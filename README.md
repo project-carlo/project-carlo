@@ -47,8 +47,8 @@ Use the included Docker setup to run the weekly pipeline in one repeatable envir
 
 `fetch -> process -> extract:web -> verify:frontend-snapshot -> build:web`
 
-The pipeline updates `data/metadata.json`, `data/events.json`, and `apps/web/public/frontend.snapshot`.
-Downloaded PDFs and local SQLite/build artifacts stay untracked.
+The pipeline updates `data/metadata.json`, `data/events.json`, `data/event_history.json`, and
+`apps/web/public/frontend.snapshot`. Downloaded PDFs and local SQLite/build artifacts stay untracked.
 
 ### First-time setup
 
@@ -88,7 +88,7 @@ The workflow:
 - runs on `workflow_dispatch` and Sundays at `08:17` UTC;
 - builds the Docker image with Buildx and GitHub Actions layer cache;
 - runs the weekly pipeline inside the container;
-- copies back only `data/metadata.json`, `data/events.json`, and `apps/web/public/frontend.snapshot`;
+- copies back only `data/metadata.json`, `data/events.json`, `data/event_history.json`, and `apps/web/public/frontend.snapshot`;
 - commits and pushes generated changes with the GitHub Actions bot when there is a diff.
 
 GitHub scheduled workflows run on the default branch and use UTC. The `17` minute offset avoids the highest-load top-of-hour window.
@@ -125,8 +125,8 @@ Run each stage independently:
 pnpm run fetch [-- --parish "..."]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
-pnpm recurrence:apply
 pnpm recurrence:backfill [-- --limit N]
+pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
 pnpm db:create
 pnpm db:drop
@@ -201,7 +201,11 @@ Two commands support it:
   cannot run inside the container.
 - `pnpm recurrence:apply` re-runs promotion over the current `data/events.json`.
   `process` already promotes each bulletin as it merges it; this is for applying
-  a backfilled history, or a changed threshold, to events processed earlier.
+  a backfilled history, or a changed threshold, to events processed earlier. Run
+  it after `recurrence:backfill`, not before: promotion clears a row's date, so
+  apply records every sighting to the history first and then promotes.
+  Backfilling afterwards would be reading from an `events.json` that has already
+  lost those dates.
 
 ## Environment Variables
 

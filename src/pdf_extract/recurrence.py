@@ -385,8 +385,26 @@ def promote_recurring_events(
 
 
 # ── Pipeline entry points ───────────────────────────────────────────────────
+def _occurrence_set(history: History) -> set[tuple[SlotKey, date]]:
+    """Flatten `history` to the (slot, date) pairs it currently holds."""
+    return {(key, day) for key, days in history.items() for day in days}
+
+
+def _count_new(history: History, before: set[tuple[SlotKey, date]]) -> int:
+    """Count occurrences in `history` that `before` did not already hold.
+
+    Counted after pruning rather than as rows are recorded: revisions and
+    bulletins both reach back past the retention window, so much of what gets
+    recorded is dropped again before it is saved. Only what survives is news.
+    """
+    return sum(1 for pair in _occurrence_set(history) if pair not in before)
+
+
 def apply_recurrence(
-    events_path: Path = EVENTS_PATH, history_path: Path = EVENT_HISTORY_PATH,
+    events_path: Path = EVENTS_PATH,
+    history_path: Path = EVENT_HISTORY_PATH,
+    metadata_path: Path = BULLETINS_METADATA_PATH,
+    today: date | None = None,
 ) -> dict[str, int]:
     """Re-run promotion over the current events.json.
 
@@ -398,7 +416,17 @@ def apply_recurrence(
     history = load_history(history_path)
     if not events:
         LOGGER.info("No events at %s, nothing to promote", events_path)
-        return {"events": 0, "promoted": 0}
+        return {"events": 0, "promoted": 0, "recorded": 0}
+
+    # Recorded before promotion, exactly as `process` does it: promotion clears
+    # a row's date, so a sighting that is not already on file would be lost
+    # outright and next week's chain would break at this run.
+    already_on_file = _occurrence_set(history)
+    _record_by_bulletin(history, events, _reference_dates_by_source_url(metadata_path))
+    pruned = prune_history(history, today=today)
+    recorded = _count_new(history, already_on_file)
+    if recorded or pruned:
+        save_history(history, history_path)
 
     # Promotion dedupes against weekly rows for the same parish only, so group
     # by bulletin: rows from different bulletins never describe the same slot.
@@ -415,8 +443,11 @@ def apply_recurrence(
 
     if promoted_total:
         save_json_list(events_path, out)
-    LOGGER.info("Recurrence apply: %d of %d events promoted to weekly", promoted_total, len(events))
-    return {"events": len(out), "promoted": promoted_total}
+    LOGGER.info(
+        "Recurrence apply: %d of %d events promoted to weekly (%d new occurrences recorded)",
+        promoted_total, len(events), recorded,
+    )
+    return {"events": len(out), "promoted": promoted_total, "recorded": recorded}
 
 
 def backfill_history_from_git(
@@ -435,22 +466,23 @@ def backfill_history_from_git(
     """
     history = load_history(history_path)
     reference_dates = _reference_dates_by_source_url(metadata_path)
+    already_on_file = _occurrence_set(history)
 
     revisions = _git_revisions(events_path, limit=limit)
     scanned = 0
-    added = 0
     for revision in revisions:
         rows = _git_show_json(revision, events_path)
         if rows is None:
             continue
         scanned += 1
-        added += _record_by_bulletin(history, rows, reference_dates)
+        _record_by_bulletin(history, rows, reference_dates)
 
     # The working copy may be ahead of the last commit.
-    added += _record_by_bulletin(history, load_json_list(events_path), reference_dates)
+    _record_by_bulletin(history, load_json_list(events_path), reference_dates)
 
     prune_history(history)
     save_history(history, history_path)
+    added = _count_new(history, already_on_file)
     occurrences = sum(len(dates) for dates in history.values())
     LOGGER.info(
         "Backfilled event history from %d revisions of %s: %d new occurrences "

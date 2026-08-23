@@ -404,9 +404,14 @@ def test_apply_recurrence_rewrites_the_events_file(tmp_path: Path) -> None:
     save_json_list(events_path, [_dated_row(BASE_DATE)])
     save_history(_history_for([1, 2]), history_path)
 
-    result = apply_recurrence(events_path=events_path, history_path=history_path)
+    result = apply_recurrence(
+        events_path=events_path,
+        history_path=history_path,
+        metadata_path=tmp_path / "metadata.json",
+        today=BASE_DATE,
+    )
 
-    assert result == {"events": 1, "promoted": 1}
+    assert result == {"events": 1, "promoted": 1, "recorded": 1}
     written = json.loads(events_path.read_text(encoding="utf-8"))
     assert written[0]["event_kind"] == "weekly"
     assert written[0]["day_of_week"] == "Wednesday"
@@ -423,9 +428,14 @@ def test_apply_recurrence_dedupes_only_within_a_bulletin(tmp_path: Path) -> None
     )
     save_history(_history_for([1, 2]), history_path)
 
-    result = apply_recurrence(events_path=events_path, history_path=history_path)
+    result = apply_recurrence(
+        events_path=events_path,
+        history_path=history_path,
+        metadata_path=tmp_path / "metadata.json",
+        today=BASE_DATE,
+    )
 
-    assert result == {"events": 2, "promoted": 2}
+    assert result == {"events": 2, "promoted": 2, "recorded": 1}
 
 
 def test_apply_recurrence_leaves_the_file_alone_when_nothing_promotes(
@@ -437,10 +447,51 @@ def test_apply_recurrence_leaves_the_file_alone_when_nothing_promotes(
     save_history(_history_for([1]), history_path)
     before = events_path.read_text(encoding="utf-8")
 
-    result = apply_recurrence(events_path=events_path, history_path=history_path)
+    result = apply_recurrence(
+        events_path=events_path,
+        history_path=history_path,
+        metadata_path=tmp_path / "metadata.json",
+        today=BASE_DATE,
+    )
 
-    assert result == {"events": 1, "promoted": 0}
+    assert result == {"events": 1, "promoted": 0, "recorded": 1}
     assert events_path.read_text(encoding="utf-8") == before
+
+
+def test_apply_recurrence_records_sightings_before_it_clears_their_dates(
+    tmp_path: Path,
+) -> None:
+    """Promotion clears a row's `date`, so the sighting has to be filed first.
+
+    events.json is the only place an unrecorded sighting exists; promoting
+    without recording destroys it, leaving a hole in the chain that breaks the
+    slot back to a dated event the following week.
+    """
+    events_path = tmp_path / "events.json"
+    history_path = tmp_path / "event_history.json"
+    metadata_path = tmp_path / "metadata.json"
+    save_json_list(events_path, [_dated_row(BASE_DATE)])
+    save_history(_history_for([1, 2]), history_path)
+
+    apply_recurrence(
+        events_path=events_path,
+        history_path=history_path,
+        metadata_path=metadata_path,
+        today=BASE_DATE,
+    )
+
+    slot = ("st-mary-anytown", "adoration", 1140)
+    assert BASE_DATE in load_history(history_path)[slot]
+
+    # With its own week on file, next week's bulletin still sees an unbroken chain.
+    save_json_list(events_path, [_dated_row(BASE_DATE + timedelta(weeks=1))])
+    result = apply_recurrence(
+        events_path=events_path,
+        history_path=history_path,
+        metadata_path=metadata_path,
+        today=BASE_DATE,
+    )
+    assert result["promoted"] == 1
 
 
 def test_prune_history_tolerates_slots_holding_no_dates() -> None:
