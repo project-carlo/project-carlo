@@ -16,6 +16,8 @@
     "verify:apply": "uv run python -m pdf_extract verify apply",
     "geocode": "uv run python -m pdf_extract geocode run",
     "geocode:apply": "uv run python -m pdf_extract geocode apply",
+    "recurrence:apply": "uv run python -m pdf_extract recurrence apply",
+    "recurrence:backfill": "uv run python -m pdf_extract recurrence backfill",
     "test": "uv run pytest",
     "lint": "uv run ruff check .",
     "extract:web": "pnpm run db:create && uv run python -m pdf_extract.extract_frontend_db",

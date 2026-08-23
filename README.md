@@ -47,8 +47,8 @@ Use the included Docker setup to run the weekly pipeline in one repeatable envir
 
 `fetch -> process -> extract:web -> verify:frontend-snapshot -> build:web`
 
-The pipeline updates `data/metadata.json`, `data/events.json`, and `apps/web/public/frontend.snapshot`.
-Downloaded PDFs and local SQLite/build artifacts stay untracked.
+The pipeline updates `data/metadata.json`, `data/events.json`, `data/event_history.json`, and
+`apps/web/public/frontend.snapshot`. Downloaded PDFs and local SQLite/build artifacts stay untracked.
 
 ### First-time setup
 
@@ -88,7 +88,7 @@ The workflow:
 - runs on `workflow_dispatch` and Sundays at `08:17` UTC;
 - builds the Docker image with Buildx and GitHub Actions layer cache;
 - runs the weekly pipeline inside the container;
-- copies back only `data/metadata.json`, `data/events.json`, and `apps/web/public/frontend.snapshot`;
+- copies back only `data/metadata.json`, `data/events.json`, `data/event_history.json`, and `apps/web/public/frontend.snapshot`;
 - commits and pushes generated changes with the GitHub Actions bot when there is a diff.
 
 GitHub scheduled workflows run on the default branch and use UTC. The `17` minute offset avoids the highest-load top-of-hour window.
@@ -125,6 +125,8 @@ Run each stage independently:
 pnpm run fetch [-- --parish "..."]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
+pnpm recurrence:backfill [-- --limit N]
+pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
 pnpm db:create
 pnpm db:drop
@@ -145,6 +147,65 @@ from pdf_extract import extract_events, fetch_bulletins, process_bulletins
 fetch_result = fetch_bulletins(parish_name="Southeast Rochester Catholic Community")
 process_result = process_bulletins(parish_name="Southeast Rochester Catholic Community")
 ```
+
+## Weekly recurrence detection
+
+Bulletins are frequently unclear about whether a listing is a one-off or a
+standing weekly slot, so the extractor sometimes files a recurring Mass,
+Confession, or Adoration under a single calendar date. The frontend then shows
+it as a dated event that vanishes once the date passes.
+
+`src/pdf_extract/recurrence.py` catches those. Every occurrence the pipeline
+extracts is recorded in `data/event_history.json`, and when a dated event turns
+up on the same weekday, at the same time, for the same church and event type as
+each of the **two weeks immediately before it**, `process` rewrites it as a
+weekly event (`event_kind` `weekly`, `day_of_week` filled in, `date` cleared)
+before writing `data/events.json`.
+
+Weekly extractions count towards that chain as much as dated ones. The
+extractor is not consistent from week to week — on the current corpus, 173 of
+1488 slots have been filed both ways at some point — so a slot that alternates
+would otherwise never accumulate two consecutive dated sightings, even after
+the bulletin had listed it in its weekly schedule for two months. A weekly row
+carries no date, so it is credited to the week its bulletin covers: the first
+matching weekday on or after the bulletin's published date. When the extractor
+could not read an issue date off the bulletin, the fetch date stands in,
+snapped to the nearest Sunday — it lands anywhere from the Saturday before
+publication to the Wednesday after, and used raw it would credit a Sunday slot
+to the wrong week roughly half the time.
+
+The chain has to be unbroken: a slot seen two and four weeks ago but not last
+week is fortnightly, not weekly, and is left as a dated event. Cancellations
+are never promoted, and a promotion that would duplicate a weekly slot the same
+bulletin already lists is dropped instead — including one that duplicates a
+weekly slot the bulletin has *cancelled*. A bulletin's own dated rows never
+count as evidence for that same bulletin, so a six-week series printed on three
+consecutive dates stays a set of dated events instead of promoting itself to a
+standing weekly one. Thresholds live at the top of `recurrence.py`
+(`MIN_PRIOR_WEEKS`, `LOOKBACK_WEEKS`, `HISTORY_RETENTION_WEEKS`).
+
+Occurrences are grouped by slot on disk rather than stored one per row, which
+keeps the file in the hundreds of KB rather than the low MB now that it covers
+every event every week.
+
+`data/event_history.json` is the pipeline's only memory of past bulletins —
+`data/events.json` is compacted down to the latest bulletin per parish on every
+run — so it is committed along with the other generated data files.
+
+Two commands support it:
+
+- `pnpm recurrence:backfill` seeds `data/event_history.json` from past committed
+  revisions of `data/events.json`, so the detector does not have to wait weeks
+  for evidence to accumulate. Run it locally: it shells out to `git log` and
+  `git show`, and `.dockerignore` keeps `.git` out of the weekly image, so it
+  cannot run inside the container.
+- `pnpm recurrence:apply` re-runs promotion over the current `data/events.json`.
+  `process` already promotes each bulletin as it merges it; this is for applying
+  a backfilled history, or a changed threshold, to events processed earlier. Run
+  it after `recurrence:backfill`, not before: promotion clears a row's date, so
+  apply records every sighting to the history first and then promotes.
+  Backfilling afterwards would be reading from an `events.json` that has already
+  lost those dates.
 
 ## Environment Variables
 
@@ -180,6 +241,7 @@ pnpm db:drop     # delete the SQLite file
 - `uv.lock` - locked dependency versions
 - `data/schema.sql` - SQLite schema (source of truth)
 - `data/` - CSV, JSON data files and downloaded bulletin PDFs
+- `data/event_history.json` - occurrences seen in past bulletins (weekly recurrence detection)
 - `apps/web/` - React + TypeScript + Vite frontend
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend SQLite snapshot
 - `src/pdf_extract/` - Python CLI package
@@ -190,6 +252,8 @@ pnpm db:drop     # delete the SQLite file
   - `storage.py` - SQLite helpers and data paths
   - `db.py` - database creation from data files
   - `detect.py` - bulletin provider detection (Playwright)
+  - `recurrence.py` - promotes repeatedly-dated events to weekly ones
+  - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
 
 ## Dependencies

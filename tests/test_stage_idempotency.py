@@ -49,6 +49,9 @@ def _patch_process_paths(monkeypatch, tmp_path: Path) -> None:
     """Point process data file paths (and the shared result cache) to tmp_path."""
     monkeypatch.setattr("pdf_extract.process.BULLETINS_METADATA_PATH", tmp_path / "metadata.json")
     monkeypatch.setattr("pdf_extract.process.EVENTS_PATH", tmp_path / "events.json")
+    monkeypatch.setattr(
+        "pdf_extract.process.EVENT_HISTORY_PATH", tmp_path / "event_history.json",
+    )
     monkeypatch.setattr("pdf_extract.runner.RUNS_DIR", tmp_path / "runs")
     # These tests stub PDFs with non-PDF bytes; skip the pypdf-based truncation helper.
     # Patched on storage where load_bulletin_work_item now lives.
@@ -713,3 +716,72 @@ def test_process_serves_cached_extraction_without_api_call(
     assert second["inserted_events"] == 1
     assert second["cache_hits"] == 1
     assert extract_calls == 1, "cache hit must not call the classifier again"
+
+
+def test_process_promotes_a_dated_event_that_recurred_the_past_two_weeks(
+    monkeypatch, tmp_path: Path,
+) -> None:
+    db_path = _setup_test_db(tmp_path)
+    _patch_process_paths(monkeypatch, tmp_path)
+    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
+
+    pdf_path = tmp_path / "sample.pdf"
+    pdf_path.write_bytes(b"fake")
+    save_json_list(tmp_path / "metadata.json", [
+        {
+            "parish_slug": "test-parish",
+            "source_url": "https://example.org/parsed.pdf",
+            "pdf_path": str(pdf_path),
+            "content_hash": "recurring",
+            "fetched_at": "2026-08-19T00:00:00Z",
+            "processed_at": None,
+            "published_date": "2026-08-19",
+        }
+    ])
+    # The same 7:00 PM Wednesday Adoration was printed in the two prior bulletins.
+    save_json_list(tmp_path / "event_history.json", [
+        {
+            "church_slug": "st-mary-anytown",
+            "event_type": "adoration",
+            "start_time": 1140,
+            "dates": ["2026-08-05", "2026-08-12"],
+        }
+    ])
+
+    monkeypatch.setattr(
+        "pdf_extract.classifiers.gemini.extract_events",
+        lambda pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None: {
+            "events": [
+                {
+                    "church_slug": "st-mary-anytown",
+                    "type": "adoration",
+                    "kind": "specific_date",
+                    "day_of_week": None,
+                    "date": "2026-08-19",
+                    "start_time": "7:00 PM",
+                    "end_time": None,
+                    "cancelled": False,
+                    "page_number": 2,
+                    "note": None,
+                }
+            ],
+            "church_list_needs_review": False,
+            "published_date": "2026-08-19",
+            "wrong_bulletin": False,
+        },
+    )
+
+    result = process_bulletins(parish_name="Test Parish")
+
+    assert result["weekly_promotions"] == 1
+    events = json.loads((tmp_path / "events.json").read_text(encoding="utf-8"))
+    assert len(events) == 1
+    assert events[0]["event_kind"] == "weekly"
+    assert events[0]["day_of_week"] == "Wednesday"
+    assert events[0]["date"] is None
+
+    # The raw dated sighting is still recorded, so next week's bulletin can
+    # keep the chain going even though events.json no longer holds a date.
+    history = json.loads((tmp_path / "event_history.json").read_text(encoding="utf-8"))
+    assert len(history) == 1
+    assert history[0]["dates"] == ["2026-08-05", "2026-08-12", "2026-08-19"]

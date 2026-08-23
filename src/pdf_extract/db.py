@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import csv
 import logging
-import re
-from datetime import datetime
 from pathlib import Path
 
 from pdf_extract.storage import (
@@ -19,88 +17,9 @@ from pdf_extract.storage import (
     load_json_list,
     utc_now_iso,
 )
+from pdf_extract.timeparse import normalize_event_date, time_to_minutes
 
 LOGGER = logging.getLogger(__name__)
-
-
-def _time_to_minutes(s: str | None) -> int | None:
-    """Parse time string (h:MM AM/PM, a.m./p.m., etc.) to minutes since midnight.
-
-    Returns None for null/empty. Handles: 8:00 AM, 5:30pm, 8:00 a.m., midnight, noon.
-    """
-    if s is None or not isinstance(s, str):
-        return None
-    raw = s.strip()
-    if not raw:
-        return None
-
-    # Normalize a.m. / p.m. to AM / PM
-    raw = re.sub(r"a\.m\.?(?=\s|$)", "AM", raw, flags=re.I)
-    raw = re.sub(r"p\.m\.?(?=\s|$)", "PM", raw, flags=re.I)
-
-    if re.match(r"^midnight$", raw, re.I):
-        return 0
-    if re.match(r"^noon$", raw, re.I):
-        return 720
-
-    m = re.match(r"^(\d{1,2}):(\d{2})\s*(AM|PM)$", raw, re.I)
-    if m:
-        h = int(m[1])
-        mins = int(m[2])
-        ampm = m[3].upper()
-        if ampm == "PM" and h != 12:
-            h += 12
-        elif ampm == "AM" and h == 12:
-            h = 0
-        return h * 60 + mins
-
-    m = re.match(r"^(\d{1,2})\s*(AM|PM)$", raw, re.I)
-    if m:
-        h = int(m[1])
-        ampm = m[2].upper()
-        if ampm == "PM" and h != 12:
-            h += 12
-        elif ampm == "AM" and h == 12:
-            h = 0
-        return h * 60
-
-    m = re.match(r"^(\d{1,2}):(\d{2})$", raw)
-    if m:
-        h, mins = int(m[1]), int(m[2])
-        if 0 <= h <= 23 and 0 <= mins <= 59:
-            return h * 60 + mins
-
-    m = re.match(r"^(\d{2})(\d{2})$", raw)
-    if m:
-        h, mins = int(m[1]), int(m[2])
-        if 0 <= h <= 23 and 0 <= mins <= 59:
-            return h * 60 + mins
-
-    return None
-
-
-def _normalize_event_date(value: str | None) -> str | None:
-    """Normalize date strings to YYYY-MM-DD for specific-date events."""
-    if not isinstance(value, str):
-        return None
-    raw = value.strip()
-    if not raw:
-        return None
-
-    # Keep canonical ISO dates as-is after validating.
-    if re.match(r"^\d{4}-\d{2}-\d{2}$", raw):
-        try:
-            return datetime.strptime(raw, "%Y-%m-%d").date().isoformat()
-        except ValueError:
-            return None
-
-    for fmt in ("%B %d, %Y", "%b %d, %Y", "%m/%d/%Y", "%m/%d/%y"):
-        try:
-            return datetime.strptime(raw, fmt).date().isoformat()
-        except ValueError:
-            continue
-
-    return None
 
 
 def _validate_csv_headers(
@@ -299,7 +218,7 @@ def _load_events(conn) -> int:
         if bulletin_row:
             bulletin_id = bulletin_row["id"]
 
-        start_minutes = _time_to_minutes(entry.get("start_time"))
+        start_minutes = time_to_minutes(entry.get("start_time"))
         if start_minutes is None:
             LOGGER.warning(
                 "Skipping event: unparseable start_time %r (church=%s)",
@@ -307,7 +226,7 @@ def _load_events(conn) -> int:
             )
             continue
 
-        end_minutes = _time_to_minutes(entry.get("end_time"))
+        end_minutes = time_to_minutes(entry.get("end_time"))
 
         page_number = entry.get("page_number")
         if not isinstance(page_number, int):
@@ -319,7 +238,7 @@ def _load_events(conn) -> int:
         event_kind = entry.get("event_kind", "")
         event_date = None
         if event_kind == "specific_date":
-            event_date = _normalize_event_date(entry.get("date"))
+            event_date = normalize_event_date(entry.get("date"))
             if event_date is None:
                 LOGGER.warning(
                     "Skipping event: unparseable specific_date %r (church=%s)",
