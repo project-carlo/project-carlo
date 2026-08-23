@@ -32,6 +32,7 @@ from __future__ import annotations
 import json
 import logging
 import subprocess
+from collections.abc import Set as AbstractSet
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
@@ -137,18 +138,34 @@ def _parse_date(value: Any) -> date | None:
 def bulletin_reference_date(entry: dict[str, Any]) -> date | None:
     """The date a bulletin's week starts from, for crediting its weekly rows.
 
-    Prefers the issue date the extractor read off the bulletin itself; falls
-    back to the fetch date, which trails publication by a few days. A late
-    reference shifts a weekly sighting into the following week, which can cost
-    a promotion but cannot invent one: the chain still has to be unbroken.
+    Prefers the issue date the extractor read off the bulletin itself. When
+    that is missing the fetch date stands in, snapped to the nearest Sunday.
+    The raw fetch date cannot be used as-is: it lands anywhere from the day
+    before publication to three days after, and for a Sunday weekly row that is
+    the difference between crediting the bulletin's own Sunday and the next
+    one — a whole week. Since 58 of the corpus's 59 parishes have some
+    bulletins with an issue date and some without, an unsnapped fallback breaks
+    those parishes' chains wherever the two kinds meet.
+
+    Snapping to the *nearest* Sunday rather than the preceding one matters:
+    bulletins are fetched on the Saturday before publication as often as on the
+    Monday after, and rounding a Saturday backwards would land a full week
+    early.
     """
     published = _parse_date(entry.get("published_date"))
     if published is not None:
         return published
     fetched_at = entry.get("fetched_at")
-    if isinstance(fetched_at, str) and fetched_at:
-        return _parse_date(fetched_at[:10])
-    return None
+    if not isinstance(fetched_at, str) or not fetched_at:
+        return None
+    fetched = _parse_date(fetched_at[:10])
+    return None if fetched is None else _nearest_sunday(fetched)
+
+
+def _nearest_sunday(day: date) -> date:
+    """The Sunday of the week `day` belongs to, rounding Thursday forwards."""
+    forward = (6 - day.weekday()) % 7
+    return day + timedelta(days=forward) if forward <= 3 else day - timedelta(days=7 - forward)
 
 
 def occurrence_from_row(
@@ -226,9 +243,10 @@ def prune_history(
     recent weeks the whole chain depends on. Future occurrences themselves are
     always kept.
     """
-    if not history:
+    newest = max((max(dates) for dates in history.values() if dates), default=None)
+    if newest is None:
+        history.clear()
         return 0
-    newest = max(max(dates) for dates in history.values() if dates)
     anchor = min(newest, today if today is not None else date.today())
     cutoff = anchor - timedelta(weeks=retention_weeks)
 
@@ -245,26 +263,41 @@ def prune_history(
 
 
 # ── Promotion ───────────────────────────────────────────────────────────────
-def consecutive_prior_weeks(history: History, key: SlotKey, event_date: date) -> int:
+def consecutive_prior_weeks(
+    history: History,
+    key: SlotKey,
+    event_date: date,
+    *,
+    exclude: AbstractSet[date] = frozenset(),
+) -> int:
     """Count unbroken weeks before `event_date` that also saw this slot.
 
     Counting stops at the first missing week: a slot seen two and four weeks
     ago but not one or three weeks ago is fortnightly, not weekly.
+
+    `exclude` drops dates that must not count as independent evidence — see
+    `promote_recurring_events`, which passes the bulletin's own sightings.
     """
     seen = history.get(key)
     if not seen:
         return 0
     weeks = 0
     for weeks_back in range(1, LOOKBACK_WEEKS + 1):
-        if event_date - timedelta(weeks=weeks_back) not in seen:
+        candidate = event_date - timedelta(weeks=weeks_back)
+        if candidate not in seen or candidate in exclude:
             break
         weeks += 1
     return weeks
 
 
 def _weekly_slot(row: dict[str, Any]) -> tuple[SlotKey, int] | None:
-    """Slot and weekday of an already-weekly row, used to avoid a duplicate."""
-    if row.get("event_kind") != "weekly" or row.get("cancelled"):
+    """Slot and weekday of an already-weekly row, used to avoid a duplicate.
+
+    Cancelled weekly rows count: the slot is still spoken for, and adding a
+    second, live weekly row beside the cancellation would leave the parish
+    contradicting itself about the same weekday and time.
+    """
+    if row.get("event_kind") != "weekly":
         return None
     key = _slot_key(
         row.get("church_slug"),
@@ -296,10 +329,24 @@ def promote_recurring_events(
     it. A promoted row that duplicates a weekly row already present in `rows`
     is dropped instead, so the parish does not gain two copies of the slot.
 
+    A bulletin's own dated rows are not evidence for that same bulletin. One
+    that prints a slot on three consecutive dates — a six-week Lenten fish fry,
+    a summer novena — describes a finite series, not a standing weekly slot,
+    and without this it would promote itself to an open-ended weekly on first
+    sight. Evidence has to come from a week this bulletin did not itself list.
+
     Returns the rewritten rows and the number of dated rows promoted (including
     ones dropped as duplicates).
     """
     weekly_slots = {slot for slot in (_weekly_slot(r) for r in rows) if slot is not None}
+
+    own_dates: dict[SlotKey, set[date]] = {}
+    for row in rows:
+        if row.get("event_kind") != "specific_date":
+            continue
+        occurrence = occurrence_from_row(row, bulletin_date=None)
+        if occurrence is not None:
+            own_dates.setdefault(occurrence[0], set()).add(occurrence[1])
 
     out: list[dict[str, Any]] = []
     promoted_count = 0
@@ -313,7 +360,10 @@ def promote_recurring_events(
             out.append(row)
             continue
         key, event_date = occurrence
-        if consecutive_prior_weeks(history, key, event_date) < MIN_PRIOR_WEEKS:
+        prior = consecutive_prior_weeks(
+            history, key, event_date, exclude=own_dates.get(key, frozenset()),
+        )
+        if prior < MIN_PRIOR_WEEKS:
             out.append(row)
             continue
 

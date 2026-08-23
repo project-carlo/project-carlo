@@ -168,14 +168,21 @@ extractor is not consistent from week to week — on the current corpus, 173 of
 would otherwise never accumulate two consecutive dated sightings, even after
 the bulletin had listed it in its weekly schedule for two months. A weekly row
 carries no date, so it is credited to the week its bulletin covers: the first
-matching weekday on or after the bulletin's published date (falling back to its
-fetch date).
+matching weekday on or after the bulletin's published date. When the extractor
+could not read an issue date off the bulletin, the fetch date stands in,
+snapped to the nearest Sunday — it lands anywhere from the Saturday before
+publication to the Wednesday after, and used raw it would credit a Sunday slot
+to the wrong week roughly half the time.
 
 The chain has to be unbroken: a slot seen two and four weeks ago but not last
 week is fortnightly, not weekly, and is left as a dated event. Cancellations
 are never promoted, and a promotion that would duplicate a weekly slot the same
-bulletin already lists is dropped instead. Thresholds live at the top of
-`recurrence.py` (`MIN_PRIOR_WEEKS`, `LOOKBACK_WEEKS`, `HISTORY_RETENTION_WEEKS`).
+bulletin already lists is dropped instead — including one that duplicates a
+weekly slot the bulletin has *cancelled*. A bulletin's own dated rows never
+count as evidence for that same bulletin, so a six-week series printed on three
+consecutive dates stays a set of dated events instead of promoting itself to a
+standing weekly one. Thresholds live at the top of `recurrence.py`
+(`MIN_PRIOR_WEEKS`, `LOOKBACK_WEEKS`, `HISTORY_RETENTION_WEEKS`).
 
 Occurrences are grouped by slot on disk rather than stored one per row, which
 keeps the file in the hundreds of KB rather than the low MB now that it covers
@@ -189,7 +196,9 @@ Two commands support it:
 
 - `pnpm recurrence:backfill` seeds `data/event_history.json` from past committed
   revisions of `data/events.json`, so the detector does not have to wait weeks
-  for evidence to accumulate.
+  for evidence to accumulate. Run it locally: it shells out to `git log` and
+  `git show`, and `.dockerignore` keeps `.git` out of the weekly image, so it
+  cannot run inside the container.
 - `pnpm recurrence:apply` re-runs promotion over the current `data/events.json`.
   `process` already promotes each bulletin as it merges it; this is for applying
   a backfilled history, or a changed threshold, to events processed earlier.

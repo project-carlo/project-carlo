@@ -141,10 +141,25 @@ def test_bulletin_reference_date_prefers_published_over_fetched() -> None:
     assert bulletin_reference_date(
         {"published_date": "2026-08-16", "fetched_at": "2026-08-19T04:00:00Z"}
     ) == date(2026, 8, 16)
-    assert bulletin_reference_date(
-        {"published_date": None, "fetched_at": "2026-08-19T04:00:00Z"}
-    ) == date(2026, 8, 19)
     assert bulletin_reference_date({"published_date": None, "fetched_at": None}) is None
+
+
+def test_bulletin_reference_date_snaps_the_fetch_fallback_to_its_sunday() -> None:
+    # An issue date is nearly always a Sunday, and the fetch lands anywhere
+    # from the Saturday before to the Wednesday after. Without snapping, the
+    # same parish's Sunday slot would be credited to two different weeks
+    # depending on whether the extractor happened to read the issue date.
+    sunday = date(2026, 8, 16)
+    for fetched in ("2026-08-15", "2026-08-16", "2026-08-17", "2026-08-19"):
+        assert bulletin_reference_date(
+            {"published_date": None, "fetched_at": f"{fetched}T04:00:00Z"}
+        ) == sunday, fetched
+
+
+def test_bulletin_reference_date_survives_an_unparseable_fetch() -> None:
+    assert bulletin_reference_date(
+        {"published_date": None, "fetched_at": "not-a-date"}
+    ) is None
 
 
 # ── Promotion ───────────────────────────────────────────────────────────────
@@ -276,6 +291,42 @@ def test_weekly_rows_and_other_dated_rows_pass_through_untouched() -> None:
     assert promoted_rows == [weekly, one_off]
 
 
+def test_a_bulletin_cannot_promote_a_slot_on_its_own_listings() -> None:
+    # One bulletin printing a six-week series on three consecutive dates
+    # describes a finite run, not a standing weekly slot.
+    history: History = {}
+    rows = [
+        _dated_row(BASE_DATE - timedelta(weeks=w), event_type="fish_fry")
+        for w in (2, 1, 0)
+    ]
+    record_observations(history, rows, bulletin_date=None)
+    promoted_rows, promoted = promote_recurring_events(rows, history)
+
+    assert promoted == 0
+    assert promoted_rows == rows
+
+
+def test_earlier_bulletins_still_promote_a_slot_this_bulletin_also_lists() -> None:
+    # The exclusion is limited to the weeks this bulletin printed itself: a
+    # chain from earlier bulletins must still count.
+    history = _history_for([1, 2])
+    rows = [_dated_row(BASE_DATE), _dated_row(BASE_DATE + timedelta(weeks=1))]
+    _, promoted = promote_recurring_events(rows, history)
+    assert promoted == 1
+
+
+def test_promotion_drops_a_duplicate_of_a_cancelled_weekly_slot() -> None:
+    # The slot is spoken for either way; a live weekly row beside the
+    # cancellation would have the parish contradicting itself.
+    history = _history_for([1, 2])
+    cancelled = _weekly_row("Wednesday", cancelled=True)
+    promoted_rows, promoted = promote_recurring_events(
+        [cancelled, _dated_row(BASE_DATE)], history,
+    )
+    assert promoted == 1
+    assert promoted_rows == [cancelled]
+
+
 # ── History maintenance ─────────────────────────────────────────────────────
 def test_prune_history_drops_expired_occurrences() -> None:
     history = _history_for([0, 1, HISTORY_RETENTION_WEEKS + 1])
@@ -390,6 +441,12 @@ def test_apply_recurrence_leaves_the_file_alone_when_nothing_promotes(
 
     assert result == {"events": 1, "promoted": 0}
     assert events_path.read_text(encoding="utf-8") == before
+
+
+def test_prune_history_tolerates_slots_holding_no_dates() -> None:
+    history: History = {("st-mary-anytown", "adoration", 1140): set()}
+    assert prune_history(history, today=BASE_DATE) == 0
+    assert history == {}
 
 
 def test_thresholds_are_the_documented_defaults() -> None:

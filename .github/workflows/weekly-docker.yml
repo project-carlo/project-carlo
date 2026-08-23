@@ -51,13 +51,17 @@ jobs:
         run: |
           docker cp project-carlo-weekly:/workspace/data/metadata.json data/metadata.json
           docker cp project-carlo-weekly:/workspace/data/events.json data/events.json
+          # The recurrence detector's only memory of past bulletins. events.json is
+          # compacted to the latest bulletin per parish every run, so without copying
+          # this back out the evidence is gone and promotion silently stops working.
+          docker cp project-carlo-weekly:/workspace/data/event_history.json data/event_history.json
           docker cp project-carlo-weekly:/workspace/apps/web/public/frontend.snapshot apps/web/public/frontend.snapshot
           docker rm project-carlo-weekly
 
       - name: Commit generated changes
         id: commit
         run: |
-          git add -- data/metadata.json data/events.json apps/web/public/frontend.snapshot
+          git add -- data/metadata.json data/events.json data/event_history.json apps/web/public/frontend.snapshot
 
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
