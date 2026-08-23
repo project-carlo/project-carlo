@@ -155,18 +155,31 @@ standing weekly slot, so the extractor sometimes files a recurring Mass,
 Confession, or Adoration under a single calendar date. The frontend then shows
 it as a dated event that vanishes once the date passes.
 
-`src/pdf_extract/recurrence.py` catches those. Every dated occurrence the
-pipeline extracts is appended to `data/event_history.json`, and when a dated
-event turns up on the same weekday, at the same time, for the same church and
-event type as each of the **two weeks immediately before it**, `process`
-rewrites it as a weekly event (`event_kind` `weekly`, `day_of_week` filled in,
-`date` cleared) before writing `data/events.json`.
+`src/pdf_extract/recurrence.py` catches those. Every occurrence the pipeline
+extracts is recorded in `data/event_history.json`, and when a dated event turns
+up on the same weekday, at the same time, for the same church and event type as
+each of the **two weeks immediately before it**, `process` rewrites it as a
+weekly event (`event_kind` `weekly`, `day_of_week` filled in, `date` cleared)
+before writing `data/events.json`.
+
+Weekly extractions count towards that chain as much as dated ones. The
+extractor is not consistent from week to week — on the current corpus, 173 of
+1488 slots have been filed both ways at some point — so a slot that alternates
+would otherwise never accumulate two consecutive dated sightings, even after
+the bulletin had listed it in its weekly schedule for two months. A weekly row
+carries no date, so it is credited to the week its bulletin covers: the first
+matching weekday on or after the bulletin's published date (falling back to its
+fetch date).
 
 The chain has to be unbroken: a slot seen two and four weeks ago but not last
 week is fortnightly, not weekly, and is left as a dated event. Cancellations
 are never promoted, and a promotion that would duplicate a weekly slot the same
 bulletin already lists is dropped instead. Thresholds live at the top of
 `recurrence.py` (`MIN_PRIOR_WEEKS`, `LOOKBACK_WEEKS`, `HISTORY_RETENTION_WEEKS`).
+
+Occurrences are grouped by slot on disk rather than stored one per row, which
+keeps the file in the hundreds of KB rather than the low MB now that it covers
+every event every week.
 
 `data/event_history.json` is the pipeline's only memory of past bulletins —
 `data/events.json` is compacted down to the latest bulletin per parish on every
@@ -215,7 +228,7 @@ pnpm db:drop     # delete the SQLite file
 - `uv.lock` - locked dependency versions
 - `data/schema.sql` - SQLite schema (source of truth)
 - `data/` - CSV, JSON data files and downloaded bulletin PDFs
-- `data/event_history.json` - dated occurrences seen in past bulletins (weekly recurrence detection)
+- `data/event_history.json` - occurrences seen in past bulletins (weekly recurrence detection)
 - `apps/web/` - React + TypeScript + Vite frontend
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend SQLite snapshot
 - `src/pdf_extract/` - Python CLI package

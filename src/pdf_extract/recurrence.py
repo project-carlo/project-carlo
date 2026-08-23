@@ -8,10 +8,19 @@ frontend shows it as a dated event that disappears the moment it passes.
 
 The tell is that a genuinely weekly slot keeps reappearing: the same church,
 the same event type, the same weekday and start time, exactly one week later,
-bulletin after bulletin. `data/event_history.json` accumulates every dated
-occurrence the pipeline has extracted, and `promote_recurring_events` rewrites
-a dated event as a weekly one once matching occurrences show up in each of the
+bulletin after bulletin. `data/event_history.json` accumulates every occurrence
+the pipeline has extracted, and `promote_recurring_events` rewrites a dated
+event as a weekly one once matching occurrences show up in each of the
 `MIN_PRIOR_WEEKS` weeks immediately before it.
+
+Weekly extractions count towards that chain as much as dated ones. The
+extractor is not consistent from week to week — on the current corpus, 173 of
+1488 slots have been filed both ways at some point — so a slot that alternates
+would otherwise never accumulate two consecutive dated sightings and would
+never be promoted, even after the bulletin had listed it in its weekly
+schedule for two months. A weekly row carries no date, so it is credited to
+the week its bulletin covers: the first matching weekday on or after the
+bulletin's published date.
 
 The history file is the pipeline's only memory of past bulletins: `events.json`
 is compacted down to the latest bulletin per parish on every run, so the
@@ -28,6 +37,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.storage import (
+    BULLETINS_METADATA_PATH,
     EVENT_HISTORY_PATH,
     EVENTS_PATH,
     load_json_list,
@@ -48,163 +58,200 @@ MIN_PRIOR_WEEKS = 2
 # (parishes really do rotate an 11:00 AM Mass between churches week to week).
 LOOKBACK_WEEKS = 8
 
-# Occurrences older than this are dropped from event_history.json; they can no
-# longer contribute to any future match.
-HISTORY_RETENTION_WEEKS = 26
+# Occurrences older than this are dropped from event_history.json; past the
+# lookback window they can no longer contribute to any match.
+HISTORY_RETENTION_WEEKS = 12
 
 WEEKDAY_NAMES = (
     "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
 )
 _WEEKDAY_INDEX = {name.lower(): idx for idx, name in enumerate(WEEKDAY_NAMES)}
 
-# (church_slug, event_type, weekday index, start time in minutes). End time is
-# deliberately excluded: bulletins print "9:00 AM" one week and "9:00-10:00 AM"
-# the next for the same slot.
-SlotKey = tuple[str, str, int, int]
+# (church_slug, event_type, start time in minutes). The weekday is not part of
+# the key: occurrences are matched at exact seven-day offsets, which can only
+# ever line up on the same weekday. End time is excluded too, because bulletins
+# print "9:00 AM" one week and "9:00-10:00 AM" the next for the same slot.
+SlotKey = tuple[str, str, int]
+
+# slot -> the dates that slot was seen on.
+History = dict[SlotKey, set[date]]
 
 
-# ── History records ─────────────────────────────────────────────────────────
-def load_history(path: Path = EVENT_HISTORY_PATH) -> list[dict[str, Any]]:
-    records = load_json_list(path)
-    return [r for r in records if isinstance(r, dict)]
+# ── History file ────────────────────────────────────────────────────────────
+def load_history(path: Path = EVENT_HISTORY_PATH) -> History:
+    """Read event_history.json into slot -> dates.
 
-
-def save_history(history: list[dict[str, Any]], path: Path = EVENT_HISTORY_PATH) -> None:
-    save_json_list(path, history)
-
-
-def observation_from_row(row: dict[str, Any]) -> dict[str, Any] | None:
-    """Turn an events.json row into a history record, or None if unusable.
-
-    Only uncancelled specific-date events with a parseable date and start time
-    are evidence of recurrence: weekly rows are already weekly, and a
-    cancellation is dated by nature.
+    Records are grouped by slot on disk rather than stored one per occurrence:
+    with weekly sightings included this file covers every event in the corpus
+    every week, and the grouped form keeps it a few hundred KB instead of a few
+    MB of near-identical rows.
     """
-    if not isinstance(row, dict):
-        return None
-    if row.get("event_kind") != "specific_date" or row.get("cancelled"):
-        return None
-    church_slug = row.get("church_slug")
-    event_type = row.get("event_type")
-    if not isinstance(church_slug, str) or not isinstance(event_type, str):
-        return None
-    if not church_slug or not event_type:
-        return None
-    iso_date = normalize_event_date(row.get("date"))
-    start_minutes = time_to_minutes(row.get("start_time"))
-    if iso_date is None or start_minutes is None:
-        return None
-    return {
-        "church_slug": church_slug,
-        "event_type": event_type,
-        "date": iso_date,
-        "start_time": start_minutes,
-    }
-
-
-def _record_key(record: dict[str, Any]) -> tuple[str, str, str, int] | None:
-    church_slug = record.get("church_slug")
-    event_type = record.get("event_type")
-    iso_date = record.get("date")
-    start_time = record.get("start_time")
-    if not isinstance(church_slug, str) or not isinstance(event_type, str):
-        return None
-    if not isinstance(iso_date, str) or not isinstance(start_time, int):
-        return None
-    return (iso_date, church_slug, event_type, start_time)
-
-
-def record_observations(history: list[dict[str, Any]], rows: list[dict[str, Any]]) -> int:
-    """Add the dated occurrences in `rows` to `history` in place.
-
-    Duplicate occurrences (the same slot on the same date, seen in an earlier
-    run or twice in one bulletin) are ignored. Returns the number added.
-    """
-    known = {key for key in (_record_key(r) for r in history) if key is not None}
-    added = 0
-    for row in rows:
-        record = observation_from_row(row)
-        if record is None:
+    history: History = {}
+    for record in load_json_list(path):
+        if not isinstance(record, dict):
             continue
-        key = _record_key(record)
-        if key is None or key in known:
+        key = _slot_key(
+            record.get("church_slug"), record.get("event_type"), record.get("start_time"),
+        )
+        if key is None:
             continue
-        known.add(key)
-        history.append(record)
-        added += 1
-    if added:
-        history.sort(key=lambda r: _record_key(r) or ("", "", "", 0))
-    return added
+        dates = record.get("dates")
+        if not isinstance(dates, list):
+            continue
+        parsed = {d for d in (_parse_date(value) for value in dates) if d is not None}
+        if parsed:
+            history.setdefault(key, set()).update(parsed)
+    return history
 
 
-def prune_history(
-    history: list[dict[str, Any]],
-    *,
-    today: date | None = None,
-    retention_weeks: int = HISTORY_RETENTION_WEEKS,
-) -> int:
-    """Drop occurrences too old to affect any future match. Returns rows removed.
+def save_history(history: History, path: Path = EVENT_HISTORY_PATH) -> None:
+    records = [
+        {
+            "church_slug": church_slug,
+            "event_type": event_type,
+            "start_time": start_time,
+            "dates": [d.isoformat() for d in sorted(dates)],
+        }
+        for (church_slug, event_type, start_time), dates in sorted(history.items())
+        if dates
+    ]
+    save_json_list(path, records)
 
-    The cutoff is measured back from the newest occurrence on file rather than
-    from the wall clock, so a corpus that is replayed or backfilled long after
-    the fact keeps its most recent weeks instead of being wiped. Pass `today`
-    to push the cutoff forward to the current date as well.
-    """
-    if not history:
-        return 0
-    dates = [d for d in (_parse_date(r.get("date")) for r in history) if d is not None]
-    if not dates:
-        return 0
-    anchor = max(dates)
-    if today is not None:
-        anchor = max(anchor, today)
-    cutoff = anchor - timedelta(weeks=retention_weeks)
 
-    kept = []
-    for record in history:
-        record_date = _parse_date(record.get("date"))
-        if record_date is not None and record_date >= cutoff:
-            kept.append(record)
-    removed = len(history) - len(kept)
-    if removed:
-        history[:] = kept
-    return removed
+def _slot_key(church_slug: Any, event_type: Any, start_time: Any) -> SlotKey | None:
+    if not isinstance(church_slug, str) or not church_slug:
+        return None
+    if not isinstance(event_type, str) or not event_type:
+        return None
+    if not isinstance(start_time, int) or isinstance(start_time, bool):
+        return None
+    return (church_slug, event_type, start_time)
 
 
 def _parse_date(value: Any) -> date | None:
     iso = normalize_event_date(value) if isinstance(value, str) else None
-    if iso is None:
+    return date.fromisoformat(iso) if iso else None
+
+
+# ── Recording occurrences ───────────────────────────────────────────────────
+def bulletin_reference_date(entry: dict[str, Any]) -> date | None:
+    """The date a bulletin's week starts from, for crediting its weekly rows.
+
+    Prefers the issue date the extractor read off the bulletin itself; falls
+    back to the fetch date, which trails publication by a few days. A late
+    reference shifts a weekly sighting into the following week, which can cost
+    a promotion but cannot invent one: the chain still has to be unbroken.
+    """
+    published = _parse_date(entry.get("published_date"))
+    if published is not None:
+        return published
+    fetched_at = entry.get("fetched_at")
+    if isinstance(fetched_at, str) and fetched_at:
+        return _parse_date(fetched_at[:10])
+    return None
+
+
+def occurrence_from_row(
+    row: dict[str, Any], *, bulletin_date: date | None,
+) -> tuple[SlotKey, date] | None:
+    """Turn an events.json row into a (slot, date) occurrence, or None.
+
+    Dated rows are credited to their own date. Weekly rows are credited to the
+    first matching weekday on or after `bulletin_date`, i.e. the occurrence the
+    bulletin was actually announcing. Cancellations are never evidence of
+    recurrence.
+    """
+    if not isinstance(row, dict) or row.get("cancelled"):
         return None
-    return date.fromisoformat(iso)
+    key = _slot_key(
+        row.get("church_slug"),
+        row.get("event_type"),
+        time_to_minutes(row.get("start_time")),
+    )
+    if key is None:
+        return None
+
+    kind = row.get("event_kind")
+    if kind == "specific_date":
+        occurred = _parse_date(row.get("date"))
+        return (key, occurred) if occurred else None
+    if kind == "weekly":
+        if bulletin_date is None:
+            return None
+        day_of_week = row.get("day_of_week")
+        if not isinstance(day_of_week, str):
+            return None
+        weekday = _WEEKDAY_INDEX.get(day_of_week.strip().lower())
+        if weekday is None:
+            return None
+        offset = (weekday - bulletin_date.weekday()) % 7
+        return (key, bulletin_date + timedelta(days=offset))
+    return None
+
+
+def record_observations(
+    history: History, rows: list[dict[str, Any]], *, bulletin_date: date | None,
+) -> int:
+    """Add the occurrences in `rows` to `history` in place.
+
+    Occurrences already on file (seen in an earlier run, or listed twice in one
+    bulletin) are ignored. Returns the number added.
+    """
+    added = 0
+    for row in rows:
+        occurrence = occurrence_from_row(row, bulletin_date=bulletin_date)
+        if occurrence is None:
+            continue
+        key, occurred = occurrence
+        dates = history.setdefault(key, set())
+        if occurred not in dates:
+            dates.add(occurred)
+            added += 1
+    return added
+
+
+def prune_history(
+    history: History,
+    *,
+    today: date | None = None,
+    retention_weeks: int = HISTORY_RETENTION_WEEKS,
+) -> int:
+    """Drop occurrences too old to affect any future match. Returns dates removed.
+
+    The cutoff runs back from today, or from the newest occurrence on file when
+    that is older — so a corpus replayed or backfilled long after the fact keeps
+    its most recent weeks instead of being wiped. It deliberately does not run
+    back from the newest occurrence when that is in the *future*: bulletins
+    announce events months ahead, and anchoring on those would prune away the
+    recent weeks the whole chain depends on. Future occurrences themselves are
+    always kept.
+    """
+    if not history:
+        return 0
+    newest = max(max(dates) for dates in history.values() if dates)
+    anchor = min(newest, today if today is not None else date.today())
+    cutoff = anchor - timedelta(weeks=retention_weeks)
+
+    removed = 0
+    for key in list(history):
+        dates = history[key]
+        kept = {d for d in dates if d >= cutoff}
+        removed += len(dates) - len(kept)
+        if kept:
+            history[key] = kept
+        else:
+            del history[key]
+    return removed
 
 
 # ── Promotion ───────────────────────────────────────────────────────────────
-def build_slot_index(history: list[dict[str, Any]]) -> dict[SlotKey, set[date]]:
-    """Index history as slot -> set of dates that slot was seen on."""
-    index: dict[SlotKey, set[date]] = {}
-    for record in history:
-        record_date = _parse_date(record.get("date"))
-        start_time = record.get("start_time")
-        church_slug = record.get("church_slug")
-        event_type = record.get("event_type")
-        if record_date is None or not isinstance(start_time, int):
-            continue
-        if not isinstance(church_slug, str) or not isinstance(event_type, str):
-            continue
-        key: SlotKey = (church_slug, event_type, record_date.weekday(), start_time)
-        index.setdefault(key, set()).add(record_date)
-    return index
-
-
-def consecutive_prior_weeks(
-    index: dict[SlotKey, set[date]], key: SlotKey, event_date: date,
-) -> int:
+def consecutive_prior_weeks(history: History, key: SlotKey, event_date: date) -> int:
     """Count unbroken weeks before `event_date` that also saw this slot.
 
     Counting stops at the first missing week: a slot seen two and four weeks
     ago but not one or three weeks ago is fortnightly, not weekly.
     """
-    seen = index.get(key)
+    seen = history.get(key)
     if not seen:
         return 0
     weeks = 0
@@ -215,24 +262,20 @@ def consecutive_prior_weeks(
     return weeks
 
 
-def _weekly_key(row: dict[str, Any]) -> SlotKey | None:
-    """Slot key for an already-weekly row, used to avoid promoting a duplicate."""
+def _weekly_slot(row: dict[str, Any]) -> tuple[SlotKey, int] | None:
+    """Slot and weekday of an already-weekly row, used to avoid a duplicate."""
     if row.get("event_kind") != "weekly" or row.get("cancelled"):
         return None
-    church_slug = row.get("church_slug")
-    event_type = row.get("event_type")
+    key = _slot_key(
+        row.get("church_slug"),
+        row.get("event_type"),
+        time_to_minutes(row.get("start_time")),
+    )
     day_of_week = row.get("day_of_week")
-    if not isinstance(church_slug, str) or not isinstance(event_type, str):
-        return None
-    if not isinstance(day_of_week, str):
+    if key is None or not isinstance(day_of_week, str):
         return None
     weekday = _WEEKDAY_INDEX.get(day_of_week.strip().lower())
-    if weekday is None:
-        return None
-    start_minutes = time_to_minutes(row.get("start_time"))
-    if start_minutes is None:
-        return None
-    return (church_slug, event_type, weekday, start_minutes)
+    return None if weekday is None else (key, weekday)
 
 
 def _promote(row: dict[str, Any], weekday: int) -> dict[str, Any]:
@@ -244,54 +287,50 @@ def _promote(row: dict[str, Any], weekday: int) -> dict[str, Any]:
 
 
 def promote_recurring_events(
-    rows: list[dict[str, Any]], history: list[dict[str, Any]],
+    rows: list[dict[str, Any]], history: History,
 ) -> tuple[list[dict[str, Any]], int]:
     """Rewrite dated rows that repeat weekly as weekly rows.
 
     A row is promoted when the same church, event type, weekday and start time
     appear in `history` in each of the MIN_PRIOR_WEEKS weeks immediately before
-    it. A promoted row that duplicates a weekly row already present in
-    `rows` is dropped instead, so the parish does not gain two copies of the
-    same slot.
+    it. A promoted row that duplicates a weekly row already present in `rows`
+    is dropped instead, so the parish does not gain two copies of the slot.
 
     Returns the rewritten rows and the number of dated rows promoted (including
     ones dropped as duplicates).
     """
-    index = build_slot_index(history)
-    weekly_keys = {key for key in (_weekly_key(r) for r in rows) if key is not None}
+    weekly_slots = {slot for slot in (_weekly_slot(r) for r in rows) if slot is not None}
 
     out: list[dict[str, Any]] = []
     promoted_count = 0
     for row in rows:
-        observation = observation_from_row(row)
-        if observation is None:
+        occurrence = (
+            occurrence_from_row(row, bulletin_date=None)
+            if row.get("event_kind") == "specific_date"
+            else None
+        )
+        if occurrence is None:
             out.append(row)
             continue
-        event_date = date.fromisoformat(observation["date"])
-        key: SlotKey = (
-            observation["church_slug"],
-            observation["event_type"],
-            event_date.weekday(),
-            observation["start_time"],
-        )
-        if consecutive_prior_weeks(index, key, event_date) < MIN_PRIOR_WEEKS:
+        key, event_date = occurrence
+        if consecutive_prior_weeks(history, key, event_date) < MIN_PRIOR_WEEKS:
             out.append(row)
             continue
 
         promoted_count += 1
-        if key in weekly_keys:
+        weekday = event_date.weekday()
+        if (key, weekday) in weekly_slots:
             LOGGER.info(
                 "Dropping dated %s at %s on %s: already a weekly slot",
-                observation["event_type"], observation["church_slug"], observation["date"],
+                key[1], key[0], event_date,
             )
             continue
-        weekly_keys.add(key)
+        weekly_slots.add((key, weekday))
         LOGGER.info(
             "Promoting dated %s at %s on %s to weekly (%s %s)",
-            observation["event_type"], observation["church_slug"], observation["date"],
-            WEEKDAY_NAMES[event_date.weekday()], row.get("start_time"),
+            key[1], key[0], event_date, WEEKDAY_NAMES[weekday], row.get("start_time"),
         )
-        out.append(_promote(row, event_date.weekday()))
+        out.append(_promote(row, weekday))
     return out, promoted_count
 
 
@@ -334,6 +373,7 @@ def backfill_history_from_git(
     *,
     events_path: Path = EVENTS_PATH,
     history_path: Path = EVENT_HISTORY_PATH,
+    metadata_path: Path = BULLETINS_METADATA_PATH,
     limit: int | None = None,
 ) -> dict[str, int]:
     """Seed event_history.json from past committed revisions of events.json.
@@ -344,28 +384,63 @@ def backfill_history_from_git(
     anything.
     """
     history = load_history(history_path)
-    before = len(history)
+    reference_dates = _reference_dates_by_source_url(metadata_path)
 
     revisions = _git_revisions(events_path, limit=limit)
     scanned = 0
+    added = 0
     for revision in revisions:
         rows = _git_show_json(revision, events_path)
         if rows is None:
             continue
         scanned += 1
-        record_observations(history, rows)
+        added += _record_by_bulletin(history, rows, reference_dates)
 
     # The working copy may be ahead of the last commit.
-    record_observations(history, load_json_list(events_path))
+    added += _record_by_bulletin(history, load_json_list(events_path), reference_dates)
 
     prune_history(history)
     save_history(history, history_path)
-    added = len(history) - before
+    occurrences = sum(len(dates) for dates in history.values())
     LOGGER.info(
-        "Backfilled event history from %d revisions of %s: %d new occurrences (%d total)",
-        scanned, events_path, added, len(history),
+        "Backfilled event history from %d revisions of %s: %d new occurrences "
+        "(%d occurrences across %d slots)",
+        scanned, events_path, added, occurrences, len(history),
     )
-    return {"revisions": scanned, "added": added, "occurrences": len(history)}
+    return {
+        "revisions": scanned,
+        "added": added,
+        "occurrences": occurrences,
+        "slots": len(history),
+    }
+
+
+def _reference_dates_by_source_url(metadata_path: Path) -> dict[str, date]:
+    """Map each bulletin's source URL to the date its week starts from."""
+    reference_dates: dict[str, date] = {}
+    for entry in load_json_list(metadata_path):
+        if not isinstance(entry, dict):
+            continue
+        source_url = entry.get("source_url")
+        reference = bulletin_reference_date(entry)
+        if isinstance(source_url, str) and source_url and reference is not None:
+            reference_dates[source_url] = reference
+    return reference_dates
+
+
+def _record_by_bulletin(
+    history: History, rows: list[dict[str, Any]], reference_dates: dict[str, date],
+) -> int:
+    """Record rows a bulletin at a time, so each gets its own reference date."""
+    by_bulletin: dict[Any, list[dict[str, Any]]] = {}
+    for row in rows:
+        if isinstance(row, dict):
+            by_bulletin.setdefault(row.get("bulletin_source_url"), []).append(row)
+    added = 0
+    for source_url, bulletin_rows in by_bulletin.items():
+        reference = reference_dates.get(source_url) if isinstance(source_url, str) else None
+        added += record_observations(history, bulletin_rows, bulletin_date=reference)
+    return added
 
 
 def _git_revisions(path: Path, *, limit: int | None = None) -> list[str]:

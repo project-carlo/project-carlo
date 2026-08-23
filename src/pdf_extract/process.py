@@ -9,7 +9,7 @@ lets a re-run after a metadata reset skip the API call.
 data/events.json is derived state: it holds exactly the events of each
 parish's most recent processed bulletin, and rows from superseded bulletins
 are compacted away on every run. Because of that compaction, every dated
-occurrence is also appended to data/event_history.json before it can be
+occurrence is also recorded in data/event_history.json before it can be
 compacted away; that history is what lets `pdf_extract.recurrence` recognise a
 "one-off" the bulletins have in fact been printing every week.
 """
@@ -21,6 +21,8 @@ from typing import Any
 
 from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.recurrence import (
+    History,
+    bulletin_reference_date,
     load_history,
     promote_recurring_events,
     prune_history,
@@ -94,7 +96,7 @@ def _merge_extracted(
     entry: dict[str, Any],
     extracted: dict[str, Any],
     events: list[dict[str, Any]],
-    history: list[dict[str, Any]],
+    history: History,
 ) -> tuple[int, int]:
     """Merge an extracted result into `events` and update `entry` in place.
 
@@ -116,7 +118,9 @@ def _merge_extracted(
             parish_slug, entry.get("source_url"),
         )
     rows = flatten_extracted_events(entry, extracted)
-    record_observations(history, rows)
+    # Recorded before promotion: a promoted row loses its date, and the raw
+    # sighting is what keeps next week's chain going.
+    record_observations(history, rows, bulletin_date=bulletin_reference_date(entry))
     rows, promoted = promote_recurring_events(rows, history)
     events.extend(rows)
 

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
@@ -10,9 +11,11 @@ from pdf_extract.recurrence import (
     HISTORY_RETENTION_WEEKS,
     LOOKBACK_WEEKS,
     MIN_PRIOR_WEEKS,
+    History,
     apply_recurrence,
+    bulletin_reference_date,
     load_history,
-    observation_from_row,
+    occurrence_from_row,
     promote_recurring_events,
     prune_history,
     record_observations,
@@ -66,44 +69,82 @@ def _weekly_row(day_of_week: str, **overrides: Any) -> dict[str, Any]:
     return row
 
 
-def _history_for(weeks_back: list[int], **row_kwargs: Any) -> list[dict[str, Any]]:
-    history: list[dict[str, Any]] = []
+def _history_for(weeks_back: list[int], **row_kwargs: Any) -> History:
+    """History holding the slot as a dated sighting in each of `weeks_back`."""
+    history: History = {}
     rows = [_dated_row(BASE_DATE - timedelta(weeks=w), **row_kwargs) for w in weeks_back]
-    record_observations(history, rows)
+    record_observations(history, rows, bulletin_date=None)
     return history
 
 
-# ── Observations ────────────────────────────────────────────────────────────
-def test_observation_normalises_date_and_time() -> None:
-    record = observation_from_row(_dated_row(BASE_DATE, start_time="7:00 p.m."))
-    assert record == {
-        "church_slug": "st-mary-anytown",
-        "event_type": "adoration",
-        "date": "2026-08-19",
-        "start_time": 1140,
-    }
+def _weekly_history_for(weeks_back: list[int], day_of_week: str = "Wednesday") -> History:
+    """History holding the slot as a *weekly* sighting in each of `weeks_back`.
+
+    Each sighting comes from its own bulletin, published the Sunday before the
+    week it covers, exactly as the pipeline would record it.
+    """
+    history: History = {}
+    for weeks in weeks_back:
+        covered = BASE_DATE - timedelta(weeks=weeks)
+        published = covered - timedelta(days=covered.weekday() + 1)  # the Sunday before
+        record_observations(
+            history, [_weekly_row(day_of_week)], bulletin_date=published,
+        )
+    return history
 
 
-def test_observation_skips_weekly_cancelled_and_unparseable_rows() -> None:
-    assert observation_from_row(_weekly_row("Wednesday")) is None
-    assert observation_from_row(_dated_row(BASE_DATE, cancelled=True)) is None
-    assert observation_from_row(_dated_row(BASE_DATE, start_time="whenever")) is None
-    assert observation_from_row(_dated_row(BASE_DATE, date="sometime soon")) is None
+# ── Occurrences ─────────────────────────────────────────────────────────────
+def test_dated_row_is_credited_to_its_own_date() -> None:
+    occurrence = occurrence_from_row(
+        _dated_row(BASE_DATE, start_time="7:00 p.m."), bulletin_date=None
+    )
+    assert occurrence == (("st-mary-anytown", "adoration", 1140), BASE_DATE)
+
+
+def test_weekly_row_is_credited_to_the_week_its_bulletin_covers() -> None:
+    published = date(2026, 8, 16)  # the Sunday before BASE_DATE
+    occurrence = occurrence_from_row(_weekly_row("Wednesday"), bulletin_date=published)
+    assert occurrence == (("st-mary-anytown", "adoration", 1140), BASE_DATE)
+
+    # A weekday on the publication day itself belongs to that same week.
+    occurrence = occurrence_from_row(_weekly_row("Sunday"), bulletin_date=published)
+    assert occurrence == (("st-mary-anytown", "adoration", 1140), published)
+
+
+def test_weekly_row_without_a_bulletin_date_is_not_recorded() -> None:
+    assert occurrence_from_row(_weekly_row("Wednesday"), bulletin_date=None) is None
+
+
+def test_occurrence_skips_cancelled_and_unparseable_rows() -> None:
+    assert occurrence_from_row(_dated_row(BASE_DATE, cancelled=True), bulletin_date=None) is None
+    assert occurrence_from_row(
+        _weekly_row("Wednesday", cancelled=True), bulletin_date=BASE_DATE
+    ) is None
+    assert occurrence_from_row(
+        _dated_row(BASE_DATE, start_time="whenever"), bulletin_date=None
+    ) is None
+    assert occurrence_from_row(
+        _dated_row(BASE_DATE, date="sometime soon"), bulletin_date=None
+    ) is None
+    assert occurrence_from_row(_weekly_row("Caturday"), bulletin_date=BASE_DATE) is None
 
 
 def test_record_observations_dedupes_repeated_sightings() -> None:
-    history: list[dict[str, Any]] = []
-    rows = [_dated_row(BASE_DATE), _dated_row(BASE_DATE), _weekly_row("Sunday")]
-    assert record_observations(history, rows) == 1
-    assert record_observations(history, rows) == 0
-    assert len(history) == 1
+    history: History = {}
+    rows = [_dated_row(BASE_DATE), _dated_row(BASE_DATE)]
+    assert record_observations(history, rows, bulletin_date=None) == 1
+    assert record_observations(history, rows, bulletin_date=None) == 0
+    assert history == {("st-mary-anytown", "adoration", 1140): {BASE_DATE}}
 
 
-def test_record_observations_keeps_history_sorted_by_date() -> None:
-    history: list[dict[str, Any]] = []
-    record_observations(history, [_dated_row(BASE_DATE)])
-    record_observations(history, [_dated_row(BASE_DATE - timedelta(weeks=1))])
-    assert [r["date"] for r in history] == ["2026-08-12", "2026-08-19"]
+def test_bulletin_reference_date_prefers_published_over_fetched() -> None:
+    assert bulletin_reference_date(
+        {"published_date": "2026-08-16", "fetched_at": "2026-08-19T04:00:00Z"}
+    ) == date(2026, 8, 16)
+    assert bulletin_reference_date(
+        {"published_date": None, "fetched_at": "2026-08-19T04:00:00Z"}
+    ) == date(2026, 8, 19)
+    assert bulletin_reference_date({"published_date": None, "fetched_at": None}) is None
 
 
 # ── Promotion ───────────────────────────────────────────────────────────────
@@ -119,6 +160,30 @@ def test_promotes_after_two_prior_weeks() -> None:
     # Everything else about the row is preserved.
     assert promoted_rows[0]["start_time"] == "7:00 PM"
     assert promoted_rows[0]["page_number"] == 1
+
+
+def test_promotes_when_the_prior_weeks_were_extracted_as_weekly() -> None:
+    # The bulletin listed this slot in its weekly schedule for the past two
+    # weeks and filed it as a one-off this week. The earlier weekly sightings
+    # are the strongest possible evidence that this week's date is the error.
+    history = _weekly_history_for([1, 2])
+    _, promoted = promote_recurring_events([_dated_row(BASE_DATE)], history)
+    assert promoted == 1
+
+
+def test_promotes_across_a_mix_of_weekly_and_dated_prior_weeks() -> None:
+    history = _weekly_history_for([2])
+    record_observations(
+        history, [_dated_row(BASE_DATE - timedelta(weeks=1))], bulletin_date=None,
+    )
+    _, promoted = promote_recurring_events([_dated_row(BASE_DATE)], history)
+    assert promoted == 1
+
+
+def test_a_weekly_sighting_on_a_different_weekday_does_not_count() -> None:
+    history = _weekly_history_for([1, 2], day_of_week="Thursday")
+    _, promoted = promote_recurring_events([_dated_row(BASE_DATE)], history)
+    assert promoted == 0
 
 
 def test_does_not_promote_with_only_one_prior_week() -> None:
@@ -217,29 +282,68 @@ def test_prune_history_drops_expired_occurrences() -> None:
     removed = prune_history(history, today=BASE_DATE)
 
     assert removed == 1
-    assert [r["date"] for r in history] == ["2026-08-12", "2026-08-19"]
+    assert history == {
+        ("st-mary-anytown", "adoration", 1140): {
+            BASE_DATE, BASE_DATE - timedelta(weeks=1),
+        }
+    }
+
+
+def test_prune_history_drops_slots_left_with_no_dates() -> None:
+    history = _history_for([0])  # a current slot, so the cutoff sits at today
+    record_observations(
+        history,
+        [
+            _dated_row(BASE_DATE - timedelta(weeks=w), event_type="mass")
+            for w in (HISTORY_RETENTION_WEEKS + 1, HISTORY_RETENTION_WEEKS + 2)
+        ],
+        bulletin_date=None,
+    )
+    assert prune_history(history, today=BASE_DATE) == 2
+    assert list(history) == [("st-mary-anytown", "adoration", 1140)]
 
 
 def test_prune_history_keeps_recent_rows_when_the_corpus_is_old() -> None:
-    # Anchored on the newest occurrence, so replaying an old corpus long after
-    # the fact does not wipe it.
+    # Replaying a corpus long after the fact must not wipe it: the cutoff falls
+    # back to the newest occurrence when that is older than today.
     history = _history_for([0, 1])
-    assert prune_history(history) == 0
-    assert len(history) == 2
+    assert prune_history(history, today=BASE_DATE + timedelta(weeks=52)) == 0
+    assert len(history[("st-mary-anytown", "adoration", 1140)]) == 2
 
 
-def test_prune_history_can_be_anchored_on_today_instead() -> None:
+def test_prune_history_is_not_dragged_forward_by_future_dated_events() -> None:
+    # Bulletins announce events months out. Anchoring the cutoff on those would
+    # prune away the recent weeks every chain depends on.
     history = _history_for([0, 1])
-    removed = prune_history(history, today=BASE_DATE + timedelta(weeks=52))
-    assert removed == 2
-    assert history == []
+    record_observations(
+        history,
+        [_dated_row(BASE_DATE + timedelta(weeks=HISTORY_RETENTION_WEEKS + 4))],
+        bulletin_date=None,
+    )
+    assert prune_history(history, today=BASE_DATE) == 0
+    assert len(history[("st-mary-anytown", "adoration", 1140)]) == 3
 
 
 def test_history_round_trips_through_disk(tmp_path: Path) -> None:
     path = tmp_path / "event_history.json"
     history = _history_for([1, 2])
+    history[("st-mary-anytown", "mass", 540)] = {BASE_DATE}
     save_history(history, path)
     assert load_history(path) == history
+
+
+def test_history_is_grouped_by_slot_on_disk(tmp_path: Path) -> None:
+    path = tmp_path / "event_history.json"
+    save_history(_history_for([1, 2]), path)
+    records = json.loads(path.read_text(encoding="utf-8"))
+    assert records == [
+        {
+            "church_slug": "st-mary-anytown",
+            "event_type": "adoration",
+            "start_time": 1140,
+            "dates": ["2026-08-05", "2026-08-12"],
+        }
+    ]
 
 
 # ── apply_recurrence over events.json ───────────────────────────────────────
@@ -252,7 +356,7 @@ def test_apply_recurrence_rewrites_the_events_file(tmp_path: Path) -> None:
     result = apply_recurrence(events_path=events_path, history_path=history_path)
 
     assert result == {"events": 1, "promoted": 1}
-    written = load_history(events_path)
+    written = json.loads(events_path.read_text(encoding="utf-8"))
     assert written[0]["event_kind"] == "weekly"
     assert written[0]["day_of_week"] == "Wednesday"
 

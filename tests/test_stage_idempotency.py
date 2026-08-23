@@ -743,10 +743,9 @@ def test_process_promotes_a_dated_event_that_recurred_the_past_two_weeks(
         {
             "church_slug": "st-mary-anytown",
             "event_type": "adoration",
-            "date": day,
             "start_time": 1140,
+            "dates": ["2026-08-05", "2026-08-12"],
         }
-        for day in ("2026-08-05", "2026-08-12")
     ])
 
     monkeypatch.setattr(
@@ -784,4 +783,5 @@ def test_process_promotes_a_dated_event_that_recurred_the_past_two_weeks(
     # The raw dated sighting is still recorded, so next week's bulletin can
     # keep the chain going even though events.json no longer holds a date.
     history = json.loads((tmp_path / "event_history.json").read_text(encoding="utf-8"))
-    assert {r["date"] for r in history} == {"2026-08-05", "2026-08-12", "2026-08-19"}
+    assert len(history) == 1
+    assert history[0]["dates"] == ["2026-08-05", "2026-08-12", "2026-08-19"]
