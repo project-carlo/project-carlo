@@ -125,6 +125,29 @@ def _build_parser() -> argparse.ArgumentParser:
     geocode_apply_parser = geocode_subparsers.add_parser("apply", help="Write geocode results into churches.csv")
     _add_common_args(geocode_apply_parser)
 
+    # -- recurrence --
+    recurrence_parser = subparsers.add_parser(
+        "recurrence",
+        help="Detect dated events that repeat weekly and promote them",
+    )
+    recurrence_subparsers = recurrence_parser.add_subparsers(dest="recurrence_command")
+
+    recurrence_apply_parser = recurrence_subparsers.add_parser(
+        "apply",
+        help="Re-run weekly promotion over data/events.json using the recorded history",
+    )
+    _add_common_args(recurrence_apply_parser)
+
+    recurrence_backfill_parser = recurrence_subparsers.add_parser(
+        "backfill",
+        help="Seed data/event_history.json from past committed revisions of data/events.json",
+    )
+    recurrence_backfill_parser.add_argument(
+        "--limit", type=int, default=None,
+        help="Only scan the N most recent revisions (default: all)",
+    )
+    _add_common_args(recurrence_backfill_parser)
+
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
     db_subparsers = db_parser.add_subparsers(dest="db_command")
@@ -231,6 +254,17 @@ def main(argv: list[str] | None = None) -> int:
                 result = apply_geocode_results()
             else:
                 parser.parse_args(["geocode", "--help"])
+                return 1
+
+        elif args.command == "recurrence":
+            if args.recurrence_command == "apply":
+                from pdf_extract.recurrence import apply_recurrence
+                result = apply_recurrence()
+            elif args.recurrence_command == "backfill":
+                from pdf_extract.recurrence import backfill_history_from_git
+                result = backfill_history_from_git(limit=args.limit)
+            else:
+                parser.parse_args(["recurrence", "--help"])
                 return 1
 
         elif args.command == "db":

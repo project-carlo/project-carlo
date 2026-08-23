@@ -125,6 +125,8 @@ Run each stage independently:
 pnpm run fetch [-- --parish "..."]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
+pnpm recurrence:apply
+pnpm recurrence:backfill [-- --limit N]
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
 pnpm db:create
 pnpm db:drop
@@ -145,6 +147,39 @@ from pdf_extract import extract_events, fetch_bulletins, process_bulletins
 fetch_result = fetch_bulletins(parish_name="Southeast Rochester Catholic Community")
 process_result = process_bulletins(parish_name="Southeast Rochester Catholic Community")
 ```
+
+## Weekly recurrence detection
+
+Bulletins are frequently unclear about whether a listing is a one-off or a
+standing weekly slot, so the extractor sometimes files a recurring Mass,
+Confession, or Adoration under a single calendar date. The frontend then shows
+it as a dated event that vanishes once the date passes.
+
+`src/pdf_extract/recurrence.py` catches those. Every dated occurrence the
+pipeline extracts is appended to `data/event_history.json`, and when a dated
+event turns up on the same weekday, at the same time, for the same church and
+event type as each of the **two weeks immediately before it**, `process`
+rewrites it as a weekly event (`event_kind` `weekly`, `day_of_week` filled in,
+`date` cleared) before writing `data/events.json`.
+
+The chain has to be unbroken: a slot seen two and four weeks ago but not last
+week is fortnightly, not weekly, and is left as a dated event. Cancellations
+are never promoted, and a promotion that would duplicate a weekly slot the same
+bulletin already lists is dropped instead. Thresholds live at the top of
+`recurrence.py` (`MIN_PRIOR_WEEKS`, `LOOKBACK_WEEKS`, `HISTORY_RETENTION_WEEKS`).
+
+`data/event_history.json` is the pipeline's only memory of past bulletins —
+`data/events.json` is compacted down to the latest bulletin per parish on every
+run — so it is committed along with the other generated data files.
+
+Two commands support it:
+
+- `pnpm recurrence:backfill` seeds `data/event_history.json` from past committed
+  revisions of `data/events.json`, so the detector does not have to wait weeks
+  for evidence to accumulate.
+- `pnpm recurrence:apply` re-runs promotion over the current `data/events.json`.
+  `process` already promotes each bulletin as it merges it; this is for applying
+  a backfilled history, or a changed threshold, to events processed earlier.
 
 ## Environment Variables
 
@@ -180,6 +215,7 @@ pnpm db:drop     # delete the SQLite file
 - `uv.lock` - locked dependency versions
 - `data/schema.sql` - SQLite schema (source of truth)
 - `data/` - CSV, JSON data files and downloaded bulletin PDFs
+- `data/event_history.json` - dated occurrences seen in past bulletins (weekly recurrence detection)
 - `apps/web/` - React + TypeScript + Vite frontend
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend SQLite snapshot
 - `src/pdf_extract/` - Python CLI package
@@ -190,6 +226,8 @@ pnpm db:drop     # delete the SQLite file
   - `storage.py` - SQLite helpers and data paths
   - `db.py` - database creation from data files
   - `detect.py` - bulletin provider detection (Playwright)
+  - `recurrence.py` - promotes repeatedly-dated events to weekly ones
+  - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
 
 ## Dependencies
