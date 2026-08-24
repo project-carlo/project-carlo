@@ -3,8 +3,9 @@ import { formatMinutesMissal, titleCase } from "../utils";
 
 /**
  * Rolls a church's upcoming events up into one row per day, so a parish with
- * four Sunday Masses reads as a single "Sundays — 7:30 · 9 · 11 · 5" line in
- * the map popup instead of filling the preview with four near-identical rows.
+ * three Sunday Masses reads as a single "Sundays — 8 a.m. · 10:30 a.m. · 5
+ * p.m." line in the map popup instead of filling the preview with three
+ * near-identical rows.
  *
  * Pure formatting logic; the input order is preserved (events arrive sorted by
  * `compareSchedule`) and each row's times are sorted earliest-first.
@@ -14,11 +15,13 @@ export interface ScheduleRollupRow {
   key: string;
   /** Day heading, e.g. "Sundays" or "Tue, Mar 17". */
   label: string;
-  /** Distinct start times for the day, earliest first, already formatted. */
+  /**
+   * Distinct start times for the day, earliest first, each formatted with its
+   * own meridiem so no time in the popup can be read as the wrong half of the
+   * day.
+   */
   times: string[];
 }
-
-const MERIDIEM_SUFFIX = / (a\.m\.|p\.m\.)$/;
 
 function rollupKey(event: EventSummary): string {
   if (event.kind === "weekly" && event.day_of_week) {
@@ -52,22 +55,6 @@ function formatCompactDate(dateStr: string): string {
   });
 }
 
-/**
- * Drop the repeated meridiem from all but the last time when every time in a
- * row shares one, so "7:30 a.m. · 9 a.m. · 11 a.m." reads "7:30 · 9 · 11 a.m."
- * Rows that straddle noon keep every meridiem.
- */
-function condenseMeridiems(times: string[]): string[] {
-  if (times.length < 2) return times;
-  const suffixes = times.map((time) => MERIDIEM_SUFFIX.exec(time)?.[1]);
-  if (suffixes.some((suffix) => suffix === undefined || suffix !== suffixes[0])) {
-    return times;
-  }
-  return times.map((time, index) =>
-    index === times.length - 1 ? time : time.replace(MERIDIEM_SUFFIX, ""),
-  );
-}
-
 export function rollUpEventsByDay(
   events: EventSummary[],
 ): ScheduleRollupRow[] {
@@ -90,8 +77,6 @@ export function rollUpEventsByDay(
   return [...rows.entries()].map(([key, row]) => ({
     key,
     label: row.label,
-    times: condenseMeridiems(
-      [...row.startTimes].sort((a, b) => a - b).map(formatMinutesMissal),
-    ),
+    times: [...row.startTimes].sort((a, b) => a - b).map(formatMinutesMissal),
   }));
 }

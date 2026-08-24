@@ -39,7 +39,7 @@ describe("rollUpEventsByDay", () => {
 
     expect(rows).toHaveLength(1);
     expect(rows[0].label).toBe("Sundays");
-    expect(rows[0].times).toEqual(["7:30", "9", "11 a.m."]);
+    expect(rows[0].times).toEqual(["7:30 a.m.", "9 a.m.", "11 a.m."]);
   });
 
   it("keeps distinct days on their own rows, in input order", () => {
@@ -73,6 +73,19 @@ describe("rollUpEventsByDay", () => {
     ]);
 
     expect(rows[0].times).toEqual(["9 a.m.", "5 p.m."]);
+  });
+
+  it("spells out the meridiem on every time in a row", () => {
+    const rows = rollUpEventsByDay([
+      weekly("sunday", 7 * 60 + 30),
+      weekly("sunday", 9 * 60),
+      weekly("sunday", 11 * 60),
+      weekly("sunday", 17 * 60),
+    ]);
+
+    for (const time of rows[0].times) {
+      expect(time).toMatch(/ (a\.m\.|p\.m\.)$/);
+    }
   });
 
   it("lists a shared start time once", () => {
