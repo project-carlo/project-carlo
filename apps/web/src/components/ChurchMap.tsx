@@ -1,4 +1,4 @@
-import { memo, useEffect, useMemo, useRef } from "react";
+import { Fragment, memo, useEffect, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   MapContainer,
@@ -10,30 +10,19 @@ import {
 } from "react-leaflet";
 import type { Marker as LeafletMarker } from "leaflet";
 import L from "leaflet";
-import type { ChurchMapItem, EventSummary } from "../types";
+import type { ChurchMapItem } from "../types";
 import type { MapView } from "../lib/mapView";
-import {
-  formatAddress,
-  formatEventDate,
-  formatMinutesMissal,
-  titleCase,
-} from "../utils";
+import { rollUpEventsByDay } from "../lib/eventRollup";
+import { formatAddress } from "../utils";
 import { FleuronIcon } from "@/components/icons";
 
 const OSM_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
-function formatEventDay(event: EventSummary): string {
-  if (event.kind === "weekly" && event.day_of_week) {
-    return titleCase(event.day_of_week) + "s";
-  }
-  if (event.date) {
-    return formatEventDate(event.date);
-  }
-  return "";
-}
-
 const defaultCenter: [number, number] = [43.1566, -77.6088];
+
+/** Day rows shown in a pin popup before it spills into "…and N more days". */
+const POPUP_DAY_ROWS = 3;
 
 /* A cross-in-roundel pin: cream disc with a brass ring, a rubric-red Latin
  * cross at the center, and a subtle drop-shadow. Rendered via divIcon so
@@ -185,8 +174,14 @@ const ChurchMarker = memo(function ChurchMarker({
     }
   }, [church.id, openPopupForChurchId, openPopupRequestId]);
 
-  // upcoming_events arrives pre-sorted from fetchChurches, so just take the head.
-  const topEvents = church.upcoming_events.slice(0, 3);
+  // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
+  // that order while collapsing each day's several times onto one row.
+  const dayRows = useMemo(
+    () => rollUpEventsByDay(church.upcoming_events),
+    [church.upcoming_events],
+  );
+  const visibleRows = dayRows.slice(0, POPUP_DAY_ROWS);
+  const hiddenRowCount = dayRows.length - visibleRows.length;
   const addressLine = formatAddress(church);
 
   return (
@@ -221,29 +216,34 @@ const ChurchMarker = memo(function ChurchMarker({
             Upcoming
           </div>
           <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
-            {topEvents.length > 0 ? (
-              topEvents.map((eventItem) => {
-                const day = formatEventDay(eventItem);
-                const time = formatMinutesMissal(eventItem.start_time);
-                return (
-                  <li
-                    key={eventItem.id}
-                    className="flex items-baseline justify-between gap-3 font-serif text-[0.9rem]"
-                  >
-                    <span className="text-ink">{day || "Upcoming"}</span>
-                    <span className="flex-1 border-b border-dotted border-rule-strong translate-y-[-3px]" />
-                    <span className="tabular-nums text-rubric">{time}</span>
-                  </li>
-                );
-              })
+            {visibleRows.length > 0 ? (
+              visibleRows.map((row) => (
+                <li
+                  key={row.key}
+                  className="flex items-baseline gap-2 font-serif text-[0.9rem]"
+                >
+                  <span className="text-ink">{row.label || "Upcoming"}</span>
+                  <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
+                  <span className="text-right tabular-nums text-rubric">
+                    {row.times.map((time, index) => (
+                      // The separator sits outside the nowrap span so a long
+                      // day wraps between times, never inside "10:30 a.m.".
+                      <Fragment key={time}>
+                        {index > 0 ? " · " : null}
+                        <span className="whitespace-nowrap">{time}</span>
+                      </Fragment>
+                    ))}
+                  </span>
+                </li>
+              ))
             ) : (
               <li className="font-serif text-[0.9rem] italic text-ink-faint">
                 No services listed yet.
               </li>
             )}
-            {church.upcoming_events.length > 3 ? (
+            {hiddenRowCount > 0 ? (
               <li className="pt-1 font-serif text-[0.8125rem] italic text-ink-faint">
-                …and {church.upcoming_events.length - 3} more
+                …and {hiddenRowCount} more {hiddenRowCount === 1 ? "day" : "days"}
               </li>
             ) : null}
           </ul>
