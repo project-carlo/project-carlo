@@ -23,6 +23,7 @@ from hashlib import sha256
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.schedule_pattern import normalize_season, normalize_weeks_of_month
 from pdf_extract.storage import DATA_DIR, load_bulletin_work_item
 
 LOGGER = logging.getLogger(__name__)
@@ -86,9 +87,31 @@ def flatten_extracted_events(
                 if isinstance(ev.get("page_number"), int)
                 else None,
                 "note": note,
+                **_recurrence_pattern(ev),
             }
         )
     return out
+
+
+def _recurrence_pattern(ev: dict[str, Any]) -> dict[str, Any]:
+    """The weeks-of-month and season keys for one row, omitted when unset.
+
+    Only a small fraction of slots carry either qualifier, and events.json is
+    regenerated and committed every week, so writing three null keys onto every
+    row would cost more diff noise than it buys in uniformity. Readers use
+    `.get()`, which cannot tell an absent key from a null one.
+    """
+    pattern: dict[str, Any] = {}
+    weeks = normalize_weeks_of_month(ev.get("weeks_of_month"))
+    if weeks:
+        pattern["weeks_of_month"] = weeks
+    start_month, end_month = normalize_season(
+        ev.get("season_start_month"), ev.get("season_end_month"),
+    )
+    if start_month is not None and end_month is not None:
+        pattern["season_start_month"] = start_month
+        pattern["season_end_month"] = end_month
+    return pattern
 
 
 # ── On-disk result cache ────────────────────────────────────────────────────

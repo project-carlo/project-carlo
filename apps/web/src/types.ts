@@ -1,3 +1,5 @@
+import type { WeekOfMonth } from "./lib/schedulePattern";
+
 export type EventType = "mass" | "confession" | "adoration";
 
 export interface EventSummary {
@@ -12,6 +14,11 @@ export interface EventSummary {
   next_occurrence: string | null;
   page_number: number | null;
   note: string | null;
+  /** Weeks of the month a weekly slot falls on; empty means every week. */
+  weeks_of_month: WeekOfMonth[];
+  /** Inclusive month range a weekly slot runs in; null means all year. */
+  season_start_month: number | null;
+  season_end_month: number | null;
 }
 
 export interface ChurchMapItem {

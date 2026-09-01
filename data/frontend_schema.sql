@@ -36,7 +36,10 @@ CREATE TABLE event (
     end_time INTEGER,
     cancelled INTEGER NOT NULL,
     page_number INTEGER,
-    note TEXT
+    note TEXT,
+    weeks_of_month TEXT,        -- "first", "first,third", "last"; NULL = every week
+    season_start_month INTEGER, -- inclusive 1-12; NULL = all year
+    season_end_month INTEGER    -- inclusive 1-12, wrapping when < start
 );
 
 CREATE INDEX idx_event_church ON event(church_id);

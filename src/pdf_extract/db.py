@@ -6,6 +6,11 @@ import csv
 import logging
 from pathlib import Path
 
+from pdf_extract.schedule_pattern import (
+    normalize_season,
+    normalize_weeks_of_month,
+    weeks_of_month_to_text,
+)
 from pdf_extract.storage import (
     BULLETINS_METADATA_PATH,
     CHURCHES_CSV_PATH,
@@ -235,7 +240,19 @@ def _load_events(conn) -> int:
         note_raw = entry.get("note")
         note = note_raw.strip() if isinstance(note_raw, str) and note_raw.strip() else None
 
+        # Only a weekly slot recurs, so only a weekly slot can be qualified by
+        # which weeks of the month it falls on or which part of the year it runs.
         event_kind = entry.get("event_kind", "")
+        if event_kind == "weekly":
+            weeks_of_month = weeks_of_month_to_text(
+                normalize_weeks_of_month(entry.get("weeks_of_month"))
+            )
+            season_start, season_end = normalize_season(
+                entry.get("season_start_month"), entry.get("season_end_month"),
+            )
+        else:
+            weeks_of_month, season_start, season_end = None, None, None
+
         event_date = None
         if event_kind == "specific_date":
             event_date = normalize_event_date(entry.get("date"))
@@ -247,8 +264,8 @@ def _load_events(conn) -> int:
                 continue
 
         conn.execute(
-            """INSERT INTO event(church_id, bulletin_id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled, page_number, note)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            """INSERT INTO event(church_id, bulletin_id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled, page_number, note, weeks_of_month, season_start_month, season_end_month)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (
                 church_row["id"],
                 bulletin_id,
@@ -261,6 +278,9 @@ def _load_events(conn) -> int:
                 int(entry.get("cancelled", False)),
                 page_number,
                 note,
+                weeks_of_month,
+                season_start,
+                season_end,
             ),
         )
 

@@ -1,5 +1,6 @@
 import type { Database } from "sql.js";
 import { compareSchedule, computeNextOccurrence } from "../lib/schedule";
+import { parseSeasonMonth, parseWeeksOfMonth } from "../lib/schedulePattern";
 import { num, str } from "../lib/sqlRow";
 import type { ChurchDetail, EventSummary, EventType } from "../types";
 
@@ -79,7 +80,8 @@ export function getChurchEvents(
 
   const typePlaceholders = types.map(() => "?").join(",");
   const stmt = db.prepare(
-    `SELECT id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled, page_number, note
+    `SELECT id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled,
+            page_number, note, weeks_of_month, season_start_month, season_end_month
      FROM event
      WHERE church_id = ? AND event_type IN (${typePlaceholders})`,
   );
@@ -93,12 +95,18 @@ export function getChurchEvents(
     const day_of_week = str(row["day_of_week"]);
     const date = str(row["date"]);
     const start_time = row["start_time"] as number;
+    const weeks_of_month = parseWeeksOfMonth(row["weeks_of_month"]);
+    const season_start_month = parseSeasonMonth(row["season_start_month"]);
+    const season_end_month = parseSeasonMonth(row["season_end_month"]);
     const next_occurrence = computeNextOccurrence({
       cancelled,
       event_kind: kind,
       day_of_week,
       start_time,
       date,
+      weeks_of_month,
+      season_start_month,
+      season_end_month,
     });
     // Match the SPA's fetchChurchEvents: hide cancelled events and specific-date
     // events whose date is already past (occurrence is null for both).
@@ -115,6 +123,9 @@ export function getChurchEvents(
       next_occurrence,
       page_number: num(row["page_number"]),
       note: str(row["note"]),
+      weeks_of_month,
+      season_start_month,
+      season_end_month,
     });
   }
   stmt.free();

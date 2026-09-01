@@ -1,6 +1,13 @@
 import type { Database } from "sql.js";
 import { getDb } from "./db";
-import { compareSchedule, computeNextOccurrence } from "./lib/schedule";
+import { compareSchedule, computeNextOccurrence, patternOf } from "./lib/schedule";
+import {
+  monthInSeason,
+  parseSeasonMonth,
+  parseWeeksOfMonth,
+  patternKey,
+  type WeekOfMonth,
+} from "./lib/schedulePattern";
 import { num, str } from "./lib/sqlRow";
 import type {
   ChurchDetail,
@@ -50,6 +57,9 @@ export interface RawEvent {
   occurrence: string | null;
   page_number: number | null;
   note: string | null;
+  weeks_of_month: WeekOfMonth[];
+  season_start_month: number | null;
+  season_end_month: number | null;
 }
 
 type ChurchBase = Omit<ChurchMapItem, "event_types" | "upcoming_events">;
@@ -88,6 +98,9 @@ function mapEventRow(row: Record<string, unknown>): RawEvent {
     occurrence: null,
     page_number: num(row["page_number"]),
     note: str(row["note"]),
+    weeks_of_month: parseWeeksOfMonth(row["weeks_of_month"]),
+    season_start_month: parseSeasonMonth(row["season_start_month"]),
+    season_end_month: parseSeasonMonth(row["season_end_month"]),
   };
   ev.occurrence = computeNextOccurrence(ev);
   return ev;
@@ -141,7 +154,7 @@ function loadAllEvents(db: Database): RawEvent[] {
   const stmt = db.prepare(
     `SELECT id, church_id, event_type, event_kind,
             day_of_week, date, start_time, end_time, cancelled,
-            page_number, note
+            page_number, note, weeks_of_month, season_start_month, season_end_month
      FROM event`,
   );
   const results: RawEvent[] = [];
@@ -168,14 +181,29 @@ function toEventSummary(ev: RawEvent): EventSummary {
     next_occurrence: ev.occurrence,
     page_number: ev.page_number,
     note: ev.note,
+    weeks_of_month: ev.weeks_of_month,
+    season_start_month: ev.season_start_month,
+    season_end_month: ev.season_end_month,
   };
 }
 
 export function eventMatchesFilters(
   ev: RawEvent,
   filters: ChurchFilters,
+  today: Date = new Date(),
 ): boolean {
   if (ev.cancelled) return false;
+  // The map answers "where can I go this week", so a slot that does not resume
+  // until October is not an answer in September. Monthly slots stay: they do
+  // run at this time of year, and the popup says which week of the month.
+  if (
+    ev.event_kind === "weekly" &&
+    !monthInSeason(
+      today.getMonth() + 1, ev.season_start_month, ev.season_end_month,
+    )
+  ) {
+    return false;
+  }
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {
     if (ev.event_kind === "weekly" && ev.day_of_week) {
       const dayIdx = DAY_TO_INDEX[ev.day_of_week.toLowerCase()];
@@ -211,10 +239,13 @@ export async function fetchChurches(
 
   const { churches, events: allEvents } = await loadCaches(db);
 
+  // One reading of "now" for the whole pass; this runs per event on the
+  // slider-drag path.
+  const today = new Date();
   const grouped = new Map<number, RawEvent[]>();
   for (const ev of allEvents) {
     if (!typeSet.has(ev.event_type)) continue;
-    if (!eventMatchesFilters(ev, filters)) continue;
+    if (!eventMatchesFilters(ev, filters, today)) continue;
     let list = grouped.get(ev.church_id);
     if (!list) {
       list = [];
@@ -235,7 +266,10 @@ export async function fetchChurches(
       const seen = new Set<string>();
       let popupSchedule = weeklyEvents
         .filter((e) => {
-          const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}`;
+          // Two slots on the same weekday and time are only the same slot when
+          // they keep the same schedule: a first-Friday devotion is not a
+          // duplicate of a Friday one that runs every week.
+          const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}-${patternKey(patternOf(e))}`;
           if (seen.has(key)) return false;
           seen.add(key);
           return true;

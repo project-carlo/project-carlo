@@ -148,6 +148,23 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     _add_common_args(recurrence_backfill_parser)
 
+    # -- pattern --
+    pattern_parser = subparsers.add_parser(
+        "pattern",
+        help="Recurrence qualifiers: weeks of the month and partial-year seasons",
+    )
+    pattern_subparsers = pattern_parser.add_subparsers(dest="pattern_command")
+
+    pattern_backfill_parser = pattern_subparsers.add_parser(
+        "backfill",
+        help="Fill weeks_of_month and season months in data/events.json from event notes",
+    )
+    pattern_backfill_parser.add_argument(
+        "--dry-run", action="store_true",
+        help="Report what would change without writing events.json",
+    )
+    _add_common_args(pattern_backfill_parser)
+
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
     db_subparsers = db_parser.add_subparsers(dest="db_command")
@@ -265,6 +282,14 @@ def main(argv: list[str] | None = None) -> int:
                 result = backfill_history_from_git(limit=args.limit)
             else:
                 parser.parse_args(["recurrence", "--help"])
+                return 1
+
+        elif args.command == "pattern":
+            if args.pattern_command == "backfill":
+                from pdf_extract.pattern_backfill import backfill_patterns
+                result = backfill_patterns(dry_run=args.dry_run)
+            else:
+                parser.parse_args(["pattern", "--help"])
                 return 1
 
         elif args.command == "db":

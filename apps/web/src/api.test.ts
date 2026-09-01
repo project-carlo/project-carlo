@@ -20,11 +20,57 @@ function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
     occurrence: null,
     page_number: null,
     note: null,
+    weeks_of_month: [],
+    season_start_month: null,
+    season_end_month: null,
     ...overrides,
   };
 }
 
 describe("eventMatchesFilters", () => {
+  describe("season", () => {
+    const september = new Date(2026, 8, 1);
+    const november = new Date(2026, 10, 1);
+    // The bug this exists for: Holy Trinity Webster prints "Confessions
+    // Tuesdays 4:30, October through June", and the map offered it in
+    // September.
+    const seasonal = rawEvent({
+      event_type: "confession",
+      day_of_week: "tuesday",
+      start_time: 16 * 60 + 30,
+      season_start_month: 10,
+      season_end_month: 6,
+    });
+
+    it("hides a weekly slot that is out of season", () => {
+      expect(eventMatchesFilters(seasonal, { types: [] }, september)).toBe(
+        false,
+      );
+    });
+
+    it("shows the same slot once its season has started", () => {
+      expect(eventMatchesFilters(seasonal, { types: [] }, november)).toBe(true);
+    });
+
+    it("keeps a monthly slot: it does run at this time of year", () => {
+      const monthly = rawEvent({ weeks_of_month: ["first"] });
+      expect(eventMatchesFilters(monthly, { types: [] }, september)).toBe(true);
+    });
+
+    it("leaves a dated event to its own date", () => {
+      // A specific_date row already names the day it happens; a season on it
+      // would be the extractor contradicting itself.
+      const dated = rawEvent({
+        event_kind: "specific_date",
+        day_of_week: null,
+        date: "2026-09-04",
+        season_start_month: 10,
+        season_end_month: 6,
+      });
+      expect(eventMatchesFilters(dated, { types: [] }, september)).toBe(true);
+    });
+  });
+
   it("rejects cancelled events regardless of other filters", () => {
     const filters: ChurchFilters = { types: [] };
     expect(eventMatchesFilters(rawEvent({ cancelled: true }), filters)).toBe(

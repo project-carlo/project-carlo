@@ -60,7 +60,20 @@ CREATE TABLE IF NOT EXISTS event (
     end_time INTEGER CHECK (end_time IS NULL OR end_time BETWEEN 0 AND 1439),
     cancelled INTEGER NOT NULL DEFAULT 0 CHECK (cancelled IN (0, 1)),
     page_number INTEGER,              -- 1-indexed page of source PDF
-    note TEXT                         -- optional special context (e.g. language, seasonal)
+    note TEXT,                        -- optional special context (e.g. language, location)
+    -- Which occurrences of `day_of_week` within the month a weekly slot falls
+    -- on, as canonical ordinals ("first", "first,third", "last"). NULL means
+    -- every week; see pdf_extract.schedule_pattern.
+    weeks_of_month TEXT,
+    -- Inclusive month range a weekly slot runs in, 1-12. Both NULL means all
+    -- year; season_start_month > season_end_month wraps the new year
+    -- (October through June).
+    season_start_month INTEGER CHECK (
+        season_start_month IS NULL OR season_start_month BETWEEN 1 AND 12
+    ),
+    season_end_month INTEGER CHECK (
+        season_end_month IS NULL OR season_end_month BETWEEN 1 AND 12
+    )
 );
 
 CREATE INDEX IF NOT EXISTS idx_event_bulletin ON event(bulletin_id);

@@ -143,11 +143,13 @@ def test_refusal_or_missing_parsed_returns_empty_result(monkeypatch):
 
 def test_classifier_is_registered():
     from pdf_extract.classifiers import REGISTRY, get_classifier
+    from pdf_extract.schedule_extraction import SCHEMA_VERSION
 
     assert "gpt-5.4-mini" in REGISTRY
     c = get_classifier("gpt-5.4-mini")
     assert c.name == "gpt-5.4-mini"
-    assert c.version == "gpt-5.4-mini"
+    # The extraction schema keys the result cache alongside the model id.
+    assert c.version == f"gpt-5.4-mini-schema{SCHEMA_VERSION}"
 
 
 @pytest.mark.parametrize("custom_name", ["alt-name", None])

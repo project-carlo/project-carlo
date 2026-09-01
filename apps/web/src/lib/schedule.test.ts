@@ -156,6 +156,69 @@ describe("computeNextOccurrence", () => {
   });
 });
 
+describe("computeNextOccurrence with recurrence qualifiers", () => {
+  // Wednesday, 2026-09-02. September 2026's Fridays are the 4th, 11th, 18th
+  // and 25th; October's are the 2nd, 9th, 16th, 23rd and 30th.
+  const today = new Date(2026, 8, 2);
+
+  function next(overrides: Partial<OccurrenceInput>): string | null {
+    return computeNextOccurrence(
+      weeklyOccurrence("friday", 19 * 60, overrides),
+      today,
+    );
+  }
+
+  it("skips to the week of the month the slot actually falls on", () => {
+    // The 4th is this month's first Friday, so a first-Friday slot is next.
+    expect(next({ weeks_of_month: ["first"] })).toBe(
+      new Date(2026, 8, 4, 19, 0, 0, 0).toISOString(),
+    );
+    // A last-Friday slot waits until the 25th.
+    expect(next({ weeks_of_month: ["last"] })).toBe(
+      new Date(2026, 8, 25, 19, 0, 0, 0).toISOString(),
+    );
+  });
+
+  it("crosses into next month when this month's week has passed", () => {
+    const afterTheFirstFriday = new Date(2026, 8, 8);
+    expect(
+      computeNextOccurrence(
+        weeklyOccurrence("friday", 19 * 60, { weeks_of_month: ["first"] }),
+        afterTheFirstFriday,
+      ),
+    ).toBe(new Date(2026, 9, 2, 19, 0, 0, 0).toISOString());
+  });
+
+  it("resolves an out-of-season slot to the date its season resumes", () => {
+    // October through June, asked in September: the church page still lists it,
+    // so it has to resolve to a real date rather than disappear.
+    expect(next({ season_start_month: 10, season_end_month: 6 })).toBe(
+      new Date(2026, 9, 2, 19, 0, 0, 0).toISOString(),
+    );
+  });
+
+  it("keeps the next occurrence of an in-season slot unchanged", () => {
+    expect(next({ season_start_month: 6, season_end_month: 9 })).toBe(
+      new Date(2026, 8, 4, 19, 0, 0, 0).toISOString(),
+    );
+  });
+
+  it("honours both qualifiers at once", () => {
+    // First Friday, October through June: not the 4th, but October's 2nd.
+    expect(
+      next({
+        weeks_of_month: ["first"],
+        season_start_month: 10,
+        season_end_month: 6,
+      }),
+    ).toBe(new Date(2026, 9, 2, 19, 0, 0, 0).toISOString());
+  });
+
+  it("treats a slot with no qualifiers exactly as before", () => {
+    expect(next({})).toBe(new Date(2026, 8, 4, 19, 0, 0, 0).toISOString());
+  });
+});
+
 // ---------------------------------------------------------------------------
 // compareSchedule
 // ---------------------------------------------------------------------------

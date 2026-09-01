@@ -127,6 +127,7 @@ pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
 pnpm recurrence:backfill [-- --limit N]
 pnpm recurrence:apply
+pnpm pattern:backfill [-- --dry-run]
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
 pnpm db:create
 pnpm db:drop
@@ -207,6 +208,55 @@ Two commands support it:
   Backfilling afterwards would be reading from an `events.json` that has already
   lost those dates.
 
+## Partial-year and monthly schedules
+
+Not every recurring slot happens every week, all year. Confessions at Holy
+Trinity in Webster run Tuesdays at 4:30 — October through June. First Friday
+devotions are a Friday slot that comes round once a month. The extractor used to
+have nowhere to put either fact except `note`, free text nothing downstream
+reads, so the map offered the confession slot in September and listed the
+devotions as though they happened every Friday.
+
+Two qualifiers on a weekly event carry it now:
+
+- `weeks_of_month` — which occurrences of the weekday within the month the slot
+  falls on, as canonical ordinals (`first`, `first,third`, `last`). Empty means
+  every week. `last` stays distinct from `fourth`: a month with five Fridays has
+  a fourth Friday and a different last one.
+- `season_start_month` / `season_end_month` — the inclusive month range the slot
+  runs in, 1-12. Both null means all year, and `start > end` wraps the new year,
+  which is the shape a schedule tied to the school year takes.
+
+Only weekly events can carry them; a dated event already names the day it
+happens. `src/pdf_extract/schedule_pattern.py` normalises whatever wording the
+model returns and decides what the fields mean, and
+`apps/web/src/lib/schedulePattern.ts` mirrors the same rules in the browser.
+
+What the frontend does with them:
+
+- **Map and filters** hide a weekly slot that is out of season. The map answers
+  "where can I go this week", so a slot that does not resume until October is
+  not an answer in September. Monthly slots stay — they do run at this time of
+  year — and the pin popup carries a note saying which week of the month.
+- **The church page** lists every slot either way, with the qualifier beside the
+  time: "Tuesdays 4:30 p.m. — October through June". Someone looking up a parish
+  wants its whole schedule, and the note is also what explains why the map did
+  not show it.
+- **Recurrence detection** stops counting these slots as evidence of a weekly
+  one. A monthly row credited to its bulletin's week, or a seasonal row credited
+  out of season, would invent sightings on weeks the slot never happens — and a
+  few of those in a row are exactly what promotion reads as a standing weekly
+  slot.
+
+`pnpm pattern:backfill` recovers the qualifiers from notes already on file, so
+the corpus does not have to wait for every parish's next bulletin. It reads only
+notes that state the pattern outright ("First Friday of the month", "October
+through June") and refuses anything with an exclusion in it ("Except 1st
+Saturday of the month"), where reading the ordinal would invert the meaning, or
+a named season ("Summer Mass"), where the months the parish means are not on the
+page. It skips a row the extractor has already qualified. Notes it cannot read
+are left exactly as they are.
+
 ## Environment Variables
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
@@ -253,6 +303,8 @@ pnpm db:drop     # delete the SQLite file
   - `db.py` - database creation from data files
   - `detect.py` - bulletin provider detection (Playwright)
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
+  - `schedule_pattern.py` - weeks-of-month and partial-year season qualifiers
+  - `pattern_backfill.py` - recovers those qualifiers from older events' notes
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
 

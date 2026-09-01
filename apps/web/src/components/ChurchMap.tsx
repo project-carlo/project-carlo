@@ -218,22 +218,28 @@ const ChurchMarker = memo(function ChurchMarker({
           <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
             {visibleRows.length > 0 ? (
               visibleRows.map((row) => (
-                <li
-                  key={row.key}
-                  className="flex items-baseline gap-2 font-serif text-[0.9rem]"
-                >
-                  <span className="text-ink">{row.label || "Upcoming"}</span>
-                  <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
-                  <span className="text-right tabular-nums text-rubric">
-                    {row.times.map((time, index) => (
-                      // The separator sits outside the nowrap span so a long
-                      // day wraps between times, never inside "10:30 a.m.".
-                      <Fragment key={time}>
-                        {index > 0 ? " · " : null}
-                        <span className="whitespace-nowrap">{time}</span>
-                      </Fragment>
-                    ))}
-                  </span>
+                <li key={row.key} className="font-serif text-[0.9rem]">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-ink">{row.label || "Upcoming"}</span>
+                    <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
+                    <span className="text-right tabular-nums text-rubric">
+                      {row.times.map((time, index) => (
+                        // The separator sits outside the nowrap span so a long
+                        // day wraps between times, never inside "10:30 a.m.".
+                        <Fragment key={time}>
+                          {index > 0 ? " · " : null}
+                          <span className="whitespace-nowrap">{time}</span>
+                        </Fragment>
+                      ))}
+                    </span>
+                  </div>
+                  {/* A monthly or seasonal slot needs its qualifier here: the
+                      day heading above says "Fridays" either way. */}
+                  {row.note ? (
+                    <div className="text-[0.8125rem] leading-snug italic text-ink-faint">
+                      {row.note}
+                    </div>
+                  ) : null}
                 </li>
               ))
             ) : (

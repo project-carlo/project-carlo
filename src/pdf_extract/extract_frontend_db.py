@@ -71,7 +71,8 @@ def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> None:
             """
             SELECT e.id, e.church_id, e.event_type, e.event_kind,
                    e.day_of_week, e.date, e.start_time, e.end_time, e.cancelled,
-                   e.page_number, e.note
+                   e.page_number, e.note,
+                   e.weeks_of_month, e.season_start_month, e.season_end_month
             FROM event e
             INNER JOIN bulletin b ON e.bulletin_id = b.id
             INNER JOIN (
@@ -88,7 +89,7 @@ def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> None:
             """
         ).fetchall()
         dst.executemany(
-            "INSERT INTO event VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", events
+            "INSERT INTO event VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", events
         )
 
         dst.commit()

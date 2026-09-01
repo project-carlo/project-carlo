@@ -1836,7 +1836,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 4,
-    "note": "First Fridays after 8:30 AM Mass"
+    "note": "after 8:30 AM Mass",
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-john-evangelist-clyde",
@@ -1849,7 +1852,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 4,
-    "note": "Last Thursdays after 8:30 AM Mass"
+    "note": "after 8:30 AM Mass",
+    "weeks_of_month": [
+      "last"
+    ]
   },
   {
     "church_slug": "st-michael-lyons",
@@ -1992,7 +1998,12 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 2,
-    "note": "1st, 2nd, and 4th weeks of the month"
+    "note": null,
+    "weeks_of_month": [
+      "first",
+      "second",
+      "fourth"
+    ]
   },
   {
     "church_slug": "st-elizabeth-ann-seton",
@@ -2044,7 +2055,10 @@
     "end_time": "12:00 PM",
     "cancelled": false,
     "page_number": 5,
-    "note": "1st Saturday of the month"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "nativity-of-blessed-virgin-mary",
@@ -2174,7 +2188,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 1,
-    "note": "First Saturday of the month"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "assumption",
@@ -2304,7 +2321,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 1,
-    "note": "First Saturday of the month"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "assumption",
@@ -2330,7 +2350,10 @@
     "end_time": "4:00 PM",
     "cancelled": false,
     "page_number": 4,
-    "note": "First Friday of the month; ends with benediction"
+    "note": "ends with benediction",
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "resurrection",
@@ -2967,7 +2990,10 @@
     "end_time": "3:30 PM",
     "cancelled": false,
     "page_number": 1,
-    "note": "1st Saturday of the month"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "our-mother-of-sorrows",
@@ -3162,7 +3188,10 @@
     "end_time": "8:45 AM",
     "cancelled": false,
     "page_number": 1,
-    "note": "First Fridays"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-patricks",
@@ -4566,7 +4595,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 1,
-    "note": "First Saturday of the month"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-patrick-cato",
@@ -4631,7 +4663,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 5,
-    "note": "First Saturday Mass"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-hyacinth",
@@ -5034,7 +5069,10 @@
     "end_time": "7:30 PM",
     "cancelled": false,
     "page_number": 2,
-    "note": "First Saturday of the month"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-john-evangelist-spencerport",
@@ -5710,7 +5748,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 2,
-    "note": "First Friday of the month"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-leo-the-great",
@@ -5840,7 +5881,11 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 4,
-    "note": "Spanish, 2nd & 4th Saturdays"
+    "note": "Spanish",
+    "weeks_of_month": [
+      "second",
+      "fourth"
+    ]
   },
   {
     "church_slug": "st-patrick-mount-morris",
@@ -6269,7 +6314,10 @@
     "end_time": "4:45 PM",
     "cancelled": false,
     "page_number": 1,
-    "note": "First Fridays, following 8:00 AM Mass"
+    "note": "following 8:00 AM Mass",
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-patricks-macedon",
@@ -6516,7 +6564,10 @@
     "end_time": "12:30 PM",
     "cancelled": false,
     "page_number": 1,
-    "note": "First Friday"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-louis",
@@ -7036,7 +7087,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 1,
-    "note": "Healing Mass, First Monday of the month"
+    "note": "Healing Mass",
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-pius-x",
@@ -7192,7 +7246,9 @@
     "end_time": "5:30 PM",
     "cancelled": false,
     "page_number": 2,
-    "note": "October through June"
+    "note": null,
+    "season_start_month": 10,
+    "season_end_month": 6
   },
   {
     "church_slug": "holy-trinity",
@@ -7283,7 +7339,9 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 1,
-    "note": "June 4 - September 10"
+    "note": null,
+    "season_start_month": 6,
+    "season_end_month": 9
   },
   {
     "church_slug": "st-theodores",
@@ -7452,7 +7510,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 1,
-    "note": "First Fridays only"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-stanislaus-kostka",
@@ -7712,7 +7773,10 @@
     "end_time": "3:00 PM",
     "cancelled": false,
     "page_number": 2,
-    "note": "1st Friday; ends with Benediction at 3:00 PM"
+    "note": "ends with Benediction at 3:00 PM",
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "immaculate-conception",
@@ -7725,7 +7789,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 2,
-    "note": "1st Saturday Holy Hour"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "immaculate-conception",
@@ -9051,7 +9118,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 3,
-    "note": "First Saturday Mass; Anointing of the Sick offered"
+    "note": "Anointing of the Sick offered",
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-patricks-victor",
@@ -9870,7 +9940,10 @@
     "end_time": "12:00 PM",
     "cancelled": false,
     "page_number": 1,
-    "note": "1st Fridays"
+    "note": null,
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-ambrose",
@@ -9909,7 +9982,10 @@
     "end_time": null,
     "cancelled": false,
     "page_number": 3,
-    "note": "1st Tuesdays; Mothers of Lu Holy Hour for Vocations at Perpetual Adoration chapel"
+    "note": "Mothers of Lu Holy Hour for Vocations at Perpetual Adoration chapel",
+    "weeks_of_month": [
+      "first"
+    ]
   },
   {
     "church_slug": "st-ambrose",

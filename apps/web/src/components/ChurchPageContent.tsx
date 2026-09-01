@@ -18,6 +18,8 @@ import { FeedbackTrigger } from "@/components/FeedbackTrigger";
 import { Fleuron } from "@/components/Fleuron";
 import { Masthead } from "@/components/Masthead";
 import { useHomeHref } from "@/hooks/useHomeHref";
+import { patternOf } from "@/lib/schedule";
+import { describeSchedulePattern } from "@/lib/schedulePattern";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
 
 interface EventsByType {
@@ -135,6 +137,27 @@ function SectionPageRef({
       {label}
     </span>
   );
+}
+
+/**
+ * What qualifies this time beyond its weekday: when the slot only runs part of
+ * the year or only on certain weeks of the month, plus whatever the bulletin
+ * added.
+ *
+ * The church page lists a slot whether or not it is running today — someone
+ * looking up a parish wants its whole schedule — so the qualifier is what tells
+ * them the October-to-June confession slot they can see here is not on offer in
+ * September, and why the map did not show it.
+ */
+function eventQualifier(event: EventSummary): string | null {
+  const pattern =
+    event.kind === "weekly"
+      ? describeSchedulePattern(patternOf(event), event.day_of_week)
+      : null;
+  const parts = [pattern, event.note].filter(
+    (part): part is string => Boolean(part),
+  );
+  return parts.length > 0 ? parts.join(" · ") : null;
 }
 
 function EventNote({ note }: { note: string | null }) {
@@ -308,7 +331,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                                   <span className="tabular-nums">
                                     {formatTimeValue(event)}
                                   </span>
-                                  <EventNote note={event.note} />
+                                  <EventNote note={eventQualifier(event)} />
                                   {event.page_number !== sectionPage ? (
                                     <PageRef
                                       event={event}
@@ -349,7 +372,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                                     {formatEventDate(event.date)}
                                   </span>
                                 ) : null}
-                                <EventNote note={event.note} />
+                                <EventNote note={eventQualifier(event)} />
                                 {event.page_number !== sectionPage ? (
                                   <PageRef
                                     event={event}

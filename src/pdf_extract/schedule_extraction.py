@@ -13,7 +13,17 @@ from google import genai
 from google.genai import errors, types
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
+from pdf_extract.schedule_pattern import normalize_season, normalize_weeks_of_month
+
 LOGGER = logging.getLogger(__name__)
+
+# Bump whenever the extraction schema or prompt changes in a way that would make
+# a stored result wrong or incomplete. Classifiers fold it into their `version`,
+# which keys the on-disk result cache, so an old bulletin re-processed after a
+# change is re-extracted instead of served from a cache that predates it.
+# 2: weeks_of_month and the season months on weekly slots.
+SCHEMA_VERSION = 2
+
 _RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 _MAX_API_ATTEMPTS = 8
 _BASE_BACKOFF_SECONDS = 2.0
@@ -55,8 +65,32 @@ class WeeklySlot(BaseModel):
     day_of_week: str = Field(min_length=1, description="Full English weekday name, e.g. `Monday`.")
     start_time: str = Field(min_length=1, description="Formatted as `h:MM AM` or `h:MM PM`.")
     end_time: str | None = Field(default=None, description="For Mass, leave null. For Confession and Adoration, include when available.")
+    weeks_of_month: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Only for a slot that falls on particular weeks of the month rather than every week, "
+            "e.g. `[\"first\"]` for First Friday devotions or `[\"first\", \"third\"]` for "
+            "1st and 3rd Saturdays. Allowed values: `first`, `second`, `third`, `fourth`, `fifth`, "
+            "`last`. Leave empty for a slot that happens every week."
+        ),
+    )
+    season_start_month: str | None = Field(
+        default=None,
+        description=(
+            "First month of the year the slot runs, e.g. `October` for "
+            "'Confessions Tuesdays, October through June'. Full English month name. "
+            "Leave null for a slot that runs all year round."
+        ),
+    )
+    season_end_month: str | None = Field(
+        default=None,
+        description=(
+            "Last month of the year the slot runs, e.g. `June`. Set it together with "
+            "`season_start_month`; leave both null for a slot that runs all year round."
+        ),
+    )
     page_number: int | None = Field(default=None, description="1-indexed PDF page where this entry was found.")
-    note: str | None = Field(default=None, description="Short phrase only when there is genuinely special context (language, season, location nuance, benediction, etc.).")
+    note: str | None = Field(default=None, description="Short phrase only when there is genuinely special context (language, location nuance, benediction, etc.). Do not restate what `weeks_of_month` or the season months already say.")
 
 
 class DateSlot(BaseModel):
@@ -167,11 +201,17 @@ def _collect_events(
                 date_val = None
                 if not _valid_str(church_slug) or not _valid_str(start_time) or not _valid_str(day_of_week):
                     continue
+                pattern = _pattern_fields(
+                    item.get("weeks_of_month"),
+                    item.get("season_start_month"),
+                    item.get("season_end_month"),
+                )
             else:
                 day_of_week = None
                 date_val = item.get("date")
                 if not _valid_str(church_slug) or not _valid_str(start_time) or not _valid_str(date_val):
                     continue
+                pattern = _pattern_fields(None, None, None)
             end_time = item.get("end_time") if isinstance(item.get("end_time"), str) else None
             page_number = item.get("page_number") if isinstance(item.get("page_number"), int) else None
             note_raw = item.get("note")
@@ -187,6 +227,7 @@ def _collect_events(
                 "cancelled": cancelled,
                 "page_number": page_number,
                 "note": note,
+                **pattern,
             })
     return events
 
@@ -213,6 +254,24 @@ def _note_value(note: str | None) -> str | None:
     return stripped or None
 
 
+def _pattern_fields(
+    weeks_of_month: Any, season_start: Any, season_end: Any,
+) -> dict[str, Any]:
+    """Canonicalise a weekly slot's recurrence qualifiers for the flat event dict.
+
+    Normalising here rather than at the database boundary means events.json —
+    and the on-disk extraction cache behind it — holds one settled form of these
+    fields, so the recurrence detector and the DB loader do not each have to
+    re-interpret whatever wording the model chose.
+    """
+    start_month, end_month = normalize_season(season_start, season_end)
+    return {
+        "weeks_of_month": normalize_weeks_of_month(weeks_of_month),
+        "season_start_month": start_month,
+        "season_end_month": end_month,
+    }
+
+
 def _weekly_slot_to_event(
     slot: WeeklySlot,
     *,
@@ -230,6 +289,9 @@ def _weekly_slot_to_event(
         "cancelled": cancelled,
         "page_number": slot.page_number,
         "note": _note_value(slot.note),
+        **_pattern_fields(
+            slot.weeks_of_month, slot.season_start_month, slot.season_end_month,
+        ),
     }
 
 
@@ -250,6 +312,7 @@ def _date_slot_to_event(
         "cancelled": cancelled,
         "page_number": slot.page_number,
         "note": _note_value(slot.note),
+        **_pattern_fields(None, None, None),
     }
 
 
@@ -448,7 +511,9 @@ Extract Mass, Confession, and Adoration schedule information from the attached C
   - `single_events` for one-off or extra occurrences on a specific date that are not already covered by a weekly entry.
   - `cancellations` for events that the bulletin explicitly says are cancelled, moved, or will not take place on a specific date.
 - Never duplicate a weekly slot as a single event just because the bulletin also mentions it in a specific week.
-- Only add a `note` when there is genuinely special context worth surfacing (language, season, alternate location, benediction, etc.). No need to specify 'Vigil Mass'.
+- A weekly entry that only falls on certain weeks of the month ("First Friday devotions", "1st and 3rd Saturdays", "Healing Mass on the first Monday") still belongs in `weekly_schedule`: give it that weekday and list those weeks in `weeks_of_month`. Leave `weeks_of_month` empty for a slot that happens every week.
+- A weekly entry that only runs for part of the year ("Confessions Tuesdays, October through June", "summer Mass schedule", "resumes after Labor Day") also belongs in `weekly_schedule`: fill in `season_start_month` and `season_end_month`. Set both or neither. Use the months the bulletin states; when it names a season instead, use the months that season covers for this parish (summer as June through August, a school-year schedule as September through June). Read an exclusion the same way — a slot that does not run in July or August is a September-through-June slot.
+- Only add a `note` when there is genuinely special context worth surfacing (language, alternate location, benediction, etc.). No need to specify 'Vigil Mass', and do not restate in `note` what `weeks_of_month` or the season months already carry.
 - Identify the bulletin's own issue date and report it as `published_date`.
 - Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). In that case you may return empty event lists.
 

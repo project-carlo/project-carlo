@@ -21,6 +21,7 @@ from openai import OpenAI
 
 from pdf_extract.schedule_extraction import (
     EVENTS_SYSTEM_PROMPT,
+    SCHEMA_VERSION,
     SchedulePayload,
     reconstruct_events,
 )
@@ -45,7 +46,7 @@ class OpenAIClassifier:
         self._model = model
         self._max_retries = max_retries
         self.name = name or model
-        self.version = model
+        self.version = f"{model}-schema{SCHEMA_VERSION}"
 
     def extract(
         self,

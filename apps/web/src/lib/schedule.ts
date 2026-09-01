@@ -1,4 +1,9 @@
 import { DAY_ORDER, type WeekdayKey } from "../constants/days";
+import {
+  dateMatchesPattern,
+  type SchedulePattern,
+  type WeekOfMonth,
+} from "./schedulePattern";
 
 /**
  * Shared schedule logic for both the SPA and the prerenderer so that a static
@@ -18,12 +23,38 @@ const MONDAY_INDEX: Record<string, number> = {
 
 const EVENING_START_MINUTES = 16 * 60;
 
+/**
+ * How far ahead a weekly slot's next occurrence is searched for. Just over a
+ * year, so even a slot that runs one month a year — a last-Thursday Holy Hour
+ * that pauses for the summer — still resolves to a real date instead of
+ * vanishing from the church page.
+ */
+const MAX_LOOKAHEAD_WEEKS = 70;
+
 export interface OccurrenceInput {
   cancelled: boolean;
   event_kind: string;
   day_of_week: string | null;
   start_time: number;
   date: string | null;
+  /** Weeks of the month the slot falls on; absent or empty means every week. */
+  weeks_of_month?: WeekOfMonth[];
+  /** Inclusive month range the slot runs in; absent or null means all year. */
+  season_start_month?: number | null;
+  season_end_month?: number | null;
+}
+
+/** The recurrence qualifiers of an event, defaulted to a plain weekly slot. */
+export function patternOf(event: {
+  weeks_of_month?: WeekOfMonth[];
+  season_start_month?: number | null;
+  season_end_month?: number | null;
+}): SchedulePattern {
+  return {
+    weeks_of_month: event.weeks_of_month ?? [],
+    season_start_month: event.season_start_month ?? null,
+    season_end_month: event.season_end_month ?? null,
+  };
 }
 
 export interface CompareInput {
@@ -56,6 +87,7 @@ function nextForWeekly(
   dayOfWeek: string,
   startMinutes: number,
   today: Date,
+  pattern: SchedulePattern,
 ): Date | null {
   const dayIdx = MONDAY_INDEX[dayOfWeek.toLowerCase()];
   if (dayIdx === undefined) return null;
@@ -63,10 +95,20 @@ function nextForWeekly(
   const minutes = startMinutes % 60;
   const jsDay = (dayIdx + 1) % 7; // Python: Monday=0; JS: Sunday=0
   const daysAhead = (jsDay - today.getDay() + 7) % 7;
-  const target = new Date(today);
-  target.setDate(target.getDate() + daysAhead);
-  target.setHours(hours, minutes, 0, 0);
-  return target;
+  const candidate = new Date(today);
+  candidate.setDate(candidate.getDate() + daysAhead);
+  // A slot qualified by week of the month or by season skips most of the
+  // weekdays it nominally falls on, so walk forward a week at a time until one
+  // of them is an occurrence the slot actually keeps.
+  for (let week = 0; week < MAX_LOOKAHEAD_WEEKS; week += 1) {
+    if (dateMatchesPattern(candidate, pattern)) {
+      const target = new Date(candidate);
+      target.setHours(hours, minutes, 0, 0);
+      return target;
+    }
+    candidate.setDate(candidate.getDate() + 7);
+  }
+  return null;
 }
 
 function nextForSpecific(
@@ -92,6 +134,12 @@ function nextForSpecific(
 /**
  * ISO timestamp of the next occurrence of `event`, or null if the event is
  * cancelled, unparseable, or (for specific_date events) already past.
+ *
+ * A weekly slot resolves to the next date it genuinely runs, which for a
+ * seasonal or monthly one can be months out. That is deliberate: the church
+ * page lists a slot that is out of season alongside the note saying when it
+ * resumes, rather than dropping it as though the parish had stopped offering
+ * it.
  */
 export function computeNextOccurrence(
   event: OccurrenceInput,
@@ -100,7 +148,9 @@ export function computeNextOccurrence(
   if (event.cancelled) return null;
   let occ: Date | null = null;
   if (event.event_kind === "weekly" && event.day_of_week) {
-    occ = nextForWeekly(event.day_of_week, event.start_time, today);
+    occ = nextForWeekly(
+      event.day_of_week, event.start_time, today, patternOf(event),
+    );
   } else if (event.event_kind === "specific_date" && event.date) {
     occ = nextForSpecific(event.date, event.start_time, today);
   }

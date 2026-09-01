@@ -25,9 +25,54 @@ function event(overrides: Partial<EventSummary>): EventSummary {
     next_occurrence: null,
     page_number: null,
     note: null,
+    weeks_of_month: [],
+    season_start_month: null,
+    season_end_month: null,
     ...overrides,
   };
 }
+
+describe("rollUpEventsByDay with recurrence qualifiers", () => {
+  it("notes that a monthly slot is not every week", () => {
+    const rows = rollUpEventsByDay([
+      event({
+        kind: "weekly",
+        day_of_week: "friday",
+        start_time: 19 * 60,
+        weeks_of_month: ["first"],
+      }),
+    ]);
+
+    expect(rows).toHaveLength(1);
+    // The heading still reads "Fridays", so the note is what keeps the popup
+    // from promising a monthly devotion every week.
+    expect(rows[0].label).toBe("Fridays");
+    expect(rows[0].note).toBe("First Friday of the month");
+  });
+
+  it("keeps a monthly slot on its own row beside a weekly one", () => {
+    const rows = rollUpEventsByDay([
+      weekly("friday", 8 * 60),
+      event({
+        kind: "weekly",
+        day_of_week: "friday",
+        start_time: 19 * 60,
+        weeks_of_month: ["first"],
+      }),
+    ]);
+
+    expect(rows).toHaveLength(2);
+    expect(rows[0].times).toEqual(["8 a.m."]);
+    expect(rows[0].note).toBeNull();
+    expect(rows[1].times).toEqual(["7 p.m."]);
+    expect(rows[1].note).toBe("First Friday of the month");
+  });
+
+  it("leaves a plain weekly row unannotated", () => {
+    const rows = rollUpEventsByDay([weekly("sunday", 9 * 60)]);
+    expect(rows[0].note).toBeNull();
+  });
+});
 
 describe("rollUpEventsByDay", () => {
   it("collapses several times on one weekday into a single row", () => {

@@ -37,6 +37,11 @@ from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.schedule_pattern import (
+    month_in_season,
+    normalize_season,
+    normalize_weeks_of_month,
+)
 from pdf_extract.storage import (
     BULLETINS_METADATA_PATH,
     EVENT_HISTORY_PATH,
@@ -176,7 +181,10 @@ def occurrence_from_row(
     Dated rows are credited to their own date. Weekly rows are credited to the
     first matching weekday on or after `bulletin_date`, i.e. the occurrence the
     bulletin was actually announcing. Cancellations are never evidence of
-    recurrence.
+    recurrence, and neither is a row that does not in fact run every week: a
+    monthly slot, or a seasonal one out of season, would otherwise be credited
+    with a sighting on a week it never happens, and a few such credits in a row
+    are exactly what promotion reads as a standing weekly slot.
     """
     if not isinstance(row, dict) or row.get("cancelled"):
         return None
@@ -195,6 +203,8 @@ def occurrence_from_row(
     if kind == "weekly":
         if bulletin_date is None:
             return None
+        if normalize_weeks_of_month(row.get("weeks_of_month")):
+            return None
         day_of_week = row.get("day_of_week")
         if not isinstance(day_of_week, str):
             return None
@@ -202,7 +212,13 @@ def occurrence_from_row(
         if weekday is None:
             return None
         offset = (weekday - bulletin_date.weekday()) % 7
-        return (key, bulletin_date + timedelta(days=offset))
+        occurred = bulletin_date + timedelta(days=offset)
+        season_start, season_end = normalize_season(
+            row.get("season_start_month"), row.get("season_end_month"),
+        )
+        if not month_in_season(occurred.month, season_start, season_end):
+            return None
+        return (key, occurred)
     return None
 
 
