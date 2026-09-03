@@ -217,7 +217,7 @@ have nowhere to put either fact except `note`, free text nothing downstream
 reads, so the map offered the confession slot in September and listed the
 devotions as though they happened every Friday.
 
-Three fields on a weekly event carry it now:
+Two qualifiers on a weekly event carry it now:
 
 - `weeks_of_month` — which occurrences of the weekday within the month the slot
   falls on, as canonical ordinals (`first`, `first,third`, `last`). Empty means
@@ -228,15 +228,14 @@ Three fields on a weekly event carry it now:
   months null means all year, and a start later in the calendar than the end
   wraps the new year, which is the shape a schedule tied to the school year
   takes. A day is set only when the bulletin dated the boundary ("June 4
-  through September 10"); a null day leaves that end at the edge of its month,
-  which is what "January to April" means.
-- `season_note` — how the bulletin itself worded that range. The days are what
-  filtering reads; the note is what a reader is shown, so a parish that printed
-  "January to April" is quoted rather than corrected to "January 1 through
-  April 30". Weeks of the month get no such field: "First Friday of the month"
-  derives from `weeks_of_month` and reads back the same. Anything further about
-  a monthly slot — a Healing Mass, a benediction — belongs in the ordinary
-  `note`, as it always did.
+  through September 10"); a null day is not a missing value but a coarser
+  statement of the same thing, and leaves that end at the edge of its month.
+  That is what keeps "January to April" from being read back to anyone as
+  "January 1 through April 30" — it is described in the months it was given in.
+
+Neither field displaces `note`. Special context — a Healing Mass, a
+benediction, a language — is an ordinary note beside the qualifier, as it always
+was.
 
 Only weekly events can carry them; a dated event already names the day it
 happens. `src/pdf_extract/schedule_pattern.py` normalises whatever wording the
@@ -252,8 +251,8 @@ What the frontend does with them:
 - **The church page** lists every slot either way, with the qualifier beside the
   time: "Tuesdays 4:30 p.m. — October through June". Someone looking up a parish
   wants its whole schedule, and the note is also what explains why the map did
-  not show it. The phrase comes from `season_note` when there is one, and is
-  derived from the fields otherwise.
+  not show it. The phrase is derived from the fields, at the grain they were
+  filled in at.
 - **Recurrence detection** stops counting these slots as evidence of a weekly
   one. A monthly row credited to its bulletin's week, or a seasonal row credited
   out of season, would invent sightings on weeks the slot never happens — and a
@@ -266,9 +265,9 @@ notes that state the pattern outright ("First Friday of the month", "October
 through June", "Sept. 8 to May 30") and refuses anything with an exclusion in it
 ("Except 1st Saturday of the month"), where reading the ordinal would invert the
 meaning, or a named season ("Summer Mass"), where the months the parish means
-are not on the page. A season it reads keeps the matched phrase verbatim as its
-`season_note`. It skips a row the extractor has already qualified. Notes it
-cannot read are left exactly as they are.
+are not on the page. A range it reads keeps the days the note stated and no
+others. It skips a row the extractor has already qualified. Notes it cannot read
+are left exactly as they are.
 
 ## Environment Variables
 

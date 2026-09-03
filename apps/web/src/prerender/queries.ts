@@ -3,7 +3,6 @@ import { compareSchedule, computeNextOccurrence } from "../lib/schedule";
 import {
   parseSeasonDay,
   parseSeasonMonth,
-  parseSeasonNote,
   parseWeeksOfMonth,
 } from "../lib/schedulePattern";
 import { num, str } from "../lib/sqlRow";
@@ -88,7 +87,7 @@ export function getChurchEvents(
     `SELECT id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled,
             page_number, note, weeks_of_month,
             season_start_month, season_start_day,
-            season_end_month, season_end_day, season_note
+            season_end_month, season_end_day
      FROM event
      WHERE church_id = ? AND event_type IN (${typePlaceholders})`,
   );
@@ -109,7 +108,6 @@ export function getChurchEvents(
       row["season_start_day"], season_start_month,
     );
     const season_end_day = parseSeasonDay(row["season_end_day"], season_end_month);
-    const season_note = parseSeasonNote(row["season_note"]);
     const next_occurrence = computeNextOccurrence({
       cancelled,
       event_kind: kind,
@@ -121,7 +119,6 @@ export function getChurchEvents(
       season_start_day,
       season_end_month,
       season_end_day,
-      season_note,
     });
     // Match the SPA's fetchChurchEvents: hide cancelled events and specific-date
     // events whose date is already past (occurrence is null for both).
@@ -143,7 +140,6 @@ export function getChurchEvents(
       season_start_day,
       season_end_month,
       season_end_day,
-      season_note,
     });
   }
   stmt.free();

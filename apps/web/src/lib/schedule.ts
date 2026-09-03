@@ -48,8 +48,6 @@ export interface OccurrenceInput {
   season_start_day?: number | null;
   season_end_month?: number | null;
   season_end_day?: number | null;
-  /** The bulletin's own wording for that range. */
-  season_note?: string | null;
 }
 
 /** The recurrence qualifiers of an event, defaulted to a plain weekly slot. */
@@ -60,7 +58,6 @@ export function patternOf(event: Partial<SchedulePattern>): SchedulePattern {
     season_start_day: event.season_start_day ?? null,
     season_end_month: event.season_end_month ?? null,
     season_end_day: event.season_end_day ?? null,
-    season_note: event.season_note ?? null,
   };
 }
 

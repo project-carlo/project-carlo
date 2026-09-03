@@ -10,12 +10,10 @@ First Friday devotions as if they happened every Friday.
 
 A season is held to the day, not just the month, because bulletins state it that
 way: "Summer Masses, June 4 through September 10" starts on a Thursday in the
-first week of June and nothing before it. The days are what search and filtering
-read. They are not what a reader is shown — a parish that wrote "January to
-April" should not be quoted back as "January 1 – April 30" — so a season also
-carries `note`, the bulletin's own wording, which the frontend prefers over
-anything it could derive. Weeks of the month need no such note: "First Friday of
-the month" reads back the same way it went in.
+first week of June and nothing before it. A boundary with no day is not a
+missing value but a coarser statement of the same thing: "January to April" runs
+the whole of both months, and reads back to the parish in the words it used,
+without a January 1st or an April 30th it never printed.
 
 This module is the single place that decides what those qualifiers mean. It
 normalises the loose strings the LLM returns and answers whether a date falls
@@ -67,7 +65,6 @@ _MONTH_INDEX["sept"] = 9
 _WEEK_ORDER = {week: idx for idx, week in enumerate(WEEKS_OF_MONTH)}
 _NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
 _NON_DIGIT_RE = re.compile(r"[^0-9]")
-_WHITESPACE_RE = re.compile(r"\s+")
 
 
 def normalize_week_of_month(value: Any) -> str | None:
@@ -149,27 +146,18 @@ def normalize_day(value: Any, month: int | None) -> int | None:
     return value if 1 <= value <= DAYS_IN_MONTH[month - 1] else None
 
 
-def clean_note(value: Any) -> str | None:
-    """Collapse a free-text note to one tidy line, or None when it says nothing."""
-    if not isinstance(value, str):
-        return None
-    return _WHITESPACE_RE.sub(" ", value).strip() or None
-
-
 class Season(NamedTuple):
-    """The part of the year a slot runs, and how the bulletin worded it.
+    """The part of the year a slot runs.
 
     The months and days are inclusive bounds; a missing day means the boundary
-    sits at the edge of its month. `note` is what a reader is shown, so a parish
-    that wrote "January to April" is quoted, not paraphrased into exact days it
-    never printed.
+    sits at the edge of its month, which is how a bulletin naming only months
+    reads.
     """
 
     start_month: int | None = None
     start_day: int | None = None
     end_month: int | None = None
     end_day: int | None = None
-    note: str | None = None
 
     @property
     def is_set(self) -> bool:
@@ -185,13 +173,11 @@ def normalize_season(
     start_day: Any = None,
     end_month: Any = None,
     end_day: Any = None,
-    note: Any = None,
 ) -> Season:
     """Canonicalise a season range; a half-stated range is no range at all.
 
     "Runs from October" without an end month leaves the slot year-round rather
-    than inventing a December cutoff and hiding it for half the year. The note
-    goes with the range it describes: without one there is nothing to caption.
+    than inventing a December cutoff and hiding it for half the year.
     """
     start = normalize_month(start_month)
     end = normalize_month(end_month)
@@ -202,7 +188,6 @@ def normalize_season(
         start_day=normalize_day(start_day, start),
         end_month=end,
         end_day=normalize_day(end_day, end),
-        note=clean_note(note),
     )
 
 

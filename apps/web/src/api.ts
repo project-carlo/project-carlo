@@ -5,7 +5,6 @@ import {
   dateInSeason,
   parseSeasonDay,
   parseSeasonMonth,
-  parseSeasonNote,
   parseWeeksOfMonth,
   patternKey,
   type WeekOfMonth,
@@ -64,7 +63,6 @@ export interface RawEvent {
   season_start_day: number | null;
   season_end_month: number | null;
   season_end_day: number | null;
-  season_note: string | null;
 }
 
 type ChurchBase = Omit<ChurchMapItem, "event_types" | "upcoming_events">;
@@ -110,7 +108,6 @@ function mapEventRow(row: Record<string, unknown>): RawEvent {
     season_start_day: parseSeasonDay(row["season_start_day"], startMonth),
     season_end_month: endMonth,
     season_end_day: parseSeasonDay(row["season_end_day"], endMonth),
-    season_note: parseSeasonNote(row["season_note"]),
   };
   ev.occurrence = computeNextOccurrence(ev);
   return ev;
@@ -166,7 +163,7 @@ function loadAllEvents(db: Database): RawEvent[] {
             day_of_week, date, start_time, end_time, cancelled,
             page_number, note, weeks_of_month,
             season_start_month, season_start_day,
-            season_end_month, season_end_day, season_note
+            season_end_month, season_end_day
      FROM event`,
   );
   const results: RawEvent[] = [];
@@ -198,7 +195,6 @@ function toEventSummary(ev: RawEvent): EventSummary {
     season_start_day: ev.season_start_day,
     season_end_month: ev.season_end_month,
     season_end_day: ev.season_end_day,
-    season_note: ev.season_note,
   };
 }
 

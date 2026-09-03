@@ -27,7 +27,7 @@ LOGGER = logging.getLogger(__name__)
 # which keys the on-disk result cache, so an old bulletin re-processed after a
 # change is re-extracted instead of served from a cache that predates it.
 # 2: weeks_of_month and the season months on weekly slots.
-# 3: season boundaries to the day, plus the bulletin's own wording for them.
+# 3: season boundaries to the day.
 SCHEMA_VERSION = 3
 
 _RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
@@ -108,16 +108,6 @@ class WeeklySlot(BaseModel):
         description=(
             "Day of `season_end_month` the slot runs through, e.g. `10`. Only when the "
             "bulletin gives a date; leave null when it names the month alone."
-        ),
-    )
-    season_note: str | None = Field(
-        default=None,
-        description=(
-            "How the bulletin itself words the range, e.g. `October through June`, "
-            "`Summer schedule, June 4 - September 10`, `during the school year`. This "
-            "is shown to readers in place of the months and days, so keep the "
-            "bulletin's own phrasing. Set it whenever the season months are set; leave "
-            "null otherwise."
         ),
     )
     page_number: int | None = Field(default=None, description="1-indexed PDF page where this entry was found.")
@@ -239,7 +229,6 @@ def _collect_events(
                         item.get("season_start_day"),
                         item.get("season_end_month"),
                         item.get("season_end_day"),
-                        item.get("season_note"),
                     ),
                 )
             else:
@@ -304,7 +293,6 @@ def _pattern_fields(weeks_of_month: Any, season: Season) -> dict[str, Any]:
         "season_start_day": season.start_day,
         "season_end_month": season.end_month,
         "season_end_day": season.end_day,
-        "season_note": season.note,
     }
 
 
@@ -332,7 +320,6 @@ def _weekly_slot_to_event(
                 slot.season_start_day,
                 slot.season_end_month,
                 slot.season_end_day,
-                slot.season_note,
             ),
         ),
     }
@@ -556,8 +543,7 @@ Extract Mass, Confession, and Adoration schedule information from the attached C
 - Never duplicate a weekly slot as a single event just because the bulletin also mentions it in a specific week.
 - A weekly entry that only falls on certain weeks of the month ("First Friday devotions", "1st and 3rd Saturdays", "Healing Mass on the first Monday") still belongs in `weekly_schedule`: give it that weekday and list those weeks in `weeks_of_month`. Leave `weeks_of_month` empty for a slot that happens every week.
 - A weekly entry that only runs for part of the year ("Confessions Tuesdays, October through June", "summer Mass schedule", "resumes after Labor Day") also belongs in `weekly_schedule`: fill in `season_start_month` and `season_end_month`. Set both or neither. Use the months the bulletin states; when it names a season instead, use the months that season covers for this parish (summer as June through August, a school-year schedule as September through June). Read an exclusion the same way — a slot that does not run in July or August is a September-through-June slot.
-- When the bulletin dates the range precisely ("June 4 through September 10", "Masses resume Sept. 8"), also fill in `season_start_day` and `season_end_day`. Leave a day null when the bulletin names only the month; do not invent the 1st or the 30th.
-- Whenever you set the season months, set `season_note` to how the bulletin itself puts it — "October through June", "Summer schedule, June 4 - September 10", "during the school year". Readers are shown that phrase rather than the months and days, so quote the parish instead of paraphrasing it.
+- When the bulletin dates the range precisely ("June 4 through September 10", "Masses resume Sept. 8"), also fill in `season_start_day` and `season_end_day`. Leave a day null when the bulletin names only the month; do not invent the 1st or the 30th, since a range stated in whole months is read back to the reader in whole months.
 - Only add a `note` when there is genuinely special context worth surfacing (language, alternate location, benediction, etc.). No need to specify 'Vigil Mass', and do not restate in `note` what `weeks_of_month` or the season fields already carry — a slot on certain weeks of the month needs no note at all unless the bulletin says something further about it.
 - Identify the bulletin's own issue date and report it as `published_date`.
 - Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). In that case you may return empty event lists.

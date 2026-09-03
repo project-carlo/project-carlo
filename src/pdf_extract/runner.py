@@ -97,10 +97,10 @@ def _recurrence_pattern(ev: dict[str, Any]) -> dict[str, Any]:
     """The weeks-of-month and season keys for one row, omitted when unset.
 
     Only a small fraction of slots carry either qualifier, and events.json is
-    regenerated and committed every week, so writing six null keys onto every
+    regenerated and committed every week, so writing five null keys onto every
     row would cost more diff noise than it buys in uniformity. Readers use
     `.get()`, which cannot tell an absent key from a null one. A season's days
-    and note drop out the same way when the bulletin gave neither.
+    drop out the same way when the bulletin named only months.
     """
     pattern: dict[str, Any] = {}
     weeks = normalize_weeks_of_month(ev.get("weeks_of_month"))
@@ -111,7 +111,6 @@ def _recurrence_pattern(ev: dict[str, Any]) -> dict[str, Any]:
         ev.get("season_start_day"),
         ev.get("season_end_month"),
         ev.get("season_end_day"),
-        ev.get("season_note"),
     )
     if season.is_set:
         pattern["season_start_month"] = season.start_month
@@ -120,8 +119,6 @@ def _recurrence_pattern(ev: dict[str, Any]) -> dict[str, Any]:
         pattern["season_end_month"] = season.end_month
         if season.end_day is not None:
             pattern["season_end_day"] = season.end_day
-        if season.note is not None:
-            pattern["season_note"] = season.note
     return pattern
 
 

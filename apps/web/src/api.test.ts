@@ -25,7 +25,6 @@ function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
     season_start_day: null,
     season_end_month: null,
     season_end_day: null,
-    season_note: null,
     ...overrides,
   };
 }
@@ -64,7 +63,6 @@ describe("eventMatchesFilters", () => {
         season_start_day: 4,
         season_end_month: 9,
         season_end_day: 10,
-        season_note: "June 4 - September 10",
       });
       const filters: ChurchFilters = { types: [] };
       expect(eventMatchesFilters(summer, filters, new Date(2026, 5, 3))).toBe(

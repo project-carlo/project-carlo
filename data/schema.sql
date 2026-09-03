@@ -80,10 +80,7 @@ CREATE TABLE IF NOT EXISTS event (
     ),
     season_end_day INTEGER CHECK (
         season_end_day IS NULL OR season_end_day BETWEEN 1 AND 31
-    ),
-    -- The bulletin's own wording for the season ("January to April"), shown in
-    -- place of the exact days so a parish is quoted rather than paraphrased.
-    season_note TEXT
+    )
 );
 
 CREATE INDEX IF NOT EXISTS idx_event_bulletin ON event(bulletin_id);

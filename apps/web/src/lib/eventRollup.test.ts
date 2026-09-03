@@ -30,7 +30,6 @@ function event(overrides: Partial<EventSummary>): EventSummary {
     season_start_day: null,
     season_end_month: null,
     season_end_day: null,
-    season_note: null,
     ...overrides,
   };
 }

@@ -6,7 +6,6 @@ import {
   describeSchedulePattern,
   parseSeasonDay,
   parseSeasonMonth,
-  parseSeasonNote,
   parseWeeksOfMonth,
   patternKey,
   type SchedulePattern,
@@ -19,7 +18,6 @@ function pattern(overrides: Partial<SchedulePattern> = {}): SchedulePattern {
     season_start_day: null,
     season_end_month: null,
     season_end_day: null,
-    season_note: null,
     ...overrides,
   };
 }
@@ -63,17 +61,6 @@ describe("parseSeasonDay", () => {
 
   it("has nothing to refine without a month", () => {
     expect(parseSeasonDay(10, null)).toBeNull();
-  });
-});
-
-describe("parseSeasonNote", () => {
-  it("keeps the bulletin's wording, tidied to one line", () => {
-    expect(parseSeasonNote("October\n through  June")).toBe("October through June");
-  });
-
-  it("treats blank text as no note", () => {
-    expect(parseSeasonNote("   ")).toBeNull();
-    expect(parseSeasonNote(null)).toBeNull();
   });
 });
 
@@ -259,35 +246,28 @@ describe("describeSchedulePattern", () => {
     ).toBe("June 4 through September 10");
   });
 
-  it("quotes the bulletin rather than the exact days behind it", () => {
-    // The days are what filtering reads; "January 1 through April 30" is not
-    // what the parish printed, so it is not what the reader is shown.
+  it("keeps a range stated in whole months in whole months", () => {
+    // A parish that wrote "January to April" never said the 30th of April, and
+    // the null days are what keep it from being read back one.
     expect(
       describeSchedulePattern(
-        pattern({
-          season_start_month: 1,
-          season_start_day: 1,
-          season_end_month: 4,
-          season_end_day: 30,
-          season_note: "January to April",
-        }),
+        pattern({ season_start_month: 1, season_end_month: 4 }),
         "Wednesday",
       ),
-    ).toBe("January to April");
+    ).toBe("January through April");
   });
 
-  it("still derives the weeks of the month beside a quoted season", () => {
+  it("dates only the end the bulletin dated", () => {
     expect(
       describeSchedulePattern(
         pattern({
-          weeks_of_month: ["first"],
-          season_start_month: 10,
-          season_end_month: 6,
-          season_note: "during the school year",
+          season_start_month: 9,
+          season_start_day: 8,
+          season_end_month: 5,
         }),
-        "Friday",
+        "Sunday",
       ),
-    ).toBe("First Friday of the month, during the school year");
+    ).toBe("September 8 through May");
   });
 
   it("carries both qualifiers when a slot has both", () => {

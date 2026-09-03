@@ -21,8 +21,6 @@ export interface EventSummary {
   season_start_day: number | null;
   season_end_month: number | null;
   season_end_day: number | null;
-  /** The bulletin's own wording for that range, shown ahead of the dates. */
-  season_note: string | null;
 }
 
 export interface ChurchMapItem {

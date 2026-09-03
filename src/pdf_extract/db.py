@@ -253,7 +253,6 @@ def _load_events(conn) -> int:
                 entry.get("season_start_day"),
                 entry.get("season_end_month"),
                 entry.get("season_end_day"),
-                entry.get("season_note"),
             )
         else:
             weeks_of_month, season = None, NO_SEASON
@@ -269,8 +268,8 @@ def _load_events(conn) -> int:
                 continue
 
         conn.execute(
-            """INSERT INTO event(church_id, bulletin_id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled, page_number, note, weeks_of_month, season_start_month, season_start_day, season_end_month, season_end_day, season_note)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            """INSERT INTO event(church_id, bulletin_id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled, page_number, note, weeks_of_month, season_start_month, season_start_day, season_end_month, season_end_day)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (
                 church_row["id"],
                 bulletin_id,
@@ -288,7 +287,6 @@ def _load_events(conn) -> int:
                 season.start_day,
                 season.end_month,
                 season.end_day,
-                season.note,
             ),
         )
 

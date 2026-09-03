@@ -33,7 +33,6 @@ EVENTS = [
         "event_type": "confession", "event_kind": "weekly",
         "day_of_week": "Tuesday", "date": None, "start_time": "4:30 PM",
         "cancelled": False, "season_start_month": 10, "season_end_month": 6,
-        "season_note": "October through June",
     },
     {
         "church_slug": "holy-trinity", "bulletin_source_url": BULLETIN_URL,
@@ -41,7 +40,6 @@ EVENTS = [
         "date": None, "start_time": "8:30 AM", "cancelled": False,
         "season_start_month": 6, "season_start_day": 4,
         "season_end_month": 9, "season_end_day": 10,
-        "season_note": "June 4 - September 10",
     },
     {
         "church_slug": "holy-trinity", "bulletin_source_url": BULLETIN_URL,
@@ -56,7 +54,7 @@ EVENTS = [
         "date": "2026-09-04", "start_time": "8:00 AM", "cancelled": False,
         # A dated occurrence cannot recur, so a qualifier on one is meaningless.
         "weeks_of_month": ["first"], "season_start_month": 10,
-        "season_end_month": 6, "season_note": "October through June",
+        "season_end_month": 6,
     },
 ]
 
@@ -120,7 +118,6 @@ def test_qualifiers_reach_the_snapshot(data_dir: Path) -> None:
     assert plain["weeks_of_month"] is None
     assert plain["season_start_month"] is None
     assert plain["season_end_month"] is None
-    assert plain["season_note"] is None
 
     seasonal = rows["Tuesday"]
     assert seasonal["event_type"] == "confession"
@@ -128,23 +125,20 @@ def test_qualifiers_reach_the_snapshot(data_dir: Path) -> None:
     assert seasonal["weeks_of_month"] is None
     assert seasonal["season_start_month"] == 10
     assert seasonal["season_end_month"] == 6
-    # No day either side; the bulletin ranged whole months and is quoted so.
+    # No day either side; the bulletin ranged whole months.
     assert seasonal["season_start_day"] is None
     assert seasonal["season_end_day"] is None
-    assert seasonal["season_note"] == "October through June"
 
     dated_season = rows["Thursday"]
     assert dated_season["season_start_month"] == 6
     assert dated_season["season_start_day"] == 4
     assert dated_season["season_end_month"] == 9
     assert dated_season["season_end_day"] == 10
-    assert dated_season["season_note"] == "June 4 - September 10"
 
     monthly = rows["Friday"]
     assert monthly["weeks_of_month"] == "first"
     assert monthly["season_start_month"] is None
-    # Nothing to caption: "First Friday of the month" derives from the column.
-    assert monthly["season_note"] is None
+    # The special context that is left is an ordinary note, as it always was.
     assert monthly["note"] == "ends with Benediction"
 
 
@@ -154,4 +148,3 @@ def test_dated_events_are_never_qualified(data_dir: Path) -> None:
     assert dated["weeks_of_month"] is None
     assert dated["season_start_month"] is None
     assert dated["season_end_month"] is None
-    assert dated["season_note"] is None

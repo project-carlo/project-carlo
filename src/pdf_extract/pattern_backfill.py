@@ -18,11 +18,9 @@ invert its meaning. Anything it cannot read is left exactly as it is, and the
 row goes on behaving as it does today.
 
 The phrase it reads is removed from the note, since the fields now carry it and
-the frontend renders them itself — with one exception. A season keeps the words
-the parish printed, verbatim, in `season_note`: a bulletin that said "October
-through June" is quoted back that way rather than paraphrased as the exact days
-underneath. Weeks of the month need no such record, since "First Friday of the
-month" reads back the same either way.
+the frontend renders them itself. A range stated to the day ("June 4 -
+September 10") keeps those days; one stated in whole months ("October through
+June") keeps no days, and reads back in the whole months the parish printed.
 """
 
 from __future__ import annotations
@@ -34,7 +32,6 @@ from typing import Any
 
 from pdf_extract.schedule_pattern import (
     MONTH_NAMES,
-    clean_note,
     normalize_day,
     normalize_month,
     normalize_weeks_of_month,
@@ -136,10 +133,6 @@ def derive_pattern(note: str | None, day_of_week: Any) -> dict[str, Any] | None:
             derived["season_end_month"] = end_month
             if end_day is not None:
                 derived["season_end_day"] = end_day
-            # The words the parish printed, kept as printed: this is what the
-            # frontend shows, so a note that ranged whole months is not read
-            # back to anyone as a pair of exact dates it never named.
-            derived["season_note"] = clean_note(match.group(0))
             remaining = remaining[: match.start()] + " " + remaining[match.end():]
 
     if not derived:
