@@ -1,20 +1,10 @@
-import { DAY_ORDER, type WeekdayKey } from "../constants/days";
+import { DAY_ORDER, jsDayFor, type WeekdayKey } from "../constants/days";
 
 /**
  * Shared schedule logic for both the SPA and the prerenderer so that a static
  * church page and the live React page show the same set of events in the same
  * order.  Pure functions only; no DOM, React, or sql.js dependencies.
  */
-
-const MONDAY_INDEX: Record<string, number> = {
-  monday: 0,
-  tuesday: 1,
-  wednesday: 2,
-  thursday: 3,
-  friday: 4,
-  saturday: 5,
-  sunday: 6,
-};
 
 const EVENING_START_MINUTES = 16 * 60;
 
@@ -57,11 +47,10 @@ function nextForWeekly(
   startMinutes: number,
   today: Date,
 ): Date | null {
-  const dayIdx = MONDAY_INDEX[dayOfWeek.toLowerCase()];
-  if (dayIdx === undefined) return null;
+  const jsDay = jsDayFor(dayOfWeek);
+  if (jsDay < 0) return null;
   const hours = Math.floor(startMinutes / 60);
   const minutes = startMinutes % 60;
-  const jsDay = (dayIdx + 1) % 7; // Python: Monday=0; JS: Sunday=0
   const daysAhead = (jsDay - today.getDay() + 7) % 7;
   const target = new Date(today);
   target.setDate(target.getDate() + daysAhead);

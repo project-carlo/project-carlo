@@ -1,3 +1,4 @@
+import { FILTER_DAY_LABELS } from "../constants/days";
 import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
 import type { EventType } from "../types";
 
@@ -33,15 +34,9 @@ const MAX_TIME_MINUTE = MINUTES_PER_DAY - 1;
 
 // Day-index <-> URL abbreviation. Indices match FilterState.daysOfWeek
 // (0=Mon..6=Sun); the URL uses the lowercase 3-letter form.
-const DAY_INDEX_TO_ABBR = [
-  "mon",
-  "tue",
-  "wed",
-  "thu",
-  "fri",
-  "sat",
-  "sun",
-] as const;
+const DAY_INDEX_TO_ABBR = FILTER_DAY_LABELS.map((day) =>
+  day.abbr.toLowerCase(),
+);
 const DAY_ABBR_TO_INDEX: Record<string, number> = Object.fromEntries(
   DAY_INDEX_TO_ABBR.map((abbr, i) => [abbr, i]),
 );

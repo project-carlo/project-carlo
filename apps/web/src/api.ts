@@ -1,4 +1,5 @@
 import type { Database } from "sql.js";
+import { filterDayFromJsDay, jsDayFor } from "./constants/days";
 import { getDb } from "./db";
 import { compareSchedule, computeNextOccurrence } from "./lib/schedule";
 import { num, str } from "./lib/sqlRow";
@@ -19,16 +20,6 @@ export class ChurchNotFoundError extends Error {
     this.slug = slug;
   }
 }
-
-const DAY_TO_INDEX: Record<string, number> = {
-  monday: 0,
-  tuesday: 1,
-  wednesday: 2,
-  thursday: 3,
-  friday: 4,
-  saturday: 5,
-  sunday: 6,
-};
 
 export interface ChurchFilters {
   types: EventType[];
@@ -178,18 +169,16 @@ export function eventMatchesFilters(
   if (ev.cancelled) return false;
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {
     if (ev.event_kind === "weekly" && ev.day_of_week) {
-      const dayIdx = DAY_TO_INDEX[ev.day_of_week.toLowerCase()];
-      if (dayIdx === undefined || !filters.daysOfWeek.includes(dayIdx)) {
-        return false;
-      }
+      const dayIdx = filterDayFromJsDay(jsDayFor(ev.day_of_week));
+      if (dayIdx < 0 || !filters.daysOfWeek.includes(dayIdx)) return false;
     }
     // For specific_date, check if the date falls on a selected weekday
     if (ev.event_kind === "specific_date" && ev.date) {
       const d = parseEventDateForFilter(ev.date);
       if (!d) return false;
-      const jsDay = d.getDay();
-      const dayIdx = jsDay === 0 ? 6 : jsDay - 1;
-      if (!filters.daysOfWeek.includes(dayIdx)) return false;
+      if (!filters.daysOfWeek.includes(filterDayFromJsDay(d.getDay()))) {
+        return false;
+      }
     }
   }
   if (
