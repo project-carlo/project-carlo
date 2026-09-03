@@ -6,7 +6,7 @@ import logging
 import sqlite3
 from pathlib import Path
 
-from pdf_extract.schedule_extraction import extract_verification
+from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL, extract_verification
 from pdf_extract.storage import (
     VERIFY_RESULTS_PATH,
     church_list_for_prompt,
@@ -46,7 +46,7 @@ def _find_verified_parishes(conn: sqlite3.Connection) -> set[str]:
 def verify_churches(
     *,
     parish_name: str | None = None,
-    model: str = "gemini-3-flash-preview",
+    model: str = DEFAULT_GEMINI_MODEL,
 ) -> dict[str, int]:
     LOGGER.info("Starting verify stage (parish_name=%s, model=%s)", parish_name or "*all*", model)
     verify_results = load_json_dict(VERIFY_RESULTS_PATH)

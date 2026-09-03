@@ -13,7 +13,7 @@ from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.classifiers.openai_gpt import OpenAIClassifier
 
 REGISTRY: dict[str, Callable[[], Classifier]] = {
-    "gemini-flash": lambda: GeminiClassifier(model="gemini-3-flash-preview"),
+    "gemini-flash": lambda: GeminiClassifier(),
     "gpt-5.4-mini": lambda: OpenAIClassifier(model="gpt-5.4-mini"),
 }
 

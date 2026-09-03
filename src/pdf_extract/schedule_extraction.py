@@ -14,6 +14,11 @@ from google.genai import errors, types
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 LOGGER = logging.getLogger(__name__)
+
+# The Gemini model every stage defaults to. Bumping it here moves the whole
+# pipeline: process, verify, and the registered "gemini-flash" classifier.
+DEFAULT_GEMINI_MODEL = "gemini-3-flash-preview"
+
 _RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 _MAX_API_ATTEMPTS = 8
 _BASE_BACKOFF_SECONDS = 2.0
@@ -384,7 +389,7 @@ def extract_events(
     pdf_bytes: bytes,
     *,
     churches: list[dict],
-    model: str = "gemini-3-flash-preview",
+    model: str = DEFAULT_GEMINI_MODEL,
     today: date | None = None,
 ) -> dict[str, Any]:
     """Use Gemini to extract Mass, Confession, and Adoration schedule from a PDF.
@@ -475,7 +480,7 @@ def extract_verification(
     pdf_bytes: bytes,
     *,
     churches: list[dict],
-    model: str = "gemini-3-flash-preview",
+    model: str = DEFAULT_GEMINI_MODEL,
 ) -> dict[str, Any]:
     """Use Gemini to verify church data against a bulletin PDF.
 
