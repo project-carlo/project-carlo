@@ -2,13 +2,12 @@
 
 from __future__ import annotations
 
+import csv
 import json
 import logging
 import time
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
-
-import csv
 
 from pdf_extract.address import address_key, format_address
 from pdf_extract.storage import (

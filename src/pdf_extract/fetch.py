@@ -28,10 +28,10 @@ from pdf_extract.storage import (
 ECATHOLIC_BULLETINS_PATH = "/bulletins"
 ECATHOLIC_FILES_HOST = "files.ecatholic.com"
 ECATHOLIC_ANCHOR_SELECTOR = f"a[href*='{ECATHOLIC_FILES_HOST}']"
+ECATHOLIC_TYPE = "ecatholic"
 PARISHES_ONLINE_TYPE = "parishes_online"
 DISCOVER_MASS_TYPE = "discover_mass"
 OTHER_TYPE = "other"
-SUPPORTED_BULLETIN_PROVIDERS = {"ecatholic", PARISHES_ONLINE_TYPE, DISCOVER_MASS_TYPE, OTHER_TYPE}
 PARISHES_ONLINE_ORG_URL_TEMPLATE = "https://parishesonline.com/organization/{provider_id}"
 DISCOVER_MASS_BULLETIN_URL_TEMPLATE = "https://discovermass.com/church/{provider_id}/"
 
@@ -266,7 +266,7 @@ def _extract_ecatholic_pdf_url_from_href(*, href: str, base_url: str) -> tuple[s
     parsed = urlparse(absolute_href)
     host = parsed.netloc.lower()
     path = parsed.path.lower()
-    if host != "files.ecatholic.com":
+    if host != ECATHOLIC_FILES_HOST:
         return None
     if "bulletins" not in path:
         return None
@@ -665,35 +665,59 @@ def _extract_parishes_online_pdf_url_from_href(
 
 # ── Bulletin link resolution ────────────────────────────────────────────────
 
+BulletinLinkBuilder = Callable[..., BulletinLink]
+
+
+@dataclass(frozen=True)
+class _ProviderSpec:
+    """Everything the fetch stage needs to know about one bulletin provider."""
+
+    build: BulletinLinkBuilder
+    """Resolves the parish's latest bulletin link."""
+
+    id_column: str
+    """The parishes.csv column `build` takes as its provider_id."""
+
+
+# Adding a provider means writing its builder and adding one row here: this
+# table is what the fetch stage supports, and where each provider's id comes
+# from. Providers with a stable directory listing (parishesonline, discovermass)
+# are keyed by an account id; the rest start from the parish's own homepage.
+_PROVIDERS: dict[str, _ProviderSpec] = {
+    ECATHOLIC_TYPE: _ProviderSpec(
+        build=build_latest_ecatholic_bulletin_links, id_column="homepage_url",
+    ),
+    PARISHES_ONLINE_TYPE: _ProviderSpec(
+        build=build_latest_parishes_online_bulletin_links, id_column="provider_id",
+    ),
+    DISCOVER_MASS_TYPE: _ProviderSpec(
+        build=build_latest_discover_mass_bulletin_links, id_column="provider_id",
+    ),
+    OTHER_TYPE: _ProviderSpec(
+        build=build_latest_other_bulletin_links, id_column="homepage_url",
+    ),
+}
+
+SUPPORTED_BULLETIN_PROVIDERS = frozenset(_PROVIDERS)
+
+
 def _build_bulletin_link(
     bulletin_provider: str, fetch_provider_id: str, *, page: PageLike | None = None,
 ) -> BulletinLink:
-    if bulletin_provider == "ecatholic":
-        return build_latest_ecatholic_bulletin_links(provider_id=fetch_provider_id, page=page)
-    if bulletin_provider == PARISHES_ONLINE_TYPE:
-        return build_latest_parishes_online_bulletin_links(provider_id=fetch_provider_id, page=page)
-    if bulletin_provider == DISCOVER_MASS_TYPE:
-        return build_latest_discover_mass_bulletin_links(provider_id=fetch_provider_id, page=page)
-    if bulletin_provider == OTHER_TYPE:
-        return build_latest_other_bulletin_links(provider_id=fetch_provider_id, page=page)
-    raise ValueError(f"Unsupported bulletin_provider: {bulletin_provider}")
+    spec = _PROVIDERS.get(bulletin_provider)
+    if spec is None:
+        raise ValueError(f"Unsupported bulletin_provider: {bulletin_provider}")
+    return spec.build(provider_id=fetch_provider_id, page=page)
 
 
 def _resolve_fetch_source(parish) -> tuple[str, str] | None:
+    """The provider and provider id to fetch this parish with, or None to skip it."""
     provider = (parish["bulletin_provider"] or "").strip()
-    if provider not in SUPPORTED_BULLETIN_PROVIDERS:
+    spec = _PROVIDERS.get(provider)
+    if spec is None:
         return None
-
-    if provider in {PARISHES_ONLINE_TYPE, DISCOVER_MASS_TYPE}:
-        provider_id = (parish["provider_id"] or "").strip()
-        if not provider_id:
-            return None
-        return provider, provider_id
-
-    homepage_url = (parish["homepage_url"] or "").strip()
-    if not homepage_url:
-        return None
-    return provider, homepage_url
+    provider_id = (parish[spec.id_column] or "").strip()
+    return (provider, provider_id) if provider_id else None
 
 
 # ── HTTP helpers ────────────────────────────────────────────────────────────
