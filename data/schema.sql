@@ -65,15 +65,25 @@ CREATE TABLE IF NOT EXISTS event (
     -- on, as canonical ordinals ("first", "first,third", "last"). NULL means
     -- every week; see pdf_extract.schedule_pattern.
     weeks_of_month TEXT,
-    -- Inclusive month range a weekly slot runs in, 1-12. Both NULL means all
-    -- year; season_start_month > season_end_month wraps the new year
-    -- (October through June).
+    -- Inclusive range of the year a weekly slot runs in. Both months NULL means
+    -- all year; a start later in the calendar than the end wraps the new year
+    -- (October through June). A NULL day leaves that boundary at the edge of
+    -- its month, which is what a bulletin naming only months means.
     season_start_month INTEGER CHECK (
         season_start_month IS NULL OR season_start_month BETWEEN 1 AND 12
     ),
+    season_start_day INTEGER CHECK (
+        season_start_day IS NULL OR season_start_day BETWEEN 1 AND 31
+    ),
     season_end_month INTEGER CHECK (
         season_end_month IS NULL OR season_end_month BETWEEN 1 AND 12
-    )
+    ),
+    season_end_day INTEGER CHECK (
+        season_end_day IS NULL OR season_end_day BETWEEN 1 AND 31
+    ),
+    -- The bulletin's own wording for the season ("January to April"), shown in
+    -- place of the exact days so a parish is quoted rather than paraphrased.
+    season_note TEXT
 );
 
 CREATE INDEX IF NOT EXISTS idx_event_bulletin ON event(bulletin_id);

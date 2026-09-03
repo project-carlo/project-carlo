@@ -22,7 +22,10 @@ function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
     note: null,
     weeks_of_month: [],
     season_start_month: null,
+    season_start_day: null,
     season_end_month: null,
+    season_end_day: null,
+    season_note: null,
     ...overrides,
   };
 }
@@ -50,6 +53,32 @@ describe("eventMatchesFilters", () => {
 
     it("shows the same slot once its season has started", () => {
       expect(eventMatchesFilters(seasonal, { types: [] }, november)).toBe(true);
+    });
+
+    it("holds a dated season to the day, not just the month", () => {
+      // "Summer Masses, June 4 - September 10": the two days either side of
+      // the range fall in months the season also touches.
+      const summer = rawEvent({
+        day_of_week: "thursday",
+        season_start_month: 6,
+        season_start_day: 4,
+        season_end_month: 9,
+        season_end_day: 10,
+        season_note: "June 4 - September 10",
+      });
+      const filters: ChurchFilters = { types: [] };
+      expect(eventMatchesFilters(summer, filters, new Date(2026, 5, 3))).toBe(
+        false,
+      );
+      expect(eventMatchesFilters(summer, filters, new Date(2026, 5, 4))).toBe(
+        true,
+      );
+      expect(eventMatchesFilters(summer, filters, new Date(2026, 8, 10))).toBe(
+        true,
+      );
+      expect(eventMatchesFilters(summer, filters, new Date(2026, 8, 11))).toBe(
+        false,
+      );
     });
 
     it("keeps a monthly slot: it does run at this time of year", () => {

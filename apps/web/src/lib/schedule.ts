@@ -24,12 +24,16 @@ const MONDAY_INDEX: Record<string, number> = {
 const EVENING_START_MINUTES = 16 * 60;
 
 /**
- * How far ahead a weekly slot's next occurrence is searched for. Just over a
- * year, so even a slot that runs one month a year — a last-Thursday Holy Hour
- * that pauses for the summer — still resolves to a real date instead of
- * vanishing from the church page.
+ * How far ahead a weekly slot's next occurrence is searched for.
+ *
+ * Seven years, because the qualifiers multiply: a last-Thursday Holy Hour that
+ * only runs June 4 through June 20 offers three candidate dates a year, and one
+ * of them is the last Thursday of its month far less often than that. A slot
+ * that resolves to nothing is dropped from the church page, so the loop is
+ * cheap insurance — it exits on the first match, which for all but a handful of
+ * slots is the coming week.
  */
-const MAX_LOOKAHEAD_WEEKS = 70;
+const MAX_LOOKAHEAD_WEEKS = 366;
 
 export interface OccurrenceInput {
   cancelled: boolean;
@@ -39,21 +43,24 @@ export interface OccurrenceInput {
   date: string | null;
   /** Weeks of the month the slot falls on; absent or empty means every week. */
   weeks_of_month?: WeekOfMonth[];
-  /** Inclusive month range the slot runs in; absent or null means all year. */
+  /** Inclusive range of the year the slot runs in; absent means all year. */
   season_start_month?: number | null;
+  season_start_day?: number | null;
   season_end_month?: number | null;
+  season_end_day?: number | null;
+  /** The bulletin's own wording for that range. */
+  season_note?: string | null;
 }
 
 /** The recurrence qualifiers of an event, defaulted to a plain weekly slot. */
-export function patternOf(event: {
-  weeks_of_month?: WeekOfMonth[];
-  season_start_month?: number | null;
-  season_end_month?: number | null;
-}): SchedulePattern {
+export function patternOf(event: Partial<SchedulePattern>): SchedulePattern {
   return {
     weeks_of_month: event.weeks_of_month ?? [],
     season_start_month: event.season_start_month ?? null,
+    season_start_day: event.season_start_day ?? null,
     season_end_month: event.season_end_month ?? null,
+    season_end_day: event.season_end_day ?? null,
+    season_note: event.season_note ?? null,
   };
 }
 

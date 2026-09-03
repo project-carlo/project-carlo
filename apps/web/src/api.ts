@@ -2,8 +2,10 @@ import type { Database } from "sql.js";
 import { getDb } from "./db";
 import { compareSchedule, computeNextOccurrence, patternOf } from "./lib/schedule";
 import {
-  monthInSeason,
+  dateInSeason,
+  parseSeasonDay,
   parseSeasonMonth,
+  parseSeasonNote,
   parseWeeksOfMonth,
   patternKey,
   type WeekOfMonth,
@@ -59,7 +61,10 @@ export interface RawEvent {
   note: string | null;
   weeks_of_month: WeekOfMonth[];
   season_start_month: number | null;
+  season_start_day: number | null;
   season_end_month: number | null;
+  season_end_day: number | null;
+  season_note: string | null;
 }
 
 type ChurchBase = Omit<ChurchMapItem, "event_types" | "upcoming_events">;
@@ -85,6 +90,8 @@ export function parseEventDateForFilter(eventDate: string): Date | null {
 }
 
 function mapEventRow(row: Record<string, unknown>): RawEvent {
+  const startMonth = parseSeasonMonth(row["season_start_month"]);
+  const endMonth = parseSeasonMonth(row["season_end_month"]);
   const ev: RawEvent = {
     id: row["id"] as number,
     church_id: row["church_id"] as number,
@@ -99,8 +106,11 @@ function mapEventRow(row: Record<string, unknown>): RawEvent {
     page_number: num(row["page_number"]),
     note: str(row["note"]),
     weeks_of_month: parseWeeksOfMonth(row["weeks_of_month"]),
-    season_start_month: parseSeasonMonth(row["season_start_month"]),
-    season_end_month: parseSeasonMonth(row["season_end_month"]),
+    season_start_month: startMonth,
+    season_start_day: parseSeasonDay(row["season_start_day"], startMonth),
+    season_end_month: endMonth,
+    season_end_day: parseSeasonDay(row["season_end_day"], endMonth),
+    season_note: parseSeasonNote(row["season_note"]),
   };
   ev.occurrence = computeNextOccurrence(ev);
   return ev;
@@ -154,7 +164,9 @@ function loadAllEvents(db: Database): RawEvent[] {
   const stmt = db.prepare(
     `SELECT id, church_id, event_type, event_kind,
             day_of_week, date, start_time, end_time, cancelled,
-            page_number, note, weeks_of_month, season_start_month, season_end_month
+            page_number, note, weeks_of_month,
+            season_start_month, season_start_day,
+            season_end_month, season_end_day, season_note
      FROM event`,
   );
   const results: RawEvent[] = [];
@@ -183,7 +195,10 @@ function toEventSummary(ev: RawEvent): EventSummary {
     note: ev.note,
     weeks_of_month: ev.weeks_of_month,
     season_start_month: ev.season_start_month,
+    season_start_day: ev.season_start_day,
     season_end_month: ev.season_end_month,
+    season_end_day: ev.season_end_day,
+    season_note: ev.season_note,
   };
 }
 
@@ -196,12 +211,7 @@ export function eventMatchesFilters(
   // The map answers "where can I go this week", so a slot that does not resume
   // until October is not an answer in September. Monthly slots stay: they do
   // run at this time of year, and the popup says which week of the month.
-  if (
-    ev.event_kind === "weekly" &&
-    !monthInSeason(
-      today.getMonth() + 1, ev.season_start_month, ev.season_end_month,
-    )
-  ) {
+  if (ev.event_kind === "weekly" && !dateInSeason(today, patternOf(ev))) {
     return false;
   }
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {

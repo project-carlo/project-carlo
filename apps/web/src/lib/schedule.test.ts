@@ -214,6 +214,31 @@ describe("computeNextOccurrence with recurrence qualifiers", () => {
     ).toBe(new Date(2026, 9, 2, 19, 0, 0, 0).toISOString());
   });
 
+  it("waits out a season that has not reached its start day yet", () => {
+    // "Summer Fridays, September 12 - September 30", asked on the 1st: the
+    // Friday of the 4th is in the right month but before the range opens.
+    expect(
+      next({
+        season_start_month: 9,
+        season_start_day: 12,
+        season_end_month: 9,
+        season_end_day: 30,
+      }),
+    ).toBe(new Date(2026, 8, 18, 19, 0, 0, 0).toISOString());
+  });
+
+  it("rolls a season past its end day round to next year", () => {
+    // Ends September 3, and today is the 1st: the coming Friday is already out.
+    expect(
+      next({
+        season_start_month: 6,
+        season_start_day: 4,
+        season_end_month: 9,
+        season_end_day: 3,
+      }),
+    ).toBe(new Date(2027, 5, 4, 19, 0, 0, 0).toISOString());
+  });
+
   it("treats a slot with no qualifiers exactly as before", () => {
     expect(next({})).toBe(new Date(2026, 8, 4, 19, 0, 0, 0).toISOString());
   });

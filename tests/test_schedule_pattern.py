@@ -12,7 +12,10 @@ from pdf_extract.recurrence import occurrence_from_row
 from pdf_extract.runner import flatten_extracted_events
 from pdf_extract.schedule_extraction import SchedulePayload, reconstruct_events
 from pdf_extract.schedule_pattern import (
-    month_in_season,
+    NO_SEASON,
+    Season,
+    date_in_season,
+    normalize_day,
     normalize_month,
     normalize_season,
     normalize_weeks_of_month,
@@ -58,31 +61,85 @@ def test_normalize_month(raw: object, expected: int | None) -> None:
     assert normalize_month(raw) == expected
 
 
+@pytest.mark.parametrize(
+    ("raw", "month", "expected"),
+    [
+        (4, 6, 4), ("4", 6, 4), ("4th", 6, 4), (31, 1, 31),
+        # February keeps its leap day: a boundary is a position in every year.
+        (29, 2, 29), (30, 2, None),
+        (31, 9, None), (0, 6, None), (None, 6, None), (True, 6, None),
+        # A day without a month has nothing to refine.
+        (4, None, None),
+    ],
+)
+def test_normalize_day(raw: object, month: int | None, expected: int | None) -> None:
+    assert normalize_day(raw, month) == expected
+
+
 def test_half_stated_season_is_no_season() -> None:
     """Without both ends the slot stays year-round rather than half-hidden."""
-    assert normalize_season("October", None) == (None, None)
-    assert normalize_season(None, "June") == (None, None)
-    assert normalize_season("October", "June") == (10, 6)
+    assert normalize_season("October", None, None) == NO_SEASON
+    assert normalize_season(None, None, "June") == NO_SEASON
+    assert normalize_season("October", None, "June", None) == Season(10, None, 6, None)
+
+
+def test_season_keeps_the_days_and_the_bulletin_wording() -> None:
+    season = normalize_season("June", "4", "September", 10, "  June 4 -\n September 10 ")
+    assert season == Season(6, 4, 9, 10, "June 4 - September 10")
+
+
+def test_a_note_needs_a_season_to_caption() -> None:
+    """Nothing to quote about a range the bulletin never stated."""
+    assert normalize_season(None, None, None, None, "all summer").note is None
+
+
+def test_an_impossible_day_falls_back_to_its_whole_month() -> None:
+    assert normalize_season("February", 30, "April", 31) == Season(2, None, 4, None)
 
 
 @pytest.mark.parametrize(
-    ("month", "expected"),
-    [(9, False), (10, True), (12, True), (1, True), (6, True), (7, False)],
+    ("month", "day", "expected"),
+    [(9, 30, False), (10, 1, True), (12, 31, True), (1, 1, True),
+     (6, 30, True), (7, 1, False)],
 )
-def test_season_wrapping_the_new_year(month: int, expected: bool) -> None:
+def test_season_wrapping_the_new_year(month: int, day: int, expected: bool) -> None:
     """October through June covers the turn of the year, not the middle of it."""
-    assert month_in_season(month, 10, 6) is expected
+    season = normalize_season("October", None, "June", None)
+    assert date_in_season(month, day, season) is expected
 
 
 @pytest.mark.parametrize(
-    ("month", "expected"), [(5, False), (6, True), (8, True), (9, False)],
+    ("month", "day", "expected"),
+    [(5, 31, False), (6, 1, True), (8, 31, True), (9, 1, False)],
 )
-def test_season_within_one_year(month: int, expected: bool) -> None:
-    assert month_in_season(month, 6, 8) is expected
+def test_season_within_one_year(month: int, day: int, expected: bool) -> None:
+    season = normalize_season("June", None, "August", None)
+    assert date_in_season(month, day, season) is expected
 
 
-def test_no_season_means_every_month() -> None:
-    assert all(month_in_season(month, None, None) for month in range(1, 13))
+@pytest.mark.parametrize(
+    ("month", "day", "expected"),
+    [(6, 3, False), (6, 4, True), (7, 15, True), (9, 10, True), (9, 11, False)],
+)
+def test_dated_season_runs_to_the_day(month: int, day: int, expected: bool) -> None:
+    """"June 4 through September 10" does not start on the 1st of June."""
+    season = normalize_season("June", 4, "September", 10)
+    assert date_in_season(month, day, season) is expected
+
+
+@pytest.mark.parametrize(
+    ("month", "day", "expected"),
+    [(10, 14, False), (10, 15, True), (2, 1, True), (4, 20, True), (4, 21, False)],
+)
+def test_dated_season_wrapping_the_new_year(
+    month: int, day: int, expected: bool,
+) -> None:
+    season = normalize_season("October", 15, "April", 20)
+    assert date_in_season(month, day, season) is expected
+
+
+def test_no_season_means_every_day() -> None:
+    assert all(date_in_season(month, 1, NO_SEASON) for month in range(1, 13))
 
 
 # ── Extraction ──────────────────────────────────────────────────────────────
@@ -103,12 +160,41 @@ def _weekly_payload(**slot: object) -> dict:
 
 def test_extraction_canonicalises_the_qualifiers() -> None:
     payload = SchedulePayload.model_validate(
-        _weekly_payload(season_start_month="October", season_end_month="June")
+        _weekly_payload(
+            season_start_month="October",
+            season_end_month="June",
+            season_note="October through June",
+        )
     )
     event = reconstruct_events(payload)["events"][0]
     assert event["season_start_month"] == 10
     assert event["season_end_month"] == 6
+    assert event["season_start_day"] is None
+    assert event["season_end_day"] is None
+    assert event["season_note"] == "October through June"
     assert event["weeks_of_month"] == []
+
+
+def test_extraction_keeps_a_dated_range_and_its_wording() -> None:
+    payload = SchedulePayload.model_validate(
+        _weekly_payload(
+            season_start_month="June", season_start_day=4,
+            season_end_month="September", season_end_day=10,
+            season_note="Summer schedule, June 4 - September 10",
+        )
+    )
+    event = reconstruct_events(payload)["events"][0]
+    assert event["season_start_day"] == 4
+    assert event["season_end_day"] == 10
+    assert event["season_note"] == "Summer schedule, June 4 - September 10"
+
+
+def test_extraction_drops_a_note_with_no_season_to_caption() -> None:
+    """A caption for a range the model never stated would caption nothing."""
+    payload = SchedulePayload.model_validate(
+        _weekly_payload(season_note="all summer long")
+    )
+    assert reconstruct_events(payload)["events"][0]["season_note"] is None
 
 
 def test_lenient_path_carries_the_qualifiers() -> None:
@@ -127,6 +213,7 @@ def test_dated_slots_carry_no_qualifiers() -> None:
     event = reconstruct_events(payload)["events"][0]
     assert event["weeks_of_month"] == []
     assert event["season_start_month"] is None
+    assert event["season_note"] is None
 
 
 def test_events_json_omits_the_qualifiers_when_unset() -> None:
@@ -138,13 +225,32 @@ def test_events_json_omits_the_qualifiers_when_unset() -> None:
         {"church_slug": "b", "type": "adoration", "kind": "weekly",
          "day_of_week": "Friday", "start_time": "7:00 PM",
          "weeks_of_month": ["first"], "season_start_month": 10,
-         "season_end_month": 6},
+         "season_end_month": 6, "season_note": "October through June"},
     ]})
     assert "weeks_of_month" not in plain
     assert "season_start_month" not in plain
+    assert "season_note" not in plain
     assert qualified["weeks_of_month"] == ["first"]
     assert qualified["season_start_month"] == 10
     assert qualified["season_end_month"] == 6
+    assert qualified["season_note"] == "October through June"
+    # Days the bulletin never named stay off the row rather than arriving null.
+    assert "season_start_day" not in qualified
+    assert "season_end_day" not in qualified
+
+
+def test_events_json_keeps_the_days_a_bulletin_did_name() -> None:
+    entry = {"source_url": "https://example.test/b.pdf"}
+    (row,) = flatten_extracted_events(entry, {"events": [
+        {"church_slug": "a", "type": "mass", "kind": "weekly",
+         "day_of_week": "Thursday", "start_time": "8:30 AM",
+         "season_start_month": 6, "season_start_day": 4,
+         "season_end_month": 9, "season_end_day": 10,
+         "season_note": "June 4 - September 10"},
+    ]})
+    assert row["season_start_day"] == 4
+    assert row["season_end_day"] == 10
+    assert row["season_note"] == "June 4 - September 10"
 
 
 # ── Recurrence evidence ─────────────────────────────────────────────────────
@@ -191,6 +297,16 @@ def test_in_season_row_is_still_evidence() -> None:
     assert occurrence[1] == date(2026, 10, 9)
 
 
+def test_a_season_that_starts_mid_month_is_read_to_the_day() -> None:
+    """A slot starting October 15 saw nothing on the Friday of October 9."""
+    row = _weekly_row(
+        season_start_month=10, season_start_day=15,
+        season_end_month=6, season_end_day=1,
+    )
+    assert occurrence_from_row(row, bulletin_date=date(2026, 10, 4)) is None
+    assert occurrence_from_row(row, bulletin_date=date(2026, 10, 18)) is not None
+
+
 # ── Backfill from notes ─────────────────────────────────────────────────────
 @pytest.mark.parametrize(
     ("note", "day", "expected"),
@@ -210,10 +326,28 @@ def test_in_season_row_is_still_evidence() -> None:
          {"weeks_of_month": ["first"], "note": None}),
         ("First Friday of the month; ends with benediction", "Friday",
          {"weeks_of_month": ["first"], "note": "ends with benediction"}),
+        # A season names no days when the bulletin named none, and is quoted
+        # back in the words the parish printed.
         ("October through June", "Tuesday",
-         {"season_start_month": 10, "season_end_month": 6, "note": None}),
+         {"season_start_month": 10, "season_end_month": 6,
+          "season_note": "October through June", "note": None}),
         ("June 4 - September 10", "Thursday",
-         {"season_start_month": 6, "season_end_month": 9, "note": None}),
+         {"season_start_month": 6, "season_start_day": 4,
+          "season_end_month": 9, "season_end_day": 10,
+          "season_note": "June 4 - September 10", "note": None}),
+        ("Sept. 8 to May 30, Latin", "Sunday",
+         {"season_start_month": 9, "season_start_day": 8,
+          "season_end_month": 5, "season_end_day": 30,
+          "season_note": "Sept. 8 to May 30", "note": "Latin"}),
+        # The year beside a month is not a day of it.
+        ("October through June 2027", "Tuesday",
+         {"season_start_month": 10, "season_end_month": 6,
+          "season_note": "October through June", "note": "2027"}),
+        # Both qualifiers at once: the weeks derive, the season is quoted.
+        ("1st Saturdays, June 1 through August 31", "Saturday",
+         {"weeks_of_month": ["first"], "season_start_month": 6,
+          "season_start_day": 1, "season_end_month": 8, "season_end_day": 31,
+          "season_note": "June 1 through August 31", "note": None}),
     ],
 )
 def test_derive_pattern_reads_a_stated_schedule(
@@ -265,6 +399,10 @@ def test_backfill_updates_only_weekly_rows_without_qualifiers(tmp_path) -> None:
     rows = json.loads(events_path.read_text(encoding="utf-8"))
     assert rows[0]["season_start_month"] == 10
     assert rows[0]["season_end_month"] == 6
+    assert rows[0]["season_note"] == "October through June"
+    # No day either side, because the bulletin named neither.
+    assert "season_start_day" not in rows[0]
+    assert "season_end_day" not in rows[0]
     assert rows[0]["note"] is None
     assert "weeks_of_month" not in rows[1]
     assert rows[1]["note"] == "First Friday"

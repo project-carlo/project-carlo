@@ -7,6 +7,7 @@ import logging
 from pathlib import Path
 
 from pdf_extract.schedule_pattern import (
+    NO_SEASON,
     normalize_season,
     normalize_weeks_of_month,
     weeks_of_month_to_text,
@@ -247,11 +248,15 @@ def _load_events(conn) -> int:
             weeks_of_month = weeks_of_month_to_text(
                 normalize_weeks_of_month(entry.get("weeks_of_month"))
             )
-            season_start, season_end = normalize_season(
-                entry.get("season_start_month"), entry.get("season_end_month"),
+            season = normalize_season(
+                entry.get("season_start_month"),
+                entry.get("season_start_day"),
+                entry.get("season_end_month"),
+                entry.get("season_end_day"),
+                entry.get("season_note"),
             )
         else:
-            weeks_of_month, season_start, season_end = None, None, None
+            weeks_of_month, season = None, NO_SEASON
 
         event_date = None
         if event_kind == "specific_date":
@@ -264,8 +269,8 @@ def _load_events(conn) -> int:
                 continue
 
         conn.execute(
-            """INSERT INTO event(church_id, bulletin_id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled, page_number, note, weeks_of_month, season_start_month, season_end_month)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            """INSERT INTO event(church_id, bulletin_id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled, page_number, note, weeks_of_month, season_start_month, season_start_day, season_end_month, season_end_day, season_note)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (
                 church_row["id"],
                 bulletin_id,
@@ -279,8 +284,11 @@ def _load_events(conn) -> int:
                 page_number,
                 note,
                 weeks_of_month,
-                season_start,
-                season_end,
+                season.start_month,
+                season.start_day,
+                season.end_month,
+                season.end_day,
+                season.note,
             ),
         )
 

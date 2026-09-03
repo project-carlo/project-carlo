@@ -16,9 +16,13 @@ export interface EventSummary {
   note: string | null;
   /** Weeks of the month a weekly slot falls on; empty means every week. */
   weeks_of_month: WeekOfMonth[];
-  /** Inclusive month range a weekly slot runs in; null means all year. */
+  /** Inclusive range of the year a weekly slot runs in; null means all year. */
   season_start_month: number | null;
+  season_start_day: number | null;
   season_end_month: number | null;
+  season_end_day: number | null;
+  /** The bulletin's own wording for that range, shown ahead of the dates. */
+  season_note: string | null;
 }
 
 export interface ChurchMapItem {

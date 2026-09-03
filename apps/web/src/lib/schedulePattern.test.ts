@@ -2,9 +2,11 @@ import { describe, expect, it } from "vitest";
 import {
   dateMatchesPattern,
   dateMatchesWeeks,
+  dateInSeason,
   describeSchedulePattern,
-  monthInSeason,
+  parseSeasonDay,
   parseSeasonMonth,
+  parseSeasonNote,
   parseWeeksOfMonth,
   patternKey,
   type SchedulePattern,
@@ -14,7 +16,10 @@ function pattern(overrides: Partial<SchedulePattern> = {}): SchedulePattern {
   return {
     weeks_of_month: [],
     season_start_month: null,
+    season_start_day: null,
     season_end_month: null,
+    season_end_day: null,
+    season_note: null,
     ...overrides,
   };
 }
@@ -44,23 +49,91 @@ describe("parseSeasonMonth", () => {
   });
 });
 
-describe("monthInSeason", () => {
+describe("parseSeasonDay", () => {
+  it("keeps a day the month can actually hold", () => {
+    expect(parseSeasonDay(10, 9)).toBe(10);
+    expect(parseSeasonDay("4", 6)).toBe(4);
+  });
+
+  it("drops a day that cannot fall in its month, leaving the whole month", () => {
+    expect(parseSeasonDay(31, 9)).toBeNull();
+    expect(parseSeasonDay(30, 2)).toBeNull();
+    expect(parseSeasonDay(0, 6)).toBeNull();
+  });
+
+  it("has nothing to refine without a month", () => {
+    expect(parseSeasonDay(10, null)).toBeNull();
+  });
+});
+
+describe("parseSeasonNote", () => {
+  it("keeps the bulletin's wording, tidied to one line", () => {
+    expect(parseSeasonNote("October\n through  June")).toBe("October through June");
+  });
+
+  it("treats blank text as no note", () => {
+    expect(parseSeasonNote("   ")).toBeNull();
+    expect(parseSeasonNote(null)).toBeNull();
+  });
+});
+
+describe("dateInSeason", () => {
+  const on = (month: number, day: number, overrides: Partial<SchedulePattern>) =>
+    dateInSeason(new Date(2026, month - 1, day), pattern(overrides));
+
   it("covers the turn of the year when the range wraps", () => {
     // October through June: the school-year shape a parish schedule takes.
-    expect(monthInSeason(9, 10, 6)).toBe(false);
-    expect(monthInSeason(10, 10, 6)).toBe(true);
-    expect(monthInSeason(1, 10, 6)).toBe(true);
-    expect(monthInSeason(6, 10, 6)).toBe(true);
-    expect(monthInSeason(7, 10, 6)).toBe(false);
+    const schoolYear = { season_start_month: 10, season_end_month: 6 };
+    expect(on(9, 30, schoolYear)).toBe(false);
+    expect(on(10, 1, schoolYear)).toBe(true);
+    expect(on(1, 15, schoolYear)).toBe(true);
+    expect(on(6, 30, schoolYear)).toBe(true);
+    expect(on(7, 1, schoolYear)).toBe(false);
   });
 
   it("reads a range inside one year as written", () => {
-    expect(monthInSeason(5, 6, 8)).toBe(false);
-    expect(monthInSeason(7, 6, 8)).toBe(true);
+    const summer = { season_start_month: 6, season_end_month: 8 };
+    expect(on(5, 31, summer)).toBe(false);
+    expect(on(7, 4, summer)).toBe(true);
+  });
+
+  it("holds a dated range to the day at both ends", () => {
+    // "June 4 - September 10": the first days of June are not in it.
+    const dated = {
+      season_start_month: 6,
+      season_start_day: 4,
+      season_end_month: 9,
+      season_end_day: 10,
+    };
+    expect(on(6, 3, dated)).toBe(false);
+    expect(on(6, 4, dated)).toBe(true);
+    expect(on(9, 10, dated)).toBe(true);
+    expect(on(9, 11, dated)).toBe(false);
+  });
+
+  it("runs a dated range that wraps the new year to the day", () => {
+    const dated = {
+      season_start_month: 10,
+      season_start_day: 15,
+      season_end_month: 4,
+      season_end_day: 20,
+    };
+    expect(on(10, 14, dated)).toBe(false);
+    expect(on(10, 15, dated)).toBe(true);
+    expect(on(12, 31, dated)).toBe(true);
+    expect(on(4, 20, dated)).toBe(true);
+    expect(on(4, 21, dated)).toBe(false);
+  });
+
+  it("stretches an undated boundary across its whole month", () => {
+    const months = { season_start_month: 1, season_end_month: 4 };
+    expect(on(1, 1, months)).toBe(true);
+    expect(on(4, 30, months)).toBe(true);
+    expect(on(5, 1, months)).toBe(false);
   });
 
   it("treats a slot with no range as running all year", () => {
-    expect(monthInSeason(2, null, null)).toBe(true);
+    expect(on(2, 14, {})).toBe(true);
   });
 });
 
@@ -134,6 +207,13 @@ describe("patternKey", () => {
       patternKey(pattern({ weeks_of_month: ["second"] })),
     );
   });
+
+  it("separates seasons that share their months but not their days", () => {
+    const june = { season_start_month: 6, season_end_month: 9 };
+    expect(patternKey(pattern({ ...june, season_start_day: 4 }))).not.toBe(
+      patternKey(pattern(june)),
+    );
+  });
 });
 
 describe("describeSchedulePattern", () => {
@@ -163,6 +243,51 @@ describe("describeSchedulePattern", () => {
         "Tuesday",
       ),
     ).toBe("October through June");
+  });
+
+  it("dates the range when the bulletin dated it", () => {
+    expect(
+      describeSchedulePattern(
+        pattern({
+          season_start_month: 6,
+          season_start_day: 4,
+          season_end_month: 9,
+          season_end_day: 10,
+        }),
+        "Thursday",
+      ),
+    ).toBe("June 4 through September 10");
+  });
+
+  it("quotes the bulletin rather than the exact days behind it", () => {
+    // The days are what filtering reads; "January 1 through April 30" is not
+    // what the parish printed, so it is not what the reader is shown.
+    expect(
+      describeSchedulePattern(
+        pattern({
+          season_start_month: 1,
+          season_start_day: 1,
+          season_end_month: 4,
+          season_end_day: 30,
+          season_note: "January to April",
+        }),
+        "Wednesday",
+      ),
+    ).toBe("January to April");
+  });
+
+  it("still derives the weeks of the month beside a quoted season", () => {
+    expect(
+      describeSchedulePattern(
+        pattern({
+          weeks_of_month: ["first"],
+          season_start_month: 10,
+          season_end_month: 6,
+          season_note: "during the school year",
+        }),
+        "Friday",
+      ),
+    ).toBe("First Friday of the month, during the school year");
   });
 
   it("carries both qualifiers when a slot has both", () => {

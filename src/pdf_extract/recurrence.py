@@ -38,7 +38,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.schedule_pattern import (
-    month_in_season,
+    date_in_season,
     normalize_season,
     normalize_weeks_of_month,
 )
@@ -213,10 +213,13 @@ def occurrence_from_row(
             return None
         offset = (weekday - bulletin_date.weekday()) % 7
         occurred = bulletin_date + timedelta(days=offset)
-        season_start, season_end = normalize_season(
-            row.get("season_start_month"), row.get("season_end_month"),
+        season = normalize_season(
+            row.get("season_start_month"),
+            row.get("season_start_day"),
+            row.get("season_end_month"),
+            row.get("season_end_day"),
         )
-        if not month_in_season(occurred.month, season_start, season_end):
+        if not date_in_season(occurred.month, occurred.day, season):
             return None
         return (key, occurred)
     return None

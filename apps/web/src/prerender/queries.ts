@@ -1,6 +1,11 @@
 import type { Database } from "sql.js";
 import { compareSchedule, computeNextOccurrence } from "../lib/schedule";
-import { parseSeasonMonth, parseWeeksOfMonth } from "../lib/schedulePattern";
+import {
+  parseSeasonDay,
+  parseSeasonMonth,
+  parseSeasonNote,
+  parseWeeksOfMonth,
+} from "../lib/schedulePattern";
 import { num, str } from "../lib/sqlRow";
 import type { ChurchDetail, EventSummary, EventType } from "../types";
 
@@ -81,7 +86,9 @@ export function getChurchEvents(
   const typePlaceholders = types.map(() => "?").join(",");
   const stmt = db.prepare(
     `SELECT id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled,
-            page_number, note, weeks_of_month, season_start_month, season_end_month
+            page_number, note, weeks_of_month,
+            season_start_month, season_start_day,
+            season_end_month, season_end_day, season_note
      FROM event
      WHERE church_id = ? AND event_type IN (${typePlaceholders})`,
   );
@@ -98,6 +105,11 @@ export function getChurchEvents(
     const weeks_of_month = parseWeeksOfMonth(row["weeks_of_month"]);
     const season_start_month = parseSeasonMonth(row["season_start_month"]);
     const season_end_month = parseSeasonMonth(row["season_end_month"]);
+    const season_start_day = parseSeasonDay(
+      row["season_start_day"], season_start_month,
+    );
+    const season_end_day = parseSeasonDay(row["season_end_day"], season_end_month);
+    const season_note = parseSeasonNote(row["season_note"]);
     const next_occurrence = computeNextOccurrence({
       cancelled,
       event_kind: kind,
@@ -106,7 +118,10 @@ export function getChurchEvents(
       date,
       weeks_of_month,
       season_start_month,
+      season_start_day,
       season_end_month,
+      season_end_day,
+      season_note,
     });
     // Match the SPA's fetchChurchEvents: hide cancelled events and specific-date
     // events whose date is already past (occurrence is null for both).
@@ -125,7 +140,10 @@ export function getChurchEvents(
       note: str(row["note"]),
       weeks_of_month,
       season_start_month,
+      season_start_day,
       season_end_month,
+      season_end_day,
+      season_note,
     });
   }
   stmt.free();

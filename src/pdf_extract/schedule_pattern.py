@@ -8,8 +8,17 @@ could only put them in `note` — free text nothing downstream reads — so the
 frontend advertised an October-to-June confession slot in September, and listed
 First Friday devotions as if they happened every Friday.
 
-This module is the single place that decides what those two qualifiers mean. It
-normalises the loose strings the LLM returns and answers whether a month falls
+A season is held to the day, not just the month, because bulletins state it that
+way: "Summer Masses, June 4 through September 10" starts on a Thursday in the
+first week of June and nothing before it. The days are what search and filtering
+read. They are not what a reader is shown — a parish that wrote "January to
+April" should not be quoted back as "January 1 – April 30" — so a season also
+carries `note`, the bulletin's own wording, which the frontend prefers over
+anything it could derive. Weeks of the month need no such note: "First Friday of
+the month" reads back the same way it went in.
+
+This module is the single place that decides what those qualifiers mean. It
+normalises the loose strings the LLM returns and answers whether a date falls
 inside a season range. `pdf_extract.db` writes the normalised values into the
 `event` table, and `apps/web/src/lib/schedulePattern.ts` mirrors the same rules
 in the browser.
@@ -18,7 +27,7 @@ in the browser.
 from __future__ import annotations
 
 import re
-from typing import Any
+from typing import Any, NamedTuple
 
 # Which occurrences of a weekday within a month a slot falls on. "last" is kept
 # distinct from "fourth": a five-Friday month has a fourth Friday and a
@@ -31,6 +40,11 @@ MONTH_NAMES: tuple[str, ...] = (
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
 )
+
+# February is given 29 days: a season boundary is a recurring calendar position,
+# not a date in one particular year, and "Adoration through February 29" is a
+# real thing for a parish to print in a leap year.
+DAYS_IN_MONTH: tuple[int, ...] = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 
 _WEEK_ALIASES: dict[str, str] = {}
 for _index, _week in enumerate(WEEKS_OF_MONTH[:5], start=1):
@@ -52,6 +66,8 @@ _MONTH_INDEX["sept"] = 9
 
 _WEEK_ORDER = {week: idx for idx, week in enumerate(WEEKS_OF_MONTH)}
 _NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
+_NON_DIGIT_RE = re.compile(r"[^0-9]")
+_WHITESPACE_RE = re.compile(r"\s+")
 
 
 def normalize_week_of_month(value: Any) -> str | None:
@@ -114,28 +130,96 @@ def normalize_month(value: Any) -> int | None:
     return _MONTH_INDEX.get(_NON_ALNUM_RE.sub("", raw))
 
 
-def normalize_season(start: Any, end: Any) -> tuple[int | None, int | None]:
+def normalize_day(value: Any, month: int | None) -> int | None:
+    """Parse a day of the month, dropped when it cannot fall in `month`.
+
+    A day is only ever a refinement of the month beside it: dropping an
+    unreadable or impossible one ("February 30") leaves the boundary at the
+    whole month, which is the coarser but still correct reading.
+    """
+    if month is None or isinstance(value, bool):
+        return None
+    if isinstance(value, str):
+        digits = _NON_DIGIT_RE.sub("", value)  # Tolerate "4th".
+        if not digits:
+            return None
+        value = int(digits)
+    if not isinstance(value, int):
+        return None
+    return value if 1 <= value <= DAYS_IN_MONTH[month - 1] else None
+
+
+def clean_note(value: Any) -> str | None:
+    """Collapse a free-text note to one tidy line, or None when it says nothing."""
+    if not isinstance(value, str):
+        return None
+    return _WHITESPACE_RE.sub(" ", value).strip() or None
+
+
+class Season(NamedTuple):
+    """The part of the year a slot runs, and how the bulletin worded it.
+
+    The months and days are inclusive bounds; a missing day means the boundary
+    sits at the edge of its month. `note` is what a reader is shown, so a parish
+    that wrote "January to April" is quoted, not paraphrased into exact days it
+    never printed.
+    """
+
+    start_month: int | None = None
+    start_day: int | None = None
+    end_month: int | None = None
+    end_day: int | None = None
+    note: str | None = None
+
+    @property
+    def is_set(self) -> bool:
+        """Whether this season actually bounds anything."""
+        return self.start_month is not None and self.end_month is not None
+
+
+NO_SEASON = Season()
+
+
+def normalize_season(
+    start_month: Any,
+    start_day: Any = None,
+    end_month: Any = None,
+    end_day: Any = None,
+    note: Any = None,
+) -> Season:
     """Canonicalise a season range; a half-stated range is no range at all.
 
     "Runs from October" without an end month leaves the slot year-round rather
-    than inventing a December cutoff and hiding it for half the year.
+    than inventing a December cutoff and hiding it for half the year. The note
+    goes with the range it describes: without one there is nothing to caption.
     """
-    start_month = normalize_month(start)
-    end_month = normalize_month(end)
-    if start_month is None or end_month is None:
-        return None, None
-    return start_month, end_month
+    start = normalize_month(start_month)
+    end = normalize_month(end_month)
+    if start is None or end is None:
+        return NO_SEASON
+    return Season(
+        start_month=start,
+        start_day=normalize_day(start_day, start),
+        end_month=end,
+        end_day=normalize_day(end_day, end),
+        note=clean_note(note),
+    )
 
 
-def month_in_season(month: int, start: int | None, end: int | None) -> bool:
-    """Whether `month` falls inside an inclusive season range.
+def date_in_season(month: int, day: int, season: Season) -> bool:
+    """Whether the (month, day) position falls inside an inclusive season range.
 
     A range that wraps the new year (October through June) is the common case
-    for a parish schedule tied to the school year, so `start > end` reads as
-    "start month to December, then January to end month".
+    for a parish schedule tied to the school year, so a start later in the
+    calendar than the end reads as "start to New Year's Eve, then New Year's Day
+    to end". A boundary stated without a day covers its whole month, which is
+    what "January to April" means when the bulletin names no dates.
     """
-    if start is None or end is None:
+    if not season.is_set:
         return True
+    start = (season.start_month, season.start_day or 1)
+    end = (season.end_month, season.end_day or DAYS_IN_MONTH[season.end_month - 1])
+    position = (month, day)
     if start <= end:
-        return start <= month <= end
-    return month >= start or month <= end
+        return start <= position <= end
+    return position >= start or position <= end

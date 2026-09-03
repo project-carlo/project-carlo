@@ -9,9 +9,17 @@
  * map offered the confession slot in September and listed the devotions as
  * though they happened every Friday.
  *
+ * A season is bounded to the day, because bulletins bound it that way: a summer
+ * schedule that runs "June 4 through September 10" is not the whole of June.
+ * Those days are what filtering reads. They are not what a reader is told —
+ * `season_note` holds the bulletin's own wording, and it wins over anything
+ * derived here, so a parish that printed "January to April" is quoted rather
+ * than corrected to "January 1 through April 30". Weeks of the month carry no
+ * such note: "First Friday of the month" says itself.
+ *
  * The rules here mirror `src/pdf_extract/schedule_pattern.py`, which normalises
- * the same two qualifiers on the way into the snapshot. Pure functions only, so
- * the SPA and the prerenderer read a schedule the same way.
+ * the same qualifiers on the way into the snapshot. Pure functions only, so the
+ * SPA and the prerenderer read a schedule the same way.
  */
 
 export const WEEKS_OF_MONTH = [
@@ -28,9 +36,15 @@ export type WeekOfMonth = (typeof WEEKS_OF_MONTH)[number];
 export interface SchedulePattern {
   /** Weeks of the month the slot falls on; empty means every week. */
   weeks_of_month: WeekOfMonth[];
-  /** Inclusive month range the slot runs in, 1-12; null means all year. */
+  /** Inclusive range of the year the slot runs in; null months mean all year. */
   season_start_month: number | null;
+  /** Day of the start month; null puts the boundary at the 1st. */
+  season_start_day: number | null;
   season_end_month: number | null;
+  /** Day of the end month; null puts the boundary at the month's last day. */
+  season_end_day: number | null;
+  /** The bulletin's own wording for the range, shown in place of the dates. */
+  season_note: string | null;
 }
 
 const WEEK_SET = new Set<string>(WEEKS_OF_MONTH);
@@ -49,6 +63,10 @@ const MONTH_NAMES = [
   "November",
   "December",
 ];
+
+// February gets 29: a season boundary is a calendar position that comes round
+// every year, not a date in one of them.
+const DAYS_IN_MONTH = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 /** Parse the stored `weeks_of_month` column ("first,third") into tokens. */
 export function parseWeeksOfMonth(value: unknown): WeekOfMonth[] {
@@ -72,29 +90,54 @@ export function parseSeasonMonth(value: unknown): number | null {
 }
 
 /**
- * Whether a month falls inside an inclusive season range.
+ * Parse a stored season day against the month it belongs to.
  *
- * A range that wraps the new year (October through June) is the common case for
- * a schedule tied to the school year, so `start > end` reads as "start month to
- * December, then January to end month".
+ * A day is only ever a refinement of that month, so dropping one that cannot
+ * fall in it leaves the boundary at the whole month — coarser, still true.
  */
-export function monthInSeason(
-  month: number,
-  start: number | null,
-  end: number | null,
-): boolean {
-  if (start === null || end === null) return true;
-  if (start <= end) return month >= start && month <= end;
-  return month >= start || month <= end;
+export function parseSeasonDay(value: unknown, month: number | null): number | null {
+  if (month === null || value === null || value === undefined || value === "") {
+    return null;
+  }
+  const day = typeof value === "number" ? value : Number(value);
+  if (!Number.isInteger(day) || day < 1 || day > DAYS_IN_MONTH[month - 1]) {
+    return null;
+  }
+  return day;
 }
 
-/** Whether `date` falls in the part of the year this slot runs. */
+/** Parse a stored season note, treating blank text as no note. */
+export function parseSeasonNote(value: unknown): string | null {
+  if (typeof value !== "string") return null;
+  return value.replace(/\s+/g, " ").trim() || null;
+}
+
+/**
+ * Whether a (month, day) position falls inside an inclusive season range.
+ *
+ * A range that wraps the new year (October through June) is the common case for
+ * a schedule tied to the school year, so a start later in the calendar than the
+ * end reads as "start to New Year's Eve, then New Year's Day to end". A
+ * boundary with no day covers its whole month, which is what "January to April"
+ * means when the bulletin named no dates.
+ */
 export function dateInSeason(date: Date, pattern: SchedulePattern): boolean {
-  return monthInSeason(
-    date.getMonth() + 1,
-    pattern.season_start_month,
-    pattern.season_end_month,
-  );
+  const { season_start_month: startMonth, season_end_month: endMonth } = pattern;
+  if (startMonth === null || endMonth === null) return true;
+  const start = [startMonth, pattern.season_start_day ?? 1] as const;
+  const end = [
+    endMonth,
+    pattern.season_end_day ?? DAYS_IN_MONTH[endMonth - 1],
+  ] as const;
+  const position = [date.getMonth() + 1, date.getDate()] as const;
+
+  const onOrAfter = (a: readonly [number, number], b: readonly [number, number]) =>
+    a[0] !== b[0] ? a[0] > b[0] : a[1] >= b[1];
+
+  if (onOrAfter(end, start)) {
+    return onOrAfter(position, start) && onOrAfter(end, position);
+  }
+  return onOrAfter(position, start) || onOrAfter(end, position);
 }
 
 /** Which occurrence of its weekday within the month `date` is, 1-5. */
@@ -148,7 +191,10 @@ export function patternKey(pattern: SchedulePattern): string {
   return [
     pattern.weeks_of_month.join("+"),
     pattern.season_start_month ?? "",
+    pattern.season_start_day ?? "",
     pattern.season_end_month ?? "",
+    pattern.season_end_day ?? "",
+    pattern.season_note ?? "",
   ].join(":");
 }
 
@@ -183,13 +229,27 @@ export function describeWeeksOfMonth(
   return `${joinWithAnd(ordinals)} ${dayLabel}${plural} of the month`;
 }
 
-/** "October through June". */
-export function describeSeason(
-  start: number | null,
-  end: number | null,
-): string | null {
+/** "October", or "June 4" once the bulletin has dated the boundary. */
+function describeBoundary(month: number, day: number | null): string {
+  const name = MONTH_NAMES[month - 1];
+  return day === null ? name : `${name} ${day}`;
+}
+
+/**
+ * When the slot runs, in the bulletin's words where it gave any.
+ *
+ * The dates underneath are exact because filtering needs them to be, but a
+ * parish that wrote "January to April" never said the 30th of April, so quoting
+ * it back is both truer to the source and shorter to read.
+ */
+export function describeSeason(pattern: SchedulePattern): string | null {
+  if (pattern.season_note !== null) return pattern.season_note;
+  const { season_start_month: start, season_end_month: end } = pattern;
   if (start === null || end === null) return null;
-  return `${MONTH_NAMES[start - 1]} through ${MONTH_NAMES[end - 1]}`;
+  return (
+    `${describeBoundary(start, pattern.season_start_day)} through ` +
+    describeBoundary(end, pattern.season_end_day)
+  );
 }
 
 /**
@@ -205,7 +265,7 @@ export function describeSchedulePattern(
 ): string | null {
   const parts = [
     describeWeeksOfMonth(pattern.weeks_of_month, dayOfWeek),
-    describeSeason(pattern.season_start_month, pattern.season_end_month),
+    describeSeason(pattern),
   ].filter((part): part is string => part !== null);
   return parts.length > 0 ? parts.join(", ") : null;
 }

@@ -39,7 +39,10 @@ CREATE TABLE event (
     note TEXT,
     weeks_of_month TEXT,        -- "first", "first,third", "last"; NULL = every week
     season_start_month INTEGER, -- inclusive 1-12; NULL = all year
-    season_end_month INTEGER    -- inclusive 1-12, wrapping when < start
+    season_start_day INTEGER,   -- inclusive 1-31; NULL = from the 1st of the month
+    season_end_month INTEGER,   -- inclusive 1-12, wrapping when < start
+    season_end_day INTEGER,     -- inclusive 1-31; NULL = to the end of the month
+    season_note TEXT            -- the bulletin's own wording for the range
 );
 
 CREATE INDEX idx_event_church ON event(church_id);

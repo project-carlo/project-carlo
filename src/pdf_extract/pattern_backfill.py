@@ -18,9 +18,11 @@ invert its meaning. Anything it cannot read is left exactly as it is, and the
 row goes on behaving as it does today.
 
 The phrase it reads is removed from the note, since the fields now carry it and
-the frontend renders them itself. A range stated to the day ("June 4 -
-September 10") narrows to whole months on the way in; the model has no finer
-grain than a month.
+the frontend renders them itself — with one exception. A season keeps the words
+the parish printed, verbatim, in `season_note`: a bulletin that said "October
+through June" is quoted back that way rather than paraphrased as the exact days
+underneath. Weeks of the month need no such record, since "First Friday of the
+month" reads back the same either way.
 """
 
 from __future__ import annotations
@@ -32,6 +34,8 @@ from typing import Any
 
 from pdf_extract.schedule_pattern import (
     MONTH_NAMES,
+    clean_note,
+    normalize_day,
     normalize_month,
     normalize_weeks_of_month,
 )
@@ -49,11 +53,20 @@ _SEPARATOR = r"(?:\s*[,&+]\s*(?:and\s+)?|\s+and\s+|\s+or\s+)"
 _ORDINAL_LIST = rf"{_ORDINAL}(?:{_SEPARATOR}{_ORDINAL})*"
 _ORDINAL_TOKEN_RE = re.compile(_ORDINAL, re.I)
 
-_MONTH = "|".join(MONTH_NAMES)
-# "October through June", and "June 4 - September 10" with the days along for
-# the ride so they are consumed rather than left stranded in the note.
+# Longest first so "September" is not cut short to "Sep" with "tember" left in
+# the note. A trailing period is consumed but not captured; `normalize_month`
+# reads the abbreviations.
+_MONTH = "|".join(sorted(
+    {*MONTH_NAMES, *(name[:3] for name in MONTH_NAMES), "Sept"},
+    key=len, reverse=True,
+))
+# The day is optional and never swallows part of a year: "October through June"
+# leaves both days unset, "June 4 - September 10" fills them in, and "October
+# through June 2027" keeps its hands off the 2027.
+_DAY = r"(?:\s+(\d{1,2})(?!\d)(?:st|nd|rd|th)?)?"
+_MONTH_DAY = rf"\b({_MONTH})\b\.?{_DAY}"
 _SEASON_RE = re.compile(
-    rf"\b({_MONTH})\b\s*\d{{0,2}}\s*(?:through|thru|to|until|–|—|-)\s*({_MONTH})\b\s*\d{{0,2}}",
+    rf"{_MONTH_DAY}\s*(?:through|thru|to|until|–|—|-)\s*{_MONTH_DAY}",
     re.I,
 )
 
@@ -113,10 +126,20 @@ def derive_pattern(note: str | None, day_of_week: Any) -> dict[str, Any] | None:
     match = _SEASON_RE.search(remaining)
     if match:
         start_month = normalize_month(match.group(1))
-        end_month = normalize_month(match.group(2))
+        end_month = normalize_month(match.group(3))
         if start_month is not None and end_month is not None:
+            start_day = normalize_day(match.group(2), start_month)
+            end_day = normalize_day(match.group(4), end_month)
             derived["season_start_month"] = start_month
+            if start_day is not None:
+                derived["season_start_day"] = start_day
             derived["season_end_month"] = end_month
+            if end_day is not None:
+                derived["season_end_day"] = end_day
+            # The words the parish printed, kept as printed: this is what the
+            # frontend shows, so a note that ranged whole months is not read
+            # back to anyone as a pair of exact dates it never named.
+            derived["season_note"] = clean_note(match.group(0))
             remaining = remaining[: match.start()] + " " + remaining[match.end():]
 
     if not derived:
