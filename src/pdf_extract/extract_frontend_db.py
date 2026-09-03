@@ -22,6 +22,43 @@ SOURCE_DB = ROOT / "data" / "parish_events.db"
 DEST_DB = ROOT / "apps" / "web" / "public" / "frontend.snapshot"
 FRONTEND_SCHEMA_PATH = ROOT / "data" / "frontend_schema.sql"
 
+# Columns of the frontend_schema.sql tables, in the order the SELECTs below
+# produce them. Named rather than positional so a column added to the schema
+# fails loudly here instead of silently shifting every value one place over.
+_CHURCH_COLUMNS = (
+    "id, parish_id, slug, name, address_line1, address_line2, city, state,"
+    " postal_code, latitude, longitude, homepage_url, bulletin_url"
+)
+_EVENT_COLUMNS = (
+    "id, church_id, event_type, event_kind, day_of_week, date, start_time,"
+    " end_time, cancelled, page_number, note"
+)
+
+
+def _latest_bulletin_order(alias: str = "") -> str:
+    """ORDER BY that puts a parish's current bulletin first.
+
+    Most recently published, then most recently fetched, then most recently
+    processed, with the highest id as a deterministic tie-break. Both queries
+    below rank by it — church.bulletin_url has to name the same bulletin the
+    copied events came from — and process.py mirrors it in Python as
+    `_frontend_bulletin_rank` to decide what events.json may compact away.
+    """
+    col = f"{alias}." if alias else ""
+    return (
+        f"COALESCE({col}published_date, '') DESC,"
+        f" COALESCE({col}fetched_at, '') DESC,"
+        f" COALESCE({col}processed_at, '') DESC,"
+        f" {col}id DESC"
+    )
+
+
+def _insert_all(
+    conn: sqlite3.Connection, table: str, columns: str, rows: list[tuple]
+) -> None:
+    placeholders = ", ".join("?" * (columns.count(",") + 1))
+    conn.executemany(f"INSERT INTO {table}({columns}) VALUES ({placeholders})", rows)
+
 
 def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> None:
     if not source.exists():
@@ -48,27 +85,22 @@ def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> None:
         dst.executescript(FRONTEND_SCHEMA_PATH.read_text(encoding="utf-8"))
 
         churches = src.execute(
-            """
+            f"""
             SELECT c.id, c.parish_id, c.slug, c.name, c.address_line1, c.address_line2,
                    c.city, c.state, c.postal_code, c.latitude, c.longitude,
                    p.homepage_url,
                    (SELECT b.source_url FROM bulletin b
                     WHERE b.parish_id = c.parish_id AND b.source_url IS NOT NULL
-                    ORDER BY COALESCE(b.published_date, '') DESC,
-                             COALESCE(b.fetched_at, '') DESC,
-                             COALESCE(b.processed_at, '') DESC, b.id DESC
+                    ORDER BY {_latest_bulletin_order("b")}
                     LIMIT 1)
             FROM church c
             LEFT JOIN parish p ON c.parish_id = p.id
             """
         ).fetchall()
-        dst.executemany(
-            "INSERT INTO church VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            churches,
-        )
+        _insert_all(dst, "church", _CHURCH_COLUMNS, churches)
 
         events = src.execute(
-            """
+            f"""
             SELECT e.id, e.church_id, e.event_type, e.event_kind,
                    e.day_of_week, e.date, e.start_time, e.end_time, e.cancelled,
                    e.page_number, e.note
@@ -78,18 +110,13 @@ def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> None:
                 SELECT parish_id, id,
                        ROW_NUMBER() OVER (
                            PARTITION BY parish_id
-                           ORDER BY COALESCE(published_date, '') DESC,
-                                    COALESCE(fetched_at, '') DESC,
-                                    COALESCE(processed_at, '') DESC,
-                                    id DESC
+                           ORDER BY {_latest_bulletin_order()}
                        ) AS rn
                 FROM bulletin
             ) latest ON b.parish_id = latest.parish_id AND b.id = latest.id AND latest.rn = 1
             """
         ).fetchall()
-        dst.executemany(
-            "INSERT INTO event VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", events
-        )
+        _insert_all(dst, "event", _EVENT_COLUMNS, events)
 
         dst.commit()
         dst.execute("VACUUM")
