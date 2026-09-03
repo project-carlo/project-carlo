@@ -60,7 +60,7 @@ def _insert_all(
     conn.executemany(f"INSERT INTO {table}({columns}) VALUES ({placeholders})", rows)
 
 
-def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> None:
+def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> dict[str, object]:
     if not source.exists():
         raise FileNotFoundError(f"Source database not found: {source}")
 
@@ -143,7 +143,10 @@ def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> None:
         compressed_size_kb,
         raw_size_kb,
     )
-
-
-if __name__ == "__main__":
-    extract()
+    return {
+        "churches": church_count,
+        "events": event_count,
+        "raw_kb": round(raw_size_kb, 1),
+        "compressed_kb": round(compressed_size_kb, 1),
+        "snapshot_path": str(dest),
+    }

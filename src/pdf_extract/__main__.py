@@ -29,6 +29,7 @@ from pdf_extract.classifiers import available_classifiers
 from pdf_extract.compare import compare
 from pdf_extract.db import create_db
 from pdf_extract.detect import run_detection
+from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
 from pdf_extract.fetch import fetch_bulletins
 from pdf_extract.geocode import run_backfill
@@ -143,6 +144,11 @@ def _cmd_db_create(_args: argparse.Namespace) -> Result:
 
 def _cmd_db_drop(_args: argparse.Namespace) -> Result:
     return {"deleted": delete_db(DEFAULT_DB_PATH), "db_path": str(DEFAULT_DB_PATH)}
+
+
+def _cmd_extract_frontend_db(_args: argparse.Namespace) -> Result:
+    _ensure_db()
+    return extract_frontend_db()
 
 
 def _cmd_verify_frontend_snapshot(_args: argparse.Namespace) -> Result:
@@ -299,6 +305,14 @@ def _build_parser() -> argparse.ArgumentParser:
     db_drop_parser = db_subparsers.add_parser("drop", help="Delete the SQLite DB file")
     db_drop_parser.set_defaults(handler=_cmd_db_drop)
     _add_common_args(db_drop_parser)
+
+    # -- extract frontend db --
+    extract_frontend_db_parser = subparsers.add_parser(
+        "extract-frontend-db",
+        help="Rebuild the DB and write apps/web/public/frontend.snapshot",
+    )
+    extract_frontend_db_parser.set_defaults(handler=_cmd_extract_frontend_db)
+    _add_common_args(extract_frontend_db_parser)
 
     # -- verify frontend snapshot --
     verify_frontend_snapshot_parser = subparsers.add_parser(
