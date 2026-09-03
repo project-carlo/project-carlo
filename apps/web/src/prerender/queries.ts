@@ -1,9 +1,9 @@
 import type { Database } from "sql.js";
+import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
+import { CHURCH_DETAIL_COLUMNS, mapChurchDetailRow } from "../lib/churchRow";
 import { compareSchedule, computeNextOccurrence } from "../lib/schedule";
 import { num, str } from "../lib/sqlRow";
 import type { ChurchDetail, EventSummary, EventType } from "../types";
-
-const ALL_TYPES: EventType[] = ["mass", "confession", "adoration"];
 
 export function getAllChurchSlugs(db: Database): string[] {
   const result = db.exec("SELECT slug FROM church ORDER BY name");
@@ -39,37 +39,22 @@ export function getAllChurchesForIndex(db: Database): ChurchIndexEntry[] {
 
 export function getChurchDetail(db: Database, slug: string): ChurchDetail {
   const stmt = db.prepare(
-    `SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code,
-            latitude, longitude, homepage_url, bulletin_url FROM church WHERE slug = ?`,
+    `SELECT ${CHURCH_DETAIL_COLUMNS} FROM church WHERE slug = ?`,
   );
   stmt.bind([slug]);
   if (!stmt.step()) {
     stmt.free();
     throw new Error(`Church not found: ${slug}`);
   }
-  const row = stmt.getAsObject();
+  const detail = mapChurchDetailRow(stmt.getAsObject());
   stmt.free();
-  return {
-    id: row["id"] as number,
-    parish_id: row["parish_id"] as number,
-    slug: row["slug"] as string,
-    name: str(row["name"]),
-    address_line1: str(row["address_line1"]),
-    address_line2: str(row["address_line2"]),
-    city: str(row["city"]),
-    state: str(row["state"]),
-    postal_code: str(row["postal_code"]),
-    latitude: num(row["latitude"]),
-    longitude: num(row["longitude"]),
-    homepage_url: str(row["homepage_url"]),
-    bulletin_url: str(row["bulletin_url"]),
-  };
+  return detail;
 }
 
 export function getChurchEvents(
   db: Database,
   slug: string,
-  types: EventType[] = ALL_TYPES,
+  types: EventType[] = EVENT_TYPE_ORDER,
 ): EventSummary[] {
   const idResult = db.exec("SELECT id FROM church WHERE slug = ?", [slug]);
   if (idResult.length === 0 || idResult[0].values.length === 0) {

@@ -28,8 +28,13 @@ function todayDate(): Date {
   return new Date(now.getFullYear(), now.getMonth(), now.getDate());
 }
 
-function parseEventDate(value: string): Date | null {
-  // Prefer explicit YYYY-MM-DD parsing to avoid timezone/date shifts.
+/**
+ * Parse an event date to a local-midnight `Date`, or null if unparseable.
+ *
+ * YYYY-MM-DD is read field by field: `new Date("2026-06-07")` is parsed as UTC
+ * and renders as the day before in any negative-offset timezone.
+ */
+export function parseIsoDateLocal(value: string): Date | null {
   const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value.trim());
   if (isoMatch) {
     const year = Number.parseInt(isoMatch[1], 10);
@@ -63,7 +68,7 @@ function nextForSpecific(
   startMinutes: number,
   today: Date,
 ): Date | null {
-  const parsed = parseEventDate(eventDate);
+  const parsed = parseIsoDateLocal(eventDate);
   if (!parsed) return null;
   // Drop events whose calendar day is already past; same-day events still show
   // (date-only comparison, so an earlier start_time today is not filtered out).
