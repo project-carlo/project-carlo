@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bulletin ground truth</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>&#9989;</text></svg>" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__identity">
+        <h1>Bulletin ground truth</h1>
+        <p id="progress-line" class="topbar__progress">Loading…</p>
+      </div>
+
+      <div class="topbar__controls">
+        <label class="control">
+          <span>Order</span>
+          <select id="sort-select">
+            <option value="disagreement">Most disagreement</option>
+            <option value="quickest">Quickest first</option>
+            <option value="parish">By parish</option>
+            <option value="recent">Most recent</option>
+          </select>
+        </label>
+        <label class="control">
+          <span>Show</span>
+          <select id="filter-select">
+            <option value="todo">Not finished</option>
+            <option value="disputed">Unsettled disagreements</option>
+            <option value="all">All bulletins</option>
+            <option value="done">Completed</option>
+          </select>
+        </label>
+        <button id="queue-toggle" class="btn" type="button" title="Queue (q)">Queue</button>
+        <button id="help-toggle" class="btn" type="button" title="Shortcuts (?)">?</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="pane pane--pdf">
+        <div class="pdfbar">
+          <div class="pdfbar__meta">
+            <strong id="bulletin-parish">—</strong>
+            <span id="bulletin-date" class="muted"></span>
+          </div>
+          <div class="pdfbar__nav">
+            <button id="page-prev" class="btn btn--icon" type="button" title="Previous page ([)">←</button>
+            <span id="page-label" class="pagelabel">p. 1</span>
+            <button id="page-next" class="btn btn--icon" type="button" title="Next page (])">→</button>
+            <a id="pdf-open" class="btn" href="#" target="_blank" rel="noreferrer">Open</a>
+          </div>
+        </div>
+        <div id="pdf-holder" class="pdfholder">
+          <p class="empty">No bulletin loaded.</p>
+        </div>
+      </section>
+
+      <section class="pane pane--work">
+        <div id="banner-slot"></div>
+        <div id="cards" class="cards"></div>
+        <footer class="finish">
+          <label class="finish__notes">
+            <span>Notes for this bulletin</span>
+            <textarea id="bulletin-notes" rows="2" placeholder="Anything the next reader should know…"></textarea>
+          </label>
+          <div class="finish__actions">
+            <button id="save-partial" class="btn" type="button" title="Save progress (s)">Save progress</button>
+            <button id="skip-bulletin" class="btn" type="button" title="Skip (shift+S)">Skip</button>
+            <button id="save-complete" class="btn btn--primary" type="button" title="Mark complete and go to next (enter)">
+              Complete &amp; next
+            </button>
+          </div>
+          <p id="finish-hint" class="finish__hint"></p>
+        </footer>
+      </section>
+    </main>
+
+    <aside id="queue-panel" class="drawer" hidden>
+      <div class="drawer__head">
+        <h2>Queue</h2>
+        <button id="queue-close" class="btn btn--icon" type="button">×</button>
+      </div>
+      <ol id="queue-list" class="queue"></ol>
+    </aside>
+
+    <div id="help-panel" class="modal" hidden>
+      <div class="modal__body">
+        <div class="drawer__head">
+          <h2>Keyboard</h2>
+          <button id="help-close" class="btn btn--icon" type="button">×</button>
+        </div>
+        <dl class="keys">
+          <dt>j / k</dt><dd>Next / previous decision</dd>
+          <dt>1 … 9</dt><dd>Pick that variant of a conflict, or accept (1) / reject (2) a single candidate</dd>
+          <dt>a / x</dt><dd>Accept / reject the focused card</dd>
+          <dt>u</dt><dd>Undo the focused card's verdict</dd>
+          <dt>n</dt><dd>Add an event the models missed</dd>
+          <dt>[ / ]</dt><dd>Previous / next PDF page</dd>
+          <dt>p</dt><dd>Jump the PDF to the focused card's page</dd>
+          <dt>g</dt><dd>Show or hide the agreed candidates</dd>
+          <dt>s</dt><dd>Save progress without finishing</dd>
+          <dt>enter</dt><dd>Mark complete and open the next bulletin</dd>
+          <dt>shift + S</dt><dd>Skip this bulletin</dd>
+          <dt>q</dt><dd>Open the queue</dd>
+          <dt>?</dt><dd>This panel</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

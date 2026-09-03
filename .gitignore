@@ -53,6 +53,8 @@ apps/web/.playwright/
 data/bulletins/**/*.pdf
 data/*.db
 data/runs/
+# Derived from data/labels.json by `pnpm label:export`; the labels are committed.
+data/labels_events.json
 
 # Generated frontend assets
 # apps/web/public/frontend.snapshot

@@ -128,6 +128,8 @@ pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
 pnpm recurrence:backfill [-- --limit N]
 pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
+pnpm label
+pnpm label:score [classifier ...]
 pnpm db:create
 pnpm db:drop
 ```
@@ -207,6 +209,29 @@ Two commands support it:
   Backfilling afterwards would be reading from an `events.json` that has already
   lost those dates.
 
+## Ground truth labeling
+
+`pnpm compare` measures how far two classifiers agree with each other, which
+says nothing about whether either is right. `apps/label` collects the human
+labels that answer that, and `pnpm label:score` turns them into precision and
+recall per classifier.
+
+```bash
+pnpm extract -- --classifier gemini-flash
+pnpm extract -- --classifier gpt-5.4-mini
+pnpm label          # review the disagreements in a browser
+pnpm label:score    # score both runs against what you labeled
+```
+
+The app opens each bulletin's PDF next to the events the models proposed for it.
+Events every run agreed on are pre-accepted and collapsed; the ones they split
+over are grouped into single keystroke decisions, ordered so the bulletins with
+the most disagreement come first. Labels land in `data/labels.json`, which is
+committed — it is the only artifact in the repo that cannot be regenerated.
+
+See [`apps/label/README.md`](apps/label/README.md) for the decision model, the
+keyboard shortcuts, and what the scoring report means.
+
 ## Environment Variables
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
@@ -243,6 +268,8 @@ pnpm db:drop     # delete the SQLite file
 - `data/` - CSV, JSON data files and downloaded bulletin PDFs
 - `data/event_history.json` - occurrences seen in past bulletins (weekly recurrence detection)
 - `apps/web/` - React + TypeScript + Vite frontend
+- `apps/label/` - ground-truth labeling app (see its README)
+- `data/labels.json` - human ground truth for classifier scoring
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend SQLite snapshot
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
