@@ -52,7 +52,7 @@ export interface RawEvent {
   note: string | null;
 }
 
-type ChurchBase = Omit<ChurchMapItem, "event_types" | "upcoming_events">;
+export type ChurchBase = Omit<ChurchMapItem, "event_types" | "upcoming_events">;
 
 // frontend.snapshot is loaded once and never mutated, so the church and event
 // tables can be read into memory once and reused for every filter change.
@@ -202,14 +202,67 @@ export function eventMatchesFilters(
   return true;
 }
 
-export async function fetchChurches(
+function buildMapItem(
+  church: ChurchBase,
+  churchEvents: RawEvent[],
+): ChurchMapItem {
+  const weeklyEvents = churchEvents.filter(
+    (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
+  );
+  // Dedup repeated weekly slots (same weekday + start time) that occasionally
+  // appear across bulletins. Prefer weekly events for the popup; if the parish
+  // has only specific-date events, fall back to the five soonest occurrences.
+  const seen = new Set<string>();
+  let popupSchedule = weeklyEvents
+    .filter((e) => {
+      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .map(toEventSummary)
+    .sort((a, b) => compareSchedule(a, b));
+  if (popupSchedule.length === 0) {
+    popupSchedule = churchEvents
+      .filter((e) => e.occurrence !== null)
+      .sort((a, b) => a.occurrence!.localeCompare(b.occurrence!))
+      .slice(0, 5)
+      .map(toEventSummary);
+  }
+  const eventTypes = [
+    ...new Set(churchEvents.map((e) => e.event_type)),
+  ].sort() as EventType[];
+  return {
+    ...church,
+    event_types: eventTypes,
+    upcoming_events: popupSchedule,
+  };
+}
+
+// Per-church memo of the last map item handed out, keyed by the church row and
+// the ids of the events that produced the item. Dragging the time slider
+// re-runs this query on every input event, and for most parishes the matching
+// events don't change from one step to the next; handing back the identical
+// object then lets React.memo skip the marker (and Leaflet skip re-positioning
+// it) instead of re-rendering all ~130 pins. Bounded by the church count.
+const mapItemCache = new Map<
+  number,
+  { church: ChurchBase; signature: string; item: ChurchMapItem }
+>();
+
+/**
+ * Build the map items for one set of filters, reusing the previous item for
+ * every church whose matching events are unchanged.
+ *
+ * Exported for tests; `fetchChurches` is the app-facing entry point.
+ */
+export function collectMapItems(
+  churches: ChurchBase[],
+  allEvents: RawEvent[],
   filters: ChurchFilters,
-): Promise<ChurchMapItem[]> {
-  const db = await getDb();
+): ChurchMapItem[] {
   const types = filters.types.length > 0 ? filters.types : ALL_TYPES;
   const typeSet = new Set<EventType>(types);
-
-  const { churches, events: allEvents } = await loadCaches(db);
 
   const grouped = new Map<number, RawEvent[]>();
   for (const ev of allEvents) {
@@ -223,42 +276,35 @@ export async function fetchChurches(
     list.push(ev);
   }
 
-  return churches
-    .map((c) => {
-      const churchEvents = grouped.get(c.id) ?? [];
-      const weeklyEvents = churchEvents.filter(
-        (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
-      );
-      // Dedup repeated weekly slots (same weekday + start time) that occasionally
-      // appear across bulletins. Prefer weekly events for the popup; if the parish
-      // has only specific-date events, fall back to the five soonest occurrences.
-      const seen = new Set<string>();
-      let popupSchedule = weeklyEvents
-        .filter((e) => {
-          const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}`;
-          if (seen.has(key)) return false;
-          seen.add(key);
-          return true;
-        })
-        .map(toEventSummary)
-        .sort((a, b) => compareSchedule(a, b));
-      if (popupSchedule.length === 0) {
-        popupSchedule = churchEvents
-          .filter((e) => e.occurrence !== null)
-          .sort((a, b) => a.occurrence!.localeCompare(b.occurrence!))
-          .slice(0, 5)
-          .map(toEventSummary);
-      }
-      const eventTypes = [
-        ...new Set(churchEvents.map((e) => e.event_type)),
-      ].sort() as EventType[];
-      return {
-        ...c,
-        event_types: eventTypes,
-        upcoming_events: popupSchedule,
-      };
-    })
-    .filter((church) => church.event_types.length > 0);
+  const items: ChurchMapItem[] = [];
+  for (const church of churches) {
+    const churchEvents = grouped.get(church.id);
+    // No matching events means no event types, which the map never showed.
+    if (!churchEvents || churchEvents.length === 0) continue;
+
+    // Events are grouped in a stable order, so their ids fully describe the
+    // item this church produces.
+    let signature = "";
+    for (const ev of churchEvents) signature += `${ev.id},`;
+
+    const cached = mapItemCache.get(church.id);
+    if (cached && cached.church === church && cached.signature === signature) {
+      items.push(cached.item);
+      continue;
+    }
+    const item = buildMapItem(church, churchEvents);
+    mapItemCache.set(church.id, { church, signature, item });
+    items.push(item);
+  }
+  return items;
+}
+
+export async function fetchChurches(
+  filters: ChurchFilters,
+): Promise<ChurchMapItem[]> {
+  const db = await getDb();
+  const { churches, events } = await loadCaches(db);
+  return collectMapItems(churches, events, filters);
 }
 
 export interface ChurchSearchResult {

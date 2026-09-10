@@ -21,7 +21,14 @@ function init(): Promise<Database> {
 
 export function getDb(): Promise<Database> {
   if (!dbPromise) {
-    dbPromise = init();
+    dbPromise = init().catch((error: unknown) => {
+      // Don't hold on to a failed load: callers retry (react-query does so
+      // automatically), and a cached rejection would make every retry fail
+      // instantly without touching the network again.
+      dbPromise = null;
+      throw error;
+    });
   }
   return dbPromise;
 }
+
