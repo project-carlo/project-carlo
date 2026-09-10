@@ -11,6 +11,7 @@ import { existsSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { instrumentationSource } from "./instrument.mjs";
+import { stubOffOrigin } from "./network.mjs";
 import { scenarios } from "./scenarios.mjs";
 import { startStaticServer } from "./static-server.mjs";
 
@@ -46,11 +47,9 @@ const browser = await chromium.launch({
 });
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
 await context.addInitScript(instrumentationSource());
-await context.route("**/*", async (route) => {
-  const url = route.request().url();
-  if (url.startsWith(server.origin)) return route.fallback();
-  return route.fulfill({ status: 503, body: "{}" });
-});
+// Same stubbing as bench.mjs, so the profile reflects the workload the
+// benchmark measures rather than Leaflet's tile-failure path.
+await stubOffOrigin(context, server.origin);
 
 const page = await context.newPage();
 const client = await context.newCDPSession(page);

@@ -69,20 +69,36 @@ function pageAgent() {
       });
     });
 
-  /** Total blocking time contribution of a long task, per the web-vitals definition. */
-  const blockingPortion = (task) => Math.max(0, task.duration - 50);
+  /**
+   * Total blocking time contribution of a long task, per the web-vitals
+   * definition — computed on the portion of the task inside the window, so a
+   * task that merely overlaps the start of a measurement isn't charged in
+   * full to it.
+   */
+  const blockingPortion = (durationInWindow) => Math.max(0, durationInWindow - 50);
 
   const bench = {
     now: () => performance.now(),
 
-    /** Long tasks / mutation counters observed since `since` (default: page start). */
+    /**
+     * Long tasks / mutation counters observed since `since` (default: page
+     * start). A task that started before `since` and ran past it is counted
+     * only for its overlap: the tail of startup work routinely straddles the
+     * boundary of an interaction scenario, and charging its whole duration to
+     * the interaction inflated blocking and long-task totals.
+     */
     tasksSince(since = 0) {
-      const tasks = state.longTasks.filter((t) => t.start + t.duration >= since);
+      const clipped = [];
+      for (const task of state.longTasks) {
+        const end = task.start + task.duration;
+        if (end < since) continue;
+        clipped.push(end - Math.max(task.start, since));
+      }
       return {
-        count: tasks.length,
-        totalMs: tasks.reduce((sum, t) => sum + t.duration, 0),
-        blockingMs: tasks.reduce((sum, t) => sum + blockingPortion(t), 0),
-        longestMs: tasks.reduce((max, t) => Math.max(max, t.duration), 0),
+        count: clipped.length,
+        totalMs: clipped.reduce((sum, d) => sum + d, 0),
+        blockingMs: clipped.reduce((sum, d) => sum + blockingPortion(d), 0),
+        longestMs: clipped.reduce((max, d) => Math.max(max, d), 0),
       };
     },
 

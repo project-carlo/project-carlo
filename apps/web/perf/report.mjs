@@ -64,12 +64,25 @@ export function formatComparison(baseline, candidate) {
       const after = scenario.summary[metric]?.median;
       if (before == null || after == null) continue;
       const delta = after - before;
-      const pct = before === 0 ? 0 : (delta / before) * 100;
       const improved = HIGHER_IS_BETTER.has(metric) ? delta > 0 : delta < 0;
-      const marker = Math.abs(pct) < 2 ? "  " : improved ? "✓ " : "✗ ";
+      // A metric whose baseline is 0 has no meaningful percentage: going from
+      // 0 ms of blocking to 200 ms is an infinite regression, not a 0% change.
+      // Reporting it as 0% used to hide exactly the regressions this harness
+      // exists to catch, since the best runs bottom out at 0 on several
+      // metrics. Show the direction instead, and keep it out of the
+      // "within noise" bucket.
+      const pct = before === 0 ? null : (delta / before) * 100;
+      const negligible = pct === null ? delta === 0 : Math.abs(pct) < 2;
+      const marker = negligible ? "  " : improved ? "✓ " : "✗ ";
+      const pctLabel =
+        pct === null
+          ? delta === 0
+            ? "—"
+            : `${delta > 0 ? "+" : "-"}∞%`
+          : `${pct >= 0 ? "+" : ""}${pct.toFixed(1)}%`;
       lines.push(
         `  ${marker}${pad(metric, width)}  ${padStart(before, 9)} → ${padStart(after, 9)} ` +
-          `${pad(unit(metric), 3)}  ${padStart(`${pct >= 0 ? "+" : ""}${pct.toFixed(1)}%`, 8)}`,
+          `${pad(unit(metric), 3)}  ${padStart(pctLabel, 8)}`,
       );
     }
     lines.push("");

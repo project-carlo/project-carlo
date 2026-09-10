@@ -8,7 +8,7 @@
 // `not_found_handling: "single-page-application"`.
 import { createReadStream, existsSync, statSync } from "node:fs";
 import { createServer } from "node:http";
-import { extname, join, normalize, resolve } from "node:path";
+import { extname, join, normalize, resolve, sep } from "node:path";
 
 const MIME = {
   ".css": "text/css; charset=utf-8",
@@ -27,9 +27,19 @@ const MIME = {
 
 /** Resolve a request path to a file inside `root`, or null when it escapes. */
 function resolveFile(root, urlPath) {
-  const decoded = decodeURIComponent(urlPath.split("?")[0]);
+  let decoded;
+  try {
+    decoded = decodeURIComponent(urlPath.split("?")[0]);
+  } catch {
+    // Malformed percent-encoding: treat as not-found rather than letting the
+    // URIError take the whole server down mid-run.
+    return null;
+  }
   const candidate = resolve(join(root, normalize(decoded)));
-  if (!candidate.startsWith(root)) return null;
+  // Compare against `root + sep`, not a bare prefix: `startsWith(root)` also
+  // admits a sibling directory whose name merely begins with root's ("dist"
+  // would match "dist-other").
+  if (candidate !== root && !candidate.startsWith(root + sep)) return null;
   if (existsSync(candidate) && statSync(candidate).isDirectory()) {
     const index = join(candidate, "index.html");
     return existsSync(index) ? index : null;

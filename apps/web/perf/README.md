@@ -7,12 +7,18 @@ DOM events, and reports how long each one took to reach the screen — plus how
 much the main thread was blocked while it happened.
 
 ```bash
-pnpm --filter web build          # the harness measures dist/, not the dev server
-pnpm --filter web perf           # run everything, print a table
-pnpm --filter web perf --save baseline
+pnpm --filter web test:e2e:install  # once: the harness drives Playwright's Chromium
+pnpm --filter web build             # the harness measures dist/, not the dev server
+pnpm --filter web perf              # run everything, print a table
+pnpm --filter web perf --save mine
 # …change some code, rebuild…
-pnpm --filter web perf --compare baseline
+pnpm --filter web perf --compare mine
 ```
+
+`perf/results/baseline.json` and `optimized.json` are the reference runs
+recorded when this harness landed; they stay in git, and every other
+`--save <name>` is ignored, so pick a name of your own rather than overwriting
+them.
 
 ## What it measures
 

@@ -1,8 +1,9 @@
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import {
   collectMapItems,
   eventMatchesFilters,
   parseEventDateForFilter,
+  resetMapItemCache,
   type ChurchBase,
   type ChurchFilters,
   type RawEvent,
@@ -175,6 +176,11 @@ function church(id: number, overrides: Partial<ChurchBase> = {}): ChurchBase {
 describe("collectMapItems", () => {
   const allTypes: ChurchFilters = { types: [] };
 
+  // The memo is module state. It also checks church identity, so cases that
+  // build a fresh fixture each time are already safe; this keeps the ones
+  // sharing a church object (below) honest.
+  beforeEach(resetMapItemCache);
+
   it("drops churches with no matching events", () => {
     const churches = [church(101), church(102)];
     const events = [rawEvent({ id: 1001, church_id: 101 })];
@@ -230,6 +236,31 @@ describe("collectMapItems", () => {
 
     expect(second.map((item) => item.id)).toEqual([121]);
     expect(second[0]).toBe(first[0]);
+  });
+
+  // Guards `resetMapItemCache`. The memo keys on church identity *and* event
+  // ids, so a leak needs a shared church fixture — which is exactly what a
+  // hoisted `const` in a describe block gives you. Both halves reuse the same
+  // church object and event id with different data on purpose; without the
+  // reset above, the second is served the first one's item and sees 9:00.
+  const sharedChurch = church(140);
+
+  it("does not leak a memoised item into a later test (part 1)", () => {
+    const items = collectMapItems(
+      [sharedChurch],
+      [rawEvent({ id: 1400, church_id: 140, start_time: 9 * 60 })],
+      allTypes,
+    );
+    expect(items[0].upcoming_events[0].start_time).toBe(9 * 60);
+  });
+
+  it("does not leak a memoised item into a later test (part 2)", () => {
+    const items = collectMapItems(
+      [sharedChurch],
+      [rawEvent({ id: 1400, church_id: 140, start_time: 17 * 60 })],
+      allTypes,
+    );
+    expect(items[0].upcoming_events[0].start_time).toBe(17 * 60);
   });
 
   it("rebuilds an item when the church's matching events change", () => {

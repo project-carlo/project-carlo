@@ -31,4 +31,3 @@ export function getDb(): Promise<Database> {
   }
   return dbPromise;
 }
-

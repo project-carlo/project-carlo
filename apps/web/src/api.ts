@@ -251,6 +251,17 @@ const mapItemCache = new Map<
 >();
 
 /**
+ * Drop the memo. Only needed in tests: the app loads one immutable snapshot,
+ * so an event id always denotes the same event and the memo can never go
+ * stale. A test suite, though, builds fresh fixtures — and one that shares a
+ * church object between cases (a hoisted fixture) while varying the event
+ * data behind the same ids would otherwise be served the earlier case's item.
+ */
+export function resetMapItemCache(): void {
+  mapItemCache.clear();
+}
+
+/**
  * Build the map items for one set of filters, reusing the previous item for
  * every church whose matching events are unchanged.
  *

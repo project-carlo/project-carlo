@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // UI performance benchmark for the web app.
 //
-//   pnpm --filter web perf                    # run every scenario, print a table
-//   pnpm --filter web perf -- --save baseline # also write perf/results/baseline.json
-//   pnpm --filter web perf -- --compare baseline
+//   pnpm --filter web perf                 # run every scenario, print a table
+//   pnpm --filter web perf --save mine     # also write perf/results/mine.json
+//   pnpm --filter web perf --compare mine
 //
 // The harness serves the production build, throttles the CPU (default 4x) so
 // main-thread work is visible above timer noise, stubs every off-origin request
@@ -14,6 +14,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { instrumentationSource } from "./instrument.mjs";
+import { stubOffOrigin } from "./network.mjs";
 import { scenarios } from "./scenarios.mjs";
 import { startStaticServer } from "./static-server.mjs";
 import { formatComparison, formatSummary } from "./report.mjs";
@@ -21,13 +22,6 @@ import { formatComparison, formatSummary } from "./report.mjs";
 const HERE = dirname(fileURLToPath(import.meta.url));
 const WEB_ROOT = resolve(HERE, "..");
 const RESULTS_DIR = join(HERE, "results");
-
-// 1x1 transparent PNG — every map tile resolves to this, so tile loading costs
-// the same in every run and never touches the network.
-const BLANK_PNG = Buffer.from(
-  "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
-  "base64",
-);
 
 function parseArgs(argv) {
   const options = {
@@ -40,17 +34,30 @@ function parseArgs(argv) {
     headed: false,
     dist: null,
   };
+  // A missing or non-numeric value used to become NaN, which silently ran zero
+  // measured iterations and reported an empty scenario. Fail loudly instead.
+  const positiveNumber = (flag, raw) => {
+    const value = Number(raw);
+    if (!Number.isFinite(value) || value <= 0) {
+      throw new Error(`${flag} needs a positive number (got ${raw ?? "nothing"})`);
+    }
+    return value;
+  };
+  const requireValue = (flag, raw) => {
+    if (raw === undefined) throw new Error(`${flag} needs a value`);
+    return raw;
+  };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     const next = () => argv[(i += 1)];
     switch (arg) {
-      case "--runs": options.runs = Number(next()); break;
-      case "--cpu": options.cpuThrottle = Number(next()); break;
-      case "--scenario": options.scenario = next(); break;
-      case "--save": options.save = next(); break;
-      case "--compare": options.compare = next(); break;
-      case "--json": options.json = next(); break;
-      case "--dist": options.dist = next(); break;
+      case "--runs": options.runs = positiveNumber(arg, next()); break;
+      case "--cpu": options.cpuThrottle = positiveNumber(arg, next()); break;
+      case "--scenario": options.scenario = requireValue(arg, next()); break;
+      case "--save": options.save = requireValue(arg, next()); break;
+      case "--compare": options.compare = requireValue(arg, next()); break;
+      case "--json": options.json = requireValue(arg, next()); break;
+      case "--dist": options.dist = requireValue(arg, next()); break;
       case "--headed": options.headed = true; break;
       case "--help":
         printHelp();
@@ -81,18 +88,6 @@ Usage: node perf/bench.mjs [options]
 
 function resultPath(name) {
   return name.endsWith(".json") ? resolve(name) : join(RESULTS_DIR, `${name}.json`);
-}
-
-/** Route handler: same-origin requests pass through, everything else is stubbed. */
-async function stubOffOrigin(context, origin) {
-  await context.route("**/*", async (route) => {
-    const url = route.request().url();
-    if (url.startsWith(origin)) return route.fallback();
-    if (/\.png($|\?)/.test(url) || url.includes("tile.")) {
-      return route.fulfill({ status: 200, contentType: "image/png", body: BLANK_PNG });
-    }
-    return route.fulfill({ status: 503, contentType: "application/json", body: "{}" });
-  });
 }
 
 async function runScenario(browser, scenario, { origin, cpuThrottle }) {
