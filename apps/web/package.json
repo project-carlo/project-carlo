@@ -17,6 +17,9 @@
     "test": "vitest run",
     "deploy": "pnpm run build && wrangler deploy",
     "test:e2e": "playwright test",
+    "perf": "node perf/bench.mjs",
+    "perf:compare": "node perf/compare.mjs",
+    "perf:profile": "node perf/profile.mjs",
     "test:e2e:install": "playwright install --with-deps chromium"
   },
   "dependencies": {

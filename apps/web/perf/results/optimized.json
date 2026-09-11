@@ -1,0 +1,1145 @@
+{
+  "label": "optimized",
+  "createdAt": "2026-09-10T19:51:51.090Z",
+  "config": {
+    "runs": 7,
+    "cpuThrottle": 4,
+    "dist": "/home/user/project-carlo/apps/web/dist"
+  },
+  "scenarios": {
+    "cold-load": {
+      "description": "First visit to the map: navigation start → markers on screen.",
+      "summary": {
+        "fcpMs": {
+          "median": 244,
+          "min": 192,
+          "max": 284
+        },
+        "lcpMs": {
+          "median": 1948,
+          "min": 1036,
+          "max": 2332
+        },
+        "markersVisibleMs": {
+          "median": 2401,
+          "min": 2252,
+          "max": 2537
+        },
+        "loadEventMs": {
+          "median": 431.6,
+          "min": 389,
+          "max": 450.4
+        },
+        "blockingMs": {
+          "median": 692,
+          "min": 546,
+          "max": 884
+        },
+        "longTaskMs": {
+          "median": 1092,
+          "min": 946,
+          "max": 1284
+        },
+        "longestTaskMs": {
+          "median": 235,
+          "min": 216,
+          "max": 269
+        },
+        "transferredKb": {
+          "median": 1639.93,
+          "min": 1639.93,
+          "max": 1639.93
+        },
+        "scriptMs": {
+          "median": 898.25,
+          "min": 822.77,
+          "max": 1027.49
+        },
+        "layoutMs": {
+          "median": 130.41,
+          "min": 101.23,
+          "max": 142.97
+        },
+        "recalcStyleMs": {
+          "median": 247.15,
+          "min": 192.22,
+          "max": 299.04
+        },
+        "jsHeapMb": {
+          "median": 6.54,
+          "min": 6.2,
+          "max": 6.69
+        },
+        "domNodes": {
+          "median": 2661,
+          "min": 2289,
+          "max": 2679
+        }
+      },
+      "runs": [
+        {
+          "fcpMs": 240,
+          "lcpMs": 1036,
+          "markersVisibleMs": 2398,
+          "loadEventMs": 414.10000000009313,
+          "blockingMs": 645,
+          "longTaskMs": 995,
+          "longestTaskMs": 222,
+          "transferredKb": 1639.93359375,
+          "scriptMs": 822.77,
+          "layoutMs": 141.38,
+          "recalcStyleMs": 238.75,
+          "jsHeapMb": 6.2,
+          "domNodes": 2289
+        },
+        {
+          "fcpMs": 244,
+          "lcpMs": 2004,
+          "markersVisibleMs": 2449,
+          "loadEventMs": 448.60000000009313,
+          "blockingMs": 691,
+          "longTaskMs": 1091,
+          "longestTaskMs": 246,
+          "transferredKb": 1639.93359375,
+          "scriptMs": 923.56,
+          "layoutMs": 126.91,
+          "recalcStyleMs": 195.75,
+          "jsHeapMb": 6.69,
+          "domNodes": 2661
+        },
+        {
+          "fcpMs": 248,
+          "lcpMs": 1064,
+          "markersVisibleMs": 2537,
+          "loadEventMs": 431.60000000009313,
+          "blockingMs": 702,
+          "longTaskMs": 1102,
+          "longestTaskMs": 232,
+          "transferredKb": 1639.93359375,
+          "scriptMs": 898.25,
+          "layoutMs": 132.93,
+          "recalcStyleMs": 247.15,
+          "jsHeapMb": 6.42,
+          "domNodes": 2661
+        },
+        {
+          "fcpMs": 284,
+          "lcpMs": 2332,
+          "markersVisibleMs": 2400,
+          "loadEventMs": 450.39999999990687,
+          "blockingMs": 884,
+          "longTaskMs": 1284,
+          "longestTaskMs": 269,
+          "transferredKb": 1639.93359375,
+          "scriptMs": 1027.49,
+          "layoutMs": 142.97,
+          "recalcStyleMs": 299.04,
+          "jsHeapMb": 6.55,
+          "domNodes": 2661
+        },
+        {
+          "fcpMs": 244,
+          "lcpMs": 1948,
+          "markersVisibleMs": 2401,
+          "loadEventMs": 439.79999999981374,
+          "blockingMs": 693,
+          "longTaskMs": 1143,
+          "longestTaskMs": 244,
+          "transferredKb": 1639.93359375,
+          "scriptMs": 873.6,
+          "layoutMs": 130.41,
+          "recalcStyleMs": 256.96,
+          "jsHeapMb": 6.55,
+          "domNodes": 2660
+        },
+        {
+          "fcpMs": 216,
+          "lcpMs": 1988,
+          "markersVisibleMs": 2447,
+          "loadEventMs": 389,
+          "blockingMs": 692,
+          "longTaskMs": 1092,
+          "longestTaskMs": 216,
+          "transferredKb": 1639.93359375,
+          "scriptMs": 922.73,
+          "layoutMs": 101.23,
+          "recalcStyleMs": 256.98,
+          "jsHeapMb": 6.54,
+          "domNodes": 2661
+        },
+        {
+          "fcpMs": 192,
+          "lcpMs": 1776,
+          "markersVisibleMs": 2252,
+          "loadEventMs": 416.70000000018626,
+          "blockingMs": 546,
+          "longTaskMs": 946,
+          "longestTaskMs": 235,
+          "transferredKb": 1639.93359375,
+          "scriptMs": 859.39,
+          "layoutMs": 113.1,
+          "recalcStyleMs": 192.22,
+          "jsHeapMb": 6.47,
+          "domNodes": 2679
+        }
+      ]
+    },
+    "time-slider-drag": {
+      "description": "Dragging the time-of-day filter: 24 consecutive value changes, the heaviest interactive path in the app.",
+      "summary": {
+        "paintP50Ms": {
+          "median": 48.1,
+          "min": 44.9,
+          "max": 53
+        },
+        "paintP95Ms": {
+          "median": 65.2,
+          "min": 61.1,
+          "max": 71.7
+        },
+        "paintMaxMs": {
+          "median": 70.9,
+          "min": 62.9,
+          "max": 82.7
+        },
+        "syncP50Ms": {
+          "median": 9.3,
+          "min": 8.5,
+          "max": 9.6
+        },
+        "syncTotalMs": {
+          "median": 239.5,
+          "min": 226,
+          "max": 253.4
+        },
+        "settleMs": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "blockingMs": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "longTaskMs": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "longestTaskMs": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "longTaskCount": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "scriptMs": {
+          "median": 767.29,
+          "min": 728.24,
+          "max": 790.74
+        },
+        "layoutMs": {
+          "median": 70.58,
+          "min": 66.51,
+          "max": 75.55
+        },
+        "recalcStyleMs": {
+          "median": 124.39,
+          "min": 108.24,
+          "max": 140.13
+        },
+        "jsHeapMb": {
+          "median": 7.89,
+          "min": 6.45,
+          "max": 9.96
+        },
+        "domNodes": {
+          "median": 2618,
+          "min": 1035,
+          "max": 3013
+        }
+      },
+      "runs": [
+        {
+          "paintP50Ms": 50.10000000009313,
+          "paintP95Ms": 65.1999999997206,
+          "paintMaxMs": 70.89999999990687,
+          "syncP50Ms": 9.299999999813735,
+          "syncTotalMs": 226.6999999997206,
+          "settleMs": 0,
+          "blockingMs": 0,
+          "longTaskMs": 0,
+          "longestTaskMs": 0,
+          "longTaskCount": 0,
+          "scriptMs": 739.09,
+          "layoutMs": 70.58,
+          "recalcStyleMs": 124.39,
+          "jsHeapMb": 7.89,
+          "domNodes": 2618
+        },
+        {
+          "paintP50Ms": 47.89999999990687,
+          "paintP95Ms": 63.5,
+          "paintMaxMs": 68.90000000037253,
+          "syncP50Ms": 9.200000000186265,
+          "syncTotalMs": 233.80000000074506,
+          "settleMs": 0,
+          "blockingMs": 0,
+          "longTaskMs": 0,
+          "longestTaskMs": 0,
+          "longTaskCount": 0,
+          "scriptMs": 731.42,
+          "layoutMs": 66.51,
+          "recalcStyleMs": 131.35,
+          "jsHeapMb": 6.45,
+          "domNodes": 1035
+        },
+        {
+          "paintP50Ms": 47,
+          "paintP95Ms": 66.8000000002794,
+          "paintMaxMs": 68.8000000002794,
+          "syncP50Ms": 9.299999999813735,
+          "syncTotalMs": 251.09999999962747,
+          "settleMs": 0,
+          "blockingMs": 0,
+          "longTaskMs": 0,
+          "longestTaskMs": 0,
+          "longTaskCount": 0,
+          "scriptMs": 790.74,
+          "layoutMs": 70.57,
+          "recalcStyleMs": 108.24,
+          "jsHeapMb": 6.84,
+          "domNodes": 1304
+        },
+        {
+          "paintP50Ms": 44.89999999990687,
+          "paintP95Ms": 61.10000000009313,
+          "paintMaxMs": 62.89999999990687,
+          "syncP50Ms": 8.5,
+          "syncTotalMs": 226.00000000093132,
+          "settleMs": 0,
+          "blockingMs": 0,
+          "longTaskMs": 0,
+          "longestTaskMs": 0,
+          "longTaskCount": 0,
+          "scriptMs": 728.24,
+          "layoutMs": 68.26,
+          "recalcStyleMs": 121.38,
+          "jsHeapMb": 8.33,
+          "domNodes": 3013
+        },
+        {
+          "paintP50Ms": 48.799999999813735,
+          "paintP95Ms": 64.39999999990687,
+          "paintMaxMs": 82.6999999997206,
+          "syncP50Ms": 9.399999999906868,
+          "syncTotalMs": 253.3999999994412,
+          "settleMs": 0,
+          "blockingMs": 0,
+          "longTaskMs": 0,
+          "longestTaskMs": 0,
+          "longTaskCount": 0,
+          "scriptMs": 767.29,
+          "layoutMs": 72.07,
+          "recalcStyleMs": 111.34,
+          "jsHeapMb": 6.77,
+          "domNodes": 1302
+        },
+        {
+          "paintP50Ms": 48.09999999962747,
+          "paintP95Ms": 71.70000000018626,
+          "paintMaxMs": 79.59999999962747,
+          "syncP50Ms": 9.600000000093132,
+          "syncTotalMs": 239.49999999860302,
+          "settleMs": 0,
+          "blockingMs": 0,
+          "longTaskMs": 0,
+          "longestTaskMs": 0,
+          "longTaskCount": 0,
+          "scriptMs": 783.71,
+          "layoutMs": 75.55,
+          "recalcStyleMs": 127.79,
+          "jsHeapMb": 7.91,
+          "domNodes": 2618
+        },
+        {
+          "paintP50Ms": 53,
+          "paintP95Ms": 69.10000000009313,
+          "paintMaxMs": 74.60000000009313,
+          "syncP50Ms": 9.099999999627471,
+          "syncTotalMs": 246.7999999988824,
+          "settleMs": 0,
+          "blockingMs": 0,
+          "longTaskMs": 0,
+          "longestTaskMs": 0,
+          "longTaskCount": 0,
+          "scriptMs": 790.37,
+          "layoutMs": 74.56,
+          "recalcStyleMs": 140.13,
+          "jsHeapMb": 9.96,
+          "domNodes": 3013
+        }
+      ]
+    },
+    "service-type-switch": {
+      "description": "Switching between Mass / Confession / Adoration (3 cycles).",
+      "summary": {
+        "paintP50Ms": {
+          "median": 77.9,
+          "min": 67.6,
+          "max": 85
+        },
+        "paintP95Ms": {
+          "median": 226.6,
+          "min": 204.6,
+          "max": 257.2
+        },
+        "paintMaxMs": {
+          "median": 226.6,
+          "min": 204.6,
+          "max": 257.2
+        },
+        "syncP50Ms": {
+          "median": 1.3,
+          "min": 1,
+          "max": 1.5
+        },
+        "syncTotalMs": {
+          "median": 17.3,
+          "min": 15,
+          "max": 19.9
+        },
+        "settleMs": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "blockingMs": {
+          "median": 253,
+          "min": 240,
+          "max": 295
+        },
+        "longTaskMs": {
+          "median": 490,
+          "min": 452,
+          "max": 545
+        },
+        "longestTaskMs": {
+          "median": 153,
+          "min": 138,
+          "max": 175
+        },
+        "longTaskCount": {
+          "median": 5,
+          "min": 4,
+          "max": 6
+        },
+        "scriptMs": {
+          "median": 557.24,
+          "min": 511.12,
+          "max": 566.61
+        },
+        "layoutMs": {
+          "median": 35.09,
+          "min": 33.59,
+          "max": 43.23
+        },
+        "recalcStyleMs": {
+          "median": 402.24,
+          "min": 371.85,
+          "max": 437.48
+        },
+        "jsHeapMb": {
+          "median": 8.57,
+          "min": 7.62,
+          "max": 8.89
+        },
+        "domNodes": {
+          "median": 5413,
+          "min": 3863,
+          "max": 6942
+        }
+      },
+      "runs": [
+        {
+          "paintP50Ms": 67.60000000009313,
+          "paintP95Ms": 253,
+          "paintMaxMs": 253,
+          "syncP50Ms": 1.3999999999068677,
+          "syncTotalMs": 17.799999999813735,
+          "settleMs": 0,
+          "blockingMs": 284,
+          "longTaskMs": 484,
+          "longestTaskMs": 160,
+          "longTaskCount": 4,
+          "scriptMs": 555.54,
+          "layoutMs": 34.62,
+          "recalcStyleMs": 437.48,
+          "jsHeapMb": 8.89,
+          "domNodes": 6942
+        },
+        {
+          "paintP50Ms": 67.79999999981374,
+          "paintP95Ms": 257.1999999997206,
+          "paintMaxMs": 257.1999999997206,
+          "syncP50Ms": 1.2000000001862645,
+          "syncTotalMs": 14.999999999534339,
+          "settleMs": 0,
+          "blockingMs": 295,
+          "longTaskMs": 545,
+          "longestTaskMs": 161,
+          "longTaskCount": 5,
+          "scriptMs": 559.37,
+          "layoutMs": 33.59,
+          "recalcStyleMs": 432.55,
+          "jsHeapMb": 8.57,
+          "domNodes": 3863
+        },
+        {
+          "paintP50Ms": 82.40000000037253,
+          "paintP95Ms": 221.3000000002794,
+          "paintMaxMs": 221.3000000002794,
+          "syncP50Ms": 1,
+          "syncTotalMs": 17.299999999348074,
+          "settleMs": 0,
+          "blockingMs": 252,
+          "longTaskMs": 452,
+          "longestTaskMs": 152,
+          "longTaskCount": 4,
+          "scriptMs": 566.61,
+          "layoutMs": 43.23,
+          "recalcStyleMs": 396.67,
+          "jsHeapMb": 7.64,
+          "domNodes": 5413
+        },
+        {
+          "paintP50Ms": 82.5,
+          "paintP95Ms": 226.60000000009313,
+          "paintMaxMs": 226.60000000009313,
+          "syncP50Ms": 1.5,
+          "syncTotalMs": 16.40000000037253,
+          "settleMs": 0,
+          "blockingMs": 253,
+          "longTaskMs": 453,
+          "longestTaskMs": 153,
+          "longTaskCount": 4,
+          "scriptMs": 557.24,
+          "layoutMs": 33.8,
+          "recalcStyleMs": 421.5,
+          "jsHeapMb": 8.83,
+          "domNodes": 6416
+        },
+        {
+          "paintP50Ms": 85,
+          "paintP95Ms": 226.40000000037253,
+          "paintMaxMs": 226.40000000037253,
+          "syncP50Ms": 1.3000000002793968,
+          "syncTotalMs": 15.300000000745058,
+          "settleMs": 0,
+          "blockingMs": 240,
+          "longTaskMs": 490,
+          "longestTaskMs": 138,
+          "longTaskCount": 5,
+          "scriptMs": 511.12,
+          "layoutMs": 35.09,
+          "recalcStyleMs": 384.54,
+          "jsHeapMb": 7.66,
+          "domNodes": 5413
+        },
+        {
+          "paintP50Ms": 70.1999999997206,
+          "paintP95Ms": 252.1999999997206,
+          "paintMaxMs": 252.1999999997206,
+          "syncP50Ms": 1.400000000372529,
+          "syncTotalMs": 19.90000000037253,
+          "settleMs": 0,
+          "blockingMs": 274,
+          "longTaskMs": 524,
+          "longestTaskMs": 175,
+          "longTaskCount": 5,
+          "scriptMs": 528.2,
+          "layoutMs": 35.56,
+          "recalcStyleMs": 402.24,
+          "jsHeapMb": 8.57,
+          "domNodes": 3863
+        },
+        {
+          "paintP50Ms": 77.89999999990687,
+          "paintP95Ms": 204.60000000009313,
+          "paintMaxMs": 204.60000000009313,
+          "syncP50Ms": 1.3000000002793968,
+          "syncTotalMs": 18.700000000651926,
+          "settleMs": 0,
+          "blockingMs": 240,
+          "longTaskMs": 540,
+          "longestTaskMs": 141,
+          "longTaskCount": 6,
+          "scriptMs": 561.07,
+          "layoutMs": 40.41,
+          "recalcStyleMs": 371.85,
+          "jsHeapMb": 7.62,
+          "domNodes": 5413
+        }
+      ]
+    },
+    "day-toggle": {
+      "description": "Toggling weekday chips on and off across the whole week.",
+      "summary": {
+        "paintP50Ms": {
+          "median": 64.5,
+          "min": 58.7,
+          "max": 70.5
+        },
+        "paintP95Ms": {
+          "median": 116.6,
+          "min": 93,
+          "max": 154.8
+        },
+        "paintMaxMs": {
+          "median": 116.6,
+          "min": 93,
+          "max": 154.8
+        },
+        "syncP50Ms": {
+          "median": 1.3,
+          "min": 1.1,
+          "max": 1.5
+        },
+        "syncTotalMs": {
+          "median": 23.3,
+          "min": 21.6,
+          "max": 26.2
+        },
+        "settleMs": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "blockingMs": {
+          "median": 29,
+          "min": 0,
+          "max": 37
+        },
+        "longTaskMs": {
+          "median": 79,
+          "min": 0,
+          "max": 87
+        },
+        "longestTaskMs": {
+          "median": 79,
+          "min": 0,
+          "max": 87
+        },
+        "longTaskCount": {
+          "median": 1,
+          "min": 0,
+          "max": 1
+        },
+        "scriptMs": {
+          "median": 598.87,
+          "min": 536.78,
+          "max": 626.81
+        },
+        "layoutMs": {
+          "median": 36.4,
+          "min": 34.84,
+          "max": 41.76
+        },
+        "recalcStyleMs": {
+          "median": 232.37,
+          "min": 188.36,
+          "max": 237.02
+        },
+        "jsHeapMb": {
+          "median": 7.99,
+          "min": 7.19,
+          "max": 9.02
+        },
+        "domNodes": {
+          "median": 2717,
+          "min": 2313,
+          "max": 3578
+        }
+      },
+      "runs": [
+        {
+          "paintP50Ms": 60.5,
+          "paintP95Ms": 154.79999999981374,
+          "paintMaxMs": 154.79999999981374,
+          "syncP50Ms": 1.2999999998137355,
+          "syncTotalMs": 22.699999999720603,
+          "settleMs": 0,
+          "blockingMs": 32,
+          "longTaskMs": 82,
+          "longestTaskMs": 82,
+          "longTaskCount": 1,
+          "scriptMs": 536.78,
+          "layoutMs": 35.96,
+          "recalcStyleMs": 215.18,
+          "jsHeapMb": 7.67,
+          "domNodes": 2453
+        },
+        {
+          "paintP50Ms": 70.5,
+          "paintP95Ms": 128.89999999990687,
+          "paintMaxMs": 128.89999999990687,
+          "syncP50Ms": 1.1000000000931323,
+          "syncTotalMs": 21.700000000186265,
+          "settleMs": 0,
+          "blockingMs": 33,
+          "longTaskMs": 83,
+          "longestTaskMs": 83,
+          "longTaskCount": 1,
+          "scriptMs": 589.87,
+          "layoutMs": 37.51,
+          "recalcStyleMs": 234.92,
+          "jsHeapMb": 7.99,
+          "domNodes": 3578
+        },
+        {
+          "paintP50Ms": 64.60000000009313,
+          "paintP95Ms": 116.59999999962747,
+          "paintMaxMs": 116.59999999962747,
+          "syncP50Ms": 1.2999999998137355,
+          "syncTotalMs": 21.59999999962747,
+          "settleMs": 0,
+          "blockingMs": 19,
+          "longTaskMs": 69,
+          "longestTaskMs": 69,
+          "longTaskCount": 1,
+          "scriptMs": 575.54,
+          "layoutMs": 36.4,
+          "recalcStyleMs": 204.21,
+          "jsHeapMb": 8.66,
+          "domNodes": 2717
+        },
+        {
+          "paintP50Ms": 65.5,
+          "paintP95Ms": 93,
+          "paintMaxMs": 93,
+          "syncP50Ms": 1.5,
+          "syncTotalMs": 23.29999999841675,
+          "settleMs": 0,
+          "blockingMs": 29,
+          "longTaskMs": 79,
+          "longestTaskMs": 79,
+          "longTaskCount": 1,
+          "scriptMs": 626.81,
+          "layoutMs": 41.76,
+          "recalcStyleMs": 237.02,
+          "jsHeapMb": 8.87,
+          "domNodes": 3578
+        },
+        {
+          "paintP50Ms": 58.700000000186265,
+          "paintP95Ms": 96.8000000002794,
+          "paintMaxMs": 96.8000000002794,
+          "syncP50Ms": 1.3000000002793968,
+          "syncTotalMs": 25.99999999953434,
+          "settleMs": 0,
+          "blockingMs": 37,
+          "longTaskMs": 87,
+          "longestTaskMs": 87,
+          "longTaskCount": 1,
+          "scriptMs": 598.87,
+          "layoutMs": 37.47,
+          "recalcStyleMs": 232.37,
+          "jsHeapMb": 9.02,
+          "domNodes": 3567
+        },
+        {
+          "paintP50Ms": 62.40000000037253,
+          "paintP95Ms": 148.39999999990687,
+          "paintMaxMs": 148.39999999990687,
+          "syncP50Ms": 1.1000000000931323,
+          "syncTotalMs": 23.700000000651926,
+          "settleMs": 0,
+          "blockingMs": 25,
+          "longTaskMs": 75,
+          "longestTaskMs": 75,
+          "longTaskCount": 1,
+          "scriptMs": 616.29,
+          "layoutMs": 34.84,
+          "recalcStyleMs": 234.2,
+          "jsHeapMb": 7.68,
+          "domNodes": 2504
+        },
+        {
+          "paintP50Ms": 64.5,
+          "paintP95Ms": 107.5,
+          "paintMaxMs": 107.5,
+          "syncP50Ms": 1.3000000002793968,
+          "syncTotalMs": 26.200000000651926,
+          "settleMs": 0,
+          "blockingMs": 0,
+          "longTaskMs": 0,
+          "longestTaskMs": 0,
+          "longTaskCount": 0,
+          "scriptMs": 624.93,
+          "layoutMs": 35.38,
+          "recalcStyleMs": 188.36,
+          "jsHeapMb": 7.19,
+          "domNodes": 2313
+        }
+      ]
+    },
+    "search-typing": {
+      "description": "Typing a parish name into the search box, one keystroke at a time.",
+      "summary": {
+        "paintP50Ms": {
+          "median": 32.4,
+          "min": 30.6,
+          "max": 35.3
+        },
+        "paintP95Ms": {
+          "median": 169.2,
+          "min": 147.6,
+          "max": 197.9
+        },
+        "paintMaxMs": {
+          "median": 169.2,
+          "min": 147.6,
+          "max": 197.9
+        },
+        "syncP50Ms": {
+          "median": 14.3,
+          "min": 13.4,
+          "max": 14.5
+        },
+        "syncTotalMs": {
+          "median": 158.7,
+          "min": 140.3,
+          "max": 180
+        },
+        "settleMs": {
+          "median": 233.8,
+          "min": 213,
+          "max": 249.2
+        },
+        "blockingMs": {
+          "median": 89,
+          "min": 65,
+          "max": 111
+        },
+        "longTaskMs": {
+          "median": 139,
+          "min": 115,
+          "max": 161
+        },
+        "longestTaskMs": {
+          "median": 139,
+          "min": 115,
+          "max": 161
+        },
+        "longTaskCount": {
+          "median": 1,
+          "min": 1,
+          "max": 1
+        },
+        "scriptMs": {
+          "median": 275.21,
+          "min": 246.01,
+          "max": 305.82
+        },
+        "layoutMs": {
+          "median": 21.24,
+          "min": 17.92,
+          "max": 22.34
+        },
+        "recalcStyleMs": {
+          "median": 57,
+          "min": 48.24,
+          "max": 75.07
+        },
+        "jsHeapMb": {
+          "median": 7.77,
+          "min": 7.45,
+          "max": 8.73
+        },
+        "domNodes": {
+          "median": 2333,
+          "min": 2332,
+          "max": 2705
+        }
+      },
+      "runs": [
+        {
+          "paintP50Ms": 31.700000000186265,
+          "paintP95Ms": 180.89999999990687,
+          "paintMaxMs": 180.89999999990687,
+          "syncP50Ms": 14,
+          "syncTotalMs": 157.20000000065193,
+          "settleMs": 226.6999999997206,
+          "blockingMs": 94,
+          "longTaskMs": 144,
+          "longestTaskMs": 144,
+          "longTaskCount": 1,
+          "scriptMs": 275.21,
+          "layoutMs": 22.07,
+          "recalcStyleMs": 60.59,
+          "jsHeapMb": 7.98,
+          "domNodes": 2705
+        },
+        {
+          "paintP50Ms": 30.600000000093132,
+          "paintP95Ms": 169.20000000018626,
+          "paintMaxMs": 169.20000000018626,
+          "syncP50Ms": 14.399999999906868,
+          "syncTotalMs": 161.09999999869615,
+          "settleMs": 249.1999999997206,
+          "blockingMs": 89,
+          "longTaskMs": 139,
+          "longestTaskMs": 139,
+          "longTaskCount": 1,
+          "scriptMs": 281.48,
+          "layoutMs": 19.4,
+          "recalcStyleMs": 48.24,
+          "jsHeapMb": 7.45,
+          "domNodes": 2332
+        },
+        {
+          "paintP50Ms": 32.89999999990687,
+          "paintP95Ms": 172.89999999990687,
+          "paintMaxMs": 172.89999999990687,
+          "syncP50Ms": 13.800000000279397,
+          "syncTotalMs": 158.6999999997206,
+          "settleMs": 213,
+          "blockingMs": 95,
+          "longTaskMs": 145,
+          "longestTaskMs": 145,
+          "longTaskCount": 1,
+          "scriptMs": 276.53,
+          "layoutMs": 19.37,
+          "recalcStyleMs": 57,
+          "jsHeapMb": 8.73,
+          "domNodes": 2705
+        },
+        {
+          "paintP50Ms": 32,
+          "paintP95Ms": 147.60000000009313,
+          "paintMaxMs": 147.60000000009313,
+          "syncP50Ms": 14.299999999813735,
+          "syncTotalMs": 159.10000000009313,
+          "settleMs": 237.10000000009313,
+          "blockingMs": 65,
+          "longTaskMs": 115,
+          "longestTaskMs": 115,
+          "longTaskCount": 1,
+          "scriptMs": 255.02,
+          "layoutMs": 21.24,
+          "recalcStyleMs": 52.48,
+          "jsHeapMb": 7.54,
+          "domNodes": 2333
+        },
+        {
+          "paintP50Ms": 32.39999999990687,
+          "paintP95Ms": 153.39999999990687,
+          "paintMaxMs": 153.39999999990687,
+          "syncP50Ms": 14.5,
+          "syncTotalMs": 153.39999999990687,
+          "settleMs": 221.3000000002794,
+          "blockingMs": 78,
+          "longTaskMs": 128,
+          "longestTaskMs": 128,
+          "longTaskCount": 1,
+          "scriptMs": 255.35,
+          "layoutMs": 21.97,
+          "recalcStyleMs": 48.66,
+          "jsHeapMb": 8.19,
+          "domNodes": 2333
+        },
+        {
+          "paintP50Ms": 35.299999999813735,
+          "paintP95Ms": 197.90000000037253,
+          "paintMaxMs": 197.90000000037253,
+          "syncP50Ms": 14.399999999906868,
+          "syncTotalMs": 180.00000000046566,
+          "settleMs": 238.20000000018626,
+          "blockingMs": 111,
+          "longTaskMs": 161,
+          "longestTaskMs": 161,
+          "longTaskCount": 1,
+          "scriptMs": 305.82,
+          "layoutMs": 22.34,
+          "recalcStyleMs": 75.07,
+          "jsHeapMb": 7.77,
+          "domNodes": 2705
+        },
+        {
+          "paintP50Ms": 32.39999999990687,
+          "paintP95Ms": 150.20000000018626,
+          "paintMaxMs": 150.20000000018626,
+          "syncP50Ms": 13.399999999906868,
+          "syncTotalMs": 140.3000000002794,
+          "settleMs": 233.79999999981374,
+          "blockingMs": 70,
+          "longTaskMs": 120,
+          "longestTaskMs": 120,
+          "longTaskCount": 1,
+          "scriptMs": 246.01,
+          "layoutMs": 17.92,
+          "recalcStyleMs": 57.62,
+          "jsHeapMb": 7.45,
+          "domNodes": 2333
+        }
+      ]
+    },
+    "parish-popup-and-nav": {
+      "description": "Opening a map pin's popup, then following it through to the parish page (client-side route).",
+      "summary": {
+        "popupPaintMs": {
+          "median": 200.7,
+          "min": 172.9,
+          "max": 242.7
+        },
+        "popupOpenMs": {
+          "median": 200.9,
+          "min": 174,
+          "max": 244
+        },
+        "popupBlockingMs": {
+          "median": 104,
+          "min": 80,
+          "max": 147
+        },
+        "navContentMs": {
+          "median": 317.9,
+          "min": 175.9,
+          "max": 381.4
+        },
+        "navSettleMs": {
+          "median": 0,
+          "min": 0,
+          "max": 52.7
+        },
+        "navBlockingMs": {
+          "median": 44,
+          "min": 19,
+          "max": 46
+        },
+        "scriptMs": {
+          "median": 210.28,
+          "min": 179.77,
+          "max": 250.13
+        },
+        "layoutMs": {
+          "median": 58.39,
+          "min": 47.98,
+          "max": 70.22
+        },
+        "recalcStyleMs": {
+          "median": 101.82,
+          "min": 87.7,
+          "max": 144.98
+        },
+        "jsHeapMb": {
+          "median": 6.96,
+          "min": 5.54,
+          "max": 7.18
+        },
+        "domNodes": {
+          "median": 2530,
+          "min": 455,
+          "max": 2921
+        }
+      },
+      "runs": [
+        {
+          "popupPaintMs": 215.39999999990687,
+          "popupOpenMs": 215.5,
+          "popupBlockingMs": 115,
+          "navContentMs": 348.6999999997206,
+          "navSettleMs": 0,
+          "navBlockingMs": 44,
+          "scriptMs": 250.13,
+          "layoutMs": 62.97,
+          "recalcStyleMs": 115.12,
+          "jsHeapMb": 6.52,
+          "domNodes": 2489
+        },
+        {
+          "popupPaintMs": 200.70000000018626,
+          "popupOpenMs": 200.89999999990687,
+          "popupBlockingMs": 104,
+          "navContentMs": 326,
+          "navSettleMs": 0,
+          "navBlockingMs": 46,
+          "scriptMs": 210.28,
+          "layoutMs": 55.74,
+          "recalcStyleMs": 101.82,
+          "jsHeapMb": 7.15,
+          "domNodes": 2921
+        },
+        {
+          "popupPaintMs": 192.59999999962747,
+          "popupOpenMs": 192.59999999962747,
+          "popupBlockingMs": 96,
+          "navContentMs": 297.10000000009313,
+          "navSettleMs": 52.39999999990687,
+          "navBlockingMs": 44,
+          "scriptMs": 220.72,
+          "layoutMs": 68.57,
+          "recalcStyleMs": 100.19,
+          "jsHeapMb": 7.18,
+          "domNodes": 2530
+        },
+        {
+          "popupPaintMs": 242.6999999997206,
+          "popupOpenMs": 244,
+          "popupBlockingMs": 147,
+          "navContentMs": 381.39999999990687,
+          "navSettleMs": 52.6999999997206,
+          "navBlockingMs": 34,
+          "scriptMs": 207.38,
+          "layoutMs": 70.22,
+          "recalcStyleMs": 144.98,
+          "jsHeapMb": 6.96,
+          "domNodes": 2528
+        },
+        {
+          "popupPaintMs": 227.8000000002794,
+          "popupOpenMs": 229.10000000009313,
+          "popupBlockingMs": 131,
+          "navContentMs": 300.3000000002794,
+          "navSettleMs": 49.1999999997206,
+          "navBlockingMs": 44,
+          "scriptMs": 243.57,
+          "layoutMs": 58.39,
+          "recalcStyleMs": 116.29,
+          "jsHeapMb": 7.18,
+          "domNodes": 2902
+        },
+        {
+          "popupPaintMs": 172.89999999990687,
+          "popupOpenMs": 174,
+          "popupBlockingMs": 80,
+          "navContentMs": 317.90000000037253,
+          "navSettleMs": 0,
+          "navBlockingMs": 25,
+          "scriptMs": 202.77,
+          "layoutMs": 52.83,
+          "recalcStyleMs": 90.29,
+          "jsHeapMb": 6.96,
+          "domNodes": 2904
+        },
+        {
+          "popupPaintMs": 176,
+          "popupOpenMs": 176.3000000002794,
+          "popupBlockingMs": 82,
+          "navContentMs": 175.89999999990687,
+          "navSettleMs": 0,
+          "navBlockingMs": 19,
+          "scriptMs": 179.77,
+          "layoutMs": 47.98,
+          "recalcStyleMs": 87.7,
+          "jsHeapMb": 5.54,
+          "domNodes": 455
+        }
+      ]
+    }
+  }
+}

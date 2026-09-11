@@ -1,5 +1,5 @@
 -- Minimal SQLite schema for the web frontend snapshot (apps/web/public/frontend.snapshot).
--- Built by: python -m pdf_extract.extract_frontend_db
+-- Built by: python -m pdf_extract extract-frontend-db
 --
 -- This is a denormalised subset of data/schema.sql designed for the browser:
 --   * church gains homepage_url (from parish) and bulletin_url (latest bulletin source)
