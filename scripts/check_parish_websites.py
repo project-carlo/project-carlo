@@ -31,8 +31,17 @@ from urllib.request import Request, urlopen
 
 PARISHES_CSV = Path(__file__).resolve().parent.parent / "data" / "parishes.csv"
 
+# Two lapsed Buffalo parish domains (ststansbuffalo.com, saintjohnkanty.com) were
+# taken by the same Indonesian online-slots network, and none of its vocabulary was
+# in this list -- so both were reported as REDIRECT-OFFSITE "(merged into a family
+# site?)", which is the label that normally means "collapse this row into its
+# family". Multi-word where the single word has an innocent parish use: a parish
+# page says "time slot" and runs a "lottery" fundraiser, and "direct deposit" is on
+# every online-giving page.
 SPAM = ["casino", "roulette", "betting", "sportsbook", "viagra", "cialis",
-        "pesantren", "escort", "porn", "payday", "forex"]
+        "pesantren", "escort", "porn", "payday", "forex",
+        "judi", "togel", "gacor", "maxwin", "slot online", "situs slot",
+        "slot gacor", "slot terpercaya", "pragmatic play"]
 PARISH_WORDS = ["parish", "church", "catholic", "mass", "bulletin", "diocese",
                 "gospel", "liturgy", "sacrament", "worship", "rosary"]
 
@@ -68,7 +77,10 @@ def check(slug: str, url: str) -> tuple[str, str, str, str]:
     if spam:
         return ("SPAM-SQUAT", slug, url, f"spam terms: {spam}")
     if offsite:
-        return ("REDIRECT-OFFSITE", slug, url, f"-> {final}  (merged into a family site?)")
+        # Could be a merger into a family site -- or a lapsed domain someone else
+        # has bought. Read the target before treating it as a structural signal.
+        return ("REDIRECT-OFFSITE", slug, url,
+                f"-> {final}  (family site after a merger, or a squat on a lapsed domain?)")
     if not good:
         return ("NO-PARISH-WORDS", slug, url, f"http={status} (JS-rendered? verify by hand)")
     return ("ok", slug, url, f"http={status}")

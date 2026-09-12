@@ -34,6 +34,14 @@ be added as a church row directly.
 
 The trailing pages repeat the family numbers alongside schools and other
 non-parish entries; everything after the first repeat of "Family #1" is ignored.
+
+Not every family header starts with the word "Family". The last one is typeset
+"Campus Ministry Vicariate Family #36 (Campus Ministry Family)", so a pattern
+anchored on "^Family" skipped it and quietly attached its three bullets -- one of
+them the UB North Newman Center, a venue no other diocesan source lists -- to
+Family #35 instead. It also let the bare "Family #36" in the trailing schools
+table open a spurious 36th family, which survived only because no bullet followed
+it. Match the number wherever it appears on the line, not the start of the line.
 """
 
 from __future__ import annotations
@@ -52,7 +60,11 @@ DEFAULT_URL = ("https://www.buffalodiocese.org/wp-content/uploads/"
 
 BULLET_PARISH = "•"   # filled bullet
 BULLET_SITE = "◦"     # hollow bullet
-FAMILY_RE = re.compile(r"^Family\s*#(\d+)\s*(?:\((.*?)\))?\s*$")
+# The header is usually a bare "Family #14 (Fields of Grace)", but not always: the
+# campus-ministry entry is typeset "Campus Ministry Vicariate Family #36 (Campus
+# Ministry Family)". Anchoring on "^Family" dropped that whole family and silently
+# appended its parishes to #35 -- see the docstring note below.
+FAMILY_RE = re.compile(r"^(?:.*\s)?Family\s*#(\d+)\s*(?:\((.*?)\))?\s*$")
 
 _CTX = ssl.create_default_context()
 _CTX.check_hostname = False
