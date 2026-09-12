@@ -18,7 +18,6 @@
     "geocode:apply": "uv run python -m pdf_extract geocode apply",
     "recurrence:apply": "uv run python -m pdf_extract recurrence apply",
     "recurrence:backfill": "uv run python -m pdf_extract recurrence backfill",
-    "pattern:backfill": "uv run python -m pdf_extract pattern backfill",
     "test": "uv run pytest",
     "lint": "uv run ruff check .",
     "extract:web": "uv run python -m pdf_extract extract-frontend-db",
