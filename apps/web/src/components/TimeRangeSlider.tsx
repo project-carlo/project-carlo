@@ -43,7 +43,7 @@ export function TimeRangeSlider({
         }`}
       >
         <span className="justify-self-start tabular-nums">{formatValue(start)}</span>
-        <span className="smallcaps text-[0.8125rem] text-ink-soft">
+        <span className="font-serif text-[0.9375rem] italic text-ink-faint">
           through
         </span>
         <span className="justify-self-end tabular-nums">{formatValue(end)}</span>

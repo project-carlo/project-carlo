@@ -18,7 +18,10 @@ import {
   encodeFiltersToParams,
   type FilterState,
 } from "../components/filterState";
-import { FILTER_DAY_LABELS } from "../constants/days";
+import {
+  FILTER_DAY_DISPLAY_ORDER,
+  FILTER_DAY_LABELS,
+} from "../constants/days";
 import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
@@ -173,10 +176,10 @@ export function LandingPage() {
           </h1>
           <p
             className={cn(
-              "smallcaps m-0 text-ink-soft leading-[1.4]",
+              "m-0 font-serif italic text-ink-soft leading-[1.4]",
               open
-                ? "text-[12px] md:text-[15px]"
-                : "text-[13px] md:text-[15px]",
+                ? "text-[15px] md:text-[17px]"
+                : "text-[16px] md:text-[17px]",
             )}
           >
             Mass, Confession &amp; Adoration{" "}
@@ -220,8 +223,8 @@ export function LandingPage() {
               onClick={() => setOpen((prev) => !prev)}
               data-active={open ? "true" : undefined}
               className={cn(
-                "rubric-link smallcaps flex items-center md:inline-flex md:w-auto md:gap-2 md:text-[13px]",
-                "w-full justify-between text-[13px]",
+                "rubric-link flex items-center font-serif md:inline-flex md:w-auto md:gap-2",
+                "w-full justify-between text-[15px]",
                 open ? "text-rubric" : "text-ink-soft",
               )}
               aria-expanded={open}
@@ -274,6 +277,10 @@ export function LandingPage() {
   );
 }
 
+/** The refine section's field labels — one size and alignment for all three,
+ *  matching the map page's filter panel. */
+const REFINE_LABEL_CLASS = "smallcaps m-0 text-[0.875rem] text-ink-soft";
+
 interface RefineSectionProps {
   filters: FilterState;
   onChange: (next: FilterState) => void;
@@ -296,9 +303,7 @@ function RefineSection({
       <Fleuron size={fleuronSize} className="w-full" />
 
       <section className="flex flex-col gap-[10px] md:gap-[14px]">
-        <h3 className="smallcaps m-0 text-[12px] text-ink-soft md:text-center md:text-[13px]">
-          Service type
-        </h3>
+        <h3 className={REFINE_LABEL_CLASS}>Service type</h3>
         {isDesktop ? (
           <ServiceSegmented
             value={filters.eventType}
@@ -314,25 +319,22 @@ function RefineSection({
 
       <section className="flex flex-col gap-[10px] md:gap-[14px]">
         <div className="flex items-baseline justify-between gap-3">
-          <h3 className="smallcaps m-0 text-[12px] text-ink-soft md:text-[13px]">
-            Day of week
-          </h3>
+          <h3 className={REFINE_LABEL_CLASS}>Day of week</h3>
           <button
             type="button"
             onClick={() => onChange({ ...filters, daysOfWeek: [] })}
+            // Same hidden-when-default treatment as the map page's filter
+            // panel: held in the layout so the heading row doesn't reflow the
+            // moment a day is picked, but out of reach while it is a no-op.
+            aria-hidden={filters.daysOfWeek.length === 0}
+            tabIndex={filters.daysOfWeek.length === 0 ? -1 : 0}
             className={cn(
-              "smallcaps cursor-pointer border-0 bg-transparent",
-              "text-[12px]",
-              filters.daysOfWeek.length === 0
-                ? "text-rubric"
-                : "text-ink-soft hover:text-rubric-deep",
+              "missal-focus cursor-pointer border-0 bg-transparent font-serif text-[15px]",
+              "text-ink-soft transition-colors hover:text-rubric",
+              filters.daysOfWeek.length === 0 && "invisible",
             )}
           >
-            {filters.daysOfWeek.length === 0
-              ? "All days"
-              : isDesktop
-                ? "Show every day"
-                : "Reset"}
+            Reset
           </button>
         </div>
         <DayPills
@@ -342,9 +344,7 @@ function RefineSection({
       </section>
 
       <section className="flex flex-col gap-[10px] md:gap-[14px]">
-        <h3 className="smallcaps m-0 text-[12px] text-ink-soft md:text-[13px]">
-          Time of day
-        </h3>
+        <h3 className={REFINE_LABEL_CLASS}>Time of day</h3>
         <TimeRangeSlider
           min={0}
           max={MINUTES_PER_DAY}
@@ -373,7 +373,7 @@ function RefineSection({
         <button
           type="button"
           onClick={onSubmit}
-          className="missal-focus smallcaps inline-flex w-full items-center justify-center gap-[10px] bg-rubric px-6 py-[14px] text-[14px] tracking-[0.14em] text-paper transition-colors hover:bg-rubric-deep active:translate-y-px md:w-auto md:px-6"
+          className="missal-focus inline-flex w-full items-center justify-center gap-[10px] bg-rubric px-7 py-[14px] font-display text-[17px] leading-none text-paper transition-colors hover:bg-rubric-deep active:translate-y-px md:w-auto"
         >
           <span>Show on map</span>
           <ArrowRightIcon className="size-[14px]" />
@@ -485,7 +485,8 @@ function DayPills({ value, onChange }: DayPillsProps) {
   };
   return (
     <div className="flex items-center justify-between gap-1">
-      {FILTER_DAY_LABELS.map((day, dayIndex) => {
+      {FILTER_DAY_DISPLAY_ORDER.map((dayIndex) => {
+        const day = FILTER_DAY_LABELS[dayIndex];
         const isActive = value.includes(dayIndex);
         return (
           <button

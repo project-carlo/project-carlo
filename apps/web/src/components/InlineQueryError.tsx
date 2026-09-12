@@ -34,7 +34,7 @@ export function InlineQueryError({
         type="button"
         onClick={onRetry}
         className={cn(
-          "rubric-link smallcaps inline-flex items-center gap-1.5 text-[0.875rem]",
+          "rubric-link inline-flex items-center gap-1.5 font-serif text-[0.9375rem]",
           centered && "mx-auto mt-1",
         )}
       >

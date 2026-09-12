@@ -49,7 +49,7 @@ export function FilterPills({ filters }: FilterPillsProps) {
               ·
             </span>
           ) : null}
-          <span className="smallcaps text-[0.875rem] text-rubric">
+          <span className="font-serif text-[0.9375rem] text-rubric">
             {label}
           </span>
         </span>

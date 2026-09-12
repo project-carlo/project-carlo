@@ -284,7 +284,7 @@ export function HomePage() {
               {aboutPageEnabled ? (
                 <Link
                   to="/about"
-                  className="rubric-link smallcaps mt-1 shrink-0 text-[0.75rem]"
+                  className="rubric-link mt-1 shrink-0 font-serif text-[0.9375rem]"
                 >
                   About
                 </Link>
@@ -301,7 +301,7 @@ export function HomePage() {
                     onClick={() => setFilterPanelOpen(true)}
                     aria-label="Open filters"
                     data-active={filterPanelOpen}
-                    className="rubric-link smallcaps ml-1 whitespace-nowrap text-[0.875rem] md:hidden"
+                    className="rubric-link ml-1 whitespace-nowrap font-serif text-[0.9375rem] md:hidden"
                   >
                     Filters
                   </button>

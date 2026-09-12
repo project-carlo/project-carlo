@@ -40,7 +40,11 @@ export function Masthead({
           Project <span className="italic text-rubric">Carlo</span>
         </Link>
       </p>
-      <h1 className="smallcaps text-[0.875rem] font-normal text-ink-soft">{tagline}</h1>
+      {/* A sentence, so it stays in the body serif — small caps is for
+          labels. Italic gives it the subtitle voice without shouting. */}
+      <h1 className="font-serif text-[1rem] font-normal italic text-ink-soft sm:text-[1.0625rem]">
+        {tagline}
+      </h1>
     </header>
   );
 }

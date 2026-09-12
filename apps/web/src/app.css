@@ -134,17 +134,21 @@
       "lnum" 1;
   }
 
-  /* Small-caps label style — reused for day names, section headers, etc. */
+  /* Small-caps label style — field labels, day names, table keys. These are
+   * TRUE small caps: the initial letter keeps its full cap height and the rest
+   * drop to small caps, the way a missal sets a rubric. Deliberately not
+   * `text-transform: uppercase` + `all-small-caps`, which flattens every label
+   * to one height and reads as a shout. Reserve it for labels — never for a
+   * sentence, a link, or a button; those stay in the body serif. */
   .smallcaps {
     font-family: var(--font-display);
     font-feature-settings:
       "smcp" 1,
-      "c2sc" 1,
+      "c2sc" 0,
       "onum" 0,
       "lnum" 1;
-    font-variant-caps: all-small-caps;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.055em;
   }
 
   /* Hand-drawn rubric underline that appears on hover/focus of text links. */
@@ -173,21 +177,17 @@
     --rubric-underline: 1;
     color: var(--rubric-deep);
   }
-  .rubric-link:focus-visible {
-    outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
-    outline-offset: 4px;
-  }
   .rubric-link[data-active="true"] {
     --rubric-underline: 1;
   }
 
-  .missal-focus:focus-visible {
-    outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
-    outline-offset: 3px;
-  }
+  /* One rubric focus ring for every focusable thing in the app. The three
+   * call sites had drifted to three different offsets. */
+  .rubric-link:focus-visible,
+  .missal-focus:focus-visible,
   .missal-search-field:focus-within {
     outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
-    outline-offset: 5px;
+    outline-offset: 3px;
   }
 
   /* A hairline rule used everywhere instead of box borders. */
@@ -235,123 +235,161 @@
       0 18px 40px -18px rgb(22 18 16 / 0.32),
       0 2px 6px -2px rgb(22 18 16 / 0.1);
   }
+}
 
-  /* ---- Leaflet overrides ------------------------------------------------- */
+/* ---- Leaflet overrides ---------------------------------------------------
+ *
+ * Deliberately UNLAYERED. `leaflet.css` (imported in main.tsx) ships its own
+ * unlayered rules, and anything in `@layer base` loses to unlayered CSS no
+ * matter how specific it is — which is how the popup quietly kept Leaflet's
+ * white card, 12px corners and blue links while these rules sat here doing
+ * nothing. Plain rules after the import win on source order instead.
+ * ------------------------------------------------------------------------ */
 
-  .leaflet-container {
-    background: var(--paper-deep);
-    font-family: var(--font-sans);
-  }
+.leaflet-container {
+  background: var(--paper-deep);
+  font-family: var(--font-sans);
+}
 
-  .leaflet-container *,
-  .leaflet-container *::before,
-  .leaflet-container *::after {
-    border-style: none;
-  }
+/* Leaflet's own chrome borders, dropped so the map furniture reads as missal
+ * cards. Targeted rather than a `.leaflet-container *` blanket, which would
+ * also strip the Tailwind borders our popup content draws (its leader dots
+ * and footer rule) now that these rules are unlayered and win outright. */
+.leaflet-touch .leaflet-bar,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-control-layers-separator,
+.leaflet-control-scale-line {
+  border: none;
+}
 
-  /* OSM tiles: muted to match the missal card UI (ChurchMap). */
-  .leaflet-container.church-map .leaflet-tile-pane {
-    filter: saturate(0.78) brightness(1.02) contrast(1.08) hue-rotate(-8deg);
-  }
+/* OSM tiles: muted to match the missal card UI (ChurchMap). */
+.leaflet-container.church-map .leaflet-tile-pane {
+  filter: saturate(0.78) brightness(1.02) contrast(1.08) hue-rotate(-8deg);
+}
 
-  .leaflet-control-attribution {
-    background: color-mix(in oklch, var(--paper) 82%, transparent) !important;
-    color: var(--ink-soft) !important;
-    font-size: 12px !important;
-    padding: 2px 6px !important;
-    font-family: var(--font-sans) !important;
-  }
-  .leaflet-control-attribution a {
-    color: var(--rubric) !important;
-  }
+/* Links inside the map (popup body, attribution) are rubric, not Leaflet's
+ * default blue. `.leaflet-container a` is what `.rubric-link` was losing to. */
+.leaflet-container a {
+  color: var(--rubric);
+}
 
-  .leaflet-control-zoom a {
-    background: var(--paper) !important;
-    color: var(--ink) !important;
-    border: 1px solid var(--rule-strong) !important;
-    font-family: var(--font-display) !important;
-    font-weight: 400 !important;
-  }
-  .leaflet-control-zoom a:hover {
-    background: var(--paper-deep) !important;
-    color: var(--rubric) !important;
-  }
+/* Scoped through `.leaflet-container` to match the specificity of Leaflet's
+ * own `.leaflet-container .leaflet-control-attribution`, which sets the white
+ * background this replaces. */
+.leaflet-container .leaflet-control-attribution {
+  background: color-mix(in oklch, var(--paper) 82%, transparent);
+  color: var(--ink-soft);
+  font-size: 12px;
+  padding: 2px 6px;
+  margin: 0;
+  font-family: var(--font-sans);
+}
 
-  .leaflet-popup-content-wrapper {
-    border: 1px solid var(--rule-strong);
-    border-radius: 2px;
-    background: var(--paper);
-    box-shadow:
-      0 1px 0 rgb(22 18 16 / 0.04),
-      0 18px 40px -18px rgb(22 18 16 / 0.35),
-      0 2px 6px -2px rgb(22 18 16 / 0.12);
-    padding: 0;
-  }
+.leaflet-control-zoom a {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule-strong);
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--paper-deep);
+  color: var(--rubric);
+}
 
-  .leaflet-popup-content {
-    margin: 0;
-    padding: 0.7rem 0.7rem 0.65rem;
-    min-width: 205px;
-    max-width: 275px;
-    font-family: var(--font-sans);
-    color: var(--ink);
-    line-height: 1.5;
-  }
+/* The popup is a small missal card: paper stock, a hairline edge, square
+ * corners, and the same shadow the floating panels use. */
+.leaflet-popup-content-wrapper {
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow:
+    0 1px 0 rgb(22 18 16 / 0.04),
+    0 18px 40px -18px rgb(22 18 16 / 0.35),
+    0 2px 6px -2px rgb(22 18 16 / 0.12);
+  padding: 0;
+}
 
-  .leaflet-popup-tip {
-    background: var(--paper);
-    border: 1px solid var(--rule-strong);
-  }
+.leaflet-popup-content {
+  margin: 0;
+  padding: 0.85rem 0.9rem 0.8rem;
+  min-width: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
 
-  .leaflet-popup-close-button {
-    color: var(--ink-faint) !important;
-    font-size: 20px !important;
-    padding: 6px 8px 0 0 !important;
-    font-family: var(--font-display) !important;
-  }
-  .leaflet-popup-close-button:hover {
-    color: var(--rubric) !important;
-    background: transparent !important;
-  }
+.leaflet-popup-content p {
+  margin: 0;
+}
 
-  /* Marker settle-in animation. IMPORTANT: never animate `transform` on the
-   * `.church-map-marker` wrapper itself — Leaflet sets `transform:
-   * translate3d(...)` on that same element to position each marker, so any
-   * CSS transform here will clobber positioning and all pins stack at the
-   * top-left of the map pane. Animate opacity on the wrapper and leave any
-   * transform effects (hover lift, entry scale) to the inner <svg>. */
-  @keyframes marker-settle {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes marker-settle-svg {
-    from {
-      transform: scale(0.82) translateY(-4px);
-    }
-    to {
-      transform: scale(1) translateY(0);
-    }
-  }
-  .church-map-marker {
-    animation: marker-settle 380ms ease-out both;
-  }
-  .church-map-marker svg {
-    display: block;
-    transform-origin: 50% 100%;
-    animation: marker-settle-svg 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
-    transition: transform 200ms ease;
-    filter: drop-shadow(0 2px 3px rgb(22 18 16 / 0.28));
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .church-map-marker:hover svg {
-      transform: translateY(-2px) scale(1.06);
-    }
-  }
+/* The tip is a square rotated 45deg and clipped to its lower half, so only
+ * two of its four borders are ever on screen. Bordering all four drew a stray
+ * seam across the top of the pointer where it meets the card. After the
+ * rotation the visible V is the square's right and bottom edges. */
+.leaflet-popup-tip {
+  background: var(--paper);
+  border: none;
+  border-right: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+  box-shadow: none;
+}
 
+/* Sits in the card's top-right gutter; the popup header reserves room for it
+ * (pr-6) so a long parish name never runs underneath. */
+.leaflet-container a.leaflet-popup-close-button {
+  top: 0.3rem;
+  right: 0.3rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  font: 400 1.05rem/1.25rem var(--font-display);
+  color: var(--ink-faint);
+  transition: color 160ms ease;
+}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+  color: var(--rubric);
+  background: transparent;
+}
+
+/* Marker settle-in animation. IMPORTANT: never animate `transform` on the
+ * `.church-map-marker` wrapper itself — Leaflet sets `transform:
+ * translate3d(...)` on that same element to position each marker, so any
+ * CSS transform here will clobber positioning and all pins stack at the
+ * top-left of the map pane. Animate opacity on the wrapper and leave any
+ * transform effects (hover lift, entry scale) to the inner <svg>. */
+@keyframes marker-settle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes marker-settle-svg {
+  from {
+    transform: scale(0.82) translateY(-4px);
+  }
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
+.church-map-marker {
+  animation: marker-settle 380ms ease-out both;
+}
+.church-map-marker svg {
+  display: block;
+  transform-origin: 50% 100%;
+  animation: marker-settle-svg 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 200ms ease;
+  filter: drop-shadow(0 2px 3px rgb(22 18 16 / 0.28));
+}
+@media (hover: hover) and (pointer: fine) {
+  .church-map-marker:hover svg {
+    transform: translateY(-2px) scale(1.06);
+  }
 }
 
 /* ---- Time range slider (missal rubric styling) --------------------------- */
