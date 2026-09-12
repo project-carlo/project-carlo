@@ -1,6 +1,10 @@
 import { useRef, useState } from "react";
 import { formatMinutesMissal } from "../utils";
-import { minutesFromPointerDelta, shiftTimeRange } from "./timeRange";
+import {
+  minutesFromPointerDelta,
+  rangeSelectionStyle,
+  shiftTimeRange,
+} from "./timeRange";
 
 interface TimeRangeSliderProps {
   min: number;
@@ -53,10 +57,10 @@ export function TimeRangeSlider({
 
   const span = end - start;
   const canDragRange = span > 0 && span < max - min;
-  const rangeLeft = `calc(${startPercent}% + 0.25rem)`;
-  const rangeWidth = `calc(${Math.max(endPercent - startPercent, 0)}% - 0.5rem * ${
-    (endPercent - startPercent) / 100
-  })`;
+  const { left: rangeLeft, width: rangeWidth } = rangeSelectionStyle(
+    startPercent,
+    endPercent,
+  );
 
   const applyPointerDelta = (clientX: number) => {
     const drag = dragRef.current;
@@ -119,7 +123,6 @@ export function TimeRangeSlider({
               ? `Move time range, ${formatValue(start)} through ${formatValue(end)}`
               : undefined
           }
-          title={canDragRange ? "Drag to move this time range" : undefined}
           className={`absolute top-0 h-6 select-none touch-none ${
             canDragRange
               ? dragging

@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { minutesFromPointerDelta, shiftTimeRange } from "./timeRange";
+import {
+  minutesFromPointerDelta,
+  rangeSelectionStyle,
+  shiftTimeRange,
+} from "./timeRange";
 
 const MIN = 0;
 const MAX = 24 * 60;
@@ -46,6 +50,37 @@ describe("shiftTimeRange", () => {
 
   it("returns the input unchanged when the span is inverted", () => {
     expect(shiftTimeRange(720, 480, 60, MIN, MAX, STEP)).toEqual([720, 480]);
+  });
+});
+
+describe("rangeSelectionStyle", () => {
+  it("places the fill from the start-thumb center to the end-thumb center", () => {
+    expect(rangeSelectionStyle(0, 100)).toEqual({
+      left: "calc(0% + 0.5rem)",
+      width: "calc(100% - 1rem)",
+    });
+  });
+
+  it("keeps the right edge on the end-thumb center when the window is flush right", () => {
+    // 80%–100%: right edge is 100% - 0.5rem, the native max-thumb center.
+    expect(rangeSelectionStyle(80, 100)).toEqual({
+      left: "calc(80% - 0.3rem)",
+      width: "calc(20% - 0.2rem)",
+    });
+  });
+
+  it("keeps the left edge on the start-thumb center when the window is flush left", () => {
+    expect(rangeSelectionStyle(0, 20)).toEqual({
+      left: "calc(0% + 0.5rem)",
+      width: "calc(20% - 0.2rem)",
+    });
+  });
+
+  it("collapses to zero width when the thumbs occupy the same point", () => {
+    expect(rangeSelectionStyle(50, 50)).toEqual({
+      left: "50%",
+      width: "0%",
+    });
   });
 });
 
