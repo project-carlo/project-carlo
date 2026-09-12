@@ -1,3 +1,36 @@
+/** Matches `.time-range-slider` thumb size in app.css. */
+export const RANGE_THUMB_WIDTH_REM = 1;
+
+function calcPercentPlusRem(percent: number, rem: number): string {
+  const roundedRem = Number(rem.toFixed(4));
+  if (roundedRem === 0) return `${percent}%`;
+  const sign = roundedRem < 0 ? "-" : "+";
+  return `calc(${percent}% ${sign} ${Math.abs(roundedRem)}rem)`;
+}
+
+/**
+ * CSS position for the highlighted range between two native range thumbs.
+ *
+ * Native thumbs travel across `(trackWidth - thumbWidth)`, so a value of 100%
+ * sits half a thumb inside the right edge — not at 100% of the track. The fill
+ * is therefore placed from the start-thumb center to the end-thumb center so it
+ * never paints past either circle.
+ */
+export function rangeSelectionStyle(
+  startPercent: number,
+  endPercent: number,
+  thumbWidthRem = RANGE_THUMB_WIDTH_REM,
+): { left: string; width: string } {
+  const spanPercent = Math.max(endPercent - startPercent, 0);
+  const startShiftRem =
+    thumbWidthRem / 2 - (startPercent / 100) * thumbWidthRem;
+  const spanShiftRem = (spanPercent / 100) * thumbWidthRem;
+  return {
+    left: calcPercentPlusRem(startPercent, startShiftRem),
+    width: calcPercentPlusRem(spanPercent, -spanShiftRem),
+  };
+}
+
 /** Convert a horizontal pointer delta on the track into minutes. */
 export function minutesFromPointerDelta(
   deltaX: number,
