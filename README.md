@@ -127,7 +127,6 @@ pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
 pnpm recurrence:backfill [-- --limit N]
 pnpm recurrence:apply
-pnpm pattern:backfill [-- --dry-run]
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
 pnpm extract:web
 pnpm verify:frontend-snapshot
@@ -264,15 +263,12 @@ What the frontend does with them:
   few of those in a row are exactly what promotion reads as a standing weekly
   slot.
 
-`pnpm pattern:backfill` recovers the qualifiers from notes already on file, so
-the corpus does not have to wait for every parish's next bulletin. It reads only
-notes that state the pattern outright ("First Friday of the month", "October
-through June", "Sept. 8 to May 30") and refuses anything with an exclusion in it
-("Except 1st Saturday of the month"), where reading the ordinal would invert the
-meaning, or a named season ("Summer Mass"), where the months the parish means
-are not on the page. A range it reads keeps the days the note stated and no
-others. It skips a row the extractor has already qualified. Notes it cannot read
-are left exactly as they are.
+Existing rows were corrected once so the shipped data matches the fields. New
+bulletins fill the fields through extraction; there is no ongoing note-to-field
+pipeline. The extraction prompt is the quality lever: qualifier policy lives in
+`WEEKLY_QUALIFIER_PROMPT` in `schedule_extraction.py`, next to the `WeeklySlot`
+schema, and a wording-only change bumps `SCHEMA_VERSION` so cached results are
+not reused.
 
 ## Environment Variables
 
@@ -321,7 +317,6 @@ pnpm db:drop     # delete the SQLite file
   - `detect.py` - bulletin provider detection (Playwright)
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `schedule_pattern.py` - weeks-of-month and partial-year season qualifiers
-  - `pattern_backfill.py` - recovers those qualifiers from older events' notes
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
 

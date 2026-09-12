@@ -33,7 +33,6 @@ from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
 from pdf_extract.fetch import fetch_bulletins
 from pdf_extract.geocode import run_backfill
-from pdf_extract.pattern_backfill import backfill_patterns
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence, backfill_history_from_git
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
@@ -137,10 +136,6 @@ def _cmd_recurrence_apply(_args: argparse.Namespace) -> Result:
 
 def _cmd_recurrence_backfill(args: argparse.Namespace) -> Result:
     return backfill_history_from_git(limit=args.limit)
-
-
-def _cmd_pattern_backfill(args: argparse.Namespace) -> Result:
-    return backfill_patterns(dry_run=args.dry_run)
 
 
 def _cmd_db_create(_args: argparse.Namespace) -> Result:
@@ -297,25 +292,6 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     recurrence_backfill_parser.set_defaults(handler=_cmd_recurrence_backfill)
     _add_common_args(recurrence_backfill_parser)
-
-    # -- pattern --
-    pattern_parser = subparsers.add_parser(
-        "pattern",
-        help="Recurrence qualifiers: weeks of the month and partial-year seasons",
-    )
-    pattern_parser.set_defaults(help_parser=pattern_parser)
-    pattern_subparsers = pattern_parser.add_subparsers(dest="pattern_command")
-
-    pattern_backfill_parser = pattern_subparsers.add_parser(
-        "backfill",
-        help="Fill weeks_of_month and season months in data/events.json from event notes",
-    )
-    pattern_backfill_parser.add_argument(
-        "--dry-run", action="store_true",
-        help="Report what would change without writing events.json",
-    )
-    pattern_backfill_parser.set_defaults(handler=_cmd_pattern_backfill)
-    _add_common_args(pattern_backfill_parser)
 
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
