@@ -40,3 +40,13 @@ export function filterDayFromJsDay(jsDay: number): number {
   if (jsDay < 0) return -1;
   return (jsDay + 6) % 7;
 }
+
+/**
+ * Display order for the weekday pickers — DAY_ORDER's Sunday-first week, as
+ * both the map's filter panel and the landing page's refine section show it,
+ * expressed as indices into the Monday-first FILTER_DAY_LABELS. Keeping that
+ * array Monday-first avoids touching URL state or the filter wire format.
+ */
+export const FILTER_DAY_DISPLAY_ORDER: readonly number[] = DAY_ORDER.map(
+  (_day, jsDay) => filterDayFromJsDay(jsDay),
+);

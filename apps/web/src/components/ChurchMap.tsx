@@ -14,7 +14,7 @@ import type { ChurchMapItem } from "../types";
 import type { MapView } from "../lib/mapView";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
-import { FleuronIcon } from "@/components/icons";
+import { Fleuron } from "@/components/Fleuron";
 
 const OSM_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
@@ -23,6 +23,11 @@ const defaultCenter: [number, number] = [43.1566, -77.6088];
 
 /** Day rows shown in a pin popup before it spills into "…and N more days". */
 const POPUP_DAY_ROWS = 3;
+
+/** Every popup on the map is cut to one card size, so pins don't each open a
+ *  differently-shaped panel as you click along a street. */
+const POPUP_MIN_WIDTH = 225;
+const POPUP_MAX_WIDTH = 275;
 
 /* A cross-in-roundel pin: cream disc with a brass ring, a rubric-red Latin
  * cross at the center — and, for a searched place, a solid rubric pin. Both
@@ -202,8 +207,10 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
 
   return (
     <div className="w-full">
-      <div className="space-y-2">
-        <h3 className="font-display text-[1.35rem] leading-[1.1] font-normal text-ink">
+      {/* pr-6 keeps a long parish name clear of the close button, which
+          Leaflet pins to the card's top-right corner. */}
+      <div className="space-y-1 pr-6">
+        <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-ink">
           {church.name ?? "Unnamed parish"}
         </h3>
         {addressLine ? (
@@ -213,18 +220,10 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
         ) : null}
       </div>
 
-      <div
-        className="my-3.5 flex items-center justify-center gap-2 text-brass"
-        aria-hidden
-      >
-        <span className="h-px flex-1 bg-rule-strong" />
-        <FleuronIcon className="h-3 w-8" />
-        <span className="h-px flex-1 bg-rule-strong" />
-      </div>
+      {/* The caption rides in the rule rather than sitting on its own line
+          below it — one divider instead of two in a 250px-wide card. */}
+      <Fleuron label="Upcoming" className="my-3" />
 
-      <div className="smallcaps mb-2 text-[0.75rem] text-ink-faint">
-        Upcoming
-      </div>
       <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
         {visibleRows.length > 0 ? (
           visibleRows.map((row) => (
@@ -232,7 +231,11 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
               key={row.key}
               className="flex items-baseline gap-2 font-serif text-[0.9rem]"
             >
-              <span className="text-ink">{row.label || "Upcoming"}</span>
+              {/* Small caps here so a day reads the same in the popup
+                  as it does in the church page's schedule column. */}
+              <span className="smallcaps text-[0.9375rem] text-ink">
+                {row.label || "Upcoming"}
+              </span>
               <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
               <span className="text-right tabular-nums text-rubric">
                 {row.times.map((time, index) => (
@@ -258,10 +261,10 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
         ) : null}
       </ul>
 
-      <div className="mt-4 border-t border-rule-strong pt-3">
+      <div className="mt-3 border-t border-rule pt-2.5">
         <Link
           to={`/churches/${church.slug}/`}
-          className="rubric-link smallcaps text-[0.8125rem]"
+          className="rubric-link font-serif text-[0.9375rem]"
         >
           Full schedule →
         </Link>
@@ -299,7 +302,7 @@ const ChurchMarker = memo(function ChurchMarker({
 
   return (
     <Marker ref={markerRef} icon={markerIcon} position={position}>
-      <Popup minWidth={225} maxWidth={275}>
+      <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
         <ChurchPopupBody church={church} />
       </Popup>
     </Marker>
@@ -329,12 +332,12 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
       position={[place.lat, place.lng]}
       zIndexOffset={1000}
     >
-      <Popup minWidth={210} maxWidth={260}>
-        <div className="space-y-1.5">
-          <div className="smallcaps text-[0.75rem] text-ink-faint">
+      <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
+        <div className="space-y-1.5 pr-6">
+          <div className="smallcaps text-[0.8125rem] text-ink-faint">
             Searched place
           </div>
-          <h3 className="font-display text-[1.25rem] leading-[1.1] font-normal text-ink">
+          <h3 className="font-display text-[1.25rem] leading-[1.15] font-normal text-ink">
             {place.title}
           </h3>
           {place.subtitle ? (

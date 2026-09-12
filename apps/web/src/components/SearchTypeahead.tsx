@@ -292,7 +292,7 @@ export function SearchTypeahead({
                 <button
                   type="button"
                   onClick={handleModeToggle}
-                  className="rubric-link smallcaps ml-1 hidden whitespace-nowrap text-[0.8125rem] sm:inline-flex"
+                  className="rubric-link ml-1 hidden whitespace-nowrap font-serif text-[0.9375rem] sm:inline-flex"
                 >
                   {modeButtonLabel}
                 </button>
@@ -303,7 +303,7 @@ export function SearchTypeahead({
               <button
                 type="button"
                 onClick={handleModeToggle}
-                className="rubric-link smallcaps mt-2 text-[0.8125rem] sm:hidden"
+                className="rubric-link mt-2 font-serif text-[0.9375rem] sm:hidden"
               >
                 {modeButtonLabel}
               </button>
@@ -315,7 +315,10 @@ export function SearchTypeahead({
           side="bottom"
           sideOffset={10}
           avoidCollisions={false}
-          className="z-[950] w-[min(32rem,calc(100vw-2rem))] border-rule-strong bg-paper p-0 shadow-missal-popover"
+          // Matches the search field it drops out of. A fixed 32rem overhung
+          // the 28rem masthead card on the map page and fell short of the
+          // landing page's wider field.
+          className="z-[950] w-(--radix-popover-trigger-width) border-rule-strong bg-paper p-0 shadow-missal-popover"
           onOpenAutoFocus={(event) => event.preventDefault()}
           onInteractOutside={(event) => {
             const target = event.target;

@@ -18,7 +18,7 @@ export function AboutPage() {
     <main className="min-h-svh bg-paper px-4 py-8 sm:py-12">
       <div className="mx-auto flex w-full max-w-[40rem] flex-col gap-8">
         <header className="space-y-4">
-          <Link to={homeHref} className="rubric-link smallcaps text-[0.875rem]">
+          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
             <ArrowLeftIcon className="size-3" />
             Back to map
           </Link>
@@ -36,7 +36,7 @@ export function AboutPage() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="smallcaps text-[0.875rem] text-ink">What this is</h2>
+          <h2 className="smallcaps text-[1.0625rem] text-ink">What this is</h2>
           <p className="font-serif text-base text-ink-soft">
             Placeholder body. Lorem ipsum dolor sit amet, consectetur adipiscing
             elit. Replace with a paragraph or two explaining the project's
@@ -45,7 +45,7 @@ export function AboutPage() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="smallcaps text-[0.875rem] text-ink">Why we built it</h2>
+          <h2 className="smallcaps text-[1.0625rem] text-ink">Why we built it</h2>
           <p className="font-serif text-base text-ink-soft">
             Placeholder body. Describe the motivation behind the project — what
             problem it solves and who benefits.
@@ -53,7 +53,7 @@ export function AboutPage() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="smallcaps text-[0.875rem] text-ink">Get in touch</h2>
+          <h2 className="smallcaps text-[1.0625rem] text-ink">Get in touch</h2>
           <p className="font-serif text-base text-ink-soft">
             Placeholder body. Add contact details, social links, or a feedback
             call-to-action here.

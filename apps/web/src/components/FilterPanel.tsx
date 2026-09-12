@@ -5,7 +5,10 @@ import {
   MINUTES_PER_DAY,
   type FilterState,
 } from "./filterState";
-import { FILTER_DAY_LABELS } from "../constants/days";
+import {
+  FILTER_DAY_DISPLAY_ORDER,
+  FILTER_DAY_LABELS,
+} from "../constants/days";
 import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { TimeRangeSlider } from "./TimeRangeSlider";
 import { FeedbackTrigger } from "./FeedbackTrigger";
@@ -13,11 +16,6 @@ import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const TIME_STEP_MINUTES = 15;
-
-// Display order for the day strip: Sunday first. Values are indices into
-// FILTER_DAY_LABELS, which is Monday-first (0=Mon..6=Sun) — keeping that
-// underlying indexing avoids touching URL state or filter wire format.
-const DAY_DISPLAY_ORDER: readonly number[] = [6, 0, 1, 2, 3, 4, 5];
 
 interface FilterPanelProps {
   isOpen: boolean;
@@ -144,7 +142,7 @@ export function FilterPanel({
               onClick={resetDays}
               aria-hidden={isDaysDefault}
               tabIndex={isDaysDefault ? -1 : 0}
-              className={`missal-focus smallcaps text-[0.8125rem] text-ink-soft transition-colors hover:text-rubric ${
+              className={`missal-focus font-serif text-[0.9375rem] text-ink-soft transition-colors hover:text-rubric ${
                 isDaysDefault ? "invisible" : ""
               }`}
             >
@@ -152,10 +150,10 @@ export function FilterPanel({
             </button>
           </div>
           <div className="grid grid-cols-7 border border-rule-strong">
-            {DAY_DISPLAY_ORDER.map((dayIndex, position) => {
+            {FILTER_DAY_DISPLAY_ORDER.map((dayIndex, position) => {
               const day = FILTER_DAY_LABELS[dayIndex];
               const isSelected = filters.daysOfWeek.includes(dayIndex);
-              const isLast = position === DAY_DISPLAY_ORDER.length - 1;
+              const isLast = position === FILTER_DAY_DISPLAY_ORDER.length - 1;
               return (
                 <button
                   key={day.full}
@@ -189,7 +187,7 @@ export function FilterPanel({
               onClick={resetTime}
               aria-hidden={isTimeDefault}
               tabIndex={isTimeDefault ? -1 : 0}
-              className={`missal-focus smallcaps text-[0.8125rem] text-ink-soft transition-colors hover:text-rubric ${
+              className={`missal-focus font-serif text-[0.9375rem] text-ink-soft transition-colors hover:text-rubric ${
                 isTimeDefault ? "invisible" : ""
               }`}
             >
@@ -220,7 +218,7 @@ export function FilterPanel({
           <button
             type="button"
             onClick={handleClear}
-            className="rubric-link smallcaps text-[0.875rem] text-rubric hover:text-rubric-deep"
+            className="rubric-link font-serif text-[0.9375rem] text-rubric hover:text-rubric-deep"
           >
             Reset all
           </button>
@@ -235,7 +233,7 @@ export function FilterPanel({
           <button
             type="button"
             onClick={handleApply}
-            className="missal-focus smallcaps bg-rubric px-6 py-3 text-[0.875rem] text-paper transition-colors hover:bg-rubric-deep"
+            className="missal-focus bg-rubric px-6 py-3 font-display text-[1.05rem] leading-none text-paper transition-colors hover:bg-rubric-deep"
           >
             Apply filters
           </button>
