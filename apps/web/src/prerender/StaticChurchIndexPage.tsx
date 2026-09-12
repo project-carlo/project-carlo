@@ -148,7 +148,7 @@ export function StaticChurchIndexPage({
       <body className="bg-paper">
         <main className="mx-auto w-full max-w-3xl px-6 py-12 pb-[calc(3rem+var(--safe-area-inset-bottom))]">
           <header className="text-center">
-            <a href="/" className="rubric-link smallcaps text-[0.875rem]">
+            <a href="/" className="rubric-link font-serif text-[0.9375rem]">
               Back to map
             </a>
             <h1 className="mt-6 font-display text-[clamp(2rem,5vw,3rem)] leading-[1.05] font-normal tracking-tight text-ink">

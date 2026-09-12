@@ -22,6 +22,13 @@ import { patternOf } from "@/lib/schedule";
 import { describeSchedulePattern } from "@/lib/schedulePattern";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
 
+/** Inline annotations on a schedule line — the bulletin page a time came
+ *  from, and any qualifier on the slot. One size and one voice for all of
+ *  them, so a schedule row doesn't carry three different italics. */
+const ANNOTATION_CLASS = "font-serif text-[0.9rem] italic";
+const ANNOTATION_LINK_CLASS =
+  "text-rubric underline decoration-rubric/40 decoration-from-font underline-offset-[3px] transition-colors hover:text-rubric-deep hover:decoration-rubric-deep";
+
 interface EventsByType {
   weeklyByDay: Record<string, EventSummary[]>;
   specificDate: EventSummary[];
@@ -117,8 +124,7 @@ function SectionPageRef({
 }) {
   const label = `Found on bulletin page ${pageNumber}`;
   const title = `Open bulletin at page ${pageNumber}`;
-  const baseClass =
-    "ml-3 font-serif text-[1rem] italic";
+  const baseClass = `ml-3 ${ANNOTATION_CLASS}`;
   if (bulletinUrl) {
     return (
       <a
@@ -126,7 +132,7 @@ function SectionPageRef({
         target="_blank"
         rel="noopener noreferrer"
         title={title}
-        className={`${baseClass} text-rubric underline decoration-rubric/40 decoration-from-font underline-offset-[3px] transition-colors hover:text-rubric-deep hover:decoration-rubric-deep`}
+        className={`${baseClass} ${ANNOTATION_LINK_CLASS}`}
       >
         {label}
       </a>
@@ -163,7 +169,7 @@ function eventQualifier(event: EventSummary): string | null {
 function EventNote({ note }: { note: string | null }) {
   if (!note) return null;
   return (
-    <span className="ml-2 font-serif text-[0.85rem] italic text-ink-faint">
+    <span className={`ml-2 ${ANNOTATION_CLASS} text-ink-faint`}>
       {note}
     </span>
   );
@@ -186,7 +192,7 @@ function PageRef({
         target="_blank"
         rel="noopener noreferrer"
         title={title}
-        className="ml-2.5 font-serif text-[0.9rem] italic text-rubric underline decoration-rubric/40 decoration-from-font underline-offset-[3px] transition-colors hover:text-rubric-deep hover:decoration-rubric-deep"
+        className={`ml-2.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
       >
         {label}
       </a>
@@ -194,7 +200,7 @@ function PageRef({
   }
   return (
     <span
-      className="ml-2.5 font-serif text-[0.9rem] italic text-ink-soft"
+      className={`ml-2.5 ${ANNOTATION_CLASS} text-ink-soft`}
       title={title}
     >
       {label}
@@ -216,8 +222,8 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
     <main className="min-h-svh bg-paper">
       <header className="sticky top-0 z-40 border-b border-rule-strong bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 pt-[calc(0.85rem+var(--safe-area-inset-top))] pb-3">
-          <Link to={homeHref} className="rubric-link smallcaps text-[0.875rem]">
-            <ArrowLeftIcon className="size-3" />
+          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
+            <ArrowLeftIcon className="size-3.5" />
             Back to map
           </Link>
           <Masthead compact />
@@ -245,9 +251,9 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                 href={church.homepage_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rubric-link smallcaps inline-flex items-center gap-2 text-[0.875rem]"
+                className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
-                <ExternalLinkIcon className="size-3" />
+                <ExternalLinkIcon className="size-3.5" />
                 Visit the parish website
               </a>
             ) : null}
@@ -256,9 +262,9 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                 href={church.bulletin_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rubric-link smallcaps inline-flex items-center gap-2 text-[0.875rem]"
+                className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
-                <FileTextIcon className="size-3" />
+                <FileTextIcon className="size-3.5" />
                 Latest parish bulletin (PDF)
               </a>
             ) : null}
@@ -266,7 +272,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
               church={church}
               label="Suggest an edit"
               variant="pill"
-              icon={<PencilIcon className="size-3" />}
+              icon={<PencilIcon className="size-3.5" />}
             />
           </div>
         </section>
@@ -403,7 +409,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
       </div>
     </main>
     <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
-      <a href={CHURCH_INDEX_PATH} className="rubric-link smallcaps text-[0.875rem]">
+      <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
         Browse all parishes
       </a>
     </footer>

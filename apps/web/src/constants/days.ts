@@ -24,3 +24,11 @@ export const FILTER_DAY_LABELS: ReadonlyArray<{ full: string; abbr: string }> = 
   { full: "Saturday", abbr: "Sat" },
   { full: "Sunday", abbr: "Sun" },
 ];
+
+/**
+ * Display order for the weekday pickers: Sunday first, as both the map's
+ * filter panel and the landing page's refine section show it. Values are
+ * indices into FILTER_DAY_LABELS — keeping that array Monday-first avoids
+ * touching URL state or the filter wire format.
+ */
+export const FILTER_DAY_DISPLAY_ORDER: readonly number[] = [6, 0, 1, 2, 3, 4, 5];
