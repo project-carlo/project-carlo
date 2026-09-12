@@ -28,7 +28,8 @@ LOGGER = logging.getLogger(__name__)
 # change is re-extracted instead of served from a cache that predates it.
 # 2: weeks_of_month and the season months on weekly slots.
 # 3: season boundaries to the day.
-SCHEMA_VERSION = 3
+# 4: weekly-qualifier policy isolated into its own prompt block.
+SCHEMA_VERSION = 4
 
 # The Gemini model every stage defaults to. Bumping it here moves the whole
 # pipeline: process, verify, and the registered "gemini-flash" classifier.
@@ -78,44 +79,56 @@ class WeeklySlot(BaseModel):
     weeks_of_month: list[str] = Field(
         default_factory=list,
         description=(
-            "Only for a slot that falls on particular weeks of the month rather than every week, "
-            "e.g. `[\"first\"]` for First Friday devotions or `[\"first\", \"third\"]` for "
-            "1st and 3rd Saturdays. Allowed values: `first`, `second`, `third`, `fourth`, `fifth`, "
-            "`last`. Leave empty for a slot that happens every week."
+            "Which occurrences of `day_of_week` within the month this slot falls on. "
+            "Allowed values: `first`, `second`, `third`, `fourth`, `fifth`, `last`. "
+            "`last` is not `fourth`. Examples: `[\"first\"]` for First Friday "
+            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. Leave "
+            "empty when the slot happens every week."
         ),
     )
     season_start_month: str | None = Field(
         default=None,
         description=(
-            "First month of the year the slot runs, e.g. `October` for "
-            "'Confessions Tuesdays, October through June'. Full English month name. "
-            "Leave null for a slot that runs all year round."
+            "First month of the year the slot runs, full English name, e.g. "
+            "`October` for 'Confessions Tuesdays, October through June'. Set it "
+            "together with `season_end_month`, or leave both null for all year. "
+            "A half-stated season is no season: do not invent an end month."
         ),
     )
     season_start_day: int | None = Field(
         default=None,
         description=(
             "Day of `season_start_month` the slot starts on, e.g. `4` for 'June 4 "
-            "through September 10'. Only when the bulletin gives a date; leave null "
-            "when it names the month alone."
+            "through September 10'. Fill only when the bulletin dated the boundary; "
+            "leave null when it names the month alone. Do not invent the 1st."
         ),
     )
     season_end_month: str | None = Field(
         default=None,
         description=(
-            "Last month of the year the slot runs, e.g. `June`. Set it together with "
-            "`season_start_month`; leave both null for a slot that runs all year round."
+            "Last month of the year the slot runs, e.g. `June`. Set it together "
+            "with `season_start_month`; leave both null for a slot that runs all "
+            "year. A start later in the calendar than the end wraps the new year."
         ),
     )
     season_end_day: int | None = Field(
         default=None,
         description=(
-            "Day of `season_end_month` the slot runs through, e.g. `10`. Only when the "
-            "bulletin gives a date; leave null when it names the month alone."
+            "Day of `season_end_month` the slot runs through, e.g. `10`. Fill only "
+            "when the bulletin dated the boundary; leave null when it names the "
+            "month alone. Do not invent the 30th."
         ),
     )
     page_number: int | None = Field(default=None, description="1-indexed PDF page where this entry was found.")
-    note: str | None = Field(default=None, description="Short phrase only when there is genuinely special context (language, location nuance, benediction, etc.). Do not restate what `weeks_of_month` or the season fields already say.")
+    note: str | None = Field(
+        default=None,
+        description=(
+            "Short phrase only when there is genuinely special context (language, "
+            "location nuance, benediction, etc.). Do not restate what "
+            "`weeks_of_month` or the season fields already say. Exclusions the "
+            "fields cannot express ('every Saturday except the first') stay here."
+        ),
+    )
 
 
 class DateSlot(BaseModel):
@@ -433,6 +446,40 @@ class VerificationPayload(BaseModel):
 
 
 # ── Event extraction ─────────────────────────────────────────────────────────
+# WEEKLY_QUALIFIER_PROMPT is the control surface for weeks_of_month, the four
+# season fields, and note on WeeklySlot. Wording, examples, and named-season
+# mappings can change here without touching schema columns or the frontend;
+# bump SCHEMA_VERSION when they do, so cached extractions are not reused.
+
+
+WEEKLY_QUALIFIER_PROMPT = """\
+# Weekly schedule qualifiers
+
+A weekly slot still belongs in `weekly_schedule` when it does not run every week, all year. Give it that weekday and fill the fields below. Do not file it as a `single_event` just because it is monthly or seasonal.
+
+## Weeks of the month
+
+- Fill `weeks_of_month` only when the slot falls on particular occurrences of its weekday within the month.
+- Allowed values: `first`, `second`, `third`, `fourth`, `fifth`, `last`.
+- Examples: First Friday devotions → `["first"]`. 1st and 3rd Saturdays → `["first", "third"]`. Healing Mass on the first Monday → `["first"]`.
+- `last` is not `fourth`. A five-Friday month has a fourth Friday and a different last one; a bulletin that says "last" means the later date.
+- Leave the list empty for a slot that happens every week. Empty means every week.
+
+## Season
+
+- Fill `season_start_month` and `season_end_month` when the slot only runs for part of the year, e.g. Confessions Tuesdays, October through June.
+- Set both months or neither. A half-stated season ("runs from October", no end month) is no season at all: leave all four season fields null rather than inventing a December cutoff.
+- Use the months the bulletin states. When it names a season instead of months, use this mapping: summer is June through August; a school-year schedule is September through June.
+- An exclusion that names the off months is the complementary season: a slot that does not run in July or August is September through June.
+- When the bulletin dates the range precisely ("June 4 through September 10", "Masses resume Sept. 8"), also fill `season_start_day` and `season_end_day`. Leave a day null when the bulletin names only the month. Do not invent the 1st or the 30th: a range stated in whole months is read back in whole months.
+- A start later in the calendar than the end wraps the new year (October through June).
+
+## Notes
+
+- Only add a `note` when there is genuinely special context (language, alternate location, benediction, etc.). No need to specify 'Vigil Mass'.
+- Do not restate in `note` what `weeks_of_month` or the season fields already carry. A slot on certain weeks of the month needs no note at all unless the bulletin says something further about it.
+- An exclusion the fields cannot express ("every Saturday except the first") stays in `note`.
+"""
 
 
 EVENTS_SYSTEM_PROMPT = """\
@@ -459,13 +506,12 @@ Extract Mass, Confession, and Adoration schedule information from the attached C
   - `single_events` for one-off or extra occurrences on a specific date that are not already covered by a weekly entry.
   - `cancellations` for events that the bulletin explicitly says are cancelled, moved, or will not take place on a specific date.
 - Never duplicate a weekly slot as a single event just because the bulletin also mentions it in a specific week.
-- A weekly entry that only falls on certain weeks of the month ("First Friday devotions", "1st and 3rd Saturdays", "Healing Mass on the first Monday") still belongs in `weekly_schedule`: give it that weekday and list those weeks in `weeks_of_month`. Leave `weeks_of_month` empty for a slot that happens every week.
-- A weekly entry that only runs for part of the year ("Confessions Tuesdays, October through June", "summer Mass schedule", "resumes after Labor Day") also belongs in `weekly_schedule`: fill in `season_start_month` and `season_end_month`. Set both or neither. Use the months the bulletin states; when it names a season instead, use the months that season covers for this parish (summer as June through August, a school-year schedule as September through June). Read an exclusion the same way — a slot that does not run in July or August is a September-through-June slot.
-- When the bulletin dates the range precisely ("June 4 through September 10", "Masses resume Sept. 8"), also fill in `season_start_day` and `season_end_day`. Leave a day null when the bulletin names only the month; do not invent the 1st or the 30th, since a range stated in whole months is read back to the reader in whole months.
-- Only add a `note` when there is genuinely special context worth surfacing (language, alternate location, benediction, etc.). No need to specify 'Vigil Mass', and do not restate in `note` what `weeks_of_month` or the season fields already carry — a slot on certain weeks of the month needs no note at all unless the bulletin says something further about it.
+- A slot that only falls on certain weeks of the month, or only runs for part of the year, still belongs in `weekly_schedule`. Fill those fields from the weekly-qualifier rules below.
+- Only add a `note` when there is genuinely special context worth surfacing (language, alternate location, benediction, etc.). No need to specify 'Vigil Mass'.
 - Identify the bulletin's own issue date and report it as `published_date`.
 - Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). In that case you may return empty event lists.
 
+""" + WEEKLY_QUALIFIER_PROMPT + """
 Carefully find the events listed in the bulletin.
 """
 

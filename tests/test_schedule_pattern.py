@@ -2,19 +2,27 @@
 
 from __future__ import annotations
 
-import json
 from datetime import date
 
 import pytest
 
-from pdf_extract.pattern_backfill import backfill_patterns, derive_pattern
 from pdf_extract.recurrence import occurrence_from_row
 from pdf_extract.runner import flatten_extracted_events
-from pdf_extract.schedule_extraction import SchedulePayload, reconstruct_events
+from pdf_extract.schedule_extraction import (
+    EVENTS_SYSTEM_PROMPT,
+    SCHEMA_VERSION,
+    WEEKLY_QUALIFIER_PROMPT,
+    SchedulePayload,
+    WeeklySlot,
+    reconstruct_events,
+)
 from pdf_extract.schedule_pattern import (
     NO_SEASON,
     Season,
     date_in_season,
+    date_matches_pattern,
+    date_matches_weeks,
+    describe_schedule_pattern,
     normalize_day,
     normalize_month,
     normalize_season,
@@ -134,6 +142,73 @@ def test_dated_season_wrapping_the_new_year(
 
 def test_no_season_means_every_day() -> None:
     assert all(date_in_season(month, 1, NO_SEASON) for month in range(1, 13))
+
+
+# ── Date matching ───────────────────────────────────────────────────────────
+# September 2026: Fridays fall on the 4th, 11th, 18th and 25th.
+_SEPTEMBER_FRIDAYS = [date(2026, 9, day) for day in (4, 11, 18, 25)]
+
+
+def test_empty_weeks_match_every_date() -> None:
+    assert all(date_matches_weeks(day, []) for day in _SEPTEMBER_FRIDAYS)
+
+
+def test_first_week_matches_only_the_first_occurrence() -> None:
+    assert [date_matches_weeks(day, ["first"]) for day in _SEPTEMBER_FRIDAYS] == [
+        True, False, False, False,
+    ]
+
+
+def test_weeks_count_weekday_occurrences_not_calendar_weeks() -> None:
+    """The 4th is the first Friday even though it sits in a partial week."""
+    assert date_matches_weeks(date(2026, 9, 11), ["second"]) is True
+
+
+def test_last_is_not_fourth() -> None:
+    """October 2026 has five Fridays: 2, 9, 16, 23, 30."""
+    assert date_matches_weeks(date(2026, 10, 23), ["last"]) is False
+    assert date_matches_weeks(date(2026, 10, 30), ["last"]) is True
+    assert date_matches_weeks(date(2026, 10, 23), ["fourth"]) is True
+
+
+def test_several_named_weeks_match_any_of_them() -> None:
+    assert [
+        date_matches_weeks(day, ["second", "fourth"]) for day in _SEPTEMBER_FRIDAYS
+    ] == [False, True, False, True]
+
+
+def test_date_matches_pattern_requires_week_and_season() -> None:
+    season = normalize_season("October", None, "June", None)
+    # First Friday of October, in season.
+    assert date_matches_pattern(date(2026, 10, 2), ["first"], season) is True
+    # First Friday of September, out of season.
+    assert date_matches_pattern(date(2026, 9, 4), ["first"], season) is False
+    # In season, but the third Friday.
+    assert date_matches_pattern(date(2026, 10, 16), ["first"], season) is False
+
+
+# ── Display copy ────────────────────────────────────────────────────────────
+@pytest.mark.parametrize(
+    ("weeks", "season", "day", "expected"),
+    [
+        ([], NO_SEASON, "Friday", None),
+        (["first"], NO_SEASON, "Friday", "First Friday of the month"),
+        (["second", "fourth"], NO_SEASON, "saturday",
+         "Second and fourth Saturdays of the month"),
+        ([], normalize_season("October", None, "June", None), "Tuesday",
+         "October through June"),
+        ([], normalize_season("June", 4, "September", 10), "Thursday",
+         "June 4 through September 10"),
+        ([], normalize_season("January", None, "April", None), "Wednesday",
+         "January through April"),
+        (["first"], normalize_season("October", None, "June", None), "Friday",
+         "First Friday of the month, October through June"),
+    ],
+)
+def test_describe_schedule_pattern_matches_the_bulletin_grain(
+    weeks: list[str], season: Season, day: str, expected: str | None,
+) -> None:
+    assert describe_schedule_pattern(weeks, season, day) == expected
 
 
 # ── Extraction ──────────────────────────────────────────────────────────────
@@ -285,127 +360,51 @@ def test_a_season_that_starts_mid_month_is_read_to_the_day() -> None:
     assert occurrence_from_row(row, bulletin_date=date(2026, 10, 18)) is not None
 
 
-# ── Backfill from notes ─────────────────────────────────────────────────────
-@pytest.mark.parametrize(
-    ("note", "day", "expected"),
-    [
-        ("First Fridays after 8:30 AM Mass", "Friday",
-         {"weeks_of_month": ["first"], "note": "after 8:30 AM Mass"}),
-        ("Last Thursdays after 8:30 AM Mass", "Thursday",
-         {"weeks_of_month": ["last"], "note": "after 8:30 AM Mass"}),
-        ("1st, 2nd, and 4th weeks of the month", "Wednesday",
-         {"weeks_of_month": ["first", "second", "fourth"], "note": None}),
-        ("Spanish, 2nd & 4th Saturdays", "Saturday",
-         {"weeks_of_month": ["second", "fourth"], "note": "Spanish"}),
-        ("Healing Mass, First Monday of the month", "Monday",
-         {"weeks_of_month": ["first"], "note": "Healing Mass"}),
-        # A note left saying only what the row already says is dropped.
-        ("First Saturday Mass", "Saturday",
-         {"weeks_of_month": ["first"], "note": None}),
-        ("First Friday of the month; ends with benediction", "Friday",
-         {"weeks_of_month": ["first"], "note": "ends with benediction"}),
-        # A season named in whole months keeps no days, so it is described
-        # back in the whole months the bulletin printed.
-        ("October through June", "Tuesday",
-         {"season_start_month": 10, "season_end_month": 6, "note": None}),
-        ("June 4 - September 10", "Thursday",
-         {"season_start_month": 6, "season_start_day": 4,
-          "season_end_month": 9, "season_end_day": 10, "note": None}),
-        ("Sept. 8 to May 30, Latin", "Sunday",
-         {"season_start_month": 9, "season_start_day": 8,
-          "season_end_month": 5, "season_end_day": 30, "note": "Latin"}),
-        # The year beside a month is not a day of it.
-        ("October through June 2027", "Tuesday",
-         {"season_start_month": 10, "season_end_month": 6, "note": "2027"}),
-        # The preposition the range hung off goes with it, rather than being
-        # left as a note reading "Seasonally from".
-        ("Seasonally from June 4 to September 10", "Thursday",
-         {"season_start_month": 6, "season_start_day": 4,
-          "season_end_month": 9, "season_end_day": 10, "note": None}),
-        ("Adoration, beginning October 1 through June 30", "Friday",
-         {"season_start_month": 10, "season_start_day": 1,
-          "season_end_month": 6, "season_end_day": 30, "note": None}),
-        # Only a stranded word goes; a note that still says something keeps it.
-        ("Summer Masses run from June 4 through September 10", "Sunday",
-         {"season_start_month": 6, "season_start_day": 4,
-          "season_end_month": 9, "season_end_day": 10,
-          "note": "Summer Masses run"}),
-        ("1st Fridays, at St. John's on the Ridge", "Friday",
-         {"weeks_of_month": ["first"], "note": "at St. John's on the Ridge"}),
-        # Both qualifiers at once.
-        ("1st Saturdays, June 1 through August 31", "Saturday",
-         {"weeks_of_month": ["first"], "season_start_month": 6,
-          "season_start_day": 1, "season_end_month": 8, "season_end_day": 31,
-          "note": None}),
-    ],
-)
-def test_derive_pattern_reads_a_stated_schedule(
-    note: str, day: str, expected: dict,
-) -> None:
-    assert derive_pattern(note, day) == expected
+# ── Qualifier prompt (the quality lever) ────────────────────────────────────
+def test_qualifier_policy_lives_in_its_own_prompt_block() -> None:
+    """A reviewer can read the qualifier rules without the rest of the extractor."""
+    assert WEEKLY_QUALIFIER_PROMPT.strip().startswith("# Weekly schedule qualifiers")
+    assert WEEKLY_QUALIFIER_PROMPT in EVENTS_SYSTEM_PROMPT
+    head, _, _ = EVENTS_SYSTEM_PROMPT.partition("# Weekly schedule qualifiers")
+    assert "weeks_of_month" not in head
+    assert "season_start_month" not in head
+
+
+def test_a_wording_only_prompt_change_invalidates_cached_extractions() -> None:
+    """Classifiers fold SCHEMA_VERSION into the cache key; bump it with the prompt."""
+    assert SCHEMA_VERSION >= 4
 
 
 @pytest.mark.parametrize(
-    ("note", "day"),
+    "needle",
     [
-        # An exclusion names the week the slot does *not* run, which the fields
-        # cannot express; reading it as first-Saturday-only inverts it.
-        ("Except 1st Saturday of the month", "Saturday"),
-        ("Except second Tuesdays", "Tuesday"),
-        ("Except summer", "Sunday"),
-        # The months a parish means by "summer" are not on the page.
-        ("Summer Mass", "Sunday"),
-        ("Resumes in September", "Monday"),
-        # An ordinal about some other weekday is not this row's schedule.
-        ("First Friday devotions follow", "Sunday"),
-        ("Includes Rosary", "Monday"),
-        (None, "Monday"),
-        ("", "Monday"),
+        "still belongs in `weekly_schedule`",
+        "Empty means every week",
+        "Set both months or neither",
+        "Do not invent the 1st or the 30th",
+        "summer is June through August",
+        "school-year schedule is September through June",
+        "does not run in July or August is September through June",
+        "Do not restate in `note`",
+        "language",
+        "benediction",
+        "every Saturday except the first",
+        "First Friday",
+        "1st and 3rd Saturdays",
+        "October through June",
+        "June 4 through September 10",
     ],
 )
-def test_derive_pattern_leaves_unclear_notes_alone(note: str | None, day: str) -> None:
-    assert derive_pattern(note, day) is None
+def test_qualifier_prompt_states_the_hard_case_policy(needle: str) -> None:
+    """The isolated block, not implicit model judgment, decides these cases."""
+    assert needle in WEEKLY_QUALIFIER_PROMPT
 
 
-def test_backfill_updates_only_weekly_rows_without_qualifiers(tmp_path) -> None:
-    events_path = tmp_path / "events.json"
-    events_path.write_text(json.dumps([
-        {"church_slug": "holy-trinity", "event_kind": "weekly",
-         "day_of_week": "Tuesday", "start_time": "4:30 PM",
-         "note": "October through June"},
-        # A dated row's note describes that one date, not a recurrence.
-        {"church_slug": "holy-family", "event_kind": "specific_date",
-         "date": "2026-09-04", "start_time": "9:30 AM", "note": "First Friday"},
-        # The extractor's own reading outranks a second-hand one off a note.
-        {"church_slug": "st-ambrose", "event_kind": "weekly",
-         "day_of_week": "Friday", "start_time": "11:00 AM",
-         "note": "1st Fridays", "weeks_of_month": ["second"]},
-    ]), encoding="utf-8")
-
-    result = backfill_patterns(events_path)
-    assert result == {"events": 3, "monthly": 0, "seasonal": 1, "dry_run": 0}
-
-    rows = json.loads(events_path.read_text(encoding="utf-8"))
-    assert rows[0]["season_start_month"] == 10
-    assert rows[0]["season_end_month"] == 6
-    # No day either side, because the bulletin named neither.
-    assert "season_start_day" not in rows[0]
-    assert "season_end_day" not in rows[0]
-    assert rows[0]["note"] is None
-    assert "weeks_of_month" not in rows[1]
-    assert rows[1]["note"] == "First Friday"
-    assert rows[2]["weeks_of_month"] == ["second"]
-
-
-def test_backfill_dry_run_writes_nothing(tmp_path) -> None:
-    events_path = tmp_path / "events.json"
-    original = json.dumps([
-        {"church_slug": "holy-trinity", "event_kind": "weekly",
-         "day_of_week": "Tuesday", "start_time": "4:30 PM",
-         "note": "October through June"},
-    ])
-    events_path.write_text(original, encoding="utf-8")
-
-    result = backfill_patterns(events_path, dry_run=True)
-    assert result["seasonal"] == 1
-    assert events_path.read_text(encoding="utf-8") == original
+def test_weekly_slot_field_descriptions_steer_the_same_policy() -> None:
+    fields = WeeklySlot.model_fields
+    assert "every week" in fields["weeks_of_month"].description
+    assert "last` is not `fourth" in fields["weeks_of_month"].description
+    assert "both null" in fields["season_start_month"].description
+    assert "Do not invent the 1st" in fields["season_start_day"].description
+    assert "Do not invent the 30th" in fields["season_end_day"].description
+    assert "Do not restate" in fields["note"].description

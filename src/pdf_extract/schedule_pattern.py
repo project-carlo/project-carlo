@@ -16,15 +16,16 @@ the whole of both months, and reads back to the parish in the words it used,
 without a January 1st or an April 30th it never printed.
 
 This module is the single place that decides what those qualifiers mean. It
-normalises the loose strings the LLM returns and answers whether a date falls
-inside a season range. `pdf_extract.db` writes the normalised values into the
-`event` table, and `apps/web/src/lib/schedulePattern.ts` mirrors the same rules
-in the browser.
+normalises the loose strings the LLM returns, answers whether a date matches
+the pattern, and describes the pattern back at the grain it was filled in at.
+`pdf_extract.db` writes the normalised values into the `event` table, and
+`apps/web/src/lib/schedulePattern.ts` mirrors the same rules in the browser.
 """
 
 from __future__ import annotations
 
 import re
+from datetime import date, timedelta
 from typing import Any, NamedTuple
 
 # Which occurrences of a weekday within a month a slot falls on. "last" is kept
@@ -208,3 +209,98 @@ def date_in_season(month: int, day: int, season: Season) -> bool:
     if start <= end:
         return start <= position <= end
     return position >= start or position <= end
+
+
+def _ordinal_of_month(when: date) -> int:
+    """Which occurrence of its weekday within the month `when` is, 1-5."""
+    return (when.day - 1) // 7 + 1
+
+
+def _is_last_of_month(when: date) -> bool:
+    """Whether `when` is the last occurrence of its weekday in the month."""
+    return (when + timedelta(days=7)).month != when.month
+
+
+def date_matches_weeks(when: date, weeks: list[str]) -> bool:
+    """Whether `when` is one of the weeks of the month this slot falls on.
+
+    "last" stays distinct from "fourth": a month with five Fridays has a fourth
+    Friday and a different last one, and a bulletin that says "last Friday"
+    means the later date.
+    """
+    if not weeks:
+        return True
+    ordinal = WEEKS_OF_MONTH[_ordinal_of_month(when) - 1]
+    if ordinal != "last" and ordinal in weeks:
+        return True
+    return "last" in weeks and _is_last_of_month(when)
+
+
+def date_matches_pattern(when: date, weeks: list[str], season: Season) -> bool:
+    """Whether this slot actually happens on `when`, weeks and season both."""
+    return date_matches_weeks(when, weeks) and date_in_season(
+        when.month, when.day, season,
+    )
+
+
+def _title_case_week(week: str) -> str:
+    return week[:1].upper() + week[1:]
+
+
+def _join_with_and(parts: list[str]) -> str:
+    if len(parts) <= 1:
+        return parts[0] if parts else ""
+    if len(parts) == 2:
+        return f"{parts[0]} and {parts[1]}"
+    return f"{', '.join(parts[:-1])}, and {parts[-1]}"
+
+
+def describe_weeks_of_month(weeks: list[str], day_of_week: str | None) -> str | None:
+    """"First Friday of the month", "First and third Fridays of the month"."""
+    if not weeks:
+        return None
+    day = day_of_week.strip() if isinstance(day_of_week, str) else ""
+    if not day:
+        return f"{_join_with_and([_title_case_week(week) for week in weeks])} week of the month"
+    day_label = day[:1].upper() + day[1:].lower()
+    ordinals = [
+        _title_case_week(week) if index == 0 else week
+        for index, week in enumerate(weeks)
+    ]
+    plural = "s" if len(weeks) > 1 else ""
+    return f"{_join_with_and(ordinals)} {day_label}{plural} of the month"
+
+
+def _describe_boundary(month: int, day: int | None) -> str:
+    """"October", or "June 4" once the bulletin has dated the boundary."""
+    name = MONTH_NAMES[month - 1]
+    return name if day is None else f"{name} {day}"
+
+
+def describe_season(season: Season) -> str | None:
+    """When the slot runs, at the grain the bulletin stated it.
+
+    A boundary carries a day only where the parish printed one, so a range given
+    in whole months is described in whole months — "January through April", not
+    the January 1st and April 30th filtering reads underneath it.
+    """
+    start, end = season.start_month, season.end_month
+    if start is None or end is None:
+        return None
+    return (
+        f"{_describe_boundary(start, season.start_day)} through "
+        f"{_describe_boundary(end, season.end_day)}"
+    )
+
+
+def describe_schedule_pattern(
+    weeks: list[str], season: Season, day_of_week: str | None,
+) -> str | None:
+    """The whole qualifier as one phrase, or None for a plain weekly slot."""
+    parts = [
+        part for part in (
+            describe_weeks_of_month(weeks, day_of_week),
+            describe_season(season),
+        ) if part is not None
+    ]
+    return ", ".join(parts) if parts else None
