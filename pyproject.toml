@@ -30,3 +30,8 @@ dev = [
 [tool.ruff]
 target-version = "py313"
 line-length = 100
+
+[tool.ruff.lint]
+# Defaults (pycodestyle errors + pyflakes) plus import sorting, so import
+# blocks stay in one order without anyone having to notice.
+extend-select = ["I"]

@@ -6,15 +6,14 @@ import logging
 import sqlite3
 from pathlib import Path
 
-from pdf_extract.address import format_address
-from pdf_extract.pdf_truncate import ensure_truncated_pdf
-from pdf_extract.schedule_extraction import extract_verification
+from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL, extract_verification
 from pdf_extract.storage import (
     VERIFY_RESULTS_PATH,
+    church_list_for_prompt,
     connect_db,
     get_parish_by_name,
-    list_churches,
     load_json_dict,
+    read_bulletin_pdf,
     save_json_dict,
     utc_now_iso,
 )
@@ -47,7 +46,7 @@ def _find_verified_parishes(conn: sqlite3.Connection) -> set[str]:
 def verify_churches(
     *,
     parish_name: str | None = None,
-    model: str = "gemini-3-flash-preview",
+    model: str = DEFAULT_GEMINI_MODEL,
 ) -> dict[str, int]:
     LOGGER.info("Starting verify stage (parish_name=%s, model=%s)", parish_name or "*all*", model)
     verify_results = load_json_dict(VERIFY_RESULTS_PATH)
@@ -88,37 +87,11 @@ def verify_churches(
                 LOGGER.info("No bulletin PDF found for parish %s, skipping", parish_slug)
                 continue
 
-            pdf_path = Path(bulletin_row["pdf_path"])
-            if not pdf_path.exists():
-                LOGGER.warning("Bulletin PDF missing at %s, skipping", pdf_path)
+            pdf_bytes = read_bulletin_pdf(Path(bulletin_row["pdf_path"]))
+            if pdf_bytes is None:
                 continue
 
-            try:
-                read_path = ensure_truncated_pdf(pdf_path)
-            except Exception:
-                LOGGER.warning("Failed truncating PDF at %s, skipping", pdf_path, exc_info=True)
-                continue
-
-            try:
-                pdf_bytes = read_path.read_bytes()
-            except OSError:
-                LOGGER.warning("Failed reading PDF at %s", read_path, exc_info=True)
-                continue
-
-            # Get existing churches
-            church_rows = list_churches(conn, parish_id)
-            church_list = [
-                {
-                    "slug": r["slug"],
-                    "name": r["name"],
-                    "address": format_address(
-                        r["address_line1"], r["address_line2"],
-                        r["city"], r["state"], r["postal_code"],
-                    ),
-                }
-                for r in church_rows
-            ]
-
+            church_list = church_list_for_prompt(conn, parish_id)
             if not church_list:
                 LOGGER.info("No churches for parish %s, skipping", parish_slug)
                 continue

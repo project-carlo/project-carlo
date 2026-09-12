@@ -108,7 +108,49 @@ def list_churches(conn: sqlite3.Connection, parish_id: int) -> list[sqlite3.Row]
     ).fetchall()
 
 
-# ── Bulletin work-item loading ──────────────────────────────────────────────
+# ── Bulletin PDF and church-list loading ────────────────────────────────────
+def read_bulletin_pdf(pdf_path: Path) -> bytes | None:
+    """Read a bulletin PDF, truncated to the pages a classifier looks at.
+
+    Returns None (with a logged warning) when the bulletin should be skipped:
+    the file is missing, truncation failed, or the read failed. Every caller
+    that hands a bulletin to an LLM goes through here, so the skip policy is
+    defined once.
+    """
+    if not pdf_path.exists():
+        LOGGER.warning("Skipping: PDF missing at %s", pdf_path)
+        return None
+
+    try:
+        read_path = ensure_truncated_pdf(pdf_path)
+    except Exception:
+        LOGGER.warning("Skipping: failed truncating PDF at %s", pdf_path, exc_info=True)
+        return None
+
+    try:
+        return read_path.read_bytes()
+    except OSError:
+        LOGGER.warning("Skipping: failed reading PDF at %s", read_path, exc_info=True)
+        return None
+
+
+def church_list_for_prompt(
+    conn: sqlite3.Connection, parish_id: int
+) -> list[dict[str, Any]]:
+    """A parish's known churches in the {slug, name, address} shape the prompts take."""
+    return [
+        {
+            "slug": r["slug"],
+            "name": r["name"],
+            "address": format_address(
+                r["address_line1"], r["address_line2"],
+                r["city"], r["state"], r["postal_code"],
+            ),
+        }
+        for r in list_churches(conn, parish_id)
+    ]
+
+
 @dataclass
 class BulletinWorkItem:
     """A bulletin loaded from disk and ready to hand to a classifier."""
@@ -124,25 +166,12 @@ def load_bulletin_work_item(
     """Load PDF bytes and known-church list for a bulletin metadata entry.
 
     Returns None (with a logged warning) if the bulletin should be skipped:
-    PDF missing, truncation failed, read failed, or parish not in DB.
+    PDF unreadable (see `read_bulletin_pdf`) or parish not in DB.
 
     Runs on the caller's thread; the sqlite connection must stay single-threaded.
     """
-    pdf_path = Path(entry["pdf_path"])
-    if not pdf_path.exists():
-        LOGGER.warning("Skipping: PDF missing at %s", pdf_path)
-        return None
-
-    try:
-        read_path = ensure_truncated_pdf(pdf_path)
-    except Exception:
-        LOGGER.warning("Skipping: failed truncating PDF at %s", pdf_path, exc_info=True)
-        return None
-
-    try:
-        pdf_bytes = read_path.read_bytes()
-    except OSError:
-        LOGGER.warning("Skipping: failed reading PDF at %s", read_path, exc_info=True)
+    pdf_bytes = read_bulletin_pdf(Path(entry["pdf_path"]))
+    if pdf_bytes is None:
         return None
 
     parish_slug = entry["parish_slug"]
@@ -153,17 +182,8 @@ def load_bulletin_work_item(
         LOGGER.warning("Skipping: parish %s not found in DB", parish_slug)
         return None
 
-    church_rows = list_churches(conn, parish_row["id"])
-    church_list = [
-        {
-            "slug": r["slug"],
-            "name": r["name"],
-            "address": format_address(
-                r["address_line1"], r["address_line2"],
-                r["city"], r["state"], r["postal_code"],
-            ),
-        }
-        for r in church_rows
-    ]
-
-    return BulletinWorkItem(entry=entry, pdf_bytes=pdf_bytes, church_list=church_list)
+    return BulletinWorkItem(
+        entry=entry,
+        pdf_bytes=pdf_bytes,
+        church_list=church_list_for_prompt(conn, parish_row["id"]),
+    )

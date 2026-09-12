@@ -21,7 +21,7 @@
     "pattern:backfill": "uv run python -m pdf_extract pattern backfill",
     "test": "uv run pytest",
     "lint": "uv run ruff check .",
-    "extract:web": "pnpm run db:create && uv run python -m pdf_extract.extract_frontend_db",
+    "extract:web": "uv run python -m pdf_extract extract-frontend-db",
     "verify:frontend-snapshot": "uv run python -m pdf_extract verify-frontend-snapshot",
     "weekly:run": "pnpm run fetch && pnpm process && pnpm extract:web && pnpm verify:frontend-snapshot && pnpm build:web",
     "install:web": "pnpm install",
@@ -29,6 +29,7 @@
     "build:web": "pnpm --filter web build",
     "preview:web": "pnpm --filter web preview",
     "lint:web": "pnpm --filter web lint",
-    "check:web": "pnpm --filter web check"
+    "check:web": "pnpm --filter web check",
+    "perf:web": "pnpm --filter web perf"
   }
 }

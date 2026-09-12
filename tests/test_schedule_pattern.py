@@ -317,6 +317,21 @@ def test_a_season_that_starts_mid_month_is_read_to_the_day() -> None:
         # The year beside a month is not a day of it.
         ("October through June 2027", "Tuesday",
          {"season_start_month": 10, "season_end_month": 6, "note": "2027"}),
+        # The preposition the range hung off goes with it, rather than being
+        # left as a note reading "Seasonally from".
+        ("Seasonally from June 4 to September 10", "Thursday",
+         {"season_start_month": 6, "season_start_day": 4,
+          "season_end_month": 9, "season_end_day": 10, "note": None}),
+        ("Adoration, beginning October 1 through June 30", "Friday",
+         {"season_start_month": 10, "season_start_day": 1,
+          "season_end_month": 6, "season_end_day": 30, "note": None}),
+        # Only a stranded word goes; a note that still says something keeps it.
+        ("Summer Masses run from June 4 through September 10", "Sunday",
+         {"season_start_month": 6, "season_start_day": 4,
+          "season_end_month": 9, "season_end_day": 10,
+          "note": "Summer Masses run"}),
+        ("1st Fridays, at St. John's on the Ridge", "Friday",
+         {"weeks_of_month": ["first"], "note": "at St. John's on the Ridge"}),
         # Both qualifiers at once.
         ("1st Saturdays, June 1 through August 31", "Saturday",
          {"weeks_of_month": ["first"], "season_start_month": 6,

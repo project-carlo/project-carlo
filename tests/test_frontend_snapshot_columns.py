@@ -16,7 +16,6 @@ from pathlib import Path
 import pytest
 
 from pdf_extract import db as db_module
-from pdf_extract import storage
 from pdf_extract.db import create_db
 from pdf_extract.extract_frontend_db import extract
 
@@ -85,7 +84,7 @@ def data_dir(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     }]), encoding="utf-8")
     (tmp_path / "events.json").write_text(json.dumps(EVENTS), encoding="utf-8")
 
-    monkeypatch.setattr(storage, "PARISHES_CSV_PATH", tmp_path / "parishes.csv")
+    monkeypatch.setattr(db_module, "PARISHES_CSV_PATH", tmp_path / "parishes.csv")
     monkeypatch.setattr(db_module, "CHURCHES_CSV_PATH", tmp_path / "churches.csv")
     monkeypatch.setattr(db_module, "BULLETINS_METADATA_PATH", tmp_path / "metadata.json")
     monkeypatch.setattr(db_module, "EVENTS_PATH", tmp_path / "events.json")

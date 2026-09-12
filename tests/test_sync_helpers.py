@@ -1,16 +1,16 @@
+from dataclasses import replace
 from datetime import date
 from pathlib import Path
 
-from pdf_extract.storage import (
-    SCHEMA_PATH,
-    connect_db,
-    utc_now_iso,
-)
+import pytest
+
 from pdf_extract.fetch import (
-    BulletinLink,
+    _PROVIDERS,
     DISCOVER_MASS_TYPE,
+    ECATHOLIC_TYPE,
     OTHER_TYPE,
     PARISHES_ONLINE_TYPE,
+    BulletinLink,
     _build_bulletin_link,
     _extract_discover_mass_pdf_url_from_href,
     _extract_ecatholic_pdf_url_from_href,
@@ -24,12 +24,17 @@ from pdf_extract.fetch import (
     _report_stale_parishes,
     _resolve_ecatholic_latest_link,
     _resolve_fetch_source,
-    _resolve_other_latest_link,
     _resolve_latest_anchor_link_with_playwright,
+    _resolve_other_latest_link,
     build_latest_discover_mass_bulletin_links,
     build_latest_ecatholic_bulletin_links,
     build_latest_other_bulletin_links,
     build_latest_parishes_online_bulletin_links,
+)
+from pdf_extract.storage import (
+    SCHEMA_PATH,
+    connect_db,
+    utc_now_iso,
 )
 
 
@@ -263,34 +268,37 @@ def test_resolve_latest_anchor_link_with_playwright_uses_first_valid_anchor() ->
     assert fetch_url == "https://example.org/good.pdf"
 
 
-def test_build_bulletin_link_ecatholic(monkeypatch) -> None:
+@pytest.mark.parametrize(
+    ("provider", "provider_id", "builder"),
+    [
+        (ECATHOLIC_TYPE, "https://test.org", build_latest_ecatholic_bulletin_links),
+        (PARISHES_ONLINE_TYPE, "123", build_latest_parishes_online_bulletin_links),
+        (DISCOVER_MASS_TYPE, "st-joseph-rush", build_latest_discover_mass_bulletin_links),
+        (OTHER_TYPE, "https://example.org", build_latest_other_bulletin_links),
+    ],
+)
+def test_build_bulletin_link_dispatches_to_the_registered_builder(
+    monkeypatch, provider: str, provider_id: str, builder
+) -> None:
+    assert _PROVIDERS[provider].build is builder
+
+    seen: dict[str, object] = {}
+
     def fake_build(*, provider_id, reference_date=None, page=None):
-        return BulletinLink(source_url="https://ecatholic.com/b.pdf", fetch_url="https://ecatholic.com/b.pdf")
+        seen["provider_id"] = provider_id
+        return BulletinLink(source_url="https://example.org/b.pdf", fetch_url="https://example.org/b.pdf")
 
-    monkeypatch.setattr("pdf_extract.fetch.build_latest_ecatholic_bulletin_links", fake_build)
-    link = _build_bulletin_link("ecatholic", "https://test.org")
-    assert link.source_url == "https://ecatholic.com/b.pdf"
-
-
-def test_build_bulletin_link_parishes_online(monkeypatch) -> None:
-    def fake_build(*, provider_id, reference_date=None, page=None):
-        return BulletinLink(source_url="https://po.com/source", fetch_url="https://po.com/fetch.pdf")
-
-    monkeypatch.setattr("pdf_extract.fetch.build_latest_parishes_online_bulletin_links", fake_build)
-    link = _build_bulletin_link(PARISHES_ONLINE_TYPE, "123")
-    assert link.fetch_url == "https://po.com/fetch.pdf"
+    monkeypatch.setitem(
+        _PROVIDERS, provider, replace(_PROVIDERS[provider], build=fake_build),
+    )
+    link = _build_bulletin_link(provider, provider_id)
+    assert seen["provider_id"] == provider_id
+    assert link.fetch_url == "https://example.org/b.pdf"
 
 
-def test_build_bulletin_link_discover_mass(monkeypatch) -> None:
-    def fake_build(*, provider_id, reference_date=None, page=None):
-        return BulletinLink(
-            source_url="https://discovermass.com/church/st-joseph-rush/",
-            fetch_url="https://discovermass.com/church/st-joseph-rush/",
-        )
-
-    monkeypatch.setattr("pdf_extract.fetch.build_latest_discover_mass_bulletin_links", fake_build)
-    link = _build_bulletin_link(DISCOVER_MASS_TYPE, "st-joseph-rush")
-    assert link.fetch_url == "https://discovermass.com/church/st-joseph-rush/"
+def test_build_bulletin_link_rejects_an_unregistered_provider() -> None:
+    with pytest.raises(ValueError, match="Unsupported bulletin_provider"):
+        _build_bulletin_link("google_drive", "https://example.org")
 
 
 def test_build_latest_other_bulletin_links(monkeypatch) -> None:
@@ -565,16 +573,6 @@ def test_resolve_other_latest_link_descends_into_latest_bulletin_post_when_no_pd
     )
     assert source_url == latest_pdf_url
     assert fetch_url == latest_pdf_url
-
-
-def test_build_bulletin_link_other(monkeypatch) -> None:
-    def fake_build(*, provider_id, reference_date=None, page=None):
-        assert provider_id == "https://example.org"
-        return BulletinLink(source_url="https://example.org/weekly.pdf", fetch_url="https://example.org/weekly.pdf")
-
-    monkeypatch.setattr("pdf_extract.fetch.build_latest_other_bulletin_links", fake_build)
-    link = _build_bulletin_link(OTHER_TYPE, "https://example.org")
-    assert link.fetch_url == "https://example.org/weekly.pdf"
 
 
 def test_parse_relaxed_date_handles_multiple_formats() -> None:

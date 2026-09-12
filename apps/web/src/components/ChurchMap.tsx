@@ -30,16 +30,30 @@ const POPUP_MIN_WIDTH = 225;
 const POPUP_MAX_WIDTH = 275;
 
 /* A cross-in-roundel pin: cream disc with a brass ring, a rubric-red Latin
- * cross at the center, and a subtle drop-shadow. Rendered via divIcon so
- * nothing is fetched from a CDN at runtime. */
-const markerSvg = `
-<svg xmlns="http://www.w3.org/2000/svg" width="34" height="42" viewBox="0 0 34 42" fill="none" aria-hidden="true">
+ * cross at the center — and, for a searched place, a solid rubric pin. Both
+ * shapes live in one hidden sprite so nothing is fetched from a CDN at runtime
+ * and, more importantly, so each marker's icon is a three-node
+ * `<svg><use/></svg>` rather than ~15 nodes parsed out of an HTML string:
+ * `L.DivIcon.createIcon` runs once per marker, and ~130 pins are re-created
+ * whenever the service-type filter changes.
+ *
+ * The church pin's shadow comes from `.church-map-marker svg`'s CSS
+ * `drop-shadow` in app.css — it used to also carry an SVG `feDropShadow`,
+ * which painted a second shadow on top of the first at ~130 pins' expense.
+ * The searched-place pin has no CSS shadow, so it keeps its filter. */
+const MARKER_SPRITE_ID = "church-map-pin-sprite";
+const CHURCH_PIN_ID = "church-map-pin";
+const PLACE_PIN_ID = "church-map-place-pin";
+
+const markerSpriteSvg = `
+<svg xmlns="http://www.w3.org/2000/svg" id="${MARKER_SPRITE_ID}" aria-hidden="true"
+     style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
-    <filter id="marker-shadow" x="-30%" y="-10%" width="160%" height="130%">
-      <feDropShadow dx="0" dy="2" stdDeviation="1.6" flood-color="#161210" flood-opacity="0.3"/>
+    <filter id="place-pin-shadow" x="-30%" y="-10%" width="160%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.8" flood-color="#161210" flood-opacity="0.32"/>
     </filter>
   </defs>
-  <g filter="url(#marker-shadow)">
+  <symbol id="${CHURCH_PIN_ID}" viewBox="0 0 34 42" fill="none">
     <path d="M17 2C9.27 2 3 8.27 3 16c0 3.7 1.73 7.3 4 10.5C9.5 30 13.5 34.4 15.8 38.6a1.35 1.35 0 0 0 2.4 0C20.5 34.4 24.5 30 27 26.5 29.27 23.3 31 19.7 31 16 31 8.27 24.73 2 17 2Z"
           fill="var(--paper)" stroke="var(--brass)" stroke-width="1.3" />
     <circle cx="17" cy="16" r="9.5" fill="none" stroke="var(--rule-strong)" stroke-width="0.8" />
@@ -47,33 +61,41 @@ const markerSvg = `
       <path d="M17 9.5 V 21.5" />
       <path d="M12.5 13.5 H 21.5" />
     </g>
-  </g>
+  </symbol>
+  <symbol id="${PLACE_PIN_ID}" viewBox="0 0 32 42" fill="none">
+    <g filter="url(#place-pin-shadow)">
+      <path d="M16 2C8.82 2 3 7.82 3 15c0 4.02 2.22 7.95 4.87 11.4 2.35 3.06 5.38 6.18 6.92 10.9a1.27 1.27 0 0 0 2.42 0c1.54-4.72 4.57-7.84 6.92-10.9C26.78 22.95 29 19.02 29 15 29 7.82 23.18 2 16 2Z"
+            fill="var(--rubric)" stroke="var(--paper)" stroke-width="1.6" />
+      <circle cx="16" cy="15" r="5.2" fill="var(--paper)" stroke="var(--brass)" stroke-width="1.2" />
+    </g>
+  </symbol>
 </svg>`;
 
+/** Add the sprite to the document once, on first import of the map bundle. */
+function ensureMarkerSprite(): void {
+  if (typeof document === "undefined") return;
+  if (document.getElementById(MARKER_SPRITE_ID)) return;
+  const holder = document.createElement("div");
+  holder.innerHTML = markerSpriteSvg;
+  const sprite = holder.firstElementChild;
+  if (sprite) document.body.appendChild(sprite);
+}
+
+ensureMarkerSprite();
+
+const pinHtml = (symbolId: string, width: number, height: number) =>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" aria-hidden="true"><use href="#${symbolId}" /></svg>`;
+
 const markerIcon = L.divIcon({
-  html: markerSvg,
+  html: pinHtml(CHURCH_PIN_ID, 34, 42),
   className: "church-map-marker",
   iconSize: [34, 42],
   iconAnchor: [17, 40],
   popupAnchor: [0, -34],
 });
 
-const placeMarkerSvg = `
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="42" viewBox="0 0 32 42" fill="none" aria-hidden="true">
-  <defs>
-    <filter id="place-marker-shadow" x="-30%" y="-10%" width="160%" height="130%">
-      <feDropShadow dx="0" dy="2" stdDeviation="1.8" flood-color="#161210" flood-opacity="0.32"/>
-    </filter>
-  </defs>
-  <g filter="url(#place-marker-shadow)">
-    <path d="M16 2C8.82 2 3 7.82 3 15c0 4.02 2.22 7.95 4.87 11.4 2.35 3.06 5.38 6.18 6.92 10.9a1.27 1.27 0 0 0 2.42 0c1.54-4.72 4.57-7.84 6.92-10.9C26.78 22.95 29 19.02 29 15 29 7.82 23.18 2 16 2Z"
-          fill="var(--rubric)" stroke="var(--paper)" stroke-width="1.6" />
-    <circle cx="16" cy="15" r="5.2" fill="var(--paper)" stroke="var(--brass)" stroke-width="1.2" />
-  </g>
-</svg>`;
-
 const placeMarkerIcon = L.divIcon({
-  html: placeMarkerSvg,
+  html: pinHtml(PLACE_PIN_ID, 32, 42),
   className: "searched-place-marker",
   iconSize: [32, 42],
   iconAnchor: [16, 40],
@@ -163,22 +185,16 @@ function ViewReporter({ onViewChange }: { onViewChange: (view: MapView) => void 
   return null;
 }
 
-const ChurchMarker = memo(function ChurchMarker({
-  church,
-  openPopupForChurchId,
-  openPopupRequestId,
-}: {
-  church: ChurchMapItem;
-  openPopupForChurchId: number | undefined;
-  openPopupRequestId: number | undefined;
-}) {
-  const markerRef = useRef<LeafletMarker | null>(null);
-  useEffect(() => {
-    if (openPopupForChurchId === church.id && markerRef.current) {
-      markerRef.current.openPopup();
-    }
-  }, [church.id, openPopupForChurchId, openPopupRequestId]);
-
+/**
+ * Popup body for one parish.
+ *
+ * Split out of `ChurchMarker` on purpose: react-leaflet renders a popup's
+ * children only once Leaflet has opened it, so keeping this in its own
+ * component means the rollup, the date formatting and ~20 elements per parish
+ * are built for the one open popup rather than for all ~130 pins on every
+ * filter change.
+ */
+function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
   // that order while collapsing each day's several times onto one row.
   const dayRows = useMemo(
@@ -190,82 +206,110 @@ const ChurchMarker = memo(function ChurchMarker({
   const addressLine = formatAddress(church);
 
   return (
-    <Marker
-      ref={markerRef}
-      icon={markerIcon}
-      position={[church.latitude as number, church.longitude as number]}
-    >
+    <div className="w-full">
+      {/* pr-6 keeps a long parish name clear of the close button, which
+          Leaflet pins to the card's top-right corner. */}
+      <div className="space-y-1 pr-6">
+        <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-ink">
+          {church.name ?? "Unnamed parish"}
+        </h3>
+        {addressLine ? (
+          <p className="font-serif text-[0.875rem] leading-snug text-ink-soft">
+            {addressLine}
+          </p>
+        ) : null}
+      </div>
+
+      {/* The caption rides in the rule rather than sitting on its own line
+          below it — one divider instead of two in a 250px-wide card. */}
+      <Fleuron label="Upcoming" className="my-3" />
+
+      <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
+        {visibleRows.length > 0 ? (
+          visibleRows.map((row) => (
+            <li key={row.key} className="font-serif text-[0.9rem]">
+              <div className="flex items-baseline gap-2">
+                {/* Small caps here so a day reads the same in the popup
+                    as it does in the church page's schedule column. */}
+                <span className="smallcaps text-[0.9375rem] text-ink">
+                  {row.label || "Upcoming"}
+                </span>
+                <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
+                <span className="text-right tabular-nums text-rubric">
+                  {row.times.map((time, index) => (
+                    // The separator sits outside the nowrap span so a long
+                    // day wraps between times, never inside "10:30 a.m.".
+                    <Fragment key={time}>
+                      {index > 0 ? " · " : null}
+                      <span className="whitespace-nowrap">{time}</span>
+                    </Fragment>
+                  ))}
+                </span>
+              </div>
+              {/* A monthly or seasonal slot needs its qualifier here: the
+                  day heading above says "Fridays" either way. */}
+              {row.note ? (
+                <div className="text-[0.8125rem] leading-snug italic text-ink-faint">
+                  {row.note}
+                </div>
+              ) : null}
+            </li>
+          ))
+        ) : (
+          <li className="font-serif text-[0.9rem] italic text-ink-faint">
+            No services listed yet.
+          </li>
+        )}
+        {hiddenRowCount > 0 ? (
+          <li className="pt-1 font-serif text-[0.8125rem] italic text-ink-faint">
+            …and {hiddenRowCount} more {hiddenRowCount === 1 ? "day" : "days"}
+          </li>
+        ) : null}
+      </ul>
+
+      <div className="mt-3 border-t border-rule pt-2.5">
+        <Link
+          to={`/churches/${church.slug}/`}
+          className="rubric-link font-serif text-[0.9375rem]"
+        >
+          Full schedule →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+const ChurchMarker = memo(function ChurchMarker({
+  church,
+  openPopupRequestId,
+}: {
+  church: ChurchMapItem;
+  /**
+   * Set only on the marker a selection targets, and bumped on every repeat
+   * selection. Leaving it undefined everywhere else keeps the other markers'
+   * props identical so they never re-render when one pin is picked.
+   */
+  openPopupRequestId: number | undefined;
+}) {
+  const markerRef = useRef<LeafletMarker | null>(null);
+  useEffect(() => {
+    if (openPopupRequestId !== undefined) {
+      markerRef.current?.openPopup();
+    }
+  }, [openPopupRequestId]);
+
+  // A fresh array literal here would look like a moved marker to react-leaflet,
+  // which would call setLatLng (and re-project and re-transform the pin) on
+  // every render.
+  const position = useMemo<[number, number]>(
+    () => [church.latitude as number, church.longitude as number],
+    [church.latitude, church.longitude],
+  );
+
+  return (
+    <Marker ref={markerRef} icon={markerIcon} position={position}>
       <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
-        <div className="w-full">
-          {/* pr-6 keeps a long parish name clear of the close button, which
-              Leaflet pins to the card's top-right corner. */}
-          <div className="space-y-1 pr-6">
-            <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-ink">
-              {church.name ?? "Unnamed parish"}
-            </h3>
-            {addressLine ? (
-              <p className="font-serif text-[0.875rem] leading-snug text-ink-soft">
-                {addressLine}
-              </p>
-            ) : null}
-          </div>
-
-          {/* The caption rides in the rule rather than sitting on its own line
-              below it — one divider instead of two in a 250px-wide card. */}
-          <Fleuron label="Upcoming" className="my-3" />
-
-          <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
-            {visibleRows.length > 0 ? (
-              visibleRows.map((row) => (
-                <li key={row.key} className="font-serif text-[0.9rem]">
-                  <div className="flex items-baseline gap-2">
-                    {/* Small caps here so a day reads the same in the popup
-                        as it does in the church page's schedule column. */}
-                    <span className="smallcaps text-[0.9375rem] text-ink">
-                      {row.label || "Upcoming"}
-                    </span>
-                    <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
-                    <span className="text-right tabular-nums text-rubric">
-                      {row.times.map((time, index) => (
-                        // The separator sits outside the nowrap span so a long
-                        // day wraps between times, never inside "10:30 a.m.".
-                        <Fragment key={time}>
-                          {index > 0 ? " · " : null}
-                          <span className="whitespace-nowrap">{time}</span>
-                        </Fragment>
-                      ))}
-                    </span>
-                  </div>
-                  {/* A monthly or seasonal slot needs its qualifier here: the
-                      day heading above says "Fridays" either way. */}
-                  {row.note ? (
-                    <div className="text-[0.8125rem] leading-snug italic text-ink-faint">
-                      {row.note}
-                    </div>
-                  ) : null}
-                </li>
-              ))
-            ) : (
-              <li className="font-serif text-[0.9rem] italic text-ink-faint">
-                No services listed yet.
-              </li>
-            )}
-            {hiddenRowCount > 0 ? (
-              <li className="pt-1 font-serif text-[0.8125rem] italic text-ink-faint">
-                …and {hiddenRowCount} more {hiddenRowCount === 1 ? "day" : "days"}
-              </li>
-            ) : null}
-          </ul>
-
-          <div className="mt-3 border-t border-rule pt-2.5">
-            <Link
-              to={`/churches/${church.slug}/`}
-              className="rubric-link font-serif text-[0.9375rem]"
-            >
-              Full schedule →
-            </Link>
-          </div>
-        </div>
+        <ChurchPopupBody church={church} />
       </Popup>
     </Marker>
   );
@@ -353,8 +397,9 @@ export const ChurchMap = memo(function ChurchMap({
         <ChurchMarker
           key={church.id}
           church={church}
-          openPopupForChurchId={centerOn?.churchId}
-          openPopupRequestId={centerOn?.requestId}
+          openPopupRequestId={
+            centerOn?.churchId === church.id ? (centerOn.requestId ?? 0) : undefined
+          }
         />
       ))}
       {centerOn?.placeTitle ? (

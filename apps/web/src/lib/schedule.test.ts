@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   compareSchedule,
   computeNextOccurrence,
+  parseIsoDateLocal,
   type CompareInput,
   type OccurrenceInput,
 } from "./schedule";
@@ -387,5 +388,24 @@ describe("compareSchedule", () => {
     expect(
       compareSchedule(fromWednesday, weekly("thu", "thursday", 600)),
     ).toBeLessThan(0);
+  });
+});
+
+describe("parseIsoDateLocal", () => {
+  it("parses an ISO YYYY-MM-DD date in local time", () => {
+    const d = parseIsoDateLocal("2026-06-07");
+    expect(d).not.toBeNull();
+    expect(d!.getFullYear()).toBe(2026);
+    expect(d!.getMonth()).toBe(5);
+    expect(d!.getDate()).toBe(7);
+  });
+
+  it("trims surrounding whitespace before parsing", () => {
+    const d = parseIsoDateLocal("  2026-06-07  ");
+    expect(d!.getDate()).toBe(7);
+  });
+
+  it("returns null for an unparseable string", () => {
+    expect(parseIsoDateLocal("not-a-date")).toBeNull();
   });
 });
