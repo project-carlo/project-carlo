@@ -61,3 +61,9 @@ apps/web/public/*.wasm
 
 # Claude Code
 .claude/
+
+# Ad-hoc UI benchmark runs (`pnpm --filter web perf --save <name>`). The two
+# reference runs recorded when the harness landed stay tracked.
+apps/web/perf/results/*.json
+!apps/web/perf/results/baseline.json
+!apps/web/perf/results/optimized.json

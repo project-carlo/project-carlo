@@ -36,6 +36,7 @@ from pdf_extract.runner import (
     load_cached_result,
     store_cached_result,
 )
+from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import (
     BULLETINS_METADATA_PATH,
     EVENT_HISTORY_PATH,
@@ -48,8 +49,6 @@ from pdf_extract.storage import (
 )
 
 LOGGER = logging.getLogger(__name__)
-
-DEFAULT_MODEL = "gemini-3-flash-preview"
 
 
 def _frontend_bulletin_rank(entry: dict[str, Any], idx: int) -> tuple[str, str, str, int]:
@@ -137,7 +136,7 @@ def _merge_extracted(
 def process_bulletins(
     *,
     parish_name: str | None = None,
-    model: str = DEFAULT_MODEL,
+    model: str = DEFAULT_GEMINI_MODEL,
     concurrency: int = 5,
 ) -> dict[str, int]:
     LOGGER.info(

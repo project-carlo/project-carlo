@@ -91,7 +91,7 @@ def run(
             parish_row = get_parish_by_name(conn, parish_name)
             if not parish_row:
                 LOGGER.warning("Parish not found: %s", parish_name)
-                return _empty_summary(classifier)
+                return _summary(classifier)
             target_slug = parish_row["slug"]
             candidates = [m for m in candidates if m["parish_slug"] == target_slug]
 
@@ -170,19 +170,17 @@ def run(
     save_json_list(events_path(classifier.name), events)
     save_json_list(bulletins_path(classifier.name), served_bulletins)
 
-    summary = {
-        "classifier": classifier.name,
-        "classifier_version": classifier.version,
-        "ran_at": utc_now_iso(),
-        "bulletins_total": len(candidates),
-        "bulletins_served": len(cached_results),
-        "cache_hits": cache_hits,
-        "cache_misses": cache_misses,
-        "skipped": skipped,
-        "errors": errors,
-        "events_written": len(events),
-        "wall_seconds": round(time.monotonic() - started, 3),
-    }
+    summary = _summary(
+        classifier,
+        bulletins_total=len(candidates),
+        bulletins_served=len(cached_results),
+        cache_hits=cache_hits,
+        cache_misses=cache_misses,
+        skipped=skipped,
+        errors=errors,
+        events_written=len(events),
+        wall_seconds=round(time.monotonic() - started, 3),
+    )
 
     summary_path = run_summary_path(classifier.name)
     summary_path.parent.mkdir(parents=True, exist_ok=True)
@@ -195,7 +193,12 @@ def run(
     return summary
 
 
-def _empty_summary(classifier: Classifier) -> dict[str, Any]:
+def _summary(classifier: Classifier, **counters: Any) -> dict[str, Any]:
+    """A run summary: every field at its zero value, overridden by `counters`.
+
+    The early return for an unknown parish and the end of a real run both build
+    their summary here, so the two cannot come to disagree about the keys.
+    """
     return {
         "classifier": classifier.name,
         "classifier_version": classifier.version,
@@ -208,4 +211,4 @@ def _empty_summary(classifier: Classifier) -> dict[str, Any]:
         "errors": [],
         "events_written": 0,
         "wall_seconds": 0.0,
-    }
+    } | counters

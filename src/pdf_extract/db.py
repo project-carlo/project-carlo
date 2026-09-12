@@ -17,6 +17,7 @@ from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
     EVENTS_PATH,
+    PARISHES_CSV_PATH,
     SCHEMA_PATH,
     connect_db,
     delete_db,
@@ -48,23 +49,17 @@ def create_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, int]:
     delete_db(db_path)
     conn = connect_db(db_path)
     try:
-        # 1. Create schema
         schema_sql = SCHEMA_PATH.read_text(encoding="utf-8")
         conn.executescript(schema_sql)
         LOGGER.info("Schema created")
 
         stats: dict[str, int] = {}
 
-        # 2. Load parishes.csv → parish table
+        # Load order follows the foreign keys: parishes, then the bulletins and
+        # churches that reference them, then the events that reference both.
         stats["parishes"] = _load_parishes(conn)
-
-        # 4. Load bulletins/metadata.json → bulletin table
         stats["bulletins"] = _load_bulletins(conn)
-
-        # 5. Load churches from CSV
         stats["churches"] = _load_churches(conn)
-
-        # 6. Load events.json → event table
         stats["events"] = _load_events(conn)
 
         conn.commit()
@@ -75,8 +70,6 @@ def create_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, int]:
 
 
 def _load_parishes(conn) -> int:
-    from pdf_extract.storage import PARISHES_CSV_PATH
-
     if not PARISHES_CSV_PATH.exists():
         LOGGER.info("No parishes.csv found, skipping parish load")
         return 0
@@ -130,11 +123,6 @@ def _load_bulletins(conn) -> int:
     return count
 
 
-def _load_churches(conn) -> int:
-    """Load churches from CSV."""
-    return _load_churches_from_csv(conn)
-
-
 def _csv_bool(value: str | None) -> int:
     """Map a CSV boolean (true/false/empty) to an integer (1/0/0)."""
     return 1 if (value or "").strip().lower() == "true" else 0
@@ -148,7 +136,7 @@ def _csv_float(value: str | None) -> float | None:
     return float(raw)
 
 
-def _load_churches_from_csv(conn) -> int:
+def _load_churches(conn) -> int:
     """Insert churches from churches.csv into the database."""
     if not CHURCHES_CSV_PATH.exists():
         LOGGER.info("No churches.csv found, skipping")

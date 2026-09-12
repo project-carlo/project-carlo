@@ -23,7 +23,8 @@ export interface EventSummary {
   season_end_day: number | null;
 }
 
-export interface ChurchMapItem {
+/** The church columns every view reads; see `CHURCH_COLUMNS` in lib/churchRow. */
+export interface ChurchBase {
   id: number;
   parish_id: number;
   slug: string;
@@ -35,22 +36,14 @@ export interface ChurchMapItem {
   postal_code: string | null;
   latitude: number | null;
   longitude: number | null;
+}
+
+export interface ChurchMapItem extends ChurchBase {
   event_types: EventType[];
   upcoming_events: EventSummary[];
 }
 
-export interface ChurchDetail {
-  id: number;
-  parish_id: number;
-  slug: string;
-  name: string | null;
-  address_line1: string | null;
-  address_line2: string | null;
-  city: string | null;
-  state: string | null;
-  postal_code: string | null;
-  latitude: number | null;
-  longitude: number | null;
+export interface ChurchDetail extends ChurchBase {
   homepage_url: string | null;
   bulletin_url: string | null;
 }

@@ -51,19 +51,31 @@ function rollupLabel(event: EventSummary): string {
   return "";
 }
 
+// `Date.prototype.toLocaleDateString` builds a formatter on every call, which
+// showed up as the single hottest frame while filtering the map. Building it
+// once — and remembering the handful of distinct dates a snapshot contains —
+// makes repeat formatting free.
+const COMPACT_DATE_FORMATTER = new Intl.DateTimeFormat("en-US", {
+  weekday: "short",
+  month: "short",
+  day: "numeric",
+});
+const compactDateCache = new Map<string, string>();
+
 /**
  * Abbreviated date for the popup's narrow day column — "Wed, Sep 17" rather
  * than the church page's fuller "Wednesday, September 17th", which would wrap
  * onto two lines and squeeze the times beside it.
  */
 function formatCompactDate(dateStr: string): string {
+  const cached = compactDateCache.get(dateStr);
+  if (cached !== undefined) return cached;
   const parsed = new Date(dateStr + "T12:00:00");
-  if (Number.isNaN(parsed.getTime())) return dateStr;
-  return parsed.toLocaleDateString("en-US", {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-  });
+  const formatted = Number.isNaN(parsed.getTime())
+    ? dateStr
+    : COMPACT_DATE_FORMATTER.format(parsed);
+  compactDateCache.set(dateStr, formatted);
+  return formatted;
 }
 
 export function rollUpEventsByDay(
