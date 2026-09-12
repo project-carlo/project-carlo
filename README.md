@@ -128,11 +128,16 @@ pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
 pnpm recurrence:backfill [-- --limit N]
 pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
+pnpm extract:web
+pnpm verify:frontend-snapshot
 pnpm db:create
 pnpm db:drop
 ```
 
-All commands accept `-- --log-level DEBUG|INFO|WARNING|ERROR` (default: `INFO`).
+Every stage is a subcommand of `python -m pdf_extract`; the `pnpm` scripts above
+are shorthands for it. All commands accept
+`-- --log-level DEBUG|INFO|WARNING|ERROR` (default: `INFO`), and each prints its
+result as JSON on success.
 
 Stage idempotency:
 

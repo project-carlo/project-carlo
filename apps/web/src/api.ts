@@ -1,15 +1,26 @@
 import type { Database } from "sql.js";
+import { filterDayFromJsDay, jsDayFor } from "./constants/days";
+import { EVENT_TYPE_ORDER } from "./constants/eventTypes";
 import { getDb } from "./db";
-import { compareSchedule, computeNextOccurrence } from "./lib/schedule";
+import {
+  CHURCH_COLUMNS,
+  CHURCH_DETAIL_COLUMNS,
+  mapChurchDetailRow,
+  mapChurchRow,
+} from "./lib/churchRow";
+import {
+  compareSchedule,
+  computeNextOccurrence,
+  parseIsoDateLocal,
+} from "./lib/schedule";
 import { num, str } from "./lib/sqlRow";
 import type {
+  ChurchBase,
   ChurchDetail,
   ChurchMapItem,
   EventSummary,
   EventType,
 } from "./types";
-
-const ALL_TYPES: EventType[] = ["mass", "confession", "adoration"];
 
 export class ChurchNotFoundError extends Error {
   readonly slug: string;
@@ -19,16 +30,6 @@ export class ChurchNotFoundError extends Error {
     this.slug = slug;
   }
 }
-
-const DAY_TO_INDEX: Record<string, number> = {
-  monday: 0,
-  tuesday: 1,
-  wednesday: 2,
-  thursday: 3,
-  friday: 4,
-  saturday: 5,
-  sunday: 6,
-};
 
 export interface ChurchFilters {
   types: EventType[];
@@ -52,27 +53,11 @@ export interface RawEvent {
   note: string | null;
 }
 
-export type ChurchBase = Omit<ChurchMapItem, "event_types" | "upcoming_events">;
-
 // frontend.snapshot is loaded once and never mutated, so the church and event
 // tables can be read into memory once and reused for every filter change.
 // This keeps the slider drag → map update path JS-only after the first call.
 let allChurchesPromise: Promise<ChurchBase[]> | null = null;
 let allEventsPromise: Promise<RawEvent[]> | null = null;
-
-export function parseEventDateForFilter(eventDate: string): Date | null {
-  // Date-only filter check; accepts ISO and other parseable strings.
-  const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(eventDate.trim());
-  if (isoMatch) {
-    const year = Number.parseInt(isoMatch[1], 10);
-    const month = Number.parseInt(isoMatch[2], 10);
-    const day = Number.parseInt(isoMatch[3], 10);
-    const parsed = new Date(year, month - 1, day);
-    return Number.isNaN(parsed.getTime()) ? null : parsed;
-  }
-  const parsed = new Date(eventDate);
-  return Number.isNaN(parsed.getTime()) ? null : parsed;
-}
 
 function mapEventRow(row: Record<string, unknown>): RawEvent {
   const ev: RawEvent = {
@@ -93,22 +78,6 @@ function mapEventRow(row: Record<string, unknown>): RawEvent {
   return ev;
 }
 
-function mapChurchRow(row: Record<string, unknown>): ChurchBase {
-  return {
-    id: row["id"] as number,
-    parish_id: row["parish_id"] as number,
-    slug: row["slug"] as string,
-    name: str(row["name"]),
-    address_line1: str(row["address_line1"]),
-    address_line2: str(row["address_line2"]),
-    city: str(row["city"]),
-    state: str(row["state"]),
-    postal_code: str(row["postal_code"]),
-    latitude: num(row["latitude"]),
-    longitude: num(row["longitude"]),
-  };
-}
-
 async function loadCaches(
   db: Database,
 ): Promise<{ churches: ChurchBase[]; events: RawEvent[] }> {
@@ -122,10 +91,7 @@ async function loadCaches(
 }
 
 function loadAllChurches(db: Database): ChurchBase[] {
-  const stmt = db.prepare(
-    `SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code,
-            latitude, longitude FROM church ORDER BY name`,
-  );
+  const stmt = db.prepare(`SELECT ${CHURCH_COLUMNS} FROM church ORDER BY name`);
   const churches: ChurchBase[] = [];
   try {
     while (stmt.step()) {
@@ -178,18 +144,16 @@ export function eventMatchesFilters(
   if (ev.cancelled) return false;
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {
     if (ev.event_kind === "weekly" && ev.day_of_week) {
-      const dayIdx = DAY_TO_INDEX[ev.day_of_week.toLowerCase()];
-      if (dayIdx === undefined || !filters.daysOfWeek.includes(dayIdx)) {
-        return false;
-      }
+      const dayIdx = filterDayFromJsDay(jsDayFor(ev.day_of_week));
+      if (dayIdx < 0 || !filters.daysOfWeek.includes(dayIdx)) return false;
     }
     // For specific_date, check if the date falls on a selected weekday
     if (ev.event_kind === "specific_date" && ev.date) {
-      const d = parseEventDateForFilter(ev.date);
+      const d = parseIsoDateLocal(ev.date);
       if (!d) return false;
-      const jsDay = d.getDay();
-      const dayIdx = jsDay === 0 ? 6 : jsDay - 1;
-      if (!filters.daysOfWeek.includes(dayIdx)) return false;
+      if (!filters.daysOfWeek.includes(filterDayFromJsDay(d.getDay()))) {
+        return false;
+      }
     }
   }
   if (
@@ -272,7 +236,7 @@ export function collectMapItems(
   allEvents: RawEvent[],
   filters: ChurchFilters,
 ): ChurchMapItem[] {
-  const types = filters.types.length > 0 ? filters.types : ALL_TYPES;
+  const types = filters.types.length > 0 ? filters.types : EVENT_TYPE_ORDER;
   const typeSet = new Set<EventType>(types);
 
   const grouped = new Map<number, RawEvent[]>();
@@ -318,26 +282,15 @@ export async function fetchChurches(
   return collectMapItems(churches, events, filters);
 }
 
-export interface ChurchSearchResult {
-  id: number;
-  slug: string;
-  name: string | null;
-  address_line1: string | null;
-  address_line2: string | null;
-  city: string | null;
-  state: string | null;
-  postal_code: string | null;
-  latitude: number | null;
-  longitude: number | null;
-}
+/** What the typeahead gets back: the shared church row, geocoded ones only. */
+export type ChurchSearchResult = ChurchBase;
 
 export async function fetchAllChurchesForSearch(): Promise<
   ChurchSearchResult[]
 > {
   const db = await getDb();
   const stmt = db.prepare(
-    `SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code,
-            latitude, longitude FROM church
+    `SELECT ${CHURCH_COLUMNS} FROM church
      WHERE latitude IS NOT NULL AND longitude IS NOT NULL
      ORDER BY name`,
   );
@@ -355,20 +308,14 @@ export async function fetchAllChurchesForSearch(): Promise<
 export async function fetchChurch(slug: string): Promise<ChurchDetail> {
   const db = await getDb();
   const stmt = db.prepare(
-    `SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code,
-            latitude, longitude, homepage_url, bulletin_url FROM church WHERE slug = ?`,
+    `SELECT ${CHURCH_DETAIL_COLUMNS} FROM church WHERE slug = ?`,
   );
   try {
     stmt.bind([slug]);
     if (!stmt.step()) {
       throw new ChurchNotFoundError(slug);
     }
-    const row = stmt.getAsObject();
-    return {
-      ...mapChurchRow(row),
-      homepage_url: str(row["homepage_url"]),
-      bulletin_url: str(row["bulletin_url"]),
-    };
+    return mapChurchDetailRow(stmt.getAsObject());
   } finally {
     stmt.free();
   }
@@ -379,7 +326,7 @@ export async function fetchChurchEvents(
   types: EventType[],
 ): Promise<EventSummary[]> {
   const db = await getDb();
-  const effectiveTypes = types.length > 0 ? types : ALL_TYPES;
+  const effectiveTypes = types.length > 0 ? types : EVENT_TYPE_ORDER;
   const typeSet = new Set(effectiveTypes);
 
   const { churches, events: allEvents } = await loadCaches(db);

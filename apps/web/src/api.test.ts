@@ -2,12 +2,11 @@ import { beforeEach, describe, expect, it } from "vitest";
 import {
   collectMapItems,
   eventMatchesFilters,
-  parseEventDateForFilter,
   resetMapItemCache,
-  type ChurchBase,
   type ChurchFilters,
   type RawEvent,
 } from "./api";
+import type { ChurchBase } from "./types";
 
 function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
   return {
@@ -134,25 +133,6 @@ describe("eventMatchesFilters", () => {
         eventMatchesFilters(rawEvent({ start_time: 12 * 60 }), filters),
       ).toBe(true);
     });
-  });
-});
-
-describe("parseEventDateForFilter", () => {
-  it("parses an ISO YYYY-MM-DD date in local time", () => {
-    const d = parseEventDateForFilter("2026-06-07");
-    expect(d).not.toBeNull();
-    expect(d!.getFullYear()).toBe(2026);
-    expect(d!.getMonth()).toBe(5);
-    expect(d!.getDate()).toBe(7);
-  });
-
-  it("trims surrounding whitespace before parsing", () => {
-    const d = parseEventDateForFilter("  2026-06-07  ");
-    expect(d!.getDate()).toBe(7);
-  });
-
-  it("returns null for an unparseable string", () => {
-    expect(parseEventDateForFilter("not-a-date")).toBeNull();
   });
 });
 

@@ -14,6 +14,11 @@ from google.genai import errors, types
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 LOGGER = logging.getLogger(__name__)
+
+# The Gemini model every stage defaults to. Bumping it here moves the whole
+# pipeline: process, verify, and the registered "gemini-flash" classifier.
+DEFAULT_GEMINI_MODEL = "gemini-3-flash-preview"
+
 _RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 _MAX_API_ATTEMPTS = 8
 _BASE_BACKOFF_SECONDS = 2.0
@@ -206,80 +211,21 @@ def _normalize_published_date(raw: Any) -> str | None:
     return value
 
 
-def _note_value(note: str | None) -> str | None:
-    if note is None:
-        return None
-    stripped = note.strip()
-    return stripped or None
+def reconstruct_events(raw: SchedulePayload | dict[str, Any]) -> dict[str, Any]:
+    """Convert the structured schema to the flat events format.
 
+    A validated `SchedulePayload` is dumped back to plain data and normalised
+    by the same code as a raw dict from the lenient fallback path, so the two
+    can never drift apart in shape. (The verification side does the same thing
+    in the other direction — see `_normalize_verification_lenient`.)
 
-def _weekly_slot_to_event(
-    slot: WeeklySlot,
-    *,
-    event_type: Literal["mass", "confession", "adoration"],
-    cancelled: bool,
-) -> dict[str, Any]:
-    return {
-        "church_slug": slot.church_slug,
-        "type": event_type,
-        "kind": "weekly",
-        "day_of_week": slot.day_of_week,
-        "date": None,
-        "start_time": slot.start_time,
-        "end_time": slot.end_time,
-        "cancelled": cancelled,
-        "page_number": slot.page_number,
-        "note": _note_value(slot.note),
-    }
+    Returns:
+        Dict with "events" (list of flat event dicts), "church_list_needs_review" (bool),
+        "published_date" (str | None, YYYY-MM-DD), and "wrong_bulletin" (bool).
+    """
+    if isinstance(raw, SchedulePayload):
+        raw = raw.model_dump(mode="json")
 
-
-def _date_slot_to_event(
-    slot: DateSlot,
-    *,
-    event_type: Literal["mass", "confession", "adoration"],
-    cancelled: bool,
-) -> dict[str, Any]:
-    return {
-        "church_slug": slot.church_slug,
-        "type": event_type,
-        "kind": "specific_date",
-        "day_of_week": None,
-        "date": slot.date,
-        "start_time": slot.start_time,
-        "end_time": slot.end_time,
-        "cancelled": cancelled,
-        "page_number": slot.page_number,
-        "note": _note_value(slot.note),
-    }
-
-
-def _events_from_payload(payload: SchedulePayload) -> list[dict[str, Any]]:
-    events: list[dict[str, Any]] = []
-    for event_type, slots in [
-        ("mass", payload.weekly_schedule.masses),
-        ("confession", payload.weekly_schedule.confessions),
-        ("adoration", payload.weekly_schedule.adorations),
-    ]:
-        for slot in slots:
-            events.append(_weekly_slot_to_event(slot, event_type=event_type, cancelled=False))
-    for event_type, slots in [
-        ("mass", payload.single_events.masses),
-        ("confession", payload.single_events.confessions),
-        ("adoration", payload.single_events.adorations),
-    ]:
-        for slot in slots:
-            events.append(_date_slot_to_event(slot, event_type=event_type, cancelled=False))
-    for event_type, slots in [
-        ("mass", payload.cancellations.masses),
-        ("confession", payload.cancellations.confessions),
-        ("adoration", payload.cancellations.adorations),
-    ]:
-        for slot in slots:
-            events.append(_date_slot_to_event(slot, event_type=event_type, cancelled=True))
-    return events
-
-
-def _reconstruct_events_from_dict(raw: dict[str, Any]) -> dict[str, Any]:
     ws = raw.get("weekly_schedule") or {}
     se = raw.get("single_events") or {}
     can = raw.get("cancellations") or {}
@@ -295,23 +241,6 @@ def _reconstruct_events_from_dict(raw: dict[str, Any]) -> dict[str, Any]:
         "published_date": _normalize_published_date(raw.get("published_date")),
         "wrong_bulletin": bool(raw.get("wrong_bulletin", False)),
     }
-
-
-def reconstruct_events(raw: SchedulePayload | dict[str, Any]) -> dict[str, Any]:
-    """Convert structured schema to flat events format.
-
-    Returns:
-        Dict with "events" (list of flat event dicts), "church_list_needs_review" (bool),
-        "published_date" (str | None, YYYY-MM-DD), and "wrong_bulletin" (bool).
-    """
-    if isinstance(raw, SchedulePayload):
-        return {
-            "events": _events_from_payload(raw),
-            "church_list_needs_review": raw.church_list_needs_review,
-            "published_date": _normalize_published_date(raw.published_date),
-            "wrong_bulletin": raw.wrong_bulletin,
-        }
-    return _reconstruct_events_from_dict(raw)
 
 
 def _parse_llm_json(content: str, *, context: str) -> dict[str, Any]:
@@ -460,7 +389,7 @@ def extract_events(
     pdf_bytes: bytes,
     *,
     churches: list[dict],
-    model: str = "gemini-3-flash-preview",
+    model: str = DEFAULT_GEMINI_MODEL,
     today: date | None = None,
 ) -> dict[str, Any]:
     """Use Gemini to extract Mass, Confession, and Adoration schedule from a PDF.
@@ -551,7 +480,7 @@ def extract_verification(
     pdf_bytes: bytes,
     *,
     churches: list[dict],
-    model: str = "gemini-3-flash-preview",
+    model: str = DEFAULT_GEMINI_MODEL,
 ) -> dict[str, Any]:
     """Use Gemini to verify church data against a bulletin PDF.
 

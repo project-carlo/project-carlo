@@ -1,20 +1,10 @@
-import { DAY_ORDER, type WeekdayKey } from "../constants/days";
+import { DAY_ORDER, jsDayFor, type WeekdayKey } from "../constants/days";
 
 /**
  * Shared schedule logic for both the SPA and the prerenderer so that a static
  * church page and the live React page show the same set of events in the same
  * order.  Pure functions only; no DOM, React, or sql.js dependencies.
  */
-
-const MONDAY_INDEX: Record<string, number> = {
-  monday: 0,
-  tuesday: 1,
-  wednesday: 2,
-  thursday: 3,
-  friday: 4,
-  saturday: 5,
-  sunday: 6,
-};
 
 const EVENING_START_MINUTES = 16 * 60;
 
@@ -38,8 +28,13 @@ function todayDate(): Date {
   return new Date(now.getFullYear(), now.getMonth(), now.getDate());
 }
 
-function parseEventDate(value: string): Date | null {
-  // Prefer explicit YYYY-MM-DD parsing to avoid timezone/date shifts.
+/**
+ * Parse an event date to a local-midnight `Date`, or null if unparseable.
+ *
+ * YYYY-MM-DD is read field by field: `new Date("2026-06-07")` is parsed as UTC
+ * and renders as the day before in any negative-offset timezone.
+ */
+export function parseIsoDateLocal(value: string): Date | null {
   const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value.trim());
   if (isoMatch) {
     const year = Number.parseInt(isoMatch[1], 10);
@@ -57,11 +52,10 @@ function nextForWeekly(
   startMinutes: number,
   today: Date,
 ): Date | null {
-  const dayIdx = MONDAY_INDEX[dayOfWeek.toLowerCase()];
-  if (dayIdx === undefined) return null;
+  const jsDay = jsDayFor(dayOfWeek);
+  if (jsDay < 0) return null;
   const hours = Math.floor(startMinutes / 60);
   const minutes = startMinutes % 60;
-  const jsDay = (dayIdx + 1) % 7; // Python: Monday=0; JS: Sunday=0
   const daysAhead = (jsDay - today.getDay() + 7) % 7;
   const target = new Date(today);
   target.setDate(target.getDate() + daysAhead);
@@ -74,7 +68,7 @@ function nextForSpecific(
   startMinutes: number,
   today: Date,
 ): Date | null {
-  const parsed = parseEventDate(eventDate);
+  const parsed = parseIsoDateLocal(eventDate);
   if (!parsed) return null;
   // Drop events whose calendar day is already past; same-day events still show
   // (date-only comparison, so an earlier start_time today is not filtered out).

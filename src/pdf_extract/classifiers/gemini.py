@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import date
 from typing import Any
 
-from pdf_extract.schedule_extraction import extract_events
+from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL, extract_events
 
 
 class GeminiClassifier:
@@ -13,7 +13,7 @@ class GeminiClassifier:
     version: str
     _model: str
 
-    def __init__(self, *, model: str = "gemini-3-flash-preview", name: str | None = None) -> None:
+    def __init__(self, *, model: str = DEFAULT_GEMINI_MODEL, name: str | None = None) -> None:
         self._model = model
         self.name = name or "gemini-flash"
         self.version = model
