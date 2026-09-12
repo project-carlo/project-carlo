@@ -67,11 +67,23 @@ _SEASON_RE = re.compile(
     re.I,
 )
 
-# A note trimmed down to nothing but the service it describes is saying no more
-# than the row itself already does.
+# A note trimmed down to nothing but the service it describes — or to the bare
+# adverb that introduced the phrase now removed — is saying no more than the row
+# itself already does.
 _LEADING_NOUN_RE = re.compile(
     r"^(?:mass|masses|adoration|exposition|holy hour|devotions?|confessions?|"
-    r"benediction|rosary)\b",
+    r"benediction|rosary|seasonally|seasonal)\b",
+    re.I,
+)
+
+# The word the cut phrase hung off. Removing "June 4 to September 10" from
+# "Seasonally from June 4 to September 10" leaves "from" governing nothing, so
+# a preposition or conjunction stranded at either edge goes with it. Only words
+# that cannot open or close a note on their own are listed: "at St. Mary's"
+# keeps its "at".
+_DANGLING_RE = re.compile(
+    r"^(?:from|through|thru|to|until|till|between|starting|beginning|and|or)\b"
+    r"|\b(?:from|through|thru|to|until|till|between|starting|beginning|and|or)$",
     re.I,
 )
 _EDGE_PUNCTUATION = " \t,;:.·-–—"
@@ -94,6 +106,13 @@ def _weeks_pattern(day_of_week: str) -> re.Pattern[str]:
 def _tidy(note: str) -> str | None:
     """Clean up what is left of a note once a matched phrase is cut out."""
     text = re.sub(r"\s+", " ", note).strip(_EDGE_PUNCTUATION)
+    # Repeatedly, because cutting one stranded word can strand the one behind
+    # it: "runs from" is left by the same removal that leaves "from".
+    while True:
+        trimmed = _DANGLING_RE.sub("", text).strip(_EDGE_PUNCTUATION)
+        if trimmed == text:
+            break
+        text = trimmed
     text = _LEADING_NOUN_RE.sub("", text, count=1).strip(_EDGE_PUNCTUATION)
     return text or None
 
