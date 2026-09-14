@@ -1,0 +1,22 @@
+{
+  "note": "A synthetic but realistically shaped NFL week: 16 games across 7 kickoff waves (Thu, London, 1:00, 4:05, 4:25, SNF, MNF). Win probabilities are already de-vigged. Replace p_home with home_ml/away_ml to feed raw moneylines instead.",
+  "now": "2026-09-17T12:00:00-04:00",
+  "games": [
+    {"id": "TNF", "away": "BUF", "home": "MIA", "kickoff": "2026-09-17T20:15:00-04:00", "p_home": 0.38},
+    {"id": "LON", "away": "MIN", "home": "JAX", "kickoff": "2026-09-20T09:30:00-04:00", "p_home": 0.44},
+    {"id": "E1",  "away": "CHI", "home": "GB",  "kickoff": "2026-09-20T13:00:00-04:00", "p_home": 0.78},
+    {"id": "E2",  "away": "NYG", "home": "PHI", "kickoff": "2026-09-20T13:00:00-04:00", "p_home": 0.86},
+    {"id": "E3",  "away": "CLE", "home": "PIT", "kickoff": "2026-09-20T13:00:00-04:00", "p_home": 0.63},
+    {"id": "E4",  "away": "NE",  "home": "NYJ", "kickoff": "2026-09-20T13:00:00-04:00", "p_home": 0.52},
+    {"id": "E5",  "away": "TEN", "home": "IND", "kickoff": "2026-09-20T13:00:00-04:00", "p_home": 0.71},
+    {"id": "E6",  "away": "CAR", "home": "ATL", "kickoff": "2026-09-20T13:00:00-04:00", "p_home": 0.68},
+    {"id": "E7",  "away": "WAS", "home": "TB",  "kickoff": "2026-09-20T13:00:00-04:00", "p_home": 0.57},
+    {"id": "M1",  "away": "DEN", "home": "LV",  "kickoff": "2026-09-20T16:05:00-04:00", "p_home": 0.47},
+    {"id": "M2",  "away": "SEA", "home": "ARI", "kickoff": "2026-09-20T16:05:00-04:00", "p_home": 0.55},
+    {"id": "L1",  "away": "DAL", "home": "SF",  "kickoff": "2026-09-20T16:25:00-04:00", "p_home": 0.74},
+    {"id": "L2",  "away": "HOU", "home": "KC",  "kickoff": "2026-09-20T16:25:00-04:00", "p_home": 0.81},
+    {"id": "L3",  "away": "NO",  "home": "LAR", "kickoff": "2026-09-20T16:25:00-04:00", "p_home": 0.66},
+    {"id": "SNF", "away": "BAL", "home": "DET", "kickoff": "2026-09-20T20:20:00-04:00", "p_home": 0.53},
+    {"id": "MNF", "away": "LAC", "home": "CIN", "kickoff": "2026-09-21T20:15:00-04:00", "p_home": 0.59}
+  ]
+}
