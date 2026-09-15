@@ -360,7 +360,14 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    return args.func(args)
+    try:
+        return args.func(args)
+    except BrokenPipeError:
+        # Someone piped us into `head` and stopped reading. Not an error.
+        try:
+            sys.stdout.close()
+        finally:
+            return 0
 
 
 if __name__ == "__main__":
