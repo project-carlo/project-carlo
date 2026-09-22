@@ -25,20 +25,13 @@
   --paper-deep: oklch(0.915 0.028 82);
   --paper-edge: oklch(0.88 0.03 82);
   /* The map pin popup is the only surface in the app that floats OVER
-   * something rather than sitting in the page, and every cream is a bad
-   * choice for it: `--paper` and anything near it is indistinguishable from
-   * the masthead and filter panels the card overlaps, and from OSM's own
-   * pastel land wash once the tile filter has muted it. So the card is struck
-   * on the missal's dark leather binding instead, with the cream reserved for
-   * the type. `--rubric-lit` is the rubric lifted far enough to read on it.
-   * Every one of these clears 4.5:1 against `--binding`; the faint tone is
-   * at 0.71 rather than 0.66 for exactly that reason. */
-  --binding: oklch(0.255 0.019 48);
-  --binding-ink: oklch(0.96 0.015 82);
-  --binding-ink-soft: oklch(0.79 0.015 75);
-  --binding-ink-faint: oklch(0.71 0.014 70);
-  --binding-rule: color-mix(in oklch, var(--binding-ink) 22%, transparent);
-  --rubric-lit: oklch(0.7 0.165 28);
+   * something rather than sitting in the page, so it is the one thing that
+   * must not be paper. It is a plain, NEUTRAL white — the neutrality is the
+   * point, not the lightness. A warmer near-white was tried (0.988 at hue 85
+   * against paper's 0.955) and still read as the same cream as the masthead
+   * and filter panels the card overlaps; dropping the chroma to zero is what
+   * separates it, at any lightness. */
+  --card-white: oklch(1 0 0);
   --ink: oklch(0.2 0.015 50);
   --ink-soft: oklch(0.4 0.018 50);
   --ink-faint: oklch(0.5 0.02 50);
@@ -312,22 +305,21 @@
   color: var(--rubric);
 }
 
-/* The pin popup is one uniform card on the missal's dark binding — no tinted
- * head or foot registers. It was `--paper`, then a lighter vellum, and both
- * read as the same cream as the panels it overlaps; the bands that gave the
- * card its structure just banded it, light through the middle and dark at
- * both ends. A single dark stock separated from the map by a gilt hairline
- * settles both: the registers are marked by rules alone. */
+/* The pin popup is one uniform white card. Its two earlier forms both failed
+ * the same way: `--paper` and then a warmer vellum were creams, so on a phone
+ * the card and the panels it overlaps read as one surface. And the tinted
+ * head and foot registers that gave it structure just banded it — dark at
+ * both ends, light through the middle. So: neutral white throughout, a crisp
+ * hairline and a real shadow to cut it out of the map, and registers marked
+ * by rules alone, with no fills to band. */
 .leaflet-popup-content-wrapper {
-  /* A brass hairline, the same gilt edge the pins carry, is what frames the
-   * card — at this value nothing on the map is close enough to need more. */
-  border: 1px solid color-mix(in oklch, var(--brass) 90%, transparent);
+  border: 1px solid var(--rule-strong);
   border-radius: 2px;
-  background: var(--binding);
-  color: var(--binding-ink);
+  background: var(--card-white);
+  color: var(--ink);
   box-shadow:
-    0 26px 56px -24px rgb(22 18 16 / 0.6),
-    0 5px 14px -5px rgb(22 18 16 / 0.35);
+    0 26px 56px -24px rgb(22 18 16 / 0.5),
+    0 5px 14px -5px rgb(22 18 16 / 0.22);
   padding: 0;
   overflow: hidden;
 }
@@ -340,7 +332,7 @@
   min-width: 0;
   font-family: var(--font-sans);
   font-size: 1rem;
-  color: var(--binding-ink);
+  color: var(--ink);
   line-height: 1.5;
 }
 
@@ -353,10 +345,10 @@
  * seam across the top of the pointer where it meets the card. After the
  * rotation the visible V is the square's right and bottom edges. */
 .leaflet-popup-tip {
-  background: var(--binding);
+  background: var(--card-white);
   border: none;
-  border-right: 1px solid color-mix(in oklch, var(--brass) 90%, transparent);
-  border-bottom: 1px solid color-mix(in oklch, var(--brass) 90%, transparent);
+  border-right: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
   box-shadow: none;
 }
 
@@ -383,7 +375,7 @@
 /* The card's registers. Hairlines, never fills — a filled band at each end
  * is what made the card read as three stacked strips. */
 .map-popup-head {
-  border-bottom: 1px solid var(--binding-rule);
+  border-bottom: 1px solid var(--rule);
   /* The wide right padding clears the close button, which Leaflet pins to
    * the card's top-right corner. */
   padding: 0.7rem 2.1rem 0.7rem 0.9rem;
@@ -402,7 +394,7 @@
 /* The foot has no padding of its own: the link fills it so the whole strip is
  * the target, rather than the width of the words. */
 .map-popup-foot {
-  border-top: 1px solid var(--binding-rule);
+  border-top: 1px solid var(--rule);
 }
 
 /* Scoped through `.leaflet-container` to outrank `.leaflet-container a`,
@@ -413,18 +405,18 @@
   justify-content: space-between;
   gap: 0.75rem;
   padding: 0.55rem 0.9rem;
-  color: var(--rubric-lit);
+  color: var(--rubric);
   transition:
     color 160ms ease,
     background-color 160ms ease;
 }
 .leaflet-container .map-popup-foot-link:hover,
 .leaflet-container .map-popup-foot-link:focus-visible {
-  background: color-mix(in oklch, var(--binding-ink) 9%, transparent);
-  color: var(--binding-ink);
+  background: color-mix(in oklch, var(--rubric) 8%, transparent);
+  color: var(--rubric-deep);
 }
 .leaflet-container .map-popup-foot-link:focus-visible {
-  outline: 2px solid var(--rubric-lit);
+  outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
   outline-offset: -2px;
 }
 .map-popup-foot-link span:last-child {
@@ -432,17 +424,6 @@
 }
 .map-popup-foot-link:hover span:last-child {
   transform: translateX(3px);
-}
-
-/* The section divider inside the card is a <Fleuron>, whose own hairline and
- * caption colors are Tailwind utilities — layered, so these unlayered rules
- * recolor it for the binding without threading a prop through a component
- * every other (paper) surface in the app also uses. */
-.map-popup-divider > span[aria-hidden] {
-  background: var(--binding-rule);
-}
-.map-popup-divider > .smallcaps {
-  color: var(--binding-ink-faint);
 }
 
 /* Sits in the card's top-right gutter, on a disc that only appears under the
@@ -458,7 +439,7 @@
   padding: 0;
   border-radius: 999px;
   font: 400 1.05rem/1 var(--font-display);
-  color: var(--binding-ink-faint);
+  color: var(--ink-faint);
   background: transparent;
   transition:
     color 160ms ease,
@@ -466,11 +447,11 @@
 }
 .leaflet-container a.leaflet-popup-close-button:hover,
 .leaflet-container a.leaflet-popup-close-button:focus-visible {
-  color: var(--binding-ink);
-  background: color-mix(in oklch, var(--binding-ink) 14%, transparent);
+  color: var(--rubric);
+  background: color-mix(in oklch, var(--rubric) 12%, transparent);
 }
 .leaflet-container a.leaflet-popup-close-button:focus-visible {
-  outline: 2px solid var(--rubric-lit);
+  outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
   outline-offset: 1px;
 }
 
@@ -615,12 +596,7 @@
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
   --color-paper-edge: var(--paper-edge);
-  --color-binding: var(--binding);
-  --color-binding-ink: var(--binding-ink);
-  --color-binding-ink-soft: var(--binding-ink-soft);
-  --color-binding-ink-faint: var(--binding-ink-faint);
-  --color-binding-rule: var(--binding-rule);
-  --color-rubric-lit: var(--rubric-lit);
+  --color-card-white: var(--card-white);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-ink-faint: var(--ink-faint);

@@ -212,11 +212,11 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
           padding so the tinted bands run to the card's edges; see
           `.map-popup-*` in app.css. */}
       <div className="map-popup-head space-y-1">
-        <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-binding-ink">
+        <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-ink">
           {church.name ?? "Unnamed parish"}
         </h3>
         {addressLine ? (
-          <p className="font-serif text-[0.875rem] leading-snug text-binding-ink-soft">
+          <p className="font-serif text-[0.875rem] leading-snug text-ink-soft">
             {addressLine}
           </p>
         ) : null}
@@ -225,7 +225,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
       <div className="map-popup-body">
         {/* The caption rides in the rule rather than sitting on its own line
             below it — one divider instead of two in a 250px-wide card. */}
-        <Fleuron label="Upcoming" className="map-popup-divider mb-2.5" />
+        <Fleuron label="Upcoming" className="mb-2.5" />
 
         <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
           {visibleRows.length > 0 ? (
@@ -236,11 +236,11 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
               >
                 {/* Small caps here so a day reads the same in the popup
                     as it does in the church page's schedule column. */}
-                <span className="smallcaps text-[0.9375rem] text-binding-ink">
+                <span className="smallcaps text-[0.9375rem] text-ink">
                   {row.label || "Upcoming"}
                 </span>
-                <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-binding-rule" />
-                <span className="text-right tabular-nums text-rubric-lit">
+                <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
+                <span className="text-right tabular-nums text-rubric">
                   {row.times.map((time, index) => (
                     // The separator sits outside the nowrap span so a long
                     // day wraps between times, never inside "10:30 a.m.".
@@ -253,12 +253,12 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
               </li>
             ))
           ) : (
-            <li className="font-serif text-[0.9rem] italic text-binding-ink-faint">
+            <li className="font-serif text-[0.9rem] italic text-ink-faint">
               No services listed yet.
             </li>
           )}
           {hiddenRowCount > 0 ? (
-            <li className="pt-1 font-serif text-[0.8125rem] italic text-binding-ink-faint">
+            <li className="pt-1 font-serif text-[0.8125rem] italic text-ink-faint">
               …and {hiddenRowCount} more {hiddenRowCount === 1 ? "day" : "days"}
             </li>
           ) : null}
@@ -368,14 +368,14 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
     >
       <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
         <div className="map-popup-solo space-y-1.5">
-          <div className="smallcaps text-[0.8125rem] text-binding-ink-faint">
+          <div className="smallcaps text-[0.8125rem] text-ink-faint">
             Searched place
           </div>
-          <h3 className="font-display text-[1.25rem] leading-[1.15] font-normal text-binding-ink">
+          <h3 className="font-display text-[1.25rem] leading-[1.15] font-normal text-ink">
             {place.title}
           </h3>
           {place.subtitle ? (
-            <p className="font-serif text-[0.875rem] leading-snug text-binding-ink-soft">
+            <p className="font-serif text-[0.875rem] leading-snug text-ink-soft">
               {place.subtitle}
             </p>
           ) : null}
