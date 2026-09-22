@@ -24,12 +24,21 @@
   --paper: oklch(0.955 0.022 82);
   --paper-deep: oklch(0.915 0.028 82);
   --paper-edge: oklch(0.88 0.03 82);
-  /* A lighter stock than `--paper`, for the one surface that has to read as
-   * laid ON something rather than as the page itself: the map pin popup.
-   * `--vellum-band` tints its head and foot registers — and its pointer, which
-   * Leaflet renders outside the card, hence a token rather than a local mix. */
-  --vellum: oklch(0.988 0.011 85);
-  --vellum-band: color-mix(in oklch, var(--paper-deep) 55%, var(--vellum));
+  /* The map pin popup is the only surface in the app that floats OVER
+   * something rather than sitting in the page, and every cream is a bad
+   * choice for it: `--paper` and anything near it is indistinguishable from
+   * the masthead and filter panels the card overlaps, and from OSM's own
+   * pastel land wash once the tile filter has muted it. So the card is struck
+   * on the missal's dark leather binding instead, with the cream reserved for
+   * the type. `--rubric-lit` is the rubric lifted far enough to read on it.
+   * Every one of these clears 4.5:1 against `--binding`; the faint tone is
+   * at 0.71 rather than 0.66 for exactly that reason. */
+  --binding: oklch(0.255 0.019 48);
+  --binding-ink: oklch(0.96 0.015 82);
+  --binding-ink-soft: oklch(0.79 0.015 75);
+  --binding-ink-faint: oklch(0.71 0.014 70);
+  --binding-rule: color-mix(in oklch, var(--binding-ink) 22%, transparent);
+  --rubric-lit: oklch(0.7 0.165 28);
   --ink: oklch(0.2 0.015 50);
   --ink-soft: oklch(0.4 0.018 50);
   --ink-faint: oklch(0.5 0.02 50);
@@ -303,38 +312,35 @@
   color: var(--rubric);
 }
 
-/* The popup is a small missal card laid ON the map, so it is struck in
- * vellum — a lighter, whiter stock than the page's `--paper`. It used to be
- * `--paper` exactly, which is both the page background and, once the tile
- * filter has muted OSM's land wash, very nearly the map itself: the card had
- * no edge to speak of and read as a hole rather than a slip of paper. The
- * rubric ribbon across the top and a deeper shadow do the rest of the
- * lifting. */
+/* The pin popup is one uniform card on the missal's dark binding — no tinted
+ * head or foot registers. It was `--paper`, then a lighter vellum, and both
+ * read as the same cream as the panels it overlaps; the bands that gave the
+ * card its structure just banded it, light through the middle and dark at
+ * both ends. A single dark stock separated from the map by a gilt hairline
+ * settles both: the registers are marked by rules alone. */
 .leaflet-popup-content-wrapper {
-  border: 1px solid var(--rule-strong);
-  /* The ribbon is a top border rather than a pseudo-element so it is clipped
-   * by the wrapper's own radius and can never overhang the corners. */
-  border-top: 2px solid var(--rubric);
+  /* A brass hairline, the same gilt edge the pins carry, is what frames the
+   * card — at this value nothing on the map is close enough to need more. */
+  border: 1px solid color-mix(in oklch, var(--brass) 90%, transparent);
   border-radius: 2px;
-  background: var(--vellum);
-  color: var(--ink);
+  background: var(--binding);
+  color: var(--binding-ink);
   box-shadow:
-    0 1px 0 rgb(22 18 16 / 0.04),
-    0 24px 52px -22px rgb(22 18 16 / 0.5),
-    0 4px 12px -4px rgb(22 18 16 / 0.22);
+    0 26px 56px -24px rgb(22 18 16 / 0.6),
+    0 5px 14px -5px rgb(22 18 16 / 0.35);
   padding: 0;
   overflow: hidden;
 }
 
-/* Padding lives on the card's three registers (head, body, foot) instead of
- * here, so the head and foot tints can run to the card's edges. */
+/* Padding lives on the card's registers (head, body, foot) instead of here,
+ * so the rules that divide them run to the card's edges. */
 .leaflet-popup-content {
   margin: 0;
   padding: 0;
   min-width: 0;
   font-family: var(--font-sans);
   font-size: 1rem;
-  color: var(--ink);
+  color: var(--binding-ink);
   line-height: 1.5;
 }
 
@@ -347,18 +353,11 @@
  * seam across the top of the pointer where it meets the card. After the
  * rotation the visible V is the square's right and bottom edges. */
 .leaflet-popup-tip {
-  /* Matches the foot band it hangs off, not the card's body stock. */
-  background: var(--vellum-band);
+  background: var(--binding);
   border: none;
-  border-right: 1px solid var(--rule-strong);
-  border-bottom: 1px solid var(--rule-strong);
+  border-right: 1px solid color-mix(in oklch, var(--brass) 90%, transparent);
+  border-bottom: 1px solid color-mix(in oklch, var(--brass) 90%, transparent);
   box-shadow: none;
-}
-
-/* …unless the card has no foot band, in which case the pointer hangs off the
- * body stock instead (the searched-place card). */
-.leaflet-popup:has(.map-popup-solo) .leaflet-popup-tip {
-  background: var(--vellum);
 }
 
 /* Open animation. IMPORTANT: same trap as the markers — Leaflet positions
@@ -381,52 +380,51 @@
   animation: map-popup-open 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* The three registers of the card. The head and foot are tinted a step
- * toward `--paper-deep` so the schedule in the middle sits on the cleanest
- * stock — the same ordering a missal gives a rubric, a text and a response. */
+/* The card's registers. Hairlines, never fills — a filled band at each end
+ * is what made the card read as three stacked strips. */
 .map-popup-head {
-  background: var(--vellum-band);
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--binding-rule);
   /* The wide right padding clears the close button, which Leaflet pins to
    * the card's top-right corner. */
-  padding: 0.7rem 2.1rem 0.65rem 0.9rem;
+  padding: 0.7rem 2.1rem 0.7rem 0.9rem;
 }
 
 .map-popup-body {
-  padding: 0.7rem 0.9rem 0.75rem;
+  padding: 0.75rem 0.9rem 0.8rem;
 }
 
-/* A card with no head band of its own — the searched-place pin — keeps the
- * body's clean stock but still has to clear the close button. */
+/* A card with no head register of its own — the searched-place pin — still
+ * has to clear the close button. */
 .map-popup-solo {
   padding: 0.7rem 2.1rem 0.75rem 0.9rem;
 }
 
-/* The foot has no padding of its own: the link fills the band so the whole
- * strip is the target, rather than the width of the words. */
+/* The foot has no padding of its own: the link fills it so the whole strip is
+ * the target, rather than the width of the words. */
 .map-popup-foot {
-  background: var(--vellum-band);
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--binding-rule);
 }
 
-.map-popup-foot-link {
+/* Scoped through `.leaflet-container` to outrank `.leaflet-container a`,
+ * which is what sets the map's link color. */
+.leaflet-container .map-popup-foot-link {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.5rem 0.9rem;
-  color: var(--rubric);
+  padding: 0.55rem 0.9rem;
+  color: var(--rubric-lit);
   transition:
     color 160ms ease,
     background-color 160ms ease;
 }
-.map-popup-foot-link:hover,
-.map-popup-foot-link:focus-visible {
-  background: color-mix(in oklch, var(--rubric) 8%, transparent);
-  color: var(--rubric-deep);
+.leaflet-container .map-popup-foot-link:hover,
+.leaflet-container .map-popup-foot-link:focus-visible {
+  background: color-mix(in oklch, var(--binding-ink) 9%, transparent);
+  color: var(--binding-ink);
 }
-.map-popup-foot-link:focus-visible {
-  outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
+.leaflet-container .map-popup-foot-link:focus-visible {
+  outline: 2px solid var(--rubric-lit);
   outline-offset: -2px;
 }
 .map-popup-foot-link span:last-child {
@@ -435,14 +433,20 @@
 .map-popup-foot-link:hover span:last-child {
   transform: translateX(3px);
 }
-@media (prefers-reduced-motion: reduce) {
-  .map-popup-foot-link span:last-child {
-    transition: none;
-  }
+
+/* The section divider inside the card is a <Fleuron>, whose own hairline and
+ * caption colors are Tailwind utilities — layered, so these unlayered rules
+ * recolor it for the binding without threading a prop through a component
+ * every other (paper) surface in the app also uses. */
+.map-popup-divider > span[aria-hidden] {
+  background: var(--binding-rule);
+}
+.map-popup-divider > .smallcaps {
+  color: var(--binding-ink-faint);
 }
 
-/* Sits in the head band's top-right gutter, on a disc that only appears under
- * the pointer — a bare glyph on a tinted band was hard to aim at. */
+/* Sits in the card's top-right gutter, on a disc that only appears under the
+ * pointer — a bare glyph was hard to aim at. */
 .leaflet-container a.leaflet-popup-close-button {
   top: 0.3rem;
   right: 0.3rem;
@@ -454,7 +458,7 @@
   padding: 0;
   border-radius: 999px;
   font: 400 1.05rem/1 var(--font-display);
-  color: var(--ink-faint);
+  color: var(--binding-ink-faint);
   background: transparent;
   transition:
     color 160ms ease,
@@ -462,11 +466,11 @@
 }
 .leaflet-container a.leaflet-popup-close-button:hover,
 .leaflet-container a.leaflet-popup-close-button:focus-visible {
-  color: var(--rubric);
-  background: color-mix(in oklch, var(--rubric) 12%, transparent);
+  color: var(--binding-ink);
+  background: color-mix(in oklch, var(--binding-ink) 14%, transparent);
 }
 .leaflet-container a.leaflet-popup-close-button:focus-visible {
-  outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
+  outline: 2px solid var(--rubric-lit);
   outline-offset: 1px;
 }
 
@@ -474,6 +478,9 @@
   .leaflet-popup .leaflet-popup-content-wrapper,
   .leaflet-popup .leaflet-popup-tip-container {
     animation: none;
+  }
+  .map-popup-foot-link span:last-child {
+    transition: none;
   }
 }
 
@@ -608,7 +615,12 @@
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
   --color-paper-edge: var(--paper-edge);
-  --color-vellum: var(--vellum);
+  --color-binding: var(--binding);
+  --color-binding-ink: var(--binding-ink);
+  --color-binding-ink-soft: var(--binding-ink-soft);
+  --color-binding-ink-faint: var(--binding-ink-faint);
+  --color-binding-rule: var(--binding-rule);
+  --color-rubric-lit: var(--rubric-lit);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-ink-faint: var(--ink-faint);
