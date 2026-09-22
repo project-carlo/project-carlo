@@ -1,4 +1,5 @@
 import { Fragment, memo, useEffect, useMemo, useRef } from "react";
+import type { RefObject } from "react";
 import { Link } from "react-router-dom";
 import {
   MapContainer,
@@ -207,9 +208,10 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
 
   return (
     <div className="w-full">
-      {/* pr-6 keeps a long parish name clear of the close button, which
-          Leaflet pins to the card's top-right corner. */}
-      <div className="space-y-1 pr-6">
+      {/* The card's three registers — head, schedule, foot. Each owns its own
+          padding so the tinted bands run to the card's edges; see
+          `.map-popup-*` in app.css. */}
+      <div className="map-popup-head space-y-1">
         <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-ink">
           {church.name ?? "Unnamed parish"}
         </h3>
@@ -220,56 +222,82 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
         ) : null}
       </div>
 
-      {/* The caption rides in the rule rather than sitting on its own line
-          below it — one divider instead of two in a 250px-wide card. */}
-      <Fleuron label="Upcoming" className="my-3" />
+      <div className="map-popup-body">
+        {/* The caption rides in the rule rather than sitting on its own line
+            below it — one divider instead of two in a 250px-wide card. */}
+        <Fleuron label="Upcoming" className="mb-2.5" />
 
-      <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
-        {visibleRows.length > 0 ? (
-          visibleRows.map((row) => (
-            <li
-              key={row.key}
-              className="flex items-baseline gap-2 font-serif text-[0.9rem]"
-            >
-              {/* Small caps here so a day reads the same in the popup
-                  as it does in the church page's schedule column. */}
-              <span className="smallcaps text-[0.9375rem] text-ink">
-                {row.label || "Upcoming"}
-              </span>
-              <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
-              <span className="text-right tabular-nums text-rubric">
-                {row.times.map((time, index) => (
-                  // The separator sits outside the nowrap span so a long
-                  // day wraps between times, never inside "10:30 a.m.".
-                  <Fragment key={time}>
-                    {index > 0 ? " · " : null}
-                    <span className="whitespace-nowrap">{time}</span>
-                  </Fragment>
-                ))}
-              </span>
+        <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
+          {visibleRows.length > 0 ? (
+            visibleRows.map((row) => (
+              <li
+                key={row.key}
+                className="flex items-baseline gap-2 font-serif text-[0.9rem]"
+              >
+                {/* Small caps here so a day reads the same in the popup
+                    as it does in the church page's schedule column. */}
+                <span className="smallcaps text-[0.9375rem] text-ink">
+                  {row.label || "Upcoming"}
+                </span>
+                <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
+                <span className="text-right tabular-nums text-rubric">
+                  {row.times.map((time, index) => (
+                    // The separator sits outside the nowrap span so a long
+                    // day wraps between times, never inside "10:30 a.m.".
+                    <Fragment key={time}>
+                      {index > 0 ? " · " : null}
+                      <span className="whitespace-nowrap">{time}</span>
+                    </Fragment>
+                  ))}
+                </span>
+              </li>
+            ))
+          ) : (
+            <li className="font-serif text-[0.9rem] italic text-ink-faint">
+              No services listed yet.
             </li>
-          ))
-        ) : (
-          <li className="font-serif text-[0.9rem] italic text-ink-faint">
-            No services listed yet.
-          </li>
-        )}
-        {hiddenRowCount > 0 ? (
-          <li className="pt-1 font-serif text-[0.8125rem] italic text-ink-faint">
-            …and {hiddenRowCount} more {hiddenRowCount === 1 ? "day" : "days"}
-          </li>
-        ) : null}
-      </ul>
+          )}
+          {hiddenRowCount > 0 ? (
+            <li className="pt-1 font-serif text-[0.8125rem] italic text-ink-faint">
+              …and {hiddenRowCount} more {hiddenRowCount === 1 ? "day" : "days"}
+            </li>
+          ) : null}
+        </ul>
+      </div>
 
-      <div className="mt-3 border-t border-rule pt-2.5">
+      <div className="map-popup-foot">
         <Link
           to={`/churches/${church.slug}/`}
-          className="rubric-link font-serif text-[0.9375rem]"
+          className="map-popup-foot-link font-serif text-[0.9375rem]"
         >
-          Full schedule →
+          <span>Full schedule</span>
+          <span aria-hidden="true">→</span>
         </Link>
       </div>
     </div>
+  );
+}
+
+const SELECTED_MARKER_CLASS = "is-selected";
+
+/**
+ * Marks the pin whose popup is open. Leaflet gives that marker no class of
+ * its own, so along a city street the card could be pointing at any one of a
+ * dozen pins; `.church-map-marker.is-selected` in app.css lifts and haloes
+ * the right one. The handler object is memoized because react-leaflet
+ * re-binds every listener when its identity changes.
+ */
+function useSelectedMarkerClass(markerRef: RefObject<LeafletMarker | null>) {
+  return useMemo(
+    () => ({
+      popupopen: () =>
+        markerRef.current?.getElement()?.classList.add(SELECTED_MARKER_CLASS),
+      popupclose: () =>
+        markerRef.current
+          ?.getElement()
+          ?.classList.remove(SELECTED_MARKER_CLASS),
+    }),
+    [markerRef],
   );
 }
 
@@ -299,9 +327,15 @@ const ChurchMarker = memo(function ChurchMarker({
     () => [church.latitude as number, church.longitude as number],
     [church.latitude, church.longitude],
   );
+  const eventHandlers = useSelectedMarkerClass(markerRef);
 
   return (
-    <Marker ref={markerRef} icon={markerIcon} position={position}>
+    <Marker
+      ref={markerRef}
+      icon={markerIcon}
+      position={position}
+      eventHandlers={eventHandlers}
+    >
       <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
         <ChurchPopupBody church={church} />
       </Popup>
@@ -333,7 +367,7 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
       zIndexOffset={1000}
     >
       <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
-        <div className="space-y-1.5 pr-6">
+        <div className="map-popup-solo space-y-1.5">
           <div className="smallcaps text-[0.8125rem] text-ink-faint">
             Searched place
           </div>
