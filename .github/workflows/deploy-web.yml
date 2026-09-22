@@ -11,6 +11,17 @@ on:
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
       - ".github/workflows/deploy-web.yml"
+  pull_request:
+    types:
+      - opened
+      - reopened
+    paths:
+      - "apps/web/**"
+      - "data/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - ".github/workflows/deploy-web.yml"
   workflow_dispatch:
     inputs:
       mode:
@@ -26,7 +37,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: web-deploy-${{ github.ref }}
+  group: web-deploy-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
@@ -34,6 +45,11 @@ jobs:
     name: Deploy web
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+
+    permissions:
+      contents: read
+      pull-requests: write
 
     steps:
       - name: Checkout
@@ -76,10 +92,12 @@ jobs:
 
       - name: Prepare preview alias
         id: preview
-        if: github.event_name == 'push' && github.ref_name != 'main'
+        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
         shell: bash
+        env:
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
         run: |
-          alias="$(printf '%s' "$GITHUB_REF_NAME" \
+          alias="$(printf '%s' "$BRANCH_NAME" \
             | tr '[:upper:]' '[:lower:]' \
             | sed -E 's/[^a-z0-9]+/-/g; s/^-+//; s/-+$//; s/-+/-/g' \
             | cut -c1-48)"
@@ -103,7 +121,7 @@ jobs:
 
       - name: Upload preview web app
         id: preview-deploy
-        if: github.event_name == 'push' && github.ref_name != 'main'
+        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -123,17 +141,128 @@ jobs:
           workingDirectory: apps/web
           packageManager: pnpm
 
+      - name: Resolve preview URL
+        id: preview-url
+        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
+        shell: bash
+        env:
+          COMMAND_OUTPUT: ${{ steps.preview-deploy.outputs.command-output }}
+          COMMAND_STDERR: ${{ steps.preview-deploy.outputs.command-stderr }}
+          PREVIEW_ALIAS: ${{ steps.preview.outputs.alias }}
+        run: |
+          set -uo pipefail
+
+          # wrangler prints the URLs with colour codes, and splits stdout/stderr differently per version.
+          output="$(printf '%s\n%s\n' "$COMMAND_OUTPUT" "$COMMAND_STDERR" | sed -E 's/\x1b\[[0-9;]*[a-zA-Z]//g')"
+
+          pick() {
+            printf '%s\n' "$output" \
+              | grep -iE "$1" \
+              | grep -oE 'https://[A-Za-z0-9._-]+\.workers\.dev' \
+              | head -n 1
+          }
+
+          alias_url="$(pick 'preview alias url' || true)"
+          version_url="$(pick 'version preview url' || true)"
+
+          if [ -z "$alias_url" ]; then
+            alias_url="$(printf '%s\n' "$output" \
+              | grep -oE "https://${PREVIEW_ALIAS}-[A-Za-z0-9._-]+\.workers\.dev" \
+              | head -n 1 || true)"
+          fi
+
+          if [ -z "$version_url" ]; then
+            version_url="$(printf '%s\n' "$output" \
+              | grep -oE 'https://[A-Za-z0-9._-]+\.workers\.dev' \
+              | head -n 1 || true)"
+          fi
+
+          {
+            echo "alias-url=$alias_url"
+            echo "version-url=$version_url"
+            echo "preview-url=${alias_url:-$version_url}"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Comment preview link on pull request
+        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PREVIEW_URL: ${{ steps.preview-url.outputs.preview-url }}
+          VERSION_URL: ${{ steps.preview-url.outputs.version-url }}
+          PREVIEW_ALIAS: ${{ steps.preview.outputs.alias }}
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+          EVENT_PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          set -uo pipefail
+
+          marker='<!-- cloudflare-preview-link -->'
+
+          if [ -z "$PREVIEW_URL" ]; then
+            echo "No preview URL found in the wrangler output; skipping the pull request comment."
+            exit 0
+          fi
+
+          pr_number="$EVENT_PR_NUMBER"
+
+          if [ -z "$pr_number" ]; then
+            pr_number="$(gh pr list --head "$BRANCH_NAME" --state open --json number --jq '.[0].number // empty')"
+          fi
+
+          if [ -z "$pr_number" ]; then
+            echo "No open pull request for ${BRANCH_NAME}; skipping the pull request comment."
+            exit 0
+          fi
+
+          body="$(mktemp)"
+          {
+            echo "$marker"
+            echo "### Preview deployment"
+            echo
+            echo "**[Open the preview](${PREVIEW_URL})**"
+            echo
+            echo "| | |"
+            echo "| :-- | :-- |"
+            echo "| Preview URL | ${PREVIEW_URL} |"
+            echo "| Preview alias | \`${PREVIEW_ALIAS}\` |"
+            if [ -n "$VERSION_URL" ] && [ "$VERSION_URL" != "$PREVIEW_URL" ]; then
+              echo "| This version only | ${VERSION_URL} |"
+            fi
+            echo "| Commit | \`${HEAD_SHA:0:7}\` |"
+            echo
+            echo "<sub>Updated automatically on every push to this branch.</sub>"
+          } > "$body"
+
+          comment_id="$(gh api --paginate "repos/${GH_REPO}/issues/${pr_number}/comments" \
+            --jq ".[] | select(.body | contains(\"$marker\")) | .id" \
+            | head -n 1)"
+
+          if [ -n "$comment_id" ]; then
+            gh api -X PATCH "repos/${GH_REPO}/issues/comments/${comment_id}" -F body=@"$body" >/dev/null
+            echo "Updated preview comment on pull request #${pr_number}."
+          else
+            gh api -X POST "repos/${GH_REPO}/issues/${pr_number}/comments" -F body=@"$body" >/dev/null
+            echo "Created preview comment on pull request #${pr_number}."
+          fi
+
       - name: Summarize preview upload
-        if: github.event_name == 'push' && github.ref_name != 'main'
+        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
         env:
           COMMAND_OUTPUT: ${{ steps.preview-deploy.outputs.command-output }}
           PREVIEW_ALIAS: ${{ steps.preview.outputs.alias }}
+          PREVIEW_URL: ${{ steps.preview-url.outputs.preview-url }}
         run: |
           {
             echo "### Cloudflare preview upload"
             echo
             echo "Preview alias: \`${PREVIEW_ALIAS}\`"
             echo
+            if [ -n "$PREVIEW_URL" ]; then
+              echo "Preview URL: ${PREVIEW_URL}"
+              echo
+            fi
             echo '```'
             echo "$COMMAND_OUTPUT"
             echo '```'
