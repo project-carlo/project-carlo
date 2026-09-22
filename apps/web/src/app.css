@@ -24,6 +24,12 @@
   --paper: oklch(0.955 0.022 82);
   --paper-deep: oklch(0.915 0.028 82);
   --paper-edge: oklch(0.88 0.03 82);
+  /* A lighter stock than `--paper`, for the one surface that has to read as
+   * laid ON something rather than as the page itself: the map pin popup.
+   * `--vellum-band` tints its head and foot registers — and its pointer, which
+   * Leaflet renders outside the card, hence a token rather than a local mix. */
+  --vellum: oklch(0.988 0.011 85);
+  --vellum-band: color-mix(in oklch, var(--paper-deep) 55%, var(--vellum));
   --ink: oklch(0.2 0.015 50);
   --ink-soft: oklch(0.4 0.018 50);
   --ink-faint: oklch(0.5 0.02 50);
@@ -297,23 +303,34 @@
   color: var(--rubric);
 }
 
-/* The popup is a small missal card: paper stock, a hairline edge, square
- * corners, and the same shadow the floating panels use. */
+/* The popup is a small missal card laid ON the map, so it is struck in
+ * vellum — a lighter, whiter stock than the page's `--paper`. It used to be
+ * `--paper` exactly, which is both the page background and, once the tile
+ * filter has muted OSM's land wash, very nearly the map itself: the card had
+ * no edge to speak of and read as a hole rather than a slip of paper. The
+ * rubric ribbon across the top and a deeper shadow do the rest of the
+ * lifting. */
 .leaflet-popup-content-wrapper {
   border: 1px solid var(--rule-strong);
+  /* The ribbon is a top border rather than a pseudo-element so it is clipped
+   * by the wrapper's own radius and can never overhang the corners. */
+  border-top: 2px solid var(--rubric);
   border-radius: 2px;
-  background: var(--paper);
+  background: var(--vellum);
   color: var(--ink);
   box-shadow:
     0 1px 0 rgb(22 18 16 / 0.04),
-    0 18px 40px -18px rgb(22 18 16 / 0.35),
-    0 2px 6px -2px rgb(22 18 16 / 0.12);
+    0 24px 52px -22px rgb(22 18 16 / 0.5),
+    0 4px 12px -4px rgb(22 18 16 / 0.22);
   padding: 0;
+  overflow: hidden;
 }
 
+/* Padding lives on the card's three registers (head, body, foot) instead of
+ * here, so the head and foot tints can run to the card's edges. */
 .leaflet-popup-content {
   margin: 0;
-  padding: 0.85rem 0.9rem 0.8rem;
+  padding: 0;
   min-width: 0;
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -330,28 +347,134 @@
  * seam across the top of the pointer where it meets the card. After the
  * rotation the visible V is the square's right and bottom edges. */
 .leaflet-popup-tip {
-  background: var(--paper);
+  /* Matches the foot band it hangs off, not the card's body stock. */
+  background: var(--vellum-band);
   border: none;
   border-right: 1px solid var(--rule-strong);
   border-bottom: 1px solid var(--rule-strong);
   box-shadow: none;
 }
 
-/* Sits in the card's top-right gutter; the popup header reserves room for it
- * (pr-6) so a long parish name never runs underneath. */
+/* …unless the card has no foot band, in which case the pointer hangs off the
+ * body stock instead (the searched-place card). */
+.leaflet-popup:has(.map-popup-solo) .leaflet-popup-tip {
+  background: var(--vellum);
+}
+
+/* Open animation. IMPORTANT: same trap as the markers — Leaflet positions
+ * `.leaflet-popup` itself with `transform: translate3d(...)`, so the card is
+ * grown from its inner wrapper and tip container instead. Origin is the
+ * pointer, so the card unfolds out of the pin it belongs to. */
+@keyframes map-popup-open {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.leaflet-popup .leaflet-popup-content-wrapper,
+.leaflet-popup .leaflet-popup-tip-container {
+  transform-origin: 50% 100%;
+  animation: map-popup-open 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* The three registers of the card. The head and foot are tinted a step
+ * toward `--paper-deep` so the schedule in the middle sits on the cleanest
+ * stock — the same ordering a missal gives a rubric, a text and a response. */
+.map-popup-head {
+  background: var(--vellum-band);
+  border-bottom: 1px solid var(--rule);
+  /* The wide right padding clears the close button, which Leaflet pins to
+   * the card's top-right corner. */
+  padding: 0.7rem 2.1rem 0.65rem 0.9rem;
+}
+
+.map-popup-body {
+  padding: 0.7rem 0.9rem 0.75rem;
+}
+
+/* A card with no head band of its own — the searched-place pin — keeps the
+ * body's clean stock but still has to clear the close button. */
+.map-popup-solo {
+  padding: 0.7rem 2.1rem 0.75rem 0.9rem;
+}
+
+/* The foot has no padding of its own: the link fills the band so the whole
+ * strip is the target, rather than the width of the words. */
+.map-popup-foot {
+  background: var(--vellum-band);
+  border-top: 1px solid var(--rule);
+}
+
+.map-popup-foot-link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  color: var(--rubric);
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+.map-popup-foot-link:hover,
+.map-popup-foot-link:focus-visible {
+  background: color-mix(in oklch, var(--rubric) 8%, transparent);
+  color: var(--rubric-deep);
+}
+.map-popup-foot-link:focus-visible {
+  outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
+  outline-offset: -2px;
+}
+.map-popup-foot-link span:last-child {
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.map-popup-foot-link:hover span:last-child {
+  transform: translateX(3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-popup-foot-link span:last-child {
+    transition: none;
+  }
+}
+
+/* Sits in the head band's top-right gutter, on a disc that only appears under
+ * the pointer — a bare glyph on a tinted band was hard to aim at. */
 .leaflet-container a.leaflet-popup-close-button {
   top: 0.3rem;
   right: 0.3rem;
-  width: 1.25rem;
-  height: 1.25rem;
-  font: 400 1.05rem/1.25rem var(--font-display);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border-radius: 999px;
+  font: 400 1.05rem/1 var(--font-display);
   color: var(--ink-faint);
-  transition: color 160ms ease;
+  background: transparent;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
 }
 .leaflet-container a.leaflet-popup-close-button:hover,
-.leaflet-container a.leaflet-popup-close-button:focus {
+.leaflet-container a.leaflet-popup-close-button:focus-visible {
   color: var(--rubric);
-  background: transparent;
+  background: color-mix(in oklch, var(--rubric) 12%, transparent);
+}
+.leaflet-container a.leaflet-popup-close-button:focus-visible {
+  outline: 2px solid color-mix(in oklch, var(--rubric) 76%, transparent);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaflet-popup .leaflet-popup-content-wrapper,
+  .leaflet-popup .leaflet-popup-tip-container {
+    animation: none;
+  }
 }
 
 /* Marker settle-in animation. IMPORTANT: never animate `transform` on the
@@ -389,6 +512,23 @@
 @media (hover: hover) and (pointer: fine) {
   .church-map-marker:hover svg {
     transform: translateY(-2px) scale(1.06);
+  }
+}
+/* The pin whose popup is open. Without it, a card could point at any one of
+ * the pins packed along a city street and you had to trace the tip to tell
+ * which. `is-selected` is toggled from ChurchMap's popupopen/popupclose
+ * handlers; the lift goes on the inner <svg> for the reason above. */
+.church-map-marker.is-selected svg {
+  transform: translateY(-3px) scale(1.14);
+  filter:
+    drop-shadow(0 3px 4px rgb(22 18 16 / 0.34))
+    drop-shadow(0 0 5px color-mix(in oklch, var(--rubric) 55%, transparent));
+}
+@media (prefers-reduced-motion: reduce) {
+  .church-map-marker,
+  .church-map-marker svg {
+    animation: none;
+    transition: none;
   }
 }
 
@@ -468,6 +608,7 @@
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
   --color-paper-edge: var(--paper-edge);
+  --color-vellum: var(--vellum);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-ink-faint: var(--ink-faint);
