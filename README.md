@@ -89,7 +89,7 @@ The workflow:
 - builds the Docker image with Buildx and GitHub Actions layer cache;
 - runs the weekly pipeline inside the container;
 - copies back only `data/metadata.json`, `data/events.json`, `data/event_history.json`, and `apps/web/public/frontend.snapshot`;
-- commits and pushes generated changes with the GitHub Actions bot when there is a diff.
+- commits and pushes generated changes with the GitHub Actions bot when there is a diff. If the branch moved during the run, the commit is rebuilt on the latest tip and the push retried (up to 5 attempts); the fresh generated files replace whatever is on the branch, and every other file is kept from the branch.
 
 GitHub scheduled workflows run on the default branch and use UTC. The `17` minute offset avoids the highest-load top-of-hour window.
 

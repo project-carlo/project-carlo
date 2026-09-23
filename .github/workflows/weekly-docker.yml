@@ -61,20 +61,47 @@ jobs:
       - name: Commit generated changes
         id: commit
         run: |
-          git add -- data/metadata.json data/events.json data/event_history.json apps/web/public/frontend.snapshot
-
-          if git diff --cached --quiet; then
-            echo "No generated changes to commit."
-            echo "committed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
+          generated=(data/metadata.json data/events.json data/event_history.json apps/web/public/frontend.snapshot)
+          base="$(git rev-parse HEAD)"
           commit_date="$(date -u +%F)"
-          git -c user.name="github-actions[bot]" \
-            -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-            commit -m "chore: weekly data refresh ${commit_date}"
-          git push
-          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+          # The branch can move during the long pipeline run (e.g. a merged PR), and a rejected push
+          # would throw away this run's output, event_history.json included. So each attempt rebuilds
+          # the commit on the latest remote tip: reset the index to it, keep the working tree, and
+          # stage only the generated files. Only this job writes them, so the fresh output replaces
+          # them whole instead of being rebased or merged, which could splice two JSON snapshots into
+          # a file the pipeline never wrote. Every other path is taken from the remote tip as is.
+          for attempt in 1 2 3 4 5; do
+            if [ "$attempt" -gt 1 ]; then
+              sleep $((5 * 2 ** (attempt - 2)))
+            fi
+
+            git fetch --quiet origin "$GITHUB_REF" || continue
+            git reset --quiet FETCH_HEAD
+            git add -- "${generated[@]}"
+
+            if git diff --cached --quiet; then
+              echo "No generated changes to commit."
+              echo "committed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+
+            git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit --quiet -m "chore: weekly data refresh ${commit_date}"
+
+            if git push origin "HEAD:${GITHUB_REF}"; then
+              if ! git diff --quiet "$base" HEAD~1 -- "${generated[@]}"; then
+                echo "::warning::Generated files changed on ${GITHUB_REF_NAME} during the run; this run's output replaced them."
+              fi
+              echo "committed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Push attempt ${attempt} failed."
+          done
+
+          echo "::error::Could not push the weekly data refresh after 5 attempts."
+          exit 1
 
       - name: Trigger deploy workflow
         if: steps.commit.outputs.committed == 'true' && github.ref_name == github.event.repository.default_branch
