@@ -165,6 +165,9 @@ interface LabeledCompare extends CompareInput {
   label: string;
 }
 
+// Every fixture gets its own id, as every snapshot event row does.
+let nextId = 1;
+
 function weekly(
   label: string,
   dayOfWeek: string | null,
@@ -172,6 +175,7 @@ function weekly(
 ): LabeledCompare {
   return {
     label,
+    id: nextId++,
     kind: "weekly",
     day_of_week: dayOfWeek,
     date: null,
@@ -181,11 +185,12 @@ function weekly(
 
 function specific(
   label: string,
-  date: string,
+  date: string | null,
   startTime: number,
 ): LabeledCompare {
   return {
     label,
+    id: nextId++,
     kind: "specific_date",
     day_of_week: null,
     date,
@@ -281,8 +286,8 @@ describe("compareSchedule", () => {
   });
 
   it("derives the weekday from the date when a weekly event lacks day_of_week", () => {
-    // weekdayKeyFor's fallback: a non-specific event with no day_of_week but a
-    // date string maps via DAY_ORDER[d.getDay()]. 2026-06-14 is a Sunday.
+    // The date fallback: a non-specific event with no day_of_week but a date
+    // string takes that date's weekday. 2026-06-14 is a Sunday.
     const fromDate = weekly("from-date", null, 10 * 60);
     fromDate.date = "2026-06-14"; // Sunday
     const realSunday = weekly("real-sunday", "sunday", 8 * 60);
@@ -300,6 +305,179 @@ describe("compareSchedule", () => {
     expect(
       compareSchedule(fromWednesday, weekly("thu", "thursday", 600)),
     ).toBeLessThan(0);
+  });
+
+  it("ranks a late-evening slot ahead of the next day's early-morning one", () => {
+    const mondayLate = weekly("mon-late", "monday", 23 * 60);
+    const tuesdayEarly = weekly("tue-early", "tuesday", 30);
+    expect(compareSchedule(mondayLate, tuesdayEarly)).toBeLessThan(0);
+
+    const fridayLate = weekly("fri-late", "friday", 20 * 60);
+    const saturdayMidnight = weekly("sat-midnight", "saturday", 0);
+    expect(compareSchedule(fridayLate, saturdayMidnight)).toBeLessThan(0);
+  });
+
+  it("sorts an unrecognized day_of_week after the week, before specific dates", () => {
+    const abbreviated = weekly("abbr", "Sun", 7 * 60);
+    const saturday = weekly("sat-regular", "saturday", 9 * 60);
+    const sunday = weekly("sunday", "sunday", 10 * 60);
+    const spec = specific("spec", "2026-06-15", 8 * 60);
+    expect(compareSchedule(sunday, abbreviated)).toBeLessThan(0);
+    expect(compareSchedule(saturday, abbreviated)).toBeLessThan(0);
+    expect(compareSchedule(abbreviated, spec)).toBeLessThan(0);
+  });
+
+  it("orders two events with no resolvable weekday by start_time", () => {
+    const early = weekly("early", null, 8 * 60);
+    const late = weekly("late", "", 10 * 60);
+    expect(compareSchedule(early, late)).toBeLessThan(0);
+    expect(compareSchedule(late, early)).toBeGreaterThan(0);
+  });
+
+  it("derives the weekday from a date that is not plain YYYY-MM-DD", () => {
+    // parseIsoDateLocal falls back to Date parsing; 2026-06-14 is a Sunday.
+    const fromDateTime = weekly("from-datetime", null, 10 * 60);
+    fromDateTime.date = "2026-06-14T09:00:00";
+    const monday = weekly("monday", "monday", 8 * 60);
+    expect(compareSchedule(fromDateTime, monday)).toBeLessThan(0);
+  });
+
+  it("breaks a tie on weekday and start_time by id", () => {
+    const first = weekly("mass", "monday", 9 * 60);
+    const second = weekly("confession", "monday", 9 * 60);
+    expect(compareSchedule(first, second)).toBeLessThan(0);
+    expect(compareSchedule(second, first)).toBeGreaterThan(0);
+  });
+});
+
+describe("compareSchedule ordering properties", () => {
+  // Every branch of the comparator: each weekday rank, the vigil boundary,
+  // late-evening vs next-morning slots, Title-case days as the snapshot stores
+  // them, weekdays derived from a date, unresolvable weekdays, specific dates,
+  // and pairs that tie on everything but id.
+  function representativeEvents(): LabeledCompare[] {
+    const withDate = (e: LabeledCompare, date: string): LabeledCompare => ({
+      ...e,
+      date,
+    });
+    return [
+      specific("spec-b", "2026-06-20", 7 * 60),
+      weekly("sun-8", "Sunday", 8 * 60),
+      weekly("sun-8-dup", "Sunday", 8 * 60),
+      weekly("sun-lower", "sunday", 10 * 60),
+      withDate(weekly("sun-from-date", null, 12 * 60), "2026-06-14"),
+      withDate(
+        weekly("sun-from-datetime", null, 12 * 60 + 30),
+        "2026-06-14T09:00:00",
+      ),
+      weekly("sat-vigil", "Saturday", 16 * 60),
+      weekly("sat-vigil-dup", "Saturday", 16 * 60),
+      weekly("mon-late", "Monday", 23 * 60),
+      weekly("mon-9", "Monday", 9 * 60),
+      weekly("tue-early", "Tuesday", 30),
+      withDate(weekly("wed-from-date", "Wed", 9 * 60), "2026-06-10"),
+      weekly("fri-late", "Friday", 20 * 60),
+      weekly("sat-midnight", "Saturday", 0),
+      weekly("sat-regular", "Saturday", 15 * 60 + 59),
+      weekly("unknown-abbr", "Sun", 7 * 60),
+      weekly("unknown-empty", "", 9 * 60),
+      weekly("unknown-null", null, 9 * 60),
+      withDate(weekly("unknown-bad-date", null, 6 * 60), "not-a-date"),
+      specific("unknown-no-date", null, 5 * 60),
+      specific("spec-a", "2026-06-15", 8 * 60),
+      specific("spec-a-dup", "2026-06-15", 8 * 60),
+    ];
+  }
+
+  // Deterministic PRNG (mulberry32) so a failing permutation is reproducible.
+  function seededRandom(seed: number): () => number {
+    let state = seed;
+    return () => {
+      state = (state + 0x6d2b79f5) | 0;
+      let t = Math.imul(state ^ (state >>> 15), 1 | state);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function shuffled<T>(items: T[], random: () => number): T[] {
+    const out = [...items];
+    for (let i = out.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [out[i], out[j]] = [out[j], out[i]];
+    }
+    return out;
+  }
+
+  it("sorts the representative set into the documented order", () => {
+    expect(sortedLabels(representativeEvents())).toEqual([
+      "sun-8",
+      "sun-8-dup",
+      "sun-lower",
+      "sun-from-date",
+      "sun-from-datetime",
+      "sat-vigil",
+      "sat-vigil-dup",
+      "mon-9",
+      "mon-late",
+      "tue-early",
+      "wed-from-date",
+      "fri-late",
+      "sat-midnight",
+      "sat-regular",
+      "unknown-no-date",
+      "unknown-bad-date",
+      "unknown-abbr",
+      "unknown-empty",
+      "unknown-null",
+      "spec-a",
+      "spec-a-dup",
+      "spec-b",
+    ]);
+  });
+
+  it("is antisymmetric, and only ties an event with itself", () => {
+    const events = representativeEvents();
+    const violations: string[] = [];
+    for (const a of events) {
+      for (const b of events) {
+        const ab = Math.sign(compareSchedule(a, b));
+        const ba = Math.sign(compareSchedule(b, a));
+        if (ab + ba !== 0 || (ab === 0) !== (a === b)) {
+          violations.push(`${a.label} vs ${b.label}: ${ab}, ${ba}`);
+        }
+      }
+    }
+    expect(violations).toEqual([]);
+  });
+
+  it("is transitive", () => {
+    const events = representativeEvents();
+    const violations: string[] = [];
+    for (const a of events) {
+      for (const b of events) {
+        if (compareSchedule(a, b) >= 0) continue;
+        for (const c of events) {
+          if (compareSchedule(b, c) < 0 && compareSchedule(a, c) >= 0) {
+            violations.push(`${a.label} < ${b.label} < ${c.label}`);
+          }
+        }
+      }
+    }
+    expect(violations).toEqual([]);
+  });
+
+  it("gives the same order whatever order the events arrive in", () => {
+    const events = representativeEvents();
+    const expected = sortedLabels(events);
+    const random = seededRandom(20260614);
+    const permutations = [
+      [...events].reverse(),
+      ...Array.from({ length: 50 }, () => shuffled(events, random)),
+    ];
+    for (const permutation of permutations) {
+      expect(sortedLabels(permutation)).toEqual(expected);
+    }
   });
 });
 
