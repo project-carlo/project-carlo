@@ -12,6 +12,7 @@ import {
   compareSchedule,
   computeNextOccurrence,
   parseIsoDateLocal,
+  todayDate,
 } from "./lib/schedule";
 import { num, str } from "./lib/sqlRow";
 import type {
@@ -58,9 +59,14 @@ export interface RawEvent {
 // This keeps the slider drag → map update path JS-only after the first call.
 let allChurchesPromise: Promise<ChurchBase[]> | null = null;
 let allEventsPromise: Promise<RawEvent[]> | null = null;
+// Occurrences are the one part of an event that isn't fixed by the snapshot:
+// they are relative to the local date, and a tab can outlive it (a phone just
+// resumes it the next morning). The cached rows carry the occurrence for this
+// day (local midnight, in ms) and are refreshed in place when it moves on.
+let occurrencesDay: number | null = null;
 
 function mapEventRow(row: Record<string, unknown>): RawEvent {
-  const ev: RawEvent = {
+  return {
     id: row["id"] as number,
     church_id: row["church_id"] as number,
     event_type: row["event_type"] as EventType,
@@ -70,12 +76,10 @@ function mapEventRow(row: Record<string, unknown>): RawEvent {
     start_time: row["start_time"] as number,
     end_time: num(row["end_time"]),
     cancelled: Boolean(row["cancelled"]),
-    occurrence: null,
+    occurrence: null, // filled in by refreshOccurrences
     page_number: num(row["page_number"]),
     note: str(row["note"]),
   };
-  ev.occurrence = computeNextOccurrence(ev);
-  return ev;
 }
 
 async function loadCaches(
@@ -87,7 +91,24 @@ async function loadCaches(
   const events = await (allEventsPromise ??= Promise.resolve(
     loadAllEvents(db),
   ));
+  refreshOccurrences(events);
   return { churches, events };
+}
+
+/**
+ * Recompute every cached event's next occurrence if the local date has changed
+ * since the last call, so dated events drop off once their day has passed.
+ * The loop runs once a day at most; every other call is one date comparison,
+ * so the slider drag path pays nothing for it.
+ */
+function refreshOccurrences(events: RawEvent[]): void {
+  const today = todayDate();
+  const day = today.getTime();
+  if (day === occurrencesDay) return;
+  for (const ev of events) ev.occurrence = computeNextOccurrence(ev, today);
+  occurrencesDay = day;
+  // Every memoised item embeds the old occurrences.
+  mapItemCache.clear();
 }
 
 function loadAllChurches(db: Database): ChurchBase[] {
@@ -208,7 +229,8 @@ function buildMapItem(
 // re-runs this query on every input event, and for most parishes the matching
 // events don't change from one step to the next; handing back the identical
 // object then lets React.memo skip the marker (and Leaflet skip re-positioning
-// it) instead of re-rendering all ~130 pins. Bounded by the church count.
+// it) instead of re-rendering all ~130 pins. Bounded by the church count, and
+// cleared by refreshOccurrences when the day (and so the occurrences) changes.
 const mapItemCache = new Map<
   number,
   { church: ChurchBase; signature: string; item: ChurchMapItem }
@@ -216,10 +238,11 @@ const mapItemCache = new Map<
 
 /**
  * Drop the memo. Only needed in tests: the app loads one immutable snapshot,
- * so an event id always denotes the same event and the memo can never go
- * stale. A test suite, though, builds fresh fixtures — and one that shares a
- * church object between cases (a hoisted fixture) while varying the event
- * data behind the same ids would otherwise be served the earlier case's item.
+ * so an event id always denotes the same event, and the one thing that does
+ * change (the day occurrences are relative to) clears the memo itself. A test
+ * suite, though, builds fresh fixtures — and one that shares a church object
+ * between cases (a hoisted fixture) while varying the event data behind the
+ * same ids would otherwise be served the earlier case's item.
  */
 export function resetMapItemCache(): void {
   mapItemCache.clear();

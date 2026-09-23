@@ -23,7 +23,8 @@ export interface CompareInput {
   start_time: number;
 }
 
-function todayDate(): Date {
+/** Local midnight of the current day: the `today` occurrences are relative to. */
+export function todayDate(): Date {
   const now = new Date();
   return new Date(now.getFullYear(), now.getMonth(), now.getDate());
 }
