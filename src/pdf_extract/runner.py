@@ -135,9 +135,13 @@ def load_cached_result(
 def store_cached_result(
     classifier_name: str, classifier_version: str, content_hash: str, payload: dict[str, Any]
 ) -> None:
+    """Cache a result. Best effort: a failed write costs a future API call, not this run."""
     key = cache_key(classifier_name, classifier_version, content_hash)
     data = (json.dumps(payload, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
-    get_store().put(key, data, content_type="application/json")
+    try:
+        get_store().put(key, data, content_type="application/json")
+    except Exception:
+        LOGGER.warning("Could not store cache entry %s", key, exc_info=True)
 
 
 # ── Bounded-concurrency extraction driver ───────────────────────────────────

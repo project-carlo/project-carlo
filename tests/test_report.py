@@ -401,7 +401,8 @@ def test_render_markdown_includes_status_gates_and_changes(pipeline_dir: Path) -
     assert "| fetch | new 1 |" in markdown
     assert "<b>test-parish</b>: +1 / −1 (2 → 2 events)" in markdown
     # Entries sort by their text (so "11:00" before "9:00"), not by sign.
-    assert "- `test-church`\n  - + Mass · Sun 11:00 AM\n  - − Mass · Sun 9:00 AM\n" in markdown
+    # In clock order, not text order ("11:00" sorts before "9:00" as text).
+    assert "- `test-church`\n  - − Mass · Sun 9:00 AM\n  - + Mass · Sun 11:00 AM\n" in markdown
     assert markdown.endswith("\n")
 
 

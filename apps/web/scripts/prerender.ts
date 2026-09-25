@@ -149,7 +149,7 @@ async function main() {
   if (!existsSync(DB_PATH)) {
     // The snapshot is published data, not source: it is downloaded, not committed.
     throw new Error(
-      `${DB_PATH} is missing. Run \`pnpm data:pull -- --snapshot-only\` from the repo root first.`,
+      `${DB_PATH} is missing. Run \`pnpm data:pull --snapshot-only\` from the repo root first.`,
     );
   }
   const SQL = await initSqlJs();

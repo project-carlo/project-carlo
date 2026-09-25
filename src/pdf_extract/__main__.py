@@ -54,6 +54,9 @@ LOGGER = logging.getLogger(__name__)
 
 Result = dict[str, Any]
 
+# Exit code of `weekly` when the run finished but a publishing check failed.
+EXIT_HELD = 10
+
 
 def _configure_logging(level_name: str) -> None:
     level = getattr(logging, level_name.upper(), logging.INFO)
@@ -203,7 +206,9 @@ def _cmd_data_status(args: argparse.Namespace) -> Result:
 
 def _cmd_data_import_legacy(args: argparse.Namespace) -> Result:
     return import_legacy(
-        git_ref=args.git_ref, source_dir=Path(args.dir) if args.dir else None,
+        git_ref=args.git_ref,
+        source_dir=Path(args.dir) if args.dir else None,
+        force=args.force,
     )
 
 
@@ -423,6 +428,10 @@ def _build_parser() -> argparse.ArgumentParser:
     source = data_import_parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--git-ref", help="Git revision that still has the JSON files")
     source.add_argument("--dir", help="Directory holding the JSON files")
+    data_import_parser.add_argument(
+        "--force", action="store_true",
+        help="Import even though a run is already published",
+    )
     data_import_parser.set_defaults(handler=_cmd_data_import_legacy)
     _add_common_args(data_import_parser)
 
@@ -497,8 +506,9 @@ def main(argv: list[str] | None = None) -> int:
     if getattr(args, "fail_on_verification_error", False) and not result.get("passed", False):
         return 1
     if getattr(args, "exit_code_from_status", False):
-        # 2 lets a caller tell "held for review" apart from a crash.
-        return {"passed": 0, "held": 2}.get(result.get("status"), 1)
+        # Distinct from 1 (a crash) and 2 (what argparse and uv use for usage
+        # errors), so a caller can trust that "held" really means held.
+        return {"passed": 0, "held": EXIT_HELD}.get(result.get("status"), 1)
     return 0
 
 

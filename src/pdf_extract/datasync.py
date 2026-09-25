@@ -92,10 +92,18 @@ def compact_copy(source: Path, dest: Path) -> None:
 
 def _install_db(data: bytes, db_path: Path) -> None:
     """Replace the local database, keeping the one it replaces as .bak."""
+    if db_path.exists():
+        if Path(f"{db_path}-wal").exists():
+            # Fold the write-ahead log into the file first, so the backup holds
+            # every committed transaction.
+            conn = sqlite3.connect(db_path)
+            try:
+                conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+            finally:
+                conn.close()
+        db_path.replace(db_path.with_name(db_path.name + ".bak"))
     for suffix in ("-wal", "-shm"):
         Path(f"{db_path}{suffix}").unlink(missing_ok=True)
-    if db_path.exists():
-        db_path.replace(db_path.with_name(db_path.name + ".bak"))
     _atomic_write(db_path, data)
 
 
@@ -134,7 +142,10 @@ def pull(
             if snapshot_only and public_fallback:
                 LOGGER.warning("Nothing published to R2 yet; using the live site's snapshot")
                 return _pull_public_snapshot(snapshot_path)
-            raise BlobStoreError(f"Nothing published yet ({LATEST_KEY} not found)")
+            raise BlobStoreError(
+                f"Nothing published yet ({LATEST_KEY} not found). Publish a run with the "
+                "Publish Data Run workflow, or run Weekly Data Refresh with bootstrap."
+            )
     else:
         manifest = _read_json(store, run_key(run_id, "manifest.json"))
         if manifest is None:
@@ -260,15 +271,25 @@ def status(limit: int = 10) -> dict[str, Any]:
 # ── One-time migration helpers ──────────────────────────────────────────────
 def import_legacy(
     *, git_ref: str | None = None, source_dir: Path | None = None,
-    db_path: Path = DEFAULT_DB_PATH,
+    db_path: Path = DEFAULT_DB_PATH, force: bool = False,
 ) -> dict[str, Any]:
     """Build the database from the JSON files the repository used to commit.
 
     Reads them from a git revision (`git_ref`) or a directory holding
     metadata.json, events.json and event_history.json.
+
+    Refuses when R2 already has a published run (unless `force`): the legacy
+    files are frozen, so importing them again would roll back every bulletin,
+    event and run record added since.
     """
     if (git_ref is None) == (source_dir is None):
         raise ValueError("Pass exactly one of git_ref or source_dir")
+    store = get_store()
+    if not force and store.is_remote and store.get_remote(LATEST_KEY) is not None:
+        raise BlobStoreError(
+            "A run is already published; importing the legacy JSON would replace it with "
+            "older data. Pull the published database instead (or pass --force)."
+        )
 
     def load(name: str) -> list[Any]:
         if source_dir is not None:

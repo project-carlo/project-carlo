@@ -56,6 +56,10 @@ def schema_version(conn: sqlite3.Connection) -> int:
     return int(conn.execute("PRAGMA user_version").fetchone()[0])
 
 
+class LegacyDatabaseError(RuntimeError):
+    pass
+
+
 def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> int:
     """Apply migrations newer than the database's user_version. Returns how many ran.
 
@@ -63,6 +67,14 @@ def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> 
     so a failure leaves the database at the previous version.
     """
     current = schema_version(conn)
+    if current == 0 and conn.execute(
+        "SELECT 1 FROM sqlite_master WHERE type = 'table' LIMIT 1"
+    ).fetchone():
+        raise LegacyDatabaseError(
+            "This database was built by the old rebuild-from-JSON pipeline and has no "
+            "schema version. Replace it: `pnpm data:pull` for the published data, or "
+            "`pnpm db:create --force` for an empty one."
+        )
     files = _migration_files(migrations_dir)
     if current > len(files):
         raise RuntimeError(
@@ -139,16 +151,17 @@ def seed_reference_data(
     }
     now = utc_now_iso()
 
-    parish_rows = (
-        _read_csv(parishes_csv, {"slug", "name", "website"}) if parishes_csv.exists() else []
-    )
-    church_rows = (
-        _read_csv(
-            churches_csv,
-            {"parish_id", "slug", "name", "line1", "city", "state", "postal_code"},
-        )
-        if churches_csv.exists()
-        else []
+    # A missing CSV must not read as "every parish was removed": that would
+    # delete the whole database's bulletins and events by cascade.
+    for path in (parishes_csv, churches_csv):
+        if not path.exists():
+            raise FileNotFoundError(
+                f"{path} not found; run commands from the repository root"
+            )
+    parish_rows = _read_csv(parishes_csv, {"slug", "name", "website"})
+    church_rows = _read_csv(
+        churches_csv,
+        {"parish_id", "slug", "name", "line1", "city", "state", "postal_code"},
     )
 
     with conn:

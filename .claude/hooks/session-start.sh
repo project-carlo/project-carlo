@@ -25,7 +25,11 @@ pnpm install
 # Data: the pipeline database and frontend snapshot are not in git. Pull the
 # published copy when this environment has (read-only) R2 credentials; never
 # fail the session over it.
-if [ -n "${R2_ACCESS_KEY_ID:-}" ] && [ ! -f data/parish_events.db ]; then
+# A database without a schema version was built by the old pipeline and must be replaced.
+schema_version() {
+  uv run python -c "import sqlite3; print(sqlite3.connect('data/parish_events.db').execute('pragma user_version').fetchone()[0])" 2>/dev/null || echo 0
+}
+if [ -n "${R2_ACCESS_KEY_ID:-}" ] && { [ ! -f data/parish_events.db ] || [ "$(schema_version)" = "0" ]; }; then
   uv run python -m pdf_extract data pull --log-level WARNING >/dev/null \
     || echo "session-start: data pull failed; run 'pnpm data:pull' to retry" >&2
 fi

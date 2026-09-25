@@ -45,7 +45,7 @@ enough; see [docs/data-setup.md](docs/data-setup.md)). Without credentials, you
 can still get the snapshot the live site serves, which is all the web app needs:
 
 ```bash
-pnpm data:pull -- --snapshot-only --public-fallback
+pnpm data:pull --snapshot-only --public-fallback
 ```
 
 ## Run the web app
@@ -85,7 +85,7 @@ The run's status decides what happens next:
 | Status | Exit code | Meaning |
 | :-- | :-: | :-- |
 | `passed` | 0 | Every publishing check passed; safe to publish. |
-| `held` | 2 | A check failed (church count changed, total events moved more than 10%, less than 90% of weekly slots survived, or a parish dropped to zero events). A person decides. |
+| `held` | 10 | A check failed (church count changed, total events moved more than 10%, less than 90% of weekly slots survived, or a parish dropped to zero events). A person decides. |
 | `failed` | 1 | A stage crashed. |
 
 A local run never publishes anything.
@@ -152,7 +152,7 @@ pnpm data:status      # which run is published, and recent runs
 pnpm db:create        # an empty database instead (schema + parishes/churches, no bulletins)
 ```
 
-`pnpm data:pull -- --run-id <id>` pulls a specific run instead, e.g. a held one
+`pnpm data:pull --run-id <id>` pulls a specific run instead, e.g. a held one
 you want to inspect. The database you replace is kept as
 `data/parish_events.db.bak`.
 
@@ -181,7 +181,7 @@ pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
 pnpm extract:web
 pnpm verify:frontend-snapshot
-pnpm data:pull [-- --run-id ID --snapshot-only --no-snapshot]
+pnpm data:pull [--run-id ID --snapshot-only --no-snapshot]
 pnpm data:status
 pnpm db:create
 pnpm db:drop

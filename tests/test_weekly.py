@@ -240,7 +240,7 @@ def test_weekly_run_requires_existing_database(
 # ── CLI exit codes ──────────────────────────────────────────────────────────
 @pytest.mark.parametrize(
     ("status", "exit_code"),
-    [("passed", 0), ("held", 2), ("failed", 1), (None, 1)],
+    [("passed", 0), ("held", 10), ("failed", 1), (None, 1)],
 )
 def test_cli_weekly_exit_code_follows_status(
     pipeline_dir: Path, monkeypatch: pytest.MonkeyPatch, status: str | None, exit_code: int,

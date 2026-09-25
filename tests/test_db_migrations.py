@@ -5,6 +5,7 @@ import pytest
 
 from pdf_extract.db import (
     DatabaseMissingError,
+    LegacyDatabaseError,
     _migration_files,
     create_db,
     ensure_db,
@@ -358,18 +359,27 @@ def test_seed_rejects_csv_missing_required_columns(pipeline_dir: Path) -> None:
         create_db()
 
 
-def test_seed_without_csvs_empties_reference_tables(pipeline_dir: Path) -> None:
+def test_seed_refuses_to_run_without_the_csvs(pipeline_dir: Path) -> None:
+    """A missing CSV must not read as "every parish was removed"."""
     create_db()
     PARISHES_CSV_PATH.unlink()
-    CHURCHES_CSV_PATH.unlink()
     conn = connect_db()
     try:
-        stats = seed_reference_data(conn)
-        assert stats["parishes_deleted"] == 1
-        assert _count(conn, "parish") == 0
-        assert _count(conn, "church") == 0
+        with pytest.raises(FileNotFoundError, match="parishes.csv"):
+            seed_reference_data(conn)
+        assert _count(conn, "parish") == 1
     finally:
         conn.close()
+
+
+def test_ensure_db_rejects_a_database_from_the_old_pipeline(pipeline_dir: Path) -> None:
+    """The old code built tables without a schema version; migrating it would fail."""
+    conn = connect_db()
+    conn.execute("CREATE TABLE parish (id INTEGER PRIMARY KEY)")
+    conn.commit()
+    conn.close()
+    with pytest.raises(LegacyDatabaseError, match="data:pull"):
+        ensure_db()
 
 
 # ── Legacy JSON import ──────────────────────────────────────────────────────

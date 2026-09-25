@@ -20,6 +20,7 @@ from typing import Any
 
 from pdf_extract.runs import FAILED_STATUSES, consecutive_failures, parish_results
 from pdf_extract.storage import latest_bulletin_ids, load_bulletins, load_events
+from pdf_extract.timeparse import time_to_minutes
 
 # A parish that showed at least this many events and now shows none holds the
 # run for review: far more often a wrong PDF or a failed extraction than a
@@ -262,6 +263,24 @@ def _fmt_before_after(section: dict[str, Any]) -> str:
     return f"{section.get('previous', '?')} → {section.get('current', '?')}"
 
 
+_WEEKDAY_ORDER = {
+    day: index for index, day in enumerate(
+        ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
+    )
+}
+
+
+def _display_order(event: dict[str, Any]) -> tuple:
+    """Type, then weekday or date, then clock time (not the time's text)."""
+    day = event.get("day_of_week")
+    when = (
+        (0, _WEEKDAY_ORDER.get(day.lower(), 7), "")
+        if isinstance(day, str) and event.get("event_kind") == "weekly"
+        else (1, 0, event.get("date") or "")
+    )
+    return (event["event_type"], when, time_to_minutes(event["start_time"]) or 0)
+
+
 # ── Markdown ────────────────────────────────────────────────────────────────
 def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -> str:
     status = report["status"]
@@ -333,15 +352,15 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
             f"({change['before_count']} → {change['after_count']} events)</summary>"
         )
         lines.append("")
-        by_church: dict[str, list[str]] = {}
+        by_church: dict[str, list[tuple[tuple, str]]] = {}
         for sign, events in (("+", change["added"]), ("−", change["removed"])):
             for event in events:
                 by_church.setdefault(event["church_slug"], []).append(
-                    f"{sign} {event['summary']}"
+                    (_display_order(event), f"{sign} {event['summary']}")
                 )
         for church, entries in sorted(by_church.items()):
             lines.append(f"- `{church}`")
-            lines += [f"  - {entry}" for entry in sorted(entries, key=lambda e: e[2:])]
+            lines += [f"  - {text}" for _, text in sorted(entries)]
         lines += ["", "</details>"]
     if len(changes) > max_changed_parishes:
         lines.append(

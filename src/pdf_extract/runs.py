@@ -99,12 +99,18 @@ def parish_results(conn: sqlite3.Connection, run_id: str) -> list[dict[str, Any]
 
 
 def consecutive_failures(conn: sqlite3.Connection, parish_slug: str, stage: str) -> int:
-    """How many of the most recent runs in a row this parish failed `stage`."""
+    """How many of the most recent runs in a row this parish failed `stage`.
+
+    Counts the runs this database knows about. Held and failed runs are not
+    published, so the next run (which starts from the published database)
+    does not see their records: a parish failing through several unpublished
+    runs is undercounted.
+    """
     rows = conn.execute(
         """SELECT r.status FROM run_parish_result r
            JOIN pipeline_run p ON p.id = r.run_id
            WHERE r.parish_slug = ? AND r.stage = ?
-           ORDER BY p.started_at DESC""",
+           ORDER BY p.started_at DESC, p.id DESC""",
         (parish_slug, stage),
     ).fetchall()
     streak = 0

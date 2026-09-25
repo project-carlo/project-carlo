@@ -48,6 +48,7 @@ jobs:
           CARLO_REMOTE_WRITE: "1"
           RUN_ID: ${{ inputs.run_id }}
         run: |
+          set -o pipefail
           uv run --no-sync python -m pdf_extract data promote --run-id "$RUN_ID" | tee published.json
           {
             echo "### Published \`${RUN_ID}\`"

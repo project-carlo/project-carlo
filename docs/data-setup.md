@@ -78,8 +78,9 @@ add `*.r2.cloudflarestorage.com` to the environment's allowed domains under
 
 Merging removes `data/metadata.json`, `data/events.json`,
 `data/event_history.json` and `apps/web/public/frontend.snapshot` from the
-repository. The site keeps working in the meantime: until the first run is
-published, deploys reuse the snapshot the live site is already serving.
+repository. Until the first run is published, deploys reuse the snapshot the
+live site is already serving. If a deploy fails in that window, the live site
+is unaffected.
 
 ## 6. Run the first (bootstrap) refresh
 
@@ -93,6 +94,11 @@ the checks pass. After that, the Sunday schedule takes over with no bootstrap.
 Check the run's summary page for the change report. If the run is **held**, an
 issue labelled `data-refresh` explains why. To publish it anyway, go to
 **Actions** → **Publish Data Run** → **Run workflow** and enter the run id.
+Until some run is published, scheduled runs have nothing to start from and
+fail, so don't leave the bootstrap run unpublished.
+
+Bootstrap only once. Once a run is published, the bootstrap refuses to run, so
+the frozen JSON can't overwrite newer data.
 
 ## 7. Upload the old bulletin PDFs (at your computer, whenever convenient)
 
@@ -114,7 +120,7 @@ on this for the weekly run; it just makes old bulletins available for
 - **See what's live:** `pnpm data:status`, or R2 → `pipeline/latest.json`.
 - **Roll back:** run **Publish Data Run** with an earlier run id (listed by
   `pnpm data:status`).
-- **Inspect a held run locally:** `pnpm data:pull -- --run-id <id>`, then query
+- **Inspect a held run locally:** `pnpm data:pull --run-id <id>`, then query
   `data/parish_events.db`, e.g. the `run_parish_result` table for that run.
 - **Rotate a key:** create a new token, update the secret, delete the old
   token.

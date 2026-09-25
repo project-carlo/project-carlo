@@ -542,3 +542,20 @@ def test_import_legacy_needs_exactly_one_source(tmp_path: Path) -> None:
         import_legacy()
     with pytest.raises(ValueError, match="exactly one"):
         import_legacy(git_ref="HEAD", source_dir=tmp_path)
+
+
+def test_import_legacy_refuses_once_a_run_is_published(
+    pipeline_dir: Path, tmp_path: Path, remote_store: CachedBlobStore,
+) -> None:
+    """The legacy files are frozen: importing them again would roll back the data."""
+    _prepare_run("run-1")
+    push_candidate("run-1")
+    promote("run-1")
+
+    with pytest.raises(BlobStoreError, match="already published"):
+        import_legacy(source_dir=tmp_path / "nothing-here", db_path=tmp_path / "x.db")
+
+    result = import_legacy(
+        source_dir=tmp_path / "nothing-here", db_path=tmp_path / "x.db", force=True,
+    )
+    assert result["bulletins"] == 0

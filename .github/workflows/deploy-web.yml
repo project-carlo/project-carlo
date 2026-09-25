@@ -86,6 +86,7 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_READ_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_READ_SECRET_ACCESS_KEY }}
         run: |
+          set -o pipefail
           uv sync --frozen --no-dev
           uv run --no-sync python -m pdf_extract data pull --snapshot-only --public-fallback \
             | tee pulled.json

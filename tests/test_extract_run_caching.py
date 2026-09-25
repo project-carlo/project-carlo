@@ -151,3 +151,16 @@ def test_run_does_not_touch_processed_at(seeded_run):
 def test_unknown_classifier_raises(seeded_run):
     with pytest.raises(KeyError):
         extract_run.run(classifier_name="nope")
+
+
+def test_a_failed_cache_write_does_not_fail_the_run(seeded_run, monkeypatch):
+    """The cache is an optimisation: losing a write must not lose the extraction."""
+    def failing_put(*args, **kwargs):
+        raise RuntimeError("R2 unavailable")
+
+    monkeypatch.setattr(get_store(), "put", failing_put)
+
+    summary = extract_run.run(classifier_name="counting", concurrency=1)
+
+    assert summary["events_written"] == 1
+    assert summary["errors"] == []
