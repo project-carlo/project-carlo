@@ -1,7 +1,7 @@
 # Data storage setup
 
 One-time setup for storing pipeline data in Cloudflare R2 instead of git. You
-can do steps 1–6 from a phone browser. Step 7 needs the computer that holds the
+can do steps 1–5 from a phone browser. Step 6 needs the computer that holds the
 old bulletin PDFs.
 
 ## 1. Create the bucket
@@ -19,9 +19,9 @@ database and PDFs add up to tens of MB a year.
 
 If you chose a **jurisdiction** (e.g. EU) instead of automatic, the bucket's
 S3 endpoint looks like `https://<ACCOUNT_ID>.eu.r2.cloudflarestorage.com`.
-Add it as a repository **variable** named `R2_ENDPOINT_URL` in step 3, and as
-an environment variable of the same name in step 4. With the default location
-you don't need it.
+Add it as a repository **variable** named `R2_ENDPOINT_URL` in step 3 (and
+as an environment variable wherever else you use the keys). With the default
+location you don't need it.
 
 Note the **Account ID**. It's on the R2 overview page, and also in the
 endpoint URL `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`.
@@ -35,7 +35,7 @@ R2 overview → **Manage API tokens** (or *API* → *Manage API tokens*) →
 | Token name | Permission | Used by |
 | :-- | :-- | :-- |
 | `project-carlo-write` | Object Read & Write | the weekly and publish workflows |
-| `project-carlo-read` | Object Read only | site deploys, your laptop, Claude sessions |
+| `project-carlo-read` | Object Read only | site deploys, your laptop |
 
 After creating each token, Cloudflare shows its **Access Key ID** and
 **Secret Access Key** only once. Keep the page open until they're saved in
@@ -61,26 +61,7 @@ Optional: `HEALTHCHECK_URL`, a ping URL from a service such as
 with a day of grace. It alerts you when a successful publish *doesn't* happen,
 which covers the case where the job never runs at all.
 
-## 4. Give Claude sessions read access
-
-In the Claude app, open the cloud environment's settings (the environment menu
-in a session's title bar → **Edit**) and add these environment variables,
-using the **read-only** token:
-
-```
-R2_ACCOUNT_ID=<account id>
-R2_ACCESS_KEY_ID=<project-carlo-read access key id>
-R2_SECRET_ACCESS_KEY=<project-carlo-read secret access key>
-```
-
-New sessions pick them up, and the SessionStart hook pulls the published
-database automatically. Don't give sessions the write token.
-
-If a session reports that `<account id>.r2.cloudflarestorage.com` is blocked,
-add `*.r2.cloudflarestorage.com` to the environment's allowed domains under
-**Network access**.
-
-## 5. Merge the pull request
+## 4. Merge the pull request
 
 Merging removes `data/metadata.json`, `data/events.json`,
 `data/event_history.json` and `apps/web/public/frontend.snapshot` from the
@@ -88,7 +69,7 @@ repository. Until the first run is published, deploys reuse the snapshot the
 live site is already serving. If a deploy fails in that window, the live site
 is unaffected.
 
-## 6. Run the first (bootstrap) refresh
+## 5. Run the first (bootstrap) refresh
 
 github.com → **Actions** → **Weekly Data Refresh** → **Run workflow** → tick
 **bootstrap** → **Run workflow**.
@@ -106,7 +87,7 @@ fail, so don't leave the bootstrap run unpublished.
 Bootstrap only once. Once a run is published, the bootstrap refuses to run, so
 the frozen JSON can't overwrite newer data.
 
-## 7. Upload the old bulletin PDFs (at your computer, whenever convenient)
+## 6. Upload the old bulletin PDFs (at your computer, whenever convenient)
 
 Until now, bulletin PDFs only existed on the machine that ran the pipeline.
 New ones go to R2 automatically. To upload the old ones too, run this from the
@@ -119,7 +100,7 @@ pnpm data:upload-bulletins
 
 It skips PDFs the bucket already has, so it's safe to re-run. Nothing depends
 on this for the weekly run; it just makes old bulletins available for
-`pnpm extract` / `pnpm compare` experiments and to agents.
+`pnpm extract` / `pnpm compare` experiments.
 
 ## Day to day
 
@@ -128,5 +109,10 @@ on this for the weekly run; it just makes old bulletins available for
   each run's status, by `pnpm data:status`) and tick **rollback**.
 - **Inspect a held run locally:** `pnpm data:pull --run-id <id>`, then query
   `data/parish_events.db`, e.g. the `run_parish_result` table for that run.
+- **Claude sessions:** cloud sessions don't get R2 keys, so they work from
+  the code and the CSVs, not the pulled data. To give one the data later, add
+  the read-only keys as the session environment's `R2_ACCOUNT_ID`,
+  `R2_ACCESS_KEY_ID` and `R2_SECRET_ACCESS_KEY` and run `pnpm data:pull`.
+  Never give them the write keys.
 - **Rotate a key:** create a new token, update the secret, delete the old
   token.

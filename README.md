@@ -153,7 +153,7 @@ is downloaded the first time a command needs it and kept. With no R2
 credentials the pipeline runs purely on local files.
 
 Writes to R2 are opt-in (`CARLO_REMOTE_WRITE=1`) and only the weekly workflow
-has write keys. Laptops and agent sessions get read-only keys, so nothing run
+has write keys. Anyone else pulling data uses read-only keys, so nothing run
 outside the workflow can change shared data, even `fetch` or `process`.
 
 ### Working with the database
