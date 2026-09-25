@@ -1,110 +1,135 @@
 ---
 name: parish-site-access
-description: Open and navigate the parish websites in data/parishes.csv from a Claude Code cloud sandbox the way the pipeline's Playwright code does - real Chrome, headed under xvfb, playwright-stealth - including the Cloudflare-protected ones (all eCatholic sites plus a few others) that WebFetch and curl only see as a 403 "Just a moment..." page. Use when you need to see a parish's homepage, find or follow its bulletin links, screenshot it, debug `pdf_extract fetch`/`detect run` for a parish, check a newly added parish, or when `pnpm diocese probe url` hits a Cloudflare 403.
+description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese from a Claude Code cloud sandbox. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when WebFetch/curl get a 403 "Just a moment..." page.
 ---
 
-# Visiting parish websites from the cloud sandbox
+# Seeing parish sites the probes can't
 
-WebFetch and curl can't see about a quarter of the parish sites. Cloudflare
-returns a 403 "Just a moment..." challenge for all 11 `ecatholic` parishes and for
-`stlouischurch.org`, `holyspirit-saintjoseph.org`, `cabriniroc.org` and
-`stjohnschurchspencerport.org`. `parishesonline.com` pages are a JavaScript app that
-arrives empty. The fix is to do what the pipeline does: drive a real browser.
+This skill works alongside `explore-diocese`, whose `probe url` fetches pages without a
+browser. On Syracuse's 75 parish websites, `probe url` found the bulletin publisher for only
+7. It couldn't read these:
 
-## 1. One-time setup per sandbox (~1 min)
+- **HTTP4XX (6):** Cloudflare's "Just a moment..." page (every eCatholic-hosted site is
+  behind it), or a bot-block.
+- **NO-PARISH-WORDS (6):** pages built in JavaScript, or "Redirecting..." shells.
+- **`ok` with no publications (most of the rest):** the bulletin sits in an iframe widget,
+  or on a "Bulletins" page one click away.
+
+WebFetch hits the same walls. These tools fill the gaps, and they report ids in the
+`scheme:value` form that `publication` takes.
+
+## Setup, once per sandbox (~1 min)
 
 ```bash
 .claude/skills/parish-site-access/scripts/setup_browser.sh
 ```
 
-A fresh sandbox can't launch a browser at all until this runs. The script fixes the following:
+This installs Google Chrome and trusts the agent proxy's TLS certificate in Chrome's store.
+Before it runs, no browser starts at all:
 
-- **Google Chrome gets installed.** The venv's Playwright expects a newer bundled Chromium than the image
-  ships (`/opt/pw-browsers` has build 1194; Playwright 1.58 wants 1208), and
-  `playwright install` is blocked. Chrome from `dl.google.com` installs fine.
-  It is also what `detect.py` uses, and it passes Cloudflare more often than Chromium.
-- **The agent proxy's CA gets trusted.** The proxy re-terminates TLS, and Chrome's NSS store
-  (`~/.pki/nssdb`) starts empty, so every page fails with `ERR_CERT_AUTHORITY_INVALID`.
-  The script imports `/root/.ccr/agent-proxy-ca.crt` with `certutil`. TLS stays verified.
+- The venv's Playwright wants a newer Chromium than the image ships, and
+  `playwright install` is blocked.
+- The proxy re-terminates TLS, so every page fails with `ERR_CERT_AUTHORITY_INVALID`.
 
-## 2. Look at a site
+## `visit.py`: probe url in a real browser
 
 ```bash
 V=".claude/skills/parish-site-access/scripts/visit.py"
-uv run python $V st-jerome --text                       # slug or URL; visible text
-uv run python $V st-jerome --follow /bulletins --links files.ecatholic
-uv run python $V net-catholic --screenshot /tmp/nc.png  # then Read the PNG to see it
-uv run python $V https://parishesonline.com/organization/all-saints-parish --links selectedPublication
-uv run python $V transfiguration-st-catherine-mendon --frames --links publication-page  # iframe widget
+uv run python $V --bulletin https://www.stmarys-clinton.com http://saintlouisgonzaga.org   # like probe url
+uv run python $V https://stleohilton.org --follow /bulletins --links files.ecatholic
+uv run python $V https://example-parish.org --text 3000 --screenshot /tmp/p.png           # Read the PNG
 ```
 
-- The browser is the pipeline's own `pdf_extract.browser.launch_stealth_browser`
-  (stealth-patched, headed) with `channel="chrome"`. The script re-runs itself under
-  `xvfb-run` when there's no display.
-- `--follow TEXT` clicks through to the first link whose text or href contains TEXT,
-  and can be repeated. Prefer a path (`/bulletins`) over a word: `--follow bulletin` on
-  netcatholic.org lands on "Publish in our Bulletin".
-- `--text [N]`, `--links [REGEX]`, `--html PATH` and `--screenshot PATH` inspect the final page.
-  `--frames` adds iframe content.
-- It prints `OK`/`BLOCKED`, the HTTP status, the final URL and how many loads it needed.
-  It exits 2 if Cloudflare challenged every load. That happens occasionally during a long
-  blocked streak; wait a minute or two and run it again.
+It prints JSON with `probe url`'s fields, judged on the **rendered** page and its iframes:
 
-## 3. Run the pipeline itself
+- **`verdict`:** the same rules `probe url` uses (SPAM-SQUAT, REDIRECT-OFFSITE, HTTP4XX,
+  HTTP5XX, NO-PARISH-WORDS, ok), plus two of its own. `BLOCKED` means Cloudflare challenged
+  every load. `ERROR` means the browser couldn't load the page at all (for example, one
+  Syracuse site answers HTTP 445, which Chrome refuses).
+- **`publications`:** from the CLI's own `find_publications`. It also reads ParishesOnline's
+  `parishesonline.com/find/<slug>/bulletin/file/03-1424-<date>B.pdf` links as
+  `po-container:03/1424`, which `find_publications` misses.
+- **`bulletin_links`**, and **`pdf_links`** listed separately: `bulletin_links` stops at 15,
+  and WordPress pages use those up on feeds before reaching the PDF.
+- **`--bulletin`:** when the page embeds no id, it opens the site's bulletin pages (up to 5)
+  until one does. The result goes in `bulletin_search.found`. A bulletin page with PDFs and
+  no publisher is reported as self-hosted, with `url:<listing page>`.
+- **`--follow TEXT`** clicks through to the first link whose text or href contains TEXT
+  (repeatable). Prefer a path (`/bulletins`) to a word: "bulletin" also matches "Publish in
+  our Bulletin".
+- **`--text [N]`, `--links [REGEX]`, `--html PATH` and `--screenshot PATH`** let you read the
+  page itself.
 
-Pipeline code runs unmodified once setup is done. Its env vars pick Chrome:
+What it found on the 21 Syracuse sites `probe url` couldn't read (2026-09-25):
+
+- **Behind Cloudflare:** eCatholic ids for two (`ecatholic:35905`, `ecatholic:33641`).
+- **In "Bulletins" pages or widgets:** ParishesOnline ids for three (`po-org:…`, `lpi:…`,
+  `po-container:…`).
+- **Self-hosted:** three bulletins.
+- **Dead or hijacked domains:** a parked domain, a for-sale page, and a site taken over by a
+  Chinese movie-streaming page. None of these contain parish words, so they get a non-`ok`
+  verdict.
+- **Never loaded:** two sites stayed BLOCKED through every run (see the next section).
+
+## When a site stays BLOCKED: find the bulletin elsewhere
+
+Most Cloudflare sites load within a few tries, but some challenge nearly every visitor.
+holyfamilyendwell.com loaded 0 times in ~25 loads over half an hour. When that happens,
+don't keep hammering it. The bulletin is usually published somewhere that isn't blocked:
+
+1. **Search the web** for the parish name, the town and "bulletin". Discover Mass,
+   ParishesOnline and the eCatholic file host all show up in results. For Holy Family,
+   Endwell, a search turned up `discovermass.com/church/church-of-the-holy-family-endwell-ny/`,
+   and `issues.py discovermass` then read its 27 September issue.
+2. **Check the diocese directory, GCatholic and Facebook** for a second website, such as a
+   family or cluster site. It may be blocked too, but it's worth one try.
+3. **Try `visit.py` again later.** Blocked streaks pass.
+
+## `issues.py`: probe container for eCatholic and Discover Mass
+
+`probe container` walks a ParishesOnline container back week by week, and `issues.py` does
+the same for the other two publishers. Their files live on hosts with no Cloudflare, so no
+browser is needed even when the parish's own site is blocked:
 
 ```bash
-uv run python -m pdf_extract db create   # once: no R2 here, so start from an empty DB
-PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a uv run python -m pdf_extract fetch --parish "St. John the Evangelist (Greece)"
-PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a uv run python -m pdf_extract detect run --dry-run --limit 3
+I=".claude/skills/parish-site-access/scripts/issues.py"
+uv run python $I ecatholic ecatholic:20434 [--weeks 12 --step 4 --all --pages 3 --grep "St. Anne"]
+uv run python $I discovermass discovermass:st-patrick-victor-ny [--issues 6 --pages 3]
 ```
 
-`fetch` records bulletins in `data/parish_events.db` and saves PDFs under
-`data/bulletins/`. Both are gitignored. The real database lives in R2, and cloud sessions
-have no R2 access, so a sandbox run starts from an empty migrated DB. It re-fetches
-everything and publishes nothing. The pipeline does not retry Cloudflare challenges (see below), so an
-eCatholic parish can fail on one run and succeed on the next.
+- **eCatholic:** issues are at `files.ecatholic.com/{site id}/bulletins/{YYYYMMDD}.pdf`, one
+  per Sunday. The coming Sunday's issue is usually up by mid-week. As with ParishesOnline,
+  **a missing issue answers 403, not 404**, and there's no directory listing. The site id
+  comes from `visit.py` on the parish's eCatholic site.
+- **Discover Mass:** the church page is server-rendered and lists about 12 issues.
+  `issues.py` flags a newest issue older than 45 days, as `probe po` does.
+- **`--pages` and `--grep`** work as in `probe pdf`. Mastheads are often on page 2 or 3.
 
-## How Cloudflare behaves here (measured 2026-09-25)
+## Evidence from blocked pages
 
-- **The challenge can't be solved in this sandbox.** When Cloudflare challenges, it's an
-  interactive Turnstile ("Verify you are human"), and its endpoint
-  `brunhild.challenges.cloudflare.com` is denied by the environment's network policy.
-  `challenges.cloudflare.com` itself is allowed. Denials show up as `connect_rejected` in
-  `curl -sS "$HTTPS_PROXY/__agentproxy/status"`. Don't try to route around the policy.
-  The fix is for the user to add that host to the environment's allowed domains.
-- **Cloudflare decides per request, so retrying works.** Headed Chrome gets the real
-  page (200, no challenge) about half the time. No clearance cookie is ever set, so
-  every navigation rolls again, including a second page on the same site. Blocked
-  loads come in streaks lasting tens of seconds. `visit.py` therefore reloads with backoff
-  (2s, 4s, 8s, then 15s, up to `--retries`, default 8). The egress IP rotates across
-  a pool (160.79.106.x), but the IP doesn't predict the outcome. A batch run of
-  `visit.py` over all 15 challenged homepages loaded 15 of 15. Most needed 1–3 loads
-  (4–22 s); the worst needed 6 loads (74 s).
-- **Headless never passes.** Headless Chrome or Chromium, stealth or not, got the
-  real page on 0 of 23 loads. Keep it headed; don't set `PLAYWRIGHT_HEADLESS=1`.
-- **WebFetch and curl always get the challenge.** A browser User-Agent doesn't help.
-  `allsaintsparish.org` is the exception: it only rejects curl's default UA.
+`pnpm diocese recheck` re-fetches every evidence URL without a browser, so a quote taken from
+a Cloudflare-blocked page will come back `unreachable`. Prefer quoting the bulletin PDF:
+issues on `files.ecatholic.com`, `container.parishesonline.com` and Discover Mass all fetch
+without a browser, and a dated issue never changes. When a quote can only come from a blocked
+page, say so in the item's `note`, e.g. "behind Cloudflare; read in a browser
+(parish-site-access visit.py)", so the auditor knows to open it the same way.
 
-## When you only need the bulletin PDF
+## How Cloudflare behaves in the sandbox (measured 2026-09-25)
 
-The providers serve the PDFs from hosts with no challenge, so no browser is needed:
-
-```bash
-python .claude/skills/parish-site-access/scripts/bulletin_url.py <slug> [...] | --all
-```
-
-- **eCatholic:** `https://files.ecatholic.com/{site_id}/bulletins/{YYYYMMDD}.pdf`. The date
-  is always the Sunday. A missing file returns 403 AccessDenied (S3). `site_id` comes from
-  past bulletins in `data/parish_events.db`, or from the script's built-in table
-  (as of 2026-09) when the DB hasn't been pulled.
-- **Parishes Online:** a JSON API with no auth. `GET https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/organizations/slug/{provider_id}`
-  returns `data.salesforce_id`, then `…/organizations/{id}/publications?limit=12&type=Church`
-  returns `fileUrl` and `publishDate`.
-- **Discover Mass:** the church page is server-rendered, so plain fetches (curl, WebFetch) work. Send a browser
-  UA from Python, because `urllib`'s default gets a 403.
-
-These routes often show next Sunday's bulletin before the parish site links it.
-WebFetch on a PDF can't read the text, but it saves the file locally, and `Read` with
-`pages:` opens it.
+- **The challenge can't be solved here.** Its "Verify you are human" step needs
+  `brunhild.challenges.cloudflare.com`, which the environment's egress policy denies
+  (`connect_rejected` in `curl -sS "$HTTPS_PROXY/__agentproxy/status"`). Don't route around
+  it. The user can add that host in the environment's network settings.
+- **Cloudflare decides per request, so retrying works for most sites.** Headed Chrome
+  sometimes gets the real page with no challenge at all. No clearance cookie is ever set, so
+  every load rolls again. `visit.py` reloads with backoff (2s, 4s, 8s, then 15s, up to
+  `--retries`, default 8).
+- **How often it gets through varies by site:**
+  - **Rochester:** 15 of 15 Cloudflare homepages loaded in one batch (1–6 loads each).
+  - **Syracuse:** `stjohnsnh.com` loaded in 2. `stmarys-clinton.com` loaded in half its
+    runs. `holyfamilyendwell.com` never loaded.
+- **Headless never passes:** 0 of 23 loads. Keep the browser headed: `visit.py` re-runs
+  itself under `xvfb-run`, so don't set `PLAYWRIGHT_HEADLESS=1`.
+- The egress IP rotates across a pool, and the IP doesn't predict the outcome.
+- **`probe url`'s DEAD-DNS is real here.** The domains it flagged don't resolve, and the
+  proxy can't reach them either.

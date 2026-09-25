@@ -1,37 +1,47 @@
-"""Open a parish website in the pipeline's browser and show what it sees.
+"""`probe url` with a real browser: see a parish website the way a person does.
 
-Uses pdf_extract.browser.launch_stealth_browser (stealth-patched, headed) with
-real Chrome, the same setup detect.py uses, so what you see here is what the
-pipeline sees. Run scripts/setup_browser.sh once per sandbox first.
+`pnpm diocese probe url` fetches pages without a browser, so it reports
+HTTP4XX for sites behind Cloudflare (every eCatholic site, many others),
+NO-PARISH-WORDS for sites built in JavaScript (Wix, Squarespace, "Redirecting..."
+shells), and no publications for bulletins that sit in an iframe widget or one
+click deep. This opens the page in the pipeline's own stealth browser
+(pdf_extract.browser.launch_stealth_browser) with real Chrome, headed under
+xvfb, and reports the same fields `probe url` does, read from the rendered page
+and its iframes. Run scripts/setup_browser.sh once per sandbox first.
 
-Cloudflare decides per request whether to challenge, and in this sandbox the
-challenge can never be solved (its brunhild.challenges.cloudflare.com endpoint
-is denied by the egress policy). So every navigation that lands on
-"Just a moment..." is simply loaded again, up to --retries times.
+Cloudflare decides per request whether to challenge, and in a Claude Code sandbox
+the challenge can never be solved (brunhild.challenges.cloudflare.com is denied
+by the egress policy), so a challenged load is simply retried with backoff.
 
 Usage (from the repo root; re-runs itself under xvfb-run when there is no display):
-  uv run python .claude/skills/parish-site-access/scripts/visit.py TARGET [options]
+  uv run python .claude/skills/parish-site-access/scripts/visit.py URL [URL ...] [options]
 
-TARGET is a URL or a slug from data/parishes.csv (its website is opened).
-  --follow TEXT     then follow the first link whose text or href contains TEXT
-                    (case-insensitive); repeat to walk several pages deep
-  --text [N]        print the page's visible text (first N chars, default 4000)
-  --links [PATTERN] print links (text -> href), optionally only those matching PATTERN
-  --frames          include iframe content in --text/--links/--html (parishesonline widgets)
-  --screenshot PATH save a full-page screenshot of the final page (view it with Read)
-  --html PATH       save the final page's HTML (plus frames with --frames)
+  --bulletin        when a page embeds no publication id, open its bulletin links
+                    (up to 5) until one does, the way detect.py does; a bulletin page
+                    with PDFs and no publisher is reported as self-hosted (url:<page>)
+  --follow TEXT     after loading, follow the first link whose text or href contains
+                    TEXT (case-insensitive); repeat to walk deeper (single URL only)
+  --text [N]        include the page's visible text (first N chars, default 4000)
+  --links [REGEX]   include every link (text, href), optionally only those matching
+  --screenshot PATH full-page screenshot of the final page (look at it with Read)
+  --html PATH       save the final page's HTML, iframes included
   --retries N       loads per navigation while Cloudflare challenges (default 8)
+
+Prints JSON: {"results": [{url, verdict, status, final_url, title, loads,
+publications, bulletin_links, pdf_links, ...}]}. verdict is one of probe url's
+(ok, SPAM-SQUAT, REDIRECT-OFFSITE, HTTP4XX, HTTP5XX, NO-PARISH-WORDS) judged on the
+rendered page, or BLOCKED (Cloudflare challenged every load: wait a minute and
+retry) or ERROR (the browser could not load it at all).
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
+import json
 import os
 import re
 import shutil
 import sys
-import time
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -42,6 +52,7 @@ CF_SETTLE_MS = 5000
 # Pause before each reload. Challenged loads come in streaks lasting tens of
 # seconds, so back off instead of hammering: 2s, 4s, 8s, then 15s.
 RETRY_PAUSES_MS = (2000, 4000, 8000, 15000)
+BULLETIN_PAGES_TO_TRY = 5
 
 
 def _reexec_under_xvfb() -> None:
@@ -54,16 +65,6 @@ def _reexec_under_xvfb() -> None:
     )
 
 
-def _resolve_target(target: str) -> str:
-    if re.match(r"https?://", target):
-        return target
-    with (REPO / "data" / "parishes.csv").open(encoding="utf-8") as fh:
-        for row in csv.DictReader(fh):
-            if row["slug"] == target:
-                return row["website"]
-    sys.exit(f"{target!r} is neither a URL nor a slug in data/parishes.csv")
-
-
 def _challenged(page) -> bool:  # type: ignore[no-untyped-def]
     try:
         return CF_TITLE in (page.title() or "").lower()
@@ -71,18 +72,25 @@ def _challenged(page) -> bool:  # type: ignore[no-untyped-def]
         return True
 
 
-def goto_past_cloudflare(page, url: str, retries: int) -> tuple[int | None, int]:  # type: ignore[no-untyped-def]
-    """Load url, reloading while Cloudflare challenges. Returns (status, attempts)."""
+def goto(page, url: str, retries: int) -> tuple[int | None, int]:  # type: ignore[no-untyped-def]
+    """Load url, reloading while Cloudflare challenges. Returns (status, loads)."""
     status = None
     for attempt in range(1, retries + 1):
-        resp = page.goto(url, wait_until="domcontentloaded", timeout=30000)
-        status = resp.status if resp else None
+        try:
+            resp = page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            status = resp.status if resp else None
+        except Exception as exc:
+            # A site's own JavaScript redirect (http -> https, "Redirecting...")
+            # interrupts the navigation; the page it went to is the answer.
+            if "interrupted by another navigation" not in str(exc):
+                raise
+            page.wait_for_load_state("domcontentloaded", timeout=30000)
         waited = 0
         while _challenged(page) and waited < CF_SETTLE_MS:
             page.wait_for_timeout(500)
             waited += 500
         if not _challenged(page):
-            # let client-rendered content (parishesonline, Wix) populate
+            # let client-rendered content (Wix, ParishesOnline widgets) populate
             try:
                 page.wait_for_load_state("networkidle", timeout=8000)
             except Exception:
@@ -93,17 +101,27 @@ def goto_past_cloudflare(page, url: str, retries: int) -> tuple[int | None, int]
     return status, retries
 
 
-def _frames(page, include: bool):  # type: ignore[no-untyped-def]
-    frames = [page.main_frame]
-    if include:
-        frames += [f for f in page.frames if f != page.main_frame and not f.is_detached()]
-    return frames
+def _frames(page):  # type: ignore[no-untyped-def]
+    return [page.main_frame] + [
+        f for f in page.frames if f != page.main_frame and not f.is_detached()
+    ]
 
 
-def _links(page, include_frames: bool) -> list[tuple[str, str]]:  # type: ignore[no-untyped-def]
+def _html(page) -> str:  # type: ignore[no-untyped-def]
+    """The page's HTML followed by each iframe's, plus each iframe's own URL."""
+    parts = []
+    for frame in _frames(page):
+        try:
+            parts.append(f"<!-- frame {frame.url} -->\n{frame.content()}")
+        except Exception:
+            continue
+    return "\n".join(parts)
+
+
+def _links(page) -> list[tuple[str, str]]:  # type: ignore[no-untyped-def]
     out: list[tuple[str, str]] = []
     seen: set[str] = set()
-    for frame in _frames(page, include_frames):
+    for frame in _frames(page):
         try:
             anchors = frame.eval_on_selector_all(
                 "a[href]",
@@ -120,9 +138,9 @@ def _links(page, include_frames: bool) -> list[tuple[str, str]]:  # type: ignore
     return out
 
 
-def _text(page, include_frames: bool) -> str:  # type: ignore[no-untyped-def]
+def _text(page) -> str:  # type: ignore[no-untyped-def]
     parts = []
-    for frame in _frames(page, include_frames):
+    for frame in _frames(page):
         try:
             parts.append(frame.inner_text("body"))
         except Exception:
@@ -130,81 +148,188 @@ def _text(page, include_frames: bool) -> str:  # type: ignore[no-untyped-def]
     return "\n".join(parts)
 
 
+# ParishesOnline also links issues as parishesonline.com/find/<slug>/bulletin/
+# file/03-1424-20260927B.pdf, which the CLI's find_publications (as of
+# 2026-09) doesn't read: 03-1424 is container 03/1424.
+_PO_FIND_FILE_RE = re.compile(
+    r"parishesonline\.com/find/[a-z0-9-]+/bulletin/file/(\d+)-(\d+)-\d{8}", re.I
+)
+
+
+def _observe(page, web) -> dict:  # type: ignore[no-untyped-def]
+    html = _html(page)
+    publications = web.find_publications(html)
+    for a, b in _PO_FIND_FILE_RE.findall(html):
+        pub = f"po-container:{a}/{b}"
+        if pub not in publications:
+            publications.append(pub)
+    return {
+        "publications": publications,
+        "bulletin_links": web.bulletin_links(html, page.url),
+        # bulletin_links stops at 15, and WordPress pages spend that on feeds and
+        # embeds before reaching the PDF, so list PDFs on their own.
+        "pdf_links": [h for _, h in _links(page) if h.lower().split("?")[0].endswith(".pdf")][:15],
+    }
+
+
+def _verdict(out: dict, page, web) -> str:  # type: ignore[no-untyped-def]
+    """probe url's verdicts, judged on the rendered page instead of the raw HTML."""
+    html = _html(page).lower()
+    status = out.get("status") or 0
+    if any(t in html for t in web.SPAM_TERMS):
+        return "SPAM-SQUAT"
+    if web._registrable(web._host(page.url)) != web._registrable(web._host(out["url"])):
+        return "REDIRECT-OFFSITE"
+    if status >= 500:
+        return "HTTP5XX"
+    if status >= 400:
+        return "HTTP4XX"
+    if not any(w in _text(page).lower() for w in web.PARISH_WORDS):
+        return "NO-PARISH-WORDS"
+    return "ok"
+
+
+def _bulletin_search(page, web, links: list[str], retries: int) -> dict:  # type: ignore[no-untyped-def]
+    """Open the page's bulletin links until one embeds a publication id.
+
+    Returns what was found (`found`) and every page tried. A bulletin page with
+    PDFs but no publisher id is a self-hosted bulletin: record it as url:<page>.
+    """
+    pages = [u for u in links if not u.lower().split("?")[0].endswith(".pdf")]
+    tried, self_hosted, listing = [], None, None
+    for link in pages[:BULLETIN_PAGES_TO_TRY]:
+        try:
+            status, loads = goto(page, link, retries)
+            seen = _observe(page, web)
+        except Exception as exc:
+            tried.append({"url": link, "error": f"{type(exc).__name__}: {exc}".splitlines()[0]})
+            continue
+        blocked = _challenged(page)
+        tried.append(
+            {
+                "url": link,
+                "final_url": page.url,
+                "status": status,
+                "loads": loads,
+                "blocked": blocked,
+                **seen,
+            }
+        )
+        if blocked:
+            continue
+        # The first bulletin page that loads is where issues are listed; a later
+        # one may be a single issue's post (WordPress) holding the PDF.
+        listing = listing or page.url
+        if seen["publications"]:
+            return {
+                "found": {"page": page.url, "publications": seen["publications"]},
+                "tried": tried,
+            }
+        if seen["pdf_links"] and self_hosted is None:
+            self_hosted = {
+                "page": listing,
+                "publications": [f"url:{listing}"],
+                "pdfs_on": page.url,
+                "pdf_links": seen["pdf_links"],
+                "note": "PDFs but no publisher id: looks self-hosted",
+            }
+    return {"found": self_hosted, "tried": tried}
+
+
+def visit(page, web, url: str, args) -> dict:  # type: ignore[no-untyped-def]
+    out: dict = {"url": url}
+    try:
+        status, loads = goto(page, url, args.retries)
+        for needle in args.follow:
+            if _challenged(page):
+                break
+            match = next(
+                (
+                    h
+                    for t, h in _links(page)
+                    if needle.lower() in t.lower() or needle.lower() in h.lower()
+                ),
+                None,
+            )
+            if match is None:
+                out["follow_error"] = f"no link matching {needle!r} on {page.url}"
+                break
+            status, more = goto(page, match, args.retries)
+            loads += more
+    except Exception as exc:
+        return {**out, "verdict": "ERROR", "error": f"{type(exc).__name__}: {exc}".splitlines()[0]}
+
+    out.update(status=status, final_url=page.url, title=page.title(), loads=loads)
+    if _challenged(page):
+        return {
+            **out,
+            "verdict": "BLOCKED",
+            "detail": "Cloudflare challenged every load; wait a minute or two and retry",
+        }
+    out["verdict"] = _verdict(out, page, web)
+    if out["verdict"] != "ok":
+        out["detail"] = web.VERDICT_NOTES.get(out["verdict"], "")
+    out.update(_observe(page, web))
+
+    if args.text is not None:
+        out["text"] = _text(page)[: args.text]
+    if args.links is not None:
+        pattern = re.compile(args.links, re.IGNORECASE) if args.links else None
+        out["links"] = [
+            [t, h]
+            for t, h in _links(page)
+            if pattern is None or pattern.search(t) or pattern.search(h)
+        ]
+    if args.screenshot:
+        path = args.screenshot
+        if len(args.urls) > 1:
+            path = path.with_name(f"{path.stem}-{len(args.done)}{path.suffix}")
+        path.parent.mkdir(parents=True, exist_ok=True)
+        page.screenshot(path=str(path), full_page=True)
+        out["screenshot"] = str(path)
+    if args.html:
+        args.html.parent.mkdir(parents=True, exist_ok=True)
+        args.html.write_text(_html(page), encoding="utf-8")
+        out["html"] = str(args.html)
+    if args.bulletin and not out["publications"] and out["bulletin_links"]:
+        out["bulletin_search"] = _bulletin_search(page, web, out["bulletin_links"], args.retries)
+    return out
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    parser.add_argument("target")
+    parser.add_argument("urls", nargs="+")
+    parser.add_argument("--bulletin", action="store_true")
     parser.add_argument("--follow", action="append", default=[])
     parser.add_argument("--text", nargs="?", type=int, const=4000)
     parser.add_argument("--links", nargs="?", const="")
-    parser.add_argument("--frames", action="store_true")
     parser.add_argument("--screenshot", type=Path)
     parser.add_argument("--html", type=Path)
     parser.add_argument("--retries", type=int, default=8)
     args = parser.parse_args()
+    if args.follow and len(args.urls) > 1:
+        parser.error("--follow takes a single URL")
 
     sys.path.insert(0, str(REPO / "src"))
     from pdf_extract.browser import launch_stealth_browser
+    from pdf_extract.dioceses import web
 
-    url = _resolve_target(args.target)
     channel = os.getenv("PLAYWRIGHT_BROWSER_CHANNEL") or (
         "chrome" if shutil.which("google-chrome") else None
     )
-    with launch_stealth_browser(channel=channel) as page:
-        steps = [url, *args.follow]
-        for i, step in enumerate(steps):
-            if i > 0:
-                needle = step.lower()
-                match = next(
-                    (
-                        href
-                        for text, href in _links(page, args.frames)
-                        if needle in text.lower() or needle in href.lower()
-                    ),
-                    None,
-                )
-                if match is None:
-                    print(f"FOLLOW  no link matching {step!r} on {page.url}")
-                    return 1
-                url = match
-            started = time.time()
-            status, attempts = goto_past_cloudflare(page, url, args.retries)
-            state = "BLOCKED" if _challenged(page) else "OK"
-            print(
-                f"{state:7} {status} {page.url}\n        title={page.title()!r} "
-                f"loads={attempts} {time.time() - started:.1f}s"
-            )
-            if state == "BLOCKED":
-                print(
-                    "        Cloudflare challenged every load; retry later or with more "
-                    "--retries (see SKILL.md)"
-                )
-                return 2
-
-        if args.text is not None:
-            print("\n--- text ---")
-            print(_text(page, args.frames)[: args.text])
-        if args.links is not None:
-            pattern = re.compile(args.links, re.IGNORECASE) if args.links else None
-            links = [
-                (t, h)
-                for t, h in _links(page, args.frames)
-                if pattern is None or pattern.search(t) or pattern.search(h)
-            ]
-            print(f"\n--- links ({len(links)}) ---")
-            for text, href in links:
-                print(f"{text or '(no text)'} -> {href}")
-        if args.screenshot:
-            args.screenshot.parent.mkdir(parents=True, exist_ok=True)
-            page.screenshot(path=str(args.screenshot), full_page=True)
-            print(f"\nscreenshot: {args.screenshot}")
-        if args.html:
-            args.html.parent.mkdir(parents=True, exist_ok=True)
-            html = [page.content()]
-            if args.frames:
-                html += [f.content() for f in _frames(page, True)[1:]]
-            args.html.write_text("\n".join(html), encoding="utf-8")
-            print(f"html: {args.html}")
-    return 0
+    args.done = []
+    with launch_stealth_browser(channel=channel) as first_page:
+        context = first_page.context
+        for url in args.urls:
+            if not re.match(r"https?://", url):
+                url = f"https://{url}"
+            # A fresh tab per site: a failed navigation can leave the old one
+            # mid-load, and it would interrupt the next site's.
+            page = context.new_page()
+            args.done.append(visit(page, web, url, args))
+            page.close()
+    print(json.dumps({"results": args.done}, indent=2, ensure_ascii=False))
+    return 2 if any(r["verdict"] in {"BLOCKED", "ERROR"} for r in args.done) else 0
 
 
 if __name__ == "__main__":
