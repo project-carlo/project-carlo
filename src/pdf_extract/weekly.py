@@ -48,7 +48,7 @@ def run_weekly(
     out = run_out_dir(run_id)
     out.mkdir(parents=True, exist_ok=True)
 
-    ensure_db(db_path)
+    seeded = ensure_db(db_path)
     before_db = out / "before.db"
     compact_copy(db_path, before_db)
 
@@ -80,6 +80,7 @@ def run_weekly(
             after_db=db_path,
             stages=stages,
             snapshot_verification=verification,
+            seeded=seeded,
         )
         status = report["status"]
     finally:

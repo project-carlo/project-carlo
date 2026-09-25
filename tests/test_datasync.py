@@ -22,6 +22,7 @@ from pdf_extract.blobstore import (
 )
 from pdf_extract.datasync import (
     LATEST_KEY,
+    build_deploy_snapshot,
     import_legacy,
     promote,
     pull,
@@ -289,7 +290,10 @@ def test_status_lists_published_and_recent_runs(
     result = status(limit=2)
 
     assert result["published"]["run_id"] == "2026-09-08"
-    assert result["recent_runs"] == ["2026-09-15", "2026-09-08"]
+    assert [(r["run_id"], r["status"], r["published"]) for r in result["recent_runs"]] == [
+        ("2026-09-15", "passed", False),
+        ("2026-09-08", "passed", True),
+    ]
 
 
 def test_status_with_empty_bucket(remote_store: CachedBlobStore) -> None:
@@ -559,3 +563,61 @@ def test_import_legacy_refuses_once_a_run_is_published(
         source_dir=tmp_path / "nothing-here", db_path=tmp_path / "x.db", force=True,
     )
     assert result["bulletins"] == 0
+
+
+def test_push_refuses_to_overwrite_an_uploaded_run(
+    pipeline_dir: Path, remote_store: CachedBlobStore,
+) -> None:
+    _prepare_run("run-1")
+    push_candidate("run-1")
+    with pytest.raises(BlobStoreError, match="already uploaded"):
+        push_candidate("run-1")
+
+
+def test_promote_refuses_an_older_run_unless_rolling_back(
+    pipeline_dir: Path, remote_store: CachedBlobStore, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    clock = iter(["2026-09-20T00:00:00Z", "2026-09-27T00:00:00Z"] + ["2026-09-28T00:00:00Z"] * 9)
+    monkeypatch.setattr("pdf_extract.datasync.utc_now_iso", lambda: next(clock))
+    for run_id in ("held-run", "newer-run"):
+        _prepare_run(run_id)
+        push_candidate(run_id)
+    promote("newer-run")
+
+    with pytest.raises(BlobStoreError, match="older than the published run newer-run"):
+        promote("held-run")
+
+    pointer = promote("held-run", rollback=True)
+    assert pointer["run_id"] == "held-run"
+    assert pointer["previous_run_id"] == "newer-run"
+
+
+def test_deploy_snapshot_is_built_from_the_published_database(
+    pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
+) -> None:
+    _prepare_run("run-1")
+    push_candidate("run-1")
+    promote("run-1")
+    DEFAULT_DB_PATH.unlink()
+    snapshot = tmp_path / "site" / "frontend.snapshot"
+
+    result = build_deploy_snapshot(snapshot_path=snapshot)
+
+    assert result["run_id"] == "run-1"
+    assert result["snapshot"]["churches"] == 1
+    assert gzip.decompress(snapshot.read_bytes())[:16] == b"SQLite format 3\x00"
+
+
+def test_deploy_snapshot_without_published_data(
+    pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    with pytest.raises(BlobStoreError, match="Nothing published"):
+        build_deploy_snapshot(snapshot_path=tmp_path / "s")
+
+    monkeypatch.setattr(
+        "pdf_extract.datasync._pull_public_snapshot", lambda path: {"source": "site"},
+    )
+    assert build_deploy_snapshot(snapshot_path=tmp_path / "s", public_fallback=True) == {
+        "source": "site",
+    }

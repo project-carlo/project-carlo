@@ -11,6 +11,10 @@ on:
         description: "Run id to publish (from the weekly run's summary or issue)"
         required: true
         type: string
+      rollback:
+        description: "Allow publishing a run older than the published one (a rollback)"
+        type: boolean
+        default: false
 
 permissions: read-all
 
@@ -25,6 +29,7 @@ jobs:
     permissions:
       actions: write
       contents: read
+      issues: write
 
     steps:
       - name: Checkout
@@ -47,9 +52,12 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
           CARLO_REMOTE_WRITE: "1"
           RUN_ID: ${{ inputs.run_id }}
+          ROLLBACK: ${{ inputs.rollback }}
         run: |
           set -o pipefail
-          uv run --no-sync python -m pdf_extract data promote --run-id "$RUN_ID" | tee published.json
+          args=(--run-id "$RUN_ID")
+          [[ "$ROLLBACK" == "true" ]] && args+=(--rollback)
+          uv run --no-sync python -m pdf_extract data promote "${args[@]}" | tee published.json
           {
             echo "### Published \`${RUN_ID}\`"
             echo
@@ -62,3 +70,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run deploy-web.yml --ref "${{ github.event.repository.default_branch }}" -f mode=deploy
+
+      - name: Close issues about held or failed runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ inputs.run_id }}
+        run: |
+          for number in $(gh issue list --label data-refresh --state open --json number --jq '.[].number'); do
+            gh issue close "$number" --comment "Run \`${RUN_ID}\` was published by hand."
+          done

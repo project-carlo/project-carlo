@@ -29,6 +29,7 @@ from pdf_extract.apply import (
 from pdf_extract.classifiers import available_classifiers
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
+    build_deploy_snapshot,
     import_legacy,
     promote,
     pull,
@@ -192,12 +193,16 @@ def _cmd_data_pull(args: argparse.Namespace) -> Result:
     )
 
 
+def _cmd_data_snapshot(args: argparse.Namespace) -> Result:
+    return build_deploy_snapshot(public_fallback=args.public_fallback)
+
+
 def _cmd_data_push(args: argparse.Namespace) -> Result:
     return push_candidate(args.run_id, git_sha=args.git_sha)
 
 
 def _cmd_data_promote(args: argparse.Namespace) -> Result:
-    return promote(args.run_id)
+    return promote(args.run_id, rollback=args.rollback)
 
 
 def _cmd_data_status(args: argparse.Namespace) -> Result:
@@ -399,6 +404,17 @@ def _build_parser() -> argparse.ArgumentParser:
     data_pull_parser.set_defaults(handler=_cmd_data_pull)
     _add_common_args(data_pull_parser)
 
+    data_snapshot_parser = data_subparsers.add_parser(
+        "snapshot",
+        help="Build the frontend snapshot from the published database with this code",
+    )
+    data_snapshot_parser.add_argument(
+        "--public-fallback", action="store_true",
+        help="Use the live site's snapshot when nothing is published",
+    )
+    data_snapshot_parser.set_defaults(handler=_cmd_data_snapshot)
+    _add_common_args(data_snapshot_parser)
+
     data_push_parser = data_subparsers.add_parser(
         "push", help="Upload a run's database, snapshot and report without publishing",
     )
@@ -411,6 +427,10 @@ def _build_parser() -> argparse.ArgumentParser:
         "promote", help="Publish an uploaded run (also how to roll back)",
     )
     data_promote_parser.add_argument("--run-id", required=True)
+    data_promote_parser.add_argument(
+        "--rollback", action="store_true",
+        help="Allow publishing a run older than the published one",
+    )
     data_promote_parser.set_defaults(handler=_cmd_data_promote)
     _add_common_args(data_promote_parser)
 

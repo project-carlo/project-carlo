@@ -85,7 +85,7 @@ The run's status decides what happens next:
 | Status | Exit code | Meaning |
 | :-- | :-: | :-- |
 | `passed` | 0 | Every publishing check passed; safe to publish. |
-| `held` | 10 | A check failed (church count changed, total events moved more than 10%, less than 90% of weekly slots survived, or a parish dropped to zero events). A person decides. |
+| `held` | 10 | A check failed: church count changed, total events moved more than 10%, less than 90% of weekly slots survived, a parish dropped to zero events, a parish or church was removed from the CSVs, or more than half of the parishes failed to fetch. A person decides. |
 | `failed` | 1 | A stage crashed. |
 
 A local run never publishes anything.
@@ -96,12 +96,22 @@ A local run never publishes anything.
 demand). It pulls the published database, runs the pipeline in the Docker
 image, uploads the result to R2 as a candidate, and then:
 
-- **passed**: publishes it (moves `pipeline/latest.json` to the new run) and
-  deploys the site.
+- **passed**: publishes it (moves `pipeline/latest.json` to the new run),
+  deploys the site, and closes any open `data-refresh` issues it supersedes.
 - **held** or **failed**: leaves the site on the previous run, opens or updates
   an issue labelled `data-refresh` with the change report, and fails the job.
   To publish a held run anyway, run the **Publish Data Run** workflow with its
-  run id. The same workflow rolls back: publish an earlier run id.
+  run id. The same workflow rolls back: publish an earlier run id with
+  **rollback** ticked. Without it, publishing a run older than the live one is
+  refused, since that would drop the newer run's data.
+
+Only the default branch writes to R2 or publishes. Dispatching the workflow on
+another branch runs that branch's code against the published data and shows
+its report, but nothing it fetches or extracts leaves the job.
+
+Deploys build the snapshot themselves, from the published database with the
+code being deployed, so the snapshot's format always matches the web app, and
+edits to the CSVs show up in previews and go live on merge.
 
 The change report is always in the job summary, and kept as a workflow
 artifact for 90 days. Nothing is committed to the repository.

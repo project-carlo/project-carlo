@@ -197,9 +197,10 @@ def test_report_holds_when_parish_drops_to_zero(pipeline_dir: Path) -> None:
 
     assert report["status"] == "held"
     assert report["attention"]["dropped_to_zero"] == ["test-parish"]
-    assert report["gates"] == [
-        {"name": "No parish dropped to zero events", "passed": False, "detail": "test-parish"},
-    ]
+    assert report["gates"][0] == {
+        "name": "No parish dropped to zero events", "passed": False, "detail": "test-parish",
+    }
+    assert all(gate["passed"] for gate in report["gates"][1:])
     assert report["totals"]["events_before"] == 3
     assert report["totals"]["events_after"] == 0
     assert report["totals"]["events_removed"] == 3
@@ -237,6 +238,8 @@ def test_report_passes_and_summarises_changes(pipeline_dir: Path) -> None:
         "Total events within ±10.0%",
         "Weekly schedule at least 90.0% unchanged",
         "No parish dropped to zero events",
+        "No parish or church removed from the CSVs",
+        "At most 50% of parishes failed to fetch",
     ]
     assert report["gates"][0]["detail"] == "1 → 1"
     assert report["totals"] == {
@@ -343,8 +346,47 @@ def test_report_lists_failures_with_consecutive_failure_streak(
     assert [r["parish_slug"] for r in report["attention"]["wrong_bulletins"]] == [
         "other-parish",
     ]
-    # Failures are reported but do not hold the run on their own.
+    # The only attempted parish failed to fetch: more than half, so the run is held.
+    assert report["status"] == "held"
+    [fetch_gate] = [g for g in report["gates"] if "failed to fetch" in g["name"]]
+    assert fetch_gate == {
+        "name": "At most 50% of parishes failed to fetch", "passed": False, "detail": "1 of 1",
+    }
+
+
+def test_report_passes_when_a_minority_of_parishes_fail_to_fetch(pipeline_dir: Path) -> None:
+    before, after = _before_and_after(pipeline_dir, [MASS_9])
+    conn = connect_db(after)
+    try:
+        start_run(conn, "r", git_sha=None, trigger=None)
+        record_parish_result(conn, "r", "test-parish", "fetch", "download_failed")
+        for slug in ("a", "b"):
+            record_parish_result(conn, "r", slug, "fetch", "unchanged")
+    finally:
+        conn.close()
+
+    report = build_report(
+        run_id="r", before_db=before, after_db=after, stages={}, snapshot_verification=None,
+    )
+
     assert report["status"] == "passed"
+    assert len(report["attention"]["failures"]) == 1
+
+
+def test_report_holds_when_the_csvs_removed_a_church(pipeline_dir: Path) -> None:
+    """Seeding deletes before the run's "before" copy, so only `seeded` can show it."""
+    before, after = _before_and_after(pipeline_dir, [MASS_9])
+
+    report = build_report(
+        run_id="r", before_db=before, after_db=after, stages={},
+        snapshot_verification=None,
+        seeded={"parishes_deleted": 0, "churches_deleted": 1},
+    )
+
+    assert report["status"] == "held"
+    [gate] = [g for g in report["gates"] if "removed from the CSVs" in g["name"]]
+    assert gate["passed"] is False
+    assert gate["detail"] == "0 parishes, 1 churches deleted with their bulletins and events"
 
 
 def test_report_flags_stale_parishes_that_were_attempted(pipeline_dir: Path) -> None:

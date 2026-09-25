@@ -34,6 +34,11 @@ PARISH_DROP_WARN_MIN_EVENTS = 6
 
 STALE_BULLETIN_AGE_DAYS = 14
 
+# More than this share of attempted parishes failing to fetch holds the run:
+# the checks below compare against unchanged data and would otherwise pass a
+# week in which almost nothing was refreshed.
+FETCH_FAILURE_HOLD_FRACTION = 0.5
+
 _TYPE_LABELS = {"mass": "Mass", "confession": "Confession", "adoration": "Adoration"}
 _DAY_ABBREV = {
     "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu",
@@ -151,8 +156,14 @@ def build_report(
     after_db: Path,
     stages: dict[str, Any],
     snapshot_verification: dict[str, Any] | None,
+    seeded: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Everything the run changed and every reason to hold it, as one dict."""
+    """Everything the run changed and every reason to hold it, as one dict.
+
+    `seeded` is what re-seeding from the CSVs did at the start of the run.
+    Its deletions happen before `before_db` is taken, so the before/after
+    comparison cannot see them; they are reported and gated here instead.
+    """
     changes = diff_databases(before_db, after_db)
 
     conn = _open_ro(after_db)
@@ -212,6 +223,21 @@ def build_report(
         "name": "No parish dropped to zero events",
         "passed": not dropped_to_zero,
         "detail": ", ".join(dropped_to_zero) or "none",
+    })
+    seeded = seeded or {}
+    removed_parishes = seeded.get("parishes_deleted", 0)
+    removed_churches = seeded.get("churches_deleted", 0)
+    gates.append({
+        "name": "No parish or church removed from the CSVs",
+        "passed": not (removed_parishes or removed_churches),
+        "detail": f"{removed_parishes} parishes, {removed_churches} churches deleted"
+        " with their bulletins and events",
+    })
+    fetch_failed = sum(1 for f in failures if f["stage"] == "fetch")
+    gates.append({
+        "name": f"At most {int(FETCH_FAILURE_HOLD_FRACTION * 100)}% of parishes failed to fetch",
+        "passed": not attempted or fetch_failed <= len(attempted) * FETCH_FAILURE_HOLD_FRACTION,
+        "detail": f"{fetch_failed} of {len(attempted)}",
     })
 
     passed = all(g["passed"] for g in gates)

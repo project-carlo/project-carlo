@@ -118,8 +118,8 @@ on this for the weekly run; it just makes old bulletins available for
 ## Day to day
 
 - **See what's live:** `pnpm data:status`, or R2 → `pipeline/latest.json`.
-- **Roll back:** run **Publish Data Run** with an earlier run id (listed by
-  `pnpm data:status`).
+- **Roll back:** run **Publish Data Run** with an earlier run id (listed, with
+  each run's status, by `pnpm data:status`) and tick **rollback**.
 - **Inspect a held run locally:** `pnpm data:pull --run-id <id>`, then query
   `data/parish_events.db`, e.g. the `run_parish_result` table for that run.
 - **Rotate a key:** create a new token, update the secret, delete the old

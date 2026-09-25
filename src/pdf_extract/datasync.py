@@ -200,6 +200,10 @@ def push_candidate(
     The files come from `data/out/<run_id>/`, where `weekly` leaves them.
     """
     store = get_store()
+    if store.get_remote(run_key(run_id, "manifest.json")) is not None:
+        raise BlobStoreError(
+            f"Run {run_id} is already uploaded; runs are written once. Use a new run id."
+        )
     out = run_out_dir(run_id)
     snapshot_path = snapshot_path or out / "frontend.snapshot"
 
@@ -237,8 +241,14 @@ def push_candidate(
     return manifest
 
 
-def promote(run_id: str) -> dict[str, Any]:
-    """Publish a run: point `latest.json` at it."""
+def promote(run_id: str, *, rollback: bool = False) -> dict[str, Any]:
+    """Publish a run: point `latest.json` at it.
+
+    Refuses a run older than the one published unless `rollback`: every run
+    starts from the published database, so publishing an older one silently
+    drops everything the newer one added (a held run approved a week late,
+    say, after the next week's run already passed).
+    """
     store = get_store()
     manifest = _read_json(store, run_key(run_id, "manifest.json"))
     if manifest is None:
@@ -248,6 +258,15 @@ def promote(run_id: str) -> dict[str, Any]:
             raise BlobStoreError(f"Run {run_id} is incomplete: {key} is missing")
 
     current = _read_json(store, LATEST_KEY)
+    if (
+        current is not None
+        and not rollback
+        and str(manifest.get("created_at", "")) < str(current.get("created_at", ""))
+    ):
+        raise BlobStoreError(
+            f"Run {run_id} is older than the published run {current['run_id']}; publishing "
+            "it would drop newer data. Pass --rollback if that is what you want."
+        )
     pointer = dict(manifest)
     pointer["published_at"] = utc_now_iso()
     pointer["previous_run_id"] = current["run_id"] if current else None
@@ -257,7 +276,7 @@ def promote(run_id: str) -> dict[str, Any]:
 
 
 def status(limit: int = 10) -> dict[str, Any]:
-    """The published run and the most recent uploaded runs."""
+    """The published run and the most recent uploaded runs, with their status."""
     store = get_store()
     latest = _read_json(store, LATEST_KEY)
     assert store.remote is not None
@@ -265,7 +284,47 @@ def status(limit: int = 10) -> dict[str, Any]:
         {key.split("/")[2] for key in store.remote.list(f"{PIPELINE_PREFIX}/runs/")},
         reverse=True,
     )
-    return {"published": latest, "recent_runs": run_ids[:limit]}
+    recent = []
+    for run_id in run_ids[:limit]:
+        manifest = _read_json(store, run_key(run_id, "manifest.json")) or {}
+        recent.append({
+            "run_id": run_id,
+            "status": manifest.get("status"),
+            "created_at": manifest.get("created_at"),
+            "git_sha": manifest.get("git_sha"),
+            "published": bool(latest and latest.get("run_id") == run_id),
+        })
+    return {"published": latest, "recent_runs": recent}
+
+
+def build_deploy_snapshot(
+    *,
+    snapshot_path: Path = SNAPSHOT_PATH,
+    db_path: Path = DEFAULT_DB_PATH,
+    public_fallback: bool = False,
+) -> dict[str, Any]:
+    """The snapshot to deploy, built from the published database by *this* code.
+
+    Building here rather than reusing the published run's snapshot keeps the
+    snapshot's format in step with the web code being deployed, and lets
+    parishes.csv/churches.csv edits (seeded by `ensure_db`) show up in a
+    preview and on merge without waiting for the next weekly run.
+    """
+    # Imported here: db and extract_frontend_db import this module's neighbours.
+    from pdf_extract.db import ensure_db
+    from pdf_extract.extract_frontend_db import extract
+
+    store = get_store()
+    if not store.is_remote or store.get_remote(LATEST_KEY) is None:
+        if not public_fallback:
+            raise BlobStoreError("Nothing published to build a snapshot from")
+        LOGGER.warning("No published database; using the live site's snapshot")
+        return _pull_public_snapshot(snapshot_path)
+
+    pulled = pull(db=True, snapshot=False, db_path=db_path)
+    seeded = ensure_db(db_path)
+    built = extract(db_path, snapshot_path, keep_previous=False)
+    return {"run_id": pulled["run_id"], "seeded": seeded, "snapshot": built}
 
 
 # ── One-time migration helpers ──────────────────────────────────────────────
