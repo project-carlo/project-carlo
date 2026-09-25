@@ -476,7 +476,7 @@ def _build_parser() -> argparse.ArgumentParser:
     # -- extract frontend db --
     extract_frontend_db_parser = subparsers.add_parser(
         "extract-frontend-db",
-        help="Write apps/web/public/frontend.snapshot from the DB",
+        help="Write apps/web/public/frontend.json.gz from the DB",
     )
     extract_frontend_db_parser.set_defaults(handler=_cmd_extract_frontend_db)
     _add_common_args(extract_frontend_db_parser)
@@ -484,7 +484,7 @@ def _build_parser() -> argparse.ArgumentParser:
     # -- verify frontend snapshot --
     verify_frontend_snapshot_parser = subparsers.add_parser(
         "verify-frontend-snapshot",
-        help="Verify frontend snapshot similarity against frontend.snapshot.previous",
+        help="Verify frontend snapshot similarity against frontend.json.gz.previous",
     )
     verify_frontend_snapshot_parser.set_defaults(
         handler=_cmd_verify_frontend_snapshot, fail_on_verification_error=True,

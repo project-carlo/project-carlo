@@ -1,4 +1,3 @@
-import gzip
 import json
 import sqlite3
 from pathlib import Path
@@ -10,6 +9,7 @@ from pdf_extract import __main__ as cli
 from pdf_extract import weekly
 from pdf_extract.datasync import run_out_dir
 from pdf_extract.db import DatabaseMissingError, create_db
+from pdf_extract.extract_frontend_db import read_snapshot
 from pdf_extract.runs import record_parish_result
 from pdf_extract.storage import (
     DEFAULT_DB_PATH,
@@ -108,13 +108,7 @@ def _pipeline_run(run_id: str) -> dict[str, Any]:
 
 
 def _snapshot_event_count(path: Path) -> int:
-    db = path.with_name("unzipped.db")
-    db.write_bytes(gzip.decompress(path.read_bytes()))
-    conn = sqlite3.connect(db)
-    try:
-        return conn.execute("SELECT count(*) FROM event").fetchone()[0]
-    finally:
-        conn.close()
+    return len(read_snapshot(path.read_bytes())["events"])
 
 
 # ── run_weekly ──────────────────────────────────────────────────────────────
@@ -138,13 +132,13 @@ def test_weekly_run_passes_and_writes_outputs(
         {"stage": "process", "model": "m", "concurrency": 2, "run_id": "run-1"},
     ]
 
-    for name in ("report.md", "report.json", "frontend.snapshot", "before.db"):
+    for name in ("report.md", "report.json", "frontend.json.gz", "before.db"):
         assert (out / name).is_file(), name
     report = json.loads((out / "report.json").read_text(encoding="utf-8"))
     assert report["status"] == "passed"
     assert all(gate["passed"] for gate in report["gates"])
     assert "`run-1`: passed" in (out / "report.md").read_text(encoding="utf-8")
-    assert _snapshot_event_count(out / "frontend.snapshot") == 3
+    assert _snapshot_event_count(out / "frontend.json.gz") == 3
 
     # before.db is the database as the run found it: no new bulletin, no run row.
     before = sqlite3.connect(out / "before.db")
@@ -217,7 +211,7 @@ def test_weekly_run_failure_is_recorded_and_reraised(
     ]
     assert "`run-1`: failed" in (out / "report.md").read_text(encoding="utf-8")
     assert (out / "before.db").is_file()
-    assert not (out / "frontend.snapshot").exists()
+    assert not (out / "frontend.json.gz").exists()
     row = _pipeline_run("run-1")
     assert row["status"] == "failed"
     assert row["finished_at"] is not None

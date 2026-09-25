@@ -1,4 +1,4 @@
-import type { ChurchIndexEntry } from "./queries";
+import type { ChurchBase } from "../types";
 import {
   CHURCH_INDEX_TITLE,
   OG_IMAGE_ALT,
@@ -11,6 +11,9 @@ import {
   buildChurchIndexDescription,
   serializeJsonLd,
 } from "../lib/seo";
+
+/** What the all-parishes index lists for each church. */
+type ChurchIndexEntry = Pick<ChurchBase, "slug" | "name" | "city" | "state">;
 
 interface StaticChurchIndexPageProps {
   churches: ChurchIndexEntry[];

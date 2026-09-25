@@ -31,10 +31,28 @@ from pdf_extract.datasync import (
     status,
 )
 from pdf_extract.db import create_db
+from pdf_extract.extract_frontend_db import SNAPSHOT_NAME, encode_snapshot, read_snapshot
 from pdf_extract.storage import DEFAULT_DB_PATH
 
 BUCKET = "carlo-test"
-SNAPSHOT_BYTES = gzip.compress(b"snapshot", mtime=0)
+
+
+def _snapshot(*slugs: str) -> bytes:
+    """A snapshot with one church per slug and no events."""
+    churches = [
+        (i, 1, slug, slug, None, None, None, None, None, None, None, None, None)
+        for i, slug in enumerate(slugs, start=1)
+    ]
+    return encode_snapshot(churches, [])
+
+
+def _slugs(snapshot: bytes) -> list[str]:
+    return [church["slug"] for church in read_snapshot(snapshot)["churches"]]
+
+
+SNAPSHOT_BYTES = _snapshot("snapshot")
+# What runs published before the JSON format hold: a gzipped SQLite file.
+LEGACY_SNAPSHOT_BYTES = gzip.compress(b"SQLite format 3\x00" + bytes(84), mtime=0)
 
 
 @pytest.fixture
@@ -68,7 +86,7 @@ def _prepare_run(
         create_db()
     out = run_out_dir(run_id)
     out.mkdir(parents=True, exist_ok=True)
-    (out / "frontend.snapshot").write_bytes(snapshot)
+    (out / SNAPSHOT_NAME).write_bytes(snapshot)
     (out / "report.json").write_text(json.dumps({"status": run_status}), encoding="utf-8")
     (out / "report.md").write_text(f"# {run_id}\n", encoding="utf-8")
     return out
@@ -104,7 +122,7 @@ def test_push_uploads_run_without_publishing(
     assert _bucket_keys(s3_client) == sorted(
         run_key("run-1", name)
         for name in (
-            "manifest.json", "parish_events.db.gz", "frontend.snapshot",
+            "manifest.json", "parish_events.db.gz", SNAPSHOT_NAME,
             "report.md", "report.json",
         )
     )
@@ -146,7 +164,7 @@ def test_push_promote_pull_round_trip(
     assert pointer["previous_run_id"] is None
 
     pulled_db = tmp_path / "pulled" / "parish_events.db"
-    pulled_snapshot = tmp_path / "pulled" / "frontend.snapshot"
+    pulled_snapshot = tmp_path / "pulled" / SNAPSHOT_NAME
     result = pull(db_path=pulled_db, snapshot_path=pulled_snapshot)
 
     assert result == {
@@ -179,19 +197,46 @@ def test_pull_keeps_replaced_database_as_backup(
 def test_pull_specific_run(
     pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
 ) -> None:
-    _prepare_run("run-1", snapshot=gzip.compress(b"one"))
+    _prepare_run("run-1", snapshot=_snapshot("one"))
     push_candidate("run-1")
-    _prepare_run("run-2", snapshot=gzip.compress(b"two"))
+    _prepare_run("run-2", snapshot=_snapshot("two"))
     push_candidate("run-2")
     promote("run-2")
-    snapshot_path = tmp_path / "s.snapshot"
+    snapshot_path = tmp_path / "s.json.gz"
 
     result = pull(run_id="run-1", db=False, snapshot_path=snapshot_path)
 
     assert result["run_id"] == "run-1"
-    assert gzip.decompress(snapshot_path.read_bytes()) == b"one"
+    assert _slugs(snapshot_path.read_bytes()) == ["one"]
     with pytest.raises(BlobStoreError, match="No run run-9"):
         pull(run_id="run-9", db=False, snapshot_path=snapshot_path)
+
+
+def test_pull_rebuilds_an_older_format_snapshot_from_the_database(
+    pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
+) -> None:
+    _prepare_run("run-1", snapshot=LEGACY_SNAPSHOT_BYTES)
+    push_candidate("run-1")
+    promote("run-1")
+    snapshot_path = tmp_path / "pulled" / SNAPSHOT_NAME
+
+    result = pull(db_path=tmp_path / "pulled" / "parish_events.db", snapshot_path=snapshot_path)
+
+    assert result["snapshot_path"] == str(snapshot_path)
+    assert _slugs(snapshot_path.read_bytes()) == ["test-church"]
+
+
+def test_snapshot_only_pull_refuses_an_older_format_snapshot(
+    pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
+) -> None:
+    _prepare_run("run-1", snapshot=LEGACY_SNAPSHOT_BYTES)
+    push_candidate("run-1")
+    promote("run-1")
+    snapshot_path = tmp_path / SNAPSHOT_NAME
+
+    with pytest.raises(BlobStoreError, match="Pull without --snapshot-only"):
+        pull(db=False, snapshot_path=snapshot_path)
+    assert not snapshot_path.exists()
 
 
 def test_promote_records_previous_run(
@@ -223,7 +268,7 @@ def test_promote_refuses_incomplete_run(
 ) -> None:
     _prepare_run("run-1")
     push_candidate("run-1")
-    s3_client.delete_object(Bucket=BUCKET, Key=run_key("run-1", "frontend.snapshot"))
+    s3_client.delete_object(Bucket=BUCKET, Key=run_key("run-1", SNAPSHOT_NAME))
 
     with pytest.raises(BlobStoreError, match="incomplete"):
         promote("run-1")
@@ -254,7 +299,7 @@ def test_pull_detects_tampered_object(
     pulled_db = tmp_path / "pulled.db"
 
     with pytest.raises(BlobStoreError, match="hash"):
-        pull(db_path=pulled_db, snapshot_path=tmp_path / "s.snapshot")
+        pull(db_path=pulled_db, snapshot_path=tmp_path / "s.json.gz")
     assert not pulled_db.exists()
 
 
@@ -264,17 +309,17 @@ def test_pull_detects_missing_object(
     _prepare_run("run-1")
     push_candidate("run-1")
     promote("run-1")
-    s3_client.delete_object(Bucket=BUCKET, Key=run_key("run-1", "frontend.snapshot"))
+    s3_client.delete_object(Bucket=BUCKET, Key=run_key("run-1", SNAPSHOT_NAME))
 
     with pytest.raises(BlobStoreError, match="missing"):
-        pull(db=False, snapshot_path=tmp_path / "s.snapshot")
+        pull(db=False, snapshot_path=tmp_path / "s.json.gz")
 
 
 def test_pull_with_nothing_published_raises(
     pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
 ) -> None:
     with pytest.raises(BlobStoreError, match="Nothing published"):
-        pull(db_path=tmp_path / "x.db", snapshot_path=tmp_path / "s.snapshot")
+        pull(db_path=tmp_path / "x.db", snapshot_path=tmp_path / "s.json.gz")
 
 
 def test_status_lists_published_and_recent_runs(
@@ -336,7 +381,7 @@ def _public_result(snapshot_path: Path) -> dict[str, Any]:
 def test_pull_without_remote_raises_without_public_fallback(
     tmp_path: Path, public_site: list[Any],
 ) -> None:
-    snapshot_path = tmp_path / "s.snapshot"
+    snapshot_path = tmp_path / "s.json.gz"
 
     with pytest.raises(BlobStoreError, match="No R2 credentials"):
         pull(db_path=tmp_path / "x.db", snapshot_path=snapshot_path)
@@ -361,7 +406,7 @@ def test_pull_without_remote_public_fallback_is_only_for_snapshot_only_pulls(
 def test_pull_without_remote_uses_public_snapshot_with_fallback(
     tmp_path: Path, public_site: list[Any],
 ) -> None:
-    snapshot_path = tmp_path / "public" / "frontend.snapshot"
+    snapshot_path = tmp_path / "public" / SNAPSHOT_NAME
 
     result = pull(db=False, snapshot_path=snapshot_path, public_fallback=True)
 
@@ -374,7 +419,7 @@ def test_pull_public_fallback_does_not_apply_when_nothing_is_published(
     remote_store: CachedBlobStore, tmp_path: Path, public_site: list[Any],
 ) -> None:
     with pytest.raises(BlobStoreError, match="Nothing published"):
-        pull(db=False, snapshot_path=tmp_path / "s.snapshot", public_fallback=True)
+        pull(db=False, snapshot_path=tmp_path / "s.json.gz", public_fallback=True)
     assert public_site == []
 
 
@@ -389,11 +434,11 @@ def test_pull_public_fallback_does_not_apply_to_unknown_run(
 def test_pull_public_fallback_prefers_published_run(
     pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path, public_site: list[Any],
 ) -> None:
-    published = gzip.compress(b"published")
+    published = _snapshot("published")
     _prepare_run("run-1", snapshot=published)
     push_candidate("run-1")
     promote("run-1")
-    snapshot_path = tmp_path / "frontend.snapshot"
+    snapshot_path = tmp_path / SNAPSHOT_NAME
 
     result = pull(db=False, snapshot_path=snapshot_path, public_fallback=True)
 
@@ -402,16 +447,21 @@ def test_pull_public_fallback_prefers_published_run(
     assert public_site == []
 
 
-def test_pull_public_snapshot_rejects_non_gzip_body(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+@pytest.mark.parametrize(
+    "body",
+    [b"<html>not found</html>", LEGACY_SNAPSHOT_BYTES],
+    ids=["html", "older-format"],
+)
+def test_pull_public_snapshot_rejects_what_it_cannot_read(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, body: bytes,
 ) -> None:
     monkeypatch.setattr(
         datasync.urllib.request, "urlopen",
-        lambda request, timeout: _FakeResponse(b"<html>not found</html>"),
+        lambda request, timeout: _FakeResponse(body),
     )
-    snapshot_path = tmp_path / "frontend.snapshot"
+    snapshot_path = tmp_path / SNAPSHOT_NAME
 
-    with pytest.raises(BlobStoreError, match="did not return a gzip snapshot"):
+    with pytest.raises(BlobStoreError, match="did not return a snapshot this code can read"):
         pull(db=False, snapshot_path=snapshot_path, public_fallback=True)
     assert not snapshot_path.exists()
 
@@ -469,13 +519,13 @@ def test_deploy_snapshot_is_built_from_the_published_database(
     push_candidate("run-1")
     promote("run-1")
     DEFAULT_DB_PATH.unlink()
-    snapshot = tmp_path / "site" / "frontend.snapshot"
+    snapshot = tmp_path / "site" / SNAPSHOT_NAME
 
     result = build_deploy_snapshot(snapshot_path=snapshot)
 
     assert result["run_id"] == "run-1"
     assert result["snapshot"]["churches"] == 1
-    assert gzip.decompress(snapshot.read_bytes())[:16] == b"SQLite format 3\x00"
+    assert _slugs(snapshot.read_bytes()) == ["test-church"]
 
 
 def test_deploy_snapshot_without_published_data(
@@ -494,22 +544,24 @@ def test_promote_refuses_a_failed_run(
         promote("run-1")
 
 
-def test_deploy_snapshot_keeps_the_published_one_when_the_csvs_remove_rows(
+def test_deploy_snapshot_keeps_the_published_data_when_the_csvs_remove_rows(
     pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
 ) -> None:
-    _prepare_run("run-1")
+    # A run published before the JSON format: the deploy must not serve its snapshot.
+    _prepare_run("run-1", snapshot=LEGACY_SNAPSHOT_BYTES)
     push_candidate("run-1")
     promote("run-1")
     DEFAULT_DB_PATH.unlink()
     churches_csv = pipeline_dir / "data" / "churches.csv"
     churches_csv.write_text(churches_csv.read_text().splitlines()[0] + "\n")
-    snapshot = tmp_path / "site" / "frontend.snapshot"
+    snapshot = tmp_path / "site" / SNAPSHOT_NAME
 
     result = build_deploy_snapshot(snapshot_path=snapshot)
 
     assert result["seeded"]["churches_deleted"] == 1
-    assert "published snapshot" in result["snapshot"]
-    assert snapshot.read_bytes() == SNAPSHOT_BYTES
+    assert "published database" in result["snapshot"]["source"]
+    # Built from the published database before the CSVs removed the church.
+    assert _slugs(snapshot.read_bytes()) == ["test-church"]
 
 
 # ── Prune ───────────────────────────────────────────────────────────────────
@@ -524,7 +576,7 @@ def _seed_run(
 ) -> None:
     """A run's objects written straight to the bucket (prune only reads manifests)."""
     client.put_object(Bucket=BUCKET, Key=run_key(run_id, "parish_events.db.gz"), Body=b"db")
-    client.put_object(Bucket=BUCKET, Key=run_key(run_id, "frontend.snapshot"), Body=b"snap")
+    client.put_object(Bucket=BUCKET, Key=run_key(run_id, SNAPSHOT_NAME), Body=b"snap")
     if manifest:
         body = json.dumps(
             {"run_id": run_id, "created_at": created_at, "status": run_status},

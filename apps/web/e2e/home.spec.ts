@@ -26,6 +26,11 @@ test("home page mounts and renders cleanly", async ({ page, baseURL }) => {
     timeout: 15_000,
   });
 
+  // The data snapshot downloaded and decoded: churches are on the map.
+  await expect(page.locator(".leaflet-marker-icon").first()).toBeVisible({
+    timeout: 15_000,
+  });
+
   await page.waitForLoadState("networkidle");
 
   expect(pageErrors, pageErrors.join("\n")).toEqual([]);

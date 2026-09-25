@@ -77,7 +77,7 @@ report comparing the database before and after it, written to
 - `report.md` / `report.json`: the publishing checks, per-parish failures (with
   how many runs in a row they have failed), stale parishes, and every Mass,
   Confession and Adoration that appeared or disappeared, church by church.
-- `frontend.snapshot`: what the website would serve.
+- `frontend.json.gz`: the snapshot the website would serve.
 - `before.db`: the database as the run found it.
 
 The run's status decides what happens next:
@@ -113,7 +113,8 @@ Deploys build the snapshot themselves, from the published database with the
 code being deployed, so the snapshot's format always matches the web app, and
 edits to the CSVs show up in previews and go live on merge. The exception is a
 CSV change that removes a parish or church: that deletes events, so deploys
-keep the published snapshot until a reviewed weekly run publishes the removal.
+build the snapshot from the published database as it stands, without the CSV
+edits, until a reviewed weekly run publishes the removal.
 
 The change report is always in the job summary, and kept as a workflow
 artifact for 90 days.
@@ -142,7 +143,7 @@ available. For debugging, set `PLAYWRIGHT_HEADLESS=1` to force headless mode or
 | Bulletin PDFs | R2 `bulletins/<parish>/<sha256>.pdf` | `fetch` |
 | Gemini extraction results | R2 `runs/<classifier>/cache/<version>/<sha256>.json` | `process`, `extract` |
 | Bulletins, events, recurrence history, run records | the SQLite database, published per run to R2 `pipeline/runs/<run_id>/` | the pipeline |
-| Website snapshot | R2 `pipeline/runs/<run_id>/frontend.snapshot` | `weekly` |
+| Website snapshot (gzipped JSON) | R2 `pipeline/runs/<run_id>/frontend.json.gz` (`frontend.snapshot`, gzipped SQLite, in older runs) | `weekly` |
 | Which run is live | R2 `pipeline/latest.json` | the weekly workflow |
 
 Everything under `pipeline/runs/` is written once and never changed, and a
@@ -176,7 +177,9 @@ pnpm db:create        # an empty database instead (schema + parishes/churches, n
 
 `pnpm data:pull --run-id <id>` pulls a specific run instead, e.g. a held one
 you want to inspect. The database you replace is kept as
-`data/parish_events.db.bak`.
+`data/parish_events.db.bak`. Runs from before the snapshot became JSON hold a
+gzipped SQLite snapshot this code can't read: pulling one rebuilds its
+snapshot from its database, and a `--snapshot-only` pull of one fails.
 
 Every pipeline command first brings the local database up to date: it applies
 new migrations and re-seeds the `parish` and `church` tables from the CSVs,
@@ -323,7 +326,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 - `data/` (untracked) - the local database, bulletin PDF cache and run outputs
 - `docs/data-setup.md` - R2 bucket, API tokens, GitHub secrets, and running the published data
 - `apps/web/` - React + TypeScript + Vite frontend
-- `src/pdf_extract/extract_frontend_db.py` - builds the frontend SQLite snapshot
+- `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
   - `fetch.py` - bulletin fetching and provider link resolution

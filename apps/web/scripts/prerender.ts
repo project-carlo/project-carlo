@@ -3,21 +3,16 @@ import { existsSync, readFileSync, mkdirSync, writeFileSync, readdirSync } from 
 import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
-import initSqlJs from "sql.js";
-import {
-  getAllChurchSlugs,
-  getAllChurchesForIndex,
-  getChurchDetail,
-  getChurchEvents,
-  getChurchLastModifiedDates,
-} from "../src/prerender/queries";
+import { churchSchedule, findChurch } from "../src/api";
+import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
 import { StaticChurchIndexPage } from "../src/prerender/StaticChurchIndexPage";
 import { CHURCH_INDEX_PATH } from "../src/lib/seo";
+import { EVENT_TYPE_ORDER } from "../src/constants/eventTypes";
 
 const WEB_DIR = resolve(import.meta.dirname, "..");
 const DIST_DIR = resolve(WEB_DIR, "dist");
-const DB_PATH = resolve(WEB_DIR, "public", "frontend.snapshot");
+const SNAPSHOT_PATH = resolve(WEB_DIR, "public", SNAPSHOT_FILE);
 const SITE_ORIGIN = "https://projectcarlo.com";
 
 /** Font filename prefixes to preload — Latin subsets of the two typefaces used
@@ -69,24 +64,6 @@ function canonicalUrlForChurchSlug(origin: string, slug: string): string {
   return absoluteUrl(origin, canonicalPathForChurchSlug(slug));
 }
 
-function normalizeLastmodDate(raw: string | null | undefined): string | null {
-  if (!raw) return null;
-  const trimmed = raw.trim();
-  if (trimmed.length === 0) return null;
-
-  const isoPrefix = /^(\d{4}-\d{2}-\d{2})/.exec(trimmed);
-  if (isoPrefix) return isoPrefix[1];
-
-  const parsed = new Date(trimmed);
-  if (Number.isNaN(parsed.getTime())) return null;
-  return parsed.toISOString().slice(0, 10);
-}
-
-function maxIsoDate(dates: string[], fallback: string): string {
-  if (dates.length === 0) return fallback;
-  return dates.reduce((latest, current) => (current > latest ? current : latest), dates[0]);
-}
-
 function isAboutPageEnabledAtBuild(): boolean {
   const v = process.env.VITE_ABOUT_PAGE_ENABLED?.trim().toLowerCase();
   return v === "true" || v === "1";
@@ -96,22 +73,16 @@ function writeSitemapAndRobots(
   distDir: string,
   origin: string,
   slugs: string[],
-  lastmodBySlug: Record<string, string | null>,
+  buildDate: string,
 ): number {
-  const buildDate = new Date().toISOString().slice(0, 10);
-  const churchUrls = slugs.map((slug) => ({
-    loc: canonicalUrlForChurchSlug(origin, slug),
-    lastmod: normalizeLastmodDate(lastmodBySlug[slug]) ?? buildDate,
-  }));
-  const homepageLastmod = maxIsoDate(
-    churchUrls.map((entry) => entry.lastmod),
-    buildDate,
-  );
   const urls: { loc: string; lastmod: string }[] = [
-    { loc: absoluteUrl(origin, "/"), lastmod: homepageLastmod },
+    { loc: absoluteUrl(origin, "/"), lastmod: buildDate },
     { loc: absoluteUrl(origin, "/landing"), lastmod: buildDate },
-    { loc: absoluteUrl(origin, CHURCH_INDEX_PATH), lastmod: homepageLastmod },
-    ...churchUrls,
+    { loc: absoluteUrl(origin, CHURCH_INDEX_PATH), lastmod: buildDate },
+    ...slugs.map((slug) => ({
+      loc: canonicalUrlForChurchSlug(origin, slug),
+      lastmod: buildDate,
+    })),
   ];
   if (isAboutPageEnabledAtBuild()) {
     urls.push({ loc: absoluteUrl(origin, "/about"), lastmod: buildDate });
@@ -145,32 +116,29 @@ function writeSitemapAndRobots(
   return urls.length;
 }
 
-async function main() {
-  if (!existsSync(DB_PATH)) {
+function main() {
+  if (!existsSync(SNAPSHOT_PATH)) {
     // The snapshot is published data, not source: it is downloaded, not committed.
     throw new Error(
-      `${DB_PATH} is missing. Run \`pnpm data:pull --snapshot-only\` from the repo root first.`,
+      `${SNAPSHOT_PATH} is missing. Run \`pnpm data:pull --snapshot-only\` from the repo root first.`,
     );
   }
-  const SQL = await initSqlJs();
-  const dbBuffer = gunzipSync(readFileSync(DB_PATH));
-  const db = new SQL.Database(dbBuffer);
+  const snapshot = parseSnapshot(gunzipSync(readFileSync(SNAPSHOT_PATH)).toString("utf-8"));
 
   const { cssPath, fontPaths } = discoverAssets();
-  const slugs = getAllChurchSlugs(db);
-  const lastmodBySlug = getChurchLastModifiedDates(db);
+  const slugs = snapshot.churches.map((church) => church.slug);
   const origin = getSiteOrigin();
 
   console.log(`Pre-rendering ${slugs.length} church pages...`);
 
-  // Same fallback as the sitemap <lastmod>: build date when no bulletin date
-  // is known, so JSON-LD dateModified and the sitemap never disagree.
+  // The snapshot has no per-church modification dates, so the pages' JSON-LD
+  // dateModified and the sitemap's <lastmod> are the build date.
   const buildDate = new Date().toISOString().slice(0, 10);
 
   let count = 0;
   for (const slug of slugs) {
-    const church = getChurchDetail(db, slug);
-    const events = getChurchEvents(db, slug);
+    const church = findChurch(snapshot, slug);
+    const events = churchSchedule(snapshot, slug, EVENT_TYPE_ORDER);
 
     const html =
       "<!DOCTYPE html>" +
@@ -181,7 +149,7 @@ async function main() {
           cssPath,
           fontPaths,
           canonicalUrl: canonicalUrlForChurchSlug(origin, slug),
-          lastModified: normalizeLastmodDate(lastmodBySlug[slug]) ?? buildDate,
+          lastModified: buildDate,
         }),
       );
 
@@ -191,29 +159,24 @@ async function main() {
     count++;
   }
 
-  const indexLastmod = maxIsoDate(
-    slugs.map((slug) => normalizeLastmodDate(lastmodBySlug[slug]) ?? buildDate),
-    buildDate,
-  );
   const indexHtml =
     "<!DOCTYPE html>" +
     renderToStaticMarkup(
       createElement(StaticChurchIndexPage, {
-        churches: getAllChurchesForIndex(db),
+        churches: snapshot.churches,
         cssPath,
         fontPaths,
         canonicalUrl: absoluteUrl(origin, CHURCH_INDEX_PATH),
-        lastModified: indexLastmod,
+        lastModified: buildDate,
       }),
     );
   mkdirSync(resolve(DIST_DIR, "churches"), { recursive: true });
   writeFileSync(resolve(DIST_DIR, "churches", "index.html"), indexHtml, "utf-8");
   console.log("Wrote churches/index.html (all-parishes index).");
 
-  const urlCount = writeSitemapAndRobots(DIST_DIR, origin, slugs, lastmodBySlug);
+  const urlCount = writeSitemapAndRobots(DIST_DIR, origin, slugs, buildDate);
   console.log(`Wrote sitemap.xml and robots.txt (${urlCount} URLs).`);
 
-  db.close();
   console.log(`Pre-rendered ${count} church pages.`);
 }
 
