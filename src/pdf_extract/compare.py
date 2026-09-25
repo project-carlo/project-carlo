@@ -19,9 +19,11 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.blobstore import bulletin_pdf_key
 from pdf_extract.extract_run import bulletins_path, events_path, run_summary_path
+from pdf_extract.paths import DATA_DIR
 from pdf_extract.runner import RUNS_DIR
-from pdf_extract.storage import BULLETINS_METADATA_PATH, load_json_list, utc_now_iso
+from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, load_bulletins, utc_now_iso
 
 LOGGER = logging.getLogger(__name__)
 
@@ -96,25 +98,27 @@ def _load_run(classifier_name: str) -> tuple[EventsByBulletin, dict[str, Any]]:
 
 
 def _load_bulletin_metadata() -> dict[str, dict[str, Any]]:
-    """Return selected metadata fields keyed by bulletin source URL."""
+    """Return selected bulletin fields keyed by bulletin source URL."""
     metadata: dict[str, dict[str, Any]] = {}
-    for entry in load_json_list(BULLETINS_METADATA_PATH):
-        if not isinstance(entry, dict):
-            continue
-        source_url = entry.get("source_url")
-        if not isinstance(source_url, str):
-            continue
+    if not DEFAULT_DB_PATH.exists():
+        return metadata
+    conn = connect_db()
+    try:
+        bulletins = load_bulletins(conn)
+    finally:
+        conn.close()
+    for entry in bulletins:
+        source_url = entry["source_url"]
+        content_hash = entry.get("content_hash")
         metadata[source_url] = {
             "bulletin_source_url": source_url,
-            "pdf_path": entry.get("pdf_path") if isinstance(entry.get("pdf_path"), str) else None,
-            "parish_slug": entry.get("parish_slug")
-            if isinstance(entry.get("parish_slug"), str)
-            else None,
-            "published_date": (
-                entry.get("published_date")
-                if isinstance(entry.get("published_date"), str)
+            "pdf_path": (
+                (DATA_DIR / bulletin_pdf_key(entry["parish_slug"], content_hash)).as_posix()
+                if content_hash
                 else None
             ),
+            "parish_slug": entry["parish_slug"],
+            "published_date": entry.get("published_date"),
         }
     return metadata
 

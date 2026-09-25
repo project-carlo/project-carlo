@@ -13,12 +13,16 @@ import sqlite3
 import tempfile
 from pathlib import Path
 
-from pdf_extract.storage import configure_sqlite_connection
+from pdf_extract.storage import (
+    DEFAULT_DB_PATH,
+    configure_sqlite_connection,
+    latest_bulletin_order,
+)
 
 LOGGER = logging.getLogger(__name__)
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE_DB = ROOT / "data" / "parish_events.db"
+SOURCE_DB = DEFAULT_DB_PATH
 DEST_DB = ROOT / "apps" / "web" / "public" / "frontend.snapshot"
 FRONTEND_SCHEMA_PATH = ROOT / "data" / "frontend_schema.sql"
 
@@ -35,24 +39,6 @@ _EVENT_COLUMNS = (
 )
 
 
-def _latest_bulletin_order(alias: str = "") -> str:
-    """ORDER BY that puts a parish's current bulletin first.
-
-    Most recently published, then most recently fetched, then most recently
-    processed, with the highest id as a deterministic tie-break. Both queries
-    below rank by it — church.bulletin_url has to name the same bulletin the
-    copied events came from — and process.py mirrors it in Python as
-    `_frontend_bulletin_rank` to decide what events.json may compact away.
-    """
-    col = f"{alias}." if alias else ""
-    return (
-        f"COALESCE({col}published_date, '') DESC,"
-        f" COALESCE({col}fetched_at, '') DESC,"
-        f" COALESCE({col}processed_at, '') DESC,"
-        f" {col}id DESC"
-    )
-
-
 def _insert_all(
     conn: sqlite3.Connection, table: str, columns: str, rows: list[tuple]
 ) -> None:
@@ -60,13 +46,20 @@ def _insert_all(
     conn.executemany(f"INSERT INTO {table}({columns}) VALUES ({placeholders})", rows)
 
 
-def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> dict[str, object]:
+def extract(
+    source: Path = SOURCE_DB, dest: Path = DEST_DB, *, keep_previous: bool = True,
+) -> dict[str, object]:
+    """Write the frontend snapshot of `source` to `dest`.
+
+    With `keep_previous`, an existing snapshot at `dest` is first moved to
+    `<dest>.previous` for `verify-frontend-snapshot` to compare against.
+    """
     if not source.exists():
         raise FileNotFoundError(f"Source database not found: {source}")
 
     dest.parent.mkdir(parents=True, exist_ok=True)
     previous_dest = dest.with_name(f"{dest.name}.previous")
-    if dest.exists():
+    if keep_previous and dest.exists():
         previous_dest.unlink(missing_ok=True)
         dest.replace(previous_dest)
     legacy_dest = dest.with_suffix(".db")
@@ -90,8 +83,8 @@ def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> dict[str, object]
                    c.city, c.state, c.postal_code, c.latitude, c.longitude,
                    p.homepage_url,
                    (SELECT b.source_url FROM bulletin b
-                    WHERE b.parish_id = c.parish_id AND b.source_url IS NOT NULL
-                    ORDER BY {_latest_bulletin_order("b")}
+                    WHERE b.parish_id = c.parish_id AND b.processed_at IS NOT NULL
+                    ORDER BY {latest_bulletin_order("b")}
                     LIMIT 1)
             FROM church c
             LEFT JOIN parish p ON c.parish_id = p.id
@@ -110,9 +103,10 @@ def extract(source: Path = SOURCE_DB, dest: Path = DEST_DB) -> dict[str, object]
                 SELECT parish_id, id,
                        ROW_NUMBER() OVER (
                            PARTITION BY parish_id
-                           ORDER BY {_latest_bulletin_order()}
+                           ORDER BY {latest_bulletin_order()}
                        ) AS rn
                 FROM bulletin
+                WHERE processed_at IS NOT NULL
             ) latest ON b.parish_id = latest.parish_id AND b.id = latest.id AND latest.rn = 1
             """
         ).fetchall()

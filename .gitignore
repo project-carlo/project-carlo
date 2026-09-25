@@ -49,13 +49,18 @@ apps/web/playwright-report/
 apps/web/test-results/
 apps/web/.playwright/
 
-# Data
-data/bulletins/**/*.pdf
+# Data. The pipeline database, bulletin PDFs and run outputs live in R2 and
+# are pulled on demand (`pnpm data:pull`); only curated inputs are committed.
+data/bulletins/
 data/*.db
+data/*.db-*
+data/*.db.bak
 data/runs/
+data/out/
+data/legacy/
 
-# Generated frontend assets
-# apps/web/public/frontend.snapshot
+# Generated frontend assets (the snapshot is published data: `pnpm data:pull`)
+apps/web/public/frontend.snapshot
 apps/web/public/frontend.snapshot.previous
 apps/web/public/*.wasm
 

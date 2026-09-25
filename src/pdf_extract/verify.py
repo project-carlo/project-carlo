@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import logging
 import sqlite3
-from pathlib import Path
 
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL, extract_verification
 from pdf_extract.storage import (
@@ -77,17 +76,17 @@ def verify_churches(
 
             # Get latest bulletin PDF for this parish
             bulletin_row = conn.execute(
-                """SELECT pdf_path FROM bulletin
-                   WHERE parish_id = ? AND pdf_path IS NOT NULL
+                """SELECT content_hash FROM bulletin
+                   WHERE parish_id = ? AND content_hash IS NOT NULL
                    ORDER BY fetched_at DESC LIMIT 1""",
                 (parish_id,),
             ).fetchone()
 
-            if not bulletin_row or not bulletin_row["pdf_path"]:
+            if not bulletin_row:
                 LOGGER.info("No bulletin PDF found for parish %s, skipping", parish_slug)
                 continue
 
-            pdf_bytes = read_bulletin_pdf(Path(bulletin_row["pdf_path"]))
+            pdf_bytes = read_bulletin_pdf(parish_slug, bulletin_row["content_hash"])
             if pdf_bytes is None:
                 continue
 

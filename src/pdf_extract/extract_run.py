@@ -2,8 +2,8 @@
 fetched bulletin corpus and writes its outputs to data/runs/<classifier>/.
 
 Independent of the production process.py bookkeeping:
-- does not consult or update the `processed_at` field in metadata.json
-- does not write data/events.json
+- does not consult or update `bulletin.processed_at`
+- does not write events to the database
 - does not touch the SQLite parish_events.db beyond reads
 
 It shares the on-disk result cache with the production path (see runner.py):
@@ -19,7 +19,9 @@ import time
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.blobstore import bulletin_pdf_key
 from pdf_extract.classifiers import Classifier, get_classifier
+from pdf_extract.paths import DATA_DIR
 from pdf_extract.runner import (
     flatten_extracted_events,
     iter_extraction_outcomes,
@@ -29,10 +31,9 @@ from pdf_extract.runner import (
     store_cached_result,
 )
 from pdf_extract.storage import (
-    BULLETINS_METADATA_PATH,
     connect_db,
     get_parish_by_name,
-    load_json_list,
+    load_bulletins,
     save_json_list,
     utc_now_iso,
 )
@@ -63,7 +64,7 @@ def run(
     """Run a classifier over the fetched bulletin corpus.
 
     Re-uses cached classifier outputs keyed by (classifier+version, content_hash).
-    Always rebuilds events.json from the cache so it stays in sync.
+    Always rebuilds the run's events.json from the cache so it stays in sync.
     """
     classifier = get_classifier(classifier_name)
     LOGGER.info(
@@ -74,10 +75,6 @@ def run(
         concurrency,
     )
 
-    metadata = load_json_list(BULLETINS_METADATA_PATH)
-    candidates = [m for m in metadata if m.get("pdf_path")]
-    candidates = latest_per_parish(candidates)
-
     started = time.monotonic()
     cache_hits = 0
     cache_misses = 0
@@ -87,6 +84,7 @@ def run(
 
     conn = connect_db()
     try:
+        candidates = latest_per_parish(load_bulletins(conn))
         if parish_name:
             parish_row = get_parish_by_name(conn, parish_name)
             if not parish_row:
@@ -151,9 +149,9 @@ def run(
         served_bulletins.append(
             {
                 "bulletin_source_url": entry["source_url"],
-                "pdf_path": entry.get("pdf_path")
-                if isinstance(entry.get("pdf_path"), str)
-                else None,
+                "pdf_path": (
+                    DATA_DIR / bulletin_pdf_key(entry["parish_slug"], entry["content_hash"])
+                ).as_posix(),
                 "parish_slug": entry.get("parish_slug")
                 if isinstance(entry.get("parish_slug"), str)
                 else None,

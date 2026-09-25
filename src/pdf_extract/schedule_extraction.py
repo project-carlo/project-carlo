@@ -443,8 +443,21 @@ def extract_events(
             "extract_events: Pydantic validation failed (%s); using lenient fallback",
             exc,
         )
-        return reconstruct_events(_parse_llm_json(content, context="extract_events"))
-    return reconstruct_events(payload)
+        result = reconstruct_events(_parse_llm_json(content, context="extract_events"))
+    else:
+        result = reconstruct_events(payload)
+    result["usage"] = _token_usage(response)
+    return result
+
+
+def _token_usage(response: Any) -> dict[str, int]:
+    """Prompt and output token counts of a Gemini response, for run cost reporting."""
+    usage = getattr(response, "usage_metadata", None)
+    counts = {
+        "prompt_tokens": getattr(usage, "prompt_token_count", None),
+        "output_tokens": getattr(usage, "candidates_token_count", None),
+    }
+    return {k: v for k, v in counts.items() if isinstance(v, int)}
 
 
 # ── Verification extraction ──────────────────────────────────────────────────

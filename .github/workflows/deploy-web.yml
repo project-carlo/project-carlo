@@ -7,6 +7,7 @@ on:
     paths:
       - "apps/web/**"
       - "data/**"
+      - "src/pdf_extract/datasync.py"
       - "package.json"
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
@@ -18,6 +19,7 @@ on:
     paths:
       - "apps/web/**"
       - "data/**"
+      - "src/pdf_extract/datasync.py"
       - "package.json"
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
@@ -67,6 +69,32 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          python-version-file: .python-version
+
+      # The snapshot is published data, not source: take the published run's.
+      # Read-only R2 keys are enough; without them (or before anything is
+      # published) the live site's current snapshot is reused.
+      - name: Pull published data snapshot
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ vars.R2_BUCKET || 'project-carlo-data' }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_READ_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_READ_SECRET_ACCESS_KEY }}
+        run: |
+          uv sync --frozen --no-dev
+          uv run --no-sync python -m pdf_extract data pull --snapshot-only --public-fallback \
+            | tee pulled.json
+          {
+            echo "### Data snapshot"
+            echo '```json'
+            cat pulled.json
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Type check web app
         run: pnpm --filter web check

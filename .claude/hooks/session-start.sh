@@ -21,3 +21,11 @@ pnpm install
 # Note: this does not run `playwright install`. The image ships browsers at
 # $PLAYWRIGHT_BROWSERS_PATH, and cdn.playwright.dev is blocked by the egress
 # policy, so `pnpm test:e2e` needs that host allowed for the environment.
+
+# Data: the pipeline database and frontend snapshot are not in git. Pull the
+# published copy when this environment has (read-only) R2 credentials; never
+# fail the session over it.
+if [ -n "${R2_ACCESS_KEY_ID:-}" ] && [ ! -f data/parish_events.db ]; then
+  uv run python -m pdf_extract data pull --log-level WARNING >/dev/null \
+    || echo "session-start: data pull failed; run 'pnpm data:pull' to retry" >&2
+fi

@@ -1,17 +1,17 @@
 """Bulletin process pipeline: extract schedules from PDFs with Gemini AI.
 
 Runs the production Gemini classifier over each parish's latest fetched
-bulletin. `processed_at` in metadata.json is the gate that keeps a bulletin
-from being re-extracted; the shared on-disk result cache under data/runs/
-(keyed by classifier version + bulletin content hash) is a second layer that
-lets a re-run after a metadata reset skip the API call.
+bulletin. `bulletin.processed_at` is the gate that keeps a bulletin from being
+re-extracted; the shared result cache in the blob store (keyed by classifier
+version + bulletin content hash) is a second layer that lets a re-run skip the
+API call.
 
-data/events.json is derived state: it holds exactly the events of each
-parish's most recent processed bulletin, and rows from superseded bulletins
-are compacted away on every run. Because of that compaction, every dated
-occurrence is also recorded in data/event_history.json before it can be
-compacted away; that history is what lets `pdf_extract.recurrence` recognise a
-"one-off" the bulletins have in fact been printing every week.
+Each bulletin's events are stored against that bulletin; superseded
+bulletins keep theirs, and the frontend reads only each parish's latest (see
+`storage.latest_bulletin_order`). Every occurrence is also recorded in the
+`event_occurrence` table before weekly promotion can rewrite it; that history
+is what lets `pdf_extract.recurrence` recognise a "one-off" the bulletins have
+in fact been printing every week.
 """
 
 from __future__ import annotations
@@ -23,11 +23,11 @@ from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.recurrence import (
     History,
     bulletin_reference_date,
-    load_history,
+    load_history_from_db,
     promote_recurring_events,
     prune_history,
     record_observations,
-    save_history,
+    save_history_to_db,
 )
 from pdf_extract.runner import (
     flatten_extracted_events,
@@ -36,101 +36,60 @@ from pdf_extract.runner import (
     load_cached_result,
     store_cached_result,
 )
+from pdf_extract.runs import (
+    PROCESS_CACHED,
+    PROCESS_EXTRACTED,
+    PROCESS_FAILED,
+    PROCESS_SKIPPED,
+    PROCESS_WRONG_BULLETIN,
+    record_parish_result,
+)
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import (
-    BULLETINS_METADATA_PATH,
-    EVENT_HISTORY_PATH,
-    EVENTS_PATH,
     connect_db,
     get_parish_by_name,
-    load_json_list,
-    save_json_list,
+    load_bulletins,
+    save_processed_bulletin,
     utc_now_iso,
 )
 
 LOGGER = logging.getLogger(__name__)
 
 
-def _frontend_bulletin_rank(entry: dict[str, Any], idx: int) -> tuple[str, str, str, int]:
-    """Bulletin recency as the frontend sees it.
-
-    Mirrors the latest-bulletin ORDER BY in extract_frontend_db.py
-    (published_date, fetched_at, processed_at, insertion order). This is
-    deliberately different from `latest_per_parish` (fetched_at first), which
-    decides what to *process*: some parish sites re-serve old issues, so the
-    most recently fetched bulletin is not always the most recently published.
-    """
-    return (
-        str(entry.get("published_date") or ""),
-        str(entry.get("fetched_at") or ""),
-        str(entry.get("processed_at") or ""),
-        idx,
-    )
-
-
-def compact_events(
-    events: list[dict[str, Any]], metadata: list[dict[str, Any]],
-) -> list[dict[str, Any]]:
-    """Keep only rows belonging to each parish's frontend-visible bulletin.
-
-    Without compaction, rows from superseded bulletins (and bulletins no longer
-    present in metadata.json) accumulate in events.json forever. Ranking
-    follows `_frontend_bulletin_rank` so compaction never drops a row the
-    frontend would display.
-    """
-    top_by_parish: dict[str, tuple[tuple[str, str, str, int], Any]] = {}
-    for idx, entry in enumerate(metadata):
-        parish_slug = entry.get("parish_slug")
-        if not isinstance(parish_slug, str) or not entry.get("processed_at"):
-            continue
-        rank = _frontend_bulletin_rank(entry, idx)
-        current = top_by_parish.get(parish_slug)
-        if current is None or rank > current[0]:
-            top_by_parish[parish_slug] = (rank, entry.get("source_url"))
-    keep_urls = {url for _, url in top_by_parish.values()}
-    return [e for e in events if e.get("bulletin_source_url") in keep_urls]
-
-
-def _merge_extracted(
+def _prepare_rows(
     entry: dict[str, Any],
     extracted: dict[str, Any],
-    events: list[dict[str, Any]],
     history: History,
-) -> tuple[int, int]:
-    """Merge an extracted result into `events` and update `entry` in place.
+) -> tuple[list[dict[str, Any]], int]:
+    """Turn one extracted result into the rows to store for its bulletin.
 
-    Dated occurrences are recorded in `history` (also in place) before
-    promotion, so the raw sighting survives even when the row itself is
-    rewritten as weekly and cannot be re-derived from events.json later.
+    Occurrences are recorded in `history` (in place) before promotion, so the
+    raw sighting survives even when the row itself is rewritten as weekly.
 
-    Returns the number of events appended and the number promoted to weekly.
+    Returns the rows and the number promoted to weekly.
     """
     parish_slug = entry["parish_slug"]
-
-    published_date = extracted.get("published_date")
-    if isinstance(published_date, str) and published_date.strip():
-        entry["published_date"] = published_date
-
     if extracted.get("wrong_bulletin"):
         LOGGER.warning(
             "Bulletin flagged as wrong PDF for parish %s (source=%s); skipping events",
             parish_slug, entry.get("source_url"),
         )
+    published_date = extracted.get("published_date")
+    if isinstance(published_date, str) and published_date.strip():
+        entry["published_date"] = published_date
+
     rows = flatten_extracted_events(entry, extracted)
     # Recorded before promotion: a promoted row loses its date, and the raw
     # sighting is what keeps next week's chain going.
     record_observations(history, rows, bulletin_date=bulletin_reference_date(entry))
     rows, promoted = promote_recurring_events(rows, history)
-    events.extend(rows)
 
     if extracted.get("church_list_needs_review"):
         LOGGER.warning(
             "Church list may need review for parish %s — run 'pnpm verify --parish \"%s\"'",
             parish_slug, parish_slug,
         )
-
-    entry["processed_at"] = utc_now_iso()
-    return len(rows), promoted
+    return rows, promoted
 
 
 def process_bulletins(
@@ -138,26 +97,29 @@ def process_bulletins(
     parish_name: str | None = None,
     model: str = DEFAULT_GEMINI_MODEL,
     concurrency: int = 5,
+    run_id: str | None = None,
 ) -> dict[str, int]:
     LOGGER.info(
         "Starting process stage (parish_name=%s, model=%s, concurrency=%s)",
         parish_name or "*all*", model, concurrency,
     )
     classifier = GeminiClassifier(model=model)
-    metadata = load_json_list(BULLETINS_METADATA_PATH)
-
-    # Keep only the latest fetched bulletin per parish, then process those still pending.
-    latest = [m for m in metadata if m.get("pdf_path")]
-    latest = latest_per_parish(latest)
-    pending = [m for m in latest if m.get("processed_at") is None]
 
     processed_count = 0
     inserted_events = 0
+    skipped_events = 0
     cache_hits = 0
     promoted_events = 0
+    failed = 0
+    # Tokens spent on this run's API calls (cache hits cost nothing).
+    tokens = {"prompt_tokens": 0, "output_tokens": 0}
 
     conn = connect_db()
     try:
+        # Keep only the latest fetched bulletin per parish, then process those still pending.
+        latest = latest_per_parish(load_bulletins(conn))
+        pending = [m for m in latest if m.get("processed_at") is None]
+
         if parish_name:
             parish_row = get_parish_by_name(conn, parish_name)
             if not parish_row:
@@ -165,40 +127,49 @@ def process_bulletins(
                 return {
                     "processed_bulletins": 0,
                     "inserted_events": 0,
+                    "skipped_events": 0,
                     "cache_hits": 0,
                     "weekly_promotions": 0,
+                    "failed_bulletins": 0,
                 }
             target_slug = parish_row["slug"]
             pending = [m for m in pending if m["parish_slug"] == target_slug]
 
-        # events.json is derived state; drop rows from superseded bulletins
-        # before merging anything new.
-        events = load_json_list(EVENTS_PATH)
-        history = load_history(EVENT_HISTORY_PATH)
+        history = load_history_from_db(conn)
         pruned = prune_history(history)
         if pruned:
-            LOGGER.info("Pruned %d expired rows from event history", pruned)
-            save_history(history, EVENT_HISTORY_PATH)
-        compacted = compact_events(events, metadata)
-        if len(compacted) != len(events):
-            LOGGER.info(
-                "Compacted events.json: dropped %d stale rows",
-                len(events) - len(compacted),
-            )
-            events = compacted
-            save_json_list(EVENTS_PATH, events)
+            LOGGER.info("Pruned %d expired occurrences from event history", pruned)
+            save_history_to_db(conn, history)
 
-        def commit(entry: dict[str, Any], extracted: dict[str, Any]) -> None:
-            """Merge one result, re-compact, and persist all three files for crash safety."""
-            nonlocal events, inserted_events, processed_count, promoted_events
-            added, promoted = _merge_extracted(entry, extracted, events, history)
-            inserted_events += added
+        def commit(entry: dict[str, Any], extracted: dict[str, Any], status: str) -> None:
+            """Store one result: history first, then the bulletin's events.
+
+            In that order a crash in between leaves the bulletin unprocessed,
+            so it is simply re-run (from the cache) and its sightings, already
+            on file, are not double-counted.
+            """
+            nonlocal inserted_events, skipped_events, processed_count, promoted_events
+            rows, promoted = _prepare_rows(entry, extracted, history)
+            save_history_to_db(conn, history)
+            stored, skipped = save_processed_bulletin(
+                conn,
+                entry["id"],
+                rows,
+                processed_at=utc_now_iso(),
+                published_date=entry.get("published_date"),
+            )
+            inserted_events += stored
+            skipped_events += skipped
             promoted_events += promoted
             processed_count += 1
-            events = compact_events(events, metadata)
-            save_json_list(BULLETINS_METADATA_PATH, metadata)
-            save_json_list(EVENTS_PATH, events)
-            save_history(history, EVENT_HISTORY_PATH)
+            record_parish_result(
+                conn, run_id, entry["parish_slug"], "process",
+                PROCESS_WRONG_BULLETIN if extracted.get("wrong_bulletin") else status,
+                source_url=entry.get("source_url"),
+                content_hash=entry.get("content_hash"),
+                event_count=stored,
+                detail=f"{skipped} events could not be stored" if skipped else None,
+            )
 
         # Serve bulletins whose extraction is already cached without an API call.
         uncached: list[dict[str, Any]] = []
@@ -213,27 +184,47 @@ def process_bulletins(
                 uncached.append(entry)
                 continue
             cache_hits += 1
-            commit(entry, cached)
+            commit(entry, cached, PROCESS_CACHED)
 
         for outcome in iter_extraction_outcomes(
             uncached, conn, classifier.extract, concurrency=concurrency,
         ):
+            entry = outcome.entry
             if outcome.skipped or outcome.extracted is None:
+                failed += 1
+                record_parish_result(
+                    conn, run_id, entry["parish_slug"], "process",
+                    PROCESS_SKIPPED if outcome.skipped else PROCESS_FAILED,
+                    source_url=entry.get("source_url"),
+                    content_hash=entry.get("content_hash"),
+                    detail=(
+                        "PDF could not be loaded"
+                        if outcome.skipped
+                        else f"{type(outcome.error).__name__}: {outcome.error}"
+                    ),
+                )
                 continue
-            content_hash = outcome.entry.get("content_hash")
+            usage = outcome.extracted.get("usage")
+            if isinstance(usage, dict):
+                for key in tokens:
+                    tokens[key] += int(usage.get(key) or 0)
+            content_hash = entry.get("content_hash")
             if isinstance(content_hash, str) and content_hash:
                 store_cached_result(
                     classifier.name, classifier.version, content_hash, outcome.extracted,
                 )
-            commit(outcome.entry, outcome.extracted)
+            commit(entry, outcome.extracted, PROCESS_EXTRACTED)
     finally:
         conn.close()
 
     result = {
         "processed_bulletins": processed_count,
         "inserted_events": inserted_events,
+        "skipped_events": skipped_events,
         "cache_hits": cache_hits,
         "weekly_promotions": promoted_events,
+        "failed_bulletins": failed,
+        **tokens,
     }
     LOGGER.info("Process stage finished: %s", result)
     return result

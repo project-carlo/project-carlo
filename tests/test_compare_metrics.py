@@ -67,6 +67,20 @@ def _write_run(
     )
 
 
+def _read_metadata(tmp_path: Path) -> dict[str, dict]:
+    """Bulletin details keyed by source URL, as compare's DB loader returns them."""
+    rows = json.loads((tmp_path / "metadata.json").read_text(encoding="utf-8"))
+    return {
+        row["source_url"]: {
+            "bulletin_source_url": row["source_url"],
+            "pdf_path": row.get("pdf_path"),
+            "parish_slug": row.get("parish_slug"),
+            "published_date": row.get("published_date"),
+        }
+        for row in rows
+    }
+
+
 def _write_metadata(tmp_path: Path, rows: list[dict]) -> None:
     (tmp_path / "metadata.json").write_text(
         json.dumps(rows, indent=2) + "\n",
@@ -79,7 +93,9 @@ def patched_runs(tmp_path, monkeypatch):
     monkeypatch.setattr(runner, "RUNS_DIR", tmp_path / "runs")
     monkeypatch.setattr(compare, "RUNS_DIR", tmp_path / "runs")
     monkeypatch.setattr(compare, "COMPARE_DIR", tmp_path / "runs" / "compare")
-    monkeypatch.setattr(compare, "BULLETINS_METADATA_PATH", tmp_path / "metadata.json")
+    monkeypatch.setattr(
+        compare, "_load_bulletin_metadata", lambda: _read_metadata(tmp_path),
+    )
     _write_metadata(tmp_path, [])
     return tmp_path
 
