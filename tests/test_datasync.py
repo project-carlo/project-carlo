@@ -17,20 +17,17 @@ from pdf_extract.blobstore import (
     CachedBlobStore,
     LocalBlobStore,
     S3BlobStore,
-    bulletin_pdf_key,
     set_store,
 )
 from pdf_extract.datasync import (
     LATEST_KEY,
     build_deploy_snapshot,
-    import_legacy,
     promote,
     pull,
     push_candidate,
     run_key,
     run_out_dir,
     status,
-    upload_bulletins,
 )
 from pdf_extract.db import create_db
 from pdf_extract.storage import DEFAULT_DB_PATH
@@ -372,24 +369,11 @@ def test_pull_without_remote_uses_public_snapshot_with_fallback(
     assert snapshot_path.read_bytes() == SNAPSHOT_BYTES
 
 
-def test_pull_with_nothing_published_uses_public_snapshot_with_fallback(
-    remote_store: CachedBlobStore, tmp_path: Path, public_site: list[Any],
-) -> None:
-    snapshot_path = tmp_path / "frontend.snapshot"
-
-    result = pull(db=False, snapshot_path=snapshot_path, public_fallback=True)
-
-    assert result == _public_result(snapshot_path)
-    assert snapshot_path.read_bytes() == SNAPSHOT_BYTES
-
-
-def test_pull_with_nothing_published_raises_without_fallback_or_for_database(
+def test_pull_public_fallback_does_not_apply_when_nothing_is_published(
     remote_store: CachedBlobStore, tmp_path: Path, public_site: list[Any],
 ) -> None:
     with pytest.raises(BlobStoreError, match="Nothing published"):
-        pull(db=False, snapshot_path=tmp_path / "s.snapshot")
-    with pytest.raises(BlobStoreError, match="Nothing published"):
-        pull(db_path=tmp_path / "x.db", snapshot_path=tmp_path / "s", public_fallback=True)
+        pull(db=False, snapshot_path=tmp_path / "s.snapshot", public_fallback=True)
     assert public_site == []
 
 
@@ -450,121 +434,6 @@ def test_cli_data_pull_passes_public_fallback(monkeypatch: pytest.MonkeyPatch) -
     ]
 
 
-# ── Uploading bulletins ─────────────────────────────────────────────────────
-def test_upload_bulletins_uploads_only_verified_pdfs(
-    tmp_path: Path, remote_store: CachedBlobStore, s3_client: Any,
-) -> None:
-    bulletins = tmp_path / "bulletins"
-    parish = bulletins / "test-parish"
-    parish.mkdir(parents=True)
-    good = b"%PDF good"
-    good_hash = hashlib.sha256(good).hexdigest()
-    (parish / f"{good_hash}.pdf").write_bytes(good)
-    (parish / f"{good_hash}-truncated.pdf").write_bytes(b"%PDF truncated")
-    (parish / "bulletin.pdf").write_bytes(b"%PDF unnamed")
-    wrong_hash = hashlib.sha256(b"something else").hexdigest()
-    (parish / f"{wrong_hash}.pdf").write_bytes(b"%PDF mismatched")
-    present = b"%PDF already there"
-    present_hash = hashlib.sha256(present).hexdigest()
-    (parish / f"{present_hash}.pdf").write_bytes(present)
-    s3_client.put_object(
-        Bucket=BUCKET, Key=bulletin_pdf_key("test-parish", present_hash), Body=present,
-    )
-
-    result = upload_bulletins(bulletins)
-
-    assert result == {"uploaded": 1, "already_present": 1, "skipped": 3}
-    assert _bucket_keys(s3_client) == sorted([
-        bulletin_pdf_key("test-parish", good_hash),
-        bulletin_pdf_key("test-parish", present_hash),
-    ])
-    body = s3_client.get_object(Bucket=BUCKET, Key=bulletin_pdf_key("test-parish", good_hash))
-    assert body["Body"].read() == good
-    assert body["ContentType"] == "application/pdf"
-
-
-def test_upload_bulletins_refuses_without_remote_write(
-    tmp_path: Path, remote_store: CachedBlobStore, s3_client: Any,
-) -> None:
-    remote_store.remote_write = False
-    parish = tmp_path / "bulletins" / "test-parish"
-    parish.mkdir(parents=True)
-    data = b"%PDF"
-    (parish / f"{hashlib.sha256(data).hexdigest()}.pdf").write_bytes(data)
-
-    with pytest.raises(BlobStoreError, match="CARLO_REMOTE_WRITE"):
-        upload_bulletins(tmp_path / "bulletins")
-    assert _bucket_keys(s3_client) == []
-
-
-def test_upload_bulletins_refuses_local_only_store(tmp_path: Path) -> None:
-    with pytest.raises(BlobStoreError):
-        upload_bulletins(tmp_path / "bulletins")
-
-
-# ── Legacy import ───────────────────────────────────────────────────────────
-def test_import_legacy_from_source_dir(pipeline_dir: Path, tmp_path: Path) -> None:
-    source = tmp_path / "legacy"
-    source.mkdir()
-    url = "https://example.org/bulletin.pdf"
-    (source / "metadata.json").write_text(json.dumps([
-        {"parish_slug": "test-parish", "source_url": url, "content_hash": "abc",
-         "processed_at": "2026-09-19T00:00:00Z"},
-    ]), encoding="utf-8")
-    (source / "events.json").write_text(json.dumps([
-        {"church_slug": "test-church", "bulletin_source_url": url, "event_type": "mass",
-         "event_kind": "weekly", "day_of_week": "Sunday", "date": None,
-         "start_time": "9:00 AM", "end_time": None, "cancelled": False},
-    ]), encoding="utf-8")
-    (source / "event_history.json").write_text(json.dumps([
-        {"church_slug": "test-church", "event_type": "mass", "start_time": 540,
-         "dates": ["2026-09-13", "2026-09-20"]},
-    ]), encoding="utf-8")
-
-    result = import_legacy(source_dir=source)
-
-    assert result == {
-        "source": str(source), "bulletins": 1, "events": 1, "events_skipped": 0,
-        "occurrences": 2,
-    }
-    assert DEFAULT_DB_PATH.exists()
-
-
-def test_import_legacy_with_missing_files_builds_empty_database(
-    pipeline_dir: Path, tmp_path: Path,
-) -> None:
-    db_path = tmp_path / "empty.db"
-
-    result = import_legacy(source_dir=tmp_path / "nothing-here", db_path=db_path)
-
-    assert result["bulletins"] == result["events"] == result["occurrences"] == 0
-    assert _parish_rows(db_path)[0][1] == "test-parish"
-
-
-def test_import_legacy_needs_exactly_one_source(tmp_path: Path) -> None:
-    with pytest.raises(ValueError, match="exactly one"):
-        import_legacy()
-    with pytest.raises(ValueError, match="exactly one"):
-        import_legacy(git_ref="HEAD", source_dir=tmp_path)
-
-
-def test_import_legacy_refuses_once_a_run_is_published(
-    pipeline_dir: Path, tmp_path: Path, remote_store: CachedBlobStore,
-) -> None:
-    """The legacy files are frozen: importing them again would roll back the data."""
-    _prepare_run("run-1")
-    push_candidate("run-1")
-    promote("run-1")
-
-    with pytest.raises(BlobStoreError, match="already published"):
-        import_legacy(source_dir=tmp_path / "nothing-here", db_path=tmp_path / "x.db")
-
-    result = import_legacy(
-        source_dir=tmp_path / "nothing-here", db_path=tmp_path / "x.db", force=True,
-    )
-    assert result["bulletins"] == 0
-
-
 def test_push_refuses_to_overwrite_an_uploaded_run(
     pipeline_dir: Path, remote_store: CachedBlobStore,
 ) -> None:
@@ -610,17 +479,9 @@ def test_deploy_snapshot_is_built_from_the_published_database(
 
 def test_deploy_snapshot_without_published_data(
     pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
-    monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     with pytest.raises(BlobStoreError, match="Nothing published"):
         build_deploy_snapshot(snapshot_path=tmp_path / "s")
-
-    monkeypatch.setattr(
-        "pdf_extract.datasync._pull_public_snapshot", lambda path: {"source": "site"},
-    )
-    assert build_deploy_snapshot(snapshot_path=tmp_path / "s", public_fallback=True) == {
-        "source": "site",
-    }
 
 
 def test_promote_refuses_a_failed_run(

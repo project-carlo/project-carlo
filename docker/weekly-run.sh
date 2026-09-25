@@ -14,12 +14,7 @@ fi
 
 pdf() { uv run --no-sync python -m pdf_extract "$@"; }
 
-if [[ -n "${LEGACY_DATA_DIR:-}" ]]; then
-  echo "Bootstrapping the database from the legacy JSON files in ${LEGACY_DATA_DIR}"
-  pdf data import-legacy --dir "${LEGACY_DATA_DIR}"
-else
-  pdf data pull --no-snapshot
-fi
+pdf data pull --no-snapshot
 
 run() {
   if [[ -z "${DISPLAY:-}" ]] && command -v xvfb-run >/dev/null 2>&1; then

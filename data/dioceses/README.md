@@ -297,7 +297,7 @@ Work in this order and only fall through when a step can't answer. Commit as you
 
 **Promotion:** when `todo` shows no errors or incomplete records, run `pnpm diocese promote
 <d> --dry-run`, read it, then `pnpm diocese promote <d>` and `pnpm test`. The next pipeline
-command seeds the new rows into the database; there is no rebuild step.
+command seeds the new rows into the database.
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
 retired (merged, renamed or excluded). Retiring a church deletes its events, and retiring a
 parish deletes its bulletins and the events read from them, even for churches moved to another
