@@ -5,7 +5,7 @@ outcome under the run id, and the run ends with a report comparing the
 database before and after:
 
     data/out/<run_id>/before.db           the database as the run found it
-    data/out/<run_id>/frontend.snapshot   the snapshot the run would publish
+    data/out/<run_id>/frontend.json.gz    the snapshot the run would publish
     data/out/<run_id>/report.md|json      what changed, and the publishing checks
 
 Nothing is published here. The run's status says whether it may be:
@@ -23,6 +23,7 @@ from typing import Any
 
 from pdf_extract.datasync import compact_copy, run_out_dir
 from pdf_extract.db import ensure_db
+from pdf_extract.extract_frontend_db import SNAPSHOT_NAME
 from pdf_extract.extract_frontend_db import extract as extract_snapshot
 from pdf_extract.fetch import fetch_bulletins
 from pdf_extract.process import process_bulletins
@@ -67,7 +68,7 @@ def run_weekly(
             model=model, concurrency=concurrency, run_id=run_id,
         )
 
-        snapshot = out / "frontend.snapshot"
+        snapshot = out / SNAPSHOT_NAME
         stages["snapshot"] = extract_snapshot(db_path, snapshot, keep_previous=False)
         with tempfile.TemporaryDirectory() as tmp:
             before_snapshot = Path(tmp) / "before.snapshot"

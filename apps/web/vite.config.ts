@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import { copyFileSync, existsSync, mkdirSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import type { Plugin } from "vite";
 
@@ -27,24 +26,8 @@ function injectSiteJsonLd(): Plugin {
   };
 }
 
-function copySqlWasm(): Plugin {
-  return {
-    name: "copy-sql-wasm",
-    buildStart() {
-      const srcDir = resolve(__dirname, "node_modules/sql.js/dist");
-      const destDir = resolve(__dirname, "public");
-      if (!existsSync(destDir)) mkdirSync(destDir, { recursive: true });
-      for (const f of readdirSync(srcDir)) {
-        if (f.endsWith(".wasm")) {
-          copyFileSync(resolve(srcDir, f), resolve(destDir, f));
-        }
-      }
-    },
-  };
-}
-
 export default defineConfig({
-  plugins: [react(), tailwindcss(), copySqlWasm(), cloudflare(), injectSiteJsonLd()],
+  plugins: [react(), tailwindcss(), cloudflare(), injectSiteJsonLd()],
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
@@ -54,7 +37,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          sql: ["sql.js"],
           map: ["leaflet", "react-leaflet"],
           vendor: ["react", "react-dom", "react-router-dom"],
         },

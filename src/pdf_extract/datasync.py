@@ -4,7 +4,9 @@ Published data lives in the blob store (R2) under `pipeline/`:
 
     pipeline/runs/<run_id>/manifest.json         what the run produced (+ hashes)
     pipeline/runs/<run_id>/parish_events.db.gz   the full database after the run
-    pipeline/runs/<run_id>/frontend.snapshot     what the website serves
+    pipeline/runs/<run_id>/frontend.json.gz      what the website serves (runs
+                                                 before it: frontend.snapshot,
+                                                 an older format)
     pipeline/runs/<run_id>/report.md|report.json the run's change report
     pipeline/runs/<run_id>/published.json        present once the run has been published
     pipeline/latest.json                         pointer to the published run
@@ -32,16 +34,23 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.blobstore import BlobStoreError, CachedBlobStore, get_store
-from pdf_extract.paths import DATA_DIR, ROOT
-from pdf_extract.storage import DEFAULT_DB_PATH, utc_now_iso
+from pdf_extract.extract_frontend_db import (
+    DEST_SNAPSHOT,
+    SNAPSHOT_NAME,
+    SnapshotFormatError,
+    extract,
+    read_snapshot,
+)
+from pdf_extract.paths import DATA_DIR
+from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, utc_now_iso
 
 LOGGER = logging.getLogger(__name__)
 
 PIPELINE_PREFIX = "pipeline"
 LATEST_KEY = f"{PIPELINE_PREFIX}/latest.json"
-SNAPSHOT_PATH = ROOT / "apps" / "web" / "public" / "frontend.snapshot"
+SNAPSHOT_PATH = DEST_SNAPSHOT
 OUT_DIR = DATA_DIR / "out"
-PUBLIC_SNAPSHOT_URL = "https://projectcarlo.com/frontend.snapshot"
+PUBLIC_SNAPSHOT_URL = f"https://projectcarlo.com/{SNAPSHOT_NAME}"
 
 
 def run_key(run_id: str, name: str) -> str:
@@ -120,6 +129,10 @@ def pull(
 
     With `public_fallback`, a snapshot-only pull that has no credentials takes
     the snapshot the live site is serving, which is all the web app needs.
+
+    A run published before the current snapshot format has a snapshot this
+    code can't read; with the database pulled too, the snapshot is rebuilt
+    from it (the same data), and a snapshot-only pull of such a run fails.
     """
     store = get_store()
     snapshot_only = snapshot and not db
@@ -147,7 +160,19 @@ def pull(
         result["db_path"] = str(db_path)
     if snapshot:
         data = _fetch_verified(store, manifest["snapshot_key"], manifest["snapshot_sha256"])
-        _atomic_write(snapshot_path, data)
+        try:
+            read_snapshot(data)
+        except SnapshotFormatError as exc:
+            if not db:
+                raise BlobStoreError(
+                    f"Run {manifest['run_id']}'s snapshot is in a format this code can't "
+                    f"read ({exc}). Pull without --snapshot-only to rebuild it from the "
+                    "run's database."
+                ) from exc
+            LOGGER.info("Run %s's snapshot predates this format; rebuilding it", manifest["run_id"])
+            extract(db_path, snapshot_path, keep_previous=False)
+        else:
+            _atomic_write(snapshot_path, data)
         result["snapshot_path"] = str(snapshot_path)
     LOGGER.info("Pulled run %s", manifest["run_id"])
     return result
@@ -170,8 +195,15 @@ def _pull_public_snapshot(snapshot_path: Path) -> dict[str, Any]:
     )
     with urllib.request.urlopen(request, timeout=60) as response:
         data = response.read()
-    if data[:2] != b"\x1f\x8b":
-        raise BlobStoreError(f"{PUBLIC_SNAPSHOT_URL} did not return a gzip snapshot")
+    try:
+        read_snapshot(data)
+    except SnapshotFormatError as exc:
+        # The live site serves the format of the code it was deployed from.
+        raise BlobStoreError(
+            f"{PUBLIC_SNAPSHOT_URL} did not return a snapshot this code can read ({exc}). "
+            "If the live site runs code older than this format, pull with R2 credentials "
+            "instead, or build one from a local database with `pnpm extract:web`."
+        ) from exc
     _atomic_write(snapshot_path, data)
     return {"run_id": None, "snapshot_path": str(snapshot_path), "source": PUBLIC_SNAPSHOT_URL}
 
@@ -194,7 +226,7 @@ def push_candidate(
             f"Run {run_id} is already uploaded; runs are written once. Use a new run id."
         )
     out = run_out_dir(run_id)
-    snapshot_path = snapshot_path or out / "frontend.snapshot"
+    snapshot_path = snapshot_path or out / SNAPSHOT_NAME
 
     with tempfile.TemporaryDirectory() as tmp:
         compact = Path(tmp) / "parish_events.db"
@@ -208,7 +240,7 @@ def push_candidate(
         "git_sha": git_sha,
         "db_key": run_key(run_id, "parish_events.db.gz"),
         "db_sha256": _sha256(db_gz),
-        "snapshot_key": run_key(run_id, "frontend.snapshot"),
+        "snapshot_key": run_key(run_id, SNAPSHOT_NAME),
         "snapshot_sha256": _sha256(snapshot),
     }
     store.put_remote(manifest["db_key"], db_gz, content_type="application/gzip")
@@ -390,26 +422,34 @@ def build_deploy_snapshot(
     parishes.csv/churches.csv edits (seeded by `ensure_db`) show up in a
     preview and on merge without waiting for the next weekly run.
     """
-    # Imported here: db and extract_frontend_db import this module's neighbours.
-    from pdf_extract.db import ensure_db
-    from pdf_extract.extract_frontend_db import extract
+    # Imported here: db imports this module's neighbours.
+    from pdf_extract.db import ensure_db, migrate
 
     pulled = pull(db=True, snapshot=False, db_path=db_path)
-    seeded = ensure_db(db_path)
+    conn = connect_db(db_path)
+    try:
+        migrations = migrate(conn)
+    finally:
+        conn.close()
+    # The published run's data as it stands, before the CSVs are applied.
+    published = extract(db_path, snapshot_path, keep_previous=False)
+    seeded = {**ensure_db(db_path), "migrations_applied": migrations}
     if seeded["parishes_deleted"] or seeded["churches_deleted"]:
         # Removing a parish or church deletes its events. That goes live only
         # through a weekly run a person has reviewed (the run is held for it),
-        # never as a side effect of a deploy: keep serving the published snapshot.
+        # never as a side effect of a deploy: keep the published data.
         LOGGER.warning(
             "The CSVs remove %d parishes and %d churches; deploying the published "
-            "snapshot unchanged until a reviewed weekly run publishes the removal",
+            "data unchanged until a reviewed weekly run publishes the removal",
             seeded["parishes_deleted"], seeded["churches_deleted"],
         )
-        pull(db=False, snapshot=True, snapshot_path=snapshot_path)
         return {
             "run_id": pulled["run_id"],
             "seeded": seeded,
-            "snapshot": "published snapshot (CSV removals await a reviewed weekly run)",
+            "snapshot": {
+                **published,
+                "source": "published database (CSV removals await a reviewed weekly run)",
+            },
         }
     built = extract(db_path, snapshot_path, keep_previous=False)
     return {"run_id": pulled["run_id"], "seeded": seeded, "snapshot": built}

@@ -1,9 +1,10 @@
 # Project Carlo — Scaling Plan
 
-When does shipping the whole dataset to the browser (`frontend.snapshot`,
-queried with sql.js) stop working, and what should replace it? This plan works
-from measurements, favours the simplest option that holds, and keeps the site
-on static hosting for as long as it can.
+When does shipping the whole dataset to the browser (the frontend snapshot:
+SQLite queried with sql.js until Phase 2's first step, now gzipped JSON) stop
+working, and what should replace it? This plan works from measurements,
+favours the simplest option that holds, and keeps the site on static hosting
+for as long as it can.
 
 ## Summary
 
@@ -25,12 +26,16 @@ on static hosting for as long as it can.
 
 ## How it works today
 
-- The weekly pipeline writes `frontend.snapshot`: a gzipped SQLite file with
-  `church` and `event` tables (`data/frontend_schema.sql`), built by
-  `src/pdf_extract/extract_frontend_db.py`.
-- `apps/web/src/db.ts` downloads and gunzips it into sql.js. `apps/web/src/api.ts`
-  then reads **every** church and event into JS arrays once and filters them in
-  JS on every filter change (`collectMapItems`).
+The measurements below were taken before Phase 2's first step, when the
+snapshot was a gzipped SQLite file (`frontend.snapshot`) opened with sql.js.
+It is now column-oriented JSON; see [Phase 2](#phase-2--slim-the-payload-cheap-buys-23).
+
+- The weekly pipeline writes `frontend.json.gz`: every church and event, as
+  gzipped column-oriented JSON, built by `src/pdf_extract/extract_frontend_db.py`
+  (its docstring has the format).
+- `apps/web/src/api.ts` downloads and gunzips it, and `apps/web/src/lib/snapshot.ts`
+  decodes **every** church and event into JS objects once; filters run in JS on
+  every filter change (`collectMapItems`).
 - `apps/web/src/components/ChurchMap.tsx` renders one react-leaflet `<Marker>`
   (an SVG `divIcon`) per matching church, with no viewport culling or clustering.
 - `scripts/prerender.ts` writes one static HTML page per church, plus
@@ -38,9 +43,10 @@ on static hosting for as long as it can.
   static assets (no Worker script).
 
 Current data (live snapshot, 2026-09-25): **132 churches, 62 parishes, 850
-events**. That's 37 KB gzipped (128 KB raw), about 280 bytes per church
-gzipped. The snapshot is ~2% of a cold load's 1.65 MB; the sql.js wasm
-(660 KB raw / 320 KB gzipped) is bigger than the data until ~1,000 churches.
+events**. As SQLite that was 37 KB gzipped (128 KB raw), about 280 bytes per
+church gzipped, and the sql.js wasm (660 KB raw / 320 KB gzipped) was bigger
+than the data until ~1,000 churches. As JSON it is 14 KB gzipped, about
+100 bytes per church.
 
 ## Measurements
 
@@ -132,21 +138,48 @@ is slider paint P50 back under ~50 ms at 1,320 churches.
 
 These keep the one-file model while reducing cost per church:
 
-- **Drop sql.js in favour of compact JSON.** The app already copies every row
-  into JS arrays, so SQLite in the browser only adds 320 KB of gzipped wasm and
-  slow row mapping. Emit column-oriented JSON instead: parallel arrays, event
-  types and weekdays as small integers, and times as minutes. `JSON.parse` of
-  typed arrays is much faster than `getAsObject()` per row.
-  `extract_frontend_db.py` and `verify-frontend-snapshot` change their output
-  format; `api.ts` loses its SQL. The prerender can read the same JSON.
+- **Done: drop sql.js in favour of compact JSON.** The app already copied every
+  row into JS arrays, so SQLite in the browser only added 320 KB of gzipped wasm
+  and slow row mapping. The snapshot is now column-oriented JSON
+  (`frontend.json.gz`): parallel arrays, repeated strings (event types, kinds,
+  weekdays, dates, notes, cities) as indexes into a table of values, event ids
+  as differences, and times as minutes. `extract_frontend_db.py` writes it,
+  `verify-frontend-snapshot` reads it, and the app and the prerender decode it
+  with the same code (`apps/web/src/lib/snapshot.ts`); `api.ts` has no SQL.
 - **Split map data from detail data.** The map and filters need id, name,
   coordinates and a compact event list. Notes, `page_number`, `bulletin_url`,
   `homepage_url` and addresses are only needed on the church page, and the
   prerendered HTML already contains them. Load those per church on navigation
   instead.
-- **Compute `next_occurrence` lazily**, only for events actually shown.
-- Stop copying the unused `sql-wasm-debug.wasm` and `sql-wasm.wasm` into
-  `public/`. This saves no load time, just deploy size.
+  Not done yet: in the benchmark below it cut load time by only 5–20% at
+  1,000+ churches (and not at all today), and the map popup and the search
+  list need addresses too.
+- **Done: compute `next_occurrence` lazily**, only for events something shows.
+- **Done** (with the first step): no sql.js wasm files are copied into
+  `public/` any more, which took 2.8 MB off the deploy.
+
+#### Measured: JSON vs querying SQLite in the browser
+
+Before switching, three data layers were benchmarked on the live snapshot and
+the synthetic 10×/40×/150× ones (Chromium, 4× CPU throttle, median of 3 runs),
+each checked to give identical results to the sql.js code: the sql.js one
+(copy every row into JS once), **A** (JSON decoded into memory), and **B**
+(keep sql.js, but run a SQL query on every filter change instead of copying
+the rows).
+
+| Churches | Download, gzipped (sql.js + data → A) | Load until the first map query returns (sql.js → A) | Slider step P50 (sql.js / A / best B) |
+| ---: | --- | --- | --- |
+| 132 | 370 KB → 16 KB | 280 → 39 ms | 0.4 / 0.7 / 1.2 ms |
+| 1,320 | 670 KB → 97 KB | 690 → 150 ms | 5 / 4 / 8 ms |
+| 5,280 | 1.65 MB → 340 KB | 2.2 → 0.43 s | 24 / 24 / 35 ms |
+| 19,800 | 5.3 MB → 1.2 MB | 7.1 → 1.5 s | 124 / 130 / 164 ms |
+
+- **A** loads 3–5× faster. Filtering takes as long as before, within noise,
+  since the filter code is the same. The church page's first render is faster
+  too (6 → 1 ms today), and there is no 22 MB wasm heap.
+- **B** was slower on every filter change, at every size: the map needs nearly
+  every row on each change, and crossing the wasm boundary for each row costs
+  more than filtering plain objects in JS.
 
 ### Phase 3 — Regional static shards (the main answer, needed at ~2,000–3,000 churches)
 
@@ -190,8 +223,8 @@ pattern better.
 
 ### Alternative: a query API on Cloudflare D1 (only when writes arrive)
 
-D1 is SQLite behind a Worker, so `frontend_schema.sql` carries over almost
-unchanged.
+D1 is SQLite behind a Worker, so the snapshot's two tables (`church` and
+`event`) carry over almost unchanged.
 
 - **Cost**: on Free, 5M rows read and 100k rows written per day, plus 100k
   Worker requests per day. On Paid ($5/month), 25B reads and 50M writes per
@@ -215,8 +248,8 @@ and it adds a second vendor.
 1. **Now**: nothing is needed for today's data. Before coverage reaches
    ~500 churches, do Phase 1 (viewport culling and clustering) and check it
    with the perf harness on a synthetic 10× snapshot.
-2. **At ~1,500 churches, or a snapshot over ~400 KB gzipped**: do Phase 2,
-   which removes sql.js and splits map data from detail data.
+2. **At ~1,500 churches, or a snapshot over ~400 KB gzipped**: finish Phase 2
+   by splitting map data from detail data (sql.js is already gone).
 3. **At ~2,500 churches**: do Phase 3, regional static shards. Move to
    Workers Paid before ~19,000 prerendered pages.
 4. **Only when the product needs user-written data**: add D1 behind a Worker
