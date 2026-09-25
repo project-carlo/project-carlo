@@ -30,7 +30,7 @@ from pdf_extract.compare import compare
 from pdf_extract.db import create_db
 from pdf_extract.detect import run_detection
 from pdf_extract.dioceses import DioceseError
-from pdf_extract.dioceses_cli import add_diocese_parser
+from pdf_extract.dioceses.cli import add_diocese_parser
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
 from pdf_extract.fetch import fetch_bulletins
