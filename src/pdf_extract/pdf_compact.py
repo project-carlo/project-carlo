@@ -6,6 +6,11 @@ adds one per parish, so they are nearly all of the bucket. Only the first
 stores just those, with Ghostscript downsampling images to 150 dpi. Text and
 vector art are left as they are.
 
+Images are re-encoded as JPEG, and the stored copy is what classifiers read
+from then on, so the JPEG quality is Ghostscript's high-quality setting (no
+chroma subsampling) rather than `/ebook`'s default, which blurs small print
+in scanned pages.
+
 Compaction only saves space: whenever it fails, or would not make the file
 smaller, the bytes as downloaded are stored instead.
 """
@@ -26,6 +31,7 @@ from pdf_extract.pdf_truncate import MAX_BULLETIN_PAGES
 LOGGER = logging.getLogger(__name__)
 
 GHOSTSCRIPT_TIMEOUT_SECONDS = 180
+_HIGH_QUALITY_JPEG = "<< /QFactor 0.4 /Blend 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >>"
 
 
 def _page_count(data: bytes) -> int:
@@ -62,7 +68,10 @@ def _ghostscript(data: bytes, pages: int) -> bytes | None:
                     "-dDetectDuplicateImages=true",
                     "-dFirstPage=1", f"-dLastPage={pages}",
                     f"-sOutputFile={target}",
-                    str(source),
+                    "-c",
+                    f"<< /ColorACSImageDict {_HIGH_QUALITY_JPEG}"
+                    f" /GrayACSImageDict {_HIGH_QUALITY_JPEG} >> setdistillerparams",
+                    "-f", str(source),
                 ],
                 check=True,
                 capture_output=True,

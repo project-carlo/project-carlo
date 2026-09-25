@@ -147,8 +147,9 @@ available. For debugging, set `PLAYWRIGHT_HEADLESS=1` to force headless mode or
 
 Everything under `pipeline/runs/` is written once and never changed, and a
 rollback is just moving the pointer. After each publish the weekly workflow
-prunes old runs (`pnpm data:prune`), keeping the last 8 weeks and one run a
-month for a year; those are the runs you can roll back to.
+prunes old runs (`pnpm data:prune`), keeping the last 8 weeks and, for a
+year, each month's last run that passed or was published; those are the runs
+you can roll back to.
 
 `fetch` stores a compacted copy of each bulletin: the first 10 pages (all the
 classifiers read) with images downsampled to 150 dpi by Ghostscript, falling

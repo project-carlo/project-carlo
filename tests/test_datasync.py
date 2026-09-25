@@ -513,13 +513,25 @@ def test_deploy_snapshot_keeps_the_published_one_when_the_csvs_remove_rows(
 
 
 # ── Prune ───────────────────────────────────────────────────────────────────
-def _seed_run(client: Any, run_id: str, created_at: str, *, manifest: bool = True) -> None:
+def _seed_run(
+    client: Any,
+    run_id: str,
+    created_at: str,
+    *,
+    manifest: bool = True,
+    run_status: str = "passed",
+    went_live: bool = False,
+) -> None:
     """A run's objects written straight to the bucket (prune only reads manifests)."""
     client.put_object(Bucket=BUCKET, Key=run_key(run_id, "parish_events.db.gz"), Body=b"db")
     client.put_object(Bucket=BUCKET, Key=run_key(run_id, "frontend.snapshot"), Body=b"snap")
     if manifest:
-        body = json.dumps({"run_id": run_id, "created_at": created_at}).encode()
+        body = json.dumps(
+            {"run_id": run_id, "created_at": created_at, "status": run_status},
+        ).encode()
         client.put_object(Bucket=BUCKET, Key=run_key(run_id, "manifest.json"), Body=body)
+    if went_live:
+        client.put_object(Bucket=BUCKET, Key=run_key(run_id, "published.json"), Body=b"{}")
 
 
 def _publish(client: Any, run_id: str) -> None:
@@ -589,6 +601,72 @@ def test_prune_removes_unfinished_uploads(remote_store: CachedBlobStore, s3_clie
 
     assert result["deleted"] == ["20260101T000000Z-a"]
     assert _runs_in_bucket(s3_client) == ["20260201T000000Z-b", "20260301T000000Z-c"]
+
+
+def test_prune_does_not_keep_a_held_run_as_a_monthly_rollback_point(
+    remote_store: CachedBlobStore, s3_client: Any,
+) -> None:
+    _seed_run(s3_client, "20260920T081700Z-gh1", "2026-09-20T08:17:00Z")
+    _seed_run(s3_client, "20260927T081700Z-gh2", "2026-09-27T08:17:00Z", run_status="held")
+    _seed_run(s3_client, "20261004T081700Z-gh3", "2026-10-04T08:17:00Z")
+    _publish(s3_client, "20261004T081700Z-gh3")
+
+    result = prune(keep_recent=1, keep_monthly=12, apply=True)
+
+    assert result["deleted"] == ["20260927T081700Z-gh2"]
+    assert _runs_in_bucket(s3_client) == ["20260920T081700Z-gh1", "20261004T081700Z-gh3"]
+
+
+def test_prune_keeps_a_held_run_that_was_published_by_hand(
+    remote_store: CachedBlobStore, s3_client: Any,
+) -> None:
+    _seed_run(s3_client, "20260920T081700Z-gh1", "2026-09-20T08:17:00Z")
+    _seed_run(
+        s3_client, "20260927T081700Z-gh2", "2026-09-27T08:17:00Z",
+        run_status="held", went_live=True,
+    )
+    _seed_run(s3_client, "20261004T081700Z-gh3", "2026-10-04T08:17:00Z")
+    _publish(s3_client, "20261004T081700Z-gh3")
+
+    result = prune(keep_recent=1, keep_monthly=12, apply=True)
+
+    assert result["deleted"] == ["20260920T081700Z-gh1"]
+
+
+def test_promote_marks_the_run_as_published(
+    pipeline_dir: Path, remote_store: CachedBlobStore, s3_client: Any,
+) -> None:
+    _prepare_run("20260920T081700Z-gh1", run_status="held")
+    push_candidate("20260920T081700Z-gh1")
+
+    promote("20260920T081700Z-gh1")
+
+    assert run_key("20260920T081700Z-gh1", "published.json") in _bucket_keys(s3_client)
+
+
+def test_prune_leaves_runs_without_a_timestamped_id_alone(
+    remote_store: CachedBlobStore, s3_client: Any,
+) -> None:
+    runs = _weekly_runs(s3_client)
+    _seed_run(s3_client, "local-1234", "2026-01-01T00:00:00Z")
+    _publish(s3_client, runs[-1])
+
+    result = prune(keep_recent=1, keep_monthly=0, apply=True)
+
+    assert result["ignored"] == ["local-1234"]
+    assert _runs_in_bucket(s3_client) == [runs[-1], "local-1234"]
+
+
+def test_prune_refuses_when_the_published_run_id_has_no_timestamp(
+    remote_store: CachedBlobStore, s3_client: Any,
+) -> None:
+    _weekly_runs(s3_client)
+    _seed_run(s3_client, "local-1234", "2026-01-01T00:00:00Z")
+    _publish(s3_client, "local-1234")
+
+    with pytest.raises(BlobStoreError, match="UTC timestamp"):
+        prune(apply=True)
+    assert len(_runs_in_bucket(s3_client)) == 13
 
 
 def test_prune_refuses_without_a_published_run(

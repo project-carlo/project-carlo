@@ -172,6 +172,7 @@ jobs:
       # keeping recent weeks and one run a month to roll back to. A failure
       # here is reported but does not fail the published run.
       - name: Prune old runs
+        id: prune
         if: steps.publish.outcome == 'success'
         continue-on-error: true
         env:
@@ -183,6 +184,16 @@ jobs:
             -e CARLO_REMOTE_WRITE=1 \
             project-carlo-weekly:latest \
             uv run --no-sync python -m pdf_extract data prune --apply
+
+      - name: Report a failed prune
+        if: steps.prune.outcome == 'failure'
+        run: |
+          echo "::warning::Pruning old runs failed; the bucket keeps growing until it succeeds. See the Prune old runs step."
+          {
+            echo
+            echo "> [!WARNING]"
+            echo "> Pruning old runs failed, so old runs were not deleted this week. See the *Prune old runs* step's log."
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Open or update an issue for a held or failed run
         if: always() && steps.pipeline.outputs.status != 'passed' && github.ref_name == github.event.repository.default_branch

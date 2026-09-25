@@ -187,6 +187,38 @@ def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db
     ) == b"%PDF small"
 
 
+def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:
+    # The same PDF re-posted at a new URL: the stored copy is not rewritten.
+    urls = iter(["https://example.org/a.pdf", "https://example.org/b.pdf"])
+
+    def build_link(bulletin_provider, fetch_provider_id, *, page=None):
+        url = next(urls)
+        return BulletinLink(source_url=url, fetch_url=url)
+
+    compactions = []
+
+    def compact(data: bytes) -> bytes:
+        compactions.append(data)
+        return b"%PDF compacted " + str(len(compactions)).encode()
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: b"%PDF-1.4 same")
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", compact)
+
+    @contextmanager
+    def fake_launch_stealth_browser():
+        yield None
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+
+    fetch_bulletins(parish_name="Test Parish")
+    fetch_bulletins(parish_name="Test Parish")
+
+    assert len(compactions) == 1
+    content_hash = hashlib.sha256(b"%PDF-1.4 same").hexdigest()
+    assert get_store().get(bulletin_pdf_key("test-parish", content_hash)) == b"%PDF compacted 1"
+
+
 def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) -> None:
     def build_link(bulletin_provider, fetch_provider_id, *, page=None):
         return BulletinLink(

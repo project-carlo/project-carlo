@@ -76,8 +76,9 @@ which covers the case where the job never runs at all.
 - **Roll back:** run **Publish Data Run** with an earlier run id (listed, with
   each run's status, by `pnpm data:status`) and tick **rollback**.
 - **Old runs:** after each publish, the weekly job deletes old runs, keeping
-  the published run and anything newer, the 8 most recent runs, and the last
-  run of each of the 12 most recent months. Those are the runs you can roll
+  the published run and anything newer, the 8 most recent runs, and for each
+  of the 12 most recent months that month's last run that passed or was
+  published (held runs nobody published don't count). Those are the runs you can roll
   back to. `pnpm data:prune` shows what it would delete now;
   `--keep-recent` and `--keep-monthly` change the policy.
 - **Inspect a held run locally:** `pnpm data:pull --run-id <id>`, then query
