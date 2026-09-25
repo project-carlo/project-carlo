@@ -40,9 +40,10 @@ curl -sS "$HTTPS_PROXY/__agentproxy/status" | python3 -c \
   "import json,sys; [print(f['host'], f['detail']) for f in json.load(sys.stdin)['recentRelayFailures']]"
 ```
 
-If even `https://example.com` is refused, the environment is on an
-allowlist-only policy. That is how this repo's environment was set up
-when these findings were recorded.
+If even `https://example.com` is refused, the environment is on the
+**Trusted** level (or Custom/None). That was the case when these findings
+were recorded. See "Getting unblocked" before blaming the sites or the
+user's claude.ai settings.
 
 ## Run the probe first
 
@@ -64,10 +65,33 @@ For each target it gives one status for plain HTTP and one for Playwright:
 
 ## Getting unblocked (the user has to do this)
 
-The user changes **Network access** in the cloud environment's settings
-(the environment menu in the session title bar → Edit). They can either pick
-a broader access level or add the hosts below to the allowed domains. Access
-levels are documented at https://code.claude.com/docs/en/claude-code-on-the-web.
+**Two different settings, and only one of them matters here.** claude.ai
+**Settings → Capabilities → Domain allowlist = "All domains"** controls
+the claude.ai chat / Cowork code-execution sandbox. It does **not** apply to
+Claude Code cloud sessions. The user set that one to "All domains" and every
+parish host was still refused. (Separately, anthropics/claude-code#93562
+reports that even that setting has been ignored since 2026-09-11 on the
+surfaces it does govern.)
+
+What controls this container is the cloud **environment's Network access
+level**. Check it with the `list_environments` tool: this repo's sessions
+ran in `Default` with the description "Default - trusted network access".
+The levels, per https://code.claude.com/docs/en/cloud-environments:
+
+| Level | Reaches |
+|---|---|
+| None | nothing (GitHub, MCP connectors and the Anthropic API still work) |
+| **Trusted** (default) | package registries, GitHub, cloud SDKs, and nothing else. No parish sites. |
+| **Full** | any domain |
+| **Custom** | your own list, optionally plus the Trusted defaults |
+
+To change it: at claude.ai/code, click the cloud icon with the environment
+name in the row above the message box, hover the environment, click the
+gear, then set **Network access** to **Full**, or to **Custom** with the
+hosts below and "Also include default list of common package managers"
+ticked. There's no settings page or URL for this. Then **start a new
+session**: resuming this one after the Capabilities change made no
+difference, and the docs say sessions read environment config at startup.
 
 Hosts the pipeline needs. The first block covers most fetches: from
 `data/metadata.json`, 613 of 1279 bulletins came from parishesonline.com,
