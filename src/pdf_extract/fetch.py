@@ -14,6 +14,7 @@ from urllib.request import Request, urlopen
 
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.browser import AnchorLike, PageLike, launch_stealth_browser
+from pdf_extract.pdf_compact import compact_bulletin_pdf
 from pdf_extract.runs import (
     FETCH_DOWNLOAD_FAILED,
     FETCH_NEW,
@@ -869,14 +870,19 @@ def fetch_bulletins(
                     failed += 1
                     continue
 
+                # The hash names the bulletin as published, so it stays the
+                # bulletin's identity however the stored copy is compacted.
                 content_hash = hashlib.sha256(pdf_bytes).hexdigest()
+                key = bulletin_pdf_key(slug, content_hash)
                 try:
                     # Stored before the row that points at it, so a bulletin row
-                    # never names a PDF that is not there.
-                    store.put(
-                        bulletin_pdf_key(slug, content_hash), pdf_bytes,
-                        content_type="application/pdf",
-                    )
+                    # never names a PDF that is not there. Compaction is not
+                    # byte-for-byte repeatable, so a bulletin already stored
+                    # (the same PDF at a new URL) is left as it is.
+                    if not store.exists(key):
+                        store.put(
+                            key, compact_bulletin_pdf(pdf_bytes), content_type="application/pdf",
+                        )
                     insert_bulletin(
                         conn,
                         parish_id=parish["id"],
