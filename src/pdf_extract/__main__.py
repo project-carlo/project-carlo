@@ -29,11 +29,14 @@ from pdf_extract.apply import (
 from pdf_extract.classifiers import available_classifiers
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
+    DEFAULT_KEEP_MONTHLY,
+    DEFAULT_KEEP_RECENT,
     build_deploy_snapshot,
     promote,
     pull,
     push_candidate,
 )
+from pdf_extract.datasync import prune as data_prune
 from pdf_extract.datasync import status as data_status
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
@@ -207,6 +210,12 @@ def _cmd_data_promote(args: argparse.Namespace) -> Result:
 
 def _cmd_data_status(args: argparse.Namespace) -> Result:
     return data_status(limit=args.limit)
+
+
+def _cmd_data_prune(args: argparse.Namespace) -> Result:
+    return data_prune(
+        keep_recent=args.keep_recent, keep_monthly=args.keep_monthly, apply=args.apply,
+    )
 
 
 def _cmd_db_create(args: argparse.Namespace) -> Result:
@@ -424,6 +433,24 @@ def _build_parser() -> argparse.ArgumentParser:
     data_status_parser.add_argument("--limit", type=int, default=10)
     data_status_parser.set_defaults(handler=_cmd_data_status)
     _add_common_args(data_status_parser)
+
+    data_prune_parser = data_subparsers.add_parser(
+        "prune",
+        help="Delete old uploaded runs, keeping recent weeks and one run a month",
+    )
+    data_prune_parser.add_argument(
+        "--keep-recent", type=int, default=DEFAULT_KEEP_RECENT,
+        help=f"Most recent runs to keep (default {DEFAULT_KEEP_RECENT})",
+    )
+    data_prune_parser.add_argument(
+        "--keep-monthly", type=int, default=DEFAULT_KEEP_MONTHLY,
+        help=f"Months for which to keep that month's last run (default {DEFAULT_KEEP_MONTHLY})",
+    )
+    data_prune_parser.add_argument(
+        "--apply", action="store_true", help="Delete; without it, only report what would go",
+    )
+    data_prune_parser.set_defaults(handler=_cmd_data_prune)
+    _add_common_args(data_prune_parser)
 
     # -- diocese (exploring new dioceses; quiet by default, the JSON is the output) --
     add_diocese_parser(
