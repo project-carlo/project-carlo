@@ -16,6 +16,7 @@ dependencies = [
     "playwright-stealth>=2.0.2",
     "pypdf>=6.10.2",
     "boto3>=1.43.102",
+    "pyyaml>=6.0.3",
 ]
 
 [tool.hatch.build.targets.wheel]

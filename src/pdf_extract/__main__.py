@@ -39,6 +39,8 @@ from pdf_extract.datasync import (
 from pdf_extract.datasync import status as data_status
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
+from pdf_extract.dioceses import DioceseError
+from pdf_extract.dioceses.cli import add_diocese_parser
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
 from pdf_extract.fetch import fetch_bulletins
@@ -87,12 +89,12 @@ def _load_dotenv(path: Path = Path(".env")) -> None:
         os.environ.setdefault(key, value)
 
 
-def _add_common_args(parser: argparse.ArgumentParser) -> None:
+def _add_common_args(parser: argparse.ArgumentParser, default_level: str = "INFO") -> None:
     parser.add_argument(
         "--log-level",
-        default="INFO",
+        default=default_level,
         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
-        help="Logging verbosity (default: INFO)",
+        help=f"Logging verbosity (default: {default_level})",
     )
 
 
@@ -461,6 +463,11 @@ def _build_parser() -> argparse.ArgumentParser:
     data_upload_parser.set_defaults(handler=_cmd_data_upload_bulletins)
     _add_common_args(data_upload_parser)
 
+    # -- diocese (exploring new dioceses; quiet by default, the JSON is the output) --
+    add_diocese_parser(
+        subparsers, lambda p: _add_common_args(p, default_level="WARNING"),
+    )
+
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
     db_parser.set_defaults(help_parser=db_parser)
@@ -516,6 +523,10 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         result = handler(args)
+    except DioceseError as e:
+        # Bad input, not a crash: the message says what to fix, a traceback would bury it.
+        print(f"Error: {e}", file=sys.stderr)
+        return 1
     except Exception as e:
         LOGGER.exception("Command failed")
         print(f"Error: {e}", file=sys.stderr)

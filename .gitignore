@@ -64,11 +64,13 @@ apps/web/public/frontend.snapshot
 apps/web/public/frontend.snapshot.previous
 apps/web/public/*.wasm
 
-# Claude Code. The shared session-start hook and its registration are tracked;
-# everything else under .claude/ (local settings, caches) stays local.
+# Claude Code. The shared session-start hook, its registration and the project
+# skills are tracked; everything else under .claude/ (local settings, caches)
+# stays local.
 .claude/*
 !.claude/settings.json
 !.claude/hooks/
+!.claude/skills/
 
 # Ad-hoc UI benchmark runs (`pnpm --filter web perf --save <name>`). The two
 # reference runs recorded when the harness landed stay tracked.

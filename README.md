@@ -189,6 +189,7 @@ pnpm weekly:run
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
 pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
+pnpm diocese <subcommand> ...
 pnpm extract:web
 pnpm verify:frontend-snapshot
 pnpm data:pull [--run-id ID --snapshot-only --no-snapshot]
@@ -262,6 +263,19 @@ has lost the date it was sighted on.
 a changed threshold to events processed earlier. It records every sighting to
 the history before promoting, since promotion clears a row's date.
 
+## Exploring new dioceses
+
+`data/dioceses/<diocese>/` is where a diocese the pipeline does not cover yet is worked out
+before its rows are promoted into `data/parishes.csv` and `data/churches.csv`. It has one
+Markdown file per parish (bulletin publisher), church (worship site), excluded place and open
+question. Each file carries dated, quoted evidence and an explanation written for whoever
+audits the row later, and the files stay as the provenance of the live rows after
+promotion. `pnpm diocese` fetches rosters (GCatholic, WP Store Locator parish finders),
+measures coverage against them, audits which rows might be one bulletin, probes parish sites,
+ParishesOnline containers and bulletin PDFs, rechecks evidence, and promotes. See
+[`data/dioceses/README.md`](data/dioceses/README.md); agents get the short version from the
+`explore-diocese` skill in `.claude/skills/`.
+
 ## Environment Variables
 
 Commands read a `.env` file in the repo root if there is one (without
@@ -291,6 +305,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 - `uv.lock` - locked dependency versions
 - `data/migrations/` - SQLite schema, as numbered migrations
 - `data/parishes.csv`, `data/churches.csv` - curated parish and church lists
+- `data/dioceses/` - parishes and churches of dioceses still being explored
 - `data/` (untracked) - the local database, bulletin PDF cache and run outputs
 - `docs/data-setup.md` - one-time R2 and GitHub setup
 - `apps/web/` - React + TypeScript + Vite frontend
@@ -309,6 +324,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
+  - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
 
 ## Dependencies
 

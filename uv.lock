@@ -525,6 +525,7 @@ dependencies = [
     { name = "playwright-stealth" },
     { name = "pydantic" },
     { name = "pypdf" },
+    { name = "pyyaml" },
 ]
 
 [package.dev-dependencies]
@@ -544,6 +545,7 @@ requires-dist = [
     { name = "playwright-stealth", specifier = ">=2.0.2" },
     { name = "pydantic", specifier = ">=2.12.5" },
     { name = "pypdf", specifier = ">=6.10.2" },
+    { name = "pyyaml", specifier = ">=6.0.3" },
 ]
 
 [package.metadata.requires-dev]
