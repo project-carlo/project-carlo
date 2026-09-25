@@ -2,11 +2,15 @@
 
 from __future__ import annotations
 
-import json
+import sqlite3
+from collections.abc import Iterator
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
+import pytest
+
+from pdf_extract.db import create_db
 from pdf_extract.recurrence import (
     HISTORY_RETENTION_WEEKS,
     LOOKBACK_WEEKS,
@@ -14,14 +18,16 @@ from pdf_extract.recurrence import (
     History,
     apply_recurrence,
     bulletin_reference_date,
-    load_history,
+    history_from_records,
+    load_history_from_db,
     occurrence_from_row,
     promote_recurring_events,
     prune_history,
     record_observations,
-    save_history,
+    save_history_to_db,
 )
-from pdf_extract.storage import save_json_list
+from pdf_extract.storage import connect_db, load_events, replace_bulletin_events
+from tests.conftest import CHURCH_FIELDS, PARISH_FIELDS, write_csv
 
 BASE_DATE = date(2026, 8, 19)  # a Wednesday
 
@@ -375,122 +381,148 @@ def test_prune_history_is_not_dragged_forward_by_future_dated_events() -> None:
     assert len(history[("st-mary-anytown", "adoration", 1140)]) == 3
 
 
-def test_history_round_trips_through_disk(tmp_path: Path) -> None:
-    path = tmp_path / "event_history.json"
+# ── History storage ─────────────────────────────────────────────────────────
+@pytest.fixture
+def conn(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[sqlite3.Connection]:
+    """A pipeline DB with two parishes, each with a processed bulletin and a church."""
+    monkeypatch.chdir(tmp_path)
+    write_csv(
+        tmp_path / "data" / "parishes.csv",
+        PARISH_FIELDS,
+        [
+            {"slug": "parish-a", "name": "Parish A", "website": "https://a.example.org"},
+            {"slug": "parish-b", "name": "Parish B", "website": "https://b.example.org"},
+        ],
+    )
+    write_csv(
+        tmp_path / "data" / "churches.csv",
+        CHURCH_FIELDS,
+        [
+            {"parish_id": "parish-a", "slug": "st-mary-anytown", "name": "St. Mary",
+             "line1": "1 Main St", "city": "Anytown", "state": "NY", "postal_code": "14000"},
+            {"parish_id": "parish-b", "slug": "st-joseph", "name": "St. Joseph",
+             "line1": "2 Main St", "city": "Anytown", "state": "NY", "postal_code": "14000"},
+        ],
+    )
+    create_db()
+    connection = connect_db()
+    with connection:
+        for slug, url in (
+            ("parish-a", "https://example.org/bulletin.pdf"),
+            ("parish-b", "https://example.org/other.pdf"),
+        ):
+            connection.execute(
+                """INSERT INTO bulletin(parish_id, source_url, content_hash, fetched_at,
+                                        processed_at, published_date)
+                   SELECT id, ?, 'hash', ?, ?, ? FROM parish WHERE slug = ?""",
+                (url, "2026-08-17T00:00:00Z", "2026-08-17T01:00:00Z", "2026-08-16", slug),
+            )
+    yield connection
+    connection.close()
+
+
+def _bulletin_id(conn: sqlite3.Connection, source_url: str) -> int:
+    return conn.execute(
+        "SELECT id FROM bulletin WHERE source_url = ?", (source_url,)
+    ).fetchone()["id"]
+
+
+def _store_rows(conn: sqlite3.Connection, rows: list[dict[str, Any]]) -> None:
+    by_url: dict[str, list[dict[str, Any]]] = {}
+    for row in rows:
+        by_url.setdefault(row["bulletin_source_url"], []).append(row)
+    for url, bulletin_rows in by_url.items():
+        replace_bulletin_events(conn, _bulletin_id(conn, url), bulletin_rows)
+
+
+def test_history_round_trips_through_the_database(conn: sqlite3.Connection) -> None:
     history = _history_for([1, 2])
     history[("st-mary-anytown", "mass", 540)] = {BASE_DATE}
-    save_history(history, path)
-    assert load_history(path) == history
+    assert save_history_to_db(conn, history) == 3
+    assert load_history_from_db(conn) == history
 
 
-def test_history_is_grouped_by_slot_on_disk(tmp_path: Path) -> None:
-    path = tmp_path / "event_history.json"
-    save_history(_history_for([1, 2]), path)
-    records = json.loads(path.read_text(encoding="utf-8"))
-    assert records == [
+def test_saving_history_replaces_what_was_stored(conn: sqlite3.Connection) -> None:
+    save_history_to_db(conn, _history_for([1, 2]))
+    save_history_to_db(conn, _history_for([1]))
+    assert load_history_from_db(conn) == _history_for([1])
+
+
+def test_legacy_history_records_are_grouped_by_slot() -> None:
+    records = [
         {
             "church_slug": "st-mary-anytown",
             "event_type": "adoration",
             "start_time": 1140,
-            "dates": ["2026-08-05", "2026-08-12"],
-        }
+            "dates": ["2026-08-05", "2026-08-12", "not a date"],
+        },
+        {"church_slug": "st-mary-anytown", "event_type": "adoration", "start_time": "7pm"},
     ]
+    assert history_from_records(records) == _history_for([1, 2])
 
 
-# ── apply_recurrence over events.json ───────────────────────────────────────
-def test_apply_recurrence_rewrites_the_events_file(tmp_path: Path) -> None:
-    events_path = tmp_path / "events.json"
-    history_path = tmp_path / "event_history.json"
-    save_json_list(events_path, [_dated_row(BASE_DATE)])
-    save_history(_history_for([1, 2]), history_path)
+# ── apply_recurrence over the current events ────────────────────────────────
+def test_apply_recurrence_rewrites_the_current_events(conn: sqlite3.Connection) -> None:
+    _store_rows(conn, [_dated_row(BASE_DATE)])
+    save_history_to_db(conn, _history_for([1, 2]))
 
-    result = apply_recurrence(
-        events_path=events_path,
-        history_path=history_path,
-        metadata_path=tmp_path / "metadata.json",
-        today=BASE_DATE,
-    )
+    result = apply_recurrence(conn, today=BASE_DATE)
 
     assert result == {"events": 1, "promoted": 1, "recorded": 1}
-    written = json.loads(events_path.read_text(encoding="utf-8"))
-    assert written[0]["event_kind"] == "weekly"
-    assert written[0]["day_of_week"] == "Wednesday"
+    [written] = load_events(conn)
+    assert written["event_kind"] == "weekly"
+    assert written["day_of_week"] == "Wednesday"
 
 
-def test_apply_recurrence_dedupes_only_within_a_bulletin(tmp_path: Path) -> None:
-    events_path = tmp_path / "events.json"
-    history_path = tmp_path / "event_history.json"
+def test_apply_recurrence_dedupes_only_within_a_bulletin(conn: sqlite3.Connection) -> None:
     # The same slug/time in two parishes' bulletins must not collapse together.
-    other_bulletin = {"bulletin_source_url": "https://example.org/other.pdf"}
-    save_json_list(
-        events_path,
-        [_dated_row(BASE_DATE), _dated_row(BASE_DATE, **other_bulletin)],
+    _store_rows(
+        conn,
+        [
+            _dated_row(BASE_DATE),
+            _dated_row(BASE_DATE, bulletin_source_url="https://example.org/other.pdf"),
+        ],
     )
-    save_history(_history_for([1, 2]), history_path)
+    save_history_to_db(conn, _history_for([1, 2]))
 
-    result = apply_recurrence(
-        events_path=events_path,
-        history_path=history_path,
-        metadata_path=tmp_path / "metadata.json",
-        today=BASE_DATE,
-    )
+    result = apply_recurrence(conn, today=BASE_DATE)
 
     assert result == {"events": 2, "promoted": 2, "recorded": 1}
 
 
-def test_apply_recurrence_leaves_the_file_alone_when_nothing_promotes(
-    tmp_path: Path,
+def test_apply_recurrence_leaves_events_alone_when_nothing_promotes(
+    conn: sqlite3.Connection,
 ) -> None:
-    events_path = tmp_path / "events.json"
-    history_path = tmp_path / "event_history.json"
-    save_json_list(events_path, [_dated_row(BASE_DATE)])
-    save_history(_history_for([1]), history_path)
-    before = events_path.read_text(encoding="utf-8")
+    _store_rows(conn, [_dated_row(BASE_DATE)])
+    save_history_to_db(conn, _history_for([1]))
+    before = load_events(conn)
 
-    result = apply_recurrence(
-        events_path=events_path,
-        history_path=history_path,
-        metadata_path=tmp_path / "metadata.json",
-        today=BASE_DATE,
-    )
+    result = apply_recurrence(conn, today=BASE_DATE)
 
     assert result == {"events": 1, "promoted": 0, "recorded": 1}
-    assert events_path.read_text(encoding="utf-8") == before
+    assert load_events(conn) == before
 
 
 def test_apply_recurrence_records_sightings_before_it_clears_their_dates(
-    tmp_path: Path,
+    conn: sqlite3.Connection,
 ) -> None:
     """Promotion clears a row's `date`, so the sighting has to be filed first.
 
-    events.json is the only place an unrecorded sighting exists; promoting
+    The stored row is the only place an unrecorded sighting exists; promoting
     without recording destroys it, leaving a hole in the chain that breaks the
     slot back to a dated event the following week.
     """
-    events_path = tmp_path / "events.json"
-    history_path = tmp_path / "event_history.json"
-    metadata_path = tmp_path / "metadata.json"
-    save_json_list(events_path, [_dated_row(BASE_DATE)])
-    save_history(_history_for([1, 2]), history_path)
+    _store_rows(conn, [_dated_row(BASE_DATE)])
+    save_history_to_db(conn, _history_for([1, 2]))
 
-    apply_recurrence(
-        events_path=events_path,
-        history_path=history_path,
-        metadata_path=metadata_path,
-        today=BASE_DATE,
-    )
+    apply_recurrence(conn, today=BASE_DATE)
 
     slot = ("st-mary-anytown", "adoration", 1140)
-    assert BASE_DATE in load_history(history_path)[slot]
+    assert BASE_DATE in load_history_from_db(conn)[slot]
 
     # With its own week on file, next week's bulletin still sees an unbroken chain.
-    save_json_list(events_path, [_dated_row(BASE_DATE + timedelta(weeks=1))])
-    result = apply_recurrence(
-        events_path=events_path,
-        history_path=history_path,
-        metadata_path=metadata_path,
-        today=BASE_DATE,
-    )
+    _store_rows(conn, [_dated_row(BASE_DATE + timedelta(weeks=1))])
+    result = apply_recurrence(conn, today=BASE_DATE)
     assert result["promoted"] == 1
 
 

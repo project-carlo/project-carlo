@@ -4,7 +4,19 @@ services:
       context: .
       dockerfile: Dockerfile
     working_dir: /workspace
+    # Credentials pass through from your shell (`export ...` or `-e` on the command line).
+    # Leave CARLO_REMOTE_WRITE unset locally: the run is pulled from R2 and its
+    # outputs stay in data/out/<run_id>/. Note the run pulls over your local
+    # data/parish_events.db (the old one is kept as parish_events.db.bak).
+    environment:
+      - RUN_ID
+      - GEMINI_API_KEY
+      - R2_ACCOUNT_ID
+      - R2_BUCKET
+      - R2_ENDPOINT_URL
+      - R2_ACCESS_KEY_ID
+      - R2_SECRET_ACCESS_KEY
+      - CARLO_REMOTE_WRITE
     volumes:
       - ./data:/workspace/data
-      - ./apps/web/public:/workspace/apps/web/public
     command: ["bash", "docker/weekly-run.sh"]

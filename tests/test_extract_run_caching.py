@@ -10,46 +10,10 @@ from typing import Any
 import pytest
 
 from pdf_extract import extract_run, runner
+from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.classifiers import REGISTRY
-from pdf_extract.storage import SCHEMA_PATH, connect_db, save_json_list
-
-
-def _setup_test_db(tmp_path: Path) -> Path:
-    db_path = tmp_path / "parish_events.db"
-    conn = connect_db(db_path)
-    schema_sql = SCHEMA_PATH.read_text(encoding="utf-8")
-    conn.executescript(schema_sql)
-    conn.execute(
-        """INSERT INTO parish(
-            slug, name, homepage_url, bulletin_provider, provider_id, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?)""",
-        (
-            "test-parish",
-            "Test Parish",
-            "https://test.org",
-            "ecatholic",
-            None,
-            "2026-01-01T00:00:00Z",
-        ),
-    )
-    parish_id = conn.execute("SELECT id FROM parish WHERE slug = 'test-parish'").fetchone()["id"]
-    conn.execute(
-        "INSERT INTO church(parish_id, slug, name, address_line1, city, state, postal_code,"
-        " created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-        (
-            parish_id,
-            "st-mary-anytown",
-            "St. Mary",
-            "123 Main St",
-            "Anytown",
-            "NY",
-            "14000",
-            "2026-01-01T00:00:00Z",
-        ),
-    )
-    conn.commit()
-    conn.close()
-    return db_path
+from pdf_extract.db import create_db
+from pdf_extract.storage import churches_for_parish, connect_db, load_bulletins
 
 
 class _CountingClassifier:
@@ -89,41 +53,34 @@ def _payload_one_event() -> dict[str, Any]:
     }
 
 
-def _patch_paths(monkeypatch, tmp_path: Path, classifier: _CountingClassifier) -> None:
-    monkeypatch.setattr(extract_run, "BULLETINS_METADATA_PATH", tmp_path / "metadata.json")
-    monkeypatch.setattr(runner, "RUNS_DIR", tmp_path / "runs")
-    # Skip the pypdf truncation helper for these stub PDFs.
-    monkeypatch.setattr("pdf_extract.storage.ensure_truncated_pdf", lambda path, **kwargs: path)
-    monkeypatch.setitem(REGISTRY, classifier.name, lambda: classifier)
+def _churches() -> list[dict[str, Any]]:
+    conn = connect_db()
+    try:
+        return churches_for_parish(conn, "test-parish")
+    finally:
+        conn.close()
 
 
 @pytest.fixture
-def seeded_run(tmp_path, monkeypatch):
-    """A test harness with one bulletin in metadata and a counting classifier."""
-    db_path = _setup_test_db(tmp_path)
-    monkeypatch.setattr(extract_run, "connect_db", lambda: connect_db(db_path))
+def seeded_run(pipeline_dir: Path, monkeypatch):
+    """One unprocessed bulletin for test-parish and a counting classifier."""
+    create_db()
+    get_store().put(bulletin_pdf_key("test-parish", "hash-abc"), b"fake")
+    conn = connect_db()
+    with conn:
+        conn.execute(
+            """INSERT INTO bulletin(parish_id, source_url, content_hash, fetched_at)
+               SELECT id, 'https://example.org/parsed.pdf', 'hash-abc',
+                      '2026-01-01T00:00:00Z'
+               FROM parish WHERE slug = 'test-parish'"""
+        )
+    conn.close()
 
-    pdf_path = tmp_path / "sample.pdf"
-    pdf_path.write_bytes(b"fake")
-
-    save_json_list(
-        tmp_path / "metadata.json",
-        [
-            {
-                "parish_slug": "test-parish",
-                "source_url": "https://example.org/parsed.pdf",
-                "pdf_path": str(pdf_path),
-                "content_hash": "hash-abc",
-                "fetched_at": "2026-01-01T00:00:00Z",
-                "processed_at": None,
-                "published_date": None,
-            }
-        ],
-    )
-
+    # Skip the pypdf truncation helper for these stub PDFs.
+    monkeypatch.setattr("pdf_extract.storage.ensure_truncated_pdf", lambda path, **kwargs: path)
     classifier = _CountingClassifier(_payload_one_event())
-    _patch_paths(monkeypatch, tmp_path, classifier)
-    return tmp_path, classifier
+    monkeypatch.setitem(REGISTRY, classifier.name, lambda: classifier)
+    return pipeline_dir, classifier
 
 
 def test_first_run_calls_classifier_and_writes_outputs(seeded_run):
@@ -136,9 +93,7 @@ def test_first_run_calls_classifier_and_writes_outputs(seeded_run):
     assert summary["cache_misses"] == 1
     assert summary["events_written"] == 1
 
-    cache_file = runner.cache_path("counting", "v1", "hash-abc")
-    assert cache_file.exists()
-    cached = json.loads(cache_file.read_text(encoding="utf-8"))
+    cached = json.loads(get_store().get(runner.cache_key("counting", "v1", "hash-abc", _churches())))
     assert cached["events"][0]["church_slug"] == "st-mary-anytown"
 
     bulletins_file = extract_run.bulletins_path("counting")
@@ -146,7 +101,7 @@ def test_first_run_calls_classifier_and_writes_outputs(seeded_run):
     assert bulletins == [
         {
             "bulletin_source_url": "https://example.org/parsed.pdf",
-            "pdf_path": str(tmp_path / "sample.pdf"),
+            "pdf_path": "data/bulletins/test-parish/hash-abc.pdf",
             "parish_slug": "test-parish",
             "published_date": None,
             "event_count": 1,
@@ -154,7 +109,7 @@ def test_first_run_calls_classifier_and_writes_outputs(seeded_run):
         }
     ]
 
-    events_file = tmp_path / "runs" / "counting" / "events.json"
+    events_file = tmp_path / "data" / "runs" / "counting" / "events.json"
     events = json.loads(events_file.read_text(encoding="utf-8"))
     assert events[0]["bulletin_source_url"] == "https://example.org/parsed.pdf"
     assert events[0]["event_type"] == "mass"
@@ -185,16 +140,18 @@ def test_cache_miss_after_classifier_version_changes(seeded_run):
     assert classifier.call_count == 2
     assert summary["cache_hits"] == 0
     assert summary["cache_misses"] == 1
-    assert runner.cache_path("counting", "v2", "hash-abc").exists()
+    assert get_store().exists(runner.cache_key("counting", "v2", "hash-abc", _churches()))
 
 
-def test_run_does_not_touch_metadata_processed_at(seeded_run):
-    tmp_path, _ = seeded_run
-
+def test_run_does_not_touch_processed_at(seeded_run):
     extract_run.run(classifier_name="counting", concurrency=1)
 
-    metadata = json.loads((tmp_path / "metadata.json").read_text(encoding="utf-8"))
-    assert metadata[0]["processed_at"] is None, (
+    conn = connect_db()
+    try:
+        bulletins = load_bulletins(conn)
+    finally:
+        conn.close()
+    assert bulletins[0]["processed_at"] is None, (
         "experimental runs must not mark bulletins as processed for the prod path"
     )
 
@@ -202,3 +159,43 @@ def test_run_does_not_touch_metadata_processed_at(seeded_run):
 def test_unknown_classifier_raises(seeded_run):
     with pytest.raises(KeyError):
         extract_run.run(classifier_name="nope")
+
+
+def test_a_failed_cache_write_does_not_fail_the_run(seeded_run, monkeypatch):
+    """The cache is an optimisation: losing a write must not lose the extraction."""
+    def failing_put(*args, **kwargs):
+        raise RuntimeError("R2 unavailable")
+
+    monkeypatch.setattr(get_store(), "put", failing_put)
+
+    summary = extract_run.run(classifier_name="counting", concurrency=1)
+
+    assert summary["events_written"] == 1
+    assert summary["errors"] == []
+
+
+def test_cache_miss_after_the_church_list_changes(seeded_run):
+    """Results name church slugs from the prompt's list, so a new list re-extracts."""
+    tmp_path, classifier = seeded_run
+    extract_run.run(classifier_name="counting", concurrency=1)
+
+    churches_csv = tmp_path / "data" / "churches.csv"
+    churches_csv.write_text(
+        churches_csv.read_text(encoding="utf-8").replace("Test Church", "Renamed Church"),
+        encoding="utf-8",
+    )
+    create_db()  # re-seed from the edited CSV
+    get_store().put(bulletin_pdf_key("test-parish", "hash-abc"), b"fake")
+    conn = connect_db()
+    with conn:
+        conn.execute(
+            """INSERT INTO bulletin(parish_id, source_url, content_hash, fetched_at)
+               SELECT id, 'https://example.org/parsed.pdf', 'hash-abc', '2026-01-01T00:00:00Z'
+               FROM parish WHERE slug = 'test-parish'"""
+        )
+    conn.close()
+
+    summary = extract_run.run(classifier_name="counting", concurrency=1)
+
+    assert classifier.call_count == 2
+    assert summary["cache_hits"] == 0

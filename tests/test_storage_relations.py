@@ -1,13 +1,13 @@
 from pathlib import Path
 
-from pdf_extract.storage import SCHEMA_PATH, connect_db
+from pdf_extract.db import migrate
+from pdf_extract.storage import connect_db
 
 
 def test_event_belongs_to_church_and_bulletin(tmp_path: Path) -> None:
     db_path = tmp_path / "parish_events.db"
     conn = connect_db(db_path)
-    schema_sql = SCHEMA_PATH.read_text(encoding="utf-8")
-    conn.executescript(schema_sql)
+    migrate(conn)
 
     # Insert test data
     conn.execute(

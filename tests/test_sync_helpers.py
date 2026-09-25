@@ -1,6 +1,5 @@
 from dataclasses import replace
 from datetime import date
-from pathlib import Path
 
 import pytest
 
@@ -31,33 +30,7 @@ from pdf_extract.fetch import (
     build_latest_other_bulletin_links,
     build_latest_parishes_online_bulletin_links,
 )
-from pdf_extract.storage import (
-    SCHEMA_PATH,
-    connect_db,
-    utc_now_iso,
-)
-
-
-def _create_test_db(db_path: Path) -> None:
-    """Create a test database from schema.sql with a test parish."""
-    conn = connect_db(db_path)
-    schema_sql = SCHEMA_PATH.read_text(encoding="utf-8")
-    conn.executescript(schema_sql)
-    conn.execute(
-        """INSERT INTO parish(
-            slug, name, homepage_url, bulletin_provider, provider_id, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?)""",
-        (
-            "test-parish",
-            "Test Parish",
-            "https://test.org",
-            "ecatholic",
-            None,
-            "2026-01-01T00:00:00Z",
-        ),
-    )
-    conn.commit()
-    conn.close()
+from pdf_extract.storage import utc_now_iso
 
 
 def test_build_latest_ecatholic_bulletin_links(monkeypatch) -> None:
@@ -749,12 +722,12 @@ def test_parse_ecatholic_pdf_date() -> None:
 
 def test_report_stale_parishes_names_parishes_stuck_on_old_bulletins() -> None:
     fresh = utc_now_iso()
-    metadata = [
+    bulletins = [
         {"parish_slug": "fresh-parish", "fetched_at": fresh},
         {"parish_slug": "stale-parish", "fetched_at": "2026-01-01T00:00:00Z"},
     ]
     stale = _report_stale_parishes(
-        metadata=metadata,
+        bulletins=bulletins,
         slugs=["fresh-parish", "stale-parish", "never-fetched-parish"],
     )
     assert stale == ["stale-parish", "never-fetched-parish"]

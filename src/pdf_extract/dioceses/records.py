@@ -1226,7 +1226,9 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     orphans = sorted(live_church_parents - {row.get("slug") for row in new_p} - {None, ""})
     if orphans:
         raise DioceseError(f"refused: churches.csv would reference missing parishes {orphans}")
-    report["removed_rows_with_events"] = _referenced_by_events(report["churches"]["removed"])
+    report["removed_rows_with_events"] = _referenced_by_events(
+        report["churches"]["removed"], report["parishes"]["removed"],
+    )
 
     if not dry_run:
         for kind in (PARISH, CHURCH):
@@ -1239,22 +1241,43 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
         front, body = parse_file(meta_path)
         front.update(status="promoted", promoted=stamp)
         _write_text(meta_path, f"---\n{_dump_front(front)}---\n\n{body}\n")
-        report["next"] = "run `pnpm db:create` and `pnpm test` to check the live data"
+        report["next"] = (
+            "run `pnpm test`; the next pipeline command seeds the new rows into the database"
+        )
     return report
 
 
-def _referenced_by_events(church_slugs: list[str]) -> list[str]:
-    """Removed churches that data/events.json still has events for."""
-    import json
+def _referenced_by_events(church_slugs: list[str], parish_slugs: list[str] = ()) -> list[str]:
+    """Churches that would lose events in the local pipeline database.
 
-    if not church_slugs or not storage.EVENTS_PATH.exists():
+    Worth knowing before promoting: the next pipeline command re-seeds the
+    database from the CSVs. A removed church loses its events, and a removed
+    parish takes its bulletins, and every event read from them, with it, even
+    for churches that move to another parish. The weekly run holds for review
+    when that happens.
+    """
+    import sqlite3
+
+    if not (church_slugs or parish_slugs) or not storage.DEFAULT_DB_PATH.exists():
         return []
+    churches, parishes = list(church_slugs) or [""], list(parish_slugs) or [""]
     try:
-        events = json.loads(storage.EVENTS_PATH.read_text(encoding="utf-8"))
-    except ValueError:
+        conn = sqlite3.connect(f"file:{storage.DEFAULT_DB_PATH}?mode=ro", uri=True)
+        try:
+            rows = conn.execute(
+                f"""SELECT DISTINCT c.slug FROM church c
+                    JOIN event e ON e.church_id = c.id
+                    JOIN bulletin b ON b.id = e.bulletin_id
+                    JOIN parish p ON p.id = b.parish_id
+                    WHERE c.slug IN ({", ".join("?" * len(churches))})
+                       OR p.slug IN ({", ".join("?" * len(parishes))})""",
+                [*churches, *parishes],
+            ).fetchall()
+        finally:
+            conn.close()
+    except sqlite3.Error:
         return []
-    used = {e.get("church_slug") for e in events if isinstance(e, dict)}
-    return sorted(set(church_slugs) & used)
+    return sorted(slug for (slug,) in rows)
 
 
 # ── Search ──────────────────────────────────────────────────────────────────

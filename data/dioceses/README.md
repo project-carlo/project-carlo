@@ -296,9 +296,14 @@ Work in this order and only fall through when a step can't answer. Commit as you
    in `diocese.md`'s *Log* with the coverage numbers, and a commit.
 
 **Promotion:** when `todo` shows no errors or incomplete records, run `pnpm diocese promote
-<d> --dry-run`, read it, then `pnpm diocese promote <d>`, `pnpm db:create` and `pnpm test`.
+<d> --dry-run`, read it, then `pnpm diocese promote <d>` and `pnpm test`. The next pipeline
+command seeds the new rows into the database; there is no rebuild step.
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
-retired (merged, renamed or excluded). It also keeps coordinates and flags that `geocode` and
+retired (merged, renamed or excluded). Retiring a church deletes its events, and retiring a
+parish deletes its bulletins and the events read from them, even for churches moved to another
+parish. The dry run lists the churches that would lose events (`removed_rows_with_events`).
+Removals don't go live on merge: deploys keep serving the published data, and the next weekly
+run is held for review. Publishing that run is what applies them. It also keeps coordinates and flags that `geocode` and
 `verify` filled in. Keep editing the records after promotion and promote again. Don't delete
 a promoted record: exclude it or merge it, or its live row will be orphaned.
 
