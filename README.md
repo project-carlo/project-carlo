@@ -215,15 +215,16 @@ Two commands support it:
 
 ## Exploring new dioceses
 
-`data/dioceses/<diocese>/` is where parishes and churches in dioceses the
-pipeline does not cover yet are recorded, before they are promoted into
-`data/parishes.csv` and `data/churches.csv`. Each record carries a
-natural-language explanation and its sources. Places ruled out are kept in
-`not-parishes.md` / `not-churches.md` with the reason. `pnpm diocese`
-adds, edits, removes, searches (across every diocese and the live CSVs),
-validates and exports them. See [`data/dioceses/README.md`](data/dioceses/README.md);
-agents get the same instructions from the `explore-diocese` skill in
-`.claude/skills/`.
+`data/dioceses/<diocese>/` is where a diocese the pipeline does not cover yet is worked out
+before its rows are promoted into `data/parishes.csv` and `data/churches.csv`. It has one
+Markdown file per parish (bulletin publisher), church (worship site), excluded place and open
+question. Each file carries dated, quoted evidence and an explanation written for whoever
+audits the row later, and the files stay as the provenance of the live rows after
+promotion. `pnpm diocese` fetches rosters (GCatholic, WP Store Locator parish finders),
+measures coverage against them, audits which rows might be one bulletin, probes parish sites,
+ParishesOnline containers and bulletin PDFs, rechecks evidence, and promotes. See
+[`data/dioceses/README.md`](data/dioceses/README.md); agents get the short version from the
+`explore-diocese` skill in `.claude/skills/`.
 
 ## Environment Variables
 
@@ -274,7 +275,7 @@ pnpm db:drop     # delete the SQLite file
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
-  - `dioceses.py` / `dioceses_cli.py` - diocese exploration files and the `diocese` command
+  - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
 
 ## Dependencies
 
