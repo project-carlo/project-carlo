@@ -189,24 +189,24 @@ export function HomePage() {
     placeholderData: keepPreviousData,
   });
 
-  /** Mobile sheet: commit draft filters and close. Desktop: filters apply in real time. */
-  const handleApplyFilters = useCallback(() => {
-    setAppliedFilters(filters);
-    setFilterPanelOpen(false);
-  }, [filters, setAppliedFilters]);
-
-  const handleFiltersChange = useCallback(
-    (next: FilterState) => {
-      // Slider thumb / button highlight stays urgent so the input feels
-      // pinned to the cursor; the downstream query + map rerender is a
-      // transition, which lets newer drag values pre-empt in-flight work.
-      setFilters(next);
-      if (isDesktop) {
-        startTransition(() => setAppliedFilters(next));
-      }
-    },
-    [isDesktop, setAppliedFilters],
+  // Churches without coordinates aren't on the map, so they don't count.
+  const mappedChurchCount = useMemo(
+    () =>
+      data?.filter(
+        (church) => church.latitude !== null && church.longitude !== null,
+      ).length,
+    [data],
   );
+
+  // Filters apply as they change on every viewport, so the panel never shows
+  // a selection the map isn't using.
+  const handleFiltersChange = useCallback((next: FilterState) => {
+    // Slider thumb / button highlight stays urgent so the input feels
+    // pinned to the cursor; the downstream query + map rerender is a
+    // transition, which lets newer drag values pre-empt in-flight work.
+    setFilters(next);
+    startTransition(() => setAppliedFilters(next));
+  }, []);
 
   const handleChurchSelect = useCallback((church: ChurchSearchResult) => {
     if (church.latitude != null && church.longitude != null) {
@@ -324,7 +324,7 @@ export function HomePage() {
               onClose={() => setFilterPanelOpen(false)}
               filters={filters}
               onChange={handleFiltersChange}
-              onApply={handleApplyFilters}
+              resultCount={mappedChurchCount}
             />
           </div>
         </div>
