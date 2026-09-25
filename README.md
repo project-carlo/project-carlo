@@ -145,8 +145,16 @@ available. For debugging, set `PLAYWRIGHT_HEADLESS=1` to force headless mode or
 | Website snapshot | R2 `pipeline/runs/<run_id>/frontend.snapshot` | `weekly` |
 | Which run is live | R2 `pipeline/latest.json` | the weekly workflow |
 
-Everything under `pipeline/runs/` is written once and never changed, so every
-week's database stays available and a rollback is just moving the pointer.
+Everything under `pipeline/runs/` is written once and never changed, and a
+rollback is just moving the pointer. After each publish the weekly workflow
+prunes old runs (`pnpm data:prune`), keeping the last 8 weeks and one run a
+month for a year; those are the runs you can roll back to.
+
+`fetch` stores a compacted copy of each bulletin: the first 10 pages (all the
+classifiers read) with images downsampled to 150 dpi by Ghostscript, falling
+back to the PDF as downloaded when that fails or saves nothing. The key's
+hash is of the PDF as downloaded. Without `gs` installed, long bulletins are
+only truncated.
 
 Locally, `data/` doubles as a cache of the bucket: a PDF or cached extraction
 is downloaded the first time a command needs it and kept. With no R2
@@ -161,6 +169,7 @@ outside the workflow can change shared data, even `fetch` or `process`.
 ```bash
 pnpm data:pull        # reset data/parish_events.db (and the snapshot) to the published run
 pnpm data:status      # which run is published, and recent runs
+pnpm data:prune       # which old runs pruning would delete (--apply deletes them)
 pnpm db:create        # an empty database instead (schema + parishes/churches, no bulletins)
 ```
 
@@ -196,6 +205,7 @@ pnpm extract:web
 pnpm verify:frontend-snapshot
 pnpm data:pull [--run-id ID --snapshot-only --no-snapshot]
 pnpm data:status
+pnpm data:prune [--keep-recent N --keep-monthly N --apply]
 pnpm db:create
 pnpm db:drop
 ```

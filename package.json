@@ -8,6 +8,7 @@
     "db:create": "uv run python -m pdf_extract db create",
     "data:pull": "uv run python -m pdf_extract data pull",
     "data:status": "uv run python -m pdf_extract data status",
+    "data:prune": "uv run python -m pdf_extract data prune",
     "detect": "uv run python -m pdf_extract detect run",
     "detect:apply": "uv run python -m pdf_extract detect apply",
     "fetch": "uv run python -m pdf_extract fetch",

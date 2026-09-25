@@ -47,12 +47,18 @@ class BlobStore(Protocol):
 
     def exists(self, key: str) -> bool: ...
 
+    def delete(self, keys: list[str]) -> None: ...
+
     def list(self, prefix: str) -> Iterator[str]: ...
 
 
 # ── Keys ────────────────────────────────────────────────────────────────────
 def bulletin_pdf_key(parish_slug: str, content_hash: str) -> str:
-    """Where a fetched bulletin lives. Content-addressed, so never overwritten."""
+    """Where a fetched bulletin lives. Never overwritten.
+
+    `content_hash` is the SHA-256 of the PDF as downloaded; the stored bytes
+    are a compacted copy of it (see `pdf_compact`).
+    """
     return f"bulletins/{parish_slug}/{content_hash}.pdf"
 
 
@@ -88,6 +94,10 @@ class LocalBlobStore:
 
     def exists(self, key: str) -> bool:
         return self.path(key).is_file()
+
+    def delete(self, keys: list[str]) -> None:
+        for key in keys:
+            self.path(key).unlink(missing_ok=True)
 
     def list(self, prefix: str) -> Iterator[str]:
         base = self.root
@@ -134,6 +144,24 @@ class S3BlobStore:
                 return False
             raise BlobStoreError(f"Checking {key} in bucket {self.bucket} failed: {exc}") from exc
         return True
+
+    def delete(self, keys: list[str]) -> None:
+        """Delete `keys`; keys that are already gone are not an error."""
+        for start in range(0, len(keys), 1000):  # DeleteObjects takes at most 1000
+            batch = [{"Key": _check_key(key)} for key in keys[start:start + 1000]]
+            try:
+                response = self.client.delete_objects(
+                    Bucket=self.bucket, Delete={"Objects": batch, "Quiet": True},
+                )
+            except Exception as exc:
+                raise BlobStoreError(f"Deleting from bucket {self.bucket} failed: {exc}") from exc
+            errors = response.get("Errors") or []
+            if errors:
+                first = errors[0]
+                raise BlobStoreError(
+                    f"Deleting {len(errors)} objects from bucket {self.bucket} failed, e.g. "
+                    f"{first.get('Key')}: {first.get('Code')} {first.get('Message')}"
+                )
 
     def list(self, prefix: str) -> Iterator[str]:
         paginator = self.client.get_paginator("list_objects_v2")
@@ -201,6 +229,15 @@ class CachedBlobStore:
             )
         assert self.remote is not None
         self.remote.put(key, data, content_type=content_type)
+
+    def delete_remote(self, keys: list[str]) -> None:
+        """Delete from the remote only; the local cache is left alone."""
+        if not self.remote_write:
+            raise BlobStoreError(
+                "Remote writes are disabled: set R2 credentials and CARLO_REMOTE_WRITE=1"
+            )
+        assert self.remote is not None
+        self.remote.delete(keys)
 
     def get_remote(self, key: str) -> bytes | None:
         """Read from the remote, bypassing the local cache (for mutable pointers)."""

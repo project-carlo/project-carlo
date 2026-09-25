@@ -11,6 +11,10 @@ Published data lives in the blob store (R2) under `pipeline/`:
 A run's objects are written once and never changed. Publishing is moving the
 `latest.json` pointer, so rolling back is pointing it at an earlier run.
 Only the weekly job has credentials to write; everyone else pulls.
+
+Each run holds a full copy of a database that grows every week, so old runs
+are pruned (`prune`): recent weeks and one run a month stay available to roll
+back to.
 """
 
 from __future__ import annotations
@@ -280,6 +284,75 @@ def status(limit: int = 10) -> dict[str, Any]:
             "published": bool(latest and latest.get("run_id") == run_id),
         })
     return {"published": latest, "recent_runs": recent}
+
+
+# ── Prune ───────────────────────────────────────────────────────────────────
+DEFAULT_KEEP_RECENT = 8
+DEFAULT_KEEP_MONTHLY = 12
+
+
+def prune(
+    *,
+    keep_recent: int = DEFAULT_KEEP_RECENT,
+    keep_monthly: int = DEFAULT_KEEP_MONTHLY,
+    apply: bool = False,
+) -> dict[str, Any]:
+    """Delete old runs from `pipeline/runs/`, keeping the ones worth rolling back to.
+
+    Kept: the published run and every run after it (candidates and held runs
+    still waiting on a person), the `keep_recent` most recent runs, and the
+    last run of each of the `keep_monthly` most recent months. Without
+    `apply`, only reports what it would delete.
+    """
+    if keep_recent < 1 or keep_monthly < 0:
+        raise ValueError("keep_recent must be at least 1 and keep_monthly at least 0")
+    store = get_store()
+    latest = _read_json(store, LATEST_KEY)
+    if latest is None:
+        raise BlobStoreError("No run is published; nothing to prune against")
+    published = str(latest["run_id"])
+
+    assert store.remote is not None
+    keys_by_run: dict[str, list[str]] = {}
+    for key in store.remote.list(f"{PIPELINE_PREFIX}/runs/"):
+        keys_by_run.setdefault(key.split("/")[2], []).append(key)
+    if published not in keys_by_run:
+        raise BlobStoreError(f"The published run {published} is missing from the bucket")
+    run_ids = sorted(keys_by_run)  # run ids start with their UTC timestamp
+
+    keep = {run_id for run_id in run_ids if run_id >= published}
+    keep.update(run_ids[-keep_recent:])
+    last_of_month: dict[str, str] = {}
+    for run_id in run_ids:
+        if run_key(run_id, "manifest.json") not in keys_by_run[run_id]:
+            continue  # an upload that never finished: nothing to roll back to
+        manifest = _read_json(store, run_key(run_id, "manifest.json")) or {}
+        month = str(manifest.get("created_at", ""))[:7]
+        if month:
+            last_of_month[month] = run_id
+    for month in sorted(last_of_month)[-keep_monthly:] if keep_monthly else []:
+        keep.add(last_of_month[month])
+
+    deleted = [run_id for run_id in run_ids if run_id not in keep]
+    if apply:
+        for run_id in deleted:
+            keys = keys_by_run[run_id]
+            manifest = run_key(run_id, "manifest.json")
+            # The manifest goes first, so a run whose deletion stops halfway no
+            # longer looks complete and is swept up by the next prune.
+            if manifest in keys:
+                store.delete_remote([manifest])
+            store.delete_remote([key for key in keys if key != manifest])
+            LOGGER.info("Deleted run %s (%d objects)", run_id, len(keys))
+    else:
+        for run_id in deleted:
+            LOGGER.info("Would delete run %s", run_id)
+    return {
+        "published": published,
+        "applied": apply,
+        "kept": sorted(keep),
+        "deleted": deleted,
+    }
 
 
 def build_deploy_snapshot(

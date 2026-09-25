@@ -14,8 +14,13 @@ Cloudflare dashboard → **R2 Object Storage** → **Create bucket**.
 - Leave public access off. Nothing here needs to be public.
 
 If R2 hasn't been enabled on the account yet, Cloudflare asks you to turn it
-on first. The free tier (10 GB) covers this project many times over; the
-database and PDFs add up to tens of MB a year.
+on first. The free tier covers 10 GB. Nearly all of the bucket is bulletin
+PDFs, one per parish per week: `fetch` stores only the pages the pipeline
+reads, with images downsampled to 150 dpi, and old runs are pruned after each
+publish (see [Day to day](#day-to-day)). To cap the PDFs too, add a lifecycle
+rule on the `bulletins/` prefix (bucket → **Settings** → **Object lifecycle
+rules**): an old bulletin is only needed to re-extract it with a new
+classifier, and a missing one is skipped with a warning.
 
 If you chose a **jurisdiction** (e.g. EU) instead of automatic, the bucket's
 S3 endpoint looks like `https://<ACCOUNT_ID>.eu.r2.cloudflarestorage.com`.
@@ -70,6 +75,11 @@ which covers the case where the job never runs at all.
 - **See what's live:** `pnpm data:status`, or R2 → `pipeline/latest.json`.
 - **Roll back:** run **Publish Data Run** with an earlier run id (listed, with
   each run's status, by `pnpm data:status`) and tick **rollback**.
+- **Old runs:** after each publish, the weekly job deletes old runs, keeping
+  the published run and anything newer, the 8 most recent runs, and the last
+  run of each of the 12 most recent months. Those are the runs you can roll
+  back to. `pnpm data:prune` shows what it would delete now;
+  `--keep-recent` and `--keep-monthly` change the policy.
 - **Inspect a held run locally:** `pnpm data:pull --run-id <id>`, then query
   `data/parish_events.db`, e.g. the `run_parish_result` table for that run.
 - **Claude sessions:** cloud sessions don't get R2 keys, so they work from
