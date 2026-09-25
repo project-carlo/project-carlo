@@ -28,6 +28,8 @@ VERIFY_RESULTS_PATH = DATA_DIR / "verify_results.json"
 GEOCODE_RESULTS_PATH = DATA_DIR / "geocode_results.json"
 EVENTS_PATH = DATA_DIR / "events.json"
 EVENT_HISTORY_PATH = DATA_DIR / "event_history.json"
+# Dioceses still being explored; see pdf_extract.dioceses.
+DIOCESES_DIR = DATA_DIR / "dioceses"
 
 # Wait on SQLITE_BUSY before failing (multiple processes / concurrent sessions).
 SQLITE_BUSY_TIMEOUT_MS = 10_000
