@@ -128,6 +128,7 @@ pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
 pnpm recurrence:backfill [-- --limit N]
 pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
+pnpm diocese <subcommand> ...
 pnpm extract:web
 pnpm verify:frontend-snapshot
 pnpm db:create
@@ -212,6 +213,18 @@ Two commands support it:
   Backfilling afterwards would be reading from an `events.json` that has already
   lost those dates.
 
+## Exploring new dioceses
+
+`data/dioceses/<diocese>/` is where parishes and churches in dioceses the
+pipeline does not cover yet are recorded, before they are promoted into
+`data/parishes.csv` and `data/churches.csv`. Each record carries a
+natural-language explanation and its sources. Places ruled out are kept in
+`not-parishes.md` / `not-churches.md` with the reason. `pnpm diocese`
+adds, edits, removes, searches (across every diocese and the live CSVs),
+validates and exports them. See [`data/dioceses/README.md`](data/dioceses/README.md);
+agents get the same instructions from the `explore-diocese` skill in
+`.claude/skills/`.
+
 ## Environment Variables
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
@@ -247,6 +260,7 @@ pnpm db:drop     # delete the SQLite file
 - `data/schema.sql` - SQLite schema (source of truth)
 - `data/` - CSV, JSON data files and downloaded bulletin PDFs
 - `data/event_history.json` - occurrences seen in past bulletins (weekly recurrence detection)
+- `data/dioceses/` - parishes and churches of dioceses still being explored
 - `apps/web/` - React + TypeScript + Vite frontend
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend SQLite snapshot
 - `src/pdf_extract/` - Python CLI package
@@ -260,6 +274,7 @@ pnpm db:drop     # delete the SQLite file
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
+  - `dioceses.py` / `dioceses_cli.py` - diocese exploration files and the `diocese` command
 
 ## Dependencies
 

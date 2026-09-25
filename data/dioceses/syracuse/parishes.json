@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "cathedral-immaculate-conception-syracuse",
+    "name": "Cathedral of the Immaculate Conception",
+    "website": "https://cathedralsyracuse.org",
+    "bulletin_provider": "parishes_online",
+    "provider_id": "cathedral-of-the-immaculate-conception-13202",
+    "explanation": "The cathedral parish of the Diocese of Syracuse, a single-church parish in downtown Syracuse. Its site (cathedralsyracuse.org) posts Mass times and a weekly bulletin. Parishes Online lists it at /find/cathedral-of-the-immaculate-conception-13202, which is where the provider_id comes from. Unconfirmed: fetch reads https://parishesonline.com/organization/<provider_id>, and the /find/ slug is not guaranteed to match the /organization/ one. Open that URL and check the bulletin is published there before promoting; if it is only on the parish site, switch bulletin_provider to 'other'.",
+    "sources": [
+      "https://cathedralsyracuse.org/",
+      "https://parishesonline.com/find/cathedral-of-the-immaculate-conception-13202",
+      "https://en.wikipedia.org/wiki/Cathedral_of_the_Immaculate_Conception_(Syracuse,_New_York)"
+    ]
+  },
+  {
+    "slug": "holy-spirit-hamilton",
+    "name": "Holy Spirit Parish",
+    "website": "https://holyspiritrcparish.org",
+    "bulletin_provider": "",
+    "provider_id": "",
+    "explanation": "One parish with four worship sites along Route 20 in Madison and Oneida counties: St. Mary's (Hamilton), St. Bernard's (Waterville), St. Joseph's (Oriskany Falls) and St. Joan of Arc Mission (Morrisville). The Rome Sentinel reported the four churches merging into a single Holy Spirit Parish, so this is one parish row with several churches, not four parishes. The parish site is holyspiritrcparish.org; some church listings instead point at route20catholic.org, which looks like the shared site the churches used before (check which one posts the current bulletin). Bulletin provider not identified yet. Only St. Mary's and St. Bernard's are recorded so far; St. Joseph's (Oriskany Falls) and St. Joan of Arc (Morrisville; a mission church still counts as a church) still need addresses.",
+    "sources": [
+      "https://holyspiritrcparish.org/",
+      "https://www.romesentinel.com/news/route-20-catholic-churches-holy-spirit-parish-merger/article_66a992b3-2d7e-4d30-b659-9116c53bb9c1.html"
+    ]
+  }
+]
