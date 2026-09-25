@@ -24,6 +24,7 @@ interface FilterPanelProps {
   filters: FilterState;
   onChange: (filters: FilterState) => void;
   onApply: () => void;
+  onReset: () => void;
 }
 
 export function FilterPanel({
@@ -33,6 +34,7 @@ export function FilterPanel({
   filters,
   onChange,
   onApply,
+  onReset,
 }: FilterPanelProps) {
   const isDaysDefault = filters.daysOfWeek.length === 0;
   const isTimeDefault =
@@ -87,10 +89,6 @@ export function FilterPanel({
       timeTo: DEFAULT_FILTER_STATE.timeTo,
     });
   }, [filters, onChange]);
-
-  const handleClear = useCallback(() => {
-    onChange({ ...DEFAULT_FILTER_STATE });
-  }, [onChange]);
 
   const handleApply = useCallback(() => {
     onApply();
@@ -217,7 +215,7 @@ export function FilterPanel({
         {!isAllDefault ? (
           <button
             type="button"
-            onClick={handleClear}
+            onClick={onReset}
             className="rubric-link font-serif text-[0.9375rem] text-rubric hover:text-rubric-deep"
           >
             Reset all

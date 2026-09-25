@@ -15,6 +15,7 @@ import { FilterPills } from "../components/FilterPills";
 import { SearchTypeahead } from "../components/SearchTypeahead";
 import { Masthead } from "../components/Masthead";
 import {
+  DEFAULT_FILTER_STATE,
   filtersEqual,
   getTimeRange,
   type FilterState,
@@ -195,6 +196,18 @@ export function HomePage() {
     setFilterPanelOpen(false);
   }, [filters, setAppliedFilters]);
 
+  /** "Reset all" clears the map too, not just the mobile sheet's draft. */
+  const handleResetFilters = useCallback(() => {
+    setFilters(DEFAULT_FILTER_STATE);
+    startTransition(() => setAppliedFilters(DEFAULT_FILTER_STATE));
+  }, [setAppliedFilters]);
+
+  /** Mobile sheet: reopen on the filters the map shows, dropping any draft left unapplied by a dismiss. */
+  const handleOpenFilters = useCallback(() => {
+    setFilters(appliedFilters);
+    setFilterPanelOpen(true);
+  }, [appliedFilters]);
+
   const handleFiltersChange = useCallback(
     (next: FilterState) => {
       // Slider thumb / button highlight stays urgent so the input feels
@@ -298,7 +311,7 @@ export function HomePage() {
                 filterButton={
                   <button
                     type="button"
-                    onClick={() => setFilterPanelOpen(true)}
+                    onClick={handleOpenFilters}
                     aria-label="Open filters"
                     data-active={filterPanelOpen}
                     className="rubric-link ml-1 whitespace-nowrap font-serif text-[0.9375rem] md:hidden"
@@ -325,6 +338,7 @@ export function HomePage() {
               filters={filters}
               onChange={handleFiltersChange}
               onApply={handleApplyFilters}
+              onReset={handleResetFilters}
             />
           </div>
         </div>
