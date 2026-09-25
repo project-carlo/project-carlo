@@ -5,7 +5,8 @@ from sandboxes (and WebFetch) where the parish websites themselves return 403:
 
   parishes_online  JSON API behind parishesonline.com (slug -> org id -> publications)
   ecatholic        files.ecatholic.com/{site_id}/bulletins/{YYYYMMDD}.pdf, site id
-                   taken from past data/metadata.json rows, newest Sunday probed first
+                   taken from past bulletins in data/parish_events.db (or the table
+                   below when the DB hasn't been pulled), newest Sunday probed first
   discover_mass    discovermass.com church page (server-rendered, needs a browser UA)
 
 Anything else prints the website so you can look at it by hand.
@@ -20,6 +21,7 @@ from __future__ import annotations
 import csv
 import json
 import re
+import sqlite3
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -28,7 +30,7 @@ from urllib.request import Request, urlopen
 
 REPO = Path(__file__).resolve().parents[4]
 PARISHES_CSV = REPO / "data" / "parishes.csv"
-METADATA_JSON = REPO / "data" / "metadata.json"
+PIPELINE_DB = REPO / "data" / "parish_events.db"
 
 # discovermass.com 403s Python's default "Python-urllib" agent.
 UA = (
@@ -37,6 +39,21 @@ UA = (
 )
 PARISHES_ONLINE_API = "https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/organizations"
 ECATHOLIC_WEEKS_BACK = 6
+# eCatholic site ids as of 2026-09, for sessions without the pipeline DB (it
+# lives in R2, and cloud sessions have no R2 access). The DB wins when present.
+KNOWN_ECATHOLIC_SITE_IDS = {
+    "net-catholic": "20434",
+    "southeast-rochester-catholic-community": "19887",
+    "st-jerome": "22370",
+    "assumption-resurrection": "1021",
+    "our-lady-queen-of-peace-st-thomas-more": "17932",
+    "parish-of-the-holy-family": "32186",
+    "st-benedict-parish": "14273",
+    "st-catherine-of-siena-ithaca": "10905",
+    "st-john-of-rochester": "34606",
+    "st-leo-the-great": "34045",
+    "st-theodores-gates": "35761",
+}
 
 
 def _get(url: str, *, method: str = "GET") -> bytes:
@@ -56,23 +73,29 @@ def parishes_online(provider_id: str) -> tuple[str, str]:
 
 
 def _ecatholic_site_id(slug: str) -> str | None:
-    if not METADATA_JSON.exists():
-        return None
-    for row in reversed(json.loads(METADATA_JSON.read_text(encoding="utf-8"))):
-        if row.get("parish_slug") != slug:
-            continue
-        match = re.match(r"https://files\.ecatholic\.com/(\d+)/", row.get("source_url", ""))
-        if match:
-            return match.group(1)
-    return None
+    if PIPELINE_DB.exists():
+        try:
+            with sqlite3.connect(f"file:{PIPELINE_DB}?mode=ro", uri=True) as conn:
+                rows = conn.execute(
+                    """SELECT b.source_url FROM bulletin b JOIN parish p ON p.id = b.parish_id
+                       WHERE p.slug = ? ORDER BY b.fetched_at DESC""",
+                    (slug,),
+                ).fetchall()
+        except sqlite3.Error:
+            rows = []
+        for (source_url,) in rows:
+            match = re.match(r"https://files\.ecatholic\.com/(\d+)/", source_url or "")
+            if match:
+                return match.group(1)
+    return KNOWN_ECATHOLIC_SITE_IDS.get(slug)
 
 
 def ecatholic(slug: str) -> tuple[str, str]:
     site_id = _ecatholic_site_id(slug)
     if site_id is None:
         raise LookupError(
-            "no files.ecatholic.com site id in data/metadata.json; find one by opening "
-            "the parish's /bulletins page in a real browser (it is Cloudflare-challenged)"
+            "no files.ecatholic.com site id known; find one with visit.py "
+            "<slug> --follow /bulletins --links files.ecatholic"
         )
     today = date.today()
     next_sunday = today + timedelta(days=(6 - today.weekday()) % 7)

@@ -1,25 +1,14 @@
-import type { Database } from "sql.js";
 import { filterDayFromJsDay, jsDayFor } from "./constants/days";
 import { EVENT_TYPE_ORDER } from "./constants/eventTypes";
-import { getDb } from "./db";
-import {
-  CHURCH_COLUMNS,
-  CHURCH_DETAIL_COLUMNS,
-  mapChurchDetailRow,
-  mapChurchRow,
-} from "./lib/churchRow";
-import {
-  compareSchedule,
-  computeNextOccurrence,
-  parseIsoDateLocal,
-} from "./lib/schedule";
-import { num, str } from "./lib/sqlRow";
+import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
+import { parseSnapshot, SNAPSHOT_FILE, type Snapshot } from "./lib/snapshot";
 import type {
   ChurchBase,
   ChurchDetail,
   ChurchMapItem,
   EventSummary,
   EventType,
+  RawEvent,
 } from "./types";
 
 export class ChurchNotFoundError extends Error {
@@ -38,87 +27,33 @@ export interface ChurchFilters {
   timeTo?: number;
 }
 
-export interface RawEvent {
-  id: number;
-  church_id: number;
-  event_type: EventType;
-  event_kind: "weekly" | "specific_date";
-  day_of_week: string | null;
-  date: string | null;
-  start_time: number;
-  end_time: number | null;
-  cancelled: boolean;
-  occurrence: string | null;
-  page_number: number | null;
-  note: string | null;
-}
+// The snapshot is loaded once and never mutated, so every church and event is
+// decoded into memory once and reused for every filter change. This keeps the
+// slider drag → map update path JS-only after the first call.
+let snapshotPromise: Promise<Snapshot> | null = null;
 
-// frontend.snapshot is loaded once and never mutated, so the church and event
-// tables can be read into memory once and reused for every filter change.
-// This keeps the slider drag → map update path JS-only after the first call.
-let allChurchesPromise: Promise<ChurchBase[]> | null = null;
-let allEventsPromise: Promise<RawEvent[]> | null = null;
-
-function mapEventRow(row: Record<string, unknown>): RawEvent {
-  const ev: RawEvent = {
-    id: row["id"] as number,
-    church_id: row["church_id"] as number,
-    event_type: row["event_type"] as EventType,
-    event_kind: row["event_kind"] as "weekly" | "specific_date",
-    day_of_week: str(row["day_of_week"]),
-    date: str(row["date"]),
-    start_time: row["start_time"] as number,
-    end_time: num(row["end_time"]),
-    cancelled: Boolean(row["cancelled"]),
-    occurrence: null,
-    page_number: num(row["page_number"]),
-    note: str(row["note"]),
-  };
-  ev.occurrence = computeNextOccurrence(ev);
-  return ev;
-}
-
-async function loadCaches(
-  db: Database,
-): Promise<{ churches: ChurchBase[]; events: RawEvent[] }> {
-  const churches = await (allChurchesPromise ??= Promise.resolve(
-    loadAllChurches(db),
-  ));
-  const events = await (allEventsPromise ??= Promise.resolve(
-    loadAllEvents(db),
-  ));
-  return { churches, events };
-}
-
-function loadAllChurches(db: Database): ChurchBase[] {
-  const stmt = db.prepare(`SELECT ${CHURCH_COLUMNS} FROM church ORDER BY name`);
-  const churches: ChurchBase[] = [];
-  try {
-    while (stmt.step()) {
-      churches.push(mapChurchRow(stmt.getAsObject()));
-    }
-  } finally {
-    stmt.free();
+async function loadSnapshot(): Promise<Snapshot> {
+  const response = await fetch(`/${SNAPSHOT_FILE}`, { cache: "no-cache" });
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${SNAPSHOT_FILE}: ${response.status}`);
   }
-  return churches;
+  // Served as an opaque pre-gzipped file (see public/_headers): unzip it here.
+  const compressed = response.body ?? new Blob([await response.arrayBuffer()]).stream();
+  const decompressed = compressed.pipeThrough(new DecompressionStream("gzip"));
+  return parseSnapshot(await new Response(decompressed).text());
 }
 
-function loadAllEvents(db: Database): RawEvent[] {
-  const stmt = db.prepare(
-    `SELECT id, church_id, event_type, event_kind,
-            day_of_week, date, start_time, end_time, cancelled,
-            page_number, note
-     FROM event`,
-  );
-  const results: RawEvent[] = [];
-  try {
-    while (stmt.step()) {
-      results.push(mapEventRow(stmt.getAsObject()));
-    }
-  } finally {
-    stmt.free();
+function getSnapshot(): Promise<Snapshot> {
+  if (!snapshotPromise) {
+    snapshotPromise = loadSnapshot().catch((error: unknown) => {
+      // Don't hold on to a failed load: callers retry (react-query does so
+      // automatically), and a cached rejection would make every retry fail
+      // instantly without touching the network again.
+      snapshotPromise = null;
+      throw error;
+    });
   }
-  return results;
+  return snapshotPromise;
 }
 
 function toEventSummary(ev: RawEvent): EventSummary {
@@ -277,8 +212,7 @@ export function collectMapItems(
 export async function fetchChurches(
   filters: ChurchFilters,
 ): Promise<ChurchMapItem[]> {
-  const db = await getDb();
-  const { churches, events } = await loadCaches(db);
+  const { churches, events } = await getSnapshot();
   return collectMapItems(churches, events, filters);
 }
 
@@ -288,54 +222,44 @@ export type ChurchSearchResult = ChurchBase;
 export async function fetchAllChurchesForSearch(): Promise<
   ChurchSearchResult[]
 > {
-  const db = await getDb();
-  const stmt = db.prepare(
-    `SELECT ${CHURCH_COLUMNS} FROM church
-     WHERE latitude IS NOT NULL AND longitude IS NOT NULL
-     ORDER BY name`,
-  );
-  try {
-    const results: ChurchSearchResult[] = [];
-    while (stmt.step()) {
-      results.push(mapChurchRow(stmt.getAsObject()));
-    }
-    return results;
-  } finally {
-    stmt.free();
-  }
+  const { churches } = await getSnapshot();
+  return churches.filter((c) => c.latitude !== null && c.longitude !== null);
+}
+
+/** One church with its parish links; shared with the prerenderer. */
+export function findChurch(snapshot: Snapshot, slug: string): ChurchDetail {
+  const church = snapshot.churchDetail(slug);
+  if (!church) throw new ChurchNotFoundError(slug);
+  return church;
+}
+
+/**
+ * A church page's schedule: its upcoming events of the given types (all types
+ * when none are given), in schedule order. Cancelled events and past dates
+ * have no next occurrence and are left out. Shared with the prerenderer, so a
+ * static church page lists the same events as the live one.
+ */
+export function churchSchedule(
+  snapshot: Snapshot,
+  slug: string,
+  types: EventType[],
+): EventSummary[] {
+  const typeSet = new Set(types.length > 0 ? types : EVENT_TYPE_ORDER);
+  const church = findChurch(snapshot, slug);
+  return snapshot
+    .eventsOf(church.id)
+    .filter((e) => typeSet.has(e.event_type) && e.occurrence !== null)
+    .map(toEventSummary)
+    .sort((a, b) => compareSchedule(a, b));
 }
 
 export async function fetchChurch(slug: string): Promise<ChurchDetail> {
-  const db = await getDb();
-  const stmt = db.prepare(
-    `SELECT ${CHURCH_DETAIL_COLUMNS} FROM church WHERE slug = ?`,
-  );
-  try {
-    stmt.bind([slug]);
-    if (!stmt.step()) {
-      throw new ChurchNotFoundError(slug);
-    }
-    return mapChurchDetailRow(stmt.getAsObject());
-  } finally {
-    stmt.free();
-  }
+  return findChurch(await getSnapshot(), slug);
 }
 
 export async function fetchChurchEvents(
   slug: string,
   types: EventType[],
 ): Promise<EventSummary[]> {
-  const db = await getDb();
-  const effectiveTypes = types.length > 0 ? types : EVENT_TYPE_ORDER;
-  const typeSet = new Set(effectiveTypes);
-
-  const { churches, events: allEvents } = await loadCaches(db);
-  const church = churches.find((c) => c.slug === slug);
-  if (!church) throw new ChurchNotFoundError(slug);
-
-  return allEvents
-    .filter((e) => e.church_id === church.id && typeSet.has(e.event_type))
-    .filter((e) => e.occurrence !== null)
-    .map(toEventSummary)
-    .sort((a, b) => compareSchedule(a, b));
+  return churchSchedule(await getSnapshot(), slug, types);
 }

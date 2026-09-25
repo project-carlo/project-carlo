@@ -49,19 +49,22 @@ apps/web/playwright-report/
 apps/web/test-results/
 apps/web/.playwright/
 
-# Data
-data/bulletins/**/*.pdf
+# Data. The pipeline database, bulletin PDFs and run outputs live in R2 and
+# are pulled on demand (`pnpm data:pull`); only curated inputs are committed.
+data/bulletins/
 data/*.db
+data/*.db-*
+data/*.db.bak
 data/runs/
+data/out/
 
-# Generated frontend assets
-# apps/web/public/frontend.snapshot
-apps/web/public/frontend.snapshot.previous
-apps/web/public/*.wasm
+# Generated frontend assets (the snapshot is published data: `pnpm data:pull`)
+apps/web/public/frontend.json.gz
+apps/web/public/frontend.json.gz.previous
 
-# Claude Code. The shared session-start hook, its registration and project
-# skills are tracked;
-# everything else under .claude/ (local settings, caches) stays local.
+# Claude Code. The shared session-start hook, its registration and the project
+# skills are tracked; everything else under .claude/ (local settings, caches)
+# stays local.
 .claude/*
 !.claude/settings.json
 !.claude/hooks/

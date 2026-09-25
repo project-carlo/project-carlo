@@ -93,3 +93,12 @@ def normalize_event_date(value: str | None) -> str | None:
             continue
 
     return None
+
+
+def minutes_to_time(minutes: int | None) -> str | None:
+    """Format minutes since midnight as "h:MM AM/PM", the inverse of time_to_minutes."""
+    if minutes is None:
+        return None
+    hours, mins = divmod(int(minutes), 60)
+    suffix = "AM" if hours < 12 else "PM"
+    return f"{(hours % 12) or 12}:{mins:02d} {suffix}"

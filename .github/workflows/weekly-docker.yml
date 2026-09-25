@@ -1,4 +1,9 @@
-name: Weekly Docker Refresh
+name: Weekly Data Refresh
+
+# Pulls the published database from R2, runs the pipeline in the Docker image,
+# uploads the result as a candidate run, and publishes it only if every
+# publishing check passed. A held run opens (or updates) an issue with its
+# change report; publishing it anyway is the "Publish Data Run" workflow.
 
 on:
   schedule:
@@ -12,19 +17,51 @@ concurrency:
   group: weekly-docker-refresh
   cancel-in-progress: false
 
+env:
+  R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+  R2_BUCKET: ${{ vars.R2_BUCKET || 'project-carlo-data' }}
+  # Only for a bucket in a jurisdiction (e.g. https://<account>.eu.r2.cloudflarestorage.com);
+  # otherwise the endpoint is derived from R2_ACCOUNT_ID.
+  R2_ENDPOINT_URL: ${{ vars.R2_ENDPOINT_URL }}
+  # Optional dead-man's switch (e.g. healthchecks.io): pinged after a published run,
+  # so a run that never happens raises an alert too.
+  HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+
 jobs:
   weekly:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     permissions:
       actions: write
-      contents: write
+      contents: read
+      issues: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
+
+      - name: Check configuration
+        env:
+          HAS_GEMINI: ${{ secrets.GEMINI_API_KEY != '' }}
+          HAS_R2_KEY: ${{ secrets.R2_WRITE_ACCESS_KEY_ID != '' }}
+          HAS_R2_SECRET: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY != '' }}
+        run: |
+          missing=()
+          [[ "$HAS_GEMINI" == "true" ]] || missing+=(GEMINI_API_KEY)
+          [[ -n "$R2_ACCOUNT_ID$R2_ENDPOINT_URL" ]] || missing+=(R2_ACCOUNT_ID)
+          [[ "$HAS_R2_KEY" == "true" ]] || missing+=(R2_WRITE_ACCESS_KEY_ID)
+          [[ "$HAS_R2_SECRET" == "true" ]] || missing+=(R2_WRITE_SECRET_ACCESS_KEY)
+          if (( ${#missing[@]} )); then
+            echo "::error::Missing repository secrets: ${missing[*]}. See docs/data-setup.md."
+            exit 1
+          fi
+
+      - name: Name this run
+        id: run
+        run: |
+          run_id="$(date -u +%Y%m%dT%H%M%SZ)-gh${GITHUB_RUN_ID}"
+          echo "id=${run_id}" >> "$GITHUB_OUTPUT"
+          echo "Run id: \`${run_id}\`" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
@@ -40,46 +77,170 @@ jobs:
           cache-to: type=gha,mode=max,scope=weekly-job
 
       - name: Run weekly pipeline
+        id: pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
+          RUN_ID: ${{ steps.run.outputs.id }}
+          # Only the default branch writes to R2. A run on another branch still
+          # reads the published data, but its PDFs, cached extractions and
+          # candidate stay inside the job, so trying out a branch can never
+          # leak into the shared cache or the published data.
+          CARLO_REMOTE_WRITE: ${{ github.ref_name == github.event.repository.default_branch && '1' || '' }}
         run: |
+          set +e
           docker run --name project-carlo-weekly \
             -e GEMINI_API_KEY \
+            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
+            -e CARLO_REMOTE_WRITE \
+            -e RUN_ID -e GIT_SHA="$GITHUB_SHA" -e RUN_TRIGGER="$GITHUB_EVENT_NAME" \
             project-carlo-weekly:latest
+          code=$?
+          set -e
 
-      - name: Copy generated outputs
+          mkdir -p run-out
+          docker cp "project-carlo-weekly:/workspace/data/out/${RUN_ID}/." run-out/ || true
+          docker rm project-carlo-weekly >/dev/null
+
+          # 10 is `weekly`'s "held" code; anything else non-zero is a failure.
+          case "$code" in
+            0) status=passed ;;
+            10) status=held ;;
+            *) status=failed ;;
+          esac
+          echo "status=${status}" >> "$GITHUB_OUTPUT"
+          echo "Pipeline exited ${code} (${status})"
+
+      - name: Add change report to summary
+        if: always()
         run: |
-          docker cp project-carlo-weekly:/workspace/data/metadata.json data/metadata.json
-          docker cp project-carlo-weekly:/workspace/data/events.json data/events.json
-          # The recurrence detector's only memory of past bulletins. events.json is
-          # compacted to the latest bulletin per parish every run, so without copying
-          # this back out the evidence is gone and promotion silently stops working.
-          docker cp project-carlo-weekly:/workspace/data/event_history.json data/event_history.json
-          docker cp project-carlo-weekly:/workspace/apps/web/public/frontend.snapshot apps/web/public/frontend.snapshot
-          docker rm project-carlo-weekly
-
-      - name: Commit generated changes
-        id: commit
-        run: |
-          git add -- data/metadata.json data/events.json data/event_history.json apps/web/public/frontend.snapshot
-
-          if git diff --cached --quiet; then
-            echo "No generated changes to commit."
-            echo "committed=false" >> "$GITHUB_OUTPUT"
-            exit 0
+          if [[ -f run-out/report.md ]]; then
+            cat run-out/report.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No report was produced; see the pipeline step's log." >> "$GITHUB_STEP_SUMMARY"
           fi
 
-          commit_date="$(date -u +%F)"
-          git -c user.name="github-actions[bot]" \
-            -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-            commit -m "chore: weekly data refresh ${commit_date}"
-          git push
-          echo "committed=true" >> "$GITHUB_OUTPUT"
+      - name: Upload run outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-run-${{ steps.run.outputs.id }}
+          path: |
+            run-out/report.md
+            run-out/report.json
+          if-no-files-found: ignore
+          retention-days: 90
 
-      - name: Trigger deploy workflow
-        if: steps.commit.outputs.committed == 'true' && github.ref_name == github.event.repository.default_branch
+      # Only the default branch publishes: a dispatch on a feature branch runs that
+      # branch's code, and its output must not reach the live site.
+      - name: Publish run
+        id: publish
+        if: steps.pipeline.outputs.status == 'passed' && github.ref_name == github.event.repository.default_branch
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
+          RUN_ID: ${{ steps.run.outputs.id }}
+        run: |
+          docker run --rm \
+            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
+            -e CARLO_REMOTE_WRITE=1 \
+            project-carlo-weekly:latest \
+            uv run --no-sync python -m pdf_extract data promote --run-id "$RUN_ID"
+
+      - name: Deploy the published data
+        if: steps.publish.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Pushes made with GITHUB_TOKEN do not trigger other workflows, so dispatch deploy explicitly.
-          gh workflow run deploy-web.yml --ref "$GITHUB_REF_NAME" -f mode=deploy
+          # The site bakes the snapshot in at build time, so a new publish needs a deploy.
+          gh workflow run deploy-web.yml --ref "${{ github.event.repository.default_branch }}" -f mode=deploy
+
+      - name: Close issues about earlier held or failed runs
+        if: steps.publish.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ steps.run.outputs.id }}
+        run: |
+          # A newer run is live; publishing an older held run now would drop its data.
+          for number in $(gh issue list --label data-refresh --state open --json number --jq '.[].number'); do
+            gh issue close "$number" --comment "Superseded: run \`${RUN_ID}\` passed and was published."
+          done
+
+      # Every run keeps a full copy of the database, so old ones are deleted,
+      # keeping recent weeks and one run a month to roll back to. A failure
+      # here is reported but does not fail the published run.
+      - name: Prune old runs
+        id: prune
+        if: steps.publish.outcome == 'success'
+        continue-on-error: true
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
+        run: |
+          docker run --rm \
+            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
+            -e CARLO_REMOTE_WRITE=1 \
+            project-carlo-weekly:latest \
+            uv run --no-sync python -m pdf_extract data prune --apply
+
+      - name: Report a failed prune
+        if: steps.prune.outcome == 'failure'
+        run: |
+          echo "::warning::Pruning old runs failed; the bucket keeps growing until it succeeds. See the Prune old runs step."
+          {
+            echo
+            echo "> [!WARNING]"
+            echo "> Pruning old runs failed, so old runs were not deleted this week. See the *Prune old runs* step's log."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open or update an issue for a held or failed run
+        if: always() && steps.pipeline.outputs.status != 'passed' && github.ref_name == github.event.repository.default_branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ steps.run.outputs.id }}
+          STATUS: ${{ steps.pipeline.outputs.status || 'failed' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          label="data-refresh"
+          gh label create "$label" --color FBCA04 \
+            --description "Weekly data refresh needs a person" 2>/dev/null || true
+
+          body="$(mktemp)"
+          {
+            if [[ "$STATUS" == "held" ]]; then
+              echo "The weekly run \`${RUN_ID}\` finished but **a publishing check failed**, so the site still shows last week's data."
+              echo
+              echo "- **Publish it anyway:** Actions → *Publish Data Run* → Run workflow → run id \`${RUN_ID}\`."
+              echo "- **Leave it:** close this issue; next week's run starts again from the published data."
+            else
+              echo "The weekly run \`${RUN_ID}\` **failed** before it could finish. The site still shows last week's data."
+            fi
+            echo
+            echo "[Workflow run](${RUN_URL})"
+            echo
+            if [[ -f run-out/report.md ]]; then
+              # Issue bodies are capped at 65536 characters.
+              head -c 60000 run-out/report.md
+            fi
+          } > "$body"
+
+          existing="$(gh issue list --label "$label" --state open --json number --jq '.[0].number // empty')"
+          if [[ -n "$existing" ]]; then
+            gh issue comment "$existing" --body-file "$body"
+            echo "Commented on issue #${existing}"
+          else
+            gh issue create --title "Weekly data run ${STATUS}: ${RUN_ID}" --label "$label" --body-file "$body"
+          fi
+
+      - name: Fail the job unless published
+        if: steps.pipeline.outputs.status != 'passed'
+        run: |
+          echo "::error::Weekly run ${{ steps.pipeline.outputs.status || 'failed' }}; not published."
+          exit 1
+
+      - name: Ping healthcheck
+        if: steps.publish.outcome == 'success' && env.HEALTHCHECK_URL != ''
+        run: curl -fsS -m 10 --retry 3 "$HEALTHCHECK_URL" > /dev/null

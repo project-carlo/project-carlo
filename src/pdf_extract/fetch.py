@@ -1,4 +1,4 @@
-"""Bulletin fetch pipeline: resolve provider links, download PDFs, save metadata."""
+"""Bulletin fetch pipeline: resolve provider links, download PDFs, record bulletins."""
 
 from __future__ import annotations
 
@@ -8,20 +8,27 @@ import re
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
-from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, quote, unquote, urljoin, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
+from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.browser import AnchorLike, PageLike, launch_stealth_browser
+from pdf_extract.pdf_compact import compact_bulletin_pdf
+from pdf_extract.runs import (
+    FETCH_DOWNLOAD_FAILED,
+    FETCH_NEW,
+    FETCH_RESOLVE_FAILED,
+    FETCH_SAVE_FAILED,
+    FETCH_UNCHANGED,
+    record_parish_result,
+)
 from pdf_extract.storage import (
-    BULLETINS_DIR,
-    BULLETINS_METADATA_PATH,
     connect_db,
     get_parish_by_name,
+    insert_bulletin,
     list_parishes,
-    load_json_list,
-    save_json_list,
+    load_bulletins,
     utc_now_iso,
 )
 
@@ -790,87 +797,132 @@ def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
 def fetch_bulletins(
     *,
     parish_name: str | None = None,
-    pdf_dir: Path = BULLETINS_DIR,
+    run_id: str | None = None,
 ) -> dict[str, int]:
+    """Download each parish's latest bulletin if it is one we have not seen.
+
+    The PDF goes to the blob store under its content hash and a `bulletin` row
+    records where it came from. With `run_id`, each parish's outcome is also
+    recorded for the run report.
+    """
     LOGGER.info("Starting fetch stage (parish_name=%s)", parish_name or "*all*")
-    metadata = load_json_list(BULLETINS_METADATA_PATH)
-    existing_urls = {e["source_url"] for e in metadata}
+    store = get_store()
+
+    fetched = 0
+    skipped_existing = 0
+    failed = 0
+    attempted_slugs: list[str] = []
 
     conn = connect_db()
     try:
         parishes = _parishes_for_run(conn, parish_name)
+        existing_urls = {
+            (row["parish_id"], row["source_url"])
+            for row in conn.execute("SELECT parish_id, source_url FROM bulletin")
+        }
+
+        with launch_stealth_browser() as page:
+            for parish in parishes:
+                slug = parish["slug"]
+                fetch_source = _resolve_fetch_source(parish)
+                if fetch_source is None:
+                    # Unsupported provider (e.g. google_drive, no_bulletin): not a
+                    # parish we expect to refresh, so keep it out of the stale report.
+                    continue
+                bulletin_provider, fetch_provider_id = fetch_source
+                attempted_slugs.append(slug)
+
+                def record(status: str, **fields) -> None:
+                    record_parish_result(conn, run_id, slug, "fetch", status, **fields)
+
+                try:
+                    link = _build_bulletin_link(bulletin_provider, fetch_provider_id, page=page)
+                except ValueError as exc:
+                    LOGGER.warning("Skipping parish %s: %s", slug, exc)
+                    record(FETCH_RESOLVE_FAILED, detail=str(exc))
+                    failed += 1
+                    continue
+                except Exception as exc:
+                    LOGGER.warning(
+                        "Failed resolving bulletin link for parish %s: %s", slug, exc,
+                        exc_info=True,
+                    )
+                    record(FETCH_RESOLVE_FAILED, detail=f"{type(exc).__name__}: {exc}")
+                    failed += 1
+                    continue
+
+                if (parish["id"], link.source_url) in existing_urls:
+                    skipped_existing += 1
+                    record(FETCH_UNCHANGED, source_url=link.source_url)
+                    continue
+
+                try:
+                    pdf_bytes = _download_pdf(
+                        fetch_url=link.fetch_url, source_url=link.source_url,
+                    )
+                except (HTTPError, URLError, OSError) as exc:
+                    LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
+                    record(
+                        FETCH_DOWNLOAD_FAILED,
+                        detail=f"{type(exc).__name__}: {exc}",
+                        source_url=link.source_url,
+                    )
+                    failed += 1
+                    continue
+
+                # The hash names the bulletin as published, so it stays the
+                # bulletin's identity however the stored copy is compacted.
+                content_hash = hashlib.sha256(pdf_bytes).hexdigest()
+                key = bulletin_pdf_key(slug, content_hash)
+                try:
+                    # Stored before the row that points at it, so a bulletin row
+                    # never names a PDF that is not there. Compaction is not
+                    # byte-for-byte repeatable, so a bulletin already stored
+                    # (the same PDF at a new URL) is left as it is.
+                    if not store.exists(key):
+                        store.put(
+                            key, compact_bulletin_pdf(pdf_bytes), content_type="application/pdf",
+                        )
+                    insert_bulletin(
+                        conn,
+                        parish_id=parish["id"],
+                        source_url=link.source_url,
+                        content_hash=content_hash,
+                        fetched_at=utc_now_iso(),
+                    )
+                except Exception as exc:
+                    LOGGER.warning(
+                        "Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True,
+                    )
+                    record(
+                        FETCH_SAVE_FAILED,
+                        detail=f"{type(exc).__name__}: {exc}",
+                        source_url=link.source_url,
+                    )
+                    failed += 1
+                    continue
+
+                existing_urls.add((parish["id"], link.source_url))
+                fetched += 1
+                record(FETCH_NEW, source_url=link.source_url, content_hash=content_hash)
+
+        stale_slugs = _report_stale_parishes(
+            bulletins=load_bulletins(conn), slugs=attempted_slugs,
+        )
     finally:
         conn.close()
 
-    fetched = 0
-    skipped_existing = 0
-    attempted_slugs: list[str] = []
-
-    with launch_stealth_browser() as page:
-        for parish in parishes:
-            slug = parish["slug"]
-            fetch_source = _resolve_fetch_source(parish)
-            if fetch_source is None:
-                # Unsupported provider (e.g. google_drive, no_bulletin): not a
-                # parish we expect to refresh, so keep it out of the stale report.
-                continue
-            bulletin_provider, fetch_provider_id = fetch_source
-            attempted_slugs.append(slug)
-
-            try:
-                link = _build_bulletin_link(bulletin_provider, fetch_provider_id, page=page)
-            except ValueError as exc:
-                LOGGER.warning("Skipping parish %s: %s", slug, exc)
-                continue
-            except Exception as exc:
-                LOGGER.warning("Failed resolving bulletin link for parish %s: %s", slug, exc, exc_info=True)
-                continue
-
-            if link.source_url in existing_urls:
-                skipped_existing += 1
-                continue
-
-            try:
-                pdf_bytes = _download_pdf(fetch_url=link.fetch_url, source_url=link.source_url)
-            except (HTTPError, URLError, OSError) as exc:
-                LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
-                continue
-
-            try:
-                content_hash = hashlib.sha256(pdf_bytes).hexdigest()
-                parish_dir = pdf_dir / slug
-                parish_dir.mkdir(parents=True, exist_ok=True)
-                pdf_path = parish_dir / f"{content_hash}.pdf"
-                if not pdf_path.exists():
-                    pdf_path.write_bytes(pdf_bytes)
-
-                metadata.append({
-                    "parish_slug": slug,
-                    "source_url": link.source_url,
-                    "pdf_path": str(pdf_path),
-                    "content_hash": content_hash,
-                    "fetched_at": utc_now_iso(),
-                    "processed_at": None,
-                    "published_date": None,
-                })
-                existing_urls.add(link.source_url)
-                fetched += 1
-                save_json_list(BULLETINS_METADATA_PATH, metadata)
-            except Exception as exc:
-                LOGGER.warning("Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True)
-                continue
-
-    stale_slugs = _report_stale_parishes(metadata=metadata, slugs=attempted_slugs)
     result = {
         "fetched_bulletins": fetched,
         "skipped_existing_urls": skipped_existing,
+        "failed_parishes": failed,
         "stale_parishes": len(stale_slugs),
     }
     LOGGER.info("Fetch stage finished: %s", result)
     return result
 
 
-def _report_stale_parishes(*, metadata: list[dict], slugs: list[str]) -> list[str]:
+def _report_stale_parishes(*, bulletins: list[dict], slugs: list[str]) -> list[str]:
     """Warn about parishes still sitting on an old bulletin after this run.
 
     A resolver that keeps returning a link we already have leaves no trace
@@ -878,7 +930,7 @@ def _report_stale_parishes(*, metadata: list[dict], slugs: list[str]) -> list[st
     refreshing for months. Name them instead.
     """
     latest_by_slug: dict[str, str] = {}
-    for entry in metadata:
+    for entry in bulletins:
         slug = entry.get("parish_slug")
         fetched_at = entry.get("fetched_at")
         if not slug or not fetched_at:

@@ -3,7 +3,7 @@ import { DAY_ORDER, jsDayFor } from "../constants/days";
 /**
  * Shared schedule logic for both the SPA and the prerenderer so that a static
  * church page and the live React page show the same set of events in the same
- * order.  Pure functions only; no DOM, React, or sql.js dependencies.
+ * order.  Pure functions only; no DOM or React dependencies.
  */
 
 const EVENING_START_MINUTES = 16 * 60;

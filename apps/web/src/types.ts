@@ -14,7 +14,7 @@ export interface EventSummary {
   note: string | null;
 }
 
-/** The church columns every view reads; see `CHURCH_COLUMNS` in lib/churchRow. */
+/** The church fields every view reads. */
 export interface ChurchBase {
   id: number;
   parish_id: number;
@@ -37,4 +37,20 @@ export interface ChurchMapItem extends ChurchBase {
 export interface ChurchDetail extends ChurchBase {
   homepage_url: string | null;
   bulletin_url: string | null;
+}
+
+/** A snapshot event as the data layer filters it; `occurrence` is its next occurrence. */
+export interface RawEvent {
+  id: number;
+  church_id: number;
+  event_type: EventType;
+  event_kind: "weekly" | "specific_date";
+  day_of_week: string | null;
+  date: string | null;
+  start_time: number;
+  end_time: number | null;
+  cancelled: boolean;
+  occurrence: string | null;
+  page_number: number | null;
+  note: string | null;
 }

@@ -1,6 +1,6 @@
 ---
 name: parish-site-access
-description: Open and navigate the parish websites in data/parishes.csv from a Claude Code cloud sandbox the way the pipeline's Playwright code does - real Chrome, headed under xvfb, playwright-stealth - including the Cloudflare-protected ones (all eCatholic sites plus a few others) that WebFetch and curl only see as a 403 "Just a moment..." page. Use when you need to see a parish's homepage, find or follow its bulletin links, screenshot it, debug `pdf_extract fetch`/`detect` for a parish, or check a newly added parish.
+description: Open and navigate the parish websites in data/parishes.csv from a Claude Code cloud sandbox the way the pipeline's Playwright code does - real Chrome, headed under xvfb, playwright-stealth - including the Cloudflare-protected ones (all eCatholic sites plus a few others) that WebFetch and curl only see as a 403 "Just a moment..." page. Use when you need to see a parish's homepage, find or follow its bulletin links, screenshot it, debug `pdf_extract fetch`/`detect run` for a parish, check a newly added parish, or when `pnpm diocese probe url` hits a Cloudflare 403.
 ---
 
 # Visiting parish websites from the cloud sandbox
@@ -47,20 +47,23 @@ uv run python $V transfiguration-st-catherine-mendon --frames --links publicatio
 - `--text [N]`, `--links [REGEX]`, `--html PATH` and `--screenshot PATH` inspect the final page.
   `--frames` adds iframe content.
 - It prints `OK`/`BLOCKED`, the HTTP status, the final URL and how many loads it needed.
-  It exits 2 if Cloudflare challenged every load.
+  It exits 2 if Cloudflare challenged every load. That happens occasionally during a long
+  blocked streak; wait a minute or two and run it again.
 
 ## 3. Run the pipeline itself
 
 Pipeline code runs unmodified once setup is done. Its env vars pick Chrome:
 
 ```bash
+uv run python -m pdf_extract db create   # once: no R2 here, so start from an empty DB
 PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a uv run python -m pdf_extract fetch --parish "St. John the Evangelist (Greece)"
-PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a uv run python -m pdf_extract detect --dry-run --limit 3
+PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a uv run python -m pdf_extract detect run --dry-run --limit 3
 ```
 
-`fetch` writes `data/metadata.json` and downloads PDFs. The weekly GitHub Action owns
-that file, so `git checkout data/metadata.json` afterwards unless you mean to commit
-the result. The pipeline does not retry Cloudflare challenges (see below), so an
+`fetch` records bulletins in `data/parish_events.db` and saves PDFs under
+`data/bulletins/`. Both are gitignored. The real database lives in R2, and cloud sessions
+have no R2 access, so a sandbox run starts from an empty migrated DB. It re-fetches
+everything and publishes nothing. The pipeline does not retry Cloudflare challenges (see below), so an
 eCatholic parish can fail on one run and succeed on the next.
 
 ## How Cloudflare behaves here (measured 2026-09-25)
@@ -94,7 +97,8 @@ python .claude/skills/parish-site-access/scripts/bulletin_url.py <slug> [...] | 
 
 - **eCatholic:** `https://files.ecatholic.com/{site_id}/bulletins/{YYYYMMDD}.pdf`. The date
   is always the Sunday. A missing file returns 403 AccessDenied (S3). `site_id` comes from
-  `data/metadata.json`.
+  past bulletins in `data/parish_events.db`, or from the script's built-in table
+  (as of 2026-09) when the DB hasn't been pulled.
 - **Parishes Online:** a JSON API with no auth. `GET https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/organizations/slug/{provider_id}`
   returns `data.salesforce_id`, then `…/organizations/{id}/publications?limit=12&type=Church`
   returns `fileUrl` and `publishDate`.

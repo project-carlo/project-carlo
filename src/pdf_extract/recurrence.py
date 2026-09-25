@@ -8,8 +8,8 @@ frontend shows it as a dated event that disappears the moment it passes.
 
 The tell is that a genuinely weekly slot keeps reappearing: the same church,
 the same event type, the same weekday and start time, exactly one week later,
-bulletin after bulletin. `data/event_history.json` accumulates every occurrence
-the pipeline has extracted, and `promote_recurring_events` rewrites a dated
+bulletin after bulletin. The `event_occurrence` table accumulates every
+occurrence the pipeline has extracted, and `promote_recurring_events` rewrites a dated
 event as a weekly one once matching occurrences show up in each of the
 `MIN_PRIOR_WEEKS` weeks immediately before it.
 
@@ -22,27 +22,25 @@ schedule for two months. A weekly row carries no date, so it is credited to
 the week its bulletin covers: the first matching weekday on or after the
 bulletin's published date.
 
-The history file is the pipeline's only memory of past bulletins: `events.json`
-is compacted down to the latest bulletin per parish on every run, so the
-evidence would otherwise be gone by the time the repeat arrives.
+The occurrence table is the detector's memory of what bulletins announced:
+the event table stores each bulletin's rows *after* promotion, and a promoted
+row has lost the date it was sighted on, so the raw sighting has to be kept
+separately for next week's chain.
 """
 
 from __future__ import annotations
 
-import json
 import logging
-import subprocess
+import sqlite3
 from collections.abc import Set as AbstractSet
 from datetime import date, timedelta
-from pathlib import Path
 from typing import Any
 
 from pdf_extract.storage import (
-    BULLETINS_METADATA_PATH,
-    EVENT_HISTORY_PATH,
-    EVENTS_PATH,
-    load_json_list,
-    save_json_list,
+    latest_bulletin_ids,
+    load_bulletins,
+    load_events,
+    replace_bulletin_events,
 )
 from pdf_extract.timeparse import normalize_event_date, time_to_minutes
 
@@ -59,7 +57,7 @@ MIN_PRIOR_WEEKS = 2
 # (parishes really do rotate an 11:00 AM Mass between churches week to week).
 LOOKBACK_WEEKS = 8
 
-# Occurrences older than this are dropped from event_history.json; past the
+# Occurrences older than this are dropped from the history; past the
 # lookback window they can no longer contribute to any match.
 HISTORY_RETENTION_WEEKS = 12
 
@@ -78,45 +76,34 @@ SlotKey = tuple[str, str, int]
 History = dict[SlotKey, set[date]]
 
 
-# ── History file ────────────────────────────────────────────────────────────
-def load_history(path: Path = EVENT_HISTORY_PATH) -> History:
-    """Read event_history.json into slot -> dates.
-
-    Records are grouped by slot on disk rather than stored one per occurrence:
-    with weekly sightings included this file covers every event in the corpus
-    every week, and the grouped form keeps it a few hundred KB instead of a few
-    MB of near-identical rows.
-    """
+# ── History storage ─────────────────────────────────────────────────────────
+def load_history_from_db(conn: sqlite3.Connection) -> History:
     history: History = {}
-    for record in load_json_list(path):
-        if not isinstance(record, dict):
-            continue
-        key = _slot_key(
-            record.get("church_slug"), record.get("event_type"), record.get("start_time"),
-        )
-        if key is None:
-            continue
-        dates = record.get("dates")
-        if not isinstance(dates, list):
-            continue
-        parsed = {d for d in (_parse_date(value) for value in dates) if d is not None}
-        if parsed:
-            history.setdefault(key, set()).update(parsed)
+    for church_slug, event_type, start_time, day in conn.execute(
+        "SELECT church_slug, event_type, start_time, date FROM event_occurrence"
+    ):
+        parsed = _parse_date(day)
+        key = _slot_key(church_slug, event_type, start_time)
+        if key is not None and parsed is not None:
+            history.setdefault(key, set()).add(parsed)
     return history
 
 
-def save_history(history: History, path: Path = EVENT_HISTORY_PATH) -> None:
-    records = [
-        {
-            "church_slug": church_slug,
-            "event_type": event_type,
-            "start_time": start_time,
-            "dates": [d.isoformat() for d in sorted(dates)],
-        }
-        for (church_slug, event_type, start_time), dates in sorted(history.items())
-        if dates
+def save_history_to_db(conn: sqlite3.Connection, history: History) -> int:
+    """Replace the occurrence table with `history`. Returns the rows written."""
+    rows = [
+        (church_slug, event_type, start_time, day.isoformat())
+        for (church_slug, event_type, start_time), days in history.items()
+        for day in days
     ]
-    save_json_list(path, records)
+    with conn:
+        conn.execute("DELETE FROM event_occurrence")
+        conn.executemany(
+            """INSERT INTO event_occurrence(church_slug, event_type, start_time, date)
+               VALUES (?, ?, ?, ?)""",
+            rows,
+        )
+    return len(rows)
 
 
 def _slot_key(church_slug: Any, event_type: Any, start_time: Any) -> SlotKey | None:
@@ -171,7 +158,7 @@ def _nearest_sunday(day: date) -> date:
 def occurrence_from_row(
     row: dict[str, Any], *, bulletin_date: date | None,
 ) -> tuple[SlotKey, date] | None:
-    """Turn an events.json row into a (slot, date) occurrence, or None.
+    """Turn an event row into a (slot, date) occurrence, or None.
 
     Dated rows are credited to their own date. Weekly rows are credited to the
     first matching weekday on or after `bulletin_date`, i.e. the occurrence the
@@ -400,155 +387,48 @@ def _count_new(history: History, before: set[tuple[SlotKey, date]]) -> int:
     return sum(1 for pair in _occurrence_set(history) if pair not in before)
 
 
-def apply_recurrence(
-    events_path: Path = EVENTS_PATH,
-    history_path: Path = EVENT_HISTORY_PATH,
-    metadata_path: Path = BULLETINS_METADATA_PATH,
-    today: date | None = None,
-) -> dict[str, int]:
-    """Re-run promotion over the current events.json.
+def apply_recurrence(conn: sqlite3.Connection, today: date | None = None) -> dict[str, int]:
+    """Re-run promotion over each parish's current bulletin.
 
-    `process` already promotes each bulletin as it merges it, so this is for
-    applying a backfilled history (or a changed threshold) to events that were
-    processed before the evidence existed.
+    `process` already promotes each bulletin as it stores it, so this is for
+    applying a changed threshold (or a history imported after the fact) to
+    events that were processed before the evidence existed.
     """
-    events = load_json_list(events_path)
-    history = load_history(history_path)
+    bulletins = {b["id"]: b for b in load_bulletins(conn)}
+    events = load_events(conn, list(latest_bulletin_ids(conn).values()))
+    history = load_history_from_db(conn)
     if not events:
-        LOGGER.info("No events at %s, nothing to promote", events_path)
+        LOGGER.info("No current events, nothing to promote")
         return {"events": 0, "promoted": 0, "recorded": 0}
+
+    # Promotion dedupes against weekly rows for the same parish only, so group
+    # by bulletin: rows from different bulletins never describe the same slot.
+    by_bulletin: dict[int, list[dict[str, Any]]] = {}
+    for row in events:
+        by_bulletin.setdefault(row["bulletin_id"], []).append(row)
 
     # Recorded before promotion, exactly as `process` does it: promotion clears
     # a row's date, so a sighting that is not already on file would be lost
     # outright and next week's chain would break at this run.
     already_on_file = _occurrence_set(history)
-    _record_by_bulletin(history, events, _reference_dates_by_source_url(metadata_path))
+    for bulletin_id, rows in by_bulletin.items():
+        record_observations(
+            history, rows, bulletin_date=bulletin_reference_date(bulletins[bulletin_id]),
+        )
     pruned = prune_history(history, today=today)
     recorded = _count_new(history, already_on_file)
     if recorded or pruned:
-        save_history(history, history_path)
-
-    # Promotion dedupes against weekly rows for the same parish only, so group
-    # by bulletin: rows from different bulletins never describe the same slot.
-    by_bulletin: dict[Any, list[dict[str, Any]]] = {}
-    for row in events:
-        by_bulletin.setdefault(row.get("bulletin_source_url"), []).append(row)
+        save_history_to_db(conn, history)
 
     promoted_total = 0
-    out: list[dict[str, Any]] = []
-    for rows in by_bulletin.values():
+    for bulletin_id, rows in by_bulletin.items():
         promoted_rows, promoted = promote_recurring_events(rows, history)
-        promoted_total += promoted
-        out.extend(promoted_rows)
+        if promoted:
+            promoted_total += promoted
+            replace_bulletin_events(conn, bulletin_id, promoted_rows)
 
-    if promoted_total:
-        save_json_list(events_path, out)
     LOGGER.info(
         "Recurrence apply: %d of %d events promoted to weekly (%d new occurrences recorded)",
         promoted_total, len(events), recorded,
     )
-    return {"events": len(out), "promoted": promoted_total, "recorded": recorded}
-
-
-def backfill_history_from_git(
-    *,
-    events_path: Path = EVENTS_PATH,
-    history_path: Path = EVENT_HISTORY_PATH,
-    metadata_path: Path = BULLETINS_METADATA_PATH,
-    limit: int | None = None,
-) -> dict[str, int]:
-    """Seed event_history.json from past committed revisions of events.json.
-
-    The weekly pipeline commits a fresh events.json every run, so git already
-    holds the sightings the history file was never around to record. Without
-    this the detector needs MIN_PRIOR_WEEKS of new runs before it can promote
-    anything.
-    """
-    history = load_history(history_path)
-    reference_dates = _reference_dates_by_source_url(metadata_path)
-    already_on_file = _occurrence_set(history)
-
-    revisions = _git_revisions(events_path, limit=limit)
-    scanned = 0
-    for revision in revisions:
-        rows = _git_show_json(revision, events_path)
-        if rows is None:
-            continue
-        scanned += 1
-        _record_by_bulletin(history, rows, reference_dates)
-
-    # The working copy may be ahead of the last commit.
-    _record_by_bulletin(history, load_json_list(events_path), reference_dates)
-
-    prune_history(history)
-    save_history(history, history_path)
-    added = _count_new(history, already_on_file)
-    occurrences = sum(len(dates) for dates in history.values())
-    LOGGER.info(
-        "Backfilled event history from %d revisions of %s: %d new occurrences "
-        "(%d occurrences across %d slots)",
-        scanned, events_path, added, occurrences, len(history),
-    )
-    return {
-        "revisions": scanned,
-        "added": added,
-        "occurrences": occurrences,
-        "slots": len(history),
-    }
-
-
-def _reference_dates_by_source_url(metadata_path: Path) -> dict[str, date]:
-    """Map each bulletin's source URL to the date its week starts from."""
-    reference_dates: dict[str, date] = {}
-    for entry in load_json_list(metadata_path):
-        if not isinstance(entry, dict):
-            continue
-        source_url = entry.get("source_url")
-        reference = bulletin_reference_date(entry)
-        if isinstance(source_url, str) and source_url and reference is not None:
-            reference_dates[source_url] = reference
-    return reference_dates
-
-
-def _record_by_bulletin(
-    history: History, rows: list[dict[str, Any]], reference_dates: dict[str, date],
-) -> int:
-    """Record rows a bulletin at a time, so each gets its own reference date."""
-    by_bulletin: dict[Any, list[dict[str, Any]]] = {}
-    for row in rows:
-        if isinstance(row, dict):
-            by_bulletin.setdefault(row.get("bulletin_source_url"), []).append(row)
-    added = 0
-    for source_url, bulletin_rows in by_bulletin.items():
-        reference = reference_dates.get(source_url) if isinstance(source_url, str) else None
-        added += record_observations(history, bulletin_rows, bulletin_date=reference)
-    return added
-
-
-def _git_revisions(path: Path, *, limit: int | None = None) -> list[str]:
-    args = ["git", "log", "--format=%H"]
-    if limit is not None:
-        args.append(f"--max-count={limit}")
-    args += ["--", path.as_posix()]
-    completed = subprocess.run(args, capture_output=True, text=True, check=False)
-    if completed.returncode != 0:
-        raise RuntimeError(f"git log failed: {completed.stderr.strip()}")
-    return [line.strip() for line in completed.stdout.splitlines() if line.strip()]
-
-
-def _git_show_json(revision: str, path: Path) -> list[dict[str, Any]] | None:
-    completed = subprocess.run(
-        ["git", "show", f"{revision}:{path.as_posix()}"],
-        capture_output=True, text=True, check=False,
-    )
-    if completed.returncode != 0:
-        LOGGER.debug("Skipping %s: %s not readable at that revision", revision, path)
-        return None
-    try:
-        rows = json.loads(completed.stdout)
-    except json.JSONDecodeError:
-        LOGGER.warning("Skipping %s: %s is not valid JSON at that revision", revision, path)
-        return None
-    if not isinstance(rows, list):
-        return None
-    return [r for r in rows if isinstance(r, dict)]
+    return {"events": len(events), "promoted": promoted_total, "recorded": recorded}

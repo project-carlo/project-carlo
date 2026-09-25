@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "churches": {
+    "id": [7, 3],
+    "parish_id": [1, 1],
+    "slug": ["b", "a"],
+    "name": ["B", "A"],
+    "address_line1": [null, "1 Main St"],
+    "address_line2": [null, null],
+    "city": {"values": ["Rochester"], "codes": [0, null]},
+    "state": {"values": ["NY"], "codes": [0, 0]},
+    "postal_code": [null, "14620"],
+    "latitude": [43.1, null],
+    "longitude": [-77.6, null],
+    "homepage_url": [null, "https://a"],
+    "bulletin_url": [null, null]
+  },
+  "events": {
+    "id": {"deltas": [10, 1, 4]},
+    "church_id": [7, 3, 7],
+    "event_type": {"values": ["mass", "adoration"], "codes": [0, 0, 1]},
+    "event_kind": {"values": ["weekly", "specific_date"], "codes": [0, 1, 0]},
+    "day_of_week": {"values": ["Sunday", "Friday"], "codes": [0, null, 1]},
+    "date": {"values": ["2026-12-25"], "codes": [null, 0, null]},
+    "start_time": [600, 0, 1140],
+    "end_time": [null, 60, 1200],
+    "cancelled": [false, true, false],
+    "page_number": [2, null, 3],
+    "note": {"values": ["Midnight"], "codes": [null, 0, 0]}
+  }
+}

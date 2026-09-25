@@ -1,12 +1,16 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import {
+  ChurchNotFoundError,
+  churchSchedule,
   collectMapItems,
   eventMatchesFilters,
+  findChurch,
   resetMapItemCache,
   type ChurchFilters,
-  type RawEvent,
 } from "./api";
-import type { ChurchBase } from "./types";
+import { parseSnapshot } from "./lib/snapshot";
+import fixture from "./lib/snapshot.fixture.json";
+import type { ChurchBase, RawEvent } from "./types";
 
 function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
   return {
@@ -260,5 +264,30 @@ describe("collectMapItems", () => {
     expect(both[0].upcoming_events).toHaveLength(2);
     expect(morningOnly[0].upcoming_events).toHaveLength(1);
     expect(morningOnly[0]).not.toBe(both[0]);
+  });
+});
+
+describe("church page lookups", () => {
+  const snapshot = parseSnapshot(JSON.stringify(fixture));
+
+  it("finds a church with its parish links, or throws ChurchNotFoundError", () => {
+    expect(findChurch(snapshot, "a")).toMatchObject({
+      id: 3,
+      homepage_url: "https://a",
+      bulletin_url: null,
+    });
+    expect(() => findChurch(snapshot, "missing")).toThrow(ChurchNotFoundError);
+  });
+
+  it("lists a church's upcoming events of the chosen types in schedule order", () => {
+    // Church 7 has a Friday adoration (id 15) and a Sunday Mass (id 10).
+    expect(churchSchedule(snapshot, "b", []).map((ev) => ev.id)).toEqual([10, 15]);
+    expect(churchSchedule(snapshot, "b", ["adoration"]).map((ev) => ev.id)).toEqual([15]);
+    expect(churchSchedule(snapshot, "b", ["confession"])).toEqual([]);
+  });
+
+  it("leaves out events with no next occurrence", () => {
+    // Church 3's only event is cancelled.
+    expect(churchSchedule(snapshot, "a", [])).toEqual([]);
   });
 });

@@ -23,7 +23,8 @@ interface FilterPanelProps {
   onClose: () => void;
   filters: FilterState;
   onChange: (filters: FilterState) => void;
-  onApply: () => void;
+  /** Mapped churches matching the current filters, shown on the mobile close button. */
+  resultCount?: number;
 }
 
 export function FilterPanel({
@@ -32,7 +33,7 @@ export function FilterPanel({
   onClose,
   filters,
   onChange,
-  onApply,
+  resultCount,
 }: FilterPanelProps) {
   const isDaysDefault = filters.daysOfWeek.length === 0;
   const isTimeDefault =
@@ -91,13 +92,6 @@ export function FilterPanel({
   const handleClear = useCallback(() => {
     onChange({ ...DEFAULT_FILTER_STATE });
   }, [onChange]);
-
-  const handleApply = useCallback(() => {
-    onApply();
-    if (!isDesktop) {
-      onClose();
-    }
-  }, [isDesktop, onApply, onClose]);
 
   const panelBody = (
     <div className="flex flex-col">
@@ -232,10 +226,12 @@ export function FilterPanel({
         ) : (
           <button
             type="button"
-            onClick={handleApply}
+            onClick={onClose}
             className="missal-focus bg-rubric px-6 py-3 font-display text-[1.05rem] leading-none text-paper transition-colors hover:bg-rubric-deep"
           >
-            Apply filters
+            {resultCount == null
+              ? "Show churches"
+              : `Show ${resultCount} ${resultCount === 1 ? "church" : "churches"}`}
           </button>
         )}
       </div>
