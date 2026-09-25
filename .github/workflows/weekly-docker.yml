@@ -26,6 +26,9 @@ concurrency:
 env:
   R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
   R2_BUCKET: ${{ vars.R2_BUCKET || 'project-carlo-data' }}
+  # Only for a bucket in a jurisdiction (e.g. https://<account>.eu.r2.cloudflarestorage.com);
+  # otherwise the endpoint is derived from R2_ACCOUNT_ID.
+  R2_ENDPOINT_URL: ${{ vars.R2_ENDPOINT_URL }}
   # Optional dead-man's switch (e.g. healthchecks.io): pinged after a published run,
   # so a run that never happens raises an alert too.
   HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
@@ -54,7 +57,7 @@ jobs:
         run: |
           missing=()
           [[ "$HAS_GEMINI" == "true" ]] || missing+=(GEMINI_API_KEY)
-          [[ -n "$R2_ACCOUNT_ID" ]] || missing+=(R2_ACCOUNT_ID)
+          [[ -n "$R2_ACCOUNT_ID$R2_ENDPOINT_URL" ]] || missing+=(R2_ACCOUNT_ID)
           [[ "$HAS_R2_KEY" == "true" ]] || missing+=(R2_WRITE_ACCESS_KEY_ID)
           [[ "$HAS_R2_SECRET" == "true" ]] || missing+=(R2_WRITE_SECRET_ACCESS_KEY)
           if (( ${#missing[@]} )); then
@@ -118,7 +121,7 @@ jobs:
           set +e
           docker run --name project-carlo-weekly \
             -e GEMINI_API_KEY \
-            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
+            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
             -e CARLO_REMOTE_WRITE \
             -e RUN_ID -e GIT_SHA="$GITHUB_SHA" -e RUN_TRIGGER="$GITHUB_EVENT_NAME" \
             "${legacy_args[@]}" \
@@ -170,7 +173,7 @@ jobs:
           RUN_ID: ${{ steps.run.outputs.id }}
         run: |
           docker run --rm \
-            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
+            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
             -e CARLO_REMOTE_WRITE=1 \
             project-carlo-weekly:latest \
             uv run --no-sync python -m pdf_extract data promote --run-id "$RUN_ID"

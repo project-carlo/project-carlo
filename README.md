@@ -285,6 +285,7 @@ overriding variables already set).
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
+- `R2_ENDPOINT_URL`: only for a bucket in a jurisdiction (e.g. `https://<account>.eu.r2.cloudflarestorage.com`); otherwise derived from `R2_ACCOUNT_ID`.
 - `CARLO_REMOTE_WRITE=1`: let commands write to R2. Set only by the weekly workflow.
 
 ### Web app (`apps/web`)

@@ -7,7 +7,8 @@ on:
     paths:
       - "apps/web/**"
       - "data/**"
-      - "src/pdf_extract/datasync.py"
+      # Deploys build the snapshot with the pipeline code.
+      - "src/pdf_extract/**"
       - "package.json"
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
@@ -19,7 +20,8 @@ on:
     paths:
       - "apps/web/**"
       - "data/**"
-      - "src/pdf_extract/datasync.py"
+      # Deploys build the snapshot with the pipeline code.
+      - "src/pdf_extract/**"
       - "package.json"
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
@@ -89,6 +91,7 @@ jobs:
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET: ${{ vars.R2_BUCKET || 'project-carlo-data' }}
+          R2_ENDPOINT_URL: ${{ vars.R2_ENDPOINT_URL }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_READ_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_READ_SECRET_ACCESS_KEY }}
         run: |

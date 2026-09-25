@@ -17,6 +17,12 @@ If R2 hasn't been enabled on the account yet, Cloudflare asks you to turn it
 on first. The free tier (10 GB) covers this project many times over; the
 database and PDFs add up to tens of MB a year.
 
+If you chose a **jurisdiction** (e.g. EU) instead of automatic, the bucket's
+S3 endpoint looks like `https://<ACCOUNT_ID>.eu.r2.cloudflarestorage.com`.
+Add it as a repository **variable** named `R2_ENDPOINT_URL` in step 3, and as
+an environment variable of the same name in step 4. With the default location
+you don't need it.
+
 Note the **Account ID**. It's on the R2 overview page, and also in the
 endpoint URL `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`.
 
