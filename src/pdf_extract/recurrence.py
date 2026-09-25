@@ -77,27 +77,6 @@ History = dict[SlotKey, set[date]]
 
 
 # ── History storage ─────────────────────────────────────────────────────────
-def history_from_records(records: list[Any]) -> History:
-    """Parse the grouped {church_slug, event_type, start_time, dates} records
-    of the legacy event_history.json file."""
-    history: History = {}
-    for record in records:
-        if not isinstance(record, dict):
-            continue
-        key = _slot_key(
-            record.get("church_slug"), record.get("event_type"), record.get("start_time"),
-        )
-        if key is None:
-            continue
-        dates = record.get("dates")
-        if not isinstance(dates, list):
-            continue
-        parsed = {d for d in (_parse_date(value) for value in dates) if d is not None}
-        if parsed:
-            history.setdefault(key, set()).update(parsed)
-    return history
-
-
 def load_history_from_db(conn: sqlite3.Connection) -> History:
     history: History = {}
     for church_slug, event_type, start_time, day in conn.execute(
@@ -179,7 +158,7 @@ def _nearest_sunday(day: date) -> date:
 def occurrence_from_row(
     row: dict[str, Any], *, bulletin_date: date | None,
 ) -> tuple[SlotKey, date] | None:
-    """Turn an events.json row into a (slot, date) occurrence, or None.
+    """Turn an event row into a (slot, date) occurrence, or None.
 
     Dated rows are credited to their own date. Weekly rows are credited to the
     first matching weekday on or after `bulletin_date`, i.e. the occurrence the

@@ -5,16 +5,13 @@ import pytest
 
 from pdf_extract.db import (
     DatabaseMissingError,
-    LegacyDatabaseError,
     _migration_files,
     create_db,
     ensure_db,
-    import_legacy_json,
     migrate,
     schema_version,
     seed_reference_data,
 )
-from pdf_extract.recurrence import history_from_records, load_history_from_db
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
@@ -368,72 +365,5 @@ def test_seed_refuses_to_run_without_the_csvs(pipeline_dir: Path) -> None:
         with pytest.raises(FileNotFoundError, match="parishes.csv"):
             seed_reference_data(conn)
         assert _count(conn, "parish") == 1
-    finally:
-        conn.close()
-
-
-def test_ensure_db_rejects_a_database_from_the_old_pipeline(pipeline_dir: Path) -> None:
-    """The old code built tables without a schema version; migrating it would fail."""
-    conn = connect_db()
-    conn.execute("CREATE TABLE parish (id INTEGER PRIMARY KEY)")
-    conn.commit()
-    conn.close()
-    with pytest.raises(LegacyDatabaseError, match="data:pull"):
-        ensure_db()
-
-
-# ── Legacy JSON import ──────────────────────────────────────────────────────
-def test_import_legacy_json_maps_metadata_events_and_history(pipeline_dir: Path) -> None:
-    url = "https://example.org/bulletin.pdf"
-    metadata = [
-        {
-            "parish_slug": "test-parish", "source_url": url, "content_hash": "abc",
-            "published_date": "2026-09-20", "fetched_at": "2026-09-19T00:00:00Z",
-            "processed_at": "2026-09-19T01:00:00Z",
-        },
-        # Same bulletin twice: counted once.
-        {"parish_slug": "test-parish", "source_url": url},
-        {"parish_slug": "unknown-parish", "source_url": "https://x.org/b.pdf"},
-        {"parish_slug": "test-parish"},
-    ]
-    events = [
-        {**EVENT_ROW, "church_slug": "test-church", "bulletin_source_url": url,
-         "end_time": "10:00 AM", "page_number": 2, "note": " Spanish "},
-        {**EVENT_ROW, "church_slug": "unknown-church", "bulletin_source_url": url},
-        {**EVENT_ROW, "church_slug": "test-church", "bulletin_source_url": "https://nope"},
-        {**EVENT_ROW, "church_slug": "test-church", "bulletin_source_url": url,
-         "start_time": "sometime"},
-    ]
-    history = history_from_records([
-        {"church_slug": "test-church", "event_type": "mass", "start_time": 540,
-         "dates": ["2026-09-06", "2026-09-13", "not a date"]},
-        {"church_slug": "test-church", "event_type": "mass", "start_time": "9:00 AM",
-         "dates": ["2026-09-06"]},
-    ])
-    db_path = pipeline_dir / "data" / "imported.db"
-
-    stats = import_legacy_json(db_path, metadata=metadata, events=events, history=history)
-
-    assert stats == {"bulletins": 1, "events": 1, "events_skipped": 3, "occurrences": 2}
-    conn = connect_db(db_path)
-    try:
-        bulletin = dict(conn.execute(
-            "SELECT source_url, content_hash, published_date, fetched_at, processed_at"
-            " FROM bulletin"
-        ).fetchone())
-        assert bulletin == {
-            "source_url": url, "content_hash": "abc", "published_date": "2026-09-20",
-            "fetched_at": "2026-09-19T00:00:00Z", "processed_at": "2026-09-19T01:00:00Z",
-        }
-        event = dict(conn.execute(
-            "SELECT event_type, event_kind, day_of_week, start_time, end_time, cancelled,"
-            " page_number, note FROM event"
-        ).fetchone())
-        assert event == {
-            "event_type": "mass", "event_kind": "weekly", "day_of_week": "Sunday",
-            "start_time": 540, "end_time": 600, "cancelled": 0, "page_number": 2,
-            "note": "Spanish",
-        }
-        assert load_history_from_db(conn) == history
     finally:
         conn.close()

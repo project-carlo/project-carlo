@@ -2,10 +2,9 @@
 
 Everything the pipeline keeps as a file lives under a key such as
 `bulletins/<parish>/<sha256>.pdf`. Locally a key is simply a path under
-`data/`, so a checkout that has never been configured for R2 keeps working on
-its own files exactly as before. When R2 credentials are present, the local
-directory becomes a read-through cache in front of the bucket: a miss is
-downloaded once and kept.
+`data/`, so a checkout without R2 credentials works on its own files. When R2
+credentials are present, the local directory becomes a read-through cache in
+front of the bucket: a miss is downloaded once and kept.
 
 Writes to the bucket are opt-in (`CARLO_REMOTE_WRITE=1`). The weekly job sets
 it; laptops and agent sessions normally hold read-only credentials and never

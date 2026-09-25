@@ -18,7 +18,6 @@ from pdf_extract.recurrence import (
     History,
     apply_recurrence,
     bulletin_reference_date,
-    history_from_records,
     load_history_from_db,
     occurrence_from_row,
     promote_recurring_events,
@@ -446,19 +445,6 @@ def test_saving_history_replaces_what_was_stored(conn: sqlite3.Connection) -> No
     save_history_to_db(conn, _history_for([1, 2]))
     save_history_to_db(conn, _history_for([1]))
     assert load_history_from_db(conn) == _history_for([1])
-
-
-def test_legacy_history_records_are_grouped_by_slot() -> None:
-    records = [
-        {
-            "church_slug": "st-mary-anytown",
-            "event_type": "adoration",
-            "start_time": 1140,
-            "dates": ["2026-08-05", "2026-08-12", "not a date"],
-        },
-        {"church_slug": "st-mary-anytown", "event_type": "adoration", "start_time": "7pm"},
-    ]
-    assert history_from_records(records) == _history_for([1, 2])
 
 
 # ── apply_recurrence over the current events ────────────────────────────────

@@ -116,9 +116,9 @@ CSV change that removes a parish or church: that deletes events, so deploys
 keep the published snapshot until a reviewed weekly run publishes the removal.
 
 The change report is always in the job summary, and kept as a workflow
-artifact for 90 days. Nothing is committed to the repository.
+artifact for 90 days.
 
-Repository secrets and the one-time setup are in
+The R2 bucket, its API tokens and the repository secrets are described in
 [docs/data-setup.md](docs/data-setup.md).
 
 ### Local Docker run
@@ -170,9 +170,9 @@ you want to inspect. The database you replace is kept as
 
 Every pipeline command first brings the local database up to date: it applies
 new migrations and re-seeds the `parish` and `church` tables from the CSVs,
-matching rows by slug. An edited CSV takes effect on the next command, as
-before. A parish or church removed from its CSV is deleted along with its
-bulletins and events.
+matching rows by slug. An edited CSV takes effect on the next command. A
+parish or church removed from its CSV is deleted along with its bulletins and
+events.
 
 To change the schema, add the next numbered file to `data/migrations/`; never
 edit one that has shipped. `PRAGMA user_version` records which migrations a
@@ -310,7 +310,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 - `data/parishes.csv`, `data/churches.csv` - curated parish and church lists
 - `data/dioceses/` - parishes and churches of dioceses still being explored
 - `data/` (untracked) - the local database, bulletin PDF cache and run outputs
-- `docs/data-setup.md` - one-time R2 and GitHub setup
+- `docs/data-setup.md` - R2 bucket, API tokens, GitHub secrets, and running the published data
 - `apps/web/` - React + TypeScript + Vite frontend
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend SQLite snapshot
 - `src/pdf_extract/` - Python CLI package
@@ -319,7 +319,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `process.py` - bulletin processing with Gemini AI
   - `schedule_extraction.py` - Gemini schedule extraction
   - `storage.py` - SQLite helpers and data paths
-  - `db.py` - migrations, CSV seeding, legacy JSON import
+  - `db.py` - migrations and CSV seeding
   - `blobstore.py` - local/R2 storage for PDFs and cached extractions
   - `datasync.py` - pull, upload and publish runs
   - `weekly.py` - the weekly run; `report.py` its change report; `runs.py` run records

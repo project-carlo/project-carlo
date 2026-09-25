@@ -20,21 +20,13 @@ import hashlib
 import json
 import logging
 import sqlite3
-import subprocess
 import tempfile
 import urllib.request
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.blobstore import (
-    BlobStoreError,
-    CachedBlobStore,
-    bulletin_pdf_key,
-    get_store,
-)
-from pdf_extract.db import import_legacy_json
+from pdf_extract.blobstore import BlobStoreError, CachedBlobStore, get_store
 from pdf_extract.paths import DATA_DIR, ROOT
-from pdf_extract.recurrence import history_from_records
 from pdf_extract.storage import DEFAULT_DB_PATH, utc_now_iso
 
 LOGGER = logging.getLogger(__name__)
@@ -44,8 +36,6 @@ LATEST_KEY = f"{PIPELINE_PREFIX}/latest.json"
 SNAPSHOT_PATH = ROOT / "apps" / "web" / "public" / "frontend.snapshot"
 OUT_DIR = DATA_DIR / "out"
 PUBLIC_SNAPSHOT_URL = "https://projectcarlo.com/frontend.snapshot"
-
-LEGACY_FILES = ("data/metadata.json", "data/events.json", "data/event_history.json")
 
 
 def run_key(run_id: str, name: str) -> str:
@@ -122,9 +112,8 @@ def pull(
     Bulletin PDFs are not downloaded up front; commands fetch the ones they
     need on first use.
 
-    With `public_fallback`, a snapshot-only pull that has no credentials, or
-    finds nothing published yet, takes the snapshot the live site is serving,
-    so a deploy keeps showing the current data rather than failing.
+    With `public_fallback`, a snapshot-only pull that has no credentials takes
+    the snapshot the live site is serving, which is all the web app needs.
     """
     store = get_store()
     snapshot_only = snapshot and not db
@@ -139,13 +128,7 @@ def pull(
     if run_id is None:
         manifest = _read_json(store, LATEST_KEY)
         if manifest is None:
-            if snapshot_only and public_fallback:
-                LOGGER.warning("Nothing published to R2 yet; using the live site's snapshot")
-                return _pull_public_snapshot(snapshot_path)
-            raise BlobStoreError(
-                f"Nothing published yet ({LATEST_KEY} not found). Publish a run with the "
-                "Publish Data Run workflow, or run Weekly Data Refresh with bootstrap."
-            )
+            raise BlobStoreError(f"Nothing published ({LATEST_KEY} not found)")
     else:
         manifest = _read_json(store, run_key(run_id, "manifest.json"))
         if manifest is None:
@@ -303,7 +286,6 @@ def build_deploy_snapshot(
     *,
     snapshot_path: Path = SNAPSHOT_PATH,
     db_path: Path = DEFAULT_DB_PATH,
-    public_fallback: bool = False,
 ) -> dict[str, Any]:
     """The snapshot to deploy, built from the published database by *this* code.
 
@@ -315,13 +297,6 @@ def build_deploy_snapshot(
     # Imported here: db and extract_frontend_db import this module's neighbours.
     from pdf_extract.db import ensure_db
     from pdf_extract.extract_frontend_db import extract
-
-    store = get_store()
-    if not store.is_remote or store.get_remote(LATEST_KEY) is None:
-        if not public_fallback:
-            raise BlobStoreError("Nothing published to build a snapshot from")
-        LOGGER.warning("No published database; using the live site's snapshot")
-        return _pull_public_snapshot(snapshot_path)
 
     pulled = pull(db=True, snapshot=False, db_path=db_path)
     seeded = ensure_db(db_path)
@@ -342,75 +317,3 @@ def build_deploy_snapshot(
         }
     built = extract(db_path, snapshot_path, keep_previous=False)
     return {"run_id": pulled["run_id"], "seeded": seeded, "snapshot": built}
-
-
-# ── One-time migration helpers ──────────────────────────────────────────────
-def import_legacy(
-    *, git_ref: str | None = None, source_dir: Path | None = None,
-    db_path: Path = DEFAULT_DB_PATH, force: bool = False,
-) -> dict[str, Any]:
-    """Build the database from the JSON files the repository used to commit.
-
-    Reads them from a git revision (`git_ref`) or a directory holding
-    metadata.json, events.json and event_history.json.
-
-    Refuses when R2 already has a published run (unless `force`): the legacy
-    files are frozen, so importing them again would roll back every bulletin,
-    event and run record added since.
-    """
-    if (git_ref is None) == (source_dir is None):
-        raise ValueError("Pass exactly one of git_ref or source_dir")
-    store = get_store()
-    if not force and store.is_remote and store.get_remote(LATEST_KEY) is not None:
-        raise BlobStoreError(
-            "A run is already published; importing the legacy JSON would replace it with "
-            "older data. Pull the published database instead (or pass --force)."
-        )
-
-    def load(name: str) -> list[Any]:
-        if source_dir is not None:
-            path = source_dir / Path(name).name
-            return json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
-        completed = subprocess.run(
-            ["git", "show", f"{git_ref}:{name}"],
-            capture_output=True, text=True, check=False, cwd=ROOT,
-        )
-        if completed.returncode != 0:
-            raise RuntimeError(f"git show {git_ref}:{name} failed: {completed.stderr.strip()}")
-        return json.loads(completed.stdout)
-
-    metadata, events, history = (load(name) for name in LEGACY_FILES)
-    stats = import_legacy_json(
-        db_path, metadata=metadata, events=events, history=history_from_records(history),
-    )
-    return {"source": git_ref or str(source_dir), **stats}
-
-
-def upload_bulletins(bulletins_dir: Path = DATA_DIR / "bulletins") -> dict[str, int]:
-    """Upload local bulletin PDFs the bucket does not have yet.
-
-    For moving PDFs that were only ever fetched on one machine into shared
-    storage. Needs write credentials and CARLO_REMOTE_WRITE=1.
-    """
-    store = get_store()
-    if not store.remote_write:
-        raise BlobStoreError("Uploading needs R2 write credentials and CARLO_REMOTE_WRITE=1")
-    assert store.remote is not None
-    uploaded = present = skipped = 0
-    for path in sorted(bulletins_dir.glob("*/*.pdf")):
-        content_hash = path.stem
-        if len(content_hash) != 64 or not all(c in "0123456789abcdef" for c in content_hash):
-            skipped += 1  # truncated copies and anything not named by its hash
-            continue
-        key = bulletin_pdf_key(path.parent.name, content_hash)
-        if store.remote.exists(key):
-            present += 1
-            continue
-        data = path.read_bytes()
-        if _sha256(data) != content_hash:
-            LOGGER.warning("Skipping %s: contents do not match its name", path)
-            skipped += 1
-            continue
-        store.remote.put(key, data, content_type="application/pdf")
-        uploaded += 1
-    return {"uploaded": uploaded, "already_present": present, "skipped": skipped}

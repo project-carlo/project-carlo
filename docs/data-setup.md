@@ -1,8 +1,8 @@
 # Data storage setup
 
-One-time setup for storing pipeline data in Cloudflare R2 instead of git. You
-can do steps 1–5 from a phone browser. Step 6 needs the computer that holds the
-old bulletin PDFs.
+Pipeline data lives in a Cloudflare R2 bucket. This page covers the bucket,
+its API tokens and the repository secrets that use them, then day-to-day
+operation. Steps 1–3 can be done from a phone browser.
 
 ## 1. Create the bucket
 
@@ -54,56 +54,19 @@ secrets; use the website in a mobile browser.)
 | `R2_WRITE_SECRET_ACCESS_KEY` | Secret Access Key of `project-carlo-write` |
 | `R2_READ_ACCESS_KEY_ID` | Access Key ID of `project-carlo-read` |
 | `R2_READ_SECRET_ACCESS_KEY` | Secret Access Key of `project-carlo-read` |
-| `GEMINI_API_KEY` | already set |
+| `GEMINI_API_KEY` | the Gemini API key |
 
 Optional: `HEALTHCHECK_URL`, a ping URL from a service such as
 [healthchecks.io](https://healthchecks.io) (free). Set its schedule to weekly
 with a day of grace. It alerts you when a successful publish *doesn't* happen,
 which covers the case where the job never runs at all.
 
-## 4. Merge the pull request
-
-Merging removes `data/metadata.json`, `data/events.json`,
-`data/event_history.json` and `apps/web/public/frontend.snapshot` from the
-repository. Until the first run is published, deploys reuse the snapshot the
-live site is already serving. If a deploy fails in that window, the live site
-is unaffected.
-
-## 5. Run the first (bootstrap) refresh
-
-github.com → **Actions** → **Weekly Data Refresh** → **Run workflow** → tick
-**bootstrap** → **Run workflow**.
-
-This builds the database from the last committed JSON files (the same data
-the site shows today), runs a normal weekly pass on top, and publishes it if
-the checks pass. After that, the Sunday schedule takes over with no bootstrap.
-
-Check the run's summary page for the change report. If the run is **held**, an
-issue labelled `data-refresh` explains why. To publish it anyway, go to
-**Actions** → **Publish Data Run** → **Run workflow** and enter the run id.
-Until some run is published, scheduled runs have nothing to start from and
-fail, so don't leave the bootstrap run unpublished.
-
-Bootstrap only once. Once a run is published, the bootstrap refuses to run, so
-the frozen JSON can't overwrite newer data.
-
-## 6. Upload the old bulletin PDFs (at your computer, whenever convenient)
-
-Until now, bulletin PDFs only existed on the machine that ran the pipeline.
-New ones go to R2 automatically. To upload the old ones too, run this from the
-repository on that machine with the **write** token:
-
-```bash
-export R2_ACCOUNT_ID=... R2_ACCESS_KEY_ID=... R2_SECRET_ACCESS_KEY=... CARLO_REMOTE_WRITE=1
-pnpm data:upload-bulletins
-```
-
-It skips PDFs the bucket already has, so it's safe to re-run. Nothing depends
-on this for the weekly run; it just makes old bulletins available for
-`pnpm extract` / `pnpm compare` experiments.
-
 ## Day to day
 
+- **Held or failed runs:** each run's summary page has its change report. A
+  held or failed run also opens (or comments on) an issue labelled
+  `data-refresh` that says why. To publish a held run anyway, go to
+  **Actions** → **Publish Data Run** → **Run workflow** and enter the run id.
 - **See what's live:** `pnpm data:status`, or R2 → `pipeline/latest.json`.
 - **Roll back:** run **Publish Data Run** with an earlier run id (listed, with
   each run's status, by `pnpm data:status`) and tick **rollback**.

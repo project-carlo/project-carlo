@@ -1,4 +1,4 @@
-"""The pipeline database: migrations, reference-data seeding, and legacy import.
+"""The pipeline database: migrations and reference-data seeding.
 
 `data/parish_events.db` is the source of truth for everything the pipeline
 observes (bulletins, events, recurrence history, run records). It is not
@@ -8,7 +8,7 @@ place by pipeline commands, and published back by the weekly job.
 Two tables are the exception. `parish` and `church` are curated by hand in
 `data/parishes.csv` and `data/churches.csv`, reviewed in pull requests, and
 seeded into the database (matched by slug) before every pipeline command, so
-an edited CSV takes effect on the next command just as it always has.
+an edited CSV takes effect on the next command.
 """
 
 from __future__ import annotations
@@ -19,7 +19,6 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.recurrence import History, save_history_to_db
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
@@ -27,7 +26,6 @@ from pdf_extract.storage import (
     PARISHES_CSV_PATH,
     connect_db,
     delete_db,
-    event_row_values,
     utc_now_iso,
 )
 
@@ -56,10 +54,6 @@ def schema_version(conn: sqlite3.Connection) -> int:
     return int(conn.execute("PRAGMA user_version").fetchone()[0])
 
 
-class LegacyDatabaseError(RuntimeError):
-    pass
-
-
 def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> int:
     """Apply migrations newer than the database's user_version. Returns how many ran.
 
@@ -67,14 +61,6 @@ def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> 
     so a failure leaves the database at the previous version.
     """
     current = schema_version(conn)
-    if current == 0 and conn.execute(
-        "SELECT 1 FROM sqlite_master WHERE type = 'table' LIMIT 1"
-    ).fetchone():
-        raise LegacyDatabaseError(
-            "This database was built by the old rebuild-from-JSON pipeline and has no "
-            "schema version. Replace it: `pnpm data:pull` for the published data, or "
-            "`pnpm db:create --force` for an empty one."
-        )
     files = _migration_files(migrations_dir)
     if current > len(files):
         raise RuntimeError(
@@ -292,70 +278,3 @@ def ensure_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     finally:
         conn.close()
     return {"migrations_applied": migrations, **seeded}
-
-
-# ── Import from the legacy JSON files ───────────────────────────────────────
-def import_legacy_json(
-    db_path: Path,
-    *,
-    metadata: list[dict[str, Any]],
-    events: list[dict[str, Any]],
-    history: History,
-) -> dict[str, int]:
-    """Build a database from the JSON files the repository used to commit.
-
-    A one-time bootstrap: metadata.json becomes the bulletin table,
-    events.json the event table, event_history.json the occurrence table.
-    """
-    create_db(db_path)
-    conn = connect_db(db_path)
-    stats = {"bulletins": 0, "events": 0, "events_skipped": 0, "occurrences": 0}
-    try:
-        with conn:
-            for entry in metadata:
-                parish = conn.execute(
-                    "SELECT id FROM parish WHERE slug = ?", (entry.get("parish_slug"),)
-                ).fetchone()
-                if not parish or not entry.get("source_url"):
-                    continue
-                cursor = conn.execute(
-                    """INSERT OR IGNORE INTO bulletin(
-                           parish_id, source_url, content_hash, published_date,
-                           fetched_at, processed_at
-                       ) VALUES (?, ?, ?, ?, ?, ?)""",
-                    (
-                        parish["id"],
-                        entry["source_url"],
-                        entry.get("content_hash"),
-                        entry.get("published_date"),
-                        entry.get("fetched_at"),
-                        entry.get("processed_at"),
-                    ),
-                )
-                stats["bulletins"] += cursor.rowcount
-
-            for row in events:
-                bulletin = conn.execute(
-                    """SELECT b.id FROM bulletin b
-                       JOIN church c ON c.parish_id = b.parish_id
-                       WHERE c.slug = ? AND b.source_url = ?""",
-                    (row.get("church_slug"), row.get("bulletin_source_url")),
-                ).fetchone()
-                values = event_row_values(conn, row) if bulletin else None
-                if values is None:
-                    stats["events_skipped"] += 1
-                    continue
-                conn.execute(
-                    """INSERT INTO event(
-                           bulletin_id, church_id, event_type, event_kind, day_of_week, date,
-                           start_time, end_time, cancelled, page_number, note
-                       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                    (bulletin["id"], *values),
-                )
-                stats["events"] += 1
-
-        stats["occurrences"] = save_history_to_db(conn, history)
-    finally:
-        conn.close()
-    LOGGER.info("Imported legacy JSON into %s: %s", db_path, stats)
-    return stats

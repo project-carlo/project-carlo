@@ -91,8 +91,7 @@ jobs:
 
       # The snapshot is built here, from the published database, by the code
       # being deployed: its format always matches this web code, and CSV edits
-      # in this commit show up. Read-only R2 keys are enough; without them (or
-      # before anything is published) the live site's current snapshot is reused.
+      # in this commit show up. Read-only R2 keys are enough.
       - name: Build data snapshot
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
@@ -103,8 +102,7 @@ jobs:
         run: |
           set -o pipefail
           uv sync --frozen --no-dev
-          uv run --no-sync python -m pdf_extract data snapshot --public-fallback \
-            | tee pulled.json
+          uv run --no-sync python -m pdf_extract data snapshot | tee pulled.json
           {
             echo "### Data snapshot"
             echo '```json'

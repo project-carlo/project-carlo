@@ -30,11 +30,9 @@ from pdf_extract.classifiers import available_classifiers
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
     build_deploy_snapshot,
-    import_legacy,
     promote,
     pull,
     push_candidate,
-    upload_bulletins,
 )
 from pdf_extract.datasync import status as data_status
 from pdf_extract.db import create_db, ensure_db
@@ -195,8 +193,8 @@ def _cmd_data_pull(args: argparse.Namespace) -> Result:
     )
 
 
-def _cmd_data_snapshot(args: argparse.Namespace) -> Result:
-    return build_deploy_snapshot(public_fallback=args.public_fallback)
+def _cmd_data_snapshot(_args: argparse.Namespace) -> Result:
+    return build_deploy_snapshot()
 
 
 def _cmd_data_push(args: argparse.Namespace) -> Result:
@@ -209,18 +207,6 @@ def _cmd_data_promote(args: argparse.Namespace) -> Result:
 
 def _cmd_data_status(args: argparse.Namespace) -> Result:
     return data_status(limit=args.limit)
-
-
-def _cmd_data_import_legacy(args: argparse.Namespace) -> Result:
-    return import_legacy(
-        git_ref=args.git_ref,
-        source_dir=Path(args.dir) if args.dir else None,
-        force=args.force,
-    )
-
-
-def _cmd_data_upload_bulletins(_args: argparse.Namespace) -> Result:
-    return upload_bulletins()
 
 
 def _cmd_db_create(args: argparse.Namespace) -> Result:
@@ -401,7 +387,7 @@ def _build_parser() -> argparse.ArgumentParser:
     data_pull_parser.add_argument("--no-snapshot", action="store_true")
     data_pull_parser.add_argument(
         "--public-fallback", action="store_true",
-        help="With --snapshot-only: use the live site's snapshot when R2 has none to give",
+        help="With --snapshot-only: use the live site's snapshot when there are no R2 credentials",
     )
     data_pull_parser.set_defaults(handler=_cmd_data_pull)
     _add_common_args(data_pull_parser)
@@ -409,10 +395,6 @@ def _build_parser() -> argparse.ArgumentParser:
     data_snapshot_parser = data_subparsers.add_parser(
         "snapshot",
         help="Build the frontend snapshot from the published database with this code",
-    )
-    data_snapshot_parser.add_argument(
-        "--public-fallback", action="store_true",
-        help="Use the live site's snapshot when nothing is published",
     )
     data_snapshot_parser.set_defaults(handler=_cmd_data_snapshot)
     _add_common_args(data_snapshot_parser)
@@ -442,26 +424,6 @@ def _build_parser() -> argparse.ArgumentParser:
     data_status_parser.add_argument("--limit", type=int, default=10)
     data_status_parser.set_defaults(handler=_cmd_data_status)
     _add_common_args(data_status_parser)
-
-    data_import_parser = data_subparsers.add_parser(
-        "import-legacy",
-        help="Build the database from the old metadata/events/event_history JSON files",
-    )
-    source = data_import_parser.add_mutually_exclusive_group(required=True)
-    source.add_argument("--git-ref", help="Git revision that still has the JSON files")
-    source.add_argument("--dir", help="Directory holding the JSON files")
-    data_import_parser.add_argument(
-        "--force", action="store_true",
-        help="Import even though a run is already published",
-    )
-    data_import_parser.set_defaults(handler=_cmd_data_import_legacy)
-    _add_common_args(data_import_parser)
-
-    data_upload_parser = data_subparsers.add_parser(
-        "upload-bulletins", help="Upload local bulletin PDFs the bucket does not have",
-    )
-    data_upload_parser.set_defaults(handler=_cmd_data_upload_bulletins)
-    _add_common_args(data_upload_parser)
 
     # -- diocese (exploring new dioceses; quiet by default, the JSON is the output) --
     add_diocese_parser(

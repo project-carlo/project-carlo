@@ -4,18 +4,12 @@ name: Weekly Data Refresh
 # uploads the result as a candidate run, and publishes it only if every
 # publishing check passed. A held run opens (or updates) an issue with its
 # change report; publishing it anyway is the "Publish Data Run" workflow.
-# Nothing here commits to the repository.
 
 on:
   schedule:
     # Runs Sundays at 08:17 UTC. The offset minute avoids GitHub's top-of-hour load spike.
     - cron: "17 8 * * 0"
   workflow_dispatch:
-    inputs:
-      bootstrap:
-        description: "First run only: build the database from the JSON files the repo used to commit, instead of pulling it from R2."
-        type: boolean
-        default: false
 
 permissions: read-all
 
@@ -45,9 +39,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          # Full history so a bootstrap run can find the last committed JSON files.
-          fetch-depth: 0
 
       - name: Check configuration
         env:
@@ -72,20 +63,6 @@ jobs:
           echo "id=${run_id}" >> "$GITHUB_OUTPUT"
           echo "Run id: \`${run_id}\`" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Extract legacy JSON for bootstrap
-        if: inputs.bootstrap
-        run: |
-          # The last revision that still held the committed JSON files.
-          # --first-parent: follow main, not the merged branch, which may predate
-          # the last data refresh on main.
-          removed_in="$(git rev-list -1 --first-parent HEAD -- data/events.json)"
-          ref="${removed_in}^"
-          mkdir -p legacy
-          for name in metadata events event_history; do
-            git show "${ref}:data/${name}.json" > "legacy/${name}.json"
-          done
-          echo "Bootstrapping from $(git rev-parse --short "${ref}")" >> "$GITHUB_STEP_SUMMARY"
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 
@@ -106,25 +83,18 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
           RUN_ID: ${{ steps.run.outputs.id }}
-          BOOTSTRAP: ${{ inputs.bootstrap }}
           # Only the default branch writes to R2. A run on another branch still
           # reads the published data, but its PDFs, cached extractions and
           # candidate stay inside the job, so trying out a branch can never
           # leak into the shared cache or the published data.
           CARLO_REMOTE_WRITE: ${{ github.ref_name == github.event.repository.default_branch && '1' || '' }}
         run: |
-          legacy_args=()
-          if [[ "$BOOTSTRAP" == "true" ]]; then
-            legacy_args=(-v "$PWD/legacy:/workspace/legacy:ro" -e LEGACY_DATA_DIR=legacy)
-          fi
-
           set +e
           docker run --name project-carlo-weekly \
             -e GEMINI_API_KEY \
             -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
             -e CARLO_REMOTE_WRITE \
             -e RUN_ID -e GIT_SHA="$GITHUB_SHA" -e RUN_TRIGGER="$GITHUB_EVENT_NAME" \
-            "${legacy_args[@]}" \
             project-carlo-weekly:latest
           code=$?
           set -e
@@ -218,7 +188,6 @@ jobs:
               echo
               echo "- **Publish it anyway:** Actions → *Publish Data Run* → Run workflow → run id \`${RUN_ID}\`."
               echo "- **Leave it:** close this issue; next week's run starts again from the published data."
-              echo "  (If nothing has been published yet, as after a held bootstrap run, later runs cannot start until a run is published, so publish this one or re-run the bootstrap.)"
             else
               echo "The weekly run \`${RUN_ID}\` **failed** before it could finish. The site still shows last week's data."
             fi
