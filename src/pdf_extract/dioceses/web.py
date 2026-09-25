@@ -158,6 +158,9 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
 PUBLICATION_PATTERNS = [
     ("lpi", r"publicationWidget\?[^\"'<>]*?\bid=([A-Za-z0-9]{18}|[A-Za-z0-9]{15})\b"),
     ("po-container", r"container\.parishesonline\.com/bulletins/(\d+/\d+)/"),
+    # The same container's issues linked through the org's /find/ page, e.g.
+    # parishesonline.com/find/<slug>/bulletin/file/03-1424-20260927B.pdf is 03/1424.
+    ("po-container", r"parishesonline\.com/find/[a-z0-9-]+/bulletin/file/(\d+-\d+)-\d{8}"),
     ("po-org", r"parishesonline\.com/organization/([a-z0-9-]{3,120})"),
     ("ecatholic", r"files\.ecatholic\.com/(\d{3,8})/"),
     ("discovermass", r"discovermass\.com/church/([a-z0-9-]{3,120})"),
@@ -169,6 +172,8 @@ def find_publications(page: str) -> list[str]:
     found: list[str] = []
     for scheme, pattern in PUBLICATION_PATTERNS:
         for value in re.findall(pattern, page, flags=re.I):
+            if scheme == "po-container":
+                value = value.replace("-", "/")
             pub = f"{scheme}:{value if scheme == 'lpi' else value.lower()}"
             if pub not in found:
                 found.append(pub)

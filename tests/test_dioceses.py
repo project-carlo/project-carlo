@@ -392,6 +392,13 @@ def test_find_publications_keeps_lpi_ids_whole() -> None:
         "lpi:0018000000Qbyz4AAB", "po-container:14/0434", "ecatholic:35834"]
 
 
+def test_find_publications_reads_containers_from_find_links() -> None:
+    page = ('<a href="https://parishesonline.com/find/catholic-community-of-st-stephen-st-patrick'
+            '/bulletin/file/03-1424-20260927B.pdf">'
+            '<a href="https://container.parishesonline.com/bulletins/03/1424/20260920B.pdf">')
+    assert web.find_publications(page) == ["po-container:03/1424"]
+
+
 def test_quote_found_tolerates_layout_and_elisions() -> None:
     text = "Mass Schedule\n  Weekend: Sat. 5:10 pm\n   Sun. 7:30 am, 9:45 am\nSt. Bernard’s"
     assert web.quote_found("Weekend: Sat. 5:10 pm … Sun. 7:30 am", text)

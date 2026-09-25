@@ -148,21 +148,9 @@ def _text(page) -> str:  # type: ignore[no-untyped-def]
     return "\n".join(parts)
 
 
-# ParishesOnline also links issues as parishesonline.com/find/<slug>/bulletin/
-# file/03-1424-20260927B.pdf, which the CLI's find_publications (as of
-# 2026-09) doesn't read: 03-1424 is container 03/1424.
-_PO_FIND_FILE_RE = re.compile(
-    r"parishesonline\.com/find/[a-z0-9-]+/bulletin/file/(\d+)-(\d+)-\d{8}", re.I
-)
-
-
 def _observe(page, web) -> dict:  # type: ignore[no-untyped-def]
     html = _html(page)
     publications = web.find_publications(html)
-    for a, b in _PO_FIND_FILE_RE.findall(html):
-        pub = f"po-container:{a}/{b}"
-        if pub not in publications:
-            publications.append(pub)
     return {
         "publications": publications,
         "bulletin_links": web.bulletin_links(html, page.url),

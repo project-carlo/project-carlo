@@ -46,9 +46,7 @@ It prints JSON with `probe url`'s fields, judged on the **rendered** page and it
   HTTP5XX, NO-PARISH-WORDS, ok), plus two of its own. `BLOCKED` means Cloudflare challenged
   every load. `ERROR` means the browser couldn't load the page at all (for example, one
   Syracuse site answers HTTP 445, which Chrome refuses).
-- **`publications`:** from the CLI's own `find_publications`. It also reads ParishesOnline's
-  `parishesonline.com/find/<slug>/bulletin/file/03-1424-<date>B.pdf` links as
-  `po-container:03/1424`, which `find_publications` misses.
+- **`publications`:** from the CLI's own `find_publications`, so the ids match `probe url`'s.
 - **`bulletin_links`**, and **`pdf_links`** listed separately: `bulletin_links` stops at 15,
   and WordPress pages use those up on feeds before reaching the PDF.
 - **`--bulletin`:** when the page embeds no id, it opens the site's bulletin pages (up to 5)
