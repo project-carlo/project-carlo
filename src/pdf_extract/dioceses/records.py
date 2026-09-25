@@ -1226,7 +1226,9 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     orphans = sorted(live_church_parents - {row.get("slug") for row in new_p} - {None, ""})
     if orphans:
         raise DioceseError(f"refused: churches.csv would reference missing parishes {orphans}")
-    report["removed_rows_with_events"] = _referenced_by_events(report["churches"]["removed"])
+    report["removed_rows_with_events"] = _referenced_by_events(
+        report["churches"]["removed"], report["parishes"]["removed"],
+    )
 
     if not dry_run:
         for kind in (PARISH, CHURCH):
@@ -1245,25 +1247,31 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     return report
 
 
-def _referenced_by_events(church_slugs: list[str]) -> list[str]:
-    """Removed churches the local pipeline database still has events for.
+def _referenced_by_events(church_slugs: list[str], parish_slugs: list[str] = ()) -> list[str]:
+    """Churches that would lose events in the local pipeline database.
 
     Worth knowing before promoting: the next pipeline command re-seeds the
-    database from the CSVs and deletes a removed church's events with it (and
-    the weekly run holds for review when that happens).
+    database from the CSVs. A removed church loses its events, and a removed
+    parish takes its bulletins, and every event read from them, with it, even
+    for churches that move to another parish. The weekly run holds for review
+    when that happens.
     """
     import sqlite3
 
-    if not church_slugs or not storage.DEFAULT_DB_PATH.exists():
+    if not (church_slugs or parish_slugs) or not storage.DEFAULT_DB_PATH.exists():
         return []
+    churches, parishes = list(church_slugs) or [""], list(parish_slugs) or [""]
     try:
         conn = sqlite3.connect(f"file:{storage.DEFAULT_DB_PATH}?mode=ro", uri=True)
         try:
-            placeholders = ", ".join("?" * len(church_slugs))
             rows = conn.execute(
-                f"""SELECT DISTINCT c.slug FROM church c JOIN event e ON e.church_id = c.id
-                    WHERE c.slug IN ({placeholders})""",
-                church_slugs,
+                f"""SELECT DISTINCT c.slug FROM church c
+                    JOIN event e ON e.church_id = c.id
+                    JOIN bulletin b ON b.id = e.bulletin_id
+                    JOIN parish p ON p.id = b.parish_id
+                    WHERE c.slug IN ({", ".join("?" * len(churches))})
+                       OR p.slug IN ({", ".join("?" * len(parishes))})""",
+                [*churches, *parishes],
             ).fetchall()
         finally:
             conn.close()

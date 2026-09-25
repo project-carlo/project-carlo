@@ -621,3 +621,30 @@ def test_deploy_snapshot_without_published_data(
     assert build_deploy_snapshot(snapshot_path=tmp_path / "s", public_fallback=True) == {
         "source": "site",
     }
+
+
+def test_promote_refuses_a_failed_run(
+    pipeline_dir: Path, remote_store: CachedBlobStore,
+) -> None:
+    _prepare_run("run-1", run_status="failed")
+    push_candidate("run-1")
+    with pytest.raises(BlobStoreError, match="failed partway"):
+        promote("run-1")
+
+
+def test_deploy_snapshot_keeps_the_published_one_when_the_csvs_remove_rows(
+    pipeline_dir: Path, remote_store: CachedBlobStore, tmp_path: Path,
+) -> None:
+    _prepare_run("run-1")
+    push_candidate("run-1")
+    promote("run-1")
+    DEFAULT_DB_PATH.unlink()
+    churches_csv = pipeline_dir / "data" / "churches.csv"
+    churches_csv.write_text(churches_csv.read_text().splitlines()[0] + "\n")
+    snapshot = tmp_path / "site" / "frontend.snapshot"
+
+    result = build_deploy_snapshot(snapshot_path=snapshot)
+
+    assert result["seeded"]["churches_deleted"] == 1
+    assert "published snapshot" in result["snapshot"]
+    assert snapshot.read_bytes() == SNAPSHOT_BYTES

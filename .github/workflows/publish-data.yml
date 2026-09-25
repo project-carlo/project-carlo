@@ -24,6 +24,8 @@ concurrency:
 
 jobs:
   publish:
+    # Publishing runs the promote code with the write keys: only main's code.
+    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:

@@ -13,7 +13,7 @@ from pdf_extract import extract_run, runner
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.classifiers import REGISTRY
 from pdf_extract.db import create_db
-from pdf_extract.storage import connect_db, load_bulletins
+from pdf_extract.storage import churches_for_parish, connect_db, load_bulletins
 
 
 class _CountingClassifier:
@@ -53,6 +53,14 @@ def _payload_one_event() -> dict[str, Any]:
     }
 
 
+def _churches() -> list[dict[str, Any]]:
+    conn = connect_db()
+    try:
+        return churches_for_parish(conn, "test-parish")
+    finally:
+        conn.close()
+
+
 @pytest.fixture
 def seeded_run(pipeline_dir: Path, monkeypatch):
     """One unprocessed bulletin for test-parish and a counting classifier."""
@@ -85,7 +93,7 @@ def test_first_run_calls_classifier_and_writes_outputs(seeded_run):
     assert summary["cache_misses"] == 1
     assert summary["events_written"] == 1
 
-    cached = json.loads(get_store().get(runner.cache_key("counting", "v1", "hash-abc")))
+    cached = json.loads(get_store().get(runner.cache_key("counting", "v1", "hash-abc", _churches())))
     assert cached["events"][0]["church_slug"] == "st-mary-anytown"
 
     bulletins_file = extract_run.bulletins_path("counting")
@@ -132,7 +140,7 @@ def test_cache_miss_after_classifier_version_changes(seeded_run):
     assert classifier.call_count == 2
     assert summary["cache_hits"] == 0
     assert summary["cache_misses"] == 1
-    assert get_store().exists(runner.cache_key("counting", "v2", "hash-abc"))
+    assert get_store().exists(runner.cache_key("counting", "v2", "hash-abc", _churches()))
 
 
 def test_run_does_not_touch_processed_at(seeded_run):
@@ -164,3 +172,30 @@ def test_a_failed_cache_write_does_not_fail_the_run(seeded_run, monkeypatch):
 
     assert summary["events_written"] == 1
     assert summary["errors"] == []
+
+
+def test_cache_miss_after_the_church_list_changes(seeded_run):
+    """Results name church slugs from the prompt's list, so a new list re-extracts."""
+    tmp_path, classifier = seeded_run
+    extract_run.run(classifier_name="counting", concurrency=1)
+
+    churches_csv = tmp_path / "data" / "churches.csv"
+    churches_csv.write_text(
+        churches_csv.read_text(encoding="utf-8").replace("Test Church", "Renamed Church"),
+        encoding="utf-8",
+    )
+    create_db()  # re-seed from the edited CSV
+    get_store().put(bulletin_pdf_key("test-parish", "hash-abc"), b"fake")
+    conn = connect_db()
+    with conn:
+        conn.execute(
+            """INSERT INTO bulletin(parish_id, source_url, content_hash, fetched_at)
+               SELECT id, 'https://example.org/parsed.pdf', 'hash-abc', '2026-01-01T00:00:00Z'
+               FROM parish WHERE slug = 'test-parish'"""
+        )
+    conn.close()
+
+    summary = extract_run.run(classifier_name="counting", concurrency=1)
+
+    assert classifier.call_count == 2
+    assert summary["cache_hits"] == 0

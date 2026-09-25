@@ -31,6 +31,7 @@ from pdf_extract.runner import (
     store_cached_result,
 )
 from pdf_extract.storage import (
+    churches_for_parish,
     connect_db,
     get_parish_by_name,
     load_bulletins,
@@ -104,7 +105,10 @@ def run(
                 )
                 skipped += 1
                 continue
-            cached = load_cached_result(classifier.name, classifier.version, content_hash)
+            cached = load_cached_result(
+                classifier.name, classifier.version, content_hash,
+                churches_for_parish(conn, entry["parish_slug"]),
+            )
             if cached is not None:
                 cached_results[entry["source_url"]] = cached
                 cache_hits += 1
@@ -130,6 +134,7 @@ def run(
                 classifier.name,
                 classifier.version,
                 outcome.entry["content_hash"],
+                churches_for_parish(conn, outcome.entry["parish_slug"]),
                 outcome.extracted,
             )
             cached_results[outcome.entry["source_url"]] = outcome.extracted

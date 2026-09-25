@@ -35,9 +35,10 @@ run uv run --no-sync python -m pdf_extract weekly \
 status=$?
 set -e
 
-# Held runs are uploaded too, so a person can inspect and publish them.
-# Without write access (a local run) the outputs stay in data/out/ only.
-if [[ "${CARLO_REMOTE_WRITE:-}" == "1" && -f "data/out/${RUN_ID}/frontend.snapshot" ]]; then
+# Held runs are uploaded too, so a person can inspect and publish them; a
+# failed run is not, since it can't be published. Without write access (a
+# local run) the outputs stay in data/out/ only.
+if [[ "${CARLO_REMOTE_WRITE:-}" == "1" && ( "${status}" == 0 || "${status}" == 10 ) ]]; then
   pdf data push --run-id "${RUN_ID}" --git-sha "${GIT_SHA:-}"
 fi
 

@@ -413,16 +413,23 @@ def test_committed_dioceses_have_no_errors() -> None:
         {d: r["errors"] for d, r in result["dioceses"].items()}, indent=2)
 
 
-def test_removed_churches_with_events_come_from_the_database(root: Path, tmp_path: Path) -> None:
+def test_rows_losing_events_come_from_the_database(root: Path, tmp_path: Path) -> None:
     import sqlite3
 
     conn = sqlite3.connect(tmp_path / "parish_events.db")
     conn.executescript(
+        "CREATE TABLE parish (id INTEGER PRIMARY KEY, slug TEXT);"
+        "CREATE TABLE bulletin (id INTEGER PRIMARY KEY, parish_id INTEGER);"
         "CREATE TABLE church (id INTEGER PRIMARY KEY, slug TEXT);"
-        "CREATE TABLE event (id INTEGER PRIMARY KEY, church_id INTEGER);"
-        "INSERT INTO church VALUES (1, 'st-live'), (2, 'st-quiet');"
-        "INSERT INTO event VALUES (1, 1);"
+        "CREATE TABLE event (id INTEGER PRIMARY KEY, church_id INTEGER, bulletin_id INTEGER);"
+        "INSERT INTO parish VALUES (1, 'kept'), (2, 'retired');"
+        "INSERT INTO bulletin VALUES (10, 1), (20, 2);"
+        "INSERT INTO church VALUES (1, 'st-live'), (2, 'st-quiet'), (3, 'st-moved');"
+        # st-moved's events come from the retired parish's bulletin: they go with it.
+        "INSERT INTO event VALUES (1, 1, 10), (2, 3, 20);"
     )
     conn.close()
 
     assert records._referenced_by_events(["st-live", "st-quiet", "st-gone"]) == ["st-live"]
+    assert records._referenced_by_events([], ["retired"]) == ["st-moved"]
+    assert records._referenced_by_events([], []) == []

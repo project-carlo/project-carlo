@@ -107,17 +107,39 @@ def _cache_version_component(classifier_version: str) -> str:
     return f"{readable[:80]}-{digest}"
 
 
-def cache_key(classifier_name: str, classifier_version: str, content_hash: str) -> str:
+def _churches_fingerprint(churches: list[dict[str, Any]]) -> str:
+    canonical = json.dumps(
+        sorted(churches, key=lambda c: str(c.get("slug"))), sort_keys=True, ensure_ascii=False,
+    )
+    return sha256(canonical.encode("utf-8")).hexdigest()[:12]
+
+
+def cache_key(
+    classifier_name: str,
+    classifier_version: str,
+    content_hash: str,
+    churches: list[dict[str, Any]],
+) -> str:
+    """Where a result is cached: by classifier version, PDF, and the church list.
+
+    The church list is part of the prompt: the classifier files every event
+    under one of those slugs. A result extracted against an older list (a
+    church renamed or merged since) would name churches that no longer exist.
+    """
     return (
         f"runs/{classifier_name}/cache/"
-        f"{_cache_version_component(classifier_version)}/{content_hash}.json"
+        f"{_cache_version_component(classifier_version)}/"
+        f"{content_hash}-{_churches_fingerprint(churches)}.json"
     )
 
 
 def load_cached_result(
-    classifier_name: str, classifier_version: str, content_hash: str
+    classifier_name: str,
+    classifier_version: str,
+    content_hash: str,
+    churches: list[dict[str, Any]],
 ) -> dict[str, Any] | None:
-    key = cache_key(classifier_name, classifier_version, content_hash)
+    key = cache_key(classifier_name, classifier_version, content_hash, churches)
     try:
         data = get_store().get(key)
     except Exception:
@@ -133,10 +155,14 @@ def load_cached_result(
 
 
 def store_cached_result(
-    classifier_name: str, classifier_version: str, content_hash: str, payload: dict[str, Any]
+    classifier_name: str,
+    classifier_version: str,
+    content_hash: str,
+    churches: list[dict[str, Any]],
+    payload: dict[str, Any],
 ) -> None:
     """Cache a result. Best effort: a failed write costs a future API call, not this run."""
-    key = cache_key(classifier_name, classifier_version, content_hash)
+    key = cache_key(classifier_name, classifier_version, content_hash, churches)
     data = (json.dumps(payload, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
     try:
         get_store().put(key, data, content_type="application/json")

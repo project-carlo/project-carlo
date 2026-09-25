@@ -111,7 +111,9 @@ its report, but nothing it fetches or extracts leaves the job.
 
 Deploys build the snapshot themselves, from the published database with the
 code being deployed, so the snapshot's format always matches the web app, and
-edits to the CSVs show up in previews and go live on merge.
+edits to the CSVs show up in previews and go live on merge. The exception is a
+CSV change that removes a parish or church: that deletes events, so deploys
+keep the published snapshot until a reviewed weekly run publishes the removal.
 
 The change report is always in the job summary, and kept as a workflow
 artifact for 90 days. Nothing is committed to the repository.

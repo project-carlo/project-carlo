@@ -359,6 +359,12 @@ def church_list_for_prompt(
     ]
 
 
+def churches_for_parish(conn: sqlite3.Connection, parish_slug: str) -> list[dict[str, Any]]:
+    """`church_list_for_prompt` by parish slug; empty for an unknown parish."""
+    row = conn.execute("SELECT id FROM parish WHERE slug = ?", (parish_slug,)).fetchone()
+    return church_list_for_prompt(conn, row["id"]) if row else []
+
+
 @dataclass
 class BulletinWorkItem:
     """A bulletin loaded from the blob store and ready to hand to a classifier."""

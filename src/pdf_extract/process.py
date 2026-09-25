@@ -46,6 +46,7 @@ from pdf_extract.runs import (
 )
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import (
+    churches_for_parish,
     connect_db,
     get_parish_by_name,
     load_bulletins,
@@ -176,7 +177,10 @@ def process_bulletins(
         for entry in pending:
             content_hash = entry.get("content_hash")
             cached = (
-                load_cached_result(classifier.name, classifier.version, content_hash)
+                load_cached_result(
+                    classifier.name, classifier.version, content_hash,
+                    churches_for_parish(conn, entry["parish_slug"]),
+                )
                 if isinstance(content_hash, str) and content_hash
                 else None
             )
@@ -211,7 +215,8 @@ def process_bulletins(
             content_hash = entry.get("content_hash")
             if isinstance(content_hash, str) and content_hash:
                 store_cached_result(
-                    classifier.name, classifier.version, content_hash, outcome.extracted,
+                    classifier.name, classifier.version, content_hash,
+                    churches_for_parish(conn, entry["parish_slug"]), outcome.extracted,
                 )
             commit(entry, outcome.extracted, PROCESS_EXTRACTED)
     finally:

@@ -9,6 +9,9 @@ on:
       - "data/**"
       # Deploys build the snapshot with the pipeline code.
       - "src/pdf_extract/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".python-version"
       - "package.json"
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
@@ -22,6 +25,9 @@ on:
       - "data/**"
       # Deploys build the snapshot with the pipeline code.
       - "src/pdf_extract/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".python-version"
       - "package.json"
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"

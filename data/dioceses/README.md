@@ -299,9 +299,11 @@ Work in this order and only fall through when a step can't answer. Commit as you
 <d> --dry-run`, read it, then `pnpm diocese promote <d>` and `pnpm test`. The next pipeline
 command seeds the new rows into the database; there is no rebuild step.
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
-retired (merged, renamed or excluded). A retired church's events are deleted from the database
-along with it, which holds the next weekly run for review; the dry run lists the ones that
-have events (`removed_rows_with_events`). It also keeps coordinates and flags that `geocode` and
+retired (merged, renamed or excluded). Retiring a church deletes its events, and retiring a
+parish deletes its bulletins and the events read from them, even for churches moved to another
+parish. The dry run lists the churches that would lose events (`removed_rows_with_events`).
+Removals don't go live on merge: deploys keep serving the published data, and the next weekly
+run is held for review. Publishing that run is what applies them. It also keeps coordinates and flags that `geocode` and
 `verify` filled in. Keep editing the records after promotion and promote again. Don't delete
 a promoted record: exclude it or merge it, or its live row will be orphaned.
 

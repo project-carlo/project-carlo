@@ -253,6 +253,8 @@ def promote(run_id: str, *, rollback: bool = False) -> dict[str, Any]:
     manifest = _read_json(store, run_key(run_id, "manifest.json"))
     if manifest is None:
         raise BlobStoreError(f"No run {run_id} in the bucket; upload it first")
+    if manifest.get("status") == "failed":
+        raise BlobStoreError(f"Run {run_id} failed partway; it cannot be published")
     for key in (manifest["db_key"], manifest["snapshot_key"]):
         if store.remote is None or not store.remote.exists(key):
             raise BlobStoreError(f"Run {run_id} is incomplete: {key} is missing")
@@ -323,6 +325,21 @@ def build_deploy_snapshot(
 
     pulled = pull(db=True, snapshot=False, db_path=db_path)
     seeded = ensure_db(db_path)
+    if seeded["parishes_deleted"] or seeded["churches_deleted"]:
+        # Removing a parish or church deletes its events. That goes live only
+        # through a weekly run a person has reviewed (the run is held for it),
+        # never as a side effect of a deploy: keep serving the published snapshot.
+        LOGGER.warning(
+            "The CSVs remove %d parishes and %d churches; deploying the published "
+            "snapshot unchanged until a reviewed weekly run publishes the removal",
+            seeded["parishes_deleted"], seeded["churches_deleted"],
+        )
+        pull(db=False, snapshot=True, snapshot_path=snapshot_path)
+        return {
+            "run_id": pulled["run_id"],
+            "seeded": seeded,
+            "snapshot": "published snapshot (CSV removals await a reviewed weekly run)",
+        }
     built = extract(db_path, snapshot_path, keep_previous=False)
     return {"run_id": pulled["run_id"], "seeded": seeded, "snapshot": built}
 
