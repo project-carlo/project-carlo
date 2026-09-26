@@ -24,6 +24,7 @@ if ! command -v google-chrome >/dev/null 2>&1; then
 fi
 
 if ! command -v certutil >/dev/null 2>&1; then
+  apt-get update -qq
   DEBIAN_FRONTEND=noninteractive apt-get install -y -qq libnss3-tools >/dev/null
 fi
 
@@ -34,9 +35,19 @@ if [ -f "$proxy_ca" ]; then
   if [ ! -f "$HOME/.pki/nssdb/cert9.db" ]; then
     certutil -d "$nssdb" -N --empty-password
   fi
-  if ! certutil -d "$nssdb" -L -n ccr-agent-proxy >/dev/null 2>&1; then
-    certutil -d "$nssdb" -A -t "C,," -n ccr-agent-proxy -i "$proxy_ca"
-  fi
+  # Drop the single name this script used to import under: a cert already stored
+  # under it keeps that name and would not be re-imported under its own.
+  while certutil -d "$nssdb" -D -n ccr-agent-proxy >/dev/null 2>&1; do :; done
+  # The file can hold more than one CA. Re-import each under its own name every
+  # time, so a saved nssdb never keeps an older proxy CA under one of them.
+  certs="$(mktemp -d)"
+  awk -v dir="$certs" '/BEGIN CERTIFICATE/ {n++} n {print > (dir "/" n ".pem")}' "$proxy_ca"
+  for pem in "$certs"/*.pem; do
+    name="ccr-agent-proxy-$(basename "$pem" .pem)"
+    while certutil -d "$nssdb" -D -n "$name" >/dev/null 2>&1; do :; done
+    certutil -d "$nssdb" -A -t "C,," -n "$name" -i "$pem"
+  done
+  rm -rf "$certs"
 fi
 
-echo "ready: $(google-chrome --version); proxy CA trusted: $(certutil -d "$nssdb" -L -n ccr-agent-proxy >/dev/null 2>&1 && echo yes || echo no)"
+echo "ready: $(google-chrome --version); proxy CA trusted: $(certutil -d "$nssdb" -L -n ccr-agent-proxy-1 >/dev/null 2>&1 && echo yes || echo no)"

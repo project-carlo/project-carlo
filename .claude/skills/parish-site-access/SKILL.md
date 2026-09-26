@@ -36,27 +36,32 @@ Before it runs, no browser starts at all:
 ```bash
 V=".claude/skills/parish-site-access/scripts/visit.py"
 uv run python $V --bulletin https://www.stmarys-clinton.com http://saintlouisgonzaga.org   # like probe url
-uv run python $V https://stleohilton.org --follow /bulletins --links files.ecatholic
-uv run python $V https://example-parish.org --text 3000 --screenshot /tmp/p.png           # Read the PNG
+uv run python $V https://stleohilton.org --follow /bulletins --links --match files.ecatholic
+uv run python $V https://example-parish.org --text --chars 3000 --screenshot /tmp/p.png   # Read the PNG
 ```
 
-It prints JSON with `probe url`'s fields, judged on the **rendered** page and its iframes:
+It prints JSON with `probe url`'s fields for the site's own page, judged on the **rendered**
+HTML of the page and its iframes:
 
-- **`verdict`:** the same rules `probe url` uses (SPAM-SQUAT, REDIRECT-OFFSITE, HTTP4XX,
-  HTTP5XX, NO-PARISH-WORDS, ok), plus two of its own. `BLOCKED` means Cloudflare challenged
-  every load. `ERROR` means the browser couldn't load the page at all (for example, one
-  Syracuse site answers HTTP 445, which Chrome refuses).
+- **`verdict`:** `probe url`'s checks (SPAM-SQUAT, REDIRECT-OFFSITE, HTTP4XX, HTTP5XX,
+  NO-PARISH-WORDS, ok) applied to the rendered HTML, plus two of its own. `BLOCKED` means
+  Cloudflare challenged every load. `ERROR` means the browser couldn't load the page at all:
+  for example, one Syracuse site answers HTTP 445, which Chrome refuses. A domain that
+  doesn't resolve is also `ERROR`; run `probe url` for the DEAD-DNS diagnosis.
 - **`publications`:** from the CLI's own `find_publications`, so the ids match `probe url`'s.
 - **`bulletin_links`**, and **`pdf_links`** listed separately: `bulletin_links` stops at 15,
   and WordPress pages use those up on feeds before reaching the PDF.
 - **`--bulletin`:** when the page embeds no id, it opens the site's bulletin pages (up to 5)
-  until one does. The result goes in `bulletin_search.found`. A bulletin page with PDFs and
-  no publisher is reported as self-hosted, with `url:<listing page>`.
+  until one does. The result goes in `bulletin_search.found`. Bulletin PDFs with no
+  publisher are reported as self-hosted, with `url:<the page that lists them>`. That page
+  may be an index linking one post per issue, or the home page itself.
 - **`--follow TEXT`** clicks through to the first link whose text or href contains TEXT
-  (repeatable). Prefer a path (`/bulletins`) to a word: "bulletin" also matches "Publish in
-  our Bulletin".
-- **`--text [N]`, `--links [REGEX]`, `--html PATH` and `--screenshot PATH`** let you read the
-  page itself.
+  (repeatable, one URL only). The page it lands on goes under `followed`; the top-level
+  fields still describe the site. Prefer a path (`/bulletins`) to a word: "bulletin" also
+  matches "Publish in our Bulletin".
+- **`--text` (`--chars N`), `--links` (`--match REGEX`), `--html PATH` and
+  `--screenshot PATH`** read the final page. With several URLs, the file names get `-0`,
+  `-1` and so on.
 
 What it found on the 21 Syracuse sites `probe url` couldn't read (2026-09-25):
 
@@ -91,24 +96,31 @@ browser is needed even when the parish's own site is blocked:
 
 ```bash
 I=".claude/skills/parish-site-access/scripts/issues.py"
-uv run python $I ecatholic ecatholic:20434 [--weeks 12 --step 4 --all --pages 3 --grep "St. Anne"]
+uv run python $I ecatholic ecatholic:20434 [--weeks 12 --from 2026-06-01 --step 4 --all --pages 3 --grep "St. Anne"]
 uv run python $I discovermass discovermass:st-patrick-victor-ny [--issues 6 --pages 3]
 ```
 
 - **eCatholic:** issues are at `files.ecatholic.com/{site id}/bulletins/{YYYYMMDD}.pdf`, one
   per Sunday. The coming Sunday's issue is usually up by mid-week. As with ParishesOnline,
   **a missing issue answers 403, not 404**, and there's no directory listing. The site id
-  comes from `visit.py` on the parish's eCatholic site.
+  comes from `visit.py` on the parish's eCatholic site. Without `--from`, it starts at the
+  coming Sunday. With `--from`, it starts at the Sunday on or before that date, as
+  `probe container --from` does.
 - **Discover Mass:** the church page is server-rendered and lists about 12 issues.
-  `issues.py` flags a newest issue older than 45 days, as `probe po` does.
+- **Staleness:** for both publishers, `issues.py` flags a newest issue older than 45 days,
+  as `probe po` does.
 - **`--pages` and `--grep`** work as in `probe pdf`. Mastheads are often on page 2 or 3.
 
 ## Evidence from blocked pages
 
 `pnpm diocese recheck` re-fetches every evidence URL without a browser, so a quote taken from
 a Cloudflare-blocked page will come back `unreachable`. Prefer quoting the bulletin PDF:
-issues on `files.ecatholic.com`, `container.parishesonline.com` and Discover Mass all fetch
-without a browser, and a dated issue never changes. When a quote can only come from a blocked
+issues on `files.ecatholic.com` and `container.parishesonline.com` fetch without a browser,
+and a dated issue at a dated URL never changes. Discover Mass issues fetch without a browser
+too, but their `download.php?bulletin=` link is a token that changes on every page load.
+Old tokens kept working, including one fetched five days earlier, but nobody has checked
+whether they last. So cite a Discover Mass issue by the church page plus the issue date in
+the `note`, and quote from its text. When a quote can only come from a blocked
 page, say so in the item's `note`, e.g. "behind Cloudflare; read in a browser
 (parish-site-access visit.py)", so the auditor knows to open it the same way.
 

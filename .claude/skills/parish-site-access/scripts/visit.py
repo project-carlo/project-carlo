@@ -17,21 +17,25 @@ Usage (from the repo root; re-runs itself under xvfb-run when there is no displa
   uv run python .claude/skills/parish-site-access/scripts/visit.py URL [URL ...] [options]
 
   --bulletin        when a page embeds no publication id, open its bulletin links
-                    (up to 5) until one does, the way detect.py does; a bulletin page
-                    with PDFs and no publisher is reported as self-hosted (url:<page>)
+                    (up to 5) until one does, the way detect.py does; bulletin PDFs
+                    with no publisher are reported as self-hosted (url:<page>)
   --follow TEXT     after loading, follow the first link whose text or href contains
                     TEXT (case-insensitive); repeat to walk deeper (single URL only)
-  --text [N]        include the page's visible text (first N chars, default 4000)
-  --links [REGEX]   include every link (text, href), optionally only those matching
-  --screenshot PATH full-page screenshot of the final page (look at it with Read)
-  --html PATH       save the final page's HTML, iframes included
+  --text            include the visible text of the final page (--chars N, default 4000)
+  --links           include the final page's links as [text, href] (--match REGEX filters)
+  --screenshot PATH full-page screenshot of the final page (look at it with Read);
+                    with several URLs, -0, -1, ... is added to the name
+  --html PATH       save the final page's HTML, iframes included (numbered like --screenshot)
   --retries N       loads per navigation while Cloudflare challenges (default 8)
 
 Prints JSON: {"results": [{url, verdict, status, final_url, title, loads,
-publications, bulletin_links, pdf_links, ...}]}. verdict is one of probe url's
-(ok, SPAM-SQUAT, REDIRECT-OFFSITE, HTTP4XX, HTTP5XX, NO-PARISH-WORDS) judged on the
-rendered page, or BLOCKED (Cloudflare challenged every load: wait a minute and
-retry) or ERROR (the browser could not load it at all).
+publications, bulletin_links, pdf_links, ...}]}, describing the site's own page.
+verdict is one of probe url's (ok, SPAM-SQUAT, REDIRECT-OFFSITE, HTTP4XX, HTTP5XX,
+NO-PARISH-WORDS) judged on the rendered page, or BLOCKED (Cloudflare challenged
+every load: wait a minute and retry) or ERROR (the browser could not load it,
+which includes domains that don't resolve: probe url tells DEAD-DNS apart).
+With --follow, the page it ends on is described under "followed", and --text,
+--links, --screenshot and --html read that page.
 """
 
 from __future__ import annotations
@@ -76,6 +80,7 @@ def goto(page, url: str, retries: int) -> tuple[int | None, int]:  # type: ignor
     """Load url, reloading while Cloudflare challenges. Returns (status, loads)."""
     status = None
     for attempt in range(1, retries + 1):
+        status = None  # a challenged attempt's 403 must not describe a later load
         try:
             resp = page.goto(url, wait_until="domcontentloaded", timeout=30000)
             status = resp.status if resp else None
@@ -148,47 +153,76 @@ def _text(page) -> str:  # type: ignore[no-untyped-def]
     return "\n".join(parts)
 
 
+def _is_pdf(url: str) -> bool:
+    return url.lower().split("?")[0].endswith(".pdf")
+
+
 def _observe(page, web) -> dict:  # type: ignore[no-untyped-def]
-    html = _html(page)
-    publications = web.find_publications(html)
+    publications: list[str] = []
+    bulletin_links: list[str] = []
+    for frame in _frames(page):
+        try:
+            html = frame.content()
+        except Exception:
+            continue
+        publications += [p for p in web.find_publications(html) if p not in publications]
+        # each frame's relative links resolve against that frame, not the page
+        bulletin_links += [
+            u for u in web.bulletin_links(html, frame.url) if u not in bulletin_links
+        ]
     return {
         "publications": publications,
-        "bulletin_links": web.bulletin_links(html, page.url),
+        "bulletin_links": bulletin_links[:15],
         # bulletin_links stops at 15, and WordPress pages spend that on feeds and
         # embeds before reaching the PDF, so list PDFs on their own.
-        "pdf_links": [h for _, h in _links(page) if h.lower().split("?")[0].endswith(".pdf")][:15],
+        "pdf_links": [h for _, h in _links(page) if _is_pdf(h)][:15],
     }
 
 
-def _verdict(out: dict, page, web) -> str:  # type: ignore[no-untyped-def]
-    """probe url's verdicts, judged on the rendered page instead of the raw HTML."""
+def _verdict(url: str, status: int | None, page, web) -> str:  # type: ignore[no-untyped-def]
+    """probe url's verdicts, judged on the rendered HTML instead of the raw HTML."""
     html = _html(page).lower()
-    status = out.get("status") or 0
+    status = status or 0
     if any(t in html for t in web.SPAM_TERMS):
         return "SPAM-SQUAT"
-    if web._registrable(web._host(page.url)) != web._registrable(web._host(out["url"])):
+    if web._registrable(web._host(page.url)) != web._registrable(web._host(url)):
         return "REDIRECT-OFFSITE"
     if status >= 500:
         return "HTTP5XX"
     if status >= 400:
         return "HTTP4XX"
-    if not any(w in _text(page).lower() for w in web.PARISH_WORDS):
+    if not any(w in html for w in web.PARISH_WORDS):
         return "NO-PARISH-WORDS"
     return "ok"
 
 
-def _bulletin_search(page, web, links: list[str], retries: int) -> dict:  # type: ignore[no-untyped-def]
-    """Open the page's bulletin links until one embeds a publication id.
+def _self_hosted(page_url: str, pdfs: list[str], pdfs_on: str) -> dict:
+    return {
+        "page": page_url,
+        "publications": [f"url:{page_url}"],
+        "pdfs_on": pdfs_on,
+        "pdf_links": pdfs,
+        "note": "bulletin PDFs but no publisher id: looks self-hosted",
+    }
 
-    Returns what was found (`found`) and every page tried. A bulletin page with
-    PDFs but no publisher id is a self-hosted bulletin: record it as url:<page>.
+
+def _bulletin_search(page, web, home: dict, retries: int) -> dict:  # type: ignore[no-untyped-def]
+    """Open the home page's bulletin links until one embeds a publication id.
+
+    Returns what was found (`found`) and every page tried. Bulletin PDFs with no
+    publisher id are a self-hosted bulletin, recorded as url:<the page listing
+    them>: the bulletin page that links to the page holding the PDFs (a WordPress
+    index linking one post per issue), else the page holding them.
     """
-    pages = [u for u in links if not u.lower().split("?")[0].endswith(".pdf")]
-    tried, self_hosted, listing = [], None, None
+    home_url = page.url
+    pages = [u for u in home["bulletin_links"] if not _is_pdf(u)]
+    tried, self_hosted = [], None
+    hrefs_by_page: dict[str, set[str]] = {}
     for link in pages[:BULLETIN_PAGES_TO_TRY]:
         try:
             status, loads = goto(page, link, retries)
             seen = _observe(page, web)
+            hrefs = {h for _, h in _links(page)}
         except Exception as exc:
             tried.append({"url": link, "error": f"{type(exc).__name__}: {exc}".splitlines()[0]})
             continue
@@ -205,32 +239,49 @@ def _bulletin_search(page, web, links: list[str], retries: int) -> dict:  # type
         )
         if blocked:
             continue
-        # The first bulletin page that loads is where issues are listed; a later
-        # one may be a single issue's post (WordPress) holding the PDF.
-        listing = listing or page.url
+        hrefs_by_page[page.url] = hrefs
         if seen["publications"]:
             return {
                 "found": {"page": page.url, "publications": seen["publications"]},
                 "tried": tried,
             }
         if seen["pdf_links"] and self_hosted is None:
-            self_hosted = {
-                "page": listing,
-                "publications": [f"url:{listing}"],
-                "pdfs_on": page.url,
-                "pdf_links": seen["pdf_links"],
-                "note": "PDFs but no publisher id: looks self-hosted",
-            }
+            listing = next(
+                (p for p, links in hrefs_by_page.items() if p != page.url and link in links),
+                page.url,
+            )
+            self_hosted = _self_hosted(listing, seen["pdf_links"], page.url)
+    if self_hosted is None:
+        # Bulletin PDFs linked straight from the home page.
+        pdfs = [u for u in home["bulletin_links"] if _is_pdf(u)]
+        if pdfs:
+            self_hosted = _self_hosted(home_url, pdfs, home_url)
     return {"found": self_hosted, "tried": tried}
 
 
-def visit(page, web, url: str, args) -> dict:  # type: ignore[no-untyped-def]
+def _numbered(path: Path, index: int, many: bool) -> Path:
+    return path.with_name(f"{path.stem}-{index}{path.suffix}") if many else path
+
+
+def visit(page, web, url: str, index: int, args) -> dict:  # type: ignore[no-untyped-def]
     out: dict = {"url": url}
     try:
         status, loads = goto(page, url, args.retries)
+        out.update(status=status, final_url=page.url, title=page.title(), loads=loads)
+        if _challenged(page):
+            return {
+                **out,
+                "verdict": "BLOCKED",
+                "detail": "Cloudflare challenged every load; wait a minute or two and retry",
+            }
+        out["verdict"] = _verdict(url, status, page, web)
+        if out["verdict"] != "ok":
+            out["detail"] = web.VERDICT_NOTES.get(out["verdict"], "")
+        out.update(_observe(page, web))
+        home = dict(out)
+
+        target = out
         for needle in args.follow:
-            if _challenged(page):
-                break
             match = next(
                 (
                     h
@@ -243,44 +294,44 @@ def visit(page, web, url: str, args) -> dict:  # type: ignore[no-untyped-def]
                 out["follow_error"] = f"no link matching {needle!r} on {page.url}"
                 break
             status, more = goto(page, match, args.retries)
-            loads += more
+            target = out["followed"] = {
+                "url": match,
+                "status": status,
+                "final_url": page.url,
+                "title": page.title(),
+                "loads": more,
+            }
+            if _challenged(page):
+                target["blocked"] = True
+                break
+            target.update(_observe(page, web))
+
+        if args.text:
+            target["text"] = _text(page)[: args.chars]
+        if args.links:
+            pattern = re.compile(args.match, re.IGNORECASE) if args.match else None
+            target["links"] = [
+                [t, h]
+                for t, h in _links(page)
+                if pattern is None or pattern.search(t) or pattern.search(h)
+            ]
+        many = len(args.urls) > 1
+        if args.screenshot:
+            path = _numbered(args.screenshot, index, many)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            page.screenshot(path=str(path), full_page=True)
+            target["screenshot"] = str(path)
+        if args.html:
+            path = _numbered(args.html, index, many)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(_html(page), encoding="utf-8")
+            target["html"] = str(path)
+        if args.bulletin and not args.follow and not out["publications"] and out["bulletin_links"]:
+            out["bulletin_search"] = _bulletin_search(page, web, home, args.retries)
     except Exception as exc:
-        return {**out, "verdict": "ERROR", "error": f"{type(exc).__name__}: {exc}".splitlines()[0]}
-
-    out.update(status=status, final_url=page.url, title=page.title(), loads=loads)
-    if _challenged(page):
-        return {
-            **out,
-            "verdict": "BLOCKED",
-            "detail": "Cloudflare challenged every load; wait a minute or two and retry",
-        }
-    out["verdict"] = _verdict(out, page, web)
-    if out["verdict"] != "ok":
-        out["detail"] = web.VERDICT_NOTES.get(out["verdict"], "")
-    out.update(_observe(page, web))
-
-    if args.text is not None:
-        out["text"] = _text(page)[: args.text]
-    if args.links is not None:
-        pattern = re.compile(args.links, re.IGNORECASE) if args.links else None
-        out["links"] = [
-            [t, h]
-            for t, h in _links(page)
-            if pattern is None or pattern.search(t) or pattern.search(h)
-        ]
-    if args.screenshot:
-        path = args.screenshot
-        if len(args.urls) > 1:
-            path = path.with_name(f"{path.stem}-{len(args.done)}{path.suffix}")
-        path.parent.mkdir(parents=True, exist_ok=True)
-        page.screenshot(path=str(path), full_page=True)
-        out["screenshot"] = str(path)
-    if args.html:
-        args.html.parent.mkdir(parents=True, exist_ok=True)
-        args.html.write_text(_html(page), encoding="utf-8")
-        out["html"] = str(args.html)
-    if args.bulletin and not out["publications"] and out["bulletin_links"]:
-        out["bulletin_search"] = _bulletin_search(page, web, out["bulletin_links"], args.retries)
+        # Keep what was learnt before the failure; one bad site must not lose the batch.
+        out.setdefault("verdict", "ERROR")
+        out["error"] = f"{type(exc).__name__}: {exc}".splitlines()[0]
     return out
 
 
@@ -289,14 +340,19 @@ def main() -> int:
     parser.add_argument("urls", nargs="+")
     parser.add_argument("--bulletin", action="store_true")
     parser.add_argument("--follow", action="append", default=[])
-    parser.add_argument("--text", nargs="?", type=int, const=4000)
-    parser.add_argument("--links", nargs="?", const="")
+    parser.add_argument("--text", action="store_true")
+    parser.add_argument("--chars", type=int, default=4000)
+    parser.add_argument("--links", action="store_true")
+    parser.add_argument("--match", help="regex: only links whose text or href matches")
     parser.add_argument("--screenshot", type=Path)
     parser.add_argument("--html", type=Path)
     parser.add_argument("--retries", type=int, default=8)
     args = parser.parse_args()
     if args.follow and len(args.urls) > 1:
         parser.error("--follow takes a single URL")
+    if args.follow and args.bulletin:
+        parser.error("--bulletin searches from the site's own page; drop --follow")
+    args.retries = max(1, args.retries)
 
     sys.path.insert(0, str(REPO / "src"))
     from pdf_extract.browser import launch_stealth_browser
@@ -305,19 +361,21 @@ def main() -> int:
     channel = os.getenv("PLAYWRIGHT_BROWSER_CHANNEL") or (
         "chrome" if shutil.which("google-chrome") else None
     )
-    args.done = []
+    results = []
     with launch_stealth_browser(channel=channel) as first_page:
         context = first_page.context
-        for url in args.urls:
+        for index, url in enumerate(args.urls):
             if not re.match(r"https?://", url):
                 url = f"https://{url}"
             # A fresh tab per site: a failed navigation can leave the old one
             # mid-load, and it would interrupt the next site's.
             page = context.new_page()
-            args.done.append(visit(page, web, url, args))
-            page.close()
-    print(json.dumps({"results": args.done}, indent=2, ensure_ascii=False))
-    return 2 if any(r["verdict"] in {"BLOCKED", "ERROR"} for r in args.done) else 0
+            try:
+                results.append(visit(page, web, url, index, args))
+            finally:
+                page.close()
+    print(json.dumps({"results": results}, indent=2, ensure_ascii=False))
+    return 2 if any(r["verdict"] in {"BLOCKED", "ERROR"} for r in results) else 0
 
 
 if __name__ == "__main__":

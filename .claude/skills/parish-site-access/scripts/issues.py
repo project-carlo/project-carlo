@@ -52,7 +52,7 @@ _DM_ISSUE_RE = re.compile(
 def _key(raw: str, scheme: str, pattern: str) -> str:
     raw = raw.strip()
     if raw.startswith(f"{scheme}:"):
-        return raw.split(":", 1)[1]
+        return raw.split(":", 1)[1].strip("/").lower()
     match = re.search(pattern, raw, flags=re.I)
     return match.group(1).lower() if match else raw.strip("/").lower()
 
@@ -61,17 +61,29 @@ def _with_text(urls: list[str], pages: int, grep: list[str]) -> list[dict[str, A
     return [web.pdf_text(url, pages=pages, grep=grep) for url in urls]
 
 
+def _ecatholic_url(site: str, day: dt.date) -> str:
+    return f"{ECATHOLIC_FILES}/{site}/bulletins/{day:%Y%m%d}.pdf"
+
+
 def ecatholic(args: argparse.Namespace) -> dict[str, Any]:
     site = _key(args.id, "ecatholic", r"files\.ecatholic\.com/(\d+)")
     if not site.isdigit():
         raise SystemExit(f"an eCatholic site id is a number, got {site!r}")
-    start = dt.date.fromisoformat(args.from_date) if args.from_date else dt.date.today()
-    # Parishes post the coming Sunday's issue mid-week, so start from the next Sunday.
-    sunday = start + dt.timedelta(days=(6 - start.weekday()) % 7)
+    if args.from_date:
+        try:
+            start = dt.date.fromisoformat(args.from_date)
+        except ValueError:
+            raise SystemExit(f"--from takes a date as YYYY-MM-DD, got {args.from_date!r}")
+        # the Sunday on or before it, as probe container --from does
+        sunday = start - dt.timedelta(days=(start.weekday() + 1) % 7)
+    else:
+        # Parishes post the coming Sunday's issue mid-week, so start from the next Sunday.
+        today = dt.date.today()
+        sunday = today + dt.timedelta(days=(6 - today.weekday()) % 7)
     probed, found = [], []
     for i in range(0, args.weeks, max(1, args.step)):
         day = sunday - dt.timedelta(weeks=i)
-        url = f"{ECATHOLIC_FILES}/{site}/bulletins/{day:%Y%m%d}.pdf"
+        url = _ecatholic_url(site, day)
         resp = web.fetch(url, method="HEAD")
         probed.append({"date": day.isoformat(), "status": resp.status or resp.error})
         if resp.ok:
@@ -88,7 +100,13 @@ def ecatholic(args: argparse.Namespace) -> dict[str, Any]:
         out["note"] = (
             f"no Sunday-dated issue in {len(probed)} Sundays probed (a missing issue answers "
             "403). Some parishes name files differently: open the site's /bulletins page with "
-            "visit.py --links files.ecatholic and read the real file names."
+            "visit.py --links --match files.ecatholic and read the real file names."
+        )
+    elif not args.from_date and found[0] < _ecatholic_url(
+        site, dt.date.today() - dt.timedelta(days=45)
+    ):
+        out["note"] = (
+            f"newest issue is {found[0].rsplit('/', 1)[-1][:8]}: publishing here has stopped"
         )
     if args.pages and found:
         out["issues"] = _with_text(found, args.pages, args.grep)
@@ -148,6 +166,8 @@ def main() -> None:
     args = parser.parse_args()
     result = ecatholic(args) if args.publisher == "ecatholic" else discovermass(args)
     print(json.dumps(result, indent=2, ensure_ascii=False))
+    if result.get("error"):
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
