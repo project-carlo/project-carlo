@@ -29,6 +29,7 @@ evidence:
     for St. Ann, Binghamton, St. Joseph, Binghamton, and St. Stanislaus Kosta, Binghamton are retained
     here." Msgr. Putano is listed as pastor of St. Patrick and St. Thomas Aquinas with "PASTORAL CARE,
     CHURCH OF SAINTS CYRIL & METHODIUS, BINGHAMTON; CHURCH OF THE HOLY TRINITY, BINGHAMTON".'
+promoted: 2026-09-26
 ---
 
 ## Publisher

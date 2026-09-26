@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   quote: 406 Court Street Syracuse, NY 13208
   note: 'Masthead, 27 September 2026: "Sunday Mass: 9:00am".'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

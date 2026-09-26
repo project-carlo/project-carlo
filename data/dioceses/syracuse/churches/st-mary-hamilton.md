@@ -21,7 +21,8 @@ evidence:
 - url: https://www.romesentinel.com/news/route-20-catholic-churches-holy-spirit-parish-merger/article_66a992b3-2d7e-4d30-b659-9116c53bb9c1.html
   seen: 2026-09-25
   quote: St. Mary’s Church, 16 Wylie St. in Hamilton
-  note: The Rome Sentinel's report (18 June 2026) of the merger decree, effective 1 July 2026, naming the four churches of Holy Spirit Parish.
+  note: The Rome Sentinel's report (18 June 2026) of the merger decree, effective 1 July 2026, naming
+    the four churches of Holy Spirit Parish.
 - url: https://www.openstreetmap.org/node/8805012463
   seen: 2026-09-25
   note: 'OSM: 16 Wylie Street, 13346 (an address point, not a church node).'
@@ -35,6 +36,7 @@ evidence:
   quote: 16 Wylie Street, Hamilton, NY 13408
   note: behind Cloudflare; read in a browser (parish-site-access visit.py). The diocese's parish page
     for Holy Spirit, listing its four churches with physical addresses.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

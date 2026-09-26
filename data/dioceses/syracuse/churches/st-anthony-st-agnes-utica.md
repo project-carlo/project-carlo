@@ -32,6 +32,7 @@ evidence:
   note: 'The 27 September 2026 bulletin on this page (read with issues.py): "422 Tilden Ave, Utica 13501",
     "MASS SCHEDULE at St. Anthony & St. Agnes, Saturday 4:30 p.m., Sunday 9:30 a.m.", weekdays Monday
     and Tuesday 8:30. The quoted note (from MassTimes) says the 2008 merger left "one worship site".'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -20,8 +20,8 @@ evidence:
     NY 13031"; Masses Monday, Wednesday and Friday 9:00am, Saturday 4:30pm, Sunday 8:00am and 10:45am.'
 - url: https://www.openstreetmap.org/node/8787556552
   seen: 2026-09-26
-  note: 'OSM address point 5600 West Genesee Street, 13031, Town of Camillus (Nominatim reverse lookup of
-    the GCatholic Plus Code).'
+  note: OSM address point 5600 West Genesee Street, 13031, Town of Camillus (Nominatim reverse lookup
+    of the GCatholic Plus Code).
 - url: https://gcatholic.org/churches/usa-02/18010
   seen: 2026-09-25
   quote: 5600 W Genesee St., Camillus, New York 13031-1399
@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Joseph', 5600 W. Genesee
     Street, Camillus, NY, 13031-1311
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

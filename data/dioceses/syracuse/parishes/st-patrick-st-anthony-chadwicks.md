@@ -26,6 +26,7 @@ evidence:
   quote: His new parish underwent a merger process that meant closing St. Patrick’s Church in Clayville
     while beginning the new combined parish at the St. Anthony site.
   note: The Catholic Sun, 20 May 2010.
+promoted: 2026-09-26
 ---
 
 ## Publisher

@@ -27,6 +27,7 @@ evidence:
   quote: Saturday, September 19th 5:30 pm … Sunday, September 20th 8:45 am
   note: Page 2 of the 20 September 2026 issue; page 1 "St. Joseph & St. Patrick Church ... 702 Columbia
     Street Utica, NY 13502".
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -28,8 +28,9 @@ evidence:
   note: Immaculate Conception bulletin, 27 September 2026, masthead; daily Mass 7:30 am.
 - url: https://www.openstreetmap.org/way/216918393
   seen: 2026-09-26
-  note: 'OSM place_of_worship "Immaculate Conception Roman Catholic Church" (no address), about 35 m from
-    the GCatholic Plus Code; the school next door is tagged 400 Salt Springs Road.'
+  note: OSM place_of_worship "Immaculate Conception Roman Catholic Church" (no address), about 35 m from
+    the GCatholic Plus Code; the school next door is tagged 400 Salt Springs Road.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

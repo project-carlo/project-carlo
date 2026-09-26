@@ -26,6 +26,7 @@ evidence:
   quote: PASTOR, IMMACULATE CONCEPTION, FAYETTEVILLE; ST. ANN, MANLIUS
   note: The diocese's page for St. Ann (behind Cloudflare; read in a browser), listing Rev. Clifford H.
     Auth; Dc. Robert J. Street is "Parish Life Director, St. Ann Church, Manlius".
+promoted: 2026-09-26
 ---
 
 ## Publisher

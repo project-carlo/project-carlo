@@ -39,6 +39,7 @@ evidence:
 revisit: Look for a Mass at St. Mary's, Jamesville in the Holy Cross bulletin or events calendar (holycrossdewitt.org/events?format=json);
   if none has been held since October 2025, move it to open/ or excluded/.
 revisit_after: 2027-01-15
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

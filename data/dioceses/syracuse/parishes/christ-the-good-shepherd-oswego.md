@@ -31,17 +31,18 @@ evidence:
 - url: https://christthegoodshepherd.org/
   seen: 2026-09-26
   quote: 6:30 pm – (Hall Newman Center- SUNY Oswego)
-  note: The parish homepage. It links church-bulletin.org/486 as its bulletin, gives "Christ the Good Shepherd
-    134 E. Fifth St., Oswego" with the same Masses, and says CTGS "was formed as a unification of the parishes
-    of St. Paul, St. Joseph, St. Stephen the King, St. Peter, Sacred Heart, and the territory of St. Mary
-    of the Assumption, plus the closed parishes of St. John the Evangelist and St. Louis".
+  note: The parish homepage. It links church-bulletin.org/486 as its bulletin, gives "Christ the Good
+    Shepherd 134 E. Fifth St., Oswego" with the same Masses, and says CTGS "was formed as a unification
+    of the parishes of St. Paul, St. Joseph, St. Stephen the King, St. Peter, Sacred Heart, and the territory
+    of St. Mary of the Assumption, plus the closed parishes of St. John the Evangelist and St. Louis".
 - url: https://files.ecatholic.com/31250/documents/2022/8/Decree-for-St.-Jospeh-St.-Paul-St.-Peter-St.-Stephen.pdf
   seen: 2026-09-26
-  note: 'The merger decree, dated 21 May 2020, effective 31 May 2020 (a scan with no text layer; read rendered).
-    Item 1 unites St. Joseph, St. Paul, St. Peter and St. Stephen, the King of Hungary "to form the new
-    parish of Christ the Good Shepherd"; item 3: "The parish church will be the church of Saint Paul located
-    at 50 East Mohawk Street"; item 4 keeps the other three churches open for Mass "on the anniversary
-    of the dedication and on the patronal feast of each church".'
+  note: 'The merger decree, dated 21 May 2020, effective 31 May 2020 (a scan with no text layer; read
+    rendered). Item 1 unites St. Joseph, St. Paul, St. Peter and St. Stephen, the King of Hungary "to
+    form the new parish of Christ the Good Shepherd"; item 3: "The parish church will be the church of
+    Saint Paul located at 50 East Mohawk Street"; item 4 keeps the other three churches open for Mass
+    "on the anniversary of the dedication and on the patronal feast of each church".'
+promoted: 2026-09-26
 ---
 
 ## Publisher

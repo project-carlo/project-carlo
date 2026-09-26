@@ -23,6 +23,7 @@ evidence:
     officially designated as the sole church of the parish.
   note: The bishop's decree of 4 June 2026 (published 16 June, effective 16 July 2026) merging Our Lady
     of Lourdes and Our Lady of the Rosary and relegating the Rosary church.
+promoted: 2026-09-26
 ---
 
 ## Publisher

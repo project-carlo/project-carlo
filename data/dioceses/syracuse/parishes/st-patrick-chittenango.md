@@ -9,10 +9,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/03/0872/20260927B.pdf
   seen: 2026-09-26
   quote: St. Patrick’s Roman Catholic Church, Chittenango, NY 03-0872
-  note: 27 September 2026 issue. Pages 1 to 4 are images with no text layer; this quote is from the
-    text layer of the ad page (page 5). Page 1, read by rendering the PDF, is headed "ST. PATRICK'S ROMAN
-    CATHOLIC CHURCH, SEPTEMBER 27, 2026" and gives "WEEKEND MASSES Saturday | 4:00 pm Vigil, Sunday |
-    10:30 am; WEEKDAY MASS Wednesday | 11:00 am" and the one church, 1341 Murray Drive.
+  note: 27 September 2026 issue. Pages 1 to 4 are images with no text layer; this quote is from the text
+    layer of the ad page (page 5). Page 1, read by rendering the PDF, is headed "ST. PATRICK'S ROMAN CATHOLIC
+    CHURCH, SEPTEMBER 27, 2026" and gives "WEEKEND MASSES Saturday | 4:00 pm Vigil, Sunday | 10:30 am;
+    WEEKDAY MASS Wednesday | 11:00 am" and the one church, 1341 Murray Drive.
 - url: https://www.stpatrickschittenango.com/bulletin
   seen: 2026-09-26
   quote: Click here to visit Parishes Online for archived Bulletins
@@ -23,6 +23,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po st-patricks-roman-catholic-church`: 1341 Murray Drive, Chittenango, website stpatrickschittenango.com,
     LPi id 0018000000Qc2cLAAR, container 03/0872, newest issue 2026-09-27.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

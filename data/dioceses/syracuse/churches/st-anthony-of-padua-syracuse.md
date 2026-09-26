@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   note: 'Image-only PDF (no text layer), read by rendering page 1: "Mass Schedule | Horario de Misas Sunday
     9am (English) 11am (Español)", "1515 Midland Ave. Syracuse NY".'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

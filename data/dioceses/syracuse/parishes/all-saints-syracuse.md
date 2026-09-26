@@ -21,6 +21,7 @@ evidence:
 revisit: Check whether All Saints and St. Lucy's start a shared bulletin under Fr. Daley (from 1 January
   2027).
 revisit_after: 2027-02-01
+promoted: 2026-09-26
 ---
 
 ## Publisher

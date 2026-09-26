@@ -14,12 +14,13 @@ evidence:
     "New Mass Schedule", daily 7:30 am, no Saturday vigil.
 - url: https://icfayetteville.org/weekly-bulletin/
   seen: 2026-09-26
-  note: 'The parish''s Weekly Bulletin page (visit.py) links a self-hosted copy (/wp-content/uploads/2026/08/IC-Bulletin-8.9.26.pdf,
-    9 August 2026) and "View Past Bulletins" at parishesonline.com/find/immaculate-conception-parish-13066.'
+  note: The parish's Weekly Bulletin page (visit.py) links a self-hosted copy (/wp-content/uploads/2026/08/IC-Bulletin-8.9.26.pdf,
+    9 August 2026) and "View Past Bulletins" at parishesonline.com/find/immaculate-conception-parish-13066.
 - url: https://parishesonline.com/organization/immaculate-conception-parish-13066
   seen: 2026-09-26
   note: '`probe po immaculate-conception-parish-13066`: 400 Salt Springs Street, Fayetteville, website
     icfayetteville.org, LPi id 0018000000Qbz9kAAB, container 06/0138, newest issue 2026-09-27.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

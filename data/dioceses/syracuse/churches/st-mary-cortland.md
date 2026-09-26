@@ -35,6 +35,7 @@ evidence:
 - url: https://www.openstreetmap.org/node/357634572
   seen: 2026-09-26
   note: OSM place_of_worship "Saint Mary's Roman Catholic Church", 46 North Main Street, Cortland 13045.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

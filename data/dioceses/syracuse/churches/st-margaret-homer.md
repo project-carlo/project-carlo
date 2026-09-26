@@ -37,6 +37,7 @@ evidence:
   seen: 2026-09-26
   note: OSM place_of_worship "Saint Margaret's Roman Catholic Church", Homer 13077 (tagged on Cortland
     Street, at the corner with Copeland Avenue), about 100 m from GCatholic's point.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

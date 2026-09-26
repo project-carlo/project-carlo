@@ -33,6 +33,7 @@ evidence:
   quote: 4:00pm Vigil Mass, Saturday
   note: 'The parish site''s St. Joseph page: ''Physical and mailing address: 121 St. Joseph Place, Oneida,
     NY 13421''; 8:30am daily Mass, 4:00pm Saturday vigil, 10:45am Sunday.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -20,8 +20,8 @@ evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-john-the-evangelist-saint-mary-s-oratory-camden-ny-13316/2025-09-14.pdf
   seen: 2026-09-26
   quote: 11:00 am Mass at St. Mary, Mt. Carmel,
-  note: 'Page 2 of the 14 September 2025 bulletin, under Sunday, September 21, 2025: "11:00 am Mass at St.
-    Mary, Mt. Carmel, Florence". The 21 September 2025 issue repeats it.'
+  note: 'Page 2 of the 14 September 2025 bulletin, under Sunday, September 21, 2025: "11:00 am Mass at
+    St. Mary, Mt. Carmel, Florence". The 21 September 2025 issue repeats it.'
 - url: https://www.church-bulletin.org/bulletin/saint-john-the-evangelist-saint-mary-s-oratory-camden-ny-13316/2026-09-13.pdf
   seen: 2026-09-26
   note: 'Page 2 of the 13 September 2026 bulletin (no text layer; read rendered), Mass intentions, under
@@ -30,9 +30,9 @@ evidence:
   seen: 2026-09-26
   quote: Closed for regular services in 2003, St. Mary’s is now a devotional chapel, available for weddings,
     funerals and special Masses.
-  note: 'Rome Sentinel, "Capacity crowd enjoys annual Mass at historic church in Florence": the Mass of Sunday,
-    Sept. 21 (2025, the 180th anniversary of the 1845 founding) at "St. Mary of Mount Carmel Catholic Church",
-    concelebrated by Fr. John F. Hogan Jr.'
+  note: 'Rome Sentinel, "Capacity crowd enjoys annual Mass at historic church in Florence": the Mass of
+    Sunday, Sept. 21 (2025, the 180th anniversary of the 1845 founding) at "St. Mary of Mount Carmel Catholic
+    Church", concelebrated by Fr. John F. Hogan Jr.'
 - url: https://stjohncamden.com/?page_id=61
   seen: 2026-09-26
   quote: St. Mary Church in Florence will now serve as a devotional chapel.
@@ -40,8 +40,9 @@ evidence:
 - url: https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=43.4408324&lon=-75.747604&zoom=18
   seen: 2026-09-26
   quote: Saint Marys Church, Green Road, Town of Florence
-  note: OSM node 357586339 (a GNIS import, place_of_worship "Saint Marys Church"), reverse-geocoded to Green
-    Road, Town of Florence.
+  note: OSM node 357586339 (a GNIS import, place_of_worship "Saint Marys Church"), reverse-geocoded to
+    Green Road, Town of Florence.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -36,6 +36,7 @@ evidence:
 - url: https://parishesonline.com/organization/catholic-community-of-st-stephen-st-patrick
   seen: 2026-09-26
   note: 'ParishesOnline organization address: 59 Keibel Rd, Whitney Point, New York, 13862.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

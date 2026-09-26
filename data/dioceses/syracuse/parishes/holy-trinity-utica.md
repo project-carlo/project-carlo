@@ -35,6 +35,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po holy-trinity-church-13502`: LPi id 0018000000Qbz9aAAB, container 06/0050, weekly issues
     through 2026-09-27. holytrinityutica.com embeds this org.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

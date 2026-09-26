@@ -29,6 +29,7 @@ evidence:
     parish.
   note: Rome Sentinel, 6 May 2025. Names St. John the Baptist, St. Mary's-St. Peter's, St. Paul's and
     St. Joseph's (Lee Center), which 'will all remain open and each one will have a weekend Mass'.
+promoted: 2026-09-26
 ---
 
 ## Publisher

@@ -19,8 +19,8 @@ evidence:
     am at Divine Mercy; weekday Masses alternate between the two. No other church is named.
 - url: https://www.sh-dm.org/bulletin
   seen: 2026-09-26
-  note: 'The parishes'' Bulletin page (read with parish-site-access visit.py) embeds the ParishesOnline
-    publication page sacred-heart-divine-mercy-13039 with the 27 September 2026 issue of container 06/0003.'
+  note: The parishes' Bulletin page (read with parish-site-access visit.py) embeds the ParishesOnline
+    publication page sacred-heart-divine-mercy-13039 with the 27 September 2026 issue of container 06/0003.
 - url: https://parishesonline.com/organization/sacred-heart-divine-mercy-13039
   seen: 2026-09-26
   note: '`probe po 0018000000Qc0EhAAJ`: organization "Sacred Heart & Divine Mercy", 8229 Brewerton Rd,
@@ -31,6 +31,7 @@ evidence:
     officially designated as the sole church of the parish.
   note: The bishop's decree of 6 July 2023 (published 8 July) merging the Mission of St. Bernadette into
     Divine Mercy and relegating the Constantia church, effective 16 July 2023.
+promoted: 2026-09-26
 ---
 
 ## Publisher

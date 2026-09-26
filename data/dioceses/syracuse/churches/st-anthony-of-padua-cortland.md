@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-26
   quote: 'Sunday: 9:15am Monday: 5:30pm Thursday: 12:10pm'
   note: St. Anthony's own schedule page.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

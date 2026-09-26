@@ -28,9 +28,10 @@ evidence:
   note: St. James bulletin, 27 September 2026, page 1, with "6 Green Street, Cazenovia, NY 13035".
 - url: https://www.openstreetmap.org/way/158973636
   seen: 2026-09-26
-  note: 'OSM place_of_worship "St James Roman Catholic Church", tagged 26 Hurd Street; OSM way 326807088
-    next to it is "St James Church Rectory", 6 Green Street. The GCatholic Plus Code falls between the two,
-    about 25 m from the church.'
+  note: OSM place_of_worship "St James Roman Catholic Church", tagged 26 Hurd Street; OSM way 326807088
+    next to it is "St James Church Rectory", 6 Green Street. The GCatholic Plus Code falls between the
+    two, about 25 m from the church.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   quote: Following the final prayer service at Blessed Sacrament and transfer of the Holy Eucharist on
     December 10, 2011, the two churches formally merged on January 1, 2012
   note: The parish's own history page.
+promoted: 2026-09-26
 ---
 
 ## Publisher

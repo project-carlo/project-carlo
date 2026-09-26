@@ -21,6 +21,7 @@ evidence:
   quote: Sacramental Records for St. Francis de Sales, Utica; and St. Mary Church of South Street, Utica
     are retained here.
   note: Diocese page (behind Cloudflare; read with visit.py). Pastor Rev. Thomas Servatius.
+promoted: 2026-09-26
 ---
 
 ## Publisher

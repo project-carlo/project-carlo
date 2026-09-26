@@ -25,10 +25,9 @@ evidence:
 - url: https://bulletins.discovermass.com/download.php?bulletin=a0o2U6lLj%2ByRegtGcRfkrrW2R2Xfa11Efp2P3zMoJ1QP74ElNYoNB5Fg6T%2BUcrCiQpU1%2FL%2B%2Fo1Jp1R5iohWgbrVyEVCofS6N8IGtyoAN6FA%3D
   seen: 2026-09-26
   quote: 8:00 AM Mass - Fr. McKeon (EP)
-  note: Liverpool Catholic Community bulletin, 27 September 2026 (Discover Mass,
-    christ-the-king-liverpool-ny), page 2. Sunday Masses at EP at 8:00, 9:30 and 11:00 am, the
-    Saturday 4:00 pm vigil, and weekday Mass Monday to Thursday at 9:00 am. Masthead "EPIPHANY PARISH,
-    1001 Tulip Street, Liverpool, NY 13088".
+  note: Liverpool Catholic Community bulletin, 27 September 2026 (Discover Mass, christ-the-king-liverpool-ny),
+    page 2. Sunday Masses at EP at 8:00, 9:30 and 11:00 am, the Saturday 4:00 pm vigil, and weekday Mass
+    Monday to Thursday at 9:00 am. Masthead "EPIPHANY PARISH, 1001 Tulip Street, Liverpool, NY 13088".
 - url: https://thecatholicsun.com/final-mass-at-epiphany-parish-ihm-worship-site/
   seen: 2026-09-26
   quote: The church of Saint Joseph the Worker, located at 1001 Tulip Street, Liverpool, New York 13088,
@@ -37,8 +36,9 @@ evidence:
     as Epiphany Parish, printed by The Catholic Sun.
 - url: https://www.openstreetmap.org/way/908944098
   seen: 2026-09-26
-  note: 'OSM place_of_worship "St. Joseph the Worker Church", 1001 Tulip Street, 13088, about 15 m from
-    the GCatholic Plus Code.'
+  note: OSM place_of_worship "St. Joseph the Worker Church", 1001 Tulip Street, 13088, about 15 m from
+    the GCatholic Plus Code.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Francis of Assisi', 1031
     Chenango Street, Binghamton, NY, 13901-1746
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

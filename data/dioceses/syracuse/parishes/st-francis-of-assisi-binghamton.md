@@ -22,6 +22,7 @@ evidence:
   note: 'Diocese page (behind Cloudflare; read with visit.py): 1031 Chenango Street; "Sacramental Records
     for St. Catherine of Sienna, Binghamton; St. Christopher, Binghamton; and St. Rita, Chenango Forks
     are retained here."'
+promoted: 2026-09-26
 ---
 
 ## Publisher

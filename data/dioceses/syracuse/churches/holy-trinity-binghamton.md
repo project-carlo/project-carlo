@@ -38,6 +38,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Church of the Holy Trinity',
     346 Prospect Street, Binghamton, NY, 13905
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

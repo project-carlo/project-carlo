@@ -17,6 +17,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po`: 927 Park Avenue, LPi id 0018000000Qc0EfAAJ, container 06/0194, weekly issues through
     2026-09-27. Found by web search (site:parishesonline.com).'
+promoted: 2026-09-26
 ---
 
 ## Publisher

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: 'OSM: place_of_worship "Hall Newman Center", roman_catholic, 36 New Street, Oswego; centre 43.449665,
     -76.540383.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

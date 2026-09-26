@@ -37,6 +37,7 @@ evidence:
   seen: 2026-09-26
   note: 'OSM: ''Saint Joseph''s Church'', Charles Street, Boonville, without a house number, about 10
     m from GCatholic''s Plus Code.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

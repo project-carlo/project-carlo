@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. James', 147 Main Street,
     Johnson City, NY, 13790-2473
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

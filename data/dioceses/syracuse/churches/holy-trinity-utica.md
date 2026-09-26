@@ -27,6 +27,7 @@ evidence:
   quote: Holy Trinity • 1206 Lincoln Ave, Utica, NY
   note: Masthead of the 20 September 2026 combined bulletin; page 4 lists Sunday Masses 8:00am and 9:45am
     at "Holy Trinity Church".
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

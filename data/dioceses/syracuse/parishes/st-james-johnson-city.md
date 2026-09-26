@@ -17,6 +17,7 @@ evidence:
 - url: https://stjamesjc.org
   seen: 2026-09-26
   note: '`probe url http://www.stjamesjc.org/`: the parish site embeds `discovermass:st-james-johnson-city-ny`.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

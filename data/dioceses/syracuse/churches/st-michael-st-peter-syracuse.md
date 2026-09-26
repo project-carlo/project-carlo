@@ -31,6 +31,7 @@ evidence:
   quote: Physical Address 4791 West Seneca Turnpike Syracuse, NY 13215 Mailing Address 4782 West Seneca
     Turnpike
   note: Diocese page (Cloudflare; visit.py).
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

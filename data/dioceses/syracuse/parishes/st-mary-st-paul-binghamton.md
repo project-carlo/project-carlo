@@ -27,6 +27,7 @@ evidence:
     2026-09-27, and its page 1 is the same masthead as the self-hosted PDF. The St. Paul listing (discovermass.com/church/st-paul-binghamton-ny/,
     "282 Chenango St, Binghamton, NY 13901") serves the same bulletin. The PDF itself says "View this
     bulletin online at www.DiscoverMass.com".
+promoted: 2026-09-26
 ---
 
 ## Publisher

@@ -16,8 +16,8 @@ evidence:
 - url: https://gcatholic.org/churches/usa-02/17970
   seen: 2026-09-25
   quote: 8229 Brewerton Rd., Cicero, New York 13039-9427
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Syracuse as ''Sacred Heart'', 8229
-    Brewerton Rd., Cicero, NY, 13039; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Syracuse as ''Sacred Heart'',
+    8229 Brewerton Rd., Cicero, NY, 13039; kind: Church'
 - url: https://www.syracusediocese.org/parishfinder
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Sacred Heart', 8229 Brewerton
@@ -29,8 +29,9 @@ evidence:
     Rd. Cicero, NY 13039".
 - url: https://www.openstreetmap.org/way/1057443822
   seen: 2026-09-26
-  note: 'OSM place_of_worship "Sacred Heart Church" on Brewerton Road, 13039 (no house number), within
-    about 20 m of the GCatholic Plus Code.'
+  note: OSM place_of_worship "Sacred Heart Church" on Brewerton Road, 13039 (no house number), within
+    about 20 m of the GCatholic Plus Code.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

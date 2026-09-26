@@ -9,17 +9,18 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/06/0119/20260927B.pdf
   seen: 2026-09-26
   quote: St. Mary of the Lake, Skaneateles NY 06-0119
-  note: 'The 27 September 2026 issue. Pages 1-5 are images, so this quote is the LPi footer on page 6. Read
-    as a rendered image, page 1 is headed "St. Mary''s of the Lake", September 27, 2026, with parish website
-    www.stmarysskaneateles.com, mailing address 10 West Austin Street, and a Liturgy Schedule: daily Mass
-    8:15am Tuesday - Friday, Saturday Evening Vigil 4:30pm, Sunday 8:00am & 10:15am (Live Streamed).'
+  note: 'The 27 September 2026 issue. Pages 1-5 are images, so this quote is the LPi footer on page 6.
+    Read as a rendered image, page 1 is headed "St. Mary''s of the Lake", September 27, 2026, with parish
+    website www.stmarysskaneateles.com, mailing address 10 West Austin Street, and a Liturgy Schedule:
+    daily Mass 8:15am Tuesday - Friday, Saturday Evening Vigil 4:30pm, Sunday 8:00am & 10:15am (Live Streamed).'
 - url: https://www.stmarysskaneateles.com/bulletins
   seen: 2026-09-26
   note: The parish's Bulletins page embeds parishesonline.com/publicationWidget?type=bulletin&id=0018000000Qc2c4AAB.
 - url: https://parishesonline.com/organization/st-mary-of-the-lake-church
   seen: 2026-09-26
-  note: '`probe po 0018000000Qc2c4AAB`: organization st-mary-of-the-lake-church, "St. Mary of the Lake Church",
-    container 06/0119, weekly issues through 2026-09-27.'
+  note: '`probe po 0018000000Qc2c4AAB`: organization st-mary-of-the-lake-church, "St. Mary of the Lake
+    Church", container 06/0119, weekly issues through 2026-09-27.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

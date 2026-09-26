@@ -22,6 +22,7 @@ evidence:
   note: Holy Family's bulletin page, one PDF per week (HF-Bulletin-<Month>-<day>-<year>.pdf), newest 27
     September 2026. stmariannecope.org's own bulletin link points to this page (visit.py --bulletin on
     stmariannecope.org, 2026-09-26).
+promoted: 2026-09-26
 ---
 
 ## Publisher

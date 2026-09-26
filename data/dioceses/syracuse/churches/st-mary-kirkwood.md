@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Mary', 975 US Route 11, Kirkwood,
     NY, 13795-1648
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
   seen: 2026-09-26
   quote: In October of 2017, St. James was officially merged with Our Lady of Lourdes Church and is now
     known as Our Lady of Hope.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

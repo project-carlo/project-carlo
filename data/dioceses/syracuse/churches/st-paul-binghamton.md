@@ -34,6 +34,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Paul', 15 Doubleday Street,
     Binghamton, NY, 13901-2501
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

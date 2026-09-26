@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-26
   quote: 240 Bleecker Street Utica, NY 13501 At the corner of John & Bleecker Streets
   note: Diocese page (behind Cloudflare; read with visit.py).
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

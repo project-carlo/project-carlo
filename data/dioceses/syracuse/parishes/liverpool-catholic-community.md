@@ -9,35 +9,34 @@ evidence:
 - url: https://bulletins.discovermass.com/download.php?bulletin=a0o2U6lLj%2ByRegtGcRfkrrW2R2Xfa11Efp2P3zMoJ1QP74ElNYoNB5Fg6T%2BUcrCiQpU1%2FL%2B%2Fo1Jp1R5iohWgbrVyEVCofS6N8IGtyoAN6FA%3D
   seen: 2026-09-26
   quote: CHRIST THE KING … EPIPHANY PARISH … 1001 Tulip Street … POPE JOHN XXIII
-  note: 'The 27 September 2026 issue ("Twenty-Sixth Sunday in Ordinary Time"), listed on
-    discovermass.com/church/christ-the-king-liverpool-ny/. The download link is a Discover Mass token.
-    Page 1 masthead names the three parishes with their offices; page 2 calendar gives Masses at CTK,
-    EP and PJXXIII only.'
+  note: The 27 September 2026 issue ("Twenty-Sixth Sunday in Ordinary Time"), listed on discovermass.com/church/christ-the-king-liverpool-ny/.
+    The download link is a Discover Mass token. Page 1 masthead names the three parishes with their offices;
+    page 2 calendar gives Masses at CTK, EP and PJXXIII only.
 - url: https://bulletins.discovermass.com/download.php?bulletin=a0o2U6lLj%2ByRegtGcRfkrrW2R2Xfa11Efp2P3zMoJ1QP74ElNYoNB5Fg6T%2BUcrCiQpU1%2FL%2B%2Fo1Jp1R5iohWgbrVyEVCofS6N8IGtyoAN6FA%3D
   seen: 2026-09-26
   quote: 8:00 AM Mass - Fr. McKeon (EP) … 8:30 AM Mass - Fr. Zach (CTK) … 10:30 AM Mass - Fr. Zach (PJXXIII)
-  note: Page 2 of the same issue ("Event Calendar"), Sunday 27 September. Saturday 3 October lists "4:00PM Vigil Mass" at CTK and EP and "5:30PM Vigil Mass"
-    at PJXXIII.
+  note: Page 2 of the same issue ("Event Calendar"), Sunday 27 September. Saturday 3 October lists "4:00PM
+    Vigil Mass" at CTK and EP and "5:30PM Vigil Mass" at PJXXIII.
 - url: https://discovermass.com/church/christ-the-king-liverpool-ny/
   seen: 2026-09-26
   quote: Christ the King
-  note: 'The Discover Mass church page the pipeline reads (provider_id). issues.py found weekly issues,
-    newest 2026-09-27; it is the same series the parish site embeds as Discover Mass archive widget
-    3532, which runs weekly back to at least October 2025.'
+  note: The Discover Mass church page the pipeline reads (provider_id). issues.py found weekly issues,
+    newest 2026-09-27; it is the same series the parish site embeds as Discover Mass archive widget 3532,
+    which runs weekly back to at least October 2025.
 - url: https://bulletins.discovermass.com/download.php?bulletin=H2MJpdWp%2FZPADzRSdtmtqsFQHEdN97W0Pw6ApQKzZG5VQJTMvlZVMOoeFPLLgPYmYQs8sfHF3yeYt3V1Oum6pgaJPK3lA6%2FsyRqhV2bypbs%3D
   seen: 2026-09-26
-  quote: Catholic Family of Epiphany … Beginning Pentecost Sunday, May 24th, this shared bulletin will include
-    news, events, ministries, and important updates from all three parishes
-  note: 'Epiphany''s own last bulletin, 17 May 2026 (Discover Mass archive widget 3533, "Epiphany
-    Parish Bulletin Archives (Prior to May 24, 2026)", church page discovermass.com/church/immaculate-heart-of-mary-liverpool-ny/).
+  quote: Catholic Family of Epiphany … Beginning Pentecost Sunday, May 24th, this shared bulletin will
+    include news, events, ministries, and important updates from all three parishes
+  note: 'Epiphany''s own last bulletin, 17 May 2026 (Discover Mass archive widget 3533, "Epiphany Parish
+    Bulletin Archives (Prior to May 24, 2026)", church page discovermass.com/church/immaculate-heart-of-mary-liverpool-ny/).
     Page 2, under "Coming Soon: A Combined Bulletin for the Liverpool Catholic Community".'
 - url: https://liverpoolnycatholic.org/bulletin
   seen: 2026-09-26
   quote: Epiphany Parish Bulletin Archives (Prior to May 24, 2026)
-  note: The community site's Bulletins page (eCatholic site, behind Cloudflare; read with
-    parish-site-access visit.py). It embeds two Discover Mass archive widgets, 3532 (current, issues to
-    27 September 2026) and 3533 (Epiphany, last issue 17 May 2026), and its footer lists the three
-    parishes' offices.
+  note: The community site's Bulletins page (eCatholic site, behind Cloudflare; read with parish-site-access
+    visit.py). It embeds two Discover Mass archive widgets, 3532 (current, issues to 27 September 2026)
+    and 3533 (Epiphany, last issue 17 May 2026), and its footer lists the three parishes' offices.
+promoted: 2026-09-26
 ---
 
 ## Publisher

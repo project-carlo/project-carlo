@@ -29,6 +29,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Our Lady of Sorrows', 801 Main
     Street, Vestal, NY, 13850
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

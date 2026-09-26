@@ -114,8 +114,9 @@ evidence:
 The cathedral publishes its own weekly bulletin through ParishesOnline...
 ```
 
-`syracuse/` is a small worked example: one finished parish, one that is blocked, and four
-exclusions of different kinds.
+`syracuse/` is a complete worked example: a whole diocese explored in one pass by eight
+parallel agents, one per region, including exclusions of every kind, parishes folded into
+shared bulletins, and a canonical merger dated from the news rather than a guess.
 
 ### Fields
 

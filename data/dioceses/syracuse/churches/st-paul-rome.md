@@ -28,6 +28,7 @@ evidence:
   note: '27 September 2026 issue: page-1 masthead ''St. Paul’s Church, 1807 Bedford Street, Rome, New
     York 13440''; page-3 schedule Saturday 4:00 pm. The parish office is also here (''SACRED HEART OFFICE
     Located at St. Paul’s Church'').'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

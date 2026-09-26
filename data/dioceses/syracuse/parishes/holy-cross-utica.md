@@ -28,6 +28,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po st-peters-church-13502`: LPi id 0018000000Qc2eBAAR, 422 Coventry Avenue, no issues.
     St. Peter''s old account, silent.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

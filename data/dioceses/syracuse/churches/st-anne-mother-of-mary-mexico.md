@@ -25,11 +25,12 @@ evidence:
 - url: https://files.ecatholic.com/25311/bulletins/20260927.pdf
   seen: 2026-09-26
   quote: 3352 Main St.; Mexico, NY13114
-  note: 'Page 2 of the 27 September 2026 bulletin ("St. Anne, Mother of Mary and Parish Office"); page
-    3 lists SAMOM Masses Saturday 5:30 pm and Sunday 8:30 am.'
+  note: Page 2 of the 27 September 2026 bulletin ("St. Anne, Mother of Mary and Parish Office"); page
+    3 lists SAMOM Masses Saturday 5:30 pm and Sunday 8:30 am.
 - url: https://www.openstreetmap.org/way/488730816
   seen: 2026-09-26
   note: 'OSM: "St. Anne Mother of Mary", catholic, 3354 Main Street, Mexico; centre 43.460229, -76.236286.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

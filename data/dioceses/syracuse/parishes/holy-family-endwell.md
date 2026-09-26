@@ -19,6 +19,7 @@ evidence:
   note: 'Diocese page (behind Cloudflare; read with visit.py): 3600 Phyllis Street; "Website: holyfamilyendwell.com";
     "Sacramental records for Christ the King, Endwell and Our Lady of Angels, Endwell are retained here."
     Fr. Rumble is "PASTOR, CHURCH OF THE HOLY FAMILY, ENDWELL; MOST HOLY ROSARY, MAINE".'
+promoted: 2026-09-26
 ---
 
 ## Publisher

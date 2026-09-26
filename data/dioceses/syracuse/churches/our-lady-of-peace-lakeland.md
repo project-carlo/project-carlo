@@ -27,6 +27,7 @@ evidence:
   quote: Our Lady of Peace Church 203 Halcomb Street Lakeland, NY 13209
   note: 'Masthead, 27 September 2026. Page 9: Saturday "4 PM Arlindo & Palmira Padrao/Daughter OLOP" and
     Tuesday 8 AM OLOP.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

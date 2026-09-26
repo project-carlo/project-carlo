@@ -22,6 +22,7 @@ evidence:
   quote: SACRAMENTAL MINISTER, IMMACULATE CONCEPTION, GREENE; ST. JOSEPH, OXFORD
   note: 'The diocese''s page (read with visit.py): Rev. Paul N. Machira sacramental minister; Msgr. John
     P. Putano (Binghamton) canonical pastor.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

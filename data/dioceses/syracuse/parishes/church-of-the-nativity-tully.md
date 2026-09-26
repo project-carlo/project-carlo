@@ -8,10 +8,11 @@ group: Church of the Nativity (Tully, LaFayette, Pompey, Otisco)
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0037/20260927B.pdf
   seen: 2026-09-26
-  quote: 'Sunday Masses: 8 a.m. Immaculate Conception, Pompey9:30 a.m. St. Joseph’s, LaFayette11:30 a.m. St. Patrick’s, Otisco'
-  note: 'Page-1 masthead of the 27 September 2026 issue. It also gives "Saturday Masses: 4:30 p.m. St. Leo’s,
-    Tully", one office block each for St. Leo''s, St. Joseph''s, Immaculate Conception and St. Patrick''s,
-    Rev. Dennis Walker as pastor, and "Website: https://nativityny.org".'
+  quote: 'Sunday Masses: 8 a.m. Immaculate Conception, Pompey9:30 a.m. St. Joseph’s, LaFayette11:30 a.m.
+    St. Patrick’s, Otisco'
+  note: 'Page-1 masthead of the 27 September 2026 issue. It also gives "Saturday Masses: 4:30 p.m. St.
+    Leo’s, Tully", one office block each for St. Leo''s, St. Joseph''s, Immaculate Conception and St.
+    Patrick''s, Rev. Dennis Walker as pastor, and "Website: https://nativityny.org".'
 - url: https://container.parishesonline.com/bulletins/06/0037/20260927B.pdf
   seen: 2026-09-26
   quote: 'Read the bulletin online at: http://www.seekandfind.com/find/immaculate-conception-church-13138/download'
@@ -19,8 +20,7 @@ evidence:
 - url: https://www.nativityny.org/bulletin
   seen: 2026-09-26
   quote: The new bulletin for each weekend gets posted on Friday evenings.
-  note: The parish's Bulletin page; its "Open the latest weekly Bulletin" link goes to
-    parishesonline.com/organization/immaculate-conception-church-13138.
+  note: The parish's Bulletin page; its "Open the latest weekly Bulletin" link goes to parishesonline.com/organization/immaculate-conception-church-13138.
 - url: https://parishesonline.com/organization/immaculate-conception-church-13138
   seen: 2026-09-26
   note: '`probe po immaculate-conception-church-13138`: titled "St. Leo''s Church", 10 Onondaga St., Tully;
@@ -33,6 +33,7 @@ evidence:
 revisit: Re-read the masthead for a change in the four churches once the 2026 pastoral plan (town hall
   13 Aug 2026) produces a decision.
 revisit_after: 2027-01-15
+promoted: 2026-09-26
 ---
 
 ## Publisher

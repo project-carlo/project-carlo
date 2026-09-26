@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   quote: Sunday, September 27 @ St Francis
   note: One Catholic Family bulletin, 20 September 2026, page 5, "9:30am" Mass.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -10,9 +10,9 @@ evidence:
   seen: 2026-09-26
   quote: CHRIST OUR LIGHT and ST. ANNE, MOTHER OF MARY
   note: 'Page 1 of the 27 September 2026 issue. Page 2 gives both churches and offices ("St. Anne, Mother
-    of Mary and Parish Office 3352 Main St.; Mexico, NY13114", "Christ Our Light and Parish Office 23 Niagara
-    St.; Pulaski NY 13142"), one administrator (Msgr. Francis Osei-Nyarko), and "Nickname: COLSAMOM". Page
-    3 lists the weekend: Sat 4:00 pm COL, 5:30 pm SAMOM; Sun 8:30 am SAMOM, 10:15 am COL.'
+    of Mary and Parish Office 3352 Main St.; Mexico, NY13114", "Christ Our Light and Parish Office 23
+    Niagara St.; Pulaski NY 13142"), one administrator (Msgr. Francis Osei-Nyarko), and "Nickname: COLSAMOM".
+    Page 3 lists the weekend: Sat 4:00 pm COL, 5:30 pm SAMOM; Sun 8:30 am SAMOM, 10:15 am COL.'
 - url: https://stannechristourlight.com/
   seen: 2026-09-26
   quote: 'Sunday: SAMOM 8:30am; COL 10:15am'
@@ -22,15 +22,16 @@ evidence:
 - url: https://stannechristourlight.com/about-us
   seen: 2026-09-26
   quote: Christ Our Light was formed from two parishes in 2007
-  note: 'Behind the same 403; read in a browser. "St. Anne Mother of Mary was formed from two parishes in
-    the early 2000s, St. Anne''s in Parish New York and St. Mary''s Star of the Sea in Mexico ... the Church
-    was consecrated as St. Mary''s Star of the Sea" and "Christ Our Light was formed from two parishes in
-    2007, namely St. Frances Cabrini in Lacona and St. John the Evangelist in Pulaski."'
+  note: Behind the same 403; read in a browser. "St. Anne Mother of Mary was formed from two parishes
+    in the early 2000s, St. Anne's in Parish New York and St. Mary's Star of the Sea in Mexico ... the
+    Church was consecrated as St. Mary's Star of the Sea" and "Christ Our Light was formed from two parishes
+    in 2007, namely St. Frances Cabrini in Lacona and St. John the Evangelist in Pulaski."
 - url: https://discovermass.com/church/christ-our-light-church-pulaski-ny/
   seen: 2026-09-26
   quote: are canonically linked, forming the Parish of Christ, Our Light & St. Anne, Mother of Mary with
     two worship sites
   note: Discover Mass (MassTimes.org) listing, which has no bulletins.
+promoted: 2026-09-26
 ---
 
 ## Publisher

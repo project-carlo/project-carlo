@@ -32,6 +32,7 @@ evidence:
   quote: Church of the Sacred Heart … And Saint Mary … Our Lady of Czestochowa … 201 Main Street ~ New
     York Mills, N.Y. 13417
   note: The parish's own masthead, 19 July 2026, before the bulletins were combined.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

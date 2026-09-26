@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Patrick', 28 North Main Street,
     Jordan, NY, 13080-0567
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

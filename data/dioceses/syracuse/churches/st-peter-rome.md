@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-26
   quote: St. Mary’s-St. Peter’s Roman Catholic Church on North James Street
   note: 'Rome Sentinel, 6 May 2025: the pre-merger parish name for this church.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

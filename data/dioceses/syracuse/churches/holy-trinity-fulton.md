@@ -29,8 +29,8 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/06/0241/20260927B.pdf
   seen: 2026-09-26
   quote: 8:30 a.m.   (HT)
-  note: Page 2 of the 27 September 2026 bulletin; Masses marked (HT) on Saturday 4:00 pm, Sunday 8:30 am
-    and Tuesday/Wednesday 9:00 am.
+  note: Page 2 of the 27 September 2026 bulletin; Masses marked (HT) on Saturday 4:00 pm, Sunday 8:30
+    am and Tuesday/Wednesday 9:00 am.
 - url: https://www.holytrinity-ststephen.org/holy-trinity-parish
   seen: 2026-09-26
   quote: with Immaculate Conception church chosen as the location
@@ -45,6 +45,7 @@ evidence:
   seen: 2026-09-26
   note: 'OSM (GNIS import): "Immaculate Conception Roman Catholic Church", Fulton, at 43.323056, -76.413611,
     about 20 m from GCatholic''s Plus Code.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

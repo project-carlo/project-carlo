@@ -28,6 +28,7 @@ evidence:
   seen: 2026-09-26
   note: 'OSM: place_of_worship ''Colgate Memorial Chapel'' on the Colgate campus, Hamilton 13346 (address
     tagged as 25 Campus Footpaths). Coordinates are this way''s centroid via Nominatim.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

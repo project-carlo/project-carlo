@@ -30,6 +30,7 @@ evidence:
 - url: https://www.holycrossdewitt.org/mass
   seen: 2026-09-26
   quote: Come visit us at 4112 East Genesee Street, DeWitt, NY.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

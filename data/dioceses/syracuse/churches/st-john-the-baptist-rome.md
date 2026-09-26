@@ -27,6 +27,7 @@ evidence:
   quote: 8:30 am St. John’s Church
   note: '27 September 2026 issue: page-1 masthead ''St. John the Baptist Church, 210 E. Dominick Street,
     Rome, New York 13440''; page-3 schedule Saturday 8:00 am and Sunday 8:30 am at St. John''s.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

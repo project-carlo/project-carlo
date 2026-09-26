@@ -36,6 +36,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Church of the Holy Family', 3600
     Phyllis Street, Endwell, NY, 13760-1968
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

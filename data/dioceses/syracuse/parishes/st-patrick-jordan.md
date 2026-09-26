@@ -9,15 +9,17 @@ evidence:
 - url: https://irp.cdn-website.com/59394cb6/files/uploaded/20260927docx.pdf
   seen: 2026-09-26
   quote: 'Pastor: Rev. Robert Hyde'
-  note: 'Page 1 of the 27 September 2026 bulletin: "St. Patrick Roman Catholic Church Jordan, New York Weekend
-    Bulletin September 27, 2026", "Address: 28 N. Main Street, P.O. Box 567". Its "AREA WEEKEND MASS SCHEDULES"
-    box gives "St. Patrick. Jordan … Vigil Mass Saturday 5:00 pm Sunday 8:00 & 10:00 am" followed by St.
-    Joseph (Camillus), St. Mary of the Lake (Skaneateles) and St. Francis Xavier (Marcellus) for reference.'
+  note: 'Page 1 of the 27 September 2026 bulletin: "St. Patrick Roman Catholic Church Jordan, New York
+    Weekend Bulletin September 27, 2026", "Address: 28 N. Main Street, P.O. Box 567". Its "AREA WEEKEND
+    MASS SCHEDULES" box gives "St. Patrick. Jordan … Vigil Mass Saturday 5:00 pm Sunday 8:00 & 10:00 am"
+    followed by St. Joseph (Camillus), St. Mary of the Lake (Skaneateles) and St. Francis Xavier (Marcellus)
+    for reference.'
 - url: https://www.stpatricksjordan.com/bulletin
   seen: 2026-09-26
   note: The parish's Bulletin page, linking one PDF per week on the site builder's file host (irp.cdn-website.com/59394cb6/...),
     with irregular file names (20260927docx.pdf, St_Patrick_Bulletin_with_Letter_20260920.pdf, 2026-9-13+Bulletin.pdf,
     20260906.pdf ...), weekly through 27 September 2026.
+promoted: 2026-09-26
 ---
 
 ## Publisher

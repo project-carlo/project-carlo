@@ -28,6 +28,7 @@ evidence:
   note: 'The diocese''s page (behind Cloudflare; read with visit.py): Parish Life Director Mary Wentlent;
     Rev. Paul N. Machira sacramental minister; Rev. James P. Serowik (pastor in Vestal and Binghamton)
     canonical pastor.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Patrick', 9 Leroy Street,
     Binghamton, NY, 13905-4601
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

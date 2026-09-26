@@ -28,6 +28,7 @@ evidence:
   note: The three parishes' joint site ("Welcome to the parishes of St. Augustine's, St. Mary's, and St.
     Elizabeth Ann Seton, of Baldwinsville, NY!"), linking each parish's own site, with the shared Mass
     schedule in effect since that date.
+promoted: 2026-09-26
 ---
 
 ## Publisher

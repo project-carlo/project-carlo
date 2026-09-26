@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Prince of Peace @ St. Ambrose',
     203 Washington Avenue, Endicott, NY, 13760-5250
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

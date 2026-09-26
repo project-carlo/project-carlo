@@ -11,15 +11,16 @@ evidence:
   quote: The Most Rev. Douglas J. Lucia, bishop of Syracuse, issued a decree on Tuesday, June 16, ordering
     the merger. It became effective today, Wednesday, July 1, and the church of St. Mary will be the principal
     church, with parish offices at St. Bernard’s
-  note: Names all four churches with addresses. The page's datePublished is 2026-06-18 (16 June and
-    1 July fall on a Tuesday and a Wednesday in 2026, and also in 2020, which an earlier version of this
-    record wrongly read the weekdays as). The same article says "The decree does not close any of the churches".
+  note: Names all four churches with addresses. The page's datePublished is 2026-06-18 (16 June and 1
+    July fall on a Tuesday and a Wednesday in 2026, and also in 2020, which an earlier version of this
+    record wrongly read the weekdays as). The same article says "The decree does not close any of the
+    churches".
 - url: https://www.wktv.com/news/local/multiple-catholic-parishes-merge-in-mohawk-valley/article_8af8d0af-8069-41b4-96b5-cf293c2ef26a.html
   seen: 2026-09-26
   quote: The churches of Saint Bernard, Saint Joseph, and Saint Joan of Arc will remain open as auxiliary
     churches for public worship.
-  note: WKTV, published 2026-06-19 (datePublished). Reports the decree forming Holy Spirit parish
-    "effective July 1", with its principal church at Saint Mary, 16 Wylie St., Hamilton.
+  note: WKTV, published 2026-06-19 (datePublished). Reports the decree forming Holy Spirit parish "effective
+    July 1", with its principal church at Saint Mary, 16 Wylie St., Hamilton.
 - url: https://route20catholic.org
   seen: 2026-09-25
   note: '`probe url`: redirects to http://holyspiritrcparish.org/, i.e. the old shared site of the four
@@ -42,6 +43,7 @@ evidence:
     PDFs on files.ecatholic.com/39636/bulletins/, newest 'September 25, 2026' (20260925.pdf), then 20260918,
     20260911, 20260904, 20260828... Files are named by the Friday before the Sunday. `visit.py --bulletin
     https://holyspiritrcparish.org` reported ecatholic:39636.
+promoted: 2026-09-26
 ---
 
 ## Publisher

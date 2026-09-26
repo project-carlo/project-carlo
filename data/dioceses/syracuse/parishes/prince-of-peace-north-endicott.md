@@ -22,6 +22,7 @@ evidence:
     2026", "September 13, 2026" to bulletins.discovermass.com download links. The site is hosted by eCatholic
     (site id 34417) but no bulletins are on files.ecatholic.com (`issues.py ecatholic ecatholic:34417`:
     403 for the last three Sundays).'
+promoted: 2026-09-26
 ---
 
 ## Publisher

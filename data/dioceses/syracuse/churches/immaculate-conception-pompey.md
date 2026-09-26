@@ -35,6 +35,7 @@ evidence:
   quote: Sacramental records for St. Paul Mission, Fabius are retained here.
   note: The diocese's page for this church (behind Cloudflare; read with parish-site-access visit.py).
     Physical address 7386 Academy Street, Pompey, NY 13138.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

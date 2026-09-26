@@ -36,6 +36,7 @@ evidence:
   seen: 2026-09-26
   note: OSM place_of_worship "Saint Malachy's Roman Catholic Church", Sherburne 13460, tagged with Classic
     Street (the old GNIS point, on the same block as GCatholic's Plus Code).
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

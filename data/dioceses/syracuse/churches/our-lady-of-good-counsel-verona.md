@@ -32,6 +32,7 @@ evidence:
   quote: 5652 East Main Street
   note: 'Diocese''s parish page, physical address. behind Cloudflare; read in a browser (parish-site-access
     visit.py). '
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

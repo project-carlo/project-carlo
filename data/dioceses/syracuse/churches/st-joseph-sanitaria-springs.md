@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Joseph', 659 State Route
     7B, Port Crane, NY, 13833
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

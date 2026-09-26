@@ -27,6 +27,7 @@ evidence:
   quote: Holy Family Church 127 Chapel Drive Syracuse, NY 13219
   note: 'Masthead, 27 September 2026. Page 9: Saturday 4 PM, Sunday 7:30 AM, 11 AM and 4 PM "HF", and
     weekday Masses.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

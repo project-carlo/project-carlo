@@ -41,6 +41,7 @@ evidence:
   note: 'OSM: ''Saint Agatha''s Roman Catholic Church'' on Wilson Avenue; the address point 110 Wilson
     Avenue (node 8805053832) is on the same spot, and 329 North Peterboro Street (node 8805055857) is
     about 70 m away.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

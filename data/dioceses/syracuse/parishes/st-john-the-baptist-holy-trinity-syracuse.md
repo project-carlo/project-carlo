@@ -14,6 +14,7 @@ evidence:
 - url: https://www.stjohnthebaptist-holytrinity.com/bulletins/
   seen: 2026-09-26
   note: The parish's bulletins page (WordPress), one PDF per week, newest september-27.pdf.
+promoted: 2026-09-26
 ---
 
 ## Publisher

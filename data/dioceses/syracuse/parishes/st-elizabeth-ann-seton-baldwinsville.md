@@ -12,8 +12,8 @@ evidence:
   note: 'The 20 September 2026 bulletin, page 1: Most Rev Douglas J Lucia, Pastor; Reverend Benjamin Schrantz,
     Parochial Vicar; Deacon Mark Kay; the three parishes'' shared weekend and weekday schedule (St. EAS
     Saturday 5:30pm, Sunday 7:30am and 10:30am, Thursday 6:45am, Friday 9:00am); "Church Office Phone
-    – 315.652.4300"; "@SEASBville stelizabethbville.org". Page 2 is headed "ST. ELIZABETH ANN SETON
-    PARISH STAFF".'
+    – 315.652.4300"; "@SEASBville stelizabethbville.org". Page 2 is headed "ST. ELIZABETH ANN SETON PARISH
+    STAFF".'
 - url: https://stelizabethbville.org/category/bulletins/
   seen: 2026-09-26
   note: The site's Bulletins category, one WordPress post per issue (bulletin-9-20-3, bulletin-9-13-2,
@@ -22,6 +22,7 @@ evidence:
   seen: 2026-09-26
   quote: Saturday 5:30 pm & Sunday 7:30 & 10:30 am
   note: Homepage, under "Weekend Masses", with 3494 Rt. 31, Baldwinsville.
+promoted: 2026-09-26
 ---
 
 ## Publisher

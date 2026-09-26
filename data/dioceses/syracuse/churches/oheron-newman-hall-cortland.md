@@ -34,6 +34,7 @@ evidence:
   seen: 2026-09-26
   quote: SACRAMENTAL RESPONSIBILITIES, SUNY CORTLAND NEWMAN CENTER
   note: The Cortland parochial vicar's assignment on the diocese's page (read with visit.py).
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

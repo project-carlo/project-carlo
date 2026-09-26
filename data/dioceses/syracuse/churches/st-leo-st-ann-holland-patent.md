@@ -36,6 +36,7 @@ evidence:
   seen: 2026-09-26
   quote: The Parishes of St. Leo and St. Ann merged to form The Parish Community of St. Leo & St. Ann
     with one worship site. The church of St. Ann closed permanently.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

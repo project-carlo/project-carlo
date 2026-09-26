@@ -22,6 +22,7 @@ evidence:
   note: 'Diocese page (behind Cloudflare; read with visit.py): church 1263 Vestal Avenue, office 7 Livingston
     Street, website saintsjohnandandrew.org; "Sacramental Records for St. Andrew, Binghamton are retained
     here." Fr. Serowik is pastor of St. Vincent de Paul-Blessed Sacrament, Vestal and Sts. John & Andrew.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

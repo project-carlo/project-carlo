@@ -21,6 +21,7 @@ evidence:
   quote: Our Lady of Good Counsel - Verona
   note: 'Diocese''s page: physical address 5652 East Main Street, website olgcc.org, one pastor, no other
     worship site. behind Cloudflare; read in a browser (parish-site-access visit.py). '
+promoted: 2026-09-26
 ---
 
 ## Publisher

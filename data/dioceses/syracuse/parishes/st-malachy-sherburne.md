@@ -23,6 +23,7 @@ evidence:
     ST. BARTHOLOMEW, NORWICH
   note: Rev. Daniel M. Caughey's assignment on the diocese's page (read with visit.py); physical address
     31 East State Street.
+promoted: 2026-09-26
 ---
 
 ## Publisher

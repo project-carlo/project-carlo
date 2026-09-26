@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: Diocese page (visit.py) gives "470 Teall Avenue" -- a transposition of 740; the bulletin, GCatholic
     and the directory all say 740.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

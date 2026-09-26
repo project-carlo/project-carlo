@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-26
   note: St. Patrick-St. Brigid's own site posts the same linked-parishes issue (bulletin-files/20260920B.pdf
     has the same masthead), not a separate bulletin.
+promoted: 2026-09-26
 ---
 
 ## Publisher

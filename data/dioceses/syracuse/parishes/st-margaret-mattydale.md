@@ -14,12 +14,13 @@ evidence:
     Pastoral Administrator); daily Mass "8:15am (Hannon Chapel)".
 - url: https://www.stmargaretmattydale.org/bulletin
   seen: 2026-09-26
-  note: The parish's Bulletin page (read with parish-site-access visit.py) embeds the ParishesOnline
-    publication page st-margarets-parish with issues of container 03/1390 dated 6 to 27 September 2026.
+  note: The parish's Bulletin page (read with parish-site-access visit.py) embeds the ParishesOnline publication
+    page st-margarets-parish with issues of container 03/1390 dated 6 to 27 September 2026.
 - url: https://parishesonline.com/organization/st-margarets-parish
   seen: 2026-09-26
   note: '`probe po 0018000000Qc2bQAAR`: organization "St. Margaret Mary" (sic), 200 Roxboro, Mattydale,
     website stmargaretmattydale.org, container 03/1390, newest issue 2026-09-27.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

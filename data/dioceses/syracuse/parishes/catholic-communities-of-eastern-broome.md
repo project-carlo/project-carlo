@@ -22,6 +22,7 @@ evidence:
   seen: 2026-09-26
   note: 'Diocese page (read with visit.py): Rev. James P. Serowik is "CANONICAL PASTOR, ... ST. JOSEPH,
     DEPOSIT; ST. JOSEPH, SANITARIA SPRINGS; ... ST. MARY, KIRKWOOD".'
+promoted: 2026-09-26
 ---
 
 ## Publisher

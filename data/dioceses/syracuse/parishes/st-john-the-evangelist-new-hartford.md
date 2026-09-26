@@ -23,6 +23,7 @@ evidence:
   quote: The parish of Saint Thomas the Apostle is hereby canonically merged with the parish of Saint
     John the Evangelist
   note: Decree of 26 June 2025 (behind Cloudflare; read with visit.py).
+promoted: 2026-09-26
 ---
 
 ## Publisher

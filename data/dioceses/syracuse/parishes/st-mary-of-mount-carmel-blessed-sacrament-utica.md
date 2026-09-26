@@ -16,6 +16,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po st-mary-of-mount-carmel-church`: LPi id 0018000000Qc2bwAAB, container 06/0182, weekly
     issues through 2026-09-27. The parish homepage embeds this org.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

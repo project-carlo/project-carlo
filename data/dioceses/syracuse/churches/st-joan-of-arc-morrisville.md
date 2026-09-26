@@ -21,7 +21,8 @@ evidence:
 - url: https://www.romesentinel.com/news/route-20-catholic-churches-holy-spirit-parish-merger/article_66a992b3-2d7e-4d30-b659-9116c53bb9c1.html
   seen: 2026-09-25
   quote: St. Joan of Arc Mission, 6 Brookside Drive in Morrisville
-  note: The Rome Sentinel's report (18 June 2026) of the merger decree, effective 1 July 2026, naming the four churches of Holy Spirit Parish.
+  note: The Rome Sentinel's report (18 June 2026) of the merger decree, effective 1 July 2026, naming
+    the four churches of Holy Spirit Parish.
 - url: https://www.openstreetmap.org/node/8805040090
   seen: 2026-09-25
   note: 'OSM: an address point for 6 Brookside Drive, 13408.'
@@ -35,6 +36,7 @@ evidence:
   quote: 6 Bookside Drive
   note: behind Cloudflare; read in a browser (parish-site-access visit.py). The diocese's parish page
     for Holy Spirit, listing its four churches with physical addresses.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

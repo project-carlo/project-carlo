@@ -32,6 +32,7 @@ evidence:
   quote: 4:00PM Saturday Vigil Mass 8:15AM Sunday Mass 10:30AM Sunday Mass 5:00PM Sunday Mass
   note: Page 1 of the 20 September 2026 issue; since 19 July 2026 every Mass is at Lourdes (the 19 July
     issue says "at Lourdes" on each line).
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

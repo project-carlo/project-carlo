@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   quote: BLESSED SACRAMENT CHURCH 3127 James Street Syracuse, New York 13206
   note: Followed by "MASS TIMES ... Saturday 5:15 PM Sunday 7:30AM and 9:15AM".
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

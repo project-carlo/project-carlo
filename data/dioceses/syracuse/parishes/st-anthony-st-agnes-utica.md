@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po st-anthony-st-agnes-church`: LPi id 0018000000Qx7RSAAZ, website stanthonystagnes.com,
     no issues. An old account; recorded so no other row claims it.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

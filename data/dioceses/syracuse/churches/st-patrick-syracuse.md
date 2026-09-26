@@ -30,6 +30,7 @@ evidence:
 - url: https://parishesonline.com/organization/st-patrick-st-brigid-church
   seen: 2026-09-26
   note: '`probe po`: St Patrick & St. Brigid Church, 216 N. Lowell Avenue, Syracuse, 13204-2096.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

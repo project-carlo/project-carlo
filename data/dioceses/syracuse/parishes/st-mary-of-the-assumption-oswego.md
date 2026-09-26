@@ -10,9 +10,9 @@ evidence:
   seen: 2026-09-26
   note: 'The 20 September 2026 issue, 4 pages. Its text is drawn as outlines (no text layer), so it was
     read rendered in Chrome. Page-1 masthead: "Saint Mary of the Assumption Parish & Shrine", "Institute
-    of Christ the King Sovereign Priest", "Address: 103 West 7th Street, Oswego, NY 13126", "Website: www.stmarysoswego.com";
-    Mass Times: "Sunday: 9:00 a.m. Low Mass, 11:00 a.m. High Mass", weekdays except Thursday 7:30 a.m.,
-    Thursday 12:10 p.m., First Fridays an additional 6:00 p.m. No other church appears.'
+    of Christ the King Sovereign Priest", "Address: 103 West 7th Street, Oswego, NY 13126", "Website:
+    www.stmarysoswego.com"; Mass Times: "Sunday: 9:00 a.m. Low Mass, 11:00 a.m. High Mass", weekdays except
+    Thursday 7:30 a.m., Thursday 12:10 p.m., First Fridays an additional 6:00 p.m. No other church appears.'
 - url: https://stmarysoswego.com/
   seen: 2026-09-26
   quote: 103 W. 7th St. Oswego NY 13126
@@ -28,6 +28,7 @@ evidence:
   quote: opened its newest apostolate, St. Mary of the Assumption Shrine in Oswego, New York
   note: The Institute's announcement of its first Solemn High Mass there on Sunday, 15 June (2025, per
     Discover Mass).
+promoted: 2026-09-26
 ---
 
 ## Publisher

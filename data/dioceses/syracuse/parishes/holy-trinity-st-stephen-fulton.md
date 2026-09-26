@@ -10,10 +10,10 @@ evidence:
   seen: 2026-09-26
   quote: Holy Trinity & St. Stephen Parishes September 20, 2026
   note: 'The running head of page 3 of the 20 September 2026 issue. Page 1 says "Holy Trinity Parish and
-    St. Stephen Parish come together as one community in Christ" (letter-spaced in the text layer). Page 2 is headed
-    "Holy Trinity & St. Stephen Parishes" and lists Masses marked (HT) and (SS): Sat 4:00 pm (HT), Sun
-    8:30 am (HT), 10:30 am (SS), weekdays alternating. Page 3 gives both offices: 309 Buffalo Street (Holy
-    Trinity) and the St. Stephen office. LPi footer: "Holy Trinity, Fulton, NY 06-0241".'
+    St. Stephen Parish come together as one community in Christ" (letter-spaced in the text layer). Page
+    2 is headed "Holy Trinity & St. Stephen Parishes" and lists Masses marked (HT) and (SS): Sat 4:00
+    pm (HT), Sun 8:30 am (HT), 10:30 am (SS), weekdays alternating. Page 3 gives both offices: 309 Buffalo
+    Street (Holy Trinity) and the St. Stephen office. LPi footer: "Holy Trinity, Fulton, NY 06-0241".'
 - url: https://container.parishesonline.com/bulletins/06/0241/20260927B.pdf
   seen: 2026-09-26
   quote: www.holytrinity-ststephen.org
@@ -29,8 +29,9 @@ evidence:
     10:30 a.m. at St. Stephen", weekdays at both.'
 - url: https://www.holytrinityfulton.org/bulletins
   seen: 2026-09-26
-  note: 'The older domain, still serving the same LPi site; its Bulletins page embeds the ParishesOnline
-    widget for this organization (visit.py found lpi:0018000000Qbz9mAAB and po-container:06/0241 there).'
+  note: The older domain, still serving the same LPi site; its Bulletins page embeds the ParishesOnline
+    widget for this organization (visit.py found lpi:0018000000Qbz9mAAB and po-container:06/0241 there).
+promoted: 2026-09-26
 ---
 
 ## Publisher

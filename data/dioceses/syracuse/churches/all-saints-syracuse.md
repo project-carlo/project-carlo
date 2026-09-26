@@ -37,6 +37,7 @@ evidence:
     are retained here.
   note: 'Diocese page (Cloudflare; read with visit.py): "Physical Address 1340 Lancaster Avenue ... Mailing
     Address 1342 Lancaster Avenue".'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

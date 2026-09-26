@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   quote: 4 p.m. at St. Mary of the Lake, 6735 Route 13, Verona Beach.
   note: 'Rome Sentinel, 31 December 2024: the parish''s Mass list then, with the same address.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

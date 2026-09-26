@@ -20,8 +20,8 @@ evidence:
     409 S Main St., North Syracuse, NY, 13212; kind: Church'
 - url: https://www.syracusediocese.org/parishfinder
   seen: 2026-09-26
-  note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Rose of Lima', 409 South Main
-    Street, North Syracuse, NY, 13212-2899
+  note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Rose of Lima', 409 South
+    Main Street, North Syracuse, NY, 13212-2899
 - url: https://strosecny.org/newpageeaf31b5d
   seen: 2026-09-26
   quote: 'Sunday: 8:00am & 10:30am'
@@ -32,8 +32,9 @@ evidence:
     ... 407 SOUTH MAIN STREET | NORTH SYRACUSE, NEW YORK 13212".'
 - url: https://www.openstreetmap.org/way/754139576
   seen: 2026-09-26
-  note: 'OSM place_of_worship "Saint Rose of Lima", 409 South Main Street, 13212; about 150 m east of the
-    GCatholic Plus Code, which falls on the parish grounds.'
+  note: OSM place_of_worship "Saint Rose of Lima", 409 South Main Street, 13212; about 150 m east of the
+    GCatholic Plus Code, which falls on the parish grounds.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

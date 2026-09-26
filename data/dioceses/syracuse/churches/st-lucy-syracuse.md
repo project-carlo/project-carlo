@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   quote: MASS SCHEDULE Saturday - 5:00 Sunday - 10:00
   note: 19-20 September 2026 issue, page 1, with "432 Gifford Street, Syracuse, NY 13204".
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

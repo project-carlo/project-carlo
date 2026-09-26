@@ -10,9 +10,9 @@ evidence:
   seen: 2026-09-26
   quote: 'Saturday: 4:30pm'
   note: 'Page 1 of the 27 September 2026 bulletin: "St. Joseph’s Church 5600 West Genesee Street Camillus,
-    NY 13031", Rev. Robert Hyde pastor, "Eucharistic Liturgies are celebrated on Monday, Wednesday and Friday:
-    9:00am Saturday: 4:30pm Sunday: 8:00am & 10:45am". Page 2 notes Thursday "No Liturgy (Mass at St. Patrick’s
-    in Jordan)".'
+    NY 13031", Rev. Robert Hyde pastor, "Eucharistic Liturgies are celebrated on Monday, Wednesday and
+    Friday: 9:00am Saturday: 4:30pm Sunday: 8:00am & 10:45am". Page 2 notes Thursday "No Liturgy (Mass
+    at St. Patrick’s in Jordan)".'
 - url: https://stjosephscamillus.org/bulletins/
   seen: 2026-09-26
   quote: This Week's Bulletin
@@ -24,9 +24,11 @@ evidence:
     from 2024-09-29 through 2026-09-27.
 - url: https://www.syracusediocese.org/st-joseph-camillus
   seen: 2026-09-26
-  quote: Sacramental Records for Our Lady of Good Counsel, Warners; and St. John, Camillus are retained here.
+  quote: Sacramental Records for Our Lady of Good Counsel, Warners; and St. John, Camillus are retained
+    here.
   note: 'The diocese''s page (behind Cloudflare; read with visit.py). Clergy: "Hyde, Rev. Robert P., Jr.,
     J.C.L. PASTOR, ST. JOSEPH, CAMILLUS; ST. PATRICK, JORDAN".'
+promoted: 2026-09-26
 ---
 
 ## Publisher

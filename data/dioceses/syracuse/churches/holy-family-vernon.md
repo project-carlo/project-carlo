@@ -35,6 +35,7 @@ evidence:
   seen: 2026-09-26
   note: 'OSM: ''Holy Family Church'', 4352 Peterboro Street, Village of Vernon, 13476, about 15 m from
     GCatholic''s Plus Code.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   quote: 469 Main Street, Phoenix, NY 13135
   note: The St. Stephen office address on the parishes' contact page.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

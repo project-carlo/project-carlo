@@ -39,6 +39,7 @@ evidence:
   seen: 2026-09-26
   note: 'OSM: "Saint Paul''s Roman Catholic Church", 140 East 5th Street, Oswego; centre 43.455625, -76.502296,
     a few metres from GCatholic''s Plus Code.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

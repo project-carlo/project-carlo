@@ -33,6 +33,7 @@ evidence:
   seen: 2026-09-26
   note: 'OSM: "Saint Mary''s Roman Catholic Church", 74 West 6th Street, Oswego; centre 43.45633, -76.517817.
     The church fills the block between West 6th and West 7th streets.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

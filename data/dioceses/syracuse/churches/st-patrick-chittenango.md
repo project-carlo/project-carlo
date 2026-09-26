@@ -30,8 +30,9 @@ evidence:
     (container 03/0872, page 1, image) gives the same schedule and "1341 Murray Drive".'
 - url: https://www.openstreetmap.org/way/913722509
   seen: 2026-09-26
-  note: 'OSM place_of_worship "St. Patrick''s Church", 1341 Murray Drive, 13037, about 25 m from the GCatholic
-    Plus Code.'
+  note: OSM place_of_worship "St. Patrick's Church", 1341 Murray Drive, 13037, about 25 m from the GCatholic
+    Plus Code.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

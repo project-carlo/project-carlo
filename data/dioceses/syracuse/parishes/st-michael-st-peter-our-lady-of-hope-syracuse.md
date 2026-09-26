@@ -22,6 +22,7 @@ evidence:
   seen: 2026-09-26
   note: The bulletins page on St. Michael-St. Peter's Squarespace site lists the weekly PDFs (and inserts).
     ourladyofhopesyr.org has no bulletin link or PDF (visit.py --bulletin, 2026-09-26).
+promoted: 2026-09-26
 ---
 
 ## Publisher

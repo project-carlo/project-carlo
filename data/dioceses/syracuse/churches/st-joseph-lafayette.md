@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Church of the Nativity @ St.
     Joseph', 6104 US Route 20, LaFayette, NY, 13084-0169
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

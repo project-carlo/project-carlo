@@ -22,6 +22,7 @@ evidence:
   note: The website the directory and GCatholic give answers HTTP 520 to `probe url`, and in a browser
     (visit.py) lands on a cPanel "Default Web Site Page". Its Discover Mass listing (most-holy-rosary-maine-ny)
     has no issues.
+promoted: 2026-09-26
 ---
 
 ## Publisher

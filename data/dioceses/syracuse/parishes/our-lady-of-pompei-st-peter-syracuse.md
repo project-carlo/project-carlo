@@ -20,6 +20,7 @@ evidence:
   seen: 2026-09-26
   note: 'The Publications page (GoDaddy site) links weekly PDFs: "Bulletin September 13, 2026", "September
     6", "August 30". Fetched with curl; the host answered 502 through the proxy on about half the tries.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

@@ -16,6 +16,7 @@ evidence:
   seen: 2026-09-26
   note: The homepage links the current bulletin PDF directly (href wp-content/uploads/St.Anthonys-Bulletin-September-20-2026.pdf
     on 2026-09-26; visit.py --bulletin found it there; no separate bulletin page).
+promoted: 2026-09-26
 ---
 
 ## Publisher

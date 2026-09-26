@@ -12,8 +12,8 @@ evidence:
   note: 'The 27 September 2026 issue. Pages 1-6 are images, so this quote is from the LPi footer on the
     text pages 7-8. Read as rendered images: page 1 is headed "St. Augustine’s Church / September 27,
     2026", pastor Most Reverend Douglas J. Lucia, "7333 O’Brien Road, Baldwinsville, New York 13027";
-    page 2''s "Mass Times" box gives St. Augustine''s Sunday 10:30am and Wednesday 10:00am, and St.
-    Mary''s and St. Elizabeth Ann Seton''s times.'
+    page 2''s "Mass Times" box gives St. Augustine''s Sunday 10:30am and Wednesday 10:00am, and St. Mary''s
+    and St. Elizabeth Ann Seton''s times.'
 - url: https://www.staugustinesparish.org/resources
   seen: 2026-09-26
   quote: View This Week's Bulletin
@@ -22,6 +22,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po st-augustines-parish`: "St. Augustine''s Parish", 7333 Obrien Rd, LPi id 0018000000Qx7QfAAJ,
     container 04/0667, weekly issues through 2026-09-27.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

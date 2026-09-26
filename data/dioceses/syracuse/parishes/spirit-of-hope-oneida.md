@@ -43,6 +43,7 @@ evidence:
   note: 'The Catholic Sun, 7 June 2023: the bishop''s decree merging St. Agatha, St. Helena, Holy Family,
     St. John, St. Joseph, St. Mary (Irish Ridge), St. Mary of the Lake and St. Patrick. behind Cloudflare;
     read in a browser (parish-site-access visit.py). '
+promoted: 2026-09-26
 ---
 
 ## Publisher

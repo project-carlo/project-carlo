@@ -21,6 +21,7 @@ evidence:
     container 06/0167, weekly issues through 2026-09-27, website stasp.tilmaplatform.com. `probe url http://www.sta-sp.org`
     redirects to stasp.tilmaplatform.com ("St. Patrick''s and St. Thomas Aquinas – Binghamton"), which
     embeds this organization.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

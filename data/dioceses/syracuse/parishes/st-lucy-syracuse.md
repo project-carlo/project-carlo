@@ -21,6 +21,7 @@ evidence:
 revisit: After 1 January 2027 (Fr. Daley of All Saints becomes administrator), check whether St. Lucy's
   still publishes its own bulletin.
 revisit_after: 2027-02-01
+promoted: 2026-09-26
 ---
 
 ## Publisher

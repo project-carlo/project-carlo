@@ -10,13 +10,13 @@ evidence:
   seen: 2026-09-26
   note: 'The 27 September 2026 issue (no text layer; read rendered). Page-1 masthead "St. John the Evangelist
     & St. Mary''s Oratory, Pastor: Rev. John F. Hogan, Jr.", schedule "Saturday Vigil 4:00 p.m., Sunday
-    Morning 9:00 a.m., Wednesday, Thursday & Friday @9:00 a.m.", and "St. John the Evangelist Parish & St.
-    Mary Mount Carmel Oratory, 35 Third Street, Camden, N.Y. 13316".'
+    Morning 9:00 a.m., Wednesday, Thursday & Friday @9:00 a.m.", and "St. John the Evangelist Parish &
+    St. Mary Mount Carmel Oratory, 35 Third Street, Camden, N.Y. 13316".'
 - url: https://www.church-bulletin.org/bulletin/saint-john-the-evangelist-saint-mary-s-oratory-camden-ny-13316/2026-08-23.pdf
   seen: 2026-09-26
   quote: Mary Mount Carmel Oratory
-  note: The 23 August 2026 issue, which has a text layer; same masthead and schedule ("Saturday Vigil 4:00
-    p.m.", "Sunday Morning 9:00 a.m.").
+  note: The 23 August 2026 issue, which has a text layer; same masthead and schedule ("Saturday Vigil
+    4:00 p.m.", "Sunday Morning 9:00 a.m.").
 - url: https://www.church-bulletin.org/saint-john-the-evangelist-saint-mary-s-oratory-camden-ny-13316
   seen: 2026-09-26
   quote: Saint John the Evangelist & Saint Mary's Oratory
@@ -25,14 +25,15 @@ evidence:
 - url: https://stjohncamden.com/
   seen: 2026-09-26
   quote: 'Saturday Vigil Mass: 4:00 p.m.'
-  note: 'The parish site (hosted by John Patrick Publishing). Mass Schedule: Saturday Vigil 4:00 p.m., Sunday
-    9:00 a.m., daily Wed-Fri 9:00 a.m., at "St. John the Evangelist Church, 35 Third Street, Camden, NY
-    13316". probe url timed out on it; it loads in a browser and with curl.'
+  note: 'The parish site (hosted by John Patrick Publishing). Mass Schedule: Saturday Vigil 4:00 p.m.,
+    Sunday 9:00 a.m., daily Wed-Fri 9:00 a.m., at "St. John the Evangelist Church, 35 Third Street, Camden,
+    NY 13316". probe url timed out on it; it loads in a browser and with curl.'
 - url: https://stjohncamden.com/?page_id=61
   seen: 2026-09-26
   quote: Sale of St. Patrick’s church  property to Ranch of Hope church
   note: 'The parish timeline: St. Mary, Florence "will now serve as a devotional chapel" from 1 July 2003;
     "October 2016 Sale of St. Patrick''s church property to Ranch of Hope church" (Williamstown).'
+promoted: 2026-09-26
 ---
 
 ## Publisher

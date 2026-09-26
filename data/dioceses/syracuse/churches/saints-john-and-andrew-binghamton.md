@@ -35,6 +35,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Parish of Saints John and Andrew',
     1263 Vestal Avenue, Binghamton, NY, 13903
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

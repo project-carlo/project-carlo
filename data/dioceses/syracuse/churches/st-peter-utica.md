@@ -34,6 +34,7 @@ evidence:
 revisit: Check the Holy Cross bulletin (container 06/0233) for Masses "(St. Peter's)"; if none for two
   months, or a closing is announced, move this row to excluded/ with the last Mass date.
 revisit_after: 2027-01-01
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

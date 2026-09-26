@@ -21,6 +21,7 @@ evidence:
   quote: 'Saturday: 4:00pm'
   note: 'The parish''s "Mass Times, Confession & Adoration" page: Tuesday-Friday 9:00am, Saturday 4:00pm,
     Sunday 8:00am & 10:30am, all in the one church.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

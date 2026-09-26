@@ -34,6 +34,7 @@ evidence:
 - url: https://www.openstreetmap.org/way/1135578378
   seen: 2026-09-26
   note: 'OSM: "Saint John''s Roman Catholic Church", 18 Church Street, Camden; centre 43.336319, -75.745564.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

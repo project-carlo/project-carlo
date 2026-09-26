@@ -26,6 +26,7 @@ evidence:
     31 May 2026 (visit.py --bulletin).
 revisit: Check holycrossdewitt.org/bulletins has issues after 6 September 2026.
 revisit_after: 2026-10-20
+promoted: 2026-09-26
 ---
 
 ## Publisher

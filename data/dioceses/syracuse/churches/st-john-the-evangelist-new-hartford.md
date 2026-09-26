@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: 27 September 2026 issue (scanned images). Page 1 lists schedule changes ("no 6:45 a.m. Mass on
     Wednesday, September 30"); the page-3 concert flyer gives "66 Oxford Road, New Hartford, NY".
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

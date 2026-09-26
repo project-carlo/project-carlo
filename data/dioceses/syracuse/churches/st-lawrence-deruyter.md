@@ -32,15 +32,16 @@ evidence:
 - url: http://www.saintanthonyofcortland.com/bulletins/bulletin.pdf
   seen: 2026-09-26
   quote: 5:15 PM VigilM assa tS t. Lawrence’s
-  note: 'The Cortland/Homer bulletin, 20 September 2026 issue (this file is overwritten weekly), page 5,
-    quoted as its text layer extracts it: "The New Weekend Mass Schedule Is: Saturday 4 PM Vigil Mass
+  note: 'The Cortland/Homer bulletin, 20 September 2026 issue (this file is overwritten weekly), page
+    5, quoted as its text layer extracts it: "The New Weekend Mass Schedule Is: Saturday 4 PM Vigil Mass
     at St. Mary''s, 5:15 PM Vigil Mass at St. Lawrence''s; Sunday 8 AM ... 4 PM Mass at The Newman Center
     ... The new schedule takes effect this weekend, September 12th/13th." The same bulletin is on Discover
     Mass (st-mary-cortland-ny).'
 - url: https://www.openstreetmap.org/node/8805032682
   seen: 2026-09-26
-  note: 'OSM place_of_worship "St. Lawrence Church", 1672 Cortland Street, DeRuyter, 13052. Within 10 m
-    of the diocese''s map pin; GCatholic''s Plus Code (42.75619, -75.89056) is about 470 m west of it.'
+  note: OSM place_of_worship "St. Lawrence Church", 1672 Cortland Street, DeRuyter, 13052. Within 10 m
+    of the diocese's map pin; GCatholic's Plus Code (42.75619, -75.89056) is about 470 m west of it.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -25,15 +25,16 @@ evidence:
 - url: https://www.syracusediocese.org/news/decree-union-of-endicott-parishes
   seen: 2026-09-26
   quote: This merger will become effective on 1 July 2026.
-  note: 'Decree dated 4 June 2026, published 16 June 2026 (behind Cloudflare; read with visit.py). "The
+  note: Decree dated 4 June 2026, published 16 June 2026 (behind Cloudflare; read with visit.py). "The
     parishes of Saint Ambrose, Saint Anthony, Saint Joseph, and Our Lady of Good Counsel, Endicott, New
     York are united via an extinctive union-merger to form the new parish of Prince of Peace"; principal
     church St. Joseph, 207 Hayes Avenue; auxiliary churches St. Ambrose, St. Anthony, Our Lady of Good
     Counsel; registers kept at St. Anthony, 300 Odell Avenue. Before this, OLGC was linked with Our Lady
-    of Sorrows, Vestal (2022), and the other three with each other (2022).'
+    of Sorrows, Vestal (2022), and the other three with each other (2022).
 revisit: Check whether the Prince of Peace bulletins (container 06/0139 and the North Endicott Discover
   Mass listing) have been combined into one; merge the rows if so.
 revisit_after: 2027-03-01
+promoted: 2026-09-26
 ---
 
 ## Publisher

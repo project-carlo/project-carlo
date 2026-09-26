@@ -18,6 +18,7 @@ evidence:
 revisit: Read the OLS masthead (container 06/0089) and the Prince of Peace bulletins again to see whether
   the Vestal-Endicott planning has merged them into one bulletin.
 revisit_after: 2027-03-01
+promoted: 2026-09-26
 ---
 
 ## Publisher

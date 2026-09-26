@@ -26,6 +26,7 @@ evidence:
   quote: Sacramental Records for St. Patrick, Norwich are retained here.
   note: 'The diocese''s page (read with visit.py): 30 Pleasant Street; pastor Rev. Daniel M. Caughey,
     also pastor of St. Theresa (New Berlin), St. Malachy (Sherburne) and St. Bartholomew (Norwich).'
+promoted: 2026-09-26
 ---
 
 ## Publisher

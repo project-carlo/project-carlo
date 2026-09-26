@@ -29,6 +29,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Our Lady of Lourdes', 594 Kent
     Street, Windsor, NY, 13865
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

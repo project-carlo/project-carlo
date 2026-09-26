@@ -17,12 +17,12 @@ evidence:
   seen: 2026-09-26
   quote: Saturday Evening Vigil ...............4:30 pm
   note: 'Page 1 of the 27 September 2026 bulletin, "SAINT FRANCIS XAVIER CHURCH MARCELLUS, NEW YORK 13108":
-    Sunday 8:30 am and 10:45 am, daily Monday, Thursday, Friday 6:45 am and Tuesday 6:00pm; "1 West Main St.
-    PO Box 177".'
+    Sunday 8:30 am and 10:45 am, daily Monday, Thursday, Friday 6:45 am and Tuesday 6:00pm; "1 West Main
+    St. PO Box 177".'
 - url: https://www.openstreetmap.org/way/584323849
   seen: 2026-09-26
-  note: 'OSM place_of_worship "Saint Francis Xavier''s Roman Catholic Church", 1 West Main Street, 13108
-    (Nominatim reverse lookup of the GCatholic Plus Code).'
+  note: OSM place_of_worship "Saint Francis Xavier's Roman Catholic Church", 1 West Main Street, 13108
+    (Nominatim reverse lookup of the GCatholic Plus Code).
 - url: https://gcatholic.org/churches/usa-02/17997
   seen: 2026-09-25
   quote: 1 W Main St., Marcellus, New York 13108-0177
@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Francis Xavier Church', 1
     West Main Street, Marcellus, NY, 13108-0177
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

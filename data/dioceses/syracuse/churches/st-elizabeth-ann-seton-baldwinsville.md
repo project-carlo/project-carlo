@@ -21,13 +21,13 @@ evidence:
 - url: https://stelizabethbville.org/
   seen: 2026-09-26
   quote: Baldwinsville, NY 13027
-  note: 'Homepage footer: "St. Elizabeth Ann Seton 3494 Rt. 31 Baldwinsville, NY 13027 315-652-4300", with
-    Weekend Masses "Saturday 5:30 pm & Sunday 7:30 & 10:30 am". Its copyright line reads "St. Elizabeth
+  note: 'Homepage footer: "St. Elizabeth Ann Seton 3494 Rt. 31 Baldwinsville, NY 13027 315-652-4300",
+    with Weekend Masses "Saturday 5:30 pm & Sunday 7:30 & 10:30 am". Its copyright line reads "St. Elizabeth
     Ann Seton Church".'
 - url: https://www.openstreetmap.org/node/8787513699
   seen: 2026-09-26
-  note: 'OSM address point 3494 Belgium Road (the local name of NY-31 here), 13027, Town of Clay (Nominatim
-    reverse lookup of the GCatholic Plus Code).'
+  note: OSM address point 3494 Belgium Road (the local name of NY-31 here), 13027, Town of Clay (Nominatim
+    reverse lookup of the GCatholic Plus Code).
 - url: https://gcatholic.org/churches/usa-02/17993
   seen: 2026-09-25
   quote: 3494 State Route 31, Baldwinsville, New York 13027-9273
@@ -37,6 +37,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Elizabeth Ann Seton', 3494
     State Route 31, Baldwinsville, NY, 13027-9231
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

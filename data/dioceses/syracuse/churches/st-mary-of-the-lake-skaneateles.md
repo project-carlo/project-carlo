@@ -16,8 +16,8 @@ evidence:
 - url: https://www.stmarysskaneateles.com/mass-schedule
   seen: 2026-09-26
   quote: Saturday Vigil 4:30pm Sunday 8:00am & 10:15am
-  note: 'The parish''s Mass Schedule page: also Monday communion service at noon, Tuesday - Friday daily Mass
-    at 8:15am; footer "st. mary''s of the lake 10 West Austin Street, Skaneateles, NY".'
+  note: 'The parish''s Mass Schedule page: also Monday communion service at noon, Tuesday - Friday daily
+    Mass at 8:15am; footer "st. mary''s of the lake 10 West Austin Street, Skaneateles, NY".'
 - url: https://container.parishesonline.com/bulletins/06/0119/20260927B.pdf
   seen: 2026-09-26
   note: 'The 27 September 2026 bulletin, page 1, read as a rendered image (no text layer): "Weekend Masses:
@@ -40,6 +40,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as "St. Mary's of the Lake", 10 West
     Austin Street, Skaneateles, NY, 13152
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

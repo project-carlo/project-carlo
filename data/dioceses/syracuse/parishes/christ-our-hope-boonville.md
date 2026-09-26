@@ -24,6 +24,7 @@ evidence:
   quote: (St. Mary of the Snows is open Memorial Day - Columbus Day)
   note: 'Homepage Weekend Mass Schedule: Saturday 4 PM St. Joseph; Sunday 8 AM St. Patrick, 9:30 AM St.
     Joseph, 11:15 AM St Mary of the Snows.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

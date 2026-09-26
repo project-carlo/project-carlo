@@ -32,6 +32,7 @@ evidence:
   quote: (St. Mary of the Snows is open Memorial Day - Columbus Day)
   note: 'Homepage: Sunday 11:15 AM at St Mary of the Snows; footer address ''State Route 28, Otter Lake,
     NY 13338''.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

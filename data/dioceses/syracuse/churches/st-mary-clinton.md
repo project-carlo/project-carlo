@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: 'Page 1 (an image) of the 27 September 2026 issue: "St. Mary''s Parish, 13 Marvin Street, Clinton,
     New York 13323", "Weekend Mass Saturday Vigil 5:30pm Sunday 9:00am".'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -2,16 +2,18 @@
 name: Roman Catholic Diocese of Syracuse
 state: NY
 website: https://www.syracusediocese.org
-status: exploring
+status: promoted
 gcatholic: syra0
 city_aliases:
   Port Crane: Sanitaria Springs
+promoted: 2026-09-26
 ---
 
 Seven counties of central New York: Onondaga (Syracuse), Oneida (Utica, Rome), Madison,
 Oswego, Cortland, Chenango and Broome (Binghamton). Explored in full on 2026-09-26, region
 by region; every entry of the diocese's own parish-finder map and of GCatholic's list is a
-church, an exclusion or an open question. See the *Log* for the numbers.
+church, an exclusion or an open question. Promoted into `data/parishes.csv` and
+`data/churches.csv` on 2026-09-26; see the *Log* for the numbers.
 
 ## Sources
 
@@ -116,3 +118,16 @@ Weebly, Designrr flipbooks). Things worth knowing:
   with Mass not confirmed. Excluded the Syracuse University Catholic Center as `no-bulletin`
   (public Mass, nothing published) rather than as "not a parish". Coverage: 5 of 151
   GCatholic entries accounted for.
+- 2026-09-26: Explored the whole diocese. Imported the diocese's parish-finder map as
+  `rosters/directory.json` (202 entries), split both rosters into eight regions by town, and
+  researched them in parallel (one agent per region, then a cross-region pass). Result: 73
+  parish rows (36 ParishesOnline, 23 self-hosted or other, 8 Discover Mass, 6 eCatholic), 122
+  churches, 85 exclusions (66 closed, 9 no-bulletin, 8 other-jurisdiction, 1 not-catholic,
+  1 other: the Truxton oratory, open for prayer without Mass) and 1 open question
+  (Transfiguration Monastery, Windsor). Coverage: directory 202/202, GCatholic 151/151; three
+  churches are in no roster (Colgate Memorial Chapel, Hall Newman Center in Oswego, O'Heron
+  Newman Hall in Cortland). `audit`: 14 shared-pastor groups, each with separate bulletins
+  recorded. `recheck`: every quote found except on pages behind Cloudflare
+  (syracusediocese.org and six parish sites, each noted as read in a browser) and one
+  Designrr flipbook. Corrected Holy Spirit's merger from 2020 to 1 July 2026 (the articles
+  are dated June 2026; the weekdays fit both years). Promoted.

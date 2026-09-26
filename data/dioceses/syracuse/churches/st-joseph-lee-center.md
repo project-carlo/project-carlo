@@ -27,6 +27,7 @@ evidence:
   quote: 6:00 pm St. Joseph’s Church
   note: '27 September 2026 issue: page-1 masthead ''St. Joseph’s Church, 5748 Stokes Lee Center Road,
     Lee Center, New York 13363''; page-3 schedule Saturday 6:00 pm.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

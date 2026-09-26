@@ -24,18 +24,19 @@ evidence:
     W Yates St., East Syracuse, NY, 13057; kind: Church'
 - url: https://www.openstreetmap.org/way/344571652
   seen: 2026-09-26
-  note: 'OSM place_of_worship "Saint Mathews Roman Catholic Church", denomination catholic, addr 229 West
-    Yates Street, 13057; its centre is within about 20 m of the GCatholic Plus Code.'
+  note: OSM place_of_worship "Saint Mathews Roman Catholic Church", denomination catholic, addr 229 West
+    Yates Street, 13057; its centre is within about 20 m of the GCatholic Plus Code.
 - url: https://container.parishesonline.com/bulletins/06/0321/20260920B.pdf
   seen: 2026-09-26
   quote: Saturday September 26 @ St Matthew’s … Sunday, September 27 @ St. Matthew’s
-  note: One Catholic Family bulletin, 20 September 2026, page 5 (4:30 pm Saturday, 8 am Sunday). The
-    masthead gives "Parish Office 229 W Yates Street E Syracuse".
+  note: One Catholic Family bulletin, 20 September 2026, page 5 (4:30 pm Saturday, 8 am Sunday). The masthead
+    gives "Parish Office 229 W Yates Street E Syracuse".
 - url: https://www.syracusediocese.org/st-matthew-east-syracuse
   seen: 2026-09-26
   quote: 100 Kinne Street
   note: 'The diocese''s page (behind Cloudflare; read in a browser): Address "100 Kinne Street, East Syracuse,
     NY 13057", then "Office & Mailing Address 229 West Yates Street".'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

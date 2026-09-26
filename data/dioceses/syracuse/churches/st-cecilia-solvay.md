@@ -27,6 +27,7 @@ evidence:
   quote: St. Cecilia’s Church 1001 Woods Road Solvay, NY 13209
   note: 'Masthead, 27 September 2026. Page 9: "9:30 AM Walter Nendza/Shirley SC" on Sunday 4 October and
     "8 AM Pope Leo XIV SC" on Friday.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

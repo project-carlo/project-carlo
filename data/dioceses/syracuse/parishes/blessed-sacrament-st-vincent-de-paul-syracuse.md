@@ -24,6 +24,7 @@ evidence:
   note: '`probe po`: LPi 0018000000Qbz8uAAB, 3127 James St, container 03/1361. The separate organization
     st-vincent-de-paul-church-13203 (LPi 0018000000Qx7R2AAJ, 342 Vine St) publishes into the same container
     03/1361.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

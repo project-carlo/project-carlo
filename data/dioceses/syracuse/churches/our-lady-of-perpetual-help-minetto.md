@@ -26,13 +26,14 @@ evidence:
   seen: 2026-09-26
   quote: 'Saturday: 4:00 pm - Our Lady of Perpetual Help'
   note: 'Page 1 of the 27 September 2026 bulletin. The masthead gives the church''s address as 2913 State
-    Route 48, Minetto (the text layer doubles final letters: "29133 Statee Routee 488  Minetto"), and the
-    schedule has Saturday 4:00 pm and Sunday 9:00 am here.'
+    Route 48, Minetto (the text layer doubles final letters: "29133 Statee Routee 488  Minetto"), and
+    the schedule has Saturday 4:00 pm and Sunday 9:00 am here.'
 - url: https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=43.4074375&lon=-76.4773125&zoom=18
   seen: 2026-09-26
   quote: 2913, State Route 48
   note: OSM reverse geocode of GCatholic's Plus Code for this church lands on the address point 2913 State
     Route 48, independent of the parish.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

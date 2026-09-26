@@ -29,8 +29,9 @@ evidence:
     bulletin cover (container 06/0111, image) gives the same.
 - url: https://www.openstreetmap.org/way/215497559
   seen: 2026-09-26
-  note: 'OSM place_of_worship "Saint Annes Roman Catholic Church", 104 Academy Street, 13104, within about
-    30 m of the GCatholic Plus Code.'
+  note: OSM place_of_worship "Saint Annes Roman Catholic Church", 104 Academy Street, 13104, within about
+    30 m of the GCatholic Plus Code.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

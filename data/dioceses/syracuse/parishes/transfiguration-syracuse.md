@@ -15,6 +15,7 @@ evidence:
   seen: 2026-09-26
   note: The parish's eCatholic site (behind Cloudflare; read with visit.py). It embeds ecatholic:29735
     and links /bulletins.
+promoted: 2026-09-26
 ---
 
 ## Publisher

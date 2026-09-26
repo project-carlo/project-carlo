@@ -21,6 +21,7 @@ evidence:
   seen: 2026-09-26
   quote: SUNDAY WORSHIP Saturday Vigil– 4:00 p.m. Sunday– 9:00 a.m. 11:00 a.m. (Bi-Lingual)
   note: 27 September 2026 issue, under the masthead "927 Park Avenue, Syracuse, NY 13204".
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

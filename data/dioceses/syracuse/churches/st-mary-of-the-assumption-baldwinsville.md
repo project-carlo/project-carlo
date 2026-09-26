@@ -21,8 +21,8 @@ evidence:
     Monday 9 AM and Tuesday 7 PM at St. Mary''s.'
 - url: https://www.openstreetmap.org/way/848482802
   seen: 2026-09-26
-  note: 'OSM place_of_worship "St. Mary''s Roman Catholic Church", 49 Syracuse Street, 13027 (Nominatim
-    reverse lookup of the GCatholic Plus Code).'
+  note: OSM place_of_worship "St. Mary's Roman Catholic Church", 49 Syracuse Street, 13027 (Nominatim
+    reverse lookup of the GCatholic Plus Code).
 - url: https://gcatholic.org/churches/usa-02/18035
   seen: 2026-09-25
   quote: 47 Syracuse St., Baldwinsville, New York 13027-2997
@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Mary of the Assumption',
     47 Syracuse Street, Baldwinsville, NY, 13027-2930
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

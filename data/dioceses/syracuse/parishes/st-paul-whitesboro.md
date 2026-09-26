@@ -21,6 +21,7 @@ evidence:
   quote: co/ St. Paul 16 Park Avenue Whitesboro, NY 13492
   note: The diocese's page for St. Leo & St. Ann, Holland Patent (behind Cloudflare; read with visit.py)
     gives St. Paul's as its mailing address and Rev. John W. Canorro as pastor of both.
+promoted: 2026-09-26
 ---
 
 ## Publisher

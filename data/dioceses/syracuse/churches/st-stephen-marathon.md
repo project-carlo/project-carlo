@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: OSM place_of_worship "Saint Stephen's Catholic Church", Academy Street, Marathon, 13803; its centre
     is about 5 m from GCatholic's Plus Code.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

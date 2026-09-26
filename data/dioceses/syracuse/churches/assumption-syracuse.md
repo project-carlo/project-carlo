@@ -29,6 +29,7 @@ evidence:
 - url: https://parishesonline.com/organization/franciscan-church-of-the-assumption
   seen: 2026-09-26
   note: '`probe po`: "Assumption Church", 812 N Salina St, Syracuse, NY, 13208.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

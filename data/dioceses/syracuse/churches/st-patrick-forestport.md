@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   quote: 12000 River St., Forestport, NY 13338
   note: Homepage footer.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

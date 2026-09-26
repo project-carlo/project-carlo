@@ -19,6 +19,7 @@ evidence:
   note: The parish's bulletins page links parishesonline.com/publication-page/st-daniel-church issues
     in container 06/0145 (visit.py --bulletin). `probe po st-daniel-church` gives LPi id 0018000000Qc1WhAAJ
     and weekly issues through 2026-09-27.
+promoted: 2026-09-26
 ---
 
 ## Publisher

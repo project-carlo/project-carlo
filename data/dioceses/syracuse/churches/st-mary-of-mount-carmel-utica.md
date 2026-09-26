@@ -27,6 +27,7 @@ evidence:
   quote: 'Address: 648 Jay St., Utica, NY 13501.'
   note: 'Page 1 of the 20 September 2026 issue: "Sunday: 8 and 11 a.m. at Mount Carmel"; weekday Mass
     Thursday and Friday 8:30 a.m. "in our parish".'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

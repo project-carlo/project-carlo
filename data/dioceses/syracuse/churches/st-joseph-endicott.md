@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Prince of Peace @ St. Joseph',
     207 Hayes Avenue, Endicott, NY, 13760-3104
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

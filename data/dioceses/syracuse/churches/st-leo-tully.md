@@ -33,8 +33,9 @@ evidence:
     Leo', 10 Onondaga Street, Tully, NY, 13159
 - url: https://www.openstreetmap.org/node/8787577768
   seen: 2026-09-26
-  note: 'OSM place_of_worship "The Church of the Nativity at St. Leo''s", 10 Onondaga Street, 13159 (Nominatim
-    reverse lookup of the GCatholic Plus Code).'
+  note: OSM place_of_worship "The Church of the Nativity at St. Leo's", 10 Onondaga Street, 13159 (Nominatim
+    reverse lookup of the GCatholic Plus Code).
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -34,6 +34,7 @@ evidence:
   seen: 2026-09-26
   note: OSM node "Immaculate Conception", State Highway 206, Town of Greene 13778 (tagged community_centre,
     i.e. probably the parish hall), about 60 m from GCatholic's point.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

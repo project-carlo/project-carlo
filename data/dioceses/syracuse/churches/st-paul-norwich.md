@@ -31,6 +31,7 @@ evidence:
 - url: https://www.openstreetmap.org/node/357634875
   seen: 2026-09-26
   note: OSM place_of_worship "Saint Paul's Roman Catholic Church", Pleasant Street, Norwich 13815.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

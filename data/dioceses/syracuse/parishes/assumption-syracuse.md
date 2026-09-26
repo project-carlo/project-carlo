@@ -19,6 +19,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po`: "Assumption Church", 812 N Salina St, LPi id 0018000000Qbz8qAAB, container 06/0033,
     weekly issues through 2026-09-27.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

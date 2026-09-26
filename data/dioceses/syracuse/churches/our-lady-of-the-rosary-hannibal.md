@@ -27,6 +27,7 @@ evidence:
   quote: 10:15 am - Our Lady of the Rosary
   note: 'Page 1 of the 27 September 2026 bulletin: Sunday 10:15 am here, confessions Sunday 9:45-10:05
     am; the masthead gives 931 Cayuga Street, Hannibal (text layer "9311 Cayugaa Streett").'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

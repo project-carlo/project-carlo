@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-26
   quote: Sacramental records for St. Peter, Syracuse are retained here.
   note: Diocese page (Cloudflare; visit.py), "Address 301 Ash Street Syracuse, NY 13208".
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

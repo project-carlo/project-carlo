@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   quote: 'Website: stbartsnorwich.com'
   note: 'The diocese''s page (read with visit.py): church 73 East Main Street, office 30 Pleasant Street.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

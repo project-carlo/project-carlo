@@ -10,12 +10,13 @@ evidence:
   seen: 2026-09-26
   quote: Sunday Masses ...... 8:30 am & 10:45 am
   note: 'Page 1 of the 27 September 2026 bulletin: "SAINT FRANCIS XAVIER CHURCH MARCELLUS, NEW YORK 13108
-    FOUNDED 1873", "Saturday Evening Vigil ...............4:30 pm", daily Mass Monday, Thursday, Friday 6:45
-    am and Tuesday 6:00pm, "1 West Main St. PO Box 177", website www.sfxmarcellus.com.'
+    FOUNDED 1873", "Saturday Evening Vigil ...............4:30 pm", daily Mass Monday, Thursday, Friday
+    6:45 am and Tuesday 6:00pm, "1 West Main St. PO Box 177", website www.sfxmarcellus.com.'
 - url: https://sfxmarcellus.com/weekly-bulletins/
   seen: 2026-09-26
-  note: The parish's Weekly Bulletins page, linking one PDF per Sunday in wp-content/uploads from 2023 through
-    Bulletin-9-27-2026-2-combined.pdf.
+  note: The parish's Weekly Bulletins page, linking one PDF per Sunday in wp-content/uploads from 2023
+    through Bulletin-9-27-2026-2-combined.pdf.
+promoted: 2026-09-26
 ---
 
 ## Publisher

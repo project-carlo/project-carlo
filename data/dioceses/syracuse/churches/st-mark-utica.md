@@ -27,6 +27,7 @@ evidence:
   quote: Unless otherwise indicated, all Masses are on our Keyes Road (St. Mark’s) Campus
   note: 'Page 2 of the 20 September 2026 issue: Sat 4:00pm, Sun 10:00am, Mon 10:00am. Page 1: "440 Keyes
     Rd. Utica, NY 13502".'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

@@ -29,12 +29,13 @@ evidence:
 - url: https://files.ecatholic.com/25311/bulletins/20260927.pdf
   seen: 2026-09-26
   quote: 23 Niagara St.; Pulaski NY 13142
-  note: 'Page 2 of the 27 September 2026 bulletin ("Christ Our Light and Parish Office"); page 3 lists
-    COL Masses Saturday 4:00 pm and Sunday 10:15 am.'
+  note: Page 2 of the 27 September 2026 bulletin ("Christ Our Light and Parish Office"); page 3 lists
+    COL Masses Saturday 4:00 pm and Sunday 10:15 am.
 - url: https://www.openstreetmap.org/way/546866873
   seen: 2026-09-26
   note: 'OSM: "Saint John''s Roman Catholic Church", 23 Niagara Street, Pulaski, centre 43.570362, -76.13282;
     a GNIS node of the same name (357638454) sits on the same spot.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

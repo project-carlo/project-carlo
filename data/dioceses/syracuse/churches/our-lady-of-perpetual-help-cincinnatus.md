@@ -36,6 +36,7 @@ evidence:
 - url: https://www.openstreetmap.org/node/8774894413
   seen: 2026-09-26
   note: OSM place_of_worship "Our Lady of Perpetual Help", 2708 Lower Cincinnatus Road, 13040.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

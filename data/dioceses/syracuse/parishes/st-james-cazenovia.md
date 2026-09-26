@@ -8,7 +8,7 @@ group: Rev. Kevin Corcoran (Cazenovia, Chittenango)
 evidence:
 - url: https://stjamescaz.org/wp-content/uploads/09-27-2026-Bulletin.pdf
   seen: 2026-09-26
-  quote: 'St. James Catholic Church … 6 Green Street, Cazenovia, NY 13035'
+  quote: St. James Catholic Church … 6 Green Street, Cazenovia, NY 13035
   note: Page 1 of the 27 September 2026 issue. Names St. James alone (Fr. Kevin Corcoran, Pastor).
 - url: https://stjamescaz.org/wp-content/uploads/09-27-2026-Bulletin.pdf
   seen: 2026-09-26
@@ -24,6 +24,7 @@ evidence:
   quote: PASTOR, ST. JAMES, CAZENOVIA; ST. PATRICK, CHITTENANGO
   note: The diocese's page for St. Patrick, Chittenango (behind Cloudflare; read in a browser), listing
     Rev. Kevin J. Corcoran.
+promoted: 2026-09-26
 ---
 
 ## Publisher

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-09-25
   note: OSM place_of_worship "Cathedral of the Immaculate Conception", 259 East Onondaga Street, 13202.
     Independent of the parish; the coordinates are this way's centre.
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

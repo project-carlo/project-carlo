@@ -38,6 +38,7 @@ evidence:
     MISSION, DERUYTER; ST. PATRICK'S ORATORY, TRUXTON; SUNY CORTLAND NEWMAN COMMUNITY
   note: Rev. Artur W. Krawczenko's assignment on the diocese's page (behind Cloudflare; read with visit.py).
     The same page says "Sacramental Records for St. Bridget Mission, Solon are retained here."
+promoted: 2026-09-26
 ---
 
 ## Publisher

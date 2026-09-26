@@ -49,6 +49,7 @@ evidence:
 revisit: Check the linked-parishes bulletin (ParishesOnline 06/0134) for Masses back at St. Charles ("SC")
   after the renovation. If the parish says it will not reopen, exclude it.
 revisit_after: 2027-01-15
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

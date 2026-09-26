@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Church of Saints Cyril & Methodius',
     148 Clinton Street, Binghamton, NY, 13905-2229
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

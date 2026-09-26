@@ -35,6 +35,7 @@ evidence:
     at 16 Academy Street, "Church & Office Address - Whitney Point 59 Keibel Road", administrator Rev.
     Malachi F. Clark. Its page for Our Lady of Perpetual Help says "Our Lady of Perpetual Help is a Mission
     of the Catholic Community of St. Stephen - St. Patrick, Marathon/Whitney Point."'
+promoted: 2026-09-26
 ---
 
 ## Publisher

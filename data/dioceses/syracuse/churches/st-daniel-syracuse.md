@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-26
   quote: Saturday - 4:00pm - Sunday 10:30am
   note: Page 1 of the 27 September 2026 issue, under "CHURCH ADDRESS 3004 Court St., Syracuse, NY 13208".
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

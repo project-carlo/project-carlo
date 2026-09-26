@@ -17,6 +17,7 @@ evidence:
   seen: 2026-09-26
   note: '`probe po st-joseph-and-st-patrick-church`: LPi id 0018000000Qc1XKAAZ, container 04/0809, weekly
     through 2026-09-27; stjoestpat.org embeds this org.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

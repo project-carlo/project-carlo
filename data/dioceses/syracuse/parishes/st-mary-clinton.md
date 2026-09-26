@@ -22,6 +22,7 @@ evidence:
   quote: SATURDAY VIGIL 5:30 PM SUNDAY 7:00 AM *early riser -July 6- September 7, 2026 9:00 AM
   note: Parish homepage (eCatholic, behind Cloudflare; read with visit.py). Weekday Mass Wednesday and
     Friday 12:10 PM.
+promoted: 2026-09-26
 ---
 
 ## Publisher

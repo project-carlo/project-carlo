@@ -32,7 +32,8 @@ evidence:
     80, Otisco, NY, 13159
 - url: https://www.openstreetmap.org/node/8787480804
   seen: 2026-09-26
-  note: 'OSM address point 1865 State Route 80, 13159 (Nominatim reverse lookup of the GCatholic Plus Code).'
+  note: OSM address point 1865 State Route 80, 13159 (Nominatim reverse lookup of the GCatholic Plus Code).
+promoted: 2026-09-26
 ---
 
 ## Holds Mass

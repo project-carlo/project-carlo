@@ -30,6 +30,7 @@ evidence:
 - url: https://parishesonline.com/organization/st-vincent-de-paul-church-13203
   seen: 2026-09-26
   note: '`probe po`: St. Vincent de Paul Church, 342 Vine St, Syracuse, 13203; container 03/1361.'
+promoted: 2026-09-26
 ---
 
 ## Holds Mass
