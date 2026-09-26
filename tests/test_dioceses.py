@@ -399,6 +399,18 @@ def test_find_publications_reads_containers_from_find_links() -> None:
     assert web.find_publications(page) == ["po-container:03/1424"]
 
 
+def test_spam_terms_match_whole_words_only() -> None:
+    wix = '{"specs.stores.displayCheckoutErrorModalsForExpressButtons":"true"}'
+    assert web.spam_terms(wix + " Judicial Conference policy prohibits it") == []
+    assert web.spam_terms("Situs judi slot online terpercaya") == ["judi", "slot online"]
+
+
+def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
+    truncated = web.Response("u", 200, "u", "application/pdf", b"%PDF-1.7\n1 0 obj")
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: truncated)
+    assert web.pdf_text("https://example.org/x.pdf")["error"].startswith("could not read")
+
+
 def test_quote_found_tolerates_layout_and_elisions() -> None:
     text = "Mass Schedule\n  Weekend: Sat. 5:10 pm\n   Sun. 7:30 am, 9:45 am\nSt. Bernard’s"
     assert web.quote_found("Weekend: Sat. 5:10 pm … Sun. 7:30 am", text)
