@@ -297,13 +297,15 @@ ParishesOnline containers and bulletin PDFs, rechecks evidence, and promotes. Se
 `pnpm bench` measures cheaper alternatives to the production extractor
 against it. Each *stack* turns the bulletin PDF into text without an LLM, then
 has a small OpenAI model (default `gpt-6-luna`) read that text and fill the
-same schema Gemini fills:
+same schema Gemini fills. Every stack keeps times on the line of the day and
+heading they belong to, and tags blocks with their position on the page
+(`[x6-51% y9-95%]`) so the model can tell a sidebar from the column beside it:
 
 | Stack | Run name | PDF → text |
 | :-- | :-- | :-- |
-| `pymupdf` | `luna-pymupdf` | STACK_PYMUPDF |
-| `docling` | `luna-docling` | STACK_DOCLING |
-| `ocr` | `luna-ocr` | STACK_OCR |
+| `pymupdf` | `luna-pymupdf` | PyMuPDF text layer in column-aware reading order; RapidOCR only where there is no usable text (images, outlined text, broken fonts). Under a second per bulletin, plus a few seconds per OCR region. |
+| `docling` | `luna-docling` | Docling layout model, rows rebuilt from text positions, RapidOCR on the same kinds of regions. Tens of seconds per bulletin. |
+| `ocr` | `luna-ocr` | Every page rendered and read by RapidOCR, ignoring the text layer, then rebuilt into columns and rows. The slowest: about 5 s per page. |
 | `pdf` | `luna-pdf` | none: the model reads the PDF itself (the control) |
 
 ```bash
@@ -339,9 +341,16 @@ usually shows whether a miss happened in extraction or in the model.
 
 Everything is cached (text per extractor version and PDF, results per
 classifier version, bulletin and church list), so re-running after changing
-one stack only pays for that stack. The extractors' dependencies are in the
-optional `bench` group, which `pnpm bench` installs on first run; Docling
-downloads its layout models on first use.
+one stack only pays for that stack. Text extraction runs on the CPU, one
+bulletin at a time per stack, so the first full run is dominated by the OCR
+stacks; a quick first look is `pnpm bench --limit 15`.
+
+The extractors' dependencies are in the optional `bench` group, which
+`pnpm bench` installs on first run (about 2 GB, mostly CPU-only PyTorch for
+Docling). Docling downloads about 0.7 GB of models from Hugging Face on
+first use. On an Intel Mac there is no PyTorch for Python 3.13, so the
+`docling` stack is skipped there and the others run. PyMuPDF is AGPL-licensed,
+which is fine for this benchmark but matters before shipping it.
 
 ## Environment Variables
 

@@ -599,6 +599,10 @@ def _fmt(value: Any) -> str:
     return str(value)
 
 
+def _fmt_usd(value: float | None) -> str:
+    return "–" if value is None else f"${value:.5f}"
+
+
 def format_baseline_markdown(report: dict[str, Any]) -> str:
     rows = report.get("vs_baseline") or []
     if not rows:
@@ -627,7 +631,7 @@ def format_baseline_markdown(report: dict[str, Any]) -> str:
             f"| {_fmt(by_type['mass']['recall'])} | {_fmt(by_type['confession']['recall'])} "
             f"| {_fmt(by_type['adoration']['recall'])} "
             f"| {r['bulletins_exact_match']} | {len(r['bulletins_missed_entirely'])} "
-            f"| {_fmt(r['published_date_agreement'])} | {_fmt(r['cost_usd_per_bulletin'])} "
+            f"| {_fmt(r['published_date_agreement'])} | {_fmt_usd(r['cost_usd_per_bulletin'])} "
             f"| {_fmt(r['llm_seconds_mean'])} | {_fmt(r['text_seconds_mean'])} "
             f"| {_fmt(r['text_chars_mean'])} |"
         )
@@ -660,7 +664,7 @@ def format_markdown(report: dict[str, Any]) -> str:
         lines.append(
             f"| {c['classifier']} | {c.get('version') or ''} | {c['bulletins']} | {c['events_total']} | "
             f"{c['events_per_bulletin_mean']} | {cache} | {c.get('wall_seconds') or ''} "
-            f"| {c['errors']} | {_fmt(c.get('cost_usd_per_bulletin'))} |"
+            f"| {c['errors']} | {_fmt_usd(c.get('cost_usd_per_bulletin'))} |"
         )
 
     lines.append("")

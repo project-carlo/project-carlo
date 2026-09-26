@@ -19,6 +19,17 @@ dependencies = [
     "pyyaml>=6.0.3",
 ]
 
+# Docling's torch from PyTorch's CPU index on Linux, where PyPI's torch is the
+# ~4 GB CUDA build; Windows and macOS wheels on PyPI are already CPU builds.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+torchvision = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/pdf_extract"]
 
@@ -37,6 +48,12 @@ bench = [
     "rapidocr>=3.9.2,<4",
     "onnxruntime>=1.20",
     "numpy>=2.0",
+    # Needs torch, which has no Intel-Mac wheels for Python 3.13; there the
+    # docling stack is skipped and the others still run.
+    "docling>=2.130,<3; sys_platform != 'darwin' or platform_machine == 'arm64'",
+    # Listed only so the pytorch-cpu source below applies to them.
+    "torch; sys_platform != 'darwin' or platform_machine == 'arm64'",
+    "torchvision; sys_platform != 'darwin' or platform_machine == 'arm64'",
 ]
 
 [tool.ruff]
