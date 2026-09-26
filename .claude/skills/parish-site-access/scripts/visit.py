@@ -183,7 +183,7 @@ def _verdict(url: str, status: int | None, page, web) -> str:  # type: ignore[no
     """probe url's verdicts, judged on the rendered HTML instead of the raw HTML."""
     html = _html(page).lower()
     status = status or 0
-    if any(t in html for t in web.SPAM_TERMS):
+    if web.spam_terms(html):
         return "SPAM-SQUAT"
     if web._registrable(web._host(page.url)) != web._registrable(web._host(url)):
         return "REDIRECT-OFFSITE"
