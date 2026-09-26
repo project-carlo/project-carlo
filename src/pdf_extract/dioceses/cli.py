@@ -85,7 +85,10 @@ def _cmd_new(kind_name: str) -> Handler:
     def run(args: argparse.Namespace) -> dict[str, Any]:
         fields: dict[str, Any] = {}
         if getattr(args, "from_", None):
-            fields.update(_from_roster(args.diocese, args.from_))
+            # Only what this kind records: an exclusion has no coordinates.
+            allowed = records.KINDS[kind_name].fields
+            fields.update({k: v for k, v in _from_roster(args.diocese, args.from_).items()
+                           if k in allowed})
         for flag in _NEW_FLAGS[kind_name]:
             value = getattr(args, flag.replace("-", "_"))
             if value is not None:

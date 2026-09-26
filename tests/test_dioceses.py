@@ -399,11 +399,30 @@ def test_find_publications_reads_containers_from_find_links() -> None:
     assert web.find_publications(page) == ["po-container:03/1424"]
 
 
+def test_spam_terms_match_whole_words_only() -> None:
+    wix = '{"specs.DisplayCheckoutErrorModalsForExpressButtons": true} St. Mary Parish'
+    assert web.spam_terms(wix) == []
+    assert web.spam_terms("Best Slot Gacor and casino bonuses") == ["casino", "slot gacor"]
+
+
 def test_quote_found_tolerates_layout_and_elisions() -> None:
     text = "Mass Schedule\n  Weekend: Sat. 5:10 pm\n   Sun. 7:30 am, 9:45 am\nSt. Bernard’s"
     assert web.quote_found("Weekend: Sat. 5:10 pm … Sun. 7:30 am", text)
     assert web.quote_found("St. Bernard's", text)
     assert not web.quote_found("Sun. 7:30 am … Weekend", text)
+
+
+def test_new_exclusion_from_a_roster_drops_coordinates(root: Path, tmp_path: Path) -> None:
+    src = tmp_path / "directory.json"
+    src.write_text(json.dumps([{"id": "7", "name": "St. Paul (Closed)", "city": "Fabius",
+                                "state": "NY", "latitude": 42.8, "longitude": -75.9,
+                                "url": "https://example.org/finder"}]))
+    rosters.import_roster("test", "directory", src)
+    assert main(["diocese", "new", "excluded", "test", "--reason", "closed",
+                 "--from", "directory:7"]) == 0
+    [path] = (root / "excluded").glob("*.md")
+    text = path.read_text(encoding="utf-8")
+    assert "directory:7" in text and "latitude" not in text
 
 
 # ── CLI and the committed data ──────────────────────────────────────────────

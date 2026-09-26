@@ -202,6 +202,17 @@ SPAM_TERMS = [
     "payday", "forex", "judi", "togel", "gacor", "maxwin", "slot online", "situs slot",
     "slot gacor", "slot terpercaya", "pragmatic play",
 ]
+# Whole words only: Wix pages carry config keys like
+# "DisplayCheckoutErrorModalsForExpressButtons", which contain "forex".
+_SPAM_RE = re.compile(r"\b(?:" + "|".join(re.escape(t) for t in SPAM_TERMS) + r")\b")
+
+
+def spam_terms(text: str) -> list[str]:
+    """The SPAM_TERMS found in text as whole words (case-insensitive)."""
+    found = set(_SPAM_RE.findall(text.lower()))
+    return [t for t in SPAM_TERMS if t in found]
+
+
 PARISH_WORDS = [
     "parish", "church", "catholic", "mass", "bulletin", "diocese", "gospel", "liturgy",
     "sacrament", "worship", "rosary",
@@ -264,7 +275,7 @@ def probe_url(url: str) -> dict[str, Any]:
     title = re.search(r"<title[^>]*>(.*?)</title>", page, flags=re.S | re.I)
     if title:
         out["title"] = " ".join(html.unescape(title.group(1)).split())[:160]
-    spam = [t for t in SPAM_TERMS if t in low]
+    spam = spam_terms(page)
     words = [w for w in PARISH_WORDS if w in low]
     out["publications"] = find_publications(page)
     out["bulletin_links"] = bulletin_links(page, resp.final_url or url)
