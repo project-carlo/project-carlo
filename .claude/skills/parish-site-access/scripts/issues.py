@@ -22,7 +22,7 @@ Usage (from the repo root):
 
 --pages N adds the text of the first N readable pages of each issue found (the
 masthead is often on page 2 or 3), and --grep counts and quotes a term per page,
-exactly as `probe pdf` does. Prints JSON.
+exactly as `probe pdf` does (--grep alone reads 3 pages). Prints JSON.
 """
 
 from __future__ import annotations
@@ -108,8 +108,8 @@ def ecatholic(args: argparse.Namespace) -> dict[str, Any]:
         out["note"] = (
             f"newest issue is {found[0].rsplit('/', 1)[-1][:8]}: publishing here has stopped"
         )
-    if args.pages and found:
-        out["issues"] = _with_text(found, args.pages, args.grep)
+    if (args.pages or args.grep) and found:
+        out["issues"] = _with_text(found, args.pages or 3, args.grep)
     return out
 
 
@@ -143,8 +143,10 @@ def discovermass(args: argparse.Namespace) -> dict[str, Any]:
         out["note"] = "no bulletins listed: this church does not publish through Discover Mass now"
     elif issues[0]["date"] < (dt.date.today() - dt.timedelta(days=45)).isoformat():
         out["note"] = f"newest issue is {issues[0]['date']}: publishing here has stopped"
-    if args.pages and issues:
-        out["text"] = _with_text([i["url"] for i in issues[: args.issues]], args.pages, args.grep)
+    if (args.pages or args.grep) and issues:
+        out["text"] = _with_text(
+            [i["url"] for i in issues[: args.issues]], args.pages or 3, args.grep
+        )
     return out
 
 

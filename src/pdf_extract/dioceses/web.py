@@ -66,18 +66,24 @@ def fetch(url: str, *, method: str = "GET", timeout: int = TIMEOUT,
         "User-Agent": USER_AGENT, "Accept": "text/html,application/pdf,*/*",
         "Accept-Encoding": "gzip",
     })
-    try:
-        with urlopen(req, timeout=timeout) as resp:
-            body = resp.read(max_bytes) if method != "HEAD" else b""
-            if resp.headers.get("Content-Encoding") == "gzip" and body:
-                body = gzip.decompress(body)
-            return Response(url, resp.status, resp.geturl(),
-                            resp.headers.get("Content-Type", ""), body)
-    except HTTPError as e:
-        return Response(url, e.code, e.geturl() or url, error=f"HTTP {e.code}")
-    except (URLError, OSError, ValueError) as e:
-        reason = getattr(e, "reason", e)
-        return Response(url, error=f"{type(reason).__name__}: {reason}")
+    for attempt in (1, 2):
+        try:
+            with urlopen(req, timeout=timeout) as resp:
+                body = resp.read(max_bytes) if method != "HEAD" else b""
+                if resp.headers.get("Content-Encoding") == "gzip" and body:
+                    body = gzip.decompress(body)
+                return Response(url, resp.status, resp.geturl(),
+                                resp.headers.get("Content-Type", ""), body)
+        except HTTPError as e:
+            return Response(url, e.code, e.geturl() or url, error=f"HTTP {e.code}")
+        except (URLError, OSError, ValueError) as e:
+            reason = getattr(e, "reason", e)
+            # A reset or dropped connection mid-transfer is usually transient
+            # (Discover Mass downloads do it); try once more before reporting.
+            if attempt == 1 and isinstance(reason, (ConnectionError, TimeoutError)):
+                continue
+            return Response(url, error=f"{type(reason).__name__}: {reason}")
+    raise AssertionError("unreachable")
 
 
 # ── Text ────────────────────────────────────────────────────────────────────
@@ -136,6 +142,12 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
     if not readable:
         out["note"] = ("no extractable text: the issue is scanned images. Try an older issue "
                        "from the same source, which is often text and has the same masthead.")
+    elif len(readable) < len(texts):
+        # A masthead or Mass schedule on an image-only page is silently absent
+        # from `pages` and `grep`; say which pages those are.
+        out["pages_without_text"] = [n for n, t in enumerate(texts, 1) if not t]
+        out["note"] = ("some pages are images with no text layer (pages_without_text): "
+                       "a masthead or schedule there is invisible to pages and grep")
     terms = [t for t in grep if t]
     if terms:
         out["grep"] = {}
