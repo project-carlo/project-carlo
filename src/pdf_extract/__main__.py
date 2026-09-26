@@ -26,6 +26,7 @@ from pdf_extract.apply import (
     apply_geocode_results,
     apply_verify_results,
 )
+from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
 from pdf_extract.classifiers import available_classifiers
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
@@ -46,6 +47,12 @@ from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
 from pdf_extract.fetch import fetch_bulletins
 from pdf_extract.geocode import run_backfill
+from pdf_extract.labeling.demo import build_demo
+from pdf_extract.labeling.labels import LABELS_DIR
+from pdf_extract.labeling.server import DEFAULT_PORT as LABELER_PORT
+from pdf_extract.labeling.server import LabelerApp
+from pdf_extract.labeling.server import serve as serve_labeler
+from pdf_extract.paths import DATA_DIR
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
@@ -60,6 +67,9 @@ Result = dict[str, Any]
 
 # Exit code of `weekly` when the run finished but a publishing check failed.
 EXIT_HELD = 10
+
+# `label serve --demo` builds its generated dataset here (gitignored).
+DEMO_DIR = DATA_DIR / "labeler-demo"
 
 
 def _configure_logging(level_name: str) -> None:
@@ -229,6 +239,20 @@ def _cmd_db_create(args: argparse.Namespace) -> Result:
 
 def _cmd_db_drop(_args: argparse.Namespace) -> Result:
     return {"deleted": delete_db(DEFAULT_DB_PATH), "db_path": str(DEFAULT_DB_PATH)}
+
+
+def _cmd_label_serve(args: argparse.Namespace) -> Result:
+    # Built here rather than with get_store(): the labeler only ever reads from
+    # R2, whatever CARLO_REMOTE_WRITE says.
+    if args.demo:
+        paths = build_demo(Path(args.demo_dir))
+        set_store(CachedBlobStore(LocalBlobStore(paths["root"])))
+        app = LabelerApp(db_path=paths["db_path"], labels_dir=paths["labels_dir"], mode="demo")
+    else:
+        _ensure_db()
+        set_store(CachedBlobStore(LocalBlobStore(DATA_DIR), remote_from_env(), remote_write=False))
+        app = LabelerApp(db_path=DEFAULT_DB_PATH, labels_dir=LABELS_DIR)
+    return serve_labeler(app, port=args.port)
 
 
 def _cmd_extract_frontend_db(_args: argparse.Namespace) -> Result:
@@ -472,6 +496,26 @@ def _build_parser() -> argparse.ArgumentParser:
     db_drop_parser = db_subparsers.add_parser("drop", help="Delete the SQLite DB file")
     db_drop_parser.set_defaults(handler=_cmd_db_drop)
     _add_common_args(db_drop_parser)
+
+    # -- label (local ground-truth labeling app) --
+    label_parser = subparsers.add_parser("label", help="Label bulletins with ground truth")
+    label_parser.set_defaults(help_parser=label_parser)
+    label_subparsers = label_parser.add_subparsers(dest="label_command")
+
+    label_serve_parser = label_subparsers.add_parser(
+        "serve", help="Serve the labeling app on localhost",
+    )
+    label_serve_parser.add_argument("--port", type=int, default=LABELER_PORT)
+    label_serve_parser.add_argument(
+        "--demo", action="store_true",
+        help="Use a generated demo dataset instead of data/ (no R2 needed)",
+    )
+    label_serve_parser.add_argument(
+        "--demo-dir", default=str(DEMO_DIR),
+        help=f"Where --demo builds its dataset and keeps its labels (default: {DEMO_DIR})",
+    )
+    label_serve_parser.set_defaults(handler=_cmd_label_serve)
+    _add_common_args(label_serve_parser)
 
     # -- extract frontend db --
     extract_frontend_db_parser = subparsers.add_parser(
