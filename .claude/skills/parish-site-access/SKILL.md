@@ -1,6 +1,6 @@
 ---
 name: parish-site-access
-description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese from a Claude Code cloud sandbox. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when WebFetch/curl get a 403 "Just a moment..." page.
+description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese from a Claude Code cloud sandbox. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins, and a reader that turns a diocese's eCatholic parish-finder map into a roster. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when WebFetch/curl get a 403 "Just a moment..." page.
 ---
 
 # Seeing parish sites the probes can't
@@ -110,6 +110,26 @@ uv run python $I discovermass discovermass:st-patrick-victor-ny [--issues 6 --pa
 - **Staleness:** for both publishers, `issues.py` flags a newest issue older than 45 days,
   as `probe po` does.
 - **`--pages` and `--grep`** work as in `probe pdf`. Mastheads are often on page 2 or 3.
+
+## `finder.py`: an eCatholic parish finder as a roster
+
+A diocese whose site runs on eCatholic usually has a "parish finder" map (Syracuse:
+`syracusediocese.org/parishfinder`). It is behind Cloudflare and isn't WP Store Locator, so
+`roster fetch wpsl` can't read it. `finder.py` loads it in the browser and writes the list
+`roster import` takes: one entry per site on the map, with the finder's site id, name,
+address, coordinates, website and phone. Closed parishes stay on these maps as
+"<Name> (Closed)" with no address, and get `kind: closed`.
+
+```bash
+F=".claude/skills/parish-site-access/scripts/finder.py"
+uv run python $F https://www.syracusediocese.org/parishfinder --out /tmp/directory.json
+uv run python $F --html saved-finder.html --out /tmp/directory.json   # from visit.py --html
+pnpm diocese roster import <d> directory /tmp/directory.json --title "..." --url <finder URL> --notes "..."
+```
+
+The map pins are the diocese's, so churches made `--from directory:<id>` get
+`coordinates_from: diocese-directory`. Put a GCatholic entry first in `--from` when there is
+one: its Plus Code is on the building.
 
 ## Evidence from blocked pages
 
