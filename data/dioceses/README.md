@@ -34,9 +34,11 @@ decide this:
   bulletin is **one** row with several churches.
 - A family whose members each publish their own bulletin is **several** rows.
 - A canonical merger does not merge rows, and a rescinded one does not split them. Buffalo
-  had both: Fourteen Holy Helpers was canonically merged into Queen of Heaven and kept its
-  own bulletin (two rows); St. John and St. Mary of the Angels in Olean had their merger
-  rescinded and still publish one bulletin (one row).
+  had both: Holy Cross and Our Lady of Hope share Family #23 but are separate rows, while
+  St. John and St. Mary of the Angels in Olean had their merger rescinded and still publish
+  one bulletin (one row). Bulletins change too: Fourteen Holy Helpers kept its own bulletin
+  after merging into Queen of Heaven, but by September 2026 it shared the Blessed Family #7
+  bulletin with Queen of Heaven and St. John Vianney (one row).
 - A family's size tells you nothing. Buffalo's families went every way: some single
   bulletins over four parishes, some with every member separate.
 
