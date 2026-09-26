@@ -98,7 +98,7 @@ export function CommitInput({
         setFocused(false);
       }}
       onKeyDown={onKeyDown}
-      className={`min-w-0 rounded border px-1.5 py-0.5 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${
+      className={`min-w-0 rounded border px-1 py-0.5 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ${
         invalid
           ? "border-red-500 bg-red-50"
           : missing

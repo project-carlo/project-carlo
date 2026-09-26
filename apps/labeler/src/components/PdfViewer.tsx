@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import {
   GlobalWorkerOptions,
   TextLayer,
@@ -98,8 +98,21 @@ export function PdfViewer({ url, scrollTo, onPageChange }: Props) {
     if (scrollTo && sizes.length) goTo(Math.min(Math.max(1, scrollTo.page), sizes.length));
   }, [scrollTo, sizes.length, goTo]);
 
+  // Zooming keeps the same part of the document in view.
+  const anchor = useRef<number | null>(null);
+  const changeZoom = (next: number | "fit") => {
+    const el = scrollRef.current;
+    if (el) anchor.current = el.scrollTop / Math.max(1, el.scrollHeight);
+    setZoom(next);
+  };
+  useLayoutEffect(() => {
+    const el = scrollRef.current;
+    if (el && anchor.current !== null) el.scrollTop = anchor.current * el.scrollHeight;
+    anchor.current = null;
+  }, [scale]);
+
   const zoomBy = (factor: number) =>
-    setZoom(Math.min(5, Math.max(0.25, Math.round(scale * factor * 100) / 100)));
+    changeZoom(Math.min(5, Math.max(0.25, Math.round(scale * factor * 100) / 100)));
 
   return (
     <div className="flex h-full flex-col bg-slate-600">
@@ -123,7 +136,7 @@ export function PdfViewer({ url, scrollTo, onPageChange }: Props) {
         </button>
         <button
           className={`toolbar-btn ${zoom === "fit" ? "bg-slate-600" : ""}`}
-          onClick={() => setZoom("fit")}
+          onClick={() => changeZoom("fit")}
           title="Fit width"
         >
           Fit

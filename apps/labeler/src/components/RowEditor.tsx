@@ -8,6 +8,7 @@ import {
   allBut,
   allButWeek,
   describeSeason,
+  describeWeeks,
   parseSeason,
   toggleWeek,
 } from "../lib/pattern";
@@ -151,8 +152,13 @@ export const RowEditor = memo(function RowEditor({
   const missing = new Set(rowProblems(row));
   const weekly = row.event_kind === "weekly";
   const pendingCount = (weekly ? row.pending_split?.days : row.pending_split?.dates)?.length ?? 0;
-  const showDetails =
-    selected || row.note || (weekly && (row.weeks_of_month.length > 0 || row.season));
+  const summary = [
+    weekly && row.weeks_of_month.length > 0 ? describeWeeks(row.weeks_of_month) : null,
+    weekly && row.season ? describeSeason(row.season) : null,
+    row.note,
+  ]
+    .filter(Boolean)
+    .join(" · ");
   const patch = (p: Patch) => onPatch(row.id, p);
   const origin = ORIGIN_STYLE[row.origin];
 
@@ -178,12 +184,12 @@ export const RowEditor = memo(function RowEditor({
       }`}
     >
       <div className={`absolute top-0 bottom-0 left-0 w-1.5 rounded-l ${origin.bar}`} title={origin.label} />
-      <div className="flex flex-wrap items-center gap-1">
+      <div className="flex items-center gap-1 *:shrink-0">
         <span className="w-4 text-right text-xs text-slate-400 tabular-nums">{index + 1}</span>
         <select
           value={row.church_slug}
           onChange={(e) => patch({ church_slug: e.target.value })}
-          className={`min-w-0 flex-[1_1_6rem] rounded border px-0.5 py-0.5 text-sm ${missing.has("church") ? "border-amber-400 bg-amber-50" : "border-slate-300 bg-white"}`}
+          className={`w-0 min-w-14 flex-1 rounded border px-0.5 py-0.5 text-sm ${missing.has("church") ? "border-amber-400 bg-amber-50" : "border-slate-300 bg-white"}`}
           title={churches.find((c) => c.slug === row.church_slug)?.name ?? "Church"}
         >
           <option value="">— church —</option>
@@ -210,7 +216,7 @@ export const RowEditor = memo(function RowEditor({
             display={row.pending_split?.days ? describeDays(row.pending_split.days) : shortDay(row.day_of_week)}
             placeholder="Sun"
             title="Day; several days (Mon-Fri, Sat & Sun) make one row each once you leave the row"
-            className="w-[4.75rem]"
+            className="w-[5.5rem]"
             missing={missing.has("day")}
             autoFocus={focusField === "day"}
             onFocused={onFocusDone}
@@ -227,7 +233,7 @@ export const RowEditor = memo(function RowEditor({
             display={row.pending_split?.dates ? row.pending_split.dates.map(formatDate).join("; ") : formatDate(row.date)}
             placeholder="10/5"
             title={`${row.date ? `${row.date}. ` : ""}Date: 10/5 or Oct 5; several dates (10/2; 10/9) make one row each once you leave the row`}
-            className="w-[4.75rem]"
+            className="w-[5.5rem]"
             missing={missing.has("date")}
             autoFocus={focusField === "day"}
             onFocused={onFocusDone}
@@ -287,12 +293,13 @@ export const RowEditor = memo(function RowEditor({
           type="button"
           tabIndex={-1}
           onClick={() => patch({ cancelled: !row.cancelled })}
-          title="Cancelled (x)"
+          title={row.cancelled ? "Cancelled; click or press x to undo" : "Mark cancelled (x)"}
+          data-testid="cancelled-toggle"
           className={`rounded border px-1.5 py-0.5 text-xs font-semibold ${
             row.cancelled ? "border-red-600 bg-red-600 text-white" : "border-slate-300 bg-white text-slate-400 hover:bg-slate-100"
           }`}
         >
-          {row.cancelled ? "Cancelled" : "X"}
+          X
         </button>
         <label className="flex items-center" title="PDF page">
           <CommitInput
@@ -325,8 +332,13 @@ export const RowEditor = memo(function RowEditor({
           </button>
         </div>
       </div>
-      {showDetails && (
-        <div className="mt-1 flex flex-wrap items-center gap-1.5 pl-6">
+      {!selected && summary && (
+        <div className="truncate pl-5 text-xs text-slate-500" title={summary}>
+          {summary}
+        </div>
+      )}
+      {selected && (
+        <div className="mt-1 flex flex-wrap items-center gap-1.5 pl-5">
           {weekly && (
             <>
               <WeeksPicker

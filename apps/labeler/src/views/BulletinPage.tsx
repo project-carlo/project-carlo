@@ -464,7 +464,7 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
   const clearFocus = useCallback(() => setFocus(null), []);
 
   return (
-    <div className="grid h-full grid-cols-[3fr_2fr]">
+    <div className="grid h-full grid-cols-[minmax(0,3fr)_minmax(0,2fr)] grid-rows-[minmax(0,1fr)] overflow-hidden">
       <PdfViewer url={pdfUrl(parish, hash)} scrollTo={scrollTo} onPageChange={setViewedPage} />
       <div className="flex min-w-0 flex-col border-l border-slate-300 bg-slate-50">
         <header className="shrink-0 space-y-1.5 border-b border-slate-200 bg-white px-3 py-2">
