@@ -1,5 +1,5 @@
 ---
-name: St. Louis Gonzaga
+name: St. Louis Gonzaga Maronite Catholic Church
 reason: other-jurisdiction
 line1: 520 Rutger St.
 city: Utica
@@ -17,10 +17,12 @@ evidence:
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+A Maronite Catholic church (Eparchy of St. Maron of Brooklyn). GCatholic lists it in the
+Diocese of Syracuse's territory marked with the Maronite rite and links saintlouisgonzaga.org.
+Excluded as `other-jurisdiction` under the diocese's rule for Eastern Catholic churches (see
+`excluded/st-john-the-baptist-syracuse.md`). St. John the Evangelist's 27 September 2026
+bulletin advertises a St. Sharbel Mass there, which fits.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A project decision to cover Eastern Catholic eparchies.

@@ -1,5 +1,5 @@
 ---
-name: St. Volodymyr the Great
+name: St. Volodymyr the Great Ukrainian Catholic Church
 reason: other-jurisdiction
 line1: 4 Cottage Place
 city: Utica
@@ -17,10 +17,11 @@ evidence:
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+A Ukrainian Greek Catholic church (Eparchy of Stamford). GCatholic lists it in the Diocese of
+Syracuse's territory marked with the Ukrainian rite. Excluded as `other-jurisdiction`
+under the diocese's rule for Eastern Catholic churches (see
+`excluded/st-john-the-baptist-syracuse.md`).
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A project decision to cover Eastern Catholic eparchies.
