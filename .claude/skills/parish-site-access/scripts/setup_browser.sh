@@ -15,16 +15,28 @@
 # Chrome is blocked by Cloudflare almost every time.
 set -euo pipefail
 
+# Some environments' egress policy denies dl.google.com. Then the image's
+# pre-installed Chromium is used instead: visit.py points
+# PLAYWRIGHT_EXECUTABLE_PATH at it when Chrome is missing. It is older than the
+# venv's Playwright expects, but it launches.
+fallback_chromium=/opt/pw-browsers/chromium
 if ! command -v google-chrome >/dev/null 2>&1; then
   deb="$(mktemp --suffix=.deb)"
-  curl -fsSL -o "$deb" https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  apt-get update -qq
-  DEBIAN_FRONTEND=noninteractive apt-get install -y -qq "$deb" >/dev/null
+  if curl -fsSL -o "$deb" https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb; then
+    apt-get update -qq || true
+    DEBIAN_FRONTEND=noninteractive apt-get install -y -qq "$deb" >/dev/null
+  elif [ -x "$fallback_chromium" ]; then
+    echo "dl.google.com unreachable; using the pre-installed $fallback_chromium" >&2
+  else
+    echo "dl.google.com unreachable and no $fallback_chromium; no browser to use" >&2
+    exit 1
+  fi
   rm -f "$deb"
 fi
 
 if ! command -v certutil >/dev/null 2>&1; then
-  apt-get update -qq
+  # `|| true`: an unrelated unreachable PPA fails the update but not the install.
+  apt-get update -qq || true
   DEBIAN_FRONTEND=noninteractive apt-get install -y -qq libnss3-tools >/dev/null
 fi
 
@@ -50,4 +62,5 @@ if [ -f "$proxy_ca" ]; then
   rm -rf "$certs"
 fi
 
-echo "ready: $(google-chrome --version); proxy CA trusted: $(certutil -d "$nssdb" -L -n ccr-agent-proxy-1 >/dev/null 2>&1 && echo yes || echo no)"
+browser="$(command -v google-chrome || echo "$fallback_chromium")"
+echo "ready: $("$browser" --version); proxy CA trusted: $(certutil -d "$nssdb" -L -n ccr-agent-proxy-1 >/dev/null 2>&1 && echo yes || echo no)"

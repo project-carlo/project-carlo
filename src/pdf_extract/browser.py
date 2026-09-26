@@ -42,12 +42,16 @@ def launch_stealth_browser(*, channel: str | None = None) -> Iterator[PageLike]:
     """Yield a stealth-patched page. PLAYWRIGHT_HEADLESS and
     PLAYWRIGHT_BROWSER_CHANNEL override the defaults; `channel` is the
     caller's default when the env var is unset (e.g. "chrome" for sites
-    whose bot checks reject bundled Chromium)."""
+    whose bot checks reject bundled Chromium). PLAYWRIGHT_EXECUTABLE_PATH
+    launches a specific browser binary instead, and wins over the channel."""
     launch_kwargs: dict[str, object] = {
         "headless": _env_bool("PLAYWRIGHT_HEADLESS", False),
     }
     channel = os.getenv("PLAYWRIGHT_BROWSER_CHANNEL") or channel
-    if channel:
+    executable = os.getenv("PLAYWRIGHT_EXECUTABLE_PATH")
+    if executable:
+        launch_kwargs["executable_path"] = executable
+    elif channel:
         launch_kwargs["channel"] = channel
 
     with sync_playwright() as pw:

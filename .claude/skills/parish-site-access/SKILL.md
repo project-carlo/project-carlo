@@ -31,6 +31,16 @@ Before it runs, no browser starts at all:
   `playwright install` is blocked.
 - The proxy re-terminates TLS, so every page fails with `ERR_CERT_AUTHORITY_INVALID`.
 
+If the environment's network policy denies `dl.google.com`, the script falls back to the
+image's pre-installed Chromium (`/opt/pw-browsers/chromium`), and `visit.py` launches that
+through `PLAYWRIGHT_EXECUTABLE_PATH`. It works, but Cloudflare may pass it less often than
+Chrome. None of this helps when the policy denies the parish sites themselves: a page that
+fails with `ERR_TUNNEL_CONNECTION_FAILED` (or curl's `CONNECT tunnel failed, response 403`)
+is a denied host, listed under `recentRelayFailures` in
+`curl -sS "$HTTPS_PROXY/__agentproxy/status"`. The "trusted" network level denies every
+diocese, parish and bulletin host (and WebFetch with it), so exploration needs an
+environment with full network access.
+
 ## `visit.py`: probe url in a real browser
 
 ```bash

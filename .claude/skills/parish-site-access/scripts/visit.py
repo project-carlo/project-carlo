@@ -57,6 +57,7 @@ CF_SETTLE_MS = 5000
 # seconds, so back off instead of hammering: 2s, 4s, 8s, then 15s.
 RETRY_PAUSES_MS = (2000, 4000, 8000, 15000)
 BULLETIN_PAGES_TO_TRY = 5
+FALLBACK_CHROMIUM = "/opt/pw-browsers/chromium"
 
 
 def _reexec_under_xvfb() -> None:
@@ -361,6 +362,10 @@ def main() -> int:
     channel = os.getenv("PLAYWRIGHT_BROWSER_CHANNEL") or (
         "chrome" if shutil.which("google-chrome") else None
     )
+    # No Chrome (setup_browser.sh couldn't download it): the image's Chromium.
+    if channel is None and not os.getenv("PLAYWRIGHT_EXECUTABLE_PATH"):
+        if os.access(FALLBACK_CHROMIUM, os.X_OK):
+            os.environ["PLAYWRIGHT_EXECUTABLE_PATH"] = FALLBACK_CHROMIUM
     results = []
     with launch_stealth_browser(channel=channel) as first_page:
         context = first_page.context
