@@ -17,6 +17,7 @@ in fact been printing every week.
 from __future__ import annotations
 
 import logging
+from collections.abc import Collection
 from typing import Any
 
 from pdf_extract.classifiers.gemini import GeminiClassifier
@@ -49,6 +50,7 @@ from pdf_extract.storage import (
     churches_for_parish,
     connect_db,
     get_parish_by_name,
+    list_parishes,
     load_bulletins,
     save_processed_bulletin,
     utc_now_iso,
@@ -96,13 +98,16 @@ def _prepare_rows(
 def process_bulletins(
     *,
     parish_name: str | None = None,
+    slugs: Collection[str] | None = None,
     model: str = DEFAULT_GEMINI_MODEL,
     concurrency: int = 5,
     run_id: str | None = None,
 ) -> dict[str, int]:
     LOGGER.info(
-        "Starting process stage (parish_name=%s, model=%s, concurrency=%s)",
-        parish_name or "*all*", model, concurrency,
+        "Starting process stage (parish_name=%s, slugs=%s, model=%s, concurrency=%s)",
+        parish_name or "*all*",
+        "*all*" if slugs is None else len(slugs),
+        model, concurrency,
     )
     classifier = GeminiClassifier(model=model)
 
@@ -135,6 +140,13 @@ def process_bulletins(
                 }
             target_slug = parish_row["slug"]
             pending = [m for m in pending if m["parish_slug"] == target_slug]
+        elif slugs is not None:
+            known = {row["slug"] for row in list_parishes(conn)}
+            missing = sorted(set(slugs) - known)
+            if missing:
+                raise ValueError(f"Parish not found: {', '.join(missing)}")
+            wanted = set(slugs)
+            pending = [m for m in pending if m["parish_slug"] in wanted]
 
         history = load_history_from_db(conn)
         pruned = prune_history(history)

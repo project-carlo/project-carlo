@@ -1,4 +1,5 @@
 import json
+import logging
 import sqlite3
 from pathlib import Path
 from typing import Any
@@ -9,6 +10,7 @@ from pdf_extract import __main__ as cli
 from pdf_extract import weekly
 from pdf_extract.datasync import run_out_dir
 from pdf_extract.db import DatabaseMissingError, create_db
+from pdf_extract.dioceses.records import DioceseError
 from pdf_extract.extract_frontend_db import read_snapshot
 from pdf_extract.runs import record_parish_result
 from pdf_extract.storage import (
@@ -18,7 +20,7 @@ from pdf_extract.storage import (
     save_processed_bulletin,
     utc_now_iso,
 )
-from pdf_extract.weekly import run_weekly
+from pdf_extract.weekly import RunScopeError, resolve_run_scope, run_weekly
 
 EVENTS = [
     {
@@ -128,9 +130,10 @@ def test_weekly_run_passes_and_writes_outputs(
     assert result["stages"]["snapshot"]["events"] == 3
     assert result["totals"]["parishes_with_new_bulletin"] == 1
     assert calls == [
-        {"stage": "fetch", "run_id": "run-1"},
-        {"stage": "process", "model": "m", "concurrency": 2, "run_id": "run-1"},
+        {"stage": "fetch", "run_id": "run-1", "slugs": None},
+        {"stage": "process", "model": "m", "concurrency": 2, "run_id": "run-1", "slugs": None},
     ]
+    assert result["scope"] is None
 
     for name in ("report.md", "report.json", "frontend.json.gz", "before.db"):
         assert (out / name).is_file(), name
@@ -286,3 +289,154 @@ def test_cli_weekly_defaults_run_id_and_passes_options(
     assert (kwargs["concurrency"], kwargs["git_sha"], kwargs["trigger"]) == (
         3, "abc", "schedule",
     )
+    assert kwargs["parishes"] is None and kwargs["dioceses"] is None
+
+
+def test_cli_weekly_forwards_parish_and_diocese_limits(
+    pipeline_dir: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    calls: list[dict[str, Any]] = []
+
+    def fake_run_weekly(**kwargs: Any) -> dict[str, Any]:
+        calls.append(kwargs)
+        return {"status": "passed"}
+
+    monkeypatch.setattr(cli, "_load_dotenv", lambda: None)
+    monkeypatch.setattr(cli, "run_weekly", fake_run_weekly)
+
+    assert cli.main([
+        "weekly", "--parish", "one, two", "--parish", "three", "--diocese", "buffalo",
+    ]) == 0
+
+    [kwargs] = calls
+    assert kwargs["parishes"] == ["one, two", "three"]
+    assert kwargs["dioceses"] == ["buffalo"]
+
+
+def test_cli_weekly_prints_a_scope_error_without_a_traceback(
+    published_db: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str],
+) -> None:
+    monkeypatch.setattr(cli, "_load_dotenv", lambda: None)
+
+    assert cli.main(["weekly", "--parish", "no-such-parish"]) == 1
+
+    captured = capsys.readouterr()
+    assert "Parish not found: no-such-parish" in captured.err
+    assert "Traceback" not in captured.err
+    conn = connect_db()
+    try:
+        assert conn.execute("SELECT count(*) FROM pipeline_run").fetchone()[0] == 0
+    finally:
+        conn.close()
+    assert not Path("data/out").exists()
+
+
+def _write_diocese(root: Path, slug: str, parishes: list[str]) -> None:
+    folder = root / "data" / "dioceses" / slug
+    (folder / "parishes").mkdir(parents=True)
+    (folder / "diocese.md").write_text(f"---\nname: {slug}\n---\n", encoding="utf-8")
+    for parish in parishes:
+        (folder / "parishes" / f"{parish}.md").write_text("---\nname: x\n---\n", encoding="utf-8")
+
+
+def test_resolve_run_scope_matches_slugs_names_and_dioceses(
+    pipeline_dir: Path, caplog: pytest.LogCaptureFixture,
+) -> None:
+    from tests.conftest import PARISH_FIELDS, write_csv
+
+    write_csv(
+        pipeline_dir / "data" / "parishes.csv",
+        PARISH_FIELDS,
+        [
+            {"slug": "test-parish", "name": "Test Parish", "website": "https://example.org"},
+            {"slug": "mary", "name": "Mary, Mother of Mercy", "website": "https://mary.example"},
+        ],
+    )
+    create_db()
+    _write_diocese(pipeline_dir, "example", ["test-parish", "not-live"])
+    _write_diocese(pipeline_dir, "empty", ["not-live"])
+
+    conn = connect_db()
+    try:
+        assert resolve_run_scope(conn) is None
+        assert resolve_run_scope(conn, parishes=["  "], dioceses=[","]) is None
+
+        named = resolve_run_scope(conn, parishes=["Mary, Mother of Mercy"])
+        assert named is not None
+        assert named.parishes == ("mary",)
+        assert named.selected == ("mary",)
+
+        listed = resolve_run_scope(conn, parishes=["mary, test-parish", "Test Parish"])
+        assert listed is not None
+        assert listed.parishes == ("mary", "test-parish")
+        assert listed.selected == ("test-parish", "mary")
+
+        with caplog.at_level(logging.WARNING):
+            diocese = resolve_run_scope(conn, dioceses=["example, example"])
+        assert diocese is not None
+        assert diocese.dioceses == ("example",)
+        assert diocese.selected == ("test-parish",)
+        assert "not-live" in caplog.text
+
+        both = resolve_run_scope(conn, parishes=["mary"], dioceses=["example"])
+        assert both is not None
+        assert both.selected == ("test-parish", "mary")
+        assert both.summary() == "Refreshed 2 parishes: diocese `example`; `mary`."
+
+        with pytest.raises(RunScopeError, match="no-such-parish"):
+            resolve_run_scope(conn, parishes=["no-such-parish, mary"])
+        with pytest.raises(RunScopeError, match="no parishes"):
+            resolve_run_scope(conn, dioceses=["empty"])
+        with pytest.raises(DioceseError, match="no diocese"):
+            resolve_run_scope(conn, dioceses=["missing"])
+    finally:
+        conn.close()
+
+
+def test_weekly_run_refreshes_only_the_named_parishes(
+    published_db: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    calls = _install_stages(monkeypatch, EVENTS)
+
+    result = run_weekly(run_id="run-1", parishes=["Test Parish"], dioceses=None)
+
+    assert result["status"] == "passed"
+    assert result["scope"]["selected"] == ["test-parish"]
+    assert result["scope"]["summary"] == "Refreshed 1 parish: `test-parish`."
+    assert calls == [
+        {"stage": "fetch", "run_id": "run-1", "slugs": ["test-parish"]},
+        {
+            "stage": "process", "model": "gemini-3-flash-preview", "concurrency": 5,
+            "run_id": "run-1", "slugs": ["test-parish"],
+        },
+    ]
+    report_path = run_out_dir("run-1")
+    report = json.loads((report_path / "report.json").read_text(encoding="utf-8"))
+    assert report["scope"]["parishes"] == ["test-parish"]
+    assert report["scope"]["summary"] in (report_path / "report.md").read_text(encoding="utf-8")
+
+
+def test_weekly_run_refreshes_the_live_parishes_of_a_diocese(
+    published_db: Path, pipeline_dir: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    calls = _install_stages(monkeypatch, EVENTS)
+    _write_diocese(pipeline_dir, "example", ["test-parish", "not-live"])
+
+    result = run_weekly(run_id="run-1", dioceses=["example"])
+
+    assert result["scope"]["dioceses"] == ["example"]
+    assert result["scope"]["selected"] == ["test-parish"]
+    assert calls[0]["slugs"] == ["test-parish"]
+    assert calls[1]["slugs"] == ["test-parish"]
+
+
+def test_weekly_run_rejects_an_unknown_parish_before_starting(
+    published_db: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    calls = _install_stages(monkeypatch, EVENTS)
+
+    with pytest.raises(RunScopeError, match="no-such-parish"):
+        run_weekly(run_id="run-1", parishes=["no-such-parish"])
+
+    assert calls == []
+    assert not Path("data/out").exists()

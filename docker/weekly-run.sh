@@ -24,9 +24,22 @@ run() {
   fi
 }
 
+weekly_args=(
+  weekly
+  --run-id "${RUN_ID}"
+  --git-sha "${GIT_SHA:-}"
+  --trigger "${RUN_TRIGGER:-}"
+)
+# Optional manual limits. Empty (the scheduled run) refreshes every parish.
+if [[ -n "${PARISHES:-}" ]]; then
+  weekly_args+=(--parish "${PARISHES}")
+fi
+if [[ -n "${DIOCESES:-}" ]]; then
+  weekly_args+=(--diocese "${DIOCESES}")
+fi
+
 set +e
-run uv run --no-sync python -m pdf_extract weekly \
-  --run-id "${RUN_ID}" --git-sha "${GIT_SHA:-}" --trigger "${RUN_TRIGGER:-}"
+run uv run --no-sync python -m pdf_extract "${weekly_args[@]}"
 status=$?
 set -e
 

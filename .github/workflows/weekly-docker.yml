@@ -10,6 +10,17 @@ on:
     # Runs Sundays at 08:17 UTC. The offset minute avoids GitHub's top-of-hour load spike.
     - cron: "17 8 * * 0"
   workflow_dispatch:
+    inputs:
+      parishes:
+        description: "Only these parishes (slugs, comma-separated). Empty refreshes every parish unless Dioceses is set."
+        required: false
+        type: string
+        default: ""
+      dioceses:
+        description: "Only the live parishes of these dioceses (slugs under data/dioceses/, comma-separated). Combines with Parishes."
+        required: false
+        type: string
+        default: ""
 
 permissions: read-all
 
@@ -58,10 +69,16 @@ jobs:
 
       - name: Name this run
         id: run
+        env:
+          PARISHES: ${{ github.event_name == 'workflow_dispatch' && inputs.parishes || '' }}
+          DIOCESES: ${{ github.event_name == 'workflow_dispatch' && inputs.dioceses || '' }}
         run: |
           run_id="$(date -u +%Y%m%dT%H%M%SZ)-gh${GITHUB_RUN_ID}"
           echo "id=${run_id}" >> "$GITHUB_OUTPUT"
           echo "Run id: \`${run_id}\`" >> "$GITHUB_STEP_SUMMARY"
+          if [[ -n "$PARISHES$DIOCESES" ]]; then
+            echo "Refreshing parishes: \`${PARISHES:-all}\`; dioceses: \`${DIOCESES:-all}\`" >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
@@ -83,6 +100,8 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
           RUN_ID: ${{ steps.run.outputs.id }}
+          PARISHES: ${{ github.event_name == 'workflow_dispatch' && inputs.parishes || '' }}
+          DIOCESES: ${{ github.event_name == 'workflow_dispatch' && inputs.dioceses || '' }}
           # Only the default branch writes to R2. A run on another branch still
           # reads the published data, but its PDFs, cached extractions and
           # candidate stay inside the job, so trying out a branch can never
@@ -95,6 +114,7 @@ jobs:
             -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
             -e CARLO_REMOTE_WRITE \
             -e RUN_ID -e GIT_SHA="$GITHUB_SHA" -e RUN_TRIGGER="$GITHUB_EVENT_NAME" \
+            -e PARISHES -e DIOCESES \
             project-carlo-weekly:latest
           code=$?
           set -e
