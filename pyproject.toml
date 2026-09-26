@@ -29,6 +29,8 @@ dev = [
     "pytest>=9.0.2",
     "ruff>=0.15.2",
 ]
+# PDF → text extractors for `pnpm bench` (see pdf_extract.text_extractors).
+bench = []
 
 [tool.ruff]
 target-version = "py313"

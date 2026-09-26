@@ -262,3 +262,34 @@ def test_compare_missing_run_raises(patched_runs):
     _write_run(tmp, "a", [_ev()])
     with pytest.raises(FileNotFoundError):
         compare.compare(["a", "missing"], out_path=tmp / "report.json")
+
+
+def test_strict_key_normalizes_time_formats():
+    assert compare.strict_key(_ev(start_time="9:00 AM")) == compare.strict_key(
+        _ev(start_time="9:00am")
+    )
+
+
+def test_slot_key_matches_a_dated_event_to_its_weekday():
+    weekly = _ev(event_kind="weekly", day_of_week="Sunday", end_time=None)
+    dated = _ev(event_kind="specific_date", day_of_week=None, date="2026-09-27", end_time="10:00 AM")
+    assert compare.strict_key(weekly) != compare.strict_key(dated)
+    assert compare.slot_key(weekly) == compare.slot_key(dated)
+
+
+def test_baseline_scores_precision_and_recall(patched_runs):
+    tmp = patched_runs
+    base = [_ev(start_time="9:00 AM"), _ev(start_time="11:00 AM", event_type="confession")]
+    cand = [_ev(start_time="9:00am"), _ev(start_time="5:00 PM")]
+    _write_run(tmp, "base", base)
+    _write_run(tmp, "cand", cand)
+
+    report = compare.compare(["base", "cand"], out_path=tmp / "r.json", baseline="base")
+    row = report["vs_baseline"][0]
+    assert row["strict"] == {"precision": 0.5, "recall": 0.5, "f1": 0.5}
+    assert row["by_event_type"]["mass"]["recall"] == 1.0
+    assert row["by_event_type"]["confession"]["recall"] == 0.0
+    # Only the baseline pairs are compared side by side.
+    assert [(p["classifier_a"], p["classifier_b"]) for p in report["pairwise"]] == [
+        ("base", "cand")
+    ]

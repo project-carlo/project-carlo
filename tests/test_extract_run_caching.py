@@ -106,6 +106,10 @@ def test_first_run_calls_classifier_and_writes_outputs(seeded_run):
             "published_date": None,
             "event_count": 1,
             "wrong_bulletin": False,
+            "published_date_extracted": None,
+            "usage": {},
+            "timing": {},
+            "text_chars": None,
         }
     ]
 

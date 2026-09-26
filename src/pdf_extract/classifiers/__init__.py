@@ -11,10 +11,19 @@ from collections.abc import Callable
 from pdf_extract.classifiers.base import Classifier
 from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.classifiers.openai_gpt import OpenAIClassifier
+from pdf_extract.classifiers.text_llm import DEFAULT_TEXT_MODEL, TextLLMClassifier
 
 REGISTRY: dict[str, Callable[[], Classifier]] = {
     "gemini-flash": lambda: GeminiClassifier(),
     "gpt-5.4-mini": lambda: OpenAIClassifier(model="gpt-5.4-mini"),
+    # Text-extraction stacks feeding a small OpenAI model (see `pnpm bench`),
+    # plus the same model reading the PDF directly, as a control.
+    "luna-pdf": lambda: OpenAIClassifier(
+        model=DEFAULT_TEXT_MODEL, name="luna-pdf", reasoning_effort="medium",
+    ),
+    "luna-pymupdf": lambda: TextLLMClassifier(extractor="pymupdf-layout", name="luna-pymupdf"),
+    "luna-docling": lambda: TextLLMClassifier(extractor="docling", name="luna-docling"),
+    "luna-ocr": lambda: TextLLMClassifier(extractor="ocr-layout", name="luna-ocr"),
 }
 
 

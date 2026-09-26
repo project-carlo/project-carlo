@@ -14,6 +14,7 @@ from __future__ import annotations
 import base64
 import json
 import logging
+import time
 from datetime import date
 from typing import Any
 
@@ -30,6 +31,20 @@ LOGGER = logging.getLogger(__name__)
 DEFAULT_MODEL = "gpt-5.4-mini"
 
 
+def openai_usage(response: Any) -> dict[str, int]:
+    """Token counts of a Responses API call, in the keys run reports sum."""
+    usage = getattr(response, "usage", None)
+    input_details = getattr(usage, "input_tokens_details", None)
+    output_details = getattr(usage, "output_tokens_details", None)
+    counts = {
+        "prompt_tokens": getattr(usage, "input_tokens", None),
+        "output_tokens": getattr(usage, "output_tokens", None),
+        "cached_tokens": getattr(input_details, "cached_tokens", None),
+        "reasoning_tokens": getattr(output_details, "reasoning_tokens", None),
+    }
+    return {k: v for k, v in counts.items() if isinstance(v, int)}
+
+
 class OpenAIClassifier:
     name: str
     version: str
@@ -41,11 +56,13 @@ class OpenAIClassifier:
         model: str = DEFAULT_MODEL,
         name: str | None = None,
         max_retries: int = 5,
+        reasoning_effort: str | None = None,
     ) -> None:
         self._model = model
         self._max_retries = max_retries
+        self._reasoning_effort = reasoning_effort
         self.name = name or model
-        self.version = model
+        self.version = f"{model}+effort-{reasoning_effort}" if reasoning_effort else model
 
     def extract(
         self,
@@ -64,8 +81,13 @@ class OpenAIClassifier:
         )
         encoded = base64.b64encode(pdf_bytes).decode("ascii")
 
+        extra: dict[str, Any] = {}
+        if self._reasoning_effort:
+            extra["reasoning"] = {"effort": self._reasoning_effort}
+
+        started = time.monotonic()
         # The SDK retries 429 / 5xx responses internally; bump the budget.
-        client = OpenAI(max_retries=self._max_retries)
+        client = OpenAI(max_retries=self._max_retries, timeout=600)
         response = client.responses.parse(
             model=self._model,
             input=[
@@ -85,7 +107,9 @@ class OpenAIClassifier:
                 }
             ],
             text_format=SchedulePayload,
+            **extra,
         )
+        llm_seconds = time.monotonic() - started
 
         parsed = response.output_parsed
         if parsed is None:
@@ -95,6 +119,9 @@ class OpenAIClassifier:
                 "OpenAI %s returned no parsed output; treating as empty bulletin",
                 self._model,
             )
-            return reconstruct_events({})
-
-        return reconstruct_events(parsed)
+            result = reconstruct_events({})
+        else:
+            result = reconstruct_events(parsed)
+        result["usage"] = openai_usage(response)
+        result["timing"] = {"llm_seconds": round(llm_seconds, 3)}
+        return result

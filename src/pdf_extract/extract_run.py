@@ -58,16 +58,27 @@ def run_summary_path(classifier_name: str) -> Path:
 # ── Main entry point ────────────────────────────────────────────────────────
 def run(
     *,
-    classifier_name: str,
+    classifier_name: str | None = None,
+    classifier: Classifier | None = None,
     parish_name: str | None = None,
     concurrency: int = 5,
+    source_urls: set[str] | None = None,
+    cache_only: bool = False,
 ) -> dict[str, Any]:
     """Run a classifier over the fetched bulletin corpus.
 
     Re-uses cached classifier outputs keyed by (classifier+version, content_hash).
     Always rebuilds the run's events.json from the cache so it stays in sync.
+
+    Pass a registered `classifier_name`, or a configured `classifier` instance.
+    `source_urls` limits the run to those bulletins; `cache_only` serves cached
+    results and skips the rest instead of calling the classifier (the benchmark
+    reads the Gemini baseline this way, from what the weekly job already paid for).
     """
-    classifier = get_classifier(classifier_name)
+    if classifier is None:
+        if classifier_name is None:
+            raise ValueError("Pass classifier_name or classifier")
+        classifier = get_classifier(classifier_name)
     LOGGER.info(
         "Starting extract run (classifier=%s version=%s parish=%s concurrency=%s)",
         classifier.name,
@@ -93,6 +104,8 @@ def run(
                 return _summary(classifier)
             target_slug = parish_row["slug"]
             candidates = [m for m in candidates if m["parish_slug"] == target_slug]
+        if source_urls is not None:
+            candidates = [m for m in candidates if m["source_url"] in source_urls]
 
         # Pass 1: serve everything we already have cached, build the work list.
         pending: list[dict[str, Any]] = []
@@ -112,6 +125,8 @@ def run(
             if cached is not None:
                 cached_results[entry["source_url"]] = cached
                 cache_hits += 1
+            elif cache_only:
+                skipped += 1
             else:
                 pending.append(entry)
 
@@ -167,6 +182,10 @@ def run(
                 ),
                 "event_count": len(rows),
                 "wrong_bulletin": bool(result.get("wrong_bulletin")),
+                "published_date_extracted": result.get("published_date"),
+                "usage": result.get("usage") or {},
+                "timing": result.get("timing") or {},
+                "text_chars": result.get("text_chars"),
             }
         )
 
@@ -182,6 +201,7 @@ def run(
         skipped=skipped,
         errors=errors,
         events_written=len(events),
+        usage_total=_sum_usage(served_bulletins),
         wall_seconds=round(time.monotonic() - started, 3),
     )
 
@@ -213,5 +233,20 @@ def _summary(classifier: Classifier, **counters: Any) -> dict[str, Any]:
         "skipped": 0,
         "errors": [],
         "events_written": 0,
+        "usage_total": {},
         "wall_seconds": 0.0,
     } | counters
+
+
+def _sum_usage(bulletins: list[dict[str, Any]]) -> dict[str, int]:
+    """Token counts summed over every served bulletin, cached or not.
+
+    Cached results carry the usage of the call that produced them, so this is
+    what the run would cost from scratch, comparable across classifiers.
+    """
+    totals: dict[str, int] = {}
+    for row in bulletins:
+        for key, value in (row.get("usage") or {}).items():
+            if isinstance(value, int):
+                totals[key] = totals.get(key, 0) + value
+    return totals

@@ -26,7 +26,9 @@ from pdf_extract.apply import (
     apply_geocode_results,
     apply_verify_results,
 )
+from pdf_extract.bench import DEFAULT_STACKS, STACKS, BenchError, run_bench
 from pdf_extract.classifiers import available_classifiers
+from pdf_extract.classifiers.text_llm import DEFAULT_REASONING_EFFORT, DEFAULT_TEXT_MODEL
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
     DEFAULT_KEEP_MONTHLY,
@@ -127,7 +129,25 @@ def _cmd_extract(args: argparse.Namespace) -> Result:
 
 
 def _cmd_compare(args: argparse.Namespace) -> Result:
-    return compare(args.classifiers, out_path=Path(args.out) if args.out else None)
+    return compare(
+        args.classifiers,
+        out_path=Path(args.out) if args.out else None,
+        baseline=args.baseline,
+    )
+
+
+def _cmd_bench(args: argparse.Namespace) -> Result:
+    return run_bench(
+        stacks=args.stacks,
+        model=args.model,
+        effort=None if args.effort == "default" else args.effort,
+        limit=args.limit,
+        seed=args.seed,
+        parish_name=args.parish,
+        concurrency=args.concurrency,
+        fill_baseline=args.fill_baseline,
+        refresh_data=args.refresh_data,
+    )
 
 
 def _cmd_detect_run(args: argparse.Namespace) -> Result:
@@ -298,8 +318,51 @@ def _build_parser() -> argparse.ArgumentParser:
         "--out", type=str, default=None,
         help="Optional path for the JSON report (default: data/runs/compare/compare_<ts>.json)",
     )
+    compare_parser.add_argument(
+        "--baseline", default=None,
+        help="Score every other classifier against this one (precision/recall/F1, cost)",
+    )
     compare_parser.set_defaults(handler=_cmd_compare)
     _add_common_args(compare_parser)
+
+    # -- bench (experimental: text-extraction stacks vs. the Gemini baseline) --
+    bench_parser = subparsers.add_parser(
+        "bench",
+        help="Benchmark PDF-to-text + OpenAI stacks against the cached Gemini extractions",
+    )
+    bench_parser.add_argument(
+        "--stacks", nargs="+", choices=list(STACKS), default=list(DEFAULT_STACKS),
+        help=f"Stacks to run (default: {' '.join(DEFAULT_STACKS)})",
+    )
+    bench_parser.add_argument(
+        "--model", default=DEFAULT_TEXT_MODEL,
+        help=f"OpenAI model every stack uses (default: {DEFAULT_TEXT_MODEL})",
+    )
+    bench_parser.add_argument(
+        "--effort", default=DEFAULT_REASONING_EFFORT,
+        choices=["none", "low", "medium", "high", "xhigh", "max", "default"],
+        help=f"Reasoning effort; 'default' omits it (default: {DEFAULT_REASONING_EFFORT})",
+    )
+    bench_parser.add_argument(
+        "--limit", type=int, default=None,
+        help="Benchmark a fixed random sample of this many bulletins (default: all)",
+    )
+    bench_parser.add_argument("--seed", type=int, default=0, help="Sample seed (default: 0)")
+    bench_parser.add_argument("--parish", help="Only this parish (by name)")
+    bench_parser.add_argument(
+        "--concurrency", type=int, default=8,
+        help="Bulletins in flight at once (default: 8)",
+    )
+    bench_parser.add_argument(
+        "--fill-baseline", action="store_true",
+        help="Call Gemini for bulletins with no cached baseline (needs GEMINI_API_KEY)",
+    )
+    bench_parser.add_argument(
+        "--refresh-data", action="store_true",
+        help="Pull the published database first, replacing the local one",
+    )
+    bench_parser.set_defaults(handler=_cmd_bench)
+    _add_common_args(bench_parser)
 
     # -- detect --
     detect_parser = subparsers.add_parser("detect", help="Detect bulletin provider for parish websites")
@@ -512,7 +575,7 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         result = handler(args)
-    except DioceseError as e:
+    except (DioceseError, BenchError) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)
         return 1

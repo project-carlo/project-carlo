@@ -6,6 +6,13 @@ surfaces per-classifier latency and cache stats from data/runs/<name>/run.json.
 
 The match-key extraction is exposed as `event_key()` so the same matcher can
 score against ground truth once labels exist.
+
+With a baseline (`compare --baseline gemini-flash ...`, and every `bench`
+run), each other classifier is also scored against the baseline as if it were
+ground truth: precision, recall and F1 per event type, plus what each run
+would cost and how long it takes. That measures agreement with the production
+extractor, not correctness; the side-by-side report is where to judge which
+side of a disagreement is right.
 """
 
 from __future__ import annotations
@@ -15,7 +22,7 @@ import json
 import logging
 import statistics
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
@@ -24,6 +31,7 @@ from pdf_extract.extract_run import bulletins_path, events_path, run_summary_pat
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.runner import RUNS_DIR
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, load_bulletins, utc_now_iso
+from pdf_extract.timeparse import normalize_event_date, time_to_minutes
 
 LOGGER = logging.getLogger(__name__)
 
@@ -49,6 +57,60 @@ def event_key(event: dict[str, Any]) -> EventKey:
         event.get("date") if isinstance(event.get("date"), str) else None,
         str(event.get("start_time", "")),
         event.get("end_time") if isinstance(event.get("end_time"), str) else None,
+        bool(event.get("cancelled", False)),
+    )
+
+
+NormalizedKey = tuple[Any, ...]
+
+EVENT_TYPES = ("mass", "confession", "adoration")
+
+# USD per 1M tokens: (input, cached input, output). List prices as of
+# September 2026; edit when they change. A classifier's price is found by
+# the model id its version string starts with. Gemini's recorded output
+# tokens exclude its thinking tokens, so its cost here is a lower bound.
+MODEL_PRICES: dict[str, tuple[float, float, float]] = {
+    "gemini-3-flash-preview": (0.25, 0.05, 1.50),
+    "gpt-6-luna": (0.10, 0.01, 0.50),
+    "gpt-5.4-mini": (0.25, 0.025, 2.00),
+}
+
+
+def _minutes(value: Any) -> int | None:
+    return time_to_minutes(value) if isinstance(value, str) else None
+
+
+def strict_key(event: dict[str, Any]) -> NormalizedKey:
+    """`event_key` with times and dates parsed, so "9:00 AM" matches "9:00am"."""
+    kind = str(event.get("event_kind", ""))
+    return (
+        str(event.get("church_slug", "")),
+        str(event.get("event_type", "")),
+        kind,
+        event.get("day_of_week") if kind == "weekly" else None,
+        normalize_event_date(event.get("date")) if kind != "weekly" else None,
+        _minutes(event.get("start_time")),
+        _minutes(event.get("end_time")),
+        bool(event.get("cancelled", False)),
+    )
+
+
+def slot_key(event: dict[str, Any]) -> NormalizedKey:
+    """A looser identity: church, type, weekday, start time and cancellation.
+
+    Ignores whether the event was filed as weekly or dated (a dated event
+    counts as its weekday) and the end time, the two things classifiers most
+    often disagree on for an event they both found.
+    """
+    weekday = event.get("day_of_week") if isinstance(event.get("day_of_week"), str) else None
+    iso = normalize_event_date(event.get("date"))
+    if iso is not None:
+        weekday = date.fromisoformat(iso).strftime("%A")
+    return (
+        str(event.get("church_slug", "")),
+        str(event.get("event_type", "")),
+        (weekday or "").lower(),
+        _minutes(event.get("start_time")),
         bool(event.get("cancelled", False)),
     )
 
@@ -300,36 +362,68 @@ def _classifier_stats(
         "cache_misses": summary.get("cache_misses"),
         "wall_seconds": summary.get("wall_seconds"),
         "errors": len(summary.get("errors") or []),
+        "cost_usd_per_bulletin": _cost_per_bulletin(summary),
     }
+
+
+def _cost_per_bulletin(summary: dict[str, Any]) -> float | None:
+    price = model_price(summary.get("classifier_version"))
+    usage = summary.get("usage_total") or {}
+    served = summary.get("bulletins_served") or 0
+    if price is None or not usage or not served:
+        return None
+    return round(usage_cost(usage, price) / served, 5)
 
 
 def compare(
     classifier_names: list[str],
     *,
     out_path: Path | None = None,
+    baseline: str | None = None,
 ) -> dict[str, Any]:
-    """Compute pairwise metrics across N classifier runs."""
+    """Compute pairwise metrics across N classifier runs.
+
+    With `baseline` (one of `classifier_names`), also score every other
+    classifier against it, and limit the per-bulletin side-by-side to the
+    pairs that include it.
+    """
     if len(classifier_names) < 2:
         raise ValueError("Need at least two classifiers to compare")
+    if baseline is not None and baseline not in classifier_names:
+        raise ValueError(f"Baseline {baseline!r} is not among the compared classifiers")
 
     runs = {name: _load_run(name) for name in classifier_names}
+    manifests = {name: load_manifest(name) for name in classifier_names}
     metadata = _load_bulletin_metadata()
 
     per_classifier = [
         _classifier_stats(name, grouped, summary) for name, (grouped, summary) in runs.items()
     ]
 
+    pairs = list(itertools.combinations(classifier_names, 2))
+    if baseline is not None:
+        pairs = [(baseline, other) for other in classifier_names if other != baseline]
     pairwise = [
-        _pairwise_metrics(a, runs[a][0], b, runs[b][0], metadata)
-        for a, b in itertools.combinations(classifier_names, 2)
+        _pairwise_metrics(a, runs[a][0], b, runs[b][0], metadata) for a, b in pairs
     ]
 
-    report = {
+    report: dict[str, Any] = {
         "generated_at": utc_now_iso(),
         "classifiers": classifier_names,
         "per_classifier": per_classifier,
         "pairwise": pairwise,
     }
+    if baseline is not None:
+        report["baseline"] = baseline
+        report["vs_baseline"] = [
+            _baseline_metrics(
+                name, runs[name], manifests[name],
+                baseline, runs[baseline], manifests[baseline],
+                metadata,
+            )
+            for name in classifier_names
+            if name != baseline
+        ]
 
     if out_path is None:
         COMPARE_DIR.mkdir(parents=True, exist_ok=True)
@@ -351,19 +445,222 @@ def compare(
     return report
 
 
+def load_manifest(classifier_name: str) -> dict[str, dict[str, Any]]:
+    """bulletins.json rows (usage, timing, extracted date) keyed by source URL."""
+    path = bulletins_path(classifier_name)
+    if not path.exists():
+        return {}
+    try:
+        rows = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        LOGGER.warning("Could not parse %s; ignoring", path, exc_info=True)
+        return {}
+    return {
+        row["bulletin_source_url"]: row
+        for row in rows
+        if isinstance(row, dict) and isinstance(row.get("bulletin_source_url"), str)
+    }
+
+
+def _prf(tp: int, predicted: int, expected: int) -> dict[str, float | None]:
+    precision = tp / predicted if predicted else None
+    recall = tp / expected if expected else None
+    if precision is None or recall is None:
+        f1 = None
+    else:
+        f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
+    return {
+        "precision": None if precision is None else round(precision, 4),
+        "recall": None if recall is None else round(recall, 4),
+        "f1": None if f1 is None else round(f1, 4),
+    }
+
+
+def model_price(version: str | None) -> tuple[float, float, float] | None:
+    """(input, cached input, output) USD per 1M tokens for a classifier version."""
+    if not version:
+        return None
+    for model, price in MODEL_PRICES.items():
+        if version.startswith(model):
+            return price
+    return None
+
+
+def usage_cost(usage: dict[str, Any], price: tuple[float, float, float]) -> float:
+    input_price, cached_price, output_price = price
+    prompt = int(usage.get("prompt_tokens") or 0)
+    cached = min(int(usage.get("cached_tokens") or 0), prompt)
+    output = int(usage.get("output_tokens") or 0)
+    return ((prompt - cached) * input_price + cached * cached_price + output * output_price) / 1e6
+
+
+def _mean(values: list[float]) -> float | None:
+    return round(statistics.fmean(values), 3) if values else None
+
+
+def _baseline_metrics(
+    name: str,
+    run: tuple[EventsByBulletin, dict[str, Any]],
+    manifest: dict[str, dict[str, Any]],
+    baseline: str,
+    baseline_run: tuple[EventsByBulletin, dict[str, Any]],
+    baseline_manifest: dict[str, dict[str, Any]],
+    metadata: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    """Score one classifier against the baseline on the bulletins both served."""
+    grouped, summary = run
+    base_grouped, _ = baseline_run
+    common = sorted(set(grouped) & set(base_grouped))
+
+    counts = {
+        scope: {"tp": 0, "predicted": 0, "expected": 0}
+        for scope in ("strict", "slot", *EVENT_TYPES)
+    }
+    exact = 0
+    missed_all: list[str] = []
+    per_bulletin: list[dict[str, Any]] = []
+    for url in common:
+        rows, base_rows = grouped[url], base_grouped[url]
+        for scope, key_fn, keep in (
+            ("strict", strict_key, None),
+            ("slot", slot_key, None),
+            *((t, strict_key, t) for t in EVENT_TYPES),
+        ):
+            got = {key_fn(r) for r in rows if keep is None or r.get("event_type") == keep}
+            want = {key_fn(r) for r in base_rows if keep is None or r.get("event_type") == keep}
+            counts[scope]["tp"] += len(got & want)
+            counts[scope]["predicted"] += len(got)
+            counts[scope]["expected"] += len(want)
+            if scope == "strict":
+                exact += got == want
+                if want and not got:
+                    missed_all.append(url)
+                bulletin_prf = _prf(len(got & want), len(got), len(want))
+                info = metadata.get(url, {})
+                per_bulletin.append(
+                    {
+                        "bulletin_source_url": url,
+                        "parish_slug": info.get("parish_slug"),
+                        "baseline_events": len(want),
+                        "events": len(got),
+                        "matched": len(got & want),
+                        "f1": bulletin_prf["f1"] if want or got else 1.0,
+                    }
+                )
+
+    date_pairs = [
+        (manifest[url].get("published_date_extracted"),
+         baseline_manifest[url].get("published_date_extracted"))
+        for url in common
+        if url in manifest and url in baseline_manifest
+    ]
+    dates_compared = [(a, b) for a, b in date_pairs if b]
+
+    served = [manifest[url] for url in common if url in manifest]
+    price = model_price(summary.get("classifier_version"))
+    costs = [
+        usage_cost(row["usage"], price) for row in served if price and row.get("usage")
+    ]
+    timings = [row.get("timing") or {} for row in served]
+    text_chars = [row["text_chars"] for row in served if isinstance(row.get("text_chars"), int)]
+
+    return {
+        "classifier": name,
+        "baseline": baseline,
+        "bulletins_compared": len(common),
+        "bulletins_missing": len(set(base_grouped) - set(grouped)),
+        "events": counts["strict"]["predicted"],
+        "baseline_events": counts["strict"]["expected"],
+        "strict": _prf(**counts["strict"]),
+        "slot": _prf(**counts["slot"]),
+        "by_event_type": {t: _prf(**counts[t]) for t in EVENT_TYPES},
+        "bulletins_exact_match": exact,
+        "bulletins_missed_entirely": missed_all,
+        "published_date_agreement": (
+            round(sum(a == b for a, b in dates_compared) / len(dates_compared), 4)
+            if dates_compared else None
+        ),
+        "cost_usd_total": round(sum(costs), 4) if costs else None,
+        "cost_usd_per_bulletin": round(statistics.fmean(costs), 5) if costs else None,
+        "llm_seconds_mean": _mean([t["llm_seconds"] for t in timings if "llm_seconds" in t]),
+        "text_seconds_mean": _mean([t["text_seconds"] for t in timings if "text_seconds" in t]),
+        "text_chars_mean": round(statistics.fmean(text_chars)) if text_chars else None,
+        "per_bulletin": sorted(
+            per_bulletin, key=lambda row: (row["f1"] is None, row["f1"] or 0.0),
+        ),
+    }
+
+
+def _fmt(value: Any) -> str:
+    if value is None:
+        return "–"
+    if isinstance(value, float):
+        return f"{value:.3f}".rstrip("0").rstrip(".") if value < 1 else f"{value:.2f}"
+    return str(value)
+
+
+def format_baseline_markdown(report: dict[str, Any]) -> str:
+    rows = report.get("vs_baseline") or []
+    if not rows:
+        return ""
+    baseline = report["baseline"]
+    lines = [
+        f"## Agreement with baseline `{baseline}`",
+        "",
+        "Precision/recall treat the baseline as ground truth, so they measure agreement "
+        "with it. *Strict* matches church, type, weekly/dated, day or date, start and end "
+        "time, and cancellation; *slot* only church, type, weekday, start time and "
+        "cancellation.",
+        "",
+        "| Classifier | Bulletins | Events (base) | Strict P | Strict R | Strict F1 | Slot F1 "
+        "| Mass R | Confession R | Adoration R | Exact bulletins | Missed bulletins "
+        "| Date agree | $/bulletin | LLM s | Text s | Text chars |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for r in rows:
+        by_type = r["by_event_type"]
+        lines.append(
+            f"| {r['classifier']} | {r['bulletins_compared']} "
+            f"| {r['events']} ({r['baseline_events']}) "
+            f"| {_fmt(r['strict']['precision'])} | {_fmt(r['strict']['recall'])} "
+            f"| **{_fmt(r['strict']['f1'])}** | {_fmt(r['slot']['f1'])} "
+            f"| {_fmt(by_type['mass']['recall'])} | {_fmt(by_type['confession']['recall'])} "
+            f"| {_fmt(by_type['adoration']['recall'])} "
+            f"| {r['bulletins_exact_match']} | {len(r['bulletins_missed_entirely'])} "
+            f"| {_fmt(r['published_date_agreement'])} | {_fmt(r['cost_usd_per_bulletin'])} "
+            f"| {_fmt(r['llm_seconds_mean'])} | {_fmt(r['text_seconds_mean'])} "
+            f"| {_fmt(r['text_chars_mean'])} |"
+        )
+    # Worst bulletins per classifier: where to look first in the side-by-side.
+    lines.extend(["", "### Lowest-agreement bulletins", ""])
+    for r in rows:
+        worst = [b for b in r["per_bulletin"] if b["f1"] is not None and b["f1"] < 1.0][:8]
+        lines.append(f"**{r['classifier']}**: " + (
+            ", ".join(
+                f"{b['parish_slug'] or b['bulletin_source_url']} "
+                f"(F1 {_fmt(b['f1'])}, {b['matched']}/{b['baseline_events']})"
+                for b in worst
+            ) or "none"
+        ))
+        lines.append("")
+    return "\n".join(lines).rstrip()
+
+
 def format_markdown(report: dict[str, Any]) -> str:
     lines: list[str] = []
     lines.append("## Per-classifier")
     lines.append("")
     lines.append(
-        "| Classifier | Version | Bulletins | Events | Mean/bulletin | Cache hits/misses | Wall (s) | Errors |"
+        "| Classifier | Version | Bulletins | Events | Mean/bulletin | Cache hits/misses "
+        "| Wall (s) | Errors | $/bulletin |"
     )
-    lines.append("|---|---|---:|---:|---:|---|---:|---:|")
+    lines.append("|---|---|---:|---:|---:|---|---:|---:|---:|")
     for c in report["per_classifier"]:
         cache = f"{c.get('cache_hits') or 0}/{c.get('cache_misses') or 0}"
         lines.append(
             f"| {c['classifier']} | {c.get('version') or ''} | {c['bulletins']} | {c['events_total']} | "
-            f"{c['events_per_bulletin_mean']} | {cache} | {c.get('wall_seconds') or ''} | {c['errors']} |"
+            f"{c['events_per_bulletin_mean']} | {cache} | {c.get('wall_seconds') or ''} "
+            f"| {c['errors']} | {_fmt(c.get('cost_usd_per_bulletin'))} |"
         )
 
     lines.append("")
@@ -379,6 +676,9 @@ def format_markdown(report: dict[str, Any]) -> str:
             f"{p['events_in_both']} | {p['events_in_union']} | "
             f"{p['micro_jaccard']} | {p['mean_jaccard']} | {len(p['one_sided_zero_event_bulletins'])} |"
         )
+    baseline_section = format_baseline_markdown(report)
+    if baseline_section:
+        lines = [baseline_section, "", *lines]
     return "\n".join(lines)
 
 

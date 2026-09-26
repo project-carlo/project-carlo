@@ -292,12 +292,64 @@ ParishesOnline containers and bulletin PDFs, rechecks evidence, and promotes. Se
 [`data/dioceses/README.md`](data/dioceses/README.md); agents get the short version from the
 `explore-diocese` skill in `.claude/skills/`.
 
+## Benchmarking extraction stacks
+
+`pnpm bench` measures cheaper alternatives to the production extractor
+against it. Each *stack* turns the bulletin PDF into text without an LLM, then
+has a small OpenAI model (default `gpt-6-luna`) read that text and fill the
+same schema Gemini fills:
+
+| Stack | Run name | PDF → text |
+| :-- | :-- | :-- |
+| `pymupdf` | `luna-pymupdf` | STACK_PYMUPDF |
+| `docling` | `luna-docling` | STACK_DOCLING |
+| `ocr` | `luna-ocr` | STACK_OCR |
+| `pdf` | `luna-pdf` | none: the model reads the PDF itself (the control) |
+
+```bash
+# .env: OPENAI_API_KEY plus the R2 read keys you already use for data:pull
+pnpm bench                           # every stack, every bulletin with a baseline
+pnpm bench --limit 15                # a fixed random sample of 15 bulletins
+pnpm bench --stacks pymupdf pdf      # some stacks only
+pnpm bench --effort low              # reasoning effort (none … max)
+pnpm bench --model gpt-6-sol         # another OpenAI model for every stack
+```
+
+The baseline is `gemini-flash`, served from the extractions the weekly job
+already cached in R2, so no Gemini key is needed and nothing is re-extracted.
+Only bulletins with a cached baseline are benchmarked (pass `--fill-baseline`
+with a `GEMINI_API_KEY` to extract the rest). Without a local database the
+published one is pulled first; `--refresh-data` pulls it again.
+
+The report lands in `data/runs/bench/bench_<ts>.md` (and `.json`):
+
+- **Agreement with baseline**: precision, recall and F1 of each stack's events
+  against Gemini's, overall and per event type, *strict* (every field) and
+  *slot* (ignoring weekly-vs-dated and end time); bulletins matched exactly
+  or missed entirely; published-date agreement; cost per bulletin at list
+  prices (`MODEL_PRICES` in `compare.py`); mean model and text-extraction
+  seconds; text size.
+- **Lowest-agreement bulletins** per stack, then the per-bulletin
+  side-by-side of each stack against the baseline.
+
+Agreement is not accuracy: where a stack and Gemini disagree, either may be
+right, and the side-by-side, next to the PDF, is where to tell. The text each
+extractor produced is kept in `data/runs/text/<extractor>/<version>/`, which
+usually shows whether a miss happened in extraction or in the model.
+
+Everything is cached (text per extractor version and PDF, results per
+classifier version, bulletin and church list), so re-running after changing
+one stack only pays for that stack. The extractors' dependencies are in the
+optional `bench` group, which `pnpm bench` installs on first run; Docling
+downloads its layout models on first use.
+
 ## Environment Variables
 
 Commands read a `.env` file in the repo root if there is one (without
 overriding variables already set).
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
+- `OPENAI_API_KEY`: the OpenAI classifiers (`pnpm bench`, `pnpm extract --classifier luna-*`).
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
@@ -332,6 +384,9 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `fetch.py` - bulletin fetching and provider link resolution
   - `process.py` - bulletin processing with Gemini AI
   - `schedule_extraction.py` - Gemini schedule extraction
+  - `classifiers/` - bulletin → events classifiers for `extract` and `bench`
+  - `text_extractors/` - PDF → text extractors the text-based classifiers use
+  - `bench.py` - benchmark of text-extraction stacks against Gemini; `compare.py` its scoring
   - `storage.py` - SQLite helpers and data paths
   - `db.py` - migrations and CSV seeding
   - `blobstore.py` - local/R2 storage for PDFs and cached extractions

@@ -549,6 +549,7 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
+bench = []
 dev = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "moto", extras = ["s3"], specifier = ">=5.2.3" },
