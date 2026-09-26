@@ -16,7 +16,7 @@ discovermass:st-patrick-victor-ny), the bare id/slug, or any URL containing it.
 
 Usage (from the repo root):
   uv run python .claude/skills/parish-site-access/scripts/issues.py ecatholic <id> \
-      [--weeks 12] [--from DATE] [--step N] [--all] [--pages N] [--grep TEXT ...]
+      [--weeks 12] [--from DATE] [--step N] [--all] [--day fri] [--pages N] [--grep TEXT ...]
   uv run python .claude/skills/parish-site-access/scripts/issues.py discovermass <slug> \
       [--issues 6] [--pages N] [--grep TEXT ...]
 
@@ -61,6 +61,9 @@ def _with_text(urls: list[str], pages: int, grep: list[str]) -> list[dict[str, A
     return [web.pdf_text(url, pages=pages, grep=grep) for url in urls]
 
 
+WEEKDAYS = ("mon", "tue", "wed", "thu", "fri", "sat", "sun")
+
+
 def _ecatholic_url(site: str, day: dt.date) -> str:
     return f"{ECATHOLIC_FILES}/{site}/bulletins/{day:%Y%m%d}.pdf"
 
@@ -81,8 +84,11 @@ def ecatholic(args: argparse.Namespace) -> dict[str, Any]:
         today = dt.date.today()
         sunday = today + dt.timedelta(days=(6 - today.weekday()) % 7)
     probed, found = [], []
+    # Some parishes date the file by another day of the week (Holy Spirit,
+    # Hamilton: the Friday before); --day shifts every probe back to it.
+    before_sunday = (6 - WEEKDAYS.index(args.day)) % 7
     for i in range(0, args.weeks, max(1, args.step)):
-        day = sunday - dt.timedelta(weeks=i)
+        day = sunday - dt.timedelta(weeks=i, days=before_sunday)
         url = _ecatholic_url(site, day)
         resp = web.fetch(url, method="HEAD")
         probed.append({"date": day.isoformat(), "status": resp.status or resp.error})
@@ -99,7 +105,8 @@ def ecatholic(args: argparse.Namespace) -> dict[str, Any]:
     if not found:
         out["note"] = (
             f"no Sunday-dated issue in {len(probed)} Sundays probed (a missing issue answers "
-            "403). Some parishes name files differently: open the site's /bulletins page with "
+            "403). Some parishes date files by another weekday (try --day fri or --day sat) or "
+            "name them differently: open the site's /bulletins page with "
             "visit.py --links --match files.ecatholic and read the real file names."
         )
     elif not args.from_date and found[0] < _ecatholic_url(
@@ -159,6 +166,8 @@ def main() -> None:
     ec.add_argument("--from", dest="from_date", help="start from this date (YYYY-MM-DD)")
     ec.add_argument("--step", type=int, default=1, help="probe every n-th Sunday (4 = monthly)")
     ec.add_argument("--all", action="store_true", help="keep going after the first issue")
+    ec.add_argument("--day", choices=WEEKDAYS, default="sun",
+                    help="the weekday files are dated by, if not the Sunday (e.g. fri)")
     dm = sub.add_parser("discovermass", help="a Discover Mass church's listed bulletins")
     dm.add_argument("slug", help="discovermass:<slug>, the slug, or the church page URL")
     dm.add_argument("--issues", type=int, default=6)

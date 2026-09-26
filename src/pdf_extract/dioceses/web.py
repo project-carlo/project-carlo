@@ -106,7 +106,10 @@ def pdf_pages(data: bytes) -> list[str]:
     pages = []
     for page in reader.pages:
         try:
-            pages.append((page.extract_text() or "").strip())
+            text = page.extract_text() or ""
+            # Some LPi PDFs separate words with control characters (\x03):
+            # show them as spaces so a quote copied from here is what recheck finds.
+            pages.append(re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", " ", text).strip())
         except Exception:  # noqa: BLE001 - one bad page should not lose the rest
             pages.append("")
     return pages
@@ -346,7 +349,9 @@ def probe_container(container: str, *, weeks: int = 12, start: dt.date | None = 
     container = container.strip().strip("/")
     if not re.fullmatch(r"\d+/\d+", container):
         raise ValueError(f"a container looks like 14/0434, got {container!r}")
-    sunday = _last_sunday(start or dt.date.today())
+    # Without a start, begin at the coming Sunday: its issue is usually up by
+    # mid-week, and starting at the last one missed it on a Saturday.
+    sunday = _last_sunday(start or dt.date.today() + dt.timedelta(days=6))
     issues, found = [], []
     for i in range(0, weeks, max(1, step)):
         day = sunday - dt.timedelta(weeks=i)
@@ -436,7 +441,10 @@ _QUOTE_CHARS = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "�
 
 def _squash(text: str) -> str:
     text = unicodedata.normalize("NFKC", text).translate(_QUOTE_CHARS).lower()
-    return " ".join(re.sub(r"[^\w'\"&@:/.,-]+", " ", text).split())
+    text = " ".join(re.sub(r"[^\w'\"&@:/.,-]+", " ", text).split())
+    # PDF extraction spaces punctuation unpredictably ("Fr.Zach (CTK)" in one
+    # tool, "Fr. Zach ( CTK )" in another), so spacing around it doesn't count.
+    return re.sub(r" ?([&@:/.,-]) ?", r"\1", text)
 
 
 def quote_found(quote: str, text: str) -> bool:

@@ -1,6 +1,6 @@
 ---
 name: parish-site-access
-description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese from a Claude Code cloud sandbox. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins, and a reader that turns a diocese's eCatholic parish-finder map into a roster. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when WebFetch/curl get a 403 "Just a moment..." page.
+description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese from a Claude Code cloud sandbox. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins, and a reader that turns a diocese's eCatholic parish-finder map into a roster, and a renderer for bulletin pages that are only images. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when WebFetch/curl get a 403 "Just a moment..." page.
 ---
 
 # Seeing parish sites the probes can't
@@ -105,11 +105,33 @@ uv run python $I discovermass discovermass:st-patrick-victor-ny [--issues 6 --pa
   **a missing issue answers 403, not 404**, and there's no directory listing. The site id
   comes from `visit.py` on the parish's eCatholic site. Without `--from`, it starts at the
   coming Sunday. With `--from`, it starts at the Sunday on or before that date, as
-  `probe container --from` does.
+  `probe container --from` does. Some parishes date the file by another weekday: Holy
+  Spirit, Hamilton posts the 27 September issue as `20260925.pdf`, the Friday before. Pass
+  `--day fri` (or `sat`, ...) for those.
+- **`ecatholic:31250` is the Diocese of Syracuse's own site**, not a parish. `visit.py` and
+  `probe url` report it on any parish page that links a diocesan PDF. Don't record it.
 - **Discover Mass:** the church page is server-rendered and lists about 12 issues.
 - **Staleness:** for both publishers, `issues.py` flags a newest issue older than 45 days,
   as `probe po` does.
 - **`--pages` and `--grep`** work as in `probe pdf`. Mastheads are often on page 2 or 3.
+  `--grep` alone reads 3 pages.
+
+## `render.py`: read a bulletin page that is only an image
+
+Many bulletins are scanned images, in whole or in part: in Syracuse, about one in five
+(ParishesOnline, Discover Mass and self-hosted alike). `probe pdf` lists those pages under
+`pages_without_text`. The sandbox has no pdftoppm, PIL or tesseract, so `render.py` draws
+the pages with pdf.js in Chrome and writes PNGs you can look at with the Read tool:
+
+```bash
+uv run python .claude/skills/parish-site-access/scripts/render.py \
+    https://container.parishesonline.com/bulletins/03/1424/20260920B.pdf /tmp/ccsssp --pages 1
+```
+
+Cite the PDF's URL as usual, and say in the evidence `note` that the page is an image, so
+the auditor knows `recheck` can't find the quote in its text. Record in the parish's
+*Website and bulletin provider* that the bulletin is image-only: the pipeline will need to
+read it as an image too.
 
 ## `finder.py`: an eCatholic parish finder as a roster
 
@@ -130,6 +152,21 @@ pnpm diocese roster import <d> directory /tmp/directory.json --title "..." --url
 The map pins are the diocese's, so churches made `--from directory:<id>` get
 `coordinates_from: diocese-directory`. Put a GCatholic entry first in `--from` when there is
 one: its Plus Code is on the building.
+
+## Other bulletin hosts seen in Syracuse
+
+- **John Patrick Publishing / church-bulletin.org:** `jppc.net/onlinebulletins/<id>template.pdf`
+  and `church-bulletin.org/<id>` redirect to `church-bulletin.org/<slug>`, which lists one
+  PDF per Sunday at `church-bulletin.org/bulletin/<slug>/<YYYY-MM-DD>.pdf`, fetchable
+  without a browser. Record it as `bulletin_provider: other` with
+  `url:<church-bulletin.org page>` as the publication.
+- **Discover Mass archive widgets:** `bulletins.discovermass.com/archives/<n>`, embedded on
+  parish sites, is a plain HTML list of past issues with no Cloudflare in front.
+- **Diocesan documents:** a `syracusediocese.org/documents/...` PDF answers 403, but the same
+  file is at `files.ecatholic.com/31250/documents/<same path>` with no Cloudflare.
+- **LPi generic inserts:** a ParishesOnline page that lists only
+  `.../generic-publications/pol/<date>GB.pdf` files is LPi's generic insert, not the
+  parish's bulletin.
 
 ## Evidence from blocked pages
 

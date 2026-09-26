@@ -416,6 +416,8 @@ def test_quote_found_tolerates_layout_and_elisions() -> None:
     assert web.quote_found("Weekend: Sat. 5:10 pm … Sun. 7:30 am", text)
     assert web.quote_found("St. Bernard's", text)
     assert not web.quote_found("Sun. 7:30 am … Weekend", text)
+    # spacing around punctuation differs between PDF extractions
+    assert web.quote_found("Mass- Fr.Zach(CTK)", "8:30 AM Mass - Fr. Zach (CTK)")
 
 
 def test_new_exclusion_from_a_roster_drops_coordinates(root: Path, tmp_path: Path) -> None:
