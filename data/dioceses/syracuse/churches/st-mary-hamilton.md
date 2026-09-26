@@ -21,7 +21,7 @@ evidence:
 - url: https://www.romesentinel.com/news/route-20-catholic-churches-holy-spirit-parish-merger/article_66a992b3-2d7e-4d30-b659-9116c53bb9c1.html
   seen: 2026-09-25
   quote: St. Mary’s Church, 16 Wylie St. in Hamilton
-  note: The 2020 merger report naming the four churches of Holy Spirit Parish.
+  note: The Rome Sentinel's report (18 June 2026) of the merger decree, effective 1 July 2026, naming the four churches of Holy Spirit Parish.
 - url: https://www.openstreetmap.org/node/8805012463
   seen: 2026-09-25
   note: 'OSM: 16 Wylie Street, 13346 (an address point, not a church node).'
@@ -40,7 +40,7 @@ evidence:
 ## Holds Mass
 
 Yes: Sunday 11:00 am, and weekday Mass Tuesday and Thursday at 7:30 am, in Holy Spirit Parish's bulletin for 27 September 2026 (eCatholic 39636,
-file 20260925.pdf, page 1), whose masthead names this church among the parish's four. It is the parish's principal church under the 2020 decree.
+file 20260925.pdf, page 1), whose masthead names this church among the parish's four. It is the parish's principal church under the June 2026 decree.
 This settles the earlier "not confirmed" (the 2025 Route 20 Catholic PDF that a search summary
 had cited is no longer needed).
 

@@ -177,7 +177,9 @@ and a dated issue at a dated URL never changes. Discover Mass issues fetch witho
 too, but their `download.php?bulletin=` link is a token that changes on every page load.
 Old tokens kept working, including one fetched five days earlier, but nobody has checked
 whether they last. So cite a Discover Mass issue by the church page plus the issue date in
-the `note`, and quote from its text. When a quote can only come from a blocked
+the `note`, and quote from its text: `recheck` reads every issue the church page lists
+along with the page, so the quote is checked until the issue drops off the list (about
+twelve weeks). When a quote can only come from a blocked
 page, say so in the item's `note`, e.g. "behind Cloudflare; read in a browser
 (parish-site-access visit.py)", so the auditor knows to open it the same way.
 

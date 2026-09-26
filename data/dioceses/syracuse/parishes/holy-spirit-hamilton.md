@@ -11,8 +11,15 @@ evidence:
   quote: The Most Rev. Douglas J. Lucia, bishop of Syracuse, issued a decree on Tuesday, June 16, ordering
     the merger. It became effective today, Wednesday, July 1, and the church of St. Mary will be the principal
     church, with parish offices at St. Bernard’s
-  note: Names all four churches with addresses. The weekdays put the decree in 2020 (16 June 2020 was
-    a Tuesday). The same article says "The decree does not close any of the churches".
+  note: Names all four churches with addresses. The page's datePublished is 2026-06-18 (16 June and
+    1 July fall on a Tuesday and a Wednesday in 2026, and also in 2020, which an earlier version of this
+    record wrongly read the weekdays as). The same article says "The decree does not close any of the churches".
+- url: https://www.wktv.com/news/local/multiple-catholic-parishes-merge-in-mohawk-valley/article_8af8d0af-8069-41b4-96b5-cf293c2ef26a.html
+  seen: 2026-09-26
+  quote: The churches of Saint Bernard, Saint Joseph, and Saint Joan of Arc will remain open as auxiliary
+    churches for public worship.
+  note: WKTV, published 2026-06-19 (datePublished). Reports the decree forming Holy Spirit parish
+    "effective July 1", with its principal church at Saint Mary, 16 Wylie St., Hamilton.
 - url: https://route20catholic.org
   seen: 2026-09-25
   note: '`probe url`: redirects to http://holyspiritrcparish.org/, i.e. the old shared site of the four
@@ -39,10 +46,12 @@ evidence:
 
 ## Publisher
 
-Holy Spirit is one canonical parish formed on 1 July 2020 by merging the four "Route 20" churches:
+Holy Spirit is one canonical parish formed on 1 July 2026 by merging the four "Route 20" churches:
 St. Mary's (Hamilton, the principal church), St. Bernard's (Waterville, parish offices),
-St. Joseph's (Oriskany Falls) and St. Joan of Arc Mission (Morrisville) (Rome Sentinel; its
-weekdays date the decree to 2020). It publishes one weekly bulletin through eCatholic. I read the
+St. Joseph's (Oriskany Falls) and St. Joan of Arc Mission (Morrisville), under a decree of
+16 June 2026 (Rome Sentinel, 18 June 2026; WKTV, 19 June 2026: the other three "remain open as
+auxiliary churches for public worship"). An earlier version of this record dated the merger to
+2020 from the article's weekdays, which fit both years; both articles' publication dates say 2026. It publishes one weekly bulletin through eCatholic. I read the
 issue for the 26th Sunday of Ordinary Time, 27 September 2026 (file 20260925.pdf): its page-1
 masthead names the four churches "& The Newman Ministries of Colgate and Morrisville", and its Mass
 schedule covers the four churches plus a Sunday-evening Mass in Colgate's chapel during term.

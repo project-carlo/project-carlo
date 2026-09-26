@@ -21,7 +21,7 @@ evidence:
 - url: https://www.romesentinel.com/news/route-20-catholic-churches-holy-spirit-parish-merger/article_66a992b3-2d7e-4d30-b659-9116c53bb9c1.html
   seen: 2026-09-25
   quote: St. Bernard’s Roman Catholic Church, 190 Stafford Ave. in Waterville
-  note: The 2020 merger report naming the four churches of Holy Spirit Parish.
+  note: The Rome Sentinel's report (18 June 2026) of the merger decree, effective 1 July 2026, naming the four churches of Holy Spirit Parish.
 - url: https://www.openstreetmap.org/way/502143912
   seen: 2026-09-25
   note: 'OSM: place_of_worship "Saint Bernard''s Roman Catholic Church" on Stafford Avenue North, with

@@ -10,11 +10,12 @@ roster: []
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0050/20260920B.pdf
   seen: 2026-09-26
-  quote: invited to Sunday Mass at 8:00 p.m. at the Francis A. Wilcox Intercultural & Student Organization
-    Center (the former Newman Center) on the Utica University campus
-  note: Holy Trinity & Sacred Heart - St. Mary's bulletin, 20 September 2026, page 2 ("NEWMAN IS BACK
-    AT UTICA UNIVERSITY! The Utica Newman Outreach begins this Sunday, September 6!"). Contact Campus
-    Minister Pat Gillick; the text layer is letter-spaced, so the quote may not match mechanically.
+  note: 'Reads (not quotable mechanically: the text layer is letter-spaced or mis-spaced): "invited to
+    Sunday Mass at 8:00 p.m. at the Francis A. Wilcox Intercultural & Student Organization Center (the
+    former Newman Center) on the Utica University campus". Holy Trinity & Sacred Heart - St. Mary''s bulletin,
+    20 September 2026, page 2 ("NEWMAN IS BACK AT UTICA UNIVERSITY! The Utica Newman Outreach begins this
+    Sunday, September 6!"). Contact Campus Minister Pat Gillick; the text layer is letter-spaced, so the
+    quote may not match mechanically.'
 - url: https://www.utica.edu/directory/wilcox
   seen: 2026-09-26
   quote: A top-to-bottom renovation and repurposing of the facility that housed the former Newman Center

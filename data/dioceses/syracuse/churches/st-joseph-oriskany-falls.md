@@ -21,7 +21,7 @@ evidence:
 - url: https://www.romesentinel.com/news/route-20-catholic-churches-holy-spirit-parish-merger/article_66a992b3-2d7e-4d30-b659-9116c53bb9c1.html
   seen: 2026-09-25
   quote: St. Joseph’s Church, 229 Main St. in Oriskany Falls
-  note: The 2020 merger report naming the four churches of Holy Spirit Parish.
+  note: The Rome Sentinel's report (18 June 2026) of the merger decree, effective 1 July 2026, naming the four churches of Holy Spirit Parish.
 - url: https://www.openstreetmap.org/way/603072533
   seen: 2026-09-25
   note: 'OSM: a building at 229 Main Street, 13425.'

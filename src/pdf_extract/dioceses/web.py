@@ -142,7 +142,10 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
         return {"url": url, "error": f"not a PDF ({resp.content_type or 'unknown type'})"}
     if resp.truncated:
         return {"url": url, "error": f"larger than {MAX_BYTES // 1_000_000} MB: not read"}
-    texts = pdf_pages(resp.body)
+    try:
+        texts = pdf_pages(resp.body)
+    except Exception as exc:  # noqa: BLE001 - pypdf raises many kinds on a broken file
+        return {"url": url, "error": f"not readable as a PDF: {type(exc).__name__}: {exc}"}
     readable = [(n, t) for n, t in enumerate(texts, 1) if t]
     out: dict[str, Any] = {
         "url": url, "page_count": len(texts), "readable_pages": len(readable),
@@ -462,6 +465,26 @@ def quote_found(quote: str, text: str) -> bool:
     return True
 
 
+# A Discover Mass church page lists its recent issues behind download links
+# whose token changes on every load, so evidence cites the church page and
+# quotes an issue; recheck reads the listed issues along with the page.
+DISCOVER_MASS_CHURCH_RE = re.compile(r"discovermass\.com/church/[a-z0-9-]+/?$")
+_DISCOVER_MASS_ISSUE_RE = re.compile(
+    r"href='(https://bulletins\.discovermass\.com/download\.php\?bulletin=[^']+)'")
+
+
+def _discover_mass_issue_texts(page: str) -> str:
+    texts = []
+    for link in dict.fromkeys(_DISCOVER_MASS_ISSUE_RE.findall(page)):
+        resp = fetch(html.unescape(link))
+        if resp.ok and _is_pdf(resp) and not resp.truncated:
+            try:
+                texts.append("\n\n".join(pdf_pages(resp.body)))
+            except Exception:  # noqa: BLE001 - an unreadable issue just isn't searched
+                continue
+    return "\n\n".join(texts)
+
+
 def recheck_evidence(items: list[tuple[str, dict[str, Any]]], workers: int = 6
                      ) -> list[dict[str, Any]]:
     """Fetch each evidence URL once and look for its recorded quote.
@@ -478,7 +501,10 @@ def recheck_evidence(items: list[tuple[str, dict[str, Any]]], workers: int = 6
         if not resp.ok:
             return url, None, resp.error or f"HTTP {resp.status}"
         try:
-            return url, page_text(resp), ""
+            text = page_text(resp)
+            if DISCOVER_MASS_CHURCH_RE.search(url):
+                text += "\n\n" + _discover_mass_issue_texts(resp.text())
+            return url, text, ""
         except Exception as e:  # noqa: BLE001 - reported per item
             return url, None, f"could not read: {e}"
 

@@ -18,10 +18,10 @@ evidence:
     links are per-load tokens, so the issue is cited by the church page and date.
 - url: https://www.stanthonystagnes.com/_files/ugd/ee674d_c439dde88b594ee0947682f7db45f35e.pdf
   seen: 2026-09-26
-  quote: ST. ANTHONY AND ST. AGNES UTICA, NEW YORK September 13, 2026
-  note: The parish's own Wix bulletin page (stanthonystagnes.com/bulletins) links this one PDF, the 13
-    September 2026 issue, same masthead and schedule as the Discover Mass issues. Its text layer has broken
-    word spacing, so quote matching may fail.
+  note: 'Reads (not quotable mechanically: the text layer is letter-spaced or mis-spaced): "ST. ANTHONY
+    AND ST. AGNES UTICA, NEW YORK September 13, 2026". The parish''s own Wix bulletin page (stanthonystagnes.com/bulletins)
+    links this one PDF, the 13 September 2026 issue, same masthead and schedule as the Discover Mass issues.
+    Its text layer has broken word spacing, so quote matching may fail.'
 - url: https://parishesonline.com/organization/st-anthony-st-agnes-church
   seen: 2026-09-26
   note: '`probe po st-anthony-st-agnes-church`: LPi id 0018000000Qx7RSAAZ, website stanthonystagnes.com,
