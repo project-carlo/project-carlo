@@ -37,7 +37,8 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 TIMEOUT = 30
-MAX_BYTES = 30_000_000
+# Scanned bulletins run past 30 MB (Spirit of Hope, Oneida: 31 MB in 2026).
+MAX_BYTES = 100_000_000
 
 PO_CONTAINER_BASE = "https://container.parishesonline.com/bulletins"
 
@@ -50,6 +51,7 @@ class Response:
     content_type: str = ""
     body: bytes = b""
     error: str = ""
+    truncated: bool = False  # the body stopped at max_bytes
 
     @property
     def ok(self) -> bool:
@@ -69,11 +71,13 @@ def fetch(url: str, *, method: str = "GET", timeout: int = TIMEOUT,
     for attempt in (1, 2):
         try:
             with urlopen(req, timeout=timeout) as resp:
-                body = resp.read(max_bytes) if method != "HEAD" else b""
-                if resp.headers.get("Content-Encoding") == "gzip" and body:
+                body = resp.read(max_bytes + 1) if method != "HEAD" else b""
+                truncated = len(body) > max_bytes
+                body = body[:max_bytes]
+                if resp.headers.get("Content-Encoding") == "gzip" and body and not truncated:
                     body = gzip.decompress(body)
                 return Response(url, resp.status, resp.geturl(),
-                                resp.headers.get("Content-Type", ""), body)
+                                resp.headers.get("Content-Type", ""), body, truncated=truncated)
         except HTTPError as e:
             return Response(url, e.code, e.geturl() or url, error=f"HTTP {e.code}")
         except (URLError, OSError, ValueError) as e:
@@ -133,6 +137,8 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
         return {"url": url, "error": resp.error or f"HTTP {resp.status}"}
     if not _is_pdf(resp):
         return {"url": url, "error": f"not a PDF ({resp.content_type or 'unknown type'})"}
+    if resp.truncated:
+        return {"url": url, "error": f"larger than {MAX_BYTES // 1_000_000} MB: not read"}
     texts = pdf_pages(resp.body)
     readable = [(n, t) for n, t in enumerate(texts, 1) if t]
     out: dict[str, Any] = {

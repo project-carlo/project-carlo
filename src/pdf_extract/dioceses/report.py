@@ -245,7 +245,7 @@ def _save_links(d: Diocese, to_link: Mapping[str, set[str]]) -> dict[str, Any]:
         kind_name, slug = label.split(":", 1)
         record = after.of(records.KINDS[kind_name])[slug]
         record["roster"] = sorted(set(record.get("roster") or []) | refs)
-    return records._commit(d, after)
+    return records._commit(d, after, tolerate_unreadable=True)
 
 
 # ── Structure audit ─────────────────────────────────────────────────────────

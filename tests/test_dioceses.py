@@ -138,8 +138,14 @@ def test_an_unquoted_zip_and_a_broken_file_are_reported_not_fatal(root: Path) ->
     assert not result["passed"]
     assert any("postal_code must be text" in e and "quote it" in e for e in errors)
     assert any("b-town.md: frontmatter is not valid YAML" in e for e in errors)
+    # a new file can't miss references, so it goes ahead and names the broken one
+    created = _church()
+    assert any("b-town.md" in w for w in created["warnings"])
+    with pytest.raises(DioceseError, match="already exists"):
+        _church(slug="b-town")
+    # moving references around could miss the ones in the broken file
     with pytest.raises(DioceseError, match="do not parse"):
-        _church()
+        records.exclude_church("test", "st-ann-town", reason="closed")
 
 
 # ── Checks ──────────────────────────────────────────────────────────────────
