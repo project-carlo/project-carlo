@@ -24,7 +24,7 @@ evidence:
     Street, Liverpool, NY, 13088-5098
 - url: https://bulletins.discovermass.com/download.php?bulletin=a0o2U6lLj%2ByRegtGcRfkrrW2R2Xfa11Efp2P3zMoJ1QP74ElNYoNB5Fg6T%2BUcrCiQpU1%2FL%2B%2Fo1Jp1R5iohWgbrVyEVCofS6N8IGtyoAN6FA%3D
   seen: 2026-09-26
-  quote: 8:00AM Mass- Fr.McKeon(EP)
+  quote: 8:00 AM Mass - Fr. McKeon (EP)
   note: Liverpool Catholic Community bulletin, 27 September 2026 (Discover Mass,
     christ-the-king-liverpool-ny), page 2. Sunday Masses at EP at 8:00, 9:30 and 11:00 am, the
     Saturday 4:00 pm vigil, and weekday Mass Monday to Thursday at 9:00 am. Masthead "EPIPHANY PARISH,

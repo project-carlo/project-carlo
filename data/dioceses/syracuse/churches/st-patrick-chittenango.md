@@ -10,7 +10,7 @@ latitude: 43.0495625
 longitude: -75.9044375
 coordinates_from: gcatholic-plus-code
 name_verified: true
-address_verified: true
+address_verified: false
 roster: ['gcatholic:18048', 'directory:33191']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18048
@@ -42,7 +42,7 @@ Yes. The 27 September 2026 bulletin and the parish site give Saturday 4:00 pm vi
 ## Name and address
 
 The diocese's finder, the parish (site and bulletin) and OSM all give 1341 Murray Drive, so that is
-`line1` and `address_verified` is true. GCatholic says "1341 State Route 5"; Murray Drive is
+`line1`. `address_verified` stays false only because GCatholic gives a different street. GCatholic says "1341 State Route 5"; Murray Drive is
 presumably the local name of the road (or of its frontage), and GCatholic's Plus Code falls on the
 OSM building, so it is the same place. The name is St. Patrick everywhere. Coordinates are
 GCatholic's Plus Code, decoded.

@@ -8,8 +8,8 @@ group: Rev. Clifford Auth (Fayetteville, Manlius)
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0138/20260927B.pdf
   seen: 2026-09-26
-  quote: Immaculate Conception Parish … 400 Salt Springs Street   Fayetteville, NY    13066 … Sunday:
-    7:30 am, 9:00 am & 11:30 am
+  quote: 'Immaculate Conception Parish … 400 Salt Springs Street   Fayetteville, NY    13066 … Sunday:
+    7:30 am, 9:00 am & 11:30 am'
   note: Masthead of the 27 September 2026 issue, page 1 (Rev. Clifford H. Auth, Pastor). Names IC alone;
     "New Mass Schedule", daily 7:30 am, no Saturday vigil.
 - url: https://icfayetteville.org/weekly-bulletin/

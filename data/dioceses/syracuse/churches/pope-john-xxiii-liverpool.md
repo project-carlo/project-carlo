@@ -24,7 +24,7 @@ evidence:
     Church', 8290 Soule Road, Liverpool, NY, 13090-1329
 - url: https://bulletins.discovermass.com/download.php?bulletin=a0o2U6lLj%2ByRegtGcRfkrrW2R2Xfa11Efp2P3zMoJ1QP74ElNYoNB5Fg6T%2BUcrCiQpU1%2FL%2B%2Fo1Jp1R5iohWgbrVyEVCofS6N8IGtyoAN6FA%3D
   seen: 2026-09-26
-  quote: 10:30AM Mass -Fr.Zach(PJXXIII)
+  quote: 10:30 AM Mass - Fr. Zach (PJXXIII)
   note: Liverpool Catholic Community bulletin, 27 September 2026 (Discover Mass,
     christ-the-king-liverpool-ny), page 2. Also the Saturday 5:30 pm vigil and Monday 8:30 am Mass at
     PJXXIII; masthead "POPE JOHN XXIII, 8290 Soule Road, Liverpool, NY 13090".

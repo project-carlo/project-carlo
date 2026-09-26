@@ -11,7 +11,7 @@ longitude: -76.5025625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster: ['directory:35635', 'gcatholic:18056']
+roster: ['directory:35635', 'gcatholic:18056', 'directory:36302']
 evidence:
 - url: https://www.church-bulletin.org/bulletin/christ-the-good-shepherd-parish-oswego-ny-13126/2026-09-27.pdf
   seen: 2026-09-26
@@ -53,7 +53,9 @@ This is the former St. Paul's church, renamed for the merged parish: the 2020 de
 of Saint Paul" the parish church, the 2019 news (Spectrum, WRVO) says St. Paul's was chosen as the home
 of Christ the Good Shepherd, and the parish now writes "CTGS @ St. Paul's". GCatholic still lists it as
 "St. Paul" and OSM as "Saint Paul's Roman Catholic Church"; the diocese directory and the bulletin call
-it Christ the Good Shepherd. The name used is the parish's, with the old name in brackets so it can be
+it Christ the Good Shepherd. The directory's separate "St. Paul (Closed)" entry (directory:36302, no
+address) is the St. Paul *parish*, which the 2020 decree merged away; its church is this building, so
+that entry is linked here rather than excluded. The name used is the parish's, with the old name in brackets so it can be
 matched; the bulletin and the directory agree on "Christ the Good Shepherd", so `name_verified` is true.
 
 **The address is disputed.** The church stands at the corner of East Fifth and East Mohawk streets:

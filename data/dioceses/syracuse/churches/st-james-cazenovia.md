@@ -10,7 +10,7 @@ latitude: 42.9324375
 longitude: -75.8568125
 coordinates_from: gcatholic-plus-code
 name_verified: true
-address_verified: true
+address_verified: false
 roster: ['gcatholic:17999', 'directory:33117']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/17999
@@ -41,6 +41,7 @@ Thursday 6:45 and 11:00 am.
 ## Name and address
 
 GCatholic, the diocese's finder and the bulletin all give St. James, 6 Green Street, Cazenovia 13035,
-so both flags are true. OSM tags the church building 26 Hurd Street and the rectory next door
-6 Green Street: the church sits on the corner lot and 6 Green Street is the parish's postal address.
+and the name agrees everywhere, so `name_verified` is true. OSM tags the church building 26 Hurd Street and the rectory next door
+6 Green Street: the church sits on the corner lot and 6 Green Street is the parish's postal address. Because OSM puts the church itself on Hurd Street,
+`address_verified` stays false; the parish office could say which address the church uses.
 Coordinates are GCatholic's Plus Code, decoded, about 25 m from the OSM church outline.

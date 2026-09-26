@@ -11,7 +11,7 @@ longitude: -76.149846
 coordinates_from: osm-node
 name_verified: true
 address_verified: true
-roster: []
+roster: ['directory:33219']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0091/20260920B.pdf
   seen: 2026-09-25

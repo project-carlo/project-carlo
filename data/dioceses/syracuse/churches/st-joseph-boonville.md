@@ -1,6 +1,6 @@
 ---
 parish: christ-our-hope-boonville
-name: St. Joseph
+name: St. Joseph Church
 line1: 108 Charles St.
 line2: ''
 city: Boonville
@@ -22,14 +22,32 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'Christ our Hope @ St. Joseph',
     108 Charles Street, Boonville, NY, 13309-1334
+- url: https://www.christourhoperc.org/assets/Uploads/files/bulletin-files/Christ-Our-Hope-Bulletin-Template-1-26th.pdf
+  seen: 2026-09-26
+  quote: 4:00 PM— (St. J)
+  note: '27 September 2026 issue, page 1 intentions (Saturday Sept. 26th 4:00 PM and Sunday 9:30AM at
+    St. J); page 2 ''Vigil Saturday 4:00PM (SJ) Boonville … 9:30AM (SJ) Boonville'', plus weekday Masses.
+    Page-1 footer: ''108 Charles Street Boonville NY 13309''.'
+- url: https://www.christourhoperc.org/
+  seen: 2026-09-26
+  quote: 112 Charles St., Boonville, NY 13346
+  note: Homepage footer address for St. Joseph Church (the ZIP there is Hamilton's, a slip; Boonville
+    is 13309).
+- url: https://www.openstreetmap.org/way/545116542
+  seen: 2026-09-26
+  note: 'OSM: ''Saint Joseph''s Church'', Charles Street, Boonville, without a house number, about 10
+    m from GCatholic''s Plus Code.'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes: Saturday 4:00 pm and Sunday 9:30 am, plus weekday Masses, in the Christ Our Hope bulletin of
+27 September 2026 (pages 1-2).
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+**House number disputed: 108 or 112 Charles Street.** GCatholic, the diocese's finder and the
+bulletin footer give 108 Charles St. (the footer is the parish office's address); the parish
+homepage and the diocese's parish page give 112 Charles St. for the church. OSM has the church on
+Charles Street without a number. Modelled at 108 (two rosters) with `address_verified` false; the
+church may be 112 with the office at 108. Coordinates are GCatholic's Plus Code, on the OSM building.

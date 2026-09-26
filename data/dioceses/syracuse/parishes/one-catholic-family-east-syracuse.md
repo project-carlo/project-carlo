@@ -13,8 +13,8 @@ evidence:
     www.faithalive1.com).
 - url: https://container.parishesonline.com/bulletins/06/0321/20260920B.pdf
   seen: 2026-09-26
-  quote: Saturday September 26 @ St Matthew’s … Sunday, September 27 @ St. Matthew’s … Sunday, September
-    27 @ St Francis … Sunday, September 27 @ St Mary
+  quote: Sunday, September 27 @ St Francis … Sunday, September 27 @ St Mary … Saturday September 26 @ St
+    Matthew’s … Sunday, September 27 @ St. Matthew’s
   note: Page 5, "Weekend Mass Schedule" with intentions. Saturday 4:30 pm and Sunday 8 am at St Matthew's,
     Sunday 9:30 am at St Francis, Sunday 11 am at St Mary.
 - url: https://www.faithalive1.com/
@@ -29,8 +29,8 @@ evidence:
   seen: 2026-09-26
   quote: PASTOR, ST. FRANCIS OF ASSISI, BRIDGEPORT; ST. MATTHEW, EAST SYRACUSE; ST. MARY OF THE ASSUMPTION,
     MINOA
-  note: The diocese's page for St. Matthew (behind Cloudflare; read in a browser) lists Rev. Stephen
-    Wirkes with this title and gives "Website: faithalive1.com".
+  note: 'The diocese''s page for St. Matthew (behind Cloudflare; read in a browser) lists Rev. Stephen
+    Wirkes with this title and gives "Website: faithalive1.com".'
 ---
 
 ## Publisher

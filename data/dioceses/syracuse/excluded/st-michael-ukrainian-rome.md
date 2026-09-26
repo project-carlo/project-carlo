@@ -1,5 +1,5 @@
 ---
-name: St. Michael
+name: St. Michael Ukrainian Catholic Church
 reason: other-jurisdiction
 line1: 133 River St.
 city: Rome
@@ -17,10 +17,11 @@ evidence:
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+GCatholic lists St. Michael, 133 River St., Rome, among the churches in the Diocese of Syracuse's
+territory but marks it with the Ukrainian rite (roster field `rite: Ukrainian`, fetched
+2026-09-25): it belongs to the Ukrainian Catholic eparchy, not to the Latin diocese. Same rule as
+`excluded/st-john-the-baptist-syracuse.md`. Its own current schedule was not checked.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A project decision to cover Eastern Catholic eparchies.

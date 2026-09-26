@@ -5,26 +5,40 @@ bulletin_provider: other
 provider_id: ''
 publication: ['url:https://olgcc.org/bulletin/']
 group: ''
-evidence: []
+evidence:
+- url: https://olgcc.org/wp-content/uploads/simple-file-list/27-September-2026.pdf
+  seen: 2026-09-26
+  quote: 'Sunday  Mass:  Anticipated  Sat.4PM/Sun.  8AM  Ancient  Rite  Latin  Mass  Sunday  10AM   Mass  with  Choir'
+  note: '27 September 2026 issue, page 1: the week''s Masses, all at the one church; the rectory is at
+    5259 Beacon Light Rd., Verona (page 2).'
+- url: https://olgcc.org/bulletin/
+  seen: 2026-09-26
+  quote: Weekly Bulletin - Our Lady of Good Counsel
+  note: The parish's bulletin page (WordPress Simple File List); the current file is wp-content/uploads/simple-file-list/27-September-2026.pdf,
+    with Current-Year and Past-Years folders.
+- url: https://www.syracusediocese.org/our-lady-of-good-counsel-verona
+  seen: 2026-09-26
+  quote: Our Lady of Good Counsel - Verona
+  note: 'Diocese''s page: physical address 5652 East Main Street, website olgcc.org, one pastor, no other
+    worship site. behind Cloudflare; read in a browser (parish-site-access visit.py). '
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+Our Lady of Good Counsel, Verona, is a single parish that publishes its own weekly bulletin as
+PDFs on its site. I read the 27 September 2026 issue: page 1 gives "Sunday Mass: Anticipated
+Sat. 4PM / Sun. 8AM Ancient Rite Latin Mass / Sunday 10AM Mass with Choir" and the week's
+Masses, all at this church; nothing in it serves another parish or worship site.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: `churches/our-lady-of-good-counsel-verona.md`. The diocese's page lists no other site.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+Self-hosted on https://olgcc.org/bulletin/ (a Simple File List folder of dated PDFs), so that
+page is `website` and the `url:` publication, and the provider is `other`.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

@@ -15,9 +15,8 @@ evidence:
     EP and PJXXIII only.'
 - url: https://bulletins.discovermass.com/download.php?bulletin=a0o2U6lLj%2ByRegtGcRfkrrW2R2Xfa11Efp2P3zMoJ1QP74ElNYoNB5Fg6T%2BUcrCiQpU1%2FL%2B%2Fo1Jp1R5iohWgbrVyEVCofS6N8IGtyoAN6FA%3D
   seen: 2026-09-26
-  quote: 8:00AM Mass- Fr.McKeon(EP) … 8:30AM Mass- Fr.Zach(CTK) … 10:30AM Mass -Fr.Zach(PJXXIII)
-  note: Page 2 of the same issue ("Event Calendar"), Sunday 27 September, quoted as the text layer
-    extracts it. Saturday 3 October lists "4:00PM Vigil Mass" at CTK and EP and "5:30PM Vigil Mass"
+  quote: 8:00 AM Mass - Fr. McKeon (EP) … 8:30 AM Mass - Fr. Zach (CTK) … 10:30 AM Mass - Fr. Zach (PJXXIII)
+  note: Page 2 of the same issue ("Event Calendar"), Sunday 27 September. Saturday 3 October lists "4:00PM Vigil Mass" at CTK and EP and "5:30PM Vigil Mass"
     at PJXXIII.
 - url: https://discovermass.com/church/christ-the-king-liverpool-ny/
   seen: 2026-09-26
@@ -27,12 +26,11 @@ evidence:
     3532, which runs weekly back to at least October 2025.'
 - url: https://bulletins.discovermass.com/download.php?bulletin=H2MJpdWp%2FZPADzRSdtmtqsFQHEdN97W0Pw6ApQKzZG5VQJTMvlZVMOoeFPLLgPYmYQs8sfHF3yeYt3V1Oum6pgaJPK3lA6%2FsyRqhV2bypbs%3D
   seen: 2026-09-26
-  quote: Catholic Family of Epiphany … BeginningPentecostSunday,May24th,thisshared
+  quote: Catholic Family of Epiphany … Beginning Pentecost Sunday, May 24th, this shared bulletin will include
+    news, events, ministries, and important updates from all three parishes
   note: 'Epiphany''s own last bulletin, 17 May 2026 (Discover Mass archive widget 3533, "Epiphany
     Parish Bulletin Archives (Prior to May 24, 2026)", church page discovermass.com/church/immaculate-heart-of-mary-liverpool-ny/).
-    Page 2, "Coming Soon: A Combined Bulletin for the Liverpool Catholic Community": "Beginning Pentecost
-    Sunday, May 24th, this shared bulletin will include news, events, ministries, and important updates
-    from all three parishes" (the text layer drops the spaces, quoted as extracted).'
+    Page 2, under "Coming Soon: A Combined Bulletin for the Liverpool Catholic Community".'
 - url: https://liverpoolnycatholic.org/bulletin
   seen: 2026-09-26
   quote: Epiphany Parish Bulletin Archives (Prior to May 24, 2026)

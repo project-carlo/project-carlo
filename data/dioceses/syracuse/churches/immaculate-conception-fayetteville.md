@@ -10,7 +10,7 @@ latitude: 43.0238125
 longitude: -75.9938125
 coordinates_from: gcatholic-plus-code
 name_verified: true
-address_verified: true
+address_verified: false
 roster: ['gcatholic:17951', 'directory:33049']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/17951
@@ -40,6 +40,7 @@ Yes, daily. The 27 September 2026 bulletin gives daily Mass at 7:30 am and Sunda
 ## Name and address
 
 GCatholic and the diocese's finder agree on Immaculate Conception, 400 Salt Springs Road, 13066, so
-both flags are true. The parish's own masthead and ParishesOnline say "400 Salt Springs Street"; OSM
-tags the school next to the church "400 Salt Springs Road", which is the road's name. Coordinates are
+`name_verified` is true. The parish's own masthead and ParishesOnline say "400 Salt Springs Street"; OSM
+tags the school next to the church "400 Salt Springs Road", which is the road's name. `address_verified` stays false only
+because the parish's "Street" differs; it is almost certainly the same address. Coordinates are
 GCatholic's Plus Code, decoded, on the OSM church outline.

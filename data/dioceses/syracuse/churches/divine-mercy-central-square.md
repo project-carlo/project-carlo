@@ -10,7 +10,7 @@ latitude: 43.2815625
 longitude: -76.1451875
 coordinates_from: gcatholic-plus-code
 name_verified: true
-address_verified: true
+address_verified: false
 roster: ['gcatholic:17945', 'directory:33042']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/17945
@@ -47,8 +47,10 @@ Masses here, and weekday Mass on Tuesday and Thursday at 8:00 am.
 
 The church was dedicated in 2016 as an expansion of the parish hall, across Main Street from the old
 St. Michael's (The Catholic Sun, 13 October 2016). GCatholic, the diocese's finder, the bulletin
-masthead and the 2023 decree all give 592 South Main Street, so both flags are true. **OSM tags the
+masthead and the 2023 decree all give 592 South Main Street, and the name agrees everywhere, so
+`name_verified` is true. **OSM tags the
 building 584 South Main Street**; it is the same building (about 60 m from the Plus Code), and 592 is
-followed because GCatholic, the diocese and the parish all say so. The diocese's finder names it after
+followed because GCatholic, the diocese and the parish all say so; `address_verified` stays false
+until the number OSM carries is explained. The diocese's finder names it after
 the canonical parish, "Divine Mercy and The Mission of St. Bernadette"; the church itself is Divine
 Mercy. Coordinates are GCatholic's Plus Code, decoded.

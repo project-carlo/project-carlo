@@ -1,7 +1,7 @@
 ---
 parish: st-anthony-of-padua-syracuse
 name: St. Anthony of Padua
-line1: 1515 Midland Ave.
+line1: 1515 Midland Avenue
 line2: ''
 city: Syracuse
 state: NY
@@ -9,8 +9,8 @@ postal_code: '13205'
 latitude: 43.0241875
 longitude: -76.1505625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:17983', 'directory:33096']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/17983
@@ -22,14 +22,18 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Anthony of Padua', 1515 Midland
     Avenue, Syracuse, NY, 13205-1447
+- url: https://stanthonysyr.org/wp-content/uploads/St.Anthonys-Bulletin-September-20-2026.pdf
+  seen: 2026-09-26
+  note: 'Image-only PDF (no text layer), read by rendering page 1: "Mass Schedule | Horario de Misas Sunday
+    9am (English) 11am (Español)", "1515 Midland Ave. Syracuse NY".'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 20 September 2026 bulletin (read as an image) gives Sunday Mass at 9 am in
+English and 11 am in Spanish.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin gives 1515 Midland Ave.; GCatholic (1515 Midland Ave., 13205) and the diocese
+directory agree. Both flags true. Coordinates are GCatholic's Plus Code.
