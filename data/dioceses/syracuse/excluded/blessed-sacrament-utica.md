@@ -22,6 +22,11 @@ evidence:
     9:30 a.m. at St. Anthony.'
   note: The successor's full weekend schedule, 20 September 2026; weekdays "in our parish" (Mount Carmel)
     and at St. Anthony & St. Agnes. No Blessed Sacrament church.
+- url: https://www.mountcarmelblessedsacrament.com/parish-history/
+  seen: 2026-09-26
+  quote: Blessed Sacrament Church merged with Mount Carmel in July 2006, forming a new parish named St.
+    Mary of Mount Carmel / Blessed Sacrament Parish.
+  note: The successor parish's history page.
 parish: st-mary-of-mount-carmel-blessed-sacrament-utica
 ---
 
@@ -30,9 +35,10 @@ parish: st-mary-of-mount-carmel-blessed-sacrament-utica
 **Blessed Sacrament Church, Utica: closed.** The diocese's list marks the parish "CLOSED -
 See St. Mary of Mount Carmel-Blessed Sacrament", and the successor's 20 September 2026
 bulletin schedules Masses only at Mount Carmel (648 Jay St) and at St. Anthony & St. Agnes.
-Web sources put the merger in 2006; I found no dated closing notice, street address or last
-Mass, so this rests on the diocese's statement plus the successor's schedule (what I checked:
-the diocese list, the 20 September bulletin, the parish's About page, Discover Mass).
+The successor's history page dates the merger: "Blessed Sacrament Church merged with Mount
+Carmel in July 2006". I found no closing notice, street address or last Mass, so the building's
+closure rests on the diocese's "CLOSED" plus the successor's schedule (checked: the diocese
+list, the 20 September bulletin, the parish's history page, Discover Mass).
 
 ## What would change this
 
