@@ -6,24 +6,24 @@ import { HelpOverlay } from "../components/HelpOverlay";
 import { PdfViewer, type ScrollRequest } from "../components/PdfViewer";
 import { RowEditor, type Field } from "../components/RowEditor";
 import { formatDate, parseLooseDate } from "../lib/dates";
-import { blockingMessage, buildLabel, draftFromLabel, draftKey, type Draft } from "../lib/draft";
+import { buildLabel, draftFromLabel, draftKey, incompleteMessage, type Draft } from "../lib/draft";
 import { initHistory, pushHistory, redo, undo, type History } from "../lib/history";
 import { bulletinHref, navigate } from "../lib/route";
 import {
   blankRow,
   duplicateRow,
   editRow,
+  expandAllPending,
+  expandPending,
   fromGemini,
   handledGeminiIds,
   labelWarnings,
   sortRows,
-  splitDates,
-  splitDays,
   type Warning,
 } from "../lib/rows";
 import { formatDuration } from "../lib/time";
 import { useTimer } from "../lib/useTimer";
-import { FLAG_NAMES, type BulletinDetail, type Config, type Day, type EditorRow, type FlagName, type Status } from "../types";
+import { FLAG_NAMES, type BulletinDetail, type Config, type EditorRow, type FlagName, type Status } from "../types";
 
 interface Props {
   parish: string;
@@ -72,9 +72,7 @@ const FLAG_LABELS: Record<FlagName, string> = {
   church_missing: "Church missing",
 };
 
-type SaveState =
-  | { state: "new" | "saved" | "pending" | "saving" }
-  | { state: "blocked" | "error"; message: string };
+type SaveState = { state: "new" | "saved" | "pending" | "saving" } | { state: "error"; message: string };
 
 interface GeminiMemory {
   dismissed: string[];
@@ -167,15 +165,19 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
     [updateRows],
   );
 
-  const splitRow = useCallback(
-    (id: string, split: { days?: Day[]; dates?: string[] }) =>
-      updateRows((rs) =>
-        rs.flatMap((r) => {
-          if (r.id !== id) return [r];
-          return split.days ? splitDays(r, split.days) : splitDates(r, split.dates ?? []);
-        }),
-      ),
+  const transformRow = useCallback(
+    (id: string, fn: (row: EditorRow) => EditorRow) => updateRows((rs) => rs.map((r) => (r.id === id ? fn(r) : r))),
     [updateRows],
+  );
+
+  const leaveRow = useCallback(
+    (id: string) =>
+      update((d) =>
+        d.rows.some((r) => r.id === id && r.pending_split)
+          ? { ...d, rows: d.rows.flatMap((r) => (r.id === id ? expandPending(r) : [r])) }
+          : d,
+      ),
+    [update],
   );
 
   const deleteRow = useCallback(
@@ -241,11 +243,6 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
   // ── saving ──
   const saveNow = useCallback(
     (d: Draft, opts: { keepalive?: boolean } = {}): Promise<boolean> => {
-      const blocked = blockingMessage(d.rows);
-      if (blocked) {
-        setSave({ state: "blocked", message: blocked });
-        return Promise.resolve(false);
-      }
       const run = async () => {
         const key = draftKey(d);
         const secs = secondsRef.current;
@@ -272,12 +269,7 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
 
   useEffect(() => {
     if (draftKey(draft) === lastSaved.current) {
-      setSave((s) => (s.state === "blocked" || s.state === "pending" ? { state: labelExists.current ? "saved" : "new" } : s));
-      return;
-    }
-    const blocked = blockingMessage(draft.rows);
-    if (blocked) {
-      setSave({ state: "blocked", message: blocked });
+      setSave((s) => (s.state === "pending" ? { state: labelExists.current ? "saved" : "new" } : s));
       return;
     }
     setSave({ state: "pending" });
@@ -299,7 +291,7 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
       const d = draftRef.current;
       const dirty = draftKey(d) !== lastSaved.current;
       const timeOnly = labelExists.current && secondsRef.current !== savedSeconds.current;
-      if ((dirty || timeOnly) && !blockingMessage(d.rows)) {
+      if (dirty || timeOnly) {
         void api.save(buildLabel(d, { ...ctx.current, seconds: secondsRef.current }), { keepalive: true }).catch(() => undefined);
         lastSaved.current = draftKey(d);
         savedSeconds.current = secondsRef.current;
@@ -316,13 +308,13 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
     async (status: Extract<Status, "done" | "skipped">) => {
       (document.activeElement as HTMLElement | null)?.blur?.();
       await new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0)));
-      const d = { ...draftRef.current, status };
-      const blocked = blockingMessage(d.rows);
-      if (blocked) {
-        setMessage(`Can't mark this ${status}: ${blocked}.`);
+      const d = { ...draftRef.current, status, rows: expandAllPending(draftRef.current.rows) };
+      const incomplete = incompleteMessage(d.rows);
+      if (incomplete) {
+        setMessage(`Can't mark this ${status}: ${incomplete}.`);
         return;
       }
-      setHistory((h) => pushHistory(h, { ...h.present, status }));
+      setHistory((h) => pushHistory(h, d));
       if (!(await saveNow(d))) return;
       try {
         const { bulletin } = await api.next({ parish, hash });
@@ -443,7 +435,7 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
 
   // ── derived ──
   const handled = useMemo(() => {
-    const ids = handledGeminiIds(rows, gemini);
+    const ids = handledGeminiIds(expandAllPending(rows), gemini);
     restoredAccepted.forEach((id) => ids.add(id));
     return ids;
   }, [rows, gemini, restoredAccepted]);
@@ -467,6 +459,7 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
     return map;
   }, [warnings]);
 
+  const incomplete = useMemo(() => incompleteMessage(rows), [rows]);
   const progress = detail.progress;
   const clearFocus = useCallback(() => setFocus(null), []);
 
@@ -491,7 +484,7 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
             <span className="text-sm text-slate-500 tabular-nums" title="Time spent on this bulletin (paused while the tab is hidden)">
               ⏱ {formatDuration(seconds)}
             </span>
-            <SaveBadge save={save} />
+            <SaveBadge save={save} incomplete={incomplete} />
           </div>
           <ul className="space-y-0.5 text-xs text-slate-600">
             {churches.map((c) => (
@@ -634,7 +627,8 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
                   onFocusDone={clearFocus}
                   onSelect={selectRow}
                   onPatch={patchRow}
-                  onSplit={splitRow}
+                  onTransform={transformRow}
+                  onLeave={leaveRow}
                   onDelete={deleteRow}
                   onDuplicate={duplicate}
                 />
@@ -692,21 +686,20 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
   );
 }
 
-function SaveBadge({ save }: { save: SaveState }) {
+function SaveBadge({ save, incomplete }: { save: SaveState; incomplete: string | null }) {
   const styles: Record<SaveState["state"], [string, string]> = {
     new: ["bg-slate-100 text-slate-500", "Not saved yet"],
     saved: ["bg-emerald-100 text-emerald-800", "Saved"],
     pending: ["bg-sky-100 text-sky-800", "Unsaved…"],
     saving: ["bg-sky-100 text-sky-800", "Saving…"],
-    blocked: ["bg-amber-100 text-amber-900", "Not saved"],
     error: ["bg-red-100 text-red-800", "Save failed"],
   };
   const [cls, label] = styles[save.state];
-  const detail = "message" in save ? save.message : undefined;
+  const title = "message" in save ? save.message : incomplete ? `Left out of the file until complete: ${incomplete}` : undefined;
   return (
-    <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${cls}`} title={detail} data-testid="save-state">
+    <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${incomplete && save.state !== "error" ? "bg-amber-100 text-amber-900" : cls}`} title={title} data-testid="save-state">
       {label}
-      {detail && save.state === "blocked" ? `: ${detail}` : ""}
+      {incomplete && save.state !== "error" ? ` · ${incomplete}` : ""}
     </span>
   );
 }

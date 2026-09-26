@@ -179,3 +179,11 @@ export function formatDate(isoDate: string | null): string {
 export function shortDay(day: Day | null): string {
   return day ? day.slice(0, 3) : "";
 }
+
+/** "Mon–Fri" for three or more consecutive days (in week order), otherwise "Sat, Sun". */
+export function describeDays(days: Day[]): string {
+  const idx = days.map((d) => DAYS.indexOf(d));
+  const consecutive = idx.every((v, i) => i === 0 || v === idx[i - 1] + 1);
+  if (days.length >= 3 && consecutive) return `${shortDay(days[0])}–${shortDay(days[days.length - 1])}`;
+  return days.map(shortDay).join(", ");
+}

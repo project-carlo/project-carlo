@@ -97,7 +97,50 @@ export function editRow(row: EditorRow, patch: Patch): EditorRow {
   } else {
     next.date = null;
   }
+  const pending = next.pending_split;
+  if (!pending || !(next.event_kind === "weekly" ? pending.days : pending.dates)) delete next.pending_split;
   return next;
+}
+
+/**
+ * Set a weekly row's day. Several days keep the first on the row and wait in
+ * `pending_split` until focus leaves the row (see `expandPending`).
+ */
+export function setDays(row: EditorRow, days: Day[]): EditorRow {
+  return editRow(row, {
+    event_kind: "weekly",
+    day_of_week: days[0] ?? null,
+    pending_split: days.length > 1 ? { days } : undefined,
+  });
+}
+
+/** Set a dated row's date, or several dates to split later. */
+export function setDates(row: EditorRow, dates: string[]): EditorRow {
+  return editRow(row, {
+    event_kind: "specific_date",
+    date: dates[0] ?? null,
+    pending_split: dates.length > 1 ? { dates } : undefined,
+  });
+}
+
+/** A row with several days or dates as one row each; any other row as itself. */
+export function expandPending(row: EditorRow): EditorRow[] {
+  const pending = row.pending_split;
+  if (!pending) return [row];
+  const base = { ...row };
+  delete base.pending_split;
+  if (pending.days) return splitDays(base, pending.days);
+  if (pending.dates) return splitDates(base, pending.dates);
+  return [base];
+}
+
+export function expandAllPending(rows: EditorRow[]): EditorRow[] {
+  return rows.some((r) => r.pending_split) ? rows.flatMap(expandPending) : rows;
+}
+
+/** The rows a save writes: pending splits expanded, incomplete rows left out. */
+export function savableRows(rows: EditorRow[]): EditorRow[] {
+  return expandAllPending(rows).filter((r) => rowProblems(r).length === 0);
 }
 
 /** One row per day ("Mon-Fri"): the first keeps the row's identity. */

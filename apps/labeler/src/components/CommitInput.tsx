@@ -57,15 +57,22 @@ export function CommitInput({
     return ok;
   };
 
+  // Leave the field but stay in its row, so a pending multi-day split waits for the row to lose focus.
+  const leave = () => {
+    const row = ref.current?.closest<HTMLElement>("[data-row-id]");
+    if (row) row.focus({ preventScroll: true });
+    else ref.current?.blur();
+  };
+
   const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !(e.ctrlKey || e.metaKey)) {
       e.preventDefault();
-      if (commit()) ref.current?.blur();
+      if (commit()) leave();
     } else if (e.key === "Escape") {
       e.preventDefault();
       setText(display);
       setInvalid(false);
-      requestAnimationFrame(() => ref.current?.blur());
+      requestAnimationFrame(leave);
     } else if (e.key === "Enter") {
       commit();
     }

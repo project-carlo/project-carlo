@@ -1,5 +1,5 @@
 import type { EditorRow, Flags, Label, Status } from "../types";
-import { fromLabelEvent, rowProblems, toLabelEvent } from "./rows";
+import { fromLabelEvent, rowProblems, savableRows, toLabelEvent } from "./rows";
 
 /** The undoable part of a label. */
 export interface Draft {
@@ -29,7 +29,7 @@ export function draftFromLabel(label: Label | null): Draft {
 
 /** Everything a save would write (row ids and editor links left out). */
 export function draftKey(d: Draft): string {
-  return JSON.stringify([d.status, d.flags, d.published_date, d.note, d.rows.map(toLabelEvent)]);
+  return JSON.stringify([d.status, d.flags, d.published_date, d.note, savableRows(d.rows).map(toLabelEvent)]);
 }
 
 export function buildLabel(
@@ -48,12 +48,12 @@ export function buildLabel(
     labeler: ctx.labeler,
     seconds_spent: Math.max(0, Math.round(ctx.seconds)),
     updated_at: "",
-    events: d.rows.map(toLabelEvent),
+    events: savableRows(d.rows).map(toLabelEvent),
   };
 }
 
-/** Why the draft cannot be saved yet (a row missing a required field), or null. */
-export function blockingMessage(rows: EditorRow[]): string | null {
+/** The first row missing a required field (left out of saves until filled), or null. */
+export function incompleteMessage(rows: EditorRow[]): string | null {
   for (const [i, row] of rows.entries()) {
     const problems = rowProblems(row);
     if (problems.length) return `row ${i + 1} needs ${problems.join(", ")}`;

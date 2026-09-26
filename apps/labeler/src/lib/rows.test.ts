@@ -1,14 +1,20 @@
 import { describe, expect, it } from "vitest";
 import type { EditorRow, GeminiRow } from "../types";
+import { NO_FLAGS, buildLabel, draftKey, incompleteMessage, type Draft } from "./draft";
 import { initHistory, pushHistory, redo, undo } from "./history";
 import {
   blankRow,
   duplicateRow,
   editRow,
+  expandAllPending,
+  expandPending,
   fromGemini,
   handledGeminiIds,
   labelWarnings,
   rowProblems,
+  savableRows,
+  setDates,
+  setDays,
   sortRows,
   splitDates,
   splitDays,
@@ -98,6 +104,67 @@ describe("splitting multi-day rows", () => {
       ["specific_date", "2026-10-02", null],
       ["specific_date", "2026-10-09", null],
     ]);
+  });
+});
+
+describe("pending splits", () => {
+  const WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] as const;
+
+  it("holds several days on one row until it is expanded, so later edits reach every day", () => {
+    const pending = setDays(row({ day_of_week: null, start_time: "" }), [...WEEKDAYS]);
+    expect(pending.day_of_week).toBe("Monday");
+    expect(pending.pending_split).toEqual({ days: WEEKDAYS });
+    const timed = editRow(pending, { start_time: "08:00", end_time: "08:30" });
+    const rows = expandPending(timed);
+    expect(rows.map((x) => x.day_of_week)).toEqual(WEEKDAYS);
+    expect(rows.every((x) => x.start_time === "08:00" && x.end_time === "08:30" && !x.pending_split)).toBe(true);
+    expect(rows[0].id).toBe(pending.id);
+  });
+
+  it("clears the pending split for a single day, an empty day, or a change of kind", () => {
+    const pending = setDays(row(), ["Saturday", "Sunday"]);
+    expect(setDays(pending, ["Sunday"]).pending_split).toBeUndefined();
+    expect(setDays(pending, []).day_of_week).toBeNull();
+    const dated = editRow(pending, { event_kind: "specific_date" });
+    expect(dated.pending_split).toBeUndefined();
+    expect(expandPending(dated)).toEqual([dated]);
+  });
+
+  it("holds several dates the same way", () => {
+    const pending = setDates(row({ event_kind: "specific_date", day_of_week: null }), ["2026-10-02", "2026-10-09"]);
+    expect(pending.date).toBe("2026-10-02");
+    expect(expandPending(pending).map((x) => x.date)).toEqual(["2026-10-02", "2026-10-09"]);
+  });
+
+  it("leaves rows without a pending split alone", () => {
+    const rows = [row(), row({ day_of_week: "Saturday" })];
+    expect(expandAllPending(rows)).toBe(rows);
+  });
+});
+
+describe("savable rows", () => {
+  it("expands pending splits and leaves out incomplete rows", () => {
+    const rows = [
+      setDays(row({ start_time: "17:00" }), ["Saturday", "Sunday"]),
+      row({ start_time: "" }),
+      row({ day_of_week: "Friday" }),
+    ];
+    expect(savableRows(rows).map((x) => [x.day_of_week, x.start_time])).toEqual([
+      ["Saturday", "17:00"],
+      ["Sunday", "17:00"],
+      ["Friday", "10:30"],
+    ]);
+  });
+
+  it("gives a draft key and label that ignore incomplete rows", () => {
+    const base: Draft = { status: "in_progress", flags: NO_FLAGS, published_date: null, note: "", rows: [row()] };
+    const withBlank = { ...base, rows: [...base.rows, row({ day_of_week: null, start_time: "" })] };
+    expect(draftKey(withBlank)).toBe(draftKey(base));
+    const ctx = { parish: "p", hash: "h", sourceUrl: "u", labeler: "", seconds: 3.4 };
+    expect(buildLabel(withBlank, ctx).events).toHaveLength(1);
+    expect(buildLabel(withBlank, ctx).seconds_spent).toBe(3);
+    expect(incompleteMessage(withBlank.rows)).toBe("row 2 needs day, start time");
+    expect(incompleteMessage(base.rows)).toBeNull();
   });
 });
 

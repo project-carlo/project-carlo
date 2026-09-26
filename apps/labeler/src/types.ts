@@ -72,6 +72,11 @@ export interface EditorRow extends Omit<LabelEvent, "church_slug" | "start_time"
   start_time: string;
   /** The Gemini row this came from, while this browser remembers it. */
   gemini_id?: string;
+  /**
+   * Several days or dates typed into one row. The row becomes one row each
+   * when focus leaves it, so the times typed next apply to all of them.
+   */
+  pending_split?: { days?: Day[]; dates?: string[] };
 }
 
 /** One of Gemini's events, in the label's row shape (read-only). */

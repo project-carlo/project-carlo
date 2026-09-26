@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { formatDate, parseDates, parseDays, parseLooseDate } from "./dates";
+import { describeDays, formatDate, parseDates, parseDays, parseLooseDate } from "./dates";
 
 describe("parseDays", () => {
   it.each([
@@ -64,5 +64,24 @@ describe("parseLooseDate", () => {
   it("formats dates with their weekday", () => {
     expect(formatDate("2026-10-05")).toBe("Mon Oct 5");
     expect(formatDate(null)).toBe("");
+  });
+
+  it("reads back a formatted list of dates", () => {
+    const dates = ["2026-10-02", "2026-10-09"];
+    expect(parseDates(dates.map(formatDate).join("; "), ref)).toEqual(dates);
+  });
+});
+
+describe("describeDays", () => {
+  it.each([
+    ["Mon-Fri", "Mon–Fri"],
+    ["sat, sun", "Sat, Sun"],
+    ["m w f", "Mon, Wed, Fri"],
+    ["daily", "Mon–Sun"],
+    ["fri-mon", "Mon, Fri, Sat, Sun"],
+  ])("describes %s as %s, which reads back the same", (input, expected) => {
+    const days = parseDays(input)!;
+    expect(describeDays(days)).toBe(expected);
+    expect(parseDays(describeDays(days))).toEqual(days);
   });
 });

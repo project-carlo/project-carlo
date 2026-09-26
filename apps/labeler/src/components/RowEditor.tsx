@@ -1,6 +1,6 @@
 import { memo } from "react";
-import type { Church, Day, EditorRow, EventType, WeekOfMonth } from "../types";
-import { formatDate, parseDates, parseDays } from "../lib/dates";
+import type { Church, EditorRow, EventType, WeekOfMonth } from "../types";
+import { describeDays, formatDate, parseDates, parseDays, shortDay } from "../lib/dates";
 import {
   ALL_BUT_LAST_NOTE,
   NUMBERED_WEEKS,
@@ -11,7 +11,7 @@ import {
   parseSeason,
   toggleWeek,
 } from "../lib/pattern";
-import { rowProblems } from "../lib/rows";
+import { rowProblems, setDates, setDays } from "../lib/rows";
 import { formatTime, parseLooseTime } from "../lib/time";
 import { CommitInput } from "./CommitInput";
 
@@ -30,7 +30,9 @@ interface Props {
   onFocusDone: () => void;
   onSelect: (id: string, scroll: boolean) => void;
   onPatch: (id: string, patch: Patch) => void;
-  onSplit: (id: string, split: { days?: Day[]; dates?: string[] }) => void;
+  onTransform: (id: string, fn: (row: EditorRow) => EditorRow) => void;
+  /** Focus left the row: a pending multi-day row becomes one row per day. */
+  onLeave: (id: string) => void;
   onDelete: (id: string) => void;
   onDuplicate: (id: string) => void;
 }
@@ -65,7 +67,7 @@ function Seg<T extends string>({
           tabIndex={-1}
           title={`${o.label} (${o.key.toLowerCase()})`}
           onClick={() => onChange(o.value)}
-          className={`px-1.5 py-0.5 text-xs font-semibold ${
+          className={`px-1 py-0.5 text-xs font-semibold ${
             value === o.value ? "bg-sky-600 text-white" : "bg-white text-slate-500 hover:bg-slate-100"
           }`}
         >
@@ -141,12 +143,14 @@ export const RowEditor = memo(function RowEditor({
   onFocusDone,
   onSelect,
   onPatch,
-  onSplit,
+  onTransform,
+  onLeave,
   onDelete,
   onDuplicate,
 }: Props) {
   const missing = new Set(rowProblems(row));
   const weekly = row.event_kind === "weekly";
+  const pendingCount = (weekly ? row.pending_split?.days : row.pending_split?.dates)?.length ?? 0;
   const showDetails =
     selected || row.note || (weekly && (row.weeks_of_month.length > 0 || row.season));
   const patch = (p: Patch) => onPatch(row.id, p);
@@ -165,18 +169,22 @@ export const RowEditor = memo(function RowEditor({
         onSelect(row.id, true);
       }}
       onFocus={() => onSelect(row.id, false)}
+      onBlur={(e) => {
+        // Switching windows blurs too; only a move elsewhere in the page ends the row.
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null) && document.hasFocus()) onLeave(row.id);
+      }}
       className={`relative rounded border py-1 pr-1.5 pl-3 outline-none ${
         selected ? "border-sky-500 bg-sky-50 ring-1 ring-sky-500" : "border-slate-200 bg-white hover:border-slate-300"
       }`}
     >
       <div className={`absolute top-0 bottom-0 left-0 w-1.5 rounded-l ${origin.bar}`} title={origin.label} />
       <div className="flex flex-wrap items-center gap-1">
-        <span className="w-5 text-right text-xs text-slate-400 tabular-nums">{index + 1}</span>
+        <span className="w-4 text-right text-xs text-slate-400 tabular-nums">{index + 1}</span>
         <select
           value={row.church_slug}
           onChange={(e) => patch({ church_slug: e.target.value })}
-          className={`w-36 rounded border px-1 py-0.5 text-sm ${missing.has("church") ? "border-amber-400 bg-amber-50" : "border-slate-300 bg-white"}`}
-          title="Church"
+          className={`min-w-0 flex-[1_1_6rem] rounded border px-0.5 py-0.5 text-sm ${missing.has("church") ? "border-amber-400 bg-amber-50" : "border-slate-300 bg-white"}`}
+          title={churches.find((c) => c.slug === row.church_slug)?.name ?? "Church"}
         >
           <option value="">— church —</option>
           {churches.map((c) => (
@@ -199,54 +207,53 @@ export const RowEditor = memo(function RowEditor({
         />
         {weekly ? (
           <CommitInput
-            display={row.day_of_week ? row.day_of_week.slice(0, 3) : ""}
-            placeholder="Sun / Mon-Fri"
-            title="Day; several days (Mon-Fri, Sat & Sun) make one row each"
-            className="w-24"
+            display={row.pending_split?.days ? describeDays(row.pending_split.days) : shortDay(row.day_of_week)}
+            placeholder="Sun"
+            title="Day; several days (Mon-Fri, Sat & Sun) make one row each once you leave the row"
+            className="w-[4.75rem]"
             missing={missing.has("day")}
             autoFocus={focusField === "day"}
             onFocused={onFocusDone}
             testId="day-input"
             onCommit={(text) => {
-              if (!text.trim()) {
-                patch({ day_of_week: null });
-                return true;
-              }
-              const days = parseDays(text);
-              if (!days || days.length === 0) return false;
-              if (days.length === 1) patch({ day_of_week: days[0] });
-              else onSplit(row.id, { days });
+              const days = text.trim() ? parseDays(text) : [];
+              if (!days) return false;
+              onTransform(row.id, (r) => setDays(r, days));
               return true;
             }}
           />
         ) : (
           <CommitInput
-            display={row.date ? formatDate(row.date) : ""}
-            placeholder="10/5 or Oct 5"
-            title={row.date ? `${row.date}; several dates (10/2; 10/9) make one row each` : "Date; several dates (10/2; 10/9) make one row each"}
-            className="w-24"
+            display={row.pending_split?.dates ? row.pending_split.dates.map(formatDate).join("; ") : formatDate(row.date)}
+            placeholder="10/5"
+            title={`${row.date ? `${row.date}. ` : ""}Date: 10/5 or Oct 5; several dates (10/2; 10/9) make one row each once you leave the row`}
+            className="w-[4.75rem]"
             missing={missing.has("date")}
             autoFocus={focusField === "day"}
             onFocused={onFocusDone}
             testId="date-input"
             onCommit={(text) => {
-              if (!text.trim()) {
-                patch({ date: null });
-                return true;
-              }
-              const dates = parseDates(text, refDate);
+              const dates = text.trim() ? parseDates(text, refDate) : [];
               if (!dates) return false;
-              if (dates.length === 1) patch({ date: dates[0] });
-              else onSplit(row.id, { dates });
+              onTransform(row.id, (r) => setDates(r, dates));
               return true;
             }}
           />
+        )}
+        {pendingCount > 1 && (
+          <span
+            className="rounded bg-sky-100 px-1 text-xs font-semibold text-sky-800"
+            title={`Becomes ${pendingCount} rows, one per ${weekly ? "day" : "date"}, when you leave this row`}
+            data-testid="pending-split"
+          >
+            ×{pendingCount}
+          </span>
         )}
         <CommitInput
           display={formatTime(row.start_time)}
           placeholder="start"
           title="Start: 530p, 5:30, 17:30, noon"
-          className="w-20"
+          className="w-[4.5rem]"
           missing={missing.has("start time")}
           autoFocus={focusField === "start"}
           onFocused={onFocusDone}
@@ -263,7 +270,7 @@ export const RowEditor = memo(function RowEditor({
           display={formatTime(row.end_time)}
           placeholder="end"
           title="End (optional)"
-          className="w-20"
+          className="w-[4.5rem]"
           testId="end-input"
           onCommit={(text) => {
             if (!text.trim()) {
@@ -287,11 +294,11 @@ export const RowEditor = memo(function RowEditor({
         >
           {row.cancelled ? "Cancelled" : "X"}
         </button>
-        <label className="flex items-center gap-0.5 text-xs text-slate-500" title="PDF page">
-          p.
+        <label className="flex items-center" title="PDF page">
           <CommitInput
             display={row.page_number ? String(row.page_number) : ""}
-            className="w-9"
+            placeholder="p."
+            className="w-8 text-center"
             onCommit={(text) => {
               if (!text.trim()) {
                 patch({ page_number: null });
@@ -304,7 +311,7 @@ export const RowEditor = memo(function RowEditor({
             }}
           />
         </label>
-        <div className="ml-auto flex items-center gap-0.5">
+        <div className="flex items-center">
           {warnings.length > 0 && (
             <span className="cursor-help text-sm text-amber-600" title={warnings.join("\n")}>
               ⚠
