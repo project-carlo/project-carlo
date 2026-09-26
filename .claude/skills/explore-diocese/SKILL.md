@@ -40,7 +40,9 @@ Then, cheapest first:
    it embed?), `probe po <org slug | LPi id>` (a ParishesOnline org's address, ids and
    latest issues), `probe container <a/b> --pages 3` (latest masthead; `--all --step 4` for
    a monthly changelog), `probe pdf <url> --grep <name>` (any bulletin's text; date closures
-   this way).
+   this way). When `probe url` says HTTP4XX or NO-PARISH-WORDS, or finds no ids, the
+   `parish-site-access` skill opens the site in a real browser, and it reads eCatholic and
+   Discover Mass issues the way `probe container` reads ParishesOnline ones.
 3. **Create records:** `pnpm diocese new parish|church|excluded|open <d> ...`. For churches,
    use `--from gcatholic:<id>` to prefill the address, Plus Code coordinates and evidence.
    **Then edit the file**: replace every TODO with the explanation, add dated `evidence` with
