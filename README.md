@@ -59,6 +59,42 @@ pnpm dev:web
 To see your own local pipeline changes in the app, rebuild the snapshot from
 your local database with `pnpm extract:web`.
 
+## Label bulletins (ground truth)
+
+A local tool for recording by hand what each bulletin really says, to measure
+Gemini against later. It runs on localhost only, with no auth, and reads R2
+with the read-only keys (`R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`,
+`R2_SECRET_ACCESS_KEY`).
+
+```bash
+pnpm label           # build the UI and serve it with the API at http://localhost:8766/
+pnpm label --demo    # the same on a generated dataset (data/labeler-demo/, untracked)
+pnpm dev:labeler     # Vite dev server on :5174, proxying /api to a running `pnpm label`
+```
+
+The PDF shown is the stored compacted copy (the first 10 pages), so page
+numbers match what Gemini saw. Gemini's output is shown read-only: the cached
+result for the bulletin's content hash (the current classifier version first),
+or else the database's post-processed events. Accept rows one at a time
+(Enter) or all at once, then fix them. Press `?` in the app for the keyboard
+shortcuts.
+
+Labels are saved to `data/labels/<parish_slug>/<content_hash>.json` and are
+committed to git. Each file (`schema_version` 1) holds:
+
+- `parish_slug`, `content_hash`, `source_url`
+- `status`: `in_progress`, `done` or `skipped`
+- `flags`: `wrong_bulletin`, `unreadable`, `no_schedule`, `church_missing`
+- `published_date`, `note`, `labeler`, `seconds_spent`, `updated_at`
+- `events`: one per event, each with:
+  - `church_slug`, `event_type` (`mass`/`confession`/`adoration`), `event_kind` (`weekly`/`specific_date`)
+  - `day_of_week` or `date`, `start_time` and `end_time` (24-hour `HH:MM`), `cancelled`, `page_number`, `note`
+  - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These two apply to weekly rows only.
+  - `origin`: `human`, `gemini` or `gemini-edited`
+
+The API validates every file (`src/pdf_extract/labeling/labels.py`) and
+rejects any slug or hash that would put it outside `data/labels`.
+
 ## Weekly pipeline
 
 One command runs a whole weekly pass:
@@ -342,6 +378,8 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 - `data/` (untracked) - the local database, bulletin PDF cache and run outputs
 - `docs/data-setup.md` - R2 bucket, API tokens, GitHub secrets, and running the published data
 - `apps/web/` - React + TypeScript + Vite frontend
+- `apps/labeler/` - the local bulletin labeling UI (never deployed)
+- `data/labels/` - ground-truth labels, one JSON file per bulletin (committed)
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
@@ -358,6 +396,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
+  - `labeling/` - the labeler's API (`pnpm label`): label files, bulletin queue, Gemini sources, demo data
 
 ## Dependencies
 
