@@ -84,6 +84,8 @@ export function GeminiPanel({ gemini, churches, handled, dismissed, onAccept, on
   }
 
   const onRowKey = (e: KeyboardEvent<HTMLDivElement>, g: GeminiRow) => {
+    // Ctrl+Enter and the other page shortcuts pass through.
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
     const move = (delta: number) => {
       const items = [...document.querySelectorAll<HTMLElement>("[data-gemini-row]")];
       const i = items.indexOf(e.currentTarget);
