@@ -9,8 +9,8 @@ postal_code: '13135'
 latitude: 43.2299375
 longitude: -76.2998125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18062', 'directory:33210']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18062
@@ -22,14 +22,25 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Stephen', 469 Main Street,
     Phoenix, NY, 13135-1950
+- url: https://container.parishesonline.com/bulletins/06/0241/20260927B.pdf
+  seen: 2026-09-26
+  quote: 10:30 a.m. (SS)
+  note: Page 2 of the 27 September 2026 bulletin; Masses marked (SS) on Sunday 10:30 am and Monday/Thursday
+    9:00 am.
+- url: https://www.holytrinity-ststephen.org/contact-us
+  seen: 2026-09-26
+  quote: 469 Main Street, Phoenix, NY 13135
+  note: The St. Stephen office address on the parishes' contact page.
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 Holy Trinity & St. Stephen bulletin (page 2) lists Masses marked (SS) on
+Sunday 10:30 am and Monday and Thursday 9:00 am; the parishes' Mass page gives "10:30 a.m. at St.
+Stephen" on Sundays.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+"St. Stephen" in GCatholic, the directory and the bulletin; 469 Main Street, Phoenix, 13135 in
+GCatholic, the directory and the parishes' contact page. Independent sources agree, so both flags are
+true. Coordinates are GCatholic's Plus Code.

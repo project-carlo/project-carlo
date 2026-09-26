@@ -1,6 +1,6 @@
 ---
 parish: prince-of-peace-north-endicott
-name: St. Ambrose
+name: St. Ambrose Church
 line1: 203 Washington Ave.
 line2: ''
 city: Endicott
@@ -9,10 +9,19 @@ postal_code: '13760'
 latitude: 42.1004375
 longitude: -76.0479375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:17977', 'directory:33082']
 evidence:
+- url: https://discovermass.com/church/st-ambrose-endicott-ny/
+  seen: 2026-09-26
+  quote: 203 Washington Ave., Endicott, NY 13760
+  note: Discover Mass listing; the 27 September 2026 issue (page 2, "WEEKLY MASS & CONFESSION") has "4:00pm
+    Mass STAM" on Saturday.
+- url: https://www.openstreetmap.org/way/960892444
+  seen: 2026-09-26
+  note: OSM place_of_worship "Saint Ambrose's Roman Catholic Church", 203 Washington Avenue (Nominatim
+    search).
 - url: https://gcatholic.org/churches/usa-02/17977
   seen: 2026-09-25
   quote: 203 Washington Ave., Endicott, New York 13760-5272
@@ -26,10 +35,8 @@ evidence:
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes, weekly. The 27 September 2026 North Endicott bulletin (Discover Mass, page 2) lists Saturday 4:00 pm Mass here (STAM). The 2026 decree keeps it as an auxiliary church of Prince of Peace.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic, the diocese's finder and Prince of Peace page, the bulletin ("St. Ambrose Church 203 Washington Ave."), Discover Mass and OSM ("Saint Ambrose's Roman Catholic Church", 203 Washington Avenue, way 960892444) agree, so both flags are true. Coordinates are GCatholic's Plus Code, decoded.

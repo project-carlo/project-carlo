@@ -5,26 +5,36 @@ bulletin_provider: other
 provider_id: ''
 publication: ['url:https://www.stjohnthebaptist-holytrinity.com/bulletins/']
 group: 'Fr. Foley: OL Pompei/St. Peter + St. John the Baptist/Holy Trinity'
-evidence: []
+evidence:
+- url: https://www.stjohnthebaptist-holytrinity.com/wp-content/uploads/sites/13/2026/09/september-27.pdf
+  seen: 2026-09-26
+  quote: 'St. John the Baptist and Holy Trinity Parish Sunday Mass: 9:00am'
+  note: Masthead, page 1 of the 27 September 2026 issue, with "406 Court Street Syracuse, NY 13208" at
+    its foot.
+- url: https://www.stjohnthebaptist-holytrinity.com/bulletins/
+  seen: 2026-09-26
+  note: The parish's bulletins page (WordPress), one PDF per week, newest september-27.pdf.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. John the Baptist and Holy Trinity publishes its own weekly bulletin on its WordPress
+site. The 27 September 2026 issue's masthead is the parish's alone, 406 Court Street, with
+one Sunday Mass at 9:00 am; it names Fr. Brendan Foley as pastor, who also administers Our
+Lady of Pompei / St. Peter ("SJB/HT & OLP/SP rectory's will be closed ..."), but that parish
+posts its own bulletin, so these are separate rows in one `group`.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: the church at 406 Court Street (`st-john-the-baptist-holy-trinity-syracuse`). Holy
+Trinity's former church at 501 Park Street, closed in 2010, is
+`excluded/holy-trinity-syracuse.md`.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+stjohnthebaptist-holytrinity.com/bulletins/ lists the PDFs; provider `other`. GCatholic's
+website for the church (sjbhtsyracuse.org) was not used.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

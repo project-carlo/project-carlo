@@ -9,8 +9,8 @@ postal_code: '13104'
 latitude: 43.0023125
 longitude: -75.9740625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:17978', 'directory:33086']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/17978
@@ -22,14 +22,24 @@ evidence:
   seen: 2026-09-26
   note: Listed in Diocese of Syracuse parish finder (Mass-times map) as 'St. Ann', 104 Academy Street,
     Manlius, NY, 13104-1934
+- url: https://saintannschurch.com/about/bulletins-schedules/
+  seen: 2026-09-26
+  quote: 'Sunday: 10:15AM'
+  note: The parish's Mass Schedule box (also Saturday 4:30PM, Tuesday-Friday 9AM); the 27 September 2026
+    bulletin cover (container 06/0111, image) gives the same.
+- url: https://www.openstreetmap.org/way/215497559
+  seen: 2026-09-26
+  note: 'OSM place_of_worship "Saint Annes Roman Catholic Church", 104 Academy Street, 13104, within about
+    30 m of the GCatholic Plus Code.'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes, daily. The 27 September 2026 bulletin and the parish site give Saturday 4:30 pm vigil,
+Sunday 10:15 am, and Tuesday to Friday 9:00 am.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic, the diocese's finder, the parish and OSM all give 104 Academy Street, Manlius 13104, and
+the name St. Ann (OSM spells it "Saint Annes"), so both flags are true. Coordinates are GCatholic's
+Plus Code, decoded.

@@ -9,10 +9,18 @@ postal_code: '13905'
 latitude: 42.1006875
 longitude: -75.9383125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18066', 'directory:33214']
 evidence:
+- url: https://container.parishesonline.com/bulletins/06/0167/20260927B.pdf
+  seen: 2026-09-26
+  note: '27 September 2026 issue, page 1 (image): "4:00pm | St. Thomas Aquinas … 11:00am | St. Thomas
+    Aquinas … 10:00am | St. Thomas Aquinas"; footer "St. Thomas Aquinas | 1 Aquinas St.".'
+- url: https://www.openstreetmap.org/node/357636691
+  seen: 2026-09-26
+  note: OSM place_of_worship "Saint Thomas Aquinas Roman Catholic Church", 1 Aquinas Street (Nominatim
+    search).
 - url: https://gcatholic.org/churches/usa-02/18066
   seen: 2026-09-25
   quote: 1 Aquinas St., Binghamton, New York 13905-3999
@@ -26,10 +34,8 @@ evidence:
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes, daily. The 27 September 2026 bulletin (container 06/0167, page 1, read as an image) lists Saturday 4:00 pm, Sunday 11:00 am and Monday-Friday 10:00 am here.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic (1 Aquinas St.), the diocese's finder ("One Aquinas Street"), the bulletin footer ("St. Thomas Aquinas | 1 Aquinas St., Binghamton, NY 13905") and OSM ("Saint Thomas Aquinas Roman Catholic Church", 1 Aquinas Street) agree, so both flags are true. Coordinates are GCatholic's Plus Code, decoded.
