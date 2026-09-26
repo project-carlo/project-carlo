@@ -37,8 +37,8 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 TIMEOUT = 30
-# LPi family bulletins run past 35 MB; a truncated PDF does not parse at all.
-MAX_BYTES = 100_000_000
+# LPi family bulletins run past 180 MB; a truncated PDF does not parse at all.
+MAX_BYTES = 250_000_000
 
 PO_CONTAINER_BASE = "https://container.parishesonline.com/bulletins"
 
