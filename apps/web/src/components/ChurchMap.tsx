@@ -1,4 +1,4 @@
-import { Fragment, memo, useEffect, useMemo, useRef } from "react";
+import { Fragment, memo, useEffect, useMemo, useRef, useState } from "react";
 import type { RefObject } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -13,6 +13,13 @@ import type { Marker as LeafletMarker } from "leaflet";
 import L from "leaflet";
 import type { ChurchMapItem } from "../types";
 import type { MapView } from "../lib/mapView";
+import {
+  INDIVIDUAL_ZOOM,
+  clusterChurches,
+  zoomToRevealChurch,
+  type ClusterPin,
+  type Clusterable,
+} from "../lib/mapClusters";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
 import { Fleuron } from "@/components/Fleuron";
@@ -44,7 +51,13 @@ const POPUP_MAX_WIDTH = 275;
  * The searched-place pin has no CSS shadow, so it keeps its filter. */
 const MARKER_SPRITE_ID = "church-map-pin-sprite";
 const CHURCH_PIN_ID = "church-map-pin";
+const CLUSTER_PIN_ID = "church-map-cluster-pin";
 const PLACE_PIN_ID = "church-map-place-pin";
+
+/** Each click on a count opens the map two levels, which is enough for a city
+ *  count to break into neighborhoods and a neighborhood count into churches,
+ *  without jumping from a regional view straight to a block. */
+const CLUSTER_ZOOM_STEP = 2;
 
 const markerSpriteSvg = `
 <svg xmlns="http://www.w3.org/2000/svg" id="${MARKER_SPRITE_ID}" aria-hidden="true"
@@ -62,6 +75,11 @@ const markerSpriteSvg = `
       <path d="M17 9.5 V 21.5" />
       <path d="M12.5 13.5 H 21.5" />
     </g>
+  </symbol>
+  <symbol id="${CLUSTER_PIN_ID}" viewBox="0 0 34 42" fill="none">
+    <path d="M17 2C9.27 2 3 8.27 3 16c0 3.7 1.73 7.3 4 10.5C9.5 30 13.5 34.4 15.8 38.6a1.35 1.35 0 0 0 2.4 0C20.5 34.4 24.5 30 27 26.5 29.27 23.3 31 19.7 31 16 31 8.27 24.73 2 17 2Z"
+          fill="var(--paper)" stroke="var(--brass)" stroke-width="1.3" />
+    <circle cx="17" cy="16" r="11" fill="none" stroke="var(--rule-strong)" stroke-width="0.8" />
   </symbol>
   <symbol id="${PLACE_PIN_ID}" viewBox="0 0 32 42" fill="none">
     <g filter="url(#place-pin-shadow)">
@@ -102,6 +120,26 @@ const placeMarkerIcon = L.divIcon({
   iconAnchor: [16, 40],
   popupAnchor: [0, -34],
 });
+
+/** A count needs a wider roundel than the cross does, so the pin scales up
+ *  with the number of digits. Cached: one zoom can mount dozens of these. */
+const clusterIconCache = new Map<number, L.DivIcon>();
+
+function clusterIcon(count: number): L.DivIcon {
+  const cached = clusterIconCache.get(count);
+  if (cached) return cached;
+  const tier = count >= 100 ? "lg" : count >= 10 ? "md" : "sm";
+  const [width, height] =
+    tier === "lg" ? [62, 76] : tier === "md" ? [50, 62] : [40, 50];
+  const icon = L.divIcon({
+    html: `<div class="church-cluster-pin church-cluster-pin-${tier}"><svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 34 42" aria-hidden="true"><use href="#${CLUSTER_PIN_ID}" /></svg><span class="church-cluster-count">${count}</span></div>`,
+    className: "church-cluster-marker",
+    iconSize: [width, height],
+    iconAnchor: [width / 2, Math.round((height * 40) / 42)],
+  });
+  clusterIconCache.set(count, icon);
+  return icon;
+}
 
 interface ChurchMapProps {
   churches: ChurchMapItem[];
@@ -158,17 +196,36 @@ function PopupPaneElevator() {
 
 function ChangeView({
   center,
+  churches,
 }: {
-  center: { lat: number; lng: number; zoom?: number; requestId?: number };
+  center: { lat: number; lng: number; zoom?: number; requestId?: number; churchId?: number };
+  churches: readonly Clusterable[];
 }) {
   const map = useMap();
+  // Read the latest church list without re-flying when a filter refresh
+  // hands the map a new array while the same selection is still in effect.
+  const churchesRef = useRef(churches);
+  churchesRef.current = churches;
+
   useEffect(() => {
-    if (center.zoom != null) {
-      map.flyTo([center.lat, center.lng], center.zoom, { duration: 0.8 });
+    let zoom = center.zoom;
+    if (center.churchId != null) {
+      const reveal = zoomToRevealChurch(
+        churchesRef.current,
+        center.churchId,
+        zoom ?? map.getZoom(),
+      );
+      const target = zoom == null ? reveal : Math.max(zoom, reveal);
+      // A search that didn't ask for a zoom should only change it when the
+      // church is still hidden inside a count.
+      zoom = target === map.getZoom() && center.zoom == null ? undefined : target;
+    }
+    if (zoom != null) {
+      map.flyTo([center.lat, center.lng], zoom, { duration: 0.8 });
     } else {
       map.panTo([center.lat, center.lng]);
     }
-  }, [map, center.lat, center.lng, center.zoom, center.requestId]);
+  }, [map, center.lat, center.lng, center.zoom, center.requestId, center.churchId]);
   return null;
 }
 
@@ -343,6 +400,83 @@ const ChurchMarker = memo(function ChurchMarker({
   );
 });
 
+const ClusterMarker = memo(function ClusterMarker({
+  pin,
+}: {
+  pin: ClusterPin<Clusterable>;
+}) {
+  const map = useMap();
+  const icon = clusterIcon(pin.count);
+  const position = useMemo<[number, number]>(
+    () => [pin.latitude, pin.longitude],
+    [pin.latitude, pin.longitude],
+  );
+  const eventHandlers = useMemo(
+    () => ({
+      click: () => {
+        const current = map.getZoom();
+        const next = Math.min(INDIVIDUAL_ZOOM, Math.floor(current) + CLUSTER_ZOOM_STEP);
+        if (next > current) {
+          map.flyTo([pin.latitude, pin.longitude], next, { duration: 0.55 });
+        }
+      },
+    }),
+    [map, pin.latitude, pin.longitude],
+  );
+
+  return (
+    <Marker
+      icon={icon}
+      position={position}
+      eventHandlers={eventHandlers}
+      title={`${pin.count} churches`}
+      zIndexOffset={400 + pin.count}
+    />
+  );
+});
+
+type MappedChurch = ChurchMapItem & { latitude: number; longitude: number };
+
+/**
+ * Churches close enough to share a pin at this zoom become one numbered
+ * marker. Recomputed when the zoom settles, not on every animation frame,
+ * and not when the user only pans — grouping is in world pixels.
+ */
+function ClusteredChurches({
+  churches,
+  openChurchId,
+  openPopupRequestId,
+}: {
+  churches: MappedChurch[];
+  openChurchId: number | undefined;
+  openPopupRequestId: number | undefined;
+}) {
+  const map = useMap();
+  const [zoom, setZoom] = useState(() => map.getZoom());
+  useMapEvents({
+    zoomend: () => setZoom(map.getZoom()),
+  });
+  const pins = useMemo(() => clusterChurches(churches, zoom), [churches, zoom]);
+
+  return (
+    <>
+      {pins.map((pin) =>
+        pin.kind === "church" ? (
+          <ChurchMarker
+            key={pin.church.id}
+            church={pin.church}
+            openPopupRequestId={
+              openChurchId === pin.church.id ? openPopupRequestId : undefined
+            }
+          />
+        ) : (
+          <ClusterMarker key={pin.key} pin={pin} />
+        ),
+      )}
+    </>
+  );
+}
+
 const SearchPlaceMarker = memo(function SearchPlaceMarker({
   place,
 }: {
@@ -394,7 +528,8 @@ export const ChurchMap = memo(function ChurchMap({
   const withCoords = useMemo(
     () =>
       churches.filter(
-        (church) => church.latitude !== null && church.longitude !== null,
+        (church): church is MappedChurch =>
+          church.latitude !== null && church.longitude !== null,
       ),
     [churches],
   );
@@ -413,7 +548,7 @@ export const ChurchMap = memo(function ChurchMap({
       scrollWheelZoom
       zoomControl={false}
     >
-      {centerOn && <ChangeView center={centerOn} />}
+      {centerOn && <ChangeView center={centerOn} churches={withCoords} />}
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
       <PopupPaneElevator />
       <TileLayer
@@ -421,15 +556,13 @@ export const ChurchMap = memo(function ChurchMap({
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         maxZoom={19}
       />
-      {withCoords.map((church) => (
-        <ChurchMarker
-          key={church.id}
-          church={church}
-          openPopupRequestId={
-            centerOn?.churchId === church.id ? (centerOn.requestId ?? 0) : undefined
-          }
-        />
-      ))}
+      <ClusteredChurches
+        churches={withCoords}
+        openChurchId={centerOn?.churchId}
+        openPopupRequestId={
+          centerOn?.churchId != null ? (centerOn.requestId ?? 0) : undefined
+        }
+      />
       {centerOn?.placeTitle ? (
         <SearchPlaceMarker
           place={{
