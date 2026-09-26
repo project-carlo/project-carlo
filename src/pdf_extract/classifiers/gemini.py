@@ -2,10 +2,26 @@
 
 from __future__ import annotations
 
+import json
 from datetime import date
+from hashlib import sha256
 from typing import Any
 
-from pdf_extract.schedule_extraction import extract_events
+from pdf_extract.schedule_extraction import (
+    DEFAULT_GEMINI_MODEL,
+    EVENTS_SYSTEM_PROMPT,
+    SchedulePayload,
+    extract_events,
+)
+
+# Cached results are keyed by classifier version, so the version has to change
+# whenever the output could: the model, the prompt, or the response schema.
+_PROMPT_FINGERPRINT = sha256(
+    (
+        EVENTS_SYSTEM_PROMPT
+        + json.dumps(SchedulePayload.model_json_schema(), sort_keys=True)
+    ).encode("utf-8")
+).hexdigest()[:12]
 
 
 class GeminiClassifier:
@@ -13,10 +29,10 @@ class GeminiClassifier:
     version: str
     _model: str
 
-    def __init__(self, *, model: str = "gemini-3-flash-preview", name: str | None = None) -> None:
+    def __init__(self, *, model: str = DEFAULT_GEMINI_MODEL, name: str | None = None) -> None:
         self._model = model
         self.name = name or "gemini-flash"
-        self.version = model
+        self.version = f"{model}+prompt-{_PROMPT_FINGERPRINT}"
 
     def extract(
         self,

@@ -37,8 +37,8 @@ export function FeedbackTrigger({
       onClick={handleClick}
       className={cn(
         variant === "pill"
-          ? "rubric-link smallcaps inline-flex items-center gap-2 text-[0.875rem]"
-          : "rubric-link smallcaps text-[0.875rem] text-rubric hover:text-rubric-deep",
+          ? "rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
+          : "rubric-link font-serif text-[0.9375rem] text-rubric hover:text-rubric-deep",
         className,
       )}
     >

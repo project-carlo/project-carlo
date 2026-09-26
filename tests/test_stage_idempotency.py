@@ -1,65 +1,137 @@
-import json
+import hashlib
 import logging
 import threading
 from contextlib import contextmanager
+from datetime import date
 from pathlib import Path
 
+import pytest
+
+from pdf_extract.blobstore import bulletin_pdf_key, get_store
+from pdf_extract.db import create_db
 from pdf_extract.fetch import BulletinLink, fetch_bulletins
 from pdf_extract.process import process_bulletins
-from pdf_extract.storage import SCHEMA_PATH, connect_db, save_json_list
+from pdf_extract.recurrence import load_history_from_db, save_history_to_db
+from pdf_extract.runs import parish_results, start_run
+from pdf_extract.storage import (
+    connect_db,
+    latest_bulletin_ids,
+    load_bulletins,
+    load_events,
+    replace_bulletin_events,
+)
+from tests.conftest import CHURCH_FIELDS, PARISH_FIELDS, write_csv
 
 
-def _setup_test_db(tmp_path: Path) -> Path:
-    """Create a test DB with schema, a test parish, and seed churches."""
-    db_path = tmp_path / "parish_events.db"
-    conn = connect_db(db_path)
-    schema_sql = SCHEMA_PATH.read_text(encoding="utf-8")
-    conn.executescript(schema_sql)
-    conn.execute(
-        """INSERT INTO parish(
-            slug, name, homepage_url, bulletin_provider, provider_id, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?)""",
-        (
-            "test-parish",
-            "Test Parish",
-            "https://test.org",
-            "ecatholic",
-            None,
-            "2026-01-01T00:00:00Z",
-        ),
-    )
-    parish_id = conn.execute("SELECT id FROM parish WHERE slug = 'test-parish'").fetchone()["id"]
-    conn.execute(
-        "INSERT INTO church(parish_id, slug, name, address_line1, city, state, postal_code, created_at)"
-        " VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-        (parish_id, "st-mary-anytown", "St. Mary", "123 Main St", "Anytown", "NY", "14000",
-         "2026-01-01T00:00:00Z"),
-    )
-    conn.commit()
-    conn.close()
-    return db_path
-
-
-def _patch_fetch_paths(monkeypatch, tmp_path: Path) -> None:
-    """Point fetch data file paths to tmp_path."""
-    monkeypatch.setattr("pdf_extract.fetch.BULLETINS_METADATA_PATH", tmp_path / "metadata.json")
-
-
-def _patch_process_paths(monkeypatch, tmp_path: Path) -> None:
-    """Point process data file paths (and the shared result cache) to tmp_path."""
-    monkeypatch.setattr("pdf_extract.process.BULLETINS_METADATA_PATH", tmp_path / "metadata.json")
-    monkeypatch.setattr("pdf_extract.process.EVENTS_PATH", tmp_path / "events.json")
-    monkeypatch.setattr("pdf_extract.runner.RUNS_DIR", tmp_path / "runs")
+@pytest.fixture
+def db(tmp_path: Path, monkeypatch) -> Path:
+    """An empty pipeline DB with one parish (test-parish) and church (st-mary-anytown)."""
+    work = tmp_path / "work"
+    work.mkdir()
+    monkeypatch.chdir(work)
+    parishes = [{
+        "slug": "test-parish", "name": "Test Parish", "website": "https://test.org",
+        "bulletin_provider": "ecatholic",
+    }]
+    churches = [{
+        "parish_id": "test-parish", "slug": "st-mary-anytown", "name": "St. Mary",
+        "line1": "123 Main St", "city": "Anytown", "state": "NY", "postal_code": "14000",
+    }]
+    for idx in range(1, 3):
+        parishes.append({
+            "slug": f"test-parish-{idx}", "name": f"Test Parish {idx}",
+            "website": f"https://test-{idx}.org", "bulletin_provider": "ecatholic",
+        })
+        churches.append({
+            "parish_id": f"test-parish-{idx}", "slug": f"st-mary-anytown-{idx}",
+            "name": "St. Mary", "line1": "123 Main St", "city": "Anytown", "state": "NY",
+            "postal_code": "14000",
+        })
+    write_csv(work / "data" / "parishes.csv", PARISH_FIELDS, parishes)
+    write_csv(work / "data" / "churches.csv", CHURCH_FIELDS, churches)
+    create_db()
     # These tests stub PDFs with non-PDF bytes; skip the pypdf-based truncation helper.
-    # Patched on storage where load_bulletin_work_item now lives.
     monkeypatch.setattr("pdf_extract.storage.ensure_truncated_pdf", lambda path, **kwargs: path)
+    return work / "data" / "parish_events.db"
 
 
-def test_fetch_stage_is_idempotent(monkeypatch, tmp_path: Path) -> None:
-    db_path = _setup_test_db(tmp_path)
-    _patch_fetch_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.fetch.connect_db", lambda: connect_db(db_path))
+def _add_bulletin(
+    db: Path,
+    *,
+    parish_slug: str = "test-parish",
+    source_url: str,
+    content_hash: str,
+    pdf_bytes: bytes = b"fake",
+    fetched_at: str,
+    processed_at: str | None = None,
+    published_date: str | None = None,
+) -> int:
+    get_store().put(bulletin_pdf_key(parish_slug, content_hash), pdf_bytes)
+    conn = connect_db(db)
+    try:
+        with conn:
+            cursor = conn.execute(
+                """INSERT INTO bulletin(
+                       parish_id, source_url, content_hash, fetched_at, processed_at,
+                       published_date
+                   ) SELECT id, ?, ?, ?, ?, ? FROM parish WHERE slug = ?""",
+                (source_url, content_hash, fetched_at, processed_at, published_date, parish_slug),
+            )
+        return int(cursor.lastrowid)
+    finally:
+        conn.close()
 
+
+def _event(**overrides):
+    event = {
+        "church_slug": "st-mary-anytown",
+        "type": "mass",
+        "kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": None,
+        "start_time": "9:00 AM",
+        "end_time": None,
+        "cancelled": False,
+        "page_number": 1,
+        "note": None,
+    }
+    event.update(overrides)
+    return event
+
+
+def _extraction(*events, published_date=None, wrong_bulletin=False):
+    return {
+        "events": list(events),
+        "church_list_needs_review": False,
+        "published_date": published_date,
+        "wrong_bulletin": wrong_bulletin,
+    }
+
+
+def _stub_extractor(monkeypatch, result) -> None:
+    monkeypatch.setattr(
+        "pdf_extract.classifiers.gemini.extract_events",
+        lambda pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None: result,
+    )
+
+
+def _current_events(db: Path) -> list[dict]:
+    conn = connect_db(db)
+    try:
+        return load_events(conn, list(latest_bulletin_ids(conn).values()))
+    finally:
+        conn.close()
+
+
+def _bulletins(db: Path) -> list[dict]:
+    conn = connect_db(db)
+    try:
+        return load_bulletins(conn)
+    finally:
+        conn.close()
+
+
+def test_fetch_stage_is_idempotent(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
         lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
@@ -75,59 +147,131 @@ def test_fetch_stage_is_idempotent(monkeypatch, tmp_path: Path) -> None:
 
     monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
 
-    pdf_dir = tmp_path / "bulletins"
-    first = fetch_bulletins(parish_name="Test Parish", pdf_dir=pdf_dir)
-    second = fetch_bulletins(parish_name="Test Parish", pdf_dir=pdf_dir)
+    first = fetch_bulletins(parish_name="Test Parish")
+    second = fetch_bulletins(parish_name="Test Parish")
 
     assert first["fetched_bulletins"] == 1
     assert second["fetched_bulletins"] == 0
     assert second["skipped_existing_urls"] == 1
 
+    [bulletin] = _bulletins(db)
+    assert bulletin["processed_at"] is None
+    assert get_store().get(
+        bulletin_pdf_key("test-parish", bulletin["content_hash"])
+    ) == b"%PDF-1.4 fake"
 
-def test_process_stage_is_idempotent(monkeypatch, tmp_path: Path) -> None:
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
 
-    # Create a test PDF
-    pdf_path = tmp_path / "sample.pdf"
-    pdf_path.write_bytes(b"fake")
-
-    # Write a metadata entry for an unprocessed bulletin
-    save_json_list(tmp_path / "metadata.json", [
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/parsed.pdf",
-            "pdf_path": str(pdf_path),
-            "content_hash": "def",
-            "fetched_at": "2026-01-01T00:00:00Z",
-            "processed_at": None,
-            "published_date": "2026-02-22",
-        }
-    ])
-
+def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
-        "pdf_extract.classifiers.gemini.extract_events",
-        lambda pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None: {
-            "events": [
-                {
-                    "church_slug": "st-mary-anytown",
-                    "type": "mass",
-                    "kind": "weekly",
-                    "day_of_week": "Sunday",
-                    "date": None,
-                    "start_time": "9:00 AM",
-                    "end_time": None,
-                    "cancelled": False,
-                    "page_number": 1,
-                    "note": None,
-                }
-            ],
-            "church_list_needs_review": False,
-            "published_date": None,
-            "wrong_bulletin": False,
-        },
+        "pdf_extract.fetch._build_bulletin_link",
+        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+            source_url="https://example.org/bulletin.pdf",
+            fetch_url="https://example.org/bulletin.pdf",
+        ),
     )
+    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: b"%PDF-1.4 big")
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: b"%PDF small")
+
+    @contextmanager
+    def fake_launch_stealth_browser():
+        yield None
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+
+    fetch_bulletins(parish_name="Test Parish")
+
+    [bulletin] = _bulletins(db)
+    assert bulletin["content_hash"] == hashlib.sha256(b"%PDF-1.4 big").hexdigest()
+    assert get_store().get(
+        bulletin_pdf_key("test-parish", bulletin["content_hash"])
+    ) == b"%PDF small"
+
+
+def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:
+    # The same PDF re-posted at a new URL: the stored copy is not rewritten.
+    urls = iter(["https://example.org/a.pdf", "https://example.org/b.pdf"])
+
+    def build_link(bulletin_provider, fetch_provider_id, *, page=None):
+        url = next(urls)
+        return BulletinLink(source_url=url, fetch_url=url)
+
+    compactions = []
+
+    def compact(data: bytes) -> bytes:
+        compactions.append(data)
+        return b"%PDF compacted " + str(len(compactions)).encode()
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: b"%PDF-1.4 same")
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", compact)
+
+    @contextmanager
+    def fake_launch_stealth_browser():
+        yield None
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+
+    fetch_bulletins(parish_name="Test Parish")
+    fetch_bulletins(parish_name="Test Parish")
+
+    assert len(compactions) == 1
+    content_hash = hashlib.sha256(b"%PDF-1.4 same").hexdigest()
+    assert get_store().get(bulletin_pdf_key("test-parish", content_hash)) == b"%PDF compacted 1"
+
+
+def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) -> None:
+    def build_link(bulletin_provider, fetch_provider_id, *, page=None):
+        return BulletinLink(
+            source_url="https://example.org/bulletin.pdf",
+            fetch_url="https://example.org/bulletin.pdf",
+        )
+
+    def download(*, fetch_url, source_url):
+        if download.calls:
+            raise OSError("connection reset")
+        download.calls += 1
+        return b"%PDF-1.4 fake"
+
+    download.calls = 0
+
+    @contextmanager
+    def fake_launch_stealth_browser():
+        yield None
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    monkeypatch.setattr("pdf_extract.fetch._download_pdf", download)
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source",
+        lambda parish: ("ecatholic", parish["slug"]),
+    )
+
+    conn = connect_db(db)
+    start_run(conn, "run-1", git_sha=None, trigger="test")
+    conn.close()
+
+    result = fetch_bulletins(run_id="run-1")
+    assert result["fetched_bulletins"] == 1
+    assert result["failed_parishes"] == 2
+
+    conn = connect_db(db)
+    try:
+        statuses = {r["parish_slug"]: r["status"] for r in parish_results(conn, "run-1")}
+    finally:
+        conn.close()
+    assert statuses == {
+        "test-parish": "new",
+        "test-parish-1": "download_failed",
+        "test-parish-2": "download_failed",
+    }
+
+
+def test_process_stage_is_idempotent(monkeypatch, db: Path) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/parsed.pdf", content_hash="def",
+        fetched_at="2026-01-01T00:00:00Z", published_date="2026-02-22",
+    )
+    _stub_extractor(monkeypatch, _extraction(_event()))
 
     first = process_bulletins(parish_name="Test Parish")
     second = process_bulletins(parish_name="Test Parish")
@@ -138,63 +282,21 @@ def test_process_stage_is_idempotent(monkeypatch, tmp_path: Path) -> None:
     assert second["inserted_events"] == 0
 
 
-def test_process_only_latest_fetched_unprocessed_per_parish(monkeypatch, tmp_path: Path) -> None:
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
+def test_process_only_latest_fetched_unprocessed_per_parish(monkeypatch, db: Path) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/older.pdf", content_hash="older",
+        pdf_bytes=b"older", fetched_at="2026-01-01T00:00:00Z", published_date="2026-03-01",
+    )
+    _add_bulletin(
+        db, source_url="https://example.org/latest.pdf", content_hash="latest",
+        pdf_bytes=b"latest", fetched_at="2026-02-01T00:00:00Z", published_date="2026-01-01",
+    )
 
-    older_pdf = tmp_path / "older.pdf"
-    latest_pdf = tmp_path / "latest.pdf"
-    older_pdf.write_bytes(b"older")
-    latest_pdf.write_bytes(b"latest")
-
-    save_json_list(tmp_path / "metadata.json", [
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/older.pdf",
-            "pdf_path": str(older_pdf),
-            "content_hash": "older",
-            "fetched_at": "2026-01-01T00:00:00Z",
-            "processed_at": None,
-            "published_date": "2026-03-01",
-        },
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/latest.pdf",
-            "pdf_path": str(latest_pdf),
-            "content_hash": "latest",
-            "fetched_at": "2026-02-01T00:00:00Z",
-            "processed_at": None,
-            "published_date": "2026-01-01",
-        },
-    ])
-
-    processed_urls: list[str] = []
+    processed: list[bytes] = []
 
     def _extract_events(pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None):
-        if pdf_bytes == b"older":
-            processed_urls.append("https://example.org/older.pdf")
-        elif pdf_bytes == b"latest":
-            processed_urls.append("https://example.org/latest.pdf")
-        return {
-            "events": [
-                {
-                    "church_slug": "st-mary-anytown",
-                    "type": "mass",
-                    "kind": "weekly",
-                    "day_of_week": "Sunday",
-                    "date": None,
-                    "start_time": "9:00 AM",
-                    "end_time": None,
-                    "cancelled": False,
-                    "page_number": 1,
-                    "note": None,
-                }
-            ],
-            "church_list_needs_review": False,
-            "published_date": None,
-            "wrong_bulletin": False,
-        }
+        processed.append(pdf_bytes)
+        return _extraction(_event())
 
     monkeypatch.setattr("pdf_extract.classifiers.gemini.extract_events", _extract_events)
 
@@ -202,62 +304,19 @@ def test_process_only_latest_fetched_unprocessed_per_parish(monkeypatch, tmp_pat
 
     assert result["processed_bulletins"] == 1
     assert result["inserted_events"] == 1
-    assert processed_urls == ["https://example.org/latest.pdf"]
+    assert processed == [b"latest"]
 
 
-def test_process_skips_older_when_latest_already_processed(monkeypatch, tmp_path: Path) -> None:
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
-
-    older_pdf = tmp_path / "older.pdf"
-    latest_pdf = tmp_path / "latest.pdf"
-    older_pdf.write_bytes(b"older")
-    latest_pdf.write_bytes(b"latest")
-
-    save_json_list(tmp_path / "metadata.json", [
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/older.pdf",
-            "pdf_path": str(older_pdf),
-            "content_hash": "older",
-            "fetched_at": "2026-01-01T00:00:00Z",
-            "processed_at": None,
-            "published_date": None,
-        },
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/latest.pdf",
-            "pdf_path": str(latest_pdf),
-            "content_hash": "latest",
-            "fetched_at": "2026-02-01T00:00:00Z",
-            "processed_at": "2026-02-02T00:00:00Z",
-            "published_date": None,
-        },
-    ])
-
-    monkeypatch.setattr(
-        "pdf_extract.classifiers.gemini.extract_events",
-        lambda pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None: {
-            "events": [
-                {
-                    "church_slug": "st-mary-anytown",
-                    "type": "mass",
-                    "kind": "weekly",
-                    "day_of_week": "Sunday",
-                    "date": None,
-                    "start_time": "9:00 AM",
-                    "end_time": None,
-                    "cancelled": False,
-                    "page_number": 1,
-                    "note": None,
-                }
-            ],
-            "church_list_needs_review": False,
-            "published_date": None,
-            "wrong_bulletin": False,
-        },
+def test_process_skips_older_when_latest_already_processed(monkeypatch, db: Path) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/older.pdf", content_hash="older",
+        fetched_at="2026-01-01T00:00:00Z",
     )
+    _add_bulletin(
+        db, source_url="https://example.org/latest.pdf", content_hash="latest",
+        fetched_at="2026-02-01T00:00:00Z", processed_at="2026-02-02T00:00:00Z",
+    )
+    _stub_extractor(monkeypatch, _extraction(_event()))
 
     result = process_bulletins(parish_name="Test Parish")
 
@@ -265,66 +324,13 @@ def test_process_skips_older_when_latest_already_processed(monkeypatch, tmp_path
     assert result["inserted_events"] == 0
 
 
-def test_process_bounds_prepared_pdfs_to_concurrency(monkeypatch, tmp_path: Path) -> None:
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
-
-    conn = connect_db(db_path)
-    try:
-        for idx in range(1, 3):
-            parish_slug = f"test-parish-{idx}"
-            conn.execute(
-                """INSERT INTO parish(
-                    slug, name, homepage_url, bulletin_provider, provider_id, created_at
-                ) VALUES (?, ?, ?, ?, ?, ?)""",
-                (
-                    parish_slug,
-                    f"Test Parish {idx}",
-                    f"https://test-{idx}.org",
-                    "ecatholic",
-                    None,
-                    "2026-01-01T00:00:00Z",
-                ),
-            )
-            parish_id = conn.execute(
-                "SELECT id FROM parish WHERE slug = ?", (parish_slug,),
-            ).fetchone()["id"]
-            conn.execute(
-                "INSERT INTO church(parish_id, slug, name, address_line1, city, state, postal_code, created_at)"
-                " VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                (
-                    parish_id,
-                    f"st-mary-anytown-{idx}",
-                    "St. Mary",
-                    "123 Main St",
-                    "Anytown",
-                    "NY",
-                    "14000",
-                    "2026-01-01T00:00:00Z",
-                ),
-            )
-        conn.commit()
-    finally:
-        conn.close()
-
-    parish_slugs = ["test-parish", "test-parish-1", "test-parish-2"]
-    entries = []
-    for idx, parish_slug in enumerate(parish_slugs):
-        pdf_path = tmp_path / f"bulletin-{idx}.pdf"
-        pdf_path.write_bytes(f"pdf-{idx}".encode())
-        entries.append(
-            {
-                "parish_slug": parish_slug,
-                "source_url": f"https://example.org/bulletin-{idx}.pdf",
-                "pdf_path": str(pdf_path),
-                "content_hash": f"hash-{idx}",
-                "fetched_at": f"2026-01-0{idx + 1}T00:00:00Z",
-                "processed_at": None,
-                "published_date": None,
-            }
+def test_process_bounds_prepared_pdfs_to_concurrency(monkeypatch, db: Path) -> None:
+    for idx, parish_slug in enumerate(["test-parish", "test-parish-1", "test-parish-2"]):
+        _add_bulletin(
+            db, parish_slug=parish_slug, source_url=f"https://example.org/bulletin-{idx}.pdf",
+            content_hash=f"hash-{idx}", pdf_bytes=f"pdf-{idx}".encode(),
+            fetched_at=f"2026-01-0{idx + 1}T00:00:00Z",
         )
-    save_json_list(tmp_path / "metadata.json", entries)
 
     started = threading.Event()
     extract_calls = 0
@@ -345,12 +351,7 @@ def test_process_bounds_prepared_pdfs_to_concurrency(monkeypatch, tmp_path: Path
         nonlocal extract_calls
         extract_calls += 1
         started.set()
-        return {
-            "events": [],
-            "church_list_needs_review": False,
-            "published_date": None,
-            "wrong_bulletin": False,
-        }
+        return _extraction()
 
     monkeypatch.setattr("pdf_extract.runner.load_bulletin_work_item", _load_bulletin_work_item)
     monkeypatch.setattr("pdf_extract.classifiers.gemini.extract_events", _extract_events)
@@ -363,48 +364,14 @@ def test_process_bounds_prepared_pdfs_to_concurrency(monkeypatch, tmp_path: Path
 
 
 def test_process_skips_events_when_wrong_bulletin_flag_is_set(
-    monkeypatch, tmp_path: Path, caplog,
+    monkeypatch, db: Path, caplog,
 ) -> None:
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
-
-    pdf_path = tmp_path / "wrong.pdf"
-    pdf_path.write_bytes(b"fake")
-
-    save_json_list(tmp_path / "metadata.json", [
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/wrong.pdf",
-            "pdf_path": str(pdf_path),
-            "content_hash": "abc",
-            "fetched_at": "2026-01-01T00:00:00Z",
-            "processed_at": None,
-            "published_date": None,
-        }
-    ])
-
-    monkeypatch.setattr(
-        "pdf_extract.classifiers.gemini.extract_events",
-        lambda pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None: {
-            "events": [
-                {
-                    "church_slug": "st-mary-anytown",
-                    "type": "mass",
-                    "kind": "weekly",
-                    "day_of_week": "Sunday",
-                    "date": None,
-                    "start_time": "9:00 AM",
-                    "end_time": None,
-                    "cancelled": False,
-                    "page_number": 1,
-                    "note": None,
-                }
-            ],
-            "church_list_needs_review": False,
-            "published_date": "2025-01-15",
-            "wrong_bulletin": True,
-        },
+    _add_bulletin(
+        db, source_url="https://example.org/wrong.pdf", content_hash="abc",
+        fetched_at="2026-01-01T00:00:00Z",
+    )
+    _stub_extractor(
+        monkeypatch, _extraction(_event(), published_date="2025-01-15", wrong_bulletin=True),
     )
 
     caplog.set_level(logging.WARNING, logger="pdf_extract.process")
@@ -412,304 +379,246 @@ def test_process_skips_events_when_wrong_bulletin_flag_is_set(
 
     assert result["processed_bulletins"] == 1
     assert result["inserted_events"] == 0
-    assert any(
-        "flagged as wrong PDF" in rec.message for rec in caplog.records
+    assert any("flagged as wrong PDF" in rec.message for rec in caplog.records)
+
+    [bulletin] = _bulletins(db)
+    assert bulletin["processed_at"] is not None
+    assert bulletin["published_date"] == "2025-01-15"
+    assert _current_events(db) == []
+
+
+def test_process_stores_published_date_and_note(monkeypatch, db: Path) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/good.pdf", content_hash="xyz",
+        fetched_at="2026-04-15T00:00:00Z",
     )
-
-    metadata = json.loads((tmp_path / "metadata.json").read_text(encoding="utf-8"))
-    entry = metadata[0]
-    assert entry["processed_at"] is not None
-    assert entry["published_date"] == "2025-01-15"
-
-    events = json.loads((tmp_path / "events.json").read_text(encoding="utf-8"))
-    assert events == []
-
-
-def test_process_writes_published_date_and_note_into_metadata(
-    monkeypatch, tmp_path: Path,
-) -> None:
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
-
-    pdf_path = tmp_path / "good.pdf"
-    pdf_path.write_bytes(b"fake")
-
-    save_json_list(tmp_path / "metadata.json", [
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/good.pdf",
-            "pdf_path": str(pdf_path),
-            "content_hash": "xyz",
-            "fetched_at": "2026-04-15T00:00:00Z",
-            "processed_at": None,
-            "published_date": None,
-        }
-    ])
-
-    monkeypatch.setattr(
-        "pdf_extract.classifiers.gemini.extract_events",
-        lambda pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None: {
-            "events": [
-                {
-                    "church_slug": "st-mary-anytown",
-                    "type": "mass",
-                    "kind": "weekly",
-                    "day_of_week": "Sunday",
-                    "date": None,
-                    "start_time": "11:00 AM",
-                    "end_time": None,
-                    "cancelled": False,
-                    "page_number": 2,
-                    "note": "Spanish",
-                }
-            ],
-            "church_list_needs_review": False,
-            "published_date": "2026-04-12",
-            "wrong_bulletin": False,
-        },
+    _stub_extractor(
+        monkeypatch,
+        _extraction(
+            _event(start_time="11:00 AM", page_number=2, note="Spanish"),
+            published_date="2026-04-12",
+        ),
     )
 
     result = process_bulletins(parish_name="Test Parish")
 
     assert result["processed_bulletins"] == 1
     assert result["inserted_events"] == 1
+    assert _bulletins(db)[0]["published_date"] == "2026-04-12"
 
-    metadata = json.loads((tmp_path / "metadata.json").read_text(encoding="utf-8"))
-    assert metadata[0]["published_date"] == "2026-04-12"
-
-    events = json.loads((tmp_path / "events.json").read_text(encoding="utf-8"))
-    assert len(events) == 1
-    assert events[0]["note"] == "Spanish"
+    [event] = _current_events(db)
+    assert event["note"] == "Spanish"
+    assert event["start_time"] == "11:00 AM"
+    assert event["page_number"] == 2
 
 
-def test_process_compacts_events_from_superseded_bulletins(
-    monkeypatch, tmp_path: Path,
-) -> None:
-    """events.json keeps only each parish's latest processed bulletin's rows."""
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
-
-    older_pdf = tmp_path / "older.pdf"
-    latest_pdf = tmp_path / "latest.pdf"
-    older_pdf.write_bytes(b"older")
-    latest_pdf.write_bytes(b"latest")
-
-    save_json_list(tmp_path / "metadata.json", [
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/older.pdf",
-            "pdf_path": str(older_pdf),
-            "content_hash": "older",
-            "fetched_at": "2026-01-01T00:00:00Z",
-            "processed_at": "2026-01-02T00:00:00Z",
-            "published_date": "2026-01-01",
-        },
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/latest.pdf",
-            "pdf_path": str(latest_pdf),
-            "content_hash": "latest",
-            "fetched_at": "2026-02-01T00:00:00Z",
-            "processed_at": None,
-            "published_date": None,
-        },
-    ])
-    # Rows from the already-processed older bulletin, as today's events.json would hold.
-    save_json_list(tmp_path / "events.json", [
-        {
-            "church_slug": "st-mary-anytown",
-            "bulletin_source_url": "https://example.org/older.pdf",
-            "event_type": "mass",
-            "event_kind": "weekly",
-            "day_of_week": "Saturday",
-            "date": None,
-            "start_time": "4:00 PM",
-            "end_time": None,
-            "cancelled": False,
-            "page_number": 1,
-            "note": None,
-        }
-    ])
-
-    monkeypatch.setattr(
-        "pdf_extract.classifiers.gemini.extract_events",
-        lambda pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None: {
-            "events": [
-                {
-                    "church_slug": "st-mary-anytown",
-                    "type": "mass",
-                    "kind": "weekly",
-                    "day_of_week": "Sunday",
-                    "date": None,
-                    "start_time": "9:00 AM",
-                    "end_time": None,
-                    "cancelled": False,
-                    "page_number": 1,
-                    "note": None,
-                }
-            ],
-            "church_list_needs_review": False,
-            "published_date": "2026-02-01",
-            "wrong_bulletin": False,
-        },
+def test_process_counts_events_for_unknown_churches_as_skipped(monkeypatch, db: Path) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/good.pdf", content_hash="xyz",
+        fetched_at="2026-04-15T00:00:00Z",
+    )
+    _stub_extractor(
+        monkeypatch, _extraction(_event(), _event(church_slug="not-a-known-church")),
     )
 
     result = process_bulletins(parish_name="Test Parish")
 
-    assert result["processed_bulletins"] == 1
     assert result["inserted_events"] == 1
-
-    events = json.loads((tmp_path / "events.json").read_text(encoding="utf-8"))
-    assert [e["bulletin_source_url"] for e in events] == ["https://example.org/latest.pdf"]
-    assert events[0]["day_of_week"] == "Sunday"
+    assert result["skipped_events"] == 1
 
 
-def test_process_compaction_keeps_published_latest_over_fetched_latest(
-    monkeypatch, tmp_path: Path,
+def test_superseded_bulletins_keep_their_events_but_are_not_current(
+    monkeypatch, db: Path,
+) -> None:
+    older = _add_bulletin(
+        db, source_url="https://example.org/older.pdf", content_hash="older",
+        fetched_at="2026-01-01T00:00:00Z", processed_at="2026-01-02T00:00:00Z",
+        published_date="2026-01-01",
+    )
+    conn = connect_db(db)
+    replace_bulletin_events(conn, older, [{
+        "church_slug": "st-mary-anytown", "event_type": "mass", "event_kind": "weekly",
+        "day_of_week": "Saturday", "start_time": "4:00 PM",
+    }])
+    conn.close()
+    _add_bulletin(
+        db, source_url="https://example.org/latest.pdf", content_hash="latest",
+        fetched_at="2026-02-01T00:00:00Z",
+    )
+    _stub_extractor(monkeypatch, _extraction(_event(), published_date="2026-02-01"))
+
+    result = process_bulletins(parish_name="Test Parish")
+    assert result["processed_bulletins"] == 1
+
+    current = _current_events(db)
+    assert [e["bulletin_source_url"] for e in current] == ["https://example.org/latest.pdf"]
+    assert current[0]["day_of_week"] == "Sunday"
+
+    conn = connect_db(db)
+    try:
+        assert len(load_events(conn)) == 2, "the older bulletin's rows are kept"
+    finally:
+        conn.close()
+
+
+def test_current_bulletin_prefers_published_latest_over_fetched_latest(
+    monkeypatch, db: Path,
 ) -> None:
     """A re-served old issue (fetched later, published earlier) must not displace
-    the events of the most recently *published* bulletin — that is the bulletin
-    the frontend snapshot displays."""
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
-
-    current_pdf = tmp_path / "current.pdf"
-    stale_pdf = tmp_path / "stale.pdf"
-    current_pdf.write_bytes(b"current")
-    stale_pdf.write_bytes(b"stale")
-
-    save_json_list(tmp_path / "metadata.json", [
-        {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/current.pdf",
-            "pdf_path": str(current_pdf),
-            "content_hash": "current",
-            "fetched_at": "2026-05-23T00:00:00Z",
-            "processed_at": "2026-05-23T01:00:00Z",
-            "published_date": "2026-05-24",
-        },
-        {
-            # Fetched later, but the parish site re-served a year-old issue.
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/stale.pdf",
-            "pdf_path": str(stale_pdf),
-            "content_hash": "stale",
-            "fetched_at": "2026-06-07T00:00:00Z",
-            "processed_at": None,
-            "published_date": None,
-        },
-    ])
-    save_json_list(tmp_path / "events.json", [
-        {
-            "church_slug": "st-mary-anytown",
-            "bulletin_source_url": "https://example.org/current.pdf",
-            "event_type": "mass",
-            "event_kind": "weekly",
-            "day_of_week": "Sunday",
-            "date": None,
-            "start_time": "9:00 AM",
-            "end_time": None,
-            "cancelled": False,
-            "page_number": 1,
-            "note": None,
-        }
-    ])
-
-    monkeypatch.setattr(
-        "pdf_extract.classifiers.gemini.extract_events",
-        lambda pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None: {
-            "events": [
-                {
-                    "church_slug": "st-mary-anytown",
-                    "type": "mass",
-                    "kind": "weekly",
-                    "day_of_week": "Saturday",
-                    "date": None,
-                    "start_time": "4:00 PM",
-                    "end_time": None,
-                    "cancelled": False,
-                    "page_number": 1,
-                    "note": None,
-                }
-            ],
-            "church_list_needs_review": False,
-            "published_date": "2025-06-08",
-            "wrong_bulletin": False,
-        },
+    the events of the most recently *published* bulletin."""
+    current = _add_bulletin(
+        db, source_url="https://example.org/current.pdf", content_hash="current",
+        fetched_at="2026-05-23T00:00:00Z", processed_at="2026-05-23T01:00:00Z",
+        published_date="2026-05-24",
+    )
+    conn = connect_db(db)
+    replace_bulletin_events(conn, current, [{
+        "church_slug": "st-mary-anytown", "event_type": "mass", "event_kind": "weekly",
+        "day_of_week": "Sunday", "start_time": "9:00 AM",
+    }])
+    conn.close()
+    # Fetched later, but the parish site re-served a year-old issue.
+    _add_bulletin(
+        db, source_url="https://example.org/stale.pdf", content_hash="stale",
+        fetched_at="2026-06-07T00:00:00Z",
+    )
+    _stub_extractor(
+        monkeypatch,
+        _extraction(_event(day_of_week="Saturday", start_time="4:00 PM"),
+                    published_date="2025-06-08"),
     )
 
     result = process_bulletins(parish_name="Test Parish")
     assert result["processed_bulletins"] == 1
 
-    events = json.loads((tmp_path / "events.json").read_text(encoding="utf-8"))
+    events = _current_events(db)
     assert [e["bulletin_source_url"] for e in events] == ["https://example.org/current.pdf"]
     assert events[0]["day_of_week"] == "Sunday"
 
 
-def test_process_serves_cached_extraction_without_api_call(
-    monkeypatch, tmp_path: Path,
-) -> None:
-    """A re-run after a metadata reset reuses the on-disk result cache."""
-    db_path = _setup_test_db(tmp_path)
-    _patch_process_paths(monkeypatch, tmp_path)
-    monkeypatch.setattr("pdf_extract.process.connect_db", lambda: connect_db(db_path))
+def test_unprocessed_bulletin_does_not_blank_the_parish(db: Path) -> None:
+    """A newer bulletin that failed extraction must not become the current one."""
+    current = _add_bulletin(
+        db, source_url="https://example.org/current.pdf", content_hash="current",
+        fetched_at="2026-05-23T00:00:00Z", processed_at="2026-05-23T01:00:00Z",
+    )
+    _add_bulletin(
+        db, source_url="https://example.org/failed.pdf", content_hash="failed",
+        fetched_at="2026-06-07T00:00:00Z",
+    )
+    conn = connect_db(db)
+    try:
+        assert latest_bulletin_ids(conn) == {"test-parish": current}
+    finally:
+        conn.close()
 
-    pdf_path = tmp_path / "sample.pdf"
-    pdf_path.write_bytes(b"fake")
 
-    def _metadata_entry():
-        return {
-            "parish_slug": "test-parish",
-            "source_url": "https://example.org/parsed.pdf",
-            "pdf_path": str(pdf_path),
-            "content_hash": "def",
-            "fetched_at": "2026-01-01T00:00:00Z",
-            "processed_at": None,
-            "published_date": None,
-        }
-
-    save_json_list(tmp_path / "metadata.json", [_metadata_entry()])
+def test_process_serves_cached_extraction_without_api_call(monkeypatch, db: Path) -> None:
+    """A re-run after processed_at is reset reuses the result cache."""
+    _add_bulletin(
+        db, source_url="https://example.org/parsed.pdf", content_hash="def",
+        fetched_at="2026-01-01T00:00:00Z",
+    )
 
     extract_calls = 0
 
     def _extract_events(pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None):
         nonlocal extract_calls
         extract_calls += 1
-        return {
-            "events": [
-                {
-                    "church_slug": "st-mary-anytown",
-                    "type": "mass",
-                    "kind": "weekly",
-                    "day_of_week": "Sunday",
-                    "date": None,
-                    "start_time": "9:00 AM",
-                    "end_time": None,
-                    "cancelled": False,
-                    "page_number": 1,
-                    "note": None,
-                }
-            ],
-            "church_list_needs_review": False,
-            "published_date": None,
-            "wrong_bulletin": False,
-        }
+        return {**_extraction(_event()), "usage": {"prompt_tokens": 100, "output_tokens": 20}}
 
     monkeypatch.setattr("pdf_extract.classifiers.gemini.extract_events", _extract_events)
 
     first = process_bulletins(parish_name="Test Parish")
     assert first["processed_bulletins"] == 1
     assert first["cache_hits"] == 0
+    assert (first["prompt_tokens"], first["output_tokens"]) == (100, 20)
     assert extract_calls == 1
 
-    # Simulate a metadata reset: processed_at cleared, same bulletin content.
-    save_json_list(tmp_path / "metadata.json", [_metadata_entry()])
+    conn = connect_db(db)
+    with conn:
+        conn.execute("UPDATE bulletin SET processed_at = NULL")
+    conn.close()
 
     second = process_bulletins(parish_name="Test Parish")
     assert second["processed_bulletins"] == 1
     assert second["inserted_events"] == 1
     assert second["cache_hits"] == 1
     assert extract_calls == 1, "cache hit must not call the classifier again"
+    assert (second["prompt_tokens"], second["output_tokens"]) == (0, 0)
+    assert len(_current_events(db)) == 1, "reprocessing replaces, not duplicates"
+
+
+def test_process_records_failures_and_leaves_the_bulletin_pending(
+    monkeypatch, db: Path,
+) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/parsed.pdf", content_hash="def",
+        fetched_at="2026-01-01T00:00:00Z",
+    )
+
+    def _extract_events(pdf_bytes, *, churches, model="gemini-3-flash-preview", today=None):
+        raise RuntimeError("quota exhausted")
+
+    monkeypatch.setattr("pdf_extract.classifiers.gemini.extract_events", _extract_events)
+    conn = connect_db(db)
+    start_run(conn, "run-1", git_sha=None, trigger="test")
+    conn.close()
+
+    result = process_bulletins(run_id="run-1")
+
+    assert result["failed_bulletins"] == 1
+    assert _bulletins(db)[0]["processed_at"] is None
+    conn = connect_db(db)
+    try:
+        [row] = parish_results(conn, "run-1")
+    finally:
+        conn.close()
+    assert row["status"] == "failed"
+    assert "quota exhausted" in row["detail"]
+
+
+def test_process_promotes_a_dated_event_that_recurred_the_past_two_weeks(
+    monkeypatch, db: Path,
+) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/parsed.pdf", content_hash="recurring",
+        fetched_at="2026-08-19T00:00:00Z", published_date="2026-08-19",
+    )
+    # The same 7:00 PM Wednesday Adoration was printed in the two prior bulletins.
+    conn = connect_db(db)
+    save_history_to_db(conn, {
+        ("st-mary-anytown", "adoration", 1140): {
+            date(2026, 8, 5),
+            date(2026, 8, 12),
+        },
+    })
+    conn.close()
+
+    _stub_extractor(
+        monkeypatch,
+        _extraction(
+            _event(type="adoration", kind="specific_date", day_of_week=None,
+                   date="2026-08-19", start_time="7:00 PM", page_number=2),
+            published_date="2026-08-19",
+        ),
+    )
+
+    result = process_bulletins(parish_name="Test Parish")
+
+    assert result["weekly_promotions"] == 1
+    [event] = _current_events(db)
+    assert event["event_kind"] == "weekly"
+    assert event["day_of_week"] == "Wednesday"
+    assert event["date"] is None
+
+    # The raw dated sighting is still recorded, so next week's bulletin can
+    # keep the chain going even though the stored row no longer holds a date.
+    conn = connect_db(db)
+    try:
+        history = load_history_from_db(conn)
+    finally:
+        conn.close()
+    assert sorted(d.isoformat() for d in history[("st-mary-anytown", "adoration", 1140)]) == [
+        "2026-08-05", "2026-08-12", "2026-08-19",
+    ]

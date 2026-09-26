@@ -1,10 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import {
+  ChurchNotFoundError,
+  churchSchedule,
+  collectMapItems,
   eventMatchesFilters,
-  parseEventDateForFilter,
+  findChurch,
+  resetMapItemCache,
   type ChurchFilters,
-  type RawEvent,
 } from "./api";
+import { parseSnapshot } from "./lib/snapshot";
+import fixture from "./lib/snapshot.fixture.json";
+import type { ChurchBase, RawEvent } from "./types";
 
 function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
   return {
@@ -134,21 +140,154 @@ describe("eventMatchesFilters", () => {
   });
 });
 
-describe("parseEventDateForFilter", () => {
-  it("parses an ISO YYYY-MM-DD date in local time", () => {
-    const d = parseEventDateForFilter("2026-06-07");
-    expect(d).not.toBeNull();
-    expect(d!.getFullYear()).toBe(2026);
-    expect(d!.getMonth()).toBe(5);
-    expect(d!.getDate()).toBe(7);
+function church(id: number, overrides: Partial<ChurchBase> = {}): ChurchBase {
+  return {
+    id,
+    parish_id: id,
+    slug: `parish-${id}`,
+    name: `Parish ${id}`,
+    address_line1: "1 Main St",
+    address_line2: null,
+    city: "Rochester",
+    state: "NY",
+    postal_code: "14600",
+    latitude: 43.15,
+    longitude: -77.6,
+    ...overrides,
+  };
+}
+
+describe("collectMapItems", () => {
+  const allTypes: ChurchFilters = { types: [] };
+
+  // The memo is module state. It also checks church identity, so cases that
+  // build a fresh fixture each time are already safe; this keeps the ones
+  // sharing a church object (below) honest.
+  beforeEach(resetMapItemCache);
+
+  it("drops churches with no matching events", () => {
+    const churches = [church(101), church(102)];
+    const events = [rawEvent({ id: 1001, church_id: 101 })];
+
+    const items = collectMapItems(churches, events, allTypes);
+
+    expect(items.map((item) => item.id)).toEqual([101]);
   });
 
-  it("trims surrounding whitespace before parsing", () => {
-    const d = parseEventDateForFilter("  2026-06-07  ");
-    expect(d!.getDate()).toBe(7);
+  it("summarises a church's matching events", () => {
+    const churches = [church(111)];
+    const events = [
+      rawEvent({ id: 1101, church_id: 111, start_time: 9 * 60 }),
+      rawEvent({
+        id: 1102,
+        church_id: 111,
+        event_type: "confession",
+        day_of_week: "saturday",
+        start_time: 15 * 60,
+      }),
+    ];
+
+    const [item] = collectMapItems(churches, events, allTypes);
+
+    expect(item.event_types).toEqual(["confession", "mass"]);
+    // Sorted by the schedule order the popup uses: Monday before Saturday.
+    expect(item.upcoming_events.map((e) => e.start_time)).toEqual([
+      9 * 60,
+      15 * 60,
+    ]);
   });
 
-  it("returns null for an unparseable string", () => {
-    expect(parseEventDateForFilter("not-a-date")).toBeNull();
+  it("returns the identical item when a church's matching events are unchanged", () => {
+    const churches = [church(121), church(122)];
+    const events = [
+      rawEvent({ id: 1201, church_id: 121, start_time: 9 * 60 }),
+      rawEvent({ id: 1202, church_id: 122, start_time: 17 * 60 }),
+    ];
+
+    const first = collectMapItems(churches, events, {
+      types: [],
+      timeFrom: 0,
+      timeTo: 24 * 60,
+    });
+    // Narrowing the window drops the evening parish and leaves the other's
+    // events untouched — the map should get the very same object back for it,
+    // which is what lets the marker skip re-rendering.
+    const second = collectMapItems(churches, events, {
+      types: [],
+      timeFrom: 0,
+      timeTo: 12 * 60,
+    });
+
+    expect(second.map((item) => item.id)).toEqual([121]);
+    expect(second[0]).toBe(first[0]);
+  });
+
+  // Guards `resetMapItemCache`. The memo keys on church identity *and* event
+  // ids, so a leak needs a shared church fixture — which is exactly what a
+  // hoisted `const` in a describe block gives you. Both halves reuse the same
+  // church object and event id with different data on purpose; without the
+  // reset above, the second is served the first one's item and sees 9:00.
+  const sharedChurch = church(140);
+
+  it("does not leak a memoised item into a later test (part 1)", () => {
+    const items = collectMapItems(
+      [sharedChurch],
+      [rawEvent({ id: 1400, church_id: 140, start_time: 9 * 60 })],
+      allTypes,
+    );
+    expect(items[0].upcoming_events[0].start_time).toBe(9 * 60);
+  });
+
+  it("does not leak a memoised item into a later test (part 2)", () => {
+    const items = collectMapItems(
+      [sharedChurch],
+      [rawEvent({ id: 1400, church_id: 140, start_time: 17 * 60 })],
+      allTypes,
+    );
+    expect(items[0].upcoming_events[0].start_time).toBe(17 * 60);
+  });
+
+  it("rebuilds an item when the church's matching events change", () => {
+    const churches = [church(131)];
+    const events = [
+      rawEvent({ id: 1301, church_id: 131, start_time: 9 * 60 }),
+      rawEvent({ id: 1302, church_id: 131, start_time: 17 * 60 }),
+    ];
+
+    const both = collectMapItems(churches, events, allTypes);
+    const morningOnly = collectMapItems(churches, events, {
+      types: [],
+      timeFrom: 0,
+      timeTo: 12 * 60,
+    });
+
+    expect(both[0].upcoming_events).toHaveLength(2);
+    expect(morningOnly[0].upcoming_events).toHaveLength(1);
+    expect(morningOnly[0]).not.toBe(both[0]);
+  });
+});
+
+describe("church page lookups", () => {
+  const snapshot = parseSnapshot(JSON.stringify(fixture));
+
+  it("finds a church with its parish links, or throws ChurchNotFoundError", () => {
+    expect(findChurch(snapshot, "a")).toMatchObject({
+      id: 3,
+      homepage_url: "https://a",
+      bulletin_url: null,
+    });
+    expect(() => findChurch(snapshot, "missing")).toThrow(ChurchNotFoundError);
+  });
+
+  it("lists a church's upcoming events of the chosen types in schedule order", () => {
+    // Church 7 has a Friday adoration (id 15) and a Sunday Mass (id 10).
+    expect(churchSchedule(snapshot, "b", []).map((ev) => ev.id)).toEqual([10, 15]);
+    expect(churchSchedule(snapshot, "b", ["adoration"]).map((ev) => ev.id)).toEqual([15]);
+    expect(churchSchedule(snapshot, "b", ["confession"])).toEqual([]);
+  });
+
+  it("leaves out events with no next occurrence", () => {
+    // Church 3's only event is cancelled.
+    expect(churchSchedule(snapshot, "a", [])).toEqual([]);
   });
 });

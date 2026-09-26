@@ -66,6 +66,15 @@ export function buildChurchDescription(church: ChurchDetail): string {
   return `Mass, Confession, and Adoration times for ${name}${where}, parsed from the parish's latest weekly bulletin.`;
 }
 
+/** Canonical path of the prerendered all-parishes index page. */
+export const CHURCH_INDEX_PATH = "/churches/";
+
+export const CHURCH_INDEX_TITLE = `Browse Catholic Parishes — Mass, Confession & Adoration Times · ${SITE_NAME}`;
+
+export function buildChurchIndexDescription(parishCount: number): string {
+  return `Browse all ${parishCount} Catholic parishes on ${SITE_NAME} and find Mass, Confession, and Adoration times parsed from each parish's weekly bulletin.`;
+}
+
 /** schema.org PostalAddress for a church, or null when no address is known. */
 function postalAddress(church: ChurchDetail): Record<string, unknown> | null {
   const street = [church.address_line1, church.address_line2]
@@ -85,18 +94,23 @@ function postalAddress(church: ChurchDetail): Record<string, unknown> | null {
 }
 
 /**
- * `Church` (PlaceOfWorship) structured data for a parish detail page. Only
- * emits fields that are actually known so the markup stays valid.
+ * `Church` (PlaceOfWorship) structured data for a parish detail page.
+ *
+ * Recurring service times intentionally remain visible page content instead
+ * of `Event` nodes. Google requires each structured Event to describe one
+ * concrete event on a unique leaf page, while parish pages list many recurring
+ * services: https://developers.google.com/search/docs/appearance/structured-data/event
  */
 export function churchJsonLd(
   church: ChurchDetail,
   canonicalUrl: string,
 ): Record<string, unknown> {
   const origin = new URL(canonicalUrl).origin;
+  const churchId = `${canonicalUrl}#church`;
   const node: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Church",
-    "@id": `${canonicalUrl}#church`,
+    "@id": churchId,
     name: church.name ?? "Catholic parish",
     url: canonicalUrl,
     image: absoluteUrl(origin, OG_IMAGE_PATH),
@@ -122,9 +136,34 @@ export function churchJsonLd(
 }
 
 /**
- * BreadcrumbList: Home → {Parish}. A city level will be inserted once city
- * landing pages exist (Phase 3) — schema.org requires every non-final crumb to
- * carry an `item` URL, so we omit the city until it has a real page.
+ * `WebPage` node carrying `dateModified` (derived from the parish's latest
+ * bulletin, same source as the sitemap `<lastmod>`) — freshness signal for a
+ * schedules site.
+ */
+export function churchWebPageJsonLd(
+  church: ChurchDetail,
+  canonicalUrl: string,
+  dateModified: string | null,
+): Record<string, unknown> {
+  const node: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: buildChurchTitle(church),
+    description: buildChurchDescription(church),
+    about: { "@id": `${canonicalUrl}#church` },
+    inLanguage: "en-US",
+  };
+  if (dateModified) node.dateModified = dateModified;
+  return node;
+}
+
+/**
+ * BreadcrumbList: Home → Parishes → {Parish}. A city level will be inserted
+ * once city landing pages exist (Phase 3) — schema.org requires every
+ * non-final crumb to carry an `item` URL, so we omit the city until it has a
+ * real page.
  */
 export function churchBreadcrumbJsonLd(
   church: ChurchDetail,
@@ -144,6 +183,12 @@ export function churchBreadcrumbJsonLd(
       {
         "@type": "ListItem",
         position: 2,
+        name: "Parishes",
+        item: absoluteUrl(origin, CHURCH_INDEX_PATH),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
         name: church.name ?? "Parish",
         item: canonicalUrl,
       },

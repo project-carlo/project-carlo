@@ -3,6 +3,11 @@
 Fetch parish bulletin PDFs and extract schedule events (Mass, Confession, Adoration)
 with Gemini into SQLite.
 
+Curated inputs (the parish and church lists, the schema, the code) live in git.
+Everything the pipeline observes (bulletin PDFs, extraction results, the
+events database, and the snapshot the website serves) lives in Cloudflare R2
+and is pulled on demand. See [How data is stored](#how-data-is-stored).
+
 ## Prerequisites
 
 - [uv](https://docs.astral.sh/uv/) for Python and dependency management.
@@ -27,93 +32,164 @@ pnpm install
 
 `pnpm install` uses [`pnpm-workspace.yaml`](pnpm-workspace.yaml) and installs JavaScript dependencies for `apps/web` (package name `web`) into the workspace store. The root `package.json` has no Node dependencies of its own; `pnpm install:web` is the same command if you prefer an explicit name.
 
-## Run the web app
+## Get the data
 
-Refresh the frontend SQLite snapshot:
+The database and the website's snapshot are not committed. Pull the published copy:
 
 ```bash
-pnpm extract:web
+pnpm data:pull
 ```
 
-Start the web app:
+That needs R2 credentials in your environment or in `.env` (read-only keys are
+enough; see [docs/data-setup.md](docs/data-setup.md)). Without credentials, you
+can still get the snapshot the live site serves, which is all the web app needs:
+
+```bash
+pnpm data:pull --snapshot-only --public-fallback
+```
+
+## Run the web app
+
+Start the web app (after pulling the snapshot):
 
 ```bash
 pnpm dev:web
 ```
 
-## Weekly Docker workflow
+To see your own local pipeline changes in the app, rebuild the snapshot from
+your local database with `pnpm extract:web`.
 
-Use the included Docker setup to run the weekly pipeline in one repeatable environment:
+## Weekly pipeline
 
-`fetch -> process -> extract:web -> verify:frontend-snapshot -> build:web`
+One command runs a whole weekly pass:
 
-The pipeline updates `data/metadata.json`, `data/events.json`, and `apps/web/public/frontend.snapshot`.
-Downloaded PDFs and local SQLite/build artifacts stay untracked.
+`fetch -> process -> snapshot -> publishing checks -> change report`
 
-### First-time setup
+```bash
+pnpm weekly:run            # = python -m pdf_extract weekly
+```
 
-1. Make sure you have `GEMINI_API_KEY` available in your shell.
-2. Build the image:
+Every run has an id. Each stage records what it did for each parish under that
+id (`pipeline_run` and `run_parish_result` tables), and the run ends with a
+report comparing the database before and after it, written to
+`data/out/<run_id>/`:
+
+- `report.md` / `report.json`: the publishing checks, per-parish failures (with
+  how many runs in a row they have failed), stale parishes, and every Mass,
+  Confession and Adoration that appeared or disappeared, church by church.
+- `frontend.json.gz`: the snapshot the website would serve.
+- `before.db`: the database as the run found it.
+
+The run's status decides what happens next:
+
+| Status | Exit code | Meaning |
+| :-- | :-: | :-- |
+| `passed` | 0 | Every publishing check passed; safe to publish. |
+| `held` | 10 | A check failed: church count changed, total events moved more than 10%, less than 90% of weekly slots survived, a parish dropped to zero events, a parish or church was removed from the CSVs, or more than half of the parishes failed to fetch. A person decides. |
+| `failed` | 1 | A stage crashed. |
+
+A local run never publishes anything.
+
+### GitHub Actions
+
+`.github/workflows/weekly-docker.yml` runs Sundays at 08:17 UTC (and on
+demand). It pulls the published database, runs the pipeline in the Docker
+image, uploads the result to R2 as a candidate, and then:
+
+- **passed**: publishes it (moves `pipeline/latest.json` to the new run),
+  deploys the site, and closes any open `data-refresh` issues it supersedes.
+- **held** or **failed**: leaves the site on the previous run, opens or updates
+  an issue labelled `data-refresh` with the change report, and fails the job.
+  To publish a held run anyway, run the **Publish Data Run** workflow with its
+  run id. The same workflow rolls back: publish an earlier run id with
+  **rollback** ticked. Without it, publishing a run older than the live one is
+  refused, since that would drop the newer run's data.
+
+Only the default branch writes to R2 or publishes. Dispatching the workflow on
+another branch runs that branch's code against the published data and shows
+its report, but nothing it fetches or extracts leaves the job.
+
+Deploys build the snapshot themselves, from the published database with the
+code being deployed, so the snapshot's format always matches the web app, and
+edits to the CSVs show up in previews and go live on merge. The exception is a
+CSV change that removes a parish or church: that deletes events, so deploys
+build the snapshot from the published database as it stands, without the CSV
+edits, until a reviewed weekly run publishes the removal.
+
+The change report is always in the job summary, and kept as a workflow
+artifact for 90 days.
+
+The R2 bucket, its API tokens and the repository secrets are described in
+[docs/data-setup.md](docs/data-setup.md).
+
+### Local Docker run
 
 ```bash
 docker compose build weekly-job
+export GEMINI_API_KEY=... R2_ACCOUNT_ID=... R2_ACCESS_KEY_ID=... R2_SECRET_ACCESS_KEY=...
+docker compose run --rm weekly-job
 ```
-
-### Local weekly run
-
-```bash
-export GEMINI_API_KEY=...
-docker compose run --rm -e GEMINI_API_KEY weekly-job
-```
-
-This runs `pnpm weekly:run`. It does not create commits; GitHub Actions owns the
-scheduled commit step. Compose does not pass your repo `.env` file into the
-container; pass only the specific variables you want with `-e`.
 
 The Docker image runs Playwright in headed mode under `xvfb` when no display is
-available. This avoids true headless mode while still working on GitHub-hosted
-runners. For debugging, set `PLAYWRIGHT_HEADLESS=1` to force headless mode or
+available. For debugging, set `PLAYWRIGHT_HEADLESS=1` to force headless mode or
 `PLAYWRIGHT_BROWSER_CHANNEL=chrome` to use a locally installed Chrome channel.
 
-### GitHub Actions weekly run
+## How data is stored
 
-The scheduled workflow lives at `.github/workflows/weekly-docker.yml`.
+| What | Where | Written by |
+| :-- | :-- | :-- |
+| Parish and church lists | `data/parishes.csv`, `data/churches.csv` in git | people, in pull requests |
+| Database schema | `data/migrations/*.sql` in git | people, in pull requests |
+| Bulletin PDFs | R2 `bulletins/<parish>/<sha256>.pdf` | `fetch` |
+| Gemini extraction results | R2 `runs/<classifier>/cache/<version>/<sha256>.json` | `process`, `extract` |
+| Bulletins, events, recurrence history, run records | the SQLite database, published per run to R2 `pipeline/runs/<run_id>/` | the pipeline |
+| Website snapshot (gzipped JSON) | R2 `pipeline/runs/<run_id>/frontend.json.gz` (`frontend.snapshot`, gzipped SQLite, in older runs) | `weekly` |
+| Which run is live | R2 `pipeline/latest.json` | the weekly workflow |
 
-Required repository secrets:
+Everything under `pipeline/runs/` is written once and never changed, and a
+rollback is just moving the pointer. After each publish the weekly workflow
+prunes old runs (`pnpm data:prune`), keeping the last 8 weeks and, for a
+year, each month's last run that passed or was published; those are the runs
+you can roll back to.
 
-- `GEMINI_API_KEY`
+`fetch` stores a compacted copy of each bulletin: the first 10 pages (all the
+classifiers read) with images downsampled to 150 dpi by Ghostscript, falling
+back to the PDF as downloaded when that fails or saves nothing. The key's
+hash is of the PDF as downloaded. Without `gs` installed, long bulletins are
+only truncated.
 
-The workflow:
+Locally, `data/` doubles as a cache of the bucket: a PDF or cached extraction
+is downloaded the first time a command needs it and kept. With no R2
+credentials the pipeline runs purely on local files.
 
-- runs on `workflow_dispatch` and Sundays at `08:17` UTC;
-- builds the Docker image with Buildx and GitHub Actions layer cache;
-- runs the weekly pipeline inside the container;
-- copies back only `data/metadata.json`, `data/events.json`, and `apps/web/public/frontend.snapshot`;
-- commits and pushes generated changes with the GitHub Actions bot when there is a diff.
+Writes to R2 are opt-in (`CARLO_REMOTE_WRITE=1`) and only the weekly workflow
+has write keys. Anyone else pulling data uses read-only keys, so nothing run
+outside the workflow can change shared data, even `fetch` or `process`.
 
-GitHub scheduled workflows run on the default branch and use UTC. The `17` minute offset avoids the highest-load top-of-hour window.
+### Working with the database
 
-### Scheduler examples
-
-Linux cron (every Sunday at 03:00):
-
-```cron
-0 3 * * 0 cd /path/to/project-carlo && docker compose run --rm -e GEMINI_API_KEY weekly-job
+```bash
+pnpm data:pull        # reset data/parish_events.db (and the snapshot) to the published run
+pnpm data:status      # which run is published, and recent runs
+pnpm data:prune       # which old runs pruning would delete (--apply deletes them)
+pnpm db:create        # an empty database instead (schema + parishes/churches, no bulletins)
 ```
 
-Windows Task Scheduler action:
+`pnpm data:pull --run-id <id>` pulls a specific run instead, e.g. a held one
+you want to inspect. The database you replace is kept as
+`data/parish_events.db.bak`. Runs from before the snapshot became JSON hold a
+gzipped SQLite snapshot this code can't read: pulling one rebuilds its
+snapshot from its database, and a `--snapshot-only` pull of one fails.
 
-- Program/script: `docker`
-- Arguments: `compose run --rm -e GEMINI_API_KEY weekly-job`
-- Start in: path to the repository root
+Every pipeline command first brings the local database up to date: it applies
+new migrations and re-seeds the `parish` and `church` tables from the CSVs,
+matching rows by slug. An edited CSV takes effect on the next command. A
+parish or church removed from its CSV is deleted along with its bulletins and
+events.
 
-### Troubleshooting
-
-- **Missing API keys**: pass `GEMINI_API_KEY` with `docker compose run -e`, or set it as a repository secret for GitHub Actions.
-- **No commit created in GitHub Actions**: expected when the generated outputs did not change.
-- **Verification failed**: `verify:frontend-snapshot` exits non-zero and stops build/commit by design.
-- **Dependency changes not reflected locally**: rebuild the image with `docker compose build weekly-job`.
-- **Browser behavior differs**: Docker defaults to headed Chromium under `xvfb`; set `PLAYWRIGHT_HEADLESS=1` only when you specifically want true headless mode.
+To change the schema, add the next numbered file to `data/migrations/`; never
+edit one that has shipped. `PRAGMA user_version` records which migrations a
+database has.
 
 ## Usage
 
@@ -124,18 +200,30 @@ Run each stage independently:
 ```bash
 pnpm run fetch [-- --parish "..."]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
+pnpm weekly:run
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
+pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
+pnpm diocese <subcommand> ...
+pnpm extract:web
+pnpm verify:frontend-snapshot
+pnpm data:pull [--run-id ID --snapshot-only --no-snapshot]
+pnpm data:status
+pnpm data:prune [--keep-recent N --keep-monthly N --apply]
 pnpm db:create
 pnpm db:drop
 ```
 
-All commands accept `-- --log-level DEBUG|INFO|WARNING|ERROR` (default: `INFO`).
+Every stage is a subcommand of `python -m pdf_extract`; the `pnpm` scripts above
+are shorthands for it. All commands accept
+`-- --log-level DEBUG|INFO|WARNING|ERROR` (default: `INFO`), and each prints its
+result as JSON on success.
 
 Stage idempotency:
 
 - `fetch` skips URLs already recorded in `bulletin.source_url`
-- `process` skips rows with `processed_at` already set
+- `process` skips bulletins with `processed_at` already set, and serves
+  bulletins it has extracted before (same PDF hash, same model) from the cache
 
 ### From Python
 
@@ -146,9 +234,75 @@ fetch_result = fetch_bulletins(parish_name="Southeast Rochester Catholic Communi
 process_result = process_bulletins(parish_name="Southeast Rochester Catholic Community")
 ```
 
+## Weekly recurrence detection
+
+Bulletins are frequently unclear about whether a listing is a one-off or a
+standing weekly slot, so the extractor sometimes files a recurring Mass,
+Confession, or Adoration under a single calendar date. The frontend then shows
+it as a dated event that vanishes once the date passes.
+
+`src/pdf_extract/recurrence.py` catches those. Every occurrence the pipeline
+extracts is recorded in the `event_occurrence` table, and when a dated event
+turns up on the same weekday, at the same time, for the same church and event
+type as each of the **two weeks immediately before it**, `process` rewrites it
+as a weekly event (`event_kind` `weekly`, `day_of_week` filled in, `date`
+cleared) before storing the bulletin's events.
+
+Weekly extractions count towards that chain as much as dated ones. The
+extractor is not consistent from week to week — on the current corpus, 173 of
+1488 slots have been filed both ways at some point — so a slot that alternates
+would otherwise never accumulate two consecutive dated sightings, even after
+the bulletin had listed it in its weekly schedule for two months. A weekly row
+carries no date, so it is credited to the week its bulletin covers: the first
+matching weekday on or after the bulletin's published date. When the extractor
+could not read an issue date off the bulletin, the fetch date stands in,
+snapped to the nearest Sunday — it lands anywhere from the Saturday before
+publication to the Wednesday after, and used raw it would credit a Sunday slot
+to the wrong week roughly half the time.
+
+The chain has to be unbroken: a slot seen two and four weeks ago but not last
+week is fortnightly, not weekly, and is left as a dated event. Cancellations
+are never promoted, and a promotion that would duplicate a weekly slot the same
+bulletin already lists is dropped instead — including one that duplicates a
+weekly slot the bulletin has *cancelled*. A bulletin's own dated rows never
+count as evidence for that same bulletin, so a six-week series printed on three
+consecutive dates stays a set of dated events instead of promoting itself to a
+standing weekly one. Thresholds live at the top of `recurrence.py`
+(`MIN_PRIOR_WEEKS`, `LOOKBACK_WEEKS`, `HISTORY_RETENTION_WEEKS`).
+
+The occurrence table is the detector's memory of what bulletins announced:
+the event table stores each bulletin's rows after promotion, and a promoted row
+has lost the date it was sighted on.
+
+`pnpm recurrence:apply` re-runs promotion over each parish's current events.
+`process` already promotes each bulletin as it stores it; this is for applying
+a changed threshold to events processed earlier. It records every sighting to
+the history before promoting, since promotion clears a row's date.
+
+## Exploring new dioceses
+
+`data/dioceses/<diocese>/` is where a diocese the pipeline does not cover yet is worked out
+before its rows are promoted into `data/parishes.csv` and `data/churches.csv`. It has one
+Markdown file per parish (bulletin publisher), church (worship site), excluded place and open
+question. Each file carries dated, quoted evidence and an explanation written for whoever
+audits the row later, and the files stay as the provenance of the live rows after
+promotion. `pnpm diocese` fetches rosters (GCatholic, WP Store Locator parish finders),
+measures coverage against them, audits which rows might be one bulletin, probes parish sites,
+ParishesOnline containers and bulletin PDFs, rechecks evidence, and promotes. See
+[`data/dioceses/README.md`](data/dioceses/README.md); agents get the short version from the
+`explore-diocese` skill in `.claude/skills/`.
+
 ## Environment Variables
 
+Commands read a `.env` file in the repo root if there is one (without
+overriding variables already set).
+
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
+- `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
+  access. Without them everything runs on local files only.
+- `R2_BUCKET`: bucket name (default `project-carlo-data`).
+- `R2_ENDPOINT_URL`: only for a bucket in a jurisdiction (e.g. `https://<account>.eu.r2.cloudflarestorage.com`); otherwise derived from `R2_ACCOUNT_ID`.
+- `CARLO_REMOTE_WRITE=1`: let commands write to R2. Set only by the weekly workflow.
 
 ### Web app (`apps/web`)
 
@@ -161,42 +315,40 @@ Comments and corrections are collected with [Tally](https://tally.so). The form 
 
 Review submissions in the Tally dashboard for your form → **Submissions**. Export CSV when batching data fixes.
 
-## Database workflow
-
-The database is rebuilt from flat files (`data/schema.sql`, CSVs, and JSONs):
-
-```bash
-pnpm db:create   # drop and recreate from schema + data files
-pnpm db:drop     # delete the SQLite file
-```
-
-`schema.sql` is the source of truth for the database schema. Pipeline commands
-(`fetch`, `process`) automatically rebuild the DB before running.
-
 ## Project layout
 
 - `pyproject.toml` - project metadata and dependencies
 - `package.json` and `pnpm-workspace.yaml` - JS workspace for frontend
 - `uv.lock` - locked dependency versions
-- `data/schema.sql` - SQLite schema (source of truth)
-- `data/` - CSV, JSON data files and downloaded bulletin PDFs
+- `data/migrations/` - SQLite schema, as numbered migrations
+- `data/parishes.csv`, `data/churches.csv` - curated parish and church lists
+- `data/dioceses/` - parishes and churches of dioceses still being explored
+- `data/` (untracked) - the local database, bulletin PDF cache and run outputs
+- `docs/data-setup.md` - R2 bucket, API tokens, GitHub secrets, and running the published data
 - `apps/web/` - React + TypeScript + Vite frontend
-- `src/pdf_extract/extract_frontend_db.py` - builds the frontend SQLite snapshot
+- `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
   - `fetch.py` - bulletin fetching and provider link resolution
   - `process.py` - bulletin processing with Gemini AI
   - `schedule_extraction.py` - Gemini schedule extraction
   - `storage.py` - SQLite helpers and data paths
-  - `db.py` - database creation from data files
+  - `db.py` - migrations and CSV seeding
+  - `blobstore.py` - local/R2 storage for PDFs and cached extractions
+  - `datasync.py` - pull, upload and publish runs
+  - `weekly.py` - the weekly run; `report.py` its change report; `runs.py` run records
   - `detect.py` - bulletin provider detection (Playwright)
+  - `recurrence.py` - promotes repeatedly-dated events to weekly ones
+  - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
+  - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
 
 ## Dependencies
 
 - [google-genai](https://github.com/googleapis/python-genai) - Gemini API client for PDF processing and structured JSON output.
 - [playwright](https://playwright.dev/python/) - bulletin provider detection and link resolution.
 - [pydantic](https://docs.pydantic.dev/) - data validation and Gemini response parsing.
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Cloudflare R2 access (S3 API).
 
 To add more dependencies:
 

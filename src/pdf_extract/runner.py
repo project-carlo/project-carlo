@@ -4,9 +4,10 @@ Both the production process stage (process.py) and the experimental classifier
 runner (extract_run.py) are thin orchestrations over the pieces here:
 
 - latest-per-parish bulletin selection
-- flattening classifier output into events.json rows
-- an on-disk result cache keyed by (classifier name + version, bulletin
-  content_hash) under data/runs/<classifier>/cache/
+- flattening classifier output into event rows
+- a result cache keyed by (classifier name + version, bulletin content_hash),
+  kept in the blob store under runs/<classifier>/cache/ so every extraction
+  the weekly job pays for can be replayed and compared later
 - a bounded-concurrency extraction driver
 """
 
@@ -23,7 +24,9 @@ from hashlib import sha256
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.storage import DATA_DIR, load_bulletin_work_item
+from pdf_extract.blobstore import get_store
+from pdf_extract.paths import DATA_DIR
+from pdf_extract.storage import load_bulletin_work_item
 
 LOGGER = logging.getLogger(__name__)
 
@@ -47,11 +50,11 @@ def latest_per_parish(metadata: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return [item[1] for item in latest_by_parish.values()]
 
 
-# ── Flatten classifier output to events.json rows ───────────────────────────
+# ── Flatten classifier output to event rows ───────────────────────────
 def flatten_extracted_events(
     entry: dict[str, Any], extracted: dict[str, Any]
 ) -> list[dict[str, Any]]:
-    """Convert one classifier result into events.json rows.
+    """Convert one classifier result into event rows.
 
     Returns no rows when the classifier flagged the PDF as the wrong bulletin.
     """
@@ -91,8 +94,9 @@ def flatten_extracted_events(
     return out
 
 
-# ── On-disk result cache ────────────────────────────────────────────────────
+# ── Result cache ────────────────────────────────────────────────────────────
 def run_dir(classifier_name: str) -> Path:
+    """Local output directory for an experimental `extract` run."""
     return RUNS_DIR / classifier_name
 
 
@@ -103,34 +107,67 @@ def _cache_version_component(classifier_version: str) -> str:
     return f"{readable[:80]}-{digest}"
 
 
-def cache_path(classifier_name: str, classifier_version: str, content_hash: str) -> Path:
+def _churches_fingerprint(churches: list[dict[str, Any]]) -> str:
+    canonical = json.dumps(
+        sorted(churches, key=lambda c: str(c.get("slug"))), sort_keys=True, ensure_ascii=False,
+    )
+    return sha256(canonical.encode("utf-8")).hexdigest()[:12]
+
+
+def cache_key(
+    classifier_name: str,
+    classifier_version: str,
+    content_hash: str,
+    churches: list[dict[str, Any]],
+) -> str:
+    """Where a result is cached: by classifier version, PDF, and the church list.
+
+    The church list is part of the prompt: the classifier files every event
+    under one of those slugs. A result extracted against an older list (a
+    church renamed or merged since) would name churches that no longer exist.
+    """
     return (
-        run_dir(classifier_name)
-        / "cache"
-        / _cache_version_component(classifier_version)
-        / f"{content_hash}.json"
+        f"runs/{classifier_name}/cache/"
+        f"{_cache_version_component(classifier_version)}/"
+        f"{content_hash}-{_churches_fingerprint(churches)}.json"
     )
 
 
 def load_cached_result(
-    classifier_name: str, classifier_version: str, content_hash: str
+    classifier_name: str,
+    classifier_version: str,
+    content_hash: str,
+    churches: list[dict[str, Any]],
 ) -> dict[str, Any] | None:
-    path = cache_path(classifier_name, classifier_version, content_hash)
-    if not path.exists():
+    key = cache_key(classifier_name, classifier_version, content_hash, churches)
+    try:
+        data = get_store().get(key)
+    except Exception:
+        LOGGER.warning("Cache lookup failed for %s; treating as a miss", key, exc_info=True)
+        return None
+    if data is None:
         return None
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        LOGGER.warning("Discarding unreadable cache entry %s", path, exc_info=True)
+        return json.loads(data.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        LOGGER.warning("Discarding unreadable cache entry %s", key, exc_info=True)
         return None
 
 
 def store_cached_result(
-    classifier_name: str, classifier_version: str, content_hash: str, payload: dict[str, Any]
+    classifier_name: str,
+    classifier_version: str,
+    content_hash: str,
+    churches: list[dict[str, Any]],
+    payload: dict[str, Any],
 ) -> None:
-    path = cache_path(classifier_name, classifier_version, content_hash)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    """Cache a result. Best effort: a failed write costs a future API call, not this run."""
+    key = cache_key(classifier_name, classifier_version, content_hash, churches)
+    data = (json.dumps(payload, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    try:
+        get_store().put(key, data, content_type="application/json")
+    except Exception:
+        LOGGER.warning("Could not store cache entry %s", key, exc_info=True)
 
 
 # ── Bounded-concurrency extraction driver ───────────────────────────────────

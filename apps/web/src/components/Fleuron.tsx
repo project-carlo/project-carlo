@@ -7,12 +7,21 @@ interface FleuronProps {
   /** Width in pixels for the ornament. Height is half (the SVG has a 48×24 viewBox).
    *  Default behavior (omit) keeps the 48×16 Tailwind sizing used elsewhere in the app. */
   size?: number;
+  /** Sets a small-caps caption between the hairlines in place of the ornament.
+   *  Used where a divider also has to name the section it opens — the map
+   *  popup's "Upcoming" — so the label costs no extra line. */
+  label?: string;
   className?: string;
 }
 
 /** A centered fleuron ornament flanked by hairlines — used as a section
- *  divider throughout the app. Purely presentational. */
-export function Fleuron({ solo = false, size, className = "" }: FleuronProps) {
+ *  divider throughout the app. Purely presentational unless `label` is set. */
+export function Fleuron({
+  solo = false,
+  size,
+  label,
+  className = "",
+}: FleuronProps) {
   const sizedStyle: CSSProperties | undefined =
     size != null ? { width: size, height: size / 2 } : undefined;
   const iconClass = size != null ? "shrink-0" : "h-4 w-12 shrink-0";
@@ -31,11 +40,17 @@ export function Fleuron({ solo = false, size, className = "" }: FleuronProps) {
   return (
     <div
       className={`flex items-center justify-center gap-4 text-brass ${className}`}
-      aria-hidden="true"
+      aria-hidden={label ? undefined : "true"}
     >
-      <span className="h-px flex-1 bg-rule-strong" />
-      <FleuronIcon className={iconClass} style={sizedStyle} />
-      <span className="h-px flex-1 bg-rule-strong" />
+      <span aria-hidden className="h-px flex-1 bg-rule-strong" />
+      {label ? (
+        <span className="smallcaps text-[0.8125rem] text-ink-faint">
+          {label}
+        </span>
+      ) : (
+        <FleuronIcon className={iconClass} style={sizedStyle} />
+      )}
+      <span aria-hidden className="h-px flex-1 bg-rule-strong" />
     </div>
   );
 }

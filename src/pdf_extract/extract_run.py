@@ -2,8 +2,8 @@
 fetched bulletin corpus and writes its outputs to data/runs/<classifier>/.
 
 Independent of the production process.py bookkeeping:
-- does not consult or update the `processed_at` field in metadata.json
-- does not write data/events.json
+- does not consult or update `bulletin.processed_at`
+- does not write events to the database
 - does not touch the SQLite parish_events.db beyond reads
 
 It shares the on-disk result cache with the production path (see runner.py):
@@ -19,7 +19,9 @@ import time
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.blobstore import bulletin_pdf_key
 from pdf_extract.classifiers import Classifier, get_classifier
+from pdf_extract.paths import DATA_DIR
 from pdf_extract.runner import (
     flatten_extracted_events,
     iter_extraction_outcomes,
@@ -29,10 +31,10 @@ from pdf_extract.runner import (
     store_cached_result,
 )
 from pdf_extract.storage import (
-    BULLETINS_METADATA_PATH,
+    churches_for_parish,
     connect_db,
     get_parish_by_name,
-    load_json_list,
+    load_bulletins,
     save_json_list,
     utc_now_iso,
 )
@@ -63,7 +65,7 @@ def run(
     """Run a classifier over the fetched bulletin corpus.
 
     Re-uses cached classifier outputs keyed by (classifier+version, content_hash).
-    Always rebuilds events.json from the cache so it stays in sync.
+    Always rebuilds the run's events.json from the cache so it stays in sync.
     """
     classifier = get_classifier(classifier_name)
     LOGGER.info(
@@ -74,10 +76,6 @@ def run(
         concurrency,
     )
 
-    metadata = load_json_list(BULLETINS_METADATA_PATH)
-    candidates = [m for m in metadata if m.get("pdf_path")]
-    candidates = latest_per_parish(candidates)
-
     started = time.monotonic()
     cache_hits = 0
     cache_misses = 0
@@ -87,11 +85,12 @@ def run(
 
     conn = connect_db()
     try:
+        candidates = latest_per_parish(load_bulletins(conn))
         if parish_name:
             parish_row = get_parish_by_name(conn, parish_name)
             if not parish_row:
                 LOGGER.warning("Parish not found: %s", parish_name)
-                return _empty_summary(classifier)
+                return _summary(classifier)
             target_slug = parish_row["slug"]
             candidates = [m for m in candidates if m["parish_slug"] == target_slug]
 
@@ -106,7 +105,10 @@ def run(
                 )
                 skipped += 1
                 continue
-            cached = load_cached_result(classifier.name, classifier.version, content_hash)
+            cached = load_cached_result(
+                classifier.name, classifier.version, content_hash,
+                churches_for_parish(conn, entry["parish_slug"]),
+            )
             if cached is not None:
                 cached_results[entry["source_url"]] = cached
                 cache_hits += 1
@@ -132,6 +134,7 @@ def run(
                 classifier.name,
                 classifier.version,
                 outcome.entry["content_hash"],
+                churches_for_parish(conn, outcome.entry["parish_slug"]),
                 outcome.extracted,
             )
             cached_results[outcome.entry["source_url"]] = outcome.extracted
@@ -151,9 +154,9 @@ def run(
         served_bulletins.append(
             {
                 "bulletin_source_url": entry["source_url"],
-                "pdf_path": entry.get("pdf_path")
-                if isinstance(entry.get("pdf_path"), str)
-                else None,
+                "pdf_path": (
+                    DATA_DIR / bulletin_pdf_key(entry["parish_slug"], entry["content_hash"])
+                ).as_posix(),
                 "parish_slug": entry.get("parish_slug")
                 if isinstance(entry.get("parish_slug"), str)
                 else None,
@@ -170,19 +173,17 @@ def run(
     save_json_list(events_path(classifier.name), events)
     save_json_list(bulletins_path(classifier.name), served_bulletins)
 
-    summary = {
-        "classifier": classifier.name,
-        "classifier_version": classifier.version,
-        "ran_at": utc_now_iso(),
-        "bulletins_total": len(candidates),
-        "bulletins_served": len(cached_results),
-        "cache_hits": cache_hits,
-        "cache_misses": cache_misses,
-        "skipped": skipped,
-        "errors": errors,
-        "events_written": len(events),
-        "wall_seconds": round(time.monotonic() - started, 3),
-    }
+    summary = _summary(
+        classifier,
+        bulletins_total=len(candidates),
+        bulletins_served=len(cached_results),
+        cache_hits=cache_hits,
+        cache_misses=cache_misses,
+        skipped=skipped,
+        errors=errors,
+        events_written=len(events),
+        wall_seconds=round(time.monotonic() - started, 3),
+    )
 
     summary_path = run_summary_path(classifier.name)
     summary_path.parent.mkdir(parents=True, exist_ok=True)
@@ -195,7 +196,12 @@ def run(
     return summary
 
 
-def _empty_summary(classifier: Classifier) -> dict[str, Any]:
+def _summary(classifier: Classifier, **counters: Any) -> dict[str, Any]:
+    """A run summary: every field at its zero value, overridden by `counters`.
+
+    The early return for an unknown parish and the end of a real run both build
+    their summary here, so the two cannot come to disagree about the keys.
+    """
     return {
         "classifier": classifier.name,
         "classifier_version": classifier.version,
@@ -208,4 +214,4 @@ def _empty_summary(classifier: Classifier) -> dict[str, Any]:
         "errors": [],
         "events_written": 0,
         "wall_seconds": 0.0,
-    }
+    } | counters

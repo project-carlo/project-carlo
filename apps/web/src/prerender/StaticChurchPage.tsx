@@ -13,6 +13,7 @@ import {
   buildChurchTitle,
   churchBreadcrumbJsonLd,
   churchJsonLd,
+  churchWebPageJsonLd,
   serializeJsonLd,
 } from "../lib/seo";
 
@@ -22,6 +23,8 @@ interface StaticChurchPageProps {
   cssPath: string;
   fontPaths: string[];
   canonicalUrl: string;
+  /** ISO date (YYYY-MM-DD) the parish's data was last updated, if known. */
+  lastModified: string | null;
 }
 
 export function StaticChurchPage({
@@ -30,6 +33,7 @@ export function StaticChurchPage({
   cssPath,
   fontPaths,
   canonicalUrl,
+  lastModified,
 }: StaticChurchPageProps) {
   const title = buildChurchTitle(church);
   const description = buildChurchDescription(church);
@@ -38,6 +42,7 @@ export function StaticChurchPage({
   const ogImageUrl = absoluteUrl(origin, OG_IMAGE_PATH);
   const jsonLd = [
     churchJsonLd(church, canonicalUrl),
+    churchWebPageJsonLd(church, canonicalUrl, lastModified),
     churchBreadcrumbJsonLd(church, canonicalUrl),
   ];
 

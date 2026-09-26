@@ -19,6 +19,14 @@
         src: url("../node_modules/@fontsource/cardo/files/cardo-latin-400-italic.woff2")
           format("woff2");
       }
+      @font-face {
+        font-family: "EB Garamond";
+        font-style: italic;
+        font-weight: 400;
+        font-display: block;
+        src: url("../node_modules/@fontsource-variable/eb-garamond/files/eb-garamond-latin-wght-italic.woff2")
+          format("woff2");
+      }
 
       * {
         margin: 0;
@@ -101,10 +109,10 @@
         <div
           style="
             font-family: Cardo, Georgia, serif;
-            font-variant-caps: all-small-caps;
-            text-transform: uppercase;
-            letter-spacing: 0.34em;
-            font-size: 22px;
+            font-variant-caps: small-caps;
+            font-feature-settings: 'smcp' 1, 'c2sc' 0;
+            letter-spacing: 0.2em;
+            font-size: 24px;
             color: oklch(0.4 0.018 50);
           "
         >
@@ -175,11 +183,10 @@
         </h2>
         <div
           style="
-            font-family: Cardo, Georgia, serif;
-            font-variant-caps: all-small-caps;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            font-size: 28px;
+            font-family: 'EB Garamond', Georgia, serif;
+            font-style: italic;
+            letter-spacing: 0.01em;
+            font-size: 36px;
             color: oklch(0.4 0.018 50);
           "
         >

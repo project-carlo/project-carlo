@@ -1,15 +1,15 @@
-import type { Database } from "sql.js";
-import { getDb } from "./db";
-import { compareSchedule, computeNextOccurrence } from "./lib/schedule";
-import { num, str } from "./lib/sqlRow";
+import { filterDayFromJsDay, jsDayFor } from "./constants/days";
+import { EVENT_TYPE_ORDER } from "./constants/eventTypes";
+import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
+import { parseSnapshot, SNAPSHOT_FILE, type Snapshot } from "./lib/snapshot";
 import type {
+  ChurchBase,
   ChurchDetail,
   ChurchMapItem,
   EventSummary,
   EventType,
+  RawEvent,
 } from "./types";
-
-const ALL_TYPES: EventType[] = ["mass", "confession", "adoration"];
 
 export class ChurchNotFoundError extends Error {
   readonly slug: string;
@@ -20,16 +20,6 @@ export class ChurchNotFoundError extends Error {
   }
 }
 
-const DAY_TO_INDEX: Record<string, number> = {
-  monday: 0,
-  tuesday: 1,
-  wednesday: 2,
-  thursday: 3,
-  friday: 4,
-  saturday: 5,
-  sunday: 6,
-};
-
 export interface ChurchFilters {
   types: EventType[];
   daysOfWeek?: number[];
@@ -37,122 +27,33 @@ export interface ChurchFilters {
   timeTo?: number;
 }
 
-export interface RawEvent {
-  id: number;
-  church_id: number;
-  event_type: EventType;
-  event_kind: "weekly" | "specific_date";
-  day_of_week: string | null;
-  date: string | null;
-  start_time: number;
-  end_time: number | null;
-  cancelled: boolean;
-  occurrence: string | null;
-  page_number: number | null;
-  note: string | null;
-}
+// The snapshot is loaded once and never mutated, so every church and event is
+// decoded into memory once and reused for every filter change. This keeps the
+// slider drag → map update path JS-only after the first call.
+let snapshotPromise: Promise<Snapshot> | null = null;
 
-type ChurchBase = Omit<ChurchMapItem, "event_types" | "upcoming_events">;
-
-// frontend.snapshot is loaded once and never mutated, so the church and event
-// tables can be read into memory once and reused for every filter change.
-// This keeps the slider drag → map update path JS-only after the first call.
-let allChurchesPromise: Promise<ChurchBase[]> | null = null;
-let allEventsPromise: Promise<RawEvent[]> | null = null;
-
-export function parseEventDateForFilter(eventDate: string): Date | null {
-  // Date-only filter check; accepts ISO and other parseable strings.
-  const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(eventDate.trim());
-  if (isoMatch) {
-    const year = Number.parseInt(isoMatch[1], 10);
-    const month = Number.parseInt(isoMatch[2], 10);
-    const day = Number.parseInt(isoMatch[3], 10);
-    const parsed = new Date(year, month - 1, day);
-    return Number.isNaN(parsed.getTime()) ? null : parsed;
+async function loadSnapshot(): Promise<Snapshot> {
+  const response = await fetch(`/${SNAPSHOT_FILE}`, { cache: "no-cache" });
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${SNAPSHOT_FILE}: ${response.status}`);
   }
-  const parsed = new Date(eventDate);
-  return Number.isNaN(parsed.getTime()) ? null : parsed;
+  // Served as an opaque pre-gzipped file (see public/_headers): unzip it here.
+  const compressed = response.body ?? new Blob([await response.arrayBuffer()]).stream();
+  const decompressed = compressed.pipeThrough(new DecompressionStream("gzip"));
+  return parseSnapshot(await new Response(decompressed).text());
 }
 
-function mapEventRow(row: Record<string, unknown>): RawEvent {
-  const ev: RawEvent = {
-    id: row["id"] as number,
-    church_id: row["church_id"] as number,
-    event_type: row["event_type"] as EventType,
-    event_kind: row["event_kind"] as "weekly" | "specific_date",
-    day_of_week: str(row["day_of_week"]),
-    date: str(row["date"]),
-    start_time: row["start_time"] as number,
-    end_time: num(row["end_time"]),
-    cancelled: Boolean(row["cancelled"]),
-    occurrence: null,
-    page_number: num(row["page_number"]),
-    note: str(row["note"]),
-  };
-  ev.occurrence = computeNextOccurrence(ev);
-  return ev;
-}
-
-function mapChurchRow(row: Record<string, unknown>): ChurchBase {
-  return {
-    id: row["id"] as number,
-    parish_id: row["parish_id"] as number,
-    slug: row["slug"] as string,
-    name: str(row["name"]),
-    address_line1: str(row["address_line1"]),
-    address_line2: str(row["address_line2"]),
-    city: str(row["city"]),
-    state: str(row["state"]),
-    postal_code: str(row["postal_code"]),
-    latitude: num(row["latitude"]),
-    longitude: num(row["longitude"]),
-  };
-}
-
-async function loadCaches(
-  db: Database,
-): Promise<{ churches: ChurchBase[]; events: RawEvent[] }> {
-  const churches = await (allChurchesPromise ??= Promise.resolve(
-    loadAllChurches(db),
-  ));
-  const events = await (allEventsPromise ??= Promise.resolve(
-    loadAllEvents(db),
-  ));
-  return { churches, events };
-}
-
-function loadAllChurches(db: Database): ChurchBase[] {
-  const stmt = db.prepare(
-    `SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code,
-            latitude, longitude FROM church ORDER BY name`,
-  );
-  const churches: ChurchBase[] = [];
-  try {
-    while (stmt.step()) {
-      churches.push(mapChurchRow(stmt.getAsObject()));
-    }
-  } finally {
-    stmt.free();
+function getSnapshot(): Promise<Snapshot> {
+  if (!snapshotPromise) {
+    snapshotPromise = loadSnapshot().catch((error: unknown) => {
+      // Don't hold on to a failed load: callers retry (react-query does so
+      // automatically), and a cached rejection would make every retry fail
+      // instantly without touching the network again.
+      snapshotPromise = null;
+      throw error;
+    });
   }
-  return churches;
-}
-
-function loadAllEvents(db: Database): RawEvent[] {
-  const stmt = db.prepare(
-    `SELECT id, church_id, event_type, event_kind,
-            day_of_week, date, start_time, end_time, cancelled,
-            page_number, note
-     FROM event`,
-  );
-  const results: RawEvent[] = [];
-  try {
-    while (stmt.step()) {
-      results.push(mapEventRow(stmt.getAsObject()));
-    }
-  } finally {
-    stmt.free();
-  }
-  return results;
+  return snapshotPromise;
 }
 
 function toEventSummary(ev: RawEvent): EventSummary {
@@ -178,18 +79,16 @@ export function eventMatchesFilters(
   if (ev.cancelled) return false;
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {
     if (ev.event_kind === "weekly" && ev.day_of_week) {
-      const dayIdx = DAY_TO_INDEX[ev.day_of_week.toLowerCase()];
-      if (dayIdx === undefined || !filters.daysOfWeek.includes(dayIdx)) {
-        return false;
-      }
+      const dayIdx = filterDayFromJsDay(jsDayFor(ev.day_of_week));
+      if (dayIdx < 0 || !filters.daysOfWeek.includes(dayIdx)) return false;
     }
     // For specific_date, check if the date falls on a selected weekday
     if (ev.event_kind === "specific_date" && ev.date) {
-      const d = parseEventDateForFilter(ev.date);
+      const d = parseIsoDateLocal(ev.date);
       if (!d) return false;
-      const jsDay = d.getDay();
-      const dayIdx = jsDay === 0 ? 6 : jsDay - 1;
-      if (!filters.daysOfWeek.includes(dayIdx)) return false;
+      if (!filters.daysOfWeek.includes(filterDayFromJsDay(d.getDay()))) {
+        return false;
+      }
     }
   }
   if (
@@ -202,14 +101,78 @@ export function eventMatchesFilters(
   return true;
 }
 
-export async function fetchChurches(
-  filters: ChurchFilters,
-): Promise<ChurchMapItem[]> {
-  const db = await getDb();
-  const types = filters.types.length > 0 ? filters.types : ALL_TYPES;
-  const typeSet = new Set<EventType>(types);
+function buildMapItem(
+  church: ChurchBase,
+  churchEvents: RawEvent[],
+): ChurchMapItem {
+  const weeklyEvents = churchEvents.filter(
+    (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
+  );
+  // Dedup repeated weekly slots (same weekday + start time) that occasionally
+  // appear across bulletins. Prefer weekly events for the popup; if the parish
+  // has only specific-date events, fall back to the five soonest occurrences.
+  const seen = new Set<string>();
+  let popupSchedule = weeklyEvents
+    .filter((e) => {
+      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .map(toEventSummary)
+    .sort((a, b) => compareSchedule(a, b));
+  if (popupSchedule.length === 0) {
+    popupSchedule = churchEvents
+      .filter((e) => e.occurrence !== null)
+      .sort((a, b) => a.occurrence!.localeCompare(b.occurrence!))
+      .slice(0, 5)
+      .map(toEventSummary);
+  }
+  const eventTypes = [
+    ...new Set(churchEvents.map((e) => e.event_type)),
+  ].sort() as EventType[];
+  return {
+    ...church,
+    event_types: eventTypes,
+    upcoming_events: popupSchedule,
+  };
+}
 
-  const { churches, events: allEvents } = await loadCaches(db);
+// Per-church memo of the last map item handed out, keyed by the church row and
+// the ids of the events that produced the item. Dragging the time slider
+// re-runs this query on every input event, and for most parishes the matching
+// events don't change from one step to the next; handing back the identical
+// object then lets React.memo skip the marker (and Leaflet skip re-positioning
+// it) instead of re-rendering all ~130 pins. Bounded by the church count.
+const mapItemCache = new Map<
+  number,
+  { church: ChurchBase; signature: string; item: ChurchMapItem }
+>();
+
+/**
+ * Drop the memo. Only needed in tests: the app loads one immutable snapshot,
+ * so an event id always denotes the same event and the memo can never go
+ * stale. A test suite, though, builds fresh fixtures — and one that shares a
+ * church object between cases (a hoisted fixture) while varying the event
+ * data behind the same ids would otherwise be served the earlier case's item.
+ */
+export function resetMapItemCache(): void {
+  mapItemCache.clear();
+}
+
+/**
+ * Build the map items for one set of filters, reusing the previous item for
+ * every church whose matching events are unchanged.
+ *
+ * Exported for tests; `fetchChurches` is the app-facing entry point.
+ */
+export function collectMapItems(
+  churches: ChurchBase[],
+  allEvents: RawEvent[],
+  filters: ChurchFilters,
+): ChurchMapItem[] {
+  const types = filters.types.length > 0 ? filters.types : EVENT_TYPE_ORDER;
+  const typeSet = new Set<EventType>(types);
 
   const grouped = new Map<number, RawEvent[]>();
   for (const ev of allEvents) {
@@ -223,115 +186,80 @@ export async function fetchChurches(
     list.push(ev);
   }
 
-  return churches
-    .map((c) => {
-      const churchEvents = grouped.get(c.id) ?? [];
-      const weeklyEvents = churchEvents.filter(
-        (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
-      );
-      // Dedup repeated weekly slots (same weekday + start time) that occasionally
-      // appear across bulletins. Prefer weekly events for the popup; if the parish
-      // has only specific-date events, fall back to the five soonest occurrences.
-      const seen = new Set<string>();
-      let popupSchedule = weeklyEvents
-        .filter((e) => {
-          const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}`;
-          if (seen.has(key)) return false;
-          seen.add(key);
-          return true;
-        })
-        .map(toEventSummary)
-        .sort((a, b) => compareSchedule(a, b));
-      if (popupSchedule.length === 0) {
-        popupSchedule = churchEvents
-          .filter((e) => e.occurrence !== null)
-          .sort((a, b) => a.occurrence!.localeCompare(b.occurrence!))
-          .slice(0, 5)
-          .map(toEventSummary);
-      }
-      const eventTypes = [
-        ...new Set(churchEvents.map((e) => e.event_type)),
-      ].sort() as EventType[];
-      return {
-        ...c,
-        event_types: eventTypes,
-        upcoming_events: popupSchedule,
-      };
-    })
-    .filter((church) => church.event_types.length > 0);
+  const items: ChurchMapItem[] = [];
+  for (const church of churches) {
+    const churchEvents = grouped.get(church.id);
+    // No matching events means no event types, which the map never showed.
+    if (!churchEvents || churchEvents.length === 0) continue;
+
+    // Events are grouped in a stable order, so their ids fully describe the
+    // item this church produces.
+    let signature = "";
+    for (const ev of churchEvents) signature += `${ev.id},`;
+
+    const cached = mapItemCache.get(church.id);
+    if (cached && cached.church === church && cached.signature === signature) {
+      items.push(cached.item);
+      continue;
+    }
+    const item = buildMapItem(church, churchEvents);
+    mapItemCache.set(church.id, { church, signature, item });
+    items.push(item);
+  }
+  return items;
 }
 
-export interface ChurchSearchResult {
-  id: number;
-  slug: string;
-  name: string | null;
-  address_line1: string | null;
-  address_line2: string | null;
-  city: string | null;
-  state: string | null;
-  postal_code: string | null;
-  latitude: number | null;
-  longitude: number | null;
+export async function fetchChurches(
+  filters: ChurchFilters,
+): Promise<ChurchMapItem[]> {
+  const { churches, events } = await getSnapshot();
+  return collectMapItems(churches, events, filters);
 }
+
+/** What the typeahead gets back: the shared church row, geocoded ones only. */
+export type ChurchSearchResult = ChurchBase;
 
 export async function fetchAllChurchesForSearch(): Promise<
   ChurchSearchResult[]
 > {
-  const db = await getDb();
-  const stmt = db.prepare(
-    `SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code,
-            latitude, longitude FROM church
-     WHERE latitude IS NOT NULL AND longitude IS NOT NULL
-     ORDER BY name`,
-  );
-  try {
-    const results: ChurchSearchResult[] = [];
-    while (stmt.step()) {
-      results.push(mapChurchRow(stmt.getAsObject()));
-    }
-    return results;
-  } finally {
-    stmt.free();
-  }
+  const { churches } = await getSnapshot();
+  return churches.filter((c) => c.latitude !== null && c.longitude !== null);
+}
+
+/** One church with its parish links; shared with the prerenderer. */
+export function findChurch(snapshot: Snapshot, slug: string): ChurchDetail {
+  const church = snapshot.churchDetail(slug);
+  if (!church) throw new ChurchNotFoundError(slug);
+  return church;
+}
+
+/**
+ * A church page's schedule: its upcoming events of the given types (all types
+ * when none are given), in schedule order. Cancelled events and past dates
+ * have no next occurrence and are left out. Shared with the prerenderer, so a
+ * static church page lists the same events as the live one.
+ */
+export function churchSchedule(
+  snapshot: Snapshot,
+  slug: string,
+  types: EventType[],
+): EventSummary[] {
+  const typeSet = new Set(types.length > 0 ? types : EVENT_TYPE_ORDER);
+  const church = findChurch(snapshot, slug);
+  return snapshot
+    .eventsOf(church.id)
+    .filter((e) => typeSet.has(e.event_type) && e.occurrence !== null)
+    .map(toEventSummary)
+    .sort((a, b) => compareSchedule(a, b));
 }
 
 export async function fetchChurch(slug: string): Promise<ChurchDetail> {
-  const db = await getDb();
-  const stmt = db.prepare(
-    `SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code,
-            latitude, longitude, homepage_url, bulletin_url FROM church WHERE slug = ?`,
-  );
-  try {
-    stmt.bind([slug]);
-    if (!stmt.step()) {
-      throw new ChurchNotFoundError(slug);
-    }
-    const row = stmt.getAsObject();
-    return {
-      ...mapChurchRow(row),
-      homepage_url: str(row["homepage_url"]),
-      bulletin_url: str(row["bulletin_url"]),
-    };
-  } finally {
-    stmt.free();
-  }
+  return findChurch(await getSnapshot(), slug);
 }
 
 export async function fetchChurchEvents(
   slug: string,
   types: EventType[],
 ): Promise<EventSummary[]> {
-  const db = await getDb();
-  const effectiveTypes = types.length > 0 ? types : ALL_TYPES;
-  const typeSet = new Set(effectiveTypes);
-
-  const { churches, events: allEvents } = await loadCaches(db);
-  const church = churches.find((c) => c.slug === slug);
-  if (!church) throw new ChurchNotFoundError(slug);
-
-  return allEvents
-    .filter((e) => e.church_id === church.id && typeSet.has(e.event_type))
-    .filter((e) => e.occurrence !== null)
-    .map(toEventSummary)
-    .sort((a, b) => compareSchedule(a, b));
+  return churchSchedule(await getSnapshot(), slug, types);
 }

@@ -1,0 +1,85 @@
+name: Publish Data Run
+
+# Publish an uploaded weekly run: a held run a person has reviewed, or an
+# earlier run to roll back to. Points pipeline/latest.json at the run and
+# redeploys the site with its snapshot.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Run id to publish (from the weekly run's summary or issue)"
+        required: true
+        type: string
+      rollback:
+        description: "Allow publishing a run older than the published one (a rollback)"
+        type: boolean
+        default: false
+
+permissions: read-all
+
+concurrency:
+  group: weekly-docker-refresh
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    # Publishing runs the promote code with the write keys: only main's code.
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      actions: write
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          python-version-file: .python-version
+
+      - name: Install Python dependencies
+        run: uv sync --frozen --no-dev
+
+      - name: Publish run
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ vars.R2_BUCKET || 'project-carlo-data' }}
+          R2_ENDPOINT_URL: ${{ vars.R2_ENDPOINT_URL }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
+          CARLO_REMOTE_WRITE: "1"
+          RUN_ID: ${{ inputs.run_id }}
+          ROLLBACK: ${{ inputs.rollback }}
+        run: |
+          set -o pipefail
+          args=(--run-id "$RUN_ID")
+          [[ "$ROLLBACK" == "true" ]] && args+=(--rollback)
+          uv run --no-sync python -m pdf_extract data promote "${args[@]}" | tee published.json
+          {
+            echo "### Published \`${RUN_ID}\`"
+            echo
+            echo '```json'
+            cat published.json
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Deploy the published data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-web.yml --ref "${{ github.event.repository.default_branch }}" -f mode=deploy
+
+      - name: Close issues about held or failed runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ inputs.run_id }}
+        run: |
+          for number in $(gh issue list --label data-refresh --state open --json number --jq '.[].number'); do
+            gh issue close "$number" --comment "Run \`${RUN_ID}\` was published by hand."
+          done

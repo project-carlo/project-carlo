@@ -26,6 +26,12 @@ _CHURCHES_FIELDNAMES = [
 ]
 
 
+def _read_csv(path: Path) -> list[dict[str, str]]:
+    """Read a CSV into plain dicts, one per row."""
+    with open(path, encoding="utf-8") as f:
+        return [dict(row) for row in csv.DictReader(f)]
+
+
 def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
     """Write rows to a CSV via a temp file, then atomically rename."""
     tmp = path.with_suffix(".csv.tmp")
@@ -43,11 +49,7 @@ def apply_detect_results() -> dict[str, int]:
         LOGGER.info("No detect_results.json found, nothing to apply")
         return {"updated": 0, "unchanged": 0}
 
-    rows: list[dict[str, str]] = []
-    with open(PARISHES_CSV_PATH, encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            rows.append(dict(row))
+    rows = _read_csv(PARISHES_CSV_PATH)
 
     updated = 0
     unchanged = 0
@@ -84,16 +86,9 @@ def apply_verify_results() -> dict[str, int]:
         LOGGER.info("No verify_results.json found, nothing to apply")
         return {"corrections_applied": 0, "new_churches_added": 0}
 
-    rows: list[dict[str, str]] = []
-    with open(CHURCHES_CSV_PATH, encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            rows.append(dict(row))
+    rows = _read_csv(CHURCHES_CSV_PATH)
 
-    # Build slug -> row index lookup
-    slug_to_idx: dict[str, int] = {}
-    for i, row in enumerate(rows):
-        slug_to_idx[row["slug"]] = i
+    slug_to_idx: dict[str, int] = {row["slug"]: i for i, row in enumerate(rows)}
 
     corrected_slugs: set[str] = set()
     new_added = 0
@@ -199,11 +194,7 @@ def apply_geocode_results() -> dict[str, int]:
         )
         geo_lookup[key] = (lat, lng)
 
-    rows: list[dict[str, str]] = []
-    with open(CHURCHES_CSV_PATH, encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            rows.append(dict(row))
+    rows = _read_csv(CHURCHES_CSV_PATH)
 
     updated = 0
     for row in rows:

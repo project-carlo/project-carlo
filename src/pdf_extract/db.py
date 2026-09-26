@@ -1,108 +1,89 @@
-"""Create and populate the database from schema.sql and data files."""
+"""The pipeline database: migrations and reference-data seeding.
+
+`data/parish_events.db` is the source of truth for everything the pipeline
+observes (bulletins, events, recurrence history, run records). It is not
+rebuilt: it is pulled from the published copy (`pnpm data:pull`), changed in
+place by pipeline commands, and published back by the weekly job.
+
+Two tables are the exception. `parish` and `church` are curated by hand in
+`data/parishes.csv` and `data/churches.csv`, reviewed in pull requests, and
+seeded into the database (matched by slug) before every pipeline command, so
+an edited CSV takes effect on the next command.
+"""
 
 from __future__ import annotations
 
 import csv
 import logging
-import re
-from datetime import datetime
+import sqlite3
 from pathlib import Path
+from typing import Any
 
 from pdf_extract.storage import (
-    BULLETINS_METADATA_PATH,
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
-    EVENTS_PATH,
-    SCHEMA_PATH,
+    MIGRATIONS_DIR,
+    PARISHES_CSV_PATH,
     connect_db,
     delete_db,
-    load_json_list,
     utc_now_iso,
 )
 
 LOGGER = logging.getLogger(__name__)
 
 
-def _time_to_minutes(s: str | None) -> int | None:
-    """Parse time string (h:MM AM/PM, a.m./p.m., etc.) to minutes since midnight.
+class DatabaseMissingError(FileNotFoundError):
+    pass
 
-    Returns None for null/empty. Handles: 8:00 AM, 5:30pm, 8:00 a.m., midnight, noon.
+
+# ── Migrations ──────────────────────────────────────────────────────────────
+def _migration_files(migrations_dir: Path = MIGRATIONS_DIR) -> list[tuple[int, Path]]:
+    files: list[tuple[int, Path]] = []
+    for path in sorted(migrations_dir.glob("*.sql")):
+        prefix = path.name.split("_", 1)[0]
+        if not prefix.isdigit():
+            raise ValueError(f"Migration file name must start with a number: {path.name}")
+        files.append((int(prefix), path))
+    numbers = [n for n, _ in files]
+    if numbers != list(range(1, len(numbers) + 1)):
+        raise ValueError(f"Migrations must be numbered 1..N without gaps, found {numbers}")
+    return files
+
+
+def schema_version(conn: sqlite3.Connection) -> int:
+    return int(conn.execute("PRAGMA user_version").fetchone()[0])
+
+
+def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> int:
+    """Apply migrations newer than the database's user_version. Returns how many ran.
+
+    Each migration runs in its own transaction together with the version bump,
+    so a failure leaves the database at the previous version.
     """
-    if s is None or not isinstance(s, str):
-        return None
-    raw = s.strip()
-    if not raw:
-        return None
-
-    # Normalize a.m. / p.m. to AM / PM
-    raw = re.sub(r"a\.m\.?(?=\s|$)", "AM", raw, flags=re.I)
-    raw = re.sub(r"p\.m\.?(?=\s|$)", "PM", raw, flags=re.I)
-
-    if re.match(r"^midnight$", raw, re.I):
-        return 0
-    if re.match(r"^noon$", raw, re.I):
-        return 720
-
-    m = re.match(r"^(\d{1,2}):(\d{2})\s*(AM|PM)$", raw, re.I)
-    if m:
-        h = int(m[1])
-        mins = int(m[2])
-        ampm = m[3].upper()
-        if ampm == "PM" and h != 12:
-            h += 12
-        elif ampm == "AM" and h == 12:
-            h = 0
-        return h * 60 + mins
-
-    m = re.match(r"^(\d{1,2})\s*(AM|PM)$", raw, re.I)
-    if m:
-        h = int(m[1])
-        ampm = m[2].upper()
-        if ampm == "PM" and h != 12:
-            h += 12
-        elif ampm == "AM" and h == 12:
-            h = 0
-        return h * 60
-
-    m = re.match(r"^(\d{1,2}):(\d{2})$", raw)
-    if m:
-        h, mins = int(m[1]), int(m[2])
-        if 0 <= h <= 23 and 0 <= mins <= 59:
-            return h * 60 + mins
-
-    m = re.match(r"^(\d{2})(\d{2})$", raw)
-    if m:
-        h, mins = int(m[1]), int(m[2])
-        if 0 <= h <= 23 and 0 <= mins <= 59:
-            return h * 60 + mins
-
-    return None
-
-
-def _normalize_event_date(value: str | None) -> str | None:
-    """Normalize date strings to YYYY-MM-DD for specific-date events."""
-    if not isinstance(value, str):
-        return None
-    raw = value.strip()
-    if not raw:
-        return None
-
-    # Keep canonical ISO dates as-is after validating.
-    if re.match(r"^\d{4}-\d{2}-\d{2}$", raw):
-        try:
-            return datetime.strptime(raw, "%Y-%m-%d").date().isoformat()
-        except ValueError:
-            return None
-
-    for fmt in ("%B %d, %Y", "%b %d, %Y", "%m/%d/%Y", "%m/%d/%y"):
-        try:
-            return datetime.strptime(raw, fmt).date().isoformat()
-        except ValueError:
+    current = schema_version(conn)
+    files = _migration_files(migrations_dir)
+    if current > len(files):
+        raise RuntimeError(
+            f"Database is at schema version {current} but this checkout only knows "
+            f"{len(files)} migrations; pull the latest code."
+        )
+    applied = 0
+    for number, path in files:
+        if number <= current:
             continue
+        LOGGER.info("Applying migration %s", path.name)
+        # executescript would commit on its own; wrap it so the version bump
+        # is part of the same transaction as the migration's statements.
+        conn.executescript(
+            "BEGIN;\n"
+            + path.read_text(encoding="utf-8")
+            + f"\nPRAGMA user_version = {number};\nCOMMIT;"
+        )
+        applied += 1
+    return applied
 
-    return None
 
-
+# ── Reference data from CSV ─────────────────────────────────────────────────
 def _validate_csv_headers(
     fieldnames: list[str] | None, required: set[str], filename: str,
 ) -> None:
@@ -112,102 +93,6 @@ def _validate_csv_headers(
     missing = required - set(fieldnames)
     if missing:
         raise ValueError(f"{filename}: missing required columns: {sorted(missing)}")
-
-
-def create_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, int]:
-    """Drop and recreate the database from schema + data files.
-
-    Each load step is idempotent and skipped if its source file is missing.
-    """
-    LOGGER.info("Creating database at %s", db_path)
-    delete_db(db_path)
-    conn = connect_db(db_path)
-    try:
-        # 1. Create schema
-        schema_sql = SCHEMA_PATH.read_text(encoding="utf-8")
-        conn.executescript(schema_sql)
-        LOGGER.info("Schema created")
-
-        stats: dict[str, int] = {}
-
-        # 2. Load parishes.csv → parish table
-        stats["parishes"] = _load_parishes(conn)
-
-        # 4. Load bulletins/metadata.json → bulletin table
-        stats["bulletins"] = _load_bulletins(conn)
-
-        # 5. Load churches from CSV
-        stats["churches"] = _load_churches(conn)
-
-        # 6. Load events.json → event table
-        stats["events"] = _load_events(conn)
-
-        conn.commit()
-        LOGGER.info("Database created: %s", stats)
-        return stats
-    finally:
-        conn.close()
-
-
-def _load_parishes(conn) -> int:
-    from pdf_extract.storage import PARISHES_CSV_PATH
-
-    if not PARISHES_CSV_PATH.exists():
-        LOGGER.info("No parishes.csv found, skipping parish load")
-        return 0
-    count = 0
-    now = utc_now_iso()
-    with open(PARISHES_CSV_PATH, encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        _validate_csv_headers(reader.fieldnames, {"slug", "name", "website"}, "parishes.csv")
-        for row in reader:
-            bp = (row.get("bulletin_provider") or "").strip() or None
-            pid = (row.get("provider_id") or "").strip() or None
-            conn.execute(
-                """INSERT OR IGNORE INTO parish(
-                    slug, name, homepage_url, bulletin_provider, provider_id, created_at
-                ) VALUES (?, ?, ?, ?, ?, ?)""",
-                (row["slug"], row["name"], row["website"], bp, pid, now),
-            )
-            count += 1
-    LOGGER.info("Loaded %d parishes from parishes.csv", count)
-    return count
-
-
-def _load_bulletins(conn) -> int:
-    entries = load_json_list(BULLETINS_METADATA_PATH)
-    if not entries:
-        LOGGER.info("No bulletins/metadata.json found, skipping")
-        return 0
-
-    count = 0
-    for entry in entries:
-        parish_row = conn.execute("SELECT id FROM parish WHERE slug = ?", (entry["parish_slug"],)).fetchone()
-        if not parish_row:
-            continue
-        cursor = conn.execute(
-            """INSERT OR IGNORE INTO bulletin(parish_id, source_url, pdf_path, published_date, fetched_at, processed_at, content_hash)
-               VALUES (?, ?, ?, ?, ?, ?, ?)""",
-            (
-                parish_row["id"],
-                entry["source_url"],
-                entry.get("pdf_path"),
-                entry.get("published_date"),
-                entry.get("fetched_at"),
-                entry.get("processed_at"),
-                entry.get("content_hash"),
-            ),
-        )
-        if cursor.rowcount > 0:
-            count += 1
-
-    LOGGER.info("Loaded %d bulletins from metadata.json", count)
-    return count
-
-
-def _load_churches(conn) -> int:
-    """Load churches from CSV."""
-    return _load_churches_from_csv(conn)
 
 
 def _csv_bool(value: str | None) -> int:
@@ -223,36 +108,114 @@ def _csv_float(value: str | None) -> float | None:
     return float(raw)
 
 
-def _load_churches_from_csv(conn) -> int:
-    """Insert churches from churches.csv into the database."""
-    if not CHURCHES_CSV_PATH.exists():
-        LOGGER.info("No churches.csv found, skipping")
-        return 0
-
-    now = utc_now_iso()
-    count = 0
-    with open(CHURCHES_CSV_PATH, encoding="utf-8") as f:
+def _read_csv(path: Path, required: set[str]) -> list[dict[str, str]]:
+    with open(path, encoding="utf-8") as f:
         reader = csv.DictReader(f)
-        _validate_csv_headers(
-            reader.fieldnames,
-            {"parish_id", "slug", "name", "line1", "city", "state", "postal_code"},
-            "churches.csv",
-        )
-        for row in reader:
-            parish_row = conn.execute(
+        _validate_csv_headers(reader.fieldnames, required, path.name)
+        return list(reader)
+
+
+def seed_reference_data(
+    conn: sqlite3.Connection,
+    *,
+    parishes_csv: Path = PARISHES_CSV_PATH,
+    churches_csv: Path = CHURCHES_CSV_PATH,
+) -> dict[str, int]:
+    """Make the parish and church tables match the CSVs, matching rows by slug.
+
+    Rows are updated in place so their ids, and everything that references
+    them, survive. A parish or church removed from its CSV is deleted along
+    with its bulletins and events; the previous published database still holds
+    them if that was a mistake.
+    """
+    stats = {
+        "parishes_upserted": 0,
+        "parishes_deleted": 0,
+        "churches_upserted": 0,
+        "churches_deleted": 0,
+        "churches_skipped": 0,
+    }
+    now = utc_now_iso()
+
+    # A missing CSV must not read as "every parish was removed": that would
+    # delete the whole database's bulletins and events by cascade.
+    for path in (parishes_csv, churches_csv):
+        if not path.exists():
+            raise FileNotFoundError(
+                f"{path} not found; run commands from the repository root"
+            )
+    parish_rows = _read_csv(parishes_csv, {"slug", "name", "website"})
+    church_rows = _read_csv(
+        churches_csv,
+        {"parish_id", "slug", "name", "line1", "city", "state", "postal_code"},
+    )
+
+    with conn:
+        parish_slugs = set()
+        for row in parish_rows:
+            slug = row["slug"].strip()
+            parish_slugs.add(slug)
+            conn.execute(
+                """INSERT INTO parish(
+                       slug, name, homepage_url, bulletin_provider, provider_id, created_at
+                   ) VALUES (?, ?, ?, ?, ?, ?)
+                   ON CONFLICT(slug) DO UPDATE SET
+                       name = excluded.name,
+                       homepage_url = excluded.homepage_url,
+                       bulletin_provider = excluded.bulletin_provider,
+                       provider_id = excluded.provider_id""",
+                (
+                    slug,
+                    row["name"],
+                    row["website"],
+                    (row.get("bulletin_provider") or "").strip() or None,
+                    (row.get("provider_id") or "").strip() or None,
+                    now,
+                ),
+            )
+            stats["parishes_upserted"] += 1
+
+        # Before the churches, so a removed parish's churches are skipped as
+        # orphans rather than upserted and then deleted by the cascade.
+        for parish in conn.execute("SELECT id, slug FROM parish").fetchall():
+            if parish["slug"] not in parish_slugs:
+                LOGGER.warning("Parish %s is no longer in parishes.csv; deleting", parish["slug"])
+                conn.execute("DELETE FROM parish WHERE id = ?", (parish["id"],))
+                stats["parishes_deleted"] += 1
+
+        church_slugs = set()
+        for row in church_rows:
+            parish = conn.execute(
                 "SELECT id FROM parish WHERE slug = ?", (row["parish_id"],)
             ).fetchone()
-            if not parish_row:
+            if parish is None:
+                LOGGER.warning(
+                    "churches.csv: church %s names unknown parish %s; skipping",
+                    row["slug"], row["parish_id"],
+                )
+                stats["churches_skipped"] += 1
                 continue
-            lat = _csv_float(row.get("latitude"))
-            lng = _csv_float(row.get("longitude"))
-            cursor = conn.execute(
-                """INSERT OR IGNORE INTO church(
-                    parish_id, slug, name, address_line1, address_line2, city, state, postal_code,
-                    name_verified, address_verified, latitude, longitude, created_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            church_slugs.add(row["slug"])
+            conn.execute(
+                """INSERT INTO church(
+                       parish_id, slug, name, address_line1, address_line2, city, state,
+                       postal_code, name_verified, address_verified, latitude, longitude,
+                       created_at
+                   ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                   ON CONFLICT(slug) DO UPDATE SET
+                       parish_id = excluded.parish_id,
+                       name = excluded.name,
+                       address_line1 = excluded.address_line1,
+                       address_line2 = excluded.address_line2,
+                       city = excluded.city,
+                       state = excluded.state,
+                       postal_code = excluded.postal_code,
+                       name_verified = excluded.name_verified,
+                       address_verified = excluded.address_verified,
+                       latitude = excluded.latitude,
+                       longitude = excluded.longitude""",
                 (
-                    parish_row["id"],
+                    parish["id"],
                     row["slug"],
                     row["name"],
                     row.get("line1") or None,
@@ -262,90 +225,56 @@ def _load_churches_from_csv(conn) -> int:
                     row.get("postal_code") or None,
                     _csv_bool(row.get("name_verified")),
                     _csv_bool(row.get("address_verified")),
-                    lat,
-                    lng,
+                    _csv_float(row.get("latitude")),
+                    _csv_float(row.get("longitude")),
                     now,
                 ),
             )
-            if cursor.rowcount > 0:
-                count += 1
-    LOGGER.info("Loaded %d churches from churches.csv", count)
-    return count
+            stats["churches_upserted"] += 1
+
+        for church in conn.execute("SELECT id, slug FROM church").fetchall():
+            if church["slug"] not in church_slugs:
+                LOGGER.warning("Church %s is no longer in churches.csv; deleting", church["slug"])
+                conn.execute("DELETE FROM church WHERE id = ?", (church["id"],))
+                stats["churches_deleted"] += 1
+
+    return stats
 
 
-def _load_events(conn) -> int:
-    entries = load_json_list(EVENTS_PATH)
-    if not entries:
-        LOGGER.info("No events.json found, skipping")
-        return 0
+# ── Opening the database ────────────────────────────────────────────────────
+def create_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
+    """Create an empty database: schema plus reference data, no observed data.
 
-    count = 0
-    for entry in entries:
-        church_slug = entry.get("church_slug")
-        if not church_slug:
-            continue
-        church_row = conn.execute(
-            "SELECT id, parish_id FROM church WHERE slug = ?", (church_slug,)
-        ).fetchone()
-        if not church_row:
-            continue
+    For tests and starting from scratch. To work on real data, pull the
+    published database instead (`pnpm data:pull`).
+    """
+    LOGGER.info("Creating empty database at %s", db_path)
+    delete_db(db_path)
+    conn = connect_db(db_path)
+    try:
+        migrations = migrate(conn)
+        seeded = seed_reference_data(conn)
+    finally:
+        conn.close()
+    return {"db_path": str(db_path), "migrations_applied": migrations, **seeded}
 
-        # Resolve bulletin_id if we can find it
-        bulletin_id = None
-        bulletin_row = conn.execute(
-            "SELECT id FROM bulletin WHERE parish_id = ? AND source_url = ?",
-            (church_row["parish_id"], entry.get("bulletin_source_url")),
-        ).fetchone()
-        if bulletin_row:
-            bulletin_id = bulletin_row["id"]
 
-        start_minutes = _time_to_minutes(entry.get("start_time"))
-        if start_minutes is None:
-            LOGGER.warning(
-                "Skipping event: unparseable start_time %r (church=%s)",
-                entry.get("start_time"), church_slug,
-            )
-            continue
+def ensure_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
+    """Bring an existing database up to date before a pipeline command runs.
 
-        end_minutes = _time_to_minutes(entry.get("end_time"))
-
-        page_number = entry.get("page_number")
-        if not isinstance(page_number, int):
-            page_number = None
-
-        note_raw = entry.get("note")
-        note = note_raw.strip() if isinstance(note_raw, str) and note_raw.strip() else None
-
-        event_kind = entry.get("event_kind", "")
-        event_date = None
-        if event_kind == "specific_date":
-            event_date = _normalize_event_date(entry.get("date"))
-            if event_date is None:
-                LOGGER.warning(
-                    "Skipping event: unparseable specific_date %r (church=%s)",
-                    entry.get("date"), church_slug,
-                )
-                continue
-
-        conn.execute(
-            """INSERT INTO event(church_id, bulletin_id, event_type, event_kind, day_of_week, date, start_time, end_time, cancelled, page_number, note)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            (
-                church_row["id"],
-                bulletin_id,
-                entry.get("event_type", ""),
-                event_kind,
-                entry.get("day_of_week"),
-                event_date,
-                start_minutes,
-                end_minutes,
-                int(entry.get("cancelled", False)),
-                page_number,
-                note,
-            ),
+    Applies pending migrations and re-seeds the reference tables from the
+    CSVs. Refuses to invent a database: running the pipeline against an empty
+    one would look like every parish had lost its schedule.
+    """
+    if not db_path.exists():
+        raise DatabaseMissingError(
+            f"No database at {db_path}. Run `pnpm data:pull` to download the published "
+            "data, or `pnpm db:create` to start from an empty database."
         )
-
-        count += 1
-
-    LOGGER.info("Loaded %d events from events.json", count)
-    return count
+    conn = connect_db(db_path)
+    try:
+        migrations = migrate(conn)
+        seeded = seed_reference_data(conn)
+    finally:
+        conn.close()
+    return {"migrations_applied": migrations, **seeded}

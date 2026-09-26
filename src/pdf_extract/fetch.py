@@ -1,4 +1,4 @@
-"""Bulletin fetch pipeline: resolve provider links, download PDFs, save metadata."""
+"""Bulletin fetch pipeline: resolve provider links, download PDFs, record bulletins."""
 
 from __future__ import annotations
 
@@ -7,29 +7,38 @@ import logging
 import re
 from collections.abc import Callable
 from dataclasses import dataclass
-from datetime import date, datetime
-from pathlib import Path
+from datetime import UTC, date, datetime, timedelta
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, quote, unquote, urljoin, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
+from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.browser import AnchorLike, PageLike, launch_stealth_browser
+from pdf_extract.pdf_compact import compact_bulletin_pdf
+from pdf_extract.runs import (
+    FETCH_DOWNLOAD_FAILED,
+    FETCH_NEW,
+    FETCH_RESOLVE_FAILED,
+    FETCH_SAVE_FAILED,
+    FETCH_UNCHANGED,
+    record_parish_result,
+)
 from pdf_extract.storage import (
-    BULLETINS_DIR,
-    BULLETINS_METADATA_PATH,
     connect_db,
     get_parish_by_name,
+    insert_bulletin,
     list_parishes,
-    load_json_list,
-    save_json_list,
+    load_bulletins,
     utc_now_iso,
 )
 
 ECATHOLIC_BULLETINS_PATH = "/bulletins"
+ECATHOLIC_FILES_HOST = "files.ecatholic.com"
+ECATHOLIC_ANCHOR_SELECTOR = f"a[href*='{ECATHOLIC_FILES_HOST}']"
+ECATHOLIC_TYPE = "ecatholic"
 PARISHES_ONLINE_TYPE = "parishes_online"
 DISCOVER_MASS_TYPE = "discover_mass"
 OTHER_TYPE = "other"
-SUPPORTED_BULLETIN_PROVIDERS = {"ecatholic", PARISHES_ONLINE_TYPE, DISCOVER_MASS_TYPE, OTHER_TYPE}
 PARISHES_ONLINE_ORG_URL_TEMPLATE = "https://parishesonline.com/organization/{provider_id}"
 DISCOVER_MASS_BULLETIN_URL_TEMPLATE = "https://discovermass.com/church/{provider_id}/"
 
@@ -41,6 +50,14 @@ PLAYWRIGHT_SELECTOR_TIMEOUT_MS = 15000
 PLAYWRIGHT_NAV_RETRY_DELAY_MS = 250
 # Per-request timeout for direct PDF downloads over HTTP.
 HTTP_DOWNLOAD_TIMEOUT_SECONDS = 60
+# eCatholic bulletin pages keep their PDF links in an archive panel that is
+# often attached but not visible, and sometimes only populated after the first
+# render. When a pass finds nothing, reload once after a short settle.
+ECATHOLIC_RESOLVE_ATTEMPTS = 2
+ECATHOLIC_SETTLE_DELAY_MS = 2000
+# A parish whose newest bulletin is older than this is reported at the end of
+# the fetch stage: the resolver kept returning a link we already had.
+STALE_BULLETIN_AGE_DAYS = 14
 
 LOGGER = logging.getLogger(__name__)
 
@@ -72,16 +89,105 @@ def _resolve_ecatholic_latest_link(
     *, provider_id: str, page: PageLike | None = None,
 ) -> tuple[str, str]:
     bulletins_url = urljoin(provider_id.rstrip("/") + "/", ECATHOLIC_BULLETINS_PATH.lstrip("/"))
-    return _resolve_latest_anchor_link_with_playwright(
-        page_url=bulletins_url,
-        anchor_selector="a[href*='files.ecatholic.com']",
-        source_label=f"ecatholic provider_id={provider_id}",
-        href_to_urls=lambda href: _extract_ecatholic_pdf_url_from_href(
-            href=href,
-            base_url=bulletins_url,
-        ),
-        page=page,
-    )
+    source_label = f"ecatholic provider_id={provider_id}"
+
+    def _run(p: PageLike) -> tuple[str, str]:
+        LOGGER.info("Resolving latest anchor link (%s)", source_label)
+        LOGGER.info("Visiting page URL: %s", bulletins_url)
+        for attempt in range(1, ECATHOLIC_RESOLVE_ATTEMPTS + 1):
+            _goto_with_retry(page=p, page_url=bulletins_url)
+            # Wait on "attached", not the default "visible": these links live in
+            # a collapsed archive panel on most eCatholic themes, so requiring
+            # visibility times out on a page that already has what we need.
+            _wait_for_selector_quietly(
+                page=p,
+                selector=ECATHOLIC_ANCHOR_SELECTOR,
+                state="attached",
+                source_label=source_label,
+            )
+            pdf_urls = _collect_ecatholic_pdf_urls(page=p, base_url=bulletins_url)
+            if pdf_urls:
+                latest = _pick_latest_ecatholic_pdf_url(pdf_urls)
+                LOGGER.info("Resolved latest anchor link (%s)", source_label)
+                return latest, latest
+            if attempt < ECATHOLIC_RESOLVE_ATTEMPTS:
+                LOGGER.warning(
+                    "No eCatholic bulletin PDF on %s (attempt %d/%d), reloading",
+                    bulletins_url, attempt, ECATHOLIC_RESOLVE_ATTEMPTS,
+                )
+                p.wait_for_timeout(ECATHOLIC_SETTLE_DELAY_MS)
+        raise ValueError(f"No matching anchor link found for {source_label} at {bulletins_url}")
+
+    if page is not None:
+        return _run(page)
+    with launch_stealth_browser() as p:
+        return _run(p)
+
+
+def _collect_ecatholic_pdf_urls(*, page: PageLike, base_url: str) -> list[str]:
+    """Collect every eCatholic bulletin PDF URL the page exposes, in DOM order."""
+    urls: list[str] = []
+    seen: set[str] = set()
+
+    def _add(raw_href: str) -> None:
+        extracted = _extract_ecatholic_pdf_url_from_href(href=raw_href, base_url=base_url)
+        if extracted is None:
+            return
+        url = extracted[0]
+        if url in seen:
+            return
+        seen.add(url)
+        urls.append(url)
+
+    for anchor in page.query_selector_all(ECATHOLIC_ANCHOR_SELECTOR):
+        href = anchor.get_attribute("href")
+        if isinstance(href, str):
+            _add(href)
+    if urls:
+        return urls
+
+    # Some eCatholic themes hand the bulletin to a script-driven viewer instead
+    # of a plain anchor, leaving the PDF URL only in the rendered markup.
+    for raw in _find_ecatholic_pdf_urls_in_html(page=page):
+        _add(raw)
+    return urls
+
+
+_ECATHOLIC_HTML_PDF_URL_PATTERN = re.compile(
+    rf"https?://{re.escape(ECATHOLIC_FILES_HOST)}/[^\s\"'<>\\]+?\.pdf(?:\?[^\s\"'<>\\]*)?",
+    flags=re.IGNORECASE,
+)
+
+
+def _find_ecatholic_pdf_urls_in_html(*, page: PageLike) -> list[str]:
+    try:
+        html = page.content()
+    except Exception:
+        return []
+    if not html:
+        return []
+    # Unescape JSON-escaped slashes so URLs embedded as "https:\/\/host\/f.pdf"
+    # match a plain URL regex.
+    return _ECATHOLIC_HTML_PDF_URL_PATTERN.findall(html.replace("\\/", "/"))
+
+
+def _pick_latest_ecatholic_pdf_url(urls: list[str]) -> str:
+    """Pick the newest bulletin rather than trusting the page's anchor order."""
+    dated = [(parsed, url) for url in urls if (parsed := _parse_ecatholic_pdf_date(url))]
+    if dated:
+        return max(dated)[1]
+    return urls[0]
+
+
+def _parse_ecatholic_pdf_date(url: str) -> date | None:
+    """eCatholic names every bulletin PDF after its Sunday: `YYYYMMDD.pdf`."""
+    filename = urlparse(url).path.rsplit("/", 1)[-1]
+    if not filename.lower().endswith(".pdf"):
+        return None
+    stem = filename[: -len(".pdf")]
+    if len(stem) != 8 or not stem.isdigit():
+        return None
+    return _safe_date(int(stem[:4]), int(stem[4:6]), int(stem[6:8]))
 
 
 def _resolve_parishes_online_latest_link(
@@ -101,6 +207,30 @@ def _resolve_parishes_online_latest_link(
     )
 
 
+def _wait_for_selector_quietly(
+    *, page: PageLike, selector: str, state: str | None, source_label: str,
+) -> None:
+    """Wait for `selector`, treating the wait itself as best-effort.
+
+    The wait only lets a fast page resolve in a second instead of blocking for
+    the full timeout. When it expires we still scrape whatever the DOM holds,
+    so a hidden or late link produces a real "nothing found" error (or a link)
+    rather than a Playwright timeout that hides why the parish was skipped.
+    """
+    try:
+        if state is None:
+            page.wait_for_selector(selector, timeout=PLAYWRIGHT_SELECTOR_TIMEOUT_MS)
+        else:
+            page.wait_for_selector(
+                selector, timeout=PLAYWRIGHT_SELECTOR_TIMEOUT_MS, state=state,
+            )
+    except Exception as exc:
+        LOGGER.warning(
+            "Selector %s did not settle for %s (%s); scraping the page anyway",
+            selector, source_label, type(exc).__name__,
+        )
+
+
 def _resolve_latest_anchor_link_with_playwright(
     *,
     page_url: str,
@@ -114,14 +244,12 @@ def _resolve_latest_anchor_link_with_playwright(
         LOGGER.info("Resolving latest anchor link (%s)", source_label)
         LOGGER.info("Visiting page URL: %s", page_url)
         _goto_with_retry(page=p, page_url=page_url)
-        if wait_for_state is None:
-            p.wait_for_selector(anchor_selector, timeout=PLAYWRIGHT_SELECTOR_TIMEOUT_MS)
-        else:
-            p.wait_for_selector(
-                anchor_selector,
-                timeout=PLAYWRIGHT_SELECTOR_TIMEOUT_MS,
-                state=wait_for_state,
-            )
+        _wait_for_selector_quietly(
+            page=p,
+            selector=anchor_selector,
+            state=wait_for_state,
+            source_label=source_label,
+        )
         anchors = p.query_selector_all(anchor_selector)
         for anchor in anchors:
             href = anchor.get_attribute("href")
@@ -145,7 +273,7 @@ def _extract_ecatholic_pdf_url_from_href(*, href: str, base_url: str) -> tuple[s
     parsed = urlparse(absolute_href)
     host = parsed.netloc.lower()
     path = parsed.path.lower()
-    if host != "files.ecatholic.com":
+    if host != ECATHOLIC_FILES_HOST:
         return None
     if "bulletins" not in path:
         return None
@@ -544,35 +672,59 @@ def _extract_parishes_online_pdf_url_from_href(
 
 # ── Bulletin link resolution ────────────────────────────────────────────────
 
+BulletinLinkBuilder = Callable[..., BulletinLink]
+
+
+@dataclass(frozen=True)
+class _ProviderSpec:
+    """Everything the fetch stage needs to know about one bulletin provider."""
+
+    build: BulletinLinkBuilder
+    """Resolves the parish's latest bulletin link."""
+
+    id_column: str
+    """The parishes.csv column `build` takes as its provider_id."""
+
+
+# Adding a provider means writing its builder and adding one row here: this
+# table is what the fetch stage supports, and where each provider's id comes
+# from. Providers with a stable directory listing (parishesonline, discovermass)
+# are keyed by an account id; the rest start from the parish's own homepage.
+_PROVIDERS: dict[str, _ProviderSpec] = {
+    ECATHOLIC_TYPE: _ProviderSpec(
+        build=build_latest_ecatholic_bulletin_links, id_column="homepage_url",
+    ),
+    PARISHES_ONLINE_TYPE: _ProviderSpec(
+        build=build_latest_parishes_online_bulletin_links, id_column="provider_id",
+    ),
+    DISCOVER_MASS_TYPE: _ProviderSpec(
+        build=build_latest_discover_mass_bulletin_links, id_column="provider_id",
+    ),
+    OTHER_TYPE: _ProviderSpec(
+        build=build_latest_other_bulletin_links, id_column="homepage_url",
+    ),
+}
+
+SUPPORTED_BULLETIN_PROVIDERS = frozenset(_PROVIDERS)
+
+
 def _build_bulletin_link(
     bulletin_provider: str, fetch_provider_id: str, *, page: PageLike | None = None,
 ) -> BulletinLink:
-    if bulletin_provider == "ecatholic":
-        return build_latest_ecatholic_bulletin_links(provider_id=fetch_provider_id, page=page)
-    if bulletin_provider == PARISHES_ONLINE_TYPE:
-        return build_latest_parishes_online_bulletin_links(provider_id=fetch_provider_id, page=page)
-    if bulletin_provider == DISCOVER_MASS_TYPE:
-        return build_latest_discover_mass_bulletin_links(provider_id=fetch_provider_id, page=page)
-    if bulletin_provider == OTHER_TYPE:
-        return build_latest_other_bulletin_links(provider_id=fetch_provider_id, page=page)
-    raise ValueError(f"Unsupported bulletin_provider: {bulletin_provider}")
+    spec = _PROVIDERS.get(bulletin_provider)
+    if spec is None:
+        raise ValueError(f"Unsupported bulletin_provider: {bulletin_provider}")
+    return spec.build(provider_id=fetch_provider_id, page=page)
 
 
 def _resolve_fetch_source(parish) -> tuple[str, str] | None:
+    """The provider and provider id to fetch this parish with, or None to skip it."""
     provider = (parish["bulletin_provider"] or "").strip()
-    if provider not in SUPPORTED_BULLETIN_PROVIDERS:
+    spec = _PROVIDERS.get(provider)
+    if spec is None:
         return None
-
-    if provider in {PARISHES_ONLINE_TYPE, DISCOVER_MASS_TYPE}:
-        provider_id = (parish["provider_id"] or "").strip()
-        if not provider_id:
-            return None
-        return provider, provider_id
-
-    homepage_url = (parish["homepage_url"] or "").strip()
-    if not homepage_url:
-        return None
-    return provider, homepage_url
+    provider_id = (parish[spec.id_column] or "").strip()
+    return (provider, provider_id) if provider_id else None
 
 
 # ── HTTP helpers ────────────────────────────────────────────────────────────
@@ -645,75 +797,161 @@ def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
 def fetch_bulletins(
     *,
     parish_name: str | None = None,
-    pdf_dir: Path = BULLETINS_DIR,
+    run_id: str | None = None,
 ) -> dict[str, int]:
+    """Download each parish's latest bulletin if it is one we have not seen.
+
+    The PDF goes to the blob store under its content hash and a `bulletin` row
+    records where it came from. With `run_id`, each parish's outcome is also
+    recorded for the run report.
+    """
     LOGGER.info("Starting fetch stage (parish_name=%s)", parish_name or "*all*")
-    metadata = load_json_list(BULLETINS_METADATA_PATH)
-    existing_urls = {e["source_url"] for e in metadata}
+    store = get_store()
+
+    fetched = 0
+    skipped_existing = 0
+    failed = 0
+    attempted_slugs: list[str] = []
 
     conn = connect_db()
     try:
         parishes = _parishes_for_run(conn, parish_name)
+        existing_urls = {
+            (row["parish_id"], row["source_url"])
+            for row in conn.execute("SELECT parish_id, source_url FROM bulletin")
+        }
+
+        with launch_stealth_browser() as page:
+            for parish in parishes:
+                slug = parish["slug"]
+                fetch_source = _resolve_fetch_source(parish)
+                if fetch_source is None:
+                    # Unsupported provider (e.g. google_drive, no_bulletin): not a
+                    # parish we expect to refresh, so keep it out of the stale report.
+                    continue
+                bulletin_provider, fetch_provider_id = fetch_source
+                attempted_slugs.append(slug)
+
+                def record(status: str, **fields) -> None:
+                    record_parish_result(conn, run_id, slug, "fetch", status, **fields)
+
+                try:
+                    link = _build_bulletin_link(bulletin_provider, fetch_provider_id, page=page)
+                except ValueError as exc:
+                    LOGGER.warning("Skipping parish %s: %s", slug, exc)
+                    record(FETCH_RESOLVE_FAILED, detail=str(exc))
+                    failed += 1
+                    continue
+                except Exception as exc:
+                    LOGGER.warning(
+                        "Failed resolving bulletin link for parish %s: %s", slug, exc,
+                        exc_info=True,
+                    )
+                    record(FETCH_RESOLVE_FAILED, detail=f"{type(exc).__name__}: {exc}")
+                    failed += 1
+                    continue
+
+                if (parish["id"], link.source_url) in existing_urls:
+                    skipped_existing += 1
+                    record(FETCH_UNCHANGED, source_url=link.source_url)
+                    continue
+
+                try:
+                    pdf_bytes = _download_pdf(
+                        fetch_url=link.fetch_url, source_url=link.source_url,
+                    )
+                except (HTTPError, URLError, OSError) as exc:
+                    LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
+                    record(
+                        FETCH_DOWNLOAD_FAILED,
+                        detail=f"{type(exc).__name__}: {exc}",
+                        source_url=link.source_url,
+                    )
+                    failed += 1
+                    continue
+
+                # The hash names the bulletin as published, so it stays the
+                # bulletin's identity however the stored copy is compacted.
+                content_hash = hashlib.sha256(pdf_bytes).hexdigest()
+                key = bulletin_pdf_key(slug, content_hash)
+                try:
+                    # Stored before the row that points at it, so a bulletin row
+                    # never names a PDF that is not there. Compaction is not
+                    # byte-for-byte repeatable, so a bulletin already stored
+                    # (the same PDF at a new URL) is left as it is.
+                    if not store.exists(key):
+                        store.put(
+                            key, compact_bulletin_pdf(pdf_bytes), content_type="application/pdf",
+                        )
+                    insert_bulletin(
+                        conn,
+                        parish_id=parish["id"],
+                        source_url=link.source_url,
+                        content_hash=content_hash,
+                        fetched_at=utc_now_iso(),
+                    )
+                except Exception as exc:
+                    LOGGER.warning(
+                        "Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True,
+                    )
+                    record(
+                        FETCH_SAVE_FAILED,
+                        detail=f"{type(exc).__name__}: {exc}",
+                        source_url=link.source_url,
+                    )
+                    failed += 1
+                    continue
+
+                existing_urls.add((parish["id"], link.source_url))
+                fetched += 1
+                record(FETCH_NEW, source_url=link.source_url, content_hash=content_hash)
+
+        stale_slugs = _report_stale_parishes(
+            bulletins=load_bulletins(conn), slugs=attempted_slugs,
+        )
     finally:
         conn.close()
 
-    fetched = 0
-    skipped_existing = 0
-
-    with launch_stealth_browser() as page:
-        for parish in parishes:
-            slug = parish["slug"]
-            fetch_source = _resolve_fetch_source(parish)
-            if fetch_source is None:
-                continue
-            bulletin_provider, fetch_provider_id = fetch_source
-
-            try:
-                link = _build_bulletin_link(bulletin_provider, fetch_provider_id, page=page)
-            except ValueError:
-                LOGGER.warning("Skipping parish %s: no supported source", slug)
-                continue
-            except Exception as exc:
-                LOGGER.warning("Failed resolving bulletin link for parish %s: %s", slug, exc, exc_info=True)
-                continue
-
-            if link.source_url in existing_urls:
-                skipped_existing += 1
-                continue
-
-            try:
-                pdf_bytes = _download_pdf(fetch_url=link.fetch_url, source_url=link.source_url)
-            except (HTTPError, URLError, OSError) as exc:
-                LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
-                continue
-
-            try:
-                content_hash = hashlib.sha256(pdf_bytes).hexdigest()
-                parish_dir = pdf_dir / slug
-                parish_dir.mkdir(parents=True, exist_ok=True)
-                pdf_path = parish_dir / f"{content_hash}.pdf"
-                if not pdf_path.exists():
-                    pdf_path.write_bytes(pdf_bytes)
-
-                metadata.append({
-                    "parish_slug": slug,
-                    "source_url": link.source_url,
-                    "pdf_path": str(pdf_path),
-                    "content_hash": content_hash,
-                    "fetched_at": utc_now_iso(),
-                    "processed_at": None,
-                    "published_date": None,
-                })
-                existing_urls.add(link.source_url)
-                fetched += 1
-                save_json_list(BULLETINS_METADATA_PATH, metadata)
-            except Exception as exc:
-                LOGGER.warning("Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True)
-                continue
-
-    result = {"fetched_bulletins": fetched, "skipped_existing_urls": skipped_existing}
+    result = {
+        "fetched_bulletins": fetched,
+        "skipped_existing_urls": skipped_existing,
+        "failed_parishes": failed,
+        "stale_parishes": len(stale_slugs),
+    }
     LOGGER.info("Fetch stage finished: %s", result)
     return result
+
+
+def _report_stale_parishes(*, bulletins: list[dict], slugs: list[str]) -> list[str]:
+    """Warn about parishes still sitting on an old bulletin after this run.
+
+    A resolver that keeps returning a link we already have leaves no trace
+    beyond the `skipped_existing_urls` tally, so a parish can quietly stop
+    refreshing for months. Name them instead.
+    """
+    latest_by_slug: dict[str, str] = {}
+    for entry in bulletins:
+        slug = entry.get("parish_slug")
+        fetched_at = entry.get("fetched_at")
+        if not slug or not fetched_at:
+            continue
+        if fetched_at > latest_by_slug.get(slug, ""):
+            latest_by_slug[slug] = fetched_at
+
+    cutoff = (
+        (datetime.now(UTC) - timedelta(days=STALE_BULLETIN_AGE_DAYS))
+        .replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    )
+    stale: list[str] = []
+    for slug in slugs:
+        latest = latest_by_slug.get(slug)
+        if latest is None or latest < cutoff:
+            stale.append(slug)
+            LOGGER.warning(
+                "Parish %s has no bulletin newer than %s days (latest: %s)",
+                slug, STALE_BULLETIN_AGE_DAYS, latest or "never fetched",
+            )
+    return stale
 
 
 # ── Helpers ─────────────────────────────────────────────────────────────────

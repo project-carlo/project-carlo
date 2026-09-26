@@ -1,15 +1,15 @@
+from dataclasses import replace
 from datetime import date
-from pathlib import Path
 
-from pdf_extract.storage import (
-    SCHEMA_PATH,
-    connect_db,
-)
+import pytest
+
 from pdf_extract.fetch import (
-    BulletinLink,
+    _PROVIDERS,
     DISCOVER_MASS_TYPE,
+    ECATHOLIC_TYPE,
     OTHER_TYPE,
     PARISHES_ONLINE_TYPE,
+    BulletinLink,
     _build_bulletin_link,
     _extract_discover_mass_pdf_url_from_href,
     _extract_ecatholic_pdf_url_from_href,
@@ -17,37 +17,20 @@ from pdf_extract.fetch import (
     _find_other_bulletin_page_url,
     _goto_with_retry,
     _normalize_url_for_request,
+    _parse_ecatholic_pdf_date,
     _parse_relaxed_date,
+    _pick_latest_ecatholic_pdf_url,
+    _report_stale_parishes,
+    _resolve_ecatholic_latest_link,
     _resolve_fetch_source,
-    _resolve_other_latest_link,
     _resolve_latest_anchor_link_with_playwright,
+    _resolve_other_latest_link,
     build_latest_discover_mass_bulletin_links,
     build_latest_ecatholic_bulletin_links,
     build_latest_other_bulletin_links,
     build_latest_parishes_online_bulletin_links,
 )
-
-
-def _create_test_db(db_path: Path) -> None:
-    """Create a test database from schema.sql with a test parish."""
-    conn = connect_db(db_path)
-    schema_sql = SCHEMA_PATH.read_text(encoding="utf-8")
-    conn.executescript(schema_sql)
-    conn.execute(
-        """INSERT INTO parish(
-            slug, name, homepage_url, bulletin_provider, provider_id, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?)""",
-        (
-            "test-parish",
-            "Test Parish",
-            "https://test.org",
-            "ecatholic",
-            None,
-            "2026-01-01T00:00:00Z",
-        ),
-    )
-    conn.commit()
-    conn.close()
+from pdf_extract.storage import utc_now_iso
 
 
 def test_build_latest_ecatholic_bulletin_links(monkeypatch) -> None:
@@ -258,34 +241,37 @@ def test_resolve_latest_anchor_link_with_playwright_uses_first_valid_anchor() ->
     assert fetch_url == "https://example.org/good.pdf"
 
 
-def test_build_bulletin_link_ecatholic(monkeypatch) -> None:
+@pytest.mark.parametrize(
+    ("provider", "provider_id", "builder"),
+    [
+        (ECATHOLIC_TYPE, "https://test.org", build_latest_ecatholic_bulletin_links),
+        (PARISHES_ONLINE_TYPE, "123", build_latest_parishes_online_bulletin_links),
+        (DISCOVER_MASS_TYPE, "st-joseph-rush", build_latest_discover_mass_bulletin_links),
+        (OTHER_TYPE, "https://example.org", build_latest_other_bulletin_links),
+    ],
+)
+def test_build_bulletin_link_dispatches_to_the_registered_builder(
+    monkeypatch, provider: str, provider_id: str, builder
+) -> None:
+    assert _PROVIDERS[provider].build is builder
+
+    seen: dict[str, object] = {}
+
     def fake_build(*, provider_id, reference_date=None, page=None):
-        return BulletinLink(source_url="https://ecatholic.com/b.pdf", fetch_url="https://ecatholic.com/b.pdf")
+        seen["provider_id"] = provider_id
+        return BulletinLink(source_url="https://example.org/b.pdf", fetch_url="https://example.org/b.pdf")
 
-    monkeypatch.setattr("pdf_extract.fetch.build_latest_ecatholic_bulletin_links", fake_build)
-    link = _build_bulletin_link("ecatholic", "https://test.org")
-    assert link.source_url == "https://ecatholic.com/b.pdf"
-
-
-def test_build_bulletin_link_parishes_online(monkeypatch) -> None:
-    def fake_build(*, provider_id, reference_date=None, page=None):
-        return BulletinLink(source_url="https://po.com/source", fetch_url="https://po.com/fetch.pdf")
-
-    monkeypatch.setattr("pdf_extract.fetch.build_latest_parishes_online_bulletin_links", fake_build)
-    link = _build_bulletin_link(PARISHES_ONLINE_TYPE, "123")
-    assert link.fetch_url == "https://po.com/fetch.pdf"
+    monkeypatch.setitem(
+        _PROVIDERS, provider, replace(_PROVIDERS[provider], build=fake_build),
+    )
+    link = _build_bulletin_link(provider, provider_id)
+    assert seen["provider_id"] == provider_id
+    assert link.fetch_url == "https://example.org/b.pdf"
 
 
-def test_build_bulletin_link_discover_mass(monkeypatch) -> None:
-    def fake_build(*, provider_id, reference_date=None, page=None):
-        return BulletinLink(
-            source_url="https://discovermass.com/church/st-joseph-rush/",
-            fetch_url="https://discovermass.com/church/st-joseph-rush/",
-        )
-
-    monkeypatch.setattr("pdf_extract.fetch.build_latest_discover_mass_bulletin_links", fake_build)
-    link = _build_bulletin_link(DISCOVER_MASS_TYPE, "st-joseph-rush")
-    assert link.fetch_url == "https://discovermass.com/church/st-joseph-rush/"
+def test_build_bulletin_link_rejects_an_unregistered_provider() -> None:
+    with pytest.raises(ValueError, match="Unsupported bulletin_provider"):
+        _build_bulletin_link("google_drive", "https://example.org")
 
 
 def test_build_latest_other_bulletin_links(monkeypatch) -> None:
@@ -562,16 +548,6 @@ def test_resolve_other_latest_link_descends_into_latest_bulletin_post_when_no_pd
     assert fetch_url == latest_pdf_url
 
 
-def test_build_bulletin_link_other(monkeypatch) -> None:
-    def fake_build(*, provider_id, reference_date=None, page=None):
-        assert provider_id == "https://example.org"
-        return BulletinLink(source_url="https://example.org/weekly.pdf", fetch_url="https://example.org/weekly.pdf")
-
-    monkeypatch.setattr("pdf_extract.fetch.build_latest_other_bulletin_links", fake_build)
-    link = _build_bulletin_link(OTHER_TYPE, "https://example.org")
-    assert link.fetch_url == "https://example.org/weekly.pdf"
-
-
 def test_parse_relaxed_date_handles_multiple_formats() -> None:
     ref = date(2026, 2, 19)
     assert _parse_relaxed_date("Bulletin Feb 18, 2026", ref) == date(2026, 2, 18)
@@ -626,3 +602,132 @@ def test_resolve_fetch_source_discover_mass_without_provider_id_returns_none() -
         "homepage_url": "https://stjoseph.example.org",
     }
     assert _resolve_fetch_source(parish) is None
+
+
+class _EcatholicFakePage:
+    """Page whose bulletin anchors exist but never become visible."""
+
+    def __init__(self, *, hrefs, html="", raise_on_wait=True):
+        self._hrefs = hrefs
+        self._html = html
+        self._raise_on_wait = raise_on_wait
+        self.goto_calls = 0
+        self.settle_waits = 0
+        self.wait_states: list[str | None] = []
+
+    def goto(self, url: str, wait_until: str) -> None:
+        assert url == "https://stjeromerochester.org/bulletins"
+        assert wait_until == "domcontentloaded"
+        self.goto_calls += 1
+
+    def wait_for_selector(self, selector: str, timeout: int, state=None) -> None:
+        self.wait_states.append(state)
+        if self._raise_on_wait:
+            raise TimeoutError("Timeout 15000ms exceeded")
+
+    def query_selector_all(self, selector: str):
+        assert selector == "a[href*='files.ecatholic.com']"
+
+        class _Anchor:
+            def __init__(self, href):
+                self._href = href
+
+            def get_attribute(self, name: str):
+                return self._href if name == "href" else None
+
+        return [_Anchor(href) for href in self._hrefs]
+
+    def content(self) -> str:
+        return self._html
+
+    def wait_for_timeout(self, timeout: int) -> None:
+        self.settle_waits += 1
+
+
+def test_resolve_ecatholic_latest_link_uses_hidden_anchors() -> None:
+    page = _EcatholicFakePage(
+        hrefs=[
+            "https://files.ecatholic.com/22370/bulletins/20260809.pdf?t=1",
+            "https://files.ecatholic.com/22370/bulletins/20260823.pdf?t=3",
+            "https://files.ecatholic.com/22370/bulletins/20260816.pdf?t=2",
+            "/about-us",
+        ],
+    )
+
+    source_url, fetch_url = _resolve_ecatholic_latest_link(
+        provider_id="https://stjeromerochester.org",
+        page=page,
+    )
+
+    # A visibility timeout must not stop us reading anchors that are attached.
+    assert page.wait_states == ["attached"]
+    assert page.goto_calls == 1
+    assert source_url == "https://files.ecatholic.com/22370/bulletins/20260823.pdf?t=3"
+    assert fetch_url == source_url
+
+
+def test_resolve_ecatholic_latest_link_falls_back_to_page_html() -> None:
+    page = _EcatholicFakePage(
+        hrefs=[],
+        html=(
+            '<script>window.viewer = {"file":'
+            '"https:\\/\\/files.ecatholic.com\\/22370\\/bulletins\\/20260823.pdf?t=9"};'
+            "</script>"
+        ),
+    )
+
+    source_url, _ = _resolve_ecatholic_latest_link(
+        provider_id="https://stjeromerochester.org",
+        page=page,
+    )
+    assert source_url == "https://files.ecatholic.com/22370/bulletins/20260823.pdf?t=9"
+
+
+def test_resolve_ecatholic_latest_link_reloads_then_raises_when_page_is_empty() -> None:
+    page = _EcatholicFakePage(hrefs=[], html="<html><body>No bulletins yet</body></html>")
+
+    try:
+        _resolve_ecatholic_latest_link(
+            provider_id="https://stjeromerochester.org",
+            page=page,
+        )
+    except ValueError as exc:
+        assert "ecatholic provider_id=https://stjeromerochester.org" in str(exc)
+    else:
+        raise AssertionError("Expected ValueError when no bulletin PDF is found")
+
+    assert page.goto_calls == 2
+    assert page.settle_waits == 1
+
+
+def test_pick_latest_ecatholic_pdf_url_prefers_newest_date() -> None:
+    urls = [
+        "https://files.ecatholic.com/1/bulletins/20260705.pdf",
+        "https://files.ecatholic.com/1/bulletins/20260823.pdf?t=5",
+        "https://files.ecatholic.com/1/bulletins/20260816.pdf",
+    ]
+    assert _pick_latest_ecatholic_pdf_url(urls) == urls[1]
+
+    undated = ["https://files.ecatholic.com/1/bulletins/weekly.pdf", "https://x/2.pdf"]
+    assert _pick_latest_ecatholic_pdf_url(undated) == undated[0]
+
+
+def test_parse_ecatholic_pdf_date() -> None:
+    assert _parse_ecatholic_pdf_date(
+        "https://files.ecatholic.com/1/bulletins/20260823.pdf?t=1"
+    ) == date(2026, 8, 23)
+    assert _parse_ecatholic_pdf_date("https://files.ecatholic.com/1/bulletins/latest.pdf") is None
+    assert _parse_ecatholic_pdf_date("https://files.ecatholic.com/1/bulletins/20261332.pdf") is None
+
+
+def test_report_stale_parishes_names_parishes_stuck_on_old_bulletins() -> None:
+    fresh = utc_now_iso()
+    bulletins = [
+        {"parish_slug": "fresh-parish", "fetched_at": fresh},
+        {"parish_slug": "stale-parish", "fetched_at": "2026-01-01T00:00:00Z"},
+    ]
+    stale = _report_stale_parishes(
+        bulletins=bulletins,
+        slugs=["fresh-parish", "stale-parish", "never-fetched-parish"],
+    )
+    assert stale == ["stale-parish", "never-fetched-parish"]

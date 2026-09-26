@@ -61,7 +61,7 @@ Confession, and Adoration times parsed from weekly bulletins
 2. Create a 1200×630 branded share image (`public/og-default.png`),
    `apple-touch-icon.png` (180×180), and `site.webmanifest`.
 3. Add JSON-LD to church pages: `Church` (PlaceOfWorship) with name, address,
-   geo, url + Mass/Confession/Adoration schedule; plus `BreadcrumbList`.
+   geo, and url; plus `BreadcrumbList`.
 4. Add `WebSite` + `SearchAction` JSON-LD to the homepage.
 
 ### Phase 2 — Titles, headings & SPA meta
@@ -105,5 +105,21 @@ Confession, and Adoration times parsed from weekly bulletins
     client navigation; wired into Home, Landing, About, NotFound (noindex), and
     the client-rendered ChurchPage — fixes the shell canonical leaking onto `/landing`
   - Church name promoted to `<h1>`; service sections to `<h2>`
+- [x] Phase 2.5 — technical SEO hardening
+  - `WebPage` JSON-LD with `dateModified` (same source as sitemap `<lastmod>`).
+    Recurring schedules remain visible page content rather than `Event` JSON-LD:
+    Google requires each structured Event to have a unique leaf URL on a page
+    focused on that concrete event, which multi-event parish pages do not meet.
+  - Prerendered `/churches/` all-parishes index page (grouped by city) — gives
+    crawlers an internal-link path to all church pages instead of sitemap-only
+    discovery; linked from every church page footer, included in the sitemap,
+    and added as a "Parishes" breadcrumb level.
+  - Homepage `<h1>` now carries the intent keywords (Masthead tagline);
+    the wordmark is a styled `<p>` — visually unchanged.
+  - WebSite/Organization JSON-LD injected into `index.html` at build time from
+    `src/lib/seo.ts` (single source of truth); JSON-LD serialization escapes
+    `<` to keep `</script>`-safe.
 - [ ] Phase 3 — local long-tail expansion
-- [ ] Phase 4 — polish & measurement
+- [ ] Phase 4 — polish & measurement (submit sitemap to Google Search Console
+      + Bing Webmaster Tools after the next deploy; validate with the Rich
+      Results Test and Facebook Sharing Debugger — zero-code, do first)

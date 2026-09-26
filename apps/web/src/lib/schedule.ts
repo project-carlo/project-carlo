@@ -1,22 +1,16 @@
-import { DAY_ORDER, type WeekdayKey } from "../constants/days";
+import { DAY_ORDER, jsDayFor } from "../constants/days";
 
 /**
  * Shared schedule logic for both the SPA and the prerenderer so that a static
  * church page and the live React page show the same set of events in the same
- * order.  Pure functions only; no DOM, React, or sql.js dependencies.
+ * order.  Pure functions only; no DOM or React dependencies.
  */
 
-const MONDAY_INDEX: Record<string, number> = {
-  monday: 0,
-  tuesday: 1,
-  wednesday: 2,
-  thursday: 3,
-  friday: 4,
-  saturday: 5,
-  sunday: 6,
-};
-
 const EVENING_START_MINUTES = 16 * 60;
+// compareSchedule ranks Sunday 0, the Saturday vigil 1, Mon-Sat weekly events
+// 2-7, then these.
+const UNKNOWN_DAY_RANK = 8;
+const SPECIFIC_DATE_RANK = 9;
 
 export interface OccurrenceInput {
   cancelled: boolean;
@@ -27,6 +21,8 @@ export interface OccurrenceInput {
 }
 
 export interface CompareInput {
+  /** Event row id; the final tiebreak, so equal slots never depend on input order. */
+  id: number;
   kind: "weekly" | "specific_date";
   day_of_week: string | null;
   date: string | null;
@@ -38,8 +34,13 @@ function todayDate(): Date {
   return new Date(now.getFullYear(), now.getMonth(), now.getDate());
 }
 
-function parseEventDate(value: string): Date | null {
-  // Prefer explicit YYYY-MM-DD parsing to avoid timezone/date shifts.
+/**
+ * Parse an event date to a local-midnight `Date`, or null if unparseable.
+ *
+ * YYYY-MM-DD is read field by field: `new Date("2026-06-07")` is parsed as UTC
+ * and renders as the day before in any negative-offset timezone.
+ */
+export function parseIsoDateLocal(value: string): Date | null {
   const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value.trim());
   if (isoMatch) {
     const year = Number.parseInt(isoMatch[1], 10);
@@ -57,11 +58,10 @@ function nextForWeekly(
   startMinutes: number,
   today: Date,
 ): Date | null {
-  const dayIdx = MONDAY_INDEX[dayOfWeek.toLowerCase()];
-  if (dayIdx === undefined) return null;
+  const jsDay = jsDayFor(dayOfWeek);
+  if (jsDay < 0) return null;
   const hours = Math.floor(startMinutes / 60);
   const minutes = startMinutes % 60;
-  const jsDay = (dayIdx + 1) % 7; // Python: Monday=0; JS: Sunday=0
   const daysAhead = (jsDay - today.getDay() + 7) % 7;
   const target = new Date(today);
   target.setDate(target.getDate() + daysAhead);
@@ -74,7 +74,7 @@ function nextForSpecific(
   startMinutes: number,
   today: Date,
 ): Date | null {
-  const parsed = parseEventDate(eventDate);
+  const parsed = parseIsoDateLocal(eventDate);
   if (!parsed) return null;
   // Drop events whose calendar day is already past; same-day events still show
   // (date-only comparison, so an earlier start_time today is not filtered out).
@@ -111,54 +111,57 @@ export function computeNextOccurrence(
  * Liturgical-week comparator used for map popups and the church page.
  *
  * Order: weekly Sunday, Saturday evening (>= 4 pm, vigil), Mon-Sat weekly by
- * weekday, then specific-date events by date.  Ties break on start_time.
+ * weekday, events whose weekday can't be resolved, then specific-date events
+ * by date.  Ties break on start_time, then id, so the result never depends on
+ * the order events arrive in; neither the SPA's nor the prerenderer's query
+ * orders its rows.
  */
 export function compareSchedule(a: CompareInput, b: CompareInput): number {
-  const aIsSpecific = a.kind === "specific_date" && a.date;
-  const bIsSpecific = b.kind === "specific_date" && b.date;
-
-  if (aIsSpecific && bIsSpecific) {
-    const dateCompare = (a.date ?? "").localeCompare(b.date ?? "");
+  const rankA = scheduleRank(a);
+  const rankB = scheduleRank(b);
+  if (rankA !== rankB) return rankA - rankB;
+  if (rankA === SPECIFIC_DATE_RANK) {
+    const dateCompare = compareCodeUnits(a.date ?? "", b.date ?? "");
     if (dateCompare !== 0) return dateCompare;
-    return a.start_time - b.start_time;
   }
-  if (aIsSpecific && !bIsSpecific) return 1;
-  if (!aIsSpecific && bIsSpecific) return -1;
-
-  const dayA = weekdayKeyFor(a);
-  const dayB = weekdayKeyFor(b);
-  if (!dayA) return 1;
-  if (!dayB) return -1;
-
-  const dayIdxA = DAY_ORDER.indexOf(dayA);
-  const dayIdxB = DAY_ORDER.indexOf(dayB);
-  const isSatEveA =
-    dayA === "saturday" && a.start_time >= EVENING_START_MINUTES;
-  const isSatEveB =
-    dayB === "saturday" && b.start_time >= EVENING_START_MINUTES;
-
-  return scheduleSortKey(dayA, dayIdxA, isSatEveA, a.start_time)
-    - scheduleSortKey(dayB, dayIdxB, isSatEveB, b.start_time);
+  if (a.start_time !== b.start_time) return a.start_time - b.start_time;
+  return a.id - b.id;
 }
 
-function weekdayKeyFor(e: CompareInput): WeekdayKey | null {
+/**
+ * The event's place in the week, compared before start_time rather than folded
+ * into one number with it, so a late Monday slot still sorts ahead of an early
+ * Tuesday one.
+ */
+function scheduleRank(e: CompareInput): number {
+  if (e.kind === "specific_date" && e.date) return SPECIFIC_DATE_RANK;
+  const jsDay = weekdayFor(e);
+  if (jsDay < 0) return UNKNOWN_DAY_RANK;
+  const day = DAY_ORDER[jsDay];
+  if (day === "sunday") return 0;
+  if (day === "saturday" && e.start_time >= EVENING_START_MINUTES) return 1;
+  return jsDay + 1;
+}
+
+/**
+ * The `jsDayFor` weekday of an event: its day_of_week if that names a weekday,
+ * else the weekday of its date, else -1.
+ */
+function weekdayFor(e: CompareInput): number {
   if (e.kind === "weekly" && e.day_of_week) {
-    return e.day_of_week.toLowerCase() as WeekdayKey;
+    const jsDay = jsDayFor(e.day_of_week);
+    if (jsDay >= 0) return jsDay;
   }
   if (e.date) {
-    const d = new Date(e.date + "T12:00:00");
-    return DAY_ORDER[d.getDay()];
+    const parsed = parseIsoDateLocal(e.date);
+    if (parsed) return parsed.getDay();
   }
-  return null;
+  return -1;
 }
 
-function scheduleSortKey(
-  day: WeekdayKey,
-  dayIdx: number,
-  isSatEve: boolean,
-  startTime: number,
-): number {
-  if (day === "sunday") return startTime;
-  if (isSatEve) return 1000 + startTime;
-  return 2000 + dayIdx * 1000 + startTime;
+// Code-unit order rather than localeCompare: YYYY-MM-DD dates sort the same
+// either way, and this can't vary with the browser's or Node's ICU data.
+function compareCodeUnits(a: string, b: string): number {
+  if (a < b) return -1;
+  return a > b ? 1 : 0;
 }
