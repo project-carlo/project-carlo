@@ -1,0 +1,3221 @@
+{
+ "name": "mass-times",
+ "title": "Diocese of Buffalo: weekend Mass-times pages (Saturday afternoon, Sunday morning, Sunday afternoon)",
+ "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+ "fetched": "2026-09-26",
+ "command": "pnpm diocese roster import buffalo mass-times /tmp/bf/masstimes-roster.json",
+ "notes": "One entry per parish/locale pair across the three pages, with every time listed. The pages name the parish where our records name the building, and hamlets where the directory names towns. Stale in both directions: Queen of Angels (Lackawanna) was still listed thirteen days after its last Mass.",
+ "entries": [
+  {
+   "id": "st-mary-canaseraga",
+   "name": "St. Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Canaseraga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-the-angels-cuba",
+   "name": "Our Lady of the Angels",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cuba",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-trinity-dunkirk",
+   "name": "Holy Trinity",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Dunkirk",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:30 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-hyacinth-dunkirk",
+   "name": "St. Hyacinth",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Dunkirk",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "sacred-heart-lakewood",
+   "name": "Sacred Heart",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lakewood",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-james-jamestown",
+   "name": "St. James",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Jamestown",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-lourdes-bemus-point",
+   "name": "Our Lady of Lourdes",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Bemus Point",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9:15 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-dominic-westfield",
+   "name": "St. Dominic",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Westfield",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-vincent-de-paul-springbrook",
+   "name": "St. Vincent de Paul",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Springbrook",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-gabriel-elma",
+   "name": "St. Gabriel",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Elma",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sat. 6 p.m.",
+    "Sun. 6 a.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m.",
+    "Sun. 12 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "queen-of-heaven-west-seneca",
+   "name": "Queen of Heaven",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "West Seneca",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 9:30 a.m.",
+    "Sun. 11:15 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-xxiii-west-seneca",
+   "name": "St. John XXIII",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "West Seneca",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:30 a.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "queen-of-martyrs-cheektowaga",
+   "name": "Queen of Martyrs",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "sacred-heart-of-jesus-bowmansville",
+   "name": "Sacred Heart of Jesus",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Bowmansville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "all-saints-lockport",
+   "name": "All Saints",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lockport",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "immaculate-conception-ransomville",
+   "name": "Immaculate Conception",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Ransomville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-holley",
+   "name": "St. Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Holley",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-medina",
+   "name": "St. Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Medina",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:30 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-patrick-barker",
+   "name": "St. Patrick",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Barker",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "resurrection-st-joseph-batavia",
+   "name": "Resurrection / St. Joseph",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Batavia",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 7:30 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-the-baptist-alden",
+   "name": "St. John the Baptist",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Alden",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun 8 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-michael-warsaw",
+   "name": "St. Michael",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Warsaw",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-swormville",
+   "name": "St. Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Swormville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 7:30 a.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-fatima-shrine-lewiston",
+   "name": "Our Lady of Fatima Shrine",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lewiston",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 12 p.m.",
+    "Sun. 12 p.m.",
+    "Sun. 5 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-teresa-of-avila-akron",
+   "name": "St. Teresa of Avila",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Akron",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-leo-the-great-amherst",
+   "name": "St. Leo the Great",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Amherst",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-the-baptist-kenmore",
+   "name": "St. John the Baptist",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Kenmore",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-christopher-tonawanda",
+   "name": "St. Christopher",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Tonawanda",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 7:30 a.m.",
+    "Sun. 9 a.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-gregory-the-great-williamsville",
+   "name": "St. Gregory the Great",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Williamsville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m.",
+    "Sun. 12 p.m.",
+    "Sun. 12 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-pius-x-getzville",
+   "name": "St. Pius X",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Getzville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-rose-of-lima-buffalo",
+   "name": "St. Rose of Lima",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "ss-columba-brigid-buffalo",
+   "name": "SS. Columba-Brigid",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m. (Spanish)",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-louis-buffalo",
+   "name": "St. Louis",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "resurrection-cheektowaga",
+   "name": "Resurrection",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-hope-buffalo",
+   "name": "Our Lady of Hope",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-bonaventure-allegany",
+   "name": "St. Bonaventure",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Allegany",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-peace-salamanca",
+   "name": "Our Lady of Peace",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Salamanca",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:15 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "immaculate-conception-eden",
+   "name": "Immaculate Conception",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Eden",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-the-baptist-boston",
+   "name": "St. John the Baptist",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Boston",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sat. 6 p.m. (St. Mary’s Oratory)",
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "ss-peter-and-paul-hamburg",
+   "name": "SS. Peter & Paul",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Hamburg",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 7:30 a.m.",
+    "Sun. 9:30 a.m.",
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "blessed-sacrament-tonawanda",
+   "name": "Blessed Sacrament",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Tonawanda",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-francis-of-assisi-athol-springs",
+   "name": "St. Francis of Assisi",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Athol Springs",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:30 a.m.",
+    "Sun. 6 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "most-precious-blood-angola",
+   "name": "Most Precious Blood",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Angola",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sat. 5:30 p.m.",
+    "Sun. 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "infant-of-prague-cheektowaga",
+   "name": "Infant of Prague",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:30 a.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-gualbert-cheektowaga",
+   "name": "St. John Gualbert",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 9 a.m. (Polish)",
+    "Sun. 11:45 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-stanislaus-buffalo",
+   "name": "St. Stanislaus",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 10:15 a.m.",
+    "Sun. 12 p.m. (Polish)",
+    "Sun. 12 p.m. (Polish)",
+    "Sun. 5 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-joseph-university-buffalo",
+   "name": "St. Joseph University",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:30 a.m.",
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-pompeii-lancaster",
+   "name": "Our Lady of Pompeii",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lancaster",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-brendan-on-the-lake-newfane",
+   "name": "St. Brendan on the Lake",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Newfane",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m. (Newfane Nov.-Apr.; Wilson May-Oct.)",
+    "Sun. 8 a.m. (Newfane)",
+    "Sun. 11 a.m. (Wilson Nov.-Apr.; Olcott May-Oct.)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-czestochowa-cheektowaga",
+   "name": "Our Lady of Czestochowa",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-andrew-sloan",
+   "name": "St. Andrew",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Sloan",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-aloysius-springville",
+   "name": "St. Aloysius",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Springville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 8:00 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-help-of-christians-cheektowaga",
+   "name": "Our Lady Help of Christians",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m. (church)",
+    "Sun. 7 a.m. (chapel)",
+    "Sun. 10 a.m. (church)",
+    "Sun. 11:30 a.m. (Vietnamese)",
+    "Sun. 12:30 p.m. (Latin in the Chapel)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-neumann-sheldon",
+   "name": "St. John Neumann",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Sheldon",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-vincent-de-paul-niagara-falls",
+   "name": "St. Vincent de Paul",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Niagara Falls",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m. (Prince of Peace)",
+    "Sun. 9 a.m. (St. Leo)",
+    "Sun. 11:30 a.m. (Prince of Peace)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-charity-buffalo",
+   "name": "Our Lady of Charity",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:00 p.m. (St. Ambrose & St. Martin of Tours)",
+    "Sun. 9:30 a.m. (St. Ambrose)",
+    "Sun. 11:30 a.m. (Holy Family)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-family-of-jesus-mary-and-joseph-niagara-falls",
+   "name": "Holy Family of Jesus, Mary and Joseph",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Niagara Falls",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4 p.m. (St. Joseph)",
+    "Sun. 8:30 a.m. (St. Joseph)",
+    "Sun. 10:30 a.m. ( St. Joseph)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-mt-carmel-silver-creek",
+   "name": "Our Lady of Mt. Carmel",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Silver Creek",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "nativity-of-the-blessed-virgin-mary-williamsville",
+   "name": "Nativity of the Blessed Virgin Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Williamsville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun 8 a.m.",
+    "Sun 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "immaculate-conception-east-aurora",
+   "name": "Immaculate Conception",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "East Aurora",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 9:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-amelia-tonawanda",
+   "name": "St. Amelia",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Tonawanda",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "nativity-of-the-blessed-virgin-mary-harris-hill",
+   "name": "Nativity of the Blessed Virgin Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Harris Hill",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "fourteen-holy-helpers-west-seneca",
+   "name": "Fourteen Holy Helpers",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "West Seneca",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11 a.m. (ASL)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-philip-the-apostle-cheektowaga",
+   "name": "St. Philip the Apostle",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-mercy-leroy",
+   "name": "Our Lady of Mercy",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "LeRoy",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 7:30 a.m.",
+    "Sun. 9:30 a.m.",
+    "Sun. 5:30 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "christ-the-king-snyder",
+   "name": "Christ the King",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Snyder",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "ss-peter-and-paul-williamsville",
+   "name": "SS. Peter & Paul",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Williamsville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 9:30 a.m.",
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-stephen-grand-island",
+   "name": "St. Stephen",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Grand Island",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "blessed-sacrament-buffalo",
+   "name": "Blessed Sacrament",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "good-shepherd-pendleton",
+   "name": "Good Shepherd",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Pendleton",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "assumption-buffalo",
+   "name": "Assumption",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 10 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-peace-clarence",
+   "name": "Our Lady of Peace",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Clarence",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "blessed-trinity-buffalo",
+   "name": "Blessed Trinity",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-perpetual-help-buffalo",
+   "name": "Our Lady of Perpetual Help",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 10:00 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-joseph-cathedral-buffalo",
+   "name": "St. Joseph Cathedral",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-victory-basilica-lackawanna",
+   "name": "Our Lady of Victory Basilica",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lackawanna",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m.",
+    "Sun. 12 p.m.",
+    "Sun. 12 p.m.",
+    "Sun. 4:30 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-the-sacred-heart-orchard-park",
+   "name": "Our Lady of the Sacred Heart",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Orchard Park",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-joseph-gowanda",
+   "name": "St. Joseph",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Gowanda",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "nativity-of-our-lord-orchard-park",
+   "name": "Nativity of Our Lord",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Orchard Park",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 9:30 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-paul-ii-lake-view",
+   "name": "St. John Paul II",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lake View",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-teresa-buffalo",
+   "name": "St. Teresa",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-timothy-tonawanda",
+   "name": "St. Timothy",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Tonawanda",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 7:30 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-peter-lewiston",
+   "name": "St. Peter",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lewiston",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 4:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-brigid-bergen",
+   "name": "St. Brigid",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Bergen",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-martha-depew",
+   "name": "St. Martha",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Depew",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-benedict-eggertsville",
+   "name": "St. Benedict",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Eggertsville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-aloysius-gonzaga-cheektowaga",
+   "name": "St. Aloysius Gonzaga",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m.",
+    "Sun. 10 a.m.",
+    "Sun. 5 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "immaculate-conception-wellsville",
+   "name": "Immaculate Conception",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Wellsville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m.",
+    "Sun. 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-paul-kenmore",
+   "name": "St. Paul",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Kenmore",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m.",
+    "Sun. 10 a.m.",
+    "Sun. 5 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-czestochowa-north-tonawanda",
+   "name": "Our Lady of Czestochowa",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "North Tonawanda",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m.",
+    "Sun. 9 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-bistrica-lackawanna",
+   "name": "Our Lady of Bistrica",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lackawanna",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m.",
+    "Sun. 10 a.m. (Croatian)",
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-bernadette-orchard-park",
+   "name": "St. Bernadette",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Orchard Park",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5 p.m.",
+    "Sun. 8:30 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-the-evangelist-olean",
+   "name": "St. John the Evangelist",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Olean",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-patrick-randolph",
+   "name": "St. Patrick",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Randolph",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-of-the-cataract-niagara-falls",
+   "name": "St. Mary of the Cataract",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Niagara Falls",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 7:15 a.m.",
+    "Sun. 9:30 a.m.",
+    "Sun. 11:00 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-the-baptist-lockport",
+   "name": "St. John the Baptist",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lockport",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 7 a.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-family-albion",
+   "name": "Holy Family",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Albion",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 8 a.m.",
+    "Sun. 10:30 a.m.",
+    "Sun. 12:30 p.m. (Spanish)",
+    "Sun. 12:30 p.m. (Spanish)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-of-the-lake-barker",
+   "name": "Our Lady of the Lake",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Barker",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-michael-buffalo",
+   "name": "St. Michael",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 12 p.m.",
+    "Sun. 12 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-name-of-mary-ellicottville",
+   "name": "Holy Name of Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Ellicottville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 9:45 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-de-lasalle-niagara-falls",
+   "name": "St. John de LaSalle",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Niagara Falls",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "epiphany-of-our-lord-langford",
+   "name": "Epiphany of Our Lord",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Langford",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-of-the-lake-hamburg",
+   "name": "St. Mary of the Lake",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Hamburg",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-josaphat-cheektowaga",
+   "name": "St. Josaphat",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Cheektowaga",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 5:30 p.m. (1st, 3rd, 5th Sat. of month)",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-cross-buffalo",
+   "name": "Holy Cross",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 6:30 p.m. (Last Saturday of the Month) (French)",
+    "Sun. 10 a.m.",
+    "Sun. 12:30 p.m. (Spanish)",
+    "Sun. 12:30 p.m. (Spanish)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-of-the-assumption-lancaster",
+   "name": "St. Mary of the Assumption",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lancaster",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 7 p.m.",
+    "Sun. 12 p.m.",
+    "Sun. 12 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-east-arcade",
+   "name": "St. Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "East Arcade",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/saturday-afternoon-mass-times/",
+   "times": [
+    "Sat. 7 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/saturday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-anthony-of-padua-buffalo",
+   "name": "St. Anthony of Padua",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 7:15 a.m. (Latin)",
+    "Sun. 9:15 a.m. (Latin)",
+    "Sun. 11:15 a.m. (Italian/English)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "church-of-the-annunciation-elma",
+   "name": "Church of the Annunciation",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Elma",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 8 a.m.",
+    "Sun. 11 a.m.",
+    "Sun. 5 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-neumann-st-vincent-attica",
+   "name": "St. John Neumann / St. Vincent",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Attica",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 8 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-michael-st-mary-pavilion",
+   "name": "St. Michael / St. Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Pavilion",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mark-buffalo",
+   "name": "St. Mark",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 8 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-martin-de-porres-buffalo",
+   "name": "St. Martin de Porres",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 8 a.m.",
+    "Sun. 9:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "basilica-of-st-mary-of-the-angels-olean",
+   "name": "Basilica of St. Mary of the Angels",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Olean",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 8 a.m.",
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-of-lourdes-mayville",
+   "name": "St. Mary of Lourdes",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Mayville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 8:45 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-apostles-st-john-jamestown",
+   "name": "Holy Apostles / St. John",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Jamestown",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-arcade",
+   "name": "St. Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Arcade",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-neumann-st-joseph-varysburg",
+   "name": "St. John Neumann / St. Joseph",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Varysburg",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "resurrection-st-cecilia-oakfield",
+   "name": "Resurrection / St. Cecilia",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Oakfield",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-martin-of-tours-buffalo",
+   "name": "St. Martin of Tours",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9 a.m.",
+    "Sun. 6:30 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  },
+  {
+   "id": "corpus-christi-buffalo",
+   "name": "Corpus Christi",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9:15 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-john-olean",
+   "name": "St. John",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Olean",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-family-sanborn-tuscarora-nation",
+   "name": "Holy Family",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Sanborn/Tuscarora Nation",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9:30 a.m. (June 1 – August 31)",
+    "Sun. 10 a.m. (Sept. 1 – May 31)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-margaret-buffalo",
+   "name": "St. Margaret",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-of-the-assumption-our-lady-of-pompeii-campus-lancaster",
+   "name": "St. Mary of the Assumption/Our Lady of Pompeii Campus",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lancaster",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9:30 a.m. *NEW*",
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "our-lady-the-lake-barker",
+   "name": "Our Lady the Lake",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Barker",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-judes-chapel-alfred",
+   "name": "St. Jude’s Chapel",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Alfred",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 9:45 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-patrick-belfast",
+   "name": "St. Patrick",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Belfast",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-elizabeth-ann-seton-dunkirk",
+   "name": "St. Elizabeth Ann Seton",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Dunkirk",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 10 a.m.",
+    "Sun. 11:30 a.m. (Spanish)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-mary-of-the-assumption-hill-campus-lancaster",
+   "name": "St. Mary of the Assumption/Hill Campus",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lancaster",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "queen-of-angels-lackawanna",
+   "name": "Queen of Angels",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Lackawanna",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 10 a.m.",
+    "Sun. 11:30 a.m. (Spanish)"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-casimir-buffalo",
+   "name": "St. Casimir",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 10 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-george-west-falls",
+   "name": "St. George",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "West Falls",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-katherine-drexel-buffalo",
+   "name": "St. Katherine Drexel",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 10:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-apostles-ss-peter-and-paul-jamestown",
+   "name": "Holy Apostles / SS. Peter and Paul",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Jamestown",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "holy-spirit-buffalo",
+   "name": "Holy Spirit",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-joseph-holland",
+   "name": "St. Joseph",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Holland",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "resurrection-holy-name-of-mary-east-pembroke",
+   "name": "Resurrection / Holy Name of Mary",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "East Pembroke",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun 11 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-dominic-st-james-major-westfield",
+   "name": "St. Dominic / St. James Major",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Westfield",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 11:15 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "christ-our-hope-st-matthias-clymer-french-creek",
+   "name": "Christ Our Hope / St. Matthias",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Clymer/French Creek",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 11:15 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-patrick-fillmore",
+   "name": "St. Patrick",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Fillmore",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-philomena-franklinville",
+   "name": "St. Philomena",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Franklinville",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-bernard-youngstown",
+   "name": "St. Bernard",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Youngstown",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 11:30 a.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "ascension-batavia",
+   "name": "Ascension",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Batavia",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-morning-mass-times/",
+   "times": [
+    "Sun. 12 p.m."
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-morning-mass-times/"
+   ]
+  },
+  {
+   "id": "st-joseph-university-parish-buffalo",
+   "name": "St. Joseph University Parish",
+   "group": "",
+   "kind": "",
+   "line1": "",
+   "city": "Buffalo",
+   "state": "NY",
+   "postal_code": "",
+   "latitude": null,
+   "longitude": null,
+   "website": "",
+   "url": "https://www.buffalodiocese.org/sunday-afternoon-mass-times/",
+   "times": [
+    "Sun. 7:00 p.m. ( SCHOOL YEAR ONLY )"
+   ],
+   "pages": [
+    "https://www.buffalodiocese.org/sunday-afternoon-mass-times/"
+   ]
+  }
+ ]
+}

@@ -37,7 +37,8 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 TIMEOUT = 30
-MAX_BYTES = 30_000_000
+# LPi family bulletins run past 180 MB; a truncated PDF does not parse at all.
+MAX_BYTES = 250_000_000
 
 PO_CONTAINER_BASE = "https://container.parishesonline.com/bulletins"
 
@@ -127,7 +128,10 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
         return {"url": url, "error": resp.error or f"HTTP {resp.status}"}
     if not _is_pdf(resp):
         return {"url": url, "error": f"not a PDF ({resp.content_type or 'unknown type'})"}
-    texts = pdf_pages(resp.body)
+    try:
+        texts = pdf_pages(resp.body)
+    except Exception as e:  # noqa: BLE001 - a broken issue should not stop a container walk
+        return {"url": url, "error": f"could not read the PDF: {e}"}
     readable = [(n, t) for n, t in enumerate(texts, 1) if t]
     out: dict[str, Any] = {
         "url": url, "page_count": len(texts), "readable_pages": len(readable),
@@ -197,6 +201,8 @@ def bulletin_links(page: str, base: str, limit: int = 15) -> list[str]:
 # version of this list, and were reported as redirects "into a family site",
 # which is the label that means "collapse this row". Multi-word where the one
 # word has an innocent parish use (time slots, lotteries, direct deposit).
+# Matched as whole words: Wix pages carry config keys like `forExpressButtons`,
+# and "judicial" is common on parish sites.
 SPAM_TERMS = [
     "casino", "roulette", "betting", "sportsbook", "viagra", "cialis", "escort", "porn",
     "payday", "forex", "judi", "togel", "gacor", "maxwin", "slot online", "situs slot",
@@ -218,6 +224,11 @@ VERDICT_NOTES = {
     "NO-PARISH-WORDS": "no parish vocabulary in the HTML: usually a JavaScript-rendered site",
     "ok": "",
 }
+
+
+def spam_terms(page: str) -> list[str]:
+    low = page.lower()
+    return [t for t in SPAM_TERMS if re.search(rf"\b{re.escape(t)}\b", low)]
 
 
 def _host(url: str) -> str:
@@ -264,7 +275,7 @@ def probe_url(url: str) -> dict[str, Any]:
     title = re.search(r"<title[^>]*>(.*?)</title>", page, flags=re.S | re.I)
     if title:
         out["title"] = " ".join(html.unescape(title.group(1)).split())[:160]
-    spam = [t for t in SPAM_TERMS if t in low]
+    spam = spam_terms(low)
     words = [w for w in PARISH_WORDS if w in low]
     out["publications"] = find_publications(page)
     out["bulletin_links"] = bulletin_links(page, resp.final_url or url)
