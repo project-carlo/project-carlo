@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# The weekly pipeline inside the container:
+# The weekly pipeline, on the GitHub runner and in the local image:
 #   get the published database -> run -> upload the result as a candidate.
 # Publishing the candidate is a separate step (the workflow decides, based on
 # the run's status). Exit code is the run's: 0 passed, 10 held, other = failed.

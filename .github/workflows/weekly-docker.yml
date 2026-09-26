@@ -1,9 +1,14 @@
 name: Weekly Data Refresh
 
-# Pulls the published database from R2, runs the pipeline in the Docker image,
+# Pulls the published database from R2, runs the pipeline on the GitHub runner,
 # uploads the result as a candidate run, and publishes it only if every
 # publishing check passed. A held run opens (or updates) an issue with its
 # change report; publishing it anyway is the "Publish Data Run" workflow.
+#
+# The runner installs the same tools the local image has (uv, Playwright
+# Chromium, xvfb, Ghostscript). Building that image here meant exporting
+# Chromium into the daemon on every Sunday run, including layers the pipeline
+# never uses.
 
 on:
   schedule:
@@ -80,18 +85,28 @@ jobs:
             echo "Refreshing parishes: \`${PARISHES:-all}\`; dioceses: \`${DIOCESES:-all}\`" >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v4
-
-      - name: Build weekly image
-        uses: docker/build-push-action@v7
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10.2.0
         with:
-          context: .
-          file: Dockerfile
-          load: true
-          tags: project-carlo-weekly:latest
-          cache-from: type=gha,scope=weekly-job
-          cache-to: type=gha,mode=max,scope=weekly-job
+          enable-cache: true
+
+      - name: Install Python dependencies
+        run: uv sync --frozen --no-dev
+
+      - name: Install system packages
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends xvfb xauth ghostscript
+
+      # A cache-service error should not block the run. The next step downloads
+      # Chromium when the cache misses or this restore fails.
+      - name: Cache Playwright browsers
+        continue-on-error: true
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ hashFiles('uv.lock') }}
+
+      - name: Install Playwright Chromium
+        run: uv run --no-dev playwright install --with-deps chromium
 
       - name: Run weekly pipeline
         id: pipeline
@@ -102,6 +117,8 @@ jobs:
           RUN_ID: ${{ steps.run.outputs.id }}
           PARISHES: ${{ github.event_name == 'workflow_dispatch' && inputs.parishes || '' }}
           DIOCESES: ${{ github.event_name == 'workflow_dispatch' && inputs.dioceses || '' }}
+          GIT_SHA: ${{ github.sha }}
+          RUN_TRIGGER: ${{ github.event_name }}
           # Only the default branch writes to R2. A run on another branch still
           # reads the published data, but its PDFs, cached extractions and
           # candidate stay inside the job, so trying out a branch can never
@@ -109,19 +126,14 @@ jobs:
           CARLO_REMOTE_WRITE: ${{ github.ref_name == github.event.repository.default_branch && '1' || '' }}
         run: |
           set +e
-          docker run --name project-carlo-weekly \
-            -e GEMINI_API_KEY \
-            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
-            -e CARLO_REMOTE_WRITE \
-            -e RUN_ID -e GIT_SHA="$GITHUB_SHA" -e RUN_TRIGGER="$GITHUB_EVENT_NAME" \
-            -e PARISHES -e DIOCESES \
-            project-carlo-weekly:latest
+          # The runner injects GITHUB_TOKEN and the healthcheck URL. The old
+          # container only received the pipeline's own credentials.
+          env -u GITHUB_TOKEN -u HEALTHCHECK_URL bash docker/weekly-run.sh
           code=$?
           set -e
 
           mkdir -p run-out
-          docker cp "project-carlo-weekly:/workspace/data/out/${RUN_ID}/." run-out/ || true
-          docker rm project-carlo-weekly >/dev/null
+          cp -a "data/out/${RUN_ID}/." run-out/ || true
 
           # 10 is `weekly`'s "held" code; anything else non-zero is a failure.
           case "$code" in
@@ -161,12 +173,8 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
           RUN_ID: ${{ steps.run.outputs.id }}
-        run: |
-          docker run --rm \
-            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
-            -e CARLO_REMOTE_WRITE=1 \
-            project-carlo-weekly:latest \
-            uv run --no-sync python -m pdf_extract data promote --run-id "$RUN_ID"
+          CARLO_REMOTE_WRITE: "1"
+        run: uv run --no-sync python -m pdf_extract data promote --run-id "$RUN_ID"
 
       - name: Deploy the published data
         if: steps.publish.outcome == 'success'
@@ -198,12 +206,8 @@ jobs:
         env:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
-        run: |
-          docker run --rm \
-            -e R2_ACCOUNT_ID -e R2_BUCKET -e R2_ENDPOINT_URL -e R2_ACCESS_KEY_ID -e R2_SECRET_ACCESS_KEY \
-            -e CARLO_REMOTE_WRITE=1 \
-            project-carlo-weekly:latest \
-            uv run --no-sync python -m pdf_extract data prune --apply
+          CARLO_REMOTE_WRITE: "1"
+        run: uv run --no-sync python -m pdf_extract data prune --apply
 
       - name: Report a failed prune
         if: steps.prune.outcome == 'failure'
