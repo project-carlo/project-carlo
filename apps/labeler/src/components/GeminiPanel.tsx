@@ -1,7 +1,8 @@
 import { useState, type KeyboardEvent } from "react";
 import type { BulletinDetail, Church, EventType, GeminiRow } from "../types";
-import { formatDate } from "../lib/dates";
+import { dateForWeekday, formatDate, shortDay } from "../lib/dates";
 import { describeSeason, describeWeeks } from "../lib/pattern";
+import { weekdayOf } from "../lib/rows";
 import { formatTime } from "../lib/time";
 
 interface Props {
@@ -9,9 +10,15 @@ interface Props {
   churches: Church[];
   handled: Set<string>;
   dismissed: Set<string>;
-  onAccept: (ids: string[]) => void;
+  onAccept: (ids: string[], select?: boolean) => void;
+  /** Accept a weekly row as that weekday of the bulletin's week. False when it could not be placed. */
+  onAcceptDated: (id: string) => boolean;
+  /** Accept as weekly on that weekday, first week of the month, with the note cleared. */
+  onAcceptFirst: (id: string) => boolean;
   onDismiss: (id: string, dismissed: boolean) => void;
+  onEdit: (id: string) => void;
   onShowPage: (page: number) => void;
+  bulletinDate: string | null;
 }
 
 const TYPE_LABEL: Record<EventType, string> = {
@@ -62,7 +69,19 @@ function describe(g: GeminiRow): string {
   return `${when} ${start}${end}`;
 }
 
-export function GeminiPanel({ gemini, churches, handled, dismissed, onAccept, onDismiss, onShowPage }: Props) {
+export function GeminiPanel({
+  gemini,
+  churches,
+  handled,
+  dismissed,
+  onAccept,
+  onAcceptDated,
+  onAcceptFirst,
+  onDismiss,
+  onEdit,
+  onShowPage,
+  bulletinDate,
+}: Props) {
   const [open, setOpen] = useState(true);
   const rows = gemini.events;
   const pending = rows.filter((g) => !handled.has(g.id) && !dismissed.has(g.id));
@@ -86,27 +105,62 @@ export function GeminiPanel({ gemini, churches, handled, dismissed, onAccept, on
   const onRowKey = (e: KeyboardEvent<HTMLDivElement>, g: GeminiRow) => {
     // Ctrl+Enter and the other page shortcuts pass through.
     if (e.ctrlKey || e.metaKey || e.altKey) return;
-    const move = (delta: number) => {
-      const items = [...document.querySelectorAll<HTMLElement>("[data-gemini-row]")];
-      const i = items.indexOf(e.currentTarget);
-      items[Math.min(items.length - 1, Math.max(0, i + delta))]?.focus();
+    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    const items = () => [...document.querySelectorAll<HTMLElement>("[data-gemini-row]")];
+    // Accepting re-renders the list and can drop focus, so land again after paint.
+    const land = (el: HTMLElement | undefined) => {
+      if (!el) return;
+      const page = Number(el.dataset.page);
+      if (page) onShowPage(page);
+      const id = el.dataset.geminiRow ?? "";
+      const focusIt = () => document.querySelector<HTMLElement>(`[data-gemini-row="${CSS.escape(id)}"]`)?.focus();
+      focusIt();
+      requestAnimationFrame(focusIt);
     };
-    if (e.key === "Enter" || e.key === " " || e.key === "y") {
+    const neighbor = (delta: number) => {
+      const rows = items();
+      return rows[rows.indexOf(e.currentTarget) + delta];
+    };
+    // The next row still waiting for a decision, skipping ones already accepted or dismissed.
+    const nextCandidate = () => {
+      const rows = items();
+      const start = rows.indexOf(e.currentTarget);
+      return rows.slice(start + 1).find((el) => el.dataset.pending === "true");
+    };
+    if (key === "e") {
       e.preventDefault();
       e.stopPropagation();
-      if (!handled.has(g.id)) onAccept([g.id]);
-      move(1);
-    } else if (e.key === "Delete" || e.key === "Backspace" || e.key === "n") {
+      onEdit(g.id);
+      return;
+    }
+    if (key === "d") {
+      e.preventDefault();
+      e.stopPropagation();
+      if (onAcceptDated(g.id)) land(nextCandidate() ?? e.currentTarget);
+      return;
+    }
+    if (key === "f") {
+      e.preventDefault();
+      e.stopPropagation();
+      if (onAcceptFirst(g.id)) land(nextCandidate() ?? e.currentTarget);
+      return;
+    }
+    if (e.key === "Enter" || e.key === " " || key === "y") {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!handled.has(g.id)) onAccept([g.id], false);
+      land(nextCandidate() ?? e.currentTarget);
+    } else if (e.key === "Delete" || e.key === "Backspace" || key === "n") {
       e.preventDefault();
       e.stopPropagation();
       onDismiss(g.id, !dismissed.has(g.id));
-      move(1);
-    } else if (e.key === "ArrowDown" || e.key === "j") {
+      land(neighbor(1) ?? e.currentTarget);
+    } else if (e.key === "ArrowDown" || key === "j") {
       e.preventDefault();
-      move(1);
-    } else if (e.key === "ArrowUp" || e.key === "k") {
+      land(neighbor(1));
+    } else if (e.key === "ArrowUp" || key === "k") {
       e.preventDefault();
-      move(-1);
+      land(neighbor(-1));
     }
   };
 
@@ -150,10 +204,22 @@ export function GeminiPanel({ gemini, churches, handled, dismissed, onAccept, on
               {group.rows.map((g) => {
                 const isHandled = handled.has(g.id);
                 const isDismissed = dismissed.has(g.id);
+                const weekDate =
+                  g.event_kind === "weekly" && g.day_of_week && bulletinDate
+                    ? dateForWeekday(bulletinDate, g.day_of_week)
+                    : null;
+                const firstDay = weekdayOf(g);
+                const alreadyFirst =
+                  g.event_kind === "weekly" &&
+                  g.weeks_of_month.length === 1 &&
+                  g.weeks_of_month[0] === "first" &&
+                  !g.note?.trim();
                 return (
                   <div
                     key={g.id}
                     data-gemini-row={g.id}
+                    data-page={g.page_number ?? undefined}
+                    data-pending={!isHandled && !isDismissed ? "true" : undefined}
                     tabIndex={0}
                     onKeyDown={(e) => onRowKey(e, g)}
                     onClick={() => g.page_number && onShowPage(g.page_number)}
@@ -176,12 +242,46 @@ export function GeminiPanel({ gemini, churches, handled, dismissed, onAccept, on
                     )}
                     <span className="ml-auto flex shrink-0 items-center gap-1">
                       {g.page_number && <span className="text-xs text-slate-400">p.{g.page_number}</span>}
+                      {firstDay && !alreadyFirst && !isHandled && !isDismissed && (
+                        <button
+                          type="button"
+                          tabIndex={-1}
+                          className="rounded border border-sky-300 bg-white px-1.5 text-xs font-semibold text-sky-800 hover:bg-sky-50"
+                          title={`Accept as the first ${firstDay} of the month and clear the note (f)`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onAcceptFirst(g.id);
+                          }}
+                        >
+                          1st {shortDay(firstDay)}
+                        </button>
+                      )}
+                      {weekDate && !isHandled && !isDismissed && (
+                        <button
+                          type="button"
+                          tabIndex={-1}
+                          className="rounded border border-violet-300 bg-white px-1.5 text-xs font-semibold text-violet-800 hover:bg-violet-50"
+                          title={`Accept as ${formatDate(weekDate)} instead of every ${g.day_of_week} (d)`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onAcceptDated(g.id);
+                          }}
+                        >
+                          {formatDate(weekDate)}
+                        </button>
+                      )}
                       {!isHandled && (
                         <button
                           type="button"
                           tabIndex={-1}
                           className="rounded bg-violet-600 px-1.5 text-xs font-semibold text-white hover:bg-violet-700"
-                          title="Accept into the ground truth (Enter)"
+                          title={[
+                            "Accept into the ground truth (Enter).",
+                            weekDate ? `d accepts it as ${formatDate(weekDate)}.` : "e edits this row.",
+                            firstDay && !alreadyFirst ? `f accepts it as the first ${firstDay} of the month.` : "",
+                          ]
+                            .filter(Boolean)
+                            .join(" ")}
                           onClick={(e) => {
                             e.stopPropagation();
                             onAccept([g.id]);

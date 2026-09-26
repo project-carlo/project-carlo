@@ -36,6 +36,8 @@ interface Props {
   onLeave: (id: string) => void;
   onDelete: (id: string) => void;
   onDuplicate: (id: string) => void;
+  /** Weekly row becomes that weekday of the bulletin's week. */
+  onMakeDated: (id: string) => void;
 }
 
 const TYPES: { value: EventType; key: string; label: string }[] = [
@@ -56,7 +58,7 @@ function Seg<T extends string>({
   onChange,
 }: {
   value: T;
-  options: { value: T; key: string; label: string }[];
+  options: { value: T; key: string; label: string; title?: string }[];
   onChange: (v: T) => void;
 }) {
   return (
@@ -66,7 +68,7 @@ function Seg<T extends string>({
           key={o.value}
           type="button"
           tabIndex={-1}
-          title={`${o.label} (${o.key.toLowerCase()})`}
+          title={o.title ?? `${o.label} (${o.key.toLowerCase()})`}
           onClick={() => onChange(o.value)}
           className={`px-1 py-0.5 text-xs font-semibold ${
             value === o.value ? "bg-sky-600 text-white" : "bg-white text-slate-500 hover:bg-slate-100"
@@ -148,6 +150,7 @@ export const RowEditor = memo(function RowEditor({
   onLeave,
   onDelete,
   onDuplicate,
+  onMakeDated,
 }: Props) {
   const missing = new Set(rowProblems(row));
   const weekly = row.event_kind === "weekly";
@@ -207,9 +210,14 @@ export const RowEditor = memo(function RowEditor({
           value={row.event_kind}
           options={[
             { value: "weekly", key: "W", label: "Weekly" },
-            { value: "specific_date", key: "D", label: "Dated" },
+            {
+              value: "specific_date",
+              key: "D",
+              label: "Dated",
+              title: "Dated (d): place a weekly row on that weekday of the bulletin's week",
+            },
           ]}
-          onChange={(v) => patch({ event_kind: v })}
+          onChange={(v) => (v === "specific_date" ? onMakeDated(row.id) : patch({ event_kind: v }))}
         />
         {weekly ? (
           <CommitInput

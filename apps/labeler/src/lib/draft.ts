@@ -15,6 +15,7 @@ export const NO_FLAGS: Flags = {
   unreadable: false,
   no_schedule: false,
   church_missing: false,
+  conflicting_info: false,
 };
 
 export function draftFromLabel(label: Label | null): Draft {

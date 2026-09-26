@@ -23,7 +23,7 @@ export type Origin = "human" | "gemini" | "gemini-edited";
 
 export type Status = "in_progress" | "done" | "skipped";
 
-export const FLAG_NAMES = ["wrong_bulletin", "unreadable", "no_schedule", "church_missing"] as const;
+export const FLAG_NAMES = ["wrong_bulletin", "unreadable", "no_schedule", "church_missing", "conflicting_info"] as const;
 export type FlagName = (typeof FLAG_NAMES)[number];
 export type Flags = Record<FlagName, boolean>;
 

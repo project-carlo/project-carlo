@@ -10,8 +10,11 @@ import { buildLabel, draftFromLabel, draftKey, incompleteMessage, type Draft } f
 import { initHistory, pushHistory, redo, undo, type History } from "../lib/history";
 import { bulletinHref, navigate } from "../lib/route";
 import {
+  asDated,
+  asFirstOfMonth,
   blankRow,
   duplicateRow,
+  isFirstOfMonth,
   editRow,
   expandAllPending,
   expandPending,
@@ -70,6 +73,7 @@ const FLAG_LABELS: Record<FlagName, string> = {
   unreadable: "Unreadable",
   no_schedule: "No schedule",
   church_missing: "Church missing",
+  conflicting_info: "Conflicting info",
 };
 
 type SaveState = { state: "new" | "saved" | "pending" | "saving" } | { state: "error"; message: string };
@@ -215,11 +219,13 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
   }, [selectedId, churchSlugs, viewedPage, updateRows]);
 
   const accept = useCallback(
-    (ids: string[]) => {
+    (ids: string[], select = true) => {
       const added = gemini.filter((g) => ids.includes(g.id)).map(fromGemini);
       if (!added.length) return;
       updateRows((rs) => [...rs, ...added]);
-      if (added.length === 1) setSelectedId(added[0].id);
+      // Keyboard accept leaves the Gemini list focused. Selecting the new row
+      // would open it for editing and pull focus out of the list.
+      if (select && added.length === 1) setSelectedId(added[0].id);
     },
     [gemini, updateRows],
   );
@@ -230,6 +236,97 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
       dismissed: on ? [...new Set([...m.dismissed, id])] : m.dismissed.filter((x) => x !== id),
     }));
   }, []);
+
+  const makeDated = useCallback(
+    (id: string) => {
+      const row = draftRef.current.rows.find((r) => r.id === id);
+      if (!row || row.event_kind === "specific_date") return;
+      const weekday = row.day_of_week ?? row.pending_split?.days?.[0];
+      if (weekday && !refDate) {
+        setMessage(`Set the bulletin date to place this ${weekday} on a date.`);
+      }
+      transformRow(id, (r) => asDated(r, refDate));
+    },
+    [refDate, transformRow],
+  );
+
+  const makeFirst = useCallback(
+    (id: string) => {
+      const row = draftRef.current.rows.find((r) => r.id === id);
+      if (!row || isFirstOfMonth(row)) return;
+      const next = asFirstOfMonth(row);
+      if (next === row) {
+        setMessage("Pick a single weekday or date to mark this as the first of the month.");
+        return;
+      }
+      transformRow(id, () => next);
+    },
+    [transformRow],
+  );
+
+  const acceptDated = useCallback(
+    (id: string): boolean => {
+      const source = gemini.find((g) => g.id === id);
+      if (!source) return false;
+      const existing = draftRef.current.rows.find((r) => r.gemini_id === id);
+      const preview = asDated(existing ?? fromGemini(source), refDate);
+      const placed = !!(preview.date || preview.pending_split?.dates?.length);
+      if ((source.event_kind ?? "weekly") === "weekly" && source.day_of_week && !placed) {
+        setMessage(`Set the bulletin date to place this ${source.day_of_week} on a date.`);
+        return false;
+      }
+      if (existing) {
+        if (existing.event_kind === "weekly") transformRow(existing.id, (r) => asDated(r, refDate));
+      } else {
+        const created = preview;
+        updateRows((rs) => [...rs, created]);
+      }
+      if (dismissed.has(id)) setDismissed(id, false);
+      return true;
+    },
+    [gemini, refDate, transformRow, updateRows, dismissed, setDismissed],
+  );
+
+  const acceptFirst = useCallback(
+    (id: string): boolean => {
+      const source = gemini.find((g) => g.id === id);
+      if (!source) return false;
+      const existing = draftRef.current.rows.find((r) => r.gemini_id === id);
+      const base = existing ?? fromGemini(source);
+      if (!isFirstOfMonth(base)) {
+        const next = asFirstOfMonth(base);
+        if (next === base) {
+          setMessage("Pick a single weekday or date to mark this as the first of the month.");
+          return false;
+        }
+        if (existing) transformRow(existing.id, () => next);
+        else updateRows((rs) => [...rs, next]);
+      } else if (!existing) {
+        updateRows((rs) => [...rs, base]);
+      }
+      if (dismissed.has(id)) setDismissed(id, false);
+      return true;
+    },
+    [gemini, transformRow, updateRows, dismissed, setDismissed],
+  );
+
+  const editGemini = useCallback(
+    (id: string) => {
+      const source = gemini.find((g) => g.id === id);
+      if (!source) return;
+      let row = draftRef.current.rows.find((r) => r.gemini_id === id);
+      if (!row) {
+        row = fromGemini(source);
+        const created = row;
+        updateRows((rs) => [...rs, created]);
+      }
+      setSelectedId(row.id);
+      const missingDay = row.event_kind === "weekly" ? !row.day_of_week : !row.date;
+      setFocus({ rowId: row.id, field: missingDay ? "day" : "start" });
+      if (row.page_number) showPage(row.page_number);
+    },
+    [gemini, showPage, updateRows],
+  );
 
   useEffect(() => {
     const accepted = [...new Set([...restoredAccepted, ...rows.map((r) => r.gemini_id).filter((x): x is string => !!x)])];
@@ -392,7 +489,10 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
         patchRow(row.id, { event_kind: "weekly" });
         return handled();
       case "d":
-        patchRow(row.id, { event_kind: "specific_date" });
+        makeDated(row.id);
+        return handled();
+      case "f":
+        makeFirst(row.id);
         return handled();
       case "x":
         patchRow(row.id, { cancelled: !row.cancelled });
@@ -580,8 +680,12 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
             handled={handled}
             dismissed={dismissed}
             onAccept={accept}
+            onAcceptDated={acceptDated}
+            onAcceptFirst={acceptFirst}
+            onEdit={editGemini}
             onDismiss={setDismissed}
             onShowPage={showPage}
+            bulletinDate={refDate}
           />
 
           <section className="rounded-lg border border-slate-200 bg-white" data-testid="ground-truth">
@@ -631,6 +735,7 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
                   onLeave={leaveRow}
                   onDelete={deleteRow}
                   onDuplicate={duplicate}
+                  onMakeDated={makeDated}
                 />
               ))}
             </div>

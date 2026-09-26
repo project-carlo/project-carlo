@@ -24,6 +24,12 @@ interface Props {
 
 const ZOOM_STEP = 1.2;
 
+function pdfLoadError(error: unknown): string {
+  const message = error instanceof Error ? error.message : String(error);
+  if (/\b404\b/.test(message)) return "This bulletin PDF is not in storage.";
+  return `Could not load the PDF: ${message}`;
+}
+
 export function PdfViewer({ url, scrollTo, onPageChange }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
@@ -54,7 +60,7 @@ export function PdfViewer({ url, scrollTo, onPageChange }: Props) {
         }
       })
       .catch((e: unknown) => {
-        if (!cancelled) setError(e instanceof Error ? e.message : String(e));
+        if (!cancelled) setError(pdfLoadError(e));
       });
     return () => {
       cancelled = true;
@@ -157,7 +163,7 @@ export function PdfViewer({ url, scrollTo, onPageChange }: Props) {
         data-testid="pdf-scroll"
       >
         {error && (
-          <div className="rounded bg-red-100 p-4 text-red-800">Could not load the PDF: {error}</div>
+          <div className="rounded bg-white p-4 text-slate-800">{error}</div>
         )}
         {!error && !doc && <div className="p-4 text-slate-200">Loading PDF…</div>}
         {doc &&

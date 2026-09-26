@@ -3,7 +3,10 @@ import type { EditorRow, GeminiRow } from "../types";
 import { NO_FLAGS, buildLabel, draftKey, incompleteMessage, type Draft } from "./draft";
 import { initHistory, pushHistory, redo, undo } from "./history";
 import {
+  asDated,
+  asFirstOfMonth,
   blankRow,
+  isFirstOfMonth,
   duplicateRow,
   editRow,
   expandAllPending,
@@ -185,6 +188,111 @@ describe("origins", () => {
     expect(copy.origin).toBe("gemini-edited");
     expect(copy.gemini_id).toBeUndefined();
     expect(duplicateRow(row()).origin).toBe("human");
+  });
+
+  it("places a weekly Gemini row on that weekday of the bulletin's week", () => {
+    const accepted = fromGemini(
+      gemini({
+        day_of_week: "Wednesday",
+        weeks_of_month: ["first"],
+        season: { start_month: 9, start_day: null, end_month: 5, end_day: null },
+      }),
+    );
+    const dated = asDated(accepted, "2026-09-27");
+    expect(dated).toMatchObject({
+      event_kind: "specific_date",
+      date: "2026-09-30",
+      day_of_week: null,
+      weeks_of_month: [],
+      season: null,
+      origin: "gemini-edited",
+      gemini_id: "g0",
+    });
+    expect(asDated(dated, "2026-09-27")).toBe(dated);
+  });
+
+  it("places several pending days on their dates", () => {
+    const pending = setDays(row({ day_of_week: null, start_time: "08:00" }), [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+    ]);
+    const dated = asDated(pending, "2026-09-27");
+    expect(dated.date).toBe("2026-09-28");
+    expect(dated.pending_split?.dates).toEqual([
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+    ]);
+  });
+
+  it("marks a weekly row as the first of that weekday and clears the note", () => {
+    const accepted = fromGemini(
+      gemini({
+        day_of_week: "Friday",
+        note: "First Friday of the month",
+        season: { start_month: 9, start_day: null, end_month: 5, end_day: null },
+      }),
+    );
+    const first = asFirstOfMonth(accepted);
+    expect(first).toMatchObject({
+      event_kind: "weekly",
+      day_of_week: "Friday",
+      weeks_of_month: ["first"],
+      note: null,
+      date: null,
+      origin: "gemini-edited",
+      gemini_id: "g0",
+    });
+    expect(first.season).toEqual(accepted.season);
+    expect(isFirstOfMonth(first)).toBe(true);
+    expect(asFirstOfMonth(first)).toBe(first);
+  });
+
+  it("marks a Saturday the same way", () => {
+    const first = asFirstOfMonth(row({ day_of_week: "Saturday", note: "1st Saturday" }));
+    expect(first).toMatchObject({
+      event_kind: "weekly",
+      day_of_week: "Saturday",
+      weeks_of_month: ["first"],
+      note: null,
+    });
+  });
+
+  it("turns a specific date into the first of that weekday", () => {
+    const dated = row({
+      event_kind: "specific_date",
+      day_of_week: null,
+      date: "2026-10-03",
+      note: "First Saturday",
+      weeks_of_month: [],
+    });
+    expect(asFirstOfMonth(dated)).toMatchObject({
+      event_kind: "weekly",
+      day_of_week: "Saturday",
+      date: null,
+      weeks_of_month: ["first"],
+      note: null,
+    });
+  });
+
+  it("leaves a row alone when it has no single weekday", () => {
+    const empty = row({ day_of_week: null });
+    expect(asFirstOfMonth(empty)).toBe(empty);
+    const several = setDays(row({ day_of_week: null }), ["Friday", "Saturday"]);
+    expect(asFirstOfMonth(several)).toBe(several);
+  });
+
+  it("becomes dated with an empty date when the bulletin date or weekday is missing", () => {
+    expect(asDated(row(), null)).toMatchObject({ event_kind: "specific_date", date: null, day_of_week: null });
+    expect(asDated(row({ day_of_week: null }), "2026-09-27")).toMatchObject({
+      event_kind: "specific_date",
+      date: null,
+    });
   });
 
   it("clears what the other kind carries when switching kind", () => {

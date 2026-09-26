@@ -238,7 +238,7 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
                 raise _ApiError(HTTPStatus.NOT_FOUND, "No such bulletin")
             data = read_bulletin_pdf(parish, content_hash)
             if data is None:
-                raise _ApiError(HTTPStatus.NOT_FOUND, "The bulletin PDF could not be loaded")
+                raise _ApiError(HTTPStatus.NOT_FOUND, "This bulletin PDF is not in storage")
             self._send(HTTPStatus.OK, data, "application/pdf",
                        {"Cache-Control": "private, max-age=86400"})
 

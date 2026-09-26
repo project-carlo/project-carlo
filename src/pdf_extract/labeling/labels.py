@@ -28,7 +28,7 @@ SCHEMA_VERSION = 1
 LABELS_DIR = DATA_DIR / "labels"
 
 STATUSES = ("in_progress", "done", "skipped")
-FLAGS = ("wrong_bulletin", "unreadable", "no_schedule", "church_missing")
+FLAGS = ("wrong_bulletin", "unreadable", "no_schedule", "church_missing", "conflicting_info")
 EVENT_TYPES = ("mass", "confession", "adoration")
 EVENT_KINDS = ("weekly", "specific_date")
 DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")

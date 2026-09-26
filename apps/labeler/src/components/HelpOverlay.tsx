@@ -1,7 +1,7 @@
 const SHORTCUTS: [string, string][] = [
   ["n", "New row (keeps church, type, kind; page = page in view)"],
   ["m / c / a", "Mass / Confession / Adoration"],
-  ["w / d", "Weekly / dated"],
+  ["w / d / f", "Weekly / dated / first of the month. d places a weekly row on that weekday of the bulletin's week. f keeps that weekday (or the weekday of a date), marks the first week, and clears the note"],
   ["x", "Toggle cancelled"],
   ["Enter", "Edit the selected row (first empty field)"],
   ["↑ ↓  or  j k", "Select previous / next row"],
@@ -13,9 +13,12 @@ const SHORTCUTS: [string, string][] = [
 ];
 
 const GEMINI: [string, string][] = [
-  ["Enter / y", "Accept the focused Gemini row"],
+  ["Enter / y", "Accept, then go to the next candidate and its page"],
+  ["d", "Accept a weekly row as that weekday of the bulletin's week"],
+  ["f", "Accept as the first of that weekday each month, and clear the note"],
+  ["e", "Edit this Gemini row"],
   ["Delete / n", "Dismiss (or restore) it"],
-  ["↑ ↓", "Move between Gemini rows"],
+  ["↑ ↓  or  j k", "Move between Gemini rows and show that page"],
 ];
 
 const ENTRY: [string, string][] = [

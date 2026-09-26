@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { describeDays, formatDate, parseDates, parseDays, parseLooseDate } from "./dates";
+import { dateForWeekday, dayOfDate, describeDays, formatDate, parseDates, parseDays, parseLooseDate } from "./dates";
+import { DAYS } from "../types";
 
 describe("parseDays", () => {
   it.each([
@@ -69,6 +70,39 @@ describe("parseLooseDate", () => {
   it("reads back a formatted list of dates", () => {
     const dates = ["2026-10-02", "2026-10-09"];
     expect(parseDates(dates.map(formatDate).join("; "), ref)).toEqual(dates);
+  });
+});
+
+describe("dateForWeekday", () => {
+  // 2026-09-27 is a Sunday, so the bulletin week runs through Saturday 2026-10-03.
+  it("places each weekday on or after a Sunday bulletin date", () => {
+    expect(DAYS.map((day) => dateForWeekday("2026-09-27", day))).toEqual([
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-09-27",
+    ]);
+  });
+
+  it("uses the same weekday when the bulletin falls on it, and the next week otherwise", () => {
+    expect(dateForWeekday("2026-09-30", "Wednesday")).toBe("2026-09-30");
+    expect(dateForWeekday("2026-09-30", "Tuesday")).toBe("2026-10-06");
+  });
+
+  it("rejects a bulletin date that is not a day", () => {
+    expect(dateForWeekday("nope", "Sunday")).toBeNull();
+  });
+});
+
+describe("dayOfDate", () => {
+  it("reads the weekday of an ISO date", () => {
+    expect(dayOfDate("2026-10-02")).toBe("Friday");
+    expect(dayOfDate("2026-10-03")).toBe("Saturday");
+    expect(dayOfDate("2026-09-27")).toBe("Sunday");
+    expect(dayOfDate("nope")).toBeNull();
   });
 });
 

@@ -7,7 +7,7 @@ import type {
   LabelEvent,
   Origin,
 } from "../types";
-import { daysBetween, formatDate } from "./dates";
+import { dateForWeekday, dayOfDate, daysBetween, formatDate } from "./dates";
 import { seasonProblems } from "./pattern";
 import { formatTime, minutesOf } from "./time";
 
@@ -112,6 +112,65 @@ export function setDays(row: EditorRow, days: Day[]): EditorRow {
     day_of_week: days[0] ?? null,
     pending_split: days.length > 1 ? { days } : undefined,
   });
+}
+
+/**
+ * The one weekday a row is about: a weekly row's day, or the weekday of a
+ * dated row. Several pending days or dates are not one weekday.
+ */
+export function weekdayOf(row: {
+  event_kind: EventKind | null;
+  day_of_week: Day | null;
+  date: string | null;
+  pending_split?: { days?: Day[]; dates?: string[] };
+}): Day | null {
+  const pendingDays = row.pending_split?.days;
+  const pendingDates = row.pending_split?.dates;
+  if ((pendingDays && pendingDays.length > 1) || (pendingDates && pendingDates.length > 1)) return null;
+  if (row.event_kind === "specific_date") return row.date ? dayOfDate(row.date) : null;
+  if (row.day_of_week) return row.day_of_week;
+  return row.date ? dayOfDate(row.date) : null;
+}
+
+/**
+ * Weekly, on that weekday, and only the first week of the month.
+ * A dated row takes the weekday of its date. The note is cleared: it is
+ * usually just "first of the month". Unchanged when there is no single weekday.
+ */
+export function asFirstOfMonth(row: EditorRow): EditorRow {
+  const day = weekdayOf(row);
+  if (!day) return row;
+  return editRow(row, {
+    event_kind: "weekly",
+    day_of_week: day,
+    weeks_of_month: ["first"],
+    note: null,
+  });
+}
+
+/** Already weekly on one weekday, first week only, with no note. */
+export function isFirstOfMonth(row: EditorRow): boolean {
+  return (
+    row.event_kind === "weekly" &&
+    !!row.day_of_week &&
+    row.weeks_of_month.length === 1 &&
+    row.weeks_of_month[0] === "first" &&
+    !row.note?.trim() &&
+    !row.pending_split
+  );
+}
+
+/**
+ * A weekly row as the date of its weekday in the bulletin's week.
+ * Several pending days become several dates. Already-dated rows stay as they are.
+ * With no bulletin date or no weekday, the row becomes dated and the date stays empty.
+ */
+export function asDated(row: EditorRow, bulletinDate: string | null): EditorRow {
+  if (row.event_kind === "specific_date") return row;
+  const days = row.pending_split?.days ?? (row.day_of_week ? [row.day_of_week] : []);
+  const dates = bulletinDate ? days.map((day) => dateForWeekday(bulletinDate, day)).filter((d): d is string => !!d) : [];
+  if (!dates.length) return editRow(row, { event_kind: "specific_date" });
+  return setDates(row, dates);
 }
 
 /** Set a dated row's date, or several dates to split later. */

@@ -161,6 +161,30 @@ export function parseDates(input: string, ref: string | null): string[] | null {
   return out;
 }
 
+/**
+ * The first `day` on or after `bulletinDate`.
+ *
+ * A bulletin dated Sunday covers that Sunday through the following Saturday.
+ * The same rule the pipeline uses when it credits a weekly row to a week:
+ * `(weekday - bulletin weekday) mod 7`.
+ */
+export function dateForWeekday(bulletinDate: string, day: Day): string | null {
+  const bulletin = new Date(`${bulletinDate}T00:00:00Z`);
+  if (Number.isNaN(bulletin.getTime())) return null;
+  const target = DAYS.indexOf(day);
+  if (target < 0) return null;
+  const bulletinWeekday = (bulletin.getUTCDay() + 6) % 7;
+  const offset = (target - bulletinWeekday + 7) % 7;
+  return new Date(bulletin.getTime() + offset * 86_400_000).toISOString().slice(0, 10);
+}
+
+/** Weekday of an ISO date, in the same Monday-first order as `DAYS`. */
+export function dayOfDate(isoDate: string): Day | null {
+  const d = new Date(`${isoDate}T00:00:00Z`);
+  if (Number.isNaN(d.getTime())) return null;
+  return DAYS[(d.getUTCDay() + 6) % 7] ?? null;
+}
+
 export function daysBetween(a: string, b: string): number {
   return Math.round(
     (Date.parse(`${a}T00:00:00Z`) - Date.parse(`${b}T00:00:00Z`)) / 86_400_000,
