@@ -15,7 +15,8 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: St. Andrew the Apostle, Syracuse (CLOSED - See
-  note: '"... See St. Lucy, Syracuse". The St. Lucy diocese page: "Sacramental Records for St. Andrew
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See St. Lucy, Syracuse". The St. Lucy diocese page: "Sacramental Records for St. Andrew
     the Apostle, Syracuse; and St. Joseph, Syracuse are retained here."'
 - url: https://www.saintlucys.org/history
   seen: 2026-09-26

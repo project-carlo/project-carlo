@@ -61,8 +61,9 @@ Lawrence's Parishes". So this bulletin also covers those two places.
 - St. Mary, St. Anthony of Padua and St. Margaret (Homer): in every issue's masthead and Mass list.
 - O'Heron Newman Hall chapel at SUNY Cortland (`churches/oheron-newman-hall-cortland.md`): Sunday
   4 pm in the new schedule; in no roster.
-- St. Lawrence Mission, DeRuyter: Saturday 5:15 pm in the new schedule. It is in region B's batch,
-  not mine, so I have **not** created it; it belongs under this row (see `revisit`).
+- St. Lawrence Mission, DeRuyter (`churches/st-lawrence-deruyter.md`): Saturday 5:15 pm Vigil
+  ("5:15 PM Vigil Mass at St. Lawrence's") in the new schedule printed in the 13 and 20 September
+  2026 issues. It shares this pastor and the Truxton PO box, and no bulletin of its own was found.
 - St. Patrick's Oratory, Truxton ("an Oratory of St. Margaret, Homer" per the diocese) is in the
   bulletin only as open for prayer on Thursday afternoons, never with a Mass:
   `excluded/st-patrick-truxton.md`.

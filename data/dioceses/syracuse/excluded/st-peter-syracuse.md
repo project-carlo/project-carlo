@@ -15,8 +15,9 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: St. Peter, Syracuse (CLOSED - See
-  note: '"... See Our Lady of Pompei/St. Peter, Syracuse". The Our Lady of Pompei/St. Peter diocese page:
-    "Sacramental records for St. Peter, Syracuse are retained here."'
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See Our Lady of Pompei/St. Peter, Syracuse". The Our Lady of Pompei/St. Peter diocese
+    page: "Sacramental records for St. Peter, Syracuse are retained here."'
 - url: https://en.wikipedia.org/wiki/St._Peter's_Italian_Church_(Syracuse,_New_York)
   seen: 2026-09-26
   quote: It was merged with the parish of Our Lady of Pompei in 2008.

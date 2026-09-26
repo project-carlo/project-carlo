@@ -26,7 +26,8 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: St. Ann, Syracuse (CLOSED - See
-  note: '"... See St. Charles-St. Ann, Syracuse".'
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See St. Charles-St. Ann, Syracuse".'
 - url: https://container.parishesonline.com/bulletins/06/0134/20260927B.pdf
   seen: 2026-09-26
   quote: The Linked Parishes of St. Charles– St. Ann and St. Patrick and St. Brigid

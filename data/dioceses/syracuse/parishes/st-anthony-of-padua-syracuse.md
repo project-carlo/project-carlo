@@ -14,9 +14,8 @@ evidence:
     Holy Cross Church 4112 E Genesee Street DeWitt NY 13214".'
 - url: https://stanthonysyr.org/
   seen: 2026-09-26
-  quote: St.Anthonys-Bulletin-September-20-2026
-  note: The homepage links the current bulletin PDF directly (visit.py --bulletin found it there; no separate
-    bulletin page).
+  note: The homepage links the current bulletin PDF directly (href wp-content/uploads/St.Anthonys-Bulletin-September-20-2026.pdf
+    on 2026-09-26; visit.py --bulletin found it there; no separate bulletin page).
 ---
 
 ## Publisher

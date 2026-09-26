@@ -15,7 +15,8 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: Holy Trinity, Syracuse (CLOSED - See
-  note: '"... See St. John the Baptist/Holy Trinity, Syracuse".'
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See St. John the Baptist/Holy Trinity, Syracuse".'
 - url: https://www.syracusenewtimes.com/face-time-yusuf-soule
   seen: 2026-09-26
   quote: The church has been vacant since 2010, when the Syracuse Diocese closed it as part of its restructuring.

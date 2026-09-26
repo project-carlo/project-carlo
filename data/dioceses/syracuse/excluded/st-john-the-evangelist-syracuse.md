@@ -15,7 +15,8 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: St. John the Evangelist, Syracuse (CLOSED - See
-  note: '"... See The Cathedral of the Immaculate Conception, Syracuse".'
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See The Cathedral of the Immaculate Conception, Syracuse".'
 - url: https://en.wikipedia.org/wiki/Church_of_St._John_the_Evangelist_(Syracuse,_New_York)
   seen: 2026-09-26
   quote: The Church of St. John the Evangelist was a church in the Roman Catholic Diocese of Syracuse

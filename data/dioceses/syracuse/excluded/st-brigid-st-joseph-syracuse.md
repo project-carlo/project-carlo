@@ -20,7 +20,8 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: St. Brigid, Syracuse (CLOSED - See
-  note: '"... See St. Patrick & St. Brigid, Syracuse". The diocese page for St. Patrick & St. Brigid:
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See St. Patrick & St. Brigid, Syracuse". The diocese page for St. Patrick & St. Brigid:
     "Sacramental Records for St. Brigid, Syracuse; and St. Joseph, Syracuse are retained here."'
 - url: https://container.parishesonline.com/bulletins/06/0134/20260927B.pdf
   seen: 2026-09-26

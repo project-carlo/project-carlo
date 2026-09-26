@@ -20,8 +20,10 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: Corpus Christi Oratory, Nedrow (CLOSED - See
-  note: '"... See Church of the Nativity @ St. Leo, Tully". The diocese''s own page for the oratory (syracusediocese.org/corpus-christi-oratory-nedrow)
-    answered 404 on 2026-09-26, though the parish finder still has a pin with an address.'
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See Church of the Nativity @ St. Leo, Tully". The diocese''s own page for the oratory
+    (syracusediocese.org/corpus-christi-oratory-nedrow) answered 404 on 2026-09-26, though the parish
+    finder still has a pin with an address.'
 - url: https://container.parishesonline.com/bulletins/06/0037/20260927B.pdf
   seen: 2026-09-26
   quote: 'Saturday Masses: 4:30 p.m. St. Leo’s, Tully'

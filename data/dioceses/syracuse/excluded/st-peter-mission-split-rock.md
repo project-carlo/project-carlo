@@ -15,9 +15,10 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: St. Peter Mission, Split Rock (CLOSED - See
-  note: '"... See The Church of St. Michael and St. Peter, Syracuse". The St. Michael-St. Peter diocese
-    page: "Sacramental Records for St. Michael the Archangel, Syracuse; and St. Peter Mission, Split Rock
-    are retained here."'
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See The Church of St. Michael and St. Peter, Syracuse". The St. Michael-St. Peter
+    diocese page: "Sacramental Records for St. Michael the Archangel, Syracuse; and St. Peter Mission,
+    Split Rock are retained here."'
 - url: https://www.stmichael-stpeter.org/s/Set-26-27-26.pdf
   seen: 2026-09-26
   quote: Weekend Masses Saturday Vigil 4:00 pm OLOH 5:30 pm - SMSP Sunday 8:00 am - OLOH 9:30 am - SMSP

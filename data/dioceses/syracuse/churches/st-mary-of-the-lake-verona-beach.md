@@ -11,7 +11,7 @@ longitude: -75.7271094
 coordinates_from: diocese-directory
 name_verified: false
 address_verified: true
-roster: ['directory:33173']
+roster: ['directory:33173', 'gcatholic:18041']
 evidence:
 - url: https://www.syracusediocese.org/parishfinder
   seen: 2026-09-26

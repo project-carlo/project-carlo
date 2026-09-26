@@ -15,8 +15,9 @@ evidence:
 - url: https://www.syracusediocese.org/parishes
   seen: 2026-09-26
   quote: St. Stephen, Syracuse (CLOSED - See
-  note: '"... See Basilica of the Sacred Heart of Jesus, Syracuse". The Basilica''s diocese page: "Sacramental
-    records for St. Stephen, Syracuse are retained here."'
+  note: 'The diocese''s alphabetical parish list, behind Cloudflare (read in a browser, parish-site-access
+    visit.py): "... See Basilica of the Sacred Heart of Jesus, Syracuse". The Basilica''s diocese page:
+    "Sacramental records for St. Stephen, Syracuse are retained here."'
 - url: https://parishesonline.com/organization/st-stephen-church-13204
   seen: 2026-09-26
   note: '`probe po st-stephen-church-13204`: St. Stephen Church, 305 N Geddes St, Syracuse, 13204; no
