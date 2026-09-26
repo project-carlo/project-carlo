@@ -30,7 +30,14 @@ dev = [
     "ruff>=0.15.2",
 ]
 # PDF → text extractors for `pnpm bench` (see pdf_extract.text_extractors).
-bench = []
+bench = [
+    "pymupdf>=1.26",
+    # 3.x bundles its OCR models (no download at run time); they change across
+    # minor releases, hence the upper bound.
+    "rapidocr>=3.9.2,<4",
+    "onnxruntime>=1.20",
+    "numpy>=2.0",
+]
 
 [tool.ruff]
 target-version = "py313"
