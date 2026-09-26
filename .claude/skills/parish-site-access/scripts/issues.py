@@ -107,7 +107,9 @@ def ecatholic(args: argparse.Namespace) -> dict[str, Any]:
             f"no Sunday-dated issue in {len(probed)} Sundays probed (a missing issue answers "
             "403). Some parishes date files by another weekday (try --day fri or --day sat) or "
             "name them differently: open the site's /bulletins page with "
-            "visit.py --links --match files.ecatholic and read the real file names."
+            "visit.py --links --match 'files.ecatholic|discovermass' and read the real file "
+            "names. An eCatholic site may post its bulletin on Discover Mass instead "
+            "(bulletins.discovermass.com links): then use issues.py discovermass."
         )
     elif not args.from_date and found[0] < _ecatholic_url(
         site, dt.date.today() - dt.timedelta(days=45)
