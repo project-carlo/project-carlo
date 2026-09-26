@@ -103,7 +103,15 @@ One command runs a whole weekly pass:
 
 ```bash
 pnpm weekly:run            # = python -m pdf_extract weekly
+pnpm weekly:run -- --diocese buffalo
+pnpm weekly:run -- --parish st-joseph-cathedral-buffalo
 ```
+
+`--parish` takes a slug or the name from `data/parishes.csv` (repeat it, or
+pass several slugs separated by commas). `--diocese` takes a folder under
+`data/dioceses/` and refreshes every live parish recorded there. The two
+combine. Parishes outside the limit keep the bulletins they already had, and
+the snapshot still contains every parish. Omit both to refresh everything.
 
 Every run has an id. Each stage records what it did for each parish under that
 id (`pipeline_run` and `run_parish_result` tables), and the run ends with a
@@ -129,8 +137,12 @@ A local run never publishes anything.
 ### GitHub Actions
 
 `.github/workflows/weekly-docker.yml` runs Sundays at 08:17 UTC (and on
-demand). It pulls the published database, runs the pipeline in the Docker
-image, uploads the result to R2 as a candidate, and then:
+demand). A manual run can be limited with its **Parishes** and **Dioceses**
+inputs (slugs, comma-separated); leave them empty to refresh everything. A
+limited run is published the same way when it passes: the snapshot still has
+every parish, with fresh bulletins for the ones the run refreshed. The workflow
+pulls the published database, runs the pipeline on the GitHub runner, uploads
+the result to R2 as a candidate, and then:
 
 - **passed**: publishes it (moves `pipeline/latest.json` to the new run),
   deploys the site, and closes any open `data-refresh` issues it supersedes.
@@ -164,11 +176,15 @@ The R2 bucket, its API tokens and the repository secrets are described in
 docker compose build weekly-job
 export GEMINI_API_KEY=... R2_ACCOUNT_ID=... R2_ACCESS_KEY_ID=... R2_SECRET_ACCESS_KEY=...
 docker compose run --rm weekly-job
+DIOCESES=buffalo docker compose run --rm weekly-job
+PARISHES=st-joseph-cathedral-buffalo docker compose run --rm weekly-job
 ```
 
-The Docker image runs Playwright in headed mode under `xvfb` when no display is
-available. For debugging, set `PLAYWRIGHT_HEADLESS=1` to force headless mode or
-`PLAYWRIGHT_BROWSER_CHANNEL=chrome` to use a locally installed Chrome channel.
+That image is for this local run. The weekly workflow installs the same Python
+toolchain on the runner and does not build it. The image runs Playwright in
+headed mode under `xvfb` when no display is available. For debugging, set
+`PLAYWRIGHT_HEADLESS=1` to force headless mode or `PLAYWRIGHT_BROWSER_CHANNEL=chrome`
+to use a locally installed Chrome channel.
 
 ## How data is stored
 
@@ -236,7 +252,7 @@ Run each stage independently:
 ```bash
 pnpm run fetch [-- --parish "..."]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
-pnpm weekly:run
+pnpm weekly:run [-- --parish SLUG --diocese SLUG]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
 pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]

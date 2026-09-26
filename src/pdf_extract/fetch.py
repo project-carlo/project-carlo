@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 import logging
 import re
-from collections.abc import Callable
+from collections.abc import Callable, Collection
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
 from urllib.error import HTTPError, URLError
@@ -797,15 +797,20 @@ def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
 def fetch_bulletins(
     *,
     parish_name: str | None = None,
+    slugs: Collection[str] | None = None,
     run_id: str | None = None,
 ) -> dict[str, int]:
     """Download each parish's latest bulletin if it is one we have not seen.
 
     The PDF goes to the blob store under its content hash and a `bulletin` row
     records where it came from. With `run_id`, each parish's outcome is also
-    recorded for the run report.
+    recorded for the run report. `slugs` limits the run to those parishes.
     """
-    LOGGER.info("Starting fetch stage (parish_name=%s)", parish_name or "*all*")
+    LOGGER.info(
+        "Starting fetch stage (parish_name=%s, slugs=%s)",
+        parish_name or "*all*",
+        "*all*" if slugs is None else len(slugs),
+    )
     store = get_store()
 
     fetched = 0
@@ -815,7 +820,7 @@ def fetch_bulletins(
 
     conn = connect_db()
     try:
-        parishes = _parishes_for_run(conn, parish_name)
+        parishes = _parishes_for_run(conn, parish_name, slugs)
         existing_urls = {
             (row["parish_id"], row["source_url"])
             for row in conn.execute("SELECT parish_id, source_url FROM bulletin")
@@ -956,10 +961,17 @@ def _report_stale_parishes(*, bulletins: list[dict], slugs: list[str]) -> list[s
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
 
-def _parishes_for_run(conn, parish_name: str | None) -> list:
+def _parishes_for_run(conn, parish_name: str | None, slugs: Collection[str] | None) -> list:
     if parish_name:
         row = get_parish_by_name(conn, parish_name)
         if row is None:
             raise ValueError(f"Parish not found: {parish_name}")
         return [row]
-    return list(list_parishes(conn))
+    rows = list(list_parishes(conn))
+    if slugs is None:
+        return rows
+    wanted = set(slugs)
+    missing = sorted(wanted - {row["slug"] for row in rows})
+    if missing:
+        raise ValueError(f"Parish not found: {', '.join(missing)}")
+    return [row for row in rows if row["slug"] in wanted]

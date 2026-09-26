@@ -312,9 +312,14 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
     status = report["status"]
     icon = {"passed": "✅", "held": "⏸️", "failed": "❌"}.get(status, "")
     totals = report["totals"]
+    scope = report.get("scope") or {}
     lines = [
         f"## {icon} Weekly data run `{report['run_id']}`: {status}",
         "",
+    ]
+    if scope.get("summary"):
+        lines += [scope["summary"], ""]
+    lines += [
         f"**{totals['events_after']}** events across "
         f"**{totals['parishes_showing_events']}** parishes "
         f"(was {totals['events_before']}). "

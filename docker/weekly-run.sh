@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# The weekly pipeline inside the container:
+# The weekly pipeline, on the GitHub runner and in the local image:
 #   get the published database -> run -> upload the result as a candidate.
 # Publishing the candidate is a separate step (the workflow decides, based on
 # the run's status). Exit code is the run's: 0 passed, 10 held, other = failed.
@@ -24,9 +24,22 @@ run() {
   fi
 }
 
+weekly_args=(
+  weekly
+  --run-id "${RUN_ID}"
+  --git-sha "${GIT_SHA:-}"
+  --trigger "${RUN_TRIGGER:-}"
+)
+# Optional manual limits. Empty (the scheduled run) refreshes every parish.
+if [[ -n "${PARISHES:-}" ]]; then
+  weekly_args+=(--parish "${PARISHES}")
+fi
+if [[ -n "${DIOCESES:-}" ]]; then
+  weekly_args+=(--diocese "${DIOCESES}")
+fi
+
 set +e
-run uv run --no-sync python -m pdf_extract weekly \
-  --run-id "${RUN_ID}" --git-sha "${GIT_SHA:-}" --trigger "${RUN_TRIGGER:-}"
+run uv run --no-sync python -m pdf_extract "${weekly_args[@]}"
 status=$?
 set -e
 
