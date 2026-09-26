@@ -96,7 +96,10 @@ jobs:
       - name: Install system packages
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends xvfb xauth ghostscript
 
+      # A cache-service error should not block the run. The next step downloads
+      # Chromium when the cache misses or this restore fails.
       - name: Cache Playwright browsers
+        continue-on-error: true
         uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
@@ -123,7 +126,9 @@ jobs:
           CARLO_REMOTE_WRITE: ${{ github.ref_name == github.event.repository.default_branch && '1' || '' }}
         run: |
           set +e
-          bash docker/weekly-run.sh
+          # The runner injects GITHUB_TOKEN and the healthcheck URL. The old
+          # container only received the pipeline's own credentials.
+          env -u GITHUB_TOKEN -u HEALTHCHECK_URL bash docker/weekly-run.sh
           code=$?
           set -e
 
