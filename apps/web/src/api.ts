@@ -32,15 +32,28 @@ export interface ChurchFilters {
 // slider drag → map update path JS-only after the first call.
 let snapshotPromise: Promise<Snapshot> | null = null;
 
+/**
+ * Production serves `frontend.json.gz` as opaque bytes (see public/_headers),
+ * so the body is still gzip. A dev server that also sets `Content-Encoding:
+ * gzip` makes fetch decode it first, and the body is already JSON. Either
+ * form is the same snapshot.
+ */
+export async function snapshotText(bytes: Uint8Array): Promise<string> {
+  if (bytes.length >= 2 && bytes[0] === 0x1f && bytes[1] === 0x8b) {
+    const decompressed = new Blob([bytes.slice()])
+      .stream()
+      .pipeThrough(new DecompressionStream("gzip"));
+    return new Response(decompressed).text();
+  }
+  return new TextDecoder().decode(bytes);
+}
+
 async function loadSnapshot(): Promise<Snapshot> {
   const response = await fetch(`/${SNAPSHOT_FILE}`, { cache: "no-cache" });
   if (!response.ok) {
     throw new Error(`Failed to fetch ${SNAPSHOT_FILE}: ${response.status}`);
   }
-  // Served as an opaque pre-gzipped file (see public/_headers): unzip it here.
-  const compressed = response.body ?? new Blob([await response.arrayBuffer()]).stream();
-  const decompressed = compressed.pipeThrough(new DecompressionStream("gzip"));
-  return parseSnapshot(await new Response(decompressed).text());
+  return parseSnapshot(await snapshotText(new Uint8Array(await response.arrayBuffer())));
 }
 
 function getSnapshot(): Promise<Snapshot> {

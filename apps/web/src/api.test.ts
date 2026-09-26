@@ -1,3 +1,4 @@
+import { gzipSync } from "node:zlib";
 import { beforeEach, describe, expect, it } from "vitest";
 import {
   ChurchNotFoundError,
@@ -6,6 +7,7 @@ import {
   eventMatchesFilters,
   findChurch,
   resetMapItemCache,
+  snapshotText,
   type ChurchFilters,
 } from "./api";
 import { parseSnapshot } from "./lib/snapshot";
@@ -264,6 +266,19 @@ describe("collectMapItems", () => {
     expect(both[0].upcoming_events).toHaveLength(2);
     expect(morningOnly[0].upcoming_events).toHaveLength(1);
     expect(morningOnly[0]).not.toBe(both[0]);
+  });
+});
+
+describe("snapshotText", () => {
+  const json = JSON.stringify(fixture);
+
+  it("decompresses a gzip body, which is how production serves the snapshot", async () => {
+    const gzipped = gzipSync(Buffer.from(json));
+    await expect(snapshotText(gzipped)).resolves.toBe(json);
+  });
+
+  it("accepts JSON that a dev server already decoded via Content-Encoding", async () => {
+    await expect(snapshotText(new TextEncoder().encode(json))).resolves.toBe(json);
   });
 });
 
