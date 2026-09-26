@@ -105,7 +105,7 @@ demand). A manual run can be limited with its **Parishes** and **Dioceses**
 inputs (slugs, comma-separated); leave them empty to refresh everything. A
 limited run is published the same way when it passes: the snapshot still has
 every parish, with fresh bulletins for the ones the run refreshed. The workflow
-pulls the published database, runs the pipeline in the Docker image, uploads
+pulls the published database, runs the pipeline on the GitHub runner, uploads
 the result to R2 as a candidate, and then:
 
 - **passed**: publishes it (moves `pipeline/latest.json` to the new run),
@@ -144,9 +144,11 @@ DIOCESES=buffalo docker compose run --rm weekly-job
 PARISHES=st-joseph-cathedral-buffalo docker compose run --rm weekly-job
 ```
 
-The Docker image runs Playwright in headed mode under `xvfb` when no display is
-available. For debugging, set `PLAYWRIGHT_HEADLESS=1` to force headless mode or
-`PLAYWRIGHT_BROWSER_CHANNEL=chrome` to use a locally installed Chrome channel.
+That image is for this local run. The weekly workflow installs the same Python
+toolchain on the runner and does not build it. The image runs Playwright in
+headed mode under `xvfb` when no display is available. For debugging, set
+`PLAYWRIGHT_HEADLESS=1` to force headless mode or `PLAYWRIGHT_BROWSER_CHANNEL=chrome`
+to use a locally installed Chrome channel.
 
 ## How data is stored
 
