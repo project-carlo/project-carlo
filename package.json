@@ -32,6 +32,12 @@
     "preview:web": "pnpm --filter web preview",
     "lint:web": "pnpm --filter web lint",
     "check:web": "pnpm --filter web check",
-    "perf:web": "pnpm --filter web perf"
+    "perf:web": "pnpm --filter web perf",
+    "label": "pnpm --filter labeler build && uv run python -m pdf_extract label serve",
+    "dev:labeler": "pnpm --filter labeler dev",
+    "build:labeler": "pnpm --filter labeler build",
+    "lint:labeler": "pnpm --filter labeler lint",
+    "check:labeler": "pnpm --filter labeler check",
+    "test:labeler": "pnpm --filter labeler test"
   }
 }
