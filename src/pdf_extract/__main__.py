@@ -52,7 +52,7 @@ from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, delete_db, utc_now_iso
 from pdf_extract.verify import verify_churches
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
-from pdf_extract.weekly import run_weekly
+from pdf_extract.weekly import RunScopeError, run_weekly
 
 LOGGER = logging.getLogger(__name__)
 
@@ -184,6 +184,8 @@ def _cmd_weekly(args: argparse.Namespace) -> Result:
         concurrency=args.concurrency,
         git_sha=args.git_sha,
         trigger=args.trigger,
+        parishes=args.parish,
+        dioceses=args.diocese,
     )
 
 
@@ -380,6 +382,26 @@ def _build_parser() -> argparse.ArgumentParser:
     weekly_parser.add_argument("--concurrency", type=int, default=5)
     weekly_parser.add_argument("--git-sha", default=None)
     weekly_parser.add_argument("--trigger", default=None)
+    weekly_parser.add_argument(
+        "--parish",
+        action="append",
+        default=None,
+        metavar="PARISH",
+        help=(
+            "Parish slug or name to refresh (repeatable, or several slugs "
+            "separated by commas). Default: every parish."
+        ),
+    )
+    weekly_parser.add_argument(
+        "--diocese",
+        action="append",
+        default=None,
+        metavar="DIOCESE",
+        help=(
+            "Diocese slug (data/dioceses/<slug>) whose live parishes to refresh "
+            "(repeatable, or comma-separated). Combines with --parish."
+        ),
+    )
     weekly_parser.set_defaults(handler=_cmd_weekly, exit_code_from_status=True)
     _add_common_args(weekly_parser)
 
@@ -512,7 +534,7 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         result = handler(args)
-    except DioceseError as e:
+    except (DioceseError, RunScopeError) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)
         return 1

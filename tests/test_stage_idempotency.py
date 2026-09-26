@@ -266,6 +266,47 @@ def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) ->
     }
 
 
+def test_fetch_limits_to_the_given_slugs(monkeypatch, db: Path) -> None:
+    monkeypatch.setattr(
+        "pdf_extract.fetch._build_bulletin_link",
+        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+            source_url=f"https://example.org/{fetch_provider_id}.pdf",
+            fetch_url=f"https://example.org/{fetch_provider_id}.pdf",
+        ),
+    )
+    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: b"%PDF-1.4 fake")
+
+    @contextmanager
+    def fake_launch_stealth_browser():
+        yield None
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+
+    result = fetch_bulletins(slugs=["test-parish-1"])
+
+    assert result["fetched_bulletins"] == 1
+    assert [bulletin["parish_slug"] for bulletin in _bulletins(db)] == ["test-parish-1"]
+    with pytest.raises(ValueError, match="no-such-parish"):
+        fetch_bulletins(slugs=["no-such-parish"])
+
+
+def test_process_limits_to_the_given_slugs(monkeypatch, db: Path) -> None:
+    for slug in ("test-parish", "test-parish-1"):
+        _add_bulletin(
+            db, parish_slug=slug, source_url=f"https://example.org/{slug}.pdf",
+            content_hash=slug, fetched_at="2026-01-01T00:00:00Z",
+        )
+    _stub_extractor(monkeypatch, _extraction(_event()))
+
+    result = process_bulletins(slugs=["test-parish"])
+
+    assert result["processed_bulletins"] == 1
+    processed = {bulletin["parish_slug"] for bulletin in _bulletins(db) if bulletin["processed_at"]}
+    assert processed == {"test-parish"}
+    with pytest.raises(ValueError, match="no-such-parish"):
+        process_bulletins(slugs=["no-such-parish"])
+
+
 def test_process_stage_is_idempotent(monkeypatch, db: Path) -> None:
     _add_bulletin(
         db, source_url="https://example.org/parsed.pdf", content_hash="def",
