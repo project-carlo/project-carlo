@@ -17,7 +17,7 @@ evidence:
     2 adds a Sunday 2:00 p.m. Latin Mass at St. Mary''s (SMA).'
 - url: https://stmarypaul.wordpress.com/bulletins-2026/
   seen: 2026-09-26
-  quote: '2026-09-27'
+  quote: September 27, 2026 Download
   note: The parishes' "Bulletins 2026" page (marypaul.org redirects to stmarypaul.wordpress.com), listing
     weekly PDFs through 2026-09-27.
 - url: https://discovermass.com/church/st-mary-of-the-assumption-binghamton-ny/

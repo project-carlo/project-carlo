@@ -16,7 +16,6 @@ evidence:
     and each church's collection. Main office 975 NY Rt. 11, Kirkwood; Parish Life Director Barbara Kane.
 - url: https://www.broomecatholics.org/bulletin
   seen: 2026-09-26
-  quote: september27web2026
   note: The communities' Bulletin page, linking a PDF per Sunday (july12web2026 … september27web2026)
     on the site builder's file host irp.cdn-website.com.
 - url: https://www.syracusediocese.org/saints-john-and-andrew-binghamton
