@@ -118,8 +118,20 @@
     background-blend-mode: normal, normal, multiply;
   }
 
+  /* svh, not vh: on phones 100vh is the height with the browser's toolbars
+   * hidden, so a vh-tall root overflows the visible screen by the toolbar's
+   * height and lets the whole page scroll. */
   #root {
-    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  /* The map page is a fixed app surface: never let the document itself
+   * scroll or rubber-band, or the floating card slides up under the browser
+   * bar and the body's paper shows through below the map. */
+  html:has(main[data-map-page]),
+  html:has(main[data-map-page]) body {
+    overflow: hidden;
+    overscroll-behavior: none;
   }
 
   a {
