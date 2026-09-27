@@ -9,6 +9,7 @@ import time
 from datetime import date
 from typing import Any, Literal
 
+import httpx
 from google import genai
 from google.genai import errors, types
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
@@ -23,6 +24,11 @@ _RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 _MAX_API_ATTEMPTS = 8
 _BASE_BACKOFF_SECONDS = 2.0
 _MAX_BACKOFF_SECONDS = 30.0
+# Per-phase timeout (connect, write, read) for one Gemini HTTP call. The SDK
+# default is no timeout, so a socket that stalls while reading response headers
+# blocks a worker until the whole job is killed. A read that receives nothing
+# for this long is the stalled case; a slow but live upload is not.
+GEMINI_HTTP_TIMEOUT_MS = 180_000
 
 # Shared backoff gate: when any thread hits a transient Gemini error, no thread
 # starts a new request until the backoff window has expired. This stops fresh
@@ -269,9 +275,28 @@ def _parse_llm_json(content: str, *, context: str) -> dict[str, Any]:
     return data
 
 
+def _gemini_client() -> genai.Client:
+    """A Gemini client whose HTTP calls give up instead of waiting forever."""
+    return genai.Client(http_options=types.HttpOptions(timeout=GEMINI_HTTP_TIMEOUT_MS))
+
+
 def _is_retryable_api_error(exc: Exception) -> bool:
-    """Return true when the Gemini API error is likely transient."""
-    return isinstance(exc, errors.APIError) and exc.code in _RETRYABLE_STATUS_CODES
+    """Return true when the failure is likely transient.
+
+    Gemini status codes that mean "try again", and transport failures such as
+    a connection reset or a read timeout. The SDK surfaces those as httpx
+    errors and does not retry them itself.
+    """
+    if isinstance(exc, errors.APIError) and exc.code in _RETRYABLE_STATUS_CODES:
+        return True
+    return isinstance(exc, httpx.TransportError)
+
+
+def _failure_label(exc: Exception) -> str:
+    code = getattr(exc, "code", None)
+    if isinstance(code, int):
+        return f"status {code}"
+    return f"{type(exc).__name__}: {exc}"
 
 
 def _generate_content_with_backoff(
@@ -281,7 +306,7 @@ def _generate_content_with_backoff(
     contents: list[str | types.Part],
     config: types.GenerateContentConfig,
 ):
-    """Call Gemini generate_content with exponential backoff for transient API failures.
+    """Call Gemini generate_content with exponential backoff for transient failures.
 
     Backoff windows are shared process-wide via the gate above: while any thread
     is backing off, no thread starts a new request.
@@ -302,8 +327,8 @@ def _generate_content_with_backoff(
             backoff = min(_MAX_BACKOFF_SECONDS, _BASE_BACKOFF_SECONDS * (2 ** (attempt - 1)))
             delay = backoff + random.uniform(0, 0.25 * backoff)
             LOGGER.warning(
-                "Gemini request failed with status %s on attempt %s/%s; retrying in %.1fs",
-                getattr(exc, "code", "unknown"),
+                "Gemini request failed with %s on attempt %s/%s; retrying in %.1fs",
+                _failure_label(exc),
                 attempt,
                 _MAX_API_ATTEMPTS,
                 delay,
@@ -422,7 +447,7 @@ def extract_events(
         today_day_of_week=today.strftime("%A"),
     )
 
-    client = genai.Client()
+    client = _gemini_client()
     response = _generate_content_with_backoff(
         client,
         model=model,
@@ -511,7 +536,7 @@ def extract_verification(
     churches_json = json.dumps(churches, ensure_ascii=False)
     prompt = VERIFY_SYSTEM_PROMPT.format(churches_json=churches_json)
 
-    client = genai.Client()
+    client = _gemini_client()
     response = _generate_content_with_backoff(
         client,
         model=model,

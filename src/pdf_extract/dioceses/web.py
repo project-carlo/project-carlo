@@ -37,8 +37,9 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 TIMEOUT = 30
-# Scanned bulletins run past 30 MB (Spirit of Hope, Oneida: 31 MB in 2026).
-MAX_BYTES = 100_000_000
+# Scanned bulletins run past 30 MB (Spirit of Hope, Oneida: 31 MB in 2026),
+# and LPi family bulletins past 180 MB. A truncated PDF does not parse at all.
+MAX_BYTES = 250_000_000
 
 PO_CONTAINER_BASE = "https://container.parishesonline.com/bulletins"
 
@@ -144,8 +145,8 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
         return {"url": url, "error": f"larger than {MAX_BYTES // 1_000_000} MB: not read"}
     try:
         texts = pdf_pages(resp.body)
-    except Exception as exc:  # noqa: BLE001 - pypdf raises many kinds on a broken file
-        return {"url": url, "error": f"not readable as a PDF: {type(exc).__name__}: {exc}"}
+    except Exception as exc:  # noqa: BLE001 - a broken issue should not stop a container walk
+        return {"url": url, "error": f"could not read the PDF: {exc}"}
     readable = [(n, t) for n, t in enumerate(texts, 1) if t]
     out: dict[str, Any] = {
         "url": url, "page_count": len(texts), "readable_pages": len(readable),
@@ -221,6 +222,8 @@ def bulletin_links(page: str, base: str, limit: int = 15) -> list[str]:
 # version of this list, and were reported as redirects "into a family site",
 # which is the label that means "collapse this row". Multi-word where the one
 # word has an innocent parish use (time slots, lotteries, direct deposit).
+# Matched as whole words: Wix pages carry config keys like `forExpressButtons`,
+# and "judicial" is common on parish sites.
 SPAM_TERMS = [
     "casino", "roulette", "betting", "sportsbook", "viagra", "cialis", "escort", "porn",
     "payday", "forex", "judi", "togel", "gacor", "maxwin", "slot online", "situs slot",

@@ -409,6 +409,15 @@ def test_spam_terms_match_whole_words_only() -> None:
     wix = '{"specs.DisplayCheckoutErrorModalsForExpressButtons": true} St. Mary Parish'
     assert web.spam_terms(wix) == []
     assert web.spam_terms("Best Slot Gacor and casino bonuses") == ["casino", "slot gacor"]
+    wix = '{"specs.stores.displayCheckoutErrorModalsForExpressButtons":"true"}'
+    assert web.spam_terms(wix + " Judicial Conference policy prohibits it") == []
+    assert web.spam_terms("Situs judi slot online terpercaya") == ["judi", "slot online"]
+
+
+def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
+    broken = web.Response("u", 200, "u", "application/pdf", b"%PDF-1.7\n1 0 obj")
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: broken)
+    assert web.pdf_text("https://example.org/x.pdf")["error"].startswith("could not read")
 
 
 def test_quote_found_tolerates_layout_and_elisions() -> None:
