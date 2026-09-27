@@ -12,6 +12,7 @@
     "detect": "uv run python -m pdf_extract detect run",
     "detect:apply": "uv run python -m pdf_extract detect apply",
     "fetch": "uv run python -m pdf_extract fetch",
+    "fetch:check": "uv run python -m pdf_extract fetch-check",
     "process": "uv run python -m pdf_extract process",
     "extract": "uv run python -m pdf_extract extract",
     "compare": "uv run python -m pdf_extract compare",

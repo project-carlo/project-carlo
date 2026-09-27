@@ -213,6 +213,7 @@ Run each stage independently:
 
 ```bash
 pnpm run fetch [-- --parish "..."]
+pnpm fetch:check [-- --parish SLUG --provider other --record tests/fixtures/fetch]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm weekly:run [-- --parish SLUG --diocese SLUG]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
@@ -238,6 +239,33 @@ Stage idempotency:
 - `fetch` skips URLs already recorded in `bulletin.source_url`
 - `process` skips bulletins with `processed_at` already set, and serves
   bulletins it has extracted before (same PDF hash, same model) from the cache
+
+### Checking the fetch stage
+
+Most parishes publish through ParishesOnline, eCatholic or Discover Mass, but
+the `other` provider has to find the bulletin on the parish's own website, and
+every site is laid out differently. `pnpm fetch:check` runs the resolvers in the
+browser without touching the database, downloads what each one picks, and
+prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
+`not_pdf`, or `blocked` when Cloudflare challenged the browser instead).
+
+To keep a resolver change from fixing one site and breaking another, the pages
+each resolver read on every parish's real site are recorded in
+`tests/fixtures/fetch/<slug>.json.gz`, and `tests/test_fetch_replay.py` replays
+them offline against the bulletin in `expected.json`. After changing `fetch.py`:
+
+1. Run `pnpm test`. A changed pick on any recorded site fails the replay test.
+   A site that now opens a page the old resolver never did fails with "re-record
+   this parish".
+2. Re-record the sites whose result should change, then check them by hand:
+   `pnpm fetch:check -- --parish SLUG --record tests/fixtures/fetch`.
+3. Update their entries in `tests/fixtures/fetch/expected.json`. That diff is the
+   coverage change.
+
+Run `fetch:check` in a headed browser (under `xvfb-run` on a server); Cloudflare
+turns headless browsers away. In a Claude Code cloud sandbox, set up Chrome first
+with `.claude/skills/parish-site-access/scripts/setup_browser.sh` and set
+`PLAYWRIGHT_BROWSER_CHANNEL=chrome`.
 
 ### From Python
 
@@ -344,6 +372,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
   - `fetch.py` - bulletin fetching and provider link resolution
+  - `fetch_check.py` - `fetch:check`, and recording/replaying the pages resolvers read
   - `process.py` - bulletin processing with Gemini AI
   - `schedule_extraction.py` - Gemini schedule extraction
   - `storage.py` - SQLite helpers and data paths

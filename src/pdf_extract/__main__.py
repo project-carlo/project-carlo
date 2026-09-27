@@ -45,6 +45,7 @@ from pdf_extract.dioceses.cli import add_diocese_parser
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
 from pdf_extract.fetch import fetch_bulletins
+from pdf_extract.fetch_check import check_fetch
 from pdf_extract.geocode import run_backfill
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence
@@ -108,6 +109,21 @@ def _ensure_db() -> None:
 def _cmd_fetch(args: argparse.Namespace) -> Result:
     _ensure_db()
     return fetch_bulletins(parish_name=args.parish)
+
+
+def _cmd_fetch_check(args: argparse.Namespace) -> Result:
+    return check_fetch(
+        slugs=_split_csv(args.parish),
+        providers=_split_csv(args.provider),
+        record_dir=args.record,
+        download=not args.no_download,
+    )
+
+
+def _split_csv(values: list[str] | None) -> set[str] | None:
+    if not values:
+        return None
+    return {v.strip() for value in values for v in value.split(",") if v.strip()}
 
 
 def _cmd_process(args: argparse.Namespace) -> Result:
@@ -255,6 +271,28 @@ def _build_parser() -> argparse.ArgumentParser:
     fetch_parser.add_argument("--parish", help="Parish name (omit to run for all)")
     fetch_parser.set_defaults(handler=_cmd_fetch)
     _add_common_args(fetch_parser)
+
+    # -- fetch-check --
+    fetch_check_parser = subparsers.add_parser(
+        "fetch-check",
+        help="Resolve and download each parish's latest bulletin without saving it",
+    )
+    fetch_check_parser.add_argument(
+        "--parish", action="append", help="Only these slugs (repeat, or comma-separate)",
+    )
+    fetch_check_parser.add_argument(
+        "--provider", action="append",
+        help="Only parishes with these bulletin providers (e.g. other)",
+    )
+    fetch_check_parser.add_argument(
+        "--record", type=Path, default=None,
+        help="Save the pages each resolver read here, for tests/test_fetch_replay.py",
+    )
+    fetch_check_parser.add_argument(
+        "--no-download", action="store_true", help="Resolve links only; skip the PDF download",
+    )
+    fetch_check_parser.set_defaults(handler=_cmd_fetch_check)
+    _add_common_args(fetch_check_parser)
 
     # -- process --
     process_parser = subparsers.add_parser("process", help="Process fetched PDFs with Gemini")
