@@ -65,6 +65,10 @@ OTHER_CURRENT_WINDOW_DAYS = 7
 # A bulletin found on one of those later links, dated further than this from
 # today, is an archive's, not the current one.
 OTHER_FALLBACK_MAX_AGE_DAYS = 45
+# A date without a year ("March 28", "12-28") is taken as the nearest such day,
+# but no further ahead than the coming Sunday: "October 4" read on 27 September
+# is in an archive of last year's bulletins, not next week's.
+YEARLESS_MAX_DAYS_AHEAD = 6
 # A parish whose newest bulletin is older than this is reported at the end of
 # the fetch stage: the resolver kept returning a link we already had.
 STALE_BULLETIN_AGE_DAYS = 14
@@ -361,6 +365,10 @@ def _resolve_other_latest_link(
         bulletin_page_urls = _find_other_bulletin_page_urls(
             page=p, base_url=provider_id, reference_date=today,
         )
+        # Some homepages link this week's bulletin PDF itself, with no page for
+        # it: read the homepage as the bulletin page, after any real one.
+        if _links_bulletin_pdf(page=p, base_url=p.url or provider_id):
+            bulletin_page_urls.append(provider_id)
         if not bulletin_page_urls:
             raise ValueError(f"No bulletin page link found for other provider at {provider_id}")
 
@@ -408,9 +416,27 @@ def _resolve_other_bulletin_page(
         page=page, selector="a[href]", state="attached", source_label=bulletin_page_url,
     )
     current_page_url = page.url or bulletin_page_url
+    # A "Bulletin" link can redirect straight to this week's PDF, sometimes by
+    # script once the page has loaded.
+    if urlparse(current_page_url).path.lower().endswith(".pdf"):
+        return current_page_url, current_page_url
+
     candidates = _collect_other_pdf_candidates(
         page=page, base_url=current_page_url, reference_date=reference_date,
     )
+    if not candidates:
+        # A page that links no PDF can still hand readers the issue elsewhere: a
+        # flipbook it embeds (this week's, while it lists only older ones), or
+        # a publisher's listing of dated PDFs.
+        issue_page_url = _find_embedded_flipbook_url(
+            page=page, base_url=current_page_url,
+        ) or _find_publisher_listing_url(page=page, base_url=current_page_url)
+        if issue_page_url is not None:
+            candidates = _collect_other_post_candidates(
+                page=page, post_url=issue_page_url, reference_date=reference_date,
+            )
+            if not candidates:
+                _goto_with_retry(page=page, page_url=bulletin_page_url)
 
     # Some sites (e.g. WordPress parish blogs) list each weekly bulletin as a
     # dated post that wraps the actual PDF, rather than linking to the PDF
@@ -520,7 +546,7 @@ def _find_other_bulletin_page_urls(
         if not has_in_href and not has_in_text:
             continue
         resolved = urljoin(base_url, href)
-        if resolved.lower().endswith(".pdf"):
+        if resolved.lower().endswith(".pdf") and not _is_publisher_listing(resolved):
             continue
         if has_in_href and has_in_text:
             both_matches.append(resolved)
@@ -533,6 +559,42 @@ def _find_other_bulletin_page_urls(
         return sorted(urls, key=lambda url: url in archives)
 
     return list(dict.fromkeys(_ranked(both_matches) + _ranked(either_matches)))
+
+
+def _links_bulletin_pdf(*, page: PageLike, base_url: str) -> bool:
+    """Whether the page links a PDF labelled as the bulletin."""
+    for anchor in page.query_selector_all("a[href]"):
+        href = anchor.get_attribute("href")
+        if not isinstance(href, str):
+            continue
+        resolved = urljoin(base_url, href)
+        if (
+            resolved.lower().endswith(".pdf")
+            and not _is_publisher_listing(resolved)
+            and "bulletin" in f"{_anchor_text(anchor)} {resolved}".lower()
+        ):
+            return True
+    return False
+
+
+# John Patrick Publishing's "current bulletin" link names a PDF, but redirects
+# to the parish's listing on church-bulletin.org, whose issues are dated PDFs
+# (/bulletin/<parish>/2026-09-27.pdf).
+_PUBLISHER_LISTING_URL = re.compile(
+    r"^https?://(?:www\.)?jppc\.net/onlinebulletins/\d+template\.pdf$", flags=re.IGNORECASE,
+)
+
+
+def _is_publisher_listing(url: str) -> bool:
+    return bool(_PUBLISHER_LISTING_URL.match(url))
+
+
+def _find_publisher_listing_url(*, page: PageLike, base_url: str) -> str | None:
+    for anchor in page.query_selector_all("a[href]"):
+        href = anchor.get_attribute("href")
+        if isinstance(href, str) and _is_publisher_listing(urljoin(base_url, href)):
+            return urljoin(base_url, href)
+    return None
 
 
 def _looks_like_archive(text: str, *, this_year: int) -> bool:
@@ -596,6 +658,19 @@ def _collect_google_drive_pdf_candidates(
     return candidates
 
 
+# Flipbook services a bulletin page can link each week's issue on. Their pages
+# name the issue's PDF in a script, which the rendered-HTML scan finds.
+FLIPBOOK_HOSTS = frozenset({"designrr.page"})
+
+
+def _find_embedded_flipbook_url(*, page: PageLike, base_url: str) -> str | None:
+    for frame in page.query_selector_all("iframe[src]"):
+        src = frame.get_attribute("src")
+        if isinstance(src, str) and urlparse(urljoin(base_url, src)).netloc.lower() in FLIPBOOK_HOSTS:
+            return urljoin(base_url, src)
+    return None
+
+
 def _find_latest_other_bulletin_post(
     *, page: PageLike, base_url: str, reference_date: date,
 ) -> tuple[date, str] | None:
@@ -608,10 +683,12 @@ def _find_latest_other_bulletin_post(
     dated: list[tuple[date, str]] = []
     # A page that is itself the bulletin listing may title its posts by the
     # Sunday alone ("September 27 - Twenty-Sixth Sunday"). Its dated links on
-    # the same site count too, if nothing says "bulletin" and they are current.
+    # the same site (or a flipbook service) count too, if nothing says "bulletin"
+    # and they are current.
     unlabelled: list[tuple[date, str]] = []
     listing_is_bulletins = "bulletin" in base_url.lower()
     base_host = urlparse(base_url).netloc.lower()
+    post_hosts = {base_host, *FLIPBOOK_HOSTS}
     base_normalized = base_url.rstrip("/").lower()
     for anchor in anchors:
         href = anchor.get_attribute("href")
@@ -626,7 +703,7 @@ def _find_latest_other_bulletin_post(
         text = _anchor_text(anchor)
         labelled = "bulletin" in href.lower() or "bulletin" in text.lower()
         if not labelled and not (
-            listing_is_bulletins and urlparse(resolved).netloc.lower() == base_host
+            listing_is_bulletins and urlparse(resolved).netloc.lower() in post_hosts
         ):
             continue
         parsed_date = _parse_relaxed_date_from_texts([text, href, resolved], reference_date)
@@ -640,6 +717,15 @@ def _find_latest_other_bulletin_post(
     posts = dated or unlabelled
     if not posts:
         return None
+    # A listing keeps its newest post at one end. Of this week's posts, take the
+    # one nearest that end: an archive of past years has its own "September 27
+    # & 28", read without a year as this week's too.
+    current = [post for post in posts if _is_current(post[0], reference_date)]
+    if current:
+        steps = list(zip(posts, posts[1:]))
+        newer_later = sum(later[0] > earlier[0] for earlier, later in steps)
+        older_later = sum(later[0] < earlier[0] for earlier, later in steps)
+        return current[-1] if newer_later > older_later else current[0]
     return max(posts, key=lambda pair: pair[0])
 
 
@@ -653,7 +739,7 @@ def _collect_other_pdf_candidates(
         if not isinstance(href, str):
             continue
         absolute_href = _unwrap_pdf_viewer_url(urljoin(base_url, href))
-        if ".pdf" not in absolute_href.lower():
+        if ".pdf" not in absolute_href.lower() or _is_publisher_listing(absolute_href):
             continue
         text = _anchor_text(anchor)
         parsed_date = _parse_relaxed_date_from_texts([text, href, absolute_href], reference_date)
@@ -665,17 +751,42 @@ def _collect_other_pdf_candidates(
                 labelled="bulletin" in f"{text} {absolute_href}".lower(),
             )
         )
-    if candidates:
+    if any(c.labelled or _is_current(c.parsed_date, reference_date) for c in candidates):
         return candidates
 
     # Fallback: some WordPress parish sites embed PDFs through script-based
     # viewers (e.g. the DFlip / 3D FlipBook plugin on elmiracatholic.org) which
     # inject the PDF URL as JSON inside a <script> tag rather than a plain
-    # <a href="..pdf">. Scan the rendered HTML as a last resort.
+    # <a href="..pdf">, or link a whole block to it by script (Divi). Scan the
+    # rendered HTML when the page's links are no bulletin, after those links.
+    try:
+        html = page.content()
+    except Exception:
+        html = ""
+    linked = {c.source_url for c in candidates}
+    candidates += [
+        c for c in _collect_pdf_urls_from_html(
+            html, base_url=base_url, reference_date=reference_date,
+        )
+        if c.source_url not in linked
+    ]
+    if candidates or PDF_EMBEDDER_VIEWER_CLASS not in html:
+        return candidates
+
+    # The PDF Embedder plugin replaces its <a href="...pdf"> with a viewer once
+    # its script runs, leaving the PDF's address only in the page as served.
+    try:
+        source = page.request.get(page.url or base_url).text()
+    except Exception as exc:
+        LOGGER.info("Could not read the served page %s: %s", page.url or base_url, exc)
+        return []
     return _collect_pdf_urls_from_html(
-        page=page, base_url=base_url, reference_date=reference_date,
+        source, base_url=base_url, reference_date=reference_date,
     )
 
+
+# The viewer the PDF Embedder WordPress plugin renders in place of its PDF link.
+PDF_EMBEDDER_VIEWER_CLASS = "pdfemb-viewer"
 
 # Up to the ".pdf" that ends the path: WordPress uploads can be named
 # "9-20-26.pdf.pdf.pdf", and stopping at the first ".pdf" names a file that 404s.
@@ -706,12 +817,8 @@ def _unwrap_pdf_viewer_url(url: str) -> str:
 
 
 def _collect_pdf_urls_from_html(
-    *, page: PageLike, base_url: str, reference_date: date,
+    html: str, *, base_url: str, reference_date: date,
 ) -> list[_OtherPdfCandidate]:
-    try:
-        html = page.content()
-    except Exception:
-        return []
     if not html:
         return []
 
@@ -723,7 +830,7 @@ def _collect_pdf_urls_from_html(
     seen: set[str] = set()
     for raw in _HTML_PDF_URL_PATTERN.findall(normalized):
         absolute_url = _unwrap_pdf_viewer_url(urljoin(base_url, raw))
-        if absolute_url in seen:
+        if absolute_url in seen or _is_publisher_listing(absolute_url):
             continue
         seen.add(absolute_url)
         parsed_date = _parse_relaxed_date_from_texts([absolute_url], reference_date)
@@ -771,12 +878,17 @@ def _parse_relaxed_date(text: str, reference_date: date) -> date | None:
         r"jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t)?(?:ember)?|"
         r"oct(?:ober)?|nov(?:ember)?|dec(?:ember)?"
     )
+    # A day is never part of a longer number ("October 2026" is not October 20).
+    # A weekend can be named by both its days before the year ("September 26 &
+    # 27, 2026", "Oct-4-5-2025"); the year is still the issue's.
     month_day_pattern = re.compile(
-        rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?:\s+(?P<year>\d{{2,4}}))?",
+        rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?!\d)"
+        r"(?:\s*(?:&|and|-|\s)\s*\d{1,2}(?=\s+\d{4}(?!\d)))?"
+        r"(?:\s+(?P<year>\d{2,4}))?",
         flags=re.IGNORECASE,
     )
     day_month_pattern = re.compile(
-        rf"(?P<day>\d{{1,2}})\s+(?P<month>{month_name})(?:\s+(?P<year>\d{{2,4}}))?",
+        rf"(?<!\d)(?P<day>\d{{1,2}})\s+(?P<month>{month_name})(?:\s+(?P<year>\d{{2,4}}))?",
         flags=re.IGNORECASE,
     )
 
@@ -870,7 +982,10 @@ def _resolve_yearless_date(*, month: int, day: int, reference_date: date) -> dat
     valid = [d for d in candidates if d is not None]
     if not valid:
         return None
-    return min(valid, key=lambda d: abs((d - reference_date).days))
+    not_too_far_ahead = [
+        d for d in valid if (d - reference_date).days <= YEARLESS_MAX_DAYS_AHEAD
+    ]
+    return min(not_too_far_ahead or valid, key=lambda d: abs((d - reference_date).days))
 
 
 def _safe_date(year: int, month: int, day: int) -> date | None:
@@ -970,10 +1085,12 @@ def _http_get_bytes(
 ) -> bytes:
     request_url = _normalize_url_for_request(url)
     headers = {
+        # WordPress.com's CDN answers 403 to a Chrome much older than the
+        # current one (122 was refused in September 2026), so keep this recent.
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/122.0.0.0 Safari/537.36"
+            "Chrome/140.0.0.0 Safari/537.36"
         ),
         "Accept": "*/*",
     }

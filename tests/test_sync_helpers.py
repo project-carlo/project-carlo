@@ -459,6 +459,8 @@ def test_resolve_other_latest_link_finds_pdf_embedded_in_script_on_post_page() -
             assert timeout == 15000
 
         def query_selector_all(self, selector: str):
+            if selector == "iframe[src]":
+                return []
             assert selector == "a[href]"
             if self.url == "https://elmiracatholic.org":
                 return [FakeAnchor("/news-bulletins/", "News/Bulletins")]
@@ -526,6 +528,8 @@ def test_resolve_other_latest_link_descends_into_latest_bulletin_post_when_no_pd
             assert timeout == 15000
 
         def query_selector_all(self, selector: str):
+            if selector == "iframe[src]":
+                return []
             assert selector == "a[href]"
             if self.url == "https://elmiracatholic.org":
                 return [FakeAnchor("/news-bulletins/", "News/Bulletins")]

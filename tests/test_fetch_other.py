@@ -22,15 +22,25 @@ TODAY = date(2026, 9, 26)
 HOME = "https://parish.example"
 
 
-def _site(pages: dict[str, str]) -> SnapshotPage:
+def _site(
+    pages: dict[str, str], *, redirects: dict[str, str] | None = None,
+    sources: dict[str, str] | None = None,
+) -> SnapshotPage:
+    """Pages by address; `redirects` sends an address on to another (its page is
+    served under the address asked for), and `sources` are pages as served."""
+    redirects = redirects or {}
     return SnapshotPage(
-        PageSnapshot(requested_url=url, final_url=url, html=html) for url, html in pages.items()
+        (
+            PageSnapshot(requested_url=url, final_url=redirects.get(url, url), html=html)
+            for url, html in pages.items()
+        ),
+        sources,
     )
 
 
-def _resolve(pages: dict[str, str]) -> str:
+def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
     source_url, _ = _resolve_other_latest_link(
-        provider_id=HOME, reference_date=TODAY, page=_site(pages),
+        provider_id=HOME, reference_date=TODAY, page=_site(pages, **site),
     )
     return source_url
 
@@ -44,6 +54,16 @@ def _resolve(pages: dict[str, str]) -> str:
         ("Bulletin-September-27-2026.pdf", date(2026, 9, 27)),
         ("/wp-content/uploads/20260927.pdf", date(2026, 9, 27)),
         ("/wp-content/uploads/20260920B.pdf", date(2026, 9, 20)),
+        # A day is not the start of the year, and a weekend's second day
+        # doesn't hide its year.
+        ("Bulletin 04 October 2026", date(2026, 10, 4)),
+        ("27-September-2026.pdf", date(2026, 9, 27)),
+        ("October 4 & 5, 2025", date(2025, 10, 4)),
+        # Without a year: the nearest such day, but not past the coming Sunday.
+        ("Bulletin September 27", date(2026, 9, 27)),
+        ("Bulletin October 4 & 5", date(2025, 10, 4)),
+        ("Bulletin March 28 & 29", date(2026, 3, 28)),
+        ("/12-28-bulletin-pdf/", date(2025, 12, 28)),
         # Ids and timestamps are not dates.
         ("/bulletins/1790326230.pdf", None),
         ("/_files/ugd/cea846_00334ad9684947469dd533a9f70fcc50.pdf", None),
@@ -180,3 +200,121 @@ def test_google_drive_folder_resolves_its_newest_pdf() -> None:
     )
     assert source_url == "https://drive.google.com/file/d/id-0927/view"
     assert fetch_url == "https://drive.google.com/uc?export=download&id=id-0927"
+
+
+def test_bulletin_pdf_linked_from_the_homepage_itself() -> None:
+    assert _resolve({
+        HOME: (
+            '<a href="bulletin.pdf">Bulletin</a>'
+            '<a href="images/registration.pdf">Download</a>'
+        ),
+    }) == f"{HOME}/bulletin.pdf"
+
+
+def test_bulletin_link_that_redirects_to_the_pdf() -> None:
+    pdf = f"{HOME}/resources/bulletin.pdf"
+    assert _resolve(
+        {
+            HOME: '<a href="announcements.html">Church Bulletin</a>',
+            f"{HOME}/announcements.html": '<embed type="application/pdf">',
+        },
+        redirects={f"{HOME}/announcements.html": pdf},
+    ) == pdf
+
+
+LISTING = "https://www.church-bulletin.org/saint-joseph-camillus-ny-13031"
+TEMPLATE = "https://www.jppc.net/onlinebulletins/4038template.pdf"
+LISTING_HTML = "".join(
+    f'<a href="https://www.church-bulletin.org/bulletin/saint-joseph-camillus-ny-13031/{day}.pdf">'
+    f"{label}</a>"
+    for day, label in [("2026-09-27", "View Current Bulletin"), ("2026-09-20", "Sep 20 2026")]
+)
+
+
+@pytest.mark.parametrize(
+    "pages",
+    [
+        {HOME: f'<a href="{TEMPLATE}">Current Bulletin</a>'},
+        {
+            HOME: '<a href="/bulletins/">Bulletins</a>',
+            f"{HOME}/bulletins/": f'<a href="{TEMPLATE}">This Week\'s Bulletin</a>',
+        },
+    ],
+    ids=["from-homepage", "from-bulletin-page"],
+)
+def test_publisher_template_link_opens_the_publishers_listing(pages) -> None:
+    assert _resolve({**pages, TEMPLATE: LISTING_HTML}, redirects={TEMPLATE: LISTING}) == (
+        "https://www.church-bulletin.org/bulletin/saint-joseph-camillus-ny-13031/2026-09-27.pdf"
+    )
+
+
+def _flipbook(pdf_name: str) -> str:
+    return (
+        '<script>FLIPBOOK.options = {"pdfUrl": '
+        f'"https:\\/\\/designrr.s3.amazonaws.com\\/parish\\/{pdf_name}"}};</script>'
+    )
+
+
+def test_flipbook_links_on_a_bulletin_page_are_followed() -> None:
+    assert _resolve({
+        HOME: '<a href="/weekly-bulletin.html">Weekly Bulletin</a>',
+        f"{HOME}/weekly-bulletin.html": (
+            '<a href="https://designrr.page/?id=1">September 20, 2026</a>'
+            '<a href="https://designrr.page/?id=2">September 27, 2026</a>'
+        ),
+        "https://designrr.page/?id=2": _flipbook("27September2026.pdf"),
+    }) == "https://designrr.s3.amazonaws.com/parish/27September2026.pdf"
+
+
+def test_flipbook_embedded_in_the_bulletin_page_is_this_weeks() -> None:
+    assert _resolve({
+        HOME: '<a href="/weekly-bulletin.html">Weekly Bulletin</a>',
+        f"{HOME}/weekly-bulletin.html": (
+            "<p>Week of: September 27, 2026</p>"
+            '<iframe src="https://designrr.page/?id=2"></iframe>'
+            '<a href="https://designrr.page/?id=1">September 20, 2026</a>'
+        ),
+        "https://designrr.page/?id=2": _flipbook("27September2026.pdf"),
+    }) == "https://designrr.s3.amazonaws.com/parish/27September2026.pdf"
+
+
+def test_pdf_embedder_post_is_read_as_served() -> None:
+    post = f"{HOME}/bulletin-9-27-2/"
+    pdf = f"{HOME}/wp-content/uploads/09.27.26.pdf"
+    assert _resolve(
+        {
+            HOME: '<a href="/category/bulletins/">Bulletins</a>',
+            f"{HOME}/category/bulletins/": f'<a href="{post}">Bulletin 9/27</a>',
+            post: '<div class="pdfemb-viewer"><canvas class="pdfemb-the-canvas"></canvas></div>',
+        },
+        sources={post: f'<a href="{pdf}" class="pdfemb-viewer">09.27.26</a>'},
+    ) == pdf
+
+
+def test_pdf_linked_by_script_wins_over_an_unrelated_footer_pdf() -> None:
+    post = f"{HOME}/bulletin-27-september-2026/"
+    pdf = f"{HOME}/wp-content/uploads/09-27-2026-Bulletin.pdf"
+    footer = '<a href="/wp-content/uploads/Terms-and-Conditions-2022-1.pdf">Terms</a>'
+    assert _resolve({
+        HOME: '<a href="/category/bulletins/">Bulletins</a>',
+        f"{HOME}/category/bulletins/": f'{footer}<a href="{post}">Bulletin 27 September 2026</a>',
+        post: f'{footer}<script>var diviElementLinkData = [{{"url":"{pdf}"}}];</script>',
+    }) == pdf
+
+
+def test_this_years_post_wins_over_last_years_with_the_same_day() -> None:
+    # Newest first, without years: last year's "September 27 & 28" reads as
+    # this week's too.
+    assert _resolve({
+        HOME: '<a href="/newsletters">Bulletins</a>',
+        f"{HOME}/newsletters": (
+            '<a href="/s/PRIVACY-POLICY.pdf">Our Privacy Statement</a>'
+            '<a href="/b/bulletin-september-26-amp-27">Bulletin September 26 &amp; 27</a>'
+            '<a href="/b/bulletin-september-19-amp-20">Bulletin September 19 &amp; 20</a>'
+            '<a href="/b/bulletin-october-4-amp-5">Bulletin October 4 &amp; 5</a>'
+            '<a href="/b/bulletin-september-27-amp-28">Bulletin September 27 &amp; 28</a>'
+        ),
+        f"{HOME}/b/bulletin-september-26-amp-27": (
+            '<a href="/s/Bulletin-for-9-2627FINAL.pdf">Bulletin</a>'
+        ),
+    }) == f"{HOME}/s/Bulletin-for-9-2627FINAL.pdf"

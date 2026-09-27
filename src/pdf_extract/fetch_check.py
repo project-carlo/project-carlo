@@ -148,10 +148,36 @@ def _url_key(url: str) -> str:
     return url.rstrip("/").lower()
 
 
-class SnapshotPage:
-    """A `PageLike` that serves recorded pages instead of the network."""
+@dataclass(frozen=True)
+class _SourceResponse:
+    body: str
 
-    def __init__(self, snapshots: Iterable[PageSnapshot]) -> None:
+    def text(self) -> str:
+        return self.body
+
+
+class _SnapshotRequest:
+    def __init__(self, sources: dict[str, str]) -> None:
+        self._sources = {_url_key(url): html for url, html in sources.items()}
+
+    def get(self, url: str) -> _SourceResponse:
+        html = self._sources.get(_url_key(url))
+        if html is None:
+            raise SnapshotMissing(f"No recorded source for {url}; re-record this parish")
+        return _SourceResponse(html)
+
+
+class SnapshotPage:
+    """A `PageLike` that serves recorded pages instead of the network.
+
+    `sources` are pages as the server sent them, before any script ran, for
+    resolvers that read one through `page.request`.
+    """
+
+    def __init__(
+        self, snapshots: Iterable[PageSnapshot], sources: dict[str, str] | None = None,
+    ) -> None:
+        self.request = _SnapshotRequest(sources or {})
         self._by_url = {_url_key(s.requested_url): s for s in snapshots}
         self._current: PageSnapshot | None = None
         self._elements: list[SnapshotElement] = []
@@ -204,6 +230,17 @@ def _slim_html(html: str) -> str:
     return _SCRIPT.sub(lambda m: m.group(0) if ".pdf" in m.group(0).lower() else "", html)
 
 
+class _RecordingRequest:
+    def __init__(self, page: PageLike, sources: dict[str, str]) -> None:
+        self._page = page
+        self._sources = sources
+
+    def get(self, url: str) -> _SourceResponse:
+        html = self._page.request.get(url).text()
+        self._sources[url] = _slim_html(html)
+        return _SourceResponse(html)
+
+
 class RecordingPage:
     """Wraps a live page and keeps what the resolver saw on each page it opened."""
 
@@ -211,6 +248,8 @@ class RecordingPage:
         self._page = page
         self._requested: str | None = None
         self.snapshots: dict[str, PageSnapshot] = {}
+        self.sources: dict[str, str] = {}
+        self.request = _RecordingRequest(page, self.sources)
 
     def _record(self) -> None:
         if self._requested is None:
@@ -255,9 +294,9 @@ class RecordingPage:
 
 def save_recording(
     path: Path, *, slug: str, provider: str, provider_id: str, reference_date: date,
-    snapshots: Iterable[PageSnapshot],
+    snapshots: Iterable[PageSnapshot], sources: dict[str, str] | None = None,
 ) -> None:
-    payload = {
+    payload: dict[str, object] = {
         "slug": slug,
         "provider": provider,
         "provider_id": provider_id,
@@ -267,6 +306,8 @@ def save_recording(
             for s in snapshots
         ],
     }
+    if sources:
+        payload["sources"] = sources
     path.parent.mkdir(parents=True, exist_ok=True)
     # mtime=0 keeps a re-recording of unchanged pages byte-identical.
     with open(path, "wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as gz:
@@ -280,9 +321,10 @@ class Recording:
     provider_id: str
     reference_date: date
     snapshots: list[PageSnapshot]
+    sources: dict[str, str] = field(default_factory=dict)
 
     def page(self) -> SnapshotPage:
-        return SnapshotPage(self.snapshots)
+        return SnapshotPage(self.snapshots, self.sources)
 
     def resolve(self) -> fetch.BulletinLink:
         """Run today's resolver for this parish against the recorded pages."""
@@ -301,6 +343,7 @@ def load_recording(path: Path) -> Recording:
         provider_id=payload["provider_id"],
         reference_date=date.fromisoformat(payload["reference_date"]),
         snapshots=[PageSnapshot(**p) for p in payload["pages"]],
+        sources=payload.get("sources", {}),
     )
 
 
@@ -407,6 +450,7 @@ def check_fetch(
                     record_dir / f"{slug}{SNAPSHOT_SUFFIX}",
                     slug=slug, provider=provider, provider_id=provider_id,
                     reference_date=today, snapshots=page.snapshots.values(),
+                    sources=page.sources,
                 )
 
     counts = Counter(str(row["status"]) for row in rows)

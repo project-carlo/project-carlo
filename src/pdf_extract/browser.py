@@ -24,6 +24,16 @@ class AnchorLike(Protocol):
     def text_content(self) -> str | None: ...
 
 
+class ResponseLike(Protocol):
+    def text(self) -> str: ...
+
+
+class RequestLike(Protocol):
+    """Playwright's `page.request`: HTTP with the page's cookies, no rendering."""
+
+    def get(self, url: str) -> ResponseLike: ...
+
+
 class PageLike(Protocol):
     def goto(self, url: str, wait_until: str = ..., timeout: float = ...) -> None: ...
     def wait_for_selector(
@@ -35,6 +45,9 @@ class PageLike(Protocol):
 
     @property
     def url(self) -> str: ...
+
+    @property
+    def request(self) -> RequestLike: ...
 
 
 @contextmanager
