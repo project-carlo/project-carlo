@@ -217,8 +217,25 @@ function overlayInsets(map: LeafletMap): L.Point {
 }
 
 /**
- * The map centre that puts `latlng` in the middle of the part of the map the
- * floating UI leaves uncovered, at `zoom`.
+ * How far a target is moved from the map's centre towards the middle of the
+ * uncovered area, as a fraction of the way there. The dead centre of the
+ * space beside the desktop panel reads as off to the right of the screen,
+ * so across it stops a quarter short; down (below the phone's search card)
+ * it goes all the way.
+ */
+const FREE_AREA_PULL = { x: 0.75, y: 1 };
+
+/** The on-screen shift from the map's centre to where a target is put. */
+function freeAreaOffset(insets: L.Point): L.Point {
+  return L.point(
+    (insets.x / 2) * FREE_AREA_PULL.x,
+    (insets.y / 2) * FREE_AREA_PULL.y,
+  );
+}
+
+/**
+ * The map centre that puts `latlng` in (or, across, nearly in) the middle
+ * of the part of the map the floating UI leaves uncovered, at `zoom`.
  */
 function centerInFreeArea(
   map: LeafletMap,
@@ -227,9 +244,26 @@ function centerInFreeArea(
   insets: L.Point,
 ): L.LatLng {
   return map.unproject(
-    map.project(latlng, zoom).subtract(insets.divideBy(2)),
+    map.project(latlng, zoom).subtract(freeAreaOffset(insets)),
     zoom,
   );
+}
+
+/** Fastest a camera move may zoom, in zoom levels per second. Leaflet's
+ *  flyTo takes a fixed duration, so a four-level jump in the same time as a
+ *  one-level one rushes past everything in between. */
+const MAX_ZOOM_LEVELS_PER_SECOND = 2.5;
+const MIN_FLY_SECONDS = 0.6;
+const MAX_FLY_SECONDS = 2;
+
+/** Fly to `zoom`, taking longer the further the zoom has to change. */
+function flyGently(map: LeafletMap, target: L.LatLng, zoom: number): void {
+  const levels = Math.abs(zoom - map.getZoom());
+  const duration = Math.min(
+    Math.max(levels / MAX_ZOOM_LEVELS_PER_SECOND, MIN_FLY_SECONDS),
+    MAX_FLY_SECONDS,
+  );
+  map.flyTo(target, zoom, { duration });
 }
 
 function ChangeView({
@@ -260,7 +294,7 @@ function ChangeView({
       overlayInsets(map),
     );
     if (zoom != null) {
-      map.flyTo(target, zoom, { duration: 0.8 });
+      flyGently(map, target, zoom);
     } else {
       map.panTo(target);
     }
@@ -589,10 +623,16 @@ function ClusteredChurchMarkers({
       // pin. A roundel of one has no extent to fit, so it goes straight to
       // that zoom.
       const insets = overlayInsets(map);
+      // The target stops short of the free area's middle across (see
+      // FREE_AREA_PULL), so the fit keeps that much more room on each side
+      // to stay clear of the panel.
+      const shortfall = insets.divideBy(2).subtract(freeAreaOffset(insets));
       const fitZoom = map.getBoundsZoom(
         bounds,
         false,
-        insets.add([2 * ZOOM_INTO_MARGIN, 2 * ZOOM_INTO_MARGIN]),
+        insets
+          .add(shortfall.multiplyBy(2))
+          .add([2 * ZOOM_INTO_MARGIN, 2 * ZOOM_INTO_MARGIN]),
       );
       const zoom = Math.max(
         Math.min(Math.max(fitZoom, index.expansionZoom(cluster.id)), PIN_ZOOM),
@@ -600,10 +640,10 @@ function ClusteredChurchMarkers({
       );
       // Leaflet's flyToBounds takes the same padding but can only cap the
       // zoom, not floor it, so the centre is worked out here instead.
-      map.flyTo(
+      flyGently(
+        map,
         centerInFreeArea(map, bounds.getCenter(), zoom, insets),
         zoom,
-        { duration: 0.6 },
       );
     },
     [index, map],
