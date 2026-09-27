@@ -1,18 +1,39 @@
-import { Fragment, memo, useEffect, useMemo, useRef } from "react";
+import {
+  Fragment,
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import type { RefObject } from "react";
 import { Link } from "react-router-dom";
 import {
   MapContainer,
   Marker,
+  Polygon,
   Popup,
   TileLayer,
   useMap,
   useMapEvents,
 } from "react-leaflet";
-import type { Marker as LeafletMarker } from "leaflet";
+import type {
+  LeafletEventHandlerFnMap,
+  Map as LeafletMap,
+  Marker as LeafletMarker,
+} from "leaflet";
 import L from "leaflet";
 import type { ChurchMapItem } from "../types";
 import type { MapView } from "../lib/mapView";
+import {
+  buildClusterIndex,
+  CLUSTER_MAX_ZOOM,
+  convexHull,
+  type BBox,
+  type ClusterIndex,
+  type MapCluster,
+} from "../lib/mapClusters";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
 import { Fleuron } from "@/components/Fleuron";
@@ -158,13 +179,25 @@ function PopupPaneElevator() {
 
 function ChangeView({
   center,
+  minZoom,
 }: {
   center: { lat: number; lng: number; zoom?: number; requestId?: number };
+  /**
+   * Zoom the camera must reach, when a selected church would otherwise sit
+   * inside a cluster at the requested (or current) zoom. Read through a ref:
+   * a filter change can move it, and that alone mustn't re-fly the map.
+   */
+  minZoom?: number | null;
 }) {
   const map = useMap();
+  const minZoomRef = useRef(minZoom);
+  minZoomRef.current = minZoom;
   useEffect(() => {
-    if (center.zoom != null) {
-      map.flyTo([center.lat, center.lng], center.zoom, { duration: 0.8 });
+    let zoom = center.zoom;
+    const floor = minZoomRef.current;
+    if (floor != null && (zoom ?? map.getZoom()) < floor) zoom = floor;
+    if (zoom != null) {
+      map.flyTo([center.lat, center.lng], zoom, { duration: 0.8 });
     } else {
       map.panTo([center.lat, center.lng]);
     }
@@ -304,27 +337,35 @@ function useSelectedMarkerClass(markerRef: RefObject<LeafletMarker | null>) {
 const ChurchMarker = memo(function ChurchMarker({
   church,
   openPopupRequestId,
+  onPopupRequestHandled,
 }: {
-  church: ChurchMapItem;
+  church: MappedChurch;
   /**
    * Set only on the marker a selection targets, and bumped on every repeat
    * selection. Leaving it undefined everywhere else keeps the other markers'
    * props identical so they never re-render when one pin is picked.
    */
   openPopupRequestId: number | undefined;
+  /**
+   * Called once the requested popup is open. Pins mount and unmount as
+   * clusters split and merge, so without this a pin that was selected once
+   * would re-open its popup every time zooming brought it back.
+   */
+  onPopupRequestHandled: (requestId: number) => void;
 }) {
   const markerRef = useRef<LeafletMarker | null>(null);
   useEffect(() => {
     if (openPopupRequestId !== undefined) {
       markerRef.current?.openPopup();
+      onPopupRequestHandled(openPopupRequestId);
     }
-  }, [openPopupRequestId]);
+  }, [openPopupRequestId, onPopupRequestHandled]);
 
   // A fresh array literal here would look like a moved marker to react-leaflet,
   // which would call setLatLng (and re-project and re-transform the pin) on
   // every render.
   const position = useMemo<[number, number]>(
-    () => [church.latitude as number, church.longitude as number],
+    () => [church.latitude, church.longitude],
     [church.latitude, church.longitude],
   );
   const eventHandlers = useSelectedMarkerClass(markerRef);
@@ -342,6 +383,209 @@ const ChurchMarker = memo(function ChurchMarker({
     </Marker>
   );
 });
+
+/** A church the map can place. */
+type MappedChurch = ChurchMapItem & { latitude: number; longitude: number };
+
+function hasCoords(church: ChurchMapItem): church is MappedChurch {
+  return church.latitude !== null && church.longitude !== null;
+}
+
+/** From a church pin's tip (its anchor) up to the middle of its round head. */
+const PIN_HEAD_RISE = 24;
+
+/** Roundel diameter by cluster size: a small group stays about a pin wide,
+ *  and a city-sized one reads as bigger without swallowing its neighbours. */
+function clusterDiameter(count: number): number {
+  if (count < 10) return 32;
+  if (count < 50) return 38;
+  if (count < 100) return 44;
+  return 50;
+}
+
+// One icon per count: `L.divIcon` options are plain data, and reusing the
+// same object keeps react-leaflet from calling setIcon on every re-render.
+const clusterIcons = new Map<number, L.DivIcon>();
+
+function clusterIcon(count: number): L.DivIcon {
+  let icon = clusterIcons.get(count);
+  if (!icon) {
+    const size = clusterDiameter(count);
+    icon = L.divIcon({
+      html: `<span class="church-map-cluster-disc" style="width:${size}px;height:${size}px"><span class="church-map-cluster-count">${count}</span></span>`,
+      className: "church-map-cluster",
+      iconSize: [size, size],
+      // Centred where a pin's head would be, not on the point itself (where a
+      // pin puts its tip), so a roundel splits into pins at the same height.
+      iconAnchor: [size / 2, size / 2 + PIN_HEAD_RISE],
+    });
+    clusterIcons.set(count, icon);
+  }
+  return icon;
+}
+
+const ClusterMarker = memo(function ClusterMarker({
+  cluster,
+  onSelect,
+  onHover,
+}: {
+  cluster: MapCluster;
+  onSelect: (cluster: MapCluster) => void;
+  onHover: (cluster: MapCluster | null) => void;
+}) {
+  const position = useMemo<[number, number]>(
+    () => [cluster.lat, cluster.lng],
+    [cluster.lat, cluster.lng],
+  );
+  const eventHandlers = useMemo<LeafletEventHandlerFnMap>(
+    () => ({
+      click: () => onSelect(cluster),
+      mouseover: () => onHover(cluster),
+      mouseout: () => onHover(null),
+    }),
+    [cluster, onSelect, onHover],
+  );
+  return (
+    <Marker
+      icon={clusterIcon(cluster.count)}
+      position={position}
+      title={`${cluster.count} churches — zoom in`}
+      // Above the pins, so a count is never hidden behind a neighbour's pin.
+      zIndexOffset={500}
+      eventHandlers={eventHandlers}
+    />
+  );
+});
+
+/** How far past the visible map, as a fraction of its size on each side,
+ *  markers are still drawn, so a short pan doesn't reveal empty ground. */
+const VIEWPORT_PADDING = 0.5;
+
+interface Viewport {
+  zoom: number;
+  bbox: BBox;
+}
+
+function readViewport(map: LeafletMap): Viewport {
+  const bounds = map.getBounds().pad(VIEWPORT_PADDING);
+  return {
+    zoom: map.getZoom(),
+    bbox: [
+      bounds.getWest(),
+      bounds.getSouth(),
+      bounds.getEast(),
+      bounds.getNorth(),
+    ],
+  };
+}
+
+/**
+ * The church pins and cluster roundels for the current view.
+ *
+ * Only what falls in (and just around) the viewport is rendered, and the set
+ * is recomputed once each pan or zoom settles, so the DOM holds tens of
+ * markers however many churches the snapshot has.
+ */
+function ClusteredChurchMarkers({
+  index,
+  popupRequest,
+  onPopupRequestHandled,
+}: {
+  index: ClusterIndex<MappedChurch>;
+  popupRequest: { churchId: number; requestId: number } | null;
+  onPopupRequestHandled: (requestId: number) => void;
+}) {
+  const map = useMap();
+  const [viewport, setViewport] = useState(() => readViewport(map));
+  const [hovered, setHovered] = useState<MapCluster | null>(null);
+  useMapEvents({
+    moveend: () => setViewport(readViewport(map)),
+  });
+
+  const entries = useMemo(
+    () => index.entries(viewport.bbox, viewport.zoom),
+    [index, viewport],
+  );
+
+  const zoomInto = useCallback(
+    (cluster: MapCluster) => {
+      setHovered(null);
+      const leaves = index.leaves(cluster.id);
+      const bounds = L.latLngBounds(
+        leaves.map((church) => [church.latitude, church.longitude]),
+      );
+      // As close as keeps every church in the roundel on screen, but at
+      // least far enough to split it, and never past the zoom where every
+      // church already has its own pin.
+      const fitZoom = map.getBoundsZoom(bounds, false, L.point(96, 96));
+      const zoom = Math.min(
+        Math.max(fitZoom, index.expansionZoom(cluster.id)),
+        CLUSTER_MAX_ZOOM + 1,
+      );
+      map.flyTo(bounds.getCenter(), Math.max(zoom, map.getZoom() + 1), {
+        duration: 0.6,
+      });
+    },
+    [index, map],
+  );
+
+  // Looked up in what's drawn, so the shading goes as soon as a zoom splits
+  // or merges the hovered roundel (or a filter change rebuilds the index),
+  // whether or not Leaflet sent a mouseout.
+  const hoveredCluster = hovered
+    ? entries.find(
+        (entry) => entry.kind === "cluster" && entry.id === hovered.id,
+      )
+    : undefined;
+  const coverage = useMemo(
+    () =>
+      hoveredCluster && hoveredCluster.kind === "cluster"
+        ? convexHull(
+            index
+              .leaves(hoveredCluster.id)
+              .map((church) => [church.latitude, church.longitude]),
+          )
+        : null,
+    [index, hoveredCluster],
+  );
+
+  return (
+    <>
+      {coverage ? (
+        // Options as props, not `pathOptions`: react-leaflet applies those
+        // through setStyle, which ignores `className`.
+        <Polygon
+          positions={coverage}
+          className="church-map-coverage"
+          interactive={false}
+          opacity={1}
+          fillOpacity={1}
+        />
+      ) : null}
+      {entries.map((entry) =>
+        entry.kind === "cluster" ? (
+          <ClusterMarker
+            key={`cluster-${entry.id}`}
+            cluster={entry}
+            onSelect={zoomInto}
+            onHover={setHovered}
+          />
+        ) : (
+          <ChurchMarker
+            key={entry.item.id}
+            church={entry.item}
+            openPopupRequestId={
+              popupRequest?.churchId === entry.item.id
+                ? popupRequest.requestId
+                : undefined
+            }
+            onPopupRequestHandled={onPopupRequestHandled}
+          />
+        ),
+      )}
+    </>
+  );
+}
 
 const SearchPlaceMarker = memo(function SearchPlaceMarker({
   place,
@@ -391,12 +635,10 @@ export const ChurchMap = memo(function ChurchMap({
   initialView,
   onViewChange,
 }: ChurchMapProps) {
-  const withCoords = useMemo(
-    () =>
-      churches.filter(
-        (church) => church.latitude !== null && church.longitude !== null,
-      ),
-    [churches],
+  const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
+  const clusterIndex = useMemo(
+    () => buildClusterIndex(withCoords),
+    [withCoords],
   );
   // MapContainer only reads center/zoom on mount, which is exactly what we want:
   // restore the persisted view once, then let the user (and `centerOn`) drive it.
@@ -404,6 +646,22 @@ export const ChurchMap = memo(function ChurchMap({
     ? [initialView.lat, initialView.lng]
     : defaultCenter;
   const zoom = initialView?.zoom ?? 11;
+
+  // The last selection whose popup has been opened; see ChurchMarker.
+  const [handledRequestId, setHandledRequestId] = useState<number | null>(
+    null,
+  );
+  const selectedChurchId = centerOn?.churchId;
+  const selectionRequestId = centerOn?.requestId ?? 0;
+  const popupRequest = useMemo(
+    () =>
+      selectedChurchId != null && selectionRequestId !== handledRequestId
+        ? { churchId: selectedChurchId, requestId: selectionRequestId }
+        : null,
+    [selectedChurchId, selectionRequestId, handledRequestId],
+  );
+  const selectedSoloZoom =
+    selectedChurchId != null ? clusterIndex.soloZoom(selectedChurchId) : null;
 
   return (
     <MapContainer
@@ -413,7 +671,7 @@ export const ChurchMap = memo(function ChurchMap({
       scrollWheelZoom
       zoomControl={false}
     >
-      {centerOn && <ChangeView center={centerOn} />}
+      {centerOn && <ChangeView center={centerOn} minZoom={selectedSoloZoom} />}
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
       <PopupPaneElevator />
       <TileLayer
@@ -421,15 +679,11 @@ export const ChurchMap = memo(function ChurchMap({
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         maxZoom={19}
       />
-      {withCoords.map((church) => (
-        <ChurchMarker
-          key={church.id}
-          church={church}
-          openPopupRequestId={
-            centerOn?.churchId === church.id ? (centerOn.requestId ?? 0) : undefined
-          }
-        />
-      ))}
+      <ClusteredChurchMarkers
+        index={clusterIndex}
+        popupRequest={popupRequest}
+        onPopupRequestHandled={setHandledRequestId}
+      />
       {centerOn?.placeTitle ? (
         <SearchPlaceMarker
           place={{

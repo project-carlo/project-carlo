@@ -220,7 +220,9 @@ export const scenarios = [
 
       const popup = await page.evaluate(async () => {
         const bench = window.__bench;
-        const marker = document.querySelector(".leaflet-marker-icon");
+        // A church pin, not a cluster roundel (which zooms rather than
+        // opening a popup).
+        const marker = document.querySelector(".church-map-marker");
         if (!marker) throw new Error("no marker to click");
         const startedAt = bench.now();
         const sample = await bench.measure(() => {
