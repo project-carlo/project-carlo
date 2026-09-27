@@ -129,8 +129,9 @@ Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to c
 - `bulletin_provider`: `parishes_online`, `ecatholic`, `discover_mass`, `other`,
   `google_drive` or `no_bulletin`. `fetch` reads ParishesOnline and DiscoverMass by
   `provider_id` (the org slug from `parishesonline.com/organization/<slug>`, the church slug
-  from `discovermass.com/church/<slug>/`). It reads eCatholic and `other` from `website`, so
-  for eCatholic the website has to be the eCatholic-hosted site.
+  from `discovermass.com/church/<slug>/`). It reads eCatholic, `other` and `google_drive`
+  from `website`, so for eCatholic the website has to be the eCatholic-hosted site, and for
+  `google_drive` it has to link the shared folder.
 - `publication`: ids of the bulletin itself, as `scheme:value`. **Two parish rows may never
   share one**, and `validate` enforces that across every diocese: it catches "one bulletin
   carried as several rows", a mistake that shows up in no other check. Record every form
