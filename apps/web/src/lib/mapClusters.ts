@@ -1,10 +1,17 @@
 /**
  * Pin clustering for the church map.
  *
- * Zoomed out, churches whose pins would pile on top of each other are drawn
- * as one numbered roundel; zooming in splits it apart. The algorithm is the
- * one supercluster uses — greedy, hierarchical, built once from the closest
- * zoom outwards — with one change: the merge radius depends on the zoom.
+ * Whether the map clusters at all is decided by the zoom alone. At
+ * `CLUSTER_MAX_ZOOM` and every zoom further out, every church is drawn inside
+ * a numbered roundel — a church with no neighbours near it gets a roundel of
+ * its own, marked 1 — and from `PIN_ZOOM` in every church has its own pin.
+ * One rule for the whole map reads better than pins and roundels mixed by
+ * how crowded each patch of it happens to be.
+ *
+ * Which churches share a roundel is decided by how close they are. The
+ * algorithm is the one supercluster uses — greedy, hierarchical, built once
+ * from the closest zoom outwards — with one change: the merge radius depends
+ * on the zoom.
  *
  * - Greedy: at each zoom, take the biggest group not yet placed and absorb
  *   every other group within the radius of it.
@@ -12,26 +19,29 @@
  *   in, so a roundel at zoom z is always a union of what's drawn at z + 1.
  *   Zooming in only ever splits a roundel; it never regroups its churches
  *   with others.
- * - Radius by zoom: about one pin wide in a metro-sized view, so only pins
- *   that would overlap are merged, and wider in a state-sized view, where
- *   single pins can't be told apart anyway and small roundels would pile up
- *   on each other.
- *
- * From `CLUSTER_MAX_ZOOM + 1` (a town-sized view) every church has its own
- * pin.
+ * - Radius by zoom: a little over one roundel wide at the cutoff, so only
+ *   roundels that would overlap are merged, and wider in a state-sized view,
+ *   where small roundels would otherwise pile up on each other.
  */
 
-/** The last zoom that clusters. */
-export const CLUSTER_MAX_ZOOM = 12;
+/**
+ * The last zoom that clusters: here and further out, every church is in a
+ * roundel. Zoom 10 takes in a few counties. The default view (zoom 11) and a
+ * place search (zoom 12) are closer in, so they open on pins.
+ */
+export const CLUSTER_MAX_ZOOM = 10;
+
+/** The first zoom at which every church has a pin of its own. */
+export const PIN_ZOOM = CLUSTER_MAX_ZOOM + 1;
 
 /**
  * How close, in screen pixels, two groups must be at `zoom` to share a
- * roundel. The church pin is 34 × 42 px, so at metro zooms the radius is
- * about one pin: churches further apart than that already read as separate
- * pins. Each step out adds a few pixels.
+ * roundel. A small roundel is 28–32 px across, so at the cutoff the radius
+ * leaves a few pixels between the ones it keeps apart. Each step out adds a
+ * few more.
  */
 export function clusterRadiusPx(zoom: number): number {
-  return Math.min(60, Math.max(28, 34 + (11 - zoom) * 6));
+  return Math.min(60, 40 + (CLUSTER_MAX_ZOOM - zoom) * 6);
 }
 
 /** Leaflet's tile size: a zoom-z world is `TILE_SIZE * 2^z` pixels wide. */
@@ -63,15 +73,22 @@ export interface MapCluster {
 export type MapEntry<T> = MapPoint<T> | MapCluster;
 
 export interface ClusterIndex<T extends ClusterablePoint> {
-  /** What to draw in `bbox` at `zoom`: lone churches and roundels. */
+  /**
+   * What to draw in `bbox` at `zoom`: only roundels up to `CLUSTER_MAX_ZOOM`,
+   * only churches from `PIN_ZOOM`.
+   */
   entries(bbox: BBox, zoom: number): MapEntry<T>[];
   /** Every church inside a roundel. */
   leaves(clusterId: number): T[];
-  /** The zoom at which a roundel splits. */
+  /**
+   * The zoom at which a roundel splits, or, for a roundel of one, becomes a
+   * pin.
+   */
   expansionZoom(clusterId: number): number;
   /**
-   * The lowest zoom at which this church has a pin of its own, or `null` if
-   * it isn't in the index (filtered out, or without coordinates).
+   * The lowest zoom at which this church has a pin of its own (`PIN_ZOOM`),
+   * or `null` if it isn't in the index (filtered out, or without
+   * coordinates).
    */
   soloZoom(itemId: number): number | null;
 }
@@ -82,9 +99,10 @@ interface Group<T> {
   x: number;
   y: number;
   count: number;
-  /** The church, for a group of one. */
+  /** The church, at `PIN_ZOOM`, where every group is one pin. */
   item: T | null;
-  /** A roundel's entry; its `id` keys its React marker. */
+  /** A roundel's entry, at every zoom that clusters; its `id` keys its React
+   *  marker. */
   cluster: MapCluster | null;
   /** The groups one zoom closer in that merged into this roundel. */
   children: Group<T>[];
@@ -96,7 +114,7 @@ export function buildClusterIndex<T extends ClusterablePoint>(
   items: readonly T[],
 ): ClusterIndex<T> {
   const clusters = new Map<number, { group: Group<T>; zoom: number }>();
-  const soloZoomById = new Map<number, number>();
+  const ids = new Set(items.map((item) => item.id));
 
   // levels[z] is what is drawn at zoom z.
   const levels: Group<T>[][] = [];
@@ -109,23 +127,18 @@ export function buildClusterIndex<T extends ClusterablePoint>(
     children: [],
     order,
   }));
-  for (const group of level) soloZoomById.set(group.item!.id, 0);
-  levels[CLUSTER_MAX_ZOOM + 1] = level;
+  levels[PIN_ZOOM] = level;
 
   for (let zoom = CLUSTER_MAX_ZOOM; zoom >= 0; zoom--) {
-    level = mergeLevel(level, zoom, (group, members) => {
+    level = mergeLevel(level, zoom, (group) => {
       clusters.set(group.cluster!.id, { group, zoom });
-      for (const member of members) {
-        // Merged here, so this church stands alone only from one zoom in.
-        if (member.item) soloZoomById.set(member.item.id, zoom + 1);
-      }
     });
     levels[zoom] = level;
   }
 
   return {
     entries(bbox, zoom) {
-      const z = Math.min(Math.max(Math.floor(zoom), 0), CLUSTER_MAX_ZOOM + 1);
+      const z = Math.min(Math.max(Math.floor(zoom), 0), PIN_ZOOM);
       const [west, south, east, north] = bbox;
       const allLngs = east - west >= 360;
       const entries: MapEntry<T>[] = [];
@@ -152,11 +165,11 @@ export function buildClusterIndex<T extends ClusterablePoint>(
 
     expansionZoom(clusterId) {
       const found = clusters.get(clusterId);
-      return found ? found.zoom + 1 : CLUSTER_MAX_ZOOM + 1;
+      return found ? found.zoom + 1 : PIN_ZOOM;
     },
 
     soloZoom(itemId) {
-      return soloZoomById.get(itemId) ?? null;
+      return ids.has(itemId) ? PIN_ZOOM : null;
     },
   };
 }
@@ -169,12 +182,13 @@ let nextClusterId = 1;
 /**
  * Cluster one zoom's groups into the next zoom out. Groups are bucketed into
  * a grid of radius-sized cells, so each one only checks the 3 × 3 cells
- * around it.
+ * around it. Every group that comes out is a roundel: at the cutoff, a
+ * church with nothing near it becomes a roundel of one.
  */
 function mergeLevel<T>(
   groups: readonly Group<T>[],
   zoom: number,
-  onMerge: (group: Group<T>, members: readonly Group<T>[]) => void,
+  onCreate: (group: Group<T>) => void,
 ): Group<T>[] {
   const radius = clusterRadiusPx(zoom) / (TILE_SIZE * 2 ** zoom);
   const radiusSq = radius * radius;
@@ -222,7 +236,9 @@ function mergeLevel<T>(
         }
       }
     }
-    if (members.length === 1) {
+    // A roundel that absorbed nothing is the same roundel one zoom out, so
+    // it keeps its id (and its marker) and splits at the same zoom.
+    if (members.length === 1 && seed.cluster) {
       out.push(seed);
       continue;
     }
@@ -252,7 +268,7 @@ function mergeLevel<T>(
       children: members,
       order: Math.min(...members.map((member) => member.order)),
     };
-    onMerge(group, members);
+    onCreate(group);
     out.push(group);
   }
   return out;

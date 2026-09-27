@@ -124,12 +124,17 @@ the next one is added.
   current map bounds plus half a viewport of padding on each side, and are
   updated on `moveend`. The default view is zoom 11, a single metro area, so
   this alone keeps the DOM at tens of markers regardless of total size.
-- **Clustering at low zoom.** `apps/web/src/lib/mapClusters.ts` collapses pins
-  into numbered roundels when zoomed out. It uses supercluster's algorithm
-  (greedy and hierarchical, so zooming in only ever splits a roundel), but
-  with a radius that depends on the zoom: about one pin wide (34 px) at
-  metro zooms and up to 60 px at state level. Every church has its own pin
-  from zoom 13. Popups only exist for markers that are actually rendered.
+- **Clustering at low zoom.** `apps/web/src/lib/mapClusters.ts` draws
+  churches as numbered roundels when zoomed out. The zoom alone decides
+  whether the map clusters: at zoom 10 and further out every church is in a
+  roundel (one with no neighbours nearby gets a roundel marked 1), and from
+  zoom 11, the default view, every church has its own pin. Which churches
+  share a roundel uses supercluster's algorithm (greedy and hierarchical, so
+  zooming in only ever splits a roundel), with a radius that depends on the
+  zoom: 40 px at zoom 10, up to 60 px at state level. Clicking a roundel
+  zooms in to fit its churches in the part of the map the search card and
+  filter panel leave uncovered. Popups only exist for markers that are
+  actually rendered.
   Rebuilding the index on a filter change takes about 1 ms for today's data,
   10 ms for 2,800 churches and 85 ms for 20,000 (unthrottled). At national
   scale, build it only for the loaded shards (Phase 3) or off the main thread.

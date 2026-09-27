@@ -275,10 +275,16 @@ export function HomePage() {
       ) : null}
 
       {/* Floating card — masthead, search, filter pills; filter panel is only as tall
-       *  as its content on md+ (capped + scroll inside when needed). */}
+       *  as its content on md+ (capped + scroll inside when needed). The parts
+       *  that cover the map carry `data-map-overlay`, so the map can centre
+       *  what it zooms to in the ground they leave clear; the phone's filter
+       *  sheet blocks the map while it's open, so it isn't marked. */}
       <div className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-[900] flex justify-center px-4 pt-[calc(1rem+var(--safe-area-inset-top))] pb-[calc(1rem+var(--safe-area-inset-bottom))] md:justify-start md:px-6 md:pt-6 md:pb-6">
         <div className="pointer-events-none flex w-full max-w-[28rem] flex-col gap-4">
-          <div className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-6 pt-5 pb-4 shadow-missal-floating backdrop-blur-sm">
+          <div
+            data-map-overlay
+            className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-6 pt-5 pb-4 shadow-missal-floating backdrop-blur-sm"
+          >
             <div className="flex items-start justify-between gap-4">
               <Masthead />
               {aboutPageEnabled ? (
@@ -312,6 +318,7 @@ export function HomePage() {
           </div>
 
           <div
+            data-map-overlay={isDesktop ? true : undefined}
             className={`w-full md:min-h-0 ${
               !isDesktop && !filterPanelOpen
                 ? "pointer-events-none"

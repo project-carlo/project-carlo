@@ -28,8 +28,8 @@ import type { ChurchMapItem } from "../types";
 import type { MapView } from "../lib/mapView";
 import {
   buildClusterIndex,
-  CLUSTER_MAX_ZOOM,
   convexHull,
+  PIN_ZOOM,
   type BBox,
   type ClusterIndex,
   type MapCluster,
@@ -177,6 +177,61 @@ function PopupPaneElevator() {
   return null;
 }
 
+/**
+ * Marks the page's floating UI laid over the map (HomePage's search card and
+ * desktop filter panel), so the map can tell which part of itself is left in
+ * view.
+ */
+const MAP_OVERLAY_SELECTOR = "[data-map-overlay]";
+
+/**
+ * How much of the map, in pixels from its left and top edges, the floating
+ * UI covers, measured when it's needed: the layout changes between desktop
+ * and phone widths, and the card's height with its filter pills.
+ *
+ * A box with more than twice as much map to its right as to its left is a
+ * column (the desktop panels), so it covers everything to its left; anything
+ * else is a band across the top (the phone's search card, centred with a
+ * narrow gutter each side), so it covers everything above its bottom. The mobile filter sheet isn't marked:
+ * while it's open it blocks the map anyway. Each inset leaves at least a
+ * third of the map, so an odd window size can't squeeze the free area away.
+ */
+function overlayInsets(map: LeafletMap): L.Point {
+  const box = map.getContainer().getBoundingClientRect();
+  let left = 0;
+  let top = 0;
+  for (const el of document.querySelectorAll(MAP_OVERLAY_SELECTOR)) {
+    const rect = el.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) continue;
+    if (rect.right <= box.left || rect.left >= box.right) continue;
+    if (rect.bottom <= box.top || rect.top >= box.bottom) continue;
+    const before = rect.left - box.left;
+    const beside = box.right - rect.right;
+    if (beside > 2 * before) left = Math.max(left, rect.right - box.left);
+    else top = Math.max(top, rect.bottom - box.top);
+  }
+  return L.point(
+    Math.min(left, (box.width * 2) / 3),
+    Math.min(top, (box.height * 2) / 3),
+  );
+}
+
+/**
+ * The map centre that puts `latlng` in the middle of the part of the map the
+ * floating UI leaves uncovered, at `zoom`.
+ */
+function centerInFreeArea(
+  map: LeafletMap,
+  latlng: L.LatLngExpression,
+  zoom: number,
+  insets: L.Point,
+): L.LatLng {
+  return map.unproject(
+    map.project(latlng, zoom).subtract(insets.divideBy(2)),
+    zoom,
+  );
+}
+
 function ChangeView({
   center,
   minZoom,
@@ -196,10 +251,18 @@ function ChangeView({
     let zoom = center.zoom;
     const floor = minZoomRef.current;
     if (floor != null && (zoom ?? map.getZoom()) < floor) zoom = floor;
+    // Centred in the ground the floating UI leaves clear, not under the
+    // search card or the filter panel.
+    const target = centerInFreeArea(
+      map,
+      [center.lat, center.lng],
+      zoom ?? map.getZoom(),
+      overlayInsets(map),
+    );
     if (zoom != null) {
-      map.flyTo([center.lat, center.lng], zoom, { duration: 0.8 });
+      map.flyTo(target, zoom, { duration: 0.8 });
     } else {
-      map.panTo([center.lat, center.lng]);
+      map.panTo(target);
     }
   }, [map, center.lat, center.lng, center.zoom, center.requestId]);
   return null;
@@ -394,9 +457,11 @@ function hasCoords(church: ChurchMapItem): church is MappedChurch {
 /** From a church pin's tip (its anchor) up to the middle of its round head. */
 const PIN_HEAD_RISE = 24;
 
-/** Roundel diameter by cluster size: a small group stays about a pin wide,
- *  and a city-sized one reads as bigger without swallowing its neighbours. */
+/** Roundel diameter by cluster size: a lone church's is the size of a pin's
+ *  head, a small group's about a pin wide, and a city-sized one reads as
+ *  bigger without swallowing its neighbours. */
 function clusterDiameter(count: number): number {
+  if (count === 1) return 28;
   if (count < 10) return 32;
   if (count < 50) return 38;
   if (count < 100) return 44;
@@ -449,13 +514,17 @@ const ClusterMarker = memo(function ClusterMarker({
     <Marker
       icon={clusterIcon(cluster.count)}
       position={position}
-      title={`${cluster.count} churches — zoom in`}
+      title={`${cluster.count} ${cluster.count === 1 ? "church" : "churches"} — zoom in`}
       // Above the pins, so a count is never hidden behind a neighbour's pin.
       zIndexOffset={500}
       eventHandlers={eventHandlers}
     />
   );
 });
+
+/** Margin, in pixels, kept round a clicked roundel's churches once the map
+ *  has zoomed in to them. */
+const ZOOM_INTO_MARGIN = 48;
 
 /** How far past the visible map, as a fraction of its size on each side,
  *  markers are still drawn, so a short pan doesn't reveal empty ground. */
@@ -514,17 +583,28 @@ function ClusteredChurchMarkers({
       const bounds = L.latLngBounds(
         leaves.map((church) => [church.latitude, church.longitude]),
       );
-      // As close as keeps every church in the roundel on screen, but at
-      // least far enough to split it, and never past the zoom where every
-      // church already has its own pin.
-      const fitZoom = map.getBoundsZoom(bounds, false, L.point(96, 96));
-      const zoom = Math.min(
-        Math.max(fitZoom, index.expansionZoom(cluster.id)),
-        CLUSTER_MAX_ZOOM + 1,
+      // As close as keeps every church in the roundel in the part of the
+      // map the floating UI leaves uncovered, but at least far enough to
+      // split it, and never past the zoom where every church has its own
+      // pin. A roundel of one has no extent to fit, so it goes straight to
+      // that zoom.
+      const insets = overlayInsets(map);
+      const fitZoom = map.getBoundsZoom(
+        bounds,
+        false,
+        insets.add([2 * ZOOM_INTO_MARGIN, 2 * ZOOM_INTO_MARGIN]),
       );
-      map.flyTo(bounds.getCenter(), Math.max(zoom, map.getZoom() + 1), {
-        duration: 0.6,
-      });
+      const zoom = Math.max(
+        Math.min(Math.max(fitZoom, index.expansionZoom(cluster.id)), PIN_ZOOM),
+        map.getZoom() + 1,
+      );
+      // Leaflet's flyToBounds takes the same padding but can only cap the
+      // zoom, not floor it, so the centre is worked out here instead.
+      map.flyTo(
+        centerInFreeArea(map, bounds.getCenter(), zoom, insets),
+        zoom,
+        { duration: 0.6 },
+      );
     },
     [index, map],
   );

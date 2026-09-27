@@ -4,6 +4,7 @@ import {
   CLUSTER_MAX_ZOOM,
   clusterRadiusPx,
   convexHull,
+  PIN_ZOOM,
   type BBox,
   type ClusterablePoint,
   type MapEntry,
@@ -50,7 +51,7 @@ describe("buildClusterIndex", () => {
   const index = buildClusterIndex(points);
 
   it("accounts for every church exactly once at every zoom", () => {
-    for (let zoom = 0; zoom <= CLUSTER_MAX_ZOOM + 3; zoom++) {
+    for (let zoom = 0; zoom <= PIN_ZOOM + 2; zoom++) {
       const ids = index
         .entries(WORLD, zoom)
         .flatMap((entry) => leafIds(index, entry))
@@ -59,16 +60,29 @@ describe("buildClusterIndex", () => {
     }
   });
 
-  it("gives every church its own pin past the last clustering zoom", () => {
-    for (const zoom of [CLUSTER_MAX_ZOOM + 1, CLUSTER_MAX_ZOOM + 4]) {
+  it("gives every church its own pin from the pin zoom in", () => {
+    for (const zoom of [PIN_ZOOM, PIN_ZOOM + 3]) {
       const entries = index.entries(WORLD, zoom);
+      expect(entries).toHaveLength(points.length);
       expect(entries.every((entry) => entry.kind === "point")).toBe(true);
     }
   });
 
+  it("puts every church in a roundel at the cutoff and further out", () => {
+    for (let zoom = 0; zoom <= CLUSTER_MAX_ZOOM; zoom++) {
+      const entries = index.entries(WORLD, zoom);
+      expect(entries.every((entry) => entry.kind === "cluster")).toBe(true);
+    }
+    // Some of the countryside churches have no neighbour that close.
+    const ones = index
+      .entries(WORLD, CLUSTER_MAX_ZOOM)
+      .filter((entry) => entry.kind === "cluster" && entry.count === 1);
+    expect(ones.length).toBeGreaterThan(0);
+  });
+
   it("clusters more the further out the map is", () => {
     const counts = [];
-    for (let zoom = 0; zoom <= CLUSTER_MAX_ZOOM + 1; zoom++) {
+    for (let zoom = 0; zoom <= PIN_ZOOM; zoom++) {
       counts.push(index.entries(WORLD, zoom).length);
     }
     for (let i = 1; i < counts.length; i++) {
@@ -102,7 +116,13 @@ describe("buildClusterIndex", () => {
         const pieces = index
           .entries(WORLD, expansion)
           .filter((piece) => leaves.has(leafIds(index, piece)[0]));
-        expect(pieces.length).toBeGreaterThan(1);
+        if (entry.count === 1) {
+          // A roundel of one can't split; it becomes its church's pin.
+          expect(expansion).toBe(PIN_ZOOM);
+          expect(pieces.map((piece) => piece.kind)).toEqual(["point"]);
+        } else {
+          expect(pieces.length).toBeGreaterThan(1);
+        }
         // …and it is the same roundel at every zoom until then.
         for (let z = zoom; z < expansion; z++) {
           expect(
@@ -115,16 +135,15 @@ describe("buildClusterIndex", () => {
     }
   });
 
-  it("reports the first zoom at which each church stands alone", () => {
+  it("reports the pin zoom as the first at which each church stands alone", () => {
     for (const point of points) {
-      const solo = index.soloZoom(point.id);
-      expect(solo).not.toBeNull();
+      expect(index.soloZoom(point.id)).toBe(PIN_ZOOM);
       const standsAlone = (zoom: number) =>
         index
           .entries(WORLD, zoom)
           .some((entry) => entry.kind === "point" && entry.item.id === point.id);
-      expect(standsAlone(solo!)).toBe(true);
-      if (solo! > 0) expect(standsAlone(solo! - 1)).toBe(false);
+      expect(standsAlone(PIN_ZOOM)).toBe(true);
+      expect(standsAlone(CLUSTER_MAX_ZOOM)).toBe(false);
     }
     expect(index.soloZoom(-1)).toBeNull();
   });
@@ -137,10 +156,11 @@ describe("buildClusterIndex", () => {
     // 0.2° of longitude is ~73 px at zoom 9 (256 · 2^9 · 0.2 / 360) and
     // ~36 px at zoom 8.
     expect(clusterRadiusPx(9)).toBeLessThan(73);
-    expect(far.entries(WORLD, 9).map((entry) => entry.kind)).toEqual([
-      "point",
-      "point",
-    ]);
+    expect(
+      far
+        .entries(WORLD, 9)
+        .map((entry) => (entry.kind === "cluster" ? entry.count : 0)),
+    ).toEqual([1, 1]);
     expect(clusterRadiusPx(8)).toBeGreaterThan(36);
     expect(far.entries(WORLD, 8)).toHaveLength(1);
   });
@@ -151,12 +171,27 @@ describe("buildClusterIndex", () => {
       { id: 2, latitude: 43.1502, longitude: -77.6001 },
     ]);
     expect(sameCorner.entries(WORLD, CLUSTER_MAX_ZOOM)).toHaveLength(1);
-    expect(sameCorner.soloZoom(1)).toBe(CLUSTER_MAX_ZOOM + 1);
+    expect(sameCorner.entries(WORLD, PIN_ZOOM)).toHaveLength(2);
+  });
+
+  it("gives a church on its own a roundel of one, the same at every zoom out", () => {
+    const lone = buildClusterIndex([{ id: 1, latitude: 43, longitude: -77 }]);
+    const [entry] = lone.entries(WORLD, CLUSTER_MAX_ZOOM);
+    if (entry.kind !== "cluster") throw new Error("expected a roundel");
+    expect(entry.count).toBe(1);
+    expect(entry.lat).toBeCloseTo(43, 6);
+    expect(entry.lng).toBeCloseTo(-77, 6);
+    expect(lone.leaves(entry.id).map((item) => item.id)).toEqual([1]);
+    expect(lone.expansionZoom(entry.id)).toBe(PIN_ZOOM);
+    expect(lone.entries(WORLD, 0)).toEqual([entry]);
+    expect(lone.entries(WORLD, PIN_ZOOM).map((e) => e.kind)).toEqual([
+      "point",
+    ]);
   });
 
   it("returns only what falls inside the box", () => {
     const rochester: BBox = [-77.8, 43, -77.4, 43.3];
-    const inside = index.entries(rochester, CLUSTER_MAX_ZOOM + 1);
+    const inside = index.entries(rochester, PIN_ZOOM);
     expect(inside.length).toBeGreaterThan(0);
     for (const entry of inside) {
       if (entry.kind !== "point") throw new Error("expected pins only");
@@ -186,11 +221,10 @@ describe("buildClusterIndex", () => {
 });
 
 describe("clusterRadiusPx", () => {
-  it("is about a pin wide at metro zooms and wider further out", () => {
-    expect(clusterRadiusPx(11)).toBe(34);
-    expect(clusterRadiusPx(7)).toBeGreaterThan(clusterRadiusPx(10));
+  it("is a little over a roundel wide at the cutoff and wider further out", () => {
+    expect(clusterRadiusPx(CLUSTER_MAX_ZOOM)).toBe(40);
+    expect(clusterRadiusPx(7)).toBeGreaterThan(clusterRadiusPx(CLUSTER_MAX_ZOOM));
     expect(clusterRadiusPx(0)).toBe(60);
-    expect(clusterRadiusPx(CLUSTER_MAX_ZOOM)).toBeGreaterThanOrEqual(28);
   });
 });
 
