@@ -220,10 +220,10 @@ function overlayInsets(map: LeafletMap): L.Point {
  * How far a target is moved from the map's centre towards the middle of the
  * uncovered area, as a fraction of the way there. The dead centre of the
  * space beside the desktop panel reads as off to the right of the screen,
- * so across it stops a quarter short; down (below the phone's search card)
+ * so across it stops halfway; down (below the phone's search card)
  * it goes all the way.
  */
-const FREE_AREA_PULL = { x: 0.75, y: 1 };
+const FREE_AREA_PULL = { x: 0.5, y: 1 };
 
 /** The on-screen shift from the map's centre to where a target is put. */
 function freeAreaOffset(insets: L.Point): L.Point {
@@ -252,7 +252,7 @@ function centerInFreeArea(
 /** Fastest a camera move may zoom, in zoom levels per second. Leaflet's
  *  flyTo takes a fixed duration, so a four-level jump in the same time as a
  *  one-level one rushes past everything in between. */
-const MAX_ZOOM_LEVELS_PER_SECOND = 2.5;
+const MAX_ZOOM_LEVELS_PER_SECOND = 3;
 const MIN_FLY_SECONDS = 0.6;
 const MAX_FLY_SECONDS = 2;
 
