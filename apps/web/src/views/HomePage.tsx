@@ -233,7 +233,10 @@ export function HomePage() {
   }, []);
 
   return (
-    <main className="relative flex min-h-svh flex-col overflow-hidden bg-paper">
+    <main
+      data-map-page
+      className="relative flex h-dvh flex-col overflow-hidden bg-paper"
+    >
       {/* Full-bleed map — no z-index so it doesn't create a stacking context;
        *  the elevated popup pane inside can then layer above the header. */}
       <div className="absolute inset-0">
