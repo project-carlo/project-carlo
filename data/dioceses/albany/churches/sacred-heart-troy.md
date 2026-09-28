@@ -1,6 +1,6 @@
 ---
 parish: sacred-heart-troy
-name: Sacred Heart
+name: Church of the Sacred Heart
 line1: 310 Spring Ave.
 line2: ''
 city: Troy
@@ -9,8 +9,8 @@ postal_code: '12180'
 latitude: 42.7083125
 longitude: -73.6619375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18169', 'directory:326']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18169
@@ -22,14 +22,18 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Sacred Heart Church', 310 Spring Ave., Troy,
     NY, 12180
+- url: https://files.ecatholic.com/23317/bulletins/20260927.pdf
+  seen: 2026-09-28
+  quote: 'MASS TIMES: Weekdays - 9:00AM … Saturdays - 4:00PM … Sundays - 8:00AM and 10:30AM'
+  note: Page 1 of the 27 September 2026 issue.
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin: Saturday 4:00 pm, Sunday 8:00 and 10:30 am, weekdays 9:00
+am.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+310 Spring Ave., Troy 12180 in the bulletin, GCatholic and the directory. Both flags true.
+Coordinates are GCatholic's Plus Code.

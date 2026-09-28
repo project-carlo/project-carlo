@@ -1,6 +1,6 @@
 ---
 parish: st-thomas-the-apostle-delmar
-name: St. Thomas the Apostle
+name: St. Thomas the Apostle Catholic Church
 line1: 35 Adams Pl.
 line2: ''
 city: Delmar
@@ -9,8 +9,8 @@ postal_code: '12054'
 latitude: 42.6219375
 longitude: -73.8303125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18091', 'directory:373']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18091
@@ -22,14 +22,25 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. Thomas the Apostle Church', 35 Adams Pl.,
     Delmar, NY, 12054
+- url: https://files.ecatholic.com/16575/bulletins/20260927.pdf
+  seen: 2026-09-28
+  note: 'Page 1 is an image (rendered with render.py and read on 2026-09-28): "Church 35 Adams Place Delmar,
+    NY 12054", "Masses Saturday (Vigil): 5:00pm Sunday: 7:30am, 10:30am, 5:00pm Monday: 7:30am Tuesday:
+    12:15pm Thursday: 7:30am Friday: 12:15pm". recheck cannot find these words in the text layer.'
+- url: https://www.stmatthewsvoorheesville.org/our-network-of-parishes.html
+  seen: 2026-09-28
+  quote: 35 Adams Place Delmar, New York 12054
+  note: St. Matthew's network page, with "Saturday - 5:00 PM Sunday - 7:30 AM 10:30 AM 5:00 PM" for St.
+    Thomas.
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin cover gives Saturday 5 pm, Sunday 7:30 am, 10:30 am and
+5 pm, and weekday Masses; St. Matthew's network page gives the same weekend times.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic ("St. Thomas the Apostle", 35 Adams Pl., Delmar 12054), the diocese ("St. Thomas
+the Apostle Church", same address) and the bulletin cover agree. Coordinates are GCatholic's
+Plus Code.

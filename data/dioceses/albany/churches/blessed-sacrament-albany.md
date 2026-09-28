@@ -27,6 +27,11 @@ evidence:
   quote: SATURDAY VIGIL4 pm SUNDAY9 am & 6 pm Urdu
   note: Mass schedule box, page 1 of the 27 September 2026 issue, below the masthead "BLESSED SACRAMENT
     CHURCH 607 Central Ave., Albany, NY 12206".
+- url: https://www.openstreetmap.org/way/651155540
+  seen: 2026-09-28
+  quote: addr:housenumber 607 addr:postcode 12206 addr:state NY addr:street Central Avenue amenity place_of_worship
+  note: OpenStreetMap way 651155540, "Church of the Blessed Sacrament" (found by a Nominatim search for Blessed
+    Sacrament, Central Avenue); the school and parish center is way 651155518 at 605 Central Avenue.
 ---
 
 ## Holds Mass
@@ -39,7 +44,8 @@ for each.
 
 The bulletin masthead and the directory give **607** Central Avenue; GCatholic gives **609**
 Central Ave. The street number follows the bulletin and directory, but the sources disagree,
-so `address_verified` is false. (The parish school, Blessed Sacrament School, is on the same
-block; one of the numbers may be the school's or the rectory's. A look at the building or OSM
-would settle it.) The name agrees in all three, so `name_verified` is true. Coordinates are
+so `address_verified` is false. OpenStreetMap agrees with the bulletin: its "Church of the
+Blessed Sacrament" outline is at 607 Central Avenue and "Blessed Sacrament School and Parish
+Center" at 605, so GCatholic's 609 is probably a slip; the flag is left false only because
+the rule is to leave it false while any source disagrees. The name agrees in all three, so `name_verified` is true. Coordinates are
 GCatholic's Plus Code, on the building.

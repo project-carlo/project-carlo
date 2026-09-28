@@ -1,15 +1,15 @@
 ---
 parish: st-augustine-troy
-name: St. Augustine
+name: St. Augustine's Church
 line1: 4th Ave. & 115th St.
 line2: ''
 city: Troy
 state: NY
-postal_code: '12180'
+postal_code: '12182'
 latitude: 42.7744375
 longitude: -73.6745625
 coordinates_from: gcatholic-plus-code
-name_verified: false
+name_verified: true
 address_verified: false
 roster: ['gcatholic:18170', 'directory:328']
 evidence:
@@ -22,14 +22,21 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Augustine's Church", 4th Ave at 115th St.,
     Troy, NY, 12182
+- url: https://files.ecatholic.com/37601/bulletins/20260913.pdf
+  seen: 2026-09-28
+  quote: 'Saturday: 4:00 PM * Sunday: 9:00 AM (with Children''s Liturgy), 6:00 PM'
+  note: Page 1 of the 13 September 2026 issue, which gives the parish address as "25 115th Street, Troy,
+    NY 12182".
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 13 September 2026 bulletin: Saturday 4:00 pm, Sunday 9:00 am and 6:00 pm, weekday Masses
+Monday, Thursday, Friday and Saturday.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic and the directory give "4th Ave. at 115th St." (the corner); the bulletin gives "25
+115th Street", probably the office. Kept the corner, as both lists give it; address flag false
+because there is no street number. GCatholic's postal code 12180 is wrong for Lansingburgh; the
+directory's and the bulletin's 12182 is used. Coordinates are GCatholic's Plus Code.

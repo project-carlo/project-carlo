@@ -11,7 +11,7 @@ longitude: -73.7713125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['gcatholic:18079', 'directory:420']
+roster: ['gcatholic:18079', 'directory:420', 'directory:445']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18079
   seen: 2026-09-28
@@ -30,7 +30,12 @@ evidence:
 - url: https://www.ourladyoftheamericas.org/bulletins-boletines
   seen: 2026-09-28
   quote: 'Address: 273 Central Avenue, Albany, New York 12206'
-  note: Footer of the shrine's site, followed by "Mailing Address: 274 Sherman Street".
+  note: 'Footer of the shrine''s site, followed by "Mailing Address: 274 Sherman Street".'
+- url: https://www.rcda.org/parishes/spanish-apostolate
+  seen: 2026-09-28
+  quote: 'Dónde y cuándo encontrar una misa en español Albany Shrine Church of Our Lady of the Americas, 273 Central Ave.'
+  note: The Hispanic Apostolate page (the directory's "Spanish Apostolate", entry 445). Co-directors
+    Deacon Miguel Fabian and Deacon Ramon Bonifacio.
 ---
 
 ## Holds Mass
@@ -45,3 +50,15 @@ GCatholic ("Our Lady of the Americas", 273 Central Ave.), the directory ("Shrine
 Lady of the Americas", 273 Central Ave.) and the shrine's site (273 Central Avenue) agree; both
 flags true. The bulletin gives the mailing address and rear entrance, 274 Sherman Street, on
 the street behind. Coordinates are GCatholic's Plus Code.
+
+## Spanish Apostolate (directory 445)
+
+The directory's "Spanish Apostolate" entry has no address, only a phone number and an email
+for Jorge Reyes; its page (rcda.org/parishes/spanish-apostolate, headed "Hispanic Apostolate")
+is a diocese-wide list of where to find Mass in Spanish: this shrine first, then Sunday 10:30
+am at St. Francis of Assisi (391 Delaware Ave.), and parishes in Amsterdam, Clifton Park,
+Saratoga Springs, Schenectady, Stuyvesant Falls and Troy. It is a diocesan ministry, not a
+place, so it has no record of its own. It is linked here because the shrine is its first-listed
+Albany Mass site, holds a Spanish Mass every Sunday (11 am) with a bilingual bulletin, and its
+deacon, Deacon Miguel Fabian, is the apostolate's co-director. The other Spanish Masses are
+recorded under their own churches.

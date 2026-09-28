@@ -26,10 +26,11 @@ evidence:
   seen: 2026-09-28
   quote: 'Weekend Mass Saturday | 4:00pm Sunday | 8:00am, 11:00am'
   note: 27 September 2026 issue, page 1, with "CONTACT US 20 Sumter Ave Albany, NY 12203".
-- url: https://nominatim.openstreetmap.org/search?q=20+Sumter+Avenue,+Albany,+NY&format=json
+- url: https://www.openstreetmap.org/way/1383436997
   seen: 2026-09-28
-  quote: Christ The King Catholic Church, 20, Sumter Avenue, Westmere, Town of Guilderland
-  note: 'OpenStreetMap way 1383436997 (place_of_worship) at 42.69399, -73.88604, about 100 m from GCatholic''s
+  quote: addr:housenumber 20 addr:postcode 12203 addr:state NY addr:street Sumter Avenue amenity place_of_worship
+  note: 'OpenStreetMap way 1383436997, "Christ The King Catholic Church"; centred at 42.69399, -73.88604 (Nominatim:
+    Westmere, Town of Guilderland), about 100 m from GCatholic''s
     Plus Code. ParishesOnline''s organization point (42.67790, -73.82972) is about 5 km east and is not
     used.'
 ---

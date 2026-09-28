@@ -1,6 +1,6 @@
 ---
 parish: st-henry-averill-park
-name: St. Henry
+name: St. Henry's Catholic Church
 line1: 39 Old Route 66
 line2: ''
 city: Averill Park
@@ -9,8 +9,8 @@ postal_code: '12018'
 latitude: 42.6366875
 longitude: -73.5575625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18156', 'directory:317']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18156
@@ -22,14 +22,20 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Henry's Church", 39 Old Route 66, Averill
     Park, NY, 12018
+- url: https://container.parishesonline.com/bulletins/04/0926/20260927B.pdf
+  seen: 2026-09-28
+  note: 27 September 2026 issue, page 2 (image, rendered with render.py). "MASS SCHEDULE WEEKEND Saturday
+    04:00pm Sunday 08:00am, 10:00am" and "ST. HENRY'S CATHOLIC CHURCH 39 Old Route 66 Averill Park, NY
+    12018".
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin (page 2, an image) gives Saturday 4:00 pm, Sunday 8:00 and
+10:00 am, and weekday Masses Wednesday-Friday 8:30 am. The directory gives the same weekend
+times.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+39 Old Route 66, Averill Park 12018 in GCatholic, the diocesan directory and the bulletin (page 2,
+"St. Henry's Catholic Church"). Both flags true. Coordinates are GCatholic's Plus Code.

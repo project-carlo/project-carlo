@@ -45,9 +45,9 @@ rows; see `blessed-sacrament-albany`.
 ## Worship sites
 
 One: the shrine church (`our-lady-of-the-americas-albany`, GCatholic 18079, directory 420).
-The diocese's Hispanic Apostolate page lists the shrine as a place for Mass in Spanish, which
-is why directory 445 (Spanish Apostolate) is recorded separately in
-`excluded/spanish-apostolate-albany.md` rather than here.
+The diocese's Hispanic Apostolate page (the directory's "Spanish Apostolate", entry 445, a
+diocesan ministry with no address) lists the shrine first among its places for Mass in
+Spanish, so that entry is linked to the shrine church; see the church file.
 
 ## Website and bulletin provider
 

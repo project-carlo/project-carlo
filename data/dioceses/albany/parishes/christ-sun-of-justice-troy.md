@@ -5,26 +5,48 @@ bulletin_provider: other
 provider_id: ''
 publication: ['url:https://rensselaernewman.org/christ-sun-of-justice-parish/']
 group: ''
-evidence: []
+evidence:
+- url: https://eadn-wc03-5826237.nxedge.io/cdn/wp-content/uploads/2026/09/CSJ-2026_9_27-bulletin-combined.pdf
+  seen: 2026-09-28
+  quote: THE UNIVERSITY PARISH OF CHRIST SUN OF JUSTICE … 2125 Burdett Ave, Troy, NY 12180
+  note: Masthead, page 1 of the 27 September 2026 issue ("September 27, 2026 Twenty-Sixth Sunday in Ordinary
+    Time").
+- url: https://eadn-wc03-5826237.nxedge.io/cdn/wp-content/uploads/2026/09/CSJ-2026_9_27-bulletin-combined.pdf
+  seen: 2026-09-28
+  quote: WEEKEND MASS … Sunday 10:00 AM … Sunday 5:00 PM Mass
+  note: Page 1; daily Mass Monday-Tuesday 5:00 PM, Wednesday 9:00 AM. Pastor "Fr. Tom Morette" with the
+    OLV office's email; chaplain Fr. Jordan Lenaghan, OP.
+- url: https://rensselaernewman.org/christ-sun-of-justice-parish/
+  seen: 2026-09-28
+  quote: Sunday Bulletin for September 27, 2026
+  note: The parish page on the Rensselaer Newman Foundation site lists the five latest bulletins (27 September
+    back to 30 August 2026) as PDF links on its CDN (eadn-wc03-5826237.nxedge.io); the links are rendered
+    in the browser (visit.py), not in the static HTML.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+Christ Sun of Justice, the university parish for Rensselaer Polytechnic Institute, publishes its
+own weekly bulletin as a PDF on the Rensselaer Newman Foundation site. The 27 September 2026 issue
+is headed "The University Parish of Christ Sun of Justice, 2125 Burdett Ave" and prints its own
+schedule (Sunday 10 am and 5 pm; Monday-Tuesday 5 pm; Wednesday 9 am).
+
+Its pastor is Fr. Thomas Morrette, also pastor of Our Lady of Victory, whose 27 September
+bulletin names "Christ Sun of Justice" in its masthead. But OLV's bulletin prints only OLV's and
+Our Lady of the Snow's Masses, while CSJ's own bulletin carries CSJ's, so they are two rows.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: the Chapel + Cultural Center, 2125 Burdett Ave. (`christ-sun-of-justice-troy`).
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+rensselaernewman.org/christ-sun-of-justice-parish/ (the directory's "Additional Websites" link)
+lists "Sunday Bulletin for <date>" links, so provider `other` with that page as website and
+publication. The site's /bulletin/ page is only an e-mail sign-up form. GCatholic's
+chapelandculturalcenter.org was not needed.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Whether CSJ keeps a bulletin between semesters (the parish may pause over summer); the August 30
+issue is listed, so it did this year. Nothing else.

@@ -1,5 +1,5 @@
 ---
-name: Sts. Peter and Paul
+name: Sts. Peter and Paul Ukrainian Catholic Church
 reason: other-jurisdiction
 line1: 198 Ontario St.
 city: Cohoes
@@ -17,10 +17,12 @@ evidence:
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+GCatholic lists it among the churches in the Diocese of Albany's territory but marks it
+with the Ukrainian rite: it belongs to an Eastern Catholic eparchy (the Ukrainian Catholic Eparchy of Stamford), not to the
+Roman Catholic diocese. The diocese's Find A Parish list does not include it. As with
+Syracuse's Eastern Catholic churches, this is a scope decision (this exploration covers
+the Latin diocese), not a judgement about the church, which is open.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A project decision to cover Eastern Catholic eparchies.

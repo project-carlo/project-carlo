@@ -1,6 +1,6 @@
 ---
 parish: holy-spirit-sacred-heart-east-greenbush
-name: Sacred Heart
+name: Sacred Heart Church
 line1: 3 Catholic Way
 line2: ''
 city: Castleton-on-Hudson
@@ -9,8 +9,8 @@ postal_code: '12033'
 latitude: 42.5265625
 longitude: -73.7553125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18159', 'directory:318']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18159
@@ -22,14 +22,21 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Sacred Heart Church', 3 Catholic Way, Castleton
     on Hudson, NY, 12033
+- url: https://container.parishesonline.com/bulletins/03/1047/20260927B.pdf
+  seen: 2026-09-28
+  quote: Sacred Heart Church - Masses for the Week
+  note: Page 3 of the 27 September 2026 issue lists "4pm Vigil Mass" (Saturday 26 September) and "9am
+    Mass" (Sunday 4 October); page 4 gives "Sundays at 9:00am" and "3 Catholic Way ❖ Castleton-on-Hudson
+    12033".
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin: Sunday 9:00 am (page 4), plus a 4 pm Saturday Mass with the
+parish picnic on 26 September (page 3). The directory's Sunday 8:00 and 9:30 am times are out of
+date.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+3 Catholic Way, Castleton-on-Hudson 12033 in the bulletin, GCatholic and the directory. Both
+flags true. Coordinates are GCatholic's Plus Code.

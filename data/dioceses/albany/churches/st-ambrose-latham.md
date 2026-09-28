@@ -1,6 +1,6 @@
 ---
 parish: st-ambrose-latham
-name: St. Ambrose
+name: St. Ambrose Catholic Church
 line1: 347 Old Loudon Rd.
 line2: ''
 city: Latham
@@ -9,8 +9,8 @@ postal_code: '12110'
 latitude: 42.7579375
 longitude: -73.7533125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18093', 'directory:376']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18093
@@ -22,14 +22,22 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. Ambrose Church', 347 Old Loudon Rd., Latham,
     NY, 12110
+- url: https://container.parishesonline.com/bulletins/03/0807/20260927B.pdf
+  seen: 2026-09-28
+  note: 'Page 1 of the 27 September 2026 issue is an image (rendered with render.py and read on 2026-09-28):
+    "WEEKEND MASS Saturday | 04:00pm Sunday | 09:00am, 11:00am", weekdays Monday-Thursday 12:10pm, and
+    "St. Ambrose Catholic Church 347 Old Loudon Road Latham, NY 12110". recheck cannot find these words
+    in the text layer.'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin cover (an image) gives Saturday 4 pm, Sunday 9 and 11
+am, and Monday to Thursday 12:10 pm; the diocese's page gives the same.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic ("St. Ambrose", 347 Old Loudon Rd., Latham 12110), the diocese ("St. Ambrose
+Church", same address), the ParishesOnline organization and the bulletin cover agree.
+Coordinates are GCatholic's Plus Code; the ParishesOnline point (42.7585, -73.7539) is on the
+same site.

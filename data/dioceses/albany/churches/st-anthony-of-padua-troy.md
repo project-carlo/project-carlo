@@ -1,6 +1,6 @@
 ---
 parish: st-anthony-of-padua-troy
-name: St. Anthony of Padua
+name: St. Anthony of Padua Church
 line1: 28 State St.
 line2: ''
 city: Troy
@@ -9,8 +9,8 @@ postal_code: '12180'
 latitude: 42.7299375
 longitude: -73.6900625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:39151', 'directory:327']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/39151
@@ -22,14 +22,19 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. Anthony of Padua', 28 State St., Troy,
     NY, 12180
+- url: http://parishes.rcda.org/stanthonyofpadua/bulletins/2026/September_20.pdf
+  seen: 2026-09-28
+  note: Page 1 of the 20 September 2026 issue (image, rendered with render.py). "LITURGY OF THE EUCHARIST
+    Saturday 4:30 pm Sunday 9:00 am 12:00 pm; DAILY MASS Monday - Friday 7:15am"; parish office 28 State
+    Street, Troy, New York 12180.
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 20 September 2026 bulletin (page 1, an image): Saturday 4:30 pm, Sunday 9:00 am and
+12:00 pm, Monday-Friday 7:15 am. The directory gives the same times.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+28 State St., Troy 12180 in the bulletin, GCatholic and the directory. Both flags true.
+Coordinates are GCatholic's Plus Code.

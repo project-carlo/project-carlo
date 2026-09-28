@@ -1,6 +1,6 @@
 ---
 parish: immaculate-conception-hoosick-falls
-name: Immaculate Conception
+name: Immaculate Conception Church
 line1: 73 Main St.
 line2: ''
 city: Hoosick Falls
@@ -9,8 +9,8 @@ postal_code: '12090'
 latitude: 42.8999375
 longitude: -73.3503125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18161', 'directory:320']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18161
@@ -22,14 +22,20 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Immaculate Conception Church', 73 Main St.,
     Hoosick Falls, NY, 12090
+- url: https://files.ecatholic.com/11172/bulletins/20260927.pdf
+  seen: 2026-09-28
+  quote: 'Church: … 73 Main Street … Hoosick Falls, NY 12090'
+  note: Page 1 of the 27 September 2026 issue; Mass Saturday 4:00 pm, Sunday 10:00 am, Monday 9:00 am
+    (Chapel).
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin: Saturday 4:00 pm, Sunday 10:00 am, Monday 9:00 am in the
+chapel.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+73 Main Street, Hoosick Falls 12090 in the bulletin ("Church:"), GCatholic and the directory. The
+parish office is in Cambridge (17 S. Park Street). Both flags true. Coordinates are GCatholic's
+Plus Code.

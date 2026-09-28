@@ -20,7 +20,7 @@ evidence:
   note: Schedule box, page 2, headed "ST. JOAN OF ARC BLACK CATHOLIC APOSTOLATE".
 - url: https://www.rcda.org/parishes/black-catholic-apostolate/news-events/bulletins
   seen: 2026-09-28
-  quote: Click on dates below to see bulletin for that wee k September 20, 2026
+  quote: Click on dates below to see bulletin for that
   note: The parish's bulletins page on the diocese's site (plain HTML), one link per Sunday back to July
     2025.
 - url: https://parishesonline.com/organization/st-joan-of-arc-church-black-catholic-apostolate

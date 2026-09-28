@@ -15,7 +15,7 @@ evidence:
     / www.cathedralic.com ... 10 Lodge St., Albany / www.hist-stmarys.org".'
 - url: https://container.parishesonline.com/bulletins/03/0408/20260927B.pdf
   seen: 2026-09-28
-  quote: Mass 4:00 pm St. Mary's Sunday:     Mass 8:00 am St. Mary's
+  quote: "Mass 4:00 pm St. Mary's Sunday: Mass 8:00 am St. Mary's"
   note: '"HISTORIC ALBANY PARISHES MASS AND CONFESSION SCHEDULE", page 2: Saturday 4 pm St. Mary''s; Sunday
     8 and 10:30 am St. Mary''s, 11 am and 5 pm Cathedral; weekday Mass 12:05 pm St. Mary''s.'
 - url: https://container.parishesonline.com/bulletins/04/0782/20260927B.pdf

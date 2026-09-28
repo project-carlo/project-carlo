@@ -5,26 +5,45 @@ bulletin_provider: other
 provider_id: ''
 publication: ['url:https://www.stmichaelsofcohoes.org/bulletins.html']
 group: 'Cohoes (one pastor: Holy Trinity, St. Michael)'
-evidence: []
+evidence:
+- url: https://www.stmichaelsofcohoes.org/uploads/1/3/8/9/138944200/bulletin-2026-09-27.pdf
+  seen: 2026-09-28
+  quote: ST. MICHAEL’S ROMAN CATHOLIC CHURCH 20 Page Avenue~Cohoes, N.Y. 12047
+  note: Masthead, page 1 of the 27 September 2026 issue, self-hosted on the parish's Weebly site.
+- url: https://www.stmichaelsofcohoes.org/uploads/1/3/8/9/138944200/bulletin-2026-09-27.pdf
+  seen: 2026-09-28
+  quote: Rev. Kyle Gorenski Pastor
+  note: 'Same page; its staff box also gives "Parish Office: (518) 237-5151" and "Bulletin: bulletin@stmichaelsofcohoes.org".'
+- url: https://www.stmichaelsofcohoes.org/bulletins.html
+  seen: 2026-09-28
+  quote: 2026 September 27, 2026 September 20, 2026
+  note: The site's Bulletins page, which links one PDF per Sunday (bulletin-YYYY-MM-DD.pdf), from 2023
+    through 27 September 2026 (read with curl, 2026-09-28).
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Michael's publishes its own weekly bulletin as PDFs on its own site. The 27 September
+2026 issue's masthead is "ST. MICHAEL'S ROMAN CATHOLIC CHURCH, 20 Page Avenue~Cohoes, N.Y.
+12047", with Rev. Kyle Gorenski as pastor, its own parish office, trustees and a bulletin
+e-mail address.
+
+Fr. Gorenski is also pastor of Holy Trinity, Cohoes, and this bulletin prints the same
+joint Cohoes schedule as Holy Trinity's. But the two parishes each publish a bulletin
+(Holy Trinity's is ParishesOnline container 03/0435, masthead Holy Trinity alone), both
+current, so they are two rows sharing a `group`.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: `st-michael-cohoes`.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+stmichaelsofcohoes.org is the site the diocese and GCatholic both give. Its Bulletins page
+(bulletins.html) links every issue as `uploads/1/3/8/9/138944200/bulletin-YYYY-MM-DD.pdf`,
+dated by the Sunday; the home page links the current one. No publisher id: self-hosted,
+`other`, with the Bulletins page as the publication.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.
