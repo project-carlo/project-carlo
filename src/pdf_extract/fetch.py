@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import logging
 import re
+import time
 from collections.abc import Callable, Collection
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
@@ -65,6 +66,10 @@ OTHER_CURRENT_WINDOW_DAYS = 7
 # A bulletin found on one of those later links, dated further than this from
 # today, is an archive's, not the current one.
 OTHER_FALLBACK_MAX_AGE_DAYS = 45
+# Wait before the one retry of a download answered 429 (Too Many Requests).
+HTTP_429_RETRY_SECONDS = 10
+# How _pick_other_candidate's refusal of an old bulletin begins.
+OLD_BULLETIN_ONLY = "Only PDF found is dated"
 # A date without a year ("March 28", "12-28") is taken as the nearest such day,
 # but no further ahead than the coming Sunday: "October 4" read on 27 September
 # is in an archive of last year's bulletins, not next week's.
@@ -89,6 +94,8 @@ class _OtherPdfCandidate:
     parsed_date: date | None
     # "bulletin" appears in the link's text or address.
     labelled: bool = False
+    # The link's whole text names the bulletin ("Bulletin", "Weekly Bulletin").
+    titled_bulletin: bool = False
 
 
 # ── eCatholic bulletin resolution ───────────────────────────────────────────
@@ -101,10 +108,18 @@ def build_latest_ecatholic_bulletin_links(
     return BulletinLink(source_url=source_url, fetch_url=fetch_url)
 
 
+def _ecatholic_bulletins_url(site_url: str) -> str:
+    """The site's bulletins page; a website recorded as that page already is kept."""
+    base = site_url.rstrip("/")
+    if base.lower().endswith(ECATHOLIC_BULLETINS_PATH):
+        return base
+    return urljoin(base + "/", ECATHOLIC_BULLETINS_PATH.lstrip("/"))
+
+
 def _resolve_ecatholic_latest_link(
     *, provider_id: str, page: PageLike | None = None,
 ) -> tuple[str, str]:
-    bulletins_url = urljoin(provider_id.rstrip("/") + "/", ECATHOLIC_BULLETINS_PATH.lstrip("/"))
+    bulletins_url = _ecatholic_bulletins_url(provider_id)
     source_label = f"ecatholic provider_id={provider_id}"
 
     def _run(p: PageLike) -> tuple[str, str]:
@@ -375,20 +390,25 @@ def _resolve_other_latest_link(
         # The first "bulletin" link is not always the bulletin: it can be a news
         # post about it, or an old archive. Try the next ones before giving up,
         # and report the first page's problem if none of them has one.
+        # A later link is often an archive, so take a bulletin from it only if it
+        # is not plainly an old one. The first link's bulletin is taken whatever
+        # its age, but only once no later link has a recent one: a site's
+        # "Bulletins" page can be a stale 2017 archive beside "2026 Bulletins".
         failures: list[ValueError] = []
-        for index, bulletin_page_url in enumerate(
-            bulletin_page_urls[:OTHER_BULLETIN_PAGES_TO_TRY],
-        ):
+        pages_to_try = bulletin_page_urls[:OTHER_BULLETIN_PAGES_TO_TRY]
+        for bulletin_page_url in pages_to_try:
             try:
                 return _resolve_other_bulletin_page(
                     page=p, bulletin_page_url=bulletin_page_url, reference_date=today,
-                    # A later link is often an archive: take a bulletin from it
-                    # only if it is not plainly an old one.
-                    max_age_days=None if index == 0 else OTHER_FALLBACK_MAX_AGE_DAYS,
+                    max_age_days=OTHER_FALLBACK_MAX_AGE_DAYS,
                 )
             except ValueError as exc:
-                LOGGER.info("No bulletin on %s: %s", bulletin_page_url, exc)
+                LOGGER.info("No recent bulletin on %s: %s", bulletin_page_url, exc)
                 failures.append(exc)
+        if str(failures[0]).startswith(OLD_BULLETIN_ONLY):
+            return _resolve_other_bulletin_page(
+                page=p, bulletin_page_url=pages_to_try[0], reference_date=today,
+            )
         raise failures[0]
 
     if page is not None:
@@ -494,13 +514,23 @@ def _is_current(parsed_date: date | None, reference_date: date) -> bool:
     )
 
 
+def _age_days(candidate: _OtherPdfCandidate, reference_date: date) -> int:
+    return (reference_date - (candidate.parsed_date or reference_date)).days
+
+
 def _pick_other_candidate(
     candidates: list[_OtherPdfCandidate], *, reference_date: date,
     max_age_days: int | None = None,
 ) -> tuple[str, str]:
-    """The newest bulletin dated within a week of today, else the first one listed.
+    """The newest bulletin dated within a week of today, else a fallback.
 
-    With `max_age_days`, a first one dated further than that from today is refused.
+    With none that current, the first one listed, except:
+    - if it is plainly old (dated over OTHER_FALLBACK_MAX_AGE_DAYS ago), the
+      newest dated within that, when one is listed: a listing oldest first
+      (St. Joseph, Troy) or a parish a few weeks behind;
+    - a link whose whole text is "Bulletin" beats a first one that is not
+      dated (St. Mary's, Glens Falls lists a Confirmation PDF first).
+    With `max_age_days`, a pick dated further than that from today is refused.
     """
     dated_candidates = [c for c in candidates if _is_current(c.parsed_date, reference_date)]
     if dated_candidates:
@@ -508,13 +538,28 @@ def _pick_other_candidate(
         return best.source_url, best.fetch_url
 
     first = candidates[0]
+    if first.parsed_date is not None and _age_days(first, reference_date) > (
+        OTHER_FALLBACK_MAX_AGE_DAYS
+    ):
+        recent = [
+            c for c in candidates
+            if c.parsed_date is not None
+            and -OTHER_CURRENT_WINDOW_DAYS
+            <= _age_days(c, reference_date)
+            <= OTHER_FALLBACK_MAX_AGE_DAYS
+        ]
+        if recent:
+            best = max(recent, key=lambda c: c.parsed_date or date.min)
+            return best.source_url, best.fetch_url
+    if first.parsed_date is None:
+        first = next((c for c in candidates if c.titled_bulletin), first)
     if (
         max_age_days is not None
         and first.parsed_date is not None
         and abs((reference_date - first.parsed_date).days) > max_age_days
     ):
         raise ValueError(
-            f"Only PDF found is dated {first.parsed_date.isoformat()}: {first.source_url}"
+            f"{OLD_BULLETIN_ONLY} {first.parsed_date.isoformat()}: {first.source_url}"
         )
     return first.source_url, first.fetch_url
 
@@ -546,7 +591,9 @@ def _find_other_bulletin_page_urls(
         if not has_in_href and not has_in_text:
             continue
         resolved = urljoin(base_url, href)
-        if resolved.lower().endswith(".pdf") and not _is_publisher_listing(resolved):
+        if (
+            resolved.lower().endswith(".pdf") and not _is_publisher_listing(resolved)
+        ) or _document_download_url(resolved) is not None:
             continue
         if has_in_href and has_in_text:
             both_matches.append(resolved)
@@ -568,9 +615,9 @@ def _links_bulletin_pdf(*, page: PageLike, base_url: str) -> bool:
         if not isinstance(href, str):
             continue
         resolved = urljoin(base_url, href)
+        is_pdf = resolved.lower().endswith(".pdf") and not _is_publisher_listing(resolved)
         if (
-            resolved.lower().endswith(".pdf")
-            and not _is_publisher_listing(resolved)
+            (is_pdf or _document_download_url(resolved) is not None)
             and "bulletin" in f"{_anchor_text(anchor)} {resolved}".lower()
         ):
             return True
@@ -739,16 +786,20 @@ def _collect_other_pdf_candidates(
         if not isinstance(href, str):
             continue
         absolute_href = _unwrap_pdf_viewer_url(urljoin(base_url, href))
+        fetch_url: str | None = absolute_href
         if ".pdf" not in absolute_href.lower() or _is_publisher_listing(absolute_href):
-            continue
+            fetch_url = _document_download_url(absolute_href)
+            if fetch_url is None:
+                continue
         text = _anchor_text(anchor)
         parsed_date = _parse_relaxed_date_from_texts([text, href, absolute_href], reference_date)
         candidates.append(
             _OtherPdfCandidate(
                 source_url=absolute_href,
-                fetch_url=absolute_href,
+                fetch_url=fetch_url,
                 parsed_date=parsed_date,
                 labelled="bulletin" in f"{text} {absolute_href}".lower(),
+                titled_bulletin=bool(_BULLETIN_TITLE_RE.fullmatch(text.strip().lower())),
             )
         )
     if any(c.labelled or _is_current(c.parsed_date, reference_date) for c in candidates):
@@ -783,6 +834,27 @@ def _collect_other_pdf_candidates(
     return _collect_pdf_urls_from_html(
         source, base_url=base_url, reference_date=reference_date,
     )
+
+
+_BULLETIN_TITLE_RE = re.compile(
+    r"(?:(?:this week'?s|weekly|current|latest|parish|sunday)\s+)?bulletin"
+)
+# A Google Drive file shared on its own ("/file/d/<id>/view"), as some parishes
+# link each week's bulletin, downloads without a browser from this address.
+_GOOGLE_DRIVE_FILE_RE = re.compile(r"^https?://drive\.google\.com/file/d/([\w-]+)")
+# Concrete CMS (the Diocese of Albany's rcda.org) links files as
+# /download_file/view/<file>/<page>, which redirects to the PDF.
+_CONCRETE_DOWNLOAD_RE = re.compile(r"^https?://[^/]+/download_file/(?:view/)?\d+(?:/\d+)?/?$")
+
+
+def _document_download_url(url: str) -> str | None:
+    """Where to download a link that is a PDF though its address doesn't say so."""
+    match = _GOOGLE_DRIVE_FILE_RE.match(url)
+    if match:
+        return GOOGLE_DRIVE_FILE_DOWNLOAD_URL_TEMPLATE.format(file_id=match.group(1))
+    if _CONCRETE_DOWNLOAD_RE.match(url):
+        return url
+    return None
 
 
 # The viewer the PDF Embedder WordPress plugin renders in place of its PDF link.
@@ -856,17 +928,34 @@ def _anchor_text(anchor: AnchorLike) -> str:
         return ""
 
 
+# A folder named by the year alone ("/bulletins/2025/September_28.pdf"), not a
+# WordPress upload folder ("/2025/12/..."), whose year is the upload's.
+_PATH_YEAR_RE = re.compile(r"/(20\d{2})/(?!\d{1,2}/)")
+
+
 def _parse_relaxed_date_from_texts(texts: list[str], reference_date: date) -> date | None:
+    """The first date in texts; a yearless one takes its year from a year folder in them."""
+    year = next(
+        (int(m.group(1)) for text in texts if (m := _PATH_YEAR_RE.search(text or ""))), None,
+    )
     for text in texts:
-        parsed = _parse_relaxed_date(text, reference_date)
+        parsed = _parse_relaxed_date(text, reference_date, year=year)
         if parsed is not None:
             return parsed
     return None
 
 
-def _parse_relaxed_date(text: str, reference_date: date) -> date | None:
+def _parse_relaxed_date(
+    text: str, reference_date: date, *, year: int | None = None,
+) -> date | None:
+    """A date in text. One without a year is `year`'s if given, else the nearest."""
     if not text:
         return None
+
+    def yearless(month: int, day: int) -> date | None:
+        if year is not None:
+            return _safe_date(year, month, day)
+        return _resolve_yearless_date(month=month, day=day, reference_date=reference_date)
 
     normalized = text.lower()
     normalized = re.sub(r"(\d+)(st|nd|rd|th)", r"\1", normalized)
@@ -902,18 +991,21 @@ def _parse_relaxed_date(text: str, reference_date: date) -> date | None:
             if raw_year:
                 parsed = _safe_date(_normalize_year(raw_year, reference_date), month_num, day)
             else:
-                parsed = _resolve_yearless_date(
-                    month=month_num, day=day, reference_date=reference_date,
-                )
+                parsed = yearless(month_num, day)
             if parsed is not None:
                 return parsed
 
-    for match in re.finditer(r"(?P<year>\d{4})[-/.](?P<month>\d{1,2})[-/.](?P<day>\d{1,2})", normalized):
+    # Not the tail of a longer number: Weebly's "/38133239/02-12-2017" is no year 3239.
+    for match in re.finditer(
+        r"(?<!\d)(?P<year>\d{4})[-/.](?P<month>\d{1,2})[-/.](?P<day>\d{1,2})(?!\d)", normalized,
+    ):
         parsed = _safe_date(int(match.group("year")), int(match.group("month")), int(match.group("day")))
         if parsed is not None:
             return parsed
 
-    for match in re.finditer(r"(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})[-/.](?P<c>\d{2,4})", normalized):
+    for match in re.finditer(
+        r"(?<!\d)(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})[-/.](?P<c>\d{2,4})(?!\d)", normalized,
+    ):
         month = int(match.group("a"))
         day = int(match.group("b"))
         year = _normalize_year(match.group("c"), reference_date)
@@ -921,10 +1013,8 @@ def _parse_relaxed_date(text: str, reference_date: date) -> date | None:
         if parsed is not None:
             return parsed
 
-    for match in re.finditer(r"(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})", normalized):
-        month = int(match.group("a"))
-        day = int(match.group("b"))
-        parsed = _resolve_yearless_date(month=month, day=day, reference_date=reference_date)
+    for match in re.finditer(r"(?<!\d)(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)", normalized):
+        parsed = yearless(int(match.group("a")), int(match.group("b")))
         if parsed is not None:
             return parsed
 
@@ -942,7 +1032,7 @@ def _parse_relaxed_date(text: str, reference_date: date) -> date | None:
     # patterns above need a space.
     words_split = re.sub(r"[-_]+|(?<=[a-z])\.", " ", normalized)
     if words_split != normalized:
-        return _parse_relaxed_date(words_split, reference_date)
+        return _parse_relaxed_date(words_split, reference_date, year=year)
     return None
 
 
@@ -1135,9 +1225,19 @@ def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
     referer = source_url
     try:
         LOGGER.info("Attempting primary fetch URL: %s", fetch_url)
-        return _http_get_bytes(
-            fetch_url, referer=referer, timeout=HTTP_DOWNLOAD_TIMEOUT_SECONDS,
-        )
+        try:
+            return _http_get_bytes(
+                fetch_url, referer=referer, timeout=HTTP_DOWNLOAD_TIMEOUT_SECONDS,
+            )
+        except HTTPError as exc:
+            # Weebly and Wix file hosts answer 429 to a few quick requests.
+            if exc.code != 429:
+                raise
+            LOGGER.warning("429 from %s; retrying in %ss", fetch_url, HTTP_429_RETRY_SECONDS)
+            time.sleep(HTTP_429_RETRY_SECONDS)
+            return _http_get_bytes(
+                fetch_url, referer=referer, timeout=HTTP_DOWNLOAD_TIMEOUT_SECONDS,
+            )
     except (HTTPError, URLError, OSError) as exc:
         LOGGER.warning("Primary fetch failed (%s), falling back to source URL: %s", exc, source_url)
         return _http_get_bytes(

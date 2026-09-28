@@ -346,6 +346,9 @@ Each of these produced a confident wrong answer in Buffalo at least once.
 - **A summarizing fetch tool is not a source.** For a quote, read the page itself (`probe
   pdf`, `curl`, the recheck tool). One summary moved a 2020 merger to 2026. The article's
   weekdays gave the real year.
+- **A hand-written `quote:` or `note:` containing ": " breaks the YAML.** Quote the value
+  (`note: 'Page 1: the masthead'`). `validate` catches it, but only after the whole file is
+  unreadable, which in Albany briefly left three churches pointing at a "missing" parish.
 - **Coverage measures the roster.** A place the roster doesn't list moves no number, and an
   oratory with no weekend Mass can be missing from every list and still be open. `coverage`
   lists your churches that are in no roster; each needs an explanation, not deletion.

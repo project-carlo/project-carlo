@@ -303,7 +303,9 @@ def parse_gcatholic_detail(page: str) -> dict[str, Any]:
 def parse_address(raw: str) -> dict[str, str]:
     """'34 S Main St., Bainbridge, New York 13733-1215' -> line1, city, state, postal_code."""
     out = {"line1": "", "city": "", "state": "", "postal_code": ""}
-    parts = [p.strip() for p in (raw or "").split(",") if p.strip()]
+    # GCatholic sometimes ends an address with an invisible direction mark (U+200E).
+    raw = re.sub(r"[\u200b-\u200f\u202a-\u202e\u2066-\u2069]", "", raw or "")
+    parts = [p.strip() for p in raw.split(",") if p.strip()]
     if parts and parts[-1].upper() in ("USA", "UNITED STATES"):
         parts.pop()
     if parts:
@@ -312,6 +314,10 @@ def parse_address(raw: str) -> dict[str, str]:
             state = m.group(1).strip()
             out["state"] = US_STATES.get(state.lower(), state.upper() if len(state) == 2 else state)
             out["postal_code"] = m.group(2)
+            parts.pop()
+        elif (m := re.match(r"^(.*?)\s*\d{1,4}$", parts[-1])) and m.group(1).lower() in US_STATES:
+            # A mistyped ZIP ("Stamford, New York 1890"): keep the state, drop the number.
+            out["state"] = US_STATES[m.group(1).lower()]
             parts.pop()
     if parts:
         out["city"] = parts.pop()

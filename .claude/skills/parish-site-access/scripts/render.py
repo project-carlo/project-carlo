@@ -9,7 +9,7 @@ quote: cite the PDF's URL and say in the `note` that the page is an image.
 
 Usage (from the repo root; run setup_browser.sh once first):
   uv run python .claude/skills/parish-site-access/scripts/render.py URL|FILE OUT_PREFIX \
-      [--pages 1,2] [--scale 1.6]
+      [--pages 1,3-5] [--scale 1.6]
 
 Writes OUT_PREFIX-p<N>.png for each page (every page without --pages) and
 prints JSON: {"pdf", "page_count", "images": [...]}.
@@ -63,11 +63,20 @@ def _pdf_bytes(source: str) -> bytes:
     return resp.body
 
 
+def _page_numbers(spec: str) -> list[int]:
+    """'1,3-5' -> [1, 3, 4, 5]."""
+    out: list[int] = []
+    for part in spec.split(","):
+        first, _, last = part.strip().partition("-")
+        out.extend(range(int(first), int(last or first) + 1))
+    return out
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("pdf", help="a PDF URL or a local file")
     parser.add_argument("out", type=Path, help="output prefix, e.g. /tmp/bulletin")
-    parser.add_argument("--pages", help="comma-separated page numbers (default: all)")
+    parser.add_argument("--pages", help="page numbers and ranges, e.g. 1,3-5 (default: all)")
     parser.add_argument("--scale", type=float, default=1.6)
     args = parser.parse_args()
 
@@ -85,8 +94,7 @@ def main() -> int:
             page.set_content(PAGE)
             page.wait_for_function("window.ready === true", timeout=60000)
             count = page.evaluate("b => window.load(b)", data)
-            wanted = ([int(n) for n in args.pages.split(",")] if args.pages
-                      else range(1, count + 1))
+            wanted = _page_numbers(args.pages) if args.pages else range(1, count + 1)
             for n in wanted:
                 if not 1 <= n <= count:
                     continue

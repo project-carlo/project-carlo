@@ -245,6 +245,22 @@ PARISH_WORDS = [
     "sacrament", "worship", "rosary",
 ]
 
+
+def looks_squatted(text: str) -> bool:
+    """Spam vocabulary that means a squatter, not a passing mention.
+
+    A squat page repeats its terms; a live parish page can name one in its news (a
+    Schenectady parish announced a dinner "at Rivers Casino & Resort"). One term, at most
+    twice, on a page that still has parish vocabulary is not a squat.
+    """
+    low = text.lower()
+    hits = _SPAM_RE.findall(low)
+    if not hits:
+        return False
+    if len(set(hits)) >= 2 or len(hits) >= 3:
+        return True
+    return not any(w in low for w in PARISH_WORDS)
+
 VERDICT_NOTES = {
     "DEAD-DNS": "the domain does not resolve (checked twice, with and without www.)",
     "UNREACHABLE": "resolves but did not answer: often an IPv6-only host; check in a browser",
@@ -307,8 +323,9 @@ def probe_url(url: str) -> dict[str, Any]:
     out["publications"] = find_publications(page)
     out["bulletin_links"] = bulletin_links(page, resp.final_url or url)
     if spam:
-        verdict = "SPAM-SQUAT"
         out["spam_terms"] = spam
+    if spam and looks_squatted(page):
+        verdict = "SPAM-SQUAT"
     elif resp.final_url and _registrable(_host(resp.final_url)) != _registrable(host):
         verdict = "REDIRECT-OFFSITE"
     elif resp.status >= 500:

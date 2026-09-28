@@ -389,6 +389,14 @@ def test_gcatholic_pages_parse() -> None:
     assert detail["postal_code"] == "13733" and detail["latitude"] == pytest.approx(42.292, 1e-3)
 
 
+def test_parse_address_ignores_direction_marks() -> None:
+    # Albany's GCatholic pages end some addresses with U+200E.
+    assert rosters.parse_address("NY 23A, Hunter, New York 12450 \u200e") == {
+        "line1": "NY 23A", "city": "Hunter", "state": "NY", "postal_code": "12450"}
+    assert rosters.parse_address("27 Harper St., Stamford, New York 1890") == {
+        "line1": "27 Harper St.", "city": "Stamford", "state": "NY", "postal_code": ""}
+
+
 def test_find_publications_keeps_lpi_ids_whole() -> None:
     page = ('<iframe src="https://parishesonline.com/publicationWidget?type=bulletin&'
             'id=0018000000Qbyz4AAB"></iframe>'
@@ -412,6 +420,14 @@ def test_spam_terms_match_whole_words_only() -> None:
     wix = '{"specs.stores.displayCheckoutErrorModalsForExpressButtons":"true"}'
     assert web.spam_terms(wix + " Judicial Conference policy prohibits it") == []
     assert web.spam_terms("Situs judi slot online terpercaya") == ["judi", "slot online"]
+
+
+def test_one_passing_spam_term_on_a_parish_page_is_not_a_squat() -> None:
+    news = "Parish news: the Hall of Fame dinner is at Rivers Casino & Resort. Mass times"
+    assert web.spam_terms(news) == ["casino"] and not web.looks_squatted(news)
+    assert web.looks_squatted("Casino bonus! Best casino games, casino online")
+    assert web.looks_squatted("Situs judi slot online terpercaya, parish")
+    assert web.looks_squatted("Play at our casino tonight")
 
 
 def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:

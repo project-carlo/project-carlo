@@ -43,6 +43,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import random
 import re
 import shutil
 import sys
@@ -51,8 +52,13 @@ from urllib.parse import urljoin
 
 REPO = Path(__file__).resolve().parents[4]
 CF_TITLE = "just a moment"
+# SiteGround's "Robot Challenge Screen" (/.well-known/sgcaptcha/) clears by itself
+# after 5-10 s in a headed browser, then goes back to the page.
+SG_TITLE = "robot challenge"
+SG_PATH = "/.well-known/sgcaptcha"
 # How long one load waits for a passive challenge to clear before reloading.
 CF_SETTLE_MS = 5000
+SG_SETTLE_MS = 20000
 # Pause before each reload. Challenged loads come in streaks lasting tens of
 # seconds, so back off instead of hammering: 2s, 4s, 8s, then 15s.
 RETRY_PAUSES_MS = (2000, 4000, 8000, 15000)
@@ -63,21 +69,32 @@ def _reexec_under_xvfb() -> None:
     headless = os.getenv("PLAYWRIGHT_HEADLESS", "").lower() in {"1", "true", "yes", "on"}
     if os.getenv("DISPLAY") or headless or not shutil.which("xvfb-run"):
         return
+    # xvfb-run -a probes upward from display 99, so runs started together (parallel agents)
+    # race for the same display. Start each run's search at a random number instead.
     os.execvp(
         "xvfb-run",
-        ["xvfb-run", "-a", "-s", "-screen 0 1366x900x24", sys.executable, *sys.argv],
+        ["xvfb-run", "-a", "-n", str(random.randint(100, 60000)), "-s", "-screen 0 1366x900x24",
+         sys.executable, *sys.argv],
     )
 
 
 def _challenged(page) -> bool:  # type: ignore[no-untyped-def]
     try:
-        return CF_TITLE in (page.title() or "").lower()
+        title = (page.title() or "").lower()
+        return CF_TITLE in title or SG_TITLE in title or SG_PATH in (page.url or "")
     except Exception:  # title() during a navigation
         return True
 
 
+def _settle_ms(page) -> int:  # type: ignore[no-untyped-def]
+    try:
+        return SG_SETTLE_MS if SG_PATH in (page.url or "") else CF_SETTLE_MS
+    except Exception:
+        return CF_SETTLE_MS
+
+
 def goto(page, url: str, retries: int) -> tuple[int | None, int]:  # type: ignore[no-untyped-def]
-    """Load url, reloading while Cloudflare challenges. Returns (status, loads)."""
+    """Load url, reloading while Cloudflare (or SiteGround) challenges. Returns (status, loads)."""
     status = None
     for attempt in range(1, retries + 1):
         status = None  # a challenged attempt's 403 must not describe a later load
@@ -91,7 +108,7 @@ def goto(page, url: str, retries: int) -> tuple[int | None, int]:  # type: ignor
                 raise
             page.wait_for_load_state("domcontentloaded", timeout=30000)
         waited = 0
-        while _challenged(page) and waited < CF_SETTLE_MS:
+        while _challenged(page) and waited < _settle_ms(page):
             page.wait_for_timeout(500)
             waited += 500
         if not _challenged(page):
@@ -183,7 +200,7 @@ def _verdict(url: str, status: int | None, page, web) -> str:  # type: ignore[no
     """probe url's verdicts, judged on the rendered HTML instead of the raw HTML."""
     html = _html(page).lower()
     status = status or 0
-    if web.spam_terms(html):
+    if web.looks_squatted(html):
         return "SPAM-SQUAT"
     if web._registrable(web._host(page.url)) != web._registrable(web._host(url)):
         return "REDIRECT-OFFSITE"
