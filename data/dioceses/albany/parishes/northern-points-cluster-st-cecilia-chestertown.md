@@ -59,13 +59,13 @@ Sunday time.
 
 ## Worship sites
 
-Three: , ,
-, every church whose Mass schedule the bulletin prints.
+Three: `blessed-sacrament-bolton-landing`, `st-isaac-jogues-chestertown`,
+`st-cecilia-warrensburg`, every church whose Mass schedule the bulletin prints.
 
 Ruled out or undecided:
-- **St. James, North Creek** (): closing Mass 27 October
+- **St. James, North Creek** (`excluded/st-james-north-creek.md`): closing Mass 27 October
   2024; the diocese's directory still lists it as an "Other Worship Site" of St. Isaac Jogues.
-- **Blessed Sacrament / St. Isaac Jogues summer chapel, Hague** ():
+- **Blessed Sacrament / St. Isaac Jogues summer chapel, Hague** (`open/blessed-sacrament-hague.md`):
   summer Sunday 9 am Mass through 2023; in no 2024-2026 summer bulletin.
 - The institutional-records index also lists St. Teresa, Brant Lake and St. John the Baptist,
   Chestertown (now St. Isaac Jogues) as ended parishes of the Hague/Chestertown parish, and
@@ -80,11 +80,11 @@ The cluster's weebly site answers at two addresses: blessedsacramentbolton.org (
 Cloudflare on 2026-09-28) and northernpointscluster.weebly.com (the address the bulletin and
 the diocese give; Cloudflare in front, loads in visit.py). Both list the same files
 (uploads/3/8/1/3/38133239/MM-DD-YY_<Sunday>.pdf, one per Sunday), so the unblocked address is
-the ; its /2026-bulletins.html page lists the year's issues. File names are not
+the `website`; its /2026-bulletins.html page lists the year's issues. File names are not
 predictable (they carry the liturgical Sunday), so the issue has to be read from the list
 page. The PDFs have a text layer. The diocese's other address for the cluster,
 northernpointscluster.org (GCatholic), does not resolve (DEAD-DNS). The weebly host answered
-HTTP 429 to repeated  calls; spacing requests a second apart worked.
+HTTP 429 to repeated `probe pdf` calls; spacing requests a second apart worked.
 
 ## Not yet confirmed
 
