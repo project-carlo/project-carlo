@@ -1,6 +1,6 @@
 ---
 parish: transfiguration-troy
-name: Transfiguration
+name: Transfiguration Church (Speigletown)
 line1: 50 Hillview Dr.
 line2: ''
 city: Troy
@@ -9,8 +9,8 @@ postal_code: '12182'
 latitude: 42.7980625
 longitude: -73.6381875
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18165', 'directory:443']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18165
@@ -21,14 +21,24 @@ evidence:
 - url: https://www.rcda.org/parishes/parish/transfiguration-parish-schaghticoke-ny
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Transfiguration Parish', NY
+- url: https://container.parishesonline.com/bulletins/04/0527/20260927B.pdf
+  seen: 2026-09-28
+  note: Page 1 of the 27 September 2026 issue (image, rendered with render.py). "Speigletown - Saturday
+    4:00 PM ... Saturday, 4PM MASS Livestream" and "50 Hillview Drive Speigletown Troy, NY 12182".
+- url: https://speigletown.org/transfiguration-parish/
+  seen: 2026-09-28
+  quote: Saturday Mass on Hillview Drive, with a second site in the Village of Schaghticoke
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin (page 1, an image): Saturday 4:00 pm Mass (livestreamed),
+and a Thursday 9:00 am communion service.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+50 Hillview Drive, Speigletown (Troy 12182) in the bulletin, GCatholic ("Transfiguration") and
+ParishesOnline; the directory gives it as the parish's mailing address. The building was St.
+Bonaventure's church (founded 1970) before the 2010 merger; the parish now calls the sites by
+hamlet. Both flags true. The directory's address-less "Transfiguration Parish" entry is linked
+here, since its only address is this one. Coordinates are GCatholic's Plus Code.
