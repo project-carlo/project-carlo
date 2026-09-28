@@ -389,6 +389,14 @@ def test_gcatholic_pages_parse() -> None:
     assert detail["postal_code"] == "13733" and detail["latitude"] == pytest.approx(42.292, 1e-3)
 
 
+def test_parse_address_ignores_direction_marks() -> None:
+    # Albany's GCatholic pages end some addresses with U+200E.
+    assert rosters.parse_address("NY 23A, Hunter, New York 12450 \u200e") == {
+        "line1": "NY 23A", "city": "Hunter", "state": "NY", "postal_code": "12450"}
+    assert rosters.parse_address("27 Harper St., Stamford, New York 1890") == {
+        "line1": "27 Harper St.", "city": "Stamford", "state": "NY", "postal_code": ""}
+
+
 def test_find_publications_keeps_lpi_ids_whole() -> None:
     page = ('<iframe src="https://parishesonline.com/publicationWidget?type=bulletin&'
             'id=0018000000Qbyz4AAB"></iframe>'
