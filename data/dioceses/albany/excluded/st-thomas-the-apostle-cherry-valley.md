@@ -15,8 +15,7 @@ evidence:
     before Mass"; church at 1 Church St., Cherry Valley, NY 13320-3569; Kateri Hall at 13 Church St. Undated.'
 - url: https://stthomascv.com/bulletin-full.html
   seen: 2026-09-28
-  quote: 5th Sunday of Easter — May 3rd, 2026
-  note: 'The site''s only bulletin: an HTML page built from data embedded in the page (window.STTHOMAS_BULLETINFULL_FALLBACK),
+  note: 'Week title "5th Sunday of Easter — May 3rd, 2026" (inside a script block, so recheck cannot find it as page text). The site''s only bulletin: an HTML page built from data embedded in the page (window.STTHOMAS_BULLETINFULL_FALLBACK),
     "updated_at":"2026-05-03". Rendered in a browser (visit.py) it shows "Updated: 2026-05-03". No PDF;
     the data/bulletin_full.json file app.js asks for answers 404. Its Mass Schedule section: "Sunday:
     10:00 AM"; "May 3rd Prayer Service being held in absence of a priest."'
