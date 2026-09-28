@@ -9,8 +9,8 @@ postal_code: '12303'
 latitude: 42.7415625
 longitude: -73.9440625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18098', 'directory:374']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18098
@@ -22,14 +22,21 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. Madeleine Sophie Church', 3500 Carman Rd.,
     Schenectady, NY, 12303
+- url: https://discovermass.com/church/st-madeleine-sophie-schenectady-ny/
+  seen: 2026-09-28
+  quote: St. Madeleine Sophie (SMS) |4:00pm
+  note: '27 September 2026 issue, page 1: SMS Sat 4 pm, Sun 9 am and 7 pm, Tue/Wed/Fri 9 am.'
+- url: https://discovermass.com/church/st-madeleine-sophie-schenectady-ny/
+  seen: 2026-09-28
+  quote: St. Madeleine's 3500 Carman Road
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin (page 1) gives Saturday 4 pm and Sunday 9 am and 7 pm
+here, plus Tuesday, Wednesday and Friday 9 am.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+St. Madeleine Sophie, 3500 Carman Road, Schenectady 12303: the bulletin, GCatholic and the directory agree. Both flags true.
+Coordinates are GCatholic's Plus Code.

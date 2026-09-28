@@ -9,7 +9,7 @@ postal_code: '12308'
 latitude: 42.8144375
 longitude: -73.9316875
 coordinates_from: gcatholic-plus-code
-name_verified: false
+name_verified: true
 address_verified: false
 roster: ['gcatholic:18202', 'directory:353']
 evidence:
@@ -22,14 +22,23 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. John the Evangelist Church', 812 Union
     St., Schenectady, NY, 12308
+- url: https://sjechurch.com/bulletin/09-27-26.pdf
+  seen: 2026-09-28
+  quote: 'Saturday Mass: 4:00 p.m. Vigil Sunday Masses: 10:30 a.m.'
+- url: https://www.schenectadyhistory.org/churches/directory.html
+  seen: 2026-09-28
+  quote: St. John the Evangelist Roman Catholic Church 816 Union Street, Schenectady, NY 12308
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin (page 1) gives Saturday 4 pm Vigil and Sunday 10:30 am.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+Name agrees everywhere; `name_verified` true.
+
+Address: GCatholic and the directory give 812 Union St.; the county historical society gives
+816 Union Street; the bulletin gives only the parish office, 806 Union St. 812 (the two
+independent directories) is followed; `address_verified` false because of the 816 listing.
+Coordinates are GCatholic's Plus Code.

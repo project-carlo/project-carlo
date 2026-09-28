@@ -1,6 +1,6 @@
 ---
 parish: our-lady-queen-of-peace-rotterdam
-name: Our Lady, Queen of Peace
+name: Our Lady Queen of Peace
 line1: 210 Princetown Rd.
 line2: ''
 city: Schenectady
@@ -9,8 +9,8 @@ postal_code: '12306'
 latitude: 42.7940625
 longitude: -73.9870625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18198', 'directory:382']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18198
@@ -22,14 +22,22 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Our Lady, Queen of Peace Parish', 210 Princetown
     Rd., Schenectady, NY, 12306
+- url: https://discovermass.com/church/our-lady-queen-of-peace-schnectady-ny/
+  seen: 2026-09-28
+  quote: 'Saturday: 4:00 PM Our Lady Queen of Peace'
+  note: '27 September 2026 issue, page 1: OLQP Sat 4 pm, Sun 8 am, Mon-Wed 7:30 am, Sat 8:30 am.'
+- url: https://discovermass.com/church/our-lady-queen-of-peace-schnectady-ny/
+  seen: 2026-09-28
+  quote: Our Lady Queen of Peace Parish 210 Princetown Road Schenectady, New York 12306
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin (page 1) gives Saturday 4 pm and Sunday 8 am here, plus
+Monday-Wednesday 7:30 am and Saturday 8:30 am.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+Our Lady Queen of Peace, 210 Princetown Road, Schenectady 12306 (Town of Rotterdam): the
+bulletin, GCatholic and the directory agree. Both flags true. Coordinates are GCatholic's Plus
+Code.

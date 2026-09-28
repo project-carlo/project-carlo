@@ -1,6 +1,6 @@
 ---
 parish: holy-family-little-falls
-name: St. Joseph
+name: St. Joseph Church
 line1: 31 N Helmer Ave.
 line2: ''
 city: Dolgeville
@@ -9,8 +9,8 @@ postal_code: '13329'
 latitude: 43.1059375
 longitude: -74.7714375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18134', 'directory:295']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18134
@@ -22,14 +22,19 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Joseph's Church", 31 N Helmer Ave., Dolgeville,
     NY, 13329
+- url: https://files.ecatholic.com/28690/documents/2026/9/HF%20-%20SJ%20Bulletin%20September%2027%202026%20copy.pdf
+  seen: 2026-09-28
+  quote: St. Joseph Church 31 N. Helmer Avenue Dolgeville, NY 13329
+  note: 27 September 2026 issue, page 3; page 1 'ST. JOSEPH CHURCH MASS TIMES Sunday 8 a.m.'; page 2 has
+    intentions for St. Joseph on Sundays.
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes: Sunday 8 am (holy-day vigils 5:30 pm), per the 27 September 2026 bulletin, with its
+coffee hour after the 8 a.m. Mass on 11 October.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin, the diocese ("St. Joseph's Church") and GCatholic give 31 N. Helmer Ave.,
+Dolgeville 13329: both flags true. Coordinates: GCatholic Plus Code.

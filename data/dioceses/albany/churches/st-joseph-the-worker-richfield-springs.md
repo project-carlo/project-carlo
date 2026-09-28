@@ -1,6 +1,6 @@
 ---
 parish: st-joseph-the-worker-west-winfield
-name: St. Joseph the Worker
+name: St. Joseph the Worker Church (Richfield Springs)
 line1: 35 Canadarago St.
 line2: ''
 city: Richfield Springs
@@ -9,8 +9,8 @@ postal_code: '13439'
 latitude: 42.8501875
 longitude: -74.9813125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18143', 'directory:303']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18143
@@ -22,14 +22,24 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. Joseph the Worker Parish (Richfield Springs
     site)', 35 Canadarago St., Richfield Springs, NY, 13439
+- url: https://files.ecatholic.com/30839/bulletins/20260927.pdf
+  seen: 2026-09-28
+  quote: Sundays 8:00-8:20 am (WW), after 10:30 am Mass (RS)
+  note: '27 September 2026 issue, page 1 (masthead: ''Church and Parish Office 35 Canadarago Street, PO
+    Box 791 Richfield Springs, NY 13439''); page 2 calendar: RS Sat 4:00 pm, Sun 10:30 am, weekdays.'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes: Saturday 4:00 pm and Sunday 10:30 am, plus weekday Masses, per the 27 September 2026
+bulletin's calendar (coded RS).
+
+This church is in Richfield Springs (Otsego County, the southern-tier region of this
+exploration). It was created by the mohawk-valley agent because its parish's bulletin row
+(`st-joseph-the-worker-west-winfield`) is recorded there.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin masthead, the diocese's directory ("St. Joseph the Worker Parish (Richfield
+Springs site)") and GCatholic give 35 Canadarago St., Richfield Springs 13439: both flags
+true. Coordinates: GCatholic Plus Code.

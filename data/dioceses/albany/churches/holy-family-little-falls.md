@@ -1,6 +1,6 @@
 ---
 parish: holy-family-little-falls
-name: Holy Family
+name: Holy Family Church
 line1: 763 E Main St.
 line2: ''
 city: Little Falls
@@ -9,8 +9,8 @@ postal_code: '13365'
 latitude: 43.0438125
 longitude: -74.8529375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:18139', 'directory:300']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18139
@@ -22,14 +22,19 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Holy Family Parish', 763 E. Main St., Little
     Falls, NY, 13365
+- url: https://files.ecatholic.com/28690/documents/2026/9/HF%20-%20SJ%20Bulletin%20September%2027%202026%20copy.pdf
+  seen: 2026-09-28
+  quote: Holy Family Parish 763 E. Main Street Little Falls, NY 13365
+  note: 27 September 2026 issue, page 2; page 1 gives Holy Family Mass times Saturday 4 p.m., Sunday 10
+    a.m. and 12 p.m., weekdays.
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes, daily: Saturday 4 pm, Sunday 10 am and 12 pm (Traditional Latin Mass; none on 27
+September), Tuesday 5:30 pm, Wednesday–Friday 8 am, per the 27 September 2026 bulletin.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin, the diocese ("Holy Family Parish") and GCatholic ("Holy Family") all give 763
+E. Main St., Little Falls 13365: both flags true. Coordinates: GCatholic Plus Code.
