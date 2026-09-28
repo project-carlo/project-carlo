@@ -3,30 +3,30 @@ name: All Saints on the Hudson
 website: https://allsaintsny.us
 bulletin_provider: ecatholic
 provider_id: ''
-publication:
-- ecatholic:20630
+publication: ['ecatholic:20630']
 group: ''
 evidence:
 - url: https://files.ecatholic.com/20630/bulletins/20260927.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: ALL SAINTS ON THE HUDSON
   note: 'Masthead, page 1 of the 27 September 2026 issue: "A ROMAN CATHOLIC COMMUNITY SERVING MECHANICVILLE,
     STILLWATER, AND SARATOGA SPRINGS", 52 William Street, Mechanicville, Pastor Fr. George Fleming.'
 - url: https://files.ecatholic.com/20630/bulletins/20260927.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: 'Saturday: 4:00 PM, St. Paul’s Church, Mechanicville'
   note: 'Page 1 schedule; continues "Sunday: 8:30 AM, St. Peter’s Church, Stillwater / Sunday, 10:00 AM,
     St. Isaac Jogues, Saratoga Springs (May thru October) / Sunday, 10:30 AM, St. Paul’s Church, Mechanicville".'
 - url: https://files.ecatholic.com/20630/bulletins/20260927.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: 'Thursday: 9:00 AM, Parish Center Chapel, Mechanicville'
   note: 'Page 1 weekday Masses: "Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter’s Church, Stillwater".'
 - url: https://allsaintsny.us/mass-times
-  seen: *id001
+  seen: 2026-09-28
   quote: Parish Center Chapel 52 William St, Mechanicville
   note: Parish Mass-times page (eCatholic, behind Cloudflare; read in a browser with parish-site-access
     visit.py). Also "8:45am St. Peter's Church 895 Hudson Avenue, Stillwater" and "Seasonally Only (from
     Memorial Day until November) 10:00am Mass at St. Isaac Jogues Chapel Saratoga Lake".
+promoted: 2026-09-28
 ---
 
 ## Publisher

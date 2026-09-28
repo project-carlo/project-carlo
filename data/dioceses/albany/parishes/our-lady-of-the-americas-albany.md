@@ -11,22 +11,21 @@ evidence:
   quote: Shrine Church of Our Lady of the Americas Iglesia Santuario de Nuestra Señora de las Américas
     September 13, 2026
   note: Masthead, page 2 of the 13 September 2026 issue (the file the bulletins page labels "September
-    13/13 de septiembre"). The shrine alone; pastor Rev. Daniel Quinn, shrine chaplain Rev. Francis
-    O'Connor.
+    13/13 de septiembre"). The shrine alone; pastor Rev. Daniel Quinn, shrine chaplain Rev. Francis O'Connor.
 - url: https://www.ourladyoftheamericas.org/_files/ugd/bafe59_138f42b414d64d0d8e894405950e72ef.pdf
   seen: 2026-09-28
   quote: 9:00 am English Mass
-  note: Mass intentions, page 1, for Sunday 13 and 20 September, each followed by "11:00 am Misa en
-    español".
+  note: Mass intentions, page 1, for Sunday 13 and 20 September, each followed by "11:00 am Misa en español".
 - url: https://www.ourladyoftheamericas.org/bulletins-boletines
   seen: 2026-09-28
   quote: A mission of Blessed Sacrament Parish
-  note: 'The shrine''s "Bulletins ~ Boletines" page (Wix, plain HTML): one PDF per Sunday, latest
-    "September 13/13 de septiembre" on 2026-09-28. Also gives "Address: 273 Central Avenue ... Mailing
-    Address: 274 Sherman Street".'
-revisit: The bulletins page's newest issue was 13 September on 2026-09-28 (the 20 and 27 September
-  issues not yet posted). Check it is still being updated.
+  note: 'The shrine''s "Bulletins ~ Boletines" page (Wix, plain HTML): one PDF per Sunday, latest "September
+    13/13 de septiembre" on 2026-09-28. Also gives "Address: 273 Central Avenue ... Mailing Address: 274
+    Sherman Street".'
+revisit: The bulletins page's newest issue was 13 September on 2026-09-28 (the 20 and 27 September issues
+  not yet posted). Check it is still being updated.
 revisit_after: 2026-11-01
+promoted: 2026-09-28
 ---
 
 ## Publisher

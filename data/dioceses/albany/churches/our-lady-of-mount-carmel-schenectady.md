@@ -33,6 +33,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: Our Lady of Mount Carmel Church of Schenectady 1255 Pleasant Street
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

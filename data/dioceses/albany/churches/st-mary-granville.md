@@ -27,6 +27,7 @@ evidence:
   quote: 23 Bulkley Ave.
   note: 'Page 2 of the 27 September 2026 issue: St. Mary''s Roman Catholic Church, Granville; Masses Sunday
     12:30 pm, Monday 6:30 am, Wednesday 9:00 am.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

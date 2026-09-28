@@ -32,6 +32,7 @@ evidence:
   note: 'OSM (via Nominatim, 2026-09-28): ''Church of the Annunciation'', 48 West Street, Ilion (43.0147905,
     -75.0395205). Reverse lookup of the GCatholic point (43.01256, -75.03956) gives an unnamed building
     at 109 West Street, ~250 m south.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

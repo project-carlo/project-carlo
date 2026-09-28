@@ -30,6 +30,7 @@ evidence:
 - url: https://www.openstreetmap.org/way/1396687712
   seen: 2026-09-28
   note: OSM "Our Lady of Hope Catholic Church", 9 Wheeler Street, Whitehall (Nominatim), 43.55182, -73.39688.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

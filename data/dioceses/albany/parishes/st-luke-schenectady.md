@@ -20,6 +20,7 @@ evidence:
   note: '`probe po` 2026-09-28: ''St. Luke Church'', 1241 State St, LPi id 0018000000Qc2bNAAR, container
     03/0382, weekly issues through 2026-09-27. The parish site''s /bulletins/ page embeds this organization''s
     publicationWidget.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

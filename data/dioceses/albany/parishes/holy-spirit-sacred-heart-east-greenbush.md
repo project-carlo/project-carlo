@@ -30,6 +30,7 @@ evidence:
 revisit: New pastor after Fr. Quy Vo's departure (last weekend 26-27 September 2026); check the October
   issues still cover both churches in one bulletin.
 revisit_after: 2026-11-01
+promoted: 2026-09-28
 ---
 
 ## Publisher

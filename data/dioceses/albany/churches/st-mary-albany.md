@@ -24,10 +24,11 @@ evidence:
     St., Albany, NY, 12207
 - url: https://container.parishesonline.com/bulletins/04/0782/20260927B.pdf
   seen: 2026-09-28
-  quote: "Mass 4:00 pm St. Mary's Sunday: Mass 8:00 am St. Mary's"
+  quote: 'Mass 4:00 pm St. Mary''s Sunday: Mass 8:00 am St. Mary''s'
   note: '"Historic Albany Parishes Mass and Confession Schedule", page 2 of the 27 September 2026 issue:
-    also Sunday 10:30 am and weekdays 12:05 pm at St. Mary''s. Masthead: "Historic St. Mary''s ... 10 Lodge
-    St., Albany".'
+    also Sunday 10:30 am and weekdays 12:05 pm at St. Mary''s. Masthead: "Historic St. Mary''s ... 10
+    Lodge St., Albany".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

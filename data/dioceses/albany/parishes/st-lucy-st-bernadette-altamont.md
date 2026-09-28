@@ -21,6 +21,7 @@ evidence:
 revisit: Check stlstb.org/bulletin has issues after 6 September 2026, and whether the pipeline's other
   fetcher reads its Drive file links.
 revisit_after: 2026-10-26
+promoted: 2026-09-28
 ---
 
 ## Publisher

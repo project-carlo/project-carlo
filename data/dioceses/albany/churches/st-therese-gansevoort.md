@@ -11,9 +11,7 @@ longitude: null
 coordinates_from: ''
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18188
-- directory:662
+roster: ['gcatholic:18188', 'directory:662']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18188
   seen: 2026-09-28
@@ -25,21 +23,22 @@ evidence:
   note: Listed in Diocese of Albany Find A Parish list as 'St. Therese Chapel', 1 Wilton Gansevoort Rd.,
     Gansevoort, NY, 12831
 - url: https://container.parishesonline.com/bulletins/03/0901/20260927B.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: St. Michael the Archangel Church, South Glen Falls, NY 03-0901
   note: '27 September 2026 issue. Page 1 is an image; rendered, its lower-left panel reads "ST. THERESE
     MISSION CHAPEL / Robert O''Rourke, Administrator / Route 32 Gansevoort, NY / Mass Time: Sunday 9:30
     am".'
 - url: https://sites.google.com/view/sttheresechapel
-  seen: *id001
+  seen: 2026-09-28
   quote: 'Mass Celebration: Sunday 10 AM'
   note: The chapel's own Google Site ("SITE UNDER CONSTRUCTION!"), P.O. Box 251 Gansevoort. Its 10 AM
     disagrees with the bulletin and the diocese (9:30); probably stale.
 - url: https://stclementschurch.com/parish/parish-history/
-  seen: *id001
+  seen: 2026-09-28
   quote: built the Chapel of St. Therese of Lisieux dedicated by the Most Reverend Edward J. Maginn
   note: 'St. Clement''s history: dedicated 18 September 1966, "located on Gansevoort''s main street, next
     to the Masonic Temple".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

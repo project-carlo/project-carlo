@@ -24,15 +24,15 @@ evidence:
     Albany, NY, 12203
 - url: https://container.parishesonline.com/bulletins/03/0863/20260927B.pdf
   seen: 2026-09-28
-  quote: 'Weekend Mass Saturday | 4:00pm Sunday | 8:00am, 11:00am'
+  quote: Weekend Mass Saturday | 4:00pm Sunday | 8:00am, 11:00am
   note: 27 September 2026 issue, page 1, with "CONTACT US 20 Sumter Ave Albany, NY 12203".
 - url: https://www.openstreetmap.org/way/1383436997
   seen: 2026-09-28
   quote: addr:housenumber 20 addr:postcode 12203 addr:state NY addr:street Sumter Avenue amenity place_of_worship
-  note: 'OpenStreetMap way 1383436997, "Christ The King Catholic Church"; centred at 42.69399, -73.88604 (Nominatim:
-    Westmere, Town of Guilderland), about 100 m from GCatholic''s
-    Plus Code. ParishesOnline''s organization point (42.67790, -73.82972) is about 5 km east and is not
-    used.'
+  note: 'OpenStreetMap way 1383436997, "Christ The King Catholic Church"; centred at 42.69399, -73.88604
+    (Nominatim: Westmere, Town of Guilderland), about 100 m from GCatholic''s Plus Code. ParishesOnline''s
+    organization point (42.67790, -73.82972) is about 5 km east and is not used.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

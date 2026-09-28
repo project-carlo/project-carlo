@@ -3,14 +3,11 @@ name: St. Michael the Archangel
 website: https://stmichaelschurchsgf.com
 bulletin_provider: parishes_online
 provider_id: st-michael-the-archangel-church-12803
-publication:
-- po-org:st-michael-the-archangel-church-12803
-- lpi:0018000000Qc2cFAAR
-- po-container:03/0901
+publication: ['po-org:st-michael-the-archangel-church-12803', 'lpi:0018000000Qc2cFAAR', 'po-container:03/0901']
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0901/20260927B.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: St. Michael the Archangel Church, South Glen Falls, NY 03-0901
   note: '27 September 2026 issue, LPi footer on pages 7-8. Pages 1-6 are images; rendered page 1 masthead:
     "ST. MICHAEL THE ARCHANGEL ... SEPTEMBER 27, 2026", "MASS SCHEDULE Saturday Vigil: 4:00 pm ... Sunday:
@@ -18,8 +15,9 @@ evidence:
     80 Saratoga Avenue; and a second panel "ST. THERESE MISSION CHAPEL ... Route 32 Gansevoort, NY ...
     Mass Time: Sunday 9:30 am".'
 - url: https://stmichaelschurchsgf.com/st-michaels-parish-bulletins/
-  seen: *id001
+  seen: 2026-09-28
   note: Bulletins page embeds the ParishesOnline widget (publicationWidget id=0018000000Qc2cFAAR).
+promoted: 2026-09-28
 ---
 
 ## Publisher

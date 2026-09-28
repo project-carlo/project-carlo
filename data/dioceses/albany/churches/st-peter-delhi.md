@@ -34,6 +34,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Peter's Church", 8 Franklin Street, Delhi,
     NY, 13753
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

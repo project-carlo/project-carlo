@@ -26,6 +26,7 @@ evidence:
   note: Holy Spirit's site (Duda) lists the same bulletin as irp.cdn-website.com/df5e9c12/files/uploaded/<MONTH>+<D>-+2026.pdf;
     newest SEPTEMBER+20-+2026.pdf on 2026-09-28, whose page 1 (rendered, image-only) is the same linked
     masthead as Holy Trinity's copy.
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. Paul the Apostle Church', 330 W. Main St.,
     Hancock, NY, 13783
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

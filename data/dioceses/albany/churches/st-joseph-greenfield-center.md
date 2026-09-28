@@ -11,9 +11,7 @@ longitude: -73.8470625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18181
-- directory:337
+roster: ['gcatholic:18181', 'directory:337']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18181
   seen: 2026-09-28
@@ -29,6 +27,7 @@ evidence:
   quote: '3159 Route 9N Greenfield Center, NY 12833 Mass times: 4:00 pm Saturday 10:30 am Sunday 9:00
     am Wednesdays'
   note: 27 September 2026 issue, page 1.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

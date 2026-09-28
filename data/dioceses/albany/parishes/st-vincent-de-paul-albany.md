@@ -17,6 +17,7 @@ evidence:
   seen: 2026-09-28
   note: 'The parish site (eCatholic, behind Cloudflare: BLOCKED for 16 loads, then loaded on the second
     load of a later visit.py run). It embeds eCatholic site id 11351 and links /bulletins.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

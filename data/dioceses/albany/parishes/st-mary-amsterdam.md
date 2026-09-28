@@ -23,6 +23,7 @@ evidence:
   seen: 2026-09-28
   quote: 'Sunday: 12:00 pm (Spanish Mass)'
   note: 'Diocese''s Find A Parish page: website stmarysamsterdam.org, no ''Other Worship Sites''.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

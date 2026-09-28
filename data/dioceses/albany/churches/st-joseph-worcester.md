@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Joseph's Church", 201 Main St., Worcester,
     NY, 12197
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

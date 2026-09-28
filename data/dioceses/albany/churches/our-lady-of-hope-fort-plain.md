@@ -27,6 +27,7 @@ evidence:
   quote: What a blessing we had at the 4:00 Vigil
   note: '27 September 2026 issue, page 2 (Bishop Mark celebrated the Saturday Vigil the week before);
     page 1: Saturday Vigil 4:00 pm, Sunday 9:30 am.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: Church of the Holy Spirit … 667 Columbia Turnpike ❖ East Greenbush 12061
   note: Page 4 of the 27 September 2026 issue, with Holy Spirit's schedule Saturday Vigil 4:00pm, Sunday
     11:00am, Tuesday 6:30pm, Wednesday 9:00am.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -19,6 +19,7 @@ evidence:
   quote: 'Saturday Vigil: 4:00 pm Sunday: 10:30 am Monday-Thursday 9:00 am'
   note: '"Sacred Heart Church, Sidney, NY": the parish''s page on the diocese''s parish-site host, with
     the list of dated bulletin PDFs.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

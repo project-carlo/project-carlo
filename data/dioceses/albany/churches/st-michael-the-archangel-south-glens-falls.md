@@ -11,9 +11,7 @@ longitude: -73.6370625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18191
-- directory:438
+roster: ['gcatholic:18191', 'directory:438']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18191
   seen: 2026-09-28
@@ -29,6 +27,7 @@ evidence:
   quote: St. Michael the Archangel Church, South Glen Falls, NY 03-0901
   note: '27 September 2026 issue. Page 1 is an image; rendered: "MASS SCHEDULE Saturday Vigil: 4:00 pm
     ... Sunday: 8:00 AM, 11:00 AM & 5:30 PM ... Weekdays: Tuesday - Saturday 8:30 AM".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

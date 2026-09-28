@@ -27,6 +27,7 @@ evidence:
   quote: 85 George Street, PO Box 226
   note: 'Page 2 of the 27 September 2026 issue: St. Ann''s Roman Catholic Church, Fort Ann; Masses Sunday
     8:30 am, Tuesday 6:00 pm, first Saturday 9:00 am.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

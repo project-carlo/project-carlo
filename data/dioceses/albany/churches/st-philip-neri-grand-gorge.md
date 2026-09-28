@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. Philip Neri Church', State Highway 30,
     Grand Gorge, NY, 12434
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

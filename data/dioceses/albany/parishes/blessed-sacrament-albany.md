@@ -9,17 +9,18 @@ evidence:
 - url: https://blessedsacramentalbany.org/wp-content/uploads/2026/09/September-27-2026.pdf
   seen: 2026-09-28
   quote: BLESSED SACRAMENT CHURCH 607 Central Ave., Albany, NY 12206
-  note: Masthead, page 1 of the 27 September 2026 issue. Blessed Sacrament alone; the Shrine of Our
-    Lady of the Americas is not in the masthead or the Mass schedule.
+  note: Masthead, page 1 of the 27 September 2026 issue. Blessed Sacrament alone; the Shrine of Our Lady
+    of the Americas is not in the masthead or the Mass schedule.
 - url: https://blessedsacramentalbany.org/wp-content/uploads/2026/09/September-27-2026.pdf
   seen: 2026-09-28
   quote: SATURDAY VIGIL4 pm SUNDAY9 am & 6 pm Urdu
-  note: Mass schedule box, page 1 (the text layer runs the words together). Daily Mass Monday 7 am,
-    Tuesday and Thursday 12 pm, Wednesday 9 am.
+  note: Mass schedule box, page 1 (the text layer runs the words together). Daily Mass Monday 7 am, Tuesday
+    and Thursday 12 pm, Wednesday 9 am.
 - url: https://blessedsacramentalbany.org/bulletin/
   seen: 2026-09-28
-  note: 'The parish''s "Bulletin" page (WordPress, plain HTML): one PDF link per Sunday under
-    /wp-content/uploads/<year>/<month>/<Month>-<day>-<year>.pdf, latest "September-27-2026.pdf".'
+  note: 'The parish''s "Bulletin" page (WordPress, plain HTML): one PDF link per Sunday under /wp-content/uploads/<year>/<month>/<Month>-<day>-<year>.pdf,
+    latest "September-27-2026.pdf".'
+promoted: 2026-09-28
 ---
 
 ## Publisher

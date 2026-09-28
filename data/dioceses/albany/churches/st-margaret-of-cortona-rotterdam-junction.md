@@ -29,6 +29,7 @@ evidence:
 - url: https://discovermass.com/church/our-lady-queen-of-peace-schnectady-ny/
   seen: 2026-09-28
   quote: 'Mission Church: St. Margaret of Cortona Church 1228 Main Street'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

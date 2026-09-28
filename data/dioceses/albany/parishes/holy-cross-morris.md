@@ -17,6 +17,7 @@ evidence:
   quote: 'Sunday: 8:30 am (Our celebration is provided by Fr. Chris Welch)'
   note: 'The parish''s page on the diocese''s parish-site host: "Saturday Vigil: None", and a Bulletin
     list of dated PDFs (bulletins/2026/September_20.pdf back to October 2025).'
+promoted: 2026-09-28
 ---
 
 ## Publisher

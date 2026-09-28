@@ -25,6 +25,7 @@ evidence:
   quote: The Tri-Parish Catholic Communities of the Roman Catholic Diocese of Albany
   note: The OLG+IC+SJ site's bulletin page; its 'View Bulletin' button links parishesonline.com/organization/immaculate-conception-church-12302.
     The footer lists Our Lady of Grace, Immaculate Conception and St Joseph's Church.
+promoted: 2026-09-28
 ---
 
 ## Publisher

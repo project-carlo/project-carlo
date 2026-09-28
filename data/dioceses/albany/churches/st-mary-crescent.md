@@ -11,9 +11,7 @@ longitude: -73.7303125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18180
-- directory:336
+roster: ['gcatholic:18180', 'directory:336']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18180
   seen: 2026-09-28
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: Saturday, September 26th Twenty Sixth Sunday in Ordinary Time 4:30pm Mass
   note: 27 September 2026 issue, page 2; Sunday "9:00am Mass", "10:30am Mass", "7:00pm Mass".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

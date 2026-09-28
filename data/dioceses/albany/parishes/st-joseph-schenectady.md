@@ -25,6 +25,7 @@ evidence:
   quote: To view our Bulletin online, go to parishesonline.com and click on St. Joseph Church
   note: The parish site's 'Bulletin' link is this fixed file (the 20 September 2026 issue when read, last-modified
     17 Sep 2026); it points readers to ParishesOnline.
+promoted: 2026-09-28
 ---
 
 ## Publisher

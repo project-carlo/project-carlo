@@ -11,8 +11,7 @@ longitude: -73.6845625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18183
+roster: ['gcatholic:18183']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18183
   seen: 2026-09-28
@@ -20,13 +19,14 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Albany as ''St. Paul'', 121 N
     Main St., Mechanicville, NY, 12118; kind: Church; group: Parish of All Saints on the Hudson'
 - url: https://files.ecatholic.com/20630/bulletins/20260927.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: 'Saturday: 4:00 PM, St. Paul’s Church, Mechanicville'
   note: 27 September 2026 issue, page 1; also "Sunday, 10:30 AM, St. Paul’s Church, Mechanicville".
 - url: https://en.wikipedia.org/wiki/St._Paul_the_Apostle_Church_(Mechanicville,_New_York)
-  seen: *id001
+  seen: 2026-09-28
   note: Infobox location "121 North Main Street, Mechanicville"; dedicated 14 October 1917; "presently
     part of the parish of All Saints on the Hudson".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

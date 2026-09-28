@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Holy Cross Church', 98 Main St., Morris, NY,
     13808
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=json&q=Saint+Patrick+Catskill+NY
   seen: 2026-09-28
   note: OSM way 1355047874 "Saint Patrick Catholic Church, 157, Bridge Street", Catskill 12414.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

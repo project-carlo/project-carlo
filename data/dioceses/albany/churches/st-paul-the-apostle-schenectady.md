@@ -38,6 +38,7 @@ evidence:
   quote: old St. Paul's School, 2777 Albany Street and Kings Road
   note: 'St. Joseph''s (Schenectady) bulletin, 27 September 2026, page 1: its faith formation meets in
     the old St. Paul''s School.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

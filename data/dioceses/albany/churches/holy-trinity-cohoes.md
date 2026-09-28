@@ -27,6 +27,7 @@ evidence:
   quote: Church of the Hol y Trinity 9:00 AM — Ma ss 2:45–3:45 PM — Confession 4:00 PM — V igil Mass
   note: Saturday in the 27 September 2026 schedule box (page 1); Sunday has Holy Trinity at 10:30 AM and
     6:30 PM.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

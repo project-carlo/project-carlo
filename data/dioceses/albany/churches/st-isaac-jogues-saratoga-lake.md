@@ -11,9 +11,7 @@ longitude: null
 coordinates_from: ''
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18185
-- directory:669
+roster: ['gcatholic:18185', 'directory:669']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18185
   seen: 2026-09-28
@@ -25,14 +23,15 @@ evidence:
   note: Listed in Diocese of Albany Find A Parish list as 'St. Isaac Jogues Mission', Rt. 9P, Saratoga
     Lake, NY, 12866
 - url: https://files.ecatholic.com/20630/bulletins/20260927.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: Sunday, 10:00 AM, St. Isaac Jogues, Saratoga Springs
   note: '27 September 2026 issue, page 1: "(May thru October)".'
 - url: https://allsaintsny.us/mass-times
-  seen: *id001
+  seen: 2026-09-28
   quote: 10:00am Mass at St. Isaac Jogues Chapel Saratoga Lake
   note: 'Mass-times page: "Seasonally Only (from Memorial Day until November)". Behind Cloudflare; read
     with visit.py.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

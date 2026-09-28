@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Mary's Church", 31 Elm St., Cooperstown,
     NY, 13326
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

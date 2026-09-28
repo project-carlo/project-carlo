@@ -18,6 +18,7 @@ evidence:
   seen: 2026-09-28
   note: The parish's bulletin page lists PDFs named bulletin/MM-DD-YY.pdf, weekly through 09-27-26 on
     2026-09-28.
+promoted: 2026-09-28
 ---
 
 ## Publisher

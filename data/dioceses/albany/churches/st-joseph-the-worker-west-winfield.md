@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-28
   note: 'OSM (via Nominatim, 2026-09-28): ''Saint Joseph the Worker Catholic Church'', 303 West Main Street,
     West Winfield.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

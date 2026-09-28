@@ -28,6 +28,7 @@ evidence:
     "WEEKEND MASS Saturday | 04:00pm Sunday | 09:00am, 11:00am", weekdays Monday-Thursday 12:10pm, and
     "St. Ambrose Catholic Church 347 Old Loudon Road Latham, NY 12110". recheck cannot find these words
     in the text layer.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

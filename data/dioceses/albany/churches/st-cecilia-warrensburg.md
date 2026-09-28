@@ -29,6 +29,7 @@ evidence:
 - url: https://www.stceciliaschurch.org/mass-times.html
   seen: 2026-09-28
   quote: 10:00am on Sundays
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

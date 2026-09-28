@@ -34,6 +34,7 @@ evidence:
   seen: 2026-09-28
   note: Discover Mass names the listing "St. John-St. Ann (Now South End Community of St. Francis of Assisi
     Parish)".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: 'MASS TIMES: Weekdays - 9:00AM … Saturdays - 4:00PM … Sundays - 8:00AM and 10:30AM'
   note: Page 1 of the 27 September 2026 issue.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: St. John the Baptist and St. Peter’s Church are open each day from 9 am to 4 pm
   note: The older joint site (the diocese's link for Holy Family). A frozen COVID-era letter from Rev.
     Edward Golding; no bulletins. Not the bulletin's home.
+promoted: 2026-09-28
 ---
 
 ## Publisher

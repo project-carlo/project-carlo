@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-28
   note: 'OSM (via Nominatim, 2026-09-28): ''Our Lady Queen of Apostles Catholic Church'', 412 South Frankfort
     Street, Frankfort.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=json&q=St.+Patrick+Athens+NY
   seen: 2026-09-28
   note: OSM way 458280843 "Saint Patrick's Catholic Church, 24, North Washington Street", Athens 12015.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

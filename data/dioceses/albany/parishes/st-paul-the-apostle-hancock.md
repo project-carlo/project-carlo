@@ -17,6 +17,7 @@ evidence:
   seen: 2026-09-28
   note: 'The site''s bulletin page (JavaScript menu; read in a browser with visit.py): links Bulletins/Bull_9_27_26.pdf
     and Homilies/Homily_9_27_26.pdf.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

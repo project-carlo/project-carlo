@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: Blessed Sacrament Mass Saturday ~ 5:30 PM
   note: 4 October 2026 issue, page 2, with 'Mass Intentions ~ Blessed Sacrament Church'.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

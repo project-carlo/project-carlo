@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-28
   quote: 8:30 am | Mass | St. John's
   note: '27 September 2026 issue, page 1: Sunday 8:30 am; Thursday 12:05 pm.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

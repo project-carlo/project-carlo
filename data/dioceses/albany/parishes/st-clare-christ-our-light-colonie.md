@@ -39,6 +39,7 @@ evidence:
   note: '`probe container --step 8` over both containers back to 7 September 2025: every sampled issue
     (Sep, Nov, Dec 2025; Feb, Apr, Jun, Aug 2026) has the same shared content in both, so the two have
     shared one bulletin for at least a year.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

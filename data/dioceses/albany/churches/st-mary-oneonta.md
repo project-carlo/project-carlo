@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Mary's Church", 39 Walnut St., Oneonta,
     NY, 13820
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

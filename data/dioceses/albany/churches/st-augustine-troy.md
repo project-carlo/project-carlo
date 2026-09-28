@@ -27,6 +27,7 @@ evidence:
   quote: 'Saturday: 4:00 PM * Sunday: 9:00 AM (with Children''s Liturgy), 6:00 PM'
   note: Page 1 of the 13 September 2026 issue, which gives the parish address as "25 115th Street, Troy,
     NY 12182".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

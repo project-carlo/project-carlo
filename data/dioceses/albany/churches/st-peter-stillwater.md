@@ -11,10 +11,7 @@ longitude: -73.6409375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18184
-- directory:434
-- directory:343
+roster: ['gcatholic:18184', 'directory:434', 'directory:343']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18184
   seen: 2026-09-28
@@ -30,14 +27,15 @@ evidence:
   note: Listed in Diocese of Albany Find A Parish list as 'St. Peter the Apostle Church', 271 N. Hudson
     Ave., Stillwater, NY, 12170
 - url: https://files.ecatholic.com/20630/bulletins/20260927.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: 'Sunday: 8:30 AM, St. Peter’s Church, Stillwater'
   note: 27 September 2026 issue, page 1; weekday "Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter’s Church,
     Stillwater".
 - url: https://allsaintsny.us/mass-times
-  seen: *id001
+  seen: 2026-09-28
   quote: St. Peter's Church 895 Hudson Avenue, Stillwater
   note: Parish Mass-times page (behind Cloudflare; read with visit.py).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

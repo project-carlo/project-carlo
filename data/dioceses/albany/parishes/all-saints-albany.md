@@ -9,17 +9,18 @@ evidence:
 - url: https://files.ecatholic.com/33726/bulletins/20260927.pdf
   seen: 2026-09-28
   quote: 16 Homestead Street Albany, New York 12203
-  note: Masthead, page 1 of the 27 September 2026 issue ("ALL SAINTS CATHOLIC CHURCH"). All Saints
-    alone; pastor Rev. Charles Onyeneke.
+  note: Masthead, page 1 of the 27 September 2026 issue ("ALL SAINTS CATHOLIC CHURCH"). All Saints alone;
+    pastor Rev. Charles Onyeneke.
 - url: https://files.ecatholic.com/33726/bulletins/20260927.pdf
   seen: 2026-09-28
   quote: 7:30am, 9:30am & 7pm Sunday Mass
-  note: Page 1 of the same issue, with "4pm Saturday Vigil" above it. Page 2 lists Mass intentions
-    for Saturday 26 September 4 pm and Sunday 27 September 7:30 am, 9:30 am and 7 pm.
+  note: Page 1 of the same issue, with "4pm Saturday Vigil" above it. Page 2 lists Mass intentions for
+    Saturday 26 September 4 pm and Sunday 27 September 7:30 am, 9:30 am and 7 pm.
 - url: https://allsaintscc.org
   seen: 2026-09-28
-  note: The parish site (eCatholic, behind Cloudflare; read in a browser with parish-site-access
-    visit.py, loaded first try). It embeds eCatholic site id 33726 and links /bulletins.
+  note: The parish site (eCatholic, behind Cloudflare; read in a browser with parish-site-access visit.py,
+    loaded first try). It embeds eCatholic site id 33726 and links /bulletins.
+promoted: 2026-09-28
 ---
 
 ## Publisher

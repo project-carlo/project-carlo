@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'St. John the Baptist Church', 25 Benton Ave.,
     Walton, NY, 13856
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   note: The joint site (eCatholic, behind Cloudflare; visit.py) is titled "St. Jude the Apostle & St.
     Michael the Archangel - Wynantskill and Troy, NY" and embeds ecatholic:31038, the same id as the directory's
     St. Michael link (31038.sites.ecatholic.com).
+promoted: 2026-09-28
 ---
 
 ## Publisher

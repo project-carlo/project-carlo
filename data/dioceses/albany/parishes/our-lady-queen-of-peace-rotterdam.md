@@ -21,6 +21,7 @@ evidence:
   seen: 2026-09-28
   note: The parish's Bulletins page links discovermass.com/church/our-lady-queen-of-peace-schnectady-ny/#bulletins
     (read 2026-09-28).
+promoted: 2026-09-28
 ---
 
 ## Publisher

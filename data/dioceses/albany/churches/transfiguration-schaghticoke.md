@@ -22,6 +22,7 @@ evidence:
   seen: 2026-09-28
   note: Page 1 of the 27 September 2026 issue (image, rendered with render.py). "Schaghticoke - Sunday
     9:00AM, Communion Service Tuesday 10:00AM" and "17 South Main Street Schaghticoke, NY 12154".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
     of "Called to be Church" and was renamed Our Lady of the Snow.
   note: The same page gives "Mass, Sundays at 11:00 AM 31 Owen Road, Grafton, NY" and says the church
     was built in 1996 for St. John Francis Regis Parish.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

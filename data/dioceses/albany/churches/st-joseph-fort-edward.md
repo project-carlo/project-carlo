@@ -31,6 +31,7 @@ evidence:
 - url: https://www.openstreetmap.org/way/1216253485
   seen: 2026-09-28
   note: OSM "Saint Joseph Catholic Church", 166 Broadway, Fort Edward (Nominatim).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

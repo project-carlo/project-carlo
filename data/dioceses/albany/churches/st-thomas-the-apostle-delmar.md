@@ -32,6 +32,7 @@ evidence:
   quote: 35 Adams Place Delmar, New York 12054
   note: St. Matthew's network page, with "Saturday - 5:00 PM Sunday - 7:30 AM 10:30 AM 5:00 PM" for St.
     Thomas.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -8,19 +8,19 @@ group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0808/20260927B.pdf
   seen: 2026-09-28
-  note: 'Page 1 of the 27 September 2026 issue is an image (no text layer; rendered with
-    parish-site-access render.py and read). It reads: "26TH SUNDAY IN ORDINARY TIME - SEPTEMBER 27, 2026
-    / PARISH OF MATER CHRISTI / ROMAN CATHOLIC CHURCH / 40 HOPEWELL STREET ALBANY, NY 12208 / WEEKEND
-    MASSES / SATURDAY VIGIL MASS - 4:00 PM ... SUNDAY - 8:30 AM ... SUNDAY - 11:00 AM". Mater Christi
-    alone.'
+  note: 'Page 1 of the 27 September 2026 issue is an image (no text layer; rendered with parish-site-access
+    render.py and read). It reads: "26TH SUNDAY IN ORDINARY TIME - SEPTEMBER 27, 2026 / PARISH OF MATER
+    CHRISTI / ROMAN CATHOLIC CHURCH / 40 HOPEWELL STREET ALBANY, NY 12208 / WEEKEND MASSES / SATURDAY
+    VIGIL MASS - 4:00 PM ... SUNDAY - 8:30 AM ... SUNDAY - 11:00 AM". Mater Christi alone.'
 - url: https://container.parishesonline.com/bulletins/04/0808/20260927B.pdf
   seen: 2026-09-28
   quote: Mater Christi, Albany, NY 04-0808
   note: LPi ad-page footer (page 6, the only page with text), naming the container.
 - url: https://www.materchristi.org
   seen: 2026-09-28
-  note: The parish site (Wix; answers 429 to plain fetches, loaded in a browser with visit.py). It
-    embeds the ParishesOnline organization parish-of-mater-christi and links a bulletin PDF.
+  note: The parish site (Wix; answers 429 to plain fetches, loaded in a browser with visit.py). It embeds
+    the ParishesOnline organization parish-of-mater-christi and links a bulletin PDF.
+promoted: 2026-09-28
 ---
 
 ## Publisher

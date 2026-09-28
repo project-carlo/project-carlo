@@ -21,6 +21,7 @@ evidence:
   seen: 2026-09-28
   note: '`probe po`: "The Catholic Community of Our Lady of Victory", 55 North Lake Avenue, Troy, LPi
     id 0018000000Qc0EUAAZ, container 04/0923, weekly issues through 2026-09-27.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -15,17 +15,18 @@ evidence:
   seen: 2026-09-28
   quote: Fr. Zachariah Chichester, Pastor
   note: 'Page 2, one Mass schedule for all four sites: Saturday 4:00 pm Our Lady of Hope, 6:00 pm *Chapel
-    of the Assumption (*summer schedule); Sunday 8:30 am St. Ann''s, 10:30 am Our Lady of Hope, 12:30 pm
-    St. Mary''s; weekdays at each.'
+    of the Assumption (*summer schedule); Sunday 8:30 am St. Ann''s, 10:30 am Our Lady of Hope, 12:30
+    pm St. Mary''s; weekdays at each.'
 - url: https://files.ecatholic.com/17781/bulletins/20260927.pdf
   seen: 2026-09-28
   quote: 'Chapel of the Assumption: $417.00'
-  note: Page 5, the 20 September 2026 collection by site (Our Lady of Hope, Chapel of the Assumption, St.
-    Ann's, then St. Mary's).
+  note: Page 5, the 20 September 2026 collection by site (Our Lady of Hope, Chapel of the Assumption,
+    St. Ann's, then St. Mary's).
 - url: https://olhstann.org/
   seen: 2026-09-28
   note: 'visit.py (behind Cloudflare, loaded first try): title "Our Lady of Hope Church - Whitehall, NY",
     publications ecatholic:17781, bulletin page olhstann.org/bulletins.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

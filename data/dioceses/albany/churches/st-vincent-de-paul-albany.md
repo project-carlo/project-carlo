@@ -25,8 +25,9 @@ evidence:
 - url: https://files.ecatholic.com/11351/bulletins/20260927.pdf
   seen: 2026-09-28
   note: 'Image-only issue (rendered with render.py and read). Page 2: Mass intentions "Saturday, September
-    26 5:00PM ... Sunday, September 27 8:30AM"; calendar "Sa 10/3 ... Mass 5:00PM (C)", "Su 10/4 Mass 8:30AM
-    (C) ... Mass 11:00AM (C)".'
+    26 5:00PM ... Sunday, September 27 8:30AM"; calendar "Sa 10/3 ... Mass 5:00PM (C)", "Su 10/4 Mass
+    8:30AM (C) ... Mass 11:00AM (C)".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

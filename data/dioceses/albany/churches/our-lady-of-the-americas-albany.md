@@ -33,9 +33,11 @@ evidence:
   note: 'Footer of the shrine''s site, followed by "Mailing Address: 274 Sherman Street".'
 - url: https://www.rcda.org/parishes/spanish-apostolate
   seen: 2026-09-28
-  quote: 'Dónde y cuándo encontrar una misa en español Albany Shrine Church of Our Lady of the Americas, 273 Central Ave.'
-  note: The Hispanic Apostolate page (the directory's "Spanish Apostolate", entry 445). Co-directors
-    Deacon Miguel Fabian and Deacon Ramon Bonifacio.
+  quote: Dónde y cuándo encontrar una misa en español Albany Shrine Church of Our Lady of the Americas,
+    273 Central Ave.
+  note: The Hispanic Apostolate page (the directory's "Spanish Apostolate", entry 445). Co-directors Deacon
+    Miguel Fabian and Deacon Ramon Bonifacio.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

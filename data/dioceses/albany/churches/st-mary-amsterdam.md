@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-28
   note: 'OSM (via Nominatim, 2026-09-28): ''Saint Mary Catholic Church'', 156 East Main Street, Amsterdam;
     the GCatholic Plus Code point falls on this building.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

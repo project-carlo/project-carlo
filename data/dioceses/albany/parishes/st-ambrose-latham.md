@@ -21,6 +21,7 @@ evidence:
 - url: https://discovermass.com/church/st-ambrose-latham-ny/
   seen: 2026-09-28
   note: '`issues.py discovermass` 2026-09-28: no bulletins listed.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -28,6 +28,7 @@ evidence:
   note: Page 3 of the 27 September 2026 issue lists "4pm Vigil Mass" (Saturday 26 September) and "9am
     Mass" (Sunday 4 October); page 4 gives "Sundays at 9:00am" and "3 Catholic Way ❖ Castleton-on-Hudson
     12033".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

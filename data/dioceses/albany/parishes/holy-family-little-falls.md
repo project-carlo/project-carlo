@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   note: St. Joseph Dolgeville's address in the diocese's directory; on 2026-09-28 it redirected (visit.py)
     to holyfamilylittlefalls.org.
+promoted: 2026-09-28
 ---
 
 ## Publisher

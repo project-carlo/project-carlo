@@ -28,6 +28,7 @@ evidence:
 - url: https://stmaryscoxsackie.com/wp-content/uploads/2026/09/Coxsackie-Bulletin-September-27.pdf
   seen: 2026-09-28
   quote: St. Theresa’s Windham 5188 NY-23 Windham, NY 12496 Mass Time Saturday 5:00 PM
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

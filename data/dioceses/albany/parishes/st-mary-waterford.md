@@ -3,23 +3,21 @@ name: St. Mary of the Assumption
 website: https://stmaryswaterford.org/Site/
 bulletin_provider: parishes_online
 provider_id: st-mary-of-the-assumption-church
-publication:
-- po-org:st-mary-of-the-assumption-church
-- lpi:0018000000Qc2c0AAB
-- po-container:03/0818
+publication: ['po-org:st-mary-of-the-assumption-church', 'lpi:0018000000Qc2c0AAB', 'po-container:03/0818']
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0818/20260927B.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: St. Mary of the Assumption Roman Catholic Church
   note: Masthead, page 1 of the 27 September 2026 issue; the address and schedule are letter-spaced in
     the PDF text ("1 1 9 B r o a d S t r e e t W a t e r f o r d").
 - url: https://container.parishesonline.com/bulletins/03/0818/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: 'M a s s S c h e d u l e S a t u r d a y a t 4 : 0 0 p . m . S u n d a y a t 8 : 0 0 a . m .
     & 1 0 : 0 0 a m'
   note: 'Page 1 (letter-spaced text layer): "Mass Schedule Saturday at 4:00 p.m. Sunday at 8:00 a.m. &
     10:00 am".'
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -27,6 +27,7 @@ evidence:
   quote: 4:00 pm ✝ Albert & Theresa Kane by Joe & Sharon Thouin
   note: Page 5 "MASS INTENTIONS FOR THE WEEK / OUR LADY OF VICTORY" of the 27 September 2026 issue, Saturday
     26 September 4:00 pm; also Sunday 9:00 am and Tuesday-Thursday 12:15 pm.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

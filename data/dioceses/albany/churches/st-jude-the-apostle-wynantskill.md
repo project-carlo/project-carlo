@@ -27,6 +27,7 @@ evidence:
   quote: 10:30 AM | St. Jude the Apostle
   note: Page 1 of the 27 September 2026 issue (Sunday); also Saturday 4:00 PM and Wednesday-Thursday 8:15
     AM at St. Jude.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

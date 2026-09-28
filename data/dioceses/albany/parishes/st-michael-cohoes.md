@@ -19,6 +19,7 @@ evidence:
   quote: 2026 September 27, 2026 September 20, 2026
   note: The site's Bulletins page, which links one PDF per Sunday (bulletin-YYYY-MM-DD.pdf), from 2023
     through 27 September 2026 (read with curl, 2026-09-28).
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-28
   note: 'Directory entry 436 gives the schedule by site: ''Sunday: 11:30 am Rosa Road'', ''Thursday: 6:00
     pm Rosa Road'', ''Friday: 9:00 am Rosa Road'' (read from the scraped roster notes, 2026-09-28).'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

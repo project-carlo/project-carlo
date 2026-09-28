@@ -17,6 +17,7 @@ evidence:
   seen: 2026-09-28
   note: The parish's diocese-hosted site lists one PDF per Sunday at bulletins/2026/<Month>_<DD>.pdf,
     newest September_20.pdf; September_27.pdf answered 404 on 28 September.
+promoted: 2026-09-28
 ---
 
 ## Publisher

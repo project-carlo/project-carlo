@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-28
   quote: 498 Watervliet-Shaker Road,L atham, NY 12110
   note: Page 3 of the same issue (offering envelopes by mail), quoted as the text layer splits it.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

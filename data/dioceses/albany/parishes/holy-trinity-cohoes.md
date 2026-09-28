@@ -22,6 +22,7 @@ evidence:
   note: '`probe po` 2026-09-28: org holy-trinity-church-12047, 122 Vliet Blvd, Cohoes, LPi 0018000000Qbz9VAAR,
     container 03/0435, weekly issues through 2026-09-27. holytrinitycohoes.org/bulletin embeds this container
     (visit.py).'
+promoted: 2026-09-28
 ---
 
 ## Publisher

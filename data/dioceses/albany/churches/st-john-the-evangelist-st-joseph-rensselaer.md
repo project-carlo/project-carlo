@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-28
   note: The diocese's events calendar (on every rcda.org page on 2026-09-28) places Fr. Yusko's 1 October
     installation Mass at "the Parish of St. John the Evangelist and St. Joseph, 54 Herrick Street, Rensselaer".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

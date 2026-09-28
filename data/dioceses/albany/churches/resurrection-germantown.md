@@ -29,6 +29,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=json&q=Church+of+the+Resurrection,+Germantown,+New+York
   seen: 2026-09-28
   note: OSM way 398359974 "Church of the Resurrection, 11, Church Avenue", Germantown 12526.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

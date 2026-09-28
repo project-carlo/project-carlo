@@ -27,6 +27,7 @@ evidence:
   quote: 'Sun.:      Mass                 9:00 am               St. Francis (Del. Ave.)'
   note: '"Confession and Mass Schedule", page 4 of the 27 September 2026 issue: Saturday 4 pm and Sunday
     9 and 10:30 am at St. Francis (Del. Ave.). Masthead: "391 Delaware Avenue, Albany".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

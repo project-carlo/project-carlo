@@ -23,6 +23,7 @@ evidence:
   seen: 2026-09-28
   quote: Prayer service with Communion - Wednesday at 9:30am
   note: 'Diocese''s page: no website, Mass Saturday 4:00 pm and Sunday 9:30 am.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

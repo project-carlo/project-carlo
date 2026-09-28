@@ -19,6 +19,7 @@ evidence:
   note: '"St. Joseph''s Church, Worcester, NY": the parish''s page on the diocese''s parish-site host,
     with the list of dated bulletin PDFs. A second, older box on the same page still says "Saturday Vigil:
     5:15 pm Sunday: 10:15 am".'
+promoted: 2026-09-28
 ---
 
 ## Publisher

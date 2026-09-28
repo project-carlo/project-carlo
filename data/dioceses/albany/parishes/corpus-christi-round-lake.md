@@ -3,10 +3,7 @@ name: Corpus Christi Church
 website: https://www.corpuschristichurch.net
 bulletin_provider: parishes_online
 provider_id: corpus-christi-church-12151
-publication:
-- po-org:corpus-christi-church-12151
-- lpi:0018000000Qx7NDAAZ
-- po-container:04/0815
+publication: ['po-org:corpus-christi-church-12151', 'lpi:0018000000Qx7NDAAZ', 'po-container:04/0815']
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0815/20260927B.pdf
@@ -16,6 +13,7 @@ evidence:
     CHRISTI ROMAN CATHOLIC CHURCH ... SEPTEMBER 27, 2026 ... 2001 Route 9 Round Lake, New York 12151 ...
     Rev. George Fleming, Pastor ... Weekend Masses Saturday | 4:00pm Vigil Sunday | 8:00am, 11:00am ...
     Weekday Masses Monday | 9:00 am Tuesday | 9:00 am Thursday | 6:00 pm Friday | 9:00 am".'
+promoted: 2026-09-28
 ---
 
 ## Publisher

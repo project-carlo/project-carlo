@@ -23,9 +23,10 @@ evidence:
   note: LPi ad-page footer, page 5.
 - url: https://parishes.rcda.org/stfrancisofassisi/bulletin.php
   seen: 2026-09-28
-  note: The parish's diocesan-hosted bulletin page (plain HTML) lists the same issues as PDFs under
-    bulletins/<year>/<Month>_<day>.pdf, latest September_20.pdf on 2026-09-28. ParishesOnline's
-    organization st-francis-of-assisi-parish-12209 gives this page as its website.
+  note: The parish's diocesan-hosted bulletin page (plain HTML) lists the same issues as PDFs under bulletins/<year>/<Month>_<day>.pdf,
+    latest September_20.pdf on 2026-09-28. ParishesOnline's organization st-francis-of-assisi-parish-12209
+    gives this page as its website.
+promoted: 2026-09-28
 ---
 
 ## Publisher

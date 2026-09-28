@@ -33,6 +33,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=json&q=St.+John+the+Baptist+Church,+Greenville,+New+York
   seen: 2026-09-28
   note: OSM way 1388902250 "Saint John the Baptist Catholic Church, 5005, NY 81, West Greenville".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

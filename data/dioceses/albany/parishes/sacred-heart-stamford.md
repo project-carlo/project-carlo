@@ -19,6 +19,7 @@ evidence:
   note: 'The parish''s bulletin page, listing dated PDFs in wp-content/uploads (09-27-26 back to 07-26-26).
     Its footer: "Sacred Heart Church 27 Harper Street Stamford, NY 12455 St. Philip Neri Church 60676
     NY-30 Grand Gorge, NY 12474" (both ZIP codes differ from the bulletin and rosters).'
+promoted: 2026-09-28
 ---
 
 ## Publisher

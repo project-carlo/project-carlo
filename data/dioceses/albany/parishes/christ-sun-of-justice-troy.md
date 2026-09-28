@@ -22,6 +22,7 @@ evidence:
   note: The parish page on the Rensselaer Newman Foundation site lists the five latest bulletins (27 September
     back to 30 August 2026) as PDF links on its CDN (eadn-wc03-5826237.nxedge.io); the links are rendered
     in the browser (visit.py), not in the static HTML.
+promoted: 2026-09-28
 ---
 
 ## Publisher

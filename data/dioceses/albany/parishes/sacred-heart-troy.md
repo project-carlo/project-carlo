@@ -14,6 +14,7 @@ evidence:
   seen: 2026-09-28
   note: sacredhearttroy.com is an eCatholic site behind Cloudflare; visit.py loaded it (3 loads) and found
     ecatholic:23317 and a /bulletins page. issues.py found the 27 September 2026 issue.
+promoted: 2026-09-28
 ---
 
 ## Publisher

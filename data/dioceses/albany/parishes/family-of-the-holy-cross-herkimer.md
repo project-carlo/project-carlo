@@ -26,6 +26,7 @@ evidence:
     St. Anthony & St. Joseph, Blessed Sacrament, and St. John the Baptist.
   note: The network's eCatholic site (behind Cloudflare; read with visit.py 2026-09-28), site id 36566,
     office 228 S. Main St., Herkimer.
+promoted: 2026-09-28
 ---
 
 ## Publisher

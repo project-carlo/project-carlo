@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: St. Francis de Sales Mass Sunday ~ 10:00 AM
   note: 4 October 2026 issue, page 2, with 'Mass Intentions ~ St. Francis de Sales Church'.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

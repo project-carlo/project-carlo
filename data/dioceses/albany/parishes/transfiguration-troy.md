@@ -24,6 +24,7 @@ evidence:
     merge to form Transfiguration
   note: A community site (not the parish's). Its timeline also has "2001 St. John's, St. Monica's, and
     Our Lady of Good Counsel merge into the Church of the Holy Trinity".
+promoted: 2026-09-28
 ---
 
 ## Publisher

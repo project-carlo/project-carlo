@@ -11,9 +11,7 @@ longitude: -74.0275625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18177
-- directory:664
+roster: ['gcatholic:18177', 'directory:664']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18177
   seen: 2026-09-28
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: ST. MARY’S MISSION, GALWAY, NY SUNDAY MASS 9:30AM
   note: 27 September 2026 issue, page 5.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

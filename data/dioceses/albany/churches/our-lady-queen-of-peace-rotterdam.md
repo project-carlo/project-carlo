@@ -29,6 +29,7 @@ evidence:
 - url: https://discovermass.com/church/our-lady-queen-of-peace-schnectady-ny/
   seen: 2026-09-28
   quote: Our Lady Queen of Peace Parish 210 Princetown Road Schenectady, New York 12306
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

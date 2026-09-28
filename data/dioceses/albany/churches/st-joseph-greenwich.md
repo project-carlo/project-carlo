@@ -25,7 +25,9 @@ evidence:
 - url: https://discovermass.com/church/st-joseph-greenwich-ny/
   seen: 2026-09-28
   quote: St. Joseph’s Church Sunday 10:30am
-  note: 'Catholic Community of the Holy Family bulletin, issue of 27 September 2026 (listed on the church page), page 1: "Wed & Fri 9:00am". Page 2 gives the parish column as "36 Bleecker Street • Greenwich, NY 12834".'
+  note: 'Catholic Community of the Holy Family bulletin, issue of 27 September 2026 (listed on the church
+    page), page 1: "Wed & Fri 9:00am". Page 2 gives the parish column as "36 Bleecker Street • Greenwich,
+    NY 12834".'
 - url: https://parishes.rcda.org/StJosephsChurch/
   seen: 2026-09-28
   quote: 'Saturday Vigil at Notre Dame: 4:00 pm (Visitation - Schuylerville, NY) Sunday: 10:30 am'
@@ -33,7 +35,7 @@ evidence:
 - url: https://parishesonline.com/organization/st-joseph-church-12834
   seen: 2026-09-28
   note: '`probe po st-joseph-church-12834`: "St. Joseph Church", 36 Bleecker St, Greenwich; no publications.'
-
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ revisit: Compare the Ravena edition on churchofsaintpatrick.wixsite.com/church-r
   or the editions are the same, move this church to hudson-valley-vicariate-west-catskill and retire this
   row.
 revisit_after: 2026-10-25
+promoted: 2026-09-28
 ---
 
 ## Publisher

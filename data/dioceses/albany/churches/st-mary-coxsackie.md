@@ -27,6 +27,7 @@ evidence:
   quote: 80 Mansion St. Coxsackie, NY 12051 Mass Times Sunday 7:30 AM Sunday 11:30 AM
   note: HVVW network bulletin cover, 27 September 2026; page 3 lists the Coxsackie Mass intentions for
     Sunday 7:30 and 11:30 am.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

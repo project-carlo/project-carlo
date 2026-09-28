@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: 'Weekend Masses: Saturday 5:15 PM Sunday 9:30 AM'
   note: The parish's home page, 2026-09-28 (read with curl).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

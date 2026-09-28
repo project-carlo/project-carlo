@@ -11,9 +11,7 @@ longitude: -73.8494375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:18176
-- directory:333
+roster: ['gcatholic:18176', 'directory:333']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18176
   seen: 2026-09-28
@@ -25,14 +23,15 @@ evidence:
   note: Listed in Diocese of Albany Find A Parish list as "St. Mary's Church", 185 Milton Ave., Ballston
     Spa, NY, 12020
 - url: https://container.parishesonline.com/bulletins/03/0817/20260927B.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: Vigil Mass4:00 PM
   note: '27 September 2026 issue, page 2: Saturday Vigil 4:00 PM; Sunday 8:00 AM, 10:00 AM, 12 Noon; weekday
     7:45 AM Masses and Tuesday 5:30 PM.'
 - url: https://container.parishesonline.com/bulletins/03/0817/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: 185 Milton Ave. Ballston Spa, NY 12020
   note: Masthead address, page 1.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -20,6 +20,7 @@ evidence:
   seen: 2026-09-28
   note: The parish's Bulletins page embeds the Discover Mass bulletins (visit.py 2026-09-28 found discovermass:our-lady-of-the-assumption-latham-ny
     and bulletins.discovermass.com download links).
+promoted: 2026-09-28
 ---
 
 ## Publisher

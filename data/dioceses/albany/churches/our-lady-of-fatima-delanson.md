@@ -32,6 +32,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: Our Lady of Fatima 1735 Alexander Rd. P.O. Box 219, Delanson, NY 12053
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

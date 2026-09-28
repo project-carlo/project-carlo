@@ -27,6 +27,7 @@ evidence:
   quote: Sundays 8:00-8:20 am (WW), after 10:30 am Mass (RS)
   note: '27 September 2026 issue, page 1 (masthead: ''Church and Parish Office 35 Canadarago Street, PO
     Box 791 Richfield Springs, NY 13439''); page 2 calendar: RS Sat 4:00 pm, Sun 10:30 am, weekdays.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

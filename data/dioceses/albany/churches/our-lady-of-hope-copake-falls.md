@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: Saturday 5pm - Sunday 10am
   note: 27 September 2026 bulletin, page 1.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

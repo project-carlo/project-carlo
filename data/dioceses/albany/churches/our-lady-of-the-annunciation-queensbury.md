@@ -25,8 +25,9 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/03/0098/20260927B.pdf
   seen: 2026-09-28
   quote: Queensbury, NY 12804
-  note: 27 September 2026 issue, page 1 (Mass Schedule Saturday 4 PM, Sunday 8 AM and 11:30 AM) and
-    page 2 (intentions for Mon. 28 and Tue. 29 Sept. at 7:30).
+  note: 27 September 2026 issue, page 1 (Mass Schedule Saturday 4 PM, Sunday 8 AM and 11:30 AM) and page
+    2 (intentions for Mon. 28 and Tue. 29 Sept. at 7:30).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

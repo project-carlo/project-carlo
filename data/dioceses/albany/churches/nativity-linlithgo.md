@@ -25,6 +25,7 @@ evidence:
 - url: https://www.rcda.org/parishes/parish/parish-holy-trinity-hudson-ny
   seen: 2026-09-28
   quote: 'Saturday: 5:30 pm (Vigil Mass) Linlithgo'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

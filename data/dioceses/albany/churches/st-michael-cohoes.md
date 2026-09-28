@@ -27,6 +27,7 @@ evidence:
   quote: St. Michael’s Church 5:30 PM - Vigil Mass
   note: Saturday in the 27 September 2026 schedule (page 1); Sunday is "9:00 AM Mass" at St. Michael's,
     and weekday Masses Monday-Wednesday 9 am, Thursday and Friday 5:30 pm.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

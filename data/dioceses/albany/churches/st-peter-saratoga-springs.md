@@ -11,9 +11,7 @@ longitude: -73.7869375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18189
-- directory:341
+roster: ['gcatholic:18189', 'directory:341']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18189
   seen: 2026-09-28
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: Sunday Liturgy 7:30am and 9:00am
   note: 27 September 2026 issue, page 1; also "Anticipated on Saturday 5:00pm".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

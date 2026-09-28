@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-28
   note: 'OSM (via Nominatim, 2026-09-28): ''Saint Joseph Catholic Church'', North Main Street, Broadalbin
     (no house number).'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: Holy Family Parish 763 E. Main Street Little Falls, NY 13365
   note: 27 September 2026 issue, page 2; page 1 gives Holy Family Mass times Saturday 4 p.m., Sunday 10
     a.m. and 12 p.m., weekdays.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

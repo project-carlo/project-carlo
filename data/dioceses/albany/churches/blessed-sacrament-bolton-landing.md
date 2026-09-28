@@ -25,11 +25,12 @@ evidence:
 - url: https://www.blessedsacramentbolton.org/uploads/3/8/1/3/38133239/09-27-26_26th_sun_ord_tm_cyc_a.pdf
   seen: 2026-09-28
   quote: 7 Goodman Ave., Bolton Landing, NY 12814
-  note: 'Page 1 of the 27 September 2026 issue; Mass Schedule "10:30 am, Sunday, Blessed Sacrament";
-    page 2 "Daily Mass: Thursday, October 1st at 9:30 am".'
+  note: 'Page 1 of the 27 September 2026 issue; Mass Schedule "10:30 am, Sunday, Blessed Sacrament"; page
+    2 "Daily Mass: Thursday, October 1st at 9:30 am".'
 - url: https://www.openstreetmap.org/way/408117070
   seen: 2026-09-28
   note: OSM "Blessed Sacrament Catholic Church", 7 Goodman Street, Bolton Landing (Nominatim).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

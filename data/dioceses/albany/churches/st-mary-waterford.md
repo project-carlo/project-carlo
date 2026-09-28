@@ -11,9 +11,7 @@ longitude: -73.6810625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18192
-- directory:344
+roster: ['gcatholic:18192', 'directory:344']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18192
   seen: 2026-09-28
@@ -29,6 +27,7 @@ evidence:
   quote: 'M a s s S c h e d u l e S a t u r d a y a t 4 : 0 0 p . m . S u n d a y a t 8 : 0 0 a . m .
     & 1 0 : 0 0 a m'
   note: 27 September 2026 issue, page 1 (letter-spaced text layer).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

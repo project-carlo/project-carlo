@@ -25,6 +25,7 @@ evidence:
   seen: 2026-09-28
   note: sjesj.org is an eCatholic site behind Cloudflare; parish-site-access visit.py loaded it and found
     ecatholic:21471 and a "bulletins" page. issues.py found the 27 September 2026 issue at files.ecatholic.com/21471/bulletins/20260927.pdf.
+promoted: 2026-09-28
 ---
 
 ## Publisher

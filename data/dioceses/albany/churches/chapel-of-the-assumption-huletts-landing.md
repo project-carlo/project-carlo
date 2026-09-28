@@ -25,9 +25,10 @@ evidence:
 - url: https://files.ecatholic.com/17781/bulletins/20260927.pdf
   seen: 2026-09-28
   quote: 2026 Lands End Road
-  note: 'Page 2 of the 27 September 2026 issue: "Chapel of the Assumption, Mission Chapel of Our Lady of
-    Hope, 2026 Lands End Road, Huletts Landing, NY 12841"; "Saturday ... 6:00 pm *Chapel of the Assumption
+  note: 'Page 2 of the 27 September 2026 issue: "Chapel of the Assumption, Mission Chapel of Our Lady
+    of Hope, 2026 Lands End Road, Huletts Landing, NY 12841"; "Saturday ... 6:00 pm *Chapel of the Assumption
     (*summer schedule)". Page 5 lists a 20 September collection at the chapel.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

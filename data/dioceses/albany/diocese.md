@@ -2,8 +2,9 @@
 name: Roman Catholic Diocese of Albany
 state: NY
 website: https://www.rcda.org
-status: exploring
+status: promoted
 gcatholic: alba4
+promoted: 2026-09-28
 ---
 
 Fourteen counties of eastern New York: Albany, Schenectady, Rensselaer, Saratoga, Warren,

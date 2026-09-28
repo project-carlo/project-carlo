@@ -3,30 +3,30 @@ name: St. Clement's Parish
 website: https://stclementschurch.com
 bulletin_provider: discover_mass
 provider_id: st-clements-church-saratoga-springs-ny
-publication:
-- discovermass:st-clements-church-saratoga-springs-ny
+publication: ['discovermass:st-clements-church-saratoga-springs-ny']
 group: ''
 evidence:
 - url: https://discovermass.com/church/st-clements-church-saratoga-springs-ny/
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: TheC atholicC ommunity of Saratoga Springs
   note: 'Issue of 27 September 2026 (listed on the church page), page 1. The PDF text splits words; rendered,
     the vertical masthead reads "The Catholic Community of Saratoga Springs / St. Clement''s Parish •
     231 Lake Avenue • Saratoga Springs, NY 12866 / The Church of St. Peter • 241 Broadway • Saratoga Springs,
     NY 12866", with "Pastor: Reverend Fr. James Ebert".'
 - url: https://discovermass.com/church/st-clements-church-saratoga-springs-ny/
-  seen: *id001
+  seen: 2026-09-28
   quote: Mon-Fri 8am Sun 8am, 10am only
   note: 'Same page, St. Clement''s livestream line. The rendered "St. Clement''s Parish Mass Times" box:
     Monday-Friday 8am, Saturday Vigil 4pm, Sunday 8am, 10am, 11:30am.'
 - url: https://stclementschurch.com/bulletin/
-  seen: *id001
+  seen: 2026-09-28
   note: The parish site's Bulletin page lists the Discover Mass issues (bulletins.discovermass.com download
     links dated September 27th, 20th, 13th, 6th, August 30th ... 2026).
 - url: https://stclementschurch.com/parish/mass-times/
-  seen: *id001
+  seen: 2026-09-28
   quote: Saturday Vigil 4:00 PM Sunday 8:00 AM 10:00 AM 11:30 AM
   note: 'Parish Mass-times page: "Monday – Friday 8:00 AM (in Church)".'
+promoted: 2026-09-28
 ---
 
 ## Publisher

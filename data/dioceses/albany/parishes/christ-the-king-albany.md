@@ -8,7 +8,7 @@ group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0863/20260927B.pdf
   seen: 2026-09-28
-  quote: 'Weekend Mass Saturday | 4:00pm Sunday | 8:00am, 11:00am'
+  quote: Weekend Mass Saturday | 4:00pm Sunday | 8:00am, 11:00am
   note: Page 1 of the 27 September 2026 issue, under "MASS SCHEDULE"; "CONTACT US 20 Sumter Ave Albany,
     NY 12203". Christ the King alone.
 - url: https://container.parishesonline.com/bulletins/03/0863/20260927B.pdf
@@ -17,9 +17,9 @@ evidence:
   note: Page 2 header. Pastor Rev. Richard Lesser.
 - url: https://www.ctkparishny.org/bulletins
   seen: 2026-09-28
-  note: The parish's Bulletins page (rendered in a browser with visit.py) links ParishesOnline
-    publication-page/christ-the-king-church-12203 issues in container 03/0863, latest 27 September
-    2026 plus a 4 October "S" (special) issue.
+  note: The parish's Bulletins page (rendered in a browser with visit.py) links ParishesOnline publication-page/christ-the-king-church-12203
+    issues in container 03/0863, latest 27 September 2026 plus a 4 October "S" (special) issue.
+promoted: 2026-09-28
 ---
 
 ## Publisher

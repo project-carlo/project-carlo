@@ -28,6 +28,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Sacred Heart Church', 15 Liberty St., Sidney,
     NY, 13838
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

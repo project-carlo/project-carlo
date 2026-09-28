@@ -34,6 +34,7 @@ evidence:
   seen: 2026-09-28
   quote: St. Mary's (Hudson) and Resurrection (Germantown) will merge by July 1, 2009, with both remaining
     open
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

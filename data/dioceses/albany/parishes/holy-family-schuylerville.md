@@ -3,35 +3,35 @@ name: Catholic Community of the Holy Family (Notre Dame-Visitation and St. Josep
 website: https://discovermass.com/church/st-joseph-greenwich-ny/
 bulletin_provider: discover_mass
 provider_id: st-joseph-greenwich-ny
-publication:
-- discovermass:st-joseph-greenwich-ny
+publication: ['discovermass:st-joseph-greenwich-ny']
 group: Catholic Community of the Holy Family
 evidence:
 - url: https://discovermass.com/church/st-joseph-greenwich-ny/
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: Notre Dame-Visitation • St. Joseph’s
   note: Issue of 27 September 2026 (listed on the church page), page 1 footer line under "September 27,
     2026 • Twenty-Sixth Sunday in Ordinary Time".
 - url: https://discovermass.com/church/st-joseph-greenwich-ny/
-  seen: *id001
+  seen: 2026-09-28
   quote: Notre Dame-Visitation Saturday 4 :00pm Sunday 8:30am Spanish Mass 3:00pm
   note: 27 September 2026 issue, page 1, "The Catholic Community of the Holy Family Mass & Reconciliation
     Times"; then Tuesday 6:00pm, Thursday 9:00am, First Saturday 9:00am.
 - url: https://discovermass.com/church/st-joseph-greenwich-ny/
-  seen: *id001
+  seen: 2026-09-28
   quote: St. Joseph’s Church Sunday 10:30am
   note: 27 September 2026 issue, page 1; "Wed & Fri 9:00am".
 - url: https://discovermass.com/church/st-joseph-greenwich-ny/
-  seen: *id001
+  seen: 2026-09-28
   quote: 18 Pearl Street • Schuylerville, NY 12871
   note: '27 September 2026 issue, page 2: Notre Dame-Visitation''s column; the St. Joseph''s column gives
     "36 Bleecker Street • Greenwich, NY 12834".'
 - url: https://ndv-schuylerville.weebly.com/about-our-parish.html
-  seen: *id001
+  seen: 2026-09-28
   quote: We are currently in The Catholic Community of The Holy Family that includes St. Clements Church
     in Saratoga Springs and St. Joseph's Church in Greenwich
   note: 'NDV''s own site; its "bulletin" button links stclementschurch.com/bulletin/ (stale: St. Clement''s
     bulletin now names only St. Clement''s and St. Peter''s, Saratoga Springs).'
+promoted: 2026-09-28
 ---
 
 ## Publisher

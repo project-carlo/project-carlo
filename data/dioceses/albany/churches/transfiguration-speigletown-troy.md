@@ -28,6 +28,7 @@ evidence:
 - url: https://speigletown.org/transfiguration-parish/
   seen: 2026-09-28
   quote: Saturday Mass on Hillview Drive, with a second site in the Village of Schaghticoke
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

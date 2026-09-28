@@ -34,6 +34,7 @@ evidence:
   note: St. Adalbert's bulletin page, like mountcarmelschdy.org/bulletin.html and spacny.org/bulletins.html,
     links only parishesonline.com/find/st-paul-the-apostle-st-adalbert-and-our-lady-of-mt-carmel-church
     (read 2026-09-28).
+promoted: 2026-09-28
 ---
 
 ## Publisher

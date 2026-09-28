@@ -31,6 +31,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: St. Anthony's Church 331 Seward Place, Schenectady, NY 12308
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

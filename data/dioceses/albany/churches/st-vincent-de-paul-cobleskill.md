@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Vincent de Paul's Church", 138 Washington
     Ave., Cobleskill, NY, 12043
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

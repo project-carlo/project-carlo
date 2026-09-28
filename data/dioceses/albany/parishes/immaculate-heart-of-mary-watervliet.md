@@ -27,6 +27,7 @@ evidence:
   note: The parish site's Weekly Bulletin page (visit.py, 2026-09-28) stops at the 29 March 2026 issue
     (the 15 March one is named lpi_bulletin031526.pdf). Its issues have the same masthead as the ParishesOnline
     container, which is current.
+promoted: 2026-09-28
 ---
 
 ## Publisher

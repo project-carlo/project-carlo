@@ -24,6 +24,7 @@ evidence:
 - url: https://www.rcda.org/parishes/parish/sacred-heart-immaculate-conception-church-haines-falls-ny
   seen: 2026-09-28
   quote: 'Sunday: 9:00 am Palenville'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

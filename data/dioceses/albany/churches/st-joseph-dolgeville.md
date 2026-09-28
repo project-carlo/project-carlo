@@ -27,6 +27,7 @@ evidence:
   quote: St. Joseph Church 31 N. Helmer Avenue Dolgeville, NY 13329
   note: 27 September 2026 issue, page 3; page 1 'ST. JOSEPH CHURCH MASS TIMES Sunday 8 a.m.'; page 2 has
     intentions for St. Joseph on Sundays.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

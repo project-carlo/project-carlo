@@ -18,6 +18,7 @@ evidence:
   seen: 2026-09-28
   quote: Weekly Bulletin
   note: The parish's Bulletins page, a list of dated PDFs in wp-content/uploads (09-27-2026 back to 07-26-26).
+promoted: 2026-09-28
 ---
 
 ## Publisher

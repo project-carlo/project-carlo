@@ -31,6 +31,7 @@ evidence:
   quote: the Saturday 4:00 PM Mass at Christ Our Light
   note: Page 2; the CHRIST OUR LIGHT intentions list Tuesday 29 September 9 am, Saturday 3 October 4 pm
     and Sunday 10 am.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

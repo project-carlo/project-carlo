@@ -27,6 +27,7 @@ evidence:
   quote: 'Sunday: 9:00 am Hudson Sunday: 11:00 am Germantown'
   note: 'Directory detail page (directory:274): also "Saturday: 4:00 pm (Vigil Mass) Hudson Saturday:
     5:30 pm (Vigil Mass) Linlithgo".'
+promoted: 2026-09-28
 ---
 
 ## Publisher

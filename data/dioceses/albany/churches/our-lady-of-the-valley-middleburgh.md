@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Parish of Our Lady of the Valley', Main St.
     at Wells Ave., Middleburgh, NY, 12122
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

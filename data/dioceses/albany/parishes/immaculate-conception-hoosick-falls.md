@@ -21,6 +21,7 @@ evidence:
   note: The cluster site's "ICC Bulletins" page (behind Cloudflare; read with parish-site-access visit.py)
     lists one issue per Sunday back to 2015, newest September 27, 2026, at files.ecatholic.com/11172/bulletins/<YYYYMMDD>.pdf.
     The menu's other "Bulletins" page (/bulletins-1) listed no issues.
+promoted: 2026-09-28
 ---
 
 ## Publisher

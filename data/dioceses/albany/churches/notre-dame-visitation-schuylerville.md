@@ -11,9 +11,7 @@ longitude: -73.5855625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18190
-- directory:342
+roster: ['gcatholic:18190', 'directory:342']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18190
   seen: 2026-09-28
@@ -25,13 +23,14 @@ evidence:
   note: Listed in Diocese of Albany Find A Parish list as 'Notre Dame-Visitation Church', 18 Pearl St.,
     Schuylerville, NY, 12871
 - url: https://discovermass.com/church/st-joseph-greenwich-ny/
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: Notre Dame-Visitation Saturday 4 :00pm Sunday 8:30am Spanish Mass 3:00pm
   note: Holy Family bulletin of 27 September 2026 (listed on the church page), page 1.
 - url: https://ndv-schuylerville.weebly.com/
-  seen: *id001
+  seen: 2026-09-28
   quote: Our weekend Masses are on Saturdays at 4pm and Sunday mornings at 8:30am
   note: Parish homepage; "Spanish Mass is Sundays at 3:00pm".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

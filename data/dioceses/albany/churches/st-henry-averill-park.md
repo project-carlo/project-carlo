@@ -27,6 +27,7 @@ evidence:
   note: 27 September 2026 issue, page 2 (image, rendered with render.py). "MASS SCHEDULE WEEKEND Saturday
     04:00pm Sunday 08:00am, 10:00am" and "ST. HENRY'S CATHOLIC CHURCH 39 Old Route 66 Averill Park, NY
     12018".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

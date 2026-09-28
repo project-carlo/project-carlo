@@ -11,9 +11,7 @@ longitude: -73.7779375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18186
-- directory:339
+roster: ['gcatholic:18186', 'directory:339']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18186
   seen: 2026-09-28
@@ -29,6 +27,7 @@ evidence:
   quote: Corpus Christi Church, Round Lake, NY 04-0815
   note: '27 September 2026 issue. Page 1 is an image; rendered: "Weekend Masses Saturday | 4:00pm Vigil
     Sunday | 8:00am, 11:00am".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

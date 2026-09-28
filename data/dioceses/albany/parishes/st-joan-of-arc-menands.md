@@ -3,14 +3,13 @@ name: St. Joan of Arc Church and the Black Catholic Apostolate
 website: https://www.rcda.org/parishes/black-catholic-apostolate/news-events/bulletins
 bulletin_provider: other
 provider_id: ''
-publication: ['url:https://www.rcda.org/parishes/black-catholic-apostolate/news-events/bulletins',
-  'po-org:st-joan-of-arc-church-black-catholic-apostolate', 'lpi:0018000000Qx7OTAAZ']
+publication: ['url:https://www.rcda.org/parishes/black-catholic-apostolate/news-events/bulletins', 'po-org:st-joan-of-arc-church-black-catholic-apostolate',
+  'lpi:0018000000Qx7OTAAZ']
 group: ''
 evidence:
 - url: https://www.rcda.org/application/files/3817/8993/3154/25th_Sunday_In_Ordinary_Time_Sepember_20_2026_revised_ss.pdf
   seen: 2026-09-28
-  quote: 'Black Apostolate Mass - Sunday, 10:15am St. Joan of Arc Masses: Saturday, 4:00pm, Sunday,
-    9:00am'
+  quote: 'Black Apostolate Mass - Sunday, 10:15am St. Joan of Arc Masses: Saturday, 4:00pm, Sunday, 9:00am'
   note: Masthead, page 1 of the 20 September 2026 issue ("76 Menand Road Menands, NY 12204 ... Fr. Kofi
     Ntsiful-Amissah, Pastor"). The bulletins page links it as https://www.rcda.org/download_file/view/4430/2079,
     which redirects here.
@@ -25,8 +24,9 @@ evidence:
     2025.
 - url: https://parishesonline.com/organization/st-joan-of-arc-church-black-catholic-apostolate
   seen: 2026-09-28
-  note: The ParishesOnline organization still exists (probe po) but lists no publications, and its
-    website, sjoa-bca.com, is a lapsed Wix domain ("Reconnect Your Domain").
+  note: The ParishesOnline organization still exists (probe po) but lists no publications, and its website,
+    sjoa-bca.com, is a lapsed Wix domain ("Reconnect Your Domain").
+promoted: 2026-09-28
 ---
 
 ## Publisher

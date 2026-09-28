@@ -26,6 +26,7 @@ evidence:
 - url: https://www.rcda.org/parishes/parish/st-anns-andes-ny
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as "St. Ann's", 375 Main St., Andes, NY, 13731
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

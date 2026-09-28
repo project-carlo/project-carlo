@@ -17,6 +17,7 @@ evidence:
   seen: 2026-09-28
   note: ParishesOnline organization (LPi 0018000000Qc2biAAB, container 04/0313), website www.stmaryscoop.org,
     address 31 Elm St, Cooperstown; latest issue 2026-09-27 (probe po).
+promoted: 2026-09-28
 ---
 
 ## Publisher

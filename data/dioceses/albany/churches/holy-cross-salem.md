@@ -32,12 +32,13 @@ evidence:
   note: OSM "Holy Cross Catholic Church", 249 North Main Street, Salem (Nominatim).
 - url: https://parishesonline.com/organization/holy-cross-church-12865
   seen: 2026-09-28
-  note: '`probe po holy-cross-church-12865`: ''Holy Cross Church'', PO Box 357, Salem; "no publications: this organization does not publish
-    a bulletin here now".'
+  note: '`probe po holy-cross-church-12865`: ''Holy Cross Church'', PO Box 357, Salem; "no publications:
+    this organization does not publish a bulletin here now".'
 - url: https://www.battenkillcatholic.org/bulletins-1
   seen: 2026-09-28
   note: The Battenkill Catholic Cluster site's own "Bulletins" page (behind Cloudflare; read with visit.py)
     listed no issues; only the "ICC Bulletins" page (/bulletins, eCatholic 11172) has issues.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

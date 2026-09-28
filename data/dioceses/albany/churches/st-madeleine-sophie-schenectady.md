@@ -29,6 +29,7 @@ evidence:
 - url: https://discovermass.com/church/st-madeleine-sophie-schenectady-ny/
   seen: 2026-09-28
   quote: St. Madeleine's 3500 Carman Road
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

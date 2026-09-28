@@ -25,6 +25,7 @@ evidence:
   quote: Our Network of Parishes
   note: Lists Church of Christ the King (Albany; Fr. Rick Lesser, pastor), St. Lucy / St. Bernadette and
     St. Thomas the Apostle (both Fr. Matt Duclos) with their own websites and Mass times.
+promoted: 2026-09-28
 ---
 
 ## Publisher

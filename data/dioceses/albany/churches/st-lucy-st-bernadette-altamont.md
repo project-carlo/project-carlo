@@ -31,6 +31,7 @@ evidence:
   quote: 109 Grand Street Altamont, NY 12009
   note: 'St. Matthew''s, Voorheesville, lists St. Lucy / St. Bernadette in its "Network of Parishes" with
     "Weekend Mass times: Sunday at 9:00 AM".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

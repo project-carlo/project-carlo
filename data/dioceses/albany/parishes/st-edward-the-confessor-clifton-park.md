@@ -3,29 +3,27 @@ name: St. Edward the Confessor
 website: https://www.stedwardsny.org
 bulletin_provider: parishes_online
 provider_id: st-edward-the-confessor-church-12065
-publication:
-- po-org:st-edward-the-confessor-church-12065
-- lpi:0018000000Qc1WiAAJ
-- po-container:03/0292
+publication: ['po-org:st-edward-the-confessor-church-12065', 'lpi:0018000000Qc1WiAAJ', 'po-container:03/0292']
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0292/20260927B.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: St. Edward the Confessor, Clifton Park, NY 03-0292
   note: '27 September 2026 issue, LPi footer on pages 7-8. Pages 1-6 are images; rendered page 1: "ST.
     EDWARD THE CONFESSOR CATHOLIC CHURCH / SEPTEMBER 27, 2026 THE TWENTY-SIXTH SUNDAY IN ORDINARY TIME
     / MASS SCHEDULE WEEKEND MASSES Saturday | 4:00 pm Sunday | 7:30 am, 9:00 am, 11:00 am DAILY MASSES
     Tuesday - Wednesday | 9:00 am Friday - Saturday | 9:00 am / Pastor | Rev. Daniel McHale".'
 - url: https://www.stedwardsny.org/bulletin9ab2b387
-  seen: *id001
+  seen: 2026-09-28
   note: The site's Bulletin page embeds the ParishesOnline widget (org st-edward-the-confessor-church-12065,
     issues 03/0292/20260927B.pdf and earlier); read with visit.py, which found lpi:0018000000Qc1WiAAJ.
     The homepage also links a weekly worship aid on irp.cdn-website.com (09-27-2026 25th OT.pdf), not
     the bulletin.
 - url: https://www.stedwardsny.org/
-  seen: *id001
+  seen: 2026-09-28
   quote: Friday morning Mass and the Knights breakfast will remain at St. Mary's a bit longer
   note: 'Homepage notice: "through the completion of our kitchen renovation in early January".'
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -21,6 +21,7 @@ evidence:
 revisit: The newest issue on the News & Bulletin page was 12 September 2026 on 2026-09-28; confirm issues
   keep coming (weekly Saturday dates).
 revisit_after: 2026-11-01
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -23,6 +23,7 @@ evidence:
   seen: 2026-09-28
   note: '`probe url`: ok, links parishesonline.com/publication-page/our-lady-of-the-annunciation issues
     of container 03/0098 (20260927B, 20260920B).'
+promoted: 2026-09-28
 ---
 
 ## Publisher

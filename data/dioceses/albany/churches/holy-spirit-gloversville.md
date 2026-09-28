@@ -31,6 +31,7 @@ evidence:
 - url: https://www.openstreetmap.org/way/815859525
   seen: 2026-09-28
   note: 'OSM (via Nominatim, 2026-09-28): ''Church of the Holy Spirit'', 149 South Main Street, Gloversville.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

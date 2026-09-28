@@ -29,8 +29,9 @@ evidence:
 - url: https://www.rcda.org/application/files/3817/8993/3154/25th_Sunday_In_Ordinary_Time_Sepember_20_2026_revised_ss.pdf
   seen: 2026-09-28
   quote: 'SATURDAY VIGIL MASS: 4:00pm'
-  note: 'Schedule box, page 2 of the 20 September 2026 issue: "SUNDAY MASSES: 9:00am 10:15am (Black
-    Apostolate) DAILY MASS: 8:00am (Monday-Friday)". Masthead: "76 Menand Road Menands, NY 12204".'
+  note: 'Schedule box, page 2 of the 20 September 2026 issue: "SUNDAY MASSES: 9:00am 10:15am (Black Apostolate)
+    DAILY MASS: 8:00am (Monday-Friday)". Masthead: "76 Menand Road Menands, NY 12204".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

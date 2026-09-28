@@ -26,7 +26,8 @@ evidence:
   seen: 2026-09-28
   quote: 6 Church St., Chestertown, NY 12817
   note: Page 1 of the 27 September 2026 issue gives this address for St. Isaac Jogues Church (see Name
-    and address); Mass Saturday 5:30 pm and Sunday 9:00 am, changing to Saturday 4:00 pm from 17 October 2026.
+    and address); Mass Saturday 5:30 pm and Sunday 9:00 am, changing to Saturday 4:00 pm from 17 October
+    2026.
 - url: https://www.openstreetmap.org/way/815772896
   seen: 2026-09-28
   note: OSM "Saint Isaac Jogues Catholic Church", 86 Riverside Drive, Chestertown (Nominatim). The building
@@ -34,6 +35,7 @@ evidence:
 - url: https://www.blessedsacramentbolton.org/st-isaac-jogues.html
   seen: 2026-09-28
   quote: St Isaac Jogues (formally St. John the Baptist), 6 Church St, Chestertown, NY
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

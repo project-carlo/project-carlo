@@ -16,6 +16,7 @@ evidence:
 - url: https://www.smcconeonta.org/bulletin
   seen: 2026-09-28
   note: The parish's Bulletin page embeds the ParishesOnline publication widget with id=0018000000Qc2bgAAB.
+promoted: 2026-09-28
 ---
 
 ## Publisher

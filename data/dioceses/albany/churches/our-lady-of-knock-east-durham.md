@@ -29,6 +29,7 @@ evidence:
 - url: https://stmaryscoxsackie.com/wp-content/uploads/2026/09/Coxsackie-Bulletin-September-27.pdf
   seen: 2026-09-28
   quote: Our Lady of Knock East Durham 2052 NY-145 E. Durham, NY 12423 Mass Time Saturday 4:00 PM
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

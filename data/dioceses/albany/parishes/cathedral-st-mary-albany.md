@@ -10,28 +10,29 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/03/0408/20260927B.pdf
   seen: 2026-09-28
   quote: THE TWENTY-SIXTH SUNDAY IN ORDINARY TIME SEPTEMBER 27, 2026 HISTORIC ALBANY PARISHES
-  note: 'Cover of the 27 September 2026 issue in the Cathedral''s container. The masthead (letter-spaced
-    in the text layer, so not quoted) reads "The Cathedral / Historic St. Mary''s / 125 Eagle St., Albany
-    / www.cathedralic.com ... 10 Lodge St., Albany / www.hist-stmarys.org".'
+  note: Cover of the 27 September 2026 issue in the Cathedral's container. The masthead (letter-spaced
+    in the text layer, so not quoted) reads "The Cathedral / Historic St. Mary's / 125 Eagle St., Albany
+    / www.cathedralic.com ... 10 Lodge St., Albany / www.hist-stmarys.org".
 - url: https://container.parishesonline.com/bulletins/03/0408/20260927B.pdf
   seen: 2026-09-28
-  quote: "Mass 4:00 pm St. Mary's Sunday: Mass 8:00 am St. Mary's"
+  quote: 'Mass 4:00 pm St. Mary''s Sunday: Mass 8:00 am St. Mary''s'
   note: '"HISTORIC ALBANY PARISHES MASS AND CONFESSION SCHEDULE", page 2: Saturday 4 pm St. Mary''s; Sunday
     8 and 10:30 am St. Mary''s, 11 am and 5 pm Cathedral; weekday Mass 12:05 pm St. Mary''s.'
 - url: https://container.parishesonline.com/bulletins/04/0782/20260927B.pdf
   seen: 2026-09-28
   quote: THE TWENTY-SIXTH SUNDAY IN ORDINARY TIME SEPTEMBER 27, 2026 HISTORIC ALBANY PARISHES
-  note: The same 27 September issue, identical text on pages 1-2 and the same page count (5), served
-    from St. Mary's container. One bulletin in two containers.
+  note: The same 27 September issue, identical text on pages 1-2 and the same page count (5), served from
+    St. Mary's container. One bulletin in two containers.
 - url: https://www.hist-stmarys.org/publications
   seen: 2026-09-28
-  note: St. Mary's "Bulletins" page (LPi site, rendered with visit.py) links ParishesOnline
-    publication-page/st-mary-church-12207 issues in container 04/0782, weekly to 27 September 2026.
+  note: St. Mary's "Bulletins" page (LPi site, rendered with visit.py) links ParishesOnline publication-page/st-mary-church-12207
+    issues in container 04/0782, weekly to 27 September 2026.
 - url: https://albanycatholic.org
   seen: 2026-09-28
   quote: Historic Albany Parish Network
-  note: The network's site (125 Eagle Street office). Embeds lpi:0018000000Qbz9dAAB, the Cathedral's
-    ParishesOnline organization.
+  note: The network's site (125 Eagle Street office). Embeds lpi:0018000000Qbz9dAAB, the Cathedral's ParishesOnline
+    organization.
+promoted: 2026-09-28
 ---
 
 ## Publisher

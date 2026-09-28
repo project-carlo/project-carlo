@@ -32,6 +32,7 @@ evidence:
   quote: 21 Main Street | Ravena, NY 12143
   note: 'The parish''s home page (visit.py 2026-09-28), with "Saturday Vigil: 4:30 PM The Lord''s Day
     Mass (Sunday): 9:30 am".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   note: Page 1 of the 20 September 2026 issue (image, rendered with render.py). "LITURGY OF THE EUCHARIST
     Saturday 4:30 pm Sunday 9:00 am 12:00 pm; DAILY MASS Monday - Friday 7:15am"; parish office 28 State
     Street, Troy, New York 12180.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

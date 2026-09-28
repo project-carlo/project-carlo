@@ -33,6 +33,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: St. Joseph's Catholic Church 45 MacArthur Drive, Scotia, NY 12302
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

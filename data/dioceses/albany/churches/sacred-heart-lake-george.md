@@ -24,9 +24,10 @@ evidence:
     George, NY, 12845; Mass Sat 5:30 pm, Sun 10:00 am, Wed and Fri 8:30 am.
 - url: https://container.parishesonline.com/bulletins/03/1267/20260927B.pdf
   seen: 2026-09-28
-  quote: 'Saturday | 5:30pm (Vigil)'
+  quote: Saturday | 5:30pm (Vigil)
   note: Masthead, page 1 of the 27 September 2026 issue; Sunday 10:00am, Wednesday & Friday 8:30am; page
     2 intentions for Sat 26 Sept 5:30pm and Sun 27 Sept 10:00am.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

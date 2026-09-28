@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-28
   quote: 10:30 am | Mass | St. James
   note: '27 September 2026 issue, page 1: Sunday 10:30 am; Friday 10:30 am Rosary & Mass.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

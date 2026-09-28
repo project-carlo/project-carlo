@@ -29,6 +29,7 @@ evidence:
   note: 'St. Stanislaus''s own site (behind Cloudflare; read with visit.py 2026-09-28). Its only bulletin
     link is parishes.rcda.org/ststanislaus/bulletin.php, which redirects back to the homepage: no bulletin
     of its own.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -33,6 +33,7 @@ evidence:
     Valatie, and at the time, St. Joseph's in Stottville
   note: The Evangelist, 12 June 2024, on the maternity home in the former St. Joseph's (Stottville) rectory.
     See open/st-joseph-stottville.
+promoted: 2026-09-28
 ---
 
 ## Publisher

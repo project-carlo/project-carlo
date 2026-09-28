@@ -17,6 +17,7 @@ evidence:
   seen: 2026-09-28
   note: '"St. Vincent de Paul Catholic Community - Cobleskill, NY": eCatholic site behind Cloudflare (probe
     url 403); read in a browser with visit.py, which found eCatholic site id 5247 and a /bulletins page.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

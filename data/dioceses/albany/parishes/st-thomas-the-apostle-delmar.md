@@ -22,6 +22,7 @@ evidence:
   seen: 2026-09-28
   note: The parish's eCatholic site, behind Cloudflare; visit.py (2026-09-28) found ecatholic:16575 on
     it.
+promoted: 2026-09-28
 ---
 
 ## Publisher

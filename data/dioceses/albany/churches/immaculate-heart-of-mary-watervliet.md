@@ -27,6 +27,7 @@ evidence:
   quote: We have 3 Mass options every weekend
   note: Page 1 of the 27 September 2026 bulletin; "Saturday, 4pm; Sunday, 7:30am and 11am. See you in
     church!!"
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

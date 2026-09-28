@@ -29,6 +29,7 @@ evidence:
   seen: 2026-09-28
   quote: 5:30 pm — St. Stephen’s
   note: 27 September 2026 issue, page 1; page 2 lists Sunday 8:00 AM intentions.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

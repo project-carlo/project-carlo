@@ -11,9 +11,7 @@ longitude: -73.8039375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18178
-- directory:334
+roster: ['gcatholic:18178', 'directory:334']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18178
   seen: 2026-09-28
@@ -30,6 +28,7 @@ evidence:
   note: '27 September 2026 issue. Page 1 is an image; rendered: "WEEKEND MASSES Saturday | 4:00 pm Sunday
     | 7:30 am, 9:00 am, 11:00 am" and the address line "569 CLIFTON PARK CENTER ROAD, CLIFTON PARK, NY
     12065".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

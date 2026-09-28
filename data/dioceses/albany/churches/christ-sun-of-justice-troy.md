@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: Monday – Tuesday 5:00 PM … Wednesday 9:00 AM … WEEKEND MASS … Sunday 10:00 AM
   note: Page 1 of the 27 September 2026 issue.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

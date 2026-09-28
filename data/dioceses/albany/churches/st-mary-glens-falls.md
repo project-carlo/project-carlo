@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: 'Sunday:          8:30 a.m. & 11:15 a.m.'
   note: Page 1 of the 27 September 2026 bulletin (Saturday 4:00 p.m.; Wednesday and Thursday 12:10 p.m.).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

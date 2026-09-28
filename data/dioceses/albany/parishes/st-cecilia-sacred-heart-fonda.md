@@ -30,6 +30,7 @@ evidence:
   note: The parishes' own page (title 'St. Cecilia Church, Fonda & Sacred Heart, Tribes Hill') lists the
     same bulletins as bulletins/2026/<Month>_<DD>.pdf, newest September_20 on 2026-09-28; that PDF's last
     page footer reads 'St. Cecilia Church, Fonda, NY 03-1181'.
+promoted: 2026-09-28
 ---
 
 ## Publisher

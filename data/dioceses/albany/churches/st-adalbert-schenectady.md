@@ -33,6 +33,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: Church of St. Adalbert 550 Lansing Street, Schenectady, NY 12303
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

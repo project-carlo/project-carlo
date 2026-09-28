@@ -31,6 +31,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: St. Luke's Catholic Church 1241 State Street, Schenectady, NY 12304
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

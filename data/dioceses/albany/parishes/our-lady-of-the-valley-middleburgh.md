@@ -22,6 +22,7 @@ evidence:
   quote: Father Thomas Zelker
   note: 'Our Lady of Fatima, Delanson''s own 20 September issue: a different masthead, office and staff,
     same pastor. Shows the two cluster parishes publish separately.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

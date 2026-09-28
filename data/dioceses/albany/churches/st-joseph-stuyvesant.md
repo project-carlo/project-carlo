@@ -31,6 +31,7 @@ evidence:
   quote: 4 pm | Mass | St. Joseph’s
   note: '27 September 2026 issue, page 1: Saturday 4 pm, Sunday 12:30 pm Misa (Spanish), Wednesday 10:05
     am Mass & Adoration.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: St. John the Evangelist Roman Catholic Church 816 Union Street, Schenectady, NY 12308
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

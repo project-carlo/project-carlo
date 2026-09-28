@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-28
   note: 'ParishesOnline organization (probe po): "125 Eagle St, Albany, New York, 12202-1797", latitude
     42.646952, longitude -73.759448.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

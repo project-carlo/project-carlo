@@ -34,6 +34,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Sacred Heart Church', 38 Academy St, Margaretville,
     NY, 12455
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

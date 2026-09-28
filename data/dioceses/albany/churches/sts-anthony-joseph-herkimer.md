@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: St. Anthony & St. Joseph Mass Saturday ~ 4:00 PM
   note: 4 October 2026 issue, page 2; confessions Saturday 3.00-3.45 pm here (page 1).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

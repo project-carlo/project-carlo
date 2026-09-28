@@ -9,18 +9,19 @@ evidence:
 - url: https://www.stmarysglensfalls.org/_files/ugd/91aab8_bb1c8973bb4a41bd9806eb081cb399d9.pdf
   seen: 2026-09-28
   quote: September 27th, 2026 ~ 26th Sunday in Ordinary Time
-  note: 'Page 1 of the bulletin linked as "Bulletin" on the homepage on 2026-09-28 (redirects to a filesusr.com
-    copy). Masthead "St. Mary''s Church 62 Warren Street, Glens Falls, NY 12801", Pastor Father Scott VanDerveer,
+  note: Page 1 of the bulletin linked as "Bulletin" on the homepage on 2026-09-28 (redirects to a filesusr.com
+    copy). Masthead "St. Mary's Church 62 Warren Street, Glens Falls, NY 12801", Pastor Father Scott VanDerveer,
     Mass Schedule Saturday 4:00 p.m., Sunday 8:30 a.m. & 11:15 a.m., Wednesday and Thursday 12:10 p.m.
-    Names this church alone.'
+    Names this church alone.
 - url: https://www.stmarysglensfalls.org/_files/ugd/91aab8_bb1c8973bb4a41bd9806eb081cb399d9.pdf
   seen: 2026-09-28
   quote: 62 Warren Street, Glens Falls, NY 12801
 - url: https://www.stmarysglensfalls.org/
   seen: 2026-09-28
   note: 'Homepage (behind Cloudflare; read with parish-site-access visit.py): menu item "Bulletin" links
-    _files/ugd/91aab8_bb1c8973bb4a41bd9806eb081cb399d9.pdf; "Mass Times Wednesday: 12:10 PM Thursday: 12:10
-    PM Saturday: 4:00 PM Sunday: 8:30 AM 11:15 AM".'
+    _files/ugd/91aab8_bb1c8973bb4a41bd9806eb081cb399d9.pdf; "Mass Times Wednesday: 12:10 PM Thursday:
+    12:10 PM Saturday: 4:00 PM Sunday: 8:30 AM 11:15 AM".'
+promoted: 2026-09-28
 ---
 
 ## Publisher

@@ -3,28 +3,25 @@ name: Church of St. Peter
 website: http://www.stpetersaratoga.com
 bulletin_provider: parishes_online
 provider_id: st-peter-church-12866
-publication:
-- po-org:st-peter-church-12866
-- lpi:0018000000Qx7P1AAJ
-- po-container:03/1111
+publication: ['po-org:st-peter-church-12866', 'lpi:0018000000Qx7P1AAJ', 'po-container:03/1111']
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1111/20260927B.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: The Church of St. Peter Saratoga Springs, New York September 27, 2026
   note: 'Page 2 header of the 27 September 2026 issue. Page 1 masthead: "241 Broadway Saratoga Springs,
     NY 12866", pastoral staff led by Rev. James Ebert.'
 - url: https://container.parishesonline.com/bulletins/03/1111/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: Sunday Liturgy 7:30am and 9:00am
   note: 'Page 1, "THE EUCHARIST": also "Anticipated on Saturday 5:00pm" and "Tuesday and Friday 8:00am".'
 - url: http://www.stpetersaratoga.com/bulletin-and-worship-aid.html
-  seen: *id001
+  seen: 2026-09-28
   note: The site's "Bulletin and Worship Aid" page embeds the ParishesOnline widget (publicationWidget?id=0018000000Qx7P1AAJ)
     and links a weekly worship aid (/uploads/.../9-27-26_ul.pdf), which is an order of worship, not the
     bulletin.
 - url: https://discovermass.com/church/st-clements-church-saratoga-springs-ny/
-  seen: *id001
+  seen: 2026-09-28
   quote: TheC atholicC ommunity of Saratoga Springs
   note: St. Clement's Discover Mass issue of 27 September 2026, page 1 (the PDF text splits words; the
     page reads "The Catholic Community of Saratoga Springs / St. Clement's Parish • 231 Lake Avenue /
@@ -33,6 +30,7 @@ revisit: Check whether ParishesOnline 03/1111 is still published; if it has stop
   Discover Mass bulletin (Catholic Community of Saratoga Springs) carries St. Peter's, merge this row
   into st-clement-saratoga-springs.
 revisit_after: 2027-01-15
+promoted: 2026-09-28
 ---
 
 ## Publisher

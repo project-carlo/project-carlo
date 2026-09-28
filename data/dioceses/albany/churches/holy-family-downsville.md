@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Church of the Holy Family', 14918 Route 30,
     Downsville, NY, 13755
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

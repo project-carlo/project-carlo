@@ -40,6 +40,7 @@ evidence:
   note: 'St. Patrick Athens/Catskill''s own site: the "HHV West Network Mass Times" for all ten churches.
     Its Bulletin link goes to jppc.net/onlinebulletins/458template.pdf, which redirects to church-bulletin.org/community-of-saint-patrick-athens-ny-12015;
     that page (rendered with visit.py, 2026-09-28) shows only the week''s readings and no issue.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

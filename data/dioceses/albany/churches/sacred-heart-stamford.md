@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'Sacred Heart Church', 27 Harper St., Stamford,
     NY, 12167
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -9,9 +9,9 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/03/1267/20260927B.pdf
   seen: 2026-09-28
   quote: LITURGY SCHEDULE SACRED HEART CHURCH,
-  note: Masthead, page 1 of the 27 September 2026 issue ("SEPTEMBER 27, 2026"). Sacred Heart's own
-    schedule (Sat 5:30 pm, Sun 10 am, Wed and Fri 8:30 am), then the weekend times of St. Cecilia's,
-    Warrensburg and Our Lady of the Annunciation, Queensbury, which share the pastor (Rev. Joseph G. Busch).
+  note: Masthead, page 1 of the 27 September 2026 issue ("SEPTEMBER 27, 2026"). Sacred Heart's own schedule
+    (Sat 5:30 pm, Sun 10 am, Wed and Fri 8:30 am), then the weekend times of St. Cecilia's, Warrensburg
+    and Our Lady of the Annunciation, Queensbury, which share the pastor (Rev. Joseph G. Busch).
 - url: https://container.parishesonline.com/bulletins/03/1267/20260927B.pdf
   seen: 2026-09-28
   quote: 50 Mohican Street,
@@ -24,6 +24,7 @@ evidence:
   seen: 2026-09-28
   note: The parish's "Weekly Bulletin" page embeds widget.parishesonline.com/publications?id=93142913e5961bd2ff61281c05937c6f191ed159,
     which answered HTTP 502 on 2026-09-28, so the org was found by slug instead.
+promoted: 2026-09-28
 ---
 
 ## Publisher

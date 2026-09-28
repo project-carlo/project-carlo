@@ -22,6 +22,7 @@ evidence:
 - url: https://www.ourladyofhopecopakefalls.org
   seen: 2026-09-28
   note: Parish site (eCatholic, ecatholic:20219, behind Cloudflare; read with visit.py). Embeds po-org:our-lady-of-hope-12517.
+promoted: 2026-09-28
 ---
 
 ## Publisher

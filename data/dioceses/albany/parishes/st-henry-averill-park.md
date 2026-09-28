@@ -18,6 +18,7 @@ evidence:
   seen: 2026-09-28
   note: '`probe po`: "Catholic Community of St. Henry", 39 Old Route 66, Averill Park, LPi id 0018000000Qbz8zAAB,
     container 04/0926, weekly issues through 2026-09-27.'
+promoted: 2026-09-28
 ---
 
 ## Publisher

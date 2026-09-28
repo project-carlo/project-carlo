@@ -27,6 +27,7 @@ evidence:
   quote: 8:30 AM | St. Michael the Archangel
   note: Page 1 of the 27 September 2026 issue (Sunday); also Saturday 4:00 PM and Monday-Tuesday 12:10
     PM at St. Michael.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

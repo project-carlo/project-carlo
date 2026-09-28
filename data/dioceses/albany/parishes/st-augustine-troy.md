@@ -16,6 +16,7 @@ evidence:
   note: eCatholic site behind Cloudflare, read with visit.py (5 loads). Its archive lists issues from
     2024, newest "September 13, 2026" (files.ecatholic.com/37601/bulletins/20260913.pdf); 20 and 27 September
     not posted (issues.py 403).
+promoted: 2026-09-28
 ---
 
 ## Publisher

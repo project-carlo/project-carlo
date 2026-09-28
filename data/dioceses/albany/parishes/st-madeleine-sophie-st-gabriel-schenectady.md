@@ -20,6 +20,7 @@ evidence:
   seen: 2026-09-28
   note: The parishes' shared site (title 'St. Madeleine Sophie & St. Gabriel the Archangel') embeds discovermass:st-madeleine-sophie-schenectady-ny
     and links the weekly bulletin PDF (wp-content/uploads/2026/09/26th-Sunday-in-OT.pdf) (probe url, 2026-09-28).
+promoted: 2026-09-28
 ---
 
 ## Publisher

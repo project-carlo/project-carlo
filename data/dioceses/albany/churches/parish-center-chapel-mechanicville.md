@@ -11,23 +11,23 @@ longitude: null
 coordinates_from: ''
 name_verified: false
 address_verified: true
-roster:
-- directory:768
+roster: ['directory:768']
 evidence:
 - url: https://www.rcda.org/parishes/parish/all-saints-hudson-parish-mechanicville-site
   seen: 2026-09-28
   note: Listed in Diocese of Albany Find A Parish list as 'All Saints on the Hudson Parish, Mechanicville
     Site', 52 William St., Mechanicville, NY, 12118
 - url: https://files.ecatholic.com/20630/bulletins/20260927.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: 'Thursday: 9:00 AM, Parish Center Chapel, Mechanicville'
   note: 27 September 2026 issue, page 1 weekday Mass list. The same page puts the parish office at "52
     William Street, Mechanicville, NY 12118".
 - url: https://allsaintsny.us/mass-times
-  seen: *id001
+  seen: 2026-09-28
   quote: Parish Center Chapel 52 William St, Mechanicville
   note: 'Mass-times page: "Thursday Morning, 9:00am"; "THE PARISH CENTER CHAPEL IS OPEN MONDAY to THURSDAY
     9:00am - 3:00pm for private prayer". Behind Cloudflare; read with visit.py.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

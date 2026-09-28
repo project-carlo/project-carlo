@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-28
   quote: '5:30 PM:  St. Mary’s-St. Paul’s (4:30 PM  Adoration)'
   note: St. Mary's, Glens Falls 27 September 2026 bulletin, page 3 "Local Daily Mass Schedule" (Wednesday).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

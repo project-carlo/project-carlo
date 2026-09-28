@@ -26,6 +26,7 @@ evidence:
   note: The Cairo/East Durham site the diocese directory links for both (directory:289, 673). Its "Bulletin
     Information" page carries Fr. Russ's weekly reflection (the same text as page 3 of the Greenville
     bulletin) but no bulletin file.
+promoted: 2026-09-28
 ---
 
 ## Publisher

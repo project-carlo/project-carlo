@@ -27,6 +27,7 @@ evidence:
   quote: 'Church: … 73 Main Street … Hoosick Falls, NY 12090'
   note: Page 1 of the 27 September 2026 issue; Mass Saturday 4:00 pm, Sunday 10:00 am, Monday 9:00 am
     (Chapel).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

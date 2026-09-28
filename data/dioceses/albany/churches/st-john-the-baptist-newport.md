@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: St. John the Baptist Mass Sunday ~ 8:00 AM
   note: 4 October 2026 issue, page 2; the network's rectory is at 7516 Main St, Newport (page 1).
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

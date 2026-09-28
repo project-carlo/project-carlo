@@ -30,6 +30,7 @@ evidence:
 - url: http://parishes.rcda.org/stjosephstfrancis/bulletins/2026/September_20.pdf
   seen: 2026-09-28
   quote: 501 BRIDGE ST
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

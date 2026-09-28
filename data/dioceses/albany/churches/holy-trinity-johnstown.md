@@ -32,6 +32,7 @@ evidence:
   seen: 2026-09-28
   note: 'OSM (via Nominatim, 2026-09-28): ''Holy Trinity Catholic Church'', 207 Glebe Street, Johnstown;
     the GCatholic Plus Code point falls on it.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

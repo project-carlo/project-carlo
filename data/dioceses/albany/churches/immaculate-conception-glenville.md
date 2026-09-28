@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-28
   quote: Immaculate Conception 400 Saratoga Rd, Glenville, NY 12302
   note: Masthead, page 1.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

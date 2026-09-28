@@ -26,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: Sun. Oct 4, 9:00 am (SC)
   note: '27 September 2026 issue, page 2: Sun 9 am, Wed and Fri 8 am at (SC).'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: Vigil Mass 5:30 pm
   note: Page 2 of the 20 September 2026 issue ("Parish Happenings"); also "Mass followed by the Divine
     Mercy Chaplet - 10:00 am" on Sunday.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

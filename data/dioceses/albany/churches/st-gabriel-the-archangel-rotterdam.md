@@ -32,6 +32,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: St. Gabriel the Archangel Catholic Church [with St. Madeleine Sophie Church] 3040 Hamburg Street
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

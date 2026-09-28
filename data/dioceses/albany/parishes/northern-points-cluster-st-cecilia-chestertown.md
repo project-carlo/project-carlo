@@ -3,17 +3,18 @@ name: Northern Points Cluster and St. Cecilia's
 website: https://www.blessedsacramentbolton.org
 bulletin_provider: other
 provider_id: ''
-publication: ['url:https://www.blessedsacramentbolton.org/2026-bulletins.html', 'url:http://northernpointscluster.weebly.com/2026-bulletins.html', 'url:https://www.stceciliaschurch.org/2026.html']
+publication: ['url:https://www.blessedsacramentbolton.org/2026-bulletins.html', 'url:http://northernpointscluster.weebly.com/2026-bulletins.html',
+  'url:https://www.stceciliaschurch.org/2026.html']
 group: Northern Points Cluster
 evidence:
 - url: https://www.blessedsacramentbolton.org/uploads/3/8/1/3/38133239/09-27-26_26th_sun_ord_tm_cyc_a.pdf
   seen: 2026-09-28
   quote: The Catholic Community
-  note: 'Page 1 of the 27 September 2026 issue. The left column is "The Catholic Community of Saint Cecilia,
+  note: Page 1 of the 27 September 2026 issue. The left column is "The Catholic Community of Saint Cecilia,
     3802 Main St., Warrensburg" (Sunday Mass 10:00 am, Pastor Rev. Joseph G. Busch); the right column
     is Blessed Sacrament, 7 Goodman Ave., Bolton Landing and St. Isaac Jogues, Chestertown, with one Mass
-    schedule for the two (Pastor Rev. John O''Kane). Same pastoral associate (Barbara Carlozzi) for all
-    three.'
+    schedule for the two (Pastor Rev. John O'Kane). Same pastoral associate (Barbara Carlozzi) for all
+    three.
 - url: https://www.blessedsacramentbolton.org/uploads/3/8/1/3/38133239/09-27-26_26th_sun_ord_tm_cyc_a.pdf
   seen: 2026-09-28
   quote: 5:30 pm, Saturday, St. Isaac Jogues
@@ -37,6 +38,7 @@ evidence:
   seen: 2026-09-28
   quote: Now, the cluster includes Blessed Sacrament in Bolton Landing and St. Isaac Jogues in Chestertown-Hague.
   note: The Evangelist, 26 December 2024, on the closing of St. James, North Creek.
+promoted: 2026-09-28
 ---
 
 ## Publisher

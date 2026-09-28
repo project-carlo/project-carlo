@@ -27,6 +27,7 @@ evidence:
   quote: the Sunday 9:30 AM Mass at St. Clare's
   note: Page 2 of the 27 September 2026 shared bulletin; the same page lists SAINT CLARE Masses for Wednesday
     30 September 9 am and Saturday 4 pm / Sunday 9:30 am on 3-4 October.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

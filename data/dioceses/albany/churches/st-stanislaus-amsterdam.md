@@ -27,6 +27,7 @@ evidence:
   quote: SATURDAY, September 26, 4:00 p.m.– St. Stanislaus
   note: '27 September 2026 issue, page 5 intentions; page 1 masthead: Saturday Vigil 4:00 p.m., Sunday
     9:00 a.m.'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

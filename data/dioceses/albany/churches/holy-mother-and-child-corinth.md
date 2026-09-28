@@ -11,9 +11,7 @@ longitude: -73.8209375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18179
-- directory:335
+roster: ['gcatholic:18179', 'directory:335']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18179
   seen: 2026-09-28
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: '405 Palmer Ave Corinth, NY 12822 Mass times: 8:30 am Sunday Noon Wednesdays'
   note: 27 September 2026 issue, page 1; the intentions list "Holy Mother & Child Sun. 9/27 at 8:30 am".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

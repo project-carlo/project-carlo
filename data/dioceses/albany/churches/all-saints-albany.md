@@ -27,6 +27,7 @@ evidence:
   quote: 7:30am, 9:30am & 7pm Sunday Mass
   note: 27 September 2026 issue, page 1, below "ALL SAINTS CATHOLIC CHURCH 16 Homestead Street Albany,
     New York 12203" and "4pm Saturday Vigil".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   seen: 2026-09-28
   note: The parishes' page (title 'St. Joseph's Church, Broadalbin & St Francis of Assisi Church, Northville')
     lists weekly PDFs bulletins/2026/<Month>_<DD>.pdf; newest September_20 on 2026-09-28.
+promoted: 2026-09-28
 ---
 
 ## Publisher

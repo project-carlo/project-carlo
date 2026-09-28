@@ -26,6 +26,7 @@ evidence:
   note: eCatholic site, behind Cloudflare; read in a browser (parish-site-access visit.py) on 2026-09-28.
     Embeds ecatholic:15529; its archive listed issues only through 13 September 2026 (files.ecatholic.com/15529/bulletins/20260920.pdf
     and 20260927.pdf answered 403), while Discover Mass had 27 September.
+promoted: 2026-09-28
 ---
 
 ## Publisher

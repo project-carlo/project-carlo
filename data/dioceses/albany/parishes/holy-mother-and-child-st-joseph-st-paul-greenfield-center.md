@@ -3,37 +3,34 @@ name: Holy Mother and Child, St. Joseph's and St. Paul's
 website: http://www.stjosephschurchgreenfieldcenter.org
 bulletin_provider: parishes_online
 provider_id: st-joseph-church-12833
-publication:
-- po-org:st-joseph-church-12833
-- lpi:0018000000Qc1XNAAZ
-- po-container:03/0331
-- url:https://parishes.rcda.org/HolyMotherandChildParish/Bulletin.php
+publication: ['po-org:st-joseph-church-12833', 'lpi:0018000000Qc1XNAAZ', 'po-container:03/0331', 'url:https://parishes.rcda.org/HolyMotherandChildParish/Bulletin.php']
 group: Holy Mother and Child / St. Joseph / St. Paul
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0331/20260927B.pdf
-  seen: &id001 2026-09-28
+  seen: 2026-09-28
   quote: Welcome to the Holy Roman Catholic Community of Holy Mother & Child St. Joseph’s St. Paul’s
   note: 'Masthead, page 1 of the 27 September 2026 issue, which then gives each church''s address and
     Mass times, the two parish offices, and "Parish Administrator: Rev. Simon Udemgba".'
 - url: https://container.parishesonline.com/bulletins/03/0331/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: '405 Palmer Ave Corinth, NY 12822 Mass times: 8:30 am Sunday Noon Wednesdays'
   note: 'Page 1: Holy Mother & Child.'
 - url: https://container.parishesonline.com/bulletins/03/0331/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: '3159 Route 9N Greenfield Center, NY 12833 Mass times: 4:00 pm Saturday 10:30 am Sunday 9:00
     am Wednesdays'
   note: 'Page 1: St. Joseph''s.'
 - url: https://container.parishesonline.com/bulletins/03/0331/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: '771 Route 29 Rock City Falls, NY 12863 Mass times: 12:30 pm Sunday 9:00 am 2nd Mondays'
   note: 'Page 1: St. Paul''s.'
 - url: https://parishes.rcda.org/HolyMotherandChildParish/bulletins/2026/September_20.pdf
-  seen: *id001
+  seen: 2026-09-28
   quote: Welcome to the Holy Roman Catholic Community of Holy Mother & Child St. Joseph’s St. Paul’s
   note: 20 September 2026 issue on Holy Mother and Child's bulletin page (parishes.rcda.org, "Powered
     by Our Sunday Visitor"); page 1 is the same as the ParishesOnline issue of that date (03/0331/20260920B.pdf).
     Newest issue there when read on 2026-09-28 was 20 September; September_27.pdf answered 404.
+promoted: 2026-09-28
 ---
 
 ## Publisher

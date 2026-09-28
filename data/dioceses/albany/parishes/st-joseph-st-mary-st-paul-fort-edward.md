@@ -12,8 +12,8 @@ evidence:
   note: 'The 27 September 2026 issue (5 pages). Pages 1-4 are images with no text layer; page 1, read
     as an image (parish-site-access render.py), is headed "The Parishes of St. Joseph''s and St. Mary''s/St.
     Paul''s" with two boxes: "164 Broadway Fort Edward ... Saturday Mass 4pm ... Daily Mass Friday ...
-    Mass 5:30pm" and "11 Wall St. Hudson Falls ... Sunday Mass 10am ... Daily Mass Wednesday ... Mass at
-    5:30pm", dated "SEPTEMBER 26-27, 2026". The quote is the LPi footer on page 5, the only text layer.'
+    Mass 5:30pm" and "11 Wall St. Hudson Falls ... Sunday Mass 10am ... Daily Mass Wednesday ... Mass
+    at 5:30pm", dated "SEPTEMBER 26-27, 2026". The quote is the LPi footer on page 5, the only text layer.'
 - url: https://parishesonline.com/organization/st-joseph-church-12828
   seen: 2026-09-28
   note: '`probe po st-joseph-church-12828`: ''St. Joseph Church'', 164 Broadway, Fort Edward, LPi 0018000000Qc1XOAAZ,
@@ -22,6 +22,7 @@ evidence:
   seen: 2026-09-28
   note: St. Joseph's site (on the diocese's parish host) posts the same LPi PDFs as bulletins/2026/<Month>_<DD>.pdf
     (newest September_20.pdf on 2026-09-28, whose page 5 footer is also "St. Joseph Church | 03-0420").
+promoted: 2026-09-28
 ---
 
 ## Publisher

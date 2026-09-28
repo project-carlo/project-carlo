@@ -31,6 +31,7 @@ evidence:
   seen: 2026-09-28
   note: OSM way 1300045344 "Immaculate Conception Catholic Church, 67, North Lake Road", Haines Falls
     12436.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

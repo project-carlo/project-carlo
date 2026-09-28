@@ -11,9 +11,7 @@ longitude: -73.9225625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18182
-- directory:672
+roster: ['gcatholic:18182', 'directory:672']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18182
   seen: 2026-09-28
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-09-28
   quote: '771 Route 29 Rock City Falls, NY 12863 Mass times: 12:30 pm Sunday 9:00 am 2nd Mondays'
   note: 27 September 2026 issue, page 1; intentions "St. Paul’s Sun. 9/27 at 12:30 pm".
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

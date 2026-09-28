@@ -31,6 +31,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: St. Joseph's Church 600 State Street, Schenectady, NY 12305
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

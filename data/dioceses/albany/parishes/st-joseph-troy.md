@@ -18,6 +18,7 @@ evidence:
     visit.py --links). One PDF per Sunday on storage.googleapis.com back to 2024; the newest, labelled
     only by its file name 2026_09_14 24th Sun OT WEBSITE.pdf, is the 13 September issue. The previous
     link is "September 6, 2026".
+promoted: 2026-09-28
 ---
 
 ## Publisher

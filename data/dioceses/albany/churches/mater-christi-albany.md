@@ -24,9 +24,10 @@ evidence:
     Albany, NY, 12208
 - url: https://container.parishesonline.com/bulletins/04/0808/20260927B.pdf
   seen: 2026-09-28
-  note: 'Page 1 of the 27 September 2026 issue is an image (rendered with render.py and read):
-    "PARISH OF MATER CHRISTI / ROMAN CATHOLIC CHURCH / 40 HOPEWELL STREET ALBANY, NY 12208 / WEEKEND
-    MASSES / SATURDAY VIGIL MASS - 4:00 PM ... SUNDAY - 8:30 AM ... SUNDAY - 11:00 AM".'
+  note: 'Page 1 of the 27 September 2026 issue is an image (rendered with render.py and read): "PARISH
+    OF MATER CHRISTI / ROMAN CATHOLIC CHURCH / 40 HOPEWELL STREET ALBANY, NY 12208 / WEEKEND MASSES /
+    SATURDAY VIGIL MASS - 4:00 PM ... SUNDAY - 8:30 AM ... SUNDAY - 11:00 AM".'
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

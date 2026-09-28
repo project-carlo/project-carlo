@@ -27,6 +27,7 @@ evidence:
   quote: 4:00 pm Vigil Mass - Anticipated Sunday
   note: Page 1 of the 13 September 2026 issue; Sunday 9:00 am (English), 12:00 pm Carmelite Latin Mass,
     3:00 pm (Spanish); Monday-Saturday 8:00 am.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

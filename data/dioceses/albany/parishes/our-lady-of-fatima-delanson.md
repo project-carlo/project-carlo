@@ -27,6 +27,7 @@ evidence:
   seen: 2026-09-28
   note: The parish's bulletin page lists one PDF per Sunday at bulletins/<year>/<Month>_<DD>.pdf, weekly
     through September_20 on 2026-09-28.
+promoted: 2026-09-28
 ---
 
 ## Publisher

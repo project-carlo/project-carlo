@@ -25,6 +25,7 @@ evidence:
   quote: Parishes Online St. Stephen’s Bulletins
   note: The parish site's bulletin page (read with visit.py) links parishesonline.com/find/st-stephen-church-12086
     and an old Google Drive folder.
+promoted: 2026-09-28
 ---
 
 ## Publisher

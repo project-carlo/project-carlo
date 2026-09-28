@@ -32,6 +32,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=json&q=Sacred+Heart+Church,+Cairo,+New+York
   seen: 2026-09-28
   note: OSM way 1384479002 "Sacred Heart Catholic Church, 39, Church Street", Cairo 12413.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

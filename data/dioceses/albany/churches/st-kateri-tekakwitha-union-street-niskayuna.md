@@ -30,6 +30,7 @@ evidence:
 - url: https://www.schenectadyhistory.org/churches/directory.html
   seen: 2026-09-28
   quote: St. Kateri Tekakwitha Parish [formerly St. Helen's] 1803 Union Street, Schenectady, NY 12309
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
 - url: https://www.annunciationolqa.org/
   seen: 2026-09-28
   quote: 8:30 AM Our Lady Queen of Apostles
+promoted: 2026-09-28
 ---
 
 ## Publisher

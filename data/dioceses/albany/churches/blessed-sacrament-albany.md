@@ -30,8 +30,9 @@ evidence:
 - url: https://www.openstreetmap.org/way/651155540
   seen: 2026-09-28
   quote: addr:housenumber 607 addr:postcode 12206 addr:state NY addr:street Central Avenue amenity place_of_worship
-  note: OpenStreetMap way 651155540, "Church of the Blessed Sacrament" (found by a Nominatim search for Blessed
-    Sacrament, Central Avenue); the school and parish center is way 651155518 at 605 Central Avenue.
+  note: OpenStreetMap way 651155540, "Church of the Blessed Sacrament" (found by a Nominatim search for
+    Blessed Sacrament, Central Avenue); the school and parish center is way 651155518 at 605 Central Avenue.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   seen: 2026-09-28
   note: The parish's eCatholic site, title 'St. Joseph the Worker Catholic Church - Richfield Springs
     & West Winfield, NY' (behind Cloudflare; read with visit.py 2026-09-28), site id 30839.
+promoted: 2026-09-28
 ---
 
 ## Publisher

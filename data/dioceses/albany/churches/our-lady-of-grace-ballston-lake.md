@@ -30,6 +30,7 @@ evidence:
   seen: 2026-09-28
   quote: 73 Midline Rd, Ballston Lake, NY 12019
   note: Page 1 office box for Our Lady of Grace.
+promoted: 2026-09-28
 ---
 
 ## Holds Mass
