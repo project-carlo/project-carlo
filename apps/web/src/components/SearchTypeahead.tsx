@@ -11,6 +11,7 @@ import { useQuery } from "@tanstack/react-query";
 import type FuseType from "fuse.js";
 import { fetchAllChurchesForSearch, type ChurchSearchResult } from "../api";
 import { formatAddress } from "../utils";
+import { wantsCurrentLocation } from "../lib/currentLocationQuery";
 import {
   canSearchPlaces,
   PlaceSearchConfigurationError,
@@ -129,8 +130,10 @@ export function SearchTypeahead({
   }, [fuse, searchMode, trimmedDebouncedQuery]);
 
   const isPlaceMode = searchMode === "place";
-  const showCurrentLocationOption = isPlaceMode;
   const hasTypedQuery = query.trim().length > 0;
+  // Offered on an empty field, and after that only when the query is asking
+  // for it, so it doesn't top every list of place results.
+  const showCurrentLocationOption = isPlaceMode && wantsCurrentLocation(query);
   // Place mode opens immediately so the current-location suggestion is the
   // default; parish mode still waits for enough text to search.
   const showDropdown =
