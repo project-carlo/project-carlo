@@ -125,17 +125,6 @@
     min-height: 100svh;
   }
 
-  /* The map page is a fixed app surface: never let the document itself
-   * scroll, or the floating card slides up under the browser bar and the
-   * body's paper shows through below the map. Don't set overscroll-behavior
-   * here: `none` also turns off the browser's pull-down-to-refresh, and
-   * overflow: hidden already stops the document scrolling. Leaflet's own
-   * touch-action keeps map drags from triggering a refresh. */
-  html:has(main[data-map-page]),
-  html:has(main[data-map-page]) body {
-    overflow: hidden;
-  }
-
   a {
     color: inherit;
     text-decoration: none;
