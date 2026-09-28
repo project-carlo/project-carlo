@@ -13,14 +13,17 @@ evidence:
   quote: 2 Park Ave., Granville, New York 12832
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Albany as ''Sts. Peter and Paul'',
     2 Park Ave., Granville, NY, 12832; kind: Church; rite: Ruthenian'
+
 ---
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+GCatholic lists Sts. Peter and Paul, 2 Park Ave., Granville among the churches in the Diocese
+of Albany's territory but marks it "rite: Ruthenian": it belongs to the Byzantine Catholic
+Eparchy of Passaic, not to the Roman Catholic diocese. As in Syracuse
+(`syracuse/excluded/holy-spirit-byzantine-binghamton.md`), this is a scope decision, not a
+judgement about the church. The diocese's Find A Parish list does not include it.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A project decision to cover Eastern Catholic eparchies.
