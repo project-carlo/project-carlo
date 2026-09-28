@@ -125,8 +125,10 @@ the pages with pdf.js in Chrome and writes PNGs you can look at with the Read to
 
 ```bash
 uv run python .claude/skills/parish-site-access/scripts/render.py \
-    https://container.parishesonline.com/bulletins/03/1424/20260920B.pdf /tmp/ccsssp --pages 1
+    https://container.parishesonline.com/bulletins/03/1424/20260920B.pdf /tmp/ccsssp --pages 1-2
 ```
+
+`--pages` takes numbers and ranges (`1,3-5`); without it every page is drawn.
 
 Cite the PDF's URL as usual, and say in the evidence `note` that the page is an image, so
 the auditor knows `recheck` can't find the quote in its text. Record in the parish's
@@ -167,6 +169,24 @@ one: its Plus Code is on the building.
 - **LPi generic inserts:** a ParishesOnline page that lists only
   `.../generic-publications/pol/<date>GB.pdf` files is LPi's generic insert, not the
   parish's bulletin.
+
+## Other bulletin hosts seen in Albany
+
+- **SiteGround's "Robot Challenge Screen"** (`/.well-known/sgcaptcha/`): `visit.py` waits up
+  to 20 s for it to clear, which it usually does on the first load in headed Chrome (St.
+  John the Baptist, Walton). Plain curl gets only the challenge.
+- **Google Drive file links:** some parishes link one `drive.google.com/file/d/<id>/view`
+  per Sunday instead of a folder (Altamont, Walton). The PDF downloads without a browser from
+  `drive.google.com/uc?export=download&id=<id>`. The pipeline's `google_drive` provider reads
+  folders only, so such rows are `other`.
+- **parishes.rcda.org/<Name>/**: the diocese's hosted parish sites. `bulletin.php` lists
+  `bulletins/<YYYY>/<Month>_<DD>.pdf`. HTTPS resets about one request in three; retry.
+- **eCatholic bulletins uploaded as documents:** Holy Family, Little Falls posts its PDFs
+  under `files.ecatholic.com/<id>/documents/<y>/<m>/` with free-form names, linked from a
+  yearly `/2026-bulletins` page, so `issues.py ecatholic` finds nothing there.
+- **A spam word on a parish page is not a squat:** `probe url` and `visit.py` say
+  SPAM-SQUAT only for two spam terms, three hits, or a page without parish vocabulary. A
+  Schenectady parish's news mentioned "Rivers Casino".
 
 ## Evidence from blocked pages
 

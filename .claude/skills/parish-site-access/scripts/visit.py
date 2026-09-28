@@ -52,8 +52,13 @@ from urllib.parse import urljoin
 
 REPO = Path(__file__).resolve().parents[4]
 CF_TITLE = "just a moment"
+# SiteGround's "Robot Challenge Screen" (/.well-known/sgcaptcha/) clears by itself
+# after 5-10 s in a headed browser, then goes back to the page.
+SG_TITLE = "robot challenge"
+SG_PATH = "/.well-known/sgcaptcha"
 # How long one load waits for a passive challenge to clear before reloading.
 CF_SETTLE_MS = 5000
+SG_SETTLE_MS = 20000
 # Pause before each reload. Challenged loads come in streaks lasting tens of
 # seconds, so back off instead of hammering: 2s, 4s, 8s, then 15s.
 RETRY_PAUSES_MS = (2000, 4000, 8000, 15000)
@@ -75,13 +80,21 @@ def _reexec_under_xvfb() -> None:
 
 def _challenged(page) -> bool:  # type: ignore[no-untyped-def]
     try:
-        return CF_TITLE in (page.title() or "").lower()
+        title = (page.title() or "").lower()
+        return CF_TITLE in title or SG_TITLE in title or SG_PATH in (page.url or "")
     except Exception:  # title() during a navigation
         return True
 
 
+def _settle_ms(page) -> int:  # type: ignore[no-untyped-def]
+    try:
+        return SG_SETTLE_MS if SG_PATH in (page.url or "") else CF_SETTLE_MS
+    except Exception:
+        return CF_SETTLE_MS
+
+
 def goto(page, url: str, retries: int) -> tuple[int | None, int]:  # type: ignore[no-untyped-def]
-    """Load url, reloading while Cloudflare challenges. Returns (status, loads)."""
+    """Load url, reloading while Cloudflare (or SiteGround) challenges. Returns (status, loads)."""
     status = None
     for attempt in range(1, retries + 1):
         status = None  # a challenged attempt's 403 must not describe a later load
@@ -95,7 +108,7 @@ def goto(page, url: str, retries: int) -> tuple[int | None, int]:  # type: ignor
                 raise
             page.wait_for_load_state("domcontentloaded", timeout=30000)
         waited = 0
-        while _challenged(page) and waited < CF_SETTLE_MS:
+        while _challenged(page) and waited < _settle_ms(page):
             page.wait_for_timeout(500)
             waited += 500
         if not _challenged(page):
