@@ -176,9 +176,9 @@ one: its Plus Code is on the building.
   to 20 s for it to clear, which it usually does on the first load in headed Chrome (St.
   John the Baptist, Walton). Plain curl gets only the challenge.
 - **Google Drive file links:** some parishes link one `drive.google.com/file/d/<id>/view`
-  per Sunday instead of a folder (Altamont, Walton). The PDF downloads without a browser from
-  `drive.google.com/uc?export=download&id=<id>`. The pipeline's `google_drive` provider reads
-  folders only, so such rows are `other`.
+  per Sunday instead of a folder (Altamont, Walton). The PDF downloads without a browser
+  from `drive.google.com/uc?export=download&id=<id>`. Record these as `other`: its resolver
+  reads Drive file links, and Concrete CMS `download_file/view/<n>` links, as PDFs.
 - **parishes.rcda.org/<Name>/**: the diocese's hosted parish sites. `bulletin.php` lists
   `bulletins/<YYYY>/<Month>_<DD>.pdf`. HTTPS resets about one request in three; retry.
 - **eCatholic bulletins uploaded as documents:** Holy Family, Little Falls posts its PDFs

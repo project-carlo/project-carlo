@@ -70,6 +70,8 @@ def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
         ("/wp-content/uploads/2025/12/January-4.pdf", date(2026, 1, 4)),
         # Weebly's numeric folder is no year: "3239/02-12" is not a date.
         ("/uploads/3/8/1/3/38133239/02-12-2017_6th_sun.pdf", date(2017, 2, 12)),
+        # A ParishesOnline container number is no month and day.
+        ("/bulletins/03/0408/20260927B.pdf", date(2026, 9, 27)),
         # Ids and timestamps are not dates.
         ("/bulletins/1790326230.pdf", None),
         ("/_files/ugd/cea846_00334ad9684947469dd533a9f70fcc50.pdf", None),

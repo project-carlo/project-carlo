@@ -1013,7 +1013,7 @@ def _parse_relaxed_date(
         if parsed is not None:
             return parsed
 
-    for match in re.finditer(r"(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})", normalized):
+    for match in re.finditer(r"(?<!\d)(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)", normalized):
         parsed = yearless(int(match.group("a")), int(match.group("b")))
         if parsed is not None:
             return parsed
