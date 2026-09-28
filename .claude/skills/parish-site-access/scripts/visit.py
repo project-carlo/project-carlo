@@ -43,6 +43,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import random
 import re
 import shutil
 import sys
@@ -63,9 +64,12 @@ def _reexec_under_xvfb() -> None:
     headless = os.getenv("PLAYWRIGHT_HEADLESS", "").lower() in {"1", "true", "yes", "on"}
     if os.getenv("DISPLAY") or headless or not shutil.which("xvfb-run"):
         return
+    # xvfb-run -a probes upward from display 99, so runs started together (parallel agents)
+    # race for the same display. Start each run's search at a random number instead.
     os.execvp(
         "xvfb-run",
-        ["xvfb-run", "-a", "-s", "-screen 0 1366x900x24", sys.executable, *sys.argv],
+        ["xvfb-run", "-a", "-n", str(random.randint(100, 60000)), "-s", "-screen 0 1366x900x24",
+         sys.executable, *sys.argv],
     )
 
 
