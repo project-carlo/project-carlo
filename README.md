@@ -210,6 +210,34 @@ back to the PDF as downloaded when that fails or saves nothing. The key's
 hash is of the PDF as downloaded. Without `gs` installed, long bulletins are
 only truncated.
 
+Bulletins stored before that compaction shipped (`fda42b0`, 2026-09-25
+20:59:33 UTC) are still the original download. `pnpm bulletins:compact` finds
+them from R2's last-modified time, compacts each with the same function
+`fetch` uses, and prints what an in-place rewrite would save. It does not
+upload. Labels stay valid: they are keyed by the download hash, which is the
+object key, and a labeled PDF is skipped if compaction would drop a page the
+label cites. Run it while the weekly job is not running.
+
+```bash
+pnpm bulletins:compact                 # dry run; read-only R2 keys; needs gs
+pnpm bulletins:compact -- --cutoff 2026-09-26T00:00:00Z
+```
+
+To rewrite the objects, use the write token and `CARLO_REMOTE_WRITE=1`. The
+command saves each original under `data/bulletin-precompact/` (gitignored),
+overwrites the same key, reads it back, and restores the original if the
+read does not match. It also replaces the local cache file on this machine.
+Other machines keep a cached original until that file is deleted; that copy
+still matches the label.
+
+```bash
+export R2_ACCESS_KEY_ID=... R2_SECRET_ACCESS_KEY=...   # the write token
+export CARLO_REMOTE_WRITE=1
+pnpm bulletins:compact -- --apply
+# after spot-checking labeled bulletins in the labeler:
+pnpm bulletins:compact -- --restore     # put the backups back, if needed
+```
+
 Locally, `data/` doubles as a cache of the bucket: a PDF or cached extraction
 is downloaded the first time a command needs it and kept. With no R2
 credentials the pipeline runs purely on local files.

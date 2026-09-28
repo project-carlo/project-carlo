@@ -26,6 +26,7 @@ import os
 import threading
 from collections.abc import Iterator
 from dataclasses import dataclass
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Protocol
 
@@ -51,13 +52,26 @@ class BlobStore(Protocol):
 
     def list(self, prefix: str) -> Iterator[str]: ...
 
+    def list_stats(self, prefix: str) -> Iterator[BlobInfo]: ...
+
+
+@dataclass(frozen=True)
+class BlobInfo:
+    """One listed object. `last_modified` is timezone-aware UTC."""
+
+    key: str
+    size: int
+    last_modified: datetime
+
 
 # ── Keys ────────────────────────────────────────────────────────────────────
 def bulletin_pdf_key(parish_slug: str, content_hash: str) -> str:
-    """Where a fetched bulletin lives. Never overwritten.
+    """Where a fetched bulletin lives.
 
     `content_hash` is the SHA-256 of the PDF as downloaded; the stored bytes
-    are a compacted copy of it (see `pdf_compact`).
+    are a compacted copy of it (see `pdf_compact`). Fetch does not rewrite an
+    existing key. `bulletins compact --apply` does, once, for objects stored
+    before compaction existed, and it keeps this same key.
     """
     return f"bulletins/{parish_slug}/{content_hash}.pdf"
 
@@ -107,6 +121,16 @@ class LocalBlobStore:
             key = path.relative_to(base).as_posix()
             if key.startswith(prefix):
                 yield key
+
+    def list_stats(self, prefix: str) -> Iterator[BlobInfo]:
+        for key in self.list(prefix):
+            path = self.path(key)
+            stat = path.stat()
+            yield BlobInfo(
+                key=key,
+                size=stat.st_size,
+                last_modified=datetime.fromtimestamp(stat.st_mtime, UTC),
+            )
 
 
 # ── S3-compatible (Cloudflare R2) ───────────────────────────────────────────
@@ -163,14 +187,25 @@ class S3BlobStore:
                     f"{first.get('Key')}: {first.get('Code')} {first.get('Message')}"
                 )
 
-    def list(self, prefix: str) -> Iterator[str]:
+    def list_stats(self, prefix: str) -> Iterator[BlobInfo]:
         paginator = self.client.get_paginator("list_objects_v2")
         try:
             for page in paginator.paginate(Bucket=self.bucket, Prefix=prefix):
                 for item in page.get("Contents", []):
-                    yield item["Key"]
+                    modified = item["LastModified"]
+                    if modified.tzinfo is None:
+                        modified = modified.replace(tzinfo=UTC)
+                    yield BlobInfo(
+                        key=item["Key"],
+                        size=int(item["Size"]),
+                        last_modified=modified.astimezone(UTC),
+                    )
         except Exception as exc:
             raise BlobStoreError(f"Listing {prefix} in bucket {self.bucket} failed: {exc}") from exc
+
+    def list(self, prefix: str) -> Iterator[str]:
+        for info in self.list_stats(prefix):
+            yield info.key
 
 
 # ── Local cache in front of an optional remote ──────────────────────────────
@@ -178,7 +213,9 @@ class CachedBlobStore:
     """Local directory first, then the remote; writes go local and, if enabled, remote.
 
     Blobs are immutable once written (keys are content hashes or run ids), so
-    a local hit never needs revalidating against the remote.
+    a local hit never needs revalidating against the remote. The exception is
+    `bulletins compact --apply`, which rewrites a pre-compaction PDF in place
+    and replaces the local copy in that same step.
     """
 
     def __init__(
@@ -254,6 +291,16 @@ class CachedBlobStore:
         if self.remote is not None:
             return self.remote.list(prefix)
         return self.local.list(prefix)
+
+    def list_stats(self, prefix: str) -> Iterator[BlobInfo]:
+        """Metadata from the remote when there is one, otherwise from local files.
+
+        Bulletin compaction decides from R2's LastModified, not from a laptop
+        cache whose mtime is whenever the file was downloaded.
+        """
+        if self.remote is not None:
+            return self.remote.list_stats(prefix)
+        return self.local.list_stats(prefix)
 
 
 # ── Configuration ───────────────────────────────────────────────────────────

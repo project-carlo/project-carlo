@@ -26,7 +26,19 @@ from pdf_extract.apply import (
     apply_geocode_results,
     apply_verify_results,
 )
-from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
+from pdf_extract.blobstore import (
+    CachedBlobStore,
+    LocalBlobStore,
+    get_store,
+    remote_from_env,
+    set_store,
+)
+from pdf_extract.bulletin_compact import (
+    BACKUP_DIR,
+    COMPACTION_CUTOFF,
+    compact_bulletins,
+    parse_cutoff,
+)
 from pdf_extract.classifiers import available_classifiers
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
@@ -243,6 +255,17 @@ def _cmd_data_status(args: argparse.Namespace) -> Result:
 def _cmd_data_prune(args: argparse.Namespace) -> Result:
     return data_prune(
         keep_recent=args.keep_recent, keep_monthly=args.keep_monthly, apply=args.apply,
+    )
+
+
+def _cmd_bulletins_compact(args: argparse.Namespace) -> Result:
+    return compact_bulletins(
+        get_store(),
+        apply=args.apply,
+        restore=args.restore,
+        backup_dir=Path(args.backup_dir),
+        labels_dir=Path(args.labels_dir),
+        cutoff=parse_cutoff(args.cutoff),
     )
 
 
@@ -536,6 +559,50 @@ def _build_parser() -> argparse.ArgumentParser:
     data_prune_parser.set_defaults(handler=_cmd_data_prune)
     _add_common_args(data_prune_parser)
 
+    # -- bulletins (one-off maintenance of stored PDFs) --
+    bulletins_parser = subparsers.add_parser("bulletins", help="Maintain stored bulletin PDFs")
+    bulletins_parser.set_defaults(help_parser=bulletins_parser)
+    bulletins_subparsers = bulletins_parser.add_subparsers(dest="bulletins_command")
+
+    compact_parser = bulletins_subparsers.add_parser(
+        "compact",
+        help="Compact bulletin PDFs stored before compaction existed",
+        description=(
+            "Find bulletin PDFs last written before fetch started compacting them "
+            f"({COMPACTION_CUTOFF.isoformat()}, commit fda42b0) and report what "
+            "rewriting each object in place would save. The default is a dry run. "
+            "--apply overwrites those same keys after saving the originals under "
+            "the backup directory. Labels, database rows and extraction caches keep "
+            "the downloaded-bytes hash, which is the object key."
+        ),
+    )
+    compact_mode = compact_parser.add_mutually_exclusive_group()
+    compact_mode.add_argument(
+        "--apply", action="store_true",
+        help="Replace the objects in R2. Requires the write token and CARLO_REMOTE_WRITE=1.",
+    )
+    compact_mode.add_argument(
+        "--restore", action="store_true",
+        help="Put the backup PDFs back at the same keys. Requires write access.",
+    )
+    compact_parser.add_argument(
+        "--backup-dir", default=str(BACKUP_DIR),
+        help=f"Where --apply saves the originals (default: {BACKUP_DIR})",
+    )
+    compact_parser.add_argument(
+        "--labels-dir", default=str(LABELS_DIR),
+        help=f"Label files to check before dropping pages (default: {LABELS_DIR})",
+    )
+    compact_parser.add_argument(
+        "--cutoff", default=COMPACTION_CUTOFF.isoformat(),
+        help=(
+            "Skip objects last written at or after this ISO timestamp "
+            f"(default: {COMPACTION_CUTOFF.isoformat()})"
+        ),
+    )
+    compact_parser.set_defaults(handler=_cmd_bulletins_compact, fail_on_errors=True)
+    _add_common_args(compact_parser)
+
     # -- diocese (exploring new dioceses; quiet by default, the JSON is the output) --
     add_diocese_parser(
         subparsers, lambda p: _add_common_args(p, default_level="WARNING"),
@@ -628,6 +695,8 @@ def main(argv: list[str] | None = None) -> int:
     LOGGER.info("Command completed: %s", result)
     print(json.dumps(result, indent=2))
     if getattr(args, "fail_on_verification_error", False) and not result.get("passed", False):
+        return 1
+    if getattr(args, "fail_on_errors", False) and result.get("failed"):
         return 1
     if getattr(args, "exit_code_from_status", False):
         # Distinct from 1 (a crash) and 2 (what argparse and uv use for usage

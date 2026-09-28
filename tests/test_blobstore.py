@@ -78,6 +78,31 @@ def test_local_store_put_overwrites_and_leaves_no_temp_files(tmp_path: Path) -> 
     assert [p.name for p in tmp_path.iterdir()] == ["k.bin"]
 
 
+def test_local_store_list_stats_reports_size_and_utc_mtime(tmp_path: Path) -> None:
+    store = LocalBlobStore(tmp_path)
+    store.put("bulletins/p/a.pdf", b"abc")
+    (tmp_path / "bulletins" / "p" / ".hidden").write_bytes(b"nope")
+
+    [info] = list(store.list_stats("bulletins/"))
+
+    assert info.key == "bulletins/p/a.pdf"
+    assert info.size == 3
+    assert info.last_modified.tzinfo is not None
+
+
+def test_cached_store_list_stats_reads_the_remote_when_there_is_one(tmp_path: Path) -> None:
+    local = LocalBlobStore(tmp_path / "local")
+    remote = LocalBlobStore(tmp_path / "remote")
+    local.put("bulletins/p/local.pdf", b"local")
+    remote.put("bulletins/p/remote.pdf", b"remote-bytes")
+    store = CachedBlobStore(local, remote)
+
+    [info] = list(store.list_stats("bulletins/"))
+
+    assert info.key == "bulletins/p/remote.pdf"
+    assert info.size == len(b"remote-bytes")
+
+
 def test_local_store_list_filters_by_prefix_and_skips_hidden_files(tmp_path: Path) -> None:
     store = LocalBlobStore(tmp_path)
     store.put("bulletins/p1/a.pdf", b"a")
@@ -256,6 +281,17 @@ def test_s3_store_errors_other_than_missing_raise_blobstore_error(s3_client: Any
         store.get("k")
     with pytest.raises(BlobStoreError):
         list(store.list(""))
+
+
+def test_s3_store_list_stats_includes_size_and_last_modified(s3_client: Any) -> None:
+    store = S3BlobStore(bucket=BUCKET, client=s3_client)
+    store.put("bulletins/p/a.pdf", b"hello")
+
+    [info] = list(store.list_stats("bulletins/"))
+
+    assert info.key == "bulletins/p/a.pdf"
+    assert info.size == 5
+    assert info.last_modified.tzinfo is not None
 
 
 def test_s3_store_list_follows_pagination(s3_client: Any) -> None:
