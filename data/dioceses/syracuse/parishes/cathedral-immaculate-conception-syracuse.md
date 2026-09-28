@@ -19,6 +19,7 @@ evidence:
   seen: 2026-09-25
   note: '`pnpm diocese probe po cathedral-of-the-immaculate-conception-13202`: organization id 0018000000Qbz9eAAB,
     twelve weekly issues in container 06/0091, the newest dated 2026-09-27.'
+promoted: 2026-09-26
 ---
 
 ## Publisher

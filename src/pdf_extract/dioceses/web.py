@@ -37,7 +37,8 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 TIMEOUT = 30
-# LPi family bulletins run past 180 MB; a truncated PDF does not parse at all.
+# Scanned bulletins run past 30 MB (Spirit of Hope, Oneida: 31 MB in 2026),
+# and LPi family bulletins past 180 MB. A truncated PDF does not parse at all.
 MAX_BYTES = 250_000_000
 
 PO_CONTAINER_BASE = "https://container.parishesonline.com/bulletins"
@@ -51,6 +52,7 @@ class Response:
     content_type: str = ""
     body: bytes = b""
     error: str = ""
+    truncated: bool = False  # the body stopped at max_bytes
 
     @property
     def ok(self) -> bool:
@@ -67,18 +69,26 @@ def fetch(url: str, *, method: str = "GET", timeout: int = TIMEOUT,
         "User-Agent": USER_AGENT, "Accept": "text/html,application/pdf,*/*",
         "Accept-Encoding": "gzip",
     })
-    try:
-        with urlopen(req, timeout=timeout) as resp:
-            body = resp.read(max_bytes) if method != "HEAD" else b""
-            if resp.headers.get("Content-Encoding") == "gzip" and body:
-                body = gzip.decompress(body)
-            return Response(url, resp.status, resp.geturl(),
-                            resp.headers.get("Content-Type", ""), body)
-    except HTTPError as e:
-        return Response(url, e.code, e.geturl() or url, error=f"HTTP {e.code}")
-    except (URLError, OSError, ValueError) as e:
-        reason = getattr(e, "reason", e)
-        return Response(url, error=f"{type(reason).__name__}: {reason}")
+    for attempt in (1, 2):
+        try:
+            with urlopen(req, timeout=timeout) as resp:
+                body = resp.read(max_bytes + 1) if method != "HEAD" else b""
+                truncated = len(body) > max_bytes
+                body = body[:max_bytes]
+                if resp.headers.get("Content-Encoding") == "gzip" and body and not truncated:
+                    body = gzip.decompress(body)
+                return Response(url, resp.status, resp.geturl(),
+                                resp.headers.get("Content-Type", ""), body, truncated=truncated)
+        except HTTPError as e:
+            return Response(url, e.code, e.geturl() or url, error=f"HTTP {e.code}")
+        except (URLError, OSError, ValueError) as e:
+            reason = getattr(e, "reason", e)
+            # A reset or dropped connection mid-transfer is usually transient
+            # (Discover Mass downloads do it); try once more before reporting.
+            if attempt == 1 and isinstance(reason, (ConnectionError, TimeoutError)):
+                continue
+            return Response(url, error=f"{type(reason).__name__}: {reason}")
+    raise AssertionError("unreachable")
 
 
 # ── Text ────────────────────────────────────────────────────────────────────
@@ -97,7 +107,10 @@ def pdf_pages(data: bytes) -> list[str]:
     pages = []
     for page in reader.pages:
         try:
-            pages.append((page.extract_text() or "").strip())
+            text = page.extract_text() or ""
+            # Some LPi PDFs separate words with control characters (\x03):
+            # show them as spaces so a quote copied from here is what recheck finds.
+            pages.append(re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", " ", text).strip())
         except Exception:  # noqa: BLE001 - one bad page should not lose the rest
             pages.append("")
     return pages
@@ -128,10 +141,12 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
         return {"url": url, "error": resp.error or f"HTTP {resp.status}"}
     if not _is_pdf(resp):
         return {"url": url, "error": f"not a PDF ({resp.content_type or 'unknown type'})"}
+    if resp.truncated:
+        return {"url": url, "error": f"larger than {MAX_BYTES // 1_000_000} MB: not read"}
     try:
         texts = pdf_pages(resp.body)
-    except Exception as e:  # noqa: BLE001 - a broken issue should not stop a container walk
-        return {"url": url, "error": f"could not read the PDF: {e}"}
+    except Exception as exc:  # noqa: BLE001 - a broken issue should not stop a container walk
+        return {"url": url, "error": f"could not read the PDF: {exc}"}
     readable = [(n, t) for n, t in enumerate(texts, 1) if t]
     out: dict[str, Any] = {
         "url": url, "page_count": len(texts), "readable_pages": len(readable),
@@ -140,6 +155,12 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
     if not readable:
         out["note"] = ("no extractable text: the issue is scanned images. Try an older issue "
                        "from the same source, which is often text and has the same masthead.")
+    elif len(readable) < len(texts):
+        # A masthead or Mass schedule on an image-only page is silently absent
+        # from `pages` and `grep`; say which pages those are.
+        out["pages_without_text"] = [n for n, t in enumerate(texts, 1) if not t]
+        out["note"] = ("some pages are images with no text layer (pages_without_text): "
+                       "a masthead or schedule there is invisible to pages and grep")
     terms = [t for t in grep if t]
     if terms:
         out["grep"] = {}
@@ -208,6 +229,17 @@ SPAM_TERMS = [
     "payday", "forex", "judi", "togel", "gacor", "maxwin", "slot online", "situs slot",
     "slot gacor", "slot terpercaya", "pragmatic play",
 ]
+# Whole words only: Wix pages carry config keys like
+# "DisplayCheckoutErrorModalsForExpressButtons", which contain "forex".
+_SPAM_RE = re.compile(r"\b(?:" + "|".join(re.escape(t) for t in SPAM_TERMS) + r")\b")
+
+
+def spam_terms(text: str) -> list[str]:
+    """The SPAM_TERMS found in text as whole words (case-insensitive)."""
+    found = set(_SPAM_RE.findall(text.lower()))
+    return [t for t in SPAM_TERMS if t in found]
+
+
 PARISH_WORDS = [
     "parish", "church", "catholic", "mass", "bulletin", "diocese", "gospel", "liturgy",
     "sacrament", "worship", "rosary",
@@ -224,11 +256,6 @@ VERDICT_NOTES = {
     "NO-PARISH-WORDS": "no parish vocabulary in the HTML: usually a JavaScript-rendered site",
     "ok": "",
 }
-
-
-def spam_terms(page: str) -> list[str]:
-    low = page.lower()
-    return [t for t in SPAM_TERMS if re.search(rf"\b{re.escape(t)}\b", low)]
 
 
 def _host(url: str) -> str:
@@ -275,7 +302,7 @@ def probe_url(url: str) -> dict[str, Any]:
     title = re.search(r"<title[^>]*>(.*?)</title>", page, flags=re.S | re.I)
     if title:
         out["title"] = " ".join(html.unescape(title.group(1)).split())[:160]
-    spam = spam_terms(low)
+    spam = spam_terms(page)
     words = [w for w in PARISH_WORDS if w in low]
     out["publications"] = find_publications(page)
     out["bulletin_links"] = bulletin_links(page, resp.final_url or url)
@@ -328,7 +355,9 @@ def probe_container(container: str, *, weeks: int = 12, start: dt.date | None = 
     container = container.strip().strip("/")
     if not re.fullmatch(r"\d+/\d+", container):
         raise ValueError(f"a container looks like 14/0434, got {container!r}")
-    sunday = _last_sunday(start or dt.date.today())
+    # Without a start, begin at the coming Sunday: its issue is usually up by
+    # mid-week, and starting at the last one missed it on a Saturday.
+    sunday = _last_sunday(start or dt.date.today() + dt.timedelta(days=6))
     issues, found = [], []
     for i in range(0, weeks, max(1, step)):
         day = sunday - dt.timedelta(weeks=i)
@@ -418,7 +447,10 @@ _QUOTE_CHARS = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "�
 
 def _squash(text: str) -> str:
     text = unicodedata.normalize("NFKC", text).translate(_QUOTE_CHARS).lower()
-    return " ".join(re.sub(r"[^\w'\"&@:/.,-]+", " ", text).split())
+    text = " ".join(re.sub(r"[^\w'\"&@:/.,-]+", " ", text).split())
+    # PDF extraction spaces punctuation unpredictably ("Fr.Zach (CTK)" in one
+    # tool, "Fr. Zach ( CTK )" in another), so spacing around it doesn't count.
+    return re.sub(r" ?([&@:/.,-]) ?", r"\1", text)
 
 
 def quote_found(quote: str, text: str) -> bool:
@@ -434,6 +466,26 @@ def quote_found(quote: str, text: str) -> bool:
             return False
         pos = at + len(part)
     return True
+
+
+# A Discover Mass church page lists its recent issues behind download links
+# whose token changes on every load, so evidence cites the church page and
+# quotes an issue; recheck reads the listed issues along with the page.
+DISCOVER_MASS_CHURCH_RE = re.compile(r"discovermass\.com/church/[a-z0-9-]+/?$")
+_DISCOVER_MASS_ISSUE_RE = re.compile(
+    r"href='(https://bulletins\.discovermass\.com/download\.php\?bulletin=[^']+)'")
+
+
+def _discover_mass_issue_texts(page: str) -> str:
+    texts = []
+    for link in dict.fromkeys(_DISCOVER_MASS_ISSUE_RE.findall(page)):
+        resp = fetch(html.unescape(link))
+        if resp.ok and _is_pdf(resp) and not resp.truncated:
+            try:
+                texts.append("\n\n".join(pdf_pages(resp.body)))
+            except Exception:  # noqa: BLE001 - an unreadable issue just isn't searched
+                continue
+    return "\n\n".join(texts)
 
 
 def recheck_evidence(items: list[tuple[str, dict[str, Any]]], workers: int = 6
@@ -452,7 +504,10 @@ def recheck_evidence(items: list[tuple[str, dict[str, Any]]], workers: int = 6
         if not resp.ok:
             return url, None, resp.error or f"HTTP {resp.status}"
         try:
-            return url, page_text(resp), ""
+            text = page_text(resp)
+            if DISCOVER_MASS_CHURCH_RE.search(url):
+                text += "\n\n" + _discover_mass_issue_texts(resp.text())
+            return url, text, ""
         except Exception as e:  # noqa: BLE001 - reported per item
             return url, None, f"could not read: {e}"
 

@@ -1,0 +1,105 @@
+"""Render bulletin PDF pages to PNG, to read the ones with no text layer.
+
+Many bulletins are scanned images: `probe pdf` lists them under
+`pages_without_text`, and a masthead or Mass schedule on such a page is
+invisible to it. The sandbox has no pdftoppm, PIL or tesseract, so this renders
+the pages with pdf.js (from cdn.jsdelivr.net) in the installed Chrome. Look at
+the PNGs with the Read tool. What you read off an image is evidence like any
+quote: cite the PDF's URL and say in the `note` that the page is an image.
+
+Usage (from the repo root; run setup_browser.sh once first):
+  uv run python .claude/skills/parish-site-access/scripts/render.py URL|FILE OUT_PREFIX \
+      [--pages 1,2] [--scale 1.6]
+
+Writes OUT_PREFIX-p<N>.png for each page (every page without --pages) and
+prints JSON: {"pdf", "page_count", "images": [...]}.
+"""
+
+from __future__ import annotations
+
+import argparse
+import base64
+import json
+import os
+import shutil
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[4]
+PDFJS = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build"
+PAGE = f"""<html><body style="margin:0;background:#fff"><script type="module">
+import * as pdfjs from '{PDFJS}/pdf.min.mjs';
+pdfjs.GlobalWorkerOptions.workerSrc = '{PDFJS}/pdf.worker.min.mjs';
+let doc = null;
+window.load = async (b64) => {{
+  const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  doc = await pdfjs.getDocument({{data: bytes}}).promise;
+  return doc.numPages;
+}};
+window.render = async (scale, n) => {{
+  const page = await doc.getPage(n);
+  const vp = page.getViewport({{scale}});
+  const c = document.createElement('canvas');
+  c.width = vp.width; c.height = vp.height; c.id = 'c';
+  document.body.innerHTML = ''; document.body.appendChild(c);
+  await page.render({{canvasContext: c.getContext('2d'), viewport: vp}}).promise;
+  return [Math.ceil(vp.width), Math.ceil(vp.height)];
+}};
+window.ready = true;
+</script></body></html>"""
+
+
+def _pdf_bytes(source: str) -> bytes:
+    if os.path.exists(source):
+        return Path(source).read_bytes()
+    sys.path.insert(0, str(REPO / "src"))
+    from pdf_extract.dioceses import web
+
+    resp = web.fetch(source)
+    if not resp.ok:
+        raise SystemExit(f"{source}: {resp.error or f'HTTP {resp.status}'}")
+    if resp.truncated:
+        raise SystemExit(f"{source}: larger than {web.MAX_BYTES // 1_000_000} MB")
+    return resp.body
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    parser.add_argument("pdf", help="a PDF URL or a local file")
+    parser.add_argument("out", type=Path, help="output prefix, e.g. /tmp/bulletin")
+    parser.add_argument("--pages", help="comma-separated page numbers (default: all)")
+    parser.add_argument("--scale", type=float, default=1.6)
+    args = parser.parse_args()
+
+    data = base64.b64encode(_pdf_bytes(args.pdf)).decode()
+    from playwright.sync_api import sync_playwright
+
+    channel = "chrome" if shutil.which("google-chrome") else None
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    images = []
+    with sync_playwright() as p:
+        # Headless is fine here: the page is local and loads nothing behind Cloudflare.
+        browser = p.chromium.launch(channel=channel, headless=True)
+        try:
+            page = browser.new_page()
+            page.set_content(PAGE)
+            page.wait_for_function("window.ready === true", timeout=60000)
+            count = page.evaluate("b => window.load(b)", data)
+            wanted = ([int(n) for n in args.pages.split(",")] if args.pages
+                      else range(1, count + 1))
+            for n in wanted:
+                if not 1 <= n <= count:
+                    continue
+                width, height = page.evaluate("([s, n]) => window.render(s, n)", [args.scale, n])
+                page.set_viewport_size({"width": width, "height": height})
+                path = f"{args.out}-p{n}.png"
+                page.locator("#c").screenshot(path=path)
+                images.append(path)
+        finally:
+            browser.close()
+    print(json.dumps({"pdf": args.pdf, "page_count": count, "images": images}, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -138,8 +138,14 @@ def test_an_unquoted_zip_and_a_broken_file_are_reported_not_fatal(root: Path) ->
     assert not result["passed"]
     assert any("postal_code must be text" in e and "quote it" in e for e in errors)
     assert any("b-town.md: frontmatter is not valid YAML" in e for e in errors)
+    # a new file can't miss references, so it goes ahead and names the broken one
+    created = _church()
+    assert any("b-town.md" in w for w in created["warnings"])
+    with pytest.raises(DioceseError, match="already exists"):
+        _church(slug="b-town")
+    # moving references around could miss the ones in the broken file
     with pytest.raises(DioceseError, match="do not parse"):
-        _church()
+        records.exclude_church("test", "st-ann-town", reason="closed")
 
 
 # ── Checks ──────────────────────────────────────────────────────────────────
@@ -400,14 +406,17 @@ def test_find_publications_reads_containers_from_find_links() -> None:
 
 
 def test_spam_terms_match_whole_words_only() -> None:
+    wix = '{"specs.DisplayCheckoutErrorModalsForExpressButtons": true} St. Mary Parish'
+    assert web.spam_terms(wix) == []
+    assert web.spam_terms("Best Slot Gacor and casino bonuses") == ["casino", "slot gacor"]
     wix = '{"specs.stores.displayCheckoutErrorModalsForExpressButtons":"true"}'
     assert web.spam_terms(wix + " Judicial Conference policy prohibits it") == []
     assert web.spam_terms("Situs judi slot online terpercaya") == ["judi", "slot online"]
 
 
 def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
-    truncated = web.Response("u", 200, "u", "application/pdf", b"%PDF-1.7\n1 0 obj")
-    monkeypatch.setattr(web, "fetch", lambda url, **kw: truncated)
+    broken = web.Response("u", 200, "u", "application/pdf", b"%PDF-1.7\n1 0 obj")
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: broken)
     assert web.pdf_text("https://example.org/x.pdf")["error"].startswith("could not read")
 
 
@@ -416,6 +425,21 @@ def test_quote_found_tolerates_layout_and_elisions() -> None:
     assert web.quote_found("Weekend: Sat. 5:10 pm … Sun. 7:30 am", text)
     assert web.quote_found("St. Bernard's", text)
     assert not web.quote_found("Sun. 7:30 am … Weekend", text)
+    # spacing around punctuation differs between PDF extractions
+    assert web.quote_found("Mass- Fr.Zach(CTK)", "8:30 AM Mass - Fr. Zach (CTK)")
+
+
+def test_new_exclusion_from_a_roster_drops_coordinates(root: Path, tmp_path: Path) -> None:
+    src = tmp_path / "directory.json"
+    src.write_text(json.dumps([{"id": "7", "name": "St. Paul (Closed)", "city": "Fabius",
+                                "state": "NY", "latitude": 42.8, "longitude": -75.9,
+                                "url": "https://example.org/finder"}]))
+    rosters.import_roster("test", "directory", src)
+    assert main(["diocese", "new", "excluded", "test", "--reason", "closed",
+                 "--from", "directory:7"]) == 0
+    [path] = (root / "excluded").glob("*.md")
+    text = path.read_text(encoding="utf-8")
+    assert "directory:7" in text and "latitude" not in text
 
 
 # ── CLI and the committed data ──────────────────────────────────────────────

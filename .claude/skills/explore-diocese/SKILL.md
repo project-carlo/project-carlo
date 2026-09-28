@@ -30,6 +30,7 @@ pnpm diocese todo <d>                                 # start here if the dioces
 pnpm diocese init <d> --name "..." --state XX --gcatholic <key>   # new diocese
 pnpm diocese roster fetch <d> gcatholic               # + the diocese's own directory:
 pnpm diocese roster fetch <d> wpsl <finder URL>       #   or scrape it and `roster import`
+                                                      #   (eCatholic finder map: parish-site-access finder.py)
 ```
 
 Then, cheapest first:
