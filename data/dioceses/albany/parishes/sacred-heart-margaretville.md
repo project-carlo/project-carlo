@@ -46,7 +46,7 @@ bulletin.
 ## Website and bulletin provider
 
 sacredheartmargaretville.org is the parish's WordPress site (the directory links it; GCatholic
-still has a dead catskill.net address). Its Bulletins page links each issue as a PDF in
+still has an older catskill.net/sacredheart address, not checked). Its Bulletins page links each issue as a PDF in
 `wp-content/uploads/`. Self-hosted: `bulletin_provider: other`.
 
 ## Not yet confirmed
