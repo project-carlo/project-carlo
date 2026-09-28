@@ -17,7 +17,7 @@ evidence:
     9L, Lake George, NY 12845".'
 - url: https://container.parishesonline.com/bulletins/03/1267/20250713B.pdf
   seen: 2026-09-28
-  quote: St. Mary’s of the Lake, Lake George (Paulist Fathers):
+  quote: 'St. Mary’s of the Lake, Lake George (Paulist Fathers):'
   note: 'Sacred Heart, Lake George bulletin, 13 July 2025, page 2 "Local Daily Mass Schedule": "Monday—Friday
     at 10am (June—August)".'
 - url: https://container.parishesonline.com/bulletins/03/1267/20260705B.pdf
