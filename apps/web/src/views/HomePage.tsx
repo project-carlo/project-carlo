@@ -232,6 +232,14 @@ export function HomePage() {
     });
   }, []);
 
+  // Removes the searched-place pin. A selected church shares `centerOn` but
+  // isn't a pin, so it's left alone.
+  const handleClearPlace = useCallback(() => {
+    setCenterOn((current) => (current?.placeTitle ? null : current));
+  }, []);
+
+  const pinnedPlaceTitle = centerOn?.placeTitle;
+
   return (
     <main
       data-map-page
@@ -246,6 +254,7 @@ export function HomePage() {
             centerOn={centerOn}
             initialView={initialMapView}
             onViewChange={handleMapViewChange}
+            onClearPlace={handleClearPlace}
           />
         ) : null}
       </div>
@@ -317,6 +326,21 @@ export function HomePage() {
                 }
               />
             </div>
+            {pinnedPlaceTitle ? (
+              <div className="mt-3 flex items-center justify-between gap-3 font-serif text-[0.9375rem]">
+                <span className="min-w-0 truncate text-ink-soft">
+                  Pinned: <span className="text-ink">{pinnedPlaceTitle}</span>
+                </span>
+                <button
+                  type="button"
+                  onClick={handleClearPlace}
+                  aria-label={`Remove pin for ${pinnedPlaceTitle}`}
+                  className="rubric-link missal-focus shrink-0"
+                >
+                  Remove pin
+                </button>
+              </div>
+            ) : null}
             <FilterPills filters={appliedFilters} />
           </div>
 

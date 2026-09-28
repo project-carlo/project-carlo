@@ -139,6 +139,8 @@ interface ChurchMapProps {
   initialView?: MapView | null;
   /** Fires after the user finishes panning/zooming so the view can be persisted. */
   onViewChange?: (view: MapView) => void;
+  /** Removes the searched-place pin; the popup offers it as a button. */
+  onClearPlace?: () => void;
 }
 
 /**
@@ -709,6 +711,7 @@ function ClusteredChurchMarkers({
 
 const SearchPlaceMarker = memo(function SearchPlaceMarker({
   place,
+  onClear,
 }: {
   place: {
     lat: number;
@@ -717,6 +720,7 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
     subtitle?: string | null;
     requestId?: number;
   };
+  onClear?: () => void;
 }) {
   const markerRef = useRef<LeafletMarker | null>(null);
   useEffect(() => {
@@ -743,6 +747,15 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
               {place.subtitle}
             </p>
           ) : null}
+          {onClear ? (
+            <button
+              type="button"
+              onClick={onClear}
+              className="rubric-link missal-focus font-serif text-[0.875rem]"
+            >
+              Remove pin
+            </button>
+          ) : null}
         </div>
       </Popup>
     </Marker>
@@ -754,6 +767,7 @@ export const ChurchMap = memo(function ChurchMap({
   centerOn,
   initialView,
   onViewChange,
+  onClearPlace,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -813,6 +827,7 @@ export const ChurchMap = memo(function ChurchMap({
             subtitle: centerOn.placeSubtitle,
             requestId: centerOn.requestId,
           }}
+          onClear={onClearPlace}
         />
       ) : null}
     </MapContainer>
