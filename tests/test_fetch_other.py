@@ -12,7 +12,7 @@ import pytest
 
 from pdf_extract.fetch import (
     _find_other_bulletin_page_urls,
-    _parse_relaxed_date,
+    _parse_relaxed_date_from_texts,
     _resolve_other_latest_link,
     _unwrap_pdf_viewer_url,
 )
@@ -64,13 +64,19 @@ def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
         ("Bulletin October 4 & 5", date(2025, 10, 4)),
         ("Bulletin March 28 & 29", date(2026, 3, 28)),
         ("/12-28-bulletin-pdf/", date(2025, 12, 28)),
+        # A year folder gives a yearless date its year; a WordPress upload
+        # folder (year, then month) does not.
+        ("/bulletins/2025/September_28.pdf", date(2025, 9, 28)),
+        ("/wp-content/uploads/2025/12/January-4.pdf", date(2026, 1, 4)),
+        # Weebly's numeric folder is no year: "3239/02-12" is not a date.
+        ("/uploads/3/8/1/3/38133239/02-12-2017_6th_sun.pdf", date(2017, 2, 12)),
         # Ids and timestamps are not dates.
         ("/bulletins/1790326230.pdf", None),
         ("/_files/ugd/cea846_00334ad9684947469dd533a9f70fcc50.pdf", None),
     ],
 )
 def test_parse_relaxed_date_reads_file_name_and_abbreviated_dates(text, expected) -> None:
-    assert _parse_relaxed_date(text, TODAY) == expected
+    assert _parse_relaxed_date_from_texts([text], TODAY) == expected
 
 
 def test_unwrap_pdf_viewer_url() -> None:
@@ -318,3 +324,128 @@ def test_this_years_post_wins_over_last_years_with_the_same_day() -> None:
             '<a href="/s/Bulletin-for-9-2627FINAL.pdf">Bulletin</a>'
         ),
     }) == f"{HOME}/s/Bulletin-for-9-2627FINAL.pdf"
+
+
+def test_last_years_issue_in_a_year_folder_is_not_this_weeks() -> None:
+    # parishes.rcda.org (St. Joseph, Worcester) names files by the day alone.
+    assert _resolve({
+        HOME: '<a href="/Bulletin.php">Bulletin</a>',
+        f"{HOME}/Bulletin.php": (
+            '<a href="/bulletins/2025/September_28.pdf">September 28</a>'
+            '<a href="/bulletins/2026/September_20.pdf">September 20</a>'
+        ),
+    }) == f"{HOME}/bulletins/2026/September_20.pdf"
+
+
+def test_a_listing_oldest_first_gives_its_newest_recent_issue() -> None:
+    # St. Joseph, Troy: January first, the newest two weeks old at the end.
+    assert _resolve({
+        HOME: '<a href="/bulletins">Bulletins</a>',
+        f"{HOME}/bulletins": (
+            '<a href="/docs/2026_01_04.pdf">Jan. 4, 2026</a>'
+            '<a href="/docs/2026_09_06.pdf">September 6, 2026</a>'
+            '<a href="/docs/2026_09_13.pdf">September 13, 2026</a>'
+        ),
+    }) == f"{HOME}/docs/2026_09_13.pdf"
+
+
+def test_a_link_titled_bulletin_beats_an_undated_first_pdf() -> None:
+    # St. Mary's, Glens Falls: its homepage lists a Confirmation PDF first.
+    assert _resolve({
+        HOME: (
+            '<a href="/_files/ugd/a1.pdf">Confirmation</a>'
+            '<a href="/_files/ugd/b2.pdf">Community Resources</a>'
+            '<a href="/_files/ugd/c3.pdf">Bulletin</a>'
+        ),
+    }) == f"{HOME}/_files/ugd/c3.pdf"
+
+
+def test_drive_files_listed_on_the_website_itself_are_read_there() -> None:
+    # St. John the Baptist, Walton: its schedule page lists each week's Drive file,
+    # and its "Bulletins" link goes to an empty page.
+    drive = "https://drive.google.com/file/d/ID-0920/view?usp=drivesdk"
+    assert _resolve({
+        HOME: (
+            '<a href="/bulletins/">Bulletins</a>'
+            f'<a href="{drive}">September 20, 2026 Bulletin.pdf</a>'
+        ),
+        f"{HOME}/bulletins/": '<a href="/bulletins/">Bulletins</a>',
+    }) == drive
+
+
+def test_a_stale_first_bulletin_page_gives_way_to_this_years() -> None:
+    # Northern Points: "Bulletins" is a 2017 page beside "2026 Bulletins".
+    assert _resolve({
+        HOME: (
+            '<a href="/bulletins.html">Bulletins</a>'
+            '<a href="/2026-bulletins.html">2026 Bulletins</a>'
+        ),
+        f"{HOME}/bulletins.html": '<a href="/uploads/02-12-2017_6th_sun.pdf">Download File</a>',
+        f"{HOME}/2026-bulletins.html": (
+            '<a href="/uploads/09-27-26_26th_sun.pdf">Download File</a>'
+            '<a href="/uploads/09-20-26_25th_sun.pdf">Download File</a>'
+        ),
+    }) == f"{HOME}/uploads/09-27-26_26th_sun.pdf"
+
+
+def test_a_stale_first_bulletin_page_is_still_read_when_nothing_is_newer() -> None:
+    assert _resolve({
+        HOME: '<a href="/bulletins.html">Bulletins</a>',
+        f"{HOME}/bulletins.html": '<a href="/uploads/02-12-2017_6th_sun.pdf">Download File</a>',
+    }) == f"{HOME}/uploads/02-12-2017_6th_sun.pdf"
+
+
+def test_google_drive_file_links_are_bulletins() -> None:
+    # St. Lucy/St. Bernadette, Altamont links one Drive file per Sunday.
+    source_url, fetch_url = _resolve_other_latest_link(
+        provider_id=HOME, reference_date=TODAY, page=_site({
+            HOME: '<a href="/bulletin">Bulletin</a>',
+            f"{HOME}/bulletin": (
+                '<a href="https://drive.google.com/file/d/ID-0920/view?usp=sharing">'
+                "September 20, 2026</a>"
+                '<a href="https://drive.google.com/file/d/ID-0913/view?usp=sharing">'
+                "September 13, 2026</a>"
+            ),
+        }),
+    )
+    assert source_url == "https://drive.google.com/file/d/ID-0920/view?usp=sharing"
+    assert fetch_url == "https://drive.google.com/uc?export=download&id=ID-0920"
+
+
+def test_concrete_cms_download_links_are_bulletins() -> None:
+    # rcda.org lists St. Joan of Arc's issues as /download_file/view/<file>/<page>,
+    # beside unrelated PDFs in its menus.
+    site = "https://www.rcda.org"
+    source_url, _ = _resolve_other_latest_link(
+        provider_id=f"{site}/bulletins", reference_date=TODAY, page=_site({
+            f"{site}/bulletins": (
+                f'<a href="{site}/application/files/1/Oikoumene_November_2024.pdf">'
+                "Oikoumene Newsletter</a>"
+                f'<a href="{site}/download_file/view/4445/2079">September 27, 2026</a>'
+                f'<a href="{site}/download_file/view/4430/2079">September 20, 2026</a>'
+                f'<a href="{site}/bulletins">Bulletins</a>'
+            ),
+        }),
+    )
+    assert source_url == f"{site}/download_file/view/4445/2079"
+
+
+def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:
+    # Weebly's file host (St. Michael's, Cohoes) answers 429 to quick requests.
+    from urllib.error import HTTPError
+
+    from pdf_extract import fetch
+
+    calls: list[str] = []
+
+    def get(url: str, **_: object) -> bytes:
+        calls.append(url)
+        if len(calls) == 1:
+            raise HTTPError(url, 429, "Too Many Requests", {}, None)  # type: ignore[arg-type]
+        return b"%PDF-1.7"
+
+    monkeypatch.setattr(fetch, "_http_get_bytes", get)
+    monkeypatch.setattr(fetch.time, "sleep", lambda _: None)
+    pdf = f"{HOME}/uploads/bulletin-2026-09-27.pdf"
+    assert fetch._download_pdf(fetch_url=pdf, source_url=pdf) == b"%PDF-1.7"
+    assert calls == [pdf, pdf]

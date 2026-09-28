@@ -1,6 +1,6 @@
 ---
 name: Immaculate Conception Church (Hoosick Falls)
-website: https://www.battenkillcatholic.org/bulletins
+website: https://www.battenkillcatholic.org
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:11172']
@@ -59,7 +59,9 @@ building is in no roster and the bulletin does not mention it.
 
 eCatholic site 11172, battenkillcatholic.org (the directory's link, wrapped in a Barracuda
 linkprotect redirect). The "ICC Bulletins" page (/bulletins) is where this bulletin's issues are
-listed, so it is the website. Group: the Battenkill Catholic Cluster.
+listed. The website is the site's root: the eCatholic fetcher adds `/bulletins` itself (with
+`/bulletins` in the website it asked for `/bulletins/bulletins`, found by `fetch:check` on
+2026-09-28). Group: the Battenkill Catholic Cluster.
 
 ## Not yet confirmed
 
