@@ -1,9 +1,11 @@
 ---
 name: Holy Infancy (Holy Mother and Child Parish)
+parish: holy-mother-and-child-st-joseph-st-paul-greenfield-center
 revisit: Ask Holy Mother and Child Parish (518-654-2113) whether the Lake Luzerne church at 329 Lake Ave
   still holds any Mass or has closed/been sold; check its bulletin for a Lake Luzerne Mass
 revisit_after: 2026-11-01
-roster: ['gcatholic:18216']
+roster:
+- gcatholic:18216
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18216
   seen: 2026-09-28
@@ -23,6 +25,14 @@ evidence:
   seen: 2026-09-28
   quote: 405 Palmer Avenue, Corinth, NY 12822
   note: Discover Mass (MassTimes data) lists the merged parish at the Corinth address only, Sunday 8:30am.
+- url: https://container.parishesonline.com/bulletins/03/0331/20260927B.pdf
+  seen: 2026-09-28
+  quote: '405 Palmer Ave Corinth, NY 12822 Mass times: 8:30 am Sunday Noon Wednesdays'
+  note: 'Added by the saratoga region: the 27 September 2026 issue of the shared Holy Mother and Child
+    / St. Joseph''s / St. Paul''s bulletin (ParishesOnline 03/0331, the same bulletin as the parishes.rcda.org
+    copy) lists Masses only at Corinth, Greenfield Center and Rock City Falls. Its only mention of Luzerne
+    in pages 1-6 is "collect monetary donations for the Luzerne food pantry" (page 4); no Holy Infancy
+    or Lake Luzerne Mass.'
 line1: 329 Lake Ave.
 city: Lake Luzerne
 state: NY

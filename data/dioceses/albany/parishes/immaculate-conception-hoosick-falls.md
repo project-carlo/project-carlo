@@ -34,15 +34,25 @@ parish office is at 17 S. Park Street, Cambridge (the cluster office).
 Page 1 also prints a "Battenkill Network of Parishes" box with the Masses at St. Patrick's,
 Cambridge (Sun. 11:30 am, Wed. 9 am) and Holy Cross, Salem (Sun. 8:15 am, Tues. 9 am), and page 2
 lists the week's weekday Masses at all three. Those two churches are in Washington County (the
-warren-washington region); whether they publish anything of their own is that region's call. The
-cluster site's other "Bulletins" page (/bulletins-1) listed no issues on 28 September. If they
-have nothing else, their church rows belong under this parish.
+warren-washington region). The cluster site's other "Bulletins" page (/bulletins-1) listed no
+issues on 28 September, and the warren-washington region found no separate bulletin for either,
+so this issue is the only one that prints their schedules and both churches are under this row.
 
 ## Worship sites
 
 Immaculate Conception Church, 73 Main St., Hoosick Falls (`immaculate-conception-hoosick-falls`).
-The records index sends St. George's, Pittstown to Immaculate Conception; that building is in no
-roster and the bulletin does not mention it. Cambridge and Salem: see above.
+Three, all with Masses in the 27 September 2026 issue:
+
+- Immaculate Conception Church, 73 Main St., Hoosick Falls (`immaculate-conception-hoosick-falls`):
+  Saturday 4 pm, Sunday 10 am, Monday 9 am.
+- St. Patrick's Church, Cambridge (`st-patrick-cambridge`, created by the warren-washington
+  region): Sunday 11:30 am, Wednesday 9 am ("Battenkill Network of Parishes" box, page 1).
+- Holy Cross Church, Salem (`holy-cross-salem`, created by the warren-washington region): Sunday
+  8:15 am, Tuesday 9 am (same box).
+
+The masthead names Immaculate Conception alone, so the row keeps IC's name; the lead may rename it
+for the cluster. The records index sends St. George's, Pittstown to Immaculate Conception; that
+building is in no roster and the bulletin does not mention it.
 
 ## Website and bulletin provider
 
@@ -52,5 +62,5 @@ listed, so it is the website. Group: the Battenkill Catholic Cluster.
 
 ## Not yet confirmed
 
-Whether St. Patrick's (Cambridge) and Holy Cross (Salem) have a bulletin of their own
-(warren-washington region; recorded in the region notes).
+The Cambridge and Salem schedules are a box on IC's bulletin rather than a masthead listing; if
+either church starts a bulletin of its own it becomes a separate row. Nothing else.
