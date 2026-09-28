@@ -54,12 +54,10 @@ names neither NDV nor Greenwich, so that is out of date.
 ## Worship sites
 
 - `notre-dame-visitation-schuylerville` (18 Pearl Street), in this region.
-- **St. Joseph's, 35 Hill Street, Greenwich** (Washington County, the warren-washington
-  region): printed in this bulletin with Sunday 10:30am and weekday Masses, so it belongs
-  under this row as a church. It is currently recorded by that region as
-  `excluded/st-joseph-greenwich.md` (`no-bulletin`), written before this bulletin was found;
-  that record needs converting to a church under `holy-family-schuylerville` (left to the
-  lead / that region, per the parallel-work rules).
+- `st-joseph-greenwich` (35 Hill Street, Greenwich, Washington County): printed in this
+  bulletin with Sunday 10:30am and weekday Masses. It had first been recorded as a
+  `no-bulletin` exclusion (its own Bulletin page has none); that record was replaced by the
+  church row once this bulletin was found.
 
 ## Website and bulletin provider
 
@@ -70,5 +68,5 @@ church slug `st-joseph-greenwich-ny`.
 
 ## Not yet confirmed
 
-The Greenwich church row (see Worship sites). Page 2 says a "New Format" is "Coming in
+Page 2 says a "New Format" is "Coming in
 October", so the layout may change.

@@ -82,3 +82,10 @@ whether any Mass (Monday or Vietnamese) continues. That decides between `no-bull
 `closed`/`no-public-mass`; see `revisit`. The Vietnamese Apostolate entry is linked here
 because this building is its only known place; it should follow whatever this record
 becomes.
+
+Vietnamese Masses are printed elsewhere now, in churches that already have rows: Our Lady of
+the Assumption, Latham's 27 September 2026 bulletin has "3:00 p.m. Vietnamese Mass 1st & 3rd
+Sundays of Month" (`our-lady-of-the-assumption-latham`), and the directory puts a
+first-Sunday Vietnamese Mass at St. Joseph's, Troy (`st-joseph-troy`). Neither names the
+apostolate, so entry 444 stays linked to its listed address here (added in the cross-region
+pass, 2026-09-28).

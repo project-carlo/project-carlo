@@ -422,6 +422,14 @@ def test_spam_terms_match_whole_words_only() -> None:
     assert web.spam_terms("Situs judi slot online terpercaya") == ["judi", "slot online"]
 
 
+def test_one_passing_spam_term_on_a_parish_page_is_not_a_squat() -> None:
+    news = "Parish news: the Hall of Fame dinner is at Rivers Casino & Resort. Mass times"
+    assert web.spam_terms(news) == ["casino"] and not web.looks_squatted(news)
+    assert web.looks_squatted("Casino bonus! Best casino games, casino online")
+    assert web.looks_squatted("Situs judi slot online terpercaya, parish")
+    assert web.looks_squatted("Play at our casino tonight")
+
+
 def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
     broken = web.Response("u", 200, "u", "application/pdf", b"%PDF-1.7\n1 0 obj")
     monkeypatch.setattr(web, "fetch", lambda url, **kw: broken)
