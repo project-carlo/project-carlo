@@ -242,9 +242,13 @@ export function HomePage() {
 
   return (
     <main
-      data-map-page
-      className="relative flex h-dvh flex-col overflow-hidden bg-paper"
+      className="fixed inset-x-0 top-0 flex h-dvh flex-col overflow-hidden bg-paper"
     >
+      {/* The page is `fixed` so it adds nothing to the document's scrollable
+       *  overflow: the document can't scroll under the phone browser bar, yet
+       *  stays a normal root scroller, which Chrome needs for pull-to-refresh
+       *  (overflow: hidden or overscroll-behavior: none on html/body kill it).
+       *  Only the floating card can start a refresh; the map owns its touches. */}
       {/* Full-bleed map — no z-index so it doesn't create a stacking context;
        *  the elevated popup pane inside can then layer above the header. */}
       <div className="absolute inset-0">
