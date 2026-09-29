@@ -185,3 +185,23 @@ def test_version_tracks_the_shared_prompt_and_settings():
 def test_name_defaults_to_model_id(custom_name):
     c = OpenAIClassifier(model="gpt-5.4-mini", name=custom_name)
     assert c.name == (custom_name or "gpt-5.4-mini")
+
+
+def test_strict_mode_sends_the_sdks_strict_schema(monkeypatch):
+    from openai.lib._pydantic import to_strict_json_schema
+
+    from pdf_extract.classifiers import get_classifier
+
+    fake = _install_fake(monkeypatch, _one_mass())
+
+    classifier = get_classifier("luna-pdf-low-strict")
+    out = classifier.extract(b"%PDF-1.4 x", churches=[], today=date(2026, 5, 4))
+
+    fmt = fake.last_kwargs["text"]["format"]
+    assert fmt["strict"] is True
+    assert fmt["schema"] == to_strict_json_schema(SchedulePayload)
+    # The strict rewrite requires every property, which Gemini's schema does not.
+    assert set(fmt["schema"]["required"]) == set(SchedulePayload.model_fields)
+    assert fake.last_kwargs["input"][0]["content"][1]["detail"] == "low"
+    assert classifier.version.startswith("gpt-6-luna+effort-medium+detail-low+strict+")
+    assert [ev["start_time"] for ev in out["events"]] == ["9:00 AM"]

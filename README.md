@@ -386,7 +386,7 @@ heading they belong to, and tags blocks with their position on the page
 | `pymupdf` | `luna-pymupdf` | PyMuPDF text layer in column-aware reading order; RapidOCR only where there is no usable text (images, outlined text, broken fonts). Under a second per bulletin, plus a few seconds per OCR region. |
 | `docling` | `luna-docling` | Docling layout model, rows rebuilt from text positions, RapidOCR on the same kinds of regions. Tens of seconds per bulletin. |
 | `ocr` | `luna-ocr` | Every page rendered and read by RapidOCR, ignoring the text layer, then rebuilt into columns and rows. The slowest: about 5 s per page. |
-| `pdf` | `luna-pdf-low`, `luna-pdf-high` | none: the model reads the PDF itself (the control), sent like Gemini's request: the same prompt, then the PDF at the chosen `detail`, with the exact JSON schema Gemini gets |
+| `pdf` | `luna-pdf-low`, `luna-pdf-high` (+ `-strict`) | none: the model reads the PDF itself (the control), sent like Gemini's request: the same prompt, then the PDF at the chosen `detail`, with the exact JSON schema Gemini gets (non-strict), or with `--schema strict` the OpenAI SDK's strict version of it and strict decoding |
 
 ```bash
 # .env: OPENAI_API_KEY plus the R2 read keys you already use for data:pull
@@ -397,11 +397,16 @@ pnpm bench --effort low              # reasoning effort (none … max)
 pnpm bench --stacks pdf --detail low high                    # PDF at low vs high detail
 pnpm bench --models gpt-6-luna gpt-5.6-luna                  # every stack on both models
 pnpm bench --stacks pdf --models gpt-6-luna gpt-5.6-luna --detail low high  # all four
+pnpm bench --stacks pdf --schema exact strict                # Gemini's schema vs strict
 ```
 
 Run names start with the model: `luna-` for `gpt-6-luna`, `luna5.6-` for
 `gpt-5.6-luna`, and the model id for any other. The `pdf` stack's name ends
-with its detail, and a non-default effort is appended (`luna-pymupdf-low`).
+with its detail, then `-strict` for a strict run, and a non-default effort is
+appended (`luna-pymupdf-low`). Strict mode can't send Gemini's schema as-is
+(OpenAI requires every field and drops null defaults), so it sends the rewrite
+the SDK's `text_format=` makes, which is also what the text stacks always use;
+either way, replies are parsed leniently.
 Every configuration is its own row in the report, priced at its own model's
 rates. `pnpm extract --classifier` takes the same names for both Luna models.
 

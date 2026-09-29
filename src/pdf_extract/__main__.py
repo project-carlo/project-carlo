@@ -29,12 +29,19 @@ from pdf_extract.apply import (
 from pdf_extract.bench import (
     DEFAULT_DETAILS,
     DEFAULT_MODELS,
+    DEFAULT_SCHEMAS,
     DEFAULT_STACKS,
     BenchError,
     run_bench,
 )
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
-from pdf_extract.classifiers import BENCH_MODELS, PDF_DETAILS, STACKS, available_classifiers
+from pdf_extract.classifiers import (
+    BENCH_MODELS,
+    PDF_DETAILS,
+    SCHEMA_MODES,
+    STACKS,
+    available_classifiers,
+)
 from pdf_extract.classifiers.text_llm import DEFAULT_REASONING_EFFORT
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
@@ -173,6 +180,7 @@ def _cmd_bench(args: argparse.Namespace) -> Result:
         stacks=args.stacks,
         models=args.models,
         details=args.detail,
+        schemas=args.schema,
         effort=None if args.effort == "default" else args.effort,
         limit=args.limit,
         seed=args.seed,
@@ -414,6 +422,12 @@ def _build_parser() -> argparse.ArgumentParser:
         "--detail", nargs="+", choices=list(PDF_DETAILS), default=list(DEFAULT_DETAILS),
         help="PDF detail levels for the pdf stack, one run each "
         f"(default: {' '.join(DEFAULT_DETAILS)})",
+    )
+    bench_parser.add_argument(
+        "--schema", nargs="+", choices=list(SCHEMA_MODES), default=list(DEFAULT_SCHEMAS),
+        help="How the pdf stack asks for JSON, one run each: 'exact' sends Gemini's schema "
+        "non-strict; 'strict' sends the OpenAI SDK's strict version of it with strict "
+        f"decoding (default: {' '.join(DEFAULT_SCHEMAS)})",
     )
     bench_parser.add_argument(
         "--effort", default=DEFAULT_REASONING_EFFORT,

@@ -10,7 +10,7 @@ One command (`pnpm bench`) runs the whole comparison:
 3. Runs each stack on those bulletins, for each OpenAI model under test: a
    text extractor (PyMuPDF with an OCR fallback, Docling, or full-page OCR)
    followed by the model reading the text, plus the model reading the PDF
-   itself as a control, once per PDF `detail` under test.
+   itself as a control, once per PDF `detail` and schema mode under test.
 4. Scores every stack against the baseline (`compare --baseline`) and writes
    the report under data/runs/bench/.
 
@@ -27,7 +27,7 @@ from datetime import datetime
 from typing import Any
 
 from pdf_extract.blobstore import get_store
-from pdf_extract.classifiers import STACKS, Classifier, stack_classifier
+from pdf_extract.classifiers import STACKS, Classifier, stack_classifier, stack_name
 from pdf_extract.classifiers.openai_gpt import FileDetail
 from pdf_extract.classifiers.text_llm import DEFAULT_REASONING_EFFORT, DEFAULT_TEXT_MODEL
 from pdf_extract.compare import compare, load_manifest
@@ -44,8 +44,10 @@ BASELINE = "gemini-flash"
 
 DEFAULT_STACKS = ("pymupdf", "docling", "ocr", "pdf")
 DEFAULT_MODELS = (DEFAULT_TEXT_MODEL,)
-# The `pdf` stack sends the bulletin at low detail unless asked for more.
+# The `pdf` stack sends the bulletin at low detail, with Gemini's exact
+# schema, unless asked for more.
 DEFAULT_DETAILS: tuple[FileDetail, ...] = ("low",)
+DEFAULT_SCHEMAS = ("exact",)
 
 
 class BenchError(RuntimeError):
@@ -53,15 +55,17 @@ class BenchError(RuntimeError):
 
 
 def _configurations(
-    stacks: list[str], models: list[str], details: list[FileDetail],
-) -> list[tuple[str, str, FileDetail]]:
-    """(stack, model, detail) for every run: each model × stack, and the `pdf`
-    stack once per detail (the text stacks send no PDF, so detail is moot)."""
+    stacks: list[str], models: list[str], details: list[FileDetail], schemas: list[str],
+) -> list[tuple[str, str, FileDetail, str]]:
+    """(stack, model, detail, schema) for every run: each model × stack, and the
+    `pdf` stack once per detail and schema mode (the text stacks send no PDF and
+    always ask for strict output, so both are moot for them)."""
     return [
-        (stack, model, detail)
+        (stack, model, detail, schema)
         for model in models
         for stack in stacks
         for detail in (details if STACKS[stack] is None else details[:1])
+        for schema in (schemas if STACKS[stack] is None else ["exact"])
     ]
 
 
@@ -78,6 +82,7 @@ def run_bench(
     stacks: list[str] | None = None,
     models: list[str] | None = None,
     details: list[FileDetail] | None = None,
+    schemas: list[str] | None = None,
     effort: str | None = DEFAULT_REASONING_EFFORT,
     limit: int | None = None,
     seed: int = 0,
@@ -89,6 +94,7 @@ def run_bench(
     stacks = list(stacks or DEFAULT_STACKS)
     models = list(dict.fromkeys(models or DEFAULT_MODELS))
     details = list(dict.fromkeys(details or DEFAULT_DETAILS))
+    schemas = list(dict.fromkeys(schemas or DEFAULT_SCHEMAS))
     for stack in stacks:
         if stack not in STACKS:
             raise BenchError(f"Unknown stack {stack!r}. Available: {', '.join(STACKS)}")
@@ -132,11 +138,11 @@ def run_bench(
     names: list[str] = []
     runs: dict[str, Any] = {}
     skipped: dict[str, str] = {}
-    for stack, model, detail in _configurations(stacks, models, details):
-        label = f"{stack} ({model}{', ' + detail if STACKS[stack] is None else ''})"
+    for stack, model, detail, schema in _configurations(stacks, models, details, schemas):
+        label = stack_name(stack, model=model, detail=detail, schema=schema, effort=effort)
         try:
             classifier: Classifier = stack_classifier(
-                stack, model=model, detail=detail, effort=effort,
+                stack, model=model, detail=detail, schema=schema, effort=effort,
             )
         except ImportError as exc:
             LOGGER.error("Skipping stack %s: %s", label, exc)

@@ -1,13 +1,16 @@
-"""OpenAI classifiers that read the bulletin PDF themselves (gpt-5.4-mini, luna-pdf).
+"""OpenAI classifiers that read the bulletin PDF themselves (gpt-5.4-mini, luna*-pdf-*).
 
 Sends a request built like the Gemini one, so the two compare on equal terms:
 the same events prompt, then the bulletin PDF (as a base64 input_file), with
 the same `SchedulePayload` JSON schema Gemini is given. The reply is parsed
 and normalised by the same code as Gemini's reply.
 
-The schema goes over non-strict: OpenAI's strict mode only accepts schemas
-rewritten to its subset (every property required, no defaults), which would
-no longer be the schema Gemini sees.
+By default the schema goes over non-strict: OpenAI's strict mode only accepts
+schemas rewritten to its subset (every property required, no defaults), which
+would no longer be the schema Gemini sees. `strict=True` sends that rewrite
+instead, made by the OpenAI SDK's own converter (what `text_format=` uses), so
+decoding is constrained to the schema. Either way the reply is parsed
+leniently, so one bad slot does not lose the rest of the bulletin.
 
 Module is named openai_gpt.py (not openai.py) to avoid shadowing the upstream
 `openai` package.
@@ -23,6 +26,7 @@ from datetime import date
 from typing import Any, Literal
 
 from openai import OpenAI
+from openai.lib._pydantic import to_strict_json_schema
 
 from pdf_extract.classifiers.gemini import PROMPT_FINGERPRINT
 from pdf_extract.schedule_extraction import (
@@ -70,17 +74,23 @@ class OpenAIClassifier:
         max_retries: int = 5,
         reasoning_effort: str | None = None,
         file_detail: FileDetail | None = None,
+        strict: bool = False,
     ) -> None:
-        """`file_detail` sets the PDF input's `detail`; None leaves OpenAI's default."""
+        """`file_detail` sets the PDF input's `detail`; None leaves OpenAI's default.
+
+        `strict` asks for OpenAI's strict structured output (see the module doc).
+        """
         self._model = model
         self._max_retries = max_retries
         self._reasoning_effort = reasoning_effort
         self._file_detail = file_detail
+        self._strict = strict
         self.name = name or model
         self.version = (
             model
             + (f"+effort-{reasoning_effort}" if reasoning_effort else "")
             + (f"+detail-{file_detail}" if file_detail else "")
+            + ("+strict" if strict else "")
             + f"+prompt-{PROMPT_FINGERPRINT}"
         )
 
@@ -128,8 +138,12 @@ class OpenAIClassifier:
                 "format": {
                     "type": "json_schema",
                     "name": "SchedulePayload",
-                    "schema": SchedulePayload.model_json_schema(),
-                    "strict": False,
+                    "schema": (
+                        to_strict_json_schema(SchedulePayload)
+                        if self._strict
+                        else SchedulePayload.model_json_schema()
+                    ),
+                    "strict": self._strict,
                 }
             },
             **extra,

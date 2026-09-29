@@ -272,3 +272,19 @@ def test_stack_names_mark_a_non_default_effort():
     assert stack_name("pdf", detail="high") == "luna-pdf-high"
     assert stack_name("pymupdf", model="gpt-5.6-luna", effort="low") == "luna5.6-pymupdf-low"
     assert stack_name("pymupdf", model="gpt-x", effort=None) == "gpt-x-pymupdf-default"
+
+
+def test_bench_runs_the_pdf_stack_per_schema_mode(
+    pipeline_dir, fake_openai, fake_extractor, monkeypatch,
+):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    _seed_bulletins(monkeypatch)
+
+    result = bench.run_bench(
+        stacks=["pymupdf", "pdf"], schemas=["exact", "strict"], concurrency=2,
+    )
+
+    # Only the PDF stack has a schema mode: the text stacks are always strict.
+    assert set(result["stacks"]) == {"luna-pymupdf", "luna-pdf-low", "luna-pdf-low-strict"}
+    pdf_requests = [r for r in fake_openai.requests if "text" in r]
+    assert sorted(r["text"]["format"]["strict"] for r in pdf_requests) == [False, True]
