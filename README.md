@@ -444,6 +444,59 @@ one stack only pays for that stack. Text extraction runs on the CPU, one
 bulletin at a time per stack, so the first full run is dominated by the OCR
 stacks; a quick first look is `pnpm bench --limit 15`.
 
+### Against ground truth
+
+`pnpm bench:labels` (`pnpm bench --labels`) runs the same configurations on
+the bulletins labeled `done` in `data/labels/` (whether or not each is still
+its parish's latest) and scores every one of them, production Gemini
+included, against the labels. `--models` takes any OpenAI model id and any
+Gemini model id (`gemini-*`, run once on the PDF like production; one other
+than the production model needs `GEMINI_API_KEY`), and `--stacks`, `--detail`,
+`--effort`, `--limit` and `--parish` work as above.
+
+Every classifier is told today is the Sunday the bulletin is dated to (the
+Sunday nearest the label's published date, else the bulletin's, else the day
+it was fetched), as it would have been the week the bulletin came out, so
+dates like "this Wednesday" resolve as they did then. Results extracted this
+way are cached under that date, apart from ones extracted on the day they ran.
+Production Gemini is the exception until filled: its cached results were
+extracted the week each bulletin was fetched, and serve until
+`--fill-baseline` has extracted a Sunday-dated one (that only calls Gemini
+for bulletins with neither). The report's *Told its Sunday* column counts
+which results were.
+
+```bash
+pnpm bench:labels                                          # every stack, every labeled bulletin
+pnpm bench:labels --stacks pdf --models gpt-6-luna gpt-5.6-luna --detail low high
+pnpm bench:labels --models gemini-3-pro-preview            # another Gemini model beside production
+pnpm compare --labels gemini-flash luna-pymupdf            # score existing runs, no API calls
+```
+
+The report (`data/runs/bench/labels_<ts>.md` and `.json`) gives, per
+classifier:
+
+- **Events found**: precision, recall and F1 at four tiers, each adding
+  fields to the last: *slot* (event type, day, start time, cancelled; a dated
+  event counts as its weekday, so weekly and dated both count), *kind* (also
+  weekly vs dated and the exact date), *church* (also the church) and *exact*
+  (also the end time). Then precision and recall per event type at the slot
+  and kind tiers.
+- **Fields of matched events**: of the events matched at the slot tier (each
+  label row paired with one predicted row, preferring the pairing that agrees
+  on most), the share with the right weekly vs dated, church, end time, page
+  number (where the label has one) and note there or not, plus notes missed
+  and notes invented.
+- **Bulletins**: how many have every event found and every event exact, how
+  many were missed entirely, published-date accuracy, cost per bulletin and
+  model seconds.
+
+The per-bulletin section lists each classifier's missed and extra events and
+the fields it got wrong on matched ones. Each classifier is scored on the
+labeled bulletins it served (the rest are listed under the table): Gemini is
+served from its cache, so pass `--fill-baseline` to extract any labeled
+bulletin it has no result for. Labels' `weeks_of_month` and `season`
+are not scored yet: no classifier outputs them.
+
 The extractors' dependencies are in the optional `bench` group, which
 `pnpm bench` installs on first run (about 2 GB, mostly CPU-only PyTorch for
 Docling). Docling downloads about 0.7 GB of models from Hugging Face on
@@ -497,7 +550,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `schedule_extraction.py` - Gemini schedule extraction
   - `classifiers/` - bulletin → events classifiers for `extract` and `bench`
   - `text_extractors/` - PDF → text extractors the text-based classifiers use
-  - `bench.py` - benchmark of text-extraction stacks against Gemini; `compare.py` its scoring
+  - `bench.py` - benchmark of text-extraction stacks against Gemini or the labels; `compare.py` and `labeling/score.py` its scoring
   - `storage.py` - SQLite helpers and data paths
   - `db.py` - migrations and CSV seeding
   - `blobstore.py` - local/R2 storage for PDFs and cached extractions

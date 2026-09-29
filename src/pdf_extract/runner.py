@@ -119,17 +119,24 @@ def cache_key(
     classifier_version: str,
     content_hash: str,
     churches: list[dict[str, Any]],
+    today: date | None = None,
 ) -> str:
     """Where a result is cached: by classifier version, PDF, and the church list.
 
     The church list is part of the prompt: the classifier files every event
     under one of those slugs. A result extracted against an older list (a
     church renamed or merged since) would name churches that no longer exist.
+
+    `today` is for a result extracted as of a set date (the ground-truth
+    benchmark sends each bulletin its own Sunday). It is part of the prompt
+    too, so such a result gets its own key; results extracted on the day they
+    ran (every other caller) leave it out.
     """
+    dated = f"today-{today.isoformat()}-" if today is not None else ""
     return (
         f"runs/{classifier_name}/cache/"
         f"{_cache_version_component(classifier_version)}/"
-        f"{content_hash}-{_churches_fingerprint(churches)}.json"
+        f"{content_hash}-{dated}{_churches_fingerprint(churches)}.json"
     )
 
 
@@ -138,8 +145,9 @@ def load_cached_result(
     classifier_version: str,
     content_hash: str,
     churches: list[dict[str, Any]],
+    today: date | None = None,
 ) -> dict[str, Any] | None:
-    key = cache_key(classifier_name, classifier_version, content_hash, churches)
+    key = cache_key(classifier_name, classifier_version, content_hash, churches, today)
     try:
         data = get_store().get(key)
     except Exception:
@@ -160,9 +168,10 @@ def store_cached_result(
     content_hash: str,
     churches: list[dict[str, Any]],
     payload: dict[str, Any],
+    today: date | None = None,
 ) -> None:
     """Cache a result. Best effort: a failed write costs a future API call, not this run."""
-    key = cache_key(classifier_name, classifier_version, content_hash, churches)
+    key = cache_key(classifier_name, classifier_version, content_hash, churches, today)
     data = (json.dumps(payload, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
     try:
         get_store().put(key, data, content_type="application/json")
@@ -197,6 +206,7 @@ def iter_extraction_outcomes(
     *,
     concurrency: int = 5,
     today: date | None = None,
+    today_for: Callable[[dict[str, Any]], date | None] | None = None,
 ) -> Iterator[ExtractionOutcome]:
     """Run `extract` over bulletin entries, yielding outcomes in completion order.
 
@@ -204,6 +214,9 @@ def iter_extraction_outcomes(
     single-threaded), and only up to `concurrency` PDFs are resident/in-flight
     at once: some bulletins are large enough that preloading the whole corpus
     can exhaust memory before extraction starts.
+
+    `today_for` gives an entry its own "today" for the prompt; `today` (the
+    real date by default) is for the entries it gives None.
 
     Classifier exceptions are caught and logged, never raised.
     """
@@ -230,7 +243,8 @@ def iter_extraction_outcomes(
                 yield ExtractionOutcome(entry=entry, skipped=True)
                 continue
             fut = pool.submit(
-                extract, prepared.pdf_bytes, churches=prepared.church_list, today=today,
+                extract, prepared.pdf_bytes, churches=prepared.church_list,
+                today=(today_for(entry) if today_for else None) or today,
             )
             futures[fut] = entry
             if len(futures) >= max_workers:

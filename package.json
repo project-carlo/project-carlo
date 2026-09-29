@@ -17,6 +17,7 @@
     "extract": "uv run python -m pdf_extract extract",
     "compare": "uv run python -m pdf_extract compare",
     "bench": "uv run --group bench python -m pdf_extract bench",
+    "bench:labels": "uv run --group bench python -m pdf_extract bench --labels",
     "verify": "uv run python -m pdf_extract verify run",
     "verify:apply": "uv run python -m pdf_extract verify apply",
     "geocode": "uv run python -m pdf_extract geocode run",
