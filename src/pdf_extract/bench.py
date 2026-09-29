@@ -10,7 +10,8 @@ One command (`pnpm bench`) runs the whole comparison:
 3. Runs each stack on those bulletins, for each OpenAI model under test: a
    text extractor (PyMuPDF with an OCR fallback, Docling, or full-page OCR)
    followed by the model reading the text, plus the model reading the PDF
-   itself as a control, once per PDF `detail` and schema mode under test.
+   itself as a control, once per PDF `detail`, schema mode and input under
+   test (the PDF file, or `--pdf-input images`: one rendered image per page).
 4. Scores every stack against the baseline (`compare --baseline`) and writes
    the report under data/runs/bench/.
 
@@ -27,8 +28,14 @@ from datetime import datetime
 from typing import Any
 
 from pdf_extract.blobstore import get_store
-from pdf_extract.classifiers import STACKS, Classifier, stack_classifier, stack_name
-from pdf_extract.classifiers.openai_gpt import FileDetail
+from pdf_extract.classifiers import (
+    STACKS,
+    Classifier,
+    details_for,
+    stack_classifier,
+    stack_name,
+)
+from pdf_extract.classifiers.openai_gpt import ImageDetail, PdfInput
 from pdf_extract.classifiers.text_llm import DEFAULT_REASONING_EFFORT, DEFAULT_TEXT_MODEL
 from pdf_extract.compare import compare, load_manifest
 from pdf_extract.datasync import pull
@@ -44,10 +51,11 @@ BASELINE = "gemini-flash"
 
 DEFAULT_STACKS = ("pymupdf", "docling", "ocr", "pdf")
 DEFAULT_MODELS = (DEFAULT_TEXT_MODEL,)
-# The `pdf` stack sends the bulletin at low detail, with Gemini's exact
+# The `pdf` stack sends the bulletin PDF at low detail, with Gemini's exact
 # schema, unless asked for more.
-DEFAULT_DETAILS: tuple[FileDetail, ...] = ("low",)
+DEFAULT_DETAILS: tuple[ImageDetail, ...] = ("low",)
 DEFAULT_SCHEMAS = ("exact",)
+DEFAULT_PDF_INPUTS: tuple[PdfInput, ...] = ("file",)
 
 
 class BenchError(RuntimeError):
@@ -55,18 +63,31 @@ class BenchError(RuntimeError):
 
 
 def _configurations(
-    stacks: list[str], models: list[str], details: list[FileDetail], schemas: list[str],
-) -> list[tuple[str, str, FileDetail, str]]:
-    """(stack, model, detail, schema) for every run: each model × stack, and the
-    `pdf` stack once per detail and schema mode (the text stacks send no PDF and
-    always ask for strict output, so both are moot for them)."""
-    return [
-        (stack, model, detail, schema)
-        for model in models
-        for stack in stacks
-        for detail in (details if STACKS[stack] is None else details[:1])
-        for schema in (schemas if STACKS[stack] is None else ["exact"])
-    ]
+    stacks: list[str],
+    models: list[str],
+    details: list[ImageDetail],
+    schemas: list[str],
+    pdf_inputs: list[PdfInput],
+) -> list[tuple[str, str, ImageDetail, str, PdfInput]]:
+    """(stack, model, detail, schema, pdf_input) for every run: each model ×
+    stack, and the `pdf` stack once per input, detail and schema mode (the text
+    stacks send no PDF and always ask for strict output, so all three are moot
+    for them). `original` detail only exists for page images, so a PDF file is
+    not sent at it."""
+    configs = []
+    for model in models:
+        for stack in stacks:
+            if STACKS[stack] is not None:
+                configs.append((stack, model, details[0], "exact", "file"))
+                continue
+            for pdf_input in pdf_inputs:
+                for detail in details:
+                    if detail not in details_for(pdf_input):
+                        continue
+                    configs.extend(
+                        (stack, model, detail, schema, pdf_input) for schema in schemas
+                    )
+    return configs
 
 
 def _sample(urls: list[str], limit: int | None, seed: int) -> set[str]:
@@ -81,8 +102,9 @@ def run_bench(
     *,
     stacks: list[str] | None = None,
     models: list[str] | None = None,
-    details: list[FileDetail] | None = None,
+    details: list[ImageDetail] | None = None,
     schemas: list[str] | None = None,
+    pdf_inputs: list[PdfInput] | None = None,
     effort: str | None = DEFAULT_REASONING_EFFORT,
     limit: int | None = None,
     seed: int = 0,
@@ -95,9 +117,18 @@ def run_bench(
     models = list(dict.fromkeys(models or DEFAULT_MODELS))
     details = list(dict.fromkeys(details or DEFAULT_DETAILS))
     schemas = list(dict.fromkeys(schemas or DEFAULT_SCHEMAS))
+    pdf_inputs = list(dict.fromkeys(pdf_inputs or DEFAULT_PDF_INPUTS))
     for stack in stacks:
         if stack not in STACKS:
             raise BenchError(f"Unknown stack {stack!r}. Available: {', '.join(STACKS)}")
+    configurations = _configurations(stacks, models, details, schemas, pdf_inputs)
+    if any(STACKS[stack] is None for stack in stacks) and not any(
+        STACKS[config[0]] is None for config in configurations
+    ):
+        raise BenchError(
+            f"No detail in {details} applies to --pdf-input {' '.join(pdf_inputs)}: "
+            "'original' is for page images (--pdf-input images)."
+        )
     if not os.environ.get("OPENAI_API_KEY"):
         raise BenchError("OPENAI_API_KEY is not set (put it in .env or the environment).")
     if fill_baseline and not os.environ.get("GEMINI_API_KEY"):
@@ -138,12 +169,14 @@ def run_bench(
     names: list[str] = []
     runs: dict[str, Any] = {}
     skipped: dict[str, str] = {}
-    for stack, model, detail, schema in _configurations(stacks, models, details, schemas):
-        label = stack_name(stack, model=model, detail=detail, schema=schema, effort=effort)
+    for stack, model, detail, schema, pdf_input in configurations:
+        settings: dict[str, Any] = {
+            "model": model, "detail": detail, "schema": schema, "effort": effort,
+            "pdf_input": pdf_input,
+        }
+        label = stack_name(stack, **settings)
         try:
-            classifier: Classifier = stack_classifier(
-                stack, model=model, detail=detail, schema=schema, effort=effort,
-            )
+            classifier: Classifier = stack_classifier(stack, **settings)
         except ImportError as exc:
             LOGGER.error("Skipping stack %s: %s", label, exc)
             skipped[label] = str(exc)

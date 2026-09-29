@@ -167,6 +167,9 @@ def test_classifiers_are_registered():
         classifier = get_classifier(name)
         assert classifier.name == name
         assert classifier.version.startswith(version)
+    # Page images at every detail, including original, which PDF files don't take.
+    assert {"luna-pdf-images-low", "luna-pdf-images-original-strict"} <= set(REGISTRY)
+    assert "luna-pdf-original" not in REGISTRY
     # Text stacks keep their names (and so their cached results) for gpt-6-luna.
     assert {"luna-pymupdf", "luna5.6-pymupdf"} <= set(REGISTRY)
 
@@ -205,3 +208,114 @@ def test_strict_mode_sends_the_sdks_strict_schema(monkeypatch):
     assert fake.last_kwargs["input"][0]["content"][1]["detail"] == "low"
     assert classifier.version.startswith("gpt-6-luna+effort-medium+detail-low+strict+")
     assert [ev["start_time"] for ev in out["events"]] == ["9:00 AM"]
+
+
+def _fake_render(monkeypatch) -> list[tuple[bytes, str]]:
+    """Stand in for PyMuPDF: two pages, recording the detail each render asked for."""
+    from pdf_extract.classifiers import page_images
+
+    calls: list[tuple[bytes, str]] = []
+
+    def render(pdf_bytes: bytes, detail: str) -> list[bytes]:
+        calls.append((pdf_bytes, detail))
+        return [b"page-1-png", b"page-2-png"]
+
+    monkeypatch.setattr(page_images, "require_renderer", lambda: None)
+    monkeypatch.setattr(page_images, "render_pages", render)
+    return calls
+
+
+@pytest.mark.parametrize("detail", ["low", "high", "original"])
+def test_images_mode_sends_one_image_per_page_instead_of_the_pdf(monkeypatch, detail):
+    from pdf_extract.classifiers import get_classifier, page_images
+
+    fake = _install_fake(monkeypatch, _one_mass())
+    renders = _fake_render(monkeypatch)
+
+    classifier = get_classifier(f"luna-pdf-images-{detail}")
+    out = classifier.extract(b"%PDF-1.4 x", churches=[], today=date(2026, 5, 4))
+
+    assert renders == [(b"%PDF-1.4 x", detail)]
+    text_part, *image_parts = fake.last_kwargs["input"][0]["content"]
+    assert text_part["type"] == "input_text"
+    assert image_parts == [
+        {
+            "type": "input_image",
+            "image_url": "data:image/png;base64," + base64.b64encode(png).decode(),
+            "detail": detail,
+        }
+        for png in (b"page-1-png", b"page-2-png")
+    ]
+    assert fake.last_kwargs["text"]["format"]["schema"] == SchedulePayload.model_json_schema()
+    assert classifier.version.startswith(
+        f"gpt-6-luna+effort-medium+images-{page_images.RENDER_VERSION}+detail-{detail}+"
+    )
+    assert "render_seconds" in out["timing"]
+    assert [ev["start_time"] for ev in out["events"]] == ["9:00 AM"]
+
+
+def test_images_mode_defaults_to_high_detail(monkeypatch):
+    _fake_render(monkeypatch)
+    assert OpenAIClassifier(model="x", pdf_input="images")._file_detail == "high"
+
+
+def test_original_detail_is_only_for_page_images():
+    with pytest.raises(ValueError, match="original"):
+        OpenAIClassifier(model="x", file_detail="original")
+
+
+def test_images_mode_needs_pymupdf(monkeypatch):
+    import importlib.util
+
+    real_find_spec = importlib.util.find_spec
+    monkeypatch.setattr(
+        importlib.util, "find_spec",
+        lambda name, *a: None if name == "pymupdf" else real_find_spec(name, *a),
+    )
+    with pytest.raises(ImportError, match="uv sync --group bench"):
+        OpenAIClassifier(model="x", pdf_input="images")
+
+
+@pytest.mark.parametrize(
+    ("width_pt", "height_pt"),
+    [(612, 792), (792, 612), (792, 1224), (1224, 1584), (300, 300)],
+)
+def test_pages_render_within_each_detail_levels_limits(width_pt, height_pt):
+    import math
+
+    from pdf_extract.classifiers.page_images import LIMITS, _patches, render_scale
+
+    for detail, limit in LIMITS.items():
+        scale = render_scale(width_pt, height_pt, detail)
+        width, height = math.ceil(width_pt * scale), math.ceil(height_pt * scale)
+        assert max(width, height) <= limit.max_side + 1
+        assert scale <= limit.dpi / 72
+        if limit.max_patches:
+            assert _patches(width, height) <= limit.max_patches
+    # A letter page: 512 px tall at low, just under 2,500 patches at high, 300 dpi original.
+    assert round(612 * render_scale(612, 792, "low")) == 396
+    assert 2400 < _patches(1379, 1784) <= 2500
+    assert render_scale(612, 792, "high") == pytest.approx(1379 / 612, rel=1e-2)
+    assert render_scale(612, 792, "original") == pytest.approx(300 / 72)
+
+
+def test_render_pages_makes_one_png_per_page():
+    pymupdf = pytest.importorskip("pymupdf")
+    from pdf_extract.classifiers.page_images import render_pages
+
+    doc = pymupdf.open()
+    doc.new_page(width=612, height=792).insert_text((72, 72), "Sunday Mass 9:00 AM")
+    doc.new_page(width=792, height=612)
+    pdf_bytes = doc.tobytes()
+
+    sizes = {}
+    for detail in ("low", "high", "original"):
+        pngs = render_pages(pdf_bytes, detail)
+        assert len(pngs) == 2
+        assert all(png.startswith(b"\x89PNG") for png in pngs)
+        sizes[detail] = [
+            (pix.width, pix.height) for pix in (pymupdf.Pixmap(png) for png in pngs)
+        ]
+    assert sizes["low"] == [(396, 512), (512, 396)]
+    assert max(sizes["high"][0]) <= 2048
+    assert sizes["original"][0] == (2550, 3300)

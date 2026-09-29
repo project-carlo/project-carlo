@@ -288,3 +288,40 @@ def test_bench_runs_the_pdf_stack_per_schema_mode(
     assert set(result["stacks"]) == {"luna-pymupdf", "luna-pdf-low", "luna-pdf-low-strict"}
     pdf_requests = [r for r in fake_openai.requests if "text" in r]
     assert sorted(r["text"]["format"]["strict"] for r in pdf_requests) == [False, True]
+
+
+def test_bench_runs_the_pdf_stack_per_input(
+    pipeline_dir, fake_openai, fake_extractor, monkeypatch,
+):
+    from pdf_extract.classifiers import page_images
+
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    _seed_bulletins(monkeypatch)
+    monkeypatch.setattr(page_images, "require_renderer", lambda: None)
+    monkeypatch.setattr(page_images, "render_pages", lambda pdf, detail: [b"p1", b"p2", b"p3"])
+
+    result = bench.run_bench(
+        stacks=["pymupdf", "pdf"], pdf_inputs=["file", "images"],
+        details=["low", "original"], concurrency=2,
+    )
+
+    # `original` is sent only as page images; text stacks have no input to vary.
+    assert set(result["stacks"]) == {
+        "luna-pymupdf", "luna-pdf-low", "luna-pdf-images-low", "luna-pdf-images-original",
+    }
+    pdf_requests = [r for r in fake_openai.requests if "text" in r]
+    sent = sorted(
+        tuple(part["type"] + ":" + part["detail"] for part in r["input"][0]["content"][1:])
+        for r in pdf_requests
+    )
+    assert sent == [
+        ("input_file:low",),
+        ("input_image:low",) * 3,
+        ("input_image:original",) * 3,
+    ]
+
+
+def test_bench_rejects_original_detail_for_the_pdf_file(pipeline_dir, monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    with pytest.raises(bench.BenchError, match="--pdf-input images"):
+        bench.run_bench(stacks=["pdf"], details=["original"])
