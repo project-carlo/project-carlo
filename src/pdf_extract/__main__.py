@@ -58,6 +58,7 @@ from pdf_extract.fetch_check import check_fetch
 from pdf_extract.geocode import run_backfill
 from pdf_extract.labeling.demo import build_demo
 from pdf_extract.labeling.labels import LABELS_DIR
+from pdf_extract.labeling.score import score_against_labels
 from pdf_extract.labeling.server import DEFAULT_PORT as LABELER_PORT
 from pdf_extract.labeling.server import LabelerApp
 from pdf_extract.labeling.server import serve as serve_labeler
@@ -161,6 +162,11 @@ def _cmd_extract(args: argparse.Namespace) -> Result:
 
 
 def _cmd_compare(args: argparse.Namespace) -> Result:
+    if args.labels:
+        report = score_against_labels(
+            args.classifiers, out_path=Path(args.out) if args.out else None,
+        )
+        return {key: report[key] for key in ("labels", "classifiers", "report_json", "report_markdown")}
     return compare(
         args.classifiers,
         out_path=Path(args.out) if args.out else None,
@@ -180,6 +186,7 @@ def _cmd_bench(args: argparse.Namespace) -> Result:
         concurrency=args.concurrency,
         fill_baseline=args.fill_baseline,
         refresh_data=args.refresh_data,
+        labels=args.labels,
     )
 
 
@@ -383,7 +390,8 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     compare_parser.add_argument(
         "classifiers", nargs="+",
-        help="Two or more classifier names to compare (must each have a run dir)",
+        help="Two or more classifier names to compare (must each have a run dir); "
+        "one is enough with --labels",
     )
     compare_parser.add_argument(
         "--out", type=str, default=None,
@@ -392,6 +400,10 @@ def _build_parser() -> argparse.ArgumentParser:
     compare_parser.add_argument(
         "--baseline", default=None,
         help="Score every other classifier against this one (precision/recall/F1, cost)",
+    )
+    compare_parser.add_argument(
+        "--labels", action="store_true",
+        help="Score each run against the done labels in data/labels/ instead",
     )
     compare_parser.set_defaults(handler=_cmd_compare)
     _add_common_args(compare_parser)
@@ -407,8 +419,9 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     bench_parser.add_argument(
         "--models", "--model", nargs="+", default=list(DEFAULT_MODELS),
-        help="OpenAI models to run every stack with, e.g. "
-        f"{' '.join(BENCH_MODELS)} (default: {' '.join(DEFAULT_MODELS)})",
+        help="Models to run every stack with: OpenAI ids, e.g. "
+        f"{' '.join(BENCH_MODELS)} (default: {' '.join(DEFAULT_MODELS)}), or Gemini ids "
+        f"(gemini-*), which read the PDF once like production, e.g. {DEFAULT_GEMINI_MODEL}",
     )
     bench_parser.add_argument(
         "--detail", nargs="+", choices=list(PDF_DETAILS), default=list(DEFAULT_DETAILS),
@@ -433,6 +446,11 @@ def _build_parser() -> argparse.ArgumentParser:
     bench_parser.add_argument(
         "--fill-baseline", action="store_true",
         help="Call Gemini for bulletins with no cached baseline (needs GEMINI_API_KEY)",
+    )
+    bench_parser.add_argument(
+        "--labels", action="store_true",
+        help="Benchmark the bulletins labeled done in data/labels/ and score every "
+        "configuration, production Gemini included, against the labels",
     )
     bench_parser.add_argument(
         "--refresh-data", action="store_true",

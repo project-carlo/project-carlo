@@ -63,6 +63,7 @@ def run(
     parish_name: str | None = None,
     concurrency: int = 5,
     source_urls: set[str] | None = None,
+    bulletins: set[tuple[str, str]] | None = None,
     cache_only: bool = False,
 ) -> dict[str, Any]:
     """Run a classifier over the fetched bulletin corpus.
@@ -71,7 +72,9 @@ def run(
     Always rebuilds the run's events.json from the cache so it stays in sync.
 
     Pass a registered `classifier_name`, or a configured `classifier` instance.
-    `source_urls` limits the run to those bulletins; `cache_only` serves cached
+    `source_urls` limits the run to those bulletins. `bulletins` instead picks
+    exactly these (parish slug, content hash) PDFs, latest or not (the labeled
+    bulletins of a ground-truth benchmark); `cache_only` serves cached
     results and skips the rest instead of calling the classifier (the benchmark
     reads the Gemini baseline this way, from what the weekly job already paid for).
     """
@@ -97,7 +100,10 @@ def run(
 
     conn = connect_db()
     try:
-        candidates = latest_per_parish(load_bulletins(conn))
+        if bulletins is None:
+            candidates = latest_per_parish(load_bulletins(conn))
+        else:
+            candidates = _pick_bulletins(load_bulletins(conn), bulletins)
         if parish_name:
             parish_row = get_parish_by_name(conn, parish_name)
             if not parish_row:
@@ -182,6 +188,7 @@ def run(
                     if isinstance(entry.get("published_date"), str)
                     else None
                 ),
+                "content_hash": entry["content_hash"],
                 "event_count": len(rows),
                 "wrong_bulletin": bool(result.get("wrong_bulletin")),
                 "published_date_extracted": result.get("published_date"),
@@ -217,6 +224,24 @@ def run(
 
     LOGGER.info("Extract run finished: %s", summary)
     return summary
+
+
+def _pick_bulletins(
+    rows: list[dict[str, Any]], wanted: set[tuple[str, str]],
+) -> list[dict[str, Any]]:
+    """One bulletin row per wanted (parish slug, content hash): the latest fetched.
+
+    A PDF fetched under two URLs is one bulletin; its latest row stands for it.
+    """
+    picked: dict[tuple[str, str], dict[str, Any]] = {}
+    for row in rows:
+        key = (row.get("parish_slug"), row.get("content_hash"))
+        if key not in wanted:
+            continue
+        current = picked.get(key)
+        if current is None or str(row.get("fetched_at") or "") >= str(current.get("fetched_at") or ""):
+            picked[key] = row
+    return list(picked.values())
 
 
 def _summary(classifier: Classifier, **counters: Any) -> dict[str, Any]:

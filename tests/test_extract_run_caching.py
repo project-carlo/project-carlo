@@ -104,6 +104,7 @@ def test_first_run_calls_classifier_and_writes_outputs(seeded_run):
             "pdf_path": "data/bulletins/test-parish/hash-abc.pdf",
             "parish_slug": "test-parish",
             "published_date": None,
+            "content_hash": "hash-abc",
             "event_count": 1,
             "wrong_bulletin": False,
             "published_date_extracted": None,
