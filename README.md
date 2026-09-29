@@ -449,6 +449,17 @@ Gemini model id (`gemini-*`, run once on the PDF like production; one other
 than the production model needs `GEMINI_API_KEY`), and `--stacks`, `--detail`,
 `--effort`, `--limit` and `--parish` work as above.
 
+Every classifier is told today is the Sunday the bulletin is dated to (the
+Sunday nearest the label's published date, else the bulletin's, else the day
+it was fetched), as it would have been the week the bulletin came out, so
+dates like "this Wednesday" resolve as they did then. Results extracted this
+way are cached under that date, apart from ones extracted on the day they ran.
+Production Gemini is the exception until filled: its cached results were
+extracted the week each bulletin was fetched, and serve until
+`--fill-baseline` has extracted a Sunday-dated one (that only calls Gemini
+for bulletins with neither). The report's *Told its Sunday* column counts
+which results were.
+
 ```bash
 pnpm bench:labels                                          # every stack, every labeled bulletin
 pnpm bench:labels --stacks pdf --models gpt-6-luna gpt-5.6-luna --detail low high
@@ -478,7 +489,7 @@ The per-bulletin section lists each classifier's missed and extra events and
 the fields it got wrong on matched ones. Each classifier is scored on the
 labeled bulletins it served (the rest are listed under the table): Gemini is
 served from its cache, so pass `--fill-baseline` to extract any labeled
-bulletin it has no current result for. Labels' `weeks_of_month` and `season`
+bulletin it has no result for. Labels' `weeks_of_month` and `season`
 are not scored yet: no classifier outputs them.
 
 The extractors' dependencies are in the optional `bench` group, which

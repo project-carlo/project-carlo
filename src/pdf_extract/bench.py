@@ -17,7 +17,8 @@ One command (`pnpm bench`) runs the whole comparison:
 With `--labels` the hand-made labels in data/labels/ are the truth instead:
 the corpus is every bulletin labeled `done` (latest or not), Gemini is scored
 beside the stacks rather than against them, and the report comes from
-`labeling.score` (data/runs/labels/).
+`labeling.score` (data/runs/labels/). Every classifier is told today is the
+Sunday the bulletin is dated to (see `bulletin_sunday`), not the day it runs.
 
 `--models` takes any OpenAI model id, and any Gemini model id (`gemini-*`),
 which reads the PDF the way production does: once, whatever the stacks.
@@ -31,7 +32,8 @@ from __future__ import annotations
 import logging
 import os
 import random
-from datetime import datetime
+from collections.abc import Callable
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -113,6 +115,28 @@ def _labeled_sample(
     ordered = sorted(keys)
     by_id = {"/".join(key): key for key in ordered}
     return {by_id[k] for k in _sample(list(by_id), limit, seed)}
+
+
+def nearest_sunday(day: date) -> date:
+    """The Sunday closest to `day` (itself, if it is one)."""
+    ahead = (6 - day.weekday()) % 7
+    return day + timedelta(days=ahead if ahead <= 3 else ahead - 7)
+
+
+def bulletin_sunday(label: dict[str, Any] | None, entry: dict[str, Any]) -> date | None:
+    """The Sunday a bulletin is dated to: from its label's published date, else
+    the one the database has, else the day it was fetched (bulletins are
+    fetched the week they come out)."""
+    for raw in (
+        (label or {}).get("published_date"),
+        entry.get("published_date"),
+        str(entry.get("fetched_at") or "")[:10],
+    ):
+        try:
+            return nearest_sunday(date.fromisoformat(raw))
+        except (TypeError, ValueError):
+            continue
+    return None
 
 
 def _sample(urls: list[str], limit: int | None, seed: int) -> set[str]:
@@ -237,13 +261,21 @@ def _run_against_labels(
     """
     sample = _labeled_sample(labels_dir, limit, seed, parish_name)
     LOGGER.info("Benchmarking %d labeled bulletins against ground truth", len(sample))
+    truth = load_truth(labels_dir)
+
+    def today_for(entry: dict[str, Any]) -> date | None:
+        return bulletin_sunday(truth.get((entry["parish_slug"], entry["content_hash"])), entry)
+
     configurations = [
         ("pdf", DEFAULT_GEMINI_MODEL, details[0]),
         *(c for c in _configurations(stacks, models, details) if c[1] != DEFAULT_GEMINI_MODEL),
     ]
     runs, skipped = _run_stacks(
         configurations, effort=effort, concurrency=concurrency, bulletins=sample,
-        cache_only={BASELINE: not fill_baseline},
+        cache_only={BASELINE: not fill_baseline}, today_for=today_for,
+        # Production's results were extracted the week each bulletin was
+        # fetched; they stand in for the Sunday-dated ones until filled.
+        undated_fallback={BASELINE},
     )
     names = [name for name, summary in runs.items() if summary["bulletins_served"]]
     if not names:
@@ -272,6 +304,8 @@ def _run_stacks(
     source_urls: set[str] | None = None,
     bulletins: set[tuple[str, str]] | None = None,
     cache_only: dict[str, bool] | None = None,
+    today_for: Callable[[dict[str, Any]], date | None] | None = None,
+    undated_fallback: set[str] | None = None,
 ) -> tuple[dict[str, Any], dict[str, str]]:
     """Run each configuration on the sample: (run summaries by name, skipped with why)."""
     runs: dict[str, Any] = {}
@@ -291,6 +325,7 @@ def _run_stacks(
         summary = run_extract(
             classifier=classifier, source_urls=source_urls, bulletins=bulletins,
             concurrency=concurrency, cache_only=(cache_only or {}).get(classifier.name, False),
+            today_for=today_for, undated_fallback=classifier.name in (undated_fallback or set()),
         )
         runs[classifier.name] = summary
         if not summary["bulletins_served"]:

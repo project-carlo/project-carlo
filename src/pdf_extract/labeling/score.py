@@ -271,6 +271,11 @@ def score_classifier(name: str, truth: dict[BulletinKey, dict[str, Any]]) -> dic
         "bulletins_exact": exact_bulletins,
         "bulletins_missed_entirely": missed_entirely,
         "published_date": _rate(sum(dates), len(dates)),
+        # Told today was the bulletin's Sunday (`bench --labels`); None: not recorded.
+        "bulletins_as_of_sunday": (
+            sum(bool(row["extracted_as_of"]) for _, row in served.values())
+            if any("extracted_as_of" in row for _, row in served.values()) else None
+        ),
         "cost_usd_per_bulletin": round(statistics.fmean(costs), 5) if costs else None,
         "llm_seconds_mean": round(statistics.fmean(llm_seconds), 3) if llm_seconds else None,
         "per_bulletin": sorted(per_bulletin, key=lambda b: (b["slot_f1"] or 0.0, b["parish_slug"])),
@@ -394,17 +399,24 @@ def format_markdown(report: dict[str, Any]) -> str:
         "### Bulletins",
         "",
         "| Classifier | All events found (slot) | All events exact | Missed entirely "
-        "| Published date | $/bulletin | LLM s |",
-        "|---|---:|---:|---:|---:|---:|---:|",
+        "| Published date | Told its Sunday | $/bulletin | LLM s |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
     ])
     for r in rows:
         cost = r["cost_usd_per_bulletin"]
+        as_of = r["bulletins_as_of_sunday"]
+        told = "–" if as_of is None else f"{as_of}/{r['bulletins_scored']}"
         lines.append(
             f"| {r['classifier']} | {r['bulletins_exact']['slot']}/{r['bulletins_scored']} "
             f"| {r['bulletins_exact']['exact']}/{r['bulletins_scored']} "
             f"| {len(r['bulletins_missed_entirely'])} | {_pct(r['published_date'])} "
+            f"| {told} "
             f"| {'–' if cost is None else f'${cost:.5f}'} | {_f(r['llm_seconds_mean'])} |"
         )
+    if any(r["bulletins_as_of_sunday"] not in (None, r["bulletins_scored"]) for r in rows):
+        lines.extend(["", "*Told its Sunday*: results extracted with today set to the Sunday "
+                      "the bulletin is dated to; the rest were extracted the day they ran "
+                      "(production Gemini: the week the bulletin was fetched)."])
     partial = [r for r in rows if r["bulletins_not_served"]]
     if partial:
         lines.extend(["", "Scored only on the labeled bulletins each classifier served; missing: "

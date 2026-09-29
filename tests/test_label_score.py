@@ -186,18 +186,41 @@ def test_bench_against_labels_runs_the_labeled_bulletin_even_when_not_latest(
         "church_list_needs_review": False, "usage": {"prompt_tokens": 10, "output_tokens": 5},
     })
 
+    # A luna result extracted on the day it ran is not one extracted as of the
+    # bulletin's Sunday, so it must not be served.
+    luna = bench._classifier("pdf", "gpt-6-luna", "low", bench.DEFAULT_REASONING_EFFORT)
+    store_cached_result(luna.name, luna.version, HASH_OLD, churches, {"events": []})
+
     result = bench.run_bench(stacks=["pdf"], labels=True, concurrency=1)
 
     assert result["bulletins"] == 1
     assert set(result["stacks"]) == {"gemini-flash", "luna-pdf-low"}
     assert result["stacks"]["gemini-flash"]["api_calls"] == 0
     assert len(fake_openai.requests) == 1
+    # Told today is the Sunday the label dates the bulletin to, not the real date.
+    prompt = fake_openai.requests[0]["input"][0]["content"][0]["text"]
+    assert "2026-09-20" in prompt and "Sunday" in prompt
     report = json.loads(Path(result["report_json"]).read_text(encoding="utf-8"))
     rows = {r["classifier"]: r for r in report["results"]}
+    assert rows["luna-pdf-low"]["bulletins_as_of_sunday"] == 1
+    # Gemini is served the weekly job's result, extracted the week it was fetched.
+    assert rows["gemini-flash"]["bulletins_as_of_sunday"] == 0
     assert rows["gemini-flash"]["tiers"]["exact"]["f1"] == 1.0
     # The fake model finds the Sunday Mass only.
     assert rows["luna-pdf-low"]["tiers"]["slot"]["recall"] == 0.5
     assert rows["luna-pdf-low"]["tiers"]["slot"]["precision"] == 1.0
+
+
+def test_the_date_sent_is_the_nearest_sunday():
+    from datetime import date
+
+    assert bench.nearest_sunday(date(2026, 9, 27)) == date(2026, 9, 27)
+    assert bench.nearest_sunday(date(2026, 10, 3)) == date(2026, 10, 4)  # Saturday
+    assert bench.nearest_sunday(date(2026, 9, 29)) == date(2026, 9, 27)  # Tuesday
+    # No published date on the label or bulletin: the week it was fetched.
+    entry = {"published_date": None, "fetched_at": "2026-09-23T10:00:00Z"}
+    assert bench.bulletin_sunday({"published_date": None}, entry) == date(2026, 9, 20)
+    assert bench.bulletin_sunday({"published_date": "2026-10-04"}, entry) == date(2026, 10, 4)
 
 
 def test_gemini_models_run_once_on_the_pdf():

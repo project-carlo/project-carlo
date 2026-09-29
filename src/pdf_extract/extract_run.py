@@ -16,6 +16,8 @@ from __future__ import annotations
 import json
 import logging
 import time
+from collections.abc import Callable
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -65,6 +67,8 @@ def run(
     source_urls: set[str] | None = None,
     bulletins: set[tuple[str, str]] | None = None,
     cache_only: bool = False,
+    today_for: Callable[[dict[str, Any]], date | None] | None = None,
+    undated_fallback: bool = False,
 ) -> dict[str, Any]:
     """Run a classifier over the fetched bulletin corpus.
 
@@ -77,6 +81,13 @@ def run(
     bulletins of a ground-truth benchmark); `cache_only` serves cached
     results and skips the rest instead of calling the classifier (the benchmark
     reads the Gemini baseline this way, from what the weekly job already paid for).
+
+    `today_for` gives each bulletin the date the classifier is told is today
+    (None: the real date), and results made that way are cached under it. With
+    `undated_fallback`, a bulletin with no result for its date is served one
+    extracted on the day it ran, if there is one (the weekly job's Gemini
+    results, extracted the week each bulletin was fetched). The manifest
+    records the date each served result was extracted as of, when set.
     """
     if classifier is None:
         if classifier_name is None:
@@ -97,6 +108,7 @@ def run(
     errors: list[dict[str, str]] = []
     cached_results: dict[str, dict[str, Any]] = {}  # source_url -> classifier output
     fresh_urls: set[str] = set()  # results paid for in this run
+    served_as_of: dict[str, date | None] = {}  # source_url -> the "today" it was extracted as of
 
     conn = connect_db()
     try:
@@ -125,10 +137,17 @@ def run(
                 )
                 skipped += 1
                 continue
+            churches = churches_for_parish(conn, entry["parish_slug"])
+            today = today_for(entry) if today_for else None
             cached = load_cached_result(
-                classifier.name, classifier.version, content_hash,
-                churches_for_parish(conn, entry["parish_slug"]),
+                classifier.name, classifier.version, content_hash, churches, today,
             )
+            if cached is None and today is not None and undated_fallback:
+                cached = load_cached_result(
+                    classifier.name, classifier.version, content_hash, churches,
+                )
+                today = None
+            served_as_of[entry["source_url"]] = today
             if cached is not None:
                 cached_results[entry["source_url"]] = cached
                 cache_hits += 1
@@ -139,7 +158,7 @@ def run(
 
         # Pass 2: run the classifier on cache misses, with bounded concurrency.
         for outcome in iter_extraction_outcomes(
-            pending, conn, classifier.extract, concurrency=concurrency,
+            pending, conn, classifier.extract, concurrency=concurrency, today_for=today_for,
         ):
             if outcome.skipped:
                 skipped += 1
@@ -158,6 +177,10 @@ def run(
                 outcome.entry["content_hash"],
                 churches_for_parish(conn, outcome.entry["parish_slug"]),
                 outcome.extracted,
+                today_for(outcome.entry) if today_for else None,
+            )
+            served_as_of[outcome.entry["source_url"]] = (
+                today_for(outcome.entry) if today_for else None
             )
             cached_results[outcome.entry["source_url"]] = outcome.extracted
             fresh_urls.add(outcome.entry["source_url"])
@@ -174,30 +197,32 @@ def run(
             continue
         rows = flatten_extracted_events(entry, result)
         events.extend(rows)
-        served_bulletins.append(
-            {
-                "bulletin_source_url": entry["source_url"],
-                "pdf_path": (
-                    DATA_DIR / bulletin_pdf_key(entry["parish_slug"], entry["content_hash"])
-                ).as_posix(),
-                "parish_slug": entry.get("parish_slug")
-                if isinstance(entry.get("parish_slug"), str)
-                else None,
-                "published_date": (
-                    entry.get("published_date")
-                    if isinstance(entry.get("published_date"), str)
-                    else None
-                ),
-                "content_hash": entry["content_hash"],
-                "event_count": len(rows),
-                "wrong_bulletin": bool(result.get("wrong_bulletin")),
-                "published_date_extracted": result.get("published_date"),
-                "cache_hit": entry["source_url"] not in fresh_urls,
-                "usage": result.get("usage") or {},
-                "timing": result.get("timing") or {},
-                "text_chars": result.get("text_chars"),
-            }
-        )
+        row = {
+            "bulletin_source_url": entry["source_url"],
+            "pdf_path": (
+                DATA_DIR / bulletin_pdf_key(entry["parish_slug"], entry["content_hash"])
+            ).as_posix(),
+            "parish_slug": entry.get("parish_slug")
+            if isinstance(entry.get("parish_slug"), str)
+            else None,
+            "published_date": (
+                entry.get("published_date")
+                if isinstance(entry.get("published_date"), str)
+                else None
+            ),
+            "content_hash": entry["content_hash"],
+            "event_count": len(rows),
+            "wrong_bulletin": bool(result.get("wrong_bulletin")),
+            "published_date_extracted": result.get("published_date"),
+            "cache_hit": entry["source_url"] not in fresh_urls,
+            "usage": result.get("usage") or {},
+            "timing": result.get("timing") or {},
+            "text_chars": result.get("text_chars"),
+        }
+        if today_for:
+            as_of = served_as_of.get(entry["source_url"])
+            row["extracted_as_of"] = as_of.isoformat() if as_of else None
+        served_bulletins.append(row)
 
     save_json_list(events_path(classifier.name), events)
     save_json_list(bulletins_path(classifier.name), served_bulletins)
