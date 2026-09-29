@@ -2,7 +2,7 @@
   "name": "project-carlo",
   "private": true,
   "version": "0.0.0",
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@12.7.0+sha512.9c56477e360068d6e9dca6a92efb4e46b3dc5a52fcebf3d84d78b9736c0ded589a561621a52f68219a7a39facc63cdc079c3226ef9c9d5f02b79f74e69a807b6",
   "scripts": {
     "db:drop": "uv run python -m pdf_extract db drop",
     "db:create": "uv run python -m pdf_extract db create",
@@ -12,6 +12,7 @@
     "detect": "uv run python -m pdf_extract detect run",
     "detect:apply": "uv run python -m pdf_extract detect apply",
     "fetch": "uv run python -m pdf_extract fetch",
+    "fetch:check": "uv run python -m pdf_extract fetch-check",
     "process": "uv run python -m pdf_extract process",
     "extract": "uv run python -m pdf_extract extract",
     "compare": "uv run python -m pdf_extract compare",
@@ -33,6 +34,12 @@
     "preview:web": "pnpm --filter web preview",
     "lint:web": "pnpm --filter web lint",
     "check:web": "pnpm --filter web check",
-    "perf:web": "pnpm --filter web perf"
+    "perf:web": "pnpm --filter web perf",
+    "label": "pnpm --filter labeler build && uv run python -m pdf_extract label serve",
+    "dev:labeler": "pnpm --filter labeler dev",
+    "build:labeler": "pnpm --filter labeler build",
+    "lint:labeler": "pnpm --filter labeler lint",
+    "check:labeler": "pnpm --filter labeler check",
+    "test:labeler": "pnpm --filter labeler test"
   }
 }

@@ -856,9 +856,17 @@ def _check_drift(d: Diocese, owners: _Owners, p: Problems) -> None:
                                   f"{', '.join(differ)}; run `diocese promote` to reconcile")
 
 
-def _commit(before: Diocese, after: Diocese) -> dict[str, Any]:
-    """Save `after` unless it adds errors; return what changed and the new warnings."""
-    if before.unreadable:
+def _commit(before: Diocese, after: Diocese, *, tolerate_unreadable: bool = False
+            ) -> dict[str, Any]:
+    """Save `after` unless it adds errors; return what changed and the new warnings.
+
+    A file that doesn't parse blocks commands that move references between
+    files (merge, rename, exclude): they could miss the ones inside it. Changes
+    confined to readable records (a new file, roster links) pass
+    `tolerate_unreadable`, so one half-written file doesn't stop everyone
+    else's work; the unparseable files are named in the warnings.
+    """
+    if before.unreadable and not tolerate_unreadable:
         raise DioceseError("fix these files first; they do not parse:\n  "
                            + "\n  ".join(before.unreadable))
     owners = _owners(after.slug)
@@ -870,7 +878,8 @@ def _commit(before: Diocese, after: Diocese) -> dict[str, Any]:
         raise DioceseError("refused, nothing was written:\n  " + "\n  ".join(added))
     changes = _save(before, after)
     return {**changes, "warnings": [w for w in new.warnings + new.incomplete
-                                    if w not in old.warnings + old.incomplete]}
+                                    if w not in old.warnings + old.incomplete]
+            + [f"does not parse (left alone): {u}" for u in before.unreadable]}
 
 
 def _get(d: Diocese, kind: Kind, slug: str) -> dict[str, Any]:
@@ -941,11 +950,12 @@ def new_record(diocese: str, kind_name: str, fields: Mapping[str, Any], *,
     record["body"] = body if body is not None else kind.template
 
     before = load(diocese)
-    if slug in before.of(kind):
+    # the file on disk, not the loaded records: an unparseable one isn't loaded
+    if slug in before.of(kind) or (diocese_dir(diocese) / kind.dir / f"{slug}.md").exists():
         raise DioceseError(f"{kind.dir}/{slug}.md already exists; edit it, or pick another slug")
     after = before.copy()
     after.of(kind)[slug] = record
-    result = _commit(before, after)
+    result = _commit(before, after, tolerate_unreadable=True)
     return {"created": f"{kind.dir}/{slug}.md", "diocese": diocese, "slug": slug, **result}
 
 

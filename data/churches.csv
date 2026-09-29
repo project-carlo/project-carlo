@@ -25,14 +25,14 @@ transfiguration-st-catherine-mendon,st-catherine-of-siena-mendon,St. Catherine o
 st-monica-emmanuel,st-monica,St. Monica Church,34 Monica Street,,Rochester,NY,14619,,,43.1340859,-77.6370623
 good-shepherd-catholic-community,st-patricks-moravia,St. Patrick's Church,51 Grove Street,,Moravia,NY,13118,true,false,42.7094458,-76.424062
 good-shepherd-catholic-community,st-patricks-aurora,St. Patrick's Church,303 Main Street,,Aurora,NY,13026,true,false,42.7094458,-76.424062
-good-shepherd-catholic-community,our-lady-of-the-lake,Our Lady of the Lake,8695 State Route 90,,King Ferry,NY,13081,true,false,,
+good-shepherd-catholic-community,our-lady-of-the-lake,Our Lady of the Lake,8695 State Route 90,,King Ferry,NY,13081,true,false,42.6660431,-76.6226474
 good-shepherd-catholic-community,st-michaels,St. Michael's Church,162 Cayuga Street,,Union Springs,NY,13160,true,false,42.842092,-76.691891
 holy-apostles,holy-apostles,Holy Apostles Church,530 Lyell Avenue,,Rochester,NY,14606,,,43.1650075,-77.6436876
 our-mother-of-sorrows-holy-cross,our-mother-of-sorrows,Our Mother of Sorrows,5000 Mount Read Boulevard,,Rochester,NY,14612,true,true,43.2516358,-77.6590211
 our-mother-of-sorrows-holy-cross,holy-cross-rochester,Holy Cross Church,4492 Lake Avenue,,Rochester,NY,14612,true,true,43.2528157,-77.6120689
 holy-family-catholic-community,st-joseph-wayland,St. Joseph Church,208 Fremont Street,,Wayland,NY,14572,,,42.5686758,-77.5951581
 holy-family-catholic-community,st-mary-dansville,St. Mary Church,38 Elizabeth Street,,Dansville,NY,14437,,,42.5603868,-77.6928581
-holy-family-catholic-community,sacred-heart-of-jesus,Sacred Heart of Jesus Church,11114 Chapel Street,,Perkinsville,NY,14529,,,,
+holy-family-catholic-community,sacred-heart-of-jesus,Sacred Heart of Jesus Church,11114 Chapel Street,,Perkinsville,NY,14529,,,42.5406875,-77.6273125
 holy-family-catholic-community,st-pius-v,St. Pius V Church,35 Maple Avenue,,Cohocton,NY,14826,,,42.5008445,-77.496703
 holy-trinity-webster,holy-trinity,Holy Trinity Church,1460 Ridge Road,,Webster,NY,14580,,,43.2145951,-77.4162619
 immaculate-conception-ithaca,immaculate-conception,Immaculate Conception Church,113 North Geneva Street,,Ithaca,NY,14850,true,true,42.4401742,-76.500315
@@ -90,7 +90,7 @@ st-john-of-rochester,st-john-of-rochester,St. John of Rochester,8 Wickford Way,,
 st-john-greece,st-john-evangelist-greece,St. John the Evangelist,2400 West Ridge Road,,Rochester,NY,14626,true,true,43.2098184,-77.6918912
 st-john-spencerport,st-john-evangelist-spencerport,St. John the Evangelist,55 Martha Street,,Spencerport,NY,14559,,,43.1938664,-77.8039002
 st-john-vianney,st-marys-bath,St. Mary's Church,32 East Morris Street,,Bath,NY,14810,,,42.3321338,-77.3157969
-st-john-vianney,st-gabriels,St. Gabriel's Church,78 Shethar Street,,Hammondsport,NY,14840,,,,
+st-john-vianney,st-gabriels,St. Gabriel's Church,78 Shethar Street,,Hammondsport,NY,14840,,,42.4088094,-77.2254236
 catholic-parishes-eastern-wayne-county,st-john-evangelist-clyde,St. John the Evangelist,114 Sodus Street,,Clyde,NY,14433,true,false,43.0866606,-76.8703443
 catholic-parishes-eastern-wayne-county,st-michael-lyons,St. Michael,3 Holley Street,,Lyons,NY,14489,true,false,43.0674625,-76.9882325
 catholic-parishes-eastern-wayne-county,st-patrick-savannah,St. Patrick,52 Clyde Street,,Savannah,NY,13146,false,false,,
@@ -131,3 +131,415 @@ st-theodores-gates,st-theodores,St. Theodore's Catholic Church,168 Spencerport R
 our-lady-of-the-snow-saints-mary-and-martha,st-marys-auburn,St. Mary's Church,15 Clark Street,,Auburn,NY,13021,,,42.9316058,-76.5696618
 sacred-heart-auburn-cluster,holy-family-auburn,Holy Family Church,85 North St.,,Auburn,NY,13021,,,42.9359435,-76.5669228
 most-holy-name-of-jesus,eucharistic-adoration-chapel-elmira,Eucharistic Adoration Chapel,1012 Davis St.,,Elmira,NY,14901,,,42.101813,-76.8210736
+beloved-disciples-lancaster,our-lady-of-pompeii-lancaster,Our Lady of Pompeii Church,158 Laverack Avenue,,Lancaster,NY,14086,true,false,42.9080625,-78.6801875
+beloved-disciples-lancaster,st-martha-depew,St. Martha Church,10 French Road,,Depew,NY,14043,true,true,42.9191875,-78.7141875
+beloved-disciples-lancaster,st-mary-assumption-lancaster,St. Mary of the Assumption Church,1 St. Mary's Hill,,Lancaster,NY,14086,true,true,42.9036875,-78.6759375
+beloved-disciples-lancaster,st-philip-the-apostle-cheektowaga,St. Philip the Apostle Church,950 Losson Road,,Cheektowaga,NY,14227,true,true,42.8813125,-78.7251875
+blessed-family-7-west-seneca,fourteen-holy-helpers-west-seneca,Fourteen Holy Helpers Church,1345 Indian Church Road,,West Seneca,NY,14224,true,true,42.8534375,-78.7565625
+blessed-family-7-west-seneca,queen-of-heaven-west-seneca,Queen of Heaven Church,4220 Seneca Street,,West Seneca,NY,14224,true,true,42.8319375,-78.7489375
+blessed-family-7-west-seneca,st-john-vianney-orchard-park,St. John Vianney Church,2950 Southwestern Boulevard,,Orchard Park,NY,14127,true,true,42.8063125,-78.7359375
+blessed-trinity-buffalo,blessed-trinity-buffalo,Blessed Trinity Church,317 Leroy Avenue,,Buffalo,NY,14214,true,true,42.9326875,-78.8336875
+bread-of-life-catholic-community,christ-the-king-snyder,Christ the King Church,30 Lamarck Drive,,Snyder,NY,14226,true,true,42.9600625,-78.7740625
+bread-of-life-catholic-community,infant-of-prague-cheektowaga,Infant of Prague Church,921 Cleveland Drive,,Cheektowaga,NY,14225,true,true,42.9450625,-78.7646875
+bread-of-life-catholic-community,ss-peter-and-paul-williamsville,Saints Peter & Paul Church,5480 Main Street,,Williamsville,NY,14221,true,true,42.9624375,-78.7491875
+bread-of-life-catholic-community,st-aloysius-gonzaga-cheektowaga,St. Aloysius Gonzaga Church,157 Cleveland Drive,,Cheektowaga,NY,14215,true,true,42.9446875,-78.7936875
+bread-of-life-catholic-community,st-benedict-amherst,St. Benedict Church,1317 Eggert Road,,Amherst,NY,14226,true,true,42.9636875,-78.8035625
+bread-of-life-catholic-community,st-leo-the-great-amherst,St. Leo the Great Church,885 Sweet Home Road,,Amherst,NY,14226,true,true,42.9868125,-78.8073125
+catholic-community-buffalo-north,assumption-buffalo,Assumption Church,435 Amherst Street,,Buffalo,NY,14207,true,true,42.9386875,-78.8880625
+catholic-community-buffalo-north,holy-spirit-buffalo,Holy Spirit Church,91 Dakota Street,,Buffalo,NY,14216,true,true,42.9468125,-78.8674375
+catholic-community-buffalo-north,st-margaret-buffalo,St. Margaret Church,1395 Hertel Avenue,,Buffalo,NY,14216,true,true,42.9474375,-78.8561875
+catholic-community-buffalo-north,st-mark-buffalo,St. Mark Church,401 Woodward Avenue,,Buffalo,NY,14214,true,true,42.9401875,-78.8490625
+catholic-community-buffalo-north,st-rose-of-lima-buffalo,St. Rose of Lima Church,500 Parker Avenue,,Buffalo,NY,14216,true,false,42.9525625,-78.8393125
+catholic-family-cheektowaga,our-lady-help-of-christians-cheektowaga,Our Lady Help of Christians Church,4125 Union Road,,Cheektowaga,NY,14225,true,true,42.9269375,-78.7538125
+catholic-family-cheektowaga,queen-of-martyrs-cheektowaga,Queen of Martyrs Church,180 George Urban Boulevard,,Cheektowaga,NY,14225,true,true,42.9190625,-78.7825625
+catholic-family-cheektowaga,resurrection-cheektowaga,Resurrection Church,130 Como Park Boulevard,,Cheektowaga,NY,14227,true,true,42.8934375,-78.7540625
+catholic-family-cheektowaga,st-josaphat-cheektowaga,St. Josaphat Church,20 Peoria Avenue,,Cheektowaga,NY,14206,true,true,42.8844375,-78.7806875
+catholic-family-holy-rosary,epiphany-of-our-lord-langford,Epiphany of Our Lord Church,10893 Sisson Highway,,Langford,NY,14111,true,true,42.5850625,-78.8420625
+catholic-family-holy-rosary,immaculate-conception-eden,Immaculate Conception Church,8791 South Main Street,,Eden,NY,14057,true,true,42.6468125,-78.8994375
+catholic-family-holy-rosary,st-joseph-gowanda,St. Joseph Church,26 Erie Street,,Gowanda,NY,14070,true,false,42.4646875,-78.9324375
+catholic-family-holy-spirit-alden,our-lady-of-peace-clarence,Our Lady of Peace Church,10950 Main Street,,Clarence,NY,14031,true,true,42.9819375,-78.5798125
+catholic-family-holy-spirit-alden,st-john-the-baptist-alden,St. John the Baptist Church,2021 Sandridge Road,,Alden,NY,14004,true,true,42.9110625,-78.5231875
+catholic-family-holy-spirit-alden,st-teresa-of-avila-akron,St. Teresa of Avila Church,5771 Buell Street,,Akron,NY,14001,true,true,43.0033125,-78.5013125
+catholic-family-south-buffalo,holy-family-buffalo,Holy Family Church,1885 South Park Avenue,,Buffalo,NY,14220,true,false,42.8472192,-78.8242963
+catholic-family-south-buffalo,our-lady-of-perpetual-help-buffalo,Our Lady of Perpetual Help Church,115 O'Connell Avenue,,Buffalo,NY,14204,true,false,42.8674375,-78.8613125
+catholic-family-south-buffalo,st-ambrose-buffalo,St. Ambrose Church,260 Okell Street,,Buffalo,NY,14220,true,false,42.838225,-78.820991
+catholic-family-south-buffalo,st-martin-of-tours-buffalo,St. Martin of Tours Church,1140 Abbott Road,,Buffalo,NY,14220,true,true,42.8336875,-78.8056875
+catholic-family-south-buffalo,st-teresa-buffalo,St. Teresa Church,1974 Seneca Street,,Buffalo,NY,14210,true,true,42.8575625,-78.8120625
+catholic-neighbors-in-faith,sacred-heart-lakewood,Sacred Heart Church,380 East Fairmount Avenue,,Lakewood,NY,14750,true,true,42.0983125,-79.2979375
+catholic-neighbors-in-faith,ss-peter-and-paul-jamestown,Ss. Peter and Paul Church,508 Cherry Street,,Jamestown,NY,14701,true,true,42.0985625,-79.2430625
+catholic-neighbors-in-faith,st-james-jamestown,St. James Church,27 Allen Street,,Jamestown,NY,14701,true,true,42.0918125,-79.2353125
+catholic-neighbors-in-faith,st-john-jamestown,St. John Church,282 Newton Avenue,,Jamestown,NY,14701,true,false,42.1083125,-79.2258125
+catholic-neighbors-in-faith,st-patrick-randolph,St. Patrick Church,189 Main Street,,Randolph,NY,14772,true,true,42.160685,-78.980854
+cattaraugus-creek-catholic,st-aloysius-springville,St. Aloysius Church,190 Franklin Street,,Springville,NY,14141,true,true,42.5100625,-78.6693125
+cattaraugus-creek-catholic,st-joseph-holland,St. Joseph Church,46 North Main Street,,Holland,NY,14080,true,true,42.6416875,-78.5431875
+cattaraugus-creek-catholic,st-mary-arcade,St. Mary Church,417 West Main Street,,Arcade,NY,14009,true,false,42.5339375,-78.4304375
+cattaraugus-creek-catholic,st-mary-east-arcade,St. Mary Church,6785 East Arcade Road,,East Arcade,NY,14009,true,true,42.5728125,-78.3431875
+central-niagara-catholic,all-saints-lockport,All Saints Church,76 Church Street,,Lockport,NY,14094,true,true,43.1719375,-78.6949375
+central-niagara-catholic,our-lady-of-the-rosary-wilson,"St. Brendan on the Lake, Wilson site (former Our Lady of the Rosary Church)",345 Lake Street,,Wilson,NY,14172,true,true,43.3083125,-78.8264375
+central-niagara-catholic,st-bridget-newfane,"St. Brendan on the Lake, Newfane site (former St. Bridget Church)",3455 Ewings Road,,Newfane,NY,14108,true,true,43.2473125,-78.7113125
+central-niagara-catholic,st-charles-borromeo-olcott,St. Charles Borromeo Oratory,5972 Main Street,,Olcott,NY,14126,true,true,43.3378125,-78.7139375
+central-niagara-catholic,st-john-baptist-lockport,St. John the Baptist Church,168 Chestnut Street,,Lockport,NY,14094,true,true,43.1735625,-78.6838125
+central-niagara-catholic,st-patrick-barker,St. Patrick Church,1726 Quaker Road,,Barker,NY,14012,true,true,43.3260625,-78.5548125
+chautauqua-family-catholic,our-lady-of-lourdes-bemus-point,Our Lady of Lourdes Church,41 Main Street,,Bemus Point,NY,14712,true,true,42.1581875,-79.3906875
+chautauqua-family-catholic,st-james-major-westfield,St. James Major Church,15 Union Street,,Westfield,NY,14787,true,true,42.3225625,-79.5746875
+chautauqua-family-catholic,st-mary-mayville,St. Mary Church,22 East Chautauqua Street,,Mayville,NY,14757,true,false,42.2552835,-79.5043626
+chautauqua-family-catholic,st-matthias-clymer,St. Matthias Church,1762 French Creek Mina Road,,Clymer,NY,14724,true,true,42.0755625,-79.6978125
+cheektowaga-kaisertown-sloan-catholic,our-lady-of-czestochowa-cheektowaga,Our Lady of Czestochowa Church,2158 Clinton Street,,Cheektowaga,NY,14206,true,false,42.8718125,-78.7965625
+cheektowaga-kaisertown-sloan-catholic,st-andrew-sloan,St. Andrew Church,34 Francis Avenue,,Sloan,NY,14212,true,true,42.8954375,-78.7880625
+cheektowaga-kaisertown-sloan-catholic,st-casimir-buffalo,St. Casimir Church,160 Cable Street,,Buffalo,NY,14206,true,true,42.8689375,-78.8076875
+christ-our-light-family,holy-family-belmont,"Holy Family of Jesus, Mary and Joseph Church",5 Milton Street,,Belmont,NY,14813,true,true,42.2281875,-78.0320625
+christ-our-light-family,immaculate-conception-wellsville,Immaculate Conception Church,36 Maple Avenue,,Wellsville,NY,14895,true,false,42.1213889,-77.9425
+christ-our-light-family,our-lady-of-the-angels-cuba,Our Lady of the Angels Church,48 South Street,,Cuba,NY,14727,true,false,42.214473,-78.275766
+christ-our-light-family,st-jude-alfred,St. Jude Chapel,299 Lower College Drive,,Alfred,NY,14802,true,false,42.2557686,-77.7931675
+downtown-family-buffalo,blessed-sacrament-buffalo,Blessed Sacrament Church,1035 Delaware Avenue,,Buffalo,NY,14209,true,false,42.912225,-78.869029
+downtown-family-buffalo,st-louis-buffalo,St. Louis Church,35 Edward Street,,Buffalo,NY,14202,true,true,42.8955625,-78.8713125
+downtown-family-buffalo,st-michael-buffalo,St. Michael Church,651 Washington Street,,Buffalo,NY,14203,true,true,42.8914375,-78.8711875
+enchanted-mountains-catholic,st-bonaventure-allegany,St. Bonaventure Church,95 East Main Street,,Allegany,NY,14706,true,true,42.0875625,-78.4900625
+enchanted-mountains-catholic,st-john-evangelist-olean,St. John the Evangelist Church,931 North Union Street,,Olean,NY,14760,true,true,42.0910625,-78.4341875
+enchanted-mountains-catholic,st-mary-of-the-angels-olean,Basilica of St. Mary of the Angels,202 South Union Street,,Olean,NY,14760,true,false,42.075343,-78.430117
+eternal-flame-catholic-community,nativity-of-our-lord-orchard-park,Nativity of Our Lord Church,43 Argyle Place,,Orchard Park,NY,14127,true,false,42.763164,-78.745441
+eternal-flame-catholic-community,ss-peter-and-paul-hamburg,Saints Peter & Paul Church,66 East Main Street,,Hamburg,NY,14075,true,true,42.7159375,-78.8273125
+eternal-flame-catholic-community,st-bernadette-orchard-park,St. Bernadette Church,5930 South Abbott Road,,Orchard Park,NY,14127,true,true,42.7260625,-78.7959375
+eternal-flame-catholic-community,st-john-the-baptist-boston,St. John the Baptist Church,6895 Boston Cross Road,,Boston,NY,14025,true,true,42.6301875,-78.7361875
+eternal-flame-catholic-community,st-mary-oratory-east-eden,St. Mary Oratory,8175 East Eden Road,,East Eden,NY,14057,true,false,42.663296,-78.8272065
+fields-of-grace,st-cecilia-sheldon,St. Cecilia Church,991 Centerline Road,,Sheldon,NY,14145,true,true,42.7374375,-78.4178125
+fields-of-grace,st-joseph-varysburg,St. Joseph Church,2311 Route 98,,Varysburg,NY,14167,true,false,42.7646875,-78.3111875
+fields-of-grace,st-mary-pavilion,St. Mary Church,11095 St. Mary's Street,,Pavilion,NY,14525,true,true,42.8764375,-78.0254375
+fields-of-grace,st-michael-warsaw,St. Michael Church,171 North Main Street,,Warsaw,NY,14569,true,true,42.7451875,-78.1328125
+fields-of-grace,st-vincent-de-paul-attica,St. Vincent de Paul Church,50 East Avenue,,Attica,NY,14011,true,true,42.8659375,-78.2758125
+greater-east-buffalo-catholic,corpus-christi-buffalo,Corpus Christi Church,199 Clark Street,,Buffalo,NY,14212,true,true,42.8915625,-78.8360625
+greater-east-buffalo-catholic,st-adalbert-buffalo,St. Adalbert Basilica,212 Stanislaus Street,,Buffalo,NY,14212,true,false,42.8977494,-78.8314305
+greater-east-buffalo-catholic,st-john-gualbert-cheektowaga,St. John Gualbert Church,83 Gualbert Avenue,,Cheektowaga,NY,14211,true,true,42.9098125,-78.7930625
+greater-east-buffalo-catholic,st-katharine-drexel-buffalo,St. Katharine Drexel Church,118 Schiller Street,,Buffalo,NY,14206,true,true,42.8881875,-78.8021875
+greater-east-buffalo-catholic,st-stanislaus-buffalo,St. Stanislaus Church,123 Townsend Street,,Buffalo,NY,14212,true,true,42.8879375,-78.8404375
+holy-cross-buffalo,holy-cross-buffalo,Holy Cross Church,345 Seventh Street,,Buffalo,NY,14201,true,true,42.8946875,-78.8871875
+lakeshore-catholic-faith-community,most-precious-blood-angola,Most Precious Blood Church,22 Prospect Street,,Angola,NY,14006,true,true,42.6373125,-79.0365625
+lakeshore-catholic-faith-community,st-francis-of-assisi-athol-springs,St. Francis of Assisi Church,4263 St. Francis Drive,,Athol Springs,NY,14010,true,false,42.767777,-78.862943
+lakeshore-catholic-faith-community,st-john-paul-ii-lake-view,St. John Paul II Church,2052 Lake View Road,,Lake View,NY,14085,true,true,42.7105625,-78.9331875
+lakeshore-catholic-faith-community,st-mary-of-the-lake-hamburg,St. Mary of the Lake Church,4737 Lake Shore Road,,Hamburg,NY,14075,true,false,42.7540234,-78.8898175
+light-of-christ-kenmore,blessed-sacrament-tonawanda,Blessed Sacrament Church,263 Claremont Avenue,,Tonawanda,NY,14223,true,true,42.9655625,-78.8304375
+light-of-christ-kenmore,st-john-baptist-kenmore,St. John the Baptist Church,1085 Englewood Avenue,,Kenmore,NY,14223,true,true,42.9741875,-78.8550625
+light-of-christ-kenmore,st-paul-kenmore,St. Paul Church,33 Victoria Boulevard,,Kenmore,NY,14217,true,true,42.9639375,-78.8704375
+light-of-christ-kenmore,st-stephen-grand-island,St. Stephen Church,2100 Baseline Road,,Grand Island,NY,14072,true,true,43.0179375,-78.9665625
+light-of-christ-kenmore,st-timothy-tonawanda,St. Timothy Church,565 East Park Drive,,Tonawanda,NY,14150,true,true,42.9883125,-78.8983125
+niagara-falls-rc-family,prince-of-peace-niagara-falls,Prince of Peace Church,1055 Military Road,,Niagara Falls,NY,14304,true,true,43.0866875,-78.9645625
+niagara-falls-rc-family,st-john-de-lasalle,St. John de LaSalle Church,8477 Buffalo Avenue,,Niagara Falls,NY,14304,true,false,43.075765,-78.965466
+niagara-falls-rc-family,st-joseph-niagara-falls,St. Joseph Church,1413 Pine Avenue,,Niagara Falls,NY,14301,true,true,43.0948125,-79.0450625
+niagara-falls-rc-family,st-leo-niagara-falls,St. Leo Church,2748 Military Road,,Niagara Falls,NY,14304,true,true,43.1096875,-78.9874375
+niagara-falls-rc-family,st-mary-of-the-cataract,St. Mary of the Cataract Church,237 4th Street,,Niagara Falls,NY,14303,true,false,43.0848992,-79.0573002
+niagara-frontier-catholic,immaculate-conception-ransomville,Immaculate Conception Church,4671 Townline Road,,Ransomville,NY,14131,true,true,43.1870625,-78.8849375
+niagara-frontier-catholic,st-bernard-youngstown,St. Bernard Church,422 Second Street,,Youngstown,NY,14174,true,false,43.249611,-79.0477205
+niagara-frontier-catholic,st-peter-lewiston,St. Peter Church,620 Center Street,,Lewiston,NY,14092,true,true,43.1728125,-79.0395625
+one-catholic,holy-family-albion,Holy Family Church,106 South Main Street,,Albion,NY,14411,true,true,43.2450625,-78.1944375
+one-catholic,st-mary-holley,St. Mary Church,13 South Main Street,,Holley,NY,14470,true,false,43.225475,-78.026986
+one-catholic,st-mary-medina,St. Mary Church,211 Eagle Street,,Medina,NY,14103,true,true,43.2230625,-78.3890625
+our-lady-of-fatima-shrine-lewiston,our-lady-of-fatima-shrine-lewiston,Our Lady of Fatima Shrine,1023 Swann Road,,Lewiston,NY,14174,true,false,43.2003608,-79.0033995
+our-lady-of-hope-buffalo,our-lady-of-hope-buffalo,Our Lady of Hope Church,18 Greenwood Place,,Buffalo,NY,14213,false,true,42.9203125,-78.8895625
+our-lady-of-the-sacred-heart-orchard-park,our-lady-of-the-sacred-heart-orchard-park,Our Lady of the Sacred Heart Church,3148 Abbott Road,,Orchard Park,NY,14127,true,true,42.798928,-78.796773
+our-lady-of-victory-basilica,our-lady-of-bistrica-lackawanna,Our Lady of Bistrica Church,1619 Abbott Road,,Lackawanna,NY,14218,true,true,42.8211875,-78.8031875
+our-lady-of-victory-basilica,our-lady-of-victory-lackawanna,Our Lady of Victory Basilica,767 Ridge Road,,Lackawanna,NY,14218,true,false,42.825432,-78.823089
+shepherd-and-saints-family,good-shepherd-pendleton,Good Shepherd Church,5442 Tonawanda Creek Road,,Pendleton,NY,14120,true,true,43.0783125,-78.7399375
+shepherd-and-saints-family,st-gregory-the-great-williamsville,St. Gregory the Great Church,200 St. Gregory Court,,Williamsville,NY,14221,true,true,42.9933125,-78.7279375
+shepherd-and-saints-family,st-pius-x-getzville,St. Pius X Church,1700 North French Road,,Getzville,NY,14068,true,true,43.0354375,-78.7625625
+ss-columba-and-brigid-buffalo,ss-columba-and-brigid-buffalo,SS. Columba & Brigid Church,75 Hickory Street,,Buffalo,NY,14204,true,false,42.881793,-78.858676
+st-andrew-kim-tonawanda,st-andrew-kim-tonawanda,St. Andrew Kim Church,9 O'Hara Road,,Tonawanda,NY,14150,true,true,43.0003125,-78.8624375
+st-anthony-of-padua-buffalo,st-anthony-of-padua-buffalo,St. Anthony of Padua Church,160 Court Street,,Buffalo,NY,14202,true,true,42.8866875,-78.8809375
+st-gabriel-elma,st-gabriel-elma,St. Gabriel Church,5271 Clinton Street,,Elma,NY,14059,true,true,42.8604375,-78.6889375
+st-john-xxiii-west-seneca,st-john-xxiii-west-seneca,St. John XXIII Church,1 Arcade Street,,West Seneca,NY,14224,true,true,42.8575625,-78.7881875
+st-joseph-cathedral-buffalo,st-joseph-cathedral-buffalo,St. Joseph Cathedral,50 Franklin Street,,Buffalo,NY,14202,true,false,42.883254,-78.877688
+st-joseph-university-buffalo,st-joseph-university-buffalo,St. Joseph University Church,3269 Main Street,,Buffalo,NY,14214,false,false,42.951891,-78.823334
+st-martin-de-porres-buffalo,st-martin-de-porres-buffalo,St. Martin de Porres Church,555 Northampton Street,,Buffalo,NY,14208,true,true,42.9070625,-78.8463125
+st-patricks-family-of-churches,st-mary-canaseraga,St. Mary Church,7 North Street,,Canaseraga,NY,14822,true,false,42.4658125,-77.7756875
+st-patricks-family-of-churches,st-patrick-belfast,St. Patrick Church,1 Merton Avenue,,Belfast,NY,14711,true,false,42.344033,-78.109707
+st-patricks-family-of-churches,st-patrick-fillmore,St. Patrick Church,109 West Main Street,,Fillmore,NY,14735,true,true,42.4664375,-78.1184375
+the-lords-vineyard,holy-trinity-dunkirk,Holy Trinity Church,1032 Central Avenue,,Dunkirk,NY,14048,true,true,42.4639375,-79.3333125
+the-lords-vineyard,our-lady-of-mt-carmel-silver-creek,Our Lady of Mount Carmel Church,165 Central Avenue,,Silver Creek,NY,14136,true,true,42.5449375,-79.1709375
+the-lords-vineyard,st-elizabeth-ann-seton-dunkirk,St. Elizabeth Ann Seton Church,328 Washington Avenue,,Dunkirk,NY,14048,true,true,42.4844375,-79.3330625
+the-lords-vineyard,st-hyacinth-dunkirk,St. Hyacinth Church,295 Lake Shore Drive East,,Dunkirk,NY,14048,true,false,42.491475,-79.319934
+three-catholic-sisters-foothills,holy-name-of-mary-ellicottville,Holy Name of Mary Church,22 Jefferson Street,,Ellicottville,NY,14731,true,true,42.2743125,-78.6719375
+three-catholic-sisters-foothills,our-lady-of-peace-salamanca,Our Lady of Peace Church,274 Broad Street,,Salamanca,NY,14779,true,false,42.1570083,-78.7258459
+three-catholic-sisters-foothills,st-pacificus-humphrey,St. Pacificus Oratory,4722 Chapel Hill Road,,Humphrey,NY,14741,true,false,42.2039539,-78.5336352
+three-catholic-sisters-foothills,st-philomena-franklinville,St. Philomena Church,26 North Plymouth Avenue,,Franklinville,NY,14737,true,true,42.3441875,-78.4516875
+together-in-christ-family,nativity-of-the-blessed-virgin-mary-williamsville,Nativity of the Blessed Virgin Mary Church,8500 Main Street,,Williamsville,NY,14221,true,true,42.9654375,-78.6765625
+together-in-christ-family,sacred-heart-of-jesus-bowmansville,Sacred Heart of Jesus Church,5337 Genesee Street,,Bowmansville,NY,14026,true,true,42.9419375,-78.6825625
+together-in-christ-family,st-mary-swormville,St. Mary's Church (Swormville),6919 Transit Road,,Swormville,NY,14051,true,true,43.0378125,-78.6966875
+tonawanda-catholic,our-lady-of-czestochowa-north-tonawanda,Our Lady of Czestochowa Church,64 Center Avenue,,North Tonawanda,NY,14120,true,false,43.0391875,-78.8798125
+tonawanda-catholic,st-amelia-tonawanda,St. Amelia Church,2999 Eggert Road,,Tonawanda,NY,14150,true,true,42.9946875,-78.8456875
+tonawanda-catholic,st-christopher-tonawanda,St. Christopher Church,2660 Niagara Falls Boulevard,,Tonawanda,NY,14150,true,true,43.0266875,-78.8233125
+tonawanda-catholic,st-jude-the-apostle-north-tonawanda,St. Jude the Apostle Church,800 Niagara Falls Boulevard,,North Tonawanda,NY,14120,true,true,43.0591875,-78.8394375
+twelve-apostles-catholic,ascension-batavia,Ascension Church,135 South Swan Street,,Batavia,NY,14020,true,false,42.9889375,-78.1785625
+twelve-apostles-catholic,holy-name-of-mary-east-pembroke,Holy Name of Mary Church,8656 Church Street,,East Pembroke,NY,14056,true,true,42.9945625,-78.3129375
+twelve-apostles-catholic,our-lady-of-mercy-leroy,Our Lady of Mercy Church,44 Lake Street,,LeRoy,NY,14482,true,true,42.9810625,-77.9921875
+twelve-apostles-catholic,st-brigid-bergen,St. Brigid Church,18 Gibson Street,,Bergen,NY,14416,true,true,43.0874375,-77.9440625
+twelve-apostles-catholic,st-cecilia-oakfield,St. Cecilia Church,56 Maple Avenue,,Oakfield,NY,14125,true,true,43.0664375,-78.2770625
+twelve-apostles-catholic,st-joseph-batavia,St. Joseph Church,303 East Main Street,,Batavia,NY,14020,true,true,42.9966875,-78.1781875
+wheat-family-east-aurora,church-of-the-annunciation-elma,Church of the Annunciation,7580 Clinton Street,,Elma,NY,14059,true,true,42.8561875,-78.6060625
+wheat-family-east-aurora,immaculate-conception-east-aurora,Immaculate Conception Church,520 Oakwood Avenue,,East Aurora,NY,14052,true,true,42.7659375,-78.6154375
+wheat-family-east-aurora,memorare-chapel-west-falls,Memorare Chapel (former St. George Church),74 Old Glenwood Road,,West Falls,NY,14170,true,false,42.7203125,-78.6814375
+wheat-family-east-aurora,st-vincent-de-paul-springbrook,St. Vincent de Paul Church,6441 Seneca Street,,Springbrook,NY,14140,true,true,42.8176875,-78.6709375
+st-lawrence-otoole-and-sacred-heart,sacred-heart-patterson,Sacred Heart Church,414 Haviland Drive,,Patterson,NY,12563,true,true,41.4809375,-73.5415625
+st-lawrence-otoole-and-sacred-heart,st-lawrence-otoole-brewster,St. Lawrence O'Toole Church,31 Prospect Street,,Brewster,NY,10509,true,true,41.3983125,-73.6168125
+all-saints-syracuse,all-saints-syracuse,All Saints Church,1340 Lancaster Avenue,,Syracuse,NY,13210,true,true,43.0273125,-76.1221875
+assumption-syracuse,assumption-syracuse,Assumption Church,812 North Salina Street,,Syracuse,NY,13208,true,true,43.0625625,-76.1545625
+basilica-sacred-heart-syracuse,basilica-sacred-heart-syracuse,Basilica of the Sacred Heart of Jesus,927 Park Avenue,,Syracuse,NY,13204,true,true,43.0519874,-76.1791952
+blessed-sacrament-st-vincent-de-paul-syracuse,blessed-sacrament-syracuse,Blessed Sacrament Church,3127 James Street,,Syracuse,NY,13206,true,true,43.0691875,-76.1030625
+blessed-sacrament-st-vincent-de-paul-syracuse,st-vincent-de-paul-syracuse,St. Vincent de Paul Church,342 Vine Street,,Syracuse,NY,13203,true,true,43.0553125,-76.1255625
+cathedral-immaculate-conception-syracuse,cathedral-immaculate-conception-syracuse,Cathedral of the Immaculate Conception,259 East Onondaga Street,,Syracuse,NY,13202,true,true,43.0468791,-76.149846
+catholic-communities-of-eastern-broome,our-lady-of-lourdes-windsor,Our Lady of Lourdes,594 Kent St.,,Windsor,NY,13865,true,true,42.0703125,-75.6429375
+catholic-communities-of-eastern-broome,st-joseph-deposit,St. Joseph's Church,98 2nd St.,,Deposit,NY,13754,true,true,42.0618125,-75.4254375
+catholic-communities-of-eastern-broome,st-joseph-sanitaria-springs,St. Joseph's Church,659 State Route 7B,,Sanitaria Springs,NY,13833,true,true,42.1601875,-75.7808125
+catholic-communities-of-eastern-broome,st-mary-kirkwood,St. Mary's Church,975 State Route 11,,Kirkwood,NY,13795,true,true,42.0865625,-75.8181875
+catholic-community-st-stephen-st-patrick-whitney-point,our-lady-of-perpetual-help-cincinnatus,Our Lady of Perpetual Help,2708 Lower Cincinnatus Rd.,,Cincinnatus,NY,13040,true,true,42.5383125,-75.8961875
+catholic-community-st-stephen-st-patrick-whitney-point,st-patrick-whitney-point,St. Patrick,59 Keibel Rd.,,Whitney Point,NY,13862,true,true,42.3404375,-75.9764375
+catholic-community-st-stephen-st-patrick-whitney-point,st-stephen-marathon,St. Stephen,16 Academy St.,,Marathon,NY,13803,true,true,42.4379375,-76.0376875
+christ-our-hope-boonville,st-joseph-boonville,St. Joseph Church,108 Charles St.,,Boonville,NY,13309,false,false,43.4811875,-75.3318125
+christ-our-hope-boonville,st-mary-of-the-snows-otter-lake,St. Mary of the Snows,14040 State Route 28,,Otter Lake,NY,13338,false,false,43.5931875,-75.1100625
+christ-our-hope-boonville,st-patrick-forestport,St. Patrick Church,12000 River St.,,Forestport,NY,13338,false,true,43.4443125,-75.2071875
+christ-our-light-st-anne-pulaski,christ-our-light-pulaski,Christ Our Light,23 Niagara St.,,Pulaski,NY,13142,true,true,43.5703125,-76.1325625
+christ-our-light-st-anne-pulaski,st-anne-mother-of-mary-mexico,"St. Anne, Mother of Mary",3352 Main St.,,Mexico,NY,13114,true,true,43.4601875,-76.2361875
+christ-the-good-shepherd-oswego,christ-the-good-shepherd-oswego,Christ the Good Shepherd (former St. Paul's Church),134 East 5th Street,,Oswego,NY,13126,true,false,43.4555625,-76.5025625
+christ-the-good-shepherd-oswego,hall-newman-center-oswego,Hall Newman Center (SUNY Oswego),36 New Street,,Oswego,NY,13126,true,true,43.449665,-76.540383
+christ-the-good-shepherd-oswego,our-lady-of-perpetual-help-minetto,Our Lady of Perpetual Help,2913 State Route 48,,Minetto,NY,13115,true,true,43.4074375,-76.4773125
+christ-the-good-shepherd-oswego,our-lady-of-the-rosary-hannibal,Our Lady of the Rosary,931 Cayuga St.,,Hannibal,NY,13074,true,true,43.3180625,-76.5791875
+church-of-the-nativity-tully,immaculate-conception-pompey,Immaculate Conception Church,7386 Academy St.,,Pompey,NY,13138,true,true,42.9003125,-76.0135625
+church-of-the-nativity-tully,st-joseph-lafayette,St. Joseph's Church,6104 US Route 20,,LaFayette,NY,13084,true,true,42.8919375,-76.1059375
+church-of-the-nativity-tully,st-leo-tully,St. Leo's Church,10 Onondaga St.,,Tully,NY,13159,true,true,42.7961875,-76.1089375
+church-of-the-nativity-tully,st-patrick-otisco,St. Patrick's Mission,1865 Route 80,,Otisco,NY,13159,true,true,42.8616875,-76.2181875
+historic-old-st-johns-utica,historic-old-st-johns-utica,Historic Old St. John's Church,240 Bleecker St.,,Utica,NY,13501,true,true,43.1008125,-75.2269375
+holy-cross-dewitt,holy-cross-dewitt,Holy Cross Church,4112 East Genesee Street,,DeWitt,NY,13214,true,true,43.0359375,-76.0736875
+holy-cross-dewitt,st-marys-oratory-jamesville,St. Mary's Oratory,6443 East Seneca Turnpike,,Jamesville,NY,13078,true,true,42.9914763,-76.0717698
+holy-cross-utica,st-mark-utica,St. Mark's Church (Holy Cross Parish),440 Keyes Rd.,,Utica,NY,13502,false,true,43.1140625,-75.1770625
+holy-cross-utica,st-peter-utica,St. Peter's Church (Holy Cross Parish),422 Coventry Ave.,,Utica,NY,13502,false,true,43.1161875,-75.2096875
+holy-family-endwell,holy-family-endwell,Church of the Holy Family,3600 Phyllis St.,,Endwell,NY,13760,true,true,42.1205625,-76.0231875
+holy-family-st-marianne-cope-syracuse,holy-family-syracuse,Holy Family Church,127 Chapel Drive,,Syracuse,NY,13219,true,true,43.0458125,-76.2409375
+holy-family-st-marianne-cope-syracuse,our-lady-of-peace-lakeland,Our Lady of Peace Church,203 Halcomb Street,,Lakeland,NY,13209,true,true,43.0885625,-76.2438125
+holy-family-st-marianne-cope-syracuse,st-cecilia-solvay,St. Cecilia's Church,1001 Woods Road,,Solvay,NY,13209,true,true,43.0606875,-76.2131875
+holy-spirit-hamilton,colgate-memorial-chapel-hamilton,Colgate Memorial Chapel,13 Oak Dr.,,Hamilton,NY,13346,true,false,42.8173491,-75.5363161
+holy-spirit-hamilton,st-bernard-waterville,St. Bernard's Church,199 Stafford Ave.,,Waterville,NY,13480,true,false,42.9336875,-75.3744375
+holy-spirit-hamilton,st-joan-of-arc-morrisville,St. Joan of Arc Mission,6 Brookside Dr.,,Morrisville,NY,13408,true,true,42.8956875,-75.6466875
+holy-spirit-hamilton,st-joseph-oriskany-falls,St. Joseph's Church,229 Main St.,,Oriskany Falls,NY,13425,true,false,42.9388125,-75.4645625
+holy-spirit-hamilton,st-mary-hamilton,St. Mary's Church,16 Wylie St.,,Hamilton,NY,13346,true,true,42.8304375,-75.5475625
+holy-trinity-st-stephen-fulton,holy-trinity-fulton,Holy Trinity,309 Buffalo St.,,Fulton,NY,13069,true,true,43.3229375,-76.4135625
+holy-trinity-st-stephen-fulton,st-stephen-phoenix,St. Stephen,469 Main St.,,Phoenix,NY,13135,true,true,43.2299375,-76.2998125
+holy-trinity-utica,holy-trinity-utica,Holy Trinity Church,1206 Lincoln Ave.,,Utica,NY,13502,true,true,43.0993125,-75.2448125
+holy-trinity-utica,sacred-heart-st-mary-new-york-mills,"Church of the Sacred Heart & St. Mary, Our Lady of Czestochowa",201 Main St.,,New York Mills,NY,13417,true,true,43.1074375,-75.2851875
+immaculate-conception-fayetteville,immaculate-conception-fayetteville,Immaculate Conception,400 Salt Springs Rd.,,Fayetteville,NY,13066,true,false,43.0238125,-75.9938125
+immaculate-conception-greene,immaculate-conception-greene,Immaculate Conception,1180 State Hwy. 206,,Greene,NY,13778,true,true,42.3256875,-75.7644375
+liverpool-catholic-community,christ-the-king-liverpool,Christ the King,21 Cherry Tree Cir.,,Liverpool,NY,13090,true,true,43.1429375,-76.2208125
+liverpool-catholic-community,epiphany-st-joseph-the-worker-liverpool,Epiphany Parish (St. Joseph the Worker Church),1001 Tulip St.,,Liverpool,NY,13088,false,true,43.1100625,-76.2063125
+liverpool-catholic-community,pope-john-xxiii-liverpool,Pope John XXIII,8290 Soule Rd.,,Liverpool,NY,13090,false,true,43.1716875,-76.2245625
+mary-mother-of-our-savior-utica,our-lady-of-lourdes-utica,Our Lady of Lourdes Church,2222 Genesee Street,,Utica,NY,13502,true,true,43.0833125,-75.2689375
+most-holy-rosary-maine,most-holy-rosary-maine,Most Holy Rosary Church,2596 Main St.,,Maine,NY,13802,true,true,42.1945625,-76.0604375
+one-catholic-family-east-syracuse,st-francis-of-assisi-bridgeport,St. Francis of Assisi,7820 Bridgeport-Minoa Rd.,,Bridgeport,NY,13030,true,true,43.1533125,-75.9734375
+one-catholic-family-east-syracuse,st-mary-of-the-assumption-minoa,St. Mary of the Assumption,401 N Main St.,,Minoa,NY,13116,false,true,43.0796875,-76.0010625
+one-catholic-family-east-syracuse,st-matthew-east-syracuse,St. Matthew,229 W Yates St.,,East Syracuse,NY,13057,true,false,43.0663125,-76.0765625
+our-lady-of-good-counsel-verona,our-lady-of-good-counsel-verona,Our Lady of Good Counsel,5652 E Main St.,,Verona,NY,13478,false,true,43.1371875,-75.5714375
+our-lady-of-pompei-st-peter-syracuse,our-lady-of-pompei-st-peter-syracuse,Church of Our Lady of Pompei / St. Peter,301 Ash Street,,Syracuse,NY,13208,true,true,43.0605625,-76.1501875
+our-lady-of-sorrows-vestal,our-lady-of-sorrows-vestal,Our Lady of Sorrows Church,801 Main Street,,Vestal,NY,13850,true,true,42.0751875,-76.0486875
+prince-of-peace-north-endicott,st-ambrose-endicott,St. Ambrose Church,203 Washington Ave.,,Endicott,NY,13760,true,true,42.1004375,-76.0479375
+prince-of-peace-north-endicott,st-anthony-of-padua-endicott,St. Anthony of Padua,300 Odell Avenue,,Endicott,NY,13760,true,true,42.1130625,-76.0491875
+prince-of-peace-north-endicott,st-joseph-endicott,St. Joseph Church,207 Hayes Ave.,,Endicott,NY,13760,true,true,42.1115625,-76.0401875
+prince-of-peace-our-lady-of-good-counsel-endicott,our-lady-of-good-counsel-endicott,Our Lady of Good Counsel,701 W Main St.,,Endicott,NY,13760,true,true,42.0925625,-76.0790625
+sacred-heart-divine-mercy-cicero,divine-mercy-central-square,Divine Mercy,592 S Main St.,,Central Square,NY,13036,true,false,43.2815625,-76.1451875
+sacred-heart-divine-mercy-cicero,sacred-heart-cicero,Sacred Heart,8229 Brewerton Rd.,,Cicero,NY,13039,true,true,43.1690625,-76.1178125
+sacred-heart-rome,st-john-the-baptist-rome,St. John the Baptist Church,210 E Dominick St.,,Rome,NY,13440,false,true,43.2089375,-75.4541875
+sacred-heart-rome,st-joseph-lee-center,St. Joseph's Church,5748 Stokes Lee Center Rd.,,Lee Center,NY,13363,false,true,43.3026875,-75.5068125
+sacred-heart-rome,st-paul-rome,St. Paul's Church,1807 Bedford St.,,Rome,NY,13440,false,true,43.2358125,-75.4473125
+sacred-heart-rome,st-peter-rome,St. Peter's Church,200 N. James St.,,Rome,NY,13440,false,false,43.2123125,-75.4556875
+saints-john-and-andrew-binghamton,saints-john-and-andrew-binghamton,The Church of Saints John and Andrew,1263 Vestal Ave.,,Binghamton,NY,13903,true,true,42.0905625,-75.9078125
+spirit-of-hope-oneida,holy-family-vernon,Church of the Holy Family,4352 Peterboro St.,,Vernon,NY,13476,false,false,43.0731875,-75.5430625
+spirit-of-hope-oneida,st-agatha-canastota,St. Agatha,110 Wilson Ave.,,Canastota,NY,13032,false,false,43.0850625,-75.7509375
+spirit-of-hope-oneida,st-joseph-oneida,St. Joseph's Church,121 St. Joseph Pl.,,Oneida,NY,13421,false,true,43.0988125,-75.6564375
+spirit-of-hope-oneida,st-mary-of-the-lake-verona-beach,St. Mary of the Lake,6735 State Route 13,,Verona Beach,NY,13162,false,true,43.1876446,-75.7271094
+ss-cyril-methodius-holy-trinity-binghamton,holy-trinity-binghamton,Church of the Holy Trinity,346 Prospect St.,,Binghamton,NY,13905,true,true,42.1164375,-75.9419375
+ss-cyril-methodius-holy-trinity-binghamton,sts-cyril-methodius-binghamton,SS. Cyril & Methodius,148 Clinton St.,,Binghamton,NY,13905,true,true,42.1058125,-75.9251875
+st-ann-manlius,st-ann-manlius,St. Ann,104 Academy St.,,Manlius,NY,13104,true,true,43.0023125,-75.9740625
+st-anthony-of-padua-syracuse,st-anthony-of-padua-syracuse,St. Anthony of Padua,1515 Midland Avenue,,Syracuse,NY,13205,true,true,43.0241875,-76.1505625
+st-anthony-st-agnes-utica,st-anthony-st-agnes-utica,St. Anthony & St. Agnes Church,422 Tilden Ave.,,Utica,NY,13501,true,true,43.0941875,-75.2019375
+st-augustine-baldwinsville,st-augustine-baldwinsville,St. Augustine's Church,7333 O'Brien Rd.,,Baldwinsville,NY,13027,true,true,43.1251875,-76.3003125
+st-bartholomew-norwich,st-bartholomew-norwich,St. Bartholomew,73 E Main St.,,Norwich,NY,13815,true,true,42.5318125,-75.5184375
+st-charles-st-ann-st-patrick-st-brigid-syracuse,st-charles-borromeo-syracuse,St. Charles Church,501 South Orchard Road,,Syracuse,NY,13219,true,false,43.0393125,-76.2033125
+st-charles-st-ann-st-patrick-st-brigid-syracuse,st-patrick-syracuse,St. Patrick's Church,216 North Lowell Avenue,,Syracuse,NY,13204,true,true,43.0503125,-76.1833125
+st-daniel-syracuse,st-daniel-syracuse,St. Daniel Church,3004 Court Street,,Syracuse,NY,13208,true,true,43.0828125,-76.1259375
+st-elizabeth-ann-seton-baldwinsville,st-elizabeth-ann-seton-baldwinsville,St. Elizabeth Ann Seton Church,3494 State Route 31,,Baldwinsville,NY,13027,true,true,43.1776875,-76.2675625
+st-francis-of-assisi-binghamton,st-francis-of-assisi-binghamton,St. Francis of Assisi,1031 Chenango St.,,Binghamton,NY,13901,true,true,42.1459375,-75.8899375
+st-francis-xavier-marcellus,st-francis-xavier-marcellus,St. Francis Xavier Church,1 West Main St.,,Marcellus,NY,13108,true,true,42.9821875,-76.3408125
+st-james-cazenovia,st-james-cazenovia,St. James,6 Green St.,,Cazenovia,NY,13035,true,false,42.9324375,-75.8568125
+st-james-johnson-city,st-james-johnson-city,St. James Roman Catholic Church,147 Main St.,,Johnson City,NY,13790,true,true,42.1134375,-75.9505625
+st-john-the-baptist-holy-trinity-syracuse,st-john-the-baptist-holy-trinity-syracuse,St. John the Baptist and Holy Trinity Church,406 Court Street,,Syracuse,NY,13208,true,true,43.0685625,-76.1578125
+st-john-the-evangelist-camden,st-john-the-evangelist-camden,St. John the Evangelist,22 Church Street,,Camden,NY,13316,true,true,43.3361875,-75.7456875
+st-john-the-evangelist-camden,st-mary-of-mount-carmel-florence,St. Mary of Mount Carmel Oratory,Green Road,,Florence,NY,13316,false,false,43.4408324,-75.747604
+st-john-the-evangelist-new-hartford,st-john-the-evangelist-new-hartford,St. John the Evangelist Church,66 Oxford Rd.,,New Hartford,NY,13413,true,true,43.0671875,-75.2855625
+st-joseph-camillus,st-joseph-camillus,St. Joseph's Church,5600 W Genesee St.,,Camillus,NY,13031,true,true,43.0406875,-76.2899375
+st-joseph-oxford,st-joseph-oxford,St. Joseph,3 Scott St.,,Oxford,NY,13830,true,true,42.4431875,-75.6003125
+st-joseph-st-patrick-utica,st-joseph-st-patrick-utica,St. Joseph & St. Patrick Church,702 Columbia St.,,Utica,NY,13502,true,true,43.1046875,-75.2416875
+st-lucy-syracuse,st-lucy-syracuse,St. Lucy's Church,432 Gifford Street,,Syracuse,NY,13204,true,true,43.0433125,-76.1623125
+st-malachy-sherburne,st-malachy-sherburne,St. Malachy,29 East State Street,,Sherburne,NY,13460,true,false,42.6784375,-75.4964375
+st-margaret-mattydale,st-margaret-mattydale,St. Margaret,203 Roxboro Rd.,,Mattydale,NY,13211,true,false,43.0998125,-76.1464375
+st-mary-clinton,st-mary-clinton,St. Mary's Church,13 Marvin St.,,Clinton,NY,13323,true,true,43.0454375,-75.3804375
+st-mary-cortland,oheron-newman-hall-cortland,O'Heron Newman Hall Catholic Chapel (SUNY Cortland),8 Calvert Street,,Cortland,NY,13045,false,true,42.5961111,-76.1872222
+st-mary-cortland,st-anthony-of-padua-cortland,St. Anthony of Padua,50 Pomeroy St.,,Cortland,NY,13045,true,true,42.6016875,-76.1670625
+st-mary-cortland,st-lawrence-deruyter,St. Lawrence Mission,1672 Cortland Street,,DeRuyter,NY,13052,false,false,42.7566666,-75.8849032
+st-mary-cortland,st-margaret-homer,St. Margaret,14 Copeland Ave.,,Homer,NY,13077,true,true,42.6294375,-76.1816875
+st-mary-cortland,st-mary-cortland,St. Mary,46 N Main St.,,Cortland,NY,13045,true,true,42.6038125,-76.1806875
+st-mary-of-mount-carmel-blessed-sacrament-utica,st-mary-of-mount-carmel-utica,St. Mary of Mount Carmel Church,648 Jay St.,,Utica,NY,13501,false,true,43.0999375,-75.2176875
+st-mary-of-the-assumption-baldwinsville,st-mary-of-the-assumption-baldwinsville,St. Mary of the Assumption,47 Syracuse St.,,Baldwinsville,NY,13027,true,true,43.1531875,-76.3298125
+st-mary-of-the-assumption-oswego,st-mary-of-the-assumption-oswego,St. Mary of the Assumption Parish & Shrine,103 W 7th St.,,Oswego,NY,13126,true,true,43.4561875,-76.5181875
+st-mary-of-the-lake-skaneateles,st-mary-of-the-lake-skaneateles,St. Mary's of the Lake,81 Jordan St.,,Skaneateles,NY,13152,true,false,42.9510625,-76.4311875
+st-mary-st-paul-binghamton,st-mary-of-the-assumption-binghamton,St. Mary of the Assumption,37 Fayette St.,,Binghamton,NY,13901,true,false,42.1003125,-75.9050625
+st-mary-st-paul-binghamton,st-paul-binghamton,Church of St. Paul,282 Chenango Street,,Binghamton,NY,13901,true,false,42.1068125,-75.9046875
+st-michael-st-peter-our-lady-of-hope-syracuse,our-lady-of-hope-syracuse,Our Lady of Hope Church,4845 South Salina Street,,Syracuse,NY,13205,false,true,42.9989375,-76.1425625
+st-michael-st-peter-our-lady-of-hope-syracuse,st-michael-st-peter-syracuse,Church of St. Michael & St. Peter,4791 West Seneca Turnpike,,Syracuse,NY,13215,true,true,43.0048125,-76.1846875
+st-patrick-chittenango,st-patrick-chittenango,St. Patrick,1341 Murray Drive,,Chittenango,NY,13037,true,false,43.0495625,-75.9044375
+st-patrick-jordan,st-patrick-jordan,St. Patrick's Church,28 North Main St.,,Jordan,NY,13080,true,true,43.0671875,-76.4745625
+st-patrick-st-anthony-chadwicks,st-patrick-st-anthony-chadwicks,St. Patrick - St. Anthony Church,3364 Oneida St.,,Chadwicks,NY,13319,true,true,43.0263125,-75.2701875
+st-patrick-st-thomas-aquinas-binghamton,st-patrick-binghamton,St. Patrick's Church,9 Leroy St.,,Binghamton,NY,13905,true,true,42.0950625,-75.9204375
+st-patrick-st-thomas-aquinas-binghamton,st-thomas-aquinas-binghamton,St. Thomas Aquinas,1 Aquinas St.,,Binghamton,NY,13905,true,true,42.1006875,-75.9383125
+st-paul-norwich,st-paul-norwich,St. Paul,30 Pleasant St.,,Norwich,NY,13815,true,true,42.5366875,-75.5266875
+st-paul-whitesboro,st-leo-st-ann-holland-patent,St. Leo & St. Ann Church,7937 Elm St.,,Holland Patent,NY,13354,true,true,43.2460625,-75.2539375
+st-paul-whitesboro,st-paul-whitesboro,St. Paul's Church,16 Park Ave.,,Whitesboro,NY,13492,true,true,43.1205625,-75.2908125
+st-rose-of-lima-north-syracuse,st-rose-of-lima-north-syracuse,St. Rose of Lima,409 S Main St.,,North Syracuse,NY,13212,true,false,43.1307846,-76.1318919
+st-vincent-de-paul-blessed-sacrament-vestal,st-vincent-de-paul-blessed-sacrament-vestal,St. Vincent de Paul Blessed Sacrament,465 Clubhouse Rd.,,Vestal,NY,13850,true,true,42.0876875,-75.9493125
+transfiguration-syracuse,transfiguration-syracuse,Transfiguration of Our Lord Church,740 Teall Avenue,,Syracuse,NY,13206,true,true,43.0580625,-76.1218125
+all-saints-albany,all-saints-albany,All Saints Catholic Church,16 Homestead Street,,Albany,NY,12203,true,true,42.6758125,-73.8238125
+all-saints-on-the-hudson-mechanicville,parish-center-chapel-mechanicville,All Saints on the Hudson Parish Center Chapel,52 William St.,,Mechanicville,NY,12118,false,true,,
+all-saints-on-the-hudson-mechanicville,st-isaac-jogues-saratoga-lake,St. Isaac Jogues Chapel,Route 9p,,Saratoga Lake,NY,12866,true,true,,
+all-saints-on-the-hudson-mechanicville,st-paul-mechanicville,St. Paul the Apostle Church,121 N Main St.,,Mechanicville,NY,12118,true,true,42.9064375,-73.6845625
+all-saints-on-the-hudson-mechanicville,st-peter-stillwater,St. Peter's Church,895 Hudson Ave.,,Stillwater,NY,12170,true,true,42.9488125,-73.6409375
+annunciation-our-lady-queen-of-apostles-ilion,annunciation-ilion,Church of the Annunciation,50 West St.,,Ilion,NY,13357,true,false,43.0147905,-75.0395205
+annunciation-our-lady-queen-of-apostles-ilion,our-lady-queen-of-apostles-frankfort,Our Lady Queen of Apostles,412 S Frankfort St.,,Frankfort,NY,13340,true,true,43.0339375,-75.0733125
+blessed-sacrament-albany,blessed-sacrament-albany,Blessed Sacrament Church,607 Central Avenue,,Albany,NY,12206,true,false,42.6734375,-73.7821875
+cathedral-st-mary-albany,cathedral-immaculate-conception-albany,Cathedral of the Immaculate Conception,125 Eagle Street,,Albany,NY,12202,true,true,42.646952,-73.759448
+cathedral-st-mary-albany,st-mary-albany,Historic St. Mary's Church on Capitol Hill,10 Lodge Street,,Albany,NY,12207,true,true,42.6519375,-73.7529375
+ccncc-valatie,st-james-chatham,St. James,117 Hudson Ave.,,Chatham,NY,12037,true,true,42.3568125,-73.6000625
+ccncc-valatie,st-john-the-baptist-valatie,St. John the Baptist,1025 Kinderhook St.,,Valatie,NY,12184,true,true,42.4116875,-73.6869375
+ccncc-valatie,st-joseph-stuyvesant,Church of St. Joseph,1820 Route 9,,Stuyvesant,NY,12173,true,true,42.3879375,-73.7818125
+christ-sun-of-justice-troy,christ-sun-of-justice-troy,Christ Sun of Justice (Chapel + Cultural Center),2125 Burdett Ave.,,Troy,NY,12180,true,true,42.7318125,-73.6720625
+christ-the-king-albany,christ-the-king-albany,Christ the King Church,20 Sumter Avenue,,Albany,NY,12203,true,true,42.6938125,-73.8871875
+corpus-christi-round-lake,corpus-christi-round-lake,Corpus Christi Church,2001 Route 9 & Ushers Rd.,,Round Lake,NY,12151,true,true,42.9064375,-73.7779375
+family-of-the-holy-cross-herkimer,blessed-sacrament-mohawk,Blessed Sacrament Church,71 E Main St.,,Mohawk,NY,13407,true,true,43.0131875,-74.9989375
+family-of-the-holy-cross-herkimer,st-francis-de-sales-herkimer,St. Francis de Sales Church,219 N Bellinger St.,,Herkimer,NY,13350,true,true,43.0259375,-74.9915625
+family-of-the-holy-cross-herkimer,st-john-the-baptist-newport,St. John the Baptist Church,7516 N Main St.,,Newport,NY,13416,true,true,43.1893125,-75.0168125
+family-of-the-holy-cross-herkimer,sts-anthony-joseph-herkimer,St. Anthony & St. Joseph Church,229 S Main St.,,Herkimer,NY,13350,true,true,43.0238125,-74.9846875
+holy-cross-morris,holy-cross-morris,Holy Cross Church,98 Main St.,,Morris,NY,13808,true,true,42.5489375,-75.2428125
+holy-family-little-falls,holy-family-little-falls,Holy Family Church,763 E Main St.,,Little Falls,NY,13365,true,true,43.0438125,-74.8529375
+holy-family-little-falls,st-joseph-dolgeville,St. Joseph Church,31 N Helmer Ave.,,Dolgeville,NY,13329,true,true,43.1059375,-74.7714375
+holy-family-schuylerville,notre-dame-visitation-schuylerville,Notre Dame-Visitation Church,18 Pearl St.,,Schuylerville,NY,12871,true,true,43.0959375,-73.5855625
+holy-family-schuylerville,st-joseph-greenwich,St. Joseph,35 Hill St.,,Greenwich,NY,12834,true,true,43.0894375,-73.5024375
+holy-mother-and-child-st-joseph-st-paul-greenfield-center,holy-mother-and-child-corinth,Holy Mother and Child Church,405 Palmer Ave.,,Corinth,NY,12822,true,true,43.2454375,-73.8209375
+holy-mother-and-child-st-joseph-st-paul-greenfield-center,st-joseph-greenfield-center,St. Joseph's Church,3159 Route 9N,,Greenfield Center,NY,12833,true,true,43.1328125,-73.8470625
+holy-mother-and-child-st-joseph-st-paul-greenfield-center,st-paul-rock-city-falls,St. Paul's Church,771 Route 29,,Rock City Falls,NY,12863,true,true,43.0661875,-73.9225625
+holy-spirit-holy-trinity-gloversville,holy-spirit-gloversville,Church of the Holy Spirit,149 S Main St.,,Gloversville,NY,12078,true,true,43.0456875,-74.3486875
+holy-spirit-holy-trinity-gloversville,holy-trinity-johnstown,Holy Trinity Church,207 Glebe St.,,Johnstown,NY,12095,true,false,43.0043125,-74.3689375
+holy-spirit-sacred-heart-east-greenbush,holy-spirit-east-greenbush,Church of the Holy Spirit,667 Columbia Trpk.,,East Greenbush,NY,12061,true,true,42.5905625,-73.7009375
+holy-spirit-sacred-heart-east-greenbush,sacred-heart-castleton-on-hudson,Sacred Heart Church,3 Catholic Way,,Castleton-on-Hudson,NY,12033,true,true,42.5265625,-73.7553125
+holy-trinity-cohoes,holy-trinity-cohoes,Church of the Holy Trinity,122 Vliet Blvd.,,Cohoes,NY,12047,true,true,42.7778125,-73.7130625
+holy-trinity-hudson,nativity-linlithgo,Nativity Chapel,County Route 31 & County Route 10,,Linlithgo,NY,12526,false,false,42.1573125,-73.8203125
+holy-trinity-hudson,resurrection-germantown,Church of the Resurrection,9 Church Ave.,,Germantown,NY,12526,true,false,42.1311875,-73.8803125
+holy-trinity-hudson,st-mary-hudson,St. Mary,429 E Allen St.,,Hudson,NY,12534,true,true,42.2494375,-73.7899375
+hudson-valley-vicariate-west-catskill,immaculate-conception-haines-falls,Immaculate Conception,67 N Lake Rd.,,Haines Falls,NY,12436,true,false,42.1975625,-74.0961875
+hudson-valley-vicariate-west-catskill,sacred-heart-palenville,Sacred Heart,710 Route 23A,,Palenville,NY,12463,true,false,,
+hudson-valley-vicariate-west-catskill,st-mary-coxsackie,St. Mary,80 Mansion St.,,Coxsackie,NY,12051,true,true,42.3534375,-73.8045625
+hudson-valley-vicariate-west-catskill,st-patrick-athens,St. Patrick,24 N Washington St.,,Athens,NY,12015,true,true,42.2611875,-73.8080625
+hudson-valley-vicariate-west-catskill,st-patrick-catskill,St. Patrick,157 Bridge St.,,Catskill,NY,12414,true,false,42.2183125,-73.8615625
+immaculate-conception-hoosick-falls,holy-cross-salem,Holy Cross,249 N Main St.,,Salem,NY,12865,true,true,43.1761875,-73.3280625
+immaculate-conception-hoosick-falls,immaculate-conception-hoosick-falls,Immaculate Conception Church,73 Main St.,,Hoosick Falls,NY,12090,true,true,42.8999375,-73.3503125
+immaculate-conception-hoosick-falls,st-patrick-cambridge,St. Patrick,17 S Park St.,,Cambridge,NY,12816,true,false,43.0254375,-73.3753125
+immaculate-heart-of-mary-watervliet,immaculate-heart-of-mary-watervliet,Immaculate Heart of Mary,2416 - 7th Ave.,,Watervliet,NY,12189,true,true,42.7353125,-73.7056875
+mater-christi-albany,mater-christi-albany,Mater Christi Church,40 Hopewell Street,,Albany,NY,12208,true,true,42.6565625,-73.8133125
+northern-points-cluster-st-cecilia-chestertown,blessed-sacrament-bolton-landing,Blessed Sacrament,7 Goodman Ave.,,Bolton Landing,NY,12814,true,true,43.5565625,-73.6561875
+northern-points-cluster-st-cecilia-chestertown,st-cecilia-warrensburg,St. Cecilia,3802 Main St.,,Warrensburg,NY,12885,true,true,43.4941875,-73.7709375
+northern-points-cluster-st-cecilia-chestertown,st-isaac-jogues-chestertown,St. Isaac Jogues,86 Riverside Dr.,,Chestertown,NY,12817,true,false,43.6535625,-73.8029375
+olg-ic-sj-glenville,immaculate-conception-glenville,Immaculate Conception,400 Saratoga Rd.,,Glenville,NY,12302,true,true,42.8818125,-73.9263125
+olg-ic-sj-glenville,our-lady-of-grace-ballston-lake,Our Lady of Grace,73 Midline Rd.,,Ballston Lake,NY,12019,true,true,42.9191875,-73.8793125
+olg-ic-sj-glenville,st-joseph-scotia,St. Joseph's Church,231 Second St.,,Scotia,NY,12302,true,false,42.8295625,-73.9656875
+our-lady-of-fatima-delanson,our-lady-of-fatima-delanson,Our Lady of Fatima,1735 Alexander Rd.,,Delanson,NY,12053,true,true,42.7499375,-74.1878125
+our-lady-of-hope-copake-falls,our-lady-of-hope-copake-falls,Our Lady of Hope,8074 State Rte. 22,,Copake Falls,NY,12517,true,true,42.1174375,-73.5296875
+our-lady-of-hope-fort-plain,our-lady-of-hope-fort-plain,Our Lady of Hope,115 Reid St.,,Fort Plain,NY,13339,true,true,42.9286875,-74.6380625
+our-lady-of-hope-whitehall,chapel-of-the-assumption-huletts-landing,Chapel of the Assumption,2026 Lands End Rd.,,Huletts Landing,NY,12841,false,true,,
+our-lady-of-hope-whitehall,our-lady-of-hope-whitehall,Our Lady of Hope,9 Wheeler Ave.,,Whitehall,NY,12887,true,false,43.5516875,-73.3970625
+our-lady-of-hope-whitehall,st-ann-fort-ann,St. Ann,85 George St.,,Fort Ann,NY,12827,true,true,43.4156875,-73.4876875
+our-lady-of-hope-whitehall,st-mary-granville,St. Mary,23 Bulkley Ave.,,Granville,NY,12832,true,true,43.4036875,-73.2629375
+our-lady-of-the-americas-albany,our-lady-of-the-americas-albany,Shrine Church of Our Lady of the Americas,273 Central Avenue,,Albany,NY,12206,true,true,42.6639375,-73.7713125
+our-lady-of-the-annunciation-queensbury,our-lady-of-the-annunciation-queensbury,Our Lady of the Annunciation,448 Aviation Rd.,,Queensbury,NY,12804,true,true,43.3291875,-73.6880625
+our-lady-of-the-assumption-latham,our-lady-of-the-assumption-latham,Our Lady of the Assumption Church,498 Watervliet Shaker Rd.,,Latham,NY,12110,true,true,42.7334375,-73.7555625
+our-lady-of-the-valley-middleburgh,our-lady-of-the-valley-middleburgh,Our Lady of the Valley,Main St. & Wells Ave.,,Middleburgh,NY,12122,true,true,42.5969375,-74.3324375
+our-lady-of-victory-troy,our-lady-of-the-snow-grafton,Our Lady of the Snow Mission,31 Owen Rd.,,Grafton,NY,12082,true,true,42.7704375,-73.4479375
+our-lady-of-victory-troy,our-lady-of-victory-troy,Our Lady of Victory Church,55 N Lake Ave.,,Troy,NY,12180,true,true,42.7420625,-73.6605625
+our-lady-queen-of-peace-rotterdam,our-lady-queen-of-peace-rotterdam,Our Lady Queen of Peace,210 Princetown Rd.,,Schenectady,NY,12306,true,true,42.7940625,-73.9870625
+our-lady-queen-of-peace-rotterdam,st-margaret-of-cortona-rotterdam-junction,St. Margaret of Cortona,1228 Main St.,,Rotterdam Junction,NY,12150,true,true,42.8708125,-74.0394375
+sacred-heart-lake-george,sacred-heart-lake-george,Sacred Heart,50 Mohican St.,,Lake George,NY,12845,true,true,43.4205625,-73.7168125
+sacred-heart-margaretville,sacred-heart-margaretville,Sacred Heart Church,38 Academy St.,,Margaretville,NY,12455,true,false,42.1463125,-74.6518125
+sacred-heart-margaretville,st-anne-andes,St. Anne's Mission Church,375 Main St.,,Andes,NY,13731,false,true,42.1913125,-74.7793125
+sacred-heart-sidney,sacred-heart-sidney,Sacred Heart Church,15 Liberty St.,,Sidney,NY,13838,true,true,42.3160625,-75.3911875
+sacred-heart-stamford,sacred-heart-stamford,Sacred Heart Church,27 Harper St.,,Stamford,NY,12167,true,true,42.4101875,-74.6234375
+sacred-heart-stamford,st-philip-neri-grand-gorge,St. Philip Neri Church,60676 State Highway 30,,Grand Gorge,NY,12434,true,true,42.3618125,-74.4975625
+sacred-heart-troy,sacred-heart-troy,Church of the Sacred Heart,310 Spring Ave.,,Troy,NY,12180,true,true,42.7083125,-73.6619375
+st-ambrose-latham,st-ambrose-latham,St. Ambrose Catholic Church,347 Old Loudon Rd.,,Latham,NY,12110,true,true,42.7579375,-73.7533125
+st-anthony-of-padua-troy,st-anthony-of-padua-troy,St. Anthony of Padua Church,28 State St.,,Troy,NY,12180,true,true,42.7299375,-73.6900625
+st-anthony-schenectady,st-anthony-schenectady,St. Anthony's Church,331 Seward Pl.,,Schenectady,NY,12305,true,true,42.8204375,-73.9314375
+st-augustine-troy,st-augustine-troy,St. Augustine's Church,4th Ave. & 115th St.,,Troy,NY,12182,true,false,42.7744375,-73.6745625
+st-cecilia-sacred-heart-fonda,sacred-heart-tribes-hill,Sacred Heart Church,111 3rd Ave.,,Tribes Hill,NY,12177,true,true,42.9520625,-74.2914375
+st-cecilia-sacred-heart-fonda,st-cecilia-fonda,St. Cecilia Church,26 Broadway,,Fonda,NY,12068,true,true,42.9553125,-74.3770625
+st-clare-christ-our-light-colonie,christ-our-light-loudonville,Christ Our Light Catholic Church,1 Maria Dr.,,Loudonville,NY,12211,true,true,42.7093125,-73.7909375
+st-clare-christ-our-light-colonie,st-clare-colonie,Church of Saint Clare,1947 Central Ave.,,Colonie,NY,12205,true,true,42.7398125,-73.8574375
+st-clement-saratoga-springs,st-clement-saratoga-springs,St. Clement's Church,231 Lake Ave.,,Saratoga Springs,NY,12866,true,true,43.0849375,-73.7661875
+st-edward-the-confessor-clifton-park,st-edward-the-confessor-clifton-park,St. Edward the Confessor Church,569 Clifton Park Center Rd.,,Clifton Park,NY,12065,true,true,42.8590625,-73.8039375
+st-francis-of-assisi-albany,st-francis-of-assisi-albany,St. Francis of Assisi Church (Delaware Avenue),391 Delaware Avenue,,Albany,NY,12209,true,true,42.6418125,-73.7803125
+st-francis-of-assisi-albany,st-francis-of-assisi-south-end-albany,"St. Francis of Assisi, South End Community (former St. Ann)",93 Fourth Avenue,,Albany,NY,12202,true,false,42.6391243,-73.7574696
+st-henry-averill-park,st-henry-averill-park,St. Henry's Catholic Church,39 Old Route 66,,Averill Park,NY,12018,true,true,42.6366875,-73.5575625
+st-joan-of-arc-menands,st-joan-of-arc-menands,St. Joan of Arc Church,76 Menand Road,,Menands,NY,12204,true,true,42.6958125,-73.7299375
+st-john-st-joseph-st-mary-rensselaer,st-john-the-evangelist-st-joseph-rensselaer,St. John the Evangelist & St. Joseph Church,Herrick St. & Elm St.,,Rensselaer,NY,12144,true,false,42.6405625,-73.7386875
+st-john-st-joseph-st-mary-rensselaer,st-mary-clinton-heights-rensselaer,Church of St. Mary at Clinton Heights,163 Columbia Trpk.,,Rensselaer,NY,12144,true,true,42.6208125,-73.7348125
+st-john-the-baptist-greenville,our-lady-of-knock-east-durham,Our Lady of Knock Shrine,2052 State Route 145,,East Durham,NY,12423,true,false,42.3636875,-74.0774375
+st-john-the-baptist-greenville,sacred-heart-cairo,Sacred Heart,35 Church St.,,Cairo,NY,12413,true,false,42.2956875,-73.9988125
+st-john-the-baptist-greenville,st-john-the-baptist-greenville,St. John the Baptist,4987 State Route 81,,Greenville,NY,12083,true,false,42.4144375,-74.0281875
+st-john-the-baptist-walton,holy-family-downsville,Church of the Holy Family,14918 State Highway 30,,Downsville,NY,13755,true,false,42.0797165,-74.9975894
+st-john-the-baptist-walton,st-john-the-baptist-walton,St. John the Baptist,25 Benton Ave.,,Walton,NY,13856,true,true,42.1691875,-75.1258125
+st-john-the-baptist-walton,st-peter-delhi,St. Peter's Church,8 Franklin Street,,Delhi,NY,13753,true,false,42.275824,-74.9211236
+st-john-the-evangelist-schenectady,st-john-the-evangelist-schenectady,St. John the Evangelist,812 Union St.,,Schenectady,NY,12308,true,false,42.8144375,-73.9316875
+st-joseph-schenectady,st-joseph-schenectady,St. Joseph's Church,600 State St.,,Schenectady,NY,12305,true,true,42.8116875,-73.9389375
+st-joseph-st-francis-broadalbin,st-francis-of-assisi-northville,St. Francis of Assisi Church,501 Bridge St.,,Northville,NY,12134,true,true,43.2253125,-74.1771875
+st-joseph-st-francis-broadalbin,st-joseph-broadalbin,St. Joseph's Church,North St. & N Main St.,,Broadalbin,NY,12025,true,true,43.0621875,-74.1983125
+st-joseph-st-mary-st-paul-fort-edward,st-joseph-fort-edward,St. Joseph,166 Broadway,,Fort Edward,NY,12828,true,false,43.2695625,-73.5869375
+st-joseph-st-mary-st-paul-fort-edward,st-mary-st-paul-hudson-falls,St. Mary–St. Paul,Park Pl.,,Hudson Falls,NY,12839,true,false,43.3020625,-73.5868125
+st-joseph-the-worker-west-winfield,st-joseph-the-worker-richfield-springs,St. Joseph the Worker Church (Richfield Springs),35 Canadarago St.,,Richfield Springs,NY,13439,true,true,42.8501875,-74.9813125
+st-joseph-the-worker-west-winfield,st-joseph-the-worker-west-winfield,St. Joseph the Worker Church (West Winfield),303 W Main St.,,West Winfield,NY,13491,true,true,42.8849375,-75.1988125
+st-joseph-troy,st-joseph-troy,St. Joseph Church,416 Third Street,,Troy,NY,12180,true,false,42.7155625,-73.6933125
+st-joseph-worcester,st-joseph-worcester,St. Joseph's Church,205 Main St.,,Worcester,NY,12197,true,false,42.5936082,-74.7454869
+st-jude-st-michael-wynantskill,st-jude-the-apostle-wynantskill,St. Jude the Apostle Church,43 Brookside Ave.,,Wynantskill,NY,12198,true,true,42.6936875,-73.6460625
+st-jude-st-michael-wynantskill,st-michael-the-archangel-troy,St. Michael the Archangel Church,175 Williams Rd.,,Troy,NY,12180,true,true,42.6919375,-73.6846875
+st-kateri-tekakwitha-niskayuna,st-kateri-tekakwitha-rosa-road-schenectady,St. Kateri Tekakwitha Church (Rosa Road),2216 Rosa Rd.,,Schenectady,NY,12309,false,true,42.8281875,-73.9058125
+st-kateri-tekakwitha-niskayuna,st-kateri-tekakwitha-union-street-niskayuna,St. Kateri Tekakwitha Church (Union Street),1803 Union St.,,Schenectady,NY,12309,false,true,42.8011875,-73.8964375
+st-lucy-st-bernadette-altamont,st-lucy-st-bernadette-altamont,St. Lucy/St. Bernadette Catholic Church,113 Grand St.,,Altamont,NY,12009,true,false,42.7006875,-74.0284375
+st-luke-schenectady,st-luke-schenectady,St. Luke's Church,1241 State St.,,Schenectady,NY,12304,true,false,42.7988125,-73.9244375
+st-madeleine-sophie-st-gabriel-schenectady,st-gabriel-the-archangel-rotterdam,St. Gabriel the Archangel,3040 Hamburg St.,,Schenectady,NY,12303,true,true,42.7665625,-73.9386875
+st-madeleine-sophie-st-gabriel-schenectady,st-madeleine-sophie-schenectady,St. Madeleine Sophie,3500 Carman Rd.,,Schenectady,NY,12303,true,true,42.7415625,-73.9440625
+st-mary-amsterdam,st-mary-amsterdam,St. Mary's Church,156 E Main St.,,Amsterdam,NY,12010,true,true,42.9350625,-74.1876875
+st-mary-ballston-spa,st-mary-ballston-spa,St. Mary's Church,185 Milton Ave.,,Ballston Spa,NY,12020,true,false,43.0056875,-73.8494375
+st-mary-ballston-spa,st-mary-galway,St. Mary's Mission Church,2113 East St.,,Galway,NY,12074,true,true,43.0191875,-74.0275625
+st-mary-cooperstown,st-mary-cooperstown,St. Mary's Our Lady of the Lake,31 Elm St.,,Cooperstown,NY,13326,false,true,42.6978125,-74.9271875
+st-mary-crescent,st-mary-crescent,"St. Mary's Church, Crescent",86 Church Hill Rd.,,Waterford,NY,12188,true,true,42.8250625,-73.7303125
+st-mary-glens-falls,st-mary-glens-falls,St. Mary,62 Warren St.,,Glens Falls,NY,12801,true,true,43.3096875,-73.6415625
+st-mary-nassau,st-mary-nassau,St. Mary's Church,26 Church St.,,Nassau,NY,12123,true,true,42.5153125,-73.6074375
+st-mary-oneonta,st-mary-oneonta,St. Mary's Catholic Church,39 Walnut Street,,Oneonta,NY,13820,true,false,42.4576875,-75.0598125
+st-mary-waterford,st-mary-waterford,St. Mary of the Assumption Church,119 Broad St.,,Waterford,NY,12188,true,true,42.7914375,-73.6810625
+st-matthew-voorheesville,st-matthew-voorheesville,Saint Matthew's Church,25 Mountainview St.,,Voorheesville,NY,12186,true,true,42.6478125,-73.9325625
+st-michael-cohoes,st-michael-cohoes,St. Michael's Church,20 Page Ave.,,Cohoes,NY,12047,true,false,42.7739375,-73.6921875
+st-michael-the-archangel-south-glens-falls,st-michael-the-archangel-south-glens-falls,St. Michael the Archangel Church,80 Saratoga Ave.,,South Glens Falls,NY,12803,true,true,43.2931875,-73.6370625
+st-michael-the-archangel-south-glens-falls,st-therese-gansevoort,St. Therese Mission Chapel,1 Wilton Gansevoort Rd.,,Gansevoort,NY,12831,true,true,,
+st-patrick-ravena,st-patrick-ravena,St. Patrick's Church,21 Main St.,,Ravena,NY,12143,true,true,42.4731875,-73.8021875
+st-paul-st-adalbert-mt-carmel-schenectady,our-lady-of-mount-carmel-schenectady,Our Lady of Mount Carmel,1255 Pleasant St.,,Schenectady,NY,12303,true,false,42.7941875,-73.9470625
+st-paul-st-adalbert-mt-carmel-schenectady,st-adalbert-schenectady,Church of St. Adalbert,550 Lansing St.,,Schenectady,NY,12303,true,true,42.8040625,-73.9485625
+st-paul-st-adalbert-mt-carmel-schenectady,st-paul-the-apostle-schenectady,St. Paul the Apostle,2777 Albany St.,,Schenectady,NY,12304,true,false,42.7805625,-73.9084375
+st-paul-the-apostle-hancock,st-paul-the-apostle-hancock,St. Paul the Apostle Church,346 West Main Street,,Hancock,NY,13783,true,false,41.9554375,-75.2884375
+st-peter-saratoga-springs,st-peter-saratoga-springs,Church of St. Peter,241 Broadway,,Saratoga Springs,NY,12866,true,true,43.0764375,-73.7869375
+st-stanislaus-our-lady-of-mount-carmel-amsterdam,our-lady-of-mount-carmel-amsterdam,Our Lady of Mt. Carmel Church,39 St. John St.,,Amsterdam,NY,12010,false,true,42.9285625,-74.1965625
+st-stanislaus-our-lady-of-mount-carmel-amsterdam,st-stanislaus-amsterdam,Church of St. Stanislaus,50 Cornell St.,,Amsterdam,NY,12010,true,true,42.9355625,-74.1833125
+st-stephen-hagaman,st-stephen-hagaman,St. Stephen's Church,51 Pawling St.,,Hagaman,NY,12086,true,true,42.9794375,-74.1494375
+st-theresa-windham,st-theresa-windham,St. Theresa of the Child Jesus,5188 State Route 23,,Windham,NY,12496,true,true,42.3101875,-74.2388125
+st-thomas-the-apostle-delmar,st-thomas-the-apostle-delmar,St. Thomas the Apostle Catholic Church,35 Adams Pl.,,Delmar,NY,12054,true,true,42.6219375,-73.8303125
+st-vincent-de-paul-albany,st-vincent-de-paul-albany,Church of St. Vincent de Paul,900 Madison Avenue,,Albany,NY,12208,true,true,42.6615625,-73.7841875
+st-vincent-de-paul-cobleskill,st-vincent-de-paul-cobleskill,St. Vincent de Paul,138 Washington Ave.,,Cobleskill,NY,12043,true,true,42.6793125,-74.4910625
+transfiguration-troy,transfiguration-schaghticoke,Transfiguration Church (Schaghticoke),17 South Main Street,,Schaghticoke,NY,12154,true,true,42.8938125,-73.5913125
+transfiguration-troy,transfiguration-speigletown-troy,Transfiguration Church (Speigletown),50 Hillview Dr.,,Troy,NY,12182,true,true,42.7980625,-73.6381875

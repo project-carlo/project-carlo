@@ -14,7 +14,7 @@ def _mock_gemini_response(monkeypatch, text: str) -> None:
     )
     monkeypatch.setattr(
         "pdf_extract.schedule_extraction.genai.Client",
-        lambda: SimpleNamespace(),
+        lambda **_kwargs: SimpleNamespace(),
     )
 
 

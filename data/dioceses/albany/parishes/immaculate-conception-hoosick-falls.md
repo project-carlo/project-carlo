@@ -1,0 +1,69 @@
+---
+name: Immaculate Conception Church (Hoosick Falls)
+website: https://www.battenkillcatholic.org
+bulletin_provider: ecatholic
+provider_id: ''
+publication: ['ecatholic:11172']
+group: Battenkill Catholic Cluster
+evidence:
+- url: https://files.ecatholic.com/11172/bulletins/20260927.pdf
+  seen: 2026-09-28
+  quote: Immaculate Conception Church - September 26 & 27, 2026
+  note: Masthead, page 1 of the 27 September 2026 issue, with "Immaculate Conception Mass Schedule Saturday,
+    4:00 pm Sunday, 10:00 am Monday, 9:00 am (Chapel)".
+- url: https://files.ecatholic.com/11172/bulletins/20260927.pdf
+  seen: 2026-09-28
+  quote: Battenkill Network of Parishes … St. Patrick's Church, Cambridge, 518-677-2757 … Mass - Sun.
+    11:30 am; Wed. 9:00 am … Holy Cross, Salem, 518-854-7626 … Mass - Sun. 8:15 am; Tues. 9:00 am
+  note: Page 1. Page 2's liturgy schedule lists the week's weekday Masses at all three churches.
+- url: https://www.battenkillcatholic.org/bulletins
+  seen: 2026-09-28
+  note: The cluster site's "ICC Bulletins" page (behind Cloudflare; read with parish-site-access visit.py)
+    lists one issue per Sunday back to 2015, newest September 27, 2026, at files.ecatholic.com/11172/bulletins/<YYYYMMDD>.pdf.
+    The menu's other "Bulletins" page (/bulletins-1) listed no issues.
+promoted: 2026-09-28
+---
+
+## Publisher
+
+Immaculate Conception, Hoosick Falls publishes a weekly bulletin on the Battenkill Catholic
+Cluster's eCatholic site (site id 11172), under the menu item "ICC Bulletins". The 27 September
+2026 issue is headed "Immaculate Conception Church - September 26 & 27, 2026" and gives IC's own
+schedule and staff (Parish Life Coordinator Mary K. Rosmus, Parochial Vicar Rev. Peter Tkocz). Its
+parish office is at 17 S. Park Street, Cambridge (the cluster office).
+
+Page 1 also prints a "Battenkill Network of Parishes" box with the Masses at St. Patrick's,
+Cambridge (Sun. 11:30 am, Wed. 9 am) and Holy Cross, Salem (Sun. 8:15 am, Tues. 9 am), and page 2
+lists the week's weekday Masses at all three. Those two churches are in Washington County (the
+warren-washington region). The cluster site's other "Bulletins" page (/bulletins-1) listed no
+issues on 28 September, and the warren-washington region found no separate bulletin for either,
+so this issue is the only one that prints their schedules and both churches are under this row.
+
+## Worship sites
+
+Immaculate Conception Church, 73 Main St., Hoosick Falls (`immaculate-conception-hoosick-falls`).
+Three, all with Masses in the 27 September 2026 issue:
+
+- Immaculate Conception Church, 73 Main St., Hoosick Falls (`immaculate-conception-hoosick-falls`):
+  Saturday 4 pm, Sunday 10 am, Monday 9 am.
+- St. Patrick's Church, Cambridge (`st-patrick-cambridge`, created by the warren-washington
+  region): Sunday 11:30 am, Wednesday 9 am ("Battenkill Network of Parishes" box, page 1).
+- Holy Cross Church, Salem (`holy-cross-salem`, created by the warren-washington region): Sunday
+  8:15 am, Tuesday 9 am (same box).
+
+The masthead names Immaculate Conception alone, so the row keeps IC's name; the lead may rename it
+for the cluster. The records index sends St. George's, Pittstown to Immaculate Conception; that
+building is in no roster and the bulletin does not mention it.
+
+## Website and bulletin provider
+
+eCatholic site 11172, battenkillcatholic.org (the directory's link, wrapped in a Barracuda
+linkprotect redirect). The "ICC Bulletins" page (/bulletins) is where this bulletin's issues are
+listed. The website is the site's root: the eCatholic fetcher adds `/bulletins` itself (with
+`/bulletins` in the website it asked for `/bulletins/bulletins`, found by `fetch:check` on
+2026-09-28). Group: the Battenkill Catholic Cluster.
+
+## Not yet confirmed
+
+The Cambridge and Salem schedules are a box on IC's bulletin rather than a masthead listing; if
+either church starts a bulletin of its own it becomes a separate row. Nothing else.

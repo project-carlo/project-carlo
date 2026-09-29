@@ -34,9 +34,11 @@ decide this:
   bulletin is **one** row with several churches.
 - A family whose members each publish their own bulletin is **several** rows.
 - A canonical merger does not merge rows, and a rescinded one does not split them. Buffalo
-  had both: Fourteen Holy Helpers was canonically merged into Queen of Heaven and kept its
-  own bulletin (two rows); St. John and St. Mary of the Angels in Olean had their merger
-  rescinded and still publish one bulletin (one row).
+  had both: Holy Cross and Our Lady of Hope share Family #23 but are separate rows, while
+  St. John and St. Mary of the Angels in Olean had their merger rescinded and still publish
+  one bulletin (one row). Bulletins change too: Fourteen Holy Helpers kept its own bulletin
+  after merging into Queen of Heaven, but by September 2026 it shared the Blessed Family #7
+  bulletin with Queen of Heaven and St. John Vianney (one row).
 - A family's size tells you nothing. Buffalo's families went every way: some single
   bulletins over four parishes, some with every member separate.
 
@@ -114,8 +116,9 @@ evidence:
 The cathedral publishes its own weekly bulletin through ParishesOnline...
 ```
 
-`syracuse/` is a small worked example: one finished parish, one that is blocked, and four
-exclusions of different kinds.
+`syracuse/` is a complete worked example: a whole diocese explored in one pass by eight
+parallel agents, one per region, including exclusions of every kind, parishes folded into
+shared bulletins, and a canonical merger dated from the news rather than a guess.
 
 ### Fields
 
@@ -127,8 +130,9 @@ Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to c
 - `bulletin_provider`: `parishes_online`, `ecatholic`, `discover_mass`, `other`,
   `google_drive` or `no_bulletin`. `fetch` reads ParishesOnline and DiscoverMass by
   `provider_id` (the org slug from `parishesonline.com/organization/<slug>`, the church slug
-  from `discovermass.com/church/<slug>/`). It reads eCatholic and `other` from `website`, so
-  for eCatholic the website has to be the eCatholic-hosted site.
+  from `discovermass.com/church/<slug>/`). It reads eCatholic, `other` and `google_drive`
+  from `website`, so for eCatholic the website has to be the eCatholic-hosted site, and for
+  `google_drive` it has to link the shared folder.
 - `publication`: ids of the bulletin itself, as `scheme:value`. **Two parish rows may never
   share one**, and `validate` enforces that across every diocese: it catches "one bulletin
   carried as several rows", a mistake that shows up in no other check. Record every form
@@ -342,6 +346,9 @@ Each of these produced a confident wrong answer in Buffalo at least once.
 - **A summarizing fetch tool is not a source.** For a quote, read the page itself (`probe
   pdf`, `curl`, the recheck tool). One summary moved a 2020 merger to 2026. The article's
   weekdays gave the real year.
+- **A hand-written `quote:` or `note:` containing ": " breaks the YAML.** Quote the value
+  (`note: 'Page 1: the masthead'`). `validate` catches it, but only after the whole file is
+  unreadable, which in Albany briefly left three churches pointing at a "missing" parish.
 - **Coverage measures the roster.** A place the roster doesn't list moves no number, and an
   oratory with no weekend Mass can be missing from every list and still be open. `coverage`
   lists your churches that are in no roster; each needs an explanation, not deletion.

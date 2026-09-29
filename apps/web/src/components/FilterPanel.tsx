@@ -257,7 +257,7 @@ export function FilterPanel({
     >
       <SheetContent
         side="bottom"
-        className="z-[1200] max-h-[88vh] gap-0 border-x-0 border-rule-strong bg-paper px-0 pb-0"
+        className="z-[1200] max-h-[88dvh] gap-0 border-x-0 border-rule-strong bg-paper px-0 pb-0"
         showCloseButton
       >
         <SheetTitle className="sr-only">Filters</SheetTitle>

@@ -37,7 +37,8 @@ It is now column-oriented JSON; see [Phase 2](#phase-2--slim-the-payload-cheap-b
   decodes **every** church and event into JS objects once; filters run in JS on
   every filter change (`collectMapItems`).
 - `apps/web/src/components/ChurchMap.tsx` renders one react-leaflet `<Marker>`
-  (an SVG `divIcon`) per matching church, with no viewport culling or clustering.
+  (an SVG `divIcon`) per matching church or cluster in and around the viewport
+  (see [Phase 1](#phase-1--draw-only-whats-on-screen-needed-at-500-churches)).
 - `scripts/prerender.ts` writes one static HTML page per church, plus
   `churches/index.html` and `sitemap.xml`. Everything is served as Workers
   static assets (no Worker script).
@@ -117,16 +118,26 @@ the next one is added.
 
 ### Phase 1 — Draw only what's on screen (needed at ~500 churches)
 
-This change is to the map only; the data layer stays as it is.
+**Done.** This change is to the map only; the data layer stays as it is.
 
-- **Viewport culling.** Render markers only for churches inside the current
-  map bounds plus some padding, and update on `moveend`. The default view is
-  zoom 11, a single metro area, so this alone keeps the DOM at tens of markers
-  regardless of total size.
-- **Clustering at low zoom.** Use [`supercluster`](https://github.com/mapbox/supercluster)
-  (small and fast; indexing 20,000 points takes tens of ms) to collapse pins
-  into counts when zoomed out. Popups only exist for markers that are actually
-  rendered.
+- **Viewport culling.** Markers are rendered only for churches inside the
+  current map bounds plus half a viewport of padding on each side, and are
+  updated on `moveend`. The default view is zoom 11, a single metro area, so
+  this alone keeps the DOM at tens of markers regardless of total size.
+- **Clustering at low zoom.** `apps/web/src/lib/mapClusters.ts` draws
+  churches as numbered roundels when zoomed out. The zoom alone decides
+  whether the map clusters: at zoom 10 and further out every church is in a
+  roundel (one with no neighbours nearby gets a roundel marked 1), and from
+  zoom 11, the default view, every church has its own pin. Which churches
+  share a roundel uses supercluster's algorithm (greedy and hierarchical, so
+  zooming in only ever splits a roundel), with a radius that depends on the
+  zoom: 40 px at zoom 10, up to 60 px at state level. Clicking a roundel
+  zooms in to fit its churches in the part of the map the search card and
+  filter panel leave uncovered. Popups only exist for markers that are
+  actually rendered.
+  Rebuilding the index on a filter change takes about 1 ms for today's data,
+  10 ms for 2,800 churches and 85 ms for 20,000 (unthrottled). At national
+  scale, build it only for the loaded shards (Phase 3) or off the main thread.
 - Canvas markers (`preferCanvas` / `L.circleMarker`) are an alternative to
   culling. They would lose the current SVG pin design, so culling plus
   clustering is the better fit.
@@ -245,9 +256,9 @@ and it adds a second vendor.
 
 ## Recommended sequence
 
-1. **Now**: nothing is needed for today's data. Before coverage reaches
-   ~500 churches, do Phase 1 (viewport culling and clustering) and check it
-   with the perf harness on a synthetic 10× snapshot.
+1. **Now**: Phase 1 (viewport culling and clustering) is done. Before
+   coverage reaches ~500 churches, check it with the perf harness on a
+   synthetic 10× snapshot.
 2. **At ~1,500 churches, or a snapshot over ~400 KB gzipped**: finish Phase 2
    by splitting map data from detail data (sql.js is already gone).
 3. **At ~2,500 churches**: do Phase 3, regional static shards. Move to

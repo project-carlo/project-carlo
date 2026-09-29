@@ -59,6 +59,42 @@ pnpm dev:web
 To see your own local pipeline changes in the app, rebuild the snapshot from
 your local database with `pnpm extract:web`.
 
+## Label bulletins (ground truth)
+
+A local tool for recording by hand what each bulletin really says, to measure
+Gemini against later. It runs on localhost only, with no auth, and reads R2
+with the read-only keys (`R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`,
+`R2_SECRET_ACCESS_KEY`).
+
+```bash
+pnpm label           # build the UI and serve it with the API at http://localhost:8766/
+pnpm label --demo    # the same on a generated dataset (data/labeler-demo/, untracked)
+pnpm dev:labeler     # Vite dev server on :5174, proxying /api to a running `pnpm label`
+```
+
+The PDF shown is the stored compacted copy (the first 10 pages), so page
+numbers match what Gemini saw. Gemini's output is shown read-only: the cached
+result for the bulletin's content hash (the current classifier version first),
+or else the database's post-processed events. Accept rows one at a time
+(Enter) or all at once, then fix them. Press `?` in the app for the keyboard
+shortcuts.
+
+Labels are saved to `data/labels/<parish_slug>/<content_hash>.json` and are
+committed to git. Each file (`schema_version` 1) holds:
+
+- `parish_slug`, `content_hash`, `source_url`
+- `status`: `in_progress`, `done` or `skipped`
+- `flags`: `wrong_bulletin`, `unreadable`, `no_schedule`, `church_missing`
+- `published_date`, `note`, `labeler`, `seconds_spent`, `updated_at`
+- `events`: one per event, each with:
+  - `church_slug`, `event_type` (`mass`/`confession`/`adoration`), `event_kind` (`weekly`/`specific_date`)
+  - `day_of_week` or `date`, `start_time` and `end_time` (24-hour `HH:MM`), `cancelled`, `page_number`, `note`
+  - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These two apply to weekly rows only.
+  - `origin`: `human`, `gemini` or `gemini-edited`
+
+The API validates every file (`src/pdf_extract/labeling/labels.py`) and
+rejects any slug or hash that would put it outside `data/labels`.
+
 ## Weekly pipeline
 
 One command runs a whole weekly pass:
@@ -67,7 +103,15 @@ One command runs a whole weekly pass:
 
 ```bash
 pnpm weekly:run            # = python -m pdf_extract weekly
+pnpm weekly:run -- --diocese buffalo
+pnpm weekly:run -- --parish st-joseph-cathedral-buffalo
 ```
+
+`--parish` takes a slug or the name from `data/parishes.csv` (repeat it, or
+pass several slugs separated by commas). `--diocese` takes a folder under
+`data/dioceses/` and refreshes every live parish recorded there. The two
+combine. Parishes outside the limit keep the bulletins they already had, and
+the snapshot still contains every parish. Omit both to refresh everything.
 
 Every run has an id. Each stage records what it did for each parish under that
 id (`pipeline_run` and `run_parish_result` tables), and the run ends with a
@@ -93,8 +137,12 @@ A local run never publishes anything.
 ### GitHub Actions
 
 `.github/workflows/weekly-docker.yml` runs Sundays at 08:17 UTC (and on
-demand). It pulls the published database, runs the pipeline in the Docker
-image, uploads the result to R2 as a candidate, and then:
+demand). A manual run can be limited with its **Parishes** and **Dioceses**
+inputs (slugs, comma-separated); leave them empty to refresh everything. A
+limited run is published the same way when it passes: the snapshot still has
+every parish, with fresh bulletins for the ones the run refreshed. The workflow
+pulls the published database, runs the pipeline on the GitHub runner, uploads
+the result to R2 as a candidate, and then:
 
 - **passed**: publishes it (moves `pipeline/latest.json` to the new run),
   deploys the site, and closes any open `data-refresh` issues it supersedes.
@@ -128,11 +176,15 @@ The R2 bucket, its API tokens and the repository secrets are described in
 docker compose build weekly-job
 export GEMINI_API_KEY=... R2_ACCOUNT_ID=... R2_ACCESS_KEY_ID=... R2_SECRET_ACCESS_KEY=...
 docker compose run --rm weekly-job
+DIOCESES=buffalo docker compose run --rm weekly-job
+PARISHES=st-joseph-cathedral-buffalo docker compose run --rm weekly-job
 ```
 
-The Docker image runs Playwright in headed mode under `xvfb` when no display is
-available. For debugging, set `PLAYWRIGHT_HEADLESS=1` to force headless mode or
-`PLAYWRIGHT_BROWSER_CHANNEL=chrome` to use a locally installed Chrome channel.
+That image is for this local run. The weekly workflow installs the same Python
+toolchain on the runner and does not build it. The image runs Playwright in
+headed mode under `xvfb` when no display is available. For debugging, set
+`PLAYWRIGHT_HEADLESS=1` to force headless mode or `PLAYWRIGHT_BROWSER_CHANNEL=chrome`
+to use a locally installed Chrome channel.
 
 ## How data is stored
 
@@ -199,8 +251,9 @@ Run each stage independently:
 
 ```bash
 pnpm run fetch [-- --parish "..."]
+pnpm fetch:check [-- --parish SLUG --provider other --record tests/fixtures/fetch]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
-pnpm weekly:run
+pnpm weekly:run [-- --parish SLUG --diocese SLUG]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
 pnpm recurrence:apply
 pnpm geocode [-- --dry-run --limit N --email "you@example.com"]
@@ -224,6 +277,33 @@ Stage idempotency:
 - `fetch` skips URLs already recorded in `bulletin.source_url`
 - `process` skips bulletins with `processed_at` already set, and serves
   bulletins it has extracted before (same PDF hash, same model) from the cache
+
+### Checking the fetch stage
+
+Most parishes publish through ParishesOnline, eCatholic or Discover Mass, but
+the `other` provider has to find the bulletin on the parish's own website, and
+every site is laid out differently. `pnpm fetch:check` runs the resolvers in the
+browser without touching the database, downloads what each one picks, and
+prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
+`not_pdf`, or `blocked` when Cloudflare challenged the browser instead).
+
+To keep a resolver change from fixing one site and breaking another, the pages
+each resolver read on every parish's real site are recorded in
+`tests/fixtures/fetch/<slug>.json.gz`, and `tests/test_fetch_replay.py` replays
+them offline against the bulletin in `expected.json`. After changing `fetch.py`:
+
+1. Run `pnpm test`. A changed pick on any recorded site fails the replay test.
+   A site that now opens a page the old resolver never did fails with "re-record
+   this parish".
+2. Re-record the sites whose result should change, then check them by hand:
+   `pnpm fetch:check -- --parish SLUG --record tests/fixtures/fetch`.
+3. Update their entries in `tests/fixtures/fetch/expected.json`. That diff is the
+   coverage change.
+
+Run `fetch:check` in a headed browser (under `xvfb-run` on a server); Cloudflare
+turns headless browsers away. In a Claude Code cloud sandbox, set up Chrome first
+with `.claude/skills/parish-site-access/scripts/setup_browser.sh` and set
+`PLAYWRIGHT_BROWSER_CHANNEL=chrome`.
 
 ### From Python
 
@@ -387,10 +467,13 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 - `data/` (untracked) - the local database, bulletin PDF cache and run outputs
 - `docs/data-setup.md` - R2 bucket, API tokens, GitHub secrets, and running the published data
 - `apps/web/` - React + TypeScript + Vite frontend
+- `apps/labeler/` - the local bulletin labeling UI (never deployed)
+- `data/labels/` - ground-truth labels, one JSON file per bulletin (committed)
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
   - `fetch.py` - bulletin fetching and provider link resolution
+  - `fetch_check.py` - `fetch:check`, and recording/replaying the pages resolvers read
   - `process.py` - bulletin processing with Gemini AI
   - `schedule_extraction.py` - Gemini schedule extraction
   - `classifiers/` - bulletin → events classifiers for `extract` and `bench`
@@ -406,6 +489,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
+  - `labeling/` - the labeler's API (`pnpm label`): label files, bulletin queue, Gemini sources, demo data
 
 ## Dependencies
 

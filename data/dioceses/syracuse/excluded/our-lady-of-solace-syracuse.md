@@ -6,7 +6,7 @@ city: Syracuse
 state: NY
 postal_code: ''
 decided: 2026-09-25
-roster: []
+roster: ['directory:33068']
 evidence:
 - url: https://thecatholicsun.com/two-churches-grow-through-closing-and-emerge-as-one/
   seen: 2026-09-25

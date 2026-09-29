@@ -232,8 +232,23 @@ export function HomePage() {
     });
   }, []);
 
+  // Removes the searched-place pin. A selected church shares `centerOn` but
+  // isn't a pin, so it's left alone.
+  const handleClearPlace = useCallback(() => {
+    setCenterOn((current) => (current?.placeTitle ? null : current));
+  }, []);
+
+  const pinnedPlaceTitle = centerOn?.placeTitle;
+
   return (
-    <main className="relative flex min-h-svh flex-col overflow-hidden bg-paper">
+    <main
+      className="fixed inset-x-0 top-0 flex h-dvh flex-col overflow-hidden bg-paper"
+    >
+      {/* The page is `fixed` so it adds nothing to the document's scrollable
+       *  overflow: the document can't scroll under the phone browser bar, yet
+       *  stays a normal root scroller, which Chrome needs for pull-to-refresh
+       *  (overflow: hidden or overscroll-behavior: none on html/body kill it).
+       *  Only the floating card can start a refresh; the map owns its touches. */}
       {/* Full-bleed map — no z-index so it doesn't create a stacking context;
        *  the elevated popup pane inside can then layer above the header. */}
       <div className="absolute inset-0">
@@ -243,6 +258,7 @@ export function HomePage() {
             centerOn={centerOn}
             initialView={initialMapView}
             onViewChange={handleMapViewChange}
+            onClearPlace={handleClearPlace}
           />
         ) : null}
       </div>
@@ -275,10 +291,16 @@ export function HomePage() {
       ) : null}
 
       {/* Floating card — masthead, search, filter pills; filter panel is only as tall
-       *  as its content on md+ (capped + scroll inside when needed). */}
+       *  as its content on md+ (capped + scroll inside when needed). The parts
+       *  that cover the map carry `data-map-overlay`, so the map can centre
+       *  what it zooms to in the ground they leave clear; the phone's filter
+       *  sheet blocks the map while it's open, so it isn't marked. */}
       <div className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-[900] flex justify-center px-4 pt-[calc(1rem+var(--safe-area-inset-top))] pb-[calc(1rem+var(--safe-area-inset-bottom))] md:justify-start md:px-6 md:pt-6 md:pb-6">
         <div className="pointer-events-none flex w-full max-w-[28rem] flex-col gap-4">
-          <div className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-6 pt-5 pb-4 shadow-missal-floating backdrop-blur-sm">
+          <div
+            data-map-overlay
+            className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-6 pt-5 pb-4 shadow-missal-floating backdrop-blur-sm"
+          >
             <div className="flex items-start justify-between gap-4">
               <Masthead />
               {aboutPageEnabled ? (
@@ -308,10 +330,26 @@ export function HomePage() {
                 }
               />
             </div>
+            {pinnedPlaceTitle ? (
+              <div className="mt-3 flex items-center justify-between gap-3 font-serif text-[0.9375rem]">
+                <span className="min-w-0 truncate text-ink-soft">
+                  Pinned: <span className="text-ink">{pinnedPlaceTitle}</span>
+                </span>
+                <button
+                  type="button"
+                  onClick={handleClearPlace}
+                  aria-label={`Remove pin for ${pinnedPlaceTitle}`}
+                  className="rubric-link missal-focus shrink-0"
+                >
+                  Remove pin
+                </button>
+              </div>
+            ) : null}
             <FilterPills filters={appliedFilters} />
           </div>
 
           <div
+            data-map-overlay={isDesktop ? true : undefined}
             className={`w-full md:min-h-0 ${
               !isDesktop && !filterPanelOpen
                 ? "pointer-events-none"

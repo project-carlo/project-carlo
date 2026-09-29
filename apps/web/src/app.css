@@ -118,8 +118,11 @@
     background-blend-mode: normal, normal, multiply;
   }
 
+  /* svh, not vh: on phones 100vh is the height with the browser's toolbars
+   * hidden, so a vh-tall root overflows the visible screen by the toolbar's
+   * height and lets the whole page scroll. */
   #root {
-    min-height: 100vh;
+    min-height: 100svh;
   }
 
   a {
@@ -512,9 +515,76 @@
     drop-shadow(0 3px 4px rgb(22 18 16 / 0.34))
     drop-shadow(0 0 5px color-mix(in oklch, var(--rubric) 55%, transparent));
 }
+/* A cluster roundel: the pin's cream disc and brass ring, with the count set
+ * in rubric where the pin has its cross. Same rule as the pins — Leaflet
+ * owns the wrapper's `transform`, so the entry scale and the hover lift go
+ * on the inner disc. */
+.church-map-cluster {
+  animation: marker-settle 380ms ease-out both;
+}
+.church-map-cluster-disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1.5px solid var(--brass);
+  border-radius: 9999px;
+  background: var(--paper);
+  /* The inner hairline echoes the ring round the pin's cross. */
+  box-shadow:
+    inset 0 0 0 2.5px var(--paper),
+    inset 0 0 0 3.3px var(--rule-strong),
+    0 2px 3px rgb(22 18 16 / 0.28);
+  cursor: pointer;
+  animation: cluster-settle 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 200ms ease;
+}
+.church-map-cluster-count {
+  font-family: "Cardo", Georgia, serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--rubric);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+@keyframes cluster-settle {
+  from {
+    transform: scale(0.82);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .church-map-cluster:hover .church-map-cluster-disc {
+    transform: scale(1.08);
+  }
+}
+.church-map-cluster:focus-visible {
+  outline: none;
+}
+.church-map-cluster:focus-visible .church-map-cluster-disc {
+  outline: 2px solid var(--rubric);
+  outline-offset: 2px;
+}
+/* The ground a hovered roundel covers: the hull of its churches, fattened
+ * by a wide round-joined stroke so a pair or a single street still reads as
+ * an area. `opacity` (not fill-/stroke-opacity) flattens fill and stroke
+ * into one even wash. */
+.church-map-coverage {
+  fill: var(--brass);
+  stroke: var(--brass);
+  stroke-width: 28px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  opacity: 0.22;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .church-map-marker,
-  .church-map-marker svg {
+  .church-map-marker svg,
+  .church-map-cluster,
+  .church-map-cluster-disc {
     animation: none;
     transition: none;
   }

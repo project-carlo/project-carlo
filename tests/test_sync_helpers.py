@@ -14,7 +14,7 @@ from pdf_extract.fetch import (
     _extract_discover_mass_pdf_url_from_href,
     _extract_ecatholic_pdf_url_from_href,
     _extract_parishes_online_pdf_url_from_href,
-    _find_other_bulletin_page_url,
+    _find_other_bulletin_page_urls,
     _goto_with_retry,
     _normalize_url_for_request,
     _parse_ecatholic_pdf_date,
@@ -271,7 +271,7 @@ def test_build_bulletin_link_dispatches_to_the_registered_builder(
 
 def test_build_bulletin_link_rejects_an_unregistered_provider() -> None:
     with pytest.raises(ValueError, match="Unsupported bulletin_provider"):
-        _build_bulletin_link("google_drive", "https://example.org")
+        _build_bulletin_link("no_bulletin", "https://example.org")
 
 
 def test_build_latest_other_bulletin_links(monkeypatch) -> None:
@@ -315,7 +315,7 @@ def test_find_other_bulletin_page_url_prefers_href_and_text_match() -> None:
                 FakeAnchor("/bulletins", "Read Bulletins"),
             ]
 
-    resolved = _find_other_bulletin_page_url(page=FakePage(), base_url="https://example.org")
+    resolved = _find_other_bulletin_page_urls(page=FakePage(), base_url="https://example.org")[0]
     assert resolved == "https://example.org/bulletins"
 
 
@@ -459,6 +459,8 @@ def test_resolve_other_latest_link_finds_pdf_embedded_in_script_on_post_page() -
             assert timeout == 15000
 
         def query_selector_all(self, selector: str):
+            if selector == "iframe[src]":
+                return []
             assert selector == "a[href]"
             if self.url == "https://elmiracatholic.org":
                 return [FakeAnchor("/news-bulletins/", "News/Bulletins")]
@@ -526,6 +528,8 @@ def test_resolve_other_latest_link_descends_into_latest_bulletin_post_when_no_pd
             assert timeout == 15000
 
         def query_selector_all(self, selector: str):
+            if selector == "iframe[src]":
+                return []
             assert selector == "a[href]"
             if self.url == "https://elmiracatholic.org":
                 return [FakeAnchor("/news-bulletins/", "News/Bulletins")]
