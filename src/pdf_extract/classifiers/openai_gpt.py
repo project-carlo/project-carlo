@@ -1,9 +1,13 @@
-"""OpenAI gpt-5.4-mini classifier.
+"""OpenAI classifiers that read the bulletin PDF themselves (gpt-5.4-mini, luna-pdf).
 
-Uses the Responses API with a base64 PDF input_file and a Pydantic-typed
-structured output (text_format=SchedulePayload). Reuses the prompt and the
-flat-event normalizer from schedule_extraction so output shape matches the
-Gemini classifier exactly.
+Sends a request built like the Gemini one, so the two compare on equal terms:
+the same events prompt, then the bulletin PDF (as a base64 input_file), with
+the same `SchedulePayload` JSON schema Gemini is given. The reply is parsed
+and normalised by the same code as Gemini's reply.
+
+The schema goes over non-strict: OpenAI's strict mode only accepts schemas
+rewritten to its subset (every property required, no defaults), which would
+no longer be the schema Gemini sees.
 
 Module is named openai_gpt.py (not openai.py) to avoid shadowing the upstream
 `openai` package.
@@ -16,13 +20,15 @@ import json
 import logging
 import time
 from datetime import date
-from typing import Any
+from typing import Any, Literal
 
 from openai import OpenAI
 
+from pdf_extract.classifiers.gemini import PROMPT_FINGERPRINT
 from pdf_extract.schedule_extraction import (
     EVENTS_SYSTEM_PROMPT,
     SchedulePayload,
+    events_from_json,
     reconstruct_events,
 )
 
@@ -30,9 +36,15 @@ LOGGER = logging.getLogger(__name__)
 
 DEFAULT_MODEL = "gpt-5.4-mini"
 
+FileDetail = Literal["low", "high"]
+
 
 def openai_usage(response: Any) -> dict[str, int]:
-    """Token counts of a Responses API call, in the keys run reports sum."""
+    """Token counts of a Responses API call, in the keys run reports sum.
+
+    OpenAI counts `reasoning_tokens` inside `output_tokens`, and `cached_tokens`
+    inside `prompt_tokens`.
+    """
     usage = getattr(response, "usage", None)
     input_details = getattr(usage, "input_tokens_details", None)
     output_details = getattr(usage, "output_tokens_details", None)
@@ -57,12 +69,20 @@ class OpenAIClassifier:
         name: str | None = None,
         max_retries: int = 5,
         reasoning_effort: str | None = None,
+        file_detail: FileDetail | None = None,
     ) -> None:
+        """`file_detail` sets the PDF input's `detail`; None leaves OpenAI's default."""
         self._model = model
         self._max_retries = max_retries
         self._reasoning_effort = reasoning_effort
+        self._file_detail = file_detail
         self.name = name or model
-        self.version = f"{model}+effort-{reasoning_effort}" if reasoning_effort else model
+        self.version = (
+            model
+            + (f"+effort-{reasoning_effort}" if reasoning_effort else "")
+            + (f"+detail-{file_detail}" if file_detail else "")
+            + f"+prompt-{PROMPT_FINGERPRINT}"
+        )
 
     def extract(
         self,
@@ -80,6 +100,13 @@ class OpenAIClassifier:
             today_day_of_week=today.strftime("%A"),
         )
         encoded = base64.b64encode(pdf_bytes).decode("ascii")
+        file_part: dict[str, Any] = {
+            "type": "input_file",
+            "filename": "bulletin.pdf",
+            "file_data": f"data:application/pdf;base64,{encoded}",
+        }
+        if self._file_detail:
+            file_part["detail"] = self._file_detail
 
         extra: dict[str, Any] = {}
         if self._reasoning_effort:
@@ -88,40 +115,37 @@ class OpenAIClassifier:
         started = time.monotonic()
         # The SDK retries 429 / 5xx responses internally; bump the budget.
         client = OpenAI(max_retries=self._max_retries, timeout=600)
-        response = client.responses.parse(
+        response = client.responses.create(
             model=self._model,
+            # Prompt, then PDF: the order Gemini gets them in.
             input=[
                 {
                     "role": "user",
-                    "content": [
-                        {
-                            "type": "input_file",
-                            "filename": "bulletin.pdf",
-                            "file_data": f"data:application/pdf;base64,{encoded}",
-                        },
-                        {
-                            "type": "input_text",
-                            "text": prompt,
-                        },
-                    ],
+                    "content": [{"type": "input_text", "text": prompt}, file_part],
                 }
             ],
-            text_format=SchedulePayload,
+            text={
+                "format": {
+                    "type": "json_schema",
+                    "name": "SchedulePayload",
+                    "schema": SchedulePayload.model_json_schema(),
+                    "strict": False,
+                }
+            },
             **extra,
         )
         llm_seconds = time.monotonic() - started
 
-        parsed = response.output_parsed
-        if parsed is None:
-            # Refusal or schema mismatch — log and degrade to empty result so the
+        content = response.output_text
+        if not content:
+            # Refusal or an empty reply: degrade to an empty result so the
             # bulletin shows up in the run as zero-events rather than crashing.
             LOGGER.warning(
-                "OpenAI %s returned no parsed output; treating as empty bulletin",
+                "OpenAI %s returned no output (status=%s); treating as empty bulletin",
                 self._model,
+                getattr(response, "status", None),
             )
-            result = reconstruct_events({})
-        else:
-            result = reconstruct_events(parsed)
+        result = events_from_json(content or "{}", context=f"openai {self._model}")
         result["usage"] = openai_usage(response)
         result["timing"] = {"llm_seconds": round(llm_seconds, 3)}
         return result

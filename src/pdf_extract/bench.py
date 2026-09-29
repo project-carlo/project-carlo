@@ -53,6 +53,8 @@ STACKS: dict[str, str | None] = {
     "pdf": None,
 }
 DEFAULT_STACKS = ("pymupdf", "docling", "ocr", "pdf")
+# The `pdf` stack sends the bulletin at low detail: the cheap setting under test.
+PDF_DETAIL = "low"
 
 
 class BenchError(RuntimeError):
@@ -72,7 +74,9 @@ def build_stack_classifier(stack: str, *, model: str, effort: str | None) -> Cla
         name += f"-{effort}"
     extractor = STACKS[stack]
     if extractor is None:
-        return OpenAIClassifier(model=model, name=name, reasoning_effort=effort)
+        return OpenAIClassifier(
+            model=model, name=name, reasoning_effort=effort, file_detail=PDF_DETAIL,
+        )
     return TextLLMClassifier(extractor=extractor, name=name, model=model, reasoning_effort=effort)
 
 

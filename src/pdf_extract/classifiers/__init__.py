@@ -19,7 +19,7 @@ REGISTRY: dict[str, Callable[[], Classifier]] = {
     # Text-extraction stacks feeding a small OpenAI model (see `pnpm bench`),
     # plus the same model reading the PDF directly, as a control.
     "luna-pdf": lambda: OpenAIClassifier(
-        model=DEFAULT_TEXT_MODEL, name="luna-pdf", reasoning_effort="medium",
+        model=DEFAULT_TEXT_MODEL, name="luna-pdf", reasoning_effort="medium", file_detail="low",
     ),
     "luna-pymupdf": lambda: TextLLMClassifier(extractor="pymupdf-layout", name="luna-pymupdf"),
     "luna-docling": lambda: TextLLMClassifier(extractor="docling", name="luna-docling"),

@@ -65,12 +65,11 @@ NormalizedKey = tuple[Any, ...]
 
 EVENT_TYPES = ("mass", "confession", "adoration")
 
-# USD per 1M tokens: (input, cached input, output). List prices as of
-# September 2026; edit when they change. A classifier's price is found by
-# the model id its version string starts with. Gemini's recorded output
-# tokens exclude its thinking tokens, so its cost here is a lower bound.
+# USD per 1M tokens: (input, cached input, output), standard (not batch) tier.
+# List prices as of September 2026; edit when they change. A classifier's
+# price is found by the model id its version string starts with.
 MODEL_PRICES: dict[str, tuple[float, float, float]] = {
-    "gemini-3-flash-preview": (0.25, 0.05, 1.50),
+    "gemini-3-flash-preview": (0.50, 0.05, 3.00),
     "gpt-6-luna": (0.10, 0.01, 0.50),
     "gpt-5.4-mini": (0.25, 0.025, 2.00),
 }
@@ -347,9 +346,19 @@ def _pairwise_bulletin_details(
 
 
 def _classifier_stats(
-    name: str, grouped: EventsByBulletin, summary: dict[str, Any]
+    name: str,
+    grouped: EventsByBulletin,
+    summary: dict[str, Any],
+    manifest: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
     counts = [len(s) for s in _event_keys_by_bulletin(grouped).values()]
+    hits = summary.get("cache_hits") or 0
+    misses = summary.get("cache_misses") or 0
+    usage = summary.get("usage_total") or {}
+    prompt_tokens = usage.get("prompt_tokens") or 0
+    rows = list(manifest.values())
+    costs = _costs(summary, rows)
+    fresh = _costs(summary, [row for row in rows if row.get("cache_hit") is False])
     return {
         "classifier": name,
         "version": summary.get("classifier_version"),
@@ -362,17 +371,32 @@ def _classifier_stats(
         "cache_misses": summary.get("cache_misses"),
         "wall_seconds": summary.get("wall_seconds"),
         "errors": len(summary.get("errors") or []),
-        "cost_usd_per_bulletin": _cost_per_bulletin(summary),
+        "cache_hit_rate": round(hits / (hits + misses), 4) if hits + misses else None,
+        "api_cache_hit_rate": (
+            round((usage.get("cached_tokens") or 0) / prompt_tokens, 4) if prompt_tokens else None
+        ),
+        "cost_usd_total": round(sum(costs), 4) if costs else None,
+        "cost_usd_per_bulletin": round(statistics.fmean(costs), 5) if costs else None,
+        "cost_usd_this_run": round(sum(fresh), 4) if costs else None,
+        "cost_missing_thinking": sum(_lacks_thinking(row.get("usage")) for row in rows),
     }
 
 
-def _cost_per_bulletin(summary: dict[str, Any]) -> float | None:
+def _costs(summary: dict[str, Any], rows: list[dict[str, Any]]) -> list[float]:
+    """List-price cost of each manifest row that recorded usage."""
     price = model_price(summary.get("classifier_version"))
-    usage = summary.get("usage_total") or {}
-    served = summary.get("bulletins_served") or 0
-    if price is None or not usage or not served:
-        return None
-    return round(usage_cost(usage, price) / served, 5)
+    if price is None:
+        return []
+    return [usage_cost(row["usage"], price) for row in rows if row.get("usage")]
+
+
+def _lacks_thinking(usage: Any) -> bool:
+    """A result recorded before thinking tokens were, so its cost leaves them out.
+
+    OpenAI results always carry `reasoning_tokens`; Gemini results carry
+    `thinking_tokens` since it was added.
+    """
+    return bool(usage) and "thinking_tokens" not in usage and "reasoning_tokens" not in usage
 
 
 def compare(
@@ -397,7 +421,8 @@ def compare(
     metadata = _load_bulletin_metadata()
 
     per_classifier = [
-        _classifier_stats(name, grouped, summary) for name, (grouped, summary) in runs.items()
+        _classifier_stats(name, grouped, summary, manifests[name])
+        for name, (grouped, summary) in runs.items()
     ]
 
     pairs = list(itertools.combinations(classifier_names, 2))
@@ -487,10 +512,15 @@ def model_price(version: str | None) -> tuple[float, float, float] | None:
 
 
 def usage_cost(usage: dict[str, Any], price: tuple[float, float, float]) -> float:
+    """USD for one call's usage.
+
+    Gemini's `thinking_tokens` are billed as output on top of `output_tokens`;
+    OpenAI's `reasoning_tokens` are already inside `output_tokens`.
+    """
     input_price, cached_price, output_price = price
     prompt = int(usage.get("prompt_tokens") or 0)
     cached = min(int(usage.get("cached_tokens") or 0), prompt)
-    output = int(usage.get("output_tokens") or 0)
+    output = int(usage.get("output_tokens") or 0) + int(usage.get("thinking_tokens") or 0)
     return ((prompt - cached) * input_price + cached * cached_price + output * output_price) / 1e6
 
 
@@ -509,7 +539,7 @@ def _baseline_metrics(
 ) -> dict[str, Any]:
     """Score one classifier against the baseline on the bulletins both served."""
     grouped, summary = run
-    base_grouped, _ = baseline_run
+    base_grouped, base_summary = baseline_run
     common = sorted(set(grouped) & set(base_grouped))
 
     counts = {
@@ -557,10 +587,14 @@ def _baseline_metrics(
     dates_compared = [(a, b) for a, b in date_pairs if b]
 
     served = [manifest[url] for url in common if url in manifest]
-    price = model_price(summary.get("classifier_version"))
-    costs = [
-        usage_cost(row["usage"], price) for row in served if price and row.get("usage")
+    costs = _costs(summary, served)
+    # The baseline's cost on the bulletins both have usage for, to set side by side.
+    priced_both = [
+        url for url in common
+        if (manifest.get(url) or {}).get("usage") and (baseline_manifest.get(url) or {}).get("usage")
     ]
+    own_costs = _costs(summary, [manifest[url] for url in priced_both])
+    base_costs = _costs(base_summary, [baseline_manifest[url] for url in priced_both])
     timings = [row.get("timing") or {} for row in served]
     text_chars = [row["text_chars"] for row in served if isinstance(row.get("text_chars"), int)]
 
@@ -582,6 +616,16 @@ def _baseline_metrics(
         ),
         "cost_usd_total": round(sum(costs), 4) if costs else None,
         "cost_usd_per_bulletin": round(statistics.fmean(costs), 5) if costs else None,
+        "baseline_cost_usd_per_bulletin": (
+            round(statistics.fmean(base_costs), 5) if base_costs else None
+        ),
+        "cost_vs_baseline": (
+            round(sum(own_costs) / sum(base_costs), 4)
+            if own_costs and base_costs and sum(base_costs) else None
+        ),
+        "baseline_cost_missing_thinking": sum(
+            _lacks_thinking(baseline_manifest[url].get("usage")) for url in priced_both
+        ),
         "llm_seconds_mean": _mean([t["llm_seconds"] for t in timings if "llm_seconds" in t]),
         "text_seconds_mean": _mean([t["text_seconds"] for t in timings if "text_seconds" in t]),
         "text_chars_mean": round(statistics.fmean(text_chars)) if text_chars else None,
@@ -599,8 +643,19 @@ def _fmt(value: Any) -> str:
     return str(value)
 
 
-def _fmt_usd(value: float | None) -> str:
-    return "–" if value is None else f"${value:.5f}"
+def _fmt_usd(value: float | None, lower_bound: bool = False) -> str:
+    """Dollars; `lower_bound` marks a cost missing some results' thinking tokens."""
+    if value is None:
+        return "–"
+    return f"{'≥' if lower_bound else ''}${value:.5f}"
+
+
+def _fmt_rate(value: float | None) -> str:
+    return "–" if value is None else f"{value:.1%}"
+
+
+def _fmt_ratio(value: float | None) -> str:
+    return "–" if value is None else f"{value:.2f}x"
 
 
 def format_baseline_markdown(report: dict[str, Any]) -> str:
@@ -618,8 +673,10 @@ def format_baseline_markdown(report: dict[str, Any]) -> str:
         "",
         "| Classifier | Bulletins | Events (base) | Strict P | Strict R | Strict F1 | Slot F1 "
         "| Mass R | Confession R | Adoration R | Exact bulletins | Missed bulletins "
-        "| Date agree | $/bulletin | LLM s | Text s | Text chars |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Date agree | $/bulletin | Baseline $/bulletin | Cost vs baseline "
+        "| LLM s | Text s | Text chars |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:"
+        "|---:|---:|",
     ]
     for r in rows:
         by_type = r["by_event_type"]
@@ -632,6 +689,8 @@ def format_baseline_markdown(report: dict[str, Any]) -> str:
             f"| {_fmt(by_type['adoration']['recall'])} "
             f"| {r['bulletins_exact_match']} | {len(r['bulletins_missed_entirely'])} "
             f"| {_fmt(r['published_date_agreement'])} | {_fmt_usd(r['cost_usd_per_bulletin'])} "
+            f"| {_fmt_usd(r['baseline_cost_usd_per_bulletin'], r['baseline_cost_missing_thinking'] > 0)} "
+            f"| {_fmt_ratio(r['cost_vs_baseline'])} "
             f"| {_fmt(r['llm_seconds_mean'])} | {_fmt(r['text_seconds_mean'])} "
             f"| {_fmt(r['text_chars_mean'])} |"
         )
@@ -656,16 +715,31 @@ def format_markdown(report: dict[str, Any]) -> str:
     lines.append("")
     lines.append(
         "| Classifier | Version | Bulletins | Events | Mean/bulletin | Cache hits/misses "
-        "| Wall (s) | Errors | $/bulletin |"
+        "| Cache hit rate | API prompt-cache | Wall (s) | Errors | $/bulletin | $ total "
+        "| $ paid this run |"
     )
-    lines.append("|---|---|---:|---:|---:|---|---:|---:|---:|")
+    lines.append("|---|---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|")
+    lower_bound = []
     for c in report["per_classifier"]:
         cache = f"{c.get('cache_hits') or 0}/{c.get('cache_misses') or 0}"
+        partial = bool(c.get("cost_missing_thinking"))
+        if partial:
+            lower_bound.append(f"{c['classifier']} ({c['cost_missing_thinking']} results)")
         lines.append(
             f"| {c['classifier']} | {c.get('version') or ''} | {c['bulletins']} | {c['events_total']} | "
-            f"{c['events_per_bulletin_mean']} | {cache} | {c.get('wall_seconds') or ''} "
-            f"| {c['errors']} | {_fmt_usd(c.get('cost_usd_per_bulletin'))} |"
+            f"{c['events_per_bulletin_mean']} | {cache} | {_fmt_rate(c.get('cache_hit_rate'))} "
+            f"| {_fmt_rate(c.get('api_cache_hit_rate'))} | {c.get('wall_seconds') or ''} "
+            f"| {c['errors']} | {_fmt_usd(c.get('cost_usd_per_bulletin'), partial)} "
+            f"| {_fmt_usd(c.get('cost_usd_total'), partial)} "
+            f"| {_fmt_usd(c.get('cost_usd_this_run'))} |"
         )
+    if lower_bound:
+        lines.extend([
+            "",
+            "≥: some cached results were recorded before thinking tokens were, so the "
+            "thinking (billed as output) is missing from their cost: "
+            + ", ".join(lower_bound) + ".",
+        ])
 
     lines.append("")
     lines.append("## Pairwise agreement (exact tuple match)")

@@ -16,7 +16,8 @@ from pdf_extract.schedule_extraction import (
 
 # Cached results are keyed by classifier version, so the version has to change
 # whenever the output could: the model, the prompt, or the response schema.
-_PROMPT_FINGERPRINT = sha256(
+# Every classifier sent this prompt and schema builds its version from this.
+PROMPT_FINGERPRINT = sha256(
     (
         EVENTS_SYSTEM_PROMPT
         + json.dumps(SchedulePayload.model_json_schema(), sort_keys=True)
@@ -32,7 +33,7 @@ class GeminiClassifier:
     def __init__(self, *, model: str = DEFAULT_GEMINI_MODEL, name: str | None = None) -> None:
         self._model = model
         self.name = name or "gemini-flash"
-        self.version = f"{model}+prompt-{_PROMPT_FINGERPRINT}"
+        self.version = f"{model}+prompt-{PROMPT_FINGERPRINT}"
 
     def extract(
         self,

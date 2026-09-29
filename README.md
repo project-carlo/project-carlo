@@ -386,7 +386,7 @@ heading they belong to, and tags blocks with their position on the page
 | `pymupdf` | `luna-pymupdf` | PyMuPDF text layer in column-aware reading order; RapidOCR only where there is no usable text (images, outlined text, broken fonts). Under a second per bulletin, plus a few seconds per OCR region. |
 | `docling` | `luna-docling` | Docling layout model, rows rebuilt from text positions, RapidOCR on the same kinds of regions. Tens of seconds per bulletin. |
 | `ocr` | `luna-ocr` | Every page rendered and read by RapidOCR, ignoring the text layer, then rebuilt into columns and rows. The slowest: about 5 s per page. |
-| `pdf` | `luna-pdf` | none: the model reads the PDF itself (the control) |
+| `pdf` | `luna-pdf` | none: the model reads the PDF itself (the control), sent like Gemini's request: the same prompt, then the PDF at `detail: low`, with the exact JSON schema Gemini gets |
 
 ```bash
 # .env: OPENAI_API_KEY plus the R2 read keys you already use for data:pull
@@ -409,8 +409,14 @@ The report lands in `data/runs/bench/bench_<ts>.md` (and `.json`):
   against Gemini's, overall and per event type, *strict* (every field) and
   *slot* (ignoring weekly-vs-dated and end time); bulletins matched exactly
   or missed entirely; published-date agreement; cost per bulletin at list
-  prices (`MODEL_PRICES` in `compare.py`); mean model and text-extraction
+  prices (`MODEL_PRICES` in `compare.py`), next to Gemini's cost on the same
+  bulletins and the ratio of the two; mean model and text-extraction
   seconds; text size.
+- **Per-classifier**: result-cache hits/misses and hit rate, the provider's
+  prompt-cache hit rate, cost per bulletin and in total at list price (cached
+  results carry the usage of the call that made them), and what this run
+  actually paid. Gemini's thinking tokens are billed as output; results cached
+  before they were recorded have their cost marked `≥` (a lower bound).
 - **Lowest-agreement bulletins** per stack, then the per-bulletin
   side-by-side of each stack against the baseline.
 

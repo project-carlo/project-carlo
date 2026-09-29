@@ -93,6 +93,7 @@ def run(
     skipped = 0
     errors: list[dict[str, str]] = []
     cached_results: dict[str, dict[str, Any]] = {}  # source_url -> classifier output
+    fresh_urls: set[str] = set()  # results paid for in this run
 
     conn = connect_db()
     try:
@@ -153,6 +154,7 @@ def run(
                 outcome.extracted,
             )
             cached_results[outcome.entry["source_url"]] = outcome.extracted
+            fresh_urls.add(outcome.entry["source_url"])
             cache_misses += 1
     finally:
         conn.close()
@@ -183,6 +185,7 @@ def run(
                 "event_count": len(rows),
                 "wrong_bulletin": bool(result.get("wrong_bulletin")),
                 "published_date_extracted": result.get("published_date"),
+                "cache_hit": entry["source_url"] not in fresh_urls,
                 "usage": result.get("usage") or {},
                 "timing": result.get("timing") or {},
                 "text_chars": result.get("text_chars"),

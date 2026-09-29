@@ -3,60 +3,67 @@
 from __future__ import annotations
 
 import base64
+import json
 from datetime import date
+from types import SimpleNamespace
 from typing import Any
 
 import pytest
 
 from pdf_extract.classifiers import openai_gpt
+from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.classifiers.openai_gpt import OpenAIClassifier
 from pdf_extract.schedule_extraction import SchedulePayload
 
 
-class _FakeResponse:
-    def __init__(self, parsed: SchedulePayload | None) -> None:
-        self.output_parsed = parsed
+def _usage(**overrides: int) -> SimpleNamespace:
+    values = {"input": 1000, "cached": 0, "output": 300, "reasoning": 200} | overrides
+    return SimpleNamespace(
+        input_tokens=values["input"],
+        input_tokens_details=SimpleNamespace(cached_tokens=values["cached"]),
+        output_tokens=values["output"],
+        output_tokens_details=SimpleNamespace(reasoning_tokens=values["reasoning"]),
+    )
 
 
 class _FakeResponses:
-    def __init__(self, parsed: SchedulePayload | None) -> None:
-        self._parsed = parsed
+    def __init__(self, output_text: str) -> None:
+        self._output_text = output_text
         self.last_kwargs: dict[str, Any] = {}
         self.call_count = 0
 
-    def parse(self, **kwargs: Any) -> _FakeResponse:
+    def create(self, **kwargs: Any) -> SimpleNamespace:
         self.call_count += 1
         self.last_kwargs = kwargs
-        return _FakeResponse(self._parsed)
+        return SimpleNamespace(output_text=self._output_text, usage=_usage(), status="completed")
 
 
-class _FakeClient:
-    def __init__(self, *, responses: _FakeResponses) -> None:
-        self.responses = responses
-
-
-def _install_fake(monkeypatch, parsed: SchedulePayload | None) -> _FakeResponses:
-    fake_responses = _FakeResponses(parsed)
+def _install_fake(monkeypatch, payload: dict[str, Any] | str | None = None) -> _FakeResponses:
+    text = payload if isinstance(payload, str) else json.dumps(payload or {})
+    fake_responses = _FakeResponses(text)
     monkeypatch.setattr(
-        openai_gpt, "OpenAI", lambda **kwargs: _FakeClient(responses=fake_responses)
+        openai_gpt, "OpenAI", lambda **kwargs: SimpleNamespace(responses=fake_responses)
     )
     return fake_responses
 
 
-def test_request_passes_pdf_as_base64_input_file(monkeypatch):
-    pdf_bytes = b"%PDF-1.4 hello"
-    parsed = SchedulePayload.model_validate({
-        "weekly_schedule": {"masses": [], "confessions": [], "adorations": []},
-        "single_events": {"masses": [], "confessions": [], "adorations": []},
-        "cancellations": {"masses": [], "confessions": [], "adorations": []},
-        "church_list_needs_review": False,
-        "published_date": None,
-        "wrong_bulletin": False,
-    })
-    fake = _install_fake(monkeypatch, parsed)
+def _one_mass() -> dict[str, Any]:
+    return {
+        "weekly_schedule": {
+            "masses": [{
+                "church_slug": "st-mary", "day_of_week": "Sunday", "start_time": "9:00 AM",
+                "end_time": None, "page_number": 1, "note": None,
+            }],
+        },
+        "published_date": "2026-05-03",
+    }
 
-    classifier = OpenAIClassifier(model="gpt-5.4-mini")
-    classifier.extract(
+
+def test_request_sends_prompt_then_pdf_with_geminis_schema(monkeypatch):
+    pdf_bytes = b"%PDF-1.4 hello"
+    fake = _install_fake(monkeypatch, {})
+
+    OpenAIClassifier(model="gpt-5.4-mini").extract(
         pdf_bytes,
         churches=[{"slug": "st-mary", "name": "St. Mary", "address": "123 Main"}],
         today=date(2026, 5, 4),
@@ -65,89 +72,102 @@ def test_request_passes_pdf_as_base64_input_file(monkeypatch):
     assert fake.call_count == 1
     kwargs = fake.last_kwargs
     assert kwargs["model"] == "gpt-5.4-mini"
-    # Pydantic class is passed through as text_format; SDK derives schema.
-    assert kwargs["text_format"].__name__ == "SchedulePayload"
+    assert "reasoning" not in kwargs
+    fmt = kwargs["text"]["format"]
+    assert fmt["type"] == "json_schema"
+    assert fmt["schema"] == SchedulePayload.model_json_schema(), "the schema Gemini is given"
+    assert fmt["strict"] is False
 
-    content = kwargs["input"][0]["content"]
-    file_part = next(p for p in content if p["type"] == "input_file")
-    text_part = next(p for p in content if p["type"] == "input_text")
-
-    expected_b64 = base64.b64encode(pdf_bytes).decode("ascii")
-    assert file_part["file_data"] == f"data:application/pdf;base64,{expected_b64}"
-    assert file_part["filename"].endswith(".pdf")
+    text_part, file_part = kwargs["input"][0]["content"]
+    assert text_part["type"] == "input_text"
     assert "Mass, Confession" in text_part["text"]
     assert "st-mary" in text_part["text"]
     assert "2026-05-04" in text_part["text"]
 
+    expected_b64 = base64.b64encode(pdf_bytes).decode("ascii")
+    assert file_part["type"] == "input_file"
+    assert file_part["file_data"] == f"data:application/pdf;base64,{expected_b64}"
+    assert file_part["filename"].endswith(".pdf")
+    assert "detail" not in file_part
 
-def test_returns_normalized_event_shape(monkeypatch):
-    parsed = SchedulePayload.model_validate({
-        "weekly_schedule": {
-            "masses": [
-                {
-                    "church_slug": "st-mary",
-                    "day_of_week": "Sunday",
-                    "start_time": "9:00 AM",
-                    "end_time": None,
-                    "page_number": 1,
-                    "note": None,
-                }
-            ],
-            "confessions": [],
-            "adorations": [],
-        },
-        "single_events": {"masses": [], "confessions": [], "adorations": []},
-        "cancellations": {"masses": [], "confessions": [], "adorations": []},
-        "church_list_needs_review": False,
-        "published_date": "2026-05-03",
-        "wrong_bulletin": False,
-    })
-    _install_fake(monkeypatch, parsed)
 
-    classifier = OpenAIClassifier()
-    out = classifier.extract(
+def test_luna_pdf_sends_the_pdf_at_low_detail(monkeypatch):
+    from pdf_extract.classifiers import get_classifier
+
+    fake = _install_fake(monkeypatch, {})
+
+    get_classifier("luna-pdf").extract(b"%PDF-1.4 x", churches=[], today=date(2026, 5, 4))
+
+    assert fake.last_kwargs["model"] == "gpt-6-luna"
+    assert fake.last_kwargs["reasoning"] == {"effort": "medium"}
+    assert fake.last_kwargs["input"][0]["content"][1]["detail"] == "low"
+
+
+def test_returns_normalized_event_shape_usage_and_timing(monkeypatch):
+    _install_fake(monkeypatch, _one_mass())
+
+    out = OpenAIClassifier().extract(
         b"%PDF-1.4 x", churches=[{"slug": "st-mary", "name": "x", "address": "x"}],
         today=date(2026, 5, 4),
     )
     assert out["published_date"] == "2026-05-03"
     assert out["wrong_bulletin"] is False
-    assert len(out["events"]) == 1
     ev = out["events"][0]
-    assert ev["church_slug"] == "st-mary"
-    assert ev["type"] == "mass"
-    assert ev["kind"] == "weekly"
-    assert ev["day_of_week"] == "Sunday"
-    assert ev["start_time"] == "9:00 AM"
+    assert (ev["church_slug"], ev["type"], ev["kind"]) == ("st-mary", "mass", "weekly")
+    assert (ev["day_of_week"], ev["start_time"]) == ("Sunday", "9:00 AM")
+    assert out["usage"] == {
+        "prompt_tokens": 1000, "output_tokens": 300, "cached_tokens": 0, "reasoning_tokens": 200,
+    }
+    assert "llm_seconds" in out["timing"]
+
+
+def test_invalid_slot_falls_back_to_lenient_parsing(monkeypatch):
+    payload = _one_mass()
+    payload["weekly_schedule"]["masses"].append(
+        {"church_slug": "", "day_of_week": "Saturday", "start_time": "5:00 PM"}
+    )
+    _install_fake(monkeypatch, payload)
+
+    out = OpenAIClassifier().extract(b"%PDF-1.4 x", churches=[], today=date(2026, 5, 4))
+
+    assert [ev["start_time"] for ev in out["events"]] == ["9:00 AM"]
 
 
 def test_empty_pdf_short_circuits_without_calling_api(monkeypatch):
-    fake = _install_fake(monkeypatch, parsed=None)
+    fake = _install_fake(monkeypatch)
 
-    classifier = OpenAIClassifier()
-    out = classifier.extract(b"", churches=[], today=date(2026, 5, 4))
+    out = OpenAIClassifier().extract(b"", churches=[], today=date(2026, 5, 4))
 
     assert fake.call_count == 0
     assert out["events"] == []
     assert out["wrong_bulletin"] is False
 
 
-def test_refusal_or_missing_parsed_returns_empty_result(monkeypatch):
-    _install_fake(monkeypatch, parsed=None)  # output_parsed is None
+def test_refusal_or_empty_output_returns_empty_result(monkeypatch):
+    _install_fake(monkeypatch, "")
 
-    classifier = OpenAIClassifier()
-    out = classifier.extract(
-        b"%PDF-1.4 x", churches=[], today=date(2026, 5, 4),
-    )
+    out = OpenAIClassifier().extract(b"%PDF-1.4 x", churches=[], today=date(2026, 5, 4))
+
     assert out["events"] == []
+    assert out["usage"]["prompt_tokens"] == 1000
 
 
-def test_classifier_is_registered():
+def test_classifiers_are_registered():
     from pdf_extract.classifiers import REGISTRY, get_classifier
 
-    assert "gpt-5.4-mini" in REGISTRY
-    c = get_classifier("gpt-5.4-mini")
-    assert c.name == "gpt-5.4-mini"
-    assert c.version == "gpt-5.4-mini"
+    assert {"gpt-5.4-mini", "luna-pdf"} <= set(REGISTRY)
+    assert get_classifier("gpt-5.4-mini").name == "gpt-5.4-mini"
+    assert get_classifier("luna-pdf").version.startswith("gpt-6-luna+effort-medium+detail-low+")
+
+
+def test_version_tracks_the_shared_prompt_and_settings():
+    """Cached results are keyed by version: a prompt, schema or setting change must move it."""
+    fingerprint = GeminiClassifier(model="m").version.removeprefix("m+")
+    assert OpenAIClassifier(model="x").version == f"x+{fingerprint}"
+    assert (
+        OpenAIClassifier(model="x", reasoning_effort="low", file_detail="low").version
+        == f"x+effort-low+detail-low+{fingerprint}"
+    )
 
 
 @pytest.mark.parametrize("custom_name", ["alt-name", None])

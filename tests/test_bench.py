@@ -61,6 +61,13 @@ class _FakeResponses:
         self.requests.append(kwargs)
         return type("R", (), {"output_parsed": self.parsed, "usage": _FakeUsage()})()
 
+    def create(self, **kwargs: Any) -> Any:
+        """The PDF classifier asks for JSON against Gemini's schema and parses it itself."""
+        self.requests.append(kwargs)
+        return type("R", (), {
+            "output_text": self.parsed.model_dump_json(), "usage": _FakeUsage(),
+        })()
+
 
 @pytest.fixture
 def fake_openai(monkeypatch) -> _FakeResponses:
@@ -183,8 +190,25 @@ def test_bench_scores_stacks_against_the_cached_baseline(
     assert text_row["published_date_agreement"] == 1.0
     # 1000 in + 200 out at $0.10 / $0.50 per 1M tokens.
     assert text_row["cost_usd_per_bulletin"] == pytest.approx(0.0002)
+    # The baseline's 2000 in + 400 out at $0.50 / $3.00; its result predates
+    # thinking tokens being recorded, so that cost is a lower bound.
+    assert text_row["baseline_cost_usd_per_bulletin"] == pytest.approx(0.0022)
+    assert text_row["cost_vs_baseline"] == pytest.approx(0.0909, abs=1e-4)
+    assert text_row["baseline_cost_missing_thinking"] == 1
+    stats = {c["classifier"]: c for c in report["per_classifier"]}
+    assert stats["gemini-flash"]["cache_hit_rate"] == 1.0
+    assert stats["gemini-flash"]["cost_usd_this_run"] == 0
+    assert stats["luna-pdf"]["cache_hit_rate"] == 0.0
+
+    # The PDF stack sends prompt then PDF, at low detail, with Gemini's schema.
+    pdf_request = next(r for r in fake_openai.requests if "text" in r)
+    text_part, file_part = pdf_request["input"][0]["content"]
+    assert text_part["type"] == "input_text"
+    assert file_part["detail"] == "low"
+    assert pdf_request["text"]["format"]["schema"] == SchedulePayload.model_json_schema()
     markdown = Path(result["report_markdown"]).read_text(encoding="utf-8")
     assert "Agreement with baseline `gemini-flash`" in markdown
+    assert "≥$0.00220" in markdown
 
     # A second run is served entirely from the caches.
     bench.run_bench(stacks=["pymupdf"], concurrency=2)
