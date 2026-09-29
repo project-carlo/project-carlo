@@ -8,7 +8,7 @@ const SHORTCUTS: [string, string][] = [
   ["Ctrl+D", "Duplicate row"],
   ["Delete", "Delete row"],
   ["Ctrl+Z / Ctrl+Shift+Z", "Undo / redo"],
-  ["Ctrl+Enter", "Mark done and open the next bulletin"],
+  ["Ctrl+Enter", "Mark done and open the next bulletin (or the next parish with nothing labeled, when that filter is on)"],
   ["?", "Show or hide this help"],
 ];
 

@@ -1,5 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { api } from "../api";
+import {
+  rememberUnlabeledParishCursor,
+  setUnlabeledParishesOn,
+  unlabeledParishCursor,
+  unlabeledParishesOn,
+} from "../lib/queuePrefs";
 import { bulletinHref, navigate } from "../lib/route";
 import type { BulletinSummary, Config, Progress } from "../types";
 
@@ -30,6 +36,7 @@ export function QueuePage({ config, labeler, onLabelerChange }: Props) {
   const [parish, setParish] = useState(() => localStorage.getItem("labeler:queue-parish") ?? "");
   const [status, setStatus] = useState("");
   const [latestOnly, setLatestOnly] = useState(false);
+  const [unlabeledParishes, setUnlabeledParishes] = useState(unlabeledParishesOn);
 
   useEffect(() => {
     api
@@ -42,6 +49,7 @@ export function QueuePage({ config, labeler, onLabelerChange }: Props) {
   }, []);
 
   useEffect(() => localStorage.setItem("labeler:queue-parish", parish), [parish]);
+  useEffect(() => setUnlabeledParishesOn(unlabeledParishes), [unlabeledParishes]);
 
   const parishes = useMemo(() => {
     const seen = new Map<string, string>();
@@ -49,18 +57,39 @@ export function QueuePage({ config, labeler, onLabelerChange }: Props) {
     return [...seen.entries()].sort((a, b) => a[1].localeCompare(b[1]));
   }, [bulletins]);
 
+  const labeledParishes = useMemo(() => {
+    const slugs = new Set<string>();
+    for (const b of bulletins ?? []) if (b.status !== "unlabeled") slugs.add(b.parish_slug);
+    return slugs;
+  }, [bulletins]);
+
   const shown = (bulletins ?? []).filter(
     (b) =>
       (!parish || b.parish_slug === parish) &&
       (!status || b.status === status) &&
-      (!latestOnly || b.rank === 0),
+      (!latestOnly || b.rank === 0) &&
+      (!unlabeledParishes || (b.rank === 0 && !labeledParishes.has(b.parish_slug))),
   );
 
   const openNext = async () => {
     try {
-      const { bulletin } = await api.next(undefined, parish || undefined);
-      if (bulletin) navigate(bulletinHref(bulletin.parish_slug, bulletin.content_hash));
-      else setError(parish ? "Every bulletin of this parish is labeled." : "Every bulletin is labeled.");
+      const { bulletin } = await api.next(
+        unlabeledParishes ? unlabeledParishCursor() : undefined,
+        parish || undefined,
+        { unlabeledParishes },
+      );
+      if (bulletin) {
+        if (unlabeledParishes) rememberUnlabeledParishCursor(bulletin.parish_slug, bulletin.content_hash);
+        navigate(bulletinHref(bulletin.parish_slug, bulletin.content_hash));
+      } else {
+        setError(
+          unlabeledParishes
+            ? "No other parish is waiting for a first label."
+            : parish
+              ? "Every bulletin of this parish is labeled."
+              : "Every bulletin is labeled.",
+        );
+      }
     } catch (e) {
       setError((e as Error).message);
     }
@@ -96,9 +125,9 @@ export function QueuePage({ config, labeler, onLabelerChange }: Props) {
         <div className="mb-4 rounded-lg border border-slate-200 bg-white p-4">
           <div className="mb-2 flex flex-wrap items-baseline gap-x-4 gap-y-1">
             <span className="text-2xl font-semibold tabular-nums">
-              {progress.latest_done} / {progress.latest_total} done
+              {progress.parishes_labeled} / {progress.latest_total} parishes
             </span>
-            <span className="text-sm text-slate-500">each parish's latest bulletin</span>
+            <span className="text-sm text-slate-500">with at least one bulletin labeled</span>
             <span className="ml-auto text-sm text-slate-600 tabular-nums">
               {progress.done} done · {progress.in_progress} in progress · {progress.skipped} skipped · {progress.unlabeled} unlabeled
             </span>
@@ -106,7 +135,7 @@ export function QueuePage({ config, labeler, onLabelerChange }: Props) {
           <div className="h-2 overflow-hidden rounded bg-slate-100">
             <div
               className="h-full bg-emerald-500"
-              style={{ width: `${progress.latest_total ? (100 * progress.latest_done) / progress.latest_total : 0}%` }}
+              style={{ width: `${progress.latest_total ? (100 * progress.parishes_labeled) / progress.latest_total : 0}%` }}
             />
           </div>
         </div>
@@ -133,9 +162,23 @@ export function QueuePage({ config, labeler, onLabelerChange }: Props) {
           <input type="checkbox" checked={latestOnly} onChange={(e) => setLatestOnly(e.target.checked)} />
           Latest per parish only
         </label>
+        <label className="flex items-center gap-1.5 text-sm text-slate-600" title="The latest bulletin of each parish that has no bulletin labeled yet. Next cycles through them.">
+          <input
+            type="checkbox"
+            checked={unlabeledParishes}
+            onChange={(e) => setUnlabeledParishes(e.target.checked)}
+            data-testid="unlabeled-parishes-filter"
+          />
+          Parishes with nothing labeled
+        </label>
         <span className="text-sm text-slate-500">{shown.length} bulletins</span>
-        <button className="btn-primary ml-auto" onClick={() => void openNext()} data-testid="next-unlabeled">
-          Next unlabeled →
+        <button
+          className="btn-primary ml-auto"
+          onClick={() => void openNext()}
+          data-testid="next-unlabeled"
+          title={unlabeledParishes ? "Open the next parish that has nothing labeled yet" : "Open the next unlabeled bulletin"}
+        >
+          {unlabeledParishes ? "Next parish →" : "Next unlabeled →"}
         </button>
       </div>
 
@@ -159,7 +202,10 @@ export function QueuePage({ config, labeler, onLabelerChange }: Props) {
               <tr
                 key={`${b.parish_slug}/${b.content_hash}`}
                 className="cursor-pointer border-t border-slate-100 hover:bg-sky-50"
-                onClick={() => navigate(bulletinHref(b.parish_slug, b.content_hash))}
+                onClick={() => {
+                  if (unlabeledParishes) rememberUnlabeledParishCursor(b.parish_slug, b.content_hash);
+                  navigate(bulletinHref(b.parish_slug, b.content_hash));
+                }}
               >
                 <td className="px-3 py-1.5">
                   <a href={bulletinHref(b.parish_slug, b.content_hash)} className="font-medium text-slate-800 hover:underline">

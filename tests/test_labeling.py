@@ -16,6 +16,7 @@ from pdf_extract.labeling.bulletins import (
     gemini_rows,
     list_bulletins,
     next_bulletin,
+    parish_bulletins,
     progress,
 )
 from pdf_extract.labeling.demo import OLD_CLASSIFIER_VERSION, build_demo, make_pdf
@@ -134,7 +135,62 @@ def test_statuses_next_and_progress_follow_label_files(conn, demo):
     counts = progress(queue)
     assert counts["latest_total"] == 3
     assert counts["latest_done"] == 1
+    assert counts["parishes_labeled"] == 2
     assert counts["done"] == 1 and counts["in_progress"] == 1 and counts["unlabeled"] == 2
+
+
+def test_progress_counts_a_parish_once_any_bulletin_is_labeled(conn, demo):
+    labels_dir = demo["labels_dir"]
+    older = _queue_key(conn, "holy-family-demo", rank=1)
+    write_label(_label(*older, status="done"), parish_slug=older[0], content_hash=older[1],
+                source_url="u", labels_dir=labels_dir)
+    started = _queue_key(conn, "our-lady-demo")
+    write_label(_label(*started), parish_slug=started[0], content_hash=started[1],
+                source_url="u", labels_dir=labels_dir)
+
+    queue = list_bulletins(conn, labels_dir)
+    counts = progress(queue)
+    # The latest holy-family bulletin is still unlabeled, so it is not "latest done".
+    assert counts["latest_done"] == 0
+    assert counts["parishes_labeled"] == 2
+
+    nxt = next_bulletin(queue, unlabeled_parishes=True)
+    assert (nxt["parish_slug"], nxt["rank"]) == ("st-anne-demo", 0)
+    assert next_bulletin(
+        queue, after=(nxt["parish_slug"], nxt["content_hash"]), unlabeled_parishes=True,
+    ) is None
+
+
+def test_next_cycles_the_latest_bulletin_of_unlabeled_parishes(conn, demo):
+    labels_dir = demo["labels_dir"]
+    skipped = _queue_key(conn, "holy-family-demo")
+    write_label(_label(*skipped, status="skipped"), parish_slug=skipped[0],
+                content_hash=skipped[1], source_url="u", labels_dir=labels_dir)
+    queue = list_bulletins(conn, labels_dir)
+    assert progress(queue)["parishes_labeled"] == 1
+
+    first = next_bulletin(queue, unlabeled_parishes=True)
+    assert (first["parish_slug"], first["rank"]) == ("our-lady-demo", 0)
+    second = next_bulletin(
+        queue, after=(first["parish_slug"], first["content_hash"]), unlabeled_parishes=True,
+    )
+    assert (second["parish_slug"], second["rank"]) == ("st-anne-demo", 0)
+    wrapped = next_bulletin(
+        queue, after=(second["parish_slug"], second["content_hash"]), unlabeled_parishes=True,
+    )
+    assert wrapped["parish_slug"] == "our-lady-demo"
+    # Starting from a parish that already has a label wraps to the first waiting one.
+    assert next_bulletin(queue, after=skipped, unlabeled_parishes=True)["parish_slug"] == "our-lady-demo"
+
+
+def test_parish_bulletins_lists_one_parish_latest_first(conn, demo):
+    queue = list_bulletins(conn, demo["labels_dir"])
+    listed = parish_bulletins(queue, "holy-family-demo")
+    assert [b["rank"] for b in listed] == [0, 1]
+    assert listed[0]["published_date"] == "2026-09-27"
+    assert listed[1]["published_date"] == "2026-09-20"
+    assert {b["status"] for b in listed} == {"unlabeled"}
+    assert [b["rank"] for b in parish_bulletins(queue, "st-anne-demo")] == [0]
 
 
 # ── Gemini sources ──────────────────────────────────────────────────────────
@@ -406,6 +462,8 @@ def test_http_queue_detail_pdf_and_save(server, demo):
     assert status == 200
     assert detail["label"] is None
     assert detail["gemini"]["source"]["kind"] == "cache"
+    assert [b["rank"] for b in detail["parish_bulletins"]] == [0, 1]
+    assert detail["parish_bulletins"][0]["content_hash"] == first["content_hash"]
 
     status, pdf = _request(server, "GET", f"/api/bulletins/{key}/pdf")
     assert status == 200 and pdf.startswith(b"%PDF")
@@ -421,6 +479,15 @@ def test_http_queue_detail_pdf_and_save(server, demo):
     assert status == 200
     assert nxt["bulletin"]["parish_slug"] == "our-lady-demo"
     assert nxt["progress"]["latest_done"] == 1
+    assert nxt["progress"]["parishes_labeled"] == 1
+
+    status, fresh = _request(server, "GET", "/api/next?unlabeled_parishes=1")
+    assert status == 200
+    assert (fresh["bulletin"]["parish_slug"], fresh["bulletin"]["rank"]) == ("our-lady-demo", 0)
+    status, cycled = _request(
+        server, "GET", f"/api/next?unlabeled_parishes=1&after=our-lady-demo/{fresh['bulletin']['content_hash']}",
+    )
+    assert cycled["bulletin"]["parish_slug"] == "st-anne-demo"
 
     status, config = _request(server, "GET", "/api/config")
     assert config["mode"] == "demo" and config["classifier"] == "gemini-flash"

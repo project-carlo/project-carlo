@@ -130,11 +130,22 @@ export interface BulletinSummary {
 export interface Progress {
   latest_total: number;
   latest_done: number;
+  /** Parishes with at least one bulletin labeled (in progress, done, or skipped). */
+  parishes_labeled: number;
   total: number;
   unlabeled: number;
   in_progress: number;
   done: number;
   skipped: number;
+}
+
+/** One bulletin of the parish open in the editor, for switching among them. */
+export interface ParishBulletin {
+  content_hash: string;
+  published_date: string | null;
+  fetched_at: string | null;
+  rank: number;
+  status: BulletinSummary["status"];
 }
 
 export interface BulletinDetail {
@@ -156,6 +167,7 @@ export interface BulletinDetail {
   };
   label: Label | null;
   progress: Progress;
+  parish_bulletins: ParishBulletin[];
 }
 
 export interface Config {

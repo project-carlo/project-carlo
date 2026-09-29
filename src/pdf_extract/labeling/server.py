@@ -9,8 +9,11 @@ API:
 
 - `GET  /api/config`                          mode, classifier version, default labeler
 - `GET  /api/bulletins`                       the queue, with label statuses and progress
-- `GET  /api/next?after=<parish>/<hash>&parish=<slug>`   the next bulletin to label
-- `GET  /api/bulletins/<parish>/<hash>`       parish, churches, Gemini's output, the label
+- `GET  /api/next?after=<parish>/<hash>&parish=<slug>&unlabeled_parishes=1`
+                                              the next bulletin to label; with the flag,
+                                              cycle the latest of parishes with no label yet
+- `GET  /api/bulletins/<parish>/<hash>`       parish, churches, Gemini's output, the label,
+                                              and that parish's other bulletins
 - `GET  /api/bulletins/<parish>/<hash>/pdf`   the stored PDF Gemini read
 - `PUT  /api/labels/<parish>/<hash>`          validate and save a label
 """
@@ -36,6 +39,7 @@ from pdf_extract.labeling.bulletins import (
     find_bulletin,
     list_bulletins,
     next_bulletin,
+    parish_bulletins,
     progress,
 )
 from pdf_extract.labeling.labels import (
@@ -209,9 +213,15 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
             parish_filter = (query.get("parish") or [None])[0] or None
             if parish_filter is not None and not is_valid_slug(parish_filter):
                 raise _ApiError(HTTPStatus.BAD_REQUEST, "Invalid parish slug")
+            unlabeled_parishes = (query.get("unlabeled_parishes") or [""])[0] in ("1", "true")
             queue = app.queue()
             self._json({
-                "bulletin": next_bulletin(queue, after=after, parish_slug=parish_filter),
+                "bulletin": next_bulletin(
+                    queue,
+                    after=after,
+                    parish_slug=parish_filter,
+                    unlabeled_parishes=unlabeled_parishes,
+                ),
                 "progress": progress(queue),
             })
 
@@ -226,6 +236,7 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
                 raise _ApiError(HTTPStatus.NOT_FOUND, "No such bulletin")
             detail["label"] = read_label(parish, content_hash, app.labels_dir)
             detail["progress"] = progress(queue)
+            detail["parish_bulletins"] = parish_bulletins(queue, parish)
             self._json(detail)
 
         def _pdf(self, parish: str, content_hash: str) -> None:

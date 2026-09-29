@@ -95,13 +95,27 @@ def next_bulletin(
     *,
     after: tuple[str, str] | None = None,
     parish_slug: str | None = None,
+    unlabeled_parishes: bool = False,
 ) -> dict[str, Any] | None:
     """The next bulletin to label: unlabeled first, then ones left in progress.
 
     Searches forward from `after` (wrapping round), never returning `after`
     itself, so "next" from a bulletin moves on even if it is unfinished.
+
+    With `unlabeled_parishes`, only the latest bulletin of each parish that
+    has no label yet is eligible, in the same queue order. A parish counts as
+    labeled once any of its bulletins is in progress, done, or skipped.
     """
-    candidates = [b for b in queue if parish_slug is None or b["parish_slug"] == parish_slug]
+    if unlabeled_parishes:
+        labeled = {b["parish_slug"] for b in queue if b["status"] != UNLABELED}
+        candidates = [
+            b for b in queue
+            if b["rank"] == 0
+            and b["parish_slug"] not in labeled
+            and (parish_slug is None or b["parish_slug"] == parish_slug)
+        ]
+    else:
+        candidates = [b for b in queue if parish_slug is None or b["parish_slug"] == parish_slug]
     start = 0
     if after is not None:
         for i, b in enumerate(candidates):
@@ -118,13 +132,39 @@ def next_bulletin(
 
 
 def progress(queue: list[dict[str, Any]]) -> dict[str, int]:
-    """Done counts: over each parish's latest bulletin, and over every label."""
+    """Bulletin counts, plus how many parishes have at least one label.
+
+    `parishes_labeled` is the tracker: a parish counts once any bulletin has
+    a label (in progress, done, or skipped), not only when its latest is done.
+    `latest_done` remains the count of latest bulletins marked done or skipped.
+    """
     latest = [b for b in queue if b["rank"] == 0]
-    counts = {"latest_total": len(latest), "latest_done": 0, "total": len(queue)}
+    labeled = {b["parish_slug"] for b in queue if b["status"] != UNLABELED}
+    counts = {
+        "latest_total": len(latest),
+        "latest_done": sum(1 for b in latest if b["status"] in ("done", "skipped")),
+        "parishes_labeled": len(labeled),
+        "total": len(queue),
+    }
     for status in (UNLABELED, "in_progress", "done", "skipped"):
         counts[status] = sum(1 for b in queue if b["status"] == status)
-    counts["latest_done"] = sum(1 for b in latest if b["status"] in ("done", "skipped"))
     return counts
+
+
+def parish_bulletins(queue: list[dict[str, Any]], parish_slug: str) -> list[dict[str, Any]]:
+    """Every bulletin of one parish, latest first, for the bulletin switcher."""
+    rows = [b for b in queue if b["parish_slug"] == parish_slug]
+    rows.sort(key=lambda b: b["rank"])
+    return [
+        {
+            "content_hash": b["content_hash"],
+            "published_date": b["published_date"],
+            "fetched_at": b["fetched_at"],
+            "rank": b["rank"],
+            "status": b["status"],
+        }
+        for b in rows
+    ]
 
 
 # ── Gemini's output ─────────────────────────────────────────────────────────

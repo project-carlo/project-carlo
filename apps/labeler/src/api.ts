@@ -23,10 +23,15 @@ export function pdfUrl(parish: string, hash: string): string {
 export const api = {
   config: () => request<Config>("/api/config"),
   bulletins: () => request<{ bulletins: BulletinSummary[]; progress: Progress }>("/api/bulletins"),
-  next: (after?: { parish: string; hash: string }, parish?: string) => {
+  next: (
+    after?: { parish: string; hash: string },
+    parish?: string,
+    options?: { unlabeledParishes?: boolean },
+  ) => {
     const params = new URLSearchParams();
     if (after) params.set("after", `${after.parish}/${after.hash}`);
     if (parish) params.set("parish", parish);
+    if (options?.unlabeledParishes) params.set("unlabeled_parishes", "1");
     return request<{ bulletin: BulletinSummary | null; progress: Progress }>(`/api/next?${params}`);
   },
   detail: (parish: string, hash: string) =>

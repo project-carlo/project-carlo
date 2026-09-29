@@ -8,6 +8,7 @@ import { RowEditor, type Field } from "../components/RowEditor";
 import { formatDate, parseLooseDate } from "../lib/dates";
 import { buildLabel, draftFromLabel, draftKey, incompleteMessage, type Draft } from "../lib/draft";
 import { initHistory, pushHistory, redo, undo, type History } from "../lib/history";
+import { rememberUnlabeledParishCursor, unlabeledParishesOn } from "../lib/queuePrefs";
 import { bulletinHref, navigate } from "../lib/route";
 import {
   asDated,
@@ -26,7 +27,7 @@ import {
 } from "../lib/rows";
 import { formatDuration } from "../lib/time";
 import { useTimer } from "../lib/useTimer";
-import { FLAG_NAMES, type BulletinDetail, type Config, type EditorRow, type FlagName, type Status } from "../types";
+import { FLAG_NAMES, type BulletinDetail, type Config, type EditorRow, type FlagName, type ParishBulletin, type Status } from "../types";
 
 interface Props {
   parish: string;
@@ -40,6 +41,7 @@ export function BulletinPage(props: Props) {
   const { parish, hash } = props;
   const [detail, setDetail] = useState<BulletinDetail | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -54,6 +56,8 @@ export function BulletinPage(props: Props) {
     };
   }, [parish, hash]);
 
+  useEffect(() => setMenuOpen(false), [parish]);
+
   if (error) {
     return (
       <div className="p-8">
@@ -65,7 +69,15 @@ export function BulletinPage(props: Props) {
     );
   }
   if (!detail) return <div className="p-8 text-slate-500">Loading bulletin…</div>;
-  return <BulletinEditor key={`${parish}/${hash}`} detail={detail} {...props} />;
+  return (
+    <BulletinEditor
+      key={`${parish}/${hash}`}
+      detail={detail}
+      menuOpen={menuOpen}
+      onMenuOpenChange={setMenuOpen}
+      {...props}
+    />
+  );
 }
 
 const FLAG_LABELS: Record<FlagName, string> = {
@@ -102,7 +114,16 @@ function isTyping(el: Element | null): boolean {
   return !!el?.matches('input:not([type="checkbox"]), textarea, select, [contenteditable="true"]');
 }
 
-function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange }: Props & { detail: BulletinDetail }) {
+function BulletinEditor({
+  detail,
+  parish,
+  hash,
+  config,
+  labeler,
+  onLabelerChange,
+  menuOpen,
+  onMenuOpenChange,
+}: Props & { detail: BulletinDetail; menuOpen: boolean; onMenuOpenChange: (open: boolean) => void }) {
   const churches = detail.churches;
   const churchSlugs = useMemo(() => churches.map((c) => c.slug), [churches]);
   const gemini = detail.gemini.events;
@@ -414,9 +435,12 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
       setHistory((h) => pushHistory(h, d));
       if (!(await saveNow(d))) return;
       try {
-        const { bulletin } = await api.next({ parish, hash });
-        if (bulletin) navigate(bulletinHref(bulletin.parish_slug, bulletin.content_hash));
-        else navigate("#/");
+        const cycleParishes = unlabeledParishesOn();
+        const { bulletin } = await api.next({ parish, hash }, undefined, { unlabeledParishes: cycleParishes });
+        if (bulletin) {
+          if (cycleParishes) rememberUnlabeledParishCursor(bulletin.parish_slug, bulletin.content_hash);
+          navigate(bulletinHref(bulletin.parish_slug, bulletin.content_hash));
+        } else navigate("#/");
       } catch (e) {
         setMessage(`Saved, but finding the next bulletin failed: ${(e as Error).message}`);
       }
@@ -458,6 +482,7 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
     }
     if (e.key === "Escape") {
       setShowHelp(false);
+      onMenuOpenChange(false);
       return;
     }
     if (key === "n") {
@@ -562,6 +587,8 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
   const incomplete = useMemo(() => incompleteMessage(rows), [rows]);
   const progress = detail.progress;
   const clearFocus = useCallback(() => setFocus(null), []);
+  const cycleParishes = unlabeledParishesOn();
+  const labeledHere = detail.parish_bulletins.filter((b) => b.status !== "unlabeled").length;
 
   return (
     <div className="grid h-full grid-cols-[minmax(0,3fr)_minmax(0,2fr)] grid-rows-[minmax(0,1fr)] overflow-hidden">
@@ -577,15 +604,33 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
                 {detail.parish.name}
               </a>
             </h1>
+            <button
+              type="button"
+              className="btn py-0.5 text-xs"
+              aria-expanded={menuOpen}
+              data-testid="parish-bulletins"
+              onClick={() => onMenuOpenChange(!menuOpen)}
+            >
+              {menuOpen ? "Hide bulletins" : "Bulletins"}
+              <span className="font-normal text-slate-500">
+                {labeledHere} labeled
+              </span>
+            </button>
             {config?.mode === "demo" && <span className="rounded bg-amber-200 px-1.5 text-xs font-semibold text-amber-900">DEMO</span>}
-            <span className="ml-auto text-sm text-slate-600 tabular-nums" title={`${progress.done} done, ${progress.skipped} skipped, ${progress.in_progress} in progress across all ${progress.total} bulletins`}>
-              <b>{progress.latest_done}</b> / {progress.latest_total} done
+            <span
+              className="ml-auto text-sm text-slate-600 tabular-nums"
+              title={`${progress.parishes_labeled} parishes have a labeled bulletin, of ${progress.latest_total}. ${progress.done} bulletins done, ${progress.skipped} skipped, ${progress.in_progress} in progress, across ${progress.total}.`}
+            >
+              <b>{progress.parishes_labeled}</b> / {progress.latest_total} parishes
             </span>
             <span className="text-sm text-slate-500 tabular-nums" title="Time spent on this bulletin (paused while the tab is hidden)">
               ⏱ {formatDuration(seconds)}
             </span>
             <SaveBadge save={save} incomplete={incomplete} />
           </div>
+          {menuOpen && (
+            <ParishBulletins parish={parish} current={hash} bulletins={detail.parish_bulletins} />
+          )}
           <ul className="space-y-0.5 text-xs text-slate-600">
             {churches.map((c) => (
               <li key={c.slug}>
@@ -654,11 +699,19 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
                 <option value="done">Done</option>
                 <option value="skipped">Skipped</option>
               </select>
-              <button className="btn py-0.5 text-xs" onClick={() => void finish("skipped")} title="Mark skipped and open the next bulletin">
+              <button
+                className="btn py-0.5 text-xs"
+                onClick={() => void finish("skipped")}
+                title={cycleParishes ? "Mark skipped and open the next parish with nothing labeled" : "Mark skipped and open the next bulletin"}
+              >
                 Skip
               </button>
-              <button className="btn-primary py-0.5 text-xs" onClick={() => void finish("done")} title="Mark done and open the next bulletin (Ctrl+Enter)">
-                Done &amp; next
+              <button
+                className="btn-primary py-0.5 text-xs"
+                onClick={() => void finish("done")}
+                title={cycleParishes ? "Mark done and open the next parish with nothing labeled (Ctrl+Enter)" : "Mark done and open the next bulletin (Ctrl+Enter)"}
+              >
+                {cycleParishes ? "Done & next parish" : "Done & next"}
               </button>
             </span>
           </div>
@@ -788,6 +841,46 @@ function BulletinEditor({ detail, parish, hash, config, labeler, onLabelerChange
       </div>
       {showHelp && <HelpOverlay onClose={() => setShowHelp(false)} />}
     </div>
+  );
+}
+
+const BULLETIN_STATUS: Record<ParishBulletin["status"], [string, string]> = {
+  unlabeled: ["bg-slate-100 text-slate-600", "Not labeled"],
+  in_progress: ["bg-sky-100 text-sky-800", "In progress"],
+  done: ["bg-emerald-100 text-emerald-800", "Done"],
+  skipped: ["bg-zinc-200 text-zinc-700", "Skipped"],
+};
+
+function ParishBulletins({
+  parish,
+  current,
+  bulletins,
+}: {
+  parish: string;
+  current: string;
+  bulletins: ParishBulletin[];
+}) {
+  return (
+    <ul className="max-h-52 overflow-y-auto rounded border border-slate-200" data-testid="parish-bulletins-menu">
+      {bulletins.map((b) => {
+        const here = b.content_hash === current;
+        const when = b.published_date ?? (b.fetched_at ? `fetched ${b.fetched_at.slice(0, 10)}` : "No date");
+        const [tone, label] = BULLETIN_STATUS[b.status];
+        return (
+          <li key={b.content_hash} className={here ? "bg-sky-50" : undefined}>
+            <a
+              href={bulletinHref(parish, b.content_hash)}
+              aria-current={here ? "page" : undefined}
+              className="flex items-center gap-2 px-2 py-1 text-sm hover:bg-sky-50"
+            >
+              <span className="tabular-nums text-slate-800">{when}</span>
+              <span className="text-xs text-slate-500">{b.rank === 0 ? "latest" : `${b.rank} back`}</span>
+              <span className={`ml-auto rounded px-1.5 py-0.5 text-xs font-medium ${tone}`}>{label}</span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
