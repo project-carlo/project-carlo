@@ -106,6 +106,9 @@ def test_first_run_calls_classifier_and_writes_outputs(seeded_run):
             "published_date": None,
             "event_count": 1,
             "wrong_bulletin": False,
+            "cache_hit": False,
+            "usage": None,
+            "cost_usd": None,
         }
     ]
 
@@ -199,3 +202,115 @@ def test_cache_miss_after_the_church_list_changes(seeded_run):
 
     assert classifier.call_count == 2
     assert summary["cache_hits"] == 0
+
+
+def _add_bulletin(parish_slug: str, url: str, content_hash: str) -> None:
+    get_store().put(bulletin_pdf_key(parish_slug, content_hash), b"fake")
+    conn = connect_db()
+    with conn:
+        conn.execute(
+            """INSERT INTO bulletin(parish_id, source_url, content_hash, fetched_at)
+               SELECT id, ?, ?, '2026-01-01T00:00:00Z' FROM parish WHERE slug = ?""",
+            (url, content_hash, parish_slug),
+        )
+    conn.close()
+
+
+def test_cache_only_never_calls_the_classifier(seeded_run):
+    _, classifier = seeded_run
+
+    summary = extract_run.run(classifier_name="counting", cache_only=True)
+
+    assert classifier.call_count == 0
+    assert summary["cache_hits"] == 0
+    assert summary["not_cached"] == 1
+    assert summary["bulletins_served"] == 0
+    assert json.loads(extract_run.bulletins_path("counting").read_text(encoding="utf-8")) == []
+
+    extract_run.run(classifier_name="counting", concurrency=1)  # pays once
+    summary = extract_run.run(classifier_name="counting", cache_only=True)
+    assert classifier.call_count == 1
+    assert summary["cache_hits"] == 1
+    assert summary["not_cached"] == 0
+
+
+def test_source_urls_restrict_the_run(seeded_run):
+    _, classifier = seeded_run
+
+    summary = extract_run.run(
+        classifier_name="counting", source_urls=["https://example.org/other.pdf"],
+    )
+
+    assert classifier.call_count == 0
+    assert summary["bulletins_total"] == 0
+
+
+def test_limit_caps_the_bulletins_run(seeded_run):
+    _, classifier = seeded_run
+    conn = connect_db()
+    with conn:
+        conn.execute(
+            "INSERT INTO parish(slug, name, homepage_url) "
+            "VALUES ('second-parish', 'Second Parish', 'https://example.org')"
+        )
+    conn.close()
+    _add_bulletin("second-parish", "https://example.org/second.pdf", "hash-def")
+
+    summary = extract_run.run(classifier_name="counting", concurrency=1, limit=1)
+
+    assert classifier.call_count == 1
+    assert summary["bulletins_served"] == 1
+
+
+def test_usage_and_cost_are_recorded_per_bulletin(seeded_run, monkeypatch):
+    _, classifier = seeded_run
+    classifier._payload = {
+        **_payload_one_event(),
+        "usage": {
+            "prompt_tokens": 1_000_000,
+            "cached_prompt_tokens": 0,
+            "output_tokens": 100_000,
+            "thinking_tokens": 100_000,
+        },
+    }
+    classifier.model = "gpt-6-luna"  # $0.10 in / $0.50 out per 1M tokens
+
+    first = extract_run.run(classifier_name="counting", concurrency=1)
+    row = json.loads(extract_run.bulletins_path("counting").read_text(encoding="utf-8"))[0]
+
+    assert first["model"] == "gpt-6-luna"
+    assert row["cache_hit"] is False
+    assert row["cost_usd"] == pytest.approx(0.2)
+    assert first["usage"]["cost_usd"] == pytest.approx(0.2)
+    assert first["usage_this_run"]["cost_usd"] == pytest.approx(0.2)
+
+    second = extract_run.run(classifier_name="counting", concurrency=1)
+    row = json.loads(extract_run.bulletins_path("counting").read_text(encoding="utf-8"))[0]
+
+    assert row["cache_hit"] is True
+    assert second["usage"]["cost_usd"] == pytest.approx(0.2), "cached results keep their cost"
+    assert second["usage_this_run"]["cost_usd"] == 0
+
+
+def test_bench_pays_only_for_the_challenger_on_the_baselines_cached_bulletins(
+    seeded_run, monkeypatch,
+):
+    from pdf_extract import bench, compare
+
+    tmp_path, baseline = seeded_run
+    challenger = _CountingClassifier(_payload_one_event())
+    challenger.name = "challenger"
+    monkeypatch.setitem(REGISTRY, challenger.name, lambda: challenger)
+    monkeypatch.setattr(compare, "COMPARE_DIR", tmp_path / "compare")
+    monkeypatch.setattr(compare, "_load_bulletin_metadata", dict)
+
+    with pytest.raises(RuntimeError, match="No cached counting results"):
+        bench.bench(challenger="challenger", baseline="counting")
+    assert (baseline.call_count, challenger.call_count) == (0, 0)
+
+    extract_run.run(classifier_name="counting", concurrency=1)  # the weekly job's spend
+    result = bench.bench(challenger="challenger", baseline="counting")
+
+    assert (baseline.call_count, challenger.call_count) == (1, 1)
+    assert result["cost"]["bulletins_priced_in_both"] == 0
+    assert [c["classifier"] for c in result["per_classifier"]] == ["counting", "challenger"]

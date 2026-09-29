@@ -262,3 +262,67 @@ def test_compare_missing_run_raises(patched_runs):
     _write_run(tmp, "a", [_ev()])
     with pytest.raises(FileNotFoundError):
         compare.compare(["a", "missing"], out_path=tmp / "report.json")
+
+
+def _price_run(tmp_path: Path, name: str, model: str, usages: dict[str, dict | None]) -> None:
+    """Give a run written by `_write_run` a model and per-bulletin usage."""
+    run_dir = tmp_path / "runs" / name
+    (run_dir / "bulletins.json").write_text(
+        json.dumps([
+            {"bulletin_source_url": url, "event_count": 0, "usage": usage}
+            for url, usage in usages.items()
+        ]),
+        encoding="utf-8",
+    )
+    (run_dir / "run.json").write_text(
+        json.dumps({"model": model, "cache_hits": 3, "cache_misses": 1,
+                    "usage_this_run": {"cost_usd": 0.5}}),
+        encoding="utf-8",
+    )
+
+
+def test_compare_reports_cost_and_cache_hit_rates(patched_runs, capsys):
+    tmp = patched_runs
+    one = "https://example.org/one.pdf"
+    two = "https://example.org/two.pdf"
+    _write_run(tmp, "gemini", [_ev(bulletin_source_url=one)])
+    _write_run(tmp, "luna", [_ev(bulletin_source_url=one)])
+    million_in = {"prompt_tokens": 1_000_000, "cached_prompt_tokens": 0,
+                  "output_tokens": 0, "thinking_tokens": 0}
+    _price_run(tmp, "gemini", "gemini-3-flash-preview", {one: million_in, two: million_in})
+    _price_run(tmp, "luna", "gpt-6-luna", {one: million_in, two: None})
+
+    report = compare.compare(["gemini", "luna"], out_path=tmp / "report.json")
+
+    gemini, luna = report["per_classifier"]
+    assert gemini["cache_hit_rate"] == 0.75
+    assert gemini["usage"]["cost_usd"] == pytest.approx(1.0)
+    assert gemini["usage"]["cost_per_bulletin_usd"] == pytest.approx(0.5)
+    assert luna["usage"]["cost_usd"] == pytest.approx(0.1)
+    assert luna["paid_this_run_usd"] == 0.5
+
+    cost = report["pairwise"][0]["cost"]
+    assert cost["bulletins_priced_in_both"] == 1, "only bulletins priced for both"
+    assert cost["gemini"]["cost_usd"] == pytest.approx(0.5)
+    assert cost["luna"]["cost_usd"] == pytest.approx(0.1)
+    assert cost["cost_ratio_b_over_a"] == pytest.approx(0.2)
+
+    printed = capsys.readouterr().out
+    assert "## Cost and cache" in printed
+    assert "| gemini | luna | 1 | $0.5000 | $0.1000 |" in printed
+    assert "0.20x" in printed
+
+
+def test_cost_is_marked_as_a_lower_bound_without_thinking_counts(patched_runs, capsys):
+    tmp = patched_runs
+    one = "https://example.org/one.pdf"
+    _write_run(tmp, "gemini", [_ev(bulletin_source_url=one)])
+    _write_run(tmp, "luna", [_ev(bulletin_source_url=one)])
+    _price_run(tmp, "gemini", "gemini-3-flash-preview", {one: {"prompt_tokens": 1_000_000}})
+    _price_run(tmp, "luna", "gpt-6-luna", {one: {"prompt_tokens": 1_000_000, "thinking_tokens": 0}})
+
+    compare.compare(["gemini", "luna"], out_path=tmp / "report.json")
+
+    printed = capsys.readouterr().out
+    assert "≥$0.5000" in printed
+    assert "gemini (1)" in printed

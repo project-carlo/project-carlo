@@ -9,6 +9,9 @@ Independent of the production process.py bookkeeping:
 It shares the on-disk result cache with the production path (see runner.py):
 each classifier output is keyed by (classifier name + version, bulletin
 content_hash). A cache hit means zero classifier calls on re-run.
+
+Each run also records every served result's token usage and list-price cost
+(see pricing.py), whether it came from the cache or was paid for this run.
 """
 
 from __future__ import annotations
@@ -16,12 +19,14 @@ from __future__ import annotations
 import json
 import logging
 import time
+from collections.abc import Collection
 from pathlib import Path
 from typing import Any
 
 from pdf_extract.blobstore import bulletin_pdf_key
 from pdf_extract.classifiers import Classifier, get_classifier
 from pdf_extract.paths import DATA_DIR
+from pdf_extract.pricing import price_for, summarize_usage, usage_cost
 from pdf_extract.runner import (
     flatten_extracted_events,
     iter_extraction_outcomes,
@@ -61,27 +66,37 @@ def run(
     classifier_name: str,
     parish_name: str | None = None,
     concurrency: int = 5,
+    cache_only: bool = False,
+    source_urls: Collection[str] | None = None,
+    limit: int | None = None,
 ) -> dict[str, Any]:
     """Run a classifier over the fetched bulletin corpus.
 
     Re-uses cached classifier outputs keyed by (classifier+version, content_hash).
     Always rebuilds the run's events.json from the cache so it stays in sync.
+
+    `cache_only` serves cached results and never calls the classifier: misses
+    are counted as `not_cached` and left out. `source_urls` restricts the run
+    to those bulletins, and `limit` stops once that many are served or queued.
     """
     classifier = get_classifier(classifier_name)
     LOGGER.info(
-        "Starting extract run (classifier=%s version=%s parish=%s concurrency=%s)",
+        "Starting extract run (classifier=%s version=%s parish=%s concurrency=%s%s)",
         classifier.name,
         classifier.version,
         parish_name or "*all*",
         concurrency,
+        " cache-only" if cache_only else "",
     )
 
     started = time.monotonic()
     cache_hits = 0
     cache_misses = 0
+    not_cached = 0
     skipped = 0
     errors: list[dict[str, str]] = []
     cached_results: dict[str, dict[str, Any]] = {}  # source_url -> classifier output
+    fresh_urls: set[str] = set()  # results paid for in this run
 
     conn = connect_db()
     try:
@@ -93,10 +108,15 @@ def run(
                 return _summary(classifier)
             target_slug = parish_row["slug"]
             candidates = [m for m in candidates if m["parish_slug"] == target_slug]
+        if source_urls is not None:
+            wanted = set(source_urls)
+            candidates = [m for m in candidates if m["source_url"] in wanted]
 
         # Pass 1: serve everything we already have cached, build the work list.
         pending: list[dict[str, Any]] = []
         for entry in candidates:
+            if limit is not None and len(cached_results) + len(pending) >= limit:
+                break
             content_hash = entry.get("content_hash")
             if not isinstance(content_hash, str) or not content_hash:
                 LOGGER.warning(
@@ -112,6 +132,8 @@ def run(
             if cached is not None:
                 cached_results[entry["source_url"]] = cached
                 cache_hits += 1
+            elif cache_only:
+                not_cached += 1
             else:
                 pending.append(entry)
 
@@ -138,11 +160,14 @@ def run(
                 outcome.extracted,
             )
             cached_results[outcome.entry["source_url"]] = outcome.extracted
+            fresh_urls.add(outcome.entry["source_url"])
             cache_misses += 1
     finally:
         conn.close()
 
     # Rebuild events.json from the (now-current) cache for every served bulletin.
+    model = getattr(classifier, "model", None)
+    price = price_for(model)
     events: list[dict[str, Any]] = []
     served_bulletins: list[dict[str, Any]] = []
     for entry in candidates:
@@ -151,6 +176,7 @@ def run(
             continue
         rows = flatten_extracted_events(entry, result)
         events.extend(rows)
+        usage = result.get("usage") if isinstance(result.get("usage"), dict) else None
         served_bulletins.append(
             {
                 "bulletin_source_url": entry["source_url"],
@@ -167,6 +193,9 @@ def run(
                 ),
                 "event_count": len(rows),
                 "wrong_bulletin": bool(result.get("wrong_bulletin")),
+                "cache_hit": entry["source_url"] not in fresh_urls,
+                "usage": usage,
+                "cost_usd": round(usage_cost(usage, price), 6) if usage and price else None,
             }
         )
 
@@ -179,10 +208,16 @@ def run(
         bulletins_served=len(cached_results),
         cache_hits=cache_hits,
         cache_misses=cache_misses,
+        not_cached=not_cached,
         skipped=skipped,
         errors=errors,
         events_written=len(events),
         wall_seconds=round(time.monotonic() - started, 3),
+        model=model,
+        usage=summarize_usage([b["usage"] for b in served_bulletins], price),
+        usage_this_run=summarize_usage(
+            [b["usage"] for b in served_bulletins if not b["cache_hit"]], price,
+        ),
     )
 
     summary_path = run_summary_path(classifier.name)
@@ -210,6 +245,7 @@ def _summary(classifier: Classifier, **counters: Any) -> dict[str, Any]:
         "bulletins_served": 0,
         "cache_hits": 0,
         "cache_misses": 0,
+        "not_cached": 0,
         "skipped": 0,
         "errors": [],
         "events_written": 0,

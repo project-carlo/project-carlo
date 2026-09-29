@@ -2,7 +2,8 @@
 
 Reads data/runs/<name>/events.json for each requested classifier and computes
 exact-tuple-match agreement, broken down per-bulletin and aggregated. Also
-surfaces per-classifier latency and cache stats from data/runs/<name>/run.json.
+surfaces per-classifier latency and cache stats from data/runs/<name>/run.json,
+and token usage and list-price cost from data/runs/<name>/bulletins.json.
 
 The match-key extraction is exposed as `event_key()` so the same matcher can
 score against ground truth once labels exist.
@@ -22,6 +23,7 @@ from typing import Any
 from pdf_extract.blobstore import bulletin_pdf_key
 from pdf_extract.extract_run import bulletins_path, events_path, run_summary_path
 from pdf_extract.paths import DATA_DIR
+from pdf_extract.pricing import price_for, summarize_usage
 from pdf_extract.runner import RUNS_DIR
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, load_bulletins, utc_now_iso
 
@@ -32,6 +34,7 @@ COMPARE_DIR = RUNS_DIR / "compare"
 EventKey = tuple[str, str, str, str | None, str | None, str, str | None, bool]
 EventsByBulletin = dict[str, list[dict[str, Any]]]
 EventKeysByBulletin = dict[str, set[EventKey]]
+ManifestByBulletin = dict[str, dict[str, Any]]
 
 
 def event_key(event: dict[str, Any]) -> EventKey:
@@ -53,8 +56,10 @@ def event_key(event: dict[str, Any]) -> EventKey:
     )
 
 
-def _load_run(classifier_name: str) -> tuple[EventsByBulletin, dict[str, Any]]:
-    """Return (events grouped by bulletin_source_url, run.json summary if present)."""
+def _load_run(
+    classifier_name: str,
+) -> tuple[EventsByBulletin, dict[str, Any], ManifestByBulletin]:
+    """Return (events by bulletin_source_url, run.json summary, bulletins.json rows by URL)."""
     ev_path = events_path(classifier_name)
     if not ev_path.exists():
         raise FileNotFoundError(
@@ -62,6 +67,7 @@ def _load_run(classifier_name: str) -> tuple[EventsByBulletin, dict[str, Any]]:
             f"Run `pnpm extract --classifier {classifier_name}` first."
         )
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    manifest_rows: ManifestByBulletin = {}
 
     manifest_path = bulletins_path(classifier_name)
     if manifest_path.exists():
@@ -76,6 +82,7 @@ def _load_run(classifier_name: str) -> tuple[EventsByBulletin, dict[str, Any]]:
                 url = row.get("bulletin_source_url") or row.get("source_url")
                 if isinstance(url, str):
                     grouped.setdefault(url, [])
+                    manifest_rows[url] = row
 
     rows = json.loads(ev_path.read_text(encoding="utf-8"))
     for row in rows:
@@ -94,7 +101,7 @@ def _load_run(classifier_name: str) -> tuple[EventsByBulletin, dict[str, Any]]:
         except json.JSONDecodeError:
             LOGGER.warning("Could not parse %s; ignoring", summary_path, exc_info=True)
 
-    return grouped, summary
+    return grouped, summary, manifest_rows
 
 
 def _load_bulletin_metadata() -> dict[str, dict[str, Any]]:
@@ -284,10 +291,32 @@ def _pairwise_bulletin_details(
     )
 
 
+def _usage_over(
+    manifest: ManifestByBulletin, summary: dict[str, Any], urls: list[str] | None = None,
+) -> dict[str, Any]:
+    """Usage and list-price cost over a run's bulletins (all of them, or `urls`)."""
+    rows = manifest.values() if urls is None else [manifest[u] for u in urls if u in manifest]
+    usages = [row.get("usage") if isinstance(row.get("usage"), dict) else None for row in rows]
+    usage = summarize_usage(usages, price_for(summary.get("model")))
+    priced = usage["results_with_usage"]
+    cost = usage["cost_usd"]
+    usage["cost_per_bulletin_usd"] = (
+        round(cost / priced, 6) if cost is not None and priced else None
+    )
+    usage["api_cache_hit_rate"] = (
+        round(usage["cached_prompt_tokens"] / usage["prompt_tokens"], 4)
+        if usage["prompt_tokens"]
+        else None
+    )
+    return usage
+
+
 def _classifier_stats(
-    name: str, grouped: EventsByBulletin, summary: dict[str, Any]
+    name: str, grouped: EventsByBulletin, summary: dict[str, Any], manifest: ManifestByBulletin,
 ) -> dict[str, Any]:
     counts = [len(s) for s in _event_keys_by_bulletin(grouped).values()]
+    hits = summary.get("cache_hits") or 0
+    misses = summary.get("cache_misses") or 0
     return {
         "classifier": name,
         "version": summary.get("classifier_version"),
@@ -298,8 +327,35 @@ def _classifier_stats(
         "events_per_bulletin_max": max(counts) if counts else 0,
         "cache_hits": summary.get("cache_hits"),
         "cache_misses": summary.get("cache_misses"),
+        "cache_hit_rate": round(hits / (hits + misses), 4) if hits + misses else None,
         "wall_seconds": summary.get("wall_seconds"),
         "errors": len(summary.get("errors") or []),
+        "model": summary.get("model"),
+        "usage": _usage_over(manifest, summary),
+        "paid_this_run_usd": (summary.get("usage_this_run") or {}).get("cost_usd"),
+    }
+
+
+def _pairwise_cost(
+    name_a: str, run_a: tuple, name_b: str, run_b: tuple,
+) -> dict[str, Any]:
+    """Each side's cost over the bulletins both classifiers have usage for."""
+    _, summary_a, manifest_a = run_a
+    _, summary_b, manifest_b = run_b
+
+    def priced(manifest: ManifestByBulletin) -> set[str]:
+        return {u for u, row in manifest.items() if isinstance(row.get("usage"), dict)}
+
+    shared = sorted(priced(manifest_a) & priced(manifest_b))
+    usage_a = _usage_over(manifest_a, summary_a, shared)
+    usage_b = _usage_over(manifest_b, summary_b, shared)
+    cost_a = usage_a["cost_usd"]
+    cost_b = usage_b["cost_usd"]
+    return {
+        "bulletins_priced_in_both": len(shared),
+        name_a: usage_a,
+        name_b: usage_b,
+        "cost_ratio_b_over_a": round(cost_b / cost_a, 4) if cost_a and cost_b is not None else None,
     }
 
 
@@ -316,11 +372,13 @@ def compare(
     metadata = _load_bulletin_metadata()
 
     per_classifier = [
-        _classifier_stats(name, grouped, summary) for name, (grouped, summary) in runs.items()
+        _classifier_stats(name, grouped, summary, manifest)
+        for name, (grouped, summary, manifest) in runs.items()
     ]
 
     pairwise = [
         _pairwise_metrics(a, runs[a][0], b, runs[b][0], metadata)
+        | {"cost": _pairwise_cost(a, runs[a], b, runs[b])}
         for a, b in itertools.combinations(classifier_names, 2)
     ]
 
@@ -379,7 +437,78 @@ def format_markdown(report: dict[str, Any]) -> str:
             f"{p['events_in_both']} | {p['events_in_union']} | "
             f"{p['micro_jaccard']} | {p['mean_jaccard']} | {len(p['one_sided_zero_event_bulletins'])} |"
         )
+
+    lines.extend(format_cost_markdown(report))
     return "\n".join(lines)
+
+
+def _usd(value: float | None, usage: dict[str, Any]) -> str:
+    """A dollar amount, marked as a lower bound when some results lack thinking tokens."""
+    if value is None:
+        return "n/a"
+    floor = "≥" if usage.get("results_missing_thinking_tokens") else ""
+    return f"{floor}${value:.4f}"
+
+
+def _pct(value: float | None) -> str:
+    return "n/a" if value is None else f"{value:.1%}"
+
+
+def format_cost_markdown(report: dict[str, Any]) -> list[str]:
+    lines = [
+        "",
+        "## Cost and cache (list price, all served bulletins)",
+        "",
+        "| Classifier | Model | Result-cache hits/misses | Result-cache hit rate | "
+        "Bulletins priced | Input tok | API prompt-cache hit rate | Output tok | Thinking tok | "
+        "Total | Per bulletin | Paid this run |",
+        "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    lower_bound = []
+    for c in report["per_classifier"]:
+        u = c.get("usage") or {}
+        if u.get("results_missing_thinking_tokens"):
+            lower_bound.append(f"{c['classifier']} ({u['results_missing_thinking_tokens']})")
+        paid = c.get("paid_this_run_usd")
+        lines.append(
+            f"| {c['classifier']} | {c.get('model') or ''} | "
+            f"{c.get('cache_hits') or 0}/{c.get('cache_misses') or 0} | "
+            f"{_pct(c.get('cache_hit_rate'))} | "
+            f"{u.get('results_with_usage', 0)}/{c['bulletins']} | {u.get('prompt_tokens', 0):,} | "
+            f"{_pct(u.get('api_cache_hit_rate'))} | {u.get('output_tokens', 0):,} | "
+            f"{u.get('thinking_tokens', 0):,} | {_usd(u.get('cost_usd'), u)} | "
+            f"{_usd(u.get('cost_per_bulletin_usd'), u)} | "
+            f"{'n/a' if paid is None else f'${paid:.4f}'} |"
+        )
+
+    lines.extend([
+        "",
+        "## Cost head-to-head (bulletins priced for both)",
+        "",
+        "| A | B | Bulletins | A total | B total | A per bulletin | B per bulletin | B / A |",
+        "|---|---|---:|---:|---:|---:|---:|---:|",
+    ])
+    for p in report["pairwise"]:
+        cost = p.get("cost") or {}
+        a = cost.get(p["classifier_a"]) or {}
+        b = cost.get(p["classifier_b"]) or {}
+        ratio = cost.get("cost_ratio_b_over_a")
+        lines.append(
+            f"| {p['classifier_a']} | {p['classifier_b']} | "
+            f"{cost.get('bulletins_priced_in_both', 0)} | "
+            f"{_usd(a.get('cost_usd'), a)} | {_usd(b.get('cost_usd'), b)} | "
+            f"{_usd(a.get('cost_per_bulletin_usd'), a)} | "
+            f"{_usd(b.get('cost_per_bulletin_usd'), b)} | "
+            f"{'n/a' if ratio is None else f'{ratio:.2f}x'} |"
+        )
+
+    if lower_bound:
+        lines.extend([
+            "",
+            "≥: some cached results were recorded before thinking tokens were, so their "
+            "thinking (billed as output) is missing from the cost: " + ", ".join(lower_bound) + ".",
+        ])
+    return lines
 
 
 def format_side_by_side_markdown(report: dict[str, Any]) -> str:

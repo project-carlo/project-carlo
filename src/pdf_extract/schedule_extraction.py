@@ -250,9 +250,9 @@ def reconstruct_events(raw: SchedulePayload | dict[str, Any]) -> dict[str, Any]:
 
 
 def _parse_llm_json(content: str, *, context: str) -> dict[str, Any]:
-    """Parse a Gemini JSON string, warning (not raising) on bad output.
+    """Parse an LLM JSON string, warning (not raising) on bad output.
 
-    Gemini is configured with response_mime_type=application/json and a JSON schema,
+    The model is configured to answer JSON matching a schema,
     so malformed output or non-dict top-level values indicate an LLM-side problem.
     We coalesce to {} so downstream normalisation treats it as an empty result,
     but log enough detail to distinguish this from a genuinely empty bulletin.
@@ -262,13 +262,13 @@ def _parse_llm_json(content: str, *, context: str) -> dict[str, Any]:
         data = json.loads(content)
     except json.JSONDecodeError as exc:
         LOGGER.warning(
-            "%s: failed to parse Gemini JSON (len=%d, err=%s): %r",
+            "%s: failed to parse LLM JSON (len=%d, err=%s): %r",
             context, len(content), exc, snippet,
         )
         return {}
     if not isinstance(data, dict):
         LOGGER.warning(
-            "%s: Gemini JSON top-level is %s, expected object (len=%d): %r",
+            "%s: LLM JSON top-level is %s, expected object (len=%d): %r",
             context, type(data).__name__, len(content), snippet,
         )
         return {}
@@ -460,29 +460,49 @@ def extract_events(
             response_json_schema=SchedulePayload.model_json_schema(),
         ),
     )
-    content = response.text or "{}"
-    try:
-        payload = SchedulePayload.model_validate_json(content)
-    except ValidationError as exc:
-        LOGGER.warning(
-            "extract_events: Pydantic validation failed (%s); using lenient fallback",
-            exc,
-        )
-        result = reconstruct_events(_parse_llm_json(content, context="extract_events"))
-    else:
-        result = reconstruct_events(payload)
+    result = events_from_json(response.text or "{}", context="extract_events")
     result["usage"] = _token_usage(response)
     return result
 
 
+def events_from_json(content: str, *, context: str) -> dict[str, Any]:
+    """Validate a `SchedulePayload` JSON reply and flatten it to events.
+
+    Falls back to lenient parsing when strict validation fails, so one bad slot
+    does not drop the rest. Shared by every classifier that is given the
+    `SchedulePayload` schema, so they all read replies the same way.
+    """
+    try:
+        payload = SchedulePayload.model_validate_json(content)
+    except ValidationError as exc:
+        LOGGER.warning("%s: Pydantic validation failed (%s); using lenient fallback", context, exc)
+        return reconstruct_events(_parse_llm_json(content, context=context))
+    return reconstruct_events(payload)
+
+
 def _token_usage(response: Any) -> dict[str, int]:
-    """Prompt and output token counts of a Gemini response, for run cost reporting."""
+    """Token counts of a Gemini response, for run cost reporting.
+
+    Keys follow `pricing.USAGE_KEYS`. Gemini reports thinking tokens apart from
+    the answer (`candidates_token_count`) but bills them as output, and counts
+    cached input inside `prompt_token_count`. Counts Gemini leaves unset on a
+    response that did no thinking or caching are recorded as 0, so a result
+    missing a key predates it being recorded.
+    """
     usage = getattr(response, "usage_metadata", None)
     counts = {
         "prompt_tokens": getattr(usage, "prompt_token_count", None),
         "output_tokens": getattr(usage, "candidates_token_count", None),
     }
-    return {k: v for k, v in counts.items() if isinstance(v, int)}
+    out = {k: v for k, v in counts.items() if isinstance(v, int)}
+    if usage is not None:
+        for key, attr in (
+            ("cached_prompt_tokens", "cached_content_token_count"),
+            ("thinking_tokens", "thoughts_token_count"),
+        ):
+            value = getattr(usage, attr, None)
+            out[key] = value if isinstance(value, int) else 0
+    return out
 
 
 # ── Verification extraction ──────────────────────────────────────────────────

@@ -26,6 +26,7 @@ from pdf_extract.apply import (
     apply_geocode_results,
     apply_verify_results,
 )
+from pdf_extract.bench import DEFAULT_BASELINE, DEFAULT_CHALLENGER, bench
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
 from pdf_extract.classifiers import available_classifiers
 from pdf_extract.compare import compare
@@ -149,11 +150,25 @@ def _cmd_extract(args: argparse.Namespace) -> Result:
         classifier_name=args.classifier,
         parish_name=args.parish,
         concurrency=args.concurrency,
+        cache_only=args.cache_only,
+        limit=args.limit,
     )
 
 
 def _cmd_compare(args: argparse.Namespace) -> Result:
     return compare(args.classifiers, out_path=Path(args.out) if args.out else None)
+
+
+def _cmd_bench(args: argparse.Namespace) -> Result:
+    _ensure_db()
+    return bench(
+        challenger=args.challenger,
+        baseline=args.baseline,
+        parish_name=args.parish,
+        limit=args.limit,
+        concurrency=args.concurrency,
+        out_path=Path(args.out) if args.out else None,
+    )
 
 
 def _cmd_detect_run(args: argparse.Namespace) -> Result:
@@ -346,6 +361,13 @@ def _build_parser() -> argparse.ArgumentParser:
         "--concurrency", type=int, default=5,
         help="Number of parallel classifier calls (default: 5)",
     )
+    extract_parser.add_argument(
+        "--cache-only", action="store_true",
+        help="Serve cached results only; never call the classifier",
+    )
+    extract_parser.add_argument(
+        "--limit", type=int, default=None, help="Stop after this many bulletins",
+    )
     extract_parser.set_defaults(handler=_cmd_extract)
     _add_common_args(extract_parser)
 
@@ -364,6 +386,36 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     compare_parser.set_defaults(handler=_cmd_compare)
     _add_common_args(compare_parser)
+
+    # -- bench (experimental: challenger vs the baseline's cached results) --
+    bench_parser = subparsers.add_parser(
+        "bench",
+        help="Run a challenger classifier on the bulletins the baseline has cached "
+        "results for, then compare agreement, cache hit rates and cost",
+    )
+    bench_parser.add_argument(
+        "--challenger", default=DEFAULT_CHALLENGER, choices=available_classifiers(),
+        help=f"Classifier to pay for (default: {DEFAULT_CHALLENGER})",
+    )
+    bench_parser.add_argument(
+        "--baseline", default=DEFAULT_BASELINE, choices=available_classifiers(),
+        help=f"Classifier served from its cache only (default: {DEFAULT_BASELINE})",
+    )
+    bench_parser.add_argument("--parish", help="Parish name (omit to run for all)")
+    bench_parser.add_argument(
+        "--limit", type=int, default=None,
+        help="Benchmark at most this many bulletins (caps challenger spend)",
+    )
+    bench_parser.add_argument(
+        "--concurrency", type=int, default=5,
+        help="Number of parallel challenger calls (default: 5)",
+    )
+    bench_parser.add_argument(
+        "--out", type=str, default=None,
+        help="Optional path for the JSON report (default: data/runs/compare/compare_<ts>.json)",
+    )
+    bench_parser.set_defaults(handler=_cmd_bench)
+    _add_common_args(bench_parser)
 
     # -- detect --
     detect_parser = subparsers.add_parser("detect", help="Detect bulletin provider for parish websites")

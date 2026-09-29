@@ -16,6 +16,7 @@
     "process": "uv run python -m pdf_extract process",
     "extract": "uv run python -m pdf_extract extract",
     "compare": "uv run python -m pdf_extract compare",
+    "bench": "uv run python -m pdf_extract bench",
     "verify": "uv run python -m pdf_extract verify run",
     "verify:apply": "uv run python -m pdf_extract verify apply",
     "geocode": "uv run python -m pdf_extract geocode run",
