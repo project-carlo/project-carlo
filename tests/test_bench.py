@@ -175,7 +175,7 @@ def test_bench_scores_stacks_against_the_cached_baseline(
 
     # Only the bulletin with a baseline is benchmarked, and Gemini is never called.
     assert result["bulletins"] == 1
-    assert set(result["stacks"]) == {"luna-pymupdf", "luna-pdf"}
+    assert set(result["stacks"]) == {"luna-pymupdf", "luna-pdf-low"}
     assert all(s["served"] == 1 for s in result["stacks"].values())
     assert len(fake_openai.requests) == 2
 
@@ -198,7 +198,7 @@ def test_bench_scores_stacks_against_the_cached_baseline(
     stats = {c["classifier"]: c for c in report["per_classifier"]}
     assert stats["gemini-flash"]["cache_hit_rate"] == 1.0
     assert stats["gemini-flash"]["cost_usd_this_run"] == 0
-    assert stats["luna-pdf"]["cache_hit_rate"] == 0.0
+    assert stats["luna-pdf-low"]["cache_hit_rate"] == 0.0
 
     # The PDF stack sends prompt then PDF, at low detail, with Gemini's schema.
     pdf_request = next(r for r in fake_openai.requests if "text" in r)
@@ -234,3 +234,41 @@ def test_sample_is_deterministic():
     assert bench._sample(urls, 5, seed=0) == bench._sample(list(reversed(urls)), 5, seed=0)
     assert len(bench._sample(urls, 5, seed=0)) == 5
     assert bench._sample(urls, None, seed=0) == set(urls)
+
+
+def test_bench_runs_every_model_and_pdf_detail(pipeline_dir, fake_openai, fake_extractor, monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    _seed_bulletins(monkeypatch)
+
+    result = bench.run_bench(
+        stacks=["pymupdf", "pdf"], models=["gpt-6-luna", "gpt-5.6-luna"],
+        details=["low", "high"], concurrency=2,
+    )
+
+    # The detail only multiplies the PDF stack: text stacks send no PDF.
+    assert set(result["stacks"]) == {
+        "luna-pymupdf", "luna-pdf-low", "luna-pdf-high",
+        "luna5.6-pymupdf", "luna5.6-pdf-low", "luna5.6-pdf-high",
+    }
+    pdf_requests = [r for r in fake_openai.requests if "text" in r]
+    assert sorted(
+        (r["model"], r["input"][0]["content"][1]["detail"]) for r in pdf_requests
+    ) == [
+        ("gpt-5.6-luna", "high"), ("gpt-5.6-luna", "low"),
+        ("gpt-6-luna", "high"), ("gpt-6-luna", "low"),
+    ]
+    assert fake_extractor.calls == 1, "text is extracted once and shared by both models"
+
+    report = json.loads(Path(result["report_json"]).read_text(encoding="utf-8"))
+    rows = {row["classifier"]: row for row in report["vs_baseline"]}
+    # Same 1000 in / 200 out usage, priced per model: $0.20/$1.20 vs $0.10/$0.50.
+    assert rows["luna5.6-pdf-low"]["cost_usd_per_bulletin"] == pytest.approx(0.00044)
+    assert rows["luna-pdf-low"]["cost_usd_per_bulletin"] == pytest.approx(0.0002)
+
+
+def test_stack_names_mark_a_non_default_effort():
+    from pdf_extract.classifiers import stack_name
+
+    assert stack_name("pdf", detail="high") == "luna-pdf-high"
+    assert stack_name("pymupdf", model="gpt-5.6-luna", effort="low") == "luna5.6-pymupdf-low"
+    assert stack_name("pymupdf", model="gpt-x", effort=None) == "gpt-x-pymupdf-default"

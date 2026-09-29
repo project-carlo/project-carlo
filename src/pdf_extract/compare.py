@@ -71,6 +71,7 @@ EVENT_TYPES = ("mass", "confession", "adoration")
 MODEL_PRICES: dict[str, tuple[float, float, float]] = {
     "gemini-3-flash-preview": (0.50, 0.05, 3.00),
     "gpt-6-luna": (0.10, 0.01, 0.50),
+    "gpt-5.6-luna": (0.20, 0.02, 1.20),
     "gpt-5.4-mini": (0.25, 0.025, 2.00),
 }
 

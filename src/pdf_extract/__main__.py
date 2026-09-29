@@ -26,10 +26,16 @@ from pdf_extract.apply import (
     apply_geocode_results,
     apply_verify_results,
 )
-from pdf_extract.bench import DEFAULT_STACKS, STACKS, BenchError, run_bench
+from pdf_extract.bench import (
+    DEFAULT_DETAILS,
+    DEFAULT_MODELS,
+    DEFAULT_STACKS,
+    BenchError,
+    run_bench,
+)
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
-from pdf_extract.classifiers import available_classifiers
-from pdf_extract.classifiers.text_llm import DEFAULT_REASONING_EFFORT, DEFAULT_TEXT_MODEL
+from pdf_extract.classifiers import BENCH_MODELS, PDF_DETAILS, STACKS, available_classifiers
+from pdf_extract.classifiers.text_llm import DEFAULT_REASONING_EFFORT
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
     DEFAULT_KEEP_MONTHLY,
@@ -165,7 +171,8 @@ def _cmd_compare(args: argparse.Namespace) -> Result:
 def _cmd_bench(args: argparse.Namespace) -> Result:
     return run_bench(
         stacks=args.stacks,
-        model=args.model,
+        models=args.models,
+        details=args.detail,
         effort=None if args.effort == "default" else args.effort,
         limit=args.limit,
         seed=args.seed,
@@ -399,8 +406,14 @@ def _build_parser() -> argparse.ArgumentParser:
         help=f"Stacks to run (default: {' '.join(DEFAULT_STACKS)})",
     )
     bench_parser.add_argument(
-        "--model", default=DEFAULT_TEXT_MODEL,
-        help=f"OpenAI model every stack uses (default: {DEFAULT_TEXT_MODEL})",
+        "--models", "--model", nargs="+", default=list(DEFAULT_MODELS),
+        help="OpenAI models to run every stack with, e.g. "
+        f"{' '.join(BENCH_MODELS)} (default: {' '.join(DEFAULT_MODELS)})",
+    )
+    bench_parser.add_argument(
+        "--detail", nargs="+", choices=list(PDF_DETAILS), default=list(DEFAULT_DETAILS),
+        help="PDF detail levels for the pdf stack, one run each "
+        f"(default: {' '.join(DEFAULT_DETAILS)})",
     )
     bench_parser.add_argument(
         "--effort", default=DEFAULT_REASONING_EFFORT,

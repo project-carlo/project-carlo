@@ -386,7 +386,7 @@ heading they belong to, and tags blocks with their position on the page
 | `pymupdf` | `luna-pymupdf` | PyMuPDF text layer in column-aware reading order; RapidOCR only where there is no usable text (images, outlined text, broken fonts). Under a second per bulletin, plus a few seconds per OCR region. |
 | `docling` | `luna-docling` | Docling layout model, rows rebuilt from text positions, RapidOCR on the same kinds of regions. Tens of seconds per bulletin. |
 | `ocr` | `luna-ocr` | Every page rendered and read by RapidOCR, ignoring the text layer, then rebuilt into columns and rows. The slowest: about 5 s per page. |
-| `pdf` | `luna-pdf` | none: the model reads the PDF itself (the control), sent like Gemini's request: the same prompt, then the PDF at `detail: low`, with the exact JSON schema Gemini gets |
+| `pdf` | `luna-pdf-low`, `luna-pdf-high` | none: the model reads the PDF itself (the control), sent like Gemini's request: the same prompt, then the PDF at the chosen `detail`, with the exact JSON schema Gemini gets |
 
 ```bash
 # .env: OPENAI_API_KEY plus the R2 read keys you already use for data:pull
@@ -394,8 +394,16 @@ pnpm bench                           # every stack, every bulletin with a baseli
 pnpm bench --limit 15                # a fixed random sample of 15 bulletins
 pnpm bench --stacks pymupdf pdf      # some stacks only
 pnpm bench --effort low              # reasoning effort (none … max)
-pnpm bench --model gpt-6-sol         # another OpenAI model for every stack
+pnpm bench --stacks pdf --detail low high                    # PDF at low vs high detail
+pnpm bench --models gpt-6-luna gpt-5.6-luna                  # every stack on both models
+pnpm bench --stacks pdf --models gpt-6-luna gpt-5.6-luna --detail low high  # all four
 ```
+
+Run names start with the model: `luna-` for `gpt-6-luna`, `luna5.6-` for
+`gpt-5.6-luna`, and the model id for any other. The `pdf` stack's name ends
+with its detail, and a non-default effort is appended (`luna-pymupdf-low`).
+Every configuration is its own row in the report, priced at its own model's
+rates. `pnpm extract --classifier` takes the same names for both Luna models.
 
 The baseline is `gemini-flash`, served from the extractions the weekly job
 already cached in R2, so no Gemini key is needed and nothing is re-extracted.

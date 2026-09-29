@@ -7,9 +7,10 @@ One command (`pnpm bench`) runs the whole comparison:
 2. Serves the Gemini baseline from the extraction cache the weekly job already
    paid for (no Gemini key needed); only bulletins with a cached baseline are
    benchmarked, unless `--fill-baseline` is given with a GEMINI_API_KEY.
-3. Runs each stack on those bulletins: a text extractor (PyMuPDF with an OCR
-   fallback, Docling, or full-page OCR) followed by an OpenAI model reading the
-   text, plus the same model reading the PDF itself as a control.
+3. Runs each stack on those bulletins, for each OpenAI model under test: a
+   text extractor (PyMuPDF with an OCR fallback, Docling, or full-page OCR)
+   followed by the model reading the text, plus the model reading the PDF
+   itself as a control, once per PDF `detail` under test.
 4. Scores every stack against the baseline (`compare --baseline`) and writes
    the report under data/runs/bench/.
 
@@ -26,13 +27,9 @@ from datetime import datetime
 from typing import Any
 
 from pdf_extract.blobstore import get_store
-from pdf_extract.classifiers import Classifier
-from pdf_extract.classifiers.openai_gpt import OpenAIClassifier
-from pdf_extract.classifiers.text_llm import (
-    DEFAULT_REASONING_EFFORT,
-    DEFAULT_TEXT_MODEL,
-    TextLLMClassifier,
-)
+from pdf_extract.classifiers import STACKS, Classifier, stack_classifier
+from pdf_extract.classifiers.openai_gpt import FileDetail
+from pdf_extract.classifiers.text_llm import DEFAULT_REASONING_EFFORT, DEFAULT_TEXT_MODEL
 from pdf_extract.compare import compare, load_manifest
 from pdf_extract.datasync import pull
 from pdf_extract.db import ensure_db
@@ -45,39 +42,27 @@ LOGGER = logging.getLogger(__name__)
 BENCH_DIR = RUNS_DIR / "bench"
 BASELINE = "gemini-flash"
 
-# Stack name -> text extractor (None: the model reads the PDF directly).
-STACKS: dict[str, str | None] = {
-    "pymupdf": "pymupdf-layout",
-    "docling": "docling",
-    "ocr": "ocr-layout",
-    "pdf": None,
-}
 DEFAULT_STACKS = ("pymupdf", "docling", "ocr", "pdf")
-# The `pdf` stack sends the bulletin at low detail: the cheap setting under test.
-PDF_DETAIL = "low"
+DEFAULT_MODELS = (DEFAULT_TEXT_MODEL,)
+# The `pdf` stack sends the bulletin at low detail unless asked for more.
+DEFAULT_DETAILS: tuple[FileDetail, ...] = ("low",)
 
 
 class BenchError(RuntimeError):
     """The benchmark cannot run as configured (missing key, data or baseline)."""
 
 
-def _model_prefix(model: str) -> str:
-    return "luna" if model == DEFAULT_TEXT_MODEL else model
-
-
-def build_stack_classifier(stack: str, *, model: str, effort: str | None) -> Classifier:
-    """The classifier for one stack; its name is the run directory under data/runs/."""
-    if stack not in STACKS:
-        raise BenchError(f"Unknown stack {stack!r}. Available: {', '.join(STACKS)}")
-    name = f"{_model_prefix(model)}-{stack}"
-    if effort and effort != DEFAULT_REASONING_EFFORT:
-        name += f"-{effort}"
-    extractor = STACKS[stack]
-    if extractor is None:
-        return OpenAIClassifier(
-            model=model, name=name, reasoning_effort=effort, file_detail=PDF_DETAIL,
-        )
-    return TextLLMClassifier(extractor=extractor, name=name, model=model, reasoning_effort=effort)
+def _configurations(
+    stacks: list[str], models: list[str], details: list[FileDetail],
+) -> list[tuple[str, str, FileDetail]]:
+    """(stack, model, detail) for every run: each model × stack, and the `pdf`
+    stack once per detail (the text stacks send no PDF, so detail is moot)."""
+    return [
+        (stack, model, detail)
+        for model in models
+        for stack in stacks
+        for detail in (details if STACKS[stack] is None else details[:1])
+    ]
 
 
 def _sample(urls: list[str], limit: int | None, seed: int) -> set[str]:
@@ -91,7 +76,8 @@ def _sample(urls: list[str], limit: int | None, seed: int) -> set[str]:
 def run_bench(
     *,
     stacks: list[str] | None = None,
-    model: str = DEFAULT_TEXT_MODEL,
+    models: list[str] | None = None,
+    details: list[FileDetail] | None = None,
     effort: str | None = DEFAULT_REASONING_EFFORT,
     limit: int | None = None,
     seed: int = 0,
@@ -101,6 +87,8 @@ def run_bench(
     refresh_data: bool = False,
 ) -> dict[str, Any]:
     stacks = list(stacks or DEFAULT_STACKS)
+    models = list(dict.fromkeys(models or DEFAULT_MODELS))
+    details = list(dict.fromkeys(details or DEFAULT_DETAILS))
     for stack in stacks:
         if stack not in STACKS:
             raise BenchError(f"Unknown stack {stack!r}. Available: {', '.join(STACKS)}")
@@ -144,12 +132,15 @@ def run_bench(
     names: list[str] = []
     runs: dict[str, Any] = {}
     skipped: dict[str, str] = {}
-    for stack in stacks:
+    for stack, model, detail in _configurations(stacks, models, details):
+        label = f"{stack} ({model}{', ' + detail if STACKS[stack] is None else ''})"
         try:
-            classifier = build_stack_classifier(stack, model=model, effort=effort)
+            classifier: Classifier = stack_classifier(
+                stack, model=model, detail=detail, effort=effort,
+            )
         except ImportError as exc:
-            LOGGER.error("Skipping stack %s: %s", stack, exc)
-            skipped[stack] = str(exc)
+            LOGGER.error("Skipping stack %s: %s", label, exc)
+            skipped[label] = str(exc)
             continue
         LOGGER.info("Running stack %s (%s)", classifier.name, classifier.version)
         summary = run_extract(classifier=classifier, source_urls=sample, concurrency=concurrency)
@@ -157,7 +148,7 @@ def run_bench(
         if summary["bulletins_served"]:
             names.append(classifier.name)
         else:
-            skipped[stack] = f"no bulletins extracted ({len(summary['errors'])} errors)"
+            skipped[label] = f"no bulletins extracted ({len(summary['errors'])} errors)"
 
     if not names:
         raise BenchError(f"No stack produced results: {skipped}")

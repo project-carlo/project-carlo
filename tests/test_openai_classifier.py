@@ -96,7 +96,7 @@ def test_luna_pdf_sends_the_pdf_at_low_detail(monkeypatch):
 
     fake = _install_fake(monkeypatch, {})
 
-    get_classifier("luna-pdf").extract(b"%PDF-1.4 x", churches=[], today=date(2026, 5, 4))
+    get_classifier("luna-pdf-low").extract(b"%PDF-1.4 x", churches=[], today=date(2026, 5, 4))
 
     assert fake.last_kwargs["model"] == "gpt-6-luna"
     assert fake.last_kwargs["reasoning"] == {"effort": "medium"}
@@ -155,9 +155,20 @@ def test_refusal_or_empty_output_returns_empty_result(monkeypatch):
 def test_classifiers_are_registered():
     from pdf_extract.classifiers import REGISTRY, get_classifier
 
-    assert {"gpt-5.4-mini", "luna-pdf"} <= set(REGISTRY)
     assert get_classifier("gpt-5.4-mini").name == "gpt-5.4-mini"
-    assert get_classifier("luna-pdf").version.startswith("gpt-6-luna+effort-medium+detail-low+")
+    # Both Luna models, and the PDF control at both detail levels.
+    for name, version in (
+        ("luna-pdf-low", "gpt-6-luna+effort-medium+detail-low+"),
+        ("luna-pdf-high", "gpt-6-luna+effort-medium+detail-high+"),
+        ("luna5.6-pdf-low", "gpt-5.6-luna+effort-medium+detail-low+"),
+        ("luna5.6-pdf-high", "gpt-5.6-luna+effort-medium+detail-high+"),
+    ):
+        assert name in REGISTRY
+        classifier = get_classifier(name)
+        assert classifier.name == name
+        assert classifier.version.startswith(version)
+    # Text stacks keep their names (and so their cached results) for gpt-6-luna.
+    assert {"luna-pymupdf", "luna5.6-pymupdf"} <= set(REGISTRY)
 
 
 def test_version_tracks_the_shared_prompt_and_settings():
