@@ -309,6 +309,9 @@ def _resolves(host: str) -> bool:
 def probe_url(url: str) -> dict[str, Any]:
     """What is at a parish website now, and which bulletin does it embed?"""
     out: dict[str, Any] = {"url": url}
+    if "://" not in url and "." in url.split("/", 1)[0]:
+        url = f"https://{url}"  # a bare domain, as parish directories print them
+        out["url_tried"] = url
     host = _host(url)
     if not host:
         return {**out, "verdict": "BAD-URL"}

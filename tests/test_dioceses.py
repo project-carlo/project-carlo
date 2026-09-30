@@ -464,6 +464,15 @@ def test_recheck_reports_a_bot_check_page_as_unreachable(monkeypatch: pytest.Mon
     assert len(calls) == 2  # retried once before giving up
 
 
+def test_probe_url_takes_a_bare_domain(monkeypatch: pytest.MonkeyPatch) -> None:
+    page = b"<html><title>St. Ann Parish</title>Mass times, bulletin</html>"
+    monkeypatch.setattr(web, "_resolves", lambda host: True)
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: web.Response(url, 200, url, "text/html", page))
+    out = web.probe_url("stann.org")
+    assert out["url_tried"] == "https://stann.org" and out["verdict"] == "ok"
+    assert web.probe_url("not a url")["verdict"] == "BAD-URL"
+
+
 def test_quote_found_tolerates_layout_and_elisions() -> None:
     text = "Mass Schedule\n  Weekend: Sat. 5:10 pm\n   Sun. 7:30 am, 9:45 am\nSt. Bernard’s"
     assert web.quote_found("Weekend: Sat. 5:10 pm … Sun. 7:30 am", text)
