@@ -1,6 +1,7 @@
 ---
 name: St. Raymond
 reason: closed
+last_mass: '2019-01'
 line1: 8828 State Hwy. 56
 city: Raymondville
 state: NY
@@ -35,7 +36,7 @@ revisit_after: '2027-01-31'
 
 **St. Raymond, 8828 State Hwy. 56, Raymondville: no regular Mass since early 2019.** The Watertown Daily Times of 27 January 2019 ("Final Masses celebrated at two local churches", subhead "Parishes will technically remain open, but will not hold regular services") reports that St. Lawrence (North Lawrence) and St. Raymond (Raymondville) "have celebrated their final regular Masses" and entered oratory status: closed as a regular worship site, available for weddings and funerals. In 2015 the Church of the Visitation and St. Raymond's had consolidated into one parish, "The Parish of the Visitation and St. Raymond" (same article), which is why "St. Raymond" is still in the parish's name and in the Norfolk directory entry, although the parish's church is the Church of the Visitation in Norfolk.
 
-Current sources agree: the parish's Mass Times (read 2026-09-30) list only Norfolk, Norwood and Brasher Falls, and the 2026 bulletins never name a Mass in Raymondville. GCatholic (updated 2025-12-21) and its phone number (the Norfolk office) still list the church, and the diocese's directory has no Raymondville entry. `last_mass` is not set: the article gives no date and none was found. `closed` is used because regular Masses ended; whether the building is still diocesan property was not checked.
+Current sources agree: the parish's Mass Times (read 2026-09-30) list only Norfolk, Norwood and Brasher Falls, and the 2026 bulletins never name a Mass in Raymondville. GCatholic (updated 2025-12-21) and its phone number (the Norfolk office) still list the church, and the diocese's directory has no Raymondville entry. `last_mass` is January 2019, the month of the article reporting the final regular Masses as already celebrated; no closer date was found. `closed` is used because regular Masses ended; whether the building is still diocesan property was not checked.
 
 ## What would change this
 

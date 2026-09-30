@@ -1,6 +1,7 @@
 ---
 name: St. Mary
 reason: closed
+last_mass: '2007'
 line1: 753 County Route 41
 city: Lake Titus
 state: NY
@@ -40,7 +41,8 @@ St. Mary's, Lake Titus (GCatholic: 753 County Route 41) was a mission of St. Hel
 1925. The parish website's history says "the last regularly scheduled Masses were offered in St. Joseph's
 and St. Mary's in 2007", and no 2026 bulletin of St. André Bessette Parish has a Mass there (17 issues from 7
 June to 27 September 2026, no "Titus" in any). "Regularly scheduled" leaves room for an occasional Mass; no
-source says the building was closed, sold or relegated, so `last_mass` is left blank. I filed it as `closed`
+source says the building was closed, sold or relegated. `last_mass` is the year of the last regularly
+scheduled Mass, 2007. I filed it as `closed`
 rather than `open` because the parish itself lists only Notre Dame and St. Helen's as its churches and
 its 2026 schedules are complete for the weekend. GCatholic's address, 753 County Route 41, is two numbers from
 St. Helen's (755 County Highway 41) and unlikely to be the lake chapel's; the real location was not found.

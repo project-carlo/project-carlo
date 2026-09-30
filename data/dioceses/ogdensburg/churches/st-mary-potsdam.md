@@ -49,7 +49,7 @@ evidence:
 
 Yes, weekly. The 27 September 2026 bulletin (page 2) lists Masses "(Potsdam)": Sunday 9:00 am Latin
 Mass and 11:00 am, Tuesday 12:10 pm, Thursday 5:15 pm, Friday 8:00 am. The parish site says the same
-and adds Saturday-free weekdays "Check bulletin for occasional changes".
+and says "Check bulletin for occasional changes".
 
 ## Name and address
 

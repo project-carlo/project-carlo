@@ -1,6 +1,7 @@
 ---
 name: St. Lawrence
 reason: closed
+last_mass: '2019-01'
 line1: 47 Church St.
 city: North Lawrence
 state: NY
@@ -31,7 +32,7 @@ parish: parishes-of-norfolk-norwood-brasher-falls
 
 ## Why it is excluded
 
-**St. Lawrence, 47 Church St., North Lawrence: closed, sold, now a fitness center.** The Watertown Daily Times of 23 August 2026 calls 47 Church St. "the former St. Lawrence Catholic Church", says the parish merged with St. Patrick's, Brasher Falls in 2018, "leaving the brick church to be sold by the Diocese of Ogdensburg", that it was sold in 2022 and again since, and that the new owners were to open The Vault (indoor fitness) in September 2026. The same paper had reported on 27 January 2019 that the church had celebrated its final regular Mass (subhead "Parishes will technically remain open, but will not hold regular services"). The current parish Mass Times list no North Lawrence Mass. The `last_mass` date is not set: only "before 27 January 2019" is known.
+**St. Lawrence, 47 Church St., North Lawrence: closed, sold, now a fitness center.** The Watertown Daily Times of 23 August 2026 calls 47 Church St. "the former St. Lawrence Catholic Church", says the parish merged with St. Patrick's, Brasher Falls in 2018, "leaving the brick church to be sold by the Diocese of Ogdensburg", that it was sold in 2022 and again since, and that the new owners were to open The Vault (indoor fitness) in September 2026. The same paper had reported on 27 January 2019 that the church had celebrated its final regular Mass (subhead "Parishes will technically remain open, but will not hold regular services"). The current parish Mass Times list no North Lawrence Mass. `last_mass` is January 2019, the month of the article reporting the final regular Mass as already celebrated; no closer date is known.
 
 Beware of stale listings: GCatholic (updated 2025-12-21) still lists it as a church, and Discover Mass still has a "St. Lawrence, North Lawrence" page with "Saturday 4:00pm, Wednesday 8:30am, Thursday 8:30am" and a COVID-era notice, which is years out of date. The parish name survives at St. Patrick's, Brasher Falls (its hall has a "St. Lawrence Room"). Not to be confused with `st-lawrence-louisville` (Massena), which is a different church.
 

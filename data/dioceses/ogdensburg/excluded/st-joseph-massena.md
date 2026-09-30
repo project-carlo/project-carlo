@@ -1,6 +1,7 @@
 ---
 name: St. Joseph's
 reason: closed
+last_mass: '2017'
 line1: 22 Bayley Rd.
 city: Massena
 state: NY
@@ -33,7 +34,7 @@ parish: st-peters-parish-massena
 
 ## Why it is excluded
 
-**St. Joseph's, 22 Bayley Rd., Massena: no regular Mass since 2017.** The Watertown Daily Times of 2 September 2026 says "One of Massena's churches, St. Joseph's, had already been changed to oratory status following a final Mass in 2017. In oratory status, the building has been closed and does not have regular Masses scheduled. But it is available for special occasions such as weddings and, funerals." The current St. Peter's Parish bulletin (27 September 2026, container 06/0114) and the parish's Mass Times page schedule no Mass there, and the diocesan directory does not list it as a worship site, but the parish website footer still prints its address and GCatholic (updated 2025-12-21) still lists it as a church affiliated with St. Mary's. It is an oratory in the diocese's sense: closed, used for weddings and funerals, so no public Mass. `last_mass` is not set because the article gives only the year, 2017; nothing was found that dates it more closely (a search of the North Country Catholic turned up nothing).
+**St. Joseph's, 22 Bayley Rd., Massena: no regular Mass since 2017.** The Watertown Daily Times of 2 September 2026 says "One of Massena's churches, St. Joseph's, had already been changed to oratory status following a final Mass in 2017. In oratory status, the building has been closed and does not have regular Masses scheduled. But it is available for special occasions such as weddings and, funerals." The current St. Peter's Parish bulletin (27 September 2026, container 06/0114) and the parish's Mass Times page schedule no Mass there, and the diocesan directory does not list it as a worship site, but the parish website footer still prints its address and GCatholic (updated 2025-12-21) still lists it as a church affiliated with St. Mary's. It is an oratory in the diocese's sense: closed, used for weddings and funerals, so no public Mass. `last_mass` is the year alone, 2017, because the article gives no closer date; nothing was found that dates it more closely (a search of the North Country Catholic turned up nothing).
 
 The reason is `closed` (no Mass any more) rather than `no-public-mass`: it was a parish church whose Masses stopped, not a private chapel.
 
