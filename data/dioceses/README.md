@@ -381,7 +381,7 @@ pnpm diocese probe url <url>...
 pnpm diocese probe sites <d> [--all]
 pnpm diocese probe po <org slug | LPi id>... [--issues N]
 pnpm diocese probe container <a/b> [--weeks N --from date --step N --all --pages N]
-pnpm diocese probe pdf <url> [--pages N] [--grep text ...]
+pnpm diocese probe pdf <url> [--pages N] [--chars N] [--grep text] [--grep text2 ...]
 pnpm diocese recheck <d> [slug ...] [--kind k] [--all]
 
 pnpm diocese export  <d> --out-dir DIR

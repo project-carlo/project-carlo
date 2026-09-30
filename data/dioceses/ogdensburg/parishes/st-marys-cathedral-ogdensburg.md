@@ -12,7 +12,7 @@ evidence:
   note: Page 1 of the 27 September 2026 issue (container 06/0092), weekend and weekday Mass block for
     both churches, with the masthead lines "September 27, 2026 / 401 Hamilton Street / 119 Ford Avenue"
     for the cathedral and Notre Dame and the parish office "125 Ford Avenue, Ogdensburg, NY 13669".
-- url: https://container.parishesonline.com/bulletins/06/0092/20260927B.pdf
+- url: https://container.parishesonline.com/bulletins/06/0092/20261004B.pdf
   seen: 2026-09-30
   quote: Due to the discontinuation of the Publishers software
   note: 'Page 3 of the 4 October 2026 issue (https://container.parishesonline.com/bulletins/06/0092/20261004B.pdf):
