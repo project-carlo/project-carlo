@@ -187,3 +187,17 @@ Of the 36 parish rows, 14 are ParishesOnline, 11 eCatholic and 11 `other`.
     Holy Ghost Chapel and the Tabernacle.
   - **Audit:** one group spans rows (Southern Adirondack), with separate bulletins recorded.
   - **Promoted.**
+  - **Fetch-check:** a live `fetch:check` of the 36 rows first found 24 ok, 8 blocked
+    (eCatholic sites behind Cloudflare), 4 failing and 3 picking the wrong PDF. The resolver
+    fixes cover these cases:
+    - A website that is itself the PDF.
+    - Ellenburg's dated "Download File" links.
+    - Lake Placid's church-bulletin.org listing.
+    - Weebly's numbered folders, which were read as a date.
+    - River Catholics' "20026" typo.
+    - Weekly-overwritten PDFs, which `fetch` now downloads again.
+
+    After them, every non-eCatholic row resolves to its current bulletin. Seven sites are
+    replay fixtures. Five eCatholic sites stayed Cloudflare-blocked through three sandbox
+    runs: Chateaugay, Oswegatchie, Our Lady of Grace, Champlain and Rouses Point. For each,
+    `issues.py` confirmed a current issue at `files.ecatholic.com/<id>/bulletins/`.
