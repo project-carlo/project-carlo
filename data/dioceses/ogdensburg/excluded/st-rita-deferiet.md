@@ -1,6 +1,7 @@
 ---
 name: St. Rita
-reason: no-public-mass
+reason: closed
+last_mass: '2019-06'
 parish: river-catholics-evans-mills
 line1: 31 Riverside Dr.
 city: Deferiet
@@ -41,10 +42,12 @@ regular basis", such as a funeral or a wedding. The Wikipedia list of the dioces
 still shows it as "yoked with" St. Paul's. The current bulletin of St. Paul's parish (the
 River Catholics bulletin of 27 September 2026, `river-catholics-evans-mills`) does not
 mention Deferiet, and its Mass list has only St. Mary's (Evans Mills) and St. Paul's. So the
-building is not a place of public Mass now; nothing says it was sold or demolished, so this is
-`no-public-mass`, not `closed`. GCatholic (18271) still lists it as a church with a phone
-number; the diocese directory does not list it. The exact date of the last regular Sunday
-Mass was not found (end of June 2019).
+building is not a place of public Mass now. It is filed as `closed`, the reason this diocese's
+records use for every oratory whose regular Masses ended (St. Joseph, Massena; St. Raymond,
+Raymondville): `closed` means no Mass any more, not that the building was sold, and nothing
+says this one was sold or demolished. GCatholic (18271) still lists it as a church with a phone
+number; the diocese directory does not list it. `last_mass` is June 2019, from "at the end of June"; the exact
+Sunday was not found.
 
 The GCatholic entry is in Region H's list, but the parish that would hold it belongs to
 another region (River Catholics, Black River).

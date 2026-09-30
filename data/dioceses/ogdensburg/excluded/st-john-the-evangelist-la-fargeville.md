@@ -1,6 +1,6 @@
 ---
 name: St. John the Evangelist
-reason: no-public-mass
+reason: closed
 parish: st-marys-clayton
 line1: 35923 NYS Route 180
 city: La Fargeville
@@ -44,8 +44,11 @@ an oratory, a space set aside for worship that does not see a regular celebratio
 The 27 September 2026 bulletin of the parish (ParishesOnline 06/0098) lists Masses at
 Clayton, Alexandria Bay, Redwood and Thousand Island Park and does not mention La Fargeville
 in any of its six pages. So the building is standing and belongs to the parish, but there is
-no public Mass, which is why the reason is `no-public-mass` rather than `closed` (no source
-says it closed or was sold). GCatholic lists it (18260) with a phone number that is
+no public Mass. It is filed as `closed`, the reason this diocese's records use for every
+oratory whose regular Masses ended (St. Joseph, Massena; St. Rita, Deferiet): it means no Mass
+any more, not that the building was sold, and no source says it was. `last_mass` is blank: the
+2021 article announces the change without dating the last Mass, and the page's text beyond the
+headline could not be read without a browser. GCatholic lists it (18260) with a phone number that is
 Clayton's; the diocese directory does not list it at all.
 
 ## What would change this
