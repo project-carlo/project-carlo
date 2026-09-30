@@ -436,6 +436,21 @@ def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
     assert web.pdf_text("https://example.org/x.pdf")["error"].startswith("could not read")
 
 
+def test_recheck_reports_a_bot_check_page_as_unreachable(monkeypatch: pytest.MonkeyPatch) -> None:
+    loader = b"<html><head><title>One moment, please...</title></head><body>Loader</body></html>"
+    calls = []
+
+    def fake_fetch(url: str, **_: object) -> web.Response:
+        calls.append(url)
+        return web.Response(url, 200, url, "text/html", loader)
+
+    monkeypatch.setattr(web, "fetch", fake_fetch)
+    monkeypatch.setattr(web, "BOT_CHECK_RETRY_SECONDS", 0)
+    out = web.recheck_evidence([("church x", {"url": "https://gcatholic.org/c/1", "quote": "17 Grove St."})])
+    assert out[0]["result"] == "unreachable"
+    assert len(calls) == 2  # retried once before giving up
+
+
 def test_quote_found_tolerates_layout_and_elisions() -> None:
     text = "Mass Schedule\n  Weekend: Sat. 5:10 pm\n   Sun. 7:30 am, 9:45 am\nSt. Bernard’s"
     assert web.quote_found("Weekend: Sat. 5:10 pm … Sun. 7:30 am", text)
