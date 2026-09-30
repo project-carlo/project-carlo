@@ -15,18 +15,18 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. John Bosco'',
     57 Rennie St., Malone, NY, 12953; kind: Church'
 - url: http://www.lhcmalone.com/
-  seen: &id001 2026-09-30
+  seen: 2026-09-30
   quote: Join us Sundays at 10:00 AM 57 Rennie St Malone, NY
   note: Living Hope Church (a non-denominational congregation) now meets at 57 Rennie St., Malone, which
     is GCatholic's address for St. John Bosco.
 - url: http://standres.org/
-  seen: *id001
+  seen: 2026-09-30
   quote: A third parish was begun within the village of Malone as St. John Bosco Church was incorporated
     on June 23, 1935
   note: 'St. André Bessette parish website, History: St. John Bosco was one of the four Malone parishes
     united in 2014; the parish now names only Notre Dame and St. Helen''s as its churches.'
 - url: https://www.mymalonetelegram.com/top_stories/st-john-bosco-to-become-new-home-of-living-hope-church-after-building-s-sale/article_d327ae61-e516-5901-a80f-730a2f0b5e1f.html
-  seen: *id001
+  seen: 2026-09-30
   note: 'Malone Telegram (now nny360.com) article "St. John Bosco to become new home of Living Hope Church
     after building’s sale". I saw it only in a search-engine summary: the church closed "at 9 a.m. on
     Wednesday, with the removal of the Blessed Sacrament", the bishop''s decree approving closure and
@@ -34,7 +34,7 @@ evidence:
     approval. The page itself returns 404 to curl and to the browser, so these words are not quoted and
     `recheck` cannot check them. The year and day of the closure are not known.'
 - url: https://container.parishesonline.com/bulletins/06/0038/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-30
   quote: Notre Dame and St. Helen’s Churches
   note: '27 September 2026 masthead of St. André Bessette Parish: two churches, not St. John Bosco. No
     bulletin from 7 June to 27 September 2026 has a Mass at St. John Bosco.'

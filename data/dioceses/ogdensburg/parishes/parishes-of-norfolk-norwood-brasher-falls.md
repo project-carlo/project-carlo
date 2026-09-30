@@ -30,11 +30,11 @@ evidence:
 - {url: 'https://norfolknorwoodraymondville.org/bulletins', seen: '2026-09-30', quote: 'September 27,
     2026', note: 'Bulletin archive page (browser): weekly PDFs at files.ecatholic.com/15674/bulletins/YYYYMMDD.pdf
     back to January 2026 and earlier years; the newest is 27 September 2026 (issues.py ecatholic ecatholic:15674
-    finds all Sundays back to March 2026).'}
+    finds all Sundays back to March 2026). Site behind Cloudflare, so recheck answers 403.'}
 - {url: 'https://norfolknorwoodraymondville.org/pvsr', seen: '2026-09-30', quote: comprised of three Catholic
     Parishes (St. Andrew's / Visitation and St. Raymond / St. Patrick's), note: 'About Us: one pastor
     serves the three parishes, "serving the communities of Norwood, Norfolk, Raymondville, Stockholm,
-    Winthrop, Brasher Falls, North Lawrence and Lawrenceville".'}
+    Winthrop, Brasher Falls, North Lawrence and Lawrenceville". (Site behind Cloudflare; read in a browser.)'}
 - {url: 'https://www.rcdony.org/parish/norfolk', seen: '2026-09-30', quote: 'Parish of the Visitation
     and St. Raymond Church of the Visitation 3 Morris Street Norfolk, New York 13667', note: 'Diocesan
     directory entry for Norfolk; the Norwood and Brasher Falls entries (rcdony.org/parish/norwood, /brasher-falls)

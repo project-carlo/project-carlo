@@ -15,14 +15,14 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Bridget'',
     Trout River Rd., Trout River, NY, 12926; kind: Oratory'
 - url: https://files.ecatholic.com/18168/documents/2018/2/Pastoral%20Plan%20form%20fillable%20Final%204th%206.pdf
-  seen: &id001 2026-09-30
+  seen: 2026-09-30
   quote: St. Bridget’s- former oratory, currently up for sale
   note: 'The Catholic Communities of Chateaugay, Constable and Fort Covington''s pastoral plan (a 9-page
     form, memo from Rev. Thomas Kornmeyer, pastor, dated 14 February 2018; linked from ccfcatholics.com/pastoral-plan),
     page 1: "St. Bridget’s- former oratory, currently up for sale"; the plan''s closing list of open churches
     (St. Patrick, St. Mary''s of the Fort, St. Francis of Assisi) does not include it.'
 - url: https://gcatholic.org/churches/usa-02/18265
-  seen: *id001
+  seen: 2026-09-30
   note: GCatholic lists it as "Oratory of St. Bridget", Trout River Rd., Trout River, with no coordinates
     and no Plus Code.
 parish: catholic-communities-chateaugay-constable-fort-covington

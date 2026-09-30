@@ -12,7 +12,7 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''Our Lady of Fatima'',
     4328 State Route 37, Malone, NY, 12953; kind: Church'
 - url: https://files.ecatholic.com/18168/documents/2018/2/Pastoral%20Plan%20form%20fillable%20Final%204th%206.pdf
-  seen: &id001 2026-09-30
+  seen: 2026-09-30
   quote: Our Lady of Fatima - worship site
   note: 'The Catholic Communities of Chateaugay, Constable and Fort Covington''s pastoral plan (a 9-page
     form, memo from Rev. Thomas Kornmeyer, pastor, dated 14 February 2018; linked from ccfcatholics.com/pastoral-plan),
@@ -20,17 +20,17 @@ evidence:
     & Trout River; the plan''s "three churches open" list (Chateaugay, Fort Covington, Constable) leaves
     it out.'
 - url: https://ccfcatholics.com/mass-times
-  seen: *id001
+  seen: 2026-09-30
   quote: 8:30AM at St. Francis of Assisi, Constable
   note: 'Parish Mass Times page (browser), read 2026-09-30: the only churches with Mass are St. Patrick''s
     (Chateaugay), St. Francis of Assisi (Constable) and St. Mary''s of the Fort (Fort Covington).'
 - url: https://www.openstreetmap.org/node/357553852
-  seen: *id001
-  note: 'OpenStreetMap node 357553852, "Church of Our Lady of Fatima, State Highway 37, Westville Center,
-    Town of Westville, Franklin County" at 44.91866, -74.36824, about 70 m from GCatholic's Plus Code point (44.91869, -74.36731): a church building exists there; OSM does not say whether it is
-    in use.'
+  seen: 2026-09-30
+  note: OpenStreetMap node 357553852, "Church of Our Lady of Fatima, State Highway 37, Westville Center,
+    Town of Westville, Franklin County" at 44.91866, -74.36824, about 70 m from GCatholic's Plus Code
+    point (44.91869, -74.36731); a church building exists there; OSM does not say whether it is in use.
 - url: https://gcatholic.org/churches/usa-02/18264
-  seen: *id001
+  seen: 2026-09-30
   note: GCatholic (18264) lists "Church of Our Lady of Fatima", 4328 State Route 37, Malone 12953, with
     a Plus Code but no note on its status. Its town is Malone because of the mailing address; the place
     is Westville.

@@ -42,8 +42,8 @@ evidence:
 - url: https://www.openstreetmap.org/node/357649525
   seen: 2026-09-30
   note: OpenStreetMap node 357649525, "Saint Patrick's Roman Catholic Church, West Main Street, Village
-    of Chateaugay" at 44.9259, -74.0814, which is within about 40 m of GCatholic's Plus Code point (no house
-    number in OSM).
+    of Chateaugay" at 44.9259, -74.0814, which is within about 40 m of GCatholic's Plus Code point (no
+    house number in OSM).
 ---
 
 ## Holds Mass

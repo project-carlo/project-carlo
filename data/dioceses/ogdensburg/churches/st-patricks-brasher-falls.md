@@ -29,7 +29,7 @@ evidence:
     29 Sept and Thursday 1 Oct 8:30am ST. PATRICK''S.'}
 - {url: 'https://norfolknorwoodraymondville.org/contact-us', seen: '2026-09-30', quote: '834 State Highway
     11C, Brasher Falls, NY 13613', note: 'Parish site contact page: "St. Patrick''s Parish Office ...
-    In the former Rectory to the right-rear of the Church".'}
+    In the former Rectory to the right-rear of the Church". (Site behind Cloudflare; read in a browser.)'}
 - {url: 'https://www.rcdony.org/parish/brasher-falls', seen: '2026-09-30', quote: 'St. Patrick''s Church
     834 State Highway 11C Brasher Falls, New York 13613', note: Diocesan directory entry.}
 ---

@@ -15,19 +15,19 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Mary'', 753
     County Route 41, Lake Titus, NY, 12953; kind: Church'
 - url: http://standres.org/
-  seen: &id001 2026-09-30
+  seen: 2026-09-30
   quote: the last regularly scheduled Masses were offered in St. Joseph’s and St. Mary’s in 2007
   note: 'St. André Bessette parish website, History: "St. Helen’s would go on to establish mission churches
     in the surrounding communities of Mountain View (St. Elizabeth’s, 1907), Owls Head (St. Joseph’s,
     1923), and Lake Titus (St. Mary’s, 1925); St. Elizabeth’s closed in 1959, and the last regularly scheduled
     Masses were offered in St. Joseph’s and St. Mary’s in 2007."'
 - url: https://container.parishesonline.com/bulletins/06/0038/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-30
   quote: Notre Dame and St. Helen’s Churches
   note: '27 September 2026 masthead and schedule: no Lake Titus Mass. "Titus" appears in none of the 17
     issues from 7 June to 27 September 2026.'
 - url: https://gcatholic.org/churches/usa-02/18300
-  seen: *id001
+  seen: 2026-09-30
   note: GCatholic lists "St. Mary", 753 County Route 41, Lake Titus (no coordinates). That address is
     two numbers from the directory's address for St. Helen's (755 County Highway 41, Chasm Falls), so
     it is probably a placeholder.

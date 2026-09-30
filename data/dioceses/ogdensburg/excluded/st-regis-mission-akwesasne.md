@@ -16,35 +16,35 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Regis'', Route
     37, Hogansburg, NY, 13655; kind: Mission'
 - url: https://www.rcdony.org/parish/hogansburg
-  seen: &id001 2026-09-30
+  seen: 2026-09-30
   quote: St. Regis, Quebec H0M 1A0
   note: 'Ogdensburg diocese directory entry (directory:hogansburg), listed under "Hogansburg": "St. Regis
     Mission, 109 Angus Thomas Memorial Street, St. Regis, Quebec H0M 1A0, Canada", pastor Reverend Jerome
     Pastores, mailing address P.O. Box 429, Hogansburg, NY.'
 - url: https://diocesevalleyfield.org/fr/bulletins-paroissiaux/bp-septembre-2026
-  seen: *id001
+  seen: 2026-09-30
   quote: St. Regis Mission Church - Saint-Régis
   note: The Diocese of Valleyfield (Quebec) list of parish bulletins for September 2026 includes "St.
     Regis Mission Church - Saint-Régis" (links http://stregismission.org/ and a Facebook page) among its
     own parishes, with no PDF linked for any Sunday.
 - url: https://northcountrycatholic.org/Articles/2026/4_1Missionvisit.html
-  seen: *id001
+  seen: 2026-09-30
   quote: Bishop Alain Faubert of the Diocese of Valleyfield
   note: 'North Country Catholic, 1 April 2026, "Valleyfield bishop visits Mission" by Dr. Rose-Alma McDonald
     of St. Regis Mission Church: on 21 and 22 March the mission "welcomed a special pastoral visit from
     Bishop Alain Faubert of the Diocese of Valleyfield", who celebrated Mass, and its parishioners hope
     for "ongoing collaboration with the diocese".'
 - url: https://diocesevalleyfield.org/sites/default/files/february_5_2023_bulletin_st._regis_mission.pdf
-  seen: *id001
+  seen: 2026-09-30
   quote: For weekend masses at the St. Regis Mission Church
   note: 'A 5 February 2023 St. Regis Mission bulletin hosted on the Diocese of Valleyfield''s site: Saturday
     4:00 PM and Sunday 10:00 AM Mass, collections in CDN and USD.'
 - url: https://www.openstreetmap.org/way/1264645745
-  seen: *id001
+  seen: 2026-09-30
   note: 'OpenStreetMap way 1264645745, "St. Regis Mission Catholic Church, Rue du Mémorial Angus Thomas,
     Montérégie, Québec, H0M 1A0" at 45.00278, -74.64262: the church is on the Quebec side of Akwesasne.'
 - url: https://www.stregismission.org/
-  seen: *id001
+  seen: 2026-09-30
   note: The mission's own site (linked from Valleyfield) answered Cloudflare error 1016, "Origin DNS error",
     on 2026-09-30, and stregismission.org does not resolve in `probe url`.
 ---

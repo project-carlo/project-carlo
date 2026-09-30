@@ -12,7 +12,7 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. George'',
     797 Depot St., Burke, NY, 12917; kind: Church'
 - url: https://files.ecatholic.com/18168/documents/2018/2/Pastoral%20Plan%20form%20fillable%20Final%204th%206.pdf
-  seen: &id001 2026-09-30
+  seen: 2026-09-30
   quote: St. George’s Church - worship site
   note: 'The Catholic Communities of Chateaugay, Constable and Fort Covington''s pastoral plan (a 9-page
     form, memo from Rev. Thomas Kornmeyer, pastor, dated 14 February 2018; linked from ccfcatholics.com/pastoral-plan),
@@ -21,24 +21,24 @@ evidence:
     They are: St. Patrick’s in Chateaugay, St. Mary’s of the Fort, and St. Francis of Assisi in Constable",
     which leaves Burke out.'
 - url: https://files.ecatholic.com/18168/bulletins/20260920.pdf
-  seen: *id001
+  seen: 2026-09-30
   quote: We are located in the body of the Church.
   note: 'Page 1 of the 20 September 2026 issue, an advertisement: "ST. GEORGE’S COUNTRY PATCH STORE, 797
     Depot St., Burke, NY. We are located in the body of the Church. Hours: Tues. - Friday: 10AM-2PM, First
     Saturday of the Month Only: 10AM-1PM". The nave is a thrift store.'
 - url: https://ccfcatholics.com/
-  seen: *id001
+  seen: 2026-09-30
   quote: Country Patch at St. George Church
   note: 'Parish home page (eCatholic, behind Cloudflare; read in a browser): "Thrift Store in Burke, Country
     Patch at St. George Church, 797 Depot Street, Burke, NY".'
 - url: https://ccfcatholics.com/mass-times
-  seen: *id001
+  seen: 2026-09-30
   quote: 'Saturday Anticipated Mass: 4:00 PM at St. Patrick''s, Chateaugay'
   note: 'Parish Mass Times page (browser), read 2026-09-30: Saturday 4:00 PM at St. Patrick''s, Chateaugay;
     Sunday 8:30AM Constable and 10:30AM Fort Covington; weekday services at Fort Covington, Constable
     and Chateaugay. No Burke.'
 - url: https://discovermass.com/church/st-george-burke-ny/
-  seen: *id001
+  seen: 2026-09-30
   quote: 797 Depot Street, Burke, NY 12917
   note: Discover Mass listing (phone 518-497-6673, website the dead ccbcparish.com) with a COVID-era note
     and a stale Mass-times table (Saturday 4:00pm; Thursday 8:30am, April to November); no bulletins.

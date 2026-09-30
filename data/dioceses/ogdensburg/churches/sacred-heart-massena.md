@@ -25,9 +25,10 @@ evidence:
 - {url: 'https://massenacatholics.com/mass-times', seen: '2026-09-30', quote: '4:00 PM Sacred Heart Church',
   note: 'Parish Mass Times page (Cloudflare; read in a browser). Saturday 4:00 PM, Sunday 9:30 AM, Monday
     12:05 PM, Wednesday to Friday 12:05 PM, first Saturday 9:00 AM at Sacred Heart Church.'}
-- {url: 'https://parishesonline.com/organization/st-peters-parish-in-massena', seen: '2026-09-30', quote: '212
-    Main Street, Massena', note: 'ParishesOnline organization of the parish (probe po: "212 Main Street,
-    Massena, New York, 13662-0329", 44.9256706, -74.8911896).'}
+- {url: 'https://parishesonline.com/organization/st-peters-parish-in-massena', seen: '2026-09-30', note: 'ParishesOnline
+    organization of the parish (`probe po st-peters-parish-in-massena`, 2026-09-30): address "212 Main
+    Street, Massena, New York, 13662-0329", 44.9256706, -74.8911896. The page is script-rendered, so there
+    is no quote for recheck.'}
 ---
 
 ## Holds Mass

@@ -15,7 +15,7 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Joseph'',
     306 W Main St., Malone, NY, 12953; kind: Church'
 - url: https://northcountrynow.com/stories/opinion-closing-user-friendly-church-makes-no-sense-canton-resident-says,29702
-  seen: &id001 2026-09-30
+  seen: 2026-09-30
   quote: Bishop LaValley ignored their vote
   note: 'North Country Now, Opinion letter "Closing user-friendly church makes no sense, Canton resident
     says", by Tony Beane, 6 April 2018: says St. Joseph''s, Malone was proposed for permanent closure
@@ -24,18 +24,18 @@ evidence:
     site for us now and in the future?". A letter to the editor, so it is one writer''s account, but it
     states the decision.'
 - url: http://standres.org/
-  seen: *id001
+  seen: 2026-09-30
   quote: St. Joseph’s Church was incorporated on July 26, 1848
   note: 'St. André Bessette parish website, History: St. Joseph''s was one of the four Malone parishes
     united in 2014; the 2026 site, bulletin and diocese directory name only Notre Dame and St. Helen''s
     as churches.'
 - url: https://discovermass.com/church/st-joseph-malone-ny/
-  seen: *id001
+  seen: 2026-09-30
   quote: 306 W. Main St, Malone, NY 12953
   note: Discover Mass lists the church (phone 518-483-1300, website standres.org) with a COVID-era note
     and an empty Mass-times table, and no bulletins.
 - url: https://container.parishesonline.com/bulletins/06/0038/20260927B.pdf
-  seen: *id001
+  seen: 2026-09-30
   quote: Notre Dame and St. Helen’s Churches
   note: '27 September 2026 masthead: two churches, not St. Joseph. No bulletin from 7 June to 27 September
     2026 has a Mass at St. Joseph.'
