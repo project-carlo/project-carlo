@@ -25,14 +25,21 @@ evidence:
 - url: https://files.ecatholic.com/15896/bulletins/20260927.pdf
   seen: 2026-09-30
   quote: Sun. 27 Twenty-Sixth Sunday in Ordinary Time
-  note: 'Page 1 Mass intentions of the 27 September 2026 bulletin: "8:00AM (St. Patrick’s) Chris Barriere", "10:00AM (St. Patrick’s) 3rd Anniversary of Andy Guay", weekdays "9:00AM (St. Patrick’s)" Monday 28 to Wednesday 30 September, Sunday 4 October 8:00AM and 10:00AM (St. Patrick’s). Confessions "St. Patrick’s, Sundays, 7:15-7:45AM and 9:30-9:45AM" (page 2).'
+  note: 'Page 1 Mass intentions of the 27 September 2026 bulletin: "8:00AM (St. Patrick’s) Chris Barriere",
+    "10:00AM (St. Patrick’s) 3rd Anniversary of Andy Guay", weekdays "9:00AM (St. Patrick’s)" Monday 28
+    to Wednesday 30 September, Sunday 4 October 8:00AM and 10:00AM (St. Patrick’s). Confessions "St. Patrick’s,
+    Sundays, 7:15-7:45AM and 9:30-9:45AM" (page 2).'
 - url: https://www.stpatricksrpny.org/mass-times
   seen: 2026-09-30
   quote: 'SUNDAY: 8:00 AM 10:00 AM'
-  note: 'Parish Mass Times page (eCatholic behind Cloudflare; read in a browser with visit.py on 2026-09-30, so `recheck` reports it unreachable): "MONWED 9:00 AM Check bulletin to confirm".'
+  note: 'Parish Mass Times page (eCatholic behind Cloudflare; read in a browser with visit.py on 2026-09-30,
+    so `recheck` reports it unreachable): "MONWED 9:00 AM Check bulletin to confirm".'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=140+Lake+Street,+Rouses+Point,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address node "140, Lake Street, Village of Rouses Point" (node 10800382105) at 44.99078, -73.36482, 35 m from GCatholic''s Plus Code point; "138, Lake Street" (way 809688625) is at 44.99103, -73.36482, 25 m north. OSM has both numbers.'
+  note: 'Nominatim: address node "140, Lake Street, Village of Rouses Point" (node 10800382105) at 44.99078,
+    -73.36482, 35 m from GCatholic''s Plus Code point; "138, Lake Street" (way 809688625) is at 44.99103,
+    -73.36482, 25 m north. OSM has both numbers.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

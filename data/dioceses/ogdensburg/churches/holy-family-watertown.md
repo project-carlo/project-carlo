@@ -42,6 +42,7 @@ evidence:
   note: 'OpenStreetMap: address point "129, Winthrop Street" (way 809364090) at 43.9719085, -75.9032521
     and node 357631197 "Holy Family Roman Catholic Church" at 43.9722222, -75.9030556; the GCatholic Plus
     Code point is 43.9721875, -75.9034375.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

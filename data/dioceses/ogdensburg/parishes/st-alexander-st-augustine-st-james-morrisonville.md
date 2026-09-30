@@ -9,24 +9,39 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/04/0726/20260927B.pdf
   seen: 2026-09-30
   quote: 'Mass Times: Saturdays - 4:00pm - Sundays 7:30am & 10:30am - Weekdays 9:00am'
-  note: 'Page 1 of the 27 September 2026 issue (container 04/0726). The line is under "ST. ALEXANDER PO Box 159, 1 Church St., Morrisonville NY 12962". Directly below: "ST. AUGUSTINE 3035 Main Street, Peru, 12972 518-561-5039 Mass Times: Saturdays - 4:30pm - Sundays 9:30am - Tuesdays & Fridays 8:00am" and "ST. JAMES 26 Church Rd, Cadyville 12918 518-561-5039 Mass Times: Sundays 9:00am". The first lines of page 1 are the pastor (Rev. Christopher J. Looby) and staff.'
+  note: 'Page 1 of the 27 September 2026 issue (container 04/0726). The line is under "ST. ALEXANDER PO
+    Box 159, 1 Church St., Morrisonville NY 12962". Directly below: "ST. AUGUSTINE 3035 Main Street, Peru,
+    12972 518-561-5039 Mass Times: Saturdays - 4:30pm - Sundays 9:30am - Tuesdays & Fridays 8:00am" and
+    "ST. JAMES 26 Church Rd, Cadyville 12918 518-561-5039 Mass Times: Sundays 9:00am". The first lines
+    of page 1 are the pastor (Rev. Christopher J. Looby) and staff.'
 - url: https://container.parishesonline.com/bulletins/04/0726/20260927B.pdf
   seen: 2026-09-30
-  quote: 'SUNDAY, OCTOBER 4TH'
-  note: 'Page 2, Mass intentions: "7:30 am (St Alexander)", "9:00 am (St James)", "9:30 am (St Augustine)", "10:30 am (St Alexander)"; Saturday 3 October "4:00 pm (St Alexander)" and "4:30 pm (St Augustine)"; weekday "9:00 am (St Alexander)" Monday to Friday and "8:00 am (St Augustine)" Tuesday and Friday.'
+  quote: SUNDAY, OCTOBER 4TH
+  note: 'Page 2, Mass intentions: "7:30 am (St Alexander)", "9:00 am (St James)", "9:30 am (St Augustine)",
+    "10:30 am (St Alexander)"; Saturday 3 October "4:00 pm (St Alexander)" and "4:30 pm (St Augustine)";
+    weekday "9:00 am (St Alexander)" Monday to Friday and "8:00 am (St Augustine)" Tuesday and Friday.'
 - url: https://parishesonline.com/organization/st-alexander-st-james-st-augustine-churches
   seen: 2026-09-30
-  note: '`probe po`: "St. Alexander & St. James / St. Augustine Churches", website https://www.rccalexanderaugustinejames.org/, 1 Church St, Morrisonville 12962, LPi id 0018000000Qc0ErAAJ, container 04/0726, newest issue 2026-09-27 (then 2026-09-20, 2026-09-13).'
+  note: '`probe po`: "St. Alexander & St. James / St. Augustine Churches", website https://www.rccalexanderaugustinejames.org/,
+    1 Church St, Morrisonville 12962, LPi id 0018000000Qc0ErAAJ, container 04/0726, newest issue 2026-09-27
+    (then 2026-09-20, 2026-09-13).'
 - url: https://www.rccalexanderaugustinejames.org
   seen: 2026-09-30
-  note: 'Wix site (title "Catholic | RCCofAlexanderAugustineJames"). `probe url` finds its bulletin link https://www.parishesonline.com/publication-page/st-alexander-st-james-st-augustine-churches?selectedPublication=https://container.parishesonline.com/bulletins, the same organization.'
+  note: Wix site (title "Catholic | RCCofAlexanderAugustineJames"). `probe url` finds its bulletin link
+    https://www.parishesonline.com/publication-page/st-alexander-st-james-st-augustine-churches?selectedPublication=https://container.parishesonline.com/bulletins,
+    the same organization.
 - url: https://www.rcdony.org/parish/morrisonville
   seen: 2026-09-30
-  note: 'Directory: St. Alexander''s Church, 1 Church Street, Morrisonville, group "The Roman Catholic Community of St. Alexander and St. Joseph", website rccalexanderaugustinejames.org, pastor Reverend Christopher Looby. directory:cadyville and directory:peru give the same website and phone 518-561-5039.'
+  note: 'Directory: St. Alexander''s Church, 1 Church Street, Morrisonville, group "The Roman Catholic
+    Community of St. Alexander and St. Joseph", website rccalexanderaugustinejames.org, pastor Reverend
+    Christopher Looby. directory:cadyville and directory:peru give the same website and phone 518-561-5039.'
 - url: https://northcountrycatholic.org/Articles/2026/5_20priestchanges.html
   seen: 2026-09-30
-  quote: The Roman Catholic Community of St. Alexander and St. Joseph in Morrisonville, St. James Church in Cadyville and St. Augustine’s Church in Peru
-  note: 'North Country Catholic, 20 May 2026, "Bishop announces assignment changes" (effective 1 July): names the three places as one assignment, Fr. John Kennedy Ojuok coming as parochial vicar.'
+  quote: The Roman Catholic Community of St. Alexander and St. Joseph in Morrisonville, St. James Church
+    in Cadyville and St. Augustine’s Church in Peru
+  note: 'North Country Catholic, 20 May 2026, "Bishop announces assignment changes" (effective 1 July):
+    names the three places as one assignment, Fr. John Kennedy Ojuok coming as parochial vicar.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

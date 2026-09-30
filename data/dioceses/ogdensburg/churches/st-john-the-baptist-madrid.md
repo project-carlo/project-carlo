@@ -13,23 +13,35 @@ name_verified: true
 address_verified: true
 roster: ['gcatholic:18297', 'directory:waddington-2']
 evidence:
-- {url: 'https://gcatholic.org/churches/usa-02/18297', seen: 2026-09-30, quote: '3715 County Route 14,
-    Madrid, New York 13660', note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg
-    as ''St. John the Baptist'', 3715 County Route 14, Madrid, NY, 13660; kind: Church'}
-- {url: 'https://www.rcdony.org/parish/waddington', seen: 2026-09-30, note: 'Listed in Diocese of Ogdensburg
-    parish directory as ''St. John the Baptist Church'', 29 North Street, Madrid, NY, 13660'}
-- {url: 'https://mwcatholics.org/files/bulletin.pdf', seen: '2026-09-30', quote: 'St. John the Baptist
-    29 North Street Madrid, NY 13660', note: 'Page 1 (issue of 27 Sep 2026): Saturday 4:30pm Mass, confessions
-    Saturday 3:45-4:15pm; page 2 lists Saturday 26 Sep 4:30 pm (SJ) Mass and weekday Masses (SJ) on Tuesday
-    29 Sep 9:00 am and Thursday 1 Oct 9:00 am.'}
-- {url: 'https://mwcatholics.org/', seen: '2026-09-30', quote: 'St. John the Baptist Church 29 North Street
-    Madrid, NY 13660', note: 'Parish site home page: Saturday (Ant) 4:30 p.m.; weekday Tuesday and Thursday
-    9 a.m.; penance Saturday 3:45-4:15 p.m.'}
-- {url: 'https://www.rcdony.org/parish/waddington', seen: '2026-09-30', quote: 'St. John the Baptist Church
-    29 North Street Madrid, New York 13660', note: Diocesan directory entry for Madrid.}
-- {url: 'https://nominatim.openstreetmap.org/search?q=29+North+Street+Madrid+NY&format=jsonv2', seen: '2026-09-30',
-  note: 'OSM node 357642186 "Saint John''s Roman Catholic Church, 29, North Street, Madrid" (amenity=place_of_worship,
-    44.74939, -75.13500) on building way 813489815.'}
+- url: https://gcatholic.org/churches/usa-02/18297
+  seen: 2026-09-30
+  quote: 3715 County Route 14, Madrid, New York 13660
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. John the Baptist'',
+    3715 County Route 14, Madrid, NY, 13660; kind: Church'
+- url: https://www.rcdony.org/parish/waddington
+  seen: 2026-09-30
+  note: Listed in Diocese of Ogdensburg parish directory as 'St. John the Baptist Church', 29 North Street,
+    Madrid, NY, 13660
+- url: https://mwcatholics.org/files/bulletin.pdf
+  seen: 2026-09-30
+  quote: St. John the Baptist 29 North Street Madrid, NY 13660
+  note: 'Page 1 (issue of 27 Sep 2026): Saturday 4:30pm Mass, confessions Saturday 3:45-4:15pm; page 2
+    lists Saturday 26 Sep 4:30 pm (SJ) Mass and weekday Masses (SJ) on Tuesday 29 Sep 9:00 am and Thursday
+    1 Oct 9:00 am.'
+- url: https://mwcatholics.org/
+  seen: 2026-09-30
+  quote: St. John the Baptist Church 29 North Street Madrid, NY 13660
+  note: 'Parish site home page: Saturday (Ant) 4:30 p.m.; weekday Tuesday and Thursday 9 a.m.; penance
+    Saturday 3:45-4:15 p.m.'
+- url: https://www.rcdony.org/parish/waddington
+  seen: 2026-09-30
+  quote: St. John the Baptist Church 29 North Street Madrid, New York 13660
+  note: Diocesan directory entry for Madrid.
+- url: https://nominatim.openstreetmap.org/search?q=29+North+Street+Madrid+NY&format=jsonv2
+  seen: 2026-09-30
+  note: OSM node 357642186 "Saint John's Roman Catholic Church, 29, North Street, Madrid" (amenity=place_of_worship,
+    44.74939, -75.13500) on building way 813489815.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

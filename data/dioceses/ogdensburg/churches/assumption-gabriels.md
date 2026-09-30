@@ -16,20 +16,29 @@ evidence:
 - url: https://gcatholic.org/churches/usa-02/18277
   seen: 2026-09-30
   quote: 826 State Route 86, Gabriels, New York 12983
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''Assumption'', 826 State Route 86, Gabriels, NY, 12983; kind: Church. Plus Code 87P7CRJF+69.'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''Assumption'',
+    826 State Route 86, Gabriels, NY, 12983; kind: Church. Plus Code 87P7CRJF+69.'
 - url: https://www.rcdony.org/parish/saranac-lake
   seen: 2026-09-30
-  note: Listed in Diocese of Ogdensburg parish directory as 'Church of the Assumption', 826 State Route 86, Gabriels, NY, 12939 (directory:saranac-lake-2); worship site of St. Bernard's, Saranac Lake.
+  note: Listed in Diocese of Ogdensburg parish directory as 'Church of the Assumption', 826 State Route
+    86, Gabriels, NY, 12939 (directory:saranac-lake-2); worship site of St. Bernard's, Saranac Lake.
 - url: https://container.parishesonline.com/bulletins/06/0140/20260927B.pdf
   seen: 2026-09-30
-  note: 'Image-only pages 1 and 4 of the 27 September 2026 issue. Page 1 masthead: "Church of the Assumption, 826 State Rt. 86, Gabriels, NY". Page 4: "Sunday Liturgies: 4:30 p.m. (Anticipated) - St. Bernard''s; 8:00 a.m. - Church of the Assumption; 10:00 a.m. - St. Bernard''s"; intentions "8:00 a.m. (Assumption) Richard Trudeau by Carol Trudeau" for Sunday 27 September and "8:00 a.m. (Assumption) People of the Parish" for Sunday 4 October.'
+  note: 'Image-only pages 1 and 4 of the 27 September 2026 issue. Page 1 masthead: "Church of the Assumption,
+    826 State Rt. 86, Gabriels, NY". Page 4: "Sunday Liturgies: 4:30 p.m. (Anticipated) - St. Bernard''s;
+    8:00 a.m. - Church of the Assumption; 10:00 a.m. - St. Bernard''s"; intentions "8:00 a.m. (Assumption)
+    Richard Trudeau by Carol Trudeau" for Sunday 27 September and "8:00 a.m. (Assumption) People of the
+    Parish" for Sunday 4 October.'
 - url: https://localwiki.org/hsl/Church_of_the_Assumption
   seen: 2026-09-30
   quote: 826 New York Route 86 , Gabriels
-  note: 'Historic Saranac Lake wiki: "The Church of the Assumption (Roman Catholic) was built by Benjamin A. Muncil", 826 New York Route 86, Gabriels.'
+  note: 'Historic Saranac Lake wiki: "The Church of the Assumption (Roman Catholic) was built by Benjamin
+    A. Muncil", 826 New York Route 86, Gabriels.'
 - url: https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=44.4305625&lon=-74.1765625&zoom=18
   seen: 2026-09-30
-  note: 'OSM has a building at 826 State Highway 86, Gabriels (44.43042, -74.17674, 15 m from GCatholic''s Plus Code point) with postcode 12970.'
+  note: OSM has a building at 826 State Highway 86, Gabriels (44.43042, -74.17674, 15 m from GCatholic's
+    Plus Code point) with postcode 12970.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -13,20 +13,29 @@ name_verified: true
 address_verified: true
 roster: ['gcatholic:18315', 'directory:norfolk']
 evidence:
-- {url: 'https://gcatholic.org/churches/usa-02/18315', seen: 2026-09-30, quote: '3 Morris St., Norfolk,
-    New York 13667', note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg
-    as ''Visitation'', 3 Morris St., Norfolk, NY, 13667; kind: Church'}
-- {url: 'https://www.rcdony.org/parish/norfolk', seen: 2026-09-30, note: 'Listed in Diocese of Ogdensburg
-    parish directory as ''Church of the Visitation'', 3 Morris Street, Norfolk, NY, 13667; group: Parish
-    of the Visitation and St. Raymond'}
-- {url: 'https://norfolknorwoodraymondville.org/', seen: '2026-09-30', quote: '10:30 AM Visitation, Norfolk',
+- url: https://gcatholic.org/churches/usa-02/18315
+  seen: 2026-09-30
+  quote: 3 Morris St., Norfolk, New York 13667
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''Visitation'',
+    3 Morris St., Norfolk, NY, 13667; kind: Church'
+- url: https://www.rcdony.org/parish/norfolk
+  seen: 2026-09-30
+  note: 'Listed in Diocese of Ogdensburg parish directory as ''Church of the Visitation'', 3 Morris Street,
+    Norfolk, NY, 13667; group: Parish of the Visitation and St. Raymond'
+- url: https://norfolknorwoodraymondville.org/
+  seen: 2026-09-30
+  quote: 10:30 AM Visitation, Norfolk
   note: 'Parish site Mass Times (browser): Sunday 10:30 AM; Monday to Thursday 8:30 AM at Visitation,
-    Norfolk.'}
-- {url: 'https://files.ecatholic.com/15674/bulletins/20260927.pdf', seen: '2026-09-30', note: '27 September
-    2026 issue, page 1 (image; read with render.py): "Sun Oct 4 ... 10:30am CHURCH OF THE VISITATION"
-    and weekday Masses Monday, Tuesday, Wednesday and Thursday 8:30am at Church of the Visitation.'}
-- {url: 'https://nominatim.openstreetmap.org/search?q=3+Morris+Street+Norfolk+NY&format=jsonv2', seen: '2026-09-30',
-  note: 'OSM way 308766589, a place_of_worship at "3, Morris Street, Town of Norfolk" (44.79967, -74.99056).'}
+    Norfolk.'
+- url: https://files.ecatholic.com/15674/bulletins/20260927.pdf
+  seen: 2026-09-30
+  note: '27 September 2026 issue, page 1 (image; read with render.py): "Sun Oct 4 ... 10:30am CHURCH OF
+    THE VISITATION" and weekday Masses Monday, Tuesday, Wednesday and Thursday 8:30am at Church of the
+    Visitation.'
+- url: https://nominatim.openstreetmap.org/search?q=3+Morris+Street+Norfolk+NY&format=jsonv2
+  seen: 2026-09-30
+  note: OSM way 308766589, a place_of_worship at "3, Morris Street, Town of Norfolk" (44.79967, -74.99056).
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

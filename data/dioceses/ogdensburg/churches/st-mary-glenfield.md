@@ -25,16 +25,20 @@ evidence:
 - url: https://files.ecatholic.com/19929/bulletins/20260809.pdf
   seen: 2026-09-30
   quote: 5:30 pm (SM)
-  note: 'Page 1 of the 9 August 2026 issue: Saturday vigil Masses 4:00 pm (SP) and 5:30 pm (SM); the churches box gives "St. Mary’s 6106 Blue St. Glenfield".'
+  note: 'Page 1 of the 9 August 2026 issue: Saturday vigil Masses 4:00 pm (SP) and 5:30 pm (SM); the churches
+    box gives "St. Mary’s 6106 Blue St. Glenfield".'
 - url: https://files.ecatholic.com/19929/bulletins/20260927.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF, read by eye. Page 1: "St. Mary''s 6106 Blue Street, Glenfield"; Saturday 3 October 5:30 pm (SM). Page 2 "St. Mary''s News": "As the seasons change, St. Mary’s Church will close for the winter following the October 10th Mass, the weekend before Columbus Day ... we look forward to gathering together again when St. Mary’s reopens in the spring."'
+  note: 'Image-only PDF, read by eye. Page 1: "St. Mary''s 6106 Blue Street, Glenfield"; Saturday 3 October
+    5:30 pm (SM). Page 2 "St. Mary''s News": "As the seasons change, St. Mary’s Church will close for
+    the winter following the October 10th Mass, the weekend before Columbus Day ... we look forward to
+    gathering together again when St. Mary’s reopens in the spring."'
 - url: https://spsmshcatholic.org/st-marys-1
   seen: 2026-09-30
   quote: 6106 Blue St. ~ Glenfield, NY 13343
   note: 'The parish site''s St. Mary''s page (eCatholic, read with visit.py): "Physical Location:  6106
     Blue St. ~ Glenfield, NY 13343".'
-
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -3,8 +3,7 @@ name: Our Lady of Lourdes, Schroon Lake
 website: https://www.rcdony.org/images/ourladylourdes.pdf
 bulletin_provider: other
 provider_id: ''
-publication:
-- url:https://www.rcdony.org/images/ourladylourdes.pdf
+publication: ['url:https://www.rcdony.org/images/ourladylourdes.pdf']
 group: Southern Adirondack Catholic Community (St. Mary's, Sacred Heart, Our Lady of Lourdes)
 evidence:
 - url: https://www.rcdony.org/images/ourladylourdes.pdf
@@ -32,7 +31,9 @@ evidence:
   seen: 2026-09-30
   note: 'Diocese Parish Bulletins page: ''Schroon Lake'' links https://www.rcdony.org/images/ourladylourdes.pdf,
     while Ticonderoga and Crown Point link the ParishesOnline organization st-mary-s-church-sacred-heart-our-lady-of-lordes.'
+promoted: 2026-09-30
 ---
+
 ## Publisher
 
 Our Lady of Lourdes, Schroon Lake publishes its own bulletin as a two-page PDF that the diocese hosts at `rcdony.org/images/ourladylourdes.pdf`. The copy read on 2026-09-30 is the issue for 27 September 2026 (header "OUR LADY OF LOURDES CATHOLIC CHURCH", Administrator Fernando V. Solomon, 1114 US Route 9, Schroon Lake, `schroonlakesec@rcdony.org`), last modified 25 September 2026, so it is current and weekly. It lists the week's Masses for all three churches of the Southern Adirondack Catholic Community, but is headed and kept by Schroon Lake.

@@ -9,21 +9,23 @@ evidence:
 - url: https://www.rcdony.org/images/Harrisvillebulletin-1.pdf
   seen: 2026-09-30
   quote: Telephone & Fax (315)543-2421
-  note: 'The bulletin dated 27 September 2026 (2 pages, text layer): letterhead "St. Francis Solanus Church 14361
-    Maple Street Post Office Box 208 Harrisville, NY 13648-0208", pastor Rev. Joseph Morgan, "Readings and
-    Intentions" for Sunday 27 September and Sunday 4 October, "COFFEE HOUR Next Sunday, October 4th downstairs
-    after Mass". The URL is one fixed file on the diocese''s site that is overwritten each week, so the
-    quote will stop being found; it is not a dated URL. It prints no Mass time.'
+  note: 'The bulletin dated 27 September 2026 (2 pages, text layer): letterhead "St. Francis Solanus Church
+    14361 Maple Street Post Office Box 208 Harrisville, NY 13648-0208", pastor Rev. Joseph Morgan, "Readings
+    and Intentions" for Sunday 27 September and Sunday 4 October, "COFFEE HOUR Next Sunday, October 4th
+    downstairs after Mass". The URL is one fixed file on the diocese''s site that is overwritten each
+    week, so the quote will stop being found; it is not a dated URL. It prints no Mass time.'
 - url: https://www.rcdony.org/directory/parish-bulletins.html
   seen: 2026-09-30
-  note: 'The diocese''s "Parish Bulletins" page lists Harrisville with exactly this file
-    (rcdony.org/images/Harrisvillebulletin-1.pdf). The parish has no website of its own: the directory entry
-    (www.rcdony.org/parish/harrisville) gives none.'
+  note: 'The diocese''s "Parish Bulletins" page lists Harrisville with exactly this file (rcdony.org/images/Harrisvillebulletin-1.pdf).
+    The parish has no website of its own: the directory entry (www.rcdony.org/parish/harrisville) gives
+    none.'
 - url: https://discovermass.com/church/st-francis-solanus-harrisville-ny/
   seen: 2026-09-30
-  note: 'Discover Mass listing (`discovermass:st-francis-solanus-harrisville-ny` per `probe url`): "Mass Times
-    Sunday 10:30am" and "Shucks! There are no bulletins available." The Mass time is the only source for
-    10:30 and its date is unknown; no bulletin is posted there, so it is not recorded as a publication id.'
+  note: 'Discover Mass listing (`discovermass:st-francis-solanus-harrisville-ny` per `probe url`): "Mass
+    Times Sunday 10:30am" and "Shucks! There are no bulletins available." The Mass time is the only source
+    for 10:30 and its date is unknown; no bulletin is posted there, so it is not recorded as a publication
+    id.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

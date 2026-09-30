@@ -13,24 +13,35 @@ name_verified: true
 address_verified: false
 roster: ['gcatholic:18317', 'directory:norwood']
 evidence:
-- {url: 'https://gcatholic.org/churches/usa-02/18317', seen: 2026-09-30, quote: '2 Park Ave., Norwood,
-    New York 13668', note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg
-    as ''St. Andrew'', 2 Park Ave., Norwood, NY, 13668; kind: Church'}
-- {url: 'https://www.rcdony.org/parish/norwood', seen: 2026-09-30, note: 'Listed in Diocese of Ogdensburg
-    parish directory as "St. Andrew''s Church", 4 Park Avenue, Norwood, NY, 13668'}
-- {url: 'https://norfolknorwoodraymondville.org/', seen: '2026-09-30', quote: '4:00 PM St. Andrew''s,
-    Norwood', note: 'Parish site Mass Times (browser): Saturday 4:00 PM and Friday 8:30 AM at St. Andrew''s,
-    Norwood.'}
-- {url: 'https://files.ecatholic.com/15674/bulletins/20260927.pdf', seen: '2026-09-30', note: '27 September
-    2026 issue, page 1 (image; read with render.py): "Sat Oct 3 ... 4:00pm ST. ANDREW''S", "Fri Oct 2
-    - 8:30am ST. ANDREW''S"; page 2 gives Sacrament of Penance Saturday 3:15-3:45 pm at St. Andrew''s.'}
-- {url: 'https://nominatim.openstreetmap.org/search?q=Saint+Andrew%27s+Church+Norwood+NY&format=jsonv2',
-  seen: '2026-09-30', note: 'OSM node 357649380 "Saint Andrew''s Roman Catholic Church, Park Avenue, Norwood"
-    (no house number; 44.74944, -74.99528). OSM also has a building tagged "2 Park Avenue" (way 812693439,
-    44.74972, -74.99535) and a point "4 Park Avenue" (node 8796141424, 44.74953, -74.99525), both within
-    40 m of the church node.'}
-- {url: 'https://www.rcdony.org/parish/norwood', seen: '2026-09-30', quote: 'St. Andrew''s Church 4 Park
-    Avenue Norwood, New York 13668', note: Diocesan directory entry.}
+- url: https://gcatholic.org/churches/usa-02/18317
+  seen: 2026-09-30
+  quote: 2 Park Ave., Norwood, New York 13668
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Andrew'',
+    2 Park Ave., Norwood, NY, 13668; kind: Church'
+- url: https://www.rcdony.org/parish/norwood
+  seen: 2026-09-30
+  note: Listed in Diocese of Ogdensburg parish directory as "St. Andrew's Church", 4 Park Avenue, Norwood,
+    NY, 13668
+- url: https://norfolknorwoodraymondville.org/
+  seen: 2026-09-30
+  quote: 4:00 PM St. Andrew's, Norwood
+  note: 'Parish site Mass Times (browser): Saturday 4:00 PM and Friday 8:30 AM at St. Andrew''s, Norwood.'
+- url: https://files.ecatholic.com/15674/bulletins/20260927.pdf
+  seen: 2026-09-30
+  note: '27 September 2026 issue, page 1 (image; read with render.py): "Sat Oct 3 ... 4:00pm ST. ANDREW''S",
+    "Fri Oct 2 - 8:30am ST. ANDREW''S"; page 2 gives Sacrament of Penance Saturday 3:15-3:45 pm at St.
+    Andrew''s.'
+- url: https://nominatim.openstreetmap.org/search?q=Saint+Andrew%27s+Church+Norwood+NY&format=jsonv2
+  seen: 2026-09-30
+  note: OSM node 357649380 "Saint Andrew's Roman Catholic Church, Park Avenue, Norwood" (no house number;
+    44.74944, -74.99528). OSM also has a building tagged "2 Park Avenue" (way 812693439, 44.74972, -74.99535)
+    and a point "4 Park Avenue" (node 8796141424, 44.74953, -74.99525), both within 40 m of the church
+    node.
+- url: https://www.rcdony.org/parish/norwood
+  seen: 2026-09-30
+  quote: St. Andrew's Church 4 Park Avenue Norwood, New York 13668
+  note: Diocesan directory entry.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

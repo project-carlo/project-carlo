@@ -43,6 +43,7 @@ evidence:
   note: 'OSM (Nominatim reverse lookup of the GCatholic point, 2026-09-30): way 813755733, amenity=place_of_worship,
     "Saint Mary''s Roman Catholic Church", 66 Court Street, centre 44.601065, -75.1687444. The ParishesOnline
     org address (66 Court St, Canton) has the same coordinates.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

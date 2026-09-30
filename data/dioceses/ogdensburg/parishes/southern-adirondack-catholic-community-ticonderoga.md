@@ -3,10 +3,7 @@ name: Southern Adirondack Catholic Community (St. Mary's, Ticonderoga and Sacred
 website: https://www.southernadirondackcatholics.org/
 bulletin_provider: parishes_online
 provider_id: st-mary-s-church-sacred-heart-our-lady-of-lordes
-publication:
-- po-org:st-mary-s-church-sacred-heart-our-lady-of-lordes
-- lpi:0018000000Qc2bhAAB
-- po-container:03/0940
+publication: ['po-org:st-mary-s-church-sacred-heart-our-lady-of-lordes', 'lpi:0018000000Qc2bhAAB', 'po-container:03/0940']
 group: Southern Adirondack Catholic Community (St. Mary's, Sacred Heart, Our Lady of Lourdes)
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0940/20260927B.pdf
@@ -43,7 +40,9 @@ evidence:
   note: 'Diocese directory: St. Mary''s, 22 Father Jogues Place, Ticonderoga; website southernadirondackcatholics.org;
     Administrator Rev. Fernando V. Solomon, Jr.; Crown Point and Schroon Lake list the same website and
     administrator.'
+promoted: 2026-09-30
 ---
+
 ## Publisher
 
 One weekly ParishesOnline bulletin (container `03/0940`, organization "St. Mary's Church/Sacred Heart/Our Lady of Lourdes", Ticonderoga) serves the Southern Adirondack Catholic Community: St. Mary's (Ticonderoga), Sacred Heart of Jesus (Crown Point) and Our Lady of Lourdes (Schroon Lake), three canonical parishes under one administrator, Rev. Fernando V. Solomon, Jr. The 27 September 2026 issue (read 2026-09-30) is headed "SOUTHERN ADIRONDACK CATHOLIC COMMUNITY / ST. MARY'S, SACRED HEART, AND OUR LADY OF LOURDES" and its page 2 lists Mass intentions at all three churches. Pages 1 to 3 of the PDF are images with no text layer (rendered with `render.py` and read as pictures), so only the ads and footer on pages 4 to 5 can be quoted; the pipeline will need to read this bulletin as an image.

@@ -3,8 +3,7 @@ name: Catholic Communities of Chateaugay, Constable and Fort Covington
 website: https://ccfcatholics.com/
 bulletin_provider: ecatholic
 provider_id: ''
-publication:
-- ecatholic:18168
+publication: ['ecatholic:18168']
 group: Catholic Community of Burke and Chateaugay; Catholic Community of Constable, Westville and Trout
   River
 evidence:
@@ -43,6 +42,7 @@ evidence:
     NY 12926", and CHURCH PHYSICAL ADDRESSES for the Catholic Community of Burke and Chateaugay (132 W.
     Main Street, Chateaugay), St. Mary''s of the Fort (2549 Chateaugay St.) and St. Francis of Assisi
     (5 Poplar Street).'
+promoted: 2026-09-30
 ---
 
 ## Publisher

@@ -35,6 +35,7 @@ evidence:
   seen: 2026-09-30
   note: 'OSM (Nominatim reverse lookup of the GCatholic point, 2026-09-30): way 812683131, building=yes,
     47 South Main Street, Village of Hammond, centre 44.446398, -75.6962921.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

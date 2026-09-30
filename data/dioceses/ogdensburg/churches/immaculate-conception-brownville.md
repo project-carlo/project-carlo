@@ -42,6 +42,7 @@ evidence:
   note: 'Nominatim: an OSM address point "214, West Main Street, Village of Brownville" at 44.0023905,
     -75.9865652 (ZIP shown as 13634, not 13615); "119, West Main Street" is at 44.0021345, -75.9840816,
     about 200 m east.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

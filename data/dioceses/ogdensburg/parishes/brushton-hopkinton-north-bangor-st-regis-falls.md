@@ -3,10 +3,7 @@ name: Catholic Churches of Brushton, Hopkinton, North Bangor and St. Regis Falls
 website: http://www.hcsmsasa.org
 bulletin_provider: parishes_online
 provider_id: st-mary-st-augustine
-publication:
-- po-org:st-mary-st-augustine
-- lpi:0018000000Qx7FLAAZ
-- po-container:04/0689
+publication: ['po-org:st-mary-st-augustine', 'lpi:0018000000Qx7FLAAZ', 'po-container:04/0689']
 group: The Catholic Community of St. Augustine
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0689/20260927B.pdf
@@ -41,6 +38,7 @@ evidence:
   note: '`probe po st-mary-st-augustine` (the page is JavaScript): "St. Mary - St. Augustine", 1347 Washington
     St, Brushton, website https://www.staugustinesandstmarys.org/, ids po-org:st-mary-st-augustine, lpi:0018000000Qx7FLAAZ,
     po-container:04/0689; weekly issues 2026-08-23 to 2026-09-27, all at container 04/0689.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

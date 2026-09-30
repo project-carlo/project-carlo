@@ -29,9 +29,10 @@ evidence:
     Alexandria Bay  Saturdays at 4:00 pm  Sundays at  9:30 am"; weekday 8:00 (SC) Masses on page 2.'
 - url: https://www.openstreetmap.org/way/406634832
   seen: 2026-09-30
-  note: 'OSM "Saint Cyril''s Roman Catholic Church", Walton Street, Village of Alexandria Bay 13607, centre
-    44.33664, -75.91607 (Nominatim). No house number. The building at 2 Rock Street in the same block is
-    the (former) First Methodist Episcopal Church (OSM way 406634829).'
+  note: OSM "Saint Cyril's Roman Catholic Church", Walton Street, Village of Alexandria Bay 13607, centre
+    44.33664, -75.91607 (Nominatim). No house number. The building at 2 Rock Street in the same block
+    is the (former) First Methodist Episcopal Church (OSM way 406634829).
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

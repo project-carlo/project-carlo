@@ -30,8 +30,9 @@ evidence:
     year before; it confirms the Catholic Mass is held in the Tabernacle building.
 - url: https://www.openstreetmap.org/node/6823957893
   seen: 2026-09-30
-  note: 'OSM node "Tabernacle" (amenity=place_of_worship, no denomination), 17221 Sunset Avenue, Thousand
-    Island Park 13692, 44.2892155, -76.025975 (Nominatim search "Tabernacle Thousand Island Park NY").'
+  note: OSM node "Tabernacle" (amenity=place_of_worship, no denomination), 17221 Sunset Avenue, Thousand
+    Island Park 13692, 44.2892155, -76.025975 (Nominatim search "Tabernacle Thousand Island Park NY").
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

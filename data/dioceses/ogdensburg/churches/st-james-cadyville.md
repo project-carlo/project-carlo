@@ -1,7 +1,7 @@
 ---
 parish: st-alexander-st-augustine-st-james-morrisonville
 name: St. James
-line1: '26 Church Rd'
+line1: 26 Church Rd
 line2: ''
 city: Cadyville
 state: NY
@@ -25,10 +25,13 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/04/0726/20260927B.pdf
   seen: 2026-09-30
   quote: ST. JAMES 26 Church Rd, Cadyville 12918
-  note: 'Page 1 of the 27 September 2026 issue (container 04/0726); its line "Mass Times: Sundays 9:00am" follows. Page 2: Sunday 4 October "9:00 am (St James)". The weekly St. James Mass is Sunday only.'
+  note: 'Page 1 of the 27 September 2026 issue (container 04/0726); its line "Mass Times: Sundays 9:00am"
+    follows. Page 2: Sunday 4 October "9:00 am (St James)". The weekly St. James Mass is Sunday only.'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=26+Church+Road,+Cadyville,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address point "26, Church Road, Cadyville, Town of Plattsburgh" (way 809660519) at 44.69904, -73.63488, 45 m from GCatholic''s Plus Code point; no result for "26 Church Street".'
+  note: 'Nominatim: address point "26, Church Road, Cadyville, Town of Plattsburgh" (way 809660519) at
+    44.69904, -73.63488, 45 m from GCatholic''s Plus Code point; no result for "26 Church Street".'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

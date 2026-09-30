@@ -11,9 +11,7 @@ longitude: -74.5061875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18246
-- directory:brushton
+roster: ['gcatholic:18246', 'directory:brushton']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18246
   seen: 2026-09-30
@@ -39,6 +37,7 @@ evidence:
   note: '`probe po st-mary-st-augustine` gives the address "1347 Washington St, Brushton, New York, 12916"
     and the point 44.832895, -74.506708; the bulletin''s page 3 gives "Fr. Kris'' Residence / St. Mary''s,
     1347 Washington St., Brushton".'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

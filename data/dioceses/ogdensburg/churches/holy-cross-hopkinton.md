@@ -11,9 +11,7 @@ longitude: -74.7070625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18283
-- directory:hopkinton
+roster: ['gcatholic:18283', 'directory:hopkinton']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18283
   seen: 2026-09-30
@@ -34,6 +32,7 @@ evidence:
   quote: 11:30 AM at Holy Cross Church, Hopkinton
   note: 'Parish website Mass Times, read 2026-09-30: Sunday 11:30 AM at Holy Cross Church, Hopkinton (after
     8 AM North Bangor and 9:45 AM St. Regis Falls).'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

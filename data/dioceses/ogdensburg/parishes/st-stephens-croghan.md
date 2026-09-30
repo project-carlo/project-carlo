@@ -9,26 +9,26 @@ evidence:
 - url: https://files.ecatholic.com/29575/bulletins/20260927.pdf
   seen: 2026-09-30
   quote: St. Stephen’s Parish
-  note: 'Page 1 masthead of the 27 September 2026 issue (2 pages, text layer): "St. Stephen’s Parish
-    http://www.ststephenscroghan.org/ 9748 Main Street/PO Box 38 Croghan, NY 13327", Rev. Joseph A. Morgan,
-    VG, Deacon Peter Woolschlager. Mass list: Saturday 26 September 5:00 pm, Sunday 27 September 8:30 am,
-    weekdays 8:15 am, Friday 2 October 6:30 pm Eucharistic Adoration. No other church or place is named
-    (searched for "Harrisville" and "Solanus": no hits).'
+  note: 'Page 1 masthead of the 27 September 2026 issue (2 pages, text layer): "St. Stephen’s Parish http://www.ststephenscroghan.org/
+    9748 Main Street/PO Box 38 Croghan, NY 13327", Rev. Joseph A. Morgan, VG, Deacon Peter Woolschlager.
+    Mass list: Saturday 26 September 5:00 pm, Sunday 27 September 8:30 am, weekdays 8:15 am, Friday 2
+    October 6:30 pm Eucharistic Adoration. No other church or place is named (searched for "Harrisville"
+    and "Solanus": no hits).'
 - url: https://www.ststephenscroghan.org/
   seen: 2026-09-30
   quote: St. Stephen's Catholic Church - Croghan, NY
-  note: 'The parish site (eCatholic, behind Cloudflare; loaded on the first try with visit.py). It embeds
-    ecatholic:29575 and links /bulletins and /mass-times.'
+  note: The parish site (eCatholic, behind Cloudflare; loaded on the first try with visit.py). It embeds
+    ecatholic:29575 and links /bulletins and /mass-times.
 - url: https://www.rcdony.org/parish/croghan
   seen: 2026-09-30
   quote: 'Administrator: Reverend Joseph A. Morgan, VG'
-  note: 'The diocese directory entry for Croghan (St. Stephen''s Church, 9748 State Route 812, website
-    www.ststephenscroghan.org). The Harrisville entry has the same administrator but its own bulletin (see
-    `st-francis-solanus-harrisville`).'
+  note: The diocese directory entry for Croghan (St. Stephen's Church, 9748 State Route 812, website www.ststephenscroghan.org).
+    The Harrisville entry has the same administrator but its own bulletin (see `st-francis-solanus-harrisville`).
 - url: https://www.rcdony.org/directory/parish-bulletins.html
   seen: 2026-09-30
-  note: 'The diocese''s bulletin page lists Croghan with "#" (no link), so the bulletin came from the parish
-    site, not the diocese page.'
+  note: The diocese's bulletin page lists Croghan with "#" (no link), so the bulletin came from the parish
+    site, not the diocese page.
+promoted: 2026-09-30
 ---
 
 ## Publisher

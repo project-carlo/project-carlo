@@ -3,8 +3,7 @@ name: St. Bartholomew's, Old Forge and St. Anthony of Padua, Inlet and Raquette 
 website: https://fultonchaincatholics.org
 bulletin_provider: other
 provider_id: ''
-publication:
-- url:https://fultonchaincatholics.org/files/bulletin.pdf
+publication: ['url:https://fultonchaincatholics.org/files/bulletin.pdf']
 group: ''
 evidence:
 - url: https://fultonchaincatholics.org/files/bulletin.pdf
@@ -34,7 +33,9 @@ evidence:
   note: 'Diocese directory: Inlet''s website fultonchaincatholic.rcdony.org (old address); St. Bartholomew''s
     (Old Forge) lists fultonchaincatholics.org; both have phone 315-369-3554 and Pastor Rev. Thomas E.
     Kornmeyer.'
+promoted: 2026-09-30
 ---
+
 ## Publisher
 
 St. Bartholomew's, Old Forge and St. Anthony of Padua, Inlet (and its Raquette Lake oratory) share one pastor, Fr. Thomas Kornmeyer, one office (Old Forge) and one weekly bulletin, a two-page PDF the parish keeps at a fixed URL on fultonchaincatholics.org. The copy read on 2026-09-30 covers 26 September to 4 October 2026 and names both churches in its masthead and in a single Mass schedule ("(OF)" and "(Inlet)").

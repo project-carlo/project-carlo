@@ -25,11 +25,14 @@ evidence:
 - url: http://www.cvrchparish.org/files/bulletin.pdf
   seen: 2026-09-30
   quote: ALL SAINTS CHURCH – CHAUMONT
-  note: 'Page 2 of the 27 September 2026 issue: Sunday 27 September 9:00 am Mass, weekday Masses 8:30 am on Tuesday 29 September and Friday 2 October, Sunday 4 October 9:00 am. Also: "ALL SAINTS CHURCH: There will be a Community Rosary on Tuesday. September 29th at 6pm."'
+  note: 'Page 2 of the 27 September 2026 issue: Sunday 27 September 9:00 am Mass, weekday Masses 8:30
+    am on Tuesday 29 September and Friday 2 October, Sunday 4 October 9:00 am. Also: "ALL SAINTS CHURCH:
+    There will be a Community Rosary on Tuesday. September 29th at 6pm."'
 - url: http://www.cvrchparish.org/
   seen: 2026-09-30
   quote: Sunday – Chaumont (All Saints Church) – 9 am
   note: 'The parish site''s home page: "All Saints Church 27420 Madison Street Chaumont, NY 13622".'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

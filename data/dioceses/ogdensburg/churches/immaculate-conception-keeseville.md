@@ -19,18 +19,25 @@ evidence:
     1660 Front Street, Route 9, Keeseville, NY, 12944; group: The Roman Catholic Community of Keeseville'
 - url: https://files.ecatholic.com/35001/bulletins/20260927.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF (no text layer), read with parish-site-access render.py, so `recheck` cannot find text in it. Page 1 of the 27 September 2026 bulletin: "Immaculate Conception Church 1660 Front Street, Route 9 Keeseville, New York"; "Mon & Tues - IC, Keeseville 8:00am, Rosary 8:30am, Mass"; "Sunday - I.C, Keeseville 1:00-4:00pm, Eucharistic Adoration".'
+  note: 'Image-only PDF (no text layer), read with parish-site-access render.py, so `recheck` cannot find
+    text in it. Page 1 of the 27 September 2026 bulletin: "Immaculate Conception Church 1660 Front Street,
+    Route 9 Keeseville, New York"; "Mon & Tues - IC, Keeseville 8:00am, Rosary 8:30am, Mass"; "Sunday
+    - I.C, Keeseville 1:00-4:00pm, Eucharistic Adoration".'
 - url: https://kawcatholics.org/mass-times
   seen: 2026-09-30
   quote: Mon Tue 8:30 am Immaculate Conception-Keeseville
-  note: Website Mass Times page (eCatholic behind Cloudflare; read in a browser with visit.py, so `recheck` reports it unreachable).
+  note: Website Mass Times page (eCatholic behind Cloudflare; read in a browser with visit.py, so `recheck`
+    reports it unreachable).
 - url: https://kawcatholics.org/immaculate-conception
   seen: 2026-09-30
   quote: Immaculate Conception Church 1660 Front Street, Route 9 Keeseville, New York
   note: Church page on the parish website (Cloudflare caveat as above).
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=1660+Front+Street,+Keeseville,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address point "1660, Front Street, Keeseville, Town of Chesterfield, Essex County" (way 814403046) at 44.50091, -73.48107, used for the coordinates. No OSM node named Immaculate Conception was found by name.'
+  note: 'Nominatim: address point "1660, Front Street, Keeseville, Town of Chesterfield, Essex County"
+    (way 814403046) at 44.50091, -73.48107, used for the coordinates. No OSM node named Immaculate Conception
+    was found by name.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

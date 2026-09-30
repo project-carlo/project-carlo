@@ -25,15 +25,19 @@ evidence:
 - url: https://catholicparishesofslc.weebly.com/uploads/1/3/1/4/131484079/bulletin_sept_13.pdf
   seen: 2026-09-30
   quote: 10 am @ Cville For the People of the Parishes
-  note: 'Page 2 of the 13 September 2026 issue: Sunday 13 September 10 am @ Cville; Monday-Friday 9 am Masses at Cville on Tuesday and Thursday (9 am Tues.@ Cville, 9 am Thurs.@ Cville).'
+  note: 'Page 2 of the 13 September 2026 issue: Sunday 13 September 10 am @ Cville; Monday-Friday 9 am
+    Masses at Cville on Tuesday and Thursday (9 am Tues.@ Cville, 9 am Thurs.@ Cville).'
 - url: https://catholicparishesofslc.weebly.com/
   seen: 2026-09-30
   quote: St. Mary's 5905 James St. Constableville
-  note: 'Home page of the parish site, churches list: "St. Mary''s 5905 James St. Constableville"; Mass Schedule "St. Mary''s (Constableville)10am" on Sunday and "Tuesday - St. Mary''s 9am", "Thursday- St. Mary''s 9am".'
+  note: 'Home page of the parish site, churches list: "St. Mary''s 5905 James St. Constableville"; Mass
+    Schedule "St. Mary''s (Constableville)10am" on Sunday and "Tuesday - St. Mary''s 9am", "Thursday-
+    St. Mary''s 9am".'
 - url: https://www.openstreetmap.org/way/624519576
   seen: 2026-09-30
-  note: OSM way "St Mary's Roman Catholic Church", James Street, Village of Constableville 13325, centre 43.56682,
-    -75.42793 (Nominatim); the coordinate is within 15 m of the GCatholic Plus Code point.
+  note: OSM way "St Mary's Roman Catholic Church", James Street, Village of Constableville 13325, centre
+    43.56682, -75.42793 (Nominatim); the coordinate is within 15 m of the GCatholic Plus Code point.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

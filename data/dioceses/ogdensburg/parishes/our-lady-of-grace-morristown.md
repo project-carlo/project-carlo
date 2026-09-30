@@ -35,6 +35,7 @@ evidence:
   seen: 2026-09-30
   note: 'Bulletins page (browser): lists every issue from 4 December 2022 to 27 September 2026, each a
     files.ecatholic.com/5458/bulletins/YYYYMMDD.pdf link; no separate bulletin for any single church.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

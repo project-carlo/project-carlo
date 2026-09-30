@@ -25,11 +25,14 @@ evidence:
 - url: https://catholicparishesofslc.weebly.com/uploads/1/3/1/4/131484079/bulletin_sept_13.pdf
   seen: 2026-09-30
   quote: 6 pm @ LF Thomas Kelly
-  note: 'Page 2 of the 13 September 2026 issue: Saturday 12 September 6 pm @ LF Thomas Kelly by Marlene Kelly; Saturday 19 September 6 pm @ LF. Page 1 names "St. John’s: Lyons Falls" with its trustees.'
+  note: 'Page 2 of the 13 September 2026 issue: Saturday 12 September 6 pm @ LF Thomas Kelly by Marlene
+    Kelly; Saturday 19 September 6 pm @ LF. Page 1 names "St. John’s: Lyons Falls" with its trustees.'
 - url: https://catholicparishesofslc.weebly.com/
   seen: 2026-09-30
   quote: St. John's 5838 McAlpine Street Lyons Falls
-  note: 'Home page of the parish site, churches list: "St. John''s 5838 McAlpine Street Lyons Falls"; Mass Schedule "St. John''s (Lyons Falls) 6 pm" on Saturday.'
+  note: 'Home page of the parish site, churches list: "St. John''s 5838 McAlpine Street Lyons Falls";
+    Mass Schedule "St. John''s (Lyons Falls) 6 pm" on Saturday.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

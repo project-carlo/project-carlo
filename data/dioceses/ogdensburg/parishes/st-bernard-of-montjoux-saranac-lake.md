@@ -9,18 +9,30 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/06/0140/20260927B.pdf
   seen: 2026-09-30
   quote: For ad info. call 1-800-950-9952 www.4lpi.com St. Bernard of Montjoux, Saranac Lake, NY 06-0140
-  note: 'Page 5 (ad page, the only page with a text layer) of the 27 September 2026 issue, naming the container 06-0140. Pages 1-4 are scanned images, read with parish-site-access render.py: page 1 masthead "St. Bernard of Montjoux Parish, September 27, 2026", "St. Bernard''s Church, 27 St. Bernard''s St. Saranac Lake, NY 12983" and "Church of the Assumption, 826 State Rt. 86, Gabriels, NY", Pastor Father Martin E. Cline.'
+  note: 'Page 5 (ad page, the only page with a text layer) of the 27 September 2026 issue, naming the
+    container 06-0140. Pages 1-4 are scanned images, read with parish-site-access render.py: page 1 masthead
+    "St. Bernard of Montjoux Parish, September 27, 2026", "St. Bernard''s Church, 27 St. Bernard''s St.
+    Saranac Lake, NY 12983" and "Church of the Assumption, 826 State Rt. 86, Gabriels, NY", Pastor Father
+    Martin E. Cline.'
 - url: https://container.parishesonline.com/bulletins/06/0140/20260927B.pdf
   seen: 2026-09-30
-  note: 'Image-only page 4 (Mass intentions and "Sunday Liturgies"): "4:30 p.m. (Anticipated) - St. Bernard''s; 8:00 a.m. - Church of the Assumption; 10:00 a.m. - St. Bernard''s. Weekday Masses: Mon. - no scheduled Mass, Wed. & Fri. - 8:30 a.m., Tues. & Thurs. - 12:00 p.m. - St. Bernard''s". recheck cannot find text from this page.'
+  note: 'Image-only page 4 (Mass intentions and "Sunday Liturgies"): "4:30 p.m. (Anticipated) - St. Bernard''s;
+    8:00 a.m. - Church of the Assumption; 10:00 a.m. - St. Bernard''s. Weekday Masses: Mon. - no scheduled
+    Mass, Wed. & Fri. - 8:30 a.m., Tues. & Thurs. - 12:00 p.m. - St. Bernard''s". recheck cannot find
+    text from this page.'
 - url: https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/organizations/slug/st-bernard-of-montjoux
   seen: 2026-09-30
   quote: '"slug":"st-bernard-of-montjoux"'
-  note: 'ParishesOnline organization (probe po st-bernard-of-montjoux): LPi id 0018000000Qc0FAAAZ, website https://stbernards.church, address 27 Saint Bernard St, Saranac Lake 12983-1834; latest issue 2026-09-27 in container 06/0140. The 4 October 2026 issue (20261004B.pdf) was already posted on 2026-09-30.'
+  note: 'ParishesOnline organization (probe po st-bernard-of-montjoux): LPi id 0018000000Qc0FAAAZ, website
+    https://stbernards.church, address 27 Saint Bernard St, Saranac Lake 12983-1834; latest issue 2026-09-27
+    in container 06/0140. The 4 October 2026 issue (20261004B.pdf) was already posted on 2026-09-30.'
 - url: https://www.rcdony.org/parish/saranac-lake
   seen: 2026-09-30
   quote: 'Worship sites: Church of the Assumption - Gabriels'
-  note: 'Directory: "St. Bernard''s Church, 27 St. Bernard Street, Saranac Lake" and "Church of the Assumption, 826 State Route 86, Gabriels", both with website www.stbernards.church, telephone 518-891-4616, pastor Reverend Martin E. Cline.'
+  note: 'Directory: "St. Bernard''s Church, 27 St. Bernard Street, Saranac Lake" and "Church of the Assumption,
+    826 State Route 86, Gabriels", both with website www.stbernards.church, telephone 518-891-4616, pastor
+    Reverend Martin E. Cline.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

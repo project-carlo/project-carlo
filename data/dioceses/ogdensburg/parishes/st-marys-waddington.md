@@ -6,37 +6,45 @@ provider_id: ''
 publication: ['url:https://mwcatholics.org/files/bulletin.pdf']
 group: St. Mary's Parish, Waddington (formerly St. Mary's and St. John the Baptist, Madrid)
 evidence:
-- {url: 'https://mwcatholics.org/files/bulletin.pdf', seen: '2026-09-30', quote: 'St. Mary’s Parish Weekly
-    26th SUNDAY OF ORDINARY TIME — SEPTEMBER 27, 2026', note: 'Page 1 masthead of the bulletin PDF as
-    served on 2026-09-30 (Last-Modified 2026-09-28). The file name never changes, so this quote will disappear
-    when the next issue replaces it; the page-1 block also reads "One Parish ~ Two Worship Sites", with
-    "St. John the Baptist, 29 North Street, Madrid, NY 13660, Mass Saturday 4:30pm" and "St. Mary’s Church,
-    34 Oak Street, Waddington, NY 13694, Mass Sunday 9:30am".'}
-- {url: 'https://mwcatholics.org/files/bulletin.pdf', seen: '2026-09-30', quote: Beginning November 2nd
-    our Mass schedule will be, note: 'Page 1, "Scheduling Masses": Saturday 4:30 pm at St. John''s, Sunday
-    9:30 am at St. Mary''s, Monday 8:00 am at St. Mary''s, Tuesday 8:00 am at St. John''s, Thursday 8:00
-    am at St. John''s. Page 2 "Weekly Parish Schedule" lists the current Masses marked (SJ) and (SM) for
-    the two churches.'}
-- {url: 'https://mwcatholics.org/', seen: '2026-09-30', quote: 'we are now one parish, with two worship
-    sites (churches)', note: 'Parish site home page: "As of July 1, 2026, St. John’s Parish of Madrid
-    and St. Mary’s Parish of Waddington were officially merged; we are now one parish, with two worship
-    sites (churches)." It continues "Beginning November 1, 2026, St. Mary’s Parish will be linked with
-    St. Peter’s Parish." The page embeds no bulletin id; its Bulletin link is the PDF above.'}
-- {url: 'https://www.nny360.com/news/stlawrencecounty/changes-coming-to-area-catholic-communities-on-nov-1/article_03d6fbd0-b5c6-5400-a5ad-766fb7489267.html',
-  seen: '2026-09-30', quote: 'had officially merged as of July 1, and are now one parish with two worship
-    sites', note: 'Watertown Daily Times, 2 Sep 2026 (paywalled; body scrambled in the raw HTML and readable
-    only in a browser, so recheck will probably not find it): the Madrid and Waddington parishes merged
-    1 July 2026; Fr. Garry Giroux retires in November and Rev. Mark Reilly (pastor of St. Peter''s Parish,
-    Massena) becomes pastor of Madrid and Waddington on 1 November, with Rev. Matthew Conger as parochial
-    vicar.'}
-- {url: 'https://www.rcdony.org/parish/waddington', seen: '2026-09-30', quote: 'Worship Site: St. John
-    the Baptist Church - Madrid', note: 'Diocesan directory: "St. Mary''s Church, 34 Oak Street, Waddington"
-    with Madrid as its worship site (the directory still has a separate St. John the Baptist entry, Madrid,
-    sharing the same phone and website).'}
+- url: https://mwcatholics.org/files/bulletin.pdf
+  seen: 2026-09-30
+  quote: St. Mary’s Parish Weekly 26th SUNDAY OF ORDINARY TIME — SEPTEMBER 27, 2026
+  note: Page 1 masthead of the bulletin PDF as served on 2026-09-30 (Last-Modified 2026-09-28). The file
+    name never changes, so this quote will disappear when the next issue replaces it; the page-1 block
+    also reads "One Parish ~ Two Worship Sites", with "St. John the Baptist, 29 North Street, Madrid,
+    NY 13660, Mass Saturday 4:30pm" and "St. Mary’s Church, 34 Oak Street, Waddington, NY 13694, Mass
+    Sunday 9:30am".
+- url: https://mwcatholics.org/files/bulletin.pdf
+  seen: 2026-09-30
+  quote: Beginning November 2nd our Mass schedule will be
+  note: 'Page 1, "Scheduling Masses": Saturday 4:30 pm at St. John''s, Sunday 9:30 am at St. Mary''s,
+    Monday 8:00 am at St. Mary''s, Tuesday 8:00 am at St. John''s, Thursday 8:00 am at St. John''s. Page
+    2 "Weekly Parish Schedule" lists the current Masses marked (SJ) and (SM) for the two churches.'
+- url: https://mwcatholics.org/
+  seen: 2026-09-30
+  quote: we are now one parish, with two worship sites (churches)
+  note: 'Parish site home page: "As of July 1, 2026, St. John’s Parish of Madrid and St. Mary’s Parish
+    of Waddington were officially merged; we are now one parish, with two worship sites (churches)." It
+    continues "Beginning November 1, 2026, St. Mary’s Parish will be linked with St. Peter’s Parish."
+    The page embeds no bulletin id; its Bulletin link is the PDF above.'
+- url: https://www.nny360.com/news/stlawrencecounty/changes-coming-to-area-catholic-communities-on-nov-1/article_03d6fbd0-b5c6-5400-a5ad-766fb7489267.html
+  seen: 2026-09-30
+  quote: had officially merged as of July 1, and are now one parish with two worship sites
+  note: 'Watertown Daily Times, 2 Sep 2026 (paywalled; body scrambled in the raw HTML and readable only
+    in a browser, so recheck will probably not find it): the Madrid and Waddington parishes merged 1 July
+    2026; Fr. Garry Giroux retires in November and Rev. Mark Reilly (pastor of St. Peter''s Parish, Massena)
+    becomes pastor of Madrid and Waddington on 1 November, with Rev. Matthew Conger as parochial vicar.'
+- url: https://www.rcdony.org/parish/waddington
+  seen: 2026-09-30
+  quote: 'Worship Site: St. John the Baptist Church - Madrid'
+  note: 'Diocesan directory: "St. Mary''s Church, 34 Oak Street, Waddington" with Madrid as its worship
+    site (the directory still has a separate St. John the Baptist entry, Madrid, sharing the same phone
+    and website).'
 revisit: After 1 November 2026 look at mwcatholics.org and the Massena bulletin. If the Waddington PDF
   stops being updated and the St. Peter's bulletin (container 06/0114) starts to carry Madrid and Waddington,
   merge this row into st-peters-parish-massena; if both are still published keep them apart.
-revisit_after: '2026-11-15'
+revisit_after: 2026-11-15
+promoted: 2026-09-30
 ---
 
 ## Publisher

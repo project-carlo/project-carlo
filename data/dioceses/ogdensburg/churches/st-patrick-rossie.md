@@ -43,6 +43,7 @@ evidence:
 revisit: 'Get coordinates: `pnpm geocode` after promotion, or find the church on a map (OSM and Nominatim
   have no church in Rossie); confirm 1219 County Route 3 with the parish office (315-375-6571).'
 revisit_after: 2026-12-31
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

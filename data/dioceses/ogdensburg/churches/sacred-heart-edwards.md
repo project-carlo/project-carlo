@@ -38,6 +38,7 @@ evidence:
   note: 'OSM (Nominatim reverse lookup of the GCatholic point, 2026-09-30): way 813413017, building=yes
     (not tagged as a church), 20 Trout Lake Street, Edwards, centre 44.327855, -75.2506245. OSM also has
     Trout Lake Street (way 8752891) running through the hamlet.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

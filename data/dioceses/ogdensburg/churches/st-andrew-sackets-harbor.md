@@ -36,6 +36,7 @@ evidence:
   note: Nominatim knows both "107, Woolsey Street" and "200, East Main Street" in Sackets Harbor (43.9452,
     -76.1177 and 43.94516, -76.11736), both within about 40 m of the GCatholic Plus Code point, so they
     are probably two addresses of one corner building; nothing in OSM says which is the church.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

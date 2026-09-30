@@ -9,22 +9,36 @@ evidence:
 - url: https://files.ecatholic.com/15896/bulletins/20260927.pdf
   seen: 2026-09-30
   quote: FR. NICOLAS REVILLA, PASTOR
-  note: 'Page 1 of the 27 September 2026 issue (2 pages, text layer): "September 27, 2026 FR. NICOLAS REVILLA, PASTOR / Sr. Rani Selvaraj, SCC - Pastoral Associate", "Many thanks to all who continue to support St. Patrick’s Church with their offertory gifts" and a weekly-collection report for St. Patrick’s alone.'
+  note: 'Page 1 of the 27 September 2026 issue (2 pages, text layer): "September 27, 2026 FR. NICOLAS
+    REVILLA, PASTOR / Sr. Rani Selvaraj, SCC - Pastoral Associate", "Many thanks to all who continue to
+    support St. Patrick’s Church with their offertory gifts" and a weekly-collection report for St. Patrick’s
+    alone.'
 - url: https://files.ecatholic.com/15896/bulletins/20260927.pdf
   seen: 2026-09-30
   quote: Sun. 27 Twenty-Sixth Sunday in Ordinary Time
-  note: 'Page 1 Mass intentions: Saturday 26 September "4:00PM (St. Mary’s)", Sunday 27 September "8:00AM (St. Patrick’s)" and "10:00AM (St. Patrick’s)", weekdays 9:00AM (St. Patrick’s) Monday to Wednesday and 9:00AM (St. Mary’s) Thursday 1 and Friday 2 October, Saturday 3 October 4:00PM (St. Mary’s), Sunday 4 October 8:00AM and 10:00AM (St. Patrick’s). Two Sunday Masses carry "Parishioners of St. Mary’s & St. Patrick’s (pro populo)". So this bulletin schedules both churches.'
+  note: 'Page 1 Mass intentions: Saturday 26 September "4:00PM (St. Mary’s)", Sunday 27 September "8:00AM
+    (St. Patrick’s)" and "10:00AM (St. Patrick’s)", weekdays 9:00AM (St. Patrick’s) Monday to Wednesday
+    and 9:00AM (St. Mary’s) Thursday 1 and Friday 2 October, Saturday 3 October 4:00PM (St. Mary’s), Sunday
+    4 October 8:00AM and 10:00AM (St. Patrick’s). Two Sunday Masses carry "Parishioners of St. Mary’s
+    & St. Patrick’s (pro populo)". So this bulletin schedules both churches.'
 - url: https://www.stpatricksrpny.org/
   seen: 2026-09-30
   quote: St. Mary’s and St. Patrick’s Faith Formation Program begins this Sunday, September 27
-  note: Parish home page (eCatholic, behind Cloudflare; BLOCKED for several loads and read in a browser with visit.py on 2026-09-30, so `recheck` reports it unreachable). The page links "St. Mary's Church, Champlain" (stmaryschamplain.org) and two bulletin pages, /bulletins and /bulletins-events; `visit.py` reports `ecatholic:15896`.
+  note: Parish home page (eCatholic, behind Cloudflare; BLOCKED for several loads and read in a browser
+    with visit.py on 2026-09-30, so `recheck` reports it unreachable). The page links "St. Mary's Church,
+    Champlain" (stmaryschamplain.org) and two bulletin pages, /bulletins and /bulletins-events; `visit.py`
+    reports `ecatholic:15896`.
 - url: https://www.stpatricksrpny.org/mass-times
   seen: 2026-09-30
   quote: 'SUNDAY: 8:00 AM 10:00 AM MONWED 9:00 AM Check bulletin to confirm'
   note: Parish Mass Times page (same caveat).
 - url: https://www.rcdony.org/parish/rouses-point
   seen: 2026-09-30
-  note: 'Directory: directory:rouses-point, St. Patrick''s Church, 140 Lake Street, Rouses Point, website https://www.stpatricksrpny.org, phone 518-297-7361, pastor Rev. Nicolas J. Revilla. directory:champlain (St. Mary''s Church, 90 Church Street, Champlain, phone 518-298-8244, no website, pastor Reverend Nicolas J. Revilla) names the same pastor.'
+  note: 'Directory: directory:rouses-point, St. Patrick''s Church, 140 Lake Street, Rouses Point, website
+    https://www.stpatricksrpny.org, phone 518-297-7361, pastor Rev. Nicolas J. Revilla. directory:champlain
+    (St. Mary''s Church, 90 Church Street, Champlain, phone 518-298-8244, no website, pastor Reverend
+    Nicolas J. Revilla) names the same pastor.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

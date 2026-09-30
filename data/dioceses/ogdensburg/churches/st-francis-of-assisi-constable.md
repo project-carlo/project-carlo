@@ -11,9 +11,7 @@ longitude: -74.2928125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18263
-- directory:constable
+roster: ['gcatholic:18263', 'directory:constable']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18263
   seen: 2026-09-30
@@ -40,6 +38,7 @@ evidence:
     12926
   note: 'Parish contact page (browser): the central office for the three parishes is also "5 Poplar Street,
     Constable" and the St. Francis Rectory phone is 518-483-2775.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -42,6 +42,7 @@ evidence:
   note: 'OpenStreetMap: address point "123, South Massey Street" (way 809364212) at 43.9756820, -75.9167151
     and node 357631081 "Saint Patricks Roman Catholic Church" at 43.9758333, -75.9166667; the GCatholic
     Plus Code point is 43.9758125, -75.9170625.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

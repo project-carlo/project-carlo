@@ -43,6 +43,7 @@ evidence:
     Church", Lawrence Avenue, no house number, centre 44.6730616, -74.9783338. Nominatim also has an address
     node "20, Lawrence Avenue" at 44.67306, -74.97823 (on the church) and a building "17, Lawrence Avenue"
     at 44.67223, -74.97789 (about 95 m south-west).'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

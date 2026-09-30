@@ -33,6 +33,7 @@ evidence:
   note: '`probe po church-of-our-lady-of-the-sacred-heart`: "Church of Our Lady of the Sacred Heart",
     www.olshparish.org, 320 W Lynde St, Watertown; ids po-org:church-of-our-lady-of-the-sacred-heart,
     lpi:0018000000Qc0ERAAZ, po-container:06/0110; weekly issues to 2026-10-04.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

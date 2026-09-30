@@ -11,9 +11,7 @@ longitude: -73.7607947
 coordinates_from: osm-node
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18336
-- directory:schroon-lake
+roster: ['gcatholic:18336', 'directory:schroon-lake']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18336
   seen: 2026-09-30
@@ -38,7 +36,9 @@ evidence:
   note: OpenStreetMap node 4691675098 'Our Lady of Lourdes', place_of_worship on Main Street, Schroon
     Lake (43.83822, -73.76079); no house number. A reverse lookup at GCatholic's point returns 1087 Main
     Street (a realty office), 27 numbers below 1114, about 200 m south-west.
+promoted: 2026-09-30
 ---
+
 ## Holds Mass
 
 Yes, weekly: Sunday 11:15 am, Tuesday 11:30 am and Wednesday 9:00 am (the church's own bulletin of 27 September 2026, and the same in the community's website and in the ParishesOnline bulletin's Mass intentions, read 2026-09-30). The website also lists a Saturday 6:00 pm Mass, which neither bulletin shows for the weekend of 26 to 27 September and 3 to 4 October; it may be seasonal (not checked).

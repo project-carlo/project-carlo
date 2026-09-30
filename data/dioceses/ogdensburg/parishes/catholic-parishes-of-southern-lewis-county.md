@@ -10,35 +10,37 @@ evidence:
   seen: 2026-09-30
   quote: Catholic Parishes of Southern Lewis County
   note: 'Page 1 of the 13 September 2026 issue (2 pages, text layer), the newest issue on the site on
-    2026-09-30 (the 20 and 27 September issues were not posted yet): "Staff  Pastoral Team Rev. Daniel L.
-    Chapin, Deacon James Chaufty, Deacon Michael Lieber, Jr.", "Mailing Address: PO Box 431 Port Leyden",
+    2026-09-30 (the 20 and 27 September issues were not posted yet): "Staff  Pastoral Team Rev. Daniel
+    L. Chapin, Deacon James Chaufty, Deacon Michael Lieber, Jr.", "Mailing Address: PO Box 431 Port Leyden",
     and the four churches "St. Mary’s Nativity: West Leyden", "St. Mary’s : Constableville", "St. Martin’s:
     Port Leyden", "St. John’s: Lyons Falls" with their trustees.'
 - url: https://catholicparishesofslc.weebly.com/uploads/1/3/1/4/131484079/bulletin_sept_13.pdf
   seen: 2026-09-30
   quote: 10 am @ Cville For the People of the Parishes
-  note: 'Page 2, "Mass Intentions for this week": Saturday 12 September 4 pm @ WL and 6 pm @ LF; Sunday 13
-    September 8:15 am @ PL and 10 am @ Cville; weekday 9 am Mass Monday @ PL, Tuesday @ Cville, Wednesday
-    @ PL, Thursday @ Cville, Friday @ PL; the following weekend the same four. Page 1 lists "Saturday, 4:00
-    pm St. Mary’s Nativity; Saturday, 6:00 pm St. John’s; Sunday, 8:15 am St. Martin’s; Sunday, 10:00 am St.
-    Mary’s" as the ministers'' schedule.'
+  note: 'Page 2, "Mass Intentions for this week": Saturday 12 September 4 pm @ WL and 6 pm @ LF; Sunday
+    13 September 8:15 am @ PL and 10 am @ Cville; weekday 9 am Mass Monday @ PL, Tuesday @ Cville, Wednesday
+    @ PL, Thursday @ Cville, Friday @ PL; the following weekend the same four. Page 1 lists "Saturday,
+    4:00 pm St. Mary’s Nativity; Saturday, 6:00 pm St. John’s; Sunday, 8:15 am St. Martin’s; Sunday, 10:00
+    am St. Mary’s" as the ministers'' schedule.'
 - url: https://catholicparishesofslc.weebly.com/
   seen: 2026-09-30
   quote: Sunday - St. Martin's (Port Leyden) 8:15 am
   note: 'The parish site''s home page, Mass Schedule (static Weebly page, browser): weekday Masses Monday,
     Wednesday, Friday 9am "St. Martin''s Rectory Chapel" and Tuesday, Thursday 9am "St. Mary''s"; Saturday
     West Leyden 4pm, Lyons Falls 6 pm; Sunday Port Leyden 8:15 am, Constableville 10am. It lists the four
-    churches with addresses (5905 James St. Constableville; 1183 State Route 26 West Leyden; 7108 North St,
-    Port Leyden; 5838 McAlpine Street Lyons Falls).'
+    churches with addresses (5905 James St. Constableville; 1183 State Route 26 West Leyden; 7108 North
+    St, Port Leyden; 5838 McAlpine Street Lyons Falls).'
 - url: https://catholicparishesofslc.weebly.com/about.html
   seen: 2026-09-30
   quote: all four Parishes are now under the direction of Father Daniel L Chapin
-  note: 'The site''s About page: "Each Parish has one Mass per weekend. Weekday Masses alternate between St.
-    Mary''s and St. Martins."'
+  note: 'The site''s About page: "Each Parish has one Mass per weekend. Weekday Masses alternate between
+    St. Mary''s and St. Martins."'
 - url: https://www.rcdony.org/directory/parish-bulletins.html
   seen: 2026-09-30
-  note: The diocese's bulletin page links catholicparishesofslc.weebly.com/bulletins.html for Lyons Falls, Port
-    Leyden and West Leyden, and lists no bulletin for Constableville ("None"), which the same bulletin covers.
+  note: The diocese's bulletin page links catholicparishesofslc.weebly.com/bulletins.html for Lyons Falls,
+    Port Leyden and West Leyden, and lists no bulletin for Constableville ("None"), which the same bulletin
+    covers.
+promoted: 2026-09-30
 ---
 
 ## Publisher

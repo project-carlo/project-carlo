@@ -11,9 +11,7 @@ longitude: -73.6001297
 coordinates_from: osm-node
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:18273
-- directory:elizabethtown
+roster: ['gcatholic:18273', 'directory:elizabethtown']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18273
   seen: 2026-09-30
@@ -44,7 +42,9 @@ evidence:
     (44.21135, -73.60013). A separate OSM 'house' way 45759030 is numbered 7482 Court Street (44.21233,
     -73.59846), about 170 m north-east of the church building. A reverse lookup at GCatholic's point (44.21331,
     -73.59756) returns a credit union at 7519 Court Street.
+promoted: 2026-09-30
 ---
+
 ## Holds Mass
 
 Yes, weekly: Sunday 8:00 am and Friday 8:00 am (followed by a Holy Hour with Adoration and Confessions at 8:30) in the 27 September 2026 bulletin, page 2; the parish's Mass Times page gives Sunday 8:00 am. Read 2026-09-30.

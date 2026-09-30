@@ -36,6 +36,7 @@ evidence:
   note: 'Parish Mass-times page (eCatholic, behind Cloudflare; browser): Saturday vigil 4:00 PM Cathedral;
     Sunday 8:00 AM cathedral, 9:30 AM Notre Dame, 11:00 AM cathedral; Monday to Friday 6:45 AM Notre Dame,
     12:00 PM cathedral.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

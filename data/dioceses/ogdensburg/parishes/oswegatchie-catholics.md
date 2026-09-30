@@ -28,6 +28,7 @@ evidence:
     pm St. James, Gouverneur / 5:30 pm Sacred Heart, Edwards / Sunday: 9:00 am St. Huberts, Star Lake
     / 11:00 am St. James, Gouverneur". Menu lists "St. James Church and School, Gouverneur", "Sacred Heart
     Worship Site, Edwards", "St. Huberts Church, Star Lake".'
+promoted: 2026-09-30
 ---
 
 ## Publisher

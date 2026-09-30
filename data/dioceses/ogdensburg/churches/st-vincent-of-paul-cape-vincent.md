@@ -26,11 +26,15 @@ evidence:
 - url: http://www.cvrchparish.org/files/bulletin.pdf
   seen: 2026-09-30
   quote: ST. VINCENT OF PAUL CHURCH—CAPE VINCENT
-  note: 'Page 2 of the 27 September 2026 issue (a fixed-URL file, see the parish row): Sunday 11:00 am Mass for John Malcho, weekday Masses 8:30 am Wednesday 30 September and Thursday 1 October. Page 1 gives the office as "P.O. Box 288, 139 N. Kanady St., Cape Vincent".'
+  note: 'Page 2 of the 27 September 2026 issue (a fixed-URL file, see the parish row): Sunday 11:00 am
+    Mass for John Malcho, weekday Masses 8:30 am Wednesday 30 September and Thursday 1 October. Page 1
+    gives the office as "P.O. Box 288, 139 N. Kanady St., Cape Vincent".'
 - url: http://www.cvrchparish.org/
   seen: 2026-09-30
   quote: Sunday – Cape Vincent (St. Vincent of Paul Church) – 11 am
-  note: 'The parish site''s home page: "St. Vincent of Paul Church 1626 Kanady Street (corner of Kanady & Lake Street) Cape Vincent, NY 13618".'
+  note: 'The parish site''s home page: "St. Vincent of Paul Church 1626 Kanady Street (corner of Kanady
+    & Lake Street) Cape Vincent, NY 13618".'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

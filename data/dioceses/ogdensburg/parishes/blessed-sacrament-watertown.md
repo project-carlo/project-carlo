@@ -54,6 +54,7 @@ evidence:
   note: '`probe po st-patricks-`: title "St. Patrick''s Church", website sawatn.org, 123 S. Massey St,
     Watertown; ids po-org:st-patricks-, lpi:0018000000Qc2cPAAR, po-container:06/0117; weekly issues to
     2026-10-04 (an early issue for the following Sunday).'
+promoted: 2026-09-30
 ---
 
 ## Publisher

@@ -42,6 +42,7 @@ evidence:
   note: 'OpenStreetMap: address point "850, Arsenal Street" (way 809344301) at 43.9769090, -75.9305195
     and node 357631347 "Saint Anthony''s Roman Catholic Church" at 43.9769524, -75.9305127; the GCatholic
     Plus Code point is 43.9766875, -75.9305625.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

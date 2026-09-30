@@ -11,9 +11,7 @@ longitude: null
 coordinates_from: ''
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18286
-- directory:inlet
+roster: ['gcatholic:18286', 'directory:inlet']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18286
   seen: 2026-09-30
@@ -38,7 +36,9 @@ evidence:
   note: 'Read with visit.py: ''St. Anthony of Padua Parish of Inlet and Raquette Lake ... 183 North Route
     28''; Mass times ''St. Anthony Wednesday and Friday 10:00 am, Sunday 8:00am'' (stale, through Labor
     Day); Sunday 7:30-7:45 am penance at St. Anthony''s Church, Inlet.'
+promoted: 2026-09-30
 ---
+
 ## Holds Mass
 
 Yes, weekly: Sunday 8:00 am, Wednesday 10:00 am (30 September 2026) and, until 11 October 2026 only, Saturday 5:30 pm (bulletin for 26 September to 4 October 2026, page 1, read 2026-09-30). The parish website lists Wednesday and Friday 10:00 am and Sunday 8:00 am "through Labor Day weekend"; the current bulletin shows no Friday Mass at Inlet.

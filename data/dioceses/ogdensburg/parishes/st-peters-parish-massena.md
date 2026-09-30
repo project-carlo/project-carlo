@@ -8,37 +8,58 @@ group: St. Peter's Parish
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0114/20260927B.pdf
   seen: 2026-09-30
-  quote: 'Sacred Heart & St. Lawrence, Massena, NY 06-0114'
-  note: 'Page 5 (advertiser footer) of the 27 September 2026 issue in container 06/0114: "St. Mary & St. Joseph/Sacred Heart & St. Lawrence, Massena, NY 06-0114". The footer is LPi''s account name and still names St. Joseph, which no longer has Mass (see excluded/st-joseph-massena.md), so it is not a membership list. Page 1 is letter-spaced in the text layer, so the masthead is not quoted.'
+  quote: Sacred Heart & St. Lawrence, Massena, NY 06-0114
+  note: 'Page 5 (advertiser footer) of the 27 September 2026 issue in container 06/0114: "St. Mary & St.
+    Joseph/Sacred Heart & St. Lawrence, Massena, NY 06-0114". The footer is LPi''s account name and still
+    names St. Joseph, which no longer has Mass (see excluded/st-joseph-massena.md), so it is not a membership
+    list. Page 1 is letter-spaced in the text layer, so the masthead is not quoted.'
 - url: https://container.parishesonline.com/bulletins/06/0114/20260927B.pdf
   seen: 2026-09-30
   quote: 6:00pm (SL) † Rose Alma Bourden by Friends & Family
-  note: 'Page 4, "CALENDAR" of the 27 September 2026 issue: Saturday 26 September 4:00pm (SH) Sacred Heart and 6:00pm (SL) St. Lawrence; Sunday 27 September 8:00am (SM) and 11:00am (SM) St. Mary''s, 9:30am (SH). The weekday Masses are at Sacred Heart and St. Mary''s.'
+  note: 'Page 4, "CALENDAR" of the 27 September 2026 issue: Saturday 26 September 4:00pm (SH) Sacred Heart
+    and 6:00pm (SL) St. Lawrence; Sunday 27 September 8:00am (SM) and 11:00am (SM) St. Mary''s, 9:30am
+    (SH). The weekday Masses are at Sacred Heart and St. Mary''s.'
 - url: https://container.parishesonline.com/bulletins/06/0114/20260927B.pdf
   seen: 2026-09-30
-  quote: 'ST. PETER’S PARISH, MASSENA, NY September 27, 2026'
-  note: Running head of pages 2 and 3. One bulletin, headed "St. Peter's Parish", for all the Massena-area churches.
+  quote: ST. PETER’S PARISH, MASSENA, NY September 27, 2026
+  note: Running head of pages 2 and 3. One bulletin, headed "St. Peter's Parish", for all the Massena-area
+    churches.
 - url: https://container.parishesonline.com/bulletins/06/0114/20261004B.pdf
   seen: 2026-09-30
-  note: The 4 October 2026 issue is already posted (probe container 06/0114). Same page-1 schedule as 27 September (Saturday 4 pm Sacred Heart and 6 pm St. Lawrence; Sunday 8 and 11 am St. Mary's and 9:30 am Sacred Heart), so the schedule below is the one in force until 31 October.
+  note: The 4 October 2026 issue is already posted (probe container 06/0114). Same page-1 schedule as
+    27 September (Saturday 4 pm Sacred Heart and 6 pm St. Lawrence; Sunday 8 and 11 am St. Mary's and
+    9:30 am Sacred Heart), so the schedule below is the one in force until 31 October.
 - url: https://massenacatholics.com/mass-times
   seen: 2026-09-30
   quote: 6:00 PM St. Lawrence Church
-  note: 'Parish site (eCatholic, behind Cloudflare; read in a browser with parish-site-access visit.py). Mass Times page: Saturday 4:00 PM Sacred Heart Church and 6:00 PM St. Lawrence Church; Sunday 8:00 AM St. Mary''s, 9:30 AM Sacred Heart, 11:00 AM St. Mary''s. Footer lists four addresses: Sacred Heart, St. Joseph''s (22 Bayley Rd.), St. Lawrence (30 Willard Rd, Louisville) and St. Mary''s.'
+  note: 'Parish site (eCatholic, behind Cloudflare; read in a browser with parish-site-access visit.py).
+    Mass Times page: Saturday 4:00 PM Sacred Heart Church and 6:00 PM St. Lawrence Church; Sunday 8:00
+    AM St. Mary''s, 9:30 AM Sacred Heart, 11:00 AM St. Mary''s. Footer lists four addresses: Sacred Heart,
+    St. Joseph''s (22 Bayley Rd.), St. Lawrence (30 Willard Rd, Louisville) and St. Mary''s.'
 - url: https://massenacatholics.com/bulletins-1
   seen: 2026-09-30
   quote: View Past Bulletins
-  note: 'Parish "Bulletins" page (browser): embeds ParishesOnline organization st-peters-parish-in-massena (lpi:0018000000Qc0EiAAJ, po-container:06/0114) and links its weekly issues (20260927B, 20260920B, 20260913B, 20260906B). Also carries eCatholic site id 12074, but the bulletin is not an eCatholic file (issues.py ecatholic finds no Sunday-dated issue), so that id is not recorded as a publication.'
+  note: 'Parish "Bulletins" page (browser): embeds ParishesOnline organization st-peters-parish-in-massena
+    (lpi:0018000000Qc0EiAAJ, po-container:06/0114) and links its weekly issues (20260927B, 20260920B,
+    20260913B, 20260906B). Also carries eCatholic site id 12074, but the bulletin is not an eCatholic
+    file (issues.py ecatholic finds no Sunday-dated issue), so that id is not recorded as a publication.'
 - url: https://www.rcdony.org/parish/massena
   seen: 2026-09-30
   quote: 'Worship sites: St. Mary''s Church - Massena Worship sites: St. Lawrence Church - Louisville'
-  note: 'Diocesan directory: "St. Peter''s Parish", Sacred Heart Church (212 Main Street) with worship sites St. Mary''s and St. Lawrence; it lists no St. Joseph.'
+  note: 'Diocesan directory: "St. Peter''s Parish", Sacred Heart Church (212 Main Street) with worship
+    sites St. Mary''s and St. Lawrence; it lists no St. Joseph.'
 - url: https://www.nny360.com/news/stlawrencecounty/changes-coming-to-area-catholic-communities-on-nov-1/article_03d6fbd0-b5c6-5400-a5ad-766fb7489267.html
   seen: 2026-09-30
-  quote: The Massena and Louisville churches include Sacred Heart and St. Mary’s in Massena and St. Lawrence in Louisville.
-  note: Watertown Daily Times, 2 Sep 2026. Paywalled; the body is scrambled in the raw HTML and readable only in a browser (visit.py --text), so recheck will probably not find it.
-revisit: After 1 November 2026 read the massenacatholics.com bulletin again. Does St. Lawrence still appear in the schedule (it is to become an oratory after the last Saturday, 31 October)? Has the schedule changed to Saturday 4 pm and Sunday 9 and 11 am? Does this bulletin now also cover Madrid and Waddington (st-marys-waddington row)?
+  quote: The Massena and Louisville churches include Sacred Heart and St. Mary’s in Massena and St. Lawrence
+    in Louisville.
+  note: Watertown Daily Times, 2 Sep 2026. Paywalled; the body is scrambled in the raw HTML and readable
+    only in a browser (visit.py --text), so recheck will probably not find it.
+revisit: After 1 November 2026 read the massenacatholics.com bulletin again. Does St. Lawrence still appear
+  in the schedule (it is to become an oratory after the last Saturday, 31 October)? Has the schedule changed
+  to Saturday 4 pm and Sunday 9 and 11 am? Does this bulletin now also cover Madrid and Waddington (st-marys-waddington
+  row)?
 revisit_after: 2026-11-08
+promoted: 2026-09-30
 ---
 
 ## Publisher

@@ -11,9 +11,7 @@ longitude: -74.2265241
 coordinates_from: nominatim
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:18299
-- directory:malone-2
+roster: ['gcatholic:18299', 'directory:malone-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18299
   seen: 2026-09-30
@@ -40,6 +38,7 @@ evidence:
   note: OpenStreetMap way 810123644, "Saint Helens Church, Fayette Road, Chasm Falls, Town of Malone"
     at 44.746973, -74.2265241 (found with Nominatim). Its street name (Fayette Road) does not match "County
     Highway 41".
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

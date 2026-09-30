@@ -11,32 +11,34 @@ evidence:
   quote: CATHOLIC COMMUNITY OF ST. PETER AND ST. MARY AND ST. HEDWIG
   note: 'The 9 August 2026 issue (2 pages, text layer): the churches box "St. Mary’s 6106 Blue St. Glenfield;
     St. Peter’s 5449 Shady Ave, Lowville; St. Hedwig’s 5432 St Rt 26, Turin", and the weekly schedule
-    with codes (SP), (SM), (SH): Sunday 9:00 am (SP) and 11:00 am (SH), Saturday 4:00 pm (SP) and 5:30 pm
-    (SM).'
+    with codes (SP), (SM), (SH): Sunday 9:00 am (SP) and 11:00 am (SH), Saturday 4:00 pm (SP) and 5:30
+    pm (SM).'
 - url: https://files.ecatholic.com/19929/bulletins/20260927.pdf
   seen: 2026-09-30
   note: 'Image-only PDF (4 pages, no text layer), drawn with render.py and read by eye, so `recheck` cannot
     quote it. Page 1 is headed "Welcome Home  CATHOLIC COMMUNITY OF ST. PETER AND ST. MARY AND ST. HEDWIG"
-    with photos of St. Peter''s (5449 Shady Ave, Lowville), St. Mary''s (6106 Blue Street, Glenfield) and
-    St. Hedwig''s (5432 St Rt 26, Turin), pastor Rev. Sony G. Pulickal, and "Parish Weekly Mass Schedule":
-    Sunday 27 September 9:00 am (SP) and 11:00 am (SH); weekdays 8:30 am (SP); Saturday 3 October 4:00 pm
-    (SP) and 5:30 pm (SM); Sunday 4 October 9:00 am (SP) and 11:00 am (SH). Page 2 "St. Mary''s News": "St.
-    Mary’s Church will close for the winter following the October 10th Mass" and "Parish Bulletin Update":
-    the parish is changing its bulletin publishing system "beginning next week".'
+    with photos of St. Peter''s (5449 Shady Ave, Lowville), St. Mary''s (6106 Blue Street, Glenfield)
+    and St. Hedwig''s (5432 St Rt 26, Turin), pastor Rev. Sony G. Pulickal, and "Parish Weekly Mass Schedule":
+    Sunday 27 September 9:00 am (SP) and 11:00 am (SH); weekdays 8:30 am (SP); Saturday 3 October 4:00
+    pm (SP) and 5:30 pm (SM); Sunday 4 October 9:00 am (SP) and 11:00 am (SH). Page 2 "St. Mary''s News":
+    "St. Mary’s Church will close for the winter following the October 10th Mass" and "Parish Bulletin
+    Update": the parish is changing its bulletin publishing system "beginning next week".'
 - url: https://spsmshcatholic.org/bulletins
   seen: 2026-09-30
   quote: Catholic Community of
-  note: 'The parish site (eCatholic; behind Cloudflare, its home page challenged all 8 loads and /bulletins
+  note: The parish site (eCatholic; behind Cloudflare, its home page challenged all 8 loads and /bulletins
     loaded on the 2nd, read with visit.py). Its Bulletins page embeds ecatholic:19929 and lists weekly
-    issues from 4 January to 27 September 2026 as files.ecatholic.com/19929/bulletins/<YYYYMMDD>.pdf, each
-    dated by the Sunday. Its header reads "Catholic Community of St. Peter, St. Mary, St. Hedwig" and
-    "Parish Office 5457 Shady Ave. | Lowville, NY 13367".'
+    issues from 4 January to 27 September 2026 as files.ecatholic.com/19929/bulletins/<YYYYMMDD>.pdf,
+    each dated by the Sunday. Its header reads "Catholic Community of St. Peter, St. Mary, St. Hedwig"
+    and "Parish Office 5457 Shady Ave. | Lowville, NY 13367".
 - url: https://www.rcdony.org/directory/parish-bulletins.html
   seen: 2026-09-30
   note: The diocese's bulletin page links spsmshcatholic.org/bulletins for Glenfield, Houseville and Lowville.
-revisit: Read the 4 October 2026 and later issues (files.ecatholic.com/19929/bulletins/20261004.pdf or wherever
-  the new publishing system puts them) and update website/provider/publication if the bulletin moved
+revisit: Read the 4 October 2026 and later issues (files.ecatholic.com/19929/bulletins/20261004.pdf or
+  wherever the new publishing system puts them) and update website/provider/publication if the bulletin
+  moved
 revisit_after: 2026-10-15
+promoted: 2026-09-30
 ---
 
 ## Publisher

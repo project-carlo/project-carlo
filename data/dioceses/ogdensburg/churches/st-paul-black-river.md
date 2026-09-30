@@ -56,6 +56,7 @@ evidence:
   note: 'OpenStreetMap: node 1397214769 "St. Paul''s" (catholic) at 44.0164526, -75.8013326; address nodes
     "208, Leray Street" at 44.0160524, -75.8013186 and "210, Leray Street" at 44.0157773, -75.8007131.
     The GCatholic Plus Code point is 44.0163125, -75.8014375, nearest 208.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

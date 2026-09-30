@@ -48,6 +48,7 @@ evidence:
     ecatholic:3087 and po-container:04/0642. eCatholic site 3087 has no bulletin files of its own (no
     Sunday issue in four weeks, `issues.py ecatholic`), and its Bulletins page uses the ParishesOnline
     widget.
+promoted: 2026-09-30
 ---
 
 ## Publisher

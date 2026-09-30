@@ -38,6 +38,7 @@ evidence:
   note: 'OSM (Nominatim search, 2026-09-30): way 251616449, amenity=place_of_worship, "Notre Dame De La
     Victoire Roman Catholic Church", 119 Ford Avenue, centre 44.6925637, -75.5001791 (45 m from GCatholic''s
     Plus Code).'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

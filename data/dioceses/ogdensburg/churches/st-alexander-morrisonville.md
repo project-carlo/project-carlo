@@ -25,10 +25,15 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/04/0726/20260927B.pdf
   seen: 2026-09-30
   quote: PO Box 159, 1 Church St., Morrisonville NY 12962
-  note: 'Page 1 of the 27 September 2026 issue (container 04/0726), ST. ALEXANDER block; its line "Mass Times: Saturdays - 4:00pm - Sundays 7:30am & 10:30am - Weekdays 9:00am" follows. Page 2 schedules Saturday 3 October 4:00 pm, Sunday 4 October 7:30 am and 10:30 am, and 9:00 am on Monday to Friday, all (St Alexander).'
+  note: 'Page 1 of the 27 September 2026 issue (container 04/0726), ST. ALEXANDER block; its line "Mass
+    Times: Saturdays - 4:00pm - Sundays 7:30am & 10:30am - Weekdays 9:00am" follows. Page 2 schedules
+    Saturday 3 October 4:00 pm, Sunday 4 October 7:30 am and 10:30 am, and 9:00 am on Monday to Friday,
+    all (St Alexander).'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=1+Church+Street,+Morrisonville,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address point "1, Church Street, Morrisonville, Town of Schuyler Falls" (way 809811500) at 44.69264, -73.56236, 15 m from GCatholic''s Plus Code point.'
+  note: 'Nominatim: address point "1, Church Street, Morrisonville, Town of Schuyler Falls" (way 809811500)
+    at 44.69264, -73.56236, 15 m from GCatholic''s Plus Code point.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

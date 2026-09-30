@@ -34,12 +34,13 @@ evidence:
     Louis, Sr. & Angela Purcell Schoenmaker.'
 - url: https://www.openstreetmap.org/node/10173632953
   seen: 2026-09-30
-  note: 'OSM node "St Francis Xavier Catholic Church", Butterfield Lake Road, Redwood 13679, 44.29883,
-    -75.79971 (Nominatim). No house number.'
+  note: OSM node "St Francis Xavier Catholic Church", Butterfield Lake Road, Redwood 13679, 44.29883,
+    -75.79971 (Nominatim). No house number.
 - url: https://www.nny360.com/communitynews/faithperspectives/catholic-parishes-in-north-country-make-pastoral-changes/article_cbaf3b98-4bd4-56e2-a0c0-fd5dbc834abb.html
   seen: 2026-09-30
   quote: St. Francis Xavier Church in Redwood will remain a seasonal worship site open in the summers.
-  note: 'Watertown Daily Times, 7 June 2021, photo caption. Read from the page HTML with curl.'
+  note: Watertown Daily Times, 7 June 2021, photo caption. Read from the page HTML with curl.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

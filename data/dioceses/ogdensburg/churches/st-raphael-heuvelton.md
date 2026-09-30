@@ -37,6 +37,7 @@ evidence:
   seen: 2026-09-30
   note: 'OSM (Nominatim reverse lookup of the GCatholic point, 2026-09-30): way 812926238, building=yes
     (not tagged as a church), 3 Clinton Street, Village of Heuvelton, centre 44.619035, -75.4081455.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

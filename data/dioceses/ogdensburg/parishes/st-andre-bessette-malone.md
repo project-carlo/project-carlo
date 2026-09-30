@@ -3,10 +3,7 @@ name: St. André Bessette Parish
 website: http://www.standres.org/
 bulletin_provider: parishes_online
 provider_id: st-andre-bessette-parish-12953
-publication:
-- po-org:st-andre-bessette-parish-12953
-- lpi:0018000000Qbz9qAAB
-- po-container:06/0038
+publication: ['po-org:st-andre-bessette-parish-12953', 'lpi:0018000000Qbz9qAAB', 'po-container:06/0038']
 group: St. Andre Bessette Roman Catholic Parish
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0038/20260927B.pdf
@@ -30,6 +27,7 @@ evidence:
   note: '`probe po st-andre-bessette-parish-12953`: "St. Andre Bessette Parish", 11 Church St., Malone,
     website http://www.standres.org/, ids po-org:st-andre-bessette-parish-12953, lpi:0018000000Qbz9qAAB,
     po-container:06/0038; weekly issues 2026-08-23 to 2026-09-27.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

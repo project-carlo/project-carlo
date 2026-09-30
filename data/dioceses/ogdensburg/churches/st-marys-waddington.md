@@ -13,21 +13,31 @@ name_verified: true
 address_verified: true
 roster: ['gcatholic:18342', 'directory:waddington-1']
 evidence:
-- {url: 'https://gcatholic.org/churches/usa-02/18342', seen: 2026-09-30, quote: '34 Oak St., Waddington,
-    New York 13694', note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg
-    as ''St. Mary'', 34 Oak St., Waddington, NY, 13694; kind: Church'}
-- {url: 'https://www.rcdony.org/parish/waddington', seen: 2026-09-30, note: 'Listed in Diocese of Ogdensburg
-    parish directory as "St. Mary''s Church", 34 Oak Street, Waddington, NY, 13694'}
-- {url: 'https://mwcatholics.org/files/bulletin.pdf', seen: '2026-09-30', quote: 'Sunday 9:30am', note: 'Page
-    1 (issue of 27 Sep 2026): "St. Mary’s Church 34 Oak Street Waddington, NY 13694 ... Mass Sunday 9:30am";
-    page 2 lists Sunday 27 Sep 9:30 am (SM) Mass and weekday Masses (SM) on Monday 28 Sep 7:30 am and
-    Wednesday 30 Sep 7:30 am.'}
-- {url: 'https://mwcatholics.org/', seen: '2026-09-30', quote: 'St. Mary''s Church 34 Oak Street Waddington,
-    NY 13694', note: 'Parish site home page: Sunday 9:30 a.m.; weekday Monday and Wednesday 7:30 a.m.;
-    penance Sunday 8:45-9:15 a.m.'}
-- {url: 'https://nominatim.openstreetmap.org/search?q=34+Oak+Street+Waddington+NY&format=jsonv2', seen: '2026-09-30',
-  note: 'OSM node 8796132628 is an address point "34 Oak Street, Waddington" (44.86483, -75.20085), not
-    tagged as a church; it confirms the number and street.'}
+- url: https://gcatholic.org/churches/usa-02/18342
+  seen: 2026-09-30
+  quote: 34 Oak St., Waddington, New York 13694
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Mary'', 34
+    Oak St., Waddington, NY, 13694; kind: Church'
+- url: https://www.rcdony.org/parish/waddington
+  seen: 2026-09-30
+  note: Listed in Diocese of Ogdensburg parish directory as "St. Mary's Church", 34 Oak Street, Waddington,
+    NY, 13694
+- url: https://mwcatholics.org/files/bulletin.pdf
+  seen: 2026-09-30
+  quote: Sunday 9:30am
+  note: 'Page 1 (issue of 27 Sep 2026): "St. Mary’s Church 34 Oak Street Waddington, NY 13694 ... Mass
+    Sunday 9:30am"; page 2 lists Sunday 27 Sep 9:30 am (SM) Mass and weekday Masses (SM) on Monday 28
+    Sep 7:30 am and Wednesday 30 Sep 7:30 am.'
+- url: https://mwcatholics.org/
+  seen: 2026-09-30
+  quote: St. Mary's Church 34 Oak Street Waddington, NY 13694
+  note: 'Parish site home page: Sunday 9:30 a.m.; weekday Monday and Wednesday 7:30 a.m.; penance Sunday
+    8:45-9:15 a.m.'
+- url: https://nominatim.openstreetmap.org/search?q=34+Oak+Street+Waddington+NY&format=jsonv2
+  seen: 2026-09-30
+  note: OSM node 8796132628 is an address point "34 Oak Street, Waddington" (44.86483, -75.20085), not
+    tagged as a church; it confirms the number and street.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

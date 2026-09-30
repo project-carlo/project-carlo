@@ -11,9 +11,7 @@ longitude: -74.4894375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:18240
-- directory:fort-covington
+roster: ['gcatholic:18240', 'directory:fort-covington']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18240
   seen: 2026-09-30
@@ -50,6 +48,7 @@ evidence:
   seen: 2026-09-30
   note: OpenStreetMap way 532644024, "St. Marys of the Fort Church, 2549, Chateaugay Street, Fort Covington"
     at 44.99024, -74.48919, which is within about 25 m of GCatholic's Plus Code point.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

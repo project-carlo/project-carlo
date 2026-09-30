@@ -8,18 +8,18 @@ group: ''
 evidence:
 - url: http://www.catholicsofcarthagecopenhagen.org/images/Bulletin_-_September_27,_2026.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF (5 pages, no text layer; `probe pdf` reads 0 pages), drawn with render.py and read by
-    eye, so `recheck` cannot find a quote in it. Page 1 is headed "ST JAMES & ST MARY''S PARISH COMMUNITY",
-    "SEPTEMBER 27, 2026 | TWENTY-SIXTH SUNDAY IN ORDINARY TIME", with photos of St. James (State Street,
-    Carthage) and St. Mary''s (NYS Rt. 12, Copenhagen), pastor Rev. Jaya Kumar Francis, MSC, and "Weekend
-    Mass Schedule: Saturday: 4:00pm(ant.) St. James; Sunday: 8:00am St. Mary''s, 10:00am St. James".
-    Page 2 "Mass Intentions" lists the week''s Masses at SJ and SM.'
+  note: 'Image-only PDF (5 pages, no text layer; `probe pdf` reads 0 pages), drawn with render.py and
+    read by eye, so `recheck` cannot find a quote in it. Page 1 is headed "ST JAMES & ST MARY''S PARISH
+    COMMUNITY", "SEPTEMBER 27, 2026 | TWENTY-SIXTH SUNDAY IN ORDINARY TIME", with photos of St. James
+    (State Street, Carthage) and St. Mary''s (NYS Rt. 12, Copenhagen), pastor Rev. Jaya Kumar Francis,
+    MSC, and "Weekend Mass Schedule: Saturday: 4:00pm(ant.) St. James; Sunday: 8:00am St. Mary''s, 10:00am
+    St. James". Page 2 "Mass Intentions" lists the week''s Masses at SJ and SM.'
 - url: http://www.catholicsofcarthagecopenhagen.org/bulletins.html
   seen: 2026-09-30
   quote: Bulletin for September 27, 2026
-  note: 'The parish site''s "Printable Church Bulletins" page (browser, static HTML): six weekly PDFs from
-    23 August to 27 September 2026 at /images/Bulletin_-_<Month>_<day>,_2026.pdf. The diocese''s bulletin
-    page links this page for both Carthage and Copenhagen.'
+  note: 'The parish site''s "Printable Church Bulletins" page (browser, static HTML): six weekly PDFs
+    from 23 August to 27 September 2026 at /images/Bulletin_-_<Month>_<day>,_2026.pdf. The diocese''s
+    bulletin page links this page for both Carthage and Copenhagen.'
 - url: http://www.catholicsofcarthagecopenhagen.org/massschedule.html
   seen: 2026-09-30
   quote: 10:00AM St. James
@@ -30,6 +30,7 @@ evidence:
   note: 'The directory''s website for both entries, and the address printed on the bulletin ("Website:
     www.sj-sm.org"). It answers 404 (http) and 502 (https) to a browser on 2026-09-30, so the directory''s
     link is dead; GCatholic''s link (the domain used here) works.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

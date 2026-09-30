@@ -36,6 +36,7 @@ evidence:
   seen: 2026-09-30
   note: 'OpenStreetMap node 357581443: "Queen of Heaven Church", 8900 State Route 3, Henderson, 13650,
     at 43.8497864, -76.1953408 (GCatholic Plus Code point is 43.8498125, -76.1955625, about 20 m away).'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

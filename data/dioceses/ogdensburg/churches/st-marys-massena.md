@@ -13,20 +13,30 @@ name_verified: true
 address_verified: true
 roster: ['gcatholic:18305', 'directory:massena-3']
 evidence:
-- {url: 'https://gcatholic.org/churches/usa-02/18305', seen: 2026-09-30, quote: '9 Sycamore St., Massena,
-    New York 13662', note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg
-    as ''St. Mary'', 9 Sycamore St., Massena, NY, 13662; kind: Church'}
-- {url: 'https://www.rcdony.org/parish/massena', seen: 2026-09-30, note: 'Listed in Diocese of Ogdensburg
-    parish directory as "St. Mary''s Church", 9 Sycamore Street, Massena, NY, 13662; group: St. Peter''s
-    Parish'}
-- {url: 'https://container.parishesonline.com/bulletins/06/0114/20260927B.pdf', seen: '2026-09-30', quote: '11:00am
-    (SM) † Edwin Thomas by the Family', note: 'Page 4 calendar of the 27 September 2026 St. Peter''s Parish
-    bulletin: Sunday 8:00am (SM) and 11:00am (SM), Tuesday 5:30pm (SM).'}
-- {url: 'https://massenacatholics.com/mass-times', seen: '2026-09-30', quote: '11:00 AM St. Mary''s Church',
+- url: https://gcatholic.org/churches/usa-02/18305
+  seen: 2026-09-30
+  quote: 9 Sycamore St., Massena, New York 13662
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Mary'', 9
+    Sycamore St., Massena, NY, 13662; kind: Church'
+- url: https://www.rcdony.org/parish/massena
+  seen: 2026-09-30
+  note: 'Listed in Diocese of Ogdensburg parish directory as "St. Mary''s Church", 9 Sycamore Street,
+    Massena, NY, 13662; group: St. Peter''s Parish'
+- url: https://container.parishesonline.com/bulletins/06/0114/20260927B.pdf
+  seen: 2026-09-30
+  quote: 11:00am (SM) † Edwin Thomas by the Family
+  note: 'Page 4 calendar of the 27 September 2026 St. Peter''s Parish bulletin: Sunday 8:00am (SM) and
+    11:00am (SM), Tuesday 5:30pm (SM).'
+- url: https://massenacatholics.com/mass-times
+  seen: 2026-09-30
+  quote: 11:00 AM St. Mary's Church
   note: 'Parish Mass Times page (Cloudflare; read in a browser): Sunday 8:00 AM and 11:00 AM, Tuesday
-    5:30 PM at St. Mary''s Church.'}
-- {url: 'https://massenacatholics.com/bulletins-1', seen: '2026-09-30', quote: 'St. Mary''s, 9 Sycamore
-    St., Massena', note: 'Footer of the parish site (browser): the four Massena-area addresses.'}
+    5:30 PM at St. Mary''s Church.'
+- url: https://massenacatholics.com/bulletins-1
+  seen: 2026-09-30
+  quote: St. Mary's, 9 Sycamore St., Massena
+  note: 'Footer of the parish site (browser): the four Massena-area addresses.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

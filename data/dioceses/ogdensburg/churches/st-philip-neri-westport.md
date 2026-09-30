@@ -11,9 +11,7 @@ longitude: -73.4432031
 coordinates_from: nominatim
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:18350
-- directory:westport
+roster: ['gcatholic:18350', 'directory:westport']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18350
   seen: 2026-09-30
@@ -55,7 +53,9 @@ evidence:
     numbered 6602 (way 814656662) and 6603 (way 814655142) Main Street within about 50 m; OSM has no place_of_worship
     tag for any of them. A reverse lookup at GCatholic''s point (44.18306, -73.43331), 800 m east, returns
     Westport Federated Church (7 Baybreeze Lane), a Protestant church.'
+promoted: 2026-09-30
 ---
+
 ## Holds Mass
 
 Yes, but in summer only: Saturday 4:00 pm from Memorial Day to Labor Day (Saturday Masses at Westport appear in the issues sampled from 24 May to 6 September 2026; the Saturday Mass is at Port Henry from 12 September), and the summer issues also show a weekday 8:00 am (SPN) Mass and Holy Hour some weeks. This is the schedule set at the 23 May 2026 change, and the parish's Mass Times page says "(Memorial Day-Labor Day)". Read 2026-09-30. Outside the season there is no Mass here, and the next season starts about 30 May 2027 (Memorial Day).

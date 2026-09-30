@@ -25,14 +25,19 @@ evidence:
 - url: http://www.catholicsofcarthagecopenhagen.org/massschedule.html
   seen: 2026-09-30
   quote: 4:00PM St. James (Ant)
-  note: 'The parish site''s Mass Schedule: "Saturday: 4:00PM St. James (Ant)" and Sunday 10:00AM St. James; reconciliation Saturdays 2:30PM.'
+  note: 'The parish site''s Mass Schedule: "Saturday: 4:00PM St. James (Ant)" and Sunday 10:00AM St. James;
+    reconciliation Saturdays 2:30PM.'
 - url: http://www.catholicsofcarthagecopenhagen.org/images/Bulletin_-_September_27,_2026.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF, read by eye (render.py). Page 1 cover: "St. James, State Street, Carthage" and "Saturday: 4:00pm(ant.) St. James; Sunday: 10:00am St. James"; "ST. JAMES RECTORY 327 West St. Carthage, NY 13619" and "AUGUSTINIAN ACADEMY 317 West St.". Page 2 (Mass Intentions) lists 9:30 SJ weekday Masses or Communion services Monday to Friday except Wednesday, when the weekday Mass is 9:00 SM at Copenhagen.'
+  note: 'Image-only PDF, read by eye (render.py). Page 1 cover: "St. James, State Street, Carthage" and
+    "Saturday: 4:00pm(ant.) St. James; Sunday: 10:00am St. James"; "ST. JAMES RECTORY 327 West St. Carthage,
+    NY 13619" and "AUGUSTINIAN ACADEMY 317 West St.". Page 2 (Mass Intentions) lists 9:30 SJ weekday Masses
+    or Communion services Monday to Friday except Wednesday, when the weekday Mass is 9:00 SM at Copenhagen.'
 - url: https://www.openstreetmap.org/way/808988730
   seen: 2026-09-30
-  note: 'OSM way "Saint James Roman Catholic Church", 327 West Street, Carthage, centre 43.97828,
-    -75.60789 (Nominatim viewbox search).'
+  note: OSM way "Saint James Roman Catholic Church", 327 West Street, Carthage, centre 43.97828, -75.60789
+    (Nominatim viewbox search).
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

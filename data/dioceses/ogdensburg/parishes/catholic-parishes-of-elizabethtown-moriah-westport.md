@@ -3,10 +3,7 @@ name: The Catholic Parishes of Elizabethtown, Moriah, and Westport
 website: https://www.emwparishes.org
 bulletin_provider: parishes_online
 provider_id: catholic-community-of-moriah
-publication:
-- po-org:catholic-community-of-moriah
-- lpi:0018000000Qx7PLAAZ
-- po-container:04/0733
+publication: ['po-org:catholic-community-of-moriah', 'lpi:0018000000Qx7PLAAZ', 'po-container:04/0733']
 group: The Catholic Community of Moriah (directory); Catholic Parishes of Elizabethtown, Moriah, & Westport
   (bulletin)
 evidence:
@@ -47,7 +44,9 @@ evidence:
     (a domain that now serves a ''This website is for sale!'' page; the PDF answers HTTP 441); ''Mineville''
     and ''Port Henry'' link the ParishesOnline organization catholic-community-of-moriah; Westport is
     not listed.'
+promoted: 2026-09-30
 ---
+
 ## Publisher
 
 One weekly ParishesOnline bulletin (container `04/0733`, organization "The Catholic Parishes of Elizabethtown, Moriah, & Westport" at `catholic-community-of-moriah`) serves four churches in three canonical parishes joined into one "Pastoral Care Area" (Elizabethtown, Moriah, Westport), under Fr. Joseph Giroux. The 27 September 2026 issue (read 2026-09-30) has that title as masthead and names St. Elizabeth's, All Saints, St. Patrick's and St. Philip Neri on page 1. The diocese directory lists only the Moriah pair (St. Patrick's, Port Henry and All Saints, Mineville) as "The Catholic Community of Moriah"; Elizabethtown and Westport carry the same website and phone and are in the same bulletin, so they are one row with them. I also read the Mass-schedule pages of about forty issues of the container, sampled from January 2025 to September 2026, to see which churches have Mass when (see the churches and the All Saints record).

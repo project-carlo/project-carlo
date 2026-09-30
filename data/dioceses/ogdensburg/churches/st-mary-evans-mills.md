@@ -49,6 +49,7 @@ evidence:
   note: OpenStreetMap has address nodes for both "8408, South Main Street" (44.0851750, -75.8093897) and
     "8422, South Main Street" (44.0851949, -75.8093627), 3 m apart; the GCatholic Plus Code point is 44.0851875,
     -75.8090625.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

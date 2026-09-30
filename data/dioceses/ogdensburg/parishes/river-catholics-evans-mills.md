@@ -38,6 +38,7 @@ evidence:
   seen: 2026-09-30
   note: Lists the 2019 consolidation documents ("St. Mary; St. Joseph; St. Theresa" and "St Paul and St
     Rita"); see excluded/st-joseph-philadelphia and excluded/st-theresa-of-avila-theresa.
+promoted: 2026-09-30
 ---
 
 ## Publisher

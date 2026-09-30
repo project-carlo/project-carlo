@@ -11,9 +11,7 @@ longitude: -74.0811875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18256
-- directory:chateaugay
+roster: ['gcatholic:18256', 'directory:chateaugay']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18256
   seen: 2026-09-30
@@ -44,6 +42,7 @@ evidence:
   note: OpenStreetMap node 357649525, "Saint Patrick's Roman Catholic Church, West Main Street, Village
     of Chateaugay" at 44.9259, -74.0814, which is within about 40 m of GCatholic's Plus Code point (no
     house number in OSM).
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

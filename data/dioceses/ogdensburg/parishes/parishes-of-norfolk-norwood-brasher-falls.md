@@ -6,44 +6,58 @@ provider_id: ''
 publication: ['ecatholic:15674']
 group: Parish of the Visitation and St. Raymond / St. Andrew's / St. Patrick's
 evidence:
-- {url: 'https://files.ecatholic.com/15674/bulletins/20260927.pdf', seen: '2026-09-30', note: '27 September
-    2026 issue, 5 pages, scanned images (no text layer; read with render.py, page 1 and 2). Page 1 masthead:
-    three church photographs labelled "Church of the Visitation", "St. Andrew''s Church" and "St. Patrick''s
-    Church" over the title "Catholic Parish Weekly". Its "LITURGICAL SCHEDULE" gives Masses at Church
-    of the Visitation, St. Patrick''s and St. Andrew''s only, and the Sanctuary Lamp box names the same
-    three. recheck cannot find text in this file.'}
-- {url: 'https://files.ecatholic.com/15674/bulletins/20260906.pdf', seen: '2026-09-30', quote: 'Office
-    for St Andrew’s Church of the Visitation & St. Patrick’s: 3 Morris St., Norfolk, NY 13667', note: '6
-    September 2026 issue (text layer on pages 1-3), page 1: one office for the three churches. Trustees
-    are listed for "Parish of the Visitation & St. Raymond", "St. Andrew''s Parish" and "St. Patrick''s
-    Parish": three canonical parishes, one bulletin.'}
-- {url: 'https://files.ecatholic.com/15674/bulletins/20260906.pdf', seen: '2026-09-30', quote: 'St. Patrick’s
-    Church – $1,647.00', note: 'Page 2, "God''s Plan for Giving": collections for "Parish of the Visitation
-    & St. Raymond", "St. Andrew''s Church" and "St. Patrick''s Church". The Raymondville building is never
-    named as a place of Mass: grep of this and five other 2026 issues for "Raymondville" finds only the
-    pastor''s given name Raymond and the parish title.'}
-- {url: 'https://norfolknorwoodraymondville.org/', seen: '2026-09-30', quote: '8:30 AM St. Patrick''s,
-    Brasher Falls', note: 'Parish site home page (eCatholic, behind Cloudflare; read in a browser with
-    visit.py). Mass Times: Saturday 4:00 PM St. Andrew''s, Norwood; Sunday 8:30 AM St. Patrick''s, Brasher
-    Falls and 10:30 AM Visitation, Norfolk; Monday, Tuesday, Wednesday, Thursday 8:30 AM Visitation (Tuesday
-    and Thursday also St. Patrick''s); Friday 8:30 AM St. Andrew''s.'}
-- {url: 'https://norfolknorwoodraymondville.org/bulletins', seen: '2026-09-30', quote: 'September 27,
-    2026', note: 'Bulletin archive page (browser): weekly PDFs at files.ecatholic.com/15674/bulletins/YYYYMMDD.pdf
+- url: https://files.ecatholic.com/15674/bulletins/20260927.pdf
+  seen: 2026-09-30
+  note: '27 September 2026 issue, 5 pages, scanned images (no text layer; read with render.py, page 1
+    and 2). Page 1 masthead: three church photographs labelled "Church of the Visitation", "St. Andrew''s
+    Church" and "St. Patrick''s Church" over the title "Catholic Parish Weekly". Its "LITURGICAL SCHEDULE"
+    gives Masses at Church of the Visitation, St. Patrick''s and St. Andrew''s only, and the Sanctuary
+    Lamp box names the same three. recheck cannot find text in this file.'
+- url: https://files.ecatholic.com/15674/bulletins/20260906.pdf
+  seen: 2026-09-30
+  quote: 'Office for St Andrew’s Church of the Visitation & St. Patrick’s: 3 Morris St., Norfolk, NY 13667'
+  note: '6 September 2026 issue (text layer on pages 1-3), page 1: one office for the three churches.
+    Trustees are listed for "Parish of the Visitation & St. Raymond", "St. Andrew''s Parish" and "St.
+    Patrick''s Parish": three canonical parishes, one bulletin.'
+- url: https://files.ecatholic.com/15674/bulletins/20260906.pdf
+  seen: 2026-09-30
+  quote: St. Patrick’s Church – $1,647.00
+  note: 'Page 2, "God''s Plan for Giving": collections for "Parish of the Visitation & St. Raymond", "St.
+    Andrew''s Church" and "St. Patrick''s Church". The Raymondville building is never named as a place
+    of Mass: grep of this and five other 2026 issues for "Raymondville" finds only the pastor''s given
+    name Raymond and the parish title.'
+- url: https://norfolknorwoodraymondville.org/
+  seen: 2026-09-30
+  quote: 8:30 AM St. Patrick's, Brasher Falls
+  note: 'Parish site home page (eCatholic, behind Cloudflare; read in a browser with visit.py). Mass Times:
+    Saturday 4:00 PM St. Andrew''s, Norwood; Sunday 8:30 AM St. Patrick''s, Brasher Falls and 10:30 AM
+    Visitation, Norfolk; Monday, Tuesday, Wednesday, Thursday 8:30 AM Visitation (Tuesday and Thursday
+    also St. Patrick''s); Friday 8:30 AM St. Andrew''s.'
+- url: https://norfolknorwoodraymondville.org/bulletins
+  seen: 2026-09-30
+  quote: September 27, 2026
+  note: 'Bulletin archive page (browser): weekly PDFs at files.ecatholic.com/15674/bulletins/YYYYMMDD.pdf
     back to January 2026 and earlier years; the newest is 27 September 2026 (issues.py ecatholic ecatholic:15674
-    finds all Sundays back to March 2026). Site behind Cloudflare, so recheck answers 403.'}
-- {url: 'https://norfolknorwoodraymondville.org/pvsr', seen: '2026-09-30', quote: comprised of three Catholic
-    Parishes (St. Andrew's / Visitation and St. Raymond / St. Patrick's), note: 'About Us: one pastor
-    serves the three parishes, "serving the communities of Norwood, Norfolk, Raymondville, Stockholm,
-    Winthrop, Brasher Falls, North Lawrence and Lawrenceville". (Site behind Cloudflare; read in a browser.)'}
-- {url: 'https://www.rcdony.org/parish/norfolk', seen: '2026-09-30', quote: 'Parish of the Visitation
-    and St. Raymond Church of the Visitation 3 Morris Street Norfolk, New York 13667', note: 'Diocesan
-    directory entry for Norfolk; the Norwood and Brasher Falls entries (rcdony.org/parish/norwood, /brasher-falls)
-    give the same pastor, the same website and the office phone 315-384-4242.'}
-- {url: 'https://www.nny360.com/news/final-masses-celebrated-at-two-local-churches/article_13690a16-3219-5b15-b685-08ea76e9264c.html',
-  seen: '2026-09-30', quote: 'Parishes will technically remain open, but will not hold regular services',
+    finds all Sundays back to March 2026). Site behind Cloudflare, so recheck answers 403.'
+- url: https://norfolknorwoodraymondville.org/pvsr
+  seen: 2026-09-30
+  quote: comprised of three Catholic Parishes (St. Andrew's / Visitation and St. Raymond / St. Patrick's)
+  note: 'About Us: one pastor serves the three parishes, "serving the communities of Norwood, Norfolk,
+    Raymondville, Stockholm, Winthrop, Brasher Falls, North Lawrence and Lawrenceville". (Site behind
+    Cloudflare; read in a browser.)'
+- url: https://www.rcdony.org/parish/norfolk
+  seen: 2026-09-30
+  quote: Parish of the Visitation and St. Raymond Church of the Visitation 3 Morris Street Norfolk, New
+    York 13667
+  note: Diocesan directory entry for Norfolk; the Norwood and Brasher Falls entries (rcdony.org/parish/norwood,
+    /brasher-falls) give the same pastor, the same website and the office phone 315-384-4242.
+- url: https://www.nny360.com/news/final-masses-celebrated-at-two-local-churches/article_13690a16-3219-5b15-b685-08ea76e9264c.html
+  seen: 2026-09-30
+  quote: Parishes will technically remain open, but will not hold regular services
   note: 'Watertown Daily Times, 27 Jan 2019: St. Lawrence (North Lawrence) and St. Raymond (Raymondville)
     celebrated their final regular Masses. Body scrambled in the raw HTML (paywall), readable in a browser;
-    the subhead quoted is in the page text.'}
+    the subhead quoted is in the page text.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

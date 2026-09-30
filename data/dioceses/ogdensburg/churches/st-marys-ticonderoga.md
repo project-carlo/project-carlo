@@ -11,9 +11,7 @@ longitude: -73.4255625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18339
-- directory:ticonderoga
+roster: ['gcatholic:18339', 'directory:ticonderoga']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18339
   seen: 2026-09-30
@@ -38,7 +36,9 @@ evidence:
   seen: 2026-09-30
   note: OpenStreetMap way 796488346 'Saint Mary's Catholic Church', 22 Father Jogues Place, Ticonderoga
     (43.84635, -73.42557).
+promoted: 2026-09-30
 ---
+
 ## Holds Mass
 
 Yes, weekly: Saturday 4:00 pm and Sunday 9:30 am, plus weekday Mass on Monday and Friday at 9:00 am (the community's page-1 schedule in the 27 September 2026 ParishesOnline bulletin, container 03/0940, and the community's website, both read 2026-09-30; the bulletin's schedule is an image). Page 2 of the same issue has Mass intentions at St. Mary's for 28 September, 2 October, 3 October and 4 October.

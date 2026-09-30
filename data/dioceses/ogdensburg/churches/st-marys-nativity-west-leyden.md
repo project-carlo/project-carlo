@@ -25,11 +25,14 @@ evidence:
 - url: https://catholicparishesofslc.weebly.com/uploads/1/3/1/4/131484079/bulletin_sept_13.pdf
   seen: 2026-09-30
   quote: 4 pm @ WL Tom Alger
-  note: 'Page 2 of the 13 September 2026 issue: Saturday 12 September 4 pm @ WL Tom Alger by Hrim Family; Saturday 19 September 4 pm @ WL. Page 1: "St. Mary’s Nativity: West Leyden".'
+  note: 'Page 2 of the 13 September 2026 issue: Saturday 12 September 4 pm @ WL Tom Alger by Hrim Family;
+    Saturday 19 September 4 pm @ WL. Page 1: "St. Mary’s Nativity: West Leyden".'
 - url: https://catholicparishesofslc.weebly.com/
   seen: 2026-09-30
   quote: St. Mary's Nativity 1183 State Route 26 West Leyden
-  note: 'Home page of the parish site, churches list: "St. Mary''s Nativity 1183 State Route 26 West Leyden"; Mass Schedule "Saturday - St. Mary''s Nativity (West Leyden) 4pm".'
+  note: 'Home page of the parish site, churches list: "St. Mary''s Nativity 1183 State Route 26 West Leyden";
+    Mass Schedule "Saturday - St. Mary''s Nativity (West Leyden) 4pm".'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

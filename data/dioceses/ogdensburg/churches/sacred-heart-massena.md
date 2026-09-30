@@ -13,22 +13,31 @@ name_verified: true
 address_verified: true
 roster: ['gcatholic:18303', 'directory:massena-1']
 evidence:
-- {url: 'https://gcatholic.org/churches/usa-02/18303', seen: 2026-09-30, quote: '212 Main St., Massena,
-    New York 13662', note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg
-    as ''Sacred Heart'', 212 Main St., Massena, NY, 13662; kind: Church'}
-- {url: 'https://www.rcdony.org/parish/massena', seen: 2026-09-30, note: 'Listed in Diocese of Ogdensburg
-    parish directory as ''Sacred Heart Church'', 212 Main Street, Massena, NY, 13662; group: St. Peter''s
-    Parish'}
-- {url: 'https://container.parishesonline.com/bulletins/06/0114/20260927B.pdf', seen: '2026-09-30', quote: '4:00pm
-    (SH) † Marie Proulx by Tom & Linda Proulx', note: 'Page 4 calendar of the 27 September 2026 St. Peter''s
-    Parish bulletin: Saturday 4:00pm (SH) vigil, Sunday 9:30am (SH), weekdays 12:05pm (SH).'}
-- {url: 'https://massenacatholics.com/mass-times', seen: '2026-09-30', quote: '4:00 PM Sacred Heart Church',
-  note: 'Parish Mass Times page (Cloudflare; read in a browser). Saturday 4:00 PM, Sunday 9:30 AM, Monday
-    12:05 PM, Wednesday to Friday 12:05 PM, first Saturday 9:00 AM at Sacred Heart Church.'}
-- {url: 'https://parishesonline.com/organization/st-peters-parish-in-massena', seen: '2026-09-30', note: 'ParishesOnline
-    organization of the parish (`probe po st-peters-parish-in-massena`, 2026-09-30): address "212 Main
-    Street, Massena, New York, 13662-0329", 44.9256706, -74.8911896. The page is script-rendered, so there
-    is no quote for recheck.'}
+- url: https://gcatholic.org/churches/usa-02/18303
+  seen: 2026-09-30
+  quote: 212 Main St., Massena, New York 13662
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''Sacred Heart'',
+    212 Main St., Massena, NY, 13662; kind: Church'
+- url: https://www.rcdony.org/parish/massena
+  seen: 2026-09-30
+  note: 'Listed in Diocese of Ogdensburg parish directory as ''Sacred Heart Church'', 212 Main Street,
+    Massena, NY, 13662; group: St. Peter''s Parish'
+- url: https://container.parishesonline.com/bulletins/06/0114/20260927B.pdf
+  seen: 2026-09-30
+  quote: 4:00pm (SH) † Marie Proulx by Tom & Linda Proulx
+  note: 'Page 4 calendar of the 27 September 2026 St. Peter''s Parish bulletin: Saturday 4:00pm (SH) vigil,
+    Sunday 9:30am (SH), weekdays 12:05pm (SH).'
+- url: https://massenacatholics.com/mass-times
+  seen: 2026-09-30
+  quote: 4:00 PM Sacred Heart Church
+  note: Parish Mass Times page (Cloudflare; read in a browser). Saturday 4:00 PM, Sunday 9:30 AM, Monday
+    12:05 PM, Wednesday to Friday 12:05 PM, first Saturday 9:00 AM at Sacred Heart Church.
+- url: https://parishesonline.com/organization/st-peters-parish-in-massena
+  seen: 2026-09-30
+  note: 'ParishesOnline organization of the parish (`probe po st-peters-parish-in-massena`, 2026-09-30):
+    address "212 Main Street, Massena, New York, 13662-0329", 44.9256706, -74.8911896. The page is script-rendered,
+    so there is no quote for recheck.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

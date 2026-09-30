@@ -11,9 +11,7 @@ longitude: -74.9730625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18320
-- directory:old-forge
+roster: ['gcatholic:18320', 'directory:old-forge']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18320
   seen: 2026-09-30
@@ -42,7 +40,9 @@ evidence:
   seen: 2026-09-30
   note: OpenStreetMap way 637975076 'Saint Bartholomew's Church', 103 Crosby Boulevard, Old Forge (43.70900,
     -74.97333).
+promoted: 2026-09-30
 ---
+
 ## Holds Mass
 
 Yes, weekly: Saturday 4:00 pm, Sunday 10:00 am, Tuesday 8:00 am and Thursday 8:00 am (bulletin for 26 September to 4 October 2026, page 1, read 2026-09-30; the website gives the same times). Confessions Saturday 3:15 to 3:45 pm.

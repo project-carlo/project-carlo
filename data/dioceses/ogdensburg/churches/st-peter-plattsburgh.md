@@ -24,11 +24,17 @@ evidence:
     Plattsburgh, NY, 12901; group: Holy Cross Parish'
 - url: https://container.parishesonline.com/bulletins/04/0730/20260927B.pdf
   seen: 2026-09-30
-  quote: 'S t .  P e t e r ’ s  C h u r c h  -  1 1 4  C o r n e l i a  S t .  D a i l y  M a s s  1 2 : 0 5  P M  M o n d a y  -  F r i d a y  W e e k e n d  M a s s  4 : 0 0  P M  A n t i c i p a t e d  S a t u r d a y  |   1 1 : 1 5  A M  S u n d a y'
-  note: 'Page 1 of the 27 September 2026 Holy Cross bulletin (container 04/0730); letters spaced out in the text layer. Page 3: Saturday 3 October 4:00pm (SP), Sunday 4 October 11:15am (SP), 12:05pm (SP) every weekday.'
+  quote: 'S t .  P e t e r ’ s  C h u r c h  -  1 1 4  C o r n e l i a  S t .  D a i l y  M a s s  1 2
+    : 0 5  P M  M o n d a y  -  F r i d a y  W e e k e n d  M a s s  4 : 0 0  P M  A n t i c i p a t e
+    d  S a t u r d a y  |   1 1 : 1 5  A M  S u n d a y'
+  note: 'Page 1 of the 27 September 2026 Holy Cross bulletin (container 04/0730); letters spaced out in
+    the text layer. Page 3: Saturday 3 October 4:00pm (SP), Sunday 4 October 11:15am (SP), 12:05pm (SP)
+    every weekday.'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=114+Cornelia+Street,+Plattsburgh,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address point "114, Cornelia Street, City of Plattsburgh" (way 808887954) at 44.69948, -73.45895, 55 m from GCatholic''s Plus Code point.'
+  note: 'Nominatim: address point "114, Cornelia Street, City of Plattsburgh" (way 808887954) at 44.69948,
+    -73.45895, 55 m from GCatholic''s Plus Code point.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

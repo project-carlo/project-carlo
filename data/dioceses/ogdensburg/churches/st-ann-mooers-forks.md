@@ -24,18 +24,26 @@ evidence:
     Forks, NY, 12959
 - url: https://files.ecatholic.com/17009/bulletins/20260927.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF (no text layer), read with parish-site-access render.py, so `recheck` cannot find text in it. 27 September 2026 issue, Mass intentions: "Sat. 4:00 PM (SA) People of the Parish", "Mon.8:00AM(SA)+", "Thurs.8:00AM(SA)+", "Sat. 4:00PM(SA)+ Russell Gadway", "Sun.8:00AM(SA)+ Leon Duprey"; "Trunk or Treat ... in the St. Ann''s Church parking lot" and the triduum box "October 1-SA Church, 8am".'
+  note: 'Image-only PDF (no text layer), read with parish-site-access render.py, so `recheck` cannot find
+    text in it. 27 September 2026 issue, Mass intentions: "Sat. 4:00 PM (SA) People of the Parish", "Mon.8:00AM(SA)+",
+    "Thurs.8:00AM(SA)+", "Sat. 4:00PM(SA)+ Russell Gadway", "Sun.8:00AM(SA)+ Leon Duprey"; "Trunk or Treat
+    ... in the St. Ann''s Church parking lot" and the triduum box "October 1-SA Church, 8am".'
 - url: https://17009.sites.ecatholic.com/mass-schedule
   seen: 2026-09-30
   quote: 'Saturday: 4:00 PM St. Ann''s, Mooers Forks'
-  note: Parish website Mass Schedule page (eCatholic behind Cloudflare; read in a browser with visit.py on 2026-09-30, so `recheck` reports it unreachable); also Sunday 8:00 AM, Monday 8:00 AM and Thursday 8:00 AM at St. Ann's.
+  note: Parish website Mass Schedule page (eCatholic behind Cloudflare; read in a browser with visit.py
+    on 2026-09-30, so `recheck` reports it unreachable); also Sunday 8:00 AM, Monday 8:00 AM and Thursday
+    8:00 AM at St. Ann's.
 - url: https://17009.sites.ecatholic.com/our-parishes
   seen: 2026-09-30
   quote: St. Ann's Church 3066 State Route 11 Mooers Forks, NY 12959
   note: 'Parish website "Our Parishes" page (same caveat): 3066, not 3062.'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=3062+US+Route+11,+Mooers+Forks,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address points "3062, State Route 11, Mooers" (way 809686563) at 44.95878, -73.63789 and "3066, State Route 11" (way 809688340) at 44.95863, -73.63833, 40 m apart; GCatholic''s Plus Code point is 130 m from the 3062 point.'
+  note: 'Nominatim: address points "3062, State Route 11, Mooers" (way 809686563) at 44.95878, -73.63789
+    and "3066, State Route 11" (way 809688340) at 44.95863, -73.63833, 40 m apart; GCatholic''s Plus Code
+    point is 130 m from the 3062 point.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

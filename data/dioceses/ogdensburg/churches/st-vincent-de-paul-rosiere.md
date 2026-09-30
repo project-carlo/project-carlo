@@ -25,15 +25,18 @@ evidence:
 - url: http://www.cvrchparish.org/files/bulletin.pdf
   seen: 2026-09-30
   quote: ST. VINCENT DE PAUL CHURCH—ROSIERE
-  note: 'Page 2 of the 27 September 2026 issue: Saturday 26 September 4:00 pm and Saturday 3 October 4:00 pm Masses; the attendance line reads "R 4:00 pm...69".'
+  note: 'Page 2 of the 27 September 2026 issue: Saturday 26 September 4:00 pm and Saturday 3 October 4:00
+    pm Masses; the attendance line reads "R 4:00 pm...69".'
 - url: http://www.cvrchparish.org/
   seen: 2026-09-30
   quote: Saturday – Rosiere / St Vincent De Paul – 4 pm until the end of October 2026
-  note: 'The parish site''s home page Mass Schedule (the only Rosiere Mass is Saturday; "until the end of October 2026"); it lists the church at "31399 County Route 4 Cape Vincent (Rosiere), NY 13601".'
+  note: The parish site's home page Mass Schedule (the only Rosiere Mass is Saturday; "until the end of
+    October 2026"); it lists the church at "31399 County Route 4 Cape Vincent (Rosiere), NY 13601".
 - url: https://www.openstreetmap.org/node/3475169606
   seen: 2026-09-30
-  note: 'OSM node "St. Vincent De Paul Church", 31399 County Road 4, Rosiere 13618, 44.12191, -76.24126
-    (Nominatim search).'
+  note: OSM node "St. Vincent De Paul Church", 31399 County Road 4, Rosiere 13618, 44.12191, -76.24126
+    (Nominatim search).
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

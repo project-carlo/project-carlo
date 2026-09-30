@@ -36,6 +36,7 @@ evidence:
   note: 'OpenStreetMap: address point "320, Lynde Street West" at 43.9821374, -75.9102918 and node 357631265
     "Our Lady of the Sacred Heart Roman Catholic Church" at 43.9822222, -75.9108333; the GCatholic Plus
     Code point is 43.9820625, -75.9103125.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

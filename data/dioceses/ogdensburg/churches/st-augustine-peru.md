@@ -25,10 +25,15 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/04/0726/20260927B.pdf
   seen: 2026-09-30
   quote: ST. AUGUSTINE 3035 Main Street, Peru, 12972
-  note: 'Page 1 of the 27 September 2026 issue (container 04/0726); its line "Mass Times: Saturdays - 4:30pm - Sundays 9:30am - Tuesdays & Fridays 8:00am" follows. Page 2: Saturday 3 October 4:30 pm, Sunday 4 October 9:30 am, Tuesday 29 September and Friday 2 October 8:00 am, all (St Augustine).'
+  note: 'Page 1 of the 27 September 2026 issue (container 04/0726); its line "Mass Times: Saturdays -
+    4:30pm - Sundays 9:30am - Tuesdays & Fridays 8:00am" follows. Page 2: Saturday 3 October 4:30 pm,
+    Sunday 4 October 9:30 am, Tuesday 29 September and Friday 2 October 8:00 am, all (St Augustine).'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=3035+Main+Street,+Peru,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address point "3035, Main Street, Town of Peru" (way 809757711) at 44.58249, -73.52443, 15 m from GCatholic''s Plus Code point. The directory''s "3029 Main Street" is also an OSM address point (way 809757564, 44.58238, -73.52495), about 40 m west: the neighbouring building, not the church.'
+  note: 'Nominatim: address point "3035, Main Street, Town of Peru" (way 809757711) at 44.58249, -73.52443,
+    15 m from GCatholic''s Plus Code point. The directory''s "3029 Main Street" is also an OSM address
+    point (way 809757564, 44.58238, -73.52495), about 40 m west: the neighbouring building, not the church.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -11,9 +11,7 @@ longitude: -74.2876875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:18301
-- directory:malone-1
+roster: ['gcatholic:18301', 'directory:malone-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18301
   seen: 2026-09-30
@@ -39,6 +37,7 @@ evidence:
   seen: 2026-09-30
   note: '`probe po`: "11 Church St., Malone, New York, 12953-1750", point 44.849439, -74.287023; the bulletin''s
     parish office is 12 Homestead Park.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

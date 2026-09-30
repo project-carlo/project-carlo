@@ -16,22 +16,30 @@ evidence:
 - url: https://gcatholic.org/churches/usa-02/18340
   seen: 2026-09-30
   quote: 48 Wawbeek Ave., Tupper Lake, New York 12986
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Alphonsus'', 48 Wawbeek Ave., Tupper Lake, NY, 12986; kind: Church. Plus Code 87P76GCM+GP.'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Alphonsus'',
+    48 Wawbeek Ave., Tupper Lake, NY, 12986; kind: Church. Plus Code 87P76GCM+GP.'
 - url: https://www.rcdony.org/parish/tupper-lake
   seen: 2026-09-30
-  note: Listed in Diocese of Ogdensburg parish directory as 'St. Alphonsus Church', 48 Wawbeek Avenue, Tupper Lake, NY, 12986 (directory:tupper-lake), group "St. Alphonsus - Holy Name of Jesus Parish", pastor Reverend Severinus Torwoe.
+  note: Listed in Diocese of Ogdensburg parish directory as 'St. Alphonsus Church', 48 Wawbeek Avenue,
+    Tupper Lake, NY, 12986 (directory:tupper-lake), group "St. Alphonsus - Holy Name of Jesus Parish",
+    pastor Reverend Severinus Torwoe.
 - url: https://files.ecatholic.com/15094/bulletins/20260913.pdf
   seen: 2026-09-30
   quote: St. Alphonsus-Holy Name of Jesus Parish, 48 Wawbeek Ave, Tupper Lake
-  note: 'Page 2 of the 13 September 2026 issue. Page 3 lists Tupper Lake Masses "Saturday 09/19 4:00pm SA", "Sunday 09/20 8:30am SA" and "Sunday 09/20 10:30am SA" (SA = St. Alphonsus) besides weekday 8:00am HGC (Holy Ghost Chapel) ones.'
+  note: Page 2 of the 13 September 2026 issue. Page 3 lists Tupper Lake Masses "Saturday 09/19 4:00pm
+    SA", "Sunday 09/20 8:30am SA" and "Sunday 09/20 10:30am SA" (SA = St. Alphonsus) besides weekday 8:00am
+    HGC (Holy Ghost Chapel) ones.
 - url: https://tupperlakecatholics.org/mass-times
   seen: 2026-09-30
   quote: 10:30 AM St. Alphonsus, Tupper Lake
-  note: 'Parish site Mass Times page (eCatholic, behind Cloudflare; read in a browser with parish-site-access visit.py): Saturday 4:00 PM, Sunday 8:30 AM and 10:30 AM St. Alphonsus, Tupper Lake.'
+  note: 'Parish site Mass Times page (eCatholic, behind Cloudflare; read in a browser with parish-site-access
+    visit.py): Saturday 4:00 PM, Sunday 8:30 AM and 10:30 AM St. Alphonsus, Tupper Lake.'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=48+Wawbeek+Avenue,+Tupper+Lake,+NY
   seen: 2026-09-30
   quote: 48, Wawbeek Avenue, Village of Tupper Lake
-  note: OSM address point 48 Wawbeek Avenue (a house-type point) at 44.22109, -74.46545, about 25 m from GCatholic's Plus Code point.
+  note: OSM address point 48 Wawbeek Avenue (a house-type point) at 44.22109, -74.46545, about 25 m from
+    GCatholic's Plus Code point.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

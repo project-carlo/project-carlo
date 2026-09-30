@@ -25,7 +25,10 @@ evidence:
 - url: https://www.rcdony.org/images/Harrisvillebulletin-1.pdf
   seen: 2026-09-30
   quote: St. Francis Solanus Church
-  note: 'Letterhead of the 27 September 2026 bulletin (fixed URL, overwritten weekly): "St. Francis Solanus Church 14361 Maple Street Post Office Box 208 Harrisville, NY 13648-0208"; "Sunday, September 27, 2026 Twenty-sixth Sunday of Ordinary Time ... Harley Hooper by Rick and Julie Chartrand" is the Sunday intention.'
+  note: 'Letterhead of the 27 September 2026 bulletin (fixed URL, overwritten weekly): "St. Francis Solanus
+    Church 14361 Maple Street Post Office Box 208 Harrisville, NY 13648-0208"; "Sunday, September 27,
+    2026 Twenty-sixth Sunday of Ordinary Time ... Harley Hooper by Rick and Julie Chartrand" is the Sunday
+    intention.'
 - url: https://discovermass.com/church/st-francis-solanus-harrisville-ny/
   seen: 2026-09-30
   quote: 14355 Maple Street, Harrisville, NY 13648
@@ -33,7 +36,9 @@ evidence:
 - url: https://www.rcdony.org/parish/harrisville
   seen: 2026-09-30
   quote: 14355 Maple Street
-  note: 'The diocese''s page for Harrisville: "St. Francis Solanus Church 14355 Maple Street Harrisville, New York 13648"; "Mailing Address: 14361 Maple Street P.O. Box 208".'
+  note: 'The diocese''s page for Harrisville: "St. Francis Solanus Church 14355 Maple Street Harrisville,
+    New York 13648"; "Mailing Address: 14361 Maple Street P.O. Box 208".'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -11,9 +11,7 @@ longitude: -74.5451875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18334
-- directory:st-regis-falls
+roster: ['gcatholic:18334', 'directory:st-regis-falls']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18334
   seen: 2026-09-30
@@ -39,6 +37,7 @@ evidence:
   note: 'North Country Catholic Franklin events page, read 2026-09-30: "St. Regis Falls – ... first Saturday
     Devotion and Holy Hour for Vocations ... Following the 4:30 anticipated Mass" (an old listing; the
     27 September bulletin has no Saturday Mass here). Not used for the schedule.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

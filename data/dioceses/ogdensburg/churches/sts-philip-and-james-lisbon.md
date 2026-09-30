@@ -43,6 +43,7 @@ revisit: 'Confirm where Mass is said in Lisbon and which building is the church:
   Street, GCatholic (Plus Code) points at 55 Church Street 330 m south and gives "6892 County Route 10".
   Read a current Heuvelton/Lisbon bulletin that names the church per Mass, or call the rectory (315-344-2383).'
 revisit_after: 2026-12-31
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

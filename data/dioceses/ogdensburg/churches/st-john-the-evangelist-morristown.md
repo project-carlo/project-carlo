@@ -36,6 +36,7 @@ evidence:
   seen: 2026-09-30
   note: 'OSM (Nominatim reverse lookup of the GCatholic point, 2026-09-30): address node 506 Gouverneur
     Street, Town of Morristown, ZIP 13664, 44.5858767, -75.6458837, 22 m from GCatholics Plus Code.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

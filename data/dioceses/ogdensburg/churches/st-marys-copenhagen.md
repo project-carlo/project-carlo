@@ -25,10 +25,15 @@ evidence:
 - url: http://www.catholicsofcarthagecopenhagen.org/massschedule.html
   seen: 2026-09-30
   quote: 8:00AM St. Mary's
-  note: 'The parish site''s Mass Schedule: Sunday 8:00AM at St. Mary''s, reconciliation Sundays 7:30AM at St. Mary''s (there is no Saturday or weekday Mass at Copenhagen).'
+  note: 'The parish site''s Mass Schedule: Sunday 8:00AM at St. Mary''s, reconciliation Sundays 7:30AM
+    at St. Mary''s (there is no Saturday or weekday Mass at Copenhagen).'
 - url: http://www.catholicsofcarthagecopenhagen.org/images/Bulletin_-_September_27,_2026.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF, read by eye. Page 1 cover: "St. Mary''s NYS Rt. 12, Copenhagen; Land Deeded 1901, Incorporated, 1890; Present Church Dedicated, 1902" and "Sunday: 8:00am St. Mary''s"; page 2 Mass Intentions "Sunday, September 27 8:00SM Annette Newman by Thompson family", and 9:00SM Wednesday 30 September.'
+  note: 'Image-only PDF, read by eye. Page 1 cover: "St. Mary''s NYS Rt. 12, Copenhagen; Land Deeded 1901,
+    Incorporated, 1890; Present Church Dedicated, 1902" and "Sunday: 8:00am St. Mary''s"; page 2 Mass
+    Intentions "Sunday, September 27 8:00SM Annette Newman by Thompson family", and 9:00SM Wednesday 30
+    September.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

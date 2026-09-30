@@ -9,21 +9,33 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/03/1493/20260927B.pdf
   seen: 2026-09-30
   quote: Eastern Lake Ontario Catholics September 27, 2026
-  note: 'Page 1 (masthead) of the 27 September 2026 issue, ParishesOnline container 03/1493 (6 pages, text layer). It lists four churches with their addresses: St. Andrew''s, 107 Woolsey Street, Sackets Harbor; Queen of Heaven, 8900 US RT 3, Henderson; Immaculate Conception, 214 West Main Street, Brownville; St. Cecilia''s, 17 Grove Street, Adams.'
+  note: 'Page 1 (masthead) of the 27 September 2026 issue, ParishesOnline container 03/1493 (6 pages,
+    text layer). It lists four churches with their addresses: St. Andrew''s, 107 Woolsey Street, Sackets
+    Harbor; Queen of Heaven, 8900 US RT 3, Henderson; Immaculate Conception, 214 West Main Street, Brownville;
+    St. Cecilia''s, 17 Grove Street, Adams.'
 - url: https://container.parishesonline.com/bulletins/03/1493/20260927B.pdf
   seen: 2026-09-30
   quote: 4:00 pm (IC) 4:30 pm (SC) 8:30 am (QH) 9:00 am (IC) 10:30 am (SA) 11:00 am (SC)
-  note: 'Page 2, "LITURGY SCHEDULE", weekend of 26-27 September (repeated for 3-4 October): one schedule for all four churches, keyed by letters. The weekday Masses of 28 September to 2 October are also spread over IC, SC, QH and SA.'
+  note: 'Page 2, "LITURGY SCHEDULE", weekend of 26-27 September (repeated for 3-4 October): one schedule
+    for all four churches, keyed by letters. The weekday Masses of 28 September to 2 October are also
+    spread over IC, SC, QH and SA.'
 - url: https://container.parishesonline.com/bulletins/03/1493/20260927B.pdf
   seen: 2026-09-30
-  quote: 'SC= St. Cecilia''s in Adams IC = Immac. Conception in Brownville SA = St. Andrews in Sackets Harbor QH = Queen of Heaven in Henderson'
-  note: Page 2, the key to the schedule codes. The Sunday intention "All the People of Our Four Parishes" on the same page names the four.
+  quote: SC= St. Cecilia's in Adams IC = Immac. Conception in Brownville SA = St. Andrews in Sackets Harbor
+    QH = Queen of Heaven in Henderson
+  note: Page 2, the key to the schedule codes. The Sunday intention "All the People of Our Four Parishes"
+    on the same page names the four.
 - url: https://www.elocparishes.org/
   seen: 2026-09-30
-  note: 'The parish site (eCatholic, custom domain; behind Cloudflare, read with visit.py). Its "Normal Mass Schedule" is the same four churches and times as the bulletin; its Bulletins link goes to https://parishesonline.com/organization/eastern-lake-ontario-catholics. It embeds po-org:eastern-lake-ontario-catholics (and ecatholic:39874, the site''s own id, not a bulletin).'
+  note: The parish site (eCatholic, custom domain; behind Cloudflare, read with visit.py). Its "Normal
+    Mass Schedule" is the same four churches and times as the bulletin; its Bulletins link goes to https://parishesonline.com/organization/eastern-lake-ontario-catholics.
+    It embeds po-org:eastern-lake-ontario-catholics (and ecatholic:39874, the site's own id, not a bulletin).
 - url: https://parishesonline.com/organization/eastern-lake-ontario-catholics
   seen: 2026-09-30
-  note: '`probe po eastern-lake-ontario-catholics`: title "Eastern Lake Ontario Catholics", address 119 W. Main St, Brownville; ids po-org:eastern-lake-ontario-catholics, lpi:001RP00000arY5JYAU, po-container:03/1493; weekly issues 23 Aug to 27 Sept 2026, newest 2026-09-27.'
+  note: '`probe po eastern-lake-ontario-catholics`: title "Eastern Lake Ontario Catholics", address 119
+    W. Main St, Brownville; ids po-org:eastern-lake-ontario-catholics, lpi:001RP00000arY5JYAU, po-container:03/1493;
+    weekly issues 23 Aug to 27 Sept 2026, newest 2026-09-27.'
+promoted: 2026-09-30
 ---
 
 ## Publisher

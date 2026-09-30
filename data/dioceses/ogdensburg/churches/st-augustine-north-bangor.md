@@ -11,9 +11,7 @@ longitude: -74.3994375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18247
-- directory:north-bangor
+roster: ['gcatholic:18247', 'directory:north-bangor']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18247
   seen: 2026-09-30
@@ -34,6 +32,7 @@ evidence:
   seen: 2026-09-30
   quote: 8 AM at St. Augustine's Church, North Bangor
   note: 'Parish website Mass Times, read 2026-09-30: Sunday 8 AM at St. Augustine''s Church, North Bangor.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

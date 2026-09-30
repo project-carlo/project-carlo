@@ -24,11 +24,18 @@ evidence:
     Plattsburgh, NY, 12901; group: Holy Cross Parish'
 - url: https://container.parishesonline.com/bulletins/04/0730/20260927B.pdf
   seen: 2026-09-30
-  quote: 'S t .  J o h n ’ s  C h u r c h  -  1 8  B r o a d  S t .  D a i l y  M a s s  8 : 0 0  A M  M o n d a y ,  W e d n e s d a y ,  F r i d a y  W e e k e n d  M a s s  5 : 1 5  P M  A n t i c i p a t e d  S a t u r d a y  |  8 : 3 0  A M  S u n d a y'
-  note: 'Page 1 of the 27 September 2026 Holy Cross bulletin (container 04/0730); letters spaced out in the text layer. Page 3: Saturday 3 October 5:15pm (SJ), Sunday 4 October 8:30am (SJ), weekdays 8:00am (SJ) Monday, Wednesday, Friday.'
+  quote: 'S t .  J o h n ’ s  C h u r c h  -  1 8  B r o a d  S t .  D a i l y  M a s s  8 : 0 0  A M  M
+    o n d a y ,  W e d n e s d a y ,  F r i d a y  W e e k e n d  M a s s  5 : 1 5  P M  A n t i c i p
+    a t e d  S a t u r d a y  |  8 : 3 0  A M  S u n d a y'
+  note: 'Page 1 of the 27 September 2026 Holy Cross bulletin (container 04/0730); letters spaced out in
+    the text layer. Page 3: Saturday 3 October 5:15pm (SJ), Sunday 4 October 8:30am (SJ), weekdays 8:00am
+    (SJ) Monday, Wednesday, Friday.'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=18+Broad+Street,+Plattsburgh,+NY
   seen: 2026-09-30
-  note: 'Nominatim: way 488518743 "Saint John the Baptist, 18, Broad Street, City of Plattsburgh" at 44.69565, -73.45461 and node 357630224 "Saint John''s Roman Catholic Church", 18 Broad Street, 11 m apart; 40 m from GCatholic''s Plus Code point.'
+  note: 'Nominatim: way 488518743 "Saint John the Baptist, 18, Broad Street, City of Plattsburgh" at 44.69565,
+    -73.45461 and node 357630224 "Saint John''s Roman Catholic Church", 18 Broad Street, 11 m apart; 40
+    m from GCatholic''s Plus Code point.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

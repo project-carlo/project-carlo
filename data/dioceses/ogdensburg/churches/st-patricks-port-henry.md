@@ -11,9 +11,7 @@ longitude: -73.4583125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:18327
-- directory:port-henry-1
+roster: ['gcatholic:18327', 'directory:port-henry-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18327
   seen: 2026-09-30
@@ -37,7 +35,9 @@ evidence:
   seen: 2026-09-30
   note: OpenStreetMap way 814656790 'Saint Patrick Catholic Church', 14 Saint Patrick's Place, Port Henry
     (44.04800, -73.45800).
+promoted: 2026-09-30
 ---
+
 ## Holds Mass
 
 Yes, weekly: Saturday 4:00 pm (Labor Day to Memorial Day, so the current one), Sunday 11:00 am, and weekday Masses (in the 27 September 2026 bulletin: Monday, Tuesday, Wednesday 8:00 am, with Adoration and Confessions Monday 8:30 am). It is the parish's main church. Read 2026-09-30 in the bulletin (page 2) and on the parish's Mass Times page.

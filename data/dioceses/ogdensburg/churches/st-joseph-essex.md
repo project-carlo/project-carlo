@@ -25,13 +25,21 @@ evidence:
 - url: https://kawcatholics.org/mass-times
   seen: 2026-09-30
   quote: 11:00 am St. Joseph's Church - Essex (July-August)
-  note: 'Website Mass Times page (eCatholic behind Cloudflare; read in a browser with visit.py, so `recheck` reports it unreachable): the Sunday 11:00 Mass is at St. Joseph''s, Essex in July and August only.'
+  note: 'Website Mass Times page (eCatholic behind Cloudflare; read in a browser with visit.py, so `recheck`
+    reports it unreachable): the Sunday 11:00 Mass is at St. Joseph''s, Essex in July and August only.'
 - url: https://files.ecatholic.com/35001/bulletins/20260726.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF (no text layer), read with parish-site-access render.py, so `recheck` cannot find text in it. Page 1 of the 26 July 2026 issue: "St. Joseph''s Church 2891 Essex Rd Essex, New York" and weekend schedule "11:00am @ St. Joseph''s Church, Essex (July-Aug)" with confession "Sunday: Prior to Mass, St. Joseph''s Church". The 27 September 2026 issue (https://files.ecatholic.com/35001/bulletins/20260927.pdf) has the 11:00am Mass at Willsboro instead.'
+  note: 'Image-only PDF (no text layer), read with parish-site-access render.py, so `recheck` cannot find
+    text in it. Page 1 of the 26 July 2026 issue: "St. Joseph''s Church 2891 Essex Rd Essex, New York"
+    and weekend schedule "11:00am @ St. Joseph''s Church, Essex (July-Aug)" with confession "Sunday: Prior
+    to Mass, St. Joseph''s Church". The 27 September 2026 issue (https://files.ecatholic.com/35001/bulletins/20260927.pdf)
+    has the 11:00am Mass at Willsboro instead.'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=2891+Essex+Road,+Essex,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address point "2891, Essex Road, Town of Essex" (way 814679263) and node 357585422 "Saint Josephs Church", 2891 Essex Road, at 44.31930, -73.34954, 10 m from GCatholic''s Plus Code point.'
+  note: 'Nominatim: address point "2891, Essex Road, Town of Essex" (way 814679263) and node 357585422
+    "Saint Josephs Church", 2891 Essex Road, at 44.31930, -73.34954, 10 m from GCatholic''s Plus Code
+    point.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -25,10 +25,13 @@ evidence:
 - url: https://files.ecatholic.com/29575/bulletins/20260927.pdf
   seen: 2026-09-30
   quote: Saturday, September 26 (5:00 pm)
-  note: 'Page 1 of the 27 September 2026 bulletin: Saturday 5:00 pm, Sunday 8:30 am, weekday 8:15 am Masses Monday to Friday; masthead address "9748 Main Street/PO Box 38, Croghan, NY 13327".'
+  note: 'Page 1 of the 27 September 2026 bulletin: Saturday 5:00 pm, Sunday 8:30 am, weekday 8:15 am Masses
+    Monday to Friday; masthead address "9748 Main Street/PO Box 38, Croghan, NY 13327".'
 - url: https://www.openstreetmap.org/way/660038958
   seen: 2026-09-30
-  note: 'OSM way "St. Stephan''s Catholic Church" (sic), 9748 Convent Street, Croghan, 43.89216, -75.39074 (Nominatim viewbox search).'
+  note: OSM way "St. Stephan's Catholic Church" (sic), 9748 Convent Street, Croghan, 43.89216, -75.39074
+    (Nominatim viewbox search).
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -26,17 +26,18 @@ evidence:
   seen: 2026-09-30
   quote: 9:30 (SM)  Joann Anderson by Joyce Ivey
   note: 'Page 2, the 27 September 2026 issue of the Clayton / Alexandria bulletin: Sunday 9:30 (SM). Page
-    1 "Weekend Masses": "St. Mary’s, Clayton  Saturdays at 4:00 pm  Sundays at 9:30 am". The masthead gives
-    the mailing address "521 James Street Clayton, NY 13624".'
+    1 "Weekend Masses": "St. Mary’s, Clayton  Saturdays at 4:00 pm  Sundays at 9:30 am". The masthead
+    gives the mailing address "521 James Street Clayton, NY 13624".'
 - url: https://www.stmarysclayton.org/worship
   seen: 2026-09-30
   quote: 9:30 a.m. Sundays at St. Mary's
-  note: 'The parish site''s Worship page: "4 p.m. Saturdays at St. Mary''s" and "9:30 a.m. Sundays at St.
-    Mary''s" both for the summer and for after Labor Day through June.'
+  note: 'The parish site''s Worship page: "4 p.m. Saturdays at St. Mary''s" and "9:30 a.m. Sundays at
+    St. Mary''s" both for the summer and for after Labor Day through June.'
 - url: https://www.openstreetmap.org/node/357632369
   seen: 2026-09-30
   note: OSM "Saint Mary's Roman Catholic Church", James Street, Clayton 13624 (Nominatim search), 44.23861,
     -76.08611; within a few metres of the GCatholic Plus Code point.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

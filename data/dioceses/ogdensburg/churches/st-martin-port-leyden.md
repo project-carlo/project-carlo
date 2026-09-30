@@ -25,11 +25,15 @@ evidence:
 - url: https://catholicparishesofslc.weebly.com/uploads/1/3/1/4/131484079/bulletin_sept_13.pdf
   seen: 2026-09-30
   quote: 8:15 am @ PL Jesse Farr
-  note: 'Page 2 of the 13 September 2026 issue: Sunday 13 September 8:15 am @ PL Jesse Farr by Dc & Mrs. Chaufty, and weekday 9 am Masses Monday, Wednesday and Friday @ PL.'
+  note: 'Page 2 of the 13 September 2026 issue: Sunday 13 September 8:15 am @ PL Jesse Farr by Dc & Mrs.
+    Chaufty, and weekday 9 am Masses Monday, Wednesday and Friday @ PL.'
 - url: https://catholicparishesofslc.weebly.com/
   seen: 2026-09-30
   quote: St. Martin's 7108 North St, Port Leyden
-  note: 'Home page of the parish site, churches list: "St. Martin''s 7108 North St, Port Leyden"; Mass Schedule "Sunday - St. Martin''s (Port Leyden) 8:15 am" and weekday 9am at "St. Martin''s Rectory Chapel".'
+  note: 'Home page of the parish site, churches list: "St. Martin''s 7108 North St, Port Leyden"; Mass
+    Schedule "Sunday - St. Martin''s (Port Leyden) 8:15 am" and weekday 9am at "St. Martin''s Rectory
+    Chapel".'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

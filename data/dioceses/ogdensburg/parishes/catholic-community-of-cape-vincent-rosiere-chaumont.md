@@ -16,21 +16,22 @@ evidence:
 - url: http://www.cvrchparish.org/files/bulletin.pdf
   seen: 2026-09-30
   quote: ST. VINCENT DE PAUL CHURCH—ROSIERE
-  note: 'Page 2 of the same issue, the three liturgy headings: "ALL SAINTS CHURCH – CHAUMONT" (Sunday 9:00
-    am, weekday 8:30 am Tuesday and Friday), "ST. VINCENT OF PAUL CHURCH—CAPE VINCENT" (Sunday 11:00 am,
-    weekday 8:30 am Wednesday and Thursday) and "ST. VINCENT DE PAUL CHURCH—ROSIERE" (Saturday 4:00 pm).
-    The attendance line reads "R 4:00 pm...69  CH 9:00 am...78CV 11:00 am...97".'
+  note: 'Page 2 of the same issue, the three liturgy headings: "ALL SAINTS CHURCH – CHAUMONT" (Sunday
+    9:00 am, weekday 8:30 am Tuesday and Friday), "ST. VINCENT OF PAUL CHURCH—CAPE VINCENT" (Sunday 11:00
+    am, weekday 8:30 am Wednesday and Thursday) and "ST. VINCENT DE PAUL CHURCH—ROSIERE" (Saturday 4:00
+    pm). The attendance line reads "R 4:00 pm...69  CH 9:00 am...78CV 11:00 am...97".'
 - url: http://www.cvrchparish.org/
   seen: 2026-09-30
   quote: Saturday – Rosiere / St Vincent De Paul – 4 pm until the end of October 2026
   note: 'The parish site''s home page (read in a browser; static HTML). "Mass Schedule": "Sunday – Chaumont
-    (All Saints Church) – 9 am", "Sunday – Cape Vincent (St. Vincent of Paul Church) – 11 am". It lists the
-    three churches with the addresses 1626 Kanady Street, Cape Vincent; 31399 County Route 4, Rosiere;
+    (All Saints Church) – 9 am", "Sunday – Cape Vincent (St. Vincent of Paul Church) – 11 am". It lists
+    the three churches with the addresses 1626 Kanady Street, Cape Vincent; 31399 County Route 4, Rosiere;
     27420 Madison Street, Chaumont. Its "Bulletin" link is the fixed file above.'
 - url: https://www.rcdony.org/directory/parish-bulletins.html
   seen: 2026-09-30
-  note: The diocese's "Parish Bulletins" page links this same file (cvrchparish.org/files/bulletin.pdf) for
-    Cape Vincent, Chaumont and Rosiere, and no other bulletin for any of them.
+  note: The diocese's "Parish Bulletins" page links this same file (cvrchparish.org/files/bulletin.pdf)
+    for Cape Vincent, Chaumont and Rosiere, and no other bulletin for any of them.
+promoted: 2026-09-30
 ---
 
 ## Publisher

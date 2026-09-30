@@ -38,6 +38,7 @@ evidence:
   seen: 2026-09-30
   note: 'OSM node 357645993, amenity=place_of_worship, "Saint James Roman Catholic Church", East Main
     Street (no house number), 44.3362, -75.4643: same spot as GCatholics Plus Code (44.33631, -75.46419).'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -13,25 +13,39 @@ name_verified: true
 address_verified: true
 roster: ['gcatholic:18243', 'directory:brasher-falls']
 evidence:
-- {url: 'https://gcatholic.org/churches/usa-02/18243', seen: 2026-09-30, quote: '836 State Hwy. 11C, Brasher
-    Falls, New York 13613', note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg
-    as ''St. Patrick'', 836 State Hwy. 11C, Brasher Falls, NY, 13613; kind: Church'}
-- {url: 'https://www.rcdony.org/parish/brasher-falls', seen: 2026-09-30, note: 'Listed in Diocese of Ogdensburg
-    parish directory as "St. Patrick''s Church", 834 State Highway 11C, Brasher Falls, NY, 13613'}
-- {url: 'https://norfolknorwoodraymondville.org/', seen: '2026-09-30', quote: '8:30 AM St. Patrick''s,
-    Brasher Falls', note: 'Parish site Mass Times (browser): Sunday 8:30 AM; Tuesday and Thursday 8:30
-    AM at St. Patrick''s, Brasher Falls.'}
-- {url: 'https://files.ecatholic.com/15674/bulletins/20260906.pdf', seen: '2026-09-30', quote: 'Info for
-    St Patrick’s Church: 834 St Hwy 11C. Brasher Falls, NY 13613', note: 'Page 1 of the 6 September 2026
-    bulletin (text layer): the parish''s own address for the church is 834 State Highway 11C.'}
-- {url: 'https://files.ecatholic.com/15674/bulletins/20260927.pdf', seen: '2026-09-30', note: '27 September
-    2026 issue, page 1 (image; read with render.py): "Sun Oct 4 ... 8:30am ST. PATRICK''S" and Tuesday
-    29 Sept and Thursday 1 Oct 8:30am ST. PATRICK''S.'}
-- {url: 'https://norfolknorwoodraymondville.org/contact-us', seen: '2026-09-30', quote: '834 State Highway
-    11C, Brasher Falls, NY 13613', note: 'Parish site contact page: "St. Patrick''s Parish Office ...
-    In the former Rectory to the right-rear of the Church". (Site behind Cloudflare; read in a browser.)'}
-- {url: 'https://www.rcdony.org/parish/brasher-falls', seen: '2026-09-30', quote: 'St. Patrick''s Church
-    834 State Highway 11C Brasher Falls, New York 13613', note: Diocesan directory entry.}
+- url: https://gcatholic.org/churches/usa-02/18243
+  seen: 2026-09-30
+  quote: 836 State Hwy. 11C, Brasher Falls, New York 13613
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Ogdensburg as ''St. Patrick'',
+    836 State Hwy. 11C, Brasher Falls, NY, 13613; kind: Church'
+- url: https://www.rcdony.org/parish/brasher-falls
+  seen: 2026-09-30
+  note: Listed in Diocese of Ogdensburg parish directory as "St. Patrick's Church", 834 State Highway
+    11C, Brasher Falls, NY, 13613
+- url: https://norfolknorwoodraymondville.org/
+  seen: 2026-09-30
+  quote: 8:30 AM St. Patrick's, Brasher Falls
+  note: 'Parish site Mass Times (browser): Sunday 8:30 AM; Tuesday and Thursday 8:30 AM at St. Patrick''s,
+    Brasher Falls.'
+- url: https://files.ecatholic.com/15674/bulletins/20260906.pdf
+  seen: 2026-09-30
+  quote: 'Info for St Patrick’s Church: 834 St Hwy 11C. Brasher Falls, NY 13613'
+  note: 'Page 1 of the 6 September 2026 bulletin (text layer): the parish''s own address for the church
+    is 834 State Highway 11C.'
+- url: https://files.ecatholic.com/15674/bulletins/20260927.pdf
+  seen: 2026-09-30
+  note: '27 September 2026 issue, page 1 (image; read with render.py): "Sun Oct 4 ... 8:30am ST. PATRICK''S"
+    and Tuesday 29 Sept and Thursday 1 Oct 8:30am ST. PATRICK''S.'
+- url: https://norfolknorwoodraymondville.org/contact-us
+  seen: 2026-09-30
+  quote: 834 State Highway 11C, Brasher Falls, NY 13613
+  note: 'Parish site contact page: "St. Patrick''s Parish Office ... In the former Rectory to the right-rear
+    of the Church". (Site behind Cloudflare; read in a browser.)'
+- url: https://www.rcdony.org/parish/brasher-falls
+  seen: 2026-09-30
+  quote: St. Patrick's Church 834 State Highway 11C Brasher Falls, New York 13613
+  note: Diocesan directory entry.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

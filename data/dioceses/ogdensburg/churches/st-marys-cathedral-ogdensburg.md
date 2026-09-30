@@ -40,6 +40,7 @@ evidence:
   seen: 2026-09-30
   note: 'OSM (Nominatim search, 2026-09-30): node 357636094, amenity=place_of_worship, "Saint Mary''s
     Cathedral", 401 Hamilton Street, 44.6989047, -75.4855035, 4 m from GCatholic''s Plus Code.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

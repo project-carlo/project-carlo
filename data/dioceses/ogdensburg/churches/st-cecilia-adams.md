@@ -35,6 +35,7 @@ evidence:
   seen: 2026-09-30
   note: 'OpenStreetMap (Overpass, way 809247159): "Saint Cecelia Roman Catholic Church", 17 Grove Street,
     centre 43.8062955, -76.027249, about 15 m from the GCatholic Plus Code point.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -37,6 +37,7 @@ evidence:
   seen: 2026-09-30
   note: 'OSM (Nominatim reverse lookup of the GCatholic point, 2026-09-30): way 813019050, building=church,
     4897 State Highway 56, Colton, centre 44.5564415, -74.9452449.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

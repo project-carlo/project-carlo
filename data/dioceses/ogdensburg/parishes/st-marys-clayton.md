@@ -10,9 +10,9 @@ evidence:
   seen: 2026-09-30
   quote: Catholic Community of Alexandria, Alexandria Bay—Redwood
   note: 'Page 2 of the 27 September 2026 issue (6 pages, text layer), "Weekly Giving" heading. Page 1
-    is the masthead: "Welcome to St. Mary’s Church, Clayton & the Catholic Community of Alexandria,
-    Alexandria Bay", with Deacon Neil Fuller as Parish Life Coordinator and Rev. Donald A. Robinson as
-    Sacramental Minister.'
+    is the masthead: "Welcome to St. Mary’s Church, Clayton & the Catholic Community of Alexandria, Alexandria
+    Bay", with Deacon Neil Fuller as Parish Life Coordinator and Rev. Donald A. Robinson as Sacramental
+    Minister.'
 - url: https://container.parishesonline.com/bulletins/06/0098/20260927B.pdf
   seen: 2026-09-30
   quote: St. Francis Xavier, Redwood
@@ -23,27 +23,27 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/06/0098/20261004B.pdf
   seen: 2026-09-30
   quote: Tabernacle, Thousand Island Park
-  note: 'The 4 October 2026 issue (already posted on 30 September) has the identical masthead and
-    Weekend Masses box, so the September issues are not a one-off. Read with `probe container 06/0098
-    --all --step 4`; the 6 September and 9 August issues also carry the masthead and, on page 2, summer
-    Sunday 8:00 Masses coded (TIP) and (SFX).'
+  note: The 4 October 2026 issue (already posted on 30 September) has the identical masthead and Weekend
+    Masses box, so the September issues are not a one-off. Read with `probe container 06/0098 --all --step
+    4`; the 6 September and 9 August issues also carry the masthead and, on page 2, summer Sunday 8:00
+    Masses coded (TIP) and (SFX).
 - url: https://parishesonline.com/organization/saint-marys-church
   seen: 2026-09-30
-  note: '`probe po saint-marys-church`: "Saint Mary''s Church", 521 James Street, Clayton, website
-    www.stmarysclayton.org, ids po-org:saint-marys-church, lpi:0018000000Qc2boAAB, po-container:06/0098,
-    latest issue 2026-09-27, weekly issues back to at least 23 August.'
+  note: '`probe po saint-marys-church`: "Saint Mary''s Church", 521 James Street, Clayton, website www.stmarysclayton.org,
+    ids po-org:saint-marys-church, lpi:0018000000Qc2boAAB, po-container:06/0098, latest issue 2026-09-27,
+    weekly issues back to at least 23 August.'
 - url: https://www.stmarysclayton.org/
   seen: 2026-09-30
   quote: PARISH BULLETIN
-  note: 'The parish site (loaded in a browser on the first try). Its "PARISH BULLETIN" link goes
-    to parishesonline.com/publication-page/saint-marys-church (a 2020 issue path, but the same org). The
-    site header still reads "The Catholic Churches of St. Mary''s, Clayton and St. John the Evangelist,
-    Lafargeville" (see *Worship sites*).'
+  note: The parish site (loaded in a browser on the first try). Its "PARISH BULLETIN" link goes to parishesonline.com/publication-page/saint-marys-church
+    (a 2020 issue path, but the same org). The site header still reads "The Catholic Churches of St. Mary's,
+    Clayton and St. John the Evangelist, Lafargeville" (see *Worship sites*).
 - url: http://www.stcyrils.org/
   seen: 2026-09-30
-  note: 'The Alexandria Bay site named in the masthead. It answers 403 to curl, `probe url` and visit.py
+  note: The Alexandria Bay site named in the masthead. It answers 403 to curl, `probe url` and visit.py
     (one load), and a TLS error to curl with a browser user agent; not read. Nothing on the ParishesOnline
-    side suggests a separate bulletin (see *Not yet confirmed*).'
+    side suggests a separate bulletin (see *Not yet confirmed*).
+promoted: 2026-09-30
 ---
 
 ## Publisher

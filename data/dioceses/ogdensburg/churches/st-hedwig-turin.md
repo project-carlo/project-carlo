@@ -25,14 +25,18 @@ evidence:
 - url: https://files.ecatholic.com/19929/bulletins/20260809.pdf
   seen: 2026-09-30
   quote: 5432 St Rt 26, Turin
-  note: 'Churches box of the 9 August 2026 issue: "St. Hedwig’s 5432 St Rt 26, Turin"; page 1 Sunday 11:00 am (SH).'
+  note: 'Churches box of the 9 August 2026 issue: "St. Hedwig’s 5432 St Rt 26, Turin"; page 1 Sunday 11:00
+    am (SH).'
 - url: https://files.ecatholic.com/19929/bulletins/20260927.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF, read by eye. Page 1: "St. Hedwig''s 5432 St Rt 26, Turin"; Sunday 27 September 11:00 am (SH) and Sunday 4 October 11:00 am (SH); "St. Hedwig - Divine Mercy Devotions & Adoration directly after 11am Mass" on the first Sunday.'
+  note: 'Image-only PDF, read by eye. Page 1: "St. Hedwig''s 5432 St Rt 26, Turin"; Sunday 27 September
+    11:00 am (SH) and Sunday 4 October 11:00 am (SH); "St. Hedwig - Divine Mercy Devotions & Adoration
+    directly after 11am Mass" on the first Sunday.'
 - url: https://www.openstreetmap.org/node/357584640
   seen: 2026-09-30
-  note: 'OSM node "Saint Hedwigs Church", West Road, Turin area, 43.67674, -75.44157 (Nominatim viewbox
-    search); no house number. About 25 m from the GCatholic Plus Code point.'
+  note: OSM node "Saint Hedwigs Church", West Road, Turin area, 43.67674, -75.44157 (Nominatim viewbox
+    search); no house number. About 25 m from the GCatholic Plus Code point.
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

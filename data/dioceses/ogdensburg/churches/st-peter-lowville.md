@@ -25,10 +25,14 @@ evidence:
 - url: https://files.ecatholic.com/19929/bulletins/20260809.pdf
   seen: 2026-09-30
   quote: 5449 Shady Ave, Lowville
-  note: 'Churches box of the 9 August 2026 issue (page 2): "St. Peter’s 5449 Shady Ave, Lowville"; page 1 lists Sunday 9:00 am (SP), weekday 8:30 am (SP), Saturday 4:00 pm (SP).'
+  note: 'Churches box of the 9 August 2026 issue (page 2): "St. Peter’s 5449 Shady Ave, Lowville"; page
+    1 lists Sunday 9:00 am (SP), weekday 8:30 am (SP), Saturday 4:00 pm (SP).'
 - url: https://files.ecatholic.com/19929/bulletins/20260927.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF, read by eye. Page 1: "St. Peter''s 5449 Shady Ave, Lowville"; Sunday 27 September 9:00 am (SP); Monday to Friday 8:30 am (SP) (Monday a Communion Service); Saturday 3 October 4:00 pm (SP); Sunday 4 October 9:00 am (SP).'
+  note: 'Image-only PDF, read by eye. Page 1: "St. Peter''s 5449 Shady Ave, Lowville"; Sunday 27 September
+    9:00 am (SP); Monday to Friday 8:30 am (SP) (Monday a Communion Service); Saturday 3 October 4:00
+    pm (SP); Sunday 4 October 9:00 am (SP).'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

@@ -24,14 +24,21 @@ evidence:
     Street, Route 22, Keeseville, NY, 12944; group: The Roman Catholic Community of Keeseville'
 - url: https://files.ecatholic.com/35001/bulletins/20260927.pdf
   seen: 2026-09-30
-  note: 'Image-only PDF (no text layer), read with parish-site-access render.py, so `recheck` cannot find text in it. Page 1 of the 27 September 2026 bulletin: "St. John the Baptist Church 1803 Main Street, Route 22 Keeseville, New York"; "Saturday anticipated Mass 4:00pm @ St. John the Baptist Church, Keeseville"; "Saturday: 3:15-3:45pm, St. John the Baptist" (confession).'
+  note: 'Image-only PDF (no text layer), read with parish-site-access render.py, so `recheck` cannot find
+    text in it. Page 1 of the 27 September 2026 bulletin: "St. John the Baptist Church 1803 Main Street,
+    Route 22 Keeseville, New York"; "Saturday anticipated Mass 4:00pm @ St. John the Baptist Church, Keeseville";
+    "Saturday: 3:15-3:45pm, St. John the Baptist" (confession).'
 - url: https://kawcatholics.org/mass-times
   seen: 2026-09-30
   quote: 'Saturday: 4:00 pm St. John the Baptist Church - Keeseville'
-  note: Website Mass Times page (eCatholic behind Cloudflare; read in a browser with visit.py, so `recheck` reports it unreachable).
+  note: Website Mass Times page (eCatholic behind Cloudflare; read in a browser with visit.py, so `recheck`
+    reports it unreachable).
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=1803+Main+Street,+Keeseville,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address point "1803, Main Street, Keeseville, Town of AuSable" (way 809673444) at 44.50668, -73.48650, about 25 m from GCatholic''s Plus Code point; "1804, Main Street" (way 809672053) is at 44.50714, -73.48596, 75 m northeast. So both numbers exist in OSM.'
+  note: 'Nominatim: address point "1803, Main Street, Keeseville, Town of AuSable" (way 809673444) at
+    44.50668, -73.48650, about 25 m from GCatholic''s Plus Code point; "1804, Main Street" (way 809672053)
+    is at 44.50714, -73.48596, 75 m northeast. So both numbers exist in OSM.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

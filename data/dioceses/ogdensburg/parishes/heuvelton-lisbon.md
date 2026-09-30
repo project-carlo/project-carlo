@@ -32,6 +32,7 @@ evidence:
   quote: Mass Times Saturday 4:30pm Sunday 10:30am
   note: Discover Mass / MassTimes listing for St. Raphael, 5 Clinton St. (undated, still with a COVID-19
     notice); no bulletins listed.
+promoted: 2026-09-30
 ---
 
 ## Publisher

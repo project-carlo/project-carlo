@@ -11,9 +11,7 @@ longitude: -73.4210625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:18269
-- directory:crown-point
+roster: ['gcatholic:18269', 'directory:crown-point']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18269
   seen: 2026-09-30
@@ -43,7 +41,9 @@ evidence:
   seen: 2026-09-30
   note: OpenStreetMap node 2926843726 'Sacred Heart', place_of_worship on State Highway 9N, Crown Point
     (43.95042, -73.42097); no house number.
+promoted: 2026-09-30
 ---
+
 ## Holds Mass
 
 Yes, weekly: Sunday 8:00 am (with Reconciliation at 7:15 am) and Tuesday 8:30 am (27 September 2026 ParishesOnline bulletin, page 1 schedule and page 2 intentions, both images; the same times in the text of the Our Lady of Lourdes bulletin of that date and on the community's website, read 2026-09-30).

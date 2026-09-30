@@ -9,23 +9,37 @@ evidence:
 - url: https://files.ecatholic.com/15094/bulletins/20260913.pdf
   seen: 2026-09-30
   quote: St. Alphonsus-Holy Name, St. Henry’s & St. Therese Secretary/Bookkeeper
-  note: 'Page 2 of the 13 September 2026 issue (the newest posted; page 1 is a Liguori "Good News!" insert image). One staff list for the three parishes: "Fr. Severinus Torwoe", "Fr. Paul Kelly, In residence; St. Therese, Newcomb", trustees for each, and the three church addresses "St. Alphonsus-Holy Name of Jesus Parish, 48 Wawbeek Ave, Tupper Lake / St. Henry’s Parish, 1187 Main St, Long Lake / St. Therese’ Parish, 14 Adams Lane, Newcomb".'
+  note: 'Page 2 of the 13 September 2026 issue (the newest posted; page 1 is a Liguori "Good News!" insert
+    image). One staff list for the three parishes: "Fr. Severinus Torwoe", "Fr. Paul Kelly, In residence;
+    St. Therese, Newcomb", trustees for each, and the three church addresses "St. Alphonsus-Holy Name
+    of Jesus Parish, 48 Wawbeek Ave, Tupper Lake / St. Henry’s Parish, 1187 Main St, Long Lake / St. Therese’
+    Parish, 14 Adams Lane, Newcomb".'
 - url: https://files.ecatholic.com/15094/bulletins/20260913.pdf
   seen: 2026-09-30
   quote: Sunday 09/20 12:30pm SH People of the Parish
-  note: 'Page 3, Mass intentions in three blocks TUPPER LAKE, LONG LAKE and Newcomb (SA/HGC, SH, ST); the Tupper Lake block has Sunday 8:30am and 10:30am SA and daily 8:00am HGC.'
+  note: Page 3, Mass intentions in three blocks TUPPER LAKE, LONG LAKE and Newcomb (SA/HGC, SH, ST); the
+    Tupper Lake block has Sunday 8:30am and 10:30am SA and daily 8:00am HGC.
 - url: https://tupperlakecatholics.org/bulletins
   seen: 2026-09-30
   quote: ST. HENRY'S PARISH, LONG LAKE, 1188 MAIN ST, LONG LAKE
-  note: 'Parish site (eCatholic, behind Cloudflare; read in a browser with parish-site-access visit.py; it loaded on the second try). Its banner names the three parishes; the Bulletin page embeds eCatholic site id 15094 and lists files.ecatholic.com/15094/bulletins/YYYYMMDD.pdf from 20260607 to 20260913. 20260920 and 20260927 answer 403 (not posted).'
+  note: Parish site (eCatholic, behind Cloudflare; read in a browser with parish-site-access visit.py;
+    it loaded on the second try). Its banner names the three parishes; the Bulletin page embeds eCatholic
+    site id 15094 and lists files.ecatholic.com/15094/bulletins/YYYYMMDD.pdf from 20260607 to 20260913.
+    20260920 and 20260927 answer 403 (not posted).
 - url: https://tupperlakecatholics.org/mass-times
   seen: 2026-09-30
   quote: 12:30 PM St. Henry's, Long Lake
-  note: 'Mass Times page (behind Cloudflare; read in a browser with parish-site-access visit.py): Saturday 4:00 PM St. Alphonsus; Sunday 8:30 AM St. Alphonsus, 9:00 AM St. Therese (Newcomb), 10:30 AM St. Alphonsus, 12:30 PM St. Henry''s (Long Lake); Monday to Saturday 8:00 AM Holy Ghost Chapel; Tuesday 11:00 AM "Mercy"; Wednesday 3:00 PM St. Henry''s and 4:00 PM St. Therese.'
+  note: 'Mass Times page (behind Cloudflare; read in a browser with parish-site-access visit.py): Saturday
+    4:00 PM St. Alphonsus; Sunday 8:30 AM St. Alphonsus, 9:00 AM St. Therese (Newcomb), 10:30 AM St. Alphonsus,
+    12:30 PM St. Henry''s (Long Lake); Monday to Saturday 8:00 AM Holy Ghost Chapel; Tuesday 11:00 AM
+    "Mercy"; Wednesday 3:00 PM St. Henry''s and 4:00 PM St. Therese.'
 - url: https://tupperlakecatholics.org/our-history
   seen: 2026-09-30
   quote: Until recently, Tupper Lake Catholics were served by two parishes and two worship sites
-  note: 'Parish history page (behind Cloudflare; read in a browser): St. Alphonsus (1890) and Holy Name of Jesus (1904), merged, with the closed Holy Ghost Academy serving as parish administration and religious education centre; photo albums "Holy Name of Jesus 1904-2019" and "St. Alphonsus".'
+  note: 'Parish history page (behind Cloudflare; read in a browser): St. Alphonsus (1890) and Holy Name
+    of Jesus (1904), merged, with the closed Holy Ghost Academy serving as parish administration and religious
+    education centre; photo albums "Holy Name of Jesus 1904-2019" and "St. Alphonsus".'
+promoted: 2026-09-30
 ---
 
 ## Publisher

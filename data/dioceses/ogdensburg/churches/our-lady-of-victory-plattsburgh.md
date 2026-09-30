@@ -24,11 +24,18 @@ evidence:
     Street, Plattsburgh, NY, 12901; group: Holy Cross Parish'
 - url: https://container.parishesonline.com/bulletins/04/0730/20260927B.pdf
   seen: 2026-09-30
-  quote: 'O u r  L a d y  o f  V i c t o r y  -  4 9 1 9  S  C a t h e r i n e  S t .  D a i l y  M a s s  8 : 0 0  A M  T u e s d a y  &  T h u r s d a y  W e e k e n d  M a s s  1 0 : 0 0  A M  S u n d a y'
-  note: 'Page 1 of the 27 September 2026 Holy Cross bulletin (container 04/0730). The text layer spaces out the letters of this block; the quote is copied as extracted. Page 3 gives the weeks intentions: Tuesday 29 September and Thursday 1 October 8:00 am (OLV), Sunday 4 October 10:00 am (OLV).'
+  quote: 'O u r  L a d y  o f  V i c t o r y  -  4 9 1 9  S  C a t h e r i n e  S t .  D a i l y  M a
+    s s  8 : 0 0  A M  T u e s d a y  &  T h u r s d a y  W e e k e n d  M a s s  1 0 : 0 0  A M  S u
+    n d a y'
+  note: 'Page 1 of the 27 September 2026 Holy Cross bulletin (container 04/0730). The text layer spaces
+    out the letters of this block; the quote is copied as extracted. Page 3 gives the weeks intentions:
+    Tuesday 29 September and Thursday 1 October 8:00 am (OLV), Sunday 4 October 10:00 am (OLV).'
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=4919+South+Catherine+Street,+Plattsburgh,+NY
   seen: 2026-09-30
-  note: 'Nominatim: address point "4919, South Catherine Street, City of Plattsburgh" (way 809869259) at 44.68424, -73.46015, and node 357630263 "Our Lady of Victory Roman Catholic Church" at 44.68395, -73.46035, 25 m from GCatholic''s Plus Code point.'
+  note: 'Nominatim: address point "4919, South Catherine Street, City of Plattsburgh" (way 809869259)
+    at 44.68424, -73.46015, and node 357630263 "Our Lady of Victory Roman Catholic Church" at 44.68395,
+    -73.46035, 25 m from GCatholic''s Plus Code point.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass

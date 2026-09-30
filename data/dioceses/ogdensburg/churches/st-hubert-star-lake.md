@@ -37,6 +37,7 @@ evidence:
   seen: 2026-09-30
   note: 'OSM (Nominatim reverse lookup of the GCatholic point, 2026-09-30): way 812605679, building=yes,
     1046 Oswegatchie Trail, Star Lake (Town of Fine), centre 44.1608625, -75.0541401.'
+promoted: 2026-09-30
 ---
 
 ## Holds Mass
