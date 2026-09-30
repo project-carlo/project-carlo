@@ -56,7 +56,7 @@ lists them):
 
 | reason | use it for |
 |---|---|
-| `closed` | no Mass any more: closed, merged away, sold, demolished. Put the date in `last_mass` when a source gives it |
+| `closed` | no Mass any more: closed, merged away, sold, demolished. Put the date in `last_mass` when a source gives it (`2017` or `2017-06` when it gives no day) |
 | `no-bulletin` | **open**, with public Mass, but nothing the pipeline could read. Don't file these under `closed`; that list has to stay a record of what actually shut down |
 | `no-public-mass` | offices, schools, pregnancy centers, cemeteries, private convent or hospital chapels |
 | `not-catholic` | a same-named Orthodox, Episcopal, Lutheran... church |

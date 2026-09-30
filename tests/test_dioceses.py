@@ -209,6 +209,19 @@ def test_rename_moves_references(root: Path) -> None:
     assert "replaces" not in d.of(records.PARISH)["st-ann-town"]  # never promoted
 
 
+def test_last_mass_may_be_a_year_or_month_when_no_source_gives_the_day(root: Path) -> None:
+    _parish()
+    _church()
+    records.exclude_church("test", "st-ann-town", reason="closed", last_mass="2019-02")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    path = root / "excluded" / "st-ann-town.md"
+    path.write_text(path.read_text().replace("last_mass: 2019-02", "last_mass: 2017"))
+    assert records.load("test").of(records.EXCLUDED)["st-ann-town"]["last_mass"] == "2017"
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    path.write_text(path.read_text().replace("last_mass: 2017", "last_mass: 2017-13"))
+    assert any("last_mass" in e for e in records.validate("test")["dioceses"]["test"]["errors"])
+
+
 def test_exclude_turns_a_church_into_an_exclusion(root: Path) -> None:
     _parish()
     _church(roster=["gcatholic:1"])
