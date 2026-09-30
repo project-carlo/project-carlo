@@ -10,7 +10,7 @@ publication:
 group: The Catholic Community of St. Augustine
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0689/20260927B.pdf
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: In Brushton, Hopkinton, North Bangor & St. Regis Falls
   note: 'Masthead, page 1 of the 27 September 2026 issue (4 pages, text layer): "The Roman Catholic Church
     In Brushton, Hopkinton, North Bangor & St. Regis Falls", then "Holy Cross Church, Hopkinton, NY",
@@ -18,26 +18,26 @@ evidence:
     Community of St. Augustine in North Bangor, NY", "Sept. 27, 2026, 26th Sunday in Ordinary Time". Pastor
     Rev. Kris C. Lauzon (page 3).'
 - url: https://container.parishesonline.com/bulletins/04/0689/20260927B.pdf
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: '9:45am: St. Ann: People of the parish'
   note: 'Page 2, Mass intentions for 28 Sept to 4 Oct: Sat 4:00pm SM (St. Mary), Sun 8:00am SA (St. Augustine),
     9:45am St. Ann, 11:30am HC (Holy Cross); weekdays 9:00am SM (Mon, Wed, Sat), 9:00am SA (Tue), 8:00am
     St. Ann (Thu, Fri). One schedule for all four churches.'
 - url: https://container.parishesonline.com/bulletins/04/0689/20260927B.pdf
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: The St. Mary & St. Augustine Altar Rosary Society
   note: 'Page 1: shared parish activities for the four churches (St. Mary and St. Augustine Altar Rosary
     Society meets at the Deacon John Dwyer Parish Center; Holy Cross has its own religious-formation slot),
     and page 2 lists the collections of Holy Cross, St. Mary, St. Ann and St. Augustine together.'
 - url: http://www.hcsmsasa.org
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: 8 AM at St. Augustine's Church, North Bangor
   note: 'Parish website (plain HTML, no Cloudflare), read 2026-09-30: title "The Roman Catholic Church
     in Brushton, Hopkinton, North Bangor & St. Regis Falls"; Mass Times Saturday 4 PM St. Mary''s, Brushton;
     Sunday 8 AM St. Augustine''s, North Bangor, 9:45 AM St. Ann''s, St. Regis Falls, 11:30 AM Holy Cross,
     Hopkinton; embeds the ParishesOnline widget id=0018000000Qx7FLAAZ.'
 - url: https://parishesonline.com/organization/st-mary-st-augustine
-  seen: '2026-09-30'
+  seen: 2026-09-30
   note: '`probe po st-mary-st-augustine` (the page is JavaScript): "St. Mary - St. Augustine", 1347 Washington
     St, Brushton, website https://www.staugustinesandstmarys.org/, ids po-org:st-mary-st-augustine, lpi:0018000000Qx7FLAAZ,
     po-container:04/0689; weekly issues 2026-08-23 to 2026-09-27, all at container 04/0689.'

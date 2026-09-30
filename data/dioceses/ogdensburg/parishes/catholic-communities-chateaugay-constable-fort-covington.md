@@ -9,21 +9,21 @@ group: Catholic Community of Burke and Chateaugay; Catholic Community of Constab
   River
 evidence:
 - url: https://files.ecatholic.com/18168/bulletins/20260927.pdf
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: Welcome to The Catholic Communities of
   note: 'Page 1 masthead of the 27 September 2026 issue (2 pages, text layer): "Welcome to The Catholic
     Communities of St. Patrick’s * St. Francis of Assisi * St. Mary’s of the Fort", "Twenty-sixth Sunday
     in Ordinary Time", Fr. Pasala, Pastor, Constable Central Parish Office, 5 Poplar St., Constable NY,
     website www.ccfcatholics.com. Trustees are listed for Chateaugay, Fort Covington and Constable only.'
 - url: https://files.ecatholic.com/18168/bulletins/20260927.pdf
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: Theresa LaPrad by Bev Sprague
   note: 'Page 2, THIS WEEKEND MASS SCHEDULE: (SP) 4:00PM Saturday anticipated Mass; (SF) 8:30AM Sunday;
     (SM) 10:30AM Sunday ("Helen Perusse by Linda Holmes & Maureen Dumont"). The schedule labels the days
     "Sat., Sept. 27" and "Sunday, Sept. 28", off by one against the masthead. NEXT WEEKEND repeats the
     same three.'
 - url: https://ccfcatholics.com/mass-times
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: 'Saturday Anticipated Mass: 4:00 PM at St. Patrick''s, Chateaugay'
   note: 'Parish site (eCatholic, behind Cloudflare; read in a browser with parish-site-access visit.py,
     so `recheck` will report it unreachable). Full text: "Sunday Mass: 8:30AM at St. Francis of Assisi,
@@ -31,13 +31,13 @@ evidence:
     Covington, Wednesday 8:30AM Constable, Thursday 8:30AM Chateaugay; First Saturdays Mass 8:30AM Fort
     Covington. No other church appears.'
 - url: https://ccfcatholics.com/
-  seen: '2026-09-30'
+  seen: 2026-09-30
   note: 'Home page (eCatholic, read in a browser): title "Catholic Community of Burke And Chateaugay -
     CHATEAUGAY, NY", embeds ecatholic:18168 and links /bulletins, whose archive lists one issue per Sunday
     from 4 January to 27 September 2026 (files.ecatholic.com/18168/bulletins/YYYYMMDD.pdf). It also lists
     "Country Patch at St. George Church, 797 Depot Street, Burke" as a thrift store (see open/st-george-burke).'
 - url: https://ccfcatholics.com/contact-us
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: St. Mary's of the Fort Church 2549 Chateaugay St., Fort Covington, NY 12937
   note: 'Parish contact page (browser): "CENTRAL OFFICE FOR THE THREE PARISHES, 5 Poplar Street, Constable,
     NY 12926", and CHURCH PHYSICAL ADDRESSES for the Catholic Community of Burke and Chateaugay (132 W.

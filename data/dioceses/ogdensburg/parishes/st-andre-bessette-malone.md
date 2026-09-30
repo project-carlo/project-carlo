@@ -10,14 +10,14 @@ publication:
 group: St. Andre Bessette Roman Catholic Parish
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0038/20260927B.pdf
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: Notre Dame and St. Helen’s Churches
   note: 'Masthead, page 1 of the 27 September 2026 issue (6 pages, text layer): "Welcome to St. André
     Bessette Roman Catholic Parish, Notre Dame and St. Helen’s Churches", 12 Homestead Park, Malone, Pastor
     Father Scott Seymour; Sunday Mass "Anticipated (Saturday) 4:00 P.M. at Notre Dame", "Sunday 8:00 A.M.
     at Notre Dame, 9:30 A.M. at St. Helens, 11:00 A.M. at Notre Dame".'
 - url: http://standres.org/
-  seen: '2026-09-30'
+  seen: 2026-09-30
   quote: 'Sunday St. Helen''s Church: 9:30 am'
   note: 'Parish website (plain HTML): "Notre Dame Church Malone, NY", "St. Helen''s Church Chasm Falls,
     NY"; Mass Times Sunday (Ant) 4pm, 8am, 11am; daily Masses at Notre Dame; "Sunday St. Helen''s Church:
@@ -26,7 +26,7 @@ evidence:
     28, 2014, Bishop Terry LaValley issued the decree uniting the parishes as one in the new St. André
     Bessette Parish, effective July 1, 2014."'
 - url: https://parishesonline.com/organization/st-andre-bessette-parish-12953
-  seen: '2026-09-30'
+  seen: 2026-09-30
   note: '`probe po st-andre-bessette-parish-12953`: "St. Andre Bessette Parish", 11 Church St., Malone,
     website http://www.standres.org/, ids po-org:st-andre-bessette-parish-12953, lpi:0018000000Qbz9qAAB,
     po-container:06/0038; weekly issues 2026-08-23 to 2026-09-27.'
