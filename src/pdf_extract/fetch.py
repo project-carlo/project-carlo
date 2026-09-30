@@ -371,6 +371,11 @@ def build_latest_other_bulletin_links(
 def _resolve_other_latest_link(
     *, provider_id: str, reference_date: date | None = None, page: PageLike | None = None,
 ) -> tuple[str, str]:
+    # A parish with no site of its own can have only a PDF the diocese or the
+    # parish overwrites each week (rcdony.org/images/Harrisvillebulletin-1.pdf).
+    if _is_pdf_url(provider_id):
+        return provider_id, provider_id
+
     def _run(p: PageLike) -> tuple[str, str]:
         today = reference_date or date.today()
         _goto_with_retry(page=p, page_url=provider_id)
@@ -382,7 +387,7 @@ def _resolve_other_latest_link(
         )
         # Some homepages link this week's bulletin PDF itself, with no page for
         # it: read the homepage as the bulletin page, after any real one.
-        if _links_bulletin_pdf(page=p, base_url=p.url or provider_id):
+        if _links_bulletin_pdf(page=p, base_url=p.url or provider_id, reference_date=today):
             bulletin_page_urls.append(provider_id)
         if not bulletin_page_urls:
             raise ValueError(f"No bulletin page link found for other provider at {provider_id}")
@@ -456,6 +461,18 @@ def _resolve_other_bulletin_page(
                 page=page, post_url=issue_page_url, reference_date=reference_date,
             )
             if not candidates:
+                _goto_with_retry(page=page, page_url=bulletin_page_url)
+    elif not any(c.labelled or _is_current(c.parsed_date, reference_date) for c in candidates):
+        # Its PDFs are something else (a survey, a history) beside a link to
+        # the publisher's listing: St. Agnes, Lake Placid's "recent bulletins".
+        listing_url = _find_publisher_listing_url(page=page, base_url=current_page_url)
+        if listing_url is not None:
+            listed = _collect_other_post_candidates(
+                page=page, post_url=listing_url, reference_date=reference_date,
+            )
+            if listed:
+                candidates = listed
+            else:
                 _goto_with_retry(page=page, page_url=bulletin_page_url)
 
     # Some sites (e.g. WordPress parish blogs) list each weekly bulletin as a
@@ -592,7 +609,7 @@ def _find_other_bulletin_page_urls(
             continue
         resolved = urljoin(base_url, href)
         if (
-            resolved.lower().endswith(".pdf") and not _is_publisher_listing(resolved)
+            _is_pdf_url(resolved) and not _is_publisher_listing(resolved)
         ) or _document_download_url(resolved) is not None:
             continue
         if has_in_href and has_in_text:
@@ -608,27 +625,45 @@ def _find_other_bulletin_page_urls(
     return list(dict.fromkeys(_ranked(both_matches) + _ranked(either_matches)))
 
 
-def _links_bulletin_pdf(*, page: PageLike, base_url: str) -> bool:
-    """Whether the page links a PDF labelled as the bulletin."""
+def _links_bulletin_pdf(
+    *, page: PageLike, base_url: str, reference_date: date | None = None,
+) -> bool:
+    """Whether the page links a PDF labelled as the bulletin, or one dated this week.
+
+    Some homepages post the week's bulletin as a bare "Download File" link
+    whose file name carries the date (cathcommsbse.org's
+    ".../1024614-09-27-2026-aab32.pdf?download").
+    """
     for anchor in page.query_selector_all("a[href]"):
         href = anchor.get_attribute("href")
         if not isinstance(href, str):
             continue
         resolved = urljoin(base_url, href)
-        is_pdf = resolved.lower().endswith(".pdf") and not _is_publisher_listing(resolved)
-        if (
-            (is_pdf or _document_download_url(resolved) is not None)
-            and "bulletin" in f"{_anchor_text(anchor)} {resolved}".lower()
+        is_pdf = _is_pdf_url(resolved) and not _is_publisher_listing(resolved)
+        if not (is_pdf or _document_download_url(resolved) is not None):
+            continue
+        text = _anchor_text(anchor)
+        if "bulletin" in f"{text} {resolved}".lower():
+            return True
+        if reference_date is not None and _is_current(
+            _parse_relaxed_date_from_texts([text, resolved], reference_date), reference_date,
         ):
             return True
     return False
+
+
+def _is_pdf_url(url: str) -> bool:
+    """A link to a PDF file, query string or not ("bulletin.pdf?download")."""
+    return urlparse(url).path.lower().endswith(".pdf")
 
 
 # John Patrick Publishing's "current bulletin" link names a PDF, but redirects
 # to the parish's listing on church-bulletin.org, whose issues are dated PDFs
 # (/bulletin/<parish>/2026-09-27.pdf).
 _PUBLISHER_LISTING_URL = re.compile(
-    r"^https?://(?:www\.)?jppc\.net/onlinebulletins/\d+template\.pdf$", flags=re.IGNORECASE,
+    r"^https?://(?:www\.)?(?:jppc\.net/onlinebulletins/\d+template\.pdf"
+    r"|church-bulletin\.org/(?:\?id=\d+|[\w-]+/?))$",
+    flags=re.IGNORECASE,
 )
 
 
@@ -973,11 +1008,11 @@ def _parse_relaxed_date(
     month_day_pattern = re.compile(
         rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?!\d)"
         r"(?:\s*(?:&|and|-|\s)\s*\d{1,2}(?=\s+\d{4}(?!\d)))?"
-        r"(?:\s+(?P<year>\d{2,4}))?",
+        r"(?:\s+(?P<year>\d{2,4})(?!\d))?",
         flags=re.IGNORECASE,
     )
     day_month_pattern = re.compile(
-        rf"(?<!\d)(?P<day>\d{{1,2}})\s+(?P<month>{month_name})(?:\s+(?P<year>\d{{2,4}}))?",
+        rf"(?<!\d)(?P<day>\d{{1,2}})\s+(?P<month>{month_name})(?:\s+(?P<year>\d{{2,4}})(?!\d))?",
         flags=re.IGNORECASE,
     )
 
@@ -1013,7 +1048,10 @@ def _parse_relaxed_date(
         if parsed is not None:
             return parsed
 
-    for match in re.finditer(r"(?<!\d)(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)", normalized):
+    # Not a run of numbered folders either: Weebly's "/uploads/1/3/1/4/" is no 3 January.
+    for match in re.finditer(
+        r"(?<!\d)(?<!\d[-/.])(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)(?![-/.]\d)", normalized,
+    ):
         parsed = yearless(int(match.group("a")), int(match.group("b")))
         if parsed is not None:
             return parsed
@@ -1274,10 +1312,11 @@ def fetch_bulletins(
     conn = connect_db()
     try:
         parishes = _parishes_for_run(conn, parish_name, slugs)
-        existing_urls = {
-            (row["parish_id"], row["source_url"])
-            for row in conn.execute("SELECT parish_id, source_url FROM bulletin")
-        }
+        existing_urls = set()
+        existing_hashes = set()
+        for row in conn.execute("SELECT parish_id, source_url, content_hash FROM bulletin"):
+            existing_urls.add((row["parish_id"], row["source_url"]))
+            existing_hashes.add((row["parish_id"], row["content_hash"]))
 
         with launch_stealth_browser() as page:
             for parish in parishes:
@@ -1309,9 +1348,11 @@ def fetch_bulletins(
                     failed += 1
                     continue
 
-                if (parish["id"], link.source_url) in existing_urls:
+                source_url = link.source_url
+                rolling = (parish["id"], source_url) in existing_urls
+                if rolling and not _may_be_overwritten(bulletin_provider, source_url):
                     skipped_existing += 1
-                    record(FETCH_UNCHANGED, source_url=link.source_url)
+                    record(FETCH_UNCHANGED, source_url=source_url)
                     continue
 
                 try:
@@ -1331,6 +1372,14 @@ def fetch_bulletins(
                 # The hash names the bulletin as published, so it stays the
                 # bulletin's identity however the stored copy is compacted.
                 content_hash = hashlib.sha256(pdf_bytes).hexdigest()
+                if rolling:
+                    if (parish["id"], content_hash) in existing_hashes:
+                        skipped_existing += 1
+                        record(FETCH_UNCHANGED, source_url=source_url)
+                        continue
+                    # A new issue at the old address: the fragment keeps each
+                    # issue's source_url distinct, and still opens the file.
+                    source_url = f"{source_url}#{content_hash[:12]}"
                 key = bulletin_pdf_key(slug, content_hash)
                 try:
                     # Stored before the row that points at it, so a bulletin row
@@ -1344,7 +1393,7 @@ def fetch_bulletins(
                     insert_bulletin(
                         conn,
                         parish_id=parish["id"],
-                        source_url=link.source_url,
+                        source_url=source_url,
                         content_hash=content_hash,
                         fetched_at=utc_now_iso(),
                     )
@@ -1355,14 +1404,15 @@ def fetch_bulletins(
                     record(
                         FETCH_SAVE_FAILED,
                         detail=f"{type(exc).__name__}: {exc}",
-                        source_url=link.source_url,
+                        source_url=source_url,
                     )
                     failed += 1
                     continue
 
-                existing_urls.add((parish["id"], link.source_url))
+                existing_urls.add((parish["id"], source_url))
+                existing_hashes.add((parish["id"], content_hash))
                 fetched += 1
-                record(FETCH_NEW, source_url=link.source_url, content_hash=content_hash)
+                record(FETCH_NEW, source_url=source_url, content_hash=content_hash)
 
         stale_slugs = _report_stale_parishes(
             bulletins=load_bulletins(conn), slugs=attempted_slugs,
@@ -1378,6 +1428,18 @@ def fetch_bulletins(
     }
     LOGGER.info("Fetch stage finished: %s", result)
     return result
+
+
+def _may_be_overwritten(bulletin_provider: str, source_url: str) -> bool:
+    """Whether a bulletin URL seen before can hold a new issue now.
+
+    Some parishes overwrite one file every week ("/files/bulletin.pdf"): an
+    undated address on the parish's own site. Dated addresses and the
+    publishers' archives name one issue each.
+    """
+    return bulletin_provider == OTHER_TYPE and _parse_relaxed_date(
+        source_url, date.today(),
+    ) is None
 
 
 def _report_stale_parishes(*, bulletins: list[dict], slugs: list[str]) -> list[str]:

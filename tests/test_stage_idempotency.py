@@ -219,6 +219,47 @@ def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:
     assert get_store().get(bulletin_pdf_key("test-parish", content_hash)) == b"%PDF compacted 1"
 
 
+@pytest.mark.parametrize(
+    ("provider", "url", "stored"),
+    [
+        # A parish that overwrites one file every week: each new issue is kept.
+        ("other", "https://test.org/files/bulletin.pdf", 2),
+        # A dated address names one issue, and a publisher's address is never reused.
+        ("other", "https://test.org/files/bulletin-2026-09-27.pdf", 1),
+        ("ecatholic", "https://files.ecatholic.com/1/bulletins/bulletin.pdf", 1),
+    ],
+)
+def test_fetch_reads_an_undated_bulletin_address_again_for_a_new_issue(
+    monkeypatch, db: Path, provider: str, url: str, stored: int,
+) -> None:
+    issues = iter([b"%PDF-1.4 week 1", b"%PDF-1.4 week 1", b"%PDF-1.4 week 2"])
+    monkeypatch.setattr(
+        "pdf_extract.fetch._build_bulletin_link",
+        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+            source_url=url, fetch_url=url,
+        ),
+    )
+    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: next(issues))
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source", lambda parish: (provider, "https://test.org"),
+    )
+
+    @contextmanager
+    def fake_launch_stealth_browser():
+        yield None
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+
+    results = [fetch_bulletins(parish_name="Test Parish") for _ in range(3)]
+
+    assert [r["fetched_bulletins"] for r in results] == [1, 0, stored - 1]
+    bulletins = _bulletins(db)
+    assert len(bulletins) == stored
+    if stored == 2:
+        week_2 = hashlib.sha256(b"%PDF-1.4 week 2").hexdigest()
+        assert {b["source_url"] for b in bulletins} == {url, f"{url}#{week_2[:12]}"}
+
+
 def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) -> None:
     def build_link(bulletin_provider, fetch_provider_id, *, page=None):
         return BulletinLink(
