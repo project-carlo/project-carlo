@@ -188,6 +188,21 @@ one: its Plus Code is on the building.
   SPAM-SQUAT only for two spam terms, three hits, or a page without parish vocabulary. A
   Schenectady parish's news mentioned "Rivers Casino".
 
+## Other bulletin hosts seen in Ogdensburg
+
+- **Weekly-overwritten PDFs:** `cvrchparish.org/files/bulletin.pdf`,
+  `mwcatholics.org/files/bulletin.pdf`, and the diocese's own
+  `rcdony.org/images/<parish>bulletin.pdf`. Record the PDF (or the page linking it) as the
+  `other` website. `fetch` downloads an undated address again each week and keeps a new
+  issue under a `#<hash>` fragment. A PDF evidence quote from one of these is only good
+  until the next Sunday, so say which issue in the `note`.
+- **church-bulletin.org linked directly** (`church-bulletin.org/?id=4047`, "recent
+  bulletins"), not through a jppc.net template. The resolver follows it when the page's own
+  PDFs are something else.
+- **nny360.com (Watertown Daily Times):** paywalled articles keep their text ROT47-scrambled
+  in the served HTML. `visit.py --text` shows it, but `recheck` can't, so quote the headline
+  or subhead where you can.
+
 ## Evidence from blocked pages
 
 `pnpm diocese recheck` re-fetches every evidence URL without a browser, so a quote taken from
