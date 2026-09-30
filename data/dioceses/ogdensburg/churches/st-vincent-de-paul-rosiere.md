@@ -10,7 +10,7 @@ latitude: 44.1218125
 longitude: -76.2411875
 coordinates_from: gcatholic-plus-code
 name_verified: true
-address_verified: true
+address_verified: false
 roster: ['gcatholic:18251', 'directory:cape-vincent-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-02/18251
@@ -46,9 +46,10 @@ stop after October and resume in spring (the site does not say; see the parish r
 ## Name and address
 
 Name: the parish site, bulletin, directory, GCatholic and OSM all say "St. Vincent de Paul"
-(name_verified true). Address 31399 County Route 4: the diocese directory, the parish site
-and OSM (a node with house number 31399) agree, so address_verified is true. GCatholic's
-31385 County Route 4 is the odd one out (a neighbouring number), noted. The parish site's
+(name_verified true). Address: **one source disagrees, so address_verified stays false.** The diocese directory,
+the parish site and OSM (a node with house number 31399) all say 31399 County Route 4;
+GCatholic says 31385 County Route 4, probably a neighbouring number, but I have no source
+that says so. I followed the three that agree. The parish site's
 ZIP for the hamlet is 13601 and the directory's and OSM's 13618; I used 13618, the ZIP of
 the directory, GCatholic and OSM. Coordinates: GCatholic Plus Code 87P54QC5+PG, about 10 m
 from the OSM node.

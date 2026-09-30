@@ -30,7 +30,6 @@ evidence:
   note: 'Parish site Mass Times page (eCatholic, behind Cloudflare; read in a browser with parish-site-access visit.py): Sunday 12:30 PM and Wednesday 3:00 PM St. Henry''s, Long Lake.'
 - url: https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%3Bway%28815597093%29%3Bout%20tags%3B
   seen: 2026-09-30
-  quote: '"addr:housenumber":"1187"'
   note: OSM way 815597093, a place of worship building with addr:housenumber 1187, on Main Street at 43.97160, -74.42097, about 25 m from GCatholic's Plus Code point (Overpass query by radius on 2026-09-30).
 ---
 
