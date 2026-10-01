@@ -29,6 +29,7 @@ from pdf_extract.apply import (
 from pdf_extract.bench import (
     DEFAULT_DETAILS,
     DEFAULT_MODELS,
+    DEFAULT_PDF_INPUTS,
     DEFAULT_SCHEMAS,
     DEFAULT_STACKS,
     BenchError,
@@ -37,7 +38,8 @@ from pdf_extract.bench import (
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
 from pdf_extract.classifiers import (
     BENCH_MODELS,
-    PDF_DETAILS,
+    IMAGE_DETAILS,
+    PDF_INPUTS,
     SCHEMA_MODES,
     STACKS,
     available_classifiers,
@@ -187,6 +189,7 @@ def _cmd_bench(args: argparse.Namespace) -> Result:
         models=args.models,
         details=args.detail,
         schemas=args.schema,
+        pdf_inputs=args.pdf_input,
         effort=None if args.effort == "default" else args.effort,
         limit=args.limit,
         seed=args.seed,
@@ -432,9 +435,15 @@ def _build_parser() -> argparse.ArgumentParser:
         f"(gemini-*), which read the PDF once like production, e.g. {DEFAULT_GEMINI_MODEL}",
     )
     bench_parser.add_argument(
-        "--detail", nargs="+", choices=list(PDF_DETAILS), default=list(DEFAULT_DETAILS),
-        help="PDF detail levels for the pdf stack, one run each "
-        f"(default: {' '.join(DEFAULT_DETAILS)})",
+        "--detail", nargs="+", choices=list(IMAGE_DETAILS), default=list(DEFAULT_DETAILS),
+        help="Detail levels for the pdf stack, one run each; 'original' (full "
+        f"resolution) only for --pdf-input images (default: {' '.join(DEFAULT_DETAILS)})",
+    )
+    bench_parser.add_argument(
+        "--pdf-input", nargs="+", choices=list(PDF_INPUTS), default=list(DEFAULT_PDF_INPUTS),
+        help="What the pdf stack sends, one run each: 'file' sends the PDF; 'images' "
+        "renders each page to a PNG sized for the detail level and sends those "
+        f"(default: {' '.join(DEFAULT_PDF_INPUTS)})",
     )
     bench_parser.add_argument(
         "--schema", nargs="+", choices=list(SCHEMA_MODES), default=list(DEFAULT_SCHEMAS),

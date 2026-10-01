@@ -10,7 +10,8 @@ One command (`pnpm bench`) runs the whole comparison:
 3. Runs each stack on those bulletins, for each OpenAI model under test: a
    text extractor (PyMuPDF with an OCR fallback, Docling, or full-page OCR)
    followed by the model reading the text, plus the model reading the PDF
-   itself as a control, once per PDF `detail` and schema mode under test.
+   itself as a control, once per PDF `detail`, schema mode and input under
+   test (the PDF file, or `--pdf-input images`: one rendered image per page).
 4. Scores every stack against the baseline (`compare --baseline`) and writes
    the report under data/runs/bench/.
 
@@ -38,9 +39,15 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.blobstore import get_store
-from pdf_extract.classifiers import STACKS, Classifier, stack_classifier, stack_name
+from pdf_extract.classifiers import (
+    STACKS,
+    Classifier,
+    details_for,
+    stack_classifier,
+    stack_name,
+)
 from pdf_extract.classifiers.gemini import GeminiClassifier
-from pdf_extract.classifiers.openai_gpt import FileDetail
+from pdf_extract.classifiers.openai_gpt import ImageDetail, PdfInput
 from pdf_extract.classifiers.text_llm import DEFAULT_REASONING_EFFORT, DEFAULT_TEXT_MODEL
 from pdf_extract.compare import compare, load_manifest
 from pdf_extract.datasync import pull
@@ -59,10 +66,11 @@ BASELINE = "gemini-flash"
 
 DEFAULT_STACKS = ("pymupdf", "docling", "ocr", "pdf")
 DEFAULT_MODELS = (DEFAULT_TEXT_MODEL,)
-# The `pdf` stack sends the bulletin at low detail, with Gemini's exact
+# The `pdf` stack sends the bulletin PDF at low detail, with Gemini's exact
 # schema, unless asked for more.
-DEFAULT_DETAILS: tuple[FileDetail, ...] = ("low",)
+DEFAULT_DETAILS: tuple[ImageDetail, ...] = ("low",)
 DEFAULT_SCHEMAS = ("exact",)
+DEFAULT_PDF_INPUTS: tuple[PdfInput, ...] = ("file",)
 
 
 class BenchError(RuntimeError):
@@ -76,31 +84,43 @@ def is_gemini(model: str) -> bool:
 def _configurations(
     stacks: list[str],
     models: list[str],
-    details: list[FileDetail],
+    details: list[ImageDetail],
     schemas: list[str] | None = None,
-) -> list[tuple[str, str, FileDetail, str]]:
-    """(stack, model, detail, schema) for every run: each model × stack, and the
-    `pdf` stack once per detail and schema mode (the text stacks send no PDF and
-    always ask for strict output, so both are moot for them).
-    A Gemini model runs once, on the PDF, as production does."""
+    pdf_inputs: list[PdfInput] | None = None,
+) -> list[tuple[str, str, ImageDetail, str, PdfInput]]:
+    """(stack, model, detail, schema, pdf_input) for every run: each model ×
+    stack, and the `pdf` stack once per input, detail and schema mode (the text
+    stacks send no PDF and always ask for strict output, so all three are moot
+    for them). `original` detail only exists for page images, so a PDF file is
+    not sent at it. A Gemini model runs once, on the PDF, as production does."""
     schemas = list(schemas or DEFAULT_SCHEMAS)
-    return [
-        (stack, model, detail, schema)
-        for model in models
-        for stack in (["pdf"] if is_gemini(model) else stacks)
-        for detail in (details if STACKS[stack] is None and not is_gemini(model) else details[:1])
-        for schema in (schemas if STACKS[stack] is None and not is_gemini(model) else ["exact"])
-    ]
+    pdf_inputs = list(pdf_inputs or DEFAULT_PDF_INPUTS)
+    configs: list[tuple[str, str, ImageDetail, str, PdfInput]] = []
+    for model in models:
+        for stack in (["pdf"] if is_gemini(model) else stacks):
+            if STACKS[stack] is not None or is_gemini(model):
+                configs.append((stack, model, details[0], "exact", "file"))
+                continue
+            for pdf_input in pdf_inputs:
+                for detail in details:
+                    if detail not in details_for(pdf_input):
+                        continue
+                    configs.extend(
+                        (stack, model, detail, schema, pdf_input) for schema in schemas
+                    )
+    return configs
 
 
 def _classifier(
-    stack: str, model: str, detail: FileDetail, effort: str | None,
-    schema: str = "exact",
+    stack: str, model: str, detail: ImageDetail, effort: str | None,
+    schema: str = "exact", pdf_input: PdfInput = "file",
 ) -> Classifier:
     if is_gemini(model):
         # The production model keeps the production name, so it shares its cache.
         return GeminiClassifier(model=model, name=None if model == DEFAULT_GEMINI_MODEL else model)
-    return stack_classifier(stack, model=model, detail=detail, schema=schema, effort=effort)
+    return stack_classifier(
+        stack, model=model, detail=detail, schema=schema, effort=effort, pdf_input=pdf_input,
+    )
 
 
 def _labeled_sample(
@@ -160,8 +180,9 @@ def run_bench(
     *,
     stacks: list[str] | None = None,
     models: list[str] | None = None,
-    details: list[FileDetail] | None = None,
+    details: list[ImageDetail] | None = None,
     schemas: list[str] | None = None,
+    pdf_inputs: list[PdfInput] | None = None,
     effort: str | None = DEFAULT_REASONING_EFFORT,
     limit: int | None = None,
     seed: int = 0,
@@ -176,9 +197,23 @@ def run_bench(
     models = list(dict.fromkeys(models or DEFAULT_MODELS))
     details = list(dict.fromkeys(details or DEFAULT_DETAILS))
     schemas = list(dict.fromkeys(schemas or DEFAULT_SCHEMAS))
+    pdf_inputs = list(dict.fromkeys(pdf_inputs or DEFAULT_PDF_INPUTS))
     for stack in stacks:
         if stack not in STACKS:
             raise BenchError(f"Unknown stack {stack!r}. Available: {', '.join(STACKS)}")
+    configurations = _configurations(stacks, models, details, schemas, pdf_inputs)
+    wants_openai_pdf = any(not is_gemini(m) for m in models) and any(
+        STACKS[stack] is None for stack in stacks
+    )
+    has_openai_pdf = any(
+        STACKS[stack] is None and not is_gemini(model)
+        for stack, model, *_rest in configurations
+    )
+    if wants_openai_pdf and not has_openai_pdf:
+        raise BenchError(
+            f"No detail in {details} applies to --pdf-input {' '.join(pdf_inputs)}: "
+            "'original' is for page images (--pdf-input images)."
+        )
     if any(not is_gemini(m) for m in models) and not os.environ.get("OPENAI_API_KEY"):
         raise BenchError("OPENAI_API_KEY is not set (put it in .env or the environment).")
     if fill_baseline and not os.environ.get("GEMINI_API_KEY"):
@@ -199,7 +234,8 @@ def run_bench(
 
     if labels:
         return _run_against_labels(
-            stacks=stacks, models=models, details=details, schemas=schemas, effort=effort,
+            stacks=stacks, models=models, details=details, schemas=schemas,
+            pdf_inputs=pdf_inputs, effort=effort,
             limit=limit, seed=seed, parish_name=parish_name, concurrency=concurrency,
             fill_baseline=fill_baseline, labels_dir=labels_dir,
         )
@@ -227,12 +263,9 @@ def run_bench(
     run_extract(classifier_name=BASELINE, source_urls=sample, cache_only=True)
 
     # The baseline is the truth here, not one of the runs under test.
-    configurations = [
-        c for c in _configurations(stacks, models, details, schemas)
-        if c[1] != DEFAULT_GEMINI_MODEL
-    ]
     runs, skipped = _run_stacks(
-        configurations, effort=effort, concurrency=concurrency, source_urls=sample,
+        [c for c in configurations if c[1] != DEFAULT_GEMINI_MODEL],
+        effort=effort, concurrency=concurrency, source_urls=sample,
     )
     names = [name for name, summary in runs.items() if summary["bulletins_served"]]
     if not names:
@@ -256,8 +289,9 @@ def _run_against_labels(
     *,
     stacks: list[str],
     models: list[str],
-    details: list[FileDetail],
+    details: list[ImageDetail],
     schemas: list[str],
+    pdf_inputs: list[PdfInput],
     effort: str | None,
     limit: int | None,
     seed: int,
@@ -280,9 +314,9 @@ def _run_against_labels(
         return bulletin_sunday(truth.get((entry["parish_slug"], entry["content_hash"])), entry)
 
     configurations = [
-        ("pdf", DEFAULT_GEMINI_MODEL, details[0], "exact"),
+        ("pdf", DEFAULT_GEMINI_MODEL, details[0], "exact", "file"),
         *(
-            c for c in _configurations(stacks, models, details, schemas)
+            c for c in _configurations(stacks, models, details, schemas, pdf_inputs)
             if c[1] != DEFAULT_GEMINI_MODEL
         ),
     ]
@@ -313,7 +347,7 @@ def _run_against_labels(
 
 
 def _run_stacks(
-    configurations: list[tuple[str, str, FileDetail, str]],
+    configurations: list[tuple[str, str, ImageDetail, str, PdfInput]],
     *,
     effort: str | None,
     concurrency: int,
@@ -326,13 +360,18 @@ def _run_stacks(
     """Run each configuration on the sample: (run summaries by name, skipped with why)."""
     runs: dict[str, Any] = {}
     skipped: dict[str, str] = {}
-    for stack, model, detail, schema in configurations:
+    for stack, model, detail, schema, pdf_input in configurations:
         label = (
             model if is_gemini(model)
-            else stack_name(stack, model=model, detail=detail, schema=schema, effort=effort)
+            else stack_name(
+                stack, model=model, detail=detail, schema=schema, effort=effort,
+                pdf_input=pdf_input,
+            )
         )
         try:
-            classifier = _classifier(stack, model, detail, effort, schema=schema)
+            classifier = _classifier(
+                stack, model, detail, effort, schema=schema, pdf_input=pdf_input,
+            )
         except ImportError as exc:
             LOGGER.error("Skipping stack %s: %s", label, exc)
             skipped[label] = str(exc)

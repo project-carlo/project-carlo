@@ -228,10 +228,10 @@ def test_gemini_models_run_once_on_the_pdf():
         ["pymupdf", "pdf"], ["gemini-3-pro-preview", "gpt-6-luna"], ["low", "high"],
     )
     assert configurations == [
-        ("pdf", "gemini-3-pro-preview", "low", "exact"),
-        ("pymupdf", "gpt-6-luna", "low", "exact"),
-        ("pdf", "gpt-6-luna", "low", "exact"),
-        ("pdf", "gpt-6-luna", "high", "exact"),
+        ("pdf", "gemini-3-pro-preview", "low", "exact", "file"),
+        ("pymupdf", "gpt-6-luna", "low", "exact", "file"),
+        ("pdf", "gpt-6-luna", "low", "exact", "file"),
+        ("pdf", "gpt-6-luna", "high", "exact", "file"),
     ]
 
 

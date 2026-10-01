@@ -386,7 +386,7 @@ heading they belong to, and tags blocks with their position on the page
 | `pymupdf` | `luna-pymupdf` | PyMuPDF text layer in column-aware reading order; RapidOCR only where there is no usable text (images, outlined text, broken fonts). Under a second per bulletin, plus a few seconds per OCR region. |
 | `docling` | `luna-docling` | Docling layout model, rows rebuilt from text positions, RapidOCR on the same kinds of regions. Tens of seconds per bulletin. |
 | `ocr` | `luna-ocr` | Every page rendered and read by RapidOCR, ignoring the text layer, then rebuilt into columns and rows. The slowest: about 5 s per page. |
-| `pdf` | `luna-pdf-low`, `luna-pdf-high` (+ `-strict`) | none: the model reads the PDF itself (the control), sent like Gemini's request: the same prompt, then the PDF at the chosen `detail`, with the exact JSON schema Gemini gets (non-strict), or with `--schema strict` the OpenAI SDK's strict version of it and strict decoding |
+| `pdf` | `luna-pdf-low`, `luna-pdf-high` (+ `-strict`); `luna-pdf-images-low`, `-high`, `-original` | none: the model reads the PDF itself (the control), sent like Gemini's request: the same prompt, then the PDF at the chosen `detail`, with the exact JSON schema Gemini gets (non-strict), or with `--schema strict` the OpenAI SDK's strict version of it and strict decoding. With `--pdf-input images`, each page is rendered to a PNG and the pages are sent as images instead of the PDF |
 
 ```bash
 # .env: OPENAI_API_KEY plus the R2 read keys you already use for data:pull
@@ -398,12 +398,20 @@ pnpm bench --stacks pdf --detail low high                    # PDF at low vs hig
 pnpm bench --models gpt-6-luna gpt-5.6-luna                  # every stack on both models
 pnpm bench --stacks pdf --models gpt-6-luna gpt-5.6-luna --detail low high  # all four
 pnpm bench --stacks pdf --schema exact strict                # Gemini's schema vs strict
+pnpm bench --stacks pdf --pdf-input file images              # the PDF vs its pages as images
+pnpm bench --stacks pdf --pdf-input images --detail low high original  # image detail levels
 ```
 
 Run names start with the model: `luna-` for `gpt-6-luna`, `luna5.6-` for
 `gpt-5.6-luna`, and the model id for any other. The `pdf` stack's name ends
-with its detail, then `-strict` for a strict run, and a non-default effort is
-appended (`luna-pymupdf-low`). Strict mode can't send Gemini's schema as-is
+with its detail, after `-images` when it sends page images, then `-strict` for
+a strict run, and a non-default effort is appended (`luna-pymupdf-low`).
+Page images are rendered at the size the model reads each detail level at, so
+nothing is uploaded that OpenAI would only scale down: `low` fits 512 × 512 px,
+`high` fits 2,500 32-px patches and 2,048 px a side (about 165 dpi for a
+letter page), and `original`, which only images take, is 300 dpi, shrunk only
+past 10,000 patches or 6,000 px a side (the tightest model's cap). Rendering
+needs PyMuPDF, which `pnpm bench` installs with the other extractors. Strict mode can't send Gemini's schema as-is
 (OpenAI requires every field and drops null defaults), so it sends the rewrite
 the SDK's `text_format=` makes, which is also what the text stacks always use;
 either way, replies are parsed leniently.
@@ -452,7 +460,7 @@ its parish's latest) and scores every one of them, production Gemini
 included, against the labels. `--models` takes any OpenAI model id and any
 Gemini model id (`gemini-*`, run once on the PDF like production; one other
 than the production model needs `GEMINI_API_KEY`), and `--stacks`, `--detail`,
-`--effort`, `--limit` and `--parish` work as above.
+`--pdf-input`, `--effort`, `--limit` and `--parish` work as above.
 
 Every classifier is told today is the Sunday the bulletin is dated to (the
 Sunday nearest the label's published date, else the bulletin's, else the day
