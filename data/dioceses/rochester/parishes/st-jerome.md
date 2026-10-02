@@ -3,31 +3,42 @@ name: Church of Saint Jerome
 website: https://stjeromerochester.org
 bulletin_provider: ecatholic
 provider_id: ''
-publication: []
+publication: ['ecatholic:22370']
 group: ''
-evidence: []
+evidence:
+- url: https://files.ecatholic.com/22370/bulletins/20261004.pdf
+  seen: 2026-10-02
+  quote: CHURCH OF ST. JEROME OCTOBER 4, 2026
+  note: Page 1 of the 4 October 2026 issue (3 pages, text).
+- url: https://files.ecatholic.com/22370/bulletins/20261004.pdf
+  seen: 2026-10-02
+  quote: Saturday Vigil | 4:30 p.m. Sunday | 8:00 a.m. & 10:00 a.m. Monday through Friday | 7:30 a.m.
+  note: Page 1 of the same issue.
+- url: http://rc.net/rochester/stjerome/
+  seen: 2026-10-02
+  note: The Parish Locator still links this address (HTTP 503 on 2 October 2026); it is an old rc.net
+    page, not the parish site.
 promoted: 2026-10-02
 ---
 
-> Adopted on 2026-10-02 from the live row, which predates the diocese records (Rochester was the pipeline's first diocese and was written straight into the CSVs). The frontmatter is the live row as it stood; the explanation below is the audit.
-
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Jerome publishes its own eCatholic bulletin. The 4 October 2026 issue is headed "CHURCH
+OF ST. JEROME", gives the address 207 Garfield Street, East Rochester, and lists Saturday
+vigil 4:30 pm, Sunday 8:00 and 10:00 am, and weekday Masses Monday-Friday 7:30 am. No other
+church is named. The Parish Locator lists St. Jerome as its own group.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: `st-jerome`, 207 Garfield Street.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+`stjeromerochester.org` is eCatholic (probe url 403; visit.py found `ecatholic:22370`).
+**The locator's link `rc.net/rochester/stjerome/` is dead** (503) and an obsolete host; the
+live site is `stjeromerochester.org`, which the Directory of Parishes and the bulletin give.
+issues.py found the 4 October issue at `files.ecatholic.com/22370/bulletins/20261004.pdf`.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

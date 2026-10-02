@@ -11,20 +11,23 @@ evidence:
 - url: https://gcatholic.org/churches/usa-02/17116
   seen: 2026-10-02
   quote: 136 Washington St., Auburn, New York 13021
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Rochester as ''Sts. Peter and
-    Paul'', 136 Washington St., Auburn, NY, 13021; kind: Church; rite: Ukrainian'
+  note: 'GCatholic page 17116 reads "Church of Sts. Peter and Paul (Ukrainian) ... Jurisdiction: Ukrainian
+    Diocese of Stamford ... within the territory of the Roman Diocese of Rochester ... Rite: Ukrainian
+    (Byzantine)".'
 - url: https://www.dor.org/parishes-campuses-cemeteries/parish-locator-and-mass-times/
   seen: 2026-10-02
-  note: 'Listed in Diocese of Rochester Parish Locator and Mass Times as ''Ss. Peter and Paul'', Auburn,
-    NY; group: Individual'
+  note: The Locator lists "Ss. Peter and Paul", Auburn, under its "Individual" block (Sat 4pm, Sun 8 and
+    9:30am), with no address or website.
+- url: https://www.openstreetmap.org/search?query=Ukrainian%20Greek%20Catholic%20Church%20of%20Saint%20Peter%20and%20Saint%20Paul%20Auburn
+  seen: 2026-10-02
+  note: OpenStreetMap node "Ukrainian Greek Catholic Church of Saint Peter and Saint Paul", Perrine Street
+    area, Auburn (about 42.9397, -76.5781), near 136 Washington St.
 ---
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+**Ss. Peter and Paul, 136 Washington St, Auburn: Ukrainian Greek Catholic, other jurisdiction.** GCatholic lists it as the Church of Sts. Peter and Paul (Ukrainian), Ukrainian Diocese of Stamford, Byzantine rite, "within the territory of the Roman Diocese of Rochester". OpenStreetMap names the same place a Ukrainian Greek Catholic church. The Locator puts it in its "Individual" block with Ukrainian-church neighbours. It is not a Diocese of Rochester parish and publishes no Rochester bulletin. I did not look for a parish bulletin of its own.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+Nothing expected.

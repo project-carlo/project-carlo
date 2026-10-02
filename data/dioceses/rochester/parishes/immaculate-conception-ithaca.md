@@ -1,33 +1,41 @@
 ---
 name: Immaculate Conception Church
 website: https://www.immconch.org
-bulletin_provider: other
-provider_id: ''
-publication: []
+bulletin_provider: parishes_online
+provider_id: immaculate-conception-church-14850
+publication: ['po-org:immaculate-conception-church-14850', 'lpi:0018000000Qx7QUAAZ', 'po-container:03/1285']
 group: ''
-evidence: []
+evidence:
+- {url: 'https://container.parishesonline.com/bulletins/03/1285/20261004B.pdf', seen: 2026-10-02, quote: IMMACULATE
+    CONCEPTION, note: 'Page 1 masthead of the 4 October 2026 issue (container 03/1285): "Immaculate Conception
+    Catholic Church 113 N. Geneva Street Ithaca, NY 14850".'}
+- {url: 'https://container.parishesonline.com/bulletins/03/1285/20261004B.pdf', seen: 2026-10-02, quote: Saturday
+    Vigil, note: 'Page 1 Mass schedule: Saturday Vigil 4:30pm; Sunday 8:30am, 10:30am; weekdays; First
+    Saturday 9:00am.'}
+- {url: 'https://www.immconch.org/bulletins-a/', seen: 2026-10-02, quote: immaculate-conception-church-14850,
+  note: 'The parish Bulletins page links https://parishesonline.com/publication-page/immaculate-conception-church-14850
+    (container 03/1285).'}
 promoted: 2026-10-02
 ---
 
-> Adopted on 2026-10-02 from the live row, which predates the diocese records (Rochester was the pipeline's first diocese and was written straight into the CSVs). The frontmatter is the live row as it stood; the explanation below is the audit.
-
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+Immaculate Conception Parish, Ithaca, publishes its own bulletin through ParishesOnline. The 4 October 2026
+issue's masthead reads "Immaculate Conception ... OCTOBER 4, 2026" with the Mass schedule and
+"113 N. Geneva Street, Ithaca". It is a single-church parish. (St. Catherine of Siena's bulletin says the
+First Saturday 9:00 am Mass is "at Immaculate Conception", which is this parish's own First Saturday Mass.)
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+`churches/immaculate-conception.md` only.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+The live row had provider `other`. `immconch.org`'s Bulletins page links the ParishesOnline publication page
+for organization `immaculate-conception-church-14850` (LPi id 0018000000Qx7QUAAZ, container 03/1285, newest
+issue 2026-10-04), so the row is changed to `parishes_online` with that provider_id: fetch reads
+ParishesOnline by provider_id and this is the bulletin itself.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

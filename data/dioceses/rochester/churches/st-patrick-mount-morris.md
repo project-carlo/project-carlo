@@ -13,6 +13,7 @@ name_verified: true
 address_verified: true
 roster:
 - gcatholic:17813
+- parish-directory:st-luke-the-evangelist-parish-2
 evidence:
 - url: https://www.stlukelivingstoncounty.org/
   seen: '2026-10-02'
