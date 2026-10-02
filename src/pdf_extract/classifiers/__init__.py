@@ -11,10 +11,16 @@ from collections.abc import Callable
 from pdf_extract.classifiers.base import Classifier
 from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.classifiers.openai_gpt import OpenAIClassifier
+from pdf_extract.classifiers.openai_responses import OpenAIResponsesClassifier
 
 REGISTRY: dict[str, Callable[[], Classifier]] = {
     "gemini-flash": lambda: GeminiClassifier(),
     "gpt-5.4-mini": lambda: OpenAIClassifier(model="gpt-5.4-mini"),
+    # Qualified schema (weeks of the month, seasons), for scoring against labels.
+    "gpt-6-luna": lambda: OpenAIResponsesClassifier(model="gpt-6-luna"),
+    "gpt-6-luna-nonstrict": lambda: OpenAIResponsesClassifier(
+        model="gpt-6-luna", name="gpt-6-luna-nonstrict", strict=False,
+    ),
 }
 
 

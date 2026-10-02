@@ -95,6 +95,32 @@ committed to git. Each file (`schema_version` 1) holds:
 The API validates every file (`src/pdf_extract/labeling/labels.py`) and
 rejects any slug or hash that would put it outside `data/labels`.
 
+### Run a classifier over the labeled bulletins
+
+```bash
+pnpm eval --classifier gpt-6-luna --limit 2   # smoke test on two bulletins
+pnpm eval --classifier gpt-6-luna             # every label marked done
+pnpm eval --classifier gpt-6-luna --status done --status in_progress --parish all-saints-albany
+```
+
+Any classifier in `src/pdf_extract/classifiers/__init__.py` can be run
+(`gemini-flash`, `gpt-6-luna`, `gpt-6-luna-nonstrict`, ...). Each bulletin is
+classified as of the day it was fetched, and results are cached by classifier
+version (model, prompt, schema and settings), PDF and church list, so re-running
+an unchanged classifier makes no API calls (`--refresh` forces them). Output
+goes to `data/runs/<classifier>/eval/<version>/`:
+
+- `predictions/<parish_slug>/<content_hash>.json`: the classifier's events in
+  the label's row shape, next to `published_date`, `wrong_bulletin`, token usage
+  and timing, so each file lines up with its label.
+- `run.json`: cache hits, errors, skipped bulletins and summed token usage.
+
+The `gpt-6-luna` classifiers (`classifiers/openai_responses.py`) use the
+Responses API with the schema and prompt in `classifiers/qualified_schedule.py`:
+the production schema plus `weeks_of_month` and `season` on weekly slots, and the
+production Gemini prompt with its static part sent first as an explicit
+prompt-cache breakpoint. They need `OPENAI_API_KEY`.
+
 ## Weekly pipeline
 
 One command runs a whole weekly pass:
@@ -378,6 +404,7 @@ Commands read a `.env` file in the repo root if there is one (without
 overriding variables already set).
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
+- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`).
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
@@ -426,6 +453,8 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
   - `labeling/` - the labeler's API (`pnpm label`): label files, bulletin queue, Gemini sources, demo data
+  - `classifiers/` - pluggable bulletin → events classifiers (Gemini, OpenAI) and their registry
+  - `evals/` - running classifiers over the labeled bulletins (`pnpm eval`)
 
 ## Dependencies
 

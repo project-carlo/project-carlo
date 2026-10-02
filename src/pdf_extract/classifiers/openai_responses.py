@@ -1,0 +1,201 @@
+"""OpenAI Responses API classifier over the qualified schedule schema.
+
+One request per bulletin, laid out so the shared part is a cacheable prefix:
+
+1. a developer message holding the static `INSTRUCTIONS`, marked as an explicit
+   prompt-cache breakpoint (the response schema in `text.format` is part of
+   that prefix too);
+2. a user message with the per-bulletin context (known churches, today's date)
+   and then the PDF.
+
+Caching runs in explicit mode so the only cache write is that shared prefix.
+In the default implicit mode OpenAI puts a breakpoint at the end of the last
+user message, which would write every unique PDF to the cache at 1.25x the
+input rate for no later hit.
+
+`strict` toggles constrained decoding (`json_schema` with `strict: true`). The
+same schema is sent either way, and the reply goes through the same lenient
+parse, so the two modes differ only in whether the API enforces the schema.
+"""
+
+from __future__ import annotations
+
+import base64
+import json
+import logging
+from datetime import date
+from typing import Any, Literal
+
+from openai import OpenAI
+from openai.lib._pydantic import to_strict_json_schema
+from pydantic import ValidationError
+
+from pdf_extract.classifiers.qualified_schedule import (
+    INSTRUCTIONS,
+    SCHEMA_FINGERPRINT,
+    QualifiedSchedulePayload,
+    flatten_events,
+    render_context,
+)
+
+LOGGER = logging.getLogger(__name__)
+
+ReasoningEffort = Literal["none", "low", "medium", "high", "xhigh", "max"]
+FileDetail = Literal["auto", "low", "high"]
+
+# Seconds one request may take before the SDK gives up (and retries).
+REQUEST_TIMEOUT_SECONDS = 600.0
+
+
+def _without_defaults(schema: Any) -> Any:
+    """The schema with `default` keys dropped: every field is required in strict mode."""
+    if isinstance(schema, dict):
+        return {k: _without_defaults(v) for k, v in schema.items() if k != "default"}
+    if isinstance(schema, list):
+        return [_without_defaults(v) for v in schema]
+    return schema
+
+
+RESPONSE_SCHEMA = _without_defaults(to_strict_json_schema(QualifiedSchedulePayload))
+
+
+class OpenAIResponsesClassifier:
+    name: str
+    version: str
+
+    def __init__(
+        self,
+        *,
+        model: str,
+        name: str | None = None,
+        reasoning_effort: ReasoningEffort = "medium",
+        file_detail: FileDetail = "low",
+        strict: bool = True,
+        max_retries: int = 5,
+    ) -> None:
+        self._model = model
+        self._reasoning_effort = reasoning_effort
+        self._file_detail = file_detail
+        self._strict = strict
+        self._max_retries = max_retries
+        self._client: OpenAI | None = None
+        self.name = name or model
+        # Keys the result cache, so it names everything that changes the output.
+        self.version = (
+            f"{model}+{'strict' if strict else 'nonstrict'}+reasoning-{reasoning_effort}"
+            f"+detail-{file_detail}+prompt-{SCHEMA_FINGERPRINT}"
+        )
+
+    def _openai(self) -> OpenAI:
+        # Built on first use, so listing the registry needs no API key. The
+        # client is thread-safe; the SDK retries 429 / 5xx and timeouts itself.
+        if self._client is None:
+            self._client = OpenAI(max_retries=self._max_retries, timeout=REQUEST_TIMEOUT_SECONDS)
+        return self._client
+
+    def request(
+        self, pdf_bytes: bytes, *, churches: list[dict[str, Any]], today: date,
+    ) -> dict[str, Any]:
+        """The keyword arguments for `responses.create`, for one bulletin."""
+        encoded = base64.b64encode(pdf_bytes).decode("ascii")
+        return {
+            "model": self._model,
+            "input": [
+                {
+                    "role": "developer",
+                    "content": [
+                        {
+                            "type": "input_text",
+                            "text": INSTRUCTIONS,
+                            "prompt_cache_breakpoint": {"mode": "explicit"},
+                        },
+                    ],
+                },
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "input_text",
+                            "text": render_context(
+                                churches, today.isoformat(), today.strftime("%A"),
+                            ),
+                        },
+                        {
+                            "type": "input_file",
+                            "filename": "bulletin.pdf",
+                            "file_data": f"data:application/pdf;base64,{encoded}",
+                            "detail": self._file_detail,
+                        },
+                    ],
+                },
+            ],
+            "reasoning": {"effort": self._reasoning_effort},
+            "text": {
+                "format": {
+                    "type": "json_schema",
+                    "name": "schedule_payload",
+                    "schema": RESPONSE_SCHEMA,
+                    "strict": self._strict,
+                },
+            },
+            "prompt_cache_options": {"mode": "explicit"},
+            "store": False,
+        }
+
+    def extract(
+        self,
+        pdf_bytes: bytes,
+        *,
+        churches: list[dict[str, Any]],
+        today: date,
+    ) -> dict[str, Any]:
+        if not pdf_bytes:
+            return flatten_events({})
+
+        response = self._openai().responses.create(
+            **self.request(pdf_bytes, churches=churches, today=today),
+        )
+        if response.status != "completed":
+            LOGGER.warning(
+                "%s response %s is %s (%s)",
+                self._model, response.id, response.status, response.incomplete_details,
+            )
+        result = flatten_events(_parse(response.output_text or "", model=self._model))
+        result["usage"] = _usage(response)
+        result["response_id"] = response.id
+        return result
+
+
+def _parse(text: str, *, model: str) -> QualifiedSchedulePayload | dict[str, Any]:
+    """The validated payload, or the raw JSON object when it does not validate.
+
+    Strict mode should always validate; a refusal or a truncated reply comes back
+    as an empty result so the bulletin scores as zero events rather than crashing.
+    """
+    try:
+        return QualifiedSchedulePayload.model_validate_json(text)
+    except ValidationError as exc:
+        LOGGER.warning("%s output failed validation (%s); reading it leniently", model, exc)
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError:
+        LOGGER.warning("%s returned no JSON object: %r", model, text[:200])
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def _usage(response: Any) -> dict[str, int]:
+    """Token counts for run cost reporting, including the prompt-cache split."""
+    usage = getattr(response, "usage", None)
+    if usage is None:
+        return {}
+    input_details = getattr(usage, "input_tokens_details", None)
+    output_details = getattr(usage, "output_tokens_details", None)
+    counts = {
+        "input_tokens": getattr(usage, "input_tokens", None),
+        "cached_tokens": getattr(input_details, "cached_tokens", None),
+        "cache_write_tokens": getattr(input_details, "cache_write_tokens", None),
+        "output_tokens": getattr(usage, "output_tokens", None),
+        "reasoning_tokens": getattr(output_details, "reasoning_tokens", None),
+    }
+    return {k: v for k, v in counts.items() if isinstance(v, int)}
