@@ -10,7 +10,7 @@ latitude: 43.316239
 longitude: -76.7019125
 coordinates_from: geocode-stage
 name_verified: true
-address_verified: false
+address_verified: true
 roster: ['directory:291-st-jude-chapel', 'gcatholic:17800']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0326/20261004B.pdf

@@ -9,8 +9,8 @@ postal_code: '14502'
 latitude: 43.0681442
 longitude: -77.3029822
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:356-st-patrick-s', 'gcatholic:17847', 'parish-directory:st-katharine-drexel-parish-2']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0230/20261004B.pdf

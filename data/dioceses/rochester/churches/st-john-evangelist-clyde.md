@@ -10,7 +10,7 @@ latitude: 43.0866606
 longitude: -76.8703443
 coordinates_from: geocode-stage
 name_verified: true
-address_verified: false
+address_verified: true
 roster: ['directory:364-st-john-the-evangelist', 'gcatholic:17788', 'directory:364-st-joseph-the-worker',
   'parish-directory:st-joseph-the-worker-roman-catholic-parish']
 evidence:

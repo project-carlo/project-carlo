@@ -9,8 +9,8 @@ postal_code: '14886'
 latitude: 42.5399821
 longitude: -76.6594573
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:368-st-james-the-apostle-trumansburg', 'gcatholic:17906', 'directory:368-st-james-the-apostle']
 evidence:
 - url: https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf

@@ -10,7 +10,7 @@ latitude: 43.2183125
 longitude: -76.8169375
 coordinates_from: gcatholic-plus-code
 name_verified: true
-address_verified: false
+address_verified: true
 roster: ['directory:345-st-mary-magdalene-wolcott', 'gcatholic:17920', 'parish-directory:community-of-the-blessed-trinity-1']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0326/20261004B.pdf

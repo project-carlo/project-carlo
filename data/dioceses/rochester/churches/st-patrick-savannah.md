@@ -9,7 +9,7 @@ postal_code: '13146'
 latitude: 43.0678125
 longitude: -76.7644375
 coordinates_from: gcatholic-plus-code
-name_verified: false
+name_verified: true
 address_verified: true
 roster: ['gcatholic:17897', 'directory:364-st-patrick']
 evidence:

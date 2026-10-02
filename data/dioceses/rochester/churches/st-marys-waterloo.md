@@ -9,7 +9,7 @@ postal_code: '13165'
 latitude: 42.909473
 longitude: -76.8653883
 coordinates_from: geocode-stage
-name_verified: false
+name_verified: true
 address_verified: false
 roster: ['directory:366-st-mary-s', 'gcatholic:17910', 'directory:366-st-francis-st-clare']
 evidence:

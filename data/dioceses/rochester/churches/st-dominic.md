@@ -9,8 +9,8 @@ postal_code: '14548'
 latitude: 42.9545048
 longitude: -77.2293157
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:360-st-dominic', 'gcatholic:17901']
 evidence:
 - url: https://media.thechurchcoassets.com/accounts/4026/258f55ad-c215-4428-98cb-000d2a9a6c53-./OT-27-October-4,-2026.pdf

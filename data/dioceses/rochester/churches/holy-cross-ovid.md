@@ -9,8 +9,8 @@ postal_code: '14521'
 latitude: 42.6737495
 longitude: -76.8229135
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:368-holy-cross', 'gcatholic:17858']
 evidence:
 - url: https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf

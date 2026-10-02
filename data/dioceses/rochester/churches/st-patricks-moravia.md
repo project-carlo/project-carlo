@@ -10,7 +10,7 @@ latitude: 42.7094458
 longitude: -76.424062
 coordinates_from: geocode-stage
 name_verified: true
-address_verified: false
+address_verified: true
 roster: ['directory:337-st-patrick-moravia', 'gcatholic:17851']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0198/20261004B.pdf

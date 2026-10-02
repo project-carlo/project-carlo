@@ -10,7 +10,7 @@ latitude: 42.6660431
 longitude: -76.6226474
 coordinates_from: geocode-stage
 name_verified: true
-address_verified: false
+address_verified: true
 roster: ['gcatholic:17841', 'directory:337-our-lady-of-the-lake']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0198/20261004B.pdf

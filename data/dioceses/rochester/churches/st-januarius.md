@@ -9,8 +9,8 @@ postal_code: '14512'
 latitude: 42.623984
 longitude: -77.396913
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:359-st-januarius', 'gcatholic:17852']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0100/20261004B.pdf

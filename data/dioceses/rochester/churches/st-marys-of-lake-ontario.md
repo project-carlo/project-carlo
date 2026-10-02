@@ -9,8 +9,8 @@ postal_code: '14519'
 latitude: 43.2110625
 longitude: -77.2846875
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:353-st-mary-of-the-lake', 'gcatholic:17857', 'parish-directory:st-maximilian-kolbe-parish-1']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0230/20261004B.pdf

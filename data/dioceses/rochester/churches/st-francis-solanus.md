@@ -9,8 +9,8 @@ postal_code: '14847'
 latitude: 42.616053
 longitude: -76.7233476
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:368-st-francis-solanus', 'gcatholic:17835']
 evidence:
 - url: https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf

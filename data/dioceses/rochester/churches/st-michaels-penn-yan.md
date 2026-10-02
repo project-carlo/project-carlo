@@ -9,8 +9,8 @@ postal_code: '14527'
 latitude: 42.6611295
 longitude: -77.0571805
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:359-st-michael-s', 'gcatholic:17865']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0100/20261004B.pdf

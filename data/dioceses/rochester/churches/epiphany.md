@@ -9,8 +9,8 @@ postal_code: '14551'
 latitude: 43.2359575
 longitude: -77.0705842
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:353-church-of-the-epiphany', 'gcatholic:17902']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0230/20261004B.pdf

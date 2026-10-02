@@ -9,8 +9,8 @@ postal_code: '13021'
 latitude: 42.9316058
 longitude: -76.5696618
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:210-st-mary', 'gcatholic:17763']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0329/20261004B.pdf

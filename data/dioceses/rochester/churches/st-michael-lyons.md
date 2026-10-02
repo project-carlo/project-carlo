@@ -10,7 +10,7 @@ latitude: 43.0674625
 longitude: -76.9882325
 coordinates_from: geocode-stage
 name_verified: true
-address_verified: false
+address_verified: true
 roster: ['directory:364-st-michael', 'gcatholic:17846']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0326/20261004B.pdf

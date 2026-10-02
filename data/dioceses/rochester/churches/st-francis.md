@@ -9,7 +9,7 @@ postal_code: '14532'
 latitude: 42.9567345
 longitude: -77.0583605
 coordinates_from: geocode-stage
-name_verified: false
+name_verified: true
 address_verified: false
 roster: ['directory:360-st-francis', 'gcatholic:17866']
 evidence:

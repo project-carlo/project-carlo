@@ -21,7 +21,6 @@ evidence:
     9:00am.'
 - url: https://www.immconch.org/bulletins-a/
   seen: 2026-10-02
-  quote: immaculate-conception-church-14850
   note: The parish Bulletins page links https://parishesonline.com/publication-page/immaculate-conception-church-14850
     (container 03/1285).
 promoted: 2026-10-02

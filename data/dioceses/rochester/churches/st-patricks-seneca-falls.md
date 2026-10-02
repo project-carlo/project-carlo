@@ -9,7 +9,7 @@ postal_code: '13148'
 latitude: 42.907756
 longitude: -76.806193
 coordinates_from: geocode-stage
-name_verified: false
+name_verified: true
 address_verified: false
 roster: ['gcatholic:17900', 'directory:366-st-patricks']
 evidence:

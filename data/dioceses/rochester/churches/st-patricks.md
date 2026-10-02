@@ -9,8 +9,8 @@ postal_code: '14873'
 latitude: 42.527322
 longitude: -77.2869487
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:17873', 'directory:359-st-patrick-s']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0100/20261004B.pdf

@@ -9,8 +9,8 @@ postal_code: '14522'
 latitude: 43.0645845
 longitude: -77.2332892
 coordinates_from: geocode-stage
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:356-st-anne-s', 'gcatholic:17862']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0230/20261004B.pdf

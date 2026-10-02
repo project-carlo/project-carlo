@@ -10,7 +10,7 @@ latitude: 42.7505562
 longitude: -76.7016978
 coordinates_from: osm-node
 name_verified: true
-address_verified: false
+address_verified: true
 roster: ['directory:337-st-patrick-aurora', 'gcatholic:17770', 'parish-directory:good-shepherd-catholic-community-2']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0198/20261004B.pdf

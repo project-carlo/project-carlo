@@ -15,7 +15,6 @@ roster: ['gcatholic:17903']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0230/20260726B.pdf
   seen: 2026-10-02
-  quote: Mass Schedule is subject to
   note: '26 July 2026 issue (image-only; read by rendering pages 1 and 3 with render.py): the Sodus Point
     church is not named in the masthead, weekend Mass list or the page-3 Mass intentions for 25 July to
     2 August; Masses are at Macedon, Palmyra, Ontario and Sodus (Epiphany) only. The 4 Oct 2026 issue

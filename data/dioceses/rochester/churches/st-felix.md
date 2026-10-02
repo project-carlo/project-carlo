@@ -9,8 +9,8 @@ postal_code: '14432'
 latitude: 42.9651875
 longitude: -77.1365625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['directory:360-st-felix', 'gcatholic:17787', 'directory:360-st-peter']
 evidence:
 - url: https://media.thechurchcoassets.com/accounts/4026/258f55ad-c215-4428-98cb-000d2a9a6c53-./OT-27-October-4,-2026.pdf
