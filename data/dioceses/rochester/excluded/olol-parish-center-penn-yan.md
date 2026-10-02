@@ -15,7 +15,7 @@ evidence:
     Yan, Prattsburgh), as the office, not a church.'
 - url: https://container.parishesonline.com/bulletins/06/0100/20261004B.pdf
   seen: 2026-10-02
-  quote: OLOL Parish Office - 210 Keuka St., Penn Yan, NY
+  quote: O L O L  P a r i s h  O f f i c e  -  2 1 0  K e u k a  S t . ,  P e n n  Y a n ,  N Y
   note: 4 Oct 2026 bulletin, page 2 (text layer is letter-spaced; the quote is as extracted). Every Mass
     in the week's schedule is at a church, "St. M Chapel" for the Monday rosary.
 parish: our-lady-of-the-lakes

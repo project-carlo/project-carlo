@@ -36,7 +36,7 @@ evidence:
     Sodus Point (undated text): a mission since 1876, under Epiphany since 1922.'
 - url: https://discovermass.com/church/st-rose-of-lima-sodus-point-ny/
   seen: 2026-10-02
-  quote: Saturday6:15pm - This is seasonal:June 30 -September5, 2015
+  quote: This is seasonal
   note: 'DiscoverMass: St Rose of Lima, 7502 Fitzhugh Street, Sodus Point; the only Mass time is a seasonal
     2015 one (stale).'
 - url: https://www.dor.org/learning-and-living-your-faith/sacraments/sacramental-records/
