@@ -24,7 +24,6 @@ evidence:
     parish site).
 - url: https://stmaryourmother.com/bulletins/
   seen: 2026-10-02
-  quote: Bulletins
   note: The parish site Bulletins page links one PDF per Sunday, https://stmaryourmother.com/Bulletins/2026/YYYYMMDD.pdf
     (newest read 20260927).
 promoted: 2026-10-02

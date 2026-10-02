@@ -3,19 +3,25 @@ name: St. Catherine of Siena Church
 website: https://stcathofsiena.org
 bulletin_provider: ecatholic
 provider_id: ''
-publication: ['ecatholic:10905', 'po-container:03/1311']
+publication:
+- ecatholic:10905
+- po-container:03/1311
 group: ''
 evidence:
-- {url: 'https://files.ecatholic.com/10905/bulletins/20261004.pdf', seen: 2026-10-02, quote: 'St. Catherine
-    of Siena, Ithaca, NY 03-1311', note: 'LPi ad-page footer of the 4 October 2026 issue (text layer;
-    pages 1 to 14 are images). Page 1, rendered with render.py, reads "St. Catherine of Siena Roman Catholic
-    Church ITHACA, NEW YORK / October 4, 2026 | Twenty-seventh Sunday of Ordinary Time / 309 SIENA DRIVE,
-    ITHACA, NY 14850 | WWW.STCATHOFSIENA.ORG | PHONE: 607-257-2493". Page 2 "MASS SCHEDULE": Weekend Saturday
-    5:00 p.m., Sunday 9:00 a.m.; Weekday Tuesday, Thursday, Friday 9:00 a.m.; First Saturday 9:00 a.m.
-    at Immaculate Conception. recheck cannot find those image-only words.'}
-- {url: 'https://stcathofsiena.org/bulletins', seen: 2026-10-02, quote: 'October 4, 2026', note: 'Bulletins
-    page of the eCatholic site (site id 10905, behind Cloudflare; read with visit.py) lists one PDF per
-    Sunday, newest 20261004.'}
+- url: https://files.ecatholic.com/10905/bulletins/20261004.pdf
+  seen: 2026-10-02
+  quote: St. Catherine of Siena, Ithaca, NY 03-1311
+  note: 'LPi ad-page footer of the 4 October 2026 issue (text layer; pages 1 to 14 are images). Page 1,
+    rendered with render.py, reads "St. Catherine of Siena Roman Catholic Church ITHACA, NEW YORK / October
+    4, 2026 | Twenty-seventh Sunday of Ordinary Time / 309 SIENA DRIVE, ITHACA, NY 14850 | WWW.STCATHOFSIENA.ORG
+    | PHONE: 607-257-2493". Page 2 "MASS SCHEDULE": Weekend Saturday 5:00 p.m., Sunday 9:00 a.m.; Weekday
+    Tuesday, Thursday, Friday 9:00 a.m.; First Saturday 9:00 a.m. at Immaculate Conception. recheck cannot
+    find those image-only words.'
+- url: https://stcathofsiena.org/bulletins
+  seen: 2026-10-02
+  quote: October 4, 2026
+  note: Bulletins page of the eCatholic site (site id 10905, behind Cloudflare; read with visit.py) lists
+    one PDF per Sunday, newest 20261004.
 promoted: 2026-10-02
 ---
 

@@ -3,25 +3,33 @@ name: Blessed Trinity and St. Patrick Parishes
 website: https://blessed-trinity-parish.org
 bulletin_provider: other
 provider_id: ''
-publication: ['url:https://blessed-trinity-parish.org/bulletins-archive/', 'po-container:06/0156']
+publication:
+- url:https://blessed-trinity-parish.org/bulletins-archive/
+- po-container:06/0156
 group: Blessed Trinity & St. Patrick
 evidence:
-- {url: 'https://container.parishesonline.com/bulletins/06/0156/20261004B.pdf', seen: 2026-10-02, quote: 'Blessed
-    Trinity & St. Patrick, Owego, NY 06-0156', note: 'LPi ad-page footer, 4 October 2026 issue (container
-    06/0156; pages 1-6 are images). Page 1, rendered with render.py, reads "BLESSED TRINITY PARISH & SAINT
-    PATRICK PARISH / October 4, 2026 Volume 28 Issue 40", then four boxes: St. James, 503 Clark Street,
-    Waverly; St. John, 28 Rock Street, Newark Valley; St. Margaret Mary, 1110 Pennsylvania Ave., Apalachin;
-    St. Patrick, 300 Main Street, Owego (mailing address 309 Front Street for all). recheck cannot find
-    the image-only words.'}
-- {url: 'https://blessed-trinity-parish.org/wp-content/parish_specific/bulletins/2026-09-27.pdf', seen: 2026-10-02,
-  quote: 'Blessed Trinity & St. Patrick, Owego, NY 06-0156', note: The 27 September 2026 issue as posted
-    on the parish site (same footer; same image-only pages). The site lags the container by a week.}
-- {url: 'https://blessed-trinity-parish.org/bulletins-archive/', seen: 2026-10-02, quote: bulletins, note: 'Bulletins
-    archive on the parish site: one PDF per Sunday, wp-content/parish_specific/bulletins/YYYY-MM-DD.pdf,
-    newest 2026-09-27 on 2026-10-02.'}
-- {url: 'https://ps.dor.org/directory/blessed-trinity/', seen: 2026-10-02, quote: Blessed Trinity a cluster
-    community, note: 'Diocese Directory of Parishes: one listing for the cluster, "Cluster (St. Patrick's)",
-    four churches, Mass schedule for all four, "Weekly Bulletin Website: https://blessed-trinity-parish.org/".'}
+- url: https://container.parishesonline.com/bulletins/06/0156/20261004B.pdf
+  seen: 2026-10-02
+  quote: Blessed Trinity & St. Patrick, Owego, NY 06-0156
+  note: 'LPi ad-page footer, 4 October 2026 issue (container 06/0156; pages 1-6 are images). Page 1, rendered
+    with render.py, reads "BLESSED TRINITY PARISH & SAINT PATRICK PARISH / October 4, 2026 Volume 28 Issue
+    40", then four boxes: St. James, 503 Clark Street, Waverly; St. John, 28 Rock Street, Newark Valley;
+    St. Margaret Mary, 1110 Pennsylvania Ave., Apalachin; St. Patrick, 300 Main Street, Owego (mailing
+    address 309 Front Street for all). recheck cannot find the image-only words.'
+- url: https://blessed-trinity-parish.org/wp-content/parish_specific/bulletins/2026-09-27.pdf
+  seen: 2026-10-02
+  quote: Blessed Trinity & St. Patrick, Owego, NY 06-0156
+  note: The 27 September 2026 issue as posted on the parish site (same footer; same image-only pages).
+    The site lags the container by a week.
+- url: https://blessed-trinity-parish.org/bulletins-archive/
+  seen: 2026-10-02
+  note: 'Bulletins archive on the parish site: one PDF per Sunday, wp-content/parish_specific/bulletins/YYYY-MM-DD.pdf,
+    newest 2026-09-27 on 2026-10-02.'
+- url: https://ps.dor.org/directory/blessed-trinity/
+  seen: 2026-10-02
+  quote: Blessed Trinity a cluster community
+  note: 'Diocese Directory of Parishes: one listing for the cluster, "Cluster (St. Patrick''s)", four
+    churches, Mass schedule for all four, "Weekly Bulletin Website: https://blessed-trinity-parish.org/".'
 promoted: 2026-10-02
 ---
 

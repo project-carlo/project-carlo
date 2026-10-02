@@ -3,22 +3,30 @@ name: St. Benedict's / St. Mary's of the Lake
 website: https://stmarystben.org
 bulletin_provider: parishes_online
 provider_id: st-marys-on-the-lake-st-benedicts
-publication: ['po-org:st-marys-on-the-lake-st-benedicts', 'lpi:0018000000Qc2bYAAR', 'po-container:06/0201']
+publication:
+- po-org:st-marys-on-the-lake-st-benedicts
+- lpi:0018000000Qc2bYAAR
+- po-container:06/0201
 group: Schuyler Catholic Community
 evidence:
-- {url: 'https://container.parishesonline.com/bulletins/06/0201/20261004B.pdf', seen: 2026-10-02, quote: St.
-    Marys &, note: 'Page 1 of the 4 October 2026 issue: masthead "St. Marys & St. Benedict’s Parish" (the
-    text layer splits it over two lines), with "St. Mary’s of the Lake 905 N. Decatur Street Watkins Glen"
-    and "St. Benedict’s 304 Speedway Odessa".'}
-- {url: 'https://container.parishesonline.com/bulletins/06/0201/20261004B.pdf', seen: 2026-10-02, quote: St.
-    Benedict’s Mass Intentions, note: 'Page 4: Saturday 5:00 pm at St. Benedict’s; Sunday 8:00 am and
-    10:00 am at St. Mary’s.'}
-- {url: 'https://parishesonline.com/organization/st-marys-on-the-lake-st-benedicts', seen: 2026-10-02,
-  quote: St. Mary, note: 'ParishesOnline organization "St. Mary's on the Lake / St. Benedict's" (probe po
-    2026-10-02): website https://www.stmarystben.org/, container 06/0201, newest issue 2026-10-04.'}
-- {url: 'https://ps.dor.org/directory/st-benedicts/', seen: 2026-10-02, quote: 'St. Marys of the Lake
-    & St. Benedicts, a cluster community', note: 'Diocese Directory of Parishes: one cluster listing both
-    churches, website https://www.stmarystben.org/.'}
+- url: https://container.parishesonline.com/bulletins/06/0201/20261004B.pdf
+  seen: 2026-10-02
+  quote: St. Marys &
+  note: 'Page 1 of the 4 October 2026 issue: masthead "St. Marys & St. Benedict’s Parish" (the text layer
+    splits it over two lines), with "St. Mary’s of the Lake 905 N. Decatur Street Watkins Glen" and "St.
+    Benedict’s 304 Speedway Odessa".'
+- url: https://container.parishesonline.com/bulletins/06/0201/20261004B.pdf
+  seen: 2026-10-02
+  quote: St. Benedict’s Mass Intentions
+  note: 'Page 4: Saturday 5:00 pm at St. Benedict’s; Sunday 8:00 am and 10:00 am at St. Mary’s.'
+- url: https://parishesonline.com/organization/st-marys-on-the-lake-st-benedicts
+  seen: 2026-10-02
+  note: 'ParishesOnline organization "St. Mary''s on the Lake / St. Benedict''s" (probe po 2026-10-02):
+    website https://www.stmarystben.org/, container 06/0201, newest issue 2026-10-04.'
+- url: https://ps.dor.org/directory/st-benedicts/
+  seen: 2026-10-02
+  quote: St. Mary's of the Lake & St. Benedict's, a cluster community
+  note: 'Diocese Directory of Parishes: one cluster listing both churches, website https://www.stmarystben.org/.'
 promoted: 2026-10-02
 ---
 

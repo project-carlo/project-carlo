@@ -3,18 +3,27 @@ name: Immaculate Conception Church
 website: https://www.immconch.org
 bulletin_provider: parishes_online
 provider_id: immaculate-conception-church-14850
-publication: ['po-org:immaculate-conception-church-14850', 'lpi:0018000000Qx7QUAAZ', 'po-container:03/1285']
+publication:
+- po-org:immaculate-conception-church-14850
+- lpi:0018000000Qx7QUAAZ
+- po-container:03/1285
 group: ''
 evidence:
-- {url: 'https://container.parishesonline.com/bulletins/03/1285/20261004B.pdf', seen: 2026-10-02, quote: IMMACULATE
-    CONCEPTION, note: 'Page 1 masthead of the 4 October 2026 issue (container 03/1285): "Immaculate Conception
-    Catholic Church 113 N. Geneva Street Ithaca, NY 14850".'}
-- {url: 'https://container.parishesonline.com/bulletins/03/1285/20261004B.pdf', seen: 2026-10-02, quote: Saturday
-    Vigil, note: 'Page 1 Mass schedule: Saturday Vigil 4:30pm; Sunday 8:30am, 10:30am; weekdays; First
-    Saturday 9:00am.'}
-- {url: 'https://www.immconch.org/bulletins-a/', seen: 2026-10-02, quote: immaculate-conception-church-14850,
-  note: 'The parish Bulletins page links https://parishesonline.com/publication-page/immaculate-conception-church-14850
-    (container 03/1285).'}
+- url: https://container.parishesonline.com/bulletins/03/1285/20261004B.pdf
+  seen: 2026-10-02
+  quote: IMMACULATE CONCEPTION
+  note: 'Page 1 masthead of the 4 October 2026 issue (container 03/1285): "Immaculate Conception Catholic
+    Church 113 N. Geneva Street Ithaca, NY 14850".'
+- url: https://container.parishesonline.com/bulletins/03/1285/20261004B.pdf
+  seen: 2026-10-02
+  quote: Saturday Vigil
+  note: 'Page 1 Mass schedule: Saturday Vigil 4:30pm; Sunday 8:30am, 10:30am; weekdays; First Saturday
+    9:00am.'
+- url: https://www.immconch.org/bulletins-a/
+  seen: 2026-10-02
+  quote: immaculate-conception-church-14850
+  note: The parish Bulletins page links https://parishesonline.com/publication-page/immaculate-conception-church-14850
+    (container 03/1285).
 promoted: 2026-10-02
 ---
 
