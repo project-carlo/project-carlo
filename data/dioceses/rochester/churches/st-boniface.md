@@ -11,19 +11,31 @@ longitude: -77.6027498
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:29-st-boniface', 'gcatholic:17887']
-evidence: []
+roster:
+- directory:29-st-boniface
+- gcatholic:17887
+evidence:
+- url: https://files.ecatholic.com/19887/bulletins/20261004.pdf
+  seen: '2026-10-02'
+  quote: Sunday | 8:00am St. Boniface Church,
+  note: '4 October 2026 bulletin, page 1: Sunday 8:00 am; weekday Mass Tuesday and Thursday 8:00 am at
+    St. Boniface.'
+- url: https://ps.dor.org/directory/st-boniface/
+  seen: '2026-10-02'
+  quote: St. Boniface Church (January - June)
+  note: Diocesan directory listing (the Saturday vigil is at St. Boniface January to June). Address 330
+    Gregory Street.
+- url: https://gcatholic.org/churches/usa-02/17887
+  seen: '2026-10-02'
+  quote: 330 Gregory St., Rochester, New York 14620
+  note: 'GCatholic: St. Boniface, 28 m from the stored point.'
 promoted: 2026-10-02
 ---
 
-> Adopted on 2026-10-02 from the live row, which predates the diocese records (Rochester was the pipeline's first diocese and was written straight into the CSVs). The frontmatter is the live row as it stood; the explanation below is the audit.
-
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 4 October 2026 bulletin lists Sunday 8:00 am and Tuesday and Thursday 8:00 am Masses at St. Boniface. The Saturday vigil is here January to June (the directory) and at St. Mary's July to December.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+"St. Boniface Church", 330 Gregory Street, Rochester 14620: the bulletin, the diocesan directory, GCatholic and the locator agree. Stored coordinates are 28 m from GCatholic's Plus Code.

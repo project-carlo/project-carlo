@@ -11,7 +11,7 @@ longitude: -76.6226474
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17841', 'directory:337-our-lady-of-the-lake']
+roster: ['gcatholic:17841', 'directory:337-our-lady-of-the-lake', 'parish-directory:good-shepherd-catholic-community-3']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0198/20261004B.pdf
   seen: 2026-10-02

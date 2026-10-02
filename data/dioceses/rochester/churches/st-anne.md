@@ -11,19 +11,30 @@ longitude: -77.6196083
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:26-st-anne', 'gcatholic:17894']
-evidence: []
+roster:
+- directory:26-st-anne
+- gcatholic:17894
+evidence:
+- url: https://container.parishesonline.com/bulletins/06/0132/20260927B.pdf
+  seen: '2026-10-02'
+  quote: 4:00pm (SA) Alice & Paul McCarney by the family
+  note: '27 September 2026 bulletin, page 2: Saturday 4:00 pm, Sunday 11:00 am and weekday 8:00 am Masses
+    "(SA)". Page 4 (an image) announces a pet blessing "St. Anne Church, 1600 Mount Hope Avenue".'
+- url: https://ps.dor.org/directory/st-anne/
+  seen: '2026-10-02'
+  quote: 'Saint Anne Church : 1600 Mt. Hope Avenue, Rochester, NY 14620'
+  note: Diocesan directory (cluster listing).
+- url: https://gcatholic.org/churches/usa-02/17894
+  seen: '2026-10-02'
+  quote: 1600 Mount Hope Ave., Rochester, New York 14620-4598
+  note: 'GCatholic: "St. Anne", 53 m from the stored point.'
 promoted: 2026-10-02
 ---
 
-> Adopted on 2026-10-02 from the live row, which predates the diocese records (Rochester was the pipeline's first diocese and was written straight into the CSVs). The frontmatter is the live row as it stood; the explanation below is the audit.
-
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. Saturday 4:00 pm, Sunday 11:00 am and weekday 8:00 am at St. Anne (27 September 2026 bulletin; directory agrees).
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+Saint Anne Church, 1600 Mount Hope Avenue, Rochester 14620: bulletin page 4, the diocesan directory, GCatholic and the locator agree. The locator's older text mentioned "St. Ann Community" at 1500 Portland Ave, Irondequoit: a different place (open record `open/st-ann-community-irondequoit.md`), not this church. Stored coordinates are 53 m from the Plus Code.
