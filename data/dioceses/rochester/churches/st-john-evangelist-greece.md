@@ -11,7 +11,7 @@ longitude: -77.6918912
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17820', 'directory:39-st-john-the-evangelist-church']
+roster: ['directory:39-st-john-the-evangelist-church', 'gcatholic:17820', 'parish-directory:st-john-the-evangelist']
 evidence:
 - url: https://www.stjohngreece.org/wp-content/uploads/Sept-27-2026.pdf
   seen: 2026-10-02

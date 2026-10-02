@@ -11,9 +11,7 @@ longitude: -76.500315
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:266-immaculate-conception
-- gcatholic:17839
+roster: ['directory:266-immaculate-conception', 'gcatholic:17839', 'parish-directory:immaculate-conception']
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1285/20261004B.pdf
   seen: 2026-10-02

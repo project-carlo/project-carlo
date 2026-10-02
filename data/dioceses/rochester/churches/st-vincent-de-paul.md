@@ -11,7 +11,7 @@ longitude: -77.8851595
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:369-st-vincent-de-paul', 'gcatholic:17786']
+roster: ['directory:369-st-vincent-de-paul', 'gcatholic:17786', 'parish-directory:st-martin-de-porres-2']
 evidence:
 - url: https://www.stmartinrochester.org/
   seen: 2026-10-02

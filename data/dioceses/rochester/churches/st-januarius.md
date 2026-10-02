@@ -11,7 +11,7 @@ longitude: -77.396913
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:359-st-januarius', 'gcatholic:17852']
+roster: ['directory:359-st-januarius', 'gcatholic:17852', 'parish-directory:our-lady-of-the-lakes-catholic-community-3']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0100/20261004B.pdf
   seen: 2026-10-02

@@ -11,7 +11,7 @@ longitude: -77.0583605
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: false
-roster: ['directory:360-st-francis', 'gcatholic:17866']
+roster: ['directory:360-st-francis', 'gcatholic:17866', 'parish-directory:st-peters-roman-catholic-parish-1']
 evidence:
 - url: https://media.thechurchcoassets.com/accounts/4026/258f55ad-c215-4428-98cb-000d2a9a6c53-./OT-27-October-4,-2026.pdf
   seen: 2026-10-02

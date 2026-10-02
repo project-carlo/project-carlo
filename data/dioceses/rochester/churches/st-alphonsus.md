@@ -11,7 +11,7 @@ longitude: -76.5552786
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:207-st-alphonsus', 'gcatholic:17762']
+roster: ['directory:207-st-alphonsus', 'gcatholic:17762', 'parish-directory:st-alphonsus']
 evidence:
 - url: https://www.sacredheartauburn.org/wp-content/uploads/Sacred-Heart-092726.pdf.pdf
   seen: 2026-10-02

@@ -5,27 +5,24 @@ line1: Schmitt Interfaith Center, 40 Lomb Memorial Dr.
 city: Rochester
 state: NY
 postal_code: '14623'
-decided: '2026-10-02'
-roster:
-- gcatholic:17877
-- parish-directory:rit-newman-catholic-community
+decided: 2026-10-02
+roster: ['gcatholic:17877', 'parish-directory:rit-newman-catholic-community', 'directory:ind-newman-parish-rochester-institute-of-technology-rit']
 evidence:
 - url: https://www.ritnewman.com/
-  seen: '2026-10-02'
-  quote: 'Schmitt Interfaith Center
-
+  seen: 2026-10-02
+  quote: |-
+    Schmitt Interfaith Center
     40 Lomb Memorial Drive
-
-    Rochester, NY 14623'
+    Rochester, NY 14623
   note: Home page footer; the Mass Schedule box lists "Sundays at Allen Chapel, Schmitt Interfaith Center
     ... 9:15 AM (ASL Interpreted) 5:00 PM" and "Wednesdays at Jones Chapel ... 5:30 PM", with events listed
     for 4 and 7 October 2026.
 - url: https://www.ritnewman.com/publications/bulletin/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   note: 'Bulletin page (WordPress): newest weekly PDF "Bulletin-06-23-2024.pdf" (23 June 2024), then annual
     reports; nothing current.'
 - url: https://ps.dor.org/directory/rit-newman-catholic-community/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Rochester Institute of Technology Schmitt Interfaith Center, Allan Chapel, 40 Lomb Memorial Dr.,
     Rochester, NY 14623
   note: 'Diocesan directory (1/27/25): "Sunday: 10:00 AM (ASL Interpreter) Allen Chapel", "Sunday at 5:00

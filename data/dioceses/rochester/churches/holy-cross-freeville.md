@@ -11,9 +11,7 @@ longitude: -76.3278125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- directory:233-holy-cross
-- gcatholic:17804
+roster: ['directory:233-holy-cross', 'gcatholic:17804', 'parish-directory:all-saints-1', 'parish-directory:holy-cross-parish']
 evidence:
 - url: https://files.ecatholic.com/20434/bulletins/20260927.pdf
   seen: 2026-10-02

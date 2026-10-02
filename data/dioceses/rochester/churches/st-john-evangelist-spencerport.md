@@ -11,7 +11,7 @@ longitude: -77.8039002
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:316-st-john-the-evangelist', 'gcatholic:17904']
+roster: ['directory:316-st-john-the-evangelist', 'gcatholic:17904', 'parish-directory:st-john-the-evangelist-2']
 evidence:
 - url: https://discovermass.com/church/st-john-the-evangelist-spencerport-ny/
   seen: 2026-10-02

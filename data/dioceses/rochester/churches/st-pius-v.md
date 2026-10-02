@@ -11,31 +11,30 @@ longitude: -77.496703
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:17923
-- directory:342-st-pius-v
+roster: ['directory:342-st-pius-v', 'gcatholic:17923', 'parish-directory:holy-family-catholic-community-3']
 evidence:
 - url: https://www.hfccwny.org/parish-life/mass-schedule/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Sunday 11:00am at St. Pius V, Cohocton, NY
 - url: https://container.parishesonline.com/bulletins/06/0327/20261004B.pdf
-  seen: '2026-10-02'
-  note: '4 October 2026 issue, page 2 intentions: "St. Pius V 11:00 am" Sunday 11 October (letter-spaced in the
-    text layer, so not quotable).'
+  seen: 2026-10-02
+  note: '4 October 2026 issue, page 2 intentions: "St. Pius V 11:00 am" Sunday 11 October (letter-spaced
+    in the text layer, so not quotable).'
 - url: https://ps.dor.org/directory/holy-family-catholic-community/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: St. Pius V, 35 Maple Ave., Cohocon
   note: Diocese directory (the listing misspells Cohocton).
 - url: https://gcatholic.org/churches/usa-02/17923
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 35 Maple Ave., Cohocton, New York 14826
   note: GCatholic names it 'St. Pius'.
 - url: https://www.dor.org/parishes-campuses-cemeteries/parish-locator-and-mass-times/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   note: 'Parish Locator: ''St. Pius V'', 35 Maple Ave., Cohocton, Mass: Sun 11am (locator entry directory:342-st-pius-v).'
 - url: https://www.openstreetmap.org/?mlat=42.5008445&mlon=-77.496703#map=19/42.5008445/-77.496703
-  seen: '2026-10-02'
-  note: OSM (Nominatim "35 Maple Avenue, Cohocton, NY") returns a place of worship at exactly the live point.
+  seen: 2026-10-02
+  note: OSM (Nominatim "35 Maple Avenue, Cohocton, NY") returns a place of worship at exactly the live
+    point.
 promoted: 2026-10-02
 ---
 

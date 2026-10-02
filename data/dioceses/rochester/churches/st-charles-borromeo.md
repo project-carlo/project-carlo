@@ -11,7 +11,7 @@ longitude: -77.6431355
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17819', 'directory:32-st-charles-borromeo']
+roster: ['directory:32-st-charles-borromeo', 'gcatholic:17819', 'parish-directory:st-charles-borromeo']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0049/20260927B.pdf
   seen: 2026-10-02

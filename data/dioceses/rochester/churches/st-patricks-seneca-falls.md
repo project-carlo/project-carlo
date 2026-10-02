@@ -11,7 +11,7 @@ longitude: -76.806193
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: false
-roster: ['gcatholic:17900', 'directory:366-st-patricks']
+roster: ['directory:366-st-patricks', 'gcatholic:17900', 'parish-directory:st-francis-and-st-clare-2']
 evidence:
 - url: https://www.sfscrcc.org/bulletins/1790326230.pdf
   seen: 2026-10-02

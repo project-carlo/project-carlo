@@ -11,7 +11,7 @@ longitude: -76.5373876
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:205-sacred-heart', 'gcatholic:17766']
+roster: ['directory:205-sacred-heart', 'gcatholic:17766', 'parish-directory:sacred-heart']
 evidence:
 - url: https://www.sacredheartauburn.org/wp-content/uploads/Sacred-Heart-092726.pdf.pdf
   seen: 2026-10-02

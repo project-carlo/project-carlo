@@ -11,7 +11,7 @@ longitude: -77.6114996
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:270-st-rose', 'gcatholic:17844']
+roster: ['directory:270-st-rose', 'gcatholic:17844', 'parish-directory:st-rose']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0016/20261004B.pdf
   seen: 2026-10-02

@@ -11,7 +11,7 @@ longitude: -77.095884
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:283-st-michael', 'gcatholic:17853']
+roster: ['directory:283-st-michael', 'gcatholic:17853', 'parish-directory:st-michael']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0326/20261004B.pdf
   seen: 2026-10-02

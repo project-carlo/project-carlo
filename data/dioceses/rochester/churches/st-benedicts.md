@@ -11,9 +11,7 @@ longitude: -76.7925424
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:287-st-benedict
-- gcatholic:17856
+roster: ['directory:287-st-benedict', 'gcatholic:17856', 'parish-directory:st-benedicts', 'parish-directory:st-marys-of-the-lake-2']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0201/20261004B.pdf
   seen: 2026-10-02

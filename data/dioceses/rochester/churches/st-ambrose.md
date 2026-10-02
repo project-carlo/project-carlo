@@ -11,22 +11,19 @@ longitude: -77.5564105
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:348-st-ambrose
-- gcatholic:17888
-- directory:348-peace-of-christ-parish
+roster: ['directory:348-peace-of-christ-parish', 'directory:348-st-ambrose', 'gcatholic:17888', 'parish-directory:peace-of-christ-1']
 evidence:
 - url: https://ps.dor.org/directory/peace-of-christ/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: St. Ambrose at 9:45 AM & 5:00 PM
   note: The Discover Mass bulletin's text layer is garbled, so the Mass times are quoted from the diocesan
     directory. Sunday 9:45 am and 5:00 pm; Tuesday and Thursday 9:15 am; Friday 12:15 pm.
 - url: https://ps.dor.org/directory/peace-of-christ/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: St. Ambrose Church 25 Empire Blvd., Rochester
   note: 'Diocesan directory: the three churches of the multi-site parish.'
 - url: https://gcatholic.org/churches/usa-02/17888
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 25 Empire Blvd., Rochester, New York 14609
   note: 'GCatholic: "St. Ambrose" (group Peace of Christ Parish), 54 m from the stored point.'
 promoted: 2026-10-02

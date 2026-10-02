@@ -11,7 +11,7 @@ longitude: -76.988706
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17903']
+roster: ['gcatholic:17903', 'parish-directory:st-maximilian-kolbe-parish-3']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0230/20260726B.pdf
   seen: 2026-10-02

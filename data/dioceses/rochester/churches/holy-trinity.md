@@ -11,7 +11,7 @@ longitude: -77.4162619
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:326-holy-trinity', 'gcatholic:17915']
+roster: ['directory:326-holy-trinity', 'gcatholic:17915', 'parish-directory:church-of-the-holy-trinity']
 evidence:
 - url: https://holytrinityweb.org/wp-content/uploads/2026/09/20260927B.pdf
   seen: 2026-10-02

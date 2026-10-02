@@ -11,7 +11,7 @@ longitude: -77.5212237
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:336-church-of-the-transfiguration', 'gcatholic:17870']
+roster: ['directory:336-church-of-the-transfiguration', 'gcatholic:17870', 'parish-directory:church-of-the-transfiguration']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0105/20261004B.pdf
   seen: 2026-10-02

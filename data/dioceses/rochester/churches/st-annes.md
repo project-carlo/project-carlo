@@ -11,7 +11,7 @@ longitude: -77.2332892
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:356-st-anne-s', 'gcatholic:17862']
+roster: ['directory:356-st-anne-s', 'gcatholic:17862', 'parish-directory:st-katharine-drexel-parish-1']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0230/20261004B.pdf
   seen: 2026-10-02

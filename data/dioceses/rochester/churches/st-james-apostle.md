@@ -11,7 +11,8 @@ longitude: -76.6594573
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:368-st-james-the-apostle-trumansburg', 'gcatholic:17906', 'directory:368-st-james-the-apostle']
+roster: ['directory:368-st-james-the-apostle', 'directory:368-st-james-the-apostle-trumansburg', 'gcatholic:17906',
+  'parish-directory:mary-mother-of-mercy-1']
 evidence:
 - url: https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf
   seen: 2026-10-02

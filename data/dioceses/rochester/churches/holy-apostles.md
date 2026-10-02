@@ -11,26 +11,24 @@ longitude: -77.6436876
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:7-holy-apostles
-- gcatholic:17890
+roster: ['directory:7-holy-apostles', 'gcatholic:17890', 'parish-directory:holy-apostles']
 evidence:
 - url: https://www.holyapostleschurchfamily.org/visit
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 'Church: 530 Lyell Ave Rochester, NY 14606'
   note: 'Parish site "Visit Us" page, with "Mass Times Saturday: 4:00 PM English Sunday: 9:30 AM English
     11:30 AM Spanish" and the office at 7 Austin St.'
 - url: https://www.holyapostleschurchfamily.org/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Mass Intentions for  week of 9/28/2026  thru 10/4/2026
   note: 'Home page: current intentions for 12:10 pm weekday Masses, 4 pm Saturday and 9:30 am and 11:30
     am Sunday.'
 - url: https://ps.dor.org/directory/holy-apostles/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 'Saturday: 4:00 PM English Sunday: 9:30 AM English 11:30 AM Spanish'
   note: Diocesan directory listing; address 530 Lyell Avenue.
 - url: https://gcatholic.org/churches/usa-02/17890
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 530 Lyell Ave., Rochester, New York 14606
   note: 'GCatholic: "Holy Apostles", 22 m from the stored point.'
 promoted: 2026-10-02

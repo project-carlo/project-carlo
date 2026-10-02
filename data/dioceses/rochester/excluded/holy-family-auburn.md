@@ -6,7 +6,7 @@ city: Auburn
 state: NY
 postal_code: '13021'
 decided: 2026-10-02
-roster: ['directory:204-holy-family', 'gcatholic:17767']
+roster: ['directory:204-holy-family', 'gcatholic:17767', 'parish-directory:holy-family']
 evidence:
 - url: https://catholiccourier.com/articles/auburn-church-closes-due-to-health-and-safety-concerns/
   seen: 2026-10-02

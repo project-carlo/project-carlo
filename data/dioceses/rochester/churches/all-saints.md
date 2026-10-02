@@ -11,9 +11,7 @@ longitude: -76.5388303
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:273-all-saints-church
-- gcatholic:17842
+roster: ['directory:273-all-saints-church', 'gcatholic:17842', 'parish-directory:all-saints-3']
 evidence:
 - url: https://files.ecatholic.com/20434/bulletins/20260927.pdf
   seen: 2026-10-02

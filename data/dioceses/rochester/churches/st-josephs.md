@@ -11,7 +11,7 @@ longitude: -77.4778718
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:295-st-joseph', 'gcatholic:17864']
+roster: ['directory:295-st-joseph', 'gcatholic:17864', 'parish-directory:st-josephs']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0030/20261004B.pdf
   seen: 2026-10-02

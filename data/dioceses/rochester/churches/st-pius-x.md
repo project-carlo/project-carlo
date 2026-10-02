@@ -11,7 +11,7 @@ longitude: -77.7347367
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: false
-roster: ['gcatholic:17785', 'directory:51-st-pius-the-tenth']
+roster: ['directory:51-st-pius-the-tenth', 'gcatholic:17785', 'parish-directory:st-pius-tenth']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0029/20260927B.pdf
   seen: 2026-10-02

@@ -11,7 +11,7 @@ longitude: -76.5696618
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:210-st-mary', 'gcatholic:17763']
+roster: ['directory:210-st-mary', 'gcatholic:17763', 'parish-directory:st-marys-church']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0329/20261004B.pdf
   seen: 2026-10-02

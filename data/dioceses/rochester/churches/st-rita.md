@@ -11,7 +11,7 @@ longitude: -77.5048691
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:327-st-rita', 'gcatholic:17914']
+roster: ['directory:327-st-rita', 'gcatholic:17914', 'parish-directory:saint-rita']
 evidence:
 - url: https://s3-us-west-2.amazonaws.com/classrooms.stritawebster.org/Bulletins/2026/October%204.pdf
   seen: 2026-10-02

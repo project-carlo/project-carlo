@@ -11,7 +11,7 @@ longitude: -76.9796252
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17816', 'directory:346-our-lady-of-peace']
+roster: ['directory:346-our-lady-of-peace', 'gcatholic:17816', 'parish-directory:our-lady-of-peace-parish']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0090/20261004B.pdf
   seen: 2026-10-02

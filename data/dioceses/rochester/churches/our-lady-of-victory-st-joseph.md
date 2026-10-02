@@ -11,26 +11,24 @@ longitude: -77.6089455
 coordinates_from: geocode-stage
 name_verified: false
 address_verified: true
-roster:
-- directory:22-our-lady-of-victory-st-joseph
-- gcatholic:17878
+roster: ['directory:22-our-lady-of-victory-st-joseph', 'gcatholic:17878', 'parish-directory:our-lady-of-victory-st-joseph']
 evidence:
 - url: https://drive.google.com/uc?export=download&id=1LdcErV26yow8rjtS18K-yW5DXaoEBnaZ
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Our Lady of Victory/St Joseph
   note: '27 September 2026 bulletin: "210 Pleasant St. Rochester, NY 14604", Saturday 4:30 pm, Sunday
     10:00 am, weekdays 12:10 pm.'
 - url: https://www.olvsj.org/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: OUR LADY OF VICTORY / ST. JOSEPH
   note: 'Parish home page: "210 Pleasant St Rochester, NY 14604 ... The Little French Church that has
     served downtown since 1868."'
 - url: https://ps.dor.org/directory/our-lady-of-victory-st-joseph/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Our Lady of Victory/St. Joseph
   note: Diocesan directory listing, 210 Pleasant St.
 - url: https://gcatholic.org/churches/usa-02/17878
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 210 Pleasant St., Rochester, New York 14604
   note: GCatholic lists the building as "Our Lady of Victory" (group "Parish of St. Joseph-Our Lady of
     Victory"), 18 m from the stored point.

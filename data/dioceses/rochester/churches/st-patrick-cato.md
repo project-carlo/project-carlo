@@ -11,7 +11,7 @@ longitude: -76.5692612
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:343-st-patrick', 'gcatholic:17782']
+roster: ['directory:343-st-patrick', 'gcatholic:17782', 'parish-directory:our-lady-of-the-snow-parish-3']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0329/20261004B.pdf
   seen: 2026-10-02

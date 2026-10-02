@@ -11,7 +11,7 @@ longitude: -77.5932223
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:261-st-paul-of-the-cross', 'gcatholic:17831']
+roster: ['directory:261-st-paul-of-the-cross', 'gcatholic:17831', 'parish-directory:st-paul-of-the-cross']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0016/20261004B.pdf
   seen: 2026-10-02

@@ -11,21 +11,19 @@ longitude: -77.6196083
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:26-st-anne
-- gcatholic:17894
+roster: ['directory:26-st-anne', 'gcatholic:17894', 'parish-directory:st-anne']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0132/20260927B.pdf
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 4:00pm (SA) Alice & Paul McCarney by the family
   note: '27 September 2026 bulletin, page 2: Saturday 4:00 pm, Sunday 11:00 am and weekday 8:00 am Masses
     "(SA)". Page 4 (an image) announces a pet blessing "St. Anne Church, 1600 Mount Hope Avenue".'
 - url: https://ps.dor.org/directory/st-anne/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 'Saint Anne Church : 1600 Mt. Hope Avenue, Rochester, NY 14620'
   note: Diocesan directory (cluster listing).
 - url: https://gcatholic.org/churches/usa-02/17894
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 1600 Mount Hope Ave., Rochester, New York 14620-4598
   note: 'GCatholic: "St. Anne", 53 m from the stored point.'
 promoted: 2026-10-02

@@ -11,7 +11,7 @@ longitude: -77.4878701
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:237-st-jerome']
+roster: ['directory:237-st-jerome', 'parish-directory:st-jerome']
 evidence:
 - url: https://files.ecatholic.com/22370/bulletins/20261004.pdf
   seen: 2026-10-02

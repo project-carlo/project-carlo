@@ -11,7 +11,7 @@ longitude: -77.4854109
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17863', 'directory:294-holy-spirit']
+roster: ['directory:294-holy-spirit', 'gcatholic:17863', 'parish-directory:church-of-the-holy-spirit']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0030/20261004B.pdf
   seen: 2026-10-02

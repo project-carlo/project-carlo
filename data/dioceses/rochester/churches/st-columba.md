@@ -11,7 +11,7 @@ longitude: -77.855098
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:369-st-columba-st-patrick', 'gcatholic:17779']
+roster: ['directory:369-st-columba-st-patrick', 'gcatholic:17779', 'parish-directory:st-martin-de-porres-3']
 evidence:
 - url: https://www.stmartinrochester.org/
   seen: 2026-10-02

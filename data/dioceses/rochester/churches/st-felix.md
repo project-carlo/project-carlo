@@ -11,7 +11,7 @@ longitude: -77.1365625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['directory:360-st-felix', 'gcatholic:17787', 'directory:360-st-peter']
+roster: ['directory:360-st-felix', 'directory:360-st-peter', 'gcatholic:17787', 'parish-directory:st-peters-roman-catholic-parish-2']
 evidence:
 - url: https://media.thechurchcoassets.com/accounts/4026/258f55ad-c215-4428-98cb-000d2a9a6c53-./OT-27-October-4,-2026.pdf
   seen: 2026-10-02

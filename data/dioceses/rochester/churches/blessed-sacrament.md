@@ -11,27 +11,25 @@ longitude: -77.5884847
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:2-blessed-sacrament
-- gcatholic:17886
+roster: ['directory:2-blessed-sacrament', 'gcatholic:17886', 'parish-directory:blessed-sacrament-1']
 evidence:
 - url: https://files.ecatholic.com/19887/bulletins/20261004.pdf
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 9:00am | Blessed Sacrament Church
   note: '4 October 2026 bulletin, page 1: Sunday 9:00 am at Blessed Sacrament; weekday Mass Monday and
     Wednesday 8:00 am.'
 - url: https://files.ecatholic.com/19887/bulletins/20261004.pdf
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 259 Rutgers Street, Rochester, NY  14607
   note: The bulletin's cluster contact line gives 259 Rutgers Street, the same street address the diocesan
     directory gives for Blessed Sacrament in its notes.
 - url: https://ps.dor.org/directory/blessed-sacrament/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 'Blessed Sacrament: 259 Rutgers Street Rochester'
   note: 'Diocesan directory: the listing''s address line is "534 Oxford Street" but its text gives 259
     Rutgers Street.'
 - url: https://gcatholic.org/churches/usa-02/17886
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 534 Oxford St., Rochester, New York 14607
   note: 'GCatholic: Plus Code 87M44CV6+XG, 22 m from the stored point.'
 promoted: 2026-10-02

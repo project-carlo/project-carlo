@@ -11,7 +11,7 @@ longitude: -77.7454914
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: false
-roster: ['directory:212-st-agnes', 'gcatholic:17771']
+roster: ['directory:212-st-agnes', 'gcatholic:17771', 'parish-directory:st-agnes']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0016/20261004B.pdf
   seen: 2026-10-02

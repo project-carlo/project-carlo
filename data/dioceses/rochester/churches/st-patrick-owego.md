@@ -11,9 +11,7 @@ longitude: -76.2576223
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:340-st-patrick
-- gcatholic:17861
+roster: ['directory:340-st-patrick', 'gcatholic:17861', 'parish-directory:st-patrick-2']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0156/20261004B.pdf
   seen: 2026-10-02

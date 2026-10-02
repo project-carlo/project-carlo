@@ -11,7 +11,7 @@ longitude: -77.7581847
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:369-st-mary-of-the-assumption', 'gcatholic:17899']
+roster: ['directory:369-st-mary-of-the-assumption', 'gcatholic:17899', 'parish-directory:st-martin-de-porres-1']
 evidence:
 - url: https://www.stmartinrochester.org/
   seen: 2026-10-02

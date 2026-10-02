@@ -11,7 +11,7 @@ longitude: -77.9227876
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:335-st-elizabeth-ann-seton', 'gcatholic:17825']
+roster: ['directory:335-st-elizabeth-ann-seton', 'gcatholic:17825', 'parish-directory:st-elizabeth-ann-seton']
 evidence:
 - url: https://www.nativityseas.org/
   seen: 2026-10-02

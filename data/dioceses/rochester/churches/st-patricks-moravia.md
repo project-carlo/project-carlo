@@ -11,7 +11,7 @@ longitude: -76.424062
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:337-st-patrick-moravia', 'gcatholic:17851']
+roster: ['directory:337-st-patrick-moravia', 'gcatholic:17851', 'parish-directory:good-shepherd-catholic-community-1']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0198/20261004B.pdf
   seen: 2026-10-02

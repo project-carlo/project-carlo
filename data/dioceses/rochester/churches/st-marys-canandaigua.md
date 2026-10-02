@@ -11,7 +11,7 @@ longitude: -77.2828984
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:365-st-benedict', 'directory:365-st-mary', 'gcatholic:17781']
+roster: ['directory:365-st-benedict', 'directory:365-st-mary', 'gcatholic:17781', 'parish-directory:st-benedict-parish-1']
 evidence:
 - url: https://files.ecatholic.com/14273/bulletins/20261004.pdf
   seen: 2026-10-02

@@ -11,9 +11,7 @@ longitude: -76.3725574
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:255-st-anthony
-- gcatholic:17824
+roster: ['directory:255-st-anthony', 'gcatholic:17824', 'parish-directory:all-saints-2', 'parish-directory:saint-anthony-parish']
 evidence:
 - url: https://files.ecatholic.com/20434/bulletins/20260927.pdf
   seen: 2026-10-02

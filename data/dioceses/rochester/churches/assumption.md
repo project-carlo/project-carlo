@@ -11,7 +11,7 @@ longitude: -77.4403658
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:248-church-of-the-assumption', 'gcatholic:17801']
+roster: ['directory:248-church-of-the-assumption', 'gcatholic:17801', 'parish-directory:church-of-the-assumption']
 evidence:
 - url: https://files.ecatholic.com/1021/bulletins/20260927.pdf
   seen: 2026-10-02

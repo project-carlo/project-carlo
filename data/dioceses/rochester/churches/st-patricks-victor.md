@@ -11,7 +11,7 @@ longitude: -77.4085784
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:321-st-patrick', 'gcatholic:17909']
+roster: ['directory:321-st-patrick', 'gcatholic:17909', 'parish-directory:st-patricks']
 evidence:
 - url: https://www.stpatricksvictor.org/celebrate-mass/
   seen: 2026-10-02

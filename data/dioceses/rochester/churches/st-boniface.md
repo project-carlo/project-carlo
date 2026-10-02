@@ -11,22 +11,20 @@ longitude: -77.6027498
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:29-st-boniface
-- gcatholic:17887
+roster: ['directory:29-st-boniface', 'gcatholic:17887', 'parish-directory:st-boniface']
 evidence:
 - url: https://files.ecatholic.com/19887/bulletins/20261004.pdf
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Sunday | 8:00am St. Boniface Church,
   note: '4 October 2026 bulletin, page 1: Sunday 8:00 am; weekday Mass Tuesday and Thursday 8:00 am at
     St. Boniface.'
 - url: https://ps.dor.org/directory/st-boniface/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: St. Boniface Church (January - June)
   note: Diocesan directory listing (the Saturday vigil is at St. Boniface January to June). Address 330
     Gregory Street.
 - url: https://gcatholic.org/churches/usa-02/17887
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 330 Gregory St., Rochester, New York 14620
   note: 'GCatholic: St. Boniface, 28 m from the stored point.'
 promoted: 2026-10-02

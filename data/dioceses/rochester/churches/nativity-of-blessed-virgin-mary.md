@@ -11,7 +11,7 @@ longitude: -77.9399647
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:215-nativity-of-the-blessed-virgin-mary', 'gcatholic:17777']
+roster: ['directory:215-nativity-of-the-blessed-virgin-mary', 'gcatholic:17777', 'parish-directory:church-of-the-nativity-of-the-blessed-virgin-mary']
 evidence:
 - url: https://www.nativityseas.org/
   seen: 2026-10-02

@@ -11,7 +11,7 @@ longitude: -76.7019125
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:291-st-jude-chapel', 'gcatholic:17800', 'parish-directory:community-of-the-blessed-trinity-3']
+roster: ['directory:291-st-jude-chapel', 'directory:345-st-jude', 'gcatholic:17800', 'parish-directory:community-of-the-blessed-trinity-3']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0326/20261004B.pdf
   seen: 2026-10-02

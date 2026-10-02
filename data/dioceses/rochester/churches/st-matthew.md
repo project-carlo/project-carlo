@@ -11,7 +11,7 @@ longitude: -77.6566162
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17845', 'directory:339-st-matthew']
+roster: ['directory:339-st-matthew', 'gcatholic:17845', 'parish-directory:st-mary', 'parish-directory:st-matthew']
 evidence:
 - url: https://www.stsmaryandmatthew.com/_files/ugd/dcc8c9_c60b31dd0f0c4445adce458783627ad1.pdf
   seen: 2026-10-02

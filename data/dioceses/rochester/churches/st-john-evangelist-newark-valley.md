@@ -11,9 +11,7 @@ longitude: -76.1817146
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:340-st-john-the-evangelist
-- gcatholic:17854
+roster: ['directory:340-st-john-the-evangelist', 'gcatholic:17854', 'parish-directory:blessed-trinity-3']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0156/20261004B.pdf
   seen: 2026-10-02

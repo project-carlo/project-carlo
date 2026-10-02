@@ -11,9 +11,7 @@ longitude: -76.5437655
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:340-st-james
-- gcatholic:17912
+roster: ['directory:340-st-james', 'gcatholic:17912', 'parish-directory:blessed-trinity-2']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0156/20261004B.pdf
   seen: 2026-10-02

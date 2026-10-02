@@ -11,7 +11,8 @@ longitude: -76.5872628
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:363-st-francis-of-assisi', 'gcatholic:17764', 'directory:363-ss-mary-and-martha']
+roster: ['directory:363-ss-mary-and-martha', 'directory:363-st-francis-of-assisi', 'gcatholic:17764',
+  'parish-directory:sts-mary-and-martha-1']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0329/20261004B.pdf
   seen: 2026-10-02

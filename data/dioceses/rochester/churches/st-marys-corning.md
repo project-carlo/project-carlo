@@ -11,39 +11,39 @@ longitude: -77.0614375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:17790
-- directory:338-all-saints-parish
-- parish-directory:all-saints-parish-1
+roster: ['gcatholic:17790', 'directory:338-all-saints-parish', 'parish-directory:all-saints-parish-1',
+  'parish-directory:all-saints-parish-2']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0144/20261004B.pdf
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 'Saturday Vigil: 5pm ; Sunday: 8am, 10:30am'
-  note: 3-4 October 2026 issue, page 1. The same page says "All Masses and Confessions are in the Gym" (the bulletins
-    call it "our temporary time in the Gym" and do not say why; they also mention "the 4 o'clock Mass in the chapel"
-    reserved for people with mobility issues); the Mass schedule on page 2 has Saturday 5:00 pm, Sunday 8:00 and
-    10:30, Wednesday 6:00 pm.
+  note: 3-4 October 2026 issue, page 1. The same page says "All Masses and Confessions are in the Gym"
+    (the bulletins call it "our temporary time in the Gym" and do not say why; they also mention "the
+    4 o'clock Mass in the chapel" reserved for people with mobility issues); the Mass schedule on page
+    2 has Saturday 5:00 pm, Sunday 8:00 and 10:30, Wednesday 6:00 pm.
 - url: https://allsaintsparish.org/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: St. Mary's Catholic Church | All Saints Parish 158 STATE STREET, CORNING NY 14830
-  note: Parish site header (the parish offices). Its footer gives the church as "155 State Street, Corning NY".
-    Weekend Masses 5pm Saturday vigil, 8 am and 10:30 am Sunday.
+  note: Parish site header (the parish offices). Its footer gives the church as "155 State Street, Corning
+    NY". Weekend Masses 5pm Saturday vigil, 8 am and 10:30 am Sunday.
 - url: https://ps.dor.org/directory/all-saints-parish/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: St. Mary Church (SM) 155 State Street, Corning NY
-  note: 'Diocese directory: "Parish Offices (PO) 158 State Street" and "All Saints Academy (ASA) 158 State Street".'
+  note: 'Diocese directory: "Parish Offices (PO) 158 State Street" and "All Saints Academy (ASA) 158 State
+    Street".'
 - url: https://gcatholic.org/churches/usa-02/17790
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 155 State St., Corning, New York 14830
 - url: https://www.openstreetmap.org/?mlat=42.1423229&mlon=-77.0618396#map=19/42.1423229/-77.0618396
-  seen: '2026-10-02'
+  seen: 2026-10-02
   note: OSM place of worship "Saint Mary's Roman Catholic Church", 155 State Street, at 42.1423229, -77.0618396.
-    158 State Street is the parish office/school ("Saint Mary's Parochial School", "All Saints Parish") at 42.1423,
-    -77.0610.
+    158 State Street is the parish office/school ("Saint Mary's Parochial School", "All Saints Parish")
+    at 42.1423, -77.0610.
 - url: https://catholiccourier.com/articles/final-liturgy-takes-place-at-church-in-painted-post/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: The lone remaining worship site for All Saints is St. Mary Church, 155 State St., Corning.
-  note: Catholic Courier, 23 September 2019. Behind a SiteGround captcha for plain fetchers (read in a browser with visit.py), so recheck reports no-text.
+  note: Catholic Courier, 23 September 2019. Behind a SiteGround captcha for plain fetchers (read in a
+    browser with visit.py), so recheck reports no-text.
 promoted: 2026-10-02
 ---
 

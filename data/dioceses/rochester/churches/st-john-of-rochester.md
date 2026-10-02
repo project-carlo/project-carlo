@@ -11,7 +11,7 @@ longitude: -77.4758017
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:249-st-john-of-rochester', 'gcatholic:17803']
+roster: ['directory:249-st-john-of-rochester', 'gcatholic:17803', 'parish-directory:st-john-of-rochester']
 evidence:
 - url: https://files.ecatholic.com/34606/bulletins/20260927.pdf
   seen: 2026-10-02

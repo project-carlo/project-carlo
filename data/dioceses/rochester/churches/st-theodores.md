@@ -11,7 +11,7 @@ longitude: -77.6952206
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17806', 'directory:54-st-theodore']
+roster: ['directory:54-st-theodore', 'gcatholic:17806', 'parish-directory:st-theodores-catholic-church']
 evidence:
 - url: https://files.ecatholic.com/35761/bulletins/20260927.pdf
   seen: 2026-10-02

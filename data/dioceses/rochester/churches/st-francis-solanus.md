@@ -11,7 +11,7 @@ longitude: -76.7233476
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:368-st-francis-solanus', 'gcatholic:17835']
+roster: ['directory:368-st-francis-solanus', 'gcatholic:17835', 'parish-directory:mary-mother-of-mercy-2']
 evidence:
 - url: https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf
   seen: 2026-10-02

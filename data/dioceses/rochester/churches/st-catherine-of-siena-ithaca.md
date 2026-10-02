@@ -11,9 +11,7 @@ longitude: -76.4706896
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:267-st-catherine-of-siena
-- gcatholic:17840
+roster: ['directory:267-st-catherine-of-siena', 'gcatholic:17840', 'parish-directory:st-catherine-of-siena-church']
 evidence:
 - url: https://files.ecatholic.com/10905/bulletins/20261004.pdf
   seen: 2026-10-02

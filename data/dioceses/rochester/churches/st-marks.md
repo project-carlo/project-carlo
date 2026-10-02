@@ -11,7 +11,7 @@ longitude: -77.7014974
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17821', 'directory:44-st-mark']
+roster: ['directory:44-st-mark', 'gcatholic:17821', 'parish-directory:st-marks']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0096/20260927B.pdf
   seen: 2026-10-02

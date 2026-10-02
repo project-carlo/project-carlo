@@ -11,7 +11,7 @@ longitude: -77.7957304
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:259-st-leo', 'gcatholic:17829']
+roster: ['directory:259-st-leo', 'gcatholic:17829', 'parish-directory:st-leo']
 evidence:
 - url: https://files.ecatholic.com/34045/bulletins/20260927.pdf
   seen: 2026-10-02

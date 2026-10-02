@@ -11,7 +11,7 @@ longitude: -77.8027178
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17784', 'directory:333-st-christopher']
+roster: ['directory:333-st-christopher', 'gcatholic:17784', 'parish-directory:st-christopher-2']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0126/20260927B.pdf
   seen: 2026-10-02

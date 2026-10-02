@@ -11,7 +11,7 @@ longitude: -77.4328218
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17791', 'directory:365-st-bridget']
+roster: ['directory:365-st-bridget', 'gcatholic:17791', 'parish-directory:st-benedict-parish-2']
 evidence:
 - url: https://files.ecatholic.com/14273/bulletins/20261004.pdf
   seen: 2026-10-02

@@ -11,7 +11,7 @@ longitude: -77.4106996
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:334-church-of-the-resurrection', 'gcatholic:17802']
+roster: ['directory:334-church-of-the-resurrection', 'gcatholic:17802', 'parish-directory:church-of-the-resurrection']
 evidence:
 - url: https://files.ecatholic.com/1021/bulletins/20260927.pdf
   seen: 2026-10-02

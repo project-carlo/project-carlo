@@ -11,22 +11,20 @@ longitude: -77.5746931
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:358-annunciation-church
-- gcatholic:17892
+roster: ['directory:358-annunciation-church', 'gcatholic:17892', 'parish-directory:st-frances-xavier-cabrini-parish-1']
 evidence:
 - url: https://cabriniroc.org/faq
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Saturday 4 pm at Annunciation 1760 Norton St
   note: 'Cabrini parish site FAQ page (behind Cloudflare; read with visit.py): English Mass Saturday 4
     pm and Monday, Wednesday, Friday 8 am at Annunciation. The Spanish page gives the same address ("1760
     Norton St").'
 - url: https://ps.dor.org/directory/st-frances-xavier-cabrini-parish/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Saturday 4:00 PM at Annunciation - English
   note: 'Diocesan directory listing for Cabrini Parish: "Church of the Annunciation, 1760 Norton Street".'
 - url: https://gcatholic.org/churches/usa-02/17892
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 1754 Norton St., Rochester, New York 14609
   note: GCatholic lists "Annunciation" at 1754 Norton St.; Plus Code 87M45CPG+W5 puts it 70 m from the
     stored point.

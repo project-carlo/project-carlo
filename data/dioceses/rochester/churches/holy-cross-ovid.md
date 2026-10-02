@@ -11,7 +11,7 @@ longitude: -76.8229135
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:368-holy-cross', 'gcatholic:17858']
+roster: ['directory:368-holy-cross', 'gcatholic:17858', 'parish-directory:mary-mother-of-mercy-3']
 evidence:
 - url: https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf
   seen: 2026-10-02

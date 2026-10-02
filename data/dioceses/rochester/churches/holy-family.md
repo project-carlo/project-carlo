@@ -11,7 +11,7 @@ longitude: -77.7382788
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17809', 'directory:367-st-jude']
+roster: ['directory:367-st-jude', 'gcatholic:17809', 'parish-directory:parish-of-the-holy-family']
 evidence:
 - url: https://files.ecatholic.com/32186/bulletins/20260927.pdf
   seen: 2026-10-02

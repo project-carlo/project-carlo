@@ -11,7 +11,7 @@ longitude: -77.4632416
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster: ['directory:331-st-paul', 'gcatholic:17916']
+roster: ['directory:331-st-paul', 'gcatholic:17916', 'parish-directory:st-pauls-church']
 evidence:
 - url: https://www.stpaulsrcc.org/wp-content/uploads/September-13-2026.pdf
   seen: 2026-10-02

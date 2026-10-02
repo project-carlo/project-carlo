@@ -11,9 +11,7 @@ longitude: -76.8697424
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- directory:323-st-mary-of-the-lake
-- gcatholic:17911
+roster: ['directory:323-st-mary-of-the-lake', 'gcatholic:17911', 'parish-directory:st-marys-of-the-lake-1']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0201/20261004B.pdf
   seen: 2026-10-02
