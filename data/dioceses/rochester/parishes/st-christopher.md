@@ -3,31 +3,34 @@ name: St. Christopher
 website: https://www.stchristophersnchili.org
 bulletin_provider: parishes_online
 provider_id: st-christophers-church
-publication: []
+publication: ['po-org:st-christophers-church', 'lpi:0018000000Qc1WeAAJ', 'po-container:06/0126']
 group: ''
-evidence: []
+evidence:
+- url: https://container.parishesonline.com/bulletins/06/0126/20260927B.pdf
+  seen: 2026-10-02
+  quote: Saturday | 04:30pm Sunday | 10:00am
+  note: 'Page 1 of the 27 September 2026 issue, "Weekend Masses". Staff block: "Parochial Administrator
+    Father Eloo Nwosu" and "Regional Finance Director Chris Frontale". The page also names the parish
+    website https://www.stchristophersnchili.org/.'
+- url: https://parishesonline.com/organization/st-christophers-church
+  seen: 2026-10-02
+  note: '`diocese probe po st-christophers-church`: organization id 0018000000Qc1WeAAJ, container 06/0126,
+    address 3350 Union St, North Chili, newest issue 2026-10-04.'
 promoted: 2026-10-02
 ---
 
-> Adopted on 2026-10-02 from the live row, which predates the diocese records (Rochester was the pipeline's first diocese and was written straight into the CSVs). The frontmatter is the live row as it stood; the explanation below is the audit.
-
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Christopher (North Chili) publishes its own weekly ParishesOnline bulletin, container 06/0126. The 27 September 2026 issue (page 1) lists Mass on Saturday 4:30pm and Sunday 10:00am, with weekday Masses Monday 12:10pm and Tuesday and Wednesday 9:00am. The bulletin has no masthead address on page 1; the address comes from the ParishesOnline organization record and the diocesan directory (3350 Union Street). One church, and no other parish's name appears.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: `churches/st-christophers.md`.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+`https://www.stchristophersnchili.org` (200) has a `/bulletin` page. The ParishesOnline organization `st-christophers-church` lists that website; ids recorded. The live `provider_id` was correct.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

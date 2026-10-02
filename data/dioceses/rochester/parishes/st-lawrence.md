@@ -3,31 +3,43 @@ name: St. Lawrence
 website: https://stlawrencegreeceny.org
 bulletin_provider: other
 provider_id: ''
-publication: []
-group: ''
-evidence: []
+publication: ['url:https://www.stlawrencegreeceny.org/worship/bulletins/']
+group: Roc Catholics Northwest
+evidence:
+- url: https://www.stlawrencegreeceny.org/wp-content/uploads/20260927.pdf
+  seen: 2026-10-02
+  quote: Saint Lawrence Church 1000 North Greece Road Rochester, NY 14626
+  note: Masthead of the 27 September 2026 issue, page 1.
+- url: https://www.stlawrencegreeceny.org/wp-content/uploads/20260927.pdf
+  seen: 2026-10-02
+  quote: Saturday 4:00 pm Sunday 8:00 am 10:00 am
+  note: The "Mass Schedule" block in the same issue.
+- url: https://www.stlawrencegreeceny.org/worship/bulletins/
+  seen: 2026-10-02
+  note: 'Bulletins page (WordPress). It lists one PDF per Sunday named YYYYMMDD.pdf (20260920.pdf, 20260913.pdf
+    ...); the home page also links 20261004.pdf. Self-hosted: the publication id is this page.'
+- url: https://www.roccatholicsnorthwest.org/
+  seen: 2026-10-02
+  quote: a collaborative effort of the Catholic parishes of Greece, Hilton, and Charlotte in the Rochester
+    NY area
+  note: 'Names seven parishes (Holy Cross, Our Mother of Sorrows, St. Charles Borromeo, St. John the Evangelist,
+    St. Lawrence, St. Leo the Great, St. Mark’s). A collaborative, not a shared bulletin: each of the
+    five in this region publishes its own.'
 promoted: 2026-10-02
 ---
 
-> Adopted on 2026-10-02 from the live row, which predates the diocese records (Rochester was the pipeline's first diocese and was written straight into the CSVs). The frontmatter is the live row as it stood; the explanation below is the audit.
-
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Lawrence publishes its own weekly PDF bulletin on its WordPress site. I read the 27 September 2026 issue: the masthead is "Saint Lawrence Church, 1000 North Greece Road, Rochester, NY 14626", and its Mass schedule is Saturday 4:00 pm, Sunday 8:00 and 10:00 am, Monday to Friday 8:30 am. It names this one church. It also lists `www.roccatholicsnorthwest.org`, the collaborative site; the bulletin itself is St. Lawrence's own.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: `churches/st-lawrence.md`. The Parish Locator's garbled entry "1000 St Lawrence School, Greece" (`directory:41-st-lawrence`) is this church: GCatholic (`gcatholic:17818`) gives 1000 N Greece Rd., the diocese directory gives 1000 North Greece Road, and "St Lawrence School" is the school that shares the campus. Both are linked on the church record.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+`stlawrencegreeceny.org` redirects to `www.stlawrencegreeceny.org` (200 OK). `bulletin_provider: other`: the Bulletins page lists the PDFs, recorded as `url:` in `publication`. The live provider and website were already correct.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

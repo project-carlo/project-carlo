@@ -3,31 +3,33 @@ name: St. Theodore's Catholic Church
 website: https://www.sttheodoreschurch.com
 bulletin_provider: ecatholic
 provider_id: ''
-publication: []
+publication: ['ecatholic:35761']
 group: ''
-evidence: []
+evidence:
+- url: https://files.ecatholic.com/35761/bulletins/20260927.pdf
+  seen: 2026-10-02
+  quote: 'Saturday Vigil: 4:30 pm; Sunday: 9:00 & 11:00 am'
+  note: Page 1 of the 27 September 2026 issue ("Mass Times"), under the masthead "St. Theodore Catholic
+    Church". The 4 October issue was not posted yet on 2026-10-02 (403).
+- url: https://www.sttheodoreschurch.com/bulletins
+  seen: 2026-10-02
+  note: Behind Cloudflare to curl (403); visit.py loaded it on the third try and found embedded ecatholic
+    site id 35761 (eCatholic-hosted).
 promoted: 2026-10-02
 ---
 
-> Adopted on 2026-10-02 from the live row, which predates the diocese records (Rochester was the pipeline's first diocese and was written straight into the CSVs). The frontmatter is the live row as it stood; the explanation below is the audit.
-
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Theodore's (Gates) publishes its own weekly bulletin on eCatholic, site id 35761. I read the 27 September 2026 issue (the latest posted on 2 October): the masthead is "St. Theodore Catholic Church, 168 Spencerport Road, Rochester, NY 14606" (the PDF text splits the letters) and the Mass times are Saturday vigil 4:30 pm, Sunday 9:00 and 11:00 am, weekdays 8:30 am. It names this parish only.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: `churches/st-theodores.md`. GCatholic lists St. Theodore (17806) and St. Jude (17809) separately, both in Gates: St. Jude is part of the Parish of the Holy Family, which has its own bulletin (`parishes/parish-of-the-holy-family.md`).
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+`https://www.sttheodoreschurch.com` is an eCatholic-hosted site (site id 35761), read by `bulletin_provider: ecatholic` from the website. Cloudflare blocks curl; use the browser skill to see it.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.
