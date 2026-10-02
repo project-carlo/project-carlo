@@ -43,6 +43,7 @@ from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
 from pdf_extract.dioceses import DioceseError
 from pdf_extract.dioceses.cli import add_diocese_parser
+from pdf_extract.evals.report import write_report as write_eval_report
 from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
 from pdf_extract.evals.run import run as run_eval
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
@@ -163,6 +164,14 @@ def _cmd_eval_run(args: argparse.Namespace) -> Result:
         limit=args.limit,
         concurrency=args.concurrency,
         refresh=args.refresh,
+    )
+
+
+def _cmd_eval_report(args: argparse.Namespace) -> Result:
+    return write_eval_report(
+        classifier_name=args.classifier,
+        version=args.version,
+        statuses=args.status or EVAL_DEFAULT_STATUSES,
     )
 
 
@@ -396,6 +405,24 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     eval_run_parser.set_defaults(handler=_cmd_eval_run)
     _add_common_args(eval_run_parser)
+
+    eval_report_parser = eval_subparsers.add_parser(
+        "report",
+        help="Score an eval run against the labels; writes report.md and report.json",
+    )
+    eval_report_parser.add_argument(
+        "--classifier", required=True, choices=available_classifiers(),
+        help="Name of the registered classifier",
+    )
+    eval_report_parser.add_argument(
+        "--version", help="Classifier version to score (default: its current version)",
+    )
+    eval_report_parser.add_argument(
+        "--status", action="append", choices=["done", "in_progress"],
+        help="Label statuses to score; repeatable (default: done). Skipped labels never are",
+    )
+    eval_report_parser.set_defaults(handler=_cmd_eval_report)
+    _add_common_args(eval_report_parser)
 
     # -- compare (experimental: pairwise metrics over previous extract runs) --
     compare_parser = subparsers.add_parser(

@@ -121,6 +121,36 @@ the production schema plus `weeks_of_month` and `season` on weekly slots, and th
 production Gemini prompt with its static part sent first as an explicit
 prompt-cache breakpoint. They need `OPENAI_API_KEY`.
 
+### Score an eval run against the labels
+
+```bash
+pnpm eval:report --classifier gpt-6-luna                  # its current version
+pnpm eval:report --classifier gpt-6-luna --version <ver>  # an older version's output
+```
+
+Writes `report.md` and `report.json` next to the predictions
+(`src/pdf_extract/evals/report.py`). Labels marked done are scored (`--status
+in_progress` adds those); skipped labels never are. Within each bulletin every
+label event is paired with at most one prediction, in tiers tried strictest
+first:
+
+| Tier | Agrees on | Counts as found |
+|---|---|---|
+| `exact` | church, type, weekly/dated, weekday or date, start, cancelled, end time, weeks of month, season | strict, core, loose |
+| `core` | the same, but end time, weeks of month or season differ | core, loose |
+| `wrong_kind` | weekly on one side, dated on the other, same weekday; church, type, start, cancelled agree | loose |
+| `wrong_church` | everything in `core` but the church | never |
+| `wrong_type` | everything in `core` but the event type | never |
+| `wrong_time` | church, type, kind, weekday or date, cancelled; the start time differs | loose |
+
+The report gives precision, recall and F1 (pooled and per-bulletin average) at
+the strict, core and loose levels; the wrong-church, wrong-type, missed and
+spurious rates; the same broken down by event type and by weekly/dated; how
+often end time, weeks of month, season and the presence of a note agree on the
+pairs found; per-bulletin perfect rate, published-date accuracy, wrong-bulletin
+agreement and event-count error; token usage and timing; and every bulletin's
+differences, worst bulletin first.
+
 ## Weekly pipeline
 
 One command runs a whole weekly pass:
