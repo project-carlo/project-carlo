@@ -59,11 +59,11 @@ def test_wrong_time_pairs_closest_start_first():
     assert _tiers(labels, preds) == [("wrong_time", 0, 1), ("wrong_time", 1, 0)]
 
 
-def test_wrong_kind_needs_same_weekday_and_start():
+def test_weekly_vs_dated_needs_same_weekday_and_start():
     labels = [_ev(), _ev(day_of_week="Saturday", start_time="16:00")]
     preds = [_dated(), _dated(date="2026-10-03", start_time="17:00")]  # a Saturday, other time
     assert _tiers(labels, preds) == [
-        ("wrong_kind", 0, 0), ("missed", 1, None), ("spurious", None, 1),
+        ("weekly_vs_dated", 0, 0), ("missed", 1, None), ("spurious", None, 1),
     ]
 
 
@@ -78,7 +78,7 @@ def test_wrong_church_and_type_are_found_before_wrong_time_and_never_count():
         ("wrong_church", 0, 1), ("wrong_type", 1, 2), ("spurious", None, 0),
     ]
     score = score_records(match_events(labels, preds))
-    assert score["levels"]["loose"]["found"] == 0
+    assert score["levels"]["any_time"]["found"] == 0
     assert score["rates"]["wrong_church"] == 0.5 and score["rates"]["wrong_type"] == 0.5
 
 
@@ -98,7 +98,8 @@ def test_levels_precision_recall_f1():
     assert score["levels"]["strict"] == {
         "found": 1, "precision": 1 / 3, "recall": 1 / 4, "f1": 2 / 7,
     }
-    assert score["levels"]["loose"]["f1"] == 6 / 7
+    assert score["levels"]["loose"]["f1"] == 4 / 7
+    assert score["levels"]["any_time"]["f1"] == 6 / 7
     assert score_records([])["levels"]["strict"]["f1"] == 1.0
 
 
@@ -168,13 +169,13 @@ def test_build_report_skips_skipped_and_lists_unpredicted(files):
     assert kinds["specific_date"]["levels"]["loose"]["precision"] == 1.0
     assert kinds["specific_date"]["levels"]["loose"]["recall"] is None
     bl = report["bulletin_level"]
-    assert bl["perfect"] == {"strict": 0, "core": 0, "loose": 1}
+    assert bl["perfect"] == {"strict": 0, "core": 0, "loose": 1, "any_time": 1}
     assert bl["published_date"]["accuracy"] == 1.0
     assert report["cost"]["usage"] == {"input_tokens": 100}
 
     markdown = render_markdown(report)
     assert "# Eval report: fake" in markdown
-    assert "**wrong_kind**" in markdown and "no prediction" in markdown
+    assert "**weekly_vs_dated**" in markdown and "no prediction" in markdown
 
 
 def test_write_report_writes_next_to_predictions(files, tmp_path, monkeypatch):
@@ -189,4 +190,4 @@ def test_write_report_writes_next_to_predictions(files, tmp_path, monkeypatch):
     summary = write_report(classifier_name="gemini-flash", version="v1", labels_dir=labels_dir)
     assert Path(summary["report_md"]).read_text().startswith("# Eval report")
     assert json.loads(Path(summary["report_json"]).read_text())["bulletins"]
-    assert summary["f1"] == {"strict": 0.5, "core": 0.5, "loose": 1.0}
+    assert summary["f1"] == {"strict": 0.5, "core": 0.5, "loose": 1.0, "any_time": 1.0}

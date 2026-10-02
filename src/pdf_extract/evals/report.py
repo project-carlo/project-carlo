@@ -12,15 +12,16 @@ for the next. The tiers, in the order they are tried:
 - `exact`: church, type, kind, weekday or date, start time, cancelled, end time,
   `weeks_of_month` and `season` all agree (notes and page numbers are ignored).
 - `core`: the first six agree; end time or a recurrence qualifier differs.
-- `wrong_kind`: weekly on one side and dated on the other, on the same weekday,
+- `weekly_vs_dated`: weekly on one side and dated on the other, on the same weekday,
   with church, type, start time and cancelled agreeing.
 - `wrong_church`: everything in `core` but the church.
 - `wrong_type`: everything in `core` but the event type.
 - `wrong_time`: church, type, kind, weekday or date and cancelled agree; the start
   time differs (by any amount; the closest time pairs first).
 
-`exact`, `core`, `wrong_kind` and `wrong_time` count as found, at three levels:
-strict (`exact`), core (`exact` + `core`) and loose (all four). `wrong_church` and
+`exact`, `core`, `weekly_vs_dated` and `wrong_time` count as found, at four levels:
+strict (`exact`), core (+ `core`), loose (+ `weekly_vs_dated`) and any_time (+
+`wrong_time`), so a wrong start time only counts at the last. `wrong_church` and
 `wrong_type` never count as found: they are reported on their own so it is clear
 how often the classifier saw the event but put it at the wrong church or called it
 the wrong thing, and they are tried before `wrong_time` because a pair that agrees
@@ -49,13 +50,14 @@ from pdf_extract.timeparse import time_to_minutes
 LOGGER = logging.getLogger(__name__)
 
 # Matching order (see the module docstring).
-TIERS = ("exact", "core", "wrong_kind", "wrong_church", "wrong_type", "wrong_time")
-FOUND_TIERS = ("exact", "core", "wrong_time", "wrong_kind")
+TIERS = ("exact", "core", "weekly_vs_dated", "wrong_church", "wrong_type", "wrong_time")
+FOUND_TIERS = ("exact", "core", "weekly_vs_dated", "wrong_time")
 DIAGNOSTIC_TIERS = ("wrong_church", "wrong_type")
 LEVELS = {
     "strict": ("exact",),
     "core": ("exact", "core"),
-    "loose": FOUND_TIERS,
+    "loose": ("exact", "core", "weekly_vs_dated"),
+    "any_time": FOUND_TIERS,
 }
 # Label-side outcomes in display order; they sum to the number of label events.
 LABEL_OUTCOMES = (*FOUND_TIERS, *DIAGNOSTIC_TIERS, "missed")
@@ -120,7 +122,7 @@ def _tier_core(g: dict[str, Any], p: dict[str, Any]) -> int | None:
     return _detail_diffs(g, p) if _same(g, p, CORE_FIELDS) else None
 
 
-def _tier_wrong_kind(g: dict[str, Any], p: dict[str, Any]) -> int | None:
+def _tier_weekly_vs_dated(g: dict[str, Any], p: dict[str, Any]) -> int | None:
     if g.get("event_kind") == p.get("event_kind"):
         return None
     if not _same(g, p, ("church_slug", "event_type", "start_time", "cancelled")):
@@ -146,7 +148,7 @@ def _tier_wrong_time(g: dict[str, Any], p: dict[str, Any]) -> int | None:
 TIER_RULES: dict[str, Tier] = {
     "exact": _tier_exact,
     "core": _tier_core,
-    "wrong_kind": _tier_wrong_kind,
+    "weekly_vs_dated": _tier_weekly_vs_dated,
     "wrong_church": _tier_wrong_church,
     "wrong_type": _tier_wrong_type,
     "wrong_time": _tier_wrong_time,
@@ -263,14 +265,14 @@ def _presence_category(label_value: Any, pred_value: Any, same: bool) -> str:
 
 
 def field_accuracy(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    """How often each secondary field agrees, over the pairs counted as found.
+    """How often each secondary field agrees, over the pairs found at the loose level.
 
     `weeks_of_month` and `season` only over pairs that are weekly on both sides.
     Each field's outcomes: both_empty, match, different, missing (label has it,
     prediction does not), extra (prediction has it, label does not); notes are
     compared by presence only, so a note on both sides is a match.
     """
-    pairs = [r for r in records if r["tier"] in FOUND_TIERS]
+    pairs = [r for r in records if r["tier"] in LEVELS["loose"]]
     weekly = [
         r for r in pairs
         if r["label"]["event_kind"] == "weekly" and r["pred"].get("event_kind") == "weekly"
@@ -518,7 +520,7 @@ def _slice_rows(slices: dict[str, dict[str, Any]]) -> list[list[Any]]:
             value, s["label_events"], s["predicted_events"],
             _pct(s["levels"]["strict"]["f1"]), _pct(s["levels"]["core"]["f1"]),
             _pct(s["levels"]["loose"]["recall"]), _pct(s["levels"]["loose"]["precision"]),
-            _pct(s["levels"]["loose"]["f1"]),
+            _pct(s["levels"]["loose"]["f1"]), _pct(s["levels"]["any_time"]["f1"]),
             _pct(s["rates"]["wrong_church"]), _pct(s["rates"]["wrong_type"]),
         ])
     return rows
@@ -526,7 +528,7 @@ def _slice_rows(slices: dict[str, dict[str, Any]]) -> list[list[Any]]:
 
 SLICE_HEADER = [
     "", "Label", "Pred", "Strict F1", "Core F1", "Loose R", "Loose P", "Loose F1",
-    "Wrong church", "Wrong type",
+    "Any-time F1", "Wrong church", "Wrong type",
 ]
 
 
@@ -559,7 +561,8 @@ def render_markdown(report: dict[str, Any]) -> str:
     lines += [
         "",
         "Strict = everything agrees; core = end time / weeks / season may differ; "
-        "loose = also a wrong start time or weekly-vs-dated on the same weekday. "
+        "loose = also weekly-vs-dated on the same weekday; any_time = also a wrong "
+        "start time (same church, type and day). "
         "Micro pools every event; macro averages per-bulletin F1.",
         "",
         "## Errors",
@@ -590,7 +593,7 @@ def render_markdown(report: dict[str, Any]) -> str:
     lines += _table(SLICE_HEADER, _slice_rows(report["by_event_kind"]))
 
     lines += [
-        "", "## Field accuracy (pairs counted as found)", "",
+        "", "## Field accuracy (pairs found at the loose level)", "",
         "Missing = the label has it, the prediction does not; extra = the reverse. "
         "Weeks and season are over weekly–weekly pairs; notes by presence only.",
         "",
@@ -609,9 +612,8 @@ def render_markdown(report: dict[str, Any]) -> str:
     lines += _table(
         ["", "Value"],
         [
-            ["Perfect (strict)", f"{bl['perfect']['strict']} ({_pct(bl['perfect_rate']['strict'])})"],
-            ["Perfect (core)", f"{bl['perfect']['core']} ({_pct(bl['perfect_rate']['core'])})"],
-            ["Perfect (loose)", f"{bl['perfect']['loose']} ({_pct(bl['perfect_rate']['loose'])})"],
+            *[[f"Perfect ({level})", f"{bl['perfect'][level]} ({_pct(bl['perfect_rate'][level])})"]
+              for level in LEVELS],
             ["Published date correct",
              f"{pd['correct']}/{pd['labeled']} ({_pct(pd['accuracy'])}); {pd['missing']} not given"],
             ["Wrong bulletin (tp / fp / fn / tn)", f"{wb['tp']} / {wb['fp']} / {wb['fn']} / {wb['tn']}"],
@@ -639,12 +641,13 @@ def render_markdown(report: dict[str, Any]) -> str:
     )
     lines += ["", "## Per bulletin (worst first)", ""]
     lines += _table(
-        ["Bulletin", "Label", "Pred", "Strict F1", "Loose F1", "Wrong church", "Wrong type",
-         "Missed", "Spurious"],
+        ["Bulletin", "Label", "Pred", "Strict F1", "Loose F1", "Any-time F1", "Wrong church",
+         "Wrong type", "Missed", "Spurious"],
         [
             [f"{b['parish_slug']}/{b['content_hash'][:8]}", b["label_events"],
              b["predicted_events"], _pct(b["levels"]["strict"]["f1"]),
-             _pct(b["levels"]["loose"]["f1"]), b["outcomes"]["wrong_church"],
+             _pct(b["levels"]["loose"]["f1"]), _pct(b["levels"]["any_time"]["f1"]),
+             b["outcomes"]["wrong_church"],
              b["outcomes"]["wrong_type"], b["outcomes"]["missed"], b["spurious"]]
             for b in worst
         ],

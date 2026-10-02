@@ -136,18 +136,18 @@ first:
 
 | Tier | Agrees on | Counts as found |
 |---|---|---|
-| `exact` | church, type, weekly/dated, weekday or date, start, cancelled, end time, weeks of month, season | strict, core, loose |
-| `core` | the same, but end time, weeks of month or season differ | core, loose |
-| `wrong_kind` | weekly on one side, dated on the other, same weekday; church, type, start, cancelled agree | loose |
+| `exact` | church, type, weekly/dated, weekday or date, start, cancelled, end time, weeks of month, season | strict, core, loose, any_time |
+| `core` | the same, but end time, weeks of month or season differ | core, loose, any_time |
+| `weekly_vs_dated` | weekly on one side, dated on the other, same weekday; church, type, start, cancelled agree | loose, any_time |
 | `wrong_church` | everything in `core` but the church | never |
 | `wrong_type` | everything in `core` but the event type | never |
-| `wrong_time` | church, type, kind, weekday or date, cancelled; the start time differs | loose |
+| `wrong_time` | church, type, kind, weekday or date, cancelled; the start time differs | any_time |
 
 The report gives precision, recall and F1 (pooled and per-bulletin average) at
-the strict, core and loose levels; the wrong-church, wrong-type, missed and
+the strict, core, loose and any_time levels; the wrong-church, wrong-type, missed and
 spurious rates; the same broken down by event type and by weekly/dated; how
 often end time, weeks of month, season and the presence of a note agree on the
-pairs found; per-bulletin perfect rate, published-date accuracy, wrong-bulletin
+pairs found at the loose level; per-bulletin perfect rate, published-date accuracy, wrong-bulletin
 agreement and event-count error; token usage and timing; and every bulletin's
 differences, worst bulletin first.
 
