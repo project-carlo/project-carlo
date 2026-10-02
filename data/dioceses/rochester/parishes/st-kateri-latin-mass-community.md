@@ -3,34 +3,34 @@ name: St. Kateri Tekakwitha Latin Mass Community
 website: https://www.skt-lmc.org
 bulletin_provider: other
 provider_id: ''
-publication:
-- url:https://www.skt-lmc.org/our-parish/latest-bulletins-and-notices/
+publication: ['url:https://www.skt-lmc.org/our-parish/latest-bulletins-and-notices/']
 group: Saint Kateri Tekakwitha
 evidence:
 - url: https://www.skt-lmc.org/wp-content/uploads/2026/09/2026-09-27_18thSun_Web.pdf
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: "ST. KATERI TEKAKWITHA \nLATIN MASS COMMUNITY \nST. THOMAS THE APOSTLE CHURCH"
   note: 'Masthead, page 1 of the issue filed as 2026-09-27_18thSun_Web.pdf (12 pages). Its page 1 date
     line reads "SEPTEMBER 20, 2026" over "Twenty-sixth Sunday in Ordinary Time", which is 27 September:
     a typo carried over from the previous week. The 4 October issue (2026-10-04_19thaftPent_Web.pdf) is
     up and reads "OCTOBER 4, 2026".'
 - url: https://www.skt-lmc.org/wp-content/uploads/2026/09/2026-09-27_18thSun_Web.pdf
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: MASS TIMES Sundays 9:00am-English, 11:15am-Latin
   note: 'Page 9 (contact page): "LOCATION 4536 St. Paul Boulevard, Rochester NY 14617", "MAILING ADDRESS
     / OFFICE St. Kateri Parish, 445 Kings Highway South", "CONFESSION Sundays before & after 11:15 am
     Mass".'
 - url: https://www.skt-lmc.org/our-parish/latest-bulletins-and-notices/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   note: 'Bulletins page (WordPress): one PDF per Sunday under /wp-content/uploads/<year>/<month>/, newest
     "2026-10-04_19thaftPent_Web.pdf" then 2026-09-27_18thSun_Web.pdf, 2026-09-20_17th_Web.pdf. Read with
     visit.py --bulletin ("bulletin PDFs but no publisher id: looks self-hosted").'
 - url: https://www.skt-lmc.org/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Sunday Mass | English 9:00 AM | Latin 11:15 AM
   note: 'Home page: "Latin Mass Community at St. Thomas the Apostle Church in Irondequoit on St. Paul
     Boulevard ... Ordinary Form of the Mass at 9am and the Extraordinary Form at 11:15 every Sunday";
     Adoration Chapel open Monday to Friday 9 am to 10 pm.'
+promoted: 2026-10-02
 ---
 
 ## Publisher

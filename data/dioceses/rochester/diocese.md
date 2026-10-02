@@ -2,8 +2,9 @@
 name: Roman Catholic Diocese of Rochester
 state: NY
 website: https://www.dor.org
-status: exploring
+status: promoted
 gcatholic: roch0
+promoted: 2026-10-02
 ---
 
 Twelve counties of western and central New York: Monroe (Rochester), Livingston, Ontario,
@@ -140,3 +141,48 @@ About half the rows are ParishesOnline (LPi, containers `06/xxxx` and a few `03/
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-10-02: Documented and audited the whole diocese, then promoted.
+  - **Setup:** adopted the 62 parish and 132 church rows that had been written straight into
+    the CSVs as records under their live slugs. Scraped the Parish Locator
+    (`rosters/directory.json`, 168) and the Directory of Parishes
+    (`rosters/parish-directory.json`, 134), and fetched GCatholic (`rosters/gcatholic.json`,
+    165). Split by county into six regions (Rochester city; west Monroe; east Monroe and
+    Ontario; Wayne, Seneca, Yates and Cayuga; Livingston and Steuben; Chemung, Schuyler,
+    Tompkins and Tioga), researched in parallel, one agent each, then merged and linked.
+  - **Result:** 63 parish rows (28 ParishesOnline, 19 other, 11 eCatholic, 3 Discover Mass,
+    1 Google Drive, 1 no_bulletin) and 130 churches, each with Mass evidence from a September
+    or October 2026 bulletin or schedule. Every parish has publication ids.
+  - **Exclusions:** 34. 19 closed (Gates: Holy Ghost and St. Helen; Holy Name, Greece; Good
+    Shepherd, Henrietta; St. Joseph, Rush; Holy Family, Auburn; St. John, Port Byron;
+    Rushville; Stanley; Elmira: Lourdes, Ss. Peter and Paul, St. Charles; Corning St. Vincent;
+    Painted Post; Hornell St. Ignatius; Canisteo; Rochester: Holy Redeemer, Holy Rosary, St.
+    Joseph on Franklin St). 6 other-jurisdiction (Ukrainian, Melkite, Ordinariate). 6
+    no-bulletin (monasteries, Cornell, UR and RIT Newman). 3 no-public-mass.
+  - **Open:** 8 (St. Casimir, Elmira; St. Gregory, Marion; St. Bernard, Scipio Center; Padre
+    Pio chapel; St. Ann Community; 124 Evergreen St; SUNY Brockport and Geneseo Newman).
+  - **Coverage:** directory 168/168, GCatholic 165/165, Directory of Parishes 134/134. One
+    church in no roster: St. John's Chapel, Geneva (Sunday 4:30 pm Mass in the Our Lady of
+    Peace bulletin). `audit`: 12 groups span rows, each with separate bulletins recorded.
+  - **Live rows fixed:**
+    - Bulletin source: the Cathedral (`other` to ParishesOnline `the-cathedral-community`);
+      Immaculate Conception, Ithaca (`other` to ParishesOnline); Brockport and
+      Pittsford/Mendon websites.
+    - Cabrini: its Google Drive folder is gone (now `other` at `/faq`, still failing; revisit
+      2026-11-01).
+    - New row for the St. Kateri Latin Mass Community, which publishes its own bulletin; St.
+      Thomas the Apostle moved under it.
+    - Removed churches: the Elmira adoration chapel (no Mass) and Holy Family, Auburn
+      (closed 16 June 2024).
+    - Wrong addresses, mostly an office number instead of the church: Geneseo, Corning,
+      Wayland, Perkinsville, Retsof, St. Monica, St. Stanislaus, Savannah.
+    - Wrong points: Honeoye was 18.7 km off, Aurora 23 km, Freeville 2.2 km, and six more
+      150–310 m off.
+    - Renamed: `holy-family` is St. Jude the Apostle; `st-mary-star-of-sea` is St. Rose of
+      Lima.
+  - **Fetch-check:** before promotion, 61 of the 62 live rows resolved; Cabrini failed, and
+    St. Patrick's, Victor failed once and resolved on a re-run. After promotion every changed
+    row resolves to its 4 October issue except Cabrini. Their replay fixtures were
+    re-recorded.
+  - **`recheck`:** quotes found except on Cloudflare- or captcha-blocked pages (Catholic
+    Courier, some parish sites, Wix 429s) and image-only bulletins, whose readings are notes.
