@@ -5,8 +5,9 @@ two recurrence qualifiers the labels record on weekly slots: which weeks of the
 month a slot falls on (`weeks_of_month`) and which part of the year it runs
 (`season`). The qualifier field descriptions follow PR 22's extraction schema.
 
-The prompt is the production Gemini prompt, split in two so the part that never
-changes comes first: `INSTRUCTIONS` is identical for every bulletin and can be
+The prompt starts from the production Gemini prompt, with the labeling rules
+added (weekly vs dated, chapels, Communion Services, times relative to a Mass),
+and is split in two so the part that never changes comes first: `INSTRUCTIONS` is identical for every bulletin and can be
 served from a provider's prompt cache, while `CONTEXT_TEMPLATE` (the parish's
 churches and today's date) and then the PDF follow it.
 
@@ -207,28 +208,66 @@ class QualifiedSchedulePayload(BaseModel):
 
 
 # ── Prompt ──────────────────────────────────────────────────────────────────
-# The production Gemini prompt (schedule_extraction.EVENTS_SYSTEM_PROMPT), with
-# its two per-bulletin sections moved after the instructions so everything up
-# to them is the same for every request.
+# Started from the production Gemini prompt (schedule_extraction.EVENTS_SYSTEM_PROMPT)
+# and extended with the labeling rules. Its two per-bulletin sections come after
+# these instructions, so everything up to them is the same for every request.
 INSTRUCTIONS = """\
 # Role
 
-Extract Mass, Confession, and Adoration schedule information from the attached Catholic parish bulletin PDF.
+Extract Mass, Confession, and Adoration schedule information from the attached Catholic parish bulletin PDF. The output feeds a public Mass-times website, so a wrong time is worse than a missing one.
 
-# Instructions
+# What to extract
 
-- Only extract Mass, Confession, and Adoration events. Ignore every other kind of event or activity in the bulletin.
-- Attach every event to one of the churches in the known-churches list using its exact `slug`.
-- Sort each event into exactly one bucket:
-  - `weekly_schedule` for recurring weekly times.
-  - `single_events` for one-off or extra occurrences on a specific date that are not already covered by a weekly entry.
-  - `cancellations` for events that the bulletin explicitly says are cancelled, moved, or will not take place on a specific date.
-- Never duplicate a weekly slot as a single event just because the bulletin also mentions it in a specific week.
-- Only add a `note` when there is genuinely special context worth surfacing (language, season, alternate location, benediction, etc.). No need to specify 'Vigil Mass'.
+- Only extract Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin.
+- A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, record that Mass under `cancellations` for that date.
+- Skip anything without a definite start time, such as "Confession by appointment" or "call the office".
+
+# Churches and chapels
+
+- Attach every event to one of the churches in the known-churches list (given after these instructions) using its exact `slug`.
+- An event in a chapel or room of a listed church itself ("in the chapel", "Blessed Sacrament Chapel", "in the church hall") belongs to that church; say where in a short `note`.
+- An event at a separate chapel (a convent, school, hospital, nursing home or mission chapel with its own building), or one whose location is unclear, is left out unless the known-churches list includes that chapel or its address. If you leave out such a chapel that clearly has its own Mass, Confession or Adoration times, set `church_list_needs_review` to true.
+
+# Weekly or dated
+
+Sort each event into exactly one bucket:
+
+- `weekly_schedule` for recurring weekly times.
+- `single_events` for occurrences on a specific date that are not already covered by a weekly entry.
+- `cancellations` for events that the bulletin says are cancelled, moved, or will not take place on a specific date. A moved event is a cancellation of the original date and time plus a single event at the new one.
+
+To decide between weekly and dated:
+
+1. Times presented as the parish's regular schedule ("Weekend Masses", "Daily Mass", "Mass Schedule", "Confessions: Saturdays 3:00-3:45 PM") are weekly. A range of days ("Monday-Friday 8:00 AM") is one weekly entry per day.
+2. Times given only with a date, or with a date and its weekday ("Tuesday, October 6, 7:00 PM Adoration"), are dated, including the dated times in a weekly calendar or a list of Mass intentions.
+3. Exception: if the bulletin shows dated times for two or more weeks and the same slot (church, type, weekday and time) appears in each of those weeks, record it as weekly, unless the bulletin marks it as special or one-off.
+4. When it is unclear, prefer dated. A slot recorded as dated that turns up again in later bulletins is promoted to weekly automatically; a slot wrongly recorded as weekly stays wrong.
+5. Never duplicate a weekly slot as a single event just because the bulletin also lists it on a date in a specific week. Holy days, holidays, feast-day Masses and other special services are dated.
+
+# Weekly qualifiers
+
+- `weeks_of_month`: for slots that only happen on some occurrences of the weekday in a month, such as "First Friday Adoration" or "1st and 3rd Saturdays". Leave it empty for every week.
+- `season`: for slots the bulletin limits to part of the year ("October through June", "summer schedule"), with the months it gives.
+
+# Times
+
+- `start_time` and `end_time` are formatted as `h:MM AM` or `h:MM PM`; "noon" is `12:00 PM`.
+- For Mass, leave `end_time` null. For Confession and Adoration, give `end_time` when the bulletin gives one or a duration ("one hour"); leave it null for "until all are heard" or no end.
+- When the bulletin times an event relative to a Mass rather than giving a clock time, work it out from that Mass's start time:
+  - "After" or "following" a weekend Mass (Saturday evening vigil or Sunday): 1 hour after the Mass starts.
+  - "After" or "following" a weekday Mass: 30 minutes after the Mass starts.
+  - "N minutes before Mass": N minutes before it, ending when the Mass starts. "Before every Mass" is one entry for each Mass it refers to.
+
+# Notes
+
+Only add a `note` when there is genuinely special context worth surfacing: language, location within the church, benediction, a relative timing you converted ("after the 4:00 PM Mass"), a special occasion. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month` or `season` already say.
+
+# Bulletin
+
 - Identify the bulletin's own issue date and report it as `published_date`.
 - Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). In that case you may return empty event lists.
 
-Carefully find the events listed in the bulletin.
+Read the whole bulletin, including calendars, sidebars and the back page, and carefully find every event it lists.
 """
 
 CONTEXT_TEMPLATE = """\

@@ -118,8 +118,9 @@ goes to `data/runs/<classifier>/eval/<version>/`:
 The `gpt-6-luna` classifiers (`classifiers/openai_responses.py`) use the
 Responses API with the schema and prompt in `classifiers/qualified_schedule.py`:
 the production schema plus `weeks_of_month` and `season` on weekly slots, and the
-production Gemini prompt with its static part sent first as an explicit
-prompt-cache breakpoint. They need `OPENAI_API_KEY`.
+production Gemini prompt extended with the labeling rules (weekly vs dated,
+chapels, Communion Services, times given relative to a Mass), its static part
+sent first as an explicit prompt-cache breakpoint. They need `OPENAI_API_KEY`.
 
 ### Score an eval run against the labels
 
