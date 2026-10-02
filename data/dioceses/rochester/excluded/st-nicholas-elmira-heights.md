@@ -6,7 +6,9 @@ city: Elmira Heights
 state: NY
 postal_code: '14903'
 decided: 2026-10-02
-roster: ['gcatholic:17124', 'directory:ind-st-nicholas']
+roster:
+- gcatholic:17124
+- directory:ind-st-nicholas
 evidence:
 - url: https://gcatholic.org/churches/usa-02/17124
   seen: 2026-10-02
@@ -17,14 +19,22 @@ evidence:
   seen: 2026-10-02
   note: 'Listed in Diocese of Rochester Parish Locator and Mass Times as ''St. Nicholas'', Elmira Heights,
     NY; group: Individual'
+- url: https://gcatholic.org/churches/usa-02/17124
+  seen: 2026-10-02
+  quote: Church of St. Nicholas (Ukrainian)
+  note: 'GCatholic page, read 2026-10-02: "Rite: Ukrainian", under the Ukrainian Catholic hierarchy; address
+    412-418 E McCann Blvd., Elmira Heights. Its listed website, stnicholasukrainianchurch.org, answers
+    404.'
+- url: https://www.dor.org/parishes-campuses-cemeteries/parish-locator-and-mass-times/
+  seen: 2026-10-02
+  note: 'Parish Locator: "St. Nicholas", Elmira Heights, group "Individual", "Mass: Sat: 5pm (English),
+    Sun: 8:30am (English), 10am (Ukrainian-sung)".'
 ---
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+A Ukrainian-rite church, outside the Diocese of Rochester's jurisdiction. GCatholic lists it as "Church of St. Nicholas (Ukrainian)", rite Ukrainian. The Locator lists it among the diocese's "Individual" places, with Masses in English and Ukrainian. I did not find which eparchy it belongs to (its website is dead); I could not exclude that it is Ukrainian Orthodox, but GCatholic lists only Catholic churches, so I treated it as Eastern Catholic. Eastern Catholic churches are `other-jurisdiction` under the brief.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A bulletin from the church showing it serves the Roman Rite under the diocese (unlikely).

@@ -12,18 +12,33 @@ coordinates_from: geocode-stage
 name_verified: false
 address_verified: false
 roster: ['directory:368-st-francis-solanus', 'gcatholic:17835']
-evidence: []
+evidence:
+- url: https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf
+  seen: 2026-10-02
+  quote: 'St. Francis Solanus 3660 Orchard St. Interlaken, NY Weekend Mass: Saturday, 4:00 p.m. Weekday
+    Mass: Tuesday-Friday, 8:30 a.m.'
+  note: 27 Sep 2026 issue, page 1; also the parish centre address (P.O. Box 403, Interlaken).
+- url: https://gcatholic.org/churches/usa-02/17835
+  seen: 2026-10-02
+  quote: 3660 Orchard St., Interlaken, New York 14847
+  note: GCatholic lists 'St. Francis Solanus', 3660 Orchard St., Interlaken, kind Church; Plus Code 87J5J78G+CM.
+- url: https://ps.dor.org/directory/mary-mother-of-mercy/
+  seen: 2026-10-02
+  quote: St. Francis Solanus , 3660 Orchard St., Interlaken, N.Y.
+- url: https://nominatim.openstreetmap.org/search?q=3660%20Orchard%20Street%2C%20Interlaken%2C%20NY&format=jsonv2
+  seen: 2026-10-02
+  note: No OSM place_of_worship found within 150 m of GCatholic's Plus Code; the nearest church nodes
+    are other denominations. OSM does not independently confirm the building.
+- url: https://www.dor.org/parishes-campuses-cemeteries/parish-locator-and-mass-times/
+  seen: 2026-10-02
+  note: 'Locator: ''St. Francis Solanus'', 3660 Orchard St., Interlaken (Sat 4pm).'
 promoted: 2026-10-02
 ---
 
-> Adopted on 2026-10-02 from the live row, which predates the diocese records (Rochester was the pipeline's first diocese and was written straight into the CSVs). The frontmatter is the live row as it stood; the explanation below is the audit.
-
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 27 September 2026 bulletin (page 1) gives St. Francis Solanus a Saturday 4:00 p.m. weekend Mass and weekday Masses Tuesday to Friday at 8:30 a.m.; the directory says daily Mass here.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+Both flags true. The bulletin, GCatholic, the diocese directory and the Locator agree on 3660 Orchard Street, Interlaken 14847. OSM has no church node at the spot (not a contradiction). Coordinates (geocode stage) are 3 m from GCatholic's Plus Code.

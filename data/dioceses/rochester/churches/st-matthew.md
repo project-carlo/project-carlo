@@ -15,9 +15,8 @@ roster: ['gcatholic:17845', 'directory:339-st-matthew']
 evidence:
 - url: https://www.stsmaryandmatthew.com/_files/ugd/dcc8c9_c60b31dd0f0c4445adce458783627ad1.pdf
   seen: 2026-10-02
-  quote: Saturday, October 3 St. Matthew - 3:30 - 4:00 pm Reconciliation St. Matthew - 4:30 pm - Mass
-    Sunday, October 4 - 27th Sunday in Ordinary Time St. Mary’s - 8:30 am - Mass - Live Streamed St. Matthew
-    - 10:30 am - Mass
+  quote: Saturday, October 3 … St. Matthew - 4:30 pm - Mass Sunday, October 4 - 27th Sunday in Ordinary
+    Time St. Mary’s - 8:30 am - Mass - Live Streamed St. Matthew - 10:30 am - Mass
   note: 'Page 3 calendar of the 27 September 2026 bulletin. Weekdays: Monday and Wednesday "St. Matthew
     - 9:00 am - Mass".'
 - url: https://www.stsmaryandmatthew.com/_files/ugd/dcc8c9_c60b31dd0f0c4445adce458783627ad1.pdf
