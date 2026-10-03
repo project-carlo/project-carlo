@@ -31,6 +31,7 @@ from urllib.error import HTTPError, URLError
 
 from pdf_extract import fetch
 from pdf_extract.browser import PageLike, launch_stealth_browser
+from pdf_extract.parish_sites.dates import parse_date
 from pdf_extract.storage import PARISHES_CSV_PATH
 
 LOGGER = logging.getLogger(__name__)
@@ -387,9 +388,11 @@ def _check_one(
         result.update(status=status, detail=f"{type(exc).__name__}: {exc}")
         return result
     result["source_url"] = link.source_url
+    if link.how:
+        result["how"] = link.how
     if link.fetch_url != link.source_url:
         result["fetch_url"] = link.fetch_url
-    url_date = fetch._parse_relaxed_date(link.source_url, reference_date)
+    url_date = parse_date(link.source_url, reference_date)
     if url_date is not None:
         result["url_date"] = url_date.isoformat()
     if not download:

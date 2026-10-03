@@ -18,7 +18,8 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.runs import FAILED_STATUSES, consecutive_failures, parish_results
+from pdf_extract.parish_sites.resolve import OLD_PICK_MARK
+from pdf_extract.runs import FAILED_STATUSES, FETCH_NEW, consecutive_failures, parish_results
 from pdf_extract.storage import latest_bulletin_ids, load_bulletins, load_events
 from pdf_extract.timeparse import time_to_minutes
 
@@ -179,6 +180,13 @@ def build_report(
             if r["status"] in FAILED_STATUSES
         ]
         wrong_bulletins = [r for r in results if r["status"] == "wrong_bulletin"]
+        # A new bulletin the site dated, but not this week: a parish running
+        # behind, or the resolver reading an archive.
+        old_picks = [
+            r for r in results
+            if r["stage"] == "fetch" and r["status"] == FETCH_NEW
+            and OLD_PICK_MARK in (r.get("detail") or "")
+        ]
         stale = _stale_parishes(conn, attempted)
     finally:
         conn.close()
@@ -259,6 +267,7 @@ def build_report(
         "attention": {
             "failures": failures,
             "wrong_bulletins": wrong_bulletins,
+            "old_picks": old_picks,
             "stale_parishes": stale,
             "dropped_to_zero": dropped_to_zero,
             "big_drops": big_drops,
@@ -359,6 +368,11 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
         notes.append(
             f"- **{result['parish_slug']}**: the extractor says the PDF is not this "
             f"parish's current bulletin ({result.get('source_url')})"
+        )
+    for result in attention.get("old_picks", []):
+        notes.append(
+            f"- **{result['parish_slug']}**: took a bulletin not dated this week "
+            f"({result['detail']}; {result.get('source_url')})"
         )
     for slug in attention["dropped_to_zero"]:
         notes.append(f"- **{slug}** now shows no events (holds the run)")

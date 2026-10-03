@@ -505,3 +505,29 @@ def test_render_markdown_truncates_long_change_lists() -> None:
 
     assert markdown.count("<details>") == 2
     assert "…and 1 more parishes; see report.json." in markdown
+
+
+def test_report_points_out_a_new_bulletin_not_dated_this_week(pipeline_dir: Path) -> None:
+    before, after = _before_and_after(pipeline_dir, [MASS_9])
+    conn = connect_db(after)
+    try:
+        start_run(conn, "run-1", git_sha=None, trigger=None)
+        record_parish_result(
+            conn, "run-1", "test-parish", "fetch", "new",
+            detail="page-pdfs on https://p.org/bulletins: first-listed, dated 2026-09-06",
+            source_url="https://p.org/2026-09-06.pdf",
+        )
+        record_parish_result(
+            conn, "run-1", "other-parish", "fetch", "new",
+            detail="page-pdfs on https://o.org/bulletins: current",
+        )
+    finally:
+        conn.close()
+
+    report = build_report(
+        run_id="run-1", before_db=before, after_db=after, stages={},
+        snapshot_verification=None,
+    )
+
+    assert [r["parish_slug"] for r in report["attention"]["old_picks"]] == ["test-parish"]
+    assert "**test-parish**: took a bulletin not dated this week" in render_markdown(report)

@@ -1,0 +1,167 @@
+"""Find this week's bulletin on a parish's own website.
+
+Three stages, each in its own module:
+
+1. locate: the bulletin page, from the parish's recipe or by following the
+   homepage's "bulletin" links (`locate.py`);
+2. collect: the PDFs that page offers, by the collectors in order
+   (`collectors.py`);
+3. choose: this week's issue among them (`choose.py`).
+
+A parish's `Recipe` can pin the first two stages: the page to read, and the
+one collector that reads it. Then nothing is guessed for that parish, and a
+change made for another site cannot change what it picks.
+"""
+
+from __future__ import annotations
+
+import logging
+from dataclasses import dataclass
+from datetime import date
+
+from pdf_extract.browser import PageLike, goto_with_retry, wait_for_selector_quietly
+from pdf_extract.parish_sites.choose import (
+    CURRENT,
+    FALLBACK_MAX_AGE_DAYS,
+    Choice,
+    OldBulletinOnly,
+    choose,
+    is_convincing,
+)
+from pdf_extract.parish_sites.collectors import (
+    COLLECTORS,
+    BulletinPage,
+    Candidate,
+    Collector,
+    NoBulletin,
+)
+from pdf_extract.parish_sites.locate import find_bulletin_page_urls, links_bulletin_pdf
+
+LOGGER = logging.getLogger(__name__)
+
+# A homepage can link "bulletin" from several places (a menu entry, a news post
+# about the bulletin, a Drive folder). When a page has no bulletin, the next is
+# tried, up to this many.
+BULLETIN_PAGES_TO_TRY = 3
+
+
+@dataclass(frozen=True)
+class Recipe:
+    """How to read one parish's site, as recorded when it was explored."""
+
+    page: str | None = None
+    """The bulletin page; without it, found from the homepage."""
+    collector: str | None = None
+    """The one collector that reads `page`; without it, each is tried in turn."""
+
+    def __post_init__(self) -> None:
+        if self.collector is not None and self.collector not in COLLECTORS:
+            raise ValueError(
+                f"Unknown collector {self.collector!r}; expected one of {sorted(COLLECTORS)}"
+            )
+
+
+@dataclass(frozen=True)
+class Resolution:
+    """This week's bulletin, and how the resolver came to it."""
+
+    candidate: Candidate
+    page_url: str
+    collector: str
+    reason: str
+
+    def describe(self) -> str:
+        """One line for the run report: "page-pdfs on <page>: current".
+
+        A pick the site dated, but not this week, ends in OLD_PICK_MARK and
+        its date, so the report can point it out.
+        """
+        text = f"{self.collector} on {self.page_url}: {self.reason}"
+        dated = self.candidate.parsed_date
+        if dated is not None and self.reason != CURRENT:
+            text += f"{OLD_PICK_MARK}{dated.isoformat()}"
+        return text
+
+
+# How `Resolution.describe` marks a pick dated before (or after) this week.
+OLD_PICK_MARK = ", dated "
+
+
+def resolve_parish_site(
+    *, homepage_url: str, reference_date: date, page: PageLike, recipe: Recipe | None = None,
+) -> Resolution:
+    recipe = recipe or Recipe()
+    collectors = (
+        [COLLECTORS[recipe.collector]] if recipe.collector else list(COLLECTORS.values())
+    )
+    if recipe.page:
+        return _resolve_bulletin_page(
+            page=page, url=recipe.page, reference_date=reference_date, collectors=collectors,
+        )
+
+    bulletin_page_urls = _locate_bulletin_pages(
+        page=page, homepage_url=homepage_url, reference_date=reference_date,
+    )
+    # The first "bulletin" link is not always the bulletin: it can be a news
+    # post about it, or an old archive. Try the next ones before giving up,
+    # and report the first page's problem if none of them has one.
+    # A later link is often an archive, so take a bulletin from it only if it
+    # is not plainly an old one. The first link's bulletin is taken whatever
+    # its age, but only once no later link has a recent one: a site's
+    # "Bulletins" page can be a stale 2017 archive beside "2026 Bulletins".
+    failures: list[ValueError] = []
+    pages_to_try = bulletin_page_urls[:BULLETIN_PAGES_TO_TRY]
+    for url in pages_to_try:
+        try:
+            return _resolve_bulletin_page(
+                page=page, url=url, reference_date=reference_date, collectors=collectors,
+                max_age_days=FALLBACK_MAX_AGE_DAYS,
+            )
+        except ValueError as exc:
+            LOGGER.info("No recent bulletin on %s: %s", url, exc)
+            failures.append(exc)
+    if isinstance(failures[0], OldBulletinOnly):
+        return _resolve_bulletin_page(
+            page=page, url=pages_to_try[0], reference_date=reference_date, collectors=collectors,
+        )
+    raise failures[0]
+
+
+def _locate_bulletin_pages(
+    *, page: PageLike, homepage_url: str, reference_date: date,
+) -> list[str]:
+    goto_with_retry(page=page, page_url=homepage_url)
+    wait_for_selector_quietly(
+        page=page, selector="a[href]", state="attached", source_label=homepage_url,
+    )
+    urls = find_bulletin_page_urls(page=page, base_url=homepage_url, reference_date=reference_date)
+    # Some homepages link this week's bulletin PDF itself, with no page for
+    # it: read the homepage as the bulletin page, after any real one.
+    if links_bulletin_pdf(page=page, base_url=page.url or homepage_url):
+        urls.append(homepage_url)
+    if not urls:
+        raise NoBulletin(f"No bulletin page link found for other provider at {homepage_url}")
+    return urls
+
+
+def _resolve_bulletin_page(
+    *, page: PageLike, url: str, reference_date: date, collectors: list[Collector],
+    max_age_days: int | None = None,
+) -> Resolution:
+    site = BulletinPage(page=page, requested_url=url, reference_date=reference_date)
+    site.load()
+    found: list[Candidate] = []
+    used: Collector | None = None
+    for collector in collectors:
+        if used is not None and (used.final or is_convincing(found, reference_date)):
+            break
+        site.return_here()
+        more = collector.collect(site, found)
+        if more:
+            found, used = more, collector
+    if used is None:
+        raise NoBulletin(f"No PDF links found on bulletin page: {url}")
+    choice: Choice = choose(found, reference_date=reference_date, max_age_days=max_age_days)
+    return Resolution(
+        candidate=choice.candidate, page_url=site.url, collector=used.name, reason=choice.reason,
+    )

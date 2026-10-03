@@ -10,16 +10,19 @@ from datetime import date
 
 import pytest
 
-from pdf_extract.fetch import (
-    _find_other_bulletin_page_urls,
-    _parse_relaxed_date_from_texts,
-    _resolve_other_latest_link,
-    _unwrap_pdf_viewer_url,
-)
+from pdf_extract.fetch import build_latest_other_bulletin_links
 from pdf_extract.fetch_check import PageSnapshot, SnapshotPage
+from pdf_extract.parish_sites.dates import parse_date_from_texts
+from pdf_extract.parish_sites.links import unwrap_pdf_viewer_url
+from pdf_extract.parish_sites.locate import find_bulletin_page_urls
 
 TODAY = date(2026, 9, 26)
 HOME = "https://parish.example"
+
+
+def _resolve_other(**kwargs) -> tuple[str, str]:
+    link = build_latest_other_bulletin_links(**kwargs)
+    return link.source_url, link.fetch_url
 
 
 def _site(
@@ -39,7 +42,7 @@ def _site(
 
 
 def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
-    source_url, _ = _resolve_other_latest_link(
+    source_url, _ = _resolve_other(
         provider_id=HOME, reference_date=TODAY, page=_site(pages, **site),
     )
     return source_url
@@ -78,18 +81,18 @@ def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
     ],
 )
 def test_parse_relaxed_date_reads_file_name_and_abbreviated_dates(text, expected) -> None:
-    assert _parse_relaxed_date_from_texts([text], TODAY) == expected
+    assert parse_date_from_texts([text], TODAY) == expected
 
 
-def test_unwrap_pdf_viewer_url() -> None:
+def testunwrap_pdf_viewer_url() -> None:
     pdf = "https://cniffamily.org/wp-content/uploads/2026/09/Bulletin-September-27-2026.pdf"
-    assert _unwrap_pdf_viewer_url(f"https://docs.google.com/gview?url={pdf}&embedded=true") == pdf
-    assert _unwrap_pdf_viewer_url(f"{HOME}/pdfjs/web/viewer.html?file={pdf}") == pdf
+    assert unwrap_pdf_viewer_url(f"https://docs.google.com/gview?url={pdf}&embedded=true") == pdf
+    assert unwrap_pdf_viewer_url(f"{HOME}/pdfjs/web/viewer.html?file={pdf}") == pdf
     # Already a PDF, or no absolute PDF address inside: left alone.
     direct = f"{HOME}/b.pdf?url=https://x.org/a.pdf"
-    assert _unwrap_pdf_viewer_url(direct) == direct
+    assert unwrap_pdf_viewer_url(direct) == direct
     relative = f"{HOME}/page?url=/relative.pdf"
-    assert _unwrap_pdf_viewer_url(relative) == relative
+    assert unwrap_pdf_viewer_url(relative) == relative
 
 
 def test_flipbook_pdf_named_with_repeated_extension_is_read_whole() -> None:
@@ -141,7 +144,7 @@ def test_archive_links_are_tried_after_the_current_bulletin_page() -> None:
         ),
     })
     page.goto(HOME)
-    assert _find_other_bulletin_page_urls(page=page, base_url=HOME, reference_date=TODAY) == [
+    assert find_bulletin_page_urls(page=page, base_url=HOME, reference_date=TODAY) == [
         f"{HOME}/copy-of-bulletins",
         f"{HOME}/copy-of-2021-bulletins",
         f"{HOME}/bulletin-archive",
@@ -198,7 +201,7 @@ def test_google_drive_folder_resolves_its_newest_pdf() -> None:
             ("id-notes", "Parish notes.docx"),
         ]
     )
-    source_url, fetch_url = _resolve_other_latest_link(
+    source_url, fetch_url = _resolve_other(
         provider_id=HOME,
         reference_date=TODAY,
         page=_site({
@@ -399,7 +402,7 @@ def test_a_stale_first_bulletin_page_is_still_read_when_nothing_is_newer() -> No
 
 def test_google_drive_file_links_are_bulletins() -> None:
     # St. Lucy/St. Bernadette, Altamont links one Drive file per Sunday.
-    source_url, fetch_url = _resolve_other_latest_link(
+    source_url, fetch_url = _resolve_other(
         provider_id=HOME, reference_date=TODAY, page=_site({
             HOME: '<a href="/bulletin">Bulletin</a>',
             f"{HOME}/bulletin": (
@@ -418,7 +421,7 @@ def test_concrete_cms_download_links_are_bulletins() -> None:
     # rcda.org lists St. Joan of Arc's issues as /download_file/view/<file>/<page>,
     # beside unrelated PDFs in its menus.
     site = "https://www.rcda.org"
-    source_url, _ = _resolve_other_latest_link(
+    source_url, _ = _resolve_other(
         provider_id=f"{site}/bulletins", reference_date=TODAY, page=_site({
             f"{site}/bulletins": (
                 f'<a href="{site}/application/files/1/Oikoumene_November_2024.pdf">'
