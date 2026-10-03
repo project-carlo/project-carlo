@@ -2,7 +2,7 @@
 name: St. Patrick Roman Catholic Church
 website: https://www.stpatricksjordan.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stpatricksjordan.com/bulletin
 publication: ['url:https://www.stpatricksjordan.com/bulletin']
 group: Rev. Robert Hyde (Camillus, Jordan)
 evidence:
@@ -48,6 +48,11 @@ stpatricksjordan.com is the parish's own site (a Duda site). `probe url` found i
 and the PDFs on irp.cdn-website.com, with no publisher id, so the bulletin is self-hosted: provider
 `other`, `publication` the Bulletin page. A test run of the pipeline's `other` fetcher on
 2026-09-26 found the 27 September issue (20260927docx.pdf).
+
+Fetch recipe `page-pdfs https://www.stpatricksjordan.com/bulletin`, pinned 2026-10-03: on
+the pages recorded 2026-09-27 (`tests/fixtures/fetch/st-patrick-jordan.json.gz`) the
+resolver found https://irp.cdn-website.com/59394cb6/files/uploaded/20260927docx.pdf this
+way, dated that week.
 
 ## Not yet confirmed
 

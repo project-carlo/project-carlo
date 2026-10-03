@@ -2,7 +2,7 @@
 name: Immaculate Conception/St. Bridget's
 website: https://www.immaculateconceptionrochester.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.immaculateconceptionrochester.org/bulletin-news
 publication:
 - url:https://www.immaculateconceptionrochester.org/bulletin-news
 group: St. Monica / Immaculate Conception-St. Bridget's cluster
@@ -39,6 +39,8 @@ One: `churches/immaculate-conception-st-bridgets.md`. The parish was formed from
 ## Website and bulletin provider
 
 `immaculateconceptionrochester.org` is alive. It is Wix, which rate-limits plain fetches (429 to `probe url` and `probe pdf`; curl and a browser work); the browser-based fetch should be fine. The bulletin page lists date-labelled PDFs, so provider `other` reading the website is right.
+
+Fetch recipe `page-pdfs https://www.immaculateconceptionrochester.org/bulletin-news`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/immaculate-conception-st-bridgets.json.gz` the resolver found https://www.immaculateconceptionrochester.org/_files/ugd/309cee_8abae253aa794d1382e0a22d6872d95a.pdf this way, dated that week.
 
 ## Not yet confirmed
 

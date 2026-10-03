@@ -2,7 +2,7 @@
 name: St. Lawrence
 website: https://stlawrencegreeceny.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stlawrencegreeceny.org/worship/bulletins/
 publication: ['url:https://www.stlawrencegreeceny.org/worship/bulletins/']
 group: Roc Catholics Northwest
 evidence:
@@ -39,6 +39,8 @@ One: `churches/st-lawrence.md`. The Parish Locator's garbled entry "1000 St Lawr
 ## Website and bulletin provider
 
 `stlawrencegreeceny.org` redirects to `www.stlawrencegreeceny.org` (200 OK). `bulletin_provider: other`: the Bulletins page lists the PDFs, recorded as `url:` in `publication`. The live provider and website were already correct.
+
+Fetch recipe `page-pdfs https://www.stlawrencegreeceny.org/worship/bulletins/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-lawrence.json.gz` the resolver found https://www.stlawrencegreeceny.org/wp-content/uploads/20260927.pdf this way, dated that week.
 
 ## Not yet confirmed
 

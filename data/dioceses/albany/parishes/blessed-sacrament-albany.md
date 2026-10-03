@@ -2,7 +2,7 @@
 name: Blessed Sacrament Church
 website: https://blessedsacramentalbany.org/bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://blessedsacramentalbany.org/bulletin/']
 group: Blessed Sacrament (with the Shrine of Our Lady of the Americas)
 evidence:
@@ -52,6 +52,11 @@ blessedsacramentalbany.org is the directory's website link (GCatholic's
 blessedsacramentchurchalbany.org does not resolve: DEAD-DNS on 2026-09-28). Its /bulletin/
 page lists each issue as a self-hosted PDF, so provider `other` with that page as website
 and publication. The printer credit in the issue names no publisher id.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/blessed-sacrament-albany.json.gz`) the resolver found
+https://blessedsacramentalbany.org/wp-content/uploads/2026/09/September-27-2026.pdf this
+way, dated that week.
 
 ## Not yet confirmed
 

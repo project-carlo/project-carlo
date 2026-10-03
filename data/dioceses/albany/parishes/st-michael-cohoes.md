@@ -2,7 +2,7 @@
 name: St. Michael's Roman Catholic Church
 website: https://www.stmichaelsofcohoes.org/bulletins.html
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.stmichaelsofcohoes.org/bulletins.html']
 group: 'Cohoes (one pastor: Holy Trinity, St. Michael)'
 evidence:
@@ -44,6 +44,11 @@ stmichaelsofcohoes.org is the site the diocese and GCatholic both give. Its Bull
 (bulletins.html) links every issue as `uploads/1/3/8/9/138944200/bulletin-YYYY-MM-DD.pdf`,
 dated by the Sunday; the home page links the current one. No publisher id: self-hosted,
 `other`, with the Bulletins page as the publication.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/st-michael-cohoes.json.gz`) the resolver found
+https://www.stmichaelsofcohoes.org/uploads/1/3/8/9/138944200/bulletin-2026-10-04.pdf this
+way, dated that week.
 
 ## Not yet confirmed
 

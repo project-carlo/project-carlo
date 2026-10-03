@@ -2,7 +2,7 @@
 name: St. Monica / Emmanuel Church of the Deaf
 website: https://www.stmonicaofrochester.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stmonicaofrochester.org/copy-of-bulletins
 publication:
 - url:https://www.stmonicaofrochester.org/copy-of-bulletins
 group: St. Monica / Immaculate Conception-St. Bridget's cluster
@@ -42,6 +42,8 @@ One: `churches/st-monica.md` (831 Genesee Street, at the corner of Monica Street
 ## Website and bulletin provider
 
 `stmonicaofrochester.org` is alive (200). The bulletins live on three year pages (/copy-of-2021-bulletins is the 2024 one, /copy-of-bulletins the 2026 one, /copy-of-bulletins-1 the 2025 one); only /copy-of-bulletins has the current issues. The fetch's `other` resolver tries several bulletin links in turn and falls back past old archives, so provider `other` with the home page should find it, but the first "bulletins" link on the home page is the 2024 archive. Recorded as `url:` of the 2026 page.
+
+Fetch recipe `page-pdfs https://www.stmonicaofrochester.org/copy-of-bulletins`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-monica-emmanuel.json.gz` the resolver found https://www.stmonicaofrochester.org/_files/ugd/cea846_00334ad9684947469dd533a9f70fcc50.pdf this way, dated that week.
 
 ## Not yet confirmed
 

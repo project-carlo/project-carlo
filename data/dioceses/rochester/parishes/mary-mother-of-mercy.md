@@ -2,7 +2,7 @@
 name: The Parish of Mary, Mother of Mercy
 website: https://www.marymotherofmercy.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.marymotherofmercy.com/mass/bulletins/
 publication: ['url:https://www.marymotherofmercy.com/mass/bulletins/']
 group: Mary, Mother of Mercy
 evidence:
@@ -38,6 +38,8 @@ St. Francis Solanus (Sat 4:00 p.m.; weekday Mass Tue-Fri 8:30), St. James the Ap
 ## Website and bulletin provider
 
 `website` https://www.marymotherofmercy.com links `/mass/bulletins/`, a WordPress page listing every PDF. Provider `other`, no provider_id. The publication is that page. No change to the live row.
+
+Fetch recipe `page-pdfs https://www.marymotherofmercy.com/mass/bulletins/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/mary-mother-of-mercy.json.gz` the resolver found https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf this way, dated that week.
 
 ## Not yet confirmed
 

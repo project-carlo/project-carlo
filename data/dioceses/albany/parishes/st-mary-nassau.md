@@ -2,7 +2,7 @@
 name: St. Mary's Church (Nassau)
 website: https://parishes.rcda.org/St.MarysNassau/bulletin.php
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://parishes.rcda.org/St.MarysNassau/bulletin.php']
 group: ''
 evidence:
@@ -43,6 +43,11 @@ weekday morning Masses move to the rectory; that is the same parish, not a separ
 The directory's link, parishes.rcda.org/St.MarysNassau/, has a "Bulletin" page (bulletin.php)
 listing the PDFs, so provider `other` with that page as website and publication. The site
 occasionally resets connections; a retry works.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/st-mary-nassau.json.gz`) the resolver found
+https://parishes.rcda.org/St.MarysNassau/bulletins/2026/October_04.pdf this way, dated
+that week.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. John Vianney
 website: https://sjvbath.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.sjvbath.org/bulletin-3/
 publication:
 - url:https://www.sjvbath.org/bulletin-2/
 - url:https://www.sjvbath.org/bulletin-3/
@@ -46,6 +46,8 @@ Two: `st-marys-bath` (Saturday 4:00 pm, Sunday 10:30 am, Monday and Thursday 11:
 ## Website and bulletin provider
 
 www.sjvbath.org is a live WordPress site; its Bulletin menu links two pages (`/bulletin-2/`, the archive, and `/bulletin-3/`, the latest issue) that list the PDFs, so `bulletin_provider: other` with both pages as `url:` publications and no provider_id. **The PDFs are image-only** (no text layer): the pipeline will have to read them as images.
+
+Fetch recipe `page-pdfs https://www.sjvbath.org/bulletin-3/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-john-vianney.json.gz` the resolver found https://www.sjvbath.org/wp-content/uploads/Sept-27th-26th-Sun-in-OT.pdf this way, dated that week.
 
 ## Not yet confirmed
 

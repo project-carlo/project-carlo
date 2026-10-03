@@ -408,8 +408,66 @@ def test_report_flags_stale_parishes_that_were_attempted(pipeline_dir: Path) -> 
 
     assert report["attention"]["stale_parishes"] == {
         "never-fetched": None,
-        "test-parish": "2026-01-05T00:00:00Z",
+        "test-parish": {
+            "bulletin_date": "2026-01-04",
+            "fetched_at": "2026-01-05T00:00:00Z",
+            "last_seen_at": "2026-01-05T00:00:00Z",
+            "source_url": "https://example.org/2026-01-04.pdf",
+        },
     }
+    markdown = render_markdown(report)
+    assert "**never-fetched** has no bulletin from the last 14 days (never fetched)" in markdown
+    assert (
+        "**test-parish** has no bulletin from the last 14 days "
+        "(newest is for 2026-01-04, fetched 2026-01-05)"
+    ) in markdown
+
+
+def test_report_calls_a_parish_whose_site_serves_an_old_issue_stale(pipeline_dir: Path) -> None:
+    # Fetched this week, but the bulletin is for a week long gone: a site
+    # that is alive but no longer updated.
+    before, after = _before_and_after(pipeline_dir, None)
+    _add_bulletin(after, [MASS_9], published_date="2026-01-04")
+    conn = connect_db(after)
+    try:
+        start_run(conn, "r", git_sha=None, trigger=None)
+        record_parish_result(conn, "r", "test-parish", "fetch", "unchanged")
+    finally:
+        conn.close()
+
+    report = build_report(
+        run_id="r", before_db=before, after_db=after, stages={}, snapshot_verification=None,
+    )
+
+    assert report["attention"]["stale_parishes"]["test-parish"]["bulletin_date"] == "2026-01-04"
+
+
+def test_report_lists_repeated_weeks_and_old_issues(pipeline_dir: Path) -> None:
+    before, after = _before_and_after(pipeline_dir, [MASS_9])
+    conn = connect_db(after)
+    try:
+        start_run(conn, "r", git_sha=None, trigger=None)
+        record_parish_result(
+            conn, "r", "test-parish", "process", "repeated_week",
+            detail="bulletin 3 for 2026-09-13 (after #1, #2)", source_url="https://x/3.pdf",
+        )
+        record_parish_result(
+            conn, "r", "other-parish", "process", "old_issue",
+            detail="for 2026-08-30, older than #4 for 2026-09-13", source_url="https://x/o.pdf",
+        )
+    finally:
+        conn.close()
+
+    report = build_report(
+        run_id="r", before_db=before, after_db=after, stages={}, snapshot_verification=None,
+    )
+
+    assert [r["parish_slug"] for r in report["attention"]["repeated_weeks"]] == ["test-parish"]
+    assert [r["parish_slug"] for r in report["attention"]["old_issues"]] == ["other-parish"]
+    assert report["attention"]["failures"] == []
+    markdown = render_markdown(report)
+    assert "**test-parish**: another bulletin for a week we already had two of" in markdown
+    assert "**other-parish**: the site served an older issue than the one shown" in markdown
 
 
 def test_report_opens_databases_read_only(pipeline_dir: Path) -> None:
@@ -505,3 +563,29 @@ def test_render_markdown_truncates_long_change_lists() -> None:
 
     assert markdown.count("<details>") == 2
     assert "…and 1 more parishes; see report.json." in markdown
+
+
+def test_report_points_out_a_new_bulletin_not_dated_this_week(pipeline_dir: Path) -> None:
+    before, after = _before_and_after(pipeline_dir, [MASS_9])
+    conn = connect_db(after)
+    try:
+        start_run(conn, "run-1", git_sha=None, trigger=None)
+        record_parish_result(
+            conn, "run-1", "test-parish", "fetch", "new",
+            detail="page-pdfs on https://p.org/bulletins: first-listed, dated 2026-09-06",
+            source_url="https://p.org/2026-09-06.pdf",
+        )
+        record_parish_result(
+            conn, "run-1", "other-parish", "fetch", "new",
+            detail="page-pdfs on https://o.org/bulletins: current",
+        )
+    finally:
+        conn.close()
+
+    report = build_report(
+        run_id="run-1", before_db=before, after_db=after, stages={},
+        snapshot_verification=None,
+    )
+
+    assert [r["parish_slug"] for r in report["attention"]["old_picks"]] == ["test-parish"]
+    assert "**test-parish**: took a bulletin not dated this week" in render_markdown(report)

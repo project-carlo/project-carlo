@@ -2,7 +2,7 @@
 name: St. Michael & St. Peter and Our Lady of Hope
 website: https://www.stmichael-stpeter.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stmichael-stpeter.org/bulletins
 publication: ['url:https://www.stmichael-stpeter.org/bulletins', 'po-container:03/1385']
 group: St. Michael-St. Peter + Our Lady of Hope (shared pastor)
 evidence:
@@ -46,6 +46,12 @@ The PDFs are posted on stmichael-stpeter.org/bulletins, so provider `other` with
 They are LPi bulletins, also in ParishesOnline container 03/1385, but no ParishesOnline
 organization slug was found for it (guessed slugs and a web search found none), so
 `parishes_online` could not be used; the container id is recorded in `publication`.
+
+Fetch recipe `page-pdfs https://www.stmichael-stpeter.org/bulletins`, pinned 2026-10-03:
+on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/st-michael-st-peter-our-lady-of-hope-syracuse.json.gz`) the
+resolver found https://www.stmichael-stpeter.org/s/Set-26-27-26.pdf this way, dated that
+week.
 
 ## Not yet confirmed
 

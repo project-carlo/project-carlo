@@ -14,11 +14,23 @@ from __future__ import annotations
 
 import sqlite3
 from dataclasses import dataclass, field
-from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.runs import FAILED_STATUSES, consecutive_failures, parish_results
+from pdf_extract.bulletin_week import (
+    STALE_BULLETIN_AGE_DAYS,
+    bulletin_reference_date,
+    stale_parishes,
+)
+from pdf_extract.parish_sites.resolve import OLD_PICK_MARK
+from pdf_extract.runs import (
+    FAILED_STATUSES,
+    FETCH_NEW,
+    PROCESS_OLD_ISSUE,
+    PROCESS_REPEATED_WEEK,
+    consecutive_failures,
+    parish_results,
+)
 from pdf_extract.storage import latest_bulletin_ids, load_bulletins, load_events
 from pdf_extract.timeparse import time_to_minutes
 
@@ -31,8 +43,6 @@ PARISH_DROP_TO_ZERO_MIN_EVENTS = 3
 # warning, without holding the run.
 PARISH_DROP_WARN_FRACTION = 0.5
 PARISH_DROP_WARN_MIN_EVENTS = 6
-
-STALE_BULLETIN_AGE_DAYS = 14
 
 # More than this share of attempted parishes failing to fetch holds the run:
 # the checks below compare against unchanged data and would otherwise pass a
@@ -133,20 +143,28 @@ def _sort_key(key: EventKey) -> tuple:
     return tuple("" if v is None else str(v) for v in key)
 
 
-def _stale_parishes(conn: sqlite3.Connection, attempted: set[str]) -> dict[str, str | None]:
-    latest_fetch: dict[str, str] = {}
-    for entry in load_bulletins(conn):
-        fetched = entry.get("fetched_at") or ""
-        if fetched > latest_fetch.get(entry["parish_slug"], ""):
-            latest_fetch[entry["parish_slug"]] = fetched
-    cutoff = (datetime.now(UTC) - timedelta(days=STALE_BULLETIN_AGE_DAYS)).strftime(
-        "%Y-%m-%dT%H:%M:%SZ"
-    )
-    return {
-        slug: latest_fetch.get(slug)
-        for slug in sorted(attempted)
-        if latest_fetch.get(slug, "") < cutoff
-    }
+def _stale_parishes(
+    conn: sqlite3.Connection, attempted: set[str],
+) -> dict[str, dict[str, str | None] | None]:
+    """Parishes whose newest bulletin is two weeks old, with when it was last served.
+
+    A site still serving that bulletin is alive but not updated; one that
+    stopped answering was last seen when it was fetched.
+    """
+    stale = stale_parishes(load_bulletins(conn), sorted(attempted))
+    out: dict[str, dict[str, str | None] | None] = {}
+    for slug, newest in stale.items():
+        if newest is None:
+            out[slug] = None
+            continue
+        reference = bulletin_reference_date(newest)
+        out[slug] = {
+            "bulletin_date": reference.isoformat() if reference else None,
+            "fetched_at": newest.get("fetched_at"),
+            "last_seen_at": newest.get("last_seen_at"),
+            "source_url": newest.get("source_url"),
+        }
+    return out
 
 
 def build_report(
@@ -179,6 +197,18 @@ def build_report(
             if r["status"] in FAILED_STATUSES
         ]
         wrong_bulletins = [r for r in results if r["status"] == "wrong_bulletin"]
+        # A third bulletin for one week: the site keeps changing it, or the
+        # duplicate check is missing a server's rebuilds.
+        repeated_weeks = [r for r in results if r["status"] == PROCESS_REPEATED_WEEK]
+        # The site went back to an older issue than one we already had.
+        old_issues = [r for r in results if r["status"] == PROCESS_OLD_ISSUE]
+        # A new bulletin the site dated, but not this week: a parish running
+        # behind, or the resolver reading an archive.
+        old_picks = [
+            r for r in results
+            if r["stage"] == "fetch" and r["status"] == FETCH_NEW
+            and OLD_PICK_MARK in (r.get("detail") or "")
+        ]
         stale = _stale_parishes(conn, attempted)
     finally:
         conn.close()
@@ -259,6 +289,9 @@ def build_report(
         "attention": {
             "failures": failures,
             "wrong_bulletins": wrong_bulletins,
+            "repeated_weeks": repeated_weeks,
+            "old_issues": old_issues,
+            "old_picks": old_picks,
             "stale_parishes": stale,
             "dropped_to_zero": dropped_to_zero,
             "big_drops": big_drops,
@@ -308,6 +341,19 @@ def _display_order(event: dict[str, Any]) -> tuple:
 
 
 # ── Markdown ────────────────────────────────────────────────────────────────
+def _describe_newest(newest: dict[str, str | None] | None) -> str:
+    if newest is None:
+        return "never fetched"
+    fetched = (newest.get("fetched_at") or "")[:10]
+    seen = (newest.get("last_seen_at") or "")[:10]
+    text = f"newest is for {newest.get('bulletin_date') or 'an unknown date'}"
+    if fetched:
+        text += f", fetched {fetched}"
+    if seen and seen != fetched:
+        text += f"; the site still served it {seen}"
+    return text
+
+
 def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -> str:
     status = report["status"]
     icon = {"passed": "✅", "held": "⏸️", "failed": "❌"}.get(status, "")
@@ -360,14 +406,29 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
             f"- **{result['parish_slug']}**: the extractor says the PDF is not this "
             f"parish's current bulletin ({result.get('source_url')})"
         )
+    for result in attention.get("repeated_weeks", []):
+        notes.append(
+            f"- **{result['parish_slug']}**: another bulletin for a week we already had "
+            f"two of; check it ({result['detail']}; {result.get('source_url')})"
+        )
+    for result in attention.get("old_issues", []):
+        notes.append(
+            f"- **{result['parish_slug']}**: the site served an older issue than the one "
+            f"shown ({result['detail']}; {result.get('source_url')})"
+        )
+    for result in attention.get("old_picks", []):
+        notes.append(
+            f"- **{result['parish_slug']}**: took a bulletin not dated this week "
+            f"({result['detail']}; {result.get('source_url')})"
+        )
     for slug in attention["dropped_to_zero"]:
         notes.append(f"- **{slug}** now shows no events (holds the run)")
     for slug in attention["big_drops"]:
         notes.append(f"- **{slug}** lost more than half of its events")
-    for slug, fetched in attention["stale_parishes"].items():
+    for slug, newest in attention["stale_parishes"].items():
         notes.append(
-            f"- **{slug}** has no bulletin newer than {STALE_BULLETIN_AGE_DAYS} days "
-            f"(latest fetched {fetched[:10] if fetched else 'never'})"
+            f"- **{slug}** has no bulletin from the last {STALE_BULLETIN_AGE_DAYS} days "
+            f"({_describe_newest(newest)})"
         )
     lines += ["", "### Needs attention", ""]
     lines += notes or ["Nothing."]

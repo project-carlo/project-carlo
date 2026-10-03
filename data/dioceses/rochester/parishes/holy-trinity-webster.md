@@ -2,7 +2,7 @@
 name: Holy Trinity Church
 website: https://holytrinityweb.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://holytrinityweb.org/media
 publication: ['url:https://holytrinityweb.org/media']
 group: ''
 evidence:
@@ -47,6 +47,8 @@ PDFs, so provider `other` with the home page as website. The `publication` is th
 page. The bulletin PDFs are named `YYYYMMDDB.pdf`, which looks like an LPi file name, but
 they are hosted on the parish's own uploads folder, not on ParishesOnline (no container
 id was found). The old domain `holytrinityweb.com` that the diocese lists is dead.
+
+Fetch recipe `page-pdfs https://holytrinityweb.org/media`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/holy-trinity-webster.json.gz` the resolver found https://holytrinityweb.org/wp-content/uploads/2026/09/20260927B.pdf this way, dated that week.
 
 ## Not yet confirmed
 

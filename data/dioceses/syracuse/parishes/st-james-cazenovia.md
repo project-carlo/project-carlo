@@ -2,7 +2,7 @@
 name: St. James Catholic Church
 website: https://stjamescaz.org/category/media-bulletins/
 bulletin_provider: other
-provider_id: ''
+provider_id: dated-post https://stjamescaz.org/category/bulletins/
 publication: ['url:https://stjamescaz.org/category/media-bulletins/']
 group: Rev. Kevin Corcoran (Cazenovia, Chittenango)
 evidence:
@@ -47,6 +47,11 @@ Cortland/Homer bulletin schedules its Mass.
 stjamescaz.org (the diocese's link; GCatholic's stjamescaz.com is the older domain) posts each issue
 at /wp-content/uploads/MM-DD-YYYY-Bulletin.pdf and lists them in the "Bulletins" category page,
 which is `website` and the `url:` publication id. Provider `other`.
+
+Fetch recipe `dated-post https://stjamescaz.org/category/bulletins/`, pinned 2026-10-03:
+on the pages recorded 2026-09-27 (`tests/fixtures/fetch/st-james-cazenovia.json.gz`) the
+resolver found https://stjamescaz.org/wp-content/uploads/09-27-2026-Bulletin.pdf this way,
+dated that week.
 
 ## Not yet confirmed
 

@@ -21,6 +21,10 @@ from datetime import date
 from typing import Any, Protocol, runtime_checkable
 
 
+class ClassifierOptionError(ValueError):
+    """A classifier was asked for an option, or option value, it does not have."""
+
+
 @runtime_checkable
 class Classifier(Protocol):
     """Pluggable bulletin → events classifier."""

@@ -91,9 +91,102 @@ committed to git. Each file (`schema_version` 1) holds:
   - `day_of_week` or `date`, `start_time` and `end_time` (24-hour `HH:MM`), `cancelled`, `page_number`, `note`
   - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These two apply to weekly rows only.
   - `origin`: `human`, `gemini` or `gemini-edited`
+  - `optional`: `null` for a required event; `include` or `exclude` for one where it is a judgment call whether it belongs at all, naming the preferred answer (press `o` on a row to cycle). Files saved before this field existed lack it, which reads as `null`.
 
 The API validates every file (`src/pdf_extract/labeling/labels.py`) and
 rejects any slug or hash that would put it outside `data/labels`.
+
+### Run a classifier over the labeled bulletins
+
+```bash
+pnpm eval --classifier gpt-6-luna --limit 2   # smoke test on two bulletins
+pnpm eval --classifier gpt-6-luna             # every label marked done
+pnpm eval --classifier gpt-6-luna --status done --status in_progress --parish all-saints-albany
+```
+
+Any classifier in `src/pdf_extract/classifiers/__init__.py` can be run
+(`gemini-flash`, `gpt-6-luna`, `gpt-6-luna-nonstrict`, ...). Each bulletin is
+classified as of the day it was fetched, and results are cached by classifier
+version (model, prompt, schema and settings), PDF and church list, so re-running
+an unchanged classifier makes no API calls (`--refresh` forces them). Output
+goes to `data/runs/<classifier>/eval/<version>/`, which is committed (the rest of
+`data/runs/`, including the result cache, stays gitignored). `<version>` is
+the settings and a digest (`strict_reasoning-medium_detail-low-d469c0cc103e`),
+and prediction files are named by the first 12 characters of the content hash,
+so paths stay inside Windows' 260-character limit:
+
+- `predictions/<parish_slug>/<content_hash[:12]>.json`: the classifier's events
+  in the label's row shape, next to the full `content_hash`, `published_date`,
+  `wrong_bulletin`, token usage and timing, so each file lines up with its label.
+- `run.json`: cache hits, errors, skipped bulletins and summed token usage.
+
+The `gpt-6-luna` classifiers (`classifiers/openai_responses.py`) use the
+Responses API with the schema and prompt in `classifiers/qualified_schedule.py`:
+the production schema plus `weeks_of_month` and `season` on weekly slots, and the
+production Gemini prompt extended with the labeling rules (weekly vs dated,
+chapels, Communion Services, times given relative to a Mass), its static part
+sent first as an explicit prompt-cache breakpoint. They need `OPENAI_API_KEY`.
+
+Their model settings can be changed per run:
+
+```bash
+pnpm eval --classifier gpt-6-luna --reasoning high --image-detail high
+pnpm eval --classifier gpt-6-luna --pdf-as-images --image-detail original
+pnpm eval --classifier gpt-6-luna --model gpt-6.1-sol --reasoning high
+```
+
+- `--model`: any OpenAI model with the Responses API, in place of `gpt-6-luna`
+  (same prompt and schema). Its results go under `data/runs/<model>/`
+  (`<model>-nonstrict/` with `gpt-6-luna-nonstrict`).
+
+- `--reasoning`: `none`, `minimal`, `low`, `medium` (default), `high`, `xhigh`, `max`.
+- `--image-detail`: `auto`, `low` (default), `high`, or `original`, which only
+  page images take.
+- `--pdf-as-images`: render every page to a 200 dpi JPEG (pypdfium2) and send
+  those, each after a "Page N of M" line, in place of the PDF.
+
+Each setting is part of the classifier version, so every combination is cached
+and written under its own `eval/<version>/` directory. `pnpm eval:report` takes
+the same flags to find that run.
+
+### Score an eval run against the labels
+
+```bash
+pnpm eval:report --classifier gpt-6-luna                  # its current version
+pnpm eval:report --classifier gpt-6-luna --pdf-as-images  # the run made with those flags
+pnpm eval:report --classifier gpt-6-luna --model gpt-6.1-sol
+pnpm eval:report --classifier gpt-6-luna --version <ver>  # an older version's output
+```
+
+Writes `report.md` and `report.json` next to the predictions
+(`src/pdf_extract/evals/report.py`). Labels marked done are scored (`--status
+in_progress` adds those); skipped labels never are. Within each bulletin every
+label event is paired with at most one prediction, in tiers tried strictest
+first:
+
+| Tier | Agrees on | Counts as found |
+|---|---|---|
+| `exact` | church, type, weekly/dated, weekday or date, start, cancelled, end time, weeks of month, season | strict, core, loose, any_time |
+| `core` | the same, but end time, weeks of month or season differ | core, loose, any_time |
+| `weekly_vs_dated` | weekly on one side, dated on the other, same weekday; church, type, start, cancelled agree | loose, any_time |
+| `wrong_church` | everything in `core` but the church | never |
+| `wrong_type` | everything in `core` but the event type | never |
+| `wrong_time` | church, type, kind, weekday or date, cancelled; the start time differs | any_time |
+
+The report gives precision, recall and F1 (pooled and per-bulletin average) at
+the strict, core, loose and any_time levels; the wrong-church, wrong-type, missed and
+spurious rates; the same broken down by event type and by weekly/dated; how
+often end time, weeks of month, season and the presence of a note agree on the
+pairs found at the loose level; per-bulletin perfect rate, published-date accuracy, wrong-bulletin
+agreement and event-count error; token usage and timing; and every bulletin's
+differences, worst bulletin first.
+
+Optional label events are left out of all of those numbers. They are paired
+after the required events, against the predictions still unpaired, in the tiers
+that count as found at any_time; a prediction paired with one is neither found
+nor spurious. The report's "Optional events" section counts how often the
+classifier made the preferred choice: predicted an `include` event, or left out
+an `exclude` one.
 
 ## Weekly pipeline
 
@@ -123,6 +216,14 @@ report comparing the database before and after it, written to
   Confession and Adoration that appeared or disappeared, church by church.
 - `frontend.json.gz`: the snapshot the website would serve.
 - `before.db`: the database as the run found it.
+
+A parish's current bulletin is the one for the latest week, by the issue date
+the extractor read off it (else the fetch date), and the most recently fetched
+of that week's (`src/pdf_extract/bulletin_week.py`). So a second bulletin for a
+week (a correction) replaces the first, and an old issue a site falls back to
+is stored but never shown. The report lists the old issues, and flags a third
+bulletin for one week for a person to look at. A parish is stale when its
+newest bulletin is two weeks old, however recently the site served it.
 
 The run's status decides what happens next:
 
@@ -274,7 +375,17 @@ result as JSON on success.
 
 Stage idempotency:
 
-- `fetch` skips URLs already recorded in `bulletin.source_url`
+- `fetch` skips a parish whose newest bulletin is already this weekend's, by
+  the issue date the extractor read off it (and only when that bulletin was
+  fetched within a few days of the date). Otherwise it downloads the bulletin,
+  asking the server first whether the copy it has from that address is still
+  current (`ETag` / `Last-Modified`), and keeps it only if it is new: not the
+  same bytes as any of the parish's bulletins (`src/pdf_extract/duplicates.py`).
+  A bulletin
+  seen again is recorded on its row (`last_seen_at`), not stored twice. The
+  address is never taken to mean the bulletin is unchanged: Discover Mass
+  serves the same PDF from a new address each time, and some sites put each
+  week's bulletin at the same one.
 - `process` skips bulletins with `processed_at` already set, and serves
   bulletins it has extracted before (same PDF hash, same model) from the cache
 
@@ -287,10 +398,45 @@ browser without touching the database, downloads what each one picks, and
 prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
 `not_pdf`, or `blocked` when Cloudflare challenged the browser instead).
 
+#### How the `other` resolver reads a site
+
+`src/pdf_extract/parish_sites/` reads a parish's own site in three stages:
+
+1. **Locate** the bulletin page by following the homepage's "bulletin" links
+   (`locate.py`).
+2. **Collect** the PDFs it offers (`collectors.py`). Each collector handles one
+   way a site offers them: `drive-folder`, `redirected-pdf` (the bulletin link
+   is the PDF), `page-pdfs` (links, or addresses in the page's markup),
+   `linked-issue-page` (an embedded flipbook or a publisher's listing) and
+   `dated-post` (a weekly post that wraps the PDF). They run in that order
+   until one finds a convincing set.
+3. **Choose** this week's issue among them (`choose.py`), and say why:
+   `current` (dated this week), or a fallback (`newest-recent`, `titled`,
+   `first-listed`).
+
+Each fetch result records how its bulletin was found ("page-pdfs on
+https://…/bulletins: current"), and the run report lists any new bulletin the
+site dated, but not this week.
+
+A parish can pin the first two stages with a **recipe** in its `provider_id`:
+a collector, a bulletin page, or both (`page-pdfs https://example.org/bulletins`;
+a collector alone reads `website` as the bulletin page). A pinned parish skips
+the homepage and runs only its collector, so it fails loudly when its site
+changes rather than guessing, and no change made for another site can change
+what it picks. `fetch:check` prints the recipe that reproduces each pick it
+guessed; pin it once the pick is right.
+
+When a site needs something new, add a collector rather than a branch inside
+an existing one, and record the site (below).
+
+#### Recorded sites
+
 To keep a resolver change from fixing one site and breaking another, the pages
 each resolver read on every parish's real site are recorded in
 `tests/fixtures/fetch/<slug>.json.gz`, and `tests/test_fetch_replay.py` replays
-them offline against the bulletin in `expected.json`. After changing `fetch.py`:
+them offline against the bulletin in `expected.json`, using each parish's
+recipe in `data/parishes.csv` as it is now. After changing `fetch.py` or
+`parish_sites/`, or pinning a recipe:
 
 1. Run `pnpm test`. A changed pick on any recorded site fails the replay test.
    A site that now opens a page the old resolver never did fails with "re-record
@@ -378,6 +524,7 @@ Commands read a `.env` file in the repo root if there is one (without
 overriding variables already set).
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
+- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`).
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
@@ -426,6 +573,8 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
   - `labeling/` - the labeler's API (`pnpm label`): label files, bulletin queue, Gemini sources, demo data
+  - `classifiers/` - pluggable bulletin → events classifiers (Gemini, OpenAI) and their registry
+  - `evals/` - running classifiers over the labeled bulletins (`pnpm eval`)
 
 ## Dependencies
 

@@ -2,7 +2,7 @@
 name: St. Francis and St. Clare
 website: https://sfscrcc.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs http://www.sfscrcc.org/bulletin.htm
 publication: ['url:https://www.sfscrcc.org/bulletin.htm']
 group: St. Francis & St. Clare
 evidence:
@@ -42,6 +42,8 @@ St. Mary's, Waterloo (Sat 5:00 PM, Sun 9:30 AM) and St. Patrick's, Seneca Falls 
 ## Website and bulletin provider
 
 `website` https://sfscrcc.org (the home page links `bulletin.htm`, which lists the PDFs). Provider `other` with no provider_id, since fetch reads the page; the publication is the bulletin page. The PDFs are named by timestamp (1790326230.pdf), not date, so fetch must read the page, not guess names. The old GCatholic domain (smsprcc.org) is dead.
+
+Fetch recipe `page-pdfs http://www.sfscrcc.org/bulletin.htm`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-francis-and-st-clare.json.gz` the resolver found https://www.sfscrcc.org/bulletins/1790326230.pdf this way, dated that week.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. Elizabeth Ann Seton
 website: https://stelizabethbville.org
 bulletin_provider: other
-provider_id: ''
+provider_id: dated-post https://stelizabethbville.org/announcements/
 publication: ['url:https://stelizabethbville.org/category/bulletins/']
 group: Baldwinsville Catholic Parishes
 evidence:
@@ -55,6 +55,11 @@ latest post (bulletin-9-20-3) but failed with "No PDF links found on bulletin po
 PDF Embedder plugin replaces the `<a href="…/09.20.26.pdf" class="pdfemb-viewer">` anchor with a
 canvas viewer when the page renders, so neither the anchors nor the rendered HTML still hold the
 URL. The raw HTML does. Reported to the orchestrator.
+
+Fetch recipe `dated-post https://stelizabethbville.org/announcements/`, pinned 2026-10-03:
+on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/st-elizabeth-ann-seton-baldwinsville.json.gz`) the resolver found
+https://stelizabethbville.org/wp-content/uploads/09.27.26.pdf this way, dated that week.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. Mary Our Mother
 website: https://stmaryourmother.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://stmaryourmother.com/bulletins/
 publication:
 - url:https://stmaryourmother.com/bulletins/
 - po-container:06/0149
@@ -49,6 +49,8 @@ lists self-hosted PDFs under /Bulletins/2026/. The same bulletin is also in Pari
 (found from the LPi footer "St. Mary Our Mother, Horseheads, NY 06-0149"), recorded as a publication id.
 The diocese Directory of Parishes gives the address as "816 East Broad Street, Rochester" for this
 parish, an error (the parish and its bulletin say 816 West Broad Street, Horseheads).
+
+Fetch recipe `page-pdfs https://stmaryourmother.com/bulletins/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-mary-our-mother.json.gz` the resolver found https://stmaryourmother.com/Bulletins/2026/20260927.pdf this way, dated that week.
 
 ## Not yet confirmed
 

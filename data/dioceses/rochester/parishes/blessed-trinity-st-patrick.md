@@ -2,7 +2,7 @@
 name: Blessed Trinity and St. Patrick Parishes
 website: https://blessed-trinity-parish.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://blessed-trinity-parish.org/bulletins-archive/
 publication:
 - url:https://blessed-trinity-parish.org/bulletins-archive/
 - po-container:06/0156
@@ -57,6 +57,8 @@ bulletin (not researched further).
 The parish site `blessed-trinity-parish.org` (WordPress) links each Sunday's PDF (probe url finds the
 2026-09-27 file on the homepage), so the provider stays `other`. The container id comes from the footer, and
 `po-container:06/0156` has a 4 October issue. I found no ParishesOnline organization slug.
+
+Fetch recipe `page-pdfs https://blessed-trinity-parish.org/bulletins-archive/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/blessed-trinity-st-patrick.json.gz` the resolver found https://blessed-trinity-parish.org/wp-content/parish_specific/bulletins/2026-09-27.pdf this way, dated that week.
 
 ## Not yet confirmed
 

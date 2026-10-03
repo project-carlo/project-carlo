@@ -2,7 +2,7 @@
 name: Catholic Neighbors in Faith
 website: https://cniffamily.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://cniffamily.org/bulletin/
 publication: ['url:https://cniffamily.org/bulletin/']
 group: 'Family #4'
 evidence:
@@ -24,6 +24,12 @@ St. James Church; St. John Church; Ss. Peter and Paul Church; Sacred Heart Churc
 ## Website and bulletin provider
 
 The bulletin is at https://cniffamily.org/wp-content/uploads/2026/09/Bulletin-September-27-2026.pdf. Provider `other`.
+
+Fetch recipe `page-pdfs https://cniffamily.org/bulletin/`, pinned 2026-10-03: on the pages
+recorded 2026-09-26 (`tests/fixtures/fetch/catholic-neighbors-in-faith.json.gz`) the
+resolver found
+https://cniffamily.org/wp-content/uploads/2026/09/Bulletin-September-27-2026.pdf this way,
+dated that week.
 
 ## Not yet confirmed
 

@@ -71,6 +71,7 @@ def _event(**overrides) -> dict:
         "page_number": 2,
         "note": None,
         "origin": "human",
+        "optional": None,
     }
     event.update(overrides)
     return event
@@ -291,6 +292,14 @@ def test_a_complete_label_is_valid():
     assert validate_label(label) == []
 
 
+def test_optional_events_carry_a_preference_and_older_labels_may_lack_it():
+    events = [_event(optional=None), _event(optional="include"), _event(optional="exclude")]
+    assert validate_label(_label(events=events)) == []
+    legacy = _event()
+    legacy.pop("optional")
+    assert validate_label(_label(events=[legacy])) == []
+
+
 @pytest.mark.parametrize("change, message", [
     ({"day_of_week": None}, "day_of_week must be a weekday name"),
     ({"date": "2026-10-05"}, "date must be null for a weekly event"),
@@ -312,6 +321,8 @@ def test_a_complete_label_is_valid():
      "season.start_day must be null or a day of month 2"),
     ({"season": {"start_month": 9, "end_month": 5}}, "season: missing start_day, end_day"),
     ({"origin": "model"}, "origin must be one of"),
+    ({"optional": True}, "optional must be null, include or exclude"),
+    ({"optional": "maybe"}, "optional must be null, include or exclude"),
     ({"cancelled": "no"}, "cancelled must be true or false"),
     ({"page_number": 0}, "page_number must be null or a positive integer"),
     ({"church_slug": "../x"}, "church_slug must be a church slug"),

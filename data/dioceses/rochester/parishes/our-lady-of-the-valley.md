@@ -2,7 +2,7 @@
 name: Our Lady of the Valley Parish
 website: https://www.olv14843.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.olv14843.org/about/bulletins/
 publication:
 - url:https://www.olv14843.org/about/bulletins/
 group: ''
@@ -40,6 +40,8 @@ Two: `st-anns` (Hornell: Saturday 4:30 pm, Sunday 6:45 and 10:45 am, weekdays 12
 ## Website and bulletin provider
 
 www.olv14843.org is the parish's own site and is live; its Bulletins page (`/about/bulletins/`) links the weekly PDFs, so `bulletin_provider: other` with `publication: url:https://www.olv14843.org/about/bulletins/`, no provider_id. The Parish Locator links ourladycv.org instead: that domain still answers HTTP 200 but serves an empty page (last modified 15 February 2025; no parish text, so `probe url` says NO-PARISH-WORDS), so it is a dead former site and not used. The bulletin PDFs have text.
+
+Fetch recipe `page-pdfs https://www.olv14843.org/about/bulletins/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/our-lady-of-the-valley.json.gz` the resolver found https://www.olv14843.org/wp-content/uploads/20260927.pdf this way, dated that week.
 
 ## Not yet confirmed
 

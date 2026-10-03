@@ -2,7 +2,7 @@
 name: St. John the Evangelist (Greece)
 website: https://www.stjohngreece.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stjohngreece.org/mass/bulletins/
 publication: ['url:https://www.stjohngreece.org/mass/bulletins/']
 group: Roc Catholics Northwest
 evidence:
@@ -37,6 +37,8 @@ One: `churches/st-john-evangelist-greece.md`. The diocese's locator and GCatholi
 ## Website and bulletin provider
 
 `https://www.stjohngreece.org` is alive (200). Its `/mass/bulletins/` page lists the PDFs, newest first, so `bulletin_provider: other` reading `website` finds the current issue; the page is recorded as `url:https://www.stjohngreece.org/mass/bulletins/` in `publication`. No third-party host is embedded.
+
+Fetch recipe `page-pdfs https://www.stjohngreece.org/mass/bulletins/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-john-greece.json.gz` the resolver found https://www.stjohngreece.org/wp-content/uploads/Sept-27-2026.pdf this way, dated that week.
 
 ## Not yet confirmed
 

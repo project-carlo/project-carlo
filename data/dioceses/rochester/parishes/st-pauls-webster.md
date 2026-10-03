@@ -2,7 +2,7 @@
 name: St. Paul's Roman Catholic Church
 website: https://www.stpaulsrcc.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stpaulsrcc.org/about/bulletins/
 publication: ['url:https://www.stpaulsrcc.org/about/bulletins/']
 group: ''
 evidence:
@@ -47,6 +47,8 @@ has a hidden `<div style="position:absolute; left:-20914565266523px">` of casino
 ("slot gacor" and similar), the mark of a hacked WordPress install. The real content is
 intact. Some issues are image-only or partly image (20 September has no text layer; 27
 September has three image pages), so extraction will need the OCR path on those weeks.
+
+Fetch recipe `page-pdfs https://www.stpaulsrcc.org/about/bulletins/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-pauls-webster.json.gz` the resolver found https://www.stpaulsrcc.org/wp-content/uploads/September-27-2026.pdf this way, dated that week.
 
 ## Not yet confirmed
 

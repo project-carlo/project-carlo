@@ -2,7 +2,7 @@
 name: St. Joseph's Church
 website: https://parishes.rcda.org/st.josephschurch/Bulletin.php
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://parishes.rcda.org/st.josephschurch/Bulletin.php']
 group: ''
 evidence:
@@ -39,6 +39,11 @@ eCatholic bulletin with a different masthead and schedule. Two rows.
 
 `parishes.rcda.org/st.josephschurch/` is the site the directory links; `Bulletin.php` (capital
 B) lists one PDF per Sunday at `bulletins/<year>/<Month>_<DD>.pdf`. `bulletin_provider: other`.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-09-28
+(`tests/fixtures/fetch/st-joseph-worcester.json.gz`) the resolver found
+https://parishes.rcda.org/st.josephschurch/bulletins/2026/September_27.pdf this way, dated
+that week.
 
 ## Not yet confirmed
 

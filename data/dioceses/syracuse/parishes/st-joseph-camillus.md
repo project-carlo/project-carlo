@@ -2,7 +2,7 @@
 name: St. Joseph's Church
 website: https://stjosephscamillus.org
 bulletin_provider: other
-provider_id: ''
+provider_id: linked-issue-page https://stjosephscamillus.org/bulletins/
 publication: ['url:https://www.church-bulletin.org/saint-joseph-s-church-camillus-ny-13031']
 group: Rev. Robert Hyde (Camillus, Jordan)
 evidence:
@@ -69,6 +69,12 @@ https://stjosephscamillus.org returned jppc.net/onlinebulletins/4038template.pdf
 PDF but a redirect to the HTML listing, so the download will not get the bulletin. Pointed at the
 listing page instead, the fetcher found no "bulletin" page link. A church-bulletin.org builder
 (latest = /bulletin/<slug>/<Sunday>.pdf) would fix both. Reported to the orchestrator.
+
+Fetch recipe `linked-issue-page https://stjosephscamillus.org/bulletins/`, pinned
+2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/st-joseph-camillus.json.gz`) the resolver found
+https://www.church-bulletin.org/bulletin/saint-joseph-s-church-camillus-ny-13031/2026-09-27.pdf
+this way, dated that week.
 
 ## Not yet confirmed
 

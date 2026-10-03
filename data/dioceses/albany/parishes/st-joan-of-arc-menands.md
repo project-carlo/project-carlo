@@ -2,7 +2,7 @@
 name: St. Joan of Arc Church and the Black Catholic Apostolate
 website: https://www.rcda.org/parishes/black-catholic-apostolate/news-events/bulletins
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.rcda.org/parishes/black-catholic-apostolate/news-events/bulletins', 'po-org:st-joan-of-arc-church-black-catholic-apostolate',
   'lpi:0018000000Qx7OTAAZ']
 group: ''
@@ -56,6 +56,10 @@ still named by ParishesOnline, is a lapsed Wix domain (HTTP 404 "Reconnect Your 
 browser). The ParishesOnline organization's ids are recorded because they belong to this
 publisher, though it publishes nothing there now; Discover Mass lists both St. Joan of Arc and
 the apostolate with no bulletins.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-09-28
+(`tests/fixtures/fetch/st-joan-of-arc-menands.json.gz`) the resolver found
+https://www.rcda.org/download_file/view/4445/2079 this way, dated that week.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: Parish of the Most Holy Name of Jesus
 website: https://elmiracatholic.org
 bulletin_provider: other
-provider_id: ''
+provider_id: dated-post https://www.elmiracatholic.org/news-bulletins/
 publication:
 - url:https://www.elmiracatholic.org/news-bulletins/
 - po-container:06/0115
@@ -78,6 +78,8 @@ The same bulletin is also on ParishesOnline as container 06/0115 (its 4 October 
 older issues from 2024 and 2025 are there too), recorded as a second publication id. I could not find the
 organization slug for that container (`probe po` found no guess), so `parishes_online` with a
 provider_id was not an option.
+
+Fetch recipe `dated-post https://www.elmiracatholic.org/news-bulletins/`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/most-holy-name-of-jesus.json.gz` the resolver found https://www.elmiracatholic.org/wp-content/uploads/2026/09/9-20-26.pdf.pdf.pdf this way, dated that week.
 
 ## Not yet confirmed
 

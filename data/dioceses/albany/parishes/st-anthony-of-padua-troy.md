@@ -2,7 +2,7 @@
 name: St. Anthony of Padua Church
 website: http://parishes.rcda.org/stanthonyofpadua/Bulletin.php
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:http://parishes.rcda.org/stanthonyofpadua/Bulletin.php']
 group: ''
 evidence:
@@ -37,6 +37,11 @@ sends St. Patrick's and St. Peter's (Troy) to St. Anthony; neither is in any ros
 parishes.rcda.org/stanthonyofpadua/ (the directory's link) has a Bulletin page listing the PDFs,
 so provider `other` with that page as website and publication. GCatholic's
 stanthonystroyny.com was not needed.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/st-anthony-of-padua-troy.json.gz`) the resolver found
+http://parishes.rcda.org/stanthonyofpadua/bulletins/2026/October_04.pdf this way, dated
+that week.
 
 ## Not yet confirmed
 

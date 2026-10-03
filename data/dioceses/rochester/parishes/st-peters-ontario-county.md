@@ -2,7 +2,7 @@
 name: St. Peter's Roman Catholic Parish
 website: https://www.stpeterparish.us
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stpeterparish.us/bulletins
 publication: ['url:https://www.stpeterparish.us/bulletins']
 group: St. Peter's (Clifton Springs, Phelps, Shortsville)
 evidence:
@@ -41,6 +41,8 @@ St. Felix, Clifton Springs; St. Francis, Phelps; St. Dominic, Shortsville. Nothi
 ## Website and bulletin provider
 
 `website` https://www.stpeterparish.us links the bulletin page `/bulletins` (and the newest PDF on the home page). The provider is `other` (self-hosted PDFs on the church-co asset host) with no provider_id. The publication id is the bulletin page. The old domain GCatholic carries for the parish (stdominicchurch-shortsville.com) is dead.
+
+Fetch recipe `page-pdfs https://www.stpeterparish.us/bulletins`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-peters-ontario-county.json.gz` the resolver found https://media.thechurchcoassets.com/accounts/4026/130cb865-9c96-400c-97a2-fd62773c3213-./2026-9-27BU-YR-A.pdf this way, dated that week.
 
 ## Not yet confirmed
 

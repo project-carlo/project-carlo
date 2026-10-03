@@ -2,7 +2,7 @@
 name: Saint Rita
 website: https://www.saintritawebster.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.saintritawebster.org/bulletins.html
 publication: ['url:https://saintritawebster.org/bulletins.html']
 group: ''
 evidence:
@@ -38,6 +38,8 @@ title is "Saint Rita Catholic Church and School"); the school is not a worship s
 `saintritawebster.org` (the `www.` form redirects to it) has a "Bulletins" page that lists
 the PDFs, which are stored on an S3 bucket, so provider `other`. The publication is that
 page. The diocese's Parish Locator links the same site.
+
+Fetch recipe `page-pdfs https://www.saintritawebster.org/bulletins.html`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-rita-webster.json.gz` the resolver found https://s3-us-west-2.amazonaws.com/classrooms.stritawebster.org/Bulletins/2026/September 27.pdf this way, dated that week.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: Our Lady of Victory / St. Joseph
 website: https://olvsj.org
 bulletin_provider: google_drive
-provider_id: ''
+provider_id: drive-folder https://drive.google.com/drive/folders/1GKyckPYyKi9TbK14Qli16e-iV8sJYuhd?usp=sharing
 publication:
 - url:https://drive.google.com/drive/folders/1GKyckPYyKi9TbK14Qli16e-iV8sJYuhd
 group: ''
@@ -39,6 +39,8 @@ One: `churches/our-lady-of-victory-st-joseph.md` (210 Pleasant Street, "The Litt
 ## Website and bulletin provider
 
 `olvsj.org` (redirects to `www.olvsj.org`) links the Drive folder from its "BULLETINS" button, which is what the live `google_drive` provider needs (the website has to link the folder). Provider unchanged. Drive does not show the files without a browser; the folder is public.
+
+Fetch recipe `drive-folder https://drive.google.com/drive/folders/1GKyckPYyKi9TbK14Qli16e-iV8sJYuhd?usp=sharing`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/our-lady-of-victory-st-joseph.json.gz` the resolver found https://drive.google.com/file/d/16rZZ-DBeNg8cYlv7A5OBlZuVWdEIWvGh/view this way, dated that week.
 
 ## Not yet confirmed
 

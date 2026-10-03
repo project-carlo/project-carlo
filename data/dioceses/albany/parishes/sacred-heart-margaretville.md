@@ -2,7 +2,7 @@
 name: Sacred Heart Parish (Margaretville and Andes)
 website: https://sacredheartmargaretville.org/bulletins/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://sacredheartmargaretville.org/bulletins/']
 group: Sacred Heart Church; St. Ann's
 evidence:
@@ -49,6 +49,11 @@ bulletin.
 sacredheartmargaretville.org is the parish's WordPress site (the directory links it; GCatholic
 still has an older catskill.net/sacredheart address, not checked). Its Bulletins page links each issue as a PDF in
 `wp-content/uploads/`. Self-hosted: `bulletin_provider: other`.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/sacred-heart-margaretville.json.gz`) the resolver found
+https://sacredheartmargaretville.org/wp-content/uploads/2026/10/10-04-2026-1.pdf this way,
+dated that week.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. Malachy of Armagh Roman Catholic Church
 website: https://www.stmalachysherburne.com/latest-bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.stmalachysherburne.com/latest-bulletin/']
 group: Rev. Daniel Caughey (Norwich, Sherburne, New Berlin)
 evidence:
@@ -45,6 +45,11 @@ One: St. Malachy's (`churches/st-malachy-sherburne.md`).
 stmalachysherburne.com is the parish's site (diocese and GCatholic agree). Its Latest Bulletin page
 links each week's PDF under wp-content/uploads/, with file names like Sept-20-2026.pdf that are not
 fully predictable, so the provider is `other` and the website and publication are that page.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/st-malachy-sherburne.json.gz`) the resolver found
+https://www.stmalachysherburne.com/wp-content/uploads/2026/09/Sept-20-2026.pdf this way,
+dated that week.
 
 ## Not yet confirmed
 

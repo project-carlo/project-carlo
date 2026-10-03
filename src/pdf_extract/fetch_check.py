@@ -31,6 +31,8 @@ from urllib.error import HTTPError, URLError
 
 from pdf_extract import fetch
 from pdf_extract.browser import PageLike, launch_stealth_browser
+from pdf_extract.parish_sites import Recipe
+from pdf_extract.parish_sites.dates import parse_date
 from pdf_extract.storage import PARISHES_CSV_PATH
 
 LOGGER = logging.getLogger(__name__)
@@ -295,6 +297,7 @@ class RecordingPage:
 def save_recording(
     path: Path, *, slug: str, provider: str, provider_id: str, reference_date: date,
     snapshots: Iterable[PageSnapshot], sources: dict[str, str] | None = None,
+    recipe: str = "",
 ) -> None:
     payload: dict[str, object] = {
         "slug": slug,
@@ -308,6 +311,8 @@ def save_recording(
     }
     if sources:
         payload["sources"] = sources
+    if recipe:
+        payload["recipe"] = recipe
     path.parent.mkdir(parents=True, exist_ok=True)
     # mtime=0 keeps a re-recording of unchanged pages byte-identical.
     with open(path, "wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as gz:
@@ -322,16 +327,30 @@ class Recording:
     reference_date: date
     snapshots: list[PageSnapshot]
     sources: dict[str, str] = field(default_factory=dict)
+    # The parish's recipe when it was recorded. A recipe added since is read
+    # from parishes.csv by the replay test.
+    recipe: str = ""
 
     def page(self) -> SnapshotPage:
         return SnapshotPage(self.snapshots, self.sources)
 
-    def resolve(self) -> fetch.BulletinLink:
+    def resolve(self, *, recipe: str | None = None) -> fetch.BulletinLink:
         """Run today's resolver for this parish against the recorded pages."""
-        spec = fetch._PROVIDERS[self.provider]
-        return spec.build(
-            provider_id=self.provider_id, reference_date=self.reference_date, page=self.page(),
+        return _resolve(
+            fetch.FetchSource(
+                self.provider, self.provider_id, self.recipe if recipe is None else recipe,
+            ),
+            page=self.page(), reference_date=self.reference_date,
         )
+
+
+def _resolve(
+    source: fetch.FetchSource, *, page: PageLike, reference_date: date,
+) -> fetch.BulletinLink:
+    return fetch._build_bulletin_link(
+        source.provider, source.provider_id, page=page, recipe=source.recipe,
+        reference_date=reference_date,
+    )
 
 
 def load_recording(path: Path) -> Recording:
@@ -344,6 +363,7 @@ def load_recording(path: Path) -> Recording:
         reference_date=date.fromisoformat(payload["reference_date"]),
         snapshots=[PageSnapshot(**p) for p in payload["pages"]],
         sources=payload.get("sources", {}),
+        recipe=payload.get("recipe", ""),
     )
 
 
@@ -373,23 +393,36 @@ def _read_parishes(path: Path) -> list[dict[str, str]]:
         return [{**row, "homepage_url": row["website"]} for row in csv.DictReader(fh)]
 
 
+def _same_recipe(recipe: str, source: fetch.FetchSource) -> bool:
+    """Whether `recipe` reads the parish's site the way its recorded one does."""
+    try:
+        recorded = Recipe.parse(source.recipe, website=source.provider_id)
+    except ValueError:
+        return False
+    return Recipe.parse(recipe, website=source.provider_id) == recorded
+
+
 def _check_one(
-    slug: str, provider: str, provider_id: str, page: PageLike, *,
+    slug: str, source: fetch.FetchSource, page: PageLike, *,
     reference_date: date, download: bool,
 ) -> dict[str, object]:
-    result: dict[str, object] = {"slug": slug, "provider": provider}
+    result: dict[str, object] = {"slug": slug, "provider": source.provider}
     try:
-        link = fetch._PROVIDERS[provider].build(
-            provider_id=provider_id, reference_date=reference_date, page=page,
-        )
+        link = _resolve(source, page=page, reference_date=reference_date)
     except Exception as exc:
         status = BLOCKED if _challenged(page) else RESOLVE_FAILED
         result.update(status=status, detail=f"{type(exc).__name__}: {exc}")
         return result
     result["source_url"] = link.source_url
+    if link.how:
+        result["how"] = link.how
+    # A recipe that would pin what the resolver guessed: copy it into the
+    # parish's provider_id once the pick is right.
+    if link.recipe and not _same_recipe(link.recipe, source):
+        result["recipe"] = link.recipe
     if link.fetch_url != link.source_url:
         result["fetch_url"] = link.fetch_url
-    url_date = fetch._parse_relaxed_date(link.source_url, reference_date)
+    url_date = parse_date(link.source_url, reference_date)
     if url_date is not None:
         result["url_date"] = url_date.isoformat()
     if not download:
@@ -436,11 +469,11 @@ def check_fetch(
     with launch_stealth_browser() as live_page:
         for parish in parishes:
             slug = parish["slug"]
-            provider, provider_id = fetch._resolve_fetch_source(parish) or ("", "")
+            source = fetch._resolve_fetch_source(parish)
+            assert source is not None
             page = RecordingPage(live_page) if record_dir else None
             row = _check_one(
-                slug, provider, provider_id, page or live_page,
-                reference_date=today, download=download,
+                slug, source, page or live_page, reference_date=today, download=download,
             )
             LOGGER.info("%s: %s %s", slug, row["status"], row.get("source_url", row.get("detail")))
             rows.append(row)
@@ -448,9 +481,9 @@ def check_fetch(
             if record_dir and page is not None and row["status"] != BLOCKED:
                 save_recording(
                     record_dir / f"{slug}{SNAPSHOT_SUFFIX}",
-                    slug=slug, provider=provider, provider_id=provider_id,
+                    slug=slug, provider=source.provider, provider_id=source.provider_id,
                     reference_date=today, snapshots=page.snapshots.values(),
-                    sources=page.sources,
+                    sources=page.sources, recipe=source.recipe,
                 )
 
     counts = Counter(str(row["status"]) for row in rows)

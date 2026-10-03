@@ -2,7 +2,7 @@
 name: St. Mary's / St. Matthew
 website: https://www.stsmaryandmatthew.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stsmaryandmatthew.com/bulletin
 publication: ['url:https://www.stsmaryandmatthew.com/bulletin']
 group: 'Cluster: St. Mary (Honeoye) and St. Matthew (Livonia)'
 evidence:
@@ -50,6 +50,8 @@ neither bulletin nor roster lists a building or Mass for them.
 
 `stsmaryandmatthew.com` is a Wix site; its `/bulletin` page lists PDFs under `/_files/ugd/`,
 so provider `other` with the home page as website.
+
+Fetch recipe `page-pdfs https://www.stsmaryandmatthew.com/bulletin`, pinned 2026-10-03: on the pages recorded in `tests/fixtures/fetch/st-marys-st-matthew.json.gz` the resolver found https://www.stsmaryandmatthew.com/_files/ugd/dcc8c9_c60b31dd0f0c4445adce458783627ad1.pdf this way, dated that week.
 
 ## Not yet confirmed
 
