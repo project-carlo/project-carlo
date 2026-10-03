@@ -26,7 +26,6 @@ from pdf_extract.parish_sites.choose import (
     Choice,
     OldBulletinOnly,
     choose,
-    is_convincing,
 )
 from pdf_extract.parish_sites.collectors import (
     COLLECTORS,
@@ -187,7 +186,7 @@ def _resolve_bulletin_page(
     found: list[Candidate] = []
     used: Collector | None = None
     for collector in collectors:
-        if used is not None and (used.final or is_convincing(found, reference_date)):
+        if used is not None and used.final:
             break
         site.return_here()
         more = collector.collect(site, found)

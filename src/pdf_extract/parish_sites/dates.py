@@ -20,6 +20,19 @@ YEARLESS_MAX_DAYS_AHEAD = 6
 _PATH_YEAR_RE = re.compile(r"/(20\d{2})/(?!\d{1,2}/)")
 
 
+# Ids that hosts put in addresses, which can hold what reads as a date ("e2-4a"
+# in a Wix host's UUID): a UUID, or a long run of hex digits.
+_HEX_ID_RE = re.compile(
+    r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+    r"|(?<![0-9a-z])[0-9a-f]{16,}(?![0-9a-z])"
+)
+
+
+# When a WordPress file was uploaded, not the issue's date: in
+# "uploads/2026/10/10-04-2026-1.pdf" it would read as 10 October.
+_WORDPRESS_UPLOAD_FOLDER_RE = re.compile(r"/uploads/20\d{2}/\d{2}/")
+
+
 def parse_date_from_texts(texts: list[str], reference_date: date) -> date | None:
     """The first date in texts; a yearless one takes its year from a year folder in them."""
     year = next(
@@ -44,7 +57,7 @@ def parse_date(
             return safe_date(year, month, day)
         return _resolve_yearless_date(month=month, day=day, reference_date=reference_date)
 
-    normalized = text.lower()
+    normalized = _WORDPRESS_UPLOAD_FOLDER_RE.sub("/", _HEX_ID_RE.sub(" ", text.lower()))
     normalized = re.sub(r"(\d+)(st|nd|rd|th)", r"\1", normalized)
     normalized = normalized.replace(",", " ")
     normalized = re.sub(r"\s+", " ", normalized).strip()

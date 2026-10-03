@@ -42,9 +42,11 @@ def _site(
     )
 
 
-def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
+def _resolve(
+    pages: dict[str, str], *, today: date = TODAY, **site: dict[str, str],
+) -> str:
     source_url, _ = _resolve_other(
-        provider_id=HOME, reference_date=TODAY, page=_site(pages, **site),
+        provider_id=HOME, reference_date=today, page=_site(pages, **site),
     )
     return source_url
 
@@ -79,6 +81,15 @@ def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
         # Ids and timestamps are not dates.
         ("/bulletins/1790326230.pdf", None),
         ("/_files/ugd/cea846_00334ad9684947469dd533a9f70fcc50.pdf", None),
+        # Nor is "e2-4a" inside a Wix file host's id (St. Patrick, Ravena).
+        (
+            "https://66067635-7ce2-4a3b-8ee4-2d7aacecd675.filesusr.com/ugd/"
+            "eb6be9_047b24e2076843a4a39cc7e2d47bd9ab.pdf",
+            None,
+        ),
+        # A WordPress upload folder that runs into a dated file name is the
+        # folder's year and month, then the file's date (Sacred Heart, Margaretville).
+        ("/wp-content/uploads/2026/10/10-04-2026-1.pdf", date(2026, 10, 4)),
     ],
 )
 def test_parse_relaxed_date_reads_file_name_and_abbreviated_dates(text, expected) -> None:
@@ -188,6 +199,21 @@ def test_undated_pdf_labelled_bulletin_is_kept_without_visiting_posts() -> None:
             '<a href="/bulletin-09-27-26/">Bulletin 09.27.26 announcements</a>'
         ),
     }) == f"{HOME}/_files/ugd/abc.pdf"
+
+
+def test_this_weeks_post_beats_last_weeks_pdf_listed_beside_it() -> None:
+    # Sacred Heart, Stamford lists each week's post with its PDF, but names this
+    # week's PDF "output.pdf"; read on Saturday, last Sunday's is still current.
+    assert _resolve({
+        HOME: '<a href="/weekly-bulletin/">Weekly Bulletin</a>',
+        f"{HOME}/weekly-bulletin/": (
+            '<a href="/10-04-26/">10-04-26</a>'
+            '<a href="/wp-content/uploads/2026/10/output.pdf">Download</a>'
+            '<a href="/09-27-26/">09-27-26</a>'
+            '<a href="/wp-content/uploads/2026/09/09-27-26Web.pdf">Download</a>'
+        ),
+        f"{HOME}/10-04-26/": '<a href="/wp-content/uploads/2026/10/output.pdf">Download</a>',
+    }, today=date(2026, 10, 3)) == f"{HOME}/wp-content/uploads/2026/10/output.pdf"
 
 
 def test_google_drive_folder_resolves_its_newest_pdf() -> None:

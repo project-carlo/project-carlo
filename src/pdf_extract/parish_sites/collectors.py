@@ -1,10 +1,11 @@
 """Ways a bulletin page offers its PDFs, each a named collector.
 
 A collector reads the bulletin page (or one page it links) and returns the
-PDFs it finds there as candidates. The resolver runs them in COLLECTORS order
-and stops once it has a convincing set (see `choose.is_convincing`), so each
-collector only runs on the sites the ones before it could not read. A parish's
-fetch recipe can name the one collector its site needs.
+PDFs it finds there as candidates. The resolver runs them in COLLECTORS order,
+handing each what the ones before it found; a collector returns nothing
+unless it has something better, so each only matters on the sites the ones
+before it could not read. A `final` collector's find ends the search. A
+parish's fetch recipe can name the one collector its site needs.
 
 To teach the resolver a new kind of site, add a collector here, rather than a
 branch inside another one, and record the site for tests/test_fetch_replay.py.
@@ -234,6 +235,8 @@ def collect_redirected_pdf(site: BulletinPage, found: list[Candidate]) -> list[C
 
 def collect_page_pdfs(site: BulletinPage, found: list[Candidate]) -> list[Candidate]:
     """The PDFs the bulletin page links, or names in its markup."""
+    if found:
+        return []
     return page_pdf_candidates(
         page=site.page, base_url=site.url, reference_date=site.reference_date,
     )
@@ -272,12 +275,17 @@ def collect_dated_post(site: BulletinPage, found: list[Candidate]) -> list[Candi
 
     Some sites (e.g. WordPress parish blogs) list each weekly bulletin as a
     dated post that wraps the actual PDF, rather than linking to the PDF
-    directly. With PDFs already found that are something else (a tour guide in
-    the menu), only a post for this week's bulletin replaces them.
+    directly. With PDFs already found, only a post for this week's bulletin
+    replaces them, and only if they are something else (a tour guide in the
+    menu) or older than it: Sacred Heart, Stamford lists each week's post with
+    its PDF, but names this week's PDF "output.pdf".
     """
     post = latest_bulletin_post(site)
     if found:
         if post is None or not is_current(post[0], site.reference_date):
+            return []
+        newest = max((c.parsed_date for c in found if c.parsed_date), default=None)
+        if is_convincing(found, site.reference_date) and (newest is None or newest >= post[0]):
             return []
         return _candidates_on(site, post[1])
     if post is None:
