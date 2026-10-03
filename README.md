@@ -108,7 +108,8 @@ Any classifier in `src/pdf_extract/classifiers/__init__.py` can be run
 classified as of the day it was fetched, and results are cached by classifier
 version (model, prompt, schema and settings), PDF and church list, so re-running
 an unchanged classifier makes no API calls (`--refresh` forces them). Output
-goes to `data/runs/<classifier>/eval/<version>/`:
+goes to `data/runs/<classifier>/eval/<version>/`, which is committed (the rest of
+`data/runs/`, including the result cache, stays gitignored):
 
 - `predictions/<parish_slug>/<content_hash>.json`: the classifier's events in
   the label's row shape, next to `published_date`, `wrong_bulletin`, token usage
