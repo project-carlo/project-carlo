@@ -367,3 +367,85 @@ def test_seed_refuses_to_run_without_the_csvs(pipeline_dir: Path) -> None:
         assert _count(conn, "parish") == 1
     finally:
         conn.close()
+
+
+def test_bulletin_rebuild_keeps_events_and_allows_a_reissued_address(tmp_path: Path) -> None:
+    first_only = tmp_path / "migrations"
+    first_only.mkdir()
+    (first_only / "0001_initial.sql").write_text(
+        (MIGRATIONS_DIR / "0001_initial.sql").read_text(encoding="utf-8"), encoding="utf-8",
+    )
+    conn = connect_db(tmp_path / "x.db")
+    try:
+        migrate(conn, first_only)
+        with conn:
+            conn.execute(
+                "INSERT INTO parish(slug, name, homepage_url) VALUES ('p', 'P', 'https://p.org')"
+            )
+            conn.execute("INSERT INTO church(parish_id, slug, name) VALUES (1, 'c', 'C')")
+            conn.execute(
+                "INSERT INTO bulletin(parish_id, source_url, content_hash) "
+                "VALUES (1, 'https://p.org/bulletin.pdf', 'h1')"
+            )
+            conn.execute(
+                "INSERT INTO event(church_id, bulletin_id, event_type, event_kind, start_time) "
+                "VALUES (1, 1, 'mass', 'weekly', 540)"
+            )
+
+        assert migrate(conn) == _count_migrations() - 1
+
+        assert _count(conn, "event") == 1
+        assert conn.execute("PRAGMA foreign_keys").fetchone()[0] == 1
+        insert_bulletin(
+            conn, parish_id=1, source_url="https://p.org/bulletin.pdf",
+            content_hash="h2", fetched_at="2026-10-04T00:00:00Z",
+        )
+        assert [r[0] for r in conn.execute("SELECT id FROM bulletin ORDER BY id")] == [1, 2]
+        with pytest.raises(sqlite3.IntegrityError):
+            insert_bulletin(
+                conn, parish_id=1, source_url="https://p.org/bulletin.pdf",
+                content_hash="h2", fetched_at="2026-10-04T00:00:00Z",
+            )
+    finally:
+        conn.close()
+
+
+def test_bulletin_fingerprints_backfill_last_seen_and_the_wrong_bulletin_verdict(
+    tmp_path: Path,
+) -> None:
+    before = tmp_path / "migrations"
+    before.mkdir()
+    for name in ("0001_initial.sql", "0002_bulletin_same_url_new_content.sql"):
+        (before / name).write_text((MIGRATIONS_DIR / name).read_text(encoding="utf-8"))
+    conn = connect_db(tmp_path / "x.db")
+    try:
+        migrate(conn, before)
+        with conn:
+            conn.execute(
+                "INSERT INTO parish(slug, name, homepage_url) VALUES ('p', 'P', 'https://p.org')"
+            )
+            for content_hash in ("right", "wrong"):
+                conn.execute(
+                    "INSERT INTO bulletin(parish_id, source_url, content_hash, fetched_at) "
+                    "VALUES (1, ?, ?, '2026-09-27T09:00:00Z')",
+                    (f"https://p.org/{content_hash}.pdf", content_hash),
+                )
+            conn.execute(
+                "INSERT INTO pipeline_run(id, started_at, status) VALUES ('r', 'now', 'passed')"
+            )
+            conn.execute(
+                "INSERT INTO run_parish_result(run_id, parish_slug, stage, status, content_hash) "
+                "VALUES ('r', 'p', 'process', 'wrong_bulletin', 'wrong')"
+            )
+
+        migrate(conn)
+
+        rows = conn.execute(
+            "SELECT content_hash, wrong_bulletin, last_seen_at FROM bulletin ORDER BY id"
+        ).fetchall()
+        assert [tuple(r) for r in rows] == [
+            ("right", 0, "2026-09-27T09:00:00Z"),
+            ("wrong", 1, "2026-09-27T09:00:00Z"),
+        ]
+    finally:
+        conn.close()

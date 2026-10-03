@@ -2,7 +2,7 @@
 name: St. Theresa of the Child Jesus
 website: https://www.sttheresawindham.org/news-bulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.sttheresawindham.org/news-bulletin']
 group: Hudson Valley Vicariate West
 evidence:
@@ -46,6 +46,11 @@ only the network bulletin prints their Sunday Masses (see that record).
 
 sttheresawindham.org/news-bulletin (directory:294 links the site). Provider `other`,
 publication `url:` of that page. The files are linked from the page with no publisher id.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/st-theresa-windham.json.gz`) the resolver found
+https://www.sttheresawindham.org/s/St-Theresas-Bulletin_October-3-2026.pdf this way, dated
+that week.
 
 ## Not yet confirmed
 

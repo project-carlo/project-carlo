@@ -2,7 +2,7 @@
 name: Sacred Heart Church
 website: https://parishes.rcda.org/sacredheartsidney/bulletin.php
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://parishes.rcda.org/sacredheartsidney/bulletin.php']
 group: ''
 evidence:
@@ -44,6 +44,11 @@ building is in a roster and the bulletin lists no Mass there.
 `parishes.rcda.org/sacredheartsidney/` is the site the directory links (GCatholic still has
 sidneyonline.com). `bulletin.php` lists one PDF per Sunday at
 `bulletins/<year>/<Month>_<DD>.pdf`. `bulletin_provider: other`.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/sacred-heart-sidney.json.gz`) the resolver found
+https://parishes.rcda.org/sacredheartsidney/bulletins/2026/October_04.pdf this way, dated
+that week.
 
 ## Not yet confirmed
 

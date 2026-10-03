@@ -10,16 +10,20 @@ from datetime import date
 
 import pytest
 
-from pdf_extract.fetch import (
-    _find_other_bulletin_page_urls,
-    _parse_relaxed_date_from_texts,
-    _resolve_other_latest_link,
-    _unwrap_pdf_viewer_url,
-)
-from pdf_extract.fetch_check import PageSnapshot, SnapshotPage
+from pdf_extract.fetch import OTHER_TYPE, FetchSource, build_latest_other_bulletin_links
+from pdf_extract.fetch_check import PageSnapshot, SnapshotPage, _same_recipe
+from pdf_extract.parish_sites import Recipe
+from pdf_extract.parish_sites.dates import parse_date_from_texts
+from pdf_extract.parish_sites.links import unwrap_pdf_viewer_url
+from pdf_extract.parish_sites.locate import find_bulletin_page_urls
 
 TODAY = date(2026, 9, 26)
 HOME = "https://parish.example"
+
+
+def _resolve_other(**kwargs) -> tuple[str, str]:
+    link = build_latest_other_bulletin_links(**kwargs)
+    return link.source_url, link.fetch_url
 
 
 def _site(
@@ -38,9 +42,11 @@ def _site(
     )
 
 
-def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
-    source_url, _ = _resolve_other_latest_link(
-        provider_id=HOME, reference_date=TODAY, page=_site(pages, **site),
+def _resolve(
+    pages: dict[str, str], *, today: date = TODAY, **site: dict[str, str],
+) -> str:
+    source_url, _ = _resolve_other(
+        provider_id=HOME, reference_date=today, page=_site(pages, **site),
     )
     return source_url
 
@@ -75,21 +81,37 @@ def _resolve(pages: dict[str, str], **site: dict[str, str]) -> str:
         # Ids and timestamps are not dates.
         ("/bulletins/1790326230.pdf", None),
         ("/_files/ugd/cea846_00334ad9684947469dd533a9f70fcc50.pdf", None),
+        # Nor is "e2-4a" inside a Wix file host's id (St. Patrick, Ravena).
+        (
+            "https://66067635-7ce2-4a3b-8ee4-2d7aacecd675.filesusr.com/ugd/"
+            "eb6be9_047b24e2076843a4a39cc7e2d47bd9ab.pdf",
+            None,
+        ),
+        # A WordPress upload folder that runs into a dated file name is the
+        # folder's year and month, then the file's date (Sacred Heart, Margaretville).
+        ("/wp-content/uploads/2026/10/10-04-2026-1.pdf", date(2026, 10, 4)),
+        # An ordinal is a day, not a month or a year (St. John Vianney, Bath).
+        ("/wp-content/uploads/Sept.-27th-26th-Sun-in-OT.pdf", date(2026, 9, 27)),
+        ("/wp-content/uploads/Sept.-20th-25th-Sun-in-OT.pdf", date(2026, 9, 20)),
+        ("September 27th, 2026", date(2026, 9, 27)),
+        # A run of digits that is no month-day-year gives a later yearless
+        # date no year.
+        ("scan 13-45-19 bulletin 9-27", date(2026, 9, 27)),
     ],
 )
 def test_parse_relaxed_date_reads_file_name_and_abbreviated_dates(text, expected) -> None:
-    assert _parse_relaxed_date_from_texts([text], TODAY) == expected
+    assert parse_date_from_texts([text], TODAY) == expected
 
 
-def test_unwrap_pdf_viewer_url() -> None:
+def testunwrap_pdf_viewer_url() -> None:
     pdf = "https://cniffamily.org/wp-content/uploads/2026/09/Bulletin-September-27-2026.pdf"
-    assert _unwrap_pdf_viewer_url(f"https://docs.google.com/gview?url={pdf}&embedded=true") == pdf
-    assert _unwrap_pdf_viewer_url(f"{HOME}/pdfjs/web/viewer.html?file={pdf}") == pdf
+    assert unwrap_pdf_viewer_url(f"https://docs.google.com/gview?url={pdf}&embedded=true") == pdf
+    assert unwrap_pdf_viewer_url(f"{HOME}/pdfjs/web/viewer.html?file={pdf}") == pdf
     # Already a PDF, or no absolute PDF address inside: left alone.
     direct = f"{HOME}/b.pdf?url=https://x.org/a.pdf"
-    assert _unwrap_pdf_viewer_url(direct) == direct
+    assert unwrap_pdf_viewer_url(direct) == direct
     relative = f"{HOME}/page?url=/relative.pdf"
-    assert _unwrap_pdf_viewer_url(relative) == relative
+    assert unwrap_pdf_viewer_url(relative) == relative
 
 
 def test_flipbook_pdf_named_with_repeated_extension_is_read_whole() -> None:
@@ -141,7 +163,7 @@ def test_archive_links_are_tried_after_the_current_bulletin_page() -> None:
         ),
     })
     page.goto(HOME)
-    assert _find_other_bulletin_page_urls(page=page, base_url=HOME, reference_date=TODAY) == [
+    assert find_bulletin_page_urls(page=page, base_url=HOME, reference_date=TODAY) == [
         f"{HOME}/copy-of-bulletins",
         f"{HOME}/copy-of-2021-bulletins",
         f"{HOME}/bulletin-archive",
@@ -186,6 +208,21 @@ def test_undated_pdf_labelled_bulletin_is_kept_without_visiting_posts() -> None:
     }) == f"{HOME}/_files/ugd/abc.pdf"
 
 
+def test_this_weeks_post_beats_last_weeks_pdf_listed_beside_it() -> None:
+    # Sacred Heart, Stamford lists each week's post with its PDF, but names this
+    # week's PDF "output.pdf"; read on Saturday, last Sunday's is still current.
+    assert _resolve({
+        HOME: '<a href="/weekly-bulletin/">Weekly Bulletin</a>',
+        f"{HOME}/weekly-bulletin/": (
+            '<a href="/10-04-26/">10-04-26</a>'
+            '<a href="/wp-content/uploads/2026/10/output.pdf">Download</a>'
+            '<a href="/09-27-26/">09-27-26</a>'
+            '<a href="/wp-content/uploads/2026/09/09-27-26Web.pdf">Download</a>'
+        ),
+        f"{HOME}/10-04-26/": '<a href="/wp-content/uploads/2026/10/output.pdf">Download</a>',
+    }, today=date(2026, 10, 3)) == f"{HOME}/wp-content/uploads/2026/10/output.pdf"
+
+
 def test_google_drive_folder_resolves_its_newest_pdf() -> None:
     folder = "https://drive.google.com/drive/folders/FOLDER?usp=sharing"
     rows = "".join(
@@ -198,7 +235,7 @@ def test_google_drive_folder_resolves_its_newest_pdf() -> None:
             ("id-notes", "Parish notes.docx"),
         ]
     )
-    source_url, fetch_url = _resolve_other_latest_link(
+    source_url, fetch_url = _resolve_other(
         provider_id=HOME,
         reference_date=TODAY,
         page=_site({
@@ -397,9 +434,38 @@ def test_a_stale_first_bulletin_page_is_still_read_when_nothing_is_newer() -> No
     }) == f"{HOME}/uploads/02-12-2017_6th_sun.pdf"
 
 
+def test_a_stale_first_bulletin_page_is_read_once() -> None:
+    site = _site({
+        HOME: '<a href="/bulletins.html">Bulletins</a>',
+        f"{HOME}/bulletins.html": '<a href="/uploads/02-12-2017_6th_sun.pdf">Download File</a>',
+    })
+    visited: list[str] = []
+    goto = site.goto
+
+    def counting_goto(url: str, **kwargs) -> None:
+        visited.append(url)
+        goto(url, **kwargs)
+
+    site.goto = counting_goto  # type: ignore[method-assign]
+    source_url, _ = _resolve_other(provider_id=HOME, reference_date=TODAY, page=site)
+    assert source_url == f"{HOME}/uploads/02-12-2017_6th_sun.pdf"
+    assert visited.count(f"{HOME}/bulletins.html") == 1
+
+
+def test_bulletin_links_are_read_relative_to_where_the_homepage_landed() -> None:
+    landing = f"{HOME}/en/home/"
+    assert _resolve(
+        {
+            HOME: '<a href="bulletin/">Bulletin</a>',
+            f"{landing}bulletin/": '<a href="/uploads/09-27-26_26th_sun.pdf">Download</a>',
+        },
+        redirects={HOME: landing},
+    ) == f"{HOME}/uploads/09-27-26_26th_sun.pdf"
+
+
 def test_google_drive_file_links_are_bulletins() -> None:
     # St. Lucy/St. Bernadette, Altamont links one Drive file per Sunday.
-    source_url, fetch_url = _resolve_other_latest_link(
+    source_url, fetch_url = _resolve_other(
         provider_id=HOME, reference_date=TODAY, page=_site({
             HOME: '<a href="/bulletin">Bulletin</a>',
             f"{HOME}/bulletin": (
@@ -418,7 +484,7 @@ def test_concrete_cms_download_links_are_bulletins() -> None:
     # rcda.org lists St. Joan of Arc's issues as /download_file/view/<file>/<page>,
     # beside unrelated PDFs in its menus.
     site = "https://www.rcda.org"
-    source_url, _ = _resolve_other_latest_link(
+    source_url, _ = _resolve_other(
         provider_id=f"{site}/bulletins", reference_date=TODAY, page=_site({
             f"{site}/bulletins": (
                 f'<a href="{site}/application/files/1/Oikoumene_November_2024.pdf">'
@@ -440,14 +506,108 @@ def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:
 
     calls: list[str] = []
 
-    def get(url: str, **_: object) -> bytes:
+    def get(url: str, **_: object) -> fetch._Response:
         calls.append(url)
         if len(calls) == 1:
             raise HTTPError(url, 429, "Too Many Requests", {}, None)  # type: ignore[arg-type]
-        return b"%PDF-1.7"
+        return fetch._Response(b"%PDF-1.7")
 
-    monkeypatch.setattr(fetch, "_http_get_bytes", get)
+    monkeypatch.setattr(fetch, "_http_get", get)
     monkeypatch.setattr(fetch.time, "sleep", lambda _: None)
     pdf = f"{HOME}/uploads/bulletin-2026-09-27.pdf"
     assert fetch._download_pdf(fetch_url=pdf, source_url=pdf) == b"%PDF-1.7"
     assert calls == [pdf, pdf]
+
+
+def test_a_conditional_download_answered_304_brings_back_no_pdf(monkeypatch) -> None:
+    from urllib.error import HTTPError
+
+    from pdf_extract import fetch
+    from pdf_extract.duplicates import Validators
+
+    sent: list[dict[str, str]] = []
+
+    def get(url: str, *, extra_headers=None, **_: object) -> fetch._Response:
+        sent.append(dict(extra_headers or {}))
+        if extra_headers:
+            raise HTTPError(url, 304, "Not Modified", {}, None)  # type: ignore[arg-type]
+        return fetch._Response(b"%PDF-1.7", etag='"v2"', last_modified="Sun, 27 Sep 2026")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    pdf = f"{HOME}/uploads/bulletin.pdf"
+
+    download = fetch._download_bulletin(
+        fetch_url=pdf, source_url=pdf, validators=Validators('"v1"', "Sat, 26 Sep 2026"),
+    )
+    assert download == fetch.Download(pdf=None)
+    assert sent == [{"If-None-Match": '"v1"', "If-Modified-Since": "Sat, 26 Sep 2026"}]
+
+    download = fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
+    assert download == fetch.Download(b"%PDF-1.7", etag='"v2"', last_modified="Sun, 27 Sep 2026")
+
+
+def test_a_304_to_an_unconditional_download_is_a_failure(monkeypatch) -> None:
+    from urllib.error import HTTPError
+
+    from pdf_extract import fetch
+
+    def get(url: str, **_: object) -> fetch._Response:
+        raise HTTPError(url, 304, "Not Modified", {}, None)  # type: ignore[arg-type]
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    pdf = f"{HOME}/uploads/bulletin.pdf"
+    with pytest.raises(HTTPError):
+        fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
+
+
+# ── Recipes ─────────────────────────────────────────────────────────────────
+
+def test_recipe_reads_collector_page_or_both() -> None:
+    page = f"{HOME}/bulletins"
+    assert Recipe.parse("", website=HOME) == Recipe()
+    assert Recipe.parse(page, website=HOME) == Recipe(page=page)
+    assert Recipe.parse(f"dated-post {page}", website=HOME) == Recipe(page, "dated-post")
+    # A collector alone reads the website as the bulletin page.
+    assert Recipe.parse("page-pdfs", website=page) == Recipe(page, "page-pdfs")
+    assert Recipe(page, "page-pdfs").text(website=page) == "page-pdfs"
+    assert Recipe(page, "page-pdfs").text(website=HOME) == f"page-pdfs {page}"
+    with pytest.raises(ValueError, match="Unknown collector 'pdfs'"):
+        Recipe.parse("pdfs", website=HOME)
+    with pytest.raises(ValueError, match="two pages"):
+        Recipe.parse(f"{page} {HOME}", website=HOME)
+
+
+def test_a_recipe_skips_the_homepage_and_runs_only_its_collector() -> None:
+    # The homepage is not recorded: a pinned page is read without it. The page
+    # lists this week's post, which dated-post would follow, and an older PDF.
+    pages = {
+        f"{HOME}/bulletins": (
+            '<a href="/files/bulletin-2026-09-20.pdf">Bulletin</a>'
+            '<a href="/2026/09/25/bulletin-september-27/">Bulletin for September 27</a>'
+        ),
+        f"{HOME}/2026/09/25/bulletin-september-27/": '<a href="/files/0927.pdf">Read it</a>',
+    }
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=TODAY, page=_site(pages),
+        recipe=f"page-pdfs {HOME}/bulletins",
+    )
+    assert link.source_url == f"{HOME}/files/bulletin-2026-09-20.pdf"
+    assert link.how == f"page-pdfs on {HOME}/bulletins: current"
+    assert link.recipe == f"page-pdfs {HOME}/bulletins"
+
+
+def test_a_recipe_whose_collector_finds_nothing_fails_rather_than_guessing() -> None:
+    pages = {f"{HOME}/bulletins": '<iframe src="https://designrr.page/?id=1"></iframe>'}
+    with pytest.raises(ValueError, match="No PDF links found on bulletin page"):
+        _resolve_other(
+            provider_id=HOME, reference_date=TODAY, page=_site(pages),
+            recipe=f"page-pdfs {HOME}/bulletins",
+        )
+
+
+def test_a_recipe_written_differently_is_the_same_recipe() -> None:
+    source = FetchSource(OTHER_TYPE, HOME, f"page-pdfs {HOME}")
+    assert _same_recipe("page-pdfs", source)
+    assert _same_recipe(f"{HOME}/b page-pdfs", source._replace(recipe=f"page-pdfs {HOME}/b"))
+    assert not _same_recipe(f"page-pdfs {HOME}/b", source)
+    assert not _same_recipe("page-pdfs", source._replace(recipe=""))

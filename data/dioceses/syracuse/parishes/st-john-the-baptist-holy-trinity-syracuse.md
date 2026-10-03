@@ -2,7 +2,7 @@
 name: St. John the Baptist and Holy Trinity Parish
 website: https://www.stjohnthebaptist-holytrinity.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stjohnthebaptist-holytrinity.com/bulletins/
 publication: ['url:https://www.stjohnthebaptist-holytrinity.com/bulletins/']
 group: 'Fr. Foley: OL Pompei/St. Peter + St. John the Baptist/Holy Trinity'
 evidence:
@@ -35,6 +35,13 @@ Trinity's former church at 501 Park Street, closed in 2010, is
 
 stjohnthebaptist-holytrinity.com/bulletins/ lists the PDFs; provider `other`. GCatholic's
 website for the church (sjbhtsyracuse.org) was not used.
+
+Fetch recipe `page-pdfs https://www.stjohnthebaptist-holytrinity.com/bulletins/`, pinned
+2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/st-john-the-baptist-holy-trinity-syracuse.json.gz`) the resolver
+found
+https://www.stjohnthebaptist-holytrinity.com/wp-content/uploads/sites/13/2026/09/september-27.pdf
+this way, dated that week.
 
 ## Not yet confirmed
 

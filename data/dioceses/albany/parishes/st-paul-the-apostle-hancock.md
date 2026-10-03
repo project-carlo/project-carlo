@@ -2,7 +2,7 @@
 name: St. Paul the Apostle
 website: https://www.stpaulshancock.org/bulletin.htm
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.stpaulshancock.org/bulletin.htm']
 group: ''
 evidence:
@@ -38,6 +38,10 @@ No other place is named in the bulletin or grouped with it by the directory.
 stpaulshancock.org (both rosters) renders its menu by script, so `probe url` said
 NO-PARISH-WORDS; `visit.py --bulletin` found `bulletin.htm`, which links the week's PDF as
 `Bulletins/Bull_<M>_<D>_<YY>.pdf`. Self-hosted: `bulletin_provider: other`.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/st-paul-the-apostle-hancock.json.gz`) the resolver found
+https://www.stpaulshancock.org/Bulletins/Bull_10_4_26.pdf this way, dated that week.
 
 ## Not yet confirmed
 

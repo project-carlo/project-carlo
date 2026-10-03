@@ -3,7 +3,6 @@
 import json
 import logging
 import random
-import re
 import threading
 import time
 from datetime import date
@@ -13,6 +12,8 @@ import httpx
 from google import genai
 from google.genai import errors, types
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
+
+from pdf_extract.bulletin_week import parse_iso_date
 
 LOGGER = logging.getLogger(__name__)
 
@@ -202,19 +203,12 @@ def _collect_events(
     return events
 
 
-_ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-
-
 def _normalize_published_date(raw: Any) -> str | None:
-    """Accept a YYYY-MM-DD string from the LLM, or None."""
+    """Accept a YYYY-MM-DD string naming a real day from the LLM, or None."""
     if not isinstance(raw, str):
         return None
     value = raw.strip()
-    if not value:
-        return None
-    if not _ISO_DATE_RE.match(value):
-        return None
-    return value
+    return value if parse_iso_date(value) else None
 
 
 def reconstruct_events(raw: SchedulePayload | dict[str, Any]) -> dict[str, Any]:

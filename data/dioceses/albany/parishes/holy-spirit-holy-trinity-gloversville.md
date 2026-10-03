@@ -2,7 +2,7 @@
 name: Church of the Holy Spirit and Holy Trinity Church
 website: https://parishes.rcda.org/HolyTrinityJohnstown/bulletin.php
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://parishes.rcda.org/HolyTrinityJohnstown/bulletin.php', 'url:https://www.holyspirit12078.org/bulletin']
 group: ''
 evidence:
@@ -61,6 +61,11 @@ without Cloudflare. Holy Spirit's page is recorded as a second `url:` publicatio
 
 **Image-only:** every issue checked (20 and 27 September 2026, both hosts) is scanned images
 with no text layer. The pipeline will need to read it as images.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/holy-spirit-holy-trinity-gloversville.json.gz`) the resolver found
+https://parishes.rcda.org/HolyTrinityJohnstown/bulletins/2026/October_04@Twenty-Eighth
+Sunday in Ordinary Time.pdf this way, dated that week.
 
 ## Not yet confirmed
 

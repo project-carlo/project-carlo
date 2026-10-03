@@ -132,7 +132,11 @@ Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to c
   `provider_id` (the org slug from `parishesonline.com/organization/<slug>`, the church slug
   from `discovermass.com/church/<slug>/`). It reads eCatholic, `other` and `google_drive`
   from `website`, so for eCatholic the website has to be the eCatholic-hosted site, and for
-  `google_drive` it has to link the shared folder.
+  `google_drive` it has to link the shared folder. For `other` and `google_drive`,
+  `provider_id` may pin how to read the site, as a recipe: a collector, the bulletin page,
+  or both (`page-pdfs https://example.org/bulletins`). Run
+  `pnpm fetch:check -- --parish <slug>` and record the `recipe` it prints once its pick is
+  this week's bulletin (see "How the `other` resolver reads a site" in the main README).
 - `publication`: ids of the bulletin itself, as `scheme:value`. **Two parish rows may never
   share one**, and `validate` enforces that across every diocese: it catches "one bulletin
   carried as several rows", a mistake that shows up in no other check. Record every form

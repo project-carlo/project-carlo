@@ -124,6 +124,14 @@ report comparing the database before and after it, written to
 - `frontend.json.gz`: the snapshot the website would serve.
 - `before.db`: the database as the run found it.
 
+A parish's current bulletin is the one for the latest week, by the issue date
+the extractor read off it (else the fetch date), and the most recently fetched
+of that week's (`src/pdf_extract/bulletin_week.py`). So a second bulletin for a
+week (a correction) replaces the first, and an old issue a site falls back to
+is stored but never shown. The report lists the old issues, and flags a third
+bulletin for one week for a person to look at. A parish is stale when its
+newest bulletin is two weeks old, however recently the site served it.
+
 The run's status decides what happens next:
 
 | Status | Exit code | Meaning |
@@ -274,7 +282,17 @@ result as JSON on success.
 
 Stage idempotency:
 
-- `fetch` skips URLs already recorded in `bulletin.source_url`
+- `fetch` skips a parish whose newest bulletin is already this weekend's, by
+  the issue date the extractor read off it (and only when that bulletin was
+  fetched within a few days of the date). Otherwise it downloads the bulletin,
+  asking the server first whether the copy it has from that address is still
+  current (`ETag` / `Last-Modified`), and keeps it only if it is new: not the
+  same bytes as any of the parish's bulletins (`src/pdf_extract/duplicates.py`).
+  A bulletin
+  seen again is recorded on its row (`last_seen_at`), not stored twice. The
+  address is never taken to mean the bulletin is unchanged: Discover Mass
+  serves the same PDF from a new address each time, and some sites put each
+  week's bulletin at the same one.
 - `process` skips bulletins with `processed_at` already set, and serves
   bulletins it has extracted before (same PDF hash, same model) from the cache
 
@@ -287,10 +305,45 @@ browser without touching the database, downloads what each one picks, and
 prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
 `not_pdf`, or `blocked` when Cloudflare challenged the browser instead).
 
+#### How the `other` resolver reads a site
+
+`src/pdf_extract/parish_sites/` reads a parish's own site in three stages:
+
+1. **Locate** the bulletin page by following the homepage's "bulletin" links
+   (`locate.py`).
+2. **Collect** the PDFs it offers (`collectors.py`). Each collector handles one
+   way a site offers them: `drive-folder`, `redirected-pdf` (the bulletin link
+   is the PDF), `page-pdfs` (links, or addresses in the page's markup),
+   `linked-issue-page` (an embedded flipbook or a publisher's listing) and
+   `dated-post` (a weekly post that wraps the PDF). They run in that order
+   until one finds a convincing set.
+3. **Choose** this week's issue among them (`choose.py`), and say why:
+   `current` (dated this week), or a fallback (`newest-recent`, `titled`,
+   `first-listed`).
+
+Each fetch result records how its bulletin was found ("page-pdfs on
+https://…/bulletins: current"), and the run report lists any new bulletin the
+site dated, but not this week.
+
+A parish can pin the first two stages with a **recipe** in its `provider_id`:
+a collector, a bulletin page, or both (`page-pdfs https://example.org/bulletins`;
+a collector alone reads `website` as the bulletin page). A pinned parish skips
+the homepage and runs only its collector, so it fails loudly when its site
+changes rather than guessing, and no change made for another site can change
+what it picks. `fetch:check` prints the recipe that reproduces each pick it
+guessed; pin it once the pick is right.
+
+When a site needs something new, add a collector rather than a branch inside
+an existing one, and record the site (below).
+
+#### Recorded sites
+
 To keep a resolver change from fixing one site and breaking another, the pages
 each resolver read on every parish's real site are recorded in
 `tests/fixtures/fetch/<slug>.json.gz`, and `tests/test_fetch_replay.py` replays
-them offline against the bulletin in `expected.json`. After changing `fetch.py`:
+them offline against the bulletin in `expected.json`, using each parish's
+recipe in `data/parishes.csv` as it is now. After changing `fetch.py` or
+`parish_sites/`, or pinning a recipe:
 
 1. Run `pnpm test`. A changed pick on any recorded site fails the replay test.
    A site that now opens a page the old resolver never did fails with "re-record

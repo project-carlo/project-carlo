@@ -3,6 +3,7 @@ from datetime import date
 
 import pytest
 
+from pdf_extract.browser import goto_with_retry
 from pdf_extract.fetch import (
     _PROVIDERS,
     DISCOVER_MASS_TYPE,
@@ -10,27 +11,31 @@ from pdf_extract.fetch import (
     OTHER_TYPE,
     PARISHES_ONLINE_TYPE,
     BulletinLink,
+    FetchSource,
     _build_bulletin_link,
     _extract_discover_mass_pdf_url_from_href,
     _extract_ecatholic_pdf_url_from_href,
     _extract_parishes_online_pdf_url_from_href,
-    _find_other_bulletin_page_urls,
-    _goto_with_retry,
     _normalize_url_for_request,
     _parse_ecatholic_pdf_date,
-    _parse_relaxed_date,
     _pick_latest_ecatholic_pdf_url,
-    _report_stale_parishes,
     _resolve_ecatholic_latest_link,
     _resolve_fetch_source,
     _resolve_latest_anchor_link_with_playwright,
-    _resolve_other_latest_link,
     build_latest_discover_mass_bulletin_links,
     build_latest_ecatholic_bulletin_links,
     build_latest_other_bulletin_links,
     build_latest_parishes_online_bulletin_links,
 )
-from pdf_extract.storage import utc_now_iso
+from pdf_extract.parish_sites import Resolution
+from pdf_extract.parish_sites.choose import CURRENT, Candidate
+from pdf_extract.parish_sites.dates import parse_date
+from pdf_extract.parish_sites.locate import find_bulletin_page_urls
+
+
+def _resolve_other(**kwargs) -> tuple[str, str]:
+    link = build_latest_other_bulletin_links(**kwargs)
+    return link.source_url, link.fetch_url
 
 
 def test_build_latest_ecatholic_bulletin_links(monkeypatch) -> None:
@@ -257,15 +262,18 @@ def test_build_bulletin_link_dispatches_to_the_registered_builder(
 
     seen: dict[str, object] = {}
 
-    def fake_build(*, provider_id, reference_date=None, page=None):
+    def fake_build(*, provider_id, reference_date=None, page=None, **recipe):
         seen["provider_id"] = provider_id
+        seen.update(recipe)
         return BulletinLink(source_url="https://example.org/b.pdf", fetch_url="https://example.org/b.pdf")
 
     monkeypatch.setitem(
         _PROVIDERS, provider, replace(_PROVIDERS[provider], build=fake_build),
     )
-    link = _build_bulletin_link(provider, provider_id)
+    link = _build_bulletin_link(provider, provider_id, recipe="page-pdfs")
     assert seen["provider_id"] == provider_id
+    # Only a provider that reads the parish's own site takes a recipe.
+    assert seen.get("recipe") == ("page-pdfs" if provider == OTHER_TYPE else None)
     assert link.fetch_url == "https://example.org/b.pdf"
 
 
@@ -275,21 +283,25 @@ def test_build_bulletin_link_rejects_an_unregistered_provider() -> None:
 
 
 def test_build_latest_other_bulletin_links(monkeypatch) -> None:
-    def fake_resolve(*, provider_id: str, reference_date=None, page=None) -> tuple[str, str]:
-        assert provider_id == "https://example.org"
+    pdf = "https://example.org/bulletins/2026-02-16.pdf"
+
+    def fake_resolve(*, homepage_url: str, reference_date, page, recipe=None) -> Resolution:
+        assert homepage_url == "https://example.org"
         assert reference_date == date(2026, 2, 19)
-        return (
-            "https://example.org/bulletins/2026-02-16.pdf",
-            "https://example.org/bulletins/2026-02-16.pdf",
+        return Resolution(
+            candidate=Candidate(source_url=pdf, fetch_url=pdf, parsed_date=date(2026, 2, 16)),
+            page_url="https://example.org/bulletins", collector="page-pdfs", reason=CURRENT,
         )
 
-    monkeypatch.setattr("pdf_extract.fetch._resolve_other_latest_link", fake_resolve)
+    monkeypatch.setattr("pdf_extract.fetch.resolve_parish_site", fake_resolve)
     link = build_latest_other_bulletin_links(
         provider_id="https://example.org",
         reference_date=date(2026, 2, 19),
+        page=object(),
     )
-    assert link.source_url == "https://example.org/bulletins/2026-02-16.pdf"
-    assert link.fetch_url == "https://example.org/bulletins/2026-02-16.pdf"
+    assert link.source_url == pdf
+    assert link.fetch_url == pdf
+    assert link.how == "page-pdfs on https://example.org/bulletins: current"
 
 
 def test_find_other_bulletin_page_url_prefers_href_and_text_match() -> None:
@@ -315,7 +327,7 @@ def test_find_other_bulletin_page_url_prefers_href_and_text_match() -> None:
                 FakeAnchor("/bulletins", "Read Bulletins"),
             ]
 
-    resolved = _find_other_bulletin_page_urls(page=FakePage(), base_url="https://example.org")[0]
+    resolved = find_bulletin_page_urls(page=FakePage(), base_url="https://example.org")[0]
     assert resolved == "https://example.org/bulletins"
 
 
@@ -359,7 +371,7 @@ def test_resolve_other_latest_link_prefers_latest_parseable_within_plus_minus_we
                 FakeAnchor("/pdfs/future-2026-03-10.pdf", "Mar 10, 2026 Bulletin"),
             ]
 
-    source_url, fetch_url = _resolve_other_latest_link(
+    source_url, fetch_url = _resolve_other(
         provider_id="https://example.org",
         reference_date=date(2026, 2, 19),
         page=FakePage(),
@@ -402,7 +414,7 @@ def test_resolve_other_latest_link_falls_back_to_first_pdf_when_no_date_match() 
                 FakeAnchor("/pdfs/no-date-2.pdf", "Latest PDF"),
             ]
 
-    source_url, fetch_url = _resolve_other_latest_link(
+    source_url, fetch_url = _resolve_other(
         provider_id="https://example.org",
         reference_date=date(2026, 2, 19),
         page=FakePage(),
@@ -476,7 +488,7 @@ def test_resolve_other_latest_link_finds_pdf_embedded_in_script_on_post_page() -
                 return f"<html><body>{dflip_script}</body></html>"
             return "<html><body></body></html>"
 
-    source_url, fetch_url = _resolve_other_latest_link(
+    source_url, fetch_url = _resolve_other(
         provider_id="https://elmiracatholic.org",
         reference_date=date(2026, 4, 17),
         page=FakePage(),
@@ -543,7 +555,7 @@ def test_resolve_other_latest_link_descends_into_latest_bulletin_post_when_no_pd
             assert self.url == latest_post_url
             return [FakeAnchor(latest_pdf_url, "Download Bulletin")]
 
-    source_url, fetch_url = _resolve_other_latest_link(
+    source_url, fetch_url = _resolve_other(
         provider_id="https://elmiracatholic.org",
         reference_date=date(2026, 4, 17),
         page=FakePage(),
@@ -554,9 +566,9 @@ def test_resolve_other_latest_link_descends_into_latest_bulletin_post_when_no_pd
 
 def test_parse_relaxed_date_handles_multiple_formats() -> None:
     ref = date(2026, 2, 19)
-    assert _parse_relaxed_date("Bulletin Feb 18, 2026", ref) == date(2026, 2, 18)
-    assert _parse_relaxed_date("Bulletin 02/18/26", ref) == date(2026, 2, 18)
-    assert _parse_relaxed_date("Bulletin 2026-02-18", ref) == date(2026, 2, 18)
+    assert parse_date("Bulletin Feb 18, 2026", ref) == date(2026, 2, 18)
+    assert parse_date("Bulletin 02/18/26", ref) == date(2026, 2, 18)
+    assert parse_date("Bulletin 2026-02-18", ref) == date(2026, 2, 18)
 
 
 def test_normalize_url_for_request_encodes_spaces() -> None:
@@ -585,7 +597,7 @@ def test_goto_with_retry_on_interrupted_navigation() -> None:
             self.waits += 1
 
     page = FakePage()
-    _goto_with_retry(page=page, page_url="https://example.org/page")
+    goto_with_retry(page=page, page_url="https://example.org/page")
     assert page.calls == 2
     assert page.waits == 1
 
@@ -596,7 +608,7 @@ def test_resolve_fetch_source_discover_mass_uses_provider_id() -> None:
         "provider_id": "st-joseph-rush",
         "homepage_url": "https://stjoseph.example.org",
     }
-    assert _resolve_fetch_source(parish) == (DISCOVER_MASS_TYPE, "st-joseph-rush")
+    assert _resolve_fetch_source(parish) == FetchSource(DISCOVER_MASS_TYPE, "st-joseph-rush")
 
 
 def test_resolve_fetch_source_discover_mass_without_provider_id_returns_none() -> None:
@@ -722,16 +734,3 @@ def test_parse_ecatholic_pdf_date() -> None:
     ) == date(2026, 8, 23)
     assert _parse_ecatholic_pdf_date("https://files.ecatholic.com/1/bulletins/latest.pdf") is None
     assert _parse_ecatholic_pdf_date("https://files.ecatholic.com/1/bulletins/20261332.pdf") is None
-
-
-def test_report_stale_parishes_names_parishes_stuck_on_old_bulletins() -> None:
-    fresh = utc_now_iso()
-    bulletins = [
-        {"parish_slug": "fresh-parish", "fetched_at": fresh},
-        {"parish_slug": "stale-parish", "fetched_at": "2026-01-01T00:00:00Z"},
-    ]
-    stale = _report_stale_parishes(
-        bulletins=bulletins,
-        slugs=["fresh-parish", "stale-parish", "never-fetched-parish"],
-    )
-    assert stale == ["stale-parish", "never-fetched-parish"]

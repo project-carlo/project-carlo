@@ -2,7 +2,7 @@
 name: Blessed Trinity Church
 website: https://blessedtrinitybuffalo.org
 bulletin_provider: other
-provider_id: ''
+provider_id: drive-folder https://drive.google.com/drive/folders/1g-QJ4drwlt5l_mBllOSV6jYuvlv4r5HO?usp=sharing
 publication: ['url:https://blessedtrinitybuffalo.org/category/this-week/']
 group: 'Family #21'
 evidence:
@@ -24,6 +24,13 @@ Blessed Trinity Church. Each church record gives the Mass evidence. Churches of 
 ## Website and bulletin provider
 
 The bulletin is at https://blessedtrinitybuffalo.org/category/this-week/. Provider `other`.
+
+Fetch recipe `drive-folder
+https://drive.google.com/drive/folders/1g-QJ4drwlt5l_mBllOSV6jYuvlv4r5HO?usp=sharing`,
+pinned 2026-10-03: on the pages recorded 2026-09-26
+(`tests/fixtures/fetch/blessed-trinity-buffalo.json.gz`) the resolver found
+https://drive.google.com/file/d/1jZL0fgkog0pNK0IwTsKLSdkis1V1S3aT/view this way, dated
+that week.
 
 ## Not yet confirmed
 

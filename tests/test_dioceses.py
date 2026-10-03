@@ -180,6 +180,16 @@ def test_bulletin_provider_values_cover_what_fetch_supports() -> None:
     assert SUPPORTED_BULLETIN_PROVIDERS <= records.KNOWN_BULLETIN_PROVIDERS
 
 
+def test_an_other_parish_provider_id_must_be_a_fetch_recipe(root: Path) -> None:
+    _parish("st-ann", bulletin_provider="other", provider_id="page-pdfs https://st-ann.org/b")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    with pytest.raises(DioceseError, match=(
+        r"parish 'st-bede': provider_id is not a fetch recipe: "
+        r"Unknown collector 'newest-pdf'; expected one of drive-folder, "
+    )):
+        _parish("st-bede", bulletin_provider="other", provider_id="newest-pdf")
+
+
 # ── Operations ──────────────────────────────────────────────────────────────
 def test_merge_folds_rows_into_one_and_keeps_what_was_known(root: Path) -> None:
     _parish("family", publication=["po-container:14/0948"])

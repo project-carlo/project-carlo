@@ -2,7 +2,7 @@
 name: Christ the Good Shepherd
 website: https://christthegoodshepherd.org/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://church-bulletin.org/486
 publication: ['url:https://www.church-bulletin.org/christ-the-good-shepherd-parish-oswego-ny-13126']
 group: Catholic Community of Oswego, Minetto & Hannibal
 evidence:
@@ -86,6 +86,12 @@ dated PDF per Sunday. `bulletin_provider: other`, with the parish site as `websi
 `other` fetcher reaches it: it follows the site's bulletin link to the listing page and picks the
 PDF whose URL carries the current date. `publication` is that listing page (`url:`), the only id
 this publisher exposes.
+
+Fetch recipe `page-pdfs https://church-bulletin.org/486`, pinned 2026-10-03: on the pages
+recorded 2026-09-27 (`tests/fixtures/fetch/christ-the-good-shepherd-oswego.json.gz`) the
+resolver found
+https://www.church-bulletin.org/bulletin/christ-the-good-shepherd-parish-oswego-ny-13126/2026-09-27.pdf
+this way, dated that week.
 
 ## Not yet confirmed
 

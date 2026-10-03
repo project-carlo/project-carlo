@@ -2,7 +2,7 @@
 name: St. Anthony of Padua
 website: https://stanthonysyr.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://stanthonysyr.org/']
 group: 'Fr. Kurgan: Holy Cross, St. Daniel, St. Anthony of Padua'
 evidence:
@@ -40,6 +40,11 @@ One: the church at 1515 Midland Avenue (`st-anthony-of-padua-syracuse`).
 stanthonysyr.org (WordPress) links the week's PDF from the homepage
 (wp-content/uploads/St.Anthonys-Bulletin-<Month>-<day>-<year>.pdf). Provider `other`,
 publication `url:` of the homepage.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/st-anthony-of-padua-syracuse.json.gz`) the resolver found
+https://stanthonysyr.org/wp-content/uploads/St.Anthonys-Bulletin-September-27-2026.pdf
+this way, dated that week.
 
 ## Not yet confirmed
 

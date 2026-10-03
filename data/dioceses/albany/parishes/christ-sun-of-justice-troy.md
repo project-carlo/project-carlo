@@ -2,7 +2,7 @@
 name: Christ Sun of Justice (University Parish, RPI)
 website: https://rensselaernewman.org/christ-sun-of-justice-parish/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://rensselaernewman.org/christ-sun-of-justice-parish/']
 group: ''
 evidence:
@@ -46,6 +46,11 @@ rensselaernewman.org/christ-sun-of-justice-parish/ (the directory's "Additional 
 lists "Sunday Bulletin for <date>" links, so provider `other` with that page as website and
 publication. The site's /bulletin/ page is only an e-mail sign-up form. GCatholic's
 chapelandculturalcenter.org was not needed.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/christ-sun-of-justice-troy.json.gz`) the resolver found
+https://eadn-wc03-5826237.nxedge.io/cdn/wp-content/uploads/2026/10/CSJ-2026_10_4-bulletin.pdf
+this way, dated that week.
 
 ## Not yet confirmed
 
