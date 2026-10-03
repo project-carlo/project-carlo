@@ -47,7 +47,12 @@ BULLETIN_PAGES_TO_TRY = 3
 
 @dataclass(frozen=True)
 class Recipe:
-    """How to read one parish's site, as recorded when it was explored."""
+    """How to read one parish's site, as recorded when it was explored.
+
+    It is kept in the parish's `provider_id` as text: the collector's name, the
+    bulletin page's address, or both ("page-pdfs https://example.org/bulletins").
+    A collector alone reads the parish's website as the bulletin page.
+    """
 
     page: str | None = None
     """The bulletin page; without it, found from the homepage."""
@@ -57,8 +62,31 @@ class Recipe:
     def __post_init__(self) -> None:
         if self.collector is not None and self.collector not in COLLECTORS:
             raise ValueError(
-                f"Unknown collector {self.collector!r}; expected one of {sorted(COLLECTORS)}"
+                f"Unknown collector {self.collector!r}; expected one of "
+                f"{', '.join(COLLECTORS)}"
             )
+
+    @classmethod
+    def parse(cls, text: str, *, website: str) -> Recipe:
+        page: str | None = None
+        collector: str | None = None
+        for token in text.split():
+            if token.startswith(("http://", "https://")):
+                if page is not None:
+                    raise ValueError(f"Recipe {text!r} names two pages")
+                page = token
+            elif collector is None:
+                collector = token
+            else:
+                raise ValueError(f"Recipe {text!r} names two collectors")
+        if collector is not None and page is None:
+            page = website
+        return cls(page=page, collector=collector)
+
+    def text(self, *, website: str) -> str:
+        """The recipe as `parse` reads it, leaving out a page that is the website."""
+        page = None if self.page == website and self.collector else self.page
+        return " ".join(part for part in (self.collector, page) if part)
 
 
 @dataclass(frozen=True)
@@ -67,8 +95,14 @@ class Resolution:
 
     candidate: Candidate
     page_url: str
+    """The bulletin page as linked, before any redirect."""
     collector: str
     reason: str
+
+    @property
+    def recipe(self) -> Recipe:
+        """The recipe that reads this bulletin the way it was found here."""
+        return Recipe(page=self.page_url, collector=self.collector)
 
     def describe(self) -> str:
         """One line for the run report: "page-pdfs on <page>: current".
@@ -163,5 +197,5 @@ def _resolve_bulletin_page(
         raise NoBulletin(f"No PDF links found on bulletin page: {url}")
     choice: Choice = choose(found, reference_date=reference_date, max_age_days=max_age_days)
     return Resolution(
-        candidate=choice.candidate, page_url=site.url, collector=used.name, reason=choice.reason,
+        candidate=choice.candidate, page_url=url, collector=used.name, reason=choice.reason,
     )

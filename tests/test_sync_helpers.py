@@ -11,6 +11,7 @@ from pdf_extract.fetch import (
     OTHER_TYPE,
     PARISHES_ONLINE_TYPE,
     BulletinLink,
+    FetchSource,
     _build_bulletin_link,
     _extract_discover_mass_pdf_url_from_href,
     _extract_ecatholic_pdf_url_from_href,
@@ -263,15 +264,18 @@ def test_build_bulletin_link_dispatches_to_the_registered_builder(
 
     seen: dict[str, object] = {}
 
-    def fake_build(*, provider_id, reference_date=None, page=None):
+    def fake_build(*, provider_id, reference_date=None, page=None, **recipe):
         seen["provider_id"] = provider_id
+        seen.update(recipe)
         return BulletinLink(source_url="https://example.org/b.pdf", fetch_url="https://example.org/b.pdf")
 
     monkeypatch.setitem(
         _PROVIDERS, provider, replace(_PROVIDERS[provider], build=fake_build),
     )
-    link = _build_bulletin_link(provider, provider_id)
+    link = _build_bulletin_link(provider, provider_id, recipe="page-pdfs")
     assert seen["provider_id"] == provider_id
+    # Only a provider that reads the parish's own site takes a recipe.
+    assert seen.get("recipe") == ("page-pdfs" if provider == OTHER_TYPE else None)
     assert link.fetch_url == "https://example.org/b.pdf"
 
 
@@ -606,7 +610,7 @@ def test_resolve_fetch_source_discover_mass_uses_provider_id() -> None:
         "provider_id": "st-joseph-rush",
         "homepage_url": "https://stjoseph.example.org",
     }
-    assert _resolve_fetch_source(parish) == (DISCOVER_MASS_TYPE, "st-joseph-rush")
+    assert _resolve_fetch_source(parish) == FetchSource(DISCOVER_MASS_TYPE, "st-joseph-rush")
 
 
 def test_resolve_fetch_source_discover_mass_without_provider_id_returns_none() -> None:

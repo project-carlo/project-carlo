@@ -9,7 +9,7 @@ import pytest
 
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.db import create_db
-from pdf_extract.fetch import BulletinLink, fetch_bulletins
+from pdf_extract.fetch import BulletinLink, FetchSource, fetch_bulletins
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import load_history_from_db, save_history_to_db
 from pdf_extract.runs import parish_results, start_run
@@ -134,7 +134,7 @@ def _bulletins(db: Path) -> list[dict]:
 def test_fetch_stage_is_idempotent(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+        lambda bulletin_provider, fetch_provider_id, *, page=None, recipe="": BulletinLink(
             source_url="https://example.org/bulletin.pdf",
             fetch_url="https://example.org/bulletin.pdf",
         ),
@@ -173,7 +173,7 @@ def test_fetch_takes_a_new_issue_at_an_address_it_already_has(monkeypatch, db: P
     # stpaulsnorwich.com overwrites /bulletin.pdf each week.
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+        lambda bulletin_provider, fetch_provider_id, *, page=None, recipe="": BulletinLink(
             source_url="https://example.org/bulletin.pdf",
             fetch_url="https://example.org/bulletin.pdf",
         ),
@@ -194,7 +194,7 @@ def test_fetch_takes_a_new_issue_at_an_address_it_already_has(monkeypatch, db: P
 def test_fetch_does_not_download_a_dated_address_again(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+        lambda bulletin_provider, fetch_provider_id, *, page=None, recipe="": BulletinLink(
             source_url="https://example.org/bulletins/20260927.pdf",
             fetch_url="https://example.org/bulletins/20260927.pdf",
         ),
@@ -218,7 +218,7 @@ def test_fetch_does_not_download_a_dated_address_again(monkeypatch, db: Path) ->
 def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+        lambda bulletin_provider, fetch_provider_id, *, page=None, recipe="": BulletinLink(
             source_url="https://example.org/bulletin.pdf",
             fetch_url="https://example.org/bulletin.pdf",
         ),
@@ -245,7 +245,7 @@ def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:
     # The same PDF re-posted at a new URL: the stored copy is not rewritten.
     urls = iter(["https://example.org/a.pdf", "https://example.org/b.pdf"])
 
-    def build_link(bulletin_provider, fetch_provider_id, *, page=None):
+    def build_link(bulletin_provider, fetch_provider_id, *, page=None, recipe=""):
         url = next(urls)
         return BulletinLink(source_url=url, fetch_url=url)
 
@@ -274,7 +274,7 @@ def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:
 
 
 def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) -> None:
-    def build_link(bulletin_provider, fetch_provider_id, *, page=None):
+    def build_link(bulletin_provider, fetch_provider_id, *, page=None, recipe=""):
         return BulletinLink(
             source_url="https://example.org/bulletin.pdf",
             fetch_url="https://example.org/bulletin.pdf",
@@ -297,7 +297,7 @@ def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) ->
     monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
     monkeypatch.setattr(
         "pdf_extract.fetch._resolve_fetch_source",
-        lambda parish: ("ecatholic", parish["slug"]),
+        lambda parish: FetchSource("ecatholic", parish["slug"]),
     )
 
     conn = connect_db(db)
@@ -323,7 +323,7 @@ def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) ->
 def test_fetch_limits_to_the_given_slugs(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+        lambda bulletin_provider, fetch_provider_id, *, page=None, recipe="": BulletinLink(
             source_url=f"https://example.org/{fetch_provider_id}.pdf",
             fetch_url=f"https://example.org/{fetch_provider_id}.pdf",
         ),

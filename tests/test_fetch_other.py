@@ -12,6 +12,7 @@ import pytest
 
 from pdf_extract.fetch import build_latest_other_bulletin_links
 from pdf_extract.fetch_check import PageSnapshot, SnapshotPage
+from pdf_extract.parish_sites import Recipe
 from pdf_extract.parish_sites.dates import parse_date_from_texts
 from pdf_extract.parish_sites.links import unwrap_pdf_viewer_url
 from pdf_extract.parish_sites.locate import find_bulletin_page_urls
@@ -454,3 +455,48 @@ def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:
     pdf = f"{HOME}/uploads/bulletin-2026-09-27.pdf"
     assert fetch._download_pdf(fetch_url=pdf, source_url=pdf) == b"%PDF-1.7"
     assert calls == [pdf, pdf]
+
+
+# ── Recipes ─────────────────────────────────────────────────────────────────
+
+def test_recipe_reads_collector_page_or_both() -> None:
+    page = f"{HOME}/bulletins"
+    assert Recipe.parse("", website=HOME) == Recipe()
+    assert Recipe.parse(page, website=HOME) == Recipe(page=page)
+    assert Recipe.parse(f"dated-post {page}", website=HOME) == Recipe(page, "dated-post")
+    # A collector alone reads the website as the bulletin page.
+    assert Recipe.parse("page-pdfs", website=page) == Recipe(page, "page-pdfs")
+    assert Recipe(page, "page-pdfs").text(website=page) == "page-pdfs"
+    assert Recipe(page, "page-pdfs").text(website=HOME) == f"page-pdfs {page}"
+    with pytest.raises(ValueError, match="Unknown collector 'pdfs'"):
+        Recipe.parse("pdfs", website=HOME)
+    with pytest.raises(ValueError, match="two pages"):
+        Recipe.parse(f"{page} {HOME}", website=HOME)
+
+
+def test_a_recipe_skips_the_homepage_and_runs_only_its_collector() -> None:
+    # The homepage is not recorded: a pinned page is read without it. The page
+    # lists this week's post, which dated-post would follow, and an older PDF.
+    pages = {
+        f"{HOME}/bulletins": (
+            '<a href="/files/bulletin-2026-09-20.pdf">Bulletin</a>'
+            '<a href="/2026/09/25/bulletin-september-27/">Bulletin for September 27</a>'
+        ),
+        f"{HOME}/2026/09/25/bulletin-september-27/": '<a href="/files/0927.pdf">Read it</a>',
+    }
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=TODAY, page=_site(pages),
+        recipe=f"page-pdfs {HOME}/bulletins",
+    )
+    assert link.source_url == f"{HOME}/files/bulletin-2026-09-20.pdf"
+    assert link.how == f"page-pdfs on {HOME}/bulletins: current"
+    assert link.recipe == f"page-pdfs {HOME}/bulletins"
+
+
+def test_a_recipe_whose_collector_finds_nothing_fails_rather_than_guessing() -> None:
+    pages = {f"{HOME}/bulletins": '<iframe src="https://designrr.page/?id=1"></iframe>'}
+    with pytest.raises(ValueError, match="No PDF links found on bulletin page"):
+        _resolve_other(
+            provider_id=HOME, reference_date=TODAY, page=_site(pages),
+            recipe=f"page-pdfs {HOME}/bulletins",
+        )

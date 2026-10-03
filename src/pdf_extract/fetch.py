@@ -9,6 +9,7 @@ import time
 from collections.abc import Callable, Collection
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
+from typing import NamedTuple
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, quote, unquote, urljoin, urlparse, urlunparse
 from urllib.request import Request, urlopen
@@ -20,7 +21,7 @@ from pdf_extract.browser import (
     launch_stealth_browser,
     wait_for_selector_quietly,
 )
-from pdf_extract.parish_sites import resolve_parish_site
+from pdf_extract.parish_sites import Recipe, resolve_parish_site
 from pdf_extract.parish_sites.dates import parse_date, safe_date
 from pdf_extract.pdf_compact import compact_bulletin_pdf
 from pdf_extract.runs import (
@@ -74,6 +75,9 @@ class BulletinLink:
     # How the resolver came to this link, for the run report; empty when the
     # provider has only one way.
     how: str = ""
+    # For a resolver that can guess: the recipe that pins the way it found
+    # this link (see parish_sites.Recipe).
+    recipe: str = ""
 
 
 # ── eCatholic bulletin resolution ───────────────────────────────────────────
@@ -315,18 +319,26 @@ def _extract_discover_mass_pdf_url_from_href(*, href: str, base_url: str) -> tup
 
 def build_latest_other_bulletin_links(
     *, provider_id: str, reference_date: date | None = None, page: PageLike | None = None,
+    recipe: str = "",
 ) -> BulletinLink:
-    """This week's bulletin on the parish's own site, `provider_id` its homepage."""
+    """This week's bulletin on the parish's own site.
+
+    `provider_id` is the parish's website, and `recipe` how to read it, if one
+    was recorded (see parish_sites.Recipe).
+    """
+    pinned = Recipe.parse(recipe, website=provider_id)
 
     def _run(p: PageLike) -> BulletinLink:
         resolution = resolve_parish_site(
             homepage_url=provider_id, reference_date=reference_date or date.today(), page=p,
+            recipe=pinned,
         )
         LOGGER.info("Resolved %s: %s", provider_id, resolution.describe())
         return BulletinLink(
             source_url=resolution.candidate.source_url,
             fetch_url=resolution.candidate.fetch_url,
             how=resolution.describe(),
+            recipe=resolution.recipe.text(website=provider_id),
         )
 
     if page is not None:
@@ -371,6 +383,10 @@ class _ProviderSpec:
     id_column: str
     """The parishes.csv column `build` takes as its provider_id."""
 
+    recipe_column: str | None = None
+    """The column `build` takes as its recipe, for a provider that reads a
+    parish's own site."""
+
 
 # Adding a provider means writing its builder and adding one row here: this
 # table is what the fetch stage supports, and where each provider's id comes
@@ -388,34 +404,50 @@ _PROVIDERS: dict[str, _ProviderSpec] = {
     ),
     OTHER_TYPE: _ProviderSpec(
         build=build_latest_other_bulletin_links, id_column="homepage_url",
+        recipe_column="provider_id",
     ),
     # A parish that keeps its bulletins in a shared Drive folder links the
     # folder from its homepage, which the "other" resolver follows.
     GOOGLE_DRIVE_TYPE: _ProviderSpec(
         build=build_latest_other_bulletin_links, id_column="homepage_url",
+        recipe_column="provider_id",
     ),
 }
 
 SUPPORTED_BULLETIN_PROVIDERS = frozenset(_PROVIDERS)
 
 
+class FetchSource(NamedTuple):
+    """What the fetch stage reads one parish's bulletin with."""
+
+    provider: str
+    provider_id: str
+    recipe: str = ""
+
+
 def _build_bulletin_link(
     bulletin_provider: str, fetch_provider_id: str, *, page: PageLike | None = None,
+    recipe: str = "",
 ) -> BulletinLink:
     spec = _PROVIDERS.get(bulletin_provider)
     if spec is None:
         raise ValueError(f"Unsupported bulletin_provider: {bulletin_provider}")
-    return spec.build(provider_id=fetch_provider_id, page=page)
+    if spec.recipe_column is None:
+        return spec.build(provider_id=fetch_provider_id, page=page)
+    return spec.build(provider_id=fetch_provider_id, page=page, recipe=recipe)
 
 
-def _resolve_fetch_source(parish) -> tuple[str, str] | None:
-    """The provider and provider id to fetch this parish with, or None to skip it."""
+def _resolve_fetch_source(parish) -> FetchSource | None:
+    """The provider, provider id and recipe to fetch this parish with, or None to skip it."""
     provider = (parish["bulletin_provider"] or "").strip()
     spec = _PROVIDERS.get(provider)
     if spec is None:
         return None
     provider_id = (parish[spec.id_column] or "").strip()
-    return (provider, provider_id) if provider_id else None
+    if not provider_id:
+        return None
+    recipe = (parish[spec.recipe_column] or "").strip() if spec.recipe_column else ""
+    return FetchSource(provider, provider_id, recipe)
 
 
 # ── HTTP helpers ────────────────────────────────────────────────────────────
@@ -520,14 +552,16 @@ def fetch_bulletins(
                     # Unsupported provider (e.g. no_bulletin): not a
                     # parish we expect to refresh, so keep it out of the stale report.
                     continue
-                bulletin_provider, fetch_provider_id = fetch_source
                 attempted_slugs.append(slug)
 
                 def record(status: str, **fields) -> None:
                     record_parish_result(conn, run_id, slug, "fetch", status, **fields)
 
                 try:
-                    link = _build_bulletin_link(bulletin_provider, fetch_provider_id, page=page)
+                    link = _build_bulletin_link(
+                        fetch_source.provider, fetch_source.provider_id, page=page,
+                        recipe=fetch_source.recipe,
+                    )
                 except ValueError as exc:
                     LOGGER.warning("Skipping parish %s: %s", slug, exc)
                     record(FETCH_RESOLVE_FAILED, detail=str(exc))

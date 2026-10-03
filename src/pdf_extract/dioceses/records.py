@@ -33,6 +33,7 @@ from typing import Any
 import yaml
 
 from pdf_extract import storage
+from pdf_extract.parish_sites import Recipe
 
 META_FILE = "diocese.md"
 ROSTERS_DIR = "rosters"
@@ -44,6 +45,9 @@ KNOWN_BULLETIN_PROVIDERS = frozenset(
 )
 # Providers `fetch` looks up by account id rather than by the parish website.
 PROVIDERS_NEEDING_ID = frozenset({"parishes_online", "discover_mass"})
+# Providers that read the parish's own site, whose provider_id is an optional
+# recipe pinning how (see pdf_extract.parish_sites.Recipe).
+PROVIDERS_TAKING_RECIPE = frozenset({"other", "google_drive"})
 
 # Why a place is not modelled. Keep the classes apart: `closed` has to stay a
 # record of what shut down, so an open church that publishes nothing is
@@ -128,7 +132,8 @@ still lists that is not here, and where it went (excluded/, open/, another paris
 ## Website and bulletin provider
 
 TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from.
+provider_id and publication came from. For `other`, the provider_id recipe and the
+`fetch:check` run that suggested it.
 
 ## Not yet confirmed
 
@@ -611,6 +616,11 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         p.incomplete.append(f"{label}: bulletin_provider not identified yet")
     if provider in PROVIDERS_NEEDING_ID and not r.get("provider_id"):
         p.incomplete.append(f"{label}: {provider} needs a provider_id for fetch to find it")
+    if provider in PROVIDERS_TAKING_RECIPE and r.get("provider_id"):
+        try:
+            Recipe.parse(str(r["provider_id"]), website=website)
+        except ValueError as exc:
+            p.errors.append(f"{label}: provider_id is not a fetch recipe: {exc}")
     for pub in r.get("publication") or []:
         problem = publication_problem(str(pub))
         if problem:
