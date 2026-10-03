@@ -27,7 +27,8 @@ from pdf_extract.apply import (
     apply_verify_results,
 )
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
-from pdf_extract.classifiers import available_classifiers
+from pdf_extract.classifiers import ClassifierOptionError, available_classifiers
+from pdf_extract.classifiers.openai_responses import IMAGE_DETAILS, REASONING_EFFORTS
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
     DEFAULT_KEEP_MONTHLY,
@@ -43,6 +44,9 @@ from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
 from pdf_extract.dioceses import DioceseError
 from pdf_extract.dioceses.cli import add_diocese_parser
+from pdf_extract.evals.report import write_report as write_eval_report
+from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
+from pdf_extract.evals.run import run as run_eval
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
 from pdf_extract.fetch import fetch_bulletins
@@ -110,6 +114,32 @@ def _add_common_args(parser: argparse.ArgumentParser, default_level: str = "INFO
     )
 
 
+def _add_eval_model_args(parser: argparse.ArgumentParser) -> None:
+    """Model settings for `eval run`; `eval report` takes the same ones to find that run."""
+    parser.add_argument(
+        "--model",
+        help=(
+            "OpenAI model to run in place of the classifier's own, e.g. gpt-6.1-sol; "
+            "output goes under data/runs/<model>/ (default: gpt-6-luna)"
+        ),
+    )
+    parser.add_argument(
+        "--reasoning", choices=REASONING_EFFORTS,
+        help="Reasoning effort (default: the classifier's, medium for gpt-6-luna)",
+    )
+    parser.add_argument(
+        "--image-detail", choices=IMAGE_DETAILS,
+        help=(
+            "Detail level the bulletin is read at (default: the classifier's, low for "
+            "gpt-6-luna). `original` needs --pdf-as-images"
+        ),
+    )
+    parser.add_argument(
+        "--pdf-as-images", action="store_true",
+        help="Render every PDF page to an image and send those instead of the PDF",
+    )
+
+
 def _ensure_db() -> None:
     """Migrate the DB and re-seed parishes/churches from the CSVs before a command."""
     ensure_db(DEFAULT_DB_PATH)
@@ -149,6 +179,38 @@ def _cmd_extract(args: argparse.Namespace) -> Result:
         classifier_name=args.classifier,
         parish_name=args.parish,
         concurrency=args.concurrency,
+    )
+
+
+def _eval_classifier_options(args: argparse.Namespace) -> dict[str, Any]:
+    """The model settings given on the command line; unset ones keep the classifier's default."""
+    return {
+        "model": args.model,
+        "reasoning_effort": args.reasoning,
+        "file_detail": args.image_detail,
+        "pdf_as_images": True if args.pdf_as_images else None,
+    }
+
+
+def _cmd_eval_run(args: argparse.Namespace) -> Result:
+    _ensure_db()
+    return run_eval(
+        classifier_name=args.classifier,
+        statuses=args.status or EVAL_DEFAULT_STATUSES,
+        parish_slug=args.parish,
+        limit=args.limit,
+        concurrency=args.concurrency,
+        refresh=args.refresh,
+        classifier_options=_eval_classifier_options(args),
+    )
+
+
+def _cmd_eval_report(args: argparse.Namespace) -> Result:
+    return write_eval_report(
+        classifier_name=args.classifier,
+        version=args.version,
+        classifier_options=_eval_classifier_options(args),
+        statuses=args.status or EVAL_DEFAULT_STATUSES,
     )
 
 
@@ -348,6 +410,60 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     extract_parser.set_defaults(handler=_cmd_extract)
     _add_common_args(extract_parser)
+
+    # -- eval (run a classifier over the ground-truth labeled bulletins) --
+    eval_parser = subparsers.add_parser(
+        "eval", help="Run classifiers over the labeled bulletins in data/labels/",
+    )
+    eval_parser.set_defaults(help_parser=eval_parser)
+    eval_subparsers = eval_parser.add_subparsers(dest="eval_command")
+
+    eval_run_parser = eval_subparsers.add_parser(
+        "run",
+        help="Classify the labeled bulletins; writes data/runs/<classifier>/eval/<version>/",
+    )
+    eval_run_parser.add_argument(
+        "--classifier", required=True, choices=available_classifiers(),
+        help="Name of the registered classifier",
+    )
+    eval_run_parser.add_argument(
+        "--status", action="append", choices=["done", "in_progress", "skipped"],
+        help="Label statuses to include; repeatable (default: done)",
+    )
+    eval_run_parser.add_argument("--parish", help="Only this parish slug")
+    eval_run_parser.add_argument(
+        "--limit", type=int, help="Only the first N selected bulletins (a cheap smoke test)",
+    )
+    eval_run_parser.add_argument(
+        "--concurrency", type=int, default=5,
+        help="Number of parallel classifier calls (default: 5)",
+    )
+    eval_run_parser.add_argument(
+        "--refresh", action="store_true",
+        help="Ignore cached results and call the classifier again",
+    )
+    _add_eval_model_args(eval_run_parser)
+    eval_run_parser.set_defaults(handler=_cmd_eval_run)
+    _add_common_args(eval_run_parser)
+
+    eval_report_parser = eval_subparsers.add_parser(
+        "report",
+        help="Score an eval run against the labels; writes report.md and report.json",
+    )
+    eval_report_parser.add_argument(
+        "--classifier", required=True, choices=available_classifiers(),
+        help="Name of the registered classifier",
+    )
+    eval_report_parser.add_argument(
+        "--version", help="Classifier version to score (default: its current version)",
+    )
+    eval_report_parser.add_argument(
+        "--status", action="append", choices=["done", "in_progress"],
+        help="Label statuses to score; repeatable (default: done). Skipped labels never are",
+    )
+    _add_eval_model_args(eval_report_parser)
+    eval_report_parser.set_defaults(handler=_cmd_eval_report)
+    _add_common_args(eval_report_parser)
 
     # -- compare (experimental: pairwise metrics over previous extract runs) --
     compare_parser = subparsers.add_parser(
@@ -616,7 +732,7 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         result = handler(args)
-    except (DioceseError, RunScopeError) as e:
+    except (DioceseError, RunScopeError, ClassifierOptionError) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)
         return 1

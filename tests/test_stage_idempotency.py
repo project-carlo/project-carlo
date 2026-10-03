@@ -2,14 +2,15 @@ import hashlib
 import logging
 import threading
 from contextlib import contextmanager
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import pytest
 
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.db import create_db
-from pdf_extract.fetch import BulletinLink, fetch_bulletins
+from pdf_extract.duplicates import Validators
+from pdf_extract.fetch import BulletinLink, Download, FetchSource, fetch_bulletins
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import load_history_from_db, save_history_to_db
 from pdf_extract.runs import parish_results, start_run
@@ -131,28 +132,69 @@ def _bulletins(db: Path) -> list[dict]:
         conn.close()
 
 
-def test_fetch_stage_is_idempotent(monkeypatch, db: Path) -> None:
-    monkeypatch.setattr(
-        "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
-            source_url="https://example.org/bulletin.pdf",
-            fetch_url="https://example.org/bulletin.pdf",
-        ),
-    )
-    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: b"%PDF-1.4 fake")
-
+def _fake_browser(monkeypatch) -> None:
     @contextmanager
     def fake_launch_stealth_browser():
         yield None
 
     monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
 
+
+def _link_to(monkeypatch, *urls: str) -> list[str]:
+    """Resolve each parish to the next of `urls` (the last one repeating); returns the calls."""
+    calls: list[str] = []
+
+    def build_link(
+        bulletin_provider, fetch_provider_id, *, page=None, recipe="", reference_date=None,
+    ):
+        url = urls[min(len(calls), len(urls) - 1)]
+        calls.append(url)
+        return BulletinLink(source_url=url, fetch_url=url)
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    return calls
+
+
+def _serve(monkeypatch, *pdfs: bytes, etag: str | None = None) -> list[dict]:
+    """Download each of `pdfs` in turn (the last one repeating); returns the calls."""
+    calls: list[dict] = []
+
+    def download(**kwargs):
+        pdf = pdfs[min(len(calls), len(pdfs) - 1)]
+        calls.append(kwargs)
+        return Download(pdf=pdf, etag=etag)
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    return calls
+
+
+def _results(db: Path, run_id: str) -> dict[str, dict]:
+    conn = connect_db(db)
+    try:
+        return {r["parish_slug"]: r for r in parish_results(conn, run_id)}
+    finally:
+        conn.close()
+
+
+def _start_run(db: Path, run_id: str) -> None:
+    conn = connect_db(db)
+    try:
+        start_run(conn, run_id, git_sha=None, trigger="test")
+    finally:
+        conn.close()
+
+
+def test_fetch_stage_is_idempotent(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 fake")
+    _fake_browser(monkeypatch)
+
     first = fetch_bulletins(parish_name="Test Parish")
     second = fetch_bulletins(parish_name="Test Parish")
 
     assert first["fetched_bulletins"] == 1
     assert second["fetched_bulletins"] == 0
-    assert second["skipped_existing_urls"] == 1
+    assert second["unchanged_bulletins"] == 1
 
     [bulletin] = _bulletins(db)
     assert bulletin["processed_at"] is None
@@ -161,22 +203,213 @@ def test_fetch_stage_is_idempotent(monkeypatch, db: Path) -> None:
     ) == b"%PDF-1.4 fake"
 
 
-def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db: Path) -> None:
-    monkeypatch.setattr(
-        "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
-            source_url="https://example.org/bulletin.pdf",
-            fetch_url="https://example.org/bulletin.pdf",
-        ),
+def test_fetch_takes_a_new_issue_at_an_address_it_already_has(monkeypatch, db: Path) -> None:
+    # stpaulsnorwich.com overwrites /bulletin.pdf each week.
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 week 1", b"%PDF-1.4 week 1", b"%PDF-1.4 week 2")
+    _fake_browser(monkeypatch)
+
+    results = [fetch_bulletins(parish_name="Test Parish") for _ in range(3)]
+
+    assert [r["fetched_bulletins"] for r in results] == [1, 0, 1]
+    assert [b["content_hash"] for b in _bulletins(db)] == [
+        hashlib.sha256(b"%PDF-1.4 week 1").hexdigest(),
+        hashlib.sha256(b"%PDF-1.4 week 2").hexdigest(),
+    ]
+
+
+def test_fetch_compares_a_dated_address_by_content(monkeypatch, db: Path) -> None:
+    # The date in an address is a hint, not proof the bulletin is unchanged.
+    _link_to(monkeypatch, "https://example.org/bulletins/20260927.pdf")
+    downloads = _serve(monkeypatch, b"%PDF-1.4 first", b"%PDF-1.4 reissued")
+    _fake_browser(monkeypatch)
+
+    fetch_bulletins(parish_name="Test Parish")
+    second = fetch_bulletins(parish_name="Test Parish")
+
+    assert len(downloads) == 2
+    assert second["fetched_bulletins"] == 1
+
+
+def test_fetch_records_a_bulletin_served_at_a_new_address_as_seen_again(
+    monkeypatch, db: Path,
+) -> None:
+    # Discover Mass hands out a new download.php?bulletin= token on every
+    # request for the same PDF.
+    _link_to(
+        monkeypatch,
+        "https://bulletins.discovermass.com/download.php?bulletin=first-token",
+        "https://bulletins.discovermass.com/download.php?bulletin=second-token",
     )
-    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: b"%PDF-1.4 big")
+    _serve(monkeypatch, b"%PDF-1.4 same")
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-2")
+
+    fetch_bulletins(parish_name="Test Parish")
+    [first] = _bulletins(db)
+    second = fetch_bulletins(parish_name="Test Parish", run_id="run-2")
+
+    [bulletin] = _bulletins(db)
+    assert second["unchanged_bulletins"] == 1
+    assert bulletin["source_url"].endswith("first-token")
+    assert bulletin["last_seen_at"] >= first["last_seen_at"]
+    result = _results(db, "run-2")["test-parish"]
+    assert result["status"] == "unchanged"
+    assert result["detail"] == f"same bulletin as #{bulletin['id']} (byte hash)"
+
+
+def test_fetch_asks_whether_the_copy_it_has_is_current(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    calls: list[dict] = []
+
+    def download(**kwargs):
+        calls.append(kwargs)
+        if kwargs.get("validators"):
+            return Download(pdf=None)
+        return Download(pdf=b"%PDF-1.4 fake", etag='"v1"', last_modified="Sat, 26 Sep 2026")
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    _fake_browser(monkeypatch)
+
+    fetch_bulletins(parish_name="Test Parish")
+    second = fetch_bulletins(parish_name="Test Parish")
+
+    assert calls[0]["validators"] is None
+    assert calls[1]["validators"] == Validators('"v1"', "Sat, 26 Sep 2026")
+    assert second["unchanged_bulletins"] == 1
+    [bulletin] = _bulletins(db)
+    assert bulletin["etag"] == '"v1"'
+
+
+def test_fetch_skips_a_parish_that_has_this_weekends_bulletin(monkeypatch, db: Path) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/current.pdf", content_hash="current",
+        fetched_at="2026-10-03T09:00:00Z", processed_at="2026-10-03T10:00:00Z",
+        published_date="2026-10-04",
+    )
+    resolved = _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 fake")
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    # A run lands anywhere from the Saturday before to the Monday after.
+    for today in (date(2026, 10, 3), date(2026, 10, 5)):
+        result = fetch_bulletins(parish_name="Test Parish", run_id="run-1", today=today)
+        assert result["already_current"] == 1
+
+    assert resolved == []
+    assert _results(db, "run-1")["test-parish"]["status"] == "current"
+    assert result["stale_parishes"] == 0
+
+    fetch_bulletins(parish_name="Test Parish", today=date(2026, 10, 10))
+    assert len(resolved) == 1, "next weekend is fetched"
+
+
+@pytest.mark.parametrize(
+    ("fetched_at", "published_date", "processed_at", "wrong_bulletin"),
+    [
+        pytest.param("2026-10-03T09:00:00Z", None, None, False, id="no AI date"),
+        pytest.param(
+            "2026-10-03T09:00:00Z", "2026-10-04", "2026-10-03T10:00:00Z", True,
+            id="wrong bulletin",
+        ),
+        pytest.param(
+            # Fetched long before the date the extractor read: a misreading.
+            "2026-09-13T09:00:00Z", "2026-10-04", "2026-09-13T10:00:00Z", False,
+            id="implausible date",
+        ),
+    ],
+)
+def test_fetch_does_not_trust_a_doubtful_date_to_skip(
+    monkeypatch, db: Path, fetched_at, published_date, processed_at, wrong_bulletin,
+) -> None:
+    bulletin_id = _add_bulletin(
+        db, source_url="https://example.org/doubtful.pdf", content_hash="doubtful",
+        fetched_at=fetched_at, processed_at=processed_at, published_date=published_date,
+    )
+    if wrong_bulletin:
+        conn = connect_db(db)
+        with conn:
+            conn.execute("UPDATE bulletin SET wrong_bulletin = 1 WHERE id = ?", (bulletin_id,))
+        conn.close()
+    resolved = _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 fake")
+    _fake_browser(monkeypatch)
+
+    result = fetch_bulletins(parish_name="Test Parish", today=date(2026, 10, 4))
+
+    assert result["already_current"] == 0
+    assert len(resolved) == 1
+
+
+def test_fetch_does_not_count_a_failed_recheck_as_a_failure(monkeypatch, db: Path) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/bulletin.pdf", content_hash="had",
+        fetched_at="2026-09-26T09:00:00Z",
+    )
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+
+    def download(**kwargs):
+        raise OSError("connection reset")
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    # The bulletin is this week's, but undated, so it is checked again.
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1", today=date(2026, 9, 26))
+
+    assert result["failed_parishes"] == 0
+    assert result["recheck_failed"] == 1
+    assert _results(db, "run-1")["test-parish"]["status"] == "recheck_failed"
+
+
+def test_fetch_counts_a_failed_download_as_a_failure_when_the_address_had_an_older_week(
+    monkeypatch, db: Path,
+) -> None:
+    # A site that overwrites one address each week: what we have from it is
+    # last week's, so failing to download it now misses this week's.
+    _add_bulletin(
+        db, source_url="https://example.org/bulletin.pdf", content_hash="had",
+        fetched_at="2026-09-26T09:00:00Z", published_date="2026-09-27",
+        processed_at="2026-09-26T10:00:00Z",
+    )
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+
+    def download(**kwargs):
+        raise OSError("connection reset")
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1", today=date(2026, 10, 3))
+
+    assert result["failed_parishes"] == 1
+    assert result["recheck_failed"] == 0
+    assert _results(db, "run-1")["test-parish"]["status"] == "download_failed"
+
+
+def test_fetch_resolves_the_bulletin_for_the_run_date(monkeypatch, db: Path) -> None:
+    seen: list[date | None] = []
+
+    def build_link(bulletin_provider, fetch_provider_id, *, page=None, recipe="", reference_date=None):
+        seen.append(reference_date)
+        raise ValueError("stop here")
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    _fake_browser(monkeypatch)
+
+    fetch_bulletins(parish_name="Test Parish", today=date(2026, 9, 27))
+
+    assert seen == [date(2026, 9, 27)]
+
+
+def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 big")
     monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: b"%PDF small")
-
-    @contextmanager
-    def fake_launch_stealth_browser():
-        yield None
-
-    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+    _fake_browser(monkeypatch)
 
     fetch_bulletins(parish_name="Test Parish")
 
@@ -188,118 +421,51 @@ def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db
 
 
 def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:
-    # The same PDF re-posted at a new URL: the stored copy is not rewritten.
-    urls = iter(["https://example.org/a.pdf", "https://example.org/b.pdf"])
-
-    def build_link(bulletin_provider, fetch_provider_id, *, page=None):
-        url = next(urls)
-        return BulletinLink(source_url=url, fetch_url=url)
-
-    compactions = []
-
-    def compact(data: bytes) -> bytes:
-        compactions.append(data)
-        return b"%PDF compacted " + str(len(compactions)).encode()
-
-    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
-    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: b"%PDF-1.4 same")
-    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", compact)
-
-    @contextmanager
-    def fake_launch_stealth_browser():
-        yield None
-
-    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
-
-    fetch_bulletins(parish_name="Test Parish")
-    fetch_bulletins(parish_name="Test Parish")
-
-    assert len(compactions) == 1
+    # A PDF stored by a run whose database was not published: the stored copy
+    # is not rewritten.
     content_hash = hashlib.sha256(b"%PDF-1.4 same").hexdigest()
-    assert get_store().get(bulletin_pdf_key("test-parish", content_hash)) == b"%PDF compacted 1"
-
-
-@pytest.mark.parametrize(
-    ("provider", "url", "stored"),
-    [
-        # A parish that overwrites one file every week: each new issue is kept.
-        ("other", "https://test.org/files/bulletin.pdf", 2),
-        # A dated address names one issue, and a publisher's address is never reused.
-        ("other", "https://test.org/files/bulletin-2026-09-27.pdf", 1),
-        ("ecatholic", "https://files.ecatholic.com/1/bulletins/bulletin.pdf", 1),
-    ],
-)
-def test_fetch_reads_an_undated_bulletin_address_again_for_a_new_issue(
-    monkeypatch, db: Path, provider: str, url: str, stored: int,
-) -> None:
-    issues = iter([b"%PDF-1.4 week 1", b"%PDF-1.4 week 1", b"%PDF-1.4 week 2"])
+    get_store().put(bulletin_pdf_key("test-parish", content_hash), b"%PDF compacted before")
+    _link_to(monkeypatch, "https://example.org/a.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 same")
+    compactions = []
     monkeypatch.setattr(
-        "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
-            source_url=url, fetch_url=url,
-        ),
+        "pdf_extract.fetch.compact_bulletin_pdf", lambda data: compactions.append(data) or data,
     )
-    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: next(issues))
-    monkeypatch.setattr(
-        "pdf_extract.fetch._resolve_fetch_source", lambda parish: (provider, "https://test.org"),
-    )
+    _fake_browser(monkeypatch)
 
-    @contextmanager
-    def fake_launch_stealth_browser():
-        yield None
+    fetch_bulletins(parish_name="Test Parish")
 
-    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
-
-    results = [fetch_bulletins(parish_name="Test Parish") for _ in range(3)]
-
-    assert [r["fetched_bulletins"] for r in results] == [1, 0, stored - 1]
-    bulletins = _bulletins(db)
-    assert len(bulletins) == stored
-    if stored == 2:
-        week_2 = hashlib.sha256(b"%PDF-1.4 week 2").hexdigest()
-        assert {b["source_url"] for b in bulletins} == {url, f"{url}#{week_2[:12]}"}
+    assert compactions == []
+    assert [b["content_hash"] for b in _bulletins(db)] == [content_hash]
+    assert get_store().get(
+        bulletin_pdf_key("test-parish", content_hash)
+    ) == b"%PDF compacted before"
 
 
 def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) -> None:
-    def build_link(bulletin_provider, fetch_provider_id, *, page=None):
-        return BulletinLink(
-            source_url="https://example.org/bulletin.pdf",
-            fetch_url="https://example.org/bulletin.pdf",
-        )
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
 
-    def download(*, fetch_url, source_url):
+    def download(**kwargs):
         if download.calls:
             raise OSError("connection reset")
         download.calls += 1
-        return b"%PDF-1.4 fake"
+        return Download(pdf=b"%PDF-1.4 fake")
 
     download.calls = 0
 
-    @contextmanager
-    def fake_launch_stealth_browser():
-        yield None
-
-    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
-    monkeypatch.setattr("pdf_extract.fetch._download_pdf", download)
-    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    _fake_browser(monkeypatch)
     monkeypatch.setattr(
         "pdf_extract.fetch._resolve_fetch_source",
-        lambda parish: ("ecatholic", parish["slug"]),
+        lambda parish: FetchSource("ecatholic", parish["slug"]),
     )
-
-    conn = connect_db(db)
-    start_run(conn, "run-1", git_sha=None, trigger="test")
-    conn.close()
+    _start_run(db, "run-1")
 
     result = fetch_bulletins(run_id="run-1")
     assert result["fetched_bulletins"] == 1
     assert result["failed_parishes"] == 2
 
-    conn = connect_db(db)
-    try:
-        statuses = {r["parish_slug"]: r["status"] for r in parish_results(conn, "run-1")}
-    finally:
-        conn.close()
+    statuses = {slug: r["status"] for slug, r in _results(db, "run-1").items()}
     assert statuses == {
         "test-parish": "new",
         "test-parish-1": "download_failed",
@@ -310,18 +476,13 @@ def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) ->
 def test_fetch_limits_to_the_given_slugs(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+        lambda bulletin_provider, fetch_provider_id, **_: BulletinLink(
             source_url=f"https://example.org/{fetch_provider_id}.pdf",
             fetch_url=f"https://example.org/{fetch_provider_id}.pdf",
         ),
     )
-    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: b"%PDF-1.4 fake")
-
-    @contextmanager
-    def fake_launch_stealth_browser():
-        yield None
-
-    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+    _serve(monkeypatch, b"%PDF-1.4 fake")
+    _fake_browser(monkeypatch)
 
     result = fetch_bulletins(slugs=["test-parish-1"])
 
@@ -466,7 +627,118 @@ def test_process_skips_events_when_wrong_bulletin_flag_is_set(
     [bulletin] = _bulletins(db)
     assert bulletin["processed_at"] is not None
     assert bulletin["published_date"] == "2025-01-15"
+    assert bulletin["wrong_bulletin"] == 1
     assert _current_events(db) == []
+
+
+def _processed_week(db: Path, week: str, *, hash: str, start_time: str) -> int:
+    """A processed bulletin for the week of `week`, fetched the day before, with one Mass."""
+    fetched = (date.fromisoformat(week) - timedelta(days=1)).isoformat()
+    bulletin_id = _add_bulletin(
+        db, source_url=f"https://example.org/{hash}.pdf", content_hash=hash,
+        fetched_at=f"{fetched}T09:00:00Z", processed_at=f"{fetched}T10:00:00Z",
+        published_date=week,
+    )
+    conn = connect_db(db)
+    replace_bulletin_events(conn, bulletin_id, [{
+        "church_slug": "st-mary-anytown", "event_type": "mass", "event_kind": "weekly",
+        "day_of_week": "Sunday", "start_time": start_time,
+    }])
+    conn.close()
+    return bulletin_id
+
+
+def _process_new(monkeypatch, db: Path, *, published_date: str, fetched_at: str) -> dict:
+    """Fetch-and-process a new bulletin for test-parish under run "run-1"; its result."""
+    _add_bulletin(
+        db, source_url="https://example.org/new.pdf", content_hash="new",
+        fetched_at=fetched_at,
+    )
+    _stub_extractor(
+        monkeypatch, _extraction(_event(start_time="11:00 AM"), published_date=published_date),
+    )
+    conn = connect_db(db)
+    start_run(conn, "run-1", git_sha=None, trigger="test")
+    conn.close()
+    process_bulletins(parish_name="Test Parish", run_id="run-1")
+    conn = connect_db(db)
+    try:
+        [result] = parish_results(conn, "run-1")
+    finally:
+        conn.close()
+    return result
+
+
+def test_process_takes_a_second_bulletin_for_the_week_as_a_correction(
+    monkeypatch, db: Path,
+) -> None:
+    _processed_week(db, "2026-09-27", hash="last-week", start_time="8:00 AM")
+    first = _processed_week(db, "2026-10-04", hash="first", start_time="9:00 AM")
+
+    # Dated the Saturday vigil, a day before the first: still the same week.
+    result = _process_new(
+        monkeypatch, db, published_date="2026-10-03", fetched_at="2026-10-05T09:00:00Z",
+    )
+
+    assert result["status"] == "correction"
+    assert result["detail"] == f"replaces #{first} as the bulletin for 2026-10-04"
+    assert [e["start_time"] for e in _current_events(db)] == ["11:00 AM"]
+
+
+def test_process_flags_a_third_bulletin_for_one_week(monkeypatch, db: Path) -> None:
+    first = _processed_week(db, "2026-10-04", hash="first", start_time="9:00 AM")
+    second = _processed_week(db, "2026-10-04", hash="second", start_time="10:00 AM")
+
+    result = _process_new(
+        monkeypatch, db, published_date="2026-10-04", fetched_at="2026-10-05T09:00:00Z",
+    )
+
+    assert result["status"] == "repeated_week"
+    assert result["detail"].startswith(
+        f"bulletin 3 for 2026-10-04 (after #{first}, #{second})"
+    )
+    assert [e["start_time"] for e in _current_events(db)] == ["11:00 AM"]
+
+
+def test_process_keeps_an_old_issue_without_showing_it(monkeypatch, db: Path) -> None:
+    current = _processed_week(db, "2026-10-04", hash="current", start_time="9:00 AM")
+
+    # Fetched after the current bulletin, but the site fell back to an old issue.
+    result = _process_new(
+        monkeypatch, db, published_date="2026-09-20", fetched_at="2026-10-06T09:00:00Z",
+    )
+
+    assert result["status"] == "old_issue"
+    assert result["detail"] == (
+        f"for 2026-09-20, older than #{current} for 2026-10-04; kept, not shown"
+    )
+    assert [e["start_time"] for e in _current_events(db)] == ["9:00 AM"]
+
+
+def test_process_takes_a_newer_bulletin_as_usual(monkeypatch, db: Path) -> None:
+    _processed_week(db, "2026-09-27", hash="last-week", start_time="9:00 AM")
+
+    result = _process_new(
+        monkeypatch, db, published_date="2026-10-04", fetched_at="2026-10-03T09:00:00Z",
+    )
+
+    assert (result["status"], result["detail"]) == ("extracted", None)
+    assert [e["start_time"] for e in _current_events(db)] == ["11:00 AM"]
+
+
+def test_a_misread_future_date_does_not_keep_a_bulletin_current(monkeypatch, db: Path) -> None:
+    misread = _add_bulletin(
+        db, source_url="https://example.org/misread.pdf", content_hash="misread",
+        fetched_at="2026-09-26T09:00:00Z", processed_at="2026-09-26T10:00:00Z",
+        published_date="2027-09-27",
+    )
+    later = _processed_week(db, "2026-10-04", hash="later", start_time="9:00 AM")
+    conn = connect_db(db)
+    try:
+        assert latest_bulletin_ids(conn) == {"test-parish": later}
+        assert misread != later
+    finally:
+        conn.close()
 
 
 def test_process_stores_published_date_and_note(monkeypatch, db: Path) -> None:

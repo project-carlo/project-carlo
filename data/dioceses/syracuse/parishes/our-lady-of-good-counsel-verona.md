@@ -2,7 +2,7 @@
 name: Our Lady of Good Counsel
 website: https://olgcc.org/bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://olgcc.org/bulletin/']
 group: ''
 evidence:
@@ -39,6 +39,11 @@ One: `churches/our-lady-of-good-counsel-verona.md`. The diocese's page lists no 
 
 Self-hosted on https://olgcc.org/bulletin/ (a Simple File List folder of dated PDFs), so that
 page is `website` and the `url:` publication, and the provider is `other`.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/our-lady-of-good-counsel-verona.json.gz`) the resolver found
+https://olgcc.org/wp-content/uploads/simple-file-list/27-September-2026.pdf this way,
+dated that week.
 
 ## Not yet confirmed
 

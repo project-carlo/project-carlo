@@ -2,7 +2,7 @@
 name: St. John the Evangelist & St. Mary's Oratory
 website: https://stjohncamden.com/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.jppc.net/onlinebulletins/4011template.pdf
 publication: ['url:https://www.church-bulletin.org/saint-john-the-evangelist-saint-mary-s-oratory-camden-ny-13316']
 group: ''
 evidence:
@@ -59,6 +59,12 @@ stjohncamden.com is the parish's own site; its "CURRENT BULLETIN" link redirects
 church-bulletin.org page, which lists dated PDFs. `bulletin_provider: other` with the site as `website`,
 as for Christ the Good Shepherd; `publication` is the listing page. Recent issues alternate between PDFs
 with and without a text layer; the pipeline's extraction reads the rendered PDF, so both should work.
+
+Fetch recipe `page-pdfs https://www.jppc.net/onlinebulletins/4011template.pdf`, pinned
+2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/st-john-the-evangelist-camden.json.gz`) the resolver found
+https://www.church-bulletin.org/bulletin/saint-john-the-evangelist-saint-mary-s-oratory-camden-ny-13316/2026-09-27.pdf
+this way, dated that week.
 
 ## Not yet confirmed
 

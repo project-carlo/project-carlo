@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import os
 from collections.abc import Iterator
 from contextlib import contextmanager
@@ -9,6 +10,15 @@ from typing import Protocol
 
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
+
+LOGGER = logging.getLogger(__name__)
+
+# Playwright waits for a matching selector to appear on a page before we scrape
+# anchor hrefs from it.
+PLAYWRIGHT_SELECTOR_TIMEOUT_MS = 15000
+# Short delay between retries when Playwright aborts a navigation because the
+# page initiated another one while we were waiting.
+PLAYWRIGHT_NAV_RETRY_DELAY_MS = 250
 
 
 def _env_bool(name: str, default: bool) -> bool:
@@ -71,3 +81,56 @@ def launch_stealth_browser(*, channel: str | None = None) -> Iterator[PageLike]:
             yield context.new_page()
         finally:
             browser.close()
+
+
+def goto_with_retry(*, page: PageLike, page_url: str, max_attempts: int = 3) -> None:
+    for attempt in range(1, max_attempts + 1):
+        try:
+            page.goto(page_url, wait_until="domcontentloaded")
+            return
+        except Exception as exc:
+            error_text = str(exc).lower()
+            interrupted = "interrupted by another navigation" in error_text
+            is_last_attempt = attempt == max_attempts
+            if not interrupted or is_last_attempt:
+                raise
+            LOGGER.warning(
+                "Navigation interrupted for %s (attempt %d/%d), retrying",
+                page_url, attempt, max_attempts,
+            )
+            page.wait_for_timeout(PLAYWRIGHT_NAV_RETRY_DELAY_MS)
+
+
+def wait_for_selector_quietly(
+    *, page: PageLike, selector: str, state: str | None, source_label: str,
+) -> None:
+    """Wait for `selector`, treating the wait itself as best-effort.
+
+    The wait only lets a fast page resolve in a second instead of blocking for
+    the full timeout. When it expires we still scrape whatever the DOM holds,
+    so a hidden or late link produces a real "nothing found" error (or a link)
+    rather than a Playwright timeout that hides why the parish was skipped.
+    """
+    try:
+        if state is None:
+            page.wait_for_selector(selector, timeout=PLAYWRIGHT_SELECTOR_TIMEOUT_MS)
+        else:
+            page.wait_for_selector(
+                selector, timeout=PLAYWRIGHT_SELECTOR_TIMEOUT_MS, state=state,
+            )
+    except Exception as exc:
+        LOGGER.warning(
+            "Selector %s did not settle for %s (%s); scraping the page anyway",
+            selector, source_label, type(exc).__name__,
+        )
+
+
+def anchor_text(anchor: AnchorLike) -> str:
+    try:
+        return anchor.inner_text().strip()
+    except Exception:
+        pass
+    try:
+        return (anchor.text_content() or "").strip()
+    except Exception:
+        return ""

@@ -2,7 +2,7 @@
 name: Our Lady of Fatima
 website: http://parishes.rcda.org/OurLadyOfFatima/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs http://parishes.rcda.org/OurLadyOfFatima/bulletin.php
 publication: ['url:http://parishes.rcda.org/OurLadyOfFatima/bulletin.php']
 group: Schoharie County Cluster
 evidence:
@@ -53,6 +53,12 @@ bulletin says 11:15 am (the bulletin is followed).
 The site is the parish's page on parishes.rcda.org, the address the diocese directory gives.
 The bulletin is self-hosted: `bulletin_provider: other`, `publication` is the bulletin index
 page. File names are `bulletins/<YYYY>/<Monthname>_<DD>.pdf`, not a numeric date.
+
+Fetch recipe `page-pdfs http://parishes.rcda.org/OurLadyOfFatima/bulletin.php`, pinned
+2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/our-lady-of-fatima-delanson.json.gz`) the resolver found
+http://parishes.rcda.org/OurLadyOfFatima/bulletins/2026/October_04.pdf this way, dated
+that week.
 
 ## Not yet confirmed
 

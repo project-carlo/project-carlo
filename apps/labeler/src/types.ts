@@ -21,6 +21,13 @@ export type WeekOfMonth = (typeof WEEKS_OF_MONTH)[number];
 
 export type Origin = "human" | "gemini" | "gemini-edited";
 
+/**
+ * An optional event is a judgment call whether it belongs in the schedule at
+ * all; the value is the preferred answer. Scoring leaves optional events out
+ * and reports how often a classifier made the preferred choice.
+ */
+export type OptionalPreference = "include" | "exclude";
+
 export type Status = "in_progress" | "done" | "skipped";
 
 export const FLAG_NAMES = ["wrong_bulletin", "unreadable", "no_schedule", "church_missing", "conflicting_info"] as const;
@@ -48,6 +55,8 @@ export interface LabelEvent {
   page_number: number | null;
   note: string | null;
   origin: Origin;
+  /** Null for a required event. Labels saved before this existed lack it. */
+  optional: OptionalPreference | null;
 }
 
 export interface Label {

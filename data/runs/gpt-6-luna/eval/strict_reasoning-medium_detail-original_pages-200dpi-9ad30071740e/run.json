@@ -1,0 +1,26 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-medium+detail-original+pages-200dpi+prompt-ebbd3108f0f8",
+  "ran_at": "2026-10-03T17:32:16Z",
+  "out_dir": "data/runs/gpt-6-luna/eval/strict_reasoning-medium_detail-original_pages-200dpi-9ad30071740e",
+  "label_statuses": [
+    "done"
+  ],
+  "parish": null,
+  "bulletins_selected": 19,
+  "bulletins_served": 19,
+  "cache_hits": 19,
+  "classifier_calls": 0,
+  "skipped": [],
+  "errors": [],
+  "events_written": 356,
+  "usage_new_calls": {},
+  "usage_all_served": {
+    "input_tokens": 653411,
+    "cached_tokens": 55584,
+    "cache_write_tokens": 3088,
+    "output_tokens": 51090,
+    "reasoning_tokens": 22685
+  },
+  "wall_seconds": 0.612
+}

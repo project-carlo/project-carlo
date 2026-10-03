@@ -12,11 +12,13 @@ dependencies = [
     "pydantic>=2.12.5",
     "playwright>=1.55.0",
     "google-genai>=1.65.0",
-    "openai>=1.55.0",
+    "openai>=3.23.0",
     "playwright-stealth>=2.0.2",
     "pypdf>=6.10.2",
     "boto3>=1.43.102",
     "pyyaml>=6.0.3",
+    "pypdfium2>=5.13.0",
+    "pillow>=12.3.0",
 ]
 
 [tool.hatch.build.targets.wheel]

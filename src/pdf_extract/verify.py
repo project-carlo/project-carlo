@@ -11,6 +11,7 @@ from pdf_extract.storage import (
     church_list_for_prompt,
     connect_db,
     get_parish_by_name,
+    latest_bulletin_order,
     load_json_dict,
     read_bulletin_pdf,
     save_json_dict,
@@ -74,11 +75,12 @@ def verify_churches(
                 LOGGER.info("Skipping already-verified parish %s", parish_slug)
                 continue
 
-            # Get latest bulletin PDF for this parish
+            # The parish's current bulletin: by week, not by when it was
+            # fetched, so a stray old issue is not what gets verified against.
             bulletin_row = conn.execute(
-                """SELECT content_hash FROM bulletin
+                f"""SELECT content_hash FROM bulletin
                    WHERE parish_id = ? AND content_hash IS NOT NULL
-                   ORDER BY fetched_at DESC LIMIT 1""",
+                   ORDER BY {latest_bulletin_order()} LIMIT 1""",
                 (parish_id,),
             ).fetchone()
 

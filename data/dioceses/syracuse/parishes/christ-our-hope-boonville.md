@@ -2,7 +2,7 @@
 name: Christ Our Hope Parish
 website: https://www.christourhoperc.org/bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.christourhoperc.org/bulletin/']
 group: ''
 evidence:
@@ -48,6 +48,11 @@ Self-hosted: the Bulletin page (https://www.christourhoperc.org/bulletin/) lists
 irregular file names, so `website` and the `url:` publication are that page and the provider is
 `other`. No ParishesOnline, eCatholic or Discover Mass channel was found. GCatholic's website for
 the churches, stjosephs-boonville.com, is an older site.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/christ-our-hope-boonville.json.gz`) the resolver found
+https://www.christourhoperc.org/assets/Uploads/files/bulletin-files/Christ-Our-Hope-Bulletin-Template-1-26th.pdf
+this way, dated that week.
 
 ## Not yet confirmed
 

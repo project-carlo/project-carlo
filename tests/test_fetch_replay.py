@@ -8,16 +8,21 @@ on any recorded site fails here, before a weekly run finds out.
 
 When a change fixes a site, or a site is re-recorded, update its entry in
 `expected.json`: the diff is the coverage change.
+
+Each site is replayed with the parish's recipe in data/parishes.csv as it is
+now, so pinning a recipe is checked against the pages too.
 """
 
 from __future__ import annotations
 
+import csv
 import json
 import re
 from pathlib import Path
 
 import pytest
 
+from pdf_extract.fetch import _PROVIDERS
 from pdf_extract.fetch_check import (
     SNAPSHOT_SUFFIX,
     PageSnapshot,
@@ -28,10 +33,20 @@ from pdf_extract.fetch_check import (
 FIXTURES = Path(__file__).parent / "fixtures" / "fetch"
 EXPECTED: dict[str, dict[str, str]] = json.loads((FIXTURES / "expected.json").read_text())
 RECORDINGS = sorted(FIXTURES.glob(f"*{SNAPSHOT_SUFFIX}"))
+PARISHES_CSV = Path(__file__).parents[1] / "data" / "parishes.csv"
+PARISHES = {row["slug"]: row for row in csv.DictReader(PARISHES_CSV.open(encoding="utf-8"))}
 
 
 def _slug(path: Path) -> str:
     return path.name.removesuffix(SNAPSHOT_SUFFIX)
+
+
+def _current_recipe(slug: str, provider: str) -> str | None:
+    column = _PROVIDERS[provider].recipe_column
+    parish = PARISHES.get(slug)
+    if column is None or parish is None:
+        return None
+    return parish[column].strip()
 
 
 def test_every_recording_has_an_expectation() -> None:
@@ -44,11 +59,12 @@ def test_every_recording_has_an_expectation() -> None:
 def test_resolver_replays_recorded_site(path: Path) -> None:
     recording = load_recording(path)
     expected = EXPECTED[recording.slug]
+    recipe = _current_recipe(recording.slug, recording.provider)
     if "error" in expected:
         with pytest.raises(ValueError, match=re.escape(expected["error"])):
-            recording.resolve()
+            recording.resolve(recipe=recipe)
         return
-    link = recording.resolve()
+    link = recording.resolve(recipe=recipe)
     assert link.source_url == expected["source_url"]
     assert link.fetch_url == expected.get("fetch_url", expected["source_url"])
 

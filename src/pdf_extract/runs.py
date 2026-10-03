@@ -17,15 +17,27 @@ from pdf_extract.storage import utc_now_iso
 
 # Fetch outcomes.
 FETCH_NEW = "new"
+# The site served a bulletin the parish already has.
 FETCH_UNCHANGED = "unchanged"
+# Not fetched: the parish already has this weekend's bulletin.
+FETCH_CURRENT = "current"
 FETCH_RESOLVE_FAILED = "resolve_failed"
 FETCH_DOWNLOAD_FAILED = "download_failed"
+# The address of a bulletin we already have did not answer. Not a failure:
+# the parish still has that bulletin.
+FETCH_RECHECK_FAILED = "recheck_failed"
 FETCH_SAVE_FAILED = "save_failed"
 
 # Process outcomes.
 PROCESS_EXTRACTED = "extracted"
 PROCESS_CACHED = "cached"
 PROCESS_WRONG_BULLETIN = "wrong_bulletin"
+# A second bulletin for a week we had: it replaces the first.
+PROCESS_CORRECTION = "correction"
+# A third or later bulletin for one week: flagged for a person to look at.
+PROCESS_REPEATED_WEEK = "repeated_week"
+# Dated before the parish's newest bulletin: stored, but not shown.
+PROCESS_OLD_ISSUE = "old_issue"
 PROCESS_FAILED = "failed"
 PROCESS_SKIPPED = "skipped"
 
@@ -38,6 +50,11 @@ FAILED_STATUSES = frozenset({
 })
 
 _DETAIL_MAX_CHARS = 500
+
+
+def join_details(*parts: str | None) -> str | None:
+    """The non-empty parts of a result's detail, joined; None if there are none."""
+    return "; ".join(part for part in parts if part) or None
 
 
 def start_run(

@@ -197,6 +197,7 @@ def iter_extraction_outcomes(
     *,
     concurrency: int = 5,
     today: date | None = None,
+    today_for: Callable[[dict[str, Any]], date] | None = None,
 ) -> Iterator[ExtractionOutcome]:
     """Run `extract` over bulletin entries, yielding outcomes in completion order.
 
@@ -204,6 +205,9 @@ def iter_extraction_outcomes(
     single-threaded), and only up to `concurrency` PDFs are resident/in-flight
     at once: some bulletins are large enough that preloading the whole corpus
     can exhaust memory before extraction starts.
+
+    `today_for`, when given, picks each entry's reference date instead of
+    `today` (an evaluation replays a bulletin as of the day it was fetched).
 
     Classifier exceptions are caught and logged, never raised.
     """
@@ -230,7 +234,10 @@ def iter_extraction_outcomes(
                 yield ExtractionOutcome(entry=entry, skipped=True)
                 continue
             fut = pool.submit(
-                extract, prepared.pdf_bytes, churches=prepared.church_list, today=today,
+                extract,
+                prepared.pdf_bytes,
+                churches=prepared.church_list,
+                today=today_for(entry) if today_for else today,
             )
             futures[fut] = entry
             if len(futures) >= max_workers:

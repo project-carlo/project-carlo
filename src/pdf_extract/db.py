@@ -58,7 +58,10 @@ def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> 
     """Apply migrations newer than the database's user_version. Returns how many ran.
 
     Each migration runs in its own transaction together with the version bump,
-    so a failure leaves the database at the previous version.
+    so a failure leaves the database at the previous version. Foreign keys are
+    off while migrations run, so a migration can rebuild a table the way SQLite
+    requires (create, copy, drop, rename) without the drop cascading; they are
+    checked before each migration commits.
     """
     current = schema_version(conn)
     files = _migration_files(migrations_dir)
@@ -68,18 +71,36 @@ def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> 
             f"{len(files)} migrations; pull the latest code."
         )
     applied = 0
-    for number, path in files:
-        if number <= current:
-            continue
-        LOGGER.info("Applying migration %s", path.name)
-        # executescript would commit on its own; wrap it so the version bump
-        # is part of the same transaction as the migration's statements.
-        conn.executescript(
-            "BEGIN;\n"
-            + path.read_text(encoding="utf-8")
-            + f"\nPRAGMA user_version = {number};\nCOMMIT;"
-        )
-        applied += 1
+    foreign_keys = conn.execute("PRAGMA foreign_keys").fetchone()[0]
+    # The pragma is a no-op inside a transaction, so it is set around them.
+    conn.execute("PRAGMA foreign_keys = OFF")
+    try:
+        for number, path in files:
+            if number <= current:
+                continue
+            LOGGER.info("Applying migration %s", path.name)
+            # executescript would commit on its own; wrap it so the version bump
+            # is part of the same transaction as the migration's statements.
+            try:
+                conn.executescript(
+                    "BEGIN;\n"
+                    + path.read_text(encoding="utf-8")
+                    + f"\nPRAGMA user_version = {number};"
+                )
+                violations = conn.execute("PRAGMA foreign_key_check").fetchall()
+                if violations:
+                    raise RuntimeError(
+                        f"Migration {path.name} leaves {len(violations)} foreign key "
+                        f"violations, e.g. {tuple(violations[0])}"
+                    )
+            except BaseException:
+                if conn.in_transaction:
+                    conn.rollback()
+                raise
+            conn.commit()
+            applied += 1
+    finally:
+        conn.execute(f"PRAGMA foreign_keys = {'ON' if foreign_keys else 'OFF'}")
     return applied
 
 

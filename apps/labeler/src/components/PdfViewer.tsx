@@ -11,6 +11,11 @@ import { markKeywords } from "../lib/keywords";
 
 GlobalWorkerOptions.workerSrc = workerUrl;
 
+// CCITT, JBIG2 and JPEG2000 images (how many bulletins draw their text) are
+// decoded by pdf.js's wasm build. Without this URL those images are skipped
+// and the page renders as photos, rules and an empty text layer.
+const PDFJS_WASM_URL = `${import.meta.env.BASE_URL}pdfjs/wasm/`;
+
 export interface ScrollRequest {
   page: number;
   nonce: number;
@@ -42,7 +47,7 @@ export function PdfViewer({ url, scrollTo, onPageChange }: Props) {
 
   useEffect(() => {
     let cancelled = false;
-    const task = getDocument({ url });
+    const task = getDocument({ url, wasmUrl: PDFJS_WASM_URL });
     setDoc(null);
     setSizes([]);
     setError(null);
