@@ -33,6 +33,10 @@ _HEX_ID_RE = re.compile(
 _WORDPRESS_UPLOAD_FOLDER_RE = re.compile(r"/uploads/20\d{2}/\d{2}/")
 
 
+# Stands in for an ordinal's suffix ("4th" reads "4º") once it is stripped.
+_ORDINAL = "º"
+
+
 def parse_date_from_texts(texts: list[str], reference_date: date) -> date | None:
     """The first date in texts; a yearless one takes its year from a year folder in them."""
     year = next(
@@ -58,7 +62,9 @@ def parse_date(
         return _resolve_yearless_date(month=month, day=day, reference_date=reference_date)
 
     normalized = _WORDPRESS_UPLOAD_FOLDER_RE.sub("/", _HEX_ID_RE.sub(" ", text.lower()))
-    normalized = re.sub(r"(\d+)(st|nd|rd|th)", r"\1", normalized)
+    # An ordinal is a day, never a month or a year: "Oct.-4th-27th-Sun" is 4
+    # October in the 27th week, not 27 April. Mark where one was.
+    normalized = re.sub(r"(\d+)(st|nd|rd|th)", rf"\1{_ORDINAL}", normalized)
     normalized = normalized.replace(",", " ")
     normalized = re.sub(r"\s+", " ", normalized).strip()
 
@@ -71,13 +77,14 @@ def parse_date(
     # A weekend can be named by both its days before the year ("September 26 &
     # 27, 2026", "Oct-4-5-2025"); the year is still the issue's.
     month_day_pattern = re.compile(
-        rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?!\d)"
-        r"(?:\s*(?:&|and|-|\s)\s*\d{1,2}(?=\s+\d{4}(?!\d)))?"
-        r"(?:\s+(?P<year>\d{2,4}))?",
+        rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?!\d){_ORDINAL}?"
+        rf"(?:\s*(?:&|and|-|\s)\s*\d{{1,2}}{_ORDINAL}?(?=\s+\d{{4}}(?!\d)))?"
+        rf"(?:\s+(?P<year>\d{{2,4}})(?!{_ORDINAL}))?",
         flags=re.IGNORECASE,
     )
     day_month_pattern = re.compile(
-        rf"(?<!\d)(?P<day>\d{{1,2}})\s+(?P<month>{month_name})(?:\s+(?P<year>\d{{2,4}}))?",
+        rf"(?<!\d)(?P<day>\d{{1,2}}){_ORDINAL}?\s+(?P<month>{month_name})"
+        rf"(?:\s+(?P<year>\d{{2,4}})(?!{_ORDINAL}))?",
         flags=re.IGNORECASE,
     )
 

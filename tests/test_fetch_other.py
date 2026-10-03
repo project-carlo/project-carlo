@@ -90,6 +90,10 @@ def _resolve(
         # A WordPress upload folder that runs into a dated file name is the
         # folder's year and month, then the file's date (Sacred Heart, Margaretville).
         ("/wp-content/uploads/2026/10/10-04-2026-1.pdf", date(2026, 10, 4)),
+        # An ordinal is a day, not a month or a year (St. John Vianney, Bath).
+        ("/wp-content/uploads/Sept.-27th-26th-Sun-in-OT.pdf", date(2026, 9, 27)),
+        ("/wp-content/uploads/Sept.-20th-25th-Sun-in-OT.pdf", date(2026, 9, 20)),
+        ("September 27th, 2026", date(2026, 9, 27)),
     ],
 )
 def test_parse_relaxed_date_reads_file_name_and_abbreviated_dates(text, expected) -> None:
