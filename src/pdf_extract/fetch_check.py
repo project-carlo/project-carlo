@@ -31,6 +31,7 @@ from urllib.error import HTTPError, URLError
 
 from pdf_extract import fetch
 from pdf_extract.browser import PageLike, launch_stealth_browser
+from pdf_extract.parish_sites import Recipe
 from pdf_extract.parish_sites.dates import parse_date
 from pdf_extract.storage import PARISHES_CSV_PATH
 
@@ -346,14 +347,9 @@ class Recording:
 def _resolve(
     source: fetch.FetchSource, *, page: PageLike, reference_date: date,
 ) -> fetch.BulletinLink:
-    spec = fetch._PROVIDERS[source.provider]
-    if spec.recipe_column is None:
-        return spec.build(
-            provider_id=source.provider_id, reference_date=reference_date, page=page,
-        )
-    return spec.build(
-        provider_id=source.provider_id, reference_date=reference_date, page=page,
-        recipe=source.recipe,
+    return fetch._build_bulletin_link(
+        source.provider, source.provider_id, page=page, recipe=source.recipe,
+        reference_date=reference_date,
     )
 
 
@@ -397,6 +393,15 @@ def _read_parishes(path: Path) -> list[dict[str, str]]:
         return [{**row, "homepage_url": row["website"]} for row in csv.DictReader(fh)]
 
 
+def _same_recipe(recipe: str, source: fetch.FetchSource) -> bool:
+    """Whether `recipe` reads the parish's site the way its recorded one does."""
+    try:
+        recorded = Recipe.parse(source.recipe, website=source.provider_id)
+    except ValueError:
+        return False
+    return Recipe.parse(recipe, website=source.provider_id) == recorded
+
+
 def _check_one(
     slug: str, source: fetch.FetchSource, page: PageLike, *,
     reference_date: date, download: bool,
@@ -413,7 +418,7 @@ def _check_one(
         result["how"] = link.how
     # A recipe that would pin what the resolver guessed: copy it into the
     # parish's provider_id once the pick is right.
-    if link.recipe and link.recipe != source.recipe:
+    if link.recipe and not _same_recipe(link.recipe, source):
         result["recipe"] = link.recipe
     if link.fetch_url != link.source_url:
         result["fetch_url"] = link.fetch_url

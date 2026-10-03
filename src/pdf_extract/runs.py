@@ -52,6 +52,11 @@ FAILED_STATUSES = frozenset({
 _DETAIL_MAX_CHARS = 500
 
 
+def join_details(*parts: str | None) -> str | None:
+    """The non-empty parts of a result's detail, joined; None if there are none."""
+    return "; ".join(part for part in parts if part) or None
+
+
 def start_run(
     conn: sqlite3.Connection, run_id: str, *, git_sha: str | None, trigger: str | None,
 ) -> None:

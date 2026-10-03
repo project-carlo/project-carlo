@@ -13,17 +13,21 @@ lands anywhere from the Saturday before to the Monday after.
 
 `week_order_sql` is the same ordering in SQL, for the queries that pick each
 parish's current bulletin (`storage.latest_bulletin_order`). The two must
-agree.
+agree, which is why a date is read only as a real YYYY-MM-DD day: SQLite's
+`date()` reads no other format, and rolls an impossible day like 02-30 into
+the next month.
+
+A bulletin the extractor took for another parish's (`wrong_bulletin`) ranks
+behind every other: its date says nothing about this parish.
 """
 
 from __future__ import annotations
 
+import re
 from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import date, timedelta
 from typing import Any
-
-from pdf_extract.timeparse import normalize_event_date
 
 # An issue date further ahead of its fetch than this is a misreading (the
 # wrong year, a date from an event listing), not a bulletin posted early. The
@@ -48,16 +52,24 @@ def nearest_sunday(day: date) -> date:
     return day + timedelta(days=forward) if forward <= 3 else day - timedelta(days=7 - forward)
 
 
-def _parse_date(value: Any) -> date | None:
-    iso = normalize_event_date(value) if isinstance(value, str) else None
-    return date.fromisoformat(iso) if iso else None
+_ISO_DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+
+def parse_iso_date(value: Any) -> date | None:
+    """`value` as a date if it is a real day written YYYY-MM-DD, else None."""
+    if not isinstance(value, str) or not _ISO_DATE_RE.fullmatch(value):
+        return None
+    try:
+        return date.fromisoformat(value)
+    except ValueError:
+        return None
 
 
 def _fetched_day(entry: dict[str, Any]) -> date | None:
     fetched_at = entry.get("fetched_at")
     if not isinstance(fetched_at, str) or not fetched_at:
         return None
-    return _parse_date(fetched_at[:10])
+    return parse_iso_date(fetched_at[:10])
 
 
 def bulletin_reference_date(entry: dict[str, Any]) -> date | None:
@@ -79,7 +91,7 @@ def bulletin_reference_date(entry: dict[str, Any]) -> date | None:
     early.
     """
     fetched = _fetched_day(entry)
-    published = _parse_date(entry.get("published_date"))
+    published = parse_iso_date(entry.get("published_date"))
     if published is not None and (
         fetched is None or published <= fetched + timedelta(days=MAX_DAYS_AHEAD_OF_FETCH)
     ):
@@ -93,14 +105,20 @@ def bulletin_week(entry: dict[str, Any]) -> date | None:
     return None if reference is None else nearest_sunday(reference)
 
 
+def _iso_date_sql(expr: str) -> str:
+    """`expr` if it is a real day written YYYY-MM-DD, else NULL: `parse_iso_date`."""
+    return f"CASE WHEN date({expr}) = {expr} THEN {expr} END"
+
+
 def week_order_sql(alias: str = "") -> str:
     """`bulletin_week` as an SQL expression ('' for no date), for ORDER BY."""
     col = f"{alias}." if alias else ""
-    fetched = f"date(substr({col}fetched_at, 1, 10))"
+    fetched = _iso_date_sql(f"substr({col}fetched_at, 1, 10)")
+    published_date = _iso_date_sql(f"{col}published_date")
     published = (
         f"CASE WHEN {fetched} IS NULL"
-        f" OR date({col}published_date) <= date({fetched}, '+{MAX_DAYS_AHEAD_OF_FETCH} days')"
-        f" THEN date({col}published_date) END"
+        f" OR {published_date} <= date({fetched}, '+{MAX_DAYS_AHEAD_OF_FETCH} days')"
+        f" THEN {published_date} END"
     )
     # SQLite's 'weekday 0' moves forward to a Sunday, so going back three days
     # first lands Monday to Wednesday on the Sunday before, as nearest_sunday does.
@@ -110,9 +128,10 @@ def week_order_sql(alias: str = "") -> str:
     )
 
 
-def _currency_key(entry: dict[str, Any]) -> tuple[str, str, str, int]:
+def _currency_key(entry: dict[str, Any]) -> tuple[bool, str, str, str, int]:
     week = bulletin_week(entry)
     return (
+        not entry.get("wrong_bulletin"),
         week.isoformat() if week else "",
         str(entry.get("fetched_at") or ""),
         str(entry.get("processed_at") or ""),
@@ -126,6 +145,7 @@ def newest_bulletin(entries: Iterable[dict[str, Any]]) -> dict[str, Any] | None:
     The ordering `storage.latest_bulletin_order` puts first: a second issue of
     the same week (a correction) displaces the first, and an old issue a site
     falls back to never displaces a newer one, however recently it was fetched.
+    A bulletin flagged `wrong_bulletin` comes first only when there is no other.
     """
     return max(entries, key=_currency_key, default=None)
 
@@ -138,7 +158,7 @@ def has_bulletin_for(entry: dict[str, Any] | None, sunday: date) -> bool:
     """
     if entry is None or entry.get("wrong_bulletin"):
         return False
-    published = _parse_date(entry.get("published_date"))
+    published = parse_iso_date(entry.get("published_date"))
     fetched = _fetched_day(entry)
     if published is None or fetched is None:
         return False
@@ -175,7 +195,7 @@ def place_bulletin(
     Bulletins the extractor rejected as the wrong PDF are left out: their dates
     say nothing about this parish.
     """
-    if _parse_date(entry.get("published_date")) is None:
+    if parse_iso_date(entry.get("published_date")) is None:
         return None
     week = bulletin_week(entry)
     if week is None:
@@ -201,10 +221,13 @@ def stale_parishes(
 
     A parish with no bulletin at all maps to None. Judged by the bulletins'
     weeks, so a site that keeps serving an old issue is stale however often it
-    was fetched.
+    was fetched. A bulletin flagged `wrong_bulletin` is not the parish's, so it
+    keeps no parish fresh.
     """
     by_slug: dict[str, list[dict[str, Any]]] = {}
     for entry in bulletins:
+        if entry.get("wrong_bulletin"):
+            continue
         by_slug.setdefault(entry.get("parish_slug") or "", []).append(entry)
     sunday = nearest_sunday(today or date.today())
     stale: dict[str, dict[str, Any] | None] = {}

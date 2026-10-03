@@ -144,7 +144,9 @@ def _link_to(monkeypatch, *urls: str) -> list[str]:
     """Resolve each parish to the next of `urls` (the last one repeating); returns the calls."""
     calls: list[str] = []
 
-    def build_link(bulletin_provider, fetch_provider_id, *, page=None, recipe=""):
+    def build_link(
+        bulletin_provider, fetch_provider_id, *, page=None, recipe="", reference_date=None,
+    ):
         url = urls[min(len(calls), len(urls) - 1)]
         calls.append(url)
         return BulletinLink(source_url=url, fetch_url=url)
@@ -354,11 +356,53 @@ def test_fetch_does_not_count_a_failed_recheck_as_a_failure(monkeypatch, db: Pat
     _fake_browser(monkeypatch)
     _start_run(db, "run-1")
 
-    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1")
+    # The bulletin is this week's, but undated, so it is checked again.
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1", today=date(2026, 9, 26))
 
     assert result["failed_parishes"] == 0
     assert result["recheck_failed"] == 1
     assert _results(db, "run-1")["test-parish"]["status"] == "recheck_failed"
+
+
+def test_fetch_counts_a_failed_download_as_a_failure_when_the_address_had_an_older_week(
+    monkeypatch, db: Path,
+) -> None:
+    # A site that overwrites one address each week: what we have from it is
+    # last week's, so failing to download it now misses this week's.
+    _add_bulletin(
+        db, source_url="https://example.org/bulletin.pdf", content_hash="had",
+        fetched_at="2026-09-26T09:00:00Z", published_date="2026-09-27",
+        processed_at="2026-09-26T10:00:00Z",
+    )
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+
+    def download(**kwargs):
+        raise OSError("connection reset")
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1", today=date(2026, 10, 3))
+
+    assert result["failed_parishes"] == 1
+    assert result["recheck_failed"] == 0
+    assert _results(db, "run-1")["test-parish"]["status"] == "download_failed"
+
+
+def test_fetch_resolves_the_bulletin_for_the_run_date(monkeypatch, db: Path) -> None:
+    seen: list[date | None] = []
+
+    def build_link(bulletin_provider, fetch_provider_id, *, page=None, recipe="", reference_date=None):
+        seen.append(reference_date)
+        raise ValueError("stop here")
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    _fake_browser(monkeypatch)
+
+    fetch_bulletins(parish_name="Test Parish", today=date(2026, 9, 27))
+
+    assert seen == [date(2026, 9, 27)]
 
 
 def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db: Path) -> None:
@@ -432,7 +476,7 @@ def test_fetch_records_each_parish_outcome_for_the_run(monkeypatch, db: Path) ->
 def test_fetch_limits_to_the_given_slugs(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
-        lambda bulletin_provider, fetch_provider_id, *, page=None, recipe="": BulletinLink(
+        lambda bulletin_provider, fetch_provider_id, **_: BulletinLink(
             source_url=f"https://example.org/{fetch_provider_id}.pdf",
             fetch_url=f"https://example.org/{fetch_provider_id}.pdf",
         ),

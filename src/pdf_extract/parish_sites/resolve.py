@@ -143,20 +143,25 @@ def resolve_parish_site(
     # its age, but only once no later link has a recent one: a site's
     # "Bulletins" page can be a stale 2017 archive beside "2026 Bulletins".
     failures: list[ValueError] = []
+    # What the first page offered, to take its old bulletin from without
+    # reading the page again.
+    first_page: _Collected | None = None
     pages_to_try = bulletin_page_urls[:BULLETIN_PAGES_TO_TRY]
-    for url in pages_to_try:
+    for index, url in enumerate(pages_to_try):
         try:
-            return _resolve_bulletin_page(
+            collected = _collect_bulletin_page(
                 page=page, url=url, reference_date=reference_date, collectors=collectors,
-                max_age_days=FALLBACK_MAX_AGE_DAYS,
+            )
+            if index == 0:
+                first_page = collected
+            return collected.resolve(
+                reference_date=reference_date, max_age_days=FALLBACK_MAX_AGE_DAYS,
             )
         except ValueError as exc:
             LOGGER.info("No recent bulletin on %s: %s", url, exc)
             failures.append(exc)
-    if isinstance(failures[0], OldBulletinOnly):
-        return _resolve_bulletin_page(
-            page=page, url=pages_to_try[0], reference_date=reference_date, collectors=collectors,
-        )
+    if isinstance(failures[0], OldBulletinOnly) and first_page is not None:
+        return first_page.resolve(reference_date=reference_date)
     raise failures[0]
 
 
@@ -167,20 +172,48 @@ def _locate_bulletin_pages(
     wait_for_selector_quietly(
         page=page, selector="a[href]", state="attached", source_label=homepage_url,
     )
-    urls = find_bulletin_page_urls(page=page, base_url=homepage_url, reference_date=reference_date)
+    # Links are relative to where the homepage landed, after any redirect.
+    base_url = page.url or homepage_url
+    urls = find_bulletin_page_urls(page=page, base_url=base_url, reference_date=reference_date)
     # Some homepages link this week's bulletin PDF itself, with no page for
     # it: read the homepage as the bulletin page, after any real one.
-    if links_bulletin_pdf(page=page, base_url=page.url or homepage_url):
+    if links_bulletin_pdf(page=page, base_url=base_url):
         urls.append(homepage_url)
     if not urls:
         raise NoBulletin(f"No bulletin page link found for other provider at {homepage_url}")
     return urls
 
 
+@dataclass(frozen=True)
+class _Collected:
+    """The PDFs one bulletin page offers, and the collector that found them."""
+
+    url: str
+    candidates: list[Candidate]
+    collector: Collector
+
+    def resolve(self, *, reference_date: date, max_age_days: int | None = None) -> Resolution:
+        choice: Choice = choose(
+            self.candidates, reference_date=reference_date, max_age_days=max_age_days,
+        )
+        return Resolution(
+            candidate=choice.candidate, page_url=self.url, collector=self.collector.name,
+            reason=choice.reason,
+        )
+
+
 def _resolve_bulletin_page(
     *, page: PageLike, url: str, reference_date: date, collectors: list[Collector],
-    max_age_days: int | None = None,
 ) -> Resolution:
+    collected = _collect_bulletin_page(
+        page=page, url=url, reference_date=reference_date, collectors=collectors,
+    )
+    return collected.resolve(reference_date=reference_date)
+
+
+def _collect_bulletin_page(
+    *, page: PageLike, url: str, reference_date: date, collectors: list[Collector],
+) -> _Collected:
     site = BulletinPage(page=page, requested_url=url, reference_date=reference_date)
     site.load()
     found: list[Candidate] = []
@@ -194,7 +227,4 @@ def _resolve_bulletin_page(
             found, used = more, collector
     if used is None:
         raise NoBulletin(f"No PDF links found on bulletin page: {url}")
-    choice: Choice = choose(found, reference_date=reference_date, max_age_days=max_age_days)
-    return Resolution(
-        candidate=choice.candidate, page_url=url, collector=used.name, reason=choice.reason,
-    )
+    return _Collected(url=url, candidates=found, collector=used)

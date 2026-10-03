@@ -113,7 +113,9 @@ def list_churches(conn: sqlite3.Connection, parish_id: int) -> list[sqlite3.Row]
 def latest_bulletin_order(alias: str = "") -> str:
     """ORDER BY that puts a parish's current bulletin first.
 
-    The latest week (`bulletin_week.week_order_sql`: the issue date the
+    A bulletin the extractor flagged as another parish's (`wrong_bulletin`)
+    goes behind every other, since it has no events for this parish. Then the
+    latest week (`bulletin_week.week_order_sql`: the issue date the
     extractor read, else the fetch date), then the most recently fetched of
     that week's, so a correction displaces the issue it corrects while an old
     issue a site falls back to never displaces a newer one. Then the most
@@ -126,7 +128,8 @@ def latest_bulletin_order(alias: str = "") -> str:
     """
     col = f"{alias}." if alias else ""
     return (
-        f"{week_order_sql(alias)} DESC,"
+        f"COALESCE({col}wrong_bulletin, 0) ASC,"
+        f" {week_order_sql(alias)} DESC,"
         f" COALESCE({col}fetched_at, '') DESC,"
         f" COALESCE({col}processed_at, '') DESC,"
         f" {col}id DESC"

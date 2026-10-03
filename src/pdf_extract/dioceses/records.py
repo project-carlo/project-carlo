@@ -33,6 +33,7 @@ from typing import Any
 import yaml
 
 from pdf_extract import storage
+from pdf_extract.fetch import PROVIDERS_TAKING_RECIPE
 from pdf_extract.parish_sites import Recipe
 
 META_FILE = "diocese.md"
@@ -45,9 +46,6 @@ KNOWN_BULLETIN_PROVIDERS = frozenset(
 )
 # Providers `fetch` looks up by account id rather than by the parish website.
 PROVIDERS_NEEDING_ID = frozenset({"parishes_online", "discover_mass"})
-# Providers that read the parish's own site, whose provider_id is an optional
-# recipe pinning how (see pdf_extract.parish_sites.Recipe).
-PROVIDERS_TAKING_RECIPE = frozenset({"other", "google_drive"})
 
 # Why a place is not modelled. Keep the classes apart: `closed` has to stay a
 # record of what shut down, so an open church that publishes nothing is

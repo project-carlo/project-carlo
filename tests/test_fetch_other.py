@@ -10,8 +10,8 @@ from datetime import date
 
 import pytest
 
-from pdf_extract.fetch import build_latest_other_bulletin_links
-from pdf_extract.fetch_check import PageSnapshot, SnapshotPage
+from pdf_extract.fetch import OTHER_TYPE, FetchSource, build_latest_other_bulletin_links
+from pdf_extract.fetch_check import PageSnapshot, SnapshotPage, _same_recipe
 from pdf_extract.parish_sites import Recipe
 from pdf_extract.parish_sites.dates import parse_date_from_texts
 from pdf_extract.parish_sites.links import unwrap_pdf_viewer_url
@@ -94,6 +94,9 @@ def _resolve(
         ("/wp-content/uploads/Sept.-27th-26th-Sun-in-OT.pdf", date(2026, 9, 27)),
         ("/wp-content/uploads/Sept.-20th-25th-Sun-in-OT.pdf", date(2026, 9, 20)),
         ("September 27th, 2026", date(2026, 9, 27)),
+        # A run of digits that is no month-day-year gives a later yearless
+        # date no year.
+        ("scan 13-45-19 bulletin 9-27", date(2026, 9, 27)),
     ],
 )
 def test_parse_relaxed_date_reads_file_name_and_abbreviated_dates(text, expected) -> None:
@@ -431,6 +434,35 @@ def test_a_stale_first_bulletin_page_is_still_read_when_nothing_is_newer() -> No
     }) == f"{HOME}/uploads/02-12-2017_6th_sun.pdf"
 
 
+def test_a_stale_first_bulletin_page_is_read_once() -> None:
+    site = _site({
+        HOME: '<a href="/bulletins.html">Bulletins</a>',
+        f"{HOME}/bulletins.html": '<a href="/uploads/02-12-2017_6th_sun.pdf">Download File</a>',
+    })
+    visited: list[str] = []
+    goto = site.goto
+
+    def counting_goto(url: str, **kwargs) -> None:
+        visited.append(url)
+        goto(url, **kwargs)
+
+    site.goto = counting_goto  # type: ignore[method-assign]
+    source_url, _ = _resolve_other(provider_id=HOME, reference_date=TODAY, page=site)
+    assert source_url == f"{HOME}/uploads/02-12-2017_6th_sun.pdf"
+    assert visited.count(f"{HOME}/bulletins.html") == 1
+
+
+def test_bulletin_links_are_read_relative_to_where_the_homepage_landed() -> None:
+    landing = f"{HOME}/en/home/"
+    assert _resolve(
+        {
+            HOME: '<a href="bulletin/">Bulletin</a>',
+            f"{landing}bulletin/": '<a href="/uploads/09-27-26_26th_sun.pdf">Download</a>',
+        },
+        redirects={HOME: landing},
+    ) == f"{HOME}/uploads/09-27-26_26th_sun.pdf"
+
+
 def test_google_drive_file_links_are_bulletins() -> None:
     # St. Lucy/St. Bernadette, Altamont links one Drive file per Sunday.
     source_url, fetch_url = _resolve_other(
@@ -571,3 +603,11 @@ def test_a_recipe_whose_collector_finds_nothing_fails_rather_than_guessing() -> 
             provider_id=HOME, reference_date=TODAY, page=_site(pages),
             recipe=f"page-pdfs {HOME}/bulletins",
         )
+
+
+def test_a_recipe_written_differently_is_the_same_recipe() -> None:
+    source = FetchSource(OTHER_TYPE, HOME, f"page-pdfs {HOME}")
+    assert _same_recipe("page-pdfs", source)
+    assert _same_recipe(f"{HOME}/b page-pdfs", source._replace(recipe=f"page-pdfs {HOME}/b"))
+    assert not _same_recipe(f"page-pdfs {HOME}/b", source)
+    assert not _same_recipe("page-pdfs", source._replace(recipe=""))

@@ -243,7 +243,7 @@ def test_normalize_published_date_and_wrong_bulletin() -> None:
 
 def test_normalize_published_date_rejects_invalid() -> None:
     """Non-ISO published_date strings are coerced to None."""
-    for raw in ["April 12, 2026", "", "   ", None, 12345]:
+    for raw in ["April 12, 2026", "", "   ", None, 12345, "2026-02-30", "2026-13-01"]:
         result = reconstruct_events({"published_date": raw})
         assert result["published_date"] is None
 

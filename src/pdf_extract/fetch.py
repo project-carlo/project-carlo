@@ -24,6 +24,7 @@ from pdf_extract.browser import (
 from pdf_extract.bulletin_week import (
     STALE_BULLETIN_AGE_DAYS,
     bulletin_reference_date,
+    bulletin_week,
     has_bulletin_for,
     nearest_sunday,
     newest_bulletin,
@@ -47,6 +48,7 @@ from pdf_extract.runs import (
     FETCH_RESOLVE_FAILED,
     FETCH_SAVE_FAILED,
     FETCH_UNCHANGED,
+    join_details,
     record_parish_result,
 )
 from pdf_extract.storage import (
@@ -430,6 +432,11 @@ _PROVIDERS: dict[str, _ProviderSpec] = {
 }
 
 SUPPORTED_BULLETIN_PROVIDERS = frozenset(_PROVIDERS)
+# Providers that read the parish's own site, whose provider_id is an optional
+# recipe pinning how (see parish_sites.Recipe).
+PROVIDERS_TAKING_RECIPE = frozenset(
+    name for name, spec in _PROVIDERS.items() if spec.recipe_column is not None
+)
 
 
 class FetchSource(NamedTuple):
@@ -442,14 +449,19 @@ class FetchSource(NamedTuple):
 
 def _build_bulletin_link(
     bulletin_provider: str, fetch_provider_id: str, *, page: PageLike | None = None,
-    recipe: str = "",
+    recipe: str = "", reference_date: date | None = None,
 ) -> BulletinLink:
+    """The parish's latest bulletin link, judging "latest" by `reference_date` (today)."""
     spec = _PROVIDERS.get(bulletin_provider)
     if spec is None:
         raise ValueError(f"Unsupported bulletin_provider: {bulletin_provider}")
     if spec.recipe_column is None:
-        return spec.build(provider_id=fetch_provider_id, page=page)
-    return spec.build(provider_id=fetch_provider_id, page=page, recipe=recipe)
+        return spec.build(
+            provider_id=fetch_provider_id, reference_date=reference_date, page=page,
+        )
+    return spec.build(
+        provider_id=fetch_provider_id, reference_date=reference_date, page=page, recipe=recipe,
+    )
 
 
 def _resolve_fetch_source(parish) -> FetchSource | None:
@@ -630,7 +642,7 @@ def fetch_bulletins(
                 try:
                     link = _build_bulletin_link(
                         fetch_source.provider, fetch_source.provider_id, page=page,
-                        recipe=fetch_source.recipe,
+                        recipe=fetch_source.recipe, reference_date=today,
                     )
                 except ValueError as exc:
                     LOGGER.warning("Skipping parish %s: %s", slug, exc)
@@ -661,9 +673,12 @@ def fetch_bulletins(
                 except (HTTPError, URLError, OSError) as exc:
                     LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
                     detail = f"{type(exc).__name__}: {exc}"
-                    if any(entry["source_url"] == link.source_url for entry in stored):
-                        # A re-check of a bulletin we already have: the parish
-                        # still has it, so this is not a failure to fetch.
+                    if _rechecks_this_weeks_bulletin(stored, link.source_url, sunday):
+                        # A re-check of this week's bulletin, which we already
+                        # have from this address but could not trust the date
+                        # of: not a failure to fetch. A bulletin from an
+                        # earlier week at the same address is no such thing:
+                        # the site may have this week's issue there now.
                         recheck_failed += 1
                         record(FETCH_RECHECK_FAILED, detail=detail, source_url=link.source_url)
                     else:
@@ -687,7 +702,7 @@ def fetch_bulletins(
                     record(
                         FETCH_UNCHANGED, source_url=link.source_url,
                         content_hash=duplicate.bulletin["content_hash"],
-                        detail=_join(link.how, duplicate.describe()),
+                        detail=join_details(link.how, duplicate.describe()),
                     )
                     continue
                 assert download.pdf is not None and content_hash is not None
@@ -762,6 +777,17 @@ def fetch_bulletins(
     return result
 
 
+def _rechecks_this_weeks_bulletin(
+    stored: list[dict], source_url: str, sunday: date,
+) -> bool:
+    """Whether a bulletin for `sunday`'s week was already fetched from `source_url`."""
+    return any(
+        entry["source_url"] == source_url and not entry.get("wrong_bulletin")
+        and bulletin_week(entry) == sunday
+        for entry in stored
+    )
+
+
 def _record_seen_again(
     conn, duplicate: Duplicate, *, download: Download, source_url: str, seen_at: str,
 ) -> None:
@@ -781,10 +807,6 @@ def _record_seen_again(
         duplicate.bulletin["etag"] = etag
     if last_modified:
         duplicate.bulletin["last_modified"] = last_modified
-
-
-def _join(*parts: str | None) -> str | None:
-    return "; ".join(part for part in parts if part) or None
 
 
 # ── Helpers ─────────────────────────────────────────────────────────────────

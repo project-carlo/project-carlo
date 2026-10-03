@@ -20,6 +20,7 @@ from pdf_extract.bulletin_week import (
     stale_parishes,
     week_order_sql,
 )
+from pdf_extract.storage import latest_bulletin_order
 
 SUNDAY = date(2026, 10, 4)
 
@@ -58,7 +59,11 @@ def test_bulletin_week_ignores_a_date_far_past_the_fetch() -> None:
     assert bulletin_week(early) == date(2026, 10, 18)
 
 
-@pytest.mark.parametrize("published", [None, "2026-09-27", "2026-10-03", "2027-01-01", "junk"])
+@pytest.mark.parametrize("published", [
+    None, "2026-09-27", "2026-10-03", "2027-01-01", "junk",
+    # Dates SQLite's date() misreads or cannot read: neither side reads them.
+    "10/04/2026", "September 27, 2026", "2026-02-30", " 2026-10-04", "2026-10-4",
+])
 @pytest.mark.parametrize("fetched", [None, "2026-09-30", "2026-10-01", "2026-10-03", "junk"])
 def test_week_order_sql_agrees_with_bulletin_week(published, fetched) -> None:
     conn = sqlite3.connect(":memory:")
@@ -77,6 +82,39 @@ def test_newest_bulletin_lets_a_correction_but_not_an_old_issue_displace_the_cur
     assert newest_bulletin([current, old_issue]) is current
     assert newest_bulletin([current, correction, old_issue]) is correction
     assert newest_bulletin([]) is None
+
+
+def test_newest_bulletin_puts_a_wrong_bulletin_behind_every_other() -> None:
+    real = _bulletin(1, published="2026-09-27", fetched="2026-09-26")
+    wrong = _bulletin(2, published="2026-10-04", fetched="2026-10-03", wrong_bulletin=1)
+    assert newest_bulletin([real, wrong]) is real
+    assert newest_bulletin([wrong]) is wrong
+
+
+def test_latest_bulletin_order_agrees_with_newest_bulletin() -> None:
+    bulletins = [
+        _bulletin(1, published="2026-09-27", fetched="2026-09-26", wrong_bulletin=0),
+        _bulletin(2, published="2026-10-04", fetched="2026-10-03", wrong_bulletin=1),
+        _bulletin(3, published=None, fetched="2026-09-19", wrong_bulletin=0),
+        _bulletin(4, published="10/04/2026", fetched="2026-09-25", wrong_bulletin=0),
+    ]
+    conn = sqlite3.connect(":memory:")
+    conn.execute(
+        "CREATE TABLE bulletin (id INTEGER, published_date TEXT, fetched_at TEXT,"
+        " processed_at TEXT, wrong_bulletin INTEGER)"
+    )
+    conn.executemany(
+        "INSERT INTO bulletin VALUES (:id, :published_date, :fetched_at, :processed_at,"
+        " :wrong_bulletin)",
+        bulletins,
+    )
+    sql_order = [
+        row[0] for row in conn.execute(
+            f"SELECT id FROM bulletin ORDER BY {latest_bulletin_order()}"
+        )
+    ]
+    assert sql_order[0] == newest_bulletin(bulletins)["id"] == 1
+    assert sql_order[-1] == 2
 
 
 def test_has_bulletin_for_trusts_only_a_plausible_extracted_date() -> None:
@@ -130,5 +168,8 @@ def test_stale_parishes_judges_by_the_bulletins_week() -> None:
     ]
     stale = stale_parishes(bulletins, ["behind", "old", "stuck", "never"], today=SUNDAY)
     assert sorted(stale) == ["never", "old", "stuck"]
+    # Another parish's bulletin keeps no parish fresh.
+    wrong = _bulletin(4, published="2026-10-04", fetched="2026-10-03", wrong_bulletin=1)
+    assert stale_parishes([wrong], ["p"], today=SUNDAY) == {"p": None}
     assert stale["never"] is None
     assert stale["old"]["id"] == 2

@@ -53,6 +53,7 @@ from pdf_extract.runs import (
     PROCESS_REPEATED_WEEK,
     PROCESS_SKIPPED,
     PROCESS_WRONG_BULLETIN,
+    join_details,
     record_parish_result,
 )
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
@@ -133,10 +134,6 @@ def _placement_outcome(
             "kept, not shown"
         )
     return None, None
-
-
-def _join(*parts: str | None) -> str | None:
-    return "; ".join(part for part in parts if part) or None
 
 
 def process_bulletins(
@@ -237,7 +234,7 @@ def process_bulletins(
                 outcome = PROCESS_WRONG_BULLETIN
             elif placed is not None:
                 outcome = placed
-                placement_detail = _join(
+                placement_detail = join_details(
                     placement_detail, "from the cache" if status == PROCESS_CACHED else None,
                 )
             else:
@@ -247,7 +244,7 @@ def process_bulletins(
                 source_url=entry.get("source_url"),
                 content_hash=entry.get("content_hash"),
                 event_count=stored,
-                detail=_join(
+                detail=join_details(
                     placement_detail,
                     f"{skipped} events could not be stored" if skipped else None,
                 ),

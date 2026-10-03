@@ -113,10 +113,10 @@ def parse_date(
     for match in re.finditer(
         r"(?<!\d)(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})[-/.](?P<c>\d{2,4})(?!\d)", normalized,
     ):
-        month = int(match.group("a"))
-        day = int(match.group("b"))
-        year = _normalize_year(match.group("c"), reference_date)
-        parsed = safe_date(year, month, day)
+        parsed = safe_date(
+            _normalize_year(match.group("c"), reference_date),
+            int(match.group("a")), int(match.group("b")),
+        )
         if parsed is not None:
             return parsed
 
