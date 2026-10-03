@@ -2,7 +2,7 @@
 name: Holy Family Church & St. Marianne Cope Parish
 website: https://holyfamilysyr.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://holyfamilysyr.org/bulletin
 publication: ['url:https://holyfamilysyr.org/bulletin']
 group: Holy Family, Fairmount + St. Marianne Cope, Solvay/Lakeland (shared pastor)
 evidence:
@@ -52,6 +52,11 @@ site, so the provider is `other` and the website is the Holy Family homepage (it
 "Bulletin" link leads there). St. Marianne Cope's own site (stmariannecope.org, the
 diocese directory's website for both its churches) has no bulletin of its own: its bulletin
 link goes to holyfamilysyr.org/bulletin. So there is one publication, `url:` of that page.
+
+Fetch recipe `page-pdfs https://holyfamilysyr.org/bulletin`, pinned 2026-10-03: on the
+pages recorded 2026-09-27
+(`tests/fixtures/fetch/holy-family-st-marianne-cope-syracuse.json.gz`) the resolver found
+https://holyfamilysyr.org/s/HF-Bulletin-September-27-2026.pdf this way, dated that week.
 
 ## Not yet confirmed
 

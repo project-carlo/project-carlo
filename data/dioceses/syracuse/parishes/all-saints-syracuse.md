@@ -2,7 +2,7 @@
 name: All Saints Parish
 website: https://www.allsaintssyracuse.org
 bulletin_provider: other
-provider_id: ''
+provider_id: dated-post https://www.allsaintssyracuse.org/newsletters
 publication: ['url:https://www.allsaintssyracuse.org/newsletters']
 group: ''
 evidence:
@@ -49,6 +49,12 @@ weekend, and each post links the PDF, so provider `other` with the homepage as w
 The site also embeds eCatholic files (`ecatholic:32299`, e.g. a Hope Appeal PDF), but no
 bulletin is published there: issues.py found no Sunday-dated issue in that account, so the
 id is not recorded as a publication.
+
+Fetch recipe `dated-post https://www.allsaintssyracuse.org/newsletters`, pinned
+2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/all-saints-syracuse.json.gz`) the resolver found
+https://www.allsaintssyracuse.org/s/Bulletin-for-9-2627FINAL.pdf this way, dated that
+week.
 
 ## Not yet confirmed
 

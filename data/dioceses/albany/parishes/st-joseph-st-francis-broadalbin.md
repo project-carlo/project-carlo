@@ -2,7 +2,7 @@
 name: St. Joseph and St. Francis of Assisi Churches
 website: http://parishes.rcda.org/stjosephstfrancis/bulletin.php
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:http://parishes.rcda.org/stjosephstfrancis/bulletin.php']
 group: ''
 evidence:
@@ -47,6 +47,11 @@ INTENTIONS" and "ST. FRANCIS MASS INTENTIONS".
 `other`: self-hosted PDFs on the page the diocese's directory lists for both churches. File
 names are the Sunday's date (`September_20.pdf`); some weeks are skipped (no August_30 or
 July_19 in the list), and the 27 September issue was not yet up on 2026-09-28.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/st-joseph-st-francis-broadalbin.json.gz`) the resolver found
+http://parishes.rcda.org/stjosephstfrancis/bulletins/2026/October_4.pdf this way, dated
+that week.
 
 ## Not yet confirmed
 

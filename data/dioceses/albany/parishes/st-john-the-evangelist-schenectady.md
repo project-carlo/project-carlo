@@ -2,7 +2,7 @@
 name: St. John the Evangelist
 website: https://sjechurch.com/bulletin.htm
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://sjechurch.com/bulletin.htm']
 group: ''
 evidence:
@@ -44,6 +44,10 @@ the other two are in no roster and appear nowhere in this bulletin.
 sjechurch.com is the parish's own static site (same builder as St. Anthony's); its bulletin
 page lists the PDFs as bulletin/MM-DD-YY.pdf. `bulletin_provider: other`, `website` is that
 bulletin page.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/st-john-the-evangelist-schenectady.json.gz`) the resolver found
+https://sjechurch.com/bulletin/10-04-26.pdf this way, dated that week.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: Parish of Our Lady of the Valley
 website: https://parishes.rcda.org/olvchurch/bulletin.php
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://parishes.rcda.org/olvchurch/bulletin.php']
 group: ''
 evidence:
@@ -49,6 +49,11 @@ Joseph's, Schoharie are held by the Parish of Our Lady of the Valley (formed 200
 
 `parishes.rcda.org/olvchurch/` is the site the directory links; `bulletin.php` lists one PDF
 per Sunday at `bulletins/<year>/<Month>_<DD>.pdf`. `bulletin_provider: other`.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/our-lady-of-the-valley-middleburgh.json.gz`) the resolver found
+https://parishes.rcda.org/olvchurch/bulletins/2026/October_04.pdf this way, dated that
+week.
 
 ## Not yet confirmed
 

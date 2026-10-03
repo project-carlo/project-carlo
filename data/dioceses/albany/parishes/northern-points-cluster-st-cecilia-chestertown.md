@@ -2,7 +2,7 @@
 name: Northern Points Cluster and St. Cecilia's
 website: https://www.blessedsacramentbolton.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.blessedsacramentbolton.org/2026-bulletins.html
 publication: ['url:https://www.blessedsacramentbolton.org/2026-bulletins.html', 'url:http://northernpointscluster.weebly.com/2026-bulletins.html',
   'url:https://www.stceciliaschurch.org/2026.html']
 group: Northern Points Cluster
@@ -87,6 +87,13 @@ predictable (they carry the liturgical Sunday), so the issue has to be read from
 page. The PDFs have a text layer. The diocese's other address for the cluster,
 northernpointscluster.org (GCatholic), does not resolve (DEAD-DNS). The weebly host answered
 HTTP 429 to repeated `probe pdf` calls; spacing requests a second apart worked.
+
+Fetch recipe `page-pdfs https://www.blessedsacramentbolton.org/2026-bulletins.html`,
+pinned 2026-10-03: on the pages recorded 2026-09-28
+(`tests/fixtures/fetch/northern-points-cluster-st-cecilia-chestertown.json.gz`) the
+resolver found
+http://northernpointscluster.weebly.com/uploads/3/8/1/3/38133239/09-27-26_26th_sun_ord_tm_cyc_a.pdf
+this way, dated that week.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: Holy Cross Parish
 website: https://parishes.rcda.org/holycross/bulletin.php
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://parishes.rcda.org/holycross/bulletin.php']
 group: ''
 evidence:
@@ -43,6 +43,11 @@ no second site.
 `parishes.rcda.org/holycross/` is the parish site the directory links; its `bulletin.php`
 lists one PDF per Sunday at `bulletins/<year>/<Month>_<DD>.pdf`. Self-hosted, so
 `bulletin_provider: other`, publication `url:` of that page.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-10-03
+(`tests/fixtures/fetch/holy-cross-morris.json.gz`) the resolver found
+https://parishes.rcda.org/holycross/bulletins/2026/October_04.pdf this way, dated that
+week.
 
 ## Not yet confirmed
 

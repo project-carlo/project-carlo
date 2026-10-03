@@ -2,7 +2,7 @@
 name: Church of the Immaculate Conception
 website: https://iccgreene.com/weekly-bulletins
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://iccgreene.com/weekly-bulletins']
 group: Rev. Paul Machira (Greene, Oxford)
 evidence:
@@ -51,6 +51,11 @@ One: the church at 1180 State Highway 206 (`churches/immaculate-conception-green
 iccgreene.com/weekly-bulletins lists one post per weekend, each linking the newsletter PDF under
 iccgreene.com/s/ (file names are not predictable, e.g. ICC-Newsletter-for-September-19-20-2026-compressed-85e3.pdf).
 Self-hosted, so `other`, with the listing page as the website and `url:` publication.
+
+Fetch recipe `page-pdfs`, pinned 2026-10-03: on the pages recorded 2026-09-27
+(`tests/fixtures/fetch/immaculate-conception-greene.json.gz`) the resolver found
+https://iccgreene.com/s/ICC-Newsletter-for-September-26-27-2026-compressed.pdf this way,
+dated that week.
 
 ## Not yet confirmed
 

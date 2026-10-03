@@ -2,7 +2,7 @@
 name: St. Francis Xavier Church
 website: https://sfxmarcellus.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://sfxmarcellus.com/weekly-bulletins/
 publication: ['url:https://sfxmarcellus.com/weekly-bulletins/']
 group: ''
 evidence:
@@ -39,6 +39,12 @@ which lists dated PDFs in wp-content/uploads, and no publisher id: provider `oth
 `publication` that page. A test run of the pipeline's `other` fetcher on 2026-09-26 found the
 27 September issue. GCatholic's website for the parish (stfrancisxavier.webs.com) is an old one
 and was not used.
+
+Fetch recipe `page-pdfs https://sfxmarcellus.com/weekly-bulletins/`, pinned 2026-10-03: on
+the pages recorded 2026-09-27 (`tests/fixtures/fetch/st-francis-xavier-marcellus.json.gz`)
+the resolver found
+https://sfxmarcellus.com/wp-content/uploads/Bulletin-9-27-2026-2-combined.pdf this way,
+dated that week.
 
 ## Not yet confirmed
 
