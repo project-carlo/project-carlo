@@ -313,9 +313,11 @@ def report_dir(
     The default is the version the classifier has when built with
     `classifier_options`: the same options `eval run` was given.
     """
-    eval_root = run_dir(classifier_name) / "eval"
+    # Built only for its name and version (a `--model` override changes both).
+    classifier = get_classifier(classifier_name, **(classifier_options or {}))
+    eval_root = run_dir(classifier.name) / "eval"
     if version is None:
-        version = get_classifier(classifier_name, **(classifier_options or {})).version
+        version = classifier.version
     elif (eval_root / version).is_dir():
         return eval_root / version
     return eval_root / _cache_version_component(version)
@@ -703,10 +705,10 @@ def write_report(
     """Score an eval run and write `report.md` and `report.json` next to its predictions."""
     out_dir = report_dir(classifier_name, version, classifier_options)
     if not (out_dir / "predictions").is_dir():
-        versions = sorted(p.name for p in (run_dir(classifier_name) / "eval").glob("*") if p.is_dir())
+        versions = sorted(p.name for p in out_dir.parent.glob("*") if p.is_dir())
         raise FileNotFoundError(
             f"No eval predictions in {out_dir}; run `pnpm eval --classifier {classifier_name}` "
-            f"first, or pass one of the versions with output as --version: "
+            f"with the same flags first, or pass one of the versions with output as --version: "
             f"{', '.join(versions) or 'none'}"
         )
     report = build_report(out_dir, labels_dir, statuses=statuses)

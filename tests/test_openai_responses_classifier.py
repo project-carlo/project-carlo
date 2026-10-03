@@ -248,3 +248,23 @@ def test_invalid_model_options_are_refused():
         get_classifier("gpt-6-luna", reasoning_effort="extreme")
     with pytest.raises(ClassifierOptionError, match="does not take reasoning_effort"):
         get_classifier("gemini-flash", reasoning_effort="high")
+
+
+def test_model_option_runs_another_openai_model_under_its_own_name():
+    sol = get_classifier("gpt-6-luna", model="gpt-6.1-sol", reasoning_effort="high")
+    assert sol.name == "gpt-6.1-sol"
+    assert sol.version.startswith("gpt-6.1-sol+strict+reasoning-high+")
+    assert get_classifier("gpt-6-luna-nonstrict", model="gpt-6.1-sol").name == (
+        "gpt-6.1-sol-nonstrict"
+    )
+    # The registered default keeps its name, so existing cached runs still match.
+    assert get_classifier("gpt-6-luna", model=None).name == "gpt-6-luna"
+
+    sol._client = SimpleNamespace(responses=_FakeResponses(json.dumps(_payload())))
+    sol.extract(b"%PDF", churches=CHURCHES, today=TODAY)
+    assert sol._client.responses.calls[0]["model"] == "gpt-6.1-sol"
+
+    with pytest.raises(ClassifierOptionError, match="not an OpenAI model name"):
+        get_classifier("gpt-6-luna", model="../gpt")
+    with pytest.raises(ClassifierOptionError, match="does not take model"):
+        get_classifier("gemini-flash", model="gpt-6.1-sol")

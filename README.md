@@ -127,7 +127,12 @@ Their model settings can be changed per run:
 ```bash
 pnpm eval --classifier gpt-6-luna --reasoning high --image-detail high
 pnpm eval --classifier gpt-6-luna --pdf-as-images --image-detail original
+pnpm eval --classifier gpt-6-luna --model gpt-6.1-sol --reasoning high
 ```
+
+- `--model`: any OpenAI model with the Responses API, in place of `gpt-6-luna`
+  (same prompt and schema). Its results go under `data/runs/<model>/`
+  (`<model>-nonstrict/` with `gpt-6-luna-nonstrict`).
 
 - `--reasoning`: `none`, `minimal`, `low`, `medium` (default), `high`, `xhigh`, `max`.
 - `--image-detail`: `auto`, `low` (default), `high`, or `original`, which only
@@ -144,6 +149,7 @@ the same flags to find that run.
 ```bash
 pnpm eval:report --classifier gpt-6-luna                  # its current version
 pnpm eval:report --classifier gpt-6-luna --pdf-as-images  # the run made with those flags
+pnpm eval:report --classifier gpt-6-luna --model gpt-6.1-sol
 pnpm eval:report --classifier gpt-6-luna --version <ver>  # an older version's output
 ```
 

@@ -117,6 +117,13 @@ def _add_common_args(parser: argparse.ArgumentParser, default_level: str = "INFO
 def _add_eval_model_args(parser: argparse.ArgumentParser) -> None:
     """Model settings for `eval run`; `eval report` takes the same ones to find that run."""
     parser.add_argument(
+        "--model",
+        help=(
+            "OpenAI model to run in place of the classifier's own, e.g. gpt-6.1-sol; "
+            "output goes under data/runs/<model>/ (default: gpt-6-luna)"
+        ),
+    )
+    parser.add_argument(
         "--reasoning", choices=REASONING_EFFORTS,
         help="Reasoning effort (default: the classifier's, medium for gpt-6-luna)",
     )
@@ -178,6 +185,7 @@ def _cmd_extract(args: argparse.Namespace) -> Result:
 def _eval_classifier_options(args: argparse.Namespace) -> dict[str, Any]:
     """The model settings given on the command line; unset ones keep the classifier's default."""
     return {
+        "model": args.model,
         "reasoning_effort": args.reasoning,
         "file_detail": args.image_detail,
         "pdf_as_images": True if args.pdf_as_images else None,

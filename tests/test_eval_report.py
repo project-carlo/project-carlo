@@ -9,6 +9,7 @@ from typing import Any
 import pytest
 
 from pdf_extract import runner
+from pdf_extract.classifiers import get_classifier
 from pdf_extract.evals.report import (
     build_report,
     field_accuracy,
@@ -196,3 +197,17 @@ def test_write_report_writes_next_to_predictions(files, tmp_path, monkeypatch):
     by_dir = write_report(classifier_name="gemini-flash", version=target.name,
                           labels_dir=labels_dir)
     assert by_dir["report_md"] == summary["report_md"]
+
+
+def test_report_finds_a_run_made_with_another_model(files, tmp_path, monkeypatch):
+    labels_dir, out_dir = files
+    monkeypatch.setattr(runner, "RUNS_DIR", tmp_path / "runs")
+    options = {"model": "gpt-6.1-sol", "pdf_as_images": True}
+    version = get_classifier("gpt-6-luna", **options).version
+    target = runner.run_dir("gpt-6.1-sol") / "eval" / runner._cache_version_component(version)
+    target.parent.mkdir(parents=True)
+    out_dir.rename(target)
+
+    summary = write_report(classifier_name="gpt-6-luna", classifier_options=options,
+                           labels_dir=labels_dir)
+    assert Path(summary["report_md"]).parent == target

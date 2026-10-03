@@ -15,19 +15,19 @@ from typing import Any
 from pdf_extract.classifiers.base import Classifier, ClassifierOptionError
 from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.classifiers.openai_gpt import OpenAIClassifier
-from pdf_extract.classifiers.openai_responses import OpenAIResponsesClassifier
+from pdf_extract.classifiers.openai_responses import responses_classifier
 
 REGISTRY: dict[str, Callable[..., Classifier]] = {
     "gemini-flash": lambda: GeminiClassifier(),
     "gpt-5.4-mini": lambda: OpenAIClassifier(model="gpt-5.4-mini"),
     # Qualified schema (weeks of the month, seasons), for scoring against labels.
-    "gpt-6-luna": lambda **options: OpenAIResponsesClassifier(model="gpt-6-luna", **options),
-    "gpt-6-luna-nonstrict": lambda **options: OpenAIResponsesClassifier(
-        model="gpt-6-luna", name="gpt-6-luna-nonstrict", strict=False, **options,
+    "gpt-6-luna": lambda **options: responses_classifier("gpt-6-luna", **options),
+    "gpt-6-luna-nonstrict": lambda **options: responses_classifier(
+        "gpt-6-luna", strict=False, **options,
     ),
 }
 
-_RESPONSES_OPTIONS = frozenset({"reasoning_effort", "file_detail", "pdf_as_images"})
+_RESPONSES_OPTIONS = frozenset({"model", "reasoning_effort", "file_detail", "pdf_as_images"})
 CLASSIFIER_OPTIONS: dict[str, frozenset[str]] = {
     "gpt-6-luna": _RESPONSES_OPTIONS,
     "gpt-6-luna-nonstrict": _RESPONSES_OPTIONS,
