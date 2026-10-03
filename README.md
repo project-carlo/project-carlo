@@ -91,9 +91,102 @@ committed to git. Each file (`schema_version` 1) holds:
   - `day_of_week` or `date`, `start_time` and `end_time` (24-hour `HH:MM`), `cancelled`, `page_number`, `note`
   - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These two apply to weekly rows only.
   - `origin`: `human`, `gemini` or `gemini-edited`
+  - `optional`: `null` for a required event; `include` or `exclude` for one where it is a judgment call whether it belongs at all, naming the preferred answer (press `o` on a row to cycle). Files saved before this field existed lack it, which reads as `null`.
 
 The API validates every file (`src/pdf_extract/labeling/labels.py`) and
 rejects any slug or hash that would put it outside `data/labels`.
+
+### Run a classifier over the labeled bulletins
+
+```bash
+pnpm eval --classifier gpt-6-luna --limit 2   # smoke test on two bulletins
+pnpm eval --classifier gpt-6-luna             # every label marked done
+pnpm eval --classifier gpt-6-luna --status done --status in_progress --parish all-saints-albany
+```
+
+Any classifier in `src/pdf_extract/classifiers/__init__.py` can be run
+(`gemini-flash`, `gpt-6-luna`, `gpt-6-luna-nonstrict`, ...). Each bulletin is
+classified as of the day it was fetched, and results are cached by classifier
+version (model, prompt, schema and settings), PDF and church list, so re-running
+an unchanged classifier makes no API calls (`--refresh` forces them). Output
+goes to `data/runs/<classifier>/eval/<version>/`, which is committed (the rest of
+`data/runs/`, including the result cache, stays gitignored). `<version>` is
+the settings and a digest (`strict_reasoning-medium_detail-low-d469c0cc103e`),
+and prediction files are named by the first 12 characters of the content hash,
+so paths stay inside Windows' 260-character limit:
+
+- `predictions/<parish_slug>/<content_hash[:12]>.json`: the classifier's events
+  in the label's row shape, next to the full `content_hash`, `published_date`,
+  `wrong_bulletin`, token usage and timing, so each file lines up with its label.
+- `run.json`: cache hits, errors, skipped bulletins and summed token usage.
+
+The `gpt-6-luna` classifiers (`classifiers/openai_responses.py`) use the
+Responses API with the schema and prompt in `classifiers/qualified_schedule.py`:
+the production schema plus `weeks_of_month` and `season` on weekly slots, and the
+production Gemini prompt extended with the labeling rules (weekly vs dated,
+chapels, Communion Services, times given relative to a Mass), its static part
+sent first as an explicit prompt-cache breakpoint. They need `OPENAI_API_KEY`.
+
+Their model settings can be changed per run:
+
+```bash
+pnpm eval --classifier gpt-6-luna --reasoning high --image-detail high
+pnpm eval --classifier gpt-6-luna --pdf-as-images --image-detail original
+pnpm eval --classifier gpt-6-luna --model gpt-6.1-sol --reasoning high
+```
+
+- `--model`: any OpenAI model with the Responses API, in place of `gpt-6-luna`
+  (same prompt and schema). Its results go under `data/runs/<model>/`
+  (`<model>-nonstrict/` with `gpt-6-luna-nonstrict`).
+
+- `--reasoning`: `none`, `minimal`, `low`, `medium` (default), `high`, `xhigh`, `max`.
+- `--image-detail`: `auto`, `low` (default), `high`, or `original`, which only
+  page images take.
+- `--pdf-as-images`: render every page to a 200 dpi JPEG (pypdfium2) and send
+  those, each after a "Page N of M" line, in place of the PDF.
+
+Each setting is part of the classifier version, so every combination is cached
+and written under its own `eval/<version>/` directory. `pnpm eval:report` takes
+the same flags to find that run.
+
+### Score an eval run against the labels
+
+```bash
+pnpm eval:report --classifier gpt-6-luna                  # its current version
+pnpm eval:report --classifier gpt-6-luna --pdf-as-images  # the run made with those flags
+pnpm eval:report --classifier gpt-6-luna --model gpt-6.1-sol
+pnpm eval:report --classifier gpt-6-luna --version <ver>  # an older version's output
+```
+
+Writes `report.md` and `report.json` next to the predictions
+(`src/pdf_extract/evals/report.py`). Labels marked done are scored (`--status
+in_progress` adds those); skipped labels never are. Within each bulletin every
+label event is paired with at most one prediction, in tiers tried strictest
+first:
+
+| Tier | Agrees on | Counts as found |
+|---|---|---|
+| `exact` | church, type, weekly/dated, weekday or date, start, cancelled, end time, weeks of month, season | strict, core, loose, any_time |
+| `core` | the same, but end time, weeks of month or season differ | core, loose, any_time |
+| `weekly_vs_dated` | weekly on one side, dated on the other, same weekday; church, type, start, cancelled agree | loose, any_time |
+| `wrong_church` | everything in `core` but the church | never |
+| `wrong_type` | everything in `core` but the event type | never |
+| `wrong_time` | church, type, kind, weekday or date, cancelled; the start time differs | any_time |
+
+The report gives precision, recall and F1 (pooled and per-bulletin average) at
+the strict, core, loose and any_time levels; the wrong-church, wrong-type, missed and
+spurious rates; the same broken down by event type and by weekly/dated; how
+often end time, weeks of month, season and the presence of a note agree on the
+pairs found at the loose level; per-bulletin perfect rate, published-date accuracy, wrong-bulletin
+agreement and event-count error; token usage and timing; and every bulletin's
+differences, worst bulletin first.
+
+Optional label events are left out of all of those numbers. They are paired
+after the required events, against the predictions still unpaired, in the tiers
+that count as found at any_time; a prediction paired with one is neither found
+nor spurious. The report's "Optional events" section counts how often the
+classifier made the preferred choice: predicted an `include` event, or left out
+an `exclude` one.
 
 ## Weekly pipeline
 
@@ -431,6 +524,7 @@ Commands read a `.env` file in the repo root if there is one (without
 overriding variables already set).
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
+- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`).
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
@@ -479,6 +573,8 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
   - `labeling/` - the labeler's API (`pnpm label`): label files, bulletin queue, Gemini sources, demo data
+  - `classifiers/` - pluggable bulletin → events classifiers (Gemini, OpenAI) and their registry
+  - `evals/` - running classifiers over the labeled bulletins (`pnpm eval`)
 
 ## Dependencies
 

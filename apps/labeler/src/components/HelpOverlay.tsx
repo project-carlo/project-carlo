@@ -3,6 +3,7 @@ const SHORTCUTS: [string, string][] = [
   ["m / c / a", "Mass / Confession / Adoration"],
   ["w / d / f", "Weekly / dated / first of the month. d places a weekly row on that weekday of the bulletin's week. f keeps that weekday (or the weekday of a date), marks the first week, and clears the note"],
   ["x", "Toggle cancelled"],
+  ["o", "Optional: required → optional, prefer include → optional, prefer exclude → required. Scoring ignores optional rows and counts how often a classifier made the preferred choice"],
   ["Enter", "Edit the selected row (first empty field)"],
   ["↑ ↓  or  j k", "Select previous / next row"],
   ["Ctrl+D", "Duplicate row"],

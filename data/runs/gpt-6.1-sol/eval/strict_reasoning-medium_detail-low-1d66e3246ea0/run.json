@@ -1,0 +1,26 @@
+{
+  "classifier": "gpt-6.1-sol",
+  "classifier_version": "gpt-6.1-sol+strict+reasoning-medium+detail-low+prompt-ebbd3108f0f8",
+  "ran_at": "2026-10-03T17:32:20Z",
+  "out_dir": "data/runs/gpt-6.1-sol/eval/strict_reasoning-medium_detail-low-1d66e3246ea0",
+  "label_statuses": [
+    "done"
+  ],
+  "parish": null,
+  "bulletins_selected": 19,
+  "bulletins_served": 19,
+  "cache_hits": 19,
+  "classifier_calls": 0,
+  "skipped": [],
+  "errors": [],
+  "events_written": 358,
+  "usage_new_calls": {},
+  "usage_all_served": {
+    "input_tokens": 242570,
+    "cached_tokens": 55584,
+    "cache_write_tokens": 3088,
+    "output_tokens": 28719,
+    "reasoning_tokens": 3375
+  },
+  "wall_seconds": 0.548
+}

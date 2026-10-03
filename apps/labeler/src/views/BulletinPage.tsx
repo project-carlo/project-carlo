@@ -22,6 +22,7 @@ import {
   fromGemini,
   handledGeminiIds,
   labelWarnings,
+  nextOptional,
   sortRows,
   type Warning,
 } from "../lib/rows";
@@ -521,6 +522,9 @@ function BulletinEditor({
         return handled();
       case "x":
         patchRow(row.id, { cancelled: !row.cancelled });
+        return handled();
+      case "o":
+        patchRow(row.id, { optional: nextOptional(row.optional) });
         return handled();
       case "Delete":
       case "Backspace":

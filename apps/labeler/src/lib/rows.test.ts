@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { EditorRow, GeminiRow } from "../types";
+import type { EditorRow, GeminiRow, LabelEvent } from "../types";
 import { NO_FLAGS, buildLabel, draftKey, incompleteMessage, type Draft } from "./draft";
 import { initHistory, pushHistory, redo, undo } from "./history";
 import {
@@ -12,8 +12,10 @@ import {
   expandAllPending,
   expandPending,
   fromGemini,
+  fromLabelEvent,
   handledGeminiIds,
   labelWarnings,
+  nextOptional,
   rowProblems,
   savableRows,
   setDates,
@@ -335,7 +337,30 @@ describe("saving", () => {
       page_number: 2,
       note: null,
       origin: "gemini",
+      optional: null,
     });
+  });
+});
+
+describe("optional rows", () => {
+  it("cycles required, prefer include, prefer exclude", () => {
+    expect(nextOptional(null)).toBe("include");
+    expect(nextOptional("include")).toBe("exclude");
+    expect(nextOptional("exclude")).toBeNull();
+  });
+
+  it("marking a Gemini row optional does not count as editing it", () => {
+    const accepted = fromGemini(gemini());
+    const optional = editRow(accepted, { optional: "include" });
+    expect(optional).toMatchObject({ optional: "include", origin: "gemini" });
+    expect(editRow(optional, { start_time: "11:00" }).origin).toBe("gemini-edited");
+  });
+
+  it("saves the preference and reads older label events as required", () => {
+    expect(toLabelEvent(row({ optional: "exclude" })).optional).toBe("exclude");
+    const legacy: Partial<LabelEvent> = toLabelEvent(row());
+    delete legacy.optional;
+    expect(fromLabelEvent(legacy as LabelEvent).optional).toBeNull();
   });
 });
 

@@ -1,5 +1,5 @@
 import { memo } from "react";
-import type { Church, EditorRow, EventType, WeekOfMonth } from "../types";
+import type { Church, EditorRow, EventType, OptionalPreference, WeekOfMonth } from "../types";
 import { describeDays, formatDate, parseDates, parseDays, shortDay } from "../lib/dates";
 import {
   ALL_BUT_LAST_NOTE,
@@ -12,7 +12,7 @@ import {
   parseSeason,
   toggleWeek,
 } from "../lib/pattern";
-import { rowProblems, setDates, setDays } from "../lib/rows";
+import { describeOptional, rowProblems, setDates, setDays } from "../lib/rows";
 import { formatTime, parseLooseTime } from "../lib/time";
 import { CommitInput } from "./CommitInput";
 
@@ -45,6 +45,47 @@ const TYPES: { value: EventType; key: string; label: string }[] = [
   { value: "confession", key: "C", label: "Confession" },
   { value: "adoration", key: "A", label: "Adoration" },
 ];
+
+const OPTIONAL_CHOICES: { value: OptionalPreference | null; label: string; title: string }[] = [
+  { value: null, label: "Required", title: "Required: scored as usual" },
+  {
+    value: "include",
+    label: "Optional: include",
+    title: "Optional, preferably included: scoring ignores it but counts a classifier that lists it",
+  },
+  {
+    value: "exclude",
+    label: "Optional: exclude",
+    title: "Optional, preferably left out: scoring ignores it but counts a classifier that leaves it out",
+  },
+];
+
+function OptionalPicker({
+  value,
+  onChange,
+}: {
+  value: OptionalPreference | null;
+  onChange: (value: OptionalPreference | null) => void;
+}) {
+  return (
+    <div className="flex overflow-hidden rounded border border-slate-300" title="Optional (o cycles)" data-testid="optional-picker">
+      {OPTIONAL_CHOICES.map((c, i) => (
+        <button
+          key={c.label}
+          type="button"
+          tabIndex={-1}
+          title={c.title}
+          onClick={() => onChange(c.value)}
+          className={`px-1.5 py-0.5 text-xs ${i ? "border-l border-slate-200" : ""} ${
+            value === c.value ? "bg-sky-600 text-white" : "bg-white text-slate-600 hover:bg-slate-100"
+          }`}
+        >
+          {c.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 const ORIGIN_STYLE = {
   human: { bar: "bg-slate-400", label: "Entered by hand" },
@@ -156,6 +197,7 @@ export const RowEditor = memo(function RowEditor({
   const weekly = row.event_kind === "weekly";
   const pendingCount = (weekly ? row.pending_split?.days : row.pending_split?.dates)?.length ?? 0;
   const summary = [
+    describeOptional(row.optional),
     weekly && row.weeks_of_month.length > 0 ? describeWeeks(row.weeks_of_month) : null,
     weekly && row.season ? describeSeason(row.season) : null,
     row.note,
@@ -182,7 +224,7 @@ export const RowEditor = memo(function RowEditor({
         // Switching windows blurs too; only a move elsewhere in the page ends the row.
         if (!e.currentTarget.contains(e.relatedTarget as Node | null) && document.hasFocus()) onLeave(row.id);
       }}
-      className={`relative rounded border py-1 pr-1.5 pl-3 outline-none ${
+      className={`relative rounded border py-1 pr-1.5 pl-3 outline-none ${row.optional ? "border-dashed" : ""} ${
         selected ? "border-sky-500 bg-sky-50 ring-1 ring-sky-500" : "border-slate-200 bg-white hover:border-slate-300"
       }`}
     >
@@ -347,6 +389,7 @@ export const RowEditor = memo(function RowEditor({
       )}
       {selected && (
         <div className="mt-1 flex flex-wrap items-center gap-1.5 pl-5">
+          <OptionalPicker value={row.optional} onChange={(v) => patch({ optional: v })} />
           {weekly && (
             <>
               <WeeksPicker
