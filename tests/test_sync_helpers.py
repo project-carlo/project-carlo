@@ -19,7 +19,6 @@ from pdf_extract.fetch import (
     _normalize_url_for_request,
     _parse_ecatholic_pdf_date,
     _pick_latest_ecatholic_pdf_url,
-    _report_stale_parishes,
     _resolve_ecatholic_latest_link,
     _resolve_fetch_source,
     _resolve_latest_anchor_link_with_playwright,
@@ -32,7 +31,6 @@ from pdf_extract.parish_sites import Resolution
 from pdf_extract.parish_sites.choose import CURRENT, Candidate
 from pdf_extract.parish_sites.dates import parse_date
 from pdf_extract.parish_sites.locate import find_bulletin_page_urls
-from pdf_extract.storage import utc_now_iso
 
 
 def _resolve_other(**kwargs) -> tuple[str, str]:
@@ -736,16 +734,3 @@ def test_parse_ecatholic_pdf_date() -> None:
     ) == date(2026, 8, 23)
     assert _parse_ecatholic_pdf_date("https://files.ecatholic.com/1/bulletins/latest.pdf") is None
     assert _parse_ecatholic_pdf_date("https://files.ecatholic.com/1/bulletins/20261332.pdf") is None
-
-
-def test_report_stale_parishes_names_parishes_stuck_on_old_bulletins() -> None:
-    fresh = utc_now_iso()
-    bulletins = [
-        {"parish_slug": "fresh-parish", "fetched_at": fresh},
-        {"parish_slug": "stale-parish", "fetched_at": "2026-01-01T00:00:00Z"},
-    ]
-    stale = _report_stale_parishes(
-        bulletins=bulletins,
-        slugs=["fresh-parish", "stale-parish", "never-fetched-parish"],
-    )
-    assert stale == ["stale-parish", "never-fetched-parish"]

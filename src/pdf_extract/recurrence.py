@@ -36,6 +36,7 @@ from collections.abc import Set as AbstractSet
 from datetime import date, timedelta
 from typing import Any
 
+from pdf_extract.bulletin_week import bulletin_reference_date
 from pdf_extract.storage import (
     latest_bulletin_ids,
     load_bulletins,
@@ -122,39 +123,6 @@ def _parse_date(value: Any) -> date | None:
 
 
 # ── Recording occurrences ───────────────────────────────────────────────────
-def bulletin_reference_date(entry: dict[str, Any]) -> date | None:
-    """The date a bulletin's week starts from, for crediting its weekly rows.
-
-    Prefers the issue date the extractor read off the bulletin itself. When
-    that is missing the fetch date stands in, snapped to the nearest Sunday.
-    The raw fetch date cannot be used as-is: it lands anywhere from the day
-    before publication to three days after, and for a Sunday weekly row that is
-    the difference between crediting the bulletin's own Sunday and the next
-    one — a whole week. Since 58 of the corpus's 59 parishes have some
-    bulletins with an issue date and some without, an unsnapped fallback breaks
-    those parishes' chains wherever the two kinds meet.
-
-    Snapping to the *nearest* Sunday rather than the preceding one matters:
-    bulletins are fetched on the Saturday before publication as often as on the
-    Monday after, and rounding a Saturday backwards would land a full week
-    early.
-    """
-    published = _parse_date(entry.get("published_date"))
-    if published is not None:
-        return published
-    fetched_at = entry.get("fetched_at")
-    if not isinstance(fetched_at, str) or not fetched_at:
-        return None
-    fetched = _parse_date(fetched_at[:10])
-    return None if fetched is None else _nearest_sunday(fetched)
-
-
-def _nearest_sunday(day: date) -> date:
-    """The Sunday of the week `day` belongs to, rounding Thursday forwards."""
-    forward = (6 - day.weekday()) % 7
-    return day + timedelta(days=forward) if forward <= 3 else day - timedelta(days=7 - forward)
-
-
 def occurrence_from_row(
     row: dict[str, Any], *, bulletin_date: date | None,
 ) -> tuple[SlotKey, date] | None:

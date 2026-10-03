@@ -124,6 +124,14 @@ report comparing the database before and after it, written to
 - `frontend.json.gz`: the snapshot the website would serve.
 - `before.db`: the database as the run found it.
 
+A parish's current bulletin is the one for the latest week, by the issue date
+the extractor read off it (else the fetch date), and the most recently fetched
+of that week's (`src/pdf_extract/bulletin_week.py`). So a second bulletin for a
+week (a correction) replaces the first, and an old issue a site falls back to
+is stored but never shown. The report lists the old issues, and flags a third
+bulletin for one week for a person to look at. A parish is stale when its
+newest bulletin is two weeks old, however recently the site served it.
+
 The run's status decides what happens next:
 
 | Status | Exit code | Meaning |
@@ -274,9 +282,17 @@ result as JSON on success.
 
 Stage idempotency:
 
-- `fetch` skips a bulletin address it already has when the address names
-  its issue's date (`20260927.pdf`); one that names none (`/bulletin.pdf`) is
-  downloaded again and kept only if its content is new
+- `fetch` skips a parish whose newest bulletin is already this weekend's, by
+  the issue date the extractor read off it (and only when that bulletin was
+  fetched within a few days of the date). Otherwise it downloads the bulletin,
+  asking the server first whether the copy it has from that address is still
+  current (`ETag` / `Last-Modified`), and keeps it only if it is new: not the
+  same bytes as any of the parish's bulletins, nor, for a typed PDF, the same
+  words as one of its last few (`src/pdf_extract/duplicates.py`). A bulletin
+  seen again is recorded on its row (`last_seen_at`), not stored twice. The
+  address is never taken to mean the bulletin is unchanged: Discover Mass
+  serves the same PDF from a new address each time, and some sites put each
+  week's bulletin at the same one.
 - `process` skips bulletins with `processed_at` already set, and serves
   bulletins it has extracted before (same PDF hash, same model) from the cache
 

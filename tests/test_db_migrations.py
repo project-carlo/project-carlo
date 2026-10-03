@@ -408,3 +408,44 @@ def test_bulletin_rebuild_keeps_events_and_allows_a_reissued_address(tmp_path: P
             )
     finally:
         conn.close()
+
+
+def test_bulletin_fingerprints_backfill_last_seen_and_the_wrong_bulletin_verdict(
+    tmp_path: Path,
+) -> None:
+    before = tmp_path / "migrations"
+    before.mkdir()
+    for name in ("0001_initial.sql", "0002_bulletin_same_url_new_content.sql"):
+        (before / name).write_text((MIGRATIONS_DIR / name).read_text(encoding="utf-8"))
+    conn = connect_db(tmp_path / "x.db")
+    try:
+        migrate(conn, before)
+        with conn:
+            conn.execute(
+                "INSERT INTO parish(slug, name, homepage_url) VALUES ('p', 'P', 'https://p.org')"
+            )
+            for content_hash in ("right", "wrong"):
+                conn.execute(
+                    "INSERT INTO bulletin(parish_id, source_url, content_hash, fetched_at) "
+                    "VALUES (1, ?, ?, '2026-09-27T09:00:00Z')",
+                    (f"https://p.org/{content_hash}.pdf", content_hash),
+                )
+            conn.execute(
+                "INSERT INTO pipeline_run(id, started_at, status) VALUES ('r', 'now', 'passed')"
+            )
+            conn.execute(
+                "INSERT INTO run_parish_result(run_id, parish_slug, stage, status, content_hash) "
+                "VALUES ('r', 'p', 'process', 'wrong_bulletin', 'wrong')"
+            )
+
+        migrate(conn)
+
+        rows = conn.execute(
+            "SELECT content_hash, wrong_bulletin, last_seen_at FROM bulletin ORDER BY id"
+        ).fetchall()
+        assert [tuple(r) for r in rows] == [
+            ("right", 0, "2026-09-27T09:00:00Z"),
+            ("wrong", 1, "2026-09-27T09:00:00Z"),
+        ]
+    finally:
+        conn.close()

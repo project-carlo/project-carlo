@@ -12,6 +12,7 @@ from typing import Any
 
 from pdf_extract.address import format_address
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
+from pdf_extract.bulletin_week import week_order_sql
 from pdf_extract.paths import DATA_DIR, ROOT
 from pdf_extract.pdf_truncate import ensure_truncated_pdf
 from pdf_extract.timeparse import minutes_to_time, normalize_event_date, time_to_minutes
@@ -112,16 +113,20 @@ def list_churches(conn: sqlite3.Connection, parish_id: int) -> list[sqlite3.Row]
 def latest_bulletin_order(alias: str = "") -> str:
     """ORDER BY that puts a parish's current bulletin first.
 
-    Most recently published, then most recently fetched, then most recently
-    processed, with the highest id as a deterministic tie-break. The frontend
-    snapshot, the change report and `recurrence apply` all rank by it, so they
-    agree on which bulletin a parish is currently showing. Only processed
-    bulletins take part: one that was fetched but never extracted has no
-    events, and ranking it first would blank the parish.
+    The latest week (`bulletin_week.week_order_sql`: the issue date the
+    extractor read, else the fetch date), then the most recently fetched of
+    that week's, so a correction displaces the issue it corrects while an old
+    issue a site falls back to never displaces a newer one. Then the most
+    recently processed, with the highest id as a deterministic tie-break.
+    `bulletin_week.newest_bulletin` is the same ordering in Python. The
+    frontend snapshot, the change report and `recurrence apply` all rank by
+    it, so they agree on which bulletin a parish is currently showing; they
+    rank processed bulletins only, since one that was fetched but never
+    extracted has no events, and ranking it first would blank the parish.
     """
     col = f"{alias}." if alias else ""
     return (
-        f"COALESCE({col}published_date, '') DESC,"
+        f"{week_order_sql(alias)} DESC,"
         f" COALESCE({col}fetched_at, '') DESC,"
         f" COALESCE({col}processed_at, '') DESC,"
         f" {col}id DESC"
@@ -149,7 +154,8 @@ def load_bulletins(conn: sqlite3.Connection) -> list[dict[str, Any]]:
     """Every bulletin as a dict, in insertion order (the recency tie-break)."""
     rows = conn.execute(
         """SELECT b.id, p.slug AS parish_slug, b.source_url, b.content_hash,
-                  b.published_date, b.fetched_at, b.processed_at
+                  b.published_date, b.fetched_at, b.processed_at, b.wrong_bulletin,
+                  b.etag, b.last_modified, b.text_fingerprint, b.last_seen_at
            FROM bulletin b JOIN parish p ON p.id = b.parish_id
            ORDER BY b.id"""
     ).fetchall()
@@ -163,14 +169,45 @@ def insert_bulletin(
     source_url: str,
     content_hash: str,
     fetched_at: str,
+    etag: str | None = None,
+    last_modified: str | None = None,
+    text_fingerprint: str | None = None,
 ) -> int:
     with conn:
         cursor = conn.execute(
-            """INSERT INTO bulletin(parish_id, source_url, content_hash, fetched_at)
-               VALUES (?, ?, ?, ?)""",
-            (parish_id, source_url, content_hash, fetched_at),
+            """INSERT INTO bulletin(
+                   parish_id, source_url, content_hash, fetched_at, last_seen_at,
+                   etag, last_modified, text_fingerprint
+               ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+            (
+                parish_id, source_url, content_hash, fetched_at, fetched_at,
+                etag, last_modified, text_fingerprint,
+            ),
         )
     return int(cursor.lastrowid)
+
+
+def mark_bulletin_seen(
+    conn: sqlite3.Connection,
+    bulletin_id: int,
+    *,
+    seen_at: str,
+    etag: str | None = None,
+    last_modified: str | None = None,
+) -> None:
+    """Record that a site served a bulletin we already had.
+
+    New validators replace the stored ones; absent ones leave them as they are.
+    """
+    with conn:
+        conn.execute(
+            """UPDATE bulletin
+               SET last_seen_at = ?,
+                   etag = COALESCE(?, etag),
+                   last_modified = COALESCE(?, last_modified)
+               WHERE id = ?""",
+            (seen_at, etag, last_modified, bulletin_id),
+        )
 
 
 def event_row_values(conn: sqlite3.Connection, row: dict[str, Any]) -> tuple | None:
@@ -260,6 +297,7 @@ def save_processed_bulletin(
     *,
     processed_at: str,
     published_date: str | None,
+    wrong_bulletin: bool = False,
 ) -> tuple[int, int]:
     """Replace a bulletin's events and mark it processed, in one transaction.
 
@@ -269,9 +307,10 @@ def save_processed_bulletin(
         counts = _insert_events(conn, bulletin_id, rows)
         conn.execute(
             """UPDATE bulletin
-               SET processed_at = ?, published_date = COALESCE(?, published_date)
+               SET processed_at = ?, published_date = COALESCE(?, published_date),
+                   wrong_bulletin = ?
                WHERE id = ?""",
-            (processed_at, published_date, bulletin_id),
+            (processed_at, published_date, int(wrong_bulletin), bulletin_id),
         )
     return counts
 

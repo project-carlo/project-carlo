@@ -276,6 +276,8 @@ def _failed_report(run_id: str, stages: dict[str, Any]) -> dict[str, Any]:
         "attention": {
             "failures": [],
             "wrong_bulletins": [],
+            "repeated_weeks": [],
+            "old_issues": [],
             "stale_parishes": {},
             "dropped_to_zero": [],
             "big_drops": [],

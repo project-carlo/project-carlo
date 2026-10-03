@@ -20,10 +20,17 @@ import logging
 from collections.abc import Collection
 from typing import Any
 
+from pdf_extract.bulletin_week import (
+    CORRECTION,
+    OLDER,
+    REPEATED_WEEK,
+    bulletin_reference_date,
+    bulletin_week,
+    place_bulletin,
+)
 from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.recurrence import (
     History,
-    bulletin_reference_date,
     load_history_from_db,
     promote_recurring_events,
     prune_history,
@@ -39,8 +46,11 @@ from pdf_extract.runner import (
 )
 from pdf_extract.runs import (
     PROCESS_CACHED,
+    PROCESS_CORRECTION,
     PROCESS_EXTRACTED,
     PROCESS_FAILED,
+    PROCESS_OLD_ISSUE,
+    PROCESS_REPEATED_WEEK,
     PROCESS_SKIPPED,
     PROCESS_WRONG_BULLETIN,
     record_parish_result,
@@ -95,6 +105,40 @@ def _prepare_rows(
     return rows, promoted
 
 
+def _placement_outcome(
+    entry: dict[str, Any], parish_bulletins: list[dict[str, Any]],
+) -> tuple[str | None, str | None]:
+    """The run status and detail for where a bulletin's date puts it, if notable.
+
+    Nothing needs doing here to keep an old issue or a correction in its
+    place: the current bulletin is chosen by week (`latest_bulletin_order`).
+    This only says what happened, so the report can.
+    """
+    placement = place_bulletin(entry, parish_bulletins)
+    if placement is None:
+        return None, None
+    week = placement.week.isoformat()
+    others = ", ".join(f"#{other['id']}" for other in placement.others)
+    if placement.kind == CORRECTION:
+        return PROCESS_CORRECTION, f"replaces {others} as the bulletin for {week}"
+    if placement.kind == REPEATED_WEEK:
+        return PROCESS_REPEATED_WEEK, (
+            f"bulletin {len(placement.others) + 1} for {week} (after {others}); "
+            "shown, but the site keeps changing that week's bulletin"
+        )
+    if placement.kind == OLDER:
+        [newest] = placement.others
+        return PROCESS_OLD_ISSUE, (
+            f"for {week}, older than #{newest['id']} for {bulletin_week(newest)}; "
+            "kept, not shown"
+        )
+    return None, None
+
+
+def _join(*parts: str | None) -> str | None:
+    return "; ".join(part for part in parts if part) or None
+
+
 def process_bulletins(
     *,
     parish_name: str | None = None,
@@ -122,8 +166,12 @@ def process_bulletins(
 
     conn = connect_db()
     try:
+        bulletins = load_bulletins(conn)
+        by_slug: dict[str, list[dict[str, Any]]] = {}
+        for bulletin in bulletins:
+            by_slug.setdefault(bulletin["parish_slug"], []).append(bulletin)
         # Keep only the latest fetched bulletin per parish, then process those still pending.
-        latest = latest_per_parish(load_bulletins(conn))
+        latest = latest_per_parish(bulletins)
         pending = [m for m in latest if m.get("processed_at") is None]
 
         if parish_name:
@@ -164,24 +212,45 @@ def process_bulletins(
             nonlocal inserted_events, skipped_events, processed_count, promoted_events
             rows, promoted = _prepare_rows(entry, extracted, history)
             save_history_to_db(conn, history)
+            wrong_bulletin = bool(extracted.get("wrong_bulletin"))
+            processed_at = utc_now_iso()
             stored, skipped = save_processed_bulletin(
                 conn,
                 entry["id"],
                 rows,
-                processed_at=utc_now_iso(),
+                processed_at=processed_at,
                 published_date=entry.get("published_date"),
+                wrong_bulletin=wrong_bulletin,
             )
+            entry["processed_at"] = processed_at
+            entry["wrong_bulletin"] = int(wrong_bulletin)
             inserted_events += stored
             skipped_events += skipped
             promoted_events += promoted
             processed_count += 1
+
+            placed, placement_detail = (
+                (None, None) if wrong_bulletin
+                else _placement_outcome(entry, by_slug[entry["parish_slug"]])
+            )
+            if wrong_bulletin:
+                outcome = PROCESS_WRONG_BULLETIN
+            elif placed is not None:
+                outcome = placed
+                placement_detail = _join(
+                    placement_detail, "from the cache" if status == PROCESS_CACHED else None,
+                )
+            else:
+                outcome = status
             record_parish_result(
-                conn, run_id, entry["parish_slug"], "process",
-                PROCESS_WRONG_BULLETIN if extracted.get("wrong_bulletin") else status,
+                conn, run_id, entry["parish_slug"], "process", outcome,
                 source_url=entry.get("source_url"),
                 content_hash=entry.get("content_hash"),
                 event_count=stored,
-                detail=f"{skipped} events could not be stored" if skipped else None,
+                detail=_join(
+                    placement_detail,
+                    f"{skipped} events could not be stored" if skipped else None,
+                ),
             )
 
         # Serve bulletins whose extraction is already cached without an API call.

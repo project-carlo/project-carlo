@@ -2,13 +2,13 @@
 
 from __future__ import annotations
 
-import hashlib
 import logging
 import re
 import time
 from collections.abc import Callable, Collection
 from dataclasses import dataclass
-from datetime import UTC, date, datetime, timedelta
+from datetime import date
+from http import HTTPStatus
 from typing import NamedTuple
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, quote, unquote, urljoin, urlparse, urlunparse
@@ -21,12 +21,23 @@ from pdf_extract.browser import (
     launch_stealth_browser,
     wait_for_selector_quietly,
 )
+from pdf_extract.bulletin_week import (
+    STALE_BULLETIN_AGE_DAYS,
+    bulletin_reference_date,
+    has_bulletin_for,
+    nearest_sunday,
+    newest_bulletin,
+    stale_parishes,
+)
+from pdf_extract.duplicates import Duplicate, Validators, identify, validators_for
 from pdf_extract.parish_sites import Recipe, resolve_parish_site
-from pdf_extract.parish_sites.dates import parse_date, safe_date
+from pdf_extract.parish_sites.dates import safe_date
 from pdf_extract.pdf_compact import compact_bulletin_pdf
 from pdf_extract.runs import (
+    FETCH_CURRENT,
     FETCH_DOWNLOAD_FAILED,
     FETCH_NEW,
+    FETCH_RECHECK_FAILED,
     FETCH_RESOLVE_FAILED,
     FETCH_SAVE_FAILED,
     FETCH_UNCHANGED,
@@ -38,6 +49,7 @@ from pdf_extract.storage import (
     insert_bulletin,
     list_parishes,
     load_bulletins,
+    mark_bulletin_seen,
     utc_now_iso,
 )
 
@@ -61,9 +73,6 @@ ECATHOLIC_RESOLVE_ATTEMPTS = 2
 ECATHOLIC_SETTLE_DELAY_MS = 2000
 # Wait before the one retry of a download answered 429 (Too Many Requests).
 HTTP_429_RETRY_SECONDS = 10
-# A parish whose newest bulletin is older than this is reported at the end of
-# the fetch stage: the resolver kept returning a link we already had.
-STALE_BULLETIN_AGE_DAYS = 14
 
 LOGGER = logging.getLogger(__name__)
 
@@ -452,9 +461,19 @@ def _resolve_fetch_source(parish) -> FetchSource | None:
 
 # ── HTTP helpers ────────────────────────────────────────────────────────────
 
-def _http_get_bytes(
-    url: str, *, referer: str | None = None, timeout: int = HTTP_DOWNLOAD_TIMEOUT_SECONDS,
-) -> bytes:
+class _Response(NamedTuple):
+    body: bytes
+    etag: str | None = None
+    last_modified: str | None = None
+
+
+def _http_get(
+    url: str,
+    *,
+    referer: str | None = None,
+    extra_headers: dict[str, str] | None = None,
+    timeout: int = HTTP_DOWNLOAD_TIMEOUT_SECONDS,
+) -> _Response:
     request_url = _normalize_url_for_request(url)
     headers = {
         # WordPress.com's CDN answers 403 to a Chrome much older than the
@@ -468,10 +487,11 @@ def _http_get_bytes(
     }
     if referer:
         headers["Referer"] = referer
+    headers.update(extra_headers or {})
     req = Request(request_url, headers=headers)
     LOGGER.info("Fetching URL: %s", request_url)
     with urlopen(req, timeout=timeout) as resp:
-        return resp.read()
+        return _Response(resp.read(), resp.headers.get("ETag"), resp.headers.get("Last-Modified"))
 
 
 def _normalize_url_for_request(url: str) -> str:
@@ -485,28 +505,54 @@ def _normalize_url_for_request(url: str) -> str:
     return urlunparse((parsed.scheme, parsed.netloc, path, params, query, fragment))
 
 
-def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
-    referer = source_url
+@dataclass(frozen=True)
+class Download:
+    """What a bulletin download brought back."""
+
+    pdf: bytes | None
+    """The PDF, or None when the server said the copy we have is current (304)."""
+
+    etag: str | None = None
+    last_modified: str | None = None
+    """The server's validators for the fetch URL, for a conditional GET next time."""
+
+
+def _download_bulletin(
+    *, fetch_url: str, source_url: str, validators: Validators | None = None,
+) -> Download:
+    """Download a bulletin, asking first whether `validators` still name it."""
+    conditional = validators.request_headers() if validators else {}
+
+    def get() -> _Response:
+        return _http_get(fetch_url, referer=source_url, extra_headers=conditional)
+
     try:
         LOGGER.info("Attempting primary fetch URL: %s", fetch_url)
         try:
-            return _http_get_bytes(
-                fetch_url, referer=referer, timeout=HTTP_DOWNLOAD_TIMEOUT_SECONDS,
-            )
+            response = get()
         except HTTPError as exc:
             # Weebly and Wix file hosts answer 429 to a few quick requests.
-            if exc.code != 429:
+            if exc.code != HTTPStatus.TOO_MANY_REQUESTS:
                 raise
             LOGGER.warning("429 from %s; retrying in %ss", fetch_url, HTTP_429_RETRY_SECONDS)
             time.sleep(HTTP_429_RETRY_SECONDS)
-            return _http_get_bytes(
-                fetch_url, referer=referer, timeout=HTTP_DOWNLOAD_TIMEOUT_SECONDS,
-            )
+            response = get()
     except (HTTPError, URLError, OSError) as exc:
+        # urllib raises a 304 like any other non-2xx answer.
+        if conditional and isinstance(exc, HTTPError) and exc.code == HTTPStatus.NOT_MODIFIED:
+            LOGGER.info("Not modified since the copy we have: %s", fetch_url)
+            return Download(pdf=None)
         LOGGER.warning("Primary fetch failed (%s), falling back to source URL: %s", exc, source_url)
-        return _http_get_bytes(
-            source_url, referer=referer, timeout=HTTP_DOWNLOAD_TIMEOUT_SECONDS,
-        )
+        # The validators belong to the fetch URL, so none are kept from here.
+        return Download(pdf=_http_get(source_url, referer=source_url).body)
+    return Download(pdf=response.body, etag=response.etag, last_modified=response.last_modified)
+
+
+def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
+    """Download a bulletin unconditionally."""
+    pdf = _download_bulletin(fetch_url=fetch_url, source_url=source_url).pdf
+    assert pdf is not None, "only a conditional download can come back empty"
+    return pdf
 
 
 # ── Pipeline: fetch ─────────────────────────────────────────────────────────
@@ -516,12 +562,18 @@ def fetch_bulletins(
     parish_name: str | None = None,
     slugs: Collection[str] | None = None,
     run_id: str | None = None,
+    today: date | None = None,
 ) -> dict[str, int]:
     """Download each parish's latest bulletin if it is one we have not seen.
 
-    The PDF goes to the blob store under its content hash and a `bulletin` row
-    records where it came from. With `run_id`, each parish's outcome is also
-    recorded for the run report. `slugs` limits the run to those parishes.
+    A parish whose newest bulletin is, by the date the extractor read off it,
+    already this weekend's (see `bulletin_week.has_bulletin_for`) is not
+    fetched at all. For the rest, the download is compared with what the
+    parish already has (see `duplicates`): a bulletin seen before is recorded
+    as seen again, not stored twice. A new one goes to the blob store under
+    its content hash, and a `bulletin` row records where it came from. With
+    `run_id`, each parish's outcome is also recorded for the run report.
+    `slugs` limits the run to those parishes.
     """
     LOGGER.info(
         "Starting fetch stage (parish_name=%s, slugs=%s)",
@@ -529,20 +581,21 @@ def fetch_bulletins(
         "*all*" if slugs is None else len(slugs),
     )
     store = get_store()
+    sunday = nearest_sunday(today or date.today())
 
     fetched = 0
-    skipped_existing = 0
+    current = 0
+    unchanged = 0
+    recheck_failed = 0
     failed = 0
     attempted_slugs: list[str] = []
 
     conn = connect_db()
     try:
         parishes = _parishes_for_run(conn, parish_name, slugs)
-        existing = {
-            (row["parish_id"], row["source_url"], row["content_hash"])
-            for row in conn.execute("SELECT parish_id, source_url, content_hash FROM bulletin")
-        }
-        existing_urls = {(parish_id, url) for parish_id, url, _ in existing}
+        by_slug: dict[str, list[dict]] = {}
+        for entry in load_bulletins(conn):
+            by_slug.setdefault(entry["parish_slug"], []).append(entry)
 
         with launch_stealth_browser() as page:
             for parish in parishes:
@@ -553,9 +606,20 @@ def fetch_bulletins(
                     # parish we expect to refresh, so keep it out of the stale report.
                     continue
                 attempted_slugs.append(slug)
+                stored = by_slug.setdefault(slug, [])
 
                 def record(status: str, **fields) -> None:
                     record_parish_result(conn, run_id, slug, "fetch", status, **fields)
+
+                newest = newest_bulletin(stored)
+                if has_bulletin_for(newest, sunday):
+                    current += 1
+                    record(
+                        FETCH_CURRENT, source_url=newest["source_url"],
+                        content_hash=newest["content_hash"],
+                        detail=f"already have the bulletin for {sunday.isoformat()}",
+                    )
+                    continue
 
                 try:
                     link = _build_bulletin_link(
@@ -576,49 +640,75 @@ def fetch_bulletins(
                     failed += 1
                     continue
 
-                known_url = (parish["id"], link.source_url) in existing_urls
-                if known_url and not _may_be_reissued(link.source_url):
-                    skipped_existing += 1
-                    record(FETCH_UNCHANGED, source_url=link.source_url, detail=link.how or None)
-                    continue
-
+                # The address is never taken to mean we have the bulletin: one
+                # address can carry a new issue each week, and one issue can
+                # come from a new address each time. It only lets the server
+                # say the copy we have from it is current.
+                known = validators_for(link.source_url, stored)
                 try:
-                    pdf_bytes = _download_pdf(
+                    download = _download_bulletin(
                         fetch_url=link.fetch_url, source_url=link.source_url,
+                        validators=None if known is None else Validators(
+                            known.bulletin.get("etag"), known.bulletin.get("last_modified"),
+                        ),
                     )
                 except (HTTPError, URLError, OSError) as exc:
                     LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
-                    record(
-                        FETCH_DOWNLOAD_FAILED,
-                        detail=f"{type(exc).__name__}: {exc}",
-                        source_url=link.source_url,
-                    )
-                    failed += 1
+                    detail = f"{type(exc).__name__}: {exc}"
+                    if any(entry["source_url"] == link.source_url for entry in stored):
+                        # A re-check of a bulletin we already have: the parish
+                        # still has it, so this is not a failure to fetch.
+                        recheck_failed += 1
+                        record(FETCH_RECHECK_FAILED, detail=detail, source_url=link.source_url)
+                    else:
+                        failed += 1
+                        record(FETCH_DOWNLOAD_FAILED, detail=detail, source_url=link.source_url)
                     continue
 
-                # The hash names the bulletin as published, so it stays the
-                # bulletin's identity however the stored copy is compacted.
-                content_hash = hashlib.sha256(pdf_bytes).hexdigest()
-                if (parish["id"], link.source_url, content_hash) in existing:
-                    skipped_existing += 1
-                    record(FETCH_UNCHANGED, source_url=link.source_url, detail=link.how or None)
+                seen_at = utc_now_iso()
+                if download.pdf is None:
+                    duplicate = known
+                    content_hash = None
+                    text_fingerprint = None
+                else:
+                    identified = identify(download.pdf, stored)
+                    duplicate = identified.duplicate
+                    content_hash = identified.content_hash
+                    text_fingerprint = identified.text_fingerprint
+                if duplicate is not None:
+                    _record_seen_again(
+                        conn, duplicate, download=download, source_url=link.source_url,
+                        seen_at=seen_at,
+                    )
+                    unchanged += 1
+                    record(
+                        FETCH_UNCHANGED, source_url=link.source_url,
+                        content_hash=duplicate.bulletin["content_hash"],
+                        detail=_join(link.how, duplicate.describe()),
+                    )
                     continue
+                assert download.pdf is not None and content_hash is not None
+
                 key = bulletin_pdf_key(slug, content_hash)
                 try:
                     # Stored before the row that points at it, so a bulletin row
                     # never names a PDF that is not there. Compaction is not
-                    # byte-for-byte repeatable, so a bulletin already stored
-                    # (the same PDF at a new URL) is left as it is.
+                    # byte-for-byte repeatable, so a PDF already stored (by a
+                    # run whose database was not published) is left as it is.
                     if not store.exists(key):
                         store.put(
-                            key, compact_bulletin_pdf(pdf_bytes), content_type="application/pdf",
+                            key, compact_bulletin_pdf(download.pdf),
+                            content_type="application/pdf",
                         )
-                    insert_bulletin(
+                    bulletin_id = insert_bulletin(
                         conn,
                         parish_id=parish["id"],
                         source_url=link.source_url,
                         content_hash=content_hash,
-                        fetched_at=utc_now_iso(),
+                        fetched_at=seen_at,
+                        etag=download.etag,
+                        last_modified=download.last_modified,
+                        text_fingerprint=text_fingerprint,
                     )
                 except Exception as exc:
                     LOGGER.warning(
@@ -632,70 +722,67 @@ def fetch_bulletins(
                     failed += 1
                     continue
 
-                existing.add((parish["id"], link.source_url, content_hash))
-                existing_urls.add((parish["id"], link.source_url))
+                stored.append({
+                    "id": bulletin_id, "parish_slug": slug, "source_url": link.source_url,
+                    "content_hash": content_hash, "published_date": None,
+                    "fetched_at": seen_at, "processed_at": None, "wrong_bulletin": 0,
+                    "etag": download.etag, "last_modified": download.last_modified,
+                    "text_fingerprint": text_fingerprint, "last_seen_at": seen_at,
+                })
                 fetched += 1
                 record(
                     FETCH_NEW, source_url=link.source_url, content_hash=content_hash,
                     detail=link.how or None,
                 )
-
-        stale_slugs = _report_stale_parishes(
-            bulletins=load_bulletins(conn), slugs=attempted_slugs,
-        )
     finally:
         conn.close()
 
+    stale = stale_parishes(
+        (entry for entries in by_slug.values() for entry in entries),
+        attempted_slugs, today=today,
+    )
+    for slug, newest in stale.items():
+        LOGGER.warning(
+            "Parish %s has no bulletin from the last %s days (newest: %s)",
+            slug, STALE_BULLETIN_AGE_DAYS,
+            "none" if newest is None else bulletin_reference_date(newest),
+        )
+
     result = {
         "fetched_bulletins": fetched,
-        "skipped_existing_urls": skipped_existing,
+        "already_current": current,
+        "unchanged_bulletins": unchanged,
+        "recheck_failed": recheck_failed,
         "failed_parishes": failed,
-        "stale_parishes": len(stale_slugs),
+        "stale_parishes": len(stale),
     }
     LOGGER.info("Fetch stage finished: %s", result)
     return result
 
 
-def _may_be_reissued(url: str) -> bool:
-    """Whether a bulletin address we already have may hold a newer issue now.
+def _record_seen_again(
+    conn, duplicate: Duplicate, *, download: Download, source_url: str, seen_at: str,
+) -> None:
+    """Note on a stored bulletin that the site served it again.
 
-    An address naming its issue's date ("20260927.pdf") is that issue for good.
-    One that names none ("/bulletin.pdf") can be overwritten each week, so it
-    is downloaded again and compared by content.
+    The server's validators are kept only when it served the bulletin from the
+    address the bulletin was stored under: they name that address's copy.
     """
-    return parse_date(url, date.today()) is None
-
-
-def _report_stale_parishes(*, bulletins: list[dict], slugs: list[str]) -> list[str]:
-    """Warn about parishes still sitting on an old bulletin after this run.
-
-    A resolver that keeps returning a link we already have leaves no trace
-    beyond the `skipped_existing_urls` tally, so a parish can quietly stop
-    refreshing for months. Name them instead.
-    """
-    latest_by_slug: dict[str, str] = {}
-    for entry in bulletins:
-        slug = entry.get("parish_slug")
-        fetched_at = entry.get("fetched_at")
-        if not slug or not fetched_at:
-            continue
-        if fetched_at > latest_by_slug.get(slug, ""):
-            latest_by_slug[slug] = fetched_at
-
-    cutoff = (
-        (datetime.now(UTC) - timedelta(days=STALE_BULLETIN_AGE_DAYS))
-        .replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    same_address = duplicate.bulletin["source_url"] == source_url
+    etag = download.etag if same_address else None
+    last_modified = download.last_modified if same_address else None
+    mark_bulletin_seen(
+        conn, duplicate.bulletin["id"], seen_at=seen_at, etag=etag, last_modified=last_modified,
     )
-    stale: list[str] = []
-    for slug in slugs:
-        latest = latest_by_slug.get(slug)
-        if latest is None or latest < cutoff:
-            stale.append(slug)
-            LOGGER.warning(
-                "Parish %s has no bulletin newer than %s days (latest: %s)",
-                slug, STALE_BULLETIN_AGE_DAYS, latest or "never fetched",
-            )
-    return stale
+    duplicate.bulletin["last_seen_at"] = seen_at
+    if etag:
+        duplicate.bulletin["etag"] = etag
+    if last_modified:
+        duplicate.bulletin["last_modified"] = last_modified
+
+
+def _join(*parts: str | None) -> str | None:
+    return "; ".join(part for part in parts if part) or None
 
 
 # ── Helpers ─────────────────────────────────────────────────────────────────

@@ -474,17 +474,58 @@ def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:
 
     calls: list[str] = []
 
-    def get(url: str, **_: object) -> bytes:
+    def get(url: str, **_: object) -> fetch._Response:
         calls.append(url)
         if len(calls) == 1:
             raise HTTPError(url, 429, "Too Many Requests", {}, None)  # type: ignore[arg-type]
-        return b"%PDF-1.7"
+        return fetch._Response(b"%PDF-1.7")
 
-    monkeypatch.setattr(fetch, "_http_get_bytes", get)
+    monkeypatch.setattr(fetch, "_http_get", get)
     monkeypatch.setattr(fetch.time, "sleep", lambda _: None)
     pdf = f"{HOME}/uploads/bulletin-2026-09-27.pdf"
     assert fetch._download_pdf(fetch_url=pdf, source_url=pdf) == b"%PDF-1.7"
     assert calls == [pdf, pdf]
+
+
+def test_a_conditional_download_answered_304_brings_back_no_pdf(monkeypatch) -> None:
+    from urllib.error import HTTPError
+
+    from pdf_extract import fetch
+    from pdf_extract.duplicates import Validators
+
+    sent: list[dict[str, str]] = []
+
+    def get(url: str, *, extra_headers=None, **_: object) -> fetch._Response:
+        sent.append(dict(extra_headers or {}))
+        if extra_headers:
+            raise HTTPError(url, 304, "Not Modified", {}, None)  # type: ignore[arg-type]
+        return fetch._Response(b"%PDF-1.7", etag='"v2"', last_modified="Sun, 27 Sep 2026")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    pdf = f"{HOME}/uploads/bulletin.pdf"
+
+    download = fetch._download_bulletin(
+        fetch_url=pdf, source_url=pdf, validators=Validators('"v1"', "Sat, 26 Sep 2026"),
+    )
+    assert download == fetch.Download(pdf=None)
+    assert sent == [{"If-None-Match": '"v1"', "If-Modified-Since": "Sat, 26 Sep 2026"}]
+
+    download = fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
+    assert download == fetch.Download(b"%PDF-1.7", etag='"v2"', last_modified="Sun, 27 Sep 2026")
+
+
+def test_a_304_to_an_unconditional_download_is_a_failure(monkeypatch) -> None:
+    from urllib.error import HTTPError
+
+    from pdf_extract import fetch
+
+    def get(url: str, **_: object) -> fetch._Response:
+        raise HTTPError(url, 304, "Not Modified", {}, None)  # type: ignore[arg-type]
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    pdf = f"{HOME}/uploads/bulletin.pdf"
+    with pytest.raises(HTTPError):
+        fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
 
 
 # ── Recipes ─────────────────────────────────────────────────────────────────
