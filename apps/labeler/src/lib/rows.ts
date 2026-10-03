@@ -5,6 +5,7 @@ import type {
   EventType,
   GeminiRow,
   LabelEvent,
+  OptionalPreference,
   Origin,
 } from "../types";
 import { dateForWeekday, dayOfDate, daysBetween, formatDate } from "./dates";
@@ -48,6 +49,7 @@ export function blankRow(
     page_number: viewedPage ?? previous?.page_number ?? null,
     note: null,
     origin: "human",
+    optional: null,
   };
 }
 
@@ -70,6 +72,7 @@ export function fromGemini(g: GeminiRow): EditorRow {
     page_number: g.page_number,
     note: g.note,
     origin: "gemini",
+    optional: null,
   };
 }
 
@@ -82,14 +85,16 @@ type Patch = Partial<Omit<EditorRow, "id" | "origin" | "gemini_id">>;
 const SAME = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 
 /**
- * Apply an edit. A Gemini row that actually changes becomes "gemini-edited".
+ * Apply an edit. A Gemini row whose event actually changes becomes
+ * "gemini-edited"; marking it optional is not a change to the event.
  * Switching kind clears what the other kind carries: a dated row has no
  * weekday, weeks of the month or season, and a weekly row has no date.
  */
 export function editRow(row: EditorRow, patch: Patch): EditorRow {
-  const changed = (Object.keys(patch) as (keyof Patch)[]).some((k) => !SAME(row[k], patch[k]));
-  if (!changed) return row;
-  const next: EditorRow = { ...row, ...patch, origin: editedOrigin(row.origin) };
+  const changed = (Object.keys(patch) as (keyof Patch)[]).filter((k) => !SAME(row[k], patch[k]));
+  if (!changed.length) return row;
+  const edited = changed.some((k) => k !== "optional");
+  const next: EditorRow = { ...row, ...patch, origin: edited ? editedOrigin(row.origin) : row.origin };
   if (next.event_kind === "specific_date") {
     next.day_of_week = null;
     next.weeks_of_month = [];
@@ -220,6 +225,19 @@ export function splitDates(row: EditorRow, dates: string[]): EditorRow[] {
   });
 }
 
+const OPTIONAL_CYCLE: (OptionalPreference | null)[] = [null, "include", "exclude"];
+
+/** Required → optional, prefer include → optional, prefer exclude → required. */
+export function nextOptional(value: OptionalPreference | null): OptionalPreference | null {
+  return OPTIONAL_CYCLE[(OPTIONAL_CYCLE.indexOf(value) + 1) % OPTIONAL_CYCLE.length];
+}
+
+export function describeOptional(value: OptionalPreference | null): string | null {
+  if (value === "include") return "optional, prefer include";
+  if (value === "exclude") return "optional, prefer exclude";
+  return null;
+}
+
 export function duplicateRow(row: EditorRow): EditorRow {
   const copy: EditorRow = { ...row, id: newId(), origin: editedOrigin(row.origin) };
   delete copy.gemini_id;
@@ -252,11 +270,12 @@ export function toLabelEvent(row: EditorRow): LabelEvent {
     page_number: row.page_number,
     note: row.note?.trim() ? row.note.trim() : null,
     origin: row.origin,
+    optional: row.optional ?? null,
   };
 }
 
 export function fromLabelEvent(event: LabelEvent): EditorRow {
-  return { ...event, id: newId() };
+  return { ...event, optional: event.optional ?? null, id: newId() };
 }
 
 type Slot = Pick<

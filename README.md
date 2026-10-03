@@ -91,6 +91,7 @@ committed to git. Each file (`schema_version` 1) holds:
   - `day_of_week` or `date`, `start_time` and `end_time` (24-hour `HH:MM`), `cancelled`, `page_number`, `note`
   - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These two apply to weekly rows only.
   - `origin`: `human`, `gemini` or `gemini-edited`
+  - `optional`: `null` for a required event; `include` or `exclude` for one where it is a judgment call whether it belongs at all, naming the preferred answer (press `o` on a row to cycle). Files saved before this field existed lack it, which reads as `null`.
 
 The API validates every file (`src/pdf_extract/labeling/labels.py`) and
 rejects any slug or hash that would put it outside `data/labels`.
@@ -151,6 +152,13 @@ often end time, weeks of month, season and the presence of a note agree on the
 pairs found at the loose level; per-bulletin perfect rate, published-date accuracy, wrong-bulletin
 agreement and event-count error; token usage and timing; and every bulletin's
 differences, worst bulletin first.
+
+Optional label events are left out of all of those numbers. They are paired
+after the required events, against the predictions still unpaired, in the tiers
+that count as found at any_time; a prediction paired with one is neither found
+nor spurious. The report's "Optional events" section counts how often the
+classifier made the preferred choice: predicted an `include` event, or left out
+an `exclude` one.
 
 ## Weekly pipeline
 

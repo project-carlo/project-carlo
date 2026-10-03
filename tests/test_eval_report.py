@@ -14,6 +14,7 @@ from pdf_extract.evals.report import (
     field_accuracy,
     match_events,
     render_markdown,
+    score_optional,
     score_records,
     write_report,
 )
@@ -27,7 +28,7 @@ def _ev(**overrides: Any) -> dict[str, Any]:
         "church_slug": "st-mary", "event_type": "mass", "event_kind": "weekly",
         "day_of_week": "Sunday", "date": None, "start_time": "10:00", "end_time": None,
         "cancelled": False, "weeks_of_month": [], "season": None, "page_number": 1,
-        "note": None, "origin": "human",
+        "note": None, "origin": "human", "optional": None,
     }
     return event | overrides
 
@@ -101,6 +102,57 @@ def test_levels_precision_recall_f1():
     assert score["levels"]["loose"]["f1"] == 4 / 7
     assert score["levels"]["any_time"]["f1"] == 6 / 7
     assert score_records([])["levels"]["strict"]["f1"] == 1.0
+
+
+def test_optional_events_are_paired_last_and_left_out_of_the_scores():
+    labels = [
+        _ev(optional="include"),                          # also matches the required 10:00
+        _ev(),
+        _ev(start_time="12:00", optional="include"),      # left out by the classifier
+        _ev(start_time="17:00", optional="exclude"),      # predicted at 17:15
+        _ev(start_time="19:00", optional="exclude"),      # left out, as preferred
+    ]
+    preds = [_ev(), _ev(start_time="17:15"), _ev(note="second")]
+    records = match_events(labels, preds)
+    # The required 10:00 is paired first; the optional one takes the other 10:00.
+    assert _tiers(labels, preds) == [
+        ("optional", 0, 2), ("exact", 1, 0), ("optional", 2, None), ("optional", 3, 1),
+        ("optional", 4, None),
+    ]
+    assert [r["found_as"] for r in records if r["tier"] == "optional"] == [
+        "exact", None, "wrong_time", None,
+    ]
+    score = score_records(records)
+    assert score["label_events"] == 1 and score["predicted_events"] == 1
+    assert score["levels"]["strict"]["f1"] == 1.0 and score["spurious"] == 0
+    optional = score_optional(records)
+    assert optional["events"] == 4 and optional["preferred"] == 2 and optional["rate"] == 0.5
+    assert optional["by_preference"] == {
+        "include": {"events": 2, "preferred": 1, "rate": 0.5},
+        "exclude": {"events": 2, "preferred": 1, "rate": 0.5},
+    }
+
+
+def test_optional_events_never_count_as_missed_or_spurious_in_the_report(tmp_path: Path):
+    labels_dir, out_dir = tmp_path / "labels", tmp_path / "eval"
+    _label(labels_dir, HASH_A, "done", [
+        _ev(), _ev(day_of_week="Friday", optional="include"),
+        _ev(day_of_week="Saturday", optional="exclude"),
+    ])
+    _pred(out_dir, HASH_A, [_ev(), _ev(day_of_week="Saturday")])
+    report = build_report(out_dir, labels_dir)
+    assert report["overall"]["label_events"] == 1 and report["overall"]["predicted_events"] == 1
+    assert report["overall"]["levels"]["strict"]["f1"] == 1.0
+    assert report["bulletin_level"]["perfect"]["strict"] == 1
+    assert report["optional"]["preferred"] == 0 and report["optional"]["events"] == 2
+    assert set(report["by_event_type"]) == {"mass"}
+    assert report["by_event_type"]["mass"]["label_events"] == 1
+
+    markdown = render_markdown(report)
+    assert "## Optional events" in markdown
+    assert "| include | 1 | 0/1 (0.0%) |" in markdown
+    assert "**optional, prefer include**: left out" in markdown
+    assert "**optional, prefer exclude**" in markdown
 
 
 def test_field_accuracy_outcomes():

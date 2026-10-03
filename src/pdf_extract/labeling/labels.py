@@ -6,6 +6,11 @@ plus the recurrence qualifiers `weeks_of_month` and `season` (the same tokens
 and ranges `schedule_pattern` uses), so ground truth can be scored against any
 classifier later.
 
+An event can be marked optional when it is a judgment call whether it belongs
+in the schedule at all: `optional` is null for a required event, or the
+preferred answer, `include` or `exclude`. Scoring leaves optional events out of the
+headline numbers and reports how often a classifier made the preferred choice.
+
 Files live at `data/labels/<parish_slug>/<content_hash>.json`. The slug and
 hash come from HTTP requests, so both are checked against strict patterns and
 the resolved path must stay inside the labels directory.
@@ -34,6 +39,7 @@ EVENT_KINDS = ("weekly", "specific_date")
 DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 WEEKS_OF_MONTH = ("first", "second", "third", "fourth", "fifth", "last")
 ORIGINS = ("human", "gemini", "gemini-edited")
+OPTIONAL_PREFERENCES = ("include", "exclude")
 
 # February has 29: a season boundary recurs every year, leap years included.
 DAYS_IN_MONTH = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
@@ -45,7 +51,10 @@ LABEL_KEYS = (
 EVENT_KEYS = (
     "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time",
     "end_time", "cancelled", "weeks_of_month", "season", "page_number", "note", "origin",
+    "optional",
 )
+# Keys a label written before they existed may lack; a missing one reads as null.
+EVENT_KEYS_ADDED_LATER = ("optional",)
 SEASON_KEYS = ("start_month", "start_day", "end_month", "end_day")
 
 _SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -96,9 +105,11 @@ def _is_int(value: Any) -> bool:
     return isinstance(value, int) and not isinstance(value, bool)
 
 
-def _check_keys(obj: dict[str, Any], expected: tuple[str, ...], where: str) -> list[str]:
+def _check_keys(
+    obj: dict[str, Any], expected: tuple[str, ...], where: str, *, may_lack: tuple[str, ...] = (),
+) -> list[str]:
     errors = []
-    missing = [k for k in expected if k not in obj]
+    missing = [k for k in expected if k not in obj and k not in may_lack]
     extra = sorted(k for k in obj if k not in expected)
     if missing:
         errors.append(f"{where}: missing {', '.join(missing)}")
@@ -129,7 +140,7 @@ def _validate_season(season: Any, where: str) -> list[str]:
 def _validate_event(event: Any, where: str) -> list[str]:
     if not isinstance(event, dict):
         return [f"{where} must be an object"]
-    errors = _check_keys(event, EVENT_KEYS, where)
+    errors = _check_keys(event, EVENT_KEYS, where, may_lack=EVENT_KEYS_ADDED_LATER)
     if errors:
         return errors
 
@@ -177,6 +188,8 @@ def _validate_event(event: Any, where: str) -> list[str]:
         errors.append(f"{where}.note must be null or a string")
     if event["origin"] not in ORIGINS:
         errors.append(f"{where}.origin must be one of {', '.join(ORIGINS)}")
+    if event.get("optional") not in (None, *OPTIONAL_PREFERENCES):
+        errors.append(f"{where}.optional must be null, {' or '.join(OPTIONAL_PREFERENCES)}")
     return errors
 
 

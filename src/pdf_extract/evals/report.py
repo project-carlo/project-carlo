@@ -27,6 +27,12 @@ how often the classifier saw the event but put it at the wrong church or called 
 the wrong thing, and they are tried before `wrong_time` because a pair that agrees
 on everything but the church is likelier the same event than one at another hour.
 A label event left unpaired is missed; a prediction left unpaired is spurious.
+
+Label events marked `optional` are left out of all of that. They are paired only
+after the required events, against the predictions still unpaired, in the tiers
+that count as found; a prediction paired with one is neither found nor spurious.
+The report only counts how often the classifier made the labeller's preferred
+choice: included an event marked `include`, or left out one marked `exclude`.
 """
 
 from __future__ import annotations
@@ -61,6 +67,9 @@ LEVELS = {
 }
 # Label-side outcomes in display order; they sum to the number of label events.
 LABEL_OUTCOMES = (*FOUND_TIERS, *DIAGNOSTIC_TIERS, "missed")
+# The tier of every record for an optional label event (see `match_events`).
+OPTIONAL = "optional"
+OPTIONAL_PREFERENCES = ("include", "exclude")
 
 CORE_FIELDS = (
     "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time", "cancelled",
@@ -155,19 +164,17 @@ TIER_RULES: dict[str, Tier] = {
 }
 
 
-def match_events(
-    label_events: list[dict[str, Any]], pred_events: list[dict[str, Any]],
-) -> list[dict[str, Any]]:
-    """Pair one bulletin's label events with its predicted events, tier by tier.
-
-    Returns one record per label event and per unpaired prediction:
-    `{"tier", "label", "pred"}`, with tier `missed` (no pred) or `spurious` (no
-    label) for the unpaired ones.
-    """
-    open_labels = set(range(len(label_events)))
-    open_preds = set(range(len(pred_events)))
-    records: list[dict[str, Any]] = []
-    for tier in TIERS:
+def _pair(
+    label_events: list[dict[str, Any]],
+    pred_events: list[dict[str, Any]],
+    open_labels: set[int],
+    open_preds: set[int],
+    tiers: Iterable[str],
+) -> list[tuple[str, int, int]]:
+    """(tier, label index, pred index) for each pair made, tier by tier; the paired
+    indexes are removed from `open_labels` and `open_preds`."""
+    pairs = []
+    for tier in tiers:
         rule = TIER_RULES[tier]
         candidates = []
         for i in open_labels:
@@ -179,10 +186,41 @@ def match_events(
             if i in open_labels and j in open_preds:
                 open_labels.discard(i)
                 open_preds.discard(j)
-                records.append({"tier": tier, "label": label_events[i], "pred": pred_events[j]})
+                pairs.append((tier, i, j))
+    return pairs
+
+
+def match_events(
+    label_events: list[dict[str, Any]], pred_events: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Pair one bulletin's label events with its predicted events, tier by tier.
+
+    Returns one record per label event and per unpaired prediction:
+    `{"tier", "label", "pred"}`, with tier `missed` (no pred) or `spurious` (no
+    label) for the unpaired ones. An optional label event gets tier `optional`,
+    with `pred` the prediction it was paired with (or None) and `found_as` that
+    pair's tier.
+    """
+    required = {i for i, e in enumerate(label_events) if not e.get("optional")}
+    optional = set(range(len(label_events))) - required
+    open_preds = set(range(len(pred_events)))
+    records: list[dict[str, Any]] = [
+        {"tier": tier, "label": label_events[i], "pred": pred_events[j]}
+        for tier, i, j in _pair(label_events, pred_events, required, open_preds, TIERS)
+    ]
     records.extend(
-        {"tier": "missed", "label": label_events[i], "pred": None} for i in sorted(open_labels)
+        {"tier": "missed", "label": label_events[i], "pred": None} for i in sorted(required)
     )
+    found = {
+        i: (tier, j)
+        for tier, i, j in _pair(label_events, pred_events, set(optional), open_preds, FOUND_TIERS)
+    }
+    for i in sorted(optional):
+        tier, j = found.get(i, (None, None))
+        records.append({
+            "tier": OPTIONAL, "label": label_events[i],
+            "pred": None if j is None else pred_events[j], "found_as": tier,
+        })
     records.extend(
         {"tier": "spurious", "label": None, "pred": pred_events[j]} for j in sorted(open_preds)
     )
@@ -206,7 +244,9 @@ def score_records(records: list[dict[str, Any]]) -> dict[str, Any]:
 
     Recall reads off the label side and precision off the prediction side, so a
     record holding only one side of a pair (see `_slice`) counts on that side only.
+    Optional label events, and the predictions paired with them, are left out.
     """
+    records = [r for r in records if r["tier"] != OPTIONAL]
     label_side = Counter(r["tier"] for r in records if r["label"] is not None)
     pred_side = Counter(r["tier"] for r in records if r["pred"] is not None)
     n_label, n_pred = sum(label_side.values()), sum(pred_side.values())
@@ -233,10 +273,36 @@ def score_records(records: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def optional_hits(record: dict[str, Any]) -> bool:
+    """Whether the classifier made the preferred choice on an optional label event."""
+    included = record["pred"] is not None
+    return included if record["label"]["optional"] == "include" else not included
+
+
+def score_optional(records: list[dict[str, Any]]) -> dict[str, Any]:
+    """How many optional label events got the preferred choice, by preference."""
+    optional = [r for r in records if r["tier"] == OPTIONAL]
+    by_preference = {}
+    for preference in OPTIONAL_PREFERENCES:
+        subset = [r for r in optional if r["label"]["optional"] == preference]
+        hit = sum(optional_hits(r) for r in subset)
+        by_preference[preference] = {
+            "events": len(subset), "preferred": hit, "rate": _ratio(hit, len(subset)),
+        }
+    hit = sum(optional_hits(r) for r in optional)
+    return {
+        "events": len(optional),
+        "preferred": hit,
+        "rate": _ratio(hit, len(optional)),
+        "by_preference": by_preference,
+    }
+
+
 def _slice(records: list[dict[str, Any]], field: str) -> dict[str, dict[str, Any]]:
     """`score_records` per value of `field`: label events by their own value,
     predictions by theirs. A pair whose two sides fall in different slices (a
     weekly label found as a dated prediction) keeps its tier on each side."""
+    records = [r for r in records if r["tier"] != OPTIONAL]
     values: set[str] = set()
     for r in records:
         for side in ("label", "pred"):
@@ -421,6 +487,7 @@ def build_report(
     for b in bulletins:
         b["records"] = match_events(b["label"].get("events") or [], b["pred"].get("events") or [])
         b["score"] = score_records(b["records"])
+        b["optional"] = score_optional(b["records"])
         all_records.extend(b["records"])
 
     try:
@@ -440,6 +507,7 @@ def build_report(
         "unpredicted": unpredicted,
         "run_errors": run_summary.get("errors") or [],
         "overall": score_records(all_records),
+        "optional": score_optional(all_records),
         "macro_f1": {
             level: (
                 statistics.fmean(b["score"]["levels"][level]["f1"] for b in bulletins)
@@ -457,8 +525,12 @@ def build_report(
                 "parish_slug": b["parish_slug"],
                 "content_hash": b["content_hash"],
                 **b["score"],
+                "optional": b["optional"],
                 "records": [
-                    {"tier": r["tier"], "label": _strip(r["label"]), "pred": _strip(r["pred"])}
+                    {
+                        "tier": r["tier"], "label": _strip(r["label"]), "pred": _strip(r["pred"]),
+                        **({"found_as": r["found_as"]} if r["tier"] == OPTIONAL else {}),
+                    }
                     for r in b["records"]
                 ],
             }
@@ -498,6 +570,12 @@ def _describe(event: dict[str, Any]) -> str:
     if (event.get("note") or "").strip():
         parts.append(f"note: {event['note'].strip()}")
     return "; ".join(parts)
+
+
+def _preferred(score: dict[str, Any]) -> str:
+    if not score["events"]:
+        return "–"
+    return f"{score['preferred']}/{score['events']} ({_pct(score['rate'])})"
 
 
 def _level_rows(score: dict[str, Any], macro: dict[str, float | None] | None = None) -> list[list[Any]]:
@@ -544,6 +622,11 @@ def render_markdown(report: dict[str, Any]) -> str:
         f"- Bulletins scored: {bl['bulletins']} (labels: {', '.join(report['label_statuses'])})",
         f"- Label events: {n_label}; predicted events: {overall['predicted_events']}",
     ]
+    if report["optional"]["events"]:
+        lines.append(
+            f"- Optional label events, not scored: {report['optional']['events']} "
+            f"(the preferred choice made for {_preferred(report['optional'])})"
+        )
     if report["unpredicted"]:
         lines.append(
             f"- **{len(report['unpredicted'])} labeled bulletin(s) have no prediction** "
@@ -586,6 +669,23 @@ def render_markdown(report: dict[str, Any]) -> str:
         [[t, overall["outcomes"][t], _pct(_ratio(overall["outcomes"][t], n_label))]
          for t in LABEL_OUTCOMES],
     )
+
+    optional = report["optional"]
+    if optional["events"]:
+        lines += [
+            "", "## Optional events", "",
+            "Label events marked optional are left out of every other number in this report, "
+            "and so are the predictions paired with them. Preferred = an `include` event was "
+            "predicted (at the any_time level), or an `exclude` event was not.",
+            "",
+        ]
+        lines += _table(
+            ["Preference", "Events", "Preferred choice made"],
+            [
+                *[[p, s["events"], _preferred(s)] for p, s in optional["by_preference"].items()],
+                ["all", optional["events"], _preferred(optional)],
+            ],
+        )
 
     lines += ["", "## By event type", ""]
     lines += _table(SLICE_HEADER, _slice_rows(report["by_event_type"]))
@@ -642,13 +742,15 @@ def render_markdown(report: dict[str, Any]) -> str:
     lines += ["", "## Per bulletin (worst first)", ""]
     lines += _table(
         ["Bulletin", "Label", "Pred", "Strict F1", "Loose F1", "Any-time F1", "Wrong church",
-         "Wrong type", "Missed", "Spurious"],
+         "Wrong type", "Missed", "Spurious", "Optional preferred"],
         [
             [f"{b['parish_slug']}/{b['content_hash'][:8]}", b["label_events"],
              b["predicted_events"], _pct(b["levels"]["strict"]["f1"]),
              _pct(b["levels"]["loose"]["f1"]), _pct(b["levels"]["any_time"]["f1"]),
              b["outcomes"]["wrong_church"],
-             b["outcomes"]["wrong_type"], b["outcomes"]["missed"], b["spurious"]]
+             b["outcomes"]["wrong_type"], b["outcomes"]["missed"], b["spurious"],
+             "–" if not b["optional"]["events"]
+             else f"{b['optional']['preferred']}/{b['optional']['events']}"]
             for b in worst
         ],
     )
@@ -656,14 +758,25 @@ def render_markdown(report: dict[str, Any]) -> str:
     lines += ["", "## Differences", ""]
     any_diff = False
     for b in worst:
-        diffs = [r for r in b["records"] if r["tier"] != "exact"]
+        diffs = [
+            r for r in b["records"]
+            if r["tier"] != "exact" and not (r["tier"] == OPTIONAL and optional_hits(r))
+        ]
         if not diffs:
             continue
         any_diff = True
         lines += [f"### {b['parish_slug']}/{b['content_hash'][:8]}", ""]
-        order = {t: i for i, t in enumerate((*LABEL_OUTCOMES, "spurious"))}
+        order = {t: i for i, t in enumerate((*LABEL_OUTCOMES, "spurious", OPTIONAL))}
         for r in sorted(diffs, key=lambda r: order[r["tier"]]):
-            if r["label"] is not None and r["pred"] is not None:
+            if r["tier"] == OPTIONAL:
+                if r["pred"] is None:
+                    lines.append(f"- **optional, prefer include**: left out `{_describe(r['label'])}`")
+                else:
+                    lines.append(
+                        f"- **optional, prefer exclude**: label `{_describe(r['label'])}` → "
+                        f"predicted `{_describe(r['pred'])}`"
+                    )
+            elif r["label"] is not None and r["pred"] is not None:
                 lines.append(
                     f"- **{r['tier']}**: label `{_describe(r['label'])}` → "
                     f"predicted `{_describe(r['pred'])}`"
@@ -707,4 +820,5 @@ def write_report(
         "f1": {level: round(v["f1"], 4) for level, v in overall["levels"].items()},
         "wrong_church_rate": overall["rates"]["wrong_church"],
         "wrong_type_rate": overall["rates"]["wrong_type"],
+        "optional_preferred_rate": report["optional"]["rate"],
     }
