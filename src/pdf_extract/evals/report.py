@@ -301,10 +301,18 @@ def field_accuracy(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
 
 
 # ── Loading ─────────────────────────────────────────────────────────────────
-def report_dir(classifier_name: str, version: str | None = None) -> Path:
-    """The eval output for `classifier_name` at `version` (default: its current version)."""
+def report_dir(
+    classifier_name: str,
+    version: str | None = None,
+    classifier_options: dict[str, Any] | None = None,
+) -> Path:
+    """The eval output for `classifier_name` at `version`.
+
+    The default is the version the classifier has when built with
+    `classifier_options`: the same options `eval run` was given.
+    """
     if version is None:
-        version = get_classifier(classifier_name).version
+        version = get_classifier(classifier_name, **(classifier_options or {})).version
     return run_dir(classifier_name) / "eval" / _cache_version_component(version)
 
 
@@ -683,11 +691,12 @@ def write_report(
     *,
     classifier_name: str,
     version: str | None = None,
+    classifier_options: dict[str, Any] | None = None,
     statuses: Iterable[str] = DEFAULT_STATUSES,
     labels_dir: Path = LABELS_DIR,
 ) -> dict[str, Any]:
     """Score an eval run and write `report.md` and `report.json` next to its predictions."""
-    out_dir = report_dir(classifier_name, version)
+    out_dir = report_dir(classifier_name, version, classifier_options)
     if not (out_dir / "predictions").is_dir():
         versions = sorted(p.name for p in (run_dir(classifier_name) / "eval").glob("*") if p.is_dir())
         raise FileNotFoundError(

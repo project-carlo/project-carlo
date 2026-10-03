@@ -8,8 +8,14 @@ from datetime import date
 from types import SimpleNamespace
 from typing import Any
 
-from pdf_extract.classifiers import get_classifier
-from pdf_extract.classifiers.openai_responses import RESPONSE_SCHEMA, OpenAIResponsesClassifier
+import pytest
+
+from pdf_extract.classifiers import ClassifierOptionError, get_classifier
+from pdf_extract.classifiers.openai_responses import (
+    RESPONSE_SCHEMA,
+    OpenAIResponsesClassifier,
+    render_pages,
+)
 from pdf_extract.classifiers.qualified_schedule import INSTRUCTIONS, flatten_events
 
 CHURCHES = [{"slug": "st-mary", "name": "St. Mary", "address": "123 Main"}]
@@ -175,3 +181,70 @@ def test_registered_variants():
     assert strict.name == "gpt-6-luna"
     assert strict.version.startswith("gpt-6-luna+strict+reasoning-medium+detail-low+prompt-")
     assert nonstrict.version.startswith("gpt-6-luna+nonstrict+")
+
+
+def _two_page_pdf() -> bytes:
+    import io
+
+    from pypdf import PdfWriter
+
+    writer = PdfWriter()
+    writer.add_blank_page(width=612, height=792)
+    writer.add_blank_page(width=612, height=396)
+    buffer = io.BytesIO()
+    writer.write(buffer)
+    return buffer.getvalue()
+
+
+def test_render_pages_gives_one_jpeg_per_page_at_200_dpi():
+    import io
+
+    from PIL import Image
+
+    pages = render_pages(_two_page_pdf())
+    assert len(pages) == 2
+    sizes = [Image.open(io.BytesIO(page)).size for page in pages]
+    assert [Image.open(io.BytesIO(page)).format for page in pages] == ["JPEG", "JPEG"]
+    assert sizes == [(1700, 2200), (1700, 1100)]
+
+
+def test_pdf_as_images_sends_numbered_page_images_in_place_of_the_pdf():
+    classifier, fake = _classifier(_payload(), pdf_as_images=True, file_detail="original")
+    classifier.extract(_two_page_pdf(), churches=CHURCHES, today=TODAY)
+
+    _, user = fake.calls[0]["input"]
+    context, *pages = user["content"]
+    assert context["type"] == "input_text" and "st-mary" in context["text"]
+    assert [part["type"] for part in pages] == [
+        "input_text", "input_image", "input_text", "input_image",
+    ]
+    assert [pages[0]["text"], pages[2]["text"]] == ["Page 1 of 2", "Page 2 of 2"]
+    for image in pages[1::2]:
+        assert image["detail"] == "original"
+        assert image["image_url"].startswith("data:image/jpeg;base64,")
+
+
+def test_model_options_change_the_request_and_the_version():
+    default = get_classifier("gpt-6-luna")
+    classifier, fake = _classifier(_payload(), reasoning_effort="high", file_detail="high")
+    classifier.extract(b"%PDF", churches=CHURCHES, today=TODAY)
+    request = fake.calls[0]
+    assert request["reasoning"] == {"effort": "high"}
+    assert request["input"][1]["content"][1]["detail"] == "high"
+    assert "+reasoning-high+detail-high+prompt-" in classifier.version
+
+    images = get_classifier("gpt-6-luna", pdf_as_images=True)
+    assert "+detail-low+pages-200dpi+prompt-" in images.version
+    versions = {default.version, classifier.version, images.version}
+    assert len(versions) == 3
+    # None means "the classifier's default", which is what the CLI passes for unset flags.
+    assert get_classifier("gpt-6-luna", reasoning_effort=None).version == default.version
+
+
+def test_invalid_model_options_are_refused():
+    with pytest.raises(ClassifierOptionError, match="not available for a PDF"):
+        get_classifier("gpt-6-luna", file_detail="original")
+    with pytest.raises(ClassifierOptionError, match="reasoning effort"):
+        get_classifier("gpt-6-luna", reasoning_effort="extreme")
+    with pytest.raises(ClassifierOptionError, match="does not take reasoning_effort"):
+        get_classifier("gemini-flash", reasoning_effort="high")

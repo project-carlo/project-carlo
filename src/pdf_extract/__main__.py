@@ -27,7 +27,8 @@ from pdf_extract.apply import (
     apply_verify_results,
 )
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
-from pdf_extract.classifiers import available_classifiers
+from pdf_extract.classifiers import ClassifierOptionError, available_classifiers
+from pdf_extract.classifiers.openai_responses import IMAGE_DETAILS, REASONING_EFFORTS
 from pdf_extract.compare import compare
 from pdf_extract.datasync import (
     DEFAULT_KEEP_MONTHLY,
@@ -113,6 +114,25 @@ def _add_common_args(parser: argparse.ArgumentParser, default_level: str = "INFO
     )
 
 
+def _add_eval_model_args(parser: argparse.ArgumentParser) -> None:
+    """Model settings for `eval run`; `eval report` takes the same ones to find that run."""
+    parser.add_argument(
+        "--reasoning", choices=REASONING_EFFORTS,
+        help="Reasoning effort (default: the classifier's, medium for gpt-6-luna)",
+    )
+    parser.add_argument(
+        "--image-detail", choices=IMAGE_DETAILS,
+        help=(
+            "Detail level the bulletin is read at (default: the classifier's, low for "
+            "gpt-6-luna). `original` needs --pdf-as-images"
+        ),
+    )
+    parser.add_argument(
+        "--pdf-as-images", action="store_true",
+        help="Render every PDF page to an image and send those instead of the PDF",
+    )
+
+
 def _ensure_db() -> None:
     """Migrate the DB and re-seed parishes/churches from the CSVs before a command."""
     ensure_db(DEFAULT_DB_PATH)
@@ -155,6 +175,15 @@ def _cmd_extract(args: argparse.Namespace) -> Result:
     )
 
 
+def _eval_classifier_options(args: argparse.Namespace) -> dict[str, Any]:
+    """The model settings given on the command line; unset ones keep the classifier's default."""
+    return {
+        "reasoning_effort": args.reasoning,
+        "file_detail": args.image_detail,
+        "pdf_as_images": True if args.pdf_as_images else None,
+    }
+
+
 def _cmd_eval_run(args: argparse.Namespace) -> Result:
     _ensure_db()
     return run_eval(
@@ -164,6 +193,7 @@ def _cmd_eval_run(args: argparse.Namespace) -> Result:
         limit=args.limit,
         concurrency=args.concurrency,
         refresh=args.refresh,
+        classifier_options=_eval_classifier_options(args),
     )
 
 
@@ -171,6 +201,7 @@ def _cmd_eval_report(args: argparse.Namespace) -> Result:
     return write_eval_report(
         classifier_name=args.classifier,
         version=args.version,
+        classifier_options=_eval_classifier_options(args),
         statuses=args.status or EVAL_DEFAULT_STATUSES,
     )
 
@@ -403,6 +434,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--refresh", action="store_true",
         help="Ignore cached results and call the classifier again",
     )
+    _add_eval_model_args(eval_run_parser)
     eval_run_parser.set_defaults(handler=_cmd_eval_run)
     _add_common_args(eval_run_parser)
 
@@ -421,6 +453,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--status", action="append", choices=["done", "in_progress"],
         help="Label statuses to score; repeatable (default: done). Skipped labels never are",
     )
+    _add_eval_model_args(eval_report_parser)
     eval_report_parser.set_defaults(handler=_cmd_eval_report)
     _add_common_args(eval_report_parser)
 
@@ -691,7 +724,7 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         result = handler(args)
-    except (DioceseError, RunScopeError) as e:
+    except (DioceseError, RunScopeError, ClassifierOptionError) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)
         return 1

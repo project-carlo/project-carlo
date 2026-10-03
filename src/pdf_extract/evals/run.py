@@ -166,11 +166,17 @@ def run(
     limit: int | None = None,
     concurrency: int = 5,
     refresh: bool = False,
+    classifier_options: dict[str, Any] | None = None,
     labels_dir: Path = LABELS_DIR,
     db_path: Path = DEFAULT_DB_PATH,
 ) -> dict[str, Any]:
-    """Classify every selected labeled bulletin and write the predictions."""
-    classifier = get_classifier(classifier_name)
+    """Classify every selected labeled bulletin and write the predictions.
+
+    `classifier_options` (reasoning effort, detail level, ...) are passed to the
+    classifier's factory; they are part of its version, so each combination gets
+    its own cache entries and output directory.
+    """
+    classifier = get_classifier(classifier_name, **(classifier_options or {}))
     statuses = tuple(statuses)
     entries = labeled_bulletins(labels_dir, statuses=statuses, parish_slug=parish_slug)
     if limit is not None:
