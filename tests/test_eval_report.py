@@ -18,6 +18,7 @@ from pdf_extract.evals.report import (
     score_records,
     write_report,
 )
+from pdf_extract.evals.run import version_dir_name
 from pdf_extract.labeling.labels import empty_label
 
 HASH_A, HASH_B, HASH_C = "a" * 64, "b" * 64, "c" * 64
@@ -137,7 +138,8 @@ def _label(labels_dir: Path, content_hash: str, status: str, events, **extra) ->
 
 
 def _pred(out_dir: Path, content_hash: str, events, **extra) -> None:
-    _write(out_dir / "predictions" / "st-mary-parish" / f"{content_hash}.json", {
+    _write(out_dir / "predictions" / "st-mary-parish" / f"{content_hash[:12]}.json", {
+        "content_hash": content_hash,
         "classifier": "fake", "classifier_version": "fake-v1", "published_date": None,
         "wrong_bulletin": False, "usage": {"input_tokens": 100}, "seconds": 2.0,
         "from_cache": False, "events": events,
@@ -185,7 +187,7 @@ def test_write_report_writes_next_to_predictions(files, tmp_path, monkeypatch):
     with pytest.raises(FileNotFoundError):
         write_report(classifier_name="gemini-flash", version="v1", labels_dir=labels_dir)
 
-    target = runner.run_dir("gemini-flash") / "eval" / runner._cache_version_component("v1")
+    target = runner.run_dir("gemini-flash") / "eval" / version_dir_name("gemini-flash", "v1")
     target.parent.mkdir(parents=True)
     out_dir.rename(target)
     summary = write_report(classifier_name="gemini-flash", version="v1", labels_dir=labels_dir)
@@ -204,7 +206,7 @@ def test_report_finds_a_run_made_with_another_model(files, tmp_path, monkeypatch
     monkeypatch.setattr(runner, "RUNS_DIR", tmp_path / "runs")
     options = {"model": "gpt-6.1-sol", "pdf_as_images": True}
     version = get_classifier("gpt-6-luna", **options).version
-    target = runner.run_dir("gpt-6.1-sol") / "eval" / runner._cache_version_component(version)
+    target = runner.run_dir("gpt-6.1-sol") / "eval" / version_dir_name("gpt-6.1-sol", version)
     target.parent.mkdir(parents=True)
     out_dir.rename(target)
 

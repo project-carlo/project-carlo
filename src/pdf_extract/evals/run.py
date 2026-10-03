@@ -9,10 +9,12 @@ or model change is a new version that gets fresh calls.
 
 Output, under `data/runs/<classifier>/eval/<version>/`:
 
-- `predictions/<parish_slug>/<content_hash>.json`: the classifier's output for
-  one bulletin, with its events in the label's row shape (`event_type`,
+- `predictions/<parish_slug>/<content_hash[:12]>.json`: the classifier's output
+  for one bulletin, with its events in the label's row shape (`event_type`,
   `event_kind`, 24-hour `HH:MM` times, `weeks_of_month`, `season`), so it lines
-  up with `data/labels/<parish_slug>/<content_hash>.json` key for key.
+  up with `data/labels/<parish_slug>/<content_hash>.json` key for key. The file
+  holds the full `content_hash`; its name is cut short, like `<version>`, to
+  keep the path inside Windows' 260-character limit, as these are committed.
 - `run.json`: what was run, cache hits, errors, token usage and timings.
 
 Nothing here reads or writes the event table or `bulletin.processed_at`.
@@ -22,10 +24,12 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 import sqlite3
 import time
 from collections.abc import Iterable
 from datetime import date
+from hashlib import sha256
 from pathlib import Path
 from typing import Any
 
@@ -34,7 +38,6 @@ from pdf_extract.labeling.bulletins import find_bulletin, gemini_rows
 from pdf_extract.labeling.labels import LABELS_DIR, is_valid_hash, is_valid_slug
 from pdf_extract.runner import (
     ExtractFn,
-    _cache_version_component,
     iter_extraction_outcomes,
     load_cached_result,
     run_dir,
@@ -47,9 +50,37 @@ LOGGER = logging.getLogger(__name__)
 DEFAULT_STATUSES = ("done",)
 
 
+# Characters of the content hash a prediction file is named by.
+PREDICTION_HASH_CHARS = 12
+# Longest readable part of a version directory's name (a digest follows it).
+_VERSION_DIR_CHARS = 56
+# The prompt fingerprint the classifiers end their versions with; the digest covers it.
+_PROMPT_PART = re.compile(r"\+prompt-[0-9A-Za-z]+")
+
+
+def version_dir_name(classifier_name: str, version: str) -> str:
+    """A short directory name for one classifier version.
+
+    The model is dropped when the classifier is named after it (the directory
+    above already says it) and so is the prompt fingerprint; the digest of the
+    whole version keeps every version apart. `gpt-6-luna+strict+reasoning-medium+
+    detail-low+prompt-ebbd...` becomes `strict_reasoning-medium_detail-low-<digest>`.
+    """
+    model, sep, rest = version.partition("+")
+    readable = rest if sep and classifier_name.startswith(model) else version
+    readable = _PROMPT_PART.sub("", readable)
+    readable = "".join(ch if ch.isalnum() or ch in "._-" else "_" for ch in readable)
+    readable = readable.strip("_.-")[:_VERSION_DIR_CHARS] or "default"
+    return f"{readable}-{sha256(version.encode('utf-8')).hexdigest()[:12]}"
+
+
 def eval_dir(classifier: Classifier) -> Path:
     """Where one classifier version's evaluation output lives."""
-    return run_dir(classifier.name) / "eval" / _cache_version_component(classifier.version)
+    return run_dir(classifier.name) / "eval" / version_dir_name(classifier.name, classifier.version)
+
+
+def prediction_path(out_dir: Path, parish_slug: str, content_hash: str) -> Path:
+    return out_dir / "predictions" / parish_slug / f"{content_hash[:PREDICTION_HASH_CHARS]}.json"
 
 
 # ── Selecting the labeled bulletins ─────────────────────────────────────────
@@ -243,7 +274,7 @@ def run(
         pred = prediction(classifier, entry, result, from_cache=from_cache)
         events_written += len(pred["events"])
         _write_json(
-            out_dir / "predictions" / entry["parish_slug"] / f"{entry['content_hash']}.json",
+            prediction_path(out_dir, entry["parish_slug"], entry["content_hash"]),
             pred,
         )
 

@@ -109,11 +109,14 @@ classified as of the day it was fetched, and results are cached by classifier
 version (model, prompt, schema and settings), PDF and church list, so re-running
 an unchanged classifier makes no API calls (`--refresh` forces them). Output
 goes to `data/runs/<classifier>/eval/<version>/`, which is committed (the rest of
-`data/runs/`, including the result cache, stays gitignored):
+`data/runs/`, including the result cache, stays gitignored). `<version>` is
+the settings and a digest (`strict_reasoning-medium_detail-low-d469c0cc103e`),
+and prediction files are named by the first 12 characters of the content hash,
+so paths stay inside Windows' 260-character limit:
 
-- `predictions/<parish_slug>/<content_hash>.json`: the classifier's events in
-  the label's row shape, next to `published_date`, `wrong_bulletin`, token usage
-  and timing, so each file lines up with its label.
+- `predictions/<parish_slug>/<content_hash[:12]>.json`: the classifier's events
+  in the label's row shape, next to the full `content_hash`, `published_date`,
+  `wrong_bulletin`, token usage and timing, so each file lines up with its label.
 - `run.json`: cache hits, errors, skipped bulletins and summed token usage.
 
 The `gpt-6-luna` classifiers (`classifiers/openai_responses.py`) use the

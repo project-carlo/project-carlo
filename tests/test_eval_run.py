@@ -12,7 +12,7 @@ import pytest
 from pdf_extract import classifiers, runner
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, set_store
 from pdf_extract.classifiers.qualified_schedule import flatten_events
-from pdf_extract.evals.run import labeled_bulletins, run
+from pdf_extract.evals.run import labeled_bulletins, prediction_path, run, version_dir_name
 from pdf_extract.labeling.demo import build_demo
 from pdf_extract.labeling.labels import empty_label, write_label
 from pdf_extract.storage import connect_db
@@ -79,7 +79,7 @@ def test_runs_done_labels_as_of_fetch_date_and_caches(demo):
 
     out = Path(summary["out_dir"])
     pred = json.loads(
-        (out / "predictions" / done["slug"] / f"{done['content_hash']}.json").read_text()
+        (out / "predictions" / done["slug"] / f"{done['content_hash'][:12]}.json").read_text()
     )
     assert pred["classifier_version"] == "fake-v1" and pred["from_cache"] is False
     [event] = pred["events"]
@@ -115,3 +115,23 @@ def test_label_for_unknown_bulletin_is_skipped(demo):
     summary = run(classifier_name="fake", labels_dir=labels_dir, db_path=paths["db_path"])
     assert summary["skipped"][0]["reason"] == "bulletin not in database"
     assert fake.calls == []
+
+
+def test_prediction_paths_fit_windows_path_limit():
+    # The longest parish slug, a long model name, and every setting on: from a
+    # checkout at C:\\Users\\<user>\\Documents\\GitHub\\project-carlo\\ the path
+    # must stay inside MAX_PATH (260), or git on Windows cannot commit it.
+    checkout = "C:/Users/someuser/Documents/GitHub/project-carlo/"
+    classifier = classifiers.get_classifier(
+        "gpt-6-luna-nonstrict", model="gpt-6.1-sol", reasoning_effort="minimal",
+        pdf_as_images=True, file_detail="original",
+    )
+    name = version_dir_name(classifier.name, classifier.version)
+    assert name.startswith("nonstrict_reasoning-minimal_detail-original_pages-200dpi-")
+    out_dir = Path("data/runs") / classifier.name / "eval" / name
+    path = prediction_path(out_dir, "holy-mother-and-child-st-joseph-st-paul-greenfield-center",
+                           "a" * 64)
+    assert len(checkout + path.as_posix()) <= 245
+    assert version_dir_name("gemini-flash", "gemini-2.5-flash+prompt-abc123").startswith(
+        "gemini-2.5-flash-"
+    )

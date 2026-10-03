@@ -41,9 +41,9 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.classifiers import get_classifier
-from pdf_extract.evals.run import DEFAULT_STATUSES
+from pdf_extract.evals.run import DEFAULT_STATUSES, version_dir_name
 from pdf_extract.labeling.labels import DAYS, LABELS_DIR, is_valid_hash, is_valid_slug
-from pdf_extract.runner import _cache_version_component, run_dir
+from pdf_extract.runner import run_dir
 from pdf_extract.storage import utc_now_iso
 from pdf_extract.timeparse import time_to_minutes
 
@@ -320,7 +320,7 @@ def report_dir(
         version = classifier.version
     elif (eval_root / version).is_dir():
         return eval_root / version
-    return eval_root / _cache_version_component(version)
+    return eval_root / version_dir_name(classifier.name, version)
 
 
 def load_scored_bulletins(
@@ -335,7 +335,9 @@ def load_scored_bulletins(
         except (OSError, ValueError):
             LOGGER.warning("Skipping unreadable prediction %s", path)
             continue
-        predictions[(path.parent.name, path.stem)] = pred
+        # Keyed by the full hash inside: the file name is only its first characters.
+        content_hash = pred.get("content_hash") if isinstance(pred, dict) else None
+        predictions[(path.parent.name, content_hash or path.stem)] = pred
 
     scored, unpredicted = [], []
     for path in sorted(labels_dir.glob("*/*.json")):
