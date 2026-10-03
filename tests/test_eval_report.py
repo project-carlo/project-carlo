@@ -191,3 +191,8 @@ def test_write_report_writes_next_to_predictions(files, tmp_path, monkeypatch):
     assert Path(summary["report_md"]).read_text().startswith("# Eval report")
     assert json.loads(Path(summary["report_json"]).read_text())["bulletins"]
     assert summary["f1"] == {"strict": 0.5, "core": 0.5, "loose": 1.0, "any_time": 1.0}
+
+    # The directory name the "versions with output" list prints works as --version too.
+    by_dir = write_report(classifier_name="gemini-flash", version=target.name,
+                          labels_dir=labels_dir)
+    assert by_dir["report_md"] == summary["report_md"]

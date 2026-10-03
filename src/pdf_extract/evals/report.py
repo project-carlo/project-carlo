@@ -308,12 +308,17 @@ def report_dir(
 ) -> Path:
     """The eval output for `classifier_name` at `version`.
 
+    `version` is a classifier version (`gpt-6-luna+strict+...`) or the name of
+    its directory under `eval/`, as the "Versions with output" list prints it.
     The default is the version the classifier has when built with
     `classifier_options`: the same options `eval run` was given.
     """
+    eval_root = run_dir(classifier_name) / "eval"
     if version is None:
         version = get_classifier(classifier_name, **(classifier_options or {})).version
-    return run_dir(classifier_name) / "eval" / _cache_version_component(version)
+    elif (eval_root / version).is_dir():
+        return eval_root / version
+    return eval_root / _cache_version_component(version)
 
 
 def load_scored_bulletins(
@@ -701,7 +706,8 @@ def write_report(
         versions = sorted(p.name for p in (run_dir(classifier_name) / "eval").glob("*") if p.is_dir())
         raise FileNotFoundError(
             f"No eval predictions in {out_dir}; run `pnpm eval --classifier {classifier_name}` "
-            f"first. Versions with output: {', '.join(versions) or 'none'}"
+            f"first, or pass one of the versions with output as --version: "
+            f"{', '.join(versions) or 'none'}"
         )
     report = build_report(out_dir, labels_dir, statuses=statuses)
     json_path, md_path = out_dir / "report.json", out_dir / "report.md"
