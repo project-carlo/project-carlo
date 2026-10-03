@@ -55,7 +55,13 @@ data/bulletins/
 data/*.db
 data/*.db-*
 data/*.db.bak
-data/runs/
+# Run outputs and the result cache stay local, except eval results
+# (data/runs/<classifier>/eval/: predictions, run.json, report.md/.json),
+# which are committed so runs can be compared over time.
+data/runs/*
+!data/runs/*/
+data/runs/*/*
+!data/runs/*/eval/
 data/out/
 # `pnpm label --demo` builds its generated dataset here. Real labels
 # (data/labels/) are committed.

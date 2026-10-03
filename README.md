@@ -109,11 +109,15 @@ Any classifier in `src/pdf_extract/classifiers/__init__.py` can be run
 classified as of the day it was fetched, and results are cached by classifier
 version (model, prompt, schema and settings), PDF and church list, so re-running
 an unchanged classifier makes no API calls (`--refresh` forces them). Output
-goes to `data/runs/<classifier>/eval/<version>/`:
+goes to `data/runs/<classifier>/eval/<version>/`, which is committed (the rest of
+`data/runs/`, including the result cache, stays gitignored). `<version>` is
+the settings and a digest (`strict_reasoning-medium_detail-low-d469c0cc103e`),
+and prediction files are named by the first 12 characters of the content hash,
+so paths stay inside Windows' 260-character limit:
 
-- `predictions/<parish_slug>/<content_hash>.json`: the classifier's events in
-  the label's row shape, next to `published_date`, `wrong_bulletin`, token usage
-  and timing, so each file lines up with its label.
+- `predictions/<parish_slug>/<content_hash[:12]>.json`: the classifier's events
+  in the label's row shape, next to the full `content_hash`, `published_date`,
+  `wrong_bulletin`, token usage and timing, so each file lines up with its label.
 - `run.json`: cache hits, errors, skipped bulletins and summed token usage.
 
 The `gpt-6-luna` classifiers (`classifiers/openai_responses.py`) use the
@@ -123,10 +127,34 @@ production Gemini prompt extended with the labeling rules (weekly vs dated,
 chapels, Communion Services, times given relative to a Mass), its static part
 sent first as an explicit prompt-cache breakpoint. They need `OPENAI_API_KEY`.
 
+Their model settings can be changed per run:
+
+```bash
+pnpm eval --classifier gpt-6-luna --reasoning high --image-detail high
+pnpm eval --classifier gpt-6-luna --pdf-as-images --image-detail original
+pnpm eval --classifier gpt-6-luna --model gpt-6.1-sol --reasoning high
+```
+
+- `--model`: any OpenAI model with the Responses API, in place of `gpt-6-luna`
+  (same prompt and schema). Its results go under `data/runs/<model>/`
+  (`<model>-nonstrict/` with `gpt-6-luna-nonstrict`).
+
+- `--reasoning`: `none`, `minimal`, `low`, `medium` (default), `high`, `xhigh`, `max`.
+- `--image-detail`: `auto`, `low` (default), `high`, or `original`, which only
+  page images take.
+- `--pdf-as-images`: render every page to a 200 dpi JPEG (pypdfium2) and send
+  those, each after a "Page N of M" line, in place of the PDF.
+
+Each setting is part of the classifier version, so every combination is cached
+and written under its own `eval/<version>/` directory. `pnpm eval:report` takes
+the same flags to find that run.
+
 ### Score an eval run against the labels
 
 ```bash
 pnpm eval:report --classifier gpt-6-luna                  # its current version
+pnpm eval:report --classifier gpt-6-luna --pdf-as-images  # the run made with those flags
+pnpm eval:report --classifier gpt-6-luna --model gpt-6.1-sol
 pnpm eval:report --classifier gpt-6-luna --version <ver>  # an older version's output
 ```
 

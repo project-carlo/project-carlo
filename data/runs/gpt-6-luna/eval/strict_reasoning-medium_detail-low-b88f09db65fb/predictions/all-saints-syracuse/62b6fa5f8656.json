@@ -1,0 +1,101 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-medium+detail-low+prompt-bae3517e4884",
+  "parish_slug": "all-saints-syracuse",
+  "content_hash": "62b6fa5f86560bba9d4c9154ee41fec54877ab9c5794c3b28454d1710fce643e",
+  "source_url": "https://www.allsaintssyracuse.org/s/Bulletin-for-9-2627FINAL.pdf",
+  "label_status": "done",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-26",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 13142,
+    "cached_tokens": 2142,
+    "cache_write_tokens": 0,
+    "output_tokens": 1602,
+    "reasoning_tokens": 1187
+  },
+  "seconds": 19.656,
+  "response_id": "resp_03fd67d4d3789960016abf05d1c73087d2b6fefe694ce08dbc",
+  "events": [
+    {
+      "church_slug": "all-saints-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "all-saints-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "all-saints-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "all-saints-syracuse",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    }
+  ]
+}
