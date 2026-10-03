@@ -1274,10 +1274,11 @@ def fetch_bulletins(
     conn = connect_db()
     try:
         parishes = _parishes_for_run(conn, parish_name, slugs)
-        existing_urls = {
-            (row["parish_id"], row["source_url"])
-            for row in conn.execute("SELECT parish_id, source_url FROM bulletin")
+        existing = {
+            (row["parish_id"], row["source_url"], row["content_hash"])
+            for row in conn.execute("SELECT parish_id, source_url, content_hash FROM bulletin")
         }
+        existing_urls = {(parish_id, url) for parish_id, url, _ in existing}
 
         with launch_stealth_browser() as page:
             for parish in parishes:
@@ -1309,7 +1310,8 @@ def fetch_bulletins(
                     failed += 1
                     continue
 
-                if (parish["id"], link.source_url) in existing_urls:
+                known_url = (parish["id"], link.source_url) in existing_urls
+                if known_url and not _may_be_reissued(link.source_url):
                     skipped_existing += 1
                     record(FETCH_UNCHANGED, source_url=link.source_url)
                     continue
@@ -1331,6 +1333,10 @@ def fetch_bulletins(
                 # The hash names the bulletin as published, so it stays the
                 # bulletin's identity however the stored copy is compacted.
                 content_hash = hashlib.sha256(pdf_bytes).hexdigest()
+                if (parish["id"], link.source_url, content_hash) in existing:
+                    skipped_existing += 1
+                    record(FETCH_UNCHANGED, source_url=link.source_url)
+                    continue
                 key = bulletin_pdf_key(slug, content_hash)
                 try:
                     # Stored before the row that points at it, so a bulletin row
@@ -1360,6 +1366,7 @@ def fetch_bulletins(
                     failed += 1
                     continue
 
+                existing.add((parish["id"], link.source_url, content_hash))
                 existing_urls.add((parish["id"], link.source_url))
                 fetched += 1
                 record(FETCH_NEW, source_url=link.source_url, content_hash=content_hash)
@@ -1378,6 +1385,16 @@ def fetch_bulletins(
     }
     LOGGER.info("Fetch stage finished: %s", result)
     return result
+
+
+def _may_be_reissued(url: str) -> bool:
+    """Whether a bulletin address we already have may hold a newer issue now.
+
+    An address naming its issue's date ("20260927.pdf") is that issue for good.
+    One that names none ("/bulletin.pdf") can be overwritten each week, so it
+    is downloaded again and compared by content.
+    """
+    return _parse_relaxed_date(url, date.today()) is None
 
 
 def _report_stale_parishes(*, bulletins: list[dict], slugs: list[str]) -> list[str]:

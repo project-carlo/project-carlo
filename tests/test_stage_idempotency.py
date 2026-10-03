@@ -161,6 +161,60 @@ def test_fetch_stage_is_idempotent(monkeypatch, db: Path) -> None:
     ) == b"%PDF-1.4 fake"
 
 
+def _fake_browser(monkeypatch) -> None:
+    @contextmanager
+    def fake_launch_stealth_browser():
+        yield None
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", fake_launch_stealth_browser)
+
+
+def test_fetch_takes_a_new_issue_at_an_address_it_already_has(monkeypatch, db: Path) -> None:
+    # stpaulsnorwich.com overwrites /bulletin.pdf each week.
+    monkeypatch.setattr(
+        "pdf_extract.fetch._build_bulletin_link",
+        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+            source_url="https://example.org/bulletin.pdf",
+            fetch_url="https://example.org/bulletin.pdf",
+        ),
+    )
+    issues = iter([b"%PDF-1.4 week 1", b"%PDF-1.4 week 1", b"%PDF-1.4 week 2"])
+    monkeypatch.setattr("pdf_extract.fetch._download_pdf", lambda **kwargs: next(issues))
+    _fake_browser(monkeypatch)
+
+    results = [fetch_bulletins(parish_name="Test Parish") for _ in range(3)]
+
+    assert [r["fetched_bulletins"] for r in results] == [1, 0, 1]
+    assert [b["content_hash"] for b in _bulletins(db)] == [
+        hashlib.sha256(b"%PDF-1.4 week 1").hexdigest(),
+        hashlib.sha256(b"%PDF-1.4 week 2").hexdigest(),
+    ]
+
+
+def test_fetch_does_not_download_a_dated_address_again(monkeypatch, db: Path) -> None:
+    monkeypatch.setattr(
+        "pdf_extract.fetch._build_bulletin_link",
+        lambda bulletin_provider, fetch_provider_id, *, page=None: BulletinLink(
+            source_url="https://example.org/bulletins/20260927.pdf",
+            fetch_url="https://example.org/bulletins/20260927.pdf",
+        ),
+    )
+    downloads = []
+
+    def download(**kwargs):
+        downloads.append(kwargs)
+        return b"%PDF-1.4 fake"
+
+    monkeypatch.setattr("pdf_extract.fetch._download_pdf", download)
+    _fake_browser(monkeypatch)
+
+    fetch_bulletins(parish_name="Test Parish")
+    second = fetch_bulletins(parish_name="Test Parish")
+
+    assert len(downloads) == 1
+    assert second["skipped_existing_urls"] == 1
+
+
 def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db: Path) -> None:
     monkeypatch.setattr(
         "pdf_extract.fetch._build_bulletin_link",
