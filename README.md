@@ -287,8 +287,8 @@ Stage idempotency:
   fetched within a few days of the date). Otherwise it downloads the bulletin,
   asking the server first whether the copy it has from that address is still
   current (`ETag` / `Last-Modified`), and keeps it only if it is new: not the
-  same bytes as any of the parish's bulletins, nor, for a typed PDF, the same
-  words as one of its last few (`src/pdf_extract/duplicates.py`). A bulletin
+  same bytes as any of the parish's bulletins (`src/pdf_extract/duplicates.py`).
+  A bulletin
   seen again is recorded on its row (`last_seen_at`), not stored twice. The
   address is never taken to mean the bulletin is unchanged: Discover Mass
   serves the same PDF from a new address each time, and some sites put each

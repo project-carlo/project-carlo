@@ -29,7 +29,13 @@ from pdf_extract.bulletin_week import (
     newest_bulletin,
     stale_parishes,
 )
-from pdf_extract.duplicates import Duplicate, Validators, identify, validators_for
+from pdf_extract.duplicates import (
+    Duplicate,
+    Validators,
+    bulletin_hash,
+    find_duplicate,
+    validators_for,
+)
 from pdf_extract.parish_sites import Recipe, resolve_parish_site
 from pdf_extract.parish_sites.dates import safe_date
 from pdf_extract.pdf_compact import compact_bulletin_pdf
@@ -669,12 +675,9 @@ def fetch_bulletins(
                 if download.pdf is None:
                     duplicate = known
                     content_hash = None
-                    text_fingerprint = None
                 else:
-                    identified = identify(download.pdf, stored)
-                    duplicate = identified.duplicate
-                    content_hash = identified.content_hash
-                    text_fingerprint = identified.text_fingerprint
+                    content_hash = bulletin_hash(download.pdf)
+                    duplicate = find_duplicate(content_hash, stored)
                 if duplicate is not None:
                     _record_seen_again(
                         conn, duplicate, download=download, source_url=link.source_url,
@@ -708,7 +711,6 @@ def fetch_bulletins(
                         fetched_at=seen_at,
                         etag=download.etag,
                         last_modified=download.last_modified,
-                        text_fingerprint=text_fingerprint,
                     )
                 except Exception as exc:
                     LOGGER.warning(
@@ -727,7 +729,7 @@ def fetch_bulletins(
                     "content_hash": content_hash, "published_date": None,
                     "fetched_at": seen_at, "processed_at": None, "wrong_bulletin": 0,
                     "etag": download.etag, "last_modified": download.last_modified,
-                    "text_fingerprint": text_fingerprint, "last_seen_at": seen_at,
+                    "last_seen_at": seen_at,
                 })
                 fetched += 1
                 record(

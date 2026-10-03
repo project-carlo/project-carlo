@@ -155,7 +155,7 @@ def load_bulletins(conn: sqlite3.Connection) -> list[dict[str, Any]]:
     rows = conn.execute(
         """SELECT b.id, p.slug AS parish_slug, b.source_url, b.content_hash,
                   b.published_date, b.fetched_at, b.processed_at, b.wrong_bulletin,
-                  b.etag, b.last_modified, b.text_fingerprint, b.last_seen_at
+                  b.etag, b.last_modified, b.last_seen_at
            FROM bulletin b JOIN parish p ON p.id = b.parish_id
            ORDER BY b.id"""
     ).fetchall()
@@ -171,18 +171,14 @@ def insert_bulletin(
     fetched_at: str,
     etag: str | None = None,
     last_modified: str | None = None,
-    text_fingerprint: str | None = None,
 ) -> int:
     with conn:
         cursor = conn.execute(
             """INSERT INTO bulletin(
                    parish_id, source_url, content_hash, fetched_at, last_seen_at,
-                   etag, last_modified, text_fingerprint
-               ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
-            (
-                parish_id, source_url, content_hash, fetched_at, fetched_at,
-                etag, last_modified, text_fingerprint,
-            ),
+                   etag, last_modified
+               ) VALUES (?, ?, ?, ?, ?, ?, ?)""",
+            (parish_id, source_url, content_hash, fetched_at, fetched_at, etag, last_modified),
         )
     return int(cursor.lastrowid)
 

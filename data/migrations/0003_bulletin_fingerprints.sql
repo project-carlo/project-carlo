@@ -3,8 +3,6 @@
 --
 --   etag, last_modified  the validators the server sent with the PDF, for a
 --                        conditional GET of the same address next time
---   text_fingerprint     a hash of the PDF's words, for a server that rebuilds
---                        the file (new bytes, same bulletin) on each request
 --   last_seen_at         when the site last served this bulletin, so a parish
 --                        whose site is alive but unchanged can be told from
 --                        one that stopped answering
@@ -15,7 +13,6 @@
 
 ALTER TABLE bulletin ADD COLUMN etag TEXT;
 ALTER TABLE bulletin ADD COLUMN last_modified TEXT;
-ALTER TABLE bulletin ADD COLUMN text_fingerprint TEXT;
 ALTER TABLE bulletin ADD COLUMN last_seen_at TEXT;
 ALTER TABLE bulletin ADD COLUMN wrong_bulletin INTEGER NOT NULL DEFAULT 0
     CHECK (wrong_bulletin IN (0, 1));
