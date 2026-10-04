@@ -11,6 +11,7 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { fetchChurches, type ChurchSearchResult } from "../api";
 import { ChurchMap } from "../components/ChurchMap";
 import { FilterPanel } from "../components/FilterPanel";
+import { MapResults } from "../components/ChurchListPanel";
 import { FilterPills } from "../components/FilterPills";
 import { SearchTypeahead } from "../components/SearchTypeahead";
 import { Masthead } from "../components/Masthead";
@@ -22,6 +23,8 @@ import {
 import { InlineQueryError } from "../components/InlineQueryError";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useFilterUrlState } from "../hooks/useFilterUrlState";
+import { useListUrlState } from "../hooks/useListUrlState";
+import type { GeoBounds } from "../lib/churchList";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { rememberMapSearch } from "../hooks/useMapHref";
 import {
@@ -114,9 +117,16 @@ export function MapPage() {
       // Short debounce: moveend already fires once movement settles, so this
       // just coalesces a flurry of zoom steps into one history.replaceState.
       mapViewTimerRef.current = window.setTimeout(() => {
-        setSearchParams((prev) => encodeMapViewToParams(view, prev), {
-          replace: true,
-        });
+        // Read the live URL, not the render-time params: the list/map toggle may
+        // have changed `view` since this write was scheduled.
+        setSearchParams(
+          () =>
+            encodeMapViewToParams(
+              view,
+              new URLSearchParams(window.location.search),
+            ),
+          { replace: true },
+        );
       }, 400);
     },
     [setSearchParams],
@@ -139,6 +149,21 @@ export function MapPage() {
 
   const [filterPanelOpen, setFilterPanelOpen] = useState(false);
   const isDesktop = useMinWidth(768);
+
+  // The results list: the map reports its visible area, the list reports hover.
+  const list = useListUrlState();
+  const [mapBounds, setMapBounds] = useState<GeoBounds | null>(null);
+  const [hoveredChurchId, setHoveredChurchId] = useState<number | null>(null);
+  const [zoomRequest, setZoomRequest] = useState<{
+    delta: number;
+    requestId: number;
+  } | null>(null);
+  const handleZoomOut = useCallback(
+    () =>
+      setZoomRequest((prev) => ({ delta: 2, requestId: (prev?.requestId ?? 0) + 1 })),
+    [],
+  );
+  const mobileListOpen = !isDesktop && list.view === "list";
   const [centerOn, setCenterOn] = useState<{
     lat: number;
     lng: number;
@@ -240,6 +265,13 @@ export function MapPage() {
   }, []);
 
   const pinnedPlaceTitle = centerOn?.placeTitle;
+  const pin = useMemo(
+    () =>
+      centerOn?.placeTitle
+        ? { lat: centerOn.lat, lng: centerOn.lng, title: centerOn.placeTitle }
+        : null,
+    [centerOn?.placeTitle, centerOn?.lat, centerOn?.lng],
+  );
 
   return (
     <main
@@ -252,7 +284,10 @@ export function MapPage() {
        *  Only the floating card can start a refresh; the map owns its touches. */}
       {/* Full-bleed map — no z-index so it doesn't create a stacking context;
        *  the elevated popup pane inside can then layer above the header. */}
-      <div className="absolute inset-0">
+      <div
+        className={`absolute inset-0 ${mobileListOpen ? "invisible" : ""}`}
+        inert={mobileListOpen}
+      >
         {data ? (
           <ChurchMap
             churches={data}
@@ -260,6 +295,10 @@ export function MapPage() {
             initialView={initialMapView}
             onViewChange={handleMapViewChange}
             onClearPlace={handleClearPlace}
+            onBoundsChange={setMapBounds}
+            highlightedChurchId={hoveredChurchId}
+            onHoverChurch={setHoveredChurchId}
+            zoomRequest={zoomRequest}
           />
         ) : null}
       </div>
@@ -366,23 +405,33 @@ export function MapPage() {
             <FilterPills filters={appliedFilters} />
           </div>
 
-          <div
-            data-map-overlay={isDesktop ? true : undefined}
-            className={`w-full md:min-h-0 ${
-              !isDesktop && !filterPanelOpen
-                ? "pointer-events-none"
-                : "pointer-events-auto"
-            }`}
-          >
-            <FilterPanel
-              isOpen={!isDesktop && filterPanelOpen}
-              isDesktop={isDesktop}
-              onClose={() => setFilterPanelOpen(false)}
-              filters={filters}
-              onChange={handleFiltersChange}
-              resultCount={mappedChurchCount}
-            />
-          </div>
+          <MapResults
+            churches={data}
+            totalCount={mappedChurchCount}
+            bounds={mapBounds}
+            pin={pin}
+            filters={appliedFilters}
+            onFiltersChange={handleFiltersChange}
+            isDesktop={isDesktop}
+            mobileView={list.view}
+            onMobileViewChange={list.setView}
+            sort={list.sort}
+            onSortChange={list.setSort}
+            highlightedId={hoveredChurchId}
+            onHover={setHoveredChurchId}
+            onShowOnMap={handleChurchSelect}
+            onZoomOut={handleZoomOut}
+            filterPanel={
+              <FilterPanel
+                isOpen={!isDesktop && filterPanelOpen}
+                isDesktop={isDesktop}
+                onClose={() => setFilterPanelOpen(false)}
+                filters={filters}
+                onChange={handleFiltersChange}
+                resultCount={mappedChurchCount}
+              />
+            }
+          />
         </div>
       </div>
     </main>

@@ -509,7 +509,8 @@
  * the pins packed along a city street and you had to trace the tip to tell
  * which. `is-selected` is toggled from ChurchMap's popupopen/popupclose
  * handlers; the lift goes on the inner <svg> for the reason above. */
-.church-map-marker.is-selected svg {
+.church-map-marker.is-selected svg,
+.church-map-marker.is-linked svg {
   transform: translateY(-3px) scale(1.14);
   filter:
     drop-shadow(0 3px 4px rgb(22 18 16 / 0.34))
