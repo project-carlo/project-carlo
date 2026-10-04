@@ -26,6 +26,7 @@ import type {
 import L from "leaflet";
 import type { ChurchMapItem } from "../types";
 import type { MapView } from "../lib/mapView";
+import type { GeoBounds } from "../lib/churchList";
 import {
   buildClusterIndex,
   convexHull,
@@ -141,6 +142,17 @@ interface ChurchMapProps {
   onViewChange?: (view: MapView) => void;
   /** Removes the searched-place pin; the popup offers it as a button. */
   onClearPlace?: () => void;
+  /**
+   * Reports the ground the map shows that the floating UI leaves clear — what
+   * the results list means by "this area" — after every pan, zoom or resize.
+   */
+  onBoundsChange?: (bounds: GeoBounds) => void;
+  /** The church whose pin is lifted and haloed, e.g. the hovered list row. */
+  highlightedChurchId?: number | null;
+  /** Pointer entered (id) or left (null) a church pin. */
+  onHoverChurch?: (churchId: number | null) => void;
+  /** Zooms the map out by `delta` levels; each new `requestId` is one zoom. */
+  zoomRequest?: { delta: number; requestId: number } | null;
 }
 
 /**
@@ -305,6 +317,51 @@ function ChangeView({
 }
 
 /**
+ * Reports the part of the map left clear of the floating UI as a lat/lng box,
+ * once on mount and again after each pan, zoom or resize. The results list
+ * reads it as "this area". Read-only.
+ */
+function BoundsReporter({
+  onBoundsChange,
+}: {
+  onBoundsChange: (bounds: GeoBounds) => void;
+}) {
+  const map = useMap();
+  const callbackRef = useRef(onBoundsChange);
+  callbackRef.current = onBoundsChange;
+  const report = useCallback(() => {
+    const insets = overlayInsets(map);
+    const size = map.getSize();
+    const northWest = map.containerPointToLatLng([insets.x, insets.y]);
+    const southEast = map.containerPointToLatLng([size.x, size.y]);
+    callbackRef.current({
+      north: northWest.lat,
+      west: northWest.lng,
+      south: southEast.lat,
+      east: southEast.lng,
+    });
+  }, [map]);
+  useMapEvents({ moveend: report, resize: report });
+  useEffect(() => {
+    report();
+  }, [report]);
+  return null;
+}
+
+/** Zooms the map out when asked (the list's "Zoom out" button). */
+function ZoomCommand({
+  request,
+}: {
+  request: { delta: number; requestId: number };
+}) {
+  const map = useMap();
+  useEffect(() => {
+    map.setZoom(Math.max(map.getZoom() - request.delta, map.getMinZoom()));
+  }, [map, request.requestId, request.delta]);
+  return null;
+}
+
+/**
  * Reports the map's camera up to the parent after each pan/zoom settles, so the
  * view can be persisted to the URL. Read-only — it never moves the map itself.
  */
@@ -410,7 +467,13 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
   );
 }
 
+const canHover = () =>
+  typeof window !== "undefined" &&
+  window.matchMedia("(hover: hover)").matches;
+
 const SELECTED_MARKER_CLASS = "is-selected";
+/** Same look as the open-popup pin, driven from outside (list row hover). */
+const LINKED_MARKER_CLASS = "is-linked";
 
 /**
  * Marks the pin whose popup is open. Leaflet gives that marker no class of
@@ -419,7 +482,11 @@ const SELECTED_MARKER_CLASS = "is-selected";
  * the right one. The handler object is memoized because react-leaflet
  * re-binds every listener when its identity changes.
  */
-function useSelectedMarkerClass(markerRef: RefObject<LeafletMarker | null>) {
+function useSelectedMarkerClass(
+  markerRef: RefObject<LeafletMarker | null>,
+  churchId: number,
+  onHover: ((churchId: number | null) => void) | undefined,
+) {
   return useMemo(
     () => ({
       popupopen: () =>
@@ -428,8 +495,15 @@ function useSelectedMarkerClass(markerRef: RefObject<LeafletMarker | null>) {
         markerRef.current
           ?.getElement()
           ?.classList.remove(SELECTED_MARKER_CLASS),
+      // Phones fake mouseover on tap and never send the mouseout.
+      mouseover: () => {
+        if (canHover()) onHover?.(churchId);
+      },
+      mouseout: () => {
+        if (canHover()) onHover?.(null);
+      },
     }),
-    [markerRef],
+    [markerRef, churchId, onHover],
   );
 }
 
@@ -437,8 +511,13 @@ const ChurchMarker = memo(function ChurchMarker({
   church,
   openPopupRequestId,
   onPopupRequestHandled,
+  highlighted,
+  onHover,
 }: {
   church: MappedChurch;
+  /** Lifted and haloed from outside, like the pin whose popup is open. */
+  highlighted: boolean;
+  onHover: ((churchId: number | null) => void) | undefined;
   /**
    * Set only on the marker a selection targets, and bumped on every repeat
    * selection. Leaving it undefined everywhere else keeps the other markers'
@@ -467,7 +546,13 @@ const ChurchMarker = memo(function ChurchMarker({
     () => [church.latitude, church.longitude],
     [church.latitude, church.longitude],
   );
-  const eventHandlers = useSelectedMarkerClass(markerRef);
+  const eventHandlers = useSelectedMarkerClass(markerRef, church.id, onHover);
+  useEffect(() => {
+    const element = markerRef.current?.getElement();
+    if (!element) return;
+    element.classList.toggle(LINKED_MARKER_CLASS, highlighted);
+    return () => element.classList.remove(LINKED_MARKER_CLASS);
+  }, [highlighted]);
 
   return (
     <Marker
@@ -595,10 +680,14 @@ function ClusteredChurchMarkers({
   index,
   popupRequest,
   onPopupRequestHandled,
+  highlightedChurchId,
+  onHoverChurch,
 }: {
   index: ClusterIndex<MappedChurch>;
   popupRequest: { churchId: number; requestId: number } | null;
   onPopupRequestHandled: (requestId: number) => void;
+  highlightedChurchId: number | null | undefined;
+  onHoverChurch: ((churchId: number | null) => void) | undefined;
 }) {
   const map = useMap();
   const [viewport, setViewport] = useState(() => readViewport(map));
@@ -702,6 +791,8 @@ function ClusteredChurchMarkers({
                 : undefined
             }
             onPopupRequestHandled={onPopupRequestHandled}
+            highlighted={entry.item.id === highlightedChurchId}
+            onHover={onHoverChurch}
           />
         ),
       )}
@@ -768,6 +859,10 @@ export const ChurchMap = memo(function ChurchMap({
   initialView,
   onViewChange,
   onClearPlace,
+  onBoundsChange,
+  highlightedChurchId,
+  onHoverChurch,
+  zoomRequest,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -807,6 +902,8 @@ export const ChurchMap = memo(function ChurchMap({
     >
       {centerOn && <ChangeView center={centerOn} minZoom={selectedSoloZoom} />}
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
+      {onBoundsChange && <BoundsReporter onBoundsChange={onBoundsChange} />}
+      {zoomRequest && <ZoomCommand request={zoomRequest} />}
       <PopupPaneElevator />
       <TileLayer
         attribution={OSM_ATTRIBUTION}
@@ -817,6 +914,8 @@ export const ChurchMap = memo(function ChurchMap({
         index={clusterIndex}
         popupRequest={popupRequest}
         onPopupRequestHandled={setHandledRequestId}
+        highlightedChurchId={highlightedChurchId}
+        onHoverChurch={onHoverChurch}
       />
       {centerOn?.placeTitle ? (
         <SearchPlaceMarker
