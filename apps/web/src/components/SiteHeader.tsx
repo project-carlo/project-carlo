@@ -26,10 +26,10 @@ export function SiteNav({
       <SiteLink spa href={mapHref} className={link}>
         Map
       </SiteLink>
-      <SiteLink href={statePath()} className={link}>
+      <SiteLink spa href={statePath()} className={link}>
         Places
       </SiteLink>
-      <SiteLink href={DIOCESE_INDEX_PATH} className={link}>
+      <SiteLink spa href={DIOCESE_INDEX_PATH} className={link}>
         Dioceses
       </SiteLink>
       {showAbout ? (

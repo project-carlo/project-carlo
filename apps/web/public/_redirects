@@ -6,5 +6,17 @@
 /churches/:slug /churches/:slug/ 301
 /churches/:slug/index.html /churches/:slug/ 301
 
+# Browse pages: same trailing-slash form as church pages.
+/dioceses /dioceses/ 301
+/dioceses/index.html /dioceses/ 301
+/dioceses/:key /dioceses/:key/ 301
+/dioceses/:key/index.html /dioceses/:key/ 301
+/mass-times /mass-times/ny/ 301
+/mass-times/ /mass-times/ny/ 301
+/mass-times/ny /mass-times/ny/ 301
+/mass-times/ny/index.html /mass-times/ny/ 301
+/mass-times/ny/:city /mass-times/ny/:city/ 301
+/mass-times/ny/:city/index.html /mass-times/ny/:city/ 301
+
 # Cloudflare Workers static asset redirects do not support domain-level rules.
 # Keep http -> https and www -> apex redirects configured at the Cloudflare zone.

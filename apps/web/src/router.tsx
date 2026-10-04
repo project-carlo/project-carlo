@@ -2,10 +2,13 @@ import { lazy, Suspense } from "react";
 import {
   createBrowserRouter,
   Navigate,
+  Outlet,
+  ScrollRestoration,
   type RouteObject,
 } from "react-router-dom";
 import { NotFoundPage } from "./views/NotFoundPage";
 import { isAboutPageEnabled } from "./lib/featureFlags";
+import { statePath } from "./lib/places";
 import { HomeRoute } from "./views/HomeRoute";
 
 const MapPage = lazy(() =>
@@ -14,6 +17,22 @@ const MapPage = lazy(() =>
 
 const ChurchPage = lazy(() =>
   import("./views/ChurchPage").then((m) => ({ default: m.ChurchPage })),
+);
+
+// One chunk for the four browse pages: they share the place index and parts.
+const DioceseIndexRoute = lazy(() =>
+  import("./views/browse/BrowseRoutes").then((m) => ({
+    default: m.DioceseIndexRoute,
+  })),
+);
+const DioceseRoute = lazy(() =>
+  import("./views/browse/BrowseRoutes").then((m) => ({ default: m.DioceseRoute })),
+);
+const StateRoute = lazy(() =>
+  import("./views/browse/BrowseRoutes").then((m) => ({ default: m.StateRoute })),
+);
+const CityRoute = lazy(() =>
+  import("./views/browse/BrowseRoutes").then((m) => ({ default: m.CityRoute })),
 );
 
 const AboutPage = lazy(() =>
@@ -46,6 +65,39 @@ const routes: RouteObject[] = [
     ),
   },
   {
+    path: "/dioceses",
+    element: (
+      <Suspense fallback={lazyPageFallback}>
+        <DioceseIndexRoute />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/dioceses/:key",
+    element: (
+      <Suspense fallback={lazyPageFallback}>
+        <DioceseRoute />
+      </Suspense>
+    ),
+  },
+  { path: "/mass-times", element: <Navigate to={statePath()} replace /> },
+  {
+    path: "/mass-times/:state",
+    element: (
+      <Suspense fallback={lazyPageFallback}>
+        <StateRoute />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/mass-times/:state/:city",
+    element: (
+      <Suspense fallback={lazyPageFallback}>
+        <CityRoute />
+      </Suspense>
+    ),
+  },
+  {
     path: "/churches/:churchSlug",
     element: (
       <Suspense fallback={lazyPageFallback}>
@@ -71,4 +123,17 @@ routes.push({
   element: <NotFoundPage />,
 });
 
-export const router = createBrowserRouter(routes);
+// A root layout so every client navigation starts at the top of the page
+// (and back/forward restores the old scroll), instead of keeping the previous
+// page's scroll offset.
+export const router = createBrowserRouter([
+  {
+    element: (
+      <>
+        <Outlet />
+        <ScrollRestoration />
+      </>
+    ),
+    children: routes,
+  },
+]);

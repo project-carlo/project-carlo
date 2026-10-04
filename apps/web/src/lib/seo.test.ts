@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { ChurchDetail } from "../types";
-import { churchJsonLd } from "./seo";
+import { browsePageJsonLd, churchBreadcrumbJsonLd, churchJsonLd } from "./seo";
 
 const church: ChurchDetail = {
   id: 1,
@@ -48,5 +48,53 @@ describe("churchJsonLd", () => {
 
     expect(jsonLd).not.toHaveProperty("event");
     expect(JSON.stringify(jsonLd)).not.toContain('"@type":"Event"');
+  });
+});
+
+describe("browse page JSON-LD", () => {
+  it("emits CollectionPage, ItemList and BreadcrumbList with absolute URLs", () => {
+    const nodes = browsePageJsonLd({
+      origin: "https://projectcarlo.com",
+      path: "/mass-times/ny/troy/",
+      title: "Troy",
+      description: "d",
+      dateModified: "2026-10-04",
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Troy", path: "/mass-times/ny/troy/" },
+      ],
+      items: [{ name: "St One", path: "/churches/st-one/" }],
+    });
+    expect(nodes.map((n) => n["@type"])).toEqual([
+      "CollectionPage",
+      "ItemList",
+      "BreadcrumbList",
+    ]);
+    expect(nodes[0]).toMatchObject({ dateModified: "2026-10-04" });
+    expect(nodes[1]).toMatchObject({
+      numberOfItems: 1,
+      itemListElement: [
+        { position: 1, url: "https://projectcarlo.com/churches/st-one/", name: "St One" },
+      ],
+    });
+    expect(nodes[2]).toMatchObject({
+      itemListElement: [
+        { position: 1, item: "https://projectcarlo.com/" },
+        { position: 2, item: "https://projectcarlo.com/mass-times/ny/troy/" },
+      ],
+    });
+  });
+
+  it("builds a church breadcrumb from the supplied trail", () => {
+    const node = churchBreadcrumbJsonLd(
+      church,
+      "https://projectcarlo.com/churches/st-charles-borromeo/",
+      [
+        { name: "Home", path: "/" },
+        { name: "New York", path: "/mass-times/ny/" },
+        { name: "St. Charles Borromeo", path: "/churches/st-charles-borromeo/" },
+      ],
+    );
+    expect(JSON.stringify(node)).toContain("https://projectcarlo.com/mass-times/ny/");
   });
 });

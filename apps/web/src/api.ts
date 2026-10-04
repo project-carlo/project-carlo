@@ -56,6 +56,11 @@ function getSnapshot(): Promise<Snapshot> {
   return snapshotPromise;
 }
 
+/** The decoded snapshot, for pages that browse every church (diocese and city pages). */
+export function fetchSnapshot(): Promise<Snapshot> {
+  return getSnapshot();
+}
+
 function toEventSummary(ev: RawEvent): EventSummary {
   return {
     id: ev.id,

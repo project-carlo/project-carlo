@@ -33,7 +33,7 @@ Confession, and Adoration times parsed from weekly bulletins
 | No Open Graph / Twitter Card tags anywhere | Shared links render bare in iMessage/WhatsApp/Slack/Facebook/X |
 | No social share image asset | Empty previews even once OG tags exist |
 | No JSON-LD structured data | Missing rich results — biggest organic lever for a local-listings site |
-| SPA routes (`/`, `/landing`, client-navigated church page) keep the generic `index.html` title | Stale tabs/bookmarks; wrong canonical on `/landing` |
+| SPA routes (`/`, `/map`, client-navigated church page) keep the generic `index.html` title | Stale tabs/bookmarks; wrong canonical on `/map` |
 | Titles lack location + intent keywords | Misses "mass times", city, state that people search |
 | No city/region pages | No capture of "mass times in {city}" long-tail across 508 parishes |
 | No apple-touch-icon / web manifest | Weak iOS home-screen + tab presence |
@@ -62,7 +62,8 @@ Confession, and Adoration times parsed from weekly bulletins
    `apple-touch-icon.png` (180×180), and `site.webmanifest`.
 3. Add JSON-LD to church pages: `Church` (PlaceOfWorship) with name, address,
    geo, and url; plus `BreadcrumbList`.
-4. Add `WebSite` + `SearchAction` JSON-LD to the homepage.
+4. Add `WebSite` JSON-LD to the homepage. (A `SearchAction` was originally planned
+   here; it is dropped, see Progress.)
 
 ### Phase 2 — Titles, headings & SPA meta
 
@@ -97,7 +98,8 @@ Confession, and Adoration times parsed from weekly bulletins
   - `og-default.png`, `apple-touch-icon.png`, `icon-192/512.png`, `site.webmanifest`
     (regenerate via `pnpm --filter web og:gen`, source in `scripts/generate-og.ts`)
   - JSON-LD: `Church` + `BreadcrumbList` (church pages), `WebSite` + `Organization` (home)
-  - SearchAction deferred to Phase 2 (needs a real `?q=` search handler first)
+  - SearchAction **dropped**: Google retired the sitelinks search box in November 2024,
+    so the `WebSite` + `SearchAction` markup no longer earns anything. Not planned.
 - [x] Phase 2 — titles, headings & SPA meta
   - Keyword-forward title/description builders in `src/lib/seo.ts`
     (`buildChurchTitle`, `buildChurchDescription`, `HOME_TITLE`, `HOME_DESCRIPTION`)
@@ -119,7 +121,36 @@ Confession, and Adoration times parsed from weekly bulletins
   - WebSite/Organization JSON-LD injected into `index.html` at build time from
     `src/lib/seo.ts` (single source of truth); JSON-LD serialization escapes
     `<` to keep `</script>`-safe.
-- [ ] Phase 3 — local long-tail expansion
+- [~] Phase 3 — local long-tail expansion (in progress)
+  - **Site restructure:** the landing page is now `/` (it was `/landing`, which now
+    redirects to `/`) and the map app lives at `/map`. Old map links of the form
+    `/?lat=..&lng=..&z=..` redirect to `/map` with the query intact.
+  - **City pages** `/mass-times/ny/{city}/` for every city with 2+ churches
+    (`CITY_PAGE_MIN_CHURCHES`; 51 today), prerendered and also a client route. Each has
+    data-derived content so it is not a doorway page: a "This weekend" table (Saturday
+    vigil + Sunday Masses per church), computed highlights (earliest/latest Sunday Mass,
+    most Sunday Masses, daily-Mass and Saturday-Confession counts), Confession and
+    Adoration by day, the church list, and "Nearby, outside {city}" (churches within
+    ~10 miles of the city centroid). Title: "Mass & Confession Times in Buffalo, NY · 26
+    Catholic Churches | Project Carlo".
+  - **Diocese pages** `/dioceses/` and `/dioceses/{key}/` (intro, website, churches
+    grouped by town linking to city pages, the same service sections).
+  - **State hub** `/mass-times/ny/`: dioceses, all city pages and an A–Z list of every
+    town. One-church towns link straight to that church page (the church page is the
+    answer for that town), so every church is reachable in two clicks from the hub.
+  - JSON-LD on all browse pages: `CollectionPage` (with `dateModified`), `ItemList`
+    (`ListItem` → `url`/`name`) and `BreadcrumbList`; all are in `sitemap.xml`.
+    `_redirects` carries the trailing-slash rules.
+  - **Church-page internal links:** breadcrumbs Home › New York › {City, when it has a
+    page} › {Church} (BreadcrumbList matches), a diocese link, "View on map"
+    (`/map?lat=..&lng=..&z=15`) and "Nearby churches" (the 5 nearest, with distance and
+    weekend times).
+  - Decisions: browse pages show **weekly-pattern** times, never "next Mass in 20
+    minutes", because static HTML is served for days between builds. The snapshot has no
+    per-bulletin dates, so freshness reads "refreshed {build date}" rather than "bulletins
+    dated ..."; adding a bulletin date column to the snapshot would let it say the latter.
+  - Still open: per-city OG images (item 9), a first-Friday / holy-day section, and
+    bulletin dates in the snapshot.
 - [ ] Phase 4 — polish & measurement (submit sitemap to Google Search Console
       + Bing Webmaster Tools after the next deploy; validate with the Rich
       Results Test and Facebook Sharing Debugger — zero-code, do first)
