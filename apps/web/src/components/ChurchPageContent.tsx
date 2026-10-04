@@ -12,11 +12,20 @@ import {
   MapPinIcon,
   PencilIcon,
 } from "@/components/icons";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FeedbackTrigger } from "@/components/FeedbackTrigger";
 import { Fleuron } from "@/components/Fleuron";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteLink } from "@/components/SiteLink";
 import { useMapHref } from "@/hooks/useMapHref";
+import {
+  churchCrumbs,
+  mapLinkFor,
+  type ChurchPlaceContext,
+} from "@/lib/browse";
+import { dioceseForChurch, diocesePath } from "@/lib/places";
+import { NearbyList, SectionHeading } from "@/views/browse/parts";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
  *  from, and any qualifier on the slot. One size and one voice for all of
@@ -188,15 +197,20 @@ interface ChurchPageContentProps {
   events: EventSummary[];
   /** Whether the About page exists (build-time flag; the prerender passes its own). */
   showAbout?: boolean;
+  /** City-page link and nearby churches; null until the SPA has loaded them. */
+  place?: ChurchPlaceContext | null;
 }
 
 export function ChurchPageContent({
   church,
   events,
   showAbout = false,
+  place = null,
 }: ChurchPageContentProps) {
   const byType = partitionEventsByType(events);
   const mapHref = useMapHref();
+  const diocese = dioceseForChurch(church.slug);
+  const churchOnMap = mapLinkFor(church);
 
   return (
     <>
@@ -205,6 +219,10 @@ export function ChurchPageContent({
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         <section className="rise-in mx-auto max-w-2xl text-center">
+          <Breadcrumbs
+            items={churchCrumbs(church, place)}
+            className="mb-6 flex justify-center"
+          />
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
             {church.name ?? "Unnamed parish"}
           </h1>
@@ -216,9 +234,27 @@ export function ChurchPageContent({
             </p>
           ) : null}
 
+          {diocese ? (
+            <p className="mt-2 font-serif text-[0.95rem] text-ink-soft">
+              <SiteLink spa href={diocesePath(diocese.key)} className="rubric-link">
+                {diocese.shortName}
+              </SiteLink>
+            </p>
+          ) : null}
+
           <Fleuron className="my-7" />
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+            {churchOnMap ? (
+              <SiteLink
+                spa
+                href={churchOnMap}
+                className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
+              >
+                <MapPinIcon className="size-3.5" />
+                View on map
+              </SiteLink>
+            ) : null}
             {church.homepage_url ? (
               <a
                 href={church.homepage_url}
@@ -369,6 +405,21 @@ export function ChurchPageContent({
               })}
             </div>
           </div>
+        ) : null}
+
+        {place && place.nearby.length > 0 ? (
+          <section
+            aria-labelledby="nearby-churches"
+            className="mx-auto mt-16 max-w-4xl"
+          >
+            <SectionHeading
+              id="nearby-churches"
+              aside="If these times don’t work, try a church close by"
+            >
+              Nearby churches
+            </SectionHeading>
+            <NearbyList items={place.nearby} />
+          </section>
         ) : null}
 
         <div className="mx-auto mt-16 max-w-2xl">

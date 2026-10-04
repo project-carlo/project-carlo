@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ChurchNotFoundError, fetchChurch, fetchChurchEvents } from "../api";
@@ -7,6 +8,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchPageContent } from "@/components/ChurchPageContent";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 import { useMapHref } from "@/hooks/useMapHref";
+import { usePlaceIndex } from "@/hooks/usePlaceIndex";
+import { buildChurchPlaceContext } from "@/lib/browse";
 import { isAboutPageEnabled } from "@/lib/featureFlags";
 import {
   buildChurchDescription,
@@ -38,6 +41,19 @@ export function ChurchPage() {
 
   const events = eventsQuery.data;
   const church = churchQuery.data;
+
+  // The city-page link and "Nearby churches" come from the whole snapshot. It
+  // is the data the two queries above already read, so this settles at once;
+  // if it ever fails the page simply renders without those extras.
+  const placeQuery = usePlaceIndex();
+  const place = useMemo(
+    () =>
+      church && placeQuery.data
+        ? buildChurchPlaceContext(placeQuery.data, church)
+        : null,
+    [church, placeQuery.data],
+  );
+  const placeSettled = placeQuery.isSuccess || placeQuery.isError;
 
   const notFound =
     !enabled ||
@@ -79,12 +95,13 @@ export function ChurchPage() {
     );
   }
 
-  if (church && events) {
+  if (church && events && placeSettled) {
     return (
       <ChurchPageContent
         church={church}
         events={events}
         showAbout={showAbout}
+        place={place}
       />
     );
   }
@@ -102,6 +119,9 @@ export function ChurchPage() {
             message={"We couldn't load this parish."}
             onRetry={() => churchQuery.refetch()}
           />
+        ) : null}
+        {church && events && !placeSettled ? (
+          <p className="font-serif text-sm text-ink-soft">Loading parish…</p>
         ) : null}
         {eventsQuery.isLoading && !churchQuery.isLoading ? (
           <p className="mx-auto max-w-2xl font-serif text-sm text-ink-soft">

@@ -38,6 +38,7 @@ export function BrowseSection() {
         {list.map(({ diocese, count }) => (
           <li key={diocese.key}>
             <SiteLink
+              spa
               href={diocesePath(diocese.key)}
               className="missal-focus block border border-rule-strong px-4 py-3 transition-colors hover:bg-paper-deep/50"
             >
@@ -56,7 +57,7 @@ export function BrowseSection() {
       <ul className="flex flex-wrap gap-x-5 gap-y-2">
         {cities.map((c) => (
           <li key={`${c.state}/${c.slug}`}>
-            <SiteLink href={cityPath(c.state, c.name)} className={LINK}>
+            <SiteLink spa href={cityPath(c.state, c.name)} className={LINK}>
               {c.name}
               <span className="font-serif text-[0.8125rem] text-ink-faint">
                 {c.count}
@@ -70,7 +71,7 @@ export function BrowseSection() {
         <SiteLink href={CHURCH_INDEX_PATH} className={LINK}>
           All parishes A–Z
         </SiteLink>
-        <SiteLink href={statePath()} className={LINK}>
+        <SiteLink spa href={statePath()} className={LINK}>
           All of New York
         </SiteLink>
       </p>

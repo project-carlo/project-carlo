@@ -66,7 +66,7 @@ export function SiteFooter({
                 </SiteLink>
               </li>
               <li>
-                <SiteLink href={statePath()} className={LINK}>
+                <SiteLink spa href={statePath()} className={LINK}>
                   Mass times in New York
                 </SiteLink>
               </li>
@@ -90,7 +90,7 @@ export function SiteFooter({
             <ul className="space-y-1.5">
               {dioceses().map((d) => (
                 <li key={d.key}>
-                  <SiteLink href={diocesePath(d.key)} className={LINK}>
+                  <SiteLink spa href={diocesePath(d.key)} className={LINK}>
                     {d.shortName}
                   </SiteLink>
                 </li>
@@ -104,7 +104,7 @@ export function SiteFooter({
               <ul className="flex flex-wrap gap-x-4 gap-y-1.5">
                 {cities.map((c) => (
                   <li key={c.path}>
-                    <SiteLink href={c.path} className={LINK}>
+                    <SiteLink spa href={c.path} className={LINK}>
                       {c.name}
                     </SiteLink>
                   </li>
