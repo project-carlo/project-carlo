@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { DAY_ORDER } from "../constants/days";
 import { EVENT_TYPE_LABELS, EVENT_TYPE_ORDER } from "../constants/eventTypes";
 import type { ChurchDetail, EventSummary, EventType } from "../types";
@@ -8,7 +7,6 @@ import {
   formatMinutesMissal,
 } from "../utils";
 import {
-  ArrowLeftIcon,
   ExternalLinkIcon,
   FileTextIcon,
   MapPinIcon,
@@ -16,9 +14,9 @@ import {
 } from "@/components/icons";
 import { FeedbackTrigger } from "@/components/FeedbackTrigger";
 import { Fleuron } from "@/components/Fleuron";
-import { Masthead } from "@/components/Masthead";
-import { useHomeHref } from "@/hooks/useHomeHref";
-import { CHURCH_INDEX_PATH } from "@/lib/seo";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import { useMapHref } from "@/hooks/useMapHref";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
  *  from, and any qualifier on the slot. One size and one voice for all of
@@ -188,24 +186,22 @@ function PageRef({
 interface ChurchPageContentProps {
   church: ChurchDetail;
   events: EventSummary[];
+  /** Whether the About page exists (build-time flag; the prerender passes its own). */
+  showAbout?: boolean;
 }
 
-export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
+export function ChurchPageContent({
+  church,
+  events,
+  showAbout = false,
+}: ChurchPageContentProps) {
   const byType = partitionEventsByType(events);
-  const homeHref = useHomeHref();
+  const mapHref = useMapHref();
 
   return (
     <>
     <main className="min-h-svh bg-paper">
-      <header className="sticky top-0 z-40 border-b border-rule-strong bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 pt-[calc(0.85rem+var(--safe-area-inset-top))] pb-3">
-          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-            <ArrowLeftIcon className="size-3.5" />
-            Back to map
-          </Link>
-          <Masthead compact />
-        </div>
-      </header>
+      <SiteHeader sticky mapHref={mapHref} showAbout={showAbout} />
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         <section className="rise-in mx-auto max-w-2xl text-center">
@@ -385,11 +381,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
         </div>
       </div>
     </main>
-    <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
-      <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-        Browse all parishes
-      </a>
-    </footer>
+    <SiteFooter mapHref={mapHref} showAbout={showAbout} />
     </>
   );
 }

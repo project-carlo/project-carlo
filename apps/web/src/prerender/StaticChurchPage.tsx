@@ -25,6 +25,8 @@ interface StaticChurchPageProps {
   canonicalUrl: string;
   /** ISO date (YYYY-MM-DD) the parish's data was last updated, if known. */
   lastModified: string | null;
+  /** Whether the About page exists (build-time flag). */
+  showAbout?: boolean;
 }
 
 export function StaticChurchPage({
@@ -34,6 +36,7 @@ export function StaticChurchPage({
   fontPaths,
   canonicalUrl,
   lastModified,
+  showAbout = false,
 }: StaticChurchPageProps) {
   const title = buildChurchTitle(church);
   const description = buildChurchDescription(church);
@@ -97,7 +100,11 @@ export function StaticChurchPage({
       </head>
       <body>
         <MemoryRouter>
-          <ChurchPageContent church={church} events={events} />
+          <ChurchPageContent
+            church={church}
+            events={events}
+            showAbout={showAbout}
+          />
         </MemoryRouter>
       </body>
     </html>

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("home page mounts and renders cleanly", async ({ page, baseURL }) => {
+test("map page mounts and renders cleanly", async ({ page, baseURL }) => {
   const pageErrors: string[] = [];
   const consoleErrors: string[] = [];
   const failedRequests: string[] = [];
@@ -16,12 +16,12 @@ test("home page mounts and renders cleanly", async ({ page, baseURL }) => {
     }
   });
 
-  const response = await page.goto("/");
+  const response = await page.goto("/map");
   expect(response?.status()).toBe(200);
 
   await expect(page.locator("#root")).not.toBeEmpty();
 
-  // Leaflet container mounts (HomePage is lazy-loaded behind Suspense)
+  // Leaflet container mounts (MapPage is lazy-loaded behind Suspense)
   await expect(page.locator(".leaflet-container")).toBeVisible({
     timeout: 15_000,
   });
@@ -36,4 +36,18 @@ test("home page mounts and renders cleanly", async ({ page, baseURL }) => {
   expect(pageErrors, pageErrors.join("\n")).toEqual([]);
   expect(consoleErrors, consoleErrors.join("\n")).toEqual([]);
   expect(failedRequests, failedRequests.join("\n")).toEqual([]);
+});
+
+test("old map links at /?lat=..&lng=..&z=.. redirect to /map with the query", async ({
+  page,
+}) => {
+  await page.goto("/?lat=43.1&lng=-77.6&z=11&type=adoration");
+  await expect(page).toHaveURL(/\/map\?/);
+  const url = new URL(page.url());
+  expect(url.pathname).toBe("/map");
+  expect(url.searchParams.get("lat")).toBe("43.1");
+  expect(url.searchParams.get("type")).toBe("adoration");
+  await expect(page.locator(".leaflet-container")).toBeVisible({
+    timeout: 15_000,
+  });
 });

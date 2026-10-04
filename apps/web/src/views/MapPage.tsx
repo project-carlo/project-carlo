@@ -23,20 +23,21 @@ import { InlineQueryError } from "../components/InlineQueryError";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useFilterUrlState } from "../hooks/useFilterUrlState";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
-import { rememberHomeSearch } from "../hooks/useHomeHref";
+import { rememberMapSearch } from "../hooks/useMapHref";
 import {
   decodeMapViewFromParams,
   encodeMapViewToParams,
   type MapView,
 } from "../lib/mapView";
 import { PLACE_SEARCH_ZOOM, type PlaceSearchResult } from "../placeSearch";
+import { statePath } from "../lib/places";
 import { isAboutPageEnabled } from "../lib/featureFlags";
-import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
+import { MAP_DESCRIPTION, MAP_TITLE, canonicalForPath } from "../lib/seo";
 
 const aboutPageEnabled = isAboutPageEnabled();
 
 /** Map-centering payload accepted on navigation (e.g. via router state from the landing page). */
-export interface HomeMapCenter {
+export interface MapCenter {
   lat: number;
   lng: number;
   churchId?: number;
@@ -45,15 +46,15 @@ export interface HomeMapCenter {
   zoom?: number;
 }
 
-interface HomeNavState {
-  centerOn?: HomeMapCenter;
+interface MapNavState {
+  centerOn?: MapCenter;
 }
 
-export function HomePage() {
+export function MapPage() {
   useDocumentMeta({
-    title: HOME_TITLE,
-    description: HOME_DESCRIPTION,
-    canonicalUrl: canonicalForPath("/"),
+    title: MAP_TITLE,
+    description: MAP_DESCRIPTION,
+    canonicalUrl: canonicalForPath("/map"),
   });
 
   const [urlFilters, setUrlFilters] = useFilterUrlState();
@@ -130,10 +131,10 @@ export function HomePage() {
   );
 
   // Mirror the live query string into sessionStorage so in-app "Back to map"
-  // links (plain pushes to "/") can restore the current filters + view.
+  // links (plain pushes to "/map") can restore the current filters + view.
   const location = useLocation();
   useEffect(() => {
-    rememberHomeSearch(location.search);
+    rememberMapSearch(location.search);
   }, [location.search]);
 
   const [filterPanelOpen, setFilterPanelOpen] = useState(false);
@@ -159,7 +160,7 @@ export function HomePage() {
   useEffect(() => {
     if (hydratedFromStateRef.current) return;
     hydratedFromStateRef.current = true;
-    const incoming = (location.state as HomeNavState | null)?.centerOn;
+    const incoming = (location.state as MapNavState | null)?.centerOn;
     if (!incoming) return;
     centerRequestIdRef.current += 1;
     setCenterOn({ ...incoming, requestId: centerRequestIdRef.current });
@@ -303,14 +304,31 @@ export function HomePage() {
           >
             <div className="flex items-start justify-between gap-4">
               <Masthead />
-              {aboutPageEnabled ? (
-                <Link
-                  to="/about"
-                  className="rubric-link mt-1 shrink-0 font-serif text-[0.9375rem]"
-                >
-                  About
+              <nav
+                aria-label="Site"
+                className="mt-1 flex shrink-0 items-baseline gap-x-3 font-serif text-[0.9375rem]"
+              >
+                <Link to="/" className="rubric-link">
+                  Home
                 </Link>
-              ) : null}
+                <span aria-hidden className="text-ink-faint">
+                  ·
+                </span>
+                {/* Prerendered-only page for now, so a plain anchor. */}
+                <a href={statePath()} className="rubric-link">
+                  Browse
+                </a>
+                {aboutPageEnabled ? (
+                  <>
+                    <span aria-hidden className="text-ink-faint">
+                      ·
+                    </span>
+                    <Link to="/about" className="rubric-link">
+                      About
+                    </Link>
+                  </>
+                ) : null}
+              </nav>
             </div>
             <div className="mt-5">
               <SearchTypeahead

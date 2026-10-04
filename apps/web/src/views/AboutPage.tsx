@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-import { ArrowLeftIcon } from "@/components/icons";
-import { Masthead } from "@/components/Masthead";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
-import { useHomeHref } from "@/hooks/useHomeHref";
+import { useMapHref } from "@/hooks/useMapHref";
 import { canonicalForPath } from "@/lib/seo";
 
 export function AboutPage() {
@@ -12,19 +11,13 @@ export function AboutPage() {
       "About Project Carlo — a directory of Catholic parishes with Mass, Confession, and Adoration times parsed from weekly bulletins.",
     canonicalUrl: canonicalForPath("/about"),
   });
-  const homeHref = useHomeHref();
+  const mapHref = useMapHref();
 
   return (
-    <main className="min-h-svh bg-paper px-4 py-8 sm:py-12">
+    <div className="flex min-h-svh flex-col bg-paper">
+      <SiteHeader mapHref={mapHref} showAbout />
+      <main className="flex-1 px-4 py-8 sm:py-12">
       <div className="mx-auto flex w-full max-w-[40rem] flex-col gap-8">
-        <header className="space-y-4">
-          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-            <ArrowLeftIcon className="size-3" />
-            Back to map
-          </Link>
-          <Masthead compact />
-        </header>
-
         <section className="space-y-3">
           <h1 className="font-display text-[2rem] leading-[1.1] text-ink sm:text-[2.5rem]">
             About
@@ -60,6 +53,8 @@ export function AboutPage() {
           </p>
         </section>
       </div>
-    </main>
+      </main>
+      <SiteFooter mapHref={mapHref} showAbout />
+    </div>
   );
 }

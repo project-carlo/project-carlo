@@ -21,6 +21,12 @@ export const HOME_TITLE =
 export const HOME_DESCRIPTION =
   "Find Mass, Confession, and Adoration times at Catholic parishes on an interactive map. Schedules are parsed from each parish's weekly bulletin.";
 
+/** The map app at `/map`. */
+export const MAP_TITLE =
+  "Map of Mass, Confession & Adoration Times · Project Carlo";
+export const MAP_DESCRIPTION =
+  "An interactive map of Catholic parishes with Mass, Confession, and Adoration times parsed from each parish's weekly bulletin. Filter by day and time.";
+
 /** Resolve a site-relative path against an origin into an absolute URL. */
 export function absoluteUrl(origin: string, path: string): string {
   return new URL(path, `${origin}/`).href;

@@ -180,7 +180,7 @@ function PopupPaneElevator() {
 }
 
 /**
- * Marks the page's floating UI laid over the map (HomePage's search card and
+ * Marks the page's floating UI laid over the map (MapPage's search card and
  * desktop filter panel), so the map can tell which part of itself is left in
  * view.
  */

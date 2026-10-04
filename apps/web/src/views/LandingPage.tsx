@@ -1,7 +1,10 @@
 import { useCallback, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { ChurchSearchResult } from "../api";
+import { BrowseSection } from "../components/BrowseSection";
 import { Fleuron } from "../components/Fleuron";
+import { SiteFooter } from "../components/SiteFooter";
+import { SiteNav } from "../components/SiteHeader";
 import { SearchTypeahead } from "../components/SearchTypeahead";
 import { TimeRangeSlider } from "../components/TimeRangeSlider";
 import {
@@ -25,13 +28,13 @@ import {
 import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
-import { canonicalForPath } from "../lib/seo";
+import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
 import { cn } from "@/lib/utils";
 import {
   PLACE_SEARCH_ZOOM,
   type PlaceSearchResult,
 } from "../placeSearch";
-import type { HomeMapCenter } from "./HomePage";
+import type { MapCenter } from "./MapPage";
 import type { EventType } from "../types";
 
 const TIME_STEP_MINUTES = 15;
@@ -42,12 +45,19 @@ const SERVICE_ICONS: Record<EventType, typeof LatinCrossIcon> = {
   adoration: MonstranceIcon,
 };
 
-export function LandingPage() {
+interface LandingPageProps {
+  /** Whether the About page exists (build-time flag; the prerender passes its own). */
+  showAbout?: boolean;
+}
+
+/** The home page at `/`: search, "use my location", and browse links. Also
+ *  prerendered into dist/index.html (see scripts/prerender.ts), so it must
+ *  render without a browser and must not import Leaflet. */
+export function LandingPage({ showAbout = false }: LandingPageProps) {
   useDocumentMeta({
-    title: "Search Mass, Confession & Adoration Times · Project Carlo",
-    description:
-      "Search Catholic parishes by location, service, day, and time to find Mass, Confession, and Adoration times near you.",
-    canonicalUrl: canonicalForPath("/landing"),
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    canonicalUrl: canonicalForPath("/"),
   });
 
   const navigate = useNavigate();
@@ -66,9 +76,9 @@ export function LandingPage() {
   }, [filters]);
 
   const goToMap = useCallback(
-    (centerOn?: HomeMapCenter) => {
+    (centerOn?: MapCenter) => {
       navigate(
-        { pathname: "/", search: filterSearch },
+        { pathname: "/map", search: filterSearch },
         centerOn ? { state: { centerOn } } : undefined,
       );
     },
@@ -134,21 +144,18 @@ export function LandingPage() {
     );
   }, [goToMap]);
 
-  const headingFontSize = open
-    ? isDesktop
-      ? 64
-      : 40
-    : isDesktop
-      ? 88
-      : 56;
-
   return (
+    <div className="bg-paper">
     <main
       className={cn(
-        "flex min-h-svh flex-col items-center bg-paper px-7 md:px-24 md:justify-center md:py-16",
+        "relative flex min-h-svh flex-col items-center px-7 md:px-24 md:justify-center md:py-16",
         open ? "justify-start pt-9 pb-7" : "justify-center py-0",
       )}
     >
+      <SiteNav
+        showAbout={showAbout}
+        className="absolute top-[calc(1.1rem+var(--safe-area-inset-top))] right-6 justify-end md:right-10"
+      />
       <div
         className={cn(
           "flex w-full max-w-[720px] flex-col items-center",
@@ -165,12 +172,11 @@ export function LandingPage() {
           )}
         >
           <h1
-            className="m-0 font-display font-normal text-ink leading-none tracking-[-0.02em] ease-[cubic-bezier(.22,1,.36,1)]"
-            style={{
-              fontSize: headingFontSize,
-              transitionProperty: "font-size",
-              transitionDuration: isDesktop ? "360ms" : "320ms",
-            }}
+            className={cn(
+              "m-0 font-display font-normal text-ink leading-none tracking-[-0.02em]",
+              "transition-[font-size] duration-[320ms] ease-[cubic-bezier(.22,1,.36,1)] md:duration-[360ms]",
+              open ? "text-[40px] md:text-[64px]" : "text-[56px] md:text-[88px]",
+            )}
           >
             Project <em className="italic text-rubric">Carlo</em>
           </h1>
@@ -264,16 +270,28 @@ export function LandingPage() {
           />
         ) : (
           <>
-            <Fleuron size={isDesktop ? 40 : 28} className="w-full opacity-85" />
+            <Fleuron size={28} className="w-full opacity-85 md:hidden" />
+            <Fleuron size={40} className="hidden w-full opacity-85 md:flex" />
             <p className="m-0 text-center font-serif italic text-[12.5px] text-ink-faint">
-              {isDesktop
-                ? "A directory of Catholic parishes — schedules parsed from each parish’s weekly bulletin."
-                : "Schedules parsed from each parish’s weekly bulletin."}
+              <span className="hidden md:inline">
+                A directory of Catholic parishes — schedules parsed from each
+                parish’s weekly bulletin.
+              </span>
+              <span className="md:hidden">
+                Schedules parsed from each parish’s weekly bulletin.
+              </span>
+              <br />
+              <a href="#browse" className="rubric-link not-italic">
+                Browse by diocese &amp; city ↓
+              </a>
             </p>
           </>
         )}
       </div>
     </main>
+    {open ? null : <BrowseSection />}
+    <SiteFooter showAbout={showAbout} />
+    </div>
   );
 }
 

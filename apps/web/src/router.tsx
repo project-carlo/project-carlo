@@ -4,12 +4,12 @@ import {
   Navigate,
   type RouteObject,
 } from "react-router-dom";
-import { LandingPage } from "./views/LandingPage";
 import { NotFoundPage } from "./views/NotFoundPage";
 import { isAboutPageEnabled } from "./lib/featureFlags";
+import { HomeRoute } from "./views/HomeRoute";
 
-const HomePage = lazy(() =>
-  import("./views/HomePage").then((m) => ({ default: m.HomePage })),
+const MapPage = lazy(() =>
+  import("./views/MapPage").then((m) => ({ default: m.MapPage })),
 );
 
 const ChurchPage = lazy(() =>
@@ -26,22 +26,24 @@ const lazyPageFallback = (
   </main>
 );
 
+const aboutPageEnabled = isAboutPageEnabled();
+
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: (
-      <Suspense fallback={lazyPageFallback}>
-        <HomePage />
-      </Suspense>
-    ),
+    element: <HomeRoute showAbout={aboutPageEnabled} />,
   },
   {
     path: "/landing",
-    element: <LandingPage />,
+    element: <Navigate to="/" replace />,
   },
   {
     path: "/map",
-    element: <Navigate to="/" replace />,
+    element: (
+      <Suspense fallback={lazyPageFallback}>
+        <MapPage />
+      </Suspense>
+    ),
   },
   {
     path: "/churches/:churchSlug",
@@ -53,7 +55,7 @@ const routes: RouteObject[] = [
   },
 ];
 
-if (isAboutPageEnabled()) {
+if (aboutPageEnabled) {
   routes.push({
     path: "/about",
     element: (
