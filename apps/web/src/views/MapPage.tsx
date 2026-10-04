@@ -21,6 +21,9 @@ import {
   type FilterState,
 } from "../components/filterState";
 import { InlineQueryError } from "../components/InlineQueryError";
+import { ApproxLocationNotice } from "../components/ApproxLocationNotice";
+import { useInitialMapCenter } from "../hooks/useInitialMapCenter";
+import { rememberPlace } from "../lib/approxLocation";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useFilterUrlState } from "../hooks/useFilterUrlState";
 import { useListUrlState } from "../hooks/useListUrlState";
@@ -108,6 +111,9 @@ export function MapPage() {
   const [initialMapView] = useState<MapView | null>(() =>
     decodeMapViewFromParams(new URLSearchParams(window.location.search)),
   );
+  // With no camera in the URL and no place asked for, open on the visitor's
+  // approximate location (no permission prompt) when it is in coverage.
+  const initialCenter = useInitialMapCenter(initialMapView);
   const mapViewTimerRef = useRef<number | null>(null);
   const handleMapViewChange = useCallback(
     (view: MapView) => {
@@ -247,6 +253,7 @@ export function MapPage() {
   }, []);
 
   const handlePlaceSelect = useCallback((place: PlaceSearchResult) => {
+    rememberPlace(place);
     centerRequestIdRef.current += 1;
     setCenterOn({
       lat: place.lat,
@@ -288,11 +295,11 @@ export function MapPage() {
         className={`absolute inset-0 ${mobileListOpen ? "invisible" : ""}`}
         inert={mobileListOpen}
       >
-        {data ? (
+        {data && initialCenter.ready ? (
           <ChurchMap
             churches={data}
             centerOn={centerOn}
-            initialView={initialMapView}
+            initialView={initialMapView ?? initialCenter.view}
             onViewChange={handleMapViewChange}
             onClearPlace={handleClearPlace}
             onBoundsChange={setMapBounds}
@@ -401,6 +408,13 @@ export function MapPage() {
                   Remove pin
                 </button>
               </div>
+            ) : null}
+            {initialCenter.notice && !centerOn ? (
+              <ApproxLocationNotice
+                location={initialCenter.notice}
+                onPlaceSelect={handlePlaceSelect}
+                onDismiss={initialCenter.dismissNotice}
+              />
             ) : null}
             <FilterPills filters={appliedFilters} />
           </div>
