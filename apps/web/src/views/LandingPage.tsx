@@ -1,8 +1,10 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { ChurchSearchResult } from "../api";
 import { BrowseSection } from "../components/BrowseSection";
 import { Fleuron } from "../components/Fleuron";
+import { LocationLine } from "../components/LocationLine";
+import { NearbyPreview } from "../components/NearbyPreview";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteNav } from "../components/SiteHeader";
 import { SearchTypeahead } from "../components/SearchTypeahead";
@@ -27,7 +29,9 @@ import {
 } from "../constants/days";
 import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { useMinWidth } from "../hooks/useMinWidth";
+import { useApproxLocation } from "../hooks/useApproxLocation";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
+import { rememberPlace, saveLastPlace } from "../lib/approxLocation";
 import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
 import { cn } from "@/lib/utils";
 import {
@@ -68,6 +72,12 @@ export function LandingPage({ showAbout = false }: LandingPageProps) {
     "idle" | "requesting" | "error"
   >("idle");
   const [locationError, setLocationError] = useState<string | null>(null);
+  // Client-only: the prerendered page has no idea who is visiting.
+  const approx = useApproxLocation();
+  const searchRef = useRef<HTMLDivElement>(null);
+  const focusSearch = useCallback(() => {
+    searchRef.current?.querySelector("input")?.focus();
+  }, []);
 
   const filterSearch = useMemo(() => {
     const params = encodeFiltersToParams(filters, new URLSearchParams());
@@ -102,6 +112,7 @@ export function LandingPage({ showAbout = false }: LandingPageProps) {
 
   const handlePlaceSelect = useCallback(
     (place: PlaceSearchResult) => {
+      rememberPlace(place);
       goToMap({
         lat: place.lat,
         lng: place.lng,
@@ -124,6 +135,12 @@ export function LandingPage({ showAbout = false }: LandingPageProps) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         setLocationStatus("idle");
+        saveLastPlace({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+          label: "Your current location",
+          source: "device",
+        });
         goToMap({
           lat: position.coords.latitude,
           lng: position.coords.longitude,
@@ -148,7 +165,7 @@ export function LandingPage({ showAbout = false }: LandingPageProps) {
     <div className="bg-paper">
     <main
       className={cn(
-        "relative flex min-h-svh flex-col items-center px-7 md:px-24 md:justify-center md:py-16",
+        "relative flex min-h-[calc(100svh-4.5rem)] flex-col items-center px-7 md:px-24 md:justify-center md:py-16",
         open ? "justify-start pt-9 pb-7" : "justify-center py-0",
       )}
     >
@@ -200,13 +217,17 @@ export function LandingPage({ showAbout = false }: LandingPageProps) {
             "gap-4 md:gap-[18px]",
           )}
         >
-          <SearchTypeahead
-            hideModeToggle
-            size="lg"
-            filterButton={null}
-            onChurchSelect={handleChurchSelect}
-            onPlaceSelect={handlePlaceSelect}
-          />
+          <div ref={searchRef}>
+            <SearchTypeahead
+              hideModeToggle
+              size="lg"
+              filterButton={null}
+              onChurchSelect={handleChurchSelect}
+              onPlaceSelect={handlePlaceSelect}
+            />
+          </div>
+
+          <LocationLine location={approx.location} onChange={focusSearch} />
 
           {/* Mobile: stacked rows. Desktop: location-left / refine-right. */}
           <div className="flex flex-col gap-[14px] md:flex-row md:items-center md:justify-between md:gap-6">
@@ -289,7 +310,12 @@ export function LandingPage({ showAbout = false }: LandingPageProps) {
         )}
       </div>
     </main>
-    {open ? null : <BrowseSection />}
+    {open ? null : (
+      <>
+        <NearbyPreview approx={approx} />
+        <BrowseSection />
+      </>
+    )}
     <SiteFooter showAbout={showAbout} />
     </div>
   );
