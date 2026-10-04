@@ -14,8 +14,8 @@
   "published_date": "2026-10-04",
   "note": "",
   "labeler": "lyonsl2",
-  "seconds_spent": 483,
-  "updated_at": "2026-09-26T20:58:27Z",
+  "seconds_spent": 657,
+  "updated_at": "2026-10-04T22:31:39Z",
   "events": [
     {
       "church_slug": "st-patricks",
@@ -30,7 +30,8 @@
       "season": null,
       "page_number": 1,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-michaels-penn-yan",
@@ -45,7 +46,8 @@
       "season": null,
       "page_number": 1,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-januarius",
@@ -60,7 +62,8 @@
       "season": null,
       "page_number": 1,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-michaels-penn-yan",
@@ -75,7 +78,8 @@
       "season": null,
       "page_number": 1,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-januarius",
@@ -90,7 +94,8 @@
       "season": null,
       "page_number": 1,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-januarius",
@@ -105,7 +110,8 @@
       "season": null,
       "page_number": 1,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-michaels-penn-yan",
@@ -120,7 +126,8 @@
       "season": null,
       "page_number": 1,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-michaels-penn-yan",
@@ -135,7 +142,8 @@
       "season": null,
       "page_number": 1,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-michaels-penn-yan",
@@ -150,7 +158,8 @@
       "season": null,
       "page_number": 4,
       "note": "School Mass",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-michaels-penn-yan",
@@ -165,7 +174,8 @@
       "season": null,
       "page_number": 3,
       "note": "St. Francis Jubilee Mass; in chapel",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-michaels-penn-yan",
@@ -180,22 +190,8 @@
       "season": null,
       "page_number": 3,
       "note": null,
-      "origin": "gemini"
-    },
-    {
-      "church_slug": "st-januarius",
-      "event_type": "confession",
-      "event_kind": "specific_date",
-      "day_of_week": null,
-      "date": "2026-10-03",
-      "start_time": "07:45",
-      "end_time": "08:15",
-      "cancelled": false,
-      "weeks_of_month": [],
-      "season": null,
-      "page_number": 3,
-      "note": "In the chapel",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-januarius",
@@ -210,7 +206,24 @@
       "season": null,
       "page_number": 3,
       "note": "In the chapel",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
+    },
+    {
+      "church_slug": "st-januarius",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-11-08",
+      "start_time": "07:45",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "In the chapel",
+      "origin": "human",
+      "optional": "include"
     },
     {
       "church_slug": "st-patricks",
@@ -225,14 +238,15 @@
       "season": null,
       "page_number": 3,
       "note": "In the sacristy",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "st-patricks",
       "event_type": "confession",
       "event_kind": "specific_date",
       "day_of_week": null,
-      "date": "2026-10-04",
+      "date": "2026-11-07",
       "start_time": "14:45",
       "end_time": "15:15",
       "cancelled": false,
@@ -240,7 +254,8 @@
       "season": null,
       "page_number": 3,
       "note": "In the sacristy",
-      "origin": "gemini"
+      "origin": "human",
+      "optional": "include"
     },
     {
       "church_slug": "st-michaels-penn-yan",
@@ -255,7 +270,8 @@
       "season": null,
       "page_number": 5,
       "note": "Holy Hour in Chapel",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     }
   ]
 }
