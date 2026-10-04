@@ -1,6 +1,6 @@
 ---
 name: explore-diocese
-description: Research a diocese the pipeline does not cover yet, or audit or extend one already explored, in data/dioceses/<diocese>/, using the `pnpm diocese` CLI. Covers finding each parish's bulletin, deciding which parishes share one, recording churches, closures and other exclusions with dated evidence, measuring coverage against diocesan lists, and promoting the result into data/parishes.csv and data/churches.csv. Use when asked to explore, add, research, audit or fix a diocese, a parish, a church or an exclusion outside the Rochester data.
+description: Research a diocese the pipeline does not cover yet, or audit or extend one already explored, in data/dioceses/<diocese>/, using the `pnpm diocese` CLI. Covers finding each parish's bulletin, deciding which parishes share one, recording churches, closures and other exclusions with dated evidence, measuring coverage against diocesan lists, and promoting the result into data/parishes.csv and data/churches.csv. Use when asked to explore, add, research, audit or fix a diocese, a parish, a church or an exclusion.
 ---
 
 # Exploring a diocese
