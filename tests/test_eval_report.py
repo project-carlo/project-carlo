@@ -99,11 +99,65 @@ def test_levels_precision_recall_f1():
     assert score["outcomes"]["exact"] == 1 and score["outcomes"]["core"] == 1
     assert score["outcomes"]["wrong_time"] == 1 and score["outcomes"]["missed"] == 1
     assert score["levels"]["strict"] == {
-        "found": 1, "precision": 1 / 3, "recall": 1 / 4, "f1": 2 / 7,
+        "found": 1, "found_predicted": 1, "precision": 1 / 3, "recall": 1 / 4, "f1": 2 / 7,
     }
     assert score["levels"]["loose"]["f1"] == 4 / 7
     assert score["levels"]["any_time"]["f1"] == 6 / 7
     assert score_records([])["levels"]["strict"]["f1"] == 1.0
+
+
+def test_one_weekly_prediction_covers_every_dated_label_of_its_slot():
+    # 2026-10-04, 10-11 and 10-18 are Sundays; 10-10 is a Saturday.
+    labels = [
+        _dated(), _dated(date="2026-10-11"), _dated(date="2026-10-18"),
+        _dated(date="2026-10-10"),                               # other weekday
+        _dated(date="2026-10-11", start_time="12:00"),           # other time
+    ]
+    preds = [_ev()]
+    assert _tiers(labels, preds) == [
+        ("weekly_vs_dated", 0, 0), ("weekly_vs_dated", 1, 0), ("weekly_vs_dated", 2, 0),
+        ("missed", 3, None), ("missed", 4, None),
+    ]
+    score = score_records(match_events(labels, preds))
+    loose = score["levels"]["loose"]
+    assert score["label_events"] == 5 and score["predicted_events"] == 1
+    assert loose["found"] == 3 and loose["found_predicted"] == 1
+    assert loose["recall"] == 3 / 5 and loose["precision"] == 1.0
+    assert loose["f1"] == 4 / 6
+    assert score["levels"]["core"]["found"] == 0 and score["spurious"] == 0
+
+
+def test_weekly_label_still_pairs_with_one_dated_prediction():
+    labels = [_ev()]
+    preds = [_dated(), _dated(date="2026-10-11")]
+    assert _tiers(labels, preds) == [("weekly_vs_dated", 0, 0), ("spurious", None, 1)]
+
+
+def test_weekly_prediction_paired_exactly_does_not_cover_dated_labels():
+    labels = [_ev(), _dated()]
+    preds = [_ev()]
+    assert _tiers(labels, preds) == [("exact", 0, 0), ("missed", 1, None)]
+
+
+def test_covering_weekly_prediction_covers_optional_dated_labels_too():
+    labels = [_dated(), _dated(date="2026-10-11", optional="include")]
+    preds = [_ev()]
+    records = match_events(labels, preds)
+    assert _tiers(labels, preds) == [("weekly_vs_dated", 0, 0), ("optional", 1, 0)]
+    assert score_optional(records)["preferred"] == 1
+    assert score_records(records)["predicted_events"] == 1
+
+
+def test_bulletin_is_perfect_at_loose_when_a_weekly_prediction_covers_its_dates(tmp_path: Path):
+    labels_dir, out_dir = tmp_path / "labels", tmp_path / "eval"
+    _label(labels_dir, HASH_A, "done", [_dated(), _dated(date="2026-10-11")])
+    _pred(out_dir, HASH_A, [_ev()])
+    report = build_report(out_dir, labels_dir)
+    assert report["bulletin_level"]["perfect"] == {
+        "strict": 0, "core": 0, "loose": 1, "any_time": 1,
+    }
+    assert report["by_event_kind"]["weekly"]["predicted_events"] == 1
+    assert report["by_event_kind"]["specific_date"]["levels"]["loose"]["recall"] == 1.0
 
 
 def test_optional_events_are_paired_last_and_left_out_of_the_scores():

@@ -7,7 +7,10 @@ predictions.
 
 Within each bulletin every label event is paired with at most one predicted event,
 in tiers from strictest to loosest; a pair made in one tier is out of the running
-for the next. The tiers, in the order they are tried:
+for the next. Pairing is one-to-one, with one exception: in `weekly_vs_dated` a
+weekly prediction covers every dated label event of its slot (the same church,
+type, start time, cancelled and weekday), since one weekly entry stands for all
+of those dates. The tiers, in the order they are tried:
 
 - `exact`: church, type, kind, weekday or date, start time, cancelled, end time,
   `weeks_of_month` and `season` all agree (notes and page numbers are ignored).
@@ -27,10 +30,15 @@ how often the classifier saw the event but put it at the wrong church or called 
 the wrong thing, and they are tried before `wrong_time` because a pair that agrees
 on everything but the church is likelier the same event than one at another hour.
 A label event left unpaired is missed; a prediction left unpaired is spurious.
+Recall counts label events and precision counts predictions, each once, so a
+weekly prediction covering four dated label events is four found label events
+and one found prediction.
 
 Label events marked `optional` are left out of all of that. They are paired only
 after the required events, against the predictions still unpaired, in the tiers
-that count as found; a prediction paired with one is neither found nor spurious.
+that count as found, and a weekly prediction already covering required dated
+events of a slot covers that slot's optional ones too; a prediction paired only
+with optional events is neither found nor spurious.
 The report only counts how often the classifier made the labeller's preferred
 choice: included an event marked `include`, or left out one marked `exclude`.
 """
@@ -164,6 +172,12 @@ TIER_RULES: dict[str, Tier] = {
 }
 
 
+def _covers(tier: str, pred: dict[str, Any]) -> bool:
+    """Whether `pred`, paired in `tier`, stays open for more label events of that tier:
+    a weekly prediction stands for every dated label event of its slot."""
+    return tier == "weekly_vs_dated" and pred.get("event_kind") == "weekly"
+
+
 def _pair(
     label_events: list[dict[str, Any]],
     pred_events: list[dict[str, Any]],
@@ -172,7 +186,8 @@ def _pair(
     tiers: Iterable[str],
 ) -> list[tuple[str, int, int]]:
     """(tier, label index, pred index) for each pair made, tier by tier; the paired
-    indexes are removed from `open_labels` and `open_preds`."""
+    indexes are removed from `open_labels` and `open_preds`. A prediction that
+    `_covers` can pair with several label events within its tier."""
     pairs = []
     for tier in tiers:
         rule = TIER_RULES[tier]
@@ -182,11 +197,15 @@ def _pair(
                 cost = rule(label_events[i], pred_events[j])
                 if cost is not None:
                     candidates.append((cost, i, j))
+        paired = set()
         for _, i, j in sorted(candidates):
-            if i in open_labels and j in open_preds:
+            if i in open_labels and j in open_preds and (
+                j not in paired or _covers(tier, pred_events[j])
+            ):
                 open_labels.discard(i)
-                open_preds.discard(j)
+                paired.add(j)
                 pairs.append((tier, i, j))
+        open_preds -= paired
     return pairs
 
 
@@ -204,17 +223,20 @@ def match_events(
     required = {i for i, e in enumerate(label_events) if not e.get("optional")}
     optional = set(range(len(label_events))) - required
     open_preds = set(range(len(pred_events)))
+    pairs = _pair(label_events, pred_events, required, open_preds, TIERS)
     records: list[dict[str, Any]] = [
-        {"tier": tier, "label": label_events[i], "pred": pred_events[j]}
-        for tier, i, j in _pair(label_events, pred_events, required, open_preds, TIERS)
+        {"tier": tier, "label": label_events[i], "pred": pred_events[j]} for tier, i, j in pairs
     ]
     records.extend(
         {"tier": "missed", "label": label_events[i], "pred": None} for i in sorted(required)
     )
-    found = {
-        i: (tier, j)
-        for tier, i, j in _pair(label_events, pred_events, set(optional), open_preds, FOUND_TIERS)
-    }
+    open_optional = set(optional)
+    optional_pairs = _pair(label_events, pred_events, open_optional, open_preds, FOUND_TIERS)
+    covering = {j for tier, _, j in pairs if _covers(tier, pred_events[j])}
+    optional_pairs += _pair(
+        label_events, pred_events, open_optional, covering, ("weekly_vs_dated",),
+    )
+    found = {i: (tier, j) for tier, i, j in optional_pairs}
     for i in sorted(optional):
         tier, j = found.get(i, (None, None))
         records.append({
@@ -244,11 +266,18 @@ def score_records(records: list[dict[str, Any]]) -> dict[str, Any]:
 
     Recall reads off the label side and precision off the prediction side, so a
     record holding only one side of a pair (see `_slice`) counts on that side only.
-    Optional label events, and the predictions paired with them, are left out.
+    A prediction in several records (a weekly one covering dated label events)
+    counts once. Optional label events, and the predictions paired only with them,
+    are left out.
     """
     records = [r for r in records if r["tier"] != OPTIONAL]
     label_side = Counter(r["tier"] for r in records if r["label"] is not None)
-    pred_side = Counter(r["tier"] for r in records if r["pred"] is not None)
+    pred_side: Counter[str] = Counter()
+    seen: set[int] = set()
+    for r in records:
+        if r["pred"] is not None and id(r["pred"]) not in seen:
+            seen.add(id(r["pred"]))
+            pred_side[r["tier"]] += 1
     n_label, n_pred = sum(label_side.values()), sum(pred_side.values())
     levels = {}
     for level, tiers in LEVELS.items():
@@ -256,6 +285,7 @@ def score_records(records: list[dict[str, Any]]) -> dict[str, Any]:
         found_pred = sum(pred_side[t] for t in tiers)
         levels[level] = {
             "found": found_label,
+            "found_predicted": found_pred,
             "precision": _ratio(found_pred, n_pred),
             "recall": _ratio(found_label, n_label),
             "f1": _f1(found_label, found_pred, n_label, n_pred),
@@ -436,7 +466,8 @@ def _bulletin_level(bulletins: list[dict[str, Any]]) -> dict[str, Any]:
     for b in bulletins:
         score = b["score"]
         for level, values in score["levels"].items():
-            if values["found"] == score["label_events"] == score["predicted_events"]:
+            if (values["found"] == score["label_events"]
+                    and values["found_predicted"] == score["predicted_events"]):
                 perfect[level] += 1
         label_date = b["label"].get("published_date")
         pred_date = b["pred"].get("published_date")
@@ -661,7 +692,8 @@ def render_markdown(report: dict[str, Any]) -> str:
     lines += [
         "",
         "Strict = everything agrees; core = end time / weeks / season may differ; "
-        "loose = also weekly-vs-dated on the same weekday; any_time = also a wrong "
+        "loose = also weekly-vs-dated on the same weekday (a weekly prediction covers "
+        "every dated label event of its slot); any_time = also a wrong "
         "start time (same church, type and day). "
         "Micro pools every event; macro averages per-bulletin F1.",
         "",

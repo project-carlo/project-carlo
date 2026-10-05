@@ -2,7 +2,7 @@
 
 One request per bulletin, laid out so the shared part is a cacheable prefix:
 
-1. a developer message holding the static `INSTRUCTIONS`, marked as an explicit
+1. a developer message holding the shared static `POLICY`, marked as an explicit
    prompt-cache breakpoint (the response schema in `text.format` is part of
    that prefix too);
 2. a user message with the per-bulletin context (known churches, today's date)
@@ -41,12 +41,12 @@ from pydantic import ValidationError
 
 from pdf_extract.classifiers.base import ClassifierOptionError
 from pdf_extract.classifiers.qualified_schedule import (
-    INSTRUCTIONS,
     SCHEMA_FINGERPRINT,
     QualifiedSchedulePayload,
     flatten_events,
     render_context,
 )
+from pdf_extract.classifiers.schedule_policy import POLICY
 
 LOGGER = logging.getLogger(__name__)
 
@@ -158,7 +158,7 @@ class OpenAIResponsesClassifier:
                     "content": [
                         {
                             "type": "input_text",
-                            "text": INSTRUCTIONS,
+                            "text": POLICY,
                             "prompt_cache_breakpoint": {"mode": "explicit"},
                         },
                     ],

@@ -102,12 +102,14 @@ rejects any slug or hash that would put it outside `data/labels`.
 pnpm eval --classifier gpt-6-luna --limit 2   # smoke test on two bulletins
 pnpm eval --classifier gpt-6-luna             # every label marked done
 pnpm eval --classifier gpt-6-luna --status done --status in_progress --parish all-saints-albany
+pnpm eval --classifier gemini-flash-qualified
 ```
 
 Any classifier in `src/pdf_extract/classifiers/__init__.py` can be run
-(`gemini-flash`, `gpt-6-luna`, `gpt-6-luna-nonstrict`, ...). Each bulletin is
-classified as of the day it was fetched, and results are cached by classifier
-version (model, prompt, schema and settings), PDF and church list, so re-running
+(`gemini-flash`, `gemini-flash-qualified`, `gpt-6-luna`, `gpt-6-luna-nonstrict`,
+...). Each bulletin is classified as of the day it was fetched, and results are
+cached by classifier version (model, prompt, schema and settings), PDF and
+church list, so re-running
 an unchanged classifier makes no API calls (`--refresh` forces them). Output
 goes to `data/runs/<classifier>/eval/<version>/`, which is committed (the rest of
 `data/runs/`, including the result cache, stays gitignored). `<version>` is
@@ -120,14 +122,31 @@ so paths stay inside Windows' 260-character limit:
   `wrong_bulletin`, token usage and timing, so each file lines up with its label.
 - `run.json`: cache hits, errors, skipped bulletins and summed token usage.
 
-The `gpt-6-luna` classifiers (`classifiers/openai_responses.py`) use the
-Responses API with the schema and prompt in `classifiers/qualified_schedule.py`:
-the production schema plus `weeks_of_month` and `season` on weekly slots, and the
-production Gemini prompt extended with the labeling rules (weekly vs dated,
-chapels, Communion Services, times given relative to a Mass), its static part
-sent first as an explicit prompt-cache breakpoint. They need `OPENAI_API_KEY`.
+The classifiers built for scoring against the labels share one prompt and one
+schema:
 
-Their model settings can be changed per run:
+- the policy in `classifiers/schedule_policy.py` (`POLICY`): the production
+  Gemini prompt extended with the rules the labels follow (weekly vs dated,
+  chapels and parish adoration chapels, Communion Services, Benediction, Masses
+  closed to the public, special occasions in a regular slot, positive weeks of
+  the month only, stated clock times over times worked out from a Mass, no
+  dates the bulletin does not print), sent first and unchanged so it can be
+  served from the prompt cache, then the parish's churches and today's date,
+  then the PDF;
+- the schema in `classifiers/qualified_schedule.py`: the production schema plus
+  `weeks_of_month` and `season` on weekly slots.
+
+Editing either changes the version of every classifier that uses them.
+
+- `gpt-6-luna` and `gpt-6-luna-nonstrict` (`classifiers/openai_responses.py`)
+  run them on the OpenAI Responses API, the policy as an explicit prompt-cache
+  breakpoint. They need `OPENAI_API_KEY`.
+- `gemini-flash-qualified` (`classifiers/gemini_qualified.py`) runs them through
+  the production Gemini call (same model, client, timeout, backoff and lenient
+  parse as `gemini-flash`). It needs `GEMINI_API_KEY`, and takes only `--model`
+  (another Gemini model, written under `data/runs/<model>-qualified/`).
+
+The `gpt-6-luna` model settings can be changed per run:
 
 ```bash
 pnpm eval --classifier gpt-6-luna --reasoning high --image-detail high
@@ -155,6 +174,7 @@ the same flags to find that run.
 pnpm eval:report --classifier gpt-6-luna                  # its current version
 pnpm eval:report --classifier gpt-6-luna --pdf-as-images  # the run made with those flags
 pnpm eval:report --classifier gpt-6-luna --model gpt-6.1-sol
+pnpm eval:report --classifier gemini-flash-qualified
 pnpm eval:report --classifier gpt-6-luna --version <ver>  # an older version's output
 ```
 
@@ -162,7 +182,10 @@ Writes `report.md` and `report.json` next to the predictions
 (`src/pdf_extract/evals/report.py`). Labels marked done are scored (`--status
 in_progress` adds those); skipped labels never are. Within each bulletin every
 label event is paired with at most one prediction, in tiers tried strictest
-first:
+first. Pairing is one-to-one except in `weekly_vs_dated`, where one weekly
+prediction covers every dated label event of its slot (church, type, start,
+cancelled and weekday); recall counts each of those label events and precision
+counts the prediction once.
 
 | Tier | Agrees on | Counts as found |
 |---|---|---|

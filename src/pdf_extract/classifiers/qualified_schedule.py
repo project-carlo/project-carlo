@@ -5,11 +5,10 @@ two recurrence qualifiers the labels record on weekly slots: which weeks of the
 month a slot falls on (`weeks_of_month`) and which part of the year it runs
 (`season`). The qualifier field descriptions follow PR 22's extraction schema.
 
-The prompt starts from the production Gemini prompt, with the labeling rules
-added (weekly vs dated, chapels, Communion Services, times relative to a Mass),
-and is split in two so the part that never changes comes first: `INSTRUCTIONS` is identical for every bulletin and can be
-served from a provider's prompt cache, while `CONTEXT_TEMPLATE` (the parish's
-churches and today's date) and then the PDF follow it.
+The prompt is in two parts so the part that never changes comes first: the
+shared policy (`schedule_policy.POLICY`) is identical for every bulletin and
+every provider, and can be served from a prompt cache, while `CONTEXT_TEMPLATE`
+(the parish's churches and today's date) and then the PDF follow it.
 
 `flatten_events` turns a payload into the pipeline's flat event dicts, with the
 qualifiers in the flat form PR 22 uses (`weeks_of_month`, `season_start_month`,
@@ -24,6 +23,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from pdf_extract.classifiers.schedule_policy import POLICY
 from pdf_extract.labeling.labels import DAYS_IN_MONTH, WEEKS_OF_MONTH
 from pdf_extract.schedule_extraction import _normalize_published_date, _valid_str
 
@@ -94,8 +94,10 @@ class WeeklySlot(BaseModel):
         description=(
             "Which occurrences of `day_of_week` within the month this slot falls on. "
             "`last` is not `fourth`. Examples: `[\"first\"]` for First Friday "
-            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. Leave "
-            "empty when the slot happens every week."
+            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. Only the "
+            "weeks the slot happens on: 'every Saturday except the first' is "
+            "`[\"second\", \"third\", \"fourth\", \"fifth\"]`. Leave empty when the "
+            "slot happens every week."
         ),
     )
     season: Season | None = Field(
@@ -112,9 +114,9 @@ class WeeklySlot(BaseModel):
         default=None,
         description=(
             "Short phrase only when there is genuinely special context (language, "
-            "location nuance, benediction, etc.). Do not restate what "
-            "`weeks_of_month` or `season` already say. Exclusions the fields cannot "
-            "express ('every Saturday except the first') stay here."
+            "location nuance, `Benediction`, etc.). Do not restate what "
+            "`weeks_of_month` or `season` already say, and do not describe an "
+            "exclusion: list the weeks that remain in `weeks_of_month`."
         ),
     )
 
@@ -125,7 +127,12 @@ class DateSlot(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     church_slug: str = Field(description=_SLUG_DESC)
-    date: str = Field(description="Specific calendar date formatted as `YYYY-MM-DD`.")
+    date: str = Field(
+        description=(
+            "Specific calendar date formatted as `YYYY-MM-DD`. It must be printed in "
+            "the bulletin; never work out a date the bulletin does not print."
+        ),
+    )
     start_time: str = Field(description=_TIME_DESC)
     end_time: str | None = Field(default=None, description=_END_TIME_DESC)
     page_number: int | None = Field(default=None, description=_PAGE_DESC)
@@ -133,7 +140,7 @@ class DateSlot(BaseModel):
         default=None,
         description=(
             "Short phrase only when there is genuinely special context (language, "
-            "season, location nuance, benediction, etc.)."
+            "season, location nuance, `Benediction`, etc.)."
         ),
     )
 
@@ -208,69 +215,8 @@ class QualifiedSchedulePayload(BaseModel):
 
 
 # ── Prompt ──────────────────────────────────────────────────────────────────
-# Started from the production Gemini prompt (schedule_extraction.EVENTS_SYSTEM_PROMPT)
-# and extended with the labeling rules. Its two per-bulletin sections come after
-# these instructions, so everything up to them is the same for every request.
-INSTRUCTIONS = """\
-# Role
-
-Extract Mass, Confession, and Adoration schedule information from the attached Catholic parish bulletin PDF. The output feeds a public Mass-times website, so a wrong time is worse than a missing one.
-
-# What to extract
-
-- Only extract Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin.
-- A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, record that Mass under `cancellations` for that date.
-- Skip anything without a definite start time, such as "Confession by appointment" or "call the office".
-
-# Churches and chapels
-
-- Attach every event to one of the churches in the known-churches list (given after these instructions) using its exact `slug`.
-- An event in a chapel or room of a listed church itself ("in the chapel", "Blessed Sacrament Chapel", "in the church hall") belongs to that church; say where in a short `note`.
-- An event at a separate chapel (a convent, school, hospital, nursing home or mission chapel with its own building), or one whose location is unclear, is left out unless the known-churches list includes that chapel or its address. If you leave out such a chapel that clearly has its own Mass, Confession or Adoration times, set `church_list_needs_review` to true.
-
-# Weekly or dated
-
-Sort each event into exactly one bucket:
-
-- `weekly_schedule` for recurring weekly times.
-- `single_events` for occurrences on a specific date that are not already covered by a weekly entry.
-- `cancellations` for events that the bulletin says are cancelled, moved, or will not take place on a specific date. A moved event is a cancellation of the original date and time plus a single event at the new one.
-
-To decide between weekly and dated:
-
-1. Times presented as the parish's regular schedule ("Weekend Masses", "Daily Mass", "Mass Schedule", "Confessions: Saturdays 3:00-3:45 PM") are weekly. A range of days ("Monday-Friday 8:00 AM") is one weekly entry per day.
-2. Slots tied to certain weeks of the month ("First Friday Adoration", "1st and 3rd Tuesdays", "last Sunday of the month") are always weekly, with `weeks_of_month` set, never dated. This holds even when the bulletin also gives this month's date for it ("First Friday, October 2"), unless it says the event is a one-time occurrence.
-3. Times given only with a date, or with a date and its weekday ("Tuesday, October 6, 7:00 PM Adoration"), are dated, including the dated times in a weekly calendar or a list of Mass intentions.
-4. Exception: if the bulletin shows dated times for two or more weeks and the same slot (church, type, weekday and time) appears in each of those weeks, record it as weekly, unless the bulletin marks it as special or one-off.
-5. When it is unclear, prefer dated (rule 2 still wins for weeks-of-the-month slots). A slot recorded as dated that turns up again in later bulletins is promoted to weekly automatically; a slot wrongly recorded as weekly stays wrong.
-6. Never duplicate a weekly slot as a single event just because the bulletin also lists it on a date in a specific week. Holy days, holidays, feast-day Masses and other special services are dated.
-
-# Weekly qualifiers
-
-- `weeks_of_month`: for slots that only happen on some occurrences of the weekday in a month, such as `["first"]` for "First Friday Adoration" or `["first", "third"]` for "1st and 3rd Saturdays"; "last" is not "fourth". Leave it empty for every week.
-- `season`: for slots the bulletin limits to part of the year ("October through June", "summer schedule"), with the months it gives.
-
-# Times
-
-- `start_time` and `end_time` are formatted as `h:MM AM` or `h:MM PM`; "noon" is `12:00 PM`.
-- For Mass, leave `end_time` null. For Confession and Adoration, give `end_time` when the bulletin gives one or a duration ("one hour"); leave it null for "until all are heard" or no end.
-- When the bulletin times an event relative to a Mass rather than giving a clock time, work it out from that Mass's start time:
-  - "After" or "following" a weekend Mass (Saturday evening vigil or Sunday): 1 hour after the Mass starts.
-  - "After" or "following" a weekday Mass: 30 minutes after the Mass starts.
-  - "N minutes before Mass": N minutes before it, ending when the Mass starts. "Before every Mass" is one entry for each Mass it refers to.
-
-# Notes
-
-Only add a `note` when there is genuinely special context worth surfacing: language, location within the church, benediction, a relative timing you converted ("after the 4:00 PM Mass"), a special occasion. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month` or `season` already say.
-
-# Bulletin
-
-- Identify the bulletin's own issue date and report it as `published_date`.
-- Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). In that case you may return empty event lists.
-
-Read the whole bulletin, including calendars, sidebars and the back page, and carefully find every event it lists.
-"""
-
+# The static policy (`schedule_policy.POLICY`) comes first; this per-bulletin
+# section follows it, then the PDF.
 CONTEXT_TEMPLATE = """\
 # Known churches for this parish
 
@@ -298,7 +244,7 @@ def fingerprint(*parts: str) -> str:
 
 
 SCHEMA_FINGERPRINT = fingerprint(
-    INSTRUCTIONS,
+    POLICY,
     CONTEXT_TEMPLATE,
     json.dumps(QualifiedSchedulePayload.model_json_schema(), sort_keys=True),
 )
