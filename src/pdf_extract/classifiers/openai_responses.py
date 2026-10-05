@@ -29,7 +29,6 @@ import base64
 import io
 import json
 import logging
-import re
 import threading
 from datetime import date
 from typing import Any, Literal
@@ -39,7 +38,7 @@ from openai import OpenAI
 from openai.lib._pydantic import to_strict_json_schema
 from pydantic import ValidationError
 
-from pdf_extract.classifiers.base import ClassifierOptionError
+from pdf_extract.classifiers.base import ClassifierOptionError, validate_model_name
 from pdf_extract.classifiers.qualified_schedule import (
     SCHEMA_FINGERPRINT,
     QualifiedSchedulePayload,
@@ -60,9 +59,6 @@ PDF_DETAILS = ("auto", "low", "high")
 # Resolution pages are rendered at when sent as images (US Letter: 1700x2200).
 PAGE_DPI = 200
 PAGE_JPEG_QUALITY = 90
-
-# What an OpenAI model id may look like here: it names a directory under data/runs/.
-_MODEL_NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
 
 # PDFium is not thread-safe, and the runner calls `extract` from a thread pool.
 _PDFIUM_LOCK = threading.Lock()
@@ -242,9 +238,7 @@ def responses_classifier(
     `strict` is off), so another model's results are cached and written under
     its own `data/runs/<model>/`.
     """
-    model = model or default_model
-    if not _MODEL_NAME.fullmatch(model):
-        raise ClassifierOptionError(f"{model!r} is not an OpenAI model name")
+    model = validate_model_name(model or default_model, "OpenAI")
     return OpenAIResponsesClassifier(
         model=model, name=model if strict else f"{model}-nonstrict", strict=strict, **options,
     )

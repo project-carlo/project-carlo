@@ -17,12 +17,25 @@ page_number, note.
 
 from __future__ import annotations
 
+import re
 from datetime import date
 from typing import Any, Protocol, runtime_checkable
 
 
 class ClassifierOptionError(ValueError):
     """A classifier was asked for an option, or option value, it does not have."""
+
+
+# What a model id may look like: a classifier named after it names a directory
+# under data/runs/, so no path separators and no leading dot.
+_MODEL_NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
+
+
+def validate_model_name(model: str, provider: str) -> str:
+    """`model`, or ClassifierOptionError when it is not safe to name a run directory after."""
+    if not _MODEL_NAME.fullmatch(model):
+        raise ClassifierOptionError(f"{model!r} is not a valid {provider} model name")
+    return model
 
 
 @runtime_checkable

@@ -9,6 +9,7 @@ from typing import Any
 
 import pytest
 
+from pdf_extract import schedule_extraction
 from pdf_extract.classifiers import ClassifierOptionError, gemini_qualified, get_classifier
 from pdf_extract.classifiers.openai_responses import OpenAIResponsesClassifier
 from pdf_extract.classifiers.schedule_policy import POLICY
@@ -42,8 +43,9 @@ def fake_gemini(monkeypatch):
             usage_metadata=SimpleNamespace(prompt_token_count=2500, candidates_token_count=400),
         )
 
-    monkeypatch.setattr(gemini_qualified, "_gemini_client", lambda: "client")
-    monkeypatch.setattr(gemini_qualified, "_generate_content_with_backoff", generate)
+    clients = iter(range(100))
+    monkeypatch.setattr(gemini_qualified, "gemini_client", lambda: f"client-{next(clients)}")
+    monkeypatch.setattr(schedule_extraction, "_generate_content_with_backoff", generate)
     return calls, reply
 
 
@@ -92,6 +94,14 @@ def test_invalid_reply_is_read_leniently(fake_gemini):
     assert result["events"] == [] and result["wrong_bulletin"] is False
 
 
+def test_one_client_serves_every_bulletin(fake_gemini):
+    calls, _ = fake_gemini
+    classifier = get_classifier("gemini-flash-qualified")
+    for _ in range(3):
+        classifier.extract(b"%PDF", churches=CHURCHES, today=TODAY)
+    assert [call["client"] for call in calls] == ["client-0"] * 3
+
+
 def test_empty_pdf_makes_no_call(fake_gemini):
     calls, _ = fake_gemini
     result = get_classifier("gemini-flash-qualified").extract(b"", churches=CHURCHES, today=TODAY)
@@ -111,7 +121,7 @@ def test_version_and_model_option():
     assert pro.version.startswith("gemini-3-pro-preview+prompt-")
     assert get_classifier("gemini-flash-qualified", model=None).name == "gemini-flash-qualified"
 
-    with pytest.raises(ClassifierOptionError, match="not a Gemini model name"):
+    with pytest.raises(ClassifierOptionError, match="not a valid Gemini model name"):
         get_classifier("gemini-flash-qualified", model="../gemini")
     with pytest.raises(ClassifierOptionError, match="does not take reasoning_effort"):
         get_classifier("gemini-flash-qualified", reasoning_effort="high")

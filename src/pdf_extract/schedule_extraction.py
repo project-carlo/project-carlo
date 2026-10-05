@@ -269,7 +269,7 @@ def _parse_llm_json(content: str, *, context: str) -> dict[str, Any]:
     return data
 
 
-def _gemini_client() -> genai.Client:
+def gemini_client() -> genai.Client:
     """A Gemini client whose HTTP calls give up instead of waiting forever."""
     return genai.Client(http_options=types.HttpOptions(timeout=GEMINI_HTTP_TIMEOUT_MS))
 
@@ -441,32 +441,47 @@ def extract_events(
         today_day_of_week=today.strftime("%A"),
     )
 
-    client = _gemini_client()
-    response = _generate_content_with_backoff(
-        client,
+    payload, usage = request_schedule(
+        [prompt, types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf")],
+        payload_model=SchedulePayload,
         model=model,
-        contents=[
-            prompt,
-            types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
-        ],
+        context="extract_events",
+    )
+    result = reconstruct_events(payload)
+    result["usage"] = usage
+    return result
+
+
+def request_schedule[P: BaseModel](
+    contents: list[str | types.Part],
+    *,
+    payload_model: type[P],
+    model: str,
+    context: str,
+    client: genai.Client | None = None,
+) -> tuple[P | dict[str, Any], dict[str, int]]:
+    """One Gemini call asking for `payload_model` as JSON, with backoff.
+
+    Returns the validated payload, or the reply read leniently (a dict, `{}`
+    when it is not a JSON object) when it fails validation, and the token usage.
+    `context` names the caller in warnings; `client` defaults to a new one.
+    """
+    response = _generate_content_with_backoff(
+        client or gemini_client(),
+        model=model,
+        contents=contents,
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
-            response_json_schema=SchedulePayload.model_json_schema(),
+            response_json_schema=payload_model.model_json_schema(),
         ),
     )
     content = response.text or "{}"
     try:
-        payload = SchedulePayload.model_validate_json(content)
+        payload: P | dict[str, Any] = payload_model.model_validate_json(content)
     except ValidationError as exc:
-        LOGGER.warning(
-            "extract_events: Pydantic validation failed (%s); using lenient fallback",
-            exc,
-        )
-        result = reconstruct_events(_parse_llm_json(content, context="extract_events"))
-    else:
-        result = reconstruct_events(payload)
-    result["usage"] = _token_usage(response)
-    return result
+        LOGGER.warning("%s: Pydantic validation failed (%s); using lenient fallback", context, exc)
+        payload = _parse_llm_json(content, context=context)
+    return payload, _token_usage(response)
 
 
 def _token_usage(response: Any) -> dict[str, int]:
@@ -530,7 +545,7 @@ def extract_verification(
     churches_json = json.dumps(churches, ensure_ascii=False)
     prompt = VERIFY_SYSTEM_PROMPT.format(churches_json=churches_json)
 
-    client = _gemini_client()
+    client = gemini_client()
     response = _generate_content_with_backoff(
         client,
         model=model,

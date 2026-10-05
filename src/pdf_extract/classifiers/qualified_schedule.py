@@ -129,8 +129,9 @@ class DateSlot(BaseModel):
     church_slug: str = Field(description=_SLUG_DESC)
     date: str = Field(
         description=(
-            "Specific calendar date formatted as `YYYY-MM-DD`. It must be printed in "
-            "the bulletin; never work out a date the bulletin does not print."
+            "Specific calendar date formatted as `YYYY-MM-DD`. The bulletin must print "
+            "it, or tie a weekday to one clear day (\"this Saturday\"); never project "
+            "a date from a weekly slot or a weeks-of-the-month pattern."
         ),
     )
     start_time: str = Field(description=_TIME_DESC)

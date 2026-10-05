@@ -9,14 +9,16 @@ Within each bulletin every label event is paired with at most one predicted even
 in tiers from strictest to loosest; a pair made in one tier is out of the running
 for the next. Pairing is one-to-one, with one exception: in `weekly_vs_dated` a
 weekly prediction covers every dated label event of its slot (the same church,
-type, start time, cancelled and weekday), since one weekly entry stands for all
-of those dates. The tiers, in the order they are tried:
+type, start time, cancelled and weekday, on a date its `weeks_of_month` and
+`season` include), since one weekly entry stands for all of those dates. The
+tiers, in the order they are tried:
 
 - `exact`: church, type, kind, weekday or date, start time, cancelled, end time,
   `weeks_of_month` and `season` all agree (notes and page numbers are ignored).
 - `core`: the first six agree; end time or a recurrence qualifier differs.
 - `weekly_vs_dated`: weekly on one side and dated on the other, on the same weekday,
-  with church, type, start time and cancelled agreeing.
+  with church, type, start time and cancelled agreeing, and the date in the weekly
+  side's `weeks_of_month` and `season` (a "first Sunday" slot is not the second).
 - `wrong_church`: everything in `core` but the church.
 - `wrong_type`: everything in `core` but the event type.
 - `wrong_time`: church, type, kind, weekday or date and cancelled agree; the start
@@ -36,9 +38,12 @@ and one found prediction.
 
 Label events marked `optional` are left out of all of that. They are paired only
 after the required events, against the predictions still unpaired, in the tiers
-that count as found, and a weekly prediction already covering required dated
-events of a slot covers that slot's optional ones too; a prediction paired only
-with optional events is neither found nor spurious.
+that count as found and in the same order, and in `weekly_vs_dated` a weekly
+prediction already covering required dated events of a slot covers that slot's
+optional ones too. A dated optional event marked `exclude` is never paired with a
+weekly prediction: emitting the regular slot is not including the special
+occasion held at it. A prediction paired only with optional events is neither
+found nor spurious.
 The report only counts how often the classifier made the labeller's preferred
 choice: included an event marked `include`, or left out one marked `exclude`.
 """
@@ -50,13 +55,19 @@ import logging
 import statistics
 from collections import Counter
 from collections.abc import Callable, Iterable
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
 from pdf_extract.classifiers import get_classifier
 from pdf_extract.evals.run import DEFAULT_STATUSES, version_dir_name
-from pdf_extract.labeling.labels import DAYS, LABELS_DIR, is_valid_hash, is_valid_slug
+from pdf_extract.labeling.labels import (
+    DAYS,
+    LABELS_DIR,
+    WEEKS_OF_MONTH,
+    is_valid_hash,
+    is_valid_slug,
+)
 from pdf_extract.runner import run_dir
 from pdf_extract.storage import utc_now_iso
 from pdf_extract.timeparse import time_to_minutes
@@ -96,13 +107,42 @@ def _season(event: dict[str, Any]) -> tuple[Any, ...] | None:
     return tuple(season.get(k) for k in ("start_month", "start_day", "end_month", "end_day"))
 
 
+def _date(event: dict[str, Any]) -> date | None:
+    try:
+        return date.fromisoformat(event.get("date") or "")
+    except ValueError:
+        return None
+
+
 def _weekday(event: dict[str, Any]) -> str | None:
     if event.get("event_kind") == "weekly":
         return event.get("day_of_week")
-    try:
-        return DAYS[date.fromisoformat(event.get("date") or "").weekday()]
-    except ValueError:
-        return None
+    day = _date(event)
+    return None if day is None else DAYS[day.weekday()]
+
+
+def _in_season(season: tuple[Any, ...], day: date) -> bool:
+    """Whether `day` falls in a season (start month, start day, end month, end day);
+    a missing start day is the 1st, a missing end day the month's last, and a
+    season whose end comes before its start runs across the new year."""
+    start_month, start_day, end_month, end_day = season
+    if start_month is None or end_month is None:
+        return True
+    start, end, at = (start_month, start_day or 1), (end_month, end_day or 31), (day.month, day.day)
+    return start <= at <= end if start <= end else at >= start or at <= end
+
+
+def _runs_on(weekly: dict[str, Any], day: date) -> bool:
+    """Whether a weekly event's `weeks_of_month` and `season` include `day`."""
+    weeks = _weeks(weekly)
+    if weeks:
+        on = {WEEKS_OF_MONTH[(day.day - 1) // 7]}
+        if (day + timedelta(days=7)).month != day.month:
+            on.add("last")
+        if not weeks & on:
+            return False
+    season = _season(weekly)
+    return season is None or _in_season(season, day)
 
 
 def _same(label: dict[str, Any], pred: dict[str, Any], fields: Iterable[str]) -> bool:
@@ -144,7 +184,11 @@ def _tier_weekly_vs_dated(g: dict[str, Any], p: dict[str, Any]) -> int | None:
         return None
     if not _same(g, p, ("church_slug", "event_type", "start_time", "cancelled")):
         return None
-    return 0 if _weekday(g) is not None and _weekday(g) == _weekday(p) else None
+    weekly, dated = (g, p) if g.get("event_kind") == "weekly" else (p, g)
+    day = _date(dated)
+    if weekly.get("event_kind") != "weekly" or day is None:
+        return None
+    return 0 if weekly.get("day_of_week") == DAYS[day.weekday()] and _runs_on(weekly, day) else None
 
 
 def _tier_wrong_church(g: dict[str, Any], p: dict[str, Any]) -> int | None:
@@ -209,6 +253,11 @@ def _pair(
     return pairs
 
 
+def _excluded_dated(label: dict[str, Any]) -> bool:
+    """A dated optional label event the labeller prefers left out."""
+    return label.get("optional") == "exclude" and label.get("event_kind") != "weekly"
+
+
 def match_events(
     label_events: list[dict[str, Any]], pred_events: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
@@ -230,12 +279,23 @@ def match_events(
     records.extend(
         {"tier": "missed", "label": label_events[i], "pred": None} for i in sorted(required)
     )
-    open_optional = set(optional)
-    optional_pairs = _pair(label_events, pred_events, open_optional, open_preds, FOUND_TIERS)
     covering = {j for tier, _, j in pairs if _covers(tier, pred_events[j])}
-    optional_pairs += _pair(
-        label_events, pred_events, open_optional, covering, ("weekly_vs_dated",),
-    )
+    open_optional = set(optional)
+    optional_pairs = []
+    for tier in FOUND_TIERS:
+        if tier != "weekly_vs_dated":
+            optional_pairs += _pair(label_events, pred_events, open_optional, open_preds, (tier,))
+            continue
+        # Weekly predictions already covering required events join the unpaired
+        # ones, so a cover wins over a worse tier with an unpaired prediction.
+        new = _pair(
+            label_events, pred_events,
+            {i for i in open_optional if not _excluded_dated(label_events[i])},
+            open_preds | covering, (tier,),
+        )
+        open_optional -= {i for _, i, _ in new}
+        open_preds -= {j for _, _, j in new}
+        optional_pairs += new
     found = {i: (tier, j) for tier, i, j in optional_pairs}
     for i in sorted(optional):
         tier, j = found.get(i, (None, None))
@@ -366,9 +426,15 @@ def field_accuracy(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     `weeks_of_month` and `season` only over pairs that are weekly on both sides.
     Each field's outcomes: both_empty, match, different, missing (label has it,
     prediction does not), extra (prediction has it, label does not); notes are
-    compared by presence only, so a note on both sides is a match.
+    compared by presence only, so a note on both sides is a match. A weekly
+    prediction covering several dated label events is one pair, with the outcome
+    most of those label events give.
     """
-    pairs = [r for r in records if r["tier"] in LEVELS["loose"]]
+    by_pred: dict[int, list[dict[str, Any]]] = {}
+    for r in records:
+        if r["tier"] in LEVELS["loose"]:
+            by_pred.setdefault(id(r["pred"]), []).append(r)
+    pairs = [group[0] for group in by_pred.values()]
     weekly = [
         r for r in pairs
         if r["label"]["event_kind"] == "weekly" and r["pred"].get("event_kind") == "weekly"
@@ -379,14 +445,18 @@ def field_accuracy(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         "season": (weekly, _season),
         "note": (pairs, lambda e: bool((e.get("note") or "").strip())),
     }
+    def outcome(r: dict[str, Any], value: Callable[[dict[str, Any]], Any]) -> str:
+        votes = Counter(
+            _presence_category(
+                value(c["label"]), value(c["pred"]), value(c["label"]) == value(c["pred"]),
+            )
+            for c in by_pred[id(r["pred"])]
+        )
+        return votes.most_common(1)[0][0]
+
     out = {}
     for name, (subset, value) in fields.items():
-        counts = Counter(
-            _presence_category(
-                value(r["label"]), value(r["pred"]), value(r["label"]) == value(r["pred"]),
-            )
-            for r in subset
-        )
+        counts = Counter(outcome(r, value) for r in subset)
         agree = counts["both_empty"] + counts["match"]
         out[name] = {
             "pairs": len(subset),
@@ -479,7 +549,9 @@ def _bulletin_level(bulletins: list[dict[str, Any]]) -> dict[str, Any]:
         said = bool(b["pred"].get("wrong_bulletin"))
         wrong_bulletin[{(True, True): "tp", (False, True): "fp",
                         (True, False): "fn", (False, False): "tn"}[(flag, said)]] += 1
-        count_errors.append(score["predicted_events"] - score["label_events"])
+        # Predictions over label events, with a weekly prediction counting once for
+        # each dated label event it covers: spurious predictions less missed events.
+        count_errors.append(score["spurious"] - score["outcomes"]["missed"])
     n = len(bulletins)
     return {
         "bulletins": n,

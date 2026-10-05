@@ -1,9 +1,10 @@
 """Gemini classifier over the qualified schedule schema, for scoring against the labels.
 
-The production Gemini extraction (`schedule_extraction.extract_events`: the same
-client, timeout, shared backoff gate, JSON-schema response and lenient fallback)
-with its prompt and schema swapped for the ones the OpenAI eval classifier uses:
-the shared `schedule_policy.POLICY` and `qualified_schedule.QualifiedSchedulePayload`.
+The production Gemini call (`schedule_extraction.request_schedule`, which
+`extract_events` also makes: the same client, timeout, shared backoff gate,
+JSON-schema response and lenient fallback) with its prompt and schema swapped
+for the ones the OpenAI eval classifier uses: the shared `schedule_policy.POLICY`
+and `qualified_schedule.QualifiedSchedulePayload`.
 
 The request's contents are the policy, then the per-bulletin context (known
 churches, today's date), then the PDF, so every request starts with the same
@@ -12,15 +13,13 @@ text and Gemini's implicit prompt cache can serve it.
 
 from __future__ import annotations
 
-import logging
-import re
 from datetime import date
 from typing import Any
 
+from google import genai
 from google.genai import types
-from pydantic import ValidationError
 
-from pdf_extract.classifiers.base import ClassifierOptionError
+from pdf_extract.classifiers.base import validate_model_name
 from pdf_extract.classifiers.qualified_schedule import (
     SCHEMA_FINGERPRINT,
     QualifiedSchedulePayload,
@@ -28,21 +27,9 @@ from pdf_extract.classifiers.qualified_schedule import (
     render_context,
 )
 from pdf_extract.classifiers.schedule_policy import POLICY
-from pdf_extract.schedule_extraction import (
-    DEFAULT_GEMINI_MODEL,
-    _gemini_client,
-    _generate_content_with_backoff,
-    _parse_llm_json,
-    _token_usage,
-)
-
-LOGGER = logging.getLogger(__name__)
+from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL, gemini_client, request_schedule
 
 DEFAULT_NAME = "gemini-flash-qualified"
-RESPONSE_SCHEMA = QualifiedSchedulePayload.model_json_schema()
-
-# What a Gemini model id may look like here: it names a directory under data/runs/.
-_MODEL_NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
 
 
 class GeminiQualifiedClassifier:
@@ -54,6 +41,14 @@ class GeminiQualifiedClassifier:
         self.name = name or DEFAULT_NAME
         # Keys the result cache, so it names everything that changes the output.
         self.version = f"{model}+prompt-{SCHEMA_FINGERPRINT}"
+        self._client: genai.Client | None = None
+
+    def _gemini(self) -> genai.Client:
+        """One client for every bulletin, built on first use (building a classifier
+        for its name and version needs no API key)."""
+        if self._client is None:
+            self._client = gemini_client()
+        return self._client
 
     def contents(
         self, pdf_bytes: bytes, *, churches: list[dict[str, Any]], today: date,
@@ -74,28 +69,15 @@ class GeminiQualifiedClassifier:
     ) -> dict[str, Any]:
         if not pdf_bytes:
             return flatten_events({})
-
-        response = _generate_content_with_backoff(
-            _gemini_client(),
+        payload, usage = request_schedule(
+            self.contents(pdf_bytes, churches=churches, today=today),
+            payload_model=QualifiedSchedulePayload,
             model=self._model,
-            contents=self.contents(pdf_bytes, churches=churches, today=today),
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                response_json_schema=RESPONSE_SCHEMA,
-            ),
+            context=self.name,
+            client=self._gemini(),
         )
-        content = response.text or "{}"
-        try:
-            payload: QualifiedSchedulePayload | dict[str, Any] = (
-                QualifiedSchedulePayload.model_validate_json(content)
-            )
-        except ValidationError as exc:
-            LOGGER.warning(
-                "%s output failed validation (%s); reading it leniently", self._model, exc,
-            )
-            payload = _parse_llm_json(content, context=self.name)
         result = flatten_events(payload)
-        result["usage"] = _token_usage(response)
+        result["usage"] = usage
         return result
 
 
@@ -107,6 +89,5 @@ def gemini_qualified_classifier(*, model: str | None = None) -> GeminiQualifiedC
     """
     if model is None:
         return GeminiQualifiedClassifier()
-    if not _MODEL_NAME.fullmatch(model):
-        raise ClassifierOptionError(f"{model!r} is not a Gemini model name")
+    validate_model_name(model, "Gemini")
     return GeminiQualifiedClassifier(model=model, name=f"{model}-qualified")

@@ -48,7 +48,7 @@ To decide between weekly and dated:
 
 1. Times presented as the parish's regular schedule ("Weekend Masses", "Daily Mass", "Mass Schedule", "Confessions: Saturdays 3:00-3:45 PM") are weekly. A range of days ("Monday-Friday 8:00 AM") is one weekly entry per day.
 2. Slots tied to certain weeks of the month ("First Friday Adoration", "1st and 3rd Tuesdays", "last Sunday of the month") are always weekly, with `weeks_of_month` set, never dated. This holds even when the bulletin also gives this month's date for it ("First Friday, October 2"), unless it says the event is a one-time occurrence.
-3. Times given only with a date, or with a date and its weekday ("Tuesday, October 6, 7:00 PM Adoration"), are dated, including the dated times in a weekly calendar or a list of Mass intentions.
+3. Times given only with a date, or with a date and its weekday ("Tuesday, October 6, 7:00 PM Adoration"), are dated, including the dated times in a weekly calendar or a list of Mass intentions. So are one-off times given with a weekday that means one particular day ("this Saturday at 9:00 AM"; see Dates).
 4. Exception: if the bulletin shows dated times for two or more weeks and the same slot (church, type, weekday and time) appears in each of those weeks, record it as weekly, unless the bulletin marks it as special or one-off.
 5. When it is unclear, prefer dated (rule 2 still wins for weeks-of-the-month slots). A slot recorded as dated that turns up again in later bulletins is promoted to weekly automatically; a slot wrongly recorded as weekly stays wrong.
 6. Never duplicate a weekly slot as a single event just because the bulletin also lists it on a date in a specific week.
@@ -56,7 +56,9 @@ To decide between weekly and dated:
 
 # Dates
 
-Never project dates the bulletin does not print. Every `date` must be printed in the bulletin, next to the event or as the heading of the calendar day it is listed under. Do not work a date out from a weekday ("this Saturday", "next Friday"), from a weeks-of-the-month pattern, or from a weekly slot, and do not turn a weekly slot into dated entries for the coming weeks. An event whose date you would have to work out is weekly if it is part of the regular schedule, and is left out otherwise.
+Every `date` must be a day the bulletin pins down. A printed date (next to the event, or as the heading of the calendar day it is listed under) pins it down. So does a weekday the bulletin ties to one particular day, such as "this Saturday" or "next Friday": count it from the bulletin's own issue date or the week it covers, and record that date. Only do this when it is clear which day is meant; if the bulletin's date or week is unclear, or the weekday could be more than one day, do not guess.
+
+Never project dates in any other way: do not work a date out from a weeks-of-the-month pattern or from a weekly slot, and do not turn a weekly slot into dated entries for the coming weeks. An event whose day the bulletin does not pin down is weekly if it is part of the regular schedule, and is left out otherwise.
 
 # Weekly qualifiers
 

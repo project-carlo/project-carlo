@@ -129,8 +129,9 @@ schema:
   Gemini prompt extended with the rules the labels follow (weekly vs dated,
   chapels and parish adoration chapels, Communion Services, Benediction, Masses
   closed to the public, special occasions in a regular slot, positive weeks of
-  the month only, stated clock times over times worked out from a Mass, no
-  dates the bulletin does not print), sent first and unchanged so it can be
+  the month only, stated clock times over times worked out from a Mass, only
+  dates the bulletin prints or pins to one clear day such as "this Saturday"),
+  sent first and unchanged so it can be
   served from the prompt cache, then the parish's churches and today's date,
   then the PDF;
 - the schema in `classifiers/qualified_schedule.py`: the production schema plus
@@ -184,14 +185,14 @@ in_progress` adds those); skipped labels never are. Within each bulletin every
 label event is paired with at most one prediction, in tiers tried strictest
 first. Pairing is one-to-one except in `weekly_vs_dated`, where one weekly
 prediction covers every dated label event of its slot (church, type, start,
-cancelled and weekday); recall counts each of those label events and precision
-counts the prediction once.
+cancelled and weekday, on a date its weeks of month and season include); recall
+counts each of those label events and precision counts the prediction once.
 
 | Tier | Agrees on | Counts as found |
 |---|---|---|
 | `exact` | church, type, weekly/dated, weekday or date, start, cancelled, end time, weeks of month, season | strict, core, loose, any_time |
 | `core` | the same, but end time, weeks of month or season differ | core, loose, any_time |
-| `weekly_vs_dated` | weekly on one side, dated on the other, same weekday; church, type, start, cancelled agree | loose, any_time |
+| `weekly_vs_dated` | weekly on one side, dated on the other, same weekday, the date in the weekly side's weeks of month and season; church, type, start, cancelled agree | loose, any_time |
 | `wrong_church` | everything in `core` but the church | never |
 | `wrong_type` | everything in `core` but the event type | never |
 | `wrong_time` | church, type, kind, weekday or date, cancelled; the start time differs | any_time |
@@ -200,14 +201,17 @@ The report gives precision, recall and F1 (pooled and per-bulletin average) at
 the strict, core, loose and any_time levels; the wrong-church, wrong-type, missed and
 spurious rates; the same broken down by event type and by weekly/dated; how
 often end time, weeks of month, season and the presence of a note agree on the
-pairs found at the loose level; per-bulletin perfect rate, published-date accuracy, wrong-bulletin
+pairs found at the loose level (a covering weekly prediction is one pair); per-bulletin perfect rate, published-date accuracy, wrong-bulletin
 agreement and event-count error; token usage and timing; and every bulletin's
 differences, worst bulletin first.
 
 Optional label events are left out of all of those numbers. They are paired
 after the required events, against the predictions still unpaired, in the tiers
-that count as found at any_time; a prediction paired with one is neither found
-nor spurious. The report's "Optional events" section counts how often the
+that count as found at any_time and in the same order; in `weekly_vs_dated` a
+weekly prediction already covering a slot's required dated events covers its
+optional ones too. A dated `exclude` event is never paired with a weekly
+prediction. A prediction paired only with optional events is neither found nor
+spurious. The report's "Optional events" section counts how often the
 classifier made the preferred choice: predicted an `include` event, or left out
 an `exclude` one.
 

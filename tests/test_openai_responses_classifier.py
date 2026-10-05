@@ -265,7 +265,7 @@ def test_model_option_runs_another_openai_model_under_its_own_name():
     sol.extract(b"%PDF", churches=CHURCHES, today=TODAY)
     assert sol._client.responses.calls[0]["model"] == "gpt-6.1-sol"
 
-    with pytest.raises(ClassifierOptionError, match="not an OpenAI model name"):
+    with pytest.raises(ClassifierOptionError, match="not a valid OpenAI model name"):
         get_classifier("gpt-6-luna", model="../gpt")
     with pytest.raises(ClassifierOptionError, match="does not take model"):
         get_classifier("gemini-flash", model="gpt-6.1-sol")
