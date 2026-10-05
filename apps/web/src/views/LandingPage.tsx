@@ -26,8 +26,10 @@ import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { canonicalForPath } from "../lib/seo";
+import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { cn } from "@/lib/utils";
 import {
+  currentLocationPlace,
   PLACE_SEARCH_ZOOM,
   type PlaceSearchResult,
 } from "../placeSearch";
@@ -54,10 +56,6 @@ export function LandingPage() {
   const isDesktop = useMinWidth(768);
   const [open, setOpen] = useState(false);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTER_STATE);
-  const [locationStatus, setLocationStatus] = useState<
-    "idle" | "requesting" | "error"
-  >("idle");
-  const [locationError, setLocationError] = useState<string | null>(null);
 
   const filterSearch = useMemo(() => {
     const params = encodeFiltersToParams(filters, new URLSearchParams());
@@ -103,36 +101,16 @@ export function LandingPage() {
     [goToMap],
   );
 
-  const handleCurrentLocation = useCallback(() => {
-    if (!navigator.geolocation) {
-      setLocationStatus("error");
-      setLocationError("Location is not available in this browser.");
-      return;
-    }
-    setLocationStatus("requesting");
-    setLocationError(null);
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setLocationStatus("idle");
-        goToMap({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-          placeTitle: "Your current location",
-          placeSubtitle: "From your browser",
-          zoom: PLACE_SEARCH_ZOOM,
-        });
-      },
-      (error) => {
-        setLocationStatus("error");
-        setLocationError(
-          error.code === error.PERMISSION_DENIED
-            ? "Location permission was denied."
-            : "Couldn't get your current location.",
-        );
-      },
-      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 },
-    );
-  }, [goToMap]);
+  const {
+    status: locationStatus,
+    error: locationError,
+    request: handleCurrentLocation,
+  } = useBrowserLocation(
+    useCallback(
+      ({ lat, lng }) => handlePlaceSelect(currentLocationPlace(lat, lng)),
+      [handlePlaceSelect],
+    ),
+  );
 
   const headingFontSize = open
     ? isDesktop

@@ -56,6 +56,18 @@ export interface PlaceSearchResult {
   resultType: PlaceResultType;
 }
 
+/** The pin for where the browser says the visitor is. */
+export function currentLocationPlace(lat: number, lng: number): PlaceSearchResult {
+  return {
+    id: `current-location-${lat}-${lng}`,
+    title: "Your current location",
+    subtitle: "From your browser",
+    lat,
+    lng,
+    resultType: "unknown",
+  };
+}
+
 export class PlaceSearchConfigurationError extends Error {
   constructor() {
     super("Geoapify place search is not configured.");

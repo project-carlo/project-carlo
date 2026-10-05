@@ -11,7 +11,9 @@ import { CHURCH_INDEX_PATH } from "../src/lib/seo";
 import { EVENT_TYPE_ORDER } from "../src/constants/eventTypes";
 
 const WEB_DIR = resolve(import.meta.dirname, "..");
-const DIST_DIR = resolve(WEB_DIR, "dist");
+// The Cloudflare Vite plugin puts the browser build in dist/client, beside
+// the Worker's own bundle.
+const DIST_DIR = resolve(WEB_DIR, "dist", "client");
 const SNAPSHOT_PATH = resolve(WEB_DIR, "public", SNAPSHOT_FILE);
 const SITE_ORIGIN = "https://projectcarlo.com";
 
@@ -28,7 +30,7 @@ function discoverAssets(): { cssPath: string; fontPaths: string[] } {
 
   const cssFile = files.find((f) => f.startsWith("index-") && f.endsWith(".css"));
   if (!cssFile) {
-    throw new Error("Could not find built CSS file in dist/assets/");
+    throw new Error("Could not find built CSS file in dist/client/assets/");
   }
 
   const fontPaths = PRELOAD_FONT_PREFIXES.map((prefix) => {

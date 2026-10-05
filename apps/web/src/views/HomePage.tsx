@@ -8,7 +8,11 @@ import {
 } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { fetchChurches, type ChurchSearchResult } from "../api";
+import {
+  fetchAllChurchesForSearch,
+  fetchChurches,
+  type ChurchSearchResult,
+} from "../api";
 import { ChurchMap } from "../components/ChurchMap";
 import { FilterPanel } from "../components/FilterPanel";
 import { FilterPills } from "../components/FilterPills";
@@ -29,7 +33,15 @@ import {
   encodeMapViewToParams,
   type MapView,
 } from "../lib/mapView";
-import { PLACE_SEARCH_ZOOM, type PlaceSearchResult } from "../placeSearch";
+import { fetchApproximateLocation } from "../lib/approximateLocation";
+import { firstVisitStart, type MapStart } from "../lib/mapStart";
+import { useBrowserLocation } from "../hooks/useBrowserLocation";
+import { LocateButton } from "../components/LocateButton";
+import {
+  currentLocationPlace,
+  PLACE_SEARCH_ZOOM,
+  type PlaceSearchResult,
+} from "../placeSearch";
 import { isAboutPageEnabled } from "../lib/featureFlags";
 import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
 
@@ -101,9 +113,38 @@ export function HomePage() {
   // to a church page and back. Captured once on mount — MapContainer only reads
   // its initial center/zoom, so later URL edits shouldn't yank a live map.
   const [, setSearchParams] = useSearchParams();
-  const [initialMapView] = useState<MapView | null>(() =>
+  const location = useLocation();
+  const [urlMapView] = useState<MapView | null>(() =>
     decodeMapViewFromParams(new URLSearchParams(window.location.search)),
   );
+
+  // A first visit (no view in the URL, nothing to fly to from the landing
+  // page) starts near where the visitor's IP address puts them, zoomed out
+  // because the estimate can be well off, or else on the whole area the site
+  // covers. The map waits for the estimate, which is capped at a short
+  // timeout, rather than jump once it arrives.
+  const [wantsFirstVisitStart] = useState(
+    () =>
+      urlMapView == null &&
+      !(location.state as HomeNavState | null)?.centerOn,
+  );
+  const { data: approximateLocation, isPending: approximatePending } =
+    useQuery({
+      queryKey: ["approximate-location"],
+      queryFn: ({ signal }) => fetchApproximateLocation(signal),
+      enabled: wantsFirstVisitStart,
+      staleTime: Infinity,
+      retry: false,
+    });
+  const approximateSettled = !wantsFirstVisitStart || !approximatePending;
+  // Every church, not just the ones the filters leave: the start mustn't
+  // depend on the filters in a link. The search box shares this query.
+  const { data: allChurches } = useQuery({
+    queryKey: ["church-search-index"],
+    queryFn: fetchAllChurchesForSearch,
+    staleTime: 5 * 60 * 1000,
+    enabled: wantsFirstVisitStart,
+  });
   const mapViewTimerRef = useRef<number | null>(null);
   const handleMapViewChange = useCallback(
     (view: MapView) => {
@@ -131,7 +172,6 @@ export function HomePage() {
 
   // Mirror the live query string into sessionStorage so in-app "Back to map"
   // links (plain pushes to "/") can restore the current filters + view.
-  const location = useLocation();
   useEffect(() => {
     rememberHomeSearch(location.search);
   }, [location.search]);
@@ -183,11 +223,37 @@ export function HomePage() {
     };
   }, [appliedFilters]);
 
-  const { data, isLoading, error, refetch } = useQuery({
+  const { data, error, refetch } = useQuery({
     queryKey: ["churches", apiFilters],
     queryFn: () => fetchChurches(apiFilters),
     placeholderData: keepPreviousData,
   });
+
+  // Where the map mounts, settled once (on a first visit) every church and
+  // the IP estimate are in, then left alone: MapContainer reads it only once.
+  // `undefined` is still settling; null is the map's built-in default, which
+  // a fly-to from the landing page leaves at once. An estimate with no church
+  // anywhere near it gives way to the whole covered area rather than open
+  // on an empty map.
+  const [mapStart, setMapStart] = useState<MapStart | null | undefined>(() => {
+    if (wantsFirstVisitStart) return undefined;
+    return urlMapView ? { kind: "view", view: urlMapView } : null;
+  });
+  // The place the IP estimate named, shown in the card with the offer of an
+  // exact location until the visitor picks somewhere themselves.
+  const [approximateArea, setApproximateArea] = useState<string | null>(null);
+  useEffect(() => {
+    if (mapStart !== undefined || !allChurches || !approximateSettled) return;
+    const start = firstVisitStart(
+      approximateLocation ?? null,
+      allChurches,
+      isDesktop,
+    );
+    setMapStart(start);
+    if (start?.kind === "near" && approximateLocation) {
+      setApproximateArea(approximateLocation.label);
+    }
+  }, [mapStart, allChurches, approximateSettled, approximateLocation, isDesktop]);
 
   // Churches without coordinates aren't on the map, so they don't count.
   const mappedChurchCount = useMemo(
@@ -210,6 +276,7 @@ export function HomePage() {
 
   const handleChurchSelect = useCallback((church: ChurchSearchResult) => {
     if (church.latitude != null && church.longitude != null) {
+      setApproximateArea(null);
       centerRequestIdRef.current += 1;
       setCenterOn({
         lat: church.latitude,
@@ -221,6 +288,7 @@ export function HomePage() {
   }, []);
 
   const handlePlaceSelect = useCallback((place: PlaceSearchResult) => {
+    setApproximateArea(null);
     centerRequestIdRef.current += 1;
     setCenterOn({
       lat: place.lat,
@@ -238,7 +306,21 @@ export function HomePage() {
     setCenterOn((current) => (current?.placeTitle ? null : current));
   }, []);
 
+  // "Go to my exact location": the browser's position, pinned and flown to
+  // like a searched place.
+  const {
+    status: locateStatus,
+    error: locateError,
+    request: handleLocate,
+  } = useBrowserLocation(
+    useCallback(
+      ({ lat, lng }) => handlePlaceSelect(currentLocationPlace(lat, lng)),
+      [handlePlaceSelect],
+    ),
+  );
+
   const pinnedPlaceTitle = centerOn?.placeTitle;
+  const mapReady = data != null && mapStart !== undefined;
 
   return (
     <main
@@ -252,11 +334,11 @@ export function HomePage() {
       {/* Full-bleed map — no z-index so it doesn't create a stacking context;
        *  the elevated popup pane inside can then layer above the header. */}
       <div className="absolute inset-0">
-        {data ? (
+        {mapReady ? (
           <ChurchMap
             churches={data}
             centerOn={centerOn}
-            initialView={initialMapView}
+            start={mapStart}
             onViewChange={handleMapViewChange}
             onClearPlace={handleClearPlace}
           />
@@ -264,7 +346,7 @@ export function HomePage() {
       </div>
 
       {/* Initial load only — filter changes keep the map mounted via placeholderData */}
-      {isLoading && !data ? (
+      {!mapReady && !error ? (
         <div className="pointer-events-none absolute inset-0 z-[800] flex items-center justify-center">
           <div className="pointer-events-auto flex items-center gap-3 border border-rule-strong bg-paper/95 px-5 py-3 shadow-missal-loading">
             <span
@@ -330,6 +412,37 @@ export function HomePage() {
                 }
               />
             </div>
+            {approximateArea && !pinnedPlaceTitle ? (
+              <div className="mt-3 flex items-baseline justify-between gap-3 font-serif text-[0.9375rem]">
+                {/* An error wraps rather than truncate: it says what to do. */}
+                <span
+                  className={`min-w-0 text-ink-soft ${locateError ? "" : "truncate"}`}
+                >
+                  {locateError ? (
+                    locateError
+                  ) : (
+                    <>
+                      Near <span className="text-ink">{approximateArea}</span>
+                      {/* Phones haven't the width: it would only be cut off. */}
+                      <span className="hidden italic md:inline">
+                        {" "}
+                        · approximate
+                      </span>
+                    </>
+                  )}
+                </span>
+                <button
+                  type="button"
+                  onClick={handleLocate}
+                  disabled={locateStatus === "requesting"}
+                  className="rubric-link missal-focus shrink-0 disabled:cursor-wait"
+                >
+                  {locateStatus === "requesting"
+                    ? "Locating…"
+                    : "Use exact location"}
+                </button>
+              </div>
+            ) : null}
             {pinnedPlaceTitle ? (
               <div className="mt-3 flex items-center justify-between gap-3 font-serif text-[0.9375rem]">
                 <span className="min-w-0 truncate text-ink-soft">
@@ -367,6 +480,22 @@ export function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* The locate control, bottom right above the map attribution. Not a
+       *  `data-map-overlay`: it's a corner button, not a panel the map
+       *  should centre around. */}
+      {mapReady ? (
+        <div className="pointer-events-none absolute right-4 bottom-[calc(2.25rem+var(--safe-area-inset-bottom))] left-4 z-[900] md:right-6">
+          <div className="pointer-events-auto ml-auto w-fit">
+            <LocateButton
+              status={locateStatus}
+              // The card's line already says why, when it's showing.
+              error={approximateArea && !pinnedPlaceTitle ? null : locateError}
+              onLocate={handleLocate}
+            />
+          </div>
+        </div>
+      ) : null}
     </main>
   );
 }
