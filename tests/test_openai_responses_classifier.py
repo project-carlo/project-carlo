@@ -16,7 +16,8 @@ from pdf_extract.classifiers.openai_responses import (
     OpenAIResponsesClassifier,
     render_pages,
 )
-from pdf_extract.classifiers.qualified_schedule import INSTRUCTIONS, flatten_events
+from pdf_extract.classifiers.qualified_schedule import flatten_events
+from pdf_extract.classifiers.schedule_policy import POLICY
 
 CHURCHES = [{"slug": "st-mary", "name": "St. Mary", "address": "123 Main"}]
 TODAY = date(2026, 9, 18)
@@ -76,7 +77,7 @@ def test_static_prompt_comes_before_the_bulletin_and_is_the_cache_breakpoint():
     assert developer["role"] == "developer"
     assert developer["content"] == [{
         "type": "input_text",
-        "text": INSTRUCTIONS,
+        "text": POLICY,
         "prompt_cache_breakpoint": {"mode": "explicit"},
     }]
     assert request["prompt_cache_options"] == {"mode": "explicit"}
@@ -90,7 +91,7 @@ def test_static_prompt_comes_before_the_bulletin_and_is_the_cache_breakpoint():
         "data:application/pdf;base64," + base64.b64encode(pdf).decode("ascii")
     )
     # Nothing per-bulletin may sit in the cached prefix.
-    assert "st-mary" not in INSTRUCTIONS and "{" not in INSTRUCTIONS
+    assert "st-mary" not in POLICY and "{" not in POLICY
 
 
 def test_request_settings_and_strict_toggle():
@@ -264,7 +265,7 @@ def test_model_option_runs_another_openai_model_under_its_own_name():
     sol.extract(b"%PDF", churches=CHURCHES, today=TODAY)
     assert sol._client.responses.calls[0]["model"] == "gpt-6.1-sol"
 
-    with pytest.raises(ClassifierOptionError, match="not an OpenAI model name"):
+    with pytest.raises(ClassifierOptionError, match="not a valid OpenAI model name"):
         get_classifier("gpt-6-luna", model="../gpt")
     with pytest.raises(ClassifierOptionError, match="does not take model"):
         get_classifier("gemini-flash", model="gpt-6.1-sol")

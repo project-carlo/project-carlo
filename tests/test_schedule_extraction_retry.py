@@ -7,8 +7,8 @@ from google.genai import errors, types
 import pdf_extract.schedule_extraction as schedule_extraction
 from pdf_extract.schedule_extraction import (
     GEMINI_HTTP_TIMEOUT_MS,
-    _gemini_client,
     _generate_content_with_backoff,
+    gemini_client,
 )
 
 
@@ -106,7 +106,7 @@ def test_gemini_client_sets_request_timeout(monkeypatch) -> None:
         return SimpleNamespace()
 
     monkeypatch.setattr(schedule_extraction.genai, "Client", _client)
-    _gemini_client()
+    gemini_client()
 
     http_options = captured["http_options"]
     assert isinstance(http_options, types.HttpOptions)

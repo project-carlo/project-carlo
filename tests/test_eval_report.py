@@ -99,11 +99,115 @@ def test_levels_precision_recall_f1():
     assert score["outcomes"]["exact"] == 1 and score["outcomes"]["core"] == 1
     assert score["outcomes"]["wrong_time"] == 1 and score["outcomes"]["missed"] == 1
     assert score["levels"]["strict"] == {
-        "found": 1, "precision": 1 / 3, "recall": 1 / 4, "f1": 2 / 7,
+        "found": 1, "found_predicted": 1, "precision": 1 / 3, "recall": 1 / 4, "f1": 2 / 7,
     }
     assert score["levels"]["loose"]["f1"] == 4 / 7
     assert score["levels"]["any_time"]["f1"] == 6 / 7
     assert score_records([])["levels"]["strict"]["f1"] == 1.0
+
+
+def test_one_weekly_prediction_covers_every_dated_label_of_its_slot():
+    # 2026-10-04, 10-11 and 10-18 are Sundays; 10-10 is a Saturday.
+    labels = [
+        _dated(), _dated(date="2026-10-11"), _dated(date="2026-10-18"),
+        _dated(date="2026-10-10"),                               # other weekday
+        _dated(date="2026-10-11", start_time="12:00"),           # other time
+    ]
+    preds = [_ev()]
+    assert _tiers(labels, preds) == [
+        ("weekly_vs_dated", 0, 0), ("weekly_vs_dated", 1, 0), ("weekly_vs_dated", 2, 0),
+        ("missed", 3, None), ("missed", 4, None),
+    ]
+    score = score_records(match_events(labels, preds))
+    loose = score["levels"]["loose"]
+    assert score["label_events"] == 5 and score["predicted_events"] == 1
+    assert loose["found"] == 3 and loose["found_predicted"] == 1
+    assert loose["recall"] == 3 / 5 and loose["precision"] == 1.0
+    assert loose["f1"] == 4 / 6
+    assert score["levels"]["core"]["found"] == 0 and score["spurious"] == 0
+
+
+def test_weekly_label_still_pairs_with_one_dated_prediction():
+    labels = [_ev()]
+    preds = [_dated(), _dated(date="2026-10-11")]
+    assert _tiers(labels, preds) == [("weekly_vs_dated", 0, 0), ("spurious", None, 1)]
+
+
+def test_weekly_prediction_paired_exactly_does_not_cover_dated_labels():
+    labels = [_ev(), _dated()]
+    preds = [_ev()]
+    assert _tiers(labels, preds) == [("exact", 0, 0), ("missed", 1, None)]
+
+
+def test_covering_weekly_prediction_covers_optional_dated_labels_too():
+    labels = [_dated(), _dated(date="2026-10-11", optional="include")]
+    preds = [_ev()]
+    records = match_events(labels, preds)
+    assert _tiers(labels, preds) == [("weekly_vs_dated", 0, 0), ("optional", 1, 0)]
+    assert score_optional(records)["preferred"] == 1
+    assert score_records(records)["predicted_events"] == 1
+
+
+def test_weekly_qualifiers_limit_the_dates_a_weekly_event_pairs_with():
+    # October 2026's Sundays: 4, 11, 18 and 25 (the last).
+    labels = [_dated(), _dated(date="2026-10-11"), _dated(date="2026-10-25")]
+    preds = [_ev(weeks_of_month=["first", "last"])]
+    assert _tiers(labels, preds) == [
+        ("weekly_vs_dated", 0, 0), ("missed", 1, None), ("weekly_vs_dated", 2, 0),
+    ]
+    summer = {"start_month": 6, "start_day": None, "end_month": 8, "end_day": None}
+    school_year = {"start_month": 9, "start_day": 15, "end_month": 6, "end_day": None}
+    assert _tiers([_dated()], [_ev(season=summer)]) == [
+        ("missed", 0, None), ("spurious", None, 0),
+    ]
+    # Either side may be the weekly one, and a season may run across the new year.
+    assert _tiers([_ev(season=school_year)], [_dated(), _dated(date="2027-01-03")]) == [
+        ("weekly_vs_dated", 0, 0), ("spurious", None, 1),
+    ]
+    assert _tiers([_ev(season=school_year)], [_dated(date="2027-07-04")]) == [
+        ("missed", 0, None), ("spurious", None, 0),
+    ]
+
+
+def test_optional_label_takes_the_cover_before_a_worse_tier():
+    labels = [_dated(), _dated(date="2026-10-11", optional="include")]
+    preds = [_ev(), _dated(date="2026-10-11", start_time="11:00")]
+    records = match_events(labels, preds)
+    assert _tiers(labels, preds) == [
+        ("weekly_vs_dated", 0, 0), ("optional", 1, 0), ("spurious", None, 1),
+    ]
+    assert [r["found_as"] for r in records if r["tier"] == "optional"] == ["weekly_vs_dated"]
+    score = score_records(records)
+    assert score["predicted_events"] == 2 and score["spurious"] == 1
+
+
+def test_weekly_prediction_never_includes_a_dated_exclude_event():
+    # A First Communion at the regular Mass: only the weekly slot should be recorded.
+    labels = [_dated(), _dated(date="2026-10-11", optional="exclude")]
+    records = match_events(labels, [_ev()])
+    assert _tiers(labels, [_ev()]) == [("weekly_vs_dated", 0, 0), ("optional", 1, None)]
+    assert score_optional(records)["preferred"] == 1
+    # Not even an unpaired weekly prediction, but a dated one still includes it.
+    assert _tiers([_dated(optional="exclude")], [_ev()]) == [
+        ("optional", 0, None), ("spurious", None, 0),
+    ]
+    assert _tiers([_dated(optional="exclude")], [_dated()]) == [("optional", 0, 0)]
+
+
+def test_bulletin_is_perfect_at_loose_when_a_weekly_prediction_covers_its_dates(tmp_path: Path):
+    labels_dir, out_dir = tmp_path / "labels", tmp_path / "eval"
+    _label(labels_dir, HASH_A, "done", [_dated(), _dated(date="2026-10-11")])
+    _pred(out_dir, HASH_A, [_ev()])
+    report = build_report(out_dir, labels_dir)
+    assert report["bulletin_level"]["perfect"] == {
+        "strict": 0, "core": 0, "loose": 1, "any_time": 1,
+    }
+    assert report["by_event_kind"]["weekly"]["predicted_events"] == 1
+    assert report["by_event_kind"]["specific_date"]["levels"]["loose"]["recall"] == 1.0
+    # One weekly prediction for two dates is the right number of events.
+    assert report["bulletin_level"]["event_count"] == {
+        "mean_abs_error": 0, "over": 0, "under": 0, "exact": 1,
+    }
 
 
 def test_optional_events_are_paired_last_and_left_out_of_the_scores():
@@ -175,6 +279,20 @@ def test_field_accuracy_outcomes():
     assert fields["weeks_of_month"]["match"] == 1 and fields["weeks_of_month"]["both_empty"] == 1
     assert fields["season"]["missing"] == 1 and fields["season"]["accuracy"] == 0.5
     assert fields["note"]["missing"] == 1 and fields["note"]["both_empty"] == 1
+
+
+def test_field_accuracy_counts_a_covering_prediction_once():
+    labels = [
+        _dated(), _dated(date="2026-10-11"),
+        _dated(date="2026-10-18", end_time="11:00", note="First Communion"),
+    ]
+    fields = field_accuracy(match_events(labels, [_ev(end_time="11:00")]))
+    # Compared with three label events, two of which have no end time: one extra.
+    assert fields["end_time"]["pairs"] == 1 and fields["end_time"]["extra"] == 1
+    assert fields["note"] == {
+        "pairs": 1, "accuracy": 1.0, "both_empty": 1, "match": 0, "different": 0,
+        "missing": 0, "extra": 0,
+    }
 
 
 # ── Whole report over files on disk ─────────────────────────────────────────

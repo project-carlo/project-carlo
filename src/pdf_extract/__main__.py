@@ -119,8 +119,9 @@ def _add_eval_model_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--model",
         help=(
-            "OpenAI model to run in place of the classifier's own, e.g. gpt-6.1-sol; "
-            "output goes under data/runs/<model>/ (default: gpt-6-luna)"
+            "Model to run in place of the classifier's own, from the same provider: "
+            "e.g. gpt-6.1-sol for gpt-6-luna (output under data/runs/<model>/), or a "
+            "Gemini model for gemini-flash-qualified (under data/runs/<model>-qualified/)"
         ),
     )
     parser.add_argument(
