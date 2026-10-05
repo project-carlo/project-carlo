@@ -202,8 +202,12 @@ the strict, core, loose and any_time levels; the wrong-church, wrong-type, misse
 spurious rates; the same broken down by event type and by weekly/dated; how
 often end time, weeks of month, season and the presence of a note agree on the
 pairs found at the loose level (a covering weekly prediction is one pair); per-bulletin perfect rate, published-date accuracy, wrong-bulletin
-agreement and event-count error; token usage and timing; and every bulletin's
-differences, worst bulletin first.
+agreement and event-count error; token usage, its cost at standard-tier list
+prices and timing; and every bulletin's differences, worst bulletin first.
+Prices are kept for `gpt-6-luna` and `gemini-3-flash-preview` only
+(`src/pdf_extract/evals/pricing.py`); other models' runs are reported unpriced.
+Gemini predictions made before thinking tokens were recorded are flagged, as
+their cost leaves out that billed output.
 
 Optional label events are left out of all of those numbers. They are paired
 after the required events, against the predictions still unpaired, in the tiers

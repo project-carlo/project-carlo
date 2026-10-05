@@ -76,7 +76,9 @@ def test_result_is_flattened_with_qualifiers_and_usage(fake_gemini):
     assert event["weeks_of_month"] == ["second", "third", "fourth", "fifth"]
     assert event["season_start_month"] is None
     assert result["published_date"] == "2026-09-20"
-    assert result["usage"] == {"prompt_tokens": 2500, "output_tokens": 400}
+    assert result["usage"] == {
+        "prompt_tokens": 2500, "cached_tokens": 0, "output_tokens": 400, "thinking_tokens": 0,
+    }
 
 
 def test_invalid_reply_is_read_leniently(fake_gemini):

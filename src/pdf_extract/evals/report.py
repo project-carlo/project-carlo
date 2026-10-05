@@ -55,11 +55,13 @@ import logging
 import statistics
 from collections import Counter
 from collections.abc import Callable, Iterable
+from dataclasses import asdict
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
 from pdf_extract.classifiers import get_classifier
+from pdf_extract.evals import pricing
 from pdf_extract.evals.run import DEFAULT_STATUSES, version_dir_name
 from pdf_extract.labeling.labels import (
     DAYS,
@@ -574,15 +576,44 @@ def _bulletin_level(bulletins: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def _cost(bulletins: list[dict[str, Any]]) -> dict[str, Any]:
+    """Token usage, its dollar cost at list prices (see pricing.py), and timing.
+
+    A prediction served from the cache carries the usage of the call that made
+    it, so the cost is what the calls behind every scored prediction cost.
+    """
     usage: Counter[str] = Counter()
     seconds = []
+    dollars = []
+    models: set[str] = set()
+    unpriced = thinking_unrecorded = 0
     for b in bulletins:
-        for key, value in (b["pred"].get("usage") or {}).items():
+        pred_usage = b["pred"].get("usage") or {}
+        for key, value in pred_usage.items():
             if isinstance(value, int):
                 usage[key] += value
         if isinstance(b["pred"].get("seconds"), int | float):
             seconds.append(b["pred"]["seconds"])
+        model = pricing.model_of(b["pred"].get("classifier_version"))
+        if model:
+            models.add(model)
+        call = pricing.call_cost(model, pred_usage) if pred_usage else None
+        if call is None:
+            unpriced += 1
+        else:
+            dollars.append(call)
+            thinking_unrecorded += pricing.thinking_unrecorded(model, pred_usage)
+    priced = {m: asdict(p) for m in sorted(models) if (p := pricing.price_for(m))}
     return {
+        "models": sorted(models),
+        "usd": {
+            "total": round(sum(dollars), 6) if dollars else None,
+            "per_bulletin": round(statistics.fmean(dollars), 6) if dollars else None,
+            "priced_bulletins": len(dollars),
+            "unpriced_bulletins": unpriced,
+            "thinking_unrecorded": thinking_unrecorded,
+            "prices_per_million": priced,
+            "prices_as_of": pricing.PRICES_AS_OF,
+        },
         "usage": dict(sorted(usage.items())),
         "from_cache": sum(bool(b["pred"].get("from_cache")) for b in bulletins),
         "seconds_total": round(sum(seconds), 3),
@@ -730,6 +761,59 @@ SLICE_HEADER = [
 ]
 
 
+def _usd(value: float) -> str:
+    return f"${value:,.2f}" if value >= 1 else f"${value:.4f}"
+
+
+def _usd_rows(usd: dict[str, Any]) -> list[list[Any]]:
+    if usd["total"] is None:
+        return []
+    return [
+        ["Cost (USD, list price)", _usd(usd["total"])],
+        ["Cost per bulletin (mean)", _usd(usd["per_bulletin"])],
+        ["Cost per 1,000 bulletins", _usd(usd["per_bulletin"] * 1000)],
+    ]
+
+
+def _rate(value: float) -> str:
+    return f"${value:.2f}" if round(value, 2) == value else f"${value:g}"
+
+
+def _usd_notes(cost: dict[str, Any]) -> list[str]:
+    usd = cost["usd"]
+    notes = []
+    for model, p in usd["prices_per_million"].items():
+        rates = f"{_rate(p['input'])} input, {_rate(p['cached_input'])} cached input"
+        if p["cache_write"] is not None:
+            rates += f", {_rate(p['cache_write'])} cache write"
+        rates += f", {_rate(p['output'])} output"
+        long = p["long_context"]
+        if long is not None:
+            rates += (
+                f"; over {p['long_context_over']:,} input tokens {_rate(long['input'])} input, "
+                f"{_rate(long['output'])} output"
+            )
+        notes.append(f"- `{model}` priced per 1M tokens at {rates} ({p['source']}).")
+    unpriced_models = [m for m in cost["models"] if m not in usd["prices_per_million"]]
+    if unpriced_models:
+        notes.append(f"- No prices for {', '.join(f'`{m}`' for m in unpriced_models)}.")
+    if usd["total"] is not None:
+        notes.append(
+            f"- Standard-tier list prices as of {usd['prices_as_of']}, for the calls behind "
+            f"{usd['priced_bulletins']} scored prediction(s), including those served from "
+            "the cache."
+        )
+        if usd["unpriced_bulletins"]:
+            notes.append(f"- {usd['unpriced_bulletins']} bulletin(s) not priced (no usage or no price).")
+    if usd["thinking_unrecorded"]:
+        notes.append(
+            f"- **{usd['thinking_unrecorded']} prediction(s) predate thinking tokens being "
+            "recorded**, so their cost leaves out billed thinking output and is too low; "
+            "rerun with `--refresh` for a full figure."
+        )
+    return notes
+
+
 def render_markdown(report: dict[str, Any]) -> str:
     overall = report["overall"]
     n_label = overall["label_events"]
@@ -845,16 +929,19 @@ def render_markdown(report: dict[str, Any]) -> str:
     )
 
     cost = report["cost"]
+    usd = cost["usd"]
     lines += ["", "## Cost", ""]
     lines += _table(
         ["", "Value"],
         [
+            *_usd_rows(usd),
             *[[k, f"{v:,}"] for k, v in cost["usage"].items()],
             ["Served from cache", cost["from_cache"]],
             ["Seconds (total / mean / median)",
              f"{cost['seconds_total']} / {cost['seconds_mean']} / {cost['seconds_median']}"],
         ],
     )
+    lines += ["", *_usd_notes(cost)]
 
     worst = sorted(
         report["bulletins"],

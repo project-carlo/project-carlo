@@ -345,10 +345,39 @@ def test_build_report_skips_skipped_and_lists_unpredicted(files):
     assert bl["perfect"] == {"strict": 0, "core": 0, "loose": 1, "any_time": 1}
     assert bl["published_date"]["accuracy"] == 1.0
     assert report["cost"]["usage"] == {"input_tokens": 100}
+    # `fake-v1` has no price.
+    assert report["cost"]["usd"]["total"] is None
+    assert report["cost"]["usd"]["unpriced_bulletins"] == 1
 
     markdown = render_markdown(report)
     assert "# Eval report: fake" in markdown
     assert "**weekly_vs_dated**" in markdown and "no prediction" in markdown
+
+
+def test_report_prices_usage_at_list_prices(files):
+    labels_dir, out_dir = files
+    _pred(out_dir, HASH_A, [], classifier_version="gpt-6-luna+strict+reasoning-medium", usage={
+        "input_tokens": 13_000, "cached_tokens": 3_000, "cache_write_tokens": 0,
+        "output_tokens": 2_000, "reasoning_tokens": 1_000,
+    })
+    report = build_report(out_dir, labels_dir)
+    usd = report["cost"]["usd"]
+    # 10k uncached at $0.10, 3k cached at $0.01, 2k output (with reasoning) at $0.50 per 1M.
+    assert usd["total"] == pytest.approx(0.00203)
+    assert usd["priced_bulletins"] == 1 and usd["thinking_unrecorded"] == 0
+    markdown = render_markdown(report)
+    assert "| Cost (USD, list price) | $0.0020 |" in markdown
+    assert "| Cost per 1,000 bulletins | $2.03 |" in markdown
+    assert "`gpt-6-luna` priced per 1M tokens" in markdown
+
+
+def test_report_flags_gemini_usage_without_thinking_tokens(files):
+    labels_dir, out_dir = files
+    _pred(out_dir, HASH_A, [], classifier_version="gemini-3-flash-preview+prompt-abc",
+          usage={"prompt_tokens": 4_000, "output_tokens": 1_000})
+    usd = build_report(out_dir, labels_dir)["cost"]["usd"]
+    assert usd["total"] == pytest.approx(0.005)
+    assert usd["thinking_unrecorded"] == 1
 
 
 def test_write_report_writes_next_to_predictions(files, tmp_path, monkeypatch):
