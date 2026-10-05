@@ -485,11 +485,21 @@ def request_schedule[P: BaseModel](
 
 
 def _token_usage(response: Any) -> dict[str, int]:
-    """Prompt and output token counts of a Gemini response, for run cost reporting."""
+    """Token counts of a Gemini response, for run cost reporting.
+
+    `prompt_tokens` includes `cached_tokens`; `output_tokens` leaves out
+    `thinking_tokens`, which are billed as output. Gemini leaves those two
+    unset when they are zero, so they are recorded as 0 when the response has
+    usage at all: a record without them predates their being recorded.
+    """
     usage = getattr(response, "usage_metadata", None)
+    if usage is None:
+        return {}
     counts = {
         "prompt_tokens": getattr(usage, "prompt_token_count", None),
+        "cached_tokens": getattr(usage, "cached_content_token_count", None) or 0,
         "output_tokens": getattr(usage, "candidates_token_count", None),
+        "thinking_tokens": getattr(usage, "thoughts_token_count", None) or 0,
     }
     return {k: v for k, v in counts.items() if isinstance(v, int)}
 
