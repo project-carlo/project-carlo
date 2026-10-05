@@ -49,7 +49,7 @@ from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
 from pdf_extract.evals.run import run as run_eval
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
-from pdf_extract.fetch import fetch_bulletins
+from pdf_extract.fetch import FETCH_WORKERS, fetch_bulletins
 from pdf_extract.fetch_check import check_fetch
 from pdf_extract.geocode import run_backfill
 from pdf_extract.labeling.demo import build_demo
@@ -149,7 +149,7 @@ def _ensure_db() -> None:
 # ── Command handlers ────────────────────────────────────────────────────────
 def _cmd_fetch(args: argparse.Namespace) -> Result:
     _ensure_db()
-    return fetch_bulletins(parish_name=args.parish)
+    return fetch_bulletins(parish_name=args.parish, workers=args.workers)
 
 
 def _cmd_fetch_check(args: argparse.Namespace) -> Result:
@@ -356,6 +356,10 @@ def _build_parser() -> argparse.ArgumentParser:
     # -- fetch --
     fetch_parser = subparsers.add_parser("fetch", help="Fetch latest PDFs and save to disk")
     fetch_parser.add_argument("--parish", help="Parish name (omit to run for all)")
+    fetch_parser.add_argument(
+        "--workers", type=int, default=FETCH_WORKERS,
+        help="Parishes fetched at once, one request per site at most (1 fetches one at a time)",
+    )
     fetch_parser.set_defaults(handler=_cmd_fetch)
     _add_common_args(fetch_parser)
 

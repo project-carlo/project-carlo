@@ -1,6 +1,9 @@
 import hashlib
 import logging
+import sqlite3
 import threading
+import time
+from collections import Counter
 from contextlib import contextmanager
 from datetime import date, timedelta
 from pathlib import Path
@@ -10,7 +13,14 @@ import pytest
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.db import create_db
 from pdf_extract.duplicates import Validators
-from pdf_extract.fetch import BulletinLink, Download, FetchSource, fetch_bulletins
+from pdf_extract.fetch import (
+    BulletinLink,
+    Download,
+    FetchSource,
+    _site_for_source,
+    _site_for_url,
+    fetch_bulletins,
+)
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import load_history_from_db, save_history_to_db
 from pdf_extract.runs import parish_results, start_run
@@ -490,6 +500,124 @@ def test_fetch_limits_to_the_given_slugs(monkeypatch, db: Path) -> None:
     assert [bulletin["parish_slug"] for bulletin in _bulletins(db)] == ["test-parish-1"]
     with pytest.raises(ValueError, match="no-such-parish"):
         fetch_bulletins(slugs=["no-such-parish"])
+
+
+def test_fetch_never_has_two_requests_in_flight_to_one_site(monkeypatch, db: Path) -> None:
+    sources = {
+        "test-parish": FetchSource("parishes_online", "first"),
+        "test-parish-1": FetchSource("parishes_online", "second"),
+        "test-parish-2": FetchSource("other", "https://www.parish-two.org"),
+    }
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source", lambda parish: sources[parish["slug"]],
+    )
+    _fake_browser(monkeypatch)
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: data)
+
+    lock = threading.Lock()
+    in_flight: Counter[str] = Counter()
+    most: Counter[str] = Counter()
+
+    @contextmanager
+    def request(site: str):
+        with lock:
+            in_flight[site] += 1
+            most[site] = max(most[site], in_flight[site])
+            most["*"] = max(most["*"], in_flight.total())
+        try:
+            time.sleep(0.2)
+            yield
+        finally:
+            with lock:
+                in_flight[site] -= 1
+
+    def build_link(bulletin_provider, fetch_provider_id, **_):
+        if bulletin_provider == "parishes_online":
+            with request("parishesonline"):
+                url = f"https://container.parishesonline.com/{fetch_provider_id}.pdf"
+        else:
+            with request("parish-two"):
+                url = "https://files.parish-two.org/bulletin.pdf"
+        return BulletinLink(source_url=url, fetch_url=url)
+
+    def download(*, fetch_url, source_url, validators=None):
+        site = "parishesonline" if "parishesonline" in fetch_url else "parish-two"
+        with request(site):
+            return Download(pdf=f"%PDF {fetch_url}".encode())
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+
+    result = fetch_bulletins()
+
+    assert result["fetched_bulletins"] == 3
+    assert most["parishesonline"] == 1
+    assert most["parish-two"] == 1
+    assert most["*"] == 2, "the two sites were fetched at the same time"
+
+
+def test_fetch_fails_when_a_worker_crashes(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _fake_browser(monkeypatch)
+
+    def download(**kwargs):
+        raise RuntimeError("unexpected")
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+
+    with pytest.raises(RuntimeError, match="unexpected"):
+        fetch_bulletins()
+
+
+def test_fetch_stops_the_workers_when_recording_fails(monkeypatch, db: Path) -> None:
+    _fake_browser(monkeypatch)
+    downloads: list[str] = []
+
+    def build_link(bulletin_provider, fetch_provider_id, **_):
+        # The parishes share a site, so they are resolved one after another.
+        time.sleep(0.2)
+        url = f"https://example.org/{fetch_provider_id}.pdf"
+        return BulletinLink(source_url=url, fetch_url=url)
+
+    def download(*, fetch_url, source_url, validators=None):
+        downloads.append(fetch_url)
+        return Download(pdf=f"%PDF {fetch_url}".encode())
+
+    def record(*args, **kwargs):
+        raise sqlite3.OperationalError("database is locked")
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    monkeypatch.setattr("pdf_extract.fetch.record_parish_result", record)
+
+    with pytest.raises(sqlite3.OperationalError):
+        fetch_bulletins()
+    assert len(downloads) < 3, "no parish is started after the failure"
+
+
+@pytest.mark.parametrize(
+    ("url", "site"),
+    [
+        ("https://parishesonline.com/organization/x", "parishes_online"),
+        ("https://container.parishesonline.com/bulletins/06/0144/x.pdf", "parishes_online"),
+        ("https://files.ecatholic.com/20434/bulletins/x.pdf", "ecatholic"),
+        ("https://bulletins.discovermass.com/download.php?bulletin=1", "discover_mass"),
+        ("https://parishes.rcda.org/holycross/bulletin.php", "rcda.org"),
+        ("https://www.rcda.org/parishes/x/bulletins", "rcda.org"),
+        ("https://www.stpeterparish.us/bulletins", "stpeterparish.us"),
+        ("netcatholic.org", "netcatholic.org"),
+    ],
+)
+def test_fetch_groups_requests_by_site(url: str, site: str) -> None:
+    assert _site_for_url(url) == site
+
+
+def test_fetch_counts_a_hosted_providers_parish_sites_as_the_provider() -> None:
+    assert _site_for_source(FetchSource("ecatholic", "https://netcatholic.org")) == "ecatholic"
+    assert _site_for_source(FetchSource("parishes_online", "all-saints")) == "parishes_online"
+    assert _site_for_source(
+        FetchSource("other", "https://www.stpeterparish.us", "")
+    ) == "stpeterparish.us"
 
 
 def test_process_limits_to_the_given_slugs(monkeypatch, db: Path) -> None:

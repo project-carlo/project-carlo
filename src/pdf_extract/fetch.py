@@ -3,18 +3,23 @@
 from __future__ import annotations
 
 import logging
+import queue
 import re
+import threading
 import time
-from collections.abc import Callable, Collection
+from collections import Counter, deque
+from collections.abc import Callable, Collection, Iterator
+from concurrent.futures import ThreadPoolExecutor
+from contextlib import closing
 from dataclasses import dataclass
 from datetime import date
 from http import HTTPStatus
-from typing import NamedTuple
+from typing import Any, NamedTuple
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, quote, unquote, urljoin, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
-from pdf_extract.blobstore import bulletin_pdf_key, get_store
+from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.browser import (
     PageLike,
     goto_with_retry,
@@ -575,12 +580,143 @@ def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
 
 # ── Pipeline: fetch ─────────────────────────────────────────────────────────
 
+# Parishes fetched at once, each worker with its own browser. However many
+# there are, a site never has more than one of our requests in flight (see
+# `_SiteLanes`); the workers only overlap different sites, and the PDF
+# compaction that follows a download.
+FETCH_WORKERS = 6
+
+# Domains that serve many parishes' pages and bulletins, mapped to the
+# provider they belong to. A provider's own directory and its PDF host
+# (parishesonline.com, container.parishesonline.com) are one site.
+_PROVIDER_DOMAINS: dict[str, str] = {
+    "parishesonline.com": PARISHES_ONLINE_TYPE,
+    "ecatholic.com": ECATHOLIC_TYPE,
+    "discovermass.com": DISCOVER_MASS_TYPE,
+}
+# Providers whose parish pages all come from the provider's servers, whatever
+# domain the parish uses (an eCatholic parish's /bulletins is eCatholic's).
+_HOSTED_PROVIDERS = frozenset({ECATHOLIC_TYPE, PARISHES_ONLINE_TYPE, DISCOVER_MASS_TYPE})
+
+
+def _site_for_url(url: str) -> str:
+    """The site a request to `url` lands on: its provider, else its domain.
+
+    The domain is the host's last two labels, so a diocese's shared parish
+    host (parishes.rcda.org) and its main site (www.rcda.org) are one site.
+    """
+    host = (urlparse(url if "//" in url else f"//{url}").hostname or "").lower()
+    domain = ".".join(host.split(".")[-2:])
+    return _PROVIDER_DOMAINS.get(domain, domain)
+
+
+def _site_for_source(source: FetchSource) -> str:
+    """The site resolving this parish's bulletin link visits."""
+    if source.provider in _HOSTED_PROVIDERS:
+        return source.provider
+    return _site_for_url(source.provider_id)
+
+
+@dataclass(frozen=True)
+class _FetchJob:
+    """One parish to fetch, and what the fetch compares its download with."""
+
+    parish: Any
+    source: FetchSource
+    stored: list[dict]
+    """The parish's stored bulletins. Read-only until the job is recorded."""
+
+
+@dataclass(frozen=True)
+class _Fetched:
+    """What a worker brought back for one parish, for the main thread to record."""
+
+    job: _FetchJob
+    status: str
+    detail: str | None = None
+    link: BulletinLink | None = None
+    download: Download | None = None
+    content_hash: str | None = None
+    """The downloaded PDF's hash, for a new bulletin (already in the blob store)."""
+    duplicate: Duplicate | None = None
+    """The stored bulletin the download turned out to be."""
+    seen_at: str | None = None
+
+
+class _SiteLanes:
+    """Hands parishes to workers so that a site has one request in flight at most.
+
+    A worker holds a parish's site while it resolves the bulletin link, then
+    moves to the site the PDF comes from for the download (`switch`), and
+    lets go before compacting it. A free worker takes a parish from the site
+    with the most parishes still waiting, so the longest queue (one provider
+    can have half the parishes) never sits idle; each site's parishes go in
+    their given order.
+    """
+
+    def __init__(self, jobs: list[tuple[str, _FetchJob]]) -> None:
+        self._pending: dict[str, deque[_FetchJob]] = {}
+        for site, job in jobs:
+            self._pending.setdefault(site, deque()).append(job)
+        self._busy: set[str] = set()
+        # Sites a worker is waiting to download from: they go to that worker
+        # before any new parish.
+        self._wanted: Counter[str] = Counter()
+        self._cond = threading.Condition()
+
+    def take(self) -> tuple[str, _FetchJob] | None:
+        """The next parish and its site, now held; None when none are left."""
+        with self._cond:
+            while self._pending:
+                free = [
+                    site for site in self._pending
+                    if site not in self._busy and not self._wanted[site]
+                ]
+                if free:
+                    site = max(free, key=lambda s: len(self._pending[s]))
+                    queue = self._pending[site]
+                    job = queue.popleft()
+                    if not queue:
+                        del self._pending[site]
+                    self._busy.add(site)
+                    return site, job
+                self._cond.wait()
+            return None
+
+    def switch(self, held: str, site: str) -> None:
+        """Let go of `held` and hold `site`, waiting until it is free."""
+        if site == held:
+            return
+        with self._cond:
+            self._busy.discard(held)
+            self._cond.notify_all()
+            self._wanted[site] += 1
+            try:
+                while site in self._busy:
+                    self._cond.wait()
+            finally:
+                self._wanted[site] -= 1
+            self._busy.add(site)
+
+    def release(self, site: str) -> None:
+        with self._cond:
+            self._busy.discard(site)
+            self._cond.notify_all()
+
+    def close(self) -> None:
+        """Hand out no more parishes (the ones in flight finish)."""
+        with self._cond:
+            self._pending.clear()
+            self._cond.notify_all()
+
+
 def fetch_bulletins(
     *,
     parish_name: str | None = None,
     slugs: Collection[str] | None = None,
     run_id: str | None = None,
     today: date | None = None,
+    workers: int = FETCH_WORKERS,
 ) -> dict[str, int]:
     """Download each parish's latest bulletin if it is one we have not seen.
 
@@ -592,20 +728,20 @@ def fetch_bulletins(
     its content hash, and a `bulletin` row records where it came from. With
     `run_id`, each parish's outcome is also recorded for the run report.
     `slugs` limits the run to those parishes.
+
+    Up to `workers` parishes are fetched at once, never two from one site
+    (see `_SiteLanes`). Only this thread touches the database.
     """
     LOGGER.info(
-        "Starting fetch stage (parish_name=%s, slugs=%s)",
+        "Starting fetch stage (parish_name=%s, slugs=%s, workers=%s)",
         parish_name or "*all*",
         "*all*" if slugs is None else len(slugs),
+        workers,
     )
     store = get_store()
     sunday = nearest_sunday(today or date.today())
 
-    fetched = 0
-    current = 0
-    unchanged = 0
-    recheck_failed = 0
-    failed = 0
+    tally: Counter[str] = Counter()
     attempted_slugs: list[str] = []
 
     conn = connect_db()
@@ -615,142 +751,37 @@ def fetch_bulletins(
         for entry in load_bulletins(conn):
             by_slug.setdefault(entry["parish_slug"], []).append(entry)
 
-        with launch_stealth_browser() as page:
-            for parish in parishes:
-                slug = parish["slug"]
-                fetch_source = _resolve_fetch_source(parish)
-                if fetch_source is None:
-                    # Unsupported provider (e.g. no_bulletin): not a
-                    # parish we expect to refresh, so keep it out of the stale report.
-                    continue
-                attempted_slugs.append(slug)
-                stored = by_slug.setdefault(slug, [])
+        jobs: list[tuple[str, _FetchJob]] = []
+        for parish in parishes:
+            slug = parish["slug"]
+            fetch_source = _resolve_fetch_source(parish)
+            if fetch_source is None:
+                # Unsupported provider (e.g. no_bulletin): not a
+                # parish we expect to refresh, so keep it out of the stale report.
+                continue
+            attempted_slugs.append(slug)
+            stored = by_slug.setdefault(slug, [])
 
-                def record(status: str, **fields) -> None:
-                    record_parish_result(conn, run_id, slug, "fetch", status, **fields)
-
-                newest = newest_bulletin(stored)
-                if has_bulletin_for(newest, sunday):
-                    current += 1
-                    record(
-                        FETCH_CURRENT, source_url=newest["source_url"],
-                        content_hash=newest["content_hash"],
-                        detail=f"already have the bulletin for {sunday.isoformat()}",
-                    )
-                    continue
-
-                try:
-                    link = _build_bulletin_link(
-                        fetch_source.provider, fetch_source.provider_id, page=page,
-                        recipe=fetch_source.recipe, reference_date=today,
-                    )
-                except ValueError as exc:
-                    LOGGER.warning("Skipping parish %s: %s", slug, exc)
-                    record(FETCH_RESOLVE_FAILED, detail=str(exc))
-                    failed += 1
-                    continue
-                except Exception as exc:
-                    LOGGER.warning(
-                        "Failed resolving bulletin link for parish %s: %s", slug, exc,
-                        exc_info=True,
-                    )
-                    record(FETCH_RESOLVE_FAILED, detail=f"{type(exc).__name__}: {exc}")
-                    failed += 1
-                    continue
-
-                # The address is never taken to mean we have the bulletin: one
-                # address can carry a new issue each week, and one issue can
-                # come from a new address each time. It only lets the server
-                # say the copy we have from it is current.
-                known = validators_for(link.source_url, stored)
-                try:
-                    download = _download_bulletin(
-                        fetch_url=link.fetch_url, source_url=link.source_url,
-                        validators=None if known is None else Validators(
-                            known.bulletin.get("etag"), known.bulletin.get("last_modified"),
-                        ),
-                    )
-                except (HTTPError, URLError, OSError) as exc:
-                    LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
-                    detail = f"{type(exc).__name__}: {exc}"
-                    if _rechecks_this_weeks_bulletin(stored, link.source_url, sunday):
-                        # A re-check of this week's bulletin, which we already
-                        # have from this address but could not trust the date
-                        # of: not a failure to fetch. A bulletin from an
-                        # earlier week at the same address is no such thing:
-                        # the site may have this week's issue there now.
-                        recheck_failed += 1
-                        record(FETCH_RECHECK_FAILED, detail=detail, source_url=link.source_url)
-                    else:
-                        failed += 1
-                        record(FETCH_DOWNLOAD_FAILED, detail=detail, source_url=link.source_url)
-                    continue
-
-                seen_at = utc_now_iso()
-                if download.pdf is None:
-                    duplicate = known
-                    content_hash = None
-                else:
-                    content_hash = bulletin_hash(download.pdf)
-                    duplicate = find_duplicate(content_hash, stored)
-                if duplicate is not None:
-                    _record_seen_again(
-                        conn, duplicate, download=download, source_url=link.source_url,
-                        seen_at=seen_at,
-                    )
-                    unchanged += 1
-                    record(
-                        FETCH_UNCHANGED, source_url=link.source_url,
-                        content_hash=duplicate.bulletin["content_hash"],
-                        detail=join_details(link.how, duplicate.describe()),
-                    )
-                    continue
-                assert download.pdf is not None and content_hash is not None
-
-                key = bulletin_pdf_key(slug, content_hash)
-                try:
-                    # Stored before the row that points at it, so a bulletin row
-                    # never names a PDF that is not there. Compaction is not
-                    # byte-for-byte repeatable, so a PDF already stored (by a
-                    # run whose database was not published) is left as it is.
-                    if not store.exists(key):
-                        store.put(
-                            key, compact_bulletin_pdf(download.pdf),
-                            content_type="application/pdf",
-                        )
-                    bulletin_id = insert_bulletin(
-                        conn,
-                        parish_id=parish["id"],
-                        source_url=link.source_url,
-                        content_hash=content_hash,
-                        fetched_at=seen_at,
-                        etag=download.etag,
-                        last_modified=download.last_modified,
-                    )
-                except Exception as exc:
-                    LOGGER.warning(
-                        "Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True,
-                    )
-                    record(
-                        FETCH_SAVE_FAILED,
-                        detail=f"{type(exc).__name__}: {exc}",
-                        source_url=link.source_url,
-                    )
-                    failed += 1
-                    continue
-
-                stored.append({
-                    "id": bulletin_id, "parish_slug": slug, "source_url": link.source_url,
-                    "content_hash": content_hash, "published_date": None,
-                    "fetched_at": seen_at, "processed_at": None, "wrong_bulletin": 0,
-                    "etag": download.etag, "last_modified": download.last_modified,
-                    "last_seen_at": seen_at,
-                })
-                fetched += 1
-                record(
-                    FETCH_NEW, source_url=link.source_url, content_hash=content_hash,
-                    detail=link.how or None,
+            newest = newest_bulletin(stored)
+            if has_bulletin_for(newest, sunday):
+                tally[FETCH_CURRENT] += 1
+                record_parish_result(
+                    conn, run_id, slug, "fetch", FETCH_CURRENT,
+                    source_url=newest["source_url"], content_hash=newest["content_hash"],
+                    detail=f"already have the bulletin for {sunday.isoformat()}",
                 )
+                continue
+            jobs.append((
+                _site_for_source(fetch_source),
+                _FetchJob(parish=parish, source=fetch_source, stored=stored),
+            ))
+
+        # Closed on the way out, so a failure here stops the workers too.
+        with closing(_fetch_in_parallel(
+            jobs, workers=workers, store=store, sunday=sunday, today=today,
+        )) as results:
+            for fetched in results:
+                tally[_record_fetched(conn, run_id, fetched)] += 1
     finally:
         conn.close()
 
@@ -766,15 +797,221 @@ def fetch_bulletins(
         )
 
     result = {
-        "fetched_bulletins": fetched,
-        "already_current": current,
-        "unchanged_bulletins": unchanged,
-        "recheck_failed": recheck_failed,
-        "failed_parishes": failed,
+        "fetched_bulletins": tally[FETCH_NEW],
+        "already_current": tally[FETCH_CURRENT],
+        "unchanged_bulletins": tally[FETCH_UNCHANGED],
+        "recheck_failed": tally[FETCH_RECHECK_FAILED],
+        "failed_parishes": (
+            tally[FETCH_RESOLVE_FAILED] + tally[FETCH_DOWNLOAD_FAILED] + tally[FETCH_SAVE_FAILED]
+        ),
         "stale_parishes": len(stale),
     }
     LOGGER.info("Fetch stage finished: %s", result)
     return result
+
+
+def _fetch_in_parallel(
+    jobs: list[tuple[str, _FetchJob]],
+    *,
+    workers: int,
+    store: CachedBlobStore,
+    sunday: date,
+    today: date | None,
+) -> Iterator[_Fetched]:
+    """Fetch `jobs` on worker threads, yielding each result as it lands.
+
+    A worker that crashes (anything `_fetch_one` does not turn into a
+    result) stops the others taking new parishes, and its error is raised
+    here once they have finished the ones in flight.
+    """
+    if not jobs:
+        return
+    lanes = _SiteLanes(jobs)
+    results: queue.SimpleQueue[_Fetched | None] = queue.SimpleQueue()
+
+    def work() -> None:
+        try:
+            with launch_stealth_browser() as page:
+                while (taken := lanes.take()) is not None:
+                    site, job = taken
+                    results.put(_fetch_one(
+                        job, site=site, lanes=lanes, page=page, store=store,
+                        sunday=sunday, today=today,
+                    ))
+        except BaseException:
+            lanes.close()
+            raise
+        finally:
+            results.put(None)
+
+    count = max(1, min(workers, len(jobs)))
+    with ThreadPoolExecutor(max_workers=count, thread_name_prefix="fetch") as pool:
+        futures = [pool.submit(work) for _ in range(count)]
+        try:
+            finished = 0
+            while finished < count:
+                fetched = results.get()
+                if fetched is None:
+                    finished += 1
+                else:
+                    yield fetched
+        finally:
+            lanes.close()
+    for future in futures:
+        future.result()
+
+
+def _fetch_one(
+    job: _FetchJob,
+    *,
+    site: str,
+    lanes: _SiteLanes,
+    page: PageLike,
+    store: CachedBlobStore,
+    sunday: date,
+    today: date | None,
+) -> _Fetched:
+    """Resolve, download and store one parish's bulletin; no database access.
+
+    Holds `site` (taken from `lanes`) until the download is done.
+    """
+    slug = job.parish["slug"]
+    try:
+        LOGGER.info("Fetching parish %s (%s)", slug, job.source.provider)
+        try:
+            link = _build_bulletin_link(
+                job.source.provider, job.source.provider_id, page=page,
+                recipe=job.source.recipe, reference_date=today,
+            )
+        except ValueError as exc:
+            LOGGER.warning("Skipping parish %s: %s", slug, exc)
+            return _Fetched(job, FETCH_RESOLVE_FAILED, detail=str(exc))
+        except Exception as exc:
+            LOGGER.warning(
+                "Failed resolving bulletin link for parish %s: %s", slug, exc, exc_info=True,
+            )
+            return _Fetched(job, FETCH_RESOLVE_FAILED, detail=f"{type(exc).__name__}: {exc}")
+
+        pdf_site = _site_for_url(link.fetch_url)
+        lanes.switch(site, pdf_site)
+        site = pdf_site
+
+        # The address is never taken to mean we have the bulletin: one
+        # address can carry a new issue each week, and one issue can
+        # come from a new address each time. It only lets the server
+        # say the copy we have from it is current.
+        known = validators_for(link.source_url, job.stored)
+        try:
+            download = _download_bulletin(
+                fetch_url=link.fetch_url, source_url=link.source_url,
+                validators=None if known is None else Validators(
+                    known.bulletin.get("etag"), known.bulletin.get("last_modified"),
+                ),
+            )
+        except (HTTPError, URLError, OSError) as exc:
+            LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
+            # A re-check of this week's bulletin, which we already have from
+            # this address but could not trust the date of, is not a failure
+            # to fetch. A bulletin from an earlier week at the same address is
+            # no such thing: the site may have this week's issue there now.
+            status = (
+                FETCH_RECHECK_FAILED
+                if _rechecks_this_weeks_bulletin(job.stored, link.source_url, sunday)
+                else FETCH_DOWNLOAD_FAILED
+            )
+            return _Fetched(job, status, detail=f"{type(exc).__name__}: {exc}", link=link)
+    finally:
+        lanes.release(site)
+
+    seen_at = utc_now_iso()
+    if download.pdf is None:
+        duplicate = known
+        content_hash = None
+    else:
+        content_hash = bulletin_hash(download.pdf)
+        duplicate = find_duplicate(content_hash, job.stored)
+    if duplicate is not None:
+        return _Fetched(
+            job, FETCH_UNCHANGED, link=link, download=download, duplicate=duplicate,
+            seen_at=seen_at,
+        )
+    assert download.pdf is not None and content_hash is not None
+
+    key = bulletin_pdf_key(slug, content_hash)
+    try:
+        # Stored before the row that points at it, so a bulletin row never
+        # names a PDF that is not there. Compaction is not byte-for-byte
+        # repeatable, so a PDF already stored (by a run whose database was not
+        # published) is left as it is.
+        if not store.exists(key):
+            store.put(key, compact_bulletin_pdf(download.pdf), content_type="application/pdf")
+    except Exception as exc:
+        LOGGER.warning("Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True)
+        return _Fetched(
+            job, FETCH_SAVE_FAILED, detail=f"{type(exc).__name__}: {exc}", link=link,
+        )
+    return _Fetched(
+        job, FETCH_NEW, link=link, download=download, content_hash=content_hash,
+        seen_at=seen_at,
+    )
+
+
+def _record_fetched(conn, run_id: str | None, fetched: _Fetched) -> str:
+    """Record one parish's fetch in the database; returns its final status."""
+    job, link = fetched.job, fetched.link
+    slug = job.parish["slug"]
+    source_url = None if link is None else link.source_url
+
+    def record(status: str, **fields) -> str:
+        record_parish_result(conn, run_id, slug, "fetch", status, **fields)
+        return status
+
+    if fetched.status == FETCH_UNCHANGED:
+        duplicate, download = fetched.duplicate, fetched.download
+        assert duplicate is not None and download is not None and fetched.seen_at is not None
+        _record_seen_again(
+            conn, duplicate, download=download, source_url=link.source_url,
+            seen_at=fetched.seen_at,
+        )
+        return record(
+            FETCH_UNCHANGED, source_url=source_url,
+            content_hash=duplicate.bulletin["content_hash"],
+            detail=join_details(link.how, duplicate.describe()),
+        )
+    if fetched.status != FETCH_NEW:
+        if source_url is None:
+            return record(fetched.status, detail=fetched.detail)
+        return record(fetched.status, detail=fetched.detail, source_url=source_url)
+
+    download = fetched.download
+    assert download is not None and fetched.content_hash is not None
+    try:
+        bulletin_id = insert_bulletin(
+            conn,
+            parish_id=job.parish["id"],
+            source_url=link.source_url,
+            content_hash=fetched.content_hash,
+            fetched_at=fetched.seen_at,
+            etag=download.etag,
+            last_modified=download.last_modified,
+        )
+    except Exception as exc:
+        LOGGER.warning("Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True)
+        return record(
+            FETCH_SAVE_FAILED, detail=f"{type(exc).__name__}: {exc}", source_url=source_url,
+        )
+
+    job.stored.append({
+        "id": bulletin_id, "parish_slug": slug, "source_url": link.source_url,
+        "content_hash": fetched.content_hash, "published_date": None,
+        "fetched_at": fetched.seen_at, "processed_at": None, "wrong_bulletin": 0,
+        "etag": download.etag, "last_modified": download.last_modified,
+        "last_seen_at": fetched.seen_at,
+    })
+    return record(
+        FETCH_NEW, source_url=source_url, content_hash=fetched.content_hash,
+        detail=link.how or None,
+    )
 
 
 def _rechecks_this_weeks_bulletin(
