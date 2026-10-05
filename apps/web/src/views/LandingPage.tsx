@@ -26,8 +26,13 @@ import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { canonicalForPath } from "../lib/seo";
+import {
+  browserLocationErrorMessage,
+  requestBrowserLocation,
+} from "../lib/browserLocation";
 import { cn } from "@/lib/utils";
 import {
+  currentLocationPlace,
   PLACE_SEARCH_ZOOM,
   type PlaceSearchResult,
 } from "../placeSearch";
@@ -104,35 +109,19 @@ export function LandingPage() {
   );
 
   const handleCurrentLocation = useCallback(() => {
-    if (!navigator.geolocation) {
-      setLocationStatus("error");
-      setLocationError("Location is not available in this browser.");
-      return;
-    }
     setLocationStatus("requesting");
     setLocationError(null);
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
+    requestBrowserLocation().then(
+      ({ lat, lng }) => {
         setLocationStatus("idle");
-        goToMap({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-          placeTitle: "Your current location",
-          placeSubtitle: "From your browser",
-          zoom: PLACE_SEARCH_ZOOM,
-        });
+        handlePlaceSelect(currentLocationPlace(lat, lng));
       },
-      (error) => {
+      (error: unknown) => {
         setLocationStatus("error");
-        setLocationError(
-          error.code === error.PERMISSION_DENIED
-            ? "Location permission was denied."
-            : "Couldn't get your current location.",
-        );
+        setLocationError(browserLocationErrorMessage(error));
       },
-      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 },
     );
-  }, [goToMap]);
+  }, [handlePlaceSelect]);
 
   const headingFontSize = open
     ? isDesktop

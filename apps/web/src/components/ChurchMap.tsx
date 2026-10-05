@@ -137,6 +137,13 @@ interface ChurchMapProps {
   } | null;
   /** Camera to mount the map at; falls back to the Rochester-area default. */
   initialView?: MapView | null;
+  /**
+   * Put `initialView`'s point in the part of the map the floating UI leaves
+   * clear, as a search result would be, rather than at the map's dead centre.
+   * For a start chosen for the visitor (their IP estimate); a view restored
+   * from the URL is already where they left it.
+   */
+  centerInitialViewInFreeArea?: boolean;
   /** Fires after the user finishes panning/zooming so the view can be persisted. */
   onViewChange?: (view: MapView) => void;
   /** Removes the searched-place pin; the popup offers it as a button. */
@@ -301,6 +308,25 @@ function ChangeView({
       map.panTo(target);
     }
   }, [map, center.lat, center.lng, center.zoom, center.requestId]);
+  return null;
+}
+
+/** Moves the just-mounted map so its starting point sits in the free area. */
+function InitialViewInFreeArea({ view }: { view: MapView }) {
+  const map = useMap();
+  const [initial] = useState(view);
+  useEffect(() => {
+    map.setView(
+      centerInFreeArea(
+        map,
+        [initial.lat, initial.lng],
+        initial.zoom,
+        overlayInsets(map),
+      ),
+      initial.zoom,
+      { animate: false },
+    );
+  }, [map, initial]);
   return null;
 }
 
@@ -766,6 +792,7 @@ export const ChurchMap = memo(function ChurchMap({
   churches,
   centerOn,
   initialView,
+  centerInitialViewInFreeArea = false,
   onViewChange,
   onClearPlace,
 }: ChurchMapProps) {
@@ -829,6 +856,11 @@ export const ChurchMap = memo(function ChurchMap({
           }}
           onClear={onClearPlace}
         />
+      ) : null}
+      {/* Last, so the markers' and the view reporter's moveend listeners are
+          in place when it moves the map. */}
+      {initialView && centerInitialViewInFreeArea ? (
+        <InitialViewInFreeArea view={initialView} />
       ) : null}
     </MapContainer>
   );

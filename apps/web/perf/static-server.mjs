@@ -1,4 +1,4 @@
-// Minimal static file server for the built app (apps/web/dist).
+// Minimal static file server for the built app (apps/web/dist/client).
 //
 // The e2e suite runs against `wrangler dev` because it needs the production
 // Worker semantics; the benchmark deliberately does not. A plain Node server

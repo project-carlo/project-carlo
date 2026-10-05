@@ -81,7 +81,7 @@ Usage: node perf/bench.mjs [options]
   --save <name>     Write perf/results/<name>.json
   --compare <name>  Compare against perf/results/<name>.json
   --json <path>     Write the raw result JSON to an explicit path
-  --dist <path>     Measure this build directory instead of apps/web/dist
+  --dist <path>     Measure this build directory instead of apps/web/dist/client
   --headed          Run with a visible browser window
 `);
 }
@@ -177,7 +177,7 @@ function summarize(runs) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  const dist = options.dist ? resolve(options.dist) : join(WEB_ROOT, "dist");
+  const dist = options.dist ? resolve(options.dist) : join(WEB_ROOT, "dist", "client");
   if (!existsSync(join(dist, "index.html"))) {
     console.error(`No build found at ${dist}. Run \`pnpm --filter web build\` first.`);
     process.exit(1);

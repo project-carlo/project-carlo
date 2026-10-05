@@ -33,9 +33,9 @@ if (!scenario) {
   process.exit(1);
 }
 
-const dist = join(WEB_ROOT, "dist");
+const dist = join(WEB_ROOT, "dist", "client");
 if (!existsSync(join(dist, "index.html"))) {
-  console.error("No build found at apps/web/dist. Run `pnpm --filter web build` first.");
+  console.error("No build found at apps/web/dist/client. Run `pnpm --filter web build` first.");
   process.exit(1);
 }
 

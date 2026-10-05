@@ -13,7 +13,12 @@ import { fetchAllChurchesForSearch, type ChurchSearchResult } from "../api";
 import { formatAddress } from "../utils";
 import { wantsCurrentLocation } from "../lib/currentLocationQuery";
 import {
+  browserLocationErrorMessage,
+  requestBrowserLocation,
+} from "../lib/browserLocation";
+import {
   canSearchPlaces,
+  currentLocationPlace,
   PlaceSearchConfigurationError,
   searchPlaces,
   type PlaceSearchResult,
@@ -176,39 +181,17 @@ export function SearchTypeahead({
   );
 
   const handleCurrentLocationSelect = useCallback(() => {
-    if (!navigator.geolocation) {
-      setLocationStatus("error");
-      setLocationError("Location is not available in this browser.");
-      return;
-    }
-
     setLocationStatus("requesting");
     setLocationError(null);
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        onPlaceSelect({
-          id: `current-location-${position.coords.latitude}-${position.coords.longitude}`,
-          title: "Your current location",
-          subtitle: "From your browser",
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-          resultType: "unknown",
-        });
+    requestBrowserLocation().then(
+      ({ lat, lng }) => {
+        onPlaceSelect(currentLocationPlace(lat, lng));
         setLocationStatus("idle");
         clearQuery();
       },
-      (error) => {
+      (error: unknown) => {
         setLocationStatus("error");
-        setLocationError(
-          error.code === error.PERMISSION_DENIED
-            ? "Location permission was denied."
-            : "Couldn't get your current location.",
-        );
-      },
-      {
-        enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 60000,
+        setLocationError(browserLocationErrorMessage(error));
       },
     );
   }, [clearQuery, onPlaceSelect]);
