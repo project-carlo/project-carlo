@@ -4,6 +4,11 @@
  * `run_worker_first` in wrangler.jsonc).
  */
 
+import {
+  APPROXIMATE_LOCATION_PATH,
+  type ApproximateLocationResponse,
+} from "../src/lib/approximateLocationApi";
+
 interface Env {
   ASSETS: { fetch(request: Request): Promise<Response> };
 }
@@ -17,8 +22,6 @@ interface CfGeo {
   regionCode?: string;
   country?: string;
 }
-
-const APPROXIMATE_LOCATION_PATH = "/api/approximate-location";
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
@@ -42,7 +45,7 @@ function approximateLocation(request: Request): Response {
   const lat = parseCoordinate(cf?.latitude, 90);
   const lng = parseCoordinate(cf?.longitude, 180);
   const located = lat != null && lng != null;
-  const body = {
+  const body: ApproximateLocationResponse = {
     lat: located ? lat : null,
     lng: located ? lng : null,
     city: cf?.city || null,

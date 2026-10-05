@@ -12,10 +12,7 @@ import type FuseType from "fuse.js";
 import { fetchAllChurchesForSearch, type ChurchSearchResult } from "../api";
 import { formatAddress } from "../utils";
 import { wantsCurrentLocation } from "../lib/currentLocationQuery";
-import {
-  browserLocationErrorMessage,
-  requestBrowserLocation,
-} from "../lib/browserLocation";
+import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import {
   canSearchPlaces,
   currentLocationPlace,
@@ -39,7 +36,6 @@ import {
 
 const DEBOUNCE_MS = 200;
 type SearchMode = "place" | "parish";
-type LocationStatus = "idle" | "requesting" | "error";
 
 interface SearchTypeaheadProps {
   onChurchSelect: (church: ChurchSearchResult) => void;
@@ -63,9 +59,6 @@ export function SearchTypeahead({
   const [isOpen, setIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [searchMode, setSearchMode] = useState<SearchMode>("place");
-  const [locationStatus, setLocationStatus] =
-    useState<LocationStatus>("idle");
-  const [locationError, setLocationError] = useState<string | null>(null);
   const searchAnchorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -180,21 +173,19 @@ export function SearchTypeahead({
     [clearQuery, onPlaceSelect],
   );
 
-  const handleCurrentLocationSelect = useCallback(() => {
-    setLocationStatus("requesting");
-    setLocationError(null);
-    requestBrowserLocation().then(
+  const {
+    status: locationStatus,
+    error: locationError,
+    request: handleCurrentLocationSelect,
+  } = useBrowserLocation(
+    useCallback(
       ({ lat, lng }) => {
         onPlaceSelect(currentLocationPlace(lat, lng));
-        setLocationStatus("idle");
         clearQuery();
       },
-      (error: unknown) => {
-        setLocationStatus("error");
-        setLocationError(browserLocationErrorMessage(error));
-      },
-    );
-  }, [clearQuery, onPlaceSelect]);
+      [clearQuery, onPlaceSelect],
+    ),
+  );
 
   const getChurchLocationText = useCallback((church: ChurchSearchResult) => {
     const address = formatAddress(church);
@@ -336,7 +327,9 @@ export function SearchTypeahead({
                         ? "Requesting your location…"
                         : "Use your current location"}
                     </div>
-                    <div className="mt-0.5 truncate text-sm text-ink-soft">
+                    <div
+                      className={`mt-0.5 text-sm text-ink-soft ${locationError ? "" : "truncate"}`}
+                    >
                       {locationError ?? "Center the map where you are"}
                     </div>
                   </div>

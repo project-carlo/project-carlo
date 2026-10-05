@@ -34,8 +34,11 @@ export function requestBrowserLocation(): Promise<BrowserLocation> {
       (error) =>
         reject(
           new BrowserLocationError(
+            // Once a site is blocked (by the visitor, or by the browser after
+            // a few dismissed prompts) the browser stops asking and every
+            // request fails at once, so say where to undo it.
             error.code === error.PERMISSION_DENIED
-              ? "Location permission was denied."
+              ? "Location is blocked. Allow it in your browser's site settings."
               : "Couldn't get your current location.",
           ),
         ),

@@ -1,9 +1,8 @@
 import { CrosshairIcon } from "@/components/icons";
-
-export type LocateStatus = "idle" | "requesting" | "error";
+import type { BrowserLocationStatus } from "../hooks/useBrowserLocation";
 
 interface LocateButtonProps {
-  status: LocateStatus;
+  status: BrowserLocationStatus;
   /** Why the last request failed, shown beside the button. */
   error: string | null;
   onLocate: () => void;

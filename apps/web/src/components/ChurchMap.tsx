@@ -26,6 +26,7 @@ import type {
 import L from "leaflet";
 import type { ChurchMapItem } from "../types";
 import type { MapView } from "../lib/mapView";
+import type { MapStart } from "../lib/mapStart";
 import {
   buildClusterIndex,
   convexHull,
@@ -135,15 +136,9 @@ interface ChurchMapProps {
     zoom?: number;
     requestId?: number;
   } | null;
-  /** Camera to mount the map at; falls back to the Rochester-area default. */
-  initialView?: MapView | null;
-  /**
-   * Put `initialView`'s point in the part of the map the floating UI leaves
-   * clear, as a search result would be, rather than at the map's dead centre.
-   * For a start chosen for the visitor (their IP estimate); a view restored
-   * from the URL is already where they left it.
-   */
-  centerInitialViewInFreeArea?: boolean;
+  /** Where to mount the map; falls back to the Rochester-area default. Read
+   *  once, on mount. */
+  start?: MapStart | null;
   /** Fires after the user finishes panning/zooming so the view can be persisted. */
   onViewChange?: (view: MapView) => void;
   /** Removes the searched-place pin; the popup offers it as a button. */
@@ -311,23 +306,35 @@ function ChangeView({
   return null;
 }
 
-/** Moves the just-mounted map so its starting point sits in the free area. */
-function InitialViewInFreeArea({ view }: { view: MapView }) {
-  const map = useMap();
-  const [initial] = useState(view);
-  useEffect(() => {
+/** Room kept between the covered area and the edges of the free area. */
+const START_AREA_MARGIN = 24;
+
+/**
+ * Puts a start chosen for the visitor in the part of the map the floating UI
+ * leaves clear: the point of a "near" start where a search result would go,
+ * every church of an "area" start in view. Run as the map is created, before
+ * any layer or listener is added, so no tiles load for the provisional view
+ * and the move isn't reported as the visitor's own (which would write a
+ * location they never chose into the URL).
+ */
+function placeStart(map: LeafletMap, start: MapStart): void {
+  if (start.kind === "near") {
+    const { lat, lng, zoom } = start.view;
     map.setView(
-      centerInFreeArea(
-        map,
-        [initial.lat, initial.lng],
-        initial.zoom,
-        overlayInsets(map),
-      ),
-      initial.zoom,
+      centerInFreeArea(map, [lat, lng], zoom, overlayInsets(map)),
+      zoom,
       { animate: false },
     );
-  }, [map, initial]);
-  return null;
+  } else if (start.kind === "area") {
+    map.fitBounds(start.bounds, {
+      paddingTopLeft: overlayInsets(map).add([
+        START_AREA_MARGIN,
+        START_AREA_MARGIN,
+      ]),
+      paddingBottomRight: [START_AREA_MARGIN, START_AREA_MARGIN],
+      animate: false,
+    });
+  }
 }
 
 /**
@@ -791,8 +798,7 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
 export const ChurchMap = memo(function ChurchMap({
   churches,
   centerOn,
-  initialView,
-  centerInitialViewInFreeArea = false,
+  start,
   onViewChange,
   onClearPlace,
 }: ChurchMapProps) {
@@ -801,12 +807,20 @@ export const ChurchMap = memo(function ChurchMap({
     () => buildClusterIndex(withCoords),
     [withCoords],
   );
-  // MapContainer only reads center/zoom on mount, which is exactly what we want:
-  // restore the persisted view once, then let the user (and `centerOn`) drive it.
+  // MapContainer only reads center/zoom (and whenReady) on mount, which is
+  // exactly what we want: open on the start once, then let the user (and
+  // `centerOn`) drive it. A view from the URL is mounted as it is; any other
+  // start is placed by `placeStart`, which MapContainer runs synchronously
+  // once the map has a view, before it renders a single layer.
+  const initialView = start?.kind === "view" ? start.view : null;
   const center: [number, number] = initialView
     ? [initialView.lat, initialView.lng]
     : defaultCenter;
   const zoom = initialView?.zoom ?? 11;
+  // Leaflet calls it with the map as `this`.
+  function handleReady(this: LeafletMap) {
+    if (start) placeStart(this, start);
+  }
 
   // The last selection whose popup has been opened; see ChurchMarker.
   const [handledRequestId, setHandledRequestId] = useState<number | null>(
@@ -831,6 +845,7 @@ export const ChurchMap = memo(function ChurchMap({
       className="church-map h-full w-full"
       scrollWheelZoom
       zoomControl={false}
+      whenReady={handleReady}
     >
       {centerOn && <ChangeView center={centerOn} minZoom={selectedSoloZoom} />}
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
@@ -856,11 +871,6 @@ export const ChurchMap = memo(function ChurchMap({
           }}
           onClear={onClearPlace}
         />
-      ) : null}
-      {/* Last, so the markers' and the view reporter's moveend listeners are
-          in place when it moves the map. */}
-      {initialView && centerInitialViewInFreeArea ? (
-        <InitialViewInFreeArea view={initialView} />
       ) : null}
     </MapContainer>
   );

@@ -26,10 +26,7 @@ import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { canonicalForPath } from "../lib/seo";
-import {
-  browserLocationErrorMessage,
-  requestBrowserLocation,
-} from "../lib/browserLocation";
+import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { cn } from "@/lib/utils";
 import {
   currentLocationPlace,
@@ -59,10 +56,6 @@ export function LandingPage() {
   const isDesktop = useMinWidth(768);
   const [open, setOpen] = useState(false);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTER_STATE);
-  const [locationStatus, setLocationStatus] = useState<
-    "idle" | "requesting" | "error"
-  >("idle");
-  const [locationError, setLocationError] = useState<string | null>(null);
 
   const filterSearch = useMemo(() => {
     const params = encodeFiltersToParams(filters, new URLSearchParams());
@@ -108,20 +101,16 @@ export function LandingPage() {
     [goToMap],
   );
 
-  const handleCurrentLocation = useCallback(() => {
-    setLocationStatus("requesting");
-    setLocationError(null);
-    requestBrowserLocation().then(
-      ({ lat, lng }) => {
-        setLocationStatus("idle");
-        handlePlaceSelect(currentLocationPlace(lat, lng));
-      },
-      (error: unknown) => {
-        setLocationStatus("error");
-        setLocationError(browserLocationErrorMessage(error));
-      },
-    );
-  }, [handlePlaceSelect]);
+  const {
+    status: locationStatus,
+    error: locationError,
+    request: handleCurrentLocation,
+  } = useBrowserLocation(
+    useCallback(
+      ({ lat, lng }) => handlePlaceSelect(currentLocationPlace(lat, lng)),
+      [handlePlaceSelect],
+    ),
+  );
 
   const headingFontSize = open
     ? isDesktop

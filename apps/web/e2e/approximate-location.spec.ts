@@ -1,4 +1,16 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
+
+/** The zoom levels of the map tiles on screen, from their URLs. */
+async function tileZooms(page: Page): Promise<number[]> {
+  const srcs = await page
+    .locator(".leaflet-tile")
+    .evaluateAll((tiles) => tiles.map((tile) => tile.getAttribute("src")));
+  return [
+    ...new Set(
+      srcs.map((src) => Number(/tile\.openstreetmap\.org\/(\d+)\//.exec(src ?? "")?.[1])),
+    ),
+  ];
+}
 
 test("the Worker answers the approximate-location lookup", async ({
   request,
@@ -39,26 +51,53 @@ test("a first visit starts near the IP estimate, zoomed out", async ({
   await expect(
     page.getByRole("button", { name: "Go to my exact location" }),
   ).toBeVisible();
-  // Zoomed out to a region (desktop viewport): the tiles are zoom 9's.
+  // Zoomed out to a region (desktop viewport).
   await expect(
     page.locator('.leaflet-tile[src*="tile.openstreetmap.org/9/"]').first(),
   ).toBeAttached();
+  expect(await tileZooms(page)).toEqual([9]);
+  // A start chosen for the visitor isn't written into the URL: a link they
+  // copy shouldn't carry where their IP address puts them.
+  await page.waitForTimeout(1000);
+  expect(new URL(page.url()).searchParams.has("lat")).toBe(false);
 });
 
-test("an estimate far from every church keeps the default view", async ({
-  page,
-}) => {
+test("a filtered link still starts near the estimate", async ({ page }) => {
   await page.route("**/api/approximate-location", (route) =>
     route.fulfill({
-      json: { lat: 39.1, lng: -94.58, city: "Kansas City", regionCode: "MO" },
+      json: { lat: 42.8864, lng: -78.8784, city: "Buffalo", regionCode: "NY" },
     }),
   );
-  await page.goto("/");
-  await expect(page.locator(".leaflet-container")).toBeVisible({
+  // Filters no church nearby (likely none anywhere) matches: the start
+  // goes by every church, not the ones the filters leave.
+  await page.goto("/?type=confession&days=mon&from=0300&to=0330");
+  await expect(page.getByText("Near Buffalo, NY")).toBeVisible({
     timeout: 15_000,
   });
-  await expect(page.getByText("Kansas City")).toHaveCount(0);
 });
+
+for (const [name, json] of [
+  [
+    "an estimate far from every church",
+    { lat: 39.1, lng: -94.58, city: "Kansas City", regionCode: "MO" },
+  ],
+  ["no estimate", {}],
+] as const) {
+  test(`${name} shows the whole covered area`, async ({ page }) => {
+    await page.route("**/api/approximate-location", (route) =>
+      route.fulfill({ json }),
+    );
+    await page.goto("/");
+    await expect(page.locator(".leaflet-tile").first()).toBeAttached({
+      timeout: 15_000,
+    });
+    await expect(page.getByText("approximate")).toHaveCount(0);
+    // Further out than a start near the visitor (zoom 9).
+    const zooms = await tileZooms(page);
+    expect(zooms).toHaveLength(1);
+    expect(zooms[0]).toBeLessThan(9);
+  });
+}
 
 test("a view in the URL wins over the IP estimate", async ({ page }) => {
   let looked = false;
