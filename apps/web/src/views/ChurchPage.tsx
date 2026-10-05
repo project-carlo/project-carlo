@@ -1,13 +1,16 @@
-import { Link, useParams } from "react-router-dom";
+import { useMemo } from "react";
+import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ChurchNotFoundError, fetchChurch, fetchChurchEvents } from "../api";
 import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
-import { ArrowLeftIcon } from "@/components/icons";
 import { InlineQueryError } from "@/components/InlineQueryError";
-import { Masthead } from "@/components/Masthead";
+import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchPageContent } from "@/components/ChurchPageContent";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
-import { useHomeHref } from "@/hooks/useHomeHref";
+import { useMapHref } from "@/hooks/useMapHref";
+import { usePlaceIndex } from "@/hooks/usePlaceIndex";
+import { buildChurchPlaceContext } from "@/lib/browse";
+import { isAboutPageEnabled } from "@/lib/featureFlags";
 import {
   buildChurchDescription,
   buildChurchTitle,
@@ -17,7 +20,8 @@ import { NotFoundPage } from "./NotFoundPage";
 
 export function ChurchPage() {
   const { churchSlug } = useParams();
-  const homeHref = useHomeHref();
+  const mapHref = useMapHref();
+  const showAbout = isAboutPageEnabled();
   const enabled = typeof churchSlug === "string" && churchSlug.length > 0;
 
   const churchQuery = useQuery({
@@ -37,6 +41,19 @@ export function ChurchPage() {
 
   const events = eventsQuery.data;
   const church = churchQuery.data;
+
+  // The city-page link and "Nearby churches" come from the whole snapshot. It
+  // is the data the two queries above already read, so this settles at once;
+  // if it ever fails the page simply renders without those extras.
+  const placeQuery = usePlaceIndex();
+  const place = useMemo(
+    () =>
+      church && placeQuery.data
+        ? buildChurchPlaceContext(placeQuery.data, church)
+        : null,
+    [church, placeQuery.data],
+  );
+  const placeSettled = placeQuery.isSuccess || placeQuery.isError;
 
   const notFound =
     !enabled ||
@@ -78,21 +95,20 @@ export function ChurchPage() {
     );
   }
 
-  if (church && events) {
-    return <ChurchPageContent church={church} events={events} />;
+  if (church && events && placeSettled) {
+    return (
+      <ChurchPageContent
+        church={church}
+        events={events}
+        showAbout={showAbout}
+        place={place}
+      />
+    );
   }
 
   return (
     <main className="min-h-svh bg-paper">
-      <header className="sticky top-0 z-40 border-b border-rule-strong bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 pt-[calc(0.85rem+var(--safe-area-inset-top))] pb-3">
-          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-            <ArrowLeftIcon className="size-3" />
-            Back to map
-          </Link>
-          <Masthead compact />
-        </div>
-      </header>
+      <SiteHeader sticky mapHref={mapHref} showAbout={showAbout} />
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         {churchQuery.isLoading ? (
@@ -103,6 +119,9 @@ export function ChurchPage() {
             message={"We couldn't load this parish."}
             onRetry={() => churchQuery.refetch()}
           />
+        ) : null}
+        {church && events && !placeSettled ? (
+          <p className="font-serif text-sm text-ink-soft">Loading parish…</p>
         ) : null}
         {eventsQuery.isLoading && !churchQuery.isLoading ? (
           <p className="mx-auto max-w-2xl font-serif text-sm text-ink-soft">

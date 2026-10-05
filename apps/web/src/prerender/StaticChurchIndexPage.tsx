@@ -1,4 +1,6 @@
 import type { ChurchBase } from "../types";
+import { SiteFooter, type FooterCity } from "../components/SiteFooter";
+import { SiteHeader } from "../components/SiteHeader";
 import {
   CHURCH_INDEX_TITLE,
   OG_IMAGE_ALT,
@@ -22,6 +24,10 @@ interface StaticChurchIndexPageProps {
   canonicalUrl: string;
   /** ISO date (YYYY-MM-DD) — latest parish bulletin date site-wide. */
   lastModified: string;
+  /** Whether the About page exists (build-time flag). */
+  showAbout?: boolean;
+  /** Footer city links; defaults to the committed places data. */
+  footerCities?: FooterCity[];
 }
 
 interface CityGroup {
@@ -61,6 +67,8 @@ export function StaticChurchIndexPage({
   fontPaths,
   canonicalUrl,
   lastModified,
+  showAbout = false,
+  footerCities,
 }: StaticChurchIndexPageProps) {
   const title = CHURCH_INDEX_TITLE;
   const description = buildChurchIndexDescription(churches.length);
@@ -149,12 +157,10 @@ export function StaticChurchIndexPage({
         <link rel="stylesheet" href={cssPath} />
       </head>
       <body className="bg-paper">
+        <SiteHeader showAbout={showAbout} />
         <main className="mx-auto w-full max-w-3xl px-6 py-12 pb-[calc(3rem+var(--safe-area-inset-bottom))]">
           <header className="text-center">
-            <a href="/" className="rubric-link font-serif text-[0.9375rem]">
-              Back to map
-            </a>
-            <h1 className="mt-6 font-display text-[clamp(2rem,5vw,3rem)] leading-[1.05] font-normal tracking-tight text-ink">
+            <h1 className="font-display text-[clamp(2rem,5vw,3rem)] leading-[1.05] font-normal tracking-tight text-ink">
               All parishes
             </h1>
             <p className="mt-4 font-serif text-[0.95rem] text-ink-soft">
@@ -185,6 +191,7 @@ export function StaticChurchIndexPage({
             ))}
           </div>
         </main>
+        <SiteFooter showAbout={showAbout} cities={footerCities} />
       </body>
     </html>
   );

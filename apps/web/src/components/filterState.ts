@@ -28,7 +28,7 @@ export function getTimeRange(filters: FilterState): {
   return { from: filters.timeFrom, to: filters.timeTo };
 }
 
-const FILTER_PARAM_KEYS = ["type", "days", "from", "to"] as const;
+export const FILTER_PARAM_KEYS = ["type", "days", "from", "to"] as const;
 const EVENT_TYPE_SET = new Set<EventType>(EVENT_TYPE_ORDER);
 const MAX_TIME_MINUTE = MINUTES_PER_DAY - 1;
 

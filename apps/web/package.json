@@ -10,6 +10,7 @@
     "build:ts": "tsc -b",
     "build:vite": "vite build",
     "build:prerender": "tsx --tsconfig tsconfig.app.json scripts/prerender.ts",
+    "places:gen": "tsx scripts/generate-places.ts",
     "og:gen": "tsx scripts/generate-og.ts",
     "preview": "pnpm run build && wrangler dev",
     "lint": "eslint .",

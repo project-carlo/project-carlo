@@ -33,6 +33,15 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"),
     },
   },
+  // With a Worker entry (wrangler.jsonc `main`), the Cloudflare plugin would
+  // move the client build to dist/client. Keep it flat in dist/, where
+  // scripts/prerender.ts and the e2e/deploy flow expect it, and send the
+  // Worker bundle to dist-worker/ (gitignored) so it isn't served as an asset.
+  // The generated dist-worker/wrangler.json points its assets at ../dist.
+  environments: {
+    client: { build: { outDir: "dist" } },
+    project_carlo: { build: { outDir: "dist-worker" } },
+  },
   build: {
     rollupOptions: {
       output: {

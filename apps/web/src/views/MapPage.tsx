@@ -11,6 +11,7 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { fetchChurches, type ChurchSearchResult } from "../api";
 import { ChurchMap } from "../components/ChurchMap";
 import { FilterPanel } from "../components/FilterPanel";
+import { MapResults } from "../components/ChurchListPanel";
 import { FilterPills } from "../components/FilterPills";
 import { SearchTypeahead } from "../components/SearchTypeahead";
 import { Masthead } from "../components/Masthead";
@@ -20,23 +21,29 @@ import {
   type FilterState,
 } from "../components/filterState";
 import { InlineQueryError } from "../components/InlineQueryError";
+import { ApproxLocationNotice } from "../components/ApproxLocationNotice";
+import { useInitialMapCenter } from "../hooks/useInitialMapCenter";
+import { rememberPlace } from "../lib/approxLocation";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useFilterUrlState } from "../hooks/useFilterUrlState";
+import { useListUrlState } from "../hooks/useListUrlState";
+import type { GeoBounds } from "../lib/churchList";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
-import { rememberHomeSearch } from "../hooks/useHomeHref";
+import { rememberMapSearch } from "../hooks/useMapHref";
 import {
   decodeMapViewFromParams,
   encodeMapViewToParams,
   type MapView,
 } from "../lib/mapView";
 import { PLACE_SEARCH_ZOOM, type PlaceSearchResult } from "../placeSearch";
+import { statePath } from "../lib/places";
 import { isAboutPageEnabled } from "../lib/featureFlags";
-import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
+import { MAP_DESCRIPTION, MAP_TITLE, canonicalForPath } from "../lib/seo";
 
 const aboutPageEnabled = isAboutPageEnabled();
 
 /** Map-centering payload accepted on navigation (e.g. via router state from the landing page). */
-export interface HomeMapCenter {
+export interface MapCenter {
   lat: number;
   lng: number;
   churchId?: number;
@@ -45,15 +52,15 @@ export interface HomeMapCenter {
   zoom?: number;
 }
 
-interface HomeNavState {
-  centerOn?: HomeMapCenter;
+interface MapNavState {
+  centerOn?: MapCenter;
 }
 
-export function HomePage() {
+export function MapPage() {
   useDocumentMeta({
-    title: HOME_TITLE,
-    description: HOME_DESCRIPTION,
-    canonicalUrl: canonicalForPath("/"),
+    title: MAP_TITLE,
+    description: MAP_DESCRIPTION,
+    canonicalUrl: canonicalForPath("/map"),
   });
 
   const [urlFilters, setUrlFilters] = useFilterUrlState();
@@ -104,6 +111,9 @@ export function HomePage() {
   const [initialMapView] = useState<MapView | null>(() =>
     decodeMapViewFromParams(new URLSearchParams(window.location.search)),
   );
+  // With no camera in the URL and no place asked for, open on the visitor's
+  // approximate location (no permission prompt) when it is in coverage.
+  const initialCenter = useInitialMapCenter(initialMapView);
   const mapViewTimerRef = useRef<number | null>(null);
   const handleMapViewChange = useCallback(
     (view: MapView) => {
@@ -113,9 +123,16 @@ export function HomePage() {
       // Short debounce: moveend already fires once movement settles, so this
       // just coalesces a flurry of zoom steps into one history.replaceState.
       mapViewTimerRef.current = window.setTimeout(() => {
-        setSearchParams((prev) => encodeMapViewToParams(view, prev), {
-          replace: true,
-        });
+        // Read the live URL, not the render-time params: the list/map toggle may
+        // have changed `view` since this write was scheduled.
+        setSearchParams(
+          () =>
+            encodeMapViewToParams(
+              view,
+              new URLSearchParams(window.location.search),
+            ),
+          { replace: true },
+        );
       }, 400);
     },
     [setSearchParams],
@@ -130,14 +147,29 @@ export function HomePage() {
   );
 
   // Mirror the live query string into sessionStorage so in-app "Back to map"
-  // links (plain pushes to "/") can restore the current filters + view.
+  // links (plain pushes to "/map") can restore the current filters + view.
   const location = useLocation();
   useEffect(() => {
-    rememberHomeSearch(location.search);
+    rememberMapSearch(location.search);
   }, [location.search]);
 
   const [filterPanelOpen, setFilterPanelOpen] = useState(false);
   const isDesktop = useMinWidth(768);
+
+  // The results list: the map reports its visible area, the list reports hover.
+  const list = useListUrlState();
+  const [mapBounds, setMapBounds] = useState<GeoBounds | null>(null);
+  const [hoveredChurchId, setHoveredChurchId] = useState<number | null>(null);
+  const [zoomRequest, setZoomRequest] = useState<{
+    delta: number;
+    requestId: number;
+  } | null>(null);
+  const handleZoomOut = useCallback(
+    () =>
+      setZoomRequest((prev) => ({ delta: 2, requestId: (prev?.requestId ?? 0) + 1 })),
+    [],
+  );
+  const mobileListOpen = !isDesktop && list.view === "list";
   const [centerOn, setCenterOn] = useState<{
     lat: number;
     lng: number;
@@ -159,7 +191,7 @@ export function HomePage() {
   useEffect(() => {
     if (hydratedFromStateRef.current) return;
     hydratedFromStateRef.current = true;
-    const incoming = (location.state as HomeNavState | null)?.centerOn;
+    const incoming = (location.state as MapNavState | null)?.centerOn;
     if (!incoming) return;
     centerRequestIdRef.current += 1;
     setCenterOn({ ...incoming, requestId: centerRequestIdRef.current });
@@ -221,6 +253,7 @@ export function HomePage() {
   }, []);
 
   const handlePlaceSelect = useCallback((place: PlaceSearchResult) => {
+    rememberPlace(place);
     centerRequestIdRef.current += 1;
     setCenterOn({
       lat: place.lat,
@@ -239,6 +272,13 @@ export function HomePage() {
   }, []);
 
   const pinnedPlaceTitle = centerOn?.placeTitle;
+  const pin = useMemo(
+    () =>
+      centerOn?.placeTitle
+        ? { lat: centerOn.lat, lng: centerOn.lng, title: centerOn.placeTitle }
+        : null,
+    [centerOn?.placeTitle, centerOn?.lat, centerOn?.lng],
+  );
 
   return (
     <main
@@ -251,14 +291,21 @@ export function HomePage() {
        *  Only the floating card can start a refresh; the map owns its touches. */}
       {/* Full-bleed map — no z-index so it doesn't create a stacking context;
        *  the elevated popup pane inside can then layer above the header. */}
-      <div className="absolute inset-0">
-        {data ? (
+      <div
+        className={`absolute inset-0 ${mobileListOpen ? "invisible" : ""}`}
+        inert={mobileListOpen}
+      >
+        {data && initialCenter.ready ? (
           <ChurchMap
             churches={data}
             centerOn={centerOn}
-            initialView={initialMapView}
+            initialView={initialMapView ?? initialCenter.view}
             onViewChange={handleMapViewChange}
             onClearPlace={handleClearPlace}
+            onBoundsChange={setMapBounds}
+            highlightedChurchId={hoveredChurchId}
+            onHoverChurch={setHoveredChurchId}
+            zoomRequest={zoomRequest}
           />
         ) : null}
       </div>
@@ -303,14 +350,31 @@ export function HomePage() {
           >
             <div className="flex items-start justify-between gap-4">
               <Masthead />
-              {aboutPageEnabled ? (
-                <Link
-                  to="/about"
-                  className="rubric-link mt-1 shrink-0 font-serif text-[0.9375rem]"
-                >
-                  About
+              <nav
+                aria-label="Site"
+                className="mt-1 flex shrink-0 items-baseline gap-x-3 font-serif text-[0.9375rem]"
+              >
+                <Link to="/" className="rubric-link">
+                  Home
                 </Link>
-              ) : null}
+                <span aria-hidden className="text-ink-faint">
+                  ·
+                </span>
+                {/* Prerendered-only page for now, so a plain anchor. */}
+                <a href={statePath()} className="rubric-link">
+                  Browse
+                </a>
+                {aboutPageEnabled ? (
+                  <>
+                    <span aria-hidden className="text-ink-faint">
+                      ·
+                    </span>
+                    <Link to="/about" className="rubric-link">
+                      About
+                    </Link>
+                  </>
+                ) : null}
+              </nav>
             </div>
             <div className="mt-5">
               <SearchTypeahead
@@ -345,26 +409,43 @@ export function HomePage() {
                 </button>
               </div>
             ) : null}
+            {initialCenter.notice && !centerOn ? (
+              <ApproxLocationNotice
+                location={initialCenter.notice}
+                onPlaceSelect={handlePlaceSelect}
+                onDismiss={initialCenter.dismissNotice}
+              />
+            ) : null}
             <FilterPills filters={appliedFilters} />
           </div>
 
-          <div
-            data-map-overlay={isDesktop ? true : undefined}
-            className={`w-full md:min-h-0 ${
-              !isDesktop && !filterPanelOpen
-                ? "pointer-events-none"
-                : "pointer-events-auto"
-            }`}
-          >
-            <FilterPanel
-              isOpen={!isDesktop && filterPanelOpen}
-              isDesktop={isDesktop}
-              onClose={() => setFilterPanelOpen(false)}
-              filters={filters}
-              onChange={handleFiltersChange}
-              resultCount={mappedChurchCount}
-            />
-          </div>
+          <MapResults
+            churches={data}
+            totalCount={mappedChurchCount}
+            bounds={mapBounds}
+            pin={pin}
+            filters={appliedFilters}
+            onFiltersChange={handleFiltersChange}
+            isDesktop={isDesktop}
+            mobileView={list.view}
+            onMobileViewChange={list.setView}
+            sort={list.sort}
+            onSortChange={list.setSort}
+            highlightedId={hoveredChurchId}
+            onHover={setHoveredChurchId}
+            onShowOnMap={handleChurchSelect}
+            onZoomOut={handleZoomOut}
+            filterPanel={
+              <FilterPanel
+                isOpen={!isDesktop && filterPanelOpen}
+                isDesktop={isDesktop}
+                onClose={() => setFilterPanelOpen(false)}
+                filters={filters}
+                onChange={handleFiltersChange}
+                resultCount={mappedChurchCount}
+              />
+            }
+          />
         </div>
       </div>
     </main>

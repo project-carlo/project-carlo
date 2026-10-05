@@ -21,6 +21,12 @@ export const HOME_TITLE =
 export const HOME_DESCRIPTION =
   "Find Mass, Confession, and Adoration times at Catholic parishes on an interactive map. Schedules are parsed from each parish's weekly bulletin.";
 
+/** The map app at `/map`. */
+export const MAP_TITLE =
+  "Map of Mass, Confession & Adoration Times · Project Carlo";
+export const MAP_DESCRIPTION =
+  "An interactive map of Catholic parishes with Mass, Confession, and Adoration times parsed from each parish's weekly bulletin. Filter by day and time.";
+
 /** Resolve a site-relative path against an origin into an absolute URL. */
 export function absoluteUrl(origin: string, path: string): string {
   return new URL(path, `${origin}/`).href;
@@ -159,41 +165,99 @@ export function churchWebPageJsonLd(
   return node;
 }
 
+/** A level of a breadcrumb trail; `path` is site-relative. */
+export interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
+
 /**
- * BreadcrumbList: Home → Parishes → {Parish}. A city level will be inserted
- * once city landing pages exist (Phase 3) — schema.org requires every
- * non-final crumb to carry an `item` URL, so we omit the city until it has a
- * real page.
+ * BreadcrumbList for a trail like Home → New York → Buffalo → {Parish}.
+ * schema.org requires every crumb to carry an `item` URL, so a level that has
+ * no page of its own (a one-church town) is simply left out of the trail.
  */
-export function churchBreadcrumbJsonLd(
-  church: ChurchDetail,
-  canonicalUrl: string,
+export function breadcrumbJsonLd(
+  origin: string,
+  crumbs: BreadcrumbItem[],
 ): Record<string, unknown> {
-  const origin = new URL(canonicalUrl).origin;
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: SITE_NAME,
-        item: absoluteUrl(origin, "/"),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Parishes",
-        item: absoluteUrl(origin, CHURCH_INDEX_PATH),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: church.name ?? "Parish",
-        item: canonicalUrl,
-      },
-    ],
+    itemListElement: crumbs.map((crumb, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: crumb.name,
+      item: absoluteUrl(origin, crumb.path),
+    })),
   };
+}
+
+/** Breadcrumbs for a church page; see `churchCrumbs` in lib/browse.ts. */
+export function churchBreadcrumbJsonLd(
+  church: ChurchDetail,
+  canonicalUrl: string,
+  crumbs?: BreadcrumbItem[],
+): Record<string, unknown> {
+  const origin = new URL(canonicalUrl).origin;
+  return breadcrumbJsonLd(
+    origin,
+    crumbs ?? [
+      { name: "Home", path: "/" },
+      { name: church.name ?? "Parish", path: new URL(canonicalUrl).pathname },
+    ],
+  );
+}
+
+/** `ItemList` of links to the pages a browse page lists, in display order. */
+export function itemListJsonLd(
+  origin: string,
+  items: { name: string; path: string }[],
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: absoluteUrl(origin, item.path),
+      name: item.name,
+    })),
+  };
+}
+
+/**
+ * JSON-LD for a browse page (diocese index, diocese, state hub, city): a
+ * `CollectionPage` with `dateModified`, its `BreadcrumbList` and an `ItemList`
+ * of the pages it links to. Recurring schedules stay visible content rather
+ * than `Event` nodes (see `churchJsonLd`).
+ */
+export function browsePageJsonLd(opts: {
+  origin: string;
+  path: string;
+  title: string;
+  description: string;
+  dateModified: string;
+  crumbs: BreadcrumbItem[];
+  items: { name: string; path: string }[];
+}): Record<string, unknown>[] {
+  const url = absoluteUrl(opts.origin, opts.path);
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${url}#webpage`,
+      url,
+      name: opts.title,
+      description: opts.description,
+      dateModified: opts.dateModified,
+      inLanguage: "en-US",
+      isPartOf: { "@id": `${opts.origin}/#website` },
+      mainEntity: { "@id": `${url}#list` },
+    },
+    { ...itemListJsonLd(opts.origin, opts.items), "@id": `${url}#list` },
+    breadcrumbJsonLd(opts.origin, opts.crumbs),
+  ];
 }
 
 /** Site-level WebSite + Organization graph for the homepage. */

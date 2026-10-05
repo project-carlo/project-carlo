@@ -11,8 +11,8 @@ test("unknown route renders NotFoundPage via SPA fallback", async ({
   ).toBeVisible();
 });
 
-test("NotFoundPage 'Back to map' link navigates to home", async ({ page }) => {
+test("NotFoundPage 'Back to map' link navigates to the map", async ({ page }) => {
   await page.goto("/this-route-does-not-exist-xyz");
   await page.getByRole("link", { name: /back to map/i }).click();
-  await expect(page).toHaveURL("/");
+  await expect(page).toHaveURL(/\/map$/);
 });
