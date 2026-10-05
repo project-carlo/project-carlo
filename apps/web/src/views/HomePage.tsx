@@ -423,7 +423,11 @@ export function HomePage() {
                   ) : (
                     <>
                       Near <span className="text-ink">{approximateArea}</span>
-                      <span className="italic"> · approximate</span>
+                      {/* Phones haven't the width: it would only be cut off. */}
+                      <span className="hidden italic md:inline">
+                        {" "}
+                        · approximate
+                      </span>
                     </>
                   )}
                 </span>

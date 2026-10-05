@@ -45,6 +45,7 @@ test("a first visit starts near the IP estimate, zoomed out", async ({
   await expect(page.getByText("Near Buffalo, NY")).toBeVisible({
     timeout: 15_000,
   });
+  await expect(page.getByText("· approximate")).toBeVisible();
   await expect(
     page.getByRole("button", { name: "Use exact location" }),
   ).toBeVisible();
@@ -60,6 +61,25 @@ test("a first visit starts near the IP estimate, zoomed out", async ({
   // copy shouldn't carry where their IP address puts them.
   await page.waitForTimeout(1000);
   expect(new URL(page.url()).searchParams.has("lat")).toBe(false);
+});
+
+test("a phone shows the area without the approximate note", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.route("**/api/approximate-location", (route) =>
+    route.fulfill({
+      json: { lat: 42.8864, lng: -78.8784, city: "Buffalo", regionCode: "NY" },
+    }),
+  );
+  await page.goto("/");
+  await expect(page.getByText("Near Buffalo, NY")).toBeVisible({
+    timeout: 15_000,
+  });
+  await expect(page.getByText("· approximate")).toBeHidden();
+  await expect(
+    page.getByRole("button", { name: "Use exact location" }),
+  ).toBeVisible();
 });
 
 test("a filtered link still starts near the estimate", async ({ page }) => {
