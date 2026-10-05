@@ -8,9 +8,10 @@
   // needs; they're there so a bug gets killed instead of billing for
   // runaway CPU or fan-out.
   "limits": {
-    // Per invocation. The Paid plan's default is 30s; this matches the Free
-    // plan's ceiling.
-    "cpu_ms": 10,
+    // No "cpu_ms": the account is on Workers Free, which fixes CPU at 10ms
+    // per invocation and refuses the setting (API error 100328). On moving
+    // to Paid, add "cpu_ms": 10 here — Paid's default is 30s.
+
     // fetch() calls per invocation (the ASSETS binding passthrough is the
     // only one today). The Paid plan's default is 10,000.
     "subrequests": 5,
