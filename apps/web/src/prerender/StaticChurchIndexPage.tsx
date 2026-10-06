@@ -7,9 +7,10 @@ import {
   buildChurchIndexDescription,
   churchPath,
 } from "../lib/seo";
+import { CHURCH_INDEX_SEARCH_SCRIPT } from "./churchIndexSearch";
 import { StaticPageHead } from "./StaticPageHead";
 
-/** What the all-parishes index lists for each church. */
+/** What the all-churches index lists for each church. */
 type ChurchIndexEntry = Pick<ChurchBase, "slug" | "name" | "city" | "state">;
 
 interface StaticChurchIndexPageProps {
@@ -91,7 +92,7 @@ export function StaticChurchIndexPage({
         {
           "@type": "ListItem",
           position: 2,
-          name: "Parishes",
+          name: "Churches",
           item: canonicalUrl,
         },
       ],
@@ -115,17 +116,49 @@ export function StaticChurchIndexPage({
               Back to map
             </a>
             <h1 className="mt-6 font-display text-[clamp(2rem,5vw,3rem)] leading-[1.05] font-normal tracking-tight text-ink">
-              All parishes
+              All churches
             </h1>
             <p className="mt-4 font-serif text-[0.95rem] text-ink-soft">
               Mass, Confession &amp; Adoration times at {churches.length} Catholic
-              parishes, parsed from each parish&rsquo;s weekly bulletin.
+              churches, parsed from each parish&rsquo;s weekly bulletin.
             </p>
           </header>
 
-          <div className="mt-12 space-y-10">
+          <form
+            id="church-search-form"
+            role="search"
+            hidden
+            className="mt-10"
+          >
+            <label htmlFor="church-search" className="sr-only">
+              Search churches and cities
+            </label>
+            <input
+              id="church-search"
+              type="search"
+              placeholder="Search churches or cities…"
+              autoComplete="off"
+              spellCheck={false}
+              className="w-full appearance-none border-b border-rule-strong bg-transparent py-2 font-serif text-[1.0625rem] text-ink outline-none placeholder:text-ink-soft placeholder:italic focus:border-rubric [&::-webkit-search-cancel-button]:appearance-none"
+            />
+            <p
+              id="church-search-status"
+              aria-live="polite"
+              className="mt-2 min-h-[1.25rem] font-serif text-sm text-ink-soft"
+            />
+          </form>
+
+          <p
+            id="church-search-empty"
+            hidden
+            className="mt-10 text-center font-serif text-[0.95rem] text-ink-soft"
+          >
+            No churches or cities match your search.
+          </p>
+
+          <div className="mt-8 space-y-10">
             {groups.map((group) => (
-              <section key={group.label}>
+              <section key={group.label} data-city-group="">
                 <h2 className="smallcaps border-b border-rule-strong pb-2 text-[0.95rem] text-ink">
                   {group.slug ? (
                     <a href={cityPath(group.slug)} className="rubric-link">
@@ -142,7 +175,7 @@ export function StaticChurchIndexPage({
                         href={churchPath(church.slug)}
                         className="rubric-link font-serif text-[1.05rem] text-ink"
                       >
-                        {church.name ?? "Unnamed parish"}
+                        {church.name ?? "Unnamed church"}
                       </a>
                     </li>
                   ))}
@@ -151,6 +184,7 @@ export function StaticChurchIndexPage({
             ))}
           </div>
         </main>
+        <script dangerouslySetInnerHTML={{ __html: CHURCH_INDEX_SEARCH_SCRIPT }} />
       </body>
     </html>
   );

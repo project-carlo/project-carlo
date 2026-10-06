@@ -15,7 +15,7 @@ export function titleCase(value: string): string {
 }
 
 // Formatters built once and reused: constructing an Intl formatter costs far
-// more than formatting with it, and a parish page formats one date per listed
+// more than formatting with it, and a church page formats one date per listed
 // service. (Weekday and month stay separate formatters — asking for both at
 // once yields "March Tuesday" in en-US.)
 const LONG_WEEKDAY_FORMATTER = new Intl.DateTimeFormat("en-US", {

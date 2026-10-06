@@ -47,7 +47,7 @@ export function CityPage() {
     return (
       <NotFoundPage
         title="City not found"
-        message="We don't list any parishes in that city yet."
+        message="We don't list any churches in that city yet."
       />
     );
   }
@@ -59,11 +59,11 @@ export function CityPage() {
       <SiteHeader />
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         {cityQuery.isLoading ? (
-          <p className="font-serif text-sm text-ink-soft">Loading parishes…</p>
+          <p className="font-serif text-sm text-ink-soft">Loading churches…</p>
         ) : null}
         {cityQuery.error ? (
           <InlineQueryError
-            message={"We couldn't load the parishes in this city."}
+            message={"We couldn't load the churches in this city."}
             onRetry={() => cityQuery.refetch()}
           />
         ) : null}

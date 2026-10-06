@@ -129,7 +129,7 @@ function CityChurch({ entry }: { entry: CityChurchEntry }) {
     <li className="py-7">
       <h3 className="font-display text-[1.5rem] leading-tight text-ink">
         <Link to={churchPath(church.slug)} className="hover:text-rubric-deep">
-          {church.name ?? "Unnamed parish"}
+          {church.name ?? "Unnamed church"}
         </Link>
       </h3>
       {address ? (
@@ -159,7 +159,7 @@ function NearbyChurch({ entry }: { entry: CityChurchEntry }) {
     <li className="py-6">
       <h3 className="font-display text-[1.3rem] leading-tight text-ink">
         <Link to={churchPath(church.slug)} className="hover:text-rubric-deep">
-          {church.name ?? "Unnamed parish"}
+          {church.name ?? "Unnamed church"}
         </Link>
       </h3>
       <p className="mt-1 font-serif text-[0.95rem] text-ink-soft">
@@ -198,7 +198,7 @@ export function CityPageContent({ data }: { data: CityPageData }) {
             <Breadcrumbs
               className="mb-6"
               crumbs={[
-                { label: "All parishes", href: CHURCH_INDEX_PATH },
+                { label: "All churches", href: CHURCH_INDEX_PATH },
                 { label: city.label },
               ]}
             />
@@ -252,7 +252,7 @@ export function CityPageContent({ data }: { data: CityPageData }) {
       </main>
       <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
         <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-          Browse all parishes
+          Browse all churches
         </a>
       </footer>
     </>

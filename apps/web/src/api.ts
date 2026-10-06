@@ -127,7 +127,7 @@ function buildMapItem(
     (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
   );
   // Dedup repeated weekly slots (same weekday + start time) that occasionally
-  // appear across bulletins. Prefer weekly events for the popup; if the parish
+  // appear across bulletins. Prefer weekly events for the popup; if the church
   // has only specific-date events, fall back to the five soonest occurrences.
   const seen = new Set<string>();
   let popupSchedule = weeklyEvents
@@ -158,7 +158,7 @@ function buildMapItem(
 
 // Per-church memo of the last map item handed out, keyed by the church row and
 // the ids of the events that produced the item. Dragging the time slider
-// re-runs this query on every input event, and for most parishes the matching
+// re-runs this query on every input event, and for most churches the matching
 // events don't change from one step to the next; handing back the identical
 // object then lets React.memo skip the marker (and Leaflet skip re-positioning
 // it) instead of re-rendering all ~130 pins. Bounded by the church count.

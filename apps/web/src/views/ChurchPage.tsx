@@ -46,10 +46,10 @@ export function ChurchPage() {
 
   useDocumentMeta({
     title: notFound
-      ? "Parish not found · Project Carlo"
+      ? "Church not found · Project Carlo"
       : church
         ? buildChurchTitle(church)
-        : "Parish · Project Carlo",
+        : "Church · Project Carlo",
     description: !notFound && church ? buildChurchDescription(church) : undefined,
     canonicalUrl:
       !notFound && church && churchSlug
@@ -61,8 +61,8 @@ export function ChurchPage() {
   if (!enabled) {
     return (
       <NotFoundPage
-        title="Parish not found"
-        message="We couldn't find that parish."
+        title="Church not found"
+        message="We couldn't find that church."
       />
     );
   }
@@ -73,8 +73,8 @@ export function ChurchPage() {
   ) {
     return (
       <NotFoundPage
-        title="Parish not found"
-        message="We couldn't find that parish."
+        title="Church not found"
+        message="We couldn't find that church."
       />
     );
   }
@@ -95,11 +95,11 @@ export function ChurchPage() {
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         {churchQuery.isLoading ? (
-          <p className="font-serif text-sm text-ink-soft">Loading parish…</p>
+          <p className="font-serif text-sm text-ink-soft">Loading church…</p>
         ) : null}
         {churchQuery.error ? (
           <InlineQueryError
-            message={"We couldn't load this parish."}
+            message={"We couldn't load this church."}
             onRetry={() => churchQuery.refetch()}
           />
         ) : null}
@@ -111,7 +111,7 @@ export function ChurchPage() {
         {eventsQuery.error ? (
           <InlineQueryError
             className="mx-auto max-w-2xl"
-            message={"We couldn't load times for this parish."}
+            message={"We couldn't load times for this church."}
             onRetry={() => eventsQuery.refetch()}
           />
         ) : null}

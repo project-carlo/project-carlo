@@ -140,14 +140,14 @@ export function SearchTypeahead({
   const activeResults = isPlaceMode ? placeResults : parishResults;
   const hasResults = activeResults.length > 0;
   const isLoading = isPlaceMode ? placesLoading : churchesLoading;
-  const heading = isPlaceMode ? "Places" : "Matching parishes";
+  const heading = isPlaceMode ? "Places" : "Matching churches";
   const placeholder = isPlaceMode
     ? "Search for a city, ZIP, or address…"
-    : "Search for a parish…";
+    : "Search for a church…";
   const emptyMessage = isPlaceMode
     ? "No matching places."
-    : "No matching parishes.";
-  const modeButtonLabel = isPlaceMode ? "Search parishes" : "Search places";
+    : "No matching churches.";
+  const modeButtonLabel = isPlaceMode ? "Search churches" : "Search places";
   const placeSearchNotConfigured =
     isPlaceMode && placeError instanceof PlaceSearchConfigurationError;
 
@@ -248,7 +248,7 @@ export function SearchTypeahead({
                 aria-label={
                   isPlaceMode
                     ? "Search for a city, ZIP code, or address"
-                    : "Search for parish by name"
+                    : "Search for a church by name"
                 }
                 autoComplete="off"
                 className={`min-w-0 flex-1 bg-transparent font-serif text-ink outline-none placeholder:text-ink-soft placeholder:italic ${
@@ -339,7 +339,7 @@ export function SearchTypeahead({
             {showSearchStatus ? (
               isLoading ? (
                 <div className="px-3 py-4 font-serif text-sm text-ink-soft">
-                  {isPlaceMode ? "Searching places…" : "Loading parishes…"}
+                  {isPlaceMode ? "Searching places…" : "Loading churches…"}
                 </div>
               ) : placeSearchNotConfigured ? (
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
@@ -380,7 +380,7 @@ export function SearchTypeahead({
                           >
                             <div className="min-w-0">
                               <div className="truncate">
-                                {church.name ?? "Unnamed parish"}
+                                {church.name ?? "Unnamed church"}
                               </div>
                               {locationText ? (
                                 <div className="mt-0.5 truncate text-sm text-ink-soft">

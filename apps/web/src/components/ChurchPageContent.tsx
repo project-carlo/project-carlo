@@ -179,11 +179,11 @@ function PageRef({
   );
 }
 
-/** All parishes › {City} › {Parish}, without the city when the address has none. */
+/** All churches › {City} › {Church}, without the city when the address has none. */
 function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
-  const crumbs: Crumb[] = [{ label: "All parishes", href: CHURCH_INDEX_PATH }];
+  const crumbs: Crumb[] = [{ label: "All churches", href: CHURCH_INDEX_PATH }];
   if (city) crumbs.push({ label: city.label, to: cityPath(city.slug) });
-  crumbs.push({ label: church.name ?? "Unnamed parish" });
+  crumbs.push({ label: church.name ?? "Unnamed church" });
   return crumbs;
 }
 
@@ -206,7 +206,7 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
         <section className="rise-in mx-auto max-w-2xl text-center">
           <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church, city)} />
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
-            {church.name ?? "Unnamed parish"}
+            {church.name ?? "Unnamed church"}
           </h1>
 
           {formatAddress(church) ? (
@@ -253,7 +253,7 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
         {events.length === 0 ? (
           <p className="mx-auto mt-6 max-w-2xl text-center font-serif text-sm text-ink-soft md:mt-8">
             No Mass, Confession, or Adoration times are listed for this
-            parish yet.
+            church yet.
           </p>
         ) : null}
 
@@ -388,7 +388,7 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
     </main>
     <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
       <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-        Browse all parishes
+        Browse all churches
       </a>
     </footer>
     </>

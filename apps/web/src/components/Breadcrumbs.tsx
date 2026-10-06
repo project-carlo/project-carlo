@@ -7,13 +7,13 @@ export interface Crumb {
   /** In-app route; rendered as a router link. */
   to?: string;
   /**
-   * A page only the prerenderer writes (the all-parishes index), which the
+   * A page only the prerenderer writes (the all-churches index), which the
    * SPA has no route for: a plain link, so the browser loads it.
    */
   href?: string;
 }
 
-/** A trail of links ending in the current page, e.g. "All parishes › East Aurora, NY › St. Mary". */
+/** A trail of links ending in the current page, e.g. "All churches › East Aurora, NY › St. Mary". */
 export function Breadcrumbs({
   crumbs,
   className,

@@ -183,7 +183,7 @@ function main() {
     );
   mkdirSync(resolve(DIST_DIR, "churches"), { recursive: true });
   writeFileSync(resolve(DIST_DIR, "churches", "index.html"), indexHtml, "utf-8");
-  console.log("Wrote churches/index.html (all-parishes index).");
+  console.log("Wrote churches/index.html (all-churches index).");
 
   const ungeocoded = cities.filter((city) => !city.geocodedCenter);
   if (ungeocoded.length > 0) {

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("the parish index links each city to its prerendered city page", async ({
+test("the church index links each city to its prerendered city page", async ({
   page,
 }) => {
   await page.goto("/churches/");
@@ -33,7 +33,7 @@ test("a church page's breadcrumb leads back to its city page", async ({
   await expect(page).toHaveURL(cityHref);
 });
 
-test("a city with no parishes renders the not-found page", async ({ page }) => {
+test("a city with no churches renders the not-found page", async ({ page }) => {
   const response = await page.goto("/mass-times/no-such-town-zz/");
   expect(response?.status()).toBe(200);
   await expect(

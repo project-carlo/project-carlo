@@ -18,7 +18,7 @@ interface StaticChurchPageProps {
   cssPath: string;
   fontPaths: string[];
   canonicalUrl: string;
-  /** ISO date (YYYY-MM-DD) the parish's data was last updated, if known. */
+  /** ISO date (YYYY-MM-DD) the church's data was last updated, if known. */
   lastModified: string | null;
 }
 

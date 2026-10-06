@@ -2,7 +2,7 @@ import type { EventSummary } from "../types";
 import { formatMinutesMissal, titleCase } from "../utils";
 
 /**
- * Rolls a church's upcoming events up into one row per day, so a parish with
+ * Rolls a church's upcoming events up into one row per day, so a church with
  * three Sunday Masses reads as a single "Sunday — 8 a.m. · 10:30 a.m. · 5
  * p.m." line in the map popup instead of filling the preview with three
  * near-identical rows.

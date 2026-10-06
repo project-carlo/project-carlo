@@ -24,7 +24,7 @@ const church: ChurchDetail = {
 };
 
 describe("churchJsonLd", () => {
-  it("emits the parish as Church structured data", () => {
+  it("emits the church as Church structured data", () => {
     expect(
       churchJsonLd(
         church,
@@ -45,7 +45,7 @@ describe("churchJsonLd", () => {
     });
   });
 
-  it("does not classify a recurring parish schedule as Event structured data", () => {
+  it("does not classify a recurring church schedule as Event structured data", () => {
     const jsonLd = churchJsonLd(
       church,
       "https://projectcarlo.com/churches/st-charles-borromeo/",

@@ -134,8 +134,8 @@ Confession, and Adoration times parsed from weekly bulletins
     Rerun it after adding a diocese: it looks up only the new cities, and the
     build warns about any city still missing (whose page then measures from
     the mean position of its churches).
-  - Visible breadcrumbs on church and city pages (All parishes › City ›
-    Parish), and a city level in the church pages' `BreadcrumbList`; city
+  - Visible breadcrumbs on church and city pages (All churches › City ›
+    Church), and a city level in the church pages' `BreadcrumbList`; city
     pages carry `CollectionPage` + `ItemList` + `BreadcrumbList` JSON-LD.
   - Added to the sitemap; each city heading on `/churches/` links to its page.
   - Step 9 (per-page OG images) not done.

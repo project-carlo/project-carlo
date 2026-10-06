@@ -9,7 +9,7 @@ export function AboutPage() {
   useDocumentMeta({
     title: "About · Project Carlo",
     description:
-      "About Project Carlo — a directory of Catholic parishes with Mass, Confession, and Adoration times parsed from weekly bulletins.",
+      "About Project Carlo — a directory of Catholic churches with Mass, Confession, and Adoration times parsed from weekly bulletins.",
     canonicalUrl: canonicalForPath("/about"),
   });
   const homeHref = useHomeHref();
