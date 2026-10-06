@@ -257,12 +257,17 @@ bulletin for one week for a person to look at. A parish is stale when its
 newest bulletin is two weeks old, however recently the site served it.
 
 `fetch` works on several parishes at once (`pnpm fetch -- --workers N`,
-default 6, each with its own browser), but never sends a site more than one
-request at a time: all ParishesOnline parishes count as one site, as do all
+default 6, each with its own browser), but never has two workers sending one
+site requests: all ParishesOnline parishes count as one site, as do all
 eCatholic and all Discover Mass parishes, and a parish's own website counts
-by its domain (so `parishes.rcda.org` and `www.rcda.org` are one). A worker
-holds the site while it finds the bulletin and downloads it, and lets go
-before compacting the PDF, so the next parish on that site starts then.
+by its domain (so `parishes.rcda.org` and `www.rcda.org` are one). Every
+request a worker sends, from its browser or for the PDF, redirects included,
+waits until the worker holds the site it goes to, if that site is a parish's
+or a bulletin host's (a map or font CDN is no parish's, and is not waited
+for). A worker holds those sites until its parish's PDF is downloaded, takes
+its tab off them first, and lets go before compacting the PDF, so the next
+parish on a site starts then. A worker whose browser will not launch, or
+stops answering, gets a new one; the fetch fails only when no worker can.
 
 The run's status decides what happens next:
 

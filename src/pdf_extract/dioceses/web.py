@@ -32,6 +32,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlsplit
 from urllib.request import Request, urlopen
 
+from pdf_extract.parish_sites.links import registrable_domain
+
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
@@ -278,10 +280,6 @@ def _host(url: str) -> str:
     return (urlsplit(url).hostname or "").lower()
 
 
-def _registrable(host: str) -> str:
-    return ".".join(host.removeprefix("www.").split(".")[-2:])
-
-
 def _resolves(host: str) -> bool:
     for _ in range(2):  # a single resolver failure has been wrong before
         try:
@@ -326,7 +324,7 @@ def probe_url(url: str) -> dict[str, Any]:
         out["spam_terms"] = spam
     if spam and looks_squatted(page):
         verdict = "SPAM-SQUAT"
-    elif resp.final_url and _registrable(_host(resp.final_url)) != _registrable(host):
+    elif resp.final_url and registrable_domain(_host(resp.final_url)) != registrable_domain(host):
         verdict = "REDIRECT-OFFSITE"
     elif resp.status >= 500:
         verdict = "HTTP5XX"

@@ -6,6 +6,7 @@ import time
 from collections import Counter
 from contextlib import contextmanager
 from datetime import date, timedelta
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 import pytest
@@ -14,11 +15,16 @@ from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.db import create_db
 from pdf_extract.duplicates import Validators
 from pdf_extract.fetch import (
+    _REQUEST_GUARD,
     BulletinLink,
     Download,
     FetchSource,
+    SiteBusy,
+    _guard_request,
+    _http_get,
     _site_for_source,
     _site_for_url,
+    _SiteLanes,
     fetch_bulletins,
 )
 from pdf_extract.process import process_bulletins
@@ -606,6 +612,10 @@ def test_fetch_stops_the_workers_when_recording_fails(monkeypatch, db: Path) -> 
         ("https://www.rcda.org/parishes/x/bulletins", "rcda.org"),
         ("https://www.stpeterparish.us/bulletins", "stpeterparish.us"),
         ("netcatholic.org", "netcatholic.org"),
+        ("stmary.org/bulletins//2026", "stmary.org"),
+        ("https://www.stmary.org.au/bulletins", "stmary.org.au"),
+        ("https://parish.example.co.uk/x.pdf", "example.co.uk"),
+        ("http://10.0.0.5/bulletin.pdf", "10.0.0.5"),
     ],
 )
 def test_fetch_groups_requests_by_site(url: str, site: str) -> None:
@@ -618,6 +628,228 @@ def test_fetch_counts_a_hosted_providers_parish_sites_as_the_provider() -> None:
     assert _site_for_source(
         FetchSource("other", "https://www.stpeterparish.us", "")
     ) == "stpeterparish.us"
+
+
+def test_fetch_holds_every_site_a_parishs_requests_go_to(monkeypatch, db: Path) -> None:
+    # An "other" parish's bulletin page sends its tab to ParishesOnline,
+    # which another worker is fetching a parish from.
+    sources = {
+        "test-parish": FetchSource("other", "https://www.parish-one.org"),
+        "test-parish-1": FetchSource("parishes_online", "second"),
+    }
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source", lambda parish: sources.get(parish["slug"]),
+    )
+    _fake_browser(monkeypatch)
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: data)
+
+    lock = threading.Lock()
+    in_flight = 0
+    most = 0
+
+    def request_parishes_online() -> None:
+        nonlocal in_flight, most
+        _guard_request("https://parishesonline.com/publication-page/x")
+        with lock:
+            in_flight += 1
+            most = max(most, in_flight)
+        time.sleep(0.2)
+        with lock:
+            in_flight -= 1
+
+    def build_link(bulletin_provider, fetch_provider_id, **_):
+        request_parishes_online()
+        url = f"https://www.parish-one.org/{fetch_provider_id}.pdf"
+        return BulletinLink(source_url=url, fetch_url=url)
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    _serve(monkeypatch, b"%PDF one", b"%PDF two")
+
+    assert fetch_bulletins()["fetched_bulletins"] == 2
+    assert most == 1
+
+
+def test_site_lanes_refuse_a_wait_that_would_deadlock() -> None:
+    lanes = _SiteLanes([("a.org", "first"), ("b.org", "second")])  # type: ignore[list-item]
+    first_holds_a = threading.Event()
+    second_holds_b = threading.Event()
+    first_got_b = threading.Event()
+
+    def first() -> None:
+        assert lanes.take() == ("a.org", "first")
+        first_holds_a.set()
+        second_holds_b.wait()
+        lanes.acquire("b.org")
+        first_got_b.set()
+        lanes.release()
+
+    thread = threading.Thread(target=first)
+    thread.start()
+    first_holds_a.wait()
+    assert lanes.take() == ("b.org", "second")
+    second_holds_b.set()
+    while not lanes._wanted["b.org"]:
+        time.sleep(0.01)
+    assert not first_got_b.is_set(), "b.org is held"
+    # Waiting for a.org, whose worker waits for b.org, would wait forever.
+    with pytest.raises(SiteBusy):
+        lanes.acquire("a.org")
+    lanes.release()
+    thread.join(timeout=5)
+    assert first_got_b.is_set()
+
+
+def test_http_get_holds_the_site_a_redirect_leads_to() -> None:
+    class Handler(BaseHTTPRequestHandler):
+        def log_message(self, *args) -> None:
+            pass
+
+        def do_GET(self) -> None:
+            if self.path == "/moved":
+                self.send_response(302)
+                self.send_header("Location", f"http://localhost:{port}/bulletin.pdf")
+                self.end_headers()
+                return
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"%PDF")
+
+    server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+    port = server.server_address[1]
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    lanes = _SiteLanes([], guarded={"127.0.0.1", "localhost"})
+    held_elsewhere = threading.Event()
+    let_go = threading.Event()
+
+    def other_worker() -> None:
+        lanes.acquire("localhost")
+        held_elsewhere.set()
+        time.sleep(0.3)
+        let_go.set()
+        lanes.release()
+
+    _REQUEST_GUARD.lanes = lanes
+    try:
+        thread = threading.Thread(target=other_worker)
+        thread.start()
+        held_elsewhere.wait()
+        assert _http_get(f"http://127.0.0.1:{port}/moved").body == b"%PDF"
+        assert let_go.is_set(), "the redirect waited for the site it leads to"
+        thread.join()
+    finally:
+        _REQUEST_GUARD.lanes = None
+        lanes.release()
+        server.shutdown()
+
+
+def test_fetch_carries_on_when_a_workers_browser_will_not_launch(monkeypatch, db: Path) -> None:
+    sources = {
+        slug: FetchSource("other", f"https://www.{slug}.org")
+        for slug in ("test-parish", "test-parish-1", "test-parish-2")
+    }
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source", lambda parish: sources.get(parish["slug"]),
+    )
+    lock = threading.Lock()
+    launches = 0
+
+    @contextmanager
+    def launch():
+        nonlocal launches
+        with lock:
+            launches += 1
+            if launches == 1:
+                raise RuntimeError("Chrome would not start")
+        yield None
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", launch)
+    _link_to(monkeypatch, "https://example.org/a.pdf")
+    _serve(monkeypatch, b"%PDF a", b"%PDF b", b"%PDF c")
+
+    assert fetch_bulletins(workers=3)["fetched_bulletins"] == 3
+
+
+def test_fetch_fails_when_no_browser_will_launch(monkeypatch, db: Path) -> None:
+    @contextmanager
+    def launch():
+        raise RuntimeError("Chrome would not start")
+        yield
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", launch)
+    _link_to(monkeypatch, "https://example.org/a.pdf")
+
+    with pytest.raises(RuntimeError, match="No browser could be launched") as raised:
+        fetch_bulletins()
+    assert "Chrome would not start" in str(raised.value.__cause__)
+
+
+def test_fetch_relaunches_a_broken_browser_and_tries_its_parish_again(
+    monkeypatch, db: Path,
+) -> None:
+    class Context:
+        def route(self, matcher, handler) -> None:
+            pass
+
+    class Page:
+        context = Context()
+        crashed = False
+
+        def goto(self, url, **_) -> None:
+            if self.crashed:
+                raise RuntimeError("Target page, context or browser has been closed")
+
+    pages: list[Page] = []
+
+    @contextmanager
+    def launch():
+        pages.append(Page())
+        yield pages[-1]
+
+    def build_link(bulletin_provider, fetch_provider_id, *, page, **_):
+        if len(pages) == 1:
+            page.crashed = True
+            raise RuntimeError("Target page, context or browser has been closed")
+        return BulletinLink(source_url="https://example.org/a.pdf", fetch_url="https://example.org/a.pdf")
+
+    monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", launch)
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    _serve(monkeypatch, b"%PDF a")
+
+    assert fetch_bulletins(parish_name="Test Parish")["fetched_bulletins"] == 1
+    assert len(pages) == 2
+
+
+def test_fetch_logs_a_workers_error_when_recording_fails(monkeypatch, db: Path, caplog) -> None:
+    sources = {
+        "test-parish": FetchSource("other", "https://www.parish-one.org"),
+        "test-parish-1": FetchSource("other", "https://www.parish-two.org"),
+    }
+    monkeypatch.setattr(
+        "pdf_extract.fetch._resolve_fetch_source", lambda parish: sources.get(parish["slug"]),
+    )
+    _fake_browser(monkeypatch)
+
+    def build_link(bulletin_provider, fetch_provider_id, **_):
+        url = f"{fetch_provider_id}/bulletin.pdf"
+        return BulletinLink(source_url=url, fetch_url=url)
+
+    def download(*, fetch_url, source_url, validators=None):
+        if "parish-two" in fetch_url:
+            time.sleep(0.3)
+            raise RuntimeError("worker broke")
+        return Download(pdf=b"%PDF one")
+
+    def record(*args, **kwargs):
+        raise sqlite3.OperationalError("database is locked")
+
+    monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: data)
+    monkeypatch.setattr("pdf_extract.fetch.record_parish_result", record)
+
+    with caplog.at_level(logging.ERROR), pytest.raises(sqlite3.OperationalError):
+        fetch_bulletins()
+    assert "worker broke" in caplog.text
 
 
 def test_process_limits_to_the_given_slugs(monkeypatch, db: Path) -> None:
