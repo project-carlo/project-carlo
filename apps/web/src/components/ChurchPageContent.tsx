@@ -4,6 +4,7 @@ import type { ChurchDetail, EventSummary, EventType } from "../types";
 import {
   formatAddress,
   formatEventDate,
+  formatMonthDay,
   formatMinutesMissal,
 } from "../utils";
 import {
@@ -338,13 +339,23 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                               key={event.id}
                               className="grid grid-cols-[6rem_1fr] items-baseline gap-4 py-2.5"
                             >
-                              <dt className="smallcaps text-[0.875rem] text-rubric">
-                                {event.date
-                                  ? formatEventDate(event.date).replace(
+                              {/* The weekday with its date beneath, so a
+                                  one-off service reads apart from the
+                                  weekly rows above it. */}
+                              <dt className="smallcaps text-[0.875rem] leading-tight text-rubric">
+                                {event.date ? (
+                                  <>
+                                    {formatEventDate(event.date).replace(
                                       /, .+$/,
                                       "",
-                                    )
-                                  : "Special"}
+                                    )}
+                                    <span className="block">
+                                      {formatMonthDay(event.date)}
+                                    </span>
+                                  </>
+                                ) : (
+                                  "Special"
+                                )}
                               </dt>
                               <dd className="font-serif text-[1.05rem] leading-snug text-ink">
                                 <span className="tabular-nums">
@@ -353,11 +364,6 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                                     ? ` – ${formatMinutesMissal(event.end_time)}`
                                     : ""}
                                 </span>
-                                {event.date ? (
-                                  <span className="ml-2 font-serif text-[0.9rem] italic text-ink-faint">
-                                    {formatEventDate(event.date)}
-                                  </span>
-                                ) : null}
                                 <EventNote note={event.note} />
                                 {event.page_number !== sectionPage ? (
                                   <PageRef

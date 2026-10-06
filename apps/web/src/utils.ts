@@ -41,6 +41,16 @@ export function formatEventDate(dateStr: string): string {
   return formatted;
 }
 
+const SHORT_MONTH_DAY_FORMATTER = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+});
+
+/** Format YYYY-MM-DD to "Oct 7" style. */
+export function formatMonthDay(dateStr: string): string {
+  return SHORT_MONTH_DAY_FORMATTER.format(new Date(dateStr + "T12:00:00"));
+}
+
 /** Format structured address fields into a single display string. */
 export function formatAddress(church: {
   address_line1: string | null;
