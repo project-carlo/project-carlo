@@ -11,6 +11,13 @@ test("landing page mounts cleanly", async ({ page }) => {
 
   const response = await page.goto("/landing");
   expect(response?.status()).toBe(200);
+  // Kept for visitors, hidden from search engines, before and after the app runs.
+  expect(await response?.text()).toContain('<meta name="robots" content="noindex"');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    "noindex",
+  );
+  await expect(page.locator('link[rel="canonical"]')).toHaveCount(0);
 
   await expect(
     page.getByRole("heading", { name: /Project Carlo/i }),

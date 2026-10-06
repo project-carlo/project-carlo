@@ -147,10 +147,13 @@ Confession, and Adoration times parsed from weekly bulletins
     enabled), written by `scripts/prerender.ts`.
   - The homepage links to `/churches/`; before, its only links were to itself
     and the map credits, so no link path led to any church or city page.
-  - `/landing` left the sitemap (orphaned, overlaps the homepage); `/map` is a
-    301 to `/` instead of a 200 shell.
-  - Left for the Cloudflare zone: "Always Use HTTPS" (http:// served a 200,
-    http://www a 522).
+  - `/landing` is hidden from search engines (orphaned, overlaps the
+    homepage): out of the sitemap, `noindex` in both its shell and the app.
+    `/map` is a 301 to `/` instead of a 200 shell.
+  - Left for the Cloudflare zone: "Always Use HTTPS" under SSL/TLS → Edge
+    Certificates (http:// served a 200, http://www a 522). "Automatic HTTPS
+    Rewrites" is a different setting: it rewrites links inside pages and
+    redirects nothing.
 - [ ] Phase 4 — polish & measurement (submit sitemap to Google Search Console
       + Bing Webmaster Tools after the next deploy; validate with the Rich
       Results Test and Facebook Sharing Debugger — zero-code, do first)

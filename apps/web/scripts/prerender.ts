@@ -78,8 +78,7 @@ function writeSitemapAndRobots(
   buildDate: string,
 ): number {
   const urls: { loc: string; lastmod: string }[] = [
-    // Not /landing: nothing links to it and it overlaps the homepage, so it
-    // stays reachable for visitors without being put forward to search engines.
+    // Not /landing, which is noindex (see writeShellCopies).
     { loc: absoluteUrl(origin, "/"), lastmod: buildDate },
     { loc: absoluteUrl(origin, CHURCH_INDEX_PATH), lastmod: buildDate },
     ...slugs.map((slug) => ({
@@ -135,30 +134,33 @@ function replaceShellTag(html: string, pattern: RegExp, replacement: string): st
   return html.replace(pattern, replacement);
 }
 
+/** The shell marked noindex, without the homepage's canonical or og:url. */
+function noindexShell(shell: string): string {
+  const html = replaceShellTag(shell, SHELL_CANONICAL, '<meta name="robots" content="noindex" />');
+  return replaceShellTag(html, SHELL_OG_URL, "");
+}
+
 /**
  * Writes the copies of the SPA shell (dist/client/index.html) that the
  * client-rendered routes are served from. wrangler.jsonc serves 404.html,
  * with a 404 status, for any URL no file matches, so every page the app
  * routes to needs a file of its own: `/landing` is served from landing.html.
  *
+ * /landing, an alternate entry point that overlaps the homepage, is noindex.
  * 404.html is the shell too, so the router still renders the right "not
- * found" page (church, city or generic), but marked noindex and without the
- * homepage's canonical.
+ * found" page (church, city or generic), and is noindex as well.
  */
 function writeShellCopies(distDir: string, origin: string): void {
   const shell = readFileSync(resolve(distDir, "index.html"), "utf-8");
-  const pages = ["/landing"];
-  if (isAboutPageEnabledAtBuild()) pages.push("/about");
-  for (const page of pages) {
-    const url = absoluteUrl(origin, page);
+  writeFileSync(resolve(distDir, "landing.html"), noindexShell(shell), "utf-8");
+  if (isAboutPageEnabledAtBuild()) {
+    const url = absoluteUrl(origin, "/about");
     let html = replaceShellTag(shell, SHELL_CANONICAL, `<link rel="canonical" href="${url}" />`);
     html = replaceShellTag(html, SHELL_OG_URL, `<meta property="og:url" content="${url}" />`);
-    writeFileSync(resolve(distDir, `${page.slice(1)}.html`), html, "utf-8");
+    writeFileSync(resolve(distDir, "about.html"), html, "utf-8");
   }
-  let notFound = replaceShellTag(shell, SHELL_CANONICAL, '<meta name="robots" content="noindex" />');
-  notFound = replaceShellTag(notFound, SHELL_OG_URL, "");
-  writeFileSync(resolve(distDir, "404.html"), notFound, "utf-8");
-  console.log(`Wrote 404.html and ${pages.length} SPA shell page(s): ${pages.join(", ")}.`);
+  writeFileSync(resolve(distDir, "404.html"), noindexShell(shell), "utf-8");
+  console.log("Wrote 404.html and the SPA shell pages.");
 }
 
 function main() {
