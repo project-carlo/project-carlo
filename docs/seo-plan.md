@@ -150,10 +150,14 @@ Confession, and Adoration times parsed from weekly bulletins
   - `/landing` is hidden from search engines (orphaned, overlaps the
     homepage): out of the sitemap, `noindex` in both its shell and the app.
     `/map` is a 301 to `/` instead of a 200 shell.
-  - Left for the Cloudflare zone: "Always Use HTTPS" under SSL/TLS → Edge
-    Certificates (http:// served a 200, http://www a 522). "Automatic HTTPS
-    Rewrites" is a different setting: it rewrites links inside pages and
-    redirects nothing.
+  - Sitemap `<lastmod>` and JSON-LD `dateModified` date each page by when
+    its content last changed, not the build: each build publishes
+    `lastmod.json` (content hash + date per page) and the next one keeps a
+    page's date while its hash is unchanged (`src/lib/lastmod.ts`). If the
+    live file can't be read, every page is dated today and the chain restarts.
+  - Cloudflare zone: "Always Use HTTPS" turned on 2026-10-06 (http:// had
+    served a 200, http://www a 522). "Automatic HTTPS Rewrites" is a different
+    setting: it rewrites links inside pages and redirects nothing.
 - [ ] Phase 4 — polish & measurement (submit sitemap to Google Search Console
       + Bing Webmaster Tools after the next deploy; validate with the Rich
       Results Test and Facebook Sharing Debugger — zero-code, do first)
