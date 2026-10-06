@@ -34,9 +34,9 @@ describe("weeklyScheduleRows", () => {
       ),
     ]);
     expect(rows.map((r) => [r.label, r.times])).toEqual([
-      ["Sundays", ["8 a.m.", "10:30 a.m."]],
+      ["Sunday", ["8 a.m.", "10:30 a.m."]],
       ["Mon – Fri", ["8 a.m."]],
-      ["Saturdays", ["4 p.m."]],
+      ["Saturday", ["4 p.m."]],
     ]);
   });
 
@@ -49,7 +49,7 @@ describe("weeklyScheduleRows", () => {
     ]);
     expect(rows.map((r) => [r.label, r.times])).toEqual([
       ["Mon & Tue", ["8 a.m."]],
-      ["Thursdays", ["8 a.m."]],
+      ["Thursday", ["8 a.m."]],
     ]);
   });
 

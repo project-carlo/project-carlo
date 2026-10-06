@@ -19,12 +19,12 @@ const DAY_ABBR: Record<string, string> = {
   saturday: "Sat",
 };
 
-function pluralDay(day: string): string {
-  return day.charAt(0).toUpperCase() + day.slice(1) + "s";
+function dayName(day: string): string {
+  return day.charAt(0).toUpperCase() + day.slice(1);
 }
 
 function runLabel(days: string[]): string {
-  if (days.length === 1) return pluralDay(days[0]);
+  if (days.length === 1) return dayName(days[0]);
   const first = DAY_ABBR[days[0]];
   const last = DAY_ABBR[days[days.length - 1]];
   return days.length === 2 ? `${first} & ${last}` : `${first} – ${last}`;

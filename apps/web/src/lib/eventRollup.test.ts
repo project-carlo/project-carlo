@@ -38,7 +38,7 @@ describe("rollUpEventsByDay", () => {
     ]);
 
     expect(rows).toHaveLength(1);
-    expect(rows[0].label).toBe("Sundays");
+    expect(rows[0].label).toBe("Sunday");
     expect(rows[0].times).toEqual(["7:30 a.m.", "9 a.m.", "11 a.m."]);
   });
 
@@ -51,9 +51,9 @@ describe("rollUpEventsByDay", () => {
     ]);
 
     expect(rows.map((row) => row.label)).toEqual([
-      "Sundays",
-      "Saturdays",
-      "Mondays",
+      "Sunday",
+      "Saturday",
+      "Monday",
     ]);
   });
 

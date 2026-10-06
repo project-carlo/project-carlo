@@ -73,9 +73,7 @@ function partitionEventsByType(
 
 function formatDayLabel(day: string): string {
   const d = day.toLowerCase();
-  if (d === "sunday") return "Sundays";
-  if (d === "saturday") return "Saturdays";
-  return d.charAt(0).toUpperCase() + d.slice(1) + "s";
+  return d.charAt(0).toUpperCase() + d.slice(1);
 }
 
 function formatTimeValue(event: EventSummary): string {

@@ -3,7 +3,7 @@ import { formatMinutesMissal, titleCase } from "../utils";
 
 /**
  * Rolls a church's upcoming events up into one row per day, so a parish with
- * three Sunday Masses reads as a single "Sundays — 8 a.m. · 10:30 a.m. · 5
+ * three Sunday Masses reads as a single "Sunday — 8 a.m. · 10:30 a.m. · 5
  * p.m." line in the map popup instead of filling the preview with three
  * near-identical rows.
  *
@@ -13,7 +13,7 @@ import { formatMinutesMissal, titleCase } from "../utils";
 export interface ScheduleRollupRow {
   /** Stable key for React lists. */
   key: string;
-  /** Day heading, e.g. "Sundays" or "Tue, Mar 17". */
+  /** Day heading, e.g. "Sunday" or "Tue, Mar 17". */
   label: string;
   /**
    * Distinct start times for the day, earliest first, each formatted with its
@@ -34,7 +34,7 @@ function rollupKey(event: EventSummary): string {
 
 function rollupLabel(event: EventSummary): string {
   if (event.kind === "weekly" && event.day_of_week) {
-    return titleCase(event.day_of_week) + "s";
+    return titleCase(event.day_of_week);
   }
   if (event.date) return formatCompactDate(event.date);
   return "";

@@ -191,7 +191,6 @@ function NearbyChurch({ entry }: { entry: CityChurchEntry }) {
 
 export function CityPageContent({ data }: { data: CityPageData }) {
   const { city, churches, nearby } = data;
-  const count = churches.length;
 
   return (
     <>
@@ -211,13 +210,7 @@ export function CityPageContent({ data }: { data: CityPageData }) {
               Mass Times in {city.label}
             </h1>
             <p className="mt-4 font-serif text-[1rem] text-ink-soft">
-              Mass, Confession &amp; Adoration times at{" "}
-              {count === 1
-                ? "the Catholic church"
-                : `the ${count} Catholic churches`}{" "}
-              in {city.name}
-              {nearby.length > 0 ? ", and the closest parishes nearby" : ""},
-              from each parish&rsquo;s weekly bulletin.
+              Served from each parish&rsquo;s weekly bulletin.
             </p>
             <Fleuron className="mt-7" />
           </section>
@@ -242,9 +235,6 @@ export function CityPageContent({ data }: { data: CityPageData }) {
                 >
                   Nearby churches
                 </h2>
-                <p className="mt-2 font-serif text-[0.95rem] text-ink-soft">
-                  The closest parishes outside {city.name}, nearest first.
-                </p>
                 <ul className="mt-2 divide-y divide-rule">
                   {nearby.map((entry) => (
                     <NearbyChurch key={entry.church.id} entry={entry} />
