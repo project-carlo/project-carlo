@@ -35,7 +35,7 @@ test("a church page's breadcrumb leads back to its city page", async ({
 
 test("a city with no churches renders the not-found page", async ({ page }) => {
   const response = await page.goto("/mass-times/no-such-town-zz/");
-  expect(response?.status()).toBe(200);
+  expect(response?.status()).toBe(404);
   await expect(
     page.getByRole("heading", { name: "City not found" }),
   ).toBeVisible({ timeout: 15_000 });

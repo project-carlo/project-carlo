@@ -78,8 +78,9 @@ function writeSitemapAndRobots(
   buildDate: string,
 ): number {
   const urls: { loc: string; lastmod: string }[] = [
+    // Not /landing: nothing links to it and it overlaps the homepage, so it
+    // stays reachable for visitors without being put forward to search engines.
     { loc: absoluteUrl(origin, "/"), lastmod: buildDate },
-    { loc: absoluteUrl(origin, "/landing"), lastmod: buildDate },
     { loc: absoluteUrl(origin, CHURCH_INDEX_PATH), lastmod: buildDate },
     ...slugs.map((slug) => ({
       loc: canonicalUrlForChurchSlug(origin, slug),
@@ -120,6 +121,44 @@ function writeSitemapAndRobots(
 
   writeFileSync(resolve(distDir, "robots.txt"), robots, "utf-8");
   return urls.length;
+}
+
+const SHELL_CANONICAL = /<link rel="canonical" href="[^"]*"\s*\/?>/;
+const SHELL_OG_URL = /<meta property="og:url" content="[^"]*"\s*\/?>/;
+
+/** Replaces one tag in the SPA shell, failing the build if index.html stops
+ *  carrying it rather than shipping a page with the homepage's tag. */
+function replaceShellTag(html: string, pattern: RegExp, replacement: string): string {
+  if (!pattern.test(html)) {
+    throw new Error(`index.html no longer matches ${pattern}; update prerender.ts`);
+  }
+  return html.replace(pattern, replacement);
+}
+
+/**
+ * Writes the copies of the SPA shell (dist/client/index.html) that the
+ * client-rendered routes are served from. wrangler.jsonc serves 404.html,
+ * with a 404 status, for any URL no file matches, so every page the app
+ * routes to needs a file of its own: `/landing` is served from landing.html.
+ *
+ * 404.html is the shell too, so the router still renders the right "not
+ * found" page (church, city or generic), but marked noindex and without the
+ * homepage's canonical.
+ */
+function writeShellCopies(distDir: string, origin: string): void {
+  const shell = readFileSync(resolve(distDir, "index.html"), "utf-8");
+  const pages = ["/landing"];
+  if (isAboutPageEnabledAtBuild()) pages.push("/about");
+  for (const page of pages) {
+    const url = absoluteUrl(origin, page);
+    let html = replaceShellTag(shell, SHELL_CANONICAL, `<link rel="canonical" href="${url}" />`);
+    html = replaceShellTag(html, SHELL_OG_URL, `<meta property="og:url" content="${url}" />`);
+    writeFileSync(resolve(distDir, `${page.slice(1)}.html`), html, "utf-8");
+  }
+  let notFound = replaceShellTag(shell, SHELL_CANONICAL, '<meta name="robots" content="noindex" />');
+  notFound = replaceShellTag(notFound, SHELL_OG_URL, "");
+  writeFileSync(resolve(distDir, "404.html"), notFound, "utf-8");
+  console.log(`Wrote 404.html and ${pages.length} SPA shell page(s): ${pages.join(", ")}.`);
 }
 
 function main() {
@@ -212,6 +251,8 @@ function main() {
     writeFileSync(resolve(outDir, "index.html"), html, "utf-8");
   }
   console.log(`Pre-rendered ${citySlugs.length} city pages.`);
+
+  writeShellCopies(DIST_DIR, origin);
 
   const urlCount = writeSitemapAndRobots(DIST_DIR, origin, slugs, citySlugs, buildDate);
   console.log(`Wrote sitemap.xml and robots.txt (${urlCount} URLs).`);

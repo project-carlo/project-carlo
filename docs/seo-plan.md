@@ -139,6 +139,18 @@ Confession, and Adoration times parsed from weekly bulletins
     pages carry `CollectionPage` + `ItemList` + `BreadcrumbList` JSON-LD.
   - Added to the sitemap; each city heading on `/churches/` links to its page.
   - Step 9 (per-page OG images) not done.
+- [x] Pre-submission crawl audit (2026-10-06): every sitemap URL returned 200
+      with a self-canonical and valid JSON-LD; fixed what wasn't right:
+  - Unknown URLs are real 404s: `not_found_handling: "404-page"` serves
+    `404.html` (the SPA shell, `noindex`, no canonical) instead of a 200 shell.
+    Client routes need their own shell copy (`landing.html`, `about.html` when
+    enabled), written by `scripts/prerender.ts`.
+  - The homepage links to `/churches/`; before, its only links were to itself
+    and the map credits, so no link path led to any church or city page.
+  - `/landing` left the sitemap (orphaned, overlaps the homepage); `/map` is a
+    301 to `/` instead of a 200 shell.
+  - Left for the Cloudflare zone: "Always Use HTTPS" (http:// served a 200,
+    http://www a 522).
 - [ ] Phase 4 — polish & measurement (submit sitemap to Google Search Console
       + Bing Webmaster Tools after the next deploy; validate with the Rich
       Results Test and Facebook Sharing Debugger — zero-code, do first)
