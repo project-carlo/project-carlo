@@ -388,8 +388,8 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
           <Fleuron solo className="text-brass" />
           <p className="mt-4 text-center font-serif text-[0.9rem] text-ink-faint">
             Mass times are extracted with AI from each parish&apos;s latest
-            available bulletin and may not always be accurate. Please
-            confirm details with the parish before attending.
+            available bulletin and may contain mistakes. Please confirm details
+            with an official parish source before attending.
           </p>
         </div>
       </div>
