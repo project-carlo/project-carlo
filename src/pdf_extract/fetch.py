@@ -14,10 +14,11 @@ from contextlib import ExitStack, closing
 from dataclasses import dataclass, replace
 from datetime import date
 from http import HTTPStatus
+from http.client import HTTPException
 from typing import Any, NamedTuple
-from urllib.error import HTTPError, URLError
+from urllib.error import HTTPError
 from urllib.parse import parse_qs, quote, unquote, urljoin, urlparse, urlunparse
-from urllib.request import HTTPRedirectHandler, Request, build_opener
+from urllib.request import Request, urlopen
 
 from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.browser import (
@@ -44,7 +45,7 @@ from pdf_extract.duplicates import (
 )
 from pdf_extract.parish_sites import Recipe, resolve_parish_site
 from pdf_extract.parish_sites.dates import safe_date
-from pdf_extract.parish_sites.links import FLIPBOOK_HOSTS, registrable_domain, url_host
+from pdf_extract.parish_sites.links import registrable_domain, url_host
 from pdf_extract.pdf_compact import compact_bulletin_pdf
 from pdf_extract.runs import (
     FETCH_CURRENT,
@@ -513,9 +514,8 @@ def _http_get(
         headers["Referer"] = referer
     headers.update(extra_headers or {})
     req = Request(request_url, headers=headers)
-    _guard_request(request_url)
     LOGGER.info("Fetching URL: %s", request_url)
-    with _OPENER.open(req, timeout=timeout) as resp:
+    with urlopen(req, timeout=timeout) as resp:
         return _Response(resp.read(), resp.headers.get("ETag"), resp.headers.get("Last-Modified"))
 
 
@@ -562,7 +562,7 @@ def _download_bulletin(
             LOGGER.warning("429 from %s; retrying in %ss", fetch_url, HTTP_429_RETRY_SECONDS)
             time.sleep(HTTP_429_RETRY_SECONDS)
             response = get()
-    except (HTTPError, URLError, OSError) as exc:
+    except (OSError, HTTPException) as exc:
         # urllib raises a 304 like any other non-2xx answer.
         if conditional and isinstance(exc, HTTPError) and exc.code == HTTPStatus.NOT_MODIFIED:
             LOGGER.info("Not modified since the copy we have: %s", fetch_url)
@@ -583,9 +583,9 @@ def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
 # ── Pipeline: fetch ─────────────────────────────────────────────────────────
 
 # Parishes fetched at once, each worker with its own browser. However many
-# there are, a site never has two workers sending it requests (see
-# `_SiteLanes`); the workers only overlap different sites, and the PDF
-# compaction that follows a download.
+# there are, a site never has two workers fetching from it (see `_SiteLanes`);
+# the workers only overlap different sites, and the PDF compaction that
+# follows a download.
 FETCH_WORKERS = 6
 
 # Domains that serve many parishes' pages and bulletins, mapped to the
@@ -598,13 +598,9 @@ _PROVIDER_DOMAINS: dict[str, str] = {
 }
 # Providers whose parish pages all come from the provider's servers, whatever
 # domain the parish uses (an eCatholic parish's /bulletins is eCatholic's).
-_HOSTED_PROVIDERS = frozenset({ECATHOLIC_TYPE, PARISHES_ONLINE_TYPE, DISCOVER_MASS_TYPE})
-# Sites a parish's bulletin page sends us to, held like the parishes' own
-# sites whether or not any parish in the run starts from one.
-_SHARED_BULLETIN_HOSTS = frozenset({*_PROVIDER_DOMAINS, *FLIPBOOK_HOSTS})
-# Sites so large that our requests are nothing to them, which many parish
-# pages load something from (maps, videos, fonts): never held, so no worker
-# waits for one.
+_HOSTED_PROVIDERS = frozenset(_PROVIDER_DOMAINS.values())
+# Sites so large that our requests are nothing to them: never held, so no
+# worker waits for one.
 _UNLIMITED_SITES = frozenset({
     "facebook.com", "google.com", "googleapis.com", "googleusercontent.com",
     "gstatic.com", "youtube.com",
@@ -657,53 +653,43 @@ class _Fetched:
     seen_at: str | None = None
 
 
-class SiteBusy(OSError):
-    """A request not sent: waiting for its site would leave two workers each
-    waiting for a site the other holds."""
-
-
 class _SiteLanes:
-    """Lets one worker at a time send requests to a site.
+    """Lets one worker at a time fetch from a site.
 
-    A worker takes a parish together with the site it starts on (`take`), and
-    holds each other guarded site its requests go to as they go out
-    (`acquire`, which every request a fetch worker sends goes through), until
-    it lets them all go (`release`). A site is held for a parish, not a
-    request: a page sends its site many requests at once, and keeps loading
-    what it asks for after the request that opened it.
+    A worker holds one site at a time: its parish's site while its tab
+    resolves the bulletin link (`take`), then the PDF's site while it
+    downloads (`switch`), until it lets go (`release`) before compacting.
+    Holding only one, a worker never waits for a site while another waits
+    for one it holds, so the lanes cannot deadlock. A page's requests to
+    other sites (a flipbook, a redirect) are not waited for; there are only
+    ever a few workers to send them.
 
     A free worker takes a parish from the site with the most parishes still
     waiting, so the longest queue (one provider can have half the parishes)
     never sits idle; each site's parishes go in their given order, and a site
-    a worker is waiting for goes to it before any new parish.
+    a worker waits to download from goes to it before any new parish.
     """
 
-    def __init__(
-        self, jobs: list[tuple[str, _FetchJob]], *, guarded: Collection[str] = (),
-    ) -> None:
+    def __init__(self, jobs: list[tuple[str, _FetchJob]]) -> None:
         self._pending: dict[str, deque[_FetchJob]] = {}
         for site, job in jobs:
             self._pending.setdefault(site, deque()).append(job)
-        # Every parish's starting site, and the shared hosts bulletin pages
-        # send us to. Other sites (a CDN, a map) are no parish's, and are sent
-        # requests without waiting.
-        self._guarded = (set(self._pending) | set(guarded)) - _UNLIMITED_SITES
         self._holders: dict[str, int] = {}
         """Each held site's worker (its thread)."""
-        self._waiting: dict[int, str] = {}
-        """The site each waiting worker waits for."""
         self._wanted: Counter[str] = Counter()
+        self._in_flight = 0
+        """Parishes taken and not yet done: any of them can still be put back."""
         self._closed = False
         self._cond = threading.Condition()
 
-    def guards(self, site: str) -> bool:
-        return site in self._guarded
-
     def take(self) -> tuple[str, _FetchJob] | None:
-        """The next parish and its site, now held; None when none are left."""
-        me = threading.get_ident()
+        """The next parish and its site, now held; None when none are left.
+
+        Waits while every waiting parish's site is busy, and while other
+        workers' parishes may yet be put back.
+        """
         with self._cond:
-            while self._pending:
+            while not self._closed:
                 free = [
                     site for site in self._pending
                     if site not in self._holders and not self._wanted[site]
@@ -714,56 +700,45 @@ class _SiteLanes:
                     job = pending.popleft()
                     if not pending:
                         del self._pending[site]
-                    if site in self._guarded:
-                        self._holders[site] = me
+                    self._hold(site)
+                    self._in_flight += 1
                     return site, job
+                if not self._pending and not self._in_flight:
+                    break
                 self._cond.wait()
             return None
 
-    def acquire(self, site: str) -> None:
-        """Hold `site` for this worker, waiting while another worker holds it.
-
-        Raises SiteBusy instead of waiting for a site whose worker waits, by
-        way of any others, for a site this worker holds.
-        """
-        if site not in self._guarded:
-            return
+    def switch(self, site: str) -> None:
+        """Hold `site` in place of this worker's site, waiting while another worker holds it."""
         me = threading.get_ident()
         with self._cond:
-            holder = self._holders.get(site)
-            if holder == me:
+            if self._holders.get(site) == me:
                 return
-            seen: set[int] = set()
-            while holder is not None and holder not in seen:
-                if holder == me:
-                    raise SiteBusy(f"{site} is held by a worker waiting for one this one holds")
-                seen.add(holder)
-                waits_for = self._waiting.get(holder)
-                holder = None if waits_for is None else self._holders.get(waits_for)
-            self._waiting[me] = site
+            self._let_go()
+            if site in _UNLIMITED_SITES:
+                return
             self._wanted[site] += 1
             try:
                 while site in self._holders:
                     self._cond.wait()
             finally:
-                del self._waiting[me]
                 self._wanted[site] -= 1
-            self._holders[site] = me
+            self._hold(site)
 
-    def release(self, *, keep: str | None = None) -> None:
-        """Let go of every site this worker holds but `keep`."""
-        me = threading.get_ident()
+    def release(self) -> None:
+        """Let go of the site this worker holds."""
         with self._cond:
-            for site in [s for s, h in self._holders.items() if h == me and s != keep]:
-                del self._holders[site]
-            self._cond.notify_all()
+            self._let_go()
 
-    def put_back(self, site: str, job: _FetchJob) -> None:
-        """Hand `job` out again, first of its site's."""
+    def done(self, *, again: tuple[str, _FetchJob] | None = None) -> None:
+        """Finish this worker's parish, handing `again` out next if given."""
         with self._cond:
-            if not self._closed:
+            self._let_go()
+            self._in_flight -= 1
+            if again is not None and not self._closed:
+                site, job = again
                 self._pending.setdefault(site, deque()).appendleft(job)
-                self._cond.notify_all()
+            self._cond.notify_all()
 
     def unfinished(self) -> int:
         """Parishes not yet handed out."""
@@ -777,39 +752,25 @@ class _SiteLanes:
             self._pending.clear()
             self._cond.notify_all()
 
+    def _hold(self, site: str) -> None:
+        if site not in _UNLIMITED_SITES:
+            self._holders[site] = threading.get_ident()
 
-# The `_SiteLanes` a fetch worker's requests go through. Unset outside the
-# workers, whose requests go straight out.
-_REQUEST_GUARD = threading.local()
-
-
-def _guard_request(url: str) -> None:
-    """Wait until this worker may send `url`'s site requests, and hold the site."""
-    lanes: _SiteLanes | None = getattr(_REQUEST_GUARD, "lanes", None)
-    if lanes is not None:
-        lanes.acquire(_site_for_url(url))
-
-
-class _GuardedRedirectHandler(HTTPRedirectHandler):
-    """Follows a redirect once this worker holds the site it leads to."""
-
-    def redirect_request(self, req, fp, code, msg, headers, newurl):
-        _guard_request(newurl)
-        return super().redirect_request(req, fp, code, msg, headers, newurl)
-
-
-_OPENER = build_opener(_GuardedRedirectHandler)
+    def _let_go(self) -> None:
+        me = threading.get_ident()
+        for site in [s for s, h in self._holders.items() if h == me]:
+            del self._holders[site]
+        self._cond.notify_all()
 
 
 class _Tab:
-    """A fetch worker's browser tab, whose requests go through `lanes`."""
+    """A fetch worker's browser tab."""
 
     # Long enough for a busy renderer; one that cannot open a blank page in
     # this long has stopped answering.
     PARK_TIMEOUT_MS = 10_000
 
-    def __init__(self, lanes: _SiteLanes) -> None:
-        self._lanes = lanes
+    def __init__(self) -> None:
         self._browser: ExitStack | None = None
         self.page: PageLike | None = None
         self.broken = True
@@ -821,15 +782,13 @@ class _Tab:
         browser = ExitStack()
         try:
             page = browser.enter_context(launch_stealth_browser())
-            if page is not None:
-                page.context.route(lambda url: self._lanes.guards(_site_for_url(url)), _route)
         except BaseException:
             browser.close()
             raise
         self._browser, self.page, self.broken = browser, page, False
 
     def park(self) -> None:
-        """Take the tab off the sites it was on, so it sends them nothing more.
+        """Take the tab off the site it was on, so it sends it nothing more.
 
         A page keeps loading what it asks for, and a navigation that timed out
         keeps going, after we are done with them. A tab that cannot even open
@@ -850,23 +809,6 @@ class _Tab:
             except Exception as exc:
                 LOGGER.warning("Failed closing a browser: %s", exc)
         self._browser, self.page = None, None
-
-
-def _route(route) -> None:
-    """Send a tab's request to a guarded site once this worker holds the site."""
-    try:
-        _guard_request(route.request.url)
-    except SiteBusy as exc:
-        LOGGER.info("Not loading %s: %s", route.request.url, exc)
-        action = route.abort
-    else:
-        action = route.fallback
-    try:
-        action()
-    except Exception as exc:
-        # The page gave up on the request (a timeout, a new navigation) while
-        # it waited for its site.
-        LOGGER.debug("Request to %s already settled: %s", route.request.url, exc)
 
 
 def fetch_bulletins(
@@ -987,15 +929,12 @@ def _fetch_in_parallel(
     """
     if not jobs:
         return
-    lanes = _SiteLanes(
-        jobs, guarded={_site_for_url(host) for host in _SHARED_BULLETIN_HOSTS},
-    )
+    lanes = _SiteLanes(jobs)
     results: queue.SimpleQueue[_Fetched | None] = queue.SimpleQueue()
     launch_errors: list[Exception] = []
 
     def work() -> None:
-        _REQUEST_GUARD.lanes = lanes
-        tab = _Tab(lanes)
+        tab = _Tab()
         try:
             while True:
                 if tab.broken:
@@ -1008,23 +947,27 @@ def _fetch_in_parallel(
                 if (taken := lanes.take()) is None:
                     return
                 site, job = taken
-                fetched = _fetch_one(
-                    job, lanes=lanes, tab=tab, store=store, sunday=sunday, today=today,
-                )
-                if tab.broken and fetched.status == FETCH_RESOLVE_FAILED and not job.retried:
-                    # The browser broke under this parish: it gets a new one.
-                    LOGGER.warning("Trying parish %s again in a new browser", job.parish["slug"])
-                    lanes.put_back(site, replace(job, retried=True))
-                    continue
-                results.put(fetched)
+                again = None
+                try:
+                    fetched = _fetch_one(
+                        job, lanes=lanes, tab=tab, store=store, sunday=sunday, today=today,
+                    )
+                    if tab.broken and fetched.status == FETCH_RESOLVE_FAILED and not job.retried:
+                        # The browser broke under this parish: it is tried
+                        # again, by whichever worker has a browser first.
+                        LOGGER.warning(
+                            "Trying parish %s again in a new browser", job.parish["slug"],
+                        )
+                        again = (site, replace(job, retried=True))
+                    else:
+                        results.put(fetched)
+                finally:
+                    lanes.done(again=again)
         except BaseException:
             lanes.close()
             raise
         finally:
             tab.close()
-            # Whatever the closing tab's last requests took hold of.
-            lanes.release()
-            _REQUEST_GUARD.lanes = None
             results.put(None)
 
     count = max(1, min(workers, len(jobs)))
@@ -1071,8 +1014,8 @@ def _fetch_one(
 ) -> _Fetched:
     """Resolve, download and store one parish's bulletin; no database access.
 
-    Holds the parish's site (taken from `lanes`), and the others its
-    requests go to, until the download is done.
+    Holds the parish's site (taken from `lanes`) while resolving, then the
+    PDF's site while downloading, and neither while compacting.
     """
     slug = job.parish["slug"]
     try:
@@ -1093,23 +1036,20 @@ def _fetch_one(
         finally:
             tab.park()
 
-        pdf_site = _site_for_url(link.fetch_url)
-        lanes.release(keep=pdf_site)
-
         # The address is never taken to mean we have the bulletin: one
         # address can carry a new issue each week, and one issue can
         # come from a new address each time. It only lets the server
         # say the copy we have from it is current.
         known = validators_for(link.source_url, job.stored)
         try:
-            lanes.acquire(pdf_site)
+            lanes.switch(_site_for_url(link.fetch_url))
             download = _download_bulletin(
                 fetch_url=link.fetch_url, source_url=link.source_url,
                 validators=None if known is None else Validators(
                     known.bulletin.get("etag"), known.bulletin.get("last_modified"),
                 ),
             )
-        except (HTTPError, URLError, OSError) as exc:
+        except (OSError, HTTPException) as exc:
             LOGGER.warning("Failed downloading bulletin for %s: %s", slug, exc)
             # A re-check of this week's bulletin, which we already have from
             # this address but could not trust the date of, is not a failure

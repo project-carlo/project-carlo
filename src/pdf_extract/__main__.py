@@ -358,7 +358,7 @@ def _build_parser() -> argparse.ArgumentParser:
     fetch_parser.add_argument("--parish", help="Parish name (omit to run for all)")
     fetch_parser.add_argument(
         "--workers", type=int, default=FETCH_WORKERS,
-        help="Parishes fetched at once, one request per site at most (1 fetches one at a time)",
+        help="Parishes fetched at once, one per site at most (1 fetches one at a time)",
     )
     fetch_parser.set_defaults(handler=_cmd_fetch)
     _add_common_args(fetch_parser)

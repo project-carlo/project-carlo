@@ -32,7 +32,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlsplit
 from urllib.request import Request, urlopen
 
-from pdf_extract.parish_sites.links import registrable_domain
+from pdf_extract.parish_sites.links import registrable_domain, url_host
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -276,10 +276,6 @@ VERDICT_NOTES = {
 }
 
 
-def _host(url: str) -> str:
-    return (urlsplit(url).hostname or "").lower()
-
-
 def _resolves(host: str) -> bool:
     for _ in range(2):  # a single resolver failure has been wrong before
         try:
@@ -293,7 +289,8 @@ def _resolves(host: str) -> bool:
 def probe_url(url: str) -> dict[str, Any]:
     """What is at a parish website now, and which bulletin does it embed?"""
     out: dict[str, Any] = {"url": url}
-    host = _host(url)
+    # An address without its scheme cannot be fetched as it is.
+    host = url_host(url) if urlsplit(url).scheme else ""
     if not host:
         return {**out, "verdict": "BAD-URL"}
     if not _resolves(host):
@@ -324,7 +321,7 @@ def probe_url(url: str) -> dict[str, Any]:
         out["spam_terms"] = spam
     if spam and looks_squatted(page):
         verdict = "SPAM-SQUAT"
-    elif resp.final_url and registrable_domain(_host(resp.final_url)) != registrable_domain(host):
+    elif resp.final_url and registrable_domain(url_host(resp.final_url)) != registrable_domain(host):
         verdict = "REDIRECT-OFFSITE"
     elif resp.status >= 500:
         verdict = "HTTP5XX"
