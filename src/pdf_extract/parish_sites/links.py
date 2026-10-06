@@ -5,8 +5,42 @@ These only read addresses; nothing here opens a page.
 
 from __future__ import annotations
 
+import ipaddress
 import re
 from urllib.parse import parse_qs, urlparse
+
+# ── Hosts ───────────────────────────────────────────────────────────────────
+
+_SCHEME = re.compile(r"^[a-z][a-z0-9+.-]*://", flags=re.IGNORECASE)
+# Second-level labels that are, under a country code, a public suffix of their
+# own: stmary.org.au is St Mary's domain, not one shared with every .org.au.
+_COUNTRY_SECOND_LEVELS = frozenset({"ac", "co", "com", "edu", "gov", "net", "org"})
+
+
+def url_host(url: str) -> str:
+    """The lower-cased host of `url`, which may leave out its scheme; "" for none."""
+    try:
+        return (urlparse(url if _SCHEME.match(url) else f"//{url}").hostname or "").lower()
+    except ValueError:  # a malformed address, such as an unclosed "[" in its host
+        return ""
+
+
+def registrable_domain(host: str) -> str:
+    """The domain one owner registered `host` under: parishes.rcda.org -> rcda.org.
+
+    An IP address is its own domain.
+    """
+    host = host.lower().rstrip(".").removeprefix("www.")
+    try:
+        ipaddress.ip_address(host)
+        return host
+    except ValueError:
+        pass
+    labels = host.split(".")
+    keep = 2
+    if len(labels) > 2 and len(labels[-1]) == 2 and labels[-2] in _COUNTRY_SECOND_LEVELS:
+        keep = 3
+    return ".".join(labels[-keep:])
 
 # ── Google Drive ────────────────────────────────────────────────────────────
 
