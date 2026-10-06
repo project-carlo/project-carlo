@@ -392,28 +392,30 @@ export function HomePage() {
             data-map-overlay
             className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-6 pt-5 pb-4 shadow-missal-floating backdrop-blur-sm"
           >
-            <div className="flex items-start justify-between gap-4">
-              <Masthead />
-              {/* A plain link, not a router Link: /churches/ is a prerendered
-                  page with no SPA route. It's also the homepage's one crawlable
-                  path into the church and city pages. */}
-              <div className="mt-1 flex shrink-0 flex-col items-end gap-1">
-                <a
-                  href={CHURCH_INDEX_PATH}
-                  className="rubric-link font-serif text-[0.9375rem]"
-                >
-                  All churches
-                </a>
-                {aboutPageEnabled ? (
-                  <Link
-                    to="/about"
+            <Masthead
+              aside={
+                // Beside the wordmark only, so the tagline keeps one line.
+                // A plain link, not a router Link: /churches/ is a prerendered
+                // page with no SPA route. It's also the homepage's one
+                // crawlable path into the church and city pages.
+                <div className="mt-1 flex shrink-0 flex-col items-end gap-1">
+                  <a
+                    href={CHURCH_INDEX_PATH}
                     className="rubric-link font-serif text-[0.9375rem]"
                   >
-                    About
-                  </Link>
-                ) : null}
-              </div>
-            </div>
+                    All churches
+                  </a>
+                  {aboutPageEnabled ? (
+                    <Link
+                      to="/about"
+                      className="rubric-link font-serif text-[0.9375rem]"
+                    >
+                      About
+                    </Link>
+                  ) : null}
+                </div>
+              }
+            />
             <div className="mt-5">
               <SearchTypeahead
                 hideModeToggle
