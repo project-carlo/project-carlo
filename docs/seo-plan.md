@@ -119,7 +119,26 @@ Confession, and Adoration times parsed from weekly bulletins
   - WebSite/Organization JSON-LD injected into `index.html` at build time from
     `src/lib/seo.ts` (single source of truth); JSON-LD serialization escapes
     `<` to keep `</script>`-safe.
-- [ ] Phase 3 — local long-tail expansion
+- [x] Phase 3 — local long-tail expansion (step 8)
+  - Prerendered city pages at `/mass-times/{city}-{state}/` (e.g.
+    `/mass-times/east-aurora-ny/`), one per city or town with at least one
+    church: its churches with their weekly Mass times (weekly Confession &
+    Adoration behind a native `<details>`), then the six closest churches
+    outside it (within 40 miles of the town's center), each expandable to its
+    weekly Mass times. Grouping, slugs and distances live in
+    `src/lib/cities.ts`, shared by the SPA route and the prerenderer.
+  - Town centers come from OpenStreetMap (Nominatim) via
+    `pnpm geocode:cities`, committed in `apps/web/src/data/cityCenters.json`
+    (with where each came from in `cityCenterSources.json`, which the app
+    doesn't load).
+    Rerun it after adding a diocese: it looks up only the new cities, and the
+    build warns about any city still missing (whose page then measures from
+    the mean position of its churches).
+  - Visible breadcrumbs on church and city pages (All churches › City ›
+    Church), and a city level in the church pages' `BreadcrumbList`; city
+    pages carry `CollectionPage` + `ItemList` + `BreadcrumbList` JSON-LD.
+  - Added to the sitemap; each city heading on `/churches/` links to its page.
+  - Step 9 (per-page OG images) not done.
 - [ ] Phase 4 — polish & measurement (submit sitemap to Google Search Console
       + Bing Webmaster Tools after the next deploy; validate with the Rich
       Results Test and Facebook Sharing Debugger — zero-code, do first)

@@ -1,5 +1,14 @@
 import { filterDayFromJsDay, jsDayFor } from "./constants/days";
 import { EVENT_TYPE_ORDER } from "./constants/eventTypes";
+import {
+  buildCityIndex,
+  citySlugFor,
+  nearbyChurches,
+  type City,
+  type CityCenters,
+  type CityIndex,
+  type CityLink,
+} from "./lib/cities";
 import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
 import { parseSnapshot, SNAPSHOT_FILE, type Snapshot } from "./lib/snapshot";
 import type {
@@ -16,6 +25,15 @@ export class ChurchNotFoundError extends Error {
   constructor(slug: string) {
     super(`Church not found: ${slug}`);
     this.name = "ChurchNotFoundError";
+    this.slug = slug;
+  }
+}
+
+export class CityNotFoundError extends Error {
+  readonly slug: string;
+  constructor(slug: string) {
+    super(`City not found: ${slug}`);
+    this.name = "CityNotFoundError";
     this.slug = slug;
   }
 }
@@ -109,7 +127,7 @@ function buildMapItem(
     (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
   );
   // Dedup repeated weekly slots (same weekday + start time) that occasionally
-  // appear across bulletins. Prefer weekly events for the popup; if the parish
+  // appear across bulletins. Prefer weekly events for the popup; if the church
   // has only specific-date events, fall back to the five soonest occurrences.
   const seen = new Set<string>();
   let popupSchedule = weeklyEvents
@@ -140,7 +158,7 @@ function buildMapItem(
 
 // Per-church memo of the last map item handed out, keyed by the church row and
 // the ids of the events that produced the item. Dragging the time slider
-// re-runs this query on every input event, and for most parishes the matching
+// re-runs this query on every input event, and for most churches the matching
 // events don't change from one step to the next; handing back the identical
 // object then lets React.memo skip the marker (and Leaflet skip re-positioning
 // it) instead of re-rendering all ~130 pins. Bounded by the church count.
@@ -233,6 +251,19 @@ export function findChurch(snapshot: Snapshot, slug: string): ChurchDetail {
   return church;
 }
 
+function upcomingSchedule(
+  snapshot: Snapshot,
+  churchId: number,
+  types: EventType[],
+): EventSummary[] {
+  const typeSet = new Set(types.length > 0 ? types : EVENT_TYPE_ORDER);
+  return snapshot
+    .eventsOf(churchId)
+    .filter((e) => typeSet.has(e.event_type) && e.occurrence !== null)
+    .map(toEventSummary)
+    .sort((a, b) => compareSchedule(a, b));
+}
+
 /**
  * A church page's schedule: its upcoming events of the given types (all types
  * when none are given), in schedule order. Cancelled events and past dates
@@ -244,17 +275,104 @@ export function churchSchedule(
   slug: string,
   types: EventType[],
 ): EventSummary[] {
-  const typeSet = new Set(types.length > 0 ? types : EVENT_TYPE_ORDER);
-  const church = findChurch(snapshot, slug);
-  return snapshot
-    .eventsOf(church.id)
-    .filter((e) => typeSet.has(e.event_type) && e.occurrence !== null)
-    .map(toEventSummary)
-    .sort((a, b) => compareSchedule(a, b));
+  return upcomingSchedule(snapshot, findChurch(snapshot, slug).id, types);
 }
 
-export async function fetchChurch(slug: string): Promise<ChurchDetail> {
-  return findChurch(await getSnapshot(), slug);
+// The city index is derived from the (immutable) church list and the
+// (constant) city centers, so it's built once per snapshot and centers.
+const cityIndexes = new WeakMap<Snapshot, WeakMap<CityCenters, CityIndex>>();
+
+/** Every city with at least one church; shared with the prerenderer. */
+export function cityIndex(snapshot: Snapshot, centers: CityCenters): CityIndex {
+  let byCenters = cityIndexes.get(snapshot);
+  if (!byCenters) {
+    byCenters = new WeakMap();
+    cityIndexes.set(snapshot, byCenters);
+  }
+  let index = byCenters.get(centers);
+  if (!index) {
+    index = buildCityIndex(snapshot.churches, centers);
+    byCenters.set(centers, index);
+  }
+  return index;
+}
+
+/** Centers don't change a city's slug or label, so links to it don't need them. */
+const NO_CENTERS: CityCenters = {};
+
+/**
+ * The city page a church is listed on, named as that page names it; null when
+ * its address has no city. Shared with the prerenderer.
+ */
+export function churchCity(snapshot: Snapshot, church: ChurchBase): CityLink | null {
+  const slug = citySlugFor(church);
+  const city = slug ? cityIndex(snapshot, NO_CENTERS).bySlug.get(slug) : undefined;
+  return city ? { slug: city.slug, label: city.label } : null;
+}
+
+/** A church as a city page lists it: with its schedule, all types. */
+export interface CityChurchEntry {
+  church: ChurchBase;
+  /** Slug of the church's own city page (null when its address has no city). */
+  citySlug: string | null;
+  /** Miles from the city's center; set on nearby churches only. */
+  distanceMiles: number | null;
+  schedule: EventSummary[];
+}
+
+export interface CityPageData {
+  city: City;
+  /** The city's own churches, by name. */
+  churches: CityChurchEntry[];
+  /** The closest churches outside the city, nearest first. */
+  nearby: CityChurchEntry[];
+}
+
+/**
+ * Everything a city page shows. Shared with the prerenderer, so a static city
+ * page lists the same churches and times as the live one.
+ */
+export function cityPageData(
+  snapshot: Snapshot,
+  slug: string,
+  centers: CityCenters,
+): CityPageData {
+  const city = cityIndex(snapshot, centers).bySlug.get(slug);
+  if (!city) throw new CityNotFoundError(slug);
+  const entry = (church: ChurchBase, distanceMiles: number | null) => ({
+    church,
+    citySlug: citySlugFor(church),
+    distanceMiles,
+    schedule: upcomingSchedule(snapshot, church.id, EVENT_TYPE_ORDER),
+  });
+  return {
+    city,
+    churches: city.churches.map((church) => entry(church, null)),
+    nearby: nearbyChurches(city, snapshot.churches).map((n) =>
+      entry(n.church, n.distanceMiles),
+    ),
+  };
+}
+
+export async function fetchCityPage(slug: string): Promise<CityPageData> {
+  // Only city pages need the centers, so they stay out of the map's bundle.
+  const [snapshot, centers] = await Promise.all([
+    getSnapshot(),
+    import("./data/cityCenters.json").then((m) => m.default as CityCenters),
+  ]);
+  return cityPageData(snapshot, slug, centers);
+}
+
+/** A church page's church, and the city page its breadcrumbs link to. */
+export interface ChurchWithCity {
+  church: ChurchDetail;
+  city: CityLink | null;
+}
+
+export async function fetchChurch(slug: string): Promise<ChurchWithCity> {
+  const snapshot = await getSnapshot();
+  const church = findChurch(snapshot, slug);
+  return { church, city: churchCity(snapshot, church) };
 }
 
 export async function fetchChurchEvents(

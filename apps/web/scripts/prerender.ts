@@ -3,11 +3,14 @@ import { existsSync, readFileSync, mkdirSync, writeFileSync, readdirSync } from 
 import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
-import { churchSchedule, findChurch } from "../src/api";
+import { churchCity, churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
+import { cityPath, type CityCenters } from "../src/lib/cities";
+import cityCentersJson from "../src/data/cityCenters.json";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
 import { StaticChurchIndexPage } from "../src/prerender/StaticChurchIndexPage";
-import { CHURCH_INDEX_PATH } from "../src/lib/seo";
+import { StaticCityPage } from "../src/prerender/StaticCityPage";
+import { CHURCH_INDEX_PATH, churchPath } from "../src/lib/seo";
 import { EVENT_TYPE_ORDER } from "../src/constants/eventTypes";
 
 const WEB_DIR = resolve(import.meta.dirname, "..");
@@ -58,12 +61,8 @@ function absoluteUrl(origin: string, pathname: string): string {
   return new URL(pathname, `${origin}/`).href;
 }
 
-function canonicalPathForChurchSlug(slug: string): string {
-  return `/churches/${encodeURIComponent(slug)}/`;
-}
-
 function canonicalUrlForChurchSlug(origin: string, slug: string): string {
-  return absoluteUrl(origin, canonicalPathForChurchSlug(slug));
+  return absoluteUrl(origin, churchPath(slug));
 }
 
 function isAboutPageEnabledAtBuild(): boolean {
@@ -75,6 +74,7 @@ function writeSitemapAndRobots(
   distDir: string,
   origin: string,
   slugs: string[],
+  citySlugs: string[],
   buildDate: string,
 ): number {
   const urls: { loc: string; lastmod: string }[] = [
@@ -83,6 +83,10 @@ function writeSitemapAndRobots(
     { loc: absoluteUrl(origin, CHURCH_INDEX_PATH), lastmod: buildDate },
     ...slugs.map((slug) => ({
       loc: canonicalUrlForChurchSlug(origin, slug),
+      lastmod: buildDate,
+    })),
+    ...citySlugs.map((slug) => ({
+      loc: absoluteUrl(origin, cityPath(slug)),
       lastmod: buildDate,
     })),
   ];
@@ -147,6 +151,7 @@ function main() {
       renderToStaticMarkup(
         createElement(StaticChurchPage, {
           church,
+          city: churchCity(snapshot, church),
           events,
           cssPath,
           fontPaths,
@@ -161,11 +166,15 @@ function main() {
     count++;
   }
 
+  const cityCenters = cityCentersJson as CityCenters;
+  const { cities } = cityIndex(snapshot, cityCenters);
+
   const indexHtml =
     "<!DOCTYPE html>" +
     renderToStaticMarkup(
       createElement(StaticChurchIndexPage, {
         churches: snapshot.churches,
+        cities,
         cssPath,
         fontPaths,
         canonicalUrl: absoluteUrl(origin, CHURCH_INDEX_PATH),
@@ -174,9 +183,37 @@ function main() {
     );
   mkdirSync(resolve(DIST_DIR, "churches"), { recursive: true });
   writeFileSync(resolve(DIST_DIR, "churches", "index.html"), indexHtml, "utf-8");
-  console.log("Wrote churches/index.html (all-parishes index).");
+  console.log("Wrote churches/index.html (all-churches index).");
 
-  const urlCount = writeSitemapAndRobots(DIST_DIR, origin, slugs, buildDate);
+  const ungeocoded = cities.filter((city) => !city.geocodedCenter);
+  if (ungeocoded.length > 0) {
+    console.warn(
+      `Warning: ${ungeocoded.length} cities have no geocoded center, so their ` +
+        "nearby churches are measured from their own churches' mean position. " +
+        "Run `pnpm geocode:cities` and commit src/data/cityCenters.json: " +
+        ungeocoded.map((city) => city.slug).join(", "),
+    );
+  }
+  const citySlugs = cities.map((city) => city.slug);
+  for (const citySlug of citySlugs) {
+    const path = cityPath(citySlug);
+    const html =
+      "<!DOCTYPE html>" +
+      renderToStaticMarkup(
+        createElement(StaticCityPage, {
+          data: cityPageData(snapshot, citySlug, cityCenters),
+          cssPath,
+          fontPaths,
+          canonicalUrl: absoluteUrl(origin, path),
+        }),
+      );
+    const outDir = resolve(DIST_DIR, "mass-times", citySlug);
+    mkdirSync(outDir, { recursive: true });
+    writeFileSync(resolve(outDir, "index.html"), html, "utf-8");
+  }
+  console.log(`Pre-rendered ${citySlugs.length} city pages.`);
+
+  const urlCount = writeSitemapAndRobots(DIST_DIR, origin, slugs, citySlugs, buildDate);
   console.log(`Wrote sitemap.xml and robots.txt (${urlCount} URLs).`);
 
   console.log(`Pre-rendered ${count} church pages.`);

@@ -1,22 +1,22 @@
 import type { ChurchBase } from "../types";
+import { cityPath, citySlugFor, type City } from "../lib/cities";
 import {
   CHURCH_INDEX_TITLE,
-  OG_IMAGE_ALT,
-  OG_IMAGE_HEIGHT,
-  OG_IMAGE_PATH,
-  OG_IMAGE_WIDTH,
-  SITE_LOCALE,
   SITE_NAME,
   absoluteUrl,
   buildChurchIndexDescription,
-  serializeJsonLd,
+  churchPath,
 } from "../lib/seo";
+import { CHURCH_INDEX_SEARCH_SCRIPT } from "./churchIndexSearch";
+import { StaticPageHead } from "./StaticPageHead";
 
-/** What the all-parishes index lists for each church. */
+/** What the all-churches index lists for each church. */
 type ChurchIndexEntry = Pick<ChurchBase, "slug" | "name" | "city" | "state">;
 
 interface StaticChurchIndexPageProps {
   churches: ChurchIndexEntry[];
+  /** The city pages, as `cityIndex` builds them, so headings match their titles. */
+  cities: Pick<City, "slug" | "label" | "churches">[];
   cssPath: string;
   fontPaths: string[];
   canonicalUrl: string;
@@ -26,37 +26,38 @@ interface StaticChurchIndexPageProps {
 
 interface CityGroup {
   label: string;
+  /** Slug of the city's page; null for the "Other locations" group. */
+  slug: string | null;
   churches: ChurchIndexEntry[];
 }
 
 const UNKNOWN_CITY = "Other locations";
 
-/** Group churches by "City, ST" (alphabetical), with unknown locations last. */
-function groupByCity(churches: ChurchIndexEntry[]): CityGroup[] {
-  const groups = new Map<string, ChurchIndexEntry[]>();
-  for (const church of churches) {
-    const city = church.city?.trim();
-    const label = city
-      ? church.state?.trim()
-        ? `${city}, ${church.state.trim()}`
-        : city
-      : UNKNOWN_CITY;
-    const group = groups.get(label);
-    if (group) group.push(church);
-    else groups.set(label, [church]);
+/**
+ * One group per city page, under that page's label (alphabetical), then the
+ * churches whose address has no city.
+ */
+function groupByCity(
+  churches: ChurchIndexEntry[],
+  cities: StaticChurchIndexPageProps["cities"],
+): CityGroup[] {
+  const groups: CityGroup[] = cities.map((city) => ({
+    label: city.label,
+    slug: city.slug,
+    churches: city.churches,
+  }));
+  const unknown = churches
+    .filter((church) => citySlugFor(church) === null)
+    .sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""));
+  if (unknown.length > 0) {
+    groups.push({ label: UNKNOWN_CITY, slug: null, churches: unknown });
   }
-  return [...groups.entries()]
-    .sort(([a], [b]) =>
-      a === UNKNOWN_CITY ? 1 : b === UNKNOWN_CITY ? -1 : a.localeCompare(b),
-    )
-    .map(([label, entries]) => ({
-      label,
-      churches: entries.sort((a, b) => (a.name ?? "").localeCompare(b.name ?? "")),
-    }));
+  return groups;
 }
 
 export function StaticChurchIndexPage({
   churches,
+  cities,
   cssPath,
   fontPaths,
   canonicalUrl,
@@ -65,8 +66,7 @@ export function StaticChurchIndexPage({
   const title = CHURCH_INDEX_TITLE;
   const description = buildChurchIndexDescription(churches.length);
   const origin = new URL(canonicalUrl).origin;
-  const ogImageUrl = absoluteUrl(origin, OG_IMAGE_PATH);
-  const groups = groupByCity(churches);
+  const groups = groupByCity(churches, cities);
 
   const jsonLd = [
     {
@@ -92,7 +92,7 @@ export function StaticChurchIndexPage({
         {
           "@type": "ListItem",
           position: 2,
-          name: "Parishes",
+          name: "Churches",
           item: canonicalUrl,
         },
       ],
@@ -101,53 +101,14 @@ export function StaticChurchIndexPage({
 
   return (
     <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-        />
-        <meta name="description" content={description} />
-        <meta name="theme-color" content="#F3ECD8" />
-        <meta name="color-scheme" content="light" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="canonical" href={canonicalUrl} />
-        <title>{title}</title>
-
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content={SITE_NAME} />
-        <meta property="og:locale" content={SITE_LOCALE} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:image:width" content={String(OG_IMAGE_WIDTH)} />
-        <meta property="og:image:height" content={String(OG_IMAGE_HEIGHT)} />
-        <meta property="og:image:alt" content={OG_IMAGE_ALT} />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImageUrl} />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
-        />
-        {fontPaths.map((fp) => (
-          <link
-            key={fp}
-            rel="preload"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-            href={fp}
-          />
-        ))}
-        <link rel="stylesheet" href={cssPath} />
-      </head>
+      <StaticPageHead
+        title={title}
+        description={description}
+        canonicalUrl={canonicalUrl}
+        jsonLd={jsonLd}
+        cssPath={cssPath}
+        fontPaths={fontPaths}
+      />
       <body className="bg-paper">
         <main className="mx-auto w-full max-w-3xl px-6 py-12 pb-[calc(3rem+var(--safe-area-inset-bottom))]">
           <header className="text-center">
@@ -155,28 +116,66 @@ export function StaticChurchIndexPage({
               Back to map
             </a>
             <h1 className="mt-6 font-display text-[clamp(2rem,5vw,3rem)] leading-[1.05] font-normal tracking-tight text-ink">
-              All parishes
+              All churches
             </h1>
             <p className="mt-4 font-serif text-[0.95rem] text-ink-soft">
               Mass, Confession &amp; Adoration times at {churches.length} Catholic
-              parishes, parsed from each parish&rsquo;s weekly bulletin.
+              churches, parsed from each parish&rsquo;s weekly bulletin.
             </p>
           </header>
 
-          <div className="mt-12 space-y-10">
+          <form
+            id="church-search-form"
+            role="search"
+            hidden
+            className="mt-10"
+          >
+            <label htmlFor="church-search" className="sr-only">
+              Search churches and cities
+            </label>
+            <input
+              id="church-search"
+              type="search"
+              placeholder="Search for a church or city"
+              autoComplete="off"
+              spellCheck={false}
+              className="w-full appearance-none border-b border-rule-strong bg-transparent py-2 font-serif text-[1.0625rem] text-ink outline-none placeholder:text-ink-soft placeholder:italic focus:border-rubric [&::-webkit-search-cancel-button]:appearance-none"
+            />
+            <p
+              id="church-search-status"
+              aria-live="polite"
+              className="mt-2 min-h-[1.25rem] font-serif text-sm text-ink-soft"
+            />
+          </form>
+
+          <p
+            id="church-search-empty"
+            hidden
+            className="mt-10 text-center font-serif text-[0.95rem] text-ink-soft"
+          >
+            No churches or cities match your search.
+          </p>
+
+          <div className="mt-8 space-y-10">
             {groups.map((group) => (
-              <section key={group.label}>
+              <section key={group.label} data-city-group="">
                 <h2 className="smallcaps border-b border-rule-strong pb-2 text-[0.95rem] text-ink">
-                  {group.label}
+                  {group.slug ? (
+                    <a href={cityPath(group.slug)} className="rubric-link">
+                      {group.label}
+                    </a>
+                  ) : (
+                    group.label
+                  )}
                 </h2>
                 <ul className="mt-4 space-y-2">
                   {group.churches.map((church) => (
                     <li key={church.slug}>
                       <a
-                        href={`/churches/${encodeURIComponent(church.slug)}/`}
+                        href={churchPath(church.slug)}
                         className="rubric-link font-serif text-[1.05rem] text-ink"
                       >
-                        {church.name ?? "Unnamed parish"}
+                        {church.name ?? "Unnamed church"}
                       </a>
                     </li>
                   ))}
@@ -185,6 +184,7 @@ export function StaticChurchIndexPage({
             ))}
           </div>
         </main>
+        <script dangerouslySetInnerHTML={{ __html: CHURCH_INDEX_SEARCH_SCRIPT }} />
       </body>
     </html>
   );

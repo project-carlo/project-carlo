@@ -354,11 +354,11 @@ function ViewReporter({ onViewChange }: { onViewChange: (view: MapView) => void 
 }
 
 /**
- * Popup body for one parish.
+ * Popup body for one church.
  *
  * Split out of `ChurchMarker` on purpose: react-leaflet renders a popup's
  * children only once Leaflet has opened it, so keeping this in its own
- * component means the rollup, the date formatting and ~20 elements per parish
+ * component means the rollup, the date formatting and ~20 elements per church
  * are built for the one open popup rather than for all ~130 pins on every
  * filter change.
  */
@@ -380,7 +380,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
           `.map-popup-*` in app.css. */}
       <div className="map-popup-head space-y-1">
         <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-ink">
-          {church.name ?? "Unnamed parish"}
+          {church.name ?? "Unnamed church"}
         </h3>
         {addressLine ? (
           <p className="font-serif text-[0.875rem] leading-snug text-ink-soft">

@@ -1,0 +1,60 @@
+import { DAY_ORDER, jsDayFor } from "../constants/days";
+import type { EventSummary } from "../types";
+import { formatMinutesMissal, titleCase } from "../utils";
+import type { ScheduleRollupRow } from "./eventRollup";
+
+/**
+ * A compact weekly schedule for listing many churches on one page (a city
+ * page): one row per day, with runs of days that share the same times folded
+ * into one row ("Mon – Fri  8 a.m."). Pure formatting logic.
+ */
+
+/** "Mon" for "monday". */
+function dayAbbr(day: string): string {
+  return titleCase(day).slice(0, 3);
+}
+
+function runLabel(days: string[]): string {
+  if (days.length === 1) return titleCase(days[0]);
+  const first = dayAbbr(days[0]);
+  const last = dayAbbr(days[days.length - 1]);
+  return days.length === 2 ? `${first} & ${last}` : `${first} – ${last}`;
+}
+
+/** Weekly events as rows in Sunday-first order, merging adjacent days with identical times. */
+export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] {
+  const timesByDay = new Map<string, number[]>();
+  for (const event of events) {
+    if (event.kind !== "weekly" || !event.day_of_week) continue;
+    const day = DAY_ORDER[jsDayFor(event.day_of_week)];
+    if (!day) continue;
+    const times = timesByDay.get(day) ?? [];
+    if (!times.includes(event.start_time)) times.push(event.start_time);
+    timesByDay.set(day, times);
+  }
+
+  const runs: { days: string[]; times: number[]; signature: string }[] = [];
+  let previousDayListed = false;
+  for (const day of DAY_ORDER) {
+    const times = timesByDay.get(day);
+    if (!times) {
+      previousDayListed = false;
+      continue;
+    }
+    const sorted = [...times].sort((a, b) => a - b);
+    const signature = sorted.join(",");
+    const last = runs[runs.length - 1];
+    if (previousDayListed && last.signature === signature) {
+      last.days.push(day);
+    } else {
+      runs.push({ days: [day], times: sorted, signature });
+    }
+    previousDayListed = true;
+  }
+
+  return runs.map((run) => ({
+    key: `weekly:${run.days.join("-")}`,
+    label: runLabel(run.days),
+    times: run.times.map(formatMinutesMissal),
+  }));
+}

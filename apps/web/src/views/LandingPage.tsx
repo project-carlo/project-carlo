@@ -48,7 +48,7 @@ export function LandingPage() {
   useDocumentMeta({
     title: "Search Mass, Confession & Adoration Times · Project Carlo",
     description:
-      "Search Catholic parishes by location, service, day, and time to find Mass, Confession, and Adoration times near you.",
+      "Search Catholic churches by location, service, day, and time to find Mass, Confession, and Adoration times near you.",
     canonicalUrl: canonicalForPath("/landing"),
   });
 
@@ -246,7 +246,7 @@ export function LandingPage() {
             <Fleuron size={isDesktop ? 40 : 28} className="w-full opacity-85" />
             <p className="m-0 text-center font-serif italic text-[12.5px] text-ink-faint">
               {isDesktop
-                ? "A directory of Catholic parishes — schedules parsed from each parish’s weekly bulletin."
+                ? "A directory of Catholic churches — schedules parsed from each parish’s weekly bulletin."
                 : "Schedules parsed from each parish’s weekly bulletin."}
             </p>
           </>

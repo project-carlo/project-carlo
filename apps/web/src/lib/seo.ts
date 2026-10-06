@@ -3,7 +3,8 @@
  * and JSON-LD (schema.org) builders used by the prerendered church pages and
  * (in a later phase) the client-rendered routes.
  */
-import type { ChurchDetail } from "../types";
+import type { ChurchBase, ChurchDetail } from "../types";
+import { cityPath, type City, type CityLink } from "./cities";
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -19,7 +20,7 @@ export const OG_IMAGE_ALT =
 export const HOME_TITLE =
   "Mass, Confession & Adoration Times Near You · Project Carlo";
 export const HOME_DESCRIPTION =
-  "Find Mass, Confession, and Adoration times at Catholic parishes on an interactive map. Schedules are parsed from each parish's weekly bulletin.";
+  "Find Mass, Confession, and Adoration times at Catholic churches on an interactive map. Schedules are parsed from each parish's weekly bulletin.";
 
 /** Resolve a site-relative path against an origin into an absolute URL. */
 export function absoluteUrl(origin: string, path: string): string {
@@ -48,11 +49,11 @@ export function churchLocation(church: ChurchDetail): string {
 }
 
 /**
- * Keyword-forward church page title: leads with the parish name (branded
+ * Keyword-forward church page title: leads with the church name (branded
  * searches) followed by the services and location people actually search for.
  */
 export function buildChurchTitle(church: ChurchDetail): string {
-  const name = church.name?.trim() || "Catholic Parish";
+  const name = church.name?.trim() || "Catholic Church";
   const loc = churchLocation(church);
   const base = `${name} — Mass, Confession & Adoration Times`;
   return loc ? `${base} in ${loc}` : base;
@@ -60,19 +61,24 @@ export function buildChurchTitle(church: ChurchDetail): string {
 
 /** SERP-snippet description for a church page (kept under ~155 chars). */
 export function buildChurchDescription(church: ChurchDetail): string {
-  const name = church.name?.trim() || "this parish";
+  const name = church.name?.trim() || "this church";
   const loc = churchLocation(church);
   const where = loc ? ` in ${loc}` : "";
   return `Mass, Confession, and Adoration times for ${name}${where}, parsed from the parish's latest weekly bulletin.`;
 }
 
-/** Canonical path of the prerendered all-parishes index page. */
+/** Canonical path of the prerendered all-churches index page. */
 export const CHURCH_INDEX_PATH = "/churches/";
 
-export const CHURCH_INDEX_TITLE = `Browse Catholic Parishes — Mass, Confession & Adoration Times · ${SITE_NAME}`;
+/** Canonical path of a church page. */
+export function churchPath(slug: string): string {
+  return `${CHURCH_INDEX_PATH}${encodeURIComponent(slug)}/`;
+}
 
-export function buildChurchIndexDescription(parishCount: number): string {
-  return `Browse all ${parishCount} Catholic parishes on ${SITE_NAME} and find Mass, Confession, and Adoration times parsed from each parish's weekly bulletin.`;
+export const CHURCH_INDEX_TITLE = `Browse Catholic Churches — Mass, Confession & Adoration Times · ${SITE_NAME}`;
+
+export function buildChurchIndexDescription(churchCount: number): string {
+  return `Browse all ${churchCount} Catholic churches on ${SITE_NAME} and find Mass, Confession, and Adoration times parsed from each parish's weekly bulletin.`;
 }
 
 /** schema.org PostalAddress for a church, or null when no address is known. */
@@ -94,11 +100,11 @@ function postalAddress(church: ChurchDetail): Record<string, unknown> | null {
 }
 
 /**
- * `Church` (PlaceOfWorship) structured data for a parish detail page.
+ * `Church` (PlaceOfWorship) structured data for a church page.
  *
  * Recurring service times intentionally remain visible page content instead
  * of `Event` nodes. Google requires each structured Event to describe one
- * concrete event on a unique leaf page, while parish pages list many recurring
+ * concrete event on a unique leaf page, while church pages list many recurring
  * services: https://developers.google.com/search/docs/appearance/structured-data/event
  */
 export function churchJsonLd(
@@ -111,7 +117,7 @@ export function churchJsonLd(
     "@context": "https://schema.org",
     "@type": "Church",
     "@id": churchId,
-    name: church.name ?? "Catholic parish",
+    name: church.name ?? "Catholic church",
     url: canonicalUrl,
     image: absoluteUrl(origin, OG_IMAGE_PATH),
   };
@@ -160,40 +166,93 @@ export function churchWebPageJsonLd(
 }
 
 /**
- * BreadcrumbList: Home → Parishes → {Parish}. A city level will be inserted
- * once city landing pages exist (Phase 3) — schema.org requires every
- * non-final crumb to carry an `item` URL, so we omit the city until it has a
- * real page.
+ * BreadcrumbList: Home → Churches → {City} → {Church}, without the city level
+ * when the church's address has none.
  */
 export function churchBreadcrumbJsonLd(
   church: ChurchDetail,
+  city: CityLink | null,
   canonicalUrl: string,
 ): Record<string, unknown> {
   const origin = new URL(canonicalUrl).origin;
+  const crumbs: { name: string; item: string }[] = [
+    { name: SITE_NAME, item: absoluteUrl(origin, "/") },
+    { name: "Churches", item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+  ];
+  if (city) {
+    crumbs.push({ name: city.label, item: absoluteUrl(origin, cityPath(city.slug)) });
+  }
+  crumbs.push({ name: church.name ?? "Church", item: canonicalUrl });
+  return breadcrumbList(crumbs);
+}
+
+function breadcrumbList(
+  crumbs: { name: string; item: string }[],
+): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: SITE_NAME,
-        item: absoluteUrl(origin, "/"),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Parishes",
-        item: absoluteUrl(origin, CHURCH_INDEX_PATH),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: church.name ?? "Parish",
-        item: canonicalUrl,
-      },
-    ],
+    itemListElement: crumbs.map((crumb, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: crumb.name,
+      item: crumb.item,
+    })),
   };
+}
+
+/** City page title, e.g. "Catholic Mass Times in East Aurora, NY — Confession & Adoration · Project Carlo". */
+export function buildCityTitle(city: Pick<City, "label">): string {
+  return `Catholic Mass Times in ${city.label} — Confession & Adoration · ${SITE_NAME}`;
+}
+
+/** SERP-snippet description for a city page. */
+export function buildCityDescription(
+  city: Pick<City, "label" | "churches">,
+): string {
+  const count = city.churches.length;
+  const churches =
+    count === 1
+      ? `${city.churches[0].name?.trim() || "the Catholic church"}`
+      : `the ${count} Catholic churches`;
+  return `Mass, Confession, and Adoration times at ${churches} in ${city.label} and nearby churches, parsed from each parish's weekly bulletin.`;
+}
+
+/**
+ * Structured data for a city page: the page as a CollectionPage of its
+ * churches' pages, and its breadcrumbs (Home → Churches → {City}).
+ */
+export function cityJsonLd(
+  city: Pick<City, "label" | "churches">,
+  canonicalUrl: string,
+): Record<string, unknown>[] {
+  const origin = new URL(canonicalUrl).origin;
+  const churchUrl = (church: ChurchBase) => absoluteUrl(origin, churchPath(church.slug));
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: buildCityTitle(city),
+      description: buildCityDescription(city),
+      inLanguage: "en-US",
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: city.churches.map((church, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: church.name ?? "Catholic church",
+          url: churchUrl(church),
+        })),
+      },
+    },
+    breadcrumbList([
+      { name: SITE_NAME, item: absoluteUrl(origin, "/") },
+      { name: "Churches", item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+      { name: city.label, item: canonicalUrl },
+    ]),
+  ];
 }
 
 /** Site-level WebSite + Organization graph for the homepage. */
