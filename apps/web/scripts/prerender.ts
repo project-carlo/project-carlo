@@ -3,6 +3,7 @@ import { gunzipSync } from "node:zlib";
 import { existsSync, readFileSync, mkdirSync, writeFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
+import { loadEnv } from "vite";
 import { createElement } from "react";
 import { churchCity, churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
 import { cityPath, type CityCenters } from "../src/lib/cities";
@@ -77,7 +78,9 @@ function canonicalUrlForChurchSlug(origin: string, slug: string): string {
 }
 
 function isAboutPageEnabledAtBuild(): boolean {
-  const v = process.env.VITE_ABOUT_PAGE_ENABLED?.trim().toLowerCase();
+  // Read the way `vite build` reads it for the bundle (.env.production files,
+  // then the process environment), so the /about route and about.html agree.
+  const v = loadEnv("production", WEB_DIR, "VITE_").VITE_ABOUT_PAGE_ENABLED?.trim().toLowerCase();
   return v === "true" || v === "1";
 }
 
@@ -169,20 +172,36 @@ function writeShellCopies(distDir: string, origin: string): void {
  */
 async function fetchPreviousDates(origin: string): Promise<LastmodManifest | null> {
   const url = process.env.LASTMOD_BASELINE_URL || absoluteUrl(origin, `/${LASTMOD_FILE}`);
-  try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(15_000) });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const manifest = parseLastmodManifest(await res.text());
-    if (!manifest) throw new Error("not a page-date manifest");
-    console.log(`Read ${Object.keys(manifest.pages).length} page dates from ${url}.`);
-    return manifest;
-  } catch (error) {
-    console.warn(
-      `Warning: couldn't read the previous page dates from ${url} (${String(error)}), ` +
-        "so every page is dated today.",
-    );
-    return null;
+  // A failure here redates every page for good once the build deploys, so
+  // network errors, timeouts and 5xx get retried. A 404, or a response that
+  // isn't a manifest, is an answer (no dates published yet): not retried.
+  const attempts = 3;
+  let failure = "";
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(15_000) });
+      if (res.status >= 500) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        failure = `HTTP ${res.status}`;
+        break;
+      }
+      const manifest = parseLastmodManifest(await res.text());
+      if (!manifest) {
+        failure = "not a page-date manifest";
+        break;
+      }
+      console.log(`Read ${Object.keys(manifest.pages).length} page dates from ${url}.`);
+      return manifest;
+    } catch (error) {
+      failure = String(error);
+      if (attempt < attempts) await new Promise((done) => setTimeout(done, attempt * 2_000));
+    }
   }
+  console.warn(
+    `Warning: couldn't read the previous page dates from ${url} (${failure}), ` +
+      "so every page is dated today.",
+  );
+  return null;
 }
 
 async function main() {

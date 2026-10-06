@@ -1,7 +1,8 @@
 /**
- * The site's Worker. Static assets (and the SPA fallback) are served by
- * Cloudflare before this runs; only `/api/*` reaches it first (see
- * `run_worker_first` in wrangler.jsonc).
+ * The site's Worker. Static assets are served by Cloudflare before this runs;
+ * only `/api/*` reaches it first (see `run_worker_first` in wrangler.jsonc).
+ * Requests no file matches arrive here too and go back to the assets, which
+ * answer with 404.html.
  */
 
 import {

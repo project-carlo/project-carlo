@@ -4,8 +4,8 @@
 // Worker semantics; the benchmark deliberately does not. A plain Node server
 // starts in milliseconds, adds no proxy/miniflare layer between the browser and
 // the bytes, and keeps run-to-run timing noise down — which is what a
-// measurement harness needs. SPA fallback mirrors wrangler's
-// `not_found_handling: "single-page-application"`.
+// measurement harness needs. Unknown paths fall back to index.html, unlike
+// production (which serves 404.html); the benchmark only loads `/`.
 import { createReadStream, existsSync, statSync } from "node:fs";
 import { createServer } from "node:http";
 import { extname, join, normalize, resolve, sep } from "node:path";

@@ -1,5 +1,6 @@
 # Keep crawlable church URLs aligned with the prerendered directory form.
 /churches /churches/ 301
+/churches/index.html /churches/ 301
 /churches/:slug /churches/:slug/ 301
 /churches/:slug/index.html /churches/:slug/ 301
 # City pages live under /mass-times/; the all-parishes index lists every city.
