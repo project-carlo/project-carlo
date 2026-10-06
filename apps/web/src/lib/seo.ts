@@ -3,7 +3,8 @@
  * and JSON-LD (schema.org) builders used by the prerendered church pages and
  * (in a later phase) the client-rendered routes.
  */
-import type { ChurchDetail } from "../types";
+import type { ChurchBase, ChurchDetail } from "../types";
+import { cityLabel, cityPath, citySlugFor, type City } from "./cities";
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -160,40 +161,97 @@ export function churchWebPageJsonLd(
 }
 
 /**
- * BreadcrumbList: Home → Parishes → {Parish}. A city level will be inserted
- * once city landing pages exist (Phase 3) — schema.org requires every
- * non-final crumb to carry an `item` URL, so we omit the city until it has a
- * real page.
+ * BreadcrumbList: Home → Parishes → {City} → {Parish}, without the city level
+ * when the church's address has none.
  */
 export function churchBreadcrumbJsonLd(
   church: ChurchDetail,
   canonicalUrl: string,
 ): Record<string, unknown> {
   const origin = new URL(canonicalUrl).origin;
+  const crumbs: { name: string; item: string }[] = [
+    { name: SITE_NAME, item: absoluteUrl(origin, "/") },
+    { name: "Parishes", item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+  ];
+  const citySlug = citySlugFor(church);
+  if (citySlug && church.city) {
+    crumbs.push({
+      name: cityLabel(church.city.trim(), church.state?.trim() || null),
+      item: absoluteUrl(origin, cityPath(citySlug)),
+    });
+  }
+  crumbs.push({ name: church.name ?? "Parish", item: canonicalUrl });
+  return breadcrumbList(crumbs);
+}
+
+function breadcrumbList(
+  crumbs: { name: string; item: string }[],
+): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: SITE_NAME,
-        item: absoluteUrl(origin, "/"),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Parishes",
-        item: absoluteUrl(origin, CHURCH_INDEX_PATH),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: church.name ?? "Parish",
-        item: canonicalUrl,
-      },
-    ],
+    itemListElement: crumbs.map((crumb, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: crumb.name,
+      item: crumb.item,
+    })),
   };
+}
+
+/** City page title, e.g. "Catholic Mass Times in East Aurora, NY — Confession & Adoration · Project Carlo". */
+export function buildCityTitle(city: Pick<City, "label">): string {
+  return `Catholic Mass Times in ${city.label} — Confession & Adoration · ${SITE_NAME}`;
+}
+
+/** SERP-snippet description for a city page. */
+export function buildCityDescription(
+  city: Pick<City, "label" | "churches">,
+): string {
+  const count = city.churches.length;
+  const churches =
+    count === 1
+      ? `${city.churches[0].name?.trim() || "the Catholic church"}`
+      : `the ${count} Catholic churches`;
+  return `Mass, Confession, and Adoration times at ${churches} in ${city.label} and nearby parishes, parsed from each parish's weekly bulletin.`;
+}
+
+/**
+ * Structured data for a city page: the page as a CollectionPage of its
+ * churches' pages, and its breadcrumbs (Home → Parishes → {City}).
+ */
+export function cityJsonLd(
+  city: Pick<City, "label" | "churches">,
+  canonicalUrl: string,
+): Record<string, unknown>[] {
+  const origin = new URL(canonicalUrl).origin;
+  const churchUrl = (church: ChurchBase) =>
+    absoluteUrl(origin, `/churches/${encodeURIComponent(church.slug)}/`);
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: buildCityTitle(city),
+      description: buildCityDescription(city),
+      inLanguage: "en-US",
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: city.churches.map((church, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: church.name ?? "Catholic parish",
+          url: churchUrl(church),
+        })),
+      },
+    },
+    breadcrumbList([
+      { name: SITE_NAME, item: absoluteUrl(origin, "/") },
+      { name: "Parishes", item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+      { name: city.label, item: canonicalUrl },
+    ]),
+  ];
 }
 
 /** Site-level WebSite + Organization graph for the homepage. */

@@ -3,10 +3,12 @@ import { existsSync, readFileSync, mkdirSync, writeFileSync, readdirSync } from 
 import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
-import { churchSchedule, findChurch } from "../src/api";
+import { churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
+import { cityPath } from "../src/lib/cities";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
 import { StaticChurchIndexPage } from "../src/prerender/StaticChurchIndexPage";
+import { StaticCityPage } from "../src/prerender/StaticCityPage";
 import { CHURCH_INDEX_PATH } from "../src/lib/seo";
 import { EVENT_TYPE_ORDER } from "../src/constants/eventTypes";
 
@@ -75,6 +77,7 @@ function writeSitemapAndRobots(
   distDir: string,
   origin: string,
   slugs: string[],
+  citySlugs: string[],
   buildDate: string,
 ): number {
   const urls: { loc: string; lastmod: string }[] = [
@@ -83,6 +86,10 @@ function writeSitemapAndRobots(
     { loc: absoluteUrl(origin, CHURCH_INDEX_PATH), lastmod: buildDate },
     ...slugs.map((slug) => ({
       loc: canonicalUrlForChurchSlug(origin, slug),
+      lastmod: buildDate,
+    })),
+    ...citySlugs.map((slug) => ({
+      loc: absoluteUrl(origin, cityPath(slug)),
       lastmod: buildDate,
     })),
   ];
@@ -176,7 +183,26 @@ function main() {
   writeFileSync(resolve(DIST_DIR, "churches", "index.html"), indexHtml, "utf-8");
   console.log("Wrote churches/index.html (all-parishes index).");
 
-  const urlCount = writeSitemapAndRobots(DIST_DIR, origin, slugs, buildDate);
+  const citySlugs = cityIndex(snapshot).cities.map((city) => city.slug);
+  for (const citySlug of citySlugs) {
+    const path = cityPath(citySlug);
+    const html =
+      "<!DOCTYPE html>" +
+      renderToStaticMarkup(
+        createElement(StaticCityPage, {
+          data: cityPageData(snapshot, citySlug),
+          cssPath,
+          fontPaths,
+          canonicalUrl: absoluteUrl(origin, path),
+        }),
+      );
+    const outDir = resolve(DIST_DIR, "mass-times", citySlug);
+    mkdirSync(outDir, { recursive: true });
+    writeFileSync(resolve(outDir, "index.html"), html, "utf-8");
+  }
+  console.log(`Pre-rendered ${citySlugs.length} city pages.`);
+
+  const urlCount = writeSitemapAndRobots(DIST_DIR, origin, slugs, citySlugs, buildDate);
   console.log(`Wrote sitemap.xml and robots.txt (${urlCount} URLs).`);
 
   console.log(`Pre-rendered ${count} church pages.`);

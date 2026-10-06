@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { DAY_ORDER } from "../constants/days";
 import { EVENT_TYPE_LABELS, EVENT_TYPE_ORDER } from "../constants/eventTypes";
 import type { ChurchDetail, EventSummary, EventType } from "../types";
@@ -8,7 +7,6 @@ import {
   formatMinutesMissal,
 } from "../utils";
 import {
-  ArrowLeftIcon,
   ExternalLinkIcon,
   FileTextIcon,
   MapPinIcon,
@@ -16,8 +14,9 @@ import {
 } from "@/components/icons";
 import { FeedbackTrigger } from "@/components/FeedbackTrigger";
 import { Fleuron } from "@/components/Fleuron";
-import { Masthead } from "@/components/Masthead";
-import { useHomeHref } from "@/hooks/useHomeHref";
+import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
+import { SiteHeader } from "@/components/SiteHeader";
+import { cityLabel, cityPath, citySlugFor } from "@/lib/cities";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
@@ -185,6 +184,20 @@ function PageRef({
   );
 }
 
+/** All parishes › {City} › {Parish}, without the city when the address has none. */
+function churchCrumbs(church: ChurchDetail): Crumb[] {
+  const crumbs: Crumb[] = [{ label: "All parishes", href: CHURCH_INDEX_PATH }];
+  const citySlug = citySlugFor(church);
+  if (citySlug && church.city) {
+    crumbs.push({
+      label: cityLabel(church.city.trim(), church.state?.trim() || null),
+      to: cityPath(citySlug),
+    });
+  }
+  crumbs.push({ label: church.name ?? "Unnamed parish" });
+  return crumbs;
+}
+
 interface ChurchPageContentProps {
   church: ChurchDetail;
   events: EventSummary[];
@@ -192,23 +205,15 @@ interface ChurchPageContentProps {
 
 export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
   const byType = partitionEventsByType(events);
-  const homeHref = useHomeHref();
 
   return (
     <>
     <main className="min-h-svh bg-paper">
-      <header className="sticky top-0 z-40 border-b border-rule-strong bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 pt-[calc(0.85rem+var(--safe-area-inset-top))] pb-3">
-          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-            <ArrowLeftIcon className="size-3.5" />
-            Back to map
-          </Link>
-          <Masthead compact />
-        </div>
-      </header>
+      <SiteHeader />
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         <section className="rise-in mx-auto max-w-2xl text-center">
+          <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church)} />
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
             {church.name ?? "Unnamed parish"}
           </h1>

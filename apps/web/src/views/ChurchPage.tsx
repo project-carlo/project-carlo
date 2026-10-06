@@ -1,13 +1,11 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ChurchNotFoundError, fetchChurch, fetchChurchEvents } from "../api";
 import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
-import { ArrowLeftIcon } from "@/components/icons";
 import { InlineQueryError } from "@/components/InlineQueryError";
-import { Masthead } from "@/components/Masthead";
+import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchPageContent } from "@/components/ChurchPageContent";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
-import { useHomeHref } from "@/hooks/useHomeHref";
 import {
   buildChurchDescription,
   buildChurchTitle,
@@ -17,7 +15,6 @@ import { NotFoundPage } from "./NotFoundPage";
 
 export function ChurchPage() {
   const { churchSlug } = useParams();
-  const homeHref = useHomeHref();
   const enabled = typeof churchSlug === "string" && churchSlug.length > 0;
 
   const churchQuery = useQuery({
@@ -84,15 +81,7 @@ export function ChurchPage() {
 
   return (
     <main className="min-h-svh bg-paper">
-      <header className="sticky top-0 z-40 border-b border-rule-strong bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 pt-[calc(0.85rem+var(--safe-area-inset-top))] pb-3">
-          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-            <ArrowLeftIcon className="size-3" />
-            Back to map
-          </Link>
-          <Masthead compact />
-        </div>
-      </header>
+      <SiteHeader />
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         {churchQuery.isLoading ? (

@@ -1,5 +1,12 @@
 import { filterDayFromJsDay, jsDayFor } from "./constants/days";
 import { EVENT_TYPE_ORDER } from "./constants/eventTypes";
+import {
+  buildCityIndex,
+  citySlugFor,
+  nearbyChurches,
+  type City,
+  type CityIndex,
+} from "./lib/cities";
 import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
 import { parseSnapshot, SNAPSHOT_FILE, type Snapshot } from "./lib/snapshot";
 import type {
@@ -16,6 +23,15 @@ export class ChurchNotFoundError extends Error {
   constructor(slug: string) {
     super(`Church not found: ${slug}`);
     this.name = "ChurchNotFoundError";
+    this.slug = slug;
+  }
+}
+
+export class CityNotFoundError extends Error {
+  readonly slug: string;
+  constructor(slug: string) {
+    super(`City not found: ${slug}`);
+    this.name = "CityNotFoundError";
     this.slug = slug;
   }
 }
@@ -233,6 +249,19 @@ export function findChurch(snapshot: Snapshot, slug: string): ChurchDetail {
   return church;
 }
 
+function upcomingSchedule(
+  snapshot: Snapshot,
+  churchId: number,
+  types: EventType[],
+): EventSummary[] {
+  const typeSet = new Set(types.length > 0 ? types : EVENT_TYPE_ORDER);
+  return snapshot
+    .eventsOf(churchId)
+    .filter((e) => typeSet.has(e.event_type) && e.occurrence !== null)
+    .map(toEventSummary)
+    .sort((a, b) => compareSchedule(a, b));
+}
+
 /**
  * A church page's schedule: its upcoming events of the given types (all types
  * when none are given), in schedule order. Cancelled events and past dates
@@ -244,13 +273,65 @@ export function churchSchedule(
   slug: string,
   types: EventType[],
 ): EventSummary[] {
-  const typeSet = new Set(types.length > 0 ? types : EVENT_TYPE_ORDER);
-  const church = findChurch(snapshot, slug);
-  return snapshot
-    .eventsOf(church.id)
-    .filter((e) => typeSet.has(e.event_type) && e.occurrence !== null)
-    .map(toEventSummary)
-    .sort((a, b) => compareSchedule(a, b));
+  return upcomingSchedule(snapshot, findChurch(snapshot, slug).id, types);
+}
+
+// The city index is derived from the (immutable) church list, so it's built
+// once per snapshot.
+const cityIndexes = new WeakMap<Snapshot, CityIndex>();
+
+/** Every city with at least one church; shared with the prerenderer. */
+export function cityIndex(snapshot: Snapshot): CityIndex {
+  let index = cityIndexes.get(snapshot);
+  if (!index) {
+    index = buildCityIndex(snapshot.churches);
+    cityIndexes.set(snapshot, index);
+  }
+  return index;
+}
+
+/** A church as a city page lists it: with its schedule, all types. */
+export interface CityChurchEntry {
+  church: ChurchBase;
+  /** Slug of the church's own city page (null when its address has no city). */
+  citySlug: string | null;
+  /** Miles from the city's center; set on nearby churches only. */
+  distanceMiles: number | null;
+  schedule: EventSummary[];
+}
+
+export interface CityPageData {
+  city: City;
+  /** The city's own churches, by name. */
+  churches: CityChurchEntry[];
+  /** The closest churches outside the city, nearest first. */
+  nearby: CityChurchEntry[];
+}
+
+/**
+ * Everything a city page shows. Shared with the prerenderer, so a static city
+ * page lists the same churches and times as the live one.
+ */
+export function cityPageData(snapshot: Snapshot, slug: string): CityPageData {
+  const city = cityIndex(snapshot).bySlug.get(slug);
+  if (!city) throw new CityNotFoundError(slug);
+  const entry = (church: ChurchBase, distanceMiles: number | null) => ({
+    church,
+    citySlug: citySlugFor(church),
+    distanceMiles,
+    schedule: upcomingSchedule(snapshot, church.id, EVENT_TYPE_ORDER),
+  });
+  return {
+    city,
+    churches: city.churches.map((church) => entry(church, null)),
+    nearby: nearbyChurches(city, snapshot.churches).map((n) =>
+      entry(n.church, n.distanceMiles),
+    ),
+  };
+}
+
+export async function fetchCityPage(slug: string): Promise<CityPageData> {
+  return cityPageData(await getSnapshot(), slug);
 }
 
 export async function fetchChurch(slug: string): Promise<ChurchDetail> {

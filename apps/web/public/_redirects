@@ -2,6 +2,11 @@
 /churches /churches/ 301
 /churches/:slug /churches/:slug/ 301
 /churches/:slug/index.html /churches/:slug/ 301
+# City pages live under /mass-times/; the all-parishes index lists every city.
+/mass-times /churches/ 301
+/mass-times/ /churches/ 301
+/mass-times/:slug /mass-times/:slug/ 301
+/mass-times/:slug/index.html /mass-times/:slug/ 301
 
 # Cloudflare Workers static asset redirects do not support domain-level rules.
 # Keep http -> https and www -> apex redirects configured at the Cloudflare zone.

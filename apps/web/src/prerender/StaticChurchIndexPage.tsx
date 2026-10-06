@@ -1,16 +1,12 @@
 import type { ChurchBase } from "../types";
+import { cityPath, citySlugFor } from "../lib/cities";
 import {
   CHURCH_INDEX_TITLE,
-  OG_IMAGE_ALT,
-  OG_IMAGE_HEIGHT,
-  OG_IMAGE_PATH,
-  OG_IMAGE_WIDTH,
-  SITE_LOCALE,
   SITE_NAME,
   absoluteUrl,
   buildChurchIndexDescription,
-  serializeJsonLd,
 } from "../lib/seo";
+import { StaticPageHead } from "./StaticPageHead";
 
 /** What the all-parishes index lists for each church. */
 type ChurchIndexEntry = Pick<ChurchBase, "slug" | "name" | "city" | "state">;
@@ -26,6 +22,8 @@ interface StaticChurchIndexPageProps {
 
 interface CityGroup {
   label: string;
+  /** Slug of the city's page; null for the "Other locations" group. */
+  slug: string | null;
   churches: ChurchIndexEntry[];
 }
 
@@ -34,6 +32,7 @@ const UNKNOWN_CITY = "Other locations";
 /** Group churches by "City, ST" (alphabetical), with unknown locations last. */
 function groupByCity(churches: ChurchIndexEntry[]): CityGroup[] {
   const groups = new Map<string, ChurchIndexEntry[]>();
+  const slugs = new Map<string, string | null>();
   for (const church of churches) {
     const city = church.city?.trim();
     const label = city
@@ -44,6 +43,7 @@ function groupByCity(churches: ChurchIndexEntry[]): CityGroup[] {
     const group = groups.get(label);
     if (group) group.push(church);
     else groups.set(label, [church]);
+    if (!slugs.has(label)) slugs.set(label, city ? citySlugFor(church) : null);
   }
   return [...groups.entries()]
     .sort(([a], [b]) =>
@@ -51,6 +51,7 @@ function groupByCity(churches: ChurchIndexEntry[]): CityGroup[] {
     )
     .map(([label, entries]) => ({
       label,
+      slug: slugs.get(label) ?? null,
       churches: entries.sort((a, b) => (a.name ?? "").localeCompare(b.name ?? "")),
     }));
 }
@@ -65,7 +66,6 @@ export function StaticChurchIndexPage({
   const title = CHURCH_INDEX_TITLE;
   const description = buildChurchIndexDescription(churches.length);
   const origin = new URL(canonicalUrl).origin;
-  const ogImageUrl = absoluteUrl(origin, OG_IMAGE_PATH);
   const groups = groupByCity(churches);
 
   const jsonLd = [
@@ -101,53 +101,14 @@ export function StaticChurchIndexPage({
 
   return (
     <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-        />
-        <meta name="description" content={description} />
-        <meta name="theme-color" content="#F3ECD8" />
-        <meta name="color-scheme" content="light" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="canonical" href={canonicalUrl} />
-        <title>{title}</title>
-
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content={SITE_NAME} />
-        <meta property="og:locale" content={SITE_LOCALE} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:image:width" content={String(OG_IMAGE_WIDTH)} />
-        <meta property="og:image:height" content={String(OG_IMAGE_HEIGHT)} />
-        <meta property="og:image:alt" content={OG_IMAGE_ALT} />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImageUrl} />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
-        />
-        {fontPaths.map((fp) => (
-          <link
-            key={fp}
-            rel="preload"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-            href={fp}
-          />
-        ))}
-        <link rel="stylesheet" href={cssPath} />
-      </head>
+      <StaticPageHead
+        title={title}
+        description={description}
+        canonicalUrl={canonicalUrl}
+        jsonLd={jsonLd}
+        cssPath={cssPath}
+        fontPaths={fontPaths}
+      />
       <body className="bg-paper">
         <main className="mx-auto w-full max-w-3xl px-6 py-12 pb-[calc(3rem+var(--safe-area-inset-bottom))]">
           <header className="text-center">
@@ -167,7 +128,13 @@ export function StaticChurchIndexPage({
             {groups.map((group) => (
               <section key={group.label}>
                 <h2 className="smallcaps border-b border-rule-strong pb-2 text-[0.95rem] text-ink">
-                  {group.label}
+                  {group.slug ? (
+                    <a href={cityPath(group.slug)} className="rubric-link">
+                      {group.label}
+                    </a>
+                  ) : (
+                    group.label
+                  )}
                 </h2>
                 <ul className="mt-4 space-y-2">
                   {group.churches.map((church) => (

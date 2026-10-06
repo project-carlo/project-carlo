@@ -16,6 +16,10 @@ const ChurchPage = lazy(() =>
   import("./views/ChurchPage").then((m) => ({ default: m.ChurchPage })),
 );
 
+const CityPage = lazy(() =>
+  import("./views/CityPage").then((m) => ({ default: m.CityPage })),
+);
+
 const AboutPage = lazy(() =>
   import("./views/AboutPage").then((m) => ({ default: m.AboutPage })),
 );
@@ -48,6 +52,14 @@ const routes: RouteObject[] = [
     element: (
       <Suspense fallback={lazyPageFallback}>
         <ChurchPage />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/mass-times/:citySlug",
+    element: (
+      <Suspense fallback={lazyPageFallback}>
+        <CityPage />
       </Suspense>
     ),
   },

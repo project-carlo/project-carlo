@@ -1,6 +1,8 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import {
   ChurchNotFoundError,
+  CityNotFoundError,
+  cityPageData,
   churchSchedule,
   collectMapItems,
   eventMatchesFilters,
@@ -289,5 +291,28 @@ describe("church page lookups", () => {
   it("leaves out events with no next occurrence", () => {
     // Church 3's only event is cancelled.
     expect(churchSchedule(snapshot, "a", [])).toEqual([]);
+  });
+});
+
+describe("city page lookups", () => {
+  const snapshot = parseSnapshot(JSON.stringify(fixture));
+
+  it("lists a city's churches with their schedules", () => {
+    // Church 7 ("b") is the fixture's only church with a city.
+    const data = cityPageData(snapshot, "rochester-ny");
+    expect(data.city).toMatchObject({ label: "Rochester, NY" });
+    expect(data.churches).toHaveLength(1);
+    expect(data.churches[0]).toMatchObject({
+      church: { id: 7 },
+      citySlug: "rochester-ny",
+      distanceMiles: null,
+    });
+    expect(data.churches[0].schedule.map((ev) => ev.id)).toEqual([10, 15]);
+    // Church 3 has no coordinates, so nothing is nearby.
+    expect(data.nearby).toEqual([]);
+  });
+
+  it("throws CityNotFoundError for a city with no churches", () => {
+    expect(() => cityPageData(snapshot, "east-aurora-ny")).toThrow(CityNotFoundError);
   });
 });
