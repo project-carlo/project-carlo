@@ -4,7 +4,8 @@ import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
 import { churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
-import { cityPath } from "../src/lib/cities";
+import { cityPath, type CityCenters } from "../src/lib/cities";
+import cityCentersJson from "../src/data/cityCenters.json";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
 import { StaticChurchIndexPage } from "../src/prerender/StaticChurchIndexPage";
@@ -183,14 +184,25 @@ function main() {
   writeFileSync(resolve(DIST_DIR, "churches", "index.html"), indexHtml, "utf-8");
   console.log("Wrote churches/index.html (all-parishes index).");
 
-  const citySlugs = cityIndex(snapshot).cities.map((city) => city.slug);
+  const cityCenters = cityCentersJson as CityCenters;
+  const { cities } = cityIndex(snapshot, cityCenters);
+  const ungeocoded = cities.filter((city) => !city.geocodedCenter);
+  if (ungeocoded.length > 0) {
+    console.warn(
+      `Warning: ${ungeocoded.length} cities have no geocoded center, so their ` +
+        "nearby churches are measured from their own churches' mean position. " +
+        "Run `pnpm geocode:cities` and commit src/data/cityCenters.json: " +
+        ungeocoded.map((city) => city.slug).join(", "),
+    );
+  }
+  const citySlugs = cities.map((city) => city.slug);
   for (const citySlug of citySlugs) {
     const path = cityPath(citySlug);
     const html =
       "<!DOCTYPE html>" +
       renderToStaticMarkup(
         createElement(StaticCityPage, {
-          data: cityPageData(snapshot, citySlug),
+          data: cityPageData(snapshot, citySlug, cityCenters),
           cssPath,
           fontPaths,
           canonicalUrl: absoluteUrl(origin, path),

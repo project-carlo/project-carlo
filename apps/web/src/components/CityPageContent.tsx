@@ -10,7 +10,7 @@ import { MapPinIcon } from "@/components/icons";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, formatMiles } from "@/lib/cities";
 import type { ScheduleRollupRow } from "@/lib/eventRollup";
-import { compactScheduleRows } from "@/lib/scheduleSummary";
+import { weeklyScheduleRows } from "@/lib/scheduleSummary";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
 
 /** The services a card tucks behind "Confession & Adoration times". */
@@ -77,11 +77,11 @@ function Disclosure({
 }
 
 function MassSchedule({ events }: { events: EventSummary[] }) {
-  const rows = compactScheduleRows(eventsOfType(events, "mass"));
+  const rows = weeklyScheduleRows(eventsOfType(events, "mass"));
   if (rows.length === 0) {
     return (
       <p className="font-serif text-[0.95rem] italic text-ink-faint">
-        No Mass times listed yet.
+        No weekly Mass times listed.
       </p>
     );
   }
@@ -91,7 +91,7 @@ function MassSchedule({ events }: { events: EventSummary[] }) {
 function SecondarySchedules({ events }: { events: EventSummary[] }) {
   const sections = SECONDARY_TYPES.map((type) => ({
     type,
-    rows: compactScheduleRows(eventsOfType(events, type)),
+    rows: weeklyScheduleRows(eventsOfType(events, type)),
   })).filter((s) => s.rows.length > 0);
   if (sections.length === 0) return null;
   const summary = sections
@@ -226,14 +226,8 @@ export function CityPageContent({ data }: { data: CityPageData }) {
             className="rise-in mx-auto max-w-3xl"
             style={{ animationDelay: "80ms" }}
           >
-            <section aria-labelledby="city-churches" className="mt-8">
-              <h2
-                id="city-churches"
-                className="font-display text-[1.75rem] leading-none font-normal text-ink"
-              >
-                {count === 1 ? "Church" : "Churches"} in {city.name}
-              </h2>
-              <ul className="mt-2 divide-y divide-rule">
+            <section aria-label={`Churches in ${city.name}`} className="mt-2">
+              <ul className="divide-y divide-rule">
                 {churches.map((entry) => (
                   <CityChurch key={entry.church.id} entry={entry} />
                 ))}

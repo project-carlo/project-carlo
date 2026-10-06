@@ -72,6 +72,17 @@ describe("buildCityIndex", () => {
     expect(center.lng).toBeCloseTo(-78.8);
     expect(index.bySlug.get("east-aurora-ny")!.center).toBeNull();
   });
+
+  it("prefers the city's geocoded center", () => {
+    const geocoded = buildCityIndex(churches, {
+      "buffalo-ny": { lat: 42.886, lng: -78.878 },
+    });
+    expect(geocoded.bySlug.get("buffalo-ny")).toMatchObject({
+      center: { lat: 42.886, lng: -78.878 },
+      geocodedCenter: true,
+    });
+    expect(geocoded.bySlug.get("east-aurora-ny")!.geocodedCenter).toBe(false);
+  });
 });
 
 describe("nearbyChurches", () => {

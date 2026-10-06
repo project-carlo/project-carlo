@@ -5,6 +5,7 @@ import {
   citySlugFor,
   nearbyChurches,
   type City,
+  type CityCenters,
   type CityIndex,
 } from "./lib/cities";
 import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
@@ -276,17 +277,19 @@ export function churchSchedule(
   return upcomingSchedule(snapshot, findChurch(snapshot, slug).id, types);
 }
 
-// The city index is derived from the (immutable) church list, so it's built
-// once per snapshot.
-const cityIndexes = new WeakMap<Snapshot, CityIndex>();
+// The city index is derived from the (immutable) church list and the
+// (constant) city centers, so it's built once per snapshot.
+const cityIndexes = new WeakMap<
+  Snapshot,
+  { centers: CityCenters; index: CityIndex }
+>();
 
 /** Every city with at least one church; shared with the prerenderer. */
-export function cityIndex(snapshot: Snapshot): CityIndex {
-  let index = cityIndexes.get(snapshot);
-  if (!index) {
-    index = buildCityIndex(snapshot.churches);
-    cityIndexes.set(snapshot, index);
-  }
+export function cityIndex(snapshot: Snapshot, centers: CityCenters): CityIndex {
+  const cached = cityIndexes.get(snapshot);
+  if (cached && cached.centers === centers) return cached.index;
+  const index = buildCityIndex(snapshot.churches, centers);
+  cityIndexes.set(snapshot, { centers, index });
   return index;
 }
 
@@ -312,8 +315,12 @@ export interface CityPageData {
  * Everything a city page shows. Shared with the prerenderer, so a static city
  * page lists the same churches and times as the live one.
  */
-export function cityPageData(snapshot: Snapshot, slug: string): CityPageData {
-  const city = cityIndex(snapshot).bySlug.get(slug);
+export function cityPageData(
+  snapshot: Snapshot,
+  slug: string,
+  centers: CityCenters,
+): CityPageData {
+  const city = cityIndex(snapshot, centers).bySlug.get(slug);
   if (!city) throw new CityNotFoundError(slug);
   const entry = (church: ChurchBase, distanceMiles: number | null) => ({
     church,
@@ -331,7 +338,12 @@ export function cityPageData(snapshot: Snapshot, slug: string): CityPageData {
 }
 
 export async function fetchCityPage(slug: string): Promise<CityPageData> {
-  return cityPageData(await getSnapshot(), slug);
+  // Only city pages need the centers, so they stay out of the map's bundle.
+  const [snapshot, centers] = await Promise.all([
+    getSnapshot(),
+    import("./data/cityCenters.json").then((m) => m.default as CityCenters),
+  ]);
+  return cityPageData(snapshot, slug, centers);
 }
 
 export async function fetchChurch(slug: string): Promise<ChurchDetail> {

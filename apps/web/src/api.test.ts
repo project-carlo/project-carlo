@@ -299,7 +299,7 @@ describe("city page lookups", () => {
 
   it("lists a city's churches with their schedules", () => {
     // Church 7 ("b") is the fixture's only church with a city.
-    const data = cityPageData(snapshot, "rochester-ny");
+    const data = cityPageData(snapshot, "rochester-ny", {});
     expect(data.city).toMatchObject({ label: "Rochester, NY" });
     expect(data.churches).toHaveLength(1);
     expect(data.churches[0]).toMatchObject({
@@ -312,7 +312,19 @@ describe("city page lookups", () => {
     expect(data.nearby).toEqual([]);
   });
 
+  it("centers the city on its geocoded center when there is one", () => {
+    const centers = { "rochester-ny": { lat: 43.16, lng: -77.61 } };
+    expect(cityPageData(snapshot, "rochester-ny", centers).city).toMatchObject({
+      center: { lat: 43.16, lng: -77.61 },
+      geocodedCenter: true,
+    });
+    expect(cityPageData(snapshot, "rochester-ny", {}).city).toMatchObject({
+      center: { lat: 43.1, lng: -77.6 },
+      geocodedCenter: false,
+    });
+  });
+
   it("throws CityNotFoundError for a city with no churches", () => {
-    expect(() => cityPageData(snapshot, "east-aurora-ny")).toThrow(CityNotFoundError);
+    expect(() => cityPageData(snapshot, "east-aurora-ny", {})).toThrow(CityNotFoundError);
   });
 });

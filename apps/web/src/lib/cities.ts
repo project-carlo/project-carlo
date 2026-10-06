@@ -21,6 +21,12 @@ export interface LatLng {
   lng: number;
 }
 
+/**
+ * Where a city is, by slug, as scripts/geocode-cities.ts records it in
+ * src/data/cityCenters.json: the town's own coordinates from OpenStreetMap.
+ */
+export type CityCenters = Record<string, LatLng>;
+
 export interface City {
   /** URL slug: city and state, e.g. `east-aurora-ny`. */
   slug: string;
@@ -31,8 +37,13 @@ export interface City {
   label: string;
   /** The city's churches, by name. */
   churches: ChurchBase[];
-  /** Mean position of its geocoded churches; null when none is geocoded. */
+  /**
+   * Where the city is: its geocoded center when cityCenters.json has one,
+   * else the mean position of its geocoded churches; null when neither is known.
+   */
   center: LatLng | null;
+  /** Whether `center` is the town's own geocoded center, not its churches' mean. */
+  geocodedCenter: boolean;
 }
 
 export interface CityIndex {
@@ -94,9 +105,13 @@ function commonest(values: string[]): string {
 
 /**
  * Group churches into cities by their address's city and state. Churches
- * whose address has no city belong to none.
+ * whose address has no city belong to none. Each city is centered on its
+ * entry in `centers`, when there is one.
  */
-export function buildCityIndex(churches: ChurchBase[]): CityIndex {
+export function buildCityIndex(
+  churches: ChurchBase[],
+  centers: CityCenters = {},
+): CityIndex {
   const groups = new Map<string, ChurchBase[]>();
   for (const church of churches) {
     const slug = citySlugFor(church);
@@ -111,13 +126,17 @@ export function buildCityIndex(churches: ChurchBase[]): CityIndex {
     const name = commonest(members.map((c) => clean(c.city)!));
     const states = members.map((c) => clean(c.state)).filter((s) => s !== null);
     const state = states.length > 0 ? commonest(states) : null;
+    const geocoded = Object.hasOwn(centers, slug) ? centers[slug] : null;
     cities.push({
       slug,
       name,
       state,
       label: cityLabel(name, state),
       churches: [...members].sort(compareNames),
-      center: centroid(members),
+      center: geocoded
+        ? { lat: geocoded.lat, lng: geocoded.lng }
+        : centroid(members),
+      geocodedCenter: geocoded !== null,
     });
   }
   cities.sort((a, b) => a.label.localeCompare(b.label) || a.slug.localeCompare(b.slug));

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { EventSummary } from "../types";
-import { compactScheduleRows, weeklyScheduleRows } from "./scheduleSummary";
+import { weeklyScheduleRows } from "./scheduleSummary";
 
 let nextId = 1;
 function weekly(day: string, start: number): EventSummary {
@@ -52,24 +52,8 @@ describe("weeklyScheduleRows", () => {
       ["Thursdays", ["8 a.m."]],
     ]);
   });
-});
 
-describe("compactScheduleRows", () => {
-  it("adds the soonest dated services after the weekly rows", () => {
-    const rows = compactScheduleRows(
-      [
-        dated("2026-12-25", 0),
-        weekly("Sunday", 600),
-        dated("2026-12-24", 16 * 60),
-        dated("2026-12-24", 22 * 60),
-        dated("2027-01-01", 600),
-      ],
-      2,
-    );
-    expect(rows.map((r) => [r.label, r.times])).toEqual([
-      ["Sundays", ["10 a.m."]],
-      ["Thu, Dec 24", ["4 p.m.", "10 p.m."]],
-      ["Fri, Dec 25", ["12 a.m."]],
-    ]);
+  it("leaves out dated services", () => {
+    expect(weeklyScheduleRows([dated("2026-12-24", 16 * 60)])).toEqual([]);
   });
 });

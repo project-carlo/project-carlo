@@ -122,11 +122,16 @@ Confession, and Adoration times parsed from weekly bulletins
 - [x] Phase 3 — local long-tail expansion (step 8)
   - Prerendered city pages at `/mass-times/{city}-{state}/` (e.g.
     `/mass-times/east-aurora-ny/`), one per city or town with at least one
-    church: its churches with their Mass times (Confession & Adoration behind a
-    native `<details>`), then the six closest churches outside it (within 40
-    miles of the centroid of the city's churches), each expandable to its Mass
-    times. Grouping, slugs and distances live in `src/lib/cities.ts`, shared by
-    the SPA route and the prerenderer.
+    church: its churches with their weekly Mass times (weekly Confession &
+    Adoration behind a native `<details>`), then the six closest churches
+    outside it (within 40 miles of the town's center), each expandable to its
+    weekly Mass times. Grouping, slugs and distances live in
+    `src/lib/cities.ts`, shared by the SPA route and the prerenderer.
+  - Town centers come from OpenStreetMap (Nominatim) via
+    `pnpm geocode:cities`, committed in `apps/web/src/data/cityCenters.json`.
+    Rerun it after adding a diocese: it looks up only the new cities, and the
+    build warns about any city still missing (whose page then measures from
+    the mean position of its churches).
   - Visible breadcrumbs on church and city pages (All parishes › City ›
     Parish), and a city level in the church pages' `BreadcrumbList`; city
     pages carry `CollectionPage` + `ItemList` + `BreadcrumbList` JSON-LD.

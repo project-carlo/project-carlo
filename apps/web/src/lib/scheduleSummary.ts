@@ -1,13 +1,12 @@
 import { DAY_ORDER } from "../constants/days";
 import type { EventSummary } from "../types";
 import { formatMinutesMissal } from "../utils";
-import { rollUpEventsByDay, type ScheduleRollupRow } from "./eventRollup";
+import type { ScheduleRollupRow } from "./eventRollup";
 
 /**
- * A compact schedule for listing many churches on one page (a city page):
- * weekly times one row per day, with runs of days that share the same times
- * folded into one row ("Mon – Fri  8 a.m."), then the soonest few dated
- * services. Pure formatting logic.
+ * A compact weekly schedule for listing many churches on one page (a city
+ * page): one row per day, with runs of days that share the same times folded
+ * into one row ("Mon – Fri  8 a.m."). Pure formatting logic.
  */
 
 const DAY_ABBR: Record<string, string> = {
@@ -66,21 +65,4 @@ export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] 
     label: runLabel(run.days),
     times: run.times.map(formatMinutesMissal),
   }));
-}
-
-/**
- * A compact schedule: the weekly rows, then rows for the soonest
- * `maxDates` dates with dated (one-off) services.
- */
-export function compactScheduleRows(
-  events: EventSummary[],
-  maxDates = 3,
-): ScheduleRollupRow[] {
-  const dated = events
-    .filter((e) => e.kind === "specific_date" && e.date)
-    .sort((a, b) => (a.date! < b.date! ? -1 : a.date! > b.date! ? 1 : a.start_time - b.start_time));
-  return [
-    ...weeklyScheduleRows(events),
-    ...rollUpEventsByDay(dated).slice(0, maxDates),
-  ];
 }
