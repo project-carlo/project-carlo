@@ -13,6 +13,9 @@ import {
 } from "@/lib/seo";
 import { NotFoundPage } from "./NotFoundPage";
 
+/** React Query's default; a failure that outlasts it shows the error and Retry. */
+const MAX_RETRIES = 3;
+
 export function CityPage() {
   const { citySlug } = useParams();
   const enabled = typeof citySlug === "string" && citySlug.length > 0;
@@ -21,7 +24,8 @@ export function CityPage() {
     queryKey: ["city", citySlug],
     queryFn: () => fetchCityPage(citySlug!),
     enabled,
-    retry: (_failureCount, error) => !(error instanceof CityNotFoundError),
+    retry: (failureCount, error) =>
+      failureCount < MAX_RETRIES && !(error instanceof CityNotFoundError),
   });
 
   const data = cityQuery.data;

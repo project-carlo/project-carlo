@@ -3,14 +3,14 @@ import { existsSync, readFileSync, mkdirSync, writeFileSync, readdirSync } from 
 import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
-import { churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
+import { churchCity, churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
 import { cityPath, type CityCenters } from "../src/lib/cities";
 import cityCentersJson from "../src/data/cityCenters.json";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
 import { StaticChurchIndexPage } from "../src/prerender/StaticChurchIndexPage";
 import { StaticCityPage } from "../src/prerender/StaticCityPage";
-import { CHURCH_INDEX_PATH } from "../src/lib/seo";
+import { CHURCH_INDEX_PATH, churchPath } from "../src/lib/seo";
 import { EVENT_TYPE_ORDER } from "../src/constants/eventTypes";
 
 const WEB_DIR = resolve(import.meta.dirname, "..");
@@ -61,12 +61,8 @@ function absoluteUrl(origin: string, pathname: string): string {
   return new URL(pathname, `${origin}/`).href;
 }
 
-function canonicalPathForChurchSlug(slug: string): string {
-  return `/churches/${encodeURIComponent(slug)}/`;
-}
-
 function canonicalUrlForChurchSlug(origin: string, slug: string): string {
-  return absoluteUrl(origin, canonicalPathForChurchSlug(slug));
+  return absoluteUrl(origin, churchPath(slug));
 }
 
 function isAboutPageEnabledAtBuild(): boolean {
@@ -155,6 +151,7 @@ function main() {
       renderToStaticMarkup(
         createElement(StaticChurchPage, {
           church,
+          city: churchCity(snapshot, church),
           events,
           cssPath,
           fontPaths,
@@ -169,11 +166,15 @@ function main() {
     count++;
   }
 
+  const cityCenters = cityCentersJson as CityCenters;
+  const { cities } = cityIndex(snapshot, cityCenters);
+
   const indexHtml =
     "<!DOCTYPE html>" +
     renderToStaticMarkup(
       createElement(StaticChurchIndexPage, {
         churches: snapshot.churches,
+        cities,
         cssPath,
         fontPaths,
         canonicalUrl: absoluteUrl(origin, CHURCH_INDEX_PATH),
@@ -184,8 +185,6 @@ function main() {
   writeFileSync(resolve(DIST_DIR, "churches", "index.html"), indexHtml, "utf-8");
   console.log("Wrote churches/index.html (all-parishes index).");
 
-  const cityCenters = cityCentersJson as CityCenters;
-  const { cities } = cityIndex(snapshot, cityCenters);
   const ungeocoded = cities.filter((city) => !city.geocodedCenter);
   if (ungeocoded.length > 0) {
     console.warn(

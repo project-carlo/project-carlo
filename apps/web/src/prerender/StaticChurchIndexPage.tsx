@@ -1,10 +1,11 @@
 import type { ChurchBase } from "../types";
-import { cityPath, citySlugFor } from "../lib/cities";
+import { cityPath, citySlugFor, type City } from "../lib/cities";
 import {
   CHURCH_INDEX_TITLE,
   SITE_NAME,
   absoluteUrl,
   buildChurchIndexDescription,
+  churchPath,
 } from "../lib/seo";
 import { StaticPageHead } from "./StaticPageHead";
 
@@ -13,6 +14,8 @@ type ChurchIndexEntry = Pick<ChurchBase, "slug" | "name" | "city" | "state">;
 
 interface StaticChurchIndexPageProps {
   churches: ChurchIndexEntry[];
+  /** The city pages, as `cityIndex` builds them, so headings match their titles. */
+  cities: Pick<City, "slug" | "label" | "churches">[];
   cssPath: string;
   fontPaths: string[];
   canonicalUrl: string;
@@ -29,35 +32,31 @@ interface CityGroup {
 
 const UNKNOWN_CITY = "Other locations";
 
-/** Group churches by "City, ST" (alphabetical), with unknown locations last. */
-function groupByCity(churches: ChurchIndexEntry[]): CityGroup[] {
-  const groups = new Map<string, ChurchIndexEntry[]>();
-  const slugs = new Map<string, string | null>();
-  for (const church of churches) {
-    const city = church.city?.trim();
-    const label = city
-      ? church.state?.trim()
-        ? `${city}, ${church.state.trim()}`
-        : city
-      : UNKNOWN_CITY;
-    const group = groups.get(label);
-    if (group) group.push(church);
-    else groups.set(label, [church]);
-    if (!slugs.has(label)) slugs.set(label, city ? citySlugFor(church) : null);
+/**
+ * One group per city page, under that page's label (alphabetical), then the
+ * churches whose address has no city.
+ */
+function groupByCity(
+  churches: ChurchIndexEntry[],
+  cities: StaticChurchIndexPageProps["cities"],
+): CityGroup[] {
+  const groups: CityGroup[] = cities.map((city) => ({
+    label: city.label,
+    slug: city.slug,
+    churches: city.churches,
+  }));
+  const unknown = churches
+    .filter((church) => citySlugFor(church) === null)
+    .sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""));
+  if (unknown.length > 0) {
+    groups.push({ label: UNKNOWN_CITY, slug: null, churches: unknown });
   }
-  return [...groups.entries()]
-    .sort(([a], [b]) =>
-      a === UNKNOWN_CITY ? 1 : b === UNKNOWN_CITY ? -1 : a.localeCompare(b),
-    )
-    .map(([label, entries]) => ({
-      label,
-      slug: slugs.get(label) ?? null,
-      churches: entries.sort((a, b) => (a.name ?? "").localeCompare(b.name ?? "")),
-    }));
+  return groups;
 }
 
 export function StaticChurchIndexPage({
   churches,
+  cities,
   cssPath,
   fontPaths,
   canonicalUrl,
@@ -66,7 +65,7 @@ export function StaticChurchIndexPage({
   const title = CHURCH_INDEX_TITLE;
   const description = buildChurchIndexDescription(churches.length);
   const origin = new URL(canonicalUrl).origin;
-  const groups = groupByCity(churches);
+  const groups = groupByCity(churches, cities);
 
   const jsonLd = [
     {
@@ -140,7 +139,7 @@ export function StaticChurchIndexPage({
                   {group.churches.map((church) => (
                     <li key={church.slug}>
                       <a
-                        href={`/churches/${encodeURIComponent(church.slug)}/`}
+                        href={churchPath(church.slug)}
                         className="rubric-link font-serif text-[1.05rem] text-ink"
                       >
                         {church.name ?? "Unnamed parish"}

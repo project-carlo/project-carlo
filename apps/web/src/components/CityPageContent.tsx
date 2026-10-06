@@ -11,14 +11,10 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, formatMiles } from "@/lib/cities";
 import type { ScheduleRollupRow } from "@/lib/eventRollup";
 import { weeklyScheduleRows } from "@/lib/scheduleSummary";
-import { CHURCH_INDEX_PATH } from "@/lib/seo";
+import { CHURCH_INDEX_PATH, churchPath } from "@/lib/seo";
 
 /** The services a card tucks behind "Confession & Adoration times". */
 const SECONDARY_TYPES: EventType[] = ["confession", "adoration"];
-
-function churchPath(slug: string): string {
-  return `/churches/${encodeURIComponent(slug)}/`;
-}
 
 function eventsOfType(events: EventSummary[], type: EventType): EventSummary[] {
   return events.filter((e) => e.type === type);

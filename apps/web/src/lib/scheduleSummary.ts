@@ -1,6 +1,6 @@
-import { DAY_ORDER } from "../constants/days";
+import { DAY_ORDER, jsDayFor } from "../constants/days";
 import type { EventSummary } from "../types";
-import { formatMinutesMissal } from "../utils";
+import { formatMinutesMissal, titleCase } from "../utils";
 import type { ScheduleRollupRow } from "./eventRollup";
 
 /**
@@ -9,24 +9,15 @@ import type { ScheduleRollupRow } from "./eventRollup";
  * into one row ("Mon – Fri  8 a.m."). Pure formatting logic.
  */
 
-const DAY_ABBR: Record<string, string> = {
-  sunday: "Sun",
-  monday: "Mon",
-  tuesday: "Tue",
-  wednesday: "Wed",
-  thursday: "Thu",
-  friday: "Fri",
-  saturday: "Sat",
-};
-
-function dayName(day: string): string {
-  return day.charAt(0).toUpperCase() + day.slice(1);
+/** "Mon" for "monday". */
+function dayAbbr(day: string): string {
+  return titleCase(day).slice(0, 3);
 }
 
 function runLabel(days: string[]): string {
-  if (days.length === 1) return dayName(days[0]);
-  const first = DAY_ABBR[days[0]];
-  const last = DAY_ABBR[days[days.length - 1]];
+  if (days.length === 1) return titleCase(days[0]);
+  const first = dayAbbr(days[0]);
+  const last = dayAbbr(days[days.length - 1]);
   return days.length === 2 ? `${first} & ${last}` : `${first} – ${last}`;
 }
 
@@ -35,7 +26,8 @@ export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] 
   const timesByDay = new Map<string, number[]>();
   for (const event of events) {
     if (event.kind !== "weekly" || !event.day_of_week) continue;
-    const day = event.day_of_week.toLowerCase();
+    const day = DAY_ORDER[jsDayFor(event.day_of_week)];
+    if (!day) continue;
     const times = timesByDay.get(day) ?? [];
     if (!times.includes(event.start_time)) times.push(event.start_time);
     timesByDay.set(day, times);

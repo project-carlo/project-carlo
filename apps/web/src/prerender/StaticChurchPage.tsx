@@ -1,5 +1,6 @@
 import { MemoryRouter } from "react-router-dom";
 import type { ChurchDetail, EventSummary } from "../types";
+import type { CityLink } from "../lib/cities";
 import { ChurchPageContent } from "../components/ChurchPageContent";
 import {
   buildChurchDescription,
@@ -12,6 +13,7 @@ import { StaticPageHead } from "./StaticPageHead";
 
 interface StaticChurchPageProps {
   church: ChurchDetail;
+  city: CityLink | null;
   events: EventSummary[];
   cssPath: string;
   fontPaths: string[];
@@ -22,6 +24,7 @@ interface StaticChurchPageProps {
 
 export function StaticChurchPage({
   church,
+  city,
   events,
   cssPath,
   fontPaths,
@@ -31,7 +34,7 @@ export function StaticChurchPage({
   const jsonLd = [
     churchJsonLd(church, canonicalUrl),
     churchWebPageJsonLd(church, canonicalUrl, lastModified),
-    churchBreadcrumbJsonLd(church, canonicalUrl),
+    churchBreadcrumbJsonLd(church, city, canonicalUrl),
   ];
 
   return (
@@ -46,7 +49,7 @@ export function StaticChurchPage({
       />
       <body>
         <MemoryRouter>
-          <ChurchPageContent church={church} events={events} />
+          <ChurchPageContent church={church} city={city} events={events} />
         </MemoryRouter>
       </body>
     </html>

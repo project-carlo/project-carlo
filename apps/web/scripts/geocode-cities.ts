@@ -2,7 +2,9 @@
  * Geocode the center of every city (or town, village or hamlet) that has a
  * city page, from OpenStreetMap's Nominatim, into src/data/cityCenters.json.
  * City pages measure "nearby churches" from these points; a city missing
- * from the file falls back to the mean position of its churches.
+ * from the file falls back to the mean position of its churches. Where each
+ * point came from (the place's name, OpenStreetMap object and type) goes in
+ * src/data/cityCenterSources.json, which the app never loads.
  *
  * Reads the cities from the data snapshot (public/frontend.json.gz, as the
  * prerenderer does) and only looks up cities the file doesn't have yet, so
@@ -27,6 +29,7 @@ import { buildCityIndex, distanceMiles, type City } from "../src/lib/cities";
 const WEB_DIR = resolve(import.meta.dirname, "..");
 const SNAPSHOT_PATH = resolve(WEB_DIR, "public", SNAPSHOT_FILE);
 const CENTERS_PATH = resolve(WEB_DIR, "src", "data", "cityCenters.json");
+const SOURCES_PATH = resolve(WEB_DIR, "src", "data", "cityCenterSources.json");
 
 const NOMINATIM_URL = "https://nominatim.openstreetmap.org/search";
 const USER_AGENT =
@@ -39,11 +42,16 @@ const PAUSE_MS = 1100;
  */
 const DEFAULT_MAX_MILES = 15;
 
-interface CenterEntry {
-  /** "East Aurora, NY", for reading the file. */
-  name: string;
+/** A city's center as the app reads it, from cityCenters.json. */
+interface Center {
   lat: number;
   lng: number;
+}
+
+/** Where a center came from, in cityCenterSources.json. */
+interface CenterSource {
+  /** "East Aurora, NY", for reading the file. */
+  name: string;
   /** The OpenStreetMap object the point came from, e.g. "node/158488665". */
   osm: string;
   /** Its place type, e.g. "village" or "hamlet". */
@@ -126,16 +134,17 @@ function pick(
   return { result: best.result, miles: best.miles };
 }
 
-function readCenters(): Record<string, CenterEntry> {
-  if (!existsSync(CENTERS_PATH)) return {};
-  return JSON.parse(readFileSync(CENTERS_PATH, "utf-8")) as Record<string, CenterEntry>;
+function readJson<T>(path: string): Record<string, T> {
+  if (!existsSync(path)) return {};
+  return JSON.parse(readFileSync(path, "utf-8")) as Record<string, T>;
 }
 
-function writeCenters(centers: Record<string, CenterEntry>): void {
-  const sorted = Object.fromEntries(
-    Object.entries(centers).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)),
-  );
-  writeFileSync(CENTERS_PATH, JSON.stringify(sorted, null, 2) + "\n", "utf-8");
+/** By slug, one entry per line, so a hand edit or a new city is a one-line diff. */
+function writeJson(path: string, entries: Record<string, unknown>): void {
+  const lines = Object.entries(entries)
+    .sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))
+    .map(([slug, value]) => `  ${JSON.stringify(slug)}: ${JSON.stringify(value)}`);
+  writeFileSync(path, `{\n${lines.join(",\n")}\n}\n`, "utf-8");
 }
 
 const sleep = (ms: number) => new Promise((done) => setTimeout(done, ms));
@@ -162,7 +171,8 @@ async function main() {
   // what a match is checked against.
   const { cities } = buildCityIndex(snapshot.churches);
 
-  const centers = readCenters();
+  const centers = readJson<Center>(CENTERS_PATH);
+  const sources = readJson<CenterSource>(SOURCES_PATH);
   const todo = cities.filter((city) =>
     only ? only.has(city.slug) : values.refresh || !centers[city.slug],
   );
@@ -188,22 +198,25 @@ async function main() {
     }
     const { result, miles } = outcome;
     centers[city.slug] = {
-      name: city.label,
       lat: Number(Number(result.lat).toFixed(6)),
       lng: Number(Number(result.lon).toFixed(6)),
+    };
+    sources[city.slug] = {
+      name: city.label,
       osm: `${result.osm_type ?? "?"}/${result.osm_id ?? "?"}`,
       type: result.addresstype ?? result.type ?? "place",
     };
     found++;
     const away = miles === null ? "" : `, ${miles.toFixed(1)} mi from its churches`;
-    console.log(`  ✓ ${city.label}: ${result.name ?? "?"} (${centers[city.slug].type}${away})`);
+    console.log(`  ✓ ${city.label}: ${result.name ?? "?"} (${sources[city.slug].type}${away})`);
   }
 
   if (values["dry-run"]) {
     console.log(`Dry run: found ${found}, not writing ${CENTERS_PATH}.`);
   } else {
-    writeCenters(centers);
-    console.log(`Wrote ${CENTERS_PATH} (${found} found).`);
+    writeJson(CENTERS_PATH, centers);
+    writeJson(SOURCES_PATH, sources);
+    console.log(`Wrote ${CENTERS_PATH} and ${SOURCES_PATH} (${found} found).`);
   }
   if (failures.length > 0) {
     console.log(

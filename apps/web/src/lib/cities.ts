@@ -46,6 +46,9 @@ export interface City {
   geocodedCenter: boolean;
 }
 
+/** What a link to a city page needs. */
+export type CityLink = Pick<City, "slug" | "label">;
+
 export interface CityIndex {
   /** Every city, by label. */
   cities: City[];

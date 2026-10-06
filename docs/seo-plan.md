@@ -128,7 +128,9 @@ Confession, and Adoration times parsed from weekly bulletins
     weekly Mass times. Grouping, slugs and distances live in
     `src/lib/cities.ts`, shared by the SPA route and the prerenderer.
   - Town centers come from OpenStreetMap (Nominatim) via
-    `pnpm geocode:cities`, committed in `apps/web/src/data/cityCenters.json`.
+    `pnpm geocode:cities`, committed in `apps/web/src/data/cityCenters.json`
+    (with where each came from in `cityCenterSources.json`, which the app
+    doesn't load).
     Rerun it after adding a diocese: it looks up only the new cities, and the
     build warns about any city still missing (whose page then measures from
     the mean position of its churches).

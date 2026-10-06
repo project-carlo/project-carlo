@@ -10,8 +10,12 @@ import {
   buildChurchDescription,
   buildChurchTitle,
   canonicalForPath,
+  churchPath,
 } from "@/lib/seo";
 import { NotFoundPage } from "./NotFoundPage";
+
+/** React Query's default; a failure that outlasts it shows the error and Retry. */
+const MAX_RETRIES = 3;
 
 export function ChurchPage() {
   const { churchSlug } = useParams();
@@ -21,19 +25,19 @@ export function ChurchPage() {
     queryKey: ["church", churchSlug],
     queryFn: () => fetchChurch(churchSlug!),
     enabled,
-    retry: (_failureCount, error) =>
-      !(error instanceof ChurchNotFoundError),
+    retry: (failureCount, error) =>
+      failureCount < MAX_RETRIES && !(error instanceof ChurchNotFoundError),
   });
   const eventsQuery = useQuery({
     queryKey: ["church-events", churchSlug],
     queryFn: () => fetchChurchEvents(churchSlug!, [...EVENT_TYPE_ORDER]),
     enabled,
-    retry: (_failureCount, error) =>
-      !(error instanceof ChurchNotFoundError),
+    retry: (failureCount, error) =>
+      failureCount < MAX_RETRIES && !(error instanceof ChurchNotFoundError),
   });
 
   const events = eventsQuery.data;
-  const church = churchQuery.data;
+  const church = churchQuery.data?.church;
 
   const notFound =
     !enabled ||
@@ -49,7 +53,7 @@ export function ChurchPage() {
     description: !notFound && church ? buildChurchDescription(church) : undefined,
     canonicalUrl:
       !notFound && church && churchSlug
-        ? canonicalForPath(`/churches/${encodeURIComponent(churchSlug)}/`)
+        ? canonicalForPath(churchPath(churchSlug))
         : undefined,
     noindex: notFound,
   });
@@ -76,7 +80,13 @@ export function ChurchPage() {
   }
 
   if (church && events) {
-    return <ChurchPageContent church={church} events={events} />;
+    return (
+      <ChurchPageContent
+        church={church}
+        city={churchQuery.data?.city ?? null}
+        events={events}
+      />
+    );
   }
 
   return (

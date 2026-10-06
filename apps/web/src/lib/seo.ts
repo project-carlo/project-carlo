@@ -4,7 +4,7 @@
  * (in a later phase) the client-rendered routes.
  */
 import type { ChurchBase, ChurchDetail } from "../types";
-import { cityLabel, cityPath, citySlugFor, type City } from "./cities";
+import { cityPath, type City, type CityLink } from "./cities";
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -69,6 +69,11 @@ export function buildChurchDescription(church: ChurchDetail): string {
 
 /** Canonical path of the prerendered all-parishes index page. */
 export const CHURCH_INDEX_PATH = "/churches/";
+
+/** Canonical path of a church page. */
+export function churchPath(slug: string): string {
+  return `${CHURCH_INDEX_PATH}${encodeURIComponent(slug)}/`;
+}
 
 export const CHURCH_INDEX_TITLE = `Browse Catholic Parishes — Mass, Confession & Adoration Times · ${SITE_NAME}`;
 
@@ -166,6 +171,7 @@ export function churchWebPageJsonLd(
  */
 export function churchBreadcrumbJsonLd(
   church: ChurchDetail,
+  city: CityLink | null,
   canonicalUrl: string,
 ): Record<string, unknown> {
   const origin = new URL(canonicalUrl).origin;
@@ -173,12 +179,8 @@ export function churchBreadcrumbJsonLd(
     { name: SITE_NAME, item: absoluteUrl(origin, "/") },
     { name: "Parishes", item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
   ];
-  const citySlug = citySlugFor(church);
-  if (citySlug && church.city) {
-    crumbs.push({
-      name: cityLabel(church.city.trim(), church.state?.trim() || null),
-      item: absoluteUrl(origin, cityPath(citySlug)),
-    });
+  if (city) {
+    crumbs.push({ name: city.label, item: absoluteUrl(origin, cityPath(city.slug)) });
   }
   crumbs.push({ name: church.name ?? "Parish", item: canonicalUrl });
   return breadcrumbList(crumbs);
@@ -225,8 +227,7 @@ export function cityJsonLd(
   canonicalUrl: string,
 ): Record<string, unknown>[] {
   const origin = new URL(canonicalUrl).origin;
-  const churchUrl = (church: ChurchBase) =>
-    absoluteUrl(origin, `/churches/${encodeURIComponent(church.slug)}/`);
+  const churchUrl = (church: ChurchBase) => absoluteUrl(origin, churchPath(church.slug));
   return [
     {
       "@context": "https://schema.org",

@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import {
   ChurchNotFoundError,
   CityNotFoundError,
+  churchCity,
   cityPageData,
   churchSchedule,
   collectMapItems,
@@ -322,6 +323,24 @@ describe("city page lookups", () => {
       center: { lat: 43.1, lng: -77.6 },
       geocodedCenter: false,
     });
+  });
+
+  it("names a church's city as its city page does", () => {
+    // Church 3 ("a") spells its city "rochester"; church 7's "Rochester" names the page.
+    const twoSpellings = parseSnapshot(
+      JSON.stringify({
+        ...fixture,
+        churches: {
+          ...fixture.churches,
+          city: { values: ["Rochester", "rochester"], codes: [0, 1] },
+        },
+      }),
+    );
+    const city = { slug: "rochester-ny", label: "Rochester, NY" };
+    expect(churchCity(twoSpellings, findChurch(twoSpellings, "a"))).toEqual(city);
+    expect(churchCity(twoSpellings, findChurch(twoSpellings, "b"))).toEqual(city);
+    // In the plain fixture church 3 has no city, so no city page.
+    expect(churchCity(snapshot, findChurch(snapshot, "a"))).toBeNull();
   });
 
   it("throws CityNotFoundError for a city with no churches", () => {

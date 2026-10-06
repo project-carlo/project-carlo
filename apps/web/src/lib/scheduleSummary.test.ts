@@ -53,6 +53,11 @@ describe("weeklyScheduleRows", () => {
     ]);
   });
 
+  it("reads day names as the church page does, whatever their case or spacing", () => {
+    const rows = weeklyScheduleRows([weekly(" Sunday ", 9 * 60), weekly("someday", 480)]);
+    expect(rows.map((r) => [r.label, r.times])).toEqual([["Sunday", ["9 a.m."]]]);
+  });
+
   it("leaves out dated services", () => {
     expect(weeklyScheduleRows([dated("2026-12-24", 16 * 60)])).toEqual([]);
   });

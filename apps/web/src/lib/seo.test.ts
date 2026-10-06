@@ -62,7 +62,8 @@ describe("churchBreadcrumbJsonLd", () => {
     (jsonLd.itemListElement as { name: string; item: string }[]).map((c) => c.item);
 
   it("puts the church's city page between the index and the church", () => {
-    expect(names(churchBreadcrumbJsonLd(church, url))).toEqual([
+    const city = { slug: "rochester-ny", label: "Rochester, NY" };
+    expect(names(churchBreadcrumbJsonLd(church, city, url))).toEqual([
       "https://projectcarlo.com/",
       "https://projectcarlo.com/churches/",
       "https://projectcarlo.com/mass-times/rochester-ny/",
@@ -71,7 +72,7 @@ describe("churchBreadcrumbJsonLd", () => {
   });
 
   it("leaves the city out when the address has none", () => {
-    expect(names(churchBreadcrumbJsonLd({ ...church, city: null }, url))).toEqual([
+    expect(names(churchBreadcrumbJsonLd({ ...church, city: null }, null, url))).toEqual([
       "https://projectcarlo.com/",
       "https://projectcarlo.com/churches/",
       url,

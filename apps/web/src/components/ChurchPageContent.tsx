@@ -6,6 +6,7 @@ import {
   formatEventDate,
   formatMonthDay,
   formatMinutesMissal,
+  titleCase,
 } from "../utils";
 import {
   ExternalLinkIcon,
@@ -17,7 +18,7 @@ import { FeedbackTrigger } from "@/components/FeedbackTrigger";
 import { Fleuron } from "@/components/Fleuron";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { SiteHeader } from "@/components/SiteHeader";
-import { cityLabel, cityPath, citySlugFor } from "@/lib/cities";
+import { cityPath, type CityLink } from "@/lib/cities";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
@@ -70,11 +71,6 @@ function partitionEventsByType(
   }
 
   return result;
-}
-
-function formatDayLabel(day: string): string {
-  const d = day.toLowerCase();
-  return d.charAt(0).toUpperCase() + d.slice(1);
 }
 
 function formatTimeValue(event: EventSummary): string {
@@ -184,25 +180,21 @@ function PageRef({
 }
 
 /** All parishes › {City} › {Parish}, without the city when the address has none. */
-function churchCrumbs(church: ChurchDetail): Crumb[] {
+function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
   const crumbs: Crumb[] = [{ label: "All parishes", href: CHURCH_INDEX_PATH }];
-  const citySlug = citySlugFor(church);
-  if (citySlug && church.city) {
-    crumbs.push({
-      label: cityLabel(church.city.trim(), church.state?.trim() || null),
-      to: cityPath(citySlug),
-    });
-  }
+  if (city) crumbs.push({ label: city.label, to: cityPath(city.slug) });
   crumbs.push({ label: church.name ?? "Unnamed parish" });
   return crumbs;
 }
 
 interface ChurchPageContentProps {
   church: ChurchDetail;
+  /** The city page the church is listed on, as that page names it. */
+  city: CityLink | null;
   events: EventSummary[];
 }
 
-export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
+export function ChurchPageContent({ church, city, events }: ChurchPageContentProps) {
   const byType = partitionEventsByType(events);
 
   return (
@@ -212,7 +204,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         <section className="rise-in mx-auto max-w-2xl text-center">
-          <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church)} />
+          <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church, city)} />
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
             {church.name ?? "Unnamed parish"}
           </h1>
@@ -305,7 +297,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                             className="grid grid-cols-[6rem_1fr] items-baseline gap-4 py-2.5"
                           >
                             <dt className="smallcaps text-[0.875rem] text-ink-soft">
-                              {formatDayLabel(day)}
+                              {titleCase(day)}
                             </dt>
                             <dd className="font-serif text-[1.05rem] leading-snug text-ink">
                               {dayEvents.map((event, idx) => (

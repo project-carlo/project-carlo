@@ -7,6 +7,7 @@ import {
   type City,
   type CityCenters,
   type CityIndex,
+  type CityLink,
 } from "./lib/cities";
 import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
 import { parseSnapshot, SNAPSHOT_FILE, type Snapshot } from "./lib/snapshot";
@@ -278,19 +279,35 @@ export function churchSchedule(
 }
 
 // The city index is derived from the (immutable) church list and the
-// (constant) city centers, so it's built once per snapshot.
-const cityIndexes = new WeakMap<
-  Snapshot,
-  { centers: CityCenters; index: CityIndex }
->();
+// (constant) city centers, so it's built once per snapshot and centers.
+const cityIndexes = new WeakMap<Snapshot, WeakMap<CityCenters, CityIndex>>();
 
 /** Every city with at least one church; shared with the prerenderer. */
 export function cityIndex(snapshot: Snapshot, centers: CityCenters): CityIndex {
-  const cached = cityIndexes.get(snapshot);
-  if (cached && cached.centers === centers) return cached.index;
-  const index = buildCityIndex(snapshot.churches, centers);
-  cityIndexes.set(snapshot, { centers, index });
+  let byCenters = cityIndexes.get(snapshot);
+  if (!byCenters) {
+    byCenters = new WeakMap();
+    cityIndexes.set(snapshot, byCenters);
+  }
+  let index = byCenters.get(centers);
+  if (!index) {
+    index = buildCityIndex(snapshot.churches, centers);
+    byCenters.set(centers, index);
+  }
   return index;
+}
+
+/** Centers don't change a city's slug or label, so links to it don't need them. */
+const NO_CENTERS: CityCenters = {};
+
+/**
+ * The city page a church is listed on, named as that page names it; null when
+ * its address has no city. Shared with the prerenderer.
+ */
+export function churchCity(snapshot: Snapshot, church: ChurchBase): CityLink | null {
+  const slug = citySlugFor(church);
+  const city = slug ? cityIndex(snapshot, NO_CENTERS).bySlug.get(slug) : undefined;
+  return city ? { slug: city.slug, label: city.label } : null;
 }
 
 /** A church as a city page lists it: with its schedule, all types. */
@@ -346,8 +363,16 @@ export async function fetchCityPage(slug: string): Promise<CityPageData> {
   return cityPageData(snapshot, slug, centers);
 }
 
-export async function fetchChurch(slug: string): Promise<ChurchDetail> {
-  return findChurch(await getSnapshot(), slug);
+/** A church page's church, and the city page its breadcrumbs link to. */
+export interface ChurchWithCity {
+  church: ChurchDetail;
+  city: CityLink | null;
+}
+
+export async function fetchChurch(slug: string): Promise<ChurchWithCity> {
+  const snapshot = await getSnapshot();
+  const church = findChurch(snapshot, slug);
+  return { church, city: churchCity(snapshot, church) };
 }
 
 export async function fetchChurchEvents(
