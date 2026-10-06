@@ -19,8 +19,8 @@ export default defineConfig({
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
-    // wrangler dev mirrors the production Worker, including SPA fallback
-    // (not_found_handling = "single-page-application" in wrangler.jsonc).
+    // wrangler dev mirrors the production Worker, including its 404 handling
+    // (not_found_handling = "404-page" in wrangler.jsonc).
     command: `pnpm exec wrangler dev --port ${PORT} --ip 127.0.0.1 --log-level warn`,
     url: BASE_URL,
     reuseExistingServer: !process.env.CI,

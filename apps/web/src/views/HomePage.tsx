@@ -43,7 +43,12 @@ import {
   type PlaceSearchResult,
 } from "../placeSearch";
 import { isAboutPageEnabled } from "../lib/featureFlags";
-import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
+import {
+  CHURCH_INDEX_PATH,
+  HOME_DESCRIPTION,
+  HOME_TITLE,
+  canonicalForPath,
+} from "../lib/seo";
 
 const aboutPageEnabled = isAboutPageEnabled();
 
@@ -389,14 +394,25 @@ export function HomePage() {
           >
             <div className="flex items-start justify-between gap-4">
               <Masthead />
-              {aboutPageEnabled ? (
-                <Link
-                  to="/about"
-                  className="rubric-link mt-1 shrink-0 font-serif text-[0.9375rem]"
+              {/* A plain link, not a router Link: /churches/ is a prerendered
+                  page with no SPA route. It's also the homepage's one crawlable
+                  path into the church and city pages. */}
+              <div className="mt-1 flex shrink-0 flex-col items-end gap-1">
+                <a
+                  href={CHURCH_INDEX_PATH}
+                  className="rubric-link font-serif text-[0.9375rem]"
                 >
-                  About
-                </Link>
-              ) : null}
+                  All churches
+                </a>
+                {aboutPageEnabled ? (
+                  <Link
+                    to="/about"
+                    className="rubric-link font-serif text-[0.9375rem]"
+                  >
+                    About
+                  </Link>
+                ) : null}
+              </div>
             </div>
             <div className="mt-5">
               <SearchTypeahead

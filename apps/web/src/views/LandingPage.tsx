@@ -25,7 +25,6 @@ import {
 import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { useMinWidth } from "../hooks/useMinWidth";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
-import { canonicalForPath } from "../lib/seo";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { cn } from "@/lib/utils";
 import {
@@ -49,7 +48,9 @@ export function LandingPage() {
     title: "Search Mass, Confession & Adoration Times · Project Carlo",
     description:
       "Search Catholic churches by location, service, day, and time to find Mass, Confession, and Adoration times near you.",
-    canonicalUrl: canonicalForPath("/landing"),
+    // An alternate entry point that overlaps the homepage: kept for visitors,
+    // hidden from search engines.
+    noindex: true,
   });
 
   const navigate = useNavigate();
