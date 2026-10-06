@@ -206,7 +206,7 @@ export function CityPageContent({ data }: { data: CityPageData }) {
               Mass Times in {city.label}
             </h1>
             <p className="mt-4 font-serif text-[1rem] text-ink-soft">
-              Served from each parish&rsquo;s weekly bulletin.
+              Sourced from each parish&rsquo;s weekly bulletin.
             </p>
             <Fleuron className="mt-7" />
           </section>
