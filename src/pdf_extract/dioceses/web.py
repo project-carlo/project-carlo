@@ -289,8 +289,9 @@ def _resolves(host: str) -> bool:
 def probe_url(url: str) -> dict[str, Any]:
     """What is at a parish website now, and which bulletin does it embed?"""
     out: dict[str, Any] = {"url": url}
-    # An address without its scheme cannot be fetched as it is.
-    host = url_host(url) if urlsplit(url).scheme else ""
+    # An address without a host part ("stmary.org", "https:/x", "mailto:")
+    # cannot be fetched as it is.
+    host = url_host(url) if urlsplit(url).netloc else ""
     if not host:
         return {**out, "verdict": "BAD-URL"}
     if not _resolves(host):
