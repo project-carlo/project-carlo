@@ -136,7 +136,7 @@ export function StaticChurchIndexPage({
             <input
               id="church-search"
               type="search"
-              placeholder="Search churches or cities…"
+              placeholder="Search for a church or city"
               autoComplete="off"
               spellCheck={false}
               className="w-full appearance-none border-b border-rule-strong bg-transparent py-2 font-serif text-[1.0625rem] text-ink outline-none placeholder:text-ink-soft placeholder:italic focus:border-rubric [&::-webkit-search-cancel-button]:appearance-none"
