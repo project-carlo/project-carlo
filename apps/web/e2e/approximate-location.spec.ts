@@ -149,4 +149,12 @@ test("exact location pins the browser's position", async ({
     "Your current location",
   );
   await expect(page.getByText("Near Buffalo, NY")).toHaveCount(0);
+  // The pin's popup stays closed until the pin is clicked.
+  const pin = page.locator(".searched-place-marker");
+  await expect(pin).toBeVisible();
+  await expect(page.locator(".leaflet-popup")).toHaveCount(0);
+  await pin.click();
+  await expect(page.locator(".leaflet-popup")).toContainText(
+    "Your current location",
+  );
 });

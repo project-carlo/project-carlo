@@ -95,6 +95,7 @@ export function LandingPage() {
         lng: place.lng,
         placeTitle: place.title,
         placeSubtitle: place.subtitle,
+        openPlacePopup: !place.isCurrentLocation,
         zoom: PLACE_SEARCH_ZOOM,
       });
     },

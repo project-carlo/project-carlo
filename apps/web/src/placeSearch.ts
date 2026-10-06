@@ -54,6 +54,8 @@ export interface PlaceSearchResult {
   lat: number;
   lng: number;
   resultType: PlaceResultType;
+  /** The visitor's own position rather than a place they searched for. */
+  isCurrentLocation?: boolean;
 }
 
 /** The pin for where the browser says the visitor is. */
@@ -65,6 +67,7 @@ export function currentLocationPlace(lat: number, lng: number): PlaceSearchResul
     lat,
     lng,
     resultType: "unknown",
+    isCurrentLocation: true,
   };
 }
 
