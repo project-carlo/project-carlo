@@ -54,6 +54,7 @@ export interface HomeMapCenter {
   churchId?: number;
   placeTitle?: string;
   placeSubtitle?: string | null;
+  openPlacePopup?: boolean;
   zoom?: number;
 }
 
@@ -184,6 +185,7 @@ export function HomePage() {
     churchId?: number;
     placeTitle?: string;
     placeSubtitle?: string | null;
+    openPlacePopup?: boolean;
     zoom?: number;
     requestId: number;
   } | null>(null);
@@ -295,6 +297,8 @@ export function HomePage() {
       lng: place.lng,
       placeTitle: place.title,
       placeSubtitle: place.subtitle,
+      // The visitor's own position is pinned quietly; its popup opens on a click.
+      openPlacePopup: !place.isCurrentLocation,
       zoom: PLACE_SEARCH_ZOOM,
       requestId: centerRequestIdRef.current,
     });

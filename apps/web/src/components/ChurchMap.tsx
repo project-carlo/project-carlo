@@ -133,6 +133,8 @@ interface ChurchMapProps {
     churchId?: number;
     placeTitle?: string;
     placeSubtitle?: string | null;
+    /** False leaves the pin's popup closed until it's clicked. */
+    openPlacePopup?: boolean;
     zoom?: number;
     requestId?: number;
   } | null;
@@ -751,14 +753,16 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
     lng: number;
     title: string;
     subtitle?: string | null;
+    openPopup?: boolean;
     requestId?: number;
   };
   onClear?: () => void;
 }) {
   const markerRef = useRef<LeafletMarker | null>(null);
+  const openPopup = place.openPopup ?? true;
   useEffect(() => {
-    markerRef.current?.openPopup();
-  }, [place.requestId]);
+    if (openPopup) markerRef.current?.openPopup();
+  }, [place.requestId, openPopup]);
 
   return (
     <Marker
@@ -867,6 +871,7 @@ export const ChurchMap = memo(function ChurchMap({
             lng: centerOn.lng,
             title: centerOn.placeTitle,
             subtitle: centerOn.placeSubtitle,
+            openPopup: centerOn.openPlacePopup,
             requestId: centerOn.requestId,
           }}
           onClear={onClearPlace}
