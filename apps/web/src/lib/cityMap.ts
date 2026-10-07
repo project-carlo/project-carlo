@@ -19,18 +19,9 @@ export interface CityMapConfig {
 export const CITY_MAP_ATTRIBUTE = "data-city-map";
 /** Marks the element the live map is mounted into, inside the preview. */
 export const CITY_MAP_SLOT_ATTRIBUTE = "data-city-map-slot";
-/** Marks the preview's link, which a phone's first tap turns into "open". */
-export const CITY_MAP_OPEN_ATTRIBUTE = "data-city-map-open";
 
 /** The hash of a city page with its map open. */
 export const CITY_MAP_HASH = "#map";
-
-/**
- * Where the map is live in the page itself. Narrower screens keep the still
- * preview, which opens the live map over the whole window when tapped: a live
- * map in a phone's page catches the swipes meant to scroll it.
- */
-export const INLINE_MAP_MIN_WIDTH = 768;
 
 export function isCityMapOpen(): boolean {
   return window.location.hash === CITY_MAP_HASH;
@@ -61,3 +52,7 @@ export function parseCityMapConfig(json: string | undefined): CityMapConfig | nu
     return null;
   }
 }
+
+/** The city map's buttons over the map (Expand, Close, Filters): small cards. */
+export const CITY_MAP_CHIP_CLASS =
+  "missal-focus inline-flex items-center gap-2 border border-rule-strong bg-paper/95 px-3 py-1.5 font-serif text-[0.9375rem] text-rubric shadow-missal-floating backdrop-blur-sm transition-colors hover:text-rubric-deep";

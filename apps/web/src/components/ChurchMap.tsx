@@ -7,7 +7,7 @@ import {
   useRef,
   useState,
 } from "react";
-import type { ReactNode, RefObject } from "react";
+import type { ReactNode, Ref, RefObject } from "react";
 import { Link } from "react-router-dom";
 import {
   MapContainer,
@@ -149,6 +149,8 @@ interface ChurchMapProps {
   onClearPlace?: () => void;
   /** Extra layers and behaviors, rendered inside the map so they can `useMap`. */
   children?: ReactNode;
+  /** Gets the Leaflet map, for controls laid over it (MapCornerControls). */
+  mapRef?: Ref<LeafletMap>;
 }
 
 /**
@@ -812,6 +814,7 @@ export const ChurchMap = memo(function ChurchMap({
   onViewChange,
   onClearPlace,
   children,
+  mapRef,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -851,6 +854,7 @@ export const ChurchMap = memo(function ChurchMap({
 
   return (
     <MapContainer
+      ref={mapRef}
       center={center}
       zoom={zoom}
       className="church-map h-full w-full"

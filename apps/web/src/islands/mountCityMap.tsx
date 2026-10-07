@@ -11,11 +11,7 @@ import { DocumentLinksContext } from "../lib/documentLinks";
  * router, so links load their page (DocumentLinksContext); the memory router
  * is only there for the router links to render.
  */
-export function mountCityMap(
-  slot: HTMLElement,
-  config: CityMapConfig,
-  openedOnMount: boolean,
-): void {
+export function mountCityMap(slot: HTMLElement, config: CityMapConfig): void {
   const queryClient = new QueryClient({
     defaultOptions: { queries: { staleTime: 60_000, retry: 2 } },
   });
@@ -24,7 +20,7 @@ export function mountCityMap(
       <QueryClientProvider client={queryClient}>
         <MemoryRouter>
           <DocumentLinksContext.Provider value={true}>
-            <CityMapLive config={config} openedOnMount={openedOnMount} />
+            <CityMapLive config={config} />
           </DocumentLinksContext.Provider>
         </MemoryRouter>
       </QueryClientProvider>

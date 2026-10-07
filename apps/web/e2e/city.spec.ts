@@ -43,19 +43,25 @@ test("a city with no churches renders the not-found page", async ({ page }) => {
 
 const EAST_AURORA = "/mass-times/east-aurora-ny/";
 
-test("a city page's map is live in the page on a desktop, and opens over it", async ({
+test("a city page's map is live in the page, and opens to the full map view", async ({
   page,
 }) => {
   await page.goto(EAST_AURORA);
   const map = page.locator(".city-map");
   await expect(map.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
   await expect(map.locator(".church-map-marker").first()).toBeVisible();
+  await expect(map.getByRole("button", { name: "Zoom in" })).toBeVisible();
 
   await page.getByRole("button", { name: "Expand map" }).click();
   await expect(page).toHaveURL(/#map$/);
   const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
   await expect(dialog).toBeVisible();
   await expect(page.getByRole("button", { name: "Close" })).toBeFocused();
+  // The home map's view: search, filters, zoom and locate.
+  await expect(dialog.getByPlaceholder(/Search for a city/)).toBeVisible();
+  await expect(dialog.getByRole("button", { name: "Confession" })).toBeVisible();
+  await expect(dialog.getByRole("button", { name: "Zoom in" })).toBeVisible();
+  await expect(dialog.getByRole("button", { name: "Go to my exact location" })).toBeVisible();
 
   // Back closes it, leaving the city page as it was.
   await page.goBack();
@@ -69,26 +75,26 @@ test("a city page's map is live in the page on a desktop, and opens over it", as
   await expect(page.getByRole("button", { name: "Expand map" })).toBeFocused();
 });
 
-test("the open map links to the home map at its view", async ({ page }) => {
-  await page.goto(`${EAST_AURORA}#map`);
-  await page.getByRole("link", { name: /Search & filters/ }).click();
-  await expect(page).toHaveURL(/\/\?lat=-?[\d.]+&lng=-?[\d.]+&z=\d+$/);
-  await expect(page.locator(".church-map")).toBeVisible({ timeout: 15_000 });
-});
-
 test.describe("on a phone", () => {
   test.use({ viewport: { width: 390, height: 844 }, hasTouch: true });
 
-  test("the map preview stays still until a tap opens the live map", async ({
+  test("the map is live in the page and opens with filters and zoom", async ({
     page,
   }) => {
     await page.goto(EAST_AURORA);
-    await expect(page.locator(".city-map .leaflet-container")).toHaveCount(0);
+    await expect(page.locator(".city-map .leaflet-container")).toBeVisible({
+      timeout: 15_000,
+    });
 
-    await page.locator("[data-city-map-open]").tap();
+    await page.getByRole("button", { name: "Expand map" }).tap();
     await expect(page).toHaveURL(/#map$/);
-    const dialog = page.getByRole("dialog");
-    await expect(dialog.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
+    const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
+    await expect(dialog.getByRole("button", { name: "Zoom in" })).toBeVisible();
+
+    await dialog.getByRole("button", { name: /^Filters/ }).tap();
+    await expect(page.getByRole("button", { name: /^Show \d+ churches?$/ })).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(dialog).toBeVisible();
 
     await page.getByRole("button", { name: "Close" }).tap();
     await expect(dialog).toHaveCount(0);

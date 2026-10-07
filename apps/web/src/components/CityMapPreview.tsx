@@ -6,7 +6,6 @@ import { CHURCH_PIN_OUTLINE } from "@/lib/churchPin";
 import type { LatLng } from "@/lib/cities";
 import {
   CITY_MAP_ATTRIBUTE,
-  CITY_MAP_OPEN_ATTRIBUTE,
   CITY_MAP_SLOT_ATTRIBUTE,
   type CityMapConfig,
 } from "@/lib/cityMap";
@@ -201,7 +200,6 @@ export function CityMapPreview({
       {/* The whole preview opens the map; the attribution link sits above it. */}
       <Link
         to={mapHref}
-        {...{ [CITY_MAP_OPEN_ATTRIBUTE]: "" }}
         aria-label={`Open the map of churches around ${city.label}`}
         className="missal-focus absolute inset-0"
       />
