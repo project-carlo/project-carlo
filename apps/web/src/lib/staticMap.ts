@@ -10,7 +10,7 @@ import type { LatLng } from "./cities";
  * same view draws every tile and marker on the very same pixels.
  */
 
-/** Edge of an OpenStreetMap tile, in pixels. */
+/** Edge of an OpenStreetMap tile, in pixels; a zoom-z world is `TILE_SIZE * 2^z` wide. */
 export const TILE_SIZE = 256;
 
 /** OpenStreetMap's tiles, as Leaflet's tile layer takes them (ChurchMap's too). */

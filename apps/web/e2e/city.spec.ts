@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { test, expect, type Browser, type Page } from "@playwright/test";
 
 test("the church index links each city to its prerendered city page", async ({
   page,
@@ -86,39 +86,122 @@ test("a city page's map is live in the page, and opens to the full map view", as
   await expect(page.getByRole("button", { name: "Expand map" })).toBeFocused();
 });
 
+test("the open map keeps focus in itself, and Escape closes a popup before the map", async ({
+  page,
+}) => {
+  await page.goto(EAST_AURORA);
+  await expect(page.locator(".city-map-live[data-ready]")).toHaveCount(1, {
+    timeout: 15_000,
+  });
+  await page.getByRole("button", { name: "Expand map" }).click();
+  const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
+  await expect(dialog).toBeVisible();
+
+  // Tab never reaches the page behind the map.
+  for (let i = 0; i < 40; i++) {
+    await page.keyboard.press("Tab");
+    const outside = await page.evaluate(() => {
+      const el = document.activeElement;
+      return el != null && el !== document.body && el.closest("main") != null;
+    });
+    expect(outside, `focus left the map after ${i + 1} Tabs`).toBe(false);
+  }
+
+  await dialog.locator(".church-map-marker").first().click();
+  await expect(dialog.locator(".leaflet-popup")).toBeVisible();
+  // With focus on a control, not the map, as Leaflet's own Escape needs.
+  await page.getByRole("button", { name: "Close", exact: true }).focus();
+  await page.keyboard.press("Escape");
+  await expect(dialog.locator(".leaflet-popup")).toHaveCount(0);
+  await expect(dialog).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(dialog).toHaveCount(0);
+  // The page behind is back in play.
+  await expect(page.locator("main")).not.toHaveAttribute("inert");
+});
+
+/** Each marker's box in the map, from left to right. */
+async function markerBoxes(page: Page, selector: string): Promise<string[]> {
+  return page.locator(".city-map").evaluate((map, sel) => {
+    const frame = map.getBoundingClientRect();
+    return [...map.querySelectorAll(sel)]
+      .map((el) => el.getBoundingClientRect())
+      .filter((r) => r.right > frame.left && r.left < frame.right && r.bottom > frame.top && r.top < frame.bottom)
+      .map((r) => `${Math.round(r.left - frame.left)},${Math.round(r.top - frame.top)},${Math.round(r.width)}`)
+      .sort();
+  }, selector);
+}
+
+const MARKERS = ".church-map-marker, .church-map-cluster";
+
+/** The markers the still preview draws for a city, with JavaScript off. */
+async function stillMarkerBoxes(browser: Browser, path: string): Promise<string[]> {
+  const still = await browser.newPage({ javaScriptEnabled: false });
+  await still.goto(path);
+  const boxes = await markerBoxes(still, MARKERS);
+  await still.close();
+  expect(boxes.length).toBeGreaterThan(0);
+  return boxes;
+}
+
 test("the live map takes over the preview with its markers where they were", async ({
   browser,
+  page,
 }) => {
-  /** Each marker's box in the map, from left to right. */
-  const boxes = async (page: Page, selector: string) =>
-    page.locator(".city-map").evaluate((map, sel) => {
-      const frame = map.getBoundingClientRect();
-      return [...map.querySelectorAll(sel)]
-        .map((el) => el.getBoundingClientRect())
-        .filter((r) => r.right > frame.left && r.left < frame.right && r.bottom > frame.top && r.top < frame.bottom)
-        .map((r) => `${Math.round(r.left - frame.left)},${Math.round(r.top - frame.top)},${Math.round(r.width)}`)
-        .sort();
-    }, selector);
-  const markers = ".church-map-marker, .church-map-cluster";
+  const stillBoxes = await stillMarkerBoxes(browser, "/mass-times/buffalo-ny/");
 
-  const still = await browser.newPage({ javaScriptEnabled: false });
-  await still.goto("/mass-times/buffalo-ny/");
-  const stillBoxes = await boxes(still, markers);
-  expect(stillBoxes.length).toBeGreaterThan(0);
-  await still.close();
-
-  const page = await browser.newPage();
   await page.goto("/mass-times/buffalo-ny/");
   await expect(page.locator(".city-map-live[data-ready]")).toHaveCount(1, {
     timeout: 15_000,
   });
   await expect(page.locator(".city-map-static-pins")).toBeHidden();
-  const liveBoxes = await boxes(
-    page,
-    `.leaflet-container :is(${markers})`,
+  expect(await markerBoxes(page, `.leaflet-container :is(${MARKERS})`)).toEqual(
+    stillBoxes,
   );
-  expect(liveBoxes).toEqual(stillBoxes);
-  await page.close();
+});
+
+test("in the app, each city page's live map is that city's", async ({
+  browser,
+  page,
+}) => {
+  const buffalo = "/mass-times/buffalo-ny/";
+  const buffaloBoxes = await stillMarkerBoxes(browser, buffalo);
+
+  /** Navigates in the app, as one of its links would. */
+  const routeTo = (path: string) =>
+    page.evaluate((to) => {
+      const idx = ((window.history.state as { idx?: number } | null)?.idx ?? 0) + 1;
+      window.history.pushState({ usr: null, key: `e2e-${idx}`, idx }, "", to);
+      window.dispatchEvent(new PopStateEvent("popstate", { state: window.history.state }));
+    }, path);
+  const liveMapOf = async (label: string) => {
+    await expect(
+      page.getByRole("heading", { level: 1, name: `Mass Times in ${label}` }),
+    ).toBeVisible({ timeout: 15_000 });
+    await expect(page.locator(".city-map-live[data-ready]")).toHaveCount(1, {
+      timeout: 15_000,
+    });
+    return markerBoxes(page, `.leaflet-container :is(${MARKERS})`);
+  };
+
+  await page.goto("/");
+  await expect(page.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
+  await routeTo(buffalo);
+  expect(await liveMapOf("Buffalo, NY")).toEqual(buffaloBoxes);
+  await routeTo("/mass-times/rochester-ny/");
+  expect(await liveMapOf("Rochester, NY")).not.toEqual(buffaloBoxes);
+  // Back to a city whose data is cached: the page is reused, not the map.
+  await page.goBack();
+  expect(await liveMapOf("Buffalo, NY")).toEqual(buffaloBoxes);
+
+  // Opening the map keeps the router's place in history.
+  const before = await page.evaluate(() => window.history.state);
+  await page.getByRole("button", { name: "Expand map" }).click();
+  await expect(page).toHaveURL(/#map$/);
+  expect(await page.evaluate(() => window.history.state)).toEqual(before);
+  await page.goBack();
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await expect(page).toHaveURL(new RegExp(`${buffalo}$`));
 });
 
 test.describe("on a phone", () => {

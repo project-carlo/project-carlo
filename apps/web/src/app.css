@@ -291,11 +291,11 @@
   font-size: 12px;
   font-family: var(--font-sans);
 }
-/* Without round() (see staticMapPlacement), plain centering: half of
- * CITY_MAP_CANVAS. */
+/* Without round() (see staticMapPlacement), plain centering, by the canvas
+ * size CityMapPreview sets. */
 .city-map-canvas {
-  left: calc(50% - 400px);
-  top: calc(50% - 224px);
+  left: calc(50% - var(--city-map-canvas-width) / 2);
+  top: calc(50% - var(--city-map-canvas-height) / 2);
 }
 .city-map-live:not([data-ready]) {
   visibility: hidden;

@@ -9,7 +9,12 @@ import {
   useSyncExternalStore,
 } from "react";
 import { createPortal } from "react-dom";
-import { isCityMapOpen, openCityMap, type CityMapConfig } from "@/lib/cityMap";
+import {
+  closeCityMapInPlace,
+  isCityMapOpen,
+  openCityMap,
+  type CityMapConfig,
+} from "@/lib/cityMap";
 
 const CityMapView = lazy(() => import("./CityMapView"));
 
@@ -64,11 +69,8 @@ export default function CityMapLive({ config }: { config: CityMapConfig }) {
       window.history.back();
       return;
     }
-    // Opened by a link or a reload: drop the hash in place. The popstate
-    // tells this hook, and the app's router, that the URL changed.
-    const { pathname, search } = window.location;
-    window.history.replaceState(window.history.state, "", pathname + search);
-    window.dispatchEvent(new PopStateEvent("popstate", { state: window.history.state }));
+    // Opened by a link or a reload: drop the hash in place.
+    closeCityMapInPlace();
   }, []);
 
   useEffect(() => {
@@ -93,22 +95,31 @@ export default function CityMapLive({ config }: { config: CityMapConfig }) {
   }, [open, host, config.label]);
   useEffect(() => () => host.remove(), [host]);
 
-  // While open: the page behind doesn't scroll, and Escape closes, unless
-  // something on the map (the phone's filter sheet) took it first.
+  // While open: the page behind doesn't scroll and is inert, so Tab stays in
+  // the map and screen readers don't wander out of it (what the map opens in
+  // portals of its own, appended later, isn't touched); and Escape closes,
+  // unless something on the map (a popup, the phone's filter sheet) took it
+  // first.
   useEffect(() => {
     if (!open) return;
     const root = document.documentElement;
     const overflow = root.style.overflow;
     root.style.overflow = "hidden";
+    const madeInert = [...document.body.children].filter(
+      (el): el is HTMLElement =>
+        el instanceof HTMLElement && el !== host && !el.inert,
+    );
+    for (const el of madeInert) el.inert = true;
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && !event.defaultPrevented) collapse();
     };
     window.addEventListener("keydown", onKeyDown);
     return () => {
       root.style.overflow = overflow;
+      for (const el of madeInert) el.inert = false;
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [open, collapse]);
+  }, [open, collapse, host]);
 
   return (
     <>

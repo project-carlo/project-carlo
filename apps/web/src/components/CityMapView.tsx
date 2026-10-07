@@ -119,6 +119,35 @@ export default function CityMapView({
   // Read once, on mount, like every start.
   const start = useMemo<MapStart>(() => ({ kind: "view", view }), [view]);
 
+  // Open, Escape closes an open popup first, and only the next one the map
+  // (CityMapLive, which skips a handled Escape). Leaflet does the same only
+  // while the map itself has focus, so a key pressed with focus on a pin, on
+  // the page body or on a control would have closed the whole map. Captured,
+  // to run before CityMapLive's listener; not when focus is somewhere the map
+  // opened outside itself (the phone's filter sheet), which has its own.
+  useEffect(() => {
+    if (!open || !map) return;
+    const container = map.getContainer();
+    // The element the map moves in (CityMapLive's), which holds its controls.
+    const dialog = container.parentElement;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || !container.querySelector(".leaflet-popup")) {
+        return;
+      }
+      const target = event.target;
+      if (
+        target !== document.body &&
+        !(target instanceof Node && dialog?.contains(target))
+      ) {
+        return;
+      }
+      map.closePopup();
+      event.preventDefault();
+    };
+    window.addEventListener("keydown", onKeyDown, true);
+    return () => window.removeEventListener("keydown", onKeyDown, true);
+  }, [open, map]);
+
   // Focus goes back to Expand as the map closes.
   const expandRef = useRef<HTMLButtonElement>(null);
   const wasOpenRef = useRef(open);

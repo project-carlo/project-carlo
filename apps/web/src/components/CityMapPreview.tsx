@@ -117,11 +117,14 @@ export function CityMapPreview({
   const config: CityMapConfig = { label: city.label, view };
   const mapHref = `/?${encodeMapViewToParams(view, new URLSearchParams())}`;
   const tiles = staticMapTiles(view, view.zoom, CITY_MAP_CANVAS);
-  const canvasStyle: CSSProperties = {
+  const canvasStyle = {
     width: CITY_MAP_CANVAS.width,
     height: CITY_MAP_CANVAS.height,
+    // For `.city-map-canvas`'s fallback placement, in app.css.
+    "--city-map-canvas-width": `${CITY_MAP_CANVAS.width}px`,
+    "--city-map-canvas-height": `${CITY_MAP_CANVAS.height}px`,
     ...staticMapPlacement(view, view.zoom, CITY_MAP_CANVAS),
-  };
+  } as CSSProperties;
 
   return (
     <div

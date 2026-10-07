@@ -27,9 +27,30 @@ export function isCityMapOpen(): boolean {
   return window.location.hash === CITY_MAP_HASH;
 }
 
-/** Opens the map, adding a history entry for the back button to close it. */
+/**
+ * Tells whoever follows the URL (useCityMapOpen, and the app's router) that
+ * it changed: pushState and replaceState don't, as the back button does.
+ */
+function announceUrlChange(): void {
+  window.dispatchEvent(new PopStateEvent("popstate", { state: window.history.state }));
+}
+
+/**
+ * Opens the map, adding a history entry for the back button to close it.
+ * The entry keeps the current one's state, which the app's router keeps its
+ * place in history in; setting `location.hash` would leave it empty.
+ */
 export function openCityMap(): void {
-  window.location.hash = CITY_MAP_HASH;
+  const { pathname, search } = window.location;
+  window.history.pushState(window.history.state, "", pathname + search + CITY_MAP_HASH);
+  announceUrlChange();
+}
+
+/** Closes the map in place, for an open map this page added no entry for. */
+export function closeCityMapInPlace(): void {
+  const { pathname, search } = window.location;
+  window.history.replaceState(window.history.state, "", pathname + search);
+  announceUrlChange();
 }
 
 /** Parses a preview's config, or null if it isn't one. */
