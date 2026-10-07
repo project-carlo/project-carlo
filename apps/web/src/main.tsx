@@ -8,10 +8,14 @@ import { reloadOnStaleChunk } from "./lib/staleDeploy";
 import "leaflet/dist/leaflet.css";
 import "./app.css";
 
-reloadOnStaleChunk();
-
 const queryClient = createQueryClient();
 const router = createAppRouter(queryClient);
+
+// A chunk that fails on the way to another page reloads into that page.
+reloadOnStaleChunk(() => {
+  const next = router.state.navigation.location;
+  return next ? router.createHref(next) : undefined;
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

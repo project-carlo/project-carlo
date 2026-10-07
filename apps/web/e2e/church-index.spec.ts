@@ -119,3 +119,26 @@ test("the prerendered index's Map link goes back to the map as it was", async ({
     `/${search}`,
   );
 });
+
+test("in the app, back to the index returns to where it was left", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
+  const loads = countLoads(page);
+  await page.getByRole("link", { name: "All churches" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+
+  const church = page.locator('[data-city-group] li a[href^="/churches/"]').nth(150);
+  await church.scrollIntoViewIfNeeded();
+  const scrollY = await page.evaluate(() => window.scrollY);
+  expect(scrollY).toBeGreaterThan(1000);
+  // Clicked where it is: Playwright's own click would scroll it clear of
+  // the sticky header first.
+  await church.evaluate((link: HTMLElement) => link.click());
+  await expect(page.getByRole("navigation", { name: "Breadcrumb" })).toBeVisible();
+  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+
+  await page.goBack();
+  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+  expect(await page.evaluate(() => window.scrollY)).toBe(scrollY);
+  expect(loads()).toBe(0);
+});

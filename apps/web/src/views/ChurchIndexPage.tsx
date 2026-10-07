@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ChurchIndexContent } from "@/components/ChurchIndexContent";
 import { InlineQueryError } from "@/components/InlineQueryError";
@@ -28,8 +28,10 @@ export function ChurchIndexPage() {
   });
 
   // The search box works on the rendered list, as on the prerendered page.
+  // It's revealed before the page is painted, and before back or forward
+  // scrolls to where the list was left, so nothing under it moves after.
   const rootRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!data || !rootRef.current) return;
     return attachChurchIndexSearch(rootRef.current);
   }, [data]);
