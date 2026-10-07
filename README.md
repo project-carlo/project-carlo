@@ -318,6 +318,10 @@ uploads only files Cloudflare doesn't already have; if the deploy would pass
 failed download or an unreachable site only means fewer files are carried; it
 never fails the deploy.
 
+A page whose chunk is gone anyway (open longer than that, or a file that wasn't
+carried) reloads once into the new version (`apps/web/src/lib/staleDeploy.ts`),
+as does one that fetches a snapshot in a format its code can't read.
+
 The change report is always in the job summary, and kept as a workflow
 artifact for 90 days.
 

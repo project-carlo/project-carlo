@@ -1,8 +1,9 @@
 /**
- * Recovery for a page that outlives the deploy that served it. A deploy
- * replaces the site's assets wholesale (Workers static assets keep no older
- * versions), so a page loaded before one, whether an open tab or a load that
- * straddles the switch, asks for hashed chunks that no longer exist. It gets
+ * Recovery for a page that outlives the deploy that served it. Each deploy
+ * carries the previous builds' hashed chunks over for RETENTION_DAYS
+ * (lib/assetManifest.ts), so a page loaded before one usually keeps working.
+ * A chunk can still be gone: the tab is older than that, the carry-over
+ * couldn't download it, or it was over the file cap. The page then gets
  * 404.html back and the lazy import fails. Reloading fetches the new
  * version's HTML, whose chunks do exist.
  */

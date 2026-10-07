@@ -82,8 +82,8 @@ routes.push({
   element: <NotFoundPage />,
 });
 
-// One error boundary for every route: a failed lazy chunk (a page left over
-// from an earlier deploy) or any other render error lands here.
+// One error boundary for every route: a failed lazy chunk (a page older than
+// the assets deploys carry over) or any other render error lands here.
 export const router = createBrowserRouter([
   { errorElement: <RouteError fallback={lazyPageFallback} />, children: routes },
 ]);

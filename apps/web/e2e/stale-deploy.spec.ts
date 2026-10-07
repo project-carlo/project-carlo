@@ -1,8 +1,9 @@
 import { test, expect, type Page } from "@playwright/test";
 
-// A deploy removes the previous build's hashed chunks, so a page loaded
-// before it gets 404.html for a lazy chunk. These stand in for that by
-// answering HomePage's chunk the way the live site answers a missing one.
+// Deploys carry the previous builds' hashed chunks over for a while
+// (scripts/carry-assets.ts), but a page older than that, or a chunk the
+// carry-over missed, gets 404.html for a lazy chunk. These stand in for that
+// by answering HomePage's chunk the way the live site answers a missing one.
 async function removeHomePageChunk(page: Page, times?: number) {
   await page.route(
     "**/assets/HomePage-*.js",
