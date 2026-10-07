@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { computeNextOccurrence } from "./schedule";
-import { parseSnapshot, SNAPSHOT_VERSION } from "./snapshot";
+import { parseSnapshot, SnapshotVersionError, SNAPSHOT_VERSION } from "./snapshot";
 // Written by the pipeline's encoder: tests/test_extract_frontend_db.py checks
 // that encoding the same rows still gives exactly this document.
 import fixture from "./snapshot.fixture.json";
@@ -96,6 +96,7 @@ describe("parseSnapshot", () => {
   it("refuses another format version", () => {
     const other = { ...fixture, version: SNAPSHOT_VERSION + 1 };
     expect(() => parseSnapshot(JSON.stringify(other))).toThrow(/format version 2/);
+    expect(() => parseSnapshot(JSON.stringify(other))).toThrow(SnapshotVersionError);
     expect(() => parseSnapshot("null")).toThrow(/format version undefined/);
   });
 });
