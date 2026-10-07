@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { LandingPage } from "./views/LandingPage";
 import { NotFoundPage } from "./views/NotFoundPage";
+import { RouteError } from "./views/RouteError";
 import { isAboutPageEnabled } from "./lib/featureFlags";
 
 const HomePage = lazy(() =>
@@ -81,4 +82,8 @@ routes.push({
   element: <NotFoundPage />,
 });
 
-export const router = createBrowserRouter(routes);
+// One error boundary for every route: a failed lazy chunk (a page left over
+// from an earlier deploy) or any other render error lands here.
+export const router = createBrowserRouter([
+  { errorElement: <RouteError fallback={lazyPageFallback} />, children: routes },
+]);

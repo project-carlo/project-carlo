@@ -20,7 +20,13 @@ import {
   churchFiltersFor,
   DEFAULT_FILTER_STATE,
 } from "./components/filterState";
-import { parseSnapshot, SNAPSHOT_FILE, type Snapshot } from "./lib/snapshot";
+import {
+  parseSnapshot,
+  SNAPSHOT_FILE,
+  SnapshotVersionError,
+  type Snapshot,
+} from "./lib/snapshot";
+import { reloadForNewVersion } from "./lib/staleDeploy";
 import type {
   ChurchBase,
   ChurchDetail,
@@ -68,7 +74,16 @@ async function loadSnapshot(): Promise<Snapshot> {
   // Served as an opaque pre-gzipped file (see public/_headers): unzip it here.
   const compressed = response.body ?? new Blob([await response.arrayBuffer()]).stream();
   const decompressed = compressed.pipeThrough(new DecompressionStream("gzip"));
-  return parseSnapshot(await new Response(decompressed).text());
+  const json = await new Response(decompressed).text();
+  try {
+    return parseSnapshot(json);
+  } catch (error) {
+    // The snapshot is always built with the code deployed beside it, so a
+    // format this code can't read means a deploy replaced the code since
+    // this page loaded.
+    if (error instanceof SnapshotVersionError) reloadForNewVersion();
+    throw error;
+  }
 }
 
 function getSnapshot(): Promise<Snapshot> {
