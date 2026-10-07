@@ -7,6 +7,22 @@ import type { BrowserLocationStatus } from "../hooks/useBrowserLocation";
 const BUTTON_CLASS =
   "missal-focus flex size-11 items-center justify-center font-display text-[1.6rem] leading-none text-ink-soft transition-colors hover:text-rubric disabled:cursor-default disabled:text-ink-faint";
 
+/**
+ * An inert copy of the zoom buttons, drawn by a still map (the city page's
+ * preview) on the pixels the live ones will take.
+ */
+function ZoomButtonsPlaceholder() {
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none flex flex-col border border-rule-strong bg-paper/96 shadow-missal-floating backdrop-blur-sm"
+    >
+      <span className={BUTTON_CLASS}>+</span>
+      <span className={cn(BUTTON_CLASS, "border-t border-rule-strong")}>−</span>
+    </div>
+  );
+}
+
 /** Zoom in and out, one card of two buttons, each off at its end of the range. */
 function ZoomButtons({ map }: { map: LeafletMap }) {
   const [zoom, setZoom] = useState(() => map.getZoom());
@@ -52,8 +68,9 @@ export interface LocateControl {
 
 /**
  * The controls in a map's bottom-right corner, above its attribution: zoom
- * buttons (once the map exists) over the locate button, either left out.
- * `className` places the corner.
+ * buttons over the locate button, either left out. Until the map exists the
+ * zoom buttons are an inert copy, so they don't shift anything when it
+ * arrives. `className` places the corner.
  */
 export function MapCornerControls({
   map,
@@ -66,12 +83,11 @@ export function MapCornerControls({
   locate?: LocateControl;
   className?: string;
 }) {
-  const showZoom = zoom && map != null;
-  if (!showZoom && !locate) return null;
+  if (!zoom && !locate) return null;
   return (
     <div className={cn("pointer-events-none absolute z-[900]", className)}>
       <div className="pointer-events-auto ml-auto flex w-fit flex-col items-end gap-2">
-        {showZoom ? <ZoomButtons map={map} /> : null}
+        {zoom ? map ? <ZoomButtons map={map} /> : <ZoomButtonsPlaceholder /> : null}
         {locate ? (
           <LocateButton
             status={locate.status}

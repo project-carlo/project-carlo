@@ -19,10 +19,9 @@ import {
   DEFAULT_FILTER_STATE,
   type FilterState,
 } from "./filterState";
-import { ExpandIcon } from "@/components/icons";
+import { CityMapExpandChip } from "./CityMapExpandChip";
 import { useMinWidth } from "@/hooks/useMinWidth";
 import { useMapSelection } from "@/hooks/useMapSelection";
-import { CITY_MAP_CHIP_CLASS } from "@/lib/cityMap";
 import type { MapStart } from "@/lib/mapStart";
 import type { MapView } from "@/lib/mapView";
 import type { ChurchMapItem } from "../types";
@@ -154,15 +153,7 @@ export default function CityMapView({
         </Suspense>
       ) : (
         <>
-          <button
-            ref={expandRef}
-            type="button"
-            onClick={onOpen}
-            className={`${CITY_MAP_CHIP_CLASS} absolute top-3 right-3 z-[950]`}
-          >
-            <ExpandIcon className="size-3.5" />
-            Expand map
-          </button>
+          <CityMapExpandChip onClick={onOpen} buttonRef={expandRef} />
           {/* A phone pinches; its small box has no room to spare. */}
           <MapCornerControls map={map} zoom={isDesktop} className="right-3 bottom-7" />
         </>

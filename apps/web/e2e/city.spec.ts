@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 
 test("the church index links each city to its prerendered city page", async ({
   page,
@@ -49,7 +49,9 @@ test("a city page's map is live in the page, and opens to the full map view", as
   await page.goto(EAST_AURORA);
   const map = page.locator(".city-map");
   await expect(map.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
-  await expect(map.locator(".church-map-marker").first()).toBeVisible();
+  await expect(
+    map.locator(".leaflet-container .church-map-marker").first(),
+  ).toBeVisible();
   await expect(map.getByRole("button", { name: "Zoom in" })).toBeVisible();
 
   await page.getByRole("button", { name: "Expand map" }).click();
@@ -73,6 +75,41 @@ test("a city page's map is live in the page, and opens to the full map view", as
   await page.keyboard.press("Escape");
   await expect(dialog).toHaveCount(0);
   await expect(page.getByRole("button", { name: "Expand map" })).toBeFocused();
+});
+
+test("the live map takes over the preview with its markers where they were", async ({
+  browser,
+}) => {
+  /** Each marker's box in the map, from left to right. */
+  const boxes = async (page: Page, selector: string) =>
+    page.locator(".city-map").evaluate((map, sel) => {
+      const frame = map.getBoundingClientRect();
+      return [...map.querySelectorAll(sel)]
+        .map((el) => el.getBoundingClientRect())
+        .filter((r) => r.right > frame.left && r.left < frame.right && r.bottom > frame.top && r.top < frame.bottom)
+        .map((r) => `${Math.round(r.left - frame.left)},${Math.round(r.top - frame.top)},${Math.round(r.width)}`)
+        .sort();
+    }, selector);
+  const markers = ".church-map-marker, .church-map-cluster";
+
+  const still = await browser.newPage({ javaScriptEnabled: false });
+  await still.goto("/mass-times/buffalo-ny/");
+  const stillBoxes = await boxes(still, markers);
+  expect(stillBoxes.length).toBeGreaterThan(0);
+  await still.close();
+
+  const page = await browser.newPage();
+  await page.goto("/mass-times/buffalo-ny/");
+  await expect(page.locator(".city-map-live[data-ready]")).toHaveCount(1, {
+    timeout: 15_000,
+  });
+  await expect(page.locator(".city-map-static-pins")).toBeHidden();
+  const liveBoxes = await boxes(
+    page,
+    `.leaflet-container :is(${markers})`,
+  );
+  expect(liveBoxes).toEqual(stillBoxes);
+  await page.close();
 });
 
 test.describe("on a phone", () => {

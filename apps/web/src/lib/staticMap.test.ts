@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
   fitZoom,
+  latLngAt,
+  staticMapBounds,
+  staticMapPlacement,
   staticMapPosition,
   staticMapTiles,
   TILE_SIZE,
@@ -94,8 +97,8 @@ describe("staticMapTiles", () => {
 describe("staticMapPosition", () => {
   it("puts the center in the middle of the canvas", () => {
     const pos = staticMapPosition(ROCHESTER, 13, { width: 800, height: 320 }, ROCHESTER);
-    expect(Math.abs(pos.left - 400)).toBeLessThanOrEqual(0.5);
-    expect(Math.abs(pos.top - 160)).toBeLessThanOrEqual(0.5);
+    expect(Math.abs(pos.left - 400)).toBeLessThanOrEqual(1);
+    expect(Math.abs(pos.top - 160)).toBeLessThanOrEqual(1);
   });
 
   it("lines a point up with the tile under it", () => {
@@ -108,7 +111,61 @@ describe("staticMapPosition", () => {
         t.url ===
         `https://tile.openstreetmap.org/13/${Math.floor(world.x / TILE_SIZE)}/${Math.floor(world.y / TILE_SIZE)}.png`,
     )!;
-    expect(pos.left - tile.left).toBeCloseTo(world.x % TILE_SIZE, 6);
-    expect(pos.top - tile.top).toBeCloseTo(world.y % TILE_SIZE, 6);
+    // On the whole pixel Leaflet would put a marker on.
+    expect(pos.left - tile.left).toBe(Math.round(world.x) % TILE_SIZE);
+    expect(pos.top - tile.top).toBe(Math.round(world.y) % TILE_SIZE);
+  });
+});
+
+describe("latLngAt", () => {
+  it("undoes worldPixel", () => {
+    const p = worldPixel(ROCHESTER, 13);
+    const back = latLngAt(p.x, p.y, 13);
+    expect(back.lat).toBeCloseTo(ROCHESTER.lat, 9);
+    expect(back.lng).toBeCloseTo(ROCHESTER.lng, 9);
+  });
+});
+
+describe("staticMapBounds", () => {
+  it("spans the canvas around the center", () => {
+    const [west, south, east, north] = staticMapBounds(ROCHESTER, 12, {
+      width: 800,
+      height: 448,
+    });
+    expect(west).toBeLessThan(ROCHESTER.lng);
+    expect(east).toBeGreaterThan(ROCHESTER.lng);
+    expect(south).toBeLessThan(ROCHESTER.lat);
+    expect(north).toBeGreaterThan(ROCHESTER.lat);
+    // 800px at zoom 12 is 800 / (256 * 4096) of the world's 360 degrees.
+    expect(east - west).toBeCloseTo((800 / (256 * 4096)) * 360, 9);
+  });
+});
+
+describe("staticMapPlacement", () => {
+  /** What the CSS works out to for a box `box` px wide, on one axis. */
+  function resolve(css: string, box: number): number {
+    const m = css.match(/^calc\((-?[\d.]+)px - round\(nearest, calc\((-?[\d.e-]+)px - 50%\), 1px\)\)$/);
+    expect(m).not.toBeNull();
+    const rounded = Math.round(Number(m![2]) - box / 2);
+    return Number(m![1]) - rounded;
+  }
+
+  it("lines the canvas up with Leaflet's pixel origin for any box", () => {
+    const size = { width: 800, height: 448 };
+    for (const zoom of [9, 12, 14]) {
+      const c = worldPixel(ROCHESTER, zoom);
+      const { left, top } = staticMapPlacement(ROCHESTER, zoom, size);
+      for (const box of [327, 342, 343, 768]) {
+        // Leaflet's origin minus the canvas's, both in world pixels.
+        const expected =
+          Math.round(c.x - size.width / 2) - Math.round(c.x - box / 2);
+        expect(resolve(left, box)).toBe(expected);
+      }
+      for (const box of [224, 384]) {
+        const expected =
+          Math.round(c.y - size.height / 2) - Math.round(c.y - box / 2);
+        expect(resolve(top, box)).toBe(expected);
+      }
+    }
   });
 });

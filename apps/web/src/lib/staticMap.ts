@@ -4,6 +4,9 @@ import type { LatLng } from "./cities";
  * A map drawn without a map library: OpenStreetMap tiles laid out as plain
  * images, with points placed on them in pixels. Pure, so the prerendered city
  * pages, which ship no JavaScript, can show the same map preview the app does.
+ *
+ * Pixels are rounded the way Leaflet rounds them, so a live map opened on the
+ * same view draws every tile and marker on the very same pixels.
  */
 
 /** Edge of an OpenStreetMap tile, in pixels. */
@@ -42,6 +45,16 @@ export function worldPixel(point: LatLng, zoom: number): { x: number; y: number 
   };
 }
 
+/** The point at Web Mercator pixel coordinates `x`, `y` at `zoom`. */
+export function latLngAt(x: number, y: number, zoom: number): LatLng {
+  const scale = TILE_SIZE * 2 ** zoom;
+  const n = Math.PI * (1 - (2 * y) / scale);
+  return {
+    lat: (Math.atan(Math.sinh(n)) * 180) / Math.PI,
+    lng: (x / scale) * 360 - 180,
+  };
+}
+
 /**
  * The closest zoom, from `maxZoom` down to `minZoom`, at which every point
  * lies within `halfWidth` and `halfHeight` pixels of `center`; `minZoom` when
@@ -68,7 +81,8 @@ export function fitZoom(
 
 /**
  * The map's top-left corner in world pixels, whole so every tile lands on a
- * whole pixel and no hairline seams show between them.
+ * whole pixel and no hairline seams show between them (Leaflet's "pixel
+ * origin", rounded the same way).
  */
 function origin(center: LatLng, zoom: number, size: StaticMapSize) {
   const c = worldPixel(center, zoom);
@@ -107,7 +121,10 @@ export function staticMapTiles(
   return tiles;
 }
 
-/** Where `point` falls on a map of `size` centered on `center`. */
+/**
+ * Where `point` falls on a map of `size` centered on `center`, on the whole
+ * pixel Leaflet would put a marker for it.
+ */
 export function staticMapPosition(
   center: LatLng,
   zoom: number,
@@ -116,5 +133,42 @@ export function staticMapPosition(
 ): StaticMapPosition {
   const o = origin(center, zoom, size);
   const p = worldPixel(point, zoom);
-  return { left: p.x - o.x, top: p.y - o.y };
+  return { left: Math.round(p.x) - o.x, top: Math.round(p.y) - o.y };
+}
+
+/** The `[west, south, east, north]` box a map of `size` centered on `center` shows. */
+export function staticMapBounds(
+  center: LatLng,
+  zoom: number,
+  size: StaticMapSize,
+): [number, number, number, number] {
+  const o = origin(center, zoom, size);
+  const northWest = latLngAt(o.x, o.y, zoom);
+  const southEast = latLngAt(o.x + size.width, o.y + size.height, zoom);
+  return [northWest.lng, southEast.lat, southEast.lng, northWest.lat];
+}
+
+/**
+ * Where to put a map of `size` (CSS `left` and `top`) so that, inside a box
+ * of any size, centered on the same `center`, it lines up pixel for pixel
+ * with a Leaflet map filling that box.
+ *
+ * Leaflet puts the box's corner at round(c − box / 2) in world pixels, and
+ * this map's corner is at round(c − size / 2), so the map sits at the
+ * difference. That depends on the box's size, which only CSS knows; with
+ * c = n + f, n whole, it's round(f) − size / 2 − round(f − box / 2), for CSS's
+ * round(), which rounds halves up as Math.round does. Browsers without it
+ * drop the declaration for a plain centering, off by at most half a pixel.
+ */
+export function staticMapPlacement(
+  center: LatLng,
+  zoom: number,
+  size: StaticMapSize,
+): { left: string; top: string } {
+  const c = worldPixel(center, zoom);
+  const axis = (value: number, extent: number) => {
+    const f = value - Math.floor(value);
+    return `calc(${Math.round(f) - extent / 2}px - round(nearest, calc(${f}px - 50%), 1px))`;
+  };
+  return { left: axis(c.x, size.width), top: axis(c.y, size.height) };
 }

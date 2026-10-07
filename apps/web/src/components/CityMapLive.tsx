@@ -27,9 +27,9 @@ function useCityMapOpen(): boolean {
   return useSyncExternalStore(subscribeToHash, isCityMapOpen, () => false);
 }
 
-const INLINE_HOST_CLASS = "absolute inset-0 isolate";
+const INLINE_HOST_CLASS = "city-map-host absolute inset-0 isolate";
 // Under the phone's filter sheet (z-[1200], in its own portal), over the page.
-const OPEN_HOST_CLASS = "fixed inset-0 isolate z-[1100] bg-paper";
+const OPEN_HOST_CLASS = "city-map-host fixed inset-0 isolate z-[1100] bg-paper";
 
 /**
  * The city page's live map, mounted over its still preview (CityMapPreview).

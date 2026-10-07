@@ -35,7 +35,13 @@ import {
   type ClusterIndex,
   type MapCluster,
 } from "../lib/mapClusters";
-import { CHURCH_PIN_OUTLINE } from "../lib/churchPin";
+import {
+  CHURCH_PIN_ANCHOR,
+  CHURCH_PIN_BODY,
+  CHURCH_PIN_SIZE,
+  clusterAnchor,
+  clusterDiameter,
+} from "../lib/churchPin";
 import { useDocumentLinks } from "../lib/documentLinks";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
@@ -79,13 +85,7 @@ const markerSpriteSvg = `
     </filter>
   </defs>
   <symbol id="${CHURCH_PIN_ID}" viewBox="0 0 34 42" fill="none">
-    <path d="${CHURCH_PIN_OUTLINE}"
-          fill="var(--paper)" stroke="var(--brass)" stroke-width="1.3" />
-    <circle cx="17" cy="16" r="9.5" fill="none" stroke="var(--rule-strong)" stroke-width="0.8" />
-    <g stroke="var(--rubric)" stroke-width="2" stroke-linecap="round">
-      <path d="M17 9.5 V 21.5" />
-      <path d="M12.5 13.5 H 21.5" />
-    </g>
+    ${CHURCH_PIN_BODY}
   </symbol>
   <symbol id="${PLACE_PIN_ID}" viewBox="0 0 32 42" fill="none">
     <g filter="url(#place-pin-shadow)">
@@ -112,10 +112,10 @@ const pinHtml = (symbolId: string, width: number, height: number) =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" aria-hidden="true"><use href="#${symbolId}" /></svg>`;
 
 const markerIcon = L.divIcon({
-  html: pinHtml(CHURCH_PIN_ID, 34, 42),
+  html: pinHtml(CHURCH_PIN_ID, ...CHURCH_PIN_SIZE),
   className: "church-map-marker",
-  iconSize: [34, 42],
-  iconAnchor: [17, 40],
+  iconSize: CHURCH_PIN_SIZE,
+  iconAnchor: CHURCH_PIN_ANCHOR,
   popupAnchor: [0, -34],
 });
 
@@ -533,20 +533,6 @@ function hasCoords(church: ChurchMapItem): church is MappedChurch {
   return church.latitude !== null && church.longitude !== null;
 }
 
-/** From a church pin's tip (its anchor) up to the middle of its round head. */
-const PIN_HEAD_RISE = 24;
-
-/** Roundel diameter by cluster size: a lone church's is the size of a pin's
- *  head, a small group's about a pin wide, and a city-sized one reads as
- *  bigger without swallowing its neighbours. */
-function clusterDiameter(count: number): number {
-  if (count === 1) return 28;
-  if (count < 10) return 32;
-  if (count < 50) return 38;
-  if (count < 100) return 44;
-  return 50;
-}
-
 // One icon per count: `L.divIcon` options are plain data, and reusing the
 // same object keeps react-leaflet from calling setIcon on every re-render.
 const clusterIcons = new Map<number, L.DivIcon>();
@@ -559,9 +545,7 @@ function clusterIcon(count: number): L.DivIcon {
       html: `<span class="church-map-cluster-disc" style="width:${size}px;height:${size}px"><span class="church-map-cluster-count">${count}</span></span>`,
       className: "church-map-cluster",
       iconSize: [size, size],
-      // Centred where a pin's head would be, not on the point itself (where a
-      // pin puts its tip), so a roundel splits into pins at the same height.
-      iconAnchor: [size / 2, size / 2 + PIN_HEAD_RISE],
+      iconAnchor: clusterAnchor(size),
     });
     clusterIcons.set(count, icon);
   }

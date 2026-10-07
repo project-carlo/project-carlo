@@ -280,28 +280,52 @@
   filter: saturate(0.78) brightness(1.02) contrast(1.08) hue-rotate(-8deg);
 }
 
-/* The city preview's pins and attribution, dressed like the home map's. */
-.city-map-pin {
-  filter: drop-shadow(0 2px 3px rgb(22 18 16 / 0.28));
-}
+/* The city page's map (CityMapPreview, CityMapLive). The still preview
+ * draws what the live map will, on the same pixels; the live map, mounted
+ * over it, stays hidden until its markers are in, then takes over in one
+ * frame: the still markers and controls go as the live ones show, and until
+ * the live tiles paint, the still tiles show through. */
 .city-map-attribution {
   background: color-mix(in oklch, var(--paper) 82%, transparent);
   color: var(--ink-soft);
   font-size: 12px;
   font-family: var(--font-sans);
 }
-
-/* The live map (CityMapLive) over the still preview: its chip replaces the
- * still one at once, its pins the still ones once the churches are loaded,
- * and Leaflet's attribution the still one. Until its own tiles paint, the
- * still tiles show through it, so it opens without a blank flash. */
-.city-map:has(.city-map-live) .city-map-static-chip,
+/* Without round() (see staticMapPlacement), plain centering. */
+.city-map-canvas {
+  left: calc(50% - 400px);
+  top: calc(50% - 224px);
+}
+.city-map-live:not([data-ready]) {
+  visibility: hidden;
+}
 .city-map:has(.city-map-live[data-ready]) .city-map-static-pins,
-.city-map:has(.city-map-live .leaflet-container) .city-map-attribution {
+.city-map:has(.city-map-live[data-ready]) .city-map-static-control {
   display: none;
+}
+/* Once the live map is mounting, the preview stops being a link to the home
+ * map: it's about to be the map itself. */
+.city-map:has(.city-map-live) .city-map-link {
+  pointer-events: none;
 }
 .city-map-live .leaflet-container {
   background: transparent;
+}
+/* In the page, the still preview's attribution stays, over the live map. */
+.city-map-live .leaflet-control-attribution {
+  display: none;
+}
+/* Markers appear in place, without the home map's settle: the still ones
+ * are already there, and the live ones arrive on top of them. */
+.city-map .church-map-marker,
+.city-map .church-map-marker svg,
+.city-map .church-map-cluster,
+.city-map .church-map-cluster-disc,
+.city-map-host .church-map-marker,
+.city-map-host .church-map-marker svg,
+.city-map-host .church-map-cluster,
+.city-map-host .church-map-cluster-disc {
+  animation: none;
 }
 
 /* Links inside the map (popup body, attribution) are rubric, not Leaflet's
