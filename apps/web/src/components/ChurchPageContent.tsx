@@ -188,18 +188,10 @@ function PageRef({
  * change dates, which would otherwise move every week with the bulletin. One
  * string, so the element holds text only.
  */
-function BulletinLabel({
-  week,
-  suffix = "",
-}: {
-  week: string | null;
-  suffix?: string;
-}) {
+function BulletinLabel({ week }: { week: string | null }) {
   return (
     <span {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}>
-      {week
-        ? `Bulletin for the week of ${formatLongMonthDay(week)}${suffix}`
-        : `Parish bulletin${suffix}`}
+      {week ? `Bulletin for the week of ${formatLongMonthDay(week)}` : "Parish bulletin"}
     </span>
   );
 }
@@ -263,7 +255,7 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <FileTextIcon className="size-3.5" />
-                <BulletinLabel week={church.bulletin_week} suffix=" (PDF)" />
+                <BulletinLabel week={church.bulletin_week} />
               </a>
             ) : church.bulletin_week ? (
               <span className="inline-flex items-center gap-2 font-serif text-[0.9375rem] text-ink-soft">
