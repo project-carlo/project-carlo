@@ -65,17 +65,17 @@ export function MapOverlay({
         >
           <Masthead
             aside={
-              // Beside the wordmark only, so the tagline keeps one line.
-              // A plain link, not a router Link: /churches/ is a prerendered
-              // page with no SPA route. It's also the homepage's one
-              // crawlable path into the church and city pages.
+              // Beside the wordmark only, so the tagline keeps one line. The
+              // index is also the homepage's one crawlable path into the
+              // church and city pages.
               <div className="mt-1 flex shrink-0 flex-col items-end gap-1">
-                <a
-                  href={CHURCH_INDEX_PATH}
+                <Link
+                  to={CHURCH_INDEX_PATH}
+                  reloadDocument={documentLinks}
                   className="rubric-link font-serif text-[0.9375rem]"
                 >
                   {ALL_CHURCHES}
-                </a>
+                </Link>
                 {aboutPageEnabled ? (
                   <Link
                     to="/about"

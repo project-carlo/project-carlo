@@ -57,3 +57,32 @@ test("a chunk missing from the live site too shows an error, not a reload loop",
   expect(loads()).toBe(2);
   await expect(page.getByText("Unexpected Application Error")).toHaveCount(0);
 });
+
+test("a chunk gone on the way to another page reloads into that page", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page.locator(".leaflet-container")).toBeVisible({
+    timeout: 15_000,
+  });
+  // The router loads a page's code before it changes the URL.
+  await page.route(
+    "**/assets/ChurchIndexPage-*.js",
+    (route) =>
+      route.fulfill({
+        status: 404,
+        contentType: "text/html",
+        body: "<!doctype html><title>Not found</title>",
+      }),
+    { times: 1 },
+  );
+  const loads = countLoads(page);
+
+  await page.getByRole("link", { name: "All churches" }).click();
+
+  await expect(page).toHaveURL(/\/churches\/$/);
+  await expect(
+    page.getByRole("heading", { level: 1, name: "All churches" }),
+  ).toBeVisible({ timeout: 15_000 });
+  await expect.poll(loads).toBe(1);
+});

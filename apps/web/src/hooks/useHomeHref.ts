@@ -7,7 +7,14 @@ import { useState } from "react";
  * whenever it changes and replay it here, so returning to the map restores the
  * exact filters and view the user left — regardless of how they navigated away.
  */
-const HOME_SEARCH_KEY = "carlo:home-search";
+export const HOME_SEARCH_KEY = "carlo:home-search";
+
+/**
+ * Marks a link to the map that should carry the remembered query string. The
+ * prerendered pages render it as a bare "/", and a script of theirs fills in
+ * the rest (see scripts/prerender.ts).
+ */
+export const HOME_LINK_ATTRIBUTE = "data-home-link";
 
 export function rememberHomeSearch(search: string): void {
   if (typeof window === "undefined") return;

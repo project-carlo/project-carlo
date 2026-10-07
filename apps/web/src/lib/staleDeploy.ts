@@ -24,9 +24,10 @@ export function isReloadingForNewVersion(): boolean {
 
 /**
  * Reloads the page to pick up the deployed version, unless it already did so
- * moments ago. Returns whether a reload is under way.
+ * moments ago. Given `href`, loads that page instead. Returns whether a
+ * reload is under way.
  */
-export function reloadForNewVersion(): boolean {
+export function reloadForNewVersion(href?: string): boolean {
   if (reloading) return true;
   try {
     const elapsed = Date.now() - Number(sessionStorage.getItem(STORAGE_KEY));
@@ -37,7 +38,8 @@ export function reloadForNewVersion(): boolean {
     return false;
   }
   reloading = true;
-  window.location.reload();
+  if (href) window.location.assign(href);
+  else window.location.reload();
   return true;
 }
 
@@ -46,9 +48,13 @@ export function reloadForNewVersion(): boolean {
  * every failed dynamic import in a build. The error still propagates, so
  * whatever renders it (RouteError) shows a loading state while the reload
  * happens.
+ *
+ * `pendingHref` names the page a move between pages is on its way to, if one
+ * is: the router loads a page's chunk before it changes the URL, so a plain
+ * reload would land back on the page the visitor was leaving.
  */
-export function reloadOnStaleChunk(): void {
+export function reloadOnStaleChunk(pendingHref: () => string | undefined = () => undefined): void {
   window.addEventListener("vite:preloadError", () => {
-    reloadForNewVersion();
+    reloadForNewVersion(pendingHref());
   });
 }

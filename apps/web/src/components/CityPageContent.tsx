@@ -211,7 +211,7 @@ export function CityPageContent({
             <Breadcrumbs
               className="mb-6"
               crumbs={[
-                { label: ALL_CHURCHES, href: CHURCH_INDEX_PATH },
+                { label: ALL_CHURCHES, to: CHURCH_INDEX_PATH },
                 { label: city.label },
               ]}
             />
@@ -221,7 +221,6 @@ export function CityPageContent({
             <p className="mt-4 font-serif text-[1rem] text-ink-soft">
               Times {SOURCE_PHRASE}.
             </p>
-            <Fleuron className="mt-7" />
           </section>
 
           <div
@@ -235,7 +234,7 @@ export function CityPageContent({
               key={city.slug}
               data={data}
               live={liveMap}
-              className="mt-1 mb-3"
+              className="mt-8 mb-3"
             />
 
             <section aria-label={`Churches in ${city.name}`} className="mt-2">
@@ -272,9 +271,9 @@ export function CityPageContent({
         </div>
       </main>
       <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
-        <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
+        <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
           {ALL_CHURCHES}
-        </a>
+        </Link>
       </footer>
     </>
   );

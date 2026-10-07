@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { DAY_ORDER } from "../constants/days";
 import { EVENT_TYPE_LABELS, EVENT_TYPE_ORDER } from "../constants/eventTypes";
 import type { ChurchDetail, EventSummary, EventType } from "../types";
@@ -198,7 +199,7 @@ function BulletinLabel({ week }: { week: string | null }) {
 
 /** All churches › {City} › {Church}, without the city when the address has none. */
 function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
-  const crumbs: Crumb[] = [{ label: ALL_CHURCHES, href: CHURCH_INDEX_PATH }];
+  const crumbs: Crumb[] = [{ label: ALL_CHURCHES, to: CHURCH_INDEX_PATH }];
   if (city) crumbs.push({ label: city.label, to: cityPath(city.slug) });
   crumbs.push({ label: church.name ?? UNNAMED_CHURCH });
   return crumbs;
@@ -410,9 +411,9 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
       </div>
     </main>
     <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
-      <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
+      <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
         {ALL_CHURCHES}
-      </a>
+      </Link>
     </footer>
     </>
   );
