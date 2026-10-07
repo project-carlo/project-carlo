@@ -1,6 +1,7 @@
 import { FILTER_DAY_LABELS } from "../constants/days";
 import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
 import type { EventType } from "../types";
+import type { ChurchFilters } from "../api";
 
 export interface FilterState {
   eventType: EventType; // single selection: mass, adoration, or confession
@@ -26,6 +27,17 @@ export function getTimeRange(filters: FilterState): {
     return {};
   }
   return { from: filters.timeFrom, to: filters.timeTo };
+}
+
+/** The churches query for a filter selection, as the maps run it. */
+export function churchFiltersFor(filters: FilterState): ChurchFilters {
+  const { from, to } = getTimeRange(filters);
+  return {
+    types: [filters.eventType],
+    daysOfWeek: filters.daysOfWeek.length > 0 ? filters.daysOfWeek : undefined,
+    timeFrom: from,
+    timeTo: to,
+  };
 }
 
 const FILTER_PARAM_KEYS = ["type", "days", "from", "to"] as const;

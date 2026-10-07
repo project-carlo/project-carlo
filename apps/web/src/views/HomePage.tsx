@@ -6,25 +6,23 @@ import {
   useState,
   useCallback,
 } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import {
-  fetchAllChurchesForSearch,
-  fetchChurches,
-  type ChurchSearchResult,
-} from "../api";
+import type { Map as LeafletMap } from "leaflet";
+import { fetchAllChurchesForSearch, fetchChurches } from "../api";
 import { ChurchMap } from "../components/ChurchMap";
-import { FilterPanel } from "../components/FilterPanel";
-import { FilterPills } from "../components/FilterPills";
-import { SearchTypeahead } from "../components/SearchTypeahead";
-import { Masthead } from "../components/Masthead";
 import {
+  FULL_WINDOW_CORNER_CLASS,
+  MapCornerControls,
+} from "../components/MapCornerControls";
+import { MapOverlay } from "../components/MapOverlay";
+import {
+  churchFiltersFor,
   filtersEqual,
-  getTimeRange,
   type FilterState,
 } from "../components/filterState";
 import { InlineQueryError } from "../components/InlineQueryError";
-import { useMinWidth } from "../hooks/useMinWidth";
+import { DESKTOP_MIN_WIDTH, useMinWidth } from "../hooks/useMinWidth";
 import { useFilterUrlState } from "../hooks/useFilterUrlState";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { rememberHomeSearch } from "../hooks/useHomeHref";
@@ -36,26 +34,10 @@ import {
 import { fetchApproximateLocation } from "../lib/approximateLocation";
 import { firstVisitStart, type MapStart } from "../lib/mapStart";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
-import { LocateButton } from "../components/LocateButton";
-import {
-  currentLocationPlace,
-  PLACE_SEARCH_ZOOM,
-  type PlaceSearchResult,
-} from "../placeSearch";
-import { isAboutPageEnabled } from "../lib/featureFlags";
-import {
-  ALL_CHURCHES,
-  FINDING_YOUR_LOCATION,
-  USE_MY_LOCATION,
-} from "../copy";
-import {
-  CHURCH_INDEX_PATH,
-  HOME_DESCRIPTION,
-  HOME_TITLE,
-  canonicalForPath,
-} from "../lib/seo";
-
-const aboutPageEnabled = isAboutPageEnabled();
+import { useMapSelection } from "../hooks/useMapSelection";
+import { currentLocationPlace } from "../placeSearch";
+import { FINDING_YOUR_LOCATION, USE_MY_LOCATION } from "../copy";
+import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
 
 /** Map-centering payload accepted on navigation (e.g. via router state from the landing page). */
 export interface HomeMapCenter {
@@ -188,21 +170,18 @@ export function HomePage() {
   }, [location.search]);
 
   const [filterPanelOpen, setFilterPanelOpen] = useState(false);
-  const isDesktop = useMinWidth(768);
-  const [centerOn, setCenterOn] = useState<{
-    lat: number;
-    lng: number;
-    churchId?: number;
-    placeTitle?: string;
-    placeSubtitle?: string | null;
-    openPlacePopup?: boolean;
-    zoom?: number;
-    requestId: number;
-  } | null>(null);
-  // Monotonic id bumped on every church selection so that re-selecting the
-  // same church still produces a distinct `centerOn` value, which the map
-  // uses to re-pan and re-open the popup without a timer-based reset.
-  const centerRequestIdRef = useRef(0);
+  const isDesktop = useMinWidth(DESKTOP_MIN_WIDTH);
+  const [map, setMap] = useState<LeafletMap | null>(null);
+  // The place the IP estimate named, shown in the card with the offer of an
+  // exact location until the visitor picks somewhere themselves.
+  const [approximateArea, setApproximateArea] = useState<string | null>(null);
+  const {
+    centerOn,
+    center,
+    selectChurch: handleChurchSelect,
+    selectPlace: handlePlaceSelect,
+    clearPlace: handleClearPlace,
+  } = useMapSelection(useCallback(() => setApproximateArea(null), []));
 
   // Hydrate initial centering from router state (e.g. landing page navigation),
   // then clear the state via history.replaceState so a hard refresh
@@ -213,27 +192,18 @@ export function HomePage() {
     hydratedFromStateRef.current = true;
     const incoming = (location.state as HomeNavState | null)?.centerOn;
     if (!incoming) return;
-    centerRequestIdRef.current += 1;
-    setCenterOn({ ...incoming, requestId: centerRequestIdRef.current });
+    center(incoming);
     window.history.replaceState(
       null,
       "",
       location.pathname + location.search,
     );
-  }, [location.pathname, location.search, location.state]);
+  }, [location.pathname, location.search, location.state, center]);
 
-  const apiFilters = useMemo(() => {
-    const { from, to } = getTimeRange(appliedFilters);
-    return {
-      types: [appliedFilters.eventType],
-      daysOfWeek:
-        appliedFilters.daysOfWeek.length > 0
-          ? appliedFilters.daysOfWeek
-          : undefined,
-      timeFrom: from,
-      timeTo: to,
-    };
-  }, [appliedFilters]);
+  const apiFilters = useMemo(
+    () => churchFiltersFor(appliedFilters),
+    [appliedFilters],
+  );
 
   const { data, error, refetch } = useQuery({
     queryKey: ["churches", apiFilters],
@@ -251,9 +221,6 @@ export function HomePage() {
     if (wantsFirstVisitStart) return undefined;
     return urlMapView ? { kind: "view", view: urlMapView } : null;
   });
-  // The place the IP estimate named, shown in the card with the offer of an
-  // exact location until the visitor picks somewhere themselves.
-  const [approximateArea, setApproximateArea] = useState<string | null>(null);
   useEffect(() => {
     if (mapStart !== undefined || !allChurches || !approximateSettled) return;
     const start = firstVisitStart(
@@ -284,40 +251,6 @@ export function HomePage() {
     // transition, which lets newer drag values pre-empt in-flight work.
     setFilters(next);
     startTransition(() => setAppliedFilters(next));
-  }, []);
-
-  const handleChurchSelect = useCallback((church: ChurchSearchResult) => {
-    if (church.latitude != null && church.longitude != null) {
-      setApproximateArea(null);
-      centerRequestIdRef.current += 1;
-      setCenterOn({
-        lat: church.latitude,
-        lng: church.longitude,
-        churchId: church.id,
-        requestId: centerRequestIdRef.current,
-      });
-    }
-  }, []);
-
-  const handlePlaceSelect = useCallback((place: PlaceSearchResult) => {
-    setApproximateArea(null);
-    centerRequestIdRef.current += 1;
-    setCenterOn({
-      lat: place.lat,
-      lng: place.lng,
-      placeTitle: place.title,
-      placeSubtitle: place.subtitle,
-      // The visitor's own position is pinned quietly; its popup opens on a click.
-      openPlacePopup: !place.isCurrentLocation,
-      zoom: PLACE_SEARCH_ZOOM,
-      requestId: centerRequestIdRef.current,
-    });
-  }, []);
-
-  // Removes the searched-place pin. A selected church shares `centerOn` but
-  // isn't a pin, so it's left alone.
-  const handleClearPlace = useCallback(() => {
-    setCenterOn((current) => (current?.placeTitle ? null : current));
   }, []);
 
   // "Use my location": the browser's position, pinned and flown to
@@ -355,6 +288,7 @@ export function HomePage() {
             start={mapStart}
             onViewChange={handleMapViewChange}
             onClearPlace={handleClearPlace}
+            mapRef={setMap}
           />
         ) : null}
       </div>
@@ -387,141 +321,69 @@ export function HomePage() {
       ) : null}
 
       {/* Floating card — masthead, search, filter pills; filter panel is only as tall
-       *  as its content on md+ (capped + scroll inside when needed). The parts
-       *  that cover the map carry `data-map-overlay`, so the map can centre
-       *  what it zooms to in the ground they leave clear; the phone's filter
-       *  sheet blocks the map while it's open, so it isn't marked. */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-[900] flex justify-center px-4 pt-[calc(1rem+var(--safe-area-inset-top))] pb-[calc(1rem+var(--safe-area-inset-bottom))] md:justify-start md:px-6 md:pt-6 md:pb-6">
-        <div className="pointer-events-none flex w-full max-w-[28rem] flex-col gap-4">
-          <div
-            data-map-overlay
-            className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-6 pt-5 pb-4 shadow-missal-floating backdrop-blur-sm"
-          >
-            <Masthead
-              aside={
-                // Beside the wordmark only, so the tagline keeps one line.
-                // A plain link, not a router Link: /churches/ is a prerendered
-                // page with no SPA route. It's also the homepage's one
-                // crawlable path into the church and city pages.
-                <div className="mt-1 flex shrink-0 flex-col items-end gap-1">
-                  <a
-                    href={CHURCH_INDEX_PATH}
-                    className="rubric-link font-serif text-[0.9375rem]"
-                  >
-                    {ALL_CHURCHES}
-                  </a>
-                  {aboutPageEnabled ? (
-                    <Link
-                      to="/about"
-                      className="rubric-link font-serif text-[0.9375rem]"
-                    >
-                      About
-                    </Link>
-                  ) : null}
-                </div>
-              }
-            />
-            <div className="mt-5">
-              <SearchTypeahead
-                hideModeToggle
-                onChurchSelect={handleChurchSelect}
-                onPlaceSelect={handlePlaceSelect}
-                filterButton={
-                  <button
-                    type="button"
-                    onClick={() => setFilterPanelOpen(true)}
-                    aria-label="Open filters"
-                    data-active={filterPanelOpen}
-                    className="rubric-link ml-1 whitespace-nowrap font-serif text-[0.9375rem] md:hidden"
-                  >
-                    Filters
-                  </button>
-                }
-              />
-            </div>
-            {approximateArea && !pinnedPlaceTitle ? (
-              <div className="mt-3 flex items-baseline justify-between gap-3 font-serif text-[0.9375rem]">
-                {/* An error wraps rather than truncate: it says what to do. */}
-                <span
-                  className={`min-w-0 text-ink-soft ${locateError ? "" : "truncate"}`}
-                >
-                  {locateError ? (
-                    locateError
-                  ) : (
-                    <>
-                      Near <span className="text-ink">{approximateArea}</span>
-                      {/* Phones haven't the width: it would only be cut off. */}
-                      <span className="hidden italic md:inline">
-                        {" "}
-                        · approximate
-                      </span>
-                    </>
-                  )}
-                </span>
-                <button
-                  type="button"
-                  onClick={handleLocate}
-                  disabled={locateStatus === "requesting"}
-                  className="rubric-link missal-focus shrink-0 disabled:cursor-wait"
-                >
-                  {locateStatus === "requesting"
-                    ? FINDING_YOUR_LOCATION
-                    : USE_MY_LOCATION}
-                </button>
-              </div>
-            ) : null}
-            {pinnedPlaceTitle ? (
-              <div className="mt-3 flex items-center justify-between gap-3 font-serif text-[0.9375rem]">
-                <span className="min-w-0 truncate text-ink-soft">
-                  Pinned: <span className="text-ink">{pinnedPlaceTitle}</span>
-                </span>
-                <button
-                  type="button"
-                  onClick={handleClearPlace}
-                  aria-label={`Remove pin for ${pinnedPlaceTitle}`}
-                  className="rubric-link missal-focus shrink-0"
-                >
-                  Remove pin
-                </button>
-              </div>
-            ) : null}
-            <FilterPills filters={appliedFilters} />
+       *  as its content on md+ (capped + scroll inside when needed). */}
+      <MapOverlay
+        isDesktop={isDesktop}
+        filters={filters}
+        appliedFilters={appliedFilters}
+        onFiltersChange={handleFiltersChange}
+        resultCount={mappedChurchCount}
+        filterPanelOpen={filterPanelOpen}
+        onFilterPanelOpenChange={setFilterPanelOpen}
+        onChurchSelect={handleChurchSelect}
+        onPlaceSelect={handlePlaceSelect}
+        pinnedPlaceTitle={pinnedPlaceTitle}
+        onClearPlace={handleClearPlace}
+      >
+        {approximateArea && !pinnedPlaceTitle ? (
+          <div className="mt-3 flex items-baseline justify-between gap-3 font-serif text-[0.9375rem]">
+            {/* An error wraps rather than truncate: it says what to do. */}
+            <span
+              className={`min-w-0 text-ink-soft ${locateError ? "" : "truncate"}`}
+            >
+              {locateError ? (
+                locateError
+              ) : (
+                <>
+                  Near <span className="text-ink">{approximateArea}</span>
+                  {/* Phones haven't the width: it would only be cut off. */}
+                  <span className="hidden italic md:inline">
+                    {" "}
+                    · approximate
+                  </span>
+                </>
+              )}
+            </span>
+            <button
+              type="button"
+              onClick={handleLocate}
+              disabled={locateStatus === "requesting"}
+              className="rubric-link missal-focus shrink-0 disabled:cursor-wait"
+            >
+              {locateStatus === "requesting"
+                ? FINDING_YOUR_LOCATION
+                : USE_MY_LOCATION}
+            </button>
           </div>
+        ) : null}
+      </MapOverlay>
 
-          <div
-            data-map-overlay={isDesktop ? true : undefined}
-            className={`w-full md:min-h-0 ${
-              !isDesktop && !filterPanelOpen
-                ? "pointer-events-none"
-                : "pointer-events-auto"
-            }`}
-          >
-            <FilterPanel
-              isOpen={!isDesktop && filterPanelOpen}
-              isDesktop={isDesktop}
-              onClose={() => setFilterPanelOpen(false)}
-              filters={filters}
-              onChange={handleFiltersChange}
-              resultCount={mappedChurchCount}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* The locate control, bottom right above the map attribution. Not a
-       *  `data-map-overlay`: it's a corner button, not a panel the map
+      {/* The corner controls, bottom right above the map attribution: zoom on
+       *  desktop (a phone pinches), and the locate button. Not a
+       *  `data-map-overlay`: they're corner buttons, not a panel the map
        *  should centre around. */}
       {mapReady ? (
-        <div className="pointer-events-none absolute right-4 bottom-[calc(2.25rem+var(--safe-area-inset-bottom))] left-4 z-[900] md:right-6">
-          <div className="pointer-events-auto ml-auto w-fit">
-            <LocateButton
-              status={locateStatus}
-              // The card's line already says why, when it's showing.
-              error={approximateArea && !pinnedPlaceTitle ? null : locateError}
-              onLocate={handleLocate}
-            />
-          </div>
-        </div>
+        <MapCornerControls
+          map={map}
+          zoom={isDesktop}
+          locate={{
+            status: locateStatus,
+            // The card's line already says why, when it's showing.
+            error: approximateArea && !pinnedPlaceTitle ? null : locateError,
+            onLocate: handleLocate,
+          }}
+          className={FULL_WINDOW_CORNER_CLASS}
+        />
       ) : null}
     </main>
   );

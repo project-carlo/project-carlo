@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { useDocumentLinks } from "@/lib/documentLinks";
 import { cn } from "@/lib/utils";
 
 interface MastheadProps {
@@ -21,11 +22,13 @@ export function Masthead({
   aside,
   className = "",
 }: MastheadProps) {
+  const documentLinks = useDocumentLinks();
   if (compact) {
     return (
       <div className={cn("flex items-baseline gap-4", className)}>
         <Link
           to="/"
+          reloadDocument={documentLinks}
           aria-label="Project Carlo — home"
           className="font-display text-lg leading-none font-normal tracking-tight text-ink"
         >
@@ -42,7 +45,7 @@ export function Masthead({
     <header className={cn("space-y-2", className)}>
       <div className="flex items-start justify-between gap-4">
         <p className="font-display text-[2rem] leading-none font-normal tracking-tight text-ink sm:text-[2.5rem]">
-          <Link to="/" aria-label="Project Carlo — home">
+          <Link to="/" reloadDocument={documentLinks} aria-label="Project Carlo — home">
             Project <span className="italic text-rubric">Carlo</span>
           </Link>
         </p>

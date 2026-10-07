@@ -8,6 +8,8 @@ interface StaticCityPageProps {
   data: CityPageData;
   cssPath: string;
   fontPaths: string[];
+  /** Makes the map preview live; the only script the page loads. */
+  cityMapScript: string;
   canonicalUrl: string;
 }
 
@@ -15,6 +17,7 @@ export function StaticCityPage({
   data,
   cssPath,
   fontPaths,
+  cityMapScript,
   canonicalUrl,
 }: StaticCityPageProps) {
   return (
@@ -31,6 +34,7 @@ export function StaticCityPage({
         <MemoryRouter>
           <CityPageContent data={data} />
         </MemoryRouter>
+        <script type="module" src={cityMapScript} />
       </body>
     </html>
   );

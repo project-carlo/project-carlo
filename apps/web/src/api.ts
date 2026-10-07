@@ -10,6 +10,16 @@ import {
   type CityLink,
 } from "./lib/cities";
 import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
+import {
+  cityMapMarkers,
+  cityMapView,
+  type CityMapData,
+} from "./lib/cityMapLayout";
+import { buildClusterIndex, type ClusterIndex } from "./lib/mapClusters";
+import {
+  churchFiltersFor,
+  DEFAULT_FILTER_STATE,
+} from "./components/filterState";
 import { parseSnapshot, SNAPSHOT_FILE, type Snapshot } from "./lib/snapshot";
 import type {
   ChurchBase,
@@ -322,6 +332,8 @@ export interface CityChurchEntry {
 
 export interface CityPageData {
   city: City;
+  /** The city's map as it opens; null for a city with no known position. */
+  map: CityMapData | null;
   /** The city's own churches, by name. */
   churches: CityChurchEntry[];
   /** The closest churches outside the city, nearest first. */
@@ -345,13 +357,43 @@ export function cityPageData(
     distanceMiles,
     schedule: upcomingSchedule(snapshot, church.id, EVENT_TYPE_ORDER),
   });
+  const view = cityMapView(city);
   return {
     city,
+    map: view
+      ? { view, markers: cityMapMarkers(defaultMapIndex(snapshot), view) }
+      : null,
     churches: city.churches.map((church) => entry(church, null)),
     nearby: nearbyChurches(city, snapshot.churches).map((n) =>
       entry(n.church, n.distanceMiles),
     ),
   };
+}
+
+type MappedItem = ChurchMapItem & { latitude: number; longitude: number };
+
+const defaultMapIndexes = new WeakMap<Snapshot, ClusterIndex<MappedItem>>();
+
+/**
+ * The cluster index the live map builds when it opens with the default
+ * filters (ChurchMap, from fetchChurches): the same churches, in the same
+ * order, so it groups them into the same roundels. Built once per snapshot.
+ */
+function defaultMapIndex(snapshot: Snapshot): ClusterIndex<MappedItem> {
+  let index = defaultMapIndexes.get(snapshot);
+  if (!index) {
+    const items = collectMapItems(
+      snapshot.churches,
+      snapshot.events,
+      churchFiltersFor(DEFAULT_FILTER_STATE),
+    ).filter(
+      (item): item is MappedItem =>
+        item.latitude !== null && item.longitude !== null,
+    );
+    index = buildClusterIndex(items);
+    defaultMapIndexes.set(snapshot, index);
+  }
+  return index;
 }
 
 export async function fetchCityPage(slug: string): Promise<CityPageData> {

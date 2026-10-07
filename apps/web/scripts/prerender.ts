@@ -1,18 +1,19 @@
 import { createHash } from "node:crypto";
 import { gunzipSync } from "node:zlib";
-import { existsSync, readFileSync, mkdirSync, writeFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { loadEnv } from "vite";
 import { createElement } from "react";
 import { churchCity, churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
 import { cityPath, type CityCenters } from "../src/lib/cities";
+import { CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
 import cityCentersJson from "../src/data/cityCenters.json";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
 import { StaticChurchIndexPage } from "../src/prerender/StaticChurchIndexPage";
 import { StaticCityPage } from "../src/prerender/StaticCityPage";
-import { CHURCH_INDEX_PATH, churchPath } from "../src/lib/seo";
+import { CHURCH_INDEX_PATH, SITE_ORIGIN, absoluteUrl, churchPath } from "../src/lib/seo";
 import {
   LASTMOD_FILE,
   LASTMOD_PLACEHOLDER,
@@ -30,35 +31,70 @@ const WEB_DIR = resolve(import.meta.dirname, "..");
 // the Worker's own bundle.
 const DIST_DIR = resolve(WEB_DIR, "dist", "client");
 const SNAPSHOT_PATH = resolve(WEB_DIR, "public", SNAPSHOT_FILE);
-const SITE_ORIGIN = "https://projectcarlo.com";
+// Written because vite.config.ts sets build.manifest; public/.assetsignore
+// keeps it out of the deployed assets.
+const MANIFEST_PATH = resolve(DIST_DIR, ".vite", "manifest.json");
 
-/** Font filename prefixes to preload — Latin subsets of the two typefaces used
- *  on church pages (Cardo for display headings, EB Garamond for body text). */
-const PRELOAD_FONT_PREFIXES = [
-  "cardo-latin-400-normal-",
-  "eb-garamond-latin-wght-normal-",
+/** Font files to preload — Latin subsets of the two typefaces used on church
+ *  pages (Cardo for display headings, EB Garamond for body text). */
+const PRELOAD_FONTS = [
+  /\/cardo-latin-400-normal-[^/]*\.woff2$/,
+  /\/eb-garamond-latin-wght-normal-[^/]*\.woff2$/,
 ];
 
-function discoverAssets(): { cssPath: string; fontPaths: string[] } {
-  const assetsDir = resolve(DIST_DIR, "assets");
-  const files = readdirSync(assetsDir);
-
-  const cssFile = files.find((f) => f.startsWith("index-") && f.endsWith(".css"));
-  if (!cssFile) {
-    throw new Error("Could not find built CSS file in dist/client/assets/");
-  }
-
-  const fontPaths = PRELOAD_FONT_PREFIXES.map((prefix) => {
-    const match = files.find((f) => f.startsWith(prefix) && f.endsWith(".woff2"));
-    if (!match) throw new Error(`Could not find font file matching ${prefix}*.woff2`);
-    return `/assets/${match}`;
-  });
-
-  return { cssPath: `/assets/${cssFile}`, fontPaths };
+/** The parts of Vite's build manifest this script reads. */
+interface ManifestChunk {
+  file: string;
+  isEntry?: boolean;
+  css?: string[];
+  assets?: string[];
 }
 
-function getSiteOrigin(): string {
-  return new URL(SITE_ORIGIN).origin;
+/**
+ * The app's stylesheet and the fonts to preload, as Vite's build manifest
+ * lists them for the index.html entry, and the city pages' map script. The
+ * static pages link only that one stylesheet, so the build fails if any CSS
+ * lands elsewhere (say, a lazy-loaded route importing its own), or a font or
+ * the script goes missing, rather than shipping pages without them.
+ */
+function discoverAssets(): { cssPath: string; fontPaths: string[]; cityMapScript: string } {
+  if (!existsSync(MANIFEST_PATH)) {
+    throw new Error(`${MANIFEST_PATH} is missing. Run \`vite build\` first.`);
+  }
+  const manifest = JSON.parse(readFileSync(MANIFEST_PATH, "utf-8")) as Record<
+    string,
+    ManifestChunk
+  >;
+  const entry = manifest["index.html"];
+  if (!entry) throw new Error("Vite's manifest has no index.html entry.");
+
+  const css = entry.css ?? [];
+  if (css.length !== 1) {
+    throw new Error(
+      `Expected index.html to build to one stylesheet, found ${css.length}: ${css.join(", ")}`,
+    );
+  }
+  const strays = Object.entries(manifest).filter(
+    ([key, chunk]) => key !== "index.html" && chunk.css?.length,
+  );
+  if (strays.length > 0) {
+    throw new Error(
+      "Static pages link only index.html's stylesheet, but these chunks have their own CSS: " +
+        strays.map(([key, chunk]) => `${key} (${chunk.css!.join(", ")})`).join("; "),
+    );
+  }
+
+  const assets = (entry.assets ?? []).map((file) => `/${file}`);
+  const fontPaths = PRELOAD_FONTS.map((pattern) => {
+    const match = assets.find((path) => pattern.test(path));
+    if (!match) throw new Error(`Could not find a font matching ${pattern} in Vite's manifest`);
+    return match;
+  });
+
+  const cityMap = manifest[CITY_MAP_ENTRY];
+  if (!cityMap?.isEntry) throw new Error(`Vite's manifest has no ${CITY_MAP_ENTRY} entry.`);
+
+  return { cssPath: `/${css[0]}`, fontPaths, cityMapScript: `/${cityMap.file}` };
 }
 
 function escapeXml(text: string): string {
@@ -67,10 +103,6 @@ function escapeXml(text: string): string {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
-}
-
-function absoluteUrl(origin: string, pathname: string): string {
-  return new URL(pathname, `${origin}/`).href;
 }
 
 function canonicalUrlForChurchSlug(origin: string, slug: string): string {
@@ -213,9 +245,9 @@ async function main() {
   }
   const snapshot = parseSnapshot(gunzipSync(readFileSync(SNAPSHOT_PATH)).toString("utf-8"));
 
-  const { cssPath, fontPaths } = discoverAssets();
+  const { cssPath, fontPaths, cityMapScript } = discoverAssets();
   const slugs = snapshot.churches.map((church) => church.slug);
-  const origin = getSiteOrigin();
+  const origin = SITE_ORIGIN;
 
   console.log(`Pre-rendering ${slugs.length} church pages...`);
 
@@ -225,7 +257,7 @@ async function main() {
   // sitemap's <lastmod> and the page's JSON-LD dateModified.
   const buildDate = new Date().toISOString().slice(0, 10);
   const previousDates = await fetchPreviousDates(origin);
-  const assetPaths = [cssPath, ...fontPaths];
+  const assetPaths = [cssPath, ...fontPaths, cityMapScript];
   const pageDates: Record<string, LastmodEntry> = {};
   /** Dates a page rendered with LASTMOD_PLACEHOLDER and returns its final HTML. */
   const datePage = (path: string, html: string): string => {
@@ -306,6 +338,7 @@ async function main() {
             data: cityPageData(snapshot, citySlug, cityCenters),
             cssPath,
             fontPaths,
+            cityMapScript,
             canonicalUrl: absoluteUrl(origin, path),
           }),
         ),
