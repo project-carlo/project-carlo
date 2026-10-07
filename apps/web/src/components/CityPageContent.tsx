@@ -5,13 +5,16 @@ import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
 import type { EventSummary, EventType } from "../types";
 import { formatAddress } from "../utils";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { CityMapPreview } from "@/components/CityMapPreview";
 import { Fleuron } from "@/components/Fleuron";
 import { MapPinIcon } from "@/components/icons";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, formatMiles } from "@/lib/cities";
+import type { CityMapConfig } from "@/lib/cityMap";
 import type { ScheduleRollupRow } from "@/lib/eventRollup";
 import { weeklyScheduleRows } from "@/lib/scheduleSummary";
 import { CHURCH_INDEX_PATH, churchPath } from "@/lib/seo";
+import { ALL_CHURCHES, DISCLAIMER, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";
 
 /** The services a card tucks behind "Confession & Adoration times". */
 const SECONDARY_TYPES: EventType[] = ["confession", "adoration"];
@@ -129,7 +132,7 @@ function CityChurch({ entry }: { entry: CityChurchEntry }) {
     <li className="py-7">
       <h3 className="font-display text-[1.5rem] leading-tight text-ink">
         <Link to={churchPath(church.slug)} className="hover:text-rubric-deep">
-          {church.name ?? "Unnamed church"}
+          {church.name ?? UNNAMED_CHURCH}
         </Link>
       </h3>
       {address ? (
@@ -159,7 +162,7 @@ function NearbyChurch({ entry }: { entry: CityChurchEntry }) {
     <li className="py-6">
       <h3 className="font-display text-[1.3rem] leading-tight text-ink">
         <Link to={churchPath(church.slug)} className="hover:text-rubric-deep">
-          {church.name ?? "Unnamed church"}
+          {church.name ?? UNNAMED_CHURCH}
         </Link>
       </h3>
       <p className="mt-1 font-serif text-[0.95rem] text-ink-soft">
@@ -185,7 +188,17 @@ function NearbyChurch({ entry }: { entry: CityChurchEntry }) {
   );
 }
 
-export function CityPageContent({ data }: { data: CityPageData }) {
+/**
+ * A city page. `liveMap` makes its map preview live (see CityMapPreview); the
+ * prerendered page leaves it out and src/islands/cityMap.ts does the same.
+ */
+export function CityPageContent({
+  data,
+  liveMap,
+}: {
+  data: CityPageData;
+  liveMap?: (config: CityMapConfig) => ReactNode;
+}) {
   const { city, churches, nearby } = data;
 
   return (
@@ -198,7 +211,7 @@ export function CityPageContent({ data }: { data: CityPageData }) {
             <Breadcrumbs
               className="mb-6"
               crumbs={[
-                { label: "All churches", href: CHURCH_INDEX_PATH },
+                { label: ALL_CHURCHES, href: CHURCH_INDEX_PATH },
                 { label: city.label },
               ]}
             />
@@ -206,7 +219,7 @@ export function CityPageContent({ data }: { data: CityPageData }) {
               Mass Times in {city.label}
             </h1>
             <p className="mt-4 font-serif text-[1rem] text-ink-soft">
-              Sourced from each parish&rsquo;s weekly bulletin.
+              Times {SOURCE_PHRASE}.
             </p>
             <Fleuron className="mt-7" />
           </section>
@@ -215,6 +228,16 @@ export function CityPageContent({ data }: { data: CityPageData }) {
             className="rise-in mx-auto max-w-3xl"
             style={{ animationDelay: "80ms" }}
           >
+            {/* Keyed by city: when the app goes from one city's page
+             *  straight to another's (back to one it has cached, say), the
+             *  live map starts again on the new city's view. */}
+            <CityMapPreview
+              key={city.slug}
+              data={data}
+              live={liveMap}
+              className="mt-1 mb-3"
+            />
+
             <section aria-label={`Churches in ${city.name}`} className="mt-2">
               <ul className="divide-y divide-rule">
                 {churches.map((entry) => (
@@ -243,16 +266,14 @@ export function CityPageContent({ data }: { data: CityPageData }) {
           <div className="mx-auto mt-16 max-w-2xl">
             <Fleuron solo className="text-brass" />
             <p className="mt-4 text-center font-serif text-[0.9rem] text-ink-faint">
-              Mass times are extracted with AI from each parish&apos;s latest
-              available bulletin and may contain mistakes. Please confirm details
-              with an official parish source before attending.
+              {DISCLAIMER}
             </p>
           </div>
         </div>
       </main>
       <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
         <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-          Browse all churches
+          {ALL_CHURCHES}
         </a>
       </footer>
     </>

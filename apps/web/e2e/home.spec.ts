@@ -37,3 +37,19 @@ test("home page mounts and renders cleanly", async ({ page, baseURL }) => {
   expect(consoleErrors, consoleErrors.join("\n")).toEqual([]);
   expect(failedRequests, failedRequests.join("\n")).toEqual([]);
 });
+
+test("the home map has zoom buttons on a desktop, not on a phone", async ({
+  page,
+}) => {
+  await page.goto("/?lat=43.15&lng=-77.6&z=10");
+  const zoomIn = page.getByRole("button", { name: "Zoom in" });
+  await expect(zoomIn).toBeVisible({ timeout: 15_000 });
+  await zoomIn.click();
+  await expect(page).toHaveURL(/[?&]z=11(&|$)/);
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(zoomIn).toHaveCount(0);
+  await expect(
+    page.getByRole("button", { name: "Use my location", exact: true }),
+  ).toBeVisible();
+});

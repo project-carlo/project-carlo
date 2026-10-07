@@ -38,8 +38,8 @@ EVENTS = [
 WEB_FIXTURE = Path(__file__).resolve().parents[1] / "apps/web/src/lib/snapshot.fixture.json"
 # Nulls, strings that repeat, and a gap in the event ids.
 CHURCH_ROWS = [
-    (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None),
-    (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None),
+    (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20"),
+    (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None, None),
 ]
 EVENT_ROWS = [
     (10, 7, "mass", "weekly", "Sunday", None, 600, None, 0, 2, None),
@@ -83,6 +83,7 @@ def test_snapshot_has_the_latest_bulletins_churches_and_events(db: Path, tmp_pat
     assert church["city"] == "Rochester"
     assert church["address_line2"] is None
     assert church["bulletin_url"] == "https://example.org/new.pdf"
+    assert church["bulletin_week"] == "2026-09-20"
     assert church["homepage_url"] == "https://example.org"
     mass, confession = tables["events"]
     assert mass["id"] < confession["id"]
@@ -93,6 +94,29 @@ def test_snapshot_has_the_latest_bulletins_churches_and_events(db: Path, tmp_pat
     assert (confession["date"], confession["end_time"]) == ("2026-12-24", 960)
     assert confession["cancelled"] is True
     assert confession["note"] == "Christmas Eve"
+
+
+def test_a_parish_with_no_processed_bulletin_has_no_bulletin(
+    pipeline_dir: Path, tmp_path: Path,
+) -> None:
+    create_db()
+    dest = tmp_path / "frontend.json.gz"
+
+    extract(DEFAULT_DB_PATH, dest)
+
+    [church] = read_snapshot(dest.read_bytes())["churches"]
+    assert (church["bulletin_url"], church["bulletin_week"]) == (None, None)
+
+
+def test_a_snapshot_written_before_an_added_column_reads_it_as_null() -> None:
+    document = json.loads(gzip.decompress(encode_snapshot(CHURCH_ROWS, EVENT_ROWS)))
+    del document["churches"]["bulletin_week"]
+    data = gzip.compress(json.dumps(document).encode())
+
+    churches = read_snapshot(data)["churches"]
+
+    assert [church["bulletin_week"] for church in churches] == [None, None]
+    assert [church["slug"] for church in churches] == ["b", "a"]
 
 
 def test_snapshot_bytes_are_deterministic(db: Path, tmp_path: Path) -> None:
@@ -161,8 +185,8 @@ def test_verify_passes_for_the_same_data(db: Path, tmp_path: Path) -> None:
 
 
 def test_verify_fails_when_weekly_events_and_churches_change(tmp_path: Path) -> None:
-    church = (1, 1, "a", "A", None, None, None, None, None, None, None, None, None)
-    other = (2, 1, "b", "B", None, None, None, None, None, None, None, None, None)
+    church = (1, 1, "a", "A", None, None, None, None, None, None, None, None, None, None)
+    other = (2, 1, "b", "B", None, None, None, None, None, None, None, None, None, None)
     weekly = [
         (i, 1, "mass", "weekly", "Sunday", None, 480 + 60 * i, None, 0, None, None)
         for i in range(1, 11)

@@ -7,6 +7,7 @@ import {
   buildChurchIndexDescription,
   churchPath,
 } from "../lib/seo";
+import { ALL_CHURCHES, MAP_LINK, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
 import { CHURCH_INDEX_SEARCH_SCRIPT } from "./churchIndexSearch";
 import { StaticPageHead } from "./StaticPageHead";
 
@@ -92,7 +93,7 @@ export function StaticChurchIndexPage({
         {
           "@type": "ListItem",
           position: 2,
-          name: "Churches",
+          name: ALL_CHURCHES,
           item: canonicalUrl,
         },
       ],
@@ -113,14 +114,14 @@ export function StaticChurchIndexPage({
         <main className="mx-auto w-full max-w-3xl px-6 py-12 pb-[calc(3rem+var(--safe-area-inset-bottom))]">
           <header className="text-center">
             <a href="/" className="rubric-link font-serif text-[0.9375rem]">
-              Back to map
+              {MAP_LINK}
             </a>
             <h1 className="mt-6 font-display text-[clamp(2rem,5vw,3rem)] leading-[1.05] font-normal tracking-tight text-ink">
-              All churches
+              {ALL_CHURCHES}
             </h1>
             <p className="mt-4 font-serif text-[0.95rem] text-ink-soft">
-              Mass, Confession &amp; Adoration times at {churches.length} Catholic
-              churches, parsed from each parish&rsquo;s weekly bulletin.
+              Mass, Confession, and Adoration times at {churches.length} Catholic
+              churches, {SOURCE_PHRASE}.
             </p>
           </header>
 
@@ -153,7 +154,7 @@ export function StaticChurchIndexPage({
             hidden
             className="mt-10 text-center font-serif text-[0.95rem] text-ink-soft"
           >
-            No churches or cities match your search.
+            {/* The search script fills in the text, echoing the query. */}
           </p>
 
           <div className="mt-8 space-y-10">
@@ -175,7 +176,7 @@ export function StaticChurchIndexPage({
                         href={churchPath(church.slug)}
                         className="rubric-link font-serif text-[1.05rem] text-ink"
                       >
-                        {church.name ?? "Unnamed church"}
+                        {church.name ?? UNNAMED_CHURCH}
                       </a>
                     </li>
                   ))}

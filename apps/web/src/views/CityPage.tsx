@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { CityNotFoundError, fetchCityPage } from "../api";
@@ -6,12 +7,23 @@ import { InlineQueryError } from "@/components/InlineQueryError";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 import { cityPath } from "@/lib/cities";
+import type { CityMapConfig } from "@/lib/cityMap";
 import {
   buildCityDescription,
   buildCityTitle,
   canonicalForPath,
 } from "@/lib/seo";
 import { NotFoundPage } from "./NotFoundPage";
+
+const CityMapLive = lazy(() => import("@/components/CityMapLive"));
+
+function liveMap(config: CityMapConfig) {
+  return (
+    <Suspense fallback={null}>
+      <CityMapLive config={config} />
+    </Suspense>
+  );
+}
 
 /** React Query's default; a failure that outlasts it shows the error and Retry. */
 const MAX_RETRIES = 3;
@@ -47,12 +59,12 @@ export function CityPage() {
     return (
       <NotFoundPage
         title="City not found"
-        message="We don't list any churches in that city yet."
+        message="We don’t list any churches in that city yet."
       />
     );
   }
 
-  if (data) return <CityPageContent data={data} />;
+  if (data) return <CityPageContent data={data} liveMap={liveMap} />;
 
   return (
     <main className="min-h-svh bg-paper">
@@ -63,7 +75,7 @@ export function CityPage() {
         ) : null}
         {cityQuery.error ? (
           <InlineQueryError
-            message={"We couldn't load the churches in this city."}
+            message="We couldn’t load the churches in this city."
             onRetry={() => cityQuery.refetch()}
           />
         ) : null}

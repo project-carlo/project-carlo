@@ -10,7 +10,23 @@ import {
   type CityLink,
 } from "./lib/cities";
 import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
-import { parseSnapshot, SNAPSHOT_FILE, type Snapshot } from "./lib/snapshot";
+import {
+  cityMapMarkers,
+  cityMapView,
+  type CityMapData,
+} from "./lib/cityMapLayout";
+import { buildClusterIndex, type ClusterIndex } from "./lib/mapClusters";
+import {
+  churchFiltersFor,
+  DEFAULT_FILTER_STATE,
+} from "./components/filterState";
+import {
+  parseSnapshot,
+  SNAPSHOT_FILE,
+  SnapshotVersionError,
+  type Snapshot,
+} from "./lib/snapshot";
+import { reloadForNewVersion } from "./lib/staleDeploy";
 import type {
   ChurchBase,
   ChurchDetail,
@@ -58,7 +74,16 @@ async function loadSnapshot(): Promise<Snapshot> {
   // Served as an opaque pre-gzipped file (see public/_headers): unzip it here.
   const compressed = response.body ?? new Blob([await response.arrayBuffer()]).stream();
   const decompressed = compressed.pipeThrough(new DecompressionStream("gzip"));
-  return parseSnapshot(await new Response(decompressed).text());
+  const json = await new Response(decompressed).text();
+  try {
+    return parseSnapshot(json);
+  } catch (error) {
+    // The snapshot is always built with the code deployed beside it, so a
+    // format this code can't read means a deploy replaced the code since
+    // this page loaded.
+    if (error instanceof SnapshotVersionError) reloadForNewVersion();
+    throw error;
+  }
 }
 
 function getSnapshot(): Promise<Snapshot> {
@@ -322,6 +347,8 @@ export interface CityChurchEntry {
 
 export interface CityPageData {
   city: City;
+  /** The city's map as it opens; null for a city with no known position. */
+  map: CityMapData | null;
   /** The city's own churches, by name. */
   churches: CityChurchEntry[];
   /** The closest churches outside the city, nearest first. */
@@ -345,13 +372,43 @@ export function cityPageData(
     distanceMiles,
     schedule: upcomingSchedule(snapshot, church.id, EVENT_TYPE_ORDER),
   });
+  const view = cityMapView(city);
   return {
     city,
+    map: view
+      ? { view, markers: cityMapMarkers(defaultMapIndex(snapshot), view) }
+      : null,
     churches: city.churches.map((church) => entry(church, null)),
     nearby: nearbyChurches(city, snapshot.churches).map((n) =>
       entry(n.church, n.distanceMiles),
     ),
   };
+}
+
+type MappedItem = ChurchMapItem & { latitude: number; longitude: number };
+
+const defaultMapIndexes = new WeakMap<Snapshot, ClusterIndex<MappedItem>>();
+
+/**
+ * The cluster index the live map builds when it opens with the default
+ * filters (ChurchMap, from fetchChurches): the same churches, in the same
+ * order, so it groups them into the same roundels. Built once per snapshot.
+ */
+function defaultMapIndex(snapshot: Snapshot): ClusterIndex<MappedItem> {
+  let index = defaultMapIndexes.get(snapshot);
+  if (!index) {
+    const items = collectMapItems(
+      snapshot.churches,
+      snapshot.events,
+      churchFiltersFor(DEFAULT_FILTER_STATE),
+    ).filter(
+      (item): item is MappedItem =>
+        item.latitude !== null && item.longitude !== null,
+    );
+    index = buildClusterIndex(items);
+    defaultMapIndexes.set(snapshot, index);
+  }
+  return index;
 }
 
 export async function fetchCityPage(slug: string): Promise<CityPageData> {

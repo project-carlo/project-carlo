@@ -15,6 +15,18 @@ export const LASTMOD_FILE = "lastmod.json";
  *  it is derived from. */
 export const LASTMOD_PLACEHOLDER = "__LASTMOD__";
 
+/**
+ * Marks an element whose text changes without the page's content changing,
+ * such as the week of the bulletin a church's times come from: it moves on
+ * with every new bulletin, even when every time stays the same. The element
+ * must hold text only. Its text is left out of the hash.
+ */
+export const LASTMOD_EXEMPT_ATTRIBUTE = "data-lastmod-exempt";
+const LASTMOD_EXEMPT_TEXT = new RegExp(
+  `(<[a-z]+ [^>]*${LASTMOD_EXEMPT_ATTRIBUTE}[^>]*>)[^<]*`,
+  "g",
+);
+
 export interface LastmodEntry {
   hash: string;
   /** YYYY-MM-DD */
@@ -55,9 +67,13 @@ export function parseLastmodManifest(text: string): LastmodManifest | null {
 }
 
 /** A page's HTML with what changes on every build removed: the hashed asset
- *  filenames (a style change isn't a content change) and the date placeholder. */
+ *  filenames (a style change isn't a content change), the date placeholder,
+ *  and the text of elements marked with LASTMOD_EXEMPT_ATTRIBUTE. */
 export function contentForHash(html: string, assetPaths: readonly string[]): string {
-  let content = html.split(LASTMOD_PLACEHOLDER).join("");
+  let content = html
+    .split(LASTMOD_PLACEHOLDER)
+    .join("")
+    .replace(LASTMOD_EXEMPT_TEXT, "$1");
   for (const path of assetPaths) content = content.split(path).join("");
   return content;
 }

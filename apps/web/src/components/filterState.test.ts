@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  churchFiltersFor,
   DEFAULT_FILTER_STATE,
   MINUTES_PER_DAY,
   decodeFiltersFromParams,
@@ -183,5 +184,32 @@ describe("filtersEqual", () => {
     expect(
       filtersEqual(state({ daysOfWeek: [0, 1] }), state({ daysOfWeek: [0, 1] })),
     ).toBe(true);
+  });
+});
+
+describe("churchFiltersFor", () => {
+  it("asks for the service type alone when nothing else is chosen", () => {
+    const query = churchFiltersFor(DEFAULT_FILTER_STATE);
+    expect(query).toEqual({
+      types: ["mass"],
+      daysOfWeek: undefined,
+      timeFrom: undefined,
+      timeTo: undefined,
+    });
+  });
+
+  it("carries chosen days and a narrowed time range", () => {
+    const query = churchFiltersFor({
+      eventType: "confession",
+      daysOfWeek: [5, 6],
+      timeFrom: 9 * 60,
+      timeTo: 17 * 60,
+    });
+    expect(query).toEqual({
+      types: ["confession"],
+      daysOfWeek: [5, 6],
+      timeFrom: 540,
+      timeTo: 1020,
+    });
   });
 });
