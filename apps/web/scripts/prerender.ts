@@ -47,29 +47,23 @@ const PRELOAD_FONTS = [
 interface ManifestChunk {
   file: string;
   isEntry?: boolean;
-  imports?: string[];
   css?: string[];
   assets?: string[];
 }
 
-/** The home map's chunk, which the app's entry loads for "/". */
-const HOME_PAGE_CHUNK = "src/views/HomePage.tsx";
-
 /**
  * The app's stylesheet and the fonts to preload, as Vite's build manifest
- * lists them for the index.html entry, the city pages' map script, the
- * church index's search script, and what the home map loads first (see
- * withMapLinkHelp). The
- * static pages link only that one stylesheet, so the build fails if any CSS
- * lands elsewhere (say, a lazy-loaded route importing its own), or a font or
- * the script goes missing, rather than shipping pages without them.
+ * lists them for the index.html entry, the city pages' map script, and the
+ * church index's search script. The static pages link only that one
+ * stylesheet, so the build fails if any CSS lands elsewhere (say, a
+ * lazy-loaded route importing its own), or a font or a script goes missing,
+ * rather than shipping pages without them.
  */
 function discoverAssets(): {
   cssPath: string;
   fontPaths: string[];
   cityMapScript: string;
   churchIndexScript: string;
-  mapPrefetchPaths: string[];
 } {
   if (!existsSync(MANIFEST_PATH)) {
     throw new Error(`${MANIFEST_PATH} is missing. Run \`vite build\` first.`);
@@ -109,26 +103,11 @@ function discoverAssets(): {
   const churchIndex = manifest[CHURCH_INDEX_ENTRY];
   if (!churchIndex?.isEntry) throw new Error(`Vite's manifest has no ${CHURCH_INDEX_ENTRY} entry.`);
 
-  if (!manifest[HOME_PAGE_CHUNK]) throw new Error(`Vite's manifest has no ${HOME_PAGE_CHUNK} chunk.`);
-  // The script the home map runs first: the app's entry and the home page's
-  // chunk, with everything they import.
-  const scripts = new Set<string>();
-  const visit = (key: string) => {
-    const chunk = manifest[key];
-    if (!chunk) throw new Error(`Vite's manifest has no ${key} chunk.`);
-    if (scripts.has(chunk.file)) return;
-    scripts.add(chunk.file);
-    for (const imported of chunk.imports ?? []) visit(imported);
-  };
-  visit("index.html");
-  visit(HOME_PAGE_CHUNK);
-
   return {
     cssPath: `/${css[0]}`,
     fontPaths,
     cityMapScript: `/${cityMap.file}`,
     churchIndexScript: `/${churchIndex.file}`,
-    mapPrefetchPaths: [...[...scripts].map((file) => `/${file}`), `/${SNAPSHOT_FILE}`],
   };
 }
 
@@ -145,17 +124,13 @@ const HOME_LINK_SCRIPT =
   "})}catch(e){}";
 
 /**
- * Helps the page's Map link along. It opens the map where the visitor left it
- * (HOME_LINK_SCRIPT), and about as quickly as from a city page, whose live
- * map has already fetched most of what the map needs: the browser is asked
- * to fetch, once the page is idle, the home map's script and the church data.
- * Added after a page is dated (see datePage): none of it is what the page
- * says, and the hints change with every build's chunks.
+ * Adds HOME_LINK_SCRIPT to the page's head, so its Map links open the map
+ * where the visitor left it. Added after a page is dated (see datePage): the
+ * script is not what the page says, so it stays out of the lastmod hash.
  */
-function withMapLinkHelp(html: string, prefetchPaths: readonly string[]): string {
-  const links = prefetchPaths.map((path) => `<link rel="prefetch" href="${path}"/>`).join("");
+function withHomeLinkScript(html: string): string {
   if (!html.includes("</head>")) throw new Error("A prerendered page has no </head>.");
-  return html.replace("</head>", `<script>${HOME_LINK_SCRIPT}</script>${links}</head>`);
+  return html.replace("</head>", `<script>${HOME_LINK_SCRIPT}</script></head>`);
 }
 
 function escapeXml(text: string): string {
@@ -306,8 +281,7 @@ async function main() {
   }
   const snapshot = parseSnapshot(gunzipSync(readFileSync(SNAPSHOT_PATH)).toString("utf-8"));
 
-  const { cssPath, fontPaths, cityMapScript, churchIndexScript, mapPrefetchPaths } =
-    discoverAssets();
+  const { cssPath, fontPaths, cityMapScript, churchIndexScript } = discoverAssets();
   const slugs = snapshot.churches.map((church) => church.slug);
   const origin = SITE_ORIGIN;
 
@@ -329,7 +303,7 @@ async function main() {
       .slice(0, 16);
     const lastmod = resolveLastmod(previousDates?.pages[path], hash, buildDate);
     pageDates[path] = { hash, lastmod };
-    return withMapLinkHelp(html.split(LASTMOD_PLACEHOLDER).join(lastmod), mapPrefetchPaths);
+    return withHomeLinkScript(html.split(LASTMOD_PLACEHOLDER).join(lastmod));
   };
 
   let count = 0;
