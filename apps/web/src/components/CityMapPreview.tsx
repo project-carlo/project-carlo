@@ -1,8 +1,15 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import type { CityPageData } from "../api";
 import { ExpandIcon } from "@/components/icons";
 import { CHURCH_PIN_OUTLINE } from "@/lib/churchPin";
 import type { LatLng } from "@/lib/cities";
+import {
+  CITY_MAP_ATTRIBUTE,
+  CITY_MAP_OPEN_ATTRIBUTE,
+  CITY_MAP_SLOT_ATTRIBUTE,
+  type CityMapConfig,
+} from "@/lib/cityMap";
 import { encodeMapViewToParams } from "@/lib/mapView";
 import {
   fitZoom,
@@ -14,11 +21,12 @@ import {
 
 /**
  * The tiles' canvas, centered in the preview and cropped by it: wider than
- * the page column ever gets and taller than the preview, so the city stays in
+ * the page column ever gets and taller than the preview (whose desktop height
+ * fits the live map's pin popups), so the city stays in
  * the middle at any width without measuring anything, and the prerendered
  * page needs no JavaScript to draw it.
  */
-const CANVAS: StaticMapSize = { width: 800, height: 320 };
+const CANVAS: StaticMapSize = { width: 800, height: 448 };
 
 /**
  * How far from the center the city's churches may sit: inside a phone-width
@@ -85,14 +93,22 @@ function PreviewPin({
 
 /**
  * A still map of the city with its churches pinned, and the nearby ones that
- * fit, which opens the full map there. Tiles and pins are plain HTML, laid out
- * here, so the prerendered page shows the same preview as the app.
+ * fit. Tiles and pins are plain HTML, laid out here, so the prerendered page
+ * shows the same preview as the app.
+ *
+ * It's the placeholder the live map (CityMapLive) is mounted over, by `live`
+ * in the app and by src/islands/cityMap.ts on a prerendered page, into the
+ * slot marked CITY_MAP_SLOT_ATTRIBUTE. Without JavaScript it stays a link to
+ * the home map at the same view. `.city-map` in app.css hides the still pins
+ * and controls once the live map's are up.
  */
 export function CityMapPreview({
   data,
+  live,
   className = "",
 }: {
   data: CityPageData;
+  live?: (config: CityMapConfig) => ReactNode;
   className?: string;
 }) {
   const { city, churches, nearby } = data;
@@ -134,14 +150,16 @@ export function CityMapPreview({
         a.position.top - b.position.top,
     );
 
-  const mapHref = `/?${encodeMapViewToParams(
-    { lat: center.lat, lng: center.lng, zoom },
-    new URLSearchParams(),
-  )}`;
+  const config: CityMapConfig = {
+    label: city.label,
+    view: { lat: center.lat, lng: center.lng, zoom },
+  };
+  const mapHref = `/?${encodeMapViewToParams(config.view, new URLSearchParams())}`;
 
   return (
     <div
-      className={`group relative h-56 overflow-hidden border border-rule-strong bg-paper-deep shadow-missal-floating md:h-72 ${className}`}
+      {...{ [CITY_MAP_ATTRIBUTE]: JSON.stringify(config) }}
+      className={`city-map group relative h-56 overflow-hidden border border-rule-strong bg-paper-deep shadow-missal-floating md:h-96 ${className}`}
     >
       <div
         aria-hidden="true"
@@ -168,25 +186,28 @@ export function CityMapPreview({
             />
           ))}
         </div>
-        {pins.map((pin) => (
-          <PreviewPin
-            key={pin.id}
-            position={pin.position}
-            width={pin.nearby ? NEARBY_PIN_WIDTH : CITY_PIN_WIDTH}
-            nearby={pin.nearby}
-          />
-        ))}
+        <div className="city-map-static-pins">
+          {pins.map((pin) => (
+            <PreviewPin
+              key={pin.id}
+              position={pin.position}
+              width={pin.nearby ? NEARBY_PIN_WIDTH : CITY_PIN_WIDTH}
+              nearby={pin.nearby}
+            />
+          ))}
+        </div>
       </div>
 
       {/* The whole preview opens the map; the attribution link sits above it. */}
       <Link
         to={mapHref}
+        {...{ [CITY_MAP_OPEN_ATTRIBUTE]: "" }}
         aria-label={`Open the map of churches around ${city.label}`}
         className="missal-focus absolute inset-0"
       />
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute top-3 right-3 inline-flex items-center gap-2 border border-rule-strong bg-paper/95 px-3 py-1.5 font-serif text-[0.9375rem] text-rubric shadow-missal-floating transition-colors group-hover:text-rubric-deep"
+        className="city-map-static-chip pointer-events-none absolute top-3 right-3 inline-flex items-center gap-2 border border-rule-strong bg-paper/95 px-3 py-1.5 font-serif text-[0.9375rem] text-rubric shadow-missal-floating transition-colors group-hover:text-rubric-deep"
       >
         <ExpandIcon className="size-3.5" />
         Open full map
@@ -197,6 +218,10 @@ export function CityMapPreview({
       >
         &copy; OpenStreetMap contributors
       </a>
+      {/* `contents`, so it covers nothing until the live map fills it. */}
+      <div {...{ [CITY_MAP_SLOT_ATTRIBUTE]: "" }} className="contents">
+        {live?.(config)}
+      </div>
     </div>
   );
 }

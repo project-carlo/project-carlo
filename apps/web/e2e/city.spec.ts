@@ -41,18 +41,72 @@ test("a city with no churches renders the not-found page", async ({ page }) => {
   ).toBeVisible({ timeout: 15_000 });
 });
 
-test("a city page's map preview opens the full map on the city", async ({
+const EAST_AURORA = "/mass-times/east-aurora-ny/";
+
+test("a city page's map is live in the page on a desktop, and opens over it", async ({
   page,
 }) => {
-  await page.goto("/churches/");
-  await page.locator('h2 a[href^="/mass-times/"]').first().click();
+  await page.goto(EAST_AURORA);
+  const map = page.locator(".city-map");
+  await expect(map.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
+  await expect(map.locator(".church-map-marker").first()).toBeVisible();
 
-  const preview = page.getByRole("link", {
-    name: /^Open the map of churches around /,
-  });
-  await expect(preview).toBeVisible();
-  await preview.click();
+  await page.getByRole("button", { name: "Expand map" }).click();
+  await expect(page).toHaveURL(/#map$/);
+  const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
+  await expect(dialog).toBeVisible();
+  await expect(page.getByRole("button", { name: "Close" })).toBeFocused();
 
+  // Back closes it, leaving the city page as it was.
+  await page.goBack();
+  await expect(page).toHaveURL(new RegExp(`${EAST_AURORA}$`));
+  await expect(dialog).toHaveCount(0);
+  await expect(map.locator(".leaflet-container")).toBeVisible();
+
+  await page.getByRole("button", { name: "Expand map" }).click();
+  await page.keyboard.press("Escape");
+  await expect(dialog).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Expand map" })).toBeFocused();
+});
+
+test("the open map links to the home map at its view", async ({ page }) => {
+  await page.goto(`${EAST_AURORA}#map`);
+  await page.getByRole("link", { name: /Search & filters/ }).click();
   await expect(page).toHaveURL(/\/\?lat=-?[\d.]+&lng=-?[\d.]+&z=\d+$/);
   await expect(page.locator(".church-map")).toBeVisible({ timeout: 15_000 });
+});
+
+test.describe("on a phone", () => {
+  test.use({ viewport: { width: 390, height: 844 }, hasTouch: true });
+
+  test("the map preview stays still until a tap opens the live map", async ({
+    page,
+  }) => {
+    await page.goto(EAST_AURORA);
+    await expect(page.locator(".city-map .leaflet-container")).toHaveCount(0);
+
+    await page.locator("[data-city-map-open]").tap();
+    await expect(page).toHaveURL(/#map$/);
+    const dialog = page.getByRole("dialog");
+    await expect(dialog.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
+
+    await page.getByRole("button", { name: "Close" }).tap();
+    await expect(dialog).toHaveCount(0);
+    await expect(page).toHaveURL(new RegExp(`${EAST_AURORA}$`));
+  });
+});
+
+test.describe("without JavaScript", () => {
+  test.use({ javaScriptEnabled: false });
+
+  test("the map preview links to the home map on the city", async ({ page }) => {
+    await page.goto(EAST_AURORA);
+    const preview = page.getByRole("link", {
+      name: /^Open the map of churches around /,
+    });
+    await expect(preview).toHaveAttribute(
+      "href",
+      /^\/\?lat=-?[\d.]+&lng=-?[\d.]+&z=\d+$/,
+    );
+  });
 });

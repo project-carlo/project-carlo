@@ -9,6 +9,7 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 
 import { SITE_ORIGIN, serializeJsonLd, websiteJsonLd } from "./src/lib/seo";
 import { SNAPSHOT_FILE } from "./src/lib/snapshot";
+import { CITY_MAP_ENTRY } from "./src/lib/cityMapEntry";
 
 /** Injects the site-level WebSite/Organization JSON-LD into index.html so the
  *  markup has a single source of truth in src/lib/seo.ts. */
@@ -99,8 +100,18 @@ export default defineConfig({
   },
   environments: {
     client: {
-      // scripts/prerender.ts reads it to link the built stylesheet and fonts.
-      build: { manifest: true },
+      build: {
+        // scripts/prerender.ts reads it to link the built stylesheet, fonts
+        // and the city map's script.
+        manifest: true,
+        rollupOptions: {
+          input: {
+            index: resolve(__dirname, "index.html"),
+            // Loaded by the prerendered city pages (see StaticCityPage).
+            cityMap: resolve(__dirname, CITY_MAP_ENTRY),
+          },
+        },
+      },
     },
   },
   build: {
@@ -108,7 +119,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           map: ["leaflet", "react-leaflet"],
-          vendor: ["react", "react-dom", "react-router-dom"],
+          vendor: ["react", "react-dom", "react-dom/client", "react-router-dom"],
         },
       },
     },

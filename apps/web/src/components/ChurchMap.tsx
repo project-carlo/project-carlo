@@ -7,7 +7,7 @@ import {
   useRef,
   useState,
 } from "react";
-import type { RefObject } from "react";
+import type { ReactNode, RefObject } from "react";
 import { Link } from "react-router-dom";
 import {
   MapContainer,
@@ -36,6 +36,7 @@ import {
   type MapCluster,
 } from "../lib/mapClusters";
 import { CHURCH_PIN_OUTLINE } from "../lib/churchPin";
+import { useDocumentLinks } from "../lib/documentLinks";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
 import { Fleuron } from "@/components/Fleuron";
@@ -146,6 +147,8 @@ interface ChurchMapProps {
   onViewChange?: (view: MapView) => void;
   /** Removes the searched-place pin; the popup offers it as a button. */
   onClearPlace?: () => void;
+  /** Extra layers and behaviors, rendered inside the map so they can `useMap`. */
+  children?: ReactNode;
 }
 
 /**
@@ -364,6 +367,7 @@ function ViewReporter({ onViewChange }: { onViewChange: (view: MapView) => void 
  * filter change.
  */
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
+  const documentLinks = useDocumentLinks();
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
   // that order while collapsing each day's several times onto one row.
   const dayRows = useMemo(
@@ -436,6 +440,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
       <div className="map-popup-foot">
         <Link
           to={`/churches/${church.slug}/`}
+          reloadDocument={documentLinks}
           className="map-popup-foot-link font-serif text-[0.9375rem]"
         >
           <span>Full schedule</span>
@@ -806,6 +811,7 @@ export const ChurchMap = memo(function ChurchMap({
   start,
   onViewChange,
   onClearPlace,
+  children,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -878,6 +884,7 @@ export const ChurchMap = memo(function ChurchMap({
           onClear={onClearPlace}
         />
       ) : null}
+      {children}
     </MapContainer>
   );
 });

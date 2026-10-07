@@ -10,6 +10,7 @@ import { Fleuron } from "@/components/Fleuron";
 import { MapPinIcon } from "@/components/icons";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, formatMiles } from "@/lib/cities";
+import type { CityMapConfig } from "@/lib/cityMap";
 import type { ScheduleRollupRow } from "@/lib/eventRollup";
 import { weeklyScheduleRows } from "@/lib/scheduleSummary";
 import { CHURCH_INDEX_PATH, churchPath } from "@/lib/seo";
@@ -186,7 +187,17 @@ function NearbyChurch({ entry }: { entry: CityChurchEntry }) {
   );
 }
 
-export function CityPageContent({ data }: { data: CityPageData }) {
+/**
+ * A city page. `liveMap` makes its map preview live (see CityMapPreview); the
+ * prerendered page leaves it out and src/islands/cityMap.ts does the same.
+ */
+export function CityPageContent({
+  data,
+  liveMap,
+}: {
+  data: CityPageData;
+  liveMap?: (config: CityMapConfig) => ReactNode;
+}) {
   const { city, churches, nearby } = data;
 
   return (
@@ -216,7 +227,7 @@ export function CityPageContent({ data }: { data: CityPageData }) {
             className="rise-in mx-auto max-w-3xl"
             style={{ animationDelay: "80ms" }}
           >
-            <CityMapPreview data={data} className="mt-1 mb-3" />
+            <CityMapPreview data={data} live={liveMap} className="mt-1 mb-3" />
 
             <section aria-label={`Churches in ${city.name}`} className="mt-2">
               <ul className="divide-y divide-rule">

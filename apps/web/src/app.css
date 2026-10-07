@@ -291,6 +291,19 @@
   font-family: var(--font-sans);
 }
 
+/* The live map (CityMapLive) over the still preview: its chip replaces the
+ * still one at once, its pins the still ones once the churches are loaded,
+ * and Leaflet's attribution the still one. Until its own tiles paint, the
+ * still tiles show through it, so it opens without a blank flash. */
+.city-map:has(.city-map-live) .city-map-static-chip,
+.city-map:has(.city-map-live[data-ready]) .city-map-static-pins,
+.city-map:has(.city-map-live .leaflet-container) .city-map-attribution {
+  display: none;
+}
+.city-map-live .leaflet-container {
+  background: transparent;
+}
+
 /* Links inside the map (popup body, attribution) are rubric, not Leaflet's
  * default blue. `.leaflet-container a` is what `.rubric-link` was losing to. */
 .leaflet-container a {
