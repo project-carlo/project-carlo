@@ -96,6 +96,29 @@ def test_snapshot_has_the_latest_bulletins_churches_and_events(db: Path, tmp_pat
     assert confession["note"] == "Christmas Eve"
 
 
+def test_a_parish_with_no_processed_bulletin_has_no_bulletin(
+    pipeline_dir: Path, tmp_path: Path,
+) -> None:
+    create_db()
+    dest = tmp_path / "frontend.json.gz"
+
+    extract(DEFAULT_DB_PATH, dest)
+
+    [church] = read_snapshot(dest.read_bytes())["churches"]
+    assert (church["bulletin_url"], church["bulletin_week"]) == (None, None)
+
+
+def test_a_snapshot_written_before_an_added_column_reads_it_as_null() -> None:
+    document = json.loads(gzip.decompress(encode_snapshot(CHURCH_ROWS, EVENT_ROWS)))
+    del document["churches"]["bulletin_week"]
+    data = gzip.compress(json.dumps(document).encode())
+
+    churches = read_snapshot(data)["churches"]
+
+    assert [church["bulletin_week"] for church in churches] == [None, None]
+    assert [church["slug"] for church in churches] == ["b", "a"]
+
+
 def test_snapshot_bytes_are_deterministic(db: Path, tmp_path: Path) -> None:
     first = tmp_path / "a.json.gz"
     second = tmp_path / "b.json.gz"

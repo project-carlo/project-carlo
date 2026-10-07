@@ -356,15 +356,6 @@ function ViewReporter({ onViewChange }: { onViewChange: (view: MapView) => void 
 }
 
 /**
- * Popup body for one church.
- *
- * Split out of `ChurchMarker` on purpose: react-leaflet renders a popup's
- * children only once Leaflet has opened it, so keeping this in its own
- * component means the rollup, the date formatting and ~20 elements per church
- * are built for the one open popup rather than for all ~130 pins on every
- * filter change.
- */
-/**
  * The popup schedule's caption: the service its times are for. The map shows
  * one service at a time, so every time in a popup is the same service; the
  * caption says which, since the rows themselves are only days and times.
@@ -378,6 +369,15 @@ function scheduleCaption(events: EventSummary[]): string {
   return "Times";
 }
 
+/**
+ * Popup body for one church.
+ *
+ * Split out of `ChurchMarker` on purpose: react-leaflet renders a popup's
+ * children only once Leaflet has opened it, so keeping this in its own
+ * component means the rollup, the date formatting and ~20 elements per church
+ * are built for the one open popup rather than for all ~130 pins on every
+ * filter change.
+ */
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
   // that order while collapsing each day's several times onto one row.

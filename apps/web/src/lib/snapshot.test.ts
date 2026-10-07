@@ -88,6 +88,13 @@ describe("parseSnapshot", () => {
     expect(s.churchDetail("missing")).toBeNull();
   });
 
+  it("reads a column added since version 1 as null when a snapshot lacks it", () => {
+    const churches: Partial<typeof fixture.churches> = { ...fixture.churches };
+    delete churches.bulletin_week;
+    const older = parseSnapshot(JSON.stringify({ ...fixture, churches }));
+    expect(older.churchDetail("b")?.bulletin_week).toBeNull();
+  });
+
   it("groups events by church, in id order", () => {
     const s = snapshot();
     expect(s.eventsOf(7).map((ev) => ev.id)).toEqual([10, 15]);

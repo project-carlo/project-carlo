@@ -62,7 +62,7 @@ export function ChurchPage() {
     return (
       <NotFoundPage
         title="Church not found"
-        message="It may have closed, merged with another parish, or moved."
+        message="That link may be out of date, or the church may have closed or merged with another."
       />
     );
   }
@@ -74,7 +74,7 @@ export function ChurchPage() {
     return (
       <NotFoundPage
         title="Church not found"
-        message="It may have closed, merged with another parish, or moved."
+        message="That link may be out of date, or the church may have closed or merged with another."
       />
     );
   }

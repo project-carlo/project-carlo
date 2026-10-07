@@ -22,6 +22,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, type CityLink } from "@/lib/cities";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
+import { LASTMOD_EXEMPT_ATTRIBUTE } from "@/lib/lastmod";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
  *  from, and any qualifier on the slot. One size and one voice for all of
@@ -219,11 +220,15 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
           ) : null}
 
           {/* How fresh the times are: the first thing to weigh before
-              trusting one. */}
+              trusting one. Exempt from the sitemap's change dates, which
+              would otherwise move every week with the bulletin. One string,
+              so the element holds text only. */}
           {church.bulletin_week && events.length > 0 ? (
-            <p className="mt-2 font-serif text-[0.9rem] italic text-ink-faint">
-              Times from the bulletin for the week of{" "}
-              {formatLongDate(church.bulletin_week)}
+            <p
+              {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}
+              className="mt-2 font-serif text-[0.9rem] italic text-ink-faint"
+            >
+              {`Times from the bulletin for the week of ${formatLongDate(church.bulletin_week)}`}
             </p>
           ) : null}
 
@@ -264,7 +269,10 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
         {events.length === 0 ? (
           <p className="mx-auto mt-6 max-w-2xl text-center font-serif text-sm text-ink-soft md:mt-8">
             No times listed yet. The parish bulletin may not include them, or
-            we couldn’t read it. Check the parish website, or suggest an edit.
+            we couldn’t read it.
+            {church.homepage_url
+              ? " Check the parish website, or suggest an edit."
+              : " Check with the parish, or suggest an edit."}
           </p>
         ) : null}
 

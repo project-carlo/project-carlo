@@ -149,10 +149,23 @@ export function SearchTypeahead({
   const placeholder = isPlaceMode
     ? "Search for a city, ZIP, or address…"
     : "Search for a church…";
+  // "No results" only once a search has run on what's in the box: not while
+  // the debounce lags the typing, and not for a query too short to search,
+  // which would otherwise read as a search that found nothing.
+  const searchSettled = debouncedQuery === query;
+  const searchRan = isPlaceMode
+    ? shouldSearchPlaces
+    : trimmedDebouncedQuery.length >= 2 && fuse != null;
   // Echo what was searched, so a typo is easy to spot, and say what to try.
-  const emptyMessage = isPlaceMode
-    ? `No places match “${trimmedDebouncedQuery}”. Try a town name or ZIP code.`
-    : `No churches match “${trimmedDebouncedQuery}”. Try fewer words, or part of the name.`;
+  const emptyMessage = !searchSettled
+    ? null
+    : !searchRan
+      ? isPlaceMode
+        ? "Keep typing a town, ZIP code, or address."
+        : "Keep typing a church name."
+      : isPlaceMode
+        ? `No places match “${trimmedDebouncedQuery}”. Try a town name or ZIP code.`
+        : `No churches match “${trimmedDebouncedQuery}”. Try fewer words, or part of the name.`;
   const modeButtonLabel = isPlaceMode ? "Search churches" : "Search places";
   const placeSearchNotConfigured =
     isPlaceMode && placeError instanceof PlaceSearchConfigurationError;
@@ -347,11 +360,13 @@ export function SearchTypeahead({
                 <div className="px-3 py-4 font-serif text-sm text-ink-soft">
                   {isPlaceMode ? "Searching places…" : "Loading churches…"}
                 </div>
-              ) : placeSearchNotConfigured && import.meta.env.DEV ? (
-                // A developer's setup problem; visitors get the generic
-                // message below.
+              ) : placeSearchNotConfigured ? (
+                // A setup problem: name it for a developer; a visitor can
+                // only be told it won't work, since trying again won't help.
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
-                  Place search needs a Geoapify API key.
+                  {import.meta.env.DEV
+                    ? "Place search needs a Geoapify API key."
+                    : "Place search isn’t available right now."}
                 </CommandEmpty>
               ) : isPlaceMode && placeError ? (
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
@@ -400,11 +415,11 @@ export function SearchTypeahead({
                         );
                       })}
                 </CommandGroup>
-              ) : (
+              ) : emptyMessage ? (
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
                   {emptyMessage}
                 </CommandEmpty>
-              )
+              ) : null
             ) : null}
           </CommandList>
           {isPlaceMode ? (

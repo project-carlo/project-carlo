@@ -20,7 +20,7 @@ export const OG_IMAGE_ALT =
 /** Default homepage title/description — keep keyword-forward, location-agnostic. */
 export const HOME_TITLE =
   "Mass, Confession & Adoration Times Near You · Project Carlo";
-export const HOME_DESCRIPTION = `Find Mass, Confession, and Adoration times at Catholic churches on an interactive map, ${SOURCE_PHRASE}.`;
+export const HOME_DESCRIPTION = `Find Mass, Confession, and Adoration times at Catholic churches on an interactive map. Times come ${SOURCE_PHRASE}.`;
 
 /** Resolve a site-relative path against an origin into an absolute URL. */
 export function absoluteUrl(origin: string, path: string): string {

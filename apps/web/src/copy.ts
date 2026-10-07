@@ -1,6 +1,7 @@
 /**
- * Visitor-facing strings that appear in more than one place, so a wording
- * change is a one-line edit. A string used once stays beside its markup.
+ * Visitor-facing strings that appear in more than one place, or that name one
+ * of the site's fixed terms (an action, a filter, a fallback), so a wording
+ * change is a one-line edit. Other one-off strings stay beside their markup.
  *
  * Apostrophes are typographic (’), as they are everywhere on the site.
  * docs/ui-copy-audit.md has the terminology these follow.
@@ -11,7 +12,7 @@ export const SOURCE_PHRASE = "from each parish’s weekly bulletin";
 
 /** The accuracy note at the foot of church and city pages. */
 export const DISCLAIMER =
-  "Times are read from the parish bulletin by AI and can contain mistakes. Please check with the parish before you go.";
+  "Times are read from each parish’s bulletin by AI and can contain mistakes. Please check with the parish before you go.";
 
 /** The name shown for a church the data has no name for. */
 export const UNNAMED_CHURCH = "Unnamed church";

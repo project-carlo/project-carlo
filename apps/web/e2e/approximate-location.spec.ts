@@ -49,7 +49,7 @@ test("a first visit starts near the IP estimate, zoomed out", async ({
   // Offered twice: as text beside the estimate, and as the map's corner
   // control (an icon, named by its label and tooltip).
   await expect(
-    page.getByRole("button", { name: "Use my location" }),
+    page.getByRole("button", { name: "Use my location", exact: true }),
   ).toHaveCount(2);
   await expect(
     page.getByRole("button").getByText("Use my location", { exact: true }),

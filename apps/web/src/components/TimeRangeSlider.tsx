@@ -160,7 +160,7 @@ export function TimeRangeSlider({
           max={max}
           step={step}
           value={start}
-          aria-label="Start time"
+          aria-label="Earliest start"
           className="time-range-slider missal-focus absolute inset-0 h-6 w-full"
           onChange={(event) => {
             const nextStart = Math.min(Number(event.target.value), end);
@@ -173,7 +173,7 @@ export function TimeRangeSlider({
           max={max}
           step={step}
           value={end}
-          aria-label="End time"
+          aria-label="Latest start"
           className="time-range-slider missal-focus absolute inset-0 h-6 w-full"
           onChange={(event) => {
             const nextEnd = Math.max(Number(event.target.value), start);

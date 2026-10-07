@@ -5,10 +5,10 @@ stripped down to what the web app reads. It is gzipped JSON, written to
 apps/web/public/frontend.json.gz for Vite to serve as an opaque static asset;
 the app (apps/web/src/lib/snapshot.ts) decodes it into memory.
 
-Format (version 2). Each table is stored column by column, as parallel arrays:
+Format (version 1). Each table is stored column by column, as parallel arrays:
 
     {
-      "version": 2,
+      "version": 1,
       "churches": {"id": [...], "parish_id": [...], "slug": [...], ...},
       "events": {"id": {"deltas": [...]}, "church_id": [...], ...}
     }
@@ -30,6 +30,10 @@ the Sunday of the week that bulletin is for (`bulletin_week.bulletin_week`),
 or null when the bulletin has no date at all.
 
 Bump SNAPSHOT_VERSION (and the app's) on any change the app would misread.
+A new column needs no bump when its absence reads as null: list it in
+ADDED_COLUMNS, and the app and `read_snapshot` take a snapshot written before
+it (an older published run, or the live site's while a deploy is pending)
+as having nulls there, rather than refuse it.
 """
 
 from __future__ import annotations
@@ -56,7 +60,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE_DB = DEFAULT_DB_PATH
 SNAPSHOT_NAME = "frontend.json.gz"
 DEST_SNAPSHOT = ROOT / "apps" / "web" / "public" / SNAPSHOT_NAME
-SNAPSHOT_VERSION = 2
+SNAPSHOT_VERSION = 1
 
 # The columns the SELECTs below produce, in order.
 CHURCH_COLUMNS = (
@@ -67,6 +71,9 @@ EVENT_COLUMNS = (
     "id", "church_id", "event_type", "event_kind", "day_of_week", "date", "start_time",
     "end_time", "cancelled", "page_number", "note",
 )
+# Columns added since version 1 shipped. A snapshot written before one was
+# added lacks it; readers take it as all nulls.
+ADDED_COLUMNS = {"churches": {"bulletin_week"}, "events": set()}
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
@@ -151,7 +158,14 @@ def read_snapshot(data: bytes) -> dict[str, list[dict[str, Any]]]:
         )
     tables: dict[str, list[dict[str, Any]]] = {}
     for table, names in (("churches", CHURCH_COLUMNS), ("events", EVENT_COLUMNS)):
-        columns = [_decode_column(document[table][name]) for name in names]
+        stored = document[table]
+        rows = len(_decode_column(stored["id"]))
+        columns = [
+            [None] * rows
+            if name not in stored and name in ADDED_COLUMNS[table]
+            else _decode_column(stored[name])
+            for name in names
+        ]
         tables[table] = [dict(zip(names, row, strict=True)) for row in zip(*columns, strict=True)]
     return tables
 
