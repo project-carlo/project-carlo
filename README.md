@@ -308,6 +308,20 @@ CSV change that removes a parish or church: that deletes events, so deploys
 build the snapshot from the published database as it stands, without the CSV
 edits, until a reviewed weekly run publishes the removal.
 
+A deploy replaces the site's files, so a page opened before one would 404 on the
+hashed chunks (`/assets/*`) its scripts still load. The production deploy
+therefore runs `apps/web/scripts/carry-assets.ts` first: it downloads the files
+the live site's `asset-manifest.json` lists that the new build no longer has,
+for 14 days after they left it, into the build. Storage is free and wrangler
+uploads only files Cloudflare doesn't already have; if the deploy would pass
+15,000 files (the Free plan allows 20,000) the earliest retired go first. A
+failed download or an unreachable site only means fewer files are carried; it
+never fails the deploy.
+
+A page whose chunk is gone anyway (open longer than that, or a file that wasn't
+carried) reloads once into the new version (`apps/web/src/lib/staleDeploy.ts`),
+as does one that fetches a snapshot in a format its code can't read.
+
 The change report is always in the job summary, and kept as a workflow
 artifact for 90 days.
 

@@ -111,11 +111,19 @@ export interface Snapshot {
   eventsOf(churchId: number): RawEvent[];
 }
 
+/** The snapshot is in a format this code doesn't read. */
+export class SnapshotVersionError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "SnapshotVersionError";
+  }
+}
+
 /** Decode the (already gunzipped) snapshot JSON. */
 export function parseSnapshot(json: string): Snapshot {
   const document = JSON.parse(json) as SnapshotDocument;
   if (document?.version !== SNAPSHOT_VERSION) {
-    throw new Error(
+    throw new SnapshotVersionError(
       `${SNAPSHOT_FILE} is format version ${String(document?.version)}, but this ` +
         `code reads version ${SNAPSHOT_VERSION}. Rebuild it with the pipeline ` +
         "code from this checkout (`pnpm extract:web`, or `pnpm data:pull`).",
