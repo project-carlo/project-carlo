@@ -4,7 +4,7 @@ import type { ChurchDetail, EventSummary, EventType } from "../types";
 import {
   formatAddress,
   formatEventDate,
-  formatLongDate,
+  formatLongMonthDay,
   formatMonthDay,
   formatMinutesMissal,
   titleCase,
@@ -182,6 +182,28 @@ function PageRef({
   );
 }
 
+/**
+ * The current bulletin, dated by its week when it has a date: how fresh the
+ * times are, beside the bulletin they come from. Exempt from the sitemap's
+ * change dates, which would otherwise move every week with the bulletin. One
+ * string, so the element holds text only.
+ */
+function BulletinLabel({
+  week,
+  suffix = "",
+}: {
+  week: string | null;
+  suffix?: string;
+}) {
+  return (
+    <span {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}>
+      {week
+        ? `Bulletin for the week of ${formatLongMonthDay(week)}${suffix}`
+        : `Parish bulletin${suffix}`}
+    </span>
+  );
+}
+
 /** All churches › {City} › {Church}, without the city when the address has none. */
 function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
   const crumbs: Crumb[] = [{ label: ALL_CHURCHES, href: CHURCH_INDEX_PATH }];
@@ -241,8 +263,13 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <FileTextIcon className="size-3.5" />
-                Parish bulletin (PDF)
+                <BulletinLabel week={church.bulletin_week} suffix=" (PDF)" />
               </a>
+            ) : church.bulletin_week ? (
+              <span className="inline-flex items-center gap-2 font-serif text-[0.9375rem] text-ink-soft">
+                <FileTextIcon className="size-3.5" />
+                <BulletinLabel week={church.bulletin_week} />
+              </span>
             ) : null}
             <FeedbackTrigger
               church={church}
@@ -265,19 +292,6 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
 
         {events.length > 0 ? (
           <div className="mx-auto mt-6 max-w-4xl md:mt-8">
-            {/* How fresh the times are, heading the times it dates. Exempt
-                from the sitemap's change dates, which would otherwise move
-                every week with the bulletin. One string, so the element
-                holds text only. */}
-            {church.bulletin_week ? (
-              <p
-                {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}
-                className="rise-in mb-8 font-serif text-[0.9rem] italic text-ink-faint"
-                style={{ animationDelay: "80ms" }}
-              >
-                {`From the bulletin for the week of ${formatLongDate(church.bulletin_week)}`}
-              </p>
-            ) : null}
             <div className="rise-in space-y-12" style={{ animationDelay: "80ms" }}>
               {EVENT_TYPE_ORDER.map((eventType) => {
                 const section = byType[eventType];
