@@ -32,6 +32,18 @@ function routes(queryClient: QueryClient): RouteObject[] {
       element: <Navigate to="/" replace />,
     },
     {
+      path: "/churches",
+      lazy: () =>
+        import("./views/ChurchIndexPage").then((m) => ({
+          Component: m.ChurchIndexPage,
+        })),
+      loader: async () => {
+        const { prefetchChurchIndex } = await import("./lib/pageQueries");
+        await prefetchChurchIndex(queryClient);
+        return null;
+      },
+    },
+    {
       path: "/churches/:churchSlug",
       lazy: () =>
         import("./views/ChurchPage").then((m) => ({ Component: m.ChurchPage })),
@@ -77,8 +89,10 @@ export function createAppRouter(queryClient: QueryClient) {
     {
       element: <AppLayout />,
       errorElement: <RouteError fallback={lazyPageFallback} />,
-      // Shown on the first load, while the first page's code arrives.
-      hydrateFallbackElement: lazyPageFallback,
+      // Shown on the first load, while the first page's code arrives: just
+      // the paper, as each page has a loading state of its own (the map's
+      // "Loading map…") and this one would only flash before it.
+      hydrateFallbackElement: <main className="min-h-svh bg-paper" />,
       children: routes(queryClient),
     },
   ]);

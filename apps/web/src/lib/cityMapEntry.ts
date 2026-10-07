@@ -6,3 +6,7 @@
  * import it.
  */
 export const CITY_MAP_ENTRY = "src/islands/cityMap.ts";
+
+/** The all-churches index's search script (src/islands/churchIndex.ts), the
+ *  same way. */
+export const CHURCH_INDEX_ENTRY = "src/islands/churchIndex.ts";

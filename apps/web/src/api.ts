@@ -420,6 +420,20 @@ export async function fetchCityPage(slug: string): Promise<CityPageData> {
   return cityPageData(snapshot, slug, centers);
 }
 
+/** What the all-churches index lists: every church, and the city pages. */
+export interface ChurchIndexData {
+  churches: ChurchBase[];
+  cities: City[];
+}
+
+export async function fetchChurchIndex(): Promise<ChurchIndexData> {
+  const [snapshot, centers] = await Promise.all([
+    getSnapshot(),
+    import("./data/cityCenters.json").then((m) => m.default as CityCenters),
+  ]);
+  return { churches: snapshot.churches, cities: cityIndex(snapshot, centers).cities };
+}
+
 /** A church page's church, and the city page its breadcrumbs link to. */
 export interface ChurchWithCity {
   church: ChurchDetail;

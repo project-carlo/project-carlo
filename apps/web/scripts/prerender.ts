@@ -7,7 +7,8 @@ import { loadEnv } from "vite";
 import { createElement } from "react";
 import { churchCity, churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
 import { cityPath, type CityCenters } from "../src/lib/cities";
-import { CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
+import { CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
+import { HOME_LINK_ATTRIBUTE, HOME_SEARCH_KEY } from "../src/hooks/useHomeHref";
 import cityCentersJson from "../src/data/cityCenters.json";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
@@ -56,8 +57,9 @@ const HOME_PAGE_CHUNK = "src/views/HomePage.tsx";
 
 /**
  * The app's stylesheet and the fonts to preload, as Vite's build manifest
- * lists them for the index.html entry, the city pages' map script, and what
- * the home map loads first (see withMapPrefetch). The
+ * lists them for the index.html entry, the city pages' map script, the
+ * church index's search script, and what the home map loads first (see
+ * withMapLinkHelp). The
  * static pages link only that one stylesheet, so the build fails if any CSS
  * lands elsewhere (say, a lazy-loaded route importing its own), or a font or
  * the script goes missing, rather than shipping pages without them.
@@ -66,6 +68,7 @@ function discoverAssets(): {
   cssPath: string;
   fontPaths: string[];
   cityMapScript: string;
+  churchIndexScript: string;
   mapPrefetchPaths: string[];
 } {
   if (!existsSync(MANIFEST_PATH)) {
@@ -103,6 +106,8 @@ function discoverAssets(): {
 
   const cityMap = manifest[CITY_MAP_ENTRY];
   if (!cityMap?.isEntry) throw new Error(`Vite's manifest has no ${CITY_MAP_ENTRY} entry.`);
+  const churchIndex = manifest[CHURCH_INDEX_ENTRY];
+  if (!churchIndex?.isEntry) throw new Error(`Vite's manifest has no ${CHURCH_INDEX_ENTRY} entry.`);
 
   if (!manifest[HOME_PAGE_CHUNK]) throw new Error(`Vite's manifest has no ${HOME_PAGE_CHUNK} chunk.`);
   // The script the home map runs first: the app's entry and the home page's
@@ -122,21 +127,35 @@ function discoverAssets(): {
     cssPath: `/${css[0]}`,
     fontPaths,
     cityMapScript: `/${cityMap.file}`,
+    churchIndexScript: `/${churchIndex.file}`,
     mapPrefetchPaths: [...[...scripts].map((file) => `/${file}`), `/${SNAPSHOT_FILE}`],
   };
 }
 
 /**
- * Asks the browser to fetch, once the page is idle, what the home map loads
- * first: its script and the church data. Following the page's Map link then
- * opens the map about as quickly as from a city page, whose live map has
- * already fetched most of them. Added after a page is dated (see datePage):
- * the hints change with every build's chunks, not with what the page says.
+ * Points the page's Map links at the map as the visitor left it, which the
+ * app keeps in sessionStorage (src/hooks/useHomeHref.ts); a prerendered page
+ * can only render a bare "/".
  */
-function withMapPrefetch(html: string, paths: readonly string[]): string {
-  const links = paths.map((path) => `<link rel="prefetch" href="${path}"/>`).join("");
+const HOME_LINK_SCRIPT =
+  "try{var s=sessionStorage.getItem(" +
+  JSON.stringify(HOME_SEARCH_KEY) +
+  ");if(s)document.addEventListener(\"DOMContentLoaded\",function(){" +
+  `document.querySelectorAll("[${HOME_LINK_ATTRIBUTE}]").forEach(function(a){a.href="/"+s})` +
+  "})}catch(e){}";
+
+/**
+ * Helps the page's Map link along. It opens the map where the visitor left it
+ * (HOME_LINK_SCRIPT), and about as quickly as from a city page, whose live
+ * map has already fetched most of what the map needs: the browser is asked
+ * to fetch, once the page is idle, the home map's script and the church data.
+ * Added after a page is dated (see datePage): none of it is what the page
+ * says, and the hints change with every build's chunks.
+ */
+function withMapLinkHelp(html: string, prefetchPaths: readonly string[]): string {
+  const links = prefetchPaths.map((path) => `<link rel="prefetch" href="${path}"/>`).join("");
   if (!html.includes("</head>")) throw new Error("A prerendered page has no </head>.");
-  return html.replace("</head>", `${links}</head>`);
+  return html.replace("</head>", `<script>${HOME_LINK_SCRIPT}</script>${links}</head>`);
 }
 
 function escapeXml(text: string): string {
@@ -287,7 +306,8 @@ async function main() {
   }
   const snapshot = parseSnapshot(gunzipSync(readFileSync(SNAPSHOT_PATH)).toString("utf-8"));
 
-  const { cssPath, fontPaths, cityMapScript, mapPrefetchPaths } = discoverAssets();
+  const { cssPath, fontPaths, cityMapScript, churchIndexScript, mapPrefetchPaths } =
+    discoverAssets();
   const slugs = snapshot.churches.map((church) => church.slug);
   const origin = SITE_ORIGIN;
 
@@ -299,7 +319,7 @@ async function main() {
   // sitemap's <lastmod> and the page's JSON-LD dateModified.
   const buildDate = new Date().toISOString().slice(0, 10);
   const previousDates = await fetchPreviousDates(origin);
-  const assetPaths = [cssPath, ...fontPaths, cityMapScript];
+  const assetPaths = [cssPath, ...fontPaths, cityMapScript, churchIndexScript];
   const pageDates: Record<string, LastmodEntry> = {};
   /** Dates a page rendered with LASTMOD_PLACEHOLDER and returns its final HTML. */
   const datePage = (path: string, html: string): string => {
@@ -309,7 +329,7 @@ async function main() {
       .slice(0, 16);
     const lastmod = resolveLastmod(previousDates?.pages[path], hash, buildDate);
     pageDates[path] = { hash, lastmod };
-    return withMapPrefetch(html.split(LASTMOD_PLACEHOLDER).join(lastmod), mapPrefetchPaths);
+    return withMapLinkHelp(html.split(LASTMOD_PLACEHOLDER).join(lastmod), mapPrefetchPaths);
   };
 
   let count = 0;
@@ -351,6 +371,7 @@ async function main() {
           cities,
           cssPath,
           fontPaths,
+          churchIndexScript,
           canonicalUrl: absoluteUrl(origin, CHURCH_INDEX_PATH),
           lastModified: LASTMOD_PLACEHOLDER,
         }),

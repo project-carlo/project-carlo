@@ -211,7 +211,7 @@ export function CityPageContent({
             <Breadcrumbs
               className="mb-6"
               crumbs={[
-                { label: ALL_CHURCHES, href: CHURCH_INDEX_PATH },
+                { label: ALL_CHURCHES, to: CHURCH_INDEX_PATH },
                 { label: city.label },
               ]}
             />
@@ -271,9 +271,9 @@ export function CityPageContent({
         </div>
       </main>
       <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
-        <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
+        <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
           {ALL_CHURCHES}
-        </a>
+        </Link>
       </footer>
     </>
   );

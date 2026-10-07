@@ -4,6 +4,7 @@ import {
   CityNotFoundError,
   fetchChurch,
   fetchChurchEvents,
+  fetchChurchIndex,
   fetchCityPage,
 } from "../api";
 import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
@@ -12,9 +13,9 @@ import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
 const MAX_RETRIES = 3;
 
 /**
- * The church and city pages' queries, shared by the pages and the router's
- * loaders (src/router.tsx), which fetch them before a page is shown so it
- * arrives whole rather than as a "Loading…" line.
+ * The church, city and all-churches pages' queries, shared by the pages and
+ * the router's loaders (src/router.tsx), which fetch them before a page is
+ * shown so it arrives whole rather than as a "Loading…" line.
  */
 export function cityQuery(slug: string) {
   return queryOptions({
@@ -41,6 +42,19 @@ export function churchEventsQuery(slug: string) {
     retry: (failureCount, error) =>
       failureCount < MAX_RETRIES && !(error instanceof ChurchNotFoundError),
   });
+}
+
+export function churchIndexQuery() {
+  return queryOptions({
+    queryKey: ["church-index"],
+    queryFn: fetchChurchIndex,
+    retry: MAX_RETRIES,
+  });
+}
+
+/** Fetches what the all-churches index shows. Never throws: the page shows any error. */
+export async function prefetchChurchIndex(queryClient: QueryClient): Promise<void> {
+  await queryClient.prefetchQuery(churchIndexQuery());
 }
 
 /** Fetches what a city page shows. Never throws: the page shows any error. */

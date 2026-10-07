@@ -23,19 +23,15 @@ export function NotFoundPage({
         {title}
       </h1>
       <p className="max-w-md font-serif text-base text-ink-soft">{message}</p>
-      {/* Two ways on: the map, or the list (a plain link: /churches/ is a
-          prerendered page the SPA has no route for). */}
+      {/* Two ways on: the map, or the list. */}
       <div className="flex items-baseline gap-5">
         <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
           <MapIcon className="size-3.5" />
           {MAP_LINK}
         </Link>
-        <a
-          href={CHURCH_INDEX_PATH}
-          className="rubric-link font-serif text-[0.9375rem]"
-        >
+        <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
           {ALL_CHURCHES}
-        </a>
+        </Link>
       </div>
     </main>
   );
