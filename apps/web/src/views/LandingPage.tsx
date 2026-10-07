@@ -34,6 +34,15 @@ import {
 } from "../placeSearch";
 import type { HomeMapCenter } from "./HomePage";
 import type { EventType } from "../types";
+import {
+  ANY_DAY,
+  FILTER_DAY_HEADING,
+  FILTER_SERVICE_HEADING,
+  FILTER_TIME_HEADING,
+  FINDING_YOUR_LOCATION,
+  SOURCE_PHRASE,
+  USE_MY_LOCATION,
+} from "../copy";
 
 const TIME_STEP_MINUTES = 15;
 
@@ -193,8 +202,8 @@ export function LandingPage() {
               <CrosshairIcon className="size-4 shrink-0" />
               <span>
                 {locationStatus === "requesting"
-                  ? "Requesting your location…"
-                  : "Or use my current location"}
+                  ? FINDING_YOUR_LOCATION
+                  : `Or ${USE_MY_LOCATION.toLowerCase()}`}
               </span>
             </button>
 
@@ -247,8 +256,8 @@ export function LandingPage() {
             <Fleuron size={isDesktop ? 40 : 28} className="w-full opacity-85" />
             <p className="m-0 text-center font-serif italic text-[12.5px] text-ink-faint">
               {isDesktop
-                ? "A directory of Catholic churches — schedules parsed from each parish’s weekly bulletin."
-                : "Schedules parsed from each parish’s weekly bulletin."}
+                ? `A directory of Catholic churches, with times ${SOURCE_PHRASE}.`
+                : `Times ${SOURCE_PHRASE}.`}
             </p>
           </>
         )}
@@ -283,7 +292,7 @@ function RefineSection({
       <Fleuron size={fleuronSize} className="w-full" />
 
       <section className="flex flex-col gap-[10px] md:gap-[14px]">
-        <h3 className={REFINE_LABEL_CLASS}>Service type</h3>
+        <h3 className={REFINE_LABEL_CLASS}>{FILTER_SERVICE_HEADING}</h3>
         {isDesktop ? (
           <ServiceSegmented
             value={filters.eventType}
@@ -299,7 +308,7 @@ function RefineSection({
 
       <section className="flex flex-col gap-[10px] md:gap-[14px]">
         <div className="flex items-baseline justify-between gap-3">
-          <h3 className={REFINE_LABEL_CLASS}>Day of week</h3>
+          <h3 className={REFINE_LABEL_CLASS}>{FILTER_DAY_HEADING}</h3>
           <button
             type="button"
             onClick={() => onChange({ ...filters, daysOfWeek: [] })}
@@ -314,7 +323,7 @@ function RefineSection({
               filters.daysOfWeek.length === 0 && "invisible",
             )}
           >
-            Reset
+            {ANY_DAY}
           </button>
         </div>
         <DayPills
@@ -324,7 +333,7 @@ function RefineSection({
       </section>
 
       <section className="flex flex-col gap-[10px] md:gap-[14px]">
-        <h3 className={REFINE_LABEL_CLASS}>Time of day</h3>
+        <h3 className={REFINE_LABEL_CLASS}>{FILTER_TIME_HEADING}</h3>
         <TimeRangeSlider
           min={0}
           max={MINUTES_PER_DAY}

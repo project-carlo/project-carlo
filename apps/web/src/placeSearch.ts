@@ -1,3 +1,5 @@
+import { YOUR_LOCATION } from "./copy";
+
 const GEOAPIFY_AUTOCOMPLETE_URL =
   "https://api.geoapify.com/v1/geocode/autocomplete";
 
@@ -62,8 +64,8 @@ export interface PlaceSearchResult {
 export function currentLocationPlace(lat: number, lng: number): PlaceSearchResult {
   return {
     id: `current-location-${lat}-${lng}`,
-    title: "Your current location",
-    subtitle: "From your browser",
+    title: YOUR_LOCATION,
+    subtitle: null,
     lat,
     lng,
     resultType: "unknown",

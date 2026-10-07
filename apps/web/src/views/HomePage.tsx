@@ -44,6 +44,11 @@ import {
 } from "../placeSearch";
 import { isAboutPageEnabled } from "../lib/featureFlags";
 import {
+  ALL_CHURCHES,
+  FINDING_YOUR_LOCATION,
+  USE_MY_LOCATION,
+} from "../copy";
+import {
   CHURCH_INDEX_PATH,
   HOME_DESCRIPTION,
   HOME_TITLE,
@@ -176,7 +181,7 @@ export function HomePage() {
     [],
   );
 
-  // Mirror the live query string into sessionStorage so in-app "Back to map"
+  // Mirror the live query string into sessionStorage so in-app "Map"
   // links (plain pushes to "/") can restore the current filters + view.
   useEffect(() => {
     rememberHomeSearch(location.search);
@@ -315,7 +320,7 @@ export function HomePage() {
     setCenterOn((current) => (current?.placeTitle ? null : current));
   }, []);
 
-  // "Go to my exact location": the browser's position, pinned and flown to
+  // "Use my location": the browser's position, pinned and flown to
   // like a searched place.
   const {
     status: locateStatus,
@@ -372,7 +377,7 @@ export function HomePage() {
         <div className="pointer-events-none absolute inset-0 z-[800] flex items-center justify-center p-4">
           <div className="pointer-events-auto max-w-sm border border-rule-strong bg-paper/95 px-6 py-5 shadow-missal-overlay">
             <InlineQueryError
-              title={"Couldn't load data"}
+              title="Couldn’t load churches"
               message="Check your connection and try again."
               onRetry={() => refetch()}
               centered
@@ -403,7 +408,7 @@ export function HomePage() {
                     href={CHURCH_INDEX_PATH}
                     className="rubric-link font-serif text-[0.9375rem]"
                   >
-                    All churches
+                    {ALL_CHURCHES}
                   </a>
                   {aboutPageEnabled ? (
                     <Link
@@ -460,8 +465,8 @@ export function HomePage() {
                   className="rubric-link missal-focus shrink-0 disabled:cursor-wait"
                 >
                   {locateStatus === "requesting"
-                    ? "Locating…"
-                    : "Use exact location"}
+                    ? FINDING_YOUR_LOCATION
+                    : USE_MY_LOCATION}
                 </button>
               </div>
             ) : null}

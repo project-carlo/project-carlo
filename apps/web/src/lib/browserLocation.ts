@@ -1,3 +1,5 @@
+import { LOCATION_FALLBACK } from "../copy";
+
 /** Where the browser's location services put the visitor. */
 export interface BrowserLocation {
   lat: number;
@@ -21,7 +23,9 @@ export function requestBrowserLocation(): Promise<BrowserLocation> {
   return new Promise((resolve, reject) => {
     if (!navigator.geolocation) {
       reject(
-        new BrowserLocationError("Location is not available in this browser."),
+        new BrowserLocationError(
+          `Your browser can’t share your location. ${LOCATION_FALLBACK}`,
+        ),
       );
       return;
     }
@@ -38,8 +42,8 @@ export function requestBrowserLocation(): Promise<BrowserLocation> {
             // a few dismissed prompts) the browser stops asking and every
             // request fails at once, so say where to undo it.
             error.code === error.PERMISSION_DENIED
-              ? "Location is blocked. Allow it in your browser's site settings."
-              : "Couldn't get your current location.",
+              ? "Location is blocked. Allow it in your browser’s site settings."
+              : `Couldn’t find your location. ${LOCATION_FALLBACK}`,
           ),
         ),
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 },
@@ -50,5 +54,5 @@ export function requestBrowserLocation(): Promise<BrowserLocation> {
 export function browserLocationErrorMessage(error: unknown): string {
   return error instanceof BrowserLocationError
     ? error.message
-    : "Couldn't get your current location.";
+    : `Couldn’t find your location. ${LOCATION_FALLBACK}`;
 }

@@ -5,6 +5,7 @@
  */
 import type { ChurchBase, ChurchDetail } from "../types";
 import { cityPath, type City, type CityLink } from "./cities";
+import { ALL_CHURCHES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -19,8 +20,7 @@ export const OG_IMAGE_ALT =
 /** Default homepage title/description — keep keyword-forward, location-agnostic. */
 export const HOME_TITLE =
   "Mass, Confession & Adoration Times Near You · Project Carlo";
-export const HOME_DESCRIPTION =
-  "Find Mass, Confession, and Adoration times at Catholic churches on an interactive map. Schedules are parsed from each parish's weekly bulletin.";
+export const HOME_DESCRIPTION = `Find Mass, Confession, and Adoration times at Catholic churches on an interactive map, ${SOURCE_PHRASE}.`;
 
 /** Resolve a site-relative path against an origin into an absolute URL. */
 export function absoluteUrl(origin: string, path: string): string {
@@ -49,14 +49,15 @@ export function churchLocation(church: ChurchDetail): string {
 }
 
 /**
- * Keyword-forward church page title: leads with the church name (branded
- * searches) followed by the services and location people actually search for.
+ * Church page title, e.g. "St. Mary, East Aurora — Mass & Confession Times".
+ * The church's name and town lead, since search results cut titles off at
+ * about 60 characters and those are what tell one St. Mary from another; the
+ * services people search for follow, and the description names all three.
  */
 export function buildChurchTitle(church: ChurchDetail): string {
-  const name = church.name?.trim() || "Catholic Church";
-  const loc = churchLocation(church);
-  const base = `${name} — Mass, Confession & Adoration Times`;
-  return loc ? `${base} in ${loc}` : base;
+  const name = church.name?.trim() || UNNAMED_CHURCH;
+  const place = church.city?.trim() || church.state?.trim();
+  return `${place ? `${name}, ${place}` : name} — Mass & Confession Times`;
 }
 
 /** SERP-snippet description for a church page (kept under ~155 chars). */
@@ -64,7 +65,7 @@ export function buildChurchDescription(church: ChurchDetail): string {
   const name = church.name?.trim() || "this church";
   const loc = churchLocation(church);
   const where = loc ? ` in ${loc}` : "";
-  return `Mass, Confession, and Adoration times for ${name}${where}, parsed from the parish's latest weekly bulletin.`;
+  return `Mass, Confession, and Adoration times for ${name}${where}, from the parish’s weekly bulletin.`;
 }
 
 /** Canonical path of the prerendered all-churches index page. */
@@ -78,7 +79,7 @@ export function churchPath(slug: string): string {
 export const CHURCH_INDEX_TITLE = `Browse Catholic Churches — Mass, Confession & Adoration Times · ${SITE_NAME}`;
 
 export function buildChurchIndexDescription(churchCount: number): string {
-  return `Browse all ${churchCount} Catholic churches on ${SITE_NAME} and find Mass, Confession, and Adoration times parsed from each parish's weekly bulletin.`;
+  return `Browse all ${churchCount} Catholic churches on ${SITE_NAME} and find Mass, Confession, and Adoration times ${SOURCE_PHRASE}.`;
 }
 
 /** schema.org PostalAddress for a church, or null when no address is known. */
@@ -117,7 +118,7 @@ export function churchJsonLd(
     "@context": "https://schema.org",
     "@type": "Church",
     "@id": churchId,
-    name: church.name ?? "Catholic church",
+    name: church.name ?? UNNAMED_CHURCH,
     url: canonicalUrl,
     image: absoluteUrl(origin, OG_IMAGE_PATH),
   };
@@ -166,7 +167,7 @@ export function churchWebPageJsonLd(
 }
 
 /**
- * BreadcrumbList: Home → Churches → {City} → {Church}, without the city level
+ * BreadcrumbList: Home → All churches → {City} → {Church}, without the city level
  * when the church's address has none.
  */
 export function churchBreadcrumbJsonLd(
@@ -177,12 +178,12 @@ export function churchBreadcrumbJsonLd(
   const origin = new URL(canonicalUrl).origin;
   const crumbs: { name: string; item: string }[] = [
     { name: SITE_NAME, item: absoluteUrl(origin, "/") },
-    { name: "Churches", item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+    { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
   ];
   if (city) {
     crumbs.push({ name: city.label, item: absoluteUrl(origin, cityPath(city.slug)) });
   }
-  crumbs.push({ name: church.name ?? "Church", item: canonicalUrl });
+  crumbs.push({ name: church.name ?? UNNAMED_CHURCH, item: canonicalUrl });
   return breadcrumbList(crumbs);
 }
 
@@ -215,12 +216,12 @@ export function buildCityDescription(
     count === 1
       ? `${city.churches[0].name?.trim() || "the Catholic church"}`
       : `the ${count} Catholic churches`;
-  return `Mass, Confession, and Adoration times at ${churches} in ${city.label} and nearby churches, parsed from each parish's weekly bulletin.`;
+  return `Mass, Confession, and Adoration times at ${churches} in ${city.label} and nearby churches, ${SOURCE_PHRASE}.`;
 }
 
 /**
  * Structured data for a city page: the page as a CollectionPage of its
- * churches' pages, and its breadcrumbs (Home → Churches → {City}).
+ * churches' pages, and its breadcrumbs (Home → All churches → {City}).
  */
 export function cityJsonLd(
   city: Pick<City, "label" | "churches">,
@@ -242,14 +243,14 @@ export function cityJsonLd(
         itemListElement: city.churches.map((church, i) => ({
           "@type": "ListItem",
           position: i + 1,
-          name: church.name ?? "Catholic church",
+          name: church.name ?? UNNAMED_CHURCH,
           url: churchUrl(church),
         })),
       },
     },
     breadcrumbList([
       { name: SITE_NAME, item: absoluteUrl(origin, "/") },
-      { name: "Churches", item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+      { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
       { name: city.label, item: canonicalUrl },
     ]),
   ];

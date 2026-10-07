@@ -62,7 +62,7 @@ export function ChurchPage() {
     return (
       <NotFoundPage
         title="Church not found"
-        message="We couldn't find that church."
+        message="It may have closed, merged with another parish, or moved."
       />
     );
   }
@@ -74,7 +74,7 @@ export function ChurchPage() {
     return (
       <NotFoundPage
         title="Church not found"
-        message="We couldn't find that church."
+        message="It may have closed, merged with another parish, or moved."
       />
     );
   }
@@ -99,7 +99,7 @@ export function ChurchPage() {
         ) : null}
         {churchQuery.error ? (
           <InlineQueryError
-            message={"We couldn't load this church."}
+            message="We couldn’t load this church."
             onRetry={() => churchQuery.refetch()}
           />
         ) : null}
@@ -111,7 +111,7 @@ export function ChurchPage() {
         {eventsQuery.error ? (
           <InlineQueryError
             className="mx-auto max-w-2xl"
-            message={"We couldn't load times for this church."}
+            message="We couldn’t load times for this church."
             onRetry={() => eventsQuery.refetch()}
           />
         ) : null}

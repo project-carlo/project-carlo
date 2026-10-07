@@ -11,7 +11,7 @@ import { computeNextOccurrence } from "./schedule";
 export const SNAPSHOT_FILE = "frontend.json.gz";
 
 /** The format version this code reads; must match the pipeline's SNAPSHOT_VERSION. */
-export const SNAPSHOT_VERSION = 1;
+export const SNAPSHOT_VERSION = 2;
 
 type Column<T> =
   | T[]
@@ -129,7 +129,11 @@ export function parseSnapshot(json: string): Snapshot {
     longitude: c.longitude[row],
   }));
   const rowBySlug = new Map(c.slug.map((slug, row) => [slug, row]));
-  const { homepage_url: homepageUrls, bulletin_url: bulletinUrls } = c;
+  const {
+    homepage_url: homepageUrls,
+    bulletin_url: bulletinUrls,
+    bulletin_week: bulletinWeeks,
+  } = c;
 
   const e = decodeTable(document.events);
   const events: RawEvent[] = e.id.map((_, row) => new SnapshotEvent(e, row));
@@ -146,6 +150,7 @@ export function parseSnapshot(json: string): Snapshot {
         ...churches[row],
         homepage_url: homepageUrls[row],
         bulletin_url: bulletinUrls[row],
+        bulletin_week: bulletinWeeks[row],
       };
     },
     eventsOf(churchId) {

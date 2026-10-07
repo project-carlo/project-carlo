@@ -22,6 +22,11 @@ import {
 } from "../placeSearch";
 import { SearchIcon, XIcon } from "@/components/icons";
 import {
+  FINDING_YOUR_LOCATION,
+  UNNAMED_CHURCH,
+  USE_MY_LOCATION,
+} from "../copy";
+import {
   Command,
   CommandEmpty,
   CommandGroup,
@@ -144,9 +149,10 @@ export function SearchTypeahead({
   const placeholder = isPlaceMode
     ? "Search for a city, ZIP, or address…"
     : "Search for a church…";
+  // Echo what was searched, so a typo is easy to spot, and say what to try.
   const emptyMessage = isPlaceMode
-    ? "No matching places."
-    : "No matching churches.";
+    ? `No places match “${trimmedDebouncedQuery}”. Try a town name or ZIP code.`
+    : `No churches match “${trimmedDebouncedQuery}”. Try fewer words, or part of the name.`;
   const modeButtonLabel = isPlaceMode ? "Search churches" : "Search places";
   const placeSearchNotConfigured =
     isPlaceMode && placeError instanceof PlaceSearchConfigurationError;
@@ -316,7 +322,7 @@ export function SearchTypeahead({
             {showCurrentLocationOption ? (
               <CommandGroup className="[&_[cmdk-group-heading]]:hidden">
                 <CommandItem
-                  value="Use your current location"
+                  value={USE_MY_LOCATION}
                   onSelect={handleCurrentLocationSelect}
                   disabled={locationStatus === "requesting"}
                   className="group relative cursor-pointer gap-0 rounded-none border-l-2 border-transparent px-3 py-2.5 font-serif text-base text-ink data-[disabled=true]:pointer-events-none data-[selected=true]:border-rubric data-[selected=true]:bg-paper-deep/60 data-[selected=true]:text-ink"
@@ -324,13 +330,13 @@ export function SearchTypeahead({
                   <div className="min-w-0">
                     <div className="truncate">
                       {locationStatus === "requesting"
-                        ? "Requesting your location…"
-                        : "Use your current location"}
+                        ? FINDING_YOUR_LOCATION
+                        : USE_MY_LOCATION}
                     </div>
                     <div
                       className={`mt-0.5 text-sm text-ink-soft ${locationError ? "" : "truncate"}`}
                     >
-                      {locationError ?? "Center the map where you are"}
+                      {locationError ?? "Show churches around you"}
                     </div>
                   </div>
                 </CommandItem>
@@ -341,13 +347,15 @@ export function SearchTypeahead({
                 <div className="px-3 py-4 font-serif text-sm text-ink-soft">
                   {isPlaceMode ? "Searching places…" : "Loading churches…"}
                 </div>
-              ) : placeSearchNotConfigured ? (
+              ) : placeSearchNotConfigured && import.meta.env.DEV ? (
+                // A developer's setup problem; visitors get the generic
+                // message below.
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
                   Place search needs a Geoapify API key.
                 </CommandEmpty>
               ) : isPlaceMode && placeError ? (
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
-                  Place search failed. Try again.
+                  Couldn’t search places just now. Try again in a moment.
                 </CommandEmpty>
               ) : hasResults ? (
                 <CommandGroup className="[&_[cmdk-group-heading]]:hidden">
@@ -380,7 +388,7 @@ export function SearchTypeahead({
                           >
                             <div className="min-w-0">
                               <div className="truncate">
-                                {church.name ?? "Unnamed church"}
+                                {church.name ?? UNNAMED_CHURCH}
                               </div>
                               {locationText ? (
                                 <div className="mt-0.5 truncate text-sm text-ink-soft">

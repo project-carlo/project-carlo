@@ -46,12 +46,15 @@ test("a first visit starts near the IP estimate, zoomed out", async ({
     timeout: 15_000,
   });
   await expect(page.getByText("· approximate")).toBeVisible();
+  // Offered twice: as text beside the estimate, and as the map's corner
+  // control (an icon, named by its label and tooltip).
   await expect(
-    page.getByRole("button", { name: "Use exact location" }),
-  ).toBeVisible();
+    page.getByRole("button", { name: "Use my location" }),
+  ).toHaveCount(2);
   await expect(
-    page.getByRole("button", { name: "Go to my exact location" }),
+    page.getByRole("button").getByText("Use my location", { exact: true }),
   ).toBeVisible();
+  await expect(page.getByTitle("Use my location")).toBeVisible();
   // Zoomed out to a region (desktop viewport).
   await expect(
     page.locator('.leaflet-tile[src*="tile.openstreetmap.org/9/"]').first(),
@@ -78,7 +81,7 @@ test("a phone shows the area without the approximate note", async ({
   });
   await expect(page.getByText("· approximate")).toBeHidden();
   await expect(
-    page.getByRole("button", { name: "Use exact location" }),
+    page.getByRole("button").getByText("Use my location", { exact: true }),
   ).toBeVisible();
 });
 
@@ -144,17 +147,16 @@ test("exact location pins the browser's position", async ({
     }),
   );
   await page.goto("/");
-  await page.getByRole("button", { name: "Use exact location" }).click();
-  await expect(page.getByText("Pinned:")).toContainText(
-    "Your current location",
-  );
+  await page
+    .getByRole("button")
+    .getByText("Use my location", { exact: true })
+    .click();
+  await expect(page.getByText("Pinned:")).toContainText("Your location");
   await expect(page.getByText("Near Buffalo, NY")).toHaveCount(0);
   // The pin's popup stays closed until the pin is clicked.
   const pin = page.locator(".searched-place-marker");
   await expect(pin).toBeVisible();
   await expect(page.locator(".leaflet-popup")).toHaveCount(0);
   await pin.click();
-  await expect(page.locator(".leaflet-popup")).toContainText(
-    "Your current location",
-  );
+  await expect(page.locator(".leaflet-popup")).toContainText("Your location");
 });

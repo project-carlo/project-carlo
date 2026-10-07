@@ -41,6 +41,17 @@ export function formatEventDate(dateStr: string): string {
   return formatted;
 }
 
+const LONG_DATE_FORMATTER = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
+
+/** Format YYYY-MM-DD to "October 5, 2026" style. */
+export function formatLongDate(dateStr: string): string {
+  return LONG_DATE_FORMATTER.format(new Date(dateStr + "T12:00:00"));
+}
+
 const SHORT_MONTH_DAY_FORMATTER = new Intl.DateTimeFormat("en-US", {
   month: "short",
   day: "numeric",

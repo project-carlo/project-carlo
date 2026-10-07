@@ -5,10 +5,10 @@ stripped down to what the web app reads. It is gzipped JSON, written to
 apps/web/public/frontend.json.gz for Vite to serve as an opaque static asset;
 the app (apps/web/src/lib/snapshot.ts) decodes it into memory.
 
-Format (version 1). Each table is stored column by column, as parallel arrays:
+Format (version 2). Each table is stored column by column, as parallel arrays:
 
     {
-      "version": 1,
+      "version": 2,
       "churches": {"id": [...], "parish_id": [...], "slug": [...], ...},
       "events": {"id": {"deltas": [...]}, "church_id": [...], ...}
     }
@@ -23,7 +23,11 @@ A column is one of:
 
 `churches` has CHURCH_COLUMNS, ordered by name then id; `events` has
 EVENT_COLUMNS, ordered by id. `church_id` is the church's id, `cancelled` a
-boolean, times are minutes after midnight, and `date` is an ISO date.
+boolean, times are minutes after midnight, and `date` is an ISO date. A
+church's `bulletin_url` and `bulletin_week` describe its parish's current
+bulletin, the one its events come from: `bulletin_week` is the ISO date of
+the Sunday of the week that bulletin is for (`bulletin_week.bulletin_week`),
+or null when the bulletin has no date at all.
 
 Bump SNAPSHOT_VERSION (and the app's) on any change the app would misread.
 """
@@ -39,6 +43,7 @@ from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.bulletin_week import week_order_sql
 from pdf_extract.storage import (
     DEFAULT_DB_PATH,
     configure_sqlite_connection,
@@ -51,12 +56,12 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE_DB = DEFAULT_DB_PATH
 SNAPSHOT_NAME = "frontend.json.gz"
 DEST_SNAPSHOT = ROOT / "apps" / "web" / "public" / SNAPSHOT_NAME
-SNAPSHOT_VERSION = 1
+SNAPSHOT_VERSION = 2
 
 # The columns the SELECTs below produce, in order.
 CHURCH_COLUMNS = (
     "id", "parish_id", "slug", "name", "address_line1", "address_line2", "city", "state",
-    "postal_code", "latitude", "longitude", "homepage_url", "bulletin_url",
+    "postal_code", "latitude", "longitude", "homepage_url", "bulletin_url", "bulletin_week",
 )
 EVENT_COLUMNS = (
     "id", "church_id", "event_type", "event_kind", "day_of_week", "date", "start_time",
@@ -65,7 +70,7 @@ EVENT_COLUMNS = (
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
-    "churches": {"city", "state"},
+    "churches": {"city", "state", "bulletin_week"},
     "events": {"event_type", "event_kind", "day_of_week", "date", "note"},
 }
 # Event ids mostly go up by one, so their differences compress far better.
@@ -167,15 +172,21 @@ def extract(
     try:
         churches = src.execute(
             f"""
+            WITH latest AS (
+                SELECT parish_id, source_url, NULLIF({week_order_sql()}, '') AS week,
+                       ROW_NUMBER() OVER (
+                           PARTITION BY parish_id
+                           ORDER BY {latest_bulletin_order()}
+                       ) AS rn
+                FROM bulletin
+                WHERE processed_at IS NOT NULL
+            )
             SELECT c.id, c.parish_id, c.slug, c.name, c.address_line1, c.address_line2,
                    c.city, c.state, c.postal_code, c.latitude, c.longitude,
-                   p.homepage_url,
-                   (SELECT b.source_url FROM bulletin b
-                    WHERE b.parish_id = c.parish_id AND b.processed_at IS NOT NULL
-                    ORDER BY {latest_bulletin_order("b")}
-                    LIMIT 1)
+                   p.homepage_url, latest.source_url, latest.week
             FROM church c
             LEFT JOIN parish p ON c.parish_id = p.id
+            LEFT JOIN latest ON latest.parish_id = c.parish_id AND latest.rn = 1
             ORDER BY c.name, c.id
             """
         ).fetchall()

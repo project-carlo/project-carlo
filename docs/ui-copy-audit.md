@@ -9,6 +9,13 @@ Each finding gives the current copy, a suggested replacement, and the file it
 lives in. The priority list comes first, then a terminology guide, then the
 findings screen by screen.
 
+**Status.** Recommendations 2, 4, 5, 6 and 7 are implemented, along with the
+filter headings ("Looking for", "Starting"), next steps on error and empty
+states, query echoes in "no results" messages, curly apostrophes, shorter
+church page titles, and `apps/web/src/copy.ts` for shared strings. The rest
+(1, 3, 8, 9, and the other per-screen suggestions) are still open. The tables
+below describe the copy as it was before those changes.
+
 ## Summary
 
 **What already works.** The voice is distinctive and mostly consistent:

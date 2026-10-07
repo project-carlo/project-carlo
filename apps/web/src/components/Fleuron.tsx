@@ -9,7 +9,7 @@ interface FleuronProps {
   size?: number;
   /** Sets a small-caps caption between the hairlines in place of the ornament.
    *  Used where a divider also has to name the section it opens — the map
-   *  popup's "Upcoming" — so the label costs no extra line. */
+   *  popup's "Mass" — so the label costs no extra line. */
   label?: string;
   className?: string;
 }

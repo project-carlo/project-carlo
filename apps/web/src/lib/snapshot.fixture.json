@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "churches": {
     "id": [7, 3],
     "parish_id": [1, 1],
@@ -13,7 +13,8 @@
     "latitude": [43.1, null],
     "longitude": [-77.6, null],
     "homepage_url": [null, "https://a"],
-    "bulletin_url": [null, null]
+    "bulletin_url": [null, null],
+    "bulletin_week": {"values": ["2026-09-20"], "codes": [0, null]}
   },
   "events": {
     "id": {"deltas": [10, 1, 4]},

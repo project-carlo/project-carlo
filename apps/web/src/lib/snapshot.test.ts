@@ -82,7 +82,9 @@ describe("parseSnapshot", () => {
       ...s.churches[1],
       homepage_url: "https://a",
       bulletin_url: null,
+      bulletin_week: null,
     });
+    expect(s.churchDetail("b")?.bulletin_week).toBe("2026-09-20");
     expect(s.churchDetail("missing")).toBeNull();
   });
 
@@ -95,7 +97,9 @@ describe("parseSnapshot", () => {
 
   it("refuses another format version", () => {
     const other = { ...fixture, version: SNAPSHOT_VERSION + 1 };
-    expect(() => parseSnapshot(JSON.stringify(other))).toThrow(/format version 2/);
+    expect(() => parseSnapshot(JSON.stringify(other))).toThrow(
+      `format version ${SNAPSHOT_VERSION + 1}`,
+    );
     expect(() => parseSnapshot("null")).toThrow(/format version undefined/);
   });
 });

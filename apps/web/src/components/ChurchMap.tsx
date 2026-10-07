@@ -24,7 +24,7 @@ import type {
   Marker as LeafletMarker,
 } from "leaflet";
 import L from "leaflet";
-import type { ChurchMapItem } from "../types";
+import type { ChurchMapItem, EventSummary } from "../types";
 import type { MapView } from "../lib/mapView";
 import type { MapStart } from "../lib/mapStart";
 import {
@@ -37,6 +37,8 @@ import {
 } from "../lib/mapClusters";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
+import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
+import { UNNAMED_CHURCH } from "../copy";
 import { Fleuron } from "@/components/Fleuron";
 
 const OSM_ATTRIBUTION =
@@ -362,6 +364,20 @@ function ViewReporter({ onViewChange }: { onViewChange: (view: MapView) => void 
  * are built for the one open popup rather than for all ~130 pins on every
  * filter change.
  */
+/**
+ * The popup schedule's caption: the service its times are for. The map shows
+ * one service at a time, so every time in a popup is the same service; the
+ * caption says which, since the rows themselves are only days and times.
+ */
+function scheduleCaption(events: EventSummary[]): string {
+  const types = new Set(events.map((event) => event.type));
+  if (types.size === 1) {
+    const [type] = types;
+    return EVENT_TYPE_LABELS[type];
+  }
+  return "Times";
+}
+
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
   // that order while collapsing each day's several times onto one row.
@@ -380,7 +396,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
           `.map-popup-*` in app.css. */}
       <div className="map-popup-head space-y-1">
         <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-ink">
-          {church.name ?? "Unnamed church"}
+          {church.name ?? UNNAMED_CHURCH}
         </h3>
         {addressLine ? (
           <p className="font-serif text-[0.875rem] leading-snug text-ink-soft">
@@ -392,7 +408,10 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
       <div className="map-popup-body">
         {/* The caption rides in the rule rather than sitting on its own line
             below it — one divider instead of two in a 250px-wide card. */}
-        <Fleuron label="Upcoming" className="mb-2.5" />
+        <Fleuron
+          label={scheduleCaption(church.upcoming_events)}
+          className="mb-2.5"
+        />
 
         <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
           {visibleRows.length > 0 ? (
@@ -421,7 +440,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
             ))
           ) : (
             <li className="font-serif text-[0.9rem] italic text-ink-faint">
-              No services listed yet.
+              No times listed yet.
             </li>
           )}
           {hiddenRowCount > 0 ? (
@@ -774,7 +793,7 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
       <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
         <div className="map-popup-solo space-y-1.5">
           <div className="smallcaps text-[0.8125rem] text-ink-faint">
-            Searched place
+            Pinned place
           </div>
           <h3 className="font-display text-[1.25rem] leading-[1.15] font-normal text-ink">
             {place.title}
