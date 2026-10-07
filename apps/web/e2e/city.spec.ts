@@ -62,7 +62,7 @@ test("a city page's map is live in the page, and opens to the full map view", as
   await expect(page).toHaveURL(/#map$/);
   const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
   await expect(dialog).toBeVisible();
-  await expect(page.getByRole("button", { name: "Close" })).toBeFocused();
+  await expect(page.getByRole("button", { name: "Close map" })).toBeFocused();
   // The home map's view: search, filters, zoom and locate.
   await expect(dialog.getByPlaceholder(/Search for a city/)).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Confession" })).toBeVisible();
@@ -110,7 +110,7 @@ test("the open map keeps focus in itself, and Escape closes a popup before the m
   await dialog.locator(".church-map-marker").first().click();
   await expect(dialog.locator(".leaflet-popup")).toBeVisible();
   // With focus on a control, not the map, as Leaflet's own Escape needs.
-  await page.getByRole("button", { name: "Close", exact: true }).focus();
+  await page.getByRole("button", { name: "Close map", exact: true }).focus();
   await page.keyboard.press("Escape");
   await expect(dialog.locator(".leaflet-popup")).toHaveCount(0);
   await expect(dialog).toBeVisible();
@@ -204,6 +204,52 @@ test("in the app, each city page's live map is that city's", async ({
   await expect(page).toHaveURL(new RegExp(`${buffalo}$`));
 });
 
+test("in the app, a church page's breadcrumb goes to its city with no loading screen", async ({
+  page,
+}) => {
+  await page.goto("/churches/");
+  const cityLink = page.locator('h2 a[href^="/mass-times/"]').first();
+  const cityHref = (await cityLink.getAttribute("href"))!;
+  const cityLabel = (await cityLink.textContent())!.trim();
+  const churchHref = (await page
+    .locator("[data-city-group]")
+    .first()
+    .locator('li a[href^="/churches/"]')
+    .first()
+    .getAttribute("href"))!;
+
+  await page.goto("/");
+  await expect(page.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
+  // Navigates in the app, as a link in a map pin's popup would.
+  await page.evaluate((to) => {
+    const idx = ((window.history.state as { idx?: number } | null)?.idx ?? 0) + 1;
+    window.history.pushState({ usr: null, key: `e2e-${idx}`, idx }, "", to);
+    window.dispatchEvent(new PopStateEvent("popstate", { state: window.history.state }));
+  }, churchHref);
+  const breadcrumb = page.getByRole("navigation", { name: "Breadcrumb" });
+  await expect(breadcrumb).toBeVisible({ timeout: 15_000 });
+
+  // Note any "Loading…" the page shows from here on.
+  await page.evaluate(() => {
+    const w = window as typeof window & { sawLoading?: boolean };
+    w.sawLoading = false;
+    new MutationObserver(() => {
+      if (/Loading/.test(document.body.innerText)) w.sawLoading = true;
+    }).observe(document.body, { childList: true, subtree: true, characterData: true });
+  });
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+
+  await breadcrumb.locator(`a[href="${cityHref}"]`).click();
+  await expect(
+    page.getByRole("heading", { level: 1, name: `Mass Times in ${cityLabel}` }),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(() => (window as typeof window & { sawLoading?: boolean }).sawLoading),
+  ).toBe(false);
+  // The city page opens at its top, as a page load would.
+  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+});
+
 test.describe("on a phone", () => {
   test.use({ viewport: { width: 390, height: 844 }, hasTouch: true });
 
@@ -225,7 +271,7 @@ test.describe("on a phone", () => {
     await page.keyboard.press("Escape");
     await expect(dialog).toBeVisible();
 
-    await page.getByRole("button", { name: "Close" }).tap();
+    await page.getByRole("button", { name: "Close map" }).tap();
     await expect(dialog).toHaveCount(0);
     await expect(page).toHaveURL(new RegExp(`${EAST_AURORA}$`));
   });

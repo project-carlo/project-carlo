@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider } from "react-router-dom";
-import { router } from "./router";
+import { createAppRouter } from "./router";
 import { createQueryClient } from "./lib/queryClient";
 import { reloadOnStaleChunk } from "./lib/staleDeploy";
 import "leaflet/dist/leaflet.css";
@@ -11,6 +11,7 @@ import "./app.css";
 reloadOnStaleChunk();
 
 const queryClient = createQueryClient();
+const router = createAppRouter(queryClient);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

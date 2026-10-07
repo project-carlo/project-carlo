@@ -201,6 +201,16 @@
     outline-offset: 3px;
   }
 
+  /* Tailwind's reset leaves buttons with the arrow cursor, as native ones
+   * have; here every button gets the hand a link has, so whatever can be
+   * clicked says so. A disabled one keeps the arrow, and a utility (say
+   * `disabled:cursor-wait`) still has the last word. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+
   /* A hairline rule used everywhere instead of box borders. */
   .hairline {
     border: none;
@@ -245,6 +255,35 @@
     box-shadow:
       0 18px 40px -18px rgb(22 18 16 / 0.32),
       0 2px 6px -2px rgb(22 18 16 / 0.1);
+  }
+
+  /* The bar across the top while the next page loads (src/router.tsx). It
+   * waits a beat before showing, so a quick move between pages shows
+   * nothing, then creeps toward the far edge without reaching it. */
+  .nav-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1300;
+    height: 2px;
+    background: var(--rubric);
+    transform-origin: left center;
+    transform: scaleX(0);
+    pointer-events: none;
+    animation: nav-progress 8s cubic-bezier(0.1, 0.7, 0.2, 1) 150ms forwards;
+  }
+  @keyframes nav-progress {
+    from {
+      transform: scaleX(0.08);
+    }
+    to {
+      transform: scaleX(0.9);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    /* Still after the beat, just without the creep. */
+    .nav-progress {
+      animation-duration: 1ms;
+    }
   }
 }
 
