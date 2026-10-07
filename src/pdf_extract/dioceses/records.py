@@ -862,7 +862,13 @@ def _same_cell(a: str, b: str) -> bool:
 
 
 def _check_drift(d: Diocese, owners: _Owners, p: Problems) -> None:
-    """Promoted records whose live row has since changed (or gone)."""
+    """Promoted records whose live row has since changed (or gone, or should go)."""
+    for kind, off_site, live in zip((PARISH, CHURCH), unpublished(d),
+                                    (owners.live_parish, owners.live_church), strict=True):
+        for slug in sorted(off_site & live.keys()):
+            if d.of(kind)[slug].get("promoted"):
+                p.warnings.append(f"{_label(kind, slug)}: no_bulletin, but still in "
+                                  f"data/{kind.dir}.csv; run `diocese promote` to take it off")
     parishes, churches = export_rows(d)
     for kind, rows, live in ((PARISH, parishes, owners.live_parish),
                              (CHURCH, churches, owners.live_church)):
@@ -1237,7 +1243,7 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     that is blank where the live row has a value (coordinates from `geocode`,
     flags from `verify`) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share
-    its slug with a live row from then on.
+    its slug with a live row from then on; an `unpublished` one loses its stamp.
     """
     d = _ready(diocese)
     after = d.copy()
@@ -1299,9 +1305,13 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     )
 
     if not dry_run:
-        for kind in (PARISH, CHURCH):
-            for r in after.of(kind).values():
-                r["promoted"] = r.get("promoted") or stamp
+        # The stamp means "owns a live row", so an unpublished record carries none.
+        for kind, off_site in ((PARISH, unpublished_p), (CHURCH, unpublished_c)):
+            for slug, r in after.of(kind).items():
+                if slug in off_site:
+                    r.pop("promoted", None)
+                else:
+                    r["promoted"] = r.get("promoted") or stamp
         _write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
         _write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
         _save(d, after)

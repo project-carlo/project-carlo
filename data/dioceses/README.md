@@ -78,8 +78,10 @@ than reopening them):
    goes in whether or not the diocese's directory lists it.
 4. The site shows only places it can give a schedule for. A `no_bulletin` parish row and its
    churches stay in the records, with their evidence and a `revisit`, but `promote` leaves
-   them out of the live CSVs (and removes them if they were live). Setting the row to a real
-   provider when a bulletin turns up puts it back. (Settled 2026-10-07; until then these rows
+   them out of the live CSVs (and removes them if they were live, which `validate` warns about
+   until it is done), and they carry no `promoted` stamp. `coverage` counts their churches as
+   accounted for but not in its `modelled` figure. Setting the row to a real provider when a
+   bulletin turns up puts it back. (Settled 2026-10-07; until then these rows
    were kept on the map with no Mass times.) A place that was never a parish row of its own
    goes in `excluded/` with `reason: no-bulletin` as before.
 

@@ -20,10 +20,9 @@ evidence:
   seen: 2026-10-07
   quote: Sun. 9 a.m. Our Lady of Hope Buffalo
   note: Open with public Mass; the Saturday page lists "Sat. 4 p.m. Our Lady of Hope Buffalo".
-promoted: 2026-09-26
 revisit: Look for a bulletin on ourladyofhopewny.org (Cloudflare blocks automated reads), ParishesOnline
   our-lady-of-hope-14213 or Discover Mass
-revisit_after: '2027-01-15'
+revisit_after: 2027-01-15
 ---
 
 ## Publisher

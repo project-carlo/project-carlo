@@ -3,47 +3,45 @@ name: St. Frances Xavier Cabrini Parish
 website: https://cabriniroc.org/faq
 bulletin_provider: no_bulletin
 provider_id: ''
-publication:
-- url:https://cabriniroc.org/faq
+publication: ['url:https://cabriniroc.org/faq']
 group: ''
 evidence:
 - url: https://cabriniroc.org/faq
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 'To view our September 5-6th bulletin click on the following link:'
   note: '"Parish Bulletin" section of the English FAQ page (eCatholic, behind Cloudflare; read with visit.py):
     one Google Drive file link, https://drive.google.com/file/d/1aeIO3IX6qAqL_7TpxOPcLmyWERxDuKaz/view?usp=sharing.
     The Spanish page /preguntas-frecuentes carries a different file (…1FLga19-YA4SNVTWwN9wtmjXzsHitW_qV…)
     for the same issue. Neither the home page nor any other page links a Drive folder.'
 - url: https://drive.google.com/uc?export=download&id=1aeIO3IX6qAqL_7TpxOPcLmyWERxDuKaz
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: MASS at Annunciation—For Ida Caruso  by Carmen Caruso
   note: 'The 5-6 September 2026 issue (and the week to 13 September): masses at Annunciation (Saturday
     4:00 pm), Corpus Christi (Sunday 8:30 am English, 10:00 am Spanish) and Saint Michael (Sunday 11:45
     am Spanish). Read via drive.google.com/uc?export=download.'
 - url: https://cabriniroc.org/faq
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Saturday 4 pm at Annunciation 1760 Norton St
   note: 'FAQ page Mass schedule: English Saturday 4 pm Annunciation; Sunday 8:30 am Corpus Christi 864
     E Main St; Spanish Sunday 10 am Corpus Christi, 11:45 am Saint Michael "859 N Clinton Ave"; Tuesday
     12:10 pm; Friday 6:15 pm Corpus Christi.'
 - url: https://ps.dor.org/directory/st-frances-xavier-cabrini-parish/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Church of the Annunciation, 1760 Norton Street Corpus Christi Church, 864 East Main Street St.
     Michael's Church, 869 N. Clinton Avenue
   note: 'Diocesan directory listing: the parish was constituted from twelve former parishes; "Of all the
     former churches only Annunciation, Corpus Christi and Saint Michael''s remain as Catholic Churches,
     others have been repurposed or demolished."'
 - url: https://cabriniroc.org/faq
-  seen: '2026-10-07'
+  seen: 2026-10-07
   quote: 'To view our September 5-6th bulletin click on the following link:'
   note: Unchanged since 2 October (read in headed Chrome). The Spanish page /preguntas-frecuentes still
     links "Boletin Cabrini 5 y 6 de septiembre de 2026". files.ecatholic.com/29120/bulletins/<date>.pdf
     answers 403 (not there) for every Sunday from 6 September to 11 October.
-promoted: 2026-10-02
 revisit: Check cabriniroc.org/faq and /preguntas-frecuentes, and the parish Facebook, for a bulletin newer
   than 5-6 September 2026; if one is posted weekly, set the row back to `other` (the fetch needs a recipe
   or a resolver fix, see Website and bulletin provider)
-revisit_after: '2027-01-15'
+revisit_after: 2027-01-15
 ---
 
 ## Publisher

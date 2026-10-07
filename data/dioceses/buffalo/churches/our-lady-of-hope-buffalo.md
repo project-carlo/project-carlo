@@ -29,7 +29,6 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''Our Lady of Hope, Buffalo'': Sat.
     4 p.m.; Sun. 9 a.m.; Sun. 11 a.m..'
-promoted: 2026-09-26
 ---
 
 ## Holds Mass
