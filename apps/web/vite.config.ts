@@ -97,6 +97,12 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"),
     },
   },
+  environments: {
+    client: {
+      // scripts/prerender.ts reads it to link the built stylesheet and fonts.
+      build: { manifest: true },
+    },
+  },
   build: {
     rollupOptions: {
       output: {
