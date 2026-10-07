@@ -28,6 +28,15 @@ evidence:
   quote: Sacramental Records for St. Mary's are retained at Holy Cross, DeWitt.
   note: 'Diocese page (Cloudflare; read with visit.py): "Physical Address 6443 East Seneca Turnpike, Jamesville,
     NY 13078", office c/o Holy Cross.'
+- url: https://www.holycrossdewitt.org/s/2026-08-23-Holy-Cross-Bulletin.pdf
+  seen: 2026-10-07
+  quote: Holy Hour at St. Mary's, Jamesville
+  note: 23 August 2026 Holy Cross bulletin, page 3, the Holy Hour of 27 August 2026. The 30 August and
+    6 September 2026 issues (the newest posted on 2026-10-07) name no Mass or service at St. Mary's.
+- url: https://www.holycrossdewitt.org/events?format=json
+  seen: 2026-10-07
+  note: 'Holy Cross events calendar: its only St. Mary''s entries are "Mass at St. Mary''s" (9 October 2025)
+    and "Holy Hour at St. Mary''s" (21 October 2025), both past.'
 parish: holy-cross-dewitt
 line1: 6443 East Seneca Turnpike
 city: Jamesville

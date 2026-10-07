@@ -40,7 +40,8 @@ META_FILE = "diocese.md"
 ROSTERS_DIR = "rosters"
 LIVE = "live"  # how `search` labels rows of data/parishes.csv and data/churches.csv
 
-# Every value data/parishes.csv uses. `fetch` reads the first four.
+# Every value a parish record may use. `fetch` reads the first four; `no_bulletin`
+# rows stay out of data/parishes.csv (see `unpublished`).
 NO_BULLETIN = "no_bulletin"
 KNOWN_BULLETIN_PROVIDERS = frozenset(
     {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive", NO_BULLETIN}

@@ -50,8 +50,9 @@ promoted: 2026-10-02
 ## What is known
 
 No current Mass has been found at St. Patrick, Savannah. The Catholic Parishes of Eastern
-Wayne County bulletin of 4 October 2026 (ParishesOnline 06/0326), and the three issues before
-it, schedule St. Joseph the Worker's Masses at Lyons and Clyde only; the parish's Mass page lists
+Wayne County bulletin of 4 October 2026 (ParishesOnline 06/0326), and the 27 September, 20
+September and 6 September issues, schedule St. Joseph the Worker's Masses at Lyons and Clyde
+only; the parish's Mass page lists
 none at Savannah, its Savannah page has no Mass-times line, and the Locator says "Sacraments
 Only". Against that, the diocese's directory (updated January 2025) still lists a Sunday 4:00 PM
 Mass here, and the parish page says the church offers Mass. Details are under *When it was a
