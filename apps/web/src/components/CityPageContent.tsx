@@ -5,6 +5,7 @@ import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
 import type { EventSummary, EventType } from "../types";
 import { formatAddress } from "../utils";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { CityMapPreview } from "@/components/CityMapPreview";
 import { Fleuron } from "@/components/Fleuron";
 import { MapPinIcon } from "@/components/icons";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -215,6 +216,8 @@ export function CityPageContent({ data }: { data: CityPageData }) {
             className="rise-in mx-auto max-w-3xl"
             style={{ animationDelay: "80ms" }}
           >
+            <CityMapPreview data={data} className="mt-1 mb-3" />
+
             <section aria-label={`Churches in ${city.name}`} className="mt-2">
               <ul className="divide-y divide-rule">
                 {churches.map((entry) => (

@@ -273,9 +273,22 @@
   border: none;
 }
 
-/* OSM tiles: muted to match the missal card UI (ChurchMap). */
-.leaflet-container.church-map .leaflet-tile-pane {
+/* OSM tiles: muted to match the missal card UI (ChurchMap, and the city
+ * page's still preview in CityMapPreview). */
+.leaflet-container.church-map .leaflet-tile-pane,
+.city-map-tiles {
   filter: saturate(0.78) brightness(1.02) contrast(1.08) hue-rotate(-8deg);
+}
+
+/* The city preview's pins and attribution, dressed like the home map's. */
+.city-map-pin {
+  filter: drop-shadow(0 2px 3px rgb(22 18 16 / 0.28));
+}
+.city-map-attribution {
+  background: color-mix(in oklch, var(--paper) 82%, transparent);
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-family: var(--font-sans);
 }
 
 /* Links inside the map (popup body, attribution) are rubric, not Leaflet's

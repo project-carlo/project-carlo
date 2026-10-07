@@ -35,6 +35,7 @@ import {
   type ClusterIndex,
   type MapCluster,
 } from "../lib/mapClusters";
+import { CHURCH_PIN_OUTLINE } from "../lib/churchPin";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
 import { Fleuron } from "@/components/Fleuron";
@@ -77,7 +78,7 @@ const markerSpriteSvg = `
     </filter>
   </defs>
   <symbol id="${CHURCH_PIN_ID}" viewBox="0 0 34 42" fill="none">
-    <path d="M17 2C9.27 2 3 8.27 3 16c0 3.7 1.73 7.3 4 10.5C9.5 30 13.5 34.4 15.8 38.6a1.35 1.35 0 0 0 2.4 0C20.5 34.4 24.5 30 27 26.5 29.27 23.3 31 19.7 31 16 31 8.27 24.73 2 17 2Z"
+    <path d="${CHURCH_PIN_OUTLINE}"
           fill="var(--paper)" stroke="var(--brass)" stroke-width="1.3" />
     <circle cx="17" cy="16" r="9.5" fill="none" stroke="var(--rule-strong)" stroke-width="0.8" />
     <g stroke="var(--rubric)" stroke-width="2" stroke-linecap="round">

@@ -40,3 +40,19 @@ test("a city with no churches renders the not-found page", async ({ page }) => {
     page.getByRole("heading", { name: "City not found" }),
   ).toBeVisible({ timeout: 15_000 });
 });
+
+test("a city page's map preview opens the full map on the city", async ({
+  page,
+}) => {
+  await page.goto("/churches/");
+  await page.locator('h2 a[href^="/mass-times/"]').first().click();
+
+  const preview = page.getByRole("link", {
+    name: /^Open the map of churches around /,
+  });
+  await expect(preview).toBeVisible();
+  await preview.click();
+
+  await expect(page).toHaveURL(/\/\?lat=-?[\d.]+&lng=-?[\d.]+&z=\d+$/);
+  await expect(page.locator(".church-map")).toBeVisible({ timeout: 15_000 });
+});
