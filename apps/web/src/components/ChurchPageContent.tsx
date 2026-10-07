@@ -219,19 +219,6 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
             </p>
           ) : null}
 
-          {/* How fresh the times are: the first thing to weigh before
-              trusting one. Exempt from the sitemap's change dates, which
-              would otherwise move every week with the bulletin. One string,
-              so the element holds text only. */}
-          {church.bulletin_week && events.length > 0 ? (
-            <p
-              {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}
-              className="mt-2 font-serif text-[0.9rem] italic text-ink-faint"
-            >
-              {`Times from the bulletin for the week of ${formatLongDate(church.bulletin_week)}`}
-            </p>
-          ) : null}
-
           <Fleuron className="my-7" />
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
@@ -278,6 +265,19 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
 
         {events.length > 0 ? (
           <div className="mx-auto mt-6 max-w-4xl md:mt-8">
+            {/* How fresh the times are, heading the times it dates. Exempt
+                from the sitemap's change dates, which would otherwise move
+                every week with the bulletin. One string, so the element
+                holds text only. */}
+            {church.bulletin_week ? (
+              <p
+                {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}
+                className="rise-in mb-8 font-serif text-[0.9rem] italic text-ink-faint"
+                style={{ animationDelay: "80ms" }}
+              >
+                {`From the bulletin for the week of ${formatLongDate(church.bulletin_week)}`}
+              </p>
+            ) : null}
             <div className="rise-in space-y-12" style={{ animationDelay: "80ms" }}>
               {EVENT_TYPE_ORDER.map((eventType) => {
                 const section = byType[eventType];
