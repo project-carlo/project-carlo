@@ -4,7 +4,7 @@ state: NY
 website: https://www.dor.org
 status: promoted
 gcatholic: roch0
-promoted: 2026-10-02
+promoted: 2026-10-07
 ---
 
 Twelve counties of western and central New York: Monroe (Rochester), Livingston, Ontario,
@@ -186,3 +186,10 @@ Newest first: date, what was done, and the `pnpm diocese coverage` numbers after
     re-recorded.
   - **`recheck`:** quotes found except on Cloudflare- or captcha-blocked pages (Catholic
     Courier, some parish sites, Wix 429s) and image-only bulletins, whose readings are notes.
+- 2026-10-07: Audited the churches the site showed with no Mass. Cabrini (Annunciation, Corpus
+  Christi, St. Michael) is `no_bulletin`: `fetch` could not resolve its FAQ page's Drive link,
+  and the only bulletin there is still 5-6 September. Holy Apostles stays `no_bulletin` (its
+  Discover Mass page has no bulletins). Both are now kept off the site (README, Settled policy
+  4). St. Patrick, Savannah and St. Rose of Lima, Sodus Point (no 2026 Mass found) moved to
+  `open/` with `diocese question`, which takes them off the site. St. Jude, Fair Haven (summer)
+  stays a church row with no Mass this week. Promoted.

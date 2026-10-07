@@ -11,25 +11,22 @@ longitude: -77.6130002
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:17881
-- directory:358-st-michaels
+roster: ['gcatholic:17881', 'directory:358-st-michaels']
 evidence:
 - url: https://cabriniroc.org/faq
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Sunday 11:45 am at Saint Michael 859 N Clinton Ave
   note: 'FAQ page, Spanish Masses: "Sunday 11:45 am at Saint Michael 859 N Clinton Ave" and "Tuesday 12:10
     pm at San Michael 859 N Clinton Ave".'
 - url: https://ps.dor.org/directory/st-frances-xavier-cabrini-parish/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Sunday 11:45 AM at St. Michael - Spanish
   note: 'Diocesan directory: "St. Michael''s Church, 869 N. Clinton Avenue"; also "Tuesday 12:10 PM at
     Saint Michael - Spanish".'
 - url: https://gcatholic.org/churches/usa-02/17881
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 869 N Clinton Ave., Rochester, New York 14605
   note: 'GCatholic: "St. Michael", Plus Code 87M459FP+MM (36 m from the stored point).'
-promoted: 2026-10-02
 ---
 
 ## Holds Mass

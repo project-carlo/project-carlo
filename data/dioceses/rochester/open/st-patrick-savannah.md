@@ -1,16 +1,9 @@
 ---
-parish: catholic-parishes-eastern-wayne-county
 name: St. Patrick
-line1: 1583 Grand Avenue
-line2: ''
-city: Savannah
-state: NY
-postal_code: '13146'
-latitude: 43.0678125
-longitude: -76.7644375
-coordinates_from: gcatholic-plus-code
-name_verified: true
-address_verified: true
+revisit: Ask the parish office (315-902-4130) or read the Catholic Parishes of Eastern Wayne County bulletin
+  for any Mass at St. Patrick, Savannah; if one is held, make it a church row again, if the office says
+  none, exclude it
+revisit_after: 2027-01-15
 roster: ['gcatholic:17897', 'directory:364-st-patrick']
 evidence:
 - url: https://container.parishesonline.com/bulletins/06/0326/20261004B.pdf
@@ -46,16 +39,38 @@ evidence:
   seen: 2026-10-02
   note: 'Locator lists ''St. Patrick'', Clyde 14433 (really Savannah), group St. Joseph the Worker, with
     ''Mass: Sacraments Only''.'
-revisit: Check whether St. Patrick, Savannah has any public Mass (ask the parish office, 315-902-4130);
-  if not, exclude it with that source
-revisit_after: 2027-01-15
+parish: catholic-parishes-eastern-wayne-county
+line1: 1583 Grand Avenue
+city: Savannah
+state: NY
+postal_code: '13146'
 promoted: 2026-10-02
 ---
 
-## Holds Mass
+## What is known
+
+No current Mass has been found at St. Patrick, Savannah. The Catholic Parishes of Eastern
+Wayne County bulletin of 4 October 2026 (ParishesOnline 06/0326), and the 27 September, 20
+September and 6 September issues, schedule St. Joseph the Worker's Masses at Lyons and Clyde
+only; the parish's Mass page lists
+none at Savannah, its Savannah page has no Mass-times line, and the Locator says "Sacraments
+Only". Against that, the diocese's directory (updated January 2025) still lists a Sunday 4:00 PM
+Mass here, and the parish page says the church offers Mass. Details are under *When it was a
+church row* below.
+
+## Why it is not decided
+
+Nothing says Mass stopped here, or when, so it is not excluded. But no current source
+schedules one either, and on 7 October 2026 it was one of the churches showing on the site with
+no Mass at all, so it was moved here from `churches/` (an audit of churches with no listings).
+`promote` takes it off the site until the revisit settles it.
+
+## When it was a church row
+
+### Holds Mass
 
 **Not confirmed.** No current Mass was found. The 4 October 2026 bulletin and three earlier issues schedule Masses only at Lyons and Clyde for St. Joseph the Worker; the parish's Mass page lists none at Savannah; the parish's own Savannah page has no Mass-times line; the Locator says "Sacraments Only". Against that, the diocese's directory (updated January 2025) lists a Sunday 4:00 PM Mass at St. Patrick's, Savannah, and the parish page says the church offers Mass. Nothing states that Mass stopped or when, so the row is kept, not excluded, and given a revisit date. If an occasional Mass continues it belongs here; if the office confirms none, exclude it (`no-public-mass` or `closed` per what they say).
 
-## Name and address
+### Name and address
 
 **Address changed** from the live "52 Clyde Street" (no coordinates; no source supports it) to **1583 Grand Avenue**, Savannah 13146: DiscoverMass and an OSM address point say 1583 Grand Avenue; the parish page and GCatholic say "Grand Ave." without a number; the Locator lists the church as "Clyde" with no address. Name "St. Patrick" agrees across the parish page ("St. Patrick Church"), GCatholic and the Locator. The coordinates were missing; they are GCatholic's Plus Code, 15 m from the OSM address point.

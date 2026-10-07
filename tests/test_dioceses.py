@@ -263,7 +263,7 @@ def test_coverage_matches_links_and_reports(root: Path) -> None:
     ])
     cov = report.coverage("test")["rosters"][0]
     assert cov["counts"] == {"church": 3, "excluded": 1, "open": 0, "repeat": 1,
-                             "unmatched": 1}
+                             "unmatched": 1, "off_site": 0}
     assert cov["accounted_for"] == "4/5 (80%)"
     assert cov["unmatched"] == {"Family #1": [
         {"ref": "feed:5", "name": "Holy Cross", "address": "1 New Rd, Elsewhere"}]}
@@ -275,6 +275,14 @@ def test_coverage_matches_links_and_reports(root: Path) -> None:
     d = records.load("test")
     assert d.of(records.CHURCH)["st-ann-town"]["roster"] == ["feed:1"]
     assert d.of(records.CHURCH)["st-joseph-town"]["roster"] == ["feed:2"]  # not feed:6
+
+    # A church of a no_bulletin parish is accounted for but not on the site.
+    path = root / "parishes" / "st-ann.md"
+    _write(path, path.read_text(encoding="utf-8").replace(
+        "bulletin_provider: ecatholic", "bulletin_provider: no_bulletin"))
+    cov = report.coverage("test")["rosters"][0]
+    assert cov["counts"]["church"] == cov["counts"]["off_site"] > 0
+    assert cov["modelled"].startswith("0/")
 
 
 def test_city_aliases_catch_hamlet_names(root: Path) -> None:
@@ -366,6 +374,66 @@ def test_promote_adds_updates_and_retires_live_rows(root: Path) -> None:
     assert result["churches"]["removed"] == ["st-ann-town"]
     assert [r["slug"] for r in _live("PARISHES_CSV_PATH")] == ["live-parish", "family"]
     assert [r["slug"] for r in _live("CHURCHES_CSV_PATH")] == ["st-live", "st-bede-town"]
+
+
+def test_no_bulletin_parishes_stay_off_the_site(root: Path) -> None:
+    _parish()
+    _church()
+    _parish("quiet", bulletin_provider="no_bulletin")
+    _church("quiet-town", parish="quiet")
+    records.promote("test")
+    assert [r["slug"] for r in _live("PARISHES_CSV_PATH")] == ["live-parish", "st-ann"]
+    assert [r["slug"] for r in _live("CHURCHES_CSV_PATH")] == ["st-live", "st-ann-town"]
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert not [w for w in warnings if "data/" in w]               # not drift: never live
+    d = records.load("test")
+    assert "promoted" not in d.of(records.PARISH)["quiet"]          # owns no live row
+    assert "promoted" not in d.of(records.CHURCH)["quiet-town"]
+
+    # Switching a live row to no_bulletin takes it and its churches off the site...
+    path = root / "parishes" / "st-ann.md"
+    _write(path, path.read_text(encoding="utf-8").replace(
+        "bulletin_provider: ecatholic", "bulletin_provider: no_bulletin"))
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert "parish 'st-ann': no_bulletin, but still in data/parishes.csv; run `diocese " \
+        "promote` to take it off" in warnings
+    assert any(w.startswith("church 'st-ann-town': no_bulletin, but still") for w in warnings)
+    result = records.promote("test")
+    assert result["parishes"]["removed"] == ["st-ann"]
+    assert result["churches"]["removed"] == ["st-ann-town"]
+    assert [r["slug"] for r in _live("CHURCHES_CSV_PATH")] == ["st-live"]
+    assert "promoted" not in records.load("test").of(records.PARISH)["st-ann"]
+    # ...and a bulletin turning up puts it back.
+    _write(path, path.read_text(encoding="utf-8").replace(
+        "bulletin_provider: no_bulletin", "bulletin_provider: ecatholic"))
+    assert records.promote("test")["churches"]["added"] == ["st-ann-town"]
+
+
+def test_live_parishes_have_a_bulletin_provider() -> None:
+    live = Path(__file__).parents[1] / "data" / "parishes.csv"
+    with live.open(encoding="utf-8") as fh:
+        quiet = [r["slug"] for r in csv.DictReader(fh) if r["bulletin_provider"] == "no_bulletin"]
+    assert quiet == []
+
+
+def test_question_moves_a_church_to_open_and_off_the_site(root: Path) -> None:
+    _parish()
+    _church()
+    _church("st-ann-chapel", roster=["gcatholic:2"])
+    records.promote("test")
+    with pytest.raises(DioceseError, match="revisit"):
+        records.question_church("test", "st-ann-chapel", revisit=" ")
+    records.question_church("test", "st-ann-chapel", revisit="Look for a summer Mass",
+                            revisit_after="2027-06-01")
+    question = records.load("test").of(records.OPEN)["st-ann-chapel"]
+    assert question["revisit_after"] == "2027-06-01" and question["roster"] == ["gcatholic:2"]
+    assert "## When it was a church row" in question["body"]
+    assert not (root / "churches" / "st-ann-chapel.md").exists()
+
+    path = root / "open" / "st-ann-chapel.md"
+    _write(path, path.read_text(encoding="utf-8").replace("TODO: ", ""))
+    assert records.promote("test")["churches"]["removed"] == ["st-ann-chapel"]
+    assert [r["slug"] for r in _live("CHURCHES_CSV_PATH")] == ["st-live", "st-ann-town"]
 
 
 # ── Web helpers (no network) ────────────────────────────────────────────────

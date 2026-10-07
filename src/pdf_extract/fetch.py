@@ -47,6 +47,7 @@ from pdf_extract.parish_sites import Recipe, resolve_parish_site
 from pdf_extract.parish_sites.dates import safe_date
 from pdf_extract.parish_sites.links import registrable_domain, url_host
 from pdf_extract.pdf_compact import compact_bulletin_pdf
+from pdf_extract.pdf_truncate import max_pages_for
 from pdf_extract.runs import (
     FETCH_CURRENT,
     FETCH_DOWNLOAD_FAILED,
@@ -77,6 +78,13 @@ DISCOVER_MASS_TYPE = "discover_mass"
 OTHER_TYPE = "other"
 GOOGLE_DRIVE_TYPE = "google_drive"
 PARISHES_ONLINE_ORG_URL_TEMPLATE = "https://parishesonline.com/organization/{provider_id}"
+# A ParishesOnline issue's file name is its date and its type: `20261004B.pdf`
+# is the weekly bulletin, `20261004S.pdf` a "Special" insert (a worship aid, a
+# pledge card) that a parish can post for the same Sunday, or a week ahead.
+PARISHES_ONLINE_ISSUE_FILE = re.compile(r"/(\d{8})([A-Z])\.pdf$", re.IGNORECASE)
+# How much older than the newest issue listed a bulletin may be and still be
+# preferred to it. Past that, the parish has stopped posting "B" issues.
+PARISHES_ONLINE_BULLETIN_LAG_DAYS = 7
 DISCOVER_MASS_BULLETIN_URL_TEMPLATE = "https://discovermass.com/church/{provider_id}/"
 
 # Per-request timeout for direct PDF downloads over HTTP.
@@ -240,8 +248,35 @@ def _resolve_parishes_online_latest_link(
             provider_id=provider_id,
             base_url=org_url,
         ),
+        choose=_pick_parishes_online_issue,
         page=page,
     )
+
+
+def _parishes_online_issue(fetch_url: str) -> tuple[date | None, str]:
+    match = PARISHES_ONLINE_ISSUE_FILE.search(fetch_url)
+    if match is None:
+        return None, ""
+    stem = match.group(1)
+    return safe_date(int(stem[:4]), int(stem[4:6]), int(stem[6:8])), match.group(2).upper()
+
+
+def _pick_parishes_online_issue(candidates: list[tuple[str, str]]) -> tuple[str, str]:
+    """The newest weekly bulletin listed, unless it is a week older than the newest issue.
+
+    The organization page lists "Special" inserts among the bulletins, so the
+    first issue listed may be a worship aid for next Sunday. Without a dated
+    weekly bulletin to prefer, the first issue listed is taken, as before.
+    """
+    dated = [(day, kind, urls) for urls in candidates
+             for day, kind in [_parishes_online_issue(urls[1])] if day is not None]
+    bulletins = [(day, urls) for day, kind, urls in dated if kind == "B"]
+    if bulletins:
+        newest = max(day for day, _, _ in dated)
+        day, urls = max(bulletins, key=lambda b: b[0])
+        if (newest - day).days <= PARISHES_ONLINE_BULLETIN_LAG_DAYS:
+            return urls
+    return candidates[0]
 
 
 def _resolve_latest_anchor_link_with_playwright(
@@ -251,8 +286,10 @@ def _resolve_latest_anchor_link_with_playwright(
     source_label: str,
     href_to_urls: Callable[[str], tuple[str, str] | None],
     wait_for_state: str | None = None,
+    choose: Callable[[list[tuple[str, str]]], tuple[str, str]] | None = None,
     page: PageLike | None = None,
 ) -> tuple[str, str]:
+    """The first matching anchor on the page, or the one `choose` picks from all of them."""
     def _run(p: PageLike) -> tuple[str, str]:
         LOGGER.info("Resolving latest anchor link (%s)", source_label)
         LOGGER.info("Visiting page URL: %s", page_url)
@@ -264,6 +301,7 @@ def _resolve_latest_anchor_link_with_playwright(
             source_label=source_label,
         )
         anchors = p.query_selector_all(anchor_selector)
+        candidates: list[tuple[str, str]] = []
         for anchor in anchors:
             href = anchor.get_attribute("href")
             if not isinstance(href, str):
@@ -271,8 +309,13 @@ def _resolve_latest_anchor_link_with_playwright(
             urls = href_to_urls(href)
             if urls is None:
                 continue
+            if choose is None:
+                LOGGER.info("Resolved latest anchor link (%s)", source_label)
+                return urls
+            candidates.append(urls)
+        if candidates:
             LOGGER.info("Resolved latest anchor link (%s)", source_label)
-            return urls
+            return choose(candidates)
         raise ValueError(f"No matching anchor link found for {source_label} at {page_url}")
 
     if page is not None:
@@ -1086,7 +1129,10 @@ def _fetch_one(
         # repeatable, so a PDF already stored (by a run whose database was not
         # published) is left as it is.
         if not store.exists(key):
-            store.put(key, compact_bulletin_pdf(download.pdf), content_type="application/pdf")
+            store.put(
+                key, compact_bulletin_pdf(download.pdf, max_pages=max_pages_for(slug)),
+                content_type="application/pdf",
+            )
     except Exception as exc:
         LOGGER.warning("Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True)
         return _Fetched(

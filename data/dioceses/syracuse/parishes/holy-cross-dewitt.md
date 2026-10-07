@@ -45,10 +45,10 @@ office as "Located @ Holy Cross Church". Both publish their own bulletins (Paris
 
 ## Worship sites
 
-Two: Holy Cross itself (`holy-cross-dewitt`) and St. Mary's Oratory, 6443 East Seneca
-Turnpike, Jamesville (`st-marys-oratory-jamesville`), whose office and sacramental records
-are at Holy Cross (diocese page) and which the parish uses for an occasional Mass or holy
-hour (see that file).
+One: Holy Cross itself (`holy-cross-dewitt`). St. Mary's Oratory, 6443 East Seneca
+Turnpike, Jamesville, has its office and sacramental records at Holy Cross (diocese page)
+and is used for Holy Hours; its last Mass found was 9 October 2025, so on 2026-10-07 it was
+moved to `open/st-marys-oratory-jamesville` (see that file).
 
 ## Website and bulletin provider
 

@@ -186,6 +186,8 @@ HANDLERS: dict[str, Handler] = {
     "rename": lambda a: records.rename_record(a.diocese, a.kind, a.old, a.new),
     "exclude": lambda a: records.exclude_church(a.diocese, a.church, reason=a.reason,
                                                 last_mass=a.last_mass or ""),
+    "question": lambda a: records.question_church(a.diocese, a.church, revisit=a.revisit,
+                                                  revisit_after=a.revisit_after or ""),
     "coverage": lambda a: report.coverage(a.diocese, a.roster, link=a.link,
                                           show_matched=a.show_matched),
     "audit": lambda a: report.audit(a.diocese, fetch=a.fetch),
@@ -300,6 +302,13 @@ def add_diocese_parser(
     p.add_argument("church", help="church slug")
     p.add_argument("--reason", required=True, choices=list(EXCLUSION_REASONS))
     p.add_argument("--last-mass", help="date of the last Mass, if known")
+
+    p = leaf("question", "question",
+             "Turn a church into an open question (no current Mass found, not known closed)")
+    p.add_argument("diocese")
+    p.add_argument("church", help="church slug")
+    p.add_argument("--revisit", required=True, help="the next thing to check")
+    p.add_argument("--revisit-after", help="date to check it on")
 
     roster = group("roster", "Outside lists to measure the diocese against (rosters/*.json)")
     p = leaf("list", "roster-list", "Rosters of a diocese", roster)

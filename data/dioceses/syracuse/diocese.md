@@ -6,7 +6,7 @@ status: promoted
 gcatholic: syra0
 city_aliases:
   Port Crane: Sanitaria Springs
-promoted: 2026-09-26
+promoted: 2026-10-07
 ---
 
 Seven counties of central New York: Onondaga (Syracuse), Oneida (Utica, Rome), Madison,
@@ -131,3 +131,10 @@ Weebly, Designrr flipbooks). Things worth knowing:
   (syracusediocese.org and six parish sites, each noted as read in a browser) and one
   Designrr flipbook. Corrected Holy Spirit's merger from 2020 to 1 July 2026 (the articles
   are dated June 2026; the weekdays fit both years). Promoted.
+- 2026-10-07: Audited the churches the site showed with no Mass. St. Mary's Oratory, Jamesville
+  (last Mass found 9 October 2025; Holy Hours since) moved to `open/` with `diocese question`.
+  Stay church rows with no Mass this week: St. Charles, Syracuse (closed for renovation since
+  August), St. Mary of Mount Carmel, Florence (one Mass a year), and O'Heron Newman Hall and St.
+  Lawrence, DeRuyter (weekly Masses that the 4 October Cortland bulletin did not print; the site
+  reads only each parish's latest bulletin). Holy Cross, DeWitt has posted nothing since its 6
+  September issue. Promoted.

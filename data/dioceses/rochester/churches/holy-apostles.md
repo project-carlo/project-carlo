@@ -31,7 +31,6 @@ evidence:
   seen: 2026-10-02
   quote: 530 Lyell Ave., Rochester, New York 14606
   note: 'GCatholic: "Holy Apostles", 22 m from the stored point.'
-promoted: 2026-10-02
 ---
 
 ## Holds Mass

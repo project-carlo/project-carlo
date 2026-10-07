@@ -11,29 +11,26 @@ longitude: -77.589501
 coordinates_from: geocode-stage
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:17893
-- directory:358-corpus-christi-our-lady-of-the-americas
+roster: ['gcatholic:17893', 'directory:358-corpus-christi-our-lady-of-the-americas']
 evidence:
 - url: https://cabriniroc.org/faq
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Sunday 8:30 am at Corpus Christi 864 E Main St
   note: 'FAQ page: English Sunday 8:30 am, Spanish Sunday 10 am, Friday 6:15 pm (and Holy Hour 7 pm) at
     Corpus Christi.'
 - url: https://ps.dor.org/directory/st-frances-xavier-cabrini-parish/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: Sunday 8:30 AM at Corpus Christi - English
   note: 'Diocesan directory: "Corpus Christi Church, 864 East Main Street"; Sunday 10:00 AM Spanish.'
 - url: https://gcatholic.org/churches/usa-02/17893
-  seen: '2026-10-02'
+  seen: 2026-10-02
   quote: 864 E Main St., Rochester, New York 14605
   note: GCatholic lists this building as "Our Lady of the Americas" (Plus Code 87M45C66+C7, 18 m from
     the stored point).
 - url: https://www.dor.org/parishes-campuses-cemeteries/parish-locator-and-mass-times/
-  seen: '2026-10-02'
+  seen: 2026-10-02
   note: 'Locator entry "Corpus Christi (Our Lady of the Americas)", 864 E. Main Street, Rochester, "Mass:
     Sun: 8:45am (English), 10:45am (Spanish)" (stale times).'
-promoted: 2026-10-02
 ---
 
 ## Holds Mass

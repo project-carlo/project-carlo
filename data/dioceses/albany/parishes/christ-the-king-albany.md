@@ -41,6 +41,8 @@ ctkparishny.org (directory and GCatholic link). Its /bulletins page embeds the P
 widget; visit.py found `lpi:0018000000Qbz93AAB` and container 03/0863, and `probe po` gave the
 org slug christ-the-king-church-12203.
 
+The organization also posts "Special" issues (`<date>S.pdf`, e.g. a Creed card on 4 October 2026 and an 11 October one posted ahead), listed above the bulletin. Until 2026-10-07 `fetch` took the first issue listed, so it read the 4 October Special and the site showed no Mass here; it now prefers the regular bulletin (`<date>B.pdf`).
+
 ## Not yet confirmed
 
 Nothing.

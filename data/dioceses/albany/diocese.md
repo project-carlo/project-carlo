@@ -4,7 +4,7 @@ state: NY
 website: https://www.rcda.org
 status: promoted
 gcatholic: alba4
-promoted: 2026-09-28
+promoted: 2026-10-07
 ---
 
 Fourteen counties of eastern New York: Albany, Schenectady, Rensselaer, Saratoga, Warren,
@@ -189,3 +189,8 @@ self-hosted pages, the diocese's parish mini-sites, Wix, Weebly, WordPress and G
     were blocked varied from run to run (4 to 11 of 16), and each resolved on another
     run, except two blocked on all three: All Saints, Albany (eCatholic) and Holy Family,
     Little Falls (`other`). Nine sites are replay fixtures.
+- 2026-10-07: Audited the churches the site showed with no Mass. Walton, Delhi and Downsville
+  (`st-john-the-baptist-walton`) never fetched as `other`: the site builds its bulletin list in
+  the browser from a Drive folder, so the row now reads that folder (`google_drive`,
+  `drive-folder` recipe; resolves to the 11 October issue). Christ the King, Albany had been read
+  from a ParishesOnline "Special" issue; `fetch` now prefers the regular bulletin. Promoted.
