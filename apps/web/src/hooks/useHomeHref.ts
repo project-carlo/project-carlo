@@ -2,7 +2,7 @@ import { useState } from "react";
 
 /**
  * The map page keeps its full state (filters + camera) in the URL query string.
- * In-app "Back to map" links are plain pushes to "/", though, so without help
+ * In-app links to the map are plain pushes to "/", though, so without help
  * they'd drop that state. We stash the last map query string in sessionStorage
  * whenever it changes and replay it here, so returning to the map restores the
  * exact filters and view the user left — regardless of how they navigated away.
@@ -28,7 +28,7 @@ function readHomeSearch(): string {
 }
 
 /**
- * Returns the href for "Back to map" links: "/" plus the remembered query
+ * Returns the href for in-app links to the map: "/" plus the remembered query
  * string. Read once on mount — these links live on pages that don't outlive a
  * single visit, so there's no need to react to later storage writes.
  */

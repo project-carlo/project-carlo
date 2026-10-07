@@ -59,7 +59,7 @@ export function CityPage() {
     return (
       <NotFoundPage
         title="City not found"
-        message="We don't list any churches in that city yet."
+        message="We don’t list any churches in that city yet."
       />
     );
   }
@@ -75,7 +75,7 @@ export function CityPage() {
         ) : null}
         {cityQuery.error ? (
           <InlineQueryError
-            message={"We couldn't load the churches in this city."}
+            message="We couldn’t load the churches in this city."
             onRetry={() => cityQuery.refetch()}
           />
         ) : null}

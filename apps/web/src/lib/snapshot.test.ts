@@ -82,8 +82,17 @@ describe("parseSnapshot", () => {
       ...s.churches[1],
       homepage_url: "https://a",
       bulletin_url: null,
+      bulletin_week: null,
     });
+    expect(s.churchDetail("b")?.bulletin_week).toBe("2026-09-20");
     expect(s.churchDetail("missing")).toBeNull();
+  });
+
+  it("reads a column added since version 1 as null when a snapshot lacks it", () => {
+    const churches: Partial<typeof fixture.churches> = { ...fixture.churches };
+    delete churches.bulletin_week;
+    const older = parseSnapshot(JSON.stringify({ ...fixture, churches }));
+    expect(older.churchDetail("b")?.bulletin_week).toBeNull();
   });
 
   it("groups events by church, in id order", () => {
@@ -95,7 +104,9 @@ describe("parseSnapshot", () => {
 
   it("refuses another format version", () => {
     const other = { ...fixture, version: SNAPSHOT_VERSION + 1 };
-    expect(() => parseSnapshot(JSON.stringify(other))).toThrow(/format version 2/);
+    expect(() => parseSnapshot(JSON.stringify(other))).toThrow(
+      `format version ${SNAPSHOT_VERSION + 1}`,
+    );
     expect(() => parseSnapshot(JSON.stringify(other))).toThrow(SnapshotVersionError);
     expect(() => parseSnapshot("null")).toThrow(/format version undefined/);
   });

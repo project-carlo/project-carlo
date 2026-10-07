@@ -44,6 +44,8 @@ test("the church index says when nothing matches", async ({ page }) => {
   await page
     .getByRole("searchbox", { name: "Search churches and cities" })
     .fill("zzzz-no-such-church");
-  await expect(page.getByText("No churches or cities match your search.")).toBeVisible();
+  await expect(
+    page.getByText("No churches or cities match “zzzz-no-such-church”."),
+  ).toBeVisible();
   await expect(page.locator("[data-city-group]").filter({ visible: true })).toHaveCount(0);
 });

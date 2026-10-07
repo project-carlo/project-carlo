@@ -9,6 +9,7 @@ import type { FilterState } from "./filterState";
 import { useDocumentLinks } from "../lib/documentLinks";
 import { isAboutPageEnabled } from "../lib/featureFlags";
 import { CHURCH_INDEX_PATH } from "../lib/seo";
+import { ALL_CHURCHES } from "../copy";
 import type { PlaceSearchResult } from "../placeSearch";
 
 const aboutPageEnabled = isAboutPageEnabled();
@@ -73,7 +74,7 @@ export function MapOverlay({
                   href={CHURCH_INDEX_PATH}
                   className="rubric-link font-serif text-[0.9375rem]"
                 >
-                  All churches
+                  {ALL_CHURCHES}
                 </a>
                 {aboutPageEnabled ? (
                   <Link

@@ -50,6 +50,6 @@ test("the home map has zoom buttons on a desktop, not on a phone", async ({
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(zoomIn).toHaveCount(0);
   await expect(
-    page.getByRole("button", { name: "Go to my exact location" }),
+    page.getByRole("button", { name: "Use my location", exact: true }),
   ).toBeVisible();
 });

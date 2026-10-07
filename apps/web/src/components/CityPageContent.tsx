@@ -14,6 +14,7 @@ import type { CityMapConfig } from "@/lib/cityMap";
 import type { ScheduleRollupRow } from "@/lib/eventRollup";
 import { weeklyScheduleRows } from "@/lib/scheduleSummary";
 import { CHURCH_INDEX_PATH, churchPath } from "@/lib/seo";
+import { ALL_CHURCHES, DISCLAIMER, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";
 
 /** The services a card tucks behind "Confession & Adoration times". */
 const SECONDARY_TYPES: EventType[] = ["confession", "adoration"];
@@ -131,7 +132,7 @@ function CityChurch({ entry }: { entry: CityChurchEntry }) {
     <li className="py-7">
       <h3 className="font-display text-[1.5rem] leading-tight text-ink">
         <Link to={churchPath(church.slug)} className="hover:text-rubric-deep">
-          {church.name ?? "Unnamed church"}
+          {church.name ?? UNNAMED_CHURCH}
         </Link>
       </h3>
       {address ? (
@@ -161,7 +162,7 @@ function NearbyChurch({ entry }: { entry: CityChurchEntry }) {
     <li className="py-6">
       <h3 className="font-display text-[1.3rem] leading-tight text-ink">
         <Link to={churchPath(church.slug)} className="hover:text-rubric-deep">
-          {church.name ?? "Unnamed church"}
+          {church.name ?? UNNAMED_CHURCH}
         </Link>
       </h3>
       <p className="mt-1 font-serif text-[0.95rem] text-ink-soft">
@@ -210,7 +211,7 @@ export function CityPageContent({
             <Breadcrumbs
               className="mb-6"
               crumbs={[
-                { label: "All churches", href: CHURCH_INDEX_PATH },
+                { label: ALL_CHURCHES, href: CHURCH_INDEX_PATH },
                 { label: city.label },
               ]}
             />
@@ -218,7 +219,7 @@ export function CityPageContent({
               Mass Times in {city.label}
             </h1>
             <p className="mt-4 font-serif text-[1rem] text-ink-soft">
-              Sourced from each parish&rsquo;s weekly bulletin.
+              Times {SOURCE_PHRASE}.
             </p>
             <Fleuron className="mt-7" />
           </section>
@@ -265,16 +266,14 @@ export function CityPageContent({
           <div className="mx-auto mt-16 max-w-2xl">
             <Fleuron solo className="text-brass" />
             <p className="mt-4 text-center font-serif text-[0.9rem] text-ink-faint">
-              Mass times are extracted with AI from each parish&apos;s latest
-              available bulletin and may contain mistakes. Please confirm details
-              with an official parish source before attending.
+              {DISCLAIMER}
             </p>
           </div>
         </div>
       </main>
       <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
         <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-          Browse all churches
+          {ALL_CHURCHES}
         </a>
       </footer>
     </>

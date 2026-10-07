@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   LASTMOD_PLACEHOLDER,
   contentForHash,
+  LASTMOD_EXEMPT_ATTRIBUTE,
   latestDate,
   parseLastmodManifest,
   resolveLastmod,
@@ -53,6 +54,17 @@ describe("contentForHash", () => {
       "/assets/index-BBB.css",
     ]);
     expect(a).toBe(b);
+  });
+
+  it("ignores the text of exempt elements, but not the rest", () => {
+    const page = (week: string, mass: string) =>
+      `<p class="x" ${LASTMOD_EXEMPT_ATTRIBUTE}="">Times from the week of ${week}</p><p>Mass ${mass}</p>`;
+    expect(contentForHash(page("October 4", "9:00"), [])).toBe(
+      contentForHash(page("October 11", "9:00"), []),
+    );
+    expect(contentForHash(page("October 4", "9:00"), [])).not.toBe(
+      contentForHash(page("October 4", "9:30"), []),
+    );
   });
 
   it("keeps content changes", () => {

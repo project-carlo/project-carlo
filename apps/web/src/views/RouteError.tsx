@@ -32,7 +32,7 @@ function RouteErrorScreen() {
         Something went wrong
       </h1>
       <p className="max-w-md font-serif text-base text-ink-soft">
-        This page didn't load properly. Reloading usually fixes it.
+        This page didn’t load properly. Reloading usually fixes it.
       </p>
       <button
         type="button"

@@ -61,6 +61,11 @@ export const CHURCH_INDEX_SEARCH_SCRIPT = `(() => {
         ? ""
         : "Showing " + shown + " of " + total + " churches.";
     empty.hidden = words.length === 0 || shown > 0;
+    if (!empty.hidden) {
+      empty.textContent =
+        "No churches or cities match \u201c" + input.value.trim() + "\u201d. " +
+        "Try fewer words, or just the town.";
+    }
   };
 
   input.addEventListener("input", apply);

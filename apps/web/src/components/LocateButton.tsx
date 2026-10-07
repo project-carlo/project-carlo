@@ -1,5 +1,6 @@
 import { CrosshairIcon } from "@/components/icons";
 import type { BrowserLocationStatus } from "../hooks/useBrowserLocation";
+import { FINDING_YOUR_LOCATION, USE_MY_LOCATION } from "../copy";
 
 interface LocateButtonProps {
   status: BrowserLocationStatus;
@@ -9,7 +10,7 @@ interface LocateButtonProps {
 }
 
 /**
- * The map's "go to my exact location" control, in the corner where maps keep
+ * The map's "Use my location" control, in the corner where maps keep
  * it. It asks the browser for the visitor's position, which is far closer
  * than the IP estimate the map may have started from.
  */
@@ -29,10 +30,8 @@ export function LocateButton({ status, error, onLocate }: LocateButtonProps) {
         type="button"
         onClick={onLocate}
         disabled={requesting}
-        aria-label={
-          requesting ? "Finding your location…" : "Go to my exact location"
-        }
-        title="Go to my exact location"
+        aria-label={requesting ? FINDING_YOUR_LOCATION : USE_MY_LOCATION}
+        title={USE_MY_LOCATION}
         className="missal-focus flex size-11 shrink-0 items-center justify-center border border-rule-strong bg-paper/96 text-ink-soft shadow-missal-floating backdrop-blur-sm transition-colors hover:text-rubric disabled:cursor-wait"
       >
         <CrosshairIcon

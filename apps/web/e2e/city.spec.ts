@@ -67,7 +67,7 @@ test("a city page's map is live in the page, and opens to the full map view", as
   await expect(dialog.getByPlaceholder(/Search for a city/)).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Confession" })).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Zoom in" })).toBeVisible();
-  await expect(dialog.getByRole("button", { name: "Go to my exact location" })).toBeVisible();
+  await expect(dialog.getByRole("button", { name: "Use my location", exact: true })).toBeVisible();
   // The search's suggestions open over the map, not under it.
   await dialog.getByPlaceholder(/Search for a city/).fill("Buffalo");
   await page

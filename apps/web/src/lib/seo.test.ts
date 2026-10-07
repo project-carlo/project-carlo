@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { ChurchDetail } from "../types";
 import {
+  buildChurchTitle,
   buildCityDescription,
   churchBreadcrumbJsonLd,
   churchJsonLd,
@@ -21,6 +22,7 @@ const church: ChurchDetail = {
   longitude: -77.647,
   homepage_url: "https://stcharlesgreece.org",
   bulletin_url: null,
+  bulletin_week: null,
 };
 
 describe("churchJsonLd", () => {
@@ -77,6 +79,23 @@ describe("churchBreadcrumbJsonLd", () => {
       "https://projectcarlo.com/churches/",
       url,
     ]);
+  });
+});
+
+describe("church page title", () => {
+  it("leads with the church and its town", () => {
+    expect(buildChurchTitle(church)).toBe(
+      "St. Charles Borromeo, Rochester — Mass & Confession Times",
+    );
+  });
+
+  it("falls back to the state, then to the name alone", () => {
+    expect(buildChurchTitle({ ...church, city: null })).toBe(
+      "St. Charles Borromeo, NY — Mass & Confession Times",
+    );
+    expect(buildChurchTitle({ ...church, city: " ", state: null })).toBe(
+      "St. Charles Borromeo — Mass & Confession Times",
+    );
   });
 });
 

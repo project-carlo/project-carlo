@@ -27,9 +27,17 @@ type Table<Row> = { [K in keyof Row]: Column<Row[K]> };
 /** A table decoded: one plain array per field. */
 type Columns<Row> = { [K in keyof Row]: Row[K][] };
 
+/**
+ * Church columns added since version 1 shipped (the pipeline's
+ * ADDED_COLUMNS). A snapshot written before one was added lacks it, and it
+ * reads as null: such a snapshot is still served while a deploy is pending.
+ */
+type AddedChurchColumns = "bulletin_week";
+
 interface SnapshotDocument {
   version: number;
-  churches: Table<ChurchDetail>;
+  churches: Table<Omit<ChurchDetail, AddedChurchColumns>> &
+    Partial<Table<Pick<ChurchDetail, AddedChurchColumns>>>;
   events: Table<EventRow>;
 }
 
@@ -122,7 +130,10 @@ export function parseSnapshot(json: string): Snapshot {
     );
   }
 
-  const c = decodeTable(document.churches);
+  const c = decodeTable(document.churches) as Columns<
+    Omit<ChurchDetail, AddedChurchColumns>
+  > &
+    Partial<Columns<Pick<ChurchDetail, AddedChurchColumns>>>;
   const churches: ChurchBase[] = c.id.map((id, row) => ({
     id,
     parish_id: c.parish_id[row],
@@ -137,7 +148,11 @@ export function parseSnapshot(json: string): Snapshot {
     longitude: c.longitude[row],
   }));
   const rowBySlug = new Map(c.slug.map((slug, row) => [slug, row]));
-  const { homepage_url: homepageUrls, bulletin_url: bulletinUrls } = c;
+  const {
+    homepage_url: homepageUrls,
+    bulletin_url: bulletinUrls,
+    bulletin_week: bulletinWeeks,
+  } = c;
 
   const e = decodeTable(document.events);
   const events: RawEvent[] = e.id.map((_, row) => new SnapshotEvent(e, row));
@@ -154,6 +169,7 @@ export function parseSnapshot(json: string): Snapshot {
         ...churches[row],
         homepage_url: homepageUrls[row],
         bulletin_url: bulletinUrls[row],
+        bulletin_week: bulletinWeeks?.[row] ?? null,
       };
     },
     eventsOf(churchId) {
