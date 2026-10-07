@@ -80,14 +80,6 @@ export function parseCityMapConfig(json: string | undefined): CityMapConfig | nu
  */
 export const CITY_MAP_ZOOM_CORNER_CLASS = "right-3 bottom-7";
 
-/** The city map's buttons over the map (Expand, Filters): small cards. */
+/** The city map's buttons over the map (Expand, Close, Filters): small cards. */
 export const CITY_MAP_CHIP_CLASS =
   "missal-focus inline-flex items-center gap-2 border border-rule-strong bg-paper/95 px-3 py-1.5 font-serif text-[0.9375rem] text-rubric shadow-missal-floating backdrop-blur-sm transition-colors hover:text-rubric-deep";
-
-/**
- * The open map's way back to the page: solid rubric and a size up from the
- * other buttons on it, so it's the first thing the eye finds, not one more
- * card among the search and filters.
- */
-export const CITY_MAP_CLOSE_CLASS =
-  "missal-focus inline-flex min-h-11 items-center gap-2 border border-rubric bg-rubric px-4 py-2 font-serif text-[1.0625rem] text-paper shadow-missal-floating transition-colors hover:border-rubric-deep hover:bg-rubric-deep";

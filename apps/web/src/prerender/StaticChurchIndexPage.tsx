@@ -9,7 +9,6 @@ import {
   churchPath,
 } from "../lib/seo";
 import { ALL_CHURCHES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
-import { Fleuron } from "../components/Fleuron";
 import { SiteHeader } from "../components/SiteHeader";
 import { CHURCH_INDEX_SEARCH_SCRIPT } from "./churchIndexSearch";
 import { StaticPageHead } from "./StaticPageHead";
@@ -130,14 +129,13 @@ export function StaticChurchIndexPage({
                 Mass, Confession, and Adoration times at {churches.length} Catholic
                 churches, {SOURCE_PHRASE}.
               </p>
-              <Fleuron className="mt-7" />
             </section>
 
             <form
               id="church-search-form"
               role="search"
               hidden
-              className="mt-4"
+              className="mt-8"
             >
               <label htmlFor="church-search" className="sr-only">
                 Search churches and cities

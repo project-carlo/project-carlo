@@ -271,7 +271,7 @@ test.describe("on a phone", () => {
     await page.keyboard.press("Escape");
     await expect(dialog).toBeVisible();
 
-    await page.getByRole("button", { name: "Close map" }).tap();
+    await page.getByRole("button", { name: "Close" }).tap();
     await expect(dialog).toHaveCount(0);
     await expect(page).toHaveURL(new RegExp(`${EAST_AURORA}$`));
   });

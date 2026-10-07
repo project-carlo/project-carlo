@@ -7,15 +7,17 @@ import { filtersEqual, DEFAULT_FILTER_STATE, type FilterState } from "./filterSt
 import { SlidersHorizontalIcon, XIcon } from "@/components/icons";
 import { useBrowserLocation } from "@/hooks/useBrowserLocation";
 import type { useMapSelection } from "@/hooks/useMapSelection";
-import { CITY_MAP_CHIP_CLASS, CITY_MAP_CLOSE_CLASS } from "@/lib/cityMap";
+import { CITY_MAP_CHIP_CLASS } from "@/lib/cityMap";
+import { cn } from "@/lib/utils";
 import { currentLocationPlace } from "../placeSearch";
 
 const noop = () => {};
 
 /**
  * The city page's map, open over the whole window. On a desktop it's the
- * home map's view (search, filters, zoom and locate) with a Close map button;
- * on a phone, a Filters button that opens the home map's filter sheet, Close map,
+ * home map's view (search, filters, zoom and locate) with a Close map button,
+ * a size up from the rest so it isn't lost beside the big search panel; on
+ * a phone, a Filters button that opens the home map's filter sheet, Close,
  * and zoom buttons where the home map keeps its locate button.
  */
 export default function CityMapOpenControls({
@@ -59,10 +61,14 @@ export default function CityMapOpenControls({
       ref={closeRef}
       type="button"
       onClick={onClose}
-      className={`${CITY_MAP_CLOSE_CLASS} pointer-events-auto shrink-0`}
+      className={cn(
+        CITY_MAP_CHIP_CLASS,
+        "pointer-events-auto shrink-0",
+        isDesktop ? "gap-2.5 px-5 py-3 text-[1.125rem]" : "py-2",
+      )}
     >
-      <XIcon className="size-4" />
-      Close map
+      <XIcon className={isDesktop ? "size-5" : "size-4"} />
+      {isDesktop ? "Close map" : "Close"}
     </button>
   );
 

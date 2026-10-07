@@ -221,7 +221,6 @@ export function CityPageContent({
             <p className="mt-4 font-serif text-[1rem] text-ink-soft">
               Times {SOURCE_PHRASE}.
             </p>
-            <Fleuron className="mt-7" />
           </section>
 
           <div
@@ -235,7 +234,7 @@ export function CityPageContent({
               key={city.slug}
               data={data}
               live={liveMap}
-              className="mt-1 mb-3"
+              className="mt-8 mb-3"
             />
 
             <section aria-label={`Churches in ${city.name}`} className="mt-2">
