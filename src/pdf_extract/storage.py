@@ -14,7 +14,7 @@ from pdf_extract.address import format_address
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import week_order_sql
 from pdf_extract.paths import DATA_DIR, ROOT
-from pdf_extract.pdf_truncate import ensure_truncated_pdf
+from pdf_extract.pdf_truncate import ensure_truncated_pdf, max_pages_for
 from pdf_extract.timeparse import minutes_to_time, normalize_event_date, time_to_minutes
 
 LOGGER = logging.getLogger(__name__)
@@ -368,7 +368,7 @@ def read_bulletin_pdf(parish_slug: str, content_hash: str) -> bytes | None:
         return None
 
     try:
-        read_path = ensure_truncated_pdf(pdf_path)
+        read_path = ensure_truncated_pdf(pdf_path, max_pages=max_pages_for(parish_slug))
     except Exception:
         LOGGER.warning("Skipping: failed truncating PDF at %s", pdf_path, exc_info=True)
         return None

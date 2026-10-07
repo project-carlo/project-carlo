@@ -1,16 +1,8 @@
 ---
-parish: holy-cross-dewitt
 name: St. Mary's Oratory
-line1: 6443 East Seneca Turnpike
-line2: ''
-city: Jamesville
-state: NY
-postal_code: '13078'
-latitude: 42.9914763
-longitude: -76.0717698
-coordinates_from: diocese-directory
-name_verified: true
-address_verified: true
+revisit: Look for a Mass at St. Mary's, Jamesville in the Holy Cross bulletin or events calendar (holycrossdewitt.org/events?format=json);
+  a Mass makes it a church row again
+revisit_after: 2027-01-15
 roster: ['directory:33165']
 evidence:
 - url: https://www.syracusediocese.org/parishfinder
@@ -36,13 +28,35 @@ evidence:
   quote: Sacramental Records for St. Mary's are retained at Holy Cross, DeWitt.
   note: 'Diocese page (Cloudflare; read with visit.py): "Physical Address 6443 East Seneca Turnpike, Jamesville,
     NY 13078", office c/o Holy Cross.'
-revisit: Look for a Mass at St. Mary's, Jamesville in the Holy Cross bulletin or events calendar (holycrossdewitt.org/events?format=json);
-  if none has been held since October 2025, move it to open/ or excluded/.
-revisit_after: 2027-01-15
+parish: holy-cross-dewitt
+line1: 6443 East Seneca Turnpike
+city: Jamesville
+state: NY
+postal_code: '13078'
 promoted: 2026-09-26
 ---
 
-## Holds Mass
+## What is known
+
+The only Mass found at St. Mary's Oratory, Jamesville, is a one-off on Thursday 9 October 2025
+(Holy Cross event page "Mass at St. Mary's"). Since then the Holy Cross, DeWitt events calendar
+(holycrossdewitt.org/events?format=json, read 7 October 2026) lists only a Holy Hour there on 21
+October 2025, and the bulletins name Holy Hours only: the 23 August 2026 issue has "Holy Hour at
+St. Mary's, Jamesville"; the 30 August and 6 September 2026 issues (the newest Holy Cross has
+posted; read 7 October 2026) mention no Mass there. The diocese's finder still lists it, and the
+diocese keeps its records at Holy Cross.
+
+## Why it is not decided
+
+It is not closed: the building is used for Holy Hours and had a Mass a year ago. But one Mass in
+a year, not yet repeated, is not enough to show it as a church with public Mass: on 7 October
+2026 it was one of the churches showing on the site with no Mass at all, so it was moved here
+from `churches/` (an audit of churches with no listings). `promote` takes it off the site; a
+Mass in the Holy Cross bulletin or calendar makes it a church row again.
+
+## When it was a church row
+
+### Holds Mass
 
 Occasionally. It is an oratory of Holy Cross, DeWitt, with no regular schedule: Holy
 Cross's Mass page and weekly bulletins list only Holy Cross. Holy Cross's events calendar
@@ -52,7 +66,7 @@ August 2026 bulletin). The parish still uses the building for public worship, an
 occasional public Mass counts, so it is a church row under Holy Cross; but one Mass in the
 last year is thin, hence the `revisit`.
 
-## Name and address
+### Name and address
 
 The diocese page and the directory give St. Mary's Oratory, 6443 East Seneca Turnpike,
 Jamesville 13078; Holy Cross's event pages (the parish, an independent source from the

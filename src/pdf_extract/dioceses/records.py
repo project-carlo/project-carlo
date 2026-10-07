@@ -41,8 +41,9 @@ ROSTERS_DIR = "rosters"
 LIVE = "live"  # how `search` labels rows of data/parishes.csv and data/churches.csv
 
 # Every value data/parishes.csv uses. `fetch` reads the first four.
+NO_BULLETIN = "no_bulletin"
 KNOWN_BULLETIN_PROVIDERS = frozenset(
-    {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive", "no_bulletin"}
+    {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive", NO_BULLETIN}
 )
 # Providers `fetch` looks up by account id rather than by the parish website.
 PROVIDERS_NEEDING_ID = frozenset({"parishes_online", "discover_mass"})
@@ -180,7 +181,7 @@ OPEN = Kind(
     name="open",
     dir="open",
     always=("name", "revisit", "revisit_after", "roster", "evidence"),
-    optional=("parish", *_ADDRESS),
+    optional=("parish", *_ADDRESS, "promoted"),
     template="""\
 ## What is known
 
@@ -623,7 +624,7 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         problem = publication_problem(str(pub))
         if problem:
             p.errors.append(f"{label}: publication {pub!r}: {problem}")
-    if not r.get("publication") and provider != "no_bulletin":
+    if not r.get("publication") and provider != NO_BULLETIN:
         p.warnings.append(
             f"{label}: no publication id recorded, so nothing can check that no other "
             "row publishes the same bulletin"
@@ -807,23 +808,38 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
     return p
 
 
+def unpublished(d: Diocese) -> tuple[set[str], set[str]]:
+    """Parishes and churches kept in the records but left off the site.
+
+    A `no_bulletin` parish publishes nothing the pipeline can read, so its
+    churches would only ever show an empty schedule. Its records stay, with
+    their evidence and revisit date, and go live when a bulletin turns up.
+    """
+    parishes = {slug for slug, r in d.of(PARISH).items()
+                if r.get("bulletin_provider") == NO_BULLETIN}
+    churches = {slug for slug, r in d.of(CHURCH).items() if r.get("parish") in parishes}
+    return parishes, churches
+
+
 def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
-    """The diocese's rows in the column layout of the live CSVs."""
+    """The diocese's rows in the column layout of the live CSVs, without `unpublished` ones."""
     def cell(value: Any) -> str:
         if isinstance(value, bool):
             return "true" if value else "false"
         return "" if value is None else str(value)
 
+    skip_p, skip_c = unpublished(d)
     parishes = [
         {"slug": slug, "name": cell(r.get("name")), "website": cell(r.get("website")),
          "bulletin_provider": cell(r.get("bulletin_provider")),
          "provider_id": cell(r.get("provider_id"))}
-        for slug, r in sorted(d.of(PARISH).items())
+        for slug, r in sorted(d.of(PARISH).items()) if slug not in skip_p
     ]
     churches = [
         {"parish_id": cell(r.get("parish")), "slug": slug,
          **{c: cell(r.get(c)) for c in CHURCH_CSV_FIELDS[2:]}}
         for slug, r in sorted(d.of(CHURCH).items(), key=lambda kv: (kv[1].get("parish"), kv[0]))
+        if slug not in skip_c
     ]
     return parishes, churches
 
@@ -1106,6 +1122,34 @@ def exclude_church(diocese: str, slug: str, *, reason: str, last_mass: str = "",
     return {"excluded": slug, "reason": reason, **_commit(before, after)}
 
 
+def question_church(diocese: str, slug: str, *, revisit: str,
+                    revisit_after: str = "") -> dict[str, Any]:
+    """Turn a church row into an open question: no current Mass found, nothing says it closed.
+
+    Carries over what `exclude_church` does. If the church was promoted,
+    `promote` will delete its live row until the question is settled.
+    """
+    if not revisit.strip():
+        raise DioceseError("revisit (the next thing to check) is required")
+    before = load(diocese)
+    after = before.copy()
+    church = _get(after, CHURCH, slug)
+    if slug in after.of(OPEN):
+        raise DioceseError(f"open/{slug}.md already exists")
+    old_body = re.sub(r"^(#+) ", r"#\1 ", (church.get("body") or "").strip(), flags=re.M)
+    question = {
+        "slug": slug, "name": church.get("name", ""), "revisit": revisit.strip(),
+        "revisit_after": revisit_after or None, "parish": church.get("parish", ""),
+        **{f: church.get(f, "") for f in _ADDRESS},
+        "roster": church.get("roster") or [], "evidence": church.get("evidence") or [],
+        "promoted": church.get("promoted"),
+        "body": f"{OPEN.template.rstrip()}\n\n## When it was a church row\n\n{old_body}",
+    }
+    del after.of(CHURCH)[slug]
+    after.of(OPEN)[slug] = question
+    return {"question": slug, **_commit(before, after)}
+
+
 def show_diocese(diocese: str) -> dict[str, Any]:
     """The diocese at a glance: parishes with their churches, exclusions, open questions."""
     meta = load_meta(diocese)
@@ -1187,7 +1231,8 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
 
     New rows are appended and promoted rows updated in place. Live rows the
     diocese has retired are deleted: slugs in a record's `replaces` (merged or
-    renamed away) and promoted churches that are now in excluded/. A record
+    renamed away), promoted churches that are now in excluded/ or open/, and `no_bulletin`
+    parishes with their churches (see `unpublished`). A record
     that is blank where the live row has a value (coordinates from `geocode`,
     flags from `verify`) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share
@@ -1203,7 +1248,11 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
 
     retired_p = {old for r in d.of(PARISH).values() for old in r.get("replaces") or []}
     retired_c = {old for r in d.of(CHURCH).values() for old in r.get("replaces") or []}
-    retired_c |= {slug for slug, r in d.of(EXCLUDED).items() if r.get("promoted")}
+    retired_c |= {slug for kind in (EXCLUDED, OPEN) for slug, r in d.of(kind).items()
+                  if r.get("promoted")}
+    unpublished_p, unpublished_c = unpublished(d)
+    retired_p |= unpublished_p
+    retired_c |= unpublished_c
 
     def apply(kind: Kind, live: list[dict[str, str]], rows: list[dict[str, str]],
               retired: set[str]) -> tuple[list[dict[str, str]], dict[str, Any]]:

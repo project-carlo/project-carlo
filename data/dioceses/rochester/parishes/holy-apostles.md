@@ -26,6 +26,10 @@ evidence:
   quote: 'Media Links: Weekly Bulletin/Email Blast'
   note: The diocesan directory says the parish distributes a "Weekly Bulletin/Email Blast"; no archive
     of it is public.
+- url: https://discovermass.com/church/holy-apostles-rochester-ny/
+  seen: '2026-10-07'
+  quote: There are currently no bulletins available for Holy Apostles
+  note: The parish's Discover Mass page is at this slug, not `holy-apostles-church-rochester-ny` (a 404).
 promoted: 2026-10-02
 revisit: Check the Bulletins-Email Blast page and the parish Facebook for a current weekly bulletin
 revisit_after: '2027-01-15'
@@ -33,7 +37,7 @@ revisit_after: '2027-01-15'
 
 ## Publisher
 
-Holy Apostles does not publish a bulletin the pipeline can read. Its website has a "Bulletins-Email Blast" page, but the newest PDF there is from 16 May 2024; the "Past Weekly Bulletins" page stops in 2019. The home page does show this week's Mass intentions (28 September to 4 October 2026) as page text, so the site is maintained, but the parish's weekly email blast is not archived anywhere I could reach: no ParishesOnline organization (the only `holy-apostles-church` org is in Kentucky), no Discover Mass page (`/church/holy-apostles-church-rochester-ny/` is a 404). Row stays `no_bulletin`.
+Holy Apostles does not publish a bulletin the pipeline can read. Its website has a "Bulletins-Email Blast" page, but the newest PDF there is from 16 May 2024; the "Past Weekly Bulletins" page stops in 2019. The home page does show this week's Mass intentions (28 September to 4 October 2026) as page text, so the site is maintained, but the parish's weekly email blast is not archived anywhere I could reach: no ParishesOnline organization (the only `holy-apostles-church` org is in Kentucky), no Discover Mass bulletin (its page, `/church/holy-apostles-rochester-ny/`, says "There are currently no bulletins available"; `/church/holy-apostles-church-rochester-ny/` is a 404). Row stays `no_bulletin`, so since 7 October 2026 the parish and its church are kept here but left off the site (see the README's *Settled policy*).
 
 ## Worship sites
 

@@ -47,6 +47,7 @@ from pdf_extract.parish_sites import Recipe, resolve_parish_site
 from pdf_extract.parish_sites.dates import safe_date
 from pdf_extract.parish_sites.links import registrable_domain, url_host
 from pdf_extract.pdf_compact import compact_bulletin_pdf
+from pdf_extract.pdf_truncate import max_pages_for
 from pdf_extract.runs import (
     FETCH_CURRENT,
     FETCH_DOWNLOAD_FAILED,
@@ -77,6 +78,10 @@ DISCOVER_MASS_TYPE = "discover_mass"
 OTHER_TYPE = "other"
 GOOGLE_DRIVE_TYPE = "google_drive"
 PARISHES_ONLINE_ORG_URL_TEMPLATE = "https://parishesonline.com/organization/{provider_id}"
+# A ParishesOnline issue's file name ends in its type: `20261004B.pdf` is the
+# weekly bulletin, `20261004S.pdf` a "Special" insert (a worship aid, a
+# pledge card) that a parish can post for the same Sunday, or ahead of it.
+PARISHES_ONLINE_BULLETIN_FILE = re.compile(r"/\d{8}B\.pdf$", re.IGNORECASE)
 DISCOVER_MASS_BULLETIN_URL_TEMPLATE = "https://discovermass.com/church/{provider_id}/"
 
 # Per-request timeout for direct PDF downloads over HTTP.
@@ -240,6 +245,7 @@ def _resolve_parishes_online_latest_link(
             provider_id=provider_id,
             base_url=org_url,
         ),
+        prefer=lambda urls: bool(PARISHES_ONLINE_BULLETIN_FILE.search(urls[1])),
         page=page,
     )
 
@@ -251,8 +257,10 @@ def _resolve_latest_anchor_link_with_playwright(
     source_label: str,
     href_to_urls: Callable[[str], tuple[str, str] | None],
     wait_for_state: str | None = None,
+    prefer: Callable[[tuple[str, str]], bool] | None = None,
     page: PageLike | None = None,
 ) -> tuple[str, str]:
+    """The first matching anchor on the page, or the first `prefer` accepts if any does."""
     def _run(p: PageLike) -> tuple[str, str]:
         LOGGER.info("Resolving latest anchor link (%s)", source_label)
         LOGGER.info("Visiting page URL: %s", page_url)
@@ -264,6 +272,7 @@ def _resolve_latest_anchor_link_with_playwright(
             source_label=source_label,
         )
         anchors = p.query_selector_all(anchor_selector)
+        first: tuple[str, str] | None = None
         for anchor in anchors:
             href = anchor.get_attribute("href")
             if not isinstance(href, str):
@@ -271,8 +280,13 @@ def _resolve_latest_anchor_link_with_playwright(
             urls = href_to_urls(href)
             if urls is None:
                 continue
-            LOGGER.info("Resolved latest anchor link (%s)", source_label)
-            return urls
+            if prefer is None or prefer(urls):
+                LOGGER.info("Resolved latest anchor link (%s)", source_label)
+                return urls
+            first = first or urls
+        if first is not None:
+            LOGGER.info("Resolved latest anchor link (%s), none preferred", source_label)
+            return first
         raise ValueError(f"No matching anchor link found for {source_label} at {page_url}")
 
     if page is not None:
@@ -1086,7 +1100,10 @@ def _fetch_one(
         # repeatable, so a PDF already stored (by a run whose database was not
         # published) is left as it is.
         if not store.exists(key):
-            store.put(key, compact_bulletin_pdf(download.pdf), content_type="application/pdf")
+            store.put(
+                key, compact_bulletin_pdf(download.pdf, max_pages=max_pages_for(slug)),
+                content_type="application/pdf",
+            )
     except Exception as exc:
         LOGGER.warning("Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True)
         return _Fetched(

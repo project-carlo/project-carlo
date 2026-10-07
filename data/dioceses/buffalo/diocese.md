@@ -4,7 +4,7 @@ state: NY
 website: https://www.buffalodiocese.org
 status: promoted
 gcatholic: buff0
-promoted: 2026-09-26
+promoted: 2026-10-07
 ---
 
 ## Sources
@@ -41,11 +41,15 @@ promoted: 2026-09-26
 - A plan plus absence from a bulletin goes in open/, not excluded/ (St. James Depew, Divine
   Mercy, St. Joseph Lockport, Panama, Cassadaga, Portville, St. Francis Tonawanda).
 - Places that hold public Mass but publish no bulletin: Our Lady of Hope, St. Joseph University
-  Parish and St. Andrew Kim are kept as `no_bulletin` parish rows, following Rochester's live
-  `holy-apostles` row, so their churches stay on the map. Syracuse excluded a similar place
-  (Alibrandi) instead. The difference is that these three were already live churches in PR 14
-  and have their own church buildings in the diocesan roster. Holy Family (Sanborn) and the UB
-  Newman Center, which were never church rows, stay excluded as `no-bulletin`.
+  Parish and St. Andrew Kim were kept as `no_bulletin` parish rows, following Rochester's live
+  `holy-apostles` row, so their churches stayed on the map. Superseded 2026-10-07: a `no_bulletin`
+  row is now kept in the records but left off the site (README, Settled policy 4); St. Joseph
+  University turned out to publish a bulletin and St. Andrew Kim had closed (see the Log).
+  Syracuse excluded a similar place (Alibrandi) instead. The difference is that these three were
+  already live churches in PR 14 and have their own church buildings in the diocesan roster.
+  Holy Family (Sanborn), which was never a church row, stays excluded as `no-bulletin`; the UB
+  Newman Center, excluded the same way, became a church of `st-joseph-university-buffalo` on
+  2026-10-07, whose bulletin prints its Masses.
 
 ## Log
 
@@ -82,3 +86,13 @@ promoted: 2026-09-26
   - Unconfirmed, noted on the records: 16 disputed addresses (`address_verified` false); St. Jude
     the Apostle (North Tonawanda), which is reported merged by an August 2026 decree but still
     has scheduled Masses; and the St. John Kanty recourse.
+- 2026-10-07: Audited the churches the site showed with no Mass. St. Joseph University publishes a
+  ParishesOnline bulletin after all (the Campus Ministry Family, container 14/1703; pages 1-6 are
+  images): the row is `parishes_online` now, and the UB Newman Center, whose Masses that bulletin
+  prints, moved from `excluded/` to a church of it. St. Andrew Kim, Tonawanda closed on 31 March
+  2025 (the community's own notices; sold to O'Hara High School): excluded as closed, parish row
+  deleted. Our Lady of Hope stays `no_bulletin` (checked its own site, ParishesOnline, Discover
+  Mass and the Holy Cross bulletin), which now keeps it off the site (README, Settled policy 4).
+  Bread of Life's page limit is 12 (`data/bulletin_page_limits.csv`): Ss. Peter & Paul's page is
+  11. St. Charles Borromeo (Olcott, summer), St. Adalbert (about four Masses a year) and St.
+  Pacificus (occasional) stay church rows with no Mass this week. Promoted.

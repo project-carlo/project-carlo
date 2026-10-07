@@ -1,7 +1,7 @@
 ---
 name: St. Frances Xavier Cabrini Parish
 website: https://cabriniroc.org/faq
-bulletin_provider: other
+bulletin_provider: no_bulletin
 provider_id: ''
 publication:
 - url:https://cabriniroc.org/faq
@@ -33,10 +33,17 @@ evidence:
   note: 'Diocesan directory listing: the parish was constituted from twelve former parishes; "Of all the
     former churches only Annunciation, Corpus Christi and Saint Michael''s remain as Catholic Churches,
     others have been repurposed or demolished."'
+- url: https://cabriniroc.org/faq
+  seen: '2026-10-07'
+  quote: 'To view our September 5-6th bulletin click on the following link:'
+  note: Unchanged since 2 October (read in headed Chrome). The Spanish page /preguntas-frecuentes still
+    links "Boletin Cabrini 5 y 6 de septiembre de 2026". files.ecatholic.com/29120/bulletins/<date>.pdf
+    answers 403 (not there) for every Sunday from 6 September to 11 October.
 promoted: 2026-10-02
-revisit: Check whether cabriniroc.org/faq links a current bulletin (it was on 5-6 September on 2 October
-  2026); if not, switch the row to no_bulletin
-revisit_after: '2026-11-01'
+revisit: Check cabriniroc.org/faq and /preguntas-frecuentes, and the parish Facebook, for a bulletin newer
+  than 5-6 September 2026; if one is posted weekly, set the row back to `other` (the fetch needs a recipe
+  or a resolver fix, see Website and bulletin provider)
+revisit_after: '2027-01-15'
 ---
 
 ## Publisher
@@ -51,6 +58,8 @@ Three: `annunciation` (1760 Norton Street), `corpus-christi` (864 East Main Stre
 
 The live row said `google_drive` with the home page as website. The home page links no folder: it is a landing page ("ESPAÑOL / ENGLISH" buttons to /preguntas-frecuentes and /faq) and the bulletin is a single Drive file link on /faq. So `google_drive` has nothing to read. I changed the row to `bulletin_provider: other` with `website: https://cabriniroc.org/faq` (the page with the "Parish Bulletin" section and the Drive file link; the fetch's `other` resolver reads Drive file links as PDFs). The risk is that the link on that page is four weeks stale and the parish updates it irregularly.
 
+**Changed 2026-10-07 to `no_bulletin`.** As `other` the row never fetched anything: the weekly runs of 27 September and 4 October both failed with `resolve_failed` ("No bulletin page link found for other provider at https://cabriniroc.org/faq"), because the Drive link's text is the bare Drive URL and nothing on the page says "bulletin" in a link. And there is nothing current to fetch: on 7 October the FAQ page still links the 5-6 September issue, five weeks old. The page also carries hidden, empty-text Drive links to older issues (Content-Disposition names "Cabrini Bulletin January 3-4, 2025.pdf", "January 10-11, 2026", "April 25-26, 2026"), so a recipe that takes the page's first PDF link would read a 2025 bulletin. As `no_bulletin` the parish and its three churches are kept here but left off the site.
+
 ## Not yet confirmed
 
-Whether the parish posts a current bulletin anywhere readable (it is also possible the parish only updates the FAQ link monthly). Revisit 2026-11-01: if /faq is still on the September issue, the parish effectively has no current bulletin and the row should become `no_bulletin`.
+Whether the parish posts current issues on Facebook (`facebook.com/CabriniRochester`, unreadable without a login). If it starts posting weekly on /faq again, the row needs a resolver that takes the link under "Parish Bulletin" rather than the first Drive link on the page.

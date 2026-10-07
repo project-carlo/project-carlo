@@ -72,7 +72,8 @@ pnpm label --demo    # the same on a generated dataset (data/labeler-demo/, untr
 pnpm dev:labeler     # Vite dev server on :5174, proxying /api to a running `pnpm label`
 ```
 
-The PDF shown is the stored compacted copy (the first 10 pages), so page
+The PDF shown is the stored compacted copy (the first 10 pages, or the parish's
+limit in `data/bulletin_page_limits.csv`), so page
 numbers match what Gemini saw. Gemini's output is shown read-only: the cached
 result for the bulletin's content hash (the current classifier version first),
 or else the database's post-processed events. Accept rows one at a time
@@ -349,7 +350,8 @@ year, each month's last run that passed or was published; those are the runs
 you can roll back to.
 
 `fetch` stores a compacted copy of each bulletin: the first 10 pages (all the
-classifiers read) with images downsampled to 150 dpi by Ghostscript, falling
+classifiers read; `data/bulletin_page_limits.csv` raises the limit for a parish whose
+schedule runs past page 10, with the reason) with images downsampled to 150 dpi by Ghostscript, falling
 back to the PDF as downloaded when that fails or saves nothing. The key's
 hash is of the PDF as downloaded. Without `gs` installed, long bulletins are
 only truncated.

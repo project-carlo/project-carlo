@@ -112,6 +112,11 @@
   "christ-the-good-shepherd-oswego": {
     "source_url": "https://www.church-bulletin.org/bulletin/christ-the-good-shepherd-parish-oswego-ny-13126/2026-09-27.pdf"
   },
+  "christ-the-king-albany": {
+    "source_url": "https://parishesonline.com/publication-page/christ-the-king-church-12203?selectedPublication=https://container.parishesonline.com/bulletins/03/0863/20261004B.pdf",
+    "fetch_url": "https://container.parishesonline.com/bulletins/03/0863/20261004B.pdf",
+    "note": "Recorded 2026-10-07. The organization page lists the 11 October \"Special\" issue (20261011S.pdf) first; the resolver prefers the newest regular bulletin (B)."
+  },
   "church-of-the-nativity-tully": {
     "source_url": "https://parishesonline.com/publication-page/immaculate-conception-church-13138?selectedPublication=https://container.parishesonline.com/bulletins/06/0037/20260927B.pdf",
     "fetch_url": "https://container.parishesonline.com/bulletins/06/0037/20260927B.pdf"
@@ -439,7 +444,7 @@
   },
   "st-frances-xavier-cabrini": {
     "error": "No bulletin page link found for other provider at https://cabriniroc.org/faq",
-    "note": "Re-recorded 2026-10-02 at cabriniroc.org/faq: the only bulletin is one Google Drive file (the 5-6 September 2026 issue), which the resolver does not follow. See data/dioceses/rochester/parishes/st-frances-xavier-cabrini.md."
+    "note": "Re-recorded 2026-10-02 at cabriniroc.org/faq: the only bulletin is one Google Drive file (the 5-6 September 2026 issue), which the resolver does not follow. See data/dioceses/rochester/parishes/st-frances-xavier-cabrini.md. The row is no_bulletin since 2026-10-07 and is no longer in data/parishes.csv; the recording is kept as a resolver regression case."
   },
   "st-francis-and-st-clare": {
     "source_url": "https://www.sfscrcc.org/bulletins/1790326230.pdf"
@@ -480,8 +485,9 @@
     "source_url": "https://www.stjohnthebaptist-holytrinity.com/wp-content/uploads/sites/13/2026/09/september-27.pdf"
   },
   "st-john-the-baptist-walton": {
-    "source_url": "https://drive.google.com/file/d/1SkwVr1m6FWsl6cTmyFL0oYTphD2YXk5d/view?usp=drivesdk",
-    "fetch_url": "https://drive.google.com/uc?export=download&id=1SkwVr1m6FWsl6cTmyFL0oYTphD2YXk5d"
+    "source_url": "https://drive.google.com/file/d/1W5Z4gEJheeWDgJDCQP5YNjP9PrD-RG5L/view",
+    "fetch_url": "https://drive.google.com/uc?export=download&id=1W5Z4gEJheeWDgJDCQP5YNjP9PrD-RG5L",
+    "note": "Re-recorded 2026-10-07 with the drive-folder recipe: the Drive folder behind the parish's Schedule of Services page."
   },
   "st-john-the-evangelist-camden": {
     "source_url": "https://www.church-bulletin.org/bulletin/saint-john-the-evangelist-saint-mary-s-oratory-camden-ny-13316/2026-09-27.pdf"
@@ -518,6 +524,10 @@
   },
   "st-joseph-troy": {
     "source_url": "https://storage.googleapis.com/wzukusers/user-25253489/documents/2597032059cd47d2880e5371da5f734e/2026_09_14%2024th%20Sun%20OT%20WEBSITE.pdf"
+  },
+  "st-joseph-university-buffalo": {
+    "source_url": "https://parishesonline.com/publication-page/st-joseph-university-parish-14214?selectedPublication=https://container.parishesonline.com/bulletins/14/1703/20261004B.pdf",
+    "fetch_url": "https://container.parishesonline.com/bulletins/14/1703/20261004B.pdf"
   },
   "st-joseph-worcester": {
     "source_url": "https://parishes.rcda.org/st.josephschurch/bulletins/2026/September_27.pdf"
