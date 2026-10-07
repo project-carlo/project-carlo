@@ -227,7 +227,15 @@ export function CityPageContent({
             className="rise-in mx-auto max-w-3xl"
             style={{ animationDelay: "80ms" }}
           >
-            <CityMapPreview data={data} live={liveMap} className="mt-1 mb-3" />
+            {/* Keyed by city: when the app goes from one city's page
+             *  straight to another's (back to one it has cached, say), the
+             *  live map starts again on the new city's view. */}
+            <CityMapPreview
+              key={city.slug}
+              data={data}
+              live={liveMap}
+              className="mt-1 mb-3"
+            />
 
             <section aria-label={`Churches in ${city.name}`} className="mt-2">
               <ul className="divide-y divide-rule">

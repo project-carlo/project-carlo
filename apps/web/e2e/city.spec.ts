@@ -53,6 +53,10 @@ test("a city page's map is live in the page, and opens to the full map view", as
     map.locator(".leaflet-container .church-map-marker").first(),
   ).toBeVisible();
   await expect(map.getByRole("button", { name: "Zoom in" })).toBeVisible();
+  // The no-JavaScript link to the home map is gone, for the keyboard too.
+  await expect(
+    page.getByRole("link", { name: /^Open the map of churches around / }),
+  ).toHaveCount(0);
 
   await page.getByRole("button", { name: "Expand map" }).click();
   await expect(page).toHaveURL(/#map$/);
@@ -64,6 +68,11 @@ test("a city page's map is live in the page, and opens to the full map view", as
   await expect(dialog.getByRole("button", { name: "Confession" })).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Zoom in" })).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Go to my exact location" })).toBeVisible();
+  // The search's suggestions open over the map, not under it.
+  await dialog.getByPlaceholder(/Search for a city/).fill("Buffalo");
+  await page
+    .locator("[data-slot=popover-content]")
+    .click({ trial: true, timeout: 5_000 });
 
   // Back closes it, leaving the city page as it was.
   await page.goBack();

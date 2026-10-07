@@ -28,8 +28,10 @@ function useCityMapOpen(): boolean {
 }
 
 const INLINE_HOST_CLASS = "city-map-host absolute inset-0 isolate";
-// Under the phone's filter sheet (z-[1200], in its own portal), over the page.
-const OPEN_HOST_CLASS = "city-map-host fixed inset-0 isolate z-[1100] bg-paper";
+// Over the page (its sticky header is z-40), and under what the open map opens
+// in portals of its own: the search's suggestions (z-[950]) and the phone's
+// filter sheet (z-[1200]).
+const OPEN_HOST_CLASS = "city-map-host fixed inset-0 isolate z-[900] bg-paper";
 
 /**
  * The city page's live map, mounted over its still preview (CityMapPreview).

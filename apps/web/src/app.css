@@ -304,9 +304,10 @@
   display: none;
 }
 /* Once the live map is mounting, the preview stops being a link to the home
- * map: it's about to be the map itself. */
+ * map: it's about to be the map itself. Hidden rather than only let clicks
+ * through, so it's out of the tab order and the accessibility tree too. */
 .city-map:has(.city-map-live) .city-map-link {
-  pointer-events: none;
+  visibility: hidden;
 }
 .city-map-live .leaflet-container {
   background: transparent;
