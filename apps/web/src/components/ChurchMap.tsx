@@ -7,7 +7,7 @@ import {
   useRef,
   useState,
 } from "react";
-import type { RefObject } from "react";
+import type { ReactNode, Ref, RefObject } from "react";
 import { Link } from "react-router-dom";
 import {
   MapContainer,
@@ -35,6 +35,16 @@ import {
   type ClusterIndex,
   type MapCluster,
 } from "../lib/mapClusters";
+import {
+  CHURCH_PIN_ANCHOR,
+  CHURCH_PIN_BODY,
+  CHURCH_PIN_SIZE,
+  clusterAnchor,
+  clusterDiameter,
+  CLUSTER_Z_INDEX_OFFSET,
+} from "../lib/churchPin";
+import { useDocumentLinks } from "../lib/documentLinks";
+import { OSM_TILE_URL } from "../lib/staticMap";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
 import { Fleuron } from "@/components/Fleuron";
@@ -77,13 +87,7 @@ const markerSpriteSvg = `
     </filter>
   </defs>
   <symbol id="${CHURCH_PIN_ID}" viewBox="0 0 34 42" fill="none">
-    <path d="M17 2C9.27 2 3 8.27 3 16c0 3.7 1.73 7.3 4 10.5C9.5 30 13.5 34.4 15.8 38.6a1.35 1.35 0 0 0 2.4 0C20.5 34.4 24.5 30 27 26.5 29.27 23.3 31 19.7 31 16 31 8.27 24.73 2 17 2Z"
-          fill="var(--paper)" stroke="var(--brass)" stroke-width="1.3" />
-    <circle cx="17" cy="16" r="9.5" fill="none" stroke="var(--rule-strong)" stroke-width="0.8" />
-    <g stroke="var(--rubric)" stroke-width="2" stroke-linecap="round">
-      <path d="M17 9.5 V 21.5" />
-      <path d="M12.5 13.5 H 21.5" />
-    </g>
+    ${CHURCH_PIN_BODY}
   </symbol>
   <symbol id="${PLACE_PIN_ID}" viewBox="0 0 32 42" fill="none">
     <g filter="url(#place-pin-shadow)">
@@ -110,10 +114,10 @@ const pinHtml = (symbolId: string, width: number, height: number) =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" aria-hidden="true"><use href="#${symbolId}" /></svg>`;
 
 const markerIcon = L.divIcon({
-  html: pinHtml(CHURCH_PIN_ID, 34, 42),
+  html: pinHtml(CHURCH_PIN_ID, ...CHURCH_PIN_SIZE),
   className: "church-map-marker",
-  iconSize: [34, 42],
-  iconAnchor: [17, 40],
+  iconSize: CHURCH_PIN_SIZE,
+  iconAnchor: CHURCH_PIN_ANCHOR,
   popupAnchor: [0, -34],
 });
 
@@ -145,6 +149,10 @@ interface ChurchMapProps {
   onViewChange?: (view: MapView) => void;
   /** Removes the searched-place pin; the popup offers it as a button. */
   onClearPlace?: () => void;
+  /** Extra layers and behaviors, rendered inside the map so they can `useMap`. */
+  children?: ReactNode;
+  /** Gets the Leaflet map, for controls laid over it (MapCornerControls). */
+  mapRef?: Ref<LeafletMap>;
 }
 
 /**
@@ -363,6 +371,7 @@ function ViewReporter({ onViewChange }: { onViewChange: (view: MapView) => void 
  * filter change.
  */
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
+  const documentLinks = useDocumentLinks();
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
   // that order while collapsing each day's several times onto one row.
   const dayRows = useMemo(
@@ -435,6 +444,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
       <div className="map-popup-foot">
         <Link
           to={`/churches/${church.slug}/`}
+          reloadDocument={documentLinks}
           className="map-popup-foot-link font-serif text-[0.9375rem]"
         >
           <span>Full schedule</span>
@@ -525,20 +535,6 @@ function hasCoords(church: ChurchMapItem): church is MappedChurch {
   return church.latitude !== null && church.longitude !== null;
 }
 
-/** From a church pin's tip (its anchor) up to the middle of its round head. */
-const PIN_HEAD_RISE = 24;
-
-/** Roundel diameter by cluster size: a lone church's is the size of a pin's
- *  head, a small group's about a pin wide, and a city-sized one reads as
- *  bigger without swallowing its neighbours. */
-function clusterDiameter(count: number): number {
-  if (count === 1) return 28;
-  if (count < 10) return 32;
-  if (count < 50) return 38;
-  if (count < 100) return 44;
-  return 50;
-}
-
 // One icon per count: `L.divIcon` options are plain data, and reusing the
 // same object keeps react-leaflet from calling setIcon on every re-render.
 const clusterIcons = new Map<number, L.DivIcon>();
@@ -551,9 +547,7 @@ function clusterIcon(count: number): L.DivIcon {
       html: `<span class="church-map-cluster-disc" style="width:${size}px;height:${size}px"><span class="church-map-cluster-count">${count}</span></span>`,
       className: "church-map-cluster",
       iconSize: [size, size],
-      // Centred where a pin's head would be, not on the point itself (where a
-      // pin puts its tip), so a roundel splits into pins at the same height.
-      iconAnchor: [size / 2, size / 2 + PIN_HEAD_RISE],
+      iconAnchor: clusterAnchor(size),
     });
     clusterIcons.set(count, icon);
   }
@@ -586,8 +580,7 @@ const ClusterMarker = memo(function ClusterMarker({
       icon={clusterIcon(cluster.count)}
       position={position}
       title={`${cluster.count} ${cluster.count === 1 ? "church" : "churches"} — zoom in`}
-      // Above the pins, so a count is never hidden behind a neighbour's pin.
-      zIndexOffset={500}
+      zIndexOffset={CLUSTER_Z_INDEX_OFFSET}
       eventHandlers={eventHandlers}
     />
   );
@@ -805,6 +798,8 @@ export const ChurchMap = memo(function ChurchMap({
   start,
   onViewChange,
   onClearPlace,
+  children,
+  mapRef,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -844,6 +839,7 @@ export const ChurchMap = memo(function ChurchMap({
 
   return (
     <MapContainer
+      ref={mapRef}
       center={center}
       zoom={zoom}
       className="church-map h-full w-full"
@@ -856,7 +852,7 @@ export const ChurchMap = memo(function ChurchMap({
       <PopupPaneElevator />
       <TileLayer
         attribution={OSM_ATTRIBUTION}
-        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url={OSM_TILE_URL}
         maxZoom={19}
       />
       <ClusteredChurchMarkers
@@ -877,6 +873,7 @@ export const ChurchMap = memo(function ChurchMap({
           onClear={onClearPlace}
         />
       ) : null}
+      {children}
     </MapContainer>
   );
 });
