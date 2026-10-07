@@ -5,7 +5,7 @@
  */
 
 /** The church pin's outline (a 34×42 viewBox, tip at 17,40). */
-export const CHURCH_PIN_OUTLINE =
+const CHURCH_PIN_OUTLINE =
   "M17 2C9.27 2 3 8.27 3 16c0 3.7 1.73 7.3 4 10.5C9.5 30 13.5 34.4 15.8 38.6a1.35 1.35 0 0 0 2.4 0C20.5 34.4 24.5 30 27 26.5 29.27 23.3 31 19.7 31 16 31 8.27 24.73 2 17 2Z";
 
 /** The church pin, as SVG markup for a `0 0 34 42` viewBox with `fill="none"`. */
@@ -18,7 +18,7 @@ export const CHURCH_PIN_SIZE: [number, number] = [34, 42];
 export const CHURCH_PIN_ANCHOR: [number, number] = [17, 40];
 
 /** From a church pin's tip (its anchor) up to the middle of its round head. */
-export const PIN_HEAD_RISE = 24;
+const PIN_HEAD_RISE = 24;
 
 /** Roundel diameter by cluster size: a lone church's is the size of a pin's
  *  head, a small group's about a pin wide, and a city-sized one reads as
@@ -39,3 +39,6 @@ export function clusterDiameter(count: number): number {
 export function clusterAnchor(size: number): [number, number] {
   return [size / 2, size / 2 + PIN_HEAD_RISE];
 }
+
+/** Lifts roundels over pins, so a count is never hidden behind a neighbour's pin. */
+export const CLUSTER_Z_INDEX_OFFSET = 500;

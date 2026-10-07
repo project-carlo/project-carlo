@@ -60,6 +60,13 @@ function ZoomButtons({ map }: { map: LeafletMap }) {
   );
 }
 
+/**
+ * The corner a full-window map keeps them in (the home map's, and the city
+ * page's open), above the attribution.
+ */
+export const FULL_WINDOW_CORNER_CLASS =
+  "right-4 bottom-[calc(2.25rem+var(--safe-area-inset-bottom))] left-4 md:right-6";
+
 export interface LocateControl {
   status: BrowserLocationStatus;
   error: string | null;

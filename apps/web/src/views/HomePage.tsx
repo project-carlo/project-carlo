@@ -11,7 +11,10 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import type { Map as LeafletMap } from "leaflet";
 import { fetchAllChurchesForSearch, fetchChurches } from "../api";
 import { ChurchMap } from "../components/ChurchMap";
-import { MapCornerControls } from "../components/MapCornerControls";
+import {
+  FULL_WINDOW_CORNER_CLASS,
+  MapCornerControls,
+} from "../components/MapCornerControls";
 import { MapOverlay } from "../components/MapOverlay";
 import {
   churchFiltersFor,
@@ -19,7 +22,7 @@ import {
   type FilterState,
 } from "../components/filterState";
 import { InlineQueryError } from "../components/InlineQueryError";
-import { useMinWidth } from "../hooks/useMinWidth";
+import { DESKTOP_MIN_WIDTH, useMinWidth } from "../hooks/useMinWidth";
 import { useFilterUrlState } from "../hooks/useFilterUrlState";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { rememberHomeSearch } from "../hooks/useHomeHref";
@@ -166,7 +169,7 @@ export function HomePage() {
   }, [location.search]);
 
   const [filterPanelOpen, setFilterPanelOpen] = useState(false);
-  const isDesktop = useMinWidth(768);
+  const isDesktop = useMinWidth(DESKTOP_MIN_WIDTH);
   const [map, setMap] = useState<LeafletMap | null>(null);
   // The place the IP estimate named, shown in the card with the offer of an
   // exact location until the visitor picks somewhere themselves.
@@ -378,7 +381,7 @@ export function HomePage() {
             error: approximateArea && !pinnedPlaceTitle ? null : locateError,
             onLocate: handleLocate,
           }}
-          className="right-4 bottom-[calc(2.25rem+var(--safe-area-inset-bottom))] left-4 md:right-6"
+          className={FULL_WINDOW_CORNER_CLASS}
         />
       ) : null}
     </main>

@@ -9,10 +9,12 @@ import {
   CHURCH_PIN_SIZE,
   clusterAnchor,
   clusterDiameter,
+  CLUSTER_Z_INDEX_OFFSET,
 } from "@/lib/churchPin";
 import {
   CITY_MAP_ATTRIBUTE,
   CITY_MAP_SLOT_ATTRIBUTE,
+  CITY_MAP_ZOOM_CORNER_CLASS,
   type CityMapConfig,
 } from "@/lib/cityMap";
 import { CITY_MAP_CANVAS, type CityMapMarker } from "@/lib/cityMapLayout";
@@ -21,16 +23,22 @@ import {
   staticMapPlacement,
   staticMapPosition,
   staticMapTiles,
+  type StaticMapPosition,
 } from "@/lib/staticMap";
 
 const OSM_COPYRIGHT_URL = "https://www.openstreetmap.org/copyright";
+
+/** A marker, and the pixel its point falls on in the canvas. */
+interface PlacedMarker {
+  marker: CityMapMarker;
+  at: StaticMapPosition;
+}
 
 /**
  * A marker as Leaflet draws it (ChurchMap's divIcons): the same classes and
  * markup, its anchor on the same pixel, so the live marker lands on it.
  */
-function StaticMarker({ marker, view }: { marker: CityMapMarker; view: MapView }) {
-  const at = staticMapPosition(view, view.zoom, CITY_MAP_CANVAS, marker);
+function StaticMarker({ marker, at }: PlacedMarker) {
   if (marker.kind === "pin") {
     const [width, height] = CHURCH_PIN_SIZE;
     const [x, y] = CHURCH_PIN_ANCHOR;
@@ -65,12 +73,19 @@ function StaticMarker({ marker, view }: { marker: CityMapMarker; view: MapView }
   );
 }
 
-/** Leaflet's stacking: lower markers over higher ones, roundels over pins. */
-function stackOrder(view: MapView) {
-  const key = (marker: CityMapMarker) =>
-    staticMapPosition(view, view.zoom, CITY_MAP_CANVAS, marker).top +
-    (marker.kind === "cluster" ? 500 : 0);
-  return (a: CityMapMarker, b: CityMapMarker) => key(a) - key(b);
+/**
+ * The markers in Leaflet's stacking order: lower ones over higher ones, and
+ * roundels over pins (each its point's `top` plus its zIndexOffset).
+ */
+function placeMarkers(markers: CityMapMarker[], view: MapView): PlacedMarker[] {
+  const zIndex = ({ marker, at }: PlacedMarker) =>
+    at.top + (marker.kind === "cluster" ? CLUSTER_Z_INDEX_OFFSET : 0);
+  return markers
+    .map((marker) => ({
+      marker,
+      at: staticMapPosition(view, view.zoom, CITY_MAP_CANVAS, marker),
+    }))
+    .sort((a, b) => zIndex(a) - zIndex(b));
 }
 
 /**
@@ -130,8 +145,8 @@ export function CityMapPreview({
           ))}
         </div>
         <div className="city-map-static-pins">
-          {[...markers].sort(stackOrder(view)).map((marker) => (
-            <StaticMarker key={`${marker.kind}-${marker.id}`} marker={marker} view={view} />
+          {placeMarkers(markers, view).map(({ marker, at }) => (
+            <StaticMarker key={`${marker.kind}-${marker.id}`} marker={marker} at={at} />
           ))}
         </div>
       </div>
@@ -146,7 +161,7 @@ export function CityMapPreview({
       <MapCornerControls
         map={null}
         zoom
-        className="city-map-static-control right-3 bottom-7 hidden md:block"
+        className={`city-map-static-control ${CITY_MAP_ZOOM_CORNER_CLASS} hidden md:block`}
       />
       <a
         href={OSM_COPYRIGHT_URL}

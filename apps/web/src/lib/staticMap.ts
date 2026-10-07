@@ -2,8 +2,9 @@ import type { LatLng } from "./cities";
 
 /**
  * A map drawn without a map library: OpenStreetMap tiles laid out as plain
- * images, with points placed on them in pixels. Pure, so the prerendered city
- * pages, which ship no JavaScript, can show the same map preview the app does.
+ * images, with points placed on them in pixels. Pure, so a city page's map
+ * preview is laid out when the page is rendered (prerendered too) and shows
+ * before any script runs.
  *
  * Pixels are rounded the way Leaflet rounds them, so a live map opened on the
  * same view draws every tile and marker on the very same pixels.
@@ -12,8 +13,8 @@ import type { LatLng } from "./cities";
 /** Edge of an OpenStreetMap tile, in pixels. */
 export const TILE_SIZE = 256;
 
-/** The tile server the home map's Leaflet layer uses too. */
-const TILE_URL = "https://tile.openstreetmap.org";
+/** OpenStreetMap's tiles, as Leaflet's tile layer takes them (ChurchMap's too). */
+export const OSM_TILE_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 
 export interface StaticMapSize {
   width: number;
@@ -112,7 +113,9 @@ export function staticMapTiles(
       const x = ((column % count) + count) % count;
       tiles.push({
         key: `${zoom}/${column}/${row}`,
-        url: `${TILE_URL}/${zoom}/${x}/${row}.png`,
+        url: OSM_TILE_URL.replace("{z}", String(zoom))
+          .replace("{x}", String(x))
+          .replace("{y}", String(row)),
         left: column * TILE_SIZE - o.x,
         top: row * TILE_SIZE - o.y,
       });

@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { MemoryRouter } from "react-router-dom";
 import CityMapLive from "../components/CityMapLive";
 import type { CityMapConfig } from "../lib/cityMap";
 import { DocumentLinksContext } from "../lib/documentLinks";
+import { createQueryClient } from "../lib/queryClient";
 
 /**
  * Mounts the live map into a prerendered city page's preview. The page has no
@@ -12,9 +13,7 @@ import { DocumentLinksContext } from "../lib/documentLinks";
  * is only there for the router links to render.
  */
 export function mountCityMap(slot: HTMLElement, config: CityMapConfig): void {
-  const queryClient = new QueryClient({
-    defaultOptions: { queries: { staleTime: 60_000, retry: 2 } },
-  });
+  const queryClient = createQueryClient();
   createRoot(slot).render(
     <StrictMode>
       <QueryClientProvider client={queryClient}>

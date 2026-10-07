@@ -41,8 +41,10 @@ import {
   CHURCH_PIN_SIZE,
   clusterAnchor,
   clusterDiameter,
+  CLUSTER_Z_INDEX_OFFSET,
 } from "../lib/churchPin";
 import { useDocumentLinks } from "../lib/documentLinks";
+import { OSM_TILE_URL } from "../lib/staticMap";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
 import { Fleuron } from "@/components/Fleuron";
@@ -578,8 +580,7 @@ const ClusterMarker = memo(function ClusterMarker({
       icon={clusterIcon(cluster.count)}
       position={position}
       title={`${cluster.count} ${cluster.count === 1 ? "church" : "churches"} — zoom in`}
-      // Above the pins, so a count is never hidden behind a neighbour's pin.
-      zIndexOffset={500}
+      zIndexOffset={CLUSTER_Z_INDEX_OFFSET}
       eventHandlers={eventHandlers}
     />
   );
@@ -851,7 +852,7 @@ export const ChurchMap = memo(function ChurchMap({
       <PopupPaneElevator />
       <TileLayer
         attribution={OSM_ATTRIBUTION}
-        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url={OSM_TILE_URL}
         maxZoom={19}
       />
       <ClusteredChurchMarkers

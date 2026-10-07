@@ -291,7 +291,8 @@
   font-size: 12px;
   font-family: var(--font-sans);
 }
-/* Without round() (see staticMapPlacement), plain centering. */
+/* Without round() (see staticMapPlacement), plain centering: half of
+ * CITY_MAP_CANVAS. */
 .city-map-canvas {
   left: calc(50% - 400px);
   top: calc(50% - 224px);

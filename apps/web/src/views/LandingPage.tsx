@@ -23,7 +23,7 @@ import {
   FILTER_DAY_LABELS,
 } from "../constants/days";
 import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
-import { useMinWidth } from "../hooks/useMinWidth";
+import { DESKTOP_MIN_WIDTH, useMinWidth } from "../hooks/useMinWidth";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { cn } from "@/lib/utils";
@@ -54,7 +54,7 @@ export function LandingPage() {
   });
 
   const navigate = useNavigate();
-  const isDesktop = useMinWidth(768);
+  const isDesktop = useMinWidth(DESKTOP_MIN_WIDTH);
   const [open, setOpen] = useState(false);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTER_STATE);
 

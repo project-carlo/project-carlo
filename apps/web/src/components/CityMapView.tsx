@@ -20,8 +20,9 @@ import {
   type FilterState,
 } from "./filterState";
 import { CityMapExpandChip } from "./CityMapExpandChip";
-import { useMinWidth } from "@/hooks/useMinWidth";
+import { DESKTOP_MIN_WIDTH, useMinWidth } from "@/hooks/useMinWidth";
 import { useMapSelection } from "@/hooks/useMapSelection";
+import { CITY_MAP_ZOOM_CORNER_CLASS } from "@/lib/cityMap";
 import type { MapStart } from "@/lib/mapStart";
 import type { MapView } from "@/lib/mapView";
 import type { ChurchMapItem } from "../types";
@@ -61,10 +62,9 @@ function MapMode({ open }: { open: boolean }) {
 /**
  * What CityMapLive shows: the home map's churches, pins and popups, opening
  * on the city preview's view. In the page it has Expand (and zoom buttons on
- * a desktop);
- * open, CityMapOpenControls adds the rest. The filters chosen there stay on
- * the map in the page. Loaded only once the page's map goes live, and the
- * open controls only once the churches are up.
+ * a desktop); open, CityMapOpenControls adds the rest. The filters chosen
+ * there stay on the map in the page. Loaded only once the page's map goes
+ * live, and the open controls only once the churches are up.
  */
 export default function CityMapView({
   view,
@@ -80,7 +80,7 @@ export default function CityMapView({
   /** Called once the churches are on the map. */
   onReady: () => void;
 }) {
-  const isDesktop = useMinWidth(768);
+  const isDesktop = useMinWidth(DESKTOP_MIN_WIDTH);
   const [map, setMap] = useState<LeafletMap | null>(null);
   const selection = useMapSelection();
 
@@ -155,7 +155,11 @@ export default function CityMapView({
         <>
           <CityMapExpandChip onClick={onOpen} buttonRef={expandRef} />
           {/* A phone pinches; its small box has no room to spare. */}
-          <MapCornerControls map={map} zoom={isDesktop} className="right-3 bottom-7" />
+          <MapCornerControls
+            map={map}
+            zoom={isDesktop}
+            className={CITY_MAP_ZOOM_CORNER_CLASS}
+          />
         </>
       )}
     </>

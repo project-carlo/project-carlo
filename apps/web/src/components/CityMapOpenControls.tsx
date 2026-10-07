@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Map as LeafletMap } from "leaflet";
 import { FilterPanel } from "./FilterPanel";
-import { MapCornerControls } from "./MapCornerControls";
+import { FULL_WINDOW_CORNER_CLASS, MapCornerControls } from "./MapCornerControls";
 import { MapOverlay } from "./MapOverlay";
 import { filtersEqual, DEFAULT_FILTER_STATE, type FilterState } from "./filterState";
 import { SlidersHorizontalIcon, XIcon } from "@/components/icons";
@@ -9,10 +9,6 @@ import { useBrowserLocation } from "@/hooks/useBrowserLocation";
 import type { useMapSelection } from "@/hooks/useMapSelection";
 import { CITY_MAP_CHIP_CLASS } from "@/lib/cityMap";
 import { currentLocationPlace } from "../placeSearch";
-
-/** The corner the home map keeps its controls in, above the attribution. */
-const CORNER_CLASS =
-  "right-4 bottom-[calc(2.25rem+var(--safe-area-inset-bottom))] left-4 md:right-6";
 
 const noop = () => {};
 
@@ -95,7 +91,7 @@ export default function CityMapOpenControls({
             error: locateError,
             onLocate: handleLocate,
           }}
-          className={CORNER_CLASS}
+          className={FULL_WINDOW_CORNER_CLASS}
         />
       </>
     );
@@ -119,7 +115,7 @@ export default function CityMapOpenControls({
         </button>
         {closeButton}
       </div>
-      <MapCornerControls map={map} zoom className={CORNER_CLASS} />
+      <MapCornerControls map={map} zoom className={FULL_WINDOW_CORNER_CLASS} />
       <FilterPanel
         isOpen={filterPanelOpen}
         isDesktop={false}

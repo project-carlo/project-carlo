@@ -21,7 +21,7 @@ export const CITY_MAP_ATTRIBUTE = "data-city-map";
 export const CITY_MAP_SLOT_ATTRIBUTE = "data-city-map-slot";
 
 /** The hash of a city page with its map open. */
-export const CITY_MAP_HASH = "#map";
+const CITY_MAP_HASH = "#map";
 
 export function isCityMapOpen(): boolean {
   return window.location.hash === CITY_MAP_HASH;
@@ -52,6 +52,12 @@ export function parseCityMapConfig(json: string | undefined): CityMapConfig | nu
     return null;
   }
 }
+
+/**
+ * Where the map in the page keeps its zoom buttons, above the attribution;
+ * the still preview's inert copy sits on the same pixels.
+ */
+export const CITY_MAP_ZOOM_CORNER_CLASS = "right-3 bottom-7";
 
 /** The city map's buttons over the map (Expand, Close, Filters): small cards. */
 export const CITY_MAP_CHIP_CLASS =
