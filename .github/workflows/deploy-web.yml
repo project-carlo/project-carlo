@@ -149,6 +149,13 @@ jobs:
 
           echo "alias=$alias" >> "$GITHUB_OUTPUT"
 
+      # Each deploy replaces the asset set, so pages loaded before it would 404
+      # on their lazy chunks. This copies the last two weeks' retired assets
+      # from the live site into the build; it warns instead of failing.
+      - name: Carry over previous assets
+        if: (github.event_name == 'workflow_dispatch' && inputs.mode == 'deploy' && github.ref_name == 'main') || (github.event_name == 'push' && github.ref_name == 'main')
+        run: pnpm --filter web carry-assets
+
       - name: Deploy production web app
         id: production-deploy
         if: (github.event_name == 'workflow_dispatch' && inputs.mode == 'deploy' && github.ref_name == 'main') || (github.event_name == 'push' && github.ref_name == 'main')
