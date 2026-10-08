@@ -60,6 +60,22 @@ function MapMode({ open }: { open: boolean }) {
 }
 
 /**
+ * Calls `onMove` once the map starts moving: dragged, pinched, zoomed or sent
+ * to a search result. (Not as it's resized: Leaflet keeps its center then,
+ * as the preview's centered canvas does.)
+ */
+function MoveWatch({ onMove }: { onMove: () => void }) {
+  const map = useMap();
+  useEffect(() => {
+    map.on("movestart zoomstart", onMove);
+    return () => {
+      map.off("movestart zoomstart", onMove);
+    };
+  }, [map, onMove]);
+  return null;
+}
+
+/**
  * What CityMapLive shows: the home map's churches, pins and popups, opening
  * on the city preview's view. In the page it has Expand (and zoom buttons on
  * a desktop); open, CityMapOpenControls adds the rest. The filters chosen
@@ -72,6 +88,7 @@ export default function CityMapView({
   onOpen,
   onClose,
   onReady,
+  onMove,
 }: {
   view: MapView;
   open: boolean;
@@ -79,6 +96,8 @@ export default function CityMapView({
   onClose: () => void;
   /** Called once the churches are on the map. */
   onReady: () => void;
+  /** Called as the map starts moving off the view it opened on. */
+  onMove: () => void;
 }) {
   const isDesktop = useMinWidth(DESKTOP_MIN_WIDTH);
   const [map, setMap] = useState<LeafletMap | null>(null);
@@ -166,6 +185,7 @@ export default function CityMapView({
         mapRef={setMap}
       >
         <MapMode open={open} />
+        <MoveWatch onMove={onMove} />
       </ChurchMap>
       {open ? (
         <Suspense fallback={null}>

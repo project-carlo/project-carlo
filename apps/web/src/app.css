@@ -343,6 +343,15 @@
 .city-map:has(.city-map-live[data-ready]) .city-map-static-control {
   display: none;
 }
+/* The still tiles only line up with the live map on the view they were drawn
+ * for. Once it moves, they go too: otherwise, wherever the live map has no
+ * tile yet (around the shrinking old tiles as it zooms out, or the edge it's
+ * dragged in from), the transparent live map shows them through at the old
+ * zoom and offset. The preview's paper shows there instead, as on the open
+ * map. */
+.city-map:has(.city-map-live[data-moved]) .city-map-tiles {
+  display: none;
+}
 /* Once the live map is mounting, the preview stops being a link to the home
  * map: it's about to be the map itself. Hidden rather than only let clicks
  * through, so it's out of the tab order and the accessibility tree too. */

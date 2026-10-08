@@ -58,6 +58,9 @@ export default function CityMapLive({ config }: { config: CityMapConfig }) {
   const pushedRef = useRef(false);
   const [ready, setReady] = useState(false);
   const handleReady = useCallback(() => setReady(true), []);
+  // Whether the map has moved off the view the still preview draws.
+  const [moved, setMoved] = useState(false);
+  const handleMove = useCallback(() => setMoved(true), []);
 
   const expand = useCallback(() => {
     pushedRef.current = true;
@@ -127,6 +130,7 @@ export default function CityMapLive({ config }: { config: CityMapConfig }) {
         ref={inlineSlotRef}
         className="city-map-live absolute inset-0"
         data-ready={ready || undefined}
+        data-moved={moved || undefined}
       />
       {createPortal(
         <Suspense fallback={null}>
@@ -136,6 +140,7 @@ export default function CityMapLive({ config }: { config: CityMapConfig }) {
             onOpen={expand}
             onClose={collapse}
             onReady={handleReady}
+            onMove={handleMove}
           />
         </Suspense>,
         host,
