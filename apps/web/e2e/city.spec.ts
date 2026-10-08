@@ -160,6 +160,22 @@ test("the live map takes over the preview with its markers where they were", asy
   );
 });
 
+test("the still tiles go once the live map moves off their view", async ({
+  page,
+}) => {
+  await page.goto("/mass-times/buffalo-ny/");
+  await expect(page.locator(".city-map-live[data-ready]")).toHaveCount(1, {
+    timeout: 15_000,
+  });
+  // Under the live map until it moves: they show through while its tiles load.
+  await expect(page.locator(".city-map-tiles")).toBeVisible();
+
+  // Zoomed out, they'd show through around the live map's shrinking tiles.
+  await page.locator(".city-map").getByRole("button", { name: "Zoom out" }).click();
+  await expect(page.locator(".city-map-live[data-moved]")).toHaveCount(1);
+  await expect(page.locator(".city-map-tiles")).toBeHidden();
+});
+
 test("in the app, each city page's live map is that city's", async ({
   browser,
   page,
