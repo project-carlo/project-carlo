@@ -1,7 +1,8 @@
 /**
  * The church map's marker shapes, shared by the map's own markers
- * (ChurchMap) and the city page's still preview (CityMapPreview), which draws
- * the same markers on the same pixels before the live map takes over.
+ * (ChurchMap) and the city and church pages' still preview (CityMapPreview),
+ * which draws the same markers on the same pixels before the live map takes
+ * over.
  */
 
 /** The church pin's outline (a 34×42 viewBox, tip at 17,40). */
@@ -12,6 +13,14 @@ const CHURCH_PIN_OUTLINE =
 export const CHURCH_PIN_BODY = `<path d="${CHURCH_PIN_OUTLINE}" fill="var(--paper)" stroke="var(--brass)" stroke-width="1.3" />
 <circle cx="17" cy="16" r="9.5" fill="none" stroke="var(--rule-strong)" stroke-width="0.8" />
 <g stroke="var(--rubric)" stroke-width="2" stroke-linecap="round"><path d="M17 9.5 V 21.5" /><path d="M12.5 13.5 H 21.5" /></g>`;
+
+/**
+ * The pin of the church a church page is about: the same shape in rubric,
+ * with a paper cross, so it reads apart from its neighbours.
+ */
+export const CURRENT_CHURCH_PIN_BODY = `<path d="${CHURCH_PIN_OUTLINE}" fill="var(--rubric)" stroke="var(--paper)" stroke-width="1.3" />
+<circle cx="17" cy="16" r="9.5" fill="none" stroke="var(--paper)" stroke-opacity="0.45" stroke-width="0.8" />
+<g stroke="var(--paper)" stroke-width="2" stroke-linecap="round"><path d="M17 9.5 V 21.5" /><path d="M12.5 13.5 H 21.5" /></g>`;
 
 export const CHURCH_PIN_SIZE: [number, number] = [34, 42];
 /** The pin's tip, which sits on the church. */
@@ -42,3 +51,6 @@ export function clusterAnchor(size: number): [number, number] {
 
 /** Lifts roundels over pins, so a count is never hidden behind a neighbour's pin. */
 export const CLUSTER_Z_INDEX_OFFSET = 500;
+
+/** Lifts a church page's own pin over everything else on its map. */
+export const CURRENT_CHURCH_Z_INDEX_OFFSET = 1000;

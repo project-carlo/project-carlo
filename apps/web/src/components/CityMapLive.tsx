@@ -39,7 +39,8 @@ const INLINE_HOST_CLASS = "city-map-host absolute inset-0 isolate";
 const OPEN_HOST_CLASS = "city-map-host fixed inset-0 isolate z-[900] bg-paper";
 
 /**
- * The city page's live map, mounted over its still preview (CityMapPreview).
+ * The city page's live map (and the church page's), mounted over its still
+ * preview (CityMapPreview).
  * It's live in the page, and opens to fill the window until it's closed with
  * its button, Escape, or the browser's back button; see src/lib/cityMap.ts.
  * What it shows, in the page and open, is CityMapView's.
@@ -132,6 +133,7 @@ export default function CityMapLive({ config }: { config: CityMapConfig }) {
         <Suspense fallback={null}>
           <CityMapView
             view={config.view}
+            churchId={config.churchId}
             open={open}
             onOpen={expand}
             onClose={collapse}

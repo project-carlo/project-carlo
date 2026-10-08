@@ -8,7 +8,7 @@ import { DocumentLinksContext } from "../lib/documentLinks";
 import { createQueryClient } from "../lib/queryClient";
 
 /**
- * Mounts the live map into a prerendered city page's preview. The page has no
+ * Mounts the live map into a prerendered city or church page's preview. The page has no
  * router, so links load their page (DocumentLinksContext); the memory router
  * is only there for the router links to render.
  */

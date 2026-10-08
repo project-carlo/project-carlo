@@ -42,6 +42,8 @@ import {
   clusterAnchor,
   clusterDiameter,
   CLUSTER_Z_INDEX_OFFSET,
+  CURRENT_CHURCH_PIN_BODY,
+  CURRENT_CHURCH_Z_INDEX_OFFSET,
 } from "../lib/churchPin";
 import { useDocumentLinks } from "../lib/documentLinks";
 import { OSM_TILE_URL } from "../lib/staticMap";
@@ -78,6 +80,7 @@ const POPUP_MAX_WIDTH = 275;
  * The searched-place pin has no CSS shadow, so it keeps its filter. */
 const MARKER_SPRITE_ID = "church-map-pin-sprite";
 const CHURCH_PIN_ID = "church-map-pin";
+const CURRENT_CHURCH_PIN_ID = "church-map-current-pin";
 const PLACE_PIN_ID = "church-map-place-pin";
 
 const markerSpriteSvg = `
@@ -90,6 +93,9 @@ const markerSpriteSvg = `
   </defs>
   <symbol id="${CHURCH_PIN_ID}" viewBox="0 0 34 42" fill="none">
     ${CHURCH_PIN_BODY}
+  </symbol>
+  <symbol id="${CURRENT_CHURCH_PIN_ID}" viewBox="0 0 34 42" fill="none">
+    ${CURRENT_CHURCH_PIN_BODY}
   </symbol>
   <symbol id="${PLACE_PIN_ID}" viewBox="0 0 32 42" fill="none">
     <g filter="url(#place-pin-shadow)">
@@ -118,6 +124,15 @@ const pinHtml = (symbolId: string, width: number, height: number) =>
 const markerIcon = L.divIcon({
   html: pinHtml(CHURCH_PIN_ID, ...CHURCH_PIN_SIZE),
   className: "church-map-marker",
+  iconSize: CHURCH_PIN_SIZE,
+  iconAnchor: CHURCH_PIN_ANCHOR,
+  popupAnchor: [0, -34],
+});
+
+/** A church page's own church, on its map. */
+const currentMarkerIcon = L.divIcon({
+  html: pinHtml(CURRENT_CHURCH_PIN_ID, ...CHURCH_PIN_SIZE),
+  className: "church-map-marker is-current",
   iconSize: CHURCH_PIN_SIZE,
   iconAnchor: CHURCH_PIN_ANCHOR,
   popupAnchor: [0, -34],
@@ -155,6 +170,8 @@ interface ChurchMapProps {
   children?: ReactNode;
   /** Gets the Leaflet map, for controls laid over it (MapCornerControls). */
   mapRef?: Ref<LeafletMap>;
+  /** On a church page's map, its church, whose pin is marked as the page's. */
+  currentChurchId?: number;
 }
 
 /**
@@ -499,10 +516,13 @@ function useSelectedMarkerClass(markerRef: RefObject<LeafletMarker | null>) {
 
 const ChurchMarker = memo(function ChurchMarker({
   church,
+  current,
   openPopupRequestId,
   onPopupRequestHandled,
 }: {
   church: MappedChurch;
+  /** The church a church page is about, on its map. */
+  current: boolean;
   /**
    * Set only on the marker a selection targets, and bumped on every repeat
    * selection. Leaving it undefined everywhere else keeps the other markers'
@@ -536,8 +556,9 @@ const ChurchMarker = memo(function ChurchMarker({
   return (
     <Marker
       ref={markerRef}
-      icon={markerIcon}
+      icon={current ? currentMarkerIcon : markerIcon}
       position={position}
+      zIndexOffset={current ? CURRENT_CHURCH_Z_INDEX_OFFSET : 0}
       eventHandlers={eventHandlers}
     >
       <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
@@ -640,10 +661,12 @@ function readViewport(map: LeafletMap): Viewport {
  */
 function ClusteredChurchMarkers({
   index,
+  currentChurchId,
   popupRequest,
   onPopupRequestHandled,
 }: {
   index: ClusterIndex<MappedChurch>;
+  currentChurchId: number | undefined;
   popupRequest: { churchId: number; requestId: number } | null;
   onPopupRequestHandled: (requestId: number) => void;
 }) {
@@ -743,6 +766,7 @@ function ClusteredChurchMarkers({
           <ChurchMarker
             key={entry.item.id}
             church={entry.item}
+            current={entry.item.id === currentChurchId}
             openPopupRequestId={
               popupRequest?.churchId === entry.item.id
                 ? popupRequest.requestId
@@ -819,6 +843,7 @@ export const ChurchMap = memo(function ChurchMap({
   onClearPlace,
   children,
   mapRef,
+  currentChurchId,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -876,6 +901,7 @@ export const ChurchMap = memo(function ChurchMap({
       />
       <ClusteredChurchMarkers
         index={clusterIndex}
+        currentChurchId={currentChurchId}
         popupRequest={popupRequest}
         onPopupRequestHandled={setHandledRequestId}
       />

@@ -1,4 +1,3 @@
-import { lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { CityNotFoundError } from "../api";
@@ -7,24 +6,14 @@ import { InlineQueryError } from "@/components/InlineQueryError";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 import { cityPath } from "@/lib/cities";
-import type { CityMapConfig } from "@/lib/cityMap";
 import { cityQuery as cityQueryOptions } from "@/lib/pageQueries";
 import {
   buildCityDescription,
   buildCityTitle,
   canonicalForPath,
 } from "@/lib/seo";
+import { liveMap } from "./liveMap";
 import { NotFoundPage } from "./NotFoundPage";
-
-const CityMapLive = lazy(() => import("@/components/CityMapLive"));
-
-function liveMap(config: CityMapConfig) {
-  return (
-    <Suspense fallback={null}>
-      <CityMapLive config={config} />
-    </Suspense>
-  );
-}
 
 export function CityPage() {
   const { citySlug } = useParams();

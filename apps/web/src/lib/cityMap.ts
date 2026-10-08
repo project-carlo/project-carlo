@@ -1,18 +1,21 @@
 import type { MapView } from "./mapView";
 
 /**
- * The city page's map: a still preview the page is rendered with, made live
- * by CityMapLive, which also opens it over the whole window. Open is a URL
- * hash, so the browser's back button (or swipe) closes it, a link can open
- * it, and coming back from a church page finds it as it was left.
+ * The city page's map, which a church page shows too: a still preview the
+ * page is rendered with, made live by CityMapLive, which also opens it over
+ * the whole window. Open is a URL hash, so the browser's back button (or
+ * swipe) closes it, a link can open it, and coming back from a church page
+ * finds it as it was left.
  */
 
 /** What the live map needs from the page, read off the preview. */
 export interface CityMapConfig {
-  /** "East Aurora, NY". */
+  /** "East Aurora, NY", or the church's name on a church page. */
   label: string;
   /** The preview's view, which the live map opens on. */
   view: MapView;
+  /** On a church page, its church, whose pin is marked as the page's. */
+  churchId?: number;
 }
 
 /** Marks the preview; its value is the JSON of a CityMapConfig. */
@@ -64,11 +67,14 @@ export function parseCityMapConfig(json: string | undefined): CityMapConfig | nu
       !view ||
       !Number.isFinite(view.lat) ||
       !Number.isFinite(view.lng) ||
-      !Number.isFinite(view.zoom)
+      !Number.isFinite(view.zoom) ||
+      (value.churchId !== undefined && !Number.isInteger(value.churchId))
     ) {
       return null;
     }
-    return { label: value.label, view };
+    return value.churchId === undefined
+      ? { label: value.label, view }
+      : { label: value.label, view, churchId: value.churchId };
   } catch {
     return null;
   }

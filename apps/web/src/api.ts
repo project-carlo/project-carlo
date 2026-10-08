@@ -11,6 +11,10 @@ import {
 } from "./lib/cities";
 import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
 import {
+  CHURCH_MAP_CANVAS,
+  CITY_MAP_CANVAS,
+  churchMapMarkers,
+  churchMapView,
   cityMapMarkers,
   cityMapView,
   type CityMapData,
@@ -376,7 +380,11 @@ export function cityPageData(
   return {
     city,
     map: view
-      ? { view, markers: cityMapMarkers(defaultMapIndex(snapshot), view) }
+      ? {
+          view,
+          canvas: CITY_MAP_CANVAS,
+          markers: cityMapMarkers(defaultMapIndex(snapshot), view, CITY_MAP_CANVAS),
+        }
       : null,
     churches: city.churches.map((church) => entry(church, null)),
     nearby: nearbyChurches(city, snapshot.churches).map((n) =>
@@ -411,6 +419,46 @@ function defaultMapIndex(snapshot: Snapshot): ClusterIndex<MappedItem> {
   return index;
 }
 
+/**
+ * A church page's map as it opens, centered on the church; null for a church
+ * with no known position. Shared with the prerenderer.
+ */
+export function churchMapData(
+  snapshot: Snapshot,
+  church: ChurchBase,
+): CityMapData | null {
+  const view = churchMapView(church);
+  if (!view) return null;
+  return {
+    view,
+    canvas: CHURCH_MAP_CANVAS,
+    markers: churchMapMarkers(defaultMapIndex(snapshot), view, {
+      id: church.id,
+      lat: view.lat,
+      lng: view.lng,
+    }),
+  };
+}
+
+/**
+ * A church as the map's popup shows it, with every upcoming event whatever
+ * the filters: for a church page's map, which shows its church even when the
+ * filters leave it out. Null for an unknown or unmapped church.
+ */
+export async function fetchMapChurch(
+  churchId: number,
+): Promise<ChurchMapItem | null> {
+  const snapshot = await getSnapshot();
+  const church = snapshot.churches.find((c) => c.id === churchId);
+  if (!church || church.latitude == null || church.longitude == null) {
+    return null;
+  }
+  return buildMapItem(
+    church,
+    snapshot.eventsOf(church.id).filter((e) => !e.cancelled),
+  );
+}
+
 export async function fetchCityPage(slug: string): Promise<CityPageData> {
   // Only city pages need the centers, so they stay out of the map's bundle.
   const [snapshot, centers] = await Promise.all([
@@ -434,16 +482,24 @@ export async function fetchChurchIndex(): Promise<ChurchIndexData> {
   return { churches: snapshot.churches, cities: cityIndex(snapshot, centers).cities };
 }
 
-/** A church page's church, and the city page its breadcrumbs link to. */
+/**
+ * A church page's church, the city page its breadcrumbs link to, and its map
+ * as it opens (null for a church with no known position).
+ */
 export interface ChurchWithCity {
   church: ChurchDetail;
   city: CityLink | null;
+  map: CityMapData | null;
 }
 
 export async function fetchChurch(slug: string): Promise<ChurchWithCity> {
   const snapshot = await getSnapshot();
   const church = findChurch(snapshot, slug);
-  return { church, city: churchCity(snapshot, church) };
+  return {
+    church,
+    city: churchCity(snapshot, church),
+    map: churchMapData(snapshot, church),
+  };
 }
 
 export async function fetchChurchEvents(

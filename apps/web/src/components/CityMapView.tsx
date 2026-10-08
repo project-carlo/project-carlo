@@ -11,7 +11,7 @@ import {
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import type { Map as LeafletMap } from "leaflet";
 import { useMap } from "react-leaflet";
-import { fetchChurches } from "../api";
+import { fetchChurches, fetchMapChurch } from "../api";
 import { ChurchMap } from "./ChurchMap";
 import { MapCornerControls } from "./MapCornerControls";
 import {
@@ -65,15 +65,21 @@ function MapMode({ open }: { open: boolean }) {
  * a desktop); open, CityMapOpenControls adds the rest. The filters chosen
  * there stay on the map in the page. Loaded only once the page's map goes
  * live, and the open controls only once the churches are up.
+ *
+ * On a church page, the church's pin is marked as the page's, and stays on
+ * the map whatever the filters leave, as the preview draws it.
  */
 export default function CityMapView({
   view,
+  churchId,
   open,
   onOpen,
   onClose,
   onReady,
 }: {
   view: MapView;
+  /** A church page's church. */
+  churchId?: number;
   open: boolean;
   onOpen: () => void;
   onClose: () => void;
@@ -98,11 +104,25 @@ export default function CityMapView({
     () => churchFiltersFor(appliedFilters),
     [appliedFilters],
   );
-  const { data } = useQuery({
+  const { data: filtered } = useQuery({
     queryKey: ["churches", apiFilters],
     queryFn: () => fetchChurches(apiFilters),
     placeholderData: keepPreviousData,
   });
+  const { data: pageChurch } = useQuery({
+    queryKey: ["map-church", churchId],
+    queryFn: () => fetchMapChurch(churchId!),
+    enabled: churchId !== undefined,
+  });
+  // The page's church, added when the filters leave it out.
+  const data = useMemo(() => {
+    if (churchId === undefined) return filtered;
+    if (!filtered || pageChurch === undefined) return undefined;
+    if (!pageChurch || filtered.some((church) => church.id === churchId)) {
+      return filtered;
+    }
+    return [...filtered, pageChurch];
+  }, [churchId, filtered, pageChurch]);
   useEffect(() => {
     if (!data) return;
     onReady();
@@ -160,6 +180,7 @@ export default function CityMapView({
     <>
       <ChurchMap
         churches={data ?? NO_CHURCHES}
+        currentChurchId={churchId}
         start={start}
         centerOn={selection.centerOn}
         onClearPlace={selection.clearPlace}
