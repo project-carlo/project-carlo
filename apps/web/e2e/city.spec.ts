@@ -172,15 +172,13 @@ test("a pin's popup in the page is only the church's name, and the full card in 
   await expect(popup.getByRole("link")).toHaveAttribute("href", /^\/churches\//);
   await expect(popup.getByText("Full schedule")).toHaveCount(0);
   await expect(popup.locator(".leaflet-popup-close-button")).toBeHidden();
-  const compactWidth = (await popup.boundingBox())!.width;
-  expect(compactWidth).toBeLessThanOrEqual(250);
+  expect((await popup.boundingBox())!.width).toBeLessThanOrEqual(250);
 
   // Opening the map keeps the popup, now the full card, with its pin in the
-  // middle.
+  // middle. It has the full card's widths too: wider than the name-only card
+  // can grow.
   const dialog = await expectExpandedPinCentered(page);
-  expect((await dialog.locator(".leaflet-popup").boundingBox())!.width).toBeGreaterThan(
-    compactWidth,
-  );
+  expect((await dialog.locator(".leaflet-popup").boundingBox())!.width).toBeGreaterThan(250);
 
   // And again, once the open map's controls are already loaded (they then
   // mount as the map resizes, not after). Closing the map leaves the popup
@@ -188,6 +186,7 @@ test("a pin's popup in the page is only the church's name, and the full card in 
   await dialog.getByRole("button", { name: "Close", exact: true }).click();
   await expect(dialog).toHaveCount(0);
   await expect(popup.locator(".map-popup-compact")).toBeVisible();
+  expect((await popup.boundingBox())!.width).toBeLessThanOrEqual(250);
   await nudgeCityMap(page, -60, -30);
   await expectExpandedPinCentered(page);
 });

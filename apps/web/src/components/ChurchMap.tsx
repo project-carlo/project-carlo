@@ -3,6 +3,7 @@ import {
   memo,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -614,8 +615,10 @@ const ChurchMarker = memo(function ChurchMarker({
 
   // react-leaflet reads a popup's options only as it creates it, so a popup
   // switching between the two cards (the city map opening or closing over
-  // it) is resized here, after its new body is in.
-  useEffect(() => {
+  // it) gets its new widths here. Set before any effect runs: react-leaflet
+  // lays an open popup out again in one as its body changes, and it then
+  // uses these, rather than laying the new card out to the old widths first.
+  useLayoutEffect(() => {
     const popup = markerRef.current?.getPopup();
     if (!popup) return;
     popup.options.minWidth = compact
@@ -624,7 +627,6 @@ const ChurchMarker = memo(function ChurchMarker({
     popup.options.maxWidth = compact
       ? COMPACT_POPUP_MAX_WIDTH
       : POPUP_MAX_WIDTH;
-    if (popup.isOpen()) popup.update();
   }, [compact]);
 
   // A fresh array literal here would look like a moved marker to react-leaflet,
@@ -763,12 +765,16 @@ function ClusteredChurchMarkers({
   const map = useMap();
   const [viewport, setViewport] = useState(() => readViewport(map));
   const [hovered, setHovered] = useState<MapCluster | null>(null);
+  // What's drawn, or about to be: kept as it's set rather than once React has
+  // rendered it, so the move events a drag fires before then don't each ask
+  // for the same redraw again.
   const drawnRef = useRef(viewport);
-  useEffect(() => {
-    drawnRef.current = viewport;
-  }, [viewport]);
+  const redraw = () => {
+    drawnRef.current = readViewport(map);
+    setViewport(drawnRef.current);
+  };
   useMapEvents({
-    moveend: () => setViewport(readViewport(map)),
+    moveend: redraw,
     // A pan can outrun the padding (one swipe across the city page's small
     // map does), and the ground it drags in would have no markers until it
     // stopped. So once the view is within half the padding of the edge of
@@ -780,7 +786,7 @@ function ClusteredChurchMarkers({
       const [west, south, east, north] = drawn.bbox;
       const ahead = map.getBounds().pad(VIEWPORT_PADDING / 2);
       if (L.latLngBounds([south, west], [north, east]).contains(ahead)) return;
-      setViewport(readViewport(map));
+      redraw();
     },
   });
 
