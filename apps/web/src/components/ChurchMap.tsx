@@ -348,11 +348,16 @@ function centerOpenPopup(map: LeafletMap): void {
   const insets = overlayInsets(map);
   const size = map.getSize();
   const pin = map.latLngToContainerPoint(latlng);
-  // From the card's top down to the point the pin stands on.
+  // From the card's top down to the point the pin stands on, measured within
+  // the popup pane: PopupPaneElevator brings that pane's offset in line with
+  // the map's only once the running script is done, so just after the map
+  // has moved (as it does as it opens and resizes) the card isn't over the
+  // pin yet.
+  const pane = map.getPane("popupPane");
+  if (!pane) return;
   const above =
-    pin.y -
-    (element.getBoundingClientRect().top -
-      map.getContainer().getBoundingClientRect().top);
+    map.latLngToLayerPoint(latlng).y -
+    (element.getBoundingClientRect().top - pane.getBoundingClientRect().top);
   const wanted = L.point(
     (insets.x + size.x) / 2,
     Math.max((insets.y + size.y) / 2, insets.y + START_AREA_MARGIN + above),

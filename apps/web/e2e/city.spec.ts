@@ -120,6 +120,42 @@ test("the open map keeps focus in itself, and Escape closes a popup before the m
   await expect(page.locator("main")).not.toHaveAttribute("inert");
 });
 
+/** Drags the page's map a little way, so its pins are off the middle. */
+async function nudgeCityMap(page: Page, dx: number, dy: number) {
+  const box = (await page.locator(".city-map").boundingBox())!;
+  const [x, y] = [box.x + box.width / 2, box.y + box.height / 2];
+  await page.mouse.move(x, y);
+  await page.mouse.down();
+  await page.mouse.move(x + dx, y + dy, { steps: 5 });
+  await page.mouse.up();
+}
+
+/**
+ * Expands the page's map, its pin's popup open, and checks the pin comes to
+ * the middle of the map below the buttons along its top, its card clear of
+ * them.
+ */
+async function expectExpandedPinCentered(page: Page) {
+  await page.getByRole("button", { name: "Expand map" }).click();
+  const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
+  await expect(dialog.getByText("Full schedule")).toBeVisible();
+  const buttons = dialog.locator("[data-map-overlay]");
+  await expect(buttons).toBeVisible();
+  const top = await buttons.evaluate((el) => el.getBoundingClientRect().bottom);
+  // How far the point the pin stands on is from there, across and down.
+  await expect
+    .poll(async () => {
+      const pin = (await dialog.locator(".church-map-marker.is-selected").boundingBox())!;
+      return [
+        Math.round(Math.abs(pin.x + 17 - 390 / 2) / 4),
+        Math.round(Math.abs(pin.y + 40 - (top + 844) / 2) / 4),
+      ];
+    })
+    .toEqual([0, 0]);
+  expect((await dialog.locator(".leaflet-popup").boundingBox())!.y).toBeGreaterThan(top);
+  return dialog;
+}
+
 test("a pin's popup in the page is only the church's name, and the full card in the middle once the map is open", async ({
   page,
 }) => {
@@ -129,14 +165,7 @@ test("a pin's popup in the page is only the church's name, and the full card in 
     timeout: 15_000,
   });
   const map = page.locator(".city-map");
-  // Dragged, so the pin is off the middle of the map.
-  const box = (await map.boundingBox())!;
-  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-  await page.mouse.down();
-  await page.mouse.move(box.x + box.width / 2 + 100, box.y + box.height / 2 + 40, {
-    steps: 5,
-  });
-  await page.mouse.up();
+  await nudgeCityMap(page, 100, 40);
   await map.locator(".leaflet-container .church-map-marker").first().click();
   const popup = map.locator(".leaflet-popup");
   await expect(popup.locator(".map-popup-compact")).toBeVisible();
@@ -146,29 +175,21 @@ test("a pin's popup in the page is only the church's name, and the full card in 
   const compactWidth = (await popup.boundingBox())!.width;
   expect(compactWidth).toBeLessThanOrEqual(250);
 
-  // Opening the map keeps the popup, now the full card, and brings its pin
-  // to the middle of the map below the buttons along its top.
-  await page.getByRole("button", { name: "Expand map" }).click();
-  const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
-  await expect(dialog.getByText("Full schedule")).toBeVisible();
+  // Opening the map keeps the popup, now the full card, with its pin in the
+  // middle.
+  const dialog = await expectExpandedPinCentered(page);
   expect((await dialog.locator(".leaflet-popup").boundingBox())!.width).toBeGreaterThan(
     compactWidth,
   );
-  const buttons = (await dialog.locator("[data-map-overlay]").boundingBox())!;
-  // How far the point the pin stands on is from there, across and down.
-  await expect
-    .poll(async () => {
-      const pin = (await dialog.locator(".church-map-marker.is-selected").boundingBox())!;
-      return [
-        Math.round(Math.abs(pin.x + 17 - 390 / 2) / 4),
-        Math.round(Math.abs(pin.y + 40 - (buttons.y + buttons.height + 844) / 2) / 4),
-      ];
-    })
-    .toEqual([0, 0]);
-  // With its card clear of those buttons.
-  expect((await dialog.locator(".leaflet-popup").boundingBox())!.y).toBeGreaterThan(
-    buttons.y + buttons.height,
-  );
+
+  // And again, once the open map's controls are already loaded (they then
+  // mount as the map resizes, not after). Closing the map leaves the popup
+  // open, back to the name.
+  await dialog.getByRole("button", { name: "Close", exact: true }).click();
+  await expect(dialog).toHaveCount(0);
+  await expect(popup.locator(".map-popup-compact")).toBeVisible();
+  await nudgeCityMap(page, -60, -30);
+  await expectExpandedPinCentered(page);
 });
 
 /** Each marker's box in the map, from left to right. */
