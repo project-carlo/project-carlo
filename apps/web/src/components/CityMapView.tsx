@@ -60,11 +60,29 @@ function MapMode({ open }: { open: boolean }) {
 }
 
 /**
+ * Calls `onMove` once the map starts moving: dragged, pinched, zoomed or sent
+ * to a search result. (Not as it's resized: Leaflet keeps its center then,
+ * as the preview's centered canvas does.)
+ */
+function MoveWatch({ onMove }: { onMove: () => void }) {
+  const map = useMap();
+  useEffect(() => {
+    map.on("movestart zoomstart", onMove);
+    return () => {
+      map.off("movestart zoomstart", onMove);
+    };
+  }, [map, onMove]);
+  return null;
+}
+
+/**
  * What CityMapLive shows: the home map's churches, pins and popups, opening
- * on the city preview's view. In the page it has Expand (and zoom buttons on
- * a desktop); open, CityMapOpenControls adds the rest. The filters chosen
- * there stay on the map in the page. Loaded only once the page's map goes
- * live, and the open controls only once the churches are up.
+ * on the page preview's view. In the page it has Expand (and zoom buttons on
+ * a desktop), and a pin's popup is only the church's name, since the full
+ * card would cover most of the small map; open, CityMapOpenControls adds the
+ * rest. The filters chosen there stay on the map in the page. Loaded only
+ * once the page's map goes live, and the open controls only once the
+ * churches are up.
  *
  * On a church page, the church's pin is marked as the page's, and stays on
  * the map whatever the filters leave, as the preview draws it.
@@ -76,6 +94,7 @@ export default function CityMapView({
   onOpen,
   onClose,
   onReady,
+  onMove,
 }: {
   view: MapView;
   /** A church page's church. */
@@ -85,6 +104,8 @@ export default function CityMapView({
   onClose: () => void;
   /** Called once the churches are on the map. */
   onReady: () => void;
+  /** Called as the map starts moving off the view it opened on. */
+  onMove: () => void;
 }) {
   const isDesktop = useMinWidth(DESKTOP_MIN_WIDTH);
   const [map, setMap] = useState<LeafletMap | null>(null);
@@ -185,8 +206,10 @@ export default function CityMapView({
         centerOn={selection.centerOn}
         onClearPlace={selection.clearPlace}
         mapRef={setMap}
+        compactPopups={!open}
       >
         <MapMode open={open} />
+        <MoveWatch onMove={onMove} />
       </ChurchMap>
       {open ? (
         <Suspense fallback={null}>

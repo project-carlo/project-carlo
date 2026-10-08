@@ -343,6 +343,15 @@
 .city-map:has(.city-map-live[data-ready]) .city-map-static-control {
   display: none;
 }
+/* The still tiles only line up with the live map on the view they were drawn
+ * for. Once it moves, they go too: otherwise, wherever the live map has no
+ * tile yet (around the shrinking old tiles as it zooms out, or the edge it's
+ * dragged in from), the transparent live map shows them through at the old
+ * zoom and offset. The preview's paper shows there instead, as on the open
+ * map. */
+.city-map:has(.city-map-live[data-moved]) .city-map-tiles {
+  display: none;
+}
 /* Once the live map is mounting, the preview stops being a link to the home
  * map: it's about to be the map itself. Hidden rather than only let clicks
  * through, so it's out of the tab order and the accessibility tree too. */
@@ -483,6 +492,26 @@
  * has to clear the close button. */
 .map-popup-solo {
   padding: 0.7rem 2.1rem 0.75rem 0.9rem;
+}
+
+/* The name-only card, for a map too small for the full one (the city and
+ * church pages' previews). It has no close button: a tap anywhere else on the
+ * map closes it, and the button would be most of the card. */
+.map-popup-compact {
+  padding: 0.3rem 0.6rem 0.35rem;
+}
+.leaflet-popup:has(.map-popup-compact) .leaflet-popup-close-button {
+  display: none;
+}
+/* Scoped through `.leaflet-container` for the reason the foot link is. */
+.leaflet-container .map-popup-compact-link {
+  display: block;
+  color: var(--ink);
+  transition: color 160ms ease;
+}
+.leaflet-container .map-popup-compact-link:hover,
+.leaflet-container .map-popup-compact-link:focus-visible {
+  color: var(--rubric);
 }
 
 /* The foot has no padding of its own: the link fills it so the whole strip is
