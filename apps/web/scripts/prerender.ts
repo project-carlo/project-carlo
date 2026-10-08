@@ -5,7 +5,14 @@ import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { loadEnv } from "vite";
 import { createElement } from "react";
-import { churchCity, churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
+import {
+  churchCity,
+  churchMapData,
+  churchSchedule,
+  cityIndex,
+  cityPageData,
+  findChurch,
+} from "../src/api";
 import { cityPath, type CityCenters } from "../src/lib/cities";
 import { CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
 import { HOME_LINK_ATTRIBUTE, HOME_SEARCH_KEY } from "../src/hooks/useHomeHref";
@@ -53,7 +60,7 @@ interface ManifestChunk {
 
 /**
  * The app's stylesheet and the fonts to preload, as Vite's build manifest
- * lists them for the index.html entry, the city pages' map script, and the
+ * lists them for the index.html entry, the city and church pages' map script, and the
  * church index's search script. The static pages link only that one
  * stylesheet, so the build fails if any CSS lands elsewhere (say, a
  * lazy-loaded route importing its own), or a font or a script goes missing,
@@ -318,9 +325,11 @@ async function main() {
           createElement(StaticChurchPage, {
             church,
             city: churchCity(snapshot, church),
+            map: churchMapData(snapshot, church),
             events,
             cssPath,
             fontPaths,
+            cityMapScript,
             canonicalUrl: canonicalUrlForChurchSlug(origin, slug),
             lastModified: LASTMOD_PLACEHOLDER,
           }),

@@ -15,11 +15,12 @@ import { currentLocationPlace } from "../placeSearch";
 const noop = () => {};
 
 /**
- * The city page's map, open over the whole window. On a desktop it's the
- * home map's view (search, filters, zoom and locate) with a Close map button,
- * a size up from the rest so it isn't lost beside the big search panel; on
- * a phone, a Filters button that opens the home map's filter sheet, Close,
- * and zoom buttons where the home map keeps its locate button.
+ * The city page's map (and the church page's), open over the whole window.
+ * On a desktop it's the home map's view (search, filters, zoom and locate)
+ * with a Close map button, a size up from the rest so it isn't lost beside
+ * the big search panel; on a phone, a Filters button that opens the home
+ * map's filter sheet, Close, and zoom buttons where the home map keeps its
+ * locate button.
  */
 export default function CityMapOpenControls({
   isDesktop,

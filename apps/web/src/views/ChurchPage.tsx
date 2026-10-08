@@ -15,6 +15,7 @@ import {
   canonicalForPath,
   churchPath,
 } from "@/lib/seo";
+import { liveMap } from "./liveMap";
 import { NotFoundPage } from "./NotFoundPage";
 
 export function ChurchPage() {
@@ -78,7 +79,9 @@ export function ChurchPage() {
       <ChurchPageContent
         church={church}
         city={churchQuery.data?.city ?? null}
+        map={churchQuery.data?.map ?? null}
         events={events}
+        liveMap={liveMap}
       />
     );
   }

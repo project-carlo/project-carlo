@@ -1,7 +1,7 @@
 /**
- * The script a prerendered city page loads: it makes the page's map preview
- * live (see CityMapLive), the one part of the page that needs JavaScript. The
- * rest stays the static HTML it was served as.
+ * The script a prerendered city or church page loads: it makes the page's
+ * map preview live (see CityMapLive), the one part of the page that needs
+ * JavaScript. The rest stays the static HTML it was served as.
  */
 import {
   CITY_MAP_ATTRIBUTE,
