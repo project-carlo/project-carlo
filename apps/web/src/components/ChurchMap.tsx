@@ -3,6 +3,7 @@ import {
   memo,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -63,6 +64,11 @@ const POPUP_DAY_ROWS = 3;
  *  differently-shaped panel as you click along a street. */
 const POPUP_MIN_WIDTH = 225;
 const POPUP_MAX_WIDTH = 275;
+
+/** The name-only popup is cut to its name instead, up to a width that wraps
+ *  a long one rather than covering the small map it opens on. */
+const COMPACT_POPUP_MIN_WIDTH = 0;
+const COMPACT_POPUP_MAX_WIDTH = 240;
 
 /* A cross-in-roundel pin: cream disc with a brass ring, a rubric-red Latin
  * cross at the center — and, for a searched place, a solid rubric pin. Both
@@ -155,6 +161,9 @@ interface ChurchMapProps {
   children?: ReactNode;
   /** Gets the Leaflet map, for controls laid over it (MapCornerControls). */
   mapRef?: Ref<LeafletMap>;
+  /** Church pins open a small card with only the church's name, for a map
+   *  too small to hold the full one (the city page's preview). */
+  compactPopups?: boolean;
 }
 
 /**
@@ -322,6 +331,64 @@ function ChangeView({
 const START_AREA_MARGIN = 24;
 
 /**
+ * Moves the map, without animating, so the pin the open popup points at is
+ * in the middle of the part of the map the floating UI leaves clear, both
+ * across and down, or, if that would put the card above it under the UI or
+ * off the top, as near the middle as keeps the card's top clear. Does
+ * nothing with no popup open.
+ */
+function centerOpenPopup(map: LeafletMap): void {
+  const open: L.Popup[] = [];
+  map.eachLayer((layer) => {
+    if (layer instanceof L.Popup && layer.isOpen()) open.push(layer);
+  });
+  const element = open[0]?.getElement();
+  const latlng = open[0]?.getLatLng();
+  if (!element || !latlng) return;
+
+  const insets = overlayInsets(map);
+  const size = map.getSize();
+  const pin = map.latLngToContainerPoint(latlng);
+  // From the card's top down to the point the pin stands on, measured within
+  // the popup pane: PopupPaneElevator brings that pane's offset in line with
+  // the map's only once the running script is done, so just after the map
+  // has moved (as it does as it opens and resizes) the card isn't over the
+  // pin yet.
+  const pane = map.getPane("popupPane");
+  if (!pane) return;
+  const above =
+    map.latLngToLayerPoint(latlng).y -
+    (element.getBoundingClientRect().top - pane.getBoundingClientRect().top);
+  const wanted = L.point(
+    (insets.x + size.x) / 2,
+    Math.max((insets.y + size.y) / 2, insets.y + START_AREA_MARGIN + above),
+  );
+  // setView, not panBy: it also stops the pan the popup's own autoPan may
+  // have started for the map's old size.
+  map.setView(
+    map.containerPointToLatLng(size.divideBy(2).add(pin.subtract(wanted))),
+    map.getZoom(),
+    { animate: false },
+  );
+}
+
+/**
+ * Centres the open popup's pin (centerOpenPopup), as it mounts. For
+ * the city page's map opening over the whole window, which otherwise keeps
+ * the centre it had in the page, so a pin picked there could open anywhere
+ * on the big map, its card under the panel or off the top. Mounted with the
+ * open map's controls, so by then the map has its new size, the pin its
+ * full card, and the panels it must clear are in place.
+ */
+export function CenterOpenPopupOnMount({ map }: { map: LeafletMap | null }) {
+  const mapRef = useRef(map);
+  useEffect(() => {
+    if (mapRef.current) centerOpenPopup(mapRef.current);
+  }, []);
+  return null;
+}
+
+/**
  * Puts a start chosen for the visitor in the part of the map the floating UI
  * leaves clear: the point of a "near" start where a search result would go,
  * every church of an "area" start in view. Run as the map is created, before
@@ -474,6 +541,25 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
   );
 }
 
+/**
+ * Popup body for one church on a map too small for ChurchPopupBody: just its
+ * name, linking to its page.
+ */
+function ChurchPopupName({ church }: { church: ChurchMapItem }) {
+  const documentLinks = useDocumentLinks();
+  return (
+    <div className="map-popup-compact">
+      <Link
+        to={`/churches/${church.slug}/`}
+        reloadDocument={documentLinks}
+        className="map-popup-compact-link font-display text-[0.9375rem] leading-[1.2]"
+      >
+        {church.name ?? UNNAMED_CHURCH}
+      </Link>
+    </div>
+  );
+}
+
 const SELECTED_MARKER_CLASS = "is-selected";
 
 /**
@@ -501,6 +587,7 @@ const ChurchMarker = memo(function ChurchMarker({
   church,
   openPopupRequestId,
   onPopupRequestHandled,
+  compact,
 }: {
   church: MappedChurch;
   /**
@@ -515,6 +602,8 @@ const ChurchMarker = memo(function ChurchMarker({
    * would re-open its popup every time zooming brought it back.
    */
   onPopupRequestHandled: (requestId: number) => void;
+  /** Whether the popup shows only the church's name. */
+  compact: boolean;
 }) {
   const markerRef = useRef<LeafletMarker | null>(null);
   useEffect(() => {
@@ -523,6 +612,22 @@ const ChurchMarker = memo(function ChurchMarker({
       onPopupRequestHandled(openPopupRequestId);
     }
   }, [openPopupRequestId, onPopupRequestHandled]);
+
+  // react-leaflet reads a popup's options only as it creates it, so a popup
+  // switching between the two cards (the city map opening or closing over
+  // it) gets its new widths here. Set before any effect runs: react-leaflet
+  // lays an open popup out again in one as its body changes, and it then
+  // uses these, rather than laying the new card out to the old widths first.
+  useLayoutEffect(() => {
+    const popup = markerRef.current?.getPopup();
+    if (!popup) return;
+    popup.options.minWidth = compact
+      ? COMPACT_POPUP_MIN_WIDTH
+      : POPUP_MIN_WIDTH;
+    popup.options.maxWidth = compact
+      ? COMPACT_POPUP_MAX_WIDTH
+      : POPUP_MAX_WIDTH;
+  }, [compact]);
 
   // A fresh array literal here would look like a moved marker to react-leaflet,
   // which would call setLatLng (and re-project and re-transform the pin) on
@@ -540,8 +645,15 @@ const ChurchMarker = memo(function ChurchMarker({
       position={position}
       eventHandlers={eventHandlers}
     >
-      <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
-        <ChurchPopupBody church={church} />
+      <Popup
+        minWidth={compact ? COMPACT_POPUP_MIN_WIDTH : POPUP_MIN_WIDTH}
+        maxWidth={compact ? COMPACT_POPUP_MAX_WIDTH : POPUP_MAX_WIDTH}
+      >
+        {compact ? (
+          <ChurchPopupName church={church} />
+        ) : (
+          <ChurchPopupBody church={church} />
+        )}
       </Popup>
     </Marker>
   );
@@ -635,23 +747,47 @@ function readViewport(map: LeafletMap): Viewport {
  * The church pins and cluster roundels for the current view.
  *
  * Only what falls in (and just around) the viewport is rendered, and the set
- * is recomputed once each pan or zoom settles, so the DOM holds tens of
- * markers however many churches the snapshot has.
+ * is recomputed once each pan or zoom settles, and as a pan nears the edge of
+ * what's drawn, so the DOM holds tens of markers however many churches the
+ * snapshot has.
  */
 function ClusteredChurchMarkers({
   index,
   popupRequest,
   onPopupRequestHandled,
+  compactPopups,
 }: {
   index: ClusterIndex<MappedChurch>;
   popupRequest: { churchId: number; requestId: number } | null;
   onPopupRequestHandled: (requestId: number) => void;
+  compactPopups: boolean;
 }) {
   const map = useMap();
   const [viewport, setViewport] = useState(() => readViewport(map));
   const [hovered, setHovered] = useState<MapCluster | null>(null);
+  // What's drawn, or about to be: kept as it's set rather than once React has
+  // rendered it, so the move events a drag fires before then don't each ask
+  // for the same redraw again.
+  const drawnRef = useRef(viewport);
+  const redraw = () => {
+    drawnRef.current = readViewport(map);
+    setViewport(drawnRef.current);
+  };
   useMapEvents({
-    moveend: () => setViewport(readViewport(map)),
+    moveend: redraw,
+    // A pan can outrun the padding (one swipe across the city page's small
+    // map does), and the ground it drags in would have no markers until it
+    // stopped. So once the view is within half the padding of the edge of
+    // what's drawn, the set is redrawn around it. Not while zooming: the
+    // zoom is between levels then, and moveend redraws it.
+    move: () => {
+      const drawn = drawnRef.current;
+      if (map.getZoom() !== drawn.zoom) return;
+      const [west, south, east, north] = drawn.bbox;
+      const ahead = map.getBounds().pad(VIEWPORT_PADDING / 2);
+      if (L.latLngBounds([south, west], [north, east]).contains(ahead)) return;
+      redraw();
+    },
   });
 
   const entries = useMemo(
@@ -749,6 +885,7 @@ function ClusteredChurchMarkers({
                 : undefined
             }
             onPopupRequestHandled={onPopupRequestHandled}
+            compact={compactPopups}
           />
         ),
       )}
@@ -819,6 +956,7 @@ export const ChurchMap = memo(function ChurchMap({
   onClearPlace,
   children,
   mapRef,
+  compactPopups = false,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -878,6 +1016,7 @@ export const ChurchMap = memo(function ChurchMap({
         index={clusterIndex}
         popupRequest={popupRequest}
         onPopupRequestHandled={setHandledRequestId}
+        compactPopups={compactPopups}
       />
       {centerOn?.placeTitle ? (
         <SearchPlaceMarker

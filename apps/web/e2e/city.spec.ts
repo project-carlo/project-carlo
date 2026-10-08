@@ -120,6 +120,77 @@ test("the open map keeps focus in itself, and Escape closes a popup before the m
   await expect(page.locator("main")).not.toHaveAttribute("inert");
 });
 
+/** Drags the page's map a little way, so its pins are off the middle. */
+async function nudgeCityMap(page: Page, dx: number, dy: number) {
+  const box = (await page.locator(".city-map").boundingBox())!;
+  const [x, y] = [box.x + box.width / 2, box.y + box.height / 2];
+  await page.mouse.move(x, y);
+  await page.mouse.down();
+  await page.mouse.move(x + dx, y + dy, { steps: 5 });
+  await page.mouse.up();
+}
+
+/**
+ * Expands the page's map, its pin's popup open, and checks the pin comes to
+ * the middle of the map below the buttons along its top, its card clear of
+ * them.
+ */
+async function expectExpandedPinCentered(page: Page) {
+  await page.getByRole("button", { name: "Expand map" }).click();
+  const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
+  await expect(dialog.getByText("Full schedule")).toBeVisible();
+  const buttons = dialog.locator("[data-map-overlay]");
+  await expect(buttons).toBeVisible();
+  const top = await buttons.evaluate((el) => el.getBoundingClientRect().bottom);
+  // How far the point the pin stands on is from there, across and down.
+  await expect
+    .poll(async () => {
+      const pin = (await dialog.locator(".church-map-marker.is-selected").boundingBox())!;
+      return [
+        Math.round(Math.abs(pin.x + 17 - 390 / 2) / 4),
+        Math.round(Math.abs(pin.y + 40 - (top + 844) / 2) / 4),
+      ];
+    })
+    .toEqual([0, 0]);
+  expect((await dialog.locator(".leaflet-popup").boundingBox())!.y).toBeGreaterThan(top);
+  return dialog;
+}
+
+test("a pin's popup in the page is only the church's name, and the full card in the middle once the map is open", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(EAST_AURORA);
+  await expect(page.locator(".city-map-live[data-ready]")).toHaveCount(1, {
+    timeout: 15_000,
+  });
+  const map = page.locator(".city-map");
+  await nudgeCityMap(page, 100, 40);
+  await map.locator(".leaflet-container .church-map-marker").first().click();
+  const popup = map.locator(".leaflet-popup");
+  await expect(popup.locator(".map-popup-compact")).toBeVisible();
+  await expect(popup.getByRole("link")).toHaveAttribute("href", /^\/churches\//);
+  await expect(popup.getByText("Full schedule")).toHaveCount(0);
+  await expect(popup.locator(".leaflet-popup-close-button")).toBeHidden();
+  expect((await popup.boundingBox())!.width).toBeLessThanOrEqual(250);
+
+  // Opening the map keeps the popup, now the full card, with its pin in the
+  // middle. It has the full card's widths too: wider than the name-only card
+  // can grow.
+  const dialog = await expectExpandedPinCentered(page);
+  expect((await dialog.locator(".leaflet-popup").boundingBox())!.width).toBeGreaterThan(250);
+
+  // And again, once the open map's controls are already loaded (they then
+  // mount as the map resizes, not after). Closing the map leaves the popup
+  // open, back to the name.
+  await dialog.getByRole("button", { name: "Close", exact: true }).click();
+  await expect(dialog).toHaveCount(0);
+  await expect(popup.locator(".map-popup-compact")).toBeVisible();
+  expect((await popup.boundingBox())!.width).toBeLessThanOrEqual(250);
+  await nudgeCityMap(page, -60, -30);
+  await expectExpandedPinCentered(page);
+});
+
 /** Each marker's box in the map, from left to right. */
 async function markerBoxes(page: Page, selector: string): Promise<string[]> {
   return page.locator(".city-map").evaluate((map, sel) => {
@@ -158,6 +229,36 @@ test("the live map takes over the preview with its markers where they were", asy
   expect(await markerBoxes(page, `.leaflet-container :is(${MARKERS})`)).toEqual(
     stillBoxes,
   );
+});
+
+test("the markers a pan drags into the page's map are there before it stops", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/mass-times/rochester-ny/");
+  await expect(page.locator(".city-map-live[data-ready]")).toHaveCount(1, {
+    timeout: 15_000,
+  });
+  const live = `.leaflet-container :is(${MARKERS})`;
+  const before = await markerBoxes(page, live);
+
+  // Further than the markers drawn around the small map reach (half its size
+  // past each edge), and held there. Up and left, to bring in the towns
+  // south-east of the city rather than the lake.
+  const box = (await page.locator(".city-map").boundingBox())!;
+  const [x, y] = [box.x + box.width / 2, box.y + box.height / 2];
+  await page.mouse.move(x, y);
+  await page.mouse.down();
+  await page.mouse.move(x - box.width, y - box.height, { steps: 30 });
+  // Held still past Leaflet's inertia window, so letting go doesn't fling it.
+  await page.waitForTimeout(200);
+  const dragging = await markerBoxes(page, live);
+  await page.mouse.up();
+  await page.waitForTimeout(300);
+
+  expect(dragging).not.toEqual(before);
+  expect(dragging.length).toBeGreaterThan(0);
+  expect(await markerBoxes(page, live)).toEqual(dragging);
 });
 
 test("the still tiles go once the live map moves off their view", async ({

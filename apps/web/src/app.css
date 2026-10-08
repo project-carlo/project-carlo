@@ -494,6 +494,26 @@
   padding: 0.7rem 2.1rem 0.75rem 0.9rem;
 }
 
+/* The name-only card, for a map too small for the full one (the city page's
+ * preview). It has no close button: a tap anywhere else on the map closes it,
+ * and the button would be most of the card. */
+.map-popup-compact {
+  padding: 0.3rem 0.6rem 0.35rem;
+}
+.leaflet-popup:has(.map-popup-compact) .leaflet-popup-close-button {
+  display: none;
+}
+/* Scoped through `.leaflet-container` for the reason the foot link is. */
+.leaflet-container .map-popup-compact-link {
+  display: block;
+  color: var(--ink);
+  transition: color 160ms ease;
+}
+.leaflet-container .map-popup-compact-link:hover,
+.leaflet-container .map-popup-compact-link:focus-visible {
+  color: var(--rubric);
+}
+
 /* The foot has no padding of its own: the link fills it so the whole strip is
  * the target, rather than the width of the words. */
 .map-popup-foot {

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Map as LeafletMap } from "leaflet";
+import { CenterOpenPopupOnMount } from "./ChurchMap";
 import { FilterPanel } from "./FilterPanel";
 import { FULL_WINDOW_CORNER_CLASS, MapCornerControls } from "./MapCornerControls";
 import { MapOverlay } from "./MapOverlay";
@@ -72,6 +73,9 @@ export default function CityMapOpenControls({
     </button>
   );
 
+  // A pin picked in the page comes to the middle of the open map.
+  const centering = <CenterOpenPopupOnMount map={map} />;
+
   if (isDesktop) {
     return (
       <>
@@ -99,6 +103,7 @@ export default function CityMapOpenControls({
           }}
           className={FULL_WINDOW_CORNER_CLASS}
         />
+        {centering}
       </>
     );
   }
@@ -106,7 +111,12 @@ export default function CityMapOpenControls({
   const filtered = !filtersEqual(appliedFilters, DEFAULT_FILTER_STATE);
   return (
     <>
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-[950] flex items-start justify-between gap-3 px-4 pt-[calc(1rem+var(--safe-area-inset-top))]">
+      {/* Marked as covering the map, so a pin centred as the map opens keeps
+          its card clear of these buttons. */}
+      <div
+        data-map-overlay
+        className="pointer-events-none absolute inset-x-0 top-0 z-[950] flex items-start justify-between gap-3 px-4 pt-[calc(1rem+var(--safe-area-inset-top))]"
+      >
         <button
           type="button"
           onClick={() => setFilterPanelOpen(true)}
@@ -130,6 +140,7 @@ export default function CityMapOpenControls({
         onChange={onFiltersChange}
         resultCount={resultCount}
       />
+      {centering}
     </>
   );
 }
