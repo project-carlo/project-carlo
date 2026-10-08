@@ -15,11 +15,11 @@ const NEIGHBOR = church(2, 43.1601, -77.6052);
 const BUFFALO = church(3, 42.8864, -78.8784);
 
 describe("churchMapView", () => {
-  it("centers on the church at street level", () => {
+  it("centers on the church, its part of town in view", () => {
     expect(churchMapView(CATHEDRAL)).toEqual({
       lat: CATHEDRAL.latitude,
       lng: CATHEDRAL.longitude,
-      zoom: 15,
+      zoom: 13,
     });
   });
 
@@ -56,7 +56,7 @@ describe("churchMapMarkers", () => {
 });
 
 describe("parseCityMapConfig", () => {
-  const view = { lat: 43.1, lng: -77.6, zoom: 15 };
+  const view = { lat: 43.1, lng: -77.6, zoom: 13 };
 
   it("keeps a church page's church", () => {
     expect(

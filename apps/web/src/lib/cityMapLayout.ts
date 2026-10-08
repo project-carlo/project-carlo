@@ -24,8 +24,12 @@ export const CITY_MAP_CANVAS: StaticMapSize = { width: 800, height: 448 };
 /** The church page's canvas, the same way: its map sits in a wider column. */
 export const CHURCH_MAP_CANVAS: StaticMapSize = { width: 960, height: 448 };
 
-/** A church page's map: a few streets around the church, its neighbours' pins among them. */
-const CHURCH_MAP_ZOOM = 15;
+/**
+ * A church page's map: the church's part of town, with the churches near it,
+ * a step closer in than a place search (zoom 12). Closer, a phone's preview
+ * shows a few blocks and seldom a neighbour.
+ */
+const CHURCH_MAP_ZOOM = 13;
 
 /**
  * How far from the center the city's churches may sit: inside a phone-width
@@ -78,7 +82,7 @@ export function cityMapView(city: City): MapView | null {
   return { lat: city.center.lat, lng: city.center.lng, zoom };
 }
 
-/** The view a church's map opens on: the church in the middle, its street in view. */
+/** The view a church's map opens on: the church in the middle, its part of town in view. */
 export function churchMapView(church: {
   latitude: number | null;
   longitude: number | null;
