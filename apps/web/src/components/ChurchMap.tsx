@@ -330,10 +330,10 @@ function ChangeView({
 const START_AREA_MARGIN = 24;
 
 /**
- * Moves the map, without animating, so the open popup and the pin it points
- * at sit together in the middle of the part of the map the floating UI
- * leaves clear (across, nearly in it, as a selected church is put), or, if
- * they're too tall for that, with the card's top just clear of it. Does
+ * Moves the map, without animating, so the pin the open popup points at is
+ * in the middle of the part of the map the floating UI leaves clear, both
+ * across and down, or, if that would put the card above it under the UI or
+ * off the top, as near the middle as keeps the card's top clear. Does
  * nothing with no popup open.
  */
 function centerOpenPopup(map: LeafletMap): void {
@@ -347,7 +347,6 @@ function centerOpenPopup(map: LeafletMap): void {
 
   const insets = overlayInsets(map);
   const size = map.getSize();
-  const target = size.divideBy(2).add(freeAreaOffset(insets));
   const pin = map.latLngToContainerPoint(latlng);
   // From the card's top down to the point the pin stands on.
   const above =
@@ -355,8 +354,8 @@ function centerOpenPopup(map: LeafletMap): void {
     (element.getBoundingClientRect().top -
       map.getContainer().getBoundingClientRect().top);
   const wanted = L.point(
-    target.x,
-    Math.max(target.y + above / 2, insets.y + START_AREA_MARGIN + above),
+    (insets.x + size.x) / 2,
+    Math.max((insets.y + size.y) / 2, insets.y + START_AREA_MARGIN + above),
   );
   // setView, not panBy: it also stops the pan the popup's own autoPan may
   // have started for the map's old size.
@@ -368,7 +367,7 @@ function centerOpenPopup(map: LeafletMap): void {
 }
 
 /**
- * Centres the open popup, card and all (centerOpenPopup), as it mounts. For
+ * Centres the open popup's pin (centerOpenPopup), as it mounts. For
  * the city page's map opening over the whole window, which otherwise keeps
  * the centre it had in the page, so a pin picked there could open anywhere
  * on the big map, its card under the panel or off the top. Mounted with the
@@ -741,8 +740,9 @@ function readViewport(map: LeafletMap): Viewport {
  * The church pins and cluster roundels for the current view.
  *
  * Only what falls in (and just around) the viewport is rendered, and the set
- * is recomputed once each pan or zoom settles, so the DOM holds tens of
- * markers however many churches the snapshot has.
+ * is recomputed once each pan or zoom settles, and as a pan nears the edge of
+ * what's drawn, so the DOM holds tens of markers however many churches the
+ * snapshot has.
  */
 function ClusteredChurchMarkers({
   index,
@@ -758,8 +758,25 @@ function ClusteredChurchMarkers({
   const map = useMap();
   const [viewport, setViewport] = useState(() => readViewport(map));
   const [hovered, setHovered] = useState<MapCluster | null>(null);
+  const drawnRef = useRef(viewport);
+  useEffect(() => {
+    drawnRef.current = viewport;
+  }, [viewport]);
   useMapEvents({
     moveend: () => setViewport(readViewport(map)),
+    // A pan can outrun the padding (one swipe across the city page's small
+    // map does), and the ground it drags in would have no markers until it
+    // stopped. So once the view is within half the padding of the edge of
+    // what's drawn, the set is redrawn around it. Not while zooming: the
+    // zoom is between levels then, and moveend redraws it.
+    move: () => {
+      const drawn = drawnRef.current;
+      if (map.getZoom() !== drawn.zoom) return;
+      const [west, south, east, north] = drawn.bbox;
+      const ahead = map.getBounds().pad(VIEWPORT_PADDING / 2);
+      if (L.latLngBounds([south, west], [north, east]).contains(ahead)) return;
+      setViewport(readViewport(map));
+    },
   });
 
   const entries = useMemo(

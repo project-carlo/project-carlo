@@ -111,7 +111,12 @@ export default function CityMapOpenControls({
   const filtered = !filtersEqual(appliedFilters, DEFAULT_FILTER_STATE);
   return (
     <>
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-[950] flex items-start justify-between gap-3 px-4 pt-[calc(1rem+var(--safe-area-inset-top))]">
+      {/* Marked as covering the map, so a pin centred as the map opens keeps
+          its card clear of these buttons. */}
+      <div
+        data-map-overlay
+        className="pointer-events-none absolute inset-x-0 top-0 z-[950] flex items-start justify-between gap-3 px-4 pt-[calc(1rem+var(--safe-area-inset-top))]"
+      >
         <button
           type="button"
           onClick={() => setFilterPanelOpen(true)}
