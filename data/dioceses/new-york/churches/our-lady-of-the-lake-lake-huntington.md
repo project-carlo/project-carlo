@@ -24,7 +24,6 @@ evidence:
     \ \nSaturday                      4:00pm"
   note: Site-specific public Mass evidence in the inspected parish issue; the explanation identifies the
     schedule panel.
-promoted: 2026-10-08
 ---
 
 ## Holds Mass

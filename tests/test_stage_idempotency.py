@@ -419,7 +419,7 @@ def test_fetch_resolves_the_bulletin_for_the_run_date(monkeypatch, db: Path) -> 
 def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db: Path) -> None:
     _link_to(monkeypatch, "https://example.org/bulletin.pdf")
     _serve(monkeypatch, b"%PDF-1.4 big")
-    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: b"%PDF small")
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: b"%PDF small")
     _fake_browser(monkeypatch)
 
     fetch_bulletins(parish_name="Test Parish")
@@ -440,7 +440,8 @@ def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:
     _serve(monkeypatch, b"%PDF-1.4 same")
     compactions = []
     monkeypatch.setattr(
-        "pdf_extract.fetch.compact_bulletin_pdf", lambda data: compactions.append(data) or data,
+        "pdf_extract.fetch.compact_bulletin_pdf",
+        lambda data, **_: compactions.append(data) or data,
     )
     _fake_browser(monkeypatch)
 
@@ -513,7 +514,7 @@ def test_fetch_never_has_two_requests_in_flight_to_one_site(monkeypatch, db: Pat
         "pdf_extract.fetch._resolve_fetch_source", lambda parish: sources[parish["slug"]],
     )
     _fake_browser(monkeypatch)
-    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: data)
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: data)
 
     lock = threading.Lock()
     in_flight: Counter[str] = Counter()
@@ -638,7 +639,7 @@ def test_fetch_waits_to_download_from_a_site_another_worker_holds(
         "pdf_extract.fetch._resolve_fetch_source", lambda parish: sources.get(parish["slug"]),
     )
     _fake_browser(monkeypatch)
-    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: data)
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: data)
 
     lock = threading.Lock()
     in_flight: Counter[str] = Counter()
@@ -717,7 +718,7 @@ def test_fetch_hands_a_parish_tried_again_to_another_worker(monkeypatch, db: Pat
 
     monkeypatch.setattr("pdf_extract.fetch.launch_stealth_browser", launch)
     monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
-    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: data)
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: data)
     _serve(monkeypatch, b"%PDF one", b"%PDF two")
 
     assert fetch_bulletins(workers=2)["fetched_bulletins"] == 2
@@ -833,7 +834,7 @@ def test_fetch_logs_a_workers_error_when_recording_fails(monkeypatch, db: Path, 
 
     monkeypatch.setattr("pdf_extract.fetch._build_bulletin_link", build_link)
     monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
-    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data: data)
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: data)
     monkeypatch.setattr("pdf_extract.fetch.record_parish_result", record)
 
     with caplog.at_level(logging.ERROR), pytest.raises(sqlite3.OperationalError):

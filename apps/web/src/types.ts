@@ -36,7 +36,10 @@ export interface ChurchMapItem extends ChurchBase {
 
 export interface ChurchDetail extends ChurchBase {
   homepage_url: string | null;
+  /** The parish's current bulletin: the one this church's times come from. */
   bulletin_url: string | null;
+  /** YYYY-MM-DD: the Sunday of the week that bulletin is for, or null if it has no date. */
+  bulletin_week: string | null;
 }
 
 /** A snapshot event as the data layer filters it; `occurrence` is its next occurrence. */

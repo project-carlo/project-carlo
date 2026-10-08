@@ -2,8 +2,9 @@
 
 Bulletins are mostly photos and scanned pages, several MB each, and every week
 adds one per parish, so they are nearly all of the bucket. Only the first
-`MAX_BULLETIN_PAGES` pages are ever read (see `pdf_truncate`), so `fetch`
-stores just those, with Ghostscript downsampling images to 150 dpi. Text and
+`MAX_BULLETIN_PAGES` pages, or a parish's own limit, are ever read (see
+`pdf_truncate.max_pages_for`), so `fetch` stores just those, with
+Ghostscript downsampling images to 150 dpi. Text and
 vector art are left as they are.
 
 Images are re-encoded as JPEG, and the stored copy is what classifiers read

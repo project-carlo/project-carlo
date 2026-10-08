@@ -2,14 +2,40 @@
 
 from __future__ import annotations
 
+import csv
 import logging
 from pathlib import Path
 
 from pypdf import PdfReader, PdfWriter
 
+from pdf_extract.paths import DATA_DIR
+
 LOGGER = logging.getLogger(__name__)
 
 MAX_BULLETIN_PAGES = 10
+
+# Parishes whose bulletin prints a schedule past page MAX_BULLETIN_PAGES, with
+# the limit to read them to instead. Every extra page is stored and read every
+# week, so a parish is listed here only when its schedule is known to be cut.
+PAGE_LIMITS_CSV_PATH = DATA_DIR / "bulletin_page_limits.csv"
+
+
+def read_page_limits(path: Path | None = None) -> dict[str, int]:
+    """Per-parish page limits from data/bulletin_page_limits.csv, by parish slug."""
+    path = PAGE_LIMITS_CSV_PATH if path is None else path
+    if not path.exists():
+        return {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        return {
+            row["parish_slug"].strip(): int(row["max_pages"])
+            for row in csv.DictReader(fh)
+            if (row.get("parish_slug") or "").strip()
+        }
+
+
+def max_pages_for(parish_slug: str) -> int:
+    """How many of a parish's bulletin pages are stored and read."""
+    return read_page_limits().get(parish_slug, MAX_BULLETIN_PAGES)
 
 
 def _truncated_path(pdf_path: Path) -> Path:

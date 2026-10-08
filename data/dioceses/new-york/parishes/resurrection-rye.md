@@ -19,7 +19,6 @@ revisit: 'The parish does publish a current readable HTML bulletin on Flocknote.
   Find a current PDF rendition or add a reviewed HTML connector before enabling fetch; do not classify
   the active church as closed or assert that no bulletin exists.'
 revisit_after: 2026-10-15
-promoted: 2026-10-08
 ---
 
 ## Publisher
@@ -44,4 +43,4 @@ No conclusion about an unlisted building is drawn from absence.
 
 The parish does publish a current readable HTML bulletin on Flocknote. Automatic PDF fetching is deliberately disabled: the tested page-pdfs recipe failed because the archive links HTML, not a PDF. Find a current PDF rendition or add a reviewed HTML connector before enabling fetch; do not classify the active church as closed or assert that no bulletin exists.
 
-The supported `no_bulletin` provider value means skip automatic fetching here; it is not a statement that this publisher has no publication. Its actual publication identity and current issue evidence are preserved.
+The `no_bulletin` provider keeps this publisher and its venue out of the live CSVs and site under the October 7 policy, pending a supported ingestion channel. It is not a statement that this publisher has no publication. Its actual publication identity, current issue evidence and church record are preserved without promoted stamps.

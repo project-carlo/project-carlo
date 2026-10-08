@@ -64,8 +64,11 @@ of unresolved physical sites, and the latest promotion are recorded in the Log.
   Resurrection in Rye publishes readable Flocknote HTML rather than the tested PDF format;
   the Sullivan County St. Francis Xavier joint publisher's newer-dated PDF is a supplement,
   not the full issue; and St. Augustine in Highland's archive still ends August 16, 2026.
-  Each has a separate actionable connector question in `open/`. This operational skip is
-  not a statement that publication or public Mass has ceased, and is not an exclusion.
+  Each has a separate actionable connector question in `open/`. Under the October 7 policy
+  incorporated from current main on October 8, these three publishers and their five
+  venues stay in the evidence records but are omitted from the live CSVs and site until
+  a safe supported channel is available. They have no promoted stamps. This operational
+  hold is not a statement that publication or public Mass has ceased, and is not an exclusion.
 - Refreshes on October 8 found Holy Rosary Hawthorne and St. Matthew/Our Lady of Perpetual
   Help issues dated October 4. Sacred Heart/St. Patrick's latest linked issue remained
   September 20. Image-only pages were rendered and visually read; archive lag is explicit.
@@ -127,9 +130,25 @@ explicitly reports a temporary repair closure, despite a printed October 4 sched
   Structural audit finds no groups spanning publisher rows and no missing publication ids.
   Validation of all dioceses passes with no errors or incomplete records; New York retains
   20 warnings for explicit closed exclusions whose exact last-Mass dates are unknown.
-  The promotion dry run adds 185 publishers and 235 churches, updates/removes no live rows
+  The initial promotion dry run on the original worktree base adds 185 publishers and
+  235 churches, updates/removes no live rows
   and removes no rows with attached events. Research uses the local Windows adaptations
   above. Resolver checks vary in fidelity: actual saved HTML replay and downloaded/read
   PDFs are recorded separately from reconstructed-anchor checks; Cloudflare HTTP blocks
   are not treated as bad recipes or closures. This is a documented first-pass map with
   follow-up work retained, not a claim that every archdiocesan building is settled.
+- 2026-10-08 (current-main integration): Incorporated main through `cb85c5fe`, including
+  the October 7 policy that `no_bulletin` publishers and their churches remain off-site.
+  Re-promoted New York: the records still contain 186 publishers and 237 venues, but
+  183 publishers and 232 venues are live, with three publishers/five venues on hold for
+  the connector questions above. Against current main this adds 182 publisher rows and
+  230 church rows, preserving every pre-existing CSV row exactly, including the earlier
+  Brewster/Patterson records. No pre-existing rows or events are removed by this mapping.
+  Coverage remains fully accounted: the directory's 230 church-linked entries include
+  five off-site entries, leaving 225 live church-linked entries and 96 open questions;
+  GCatholic's 229 church-linked entries include four off-site entries, leaving 225 live
+  church-linked entries, 43 exclusions and 154 open questions. Structural audit is clean
+  and validation of all dioceses passes after this policy-aware promotion. The full Python
+  suite passes after current-main integration and promotion: 877 tests. The focused
+  diocese suite previously passed 35 tests on the original base. CSV preservation,
+  unique-slug checks and `git diff --check` also pass.

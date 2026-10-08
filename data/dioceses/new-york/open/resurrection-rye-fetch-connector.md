@@ -24,4 +24,6 @@ The parish does publish a current readable HTML bulletin on Flocknote. Automatic
 
 ## Next step
 
+Under the October 7 off-site policy, this publisher and its church remain in the curated evidence records but are omitted from the live CSVs and site, without promoted stamps, until a supported safe channel is available.
+
 Resolve the format/full-issue selection question and test the resulting connector on the current publication before enabling automatic fetch. This is a pipeline question, not a second physical church or an absence-based exclusion.

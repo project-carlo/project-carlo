@@ -115,8 +115,35 @@ jobs:
       - name: Build web app
         run: pnpm --filter web build
 
+      # `--with-deps` runs apt-get against the runner's Azure Ubuntu mirror,
+      # which can stall with no output and no timeout, hanging the job until
+      # the 30 minute limit. Make apt give up on a stalled connection and retry,
+      # cache the browser download, and cap the step so a hang fails fast.
+      - name: Configure apt for flaky mirrors
+        run: |
+          sudo tee /etc/apt/apt.conf.d/99-ci-network >/dev/null <<'EOF'
+          Acquire::Retries "5";
+          Acquire::http::Timeout "30";
+          Acquire::https::Timeout "30";
+          EOF
+
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+
       - name: Install Playwright browsers
-        run: pnpm --filter web exec playwright install --with-deps chromium
+        timeout-minutes: 10
+        env:
+          CACHE_HIT: ${{ steps.playwright-cache.outputs.cache-hit }}
+        run: |
+          if [ "$CACHE_HIT" = "true" ]; then
+            pnpm --filter web exec playwright install-deps chromium
+          else
+            pnpm --filter web exec playwright install --with-deps chromium
+          fi
 
       - name: Run Playwright smoke tests
         run: pnpm --filter web test:e2e
@@ -148,6 +175,13 @@ jobs:
           fi
 
           echo "alias=$alias" >> "$GITHUB_OUTPUT"
+
+      # Each deploy replaces the asset set, so pages loaded before it would 404
+      # on their lazy chunks. This copies the last two weeks' retired assets
+      # from the live site into the build; it warns instead of failing.
+      - name: Carry over previous assets
+        if: (github.event_name == 'workflow_dispatch' && inputs.mode == 'deploy' && github.ref_name == 'main') || (github.event_name == 'push' && github.ref_name == 'main')
+        run: pnpm --filter web carry-assets
 
       - name: Deploy production web app
         id: production-deploy

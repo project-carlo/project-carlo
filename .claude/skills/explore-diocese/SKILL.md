@@ -63,7 +63,10 @@ Then, cheapest first:
 
 A closure after the fact: `pnpm diocese exclude <d> <church> --reason closed --last-mass
 <date>`, then write why in the new `excluded/` file. Something you can't settle yet goes in
-`open/` (or in `revisit` / `revisit_after` on a record), with the next step and a date.
+`open/` (or in `revisit` / `revisit_after` on a record), with the next step and a date. A
+promoted church with no current Mass found and no source saying it closed: `pnpm diocese
+question <d> <church> --revisit "..."`, which takes it off the site until it is settled.
+A `no_bulletin` parish is kept in the records but left off the site.
 
 ## Don't
 

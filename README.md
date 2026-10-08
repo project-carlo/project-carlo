@@ -72,7 +72,8 @@ pnpm label --demo    # the same on a generated dataset (data/labeler-demo/, untr
 pnpm dev:labeler     # Vite dev server on :5174, proxying /api to a running `pnpm label`
 ```
 
-The PDF shown is the stored compacted copy (the first 10 pages), so page
+The PDF shown is the stored compacted copy (the first 10 pages, or the parish's
+limit in `data/bulletin_page_limits.csv`), so page
 numbers match what Gemini saw. Gemini's output is shown read-only: the cached
 result for the bulletin's content hash (the current classifier version first),
 or else the database's post-processed events. Accept rows one at a time
@@ -308,6 +309,20 @@ CSV change that removes a parish or church: that deletes events, so deploys
 build the snapshot from the published database as it stands, without the CSV
 edits, until a reviewed weekly run publishes the removal.
 
+A deploy replaces the site's files, so a page opened before one would 404 on the
+hashed chunks (`/assets/*`) its scripts still load. The production deploy
+therefore runs `apps/web/scripts/carry-assets.ts` first: it downloads the files
+the live site's `asset-manifest.json` lists that the new build no longer has,
+for 14 days after they left it, into the build. Storage is free and wrangler
+uploads only files Cloudflare doesn't already have; if the deploy would pass
+15,000 files (the Free plan allows 20,000) the earliest retired go first. A
+failed download or an unreachable site only means fewer files are carried; it
+never fails the deploy.
+
+A page whose chunk is gone anyway (open longer than that, or a file that wasn't
+carried) reloads once into the new version (`apps/web/src/lib/staleDeploy.ts`),
+as does one that fetches a snapshot in a format its code can't read.
+
 The change report is always in the job summary, and kept as a workflow
 artifact for 90 days.
 
@@ -349,7 +364,8 @@ year, each month's last run that passed or was published; those are the runs
 you can roll back to.
 
 `fetch` stores a compacted copy of each bulletin: the first 10 pages (all the
-classifiers read) with images downsampled to 150 dpi by Ghostscript, falling
+classifiers read; `data/bulletin_page_limits.csv` raises the limit for a parish whose
+schedule runs past page 10, with the reason) with images downsampled to 150 dpi by Ghostscript, falling
 back to the PDF as downloaded when that fails or saves nothing. The key's
 hash is of the PDF as downloaded. Without `gs` installed, long bulletins are
 only truncated.

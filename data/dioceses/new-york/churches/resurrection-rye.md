@@ -21,7 +21,6 @@ evidence:
   seen: 2026-10-07
   quote: Sunday, October 4th 7:30 am
   note: Issue identity and current site-specific Mass schedule; see explanation.
-promoted: 2026-10-08
 ---
 
 ## Holds Mass

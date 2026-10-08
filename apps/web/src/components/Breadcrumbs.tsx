@@ -4,13 +4,8 @@ import { cn } from "@/lib/utils";
 
 export interface Crumb {
   label: string;
-  /** In-app route; rendered as a router link. */
+  /** In-app route; rendered as a router link. Left out on the current page. */
   to?: string;
-  /**
-   * A page only the prerenderer writes (the all-churches index), which the
-   * SPA has no route for: a plain link, so the browser loads it.
-   */
-  href?: string;
 }
 
 /** A trail of links ending in the current page, e.g. "All churches › East Aurora, NY › St. Mary". */
@@ -34,16 +29,12 @@ export function Breadcrumbs({
                 </li>
               ) : null}
               <li>
-                {last ? (
-                  <span aria-current="page">{crumb.label}</span>
-                ) : crumb.to ? (
+                {last || !crumb.to ? (
+                  <span aria-current={last ? "page" : undefined}>{crumb.label}</span>
+                ) : (
                   <Link to={crumb.to} className="rubric-link">
                     {crumb.label}
                   </Link>
-                ) : (
-                  <a href={crumb.href} className="rubric-link">
-                    {crumb.label}
-                  </a>
                 )}
               </li>
             </Fragment>

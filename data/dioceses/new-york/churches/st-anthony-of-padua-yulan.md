@@ -30,7 +30,6 @@ evidence:
   note: 'October 4, 2026 masthead is 20261003.pdf page 1: one publisher with five dedications. Yulan St.
     Anthony/St. Thomas Aquinas, 25 Beaver Brook Road: Saturday 4 PM; Sunday 11:30 AM; Tuesday/Thursday
     9 AM. 20261004.pdf is a supplement, not another publisher. Narrowsburg/Lake Huntington are cross-slice.'
-promoted: 2026-10-08
 ---
 
 ## Public worship now

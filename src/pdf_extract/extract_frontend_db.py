@@ -23,9 +23,17 @@ A column is one of:
 
 `churches` has CHURCH_COLUMNS, ordered by name then id; `events` has
 EVENT_COLUMNS, ordered by id. `church_id` is the church's id, `cancelled` a
-boolean, times are minutes after midnight, and `date` is an ISO date.
+boolean, times are minutes after midnight, and `date` is an ISO date. A
+church's `bulletin_url` and `bulletin_week` describe its parish's current
+bulletin, the one its events come from: `bulletin_week` is the ISO date of
+the Sunday of the week that bulletin is for (`bulletin_week.bulletin_week`),
+or null when the bulletin has no date at all.
 
 Bump SNAPSHOT_VERSION (and the app's) on any change the app would misread.
+A new column needs no bump when its absence reads as null: list it in
+ADDED_COLUMNS, and the app and `read_snapshot` take a snapshot written before
+it (an older published run, or the live site's while a deploy is pending)
+as having nulls there, rather than refuse it.
 """
 
 from __future__ import annotations
@@ -39,6 +47,7 @@ from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.bulletin_week import week_order_sql
 from pdf_extract.storage import (
     DEFAULT_DB_PATH,
     configure_sqlite_connection,
@@ -56,16 +65,19 @@ SNAPSHOT_VERSION = 1
 # The columns the SELECTs below produce, in order.
 CHURCH_COLUMNS = (
     "id", "parish_id", "slug", "name", "address_line1", "address_line2", "city", "state",
-    "postal_code", "latitude", "longitude", "homepage_url", "bulletin_url",
+    "postal_code", "latitude", "longitude", "homepage_url", "bulletin_url", "bulletin_week",
 )
 EVENT_COLUMNS = (
     "id", "church_id", "event_type", "event_kind", "day_of_week", "date", "start_time",
     "end_time", "cancelled", "page_number", "note",
 )
+# Columns added since version 1 shipped. A snapshot written before one was
+# added lacks it; readers take it as all nulls.
+ADDED_COLUMNS = {"churches": {"bulletin_week"}, "events": set()}
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
-    "churches": {"city", "state"},
+    "churches": {"city", "state", "bulletin_week"},
     "events": {"event_type", "event_kind", "day_of_week", "date", "note"},
 }
 # Event ids mostly go up by one, so their differences compress far better.
@@ -146,7 +158,14 @@ def read_snapshot(data: bytes) -> dict[str, list[dict[str, Any]]]:
         )
     tables: dict[str, list[dict[str, Any]]] = {}
     for table, names in (("churches", CHURCH_COLUMNS), ("events", EVENT_COLUMNS)):
-        columns = [_decode_column(document[table][name]) for name in names]
+        stored = document[table]
+        rows = len(_decode_column(stored["id"]))
+        columns = [
+            [None] * rows
+            if name not in stored and name in ADDED_COLUMNS[table]
+            else _decode_column(stored[name])
+            for name in names
+        ]
         tables[table] = [dict(zip(names, row, strict=True)) for row in zip(*columns, strict=True)]
     return tables
 
@@ -167,15 +186,21 @@ def extract(
     try:
         churches = src.execute(
             f"""
+            WITH latest AS (
+                SELECT parish_id, source_url, NULLIF({week_order_sql()}, '') AS week,
+                       ROW_NUMBER() OVER (
+                           PARTITION BY parish_id
+                           ORDER BY {latest_bulletin_order()}
+                       ) AS rn
+                FROM bulletin
+                WHERE processed_at IS NOT NULL
+            )
             SELECT c.id, c.parish_id, c.slug, c.name, c.address_line1, c.address_line2,
                    c.city, c.state, c.postal_code, c.latitude, c.longitude,
-                   p.homepage_url,
-                   (SELECT b.source_url FROM bulletin b
-                    WHERE b.parish_id = c.parish_id AND b.processed_at IS NOT NULL
-                    ORDER BY {latest_bulletin_order("b")}
-                    LIMIT 1)
+                   p.homepage_url, latest.source_url, latest.week
             FROM church c
             LEFT JOIN parish p ON c.parish_id = p.id
+            LEFT JOIN latest ON latest.parish_id = c.parish_id AND latest.rn = 1
             ORDER BY c.name, c.id
             """
         ).fetchall()

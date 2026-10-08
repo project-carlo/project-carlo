@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowLeftIcon } from "@/components/icons";
+import { MapIcon } from "@/components/icons";
+import { ALL_CHURCHES, MAP_LINK } from "@/copy";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 import { useHomeHref } from "@/hooks/useHomeHref";
+import { CHURCH_INDEX_PATH } from "@/lib/seo";
 
 interface NotFoundPageProps {
   title?: string;
@@ -10,7 +12,7 @@ interface NotFoundPageProps {
 
 export function NotFoundPage({
   title = "Page not found",
-  message = "We couldn't find what you were looking for.",
+  message = "That link may be out of date.",
 }: NotFoundPageProps) {
   useDocumentMeta({ title: `${title} · Project Carlo`, noindex: true });
   const homeHref = useHomeHref();
@@ -21,10 +23,16 @@ export function NotFoundPage({
         {title}
       </h1>
       <p className="max-w-md font-serif text-base text-ink-soft">{message}</p>
-      <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-        <ArrowLeftIcon className="size-3" />
-        Back to map
-      </Link>
+      {/* Two ways on: the map, or the list. */}
+      <div className="flex items-baseline gap-5">
+        <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
+          <MapIcon className="size-3.5" />
+          {MAP_LINK}
+        </Link>
+        <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
+          {ALL_CHURCHES}
+        </Link>
+      </div>
     </main>
   );
 }

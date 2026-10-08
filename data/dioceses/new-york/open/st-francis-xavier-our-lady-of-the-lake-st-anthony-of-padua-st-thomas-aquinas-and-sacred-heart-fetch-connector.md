@@ -23,4 +23,6 @@ Automatic fetching is deliberately disabled until full-issue selection is suppor
 
 ## Next step
 
+Under the October 7 off-site policy, this publisher and its three established public-Mass churches remain in the curated evidence records but are omitted from the live CSVs and site, without promoted stamps, until the connector reliably selects the full issue rather than the newer-dated supplement.
+
 Resolve the format/full-issue selection question and test the resulting connector on the current publication before enabling automatic fetch. This is a pipeline question, not a second physical church or an absence-based exclusion.

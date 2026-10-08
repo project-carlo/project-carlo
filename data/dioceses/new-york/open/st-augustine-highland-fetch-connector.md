@@ -17,4 +17,6 @@ The eCatholic archive for publication `ecatholic:11044` still ended August 16, 2
 
 ## Next step
 
+Under the October 7 off-site policy, this publisher and its church remain in the curated evidence records but are omitted from the live CSVs and site, without promoted stamps, until a supported safe current channel is available.
+
 Locate the current publication channel or establish an explicit publication cadence, inspect the issue and test the fetch recipe. Automatic fetching is temporarily disabled using the supported `no_bulletin` skip value so that the August issue is not silently ingested as current. This is not a no-bulletin or closure exclusion, and it does not establish a shared publication with St. Cecilia.

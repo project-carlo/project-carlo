@@ -44,7 +44,7 @@ One bulletin serves both canonical parishes. The 4 October 2026 issue (ParishesO
 
 ## Worship sites
 
-Four churches have Mass in the bulletin and the cluster site's schedule: Macedon `st-patricks-macedon` (Sat 4:30, Sun 10:00), Palmyra `st-annes` (Sun 8:30), Ontario `st-marys-of-lake-ontario` (Sat 4:30, Sun 8:30) and Sodus `epiphany` (Sun 10:30). Not here: Sodus Point's St. Rose of Lima (summer chapel, `st-mary-star-of-sea`, kept as a church row with a revisit because no 2026 Mass was found) and Marion's St. Gregory / Our Lady of Guadalupe mission (`open/st-gregory-marion`). The Locator files the Marion mission under "St. Benedict" (a Canandaigua parish), which is wrong; GCatholic and the records index put St. Gregory with St. Katharine Drexel.
+Four churches have Mass in the bulletin and the cluster site's schedule: Macedon `st-patricks-macedon` (Sat 4:30, Sun 10:00), Palmyra `st-annes` (Sun 8:30), Ontario `st-marys-of-lake-ontario` (Sat 4:30, Sun 8:30) and Sodus `epiphany` (Sun 10:30). Not here: Sodus Point's St. Rose of Lima (summer chapel, `open/st-mary-star-of-sea`: no 2026 Mass was found, so on 2026-10-07 it was moved to open/ with a revisit for the 2027 season) and Marion's St. Gregory / Our Lady of Guadalupe mission (`open/st-gregory-marion`). The Locator files the Marion mission under "St. Benedict" (a Canandaigua parish), which is wrong; GCatholic and the records index put St. Gregory with St. Katharine Drexel.
 
 ## Website and bulletin provider
 

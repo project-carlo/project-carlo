@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
 import { DAY_ORDER } from "../constants/days";
 import { EVENT_TYPE_LABELS, EVENT_TYPE_ORDER } from "../constants/eventTypes";
 import type { ChurchDetail, EventSummary, EventType } from "../types";
 import {
   formatAddress,
   formatEventDate,
+  formatLongMonthDay,
   formatMonthDay,
   formatMinutesMissal,
   titleCase,
 } from "../utils";
+import { ALL_CHURCHES, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
 import {
   ExternalLinkIcon,
   FileTextIcon,
@@ -20,6 +23,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, type CityLink } from "@/lib/cities";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
+import { LASTMOD_EXEMPT_ATTRIBUTE } from "@/lib/lastmod";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
  *  from, and any qualifier on the slot. One size and one voice for all of
@@ -179,11 +183,25 @@ function PageRef({
   );
 }
 
+/**
+ * The current bulletin, dated by its week when it has a date: how fresh the
+ * times are, beside the bulletin they come from. Exempt from the sitemap's
+ * change dates, which would otherwise move every week with the bulletin. One
+ * string, so the element holds text only.
+ */
+function BulletinLabel({ week }: { week: string | null }) {
+  return (
+    <span {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}>
+      {week ? `Bulletin for the week of ${formatLongMonthDay(week)}` : "Parish bulletin"}
+    </span>
+  );
+}
+
 /** All churches › {City} › {Church}, without the city when the address has none. */
 function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
-  const crumbs: Crumb[] = [{ label: "All churches", href: CHURCH_INDEX_PATH }];
+  const crumbs: Crumb[] = [{ label: ALL_CHURCHES, to: CHURCH_INDEX_PATH }];
   if (city) crumbs.push({ label: city.label, to: cityPath(city.slug) });
-  crumbs.push({ label: church.name ?? "Unnamed church" });
+  crumbs.push({ label: church.name ?? UNNAMED_CHURCH });
   return crumbs;
 }
 
@@ -206,7 +224,7 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
         <section className="rise-in mx-auto max-w-2xl text-center">
           <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church, city)} />
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
-            {church.name ?? "Unnamed church"}
+            {church.name ?? UNNAMED_CHURCH}
           </h1>
 
           {formatAddress(church) ? (
@@ -238,8 +256,13 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <FileTextIcon className="size-3.5" />
-                Latest parish bulletin (PDF)
+                <BulletinLabel week={church.bulletin_week} />
               </a>
+            ) : church.bulletin_week ? (
+              <span className="inline-flex items-center gap-2 font-serif text-[0.9375rem] text-ink-soft">
+                <FileTextIcon className="size-3.5" />
+                <BulletinLabel week={church.bulletin_week} />
+              </span>
             ) : null}
             <FeedbackTrigger
               church={church}
@@ -252,8 +275,11 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
 
         {events.length === 0 ? (
           <p className="mx-auto mt-6 max-w-2xl text-center font-serif text-sm text-ink-soft md:mt-8">
-            No Mass, Confession, or Adoration times are listed for this
-            church yet.
+            No times listed yet. The parish bulletin may not include them, or
+            we couldn’t read it.
+            {church.homepage_url
+              ? " Check the parish website, or suggest an edit."
+              : " Check with the parish, or suggest an edit."}
           </p>
         ) : null}
 
@@ -379,17 +405,15 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
         <div className="mx-auto mt-16 max-w-2xl">
           <Fleuron solo className="text-brass" />
           <p className="mt-4 text-center font-serif text-[0.9rem] text-ink-faint">
-            Mass times are extracted with AI from each parish&apos;s latest
-            available bulletin and may contain mistakes. Please confirm details
-            with an official parish source before attending.
+            {DISCLAIMER}
           </p>
         </div>
       </div>
     </main>
     <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
-      <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-        Browse all churches
-      </a>
+      <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
+        {ALL_CHURCHES}
+      </Link>
     </footer>
     </>
   );

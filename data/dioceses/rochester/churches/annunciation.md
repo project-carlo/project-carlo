@@ -28,7 +28,6 @@ evidence:
   quote: 1754 Norton St., Rochester, New York 14609
   note: GCatholic lists "Annunciation" at 1754 Norton St.; Plus Code 87M45CPG+W5 puts it 70 m from the
     stored point.
-promoted: 2026-10-02
 ---
 
 ## Holds Mass

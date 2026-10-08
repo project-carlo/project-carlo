@@ -2,6 +2,7 @@ const CURRENT_LOCATION_PHRASES = [
   "current location",
   "use current location",
   "use my current location",
+  "use my location",
   "use your current location",
   "my current location",
   "my location",

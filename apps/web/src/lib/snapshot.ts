@@ -27,9 +27,17 @@ type Table<Row> = { [K in keyof Row]: Column<Row[K]> };
 /** A table decoded: one plain array per field. */
 type Columns<Row> = { [K in keyof Row]: Row[K][] };
 
+/**
+ * Church columns added since version 1 shipped (the pipeline's
+ * ADDED_COLUMNS). A snapshot written before one was added lacks it, and it
+ * reads as null: such a snapshot is still served while a deploy is pending.
+ */
+type AddedChurchColumns = "bulletin_week";
+
 interface SnapshotDocument {
   version: number;
-  churches: Table<ChurchDetail>;
+  churches: Table<Omit<ChurchDetail, AddedChurchColumns>> &
+    Partial<Table<Pick<ChurchDetail, AddedChurchColumns>>>;
   events: Table<EventRow>;
 }
 
@@ -103,18 +111,29 @@ export interface Snapshot {
   eventsOf(churchId: number): RawEvent[];
 }
 
+/** The snapshot is in a format this code doesn't read. */
+export class SnapshotVersionError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "SnapshotVersionError";
+  }
+}
+
 /** Decode the (already gunzipped) snapshot JSON. */
 export function parseSnapshot(json: string): Snapshot {
   const document = JSON.parse(json) as SnapshotDocument;
   if (document?.version !== SNAPSHOT_VERSION) {
-    throw new Error(
+    throw new SnapshotVersionError(
       `${SNAPSHOT_FILE} is format version ${String(document?.version)}, but this ` +
         `code reads version ${SNAPSHOT_VERSION}. Rebuild it with the pipeline ` +
         "code from this checkout (`pnpm extract:web`, or `pnpm data:pull`).",
     );
   }
 
-  const c = decodeTable(document.churches);
+  const c = decodeTable(document.churches) as Columns<
+    Omit<ChurchDetail, AddedChurchColumns>
+  > &
+    Partial<Columns<Pick<ChurchDetail, AddedChurchColumns>>>;
   const churches: ChurchBase[] = c.id.map((id, row) => ({
     id,
     parish_id: c.parish_id[row],
@@ -129,7 +148,11 @@ export function parseSnapshot(json: string): Snapshot {
     longitude: c.longitude[row],
   }));
   const rowBySlug = new Map(c.slug.map((slug, row) => [slug, row]));
-  const { homepage_url: homepageUrls, bulletin_url: bulletinUrls } = c;
+  const {
+    homepage_url: homepageUrls,
+    bulletin_url: bulletinUrls,
+    bulletin_week: bulletinWeeks,
+  } = c;
 
   const e = decodeTable(document.events);
   const events: RawEvent[] = e.id.map((_, row) => new SnapshotEvent(e, row));
@@ -146,6 +169,7 @@ export function parseSnapshot(json: string): Snapshot {
         ...churches[row],
         homepage_url: homepageUrls[row],
         bulletin_url: bulletinUrls[row],
+        bulletin_week: bulletinWeeks?.[row] ?? null,
       };
     },
     eventsOf(churchId) {

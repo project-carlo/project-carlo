@@ -38,7 +38,6 @@ evidence:
     AM Masses. Our Lady of the Lake in Lake Huntington and St. Anthony in Yulan are outside this slice.
     Read the October 3 main issue, not the October 4 supplement consisting chiefly of prayer requests
     and advertisements.
-promoted: 2026-10-08
 ---
 
 ## Public Mass

@@ -41,7 +41,6 @@ evidence:
 revisit: Find and inspect the current publication channel before enabling automatic fetch; recheck the
   public Mass schedule and any St. Cecilia member channel independently.
 revisit_after: 2026-10-14
-promoted: 2026-10-08
 ---
 
 ## Publisher
@@ -62,4 +61,4 @@ Find a current issue and compare independently publishing member channels; see `
 
 ## Automatic fetch safeguard
 
-The supported `no_bulletin` provider is used as an explicit automatic-fetch skip, not as an assertion that no publication exists. Historical PDF evidence and the current public Mass venue remain mapped. Restore a tested current connector only after locating the actual current publication channel.
+The `no_bulletin` provider keeps this publisher and its venue out of the live CSVs and site under the October 7 policy, not as an assertion that no publication exists. Historical PDF evidence and the current public Mass venue remain in the curated records without promoted stamps. Restore a tested current connector only after locating the actual current publication channel.

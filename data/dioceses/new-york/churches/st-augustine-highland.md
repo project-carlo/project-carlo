@@ -48,7 +48,6 @@ revisit: Read the actual August 13, 2026 St. Cecilia-St. Augustine merger decree
   bulletin; merger alone is not physical closure. User-provided archny posts URL redirected to 404 on
   October 7.
 revisit_after: 2026-10-14
-promoted: 2026-10-08
 ---
 
 ## Holds public Mass

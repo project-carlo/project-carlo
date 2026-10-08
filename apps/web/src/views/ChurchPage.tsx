@@ -1,11 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { ChurchNotFoundError, fetchChurch, fetchChurchEvents } from "../api";
-import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
+import { ChurchNotFoundError } from "../api";
 import { InlineQueryError } from "@/components/InlineQueryError";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchPageContent } from "@/components/ChurchPageContent";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
+import {
+  churchEventsQuery as churchEventsQueryOptions,
+  churchQuery as churchQueryOptions,
+} from "@/lib/pageQueries";
 import {
   buildChurchDescription,
   buildChurchTitle,
@@ -14,26 +17,17 @@ import {
 } from "@/lib/seo";
 import { NotFoundPage } from "./NotFoundPage";
 
-/** React Query's default; a failure that outlasts it shows the error and Retry. */
-const MAX_RETRIES = 3;
-
 export function ChurchPage() {
   const { churchSlug } = useParams();
   const enabled = typeof churchSlug === "string" && churchSlug.length > 0;
 
   const churchQuery = useQuery({
-    queryKey: ["church", churchSlug],
-    queryFn: () => fetchChurch(churchSlug!),
+    ...churchQueryOptions(churchSlug ?? ""),
     enabled,
-    retry: (failureCount, error) =>
-      failureCount < MAX_RETRIES && !(error instanceof ChurchNotFoundError),
   });
   const eventsQuery = useQuery({
-    queryKey: ["church-events", churchSlug],
-    queryFn: () => fetchChurchEvents(churchSlug!, [...EVENT_TYPE_ORDER]),
+    ...churchEventsQueryOptions(churchSlug ?? ""),
     enabled,
-    retry: (failureCount, error) =>
-      failureCount < MAX_RETRIES && !(error instanceof ChurchNotFoundError),
   });
 
   const events = eventsQuery.data;
@@ -62,7 +56,7 @@ export function ChurchPage() {
     return (
       <NotFoundPage
         title="Church not found"
-        message="We couldn't find that church."
+        message="That link may be out of date, or the church may have closed or merged with another."
       />
     );
   }
@@ -74,7 +68,7 @@ export function ChurchPage() {
     return (
       <NotFoundPage
         title="Church not found"
-        message="We couldn't find that church."
+        message="That link may be out of date, or the church may have closed or merged with another."
       />
     );
   }
@@ -99,7 +93,7 @@ export function ChurchPage() {
         ) : null}
         {churchQuery.error ? (
           <InlineQueryError
-            message={"We couldn't load this church."}
+            message="We couldn’t load this church."
             onRetry={() => churchQuery.refetch()}
           />
         ) : null}
@@ -111,7 +105,7 @@ export function ChurchPage() {
         {eventsQuery.error ? (
           <InlineQueryError
             className="mx-auto max-w-2xl"
-            message={"We couldn't load times for this church."}
+            message="We couldn’t load times for this church."
             onRetry={() => eventsQuery.refetch()}
           />
         ) : null}

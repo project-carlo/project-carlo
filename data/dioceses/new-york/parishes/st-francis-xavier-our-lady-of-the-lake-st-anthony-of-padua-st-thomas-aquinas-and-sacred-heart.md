@@ -17,7 +17,6 @@ revisit: Automatic fetching is deliberately disabled until full-issue selection 
   The default newest-date pick would ingest the supplement. Obtain a stable full-issue-only channel or
   reviewed selection rule before enabling fetch; the actual publisher and public Mass sites are established.
 revisit_after: 2026-10-15
-promoted: 2026-10-08
 ---
 
 ## Publisher
@@ -38,4 +37,4 @@ Linked worship-site records for St. Francis Xavier, Our Lady of the Lake, St. An
 
 Automatic fetching is deliberately disabled until full-issue selection is supported. The archive has a four-page full October 4 issue stored as 20261003.pdf and a two-page supplement stored as 20261004.pdf. The default newest-date pick would ingest the supplement. Obtain a stable full-issue-only channel or reviewed selection rule before enabling fetch; the actual publisher and public Mass sites are established.
 
-The supported `no_bulletin` provider value means skip automatic fetching here; it is not a statement that this publisher has no publication. Its actual publication identity and current issue evidence are preserved.
+The `no_bulletin` provider keeps this publisher and its three established public-Mass venues out of the live CSVs and site under the October 7 policy, pending safe full-issue selection. It is not a statement that this publisher has no publication. Its actual publication identity, current issue evidence and church records are preserved without promoted stamps.
