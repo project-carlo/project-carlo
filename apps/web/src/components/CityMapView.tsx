@@ -78,7 +78,9 @@ function MoveWatch({ onMove }: { onMove: () => void }) {
 /**
  * What CityMapLive shows: the home map's churches, pins and popups, opening
  * on the city preview's view. In the page it has Expand (and zoom buttons on
- * a desktop); open, CityMapOpenControls adds the rest. The filters chosen
+ * a desktop), and a pin's popup is only the church's name, since the full
+ * card would cover most of the small map; open, CityMapOpenControls adds the
+ * rest. The filters chosen
  * there stay on the map in the page. Loaded only once the page's map goes
  * live, and the open controls only once the churches are up.
  */
@@ -183,6 +185,7 @@ export default function CityMapView({
         centerOn={selection.centerOn}
         onClearPlace={selection.clearPlace}
         mapRef={setMap}
+        compactPopups={!open}
       >
         <MapMode open={open} />
         <MoveWatch onMove={onMove} />

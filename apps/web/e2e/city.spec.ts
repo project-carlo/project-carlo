@@ -120,6 +120,33 @@ test("the open map keeps focus in itself, and Escape closes a popup before the m
   await expect(page.locator("main")).not.toHaveAttribute("inert");
 });
 
+test("a pin's popup in the page is only the church's name, and the full card once the map is open", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(EAST_AURORA);
+  await expect(page.locator(".city-map-live[data-ready]")).toHaveCount(1, {
+    timeout: 15_000,
+  });
+  const map = page.locator(".city-map");
+  await map.locator(".leaflet-container .church-map-marker").first().click();
+  const popup = map.locator(".leaflet-popup");
+  await expect(popup.locator(".map-popup-compact")).toBeVisible();
+  await expect(popup.getByRole("link")).toHaveAttribute("href", /^\/churches\//);
+  await expect(popup.getByText("Full schedule")).toHaveCount(0);
+  await expect(popup.locator(".leaflet-popup-close-button")).toBeHidden();
+  const compactWidth = (await popup.boundingBox())!.width;
+  expect(compactWidth).toBeLessThanOrEqual(250);
+
+  // Opening the map keeps the popup, now the full card.
+  await page.getByRole("button", { name: "Expand map" }).click();
+  const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
+  await expect(dialog.getByText("Full schedule")).toBeVisible();
+  expect((await dialog.locator(".leaflet-popup").boundingBox())!.width).toBeGreaterThan(
+    compactWidth,
+  );
+});
+
 /** Each marker's box in the map, from left to right. */
 async function markerBoxes(page: Page, selector: string): Promise<string[]> {
   return page.locator(".city-map").evaluate((map, sel) => {
