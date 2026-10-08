@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Map as LeafletMap } from "leaflet";
+import { CenterOpenPopupOnMount } from "./ChurchMap";
 import { FilterPanel } from "./FilterPanel";
 import { FULL_WINDOW_CORNER_CLASS, MapCornerControls } from "./MapCornerControls";
 import { MapOverlay } from "./MapOverlay";
@@ -72,6 +73,9 @@ export default function CityMapOpenControls({
     </button>
   );
 
+  // A pin picked in the page comes to the middle of the open map.
+  const centering = <CenterOpenPopupOnMount map={map} />;
+
   if (isDesktop) {
     return (
       <>
@@ -99,6 +103,7 @@ export default function CityMapOpenControls({
           }}
           className={FULL_WINDOW_CORNER_CLASS}
         />
+        {centering}
       </>
     );
   }
@@ -130,6 +135,7 @@ export default function CityMapOpenControls({
         onChange={onFiltersChange}
         resultCount={resultCount}
       />
+      {centering}
     </>
   );
 }

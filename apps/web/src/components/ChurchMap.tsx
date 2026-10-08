@@ -330,6 +330,60 @@ function ChangeView({
 const START_AREA_MARGIN = 24;
 
 /**
+ * Moves the map, without animating, so the open popup and the pin it points
+ * at sit together in the middle of the part of the map the floating UI
+ * leaves clear (across, nearly in it, as a selected church is put), or, if
+ * they're too tall for that, with the card's top just clear of it. Does
+ * nothing with no popup open.
+ */
+function centerOpenPopup(map: LeafletMap): void {
+  const open: L.Popup[] = [];
+  map.eachLayer((layer) => {
+    if (layer instanceof L.Popup && layer.isOpen()) open.push(layer);
+  });
+  const element = open[0]?.getElement();
+  const latlng = open[0]?.getLatLng();
+  if (!element || !latlng) return;
+
+  const insets = overlayInsets(map);
+  const size = map.getSize();
+  const target = size.divideBy(2).add(freeAreaOffset(insets));
+  const pin = map.latLngToContainerPoint(latlng);
+  // From the card's top down to the point the pin stands on.
+  const above =
+    pin.y -
+    (element.getBoundingClientRect().top -
+      map.getContainer().getBoundingClientRect().top);
+  const wanted = L.point(
+    target.x,
+    Math.max(target.y + above / 2, insets.y + START_AREA_MARGIN + above),
+  );
+  // setView, not panBy: it also stops the pan the popup's own autoPan may
+  // have started for the map's old size.
+  map.setView(
+    map.containerPointToLatLng(size.divideBy(2).add(pin.subtract(wanted))),
+    map.getZoom(),
+    { animate: false },
+  );
+}
+
+/**
+ * Centres the open popup, card and all (centerOpenPopup), as it mounts. For
+ * the city page's map opening over the whole window, which otherwise keeps
+ * the centre it had in the page, so a pin picked there could open anywhere
+ * on the big map, its card under the panel or off the top. Mounted with the
+ * open map's controls, so by then the map has its new size, the pin its
+ * full card, and the panels it must clear are in place.
+ */
+export function CenterOpenPopupOnMount({ map }: { map: LeafletMap | null }) {
+  const mapRef = useRef(map);
+  useEffect(() => {
+    if (mapRef.current) centerOpenPopup(mapRef.current);
+  }, []);
+  return null;
+}
+
+/**
  * Puts a start chosen for the visitor in the part of the map the floating UI
  * leaves clear: the point of a "near" start where a search result would go,
  * every church of an "area" start in view. Run as the map is created, before

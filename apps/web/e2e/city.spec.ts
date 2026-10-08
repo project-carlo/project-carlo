@@ -120,7 +120,7 @@ test("the open map keeps focus in itself, and Escape closes a popup before the m
   await expect(page.locator("main")).not.toHaveAttribute("inert");
 });
 
-test("a pin's popup in the page is only the church's name, and the full card once the map is open", async ({
+test("a pin's popup in the page is only the church's name, and the full card in the middle once the map is open", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
@@ -129,6 +129,14 @@ test("a pin's popup in the page is only the church's name, and the full card onc
     timeout: 15_000,
   });
   const map = page.locator(".city-map");
+  // Dragged, so the pin is off the middle of the map.
+  const box = (await map.boundingBox())!;
+  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width / 2 + 100, box.y + box.height / 2 + 40, {
+    steps: 5,
+  });
+  await page.mouse.up();
   await map.locator(".leaflet-container .church-map-marker").first().click();
   const popup = map.locator(".leaflet-popup");
   await expect(popup.locator(".map-popup-compact")).toBeVisible();
@@ -138,13 +146,26 @@ test("a pin's popup in the page is only the church's name, and the full card onc
   const compactWidth = (await popup.boundingBox())!.width;
   expect(compactWidth).toBeLessThanOrEqual(250);
 
-  // Opening the map keeps the popup, now the full card.
+  // Opening the map keeps the popup, now the full card, and brings it and
+  // its pin to the middle of the window.
   await page.getByRole("button", { name: "Expand map" }).click();
   const dialog = page.getByRole("dialog", { name: /^Map of churches around / });
   await expect(dialog.getByText("Full schedule")).toBeVisible();
   expect((await dialog.locator(".leaflet-popup").boundingBox())!.width).toBeGreaterThan(
     compactWidth,
   );
+  // How far the pin, and the middle of the card and pin together, are from
+  // the middle of the window.
+  await expect
+    .poll(async () => {
+      const card = (await dialog.locator(".leaflet-popup").boundingBox())!;
+      const pin = (await dialog.locator(".church-map-marker.is-selected").boundingBox())!;
+      return [
+        Math.round(Math.abs(pin.x + pin.width / 2 - 390 / 2) / 4),
+        Math.round(Math.abs((card.y + pin.y + pin.height) / 2 - 844 / 2) / 8),
+      ];
+    })
+    .toEqual([0, 0]);
 });
 
 /** Each marker's box in the map, from left to right. */
