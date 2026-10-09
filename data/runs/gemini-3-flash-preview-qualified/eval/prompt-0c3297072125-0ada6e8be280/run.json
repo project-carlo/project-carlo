@@ -1,0 +1,30 @@
+{
+  "classifier": "gemini-3-flash-preview-qualified",
+  "classifier_version": "gemini-3-flash-preview+prompt-0c3297072125",
+  "ran_at": "2026-10-05T21:28:49Z",
+  "out_dir": "data/runs/gemini-3-flash-preview-qualified/eval/prompt-0c3297072125-0ada6e8be280",
+  "label_statuses": [
+    "done"
+  ],
+  "parish": null,
+  "bulletins_selected": 19,
+  "bulletins_served": 19,
+  "cache_hits": 0,
+  "classifier_calls": 19,
+  "skipped": [],
+  "errors": [],
+  "events_written": 379,
+  "usage_new_calls": {
+    "prompt_tokens": 105460,
+    "cached_tokens": 43310,
+    "output_tokens": 37730,
+    "thinking_tokens": 110644
+  },
+  "usage_all_served": {
+    "prompt_tokens": 105460,
+    "cached_tokens": 43310,
+    "output_tokens": 37730,
+    "thinking_tokens": 110644
+  },
+  "wall_seconds": 219.961
+}
