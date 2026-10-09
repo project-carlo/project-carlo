@@ -15,6 +15,7 @@ import {
   openCityMap,
   type CityMapConfig,
 } from "@/lib/cityMap";
+import { track } from "@/lib/analytics";
 
 const CityMapView = lazy(() => import("./CityMapView"));
 
@@ -64,6 +65,7 @@ export default function CityMapLive({ config }: { config: CityMapConfig }) {
   const handleMove = useCallback(() => setMoved(true), []);
 
   const expand = useCallback(() => {
+    track("map_open");
     pushedRef.current = true;
     openCityMap();
   }, []);

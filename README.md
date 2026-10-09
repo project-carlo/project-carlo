@@ -611,6 +611,13 @@ Comments and corrections are collected with [Tally](https://tally.so). The form 
 
 Review submissions in the Tally dashboard for your form → **Submissions**. Export CSV when batching data fixes.
 
+## Visitor analytics
+
+The site records pageviews and a few actions (search picks, filters, bulletin
+clicks) itself, in Cloudflare Workers Analytics Engine: no cookies, no third
+party. `pnpm analytics` prints a report. See [docs/analytics.md](docs/analytics.md)
+for what's recorded, the token the report needs, and how to add an event.
+
 ## Project layout
 
 - `pyproject.toml` - project metadata and dependencies
@@ -621,6 +628,7 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 - `data/dioceses/` - parishes and churches of dioceses still being explored
 - `data/` (untracked) - the local database, bulletin PDF cache and run outputs
 - `docs/data-setup.md` - R2 bucket, API tokens, GitHub secrets, and running the published data
+- `docs/analytics.md` - visitor analytics: what's recorded and how to query it
 - `apps/web/` - React + TypeScript + Vite frontend
 - `apps/labeler/` - the local bulletin labeling UI (never deployed)
 - `data/labels/` - ground-truth labels, one JSON file per bulletin (committed)

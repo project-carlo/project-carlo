@@ -131,6 +131,7 @@ function SectionPageRef({
         href={`${bulletinUrl}#page=${pageNumber}`}
         target="_blank"
         rel="noopener noreferrer"
+        data-track="bulletin_page"
         title={title}
         className={`${baseClass} ${ANNOTATION_LINK_CLASS}`}
       >
@@ -170,6 +171,7 @@ function PageRef({
         href={`${bulletinUrl}#page=${event.page_number}`}
         target="_blank"
         rel="noopener noreferrer"
+        data-track="bulletin_page"
         title={title}
         className={`ml-2.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
       >
@@ -260,6 +262,7 @@ export function ChurchPageContent({
                 href={church.homepage_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="parish_website"
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <ExternalLinkIcon className="size-3.5" />
@@ -271,6 +274,7 @@ export function ChurchPageContent({
                 href={church.bulletin_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="bulletin"
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <FileTextIcon className="size-3.5" />
