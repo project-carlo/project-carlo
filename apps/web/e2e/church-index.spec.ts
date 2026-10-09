@@ -111,6 +111,32 @@ test("in the app, the index's Map link goes back to the map as it was, without r
   expect(loads()).toBe(0);
 });
 
+test("leaving the map straight after moving it keeps where it was left", async ({ page }) => {
+  await page.goto("/?lat=43.15&lng=-77.6&z=10");
+  const zoomIn = page.getByRole("button", { name: "Zoom in" });
+  await expect(zoomIn).toBeVisible({ timeout: 15_000 });
+  // The index's code arriving slowly keeps the move to it under way while
+  // the zoom settles and the map would otherwise write it to the URL.
+  await page.route(/\.js$/, async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    await route.continue();
+  });
+  await zoomIn.click();
+  await page.getByRole("link", { name: "All churches" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+
+  await page.getByRole("link", { name: "Map", exact: true }).click();
+  await expect(page.locator(".leaflet-container")).toBeVisible();
+  await expect(page).toHaveURL(/[?&]z=11(&|$)/);
+
+  // Back to the index, and back again to the map as it was left.
+  await page.goBack();
+  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+  await page.goBack();
+  await expect(page.locator(".leaflet-container")).toBeVisible();
+  await expect(page).toHaveURL(/[?&]z=11(&|$)/);
+});
+
 test("the prerendered index's Map link goes back to the map as it was", async ({ page }) => {
   const search = await moveMap(page);
   await page.goto("/churches/");
