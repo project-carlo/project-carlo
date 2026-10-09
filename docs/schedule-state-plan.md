@@ -37,7 +37,8 @@ policy, schema, settings, date           ┘   (stored)    (stored, with       (
    hash it.
 3. Call the model with the policy prompt, the church list, the date, the view
    and the PDF. Store the call, whether or not it succeeds.
-4. Store each proposed change.
+4. Store each proposed change, and where the bulletin prints each entry
+   (its **sightings**).
 5. The decision policy (code) decides each proposal at once: apply it or
    reject it. Nothing waits for a later bulletin.
 6. Applied changes are appended to the change log as one new revision, and
@@ -222,6 +223,21 @@ CREATE TABLE current_schedule (
     PRIMARY KEY (parish_id, entry_id),
     UNIQUE (parish_id, identity_key)  -- no two believed entries are the same slot
 );
+
+-- ── Where bulletins print entries ──
+
+-- One row per entry per bulletin that prints it. Evidence, not schedule
+-- content: sightings make no revisions, and no decision reads them. Written
+-- for the entries a call lists in `seen`, for the new entry of each applied
+-- add or modify, and by the seed method where it knows the bulletin.
+CREATE TABLE entry_sighting (
+    bulletin_id INTEGER NOT NULL REFERENCES bulletin(id) ON DELETE CASCADE,
+    entry_id INTEGER NOT NULL REFERENCES schedule_entry(id),
+    page_number INTEGER,              -- null when the source gave no page
+    llm_call_id INTEGER REFERENCES llm_call(id) ON DELETE CASCADE,   -- null for seed sightings
+    PRIMARY KEY (bulletin_id, entry_id)
+);
+CREATE INDEX idx_entry_sighting_entry ON entry_sighting(entry_id);
 ```
 
 ### Notes on the schema
@@ -229,8 +245,8 @@ CREATE TABLE current_schedule (
 **Entries are immutable.** A `schedule_entry` is one entry's content and is
 never edited. A modify is a log row from the old entry to a new one, and the
 current schedule swaps one for the other. Nothing points at an entry except
-the log, the proposals and `current_schedule`, so nothing can be left pointing
-at a slot that has since changed. The price is that a slot has no single id
+the log, the proposals, the sightings and `current_schedule`, so nothing can
+be left pointing at a slot that has since changed. The price is that a slot has no single id
 for its whole life: a modify gives it a new entry id. Nothing needs one (the
 web app uses event ids only as React list keys), and a slot's history is the
 chain of its modify rows.
@@ -266,6 +282,22 @@ call date is left out of the view, and one dated before the snapshot's build
 date is left out of the snapshot, with no revision. It is never deleted. That
 keeps past dates out of the change log, which is where most of today's report
 noise comes from.
+
+**Page references are sightings.** A page number belongs to one bulletin,
+not to an entry: an unchanged entry can move to another page, or not be
+printed at all one week. So pages live on `entry_sighting`, keyed by bulletin
+and entry, and never on `schedule_entry`.
+
+- A call writes sightings when it succeeded and wasn't a wrong bulletin or
+  stale, whatever the policy did with its proposals: one for each entry in its
+  `seen` list that is live in its view (others are ignored), and one for the
+  new entry of each applied add or modify, on the proposal's page. A second
+  call on the same bulletin replaces the first's sightings.
+- An entry with no sighting in a bulletin is still believed. Silence is not a
+  change.
+- A seeded or hand-edited entry has no sighting until a call lists it, unless
+  the seed method knows its bulletin and page. A hand edit does not inherit the
+  page of the entry it replaced: the edit may be because the bulletin changed.
 
 **Changes take effect immediately.** There is no `valid_from`/`valid_until`.
 The policy prompt says which changes to propose when (see
@@ -304,6 +336,7 @@ question and is served from the cache.
   "published_date": "2026-10-11",
   "wrong_bulletin": false,
   "church_list_needs_review": false,
+  "seen": [{"entry_id": 118, "page_number": 2}],
   "changes": [
     {"op": "modify", "entry_id": 131,
      "entry": {"event_type":"confession","event_kind":"weekly","church_slug":"st-mary-albany",
@@ -321,6 +354,8 @@ question and is served from the cache.
   changed.
 - **`entry_id`** is an `id` from the view. It is stored as the proposal's
   `target_entry_id`.
+- **`seen`** lists the entries from the view that the bulletin prints and the
+  call does not change, each with its page. They become sightings.
 
 ### Prompt rules
 
@@ -347,6 +382,9 @@ The policy prompt tells the model:
   time, weeks, season, note). Delete + add only when one entry is replaced by
   a different one. Nothing breaks if the model gets this wrong; it only makes
   the report read better.
+- **List in `seen`** every entry from the view that the bulletin prints and
+  you don't change, with the page it is printed on. An entry you change
+  carries its page on the change instead.
 - Refer to existing entries only by the ids in the view.
 
 ## Decision policy (v1)
@@ -414,6 +452,8 @@ the parish fails with an error in `run_parish_result` and nothing is applied.
   - a parish whose schedule changed in each of its last 3 calls;
   - an undated bulletin;
   - a 3rd or later bulletin for one week (a 2nd is noted as a correction);
+  - a live weekly entry that none of the parish's last 4 bulletins since it
+    became live has printed (no sighting): still believed, but possibly gone;
   - `church_list_needs_review`, as today.
 - **Rejections:** counts by reason in the summary, and the proposals of every
   `mass_delete` and `stale_bulletin` call listed in full.
@@ -462,8 +502,15 @@ In each mode:
 | rows | each parish's current bulletin's `event` rows, as today | `current_schedule` joined to `schedule_entry` |
 | `id` | event id | entry id |
 | `weeks_of_month`, season | every week, no season | from the entry |
-| `page_number` | from the event | from the proposal that made the entry live; null for seeded entries |
+| `page_number` | from the event | the entry's sighting in the church's current bulletin (the one `bulletin_url` opens); null when that bulletin doesn't print it |
 | `bulletin_url`, `bulletin_week` per church | as today | the newest bulletin whose call succeeded and wasn't a wrong bulletin or stale |
+
+A page link always opens the current bulletin, so a page from an older
+bulletin is never shown: parish sites often serve a new PDF at the same
+address, so an old issue's address can't be trusted to open that issue. An
+entry with no page simply shows no link, and the section's "Found on bulletin
+page N" is worked out from the entries that have one, as today. The frontend
+needs no change for this.
 
 `computeNextOccurrence` needs:
 
@@ -476,7 +523,7 @@ In each mode:
 |---|---|
 | `data/migrations/` | `0004_schedule_state.sql` adds the tables above. The cleanup migration comes later (see [Rollout](#rollout)) |
 | `weekly.py`, `__main__.py`, `weekly-docker.yml` | `SCHEDULE_MODE` (`extract` or `update`, default `extract`) picks the process stage, the report and the snapshot's source. The workflow reads it from a repository variable |
-| `process.py` | update mode: render the view, call, store the call and its proposals, decide, apply. Extract mode as today |
+| `process.py` | update mode: render the view, call, store the call and its proposals, decide, apply, store sightings. Extract mode as today |
 | new `schedule/` package | the view renderer, entry hashing and identity, the policy, apply and fold (and a full rebuild from the log), the converters for weeks of month and season |
 | `classifiers/` | a `schedule_update` task: new policy prompt and response schema; version digest covers both; returns token usage and served model |
 | `schedule_extraction.py` | unchanged: the from-scratch extraction serves extract mode and the evals |
@@ -494,7 +541,8 @@ keeps publishing in extract mode until the switch.
    `extract`. Nothing writes the new tables yet.
 2. **Snapshot v2 and the frontend** ship, built from `event` in extract mode.
 3. **Seed.** Each parish's first `seed` revision is loaded into the published
-   database by the out-of-scope method. A later seed for a parish that already
+   database by the out-of-scope method, with sightings where it knows the
+   bulletin and page an entry came from. A later seed for a parish that already
    has one is a new `seed` revision of adds, modifies and deletes, like any
    other.
 4. **Switch** the repository variable to `update`. The next weekly run
@@ -535,8 +583,8 @@ LEFT JOIN llm_call c ON c.id = (
 - Changes effective from a future date (`valid_from` / `valid_until`).
 - Holding doubtful changes for corroboration by a later bulletin or for a
   person's review. Everything applies or is rejected at once in v1.
-- Recording which believed entries a bulletin showed unchanged (when each entry
-  was last seen in print).
+- Showing on the site that an entry isn't in this week's bulletin, or when it
+  was last printed. Sightings hold the data for it.
 - Tooling for people to edit schedules (the tables record `human` revisions
   already).
 - Periodic from-scratch audit calls to catch errors the update calls anchor on.
