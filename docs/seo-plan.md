@@ -158,6 +158,33 @@ Confession, and Adoration times parsed from weekly bulletins
   - Cloudflare zone: "Always Use HTTPS" turned on 2026-10-06 (http:// had
     served a 200, http://www a 522). "Automatic HTTPS Rewrites" is a different
     setting: it rewrites links inside pages and redirects nothing.
+- [x] Phase 3.5 — diocese pages
+  - Prerendered `/dioceses/` (the dioceses with pages) and `/dioceses/{slug}/`
+    (the folder name under `data/dioceses/`, e.g. `/dioceses/buffalo/`). A
+    diocese page is a way in, not another schedule list: how many churches
+    and towns the site lists, a link to the diocese's own website (saying
+    Project Carlo isn't affiliated with it), the city page's map preview
+    around its churches (live, as on a city page), and its cities A–Z, each
+    linking its city page with a church count. `CollectionPage` + `ItemList`
+    (of the city pages) + `BreadcrumbList` JSON-LD, like city pages.
+  - Only dioceses marked `coverage: complete` in their `diocese.md` get
+    pages, breadcrumbs and links (Albany, Buffalo, Rochester, Syracuse; not
+    New York, two churches so far): see `data/dioceses/README.md`.
+  - Membership comes from `apps/web/src/data/dioceses.json` (name, state,
+    website, covered, church slugs per diocese), written from
+    `data/dioceses/` and `data/churches.csv` by `pnpm diocese site-index`
+    and by `pnpm diocese promote`; pytest fails while it's out of date. It
+    ships with the web code rather than in the data snapshot, so a deploy
+    shows a change at once, with no wait for the pipeline. A church the
+    snapshot has and the file doesn't list (one a promotion removed, until
+    a reviewed weekly run publishes the removal) takes its city's diocese.
+    Grouping and labels live in `src/lib/dioceses.ts`.
+  - Breadcrumbs (visible and JSON-LD) gain a diocese level on church and
+    city pages: All churches › Diocese › City › Church.
+  - `/churches/` groups its cities under their dioceses, each covered
+    diocese's name linking its page, and links `/dioceses/` ("Browse by
+    diocese"). The diocese pages and their list are in the sitemap, dated
+    by `lastmod.ts` like every other page.
 - [ ] Phase 4 — polish & measurement (submit sitemap to Google Search Console
       + Bing Webmaster Tools after the next deploy; validate with the Rich
       Results Test and Facebook Sharing Debugger — zero-code, do first)

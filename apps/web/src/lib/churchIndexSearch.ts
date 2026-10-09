@@ -8,7 +8,8 @@
  * A church matches when every word typed appears in its name or its city's
  * name, ignoring case, accents and punctuation; "St." also matches "saint"
  * (and the reverse), "Mt." "mount". A city stays listed while any of its
- * churches match.
+ * churches match, and a diocese while any of its cities do. The diocese's
+ * name isn't searched: "Buffalo" means the city, not the whole diocese.
  */
 
 const ALIASES: Record<string, string> = {
@@ -50,7 +51,9 @@ export function attachChurchIndexSearch(root: Document | HTMLElement = document)
 
   const sections = Array.from(root.querySelectorAll<HTMLElement>("[data-city-group]")).map(
     (section) => {
-      const city = searchHaystack(section.querySelector("h2")?.textContent ?? "");
+      const city = searchHaystack(
+        section.querySelector("[data-city-heading]")?.textContent ?? "",
+      );
       const items = Array.from(section.querySelectorAll("li")).map((item) => ({
         item,
         text: `${searchHaystack(item.textContent ?? "")} ${city}`,
@@ -59,6 +62,12 @@ export function attachChurchIndexSearch(root: Document | HTMLElement = document)
     },
   );
   const total = sections.reduce((n, s) => n + s.items.length, 0);
+  const dioceses = Array.from(root.querySelectorAll<HTMLElement>("[data-diocese-group]")).map(
+    (diocese) => ({
+      diocese,
+      cities: Array.from(diocese.querySelectorAll<HTMLElement>("[data-city-group]")),
+    }),
+  );
 
   const apply = () => {
     const words = foldSearchText(input.value).split(" ").filter(Boolean);
@@ -72,6 +81,9 @@ export function attachChurchIndexSearch(root: Document | HTMLElement = document)
       }
       section.hidden = shownHere === 0;
       shown += shownHere;
+    }
+    for (const { diocese, cities } of dioceses) {
+      diocese.hidden = cities.every((city) => city.hidden);
     }
     status.textContent =
       words.length === 0 || shown === 0 ? "" : `Showing ${shown} of ${total} churches.`;

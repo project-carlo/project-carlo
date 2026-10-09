@@ -9,6 +9,14 @@ import {
   type CityIndex,
   type CityLink,
 } from "./lib/cities";
+import {
+  buildDioceseIndex,
+  dioceseLinkFor,
+  type Diocese,
+  type DioceseIndex,
+  type DioceseLink,
+  type DioceseRecords,
+} from "./lib/dioceses";
 import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
 import {
   CHURCH_MAP_CANVAS,
@@ -17,6 +25,7 @@ import {
   churchMapView,
   cityMapMarkers,
   cityMapView,
+  dioceseMapView,
   type CityMapData,
 } from "./lib/cityMapLayout";
 import { buildClusterIndex, type ClusterIndex } from "./lib/mapClusters";
@@ -54,6 +63,16 @@ export class CityNotFoundError extends Error {
   constructor(slug: string) {
     super(`City not found: ${slug}`);
     this.name = "CityNotFoundError";
+    this.slug = slug;
+  }
+}
+
+/** No such diocese, or one the site doesn't cover in full (so has no page). */
+export class DioceseNotFoundError extends Error {
+  readonly slug: string;
+  constructor(slug: string) {
+    super(`Diocese not found: ${slug}`);
+    this.name = "DioceseNotFoundError";
     this.slug = slug;
   }
 }
@@ -339,6 +358,49 @@ export function churchCity(snapshot: Snapshot, church: ChurchBase): CityLink | n
   return city ? { slug: city.slug, label: city.label } : null;
 }
 
+// Built once per snapshot and (constant) diocese records, like the city index.
+const dioceseIndexes = new WeakMap<Snapshot, WeakMap<DioceseRecords, DioceseIndex>>();
+
+/** Every diocese with a church on the site; shared with the prerenderer. */
+export function dioceseIndex(snapshot: Snapshot, records: DioceseRecords): DioceseIndex {
+  let byRecords = dioceseIndexes.get(snapshot);
+  if (!byRecords) {
+    byRecords = new WeakMap();
+    dioceseIndexes.set(snapshot, byRecords);
+  }
+  let index = byRecords.get(records);
+  if (!index) {
+    index = buildDioceseIndex(
+      snapshot.churches,
+      cityIndex(snapshot, NO_CENTERS).cities,
+      records,
+    );
+    byRecords.set(records, index);
+  }
+  return index;
+}
+
+/**
+ * The diocese page a church's breadcrumbs link to; null when its diocese has
+ * no page (or it has no known diocese). Shared with the prerenderer.
+ */
+export function churchDiocese(
+  snapshot: Snapshot,
+  church: ChurchBase,
+  records: DioceseRecords,
+): DioceseLink | null {
+  return dioceseLinkFor(dioceseIndex(snapshot, records).byChurch.get(church.slug));
+}
+
+/** The diocese page a city page's breadcrumbs link to, the same way. */
+export function cityDiocese(
+  snapshot: Snapshot,
+  citySlug: string,
+  records: DioceseRecords,
+): DioceseLink | null {
+  return dioceseLinkFor(dioceseIndex(snapshot, records).byCity.get(citySlug));
+}
+
 /** A church as a city page lists it: with its schedule, all types. */
 export interface CityChurchEntry {
   church: ChurchBase;
@@ -351,6 +413,8 @@ export interface CityChurchEntry {
 
 export interface CityPageData {
   city: City;
+  /** The diocese page its breadcrumbs link to, when the city's diocese has one. */
+  diocese: DioceseLink | null;
   /** The city's map as it opens; null for a city with no known position. */
   map: CityMapData | null;
   /** The city's own churches, by name. */
@@ -367,6 +431,7 @@ export function cityPageData(
   snapshot: Snapshot,
   slug: string,
   centers: CityCenters,
+  dioceses: DioceseRecords,
 ): CityPageData {
   const city = cityIndex(snapshot, centers).bySlug.get(slug);
   if (!city) throw new CityNotFoundError(slug);
@@ -379,6 +444,7 @@ export function cityPageData(
   const view = cityMapView(city);
   return {
     city,
+    diocese: cityDiocese(snapshot, slug, dioceses),
     map: view
       ? {
           view,
@@ -459,45 +525,107 @@ export async function fetchMapChurch(
   );
 }
 
+// Only the pages need the city centers and the dioceses, so they stay out of
+// the map's bundle.
+const loadCityCenters = () =>
+  import("./data/cityCenters.json").then((m) => m.default as CityCenters);
+const loadDioceses = () =>
+  import("./data/dioceses.json").then((m) => m.default as DioceseRecords);
+
 export async function fetchCityPage(slug: string): Promise<CityPageData> {
-  // Only city pages need the centers, so they stay out of the map's bundle.
-  const [snapshot, centers] = await Promise.all([
+  const [snapshot, centers, dioceses] = await Promise.all([
     getSnapshot(),
-    import("./data/cityCenters.json").then((m) => m.default as CityCenters),
+    loadCityCenters(),
+    loadDioceses(),
   ]);
-  return cityPageData(snapshot, slug, centers);
+  return cityPageData(snapshot, slug, centers, dioceses);
 }
 
-/** What the all-churches index lists: every church, and the city pages. */
-export interface ChurchIndexData {
-  churches: ChurchBase[];
-  cities: City[];
-}
-
-export async function fetchChurchIndex(): Promise<ChurchIndexData> {
-  const [snapshot, centers] = await Promise.all([
-    getSnapshot(),
-    import("./data/cityCenters.json").then((m) => m.default as CityCenters),
-  ]);
-  return { churches: snapshot.churches, cities: cityIndex(snapshot, centers).cities };
+/** What a diocese page shows: the diocese, with its cities, and its map. */
+export interface DiocesePageData {
+  diocese: Diocese;
+  /** The diocese's map as it opens; null when none of its churches has a position. */
+  map: CityMapData | null;
 }
 
 /**
- * A church page's church, the city page its breadcrumbs link to, and its map
- * as it opens (null for a church with no known position).
+ * Everything a diocese page shows. Shared with the prerenderer. Only a
+ * diocese the site covers in full has a page.
+ */
+export function diocesePageData(
+  snapshot: Snapshot,
+  slug: string,
+  records: DioceseRecords,
+): DiocesePageData {
+  const diocese = dioceseIndex(snapshot, records).bySlug.get(slug);
+  if (!diocese?.covered) throw new DioceseNotFoundError(slug);
+  const view = dioceseMapView(diocese.churches);
+  return {
+    diocese,
+    map: view
+      ? {
+          view,
+          canvas: CITY_MAP_CANVAS,
+          markers: cityMapMarkers(defaultMapIndex(snapshot), view, CITY_MAP_CANVAS),
+        }
+      : null,
+  };
+}
+
+export async function fetchDiocesePage(slug: string): Promise<DiocesePageData> {
+  const [snapshot, dioceses] = await Promise.all([getSnapshot(), loadDioceses()]);
+  return diocesePageData(snapshot, slug, dioceses);
+}
+
+/** The dioceses with pages, as the list of dioceses shows them. Shared with the prerenderer. */
+export function coveredDioceses(snapshot: Snapshot, records: DioceseRecords): Diocese[] {
+  return dioceseIndex(snapshot, records).dioceses.filter((d) => d.covered);
+}
+
+export async function fetchDioceseIndex(): Promise<Diocese[]> {
+  const [snapshot, dioceses] = await Promise.all([getSnapshot(), loadDioceses()]);
+  return coveredDioceses(snapshot, dioceses);
+}
+
+/** What the all-churches index lists: every church, the city pages, and their dioceses. */
+export interface ChurchIndexData {
+  churches: ChurchBase[];
+  cities: City[];
+  /** Every diocese with a church on the site, covered or not. */
+  dioceses: Diocese[];
+}
+
+export async function fetchChurchIndex(): Promise<ChurchIndexData> {
+  const [snapshot, centers, dioceses] = await Promise.all([
+    getSnapshot(),
+    loadCityCenters(),
+    loadDioceses(),
+  ]);
+  return {
+    churches: snapshot.churches,
+    cities: cityIndex(snapshot, centers).cities,
+    dioceses: dioceseIndex(snapshot, dioceses).dioceses,
+  };
+}
+
+/**
+ * A church page's church, the city and diocese pages its breadcrumbs link
+ * to, and its map as it opens (null for a church with no known position).
  */
 export interface ChurchWithCity {
   church: ChurchDetail;
   city: CityLink | null;
+  diocese: DioceseLink | null;
   map: CityMapData | null;
 }
 
 export async function fetchChurch(slug: string): Promise<ChurchWithCity> {
-  const snapshot = await getSnapshot();
+  const [snapshot, dioceses] = await Promise.all([getSnapshot(), loadDioceses()]);
   const church = findChurch(snapshot, slug);
   return {
     church,
     city: churchCity(snapshot, church),
+    diocese: churchDiocese(snapshot, church, dioceses),
     map: churchMapData(snapshot, church),
   };
 }

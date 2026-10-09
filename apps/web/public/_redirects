@@ -8,6 +8,11 @@
 /mass-times/ /churches/ 301
 /mass-times/:slug /mass-times/:slug/ 301
 /mass-times/:slug/index.html /mass-times/:slug/ 301
+# Diocese pages, and the list of them.
+/dioceses /dioceses/ 301
+/dioceses/index.html /dioceses/ 301
+/dioceses/:slug /dioceses/:slug/ 301
+/dioceses/:slug/index.html /dioceses/:slug/ 301
 
 # The old map URL; the SPA redirects it too, but crawlers need a real 301.
 /map / 301

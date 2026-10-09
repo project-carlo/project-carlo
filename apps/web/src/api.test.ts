@@ -2,15 +2,21 @@ import { beforeEach, describe, expect, it } from "vitest";
 import {
   ChurchNotFoundError,
   CityNotFoundError,
+  DioceseNotFoundError,
   churchCity,
+  churchDiocese,
   cityPageData,
   churchSchedule,
+  coveredDioceses,
+  dioceseIndex,
+  diocesePageData,
   collectMapItems,
   eventMatchesFilters,
   findChurch,
   resetMapItemCache,
   type ChurchFilters,
 } from "./api";
+import type { DioceseRecords } from "./lib/dioceses";
 import { parseSnapshot } from "./lib/snapshot";
 import fixture from "./lib/snapshot.fixture.json";
 import type { ChurchBase, RawEvent } from "./types";
@@ -300,7 +306,7 @@ describe("city page lookups", () => {
 
   it("lists a city's churches with their schedules", () => {
     // Church 7 ("b") is the fixture's only church with a city.
-    const data = cityPageData(snapshot, "rochester-ny", {});
+    const data = cityPageData(snapshot, "rochester-ny", {}, {});
     expect(data.city).toMatchObject({ label: "Rochester, NY" });
     expect(data.churches).toHaveLength(1);
     expect(data.churches[0]).toMatchObject({
@@ -315,11 +321,11 @@ describe("city page lookups", () => {
 
   it("centers the city on its geocoded center when there is one", () => {
     const centers = { "rochester-ny": { lat: 43.16, lng: -77.61 } };
-    expect(cityPageData(snapshot, "rochester-ny", centers).city).toMatchObject({
+    expect(cityPageData(snapshot, "rochester-ny", centers, {}).city).toMatchObject({
       center: { lat: 43.16, lng: -77.61 },
       geocodedCenter: true,
     });
-    expect(cityPageData(snapshot, "rochester-ny", {}).city).toMatchObject({
+    expect(cityPageData(snapshot, "rochester-ny", {}, {}).city).toMatchObject({
       center: { lat: 43.1, lng: -77.6 },
       geocodedCenter: false,
     });
@@ -344,6 +350,74 @@ describe("city page lookups", () => {
   });
 
   it("throws CityNotFoundError for a city with no churches", () => {
-    expect(() => cityPageData(snapshot, "east-aurora-ny", {})).toThrow(CityNotFoundError);
+    expect(() => cityPageData(snapshot, "east-aurora-ny", {}, {})).toThrow(CityNotFoundError);
+  });
+});
+
+describe("diocese lookups", () => {
+  const snapshot = parseSnapshot(JSON.stringify(fixture));
+  // Church 7 ("b") is in Rochester; church 3 ("a") has no city. "gone" is a
+  // church the file lists and the snapshot doesn't have (yet, or any more).
+  const records: DioceseRecords = {
+    rochester: {
+      name: "Roman Catholic Diocese of Rochester",
+      state: "NY",
+      website: "https://www.dor.org",
+      covered: true,
+      churches: ["a", "b", "gone"],
+    },
+    "new-york": {
+      name: "Archdiocese of New York",
+      state: "NY",
+      website: null,
+      covered: false,
+      churches: [],
+    },
+  };
+  const uncovered: DioceseRecords = {
+    rochester: { ...records.rochester, covered: false },
+  };
+  const link = { slug: "rochester", label: "Diocese of Rochester" };
+
+  it("puts the snapshot's churches and cities in their dioceses", () => {
+    const { dioceses, byCity } = dioceseIndex(snapshot, records);
+    // A diocese with no church on the site is left out.
+    expect(dioceses.map((d) => d.slug)).toEqual(["rochester"]);
+    expect(dioceses[0].churches.map((c) => c.slug)).toEqual(["b", "a"]);
+    expect(
+      dioceses[0].cities.map(({ city, churchCount }) => [city.slug, churchCount]),
+    ).toEqual([["rochester-ny", 1]]);
+    expect(byCity.get("rochester-ny")?.slug).toBe("rochester");
+  });
+
+  it("links a covered diocese from its church and city pages", () => {
+    expect(churchDiocese(snapshot, findChurch(snapshot, "a"), records)).toEqual(link);
+    expect(cityPageData(snapshot, "rochester-ny", {}, records).diocese).toEqual(link);
+    expect(churchDiocese(snapshot, findChurch(snapshot, "a"), uncovered)).toBeNull();
+    expect(cityPageData(snapshot, "rochester-ny", {}, uncovered).diocese).toBeNull();
+  });
+
+  it("gives a covered diocese a page, with its cities and map", () => {
+    const data = diocesePageData(snapshot, "rochester", records);
+    expect(data.diocese).toMatchObject({ label: "Diocese of Rochester", covered: true });
+    // Church 7 is the only one with a position, so the map is around it.
+    expect(data.map?.view).toMatchObject({ lat: 43.1, lng: -77.6 });
+    expect(data.map?.markers).toEqual([{ kind: "pin", id: 7, lat: 43.1, lng: -77.6 }]);
+    expect(coveredDioceses(snapshot, records).map((d) => d.slug)).toEqual(["rochester"]);
+  });
+
+  it("has no page for a diocese it doesn't cover in full, or doesn't know", () => {
+    expect(() => diocesePageData(snapshot, "rochester", uncovered)).toThrow(
+      DioceseNotFoundError,
+    );
+    expect(() => diocesePageData(snapshot, "new-york", records)).toThrow(DioceseNotFoundError);
+    expect(() => diocesePageData(snapshot, "nowhere", records)).toThrow(DioceseNotFoundError);
+    expect(coveredDioceses(snapshot, uncovered)).toEqual([]);
+  });
+
+  it("does without dioceses when the file lists none of the snapshot's churches", () => {
+    expect(dioceseIndex(snapshot, {}).dioceses).toEqual([]);
+    expect(churchDiocese(snapshot, findChurch(snapshot, "b"), {})).toBeNull();
+    expect(cityPageData(snapshot, "rochester-ny", {}, {}).diocese).toBeNull();
   });
 });

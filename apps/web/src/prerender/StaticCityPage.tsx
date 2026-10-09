@@ -26,7 +26,7 @@ export function StaticCityPage({
         title={buildCityTitle(data.city)}
         description={buildCityDescription(data.city)}
         canonicalUrl={canonicalUrl}
-        jsonLd={cityJsonLd(data.city, canonicalUrl)}
+        jsonLd={cityJsonLd(data.city, data.diocese, canonicalUrl)}
         cssPath={cssPath}
         fontPaths={fontPaths}
       />

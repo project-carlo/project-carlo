@@ -24,6 +24,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { CityMapPreview } from "@/components/CityMapPreview";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, type CityLink } from "@/lib/cities";
+import { diocesePath, type DioceseLink } from "@/lib/dioceses";
 import type { CityMapConfig } from "@/lib/cityMap";
 import type { CityMapData } from "@/lib/cityMapLayout";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
@@ -203,9 +204,17 @@ function BulletinLabel({ week }: { week: string | null }) {
   );
 }
 
-/** All churches › {City} › {Church}, without the city when the address has none. */
-function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
+/**
+ * All churches › {Diocese} › {City} › {Church}, without the diocese when it
+ * has no page, nor the city when the address has none.
+ */
+function churchCrumbs(
+  church: ChurchDetail,
+  city: CityLink | null,
+  diocese: DioceseLink | null,
+): Crumb[] {
   const crumbs: Crumb[] = [{ label: ALL_CHURCHES, to: CHURCH_INDEX_PATH }];
+  if (diocese) crumbs.push({ label: diocese.label, to: diocesePath(diocese.slug) });
   if (city) crumbs.push({ label: city.label, to: cityPath(city.slug) });
   crumbs.push({ label: church.name ?? UNNAMED_CHURCH });
   return crumbs;
@@ -215,6 +224,8 @@ interface ChurchPageContentProps {
   church: ChurchDetail;
   /** The city page the church is listed on, as that page names it. */
   city: CityLink | null;
+  /** The church's diocese, when it has a page. */
+  diocese: DioceseLink | null;
   /** The church's map as it opens; null for a church with no known position. */
   map: CityMapData | null;
   events: EventSummary[];
@@ -228,6 +239,7 @@ interface ChurchPageContentProps {
 export function ChurchPageContent({
   church,
   city,
+  diocese,
   map,
   events,
   liveMap,
@@ -242,7 +254,7 @@ export function ChurchPageContent({
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         <section className="rise-in mx-auto max-w-2xl text-center">
-          <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church, city)} />
+          <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church, city, diocese)} />
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
             {name}
           </h1>

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { churchMapMarkers, churchMapView } from "./cityMapLayout";
+import { churchMapMarkers, churchMapView, dioceseMapView } from "./cityMapLayout";
 import { parseCityMapConfig } from "./cityMap";
 import { buildClusterIndex } from "./mapClusters";
 
@@ -25,6 +25,20 @@ describe("churchMapView", () => {
 
   it("has no view for a church with no position", () => {
     expect(churchMapView({ latitude: null, longitude: -77.6 })).toBeNull();
+  });
+});
+
+describe("dioceseMapView", () => {
+  it("centers between the farthest churches and zooms out to fit them", () => {
+    const view = dioceseMapView([CATHEDRAL, NEIGHBOR, BUFFALO])!;
+    expect(view.lat).toBeCloseTo((CATHEDRAL.latitude + BUFFALO.latitude) / 2);
+    expect(view.lng).toBeCloseTo((CATHEDRAL.longitude + BUFFALO.longitude) / 2);
+    // Rochester to Buffalo, about 60 miles: a city's map would stop at 9.
+    expect(view.zoom).toBe(8);
+  });
+
+  it("has no view when no church has a position", () => {
+    expect(dioceseMapView([{ latitude: null, longitude: null }])).toBeNull();
   });
 });
 

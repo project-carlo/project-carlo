@@ -7,20 +7,28 @@ import { loadEnv } from "vite";
 import { createElement } from "react";
 import {
   churchCity,
+  churchDiocese,
   churchMapData,
   churchSchedule,
   cityIndex,
   cityPageData,
+  coveredDioceses,
+  dioceseIndex,
+  diocesePageData,
   findChurch,
 } from "../src/api";
 import { cityPath, type CityCenters } from "../src/lib/cities";
+import { DIOCESE_INDEX_PATH, diocesePath, type DioceseRecords } from "../src/lib/dioceses";
 import { ANALYTICS_ENTRY, CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
 import { HOME_LINK_ATTRIBUTE, HOME_SEARCH_KEY } from "../src/hooks/useHomeHref";
 import cityCentersJson from "../src/data/cityCenters.json";
+import diocesesJson from "../src/data/dioceses.json";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
 import { StaticChurchIndexPage } from "../src/prerender/StaticChurchIndexPage";
 import { StaticCityPage } from "../src/prerender/StaticCityPage";
+import { StaticDiocesePage } from "../src/prerender/StaticDiocesePage";
+import { StaticDioceseIndexPage } from "../src/prerender/StaticDioceseIndexPage";
 import { CHURCH_INDEX_PATH, SITE_ORIGIN, absoluteUrl, churchPath } from "../src/lib/seo";
 import {
   LASTMOD_FILE,
@@ -323,6 +331,7 @@ async function main() {
     return withPageScripts(html.split(LASTMOD_PLACEHOLDER).join(lastmod), analyticsScript);
   };
 
+  const dioceseRecords = diocesesJson as DioceseRecords;
   let count = 0;
   for (const slug of slugs) {
     const church = findChurch(snapshot, slug);
@@ -335,6 +344,7 @@ async function main() {
           createElement(StaticChurchPage, {
             church,
             city: churchCity(snapshot, church),
+            diocese: churchDiocese(snapshot, church, dioceseRecords),
             map: churchMapData(snapshot, church),
             events,
             cssPath,
@@ -354,6 +364,7 @@ async function main() {
 
   const cityCenters = cityCentersJson as CityCenters;
   const { cities } = cityIndex(snapshot, cityCenters);
+  const { dioceses, byChurch } = dioceseIndex(snapshot, dioceseRecords);
 
   const indexHtml = datePage(
     CHURCH_INDEX_PATH,
@@ -362,6 +373,7 @@ async function main() {
         createElement(StaticChurchIndexPage, {
           churches: snapshot.churches,
           cities,
+          dioceses,
           cssPath,
           fontPaths,
           churchIndexScript,
@@ -391,7 +403,7 @@ async function main() {
       "<!DOCTYPE html>" +
         renderToStaticMarkup(
           createElement(StaticCityPage, {
-            data: cityPageData(snapshot, citySlug, cityCenters),
+            data: cityPageData(snapshot, citySlug, cityCenters, dioceseRecords),
             cssPath,
             fontPaths,
             cityMapScript,
@@ -404,6 +416,62 @@ async function main() {
     writeFileSync(resolve(outDir, "index.html"), html, "utf-8");
   }
   console.log(`Pre-rendered ${citySlugs.length} city pages.`);
+
+  // A church src/data/dioceses.json doesn't list, in a city it doesn't put in
+  // one diocese, is on no diocese's page (see buildDioceseIndex).
+  const noDiocese = snapshot.churches.filter((church) => !byChurch.has(church.slug));
+  if (noDiocese.length > 0) {
+    console.warn(
+      `Warning: ${noDiocese.length} churches are in no diocese, so on no diocese page ` +
+        "and without one in their breadcrumbs. Any still in data/churches.csv need " +
+        "`pnpm diocese site-index` (and src/data/dioceses.json committed); the rest " +
+        "are churches a promotion removed that the published data still has: " +
+        noDiocese.map((church) => church.slug).join(", "),
+    );
+  }
+  // Only dioceses the site covers in full have pages; with none, neither has
+  // the list of them.
+  const covered = coveredDioceses(snapshot, dioceseRecords);
+  if (covered.length > 0) {
+    const listHtml = datePage(
+      DIOCESE_INDEX_PATH,
+      "<!DOCTYPE html>" +
+        renderToStaticMarkup(
+          createElement(StaticDioceseIndexPage, {
+            dioceses: covered,
+            cssPath,
+            fontPaths,
+            canonicalUrl: absoluteUrl(origin, DIOCESE_INDEX_PATH),
+          }),
+        ),
+    );
+    mkdirSync(resolve(DIST_DIR, "dioceses"), { recursive: true });
+    writeFileSync(resolve(DIST_DIR, "dioceses", "index.html"), listHtml, "utf-8");
+  }
+  for (const diocese of covered) {
+    const path = diocesePath(diocese.slug);
+    const html = datePage(
+      path,
+      "<!DOCTYPE html>" +
+        renderToStaticMarkup(
+          createElement(StaticDiocesePage, {
+            data: diocesePageData(snapshot, diocese.slug, dioceseRecords),
+            cssPath,
+            fontPaths,
+            cityMapScript,
+            canonicalUrl: absoluteUrl(origin, path),
+          }),
+        ),
+    );
+    const outDir = resolve(DIST_DIR, "dioceses", diocese.slug);
+    mkdirSync(outDir, { recursive: true });
+    writeFileSync(resolve(outDir, "index.html"), html, "utf-8");
+  }
+  console.log(
+    covered.length > 0
+      ? `Pre-rendered ${covered.length} diocese pages and the list of them.`
+      : "No diocese is covered in full, so there are no diocese pages.",
+  );
 
   writeShellCopies(DIST_DIR, origin);
 

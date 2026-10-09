@@ -3,6 +3,7 @@ name: Roman Catholic Diocese of Syracuse
 state: NY
 website: https://www.syracusediocese.org
 status: promoted
+coverage: complete
 gcatholic: syra0
 city_aliases:
   Port Crane: Sanitaria Springs

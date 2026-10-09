@@ -133,6 +133,21 @@ shared bulletins, and a canonical merger dated from the news rather than a guess
 Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to check) with
 `revisit_after` (a date). `todo` lists revisits that are due.
 
+**diocese** (`diocese.md`)
+- `name`, `state`, `website`: the diocese as it names itself. The website shows the name
+  shortened ("Roman Catholic Diocese of Buffalo" becomes "Diocese of Buffalo") and links
+  `website` as the diocese's own site, saying Project Carlo is not affiliated with it.
+- `status`: `exploring`, then `promoted` (with the `promoted` date), set by `promote`.
+- `coverage: complete`: set by hand, once the live rows cover the whole diocese rather than a
+  few of its parishes. It is the data owner's call, not something a command can measure. Only
+  a diocese with it gets pages on the site: `/dioceses/` lists it, `/dioceses/<diocese>/`
+  links its cities, its name links from the all-churches index, and it is a level in its
+  church and city pages' breadcrumbs. Its churches are on the site either way. Leave it out
+  while coverage is partial (the Archdiocese of New York, two churches so far). `validate`
+  requires `status: promoted` with it.
+- `gcatholic`: the GCatholic key `roster fetch` uses. `city_aliases`: see
+  [Method](#method), step 7.
+
 **parish**
 - `website`: where the bulletin can be found (required, unique across the dataset).
 - `bulletin_provider`: `parishes_online`, `ecatholic`, `discover_mass`, `other`,
@@ -314,7 +329,12 @@ Work in this order and only fall through when a step can't answer. Commit as you
 
 **Promotion:** when `todo` shows no errors or incomplete records, run `pnpm diocese promote
 <d> --dry-run`, read it, then `pnpm diocese promote <d>` and `pnpm test`. The next pipeline
-command seeds the new rows into the database.
+command seeds the new rows into the database. Promotion also rewrites
+`apps/web/src/data/dioceses.json`, the website's list of dioceses and the live churches in
+each (a church is in the diocese whose folder holds its parish's file); commit it with the
+CSVs. `pnpm diocese site-index` rewrites it on its own (after setting `coverage`, say), and
+`pytest` fails while it is out of date. Once the whole diocese is in, set `coverage:
+complete` to give it pages on the site.
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
 retired (merged, renamed, excluded, moved to open/, or `no_bulletin`). Retiring a church deletes its events, and retiring a
 parish deletes its bulletins and the events read from them, even for churches moved to another
@@ -400,6 +420,7 @@ pnpm diocese recheck <d> [slug ...] [--kind k] [--all]
 
 pnpm diocese export  <d> --out-dir DIR
 pnpm diocese promote <d> [--dry-run]
+pnpm diocese site-index [--check]
 ```
 
 `validate` separates **errors** (block every write), **incomplete** (block export and

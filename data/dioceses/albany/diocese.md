@@ -3,6 +3,7 @@ name: Roman Catholic Diocese of Albany
 state: NY
 website: https://www.rcda.org
 status: promoted
+coverage: complete
 gcatholic: alba4
 promoted: 2026-10-07
 ---

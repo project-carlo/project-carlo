@@ -32,7 +32,8 @@ jobs:
         run: |
           files="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}/files" \
             --jq '.[] | .filename, (.previous_filename // empty)')"
-          pattern='^(src/|tests/|data/|pyproject\.toml$|uv\.lock$|\.python-version$|\.github/workflows/ci\.yml$)'
+          # dioceses.json is written by `pnpm diocese`, and pytest checks it is current.
+          pattern='^(src/|tests/|data/|apps/web/src/data/dioceses\.json$|pyproject\.toml$|uv\.lock$|\.python-version$|\.github/workflows/ci\.yml$)'
           if [[ "$(wc -l <<<"$files")" -ge 3000 ]] || grep -qE "$pattern" <<<"$files"; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else

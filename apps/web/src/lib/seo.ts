@@ -5,7 +5,15 @@
  */
 import type { ChurchBase, ChurchDetail } from "../types";
 import { cityPath, type City, type CityLink } from "./cities";
-import { ALL_CHURCHES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
+import {
+  DIOCESE_INDEX_PATH,
+  countCities,
+  diocesePath,
+  diocesePlace,
+  type Diocese,
+  type DioceseLink,
+} from "./dioceses";
+import { ALL_CHURCHES, DIOCESES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -166,20 +174,36 @@ export function churchWebPageJsonLd(
   return node;
 }
 
+interface Crumb {
+  name: string;
+  item: string;
+}
+
+/** Home → All churches → {Diocese}, without the diocese when it has no page. */
+function trailTo(origin: string, diocese: DioceseLink | null): Crumb[] {
+  const crumbs = [
+    { name: SITE_NAME, item: absoluteUrl(origin, "/") },
+    { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+  ];
+  if (diocese) {
+    crumbs.push({ name: diocese.label, item: absoluteUrl(origin, diocesePath(diocese.slug)) });
+  }
+  return crumbs;
+}
+
 /**
- * BreadcrumbList: Home → All churches → {City} → {Church}, without the city level
+ * BreadcrumbList: Home → All churches → {Diocese} → {City} → {Church},
+ * without the diocese level when its diocese has no page, nor the city level
  * when the church's address has none.
  */
 export function churchBreadcrumbJsonLd(
   church: ChurchDetail,
   city: CityLink | null,
+  diocese: DioceseLink | null,
   canonicalUrl: string,
 ): Record<string, unknown> {
   const origin = new URL(canonicalUrl).origin;
-  const crumbs: { name: string; item: string }[] = [
-    { name: SITE_NAME, item: absoluteUrl(origin, "/") },
-    { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
-  ];
+  const crumbs = trailTo(origin, diocese);
   if (city) {
     crumbs.push({ name: city.label, item: absoluteUrl(origin, cityPath(city.slug)) });
   }
@@ -187,9 +211,7 @@ export function churchBreadcrumbJsonLd(
   return breadcrumbList(crumbs);
 }
 
-function breadcrumbList(
-  crumbs: { name: string; item: string }[],
-): Record<string, unknown> {
+function breadcrumbList(crumbs: Crumb[]): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -221,10 +243,12 @@ export function buildCityDescription(
 
 /**
  * Structured data for a city page: the page as a CollectionPage of its
- * churches' pages, and its breadcrumbs (Home → All churches → {City}).
+ * churches' pages, and its breadcrumbs (Home → All churches → {Diocese} →
+ * {City}, without the diocese when it has no page).
  */
 export function cityJsonLd(
   city: Pick<City, "label" | "churches">,
+  diocese: DioceseLink | null,
   canonicalUrl: string,
 ): Record<string, unknown>[] {
   const origin = new URL(canonicalUrl).origin;
@@ -248,10 +272,102 @@ export function cityJsonLd(
         })),
       },
     },
+    breadcrumbList([...trailTo(origin, diocese), { name: city.label, item: canonicalUrl }]),
+  ];
+}
+
+/** Diocese page title, e.g. "Catholic Mass Times in the Diocese of Buffalo — Confession & Adoration · Project Carlo". */
+export function buildDioceseTitle(diocese: Pick<Diocese, "label">): string {
+  return `Catholic Mass Times in the ${diocese.label} — Confession & Adoration · ${SITE_NAME}`;
+}
+
+/** SERP-snippet description for a diocese page. */
+export function buildDioceseDescription(
+  diocese: Pick<Diocese, "label" | "churches" | "cities">,
+): string {
+  const count = diocese.churches.length;
+  const churches = `${count} Catholic ${count === 1 ? "church" : "churches"}`;
+  return `Mass, Confession, and Adoration times at ${churches} in ${countCities(diocese.cities.length)} across the ${diocese.label}, ${SOURCE_PHRASE}.`;
+}
+
+/**
+ * Structured data for a diocese page: the page as a CollectionPage of its
+ * cities' pages, and its breadcrumbs (Home → All churches → {Diocese}).
+ */
+export function dioceseJsonLd(
+  diocese: Pick<Diocese, "label" | "churches" | "cities">,
+  canonicalUrl: string,
+): Record<string, unknown>[] {
+  const origin = new URL(canonicalUrl).origin;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: buildDioceseTitle(diocese),
+      description: buildDioceseDescription(diocese),
+      inLanguage: "en-US",
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: diocese.cities.map(({ city }, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: city.label,
+          url: absoluteUrl(origin, cityPath(city.slug)),
+        })),
+      },
+    },
+    breadcrumbList([...trailTo(origin, null), { name: diocese.label, item: canonicalUrl }]),
+  ];
+}
+
+export const DIOCESE_INDEX_TITLE = `Catholic Mass Times by Diocese — Confession & Adoration · ${SITE_NAME}`;
+
+/** "Albany, Buffalo and Rochester". */
+function listPlaces(dioceses: Pick<Diocese, "label">[]): string {
+  const places = dioceses.map((d) => diocesePlace(d.label));
+  return places.length > 1
+    ? `${places.slice(0, -1).join(", ")} and ${places[places.length - 1]}`
+    : (places[0] ?? "");
+}
+
+export function buildDioceseIndexDescription(dioceses: Pick<Diocese, "label">[]): string {
+  const which = dioceses.length > 0 ? ` (${listPlaces(dioceses)})` : "";
+  return `Browse Catholic churches by diocese${which} and find Mass, Confession, and Adoration times ${SOURCE_PHRASE}.`;
+}
+
+/**
+ * Structured data for the list of dioceses: a CollectionPage of their pages,
+ * and its breadcrumbs (Home → All churches → Dioceses).
+ */
+export function dioceseIndexJsonLd(
+  dioceses: Pick<Diocese, "slug" | "label">[],
+  canonicalUrl: string,
+): Record<string, unknown>[] {
+  const origin = new URL(canonicalUrl).origin;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: DIOCESE_INDEX_TITLE,
+      description: buildDioceseIndexDescription(dioceses),
+      inLanguage: "en-US",
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: dioceses.map((diocese, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: diocese.label,
+          url: absoluteUrl(origin, diocesePath(diocese.slug)),
+        })),
+      },
+    },
     breadcrumbList([
-      { name: SITE_NAME, item: absoluteUrl(origin, "/") },
-      { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
-      { name: city.label, item: canonicalUrl },
+      ...trailTo(origin, null),
+      { name: DIOCESES, item: absoluteUrl(origin, DIOCESE_INDEX_PATH) },
     ]),
   ];
 }

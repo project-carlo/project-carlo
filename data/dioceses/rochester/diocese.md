@@ -3,6 +3,7 @@ name: Roman Catholic Diocese of Rochester
 state: NY
 website: https://www.dor.org
 status: promoted
+coverage: complete
 gcatholic: roch0
 promoted: 2026-10-07
 ---

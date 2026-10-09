@@ -209,6 +209,7 @@ HANDLERS: dict[str, Handler] = {
     "recheck": _recheck,
     "export": lambda a: records.export_csv(a.diocese, Path(a.out_dir)),
     "promote": lambda a: records.promote(a.diocese, dry_run=a.dry_run),
+    "site-index": lambda a: records.write_site_index(check=a.check),
 }
 
 
@@ -389,3 +390,9 @@ def add_diocese_parser(
              "Apply the diocese to data/parishes.csv and data/churches.csv")
     p.add_argument("diocese")
     p.add_argument("--dry-run", action="store_true", help="report the changes, write nothing")
+
+    p = leaf("site-index", "site-index",
+             "Write the website's list of dioceses and their churches "
+             "(apps/web/src/data/dioceses.json); promote does this too")
+    p.add_argument("--check", action="store_true",
+                   help="write nothing; fail if the committed file is out of date")
