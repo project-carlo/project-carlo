@@ -9,7 +9,11 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 
 import { SITE_ORIGIN, serializeJsonLd, websiteJsonLd } from "./src/lib/seo";
 import { SNAPSHOT_FILE } from "./src/lib/snapshot";
-import { CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "./src/lib/cityMapEntry";
+import {
+  ANALYTICS_ENTRY,
+  CHURCH_INDEX_ENTRY,
+  CITY_MAP_ENTRY,
+} from "./src/lib/cityMapEntry";
 
 /** Injects the site-level WebSite/Organization JSON-LD into index.html so the
  *  markup has a single source of truth in src/lib/seo.ts. */
@@ -111,6 +115,8 @@ export default defineConfig({
             cityMap: resolve(__dirname, CITY_MAP_ENTRY),
             // Loaded by the prerendered all-churches index (see StaticChurchIndexPage).
             churchIndex: resolve(__dirname, CHURCH_INDEX_ENTRY),
+            // Loaded by every prerendered page (see scripts/prerender.ts).
+            analytics: resolve(__dirname, ANALYTICS_ENTRY),
           },
         },
       },

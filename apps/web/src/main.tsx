@@ -5,8 +5,12 @@ import { RouterProvider } from "react-router-dom";
 import { createAppRouter } from "./router";
 import { createQueryClient } from "./lib/queryClient";
 import { reloadOnStaleChunk } from "./lib/staleDeploy";
+import { startAnalytics } from "./lib/analytics";
 import "leaflet/dist/leaflet.css";
 import "./app.css";
+
+// Pageviews are tracked as the router moves (AppLayout).
+startAnalytics();
 
 const queryClient = createQueryClient();
 const router = createAppRouter(queryClient);

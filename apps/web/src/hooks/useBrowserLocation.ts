@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
 import {
+  BrowserLocationError,
   browserLocationErrorMessage,
   requestBrowserLocation,
   type BrowserLocation,
 } from "../lib/browserLocation";
+import { track } from "../lib/analytics";
 
 export type BrowserLocationStatus = "idle" | "requesting" | "error";
 
@@ -14,7 +16,7 @@ const ERROR_DISPLAY_MS = 6000;
  * Asks the browser for the visitor's position when `request` is called,
  * tracking the request so the control that asked can show it's working and,
  * if it fails, why (`error` is set only while `status` is "error").
- * `onLocated` gets the position.
+ * `onLocated` gets the position. Each answer is tracked (never the position).
  */
 export function useBrowserLocation(
   onLocated: (location: BrowserLocation) => void,
@@ -27,10 +29,14 @@ export function useBrowserLocation(
     setError(null);
     requestBrowserLocation().then(
       (location) => {
+        track("locate", { kind: "located" });
         setStatus("idle");
         onLocated(location);
       },
       (reason: unknown) => {
+        track("locate", {
+          kind: reason instanceof BrowserLocationError ? reason.reason : "unavailable",
+        });
         setStatus("error");
         setError(browserLocationErrorMessage(reason));
       },

@@ -13,6 +13,7 @@ import { fetchAllChurchesForSearch, type ChurchSearchResult } from "../api";
 import { formatAddress } from "../utils";
 import { wantsCurrentLocation } from "../lib/currentLocationQuery";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
+import { track } from "../lib/analytics";
 import {
   canSearchPlaces,
   currentLocationPlace,
@@ -178,6 +179,7 @@ export function SearchTypeahead({
 
   const handleChurchSelect = useCallback(
     (church: ChurchSearchResult) => {
+      track("search_select", { kind: "church", target: church.slug });
       onChurchSelect(church);
       clearQuery();
     },
@@ -186,6 +188,8 @@ export function SearchTypeahead({
 
   const handlePlaceSelect = useCallback(
     (place: PlaceSearchResult) => {
+      // Never the place itself: it could be where the visitor lives.
+      track("search_select", { kind: "place" });
       onPlaceSelect(place);
       clearQuery();
     },

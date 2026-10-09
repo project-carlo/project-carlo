@@ -1,4 +1,11 @@
-import { Outlet, ScrollRestoration, useNavigation } from "react-router-dom";
+import { useEffect } from "react";
+import {
+  Outlet,
+  ScrollRestoration,
+  useLocation,
+  useNavigation,
+} from "react-router-dom";
+import { trackPageview } from "../lib/analytics";
 
 /**
  * Every page. Moving between pages, the router loads the next one's code
@@ -9,10 +16,13 @@ import { Outlet, ScrollRestoration, useNavigation } from "react-router-dom";
  * forward return to where each page was left: the browser can't do that
  * itself, as it scrolls before the page it returns to is shown. Opening or
  * closing a city page's map (src/lib/cityMap.ts) keeps its history entry, so
- * the page stays where it is.
+ * the page stays where it is. Each page shown counts as a pageview
+ * (src/lib/analytics.ts); the map's query string changing doesn't.
  */
 export function AppLayout() {
   const navigation = useNavigation();
+  const { pathname } = useLocation();
+  useEffect(() => trackPageview(), [pathname]);
   return (
     <>
       {navigation.state === "loading" ? (

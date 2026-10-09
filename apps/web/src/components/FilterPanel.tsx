@@ -22,6 +22,7 @@ import {
   FILTER_TIME_HEADING,
 } from "../copy";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { track } from "@/lib/analytics";
 
 const TIME_STEP_MINUTES = 15;
 
@@ -53,6 +54,7 @@ export function FilterPanel({
 
   const selectDay = useCallback(
     (dayIndex: number) => {
+      track("filter", { kind: "days" });
       const current = filters.daysOfWeek;
       if (current.length === 0) {
         onChange({ ...filters, daysOfWeek: [dayIndex] });
@@ -69,6 +71,7 @@ export function FilterPanel({
 
   const selectEventType = useCallback(
     (type: EventType) => {
+      track("filter", { kind: "event_type", detail: type });
       onChange({ ...filters, eventType: type });
     },
     [filters, onChange],
@@ -98,6 +101,7 @@ export function FilterPanel({
   }, [filters, onChange]);
 
   const handleClear = useCallback(() => {
+    track("filter", { kind: "clear" });
     onChange({ ...DEFAULT_FILTER_STATE });
   }, [onChange]);
 

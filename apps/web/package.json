@@ -13,6 +13,7 @@
     "carry-assets": "tsx --tsconfig tsconfig.app.json scripts/carry-assets.ts",
     "og:gen": "tsx scripts/generate-og.ts",
     "geocode:cities": "tsx --tsconfig tsconfig.app.json scripts/geocode-cities.ts",
+    "analytics": "tsx --tsconfig tsconfig.app.json scripts/analytics-report.ts",
     "preview": "pnpm run build && wrangler dev",
     "lint": "eslint .",
     "check": "tsc -b",
