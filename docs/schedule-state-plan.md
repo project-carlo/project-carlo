@@ -25,8 +25,9 @@ over to it (see [Cutover](#cutover)).
 
 ```
 believed schedule (parish @ revision N) ─┐
-bulletin PDF                             ├─► llm_call ─► proposed_change ─► change_decision ─► schedule_change ─► revision N+1
-policy, schema, settings, date           ┘   (stored)    (stored)           (stored)            (the log)
+bulletin PDF                             ├─► llm_call ─► proposed_change ─► schedule_change ─► revision N+1
+policy, schema, settings, date           ┘   (stored)    (stored, with       (the log)
+                                                          its decision)
 ```
 
 1. Fetch stores the bulletin, as today.
@@ -34,9 +35,9 @@ policy, schema, settings, date           ┘   (stored)    (stored)           (s
    canonical JSON **view**, and hash it.
 3. Call the model with the policy prompt, the church list, the date, the view
    and the PDF. Store the call, whether or not it succeeds.
-4. Store each proposed change, and the items the model says it saw.
-5. The decision policy (code) decides each proposal: apply it, hold it as
-   pending, or reject it.
+4. Store each proposed change.
+5. The decision policy (code) decides each proposal at once: apply it or
+   reject it. Nothing waits for a later bulletin.
 6. Applied changes are written to the change log as one new revision, and the
    current schedule is updated from them.
 
@@ -215,8 +216,7 @@ CREATE TABLE schedule_item (
     value_id INTEGER NOT NULL REFERENCES schedule_value(id),   -- current value
     identity_key TEXT NOT NULL,       -- copied from the value, for the index below
     created_revision INTEGER NOT NULL,
-    deleted_revision INTEGER,         -- null while believed
-    last_confirmed_call_id INTEGER REFERENCES llm_call(id)
+    deleted_revision INTEGER          -- null while believed
 );
 -- No two believed entries are the same slot.
 CREATE UNIQUE INDEX idx_schedule_item_live
@@ -254,8 +254,10 @@ CREATE TABLE schedule_change (
 );
 CREATE INDEX idx_schedule_change_item ON schedule_change(item_id);
 
--- ── What the model proposed, and what became of it ──
+-- ── What the model proposed, and what the policy did with it ──
 
+-- Every proposal is decided when its call is processed, applied or rejected,
+-- so the decision lives on the proposal's own row.
 CREATE TABLE proposed_change (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     llm_call_id INTEGER NOT NULL REFERENCES llm_call(id) ON DELETE CASCADE,
@@ -265,36 +267,14 @@ CREATE TABLE proposed_change (
     page_number INTEGER,
     quote TEXT,                       -- the bulletin's words that call for the change
     rationale TEXT,
-    -- Two proposals from different bulletins with the same key are the same
-    -- change: 'add:<value hash>', 'modify:<item>:<value hash>', 'delete:<item>'.
-    equivalence_key TEXT NOT NULL,
+    decision TEXT NOT NULL CHECK (decision IN ('applied', 'rejected')),
+    reason TEXT NOT NULL,             -- a code from the policy: 'auto', 'stale_bulletin', 'conflict', ...
+    decided_by TEXT NOT NULL,         -- 'policy@<version>'
     CHECK ((op = 'add' AND target_item_id IS NULL AND value_id IS NOT NULL)
         OR (op = 'modify' AND target_item_id IS NOT NULL AND value_id IS NOT NULL)
         OR (op = 'delete' AND target_item_id IS NOT NULL AND value_id IS NULL))
 );
 CREATE INDEX idx_proposed_change_call ON proposed_change(llm_call_id);
-CREATE INDEX idx_proposed_change_key ON proposed_change(equivalence_key);
-
--- Every decision on a proposal, in order. A proposal held as pending gets a
--- second row when it is applied, rejected or expires; the latest row stands.
-CREATE TABLE change_decision (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    proposed_change_id INTEGER NOT NULL REFERENCES proposed_change(id) ON DELETE CASCADE,
-    decision TEXT NOT NULL CHECK (decision IN ('applied', 'pending', 'rejected', 'expired')),
-    reason TEXT NOT NULL,             -- a code from the policy: 'auto', 'corroborated', 'stale_bulletin', ...
-    decided_by TEXT NOT NULL,         -- 'policy@<version>', or a person
-    corroborated_by INTEGER REFERENCES proposed_change(id),
-    run_id TEXT REFERENCES pipeline_run(id),
-    decided_at TEXT NOT NULL
-);
-CREATE INDEX idx_change_decision_proposal ON change_decision(proposed_change_id, id);
-
--- The believed entries a call says its bulletin shows, unchanged.
-CREATE TABLE item_confirmation (
-    llm_call_id INTEGER NOT NULL REFERENCES llm_call(id) ON DELETE CASCADE,
-    item_id INTEGER NOT NULL REFERENCES schedule_item(id) ON DELETE CASCADE,
-    PRIMARY KEY (llm_call_id, item_id)
-) WITHOUT ROWID;
 
 -- ── Run bookkeeping (unchanged) ──
 
@@ -397,7 +377,6 @@ The church list (slugs, names, addresses) goes in as context, as today, and
   "published_date": "2026-10-11",
   "wrong_bulletin": false,
   "church_list_needs_review": false,
-  "confirmed_item_ids": [118, 131],
   "changes": [
     {"op": "modify", "item_id": 131,
      "entry": {"event_type":"confession","event_kind":"weekly","church_slug":"st-mary-albany",
@@ -417,56 +396,38 @@ The church list (slugs, names, addresses) goes in as context, as today, and
 - **modify vs. delete + add.** The model may use either, and the policy treats
   them the same way. The report can still show an add and a delete of the same
   identity in one call as a modify.
-- **`confirmed_item_ids`** lists the believed entries the bulletin shows,
-  unchanged. Without it, an empty change list cannot be told apart from a
-  bulletin that skipped its schedule page, and nothing would record when an entry
-  was last seen in print. It costs a few tokens per call.
-- **`quote`** is required on every change. The policy checks it against the
+- **`quote`** is required on every change. The report checks it against the
   PDF's text layer where there is one.
 
 ## Decision policy (v1)
 
-The policy is code. Its version is recorded in every `change_decision.decided_by`.
+The policy is code. Its version is recorded in every proposal's `decided_by`.
+Every proposal is decided when its call is processed: applied or rejected.
+Nothing is held for a later bulletin or a person.
 
-Rules for the whole call come first:
+A proposal is **rejected** when:
 
-| Condition | Decision for every proposal |
+| Condition | Reason |
 |---|---|
-| `status` is `parse_failed` or `api_error` | none (no proposals stored) |
-| `wrong_bulletin` | rejected, `wrong_bulletin` |
-| the bulletin's week is older than the week of the parish's last applied call | rejected, `stale_bulletin` |
-| the call proposes deleting more than half the parish's live entries | every delete pending, `mass_delete` |
+| the call says `wrong_bulletin` | `wrong_bulletin` |
+| the bulletin's week is older than the week of the parish's last applied call | `stale_bulletin` |
+| its target item changed since the call's `base_revision` | `conflict` |
+| it targets an item that isn't live in the parish | `unknown_item` |
+| it is an add, or a modify, that would duplicate a live identity | `duplicate` |
+| its entry names a church outside the parish | `unknown_church` |
 
-Then each proposal:
+Every other proposal is **applied** (`auto`): adds, modifies and deletes,
+weekly or dated. A call that fails (`parse_failed`, `api_error`) stores no
+proposals.
 
-| Proposal | Decision |
-|---|---|
-| any op, quote not found in a PDF that has a text layer | pending, `quote_not_found` |
-| target item changed since `base_revision` | rejected, `conflict` |
-| add that duplicates a live identity | rejected, `duplicate` |
-| add or delete of a specific_date entry (one-offs and cancellations) | applied, `auto` |
-| modify that leaves identity alone (end time, note) | applied, `auto` |
-| add of a weekly entry | applied, `auto` |
-| delete of a weekly entry, or a modify that changes its identity (time, weekday, qualifiers) | pending, `needs_corroboration` |
+The report flags applied changes worth a look, without blocking them:
 
-Pending proposals are resolved on the parish's later calls:
+- a quote not found in the PDF's text layer;
+- a call that deletes more than half the parish's live entries;
+- a parish whose schedule changed in each of its last few calls.
 
-- **Corroborated → applied.** A later call on a **different bulletin**
-  (different content hash) proposes a change with the same `equivalence_key`.
-  `corroborated_by` names it.
-- **Contradicted → rejected.** A later call confirms the target item unchanged.
-- **Expired.** Neither happens within the parish's next 2 calls.
-- **Person.** Anyone can approve or reject a pending proposal (a `human`
-  decision). The tooling for this is out of scope for v1, but the table records
-  it.
-
-Pending proposals are **not** shown to the model. The next call sees only the
-believed schedule, so if it proposes the same change, that is independent
-corroboration.
-
-A run is no longer held as a whole for schedule changes: a doubtful change is
-held on its own, as a pending proposal. The run-level checks that remain
-concern the run itself. More than half the parishes failed to fetch, a stage
+A run is no longer held for schedule changes. The run-level checks that remain
+concern the run itself: more than half the parishes failed to fetch, a stage
 crashed, or the snapshot fails to verify.
 
 ## Processing order
@@ -494,7 +455,7 @@ their values. It leaves out specific_date entries whose date has passed.
 - **`page_number`:** from the proposal behind the item's current value. Null
   for seeded entries.
 - **New:** `weeks_of_month`, `season_start_month`, `season_start_day`,
-  `season_end_month`, `season_end_day`, `cancels_event_id`, `last_confirmed_week`.
+  `season_end_month`, `season_end_day`, `cancels_event_id`.
 - **Per church:** `bulletin_url` and `bulletin_week` come from the parish's
   latest bulletin with an applied call.
 
@@ -510,13 +471,13 @@ otherwise be read as every week. `computeNextOccurrence` needs:
 |---|---|
 | `data/migrations/` | the three migrations replaced by the new `0001_initial.sql` |
 | `db.py` | `ensure_db` refuses a database without the new `application_id` |
-| `process.py` | rewritten: render view, call, store call/proposals/confirmations, decide, apply |
+| `process.py` | rewritten: render view, call, store the call and its proposals, decide, apply |
 | new `schedule/` package | the view renderer, value hashing and identity, the policy, apply/fold, the converters for weeks of month and season |
 | `classifiers/` | a `schedule_update` task: new policy prompt and response schema; version digest covers both; returns token usage and served model |
 | `schedule_extraction.py` | the production schema and prompt move to the new task; the from-scratch extraction stays for evals |
-| `recurrence.py`, `event_occurrence` | removed; corroboration replaces promotion |
+| `recurrence.py`, `event_occurrence` | removed: the model sees the believed weekly slot, so a dated sighting of it is no change |
 | `bulletin_week.py`, `fetch.py`, `storage.py` | read `bulletin_reading` instead of the dropped bulletin columns |
-| `report.py`, `weekly.py`, `verify_frontend_snapshot.py` | report from `change_decision` per parish; the remaining run-level checks |
+| `report.py`, `weekly.py`, `verify_frontend_snapshot.py` | report from `proposed_change` per parish, with the flags above; the remaining run-level checks |
 | `extract_frontend_db.py`, `apps/web` | snapshot v2; `computeNextOccurrence` rules |
 | `labeling/bulletins.py` | the read-only "model's answer" becomes the call's view with its proposals applied |
 | `evals/` | the new eval cases below |
@@ -526,8 +487,8 @@ otherwise be read as every week. `computeNextOccurrence` needs:
 The labels stay as they are, one full schedule per bulletin. What changes is
 how a case is built, because a call now needs a believed schedule as input:
 
-- **Identity.** Use the label as the view. The right answer is no changes, and
-  every label entry confirmed. This measures the **false-change rate**, the
+- **Identity.** Use the label as the view. The right answer is no changes. This
+  measures the **false-change rate**, the
   number that matters most here.
 - **Perturbation.** Use the label with known edits: an entry removed, a time
   shifted, a fake entry added, an end time dropped, a qualifier lost. The right
@@ -568,8 +529,12 @@ What the cutover gives up:
 
 - Initial population of schedules (the `seed` revisions).
 - Changes effective from a future date (`valid_from` / `valid_until`).
-- Tooling for people to decide pending proposals or edit schedules (the
-  tables record `human` decisions and revisions already).
+- Holding doubtful changes for corroboration by a later bulletin or for a
+  person's review. Everything applies at once in v1.
+- Recording which believed entries a bulletin showed unchanged (when each entry
+  was last seen in print).
+- Tooling for people to edit schedules (the tables record `human` revisions
+  already).
 - Periodic from-scratch audit calls to catch errors the update calls anchor on.
   This is a second `llm_call.task` when it comes.
 - Tally corrections as `human` revisions.
@@ -578,11 +543,5 @@ What the cutover gives up:
 
 1. **`weeks_of_month` storage:** a 6-bit mask (proposed), or six boolean
    columns? Either way it converts to the labels' list at the edges.
-2. **Confirmations:** a list of confirmed item ids (proposed), or a status on
-   every entry (`seen` / `not_in_bulletin`)? The second is more output, but it
-   also says when a church's schedule wasn't printed at all.
-3. **New weekly entries:** apply at once (proposed), or wait for corroboration
-   like deletes? Waiting costs a week's lag on every real new Mass time.
-4. **Pending expiry:** the next 2 calls (proposed), or a number of weeks?
-5. **The view's date cutoff:** leave out specific_date entries dated before the
+2. **The view's date cutoff:** leave out specific_date entries dated before the
    call date (proposed), or before the start of the bulletin's week?
