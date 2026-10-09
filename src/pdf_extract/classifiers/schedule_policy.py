@@ -86,4 +86,13 @@ Only add a `note` when there is genuinely special context worth surfacing: langu
 - Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). In that case you may return empty event lists.
 
 Read the whole bulletin, including calendars, sidebars and the back page, and carefully find every event it lists.
+
+
+# Final source checks
+
+- Keep church-specific schedule headings separate: an unlisted church's times must not be assigned to a similar-named listed church. A parish-wide heading, parish-office address, or photograph caption is not a different church-specific schedule heading.
+- Preserve a dated Mass with an explicit known church and time even when another church has a usual weekly Mass at that time. Different churches are not duplicates; the dated venue overrides a conflicting standing schedule for that date.
+- An event that includes Confession or Adoration does not establish those components' start/end times. Do not copy the larger event's full hours onto its components; record a component only with its own definite timing or a permitted relative-to-Mass anchor.
+- Apply the off-site rules to Mass-intentions entries too, resolving venue abbreviations from the bulletin's own context.
+- When the bulletin's printed issue date is clearly from the wrong year relative to the provided current date, set wrong_bulletin=true even if its schedule can still be extracted. Do not mistake dates of other events or historical references for the issue date.
 """

@@ -16,7 +16,13 @@ from pdf_extract.classifiers.openai_responses import (
     OpenAIResponsesClassifier,
     render_pages,
 )
-from pdf_extract.classifiers.qualified_schedule import flatten_events
+from pdf_extract.classifiers.qualified_schedule import (
+    CONTEXT_TEMPLATE,
+    SCHEMA_FINGERPRINT,
+    QualifiedSchedulePayload,
+    fingerprint,
+    flatten_events,
+)
 from pdf_extract.classifiers.schedule_policy import POLICY
 
 CHURCHES = [{"slug": "st-mary", "name": "St. Mary", "address": "123 Main"}]
@@ -108,6 +114,14 @@ def test_request_settings_and_strict_toggle():
     assert fake.calls[0]["text"]["format"]["strict"] is False
     assert fake.calls[0]["text"]["format"]["schema"] == request["text"]["format"]["schema"]
     assert nonstrict.version != classifier.version
+
+
+def test_policy_changes_invalidate_the_qualified_cache_fingerprint():
+    schema = json.dumps(QualifiedSchedulePayload.model_json_schema(), sort_keys=True)
+    assert SCHEMA_FINGERPRINT == fingerprint(POLICY, CONTEXT_TEMPLATE, schema)
+    assert fingerprint(POLICY + "\nChanged policy", CONTEXT_TEMPLATE, schema) != SCHEMA_FINGERPRINT
+    classifier = OpenAIResponsesClassifier(model="gpt-6-luna")
+    assert classifier.version.endswith(f"+prompt-{SCHEMA_FINGERPRINT}")
 
 
 def test_schema_is_strict_compatible_and_carries_the_qualifiers():
