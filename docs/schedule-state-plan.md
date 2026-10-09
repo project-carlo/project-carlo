@@ -18,10 +18,12 @@ Initial population of the schedules is out of scope: it happens by another
 method (existing schedules, agent runs, manual review). This design only needs
 it to write the first revision of each parish (`source_kind = 'seed'`).
 
-There is no migration. The new schema is a fresh baseline and the pipeline cuts
-over to it (see [Cutover](#cutover)).
+The new tables arrive as an ordinary migration next to today's, and the
+pipeline gains a mode: `extract` (today's from-scratch extraction) or `update`
+(this plan). A weekly run uses one mode or the other, never both. The old
+tables are dropped once update mode has settled (see [Rollout](#rollout)).
 
-## How a bulletin is processed
+## How a bulletin is processed (update mode)
 
 ```
 believed schedule (parish @ revision N) ─┐
@@ -31,73 +33,33 @@ policy, schema, settings, date           ┘   (stored)    (stored, with       (
 ```
 
 1. Fetch stores the bulletin, as today.
-2. Render the parish's believed schedule at its current revision into a
-   canonical JSON **view**, and hash it.
+2. Render the parish's believed schedule into a canonical JSON **view**, and
+   hash it.
 3. Call the model with the policy prompt, the church list, the date, the view
    and the PDF. Store the call, whether or not it succeeds.
 4. Store each proposed change.
 5. The decision policy (code) decides each proposal at once: apply it or
    reject it. Nothing waits for a later bulletin.
-6. Applied changes are written to the change log as one new revision, and the
-   current schedule is updated from them.
+6. Applied changes are appended to the change log as one new revision, and
+   that revision is folded into the current schedule.
 
-The change log is the source of truth. `schedule_item` (the current schedule)
-is what the log folds to and can be rebuilt from it.
+The change log is the source of truth. `current_schedule` is a materialized
+view of it: the log replayed in order. Applying a revision appends to the log
+and then folds that revision in; nothing else writes `current_schedule`, and a
+full rebuild from the log must give the same table.
 
 ## Schema
 
-The new `data/migrations/0001_initial.sql`, in full. `parish`, `church`,
-`pipeline_run` and `run_parish_result` are unchanged. `bulletin` loses the
-columns that came from the extractor. `event` and `event_occurrence` are gone.
+The new `data/migrations/0004_schedule_state.sql`, in full. It only adds
+tables: `parish`, `church`, `bulletin`, `event`, `event_occurrence` and the run
+tables are untouched, and nothing writes the new tables in extract mode. The
+cleanup migration that later drops the extract-mode tables is in
+[Rollout](#rollout).
 
 ```sql
--- Project Carlo database schema: the believed-schedule baseline.
--- Marks the database as this format, so code refuses a pre-cutover database
--- instead of mistaking its user_version for this baseline's.
-PRAGMA application_id = 0x43524C32;   -- 'CRL2'
-PRAGMA foreign_keys = ON;
-
--- ── Curated (unchanged): seeded from data/parishes.csv and data/churches.csv ──
-
-CREATE TABLE parish (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    slug TEXT NOT NULL UNIQUE,
-    name TEXT NOT NULL,
-    homepage_url TEXT NOT NULL,
-    bulletin_provider TEXT,
-    provider_id TEXT,
-    created_at TEXT
-);
-
-CREATE TABLE church (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    parish_id INTEGER NOT NULL REFERENCES parish(id) ON DELETE CASCADE,
-    slug TEXT NOT NULL UNIQUE,
-    name TEXT NOT NULL,
-    address_line1 TEXT, address_line2 TEXT,
-    city TEXT, state TEXT, postal_code TEXT,
-    latitude REAL, longitude REAL,
-    name_verified INTEGER NOT NULL DEFAULT 0,
-    address_verified INTEGER NOT NULL DEFAULT 0,
-    created_at TEXT
-);
-CREATE INDEX idx_church_parish_name ON church(parish_id, name);
-CREATE INDEX idx_church_lat_lng ON church(latitude, longitude);
-
--- ── Fetched bulletins: only what fetch knows. What the model read off a
---    bulletin (its date, whether it is this parish's) is on its llm_call. ──
-
-CREATE TABLE bulletin (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    parish_id INTEGER NOT NULL REFERENCES parish(id) ON DELETE CASCADE,
-    source_url TEXT NOT NULL,
-    content_hash TEXT NOT NULL,       -- sha256 of the PDF as downloaded
-    fetched_at TEXT NOT NULL,
-    last_seen_at TEXT,
-    etag TEXT,
-    last_modified TEXT,
-    UNIQUE (parish_id, source_url, content_hash)
-);
+-- Believed schedules: each parish's schedule kept as a log of changes, and the
+-- LLM calls that propose them. Written only when the pipeline runs in update
+-- mode (docs/schedule-state-plan.md).
 
 -- ── LLM calls ──
 
@@ -133,7 +95,7 @@ CREATE TABLE llm_call (
     version TEXT NOT NULL,            -- digest of provider, model, the three hashes and params
     base_revision INTEGER NOT NULL,   -- the parish revision the view was rendered from
     view_hash TEXT NOT NULL REFERENCES schedule_view(hash),
-    call_date TEXT NOT NULL,          -- the "today" the prompt gave
+    call_date TEXT NOT NULL,          -- the bulletin's fetch date, given to the model as "today"
     church_list_hash TEXT NOT NULL,   -- the parish's churches as sent
     request_key TEXT NOT NULL UNIQUE, -- sha256(version, content_hash, view_hash, call_date, church_list_hash)
     -- what came back
@@ -150,32 +112,18 @@ CREATE TABLE llm_call (
     cost_usd REAL,
     latency_ms INTEGER,
     started_at TEXT NOT NULL,
-    finished_at TEXT                  -- replaces bulletin.processed_at
+    finished_at TEXT
 );
 CREATE INDEX idx_llm_call_bulletin ON llm_call(bulletin_id);
 CREATE INDEX idx_llm_call_parish ON llm_call(parish_id, id);
 
--- What fetch and bulletin_week.py read in place of the removed bulletin
--- columns: each bulletin with its latest successful read.
-CREATE VIEW bulletin_reading AS
-SELECT b.*,
-       c.id AS llm_call_id,
-       c.published_date,
-       COALESCE(c.wrong_bulletin, 0) AS wrong_bulletin,
-       c.finished_at AS processed_at
-FROM bulletin b
-LEFT JOIN llm_call c ON c.id = (
-    SELECT id FROM llm_call
-    WHERE bulletin_id = b.id AND status IN ('ok', 'lenient')
-    ORDER BY id DESC LIMIT 1
-);
-
 -- ── The believed schedule ──
 
--- An immutable schedule entry value. Items, proposals and the change log all
--- point at these rows, so the columns and their checks are defined once.
--- Identical values are stored once (`hash`).
-CREATE TABLE schedule_value (
+-- One schedule entry's content, written once and never changed. Identical
+-- content is stored once (`hash`), so an entry's id names its content. The
+-- log, the proposals and the current schedule all point at these rows, so the
+-- columns and their checks are defined once.
+CREATE TABLE schedule_entry (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     hash TEXT NOT NULL UNIQUE,        -- sha256 of every column below
     identity_key TEXT NOT NULL,       -- what makes two entries the same slot (below)
@@ -188,8 +136,6 @@ CREATE TABLE schedule_value (
     start_time INTEGER NOT NULL CHECK (start_time BETWEEN 0 AND 1439),
     end_time INTEGER CHECK (end_time IS NULL OR end_time BETWEEN 0 AND 1439),
     cancelled INTEGER NOT NULL DEFAULT 0 CHECK (cancelled IN (0, 1)),
-    -- the weekly slot a cancelled specific_date entry cancels, when it is one
-    cancels_item_id INTEGER REFERENCES schedule_item(id),
     -- weeks of the month, as the labels' list: bit 0 first, 1 second, 2 third,
     -- 3 fourth, 4 fifth, 5 last. 0 = every week.
     weeks_of_month INTEGER NOT NULL DEFAULT 0 CHECK (weeks_of_month BETWEEN 0 AND 63),
@@ -202,25 +148,11 @@ CREATE TABLE schedule_value (
     CHECK ((event_kind = 'weekly' AND day_of_week IS NOT NULL AND date IS NULL)
         OR (event_kind = 'specific_date' AND date IS NOT NULL AND day_of_week IS NULL)),
     CHECK (event_kind = 'weekly' OR (weeks_of_month = 0 AND season_start_month IS NULL)),
+    CHECK (event_kind = 'specific_date' OR cancelled = 0),
     CHECK ((season_start_month IS NULL) = (season_end_month IS NULL)),
     CHECK (season_start_day IS NULL OR season_start_month IS NOT NULL),
-    CHECK (season_end_day IS NULL OR season_end_month IS NOT NULL),
-    CHECK (cancels_item_id IS NULL OR (event_kind = 'specific_date' AND cancelled = 1))
+    CHECK (season_end_day IS NULL OR season_end_month IS NOT NULL)
 );
-
--- One row per entry the parish's schedule has ever had. Its id is stable for
--- its whole life, and is how the model refers to it.
-CREATE TABLE schedule_item (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    parish_id INTEGER NOT NULL REFERENCES parish(id) ON DELETE CASCADE,
-    value_id INTEGER NOT NULL REFERENCES schedule_value(id),   -- current value
-    identity_key TEXT NOT NULL,       -- copied from the value, for the index below
-    created_revision INTEGER NOT NULL,
-    deleted_revision INTEGER          -- null while believed
-);
--- No two believed entries are the same slot.
-CREATE UNIQUE INDEX idx_schedule_item_live
-    ON schedule_item(parish_id, identity_key) WHERE deleted_revision IS NULL;
 
 -- Each parish's revisions. One revision per applied batch: a seed, one
 -- llm_call's applied proposals, or a person's edit.
@@ -236,88 +168,84 @@ CREATE TABLE schedule_revision (
     PRIMARY KEY (parish_id, revision)
 );
 
--- The log. schedule_item is this folded in order.
+-- What the model proposed, and what the policy did with it. Every proposal is
+-- decided when its call is processed, so the decision lives on its own row.
+CREATE TABLE proposed_change (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    llm_call_id INTEGER NOT NULL REFERENCES llm_call(id) ON DELETE CASCADE,
+    seq INTEGER NOT NULL,             -- position in the model's answer; decided in this order
+    op TEXT NOT NULL CHECK (op IN ('add', 'modify', 'delete')),
+    raw_json TEXT NOT NULL,           -- the proposal as the model wrote it
+    -- modify, delete: the entry id as the model gave it. Not a foreign key: it
+    -- may name no entry, and is then rejected as unknown_item.
+    target_entry_id INTEGER,
+    -- add, modify: the whole new entry. Null when it could not be stored
+    -- (unknown_church, invalid_entry).
+    entry_id INTEGER REFERENCES schedule_entry(id),
+    page_number INTEGER,
+    rationale TEXT,
+    decision TEXT NOT NULL CHECK (decision IN ('applied', 'rejected')),
+    reason TEXT NOT NULL,             -- a code from the policy: 'auto', 'stale_bulletin', 'mass_delete', ...
+    decided_by TEXT NOT NULL,         -- 'policy@<version>'
+    UNIQUE (llm_call_id, seq),
+    CHECK (decision = 'rejected'
+        OR (op = 'add' AND target_entry_id IS NULL AND entry_id IS NOT NULL)
+        OR (op = 'modify' AND target_entry_id IS NOT NULL AND entry_id IS NOT NULL)
+        OR (op = 'delete' AND target_entry_id IS NOT NULL AND entry_id IS NULL))
+);
+
+-- The log. current_schedule is this replayed in order. Rows are only ever
+-- appended.
 CREATE TABLE schedule_change (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     parish_id INTEGER NOT NULL,
     revision INTEGER NOT NULL,
     op TEXT NOT NULL CHECK (op IN ('add', 'modify', 'delete')),
-    item_id INTEGER NOT NULL REFERENCES schedule_item(id) ON DELETE CASCADE,
-    before_value_id INTEGER REFERENCES schedule_value(id),     -- null for add
-    after_value_id INTEGER REFERENCES schedule_value(id),      -- null for delete
+    before_entry_id INTEGER REFERENCES schedule_entry(id),     -- null for add
+    after_entry_id INTEGER REFERENCES schedule_entry(id),      -- null for delete
     proposed_change_id INTEGER REFERENCES proposed_change(id), -- null for seed and human
     FOREIGN KEY (parish_id, revision) REFERENCES schedule_revision(parish_id, revision)
         ON DELETE CASCADE,
-    CHECK ((op = 'add' AND before_value_id IS NULL AND after_value_id IS NOT NULL)
-        OR (op = 'modify' AND before_value_id IS NOT NULL AND after_value_id IS NOT NULL)
-        OR (op = 'delete' AND before_value_id IS NOT NULL AND after_value_id IS NULL))
+    CHECK ((op = 'add' AND before_entry_id IS NULL AND after_entry_id IS NOT NULL)
+        OR (op = 'modify' AND before_entry_id IS NOT NULL AND after_entry_id IS NOT NULL)
+        OR (op = 'delete' AND before_entry_id IS NOT NULL AND after_entry_id IS NULL))
 );
-CREATE INDEX idx_schedule_change_item ON schedule_change(item_id);
+CREATE INDEX idx_schedule_change_revision ON schedule_change(parish_id, revision);
 
--- ── What the model proposed, and what the policy did with it ──
-
--- Every proposal is decided when its call is processed, applied or rejected,
--- so the decision lives on the proposal's own row.
-CREATE TABLE proposed_change (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    llm_call_id INTEGER NOT NULL REFERENCES llm_call(id) ON DELETE CASCADE,
-    op TEXT NOT NULL CHECK (op IN ('add', 'modify', 'delete')),
-    target_item_id INTEGER REFERENCES schedule_item(id),   -- modify, delete
-    value_id INTEGER REFERENCES schedule_value(id),        -- add, modify: the whole new value
-    page_number INTEGER,
-    quote TEXT,                       -- the bulletin's words that call for the change
-    rationale TEXT,
-    decision TEXT NOT NULL CHECK (decision IN ('applied', 'rejected')),
-    reason TEXT NOT NULL,             -- a code from the policy: 'auto', 'stale_bulletin', 'conflict', ...
-    decided_by TEXT NOT NULL,         -- 'policy@<version>'
-    CHECK ((op = 'add' AND target_item_id IS NULL AND value_id IS NOT NULL)
-        OR (op = 'modify' AND target_item_id IS NOT NULL AND value_id IS NOT NULL)
-        OR (op = 'delete' AND target_item_id IS NOT NULL AND value_id IS NULL))
-);
-CREATE INDEX idx_proposed_change_call ON proposed_change(llm_call_id);
-
--- ── Run bookkeeping (unchanged) ──
-
-CREATE TABLE pipeline_run (
-    id TEXT PRIMARY KEY,
-    started_at TEXT NOT NULL,
-    finished_at TEXT,
-    status TEXT NOT NULL,
-    git_sha TEXT,
-    trigger TEXT,
-    summary_json TEXT
-);
-
-CREATE TABLE run_parish_result (
-    run_id TEXT NOT NULL REFERENCES pipeline_run(id) ON DELETE CASCADE,
-    parish_slug TEXT NOT NULL,
-    stage TEXT NOT NULL,
-    status TEXT NOT NULL,
-    detail TEXT,
-    source_url TEXT,
-    content_hash TEXT,
-    event_count INTEGER,
-    PRIMARY KEY (run_id, parish_slug, stage)
+-- The believed schedule now: schedule_change folded in order. Derived: written
+-- only by folding a new revision in, and rebuildable from the log.
+CREATE TABLE current_schedule (
+    parish_id INTEGER NOT NULL REFERENCES parish(id) ON DELETE CASCADE,
+    entry_id INTEGER NOT NULL REFERENCES schedule_entry(id),
+    identity_key TEXT NOT NULL,       -- copied from the entry, for the constraint below
+    since_revision INTEGER NOT NULL,
+    PRIMARY KEY (parish_id, entry_id),
+    UNIQUE (parish_id, identity_key)  -- no two believed entries are the same slot
 );
 ```
 
 ### Notes on the schema
 
-**Values, items and changes.** A `schedule_value` is one entry's content, never
-edited. A `schedule_item` is one entry over its lifetime, pointing at its
-current value. A modify writes a new value and moves the pointer, and the log
-keeps both. With this split, the item columns and their checks exist only
-once: proposals, the log and the current schedule all reference value rows,
-and nothing holds an item as JSON.
+**Entries are immutable.** A `schedule_entry` is one entry's content and is
+never edited. A modify is a log row from the old entry to a new one, and the
+current schedule swaps one for the other. Nothing points at an entry except
+the log, the proposals and `current_schedule`, so nothing can be left pointing
+at a slot that has since changed. The price is that a slot has no single id
+for its whole life: a modify gives it a new entry id. Nothing needs one (the
+web app uses event ids only as React list keys), and a slot's history is the
+chain of its modify rows.
 
-**Identity.** `identity_key` is computed in code from the value:
+**Identity.** `identity_key` is computed in code from the entry:
 
-- weekly: church, event type, weekday, start time, weeks of month, season
-- specific_date: church, event type, date, start time, cancelled
+- weekly: church, event type, weekday, start time
+- specific_date: church, event type, date, start time
 
-End time and note are not part of identity. Two live entries with the same
-identity are refused by the index, and the policy rejects an add that would
-duplicate one as `duplicate`.
+End time, weeks of month, season, cancelled and note are not part of identity,
+so a change to any of them is a modify of the existing entry, and "every
+Saturday 3 PM" and "first Saturday 3 PM" can't both be believed at once. The
+`UNIQUE (parish_id, identity_key)` on `current_schedule` refuses a second live
+entry for a slot, and the policy rejects a proposal that would create one as
+`duplicate`.
 
 **Weeks of the month and season** are structured as in the labels
 (`labeling/labels.py`). The database stores `weeks_of_month` as a 6-bit mask
@@ -328,33 +256,30 @@ One converter, in one module, does the translation and is shared with the
 labels code.
 
 **Cancellations** are specific_date entries with `cancelled = 1`, as in the
-labels. When one cancels a believed weekly slot, `cancels_item_id` names it, so
-the site can skip that slot on that date.
+labels. Nothing stores which weekly slot one cancels: the snapshot builder
+works it out each time (see [The snapshot](#the-snapshot-format-version-2)).
+A cancelled one-off dated entry (a Christmas Mass called off) is that entry
+modified to `cancelled = 1`, since `cancelled` is not part of identity.
 
-**Dated entries expire on their own.** A specific_date entry whose date has
-passed is left out of the view and out of the snapshot, with no revision. It is
-never deleted. That keeps past dates out of the change log, which is where most
-of today's report noise comes from.
+**Dated entries expire on their own.** A specific_date entry dated before the
+call date is left out of the view, and one dated before the snapshot's build
+date is left out of the snapshot, with no revision. It is never deleted. That
+keeps past dates out of the change log, which is where most of today's report
+noise comes from.
 
 **Changes take effect immediately.** There is no `valid_from`/`valid_until`.
-The policy prompt tells the model to propose only changes that are already in
-effect in the bulletin's week, and to leave an announced future change ("from
-November 1 the vigil moves to 5 PM") until a bulletin from a week where it is in
-effect. Effective dates can be added later as columns on `schedule_value`.
-
-**Bulletin columns.** `published_date`, `wrong_bulletin` and `processed_at`
-move to `llm_call`. The `bulletin_reading` view lets `bulletin_week.py`,
-`fetch.py` and `storage.py` keep reading the same fields from it rather than
-from `bulletin`.
+The policy prompt says which changes to propose when (see
+[Prompt rules](#prompt-rules)). Effective dates can be added later as columns
+on `schedule_entry`.
 
 ## The model's input and output
 
 ### Input: the view
 
-The canonical JSON of the parish's live entries, with expired dated entries
-left out. Keys are sorted, entries ordered by church, kind, weekday or date,
-then time, and there is no whitespace, so the same schedule always hashes the
-same:
+The canonical JSON of the parish's current schedule, with dated entries before
+the call date left out. Keys are sorted, entries ordered by church, kind,
+weekday or date, then time, and there is no whitespace, so the same schedule
+always hashes the same. `id` is the entry id:
 
 ```json
 {"churches":[{"slug":"st-mary-albany","entries":[
@@ -363,12 +288,14 @@ same:
   {"id":131,"event_type":"confession","event_kind":"weekly","day_of_week":"Saturday",
    "start_time":"3:00 PM","end_time":"3:45 PM","weeks_of_month":["first"],"season":null,"note":null},
   {"id":140,"event_type":"mass","event_kind":"specific_date","date":"2026-10-14",
-   "start_time":"7:00 AM","cancelled":true,"cancels_item_id":119,"note":null}
+   "start_time":"7:00 AM","end_time":null,"cancelled":true,"note":null}
 ]}]}
 ```
 
 The church list (slugs, names, addresses) goes in as context, as today, and
-`church_list_hash` records which list was sent.
+`church_list_hash` records which list was sent. The call date is the
+bulletin's fetch date, so a replay of the same bulletin asks exactly the same
+question and is served from the cache.
 
 ### Output
 
@@ -378,14 +305,13 @@ The church list (slugs, names, addresses) goes in as context, as today, and
   "wrong_bulletin": false,
   "church_list_needs_review": false,
   "changes": [
-    {"op": "modify", "item_id": 131,
+    {"op": "modify", "entry_id": 131,
      "entry": {"event_type":"confession","event_kind":"weekly","church_slug":"st-mary-albany",
                "day_of_week":"Saturday","start_time":"3:00 PM","end_time":"4:00 PM",
                "weeks_of_month":["first"],"season":null,"note":null},
-     "page_number": 2, "quote": "Confessions 1st Saturday 3:00–4:00 PM",
-     "rationale": "End time changed from 3:45 to 4:00."},
-    {"op": "add", "entry": {...}, "page_number": 3, "quote": "...", "rationale": "..."},
-    {"op": "delete", "item_id": 140, "page_number": 1, "quote": "...", "rationale": "..."}
+     "page_number": 2, "rationale": "End time changed from 3:45 to 4:00."},
+    {"op": "add", "entry": {...}, "page_number": 3, "rationale": "..."},
+    {"op": "delete", "entry_id": 140, "page_number": 1, "rationale": "..."}
   ]
 }
 ```
@@ -393,38 +319,104 @@ The church list (slugs, names, addresses) goes in as context, as today, and
 - **add** and **modify** carry the whole new entry, not a patch. The model does
   not have to express "clear the end time", and code works out which fields
   changed.
-- **modify vs. delete + add.** The model may use either, and the policy treats
-  them the same way. The report can still show an add and a delete of the same
-  identity in one call as a modify.
-- **`quote`** is required on every change. The report checks it against the
-  PDF's text layer where there is one.
+- **`entry_id`** is an `id` from the view. It is stored as the proposal's
+  `target_entry_id`.
+
+### Prompt rules
+
+The policy prompt tells the model:
+
+- **Silence is not a change.** An entry the bulletin doesn't mention stays.
+  Propose a delete only when the bulletin says the entry is discontinued, or
+  prints what is clearly the full schedule for that church and event type
+  without it.
+- **Weekly changes wait until they are in effect.** Propose a change to a
+  weekly entry only when it is already in effect in the bulletin's week. An
+  announced future change ("from November 1 the vigil moves to 5 PM") waits
+  for a bulletin from a week where it is in effect.
+- **Dated entries don't wait.** Propose dated entries (holy days, Christmas,
+  Holy Week, one-off events) and cancellations for any date from today on.
+- **Cancelling a weekly slot** is an add of a dated entry with
+  `cancelled: true` for the same church, event type and start time on that
+  date. Cancelling a dated entry is a modify of it.
+- **Seasons.** Put a season on both sets of entries only when the bulletin
+  gives both schedules with their date ranges ("Summer, June–August: …;
+  September–May: …"). Otherwise replace the weekly entries outright, and
+  replace them back when the regular schedule returns.
+- **Modify, not delete + add,** for a change to an existing entry (time, end
+  time, weeks, season, note). Delete + add only when one entry is replaced by
+  a different one. Nothing breaks if the model gets this wrong; it only makes
+  the report read better.
+- Refer to existing entries only by the ids in the view.
 
 ## Decision policy (v1)
 
 The policy is code. Its version is recorded in every proposal's `decided_by`.
 Every proposal is decided when its call is processed: applied or rejected.
-Nothing is held for a later bulletin or a person.
+Nothing is held for a later bulletin or a person. A call that fails
+(`parse_failed`, `api_error`) stores no proposals.
 
-A proposal is **rejected** when:
+**The whole call** is rejected, every proposal with the same reason, when:
 
 | Condition | Reason |
 |---|---|
 | the call says `wrong_bulletin` | `wrong_bulletin` |
-| the bulletin's week is older than the week of the parish's last applied call | `stale_bulletin` |
-| its target item changed since the call's `base_revision` | `conflict` |
-| it targets an item that isn't live in the parish | `unknown_item` |
-| it is an add, or a modify, that would duplicate a live identity | `duplicate` |
+| the bulletin's week is older than the parish's high-water mark (below) | `stale_bulletin` |
+| it deletes at least 3 weekly entries, and more than half the parish's live weekly entries | `mass_delete` |
+
+Otherwise each proposal is decided in `seq` order, against the schedule as the
+proposals before it left it, and is **rejected** when:
+
+| Condition | Reason |
+|---|---|
 | its entry names a church outside the parish | `unknown_church` |
+| its entry fails the entry checks (a weekly entry with a date, say) | `invalid_entry` |
+| it is an add or modify of a dated entry before the call date | `past_date` |
+| its target isn't a live entry of the parish (including one an earlier proposal in the call already changed) | `unknown_item` |
+| it would create a second live entry for a slot | `duplicate` |
 
 Every other proposal is **applied** (`auto`): adds, modifies and deletes,
-weekly or dated. A call that fails (`parse_failed`, `api_error`) stores no
-proposals.
+weekly or dated. A call with no applied proposals writes no revision.
 
-The report flags applied changes worth a look, without blocking them:
+### Which week a bulletin is for
 
-- a quote not found in the PDF's text layer;
-- a call that deletes more than half the parish's live entries;
-- a parish whose schedule changed in each of its last few calls.
+A call's week is `bulletin_week` of the `published_date` it read, with the
+existing cap on dates implausibly far past the fetch. A bulletin is **undated**
+when the model read no date or an implausible one.
+
+- The parish's **high-water mark** is the newest week among its earlier calls
+  that succeeded, weren't a wrong bulletin or stale, and were dated, whether or
+  not they applied anything. A bulletin that confirms the schedule is as
+  current as one that changes it.
+- **Older than the mark:** the call is rejected as `stale_bulletin`.
+- **Same week as the mark:** applied. The 2nd bulletin for a week is noted in
+  the report as a correction, and a 3rd or later is flagged, as today
+  (`bulletin_week.place_bulletin`).
+- **Undated:** applied, flagged in the report, and it doesn't move the mark:
+  its week would only be a guess from the fetch date, and a wrong guess would
+  make the next dated bulletin look stale.
+
+### Base revision
+
+A call is shown the parish's current schedule and its proposals are applied
+straight after, so before applying, the schedule must still render to the
+call's `view_hash`. A mismatch is a bug, not a disagreement between bulletins:
+the parish fails with an error in `run_parish_result` and nothing is applied.
+
+## The report (update mode)
+
+`report.py` reports from the run's `proposed_change` rows, per parish:
+
+- **Applied changes**, each with its page number and rationale. A modify shows
+  before → after. A delete and an add of the same church, event type and
+  weekday in one call are shown side by side.
+- **Flags**, which don't block anything:
+  - a parish whose schedule changed in each of its last 3 calls;
+  - an undated bulletin;
+  - a 3rd or later bulletin for one week (a 2nd is noted as a correction);
+  - `church_list_needs_review`, as today.
+- **Rejections:** counts by reason in the summary, and the proposals of every
+  `mass_delete` and `stale_bulletin` call listed in full.
 
 A run is no longer held for schedule changes. The run-level checks that remain
 concern the run itself: more than half the parishes failed to fetch, a stage
@@ -433,7 +425,7 @@ crashed, or the snapshot fails to verify.
 ## Processing order
 
 - **Sequential within a parish, parallel across parishes.** Each call reads the
-  revision the previous call left. Run concurrency stays per parish, as now.
+  schedule the previous call left. Run concurrency stays per parish, as now.
 - **New bulletins for one parish** are processed in order of fetch time. A
   site's fallback to an old issue is still called (the date is only known
   after the model reads it), but its changes are rejected as `stale_bulletin`.
@@ -441,96 +433,108 @@ crashed, or the snapshot fails to verify.
   is never bootstrapped by showing the model an empty schedule.
 - **Caching:** `request_key` is unique. Re-running the same bulletin against the
   same view, version, date and church list reuses the stored call instead of
-  calling the API, both after a crash and in replays. The raw response is in R2
-  under `llm/calls/<request_key>.json`, so a fresh database can reuse it too.
+  calling the API, both after a crash and in replays. A call whose proposals
+  are already decided is not applied again. The raw response is in R2 under
+  `llm/calls/<request_key>.json`, so a fresh database can reuse it too.
 
 ## The snapshot (format version 2)
 
-`extract_frontend_db.py` builds events from live `schedule_item`s joined to
-their values. It leaves out specific_date entries whose date has passed.
+Version 2 ships first, written by extract mode, so the cutover to update mode
+changes no frontend code. It is version 2 because a weekly row with
+`weeks_of_month = ["first"]` would otherwise be read as every week.
 
-- **Kept columns:** `id` (the item id), `church_id`, `event_type`,
-  `event_kind`, `day_of_week`, `date`, `start_time`, `end_time`, `cancelled`,
-  `note`.
-- **`page_number`:** from the proposal behind the item's current value. Null
-  for seeded entries.
+- **Kept columns:** `id`, `church_id`, `event_type`, `event_kind`,
+  `day_of_week`, `date`, `start_time`, `end_time`, `cancelled`, `note`,
+  `page_number`.
 - **New:** `weeks_of_month`, `season_start_month`, `season_start_day`,
   `season_end_month`, `season_end_day`, `cancels_event_id`.
-- **Per church:** `bulletin_url` and `bulletin_week` come from the parish's
-  latest bulletin with an applied call.
+- **Dated entries** before the build date are left out.
+- **`cancels_event_id`:** a cancelled dated entry cancels the live weekly entry
+  with the same church, event type and start time on its date's weekday. The
+  builder matches them on every build and writes that entry's id. After the
+  identity rules there is at most one match. A cancellation that matches
+  nothing is left out of the snapshot, as cancelled events are hidden today.
 
-It is version 2 because a weekly row with `weeks_of_month = ["first"]` would
-otherwise be read as every week. `computeNextOccurrence` needs:
+In each mode:
 
-- the weeks-of-month and season rules (the feature you're adding with this);
-- skipping a weekly slot's date when a live cancellation names it.
+| | extract mode | update mode |
+|---|---|---|
+| rows | each parish's current bulletin's `event` rows, as today | `current_schedule` joined to `schedule_entry` |
+| `id` | event id | entry id |
+| `weeks_of_month`, season | every week, no season | from the entry |
+| `page_number` | from the event | from the proposal that made the entry live; null for seeded entries |
+| `bulletin_url`, `bulletin_week` per church | as today | the newest bulletin whose call succeeded and wasn't a wrong bulletin or stale |
+
+`computeNextOccurrence` needs:
+
+- the weeks-of-month and season rules;
+- skipping a weekly entry's date when a cancellation names it.
 
 ## What changes in the code
 
 | Area | Change |
 |---|---|
-| `data/migrations/` | the three migrations replaced by the new `0001_initial.sql` |
-| `db.py` | `ensure_db` refuses a database without the new `application_id` |
-| `process.py` | rewritten: render view, call, store the call and its proposals, decide, apply |
-| new `schedule/` package | the view renderer, value hashing and identity, the policy, apply/fold, the converters for weeks of month and season |
+| `data/migrations/` | `0004_schedule_state.sql` adds the tables above. The cleanup migration comes later (see [Rollout](#rollout)) |
+| `weekly.py`, `__main__.py`, `weekly-docker.yml` | `SCHEDULE_MODE` (`extract` or `update`, default `extract`) picks the process stage, the report and the snapshot's source. The workflow reads it from a repository variable |
+| `process.py` | update mode: render the view, call, store the call and its proposals, decide, apply. Extract mode as today |
+| new `schedule/` package | the view renderer, entry hashing and identity, the policy, apply and fold (and a full rebuild from the log), the converters for weeks of month and season |
 | `classifiers/` | a `schedule_update` task: new policy prompt and response schema; version digest covers both; returns token usage and served model |
-| `schedule_extraction.py` | the production schema and prompt move to the new task; the from-scratch extraction stays for evals |
-| `recurrence.py`, `event_occurrence` | removed: the model sees the believed weekly slot, so a dated sighting of it is no change |
-| `bulletin_week.py`, `fetch.py`, `storage.py` | read `bulletin_reading` instead of the dropped bulletin columns |
-| `report.py`, `weekly.py`, `verify_frontend_snapshot.py` | report from `proposed_change` per parish, with the flags above; the remaining run-level checks |
-| `extract_frontend_db.py`, `apps/web` | snapshot v2; `computeNextOccurrence` rules |
-| `labeling/bulletins.py` | the read-only "model's answer" becomes the call's view with its proposals applied |
-| `evals/` | the new eval cases below |
+| `schedule_extraction.py` | unchanged: the from-scratch extraction serves extract mode and the evals |
+| `bulletin_week.py`, `fetch.py`, `storage.py` | unchanged while both modes exist: update mode also writes the bulletin's `published_date`, `wrong_bulletin` and `processed_at`, as extract mode does |
+| `report.py`, `verify_frontend_snapshot.py` | update mode reports from `proposed_change`, as in [The report](#the-report-update-mode); the remaining run-level checks |
+| `extract_frontend_db.py`, `apps/web` | snapshot v2 from either mode, with the cancellation matching; `computeNextOccurrence` rules |
+| `labeling/bulletins.py` | in update mode, the read-only "model's answer" becomes the call's view with its applied proposals |
 
-## Evals
+## Rollout
 
-The labels stay as they are, one full schedule per bulletin. What changes is
-how a case is built, because a call now needs a believed schedule as input:
+The work merges in small pieces behind `SCHEDULE_MODE`, and the weekly run
+keeps publishing in extract mode until the switch.
 
-- **Identity.** Use the label as the view. The right answer is no changes. This
-  measures the **false-change rate**, the
-  number that matters most here.
-- **Perturbation.** Use the label with known edits: an entry removed, a time
-  shifted, a fake entry added, an end time dropped, a qualifier lost. The right
-  answer is exactly the inverse edits. This scores recall of real changes.
-- **Sequential.** Use the previous week's label as the view and score the
-  result against this week's label, with the existing tiers in
-  `evals/report.py`. Today there is one label per parish, so this needs the
-  following week's bulletin labeled for some parishes.
+1. **Migration 0004 and the `schedule/` package** land with the mode at
+   `extract`. Nothing writes the new tables yet.
+2. **Snapshot v2 and the frontend** ship, built from `event` in extract mode.
+3. **Seed.** Each parish's first `seed` revision is loaded into the published
+   database by the out-of-scope method. A later seed for a parish that already
+   has one is a new `seed` revision of adds, modifies and deletes, like any
+   other.
+4. **Switch** the repository variable to `update`. The next weekly run
+   processes its new bulletins against the seeded schedules.
+5. **Rolling back** is setting it back to `extract`. `event` still holds what
+   the last extract-mode run left, and bulletins update mode already processed
+   are marked processed, so extract mode carries on from the next new
+   bulletin. Switching forward again continues the believed schedule where it
+   was, and the high-water mark keeps older bulletins out.
+6. **Cleanup,** once update mode has settled: a migration drops `event`,
+   `event_occurrence`, `idx_bulletin_parish_processed` and the bulletin's
+   `published_date`, `wrong_bulletin` and `processed_at`, and adds the view
+   below for the readers of those columns. Extract mode and `recurrence.py`
+   go; the from-scratch extraction stays for the evals.
 
-Scoring applies the proposals with the v1 policy, so the eval measures what
-would reach the site, not only what the model said.
-
-## Cutover
-
-1. **Merge the code** with the weekly workflow and deploys paused. The deploy
-   builds its snapshot from the published database, and the published database
-   stays in the old format until step 3.
-2. **Build the new database**, seeded by the out-of-scope method: parish and
-   church tables from the CSVs, one `seed` revision per parish. `bulletin` starts
-   empty. The first run fetches each parish's current bulletin as new. PDFs are
-   content-addressed in R2, so nothing is stored twice.
-3. **Run the weekly pipeline on it and publish it** through the usual
-   candidate → publish path.
-4. **Resume deploys.** The first deploy builds a v2 snapshot from it. Old pages
-   reload on the snapshot version change (`staleDeploy.ts`).
-
-What the cutover gives up:
-
-- **Rollback can't cross it.** A pre-cutover run can't be published by the new
-  code, and `data:pull` of one refuses. Those runs stay in R2 until pruning ages
-  them out.
-- **The old `event` history isn't carried over.** It stays readable in the
-  pre-cutover runs if the seeding method wants it.
-- **Prediction caches start fresh.** The old caches in R2 under
-  `runs/<classifier>/cache/` still serve the evals' from-scratch classifiers.
+```sql
+-- What fetch and bulletin_week.py read in place of the dropped bulletin
+-- columns: each bulletin with its latest successful read.
+CREATE VIEW bulletin_reading AS
+SELECT b.*,
+       c.id AS llm_call_id,
+       c.published_date,
+       COALESCE(c.wrong_bulletin, 0) AS wrong_bulletin,
+       c.finished_at AS processed_at
+FROM bulletin b
+LEFT JOIN llm_call c ON c.id = (
+    SELECT id FROM llm_call
+    WHERE bulletin_id = b.id AND status IN ('ok', 'lenient')
+    ORDER BY id DESC LIMIT 1
+);
+```
 
 ## Out of scope
 
 - Initial population of schedules (the `seed` revisions).
+- Running both modes in one weekly run, or update mode in shadow.
+- New eval cases for update calls. Testing is by hand.
 - Changes effective from a future date (`valid_from` / `valid_until`).
 - Holding doubtful changes for corroboration by a later bulletin or for a
-  person's review. Everything applies at once in v1.
+  person's review. Everything applies or is rejected at once in v1.
 - Recording which believed entries a bulletin showed unchanged (when each entry
   was last seen in print).
 - Tooling for people to edit schedules (the tables record `human` revisions
@@ -538,10 +542,3 @@ What the cutover gives up:
 - Periodic from-scratch audit calls to catch errors the update calls anchor on.
   This is a second `llm_call.task` when it comes.
 - Tally corrections as `human` revisions.
-
-## Open questions
-
-1. **`weeks_of_month` storage:** a 6-bit mask (proposed), or six boolean
-   columns? Either way it converts to the labels' list at the edges.
-2. **The view's date cutoff:** leave out specific_date entries dated before the
-   call date (proposed), or before the start of the bulletin's week?
