@@ -33,6 +33,7 @@ import {
   type LastmodManifest,
 } from "../src/lib/lastmod";
 import { EVENT_TYPE_ORDER } from "../src/constants/eventTypes";
+import { CHURCH_CALENDAR_FILE, buildChurchCalendar } from "../src/lib/calendar";
 
 const WEB_DIR = resolve(import.meta.dirname, "..");
 // The Cloudflare Vite plugin puts the browser build in dist/client, beside
@@ -313,6 +314,13 @@ async function main() {
     return withHomeLinkScript(html.split(LASTMOD_PLACEHOLDER).join(lastmod));
   };
 
+  // Calendar files aren't pages: no sitemap entry or date, and they may
+  // change every build (weekly events recur from the build day).
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const uidDomain = new URL(origin).hostname;
+  let calendarCount = 0;
+
   let count = 0;
   for (const slug of slugs) {
     const church = findChurch(snapshot, slug);
@@ -339,6 +347,17 @@ async function main() {
     const outDir = resolve(DIST_DIR, "churches", slug);
     mkdirSync(outDir, { recursive: true });
     writeFileSync(resolve(outDir, "index.html"), html, "utf-8");
+    // ChurchPageContent links the file only when the page lists times.
+    if (events.length > 0) {
+      const calendar = buildChurchCalendar(church, events, {
+        pageUrl: canonicalUrlForChurchSlug(origin, slug),
+        uidDomain,
+        now,
+        today,
+      });
+      writeFileSync(resolve(outDir, CHURCH_CALENDAR_FILE), calendar, "utf-8");
+      calendarCount++;
+    }
     count++;
   }
 
@@ -417,7 +436,7 @@ async function main() {
     `Wrote ${LASTMOD_FILE}: ${changed.length} of ${datedPaths.length} pages dated ${buildDate}.`,
   );
 
-  console.log(`Pre-rendered ${count} church pages.`);
+  console.log(`Pre-rendered ${count} church pages and ${calendarCount} calendar files.`);
 }
 
 await main();

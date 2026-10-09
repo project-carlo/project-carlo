@@ -15,3 +15,11 @@
 /asset-manifest.json
   Cache-Control: public, no-cache, must-revalidate
   X-Robots-Tag: noindex
+
+# A church's times as an iCalendar file (scripts/prerender.ts), to download or
+# subscribe to; rewritten every build, so always revalidated, and never a
+# search result.
+/churches/*/schedule.ics
+  Content-Type: text/calendar; charset=utf-8
+  Cache-Control: public, no-cache, must-revalidate
+  X-Robots-Tag: noindex

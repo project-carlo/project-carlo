@@ -13,6 +13,7 @@ import {
 } from "../utils";
 import { ALL_CHURCHES, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
 import {
+  CalendarPlusIcon,
   ExternalLinkIcon,
   FileTextIcon,
   MapPinIcon,
@@ -27,6 +28,7 @@ import { cityPath, type CityLink } from "@/lib/cities";
 import type { CityMapConfig } from "@/lib/cityMap";
 import type { CityMapData } from "@/lib/cityMapLayout";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
+import { churchCalendarPath } from "@/lib/calendar";
 import { LASTMOD_EXEMPT_ATTRIBUTE } from "@/lib/lastmod";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
@@ -281,6 +283,18 @@ export function ChurchPageContent({
                 <FileTextIcon className="size-3.5" />
                 <BulletinLabel week={church.bulletin_week} />
               </span>
+            ) : null}
+            {events.length > 0 ? (
+              // A plain link, not a router Link: the file is written beside
+              // the prerendered page (scripts/prerender.ts), not routed.
+              <a
+                href={churchCalendarPath(church.slug)}
+                download={`${church.slug}.ics`}
+                className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
+              >
+                <CalendarPlusIcon className="size-3.5" />
+                Add to your calendar
+              </a>
             ) : null}
             <FeedbackTrigger
               church={church}
