@@ -1,75 +1,106 @@
 name: CI
 
+# Pull requests only: main is only changed by merging a pull request that
+# already passed. Each job is billed at least a minute, so the checks share two
+# jobs, and a job whose files the pull request doesn't touch skips its checks
+# and still passes, so it can stay a required check.
+
 on:
   pull_request:
-  push:
-    branches: [main]
 
 permissions:
   contents: read
+  pull-requests: read
 
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  ruff:
-    name: ruff
+  python:
+    name: python
     runs-on: ubuntu-24.04
     timeout-minutes: 15
 
     steps:
+      # The list API stops at 3,000 files; a pull request that big runs everything.
+      - name: Check for Python changes
+        id: changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          files="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}/files" \
+            --jq '.[] | .filename, (.previous_filename // empty)')"
+          pattern='^(src/|tests/|data/|pyproject\.toml$|uv\.lock$|\.python-version$|\.github/workflows/ci\.yml$)'
+          if [[ "$(wc -l <<<"$files")" -ge 3000 ]] || grep -qE "$pattern" <<<"$files"; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "No Python changes; skipping ruff and pytest." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Checkout
+        if: steps.changes.outputs.run == 'true'
         uses: actions/checkout@v6
 
       - name: Set up uv
+        if: steps.changes.outputs.run == 'true'
         uses: astral-sh/setup-uv@v10.2.0
         with:
           enable-cache: true
 
       - name: Install Python dependencies
-        run: uv sync --frozen --group dev
-
-      - name: Lint Python
-        run: uv run ruff check .
-
-  pytest:
-    name: pytest
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v10.2.0
-        with:
-          enable-cache: true
-
-      - name: Install Python dependencies
+        id: install
+        if: steps.changes.outputs.run == 'true'
         run: uv sync --frozen --group dev
 
       # Bulletin compaction shells out to Ghostscript (tests skip without it).
       - name: Install Ghostscript
+        if: steps.changes.outputs.run == 'true'
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ghostscript
 
+      # The checks run even after one fails, so one push shows every failure.
+      - name: Lint Python
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: uv run ruff check .
+
       - name: Run Python tests
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: uv run pytest
 
-  eslint:
-    name: eslint
+  node:
+    name: node
     runs-on: ubuntu-24.04
     timeout-minutes: 15
 
     steps:
+      - name: Check for web and labeler changes
+        id: changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          files="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}/files" \
+            --jq '.[] | .filename, (.previous_filename // empty)')"
+          pattern='^(apps/|package\.json$|pnpm-lock\.yaml$|pnpm-workspace\.yaml$|\.github/workflows/ci\.yml$)'
+          if [[ "$(wc -l <<<"$files")" -ge 3000 ]] || grep -qE "$pattern" <<<"$files"; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "No web or labeler changes; skipping their checks." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Checkout
+        if: steps.changes.outputs.run == 'true'
         uses: actions/checkout@v6
 
       - name: Set up pnpm
+        if: steps.changes.outputs.run == 'true'
         uses: pnpm/action-setup@v6
 
       - name: Set up Node
+        if: steps.changes.outputs.run == 'true'
         uses: actions/setup-node@v6
         with:
           node-version: 22
@@ -77,66 +108,37 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install dependencies
+        id: install
+        if: steps.changes.outputs.run == 'true'
         run: pnpm install --frozen-lockfile
 
+      # The checks run even after one fails, so one push shows every failure.
       - name: Lint web app
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm lint:web
 
-  vitest:
-    name: vitest
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Set up Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      # Type checks without the data snapshot; the build and Playwright run
+      # in Deploy Web, on main and on preview deploys.
+      - name: Type check web app
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: pnpm check:web
 
       - name: Run web unit tests
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm --filter web test
 
-  labeler:
-    name: labeler
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Set up Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Lint
+      - name: Lint labeler
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm lint:labeler
 
-      - name: Typecheck
+      - name: Type check labeler
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm check:labeler
 
-      - name: Unit tests
+      - name: Run labeler unit tests
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm test:labeler
 
-      - name: Build
+      - name: Build labeler
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm build:labeler
