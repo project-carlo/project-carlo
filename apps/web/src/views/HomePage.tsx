@@ -6,7 +6,7 @@ import {
   useState,
   useCallback,
 } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigation, useSearchParams } from "react-router-dom";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import type { Map as LeafletMap } from "leaflet";
 import { fetchAllChurchesForSearch, fetchChurches } from "../api";
@@ -52,6 +52,27 @@ export interface HomeMapCenter {
 
 interface HomeNavState {
   centerOn?: HomeMapCenter;
+}
+
+/** A query string with the map's camera put in, when there is one to put. */
+function withMapView(search: string, view: MapView | null): string {
+  if (!view) return search;
+  return `?${encodeMapViewToParams(view, new URLSearchParams(search))}`;
+}
+
+/**
+ * Puts the camera into the map's history entry without telling the router,
+ * for when a router navigation is under way: a second one would cancel it.
+ * Does nothing once the next page's entry has replaced the map's.
+ */
+function writeViewToHistoryEntry(view: MapView): void {
+  const { pathname, search, hash } = window.location;
+  if (pathname !== "/") return;
+  window.history.replaceState(
+    window.history.state,
+    "",
+    pathname + withMapView(search, view) + hash,
+  );
 }
 
 export function HomePage() {
@@ -139,17 +160,29 @@ export function HomePage() {
     enabled: wantsFirstVisitStart,
   });
   const mapViewTimerRef = useRef<number | null>(null);
+  // The camera as of the last pan/zoom. The URL only catches up after the
+  // debounce below, so anything that needs the view now reads it from here.
+  const latestMapViewRef = useRef<MapView | null>(null);
+  // Set while the router is on its way to another page; see below.
+  const leavingRef = useRef(false);
   const handleMapViewChange = useCallback(
     (view: MapView) => {
+      latestMapViewRef.current = view;
+      rememberHomeSearch(withMapView(window.location.search, view));
       if (mapViewTimerRef.current != null) {
         window.clearTimeout(mapViewTimerRef.current);
       }
       // Short debounce: moveend already fires once movement settles, so this
       // just coalesces a flurry of zoom steps into one history.replaceState.
       mapViewTimerRef.current = window.setTimeout(() => {
-        setSearchParams((prev) => encodeMapViewToParams(view, prev), {
-          replace: true,
-        });
+        mapViewTimerRef.current = null;
+        if (leavingRef.current) {
+          writeViewToHistoryEntry(view);
+        } else {
+          setSearchParams((prev) => encodeMapViewToParams(view, prev), {
+            replace: true,
+          });
+        }
       }, 400);
     },
     [setSearchParams],
@@ -163,10 +196,29 @@ export function HomePage() {
     [],
   );
 
-  // Mirror the live query string into sessionStorage so in-app "Map"
-  // links (plain pushes to "/") can restore the current filters + view.
+  // On the way to another page (a link from the map, say "All churches"), a
+  // view still waiting on the debounce goes into this page's history entry
+  // at once, around the router: through it, it would cancel the page change.
+  // Back then returns to the map as it was left.
+  const navigation = useNavigation();
+  const leaving =
+    navigation.state !== "idle" &&
+    navigation.location.pathname !== location.pathname;
   useEffect(() => {
-    rememberHomeSearch(location.search);
+    leavingRef.current = leaving;
+    if (!leaving || mapViewTimerRef.current == null) return;
+    window.clearTimeout(mapViewTimerRef.current);
+    mapViewTimerRef.current = null;
+    if (latestMapViewRef.current) {
+      writeViewToHistoryEntry(latestMapViewRef.current);
+    }
+  }, [leaving]);
+
+  // Mirror the query string, with the latest view, into sessionStorage so
+  // in-app "Map" links (plain pushes to "/") can restore the current filters
+  // + view, even when the page is left before the view reaches the URL.
+  useEffect(() => {
+    rememberHomeSearch(withMapView(location.search, latestMapViewRef.current));
   }, [location.search]);
 
   const [filterPanelOpen, setFilterPanelOpen] = useState(false);
