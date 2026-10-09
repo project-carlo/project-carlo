@@ -2,6 +2,7 @@ import { MemoryRouter } from "react-router-dom";
 import {
   ChurchIndexContent,
   type ChurchIndexCity,
+  type ChurchIndexDiocese,
   type ChurchIndexEntry,
 } from "../components/ChurchIndexContent";
 import {
@@ -16,6 +17,7 @@ import { StaticPageHead } from "./StaticPageHead";
 interface StaticChurchIndexPageProps {
   churches: ChurchIndexEntry[];
   cities: ChurchIndexCity[];
+  dioceses: ChurchIndexDiocese[];
   cssPath: string;
   fontPaths: string[];
   /** Wires up the search box; the only script the page loads. */
@@ -28,6 +30,7 @@ interface StaticChurchIndexPageProps {
 export function StaticChurchIndexPage({
   churches,
   cities,
+  dioceses,
   cssPath,
   fontPaths,
   churchIndexScript,
@@ -81,7 +84,7 @@ export function StaticChurchIndexPage({
       />
       <body className="bg-paper">
         <MemoryRouter>
-          <ChurchIndexContent churches={churches} cities={cities} />
+          <ChurchIndexContent churches={churches} cities={cities} dioceses={dioceses} />
         </MemoryRouter>
         <script type="module" src={churchIndexScript} />
       </body>

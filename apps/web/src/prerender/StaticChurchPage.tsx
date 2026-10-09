@@ -1,6 +1,7 @@
 import { MemoryRouter } from "react-router-dom";
 import type { ChurchDetail, EventSummary } from "../types";
 import type { CityLink } from "../lib/cities";
+import type { DioceseLink } from "../lib/dioceses";
 import type { CityMapData } from "../lib/cityMapLayout";
 import { ChurchPageContent } from "../components/ChurchPageContent";
 import {
@@ -15,6 +16,7 @@ import { StaticPageHead } from "./StaticPageHead";
 interface StaticChurchPageProps {
   church: ChurchDetail;
   city: CityLink | null;
+  diocese: DioceseLink | null;
   map: CityMapData | null;
   events: EventSummary[];
   cssPath: string;
@@ -29,6 +31,7 @@ interface StaticChurchPageProps {
 export function StaticChurchPage({
   church,
   city,
+  diocese,
   map,
   events,
   cssPath,
@@ -40,7 +43,7 @@ export function StaticChurchPage({
   const jsonLd = [
     churchJsonLd(church, canonicalUrl),
     churchWebPageJsonLd(church, canonicalUrl, lastModified),
-    churchBreadcrumbJsonLd(church, city, canonicalUrl),
+    churchBreadcrumbJsonLd(church, city, diocese, canonicalUrl),
   ];
 
   return (
@@ -55,7 +58,13 @@ export function StaticChurchPage({
       />
       <body>
         <MemoryRouter>
-          <ChurchPageContent church={church} city={city} map={map} events={events} />
+          <ChurchPageContent
+            church={church}
+            city={city}
+            diocese={diocese}
+            map={map}
+            events={events}
+          />
         </MemoryRouter>
         {map ? <script type="module" src={cityMapScript} /> : null}
       </body>

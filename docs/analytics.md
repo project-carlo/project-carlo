@@ -58,7 +58,7 @@ them as `blobN`, `doubleN` and `index1`:
 | `filter` | A map filter changes | `event_type`, `days`, `clear` | | Event type |
 | `map_open` | A city or church page's map opens full screen | | | |
 | `feedback_open` | The feedback form opens | | Church slug | |
-| `outbound` | A link off the site is followed | The link's `data-track` (`bulletin`, `bulletin_page`, `parish_website`), else `link` | Host | |
+| `outbound` | A link off the site is followed | The link's `data-track` (`bulletin`, `bulletin_page`, `parish_website`, `diocese_website`), else `link` | Host | |
 
 Preview deployments write to the same dataset. Filter on `blob3` to keep them
 apart.

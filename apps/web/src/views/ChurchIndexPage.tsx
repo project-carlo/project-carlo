@@ -39,7 +39,11 @@ export function ChurchIndexPage() {
   if (data) {
     return (
       <div ref={rootRef}>
-        <ChurchIndexContent churches={data.churches} cities={data.cities} />
+        <ChurchIndexContent
+          churches={data.churches}
+          cities={data.cities}
+          dioceses={data.dioceses}
+        />
       </div>
     );
   }

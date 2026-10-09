@@ -26,6 +26,9 @@ export const MAP_LINK = "Map";
 /** The all-churches index, as links and breadcrumbs name it. */
 export const ALL_CHURCHES = "All churches";
 
+/** The list of dioceses, as its heading and breadcrumbs name it. */
+export const DIOCESES = "Dioceses";
+
 /** Asking the browser for the visitor's position, and the wait for it. */
 export const USE_MY_LOCATION = "Use my location";
 export const FINDING_YOUR_LOCATION = "Finding your location…";

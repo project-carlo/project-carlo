@@ -76,3 +76,6 @@ A `no_bulletin` parish is kept in the records but left off the site.
 - Don't quote from a summarizing fetch tool. Read the page itself (`probe pdf`, `curl`); the
   quote has to be findable by `pnpm diocese recheck`.
 - Don't delete a promoted record: exclude or merge it, so `promote` removes its live row.
+- Don't set `coverage: complete` in `diocese.md` unless the data owner says so: it gives the
+  diocese pages of its own on the website. Do commit `apps/web/src/data/dioceses.json`,
+  which `promote` rewrites.

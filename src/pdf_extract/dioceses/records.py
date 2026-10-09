@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import csv
 import datetime as dt
+import json
 import re
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass, field
@@ -35,6 +36,7 @@ import yaml
 from pdf_extract import storage
 from pdf_extract.fetch import PROVIDERS_TAKING_RECIPE
 from pdf_extract.parish_sites import Recipe
+from pdf_extract.paths import ROOT
 
 META_FILE = "diocese.md"
 ROSTERS_DIR = "rosters"
@@ -201,8 +203,14 @@ _FLOAT_FIELDS = {"latitude", "longitude"}
 _DATE_FIELDS = {"decided", "last_mass", "revisit_after", "promoted"}
 _EVIDENCE_FIELDS = ("url", "seen", "quote", "note")
 
-META_FIELDS = ("name", "state", "website", "status", "gcatholic", "city_aliases", "promoted")
+META_FIELDS = (
+    "name", "state", "website", "status", "coverage", "gcatholic", "city_aliases", "promoted",
+)
 META_STATUSES = ("exploring", "promoted")
+# `coverage: complete` is the data owner's call that the live rows cover the
+# whole diocese, not a few of its parishes: only such a diocese gets a page of
+# its own on the site (see `site_index`). Left out, the diocese is partly covered.
+META_COVERAGE = ("complete",)
 META_TEMPLATE = """\
 ## Sources
 
@@ -1186,11 +1194,28 @@ def show_diocese(diocese: str) -> dict[str, Any]:
     }
 
 
+def meta_errors(diocese: str) -> list[str]:
+    """What is wrong with diocese.md's own fields."""
+    try:
+        meta = load_meta(diocese)
+    except DioceseError as e:
+        return [str(e)]
+    errors = []
+    coverage = meta.get("coverage")
+    if coverage is not None and coverage not in META_COVERAGE:
+        errors.append(f"{META_FILE}: coverage must be one of {', '.join(META_COVERAGE)} "
+                      f"(or left out), got {coverage!r}")
+    elif coverage is not None and meta.get("status") != "promoted":
+        errors.append(f"{META_FILE}: coverage: {coverage}, but the diocese is not promoted")
+    return errors
+
+
 def validate(diocese: str | None = None) -> dict[str, Any]:
     """Check one diocese, or all; `passed` is false if any has errors."""
     report = {}
     for slug in [diocese] if diocese else diocese_slugs():
         report[slug] = problems(load(slug), rosters=roster_ids(slug)).as_dict()
+        report[slug]["errors"] = meta_errors(slug) + report[slug]["errors"]
         report[slug]["counts"] = {k: len(v) for k, v in report[slug].items()}
     return {"passed": not any(r["errors"] for r in report.values()), "dioceses": report}
 
@@ -1244,6 +1269,7 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     flags from `verify`) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share
     its slug with a live row from then on; an `unpublished` one loses its stamp.
+    The site's diocese index (`write_site_index`) is rewritten to match.
     """
     d = _ready(diocese)
     after = d.copy()
@@ -1319,6 +1345,7 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
         front, body = parse_file(meta_path)
         front.update(status="promoted", promoted=stamp)
         _write_text(meta_path, f"---\n{_dump_front(front)}---\n\n{body}\n")
+        report["site_index"] = write_site_index()
         report["next"] = (
             "run `pnpm test`; the next pipeline command seeds the new rows into the database"
         )
@@ -1356,6 +1383,60 @@ def _referenced_by_events(church_slugs: list[str], parish_slugs: list[str] = ())
     except sqlite3.Error:
         return []
     return sorted(slug for (slug,) in rows)
+
+
+# ── The site's diocese index ────────────────────────────────────────────────
+# What the website knows of the dioceses (apps/web/src/lib/dioceses.ts): each
+# one's name, state and website from diocese.md, whether it gets pages of its
+# own (`coverage: complete`), and which live churches are in it. A church is
+# in the diocese whose folder holds its parish's file, as for `weekly
+# --diocese`. Committed beside the web code rather than carried in the data
+# snapshot, so a deploy shows it at once instead of after the next pipeline
+# run. `promote` rewrites it; a test fails when it is out of date.
+SITE_INDEX_PATH = ROOT / "apps" / "web" / "src" / "data" / "dioceses.json"
+
+
+def site_index() -> tuple[dict[str, Any], list[str]]:
+    """The site's diocese index, by slug, and the live churches whose parish is in none."""
+    slugs = diocese_slugs()
+    owner = {path.stem: slug for slug in slugs
+             for path in (diocese_dir(slug) / PARISH.dir).glob("*.md")}
+    members: dict[str, list[str]] = {slug: [] for slug in slugs}
+    unassigned = []
+    for row in read_live_csv(storage.CHURCHES_CSV_PATH):
+        diocese = owner.get(row.get("parish_id", ""))
+        (members[diocese] if diocese else unassigned).append(row["slug"])
+    index = {}
+    for slug in slugs:
+        meta = load_meta(slug)
+        index[slug] = {
+            "name": meta.get("name") or slug,
+            "state": meta.get("state") or None,
+            "website": meta.get("website") or None,
+            "covered": meta.get("coverage") == "complete",
+            "churches": sorted(members[slug]),
+        }
+    return index, sorted(unassigned)
+
+
+def write_site_index(*, check: bool = False) -> dict[str, Any]:
+    """Write SITE_INDEX_PATH, or with `check`, refuse if it is out of date."""
+    index, unassigned = site_index()
+    text = json.dumps(index, indent=2, ensure_ascii=False) + "\n"
+    path = SITE_INDEX_PATH
+    current = path.read_text(encoding="utf-8") if path.exists() else None
+    if check and current != text:
+        raise DioceseError(f"{path} is out of date; run `pnpm diocese site-index` and commit it")
+    if not check and current != text:
+        _write_text(path, text)
+    return {
+        "path": str(path),
+        "written": not check and current != text,
+        "dioceses": {slug: {"covered": d["covered"], "churches": len(d["churches"])}
+                     for slug, d in index.items()},
+        # Live churches no diocese claims: on the site, but on no diocese's pages.
+        "unassigned": unassigned,
+    }
 
 
 # ── Search ──────────────────────────────────────────────────────────────────

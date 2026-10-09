@@ -7,7 +7,7 @@ test("the church index filters by city name", async ({ page }) => {
 
   const groups = page.locator("[data-city-group]");
   const total = await groups.count();
-  const label = (await groups.first().locator("h2").textContent())!.trim();
+  const label = (await groups.first().locator("[data-city-heading]").textContent())!.trim();
   await search.fill(label);
 
   await expect(groups.first()).toBeVisible();
@@ -48,6 +48,7 @@ test("the church index says when nothing matches", async ({ page }) => {
     page.getByText("No churches or cities match “zzzz-no-such-church”."),
   ).toBeVisible();
   await expect(page.locator("[data-city-group]").filter({ visible: true })).toHaveCount(0);
+  await expect(page.locator("[data-diocese-group]").filter({ visible: true })).toHaveCount(0);
 });
 
 /** Counts the page's document loads, the first one included. */

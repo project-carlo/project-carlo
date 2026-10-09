@@ -55,6 +55,29 @@ function routes(queryClient: QueryClient): RouteObject[] {
       },
     },
     {
+      path: "/dioceses",
+      lazy: () =>
+        import("./views/DioceseIndexPage").then((m) => ({
+          Component: m.DioceseIndexPage,
+        })),
+      loader: async () => {
+        const { prefetchDioceseIndex } = await import("./lib/pageQueries");
+        await prefetchDioceseIndex(queryClient);
+        return null;
+      },
+    },
+    {
+      path: "/dioceses/:dioceseSlug",
+      lazy: () =>
+        import("./views/DiocesePage").then((m) => ({ Component: m.DiocesePage })),
+      loader: async ({ params }) => {
+        if (!params.dioceseSlug) return null;
+        const { prefetchDiocesePage } = await import("./lib/pageQueries");
+        await prefetchDiocesePage(queryClient, params.dioceseSlug);
+        return null;
+      },
+    },
+    {
       path: "/mass-times/:citySlug",
       lazy: () =>
         import("./views/CityPage").then((m) => ({ Component: m.CityPage })),

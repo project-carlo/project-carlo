@@ -37,6 +37,7 @@ def root(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     monkeypatch.setattr(storage, "CHURCHES_CSV_PATH", churches)
     monkeypatch.setattr(storage, "DEFAULT_DB_PATH", tmp_path / "parish_events.db")
     monkeypatch.setattr(storage, "DIOCESES_DIR", tmp_path / "dioceses")
+    monkeypatch.setattr(records, "SITE_INDEX_PATH", tmp_path / "web" / "dioceses.json")
     records.init_diocese("test", name="Diocese of Test", state="NY")
     return tmp_path / "dioceses" / "test"
 
@@ -407,6 +408,56 @@ def test_no_bulletin_parishes_stay_off_the_site(root: Path) -> None:
     _write(path, path.read_text(encoding="utf-8").replace(
         "bulletin_provider: no_bulletin", "bulletin_provider: ecatholic"))
     assert records.promote("test")["churches"]["added"] == ["st-ann-town"]
+
+
+def test_coverage_is_complete_or_left_out_and_needs_promotion(root: Path) -> None:
+    meta = root / "diocese.md"
+    text = meta.read_text(encoding="utf-8")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+
+    _write(meta, text.replace("status: exploring", "status: exploring\ncoverage: partial"))
+    assert records.validate("test")["dioceses"]["test"]["errors"] == [
+        "diocese.md: coverage must be one of complete (or left out), got 'partial'"]
+    _write(meta, text.replace("status: exploring", "status: exploring\ncoverage: complete"))
+    assert records.validate("test")["dioceses"]["test"]["errors"] == [
+        "diocese.md: coverage: complete, but the diocese is not promoted"]
+    assert not records.validate("test")["passed"]
+    _write(meta, text.replace("status: exploring", "status: promoted\ncoverage: complete"))
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    assert records.show_diocese("test")["diocese"]["coverage"] == "complete"
+
+
+def test_promote_writes_the_site_index(root: Path) -> None:
+    _parish()
+    _church()
+    records.promote("test", dry_run=True)
+    assert not records.SITE_INDEX_PATH.exists()
+
+    result = records.promote("test")
+    assert result["site_index"]["written"]
+    # The live church whose parish is in no diocese is left out, and reported.
+    assert result["site_index"]["unassigned"] == ["st-live"]
+    index = json.loads(records.SITE_INDEX_PATH.read_text(encoding="utf-8"))
+    assert index == {"test": {
+        "name": "Diocese of Test", "state": "NY", "website": None, "covered": False,
+        "churches": ["st-ann-town"],
+    }}
+    assert records.write_site_index(check=True)["written"] is False
+
+    # Marking the diocese covered changes the index, which is then out of date.
+    meta = root / "diocese.md"
+    _write(meta, meta.read_text(encoding="utf-8").replace(
+        "status: promoted", "status: promoted\ncoverage: complete"))
+    with pytest.raises(DioceseError, match="out of date"):
+        records.write_site_index(check=True)
+    assert records.write_site_index()["written"]
+    assert json.loads(records.SITE_INDEX_PATH.read_text(encoding="utf-8"))["test"]["covered"]
+    assert main(["diocese", "site-index", "--check"]) == 0
+
+
+def test_committed_site_index_is_up_to_date() -> None:
+    result = records.write_site_index(check=True)
+    assert result["unassigned"] == [], "every live church's parish belongs to a diocese"
 
 
 def test_live_parishes_have_a_bulletin_provider() -> None:

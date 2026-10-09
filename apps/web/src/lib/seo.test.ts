@@ -1,11 +1,18 @@
 import { describe, expect, it } from "vitest";
 import type { ChurchDetail } from "../types";
+import { buildCityIndex } from "./cities";
+import { buildDioceseIndex } from "./dioceses";
 import {
   buildChurchTitle,
   buildCityDescription,
+  buildDioceseDescription,
+  buildDioceseIndexDescription,
+  buildDioceseTitle,
   churchBreadcrumbJsonLd,
   churchJsonLd,
   cityJsonLd,
+  dioceseIndexJsonLd,
+  dioceseJsonLd,
 } from "./seo";
 
 const church: ChurchDetail = {
@@ -65,7 +72,7 @@ describe("churchBreadcrumbJsonLd", () => {
 
   it("puts the church's city page between the index and the church", () => {
     const city = { slug: "rochester-ny", label: "Rochester, NY" };
-    expect(names(churchBreadcrumbJsonLd(church, city, url))).toEqual([
+    expect(names(churchBreadcrumbJsonLd(church, city, null, url))).toEqual([
       "https://projectcarlo.com/",
       "https://projectcarlo.com/churches/",
       "https://projectcarlo.com/mass-times/rochester-ny/",
@@ -73,8 +80,20 @@ describe("churchBreadcrumbJsonLd", () => {
     ]);
   });
 
+  it("puts the diocese's page before the city's, when it has one", () => {
+    const city = { slug: "rochester-ny", label: "Rochester, NY" };
+    const diocese = { slug: "rochester", label: "Diocese of Rochester" };
+    expect(names(churchBreadcrumbJsonLd(church, city, diocese, url))).toEqual([
+      "https://projectcarlo.com/",
+      "https://projectcarlo.com/churches/",
+      "https://projectcarlo.com/dioceses/rochester/",
+      "https://projectcarlo.com/mass-times/rochester-ny/",
+      url,
+    ]);
+  });
+
   it("leaves the city out when the address has none", () => {
-    expect(names(churchBreadcrumbJsonLd({ ...church, city: null }, null, url))).toEqual([
+    expect(names(churchBreadcrumbJsonLd({ ...church, city: null }, null, null, url))).toEqual([
       "https://projectcarlo.com/",
       "https://projectcarlo.com/churches/",
       url,
@@ -110,7 +129,11 @@ describe("city page metadata", () => {
   });
 
   it("lists the city's church pages and its breadcrumbs", () => {
-    const [page, crumbs] = cityJsonLd(city, "https://projectcarlo.com/mass-times/rochester-ny/");
+    const [page, crumbs] = cityJsonLd(
+      city,
+      { slug: "rochester", label: "Diocese of Rochester" },
+      "https://projectcarlo.com/mass-times/rochester-ny/",
+    );
     expect(page).toMatchObject({
       "@type": "CollectionPage",
       mainEntity: {
@@ -123,5 +146,97 @@ describe("city page metadata", () => {
       },
     });
     expect(crumbs).toMatchObject({ "@type": "BreadcrumbList" });
+    expect(
+      (crumbs.itemListElement as { item: string }[]).map((c) => c.item),
+    ).toEqual([
+      "https://projectcarlo.com/",
+      "https://projectcarlo.com/churches/",
+      "https://projectcarlo.com/dioceses/rochester/",
+      "https://projectcarlo.com/mass-times/rochester-ny/",
+    ]);
+  });
+});
+
+describe("diocese page metadata", () => {
+  const churches = [
+    church,
+    { ...church, id: 2, slug: "holy-cross", name: "Holy Cross" },
+    { ...church, id: 3, slug: "st-mary-canandaigua", city: "Canandaigua" },
+  ];
+  const { cities } = buildCityIndex(churches);
+  const [diocese] = buildDioceseIndex(churches, cities, {
+    rochester: {
+      name: "Roman Catholic Diocese of Rochester",
+      state: "NY",
+      website: "https://www.dor.org",
+      covered: true,
+      churches: churches.map((c) => c.slug),
+    },
+  }).dioceses;
+  const url = "https://projectcarlo.com/dioceses/rochester/";
+
+  it("names the diocese in the title and counts its churches and towns", () => {
+    expect(buildDioceseTitle(diocese)).toBe(
+      "Catholic Mass Times in the Diocese of Rochester — Confession & Adoration · Project Carlo",
+    );
+    expect(buildDioceseDescription(diocese)).toBe(
+      "Mass, Confession, and Adoration times at 3 Catholic churches in 2 cities and towns " +
+        "across the Diocese of Rochester, from each parish’s weekly bulletin.",
+    );
+  });
+
+  it("lists the diocese's city pages and its breadcrumbs", () => {
+    const [page, crumbs] = dioceseJsonLd(diocese, url);
+    expect(page).toMatchObject({
+      "@type": "CollectionPage",
+      url,
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: [
+          {
+            position: 1,
+            name: "Canandaigua, NY",
+            url: "https://projectcarlo.com/mass-times/canandaigua-ny/",
+          },
+          {
+            position: 2,
+            name: "Rochester, NY",
+            url: "https://projectcarlo.com/mass-times/rochester-ny/",
+          },
+        ],
+      },
+    });
+    expect(
+      (crumbs.itemListElement as { name: string }[]).map((c) => c.name),
+    ).toEqual(["Project Carlo", "All churches", "Diocese of Rochester"]);
+  });
+
+  it("lists the dioceses with pages", () => {
+    const dioceses = [
+      { slug: "albany", label: "Diocese of Albany" },
+      { slug: "new-york", label: "Archdiocese of New York" },
+      { slug: "rochester", label: "Diocese of Rochester" },
+    ];
+    expect(buildDioceseIndexDescription(dioceses)).toBe(
+      "Browse Catholic churches by diocese (Albany, New York and Rochester) and find " +
+        "Mass, Confession, and Adoration times from each parish’s weekly bulletin.",
+    );
+    const [page, crumbs] = dioceseIndexJsonLd(dioceses, "https://projectcarlo.com/dioceses/");
+    expect(page).toMatchObject({
+      mainEntity: {
+        itemListElement: [
+          { position: 1, url: "https://projectcarlo.com/dioceses/albany/" },
+          { position: 2, url: "https://projectcarlo.com/dioceses/new-york/" },
+          { position: 3, url: "https://projectcarlo.com/dioceses/rochester/" },
+        ],
+      },
+    });
+    expect(
+      (crumbs.itemListElement as { item: string }[]).map((c) => c.item),
+    ).toEqual([
+      "https://projectcarlo.com/",
+      "https://projectcarlo.com/churches/",
+      "https://projectcarlo.com/dioceses/",
+    ]);
   });
 });

@@ -3,6 +3,7 @@ name: Roman Catholic Diocese of Buffalo
 state: NY
 website: https://www.buffalodiocese.org
 status: promoted
+coverage: complete
 gcatholic: buff0
 promoted: 2026-10-07
 ---

@@ -4,7 +4,7 @@ test("the church index links each city to its prerendered city page", async ({
   page,
 }) => {
   await page.goto("/churches/");
-  const cityLink = page.locator('h2 a[href^="/mass-times/"]').first();
+  const cityLink = page.locator('[data-city-heading] a[href^="/mass-times/"]').first();
   const label = (await cityLink.textContent())!.trim();
   await cityLink.click();
 
@@ -21,7 +21,7 @@ test("a church page's breadcrumb leads back to its city page", async ({
   page,
 }) => {
   await page.goto("/churches/");
-  const cityLink = page.locator('h2 a[href^="/mass-times/"]').first();
+  const cityLink = page.locator('[data-city-heading] a[href^="/mass-times/"]').first();
   const cityHref = (await cityLink.getAttribute("href"))!;
   await cityLink.click();
 
@@ -325,7 +325,7 @@ test("in the app, a church page's breadcrumb goes to its city with no loading sc
   page,
 }) => {
   await page.goto("/churches/");
-  const cityLink = page.locator('h2 a[href^="/mass-times/"]').first();
+  const cityLink = page.locator('[data-city-heading] a[href^="/mass-times/"]').first();
   const cityHref = (await cityLink.getAttribute("href"))!;
   const cityLabel = (await cityLink.textContent())!.trim();
   const churchHref = (await page

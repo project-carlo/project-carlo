@@ -79,6 +79,7 @@ export function ChurchPage() {
       <ChurchPageContent
         church={church}
         city={churchQuery.data?.city ?? null}
+        diocese={churchQuery.data?.diocese ?? null}
         map={churchQuery.data?.map ?? null}
         events={events}
         liveMap={liveMap}

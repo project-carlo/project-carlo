@@ -8,9 +8,10 @@ import {
 } from "./staticMap";
 
 /**
- * The city and church pages' map as it opens: its view, and the markers the
- * live map draws there. The still preview (CityMapPreview) draws exactly
- * these, so the live map, mounted over it, changes nothing until it's moved.
+ * The city, church and diocese pages' map as it opens: its view, and the
+ * markers the live map draws there. The still preview (CityMapPreview) draws
+ * exactly these, so the live map, mounted over it, changes nothing until
+ * it's moved.
  */
 
 /**
@@ -41,6 +42,18 @@ const FIT_HALF_HEIGHT = 72;
 /** Close enough for a one-church town to show its streets, far enough for a city. */
 const MIN_ZOOM = 9;
 const MAX_ZOOM = 14;
+
+/**
+ * A diocese's map fits its churches in the wider, desktop preview instead:
+ * held to a phone's, it would open a step further out, where its churches
+ * merge into its neighbours' roundels. On a phone its farthest churches can
+ * sit just past the edges.
+ */
+const DIOCESE_FIT_HALF_WIDTH = 200;
+const DIOCESE_FIT_HALF_HEIGHT = 110;
+
+/** Far enough out for a diocese, which can span a dozen counties. */
+const DIOCESE_MIN_ZOOM = 6;
 
 /**
  * How far past the canvas a marker's point may be and still show on it: a
@@ -80,6 +93,36 @@ export function cityMapView(city: City): MapView | null {
     MAX_ZOOM,
   );
   return { lat: city.center.lat, lng: city.center.lng, zoom };
+}
+
+/**
+ * The view a diocese's map opens on: centered between its farthest churches,
+ * as close as keeps them all in view.
+ */
+export function dioceseMapView(
+  churches: ReadonlyArray<{ latitude: number | null; longitude: number | null }>,
+): MapView | null {
+  const points: LatLng[] = churches.flatMap((church) =>
+    church.latitude != null && church.longitude != null
+      ? [{ lat: church.latitude, lng: church.longitude }]
+      : [],
+  );
+  if (points.length === 0) return null;
+  const lats = points.map((p) => p.lat);
+  const lngs = points.map((p) => p.lng);
+  const center = {
+    lat: (Math.min(...lats) + Math.max(...lats)) / 2,
+    lng: (Math.min(...lngs) + Math.max(...lngs)) / 2,
+  };
+  const zoom = fitZoom(
+    center,
+    points,
+    DIOCESE_FIT_HALF_WIDTH,
+    DIOCESE_FIT_HALF_HEIGHT,
+    DIOCESE_MIN_ZOOM,
+    MAX_ZOOM,
+  );
+  return { ...center, zoom };
 }
 
 /** The view a church's map opens on: the church in the middle, its part of town in view. */

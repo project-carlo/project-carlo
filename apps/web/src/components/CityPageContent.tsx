@@ -10,6 +10,7 @@ import { Fleuron } from "@/components/Fleuron";
 import { MapPinIcon } from "@/components/icons";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, formatMiles } from "@/lib/cities";
+import { diocesePath } from "@/lib/dioceses";
 import type { CityMapConfig } from "@/lib/cityMap";
 import type { ScheduleRollupRow } from "@/lib/eventRollup";
 import { weeklyScheduleRows } from "@/lib/scheduleSummary";
@@ -199,7 +200,7 @@ export function CityPageContent({
   data: CityPageData;
   liveMap?: (config: CityMapConfig) => ReactNode;
 }) {
-  const { city, churches, nearby } = data;
+  const { city, diocese, churches, nearby } = data;
 
   return (
     <>
@@ -212,6 +213,7 @@ export function CityPageContent({
               className="mb-6"
               crumbs={[
                 { label: ALL_CHURCHES, to: CHURCH_INDEX_PATH },
+                ...(diocese ? [{ label: diocese.label, to: diocesePath(diocese.slug) }] : []),
                 { label: city.label },
               ]}
             />
