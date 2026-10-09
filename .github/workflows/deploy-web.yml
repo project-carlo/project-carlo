@@ -2,8 +2,7 @@ name: Deploy Web
 
 on:
   push:
-    branches:
-      - "**"
+    branches: [main]
     paths:
       - "apps/web/**"
       - "data/**"
@@ -16,22 +15,12 @@ on:
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
       - ".github/workflows/deploy-web.yml"
+  # Previews are on demand: adding the `preview` label to a pull request deploys
+  # its latest commit. The run takes the label off when it ends, so adding it
+  # again later deploys a fresh preview.
   pull_request:
     types:
-      - opened
-      - reopened
-    paths:
-      - "apps/web/**"
-      - "data/**"
-      # Deploys build the snapshot with the pipeline code.
-      - "src/pdf_extract/**"
-      - "pyproject.toml"
-      - "uv.lock"
-      - ".python-version"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - ".github/workflows/deploy-web.yml"
+      - labeled
   workflow_dispatch:
     inputs:
       mode:
@@ -46,21 +35,21 @@ on:
 permissions:
   contents: read
 
-# The push and pull_request runs for a branch share a group so they never upload
-# the same preview alias at once. A pull_request run waits for the push run of
-# the same commit instead of cancelling it, which would leave a cancelled
-# "Deploy web" check on the pull request's head commit. A later push still
-# cancels whatever is running, since that commit is no longer the head.
-concurrency:
-  group: web-deploy-${{ github.head_ref || github.ref_name }}
-  cancel-in-progress: ${{ github.event_name != 'pull_request' && github.ref != 'refs/heads/main' }}
-
 jobs:
   deploy:
     name: Deploy web
     runs-on: ubuntu-24.04
     timeout-minutes: 30
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    if: >-
+      github.event_name != 'pull_request' ||
+      (github.event.label.name == 'preview' && github.event.pull_request.head.repo.full_name == github.repository)
+
+    # On the job, not the workflow, so adding some other label never cancels a
+    # preview. Adding `preview` again cancels a preview still running for the
+    # same branch; deploys on main queue instead.
+    concurrency:
+      group: web-deploy-${{ github.head_ref || github.ref_name }}
+      cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
     permissions:
       contents: read
@@ -160,7 +149,7 @@ jobs:
 
       - name: Prepare preview alias
         id: preview
-        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
+        if: github.event_name == 'pull_request'
         shell: bash
         env:
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
@@ -196,7 +185,7 @@ jobs:
 
       - name: Upload preview web app
         id: preview-deploy
-        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
+        if: github.event_name == 'pull_request'
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -218,7 +207,7 @@ jobs:
 
       - name: Resolve preview URL
         id: preview-url
-        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
+        if: github.event_name == 'pull_request'
         shell: bash
         env:
           COMMAND_OUTPUT: ${{ steps.preview-deploy.outputs.command-output }}
@@ -259,7 +248,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Comment preview link on pull request
-        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
+        if: github.event_name == 'pull_request'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -267,9 +256,8 @@ jobs:
           PREVIEW_URL: ${{ steps.preview-url.outputs.preview-url }}
           VERSION_URL: ${{ steps.preview-url.outputs.version-url }}
           PREVIEW_ALIAS: ${{ steps.preview.outputs.alias }}
-          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
           EVENT_PR_NUMBER: ${{ github.event.pull_request.number }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           set -uo pipefail
 
@@ -281,15 +269,6 @@ jobs:
           fi
 
           pr_number="$EVENT_PR_NUMBER"
-
-          if [ -z "$pr_number" ]; then
-            pr_number="$(gh pr list --head "$BRANCH_NAME" --state open --json number --jq '.[0].number // empty')"
-          fi
-
-          if [ -z "$pr_number" ]; then
-            echo "No open pull request for ${BRANCH_NAME}; skipping the pull request comment."
-            exit 0
-          fi
 
           body="$(mktemp)"
           {
@@ -307,7 +286,7 @@ jobs:
             fi
             echo "| Commit | \`${HEAD_SHA:0:7}\` |"
             echo
-            echo "<sub>Updated automatically on every push to this branch.</sub>"
+            echo "<sub>Add the \`preview\` label again to deploy the latest commit.</sub>"
           } > "$body"
 
           comment_id="$(gh api --paginate "repos/${GH_REPO}/issues/${pr_number}/comments" \
@@ -323,7 +302,7 @@ jobs:
           fi
 
       - name: Summarize preview upload
-        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name != 'main')
+        if: github.event_name == 'pull_request'
         env:
           COMMAND_OUTPUT: ${{ steps.preview-deploy.outputs.command-output }}
           PREVIEW_ALIAS: ${{ steps.preview.outputs.alias }}
@@ -342,3 +321,13 @@ jobs:
             echo "$COMMAND_OUTPUT"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+
+      # Taking the label off lets a person add it again for a newer commit. It
+      # comes off after a failure too, so a retry is the same gesture.
+      - name: Remove preview label
+        if: always() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: gh api -X DELETE "repos/${GH_REPO}/issues/${PR_NUMBER}/labels/preview" --silent || true
