@@ -31,9 +31,10 @@ seed file is committed, and the pipeline loads it.
   bulletins each parish has and reads further back (the second newest, the
   third...) when a question needs it: weekly or one-off, a time that differs
   between weeks, a seasonal note.
-- **Seed scope:** weekly slots, plus dated entries on or after the seed's
-  `as_of` date. Cancellations are left to update mode (see
-  [Open questions](#open-questions)).
+- **Seed scope:** weekly slots, plus dated entries and cancellations on or
+  after the seed's `as_of` date. Update mode never calls a bulletin fetched on
+  or before `as_of`, so a cancellation left out of the seed (next Saturday's
+  vigil called off in the newest bulletin) would never reach the site.
 - **Runs locally**, in Claude Code on the maintainer's machine, with the R2
   read keys, `OPENAI_API_KEY` and `GEMINI_API_KEY`.
 - **Seed files are committed**, like the labels, and the pipeline loads the
@@ -299,7 +300,7 @@ to `data/seed-evals/<run>/`, not `data/seeds/`, so they are never loaded.
 
 `pnpm seed score <run>` compares each draft with its label, using the eval
 report's matching (`evals/report.py`). It compares only what a seed holds:
-weekly rows, and dated rows on or after `as_of`. It reports:
+weekly rows, and dated rows and cancellations on or after `as_of`. It reports:
 
 - the accuracy of the agent's `settled` slots, the number that matters most,
   since a reviewer may approve them without reading each one
@@ -331,11 +332,6 @@ size costs accuracy.
 
 ## Open questions
 
-- **Cancellations in the seed.** Leaving them out means a cancellation printed
-  only in bulletins up to `as_of` (say, next Saturday's vigil called off in the
-  newest bulletin) never reaches the site, since update mode doesn't call
-  those bulletins. Including future-dated cancellations costs the agent
-  little.
 - **Approving parishes with no open questions.** Every parish is approved by a
   person in this plan. If the test run shows `settled` slots are reliable
   enough, `ready` parishes could be approved in bulk.
