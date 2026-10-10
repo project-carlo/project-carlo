@@ -391,11 +391,14 @@ def _build_parser() -> argparse.ArgumentParser:
     process_parser.add_argument("--parish", help="Parish name (omit to run for all)")
     process_parser.add_argument(
         "--model", default=DEFAULT_GEMINI_MODEL,
-        help=f"Gemini model (default: {DEFAULT_GEMINI_MODEL})",
+        help=(
+            f"Gemini model for extract-mode parishes (default: {DEFAULT_GEMINI_MODEL}); "
+            "update-mode parishes always run on gpt-6-luna"
+        ),
     )
     process_parser.add_argument(
         "--concurrency", type=int, default=5,
-        help="Number of parallel Gemini calls (default: 5)",
+        help="Number of parallel model calls (default: 5)",
     )
     process_parser.set_defaults(handler=_cmd_process)
     _add_common_args(process_parser)

@@ -59,6 +59,7 @@ jobs:
       - name: Check configuration
         env:
           HAS_GEMINI: ${{ secrets.GEMINI_API_KEY != '' }}
+          HAS_OPENAI: ${{ secrets.OPENAI_API_KEY != '' }}
           HAS_R2_KEY: ${{ secrets.R2_WRITE_ACCESS_KEY_ID != '' }}
           HAS_R2_SECRET: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY != '' }}
         run: |
@@ -70,6 +71,11 @@ jobs:
           if (( ${#missing[@]} )); then
             echo "::error::Missing repository secrets: ${missing[*]}. See docs/data-setup.md."
             exit 1
+          fi
+          # Only update-mode (seeded) parishes call OpenAI; without the key
+          # their calls fail and are retried on the next runs.
+          if [[ "$HAS_OPENAI" != "true" ]]; then
+            echo "::warning::OPENAI_API_KEY is not set; update-mode parishes will not be processed. See docs/data-setup.md."
           fi
 
       - name: Name this run
@@ -112,6 +118,7 @@ jobs:
         id: pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_WRITE_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_WRITE_SECRET_ACCESS_KEY }}
           RUN_ID: ${{ steps.run.outputs.id }}

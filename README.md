@@ -593,7 +593,8 @@ Commands read a `.env` file in the repo root if there is one (without
 overriding variables already set).
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
-- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`).
+- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`) and
+  the update-mode calls of `pnpm process` and `pnpm weekly:run`.
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
@@ -627,6 +628,14 @@ rejects each one. The design is
 [docs/schedule-state-plan.md](docs/schedule-state-plan.md). A parish is in this
 mode once it has a seed revision; every other parish is extracted from scratch
 as above, and a weekly run handles both.
+
+Update calls run on `gpt-6-luna` (OpenAI Responses API, high reasoning, the PDF
+at low detail, strict decoding), set up like the eval module's `gpt-6-luna`
+classifier, and need `OPENAI_API_KEY`. Their prompt
+(`classifiers/schedule_update.py`) carries every rule of the eval policy
+(`classifiers/schedule_policy.py`), worded for changes to the believed
+schedule. `--model` on `pnpm process` only picks the Gemini model for
+extract-mode parishes.
 
 `pnpm schedule` looks at and hand-edits believed schedules:
 

@@ -762,11 +762,19 @@ code departs from it.
   another bulletin of the parish with the same `content_hash` already has a
   successful call: there is nothing new in it, and with an unchanged view its
   request key would collide with the first call's.
-- **One provider for now.** `GeminiScheduleUpdater` (in
-  `classifiers/schedule_update.py`) runs the process stage's `--model` with no
-  extra parameters, so `params_json` is `{}`. The prompt is the static policy,
-  then the church list, the date and the view, then the PDF, so the policy can
-  be served from a prompt cache.
+- **One provider: gpt-6-luna.** `OpenAIScheduleUpdater` (in
+  `classifiers/schedule_update.py`) runs every update call on `gpt-6-luna`
+  through the OpenAI Responses API, set up as the eval module's `gpt-6-luna`
+  classifier is: high reasoning effort, the PDF at low detail, and strict
+  decoding of the response schema, so `params_json` is
+  `{"file_detail":"low","reasoning_effort":"high","strict":true}`. The process
+  stage's `--model` picks only the extract-mode Gemini model. The policy is a
+  developer message marked as an explicit prompt-cache breakpoint, then the
+  church list, the date and the view, then the PDF. It carries every rule of
+  the eval policy (`classifiers/schedule_policy.py`: chapels and adoration
+  chapels, weekly vs dated, dates, exclusions as the weeks that remain, times,
+  notes and the final source checks), worded for changes, and the response
+  schema's qualifier and note descriptions are the eval schema's.
 
 ### Deciding
 

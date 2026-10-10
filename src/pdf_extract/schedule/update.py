@@ -45,7 +45,7 @@ from pdf_extract.classifiers.schedule_update import (
     SCHEMA_HASH,
     SCHEMA_TEXT,
     TASK,
-    GeminiScheduleUpdater,
+    OpenAIScheduleUpdater,
     ParsedReply,
     RawReply,
     parse_response,
@@ -194,7 +194,7 @@ def prepare(
     conn: sqlite3.Connection,
     bulletin: dict[str, Any],
     as_of: str,
-    updater: GeminiScheduleUpdater,
+    updater: OpenAIScheduleUpdater,
 ) -> Prepared | None:
     """Render the view and build the request; None when the PDF can't be loaded."""
     content_hash = bulletin.get("content_hash")
@@ -246,7 +246,7 @@ def load_call_record(key: str) -> dict[str, Any] | None:
     return record
 
 
-def store_call_record(prepared: Prepared, updater: GeminiScheduleUpdater, reply: RawReply) -> dict:
+def store_call_record(prepared: Prepared, updater: OpenAIScheduleUpdater, reply: RawReply) -> dict:
     """Store the raw request and reply. Best effort: a failed write costs a future call."""
     record = {
         "request_key": prepared.request_key,
@@ -283,7 +283,7 @@ def store_call_record(prepared: Prepared, updater: GeminiScheduleUpdater, reply:
 def _insert_call(
     conn: sqlite3.Connection,
     prepared: Prepared,
-    updater: GeminiScheduleUpdater,
+    updater: OpenAIScheduleUpdater,
     *,
     run_id: str | None,
     status: str,
@@ -343,7 +343,7 @@ class CallOutcome:
 def decide_and_apply(
     conn: sqlite3.Connection,
     prepared: Prepared,
-    updater: GeminiScheduleUpdater,
+    updater: OpenAIScheduleUpdater,
     record: dict[str, Any],
     parsed: ParsedReply,
     *,
@@ -470,7 +470,7 @@ def _view_ids(view_text: str) -> list[int]:
 def finish_call(
     conn: sqlite3.Connection,
     prepared: Prepared,
-    updater: GeminiScheduleUpdater,
+    updater: OpenAIScheduleUpdater,
     reply: RawReply | dict[str, Any] | BaseException,
     *,
     run_id: str | None,
@@ -527,11 +527,11 @@ def process_update_mode(
     *,
     slugs: Collection[str] | None = None,
     run_id: str | None = None,
-    updater: GeminiScheduleUpdater | None = None,
+    updater: OpenAIScheduleUpdater | None = None,
     concurrency: int = 5,
 ) -> dict[str, int]:
     """Call and decide every pending bulletin of the update-mode parishes in `slugs`."""
-    updater = updater or GeminiScheduleUpdater()
+    updater = updater or OpenAIScheduleUpdater()
     as_of = update_mode_parishes(conn)
     slug_by_id = {
         row["id"]: row["slug"] for row in conn.execute("SELECT id, slug FROM parish").fetchall()

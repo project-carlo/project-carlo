@@ -33,7 +33,7 @@ from pdf_extract.bulletin_week import (
     place_bulletin,
 )
 from pdf_extract.classifiers.gemini import GeminiClassifier
-from pdf_extract.classifiers.schedule_update import GeminiScheduleUpdater
+from pdf_extract.classifiers.schedule_update import OpenAIScheduleUpdater
 from pdf_extract.recurrence import (
     History,
     load_history_from_db,
@@ -314,7 +314,7 @@ def process_bulletins(
 
         update_stats = process_update_mode(
             conn, slugs=update_scope, run_id=run_id,
-            updater=GeminiScheduleUpdater(model=model), concurrency=concurrency,
+            updater=OpenAIScheduleUpdater(), concurrency=concurrency,
         )
     finally:
         conn.close()

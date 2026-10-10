@@ -6,6 +6,7 @@ import json
 import sqlite3
 from datetime import date
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any
 
 import pytest
@@ -16,7 +17,9 @@ from pdf_extract.classifiers.schedule_update import (
     LENIENT,
     OK,
     PARSE_FAILED,
-    GeminiScheduleUpdater,
+    POLICY,
+    STRICT_SCHEMA,
+    OpenAIScheduleUpdater,
     RawReply,
     parse_response,
 )
@@ -163,7 +166,7 @@ def _bulletin(
     return bulletin_id
 
 
-class FakeUpdater(GeminiScheduleUpdater):
+class FakeUpdater(OpenAIScheduleUpdater):
     """Answers each call with the next reply; records the contexts it was given."""
 
     def __init__(self, *replies: Any) -> None:
@@ -614,7 +617,7 @@ def test_the_process_stage_splits_parishes_by_mode(
     monkeypatch.setattr(process.GeminiClassifier, "extract", fake_extract)
     monkeypatch.setattr("pdf_extract.storage.read_bulletin_pdf", lambda *a: b"%PDF")
     updater = FakeUpdater(_reply())
-    monkeypatch.setattr(process, "GeminiScheduleUpdater", lambda model: updater)
+    monkeypatch.setattr(process, "OpenAIScheduleUpdater", lambda: updater)
 
     result = process.process_bulletins(concurrency=1)
 
@@ -788,6 +791,73 @@ def test_replies_are_read_strictly_then_leniently() -> None:
 
     assert parse_response("nope").status == PARSE_FAILED
     assert parse_response("[]").status == PARSE_FAILED
+
+
+def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
+    updater = OpenAIScheduleUpdater()
+    calls: list[dict[str, Any]] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        calls.append(kwargs)
+        return SimpleNamespace(
+            id="resp_1", status="completed", incomplete_details=None,
+            model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            usage=SimpleNamespace(
+                input_tokens=3000,
+                input_tokens_details=SimpleNamespace(cached_tokens=1200, cache_write_tokens=0),
+                output_tokens=900,
+                output_tokens_details=SimpleNamespace(reasoning_tokens=600),
+            ),
+        )
+
+    updater._client = SimpleNamespace(responses=SimpleNamespace(create=create))
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert (updater.provider, updater.model) == ("openai", "gpt-6-luna")
+    assert updater.params_json == '{"file_detail":"low","reasoning_effort":"high","strict":true}'
+    [request] = calls
+    assert request["reasoning"] == {"effort": "high"}
+    assert request["text"]["format"]["strict"] is True
+    assert request["store"] is False
+    developer, user = request["input"]
+    assert developer["role"] == "developer"
+    assert developer["content"] == [{
+        "type": "input_text", "text": POLICY, "prompt_cache_breakpoint": {"mode": "explicit"},
+    }]
+    assert user["content"][0] == {"type": "input_text", "text": "the context"}
+    assert user["content"][1]["type"] == "input_file"
+    assert user["content"][1]["detail"] == "low"
+    assert reply.served_model == "gpt-6-luna-2026-09-01"
+    assert reply.usage["reasoning_tokens"] == 600
+    assert parse_response(reply.text).status == OK
+
+    # Strict decoding needs every field required and no defaults.
+    assert '"default"' not in json.dumps(STRICT_SCHEMA)
+
+    def objects(node: Any):
+        if isinstance(node, dict):
+            if node.get("type") == "object":
+                yield node
+            for value in node.values():
+                yield from objects(value)
+        elif isinstance(node, list):
+            for value in node:
+                yield from objects(value)
+
+    for obj in objects(STRICT_SCHEMA):
+        assert obj["additionalProperties"] is False
+        assert set(obj["required"]) == set(obj["properties"])
+
+
+def test_update_policy_carries_the_eval_policy_rules() -> None:
+    for rule in (
+        "A parish adoration chapel belongs to the church it is at.",
+        "Write an exclusion as the weeks that remain",
+        "A clock time stated in the bulletin always wins.",
+        "Keep church-specific schedule headings separate",
+        "Apply the off-site rules to Mass-intentions entries too",
+    ):
+        assert rule in POLICY
 
 
 # ── Report and labeler ──────────────────────────────────────────────────────

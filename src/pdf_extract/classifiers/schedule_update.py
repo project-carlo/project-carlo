@@ -5,10 +5,14 @@ schedule (the view, `schedule.store.render_view`) and answers with the changes
 it thinks the bulletin calls for, plus the entries it saw unchanged. See
 docs/schedule-state-plan.md, "The model's input and output".
 
-The request is the static policy (`POLICY`), then the per-bulletin context
-(`CONTEXT_TEMPLATE`: the church list, today's date, the view), then the PDF, so
-every request starts with the same text and can be served from the provider's
-prompt cache.
+The calls run on gpt-6-luna through the OpenAI Responses API, set up as the
+eval module's `gpt-6-luna` classifier is (`classifiers/openai_responses.py`):
+the static policy (`POLICY`, which carries every rule of the eval policy,
+`schedule_policy.POLICY`, worded for changes) as a developer message marked as
+an explicit prompt-cache breakpoint, then the per-bulletin context
+(`CONTEXT_TEMPLATE`: the church list, today's date, the view) and the PDF, with
+the response schema enforced by strict decoding. Reasoning effort is high and
+the PDF is read at low detail.
 
 Every call is stored (`llm_call`) with the hashes of the policy, the response
 schema and the context template, its parameters, and `version`, a digest of all
@@ -26,17 +30,22 @@ from datetime import date
 from hashlib import sha256
 from typing import Any, Literal
 
-from google import genai
-from google.genai import types
+from openai import OpenAI
+from openai.lib._pydantic import to_strict_json_schema
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
-from pdf_extract.schedule_extraction import (
-    DEFAULT_GEMINI_MODEL,
-    _generate_content_with_backoff,
-    _normalize_published_date,
-    _token_usage,
-    gemini_client,
+from pdf_extract.classifiers.base import ClassifierOptionError
+from pdf_extract.classifiers.openai_responses import (
+    PDF_DETAILS,
+    REASONING_EFFORTS,
+    REQUEST_TIMEOUT_SECONDS,
+    ImageDetail,
+    ReasoningEffort,
+    _b64,
+    _usage,
+    _without_defaults,
 )
+from pdf_extract.schedule_extraction import _normalize_published_date
 
 LOGGER = logging.getLogger(__name__)
 
@@ -46,25 +55,66 @@ TASK = "schedule_update"
 POLICY = """\
 # Role
 
-You keep a Catholic parish's Mass, Confession and Adoration schedule up to date. You are given the schedule we currently believe (the "believed schedule", after these instructions) and the parish's latest bulletin (the attached PDF). Read the bulletin and answer with the changes it calls for. The schedule feeds a public Mass-times website, so a wrong time is worse than a missing one, and a change you are not sure of is worse than no change.
+You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date. You are given the schedule we currently believe (the "believed schedule", after these instructions) and the parish's latest bulletin (the attached PDF). Read the bulletin and answer with the changes it calls for. The schedule feeds a public Mass-times website, so a wrong time is worse than a missing one, and a change you are not sure of is worse than no change.
 
 # What counts
 
-- Only Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity.
-- Benediction implies Adoration: "Adoration and Benediction" or "Holy Hour with Benediction" is one Adoration entry with the note `Benediction`.
-- A Communion Service (a Liturgy of the Word with Communion) is not a Mass. When the bulletin says one replaces a Mass on a date, that Mass is cancelled on that date.
-- Leave out a Mass closed to the public (private, school-only, residents-only, by invitation), and anything without a definite start time ("by appointment").
-- Only events at one of the known churches (given after these instructions), named by their exact `slug`. An event in a chapel or room of a listed church belongs to that church; say where in a short `note`. Leave out events anywhere else. If the bulletin clearly shows a church or chapel of this parish with its own schedule that is not in the list, or a listed church's name or address is obviously wrong, set `church_list_needs_review` to true.
+- Only Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin.
+- Benediction implies Adoration: record Benediction as an Adoration entry with the note `Benediction`. "Adoration and Benediction" or "Holy Hour with Benediction" is one Adoration entry with that note, not two entries.
+- A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, that Mass is cancelled on that date.
+- Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation).
+- Leave out anything without a definite start time, such as "Confession by appointment" or "call the office".
 
-# Entries
+# Churches and chapels
+
+- Attach every entry to one of the churches in the known-churches list (given after these instructions) using its exact `slug`.
+- Only record events held at one of those churches. Leave out an event held anywhere else, such as another parish, a retreat house, a cemetery, a hospital, or a school or hall at another address.
+- An event in a chapel or room of a listed church itself ("in the chapel", "Blessed Sacrament Chapel", "in the church hall") belongs to that church; say where in a short `note`.
+- A parish adoration chapel belongs to the church it is at. When it is at the same location as a listed church (inside it, attached to it, or on the same grounds), record its times at that church and name the chapel in a short `note`. Leave it out when it is somewhere else you would need to drive to, or when it is unclear where it is.
+- An event at a separate chapel at another address (a convent, school, hospital, nursing home or mission chapel), or one whose location is unclear, is left out unless the known-churches list includes that chapel or its address. If you leave out such a chapel that clearly has its own Mass, Confession or Adoration times, or a listed church's name or address is obviously wrong, set `church_list_needs_review` to true.
+
+# Entries: weekly or dated
 
 Each entry is one weekly slot or one dated occurrence at one church:
 
-- `event_kind` `weekly`: a recurring weekly time, with `day_of_week` (full English weekday name). `weeks_of_month` lists the weeks of the month it happens on when it is not every week (`["first"]` for First Friday, `["first", "third"]` for 1st and 3rd Saturdays; "last" is not "fourth"; an exclusion is written as the weeks that remain), else `[]`. `season` gives the months (and days, only when the bulletin dates the boundary) of the part of the year it runs, when the bulletin limits it, else null.
-- `event_kind` `specific_date`: one date, `date` as `YYYY-MM-DD`, with `cancelled` true when it is a cancellation. Holy days, holidays, Christmas, Holy Week and other special services at times outside the weekly schedule are dated. A special occasion at a regular weekly Mass is not an entry of its own.
-- Times are `h:MM AM` or `h:MM PM`; "noon" is `12:00 PM`. For Mass leave `end_time` null; for Confession and Adoration give it when the bulletin gives one or a duration. A clock time in the bulletin always wins; only when an event is timed relative to a Mass with no clock time, work it out: "after" a weekend Mass is 1 hour after it starts, "after" a weekday Mass 30 minutes after, "N minutes before Mass" ends when the Mass starts.
-- Every `date` must be a day the bulletin pins down (a printed date, or "this Saturday" counted from the bulletin's own date). Never project dates from a weekly slot or a weeks-of-the-month pattern.
-- Only add a `note` for genuinely special context: language, place within the church, `Benediction`, a relative timing you converted, the occasion of a dated special service. Don't write "Vigil Mass", and don't repeat what `weeks_of_month` or `season` say.
+- `event_kind` `weekly`: a recurring weekly time, with `day_of_week` (full English weekday name) and the qualifiers below.
+- `event_kind` `specific_date`: one date, `date` as `YYYY-MM-DD`, with `cancelled` true when the bulletin says the event is cancelled, moved, or will not take place on that date. A moved event is a cancellation of the original date and time plus a dated entry at the new one.
+
+To decide between weekly and dated:
+
+1. Times presented as the parish's regular schedule ("Weekend Masses", "Daily Mass", "Mass Schedule", "Confessions: Saturdays 3:00-3:45 PM") are weekly. A range of days ("Monday-Friday 8:00 AM") is one weekly entry per day.
+2. Slots tied to certain weeks of the month ("First Friday Adoration", "1st and 3rd Tuesdays", "last Sunday of the month") are always weekly, with `weeks_of_month` set, never dated. This holds even when the bulletin also gives this month's date for it ("First Friday, October 2"), unless it says the event is a one-time occurrence.
+3. Times given only with a date, or with a date and its weekday ("Tuesday, October 6, 7:00 PM Adoration"), are dated, including the dated times in a weekly calendar or a list of Mass intentions. So are one-off times given with a weekday that means one particular day ("this Saturday at 9:00 AM"; see Dates).
+4. Exception: if the bulletin shows dated times for two or more weeks and the same slot (church, type, weekday and time) appears in each of those weeks, it is weekly, unless the bulletin marks it as special or one-off.
+5. When it is unclear, prefer dated (rule 2 still wins for weeks-of-the-month slots). A dated time that matches a weekly entry of the believed schedule is that entry printed again: list it in `seen`.
+6. Never duplicate a weekly slot as a dated entry just because the bulletin also lists it on a date in a specific week.
+7. A special occasion celebrated at a regular weekly Mass (a First Communion, an anniversary, a feast or a named Mass at the usual Sunday 10:00 AM Mass) is not an entry of its own: it is the weekly slot. Holy days, holidays, Christmas, Holy Week, feast-day Masses and other special services at times outside the weekly schedule are dated.
+
+# Dates
+
+Every `date` must be a day the bulletin pins down. A printed date (next to the event, or as the heading of the calendar day it is listed under) pins it down. So does a weekday the bulletin ties to one particular day, such as "this Saturday" or "next Friday": count it from the bulletin's own issue date or the week it covers, and use that date. Only do this when it is clear which day is meant; if the bulletin's date or week is unclear, or the weekday could be more than one day, do not guess.
+
+Never project dates in any other way: do not work a date out from a weeks-of-the-month pattern or from a weekly slot, and do not turn a weekly slot into dated entries for the coming weeks. An event whose day the bulletin does not pin down is weekly if it is part of the regular schedule, and is left out otherwise.
+
+# Weekly qualifiers
+
+- `weeks_of_month`: for slots that only happen on some occurrences of the weekday in a month, such as `["first"]` for "First Friday Adoration" or `["first", "third"]` for "1st and 3rd Saturdays"; "last" is not "fourth". Leave it empty (`[]`) for every week.
+- `weeks_of_month` lists only the weeks a slot does happen on; it cannot express an exclusion. Write an exclusion as the weeks that remain: "every Saturday except the first" is `["second", "third", "fourth", "fifth"]`. Do not describe the exclusion in the `note`.
+- `season`: for slots the bulletin limits to part of the year ("October through June", "summer schedule"), with the months it gives; null for a slot that runs all year. Give a day only where the bulletin dates the boundary ("June 4 through September 10"); never invent the 1st or the 30th. A half-stated season ("runs from October", no end) is no season. A start later in the year than the end wraps the new year.
+
+# Times
+
+- `start_time` and `end_time` are formatted as `h:MM AM` or `h:MM PM`; "noon" is `12:00 PM`.
+- For Mass, leave `end_time` null. For Confession and Adoration, give `end_time` when the bulletin gives one or a duration ("one hour"); leave it null for "until all are heard" or no end.
+- A clock time stated in the bulletin always wins. When the bulletin gives one, use it, even if it also places the event relative to a Mass: "Confession after the 8:00 AM Mass, 8:40-9:15 AM" starts at 8:40 AM.
+- Only when the bulletin times an event relative to a Mass and gives no clock time for it, work it out from that Mass's start time:
+  - "After" or "following" a weekend Mass (Saturday evening vigil or Sunday): 1 hour after the Mass starts.
+  - "After" or "following" a weekday Mass: 30 minutes after the Mass starts.
+  - "N minutes before Mass": N minutes before it, ending when the Mass starts. "Before every Mass" is one entry for each Mass it refers to.
+
+# Notes
+
+Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month` or `season` already say.
 
 # Changes
 
@@ -79,7 +129,7 @@ Rules:
 - **Silence is not a change.** An entry the bulletin doesn't mention stays. Propose a delete only when the bulletin says the entry is discontinued, or prints what is clearly the full schedule for that church and event type without it.
 - **Weekly changes wait until they are in effect.** Propose a change to a weekly entry only when it is already in effect in the bulletin's week. An announced future change ("from November 1 the vigil moves to 5 PM") waits for a bulletin from a week where it is in effect.
 - **Dated entries don't wait.** Propose dated entries (holy days, Christmas, Holy Week, one-off events) and cancellations for any date from today on. Never propose a dated entry before today.
-- **Cancelling a weekly slot** on one date is an `add` of a dated entry with `cancelled: true` for the same church, event type and start time on that date. Cancelling a dated entry is a `modify` of it with `cancelled: true`. A moved event is a cancellation of the original date and time plus a dated entry at the new one.
+- **Cancelling a weekly slot** on one date is an `add` of a dated entry with `cancelled: true` for the same church, event type and start time on that date. Cancelling a dated entry is a `modify` of it with `cancelled: true`.
 - **Seasons.** Put a `season` on both sets of entries only when the bulletin gives both schedules with their date ranges ("Summer, June-August: ...; September-May: ..."). Otherwise replace the weekly entries outright, and replace them back when the regular schedule returns.
 - **Modify, not delete + add,** for a change to an existing entry (time, end time, weeks, season, note). Delete + add only when one entry is replaced by a different one. A modify never changes an entry's church, event type or kind.
 - Never add an entry for a slot the believed schedule already has (same church, event type, weekday or date, and start time): modify that entry instead.
@@ -91,10 +141,18 @@ List in `seen` every entry from the believed schedule that the bulletin prints a
 
 # Bulletin
 
-- Report the bulletin's own issue date as `published_date` (`YYYY-MM-DD`).
-- Set `wrong_bulletin` to true only if the PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all). Then propose no changes. When the printed issue date is clearly from the wrong year relative to today's date, set it even if the schedule could still be read.
+- Identify the bulletin's own issue date and report it as `published_date` (`YYYY-MM-DD`).
+- Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). Then propose no changes.
 
-Read the whole bulletin, including calendars, sidebars and the back page.
+Read the whole bulletin, including calendars, sidebars and the back page, and carefully find every event it lists.
+
+# Final source checks
+
+- Keep church-specific schedule headings separate: an unlisted church's times must not be assigned to a similar-named listed church. A parish-wide heading, parish-office address, or photograph caption is not a different church-specific schedule heading.
+- Preserve a dated Mass with an explicit known church and time even when another church has a usual weekly Mass at that time. Different churches are not duplicates; the dated venue overrides a conflicting standing schedule for that date.
+- An event that includes Confession or Adoration does not establish those components' start/end times. Do not copy the larger event's full hours onto its components; record a component only with its own definite timing or a permitted relative-to-Mass anchor.
+- Apply the off-site rules to Mass-intentions entries too, resolving venue abbreviations from the bulletin's own context.
+- When the bulletin's printed issue date is clearly from the wrong year relative to today's date, set `wrong_bulletin` to true even if its schedule can still be read. Do not mistake dates of other events or historical references for the issue date.
 """
 
 CONTEXT_TEMPLATE = """\
@@ -136,16 +194,35 @@ class Season(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
-    start_month: int = Field(ge=1, le=12, description="First month the entry runs, 1-12.")
+    start_month: int = Field(
+        ge=1, le=12,
+        description=(
+            "First month of the year the entry runs, 1-12, e.g. `10` for 'Confessions "
+            "Tuesdays, October through June'."
+        ),
+    )
     start_day: int | None = Field(
-        default=None, description="Day of `start_month` it starts, only when the bulletin dates it.",
+        default=None,
+        description=(
+            "Day of `start_month` the entry starts on, e.g. `4` for 'June 4 through "
+            "September 10'. Fill only when the bulletin dated the boundary; leave null "
+            "when it names the month alone. Do not invent the 1st."
+        ),
     )
     end_month: int = Field(
         ge=1, le=12,
-        description="Last month the entry runs, 1-12. Earlier than the start wraps the new year.",
+        description=(
+            "Last month of the year the entry runs, 1-12, e.g. `6`. A start later in the "
+            "calendar than the end wraps the new year."
+        ),
     )
     end_day: int | None = Field(
-        default=None, description="Day of `end_month` it runs through, only when the bulletin dates it.",
+        default=None,
+        description=(
+            "Day of `end_month` the entry runs through, e.g. `10`. Fill only when the "
+            "bulletin dated the boundary; leave null when it names the month alone. "
+            "Do not invent the 30th."
+        ),
     )
 
 
@@ -167,10 +244,33 @@ class ScheduleEntry(BaseModel):
     )
     cancelled: bool = Field(default=False, description="specific_date only: a cancellation.")
     weeks_of_month: list[WeekOfMonth] = Field(
-        default_factory=list, description="weekly only: the weeks it happens on; [] = every week.",
+        default_factory=list,
+        description=(
+            "weekly only: which occurrences of `day_of_week` within the month the entry "
+            "falls on. `last` is not `fourth`. Examples: `[\"first\"]` for First Friday "
+            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. Only the "
+            "weeks it happens on: 'every Saturday except the first' is "
+            "`[\"second\", \"third\", \"fourth\", \"fifth\"]`. Empty for every week."
+        ),
     )
-    season: Season | None = Field(default=None, description="weekly only: part of the year.")
-    note: str | None = None
+    season: Season | None = Field(
+        default=None,
+        description=(
+            "weekly only: the part of the year the entry runs, when the bulletin limits "
+            "it (e.g. 'October through June', 'summer schedule'). Null for all year. A "
+            "half-stated season ('runs from October', no end) is no season: leave it "
+            "null rather than inventing an end month."
+        ),
+    )
+    note: str | None = Field(
+        default=None,
+        description=(
+            "Short phrase only when there is genuinely special context (language, "
+            "location nuance, `Benediction`, etc.). Do not restate what "
+            "`weeks_of_month` or `season` already say, and do not describe an "
+            "exclusion: list the weeks that remain in `weeks_of_month`."
+        ),
+    )
 
 
 class Sighting(BaseModel):
@@ -339,15 +439,40 @@ class RawReply:
     latency_ms: int
 
 
-class GeminiScheduleUpdater:
-    """Gemini, asked for `ScheduleUpdatePayload` as JSON."""
+# The model and settings every update call runs with.
+UPDATE_MODEL = "gpt-6-luna"
+UPDATE_REASONING_EFFORT: ReasoningEffort = "high"
+UPDATE_FILE_DETAIL: ImageDetail = "low"
 
-    provider = "gemini"
+# What strict decoding is given: every field required, no defaults.
+STRICT_SCHEMA = _without_defaults(to_strict_json_schema(ScheduleUpdatePayload))
 
-    def __init__(self, *, model: str = DEFAULT_GEMINI_MODEL) -> None:
+
+class OpenAIScheduleUpdater:
+    """An OpenAI model on the Responses API, asked for `ScheduleUpdatePayload` under strict decoding."""
+
+    provider = "openai"
+
+    def __init__(
+        self,
+        *,
+        model: str = UPDATE_MODEL,
+        reasoning_effort: ReasoningEffort = UPDATE_REASONING_EFFORT,
+        file_detail: ImageDetail = UPDATE_FILE_DETAIL,
+        max_retries: int = 5,
+    ) -> None:
+        if reasoning_effort not in REASONING_EFFORTS:
+            raise ClassifierOptionError(f"Unknown reasoning effort {reasoning_effort!r}")
+        if file_detail not in PDF_DETAILS:
+            raise ClassifierOptionError(f"Detail {file_detail!r} is not available for a PDF")
         self.model = model
-        self.params: dict[str, Any] = {}
-        self._client: genai.Client | None = None
+        self.params: dict[str, Any] = {
+            "file_detail": file_detail,
+            "reasoning_effort": reasoning_effort,
+            "strict": True,
+        }
+        self._max_retries = max_retries
+        self._client: OpenAI | None = None
 
     @property
     def params_json(self) -> str:
@@ -358,29 +483,65 @@ class GeminiScheduleUpdater:
         """A digest of everything that shapes the output but the bulletin and its context."""
         return version_digest(self.provider, self.model, self.params_json)
 
-    def _gemini(self) -> genai.Client:
+    def _openai(self) -> OpenAI:
+        # Built on first use, so a run with no update-mode parish needs no API key.
         if self._client is None:
-            self._client = gemini_client()
+            self._client = OpenAI(max_retries=self._max_retries, timeout=REQUEST_TIMEOUT_SECONDS)
         return self._client
 
-    def contents(self, pdf_bytes: bytes, context: str) -> list[str | types.Part]:
-        return [POLICY, context, types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf")]
+    def request(self, pdf_bytes: bytes, context: str) -> dict[str, Any]:
+        """The keyword arguments for `responses.create`, for one bulletin."""
+        return {
+            "model": self.model,
+            "input": [
+                {
+                    "role": "developer",
+                    "content": [
+                        {
+                            "type": "input_text",
+                            "text": POLICY,
+                            "prompt_cache_breakpoint": {"mode": "explicit"},
+                        },
+                    ],
+                },
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "input_text", "text": context},
+                        {
+                            "type": "input_file",
+                            "filename": "bulletin.pdf",
+                            "file_data": f"data:application/pdf;base64,{_b64(pdf_bytes)}",
+                            "detail": self.params["file_detail"],
+                        },
+                    ],
+                },
+            ],
+            "reasoning": {"effort": self.params["reasoning_effort"]},
+            "text": {
+                "format": {
+                    "type": "json_schema",
+                    "name": "schedule_update",
+                    "schema": STRICT_SCHEMA,
+                    "strict": True,
+                },
+            },
+            "prompt_cache_options": {"mode": "explicit"},
+            "store": False,
+        }
 
     def call(self, pdf_bytes: bytes, context: str) -> RawReply:
         started = time.monotonic()
-        response = _generate_content_with_backoff(
-            self._gemini(),
-            model=self.model,
-            contents=self.contents(pdf_bytes, context),
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                response_json_schema=ScheduleUpdatePayload.model_json_schema(),
-            ),
-        )
+        response = self._openai().responses.create(**self.request(pdf_bytes, context))
+        if response.status != "completed":
+            LOGGER.warning(
+                "%s response %s is %s (%s)",
+                self.model, response.id, response.status, response.incomplete_details,
+            )
         return RawReply(
-            text=response.text or "",
-            served_model=getattr(response, "model_version", None),
-            usage=_token_usage(response),
+            text=response.output_text or "",
+            served_model=getattr(response, "model", None),
+            usage=_usage(response),
             latency_ms=int((time.monotonic() - started) * 1000),
         )
 
