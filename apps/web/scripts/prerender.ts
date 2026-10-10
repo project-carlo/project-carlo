@@ -5,9 +5,16 @@ import { resolve } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { loadEnv } from "vite";
 import { createElement } from "react";
-import { churchCity, churchSchedule, cityIndex, cityPageData, findChurch } from "../src/api";
+import {
+  churchCity,
+  churchMapData,
+  churchSchedule,
+  cityIndex,
+  cityPageData,
+  findChurch,
+} from "../src/api";
 import { cityPath, type CityCenters } from "../src/lib/cities";
-import { CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
+import { ANALYTICS_ENTRY, CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
 import { HOME_LINK_ATTRIBUTE, HOME_SEARCH_KEY } from "../src/hooks/useHomeHref";
 import cityCentersJson from "../src/data/cityCenters.json";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
@@ -53,8 +60,8 @@ interface ManifestChunk {
 
 /**
  * The app's stylesheet and the fonts to preload, as Vite's build manifest
- * lists them for the index.html entry, the city pages' map script, and the
- * church index's search script. The static pages link only that one
+ * lists them for the index.html entry, the city and church pages' map script, the
+ * church index's search script, and the analytics script every page loads. The static pages link only that one
  * stylesheet, so the build fails if any CSS lands elsewhere (say, a
  * lazy-loaded route importing its own), or a font or a script goes missing,
  * rather than shipping pages without them.
@@ -64,6 +71,7 @@ function discoverAssets(): {
   fontPaths: string[];
   cityMapScript: string;
   churchIndexScript: string;
+  analyticsScript: string;
 } {
   if (!existsSync(MANIFEST_PATH)) {
     throw new Error(`${MANIFEST_PATH} is missing. Run \`vite build\` first.`);
@@ -102,12 +110,15 @@ function discoverAssets(): {
   if (!cityMap?.isEntry) throw new Error(`Vite's manifest has no ${CITY_MAP_ENTRY} entry.`);
   const churchIndex = manifest[CHURCH_INDEX_ENTRY];
   if (!churchIndex?.isEntry) throw new Error(`Vite's manifest has no ${CHURCH_INDEX_ENTRY} entry.`);
+  const analytics = manifest[ANALYTICS_ENTRY];
+  if (!analytics?.isEntry) throw new Error(`Vite's manifest has no ${ANALYTICS_ENTRY} entry.`);
 
   return {
     cssPath: `/${css[0]}`,
     fontPaths,
     cityMapScript: `/${cityMap.file}`,
     churchIndexScript: `/${churchIndex.file}`,
+    analyticsScript: `/${analytics.file}`,
   };
 }
 
@@ -125,12 +136,17 @@ const HOME_LINK_SCRIPT =
 
 /**
  * Adds HOME_LINK_SCRIPT to the page's head, so its Map links open the map
- * where the visitor left it. Added after a page is dated (see datePage): the
- * script is not what the page says, so it stays out of the lastmod hash.
+ * where the visitor left it, and the analytics script (src/islands/analytics.ts).
+ * Added after a page is dated (see datePage): the scripts are not what the
+ * page says, so they stay out of the lastmod hash.
  */
-function withHomeLinkScript(html: string): string {
+function withPageScripts(html: string, analyticsScript: string): string {
   if (!html.includes("</head>")) throw new Error("A prerendered page has no </head>.");
-  return html.replace("</head>", `<script>${HOME_LINK_SCRIPT}</script></head>`);
+  return html.replace(
+    "</head>",
+    `<script>${HOME_LINK_SCRIPT}</script>` +
+      `<script type="module" src="${analyticsScript}"></script></head>`,
+  );
 }
 
 function escapeXml(text: string): string {
@@ -281,7 +297,8 @@ async function main() {
   }
   const snapshot = parseSnapshot(gunzipSync(readFileSync(SNAPSHOT_PATH)).toString("utf-8"));
 
-  const { cssPath, fontPaths, cityMapScript, churchIndexScript } = discoverAssets();
+  const { cssPath, fontPaths, cityMapScript, churchIndexScript, analyticsScript } =
+    discoverAssets();
   const slugs = snapshot.churches.map((church) => church.slug);
   const origin = SITE_ORIGIN;
 
@@ -303,7 +320,7 @@ async function main() {
       .slice(0, 16);
     const lastmod = resolveLastmod(previousDates?.pages[path], hash, buildDate);
     pageDates[path] = { hash, lastmod };
-    return withHomeLinkScript(html.split(LASTMOD_PLACEHOLDER).join(lastmod));
+    return withPageScripts(html.split(LASTMOD_PLACEHOLDER).join(lastmod), analyticsScript);
   };
 
   let count = 0;
@@ -318,9 +335,11 @@ async function main() {
           createElement(StaticChurchPage, {
             church,
             city: churchCity(snapshot, church),
+            map: churchMapData(snapshot, church),
             events,
             cssPath,
             fontPaths,
+            cityMapScript,
             canonicalUrl: canonicalUrlForChurchSlug(origin, slug),
             lastModified: LASTMOD_PLACEHOLDER,
           }),

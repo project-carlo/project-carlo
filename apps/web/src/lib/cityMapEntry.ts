@@ -10,3 +10,7 @@ export const CITY_MAP_ENTRY = "src/islands/cityMap.ts";
 /** The all-churches index's search script (src/islands/churchIndex.ts), the
  *  same way. */
 export const CHURCH_INDEX_ENTRY = "src/islands/churchIndex.ts";
+
+/** The analytics script every prerendered page loads
+ *  (src/islands/analytics.ts), the same way. */
+export const ANALYTICS_ENTRY = "src/islands/analytics.ts";

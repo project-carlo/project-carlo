@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { DAY_ORDER } from "../constants/days";
 import { EVENT_TYPE_LABELS, EVENT_TYPE_ORDER } from "../constants/eventTypes";
@@ -20,8 +21,11 @@ import {
 import { FeedbackTrigger } from "@/components/FeedbackTrigger";
 import { Fleuron } from "@/components/Fleuron";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
+import { CityMapPreview } from "@/components/CityMapPreview";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, type CityLink } from "@/lib/cities";
+import type { CityMapConfig } from "@/lib/cityMap";
+import type { CityMapData } from "@/lib/cityMapLayout";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
 import { LASTMOD_EXEMPT_ATTRIBUTE } from "@/lib/lastmod";
 
@@ -127,6 +131,7 @@ function SectionPageRef({
         href={`${bulletinUrl}#page=${pageNumber}`}
         target="_blank"
         rel="noopener noreferrer"
+        data-track="bulletin_page"
         title={title}
         className={`${baseClass} ${ANNOTATION_LINK_CLASS}`}
       >
@@ -166,6 +171,7 @@ function PageRef({
         href={`${bulletinUrl}#page=${event.page_number}`}
         target="_blank"
         rel="noopener noreferrer"
+        data-track="bulletin_page"
         title={title}
         className={`ml-2.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
       >
@@ -209,11 +215,25 @@ interface ChurchPageContentProps {
   church: ChurchDetail;
   /** The city page the church is listed on, as that page names it. */
   city: CityLink | null;
+  /** The church's map as it opens; null for a church with no known position. */
+  map: CityMapData | null;
   events: EventSummary[];
+  /**
+   * Makes the map preview live (see CityMapPreview); the prerendered page
+   * leaves it out and src/islands/cityMap.ts does the same.
+   */
+  liveMap?: (config: CityMapConfig) => ReactNode;
 }
 
-export function ChurchPageContent({ church, city, events }: ChurchPageContentProps) {
+export function ChurchPageContent({
+  church,
+  city,
+  map,
+  events,
+  liveMap,
+}: ChurchPageContentProps) {
   const byType = partitionEventsByType(events);
+  const name = church.name ?? UNNAMED_CHURCH;
 
   return (
     <>
@@ -224,7 +244,7 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
         <section className="rise-in mx-auto max-w-2xl text-center">
           <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church, city)} />
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
-            {church.name ?? UNNAMED_CHURCH}
+            {name}
           </h1>
 
           {formatAddress(church) ? (
@@ -242,6 +262,7 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
                 href={church.homepage_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="parish_website"
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <ExternalLinkIcon className="size-3.5" />
@@ -253,6 +274,7 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
                 href={church.bulletin_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="bulletin"
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <FileTextIcon className="size-3.5" />
@@ -400,6 +422,33 @@ export function ChurchPageContent({ church, city, events }: ChurchPageContentPro
               })}
             </div>
           </div>
+        ) : null}
+
+        {/* After the times, which are what the page is for: where the church
+         *  is, among its neighbours, and the way into the full map. */}
+        {map ? (
+          <section
+            aria-labelledby="church-map-heading"
+            className="rise-in mx-auto mt-12 max-w-4xl"
+            style={{ animationDelay: "120ms" }}
+          >
+            <h2
+              id="church-map-heading"
+              className="mb-5 font-display text-[1.75rem] leading-none font-normal text-ink"
+            >
+              Map
+            </h2>
+            {/* Keyed by church: when the app goes from one church's page
+             *  straight to another's, the live map starts again on the new
+             *  church. */}
+            <CityMapPreview
+              key={church.id}
+              label={name}
+              map={map}
+              churchId={church.id}
+              live={liveMap}
+            />
+          </section>
         ) : null}
 
         <div className="mx-auto mt-16 max-w-2xl">

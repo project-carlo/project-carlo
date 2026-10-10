@@ -9,9 +9,20 @@ import {
   APPROXIMATE_LOCATION_PATH,
   type ApproximateLocationResponse,
 } from "../src/lib/approximateLocationApi";
+import {
+  ANALYTICS_PATH,
+  MAX_BATCH_BYTES,
+  analyticsDataPoint,
+  isBotUserAgent,
+  parseAnalyticsBatch,
+  type AnalyticsDataPoint,
+} from "../src/lib/analyticsApi";
 
 interface Env {
   ASSETS: { fetch(request: Request): Promise<Response> };
+  /** Workers Analytics Engine (wrangler.jsonc). Optional, so a Worker
+   *  deployed without the binding still serves the site. */
+  ANALYTICS?: { writeDataPoint(point: AnalyticsDataPoint): void };
 }
 
 /** The slice of Cloudflare's `request.cf` geolocation this Worker reads. */
@@ -29,6 +40,9 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === APPROXIMATE_LOCATION_PATH) {
       return approximateLocation(request);
+    }
+    if (url.pathname === ANALYTICS_PATH) {
+      return recordEvents(request, url, env);
     }
     return env.ASSETS.fetch(request);
   },
@@ -58,6 +72,39 @@ function approximateLocation(request: Request): Response {
     // Per visitor, so no shared cache may keep it.
     headers: { "Cache-Control": "private, no-store" },
   });
+}
+
+/**
+ * Writes a batch of the browser's events (src/lib/analytics.ts) to Analytics
+ * Engine, one data point each. The country is Cloudflare's, from the request;
+ * the address itself is never recorded. Crawlers' batches are dropped.
+ * Anything that isn't a batch gets a 400, and the browser never reads the
+ * answer, so a 204 says only that the batch was accepted.
+ */
+async function recordEvents(request: Request, url: URL, env: Env): Promise<Response> {
+  if (request.method !== "POST") {
+    return new Response(null, { status: 405, headers: { Allow: "POST" } });
+  }
+  const length = Number(request.headers.get("Content-Length") ?? 0);
+  if (!(length <= MAX_BATCH_BYTES)) return new Response(null, { status: 413 });
+  let body: unknown;
+  try {
+    const raw = await request.text();
+    if (raw.length > MAX_BATCH_BYTES) return new Response(null, { status: 413 });
+    body = JSON.parse(raw);
+  } catch {
+    return new Response(null, { status: 400 });
+  }
+  const batch = parseAnalyticsBatch(body);
+  if (!batch) return new Response(null, { status: 400 });
+  if (env.ANALYTICS && !isBotUserAgent(request.headers.get("User-Agent"))) {
+    const cf = (request as Request & { cf?: CfGeo }).cf;
+    const context = { host: url.hostname, country: cf?.country ?? "" };
+    for (const event of batch.events) {
+      env.ANALYTICS.writeDataPoint(analyticsDataPoint(batch, event, context));
+    }
+  }
+  return new Response(null, { status: 204 });
 }
 
 function parseCoordinate(raw: string | undefined, limit: number): number | null {

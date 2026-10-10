@@ -17,6 +17,14 @@
     // invocations is plenty to spot errors.
     "head_sampling_rate": 0.1,
   },
+  // Visitor analytics (worker/index.ts, docs/analytics.md). The dataset is
+  // created on the first write. Workers Free includes 100,000 data points a
+  // day, one per event; the browser batches a page's events into a single
+  // request, so each page costs one Worker invocation. Preview versions write
+  // here too, tagged with their own host.
+  "analytics_engine_datasets": [
+    { "binding": "ANALYTICS", "dataset": "project_carlo_events" },
+  ],
   "preview_urls": true,
   "assets": {
     "binding": "ASSETS",

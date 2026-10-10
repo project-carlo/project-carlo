@@ -1,6 +1,7 @@
 import { MemoryRouter } from "react-router-dom";
 import type { ChurchDetail, EventSummary } from "../types";
 import type { CityLink } from "../lib/cities";
+import type { CityMapData } from "../lib/cityMapLayout";
 import { ChurchPageContent } from "../components/ChurchPageContent";
 import {
   buildChurchDescription,
@@ -14,9 +15,12 @@ import { StaticPageHead } from "./StaticPageHead";
 interface StaticChurchPageProps {
   church: ChurchDetail;
   city: CityLink | null;
+  map: CityMapData | null;
   events: EventSummary[];
   cssPath: string;
   fontPaths: string[];
+  /** Makes the map preview live; the only script the page loads, when it has a map. */
+  cityMapScript: string;
   canonicalUrl: string;
   /** ISO date (YYYY-MM-DD) the church's data was last updated, if known. */
   lastModified: string | null;
@@ -25,9 +29,11 @@ interface StaticChurchPageProps {
 export function StaticChurchPage({
   church,
   city,
+  map,
   events,
   cssPath,
   fontPaths,
+  cityMapScript,
   canonicalUrl,
   lastModified,
 }: StaticChurchPageProps) {
@@ -49,8 +55,9 @@ export function StaticChurchPage({
       />
       <body>
         <MemoryRouter>
-          <ChurchPageContent church={church} city={city} events={events} />
+          <ChurchPageContent church={church} city={city} map={map} events={events} />
         </MemoryRouter>
+        {map ? <script type="module" src={cityMapScript} /> : null}
       </body>
     </html>
   );

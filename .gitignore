@@ -63,6 +63,8 @@ data/runs/*
 data/runs/*/*
 !data/runs/*/eval/
 data/out/
+data/pipeline/
+scratch/
 # `pnpm label --demo` builds its generated dataset here. Real labels
 # (data/labels/) are committed.
 data/labeler-demo/

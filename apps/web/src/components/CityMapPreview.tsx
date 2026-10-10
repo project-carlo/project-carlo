@@ -1,6 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import type { CityPageData } from "../api";
 import { CityMapExpandChip } from "./CityMapExpandChip";
 import { MapCornerControls } from "./MapCornerControls";
 import {
@@ -10,6 +9,8 @@ import {
   clusterAnchor,
   clusterDiameter,
   CLUSTER_Z_INDEX_OFFSET,
+  CURRENT_CHURCH_PIN_BODY,
+  CURRENT_CHURCH_Z_INDEX_OFFSET,
 } from "@/lib/churchPin";
 import {
   CITY_MAP_ATTRIBUTE,
@@ -17,13 +18,14 @@ import {
   CITY_MAP_ZOOM_CORNER_CLASS,
   type CityMapConfig,
 } from "@/lib/cityMap";
-import { CITY_MAP_CANVAS, type CityMapMarker } from "@/lib/cityMapLayout";
+import type { CityMapData, CityMapMarker } from "@/lib/cityMapLayout";
 import { encodeMapViewToParams, type MapView } from "@/lib/mapView";
 import {
   staticMapPlacement,
   staticMapPosition,
   staticMapTiles,
   type StaticMapPosition,
+  type StaticMapSize,
 } from "@/lib/staticMap";
 
 const OSM_COPYRIGHT_URL = "https://www.openstreetmap.org/copyright";
@@ -44,7 +46,7 @@ function StaticMarker({ marker, at }: PlacedMarker) {
     const [x, y] = CHURCH_PIN_ANCHOR;
     return (
       <div
-        className="leaflet-marker-icon church-map-marker"
+        className={`leaflet-marker-icon church-map-marker${marker.current ? " is-current" : ""}`}
         style={{ left: at.left - x, top: at.top - y, width, height }}
       >
         <svg
@@ -54,7 +56,9 @@ function StaticMarker({ marker, at }: PlacedMarker) {
           viewBox={`0 0 ${width} ${height}`}
           fill="none"
           aria-hidden="true"
-          dangerouslySetInnerHTML={{ __html: CHURCH_PIN_BODY }}
+          dangerouslySetInnerHTML={{
+            __html: marker.current ? CURRENT_CHURCH_PIN_BODY : CHURCH_PIN_BODY,
+          }}
         />
       </div>
     );
@@ -73,24 +77,35 @@ function StaticMarker({ marker, at }: PlacedMarker) {
   );
 }
 
+/** A marker's zIndexOffset on the live map. */
+function zIndexOffset(marker: CityMapMarker): number {
+  if (marker.kind === "cluster") return CLUSTER_Z_INDEX_OFFSET;
+  return marker.current ? CURRENT_CHURCH_Z_INDEX_OFFSET : 0;
+}
+
 /**
- * The markers in Leaflet's stacking order: lower ones over higher ones, and
- * roundels over pins (each its point's `top` plus its zIndexOffset).
+ * The markers in Leaflet's stacking order: lower ones over higher ones,
+ * roundels over pins, and a church page's own pin over them all (each its
+ * point's `top` plus its zIndexOffset).
  */
-function placeMarkers(markers: CityMapMarker[], view: MapView): PlacedMarker[] {
-  const zIndex = ({ marker, at }: PlacedMarker) =>
-    at.top + (marker.kind === "cluster" ? CLUSTER_Z_INDEX_OFFSET : 0);
+function placeMarkers(
+  markers: CityMapMarker[],
+  view: MapView,
+  canvas: StaticMapSize,
+): PlacedMarker[] {
+  const zIndex = ({ marker, at }: PlacedMarker) => at.top + zIndexOffset(marker);
   return markers
     .map((marker) => ({
       marker,
-      at: staticMapPosition(view, view.zoom, CITY_MAP_CANVAS, marker),
+      at: staticMapPosition(view, view.zoom, canvas, marker),
     }))
     .sort((a, b) => zIndex(a) - zIndex(b));
 }
 
 /**
- * The city's map as the live map opens on it: OpenStreetMap tiles, every
- * church the home map would show there (as its pins or numbered roundels),
+ * A city's map (or a church's, on its page) as the live map opens on it:
+ * OpenStreetMap tiles, every church the home map would show there (as its
+ * pins or numbered roundels, a church page's own pin marked),
  * the Expand button and, on a desktop, the zoom buttons. Plain HTML, laid out
  * here, so the prerendered page draws it without JavaScript, pixel for pixel
  * as Leaflet will (see src/lib/staticMap.ts).
@@ -102,28 +117,34 @@ function placeMarkers(markers: CityMapMarker[], view: MapView): PlacedMarker[] {
  * preview links to the home map at the same view.
  */
 export function CityMapPreview({
-  data,
+  label,
+  map,
+  churchId,
   live,
   className = "",
 }: {
-  data: CityPageData;
+  /** What the map is around: "East Aurora, NY", or a church's name. */
+  label: string;
+  map: CityMapData | null;
+  /** On a church page, its church (see CityMapConfig). */
+  churchId?: number;
   live?: (config: CityMapConfig) => ReactNode;
   className?: string;
 }) {
-  const { city, map } = data;
   if (!map) return null;
-  const { view, markers } = map;
+  const { view, canvas, markers } = map;
 
-  const config: CityMapConfig = { label: city.label, view };
+  const config: CityMapConfig =
+    churchId === undefined ? { label, view } : { label, view, churchId };
   const mapHref = `/?${encodeMapViewToParams(view, new URLSearchParams())}`;
-  const tiles = staticMapTiles(view, view.zoom, CITY_MAP_CANVAS);
+  const tiles = staticMapTiles(view, view.zoom, canvas);
   const canvasStyle = {
-    width: CITY_MAP_CANVAS.width,
-    height: CITY_MAP_CANVAS.height,
+    width: canvas.width,
+    height: canvas.height,
     // For `.city-map-canvas`'s fallback placement, in app.css.
-    "--city-map-canvas-width": `${CITY_MAP_CANVAS.width}px`,
-    "--city-map-canvas-height": `${CITY_MAP_CANVAS.height}px`,
-    ...staticMapPlacement(view, view.zoom, CITY_MAP_CANVAS),
+    "--city-map-canvas-width": `${canvas.width}px`,
+    "--city-map-canvas-height": `${canvas.height}px`,
+    ...staticMapPlacement(view, view.zoom, canvas),
   } as CSSProperties;
 
   return (
@@ -148,7 +169,7 @@ export function CityMapPreview({
           ))}
         </div>
         <div className="city-map-static-pins">
-          {placeMarkers(markers, view).map(({ marker, at }) => (
+          {placeMarkers(markers, view, canvas).map(({ marker, at }) => (
             <StaticMarker key={`${marker.kind}-${marker.id}`} marker={marker} at={at} />
           ))}
         </div>
@@ -157,7 +178,7 @@ export function CityMapPreview({
       {/* The whole preview opens the map; the attribution link sits above it. */}
       <Link
         to={mapHref}
-        aria-label={`Open the map of churches around ${city.label}`}
+        aria-label={`Open the map of churches around ${label}`}
         className="city-map-link missal-focus absolute inset-0"
       />
       <CityMapExpandChip className="city-map-static-control" />

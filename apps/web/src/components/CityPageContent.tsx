@@ -232,7 +232,8 @@ export function CityPageContent({
              *  live map starts again on the new city's view. */}
             <CityMapPreview
               key={city.slug}
-              data={data}
+              label={city.label}
+              map={data.map}
               live={liveMap}
               className="mt-8 mb-3"
             />

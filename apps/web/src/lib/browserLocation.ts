@@ -6,11 +6,17 @@ export interface BrowserLocation {
   lng: number;
 }
 
+/** Why a location request failed. */
+export type BrowserLocationFailure = "unsupported" | "denied" | "unavailable";
+
 /** A failed location request, with a message fit to show the visitor. */
 export class BrowserLocationError extends Error {
-  constructor(message: string) {
+  readonly reason: BrowserLocationFailure;
+
+  constructor(message: string, reason: BrowserLocationFailure) {
     super(message);
     this.name = "BrowserLocationError";
+    this.reason = reason;
   }
 }
 
@@ -25,6 +31,7 @@ export function requestBrowserLocation(): Promise<BrowserLocation> {
       reject(
         new BrowserLocationError(
           `Your browser can’t share your location. ${LOCATION_FALLBACK}`,
+          "unsupported",
         ),
       );
       return;
@@ -44,6 +51,7 @@ export function requestBrowserLocation(): Promise<BrowserLocation> {
             error.code === error.PERMISSION_DENIED
               ? "Location is blocked. Allow it in your browser’s site settings."
               : `Couldn’t find your location. ${LOCATION_FALLBACK}`,
+            error.code === error.PERMISSION_DENIED ? "denied" : "unavailable",
           ),
         ),
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 },
