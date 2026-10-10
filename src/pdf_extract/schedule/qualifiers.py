@@ -7,6 +7,10 @@ list such as `["first", "third"]`, and a season as
 `schedule_entry` stores the weeks as a 6-bit mask (bit 0 first ... bit 5 last,
 0 = every week) and the season as four integer columns. These are the only
 functions that translate between the two.
+
+`describe_schedule_pattern` words the qualifiers for people ("First Friday of
+the month, October through June"), as the web app's
+`apps/web/src/lib/schedulePattern.ts` does.
 """
 
 from __future__ import annotations
@@ -101,3 +105,51 @@ def columns_to_season(
         "end_month": end_month,
         "end_day": end_day,
     }
+
+
+def _join_with_and(parts: list[str]) -> str:
+    if len(parts) <= 1:
+        return parts[0] if parts else ""
+    if len(parts) == 2:
+        return f"{parts[0]} and {parts[1]}"
+    return f"{', '.join(parts[:-1])}, and {parts[-1]}"
+
+
+def describe_weeks_of_month(weeks: list[str], day_of_week: str | None) -> str | None:
+    """"First Friday of the month", "First and third Fridays of the month"."""
+    ordered = [week for week in WEEKS_OF_MONTH if week in weeks]
+    if not ordered:
+        return None
+    day = day_of_week.strip() if isinstance(day_of_week, str) else ""
+    if not day:
+        return f"{_join_with_and([w.capitalize() for w in ordered])} week of the month"
+    ordinals = [week.capitalize() if i == 0 else week for i, week in enumerate(ordered)]
+    plural = "s" if len(ordered) > 1 else ""
+    return f"{_join_with_and(ordinals)} {day.capitalize()}{plural} of the month"
+
+
+def describe_season(season: dict[str, int | None] | None) -> str | None:
+    """"October through June", or "June 4 through September 10" once the bulletin dated it.
+
+    A boundary carries a day only where the parish printed one, so a range
+    given in whole months is described in whole months.
+    """
+    if season is None:
+        return None
+    ends = []
+    for edge in ("start", "end"):
+        month, day = season[f"{edge}_month"], season[f"{edge}_day"]
+        name = MONTHS[month - 1]
+        ends.append(name if day is None else f"{name} {day}")
+    return f"{ends[0]} through {ends[1]}"
+
+
+def describe_schedule_pattern(
+    weeks: list[str], season: dict[str, int | None] | None, day_of_week: str | None,
+) -> str | None:
+    """The whole qualifier as one phrase, or None for a plain weekly slot."""
+    parts = [
+        part for part in (describe_weeks_of_month(weeks, day_of_week), describe_season(season))
+        if part is not None
+    ]
+    return ", ".join(parts) if parts else None

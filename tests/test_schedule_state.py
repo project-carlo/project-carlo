@@ -55,6 +55,7 @@ from pdf_extract.schedule.policy import (
 from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,
+    describe_schedule_pattern,
     mask_to_weeks,
     season_to_columns,
     weeks_to_mask,
@@ -222,6 +223,23 @@ def test_migration_adds_the_schedule_tables(conn: sqlite3.Connection) -> None:
 
 
 # ── Qualifiers and entries ──────────────────────────────────────────────────
+def test_qualifiers_are_described_as_the_web_app_describes_them() -> None:
+    # The display table of PR 22's PRD, which apps/web/src/lib/schedulePattern.ts follows.
+    def season(start_month, start_day, end_month, end_day):
+        return columns_to_season(start_month, start_day, end_month, end_day)
+
+    assert describe_schedule_pattern([], None, "Friday") is None
+    assert describe_schedule_pattern(["first"], None, "Friday") == "First Friday of the month"
+    assert describe_schedule_pattern(["fourth", "second"], None, "saturday") == (
+        "Second and fourth Saturdays of the month")
+    assert describe_schedule_pattern([], season(10, None, 6, None), "Tuesday") == (
+        "October through June")
+    assert describe_schedule_pattern([], season(6, 4, 9, 10), "Thursday") == (
+        "June 4 through September 10")
+    assert describe_schedule_pattern(["first"], season(10, None, 6, None), "Friday") == (
+        "First Friday of the month, October through June")
+
+
 def test_weeks_and_seasons_convert_both_ways() -> None:
     assert weeks_to_mask(["first", "third"]) == 0b101
     assert weeks_to_mask([]) == 0

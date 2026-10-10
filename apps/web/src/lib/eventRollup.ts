@@ -1,10 +1,6 @@
 import type { EventSummary } from "../types";
-import {
-  formatMinutesMissal,
-  formatQualifiedTime,
-  formatSlotQualifier,
-  titleCase,
-} from "../utils";
+import { formatMinutesMissal, titleCase } from "../utils";
+import { describeSchedulePattern, patternKey } from "./schedulePattern";
 
 /**
  * Rolls a church's upcoming events up into one row per day, so a church with
@@ -23,15 +19,30 @@ export interface ScheduleRollupRow {
   /**
    * Distinct start times for the day, earliest first, each formatted with its
    * own meridiem so no time in the popup can be read as the wrong half of the
-   * day, and followed by its slot's qualifier when it isn't every week of the
-   * year: "10 a.m. (1st & 3rd)".
+   * day.
    */
   times: string[];
+  /**
+   * When the slot does not simply happen every week, the qualifier that says
+   * so: "First Friday of the month". Without it the day heading alone would
+   * promise a monthly devotion every week.
+   */
+  note: string | null;
+}
+
+/** A weekly event's qualifier ("First Friday of the month"), else null. */
+export function slotQualifier(event: EventSummary): string | null {
+  return event.kind === "weekly"
+    ? describeSchedulePattern(event, event.day_of_week)
+    : null;
 }
 
 function rollupKey(event: EventSummary): string {
   if (event.kind === "weekly" && event.day_of_week) {
-    return `weekly:${event.day_of_week.toLowerCase()}`;
+    // Slots on the same weekday still get their own rows when they keep
+    // different schedules, so a first-Friday devotion is never folded into the
+    // times of a Mass that runs every Friday.
+    return `weekly:${event.day_of_week.toLowerCase()}:${patternKey(event)}`;
   }
   if (event.date) return `date:${event.date}`;
   // Nothing to group on — keep the event on a row of its own.
@@ -73,57 +84,36 @@ function formatCompactDate(dateStr: string): string {
   return formatted;
 }
 
-/** A start time and the qualifier of the slot it starts, as a row lists them. */
-export interface QualifiedTime {
-  start_time: number;
-  qualifier: string | null;
-}
-
-/** Add an event's time to a row's, unless an equal one is already there. */
-export function addQualifiedTime(times: QualifiedTime[], event: EventSummary): void {
-  const qualifier = event.kind === "weekly" ? formatSlotQualifier(event) : null;
-  if (
-    !times.some(
-      (t) => t.start_time === event.start_time && t.qualifier === qualifier,
-    )
-  ) {
-    times.push({ start_time: event.start_time, qualifier });
-  }
-}
-
-/** A row's times, earliest first, formatted for display. */
-export function formatQualifiedTimes(times: QualifiedTime[]): string[] {
-  return [...times]
-    .sort((a, b) => {
-      if (a.start_time !== b.start_time) return a.start_time - b.start_time;
-      // An every-week time ("") before qualified ones at the same hour.
-      const qa = a.qualifier ?? "";
-      const qb = b.qualifier ?? "";
-      return qa < qb ? -1 : qa > qb ? 1 : 0;
-    })
-    .map((t) => formatQualifiedTime(formatMinutesMissal(t.start_time), t.qualifier));
-}
-
 export function rollUpEventsByDay(
   events: EventSummary[],
 ): ScheduleRollupRow[] {
-  const rows = new Map<string, { label: string; times: QualifiedTime[] }>();
+  const rows = new Map<
+    string,
+    { label: string; startTimes: number[]; note: string | null }
+  >();
 
   for (const event of events) {
     const key = rollupKey(event);
     let row = rows.get(key);
     if (!row) {
-      row = { label: rollupLabel(event), times: [] };
+      row = {
+        label: rollupLabel(event),
+        startTimes: [],
+        note: slotQualifier(event),
+      };
       rows.set(key, row);
     }
     // Two events can share a slot (e.g. a Mass and a Confession at 4 p.m.);
     // the preview only shows the time, so list it once.
-    addQualifiedTime(row.times, event);
+    if (!row.startTimes.includes(event.start_time)) {
+      row.startTimes.push(event.start_time);
+    }
   }
 
   return [...rows.entries()].map(([key, row]) => ({
     key,
     label: row.label,
-    times: formatQualifiedTimes(row.times),
+    times: [...row.startTimes].sort((a, b) => a - b).map(formatMinutesMissal),
+    note: row.note,
   }));
 }

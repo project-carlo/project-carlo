@@ -40,6 +40,20 @@ function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
 }
 
 describe("eventMatchesFilters", () => {
+  it("hides a weekly slot out of season, and keeps a monthly one", () => {
+    const filters: ChurchFilters = { types: [] };
+    const september = new Date(2026, 8, 15);
+    const octoberToJune = rawEvent({ season_start_month: 10, season_end_month: 6 });
+    expect(eventMatchesFilters(octoberToJune, filters, september)).toBe(false);
+    expect(eventMatchesFilters(octoberToJune, filters, new Date(2026, 9, 1))).toBe(
+      true,
+    );
+    // The map answers "this time of year", so a first-Monday slot stays.
+    expect(
+      eventMatchesFilters(rawEvent({ weeks_of_month: ["first"] }), filters, september),
+    ).toBe(true);
+  });
+
   it("rejects cancelled events regardless of other filters", () => {
     const filters: ChurchFilters = { types: [] };
     expect(eventMatchesFilters(rawEvent({ cancelled: true }), filters)).toBe(

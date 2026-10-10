@@ -9,7 +9,6 @@ import {
   formatLongMonthDay,
   formatMonthDay,
   formatMinutesMissal,
-  formatSlotQualifier,
   titleCase,
 } from "../utils";
 import { ALL_CHURCHES, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
@@ -27,6 +26,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, type CityLink } from "@/lib/cities";
 import type { CityMapConfig } from "@/lib/cityMap";
 import type { CityMapData } from "@/lib/cityMapLayout";
+import { slotQualifier } from "@/lib/eventRollup";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
 import { LASTMOD_EXEMPT_ATTRIBUTE } from "@/lib/lastmod";
 
@@ -156,15 +156,21 @@ function EventNote({ note }: { note: string | null }) {
   );
 }
 
-/** When a weekly slot isn't every week of the year: "1st & 3rd", "May–Oct". */
-function SlotQualifier({ event }: { event: EventSummary }) {
-  const qualifier = formatSlotQualifier(event);
-  if (!qualifier) return null;
-  return (
-    <span className={`ml-2 ${ANNOTATION_CLASS} text-ink-soft`}>
-      {qualifier}
-    </span>
+/**
+ * What qualifies this time beyond its weekday: when the slot only runs part of
+ * the year or only on certain weeks of the month, plus whatever the bulletin
+ * added.
+ *
+ * The church page lists a slot whether or not it is running today (someone
+ * looking up a parish wants its whole schedule), so the qualifier is what tells
+ * them the October-to-June confession slot they can see here is not on offer in
+ * September, and why the map did not show it.
+ */
+function eventQualifier(event: EventSummary): string | null {
+  const parts = [slotQualifier(event), event.note].filter(
+    (part): part is string => Boolean(part),
   );
+  return parts.length > 0 ? parts.join(" · ") : null;
 }
 
 function PageRef({
@@ -370,8 +376,7 @@ export function ChurchPageContent({
                                   <span className="tabular-nums">
                                     {formatTimeValue(event)}
                                   </span>
-                                  <SlotQualifier event={event} />
-                                  <EventNote note={event.note} />
+                                  <EventNote note={eventQualifier(event)} />
                                   {event.page_number !== sectionPage ? (
                                     <PageRef
                                       event={event}
@@ -417,7 +422,7 @@ export function ChurchPageContent({
                                     ? ` – ${formatMinutesMissal(event.end_time)}`
                                     : ""}
                                 </span>
-                                <EventNote note={event.note} />
+                                <EventNote note={eventQualifier(event)} />
                                 {event.page_number !== sectionPage ? (
                                   <PageRef
                                     event={event}

@@ -30,8 +30,8 @@ import {
   SnapshotVersionError,
   type Snapshot,
 } from "./lib/snapshot";
+import { dateInSeason, patternKey } from "./lib/schedulePattern";
 import { reloadForNewVersion } from "./lib/staleDeploy";
-import { formatSlotQualifier } from "./utils";
 import type {
   ChurchBase,
   ChurchDetail,
@@ -125,8 +125,15 @@ function toEventSummary(ev: RawEvent): EventSummary {
 export function eventMatchesFilters(
   ev: RawEvent,
   filters: ChurchFilters,
+  today: Date = new Date(),
 ): boolean {
   if (ev.cancelled) return false;
+  // The map answers "where can I go this week", so a slot that does not resume
+  // until October is not an answer in September. Monthly slots stay: they do
+  // run at this time of year, and the popup says which week of the month.
+  if (ev.event_kind === "weekly" && !dateInSeason(today, seasonOf(ev))) {
+    return false;
+  }
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {
     if (ev.event_kind === "weekly" && ev.day_of_week) {
       const dayIdx = filterDayFromJsDay(jsDayFor(ev.day_of_week));
@@ -166,7 +173,10 @@ function buildMapItem(
   let popupSchedule = weeklyEvents
     .map(toEventSummary)
     .filter((e) => {
-      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}-${formatSlotQualifier(e) ?? ""}`;
+      // Two slots on the same weekday and time are only the same slot when
+      // they keep the same schedule: a first-Friday devotion is not a
+      // duplicate of a Friday one that runs every week.
+      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}-${patternKey(e)}`;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -225,10 +235,13 @@ export function collectMapItems(
   const types = filters.types.length > 0 ? filters.types : EVENT_TYPE_ORDER;
   const typeSet = new Set<EventType>(types);
 
+  // One reading of "now" for the whole pass; this runs per event on the
+  // slider-drag path.
+  const today = new Date();
   const grouped = new Map<number, RawEvent[]>();
   for (const ev of allEvents) {
     if (!typeSet.has(ev.event_type)) continue;
-    if (!eventMatchesFilters(ev, filters)) continue;
+    if (!eventMatchesFilters(ev, filters, today)) continue;
     let list = grouped.get(ev.church_id);
     if (!list) {
       list = [];

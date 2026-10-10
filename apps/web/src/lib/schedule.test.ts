@@ -251,10 +251,18 @@ describe("computeNextOccurrence for weekly slots that skip weeks", () => {
     expect(next("sunday", {}, new Set(["2026-06-13"]))).toBe(on(2026, 6, 14));
   });
 
-  it("returns null when no kept day comes within the next year or so", () => {
-    // February 2027 has no fifth Sunday.
+  it("looks years ahead for a slot whose weeks and season rarely meet", () => {
+    // A fifth Sunday in February needs a leap year whose February starts on
+    // a Sunday: the next after June 2026 is 2032.
     expect(
       next("sunday", { weeks_of_month: ["fifth"], ...season(2, null, 2, null) }),
+    ).toBe(on(2032, 2, 29));
+  });
+
+  it("returns null when no kept day can ever come", () => {
+    // February 1-28 has no fifth Sunday.
+    expect(
+      next("sunday", { weeks_of_month: ["fifth"], ...season(2, null, 2, 28) }),
     ).toBeNull();
   });
 });

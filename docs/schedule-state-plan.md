@@ -858,10 +858,26 @@ code departs from it.
   rows too. A cancellation matching nothing is left out in both modes; where an
   extract-mode bulletin repeats a weekly slot, the lowest id is named.
 - **`weeks_of_month`** is a plain list column in the snapshot.
-- **The site shows the qualifiers.** Besides `computeNextOccurrence`, the web
-  app shows a short qualifier next to a weekly time ("1st & 3rd", "May–Oct") on
-  the church page, the city summary and the map popup, so a first-Saturday slot
-  doesn't read as every Saturday. Out-of-season slots are still listed.
+- **The site shows the qualifiers as PR 22 did.** The web app follows PR 22
+  (lyonsl2/project-carlo#22, and the PRD on its branch) for how the
+  qualifiers are shown, in `apps/web/src/lib/schedulePattern.ts`:
+  - The copy is long form, at the grain the bulletin gave: "First Friday of
+    the month", "Second and fourth Saturdays of the month", "October through
+    June", "June 4 through September 10", joined with a comma when a slot has
+    both. `schedule/qualifiers.describe_schedule_pattern` words the report's
+    entries the same way.
+  - The church page lists every weekly slot, in season or not, with the
+    qualifier beside the time in the same italic annotation as the note
+    ("First Friday of the month · Benediction").
+  - The map and its filters hide a weekly slot that is out of season today.
+    Monthly slots stay, since they do run at this time of year.
+  - The map popup and the city summary give a slot that isn't every week its
+    own row, with the qualifier as a line under it, so a first-Friday devotion
+    is never folded into an every-Friday Mass. Popup dedup keys include the
+    pattern. The city summary folds a run of days only when they keep the same
+    pattern and it has no weeks of the month.
+  - The next occurrence is looked for up to seven years ahead, so a slot whose
+    weeks and season rarely meet is still found.
 
 ### Commands
 

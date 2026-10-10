@@ -14,7 +14,7 @@ from typing import Any
 from pdf_extract.schedule.entries import Entry
 from pdf_extract.schedule.history import SUCCEEDED, CallPlace, parish_history
 from pdf_extract.schedule.policy import APPLIED, MASS_DELETE, REJECTED, STALE_BULLETIN
-from pdf_extract.schedule.qualifiers import mask_to_weeks
+from pdf_extract.schedule.qualifiers import describe_schedule_pattern, mask_to_weeks
 from pdf_extract.schedule.store import church_slugs, live_entries, load_entries, table_exists
 from pdf_extract.timeparse import minutes_to_time
 
@@ -22,15 +22,6 @@ from pdf_extract.timeparse import minutes_to_time
 CHANGED_IN_A_ROW = 3
 # A live weekly entry none of the parish's last this-many bulletins printed is flagged.
 UNSEEN_BULLETINS = 4
-
-_WEEK_SHORT = {
-    "first": "1st", "second": "2nd", "third": "3rd", "fourth": "4th", "fifth": "5th",
-    "last": "last",
-}
-_MONTH_SHORT = (
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-)
-
 
 def describe_entry(entry: Entry) -> str:
     """`report.describe_event` with the weeks of the month, season and note an entry carries."""
@@ -41,21 +32,10 @@ def describe_entry(entry: Entry) -> str:
         minutes_to_time(entry.start_time), minutes_to_time(entry.end_time),
         bool(entry.cancelled),
     ))
-    qualifiers = []
-    weeks = mask_to_weeks(entry.weeks_of_month)
-    if weeks:
-        qualifiers.append(" & ".join(_WEEK_SHORT[w] for w in weeks))
-    season = entry.season()
-    if season:
-        start = _MONTH_SHORT[season["start_month"] - 1] + (
-            f" {season['start_day']}" if season["start_day"] else ""
-        )
-        end = _MONTH_SHORT[season["end_month"] - 1] + (
-            f" {season['end_day']}" if season["end_day"] else ""
-        )
-        qualifiers.append(f"{start}–{end}")
-    if entry.note:
-        qualifiers.append(entry.note)
+    pattern = describe_schedule_pattern(
+        mask_to_weeks(entry.weeks_of_month), entry.season(), entry.day_of_week,
+    )
+    qualifiers = [part for part in (pattern, entry.note) if part]
     return text + (f" ({'; '.join(qualifiers)})" if qualifiers else "")
 
 

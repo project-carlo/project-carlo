@@ -127,7 +127,7 @@ describe("rollUpEventsByDay", () => {
     expect(rows.map((row) => row.label)).toEqual(["", ""]);
   });
 
-  it("qualifies a weekly time that isn't every week of the year", () => {
+  it("gives a slot that isn't every week its own row, with its qualifier", () => {
     const rows = rollUpEventsByDay([
       weekly("sunday", 9 * 60),
       event({
@@ -144,11 +144,13 @@ describe("rollUpEventsByDay", () => {
       }),
     ]);
 
-    expect(rows[0].times).toEqual([
-      "8 a.m. (May–Oct)",
-      "9 a.m.",
-      "9 a.m. (1st & 3rd)",
+    expect(rows.map((r) => [r.label, r.times, r.note])).toEqual([
+      ["Sunday", ["9 a.m."], null],
+      ["Sunday", ["9 a.m."], "First and third Sundays of the month"],
+      ["Sunday", ["8 a.m."], "May through October"],
     ]);
+    // A first-Sunday slot is never folded into the every-week row.
+    expect(new Set(rows.map((r) => r.key)).size).toBe(3);
   });
 
   it("returns no rows for an empty schedule", () => {

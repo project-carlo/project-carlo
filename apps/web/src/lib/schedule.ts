@@ -1,5 +1,6 @@
 import { DAY_ORDER, jsDayFor } from "../constants/days";
-import type { Season } from "../types";
+import type { Season, WeekOfMonth } from "../types";
+import { dateMatchesPattern } from "./schedulePattern";
 
 /**
  * Shared schedule logic for both the SPA and the prerenderer so that a static
@@ -12,10 +13,17 @@ const EVENING_START_MINUTES = 16 * 60;
 // 2-7, then these.
 const UNKNOWN_DAY_RANK = 8;
 const SPECIFIC_DATE_RANK = 9;
-// How far ahead a weekly slot's next kept date is looked for: over a year, so
-// a seasonal slot out of season, or a "fifth" week that skips months, is
-// still found.
-const WEEKLY_HORIZON_DAYS = 400;
+/**
+ * How far ahead a weekly slot's next occurrence is searched for, in weeks.
+ *
+ * Seven years, because the qualifiers multiply: a last-Thursday Holy Hour that
+ * only runs June 4 through June 20 offers three candidate dates a year, and one
+ * of them is the last Thursday of its month far less often than that. A slot
+ * that resolves to nothing is dropped from the church page, so the loop is
+ * cheap insurance: it exits on the first match, which for all but a handful of
+ * slots is the coming week.
+ */
+const MAX_LOOKAHEAD_WEEKS = 366;
 const NO_DATES: ReadonlySet<string> = new Set();
 
 export interface OccurrenceInput {
@@ -25,7 +33,7 @@ export interface OccurrenceInput {
   start_time: number;
   date: string | null;
   /** Weekly only; missing or empty for every week (see `WeekOfMonth`). */
-  weeks_of_month?: readonly string[];
+  weeks_of_month?: readonly WeekOfMonth[];
   /** Weekly only; all missing or null for all year (see `Season`). */
   season_start_month?: number | null;
   season_start_day?: number | null;
@@ -85,35 +93,6 @@ function isoDateLocal(d: Date): string {
   return `${d.getFullYear()}-${month}-${day}`;
 }
 
-/** The week of the month each ordinal names: days 1–7 are the first. */
-const WEEK_INDEX: Record<string, number | undefined> = {
-  first: 1,
-  second: 2,
-  third: 3,
-  fourth: 4,
-  fifth: 5,
-};
-
-/** Whether `d` falls in one of the weeks of the month listed (none: every week). */
-function inWeeksOfMonth(d: Date, weeks: readonly string[]): boolean {
-  if (weeks.length === 0) return true;
-  const day = d.getDate();
-  const daysInMonth = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
-  return weeks.some((week) =>
-    week === "last" ? day + 7 > daysInMonth : WEEK_INDEX[week] === Math.ceil(day / 7),
-  );
-}
-
-/** Whether `d` falls in `season` (null: all year). */
-function inSeason(d: Date, season: Season | null): boolean {
-  if (!season) return true;
-  // Month * 100 + day orders a year's days; 31 stands for any month's last day.
-  const at = (d.getMonth() + 1) * 100 + d.getDate();
-  const start = season.start_month * 100 + (season.start_day ?? 1);
-  const end = season.end_month * 100 + (season.end_day ?? 31);
-  return start <= end ? start <= at && at <= end : at >= start || at <= end;
-}
-
 function nextForWeekly(
   event: OccurrenceInput,
   dayOfWeek: string,
@@ -122,20 +101,21 @@ function nextForWeekly(
 ): Date | null {
   const jsDay = jsDayFor(dayOfWeek);
   if (jsDay < 0) return null;
-  const weeks = event.weeks_of_month ?? [];
-  const season = seasonOf(event);
+  const pattern = {
+    weeks_of_month: event.weeks_of_month ?? [],
+    season: seasonOf(event),
+  };
   const hours = Math.floor(event.start_time / 60);
   const minutes = event.start_time % 60;
-  for (
-    let daysAhead = (jsDay - today.getDay() + 7) % 7;
-    daysAhead <= WEEKLY_HORIZON_DAYS;
-    daysAhead += 7
-  ) {
+  const firstDaysAhead = (jsDay - today.getDay() + 7) % 7;
+  // A slot qualified by week of the month or by season skips most of the
+  // weekdays it nominally falls on, so walk forward a week at a time until one
+  // of them is an occurrence the slot actually keeps.
+  for (let week = 0; week < MAX_LOOKAHEAD_WEEKS; week += 1) {
     const target = new Date(today);
-    target.setDate(target.getDate() + daysAhead);
+    target.setDate(target.getDate() + firstDaysAhead + week * 7);
     if (
-      inWeeksOfMonth(target, weeks) &&
-      inSeason(target, season) &&
+      dateMatchesPattern(target, pattern) &&
       !cancelledDates.has(isoDateLocal(target))
     ) {
       target.setHours(hours, minutes, 0, 0);
@@ -172,7 +152,7 @@ function nextForSpecific(
  * A weekly event occurs on its weekday from today on (today included, even
  * once its time has passed), in the weeks of the month and the season it
  * keeps, except on `cancelledDates` (local YYYY-MM-DD dates a cancellation
- * names for it); null when no such day comes within about a year.
+ * names for it); null when no such day comes within seven years.
  */
 export function computeNextOccurrence(
   event: OccurrenceInput,

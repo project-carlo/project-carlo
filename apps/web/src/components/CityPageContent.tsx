@@ -28,20 +28,25 @@ function ScheduleRows({ rows }: { rows: ScheduleRollupRow[] }) {
   return (
     <ul className="space-y-1">
       {rows.map((row) => (
-        <li
-          key={row.key}
-          className="flex items-baseline gap-2 font-serif text-[0.975rem]"
-        >
-          <span className="smallcaps text-[0.9375rem] text-ink">{row.label}</span>
-          <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
-          <span className="text-right tabular-nums text-rubric">
-            {row.times.map((time, index) => (
-              <Fragment key={time}>
-                {index > 0 ? " · " : null}
-                <span className="whitespace-nowrap">{time}</span>
-              </Fragment>
-            ))}
-          </span>
+        <li key={row.key} className="font-serif text-[0.975rem]">
+          <div className="flex items-baseline gap-2">
+            <span className="smallcaps text-[0.9375rem] text-ink">{row.label}</span>
+            <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
+            <span className="text-right tabular-nums text-rubric">
+              {row.times.map((time, index) => (
+                <Fragment key={time}>
+                  {index > 0 ? " · " : null}
+                  <span className="whitespace-nowrap">{time}</span>
+                </Fragment>
+              ))}
+            </span>
+          </div>
+          {/* A monthly or seasonal slot's qualifier, as in the map popup. */}
+          {row.note ? (
+            <div className="text-[0.875rem] leading-snug italic text-ink-faint">
+              {row.note}
+            </div>
+          ) : null}
         </li>
       ))}
     </ul>
