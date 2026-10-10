@@ -415,8 +415,9 @@ def test_the_mark_starts_at_the_newest_dated_bulletin_in_the_seed(
     _bulletin(conn, "later", "2026-10-03T12:00:00Z", published_date="2026-10-04",
               processed=True)
     _seed(conn, [SUN_9], as_of="2026-09-30T00:00:00Z")
-    places, mark = parish_history(conn, _parish_id(conn), "2026-09-30T00:00:00Z")
-    assert (places, mark) == ([], date(2026, 9, 27))
+    history = parish_history(conn, _parish_id(conn))
+    assert (history.places, history.mark) == ([], date(2026, 9, 27))
+    assert history.counted_weeks == [date(2026, 9, 27)]
 
 
 # ── The update stage ────────────────────────────────────────────────────────
@@ -509,10 +510,11 @@ def test_bulletins_are_called_in_fetch_order_and_older_ones_are_stale(
     assert [p[2:] for p in _proposals(conn)] == [
         ("add", APPLIED, AUTO), ("delete", REJECTED, STALE_BULLETIN),
     ]
-    places, mark = parish_history(conn, _parish_id(conn), "2026-09-30T00:00:00Z")
+    history = parish_history(conn, _parish_id(conn))
+    places = history.places
     assert [p.stale for p in places] == [False, True, False]
     assert places[2].same_week_before == 1  # a correction
-    assert mark == date(2026, 10, 4)
+    assert history.mark == date(2026, 10, 4)
     # The stale call wrote no sightings.
     stale_bulletin = places[1].bulletin_id
     assert conn.execute(
@@ -781,7 +783,7 @@ def test_replies_are_read_strictly_then_leniently() -> None:
         {"op": "rename"}, {"op": "delete", "entry_id": 5, "extra": 1},
     ], "published_date": "soon"}))
     assert lenient.status == LENIENT
-    assert [(c.seq, c.op, c.entry_id) for c in lenient.changes] == [(1, "delete", 5)]
+    assert [(c.seq, c.op, c.entry_id) for c in lenient.changes] == [(2, "delete", 5)]
     assert lenient.published_date is None
 
     assert parse_response("nope").status == PARSE_FAILED
@@ -905,3 +907,92 @@ def test_the_schedule_command_seeds_shows_and_edits(
     assert "duplicate" in capsys.readouterr().err
     assert main(["schedule", "rebuild"]) == 0
     assert json.loads(capsys.readouterr().out)["differing_rows"] == 0
+
+
+# ── Review findings ─────────────────────────────────────────────────────────
+def test_a_parish_can_be_removed_after_a_church_moved_into_it(
+    conn: sqlite3.Connection,
+) -> None:
+    _seed(conn, [SUN_9, {**SUN_9, "church_slug": "second-church"}])
+    second_id = _churches(conn)["second-church"]
+    _write_reference([PARISH, OTHER_PARISH],
+                     [CHURCH, {**SECOND, "parish_id": "other-parish"}, OTHER])
+    ensure_db()
+    _write_reference([PARISH], [CHURCH])
+
+    stats = ensure_db()
+
+    assert stats["parishes_deleted"] == 1
+    row = conn.execute(
+        "SELECT parish_id, retired_at FROM church WHERE id = ?", (second_id,),
+    ).fetchone()
+    assert (row["parish_id"], row["retired_at"] is not None) == (_parish_id(conn), True)
+    assert conn.execute("PRAGMA foreign_key_check").fetchall() == []
+    with conn:
+        assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
+def test_a_malformed_lenient_reply_reads_as_empty() -> None:
+    reply = parse_response(json.dumps({
+        "seen": 5, "changes": True, "wrong_bulletin": "false",
+        "church_list_needs_review": "true",
+    }))
+    assert (reply.status, reply.seen, reply.changes) == (LENIENT, [], [])
+    assert (reply.wrong_bulletin, reply.church_list_needs_review) == (False, True)
+    # seq is the position in the answer, counting a change that was dropped.
+    reply = parse_response(json.dumps({"changes": [
+        {"op": "rename"}, {"op": "delete", "entry_id": 5},
+    ]}))
+    assert [c.seq for c in reply.changes] == [2]
+
+
+def test_a_copy_of_a_pdf_is_not_called_again_in_the_same_run(
+    conn: sqlite3.Connection,
+) -> None:
+    _seed(conn, [SUN_9])
+    for name, fetched in (("a", "2026-10-05T12:00:00Z"), ("b", "2026-10-06T12:00:00Z")):
+        insert_bulletin(
+            conn, parish_id=_parish_id(conn), source_url=f"https://example.org/{name}.pdf",
+            content_hash="same-pdf", fetched_at=fetched,
+        )
+    stats = _run(conn, FakeUpdater(_reply()))
+    assert stats["update_calls"] == 1
+
+
+def test_a_seed_as_of_a_date_covers_that_whole_day(conn: sqlite3.Connection) -> None:
+    _bulletin(conn, "that-day", "2026-10-04T12:00:00Z", published_date="2026-10-04",
+              processed=True)
+    _seed(conn, [SUN_9], as_of="2026-10-04")
+    assert update_mode_parishes(conn) == {_parish_id(conn): "2026-10-04T23:59:59Z"}
+    assert parish_history(conn, _parish_id(conn)).mark == date(2026, 10, 4)
+    assert _run(conn, FakeUpdater())["update_calls"] == 0
+    _seed(conn, [SUN_9], as_of="2026-10-05T08:00:00-04:00")
+    assert update_mode_parishes(conn) == {_parish_id(conn): "2026-10-05T12:00:00Z"}
+
+
+def test_the_first_call_for_the_seeds_week_is_a_correction(conn: sqlite3.Connection) -> None:
+    _bulletin(conn, "seeded", "2026-10-03T12:00:00Z", published_date="2026-10-04",
+              processed=True)
+    _seed(conn, [SUN_9], as_of="2026-10-03T13:00:00Z")
+    with conn:
+        start_run(conn, "run-1", git_sha=None, trigger="test")
+    _bulletin(conn, "fixed", "2026-10-04T12:00:00Z")
+    _run(conn, FakeUpdater(_reply(published_date="2026-10-04")), "run-1")
+    [result] = parish_results(conn, "run-1")
+    assert result["status"] == "correction"
+
+
+def test_a_call_can_only_change_entries_it_was_shown(conn: sqlite3.Connection) -> None:
+    past = {**SUN_9, "event_kind": "specific_date", "date": "2026-10-04"}
+    _seed(conn, [SUN_9, past])
+    past_id = _ids(conn)["mass 2026-10-04 540"]
+    _bulletin(conn, "b1", "2026-10-10T12:00:00Z")
+    _run(conn, FakeUpdater(_reply(changes=[
+        {"op": "delete", "entry_id": past_id, "page_number": 1, "rationale": "over"}])))
+    assert [p[3:] for p in _proposals(conn)] == [(REJECTED, UNKNOWN_ITEM)]
+    assert past_id in _ids(conn).values()
+
+
+def test_hand_edits_need_an_update_mode_parish(conn: sqlite3.Connection) -> None:
+    with pytest.raises(EditError, match="extract mode"):
+        edit_entry(conn, _parish_id(conn), "add", entry=SUN_9, actor="luke")

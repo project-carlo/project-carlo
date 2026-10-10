@@ -212,6 +212,9 @@ def seed_reference_data(
         for parish in conn.execute("SELECT id, slug FROM parish").fetchall():
             if parish["slug"] not in parish_slugs:
                 LOGGER.warning("Parish %s is no longer in parishes.csv; deleting", parish["slug"])
+                stats["churches_retired"] += keep_churches_other_parishes_reference(
+                    conn, parish["id"], now,
+                )
                 conn.execute("DELETE FROM parish WHERE id = ?", (parish["id"],))
                 stats["parishes_deleted"] += 1
 
@@ -301,6 +304,46 @@ def seed_reference_data(
                 stats["churches_retired"] += 1
 
     return stats
+
+
+def keep_churches_other_parishes_reference(
+    conn: sqlite3.Connection, parish_id: int, now: str,
+) -> int:
+    """Before a parish is deleted, move out the churches another parish's log still names.
+
+    A church that moved to this parish keeps its entries in its old parish's
+    log, proposals and sightings, which are never rewritten. Deleting this
+    parish would delete the church and its entries by cascade, under those
+    rows. Such a church is instead moved back to (the lowest-id) parish that
+    references it and retired there; it comes back if churches.csv lists it
+    again. Returns how many churches were kept.
+    """
+    rows = conn.execute(
+        """SELECT c.id AS church_id, MIN(ref.parish_id) AS parish_id
+           FROM church c
+           JOIN schedule_entry e ON e.church_id = c.id
+           JOIN (
+               SELECT parish_id, before_entry_id AS entry_id FROM schedule_change
+               UNION ALL SELECT parish_id, after_entry_id FROM schedule_change
+               UNION ALL SELECT l.parish_id, p.entry_id FROM proposed_change p
+                   JOIN llm_call l ON l.id = p.llm_call_id
+               UNION ALL SELECT b.parish_id, s.entry_id FROM entry_sighting s
+                   JOIN bulletin b ON b.id = s.bulletin_id
+           ) ref ON ref.entry_id = e.id
+           WHERE c.parish_id = ? AND ref.parish_id != ?
+           GROUP BY c.id""",
+        (parish_id, parish_id),
+    ).fetchall()
+    for row in rows:
+        LOGGER.warning(
+            "Church %s is still named by parish %s's schedule log; moving it there, retired",
+            row["church_id"], row["parish_id"],
+        )
+        conn.execute(
+            "UPDATE church SET parish_id = ?, retired_at = COALESCE(retired_at, ?) WHERE id = ?",
+            (row["parish_id"], now, row["church_id"]),
+        )
+    return len(rows)
 
 
 def remove_church_entries(

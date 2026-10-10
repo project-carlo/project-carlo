@@ -105,17 +105,13 @@ def update_mode_report(conn: sqlite3.Connection, run_id: str) -> dict[str, Any]:
            WHERE c.run_id = ? ORDER BY p.slug""",
         (run_id,),
     ).fetchall()
-    as_of = dict(conn.execute(
-        """SELECT parish_id, MAX(as_of) FROM schedule_revision
-           WHERE source_kind = 'seed' GROUP BY parish_id"""
-    ).fetchall())
     by_reason: Counter[str] = Counter()
     rejected_calls: list[dict[str, Any]] = []
     parishes: list[dict[str, Any]] = []
     total_applied = total_rejected = 0
 
     for parish in parish_rows:
-        places, _ = parish_history(conn, parish["id"], as_of.get(parish["id"]))
+        places = parish_history(conn, parish["id"]).places
         place_by_call = {p.llm_call_id: p for p in places}
         calls = conn.execute(
             """SELECT c.id, c.bulletin_id, c.status, c.error, c.published_date,

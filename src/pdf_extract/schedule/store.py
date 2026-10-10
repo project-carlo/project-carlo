@@ -14,7 +14,7 @@ import json
 import sqlite3
 from collections.abc import Iterable
 from dataclasses import dataclass
-from datetime import date
+from datetime import UTC, date, datetime, time
 from hashlib import sha256
 from typing import Any
 
@@ -218,6 +218,25 @@ class Change:
     proposed_change_id: int | None = None
 
 
+def normalize_as_of(value: str) -> str:
+    """A seed's `as_of` in the form `fetched_at` is stored in, so the two compare as text.
+
+    Takes an ISO time (`Z` or an offset; none means UTC) or a date, which
+    means the end of that day: everything fetched that day is in the seed.
+    """
+    text = value.strip()
+    try:
+        if len(text) == 10:
+            moment = datetime.combine(date.fromisoformat(text), time(23, 59, 59), UTC)
+        else:
+            moment = datetime.fromisoformat(text.replace("Z", "+00:00"))
+            if moment.tzinfo is None:
+                moment = moment.replace(tzinfo=UTC)
+    except ValueError as exc:
+        raise ValueError(f"as_of must be an ISO date or time, not {value!r}") from exc
+    return moment.astimezone(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
 def append_revision(
     conn: sqlite3.Connection,
     parish_id: int,
@@ -236,8 +255,8 @@ def append_revision(
     """
     revision = current_revision(conn, parish_id) + 1
     created_at = utc_now_iso()
-    if source_kind == SEED and as_of is None:
-        as_of = created_at
+    if source_kind == SEED:
+        as_of = created_at if as_of is None else normalize_as_of(as_of)
     conn.execute(
         """INSERT INTO schedule_revision (
                parish_id, revision, source_kind, llm_call_id, run_id, actor, note, as_of,

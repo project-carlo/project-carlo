@@ -29,6 +29,7 @@ from pdf_extract.schedule.store import (
     Change,
     append_revision,
     intern_entry,
+    is_update_mode,
     live_entries,
     parish_churches,
 )
@@ -46,6 +47,14 @@ class EditResult:
     """The seqs applied (for `apply_proposals`)."""
     skipped: list[tuple[int, str, str | None]] = field(default_factory=list)
     """(seq, reason, detail) of the proposals that failed the checks or were applied already."""
+
+
+def _require_update_mode(conn: sqlite3.Connection, parish_id: int) -> None:
+    """Hand edits are for believed schedules: an extract-mode parish has none to edit."""
+    if not is_update_mode(conn, parish_id):
+        raise EditError(
+            "the parish is in extract mode (it has no seed revision); seed it first"
+        )
 
 
 def apply_proposals(
@@ -72,6 +81,7 @@ def apply_proposals(
             raise EditError(f"call {llm_call_id} has no proposal {', '.join(map(str, unknown))}")
         rows = [r for r in rows if r["seq"] in set(seqs)]
 
+    _require_update_mode(conn, call["parish_id"])
     result = EditResult(parish_id=call["parish_id"])
     today = today or date.today()
     with conn:
@@ -127,6 +137,7 @@ def edit_entry(
         raise EditError("add takes no entry id; modify and delete need one")
     if (op == DELETE) != (entry is None):
         raise EditError("add and modify need the new entry; delete takes none")
+    _require_update_mode(conn, parish_id)
     result = EditResult(parish_id=parish_id)
     with conn:
         parsed, reason, detail = check_proposal(

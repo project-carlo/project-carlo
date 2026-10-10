@@ -775,15 +775,51 @@ code departs from it.
   nothing.
 - **Staleness is worked out, not stored.** `schedule/history.py` replays a
   parish's successful calls in order and places each against the mark as it
-  stood then. A call is undated when it read no date, or one more than 21 days
-  after the fetch (the existing cap). Mass deletes count the distinct live
-  weekly entries a call's deletes name; modifies don't count.
+  stood then. Each call is placed against the seed it was made under (the
+  latest seed at or before its `base_revision`), so a later seed doesn't make
+  an earlier call look stale. A call is undated when it read no date, or one
+  more than 21 days after the fetch (the existing cap). Mass deletes count the
+  distinct live weekly entries a call's deletes name; modifies don't count.
+- **The seed's bulletin counts as its week's first.** A seed's newest dated
+  bulletin counts as the first bulletin for its week. The first update call
+  for that week is therefore noted as a correction.
+- **A call can only change what it was shown.** A modify or delete naming a
+  live entry that wasn't in the call's view is `unknown_item`. That covers a
+  dated entry already past, which stays out of the log as the plan says. Hand
+  edits may name any live entry.
+- **`seq` is the position in the model's answer.** It counts any change that
+  was dropped because it had no known `op`. A lenient reply's `seen` or
+  `changes` that isn't a list reads as empty. Its flags are true only for
+  `true` or `"true"`.
 - **A dated entry may repeat its own weekday.** Models often give
   `day_of_week` alongside `date`. When it agrees with the date it is dropped;
   when it disagrees the entry is `invalid_entry`.
 - **Hand edits re-read the proposal.** `schedule apply` checks each proposal's
   entry as the model wrote it, so one rejected as `unknown_church` can be
   applied once the church is in `churches.csv`.
+- **Hand edits need an update-mode parish.** `schedule add`, `modify`, `delete`
+  and `apply` refuse a parish without a seed, so the new tables stay empty
+  for extract-mode parishes. `schedule seed` is how a parish gets one.
+- **One failed parish doesn't stop the stage.** An error while deciding a
+  call rolls back that call's transaction. The parish is recorded as `failed`
+  for the run, and the other parishes go on.
+
+### Seeds and churches
+
+- **`as_of` is normalised.** It is stored in the same form as `fetched_at`
+  (`YYYY-MM-DDTHH:MM:SSZ`), because the two are compared as text. A date with
+  no time means the end of that day, so everything fetched that day is in the
+  seed.
+- **A parish can still be deleted after a church moved into it.** If a church
+  moved from parish A to parish B, A's log, proposals and sightings still name
+  its entries. Deleting B would delete those entries by cascade, from under
+  A's rows. So before B is deleted, any of its churches another parish still
+  names are moved back to that parish and retired. That counts as a retirement
+  in the run's CSV check.
+- **The qualifier converters are shared through their constants.** The labels
+  only validate the list and object forms and never convert them, so
+  `schedule/qualifiers.py` is the one converter. It is built on the labels'
+  `WEEKS_OF_MONTH`, `SEASON_KEYS` and `DAYS_IN_MONTH`.
 
 ### Runs and the report
 

@@ -12,6 +12,7 @@ The per-proposal checks (`check_proposal`) are also what a hand edit must pass.
 
 from __future__ import annotations
 
+from collections.abc import Collection
 from dataclasses import dataclass, field
 from datetime import date
 from typing import Any
@@ -131,11 +132,14 @@ def check_proposal(
     schedule: Schedule,
     churches: dict[str, int],
     today: date,
+    targetable: Collection[int] | None = None,
 ) -> tuple[Entry | None, str | None, str | None]:
     """Check one proposal against the schedule: (new entry, rejection reason, detail).
 
     The reason is None when the proposal may be applied. The new entry is
     returned whenever it could be read, so a rejected one is still stored.
+    `targetable` limits the entries a modify or delete may name (a call may
+    name only the entries in its view); None allows any live entry.
     """
     entry: Entry | None = None
     if op in (ADD, MODIFY):
@@ -143,7 +147,12 @@ def check_proposal(
             entry = parse_entry(raw_entry, churches)
         except EntryError as exc:
             return None, exc.reason, str(exc)
-    target = schedule.ids.get(target_entry_id) if target_entry_id is not None else None
+    target = (
+        schedule.ids.get(target_entry_id)
+        if target_entry_id is not None
+        and (targetable is None or target_entry_id in targetable)
+        else None
+    )
     if op == MODIFY and target is not None and entry is not None and (
         (entry.church_id, entry.event_type, entry.event_kind)
         != (target.church_id, target.event_type, target.event_kind)
@@ -167,14 +176,19 @@ def decide(
     churches: dict[str, int],
     today: date,
     whole_call: str | None,
+    targetable: Collection[int] | None = None,
 ) -> list[Decision]:
-    """Decide every proposal of one call, in `seq` order."""
+    """Decide every proposal of one call, in `seq` order.
+
+    `targetable`: the entry ids the call was shown. A target outside them
+    (a dated entry already past, left out of the view) is `unknown_item`.
+    """
     schedule = Schedule(ids=dict(live))
     decisions: list[Decision] = []
     for proposal in sorted(proposals, key=lambda p: p.seq):
         entry, reason, detail = check_proposal(
             proposal.op, proposal.target_entry_id, proposal.entry,
-            schedule=schedule, churches=churches, today=today,
+            schedule=schedule, churches=churches, today=today, targetable=targetable,
         )
         if whole_call is not None:
             reason, detail = whole_call, None

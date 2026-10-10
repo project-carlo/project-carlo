@@ -137,10 +137,14 @@ def _cmd_seed(args: argparse.Namespace) -> Result:
                 entries.append(parse_entry(item, churches))
             except EntryError as exc:
                 raise ScheduleCommandError(f"entry {i}: {exc.reason}: {exc}") from exc
-        with conn:
-            revision = write_seed(
-                conn, parish_id, entries, as_of=args.as_of, actor=args.actor, note=args.note,
-            )
+        try:
+            with conn:
+                revision = write_seed(
+                    conn, parish_id, entries, as_of=args.as_of, actor=args.actor,
+                    note=args.note,
+                )
+        except ValueError as exc:  # two entries for one slot, or an unreadable --as-of
+            raise ScheduleCommandError(str(exc)) from exc
         return {"parish": args.parish, "revision": revision, "entries": len(entries)}
     finally:
         conn.close()
@@ -200,7 +204,9 @@ def add_schedule_parser(
     seed.add_argument("--parish", required=True, help="Parish slug")
     seed.add_argument("--file", required=True, help="JSON list of entries in the labels' form")
     seed.add_argument(
-        "--as-of", help="The fetch time the schedule is current as of (default: now)",
+        "--as-of",
+        help="The fetch time the schedule is current as of: an ISO time, or a date for "
+        "the end of that day (default: now)",
     )
     who(seed)
 

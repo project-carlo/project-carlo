@@ -85,21 +85,59 @@ def place_call(
     return False, sum(1 for w in counted_weeks if w == week)
 
 
-def parish_history(
-    conn: sqlite3.Connection, parish_id: int, as_of: str | None,
-) -> tuple[list[CallPlace], date | None]:
-    """Every successful call of the parish placed in order, and the mark after them."""
-    mark = seed_mark(conn, parish_id, as_of)
+@dataclass
+class History:
+    """A parish's successful calls placed in order, and where the next call would fall."""
+
+    places: list[CallPlace]
+    mark: date | None
+    """The high-water mark for the next call."""
+    counted_weeks: list[date]
+    """The weeks of the bulletins counted so far: each seed's newest dated bulletin,
+    and every call that succeeded, was dated, and wasn't a wrong bulletin or stale."""
+
+
+def parish_history(conn: sqlite3.Connection, parish_id: int) -> History:
+    """Every successful call of the parish placed in order, and the mark after them.
+
+    Each call is placed against the seed it was made under (the latest seed
+    revision at or before the call's base revision), so a later seed doesn't
+    change how an earlier call was placed. A seed's newest dated bulletin
+    counts as that week's first bulletin, so the next one for the same week is
+    a correction.
+    """
+    seeds = conn.execute(
+        """SELECT revision, as_of FROM schedule_revision
+           WHERE parish_id = ? AND source_kind = 'seed' ORDER BY revision""",
+        (parish_id,),
+    ).fetchall()
+    floors = [(s["revision"], seed_mark(conn, parish_id, s["as_of"])) for s in seeds]
+    applied_seeds = 0
+    mark: date | None = None
     counted: list[date] = []
+
+    def apply_seeds(up_to_revision: int | None) -> None:
+        nonlocal applied_seeds, mark
+        while applied_seeds < len(floors) and (
+            up_to_revision is None or floors[applied_seeds][0] <= up_to_revision
+        ):
+            floor = floors[applied_seeds][1]
+            applied_seeds += 1
+            if floor is not None:
+                counted.append(floor)
+                mark = floor if mark is None else max(mark, floor)
+
     places: list[CallPlace] = []
     rows = conn.execute(
-        f"""SELECT c.id, c.bulletin_id, c.published_date, c.wrong_bulletin, b.fetched_at
+        f"""SELECT c.id, c.bulletin_id, c.published_date, c.wrong_bulletin, c.base_revision,
+                   b.fetched_at
             FROM llm_call c JOIN bulletin b ON b.id = c.bulletin_id
             WHERE c.parish_id = ? AND c.status IN ({", ".join("?" * len(SUCCEEDED))})
             ORDER BY c.id""",
         (parish_id, *SUCCEEDED),
     ).fetchall()
     for row in rows:
+        apply_seeds(row["base_revision"])
         week = call_week(row["published_date"], row["fetched_at"])
         wrong = bool(row["wrong_bulletin"])
         stale, same_week = place_call(
@@ -112,4 +150,5 @@ def parish_history(
         if week is not None and not wrong and not stale:
             counted.append(week)
             mark = week if mark is None else max(mark, week)
-    return places, mark
+    apply_seeds(None)
+    return History(places, mark, counted)

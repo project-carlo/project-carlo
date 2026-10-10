@@ -277,16 +277,17 @@ def parse_response(text: str) -> ParsedReply:
         status = LENIENT
 
     seen = []
-    for item in data.get("seen") or []:
+    for item in _list(data.get("seen")):
         if isinstance(item, dict) and _int(item.get("entry_id")) is not None:
             seen.append((item["entry_id"], _int(item.get("page_number"))))
     changes = []
-    for item in data.get("changes") or []:
+    # `seq` is the change's position in the model's answer, counting any dropped.
+    for seq, item in enumerate(_list(data.get("changes")), start=1):
         if not isinstance(item, dict) or item.get("op") not in ("add", "modify", "delete"):
             LOGGER.warning("schedule_update: dropping a change with no known op: %r", item)
             continue
         changes.append(ParsedChange(
-            seq=len(changes) + 1,
+            seq=seq,
             op=item["op"],
             raw=item,
             entry_id=_int(item.get("entry_id")),
@@ -297,11 +298,23 @@ def parse_response(text: str) -> ParsedReply:
     return ParsedReply(
         status=status,
         published_date=_normalize_published_date(data.get("published_date")),
-        wrong_bulletin=bool(data.get("wrong_bulletin", False)),
-        church_list_needs_review=bool(data.get("church_list_needs_review", False)),
+        wrong_bulletin=_flag(data.get("wrong_bulletin")),
+        church_list_needs_review=_flag(data.get("church_list_needs_review")),
         seen=seen,
         changes=changes,
     )
+
+
+def _list(value: Any) -> list[Any]:
+    """A list from a lenient reply; anything else reads as empty."""
+    return value if isinstance(value, list) else []
+
+
+def _flag(value: Any) -> bool:
+    """A lenient reply's boolean: true, or the string "true"; anything else is false."""
+    if isinstance(value, str):
+        return value.strip().lower() == "true"
+    return value is True
 
 
 def _without_nulls(entry: Any) -> Any:

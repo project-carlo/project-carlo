@@ -159,13 +159,13 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
     """
     if not isinstance(raw, dict):
         raise EntryError(INVALID_ENTRY, "entry must be an object")
-    unknown = sorted(set(raw) - ENTRY_KEYS)
-    if unknown:
-        raise EntryError(INVALID_ENTRY, f"unknown keys {', '.join(unknown)}")
-
+    # The policy checks the church before the entry itself.
     slug = raw.get("church_slug")
     if not isinstance(slug, str) or slug not in churches:
         raise EntryError(UNKNOWN_CHURCH, f"church {slug!r} is not one of the parish's")
+    unknown = sorted(set(raw) - ENTRY_KEYS)
+    if unknown:
+        raise EntryError(INVALID_ENTRY, f"unknown keys {', '.join(unknown)}")
 
     event_type = raw.get("event_type")
     if event_type not in EVENT_TYPES:

@@ -361,11 +361,12 @@ def decide_and_apply(
                 f"-> {current_revision(conn, parish_id)})"
             )
 
-        places, mark = parish_history(conn, parish_id, prepared.as_of)
+        history = parish_history(conn, parish_id)
+        mark = history.mark
         week = call_week(parsed.published_date, bulletin.get("fetched_at"))
-        counted = [p.week for p in places if p.week and not p.wrong_bulletin and not p.stale]
         stale, same_week_before = place_call(
-            week=week, wrong_bulletin=parsed.wrong_bulletin, mark=mark, counted_weeks=counted,
+            week=week, wrong_bulletin=parsed.wrong_bulletin, mark=mark,
+            counted_weeks=history.counted_weeks,
         )
 
         call_id = _insert_call(
@@ -387,7 +388,7 @@ def decide_and_apply(
         )
         decisions = decide(
             proposals, live=live, churches=parish_churches(conn, parish_id),
-            today=prepared.call_date, whole_call=whole,
+            today=prepared.call_date, whole_call=whole, targetable=set(_view_ids(view_text)),
         )
 
         changes: list[Change] = []
@@ -583,7 +584,7 @@ def process_update_mode(
                     PROCESS_SKIPPED, f"#{bulletin['id']}: PDF could not be loaded",
                 ))
                 continue
-            if _already_decided(conn, prepared.request_key):
+            if _already_decided(conn, prepared.request_key) or _pdf_already_read(conn, bulletin):
                 continue
             stored = load_call_record(prepared.request_key)
             if stored is not None:
@@ -602,6 +603,15 @@ def process_update_mode(
         except BaseRevisionMismatch as exc:
             LOGGER.error("%s", exc)
             record(CallOutcome(PROCESS_FAILED, str(exc)), parish)
+            parish.queue.clear()
+            return False
+        except Exception as exc:
+            # Rolled back; the parish fails for this run and the others go on.
+            LOGGER.exception("Deciding bulletin #%s failed", prepared.bulletin["id"])
+            record(CallOutcome(
+                PROCESS_FAILED,
+                f"#{prepared.bulletin['id']}: {type(exc).__name__}: {exc}",
+            ), parish)
             parish.queue.clear()
             return False
         return True
@@ -637,6 +647,20 @@ def process_update_mode(
         _record_parish(conn, run_id, parish)
     LOGGER.info("Update mode finished: %s", stats)
     return stats
+
+
+def _pdf_already_read(conn: sqlite3.Connection, bulletin: dict[str, Any]) -> bool:
+    """Whether another bulletin of the parish with the same PDF has a successful call.
+
+    `pending_bulletins` checks this when the run starts; this catches a copy
+    whose original was called earlier in the same run.
+    """
+    return conn.execute(
+        f"""SELECT 1 FROM llm_call c JOIN bulletin b ON b.id = c.bulletin_id
+            WHERE b.parish_id = ? AND b.content_hash = ?
+              AND c.status IN ({", ".join("?" * len(SUCCEEDED))}) LIMIT 1""",
+        (bulletin["parish_id"], bulletin["content_hash"], *SUCCEEDED),
+    ).fetchone() is not None
 
 
 def _already_decided(conn: sqlite3.Connection, key: str) -> bool:
