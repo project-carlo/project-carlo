@@ -157,6 +157,116 @@ describe("computeNextOccurrence", () => {
   });
 });
 
+describe("computeNextOccurrence for weekly slots that skip weeks", () => {
+  // Wednesday, 2026-06-10: the second Wednesday of June.
+  const today = new Date(2026, 5, 10);
+  /** ISO of a local date at 10 a.m., the time these slots start. */
+  const on = (year: number, month: number, day: number) =>
+    new Date(year, month - 1, day, 10).toISOString();
+  const next = (
+    day: string,
+    overrides: Partial<OccurrenceInput>,
+    cancelled?: ReadonlySet<string>,
+    from: Date = today,
+  ) => computeNextOccurrence(weeklyOccurrence(day, 600, overrides), from, cancelled);
+  const season = (
+    startMonth: number,
+    startDay: number | null,
+    endMonth: number,
+    endDay: number | null,
+  ): Partial<OccurrenceInput> => ({
+    season_start_month: startMonth,
+    season_start_day: startDay,
+    season_end_month: endMonth,
+    season_end_day: endDay,
+  });
+
+  it("keeps every week when no weeks of the month are listed", () => {
+    expect(next("sunday", { weeks_of_month: [] })).toBe(on(2026, 6, 14));
+  });
+
+  it("finds the next listed week of the month", () => {
+    expect(next("sunday", { weeks_of_month: ["first"] })).toBe(on(2026, 7, 5));
+    expect(next("sunday", { weeks_of_month: ["first", "third"] })).toBe(
+      on(2026, 6, 21),
+    );
+    // Today is the second Wednesday.
+    expect(next("wednesday", { weeks_of_month: ["second"] })).toBe(
+      on(2026, 6, 10),
+    );
+  });
+
+  it("takes the last week as the weekday's last day in the month", () => {
+    expect(next("sunday", { weeks_of_month: ["last"] })).toBe(on(2026, 6, 28));
+    // July 2026 has five Fridays: the 24th is the fourth, the 31st the last.
+    const july20 = new Date(2026, 6, 20);
+    expect(next("friday", { weeks_of_month: ["last"] }, undefined, july20)).toBe(
+      on(2026, 7, 31),
+    );
+    expect(next("friday", { weeks_of_month: ["fourth"] }, undefined, july20)).toBe(
+      on(2026, 7, 24),
+    );
+  });
+
+  it("skips months without a fifth week", () => {
+    // June 2026 has five Tuesdays (the 30th).
+    expect(next("tuesday", { weeks_of_month: ["fifth"] })).toBe(on(2026, 6, 30));
+    // Neither June nor July has a fifth Sunday; August does (the 30th).
+    expect(next("sunday", { weeks_of_month: ["fifth"] })).toBe(on(2026, 8, 30));
+  });
+
+  it("keeps to a season that wraps the new year", () => {
+    expect(next("sunday", season(10, null, 6, null))).toBe(on(2026, 6, 14));
+    // The season ends on the 14th, inclusive.
+    expect(next("sunday", season(10, null, 6, 14))).toBe(on(2026, 6, 14));
+    // Ending on the 13th, it starts again on October's first Sunday.
+    expect(next("sunday", season(10, null, 6, 13))).toBe(on(2026, 10, 4));
+  });
+
+  it("keeps to a season within the year, from its first day to its last", () => {
+    // Starts on the 14th, inclusive.
+    expect(next("sunday", season(6, 14, 8, null))).toBe(on(2026, 6, 14));
+    expect(next("sunday", season(9, 15, 12, null))).toBe(on(2026, 9, 20));
+    // Ended yesterday: next year's, from May 1st (a Saturday in 2027).
+    expect(next("sunday", season(5, null, 6, 9))).toBe(on(2027, 5, 2));
+    // A null end day runs to the month's end.
+    expect(next("tuesday", season(5, null, 6, null))).toBe(on(2026, 6, 16));
+  });
+
+  it("combines weeks of the month with a season", () => {
+    expect(
+      next("sunday", { weeks_of_month: ["first"], ...season(5, null, 10, null) }),
+    ).toBe(on(2026, 7, 5));
+  });
+
+  it("skips a date a cancellation names", () => {
+    expect(next("sunday", {}, new Set(["2026-06-14"]))).toBe(on(2026, 6, 21));
+    // Today's included.
+    expect(next("wednesday", {}, new Set(["2026-06-10"]))).toBe(on(2026, 6, 17));
+    // On to the next listed week, not just the next week.
+    expect(
+      next("sunday", { weeks_of_month: ["first"] }, new Set(["2026-07-05"])),
+    ).toBe(on(2026, 8, 2));
+    // A date it isn't on changes nothing.
+    expect(next("sunday", {}, new Set(["2026-06-13"]))).toBe(on(2026, 6, 14));
+  });
+
+  it("looks years ahead for a slot whose weeks and season rarely meet", () => {
+    // A fifth Sunday in February needs a leap year whose February starts on
+    // a Sunday: the next after June 2026 is 2032.
+    expect(
+      next("sunday", { weeks_of_month: ["fifth"], ...season(2, null, 2, null) }),
+    ).toBe(on(2032, 2, 29));
+  });
+
+  it("returns null when no kept day can ever come", () => {
+    // February 1-28 has no fifth Sunday.
+    expect(
+      next("sunday", { weeks_of_month: ["fifth"], ...season(2, null, 2, 28) }),
+    ).toBeNull();
+  });
+});
+
 // ---------------------------------------------------------------------------
 // compareSchedule
 // ---------------------------------------------------------------------------

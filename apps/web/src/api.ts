@@ -9,7 +9,7 @@ import {
   type CityIndex,
   type CityLink,
 } from "./lib/cities";
-import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
+import { compareSchedule, parseIsoDateLocal, seasonOf } from "./lib/schedule";
 import {
   CHURCH_MAP_CANVAS,
   CITY_MAP_CANVAS,
@@ -30,6 +30,7 @@ import {
   SnapshotVersionError,
   type Snapshot,
 } from "./lib/snapshot";
+import { dateInSeason, patternKey } from "./lib/schedulePattern";
 import { reloadForNewVersion } from "./lib/staleDeploy";
 import type {
   ChurchBase,
@@ -116,14 +117,23 @@ function toEventSummary(ev: RawEvent): EventSummary {
     next_occurrence: ev.occurrence,
     page_number: ev.page_number,
     note: ev.note,
+    weeks_of_month: ev.weeks_of_month,
+    season: seasonOf(ev),
   };
 }
 
 export function eventMatchesFilters(
   ev: RawEvent,
   filters: ChurchFilters,
+  today: Date = new Date(),
 ): boolean {
   if (ev.cancelled) return false;
+  // The map answers "where can I go this week", so a slot that does not resume
+  // until October is not an answer in September. Monthly slots stay: they do
+  // run at this time of year, and the popup says which week of the month.
+  if (ev.event_kind === "weekly" && !dateInSeason(today, seasonOf(ev))) {
+    return false;
+  }
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {
     if (ev.event_kind === "weekly" && ev.day_of_week) {
       const dayIdx = filterDayFromJsDay(jsDayFor(ev.day_of_week));
@@ -155,18 +165,22 @@ function buildMapItem(
   const weeklyEvents = churchEvents.filter(
     (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
   );
-  // Dedup repeated weekly slots (same weekday + start time) that occasionally
-  // appear across bulletins. Prefer weekly events for the popup; if the church
-  // has only specific-date events, fall back to the five soonest occurrences.
+  // Dedup repeated weekly slots (same weekday, start time, weeks and season)
+  // that occasionally appear across bulletins. Prefer weekly events for the
+  // popup; if the church has only specific-date events, fall back to the five
+  // soonest occurrences.
   const seen = new Set<string>();
   let popupSchedule = weeklyEvents
+    .map(toEventSummary)
     .filter((e) => {
-      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}`;
+      // Two slots on the same weekday and time are only the same slot when
+      // they keep the same schedule: a first-Friday devotion is not a
+      // duplicate of a Friday one that runs every week.
+      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}-${patternKey(e)}`;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
     })
-    .map(toEventSummary)
     .sort((a, b) => compareSchedule(a, b));
   if (popupSchedule.length === 0) {
     popupSchedule = churchEvents
@@ -221,10 +235,13 @@ export function collectMapItems(
   const types = filters.types.length > 0 ? filters.types : EVENT_TYPE_ORDER;
   const typeSet = new Set<EventType>(types);
 
+  // One reading of "now" for the whole pass; this runs per event on the
+  // slider-drag path.
+  const today = new Date();
   const grouped = new Map<number, RawEvent[]>();
   for (const ev of allEvents) {
     if (!typeSet.has(ev.event_type)) continue;
-    if (!eventMatchesFilters(ev, filters)) continue;
+    if (!eventMatchesFilters(ev, filters, today)) continue;
     let list = grouped.get(ev.church_id);
     if (!list) {
       list = [];

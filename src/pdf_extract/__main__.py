@@ -60,6 +60,7 @@ from pdf_extract.labeling.server import serve as serve_labeler
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence
+from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, delete_db, utc_now_iso
 from pdf_extract.verify import verify_churches
@@ -390,11 +391,14 @@ def _build_parser() -> argparse.ArgumentParser:
     process_parser.add_argument("--parish", help="Parish name (omit to run for all)")
     process_parser.add_argument(
         "--model", default=DEFAULT_GEMINI_MODEL,
-        help=f"Gemini model (default: {DEFAULT_GEMINI_MODEL})",
+        help=(
+            f"Gemini model for extract-mode parishes (default: {DEFAULT_GEMINI_MODEL}); "
+            "update-mode parishes always run on gpt-6-luna"
+        ),
     )
     process_parser.add_argument(
         "--concurrency", type=int, default=5,
-        help="Number of parallel Gemini calls (default: 5)",
+        help="Number of parallel model calls (default: 5)",
     )
     process_parser.set_defaults(handler=_cmd_process)
     _add_common_args(process_parser)
@@ -662,6 +666,9 @@ def _build_parser() -> argparse.ArgumentParser:
         subparsers, lambda p: _add_common_args(p, default_level="WARNING"),
     )
 
+    # -- schedule (believed schedules of update-mode parishes) --
+    add_schedule_parser(subparsers, _add_common_args)
+
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
     db_parser.set_defaults(help_parser=db_parser)
@@ -737,7 +744,7 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         result = handler(args)
-    except (DioceseError, RunScopeError, ClassifierOptionError) as e:
+    except (DioceseError, RunScopeError, ClassifierOptionError, ScheduleCommandError) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)
         return 1

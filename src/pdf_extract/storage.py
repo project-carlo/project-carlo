@@ -102,9 +102,10 @@ def get_parish_by_name(conn: sqlite3.Connection, name: str) -> sqlite3.Row | Non
 
 
 def list_churches(conn: sqlite3.Connection, parish_id: int) -> list[sqlite3.Row]:
+    """The parish's churches, retired ones (no longer in churches.csv) left out."""
     return conn.execute(
         "SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code"
-        " FROM church WHERE parish_id = ? ORDER BY id",
+        " FROM church WHERE parish_id = ? AND retired_at IS NULL ORDER BY id",
         (parish_id,),
     ).fetchall()
 
@@ -219,7 +220,7 @@ def event_row_values(conn: sqlite3.Connection, row: dict[str, Any]) -> tuple | N
     """
     church_slug = row.get("church_slug")
     church = conn.execute(
-        "SELECT id FROM church WHERE slug = ?", (church_slug,)
+        "SELECT id FROM church WHERE slug = ? AND retired_at IS NULL", (church_slug,)
     ).fetchone() if isinstance(church_slug, str) and church_slug else None
     if church is None:
         LOGGER.warning("Skipping event: unknown church %r", church_slug)

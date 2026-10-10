@@ -41,6 +41,21 @@ PROCESS_OLD_ISSUE = "old_issue"
 PROCESS_FAILED = "failed"
 PROCESS_SKIPPED = "skipped"
 
+# Update-mode outcomes (docs/schedule-state-plan.md). Wrong bulletins,
+# corrections, repeated weeks, failures and skips use the statuses above.
+# The bulletin's changes were applied.
+PROCESS_UPDATED = "updated"
+# The call succeeded and applied nothing.
+PROCESS_NO_CHANGE = "no_change"
+# Older than the parish's high-water mark: every change rejected.
+PROCESS_STALE = "stale_bulletin"
+# It would delete most of the weekly schedule: every change rejected.
+PROCESS_MASS_DELETE = "mass_delete"
+# No issue date read: applied, and flagged.
+PROCESS_UNDATED = "undated"
+# A bulletin whose call has failed in this many runs is no longer retried.
+PROCESS_GAVE_UP = "gave_up"
+
 FAILED_STATUSES = frozenset({
     FETCH_RESOLVE_FAILED,
     FETCH_DOWNLOAD_FAILED,

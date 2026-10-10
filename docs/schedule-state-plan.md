@@ -1,6 +1,8 @@
 # Project Carlo: believed schedules updated by proposed changes
 
-Status: proposal, for review. Nothing here is implemented.
+Status: implemented, with every parish still in extract mode until it is
+seeded. Where the implementation had to decide something this plan left open,
+or departs from it, see [Implementation decisions](#implementation-decisions).
 
 Today every bulletin is extracted from scratch, and the site shows whatever the
 parish's latest bulletin produced. Anything the extractor misses one week
@@ -738,3 +740,165 @@ LEFT JOIN llm_call c ON c.id = (
 - Periodic from-scratch audit calls to catch errors the update calls anchor on.
   This is a second `llm_call.task` when it comes.
 - Tally corrections as `human` revisions.
+
+## Implementation decisions
+
+Decisions made while implementing this plan, where it was silent or where the
+code departs from it.
+
+### Storing calls
+
+- **A successful call's row is written with its decisions.** Step 3 stores the
+  raw request and reply in the blob store (`llm/calls/<request_key>.json`) as
+  soon as the reply arrives, and a failed call's `llm_call` row at once. A
+  successful call's `llm_call` row is inserted in the step 4 to 6 transaction.
+  Otherwise a crash between the two would leave a successful call that was
+  never decided, and "no successful call yet" would never pick its bulletin
+  again. The stored reply is what the next run reuses: it finds it by request
+  key and decides it without calling the API.
+- **A reply that couldn't be read isn't reused.** It is kept in the blob store
+  for debugging, but a retry calls the model again.
+- **The same PDF is called once per parish.** A bulletin is not called when
+  another bulletin of the parish with the same `content_hash` already has a
+  successful call: there is nothing new in it, and with an unchanged view its
+  request key would collide with the first call's.
+- **One provider: gpt-6-luna.** `OpenAIScheduleUpdater` (in
+  `classifiers/schedule_update.py`) runs every update call on `gpt-6-luna`
+  through the OpenAI Responses API, set up as the eval module's `gpt-6-luna`
+  classifier is: high reasoning effort, the PDF at low detail, and strict
+  decoding of the response schema, so `params_json` is
+  `{"file_detail":"low","reasoning_effort":"high","strict":true}`. The process
+  stage's `--model` picks only the extract-mode Gemini model. The policy is a
+  developer message marked as an explicit prompt-cache breakpoint, then the
+  church list, the date and the view, then the PDF. It carries every rule of
+  the eval policy (`classifiers/schedule_policy.py`: chapels and adoration
+  chapels, weekly vs dated, dates, exclusions as the weeks that remain, times,
+  notes and the final source checks), worded for changes, and the response
+  schema's qualifier and note descriptions are the eval schema's.
+
+### Deciding
+
+- **`no_change`** is an extra per-proposal rejection reason: a modify whose new
+  entry is exactly its target. It would otherwise write a revision that changes
+  nothing.
+- **Staleness is worked out, not stored.** `schedule/history.py` replays a
+  parish's successful calls in order and places each against the mark as it
+  stood then. Each call is placed against the seed it was made under (the
+  latest seed at or before its `base_revision`), so a later seed doesn't make
+  an earlier call look stale. A call is undated when it read no date, or one
+  more than 21 days after the fetch (the existing cap). Mass deletes count the
+  distinct live weekly entries a call's deletes name; modifies don't count.
+- **The seed's bulletin counts as its week's first.** A seed's newest dated
+  bulletin counts as the first bulletin for its week. The first update call
+  for that week is therefore noted as a correction.
+- **A call can only change what it was shown.** A modify or delete naming a
+  live entry that wasn't in the call's view is `unknown_item`. That covers a
+  dated entry already past, which stays out of the log as the plan says. Hand
+  edits may name any live entry.
+- **`seq` is the position in the model's answer.** It counts any change that
+  was dropped because it had no known `op`. A lenient reply's `seen` or
+  `changes` that isn't a list reads as empty. Its flags are true only for
+  `true` or `"true"`.
+- **A dated entry may repeat its own weekday.** Models often give
+  `day_of_week` alongside `date`. When it agrees with the date it is dropped;
+  when it disagrees the entry is `invalid_entry`.
+- **Hand edits re-read the proposal.** `schedule apply` checks each proposal's
+  entry as the model wrote it, so one rejected as `unknown_church` can be
+  applied once the church is in `churches.csv`.
+- **Hand edits need an update-mode parish.** `schedule add`, `modify`, `delete`
+  and `apply` refuse a parish without a seed, so the new tables stay empty
+  for extract-mode parishes. `schedule seed` is how a parish gets one.
+- **One failed parish doesn't stop the stage.** An error while deciding a
+  call rolls back that call's transaction. The parish is recorded as `failed`
+  for the run, and the other parishes go on.
+
+### Seeds and churches
+
+- **`as_of` is normalised.** It is stored in the same form as `fetched_at`
+  (`YYYY-MM-DDTHH:MM:SSZ`), because the two are compared as text. A date with
+  no time means the end of that day, so everything fetched that day is in the
+  seed.
+- **A parish can still be deleted after a church moved into it.** If a church
+  moved from parish A to parish B, A's log, proposals and sightings still name
+  its entries. Deleting B would delete those entries by cascade, from under
+  A's rows. So before B is deleted, any of its churches another parish still
+  names are moved back to that parish and retired. That counts as a retirement
+  in the run's CSV check.
+- **The qualifier converters are shared through their constants.** The labels
+  only validate the list and object forms and never convert them, so
+  `schedule/qualifiers.py` is the one converter. It is built on the labels'
+  `WEEKS_OF_MONTH`, `SEASON_KEYS` and `DAYS_IN_MONTH`.
+
+### Runs and the report
+
+- **One run result per parish.** `run_parish_result` holds one row per parish
+  and stage, so when a parish has several bulletins in a run its row has the
+  most notable outcome and every call's detail. The new outcomes are
+  `updated`, `no_change`, `stale_bulletin`, `mass_delete`, `undated` and
+  `gave_up`. Its `event_count` is the number of live entries.
+- **The change diff leaves out update-mode parishes.** Any parish in update
+  mode in either database is left out of the extract-mode diff, so it can't be
+  counted as dropping to zero. A church retired from the CSV holds the run the
+  same way a deleted one does.
+- **The "not printed" flag** counts only the calls that were shown the entry
+  (base revision at or after the entry's `since_revision`) and weren't a wrong
+  bulletin or stale.
+
+### Snapshot and site
+
+- **Current bulletin.** An update-mode parish's `bulletin_url` and
+  `bulletin_week` use the same ordering as extract mode over its processed
+  bulletins, since update mode writes `processed_at`, `published_date` and
+  `wrong_bulletin` on the bulletins it calls. That is the newest bulletin whose
+  call succeeded and wasn't a wrong bulletin or stale (a stale one is older
+  than the mark by definition). A parish seeded but not yet called keeps
+  showing its last extract-mode bulletin rather than none.
+- **One snapshot rule for both modes.** Dated rows before the build date are
+  left out, and cancellations are matched to weekly rows, for extract-mode
+  rows too. A cancellation matching nothing is left out in both modes; where an
+  extract-mode bulletin repeats a weekly slot, the lowest id is named.
+- **`weeks_of_month`** is a plain list column in the snapshot.
+- **The site shows the qualifiers as PR 22 did.** The web app follows PR 22
+  (lyonsl2/project-carlo#22, and the PRD on its branch) for how the
+  qualifiers are shown, in `apps/web/src/lib/schedulePattern.ts`:
+  - The copy is long form, at the grain the bulletin gave: "First Friday of
+    the month", "Second and fourth Saturdays of the month", "October through
+    June", "June 4 through September 10", joined with a comma when a slot has
+    both. `schedule/qualifiers.describe_schedule_pattern` words the report's
+    entries the same way.
+  - The church page lists every weekly slot, in season or not, with the
+    qualifier beside the time in the same italic annotation as the note
+    ("First Friday of the month · Benediction").
+  - The map and its filters hide a weekly slot that is out of season today.
+    Monthly slots stay, since they do run at this time of year.
+  - The map popup and the city summary give a slot that isn't every week its
+    own row, with the qualifier as a line under it, so a first-Friday devotion
+    is never folded into an every-Friday Mass. Popup dedup keys include the
+    pattern. The city summary folds a run of days only when they keep the same
+    pattern and it has no weeks of the month.
+  - The next occurrence is looked for up to seven years ahead, so a slot whose
+    weeks and season rarely meet is still found.
+
+### Commands
+
+- `pnpm schedule show|apply|add|modify|delete|seed|rebuild` is the hand-edit
+  command. `seed` loads a JSON list of entries as a seed revision. It is a thin
+  loader for whatever method builds the seeds, which is still out of scope.
+  `rebuild` replays the log into `current_schedule` and reports any rows that
+  differed.
+- The labeler shows an update-mode bulletin's answer as the call's view with
+  its applied proposals made, marked `update`.
+
+### Rollout
+
+Rollout steps 1 and 2 land together: the migration, the `schedule/` package,
+update mode, and snapshot v2 with the frontend. No parish has a seed yet, so
+the pipeline behaves as before, except that the snapshot is version 2. Version
+2 leaves out past dated rows and cancellations that match no weekly row, which
+the site was hiding anyway.
+
+### Follow-ups
+
+- `dioceses/records._referenced_by_events` still only looks at `event` rows
+  when warning that a promotion would drop data. It doesn't yet look at
+  believed-schedule entries.

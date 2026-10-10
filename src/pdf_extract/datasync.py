@@ -434,14 +434,16 @@ def build_deploy_snapshot(
     # The published run's data as it stands, before the CSVs are applied.
     published = extract(db_path, snapshot_path, keep_previous=False)
     seeded = {**ensure_db(db_path), "migrations_applied": migrations}
-    if seeded["parishes_deleted"] or seeded["churches_deleted"]:
-        # Removing a parish or church deletes its events. That goes live only
+    removed_churches = seeded["churches_deleted"] + seeded.get("churches_retired", 0)
+    if seeded["parishes_deleted"] or removed_churches:
+        # Removing a parish or church deletes its events (or, for a church
+        # retired from a believed schedule, its entries). That goes live only
         # through a weekly run a person has reviewed (the run is held for it),
         # never as a side effect of a deploy: keep the published data.
         LOGGER.warning(
             "The CSVs remove %d parishes and %d churches; deploying the published "
             "data unchanged until a reviewed weekly run publishes the removal",
-            seeded["parishes_deleted"], seeded["churches_deleted"],
+            seeded["parishes_deleted"], removed_churches,
         )
         return {
             "run_id": pulled["run_id"],
