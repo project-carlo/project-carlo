@@ -1,6 +1,10 @@
 """Bulletin process pipeline: extract schedules from PDFs with Gemini AI.
 
-Runs the production Gemini classifier over each parish's latest fetched
+Each parish is processed in its own mode. A parish with a seed revision is in
+update mode (`pdf_extract.schedule.update`): its bulletins are read against
+its believed schedule. Every other parish is in extract mode, below.
+
+Extract mode runs the production Gemini classifier over each parish's latest fetched
 bulletin. `bulletin.processed_at` is the gate that keeps a bulletin from being
 re-extracted; the shared result cache in the blob store (keyed by classifier
 version + bulletin content hash) is a second layer that lets a re-run skip the
@@ -29,6 +33,7 @@ from pdf_extract.bulletin_week import (
     place_bulletin,
 )
 from pdf_extract.classifiers.gemini import GeminiClassifier
+from pdf_extract.classifiers.schedule_update import GeminiScheduleUpdater
 from pdf_extract.recurrence import (
     History,
     load_history_from_db,
@@ -56,6 +61,8 @@ from pdf_extract.runs import (
     join_details,
     record_parish_result,
 )
+from pdf_extract.schedule.store import update_mode_slugs
+from pdf_extract.schedule.update import process_update_mode
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import (
     churches_for_parish,
@@ -169,7 +176,13 @@ def process_bulletins(
             by_slug.setdefault(bulletin["parish_slug"], []).append(bulletin)
         # Keep only the latest fetched bulletin per parish, then process those still pending.
         latest = latest_per_parish(bulletins)
-        pending = [m for m in latest if m.get("processed_at") is None]
+        # Update-mode parishes are processed by their own stage, below.
+        update_mode = update_mode_slugs(conn)
+        pending = [
+            m for m in latest
+            if m.get("processed_at") is None and m["parish_slug"] not in update_mode
+        ]
+        update_scope: Collection[str] | None = slugs
 
         if parish_name:
             parish_row = get_parish_by_name(conn, parish_name)
@@ -185,6 +198,7 @@ def process_bulletins(
                 }
             target_slug = parish_row["slug"]
             pending = [m for m in pending if m["parish_slug"] == target_slug]
+            update_scope = [target_slug]
         elif slugs is not None:
             known = {row["slug"] for row in list_parishes(conn)}
             missing = sorted(set(slugs) - known)
@@ -297,6 +311,11 @@ def process_bulletins(
                     churches_for_parish(conn, entry["parish_slug"]), outcome.extracted,
                 )
             commit(entry, outcome.extracted, PROCESS_EXTRACTED)
+
+        update_stats = process_update_mode(
+            conn, slugs=update_scope, run_id=run_id,
+            updater=GeminiScheduleUpdater(model=model), concurrency=concurrency,
+        )
     finally:
         conn.close()
 
@@ -308,6 +327,7 @@ def process_bulletins(
         "weekly_promotions": promoted_events,
         "failed_bulletins": failed,
         **tokens,
+        **update_stats,
     }
     LOGGER.info("Process stage finished: %s", result)
     return result

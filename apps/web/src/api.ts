@@ -9,7 +9,7 @@ import {
   type CityIndex,
   type CityLink,
 } from "./lib/cities";
-import { compareSchedule, parseIsoDateLocal } from "./lib/schedule";
+import { compareSchedule, parseIsoDateLocal, seasonOf } from "./lib/schedule";
 import {
   CHURCH_MAP_CANVAS,
   CITY_MAP_CANVAS,
@@ -31,6 +31,7 @@ import {
   type Snapshot,
 } from "./lib/snapshot";
 import { reloadForNewVersion } from "./lib/staleDeploy";
+import { formatSlotQualifier } from "./utils";
 import type {
   ChurchBase,
   ChurchDetail,
@@ -116,6 +117,8 @@ function toEventSummary(ev: RawEvent): EventSummary {
     next_occurrence: ev.occurrence,
     page_number: ev.page_number,
     note: ev.note,
+    weeks_of_month: ev.weeks_of_month,
+    season: seasonOf(ev),
   };
 }
 
@@ -155,18 +158,19 @@ function buildMapItem(
   const weeklyEvents = churchEvents.filter(
     (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
   );
-  // Dedup repeated weekly slots (same weekday + start time) that occasionally
-  // appear across bulletins. Prefer weekly events for the popup; if the church
-  // has only specific-date events, fall back to the five soonest occurrences.
+  // Dedup repeated weekly slots (same weekday, start time, weeks and season)
+  // that occasionally appear across bulletins. Prefer weekly events for the
+  // popup; if the church has only specific-date events, fall back to the five
+  // soonest occurrences.
   const seen = new Set<string>();
   let popupSchedule = weeklyEvents
+    .map(toEventSummary)
     .filter((e) => {
-      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}`;
+      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}-${formatSlotQualifier(e) ?? ""}`;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
     })
-    .map(toEventSummary)
     .sort((a, b) => compareSchedule(a, b));
   if (popupSchedule.length === 0) {
     popupSchedule = churchEvents

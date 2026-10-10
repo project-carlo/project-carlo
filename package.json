@@ -24,6 +24,7 @@
     "geocode:apply": "uv run python -m pdf_extract geocode apply",
     "geocode:cities": "pnpm --filter web geocode:cities",
     "recurrence:apply": "uv run python -m pdf_extract recurrence apply",
+    "schedule": "uv run python -m pdf_extract schedule",
     "diocese": "uv run python -m pdf_extract diocese",
     "test": "uv run pytest",
     "lint": "uv run ruff check .",

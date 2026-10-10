@@ -16,6 +16,8 @@ function weekly(day: string, start: number): EventSummary {
     next_occurrence: null,
     page_number: null,
     note: null,
+    weeks_of_month: [],
+    season: null,
   };
 }
 
@@ -56,6 +58,22 @@ describe("weeklyScheduleRows", () => {
   it("reads day names as the church page does, whatever their case or spacing", () => {
     const rows = weeklyScheduleRows([weekly(" Sunday ", 9 * 60), weekly("someday", 480)]);
     expect(rows.map((r) => [r.label, r.times])).toEqual([["Sunday", ["9 a.m."]]]);
+  });
+
+  it("qualifies times that aren't every week, and folds only equal ones", () => {
+    const firstSunday: EventSummary = {
+      ...weekly("sunday", 8 * 60),
+      weeks_of_month: ["first"],
+    };
+    const rows = weeklyScheduleRows([
+      firstSunday,
+      { ...weekly("monday", 8 * 60), weeks_of_month: ["first"] },
+      weekly("tuesday", 8 * 60),
+    ]);
+    expect(rows.map((r) => [r.label, r.times])).toEqual([
+      ["Sun & Mon", ["8 a.m. (1st)"]],
+      ["Tuesday", ["8 a.m."]],
+    ]);
   });
 
   it("leaves out dated services", () => {

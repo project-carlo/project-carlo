@@ -6,6 +6,11 @@ current classifier version and church list (the key `process` would use), then
 under any version the cache has for the same PDF. Only when nothing is cached
 does it fall back to the bulletin's rows in the `event` table, which have been
 through storage and weekly promotion ("post-processing") and are marked so.
+
+For a parish in update mode the model is not asked for the whole schedule, so
+its answer is the schedule its call was shown (the view) with the call's
+applied proposals made, the pages coming from the call's sightings and
+proposals (`update_mode_source`).
 """
 
 from __future__ import annotations
@@ -30,6 +35,7 @@ from pdf_extract.labeling.labels import (
     label_statuses,
 )
 from pdf_extract.runner import _cache_version_component, cache_key
+from pdf_extract.schedule.store import church_slugs, load_entries, table_exists
 from pdf_extract.storage import (
     church_list_for_prompt,
     latest_bulletin_order,
@@ -294,6 +300,77 @@ def _read_json(key: str) -> dict[str, Any] | None:
     return parsed if isinstance(parsed, dict) else None
 
 
+def update_mode_source(conn: sqlite3.Connection, bulletin_id: int) -> dict[str, Any] | None:
+    """The bulletin's latest successful update call as an answer, or None if it has none.
+
+    The rows are the call's view with its applied proposals made: modified
+    and deleted entries out, added and modified ones in.
+    """
+    if not table_exists(conn, "llm_call"):
+        return None
+    call = conn.execute(
+        """SELECT c.id, c.model, c.version, c.published_date, c.wrong_bulletin,
+                  c.church_list_needs_review, v.json AS view_json
+           FROM llm_call c JOIN schedule_view v ON v.hash = c.view_hash
+           WHERE c.bulletin_id = ? AND c.status IN ('ok', 'lenient')
+           ORDER BY c.id DESC LIMIT 1""",
+        (bulletin_id,),
+    ).fetchone()
+    if call is None:
+        return None
+    pages = dict(conn.execute(
+        "SELECT entry_id, page_number FROM entry_sighting WHERE bulletin_id = ?",
+        (bulletin_id,),
+    ).fetchall())
+    applied = conn.execute(
+        """SELECT op, target_entry_id, entry_id, page_number FROM proposed_change
+           WHERE llm_call_id = ? AND decision = 'applied' ORDER BY seq""",
+        (call["id"],),
+    ).fetchall()
+    removed = {row["target_entry_id"] for row in applied if row["target_entry_id"]}
+    events: list[dict[str, Any]] = []
+    for church in json.loads(call["view_json"])["churches"]:
+        for item in church["entries"]:
+            if item["id"] in removed:
+                continue
+            events.append(_view_event(church["slug"], item, pages.get(item["id"])))
+    added = [row for row in applied if row["entry_id"] is not None]
+    entries = load_entries(conn, [row["entry_id"] for row in added])
+    slugs = church_slugs(conn, [e.church_id for e in entries.values()])
+    for row in added:
+        entry = entries[row["entry_id"]]
+        events.append(_view_event(
+            slugs[entry.church_id], entry.view(row["entry_id"]), row["page_number"],
+        ))
+    return {
+        "source": {
+            "kind": "update",
+            "classifier": "schedule_update",
+            "llm_call_id": call["id"],
+            "model": call["model"],
+            "prompt_version": call["version"][:12],
+        },
+        "published_date": call["published_date"],
+        "wrong_bulletin": bool(call["wrong_bulletin"]),
+        "church_list_needs_review": bool(call["church_list_needs_review"]),
+        "events": gemini_rows(events),
+    }
+
+
+def _view_event(church_slug: str, item: dict[str, Any], page: int | None) -> dict[str, Any]:
+    """A view entry in the flat shape `gemini_rows` reads."""
+    season = item.get("season") or {}
+    return {
+        **{k: v for k, v in item.items() if k not in ("id", "season")},
+        "church_slug": church_slug,
+        "page_number": page,
+        "season_start_month": season.get("start_month"),
+        "season_start_day": season.get("start_day"),
+        "season_end_month": season.get("end_month"),
+        "season_end_day": season.get("end_day"),
+    }
+
+
 def load_gemini_source(
     conn: sqlite3.Connection,
     *,
@@ -304,6 +381,9 @@ def load_gemini_source(
     processed_at: str | None,
 ) -> dict[str, Any]:
     """Gemini's output for one bulletin, and where it came from."""
+    update = update_mode_source(conn, bulletin_id)
+    if update is not None:
+        return update
     classifier = GeminiClassifier()
     current_dir = _cache_version_component(classifier.version)
     exact = cache_key(classifier.name, classifier.version, content_hash, churches)

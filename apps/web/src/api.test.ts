@@ -29,6 +29,12 @@ function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
     occurrence: null,
     page_number: null,
     note: null,
+    weeks_of_month: [],
+    season_start_month: null,
+    season_start_day: null,
+    season_end_month: null,
+    season_end_day: null,
+    cancels_event_id: null,
     ...overrides,
   };
 }
@@ -200,6 +206,19 @@ describe("collectMapItems", () => {
     ]);
   });
 
+  it("keeps weekly slots at one time that keep different weeks apart", () => {
+    const churches = [church(151)];
+    const events = [
+      rawEvent({ id: -1501, church_id: 151, weeks_of_month: ["first"] }),
+      rawEvent({ id: -1502, church_id: 151, weeks_of_month: ["third"] }),
+      rawEvent({ id: 1503, church_id: 151, weeks_of_month: ["third"] }),
+    ];
+
+    const [item] = collectMapItems(churches, events, allTypes);
+
+    expect(item.upcoming_events.map((e) => e.id)).toEqual([-1502, -1501]);
+  });
+
   it("returns the identical item when a church's matching events are unchanged", () => {
     const churches = [church(121), church(122)];
     const events = [
@@ -290,8 +309,16 @@ describe("church page lookups", () => {
   });
 
   it("leaves out events with no next occurrence", () => {
-    // Church 3's only event is cancelled.
-    expect(churchSchedule(snapshot, "a", [])).toEqual([]);
+    // Church 3's cancellation (id 11) never occurs; its weekly Mass does.
+    expect(churchSchedule(snapshot, "a", []).map((ev) => ev.id)).toEqual([-118]);
+  });
+
+  it("carries a weekly slot's weeks of the month and season", () => {
+    expect(churchSchedule(snapshot, "a", [])[0]).toMatchObject({
+      weeks_of_month: ["fourth", "last"],
+      season: { start_month: 10, start_day: null, end_month: 6, end_day: 15 },
+    });
+    expect(churchSchedule(snapshot, "b", [])[0].season).toBeNull();
   });
 });
 

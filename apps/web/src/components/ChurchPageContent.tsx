@@ -9,6 +9,7 @@ import {
   formatLongMonthDay,
   formatMonthDay,
   formatMinutesMissal,
+  formatSlotQualifier,
   titleCase,
 } from "../utils";
 import { ALL_CHURCHES, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
@@ -151,6 +152,17 @@ function EventNote({ note }: { note: string | null }) {
   return (
     <span className={`ml-2 ${ANNOTATION_CLASS} text-ink-faint`}>
       {note}
+    </span>
+  );
+}
+
+/** When a weekly slot isn't every week of the year: "1st & 3rd", "May–Oct". */
+function SlotQualifier({ event }: { event: EventSummary }) {
+  const qualifier = formatSlotQualifier(event);
+  if (!qualifier) return null;
+  return (
+    <span className={`ml-2 ${ANNOTATION_CLASS} text-ink-soft`}>
+      {qualifier}
     </span>
   );
 }
@@ -358,6 +370,7 @@ export function ChurchPageContent({
                                   <span className="tabular-nums">
                                     {formatTimeValue(event)}
                                   </span>
+                                  <SlotQualifier event={event} />
                                   <EventNote note={event.note} />
                                   {event.page_number !== sectionPage ? (
                                     <PageRef

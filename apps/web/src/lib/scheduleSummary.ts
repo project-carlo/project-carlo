@@ -1,7 +1,12 @@
 import { DAY_ORDER, jsDayFor } from "../constants/days";
 import type { EventSummary } from "../types";
-import { formatMinutesMissal, titleCase } from "../utils";
-import type { ScheduleRollupRow } from "./eventRollup";
+import { titleCase } from "../utils";
+import {
+  addQualifiedTime,
+  formatQualifiedTimes,
+  type QualifiedTime,
+  type ScheduleRollupRow,
+} from "./eventRollup";
 
 /**
  * A compact weekly schedule for listing many churches on one page (a city
@@ -23,17 +28,17 @@ function runLabel(days: string[]): string {
 
 /** Weekly events as rows in Sunday-first order, merging adjacent days with identical times. */
 export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] {
-  const timesByDay = new Map<string, number[]>();
+  const timesByDay = new Map<string, QualifiedTime[]>();
   for (const event of events) {
     if (event.kind !== "weekly" || !event.day_of_week) continue;
     const day = DAY_ORDER[jsDayFor(event.day_of_week)];
     if (!day) continue;
     const times = timesByDay.get(day) ?? [];
-    if (!times.includes(event.start_time)) times.push(event.start_time);
+    addQualifiedTime(times, event);
     timesByDay.set(day, times);
   }
 
-  const runs: { days: string[]; times: number[]; signature: string }[] = [];
+  const runs: { days: string[]; times: string[]; signature: string }[] = [];
   let previousDayListed = false;
   for (const day of DAY_ORDER) {
     const times = timesByDay.get(day);
@@ -41,8 +46,8 @@ export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] 
       previousDayListed = false;
       continue;
     }
-    const sorted = [...times].sort((a, b) => a - b);
-    const signature = sorted.join(",");
+    const sorted = formatQualifiedTimes(times);
+    const signature = sorted.join("|");
     const last = runs[runs.length - 1];
     if (previousDayListed && last.signature === signature) {
       last.days.push(day);
@@ -55,6 +60,6 @@ export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] 
   return runs.map((run) => ({
     key: `weekly:${run.days.join("-")}`,
     label: runLabel(run.days),
-    times: run.times.map(formatMinutesMissal),
+    times: run.times,
   }));
 }

@@ -1,6 +1,8 @@
 # Project Carlo: believed schedules updated by proposed changes
 
-Status: proposal, for review. Nothing here is implemented.
+Status: implemented, with every parish still in extract mode until it is
+seeded. Where the implementation had to decide something this plan left open,
+or departs from it, see [Implementation decisions](#implementation-decisions).
 
 Today every bulletin is extracted from scratch, and the site shows whatever the
 parish's latest bulletin produced. Anything the extractor misses one week
@@ -738,3 +740,105 @@ LEFT JOIN llm_call c ON c.id = (
 - Periodic from-scratch audit calls to catch errors the update calls anchor on.
   This is a second `llm_call.task` when it comes.
 - Tally corrections as `human` revisions.
+
+## Implementation decisions
+
+Decisions made while implementing this plan, where it was silent or where the
+code departs from it.
+
+### Storing calls
+
+- **A successful call's row is written with its decisions.** Step 3 stores the
+  raw request and reply in the blob store (`llm/calls/<request_key>.json`) as
+  soon as the reply arrives, and a failed call's `llm_call` row at once. A
+  successful call's `llm_call` row is inserted in the step 4 to 6 transaction.
+  Otherwise a crash between the two would leave a successful call that was
+  never decided, and "no successful call yet" would never pick its bulletin
+  again. The stored reply is what the next run reuses: it finds it by request
+  key and decides it without calling the API.
+- **A reply that couldn't be read isn't reused.** It is kept in the blob store
+  for debugging, but a retry calls the model again.
+- **The same PDF is called once per parish.** A bulletin is not called when
+  another bulletin of the parish with the same `content_hash` already has a
+  successful call: there is nothing new in it, and with an unchanged view its
+  request key would collide with the first call's.
+- **One provider for now.** `GeminiScheduleUpdater` (in
+  `classifiers/schedule_update.py`) runs the process stage's `--model` with no
+  extra parameters, so `params_json` is `{}`. The prompt is the static policy,
+  then the church list, the date and the view, then the PDF, so the policy can
+  be served from a prompt cache.
+
+### Deciding
+
+- **`no_change`** is an extra per-proposal rejection reason: a modify whose new
+  entry is exactly its target. It would otherwise write a revision that changes
+  nothing.
+- **Staleness is worked out, not stored.** `schedule/history.py` replays a
+  parish's successful calls in order and places each against the mark as it
+  stood then. A call is undated when it read no date, or one more than 21 days
+  after the fetch (the existing cap). Mass deletes count the distinct live
+  weekly entries a call's deletes name; modifies don't count.
+- **A dated entry may repeat its own weekday.** Models often give
+  `day_of_week` alongside `date`. When it agrees with the date it is dropped;
+  when it disagrees the entry is `invalid_entry`.
+- **Hand edits re-read the proposal.** `schedule apply` checks each proposal's
+  entry as the model wrote it, so one rejected as `unknown_church` can be
+  applied once the church is in `churches.csv`.
+
+### Runs and the report
+
+- **One run result per parish.** `run_parish_result` holds one row per parish
+  and stage, so when a parish has several bulletins in a run its row has the
+  most notable outcome and every call's detail. The new outcomes are
+  `updated`, `no_change`, `stale_bulletin`, `mass_delete`, `undated` and
+  `gave_up`. Its `event_count` is the number of live entries.
+- **The change diff leaves out update-mode parishes.** Any parish in update
+  mode in either database is left out of the extract-mode diff, so it can't be
+  counted as dropping to zero. A church retired from the CSV holds the run the
+  same way a deleted one does.
+- **The "not printed" flag** counts only the calls that were shown the entry
+  (base revision at or after the entry's `since_revision`) and weren't a wrong
+  bulletin or stale.
+
+### Snapshot and site
+
+- **Current bulletin.** An update-mode parish's `bulletin_url` and
+  `bulletin_week` use the same ordering as extract mode over its processed
+  bulletins, since update mode writes `processed_at`, `published_date` and
+  `wrong_bulletin` on the bulletins it calls. That is the newest bulletin whose
+  call succeeded and wasn't a wrong bulletin or stale (a stale one is older
+  than the mark by definition). A parish seeded but not yet called keeps
+  showing its last extract-mode bulletin rather than none.
+- **One snapshot rule for both modes.** Dated rows before the build date are
+  left out, and cancellations are matched to weekly rows, for extract-mode
+  rows too. A cancellation matching nothing is left out in both modes; where an
+  extract-mode bulletin repeats a weekly slot, the lowest id is named.
+- **`weeks_of_month`** is a plain list column in the snapshot.
+- **The site shows the qualifiers.** Besides `computeNextOccurrence`, the web
+  app shows a short qualifier next to a weekly time ("1st & 3rd", "May–Oct") on
+  the church page, the city summary and the map popup, so a first-Saturday slot
+  doesn't read as every Saturday. Out-of-season slots are still listed.
+
+### Commands
+
+- `pnpm schedule show|apply|add|modify|delete|seed|rebuild` is the hand-edit
+  command. `seed` loads a JSON list of entries as a seed revision. It is a thin
+  loader for whatever method builds the seeds, which is still out of scope.
+  `rebuild` replays the log into `current_schedule` and reports any rows that
+  differed.
+- The labeler shows an update-mode bulletin's answer as the call's view with
+  its applied proposals made, marked `update`.
+
+### Rollout
+
+Rollout steps 1 and 2 land together: the migration, the `schedule/` package,
+update mode, and snapshot v2 with the frontend. No parish has a seed yet, so
+the pipeline behaves as before, except that the snapshot is version 2. Version
+2 leaves out past dated rows and cancellations that match no weekly row, which
+the site was hiding anyway.
+
+### Follow-ups
+
+- `dioceses/records._referenced_by_events` still only looks at `event` rows
+  when warning that a promotion would drop data. It doesn't yet look at
+  believed-schedule entries.

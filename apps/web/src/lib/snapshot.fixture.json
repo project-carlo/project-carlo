@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "churches": {
     "id": [7, 3],
     "parish_id": [1, 1],
@@ -17,16 +17,22 @@
     "bulletin_week": {"values": ["2026-09-20"], "codes": [0, null]}
   },
   "events": {
-    "id": {"deltas": [10, 1, 4]},
-    "church_id": [7, 3, 7],
-    "event_type": {"values": ["mass", "adoration"], "codes": [0, 0, 1]},
-    "event_kind": {"values": ["weekly", "specific_date"], "codes": [0, 1, 0]},
-    "day_of_week": {"values": ["Sunday", "Friday"], "codes": [0, null, 1]},
-    "date": {"values": ["2026-12-25"], "codes": [null, 0, null]},
-    "start_time": [600, 0, 1140],
-    "end_time": [null, 60, 1200],
-    "cancelled": [false, true, false],
-    "page_number": [2, null, 3],
-    "note": {"values": ["Midnight"], "codes": [null, 0, 0]}
+    "id": {"deltas": [-118, 128, 1, 4]},
+    "church_id": [3, 7, 3, 7],
+    "event_type": {"values": ["mass", "adoration"], "codes": [0, 0, 0, 1]},
+    "event_kind": {"values": ["weekly", "specific_date"], "codes": [0, 0, 1, 0]},
+    "day_of_week": {"values": ["Friday", "Sunday"], "codes": [0, 1, null, 0]},
+    "date": {"values": ["2026-12-25"], "codes": [null, null, 0, null]},
+    "start_time": [0, 600, 0, 1140],
+    "end_time": [null, null, 60, 1200],
+    "cancelled": [false, false, true, false],
+    "page_number": [null, 2, null, 3],
+    "note": {"values": ["Midnight"], "codes": [null, null, 0, 0]},
+    "weeks_of_month": [["fourth", "last"], [], [], []],
+    "season_start_month": [10, null, null, null],
+    "season_start_day": [null, null, null, null],
+    "season_end_month": [6, null, null, null],
+    "season_end_day": [15, null, null, null],
+    "cancels_event_id": [null, null, -118, null]
   }
 }

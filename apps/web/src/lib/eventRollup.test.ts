@@ -25,6 +25,8 @@ function event(overrides: Partial<EventSummary>): EventSummary {
     next_occurrence: null,
     page_number: null,
     note: null,
+    weeks_of_month: [],
+    season: null,
     ...overrides,
   };
 }
@@ -123,6 +125,30 @@ describe("rollUpEventsByDay", () => {
 
     expect(rows).toHaveLength(2);
     expect(rows.map((row) => row.label)).toEqual(["", ""]);
+  });
+
+  it("qualifies a weekly time that isn't every week of the year", () => {
+    const rows = rollUpEventsByDay([
+      weekly("sunday", 9 * 60),
+      event({
+        kind: "weekly",
+        day_of_week: "sunday",
+        start_time: 9 * 60,
+        weeks_of_month: ["first", "third"],
+      }),
+      event({
+        kind: "weekly",
+        day_of_week: "sunday",
+        start_time: 8 * 60,
+        season: { start_month: 5, start_day: null, end_month: 10, end_day: null },
+      }),
+    ]);
+
+    expect(rows[0].times).toEqual([
+      "8 a.m. (May–Oct)",
+      "9 a.m.",
+      "9 a.m. (1st & 3rd)",
+    ]);
   });
 
   it("returns no rows for an empty schedule", () => {

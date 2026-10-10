@@ -19,6 +19,7 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.schedule.store import DELETE, REFERENCE, Change, append_revision
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
@@ -148,13 +149,23 @@ def seed_reference_data(
     them, survive. A parish or church removed from its CSV is deleted along
     with its bulletins and events; the previous published database still holds
     them if that was a mistake.
+
+    A church is different once it has believed-schedule entries, since its
+    parish's change log points at them and is never rewritten
+    (docs/schedule-state-plan.md, "Churches leaving the CSV"). When such a
+    church leaves the CSV or names another parish, its live entries are
+    deleted from its old parish's schedule by a `reference` revision; one that
+    leaves is retired (`retired_at`) rather than deleted, and comes back with
+    its id if it returns to the CSV.
     """
     stats = {
         "parishes_upserted": 0,
         "parishes_deleted": 0,
         "churches_upserted": 0,
         "churches_deleted": 0,
+        "churches_retired": 0,
         "churches_skipped": 0,
+        "schedule_entries_removed": 0,
     }
     now = utc_now_iso()
 
@@ -204,6 +215,11 @@ def seed_reference_data(
                 conn.execute("DELETE FROM parish WHERE id = ?", (parish["id"],))
                 stats["parishes_deleted"] += 1
 
+        existing = {
+            r["slug"]: r for r in conn.execute(
+                "SELECT id, slug, parish_id, retired_at FROM church"
+            ).fetchall()
+        }
         church_slugs = set()
         for row in church_rows:
             parish = conn.execute(
@@ -217,6 +233,11 @@ def seed_reference_data(
                 stats["churches_skipped"] += 1
                 continue
             church_slugs.add(row["slug"])
+            old = existing.get(row["slug"])
+            if old is not None and old["parish_id"] != parish["id"]:
+                stats["schedule_entries_removed"] += remove_church_entries(
+                    conn, old["id"], old["parish_id"], reason="moved to another parish",
+                )
             conn.execute(
                 """INSERT INTO church(
                        parish_id, slug, name, address_line1, address_line2, city, state,
@@ -234,7 +255,8 @@ def seed_reference_data(
                        name_verified = excluded.name_verified,
                        address_verified = excluded.address_verified,
                        latitude = excluded.latitude,
-                       longitude = excluded.longitude""",
+                       longitude = excluded.longitude,
+                       retired_at = NULL""",
                 (
                     parish["id"],
                     row["slug"],
@@ -253,13 +275,55 @@ def seed_reference_data(
             )
             stats["churches_upserted"] += 1
 
-        for church in conn.execute("SELECT id, slug FROM church").fetchall():
-            if church["slug"] not in church_slugs:
+        for church in conn.execute(
+            "SELECT id, slug, parish_id, retired_at FROM church"
+        ).fetchall():
+            if church["slug"] in church_slugs:
+                continue
+            stats["schedule_entries_removed"] += remove_church_entries(
+                conn, church["id"], church["parish_id"], reason="left churches.csv",
+            )
+            has_entries = conn.execute(
+                "SELECT 1 FROM schedule_entry WHERE church_id = ? LIMIT 1", (church["id"],)
+            ).fetchone()
+            if has_entries is None:
                 LOGGER.warning("Church %s is no longer in churches.csv; deleting", church["slug"])
                 conn.execute("DELETE FROM church WHERE id = ?", (church["id"],))
                 stats["churches_deleted"] += 1
+            elif church["retired_at"] is None:
+                LOGGER.warning(
+                    "Church %s is no longer in churches.csv; retiring it (its schedule "
+                    "entries stay in the log)", church["slug"],
+                )
+                conn.execute(
+                    "UPDATE church SET retired_at = ? WHERE id = ?", (now, church["id"]),
+                )
+                stats["churches_retired"] += 1
 
     return stats
+
+
+def remove_church_entries(
+    conn: sqlite3.Connection, church_id: int, parish_id: int, *, reason: str,
+) -> int:
+    """Delete a church's live entries from its parish's schedule with one `reference` revision.
+
+    Returns how many entries were removed (0, and no revision, when it had none).
+    """
+    rows = conn.execute(
+        """SELECT s.entry_id FROM current_schedule s
+           JOIN schedule_entry e ON e.id = s.entry_id
+           WHERE s.parish_id = ? AND e.church_id = ? ORDER BY s.entry_id""",
+        (parish_id, church_id),
+    ).fetchall()
+    if not rows:
+        return 0
+    append_revision(
+        conn, parish_id, source_kind=REFERENCE,
+        changes=[Change(DELETE, before_entry_id=row["entry_id"]) for row in rows],
+        actor="churches.csv", note=f"church {church_id} {reason}",
+    )
+    return len(rows)
 
 
 # ── Opening the database ────────────────────────────────────────────────────
