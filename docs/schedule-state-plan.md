@@ -16,12 +16,16 @@ schedule it was shown. Every change records the proposal and decision behind it.
 
 Initial population of the schedules is out of scope: it happens by another
 method (existing schedules, agent runs, manual review). This design only needs
-it to write the first revision of each parish (`source_kind = 'seed'`).
+it to write the first revision of each parish (`source_kind = 'seed'`), with
+the date the seed is current as of.
 
-The new tables arrive as an ordinary migration next to today's, and the
-pipeline gains a mode: `extract` (today's from-scratch extraction) or `update`
-(this plan). A weekly run uses one mode or the other, never both. The old
-tables are dropped once update mode has settled (see [Rollout](#rollout)).
+The new tables arrive as an ordinary migration next to today's. Each parish
+is in one of two modes: `extract` (today's from-scratch extraction) or
+`update` (this plan). **Seeding a parish switches it**: a parish with a seed
+revision is in update mode, and every other parish stays in extract mode. So
+parishes move over one at a time or in batches, the easy ones first, and a
+weekly run handles both kinds side by side. The old tables are dropped once
+every parish has been seeded (see [Rollout](#rollout)).
 
 ## How a bulletin is processed (update mode)
 
@@ -61,8 +65,8 @@ The new `data/migrations/0004_schedule_state.sql`, in full. It adds tables
 and one column, `church.retired_at` (see
 [Churches leaving the CSV](#churches-leaving-the-csv)): `parish`, `bulletin`,
 `event`, `event_occurrence` and the run tables are untouched, and nothing
-writes the new tables in extract mode. The cleanup migration that later drops
-the extract-mode tables is in [Rollout](#rollout).
+writes the new tables for a parish in extract mode. The cleanup migration that
+later drops the extract-mode tables is in [Rollout](#rollout).
 
 ```sql
 -- Believed schedules: each parish's schedule kept as a log of changes, and the
@@ -184,8 +188,12 @@ CREATE TABLE schedule_revision (
     run_id TEXT REFERENCES pipeline_run(id),
     actor TEXT,                       -- a person, or the seeding method
     note TEXT,
+    -- seed revisions: the schedule reflects the bulletins fetched up to this
+    -- time. Defaults to created_at. See "Which bulletins a parish processes".
+    as_of TEXT,
     created_at TEXT NOT NULL,
-    PRIMARY KEY (parish_id, revision)
+    PRIMARY KEY (parish_id, revision),
+    CHECK ((source_kind = 'seed') = (as_of IS NOT NULL))
 );
 
 -- What the model proposed, and what the policy did with it. Every proposal is
@@ -483,7 +491,11 @@ when the model read no date or an implausible one.
 - The parish's **high-water mark** is the newest week among its earlier calls
   that succeeded, weren't a wrong bulletin or stale, and were dated, whether or
   not they applied anything. A bulletin that confirms the schedule is as
-  current as one that changes it.
+  current as one that changes it. The seed counts too: the mark is never
+  older than the week of the parish's newest dated bulletin (not a wrong
+  bulletin) fetched on or before its latest seed's `as_of`, since the seed is
+  as current as that. So an old issue a site falls back to in the parish's
+  first update-mode week is stale.
 - **Older than the mark:** the call is rejected as `stale_bulletin`.
 - **Same week as the mark:** applied. The 2nd bulletin for a week is noted in
   the report as a correction, and a 3rd or later is flagged, as today
@@ -517,9 +529,11 @@ policy rejected or the report flagged:
 database, which is published as it is today. An editing interface is out of
 scope.
 
-## The report (update mode)
+## The report
 
-`report.py` reports from the run's `proposed_change` rows, per parish:
+The report has a section for each mode. Extract-mode parishes are reported as
+today. For update-mode parishes, `report.py` reports from the run's
+`proposed_change` rows, per parish:
 
 - **Applied changes**, each with its page number and rationale. A modify shows
   before → after. A delete and an add of the same church, event type and
@@ -536,28 +550,58 @@ scope.
 - **Rejections:** counts by reason in the summary, and the proposals of every
   `mass_delete` and `stale_bulletin` call listed in full.
 
-A run is no longer held for a parish's schedule changes: the per-parish
-checks (a parish dropping to zero events, say) go, and `mass_delete` takes
-their place. The run-level checks stay: more than half the parishes failed to
-fetch, a stage crashed, or `verify_frontend_snapshot` fails, with its
-thresholds as today (church count, ±10% events, 90% of weekly slots kept).
-Those now guard against a bug in building the schedule or the snapshot, not
-against one bulletin. The first run after the switch compares the seeded
-schedules with the last extract-mode snapshot and will usually be held; it is
-approved by hand.
+An update-mode parish no longer holds the run for its schedule changes: the
+per-parish checks (a parish dropping to zero events, say) apply only to
+extract-mode parishes, and `mass_delete` takes their place. The run-level
+checks stay: more than half the parishes failed to fetch, a stage crashed, or
+`verify_frontend_snapshot` fails, with its thresholds as today (church count,
+±10% events, 90% of weekly slots kept). They compare the whole snapshot, so a
+run right after a large batch of parishes was seeded compares the seeded
+schedules with those parishes' last extracted ones and may be held; it is
+approved by hand, or the batch is made smaller.
 
 ## Processing order
 
+The process stage splits the run's parishes by mode. Extract-mode parishes go
+through today's extraction, unchanged. Update-mode parishes go through the
+steps above.
+
+### Which bulletins a parish processes
+
+An update-mode parish's bulletins are called when they were **fetched after
+its latest seed's `as_of`** and have **no successful call yet**. Everything
+fetched on or before `as_of` is taken to be in the seed, and is never called,
+so switching a parish does not work through its past bulletins:
+
+- A seed written from the current state leaves `as_of` at its creation time.
+  The parish's first update-mode run calls only the bulletins fetched in that
+  run, usually one.
+- A seed built from an older bulletin sets `as_of` to that bulletin's fetch
+  time, and the parish's first run catches up on the few issues fetched since,
+  once.
+
+Update mode goes by its own calls, not `bulletin.processed_at`, so what extract
+mode did with a parish's bulletins before its seed doesn't matter. It still
+writes `published_date`, `wrong_bulletin` and `processed_at` on the bulletins
+it calls, which fetch and the snapshot read.
+
 - **Sequential within a parish, parallel across parishes.** Each call reads the
   schedule the previous call left. Run concurrency stays per parish, as now.
-- **New bulletins for one parish** are processed in order of fetch time.
-  Today only each parish's newest fetched bulletin is processed
-  (`runner.latest_per_parish`); update mode processes every unprocessed one,
-  since each may change the schedule. A
-  site's fallback to an old issue is still called (the date is only known
-  after the model reads it), but its changes are rejected as `stale_bulletin`.
-- **A parish with no revision yet is skipped**, reported as `unseeded`. It
-  is never bootstrapped by showing the model an empty schedule.
+- **In fetch order.** Today only each parish's newest fetched bulletin is
+  extracted (`runner.latest_per_parish`), and an issue superseded before its
+  run is skipped. Update mode calls each qualifying bulletin in fetch order,
+  since any of them may change the schedule; in a normal week that is one per
+  parish, sometimes two. A site's fallback to an old issue is still called
+  (the date is only known after the model reads it), but its changes are
+  rejected as `stale_bulletin`.
+- **A failed call** (`parse_failed`, `api_error`) leaves its bulletin with no
+  successful call, so the next run tries it again. Newer bulletins don't wait
+  for it: once one of them has succeeded, the retry is usually older than the
+  mark and rejected as stale, which is right, since the newer bulletin
+  already spoke for that week. A bulletin whose call has failed in 3 runs is
+  no longer retried, and the report says so.
+- **No parish is bootstrapped** by showing the model an empty schedule: a
+  parish without a seed is in extract mode.
 - **Caching:** `request_key` is unique among successful calls; a failed call
   is kept, and its retry is a new row. Re-running the same bulletin against the
   same view, version, date and church list reuses the stored call instead of
@@ -567,8 +611,8 @@ approved by hand.
 
 ## The snapshot (format version 2)
 
-Version 2 ships first, written by extract mode, so the cutover to update mode
-changes no frontend code. It is version 2 because a weekly row with
+Version 2 ships first, written while every parish is still in extract mode,
+so seeding parishes changes no frontend code. It is version 2 because a weekly row with
 `weeks_of_month = ["first"]` would otherwise be read as every week.
 
 - **Kept columns:** `id`, `church_id`, `event_type`, `event_kind`,
@@ -587,15 +631,22 @@ changes no frontend code. It is version 2 because a weekly row with
   `verify_frontend_snapshot` can compare against the v1 snapshot before it.
   The app reads only version 2.
 
-In each mode:
+Each parish's rows and its churches' bulletin columns come from its own mode,
+so one snapshot holds both kinds:
 
 | | extract mode | update mode |
 |---|---|---|
 | rows | each parish's current bulletin's `event` rows, as today | `current_schedule` joined to `schedule_entry` |
-| `id` | event id | entry id |
+| `id` | event id | minus the entry id |
 | `weeks_of_month`, season | every week, no season | from the entry |
 | `page_number` | from the event | the entry's sighting in the church's current bulletin (the one `bulletin_url` opens); null when that bulletin doesn't print it |
 | `bulletin_url`, `bulletin_week` per church | as today | the newest bulletin whose call succeeded and wasn't a wrong bulletin or stale |
+
+Event ids and entry ids are counted separately and would collide in one
+snapshot, so entry ids are written negated (entry 118 is `-118`, in `id` and
+in `cancels_event_id`). The app only needs ids unique within a snapshot, and
+the sign says where a row came from when debugging. The id column's delta
+encoding still works, since rows stay sorted by id.
 
 A page link always opens the current bulletin, so a page from an older
 bulletin is never shown: parish sites often serve a new PDF at the same
@@ -615,41 +666,44 @@ needs no change for this.
 |---|---|
 | `data/migrations/` | `0004_schedule_state.sql` adds the tables above and `church.retired_at`. The cleanup migration comes later (see [Rollout](#rollout)) |
 | `db.py`, `storage.py` | seeding retires a church with entries instead of deleting it, and writes the `reference` revision (see [Churches leaving the CSV](#churches-leaving-the-csv)); church lists leave retired churches out |
-| `weekly.py`, `__main__.py`, `weekly-docker.yml` | `SCHEDULE_MODE` (`extract` or `update`, default `extract`) picks the process stage, the report and the snapshot's source. The workflow reads it from a repository variable. `__main__.py` also gains the hand-edit command |
-| `process.py` | update mode: every unprocessed bulletin per parish, in fetch order; render the view, call, store the call, then decide, apply and store sightings in one transaction. Extract mode as today |
+| `weekly.py`, `__main__.py` | the run passes each parish to its mode's process stage, report section and snapshot source. `__main__.py` also gains the hand-edit command. No setting or workflow variable: a parish's mode is whether it has a seed |
+| `process.py` | splits parishes by mode. Update mode: each bulletin fetched after the seed's `as_of` with no successful call, in fetch order; render the view, call, store the call, then decide, apply and store sightings in one transaction. Extract mode as today, for the parishes without a seed |
 | new `schedule/` package | the view renderer, entry hashing and identity, the policy, apply and fold (and a full rebuild from the log), hand edits, the converters for weeks of month and season |
 | `classifiers/` | a `schedule_update` task: new policy prompt and response schema; version digest covers both; returns token usage and served model |
 | `schedule_extraction.py` | unchanged: the from-scratch extraction serves extract mode and the evals |
-| `bulletin_week.py`, `fetch.py`, `storage.py` | unchanged while both modes exist: update mode also writes the bulletin's `published_date`, `wrong_bulletin` and `processed_at`, as extract mode does |
-| `report.py`, `verify_frontend_snapshot.py` | update mode reports from `proposed_change`, as in [The report](#the-report-update-mode); the remaining run-level checks; verification reads a v1 previous snapshot |
-| `extract_frontend_db.py`, `apps/web` | snapshot v2 from either mode, with the cancellation matching; `computeNextOccurrence` rules |
-| `labeling/bulletins.py` | in update mode, the read-only "model's answer" becomes the call's view with its applied proposals |
+| `bulletin_week.py`, `fetch.py` | unchanged while both modes exist: update mode also writes the bulletin's `published_date`, `wrong_bulletin` and `processed_at`, as extract mode does |
+| `report.py`, `verify_frontend_snapshot.py` | a section per mode; update-mode parishes are reported from `proposed_change`, as in [The report](#the-report); the remaining run-level checks; verification reads a v1 previous snapshot |
+| `extract_frontend_db.py`, `apps/web` | snapshot v2 with each parish's rows from its own mode, entry ids negated, and the cancellation matching; `computeNextOccurrence` rules |
+| `labeling/bulletins.py` | for an update-mode parish, the read-only "model's answer" becomes the call's view with its applied proposals |
 
 ## Rollout
 
-The work merges in small pieces behind `SCHEDULE_MODE`, and the weekly run
-keeps publishing in extract mode until the switch.
+The work merges in small pieces. Until a parish is seeded, nothing about it
+changes, so everything up to the first seed ships with every parish in
+extract mode.
 
-1. **Migration 0004 and the `schedule/` package** land with the mode at
-   `extract`. Nothing writes the new tables yet.
-2. **Snapshot v2 and the frontend** ship, built from `event` in extract mode.
-3. **Seed.** Each parish's first `seed` revision is loaded into the published
-   database by the out-of-scope method, with sightings where it knows the
-   bulletin and page an entry came from. A later seed for a parish that already
-   has one is a new `seed` revision of adds, modifies and deletes, like any
-   other.
-4. **Switch** the repository variable to `update`. The next weekly run
-   processes its new bulletins against the seeded schedules.
-5. **There is no rollback** to extract mode. Setting the variable back would
-   not restore the old schedules: extract mode's snapshot reads the `event`
-   rows of each parish's newest processed bulletin, and a bulletin update mode
-   processed has none, so those parishes would show nothing until their next
-   new bulletin. A problem after the switch is fixed forward, with hand edits
-   or a new `seed` revision.
-6. **Cleanup,** once update mode has settled: a migration drops `event`,
-   `event_occurrence`, `idx_bulletin_parish_processed` and the bulletin's
-   `published_date`, `wrong_bulletin` and `processed_at`, and adds the view
-   below for the readers of those columns. Extract mode and `recurrence.py`
+1. **Migration 0004 and the `schedule/` package** land. No parish has a seed,
+   so nothing writes the new tables yet.
+2. **Snapshot v2 and the frontend** ship, built from `event` with every
+   parish in extract mode, and with the update-mode rows ready for when the
+   first parish is seeded.
+3. **Seed parishes in batches**, the easy ones first. Each parish's first
+   `seed` revision is loaded into the published database by the out-of-scope
+   method, with its `as_of` and with sightings where it knows the bulletin and
+   page an entry came from. That parish is in update mode from the next weekly
+   run. The harder parishes stay in extract mode for as long as they need. A
+   later seed for a parish that already has one is a new `seed` revision of
+   adds, modifies and deletes, like any other, with its own `as_of`.
+4. **There is no switching a parish back** to extract mode. Removing its
+   seed would mean rewriting the log, and extract mode's snapshot reads the
+   `event` rows of the parish's newest processed bulletin, which a bulletin
+   update mode processed doesn't have, so the parish would show nothing until
+   its next new bulletin. A problem after seeding is fixed forward, with hand
+   edits or a new `seed` revision.
+5. **Cleanup,** once every parish is seeded and update mode has settled: a
+   migration drops `event`, `event_occurrence`, `idx_bulletin_parish_processed`
+   and the bulletin's `published_date`, `wrong_bulletin` and `processed_at`,
+   and adds the view below for the readers of those columns. Extract mode and `recurrence.py`
    go; the from-scratch extraction stays for the evals.
 
 ```sql
@@ -672,7 +726,7 @@ LEFT JOIN llm_call c ON c.id = (
 ## Out of scope
 
 - Initial population of schedules (the `seed` revisions).
-- Running both modes in one weekly run, or update mode in shadow.
+- Running a parish in both modes, or in update mode in shadow.
 - Validating the update calls (eval cases, replays of past bulletins). That
   is separate work.
 - Changes effective from a future date (`valid_from` / `valid_until`).
