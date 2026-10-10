@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { computeNextOccurrence } from "./schedule";
 import { parseSnapshot, SnapshotVersionError, SNAPSHOT_VERSION } from "./snapshot";
 // Written by the pipeline's encoder: tests/test_extract_frontend_db.py checks
@@ -41,8 +41,27 @@ describe("parseSnapshot", () => {
 
   it("decodes plain, dictionary-coded and delta-coded event columns", () => {
     const events = snapshot().events.map((ev) => ({ ...ev }));
-    expect(events.map((ev) => ev.id)).toEqual([10, 11, 15]);
-    expect(events[1]).toMatchObject({
+    // Negative ids (schedule entries) decode from the same deltas.
+    expect(events.map((ev) => ev.id)).toEqual([-118, 10, 11, 15]);
+    expect(events[0]).toMatchObject({
+      church_id: 3,
+      event_type: "mass",
+      event_kind: "weekly",
+      day_of_week: "Friday",
+      date: null,
+      start_time: 0,
+      end_time: null,
+      cancelled: false,
+      page_number: null,
+      note: null,
+      weeks_of_month: ["fourth", "last"],
+      season_start_month: 10,
+      season_start_day: null,
+      season_end_month: 6,
+      season_end_day: 15,
+      cancels_event_id: null,
+    });
+    expect(events[2]).toMatchObject({
       church_id: 3,
       event_type: "mass",
       event_kind: "specific_date",
@@ -53,8 +72,11 @@ describe("parseSnapshot", () => {
       cancelled: true,
       page_number: null,
       note: "Midnight",
+      weeks_of_month: [],
+      season_start_month: null,
+      cancels_event_id: -118,
     });
-    expect(events[2]).toMatchObject({
+    expect(events[3]).toMatchObject({
       church_id: 7,
       event_type: "adoration",
       event_kind: "weekly",
@@ -65,15 +87,38 @@ describe("parseSnapshot", () => {
       cancelled: false,
       page_number: 3,
       note: "Midnight",
+      weeks_of_month: [],
+      season_end_day: null,
+      cancels_event_id: null,
     });
   });
 
-  it("computes each event's next occurrence when first read", () => {
-    for (const ev of snapshot().events) {
-      expect(ev.occurrence).toBe(computeNextOccurrence(ev));
-    }
-    // Cancelled: never occurs.
-    expect(snapshot().events[1].occurrence).toBeNull();
+  describe("next occurrence", () => {
+    afterEach(() => {
+      vi.useRealTimers();
+    });
+
+    it("is computed when first read, skipping cancelled dates", () => {
+      const [weekly, sunday, cancellation, adoration] = snapshot().events;
+      expect(weekly.occurrence).toBe(
+        computeNextOccurrence(weekly, undefined, new Set(["2026-12-25"])),
+      );
+      expect(sunday.occurrence).toBe(computeNextOccurrence(sunday));
+      expect(adoration.occurrence).toBe(computeNextOccurrence(adoration));
+      // Cancelled: never occurs.
+      expect(cancellation.occurrence).toBeNull();
+    });
+
+    it("moves past a weekly event's cancelled date to its next kept week", () => {
+      vi.useFakeTimers({ toFake: ["Date"] });
+      // Sunday 2026-12-20. Friday the 25th is a fourth and last Friday in
+      // season, but cancelled; January's fourth Friday is the 22nd.
+      vi.setSystemTime(new Date(2026, 11, 20, 9));
+      const [weekly, , , adoration] = snapshot().events;
+      expect(new Date(weekly.occurrence!)).toEqual(new Date(2027, 0, 22, 0, 0));
+      // Another church's Friday slot isn't cancelled by it.
+      expect(new Date(adoration.occurrence!)).toEqual(new Date(2026, 11, 25, 19, 0));
+    });
   });
 
   it("looks up a church's page details by slug", () => {
@@ -98,7 +143,7 @@ describe("parseSnapshot", () => {
   it("groups events by church, in id order", () => {
     const s = snapshot();
     expect(s.eventsOf(7).map((ev) => ev.id)).toEqual([10, 15]);
-    expect(s.eventsOf(3).map((ev) => ev.id)).toEqual([11]);
+    expect(s.eventsOf(3).map((ev) => ev.id)).toEqual([-118, 11]);
     expect(s.eventsOf(99)).toEqual([]);
   });
 

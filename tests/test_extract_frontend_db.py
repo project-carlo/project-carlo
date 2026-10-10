@@ -1,5 +1,6 @@
 import gzip
 import json
+from datetime import date
 from pathlib import Path
 
 import pytest
@@ -21,10 +22,16 @@ from pdf_extract.storage import (
 )
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 
+BUILD_DATE = date(2026, 10, 1)
 EVENTS = [
     {
         "church_slug": "test-church", "event_type": "mass", "event_kind": "weekly",
         "day_of_week": "Sunday", "date": None, "start_time": "10:00 AM", "end_time": None,
+        "cancelled": False,
+    },
+    {
+        "church_slug": "test-church", "event_type": "confession", "event_kind": "weekly",
+        "day_of_week": "Thursday", "date": None, "start_time": "3:00 PM", "end_time": "4:00 PM",
         "cancelled": False,
     },
     {
@@ -41,10 +48,17 @@ CHURCH_ROWS = [
     (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20"),
     (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None, None),
 ]
+# A negative id (an update-mode entry), weeks of the month, a season that wraps
+# the new year, and a cancellation naming a weekly row.
 EVENT_ROWS = [
-    (10, 7, "mass", "weekly", "Sunday", None, 600, None, 0, 2, None),
-    (11, 3, "mass", "specific_date", None, "2026-12-25", 0, 60, 1, None, "Midnight"),
-    (15, 7, "adoration", "weekly", "Friday", None, 1140, 1200, 0, 3, "Midnight"),
+    (-118, 3, "mass", "weekly", "Friday", None, 0, None, 0, None, None, ["fourth", "last"],
+     10, None, 6, 15, None),
+    (10, 7, "mass", "weekly", "Sunday", None, 600, None, 0, 2, None, [], None, None, None,
+     None, None),
+    (11, 3, "mass", "specific_date", None, "2026-12-25", 0, 60, 1, None, "Midnight", [], None,
+     None, None, None, -118),
+    (15, 7, "adoration", "weekly", "Friday", None, 1140, 1200, 0, 3, "Midnight", [], None, None,
+     None, None, None),
 ]
 
 
@@ -73,10 +87,10 @@ def db(pipeline_dir: Path) -> Path:
 def test_snapshot_has_the_latest_bulletins_churches_and_events(db: Path, tmp_path: Path) -> None:
     dest = tmp_path / "frontend.json.gz"
 
-    result = extract(db, dest)
+    result = extract(db, dest, build_date=BUILD_DATE)
 
     assert result["churches"] == 1
-    assert result["events"] == 2
+    assert result["events"] == 3
     tables = read_snapshot(dest.read_bytes())
     [church] = tables["churches"]
     assert church["slug"] == "test-church"
@@ -85,15 +99,57 @@ def test_snapshot_has_the_latest_bulletins_churches_and_events(db: Path, tmp_pat
     assert church["bulletin_url"] == "https://example.org/new.pdf"
     assert church["bulletin_week"] == "2026-09-20"
     assert church["homepage_url"] == "https://example.org"
-    mass, confession = tables["events"]
+    mass, weekly_confession, confession = tables["events"]
     assert mass["id"] < confession["id"]
     assert mass["church_id"] == church["id"]
     assert (mass["event_kind"], mass["day_of_week"], mass["start_time"]) == ("weekly", "Sunday", 600)
     assert mass["end_time"] is None
     assert mass["cancelled"] is False
+    assert (mass["weeks_of_month"], mass["season_start_month"]) == ([], None)
     assert (confession["date"], confession["end_time"]) == ("2026-12-24", 960)
     assert confession["cancelled"] is True
     assert confession["note"] == "Christmas Eve"
+    assert confession["cancels_event_id"] == weekly_confession["id"]
+
+
+def test_past_dated_rows_and_unmatched_cancellations_are_left_out(
+    db: Path, tmp_path: Path,
+) -> None:
+    dest = tmp_path / "frontend.json.gz"
+
+    extract(db, dest, build_date=date(2026, 12, 25))
+    kinds = [e["event_kind"] for e in read_snapshot(dest.read_bytes())["events"]]
+
+    assert kinds == ["weekly", "weekly"]
+
+
+def test_a_cancellation_matching_no_weekly_row_is_left_out(
+    pipeline_dir: Path, tmp_path: Path,
+) -> None:
+    create_db()
+    _add_bulletin("https://example.org/new.pdf", "2026-09-20", [EVENTS[0], EVENTS[2]])
+    dest = tmp_path / "frontend.json.gz"
+
+    extract(DEFAULT_DB_PATH, dest, build_date=BUILD_DATE)
+
+    assert [e["event_kind"] for e in read_snapshot(dest.read_bytes())["events"]] == ["weekly"]
+
+
+def test_a_version_1_snapshot_reads_as_every_week_with_no_cancellations() -> None:
+    document = json.loads(gzip.decompress(encode_snapshot(CHURCH_ROWS, EVENT_ROWS)))
+    document["version"] = 1
+    for name in (
+        "weeks_of_month", "season_start_month", "season_start_day", "season_end_month",
+        "season_end_day", "cancels_event_id",
+    ):
+        del document["events"][name]
+    data = gzip.compress(json.dumps(document).encode())
+
+    events = read_snapshot(data)["events"]
+
+    assert [e["weeks_of_month"] for e in events] == [[], [], [], []]
+    assert {e["season_start_month"] for e in events} == {None}
+    assert {e["cancels_event_id"] for e in events} == {None}
 
 
 def test_a_parish_with_no_processed_bulletin_has_no_bulletin(
@@ -131,10 +187,10 @@ def test_extract_keeps_the_previous_snapshot(db: Path, tmp_path: Path) -> None:
     dest = tmp_path / "frontend.json.gz"
     dest.write_bytes(b"previous")
 
-    extract(db, dest)
+    extract(db, dest, build_date=BUILD_DATE)
 
     assert (tmp_path / "frontend.json.gz.previous").read_bytes() == b"previous"
-    assert len(read_snapshot(dest.read_bytes())["events"]) == 2
+    assert len(read_snapshot(dest.read_bytes())["events"]) == 3
 
 
 def test_encoded_columns_round_trip() -> None:
@@ -188,7 +244,8 @@ def test_verify_fails_when_weekly_events_and_churches_change(tmp_path: Path) -> 
     church = (1, 1, "a", "A", None, None, None, None, None, None, None, None, None, None)
     other = (2, 1, "b", "B", None, None, None, None, None, None, None, None, None, None)
     weekly = [
-        (i, 1, "mass", "weekly", "Sunday", None, 480 + 60 * i, None, 0, None, None)
+        (i, 1, "mass", "weekly", "Sunday", None, 480 + 60 * i, None, 0, None, None,
+         [], None, None, None, None, None)
         for i in range(1, 11)
     ]
     moved = [(*row[:6], row[6] + 15, *row[7:]) for row in weekly]

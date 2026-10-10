@@ -593,7 +593,8 @@ Commands read a `.env` file in the repo root if there is one (without
 overriding variables already set).
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
-- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`).
+- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`) and
+  the update-mode calls of `pnpm process` and `pnpm weekly:run`.
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
@@ -617,6 +618,33 @@ The site records pageviews and a few actions (search picks, filters, bulletin
 clicks) itself, in Cloudflare Workers Analytics Engine: no cookies, no third
 party. `pnpm analytics` prints a report. See [docs/analytics.md](docs/analytics.md)
 for what's recorded, the token the report needs, and how to add an event.
+
+## Believed schedules (update mode)
+
+A parish can instead keep a **believed schedule**, changed only through
+recorded changes: each new bulletin is shown to the model together with the
+schedule we believe, the model proposes changes, and a code policy applies or
+rejects each one. The design is
+[docs/schedule-state-plan.md](docs/schedule-state-plan.md). A parish is in this
+mode once it has a seed revision; every other parish is extracted from scratch
+as above, and a weekly run handles both.
+
+Update calls run on `gpt-6-luna` (OpenAI Responses API, high reasoning, the PDF
+at low detail, strict decoding), set up like the eval module's `gpt-6-luna`
+classifier, and need `OPENAI_API_KEY`. Their prompt
+(`classifiers/schedule_update.py`) carries every rule of the eval policy
+(`classifiers/schedule_policy.py`), worded for changes to the believed
+schedule. `--model` on `pnpm process` only picks the Gemini model for
+extract-mode parishes.
+
+`pnpm schedule` looks at and hand-edits believed schedules:
+
+```bash
+pnpm schedule show --parish st-mary-albany          # the schedule as the model sees it
+pnpm schedule apply --call 123 --actor you --note "checked the bulletin"   # a rejected call's proposals
+pnpm schedule modify --parish st-mary-albany --entry-id 118 --entry '{...}' --actor you
+pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
+```
 
 ## Project layout
 
@@ -646,6 +674,7 @@ for what's recorded, the token the report needs, and how to add an event.
   - `weekly.py` - the weekly run; `report.py` its change report; `runs.py` run records
   - `detect.py` - bulletin provider detection (Playwright)
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
+  - `schedule/` - believed schedules for update-mode parishes: the change log, the decision policy, the update stage, hand edits (`pnpm schedule`)
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command

@@ -46,6 +46,15 @@ function SourceLine({ source }: { source: BulletinDetail["gemini"]["source"] }) 
       </span>
     );
   }
+  if (source.kind === "update") {
+    return (
+      <span title="An update-mode parish: the schedule the call was shown, with the changes the call applied.">
+        <span className="rounded bg-sky-100 px-1 text-xs font-semibold text-sky-800">update</span>{" "}
+        call #{source.llm_call_id} · <b>{source.model ?? "unknown model"}</b> · believed schedule
+        with its applied changes
+      </span>
+    );
+  }
   if (source.kind === "post-processing") {
     return (
       <span title="No cached result for this PDF: these are the bulletin's rows in the event table, after storage and weekly promotion. The model and prompt are not recorded there.">

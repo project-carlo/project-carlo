@@ -108,8 +108,10 @@ export interface GeminiRow {
 }
 
 export interface GeminiSource {
-  kind: "cache" | "post-processing" | "none";
+  kind: "cache" | "post-processing" | "update" | "none";
   classifier: string;
+  /** For an update-mode parish ("update"): the call whose view and applied changes are shown. */
+  llm_call_id?: number;
   model?: string | null;
   prompt_version?: string | null;
   version_dir?: string;

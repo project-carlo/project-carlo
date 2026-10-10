@@ -31,6 +31,8 @@ from pdf_extract.runs import (
     consecutive_failures,
     parish_results,
 )
+from pdf_extract.schedule.report import render_update_mode, update_mode_report
+from pdf_extract.schedule.store import update_mode_slugs
 from pdf_extract.storage import latest_bulletin_ids, load_bulletins, load_events
 from pdf_extract.timeparse import time_to_minutes
 
@@ -87,9 +89,17 @@ def _event_key(row: dict[str, Any]) -> EventKey:
     )
 
 
-def _current_state(conn: sqlite3.Connection) -> dict[str, tuple[int, set[EventKey], int]]:
-    """Parish slug -> (current bulletin id, its event keys, its event count)."""
-    latest = latest_bulletin_ids(conn)
+def _current_state(
+    conn: sqlite3.Connection, excluding: set[str] = frozenset(),
+) -> dict[str, tuple[int, set[EventKey], int]]:
+    """Parish slug -> (current bulletin id, its event keys, its event count).
+
+    Parishes in `excluding` (the update-mode ones) are left out.
+    """
+    latest = {
+        slug: bulletin_id for slug, bulletin_id in latest_bulletin_ids(conn).items()
+        if slug not in excluding
+    }
     by_bulletin: dict[int, list[dict[str, Any]]] = {}
     for row in load_events(conn, list(latest.values())):
         by_bulletin.setdefault(row["bulletin_id"], []).append(row)
@@ -114,10 +124,16 @@ def describe_event(key: EventKey) -> str:
 
 
 def diff_databases(before: Path, after: Path) -> list[ParishChange]:
+    """What changed for each extract-mode parish.
+
+    A parish in update mode in either database is left out: its changes are
+    reported from its calls' proposals (`schedule.report`).
+    """
     before_conn, after_conn = _open_ro(before), _open_ro(after)
     try:
-        before_state = _current_state(before_conn)
-        after_state = _current_state(after_conn)
+        update_mode = update_mode_slugs(before_conn) | update_mode_slugs(after_conn)
+        before_state = _current_state(before_conn, update_mode)
+        after_state = _current_state(after_conn, update_mode)
     finally:
         before_conn.close()
         after_conn.close()
@@ -210,6 +226,7 @@ def build_report(
             and OLD_PICK_MARK in (r.get("detail") or "")
         ]
         stale = _stale_parishes(conn, attempted)
+        update_mode = update_mode_report(conn, run_id)
     finally:
         conn.close()
 
@@ -257,11 +274,14 @@ def build_report(
     seeded = seeded or {}
     removed_parishes = seeded.get("parishes_deleted", 0)
     removed_churches = seeded.get("churches_deleted", 0)
+    retired_churches = seeded.get("churches_retired", 0)
     gates.append({
         "name": "No parish or church removed from the CSVs",
-        "passed": not (removed_parishes or removed_churches),
+        "passed": not (removed_parishes or removed_churches or retired_churches),
         "detail": f"{removed_parishes} parishes, {removed_churches} churches deleted"
-        " with their bulletins and events",
+        " with their bulletins and events"
+        + (f"; {retired_churches} churches retired with their schedule entries"
+           if retired_churches else ""),
     })
     fetch_failed = sum(1 for f in failures if f["stage"] == "fetch")
     gates.append({
@@ -285,7 +305,11 @@ def build_report(
             "events_removed": sum(len(c.removed) for c in changes),
             "parishes_changed": len(changed),
             "parishes_with_new_bulletin": sum(1 for c in changes if c.bulletin_changed),
+            "update_mode_parishes": len(update_mode["parishes"]),
+            "update_changes_applied": update_mode["applied"],
+            "update_proposals_rejected": update_mode["rejected"],
         },
+        "update_mode": update_mode,
         "attention": {
             "failures": failures,
             "wrong_bulletins": wrong_bulletins,
@@ -458,4 +482,6 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
         lines.append(
             f"\n…and {len(changes) - max_changed_parishes} more parishes; see report.json."
         )
+    if report.get("update_mode"):
+        lines += render_update_mode(report["update_mode"])
     return "\n".join(lines) + "\n"
