@@ -187,5 +187,109 @@ export interface Config {
   classifier_version: string;
   remote: boolean;
   labels_dir: string;
+  seeds_dir: string;
   default_labeler: string;
+}
+
+// ── Seeds (docs/seeding-plan.md; src/pdf_extract/seeding/files.py) ──────────
+
+/** A schedule entry in a seed: a label event without page, origin and optional. */
+export type SeedEntry = Omit<LabelEvent, "page_number" | "origin" | "optional">;
+
+export type SeedStatus = "drafting" | "needs_review" | "ready" | "approved" | "blocked";
+
+export interface SeedBulletin {
+  content_hash: string;
+  fetched_at: string;
+  published_date: string | null;
+  read: boolean;
+}
+
+export interface SeedSource {
+  /** "agent", "history", or the id of one of the file's calls. */
+  source: string;
+  bulletin?: string | null;
+  page?: number | null;
+  said: string;
+}
+
+export interface SeedOption {
+  label: string;
+  entry: SeedEntry | null;
+  leaning?: boolean;
+}
+
+export interface SeedAnswer {
+  choice: number | "edited" | "dropped";
+  by: string;
+  at: string;
+}
+
+export interface SeedSlot {
+  id: string;
+  decision: "include" | "exclude" | null;
+  status: "settled" | "needs_human";
+  entry: SeedEntry | null;
+  page: number | null;
+  sources: SeedSource[];
+  rationale: string;
+  question: string | null;
+  options: SeedOption[] | null;
+  answer: SeedAnswer | null;
+}
+
+export interface SeedCall {
+  id: string;
+  kind: "extract" | "ask";
+  model: string;
+  bulletin: string;
+  cached: boolean;
+  cost_usd: number | null;
+  question?: string;
+  answer?: string;
+  page?: number | null;
+  quote?: string;
+  events?: GeminiRow[];
+}
+
+export interface SeedFile {
+  schema_version: 1;
+  parish_slug: string;
+  status: SeedStatus;
+  as_of: string | null;
+  drafted_by: string;
+  drafted_at: string | null;
+  reviewer: string | null;
+  approved_at: string | null;
+  summary: string;
+  blocked_reason: string | null;
+  bulletins: SeedBulletin[];
+  calls: SeedCall[];
+  slots: SeedSlot[];
+}
+
+export interface SeedQueueRow {
+  parish_slug: string;
+  parish_name: string;
+  status: SeedStatus | "invalid";
+  open_questions: number;
+  slots: number;
+  included: number;
+  calls: number;
+  cost_usd: number;
+  as_of: string | null;
+  reviewer: string | null;
+  summary: string;
+  blocked_reason: string | null;
+  problem: string | null;
+  loaded: boolean;
+}
+
+export interface SeedDetail {
+  seed: SeedFile;
+  parish: { slug: string; name: string };
+  churches: Church[];
+  bulletins_in_db: string[];
+  problems: string[];
+  loaded: boolean;
 }

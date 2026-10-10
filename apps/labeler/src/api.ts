@@ -1,4 +1,4 @@
-import type { BulletinDetail, BulletinSummary, Config, Label, Progress } from "./types";
+import type { BulletinDetail, BulletinSummary, Config, Label, Progress, SeedDetail, SeedFile, SeedQueueRow } from "./types";
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(path, init);
@@ -42,5 +42,13 @@ export const api = {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(label),
       keepalive,
+    }),
+  seeds: () => request<{ seeds: SeedQueueRow[] }>("/api/seeds"),
+  seed: (parish: string) => request<SeedDetail>(`/api/seeds/${parish}`),
+  saveSeed: (seed: SeedFile) =>
+    request<SeedDetail>(`/api/seeds/${seed.parish_slug}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(seed),
     }),
 };

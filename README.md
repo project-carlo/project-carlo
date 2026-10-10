@@ -593,8 +593,9 @@ Commands read a `.env` file in the repo root if there is one (without
 overriding variables already set).
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
-- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`) and
-  the update-mode calls of `pnpm process` and `pnpm weekly:run`.
+- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`),
+  the update-mode calls of `pnpm process` and `pnpm weekly:run`, and `pnpm seed ask|extract`.
+- `CARLO_SEED_CALL_LIMIT`: external calls `pnpm seed ask|extract` may make per parish (default 4).
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
@@ -646,6 +647,52 @@ pnpm schedule modify --parish st-mary-albany --entry-id 118 --entry '{...}' --ac
 pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
 ```
 
+## Seeding parishes
+
+A parish's first seed is drafted by a Claude Code agent and approved by a
+person ([docs/seeding-plan.md](docs/seeding-plan.md)). The agent follows the
+`seed-parishes` skill in `.claude/skills/`: it reads the parish's bulletins
+itself against the extraction policy, compares them with extract mode's stored
+history, asks `gpt-6.1-sol` or `gemini-3-flash-preview` only when those leave
+doubt, and writes `data/seeds/<parish>.json` with every slot's sources,
+decision and rationale, and a question for each slot it couldn't decide.
+
+```bash
+pnpm seed pick                                # parishes to seed next, easiest first
+pnpm seed init st-mary-albany                 # start a parish's seed file
+pnpm seed bulletins st-mary-albany            # its bulletins, newest first
+pnpm seed pdf st-mary-albany latest           # the stored PDF, as a local file to read
+pnpm seed pages st-mary-albany 9f2c41 --page 2  # one page as a PNG
+pnpm seed history st-mary-albany              # what extract mode stored (free)
+pnpm seed ask st-mary-albany 9f2c41 --model gemini-3-flash-preview "Page 2: Saturday confessions?"
+pnpm seed extract st-mary-albany 9f2c41 --model gpt-6.1-sol
+pnpm seed check st-mary-albany                # or --all
+pnpm seed status                              # every seed file, and whether it is loaded
+```
+
+Output is compact text (`--json` for the full result). `ask` and `extract`
+are cached and recorded in the seed file, and refuse after
+`CARLO_SEED_CALL_LIMIT` (default 4) calls per parish that weren't cache hits.
+They need `OPENAI_API_KEY` or `GEMINI_API_KEY`.
+
+A person reviews the drafts in the labeler's **Seeds** mode (`pnpm label`, then
+Seeds): the open questions next to the PDFs, `1`-`9` to choose an option, `e`
+to edit a slot, `x` to leave it out, `r` to reopen a settled one, then Approve.
+Approved files are committed. Every pipeline command loads the approved seed
+files not yet in its database as `seed` revisions, which puts those parishes
+in update mode. A changed approved file is loaded again only when its `as_of` is
+later than the parish's latest seed. The weekly run loads them after taking its
+before-copy, so a large batch can hold the run's change checks, and a deploy
+never loads them.
+
+Test the agent on the labeled parishes first:
+
+```bash
+pnpm seed pick --labeled --eval try-1   # starts data/seed-evals/try-1/ (drafts are never loaded)
+# ...the agent drafts with --eval try-1 on every command; newer bulletins are hidden...
+pnpm seed score try-1                   # data/seed-evals/try-1/report.md
+```
+
 ## Project layout
 
 - `pyproject.toml` - project metadata and dependencies
@@ -660,6 +707,7 @@ pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
 - `apps/web/` - React + TypeScript + Vite frontend
 - `apps/labeler/` - the local bulletin labeling UI (never deployed)
 - `data/labels/` - ground-truth labels, one JSON file per bulletin (committed)
+- `data/seeds/` - parish seed files, drafted by an agent and approved in the labeler (committed); `data/seed-evals/` holds test runs on the labeled parishes
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
@@ -675,6 +723,7 @@ pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
   - `detect.py` - bulletin provider detection (Playwright)
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `schedule/` - believed schedules for update-mode parishes: the change log, the decision policy, the update stage, hand edits (`pnpm schedule`)
+  - `seeding/` - seed files: their format and checks, the agent's tools (`pnpm seed`), loading approved ones, scoring test runs, the labeler's review
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command

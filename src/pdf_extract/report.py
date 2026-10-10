@@ -191,12 +191,15 @@ def build_report(
     stages: dict[str, Any],
     snapshot_verification: dict[str, Any] | None,
     seeded: dict[str, Any] | None = None,
+    seeds: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Everything the run changed and every reason to hold it, as one dict.
 
     `seeded` is what re-seeding from the CSVs did at the start of the run.
     Its deletions happen before `before_db` is taken, so the before/after
     comparison cannot see them; they are reported and gated here instead.
+    `seeds` is what loading the approved seed files did (`seeding.loader`),
+    after `before_db` was taken, so their schedules are in the comparison.
     """
     changes = diff_databases(before_db, after_db)
 
@@ -310,6 +313,10 @@ def build_report(
             "update_proposals_rejected": update_mode["rejected"],
         },
         "update_mode": update_mode,
+        "seeds": {
+            "loaded": (seeds or {}).get("loaded", []),
+            "skipped": (seeds or {}).get("skipped", []),
+        },
         "attention": {
             "failures": failures,
             "wrong_bulletins": wrong_bulletins,
@@ -482,6 +489,24 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
         lines.append(
             f"\n…and {len(changes) - max_changed_parishes} more parishes; see report.json."
         )
+    lines += render_seeds(report.get("seeds") or {})
     if report.get("update_mode"):
         lines += render_update_mode(report["update_mode"])
     return "\n".join(lines) + "\n"
+
+
+def render_seeds(seeds: dict[str, Any]) -> list[str]:
+    """The seed files this run loaded and the ones it skipped, if any."""
+    loaded, skipped = seeds.get("loaded") or [], seeds.get("skipped") or []
+    if not loaded and not skipped:
+        return []
+    lines = ["", "### Seeds", ""]
+    for item in loaded:
+        lines.append(
+            f"- **{item['parish']}** seeded (revision {item['revision']}, "
+            f"{item['entries']} entries, as of {item['as_of']}, approved by "
+            f"{item.get('reviewer') or 'unknown'}): in update mode from now on"
+        )
+    for item in skipped:
+        lines.append(f"- **{item['parish']}** seed file not loaded: {item['reason']}")
+    return lines

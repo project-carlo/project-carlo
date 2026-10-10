@@ -16,6 +16,11 @@ API:
                                               and that parish's other bulletins
 - `GET  /api/bulletins/<parish>/<hash>/pdf`   the stored PDF Gemini read
 - `PUT  /api/labels/<parish>/<hash>`          validate and save a label
+- `GET  /api/seeds`                           every seed file, with its open questions
+- `GET  /api/seeds/<parish>`                  a seed file, the parish's churches and the
+                                              problems `seed check` finds
+- `PUT  /api/seeds/<parish>`                  validate and save a reviewed seed file; an
+                                              approved one must pass `seed check`
 """
 
 from __future__ import annotations
@@ -50,6 +55,13 @@ from pdf_extract.labeling.labels import (
     write_label,
 )
 from pdf_extract.paths import ROOT
+from pdf_extract.seeding.files import SEEDS_DIR, SeedFileError
+from pdf_extract.seeding.review import (
+    SeedReviewError,
+    save_reviewed_seed,
+    seed_detail,
+    seed_queue,
+)
 from pdf_extract.storage import connect_db, read_bulletin_pdf
 
 LOGGER = logging.getLogger(__name__)
@@ -66,6 +78,7 @@ class LabelerApp:
     labels_dir: Path
     static_dir: Path = STATIC_DIR
     mode: str = "live"
+    seeds_dir: Path = SEEDS_DIR
 
     def config(self) -> dict[str, Any]:
         classifier = GeminiClassifier()
@@ -75,6 +88,7 @@ class LabelerApp:
             "classifier_version": classifier.version,
             "remote": get_store().is_remote,
             "labels_dir": str(self.labels_dir),
+            "seeds_dir": str(self.seeds_dir),
             "default_labeler": default_labeler(),
         }
 
@@ -161,7 +175,7 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
                     raise _ApiError(HTTPStatus.METHOD_NOT_ALLOWED, "Method not allowed")
             except _ApiError as e:
                 self._json({"error": str(e)}, e.status)
-            except LabelError as e:
+            except (LabelError, SeedFileError, SeedReviewError) as e:
                 self._json({"error": str(e)}, HTTPStatus.BAD_REQUEST)
             except Exception as e:
                 LOGGER.exception("Request failed: %s %s", method, self.path)
@@ -203,6 +217,16 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
                 return self._pdf(*self._bulletin_key(parts[1], parts[2]))
             if len(parts) == 3 and parts[0] == "labels" and method == "PUT":
                 return self._save(*self._bulletin_key(parts[1], parts[2]))
+            if parts == ["seeds"] and reading:
+                return self._with_db(lambda conn: self._json(
+                    {"seeds": seed_queue(conn, app.seeds_dir)}))
+            if len(parts) == 2 and parts[0] == "seeds" and is_valid_slug(parts[1]):
+                if reading:
+                    return self._seed(parts[1])
+                if method == "PUT":
+                    body = self._body()
+                    return self._with_db(lambda conn: self._json(
+                        save_reviewed_seed(conn, parts[1], body, app.seeds_dir)))
             raise _ApiError(HTTPStatus.NOT_FOUND, f"No such endpoint: {method} /api/{'/'.join(parts)}")
 
         def _next(self, query: dict[str, list[str]]) -> None:
@@ -253,16 +277,32 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
             self._send(HTTPStatus.OK, data, "application/pdf",
                        {"Cache-Control": "private, max-age=86400"})
 
-        def _save(self, parish: str, content_hash: str) -> None:
+        def _body(self) -> Any:
             length = int(self.headers.get("Content-Length") or 0)
             if length <= 0 or length > MAX_BODY_BYTES:
                 raise _ApiError(HTTPStatus.BAD_REQUEST, "Missing or oversized body")
             if "application/json" not in (self.headers.get("Content-Type") or ""):
                 raise _ApiError(HTTPStatus.UNSUPPORTED_MEDIA_TYPE, "Send application/json")
             try:
-                body = json.loads(self.rfile.read(length).decode("utf-8"))
+                return json.loads(self.rfile.read(length).decode("utf-8"))
             except (UnicodeDecodeError, ValueError) as e:
                 raise _ApiError(HTTPStatus.BAD_REQUEST, f"Invalid JSON: {e}") from e
+
+        def _with_db(self, fn: Any) -> None:
+            conn = connect_db(app.db_path)
+            try:
+                return fn(conn)
+            finally:
+                conn.close()
+
+        def _seed(self, parish: str) -> None:
+            detail = self._with_db(lambda conn: seed_detail(conn, parish, app.seeds_dir))
+            if detail is None:
+                raise _ApiError(HTTPStatus.NOT_FOUND, "No seed file for this parish")
+            self._json(detail)
+
+        def _save(self, parish: str, content_hash: str) -> None:
+            body = self._body()
             conn = connect_db(app.db_path)
             try:
                 bulletin = find_bulletin(conn, parish, content_hash)

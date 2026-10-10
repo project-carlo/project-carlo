@@ -1,0 +1,467 @@
+"""What a seeding agent reads: a parish's bulletins, their PDFs, and extract mode's history.
+
+Everything here reads the local database (`pnpm data:pull`) and the blob store,
+as the labeler does, and nothing calls a model.
+
+A **test run** (`--eval RUN`, docs/seeding-plan.md "Testing it first") drafts
+seeds for the parishes behind the labels as of each labeled bulletin's fetch
+time. `seed pick --labeled --eval RUN` writes the run's manifest, which fixes
+that time per parish (`SeedContext.cutoff`), and every query then hides the
+bulletins fetched after it, so the agent sees what it would have seen then.
+"""
+
+from __future__ import annotations
+
+import io
+import json
+import sqlite3
+from dataclasses import dataclass, field
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any
+
+import pypdfium2 as pdfium
+from pypdf import PdfReader
+
+from pdf_extract.dioceses.records import PARISH, diocese_dir
+from pdf_extract.labeling.labels import LABELS_DIR, is_valid_hash, is_valid_slug
+from pdf_extract.schedule.store import normalize_as_of, update_mode_slugs
+from pdf_extract.seeding.files import SEED_EVALS_DIR, SEEDS_DIR, WORK_DIR, seed_slugs
+from pdf_extract.storage import (
+    list_churches,
+    load_events,
+    read_bulletin_pdf,
+    utc_now_iso,
+)
+from pdf_extract.timeparse import time_to_minutes
+
+# Shortest hash prefix a command accepts for a bulletin.
+MIN_REF_CHARS = 6
+# What `seed pick` calls a recent bulletin.
+RECENT_DAYS = 14
+MANIFEST_NAME = "run.json"
+
+
+class SeedError(ValueError):
+    """Bad input to a seed command: the message says what to fix."""
+
+
+# ── Where drafts go, and what they may see ──────────────────────────────────
+@dataclass
+class SeedContext:
+    """Where a command reads and writes seed files, and the cutoff of a test run.
+
+    For real seeds, files are in `data/seeds/` and nothing is hidden. For a
+    test run they are in `data/seed-evals/<run>/seeds/`, and each parish's
+    bulletins fetched after its labeled bulletin are hidden.
+    """
+
+    seeds_dir: Path = SEEDS_DIR
+    eval_run: str | None = None
+    manifest: dict[str, Any] = field(default_factory=dict)
+
+    @classmethod
+    def for_run(cls, eval_run: str | None, *, evals_dir: Path = SEED_EVALS_DIR) -> SeedContext:
+        if eval_run is None:
+            return cls()
+        run_dir = eval_dir(eval_run, evals_dir)
+        manifest_path = run_dir / MANIFEST_NAME
+        if not manifest_path.is_file():
+            raise SeedError(
+                f"No test run {eval_run!r}: start one with `pnpm seed pick --labeled --eval "
+                f"{eval_run}`"
+            )
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        return cls(seeds_dir=run_dir / "seeds", eval_run=eval_run, manifest=manifest)
+
+    def cutoff(self, parish_slug: str) -> str | None:
+        """The latest fetch time the parish's draft may see (None: no limit)."""
+        if self.eval_run is None:
+            return None
+        parish = (self.manifest.get("parishes") or {}).get(parish_slug)
+        if parish is None:
+            raise SeedError(f"{parish_slug} is not in test run {self.eval_run}")
+        return parish["fetched_at"]
+
+
+def eval_dir(eval_run: str, evals_dir: Path = SEED_EVALS_DIR) -> Path:
+    if not is_valid_slug(eval_run):
+        raise SeedError(f"A test run's name is a slug (a-z, 0-9, -), not {eval_run!r}")
+    return evals_dir / eval_run
+
+
+def _visible(fetched_at: str | None, cutoff: str | None) -> bool:
+    if cutoff is None:
+        return True
+    if not isinstance(fetched_at, str):
+        return False
+    return normalize_as_of(fetched_at) <= normalize_as_of(cutoff)
+
+
+# ── Parishes and bulletins ──────────────────────────────────────────────────
+def parish_row(conn: sqlite3.Connection, parish_slug: str) -> sqlite3.Row:
+    row = conn.execute(
+        "SELECT id, slug, name FROM parish WHERE slug = ?", (parish_slug,),
+    ).fetchone()
+    if row is None:
+        raise SeedError(f"Parish not found: {parish_slug} (is it in data/parishes.csv?)")
+    return row
+
+
+def parish_bulletins(
+    conn: sqlite3.Connection, parish_slug: str, *, cutoff: str | None = None,
+) -> list[dict[str, Any]]:
+    """The parish's stored bulletins, newest fetched first, the ones after `cutoff` left out.
+
+    `duplicate_of` names the newer row with the same PDF, when one exists (a
+    site that served one PDF under several addresses before fetch compared
+    downloads by their bytes).
+    """
+    parish = parish_row(conn, parish_slug)
+    rows = conn.execute(
+        """SELECT id, content_hash, source_url, fetched_at, published_date, processed_at,
+                  COALESCE(wrong_bulletin, 0) AS wrong_bulletin
+           FROM bulletin WHERE parish_id = ? AND content_hash IS NOT NULL
+           ORDER BY fetched_at DESC, id DESC""",
+        (parish["id"],),
+    ).fetchall()
+    out: list[dict[str, Any]] = []
+    first: dict[str, str] = {}
+    for row in rows:
+        if not is_valid_hash(row["content_hash"]) or not _visible(row["fetched_at"], cutoff):
+            continue
+        item = dict(row)
+        item["short"] = row["content_hash"][:12]
+        item["wrong_bulletin"] = bool(row["wrong_bulletin"])
+        item["duplicate_of"] = first.get(row["content_hash"])
+        first.setdefault(row["content_hash"], item["short"])
+        out.append(item)
+    return out
+
+
+def resolve_bulletin(
+    conn: sqlite3.Connection, parish_slug: str, ref: str, *, cutoff: str | None = None,
+) -> dict[str, Any]:
+    """The bulletin `ref` names: `latest`, or a prefix of its content hash."""
+    bulletins = [b for b in parish_bulletins(conn, parish_slug, cutoff=cutoff)
+                 if b["duplicate_of"] is None]
+    if not bulletins:
+        raise SeedError(f"{parish_slug} has no stored bulletin")
+    if ref == "latest":
+        return bulletins[0]
+    ref = ref.strip().lower().removesuffix("…")
+    if len(ref) < MIN_REF_CHARS or any(ch not in "0123456789abcdef" for ch in ref):
+        raise SeedError(
+            f"Name a bulletin by `latest` or at least {MIN_REF_CHARS} hex characters of its "
+            f"hash (see `pnpm seed bulletins {parish_slug}`), not {ref!r}"
+        )
+    matches = [b for b in bulletins if b["content_hash"].startswith(ref)]
+    if not matches:
+        hidden = " (or it was fetched after this test run's cutoff)" if cutoff else ""
+        raise SeedError(f"{parish_slug} has no bulletin {ref}{hidden}")
+    if len(matches) > 1:
+        raise SeedError(f"{ref} names {len(matches)} bulletins of {parish_slug}; give more")
+    return matches[0]
+
+
+def bulletin_pdf(parish_slug: str, content_hash: str) -> bytes:
+    """The stored compacted PDF, cut to the pages the pipeline reads, so pages match."""
+    data = read_bulletin_pdf(parish_slug, content_hash)
+    if data is None:
+        raise SeedError(
+            f"The PDF of {parish_slug}/{content_hash[:12]} is not in the blob store "
+            "(are the R2 read keys set?)"
+        )
+    return data
+
+
+def page_count(pdf: bytes) -> int:
+    return len(PdfReader(io.BytesIO(pdf)).pages)
+
+
+def list_bulletins(
+    conn: sqlite3.Connection, parish_slug: str, *, cutoff: str | None = None, limit: int = 8,
+) -> dict[str, Any]:
+    """`seed bulletins`: the newest `limit` bulletins with their page counts."""
+    bulletins = parish_bulletins(conn, parish_slug, cutoff=cutoff)
+    shown = bulletins[:limit] if limit > 0 else bulletins
+    for b in shown:
+        try:
+            b["pages"] = page_count(bulletin_pdf(parish_slug, b["content_hash"]))
+        except Exception:  # missing from storage, or unreadable: say so, don't stop
+            b["pages"] = None
+    return {
+        "parish": parish_slug,
+        "cutoff": cutoff,
+        "bulletins": [
+            {k: b.get(k) for k in (
+                "short", "content_hash", "fetched_at", "published_date", "pages",
+                "wrong_bulletin", "duplicate_of", "source_url",
+            )}
+            for b in shown
+        ],
+        "not_shown": len(bulletins) - len(shown),
+    }
+
+
+def export_pdf(
+    conn: sqlite3.Connection, parish_slug: str, ref: str, *,
+    cutoff: str | None = None, work_dir: Path = WORK_DIR,
+) -> dict[str, Any]:
+    """`seed pdf`: write the stored PDF the pipeline reads to a local file."""
+    bulletin = resolve_bulletin(conn, parish_slug, ref, cutoff=cutoff)
+    data = bulletin_pdf(parish_slug, bulletin["content_hash"])
+    path = work_dir / parish_slug / f"{bulletin['short']}.pdf"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(data)
+    return {
+        "parish": parish_slug,
+        "bulletin": bulletin["content_hash"],
+        "fetched_at": bulletin["fetched_at"],
+        "pages": page_count(data),
+        "path": path.as_posix(),
+    }
+
+
+def render_pages(
+    conn: sqlite3.Connection, parish_slug: str, ref: str, *,
+    page: int | None = None, dpi: int = 150, cutoff: str | None = None,
+    work_dir: Path = WORK_DIR,
+) -> dict[str, Any]:
+    """`seed pages`: render one page, or all, to PNGs for a closer look."""
+    if not 36 <= dpi <= 600:
+        raise SeedError("--dpi must be between 36 and 600")
+    bulletin = resolve_bulletin(conn, parish_slug, ref, cutoff=cutoff)
+    data = bulletin_pdf(parish_slug, bulletin["content_hash"])
+    out_dir = work_dir / parish_slug
+    out_dir.mkdir(parents=True, exist_ok=True)
+    pdf = pdfium.PdfDocument(data)
+    try:
+        total = len(pdf)
+        if page is not None and not 1 <= page <= total:
+            raise SeedError(f"The bulletin has pages 1 to {total}")
+        numbers = [page] if page is not None else list(range(1, total + 1))
+        paths = []
+        for number in numbers:
+            pdf_page = pdf[number - 1]
+            try:
+                image = pdf_page.render(scale=dpi / 72).to_pil()
+            finally:
+                pdf_page.close()
+            path = out_dir / f"{bulletin['short']}-p{number}-{dpi}dpi.png"
+            image.save(path, format="PNG")
+            paths.append(path.as_posix())
+    finally:
+        pdf.close()
+    return {"parish": parish_slug, "bulletin": bulletin["content_hash"], "pages": total,
+            "paths": paths}
+
+
+# ── Extract mode's history ──────────────────────────────────────────────────
+def _hhmm(value: Any) -> str | None:
+    minutes = time_to_minutes(value) if isinstance(value, str) else None
+    return None if minutes is None else f"{minutes // 60:02d}:{minutes % 60:02d}"
+
+
+def history(
+    conn: sqlite3.Connection, parish_slug: str, *, bulletins: int = 4, cutoff: str | None = None,
+) -> dict[str, Any]:
+    """`seed history`: extract mode's stored events for the parish's last processed bulletins.
+
+    They came from the older production prompt, after weekly promotion, so a
+    difference from the bulletin is a reason to look closer, not a vote.
+    """
+    rows = [b for b in parish_bulletins(conn, parish_slug, cutoff=cutoff)
+            if b["processed_at"] and b["duplicate_of"] is None][:max(1, bulletins)]
+    events = load_events(conn, [b["id"] for b in rows])
+    by_bulletin: dict[int, list[dict[str, Any]]] = {b["id"]: [] for b in rows}
+    for ev in events:
+        by_bulletin[ev["bulletin_id"]].append({
+            "church_slug": ev["church_slug"],
+            "event_type": ev["event_type"],
+            "event_kind": ev["event_kind"],
+            "day_of_week": ev["day_of_week"],
+            "date": ev["date"],
+            "start_time": _hhmm(ev["start_time"]),
+            "end_time": _hhmm(ev["end_time"]),
+            "cancelled": ev["cancelled"],
+            "page_number": ev["page_number"],
+            "note": ev["note"],
+        })
+    return {
+        "parish": parish_slug,
+        "cutoff": cutoff,
+        "bulletins": [
+            {
+                "short": b["short"],
+                "content_hash": b["content_hash"],
+                "fetched_at": b["fetched_at"],
+                "published_date": b["published_date"],
+                "wrong_bulletin": b["wrong_bulletin"],
+                "events": sorted(by_bulletin[b["id"]], key=_event_order),
+            }
+            for b in rows
+        ],
+    }
+
+
+_DAY_ORDER = {d: i for i, d in enumerate(
+    ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))}
+
+
+def _event_order(ev: dict[str, Any]) -> tuple:
+    return (
+        ev["church_slug"] or "", ev["event_kind"] != "weekly",
+        _DAY_ORDER.get(ev["day_of_week"] or "", 7), ev["date"] or "", ev["start_time"] or "",
+        ev["event_type"] or "",
+    )
+
+
+# ── Picking a batch ─────────────────────────────────────────────────────────
+def _weekly_slots(conn: sqlite3.Connection, bulletin_id: int) -> set[tuple]:
+    return {
+        (ev["church_slug"], ev["event_type"], ev["day_of_week"], ev["start_time"])
+        for ev in load_events(conn, [bulletin_id]) if ev["event_kind"] == "weekly"
+    }
+
+
+def _stability(conn: sqlite3.Connection, bulletins: list[dict[str, Any]]) -> float | None:
+    """How alike extract mode's weekly slots were in the parish's two newest bulletins (0-1)."""
+    processed = [b for b in bulletins if b["processed_at"] and not b["wrong_bulletin"]
+                 and b["duplicate_of"] is None][:2]
+    if len(processed) < 2:
+        return None
+    a, b = (_weekly_slots(conn, row["id"]) for row in processed)
+    if not a and not b:
+        return None
+    return round(len(a & b) / len(a | b), 2)
+
+
+def _age_days(fetched_at: str | None, now: datetime) -> int | None:
+    if not isinstance(fetched_at, str):
+        return None
+    moment = datetime.fromisoformat(normalize_as_of(fetched_at).replace("Z", "+00:00"))
+    return (now - moment).days
+
+
+def diocese_parishes(diocese: str) -> set[str]:
+    """The parish slugs a diocese's records name (as `weekly --diocese` reads them)."""
+    folder = diocese_dir(diocese) / PARISH.dir
+    return {path.stem for path in folder.glob("*.md")} if folder.is_dir() else set()
+
+
+def labeled_parishes(labels_dir: Path = LABELS_DIR) -> dict[str, list[str]]:
+    """Parish slug -> content hashes of its labels marked done."""
+    out: dict[str, list[str]] = {}
+    for path in sorted(labels_dir.glob("*/*.json")):
+        slug, content_hash = path.parent.name, path.stem
+        if not (is_valid_slug(slug) and is_valid_hash(content_hash)):
+            continue
+        try:
+            label = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if isinstance(label, dict) and label.get("status") == "done":
+            out.setdefault(slug, []).append(content_hash)
+    return out
+
+
+def pick(
+    conn: sqlite3.Connection,
+    *,
+    limit: int = 8,
+    diocese: str | None = None,
+    seeds_dir: Path = SEEDS_DIR,
+    now: datetime | None = None,
+) -> dict[str, Any]:
+    """`seed pick`: parishes with no seed and no seed file, easiest first.
+
+    Easiest is one church, a bulletin fetched in the last two weeks, and extract
+    mode's weekly slots alike in its two newest bulletins.
+    """
+    now = now or datetime.now(UTC)
+    in_update_mode = update_mode_slugs(conn)
+    drafted = set(seed_slugs(seeds_dir))
+    only = diocese_parishes(diocese) if diocese else None
+    candidates = []
+    for parish in conn.execute("SELECT id, slug, name FROM parish ORDER BY slug").fetchall():
+        slug = parish["slug"]
+        if slug in in_update_mode or slug in drafted or (only is not None and slug not in only):
+            continue
+        bulletins = parish_bulletins(conn, slug)
+        if not bulletins:
+            continue
+        churches = len(list_churches(conn, parish["id"]))
+        age = _age_days(bulletins[0]["fetched_at"], now)
+        stability = _stability(conn, bulletins)
+        candidates.append({
+            "parish": slug,
+            "name": parish["name"],
+            "churches": churches,
+            "bulletins": len(bulletins),
+            "newest_fetched_at": bulletins[0]["fetched_at"],
+            "newest_age_days": age,
+            "stability": stability,
+        })
+    candidates.sort(key=lambda c: (
+        c["churches"] != 1,
+        c["newest_age_days"] is None or c["newest_age_days"] > RECENT_DAYS,
+        -(c["stability"] or 0.0),
+        c["churches"],
+        c["parish"],
+    ))
+    shown = candidates[:limit] if limit > 0 else candidates
+    return {"parishes": shown, "remaining": len(candidates) - len(shown)}
+
+
+def start_eval_run(
+    conn: sqlite3.Connection,
+    eval_run: str,
+    *,
+    limit: int = 0,
+    labels_dir: Path = LABELS_DIR,
+    evals_dir: Path = SEED_EVALS_DIR,
+) -> dict[str, Any]:
+    """`seed pick --labeled --eval RUN`: the labeled parishes, and the run's manifest.
+
+    Each parish's cutoff is the fetch time of its newest labeled bulletin (a
+    label marked done). A run that already has a manifest keeps it, so its
+    parishes and cutoffs never move under drafts already written.
+    """
+    run_dir = eval_dir(eval_run, evals_dir)
+    manifest_path = run_dir / MANIFEST_NAME
+    if manifest_path.is_file():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    else:
+        parishes: dict[str, dict[str, str]] = {}
+        for slug, hashes in labeled_parishes(labels_dir).items():
+            rows = []
+            for content_hash in hashes:
+                row = conn.execute(
+                    """SELECT b.fetched_at FROM bulletin b JOIN parish p ON p.id = b.parish_id
+                       WHERE p.slug = ? AND b.content_hash = ? ORDER BY b.fetched_at LIMIT 1""",
+                    (slug, content_hash),
+                ).fetchone()
+                if row is not None and row["fetched_at"]:
+                    rows.append((normalize_as_of(row["fetched_at"]), content_hash))
+            if rows:
+                fetched_at, content_hash = max(rows)
+                parishes[slug] = {"label_hash": content_hash, "fetched_at": fetched_at}
+        if not parishes:
+            raise SeedError("No label marked done names a bulletin in the local database")
+        manifest = {"run": eval_run, "created_at": utc_now_iso(), "parishes": parishes}
+        run_dir.mkdir(parents=True, exist_ok=True)
+        manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    drafted = set(seed_slugs(run_dir / "seeds"))
+    pending = [
+        {"parish": slug, "cutoff": info["fetched_at"], "label_hash": info["label_hash"]}
+        for slug, info in sorted(manifest["parishes"].items()) if slug not in drafted
+    ]
+    shown = pending[:limit] if limit > 0 else pending
+    return {
+        "eval_run": eval_run,
+        "manifest": manifest_path.as_posix(),
+        "parishes": shown,
+        "remaining": len(pending) - len(shown),
+        "drafted": len(drafted),
+    }
