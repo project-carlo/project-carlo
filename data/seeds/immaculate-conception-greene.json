@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "immaculate-conception-greene",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:35:59Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T13:06:09Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:39:22Z",
   "summary": "One church, weekend only: Saturday 4:00 PM vigil and Sunday 10:00 AM Mass (from the liturgy team table, four weekends, and the website), Saturday 3:30–4:00 PM confession. No weekday Mass or Adoration is printed. Open question: Sunday confession after the 10:00 AM Mass, which people are asked to request.",
   "blocked_reason": null,
   "bulletins": [
@@ -163,9 +163,21 @@
     },
     {
       "id": "s4",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-greene",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "After the 10:00 AM Mass; let Father know"
+      },
       "page": 1,
       "sources": [
         {
@@ -216,7 +228,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T20:38:47Z"
+      }
     }
   ]
 }

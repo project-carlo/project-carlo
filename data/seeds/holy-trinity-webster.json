@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-trinity-webster",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:08:51Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T13:03:42Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:40:05Z",
   "summary": "One church. Weekend, daily Mass, Saturday and seasonal Tuesday (Oct–Jun) confession and Thursday Adoration are printed identically in both recent bulletins and agree with history; dated entries cover the Oct 10 confession time change and the Oct 19–23 Respect Life Adoration. Open question: a 6:30 PM Spanish Mass that the intentions show only on first Saturdays.",
   "blocked_reason": null,
   "bulletins": [
@@ -932,9 +932,23 @@
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": "Spanish"
+      },
       "page": 5,
       "sources": [
         {
@@ -1009,7 +1023,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T20:40:01Z"
+      }
     }
   ]
 }

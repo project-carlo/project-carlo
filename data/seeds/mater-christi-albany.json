@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "mater-christi-albany",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:49:03Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T13:04:00Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:43:43Z",
   "summary": "Single church. Both bulletins print the same page-1 schedule (Sat 4:00 PM with confession 3:00-3:30; Sun 8:30 and 11:00 AM with adoration 7:15-8:30; Tue 8:15 AM; Wed 5:30 PM; Fri 8:15 AM school Mass and 5:30 PM; Wed/Fri 4:30 PM adoration and confession; first-Saturday 8:00 adoration/confession and 9:00 AM Mass); history agrees. The newest bulletin adds October Monday adoration (4:30-5:00) and Mass (5:30) on Oct 5/12/19/26, seeded as dated; one question because page 2 says 'NO MASS' on Monday Oct 5.",
   "blocked_reason": null,
   "bulletins": [
@@ -852,9 +852,21 @@
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-christi-albany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-05",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "October Monday Marian devotion"
+      },
       "page": 3,
       "sources": [
         {
@@ -900,7 +912,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T20:43:39Z"
+      }
     },
     {
       "id": "s19",

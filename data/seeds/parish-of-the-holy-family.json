@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "parish-of-the-holy-family",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:11:23Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T16:34:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:43:16Z",
   "summary": "One church (St. Jude the Apostle building, slug holy-family). No standing Mass box: the Masses come from the page-2 Mass intentions, identical across five bulletins (Sep 6 to Oct 4; three older ones read from eCatholic with matching hashes): Sat 8:00 AM Vietnamese and 4:00 PM, Sun 9:00, 11:30 Vietnamese and 5:00 PM, Mon-Fri 9:00 AM, Mon/Tue/Thu/Fri 6:00 PM Vietnamese; Confession Sat 9-10 AM; monthly adorations on first Friday (9:30-3), second Friday (Holy Hour 7-8 PM) and first Saturday 9:30. One open question: the second-Saturday adoration's start time (9:30 newest vs 9:00 in September).",
   "blocked_reason": null,
   "bulletins": [
@@ -1064,7 +1064,8 @@
         "end_time": null,
         "cancelled": false,
         "weeks_of_month": [
-          "first"
+          "first",
+          "second"
         ],
         "season": null,
         "note": null
@@ -1086,13 +1087,31 @@
       "rationale": "Named as the first-Saturday adoration in the church in the weekly-events calendar; the only first Saturday any bulletin read covers. No end time printed. Weeks-of-the-month slot, so weekly. The newest bulletin doesn't print it.",
       "question": null,
       "options": null,
-      "answer": null
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2",
+        "at": "2026-10-11T20:43:07Z"
+      }
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "season": null,
+        "note": null
+      },
       "page": 6,
       "sources": [
         {
@@ -1164,7 +1183,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T20:43:11Z"
+      }
     },
     {
       "id": "s20",

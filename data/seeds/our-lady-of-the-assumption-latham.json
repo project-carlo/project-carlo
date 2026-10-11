@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-the-assumption-latham",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:50:28Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T16:33:14Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:41:53Z",
   "summary": "One church. Weekend (Sat 4:30, Sun 8:00, 10:00) and weekday (Mon 9:00, Tue 6:30, Wed 9:00, Fri 9:00) Masses, the 1st/3rd-Sunday 3:00 PM Vietnamese Mass and Saturday 3:30 PM confessions in the chapel agree across both bulletins, history and (except the Vietnamese Mass) the website. One open question: the Friday 'Simple Adoration of the Blessed' attached to the 9:00 Mass has no time of its own; leaning leave out. The Thursday Prayer Service is excluded.",
   "blocked_reason": null,
   "bulletins": [
@@ -520,9 +520,21 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
       "page": 7,
       "sources": [
         {
@@ -573,7 +585,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T20:41:32Z"
+      }
     },
     {
       "id": "s11",
