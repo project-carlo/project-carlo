@@ -1,0 +1,696 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ann-manlius",
+  "status": "ready",
+  "as_of": "2026-10-04T14:39:22Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:32:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The cover schedule box is identical in both bulletins and matches history: Sat 4:30 PM vigil, Sun 10:15 AM, Tue-Fri 9:00 AM Masses, Sat 3:30-4:15 PM confessions, and a 24-hour daily Adoration Chapel (recorded at the church 00:00-23:59). The Mon-Fri 7:00 AM Communion Service is excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8465796b4f4d4f4eddb772b4e063be33fa2f2b56661db3f415b95d194694a3d6",
+      "fetched_at": "2026-10-04T14:39:22Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "f2c26864af82cbe5fb7e8aac1c0be4e0a85698c94b91c9bdff4ca535eeaf22fe",
+      "fetched_at": "2026-09-28T00:10:24Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Weekend Masses Saturday | 4:30pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Weekend Masses Saturday | 4:30pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 2,
+          "said": "Saturday, October 10; - Vigil Mass 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Saturday 16:30"
+        }
+      ],
+      "rationale": "Mass Schedule box on the cover of both bulletins; Mass intentions agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Sunday | 10:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Sunday | 10:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 2,
+          "said": "Sunday, Oct. 11 ... 10:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Sunday 10:15"
+        }
+      ],
+      "rationale": "Mass Schedule box on the cover of both bulletins; Mass intentions agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Weekday Masses Tuesday - Friday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Weekday Masses Tuesday - Friday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 2,
+          "said": "Tuesday, October 6; 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Tuesday 09:00"
+        }
+      ],
+      "rationale": "Tuesday-Friday 9:00 AM weekday Mass in the cover schedule box of both bulletins and in the Mass intentions; history agrees. Monday has no Mass (intentions say 'Monday ... 9:00am No Mass').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Weekday Masses Tuesday - Friday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Weekday Masses Tuesday - Friday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 2,
+          "said": "Wednesday, October 7; 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Wednesday 09:00"
+        }
+      ],
+      "rationale": "Tuesday-Friday 9:00 AM weekday Mass in the cover schedule box of both bulletins and in the Mass intentions; history agrees. Monday has no Mass (intentions say 'Monday ... 9:00am No Mass').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Weekday Masses Tuesday - Friday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Weekday Masses Tuesday - Friday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 2,
+          "said": "Thursday, October 8; 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Thursday 09:00"
+        }
+      ],
+      "rationale": "Tuesday-Friday 9:00 AM weekday Mass in the cover schedule box of both bulletins and in the Mass intentions; history agrees. Monday has no Mass (intentions say 'Monday ... 9:00am No Mass').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Weekday Masses Tuesday - Friday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Weekday Masses Tuesday - Friday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 2,
+          "said": "Friday, October 9; 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Friday 09:00"
+        }
+      ],
+      "rationale": "Tuesday-Friday 9:00 AM weekday Mass in the cover schedule box of both bulletins and in the Mass intentions; history agrees. Monday has no Mass (intentions say 'Monday ... 9:00am No Mass').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Confessions Saturday 3:30 - 4:15pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Confessions Saturday 3:30 - 4:15pm or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Saturday 15:30-16:15"
+        }
+      ],
+      "rationale": "Cover schedule box of both bulletins; history agrees. 'By appointment' has no time and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Sunday 00:00 adoration '24 hours daily'"
+        }
+      ],
+      "rationale": "The parish's own Adoration Chapel, listed in the church's cover schedule box in both bulletins as open 24 hours daily, with the after-hours entrance code from the parish office; this one-church parish gives no other address, so the chapel is taken to be at St. Ann's. Recorded 00:00-23:59 each day, as the labels record continuous exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Monday 00:00 adoration '24 hours daily'"
+        }
+      ],
+      "rationale": "The parish's own Adoration Chapel, listed in the church's cover schedule box in both bulletins as open 24 hours daily, with the after-hours entrance code from the parish office; this one-church parish gives no other address, so the chapel is taken to be at St. Ann's. Recorded 00:00-23:59 each day, as the labels record continuous exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Tuesday 00:00 adoration '24 hours daily'"
+        }
+      ],
+      "rationale": "The parish's own Adoration Chapel, listed in the church's cover schedule box in both bulletins as open 24 hours daily, with the after-hours entrance code from the parish office; this one-church parish gives no other address, so the chapel is taken to be at St. Ann's. Recorded 00:00-23:59 each day, as the labels record continuous exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Wednesday 00:00 adoration '24 hours daily'"
+        }
+      ],
+      "rationale": "The parish's own Adoration Chapel, listed in the church's cover schedule box in both bulletins as open 24 hours daily, with the after-hours entrance code from the parish office; this one-church parish gives no other address, so the chapel is taken to be at St. Ann's. Recorded 00:00-23:59 each day, as the labels record continuous exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Thursday 00:00 adoration '24 hours daily'"
+        }
+      ],
+      "rationale": "The parish's own Adoration Chapel, listed in the church's cover schedule box in both bulletins as open 24 hours daily, with the after-hours entrance code from the parish office; this one-church parish gives no other address, so the chapel is taken to be at St. Ann's. Recorded 00:00-23:59 each day, as the labels record continuous exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Friday 00:00 adoration '24 hours daily'"
+        }
+      ],
+      "rationale": "The parish's own Adoration Chapel, listed in the church's cover schedule box in both bulletins as open 24 hours daily, with the after-hours entrance code from the parish office; this one-church parish gives no other address, so the chapel is taken to be at St. Ann's. Recorded 00:00-23:59 each day, as the labels record continuous exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Adoration Chapel 24 hours daily (Please call office for after hours entrance code.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8465796b4f4d",
+          "said": "weekly Saturday 00:00 adoration '24 hours daily'"
+        }
+      ],
+      "rationale": "The parish's own Adoration Chapel, listed in the church's cover schedule box in both bulletins as open 24 hours daily, with the after-hours entrance code from the parish office; this one-church parish gives no other address, so the chapel is taken to be at St. Ann's. Recorded 00:00-23:59 each day, as the labels record continuous exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-manlius",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 1,
+          "said": "Communion Service Monday - Friday | 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2c26864af82",
+          "page": 1,
+          "said": "Communion Service Monday - Friday | 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8465796b4f4d",
+          "page": 2,
+          "said": "COMMUNION SERVICE MONDAY - FRIDAY AT 7:00AM"
+        }
+      ],
+      "rationale": "A Communion Service is not a Mass (policy). Stands for the whole Monday-Friday 7:00 AM Communion Service group.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

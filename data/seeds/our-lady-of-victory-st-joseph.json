@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-victory-st-joseph",
+  "status": "ready",
+  "as_of": "2026-10-04T14:10:34Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:33:46Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (downtown Rochester). The schedule box is the same in both one-page bulletins: Sat 4:30 PM and Sun 10:00 AM, Mon-Wed & Fri 12:10 PM Masses, Confessions 11:30 AM on those weekdays and Saturday; the Mass intentions agree. Weekday confession end time is left open (none printed).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "da2e019ad8b3ee8356c216da0f3d2c97312bf6305194680807fde42d3a0d3dc3",
+      "fetched_at": "2026-10-04T14:10:34Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "5f8fb29088f7c5983c6bf31c8520525661be3931acb3cb8ef42b7b332a881259",
+      "fetched_at": "2026-09-27T14:00:09Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Weekend Masses: Saturday: 4:30 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Weekend Masses: Saturday: 4:30 P.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly Saturday 16:30"
+        }
+      ],
+      "rationale": "Schedule box of both bulletins; every Saturday in the Mass intentions is 4:30; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Sunday: 10:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Sunday: 10:00 A.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly Sunday 10:00"
+        }
+      ],
+      "rationale": "Schedule box of both bulletins; every Sunday in the Mass intentions is 10:00; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Weekday Masses: Mon. - Wed. & Fri. 12:10 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Weekday Masses: Mon. - Wed. & Fri. 12:10 P.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly Monday 12:10"
+        }
+      ],
+      "rationale": "Schedule box of both bulletins; the Mass intentions list Monday 12:10 in both weeks (Thursday: 'Church is closed.'); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Weekday Masses: Mon. - Wed. & Fri. 12:10 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Weekday Masses: Mon. - Wed. & Fri. 12:10 P.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly Tuesday 12:10"
+        }
+      ],
+      "rationale": "Schedule box of both bulletins; the Mass intentions list Tuesday 12:10 in both weeks (Thursday: 'Church is closed.'); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Weekday Masses: Mon. - Wed. & Fri. 12:10 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Weekday Masses: Mon. - Wed. & Fri. 12:10 P.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly Wednesday 12:10"
+        }
+      ],
+      "rationale": "Schedule box of both bulletins; the Mass intentions list Wednesday 12:10 in both weeks (Thursday: 'Church is closed.'); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Weekday Masses: Mon. - Wed. & Fri. 12:10 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Weekday Masses: Mon. - Wed. & Fri. 12:10 P.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly Friday 12:10"
+        }
+      ],
+      "rationale": "Schedule box of both bulletins; the Mass intentions list Friday 12:10 in both weeks (Thursday: 'Church is closed.'); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "before the 12:10 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Confessions: Before all weekday Masses, Mon., Tues., Wed. & Fri. 11:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Confessions: Before all weekday Masses, Mon., Tues., Wed. & Fri. 11:30 A.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly confession Monday 11:30 (newest: 11:30–12:10)"
+        }
+      ],
+      "rationale": "Clock time printed in both bulletins' schedule box, before that day's 12:10 PM Mass. Per the policy's rule for a clock time that runs until a Mass with no end of its own: start 11:30, no end_time, note naming the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "before the 12:10 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Confessions: Before all weekday Masses, Mon., Tues., Wed. & Fri. 11:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Confessions: Before all weekday Masses, Mon., Tues., Wed. & Fri. 11:30 A.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly confession Tuesday 11:30 (newest: 11:30–12:10)"
+        }
+      ],
+      "rationale": "Clock time printed in both bulletins' schedule box, before that day's 12:10 PM Mass. Per the policy's rule for a clock time that runs until a Mass with no end of its own: start 11:30, no end_time, note naming the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "before the 12:10 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Confessions: Before all weekday Masses, Mon., Tues., Wed. & Fri. 11:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Confessions: Before all weekday Masses, Mon., Tues., Wed. & Fri. 11:30 A.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly confession Wednesday 11:30 (newest: 11:30–12:10)"
+        }
+      ],
+      "rationale": "Clock time printed in both bulletins' schedule box, before that day's 12:10 PM Mass. Per the policy's rule for a clock time that runs until a Mass with no end of its own: start 11:30, no end_time, note naming the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "before the 12:10 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Confessions: Before all weekday Masses, Mon., Tues., Wed. & Fri. 11:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Confessions: Before all weekday Masses, Mon., Tues., Wed. & Fri. 11:30 A.M."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly confession Friday 11:30 (newest: 11:30–12:10)"
+        }
+      ],
+      "rationale": "Clock time printed in both bulletins' schedule box, before that day's 12:10 PM Mass. Per the policy's rule for a clock time that runs until a Mass with no end of its own: start 11:30, no end_time, note naming the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-st-joseph",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da2e019ad8b3",
+          "page": 1,
+          "said": "Saturday 11:30 A.M. and by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f8fb29088f7",
+          "page": 1,
+          "said": "Saturday 11:30 A.M. and by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "da2e019ad8b3",
+          "said": "weekly confession Saturday 11:30"
+        }
+      ],
+      "rationale": "Schedule box of both bulletins; no end time printed; history agrees. 'By appointment' is left out (no time). The before-Mass rule doesn't apply: the bulletin ties Saturday's 11:30 to no Mass (Saturday's Mass is 4:30 PM), so no note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

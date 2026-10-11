@@ -1,0 +1,676 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-assumption-latham",
+  "status": "needs_review",
+  "as_of": "2026-10-04T14:50:28Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:33:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 4:30, Sun 8:00, 10:00) and weekday (Mon 9:00, Tue 6:30, Wed 9:00, Fri 9:00) Masses, the 1st/3rd-Sunday 3:00 PM Vietnamese Mass and Saturday 3:30 PM confessions in the chapel agree across both bulletins, history and (except the Vietnamese Mass) the website. One open question: the Friday 'Simple Adoration of the Blessed' attached to the 9:00 Mass has no time of its own; leaning leave out. The Thursday Prayer Service is excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a093a61f512d982d81127e8cf53099a1093f4ccd237053031357dbf302b83d89",
+      "fetched_at": "2026-10-04T14:50:28Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "a7713873476e6836b338eb51e65074576466179ca426496d27786c4c0ffa34fd",
+      "fetched_at": "2026-09-28T22:00:29Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Saturday 4:30 p.m. Vigil Mass, Mass in-pew and livestreamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Saturday 4:30 p.m. Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 3,
+          "said": "SATURDAY, October 3, 4:30 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 3,
+          "said": "weekly mass Saturday 16:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "SATURDAY, October 10 4:30 p.m. Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "4:30 pm Vigil Mass, also Livestreamed"
+        }
+      ],
+      "rationale": "Printed in the Sacramental Celebrations box (p7) of both bulletins and in both weeks' Masses for the Week lists; history and the parish website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Sunday 8:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Sunday 8:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 3,
+          "said": "SUNDAY, October 11 8:00 a.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly mass Sunday 08:00"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "8:00 am Sunday Mass"
+        }
+      ],
+      "rationale": "Printed in the Sacramental Celebrations box (p7) of both bulletins and in the newest bulletin's Masses for the Week; history and the website agree. The older bulletin's week list gave 7:30 for Sunday October 4 only (see the excluded dated slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Sunday 10:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Sunday 10:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 3,
+          "said": "SUNDAY, October 11 10:00 a.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly mass Sunday 10:00"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "10:00 am Sunday Mass"
+        }
+      ],
+      "rationale": "Printed in the Sacramental Celebrations box (p7) of both bulletins and in the newest bulletin's Masses for the Week; Children's Liturgy of the Word is announced at the 10 a.m. Mass; history and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "3:00 p.m. Vietnamese Mass 1st & 3rd Sundays of Month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "3:00 p.m. Vietnamese Mass 1st & 3rd Sundays of Month"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly mass Sunday 15:00 'Vietnamese; 1st & 3rd Sundays of month'"
+        }
+      ],
+      "rationale": "Printed in the parish's own Sacramental Celebrations box in both bulletins, under the Sunday Masses, so it is at this church; weeks-of-the-month slot per the policy. The Masses for the Week lists cover only the 2nd Sunday (Oct 11) and the 1st (Oct 4, whose list shows only morning Masses, as intention lists often do for a community Mass). The website's schedule does not list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Monday 9:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Monday 9:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 3,
+          "said": "MONDAY, October 5, 9:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 3,
+          "said": "MONDAY, September 28, 9:00 a.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly mass Monday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "Monday: 9:00 am Mass"
+        }
+      ],
+      "rationale": "Printed in the Sacramental Celebrations box (p7) of both bulletins and in both weeks' Masses for the Week lists; history and the parish website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Tuesday 6:30 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Tuesday 6:30 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 3,
+          "said": "TUESDAY, October 6, 6:30 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 3,
+          "said": "TUESDAY, September 29, 6:30 a.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly mass Tuesday 06:30"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "Tuesday: 6:30 am Mass"
+        }
+      ],
+      "rationale": "Printed in the Sacramental Celebrations box (p7) of both bulletins and in both weeks' Masses for the Week lists; history and the parish website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Wednesday 9:00 a.m. Mass in-pew and livestreamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Wednesday 9:00 a.m. Mass in-pew and livestreamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 3,
+          "said": "WEDNESDAY, October 7, 9:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 3,
+          "said": "WEDNESDAY, September 30, 9:00 a.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly mass Wednesday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "Wednesday: 9:00 am Mass, Livestreamed"
+        }
+      ],
+      "rationale": "Printed in the Sacramental Celebrations box (p7) of both bulletins and in both weeks' Masses for the Week lists; history and the parish website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Friday 9:00 a.m. Mass - Simple Adoration of the Blessed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Friday 9:00 a.m. Mass - Simple Adoration of the Blessed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 3,
+          "said": "FRIDAY, October 9, 9:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 3,
+          "said": "FRIDAY, October 2, 9:00 a.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly mass Friday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "Friday: 9:oo am Mass"
+        }
+      ],
+      "rationale": "Printed in the Sacramental Celebrations box (p7) of both bulletins and in both weeks' Masses for the Week lists; history and the parish website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Confessions/Sacrament of Reconciliation Saturdays at 3:30 p.m. in the Chapel or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Saturdays at 3:30 p.m. in the Chapel or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly confession Saturday 15:30 'In the Chapel'"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/",
+          "said": "Saturday 3:30-4:15 pm CONFESSIONS"
+        }
+      ],
+      "rationale": "Same line in both bulletins; history agrees. 'The Chapel' is read as a chapel of this church (no other address is given anywhere). The bulletins give no end time; the home page says 3:30-4:15, but the bulletin is the source the policy follows, so end_time is left null. A reviewer may add 16:15 on the website's word.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Friday 9:00 a.m. Mass - Simple Adoration of the Blessed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 7,
+          "said": "Friday 9:00 a.m. Mass - Simple Adoration of the Blessed"
+        },
+        {
+          "source": "history",
+          "bulletin": "a093a61f512d",
+          "said": "weekly adoration Friday 09:00 'Simple Adoration of the Blessed'"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "Friday: 9:oo am Mass (no adoration mentioned)"
+        }
+      ],
+      "rationale": "Both bulletins attach 'Simple Adoration of the Blessed [Sacrament]' to the Friday 9:00 Mass line (the text is cut off) with no clock time and no 'after'/'following'. The policy skips an event without a definite start time and says a combined event doesn't give its component's time, so history's 09:00 (the Mass's own time) is not supported. If it follows Mass, the weekday relative rule would give 9:30. The website mentions no adoration.",
+      "question": "Friday 'Simple Adoration of the Blessed' with the 9:00 a.m. Mass: add it, and at what time?",
+      "options": [
+        {
+          "label": "Leave out (no definite time printed)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Fridays 9:30 AM, after the 9:00 Mass",
+          "entry": {
+            "church_slug": "our-lady-of-the-assumption-latham",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": "after the 9:00 AM Mass"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Prayer Service"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 7,
+          "said": "Thursday 6:30 a.m. Prayer Service"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a093a61f512d",
+          "page": 3,
+          "said": "THURSDAY, October 8, 6:30 p.m. Prayer Service"
+        },
+        {
+          "source": "website",
+          "url": "https://olalatham.org/mass-schedule/",
+          "said": "Thursday: 6:30 am Prayer Service"
+        }
+      ],
+      "rationale": "A Prayer Service is not a Mass, Confession or Adoration. (The week list prints it as 6:30 p.m., the schedule box and website as 6:30 a.m.; it is left out either way.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-assumption-latham",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-04",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 3,
+          "said": "SUNDAY, October 4, 7:30 a.m. Mass ... 9:00 a.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a7713873476e",
+          "said": "specific_date mass 2026-10-04 07:30 and 09:00"
+        }
+      ],
+      "rationale": "The 9/27 bulletin's week list gives 7:30 and 9:00 for Sunday October 4 instead of the usual 8:00 and 10:00 (also left out: the 9:00). Nothing else explains it and the 10/4 bulletin's schedule box keeps 8:00 and 10:00; it is likely a misprint. Either way the date is no later than the newest bulletin's fetch (Oct 4, 14:50), so it has passed and does not belong in the seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a7713873476e",
+          "page": 2,
+          "said": "Annual Diocesan Marriage Jubilee Mass ... Sunday, September 27th, 2026 3 PM ... at Christ Our Light Catholic Church, Loudonville"
+        }
+      ],
+      "rationale": "At another parish, and in the past.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
