@@ -23,6 +23,7 @@ from typing import Any
 import pypdfium2 as pdfium
 from pypdf import PdfReader
 
+from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.dioceses.records import PARISH, diocese_dir
 from pdf_extract.labeling.labels import LABELS_DIR, is_valid_hash, is_valid_slug
 from pdf_extract.schedule.store import normalize_as_of, update_mode_slugs
@@ -166,6 +167,11 @@ def resolve_bulletin(
 
 def bulletin_pdf(parish_slug: str, content_hash: str) -> bytes:
     """The stored compacted PDF, cut to the pages the pipeline reads, so pages match."""
+    if not pdf_stored(parish_slug, content_hash):
+        raise SeedError(
+            f"The PDF of {parish_slug}/{content_hash[:12]} is no longer stored: its history "
+            "can still be cited, but it can't be read"
+        )
     data = read_bulletin_pdf(parish_slug, content_hash)
     if data is None:
         raise SeedError(
@@ -179,23 +185,39 @@ def page_count(pdf: bytes) -> int:
     return len(PdfReader(io.BytesIO(pdf)).pages)
 
 
+def pdf_stored(parish_slug: str, content_hash: str) -> bool:
+    """Whether the blob store still holds the bulletin's PDF (old ones may be pruned)."""
+    try:
+        return get_store().exists(bulletin_pdf_key(parish_slug, content_hash))
+    except Exception:  # an unreachable store: let reading the PDF say why
+        return True
+
+
 def list_bulletins(
     conn: sqlite3.Connection, parish_slug: str, *, cutoff: str | None = None, limit: int = 8,
 ) -> dict[str, Any]:
-    """`seed bulletins`: the newest `limit` bulletins with their page counts."""
+    """`seed bulletins`: the newest `limit` bulletins with their page counts.
+
+    `stored` is false for a bulletin whose PDF the blob store no longer holds:
+    extract mode's history of it can still be cited, but it can't be read.
+    """
     bulletins = parish_bulletins(conn, parish_slug, cutoff=cutoff)
     shown = bulletins[:limit] if limit > 0 else bulletins
     for b in shown:
+        b["pages"] = None
+        b["stored"] = pdf_stored(parish_slug, b["content_hash"])
+        if not b["stored"]:
+            continue
         try:
             b["pages"] = page_count(bulletin_pdf(parish_slug, b["content_hash"]))
-        except Exception:  # missing from storage, or unreadable: say so, don't stop
-            b["pages"] = None
+        except Exception:  # unreadable: say so, don't stop
+            pass
     return {
         "parish": parish_slug,
         "cutoff": cutoff,
         "bulletins": [
             {k: b.get(k) for k in (
-                "short", "content_hash", "fetched_at", "published_date", "pages",
+                "short", "content_hash", "fetched_at", "published_date", "pages", "stored",
                 "wrong_bulletin", "duplicate_of", "source_url",
             )}
             for b in shown

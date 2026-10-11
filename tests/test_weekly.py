@@ -139,7 +139,7 @@ def test_weekly_run_loads_approved_seeds_after_its_before_copy(
     result = run_weekly(run_id="run-seeds", model="m")
 
     assert [s["parish"] for s in result["seeds"]["loaded"]] == ["test-parish"]
-    assert "test-parish** seeded" in (run_out_dir("run-seeds") / "report.md").read_text()
+    assert "test-parish** seeded" in (run_out_dir("run-seeds") / "report.md").read_text(encoding="utf-8")
     before = sqlite3.connect(run_out_dir("run-seeds") / "before.db")
     try:
         assert before.execute("SELECT count(*) FROM schedule_revision").fetchone()[0] == 0

@@ -51,9 +51,12 @@ NEEDS_HUMAN = "needs_human"
 SLOT_STATUSES = (SETTLED, NEEDS_HUMAN)
 
 # A slot's `sources[].source`: the agent's own reading, extract mode's stored
-# events, or the id of one of the file's `calls`.
+# events, a page of the parish's website (with its `url`), or the id of one of
+# the file's `calls`.
 AGENT = "agent"
 HISTORY = "history"
+WEBSITE = "website"
+SOURCE_KINDS = (AGENT, HISTORY, WEBSITE)
 
 EXTRACT = "extract"
 ASK = "ask"
@@ -308,8 +311,8 @@ def _validate_calls(seed: dict[str, Any]) -> list[str]:
         if not isinstance(call, dict):
             errors.append(f"{where} must be an object")
             continue
-        if not _nonempty(call.get("id")) or call["id"] in ids or call["id"] in (AGENT, HISTORY):
-            errors.append(f"{where}.id must be a unique id other than agent and history")
+        if not _nonempty(call.get("id")) or call["id"] in ids or call["id"] in SOURCE_KINDS:
+            errors.append(f"{where}.id must be a unique id other than {', '.join(SOURCE_KINDS)}")
         else:
             ids.add(call["id"])
         if call.get("kind") not in CALL_KINDS:
@@ -397,13 +400,20 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
             if not isinstance(source, dict):
                 errors.append(f"{at} must be an object")
                 continue
-            extra = sorted(set(source) - {"source", "bulletin", "page", "said"})
+            extra = sorted(set(source) - {"source", "bulletin", "page", "said", "url"})
             if extra:
                 errors.append(f"{at}: unknown {', '.join(extra)}")
             name = source.get("source")
-            if not isinstance(name, str) or (name not in (AGENT, HISTORY)
-                                             and name not in call_ids):
-                errors.append(f"{at}.source must be agent, history or a call's id")
+            if not isinstance(name, str) or (name not in SOURCE_KINDS and name not in call_ids):
+                errors.append(f"{at}.source must be agent, history, website or a call's id")
+            if name == WEBSITE:
+                url = source.get("url")
+                if not (isinstance(url, str) and url.startswith(("https://", "http://"))):
+                    errors.append(f"{at}.url is required for a website source: the page read")
+                if source.get("bulletin") is not None:
+                    errors.append(f"{at}: a website source names no bulletin")
+            elif source.get("url") is not None:
+                errors.append(f"{at}.url is only for a website source")
             if source.get("bulletin") is not None and resolve_hash(seed, source["bulletin"]) is None:
                 errors.append(f"{at}.bulletin must name one of the file's bulletins")
             if source.get("page") is not None and not _is_page(source["page"]):
@@ -490,6 +500,8 @@ def status_errors(seed: dict[str, Any]) -> list[str]:
     errors = []
     if status in (NEEDS_REVIEW, READY, APPROVED) and seed["as_of"] is None:
         errors.append(f"as_of is required once the draft is {status}")
+    if status in (NEEDS_REVIEW, READY) and not _nonempty(seed["summary"]):
+        errors.append("summary is required once the draft is done: what a reviewer reads first")
     if status == NEEDS_REVIEW and not n_open:
         errors.append("status is needs_review but no question is open: it is ready")
     if status in (READY, APPROVED) and n_open:
