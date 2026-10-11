@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-cross-buffalo",
-  "status": "ready",
+  "status": "approved",
   "as_of": "2026-10-04T14:25:34Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T11:54:38Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:42:11Z",
   "summary": "Single church. The Sep 27 and Oct 4 bulletins print the same LITURGIES box: Sun 9:30 AM (English) and 12:30 PM (Spanish), Mon-Fri 8:15 AM (bilingual), last-Saturday 6:00 PM (French), confessions 20 minutes before each weekend Mass; the page-2 weekly Mass lists and history agree. No adoration is listed.",
   "blocked_reason": null,
   "bulletins": [
@@ -567,7 +567,11 @@
       "rationale": "A one-off special Mass on Oct 3, before as_of (Oct 4): a seed only holds dated entries on or after as_of, so it is left out.",
       "question": null,
       "options": null,
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:41:55Z"
+      }
     }
   ]
 }

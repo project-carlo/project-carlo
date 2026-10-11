@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "all-saints-albany",
-  "status": "ready",
+  "status": "approved",
   "as_of": "2026-10-04T14:45:49Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T11:49:27Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:41:17Z",
   "summary": "One church. A clear Liturgy Schedule box (page 2) agrees with the cover and the two-week calendar and with history in both bulletins: Sat vigil, three Sunday Masses, Mon/Wed 9 AM and Thu 5:30 PM Masses, Thu 4:30 Adoration & Confession, Sat 3-3:30 and Sun 6-7 PM Confession, Sun 6-7 PM Adoration. Thursday's adoration/confession has no printed end time, so it is left null.",
   "blocked_reason": null,
   "bulletins": [
@@ -558,7 +558,11 @@
       "rationale": "Off-site at a nursing home, not a listed church, and the item doesn't even say it is a Mass. Left out.",
       "question": null,
       "options": null,
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:39:39Z"
+      }
     },
     {
       "id": "s14",
@@ -594,7 +598,11 @@
       "rationale": "A convalidation ceremony for registered couples, not described as a Mass and not a public Mass; history recorded it as one. Left out.",
       "question": null,
       "options": null,
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:40:26Z"
+      }
     }
   ]
 }

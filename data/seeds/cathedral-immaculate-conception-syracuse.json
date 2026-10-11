@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "cathedral-immaculate-conception-syracuse",
-  "status": "ready",
+  "status": "approved",
   "as_of": "2026-10-04T14:32:54Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T11:55:57Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:49:04Z",
   "summary": "One church. Page-1 schedule matches the week's intentions and history in both bulletins: Mon-Fri 7:00 and 12:00, Sat 5:10 PM, Sun 7:30, 9:45 and 5:10 PM; confession Wed 11:00-11:30 and Sat 4:15-4:45. Both Monday Masses on Columbus Day (Oct 12) are cancelled (Cathedral closed). No adoration is listed.",
   "blocked_reason": null,
   "bulletins": [
@@ -794,7 +794,11 @@
       "rationale": "A special occasion at the regular Sunday 5:10 PM Mass; per the policy only the weekly slot is recorded. Left out.",
       "question": null,
       "options": null,
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:48:56Z"
+      }
     }
   ]
 }

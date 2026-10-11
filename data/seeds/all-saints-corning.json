@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "all-saints-corning",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:05:13Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T11:51:54Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:52:22Z",
   "summary": "One church (St. Mary's), all Masses and confessions currently in the parish gym. Weekend schedule is clear (Sat 5 PM vigil, Sun 8:00 and 10:30, Sat confession 2:00-3:30); weekday Mass is one announced Mass per week, so only this week's Wed 10/7 Mass and confession are seeded as dated. Open question: a Saturday 4:00 PM Mass that appears in the intentions every week but not in the Mass-times header or website.",
   "blocked_reason": null,
   "bulletins": [
@@ -391,9 +391,21 @@
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-marys-corning",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "In the gym"
+      },
       "page": 2,
       "sources": [
         {
@@ -455,7 +467,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:52:12Z"
+      }
     },
     {
       "id": "s6",
@@ -581,7 +597,11 @@
       "rationale": "Weekday slots printed as 'No Mass' every week read (Mon 8:00, Thu 6:00 PM / 8:30, Fri 12:15, Wed 6:00 PM when it is not the week's Mass). No weekly weekday Mass is seeded, so there is nothing for these cancellations to cancel; left out, along with the Thu 10/8 6:00 PM and Fri 10/9 12:15 PM 'No Mass' lines.",
       "question": null,
       "options": null,
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:52:21Z"
+      }
     }
   ]
 }

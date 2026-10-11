@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "corpus-christi-round-lake",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:46:48Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T11:51:02Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:50:32Z",
   "summary": "Single church. The Sep 27 and Oct 4 bulletins print the same schedule sidebar (Sat 4:00 PM, Sun 8:00 and 11:00 AM; Mon/Tue/Fri 9:00 AM, Thu 6:00 PM; no Wednesday Mass; confession 15 minutes before weekday Masses and Sat 3:30-3:45 PM), confirmed by both weekly calendars and history. One question: a first-Friday 9:45 AM Holy Hour seen only in the older calendar. A Nov 2 All Souls Mass is included as dated.",
   "blocked_reason": null,
   "bulletins": [
@@ -647,13 +647,31 @@
       "rationale": "Held at St. Mary's, Crescent, another parish: off-site, left out.",
       "question": null,
       "options": null,
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:50:29Z"
+      }
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": "Holy Hour"
+      },
       "page": null,
       "sources": [
         {
@@ -700,7 +718,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:50:18Z"
+      }
     }
   ]
 }

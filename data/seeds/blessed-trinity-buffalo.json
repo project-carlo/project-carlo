@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "blessed-trinity-buffalo",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:19:47Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T11:54:53Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:51:42Z",
   "summary": "One church. Page 1 and the page-4 family-of-parishes table agree and history agrees in both bulletins: Sat 4:30 PM, Sun 10:00, Mon/Tue/Wed/Fri 11:00, Sat confession 3:50-4:20. Sister parishes' times in the shared table are left out. One question: whether the Oct 28 Healing Mass 'for members of HOBCCE' is public.",
   "blocked_reason": null,
   "bulletins": [
@@ -356,9 +356,21 @@
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Healing Mass"
+      },
       "page": 4,
       "sources": [
         {
@@ -409,7 +421,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:51:28Z"
+      }
     },
     {
       "id": "s9",
@@ -440,7 +456,11 @@
       "rationale": "The page-4 table also lists St. Martin de Porres (SMdP) and Ss. Columba-Brigid (CB), sister parishes in the family of parishes, not churches of this parish. Their times are left out here.",
       "question": null,
       "options": null,
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:51:39Z"
+      }
     }
   ]
 }
