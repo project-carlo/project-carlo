@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-delanson",
+  "status": "ready",
+  "as_of": "2026-10-04T14:49:39Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T13:07:40Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single church. Both bulletins print the same schedule: Sat 4:00 PM vigil, Sun 11:15 AM, Tue 9:00 AM, and Saturday confession at 2:00 PM (no end time); the Liturgy Schedules and history agree. Left out: the sister parish Our Lady of the Valley's Masses, the Nov 2 All Souls prayer service (not a Mass), and a 'Kingsway 2:00 & 3:00 pm' line on Sep 29 (an off-site facility, before as_of).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a6d75302492e411e212d7d583dba9167548d35e14eedb86c46334f65a1864bd2",
+      "fetched_at": "2026-10-04T14:49:39Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "2c9aa2be4a3c130f3bec94da386b1022b099ad77cfb392e69643029be8f5d551",
+      "fetched_at": "2026-09-28T21:59:44Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-delanson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a6d75302492e",
+          "page": 1,
+          "said": "Saturday Vigil Mass 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c9aa2be4a3c",
+          "page": 1,
+          "said": "Saturday Vigil Mass 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a6d75302492e",
+          "said": "weekly mass Saturday 16:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "2c9aa2be4a3c",
+          "said": "weekly mass Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the Our Lady of Fatima box on page 1 of both bulletins read, and in both page-2 Liturgy Schedules; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-delanson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a6d75302492e",
+          "page": 1,
+          "said": "Sunday Mass - 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c9aa2be4a3c",
+          "page": 1,
+          "said": "Sunday Mass - 11:15 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a6d75302492e",
+          "said": "weekly mass Sunday 11:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "2c9aa2be4a3c",
+          "said": "weekly mass Sunday 11:15"
+        }
+      ],
+      "rationale": "Printed in the Our Lady of Fatima box on page 1 of both bulletins read, and in both page-2 Liturgy Schedules; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-delanson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a6d75302492e",
+          "page": 1,
+          "said": "Tuesday - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c9aa2be4a3c",
+          "page": 1,
+          "said": "Tuesday - 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a6d75302492e",
+          "said": "weekly mass Tuesday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "2c9aa2be4a3c",
+          "said": "weekly mass Tuesday 09:00"
+        }
+      ],
+      "rationale": "Printed in the Our Lady of Fatima box on page 1 of both bulletins read, and in both page-2 Liturgy Schedules; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-delanson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a6d75302492e",
+          "page": 1,
+          "said": "Confessions - Saturday 2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c9aa2be4a3c",
+          "page": 1,
+          "said": "Confessions - Saturday 2:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a6d75302492e",
+          "said": "weekly confession Saturday 14:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "2c9aa2be4a3c",
+          "said": "weekly confession Saturday 14:00"
+        }
+      ],
+      "rationale": "Printed in the Our Lady of Fatima box on page 1 of both bulletins; history agrees. No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-valley-middleburgh",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a6d75302492e",
+          "page": 1,
+          "said": "Our Lady of the Valley ... Middleburgh: Saturday Vigil Mass - 6:00pm, Sunday Mass - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2c9aa2be4a3c",
+          "page": 1,
+          "said": "Our Lady of the Valley ... Middleburgh: Saturday Vigil Mass - 6:00pm, Sunday Mass - 9:00am"
+        }
+      ],
+      "rationale": "Our Lady of the Valley, Middleburgh, shares the pastor and bulletin but is its own parish (our-lady-of-the-valley-middleburgh) with its own row; its Sat 6:00 PM and Sun 9:00 AM Masses are left out of this seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

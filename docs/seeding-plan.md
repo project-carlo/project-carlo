@@ -136,6 +136,7 @@ prints compact text by default, `--json` on request.
 | `seed pick [--limit N] [--diocese D] [--labeled]` | Parishes with no seed and no seed file, easiest first: one church, a recent bulletin, extract-mode output stable from week to week. `--labeled` picks the parishes with labels instead, for the [test run](#testing-it-first). |
 | `seed bulletins <parish>` | The parish's bulletins, newest first: short hash, fetch date, issue date if known, page count (or `no PDF` once the PDF is pruned: its history can still be cited), whether extract mode flagged it as a wrong bulletin, and whether it's a duplicate of another. |
 | `seed pdf <parish> <bulletin>` | Writes the stored compacted PDF (the first 10 pages, or the parish's limit) to a local path and prints it, so page numbers match the pipeline's and the labeler's. |
+| `seed text <parish> <bulletin> [--page N]` | Each page's text layer, marking the pages that are only images. A tenth of what reading the PDF costs, for corroborating an older bulletin. |
 | `seed pages <parish> <bulletin> [--page N] [--dpi D]` | Renders pages as PNGs, for bulletins that are only images or a dense table to zoom into. |
 | `seed history <parish> [--bulletins N]` | Extract mode's stored events for the parish's last N bulletins, one table per bulletin, with pages. |
 | `seed extract <parish> <bulletin> --model M` | A full extraction with `POLICY`, through the existing classifiers (`gpt-6-luna --model gpt-6.1-sol`, `gemini-flash-qualified`) and the runner's result cache, so asking twice costs one call. The result is appended to the seed file's `calls`. |
@@ -233,7 +234,8 @@ There is no `seed load`: loading is what the pipeline does with approved files.
   (extract mode's stored events), `website` (a page of the parish's site, with
   its `url`), or the id of a `calls` item.
 - **`decision`** is `include` or `exclude`. Excluded slots keep their entry
-  and rationale, for review, and are never loaded.
+  and rationale, for review, and are never loaded. One with no time to record
+  (a chapel open only by arrangement) has a null entry.
 - **An answered question** has `answer` set to the chosen option's index, or
   to an entry the reviewer edited, and the reviewer's name. `decision`,
   `entry` and `status` (`settled`) follow from it.
@@ -391,7 +393,8 @@ and the labeler's `views/SeedPage.tsx` and `lib/seeds.ts`.
 - **An answer** is `{"choice", "by", "at"}`: `choice` is the option's index,
   `edited` (the reviewer's own entry), or `dropped` (the slot left out). An
   excluded slot keeps an entry for review: its own, or else the option the
-  agent leaned to.
+  agent leaned to, or none when neither has one. Only an included slot must
+  have an entry.
 - **Only included entries must be the parish's churches.** A slot left out,
   or an option, may name a chapel elsewhere, so the agent can record what it
   left out as it is.

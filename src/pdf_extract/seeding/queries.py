@@ -41,6 +41,8 @@ MIN_REF_CHARS = 6
 # What `seed pick` calls a recent bulletin.
 RECENT_DAYS = 14
 MANIFEST_NAME = "run.json"
+# Fewer characters than this on a page: it is only an image (`seed text`).
+MIN_PAGE_TEXT_CHARS = 40
 
 
 class SeedError(ValueError):
@@ -301,6 +303,42 @@ def render_pages(
         pdf.close()
     return {"parish": parish_slug, "bulletin": bulletin["content_hash"], "pages": total,
             "paths": paths}
+
+
+def page_texts(
+    conn: sqlite3.Connection, parish_slug: str, ref: str, *,
+    page: int | None = None, cutoff: str | None = None,
+) -> dict[str, Any]:
+    """`seed text`: each page's text layer, a cheap read of a bulletin.
+
+    A page with too little text (`image_only`) is only an image: render it
+    with `seed pages` to read it.
+    """
+    bulletin = resolve_bulletin(conn, parish_slug, ref, cutoff=cutoff)
+    data = bulletin_pdf(parish_slug, bulletin["content_hash"])
+    pdf = pdfium.PdfDocument(data)
+    try:
+        total = len(pdf)
+        if page is not None and not 1 <= page <= total:
+            raise SeedError(f"The bulletin has pages 1 to {total}")
+        numbers = [page] if page is not None else list(range(1, total + 1))
+        pages = []
+        for number in numbers:
+            pdf_page = pdf[number - 1]
+            try:
+                textpage = pdf_page.get_textpage()
+                try:
+                    text = textpage.get_text_range().replace("\r\n", "\n").strip()
+                finally:
+                    textpage.close()
+            finally:
+                pdf_page.close()
+            pages.append({"page": number, "text": text,
+                          "image_only": len(text) < MIN_PAGE_TEXT_CHARS})
+    finally:
+        pdf.close()
+    return {"parish": parish_slug, "bulletin": bulletin["content_hash"],
+            "fetched_at": bulletin["fetched_at"], "pages": total, "texts": pages}
 
 
 # ── Extract mode's history ──────────────────────────────────────────────────

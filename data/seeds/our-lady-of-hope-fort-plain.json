@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-hope-fort-plain",
+  "status": "ready",
+  "as_of": "2026-10-04T14:49:54Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:32:29Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Saturday 4:00 PM vigil, Sunday 9:30 AM Mass and Saturday 3:45 PM confessions are printed identically in the schedule box of both bulletins, and history agrees. The Wednesday 9:30 AM Liturgy of the Word with Holy Communion is a Communion Service and is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6f83b27d8400778426fb0911ca27faf922d31b79238d849be09343e33349c402",
+      "fetched_at": "2026-10-04T14:49:54Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "14cac9854910ae42e04233aff981e5b4dad20ca4bd3476df91567450ca69e73f",
+      "fetched_at": "2026-09-28T22:00:00Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-fort-plain",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6f83b27d8400",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14cac9854910",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6f83b27d8400",
+          "said": "weekly mass Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the Liturgical & Sacramental Celebrations box of both bulletins; Mass intentions list 4pm vigils; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-fort-plain",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6f83b27d8400",
+          "page": 1,
+          "said": "Sunday: 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14cac9854910",
+          "page": 1,
+          "said": "Sunday: 9:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "6f83b27d8400",
+          "said": "weekly mass Sunday 09:30"
+        }
+      ],
+      "rationale": "Printed in the schedule box of both bulletins; Mass intentions agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-fort-plain",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6f83b27d8400",
+          "page": 1,
+          "said": "Confessions: Saturday 3:45pm or call 518 993-8393 for an appt"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14cac9854910",
+          "page": 1,
+          "said": "Confessions: Saturday 3:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6f83b27d8400",
+          "said": "weekly confession Saturday 15:45"
+        }
+      ],
+      "rationale": "Same line in both bulletins; no end time is printed, so end_time is left null. The by-appointment option has no time and is not a slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-fort-plain",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Liturgy of the Word with Holy Communion"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6f83b27d8400",
+          "page": 2,
+          "said": "Wednesday, October 7th 9:30am Liturgy of the Word with Holy Communion followed by coffee hr."
+        },
+        {
+          "source": "agent",
+          "bulletin": "14cac9854910",
+          "page": 2,
+          "said": "Wednesday, Sept. 30th- 9:30am Liturgy of the Word with Holy Communion"
+        },
+        {
+          "source": "history",
+          "bulletin": "14cac9854910",
+          "said": "specific_date mass 2026-09-30 09:30 'Liturgy of the Word with Holy Communion'"
+        }
+      ],
+      "rationale": "A Communion Service led by the deacon (parish life coordinator), not a Mass; the policy never records one as a Mass. There is no weekday Mass it replaces, so no cancellation either. History wrongly stored it as a dated Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

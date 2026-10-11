@@ -4,6 +4,7 @@
     seed init      <parish>
     seed bulletins <parish> [--limit N]
     seed pdf       <parish> <bulletin>
+    seed text      <parish> <bulletin> [--page N]
     seed pages     <parish> <bulletin> [--page N] [--dpi D]
     seed history   <parish> [--bulletins N]
     seed extract   <parish> <bulletin> --model M
@@ -105,6 +106,12 @@ def _bulletins(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 
 def _pdf(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.export_pdf(conn, args.parish, args.bulletin, cutoff=ctx.cutoff(args.parish))
+
+
+def _text(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    return queries.page_texts(
+        conn, args.parish, args.bulletin, page=args.page, cutoff=ctx.cutoff(args.parish),
+    )
 
 
 def _pages(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
@@ -259,6 +266,16 @@ def _text_pdf(r: Result) -> str:
     return f"{r['path']}  ({r['pages']} pages, fetched {_when(r['fetched_at'])})"
 
 
+def _text_text(r: Result) -> str:
+    lines = [f"{r['bulletin'][:12]}  {r['pages']} pages, fetched {_when(r['fetched_at'])}"]
+    for p in r["texts"]:
+        lines.append(f"=== page {p['page']}" +
+                     (" (only an image: render it with `seed pages`)" if p["image_only"] else ""))
+        if p["text"]:
+            lines.append(p["text"])
+    return "\n".join(lines)
+
+
 def _text_pages(r: Result) -> str:
     return "\n".join(r["paths"])
 
@@ -392,6 +409,11 @@ def add_seed_parser(
     p = leaf("pdf", "Write a bulletin's stored PDF to a local file", _with_conn(_pdf), _text_pdf)
     parish(p)
     bulletin(p)
+
+    p = leaf("text", "A bulletin's text, page by page", _with_conn(_text), _text_text)
+    parish(p)
+    bulletin(p)
+    p.add_argument("--page", type=int, help="Only this page (default: all)")
 
     p = leaf("pages", "Render a bulletin's pages to PNGs", _with_conn(_pages), _text_pages)
     parish(p)

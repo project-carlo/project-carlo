@@ -1,0 +1,567 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-troy",
+  "status": "ready",
+  "as_of": "2026-10-04T14:51:58Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:35:39Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page-1 schedule is the same in both bulletins and matches history: Sat 4:30 PM, Sun 9:00 AM and 12:00 PM, Mon-Fri 7:15 AM Masses and Sat 3:30-4:00 PM reconciliation. The newest bulletin cancels the Monday Oct 12 7:15 AM Mass for Columbus Day; St. Augustine's Adoration Chapel (another parish, advertised on the back page) is excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "29a3240bf2c05e9fd4badc92d8f159def3b96a914bfa0a4bd87d346b8bb35dfa",
+      "fetched_at": "2026-10-04T14:51:58Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "2f9c7cbbcee05c7507553462e60188d8e4acc37002169d96ab584b522cae55f6",
+      "fetched_at": "2026-09-28T22:02:04Z",
+      "published_date": "2026-09-20",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Liturgy of the Eucharist Saturday 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Liturgy of the Eucharist Saturday 4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Saturday 16:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Saturday 16:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 2,
+          "said": "Saturday, October 10th 4:30 Ray Skiba"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins read; the page-2 Mass intentions of the newest bulletin agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Sunday 9:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Sunday 9:00 am / 12:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Sunday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Sunday 09:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 2,
+          "said": "Sunday, October 11th 9:00 For the Unborn"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins read; the page-2 Mass intentions of the newest bulletin agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Sunday 9:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Sunday 9:00 am / 12:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Sunday 12:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Sunday 12:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 2,
+          "said": "Sunday, October 11th 12:00 Giuseppino DeGiorgio"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins read; the page-2 Mass intentions of the newest bulletin agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Monday 07:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Monday 07:15"
+        },
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 2,
+          "said": "Monday, October 5th 7:15"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins read; the page-2 Mass intentions of the newest bulletin agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Tuesday 07:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Tuesday 07:15"
+        },
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 2,
+          "said": "Tuesday, October 6th 7:15"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins read; the page-2 Mass intentions of the newest bulletin agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Wednesday 07:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Wednesday 07:15"
+        },
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 2,
+          "said": "Wednesday, October 7th 7:15"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins read; the page-2 Mass intentions of the newest bulletin agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Thursday 07:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Thursday 07:15"
+        },
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 2,
+          "said": "Thursday, October 8th 7:15"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins read; the page-2 Mass intentions of the newest bulletin agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Daily Mass Monday - Friday 7:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Friday 07:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Friday 07:15"
+        },
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 2,
+          "said": "Friday, October 9th 7:15"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins read; the page-2 Mass intentions of the newest bulletin agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 1,
+          "said": "Reconciliation Saturdays 3:30-4:00pm in Church or by appointment in the Friary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f9c7cbbcee0",
+          "page": 1,
+          "said": "Reconciliation Saturdays 3:30-4:00pm in Church or by appointment in the Friary"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "weekly Saturday 15:30-16:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "2f9c7cbbcee0",
+          "said": "weekly Saturday 15:30-16:00"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins; history agrees. 'By appointment in the Friary' has no time and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-troy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 3,
+          "said": "COLUMBUS DAY is MONDAY, OCTOBER 12th. The parish office and church will be closed. There is no 7:15am morning Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "29a3240bf2c0",
+          "said": "2026-10-12 mass 07:15 CANCELLED 'Columbus Day'"
+        }
+      ],
+      "rationale": "The newest bulletin calls off the weekly Monday 7:15 AM Mass on Columbus Day, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "St. Augustine's Adoration Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29a3240bf2c0",
+          "page": 4,
+          "said": "St. Augustine's Adoration Chapel 25 115th Street, Lansingburgh OPEN DAILY 8:00AM-8:00PM"
+        }
+      ],
+      "rationale": "An ad on the back page for another parish's adoration chapel at a different address (Lansingburgh); not at St. Anthony's, so left out here (it is St. Augustine's own schedule, st-augustine-troy). Stands for all seven days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-sidney",
+  "status": "ready",
+  "as_of": "2026-10-04T14:51:18Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:35:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The bulletins have no schedule box, only a weekly Mass intentions list; both weeks read (Sep 27, Oct 4) and the parish website agree on Mon-Thu 9:00 AM, Sat 4:00 PM and Sun 10:30 AM. Friday 9:00 AM is a Communion Service every week and is left out (history stored it as a Mass). Confession is by appointment only, and no Adoration is listed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7dc9564b8e2c413a285890f53e6a9159d41e0d6bbb179206818ca0075012f32d",
+      "fetched_at": "2026-10-04T14:51:18Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "58bafbf251ae4d4f7a476559e0939fdd39c1f0378e89856a6fc8ef7a6c7c9d78",
+      "fetched_at": "2026-09-28T22:01:26Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-sidney",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dc9564b8e2c",
+          "page": 1,
+          "said": "10/5 Mon 9:00 AM Maryann Schalk"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58bafbf251ae",
+          "page": 1,
+          "said": "9/28 Mon 9:00 AM All Deceased Parishioners"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dc9564b8e2c",
+          "said": "weekly mass Monday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "58bafbf251ae",
+          "said": "weekly mass Monday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/sacredheartsidney/",
+          "said": "Monday-Thursday 9:00 am"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box, only a one-week Mass intentions list; the same weekday and time appears in both weeks read (policy rule 4 across bulletins), the parish website's Worship Times list it as the regular schedule, and history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-sidney",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dc9564b8e2c",
+          "page": 1,
+          "said": "10/6 Tues 9:00 AM All Deceased Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58bafbf251ae",
+          "page": 1,
+          "said": "9/29 Tues 9:00 AM All Deceased Parishioners"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dc9564b8e2c",
+          "said": "weekly mass Tuesday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "58bafbf251ae",
+          "said": "weekly mass Tuesday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/sacredheartsidney/",
+          "said": "Monday-Thursday 9:00 am"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box, only a one-week Mass intentions list; the same weekday and time appears in both weeks read (policy rule 4 across bulletins), the parish website's Worship Times list it as the regular schedule, and history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-sidney",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dc9564b8e2c",
+          "page": 1,
+          "said": "10/7 Wed 9:00 AM All Deceased Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58bafbf251ae",
+          "page": 1,
+          "said": "9/30 Wed 9:00 AM John Finnigan"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dc9564b8e2c",
+          "said": "weekly mass Wednesday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "58bafbf251ae",
+          "said": "weekly mass Wednesday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/sacredheartsidney/",
+          "said": "Monday-Thursday 9:00 am"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box, only a one-week Mass intentions list; the same weekday and time appears in both weeks read (policy rule 4 across bulletins), the parish website's Worship Times list it as the regular schedule, and history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-sidney",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dc9564b8e2c",
+          "page": 1,
+          "said": "10/8 Thurs 9:00 AM All Deceased Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58bafbf251ae",
+          "page": 1,
+          "said": "10/01 Thurs 9:00 AM In Honor of Jim Ives"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dc9564b8e2c",
+          "said": "weekly mass Thursday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "58bafbf251ae",
+          "said": "weekly mass Thursday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/sacredheartsidney/",
+          "said": "Monday-Thursday 9:00 am"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box, only a one-week Mass intentions list; the same weekday and time appears in both weeks read (policy rule 4 across bulletins), the parish website's Worship Times list it as the regular schedule, and history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-sidney",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dc9564b8e2c",
+          "page": 1,
+          "said": "10/10 Sat 4:00 PM Alfredine Duguay; Weekend of Oct. 10 & 11: Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58bafbf251ae",
+          "page": 1,
+          "said": "10/03 Sat 4:00 PM Nancy Liberatore; Weekend of Oct. 3rd & 4th: Saturday 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dc9564b8e2c",
+          "said": "weekly mass Saturday 16:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "58bafbf251ae",
+          "said": "weekly mass Saturday 16:00"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/sacredheartsidney/",
+          "said": "Saturday Vigil: 4:00 pm"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box, only a one-week Mass intentions list; the same weekday and time appears in both weeks read (policy rule 4 across bulletins), the parish website's Worship Times list it as the regular schedule, and history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-sidney",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dc9564b8e2c",
+          "page": 1,
+          "said": "10/11 Sun 10:30 AM All Deceased Parishioners; Sunday 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58bafbf251ae",
+          "page": 1,
+          "said": "10/04 Sun 10:30 AM Mark Granan; Sunday 10:30AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dc9564b8e2c",
+          "said": "weekly mass Sunday 10:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "58bafbf251ae",
+          "said": "weekly mass Sunday 10:30"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/sacredheartsidney/",
+          "said": "Sunday: 10:30 am"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box, only a one-week Mass intentions list; the same weekday and time appears in both weeks read (policy rule 4 across bulletins), the parish website's Worship Times list it as the regular schedule, and history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-sidney",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dc9564b8e2c",
+          "page": 1,
+          "said": "10/09 Fri 9:00 AM Communion Service"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58bafbf251ae",
+          "page": 1,
+          "said": "10/02 Fri 9:00 AM Communion Service"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dc9564b8e2c",
+          "said": "weekly mass Friday 09:00 “Communion Service”"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/sacredheartsidney/",
+          "said": "weekday Mass Monday-Thursday 9:00 am (no Friday)"
+        }
+      ],
+      "rationale": "Friday 9:00 AM is a Communion Service in both weeks, and the website lists weekday Mass only Monday-Thursday. A Communion Service is never a Mass, and there is no weekly Friday Mass for it to cancel. History wrongly stored it as a weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

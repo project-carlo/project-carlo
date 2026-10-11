@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-cohoes",
+  "status": "ready",
+  "as_of": "2026-10-04T14:47:59Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T13:01:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The 'Time for Prayer' box on page 1 is identical in both bulletins (Sep 27, Oct 4) and history agrees: 15 weekly slots at Holy Trinity. St. Michael's Church, listed in the same box, is its own parish and is left out; a one-off Oct 3 Nocturnal Adoration predates as_of.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "47ffeada5d88fe875b83dd34303c9f7f4d615516f1c14142928dfa9dd12461e1",
+      "fetched_at": "2026-10-04T14:47:59Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "4236983a323b74e4f1349380b7ed099784634e4968b029b659747db34632f1ab",
+      "fetched_at": "2026-09-28T21:58:17Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Monday 16:15–17:15"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Monday 16:15–17:15"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 5:30 PM — Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 5:30 PM — Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Monday 17:30"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Tuesday 16:15–17:15"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Tuesday 16:15–17:15"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 5:30 PM — Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 5:30 PM — Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Tuesday 17:30"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Wednesday 16:15–17:15"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 4:15–5:15 PM — Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Wednesday 16:15–17:15"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 5:30 PM — Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / Church of the Holy Trinity / 5:30 PM — Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Wednesday 17:30"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Friday / Church of the Holy Trinity / 9:00 AM — Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Friday / Church of the Holy Trinity / 9:00 AM — Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Friday 09:00"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Saturday / Church of the Holy Trinity / 9:00 AM — Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Saturday / Church of the Holy Trinity / 9:00 AM — Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Saturday 09:00"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Saturday / Church of the Holy Trinity / 2:45–3:45 PM — Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Saturday / Church of the Holy Trinity / 2:45–3:45 PM — Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Saturday 14:45–15:45"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Saturday / Church of the Holy Trinity / 4:00 PM — Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Saturday / Church of the Holy Trinity / 4:00 PM — Vigil Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Sunday / Church of the Holy Trinity / 10:30 AM — Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Sunday / Church of the Holy Trinity / 10:30 AM — Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Sunday 10:30"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Sunday / Church of the Holy Trinity / 6:30 PM — Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Sunday / Church of the Holy Trinity / 6:30 PM — Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "weekly Sunday 18:30"
+        }
+      ],
+      "rationale": "Printed under Church of the Holy Trinity in the 'Time for Prayer' schedule box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / St. Michael's Church / 9:00 AM — Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday / St. Michael's Church / 9:00 AM — Mass"
+        }
+      ],
+      "rationale": "The shared 'Time for Prayer' box also lists St. Michael's Church (20 Page Ave., Cohoes), which is its own parish in data/churches.csv (st-michael-cohoes), not a church of this parish. Its whole column is left out here: Mon–Wed 9:00 AM Mass; Thu 5:00–5:25 PM Confession, 5:30 PM Mass, 6:00–7:00 PM Adoration and Confession; Fri 4:15–5:15 PM Adoration and Confession, 5:30 PM Mass; Sat 5:30 PM Vigil Mass; Sun 8:15–8:45 AM Confession, 9:00 AM Mass. History also leaves them out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-cohoes",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-03",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Nocturnal Adoration"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47ffeada5d88",
+          "page": 3,
+          "said": "Sat Oct 3 ... Nocturnal Adoration, 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4236983a323b",
+          "page": 3,
+          "said": "Sat Oct 3 Mass, 9 am at Holy Trinity / Rosary, 3:30 pm Mass, 4 pm / Mass, 5:30 pm at St. Michael's (no Nocturnal Adoration listed)"
+        },
+        {
+          "source": "history",
+          "bulletin": "47ffeada5d88",
+          "said": "specific_date adoration 2026-10-03 19:00 'Nocturnal Adoration'"
+        }
+      ],
+      "rationale": "A dated event before as_of (Oct 4), so it can't go in the seed. Printed only once (the older bulletin's calendar covers Oct 3 without it), so not called a first-Saturday monthly slot; a later bulletin can add it if it recurs.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

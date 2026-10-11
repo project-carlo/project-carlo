@@ -1,0 +1,759 @@
+{
+  "schema_version": 1,
+  "parish_slug": "mary-mother-of-our-savior-utica",
+  "status": "ready",
+  "as_of": "2026-10-04T14:36:08Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T13:02:04Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single church (Our Lady of Lourdes, the 'Lourdes Campus'). Both bulletins print the same schedule box: Sat 4:00 PM, Sun 8:15/10:30 AM and 5:00 PM; weekdays 8:15 AM Mon/Tue/Wed/Fri and 6:45 AM Tue/Thu; confession Wed 5:30-6:30 PM; history agrees. Also seeded: the regular Wednesday 5:15 PM Holy Hour with Vespers, a new monthly First Saturday 8:15 AM Mass with confessions after (from the Sep 27 letter, which ends Saturday-afternoon confessions), and the Nov 2 All Souls Mass; two wedding Masses are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8b2cef134897b4b0829f6678bcd506fb3d1491e2c2a23f513478206333dcacfe",
+      "fetched_at": "2026-10-04T14:36:08Z",
+      "published_date": "2026-10-03",
+      "read": true
+    },
+    {
+      "content_hash": "9108d42729923cbb557e25cea0b2c68b1b38bab439345fc931e07a3055e192b8",
+      "fetched_at": "2026-09-28T00:07:41Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "4:00PM Saturday Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "4:00PM Saturday Vigil Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Saturday 16:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "8:15AM Sunday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "8:15AM Sunday Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Sunday 08:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Sunday 08:15"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "10:30AM Sunday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "10:30AM Sunday Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Sunday 10:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Sunday 10:30"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "5:00PM Sunday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "5:00PM Sunday Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Sunday 17:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Sunday 17:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "8:15AM Monday, Tuesday, Wednesday, and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "8:15AM Monday, Tuesday, Wednesday, and Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Monday 08:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Monday 08:15"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "6:45AM Tuesday and Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "6:45AM Tuesday and Thursday"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Tuesday 06:45"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Tuesday 06:45"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "8:15AM Monday, Tuesday, Wednesday, and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "8:15AM Monday, Tuesday, Wednesday, and Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Tuesday 08:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Tuesday 08:15"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "8:15AM Monday, Tuesday, Wednesday, and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "8:15AM Monday, Tuesday, Wednesday, and Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Wednesday 08:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Wednesday 08:15"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees. The Sep 29/30 'No Daily Mass' (clergy convocation) cancellations are before as_of and not seeded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "6:45AM Tuesday and Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "6:45AM Tuesday and Thursday"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Thursday 06:45"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Thursday 06:45"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "8:15AM Monday, Tuesday, Wednesday, and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "8:15AM Monday, Tuesday, Wednesday, and Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly mass Friday 08:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly mass Friday 08:15"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read and in the page-2 'Masses This Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation 5:30PM until 6:30pm every Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 1,
+          "said": "5:30PM until 6:30pm every Wednesday; p5: 'Our weekly Confession time remains every Wednesday from 5:30-6:30 p.m.'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly confession Wednesday 17:30-18:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly confession Wednesday 17:30-18:30"
+        }
+      ],
+      "rationale": "Printed in the page-1 box of both bulletins and in both weekly event calendars (p3); the Sep 27 letter on p5 confirms it is the weekly time. Priests may stay past 6:30, but 6:30 is the printed end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Holy Hour with Vespers"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 3,
+          "said": "Wednesday, Oct. 7th, 5:15pm, Holy Hour w/Vespers; 'Following our regular Wednesday Parish Holy Hour'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 3,
+          "said": "Wednesday, September 30th, 5:15pm, Holy Hour w/Vespers"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "weekly adoration Wednesday 17:15 'Holy Hour with Vespers'"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "weekly adoration Wednesday 17:15 'Holy Hour with Vespers'"
+        }
+      ],
+      "rationale": "Listed at 5:15 PM on the Wednesday of both weekly event calendars, and the procession notice calls it 'our regular Wednesday Parish Holy Hour', so weekly. No end time is printed (Holy Hour alone is not taken as a stated duration), so end_time is null. No location given; parish events elsewhere are marked '@ Seton Center', and the procession notice gathers 'in the church' after it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 5,
+          "said": "FIRST SATURDAY SCHEDULE 7:45 a.m. - Rosary, 8:15 a.m. - Mass, Confessions following Mass until all are heard ... this new monthly devotion"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 2,
+          "said": "Saturday, Oct. 3rd, First Saturday 8:15am, First Saturday Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "specific_date mass 2026-10-03 08:15 'First Saturday Mass'"
+        }
+      ],
+      "rationale": "The Sep 27 bulletin announces a monthly First Saturday Mass (started in September, continuing from October) with its own schedule box; a weeks-of-the-month slot is weekly with ['first'] per the policy. The Oct 3 bulletin's Mass list starts with the Oct 3 vigil and its calendar does not reach the next first Saturday (Nov 7), so its absence there says nothing. History stored it as a one-off date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": "after the First Saturday Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 5,
+          "said": "Saturday Confessions will instead be offered once a month, immediately following our First Saturday Mass, until all are heard."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 3,
+          "said": "Saturday, Oct. 3rd ... 8:45am, Confessions (Reconciliation)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9108d4272992",
+          "said": "specific_date confession 2026-10-03 08:45 'First Saturday'"
+        }
+      ],
+      "rationale": "The Sep 27 letter replaces Saturday-afternoon confessions before the vigil with monthly first-Saturday confessions after the 8:15 Mass, until all are heard; its p3 calendar gives the clock time 8:45 AM. End left null ('until all are heard'). Saturday afternoon confessions before the 4:00 PM vigil are discontinued, so none are seeded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "All Souls Mass of Remembrance"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 4,
+          "said": "ALL SOULS MASS OF REMEMBRANCE Monday, November 2, 2026 6:00pm @ Lourdes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9108d4272992",
+          "page": 4,
+          "said": "ALL SOULS MASS OF REMEMBRANCE Monday, November 2, 2026 6:00pm @ Lourdes"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "specific_date mass 2026-11-02 18:00 'All Souls Mass of Remembrance'"
+        }
+      ],
+      "rationale": "A dated special Mass outside the weekly schedule, after as_of, at Lourdes. Families are asked to call ahead, but it is a public parish Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-09",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Wedding"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b2cef134897",
+          "page": 3,
+          "said": "Friday, Oct 9th, 2:00pm, Hyer/Pedulla Wedding Mass; Saturday, Oct.10th, 1:00pm, Giannandrea/Garstka Wedding Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8b2cef134897",
+          "said": "specific_date mass 2026-10-09 14:00 'Wedding Mass'; 2026-10-10 13:00 'Wedding Mass'"
+        }
+      ],
+      "rationale": "Wedding Masses (Oct 9 2:00 PM and Oct 10 1:00 PM), not scheduled public Masses. Left out; history recorded both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

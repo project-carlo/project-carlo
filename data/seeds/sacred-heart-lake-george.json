@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-lake-george",
+  "status": "ready",
+  "as_of": "2026-10-04T14:51:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:34:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both readable bulletins (Sep 27, Oct 4) print the same Liturgy Schedule: Sat 5:30 PM, Sun 10:00 AM, Wed & Fri 8:30 AM Masses and Wednesday 9 AM-3 PM Adoration; the intentions calendars and history agree. No Confession times (only communal services or by appointment). The sidebar's St. Cecilia (Warrensburg) and Our Lady of the Annunciation (Queensbury) times belong to other parishes and are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c8f2e60dcf9f45c1ebe2462e8283515bd248b907d64a64bb253c28f04e3f2a88",
+      "fetched_at": "2026-10-04T14:51:00Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ac26544bbb4892831ed0ec467d485948a4a0a56630e7b04f7e1d2048e6f7d596",
+      "fetched_at": "2026-09-28T22:01:10Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lake-george",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 1,
+          "said": "Weekend Mass: Saturday | 5:30pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 1,
+          "said": "Weekend Mass: Saturday | 5:30pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 2,
+          "said": "Saturday, Oct. 3 5:30pm ...; Saturday, Oct. 10 5:30pm ..."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 2,
+          "said": "Saturday, Sept. 26 5:30pm; Saturday, Oct. 3 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c8f2e60dcf9f",
+          "said": "weekly mass Saturday 17:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "ac26544bbb48",
+          "said": "weekly mass Saturday 17:30"
+        }
+      ],
+      "rationale": "Printed under the Sacred Heart Church heading of the Liturgy Schedule in both bulletins read and in both weeks' Mass intentions; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lake-george",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 1,
+          "said": "Sunday | 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 1,
+          "said": "Sunday | 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 2,
+          "said": "Sunday, Oct. 4 10:00am; Sunday, Oct. 11 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 2,
+          "said": "Sunday, Sept. 27 10:00am; Sunday, Oct. 4 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c8f2e60dcf9f",
+          "said": "weekly mass Sunday 10:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "ac26544bbb48",
+          "said": "weekly mass Sunday 10:00"
+        }
+      ],
+      "rationale": "Printed under the Sacred Heart Church heading of the Liturgy Schedule in both bulletins read and in both weeks' Mass intentions; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lake-george",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 1,
+          "said": "Weekday Mass: Wednesday & Friday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 1,
+          "said": "Weekday Mass: Wednesday & Friday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 2,
+          "said": "Wednesday, Oct. 7 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 2,
+          "said": "Wednesday, Sept. 30 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c8f2e60dcf9f",
+          "said": "weekly mass Wednesday 08:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "ac26544bbb48",
+          "said": "weekly mass Wednesday 08:30"
+        }
+      ],
+      "rationale": "Printed under the Sacred Heart Church heading of the Liturgy Schedule in both bulletins read and in both weeks' Mass intentions; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lake-george",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 1,
+          "said": "Weekday Mass: Wednesday & Friday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 1,
+          "said": "Weekday Mass: Wednesday & Friday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 2,
+          "said": "Friday, Oct. 9 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 2,
+          "said": "Friday, Oct. 2 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c8f2e60dcf9f",
+          "said": "weekly mass Friday 08:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "ac26544bbb48",
+          "said": "weekly mass Friday 08:30"
+        }
+      ],
+      "rationale": "Printed under the Sacred Heart Church heading of the Liturgy Schedule in both bulletins read and in both weeks' Mass intentions; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lake-george",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: Wednesday | 9:00am - 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: Wednesday | 9:00am - 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 4,
+          "said": "Adoration of the Blessed Sacrament: Every Wednesday from 9am - 3pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 4,
+          "said": "Every Wednesday from 9am - 3pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "c8f2e60dcf9f",
+          "said": "weekly adoration Wednesday 09:00–15:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "ac26544bbb48",
+          "said": "weekly adoration Wednesday 09:00–15:00"
+        }
+      ],
+      "rationale": "Listed under the Sacred Heart Church heading of the Liturgy Schedule and again on page 4 ('Every Wednesday from 9am - 3pm') in both bulletins; no other location given, so it is at the church. History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-warrensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 1,
+          "said": "ST. CECILIA'S CHURCH, WARRENSBURG, NY Sunday | 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 1,
+          "said": "ST. CECILIA'S CHURCH, WARRENSBURG, NY Sunday | 10:00am"
+        }
+      ],
+      "rationale": "St. Cecilia, Warrensburg is a church of another parish (northern-points-cluster-st-cecilia-chestertown in data/churches.csv), not one of this parish's churches; its times belong to that parish's own seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c8f2e60dcf9f",
+          "page": 1,
+          "said": "OUR LADY OF THE ANNUNCIATION CHURCH, QUEENSBURY, NY Saturday | 4:00pm (Vigil) Sunday | 8:00am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac26544bbb48",
+          "page": 1,
+          "said": "OUR LADY OF THE ANNUNCIATION CHURCH, QUEENSBURY, NY Saturday | 4:00pm (Vigil) Sunday | 8:00am, 11:30am"
+        }
+      ],
+      "rationale": "Our Lady of the Annunciation, Queensbury is its own parish (our-lady-of-the-annunciation-queensbury). This entry stands for its whole column, left out for that reason: Saturday 4:00 PM, Sunday 8:00 AM and 11:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

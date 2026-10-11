@@ -22,7 +22,7 @@ export function openCount(seed: SeedFile): number {
   return seed.slots.filter(isOpen).length;
 }
 
-/** The entry an excluded slot keeps for review: its own, or one its options name. */
+/** The entry an excluded slot keeps for review: its own, or one its options name, or none. */
 function keptEntry(slot: SeedSlot): SeedEntry | null {
   if (slot.entry) return slot.entry;
   const options = slot.options ?? [];
@@ -36,16 +36,12 @@ export function chooseOption(slot: SeedSlot, index: number, by: string): SeedSlo
   if (option.entry) {
     return { ...slot, status: "settled", decision: "include", entry: option.entry, answer: answer(index, by) };
   }
-  const entry = keptEntry(slot);
-  if (!entry) return null;
-  return { ...slot, status: "settled", decision: "exclude", entry, answer: answer(index, by) };
+  return { ...slot, status: "settled", decision: "exclude", entry: keptEntry(slot), answer: answer(index, by) };
 }
 
-/** Leave a slot out, whatever it was. Null when it has no entry to keep. */
-export function dropSlot(slot: SeedSlot, by: string): SeedSlot | null {
-  const entry = keptEntry(slot);
-  if (!entry) return null;
-  return { ...slot, status: "settled", decision: "exclude", entry, answer: answer("dropped", by) };
+/** Leave a slot out, whatever it was. */
+export function dropSlot(slot: SeedSlot, by: string): SeedSlot {
+  return { ...slot, status: "settled", decision: "exclude", entry: keptEntry(slot), answer: answer("dropped", by) };
 }
 
 /** Settle a slot as the reviewer edited it. */
@@ -53,9 +49,13 @@ export function editSlot(slot: SeedSlot, entry: SeedEntry, page: number | null, 
   return { ...slot, status: "settled", decision: "include", entry, page, answer: answer("edited", by) };
 }
 
-/** Open a settled slot again as a question, its current decision as the leaning answer. */
-export function reopenSlot(slot: SeedSlot): SeedSlot {
+/**
+ * Open a settled slot again as a question, its current decision as the leaning
+ * answer. Null for a slot left out with no entry: there is nothing to include.
+ */
+export function reopenSlot(slot: SeedSlot): SeedSlot | null {
   if (isOpen(slot)) return slot;
+  if (!slot.entry && !slot.options?.some((o) => o.leaning)) return null;
   const included = slot.decision === "include";
   const options =
     slot.options && slot.options.some((o) => o.leaning)
