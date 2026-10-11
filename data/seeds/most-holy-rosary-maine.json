@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "parish_slug": "most-holy-rosary-maine",
+  "status": "ready",
+  "as_of": "2026-10-04T14:36:20Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T13:06:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single church with no Saturday vigil. Both bulletins print Sun 9:30 AM, Tue and Fri 9:00 AM Masses and confession after the Tuesday Mass (seeded at 9:30 AM per the policy); history agrees. Also seeded: a dated Holy Hour on Tue Oct 20 at 6:00 PM. The sister parish Church of the Holy Family's schedule box and its adoration chapel are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "37914efc9bae93be11c8441978f2dbcb7a44cc103760b7c6b83eee3c4a9dfaf7",
+      "fetched_at": "2026-10-04T14:36:20Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "17e7b6ce77596f55c53dff4e1d84bb394cc03e938ea5fe01df831186ec663d9c",
+      "fetched_at": "2026-09-28T00:07:51Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-rosary-maine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37914efc9bae",
+          "page": 1,
+          "said": "Sunday: 9:30 am (Rosary at 9:00 am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e7b6ce7759",
+          "page": 1,
+          "said": "Sunday: 9:30 am (Rosary at 9:00 am)"
+        },
+        {
+          "source": "history",
+          "bulletin": "37914efc9bae",
+          "said": "weekly mass Sunday 09:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "17e7b6ce7759",
+          "said": "weekly mass Sunday 09:30"
+        }
+      ],
+      "rationale": "Printed in the page-1 MASS SCHEDULE of both bulletins read, and in both page-2 'Masses for the Week' lists; history agrees. There is no regular Saturday vigil; the Oct 3 5:30 PM Oktoberfest Mass in the Sep 27 bulletin was a one-off before as_of and is not seeded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-rosary-maine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37914efc9bae",
+          "page": 1,
+          "said": "Tuesday & Friday: 9:00 am (Divine Mercy Chaplet at 8:00 am / Rosary at 8:25 am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e7b6ce7759",
+          "page": 1,
+          "said": "Tuesday & Friday: 9:00 am (Divine Mercy Chaplet at 8:00 am / Rosary at 8:25 am)"
+        },
+        {
+          "source": "history",
+          "bulletin": "37914efc9bae",
+          "said": "weekly mass Tuesday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "17e7b6ce7759",
+          "said": "weekly mass Tuesday 09:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 MASS SCHEDULE of both bulletins read, and in both page-2 'Masses for the Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-rosary-maine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37914efc9bae",
+          "page": 1,
+          "said": "Tuesday & Friday: 9:00 am (Divine Mercy Chaplet at 8:00 am / Rosary at 8:25 am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e7b6ce7759",
+          "page": 1,
+          "said": "Tuesday & Friday: 9:00 am (Divine Mercy Chaplet at 8:00 am / Rosary at 8:25 am)"
+        },
+        {
+          "source": "history",
+          "bulletin": "37914efc9bae",
+          "said": "weekly mass Friday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "17e7b6ce7759",
+          "said": "weekly mass Friday 09:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 MASS SCHEDULE of both bulletins read, and in both page-2 'Masses for the Week' lists; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-rosary-maine",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37914efc9bae",
+          "page": 1,
+          "said": "CONFESSION After Mass on Tuesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e7b6ce7759",
+          "page": 1,
+          "said": "CONFESSION After Mass on Tuesday"
+        },
+        {
+          "source": "history",
+          "bulletin": "37914efc9bae",
+          "said": "weekly confession Tuesday 09:30 'After 9:00 AM Mass'"
+        },
+        {
+          "source": "history",
+          "bulletin": "17e7b6ce7759",
+          "said": "weekly confession Tuesday 09:30 'After 9:00 AM Mass'"
+        }
+      ],
+      "rationale": "Printed on page 1 of both bulletins with no clock time; per the policy 'after' a weekday Mass starts 30 minutes after it (9:30 AM). No end time. History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-rosary-maine",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-20",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Holy Hour & Patriotic Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37914efc9bae",
+          "page": 2,
+          "said": "Coming Up at Most Holy Rosary: The next Holy Hour & Patriotic Rosary will be held on Tuesday, October 20 at 6:00 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e7b6ce7759",
+          "page": 2,
+          "said": "Coming Up at Most Holy Rosary: The next Holy Hour & Patriotic Rosary will be held on Tuesday, October 20 at 6:00 pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "37914efc9bae",
+          "said": "specific_date adoration 2026-10-20 18:00 'Holy Hour & Patriotic Rosary'"
+        },
+        {
+          "source": "history",
+          "bulletin": "17e7b6ce7759",
+          "said": "specific_date adoration 2026-10-20 18:00 'Holy Hour & Patriotic Rosary'"
+        }
+      ],
+      "rationale": "A Holy Hour with a printed date and time, listed under 'Coming Up at Most Holy Rosary', so at this church. 'The next' suggests it recurs, but no pattern is printed, so dated only (a later sighting will promote it). No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-endwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37914efc9bae",
+          "page": 2,
+          "said": "Church of the Holy Family Mass Schedule: Saturday: 4:00 pm; Sunday: 8:00 am & 11:00 am; Wednesday: 9:00 am; Confession: Saturday, 3:00 pm; Adoration Chapel: 6:00 am - 9:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e7b6ce7759",
+          "page": 2,
+          "said": "Church of the Holy Family Mass Schedule: Saturday: 4:00 pm; Sunday: 8:00 am & 11:00 am; Wednesday: 9:00 am; Confession: Saturday, 3:00 pm; Adoration Chapel: 6:00 am - 9:00 pm"
+        }
+      ],
+      "rationale": "The page-2 'Church of the Holy Family' box is the schedule of the sister parish in Endwell (its own parish, seeded separately), not this church: its Sat 4:00 PM, Sun 8:00/11:00 AM, Wed 9:00 AM Masses, Sat 3:00 PM confession and its adoration chapel (6:00 AM-9:00 PM, access code, located at Holy Family per page 1) are all left out here. The 'Holy Days: 5:00 Vigil' line has no date and is not a weekly slot, so it is left out too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
