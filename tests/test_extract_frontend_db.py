@@ -48,17 +48,17 @@ CHURCH_ROWS = [
     (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20"),
     (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None, None),
 ]
-# A negative id (an update-mode entry), weeks of the month, a season that wraps
-# the new year, and a cancellation naming a weekly row.
+# A negative id (an update-mode entry), weeks of the month, weeks excluded, a
+# season that wraps the new year, and a cancellation naming a weekly row.
 EVENT_ROWS = [
     (-118, 3, "mass", "weekly", "Friday", None, 0, None, 0, None, None, ["fourth", "last"],
-     10, None, 6, 15, None),
-    (10, 7, "mass", "weekly", "Sunday", None, 600, None, 0, 2, None, [], None, None, None,
-     None, None),
+     10, None, 6, 15, None, False),
+    (10, 7, "mass", "weekly", "Sunday", None, 600, None, 0, 2, None, ["last"], None, None, None,
+     None, None, True),
     (11, 3, "mass", "specific_date", None, "2026-12-25", 0, 60, 1, None, "Midnight", [], None,
-     None, None, None, -118),
+     None, None, None, -118, False),
     (15, 7, "adoration", "weekly", "Friday", None, 1140, 1200, 0, 3, "Midnight", [], None, None,
-     None, None, None),
+     None, None, None, False),
 ]
 
 
@@ -167,12 +167,15 @@ def test_a_parish_with_no_processed_bulletin_has_no_bulletin(
 def test_a_snapshot_written_before_an_added_column_reads_it_as_null() -> None:
     document = json.loads(gzip.decompress(encode_snapshot(CHURCH_ROWS, EVENT_ROWS)))
     del document["churches"]["bulletin_week"]
+    del document["events"]["exclude_weeks"]
     data = gzip.compress(json.dumps(document).encode())
 
-    churches = read_snapshot(data)["churches"]
+    tables = read_snapshot(data)
+    churches = tables["churches"]
 
     assert [church["bulletin_week"] for church in churches] == [None, None]
     assert [church["slug"] for church in churches] == ["b", "a"]
+    assert [event["exclude_weeks"] for event in tables["events"]] == [None] * 4
 
 
 def test_snapshot_bytes_are_deterministic(db: Path, tmp_path: Path) -> None:
@@ -245,7 +248,7 @@ def test_verify_fails_when_weekly_events_and_churches_change(tmp_path: Path) -> 
     other = (2, 1, "b", "B", None, None, None, None, None, None, None, None, None, None)
     weekly = [
         (i, 1, "mass", "weekly", "Sunday", None, 480 + 60 * i, None, 0, None, None,
-         [], None, None, None, None, None)
+         [], None, None, None, None, None, False)
         for i in range(1, 11)
     ]
     moved = [(*row[:6], row[6] + 15, *row[7:]) for row in weekly]

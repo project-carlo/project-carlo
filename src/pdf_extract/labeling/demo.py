@@ -288,7 +288,7 @@ def _entry(church: str, event_type: str, when: str, start: str, *, end: str | No
         "event_kind": "weekly" if weekly else "specific_date",
         "day_of_week": when if weekly else None, "date": None if weekly else when,
         "start_time": start, "end_time": end, "cancelled": cancelled,
-        "weeks_of_month": weeks or [], "season": season, "note": note,
+        "weeks_of_month": weeks or [], "exclude_weeks": False, "season": season, "note": note,
     }
 
 

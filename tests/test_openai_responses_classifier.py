@@ -170,6 +170,16 @@ def test_qualifiers_are_flattened_like_pr_22():
     assert result["response_id"] == "resp_1"
 
 
+def test_excluded_weeks_are_flattened_in_their_canonical_form():
+    [event] = flatten_events(_payload(weeks_of_month=["last"], exclude_weeks=True))["events"]
+    assert (event["weeks_of_month"], event["exclude_weeks"]) == (["last"], True)
+    [event] = flatten_events(_payload(weeks_of_month=["first"], exclude_weeks=True))["events"]
+    assert (event["weeks_of_month"], event["exclude_weeks"]) == (
+        ["second", "third", "fourth", "fifth"], False)
+    [event] = flatten_events(_payload())["events"]
+    assert event["exclude_weeks"] is False
+
+
 def test_lenient_reading_drops_impossible_qualifiers():
     raw = _payload(
         weeks_of_month=["first", "1st", "last"],

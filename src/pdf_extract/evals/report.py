@@ -9,12 +9,15 @@ Within each bulletin every label event is paired with at most one predicted even
 in tiers from strictest to loosest; a pair made in one tier is out of the running
 for the next. Pairing is one-to-one, with one exception: in `weekly_vs_dated` a
 weekly prediction covers every dated label event of its slot (the same church,
-type, start time, cancelled and weekday, on a date its `weeks_of_month` and
-`season` include), since one weekly entry stands for all of those dates. The
+type, start time, cancelled and weekday, on a date its `weeks_of_month` (with
+`exclude_weeks`) and `season` include), since one weekly entry stands for all of those dates. The
 tiers, in the order they are tried:
 
 - `exact`: church, type, kind, weekday or date, start time, cancelled, end time,
   `weeks_of_month` and `season` all agree (notes and page numbers are ignored).
+  Weeks agree when they pick the same weeks, however written
+  (`labels.canonical_weeks`): "every week except the first" excluded is the
+  second to fifth listed.
 - `core`: the first six agree; end time or a recurrence qualifier differs.
 - `weekly_vs_dated`: weekly on one side and dated on the other, on the same weekday,
   with church, type, start time and cancelled agreeing, and the date in the weekly
@@ -67,6 +70,7 @@ from pdf_extract.labeling.labels import (
     DAYS,
     LABELS_DIR,
     WEEKS_OF_MONTH,
+    canonical_weeks,
     is_valid_hash,
     is_valid_slug,
 )
@@ -98,8 +102,12 @@ CORE_FIELDS = (
 
 
 # ── Comparing two events ────────────────────────────────────────────────────
-def _weeks(event: dict[str, Any]) -> frozenset[str]:
-    return frozenset(event.get("weeks_of_month") or ())
+def _weeks(event: dict[str, Any]) -> tuple[frozenset[str], bool] | None:
+    """The event's weeks of the month, canonical, and whether they are excluded; None for every week."""
+    weeks, exclude = canonical_weeks(
+        list(event.get("weeks_of_month") or ()), event.get("exclude_weeks") is True,
+    )
+    return (frozenset(weeks), exclude) if weeks else None
 
 
 def _season(event: dict[str, Any]) -> tuple[Any, ...] | None:
@@ -137,11 +145,12 @@ def _in_season(season: tuple[Any, ...], day: date) -> bool:
 def _runs_on(weekly: dict[str, Any], day: date) -> bool:
     """Whether a weekly event's `weeks_of_month` and `season` include `day`."""
     weeks = _weeks(weekly)
-    if weeks:
+    if weeks is not None:
+        listed, excluded = weeks
         on = {WEEKS_OF_MONTH[(day.day - 1) // 7]}
         if (day + timedelta(days=7)).month != day.month:
             on.add("last")
-        if not weeks & on:
+        if bool(listed & on) == excluded:
             return False
     season = _season(weekly)
     return season is None or _in_season(season, day)
@@ -708,7 +717,8 @@ def _describe(event: dict[str, Any]) -> str:
         time += f"–{event['end_time']}"
     parts = [f"{event.get('event_type') or '?'} {when or '?'} {time} @ {event.get('church_slug') or '?'}"]
     if event.get("weeks_of_month"):
-        parts.append("weeks " + ",".join(event["weeks_of_month"]))
+        excluded = "except " if event.get("exclude_weeks") else ""
+        parts.append(f"weeks {excluded}" + ",".join(event["weeks_of_month"]))
     season = _season(event)
     if season is not None:
         start_m, start_d, end_m, end_d = season

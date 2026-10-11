@@ -208,6 +208,22 @@ describe("computeNextOccurrence for weekly slots that skip weeks", () => {
     );
   });
 
+  it("skips only the last week when the last is excluded", () => {
+    const exceptLast: Partial<OccurrenceInput> = {
+      weeks_of_month: ["last"],
+      exclude_weeks: true,
+    };
+    expect(next("sunday", exceptLast)).toBe(on(2026, 6, 14));
+    // June 28 is June's last Sunday; July 5 is the next one kept.
+    expect(next("sunday", exceptLast, undefined, new Date(2026, 5, 22))).toBe(
+      on(2026, 7, 5),
+    );
+    // August 2026 has five Sundays: the fourth (23rd) is kept.
+    expect(next("sunday", exceptLast, undefined, new Date(2026, 7, 17))).toBe(
+      on(2026, 8, 23),
+    );
+  });
+
   it("skips months without a fifth week", () => {
     // June 2026 has five Tuesdays (the 30th).
     expect(next("tuesday", { weeks_of_month: ["fifth"] })).toBe(on(2026, 6, 30));

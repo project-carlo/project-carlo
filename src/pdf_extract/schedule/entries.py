@@ -7,12 +7,13 @@ entry id names its content. Its `identity_key` says which slot it is:
 - weekly: church, event type, weekday, start time
 - specific_date: church, event type, date, start time
 
-End time, weeks of the month, season, cancelled and note are not part of
-identity, so changing any of them is a modify of the same slot.
+End time, weeks of the month (and whether they are excluded), season,
+cancelled and note are not part of identity, so changing any of them is a
+modify of the same slot.
 
 Entries arrive in the labels' form (times as "h:MM AM", weeks of the month as
-a list, the season as an object, the church by slug), from the model's answer,
-a hand edit or a seed. `parse_entry` checks one and turns it into an `Entry`;
+a list with `exclude_weeks`, the season as an object, the church by slug), from
+the model's answer, a hand edit or a seed. `parse_entry` checks one and turns it into an `Entry`;
 `Entry.view` turns it back.
 """
 
@@ -29,6 +30,7 @@ from pdf_extract.labeling.labels import DAYS, EVENT_KINDS, EVENT_TYPES
 from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,
+    mask_excludes_weeks,
     mask_to_weeks,
     season_to_columns,
     weeks_to_mask,
@@ -42,7 +44,7 @@ INVALID_ENTRY = "invalid_entry"
 # The keys an entry may carry in the labels' form.
 ENTRY_KEYS = frozenset({
     "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time",
-    "end_time", "cancelled", "weeks_of_month", "season", "note",
+    "end_time", "cancelled", "weeks_of_month", "exclude_weeks", "season", "note",
 })
 
 
@@ -58,7 +60,7 @@ class Entry:
     start_time: int
     end_time: int | None
     cancelled: int
-    weeks_of_month: int
+    weeks_of_month: int  # the mask, exclusion bit and all (`qualifiers.weeks_to_mask`)
     season_start_month: int | None
     season_start_day: int | None
     season_end_month: int | None
@@ -102,6 +104,7 @@ class Entry:
             out.update(
                 day_of_week=self.day_of_week,
                 weeks_of_month=mask_to_weeks(self.weeks_of_month),
+                exclude_weeks=mask_excludes_weeks(self.weeks_of_month),
                 season=self.season(),
             )
         else:
@@ -179,7 +182,7 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
     if not isinstance(cancelled, bool):
         raise EntryError(INVALID_ENTRY, "cancelled must be true or false")
     try:
-        weeks = weeks_to_mask(raw.get("weeks_of_month") or [])
+        weeks = weeks_to_mask(raw.get("weeks_of_month") or [], raw.get("exclude_weeks") or False)
         season = season_to_columns(raw.get("season"))
     except QualifierError as exc:
         raise EntryError(INVALID_ENTRY, str(exc)) from exc
@@ -203,7 +206,9 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
         if raw.get("day_of_week") is not None and day_of_week != DAYS[parsed.weekday()]:
             raise EntryError(INVALID_ENTRY, "a dated entry has no day_of_week")
         if weeks or season[0] is not None:
-            raise EntryError(INVALID_ENTRY, "weeks_of_month and season are for weekly entries")
+            raise EntryError(
+                INVALID_ENTRY, "weeks_of_month, exclude_weeks and season are for weekly entries",
+            )
         entry_date, day_of_week = parsed.isoformat(), None
 
     note = raw.get("note")

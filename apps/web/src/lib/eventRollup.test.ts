@@ -26,6 +26,7 @@ function event(overrides: Partial<EventSummary>): EventSummary {
     page_number: null,
     note: null,
     weeks_of_month: [],
+    exclude_weeks: false,
     season: null,
     ...overrides,
   };

@@ -40,11 +40,20 @@ type Columns<Row> = { [K in keyof Row]: Row[K][] };
  */
 type AddedChurchColumns = "bulletin_week";
 
+/** Event columns added since version 1 shipped; a snapshot without one reads it as false. */
+type AddedEventColumns = "exclude_weeks";
+
+/** An event row's columns as stored, the added ones possibly missing. */
+type EventTable = Table<Omit<EventRow, AddedEventColumns>> &
+  Partial<Table<Pick<EventRow, AddedEventColumns>>>;
+type EventColumns = Columns<Omit<EventRow, AddedEventColumns>> &
+  Partial<Columns<Pick<EventRow, AddedEventColumns>>>;
+
 interface SnapshotDocument {
   version: number;
   churches: Table<Omit<ChurchDetail, AddedChurchColumns>> &
     Partial<Table<Pick<ChurchDetail, AddedChurchColumns>>>;
-  events: Table<EventRow>;
+  events: EventTable;
 }
 
 function decodeColumn<T>(column: Column<T>): T[] {
@@ -74,7 +83,7 @@ const NO_CANCELLED_DATES: ReadonlySet<string> = new Set();
  * Which dates each weekly event is cancelled on: the `date` of every
  * cancelled row, under the `cancels_event_id` it names.
  */
-function cancelledDatesByEvent(columns: Columns<EventRow>): CancelledDates {
+function cancelledDatesByEvent(columns: EventColumns): CancelledDates {
   const byEvent: CancelledDates = new Map();
   columns.cancels_event_id.forEach((eventId, row) => {
     const date = columns.date[row];
@@ -104,6 +113,7 @@ class SnapshotEvent implements RawEvent {
   page_number: number | null;
   note: string | null;
   weeks_of_month: WeekOfMonth[];
+  exclude_weeks: boolean;
   season_start_month: number | null;
   season_start_day: number | null;
   season_end_month: number | null;
@@ -113,7 +123,7 @@ class SnapshotEvent implements RawEvent {
   private nextOccurrence: string | null | undefined = undefined;
 
   constructor(
-    columns: Columns<EventRow>,
+    columns: EventColumns,
     row: number,
     cancelledDates: CancelledDates,
   ) {
@@ -129,6 +139,7 @@ class SnapshotEvent implements RawEvent {
     this.page_number = columns.page_number[row];
     this.note = columns.note[row];
     this.weeks_of_month = columns.weeks_of_month[row];
+    this.exclude_weeks = columns.exclude_weeks?.[row] ?? false;
     this.season_start_month = columns.season_start_month[row];
     this.season_start_day = columns.season_start_day[row];
     this.season_end_month = columns.season_end_month[row];
@@ -203,7 +214,7 @@ export function parseSnapshot(json: string): Snapshot {
     bulletin_week: bulletinWeeks,
   } = c;
 
-  const e = decodeTable(document.events);
+  const e = decodeTable(document.events) as EventColumns;
   const cancelled = cancelledDatesByEvent(e);
   const events: RawEvent[] = e.id.map(
     (_, row) => new SnapshotEvent(e, row, cancelled),

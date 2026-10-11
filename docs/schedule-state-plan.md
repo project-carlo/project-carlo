@@ -162,8 +162,11 @@ CREATE TABLE schedule_entry (
     end_time INTEGER CHECK (end_time IS NULL OR end_time BETWEEN 0 AND 1439),
     cancelled INTEGER NOT NULL DEFAULT 0 CHECK (cancelled IN (0, 1)),
     -- weeks of the month, as the labels' list: bit 0 first, 1 second, 2 third,
-    -- 3 fourth, 4 fifth, 5 last. 0 = every week.
-    weeks_of_month INTEGER NOT NULL DEFAULT 0 CHECK (weeks_of_month BETWEEN 0 AND 63),
+    -- 3 fourth, 4 fifth, 5 last. 0 = every week. Bit 6 (migration 0005, the
+    -- labels' `exclude_weeks`): the listed weeks are the ones skipped.
+    weeks_of_month INTEGER NOT NULL DEFAULT 0 CHECK (
+        weeks_of_month BETWEEN 0 AND 127 AND weeks_of_month <> 64
+    ),
     -- season, as the labels' object: months 1-12, days null or a day of that month
     season_start_month INTEGER CHECK (season_start_month BETWEEN 1 AND 12),
     season_start_day INTEGER CHECK (season_start_day BETWEEN 1 AND 31),
@@ -303,9 +306,12 @@ not change the church, event type or kind: the policy rejects that as
 remove the weekly slot without counting as a delete.
 
 **Weeks of the month and season** are structured as in the labels
-(`labeling/labels.py`). The database stores `weeks_of_month` as a 6-bit mask
-and the season as four integer columns. The view, the model's output and the
-snapshot use the labels' forms: `["first", "third"]` and
+(`labeling/labels.py`). The database stores `weeks_of_month` as a 6-bit mask,
+plus a seventh bit for `exclude_weeks` ("every Sunday except the last" is
+`["last"]` excluded, which no list of remaining weeks can say), always in
+`labels.canonical_weeks`' form, and the season as four integer columns. The
+view, the model's output and the snapshot use the labels' forms:
+`["first", "third"]` with `exclude_weeks` false, and
 `{"start_month": 5, "start_day": null, "end_month": 10, "end_day": null}`.
 One converter, in one module, does the translation and is shared with the
 labels code. The columns' checks only bound the days at 31; the entry checks
@@ -857,7 +863,9 @@ code departs from it.
   left out, and cancellations are matched to weekly rows, for extract-mode
   rows too. A cancellation matching nothing is left out in both modes; where an
   extract-mode bulletin repeats a weekly slot, the lowest id is named.
-- **`weeks_of_month`** is a plain list column in the snapshot.
+- **`weeks_of_month`** is a plain list column in the snapshot, and
+  **`exclude_weeks`** a boolean one, added later to version 2 (a snapshot
+  without it reads as false).
 - **The site shows the qualifiers as PR 22 did.** The web app follows PR 22
   (lyonsl2/project-carlo#22, and the PRD on its branch) for how the
   qualifiers are shown, in `apps/web/src/lib/schedulePattern.ts`:

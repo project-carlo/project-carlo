@@ -33,6 +33,8 @@ export interface EventSummary {
   note: string | null;
   /** Weekly slots only: the weeks of the month it keeps; empty for every week. */
   weeks_of_month: WeekOfMonth[];
+  /** Weekly slots only: `weeks_of_month` are the weeks it skips instead. */
+  exclude_weeks: boolean;
   /** Weekly slots only: the part of the year it runs; null for all year. */
   season: Season | null;
 }
@@ -81,6 +83,8 @@ export interface RawEvent {
   note: string | null;
   /** Weekly rows only: the weeks of the month it keeps; empty for every week. */
   weeks_of_month: WeekOfMonth[];
+  /** Weekly rows only: `weeks_of_month` are the weeks it skips instead. */
+  exclude_weeks: boolean;
   /** Weekly rows only: the season (see `Season`); all four null for all year. */
   season_start_month: number | null;
   season_start_day: number | null;

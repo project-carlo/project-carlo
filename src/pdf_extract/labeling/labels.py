@@ -4,7 +4,9 @@ A label records what a person read off one bulletin PDF: every Mass,
 Confession and Adoration it lists, in the shape of the pipeline's event rows
 plus the recurrence qualifiers `weeks_of_month` and `season` (the same tokens
 and ranges `schedule_pattern` uses), so ground truth can be scored against any
-classifier later.
+classifier later. `weeks_of_month` lists the weeks an event happens on, or,
+with `exclude_weeks` true, the weeks it doesn't: "every Sunday except the
+last" is `["last"]` excluded, which no list of the weeks that remain can say.
 
 An event can be marked optional when it is a judgment call whether it belongs
 in the schedule at all: `optional` is null for a required event, or the
@@ -38,6 +40,8 @@ EVENT_TYPES = ("mass", "confession", "adoration")
 EVENT_KINDS = ("weekly", "specific_date")
 DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 WEEKS_OF_MONTH = ("first", "second", "third", "fourth", "fifth", "last")
+# The ordinals a month can have of a weekday; "last" is the fourth or the fifth.
+ORDINAL_WEEKS = WEEKS_OF_MONTH[:5]
 ORIGINS = ("human", "gemini", "gemini-edited")
 OPTIONAL_PREFERENCES = ("include", "exclude")
 
@@ -50,11 +54,12 @@ LABEL_KEYS = (
 )
 EVENT_KEYS = (
     "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time",
-    "end_time", "cancelled", "weeks_of_month", "season", "page_number", "note", "origin",
-    "optional",
+    "end_time", "cancelled", "weeks_of_month", "exclude_weeks", "season", "page_number",
+    "note", "origin", "optional",
 )
-# Keys a label written before they existed may lack; a missing one reads as null.
-EVENT_KEYS_ADDED_LATER = ("optional",)
+# Keys a label written before they existed may lack; a missing one reads as
+# null (`exclude_weeks`: false).
+EVENT_KEYS_ADDED_LATER = ("exclude_weeks", "optional")
 SEASON_KEYS = ("start_month", "start_day", "end_month", "end_day")
 
 _SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -63,6 +68,32 @@ _TIME_RE = re.compile(r"^([01]\d|2[0-3]):[0-5]\d$")
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 _write_lock = threading.Lock()
+
+
+def canonical_weeks(weeks: Any, exclude: Any) -> tuple[list[str], bool]:
+    """The one way to write a weeks-of-the-month selection, in the labels' order.
+
+    An exclusion that leaves out no "last" is the list of the weeks that
+    remain ("every week except the first" is second to fifth). One that leaves
+    out "last" stays an exclusion, without "fifth" (a fifth weekday is always
+    the last). Excluding nothing is every week, and a selection that leaves no
+    week (`weeks_never_happen`) is kept as given. Unknown tokens are dropped.
+    """
+    listed = set(weeks) if isinstance(weeks, list) else set()
+    ordered = [w for w in WEEKS_OF_MONTH if w in listed]
+    if exclude is not True or not ordered:
+        return ordered, False
+    if weeks_never_happen(ordered, True):
+        return ordered, True
+    if "last" not in listed:
+        return [w for w in ORDINAL_WEEKS if w not in listed], False
+    return [w for w in ordered if w != "fifth"], True
+
+
+def weeks_never_happen(weeks: Any, exclude: Any) -> bool:
+    """Whether a selection leaves no week at all: every ordinal, or the first four and the last, excluded."""
+    listed = set(weeks) if isinstance(weeks, list) else set()
+    return exclude is True and set(ORDINAL_WEEKS[:4]) <= listed and bool({"fifth", "last"} & listed)
 
 
 class LabelError(ValueError):
@@ -177,6 +208,13 @@ def _validate_event(event: Any, where: str) -> list[str]:
         errors.append(f"{where}.weeks_of_month has duplicates")
     elif weeks and kind == "specific_date":
         errors.append(f"{where}.weeks_of_month applies to weekly events only")
+    exclude = event.get("exclude_weeks", False)
+    if not isinstance(exclude, bool):
+        errors.append(f"{where}.exclude_weeks must be true or false")
+    elif exclude and not weeks:
+        errors.append(f"{where}.exclude_weeks needs the weeks it leaves out in weeks_of_month")
+    elif exclude and weeks_never_happen(weeks, exclude):
+        errors.append(f"{where}.exclude_weeks leaves out every week")
     errors.extend(_validate_season(event["season"], where))
     if event["season"] is not None and kind == "specific_date":
         errors.append(f"{where}.season applies to weekly events only")
@@ -202,7 +240,7 @@ def validate_entry(entry: Any, where: str) -> list[str]:
     """Every reason `entry` is not a label event minus page, origin and optional."""
     if not isinstance(entry, dict):
         return [f"{where} must be an object"]
-    errors = _check_keys(entry, ENTRY_KEYS, where)
+    errors = _check_keys(entry, ENTRY_KEYS, where, may_lack=EVENT_KEYS_ADDED_LATER)
     if errors:
         return errors
     return _validate_event({**entry, "page_number": None, "origin": "human"}, where)

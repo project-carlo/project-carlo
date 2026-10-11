@@ -24,7 +24,7 @@ from pdf_extract.schedule.store import live_entries, update_mode_parishes
 from pdf_extract.seeding import calls as seed_calls
 from pdf_extract.seeding import cli as seed_cli
 from pdf_extract.seeding.checks import check_seed
-from pdf_extract.seeding.coverage import diff, matches, missing_warning
+from pdf_extract.seeding.coverage import diff, event_said, matches, missing_warning
 from pdf_extract.seeding.files import (
     APPROVED,
     NEEDS_REVIEW,
@@ -323,6 +323,13 @@ _DATED = {**_SUNDAY, "event_kind": "specific_date", "day_of_week": None, "date":
 ])
 def test_history_matches_a_slot_by_type_day_or_date_time_and_church(entry, event, matched):
     assert matches(entry, event) is matched
+
+
+def test_an_event_says_its_weeks_and_whether_they_are_skipped():
+    assert event_said({**_SUNDAY, "weeks_of_month": ["first", "third"]}).endswith("weeks first/third")
+    assert event_said(
+        {**_SUNDAY, "weeks_of_month": ["last"], "exclude_weeks": True},
+    ).endswith("weeks except last")
 
 
 def _history_of(*events: dict[str, Any], short: str = "aaaaaaaaaaaa") -> dict[str, Any]:

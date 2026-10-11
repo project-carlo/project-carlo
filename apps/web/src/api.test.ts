@@ -30,6 +30,7 @@ function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
     page_number: null,
     note: null,
     weeks_of_month: [],
+    exclude_weeks: false,
     season_start_month: null,
     season_start_day: null,
     season_end_month: null,

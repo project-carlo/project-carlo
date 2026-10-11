@@ -33,6 +33,12 @@ export const WEEKS_OF_MONTH: readonly WeekOfMonth[] = [
 export interface SchedulePattern {
   /** Weeks of the month the slot falls on; empty means every week. */
   weeks_of_month: readonly WeekOfMonth[];
+  /**
+   * The listed weeks are the ones the slot skips: "every Sunday except the
+   * last" is `["last"]` excluded, which no list of the weeks that remain can
+   * say. Missing means false.
+   */
+  exclude_weeks?: boolean;
   /** The part of the year it runs; null means all year. */
   season: Season | null;
 }
@@ -89,7 +95,8 @@ function isLastOfMonth(date: Date): boolean {
 }
 
 /**
- * Whether `date` is one of the weeks of the month this slot falls on.
+ * Whether `date` is one of the weeks of the month this slot falls on, or,
+ * when `exclude` is set, is not one of the weeks it skips.
  *
  * "last" stays distinct from "fourth": a month with five Fridays has a fourth
  * Friday and a different last one, and a bulletin that says "last Friday" means
@@ -98,13 +105,14 @@ function isLastOfMonth(date: Date): boolean {
 export function dateMatchesWeeks(
   date: Date,
   weeks: readonly WeekOfMonth[],
+  exclude = false,
 ): boolean {
   if (weeks.length === 0) return true;
   const ordinal = WEEKS_OF_MONTH[ordinalOfMonth(date) - 1];
-  if (ordinal !== undefined && ordinal !== "last" && weeks.includes(ordinal)) {
-    return true;
-  }
-  return weeks.includes("last") && isLastOfMonth(date);
+  const listed =
+    (ordinal !== undefined && ordinal !== "last" && weeks.includes(ordinal)) ||
+    (weeks.includes("last") && isLastOfMonth(date));
+  return listed !== exclude;
 }
 
 /** Whether this slot actually happens on `date`, weeks and season both. */
@@ -113,7 +121,7 @@ export function dateMatchesPattern(
   pattern: SchedulePattern,
 ): boolean {
   return (
-    dateMatchesWeeks(date, pattern.weeks_of_month) &&
+    dateMatchesWeeks(date, pattern.weeks_of_month, pattern.exclude_weeks) &&
     dateInSeason(date, pattern.season)
   );
 }
@@ -127,10 +135,11 @@ export function isPlainWeekly(pattern: SchedulePattern): boolean {
 export function patternKey(pattern: SchedulePattern): string {
   if (isPlainWeekly(pattern)) return "";
   const { season } = pattern;
+  const weeks = WEEKS_OF_MONTH.filter((week) =>
+    pattern.weeks_of_month.includes(week),
+  ).join("+");
   return [
-    WEEKS_OF_MONTH.filter((week) => pattern.weeks_of_month.includes(week)).join(
-      "+",
-    ),
+    pattern.exclude_weeks && weeks ? `except+${weeks}` : weeks,
     season?.start_month ?? "",
     season?.start_day ?? "",
     season?.end_month ?? "",
@@ -149,7 +158,8 @@ function joinWithAnd(parts: string[]): string {
 }
 
 /**
- * "First Friday of the month", "First and third Fridays of the month".
+ * "First Friday of the month", "First and third Fridays of the month"; an
+ * exclusion reads "Every Sunday except the last".
  *
  * Needs the weekday because the ordinals count occurrences of that weekday, not
  * calendar weeks: the first Friday of a month can fall in its second week.
@@ -157,10 +167,17 @@ function joinWithAnd(parts: string[]): string {
 export function describeWeeksOfMonth(
   weeks: readonly WeekOfMonth[],
   dayOfWeek: string | null,
+  exclude = false,
 ): string | null {
   if (weeks.length === 0) return null;
   const ordered = WEEKS_OF_MONTH.filter((week) => weeks.includes(week));
   const day = dayOfWeek?.trim();
+  if (exclude) {
+    const every = day
+      ? day.charAt(0).toUpperCase() + day.slice(1).toLowerCase()
+      : "week";
+    return `Every ${every} except the ${joinWithAnd(ordered)}`;
+  }
   if (!day) {
     return `${joinWithAnd(ordered.map(titleCaseWeek))} week of the month`;
   }
@@ -205,7 +222,11 @@ export function describeSchedulePattern(
   dayOfWeek: string | null,
 ): string | null {
   const parts = [
-    describeWeeksOfMonth(pattern.weeks_of_month, dayOfWeek),
+    describeWeeksOfMonth(
+      pattern.weeks_of_month,
+      dayOfWeek,
+      pattern.exclude_weeks,
+    ),
     describeSeason(pattern.season),
   ].filter((part): part is string => part !== null);
   return parts.length > 0 ? parts.join(", ") : null;

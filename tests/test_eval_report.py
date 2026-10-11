@@ -56,6 +56,21 @@ def test_exact_and_core_tiers():
     assert _tiers(labels, preds) == [("exact", 0, 0), ("core", 1, 1)]
 
 
+def test_weeks_agree_however_they_are_written():
+    labels = [_ev(weeks_of_month=["first"], exclude_weeks=True),
+              _ev(start_time="11:00", weeks_of_month=["last"], exclude_weeks=True)]
+    preds = [_ev(weeks_of_month=["second", "third", "fourth", "fifth"]),
+             _ev(start_time="11:00", weeks_of_month=["last"])]
+    assert _tiers(labels, preds) == [("exact", 0, 0), ("core", 1, 1)]
+
+
+def test_a_weekly_slot_except_the_last_covers_the_dates_it_keeps():
+    # October 2026 has four Sundays after the 4th: the 25th is the last.
+    labels = [_dated(), _dated(date="2026-10-25")]
+    preds = [_ev(weeks_of_month=["last"], exclude_weeks=True)]
+    assert _tiers(labels, preds) == [("weekly_vs_dated", 0, 0), ("missed", 1, None)]
+
+
 def test_wrong_time_pairs_closest_start_first():
     labels = [_ev(start_time="08:00"), _ev(start_time="11:00")]
     preds = [_ev(start_time="11:30"), _ev(start_time="08:15")]

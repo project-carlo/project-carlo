@@ -42,7 +42,8 @@ def event_parts(ev: dict[str, Any]) -> dict[str, str]:
     end = f"–{ev['end_time']}" if ev.get("end_time") else ""
     extra = []
     if ev.get("weeks_of_month"):
-        extra.append("weeks " + "/".join(ev["weeks_of_month"]))
+        excluded = "except " if ev.get("exclude_weeks") else ""
+        extra.append(f"weeks {excluded}" + "/".join(ev["weeks_of_month"]))
     if ev.get("season"):
         s = ev["season"]
         extra.append(f"season {s['start_month']}/{s.get('start_day') or ''}–"
