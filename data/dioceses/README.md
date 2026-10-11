@@ -368,7 +368,7 @@ Each of these produced a confident wrong answer in Buffalo at least once.
 
 ## Commands
 
-`pnpm diocese <command> --help` gives every flag. Output is JSON (`pnpm -s` drops pnpm's
+`pnpm diocese <command> --help` gives every flag. Output is JSON (`pnpm --silent` drops pnpm's
 banner for `jq`). Without pnpm: `uv run python -m pdf_extract diocese ...`.
 
 ```bash

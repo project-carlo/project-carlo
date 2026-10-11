@@ -345,7 +345,6 @@ def test_pdf_and_pages_are_written_for_the_agent(conn, tmp_path: Path):
         render_pages(conn, PARISH, "latest", page=9, work_dir=tmp_path)
 
 
-
 def test_text_reads_each_page_and_marks_the_ones_that_are_only_images(conn):
     texts = page_texts(conn, PARISH, "latest")
     assert texts["pages"] == 3 and [p["page"] for p in texts["texts"]] == [1, 2, 3]
