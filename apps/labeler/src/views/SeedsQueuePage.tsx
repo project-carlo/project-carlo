@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api";
 import { navigate, seedHref } from "../lib/route";
+import { nextSeedToReview } from "../lib/seeds";
 import { SEED_STATUS_LABEL, SEED_STATUS_STYLE } from "../lib/seedStatus";
 import type { Config, SeedQueueRow } from "../types";
 
@@ -25,7 +26,7 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
   const shown = (seeds ?? []).filter((s) => !status || s.status === status);
   const counts = new Map<string, number>();
   for (const s of seeds ?? []) counts.set(s.status, (counts.get(s.status) ?? 0) + 1);
-  const nextToReview = (seeds ?? []).find((s) => s.status === "needs_review" || s.status === "ready");
+  const nextToReview = nextSeedToReview(seeds ?? []);
 
   return (
     <div className="mx-auto flex h-full max-w-6xl flex-col p-6">

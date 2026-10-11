@@ -24,17 +24,18 @@ read keys). Output is compact text; add `--json` for the full result. Run them a
 
 1. `pnpm seed pick [--limit N] [--diocese D]`: parishes with no seed and no seed file,
    easiest first (one church, a recent bulletin, extract mode stable week to week).
-2. Split them among subagents, **3 parishes each** unless asked otherwise, fewer when a
-   parish has several churches. Every page a subagent reads stays in its context and is paid
-   for again on each later request, so its third parish already costs about twice its first.
-   Give each subagent this skill's path, its parish list, the test run's
-   `--eval RUN` if there is one, and **its own scratch folder** (`<scratchpad>/seed-a/`,
-   `seed-b/`, ...): subagents share one scratchpad, and two writing the same file name
-   overwrite each other's work. **Create each folder before spawning its subagent**
-   (`mkdir -p`): a subagent's first write into a folder that isn't there fails. Tell it
-   to write each parish's file before starting the next, and that WebFetch may be a
-   deferred tool it has to load (ToolSearch) before its first use; `seed init` prints
-   each parish's website.
+2. Split them among `seed-drafter` subagents (`.claude/agents/seed-drafter.md`: this skill
+   preloaded, Sonnet 5.5, no subagents of its own), **3 parishes each** unless asked
+   otherwise, fewer when a parish has several churches. Every page a subagent reads stays in
+   its context and is paid for again on each later request, so its third parish already
+   costs about twice its first. Give each its parish list, the test run's `--eval RUN` if
+   there is one, and **its own scratch folder** (`<scratchpad>/seed-a/`, `seed-b/`, ...):
+   subagents share one scratchpad, and two writing the same file name overwrite each other's
+   work. **Create each folder before spawning its subagent** (`mkdir -p`): a subagent's
+   first write into a folder that isn't there fails. Tell it to write each parish's file
+   before starting the next, and that WebFetch may be a deferred tool it has to load
+   (ToolSearch) before its first use; `seed init` prints each parish's website. Override
+   its model only to compare models on a test run.
 3. When they finish: `pnpm seed check --all` and `pnpm seed status`. For a file that fails,
    run `pnpm seed finalize <parish>...` rather than fixing it by hand: it does only the
    bookkeeping (defaulted keys, sources split per bulletin, history sources, bulletins read,
