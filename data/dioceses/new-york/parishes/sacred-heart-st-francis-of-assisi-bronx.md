@@ -36,11 +36,11 @@ The October 4, 2026 linked issue identifies Sacred Heart - St. Francis of Assisi
 
 Linked worship-site records for Sacred Heart - St. Francis of Assisi, Bronx: [Sacred Heart](../churches/sacred-heart-bronx-16197.md). Each church record retains its building-specific Mass evidence.
 
-[St. Francis of Assisi](../open/st-francis-of-assisi-shakespeare-avenue-bronx.md) remains an open question. Ask Sacred Heart parish at 718-293-2766 whether any public Mass still takes place at 1544 Shakespeare Avenue; obtain the dated archdiocesan relegation/sale decree if it does not. Do not treat the joined publisher name or omitted schedule as closure evidence.
+[St. Francis of Assisi](../excluded/st-francis-of-assisi-shakespeare-avenue-bronx.md), 1544 Shakespeare Avenue, is excluded as closed by the building-specific relegation decree signed November 6, 2018 and effective immediately. The operative paragraph reduces this church to profane but not sordid use; the actual image-only decree was visually read October 8, 2026. The exclusion retains its exact URL and quote, without inventing a final-Mass date.
 
-The linked worship site [Sacred Heart](../churches/sacred-heart-bronx-16197.md) at 1253 Shakespeare Ave. has affirmative public Mass evidence. The issue labels 1253 Shakespeare the rectory and 1255 the religious-education office. GCatholic/directory associate Sacred Heart with 1253; retain that address without silently substituting an office. Former St. Francis at 1544 Shakespeare (16159) is unresolved in its separate open record; the joined name does not prove that building has Mass. 
+The linked worship site [Sacred Heart](../churches/sacred-heart-bronx-16197.md) at 1253 Shakespeare Ave. has affirmative public Mass evidence. The October 4 issue identifies the church at 1253, rectory at 1257 and religious-education office at 1255. Former St. Francis at 1544 Shakespeare (16159) is relegated, not an additional active site implied by the joined publisher name.
 
-The separate Shakespeare Avenue handoff is accounted for in [the St. Francis of Assisi open record](../open/st-francis-of-assisi-shakespeare-avenue-bronx.md). It is not the active Baychester Avenue chapel under the Frances of Rome publisher. The October 8, 2026 integration review preserves that distinction and does not add a public Mass site without building-specific evidence.
+The separate Shakespeare Avenue disposition is accounted for in [the St. Francis of Assisi exclusion](../excluded/st-francis-of-assisi-shakespeare-avenue-bronx.md). It is not the active Baychester Avenue chapel under the Frances of Rome publisher. The October 8, 2026 integration review preserves that distinction; the building-specific decree, not a schedule omission, establishes the exclusion.
 
 ## Website and bulletin provider
 

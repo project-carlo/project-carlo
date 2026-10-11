@@ -60,6 +60,6 @@ GCatholic supplies the building identity, address and Plus Code coordinates (87H
 
 ## Boundaries
 
-Only this assignment building is written here. Other buildings covered by the publication remain the parent or another slice owner responsibility.
+This record represents this physical worship building only. Other sites covered by the same bulletin require their own building-specific records and public-Mass evidence; a shared canonical parish name alone is not sufficient.
 
 An August 13, 2026 canonical merger with St. Cecilia was reported by the parent. The actual decree is not yet read because the supplied URL redirected to a 404. Existing public Mass evidence is not overridden by that reported merger; update publisher grouping only after the new masthead is read.

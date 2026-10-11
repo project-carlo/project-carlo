@@ -7,7 +7,7 @@ gcatholic: newy0
 city_aliases:
   Southeast: Brewster
   Town of Southeast: Brewster
-promoted: 2026-10-08
+promoted: 2026-10-11
 ---
 
 Opened for one requested parish in September 2026; expanded into an archdiocese-wide
@@ -59,16 +59,20 @@ of unresolved physical sites, and the latest promotion are recorded in the Log.
 - A current bulletin can retain an old template heading. The October 4 St. Teresa issue
   has a June 13, 2021 contact-page header but a current footer and current issue pages.
   Such contradictions are documented in the record, not silently corrected in a quote.
-- Automatic fetching is deliberately disabled for three real publishers using the supported
+- Automatic fetching was initially disabled for three real publishers using the supported
   `no_bulletin` skip provider, with their publication identities and active venues retained:
   Resurrection in Rye publishes readable Flocknote HTML rather than the tested PDF format;
   the Sullivan County St. Francis Xavier joint publisher's newer-dated PDF is a supplement,
   not the full issue; and St. Augustine in Highland's archive still ends August 16, 2026.
   Each has a separate actionable connector question in `open/`. Under the October 7 policy
-  incorporated from current main on October 8, these three publishers and their five
+  incorporated from current main on October 8, unsupported publishers and their associated
   venues stay in the evidence records but are omitted from the live CSVs and site until
   a safe supported channel is available. They have no promoted stamps. This operational
   hold is not a statement that publication or public Mass has ceased, and is not an exclusion.
+  The resumed research adds any genuinely unsupported channels to the same policy, without
+  treating client TLS trust problems, a later HTTP 403 or incomplete replay as cessation.
+  The current totals and every original-question disposition are in
+  [the October 8-11 research follow-up](research-followup.md).
 - Refreshes on October 8 found Holy Rosary Hawthorne and St. Matthew/Our Lady of Perpetual
   Help issues dated October 4. Sacred Heart/St. Patrick's latest linked issue remained
   September 20. Image-only pages were rendered and visually read; archive lag is explicit.
@@ -102,15 +106,18 @@ Tompkins Avenue. Do not allow a same-name match to silently absorb the other bui
 Leave verification flags false when there is an address conflict or only one independent
 source. A parish bulletin and its own homepage are one source. Buildings absent from both
 rosters can still be added when their parish provides a current Mass schedule and address;
-their lack of a roster entry is explained, and missing coordinates are not invented.
+their lack of a roster entry is explained. The resumed research supplies sourced representative
+OSM/Nominatim coordinates for the Lourdes Chapel and St. Patrick School on Staten Island,
+while retaining the street-number mismatch and school-site/interior-room fidelity caveats.
 
 Two Eastern Catholic roster entries identify an already-mapped Latin physical host at
 the same address: Holy Spirit in Cortlandt Manor and St. Francis in Mount Kisco. These
 are location-coverage aliases, not incorporation of Eastern communities into Latin
 jurisdiction. Same-name sites at different addresses remain distinct: the Latin St. Mary
 at Grand Street is an open question, not the Ruthenian St. Mary exclusion on East 15th.
-St. John the Baptist in Manhattan is likewise open because the current primary homepage
-explicitly reports a temporary repair closure, despite a printed October 4 schedule.
+St. John the Baptist in Manhattan is excluded with `reason: other` for its explicit temporary
+repair suspension, repeated in the October 11 issue despite a standing printed schedule.
+It is not labeled permanently closed and no final-Mass date is invented.
 
 ## Log
 
@@ -152,3 +159,23 @@ explicitly reports a temporary repair closure, despite a printed October 4 sched
   suite passes after current-main integration and promotion: 877 tests. The focused
   diocese suite previously passed 35 tests on the original base. CSV preservation,
   unique-slug checks and `git diff --check` also pass.
+- 2026-10-11 (completed research follow-up): Reviewed all 171 original questions from
+  `ff7cf609`: 89 are resolved and 82 retain concrete missing facts or ingestion blockers.
+  The disposition register also lists newly discovered follow-ups, so resolved original
+  identities do not hide a remaining chapel-location or connector question. Current records
+  comprise 227 publishers, 291 public-Mass venues, 78 exclusions and 86 open records.
+  Six unsupported publishers and their eight venues remain operationally off-site, not
+  classified as closed or as permanently non-publishing. No parish inquiries were sent.
+  Integrated current main through `fbaaf44d` and promoted 221 publishers / 283 venues,
+  adding 220 publishers and 281 churches relative to main. All 266 pre-existing parish
+  rows and 534 church rows remain exactly unchanged, including Brewster/Patterson flags;
+  no existing rows or attached events are removed. Promotion is idempotent.
+  Coverage is still 326/326 official directory entries and 426/426 GCatholic entries,
+  with no repeated or unmatched references. Directory coverage includes 273 live and eight
+  off-site church-linked entries; GCatholic includes 271 live and seven off-site entries,
+  78 exclusions and 70 open entries. The two additional Staten Island venues now have
+  sourced representative coordinates with their address/interior-room caveats preserved.
+  Structural and relative-link/publication/address audits pass. Validation of all dioceses
+  has zero errors and zero incomplete records; New York retains 43 explicit-closure
+  warnings without a known exact final-Mass day. Actual last-Mass evidence is distinguished
+  from merger, relegation, sale and scheduled dates; no missing days are invented.

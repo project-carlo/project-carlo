@@ -13,6 +13,10 @@ name_verified: false
 address_verified: false
 roster: ['gcatholic:16411', 'directory:3718']
 evidence:
+- url: https://files.ecatholic.com/11769/bulletins/20261011.pdf
+  seen: 2026-10-08
+  quote: St. Francis Xavier Church
+  note: Downloaded and read page 1 of the newly posted October 11 full issue. It gives 151 Bridge St., Narrowsburg, Sunday 9:30am and Tuesday/Wednesday/Friday 8:30am Masses. Future-dated issue was already published on October 8.
 - url: https://gcatholic.org/churches/usa-02/16411
   seen: 2026-10-07
   quote: |-

@@ -16,7 +16,7 @@ promoted: 2026-10-08
 
 ## Publisher
 
-The October 4, 2026 PDF identifies St. Peter's Parish in Poughkeepsie. Its current archive was checked October 8 and already links the October 11 issue. One publisher serves the chapel and parish auditorium; the original historic St. Peter church remains separately open pending physical-use evidence.
+The October 4, 2026 PDF identifies St. Peter's Parish in Poughkeepsie. Its current archive was checked October 8 and already links the October 11 issue. One publisher serves the Rosary Chapel and parish auditorium. The roster's St. Peter entry at 6 Father Cody Plaza remains a physical-identity question: October 11 issue page 2 explicitly calls that a mailing address, not proof of a distinct active or closed historical church.
 
 ## Worship sites
 

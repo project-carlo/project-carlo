@@ -1,236 +1,458 @@
 ---
 name: St. Jerome
-revisit: Contact St. Jerome at 718-665-5533 using the official directory contact and request the current
-  bulletin PDF or actual online publisher link. Inspect its masthead before creating a publisher; preserve
-  the known current Mass schedule.
-revisit_after: 2026-11-07
-roster: ['gcatholic:16163', 'directory:3600']
+revisit: Saint Jerome at 718-665-5533 must supply the current complete bulletin or actual publisher URL.
+  Read that issue masthead before defining a publisher; there is no unresolved inference that the known
+  Mass site is closed.
+roster:
+- gcatholic:16163
+- directory:3600
 evidence:
 - url: https://gcatholic.org/churches/usa-02/16163
   seen: 2026-10-07
-  quote: |-
-    Church of St. Jerome, Bronx, New York, USA
+  quote: 'Church of St. Jerome, Bronx, New York, USA
+
     Church of St. Jerome
+
     Bronx,
+
     New York
+
     ,
+
     USA
+
     ℹ️ Info
+
     📍 Nearby
+
     Jurisdiction:
+
     Metropolitan Archdiocese of
+
     New York
+
     Served by:
+
     Institute of the Incarnate Word
+
     Type:
+
     Parish, Church
+
     Rite:
+
     Roman
+
     (Latin)
+
     Location:
+
     87G8R35F+WW
+
     Address:
+
     230 Alexander Ave., Bronx,
+
     New York
+
     10454
+
     Country:
+
     USA
+
     Telephone:
+
     +1 (718) 665-5533
+
     Website:
+
     GCatholic Church ID:
+
     16163
+
     Show Map
+
     Churches Nearby
+
     Church of St. Pius V
+
     , Bronx
+
     (640 m ↗)
+
     Church of St. Rita of Cascia
+
     , Bronx
+
     (670 m ↗)
+
     Church of St. Luke
+
     , Bronx
+
     (920 m ↘)
+
     Church of the Immaculate Conception
+
     , Bronx
+
     (1000 m ↗)
+
     Church of All Saints
+
     , New York City
+
     (1.1 km ←)
+
     Church of St. Mark the Evangelist
+
     , New York City
+
     (1.3 km ↖)
+
     Church of St. Roch
+
     , Bronx
+
     (1.5 km →)
+
     Church of the Holy Rosary
+
     , New York City
+
     (1.5 km ↙)
+
     Church of Sts. Peter and Paul
+
     , Bronx
+
     (1.8 km ↗)
+
     Church of St. Charles Borromeo
+
     , New York City
+
     (1.8 km ↖)
+
     Last updated on 2025.12.21
-    © 2026 GCatholic.org
+
+    © 2026 GCatholic.org'
   note: Roster identity and address, not proof of present worship or closure.
 - url: https://www.archny.org/places/st-jeromes-church
   seen: 2026-10-07
-  quote: |-
-    St. Jerome's Church - Archdiocese of New York
+  quote: 'St. Jerome''s Church - Archdiocese of New York
+
     Child Protection
+
     Parish Finder
+
     Donate
+
     Child Protection
+
     Parish Finder
+
     Donate
+
     About
+
     +
+
     Mission
+
     History
+
     Leadership
+
     Find Your Parish
+
     Directory
+
     Careers
+
     Media
+
     Services
+
     +
+
     Becoming Catholic
+
     Baptize Your Child
+
     Find a Catholic School
+
     Grow in Faith
+
     +
+
     As a Child
+
     Catholic Scouting
+
     In Middle and High School
+
     In College
+
     As a Young Adult
+
     Catholic Calendar
+
     Resources for Parishes
+
     Live Catholic
+
     Marrying in the Catholic Church
+
     Respect Life
+
     Sacraments & Life Moments
+
     +
+
     Becoming Catholic (RCIA)
+
     Baptize Your Child
+
     Receiving the Eucharist
+
     Confirmation
+
     Marriage
+
     Penance & Confession
+
     Anointing of the Sick
+
     End of Life
+
     Annulments
+
     Sacramental Records
+
     School Records
+
     Burial Records
+
     Serve & Vocations
+
     +
+
     Adult Education
+
     Live Catholic
+
     Liturgy
+
     Vocations
+
     Sacramental Records
+
     School Records
+
     Child Protection
+
     +
+
     Report Abuse
+
     Child Protection FAQ
+
     Policies
+
     Resources
+
     Training
+
     En Español
+
     News
+
     +
+
     The Good Newsroom
+
     Monthly Bulletin
+
     Press Releases
+
     Updates from our Ministries
+
     Events
+
     Contact Us
-    St. Jerome's Church
-    Saint Jerome's Roman Catholic Church
+
+    St. Jerome''s Church
+
+    Saint Jerome''s Roman Catholic Church
+
     The Bronx, New York 10454
+
     Phone
+
     718-665-5533
+
     Next Mass
+
     Office Hours | Horario De Oficina:
+
     Tuesday - Friday / Martes - Viernes: 10 AM - 1 PM, 2 PM - 7 PM
+
     Saturday / Sabado: 11 AM - 2 PM
+
     Sunday and Monday / Domingo y Lunes: CLOSED / CERRADA
+
     Mass Schedule
+
     Saturday
+
     7:00 PM
+
     Español (Spanish)
+
     Sunday
+
     9:00 AM
+
     Español (Spanish)
+
     10:30 AM
+
     English
+
     12:00 PM
+
     Español (Spanish)
+
     Monday
+
     9:00 AM
+
     Español (Spanish)
+
     Tuesday
+
     9:00 AM
+
     Español (Spanish)
+
     Wednesday
+
     9:00 AM
+
     Español (Spanish)
+
     Thursday
+
     9:00 AM
+
     Español (Spanish)
+
     Friday
+
     9:00 AM
+
     Español (Spanish)
+
     Confession
+
     Sunday
+
     9:00 AM
-    Ends at 12:30 PM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión también se puede escuchar con cita previa, llamen al 718-665-5533.
+
+    Ends at 12:30 PM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión
+    también se puede escuchar con cita previa, llamen al 718-665-5533.
+
     Monday
+
     8:30 AM
-    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión también se puede escuchar con cita previa, llamen al 718-665-5533.
+
+    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión
+    también se puede escuchar con cita previa, llamen al 718-665-5533.
+
     Tuesday
+
     8:30 AM
-    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión también se puede escuchar con cita previa, llamen al 718-665-5533.
+
+    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión
+    también se puede escuchar con cita previa, llamen al 718-665-5533.
+
     Wednesday
+
     8:30 AM
-    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión también se puede escuchar con cita previa, llamen al 718-665-5533.
+
+    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión
+    también se puede escuchar con cita previa, llamen al 718-665-5533.
+
     Thursday
+
     8:30 AM
-    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión también se puede escuchar con cita previa, llamen al 718-665-5533.
+
+    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión
+    también se puede escuchar con cita previa, llamen al 718-665-5533.
+
     Friday
+
     8:30 AM
-    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión también se puede escuchar con cita previa, llamen al 718-665-5533.
+
+    Ends at 9 AM. Confession can also be heard by appointment, please call at 718-665-5533 La confesión
+    también se puede escuchar con cita previa, llamen al 718-665-5533.
+
     Location
+
     Visit
+
     Website
+
     Get Directions
+
     Share
+
     Contact & Location
+
     Address
-    Saint Jerome's Roman Catholic Church
+
+    Saint Jerome''s Roman Catholic Church
+
     The Bronx, New York 10454
+
     Phone
+
     718-665-5533
+
     Website
+
     stjeromebronx.com
-    Our mission is to live and proclaim the Gospel of Jesus Christ, serving 2.5 million Catholics across New York — spiritually and materially, today and into the future.
+
+    Our mission is to live and proclaim the Gospel of Jesus Christ, serving 2.5 million Catholics across
+    New York — spiritually and materially, today and into the future.
+
     About
+
     Mission
+
     History
+
     Leadership
+
     Directory
+
     Services
+
     Becoming Catholic
+
     Sacraments
+
     Vocations
+
     Respect Life
+
     Resources
+
     Career Opportunities
-    Child Protect
+
+    Child Protect'
   note: Official location and available schedule read; publisher is not inferred from directory grouping.
 - url: https://www.stjeromebronx.com/
   seen: 2026-10-07
@@ -257,22 +479,27 @@ evidence:
     \ to Rome next week to...\nFacebook \nX (Twitter)\nLogin powered by eCatholic®"
   note: Current page or related bulletin context; does not independently decide this historical building
     or unresolved publication.
+- url: https://www.stjeromebronx.com/news
+  seen: '2026-10-08'
+  quote: Performing security verification
+  note: 'Actual October 8 rendered primary page: Cloudflare HTTP 403 challenge. Separately tested httpx
+    with default certifi validation; access failure is not a church-status fact.'
 line1: 230 Alexander Ave.
 city: Bronx
 state: NY
 postal_code: '10454'
 ---
 
-## What is known
+## Known worship / identity
 
 The parish-owned current page lists Spanish weekday 9 AM Mass and Sunday Masses at 9 AM, 10:30 AM and noon. It supplies current worship evidence. Its news page and scanned navigation did not yield an inspectable current parish bulletin; a guessed October 4 eCatholic issue failed. Neither failure establishes no-bulletin.
 
-Research was reviewed October 7, 2026. Exact primary sources are quoted below; saved probes and browser text in scratch/bronx2-* preserve transport failures and inspected channels.
+## October 8, 2026 completed checks
 
-## Why it is not decided
+The October 8 rendered primary news page is a Cloudflare HTTP 403 challenge; no current bulletin was exposed by that completed check. Retained parish-owned Sunday and weekday Mass schedules support Saint Jerome worship. An inaccessible news page and earlier failed guessed October 4 document do not identify a publisher or establish no publication.
 
-Neither an active church tied to a verified current bulletin publisher nor a fact-based exclusion is established for this record. Where current Mass is explicitly known, the unresolved question is publication, not whether the church is open. Absence from a directory, a blank bulletin widget, or a failed request is not an assertion of closure or no-bulletin.
+## Exact external blocker
 
-## Next step
+Saint Jerome at 718-665-5533 must supply the current complete bulletin or actual publisher URL. Read that issue masthead before defining a publisher; there is no unresolved inference that the known Mass site is closed.
 
-Contact St. Jerome at 718-665-5533 using the official directory contact and request the current bulletin PDF or actual online publisher link. Inspect its masthead before creating a publisher; preserve the known current Mass schedule.
+This remains open for the stated missing primary evidence. No automatic next-week probe is prescribed: an accessible actual issue or affirmative parish response changes the decision. Windows urllib expired-chain failures are client transport issues; verified httpx/certifi and rendered Cloudflare challenges are recorded separately. Neither is evidence of cessation or no publication.

@@ -13,6 +13,10 @@ name_verified: false
 address_verified: false
 roster: ['directory:111561']
 evidence:
+- url: https://files.ecatholic.com/11769/bulletins/20261011.pdf
+  seen: 2026-10-08
+  quote: Our Lady of the Lake Church
+  note: 'Actual page 1 read: 6590 State Route 52, Lake Huntington (Cochecton), Saturday 4:00pm; closed from 10/31-4/4 with Mass at SFX from 11/1-4/4. This is recurring seasonal worship, not permanent closure.'
 - url: https://www.archny.org/places/sfx-sap-olol
   seen: 2026-10-06
   note: 'Listed in Archdiocese of New York official parish map (all locations) as ''St. Francis Xavier
@@ -28,7 +32,7 @@ evidence:
 
 ## Holds Mass
 
-The four-page full issue headed October 4 explicitly gives Our Lady of the Lake at 6590 State Route 52, Lake Huntington (Cochecton), with Saturday 4 PM Mass. It says closed October 31-April 4, with winter services at St. Francis Xavier; this recurring seasonal venue still counts. The Sunday-numbered PDF is a supplement, not the full issue.
+The full issues headed October 4 and October 11 explicitly give Our Lady of the Lake at 6590 State Route 52, Lake Huntington (Cochecton), with Saturday 4 PM Mass. The October 11 issue says closed October 31-April 4, with winter services at St. Francis Xavier; this recurring seasonal venue still counts. The October 4 full issue is stored as `20261003.pdf`, while the October 11 full issue is stored as `20261011.pdf`. Their companion supplement filenames change order, so a blanket Sunday-numbered-PDF rule is incorrect. Both latest two-page files were read on October 8; only the full issue supplies the Mass schedule.
 
 ## Name and address
 

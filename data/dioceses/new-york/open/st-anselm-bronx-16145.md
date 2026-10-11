@@ -1,22 +1,31 @@
 ---
 name: St. Anselm
-revisit: Obtain a current October bulletin and compare Roch channels; resolve church 673 Tinton versus
-  site contact 685 Tinton before asserting verified address.
-revisit_after: 2026-10-14
-roster: ['gcatholic:16145', 'directory:3094']
+revisit: Saint Anselm office must supply a current complete issue or accessible channel and clarify the
+  physical church entrance at 673 Tinton versus office contact 685 Tinton. Roch relegation is settled
+  independently and does not establish present bulletin membership.
+roster:
+- gcatholic:16145
+- directory:3094
 evidence:
 - url: https://gcatholic.org/churches/usa-02/16145
   seen: 2026-10-07
-  quote: |-
-    Address: 673 Tinton Ave., Bronx, New York 10455
+  quote: 'Address: 673 Tinton Ave., Bronx, New York 10455
+
     Country: USA
+
     Telephone: +1 (718) 585-8666
+
     GCatholic Church ID: 16145
+
     Missions
+
     Church of St. Roch , Bronx
+
     Show Map
+
     Churches Nearby
-    Ch
+
+    Ch'
   note: Place identity, not a present Mass or closure determination.
 - url: https://files.ecatholic.com/11115/bulletins/20260802.pdf?t=1788972503000
   seen: 2026-10-07
@@ -28,81 +37,141 @@ evidence:
   note: August 2, 2026 older issue.
 - url: https://stanselmnyc.org/
   seen: 2026-10-07
-  quote: |-
-    Church of St.Anselm & St.Roch
+  quote: 'Church of St.Anselm & St.Roch
+
     685 Tinton Ave, Bronx, New York
+
     10455
+
     Parish Office
+
     Bulletins
+
     Facebook
+
     X (Twitter)
+
     Flocknote
+
     Search
+
     Search
+
     Home
+
     About Us
-    Parish Of
+
+    Parish Of'
 - url: https://stanselmnyc.org/
   seen: 2026-10-07
-  quote: |-
-    Sunday Mass Schedule
+  quote: 'Sunday Mass Schedule
+
     Sunday :
+
     9:30 AM
+
     English
+
     English
+
     EN
+
     English
+
     11:00 AM
+
     English
+
     English
+
     EN
+
     Español
+
     12:30 PM
+
     English
+
     English
+
     EN
+
     English
+
     Daily Mass Schedule
+
     Monday :
+
     6:30 PM
+
     English
+
     English
+
     EN
+
     Español
+
     Tuesday :
+
     12:00 PM
+
     English
+
     English
+
     EN
+
     English
+
     Wednesday :
+
     6:30 PM
+
     English
+
     English
+
     EN
+
     Español
+
     Thursday :
+
     12:00 PM
+
     English
+
     English
+
     EN
+
     English
+
     1:00 PM
-    E
+
+    E'
+- url: https://stanselmnyc.org/bulletins
+  seen: '2026-10-08'
+  quote: Performing security verification
+  note: 'Actual October 8 rendered primary page: Cloudflare HTTP 403 challenge. Separately tested httpx
+    with default certifi validation; access failure is not a church-status fact.'
 line1: 673 Tinton Ave.
 city: Bronx
 state: NY
 postal_code: '10455'
 ---
 
-## What is known
+## Known worship / identity
 
 Current site has Sunday Mass times and joined Anselm/Roch name. Latest linked bulletin is August 2, 2026; neither that older issue nor the joined name establishes present publisher boundaries/Mass at Roch.
 
-Saved GCatholic and matched directory identities were reviewed October 7, 2026. A merger, omitted building, blank bulletin page, or blocked download is not an explicit closure or no-bulletin fact.
+## October 8, 2026 completed checks
 
-## Why it is not decided
+The October 8 bulletin and about-us pages both rendered Cloudflare HTTP 403. The August 2, 2026 file on files.ecatholic.com/11115 was read from actual downloaded text; its joined Anselm/Roch title is historical publisher evidence. Separately, the operative Saint Roch relegation decree, page 3, explicitly reduces the Wales Avenue church to profane use; that building is now excluded and is not a candidate worship site merely because Roch remains in the title. The 673 versus 685 Tinton church/office address discrepancy remains.
 
-The current church/publisher relationship or building status remains unresolved. This remains open, not excluded.
+## Exact external blocker
 
-Next step (October 14, 2026): Obtain a current October bulletin and compare Roch channels; resolve church 673 Tinton versus site contact 685 Tinton before asserting verified address.
+Saint Anselm office must supply a current complete issue or accessible channel and clarify the physical church entrance at 673 Tinton versus office contact 685 Tinton. Roch relegation is settled independently and does not establish present bulletin membership.
+
+This remains open for the stated missing primary evidence. No automatic next-week probe is prescribed: an accessible actual issue or affirmative parish response changes the decision. Windows urllib expired-chain failures are client transport issues; verified httpx/certifi and rendered Cloudflare challenges are recorded separately. Neither is evidence of cessation or no publication.

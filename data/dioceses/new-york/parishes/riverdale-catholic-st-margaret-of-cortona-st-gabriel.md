@@ -2,10 +2,15 @@
 name: 'Riverdale Catholic: St. Margaret of Cortona - St. Gabriel'
 website: https://www.riverdalecatholic.org/about-5
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.riverdalecatholic.org/about-5
+revisit: Recheck archive freshness; September 20 remains the latest listed issue on October 8. A later access failure does not overturn the successful collector and production PDF check.
 publication: ['url:https://www.riverdalecatholic.org/about-5']
 group: 'Riverdale Catholic: St. Margaret of Cortona - St. Gabriel'
 evidence:
+- url: https://www.riverdalecatholic.org/about-5
+  seen: 2026-10-08
+  quote: September 20th, 2026
+  note: 'Direct verified HTTP archive read: September 20 is first and latest listed, then September 13 and September 6. The pinned page-pdfs recipe selects the actual latest visible September 20 issue; archive lag is explicit and does not imply ceased publication.'
 - url: https://www.riverdalecatholic.org/_files/ugd/580908_2e42b0bfeb07457ea73e4f009347814d.pdf
   seen: 2026-10-07
   quote: "Twenty-Fifth Sunday in Ordinary Time 20th September 2026\nHoly Masses \nWeekday \nSt. Margaret’s:\
@@ -46,6 +51,8 @@ Linked worship-site records for Riverdale Catholic: St. Margaret of Cortona - St
 
 The saved parish bulletin index links the issue quoted above. Publication identifiers come from actual issue links, not canonical merger names. https://www.riverdalecatholic.org/about-5 is the bulletin discovery page.
 
-## Not yet confirmed
+## October 8, 2026 connector verification
 
-Self-hosted PDF provider recipes, where applicable, remain to be tested before promotion. Historical-building status is separate from present bulletin grouping.
+The actual HTTP archive and production PDF download succeeded in both earlier October 8 audit passes: the page-pdfs collector selected https://www.riverdalecatholic.org/_files/ugd/580908_2e42b0bfeb07457ea73e4f009347814d.pdf, with reason first-listed, dated September 20, 2026, and downloaded 7,282,171 bytes. The full rendered archive was independently re-read in T3 on October 8: September 20 is still its latest listed issue, followed by September 13 and September 6. That 18-day archive lag is retained explicitly; no October issue is claimed. First-listed is the collector's documented result, not evidence of selecting the wrong issue when it is the actual newest visible issue. The source issue's masthead and both building-specific schedules were read. Pin page-pdfs to the actual archive; a later HTTP/access failure alone must not undo the prior successful check or assert that this publication is unsupported.
+
+Revisit archive freshness with riverdalecatholic@gmail.com or 718-549-8053 if the lag grows or an issue is omitted; no contact has been made. This source does not establish that scheduled future Masses occurred.

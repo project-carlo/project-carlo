@@ -9,7 +9,7 @@ evidence:
 - url: https://files.ecatholic.com/6765/bulletins/20261004.pdf
   seen: 2026-10-07
   quote: SAINT FRANCES OF ROME, SAINT FRANCIS OF ASSISI, SAINT ANTHONY & OUR LADY OF GRACE
-  note: Verbatim visual masthead transcription, PDF page 1, inspected in scratch/bronx2-sfr-page1.png.
+  note: Verbatim visual masthead transcription of page 1 of the cited PDF, read directly from its rendered image.
     Image-only content is not in extracted PDF text.
 - url: https://files.ecatholic.com/6765/bulletins/20261004.pdf
   seen: 2026-10-07
@@ -129,15 +129,15 @@ promoted: 2026-10-08
 
 ## Publisher
 
-The October 4, 2026 issue has a raster masthead naming all four historical constituent parish names. Its page 1 Mass schedule lists St. Frances of Rome and St. Francis of Assisi Chapel; those are the two current sites directly evidenced here. The Baychester chapel has Sunday Mass at 10:00 AM. Neither historical names nor omission establish status of St. Anthony or Our Lady of Grace. Both evidenced worship sites have church records linked to this single publisher.
+The October 4, 2026 issue has a raster masthead naming all four historical constituent parish names. Its page 1 Mass schedule lists St. Frances of Rome and St. Francis of Assisi Chapel; those are the two current sites directly evidenced here. The Baychester chapel has Sunday Mass at 10:00 AM. St. Anthony and Our Lady of Grace are separately excluded under their operative building-specific relegation decrees, not from historical names or schedule omission. Both evidenced worship sites have church records linked to this single publisher.
 
 ## Worship sites
 
 Linked worship-site records for St. Frances of Rome - St. Francis of Assisi - St. Anthony and Our Lady of Grace: [St. Frances of Rome](../churches/st-frances-of-rome-bronx-16157.md), [St. Francis of Assisi Chapel](../churches/st-francis-of-assisi-baychester-avenue-bronx.md). Each church record retains its building-specific Mass evidence.
 
-[Our Lady of Grace](../open/our-lady-of-grace-bronx-16135.md) remains an open question. Obtain an explicit parish/archdiocesan status statement or public Mass schedule for Grace at 3985 Bronxwood Avenue.
+[Our Lady of Grace](../excluded/our-lady-of-grace-bronx-16135.md), 3985 Bronxwood Avenue, is excluded as closed by its building-specific relegation decree signed May 26, 2018 and effective immediately. The actual operative paragraph reducing this church to profane but not sordid use was visually read October 8, 2026; exact decree evidence is retained in the exclusion.
 
-[St. Anthony](../open/st-anthony-bronx-16147.md) remains an open question. Obtain a building-specific public Mass schedule or explicit cessation/relegation notice for Anthony, 4505 Richardson Avenue.
+[St. Anthony](../excluded/st-anthony-bronx-16147.md), 4505 Richardson Avenue, is excluded as closed by its separately issued building-specific relegation decree signed May 26, 2018 and effective immediately, visually read October 8, 2026. This is not Saint Anthony of Padua at 832 East 166th Street. Neither historical masthead name nor omission decides closure; the operative decrees do. Neither exclusion asserts an exact final-Mass date.
 
 ## Website and bulletin provider
 

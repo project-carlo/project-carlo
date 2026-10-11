@@ -1,32 +1,29 @@
 ---
 name: St. Peter
-revisit: Ask St. Peter office at 845-452-8580 whether public Mass occurs at the original indexed church
-  address; distinguish the original building from 185 Hudson View Drive chapel and the school auditorium.
-revisit_after: 2026-10-14
-roster: ['gcatholic:16217']
+revisit: Ask 845-452-8580 / stpppoffice@gmail.com whether the GCatholic 6 Father Cody Plaza entry identifies
+  the school auditorium/Seat of Wisdom chapel or a distinct worship building. The current bulletin calls
+  that a mailing address; do not invent a separate historical church point.
+revisit_after: '2026-10-17'
+roster:
+- gcatholic:16217
 evidence:
 - url: https://gcatholic.org/churches/usa-02/16217
   seen: 2026-10-07
   quote: 'GCatholic Church ID: 16217'
   note: Roster identity only, not present public Mass evidence.
+- url: https://files.ecatholic.com/6768/bulletins/20261011.pdf
+  seen: '2026-10-10'
+  quote: 'Mailing address: 6 Fr. Cody Plaza, Poughkeepsie, NY 12601'
+  note: Actual saved October 11 issue page 2 read October 10; it also gives office 171 Salt Point Turnpike
+    and explicitly labels auditorium/Our Lady of the Rosary Masses.
 line1: 6 Father Cody Plaza
 city: Poughkeepsie
 state: NY
 postal_code: '12601'
 ---
 
-## What is known
+## Address meaning corrected
 
-The October 4, 2026 St. Peter Poughkeepsie bulletin locates public Mass at Our Lady of the Rosary Chapel and the parish auditorium. It does not establish Mass at the separate historical GCatholic St. Peter church address.
+The eight-page October 11 issue, already posted in the October 8 research, was read on October 10. Page 2 explicitly calls 6 Fr. Cody Plaza the mailing address, not a newly confirmed physical church. It separately locates the office at 171 Salt Point Turnpike and Our Lady of the Rosary Chapel at 185 Hudson View Drive. The school Seat of Wisdom chapel is named without a numbered physical location; Saturday 4 PM is explicitly Parish Auditorium. The primary Mass Times page instead calls the Saturday venue School Gym. Those labels do not justify treating the roster's mailing address as a separate active historical church or asserting that it closed.
 
-GCatholic identifies this exact site as St. Peter, 6 Father Cody Plaza, Poughkeepsie. Official directory candidates are linked only when they match the site, not merely a nearby church. Saved sources were reviewed on October 7, 2026.
-
-## Why it is not decided
-
-The evidence does not yet settle both current public Mass at this building and the present bulletin publisher, or an explicit exclusion fact. Neither missing directory coverage, a canonical merger, a stale archive nor a failed download is treated as closure or no-bulletin.
-
-## Next step
-
-Ask St. Peter office at 845-452-8580 whether public Mass occurs at the original indexed church address; distinguish the original building from 185 Hudson View Drive chapel and the school auditorium.
-
-Revisit on or after October 14, 2026.
+The existing publisher and Rosary Chapel are retained. The original GCatholic entry and the separately documented auditorium question must be reconciled by the office with the actual building/room and address before they can be collapsed or become two venues. Telephone 845-452-8580 and stpppoffice@gmail.com are printed on page 2. October 10 HTTP Mass Times/history re-fetches were blocked, not cessation evidence. No contact was sent and no point is guessed from the mailing address. October 11 intentions are future-dated sources, not completed services.

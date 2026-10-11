@@ -1,207 +1,395 @@
 ---
 name: St. Martin of Tours
-revisit: Call St. Martin at 718-295-0913 and request the current Belmont Catholic Community bulletin.
-  Compare its masthead with any Mt. Carmel channel before assigning a publisher. No current bulletin found
-  is not the same as an explicit no-bulletin statement.
-revisit_after: 2026-11-07
-roster: ['gcatholic:16174', 'directory:1426']
+revisit: The Saint Martin/Belmont offices must provide the latest complete shared or separate bulletin.
+  Obtain both current mastheads; do not infer continued sharing from the February 18 issue or the common
+  pastor.
+roster:
+- gcatholic:16174
+- directory:1426
 evidence:
 - url: https://gcatholic.org/churches/usa-02/16174
   seen: 2026-10-07
-  quote: |-
-    Church of St. Martin of Tours, Bronx, New York, USA
+  quote: 'Church of St. Martin of Tours, Bronx, New York, USA
+
     Church of St. Martin of Tours
+
     Bronx,
+
     New York
+
     ,
+
     USA
+
     ℹ️ Info
+
     📍 Nearby
+
     Jurisdiction:
+
     Metropolitan Archdiocese of
+
     New York
+
     Type:
+
     Church
+
     Rite:
+
     Roman
+
     (Latin)
+
     Location:
+
     87G8V427+96
+
     Address:
+
     664 Grote St., Bronx,
+
     New York
+
     10457
+
     Country:
+
     USA
+
     Telephone:
+
     +1 (718) 295-0913
+
     GCatholic Church ID:
+
     16174
+
     Show Map
+
     Churches Nearby
+
     Church of Our Lady of Mount Carmel
+
     , Bronx
+
     (470 m ↑)
+
     Church of Our Savior
+
     , Bronx
+
     (720 m ↖)
+
     Church of St. Joseph
+
     , Bronx
+
     (910 m ↙)
+
     Church of St. Thomas Aquinas
+
     , Bronx
+
     (1.1 km ↓)
+
     Church of St. Simon Stock
+
     , Bronx
+
     (1.1 km ↖)
+
     Church of Our Lady of Mercy
+
     , Bronx
+
     (1.3 km ↖)
+
     Church of St. Mary Protectress
+
     , Bronx
+
     (1.4 km ↙)
+
     Church of St. Margaret Mary
+
     , Bronx
+
     (1.8 km ←)
+
     Church of St. Dominic
+
     , Bronx
+
     (1.8 km ↘)
+
     Church of Our Lady of Refuge
+
     , Bronx
+
     (1.8 km ↑)
+
     Last updated on 2025.12.21
-    © 2026 GCatholic.org
+
+    © 2026 GCatholic.org'
   note: Roster identity and address, not proof of present worship or closure.
 - url: https://www.archny.org/places/st-martin-of-tours-bx
   seen: 2026-10-07
-  quote: |-
-    Belmont Catholic Community: St. Martin of Tours Church - Archdiocese of New York
+  quote: 'Belmont Catholic Community: St. Martin of Tours Church - Archdiocese of New York
+
     Child Protection
+
     Parish Finder
+
     Donate
+
     Child Protection
+
     Parish Finder
+
     Donate
+
     About
+
     +
+
     Mission
+
     History
+
     Leadership
+
     Find Your Parish
+
     Directory
+
     Careers
+
     Media
+
     Services
+
     +
+
     Becoming Catholic
+
     Baptize Your Child
+
     Find a Catholic School
+
     Grow in Faith
+
     +
+
     As a Child
+
     Catholic Scouting
+
     In Middle and High School
+
     In College
+
     As a Young Adult
+
     Catholic Calendar
+
     Resources for Parishes
+
     Live Catholic
+
     Marrying in the Catholic Church
+
     Respect Life
+
     Sacraments & Life Moments
+
     +
+
     Becoming Catholic (RCIA)
+
     Baptize Your Child
+
     Receiving the Eucharist
+
     Confirmation
+
     Marriage
+
     Penance & Confession
+
     Anointing of the Sick
+
     End of Life
+
     Annulments
+
     Sacramental Records
+
     School Records
+
     Burial Records
+
     Serve & Vocations
+
     +
+
     Adult Education
+
     Live Catholic
+
     Liturgy
+
     Vocations
+
     Sacramental Records
+
     School Records
+
     Child Protection
+
     +
+
     Report Abuse
+
     Child Protection FAQ
+
     Policies
+
     Resources
+
     Training
+
     En Español
+
     News
+
     +
+
     The Good Newsroom
+
     Monthly Bulletin
+
     Press Releases
+
     Updates from our Ministries
+
     Events
+
     Contact Us
+
     Belmont Catholic Community: St. Martin of Tours Church
+
     Saint Martin of Tours Roman Catholic Church
+
     The Bronx, New York 10457
+
     Phone
+
     718-295-0913
+
     Next Mass
+
     Office Hours:
+
     Monday - Friday: 9 AM - 5 PM
+
     Saturday: 10 AM - 6 PM
+
     Sunday: 9 AM - 2 PM
+
     Mass Schedule
+
     Saturday
+
     6:00 PM
+
     Español (Spanish)
+
     Sunday
+
     9:30 AM
+
     English
+
     11:00 AM
+
     Español (Spanish)
+
     Location
+
     Visit
+
     Website
+
     Get Directions
+
     Share
+
     Contact & Location
+
     Address
+
     Saint Martin of Tours Roman Catholic Church
+
     The Bronx, New York 10457
+
     Phone
+
     718-295-0913
+
     Website
+
     stmartinoftoursbronx.org
-    Our mission is to live and proclaim the Gospel of Jesus Christ, serving 2.5 million Catholics across New York — spiritually and materially, today and into the future.
+
+    Our mission is to live and proclaim the Gospel of Jesus Christ, serving 2.5 million Catholics across
+    New York — spiritually and materially, today and into the future.
+
     About
+
     Mission
+
     History
+
     Leadership
+
     Directory
+
     Services
+
     Becoming Catholic
+
     Sacraments
+
     Vocations
+
     Respect Life
+
     Resources
+
     Career Opportunities
+
     Child Protection
+
     Report Abuse
+
     Privacy Policy
+
     Subscribe
-    Receive the latest news, initiatives, and information about upcoming events from the Archdiocese of New York. Click the link below or text ARCH to 84576!
+
+    Receive the latest news, initiatives, and information about upcoming events from the Archdiocese of
+    New York. Click the link below or text ARCH to 84576!
+
     Sign Up
+
     © Archdiocese of New York 2026
+
     Privacy Policy
-    You're about to open an external site in a new tab. Would you like to proceed?
+
+    You''re about to open an external site in a new tab. Would you like to proceed?
+
     Yes
-    No
+
+    No'
   note: Official location and available schedule read; publisher is not inferred from directory grouping.
 - url: https://stmartinoftoursbronx.org
   seen: 2026-10-07
@@ -214,22 +402,27 @@ evidence:
     \ 10, 38-42\nLogin powered by eCatholic®"
   note: Current page or related bulletin context; does not independently decide this historical building
     or unresolved publication.
+- url: https://stmartinoftoursbronx.org/bulletins
+  seen: '2026-10-08'
+  quote: Performing security verification
+  note: 'Actual October 8 rendered primary page: Cloudflare HTTP 403 challenge. Separately tested httpx
+    with default certifi validation; access failure is not a church-status fact.'
 line1: 664 Grote St.
 city: Bronx
 state: NY
 postal_code: '10457'
 ---
 
-## What is known
+## Known worship / identity
 
 The parish page and official directory identify St. Martin of Tours at 664 Grote Street and list Saturday 6 PM and Sunday 9:30 AM/11 AM Masses. The saved parish bulletin archive stops at November 26, 2023. The directory grouping Belmont Catholic Community is not proof of a currently shared bulletin.
 
-Research was reviewed October 7, 2026. Exact primary sources are quoted below; saved probes and browser text in scratch/bronx2-* preserve transport failures and inspected channels.
+## October 8, 2026 completed checks
 
-## Why it is not decided
+The October 8 rendered bulletin page is a Cloudflare HTTP 403 challenge. The downloaded February 18, 2026 Mount Carmel/Belmont issue, page 1, specifically includes Saint Martin of Tours Church, 664 Grote Street, and its own Mass box. The older shared masthead is affirmative historical publication evidence but cannot settle present sharing. The retained current parish schedule supports worship separately from this publication question.
 
-Neither an active church tied to a verified current bulletin publisher nor a fact-based exclusion is established for this record. Where current Mass is explicitly known, the unresolved question is publication, not whether the church is open. Absence from a directory, a blank bulletin widget, or a failed request is not an assertion of closure or no-bulletin.
+## Exact external blocker
 
-## Next step
+The Saint Martin/Belmont offices must provide the latest complete shared or separate bulletin. Obtain both current mastheads; do not infer continued sharing from the February 18 issue or the common pastor.
 
-Call St. Martin at 718-295-0913 and request the current Belmont Catholic Community bulletin. Compare its masthead with any Mt. Carmel channel before assigning a publisher. No current bulletin found is not the same as an explicit no-bulletin statement.
+This remains open for the stated missing primary evidence. No automatic next-week probe is prescribed: an accessible actual issue or affirmative parish response changes the decision. Windows urllib expired-chain failures are client transport issues; verified httpx/certifi and rendered Cloudflare challenges are recorded separately. Neither is evidence of cessation or no publication.

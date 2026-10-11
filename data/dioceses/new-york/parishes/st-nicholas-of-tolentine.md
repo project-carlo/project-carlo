@@ -2,10 +2,14 @@
 name: St. Nicholas of Tolentine
 website: https://stnicholasoftolentinebronx.org/bulletins/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://stnicholasoftolentinebronx.org/bulletins/
 publication: ['url:https://stnicholasoftolentinebronx.org/bulletins/']
 group: St. Nicholas of Tolentine
 evidence:
+- url: https://stnicholasoftolentinebronx.org/bulletins/
+  seen: 2026-10-08
+  quote: English Bulletin Archives
+  note: 'Direct verified HTTP read lists October 4, 2026 as latest English issue and current Spanish/Vietnamese image links. Pinned page-pdfs replay on the complete returned HTML selected 20261004ENGOct42026.pdf with reason current.'
 - url: https://stnicholasoftolentinebronx.org/wp-content/uploads/2026/10/20261004ENGOct42026.pdf
   seen: 2026-10-07
   quote: "2345 University Avenue Bronx, NY 10468 (718) 295-6800 |www.stnicholasoftolentinebronx.org  |\
@@ -46,4 +50,4 @@ The saved parish bulletin index links the issue quoted above. Publication identi
 
 ## Not yet confirmed
 
-Self-hosted PDF provider recipes, where applicable, remain to be tested before promotion. Historical-building status is separate from present bulletin grouping.
+On October 8, 2026 the complete parish-owned archive https://stnicholasoftolentinebronx.org/bulletins/ was fetched over verified HTTP. The pinned page-pdfs collector was executed against that actual HTTP HTML using the pipeline SnapshotPage resolver, reference date October 8, 2026. It selected https://stnicholasoftolentinebronx.org/wp-content/uploads/2026/10/20261004ENGOct42026.pdf, dated October 4, with reason current. The same page has Spanish and Vietnamese October 4 links; these are language editions of one publisher, not separate parish rows. The recipe pins both the collector and archive, with no homepage discovery. This is collector selection on actual fetched HTML, not a live browser fetch:check run; the cited issue itself was separately read for its masthead and schedule.

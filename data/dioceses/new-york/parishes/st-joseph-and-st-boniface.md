@@ -27,4 +27,4 @@ Official parish site links the inspected current issue. Current masthead, not ad
 
 Linked worship-site records for St. Joseph and St. Boniface: [St. Joseph](../churches/st-joseph-spring-valley.md). Each church record retains its building-specific Mass evidence.
 
-[St. Boniface](../open/st-boniface-wesley-hills.md) remains an open question. Ask 845-356-0311 for current Mass at 5 Willow Tree Road or a dated last-Mass/closure statement. Inspect chapel-restoration and Mass-times pages. Do not attach directory:4754: that is the separate Spring Valley main church.
+[The former St. Boniface building](../excluded/st-boniface-wesley-hills.md) at 5 Willow Tree Road is now the active Holy Family Syro-Malabar Catholic Church in the St. Thomas Syro-Malabar Catholic Eparchy of Chicago. Its current parish and eparchial directory independently identify the address and jurisdiction; the history connects the former St. Boniface property to Holy Family. It is excluded from this archdiocese as other-jurisdiction, not closed or without Mass. The historical compound publisher title does not establish present Latin worship at that building.

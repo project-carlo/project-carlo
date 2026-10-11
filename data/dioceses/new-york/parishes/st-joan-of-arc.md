@@ -2,25 +2,29 @@
 name: St. Joan of Arc
 website: https://stjoanofarcbronx.org/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.church-bulletin.org/saint-joan-of-arc-church-bronx-ny-10472
 publication: ['url:https://church-bulletin.org/4049']
 group: St. Joan of Arc
 evidence:
+- url: https://www.church-bulletin.org/saint-joan-of-arc-church-bronx-ny-10472
+  seen: 2026-10-08
+  quote: October 11, 2026 Bulletin
+  note: 'Direct verified HTTP publisher index; upcoming-Sunday PDF is linked explicitly. Pinned page-pdfs replay on complete fetched HTML selected the October 11 PDF with reason current using October 8 as reference date. This is not a live browser fetch:check claim.'
 - url: https://www.church-bulletin.org/bulletin/saint-joan-of-arc-church-bronx-ny-10472/2026-10-04.pdf
   seen: 2026-10-07
   quote: |-
     St. Joan of Arc Church
     1372 Stratford Ave
     Bronx, NY 10472
-  note: Verbatim visual masthead transcription of page 1, scratch/bronx2-joan-page1.png. Original PDF
-    downloaded with normally verified TLS through Chrome request context. Issue date in publisher index
+  note: Verbatim visual masthead transcription of page 1 of the cited PDF. Original PDF
+    downloaded with normally verified TLS. Issue date in publisher index
     and page 2 Sunday October 4 intentions.
 - url: https://www.church-bulletin.org/bulletin/saint-joan-of-arc-church-bronx-ny-10472/2026-10-04.pdf
   seen: 2026-10-07
   quote: |-
     Domingo, 4 de Octubre/Sun., Oct. 4
     8:00 — Pro Populo
-  note: Visual page 2 transcription, scratch/bronx2-joan-page2.png. Additional Sunday intentions appear
+  note: Visual page 2 transcription of the cited PDF. Additional Sunday intentions appear
     at 9:00, 10:30, 12:00 and 7:00.
 - url: https://church-bulletin.org/4049
   seen: 2026-10-07
@@ -42,4 +46,4 @@ The saved parish bulletin index links the issue quoted above. Publication identi
 
 ## Not yet confirmed
 
-Self-hosted PDF provider recipes, where applicable, remain to be tested before promotion. Historical-building status is separate from present bulletin grouping.
+On October 8, 2026 the actual John Patrick index at https://www.church-bulletin.org/saint-joan-of-arc-church-bronx-ny-10472 was fetched over verified HTTP. The numeric /4049 alias redirects to it. The pinned page-pdfs collector was executed on that complete HTTP HTML using the pipeline SnapshotPage resolver with reference date October 8, 2026; it selected https://www.church-bulletin.org/bulletin/saint-joan-of-arc-church-bronx-ny-10472/2026-10-11.pdf, dated October 11, with reason current. This is a newly posted upcoming-Sunday issue, not a claim that October 11 has occurred. No homepage discovery or collector fallback is needed. This tests collector selection on actual fetched HTML, not a live browser fetch:check run. The already visually read October 4 issue above independently establishes the publisher and Mass site.

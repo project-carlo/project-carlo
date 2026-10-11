@@ -26,9 +26,9 @@ The October 4 masthead names all five churches and their individual addresses. I
 
 Linked worship-site records for Holy Cross, St. Patrick, St. Mary, St. George and St. Francis: [St. Francis of Assisi](../churches/st-francis-of-assisi-youngsville.md), [St. George](../churches/st-george-jeffersonville.md), [St. Mary](../churches/st-mary-obernburg.md). Each church record retains its building-specific Mass evidence.
 
-[Holy Cross](../open/holy-cross-callicoon.md) remains an open question. Open the parish-specific bulletin links saved in scratch/nyc1-16419-browser.json and the matched official directory page; download the newest issue, read its masthead and building-specific public Mass schedule, and verify any separate member channel before choosing one publisher. If no bulletin is found, ask the parish office; lack of a working URL is not evidence of closure.
+[Holy Cross](../open/holy-cross-callicoon.md) has an explicit current Sunday 10 AM schedule at its Callicoon building. Its own archive at https://holycrosscallicoon.org/bulletins ends June 14, 2026. The June issue and this October issue name five churches, but that does not settle whether Callicoon currently distributes this issue or a separate channel. Ask the Holy Cross office at 845-887-5450 to confirm present bulletin membership before attaching the building to this publisher.
 
-[St. Patrick Church](../open/st-patrick-long-eddy.md) remains an open question. The related Holy Cross archive captured October 7 stops in June. Ask for the current shared or independent bulletin and site-specific public Mass at 20 Church Street, Long Eddy; do not infer closure from a stale archive.
+[St. Patrick Church](../open/st-patrick-long-eddy.md) has an explicit current Sunday 8 AM schedule at 20 Church Street, Long Eddy. The Holy Cross archive captured October 8 still stops in June. Ask the same office for its current shared or independent bulletin; public worship is established, while present publication membership remains unconfirmed. Do not infer closure from a stale archive.
 
 ## Website and publication
 

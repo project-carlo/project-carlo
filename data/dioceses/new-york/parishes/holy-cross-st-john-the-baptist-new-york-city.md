@@ -66,10 +66,9 @@ evidence:
     THURSDAY:
   note: Current parish site, read in headed Chrome during October 7 research; exact public schedule, not
     canonical directory name.
-revisit: Read the next available issue from https://christinthecity.nyc/bulletins and verify the masthead
-  and building-specific schedule for Holy Cross. Follow the linked open/excluded records for unresolved
-  building status or member-channel checks. Run fetch:check separately to confirm ingestion; no fresh
-  fetch is recorded by this edit.
+revisit: St. John the Baptist is temporarily suspended for repairs, including the October 11, 2026
+  Masses explicitly canceled in the posted issue. Obtain a dated parish reopening notice before restoring
+  that worship site; retain only Holy Cross as active meanwhile. This is not permanent closure.
 revisit_after: 2026-10-14
 promoted: 2026-10-08
 ---
@@ -82,7 +81,7 @@ Holy Cross - St. John the Baptist is represented by the actual issue at https://
 
 Linked worship-site records for Holy Cross - St. John the Baptist: [Holy Cross](../churches/holy-cross-west-42nd-street-new-york-city.md). Each church record retains its building-specific Mass evidence.
 
-[St. John the Baptist](../open/st-john-the-baptist-new-york-city.md), at 213 West 30th Street, is temporarily closed for repairs according to the homepage notice preserved in that open record on October 8, 2026. The unchanged printed Mass schedule does not override the suspension notice. Confirm reopening with the parish office and obtain a dated reopening notice before adding an active venue; this is not a permanent-closure exclusion.
+[St. John the Baptist](../excluded/st-john-the-baptist-new-york-city.md), at 213 West 30th Street, is temporarily excluded with reason `other` for repairs. The October 8, 2026 homepage notice and the already-posted October 11 bulletin's explicit cancellation override the unchanged regular printed schedule. Only Holy Cross remains an active worship site attached to this publisher. Obtain a dated parish reopening notice before restoring St. John; no permanent physical closure is asserted.
 
 ## Website and bulletin provider
 
@@ -90,4 +89,4 @@ The saved parish-site links lead to this issue. Provider: ecatholic; publication
 
 ## Recheck
 
-Read the next available issue from https://christinthecity.nyc/bulletins and verify the masthead and building-specific schedule for Holy Cross. Follow the linked open/excluded records for unresolved building status or member-channel checks. Run fetch:check separately to confirm ingestion; no fresh fetch is recorded by this edit.
+The irreducible question is the reopening date of St. John the Baptist after temporary repairs, not whether the shared publisher or Holy Cross is active. The October 11, 2026 issue explicitly suspends that Sunday's St. John Masses; it was already posted when read October 8, and no future reopening is treated as completed. Follow the dated evidence in the linked temporary exclusion and require a parish reopening announcement before restoring the building. Fetch-route validation is separate from this building disposition.

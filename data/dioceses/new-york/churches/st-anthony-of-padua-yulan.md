@@ -13,6 +13,10 @@ name_verified: true
 address_verified: true
 roster: ['gcatholic:16410', 'directory:4224']
 evidence:
+- url: https://files.ecatholic.com/11769/bulletins/20261011.pdf
+  seen: 2026-10-08
+  quote: St. Anthony of Padua/St. Thomas Aquinas Church
+  note: 'Actual page 1 read: 25 Beaver Brook Road, Yulan; Saturday 4:00pm, Sunday 11:30am, Tuesday/Thursday 9:00am, first Saturday 9:00am. One building with combined dedication, not a second St. Thomas Aquinas venue.'
 - url: https://gcatholic.org/churches/usa-02/16410
   seen: 2026-10-07
   quote: 'Address: 25 Beaver Brook Rd., Yulan, New York 12792'

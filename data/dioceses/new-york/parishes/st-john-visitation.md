@@ -2,10 +2,15 @@
 name: St. John - Visitation
 website: https://stjohnvisitationparish.org/english/important-information/bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://stjohnvisitationparish.org/english/important-information/bulletin/
+revisit: Re-test complete rendered archive if its route changes; the important-information route already passed actual HTML collection and production PDF download on October 8.
 publication: ['url:https://stjohnvisitationparish.org/english/important-information/bulletin/']
 group: St. John - Visitation
 evidence:
+- url: https://stjohnvisitationparish.org/english/information/bulletin/
+  seen: 2026-10-08
+  quote: 403 - Forbidden
+  note: 'Resumed verified HTTP request returned access-forbidden document, as did the important-information route. Earlier actual HTML collection and production PDF download at important-information succeeded for October 4. The later incomplete href-only reconstruction picked 2023 but is not a full-page test; neither lower-fidelity result overrides the successful check.'
 - url: https://stjohnvisitationparish.org/english/wp-content/uploads/sites/4/2026/10/oct4_2026_stjohnvisit_compressed.pdf
   seen: 2026-10-07
   quote: "Twenty-Seventh Sunday in  \nOrdinary Time  \n        OCTOBER 4, 2026 \n \n \n \n       SUNDAY,\
@@ -124,12 +129,14 @@ The October 4, 2026 issue names the people of St. John-Visitation in its Mass in
 
 Linked worship-site records for St. John - Visitation: [St. John](../churches/st-john-bronx.md). Each church record retains its building-specific Mass evidence.
 
-[Visitation](../open/visitation-van-cortlandt-park-south-bronx.md) remains an open question. Ask St. John-Visitation at 718-548-1221 whether public or occasional Mass remains at 160 Van Cortlandt Park South; obtain a dated closure/relegation statement or current building-specific schedule. Keep the Kingsbridge church and former Visitation building separate until actual evidence supports their status.
+[Visitation](../excluded/visitation-van-cortlandt-park-south-bronx.md), 160 Van Cortlandt Park South, is excluded as closed by the building-specific relegation decree signed June 30, 2017 and effective immediately. The actual operative paragraph reducing the named church to profane but not sordid use was visually read October 8, 2026; its exact source and quotes are retained in the exclusion. This does not close the active Kingsbridge church or change the current publisher's joined name. The final Mass date is unknown.
 
 ## Website and bulletin provider
 
 The saved parish bulletin index links the issue quoted above. Publication identifiers come from actual issue links, not canonical merger names. https://stjohnvisitationparish.org/english/important-information/bulletin/ is the bulletin discovery page.
 
-## Not yet confirmed
+## October 8, 2026 connector verification
 
-Self-hosted PDF provider recipes, where applicable, remain to be tested before promotion. Historical-building status is separate from present bulletin grouping.
+The earlier October 8 actual-HTTP-HTML replay plus production PDF download succeeded at https://stjohnvisitationparish.org/english/important-information/bulletin/. The page-pdfs collector selected https://stjohnvisitationparish.org/english/wp-content/uploads/sites/4/2026/10/oct4_2026_stjohnvisit_compressed.pdf with reason current and downloaded 277,344 bytes. The actual October 4 issue was read and supplies this publisher's evidence. Pin the verified important-information route; do not replace it with the similarly named information route solely from a reconstruction.
+
+Later verified HTTP requests returned 403, and a href-only reconstruction without original anchor dates/DFlip markup selected a 2023 file. Those lower-fidelity or blocked attempts do not overturn the earlier full-HTML success. The 2023 result is not pinned, a 403 is not evidence of ceased publication, and this supported publisher is not placed on an operational hold. If the maintained archive route changes, capture complete rendered HTML and re-test current-issue selection. The active Kingsbridge church and the excluded former Visitation building remain separate.

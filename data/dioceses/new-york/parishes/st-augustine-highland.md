@@ -57,6 +57,8 @@ The historical publication identity ecatholic:11044 and archive reader URL are p
 
 ## Recheck
 
+On October 8 the full rendered 2026 archive, every linked PDF and the featured issue were reexamined: August 16 remains the latest issue, with no September/October link. The homepage was separately probed for another channel; the guessed Discover Mass listing returned 404 and is not an alternative publisher. The connector record now identifies the concrete external action: ask the published webmaster or office for the current issue URL or an explicit publication cadence. No parish contact has been made, and no claim of publication cessation or shared St. Cecilia bulletin is justified.
+
 Find a current issue and compare independently publishing member channels; see `open/st-augustine-highland-fetch-connector.md`. The present website schedule supports the physical venue, not a claim that no newer bulletin exists.
 
 ## Automatic fetch safeguard

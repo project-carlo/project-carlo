@@ -73,7 +73,7 @@ GCatholic supplies the building identity, address and Plus Code coordinates (87H
 
 ## Boundaries
 
-Only this assignment building is written here. Other buildings covered by the publication remain the parent or another slice owner responsibility.
+This record represents this physical worship building only. Other sites covered by the same bulletin require their own building-specific records and public-Mass evidence; a shared canonical parish name alone is not sufficient.
 ## Exact official-directory match
 
 The directory municipality is Town of Haverstraw and raw locality Thiells; the current bulletin says Garnerville. The exact 21 Cinder Road/10923 street and ZIP, parish website, and phone 845-947-1873 identify the same building. Linked directory:2730 only to this physical site. Directory pin differs by approximately 248 m; existing GCatholic coordinates, where present, and verification flags remain unchanged. This identity link does not establish a new Mass schedule or bulletin.

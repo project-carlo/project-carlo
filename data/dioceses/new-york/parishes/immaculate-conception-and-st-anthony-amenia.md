@@ -49,7 +49,7 @@ Immaculate Conception and St. Anthony is represented by the actual issue at http
 
 Linked worship-site records for Immaculate Conception and St. Anthony: [Immaculate Conception](../churches/immaculate-conception-amenia.md). Each church record retains its building-specific Mass evidence.
 
-[St. Anthony](../open/st-anthony-pine-plains.md) remains an open question. Read the current issue at icsaamenia.org/bulletins and verify St. Anthony Pine Plains is in its current masthead and building-specific Mass schedule. Compare its member channel with this publisher before creating a separate publisher.
+[St. Anthony](../churches/st-anthony-pine-plains.md) is an active worship site of this publisher. The October 4, 2026 issue explicitly assigns Sunday 8 AM and Saturday 6:15 PM to St. Anthony in Pine Plains; its church record preserves the building-specific evidence and the unresolved street-frontage difference.
 
 ## Website and bulletin provider
 
@@ -57,4 +57,4 @@ The saved parish-site links lead to this issue. Provider: ecatholic; publication
 
 ## Recheck
 
-Read the next available issue from https://icsaamenia.org/bulletins and verify the masthead and building-specific schedule for Immaculate Conception. Follow the linked open/excluded records for unresolved building status or member-channel checks. Run fetch:check separately to confirm ingestion; no fresh fetch is recorded by this edit.
+Read the next available issue from https://icsaamenia.org/bulletins and verify the masthead and separate schedules for Immaculate Conception in Amenia and St. Anthony in Pine Plains. Both are established worship sites, not pending membership questions. Run fetch:check separately to confirm ingestion; no fresh fetch is recorded by this edit.

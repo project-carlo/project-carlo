@@ -1,32 +1,37 @@
 ---
 name: Tagaste Monastery
-revisit: Contact Tagaste Monastery at 845-357-0067 for a current public Mass schedule and visitor access
-  policy, then confirm whether any readable bulletin is published or shared with Sacred Heart.
-revisit_after: 2026-10-14
-roster: ['gcatholic:39186']
+revisit: Ask Tagaste Monastery at 845-357-0067 for a dated public chapel Mass schedule, visitor admission
+  policy and actual bulletin channel. The GCatholic-linked monastery domain fails DNS in both HTTP and
+  the browser; nearby Sacred Heart parish publication is not proof of monastery worship or shared publication.
+revisit_after: '2026-10-18'
+roster:
+- gcatholic:39186
 evidence:
 - url: https://gcatholic.org/churches/usa-02/39186
   seen: 2026-10-07
   quote: 'GCatholic Church ID: 39186'
   note: Roster identity only, not present public Mass evidence.
+- url: https://gcatholic.org/churches/usa-02/39186
+  seen: '2026-10-11'
+  quote: 'Served by: Augustinian Recollects'
+  note: Roster reread over HTTP 200. Address 220 Lafayette Avenue and telephone 845-357-0067; linked website
+    is http://www.tagastemonastery.org. Nearby Sacred Heart is separately indexed, not an automatic monastery
+    publisher match.
+- url: http://www.tagastemonastery.org
+  seen: '2026-10-11'
+  note: The actual GCatholic-linked domain failed DNS under verified HTTP and T3 browser navigation (ERR_NAME_NOT_RESOLVED).
+    HTTPS failed DNS too. This access failure says nothing about closure or whether monastery Mass is
+    public.
 line1: 220 Lafayette Ave.
 city: Suffern
 state: NY
 postal_code: '10901'
 ---
 
-## What is known
+## Identity and actual access investigation
 
-GCatholic identifies Tagaste Monastery at 220 Lafayette Avenue, Suffern. A monastery name is not evidence that Mass is private or public.
+The October 11 GCatholic reread identifies the Augustinian Recollects monastery at 220 Lafayette Avenue and supplies 845-357-0067. Its actual linked domain is tagastemonastery.org, not tagaste.org; the latter redirects to Spanish student residences and is not evidence about Suffern. The actual monastery domain fails DNS in both verified HTTP and the T3 browser. No current public-Mass timetable or full-issue publication was established from that source.
 
-GCatholic identifies this exact site as Tagaste Monastery, 220 Lafayette Ave., Suffern. Official directory candidates are linked only when they match the site, not merely a nearby church. Saved sources were reviewed on October 7, 2026.
+## Exact remaining fact
 
-## Why it is not decided
-
-The evidence does not yet settle both current public Mass at this building and the present bulletin publisher, or an explicit exclusion fact. Neither missing directory coverage, a canonical merger, a stale archive nor a failed download is treated as closure or no-bulletin.
-
-## Next step
-
-Contact Tagaste Monastery at 845-357-0067 for a current public Mass schedule and visitor access policy, then confirm whether any readable bulletin is published or shared with Sacred Heart.
-
-Revisit on or after October 14, 2026.
+A monastery can admit visitors for Mass, restrict admission, or provide only community liturgy. Its institutional type proves none of these. The nearby Sacred Heart parish is a separate roster building; its bulletin cannot be assigned to this chapel merely because it is nearby. Ask the monastery for a dated chapel schedule, public admission policy and current bulletin or explicit sharing arrangement. Preserve this as an open question, not a closure or no-public-Mass exclusion. No parish inquiry was sent.

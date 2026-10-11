@@ -25,7 +25,7 @@ The September 20, 2026 issue jointly identifies St. Mary-St. Joseph and Our Lady
 
 Linked worship-site records for St. Mary - St. Joseph - Our Lady of Mount Carmel Poughkeepsie: [Our Lady of Mount Carmel](../churches/our-lady-of-mount-carmel-poughkeepsie.md), [St. Mary](../churches/st-mary-poughkeepsie.md). Each church record retains its building-specific Mass evidence.
 
-[St. Joseph](../open/st-joseph-poughkeepsie.md) remains an open question. Ask the SMSJ-OLMC office whether public Mass still occurs at the St. Joseph building, including occasional liturgies, and obtain an explicit schedule or cessation statement.
+[St. Joseph](../excluded/st-joseph-poughkeepsie.md), 9 Lafayette Place, is excluded on the contemporary attendance report of its actual closing Mass, July 31, 2015. The joined publisher name is retained, but does not make that separate building active. The source, reported final-Mass date and possible-exception caveat are preserved in the exclusion; omission from this timetable was not the closure evidence.
 
 ## Website and bulletin provider
 
@@ -33,4 +33,4 @@ The official site and its current eCatholic PDF identify site 6769.
 
 ## Not yet confirmed
 
-An uninspected sibling building is not assumed open or closed.
+An uninspected sibling building is never assumed open or closed. The October 10 follow-up resolved the former Joseph building using an actual contemporary closing-Mass account, rather than a canonical merger or schedule omission.

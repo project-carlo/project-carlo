@@ -44,7 +44,7 @@ The 2026-10-04 issue and parish-owned index identify St. Simon Stock - St. Josep
 
 Linked worship-site records for St. Simon Stock - St. Joseph: [St. Simon Stock](../churches/st-simon-stock-bronx.md). Each church record retains its building-specific Mass evidence.
 
-[St. Joseph](../open/st-joseph-bathgate-avenue-bronx.md) remains an open question. Ask St. Simon Stock at 718-367-1251 whether public or occasional Mass remains at 1949 Bathgate Avenue, and request the dated relegation/deconsecration decree or current site-specific schedule. Do not link the Valentine Avenue directory ID to this different building.
+[St. Joseph](../excluded/st-joseph-bathgate-avenue-bronx.md), 1949 Bathgate Avenue, is excluded as closed by the actual building-specific relegation decree visually read October 8, 2026. Its operative paragraph reduces this named church to profane but not sordid use and the decree states immediate effect. The exclusion retains the exact official PDF and quotes; no exact final-Mass date is asserted. The continuing St. Simon Stock church at Valentine Avenue is a different physical site, not a replacement address for Joseph.
 
 ## Website and bulletin provider
 

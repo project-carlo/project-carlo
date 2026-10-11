@@ -1,11 +1,12 @@
 ---
 name: Our Lady of Shkodra
-revisit: Open the parish-specific bulletin links saved in scratch/nyc1-16455-browser.json and the matched
-  official directory page; download the newest issue, read its masthead and building-specific public Mass
-  schedule, and verify any separate member channel before choosing one publisher. If no bulletin is found,
-  ask the parish office; lack of a working URL is not evidence of closure.
-revisit_after: 2026-10-14
-roster: ['gcatholic:16455', 'directory:830']
+revisit: Our Lady of Shkodra office 914-761-3523 must provide the current Jeta Katolike issue or state
+  its publication cadence/replacement channel. The 2026 archive explicitly says New issue soon and contains
+  no issue PDF; do not substitute a dated event or a prior-year magazine as a current weekly bulletin.
+revisit_after: '2026-10-15'
+roster:
+- gcatholic:16455
+- directory:830
 evidence:
 - url: https://gcatholic.org/churches/usa-02/16455
   seen: 2026-10-07
@@ -23,18 +24,20 @@ evidence:
     \ Lady of"
   note: Page read from saved October 7 research; parish pages may require a headed browser. This fragment
     is identity/context, not proof of current publication.
+- url: https://albchurch.org/2026?research=20261008
+  seen: '2026-10-08'
+  quote: New issue soon.
+  note: Actual 2026 publication page HTTP 200, inspected text and links; no issue PDF.
 line1: 361 W Hartsdale Ave.
 city: Hartsdale
 state: NY
 postal_code: '10530'
 ---
 
-## What is known
+## Established site and publication channel
 
-The GCatholic entry identifies Our Lady of Shkodra at 361 W Hartsdale Ave., Hartsdale, New York 10530. The dated evidence preserves the official directory match where one exists. Saved research is scratch/nyc1-16455*.json and the corresponding HTML.
+The official parish and archdiocesan directory identify the Albanian Catholic church at 361 West Hartsdale Avenue, Hartsdale. The parish publication is Jeta Katolike. On October 8, 2026 the actual 2026 publication archive at albchurch.org/2026 was read and its links inspected. It expressly says New issue soon and has no issue PDF. Earlier yearly archive material is not a current October issue, and dated parish events are not a substitute bulletin.
 
-## Why it is not decided
+## Concrete external blocker
 
-Open the parish-specific bulletin links saved in scratch/nyc1-16455-browser.json and the matched official directory page; download the newest issue, read its masthead and building-specific public Mass schedule, and verify any separate member channel before choosing one publisher. If no bulletin is found, ask the parish office; lack of a working URL is not evidence of closure.
-
-No church, no-bulletin exclusion, or physical closure is inferred from a canonical merger, a broken old website, a roster omission, or an unreadable bulletin. Current publication identity and public worship at this building must both be settled.
+Office 914-761-3523 must provide the current Jeta Katolike issue or establish its publication cadence/replacement channel. Do not infer closure, no public Mass or permanent absence of a publication from the empty current-year archive. The remaining question is the actual current issue/cadence, not opening an already inspected saved link. October 7 and October 8 source dates and the identity/address evidence remain unchanged.

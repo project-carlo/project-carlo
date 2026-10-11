@@ -1,40 +1,54 @@
 ---
 name: Our Lady of Esperanza
-revisit: Open the parish-specific bulletin links saved in scratch/nyc1-16229-browser.json and the matched
-  official directory page; download the newest issue, read its masthead and building-specific public Mass
-  schedule, and verify any separate member channel before choosing one publisher. If no bulletin is found,
-  ask the parish office; lack of a working URL is not evidence of closure.
-revisit_after: 2026-10-14
-roster: ['gcatholic:16229', 'directory:2504']
-evidence:
-- url: https://gcatholic.org/churches/usa-02/16229
-  seen: 2026-10-07
-  note: GCatholic identity/address and building-precise Plus Code; historical merger alone is not building
-    closure.
-- url: https://www.archny.org/places/our-lady-of-esperanza-church
-  seen: 2026-10-07
-  quote: Our Lady of Esperanza Church
-  note: Official directory identity and address; not used to infer bulletin grouping or closure.
-- url: https://ourladyofesperanza.org/bulletins
-  seen: 2026-10-07
-  quote: "OUR LADY OF ESPERANZA\nWASHINGTON HEIGHTS ~ NEW YORK CITY\nMass Times/Horario de Misas\nContact\
-    \ Us\nFacebook \nX (Twitter) \nFlocknote\nHome/Inicio\nAbout\nLiturgy / Sacraments\nFaith Formation\n\
-    Ministries\nYouth Group\nPhotos/Fotos\nNews / Events\nBulletin\nArchive\n624 West 156th Street • New\
-    \ Y"
-  note: Page read from saved October 7 research; parish pages may require a headed browser. This fragment
-    is identity/context, not proof of current publication.
 line1: 624 W 156th St.
 city: New York City
 state: NY
 postal_code: '10032'
+roster:
+- gcatholic:16229
+- directory:2504
+evidence:
+- url: https://gcatholic.org/churches/usa-02/16229
+  seen: '2026-10-07'
+  note: GCatholic identity/address and building-precise Plus Code; historical merger alone is not building
+    closure.
+- url: https://www.archny.org/places/our-lady-of-esperanza-church
+  seen: '2026-10-07'
+  quote: Our Lady of Esperanza Church
+  note: Official directory identity and address; not used to infer bulletin grouping or closure.
+- url: https://ourladyofesperanza.org
+  seen: '2026-10-08'
+  quote: "Mass Times/Horario de Misas\nContact Us\nFacebook \nX (Twitter) \nFlocknote\nHome/Inicio\nAbout\n\
+    Liturgy / Sacraments\nFaith Formation\nMinistries\nYouth Group\nPhotos/Fotos\nNews / Events"
+  note: Rendered current primary Mass schedule.
+- url: https://ourladyofesperanza.org/bulletins
+  seen: '2026-10-08'
+  quote: 'Archive
+
+    624 West 156th Street • New York, NY 10032
+
+    Telephone Number/Numereo de Telefono: (212) 283-4340
+
+    Fax: (212) 283-4388
+
+    Login powered by eCatholic®'
+  note: No dated issues on the rendered October 8 archive.
+revisit: Current worship is settled. A readable current issue or confirmation of the empty archive publication
+  policy remains unavailable. The primary site gives 212-283-4340; a parish-supplied current issue/channel
+  or explicit no-publication confirmation is needed. The empty widget is not closure or proof of no-bulletin.
+revisit_after: '2026-10-17'
 ---
 
-## What is known
+## October 8, 2026 primary-source findings
 
-The GCatholic entry identifies Our Lady of Esperanza at 624 W 156th St., New York City, New York 10032. The dated evidence preserves the official directory match where one exists. Saved research is scratch/nyc1-16229*.json and the corresponding HTML.
+The church-operated homepage at https://ourladyofesperanza.org, read October 8, gives 624 West 156th Street and Saturday 6 PM Spanish; Sunday 9 AM Spanish, 10:30 AM and noon Spanish; weekday 9 AM Spanish. The rendered /bulletins page has an Archive heading with no dated issues. eCatholic identity 10863 alone does not prove current publication; October 4/11 standard date paths returned 403, not PDFs.
 
-## Why it is not decided
+## Specific remaining blocker
 
-Open the parish-specific bulletin links saved in scratch/nyc1-16229-browser.json and the matched official directory page; download the newest issue, read its masthead and building-specific public Mass schedule, and verify any separate member channel before choosing one publisher. If no bulletin is found, ask the parish office; lack of a working URL is not evidence of closure.
+Current worship is settled. A readable current issue or confirmation of the empty archive publication policy remains unavailable. The primary site gives 212-283-4340; a parish-supplied current issue/channel or explicit no-publication confirmation is needed. The empty widget is not closure or proof of no-bulletin.
 
-No church, no-bulletin exclusion, or physical closure is inferred from a canonical merger, a broken old website, a roster omission, or an unreadable bulletin. Current publication identity and public worship at this building must both be settled.
+This record remains open rather than inventing a current publisher or a physical closure. The blocker is the identified missing building/publication fact, not a request to repeat the already completed page and archive inspection.
+
+## Final disposition review — October 10, 2026
+
+Final review of October 8 evidence: https://ourladyofesperanza.org identifies 624 West 156th Street and an active Saturday/Sunday/weekday public timetable. https://ourladyofesperanza.org/bulletins renders Archive without dated issues. The eCatholic 10863 identity and failed standard date paths do not prove a current publication. The external missing fact is a current actual issue/channel or explicit no-publication policy from 212-283-4340, not current worship status. Keep this open; do not invent another publisher from the empty widget.

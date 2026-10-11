@@ -1,32 +1,42 @@
 ---
 name: St. Stephen of Hungary
-revisit: Ask STELMO79 explicitly whether public Mass is celebrated at the St. Stephen building, including
-  school or occasional liturgies; obtain a current schedule or a clear statement of no public worship.
-revisit_after: 2026-10-14
-roster: ['gcatholic:16288']
+revisit: The identified responsible office, (212) 288-6250 / info@stelmo79.org, must confirm whether public
+  Mass, including school or occasional liturgies open to visitors, occurs at 414 East 82nd Street. Request
+  an exact site-specific schedule or explicit cessation statement. The current history and generic schedule
+  are already read; a merger or surviving school alone cannot decide worship status.
+revisit_after: '2026-10-17'
+roster:
+- gcatholic:16288
 evidence:
 - url: https://gcatholic.org/churches/usa-02/16288
   seen: 2026-10-07
   quote: 'GCatholic Church ID: 16288'
   note: Roster identity only, not present public Mass evidence.
+- url: https://www.stelmo79.org/history
+  seen: '2026-10-10'
+  quote: Beginning in 2015, St. Monica became the principal church of the newly united community.
+  note: Official history, Joining Together narrative; principal does not mean sole worship site.
+- url: https://www.stelmo79.org/history
+  seen: '2026-10-10'
+  quote: its legacy continues today through St. Stephen of Hungary School.
+  note: Official history, Three Histories, One Parish; does not establish the church's current public-liturgy
+    policy.
+- url: https://www.stelmo79.org/mass
+  seen: '2026-10-10'
+  quote: 5:30 pm Vigil Mass
+  note: Rendered Mass timetable; no St. Stephen building label accompanies the schedule.
 line1: 414 E 82nd St.
 city: New York City
 state: NY
 postal_code: '10028'
 ---
 
-## What is known
+## What is known — October 10, 2026
 
-The STELMO79 current history describes the united parish and St. Stephen of Hungary School. That history is not a stated cessation of public Mass in the East 82nd Street church.
+STELMO79's official history, rendered October 10 at https://www.stelmo79.org/history, says St. Monica became the principal church in 2015 and St. Stephen's legacy continues through its school. It describes the East 82nd Street complex but does not state that public Mass there ceased. The live https://www.stelmo79.org/mass timetable lists weekday noon, Saturday noon/5:30 PM and Sunday 8 AM/10 AM/noon/5 PM, without attributing any Mass to St. Stephen's building. A principal church is not necessarily the only public worship site.
 
-GCatholic identifies this exact site as St. Stephen of Hungary, 414 E 82nd St., New York City. Official directory candidates are linked only when they match the site, not merely a nearby church. Saved sources were reviewed on October 7, 2026.
+## Concrete remaining blocker
 
-## Why it is not decided
+The identified responsible office, (212) 288-6250 / info@stelmo79.org, must confirm whether public Mass, including school or occasional liturgies open to visitors, occurs at 414 East 82nd Street. Request an exact site-specific schedule or explicit cessation statement. The current history and generic schedule are already read; a merger or surviving school alone cannot decide worship status.
 
-The evidence does not yet settle both current public Mass at this building and the present bulletin publisher, or an explicit exclusion fact. Neither missing directory coverage, a canonical merger, a stale archive nor a failed download is treated as closure or no-bulletin.
-
-## Next step
-
-Ask STELMO79 explicitly whether public Mass is celebrated at the St. Stephen building, including school or occasional liturgies; obtain a current schedule or a clear statement of no public worship.
-
-Revisit on or after October 14, 2026.
+Earlier evidence retains its October 8 observation date. Neither an inaccessible channel, an omitted building, nor a canonical merger is treated as closure or proof of no bulletin. This decision is reproducible from the URLs and quotations above without scratch files.

@@ -6,6 +6,14 @@ provider_id: ''
 publication: ['url:https://resrye.org/churchbulletins']
 group: ''
 evidence:
+- url: https://resrye.org/churchbulletins
+  seen: 2026-10-08
+  quote: October 4, 2026 Resurrection Church Bulletin
+  note: Current official index reopened; three recent issue entries link Flocknote HTML, not a PDF archive.
+- url: https://resrye.flocknote.com/note/38786342
+  seen: 2026-10-08
+  quote: Sunday, October 4th
+  note: Full rendered body, outbound anchors and embedded media inspected. Five Sunday Mass intentions and October 5-10 weekday intentions remain readable; no PDF rendition is linked.
 - url: https://new.flocknote.com/note/38786342
   seen: 2026-10-07
   quote: RESURRECTION CHURCH BULLETIN October 4, 2026
@@ -40,6 +48,8 @@ The official index links this issue. The source URL is retained so its masthead 
 No conclusion about an unlisted building is drawn from absence.
 
 ## Automatic fetch safeguard
+
+The October 8 follow-up confirms a format blocker, not a missing publisher. The complete Flocknote publication was inspected, including all outgoing links and embedded media, and no bulletin PDF was linked. The current official index still points to this October 4 HTML note. Its old outbound Mass Intentions link describes September 19-26 and must not be mistaken for the current issue. The connector record documents the concrete ingestion requirements and the secondary Discover Mass check; it does not depend on untracked research artifacts.
 
 The parish does publish a current readable HTML bulletin on Flocknote. Automatic PDF fetching is deliberately disabled: the tested page-pdfs recipe failed because the archive links HTML, not a PDF. Find a current PDF rendition or add a reviewed HTML connector before enabling fetch; do not classify the active church as closed or assert that no bulletin exists.
 

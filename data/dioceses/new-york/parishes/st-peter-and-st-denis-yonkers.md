@@ -26,4 +26,4 @@ Official parish site links the inspected current issue. Current masthead, not ad
 
 Linked worship-site records for St. Peter and St. Denis, Yonkers: [St. Peter](../churches/st-peter-yonkers.md). Each church record retains its building-specific Mass evidence.
 
-[St. Denis](../open/st-denis-yonkers.md) remains an open question. Ask 914-963-0822 whether any public Mass occurs at 470 Van Cortlandt Park Avenue. Obtain address-specific dated last-Mass/relegation/sale statement if not; a merger name and schedule silence are insufficient for exclusion.
+[St. Denis](../excluded/st-denis-yonkers.md) is excluded as closed. The July 27, 2015 Daily Voice report explicitly identifies St. Denis among churches holding final Mass before closure; the October 10, 2026 disposition records that positive evidence. The publisher title does not make the former 470 Van Cortlandt Park Avenue building an active worship site. St. Peter at 91 Ludlow Street remains this publisher?s active church.

@@ -99,6 +99,6 @@ GCatholic supplies the building identity, address and Plus Code coordinates (87H
 
 ## Boundaries
 
-Only this assignment building is written here. Other buildings covered by the publication remain the parent or another slice owner responsibility.
+This record represents this physical worship building only. Other sites covered by the same bulletin require their own building-specific records and public-Mass evidence; a shared canonical parish name alone is not sufficient.
 
 The current parish site gives 448 Route 32, which is retained; the official directory uses 26 Hunter Street and GCatholic uses a different street label. This disagreement is explicit and address_verified remains false.

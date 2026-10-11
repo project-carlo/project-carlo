@@ -1,9 +1,11 @@
 ---
 name: Mount Alvernia Retreat Center
-revisit: Ask 845-297-5706 about a current weekly/public bulletin; inspect Prayer Resources, Events & News
-  and printed sheets. Confirm publisher before creating a church; missing links do not justify no-bulletin.
-revisit_after: 2026-10-14
-roster: ['gcatholic:149070']
+revisit: Mt. Alvernia office 845-297-5706 must supply its current weekly/public liturgical sheet or explicitly
+  state whether one is published. Public Sunday 8:30/10 AM and weekday 8 AM worship is settled; the inspected
+  Prayer Resources and News routes are prayer texts/external news, not an unread bulletin archive.
+revisit_after: '2026-10-15'
+roster:
+- gcatholic:149070
 evidence:
 - url: https://gcatholic.org/churches/usa-02/149070
   seen: 2026-10-07
@@ -14,6 +16,17 @@ evidence:
   seen: 2026-10-07
   quote: SUNDAY MASSES
   note: 'Official home page read in headed Chrome: Sunday 8:30 and 10 AM; weekdays 8 AM. Saved 149070-home.txt/html.'
+- url: https://mtalvernia.org/
+  seen: '2026-10-08'
+  quote: Sunday Masses
+  note: Primary schedule Sunday 8:30/10 AM, weekdays Monday-Saturday 8 AM; 158 Delavergne Avenue.
+- url: https://mtalvernia.org/prayer-resources?research=20261008
+  seen: '2026-10-08'
+  quote: Canticle
+  note: Prayer-text page, not a dated parish bulletin index.
+- url: https://mtalvernia.org/news-and-messages-1?research=20261008
+  seen: '2026-10-08'
+  note: HTTP 200 external Catholic news/resources inspected; no current local full-issue PDF.
 line1: 158 Delavergne Ave.
 city: Wappingers Falls
 state: NY
@@ -28,6 +41,11 @@ Official home page explicitly offers Sunday Masses 8:30 and 10 AM, and Monday-Sa
 
 Neither a blocked site, old archive, administrative merger nor absence from a schedule establishes an exclusion fact. A location-specific current Mass/publisher combination or explicit status statement is still required.
 
-## Next action
 
-Ask 845-297-5706 about a current weekly/public bulletin; inspect Prayer Resources, Events & News and printed sheets. Confirm publisher before creating a church; missing links do not justify no-bulletin.
+## October 8, 2026 research follow-up
+
+Reused the saved current homepage schedule and followed both actual candidate routes. Prayer Resources contains prayer texts (including Canticle of the Creatures) and a Mass/Liturgy link back to the homepage; News and Messages is external Catholic news, not dated parish issues. Neither route exposed a complete weekly bulletin PDF. Thus public worship at this retreat chapel is explicit and cannot be excluded as private, while the publication evidence is concretely missing. Homilies/prayers and news feeds must not be passed off as a parish bulletin.
+
+## Remaining external blocker
+
+Mt. Alvernia office 845-297-5706 must supply its current weekly/public liturgical sheet or explicitly state whether one is published. Public Sunday 8:30/10 AM and weekday 8 AM worship is settled; the inspected Prayer Resources and News routes are prayer texts/external news, not an unread bulletin archive.

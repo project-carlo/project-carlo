@@ -3,7 +3,8 @@ name: St. Joseph - St. Peter Kingston and Rosendale
 website: https://stpeterrosendale.org/
 bulletin_provider: ecatholic
 provider_id: ''
-publication: ['ecatholic:6624']
+publication:
+- ecatholic:6624
 group: ''
 evidence:
 - url: https://files.ecatholic.com/6624/bulletins/20260913.pdf
@@ -14,23 +15,26 @@ evidence:
   seen: 2026-10-07
   quote: 'S u n d a y :  9 : 0 0 a m'
   note: Issue identity and current site-specific Mass schedule; see explanation.
+- url: https://www.church-bulletin.org/bulletin/the-roman-catholic-church-of-saint-joseph-saint-peter-kingston-ny-12401/2026-10-04.pdf
+  seen: '2026-10-08'
+  quote: 'MASS SCHEDULE
+
+    Saturday Vigil: 5:30pm
+
+    Sunday: 7:30am, 10:30am, 5:00pm'
+  note: October 4, 2026 issue, page 1; the St. Joseph panel at 242 Wall Street, not the St. Peter Rosendale
+    panel.
 promoted: 2026-10-08
 ---
 
 ## Publisher
 
-The September 13, 2026 current issue retained by the official archive has one St. Joseph-St. Peter masthead and separate schedules at 242 Wall Street, Kingston and 1017 Keator Avenue, Rosendale. The Rosendale schedule states Saturday vigil 4 PM, Sunday 9 AM, Monday/Wednesday 5:15 PM and Tuesday/Thursday 8 AM. The latest issue inspected here is September 13, not an assertion that no newer issue exists. The St. Joseph Kingston building remains an open question; verify its own Mass schedule and channel.
+The October 4, 2026 JPPC issue has one ST. JOSEPH - ST. PETER masthead and two site-specific panels on page 1: St. Joseph, 242 Wall Street, Kingston, and St. Peter, 1017 Keator Avenue, Rosendale. The September 13 eCatholic issue already documented this same shared publisher; the newer issue confirms it continues after the old separate St. Joseph archive stopped.
 
 ## Worship sites
 
-Linked worship-site records for St. Joseph - St. Peter Kingston and Rosendale: [St. Peter](../churches/st-peter-rosendale.md). Each church record retains its building-specific Mass evidence.
-
-[St. Joseph](../open/st-joseph-kingston.md) remains an open question. Obtain the actual linked August 13, 2026 Kingston merger decree PDFs; the supplied archny posts URL redirects to 404. Then read the first current shared bulletin after the St. Joseph archive ending August 23 and obtain a St. Joseph building-specific public Mass schedule. A merger does not close this building.
+St. Joseph Kingston holds Saturday vigil 5:30 PM and Sunday 7:30/10:30 AM and 5 PM. St. Peter Rosendale holds Saturday vigil 4 PM and Sunday 9 AM. Each has a church record. Neither panel concerns St. Peter on Wurts Street in Kingston.
 
 ## Website and bulletin provider
 
-The official index links this issue. The source URL is retained so its masthead and schedule can be rechecked.
-
-## Not yet confirmed
-
-No conclusion about an unlisted building is drawn from absence.
+The existing eCatholic 6624 publisher is retained; the independently read October 4 JPPC PDF confirms current identity and schedules. No successful new live ingestion check is claimed by this research batch.

@@ -38,7 +38,7 @@ St. Peter - St. Mary is represented by the actual issue at https://container.par
 
 Linked worship-site records for St. Peter - St. Mary: [St. Peter](../churches/st-peter-haverstraw.md). Each church record retains its building-specific Mass evidence.
 
-[St. Mary of the Assumption](../open/st-mary-of-the-assumption-haverstraw.md) remains an open question. Canonical merger with St. Peter does not establish building closure. Read the current St. Peter-St. Mary bulletin for the former St. Mary address, 46 Conklin Avenue, or obtain an explicit closure statement.
+[St. Mary of the Assumption](../excluded/st-mary-of-the-assumption-haverstraw.md) is excluded as other-jurisdiction. The Knanaya parish history explicitly records purchasing 46 Conklin Avenue from the Archdiocese in September 2017 and rededicating it September 23. The current St. Thomas Syro-Malabar Eparchy of Chicago directory independently confirms its present St. Mary?s Knanaya parish at that address. This is a transferred, still-Catholic worship building, not another current Latin worship site of this bulletin publisher.
 
 ## Website and bulletin provider
 

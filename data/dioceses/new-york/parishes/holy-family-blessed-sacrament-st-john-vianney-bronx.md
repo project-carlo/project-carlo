@@ -43,11 +43,11 @@ The October 4, 2026 issue has one masthead naming all three historical parishes 
 
 Linked worship-site records for Holy Family - Blessed Sacrament - St. John Vianney, Bronx: [Blessed Sacrament](../churches/blessed-sacrament-bronx-16189.md), [Holy Family](../churches/holy-family-bronx-16191.md). Each church record retains its building-specific Mass evidence.
 
-[St. John Vianney, Cure of Ars](../open/st-john-vianney-cure-of-ars-bronx.md) remains an open question. Ask Holy Family parish at 718-863-9156 whether any public or occasional Mass remains at 715 Castle Hill Avenue; obtain a dated decree explicitly relegating this church or a current site-specific schedule. Coordinate any publisher edit with the Holy Family owner.
+[St. John Vianney, Cure of Ars](../excluded/st-john-vianney-cure-of-ars-bronx.md), 715 Castle Hill Avenue, is excluded as closed on the strength of the building-specific relegation decree signed May 26, 2018 and effective immediately, visually read October 8, 2026. Its operative paragraph reduces this named church to profane but not sordid use. The exclusion preserves the exact decree URL and quotes; the final Mass date is unknown.
 
-Holy Family and Blessed Sacrament have current public Mass. St. John Vianney (16168) remains an unresolved physical site; its title does not establish Mass at the former building.
+Holy Family and Blessed Sacrament have current public Mass. The retained St. John Vianney title does not reopen its relegated building or add a third worship site.
 
-The building-specific handoff is accounted for in [the St. John Vianney open record](../open/st-john-vianney-cure-of-ars-bronx.md). Its unresolved status is not permission to add another active church from the historical masthead. Independent integration review on October 8, 2026 found no second publisher or missing linked worship-site record for this bulletin.
+The building-specific disposition is accounted for in [the St. John Vianney exclusion](../excluded/st-john-vianney-cure-of-ars-bronx.md). This completed relegation does not redefine the present bulletin publisher. Independent integration review on October 8, 2026 found no second publisher or missing linked active worship-site record for this bulletin.
 
 ## Website and bulletin provider
 

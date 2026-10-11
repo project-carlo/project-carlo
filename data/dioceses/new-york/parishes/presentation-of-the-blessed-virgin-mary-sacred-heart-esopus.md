@@ -1,9 +1,11 @@
 ---
-name: Presentation of the Blessed Virgin Mary - Sacred Heart
+name: St. Mary - Sacred Heart, Kingston and Esopus
 website: https://pbvmc.com/bulletins
 bulletin_provider: ecatholic
 provider_id: ''
-publication: ['ecatholic:29629']
+publication:
+- ecatholic:29629
+- ecatholic:6630
 group: Presentation of the Blessed Virgin Mary - Sacred Heart
 evidence:
 - url: https://files.ecatholic.com/29629/bulletins/20261004.pdf?t=1790792796000
@@ -35,32 +37,35 @@ evidence:
     \ 845-\r\nSacred Heart \r\nP.O. BOX 200 • 1055 BROADWAY, ESOPUS, N.Y. 12429"
   note: Actual bulletin text, page 1, read October 7, 2026. If a future Sunday is printed, it was already
     publicly posted; no future event is inferred as completed.
-revisit: Read the next available issue from https://pbvmc.com/bulletins and verify the masthead and building-specific
-  schedule for Sacred Heart. Follow the linked open/excluded records for unresolved building status or
-  member-channel checks. Run fetch:check separately to confirm ingestion; no fresh fetch is recorded by
-  this edit.
-revisit_after: 2026-10-14
+- url: https://files.ecatholic.com/29629/bulletins/20261004.pdf
+  seen: '2026-10-08'
+  quote: St. Mary-St. Peter Parish/Parroquia de Sta. María-S. Pedro
+  note: October 4, 2026 shared issue, page 1, visual masthead transcription; 160 Broadway, Kingston.
+- url: https://stmarystpeterkingston.org/schedule?research=20261008
+  seen: '2026-10-08'
+  quote: 'Saturday Vigil: 4pm, 7pm (Misa en español) Sunday: 9:00am, 11am (Misa en español), 1:00pm -
+    Latin Mass at Sacred Heart in Esopus.'
+  note: Official St. Mary Kingston schedule, read October 8; distinguishes the Sacred Heart Esopus Latin
+    Mass from St. Mary services.
+- url: https://www.dropbox.com/scl/fi/6i6wdiinexwipsxcy88r3/Saint-Peter-Church-Kingston.pdf?rlkey=vnsx0esgkhrmxf4idnrvuou41&st=45bxchns&dl=1
+  seen: '2026-10-08'
+  quote: The church of Saint Peter in the Parish of Saint Mary - Holy Name of Jesus - Saint Peter, Kingston,
+    New York is hereby reduced to profane but not sordid use
+  note: Actual relegation decree, PDF page 4, visual transcription. Signed November 4, 2020, effective
+    immediately; not an August 2026 merger.
 promoted: 2026-10-08
 ---
 
 ## Publisher
 
-Presentation of the Blessed Virgin Mary - Sacred Heart is represented by the actual issue at https://files.ecatholic.com/29629/bulletins/20261004.pdf?t=1790792796000, whose quoted masthead/schedule is preserved above. The publisher name follows the current publication, not the canonical directory label.
+The October 4, 2026 issue is the same shared bulletin on St. Mary Kingston (eCatholic 6630) and Presentation Port Ewen (29629). Page 1 names St. Mary-St. Peter at 160 Broadway, Sacred Heart at 1055 Broadway, Esopus, and Presentation at 290 Hoyt Street. The two delivery identities are recorded on one existing publisher row, not duplicated. The current site brand is St. Mary-Sacred Heart; a canonical merger alone was not used to join publications.
 
 ## Worship sites
 
-Linked worship-site records for Presentation of the Blessed Virgin Mary - Sacred Heart: [Sacred Heart](../churches/sacred-heart-esopus.md). Each church record retains its building-specific Mass evidence.
+St. Mary at 160 Broadway holds Saturday 4/7 PM and Sunday 9/11 AM. Sacred Heart Esopus holds the expressly site-labelled Sunday 1 PM Latin Mass. The Presentation contact masthead does not assign Mass there: its official schedule sends Saturday/Sunday readers to St. Mary and Sacred Heart. Presentation therefore remains an open physical-use question, not an inferred closure.
 
-[Presentation of the Blessed Virgin Mary](../open/presentation-of-the-blessed-virgin-mary-port-ewen.md) remains an open question. Resolve the current PBVMC building-specific schedule with the office: which Masses occur at 290 Hoyt Street, Port Ewen? Reuse the existing Presentation/Sacred Heart publisher only when physical public Mass here is verified.
-
-[St. Mary and Holy Name of Jesus](../open/st-mary-and-holy-name-of-jesus-kingston.md) remains an open question. Download/render the current St. Mary-Sacred Heart October PDF and obtain the actual August 13, 2026 Kingston decree. Compare its masthead with the post-August St. Joseph channel before deciding one publisher or several; its canonical name is not enough.
-
-[St. Peter](../open/st-peter-kingston.md) remains an open question. Obtain a current St. Peter building-specific Mass schedule or an explicit closure source after reading the actual Kingston decree. Neither the merger nor omission from a parish-wide timetable establishes physical closure.
+The actual St. Peter Kingston relegation decree is dated November 4, 2020, effective immediately; its dated exclusion is explicit building evidence, not the 2026 merger. The St. Peter in the separate current St. Joseph-St. Peter bulletin is Rosendale, not Kingston.
 
 ## Website and bulletin provider
 
-The saved parish-site links lead to this issue. Provider: ecatholic; publication identity: ecatholic:29629. The reader URL is https://pbvmc.com/bulletins. The provider and publication metadata identify the saved bulletin channel; they do not by themselves assert a successful live fetch:check.
-
-## Recheck
-
-Read the next available issue from https://pbvmc.com/bulletins and verify the masthead and building-specific schedule for Sacred Heart. Follow the linked open/excluded records for unresolved building status or member-channel checks. Run fetch:check separately to confirm ingestion; no fresh fetch is recorded by this edit.
+The existing Presentation eCatholic archive remains a reader entry point for the same publication; St. Mary carries its matching current copy. No new live ingestion result is asserted in this saved-evidence batch.

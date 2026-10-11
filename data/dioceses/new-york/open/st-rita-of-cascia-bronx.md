@@ -1,220 +1,431 @@
 ---
 name: St. Rita of Cascia
-revisit: Call St. Rita at 718-585-5900 to request its current Spanish/bilingual bulletin and actual publication
-  URL, or an explicit statement that no bulletin is produced. Read its masthead before deciding a joined
-  St. Pius V publisher or any no-bulletin exclusion.
-revisit_after: 2026-11-07
-roster: ['gcatholic:16182', 'directory:1522']
+revisit: Saint Rita at 718-585-5900 must provide its current Spanish/bilingual issue and actual hosting
+  channel or an explicit no-publication statement. Inspect its current masthead; the Pius V merger name
+  and now-settled building relegation do not determine Rita bulletin publication.
+roster:
+- gcatholic:16182
+- directory:1522
 evidence:
 - url: https://gcatholic.org/churches/usa-02/16182
   seen: 2026-10-07
-  quote: |-
-    Church of St. Rita of Cascia, Bronx, New York, USA
+  quote: 'Church of St. Rita of Cascia, Bronx, New York, USA
+
     Church of St. Rita of Cascia
+
     Bronx,
+
     New York
+
     ,
+
     USA
+
     ℹ️ Info
+
     📍 Nearby
+
     Jurisdiction:
+
     Metropolitan Archdiocese of
+
     New York
+
     Type:
+
     Parish, Church
+
     Rite:
+
     Roman
+
     (Latin)
+
     Location:
+
     87G8R38H+46
+
     Address:
+
     448 College Ave., Bronx,
+
     New York
+
     10451
+
     Country:
+
     USA
+
     Telephone:
+
     +1 (718) 585-5900
+
     GCatholic Church ID:
+
     16182
+
     Missions
+
     Church of St. Pius V
+
     , Bronx
+
     Show Map
+
     Churches Nearby
+
     Church of St. Pius V
+
     , Bronx
+
     (340 m ↘)
+
     Church of the Immaculate Conception
+
     , Bronx
+
     (380 m ↗)
+
     Church of St. Jerome
+
     , Bronx
+
     (670 m ↙)
+
     Church of St. Luke
+
     , Bronx
+
     (1.2 km ↘)
+
     Church of Sts. Peter and Paul
+
     , Bronx
+
     (1.2 km ↗)
+
     Church of St. Roch
+
     , Bronx
+
     (1.2 km →)
+
     Church of St. Angela Merici
+
     , Bronx
+
     (1.3 km ↑)
+
     Church of St. Mark the Evangelist
+
     , New York City
+
     (1.4 km ←)
+
     Church of St. Anselm
+
     , Bronx
+
     (1.4 km →)
+
     Church of All Saints
+
     , New York City
+
     (1.6 km ↙)
+
     Last updated on 2025.12.21
-    © 2026 GCatholic.org
+
+    © 2026 GCatholic.org'
   note: Roster identity and address, not proof of present worship or closure.
 - url: https://www.archny.org/places/rita-cascia-pius-v
   seen: 2026-10-07
-  quote: |-
-    St. Rita of Cascia - St. Pius V Church - Archdiocese of New York
+  quote: 'St. Rita of Cascia - St. Pius V Church - Archdiocese of New York
+
     Child Protection
+
     Parish Finder
+
     Donate
+
     Child Protection
+
     Parish Finder
+
     Donate
+
     About
+
     +
+
     Mission
+
     History
+
     Leadership
+
     Find Your Parish
+
     Directory
+
     Careers
+
     Media
+
     Services
+
     +
+
     Becoming Catholic
+
     Baptize Your Child
+
     Find a Catholic School
+
     Grow in Faith
+
     +
+
     As a Child
+
     Catholic Scouting
+
     In Middle and High School
+
     In College
+
     As a Young Adult
+
     Catholic Calendar
+
     Resources for Parishes
+
     Live Catholic
+
     Marrying in the Catholic Church
+
     Respect Life
+
     Sacraments & Life Moments
+
     +
+
     Becoming Catholic (RCIA)
+
     Baptize Your Child
+
     Receiving the Eucharist
+
     Confirmation
+
     Marriage
+
     Penance & Confession
+
     Anointing of the Sick
+
     End of Life
+
     Annulments
+
     Sacramental Records
+
     School Records
+
     Burial Records
+
     Serve & Vocations
+
     +
+
     Adult Education
+
     Live Catholic
+
     Liturgy
+
     Vocations
+
     Sacramental Records
+
     School Records
+
     Child Protection
+
     +
+
     Report Abuse
+
     Child Protection FAQ
+
     Policies
+
     Resources
+
     Training
+
     En Español
+
     News
+
     +
+
     The Good Newsroom
+
     Monthly Bulletin
+
     Press Releases
+
     Updates from our Ministries
+
     Events
+
     Contact Us
+
     St. Rita of Cascia
+
     St. Pius V Church
+
     448 College Avenue
+
     The Bronx, New York 10451
+
     Phone
+
     718-585-5900
+
     Next Mass
-    Fundada en 1904, se ubica en el sur de El Bronx. La parroquia quiere ser una gran comunidad de fe donde todo el mundo es bienvenido. A través de la catequesis, los sacramentos, la formación en la fe, el ejercicio de la caridad, queremos dar a conocer el amor de Dios en el mundo, especialmente a los más pobres y a los pecadores. Las Misioneras de la Caridad, fundadas por la Madre Teresa de Calcuta en 1950, forman parte activa de la parroquia colaborando en distintas actividades de catequesis, visita de enfermos y ayuda a los pobres. Los feligreses de la parroquia, cada vez más, participan en los distintos proyectos pastorales y de voluntariado.
-    Founded in 1904, it is located in South Bronx. This parish wishes to be a big faith community where everybody is welcome. Through catechesis, the sacraments, faith formation, works of charity, we want to show God’s love in the world, especially to the poorest of the poor and sinners. The Missionaries of Charity, founded by Mother Teresa of Calcutta in 1950, collaborate in the parish in some activities like catechesis, visiting the sick and helping poor people. Parishioners, more and more each day, help in the different pastoral projects and voluntary work.
+
+    Fundada en 1904, se ubica en el sur de El Bronx. La parroquia quiere ser una gran comunidad de fe
+    donde todo el mundo es bienvenido. A través de la catequesis, los sacramentos, la formación en la
+    fe, el ejercicio de la caridad, queremos dar a conocer el amor de Dios en el mundo, especialmente
+    a los más pobres y a los pecadores. Las Misioneras de la Caridad, fundadas por la Madre Teresa de
+    Calcuta en 1950, forman parte activa de la parroquia colaborando en distintas actividades de catequesis,
+    visita de enfermos y ayuda a los pobres. Los feligreses de la parroquia, cada vez más, participan
+    en los distintos proyectos pastorales y de voluntariado.
+
+    Founded in 1904, it is located in South Bronx. This parish wishes to be a big faith community where
+    everybody is welcome. Through catechesis, the sacraments, faith formation, works of charity, we want
+    to show God’s love in the world, especially to the poorest of the poor and sinners. The Missionaries
+    of Charity, founded by Mother Teresa of Calcutta in 1950, collaborate in the parish in some activities
+    like catechesis, visiting the sick and helping poor people. Parishioners, more and more each day,
+    help in the different pastoral projects and voluntary work.
+
     Oficina/Office:
+
     Lunes - Viernes/Monday - Friday: 9 AM - 5 PM
+
     Mass Schedule
+
     Saturday
+
     7:00 PM
+
     Español (Spanish)
+
     Sunday
+
     10:00 AM
+
     Español (Spanish)
+
     11:30 AM
+
     English
+
     6:00 PM
+
     Español (Spanish)
+
     Monday
+
     12:00 PM
+
     Español (Spanish)
+
     7:00 PM
+
     Español (Spanish)
+
     Tuesday
+
     7:00 PM
+
     Español (Spanish)
+
     Wednesday
+
     12:00 PM
+
     Español (Spanish)
+
     7:00 PM
+
     Español (Spanish)
+
     Thursday
+
     12:00 PM
+
     Español (Spanish)
+
     7:00 PM
+
     Español (Spanish)
+
     Friday
+
     12:00 PM
+
     Español (Spanish)
+
     7:00 PM
+
     Español (Spanish)
+
     Location
+
     Visit
+
     Website
+
     Get Directions
+
     Share
+
     Contact & Location
+
     Address
+
     448 College Avenue
+
     The Bronx, New York 10451
+
     Phone
+
     718-585-5900
+
     Website
+
     santaritabronx.com
-    Our mission is to live and proclaim the Gospel of Jesus Christ, serving 2.5 million Catholics across New York — spiritually and materially, today and into the future.
+
+    Our mission is to live and proclaim the Gospel of Jesus Christ, serving 2.5 million Catholics across
+    New York — spiritually and materially, today and into the future.
+
     About
+
     Mission
+
     History
+
     Leadership
+
     Directory
+
     Services
-    Becoming
+
+    Becoming'
   note: Official location and available schedule read; publisher is not inferred from directory grouping.
 - url: https://santaritabronx.com
   seen: 2026-10-07
@@ -254,22 +465,27 @@ evidence:
     \ Viernes Eucarístico de Sta. Rita. 24 HORAS"
   note: Current page or related bulletin context; does not independently decide this historical building
     or unresolved publication.
+- url: https://santaritabronx.com/bulletins
+  seen: '2026-10-08'
+  quote: Performing security verification
+  note: 'Actual October 8 rendered primary page: Cloudflare HTTP 403 challenge. Separately tested httpx
+    with default certifi validation; access failure is not a church-status fact.'
 line1: 448 College Ave.
 city: Bronx
 state: NY
 postal_code: '10451'
 ---
 
-## What is known
+## Known worship / identity
 
 The parish-owned current page and official directory list Sunday Masses at 10 AM, 11:30 AM and 6 PM at St. Rita, 448 College Avenue. The inspected bulletin page contains an archive heading but no inspectable current issue. A blank widget and guessed PDF failures do not establish that the parish publishes nothing.
 
-Research was reviewed October 7, 2026. Exact primary sources are quoted below; saved probes and browser text in scratch/bronx2-* preserve transport failures and inspected channels.
+## October 8, 2026 completed checks
 
-## Why it is not decided
+The October 8 rendered bulletin and about-us pages both reached Cloudflare HTTP 403. Discover Mass was checked separately and reports no available bulletins on that host. The operative Pius V decree explicitly relegates that former building; it is now excluded independently of the Rita publication question. The retained primary schedule supports Mass at Rita, 448 College Avenue.
 
-Neither an active church tied to a verified current bulletin publisher nor a fact-based exclusion is established for this record. Where current Mass is explicitly known, the unresolved question is publication, not whether the church is open. Absence from a directory, a blank bulletin widget, or a failed request is not an assertion of closure or no-bulletin.
+## Exact external blocker
 
-## Next step
+Saint Rita at 718-585-5900 must provide its current Spanish/bilingual issue and actual hosting channel or an explicit no-publication statement. Inspect its current masthead; the Pius V merger name and now-settled building relegation do not determine Rita bulletin publication.
 
-Call St. Rita at 718-585-5900 to request its current Spanish/bilingual bulletin and actual publication URL, or an explicit statement that no bulletin is produced. Read its masthead before deciding a joined St. Pius V publisher or any no-bulletin exclusion.
+This remains open for the stated missing primary evidence. No automatic next-week probe is prescribed: an accessible actual issue or affirmative parish response changes the decision. Windows urllib expired-chain failures are client transport issues; verified httpx/certifi and rendered Cloudflare challenges are recorded separately. Neither is evidence of cessation or no publication.

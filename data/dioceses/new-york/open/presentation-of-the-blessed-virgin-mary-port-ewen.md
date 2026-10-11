@@ -1,38 +1,30 @@
 ---
 name: Presentation of the Blessed Virgin Mary
-revisit: 'Resolve the current PBVMC building-specific schedule with the office: which Masses occur at
-  290 Hoyt Street, Port Ewen? Reuse the existing Presentation/Sacred Heart publisher only when physical
-  public Mass here is verified.'
-revisit_after: 2026-10-14
-roster: ['gcatholic:16441', 'directory:4602']
+revisit: Ask the PBVMC office 845-331-0053 for any public Mass physically at Presentation, whose current
+  primary footer says 209 Hoyt Street. The primary timetable labels Kingston and Sacred Heart Esopus only;
+  neither that omission nor the old Father Kelley Drive roster address establishes closure.
+revisit_after: '2026-10-17'
+roster:
+- gcatholic:16441
+- directory:4602
 evidence:
 - url: https://gcatholic.org/churches/usa-02/16441
   seen: 2026-10-07
   quote: 'GCatholic Church ID: 16441'
   note: Roster identity only, not present public Mass evidence.
-- url: https://pbvmc.com/
-  seen: 2026-10-07
-  quote: Religious Education
-  note: Rendered official page preserved in scratch/nyc3-browser files. Access/publication inspection
-    is not a closure determination.
+- url: https://pbvmc.com/mass-times?research=20261008
+  seen: '2026-10-08'
+  quote: 4:00 PM English English EN St. Mary-St. Peter of Kingston
+  note: Actual primary schedule also gives Sunday 9 AM St. Mary-St. Peter and 1 PM Sacred Heart; footer
+    identifies Presentation at 209 Hoyt Street, not the earlier question's 290.
 line1: Father Kelley Dr.
 city: Port Ewen
 state: NY
 postal_code: '12466'
 ---
 
-## What is known
+## Publisher is settled; this building is not
 
-The October 4, 2026 PBVMC bulletin visually names Presentation, Sacred Heart Esopus, and St. Mary-St. Peter Kingston. Its front-page general Mass times are not clearly assigned to Presentation.
+The retained Presentation/Sacred Heart publisher also serves the current St. Mary-St. Peter Kingston building. The actual October 8 primary Mass & Confession page explicitly labels Saturday 4 PM and Sunday 9 AM Kingston, and Sunday 1 PM Sacred Heart Esopus. It does not label a Presentation Mass. That is not a closure finding.
 
-GCatholic identifies this exact site as Presentation of the Blessed Virgin Mary, Father Kelley Dr., Port Ewen. Official directory candidates are linked only when they match the site, not merely a nearby church. Saved sources were reviewed on October 7, 2026.
-
-## Why it is not decided
-
-The evidence does not yet settle both current public Mass at this building and the present bulletin publisher, or an explicit exclusion fact. Neither missing directory coverage, a canonical merger, a stale archive nor a failed download is treated as closure or no-bulletin.
-
-## Next step
-
-Resolve the current PBVMC building-specific schedule with the office: which Masses occur at 290 Hoyt Street, Port Ewen? Reuse the existing Presentation/Sacred Heart publisher only when physical public Mass here is verified.
-
-Revisit on or after October 14, 2026.
+The same primary footer gives Presentation at 209 Hoyt Street, Port Ewen, and telephone 845-331-0053. The earlier question's 290 Hoyt Street was not supported by this actual source; the original roster instead says Father Kelley Drive. Those frontage/address differences remain explicit rather than inventing a precise building point. The current publisher is already known, so the remaining office question is narrowly whether any occasional or regular public Mass occurs at this physical Presentation church. October 10 direct re-fetches returned Cloudflare 403 and add no new building-use statement. No permanent closure or guessed coordinate is asserted, and no contact was made.
