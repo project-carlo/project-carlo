@@ -9,6 +9,11 @@ decision, rationale and question) and leaves the rest to this:
   `church_slug` when the parish has one church;
 - `"dated"` is read as `specific_date`, the name the files use;
 - a slot without an `id` gets the next free `sN`;
+- a source citing several bulletins (`"bulletins": [...]` for `bulletin`, the same
+  `said` in each) becomes one source per bulletin, as the files store them;
+- a slot gets a `history` source for each event of extract mode's recent history
+  that matches its entry or an option's (`coverage.attach_history`), for each
+  bulletin it has none for yet;
 - every bulletin a slot's `agent` source cites is marked read (none is unmarked);
 - `as_of` is the fetch time of the newest bulletin read;
 - `status` is `needs_review` while a question is open, else `ready` (a blocked file
@@ -25,6 +30,7 @@ from __future__ import annotations
 from typing import Any
 
 from pdf_extract.labeling.labels import ENTRY_KEYS
+from pdf_extract.seeding.coverage import attach_history
 from pdf_extract.seeding.files import (
     AGENT,
     APPROVED,
@@ -76,8 +82,33 @@ def _next_id(taken: set[str]) -> str:
     return f"s{n}"
 
 
+def _expand_sources(sources: Any) -> Any:
+    """`sources` with each one citing `bulletins` split into one source per bulletin."""
+    if not isinstance(sources, list):
+        return sources
+    out = []
+    for source in sources:
+        refs = source.get("bulletins") if isinstance(source, dict) else None
+        if not (isinstance(refs, list) and refs and all(isinstance(r, str) for r in refs)):
+            out.append(source)  # nothing to expand, or something `seed check` reports
+            continue
+        if isinstance(source.get("bulletin"), str):
+            refs = [source["bulletin"], *refs]
+        for ref in dict.fromkeys(refs):
+            one: dict[str, Any] = {}
+            for key, value in source.items():
+                if key == "bulletins":
+                    one["bulletin"] = ref
+                elif key != "bulletin":
+                    one[key] = value
+            out.append(one)
+    return out
+
+
 def _fill_slot(slot: dict[str, Any], church: str | None, taken: set[str]) -> dict[str, Any]:
     filled = dict(slot)
+    if "sources" in filled:
+        filled["sources"] = _expand_sources(filled["sources"])
     if not isinstance(filled.get("id"), str) or not filled["id"].strip():
         filled["id"] = _next_id(taken)
     for key, default in _SLOT_DEFAULTS.items():
@@ -94,8 +125,11 @@ def _fill_slot(slot: dict[str, Any], church: str | None, taken: set[str]) -> dic
     return {**{k: filled[k] for k in known}, **{k: v for k, v in filled.items() if k not in known}}
 
 
-def finalize_seed(seed: dict[str, Any], churches: list[str]) -> dict[str, Any]:
-    """`seed` with its bookkeeping done. `churches` are the parish's church slugs."""
+def finalize_seed(
+    seed: dict[str, Any], churches: list[str], history: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """`seed` with its bookkeeping done. `churches` are the parish's church slugs, and
+    `history` extract mode's recent bulletins (`queries.recent_history`) to cite."""
     if seed.get("status") == APPROVED:
         return seed
     seed = dict(seed)
@@ -104,7 +138,9 @@ def finalize_seed(seed: dict[str, Any], churches: list[str]) -> dict[str, Any]:
     if isinstance(slots, list):  # anything else is left for `seed check` to report
         taken = {s["id"] for s in slots if isinstance(s, dict) and isinstance(s.get("id"), str)}
         slots = seed["slots"] = [
-            _fill_slot(s, church, taken) if isinstance(s, dict) else s for s in slots
+            attach_history(seed, _fill_slot(s, church, taken), history or [])
+            if isinstance(s, dict) else s
+            for s in slots
         ]
     else:
         slots = []

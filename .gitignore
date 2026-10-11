@@ -79,11 +79,12 @@ data/labeler-demo/
 apps/web/public/frontend.json.gz
 apps/web/public/frontend.json.gz.previous
 
-# Claude Code. The shared session-start hook, its registration and the project
-# skills are tracked; everything else under .claude/ (local settings, caches)
-# stays local.
+# Claude Code. The shared session-start hook, its registration, the project
+# skills and subagents are tracked; everything else under .claude/ (local
+# settings, caches, worktrees) stays local.
 .claude/*
 !.claude/settings.json
+!.claude/agents/
 !.claude/hooks/
 !.claude/skills/
 

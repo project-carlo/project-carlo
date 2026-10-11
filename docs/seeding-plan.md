@@ -74,8 +74,9 @@ restate it.
 
 ### What a subagent does for each parish
 
-1. **Look at what's available.** `pnpm seed bulletins <parish>` lists the
-   parish's stored bulletins, newest first.
+1. **Look at what's available.** `pnpm seed init <parish>` starts the file and
+   prints the parish's website and churches, its stored bulletins newest
+   first, a summary of extract mode's recent history, and the newest PDF.
 2. **Read the newest bulletin in full** (`pnpm seed pdf`), and draft every
    Mass, Confession and Adoration slot the policy asks for, with its page.
    Write down what it leaves out on purpose too (a Communion Service, a
@@ -134,14 +135,19 @@ prints compact text by default, `--json` on request.
 | Command | What it does |
 | :-- | :-- |
 | `seed pick [--limit N] [--diocese D] [--labeled]` | Parishes with no seed and no seed file, easiest first: one church, a recent bulletin, extract-mode output stable from week to week. `--labeled` picks the parishes with labels instead, for the [test run](#testing-it-first). |
+| `seed init <parish>` | Starts the parish's file, and prints `seed brief`. |
+| `seed brief <parish>` | Where a draft starts: the parish's website, its churches with their addresses, `seed bulletins`, each event of recent history with the number of bulletins it is in (a pointer to `seed history` when there are too many), and the newest PDF, written as `seed pdf <parish> latest` writes it. |
 | `seed bulletins <parish>` | The parish's bulletins, newest first: short hash, fetch date, issue date if known, page count (or `no PDF` once the PDF is pruned: its history can still be cited), whether extract mode flagged it as a wrong bulletin, and whether it's a duplicate of another. |
 | `seed pdf <parish> <bulletin>` | Writes the stored compacted PDF (the first 10 pages, or the parish's limit) to a local path and prints it, so page numbers match the pipeline's and the labeler's. |
 | `seed text <parish> <bulletin> [--page N]` | Each page's text layer, marking the pages that are only images. A tenth of what reading the PDF costs, for corroborating an older bulletin. |
 | `seed pages <parish> <bulletin> [--page N] [--dpi D]` | Renders pages as PNGs, for bulletins that are only images or a dense table to zoom into. |
+| `seed grep <parish> [pattern] [--bulletins N]` | Searches the text layer of every bulletin with a stored PDF, newest first, printing each matching line with a line of context and flagging pages that are only images. With no pattern, schedule words (Mass, confession, adoration, cancelled, Communion Service, First Friday...). |
 | `seed history <parish> [--bulletins N]` | Extract mode's stored events for the parish's last N bulletins, one table per bulletin, with pages. |
+| `seed diff <parish> [--bulletins N]` | History events (of the bulletins with a stored PDF, or the newest N) that no slot or option of the file covers, and included slots history never had. |
+| `seed church <query>` | Churches whose slug, name, town or address, or whose parish's, contains the query: church slug, parish slug, name and address. For deciding whether a church a bulletin names is another parish's. |
 | `seed extract <parish> <bulletin> --model M` | A full extraction with `POLICY`, through the existing classifiers (`gpt-6-luna --model gpt-6.1-sol`, `gemini-flash-qualified`) and the runner's result cache, so asking twice costs one call. The result is appended to the seed file's `calls`. |
 | `seed ask <parish> <bulletin> --model M "question"` | One question about one bulletin, answered with an answer, the page and the words it read there. Appended to `calls`. |
-| `seed finalize <parish>...` | The bookkeeping that finishes a draft: fills in every key a slot or entry leaves at its default (`event_kind` from whether it has a `date`, `church_slug` for a one-church parish), marks read the bulletins the agent's sources cite, sets `as_of` to the newest one's fetch time and the status from the open questions, then runs `seed check`. |
+| `seed finalize <parish>...` | The bookkeeping that finishes a draft: fills in every key a slot or entry leaves at its default (`event_kind` from whether it has a `date`, `church_slug` for a one-church parish), splits a source citing several `bulletins` into one per bulletin, adds the matching `history` sources, marks read the bulletins the agent's sources cite, sets `as_of` to the newest one's fetch time and the status from the open questions, then runs `seed check`. It warns of the history events `seed diff` finds no slot for, and still passes. |
 | `seed check <parish>... [--all]` | The file is well formed, every entry parses as `pnpm schedule seed` would (`schedule.entries.parse_entry`), churches belong to the parish, no two included entries share a slot, every slot has a source and a rationale, every open question has options, and `as_of` is the newest bulletin consulted. |
 | `seed status` | Every seed file's status and open questions, and whether the local database has loaded it. |
 
@@ -189,7 +195,7 @@ There is no `seed load`: loading is what the pipeline does with approved files.
       "status": "settled",
       "entry": {"church_slug": "st-marys-oswego", "event_type": "mass", "event_kind": "weekly",
                 "day_of_week": "Saturday", "date": null, "start_time": "16:00", "end_time": null,
-                "cancelled": false, "weeks_of_month": [], "season": null, "note": "Vigil"},
+                "cancelled": false, "weeks_of_month": [], "season": null, "note": null},
       "page": 2,
       "sources": [
         {"source": "agent", "bulletin": "9f2c…", "page": 2, "said": "Sat 4:00 PM Vigil"},
@@ -385,6 +391,26 @@ and the labeler's `views/SeedPage.tsx` and `lib/seeds.ts`.
   `cost_usd` as null.
 - **Output** is compact text, `--json` the full result: `__main__` prints a
   command's `render` when it sets one.
+- **`seed init` prints `seed brief`**, so a draft starts from one command.
+  On a parish that has a file already it still refuses, and says to run
+  `seed brief`. The brief's history leaves out dated events before the
+  newest bulletin's fetch date (outside a seed's scope), and folds an event
+  that recurs with different notes or pages into one row.
+- **Matching history to slots** (`seeding/coverage.py`), for `finalize`'s
+  history sources and `seed diff`: the same event type, start time and
+  church (when the entry names one); a weekly event the same weekday of a
+  weekly entry; a dated event the same date, or the weekday of a weekly entry
+  unless it is a cancellation. Season, weeks of the month and end times are
+  not compared. History of a bulletin extract mode flagged as wrong is left
+  out. `seed diff` also leaves out dated events before the seed's `as_of`
+  date, and a cancellation of a weekly slot the file leaves out.
+- **History sources** come from the bulletins with a stored PDF (the newest
+  4 when the blob store can't be listed), one per matching event, and never
+  for a bulletin the slot already cites in a history source, so `finalize`
+  can run again. Their `said` is the event as `seed history` prints it.
+- **`bulletins` in a source** is shorthand for drafting only: `finalize`
+  expands it, and `seed check` rejects a file that still has it, so the
+  stored format, the loader and the labeler never see it.
 
 ### The file
 

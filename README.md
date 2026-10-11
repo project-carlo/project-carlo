@@ -659,11 +659,15 @@ decision and rationale, and a question for each slot it couldn't decide.
 
 ```bash
 pnpm seed pick                                # parishes to seed next, easiest first
-pnpm seed init st-mary-albany                 # start a parish's seed file
+pnpm seed init st-mary-albany                 # start a parish's seed file; prints `seed brief`
+pnpm seed brief st-mary-albany                # churches, website, bulletins, history, newest PDF
 pnpm seed bulletins st-mary-albany            # its bulletins, newest first
 pnpm seed pdf st-mary-albany latest           # the stored PDF, as a local file to read
 pnpm seed pages st-mary-albany 9f2c41 --page 2  # one page as a PNG
+pnpm seed grep st-mary-albany "holy hour"     # search every stored bulletin's text
 pnpm seed history st-mary-albany              # what extract mode stored (free)
+pnpm seed diff st-mary-albany                 # history no slot covers, and the reverse
+pnpm seed church "lodge st"                   # which parish a church belongs to
 pnpm seed ask st-mary-albany 9f2c41 --model gemini-3-flash-preview "Page 2: Saturday confessions?"
 pnpm seed extract st-mary-albany 9f2c41 --model gpt-6.1-sol
 pnpm seed check st-mary-albany                # or --all
