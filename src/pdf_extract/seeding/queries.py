@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import io
 import json
+import re
 import sqlite3
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
@@ -43,6 +44,11 @@ RECENT_DAYS = 14
 MANIFEST_NAME = "run.json"
 # Fewer characters than this on a page: it is only an image (`seed text`).
 MIN_PAGE_TEXT_CHARS = 40
+# How many bulletins `seed history` shows, and `seed diff` compares when the
+# blob store can't say which PDFs it holds.
+HISTORY_BULLETINS = 4
+# `seed brief` lists recent history up to this many distinct events, else points to it.
+BRIEF_HISTORY_ROWS = 40
 
 
 class SeedError(ValueError):
@@ -315,7 +321,13 @@ def page_texts(
     with `seed pages` to read it.
     """
     bulletin = resolve_bulletin(conn, parish_slug, ref, cutoff=cutoff)
-    data = bulletin_pdf(parish_slug, bulletin["content_hash"])
+    total, pages = _pdf_texts(bulletin_pdf(parish_slug, bulletin["content_hash"]), page)
+    return {"parish": parish_slug, "bulletin": bulletin["content_hash"],
+            "fetched_at": bulletin["fetched_at"], "pages": total, "texts": pages}
+
+
+def _pdf_texts(data: bytes, page: int | None = None) -> tuple[int, list[dict[str, Any]]]:
+    """The PDF's page count, and the text layer of one page or all."""
     pdf = pdfium.PdfDocument(data)
     try:
         total = len(pdf)
@@ -337,8 +349,77 @@ def page_texts(
                           "image_only": len(text) < MIN_PAGE_TEXT_CHARS})
     finally:
         pdf.close()
-    return {"parish": parish_slug, "bulletin": bulletin["content_hash"],
-            "fetched_at": bulletin["fetched_at"], "pages": total, "texts": pages}
+    return total, pages
+
+
+# ── Searching bulletins ─────────────────────────────────────────────────────
+# `seed grep`'s pattern when given none: the words schedule slots and their
+# changes are printed with.
+SCHEDULE_PATTERN = (
+    r"\bmass(es)?\b|\bvigil\b|confess|reconcil|penance|adoration|exposition|holy hour"
+    r"|benediction|blessed sacrament|cancel|suspend|communion service"
+    r"|first (friday|saturday)"
+)
+
+
+def _hunks(lines: list[str], hits: list[int]) -> list[list[dict[str, Any]]]:
+    """Each matching line with a line of context either side, overlapping runs merged."""
+    hit = set(hits)
+    hunks: list[list[dict[str, Any]]] = []
+    end = -1
+    for i in hits:
+        lo, hi = max(0, i - 1), min(len(lines) - 1, i + 1)
+        if not hunks or lo > end + 1:
+            hunks.append([])
+        for j in range(max(lo, end + 1), hi + 1):
+            hunks[-1].append({"text": lines[j], "match": j in hit})
+        end = max(end, hi)
+    return hunks
+
+
+def grep_bulletins(
+    conn: sqlite3.Connection, parish_slug: str, pattern: str | None = None, *,
+    bulletins: int = 0, cutoff: str | None = None,
+) -> dict[str, Any]:
+    """`seed grep`: the matching lines of every bulletin with a stored PDF, newest first.
+
+    Searches the text layer, as `seed text` reads it, line by line and in any
+    case; `pattern` is a regular expression, `SCHEDULE_PATTERN` when None. A
+    page that is only an image can't be searched, and is listed as such.
+    `bulletins` limits it to the newest N (0: all).
+    """
+    try:
+        regex = re.compile(pattern or SCHEDULE_PATTERN, re.IGNORECASE)
+    except re.error as exc:
+        raise SeedError(f"Not a regular expression: {pattern!r} ({exc})") from exc
+    rows = [b for b in parish_bulletins(conn, parish_slug, cutoff=cutoff)
+            if b["duplicate_of"] is None]
+    held = stored_pdfs(parish_slug) if rows else set()
+    readable = [b for b in rows if held is None or b["content_hash"] in held]
+    shown = readable[:bulletins] if bulletins > 0 else readable
+    out = []
+    for b in shown:
+        item = {k: b[k] for k in ("short", "content_hash", "fetched_at", "published_date")}
+        try:
+            _, pages = _pdf_texts(_read_pdf(parish_slug, b["content_hash"]))
+        except Exception as exc:  # unreadable: say so, don't stop
+            out.append({**item, "error": str(exc), "pages": []})
+            continue
+        found = []
+        for p in pages:
+            lines = [line.strip() for line in p["text"].splitlines() if line.strip()]
+            hits = [i for i, line in enumerate(lines) if regex.search(line)]
+            if p["image_only"] or hits:
+                found.append({"page": p["page"], "image_only": p["image_only"],
+                              "hunks": _hunks(lines, hits)})
+        out.append({**item, "error": None, "pages": found})
+    return {
+        "parish": parish_slug,
+        "pattern": regex.pattern,
+        "default_pattern": not pattern,
+        "bulletins": out,
+        "not_searched": len(rows) - len(shown),
+    }
 
 
 # ── Extract mode's history ──────────────────────────────────────────────────
@@ -348,7 +429,8 @@ def _hhmm(value: Any) -> str | None:
 
 
 def history(
-    conn: sqlite3.Connection, parish_slug: str, *, bulletins: int = 4, cutoff: str | None = None,
+    conn: sqlite3.Connection, parish_slug: str, *, bulletins: int = HISTORY_BULLETINS,
+    cutoff: str | None = None,
 ) -> dict[str, Any]:
     """`seed history`: extract mode's stored events for the parish's last processed bulletins.
 
@@ -357,6 +439,32 @@ def history(
     """
     rows = [b for b in parish_bulletins(conn, parish_slug, cutoff=cutoff)
             if b["processed_at"] and b["duplicate_of"] is None][:max(1, bulletins)]
+    return {"parish": parish_slug, "cutoff": cutoff, "bulletins": _history_of(conn, rows)}
+
+
+def recent_history(
+    conn: sqlite3.Connection, parish_slug: str, *, bulletins: int | None = None,
+    cutoff: str | None = None,
+) -> list[dict[str, Any]]:
+    """`history`'s bulletins for comparing with a seed (`seed diff`, `seed finalize`).
+
+    By default the processed bulletins whose PDF is still stored, the ones a
+    drafter can read (the newest `HISTORY_BULLETINS` when the store can't be
+    listed); `bulletins` takes the newest N instead.
+    """
+    rows = [b for b in parish_bulletins(conn, parish_slug, cutoff=cutoff)
+            if b["processed_at"] and b["duplicate_of"] is None]
+    if bulletins is None:
+        held = stored_pdfs(parish_slug) if rows else set()
+        rows = (rows[:HISTORY_BULLETINS] if held is None
+                else [b for b in rows if b["content_hash"] in held])
+    else:
+        rows = rows[:max(1, bulletins)]
+    return _history_of(conn, rows)
+
+
+def _history_of(conn: sqlite3.Connection, rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Extract mode's events for each of `rows` (`parish_bulletins` items), with pages."""
     events = load_events(conn, [b["id"] for b in rows])
     by_bulletin: dict[int, list[dict[str, Any]]] = {b["id"]: [] for b in rows}
     for ev in events:
@@ -372,21 +480,17 @@ def history(
             "page_number": ev["page_number"],
             "note": ev["note"],
         })
-    return {
-        "parish": parish_slug,
-        "cutoff": cutoff,
-        "bulletins": [
-            {
-                "short": b["short"],
-                "content_hash": b["content_hash"],
-                "fetched_at": b["fetched_at"],
-                "published_date": b["published_date"],
-                "wrong_bulletin": b["wrong_bulletin"],
-                "events": sorted(by_bulletin[b["id"]], key=_event_order),
-            }
-            for b in rows
-        ],
-    }
+    return [
+        {
+            "short": b["short"],
+            "content_hash": b["content_hash"],
+            "fetched_at": b["fetched_at"],
+            "published_date": b["published_date"],
+            "wrong_bulletin": b["wrong_bulletin"],
+            "events": sorted(by_bulletin[b["id"]], key=_event_order),
+        }
+        for b in rows
+    ]
 
 
 _DAY_ORDER = {d: i for i, d in enumerate(
@@ -399,6 +503,101 @@ def _event_order(ev: dict[str, Any]) -> tuple:
         _DAY_ORDER.get(ev["day_of_week"] or "", 7), ev["date"] or "", ev["start_time"] or "",
         ev["event_type"] or "",
     )
+
+
+# ── Churches, and where a draft starts ──────────────────────────────────────
+def _address(row: sqlite3.Row) -> str:
+    town = " ".join(x for x in (row["state"], row["postal_code"]) if x)
+    return ", ".join(x for x in (row["address_line1"], row["address_line2"], row["city"], town)
+                     if x)
+
+
+def find_churches(conn: sqlite3.Connection, query: str) -> dict[str, Any]:
+    """`seed church`: the churches whose slug, name or address (town included), or whose
+    parish's slug or name, contains `query` in any case. Read from churches.csv and
+    parishes.csv as the database loaded them, retired churches left out."""
+    needle = query.strip().lower()
+    if not needle:
+        raise SeedError("Name something to look for: a slug, a name, a town or an address")
+    rows = conn.execute(
+        """SELECT c.slug, c.name, c.address_line1, c.address_line2, c.city, c.state,
+                  c.postal_code, p.slug AS parish, p.name AS parish_name
+           FROM church c JOIN parish p ON p.id = c.parish_id
+           WHERE c.retired_at IS NULL ORDER BY p.slug, c.slug""",
+    ).fetchall()
+    found = []
+    for row in rows:
+        address = _address(row)
+        fields = (row["slug"], row["name"], address, row["parish"], row["parish_name"])
+        if any(needle in (f or "").lower() for f in fields):
+            found.append({"church": row["slug"], "parish": row["parish"], "name": row["name"],
+                          "address": address})
+    return {"query": query, "churches": found}
+
+
+def _history_summary(past: list[dict[str, Any]], since: str | None) -> list[dict[str, Any]]:
+    """Each distinct event in `history`'s bulletins (newest first), with how many of them it
+    is in, dated ones before `since` left out. Notes and pages may differ between
+    bulletins: the newest's are kept."""
+    seen: dict[tuple, dict[str, Any]] = {}
+    for b in past:
+        if b["wrong_bulletin"]:
+            continue
+        for ev in b["events"]:
+            if ev["event_kind"] != "weekly" and since and (ev["date"] or "") < since:
+                continue
+            key = tuple(ev[k] for k in ev if k not in ("page_number", "note"))
+            row = seen.setdefault(key, {"event": ev, "bulletins": 0, "in": set()})
+            if b["short"] not in row["in"]:
+                row["in"].add(b["short"])
+                row["bulletins"] += 1
+    for row in seen.values():
+        del row["in"]
+    return sorted(seen.values(), key=lambda r: _event_order(r["event"]))
+
+
+def brief(
+    conn: sqlite3.Connection, parish_slug: str, *, cutoff: str | None = None,
+    work_dir: Path = WORK_DIR,
+) -> dict[str, Any]:
+    """`seed brief`, which `seed init` prints too: what a drafter starts a parish from.
+
+    The parish's website and churches, its bulletins (`seed bulletins`), the
+    distinct events of its last `HISTORY_BULLETINS` processed bulletins with how
+    many each is in, but dated ones before the newest bulletin's fetch date
+    (outside a seed's scope; `history` null past `BRIEF_HISTORY_ROWS`, for a
+    pointer to `seed history`), and the newest PDF, written as `seed pdf <parish>
+    latest` writes it.
+    """
+    parish = conn.execute(
+        "SELECT id, slug, name, homepage_url FROM parish WHERE slug = ?", (parish_slug,),
+    ).fetchone()
+    if parish is None:
+        raise SeedError(f"Parish not found: {parish_slug} (is it in data/parishes.csv?)")
+    churches = [{"church": c["slug"], "name": c["name"], "address": _address(c)}
+                for c in list_churches(conn, parish["id"])]
+    bulletins = list_bulletins(conn, parish_slug, cutoff=cutoff)
+    newest = bulletins["bulletins"][0]["fetched_at"] if bulletins["bulletins"] else None
+    since = normalize_as_of(newest)[:10] if newest else None
+    past = history(conn, parish_slug, cutoff=cutoff)["bulletins"]
+    summary = _history_summary(past, since)
+    try:
+        pdf: dict[str, Any] = export_pdf(conn, parish_slug, "latest", cutoff=cutoff,
+                                         work_dir=work_dir)
+    except Exception as exc:  # no PDF to read: say why, don't stop
+        pdf = {"error": str(exc)}
+    return {
+        "parish": parish_slug,
+        "name": parish["name"],
+        "website": parish["homepage_url"],
+        "churches": churches,
+        "bulletins": bulletins,
+        "history_bulletins": [b["short"] for b in past if not b["wrong_bulletin"]],
+        "history_since": since,
+        "history_events": len(summary),
+        "history": summary if len(summary) <= BRIEF_HISTORY_ROWS else None,
+        "pdf": pdf,
+    }
 
 
 # ── Picking a batch ─────────────────────────────────────────────────────────

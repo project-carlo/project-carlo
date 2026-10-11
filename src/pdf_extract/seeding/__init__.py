@@ -8,8 +8,11 @@ switches a parish to update mode (docs/schedule-state-plan.md).
 
 - `files`: the file format: reading, writing and checking its shape.
 - `checks`: a file against the database (`seed check`).
-- `queries`: what the agent reads: bulletins, PDFs, extract mode's history,
-  the batch to seed, and test runs on the labeled parishes.
+- `queries`: what the agent reads: bulletins, PDFs and their text, extract
+  mode's history, churches, the batch to seed, and test runs on the labeled
+  parishes.
+- `coverage`: a file's slots against extract mode's history (`seed diff`, and
+  the history sources `finalize` attaches).
 - `calls`: second opinions from external models (`seed extract`, `seed ask`).
 - `loader`: approved files into the database.
 - `score`: a test run's drafts against the labels.

@@ -2,11 +2,15 @@
 
     seed pick      [--limit N] [--diocese D] [--labeled --eval RUN]
     seed init      <parish>
+    seed brief     <parish>
     seed bulletins <parish> [--limit N]
     seed pdf       <parish> <bulletin>
     seed text      <parish> <bulletin> [--page N]
     seed pages     <parish> <bulletin> [--page N] [--dpi D]
+    seed grep      <parish> [pattern] [--bulletins N]
     seed history   <parish> [--bulletins N]
+    seed diff      <parish> [--bulletins N]
+    seed church    <query>
     seed extract   <parish> <bulletin> --model M
     seed ask       <parish> <bulletin> --model M "question"
     seed finalize  <parish>...
@@ -35,7 +39,10 @@ from pdf_extract.schedule.store import parish_churches
 from pdf_extract.seeding import queries
 from pdf_extract.seeding.calls import call_limit, load_or_start, run_ask, run_extract
 from pdf_extract.seeding.checks import check_seed
+from pdf_extract.seeding.coverage import diff, event_parts, missing_warning
 from pdf_extract.seeding.files import (
+    APPROVED,
+    BLOCKED,
     SeedFileError,
     SeedSummary,
     read_seed,
@@ -88,14 +95,20 @@ def _pick(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 def _init(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     queries.parish_row(conn, args.parish)
     if read_seed(args.parish, ctx.seeds_dir) is not None:
-        raise SeedError(f"{seed_path(args.parish, ctx.seeds_dir)} exists already")
+        raise SeedError(f"{seed_path(args.parish, ctx.seeds_dir)} exists already "
+                        f"(`pnpm seed brief {args.parish}` prints where it starts from)")
     seed = load_or_start(conn, ctx, args.parish)
     path = write_seed_file(seed, ctx.seeds_dir)
     held = queries.stored_pdfs(args.parish)
     stored = [b["content_hash"][:12] for b in seed["bulletins"]
               if held is None or b["content_hash"] in held]
     return {"parish": args.parish, "path": Path(os.path.relpath(path)).as_posix(),
-            "bulletins": len(seed["bulletins"]), "stored": stored}
+            "bulletins": len(seed["bulletins"]), "stored": stored,
+            "brief": _brief(conn, ctx, args)}
+
+
+def _brief(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    return queries.brief(conn, args.parish, cutoff=ctx.cutoff(args.parish))
 
 
 def _bulletins(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
@@ -121,6 +134,27 @@ def _pages(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     )
 
 
+def _grep(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    return queries.grep_bulletins(
+        conn, args.parish, args.pattern, bulletins=args.bulletins,
+        cutoff=ctx.cutoff(args.parish),
+    )
+
+
+def _church(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    return queries.find_churches(conn, args.query)
+
+
+def _diff(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    seed = read_seed(args.parish, ctx.seeds_dir)
+    if seed is None:
+        raise SeedError(f"{args.parish} has no seed file: start one with `pnpm seed init`")
+    past = queries.recent_history(
+        conn, args.parish, bulletins=args.bulletins, cutoff=ctx.cutoff(args.parish),
+    )
+    return {"parish": args.parish, **diff(seed, past)}
+
+
 def _history(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.history(
         conn, args.parish, bulletins=args.bulletins, cutoff=ctx.cutoff(args.parish),
@@ -138,14 +172,26 @@ def _ask(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 
 
 def _finalize(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    warnings: dict[str, list[str]] = {}
     for slug in args.parish:
         seed = read_seed(slug, ctx.seeds_dir)
         if seed is None:
             continue  # the check below reports it
         parish = queries.parish_row(conn, slug)
         churches = sorted(parish_churches(conn, parish["id"]))
-        write_seed_file({**finalize_seed(seed, churches), "parish_slug": slug}, ctx.seeds_dir)
-    return _check(conn, ctx, args)
+        past = queries.recent_history(conn, slug, cutoff=ctx.cutoff(slug))
+        seed = {**finalize_seed(seed, churches, past), "parish_slug": slug}
+        write_seed_file(seed, ctx.seeds_dir)
+        if seed.get("status") not in (APPROVED, BLOCKED):
+            # An omission is what update mode is worst at recovering from: say so, but
+            # as a warning, since history is a hint and may be wrong.
+            found = diff(seed, past)
+            warnings[slug] = [missing_warning(row, len(found["bulletins"]))
+                              for row in found["missing"]]
+    result = _check(conn, ctx, args)
+    for f in result["files"]:
+        f["warnings"] = warnings.get(f["parish"], [])
+    return result
 
 
 def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
@@ -202,25 +248,12 @@ def _when(value: str | None) -> str:
     return (value or "—")[:16].replace("T", " ")
 
 
-def _row(ev: dict[str, Any]) -> str:
-    when = ev.get("day_of_week") or ev.get("date") or "?"
-    end = f"–{ev['end_time']}" if ev.get("end_time") else ""
-    extra = []
-    if ev.get("weeks_of_month"):
-        extra.append("weeks " + "/".join(ev["weeks_of_month"]))
-    if ev.get("season"):
-        s = ev["season"]
-        extra.append(f"season {s['start_month']}/{s.get('start_day') or ''}–"
-                     f"{s['end_month']}/{s.get('end_day') or ''}")
-    if ev.get("cancelled"):
-        extra.append("CANCELLED")
-    if ev.get("note"):
-        extra.append(f"“{ev['note']}”")
+def _row(ev: dict[str, Any], lead: str = "  ") -> str:
+    p = event_parts(ev)
     page = ev.get("page_number")
-    kind = ev.get("event_kind") or "?"
-    return (f"  {kind:13} {ev.get('event_type') or '?':10} {when:10} "
-            f"{(ev.get('start_time') or '?') + end:11} p{page if page else '-':<3} "
-            f"{ev.get('church_slug') or '?'}" + (f"  {'; '.join(extra)}" if extra else ""))
+    return (f"{lead}{p['kind']:13} {p['type']:10} {p['when']:10} {p['time']:11} "
+            f"p{page if page else '-':<3} {p['church']}"
+            + (f"  {p['extra']}" if p["extra"] else ""))
 
 
 def _text_pick(r: Result) -> str:
@@ -326,6 +359,7 @@ def _text_check(r: Result) -> str:
             head += f", {f['open_questions']} open questions"
         lines.append(head + ("" if f["problems"] else "  OK"))
         lines += [f"  - {p}" for p in f["problems"]]
+        lines += [f"  ! {w}" for w in f.get("warnings") or []]
     return "\n".join(lines)
 
 
@@ -363,7 +397,77 @@ def _text_init(r: Result) -> str:
     if len(r["stored"]) < r["bulletins"]:
         text += (f"; only {len(r['stored'])} have a stored PDF to read "
                  f"({', '.join(r['stored']) or 'none'}), the rest only history")
-    return text
+    return text + "\n\n" + _text_brief(r["brief"])
+
+
+def _text_brief(r: Result) -> str:
+    lines = [f"{r['parish']}: {r['name']}  {r['website'] or '(no website)'}"]
+    lines += [f"  {c['church']:40} {c['name']}, {c['address'] or '(no address)'}"
+              for c in r["churches"]]
+    lines.append(_text_bulletins(r["bulletins"]))
+    n = len(r["history_bulletins"])
+    if r["history"] is None:
+        lines.append(f"history: {r['history_events']} distinct events in {n} bulletins: "
+                     f"`pnpm seed history {r['parish']}`")
+    elif not r["history"]:
+        lines.append("history: none stored")
+    else:
+        since = f", dated ones from {r['history_since']}" if r["history_since"] else ""
+        lines.append(f"history: events of the last {n} processed bulletins{since}, in how "
+                     "many (older prompt; a hint, not a vote)")
+        lines += [_row(h["event"], f"  {h['bulletins']}/{n} ") for h in r["history"]]
+    pdf = r["pdf"]
+    lines.append(f"newest PDF: {_text_pdf(pdf)}" if "path" in pdf
+                 else f"newest PDF: none ({pdf['error']})")
+    return "\n".join(lines)
+
+
+def _text_grep(r: Result) -> str:
+    what = "schedule words" if r["default_pattern"] else f"/{r['pattern']}/"
+    lines = [f"{r['parish']}: {what} in {len(r['bulletins'])} bulletins with a stored PDF, "
+             "newest first"]
+    for b in r["bulletins"]:
+        head = f"{b['short']} (issue {b['published_date'] or '—'})"
+        if b["error"]:
+            lines.append(f"{head}: unreadable ({b['error']})")
+        elif not b["pages"]:
+            lines.append(f"{head}: no match")
+        for p in b["pages"]:
+            where = f"{head} p{p['page']}"
+            lines.append(f"{where}: only an image: render it with `seed pages`"
+                         if p["image_only"] else where)
+            for i, hunk in enumerate(p["hunks"]):
+                if i:
+                    lines.append("  --")
+                lines += [f"  {'>' if line['match'] else ' '} {line['text']}" for line in hunk]
+    if r["not_searched"]:
+        lines.append(f"…{r['not_searched']} older not searched (no stored PDF, or --bulletins)")
+    return "\n".join(lines)
+
+
+def _text_church(r: Result) -> str:
+    if not r["churches"]:
+        return f"No church matches {r['query']!r}."
+    return "\n".join(f"{c['church']:40} {c['parish']:40} {c['name']}, {c['address']}"
+                     for c in r["churches"])
+
+
+def _text_diff(r: Result) -> str:
+    n = len(r["bulletins"])
+    lines = [f"{r['parish']}: the seed against extract mode's history of {n} bulletins "
+             f"({', '.join(r['bulletins']) or 'none'})"]
+    lines.append("History events no slot or option covers"
+                 + (f" (dated ones before {r['scope_date']} left out)" if r["scope_date"] else "")
+                 + ":")
+    for row in r["missing"]:
+        pages = "/".join(f"p{p}" for p in row["pages"])
+        lines.append(f"  {row['said']}  ({len(row['bulletins'])}/{n} bulletins"
+                     + (f", {pages}" if pages else "") + ")")
+    if not r["missing"]:
+        lines.append("  none")
+    lines.append("Included slots history never had:")
+    lines += [f"  {u['slot']:5} {u['said']}" for u in r["unseen"]] or ["  none"]
+    return "\n".join(lines)
 
 
 # ── Parser ──────────────────────────────────────────────────────────────────
@@ -398,7 +502,12 @@ def add_seed_parser(
     p.add_argument("--labeled", action="store_true",
                    help="The labeled parishes instead, for a test run (with --eval RUN)")
 
-    p = leaf("init", "Start a parish's seed file", _with_conn(_init), _text_init)
+    p = leaf("init", "Start a parish's seed file, and print where it starts from",
+             _with_conn(_init), _text_init)
+    parish(p)
+
+    p = leaf("brief", "A parish's churches, website, bulletins, history and newest PDF",
+             _with_conn(_brief), _text_brief)
     parish(p)
 
     p = leaf("bulletins", "A parish's stored bulletins, newest first", _with_conn(_bulletins),
@@ -421,10 +530,29 @@ def add_seed_parser(
     p.add_argument("--page", type=int, help="Only this page (default: all)")
     p.add_argument("--dpi", type=int, default=150, help="Resolution (default 150)")
 
+    p = leaf("grep", "Search the text of every bulletin with a stored PDF", _with_conn(_grep),
+             _text_grep)
+    parish(p)
+    p.add_argument("pattern", nargs="?",
+                   help="A regular expression, any case (default: schedule words)")
+    p.add_argument("--bulletins", type=int, default=0,
+                   help="Only the newest N (default 0: all)")
+
     p = leaf("history", "Extract mode's stored events for recent bulletins",
              _with_conn(_history), _text_history)
     parish(p)
-    p.add_argument("--bulletins", type=int, default=4, help="How many bulletins (default 4)")
+    p.add_argument("--bulletins", type=int, default=queries.HISTORY_BULLETINS,
+                   help=f"How many bulletins (default {queries.HISTORY_BULLETINS})")
+
+    p = leaf("diff", "History events no slot covers, and included slots history never had",
+             _with_conn(_diff), _text_diff)
+    parish(p)
+    p.add_argument("--bulletins", type=int,
+                   help="The newest N processed bulletins (default: those with a stored PDF)")
+
+    p = leaf("church", "Look a church up by slug, name, town or address", _with_conn(_church),
+             _text_church, eval_run=False)
+    p.add_argument("query", help="Any part of a slug, name, town or address")
 
     p = leaf("extract", "A full extraction by an external model (cached, recorded)",
              _with_conn(_extract), _text_extract)

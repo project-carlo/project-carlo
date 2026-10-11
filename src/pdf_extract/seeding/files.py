@@ -400,7 +400,11 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
             if not isinstance(source, dict):
                 errors.append(f"{at} must be an object")
                 continue
-            extra = sorted(set(source) - {"source", "bulletin", "page", "said", "url"})
+            if "bulletins" in source:
+                errors.append(f"{at}.bulletins is a drafting shorthand: `pnpm seed finalize` "
+                              "splits it into one source per bulletin")
+            extra = sorted(set(source) - {"source", "bulletin", "bulletins", "page", "said",
+                                          "url"})
             if extra:
                 errors.append(f"{at}: unknown {', '.join(extra)}")
             name = source.get("source")
