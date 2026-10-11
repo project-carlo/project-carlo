@@ -20,6 +20,8 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.schedule.store import DELETE, REFERENCE, Change, append_revision
+from pdf_extract.seeding.files import SEEDS_DIR
+from pdf_extract.seeding.loader import load_approved_seeds
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
@@ -387,12 +389,22 @@ def create_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     return {"db_path": str(db_path), "migrations_applied": migrations, **seeded}
 
 
-def ensure_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
+def ensure_db(
+    db_path: Path = DEFAULT_DB_PATH,
+    *,
+    load_seeds: bool = True,
+    seeds_dir: Path = SEEDS_DIR,
+) -> dict[str, Any]:
     """Bring an existing database up to date before a pipeline command runs.
 
-    Applies pending migrations and re-seeds the reference tables from the
-    CSVs. Refuses to invent a database: running the pipeline against an empty
-    one would look like every parish had lost its schedule.
+    Applies pending migrations, re-seeds the reference tables from the CSVs,
+    and loads the approved seed files not loaded yet (`seeding.loader`; the
+    result is under `seeds`). Refuses to invent a database: running the
+    pipeline against an empty one would look like every parish had lost its
+    schedule.
+
+    `load_seeds` off leaves the seed files for later: the weekly run loads
+    them after taking its before-copy, so its change checks see them.
     """
     if not db_path.exists():
         raise DatabaseMissingError(
@@ -403,6 +415,20 @@ def ensure_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     try:
         migrations = migrate(conn)
         seeded = seed_reference_data(conn)
+        result: dict[str, Any] = {"migrations_applied": migrations, **seeded}
+        if load_seeds:
+            result["seeds"] = load_approved_seeds(conn, seeds_dir)
     finally:
         conn.close()
-    return {"migrations_applied": migrations, **seeded}
+    return result
+
+
+def load_seeds(
+    db_path: Path = DEFAULT_DB_PATH, *, seeds_dir: Path = SEEDS_DIR, run_id: str | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    """Load the approved seed files into the database at `db_path` (see `ensure_db`)."""
+    conn = connect_db(db_path)
+    try:
+        return load_approved_seeds(conn, seeds_dir, run_id=run_id)
+    finally:
+        conn.close()

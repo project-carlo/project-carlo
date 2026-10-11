@@ -193,6 +193,21 @@ def _validate_event(event: Any, where: str) -> list[str]:
     return errors
 
 
+# A schedule entry is a label event without the keys that describe one reading
+# of one bulletin: a seed (`pdf_extract.seeding`) holds entries in this shape.
+ENTRY_KEYS = tuple(k for k in EVENT_KEYS if k not in ("page_number", "origin", "optional"))
+
+
+def validate_entry(entry: Any, where: str) -> list[str]:
+    """Every reason `entry` is not a label event minus page, origin and optional."""
+    if not isinstance(entry, dict):
+        return [f"{where} must be an object"]
+    errors = _check_keys(entry, ENTRY_KEYS, where)
+    if errors:
+        return errors
+    return _validate_event({**entry, "page_number": None, "origin": "human"}, where)
+
+
 def validate_label(label: Any) -> list[str]:
     """Every reason `label` is not a valid schema-version-1 label (empty when valid)."""
     if not isinstance(label, dict):

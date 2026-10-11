@@ -4,6 +4,8 @@ import { useRoute } from "./lib/route";
 import type { Config } from "./types";
 import { BulletinPage } from "./views/BulletinPage";
 import { QueuePage } from "./views/QueuePage";
+import { SeedPage } from "./views/SeedPage";
+import { SeedsQueuePage } from "./views/SeedsQueuePage";
 
 const LABELER_KEY = "labeler:name";
 
@@ -37,6 +39,12 @@ export function App() {
         onLabelerChange={changeLabeler}
       />
     );
+  }
+  if (route.page === "seeds") {
+    return <SeedsQueuePage config={config} labeler={labeler} onLabelerChange={changeLabeler} />;
+  }
+  if (route.page === "seed") {
+    return <SeedPage parish={route.parish} config={config} labeler={labeler} onLabelerChange={changeLabeler} />;
   }
   return <QueuePage config={config} labeler={labeler} onLabelerChange={changeLabeler} />;
 }

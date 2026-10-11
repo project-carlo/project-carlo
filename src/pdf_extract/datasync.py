@@ -433,7 +433,9 @@ def build_deploy_snapshot(
         conn.close()
     # The published run's data as it stands, before the CSVs are applied.
     published = extract(db_path, snapshot_path, keep_previous=False)
-    seeded = {**ensure_db(db_path), "migrations_applied": migrations}
+    # Seed files wait for the weekly run, whose checks compare a newly seeded
+    # parish with its last extracted schedule; a deploy would skip them.
+    seeded = {**ensure_db(db_path, load_seeds=False), "migrations_applied": migrations}
     removed_churches = seeded["churches_deleted"] + seeded.get("churches_retired", 0)
     if seeded["parishes_deleted"] or removed_churches:
         # Removing a parish or church deletes its events (or, for a church
