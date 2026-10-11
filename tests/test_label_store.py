@@ -51,6 +51,16 @@ def test_round_trip_through_disk(tmp_path):
     assert reloaded[URL]["labeled_at"].endswith("Z")
 
 
+def test_an_undetermined_recurrence_is_recorded_as_such():
+    """The app takes the weekly reading when the runs split over weekly vs. a
+    date, without asking. The stored row has to say the human never asserted it,
+    or `data/labels.json` reads as ground truth on a question nobody answered."""
+    label = store.normalize_label(
+        _payload(events=[_event(when_undetermined=True), _event(start_time="11:00 AM")])
+    )
+    assert [row["when_undetermined"] for row in label["events"]] == [True, False]
+
+
 def test_missing_file_reads_as_no_labels(tmp_path):
     assert store.load_labels(tmp_path / "nothing.json") == {}
 

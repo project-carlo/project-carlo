@@ -229,6 +229,12 @@ over are grouped into single keystroke decisions, ordered so the bulletins with
 the most disagreement come first. Labels land in `data/labels.json`, which is
 committed — it is the only artifact in the repo that cannot be regenerated.
 
+One split is deliberately never asked about: whether a slot is weekly or a
+one-off on a given date. A single bulletin often does not say, and
+`pnpm recurrence:backfill` already settles it from repetition across weeks, so
+the two readings are merged into one candidate and scoring counts neither
+against a run.
+
 See [`apps/label/README.md`](apps/label/README.md) for the decision model, the
 keyboard shortcuts, and what the scoring report means.
 

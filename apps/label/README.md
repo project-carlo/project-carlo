@@ -53,18 +53,40 @@ between them.
 The logical fields are deliberately coarser than the columns. `event_kind`,
 `day_of_week` and `date` collapse into one field, `when`, because the extractor
 filing a standing Sunday slot under a single calendar date moves all three at
-once, and the labeler is answering one question, not three. A weekly slot and a
-date only pair up when the date falls on that same weekday.
+once, and the labeler is answering one question, not three.
 
 **Found by one model** — an event nothing else came near. Keep it or drop it.
 When it sits one field from something every model agreed on, that neighbour is
-shown underneath: a dated row duplicating an agreed weekly slot is the
-extractor's signature mistake, and it is only obvious with the weekly slot in
-view.
+shown underneath, which usually turns the decision into a glance.
 
 Below those is a form for adding events **no** model found. Those are what make
 recall measurable, which is why marking a bulletin complete means "the accepted
 set is exhaustive", not just "I answered the questions".
+
+### Weekly vs. dated is not one of the questions
+
+One split never becomes a decision. When a run files a slot as weekly and
+another files it under a single date on that same weekday, the two are the same
+slot, and the app merges them into one candidate carrying the weekly reading.
+The dated reading shows up as a dashed `also read as 2026-03-08 (Sun)` chip so
+the split is visible, but nothing is asked about it and the card is agreed if
+every run proposed one reading or the other.
+
+That is not a shortcut. "Adoration Wednesday at 7:00 PM" printed under this
+week's calendar genuinely reads both ways, and a labeler staring at one bulletin
+is guessing as much as the model was. The pipeline already answers it from
+somewhere the bulletin cannot: `pdf_extract.recurrence` promotes a dated event
+to weekly once the same slot turns up in each of the preceding weeks in
+`data/event_history.json` — the same evidence that makes 173 of 1488 slots in
+the current corpus show up filed both ways at some point. Paying a keystroke per
+bulletin for a worse answer than `pnpm recurrence:backfill` already gives is not
+a good trade.
+
+The consequences run through the rest of the app: an accepted event whose
+readings were merged is stored with `when_undetermined: true`, and scoring
+counts a prediction that differs from ground truth only on that axis as a hit
+(see below). A date on a *different* weekday, or two runs naming two different
+dates, is a genuinely wrong reading and is still put in front of you.
 
 ## Working through the queue
 
@@ -108,6 +130,10 @@ Each entry records both what was accepted and what was rejected. The rejections
 matter as much as the acceptances — a candidate a human confirmed is wrong is a
 scored false positive for whichever run proposed it.
 
+An accepted event carries `when_undetermined: true` when the runs split over
+weekly vs. a single date and the app took the weekly reading without asking, so
+nobody reading this file later mistakes those three columns for a human's answer.
+
 ```json
 {
   "https://example.org/bulletin.pdf": {
@@ -138,10 +164,11 @@ Ground truth: 12 complete of 14 labeled bulletins
 
 ### gemini-flash errors
 Near misses (right slot, one field wrong):
-  - weekly vs. dated: 5
   - end time: 3
+  - start time: 2
 Invented events: 1
 Missed events: 6
+Weekly vs. dated, not scored either way (pnpm recurrence:backfill settles it): 5
 ```
 
 Only bulletins marked complete count towards precision and recall: a partly
@@ -153,6 +180,12 @@ The error breakdown is the part worth acting on. A false positive sitting one
 field from a false negative is the model reading a real event slightly wrong,
 which is a prompt problem; an invented event is a different problem entirely,
 and the two are counted separately rather than lumped into one F1.
+
+The last line is neither. A run that read the right slot but filed it weekly
+where ground truth has a date — or the reverse — scores as a hit, because that
+axis is not labeled and `pdf_extract.recurrence` decides it downstream from
+history. The count is still printed: it measures how often the extractor
+equivocates, which is worth watching even though it costs no precision here.
 
 ## Layout
 

@@ -12,6 +12,14 @@ rest are grouped so that a disagreement costs one keystroke rather than several:
 - **singletons** — disputed candidates nothing else came near. One run saw an
   event the others missed: keep it or drop it.
 
+One disagreement never reaches any of those buckets. When one run files a slot
+as weekly and another files it under a single date on that same weekday, the two
+readings are merged into one candidate carrying the weekly form, because a
+single bulletin usually cannot say which is right and `pdf_extract.recurrence`
+decides it later from `data/event_history.json` anyway. The dated reading rides
+along on the candidate as `also_read_as` so the split is visible, and
+`labelapp.score` declines to score that axis.
+
 Nothing here decides whether a candidate is *correct* — that is the human's job.
 It only decides what gets put in front of them, and in what order.
 """
@@ -45,6 +53,9 @@ class Candidate:
     notes: list[dict[str, str]] = field(default_factory=list)
     #: agreed candidates a variant away, shown as read-only context on a singleton
     context: list["Candidate"] = field(default_factory=list)
+    #: other readings of this same slot that were folded in — `{"when", "sources"}`
+    #: rows for runs that filed it as a date rather than weekly, or vice versa
+    also_read_as: list[dict[str, Any]] = field(default_factory=list)
 
     def to_json(self) -> dict[str, Any]:
         return {
@@ -54,6 +65,7 @@ class Candidate:
             "unanimous": self.unanimous,
             "page_number": self.page_number,
             "notes": self.notes,
+            "also_read_as": self.also_read_as,
             "context": [
                 {"summary": ev.describe_event(row.event), "key_id": row.key_id}
                 for row in self.context
@@ -112,7 +124,14 @@ def build_candidates(
         for row in runs[name].events_by_bulletin.get(bulletin_url, []):
             key = event_key(row)
             entry = grouped.setdefault(
-                key, {"event": ev.normalize_event(row), "sources": [], "pages": [], "notes": []}
+                key,
+                {
+                    "event": ev.normalize_event(row),
+                    "sources": [],
+                    "pages": [],
+                    "notes": [],
+                    "also_read_as": [],
+                },
             )
             if name not in entry["sources"]:
                 entry["sources"].append(name)
@@ -127,15 +146,73 @@ def build_candidates(
         Candidate(
             key_id=ev.key_id(key),
             event=entry["event"],
-            sources=entry["sources"],
+            # Re-sorted into run order, which merging can disturb: a folded-in
+            # reading appends its runs after whoever proposed the weekly one.
+            sources=[name for name in covering if name in entry["sources"]],
             unanimous=bool(covering) and len(entry["sources"]) == len(covering),
             page_number=_majority_page(entry["pages"]),
             notes=entry["notes"],
+            also_read_as=entry["also_read_as"],
         )
-        for key, entry in grouped.items()
+        for key, entry in _merge_when_variants(grouped, covering).items()
     ]
     candidates.sort(key=_candidate_sort_key)
     return candidates, covering
+
+
+def _merge_when_variants(
+    grouped: dict[EventKey, dict[str, Any]],
+    covering: list[str],
+) -> dict[EventKey, dict[str, Any]]:
+    """Fold each single-date reading into the weekly reading of the same slot.
+
+    A bulletin printing "Adoration Wednesday at 7:00 PM" under this week's
+    calendar reads as a standing slot or as a one-off depending on who is
+    reading it, and the models split on that constantly. It is not worth a
+    labeler's keystroke: the answer is often not in the bulletin at all, and the
+    pipeline already recovers it from repetition across weeks in
+    `pdf_extract.recurrence`.
+
+    So the readings become one candidate holding the weekly form — the form
+    `recurrence` would promote the dated one to — with the sources, pages and
+    notes of both, plus a record of who read it as a date. A dated reading with
+    no weekly counterpart is left exactly as it is; nothing here invents a
+    recurrence no model proposed.
+    """
+    weekly_by_slot: dict[tuple[Any, ...], EventKey] = {}
+    for key, entry in grouped.items():
+        if entry["event"]["event_kind"] != "weekly":
+            continue
+        slot = ev.when_slot_key(entry["event"])
+        if slot is not None:
+            weekly_by_slot.setdefault(slot, key)
+
+    merged: dict[EventKey, dict[str, Any]] = {}
+    absorbed: list[tuple[EventKey, dict[str, Any]]] = []
+    for key, entry in grouped.items():
+        host = None
+        if entry["event"]["event_kind"] == "specific_date":
+            slot = ev.when_slot_key(entry["event"])
+            host = weekly_by_slot.get(slot) if slot is not None else None
+        if host is None:
+            merged[key] = entry
+        else:
+            absorbed.append((host, entry))
+
+    for host, entry in absorbed:
+        target = merged[host]
+        target["sources"].extend(
+            name for name in entry["sources"] if name not in target["sources"]
+        )
+        target["pages"].extend(entry["pages"])
+        target["notes"].extend(entry["notes"])
+        target["also_read_as"].append(
+            {
+                "when": ev.describe_when(entry["event"]),
+                "sources": [name for name in covering if name in entry["sources"]],
+            }
+        )
+    return merged
 
 
 def _candidate_sort_key(candidate: Candidate) -> tuple[Any, ...]:
@@ -165,23 +242,15 @@ def _time_sort_key(value: str) -> int:
 def _variant_of(a: dict[str, Any], b: dict[str, Any]) -> bool:
     """Whether two events are competing readings of the same schedule slot.
 
-    They must differ in exactly one logical field, and — when that field is
-    `when` — describe the same day. A weekly Sunday slot and a Mass dated to a
-    Sunday are one slot filed two ways, which is the extractor's most common
-    mistake. A weekly Tuesday slot and a weekly Thursday one are two Masses, and
-    asking a human to choose between them is a question with no right answer.
+    They must differ in exactly one logical field, and that field must not be
+    `when`. The one weekly-vs-dated pair worth putting on a card is already
+    merged away by `_merge_when_variants`; what is left on the `when` axis is two
+    different days or two different dates. A weekly Tuesday slot and a weekly
+    Thursday one are two Masses, and asking a human to choose between them is a
+    question with no right answer.
     """
     differing = ev.differing_fields(a, b)
-    if len(differing) != 1:
-        return False
-    if differing[0] != ev.FIELD_WHEN:
-        return True
-
-    kinds = {a["event_kind"], b["event_kind"]}
-    if kinds != {"weekly", "specific_date"}:
-        return False
-    weekly, dated = (a, b) if a["event_kind"] == "weekly" else (b, a)
-    return ev.weekday_of(dated["date"]) == weekly["day_of_week"]
+    return len(differing) == 1 and differing[0] != ev.FIELD_WHEN
 
 
 def _pairable(a: Candidate, b: Candidate) -> bool:
@@ -286,10 +355,10 @@ def _context_for(
 ) -> list[Candidate]:
     """Agreed candidates that differ from a variant along the conflict's own axis.
 
-    A dated slot that duplicates a weekly one every model already agreed on is
-    almost always the extractor double-filing it, and seeing that neighbour turns
-    the decision into a glance. Neighbours that differ on some *other* field are
-    unrelated events that happen to sit nearby, so they are left out.
+    A disputed 11:00 Mass next to an agreed 11:15 one is usually that Mass read
+    twice, and seeing the agreed row turns the decision into a glance.
+    Neighbours that differ on some *other* field are unrelated events that
+    happen to sit nearby, so they are left out.
     """
     allowed = set(fields)
     return [

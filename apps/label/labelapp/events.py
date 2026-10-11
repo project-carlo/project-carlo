@@ -6,8 +6,16 @@ comparison uses — so a label written here scores directly against a run.
 On top of that, events are diffed by *logical* field rather than by raw column.
 `event_kind`, `day_of_week` and `date` collapse into a single `when` field
 because they always move together: the extractor filing a standing Sunday slot
-under one calendar date changes three columns at once, and a human reviewing it
-is answering one question ("weekly or just that date?"), not three.
+under one calendar date changes three columns at once, and a reader comparing
+two readings is looking at one difference, not three.
+
+Within `when`, the weekly-vs-dated axis is treated as undetermined rather than
+as a disagreement. Whether a listing is a standing slot or a one-off is rarely
+decidable from a single bulletin, and the pipeline already answers it elsewhere:
+`pdf_extract.recurrence` promotes a dated event to weekly once the same slot
+turns up in the preceding weeks of `data/event_history.json`. `is_when_variant`
+identifies that pair so `labelapp.candidates` can fold it into one candidate and
+`labelapp.score` can decline to score it.
 """
 
 from __future__ import annotations
@@ -30,7 +38,7 @@ FIELD_CANCELLED = "cancelled"
 FIELD_LABELS: dict[str, str] = {
     FIELD_CHURCH: "church",
     FIELD_TYPE: "event type",
-    FIELD_WHEN: "weekly vs. dated",
+    FIELD_WHEN: "day or date",
     FIELD_START: "start time",
     FIELD_END: "end time",
     FIELD_CANCELLED: "cancelled",
@@ -116,11 +124,7 @@ def differing_fields(a: dict[str, Any], b: dict[str, Any]) -> list[str]:
 
 
 def weekday_of(date_value: str | None) -> str | None:
-    """Weekday name for a `YYYY-MM-DD` string, or None if it will not parse.
-
-    Shown next to a weekly-vs-dated conflict: knowing the date falls on the same
-    weekday the other model called weekly is usually the whole decision.
-    """
+    """Weekday name for a `YYYY-MM-DD` string, or None if it will not parse."""
     if not isinstance(date_value, str):
         return None
     try:
@@ -128,6 +132,47 @@ def weekday_of(date_value: str | None) -> str | None:
     except ValueError:
         return None
     return _WEEKDAY_NAMES[parsed.weekday()]
+
+
+def when_slot_key(event: dict[str, Any]) -> tuple[Any, ...] | None:
+    """Identity of the schedule slot an event fills, ignoring weekly-vs-dated.
+
+    The `when` axis collapses to the weekday both readings share, so a standing
+    Sunday slot and a Mass dated to a Sunday produce the same key. None when no
+    weekday can be resolved — a weekly row with no day, or a date that will not
+    parse — because there is then nothing to line the two readings up on.
+    """
+    normalized = normalize_event(event)
+    if normalized["event_kind"] == "weekly":
+        weekday = normalized["day_of_week"]
+    else:
+        weekday = weekday_of(normalized["date"])
+    if not weekday:
+        return None
+    return (
+        normalized["church_slug"],
+        normalized["event_type"],
+        weekday,
+        normalized["start_time"],
+        normalized["end_time"],
+        normalized["cancelled"],
+    )
+
+
+def is_when_variant(a: dict[str, Any], b: dict[str, Any]) -> bool:
+    """Whether two events are one slot filed as weekly by one reading and as a
+    single date on that same weekday by the other.
+
+    This is the extractor's most common split, and not one a labeler can settle:
+    "Adoration Wednesday at 7:00 PM" printed under this week's calendar reads
+    both ways from a single bulletin. `pdf_extract.recurrence` settles it from
+    history instead, so everything here treats the two readings as the same slot.
+    """
+    kinds = {normalize_event(a)["event_kind"], normalize_event(b)["event_kind"]}
+    if kinds != {"weekly", "specific_date"}:
+        return False
+    slot = when_slot_key(a)
+    return slot is not None and slot == when_slot_key(b)
 
 
 def describe_when(event: dict[str, Any]) -> str:

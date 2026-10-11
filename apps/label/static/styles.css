@@ -203,6 +203,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 }
 .chip--run { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
 .chip--warn { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, var(--line)); }
+.chip--muted { color: var(--text-dim); border-style: dashed; }
 
 .context {
   margin-top: 4px;

@@ -130,6 +130,51 @@ def test_an_invented_event_is_not_dressed_up_as_a_near_miss():
     assert len(attribution["missed"]) == 1
 
 
+def test_reading_a_slot_as_dated_instead_of_weekly_is_not_an_error():
+    """Nobody labels that axis — `pdf_extract.recurrence` settles it from history
+    across bulletins — so scoring a run on it would be scoring a coin toss."""
+    predicted = [_ev(event_kind="specific_date", day_of_week=None, date="2026-03-08")]
+    result = score_run(_run(predicted), _label([_ev()]))
+
+    assert (result["precision"], result["recall"]) == (1.0, 1.0)
+    assert result["false_positives"] == 0
+    assert result["false_negatives"] == 0
+    assert result["when_variants_excused"] == 1
+    assert result["error_attribution"]["near_miss_by_field"] == {}
+
+
+def test_a_date_on_the_wrong_weekday_is_still_an_error():
+    """Only weekly-vs-dated is unanswerable. 2026-03-10 is a Tuesday, so this is
+    a date read wrong, and it stays on the books as one."""
+    predicted = [_ev(event_kind="specific_date", day_of_week=None, date="2026-03-10")]
+    result = score_run(_run(predicted), _label([_ev()]))
+
+    assert result["false_positives"] == 1
+    assert result["false_negatives"] == 1
+    assert result["when_variants_excused"] == 0
+    assert result["error_attribution"]["near_miss_by_field"] == {ev.FIELD_WHEN: 1}
+
+
+def test_a_dated_prediction_of_a_rejected_slot_still_counts_as_ruled_on():
+    """A slot the labeler threw out is a false positive however it was filed."""
+    predicted = [_ev(event_kind="specific_date", day_of_week=None, date="2026-03-08")]
+    labels = _label([], [_ev()], status=store.STATUS_IN_PROGRESS)
+    decided = score_run(_run(predicted), labels)["decided_only"]
+
+    assert decided["candidates_ruled_on"] == 1
+    assert decided["accepted"] == 0
+
+
+def test_near_misses_sort_without_tripping_over_null_columns():
+    """Event keys carry None in the nullable columns, so the per-bulletin report
+    must not order them by raw tuple comparison."""
+    predicted = [_ev(start_time="7:00 AM"), _ev(start_time="7:00 AM", end_time="7:45 AM")]
+    truth = [_ev(start_time="5:00 PM")]
+    result = score_run(_run(predicted), _label(truth))
+
+    assert result["per_bulletin"][0]["false_positives"] == 2
+
+
 def test_each_false_positive_is_paired_at_most_once():
     """Two predictions one field from the same truth row cannot both be excused
     as the same near miss."""

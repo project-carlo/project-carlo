@@ -58,9 +58,11 @@ def test_agreement_ignores_page_number_and_note():
     assert groups["agreed"][0].notes == [{"run": "a", "note": "Latin"}]
 
 
-def test_weekly_versus_dated_is_one_conflict_on_the_when_field():
-    """The extractor filing a standing slot under a date moves three columns at
-    once; the labeler should still see a single question."""
+def test_weekly_and_dated_readings_merge_into_one_agreed_candidate():
+    """Whether a slot is standing or a one-off is not decidable from a single
+    bulletin, and `pdf_extract.recurrence` answers it from history later. So the
+    two readings are one candidate, and with both runs behind it, it is agreed —
+    the labeler is never asked."""
     groups, _ = _group(
         {
             "a": _run("a", [_ev()]),
@@ -70,10 +72,51 @@ def test_weekly_versus_dated_is_one_conflict_on_the_when_field():
             ),
         }
     )
-    assert len(groups["conflicts"]) == 1
-    conflict = groups["conflicts"][0]
-    assert conflict.fields == [ev.FIELD_WHEN]
-    assert len(conflict.variants) == 2
+    assert groups["conflicts"] == []
+    assert groups["singletons"] == []
+    assert len(groups["agreed"]) == 1
+
+    merged = groups["agreed"][0]
+    # The weekly form is kept: it is what recurrence would promote the other to.
+    assert merged.event["event_kind"] == "weekly"
+    assert merged.event["day_of_week"] == "Sunday"
+    assert merged.sources == ["a", "b"]
+    assert merged.also_read_as == [{"when": "2026-03-08 (Sun)", "sources": ["b"]}]
+
+
+def test_a_merged_slot_is_still_disputed_when_a_run_proposed_neither_reading():
+    """Merging settles the weekly-vs-dated axis, not whether the slot is real."""
+    groups, covering = _group(
+        {
+            "a": _run("a", [_ev()]),
+            "b": _run(
+                "b",
+                [_ev(event_kind="specific_date", day_of_week=None, date="2026-03-08")],
+            ),
+            "c": Run(name="c", covered={URL}, events_by_bulletin={URL: []}),
+        }
+    )
+    assert covering == ["a", "b", "c"]
+    assert groups["agreed"] == []
+    assert [c.sources for c in groups["singletons"]] == [["a", "b"]]
+
+
+def test_two_different_dates_do_not_merge_into_each_other():
+    """Only the weekly-vs-dated axis is undecidable. Two runs naming different
+    Sundays is a date read wrong, which one bulletin can settle."""
+    groups, _ = _group(
+        {
+            "a": _run(
+                "a",
+                [_ev(event_kind="specific_date", day_of_week=None, date="2026-03-08")],
+            ),
+            "b": _run(
+                "b",
+                [_ev(event_kind="specific_date", day_of_week=None, date="2026-03-15")],
+            ),
+        }
+    )
+    assert len(groups["singletons"]) == 2
 
 
 def test_end_time_disagreement_is_a_conflict():
@@ -139,11 +182,10 @@ def test_conflicts_stay_pairwise_instead_of_chaining():
     assert all(len(conflict.variants) == 2 for conflict in groups["conflicts"])
 
 
-def test_a_lone_dated_duplicate_carries_the_agreed_weekly_slot_as_context():
-    """The extractor's signature error: one model re-files a standing Sunday Mass
-    under a single date. Nothing disputes the dated row, so it lands as a
-    singleton — and it is only obviously wrong next to the weekly slot it
-    duplicates, so that slot rides along on the card."""
+def test_a_run_double_filing_one_slot_does_not_create_a_decision():
+    """The extractor's signature error: one model lists a standing Sunday Mass
+    and then re-files it under this Sunday's date. Both rows are the same slot,
+    so they fold together and nothing is put in front of the labeler."""
     agreed = _ev(day_of_week="Sunday", start_time="8:00 AM")
     dated = _ev(
         event_kind="specific_date",
@@ -154,9 +196,11 @@ def test_a_lone_dated_duplicate_carries_the_agreed_weekly_slot_as_context():
     groups, _ = _group({"a": _run("a", [agreed]), "b": _run("b", [dict(agreed), dated])})
 
     assert groups["conflicts"] == []
-    singleton = groups["singletons"][0]
-    assert singleton.event["date"] == "2026-03-08"
-    assert [c.event["day_of_week"] for c in singleton.context] == ["Sunday"]
+    assert groups["singletons"] == []
+    assert [c.event["day_of_week"] for c in groups["agreed"]] == ["Sunday"]
+    assert groups["agreed"][0].also_read_as == [
+        {"when": "2026-03-08 (Sun)", "sources": ["b"]}
+    ]
 
 
 def test_conflict_context_is_limited_to_the_disputed_field():
@@ -230,3 +274,24 @@ def test_review_reports_counts_and_wrong_bulletin_flags():
     assert review["disputed_count"] == 0
     assert review["wrong_bulletin_runs"] == ["b"]
     assert review["has_pdf"] is False
+
+
+def test_a_merged_candidate_reaches_the_ui_with_its_other_reading():
+    bulletin = Bulletin(
+        source_url=URL,
+        parish_slug="st-mary-parish",
+        content_hash="abc",
+        pdf_path=None,
+        published_date="2026-03-08",
+        fetched_at="2026-03-09T00:00:00Z",
+    )
+    dated = _ev(event_kind="specific_date", day_of_week=None, date="2026-03-08")
+    review = build_review(
+        bulletin, {"a": _run("a", [_ev()]), "b": _run("b", [dated])}, ["a", "b"]
+    )
+
+    assert review["candidate_count"] == 1
+    assert review["conflict_count"] == 0
+    assert review["agreed"][0]["also_read_as"] == [
+        {"when": "2026-03-08 (Sun)", "sources": ["b"]}
+    ]

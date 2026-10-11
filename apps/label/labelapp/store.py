@@ -7,6 +7,11 @@ both what the labeler accepted and what they rejected: the rejections are as
 valuable as the acceptances, since a confirmed-wrong candidate is a scored false
 positive for whichever run proposed it.
 
+An accepted event carries `when_undetermined` when the runs disagreed over
+whether its slot is weekly or a one-off. Nobody labels that axis — history
+across bulletins settles it in `pdf_extract.recurrence` — so the stored row
+holds the weekly reading and the flag says the human never asserted it.
+
 Everything arriving from the browser is re-normalized and re-keyed here rather
 than trusted, so a stale or hand-edited payload cannot write an event whose
 stored `key_id` disagrees with its own fields.
@@ -92,6 +97,10 @@ def _clean_event(raw: Any, *, default_origin: str) -> dict[str, Any] | None:
 
     event["key_id"] = ev.event_id(event)
     event["origin"] = origin if origin in (ORIGIN_MODEL, ORIGIN_HUMAN) else default_origin
+    # Set when the runs split over weekly vs. a single date and the app took the
+    # weekly reading without asking (`labelapp.candidates`). Recorded so nobody
+    # reading this file later mistakes those three columns for a human's answer.
+    event["when_undetermined"] = bool(raw.get("when_undetermined"))
     event["sources"] = sources
     event["note"] = note.strip() if isinstance(note, str) and note.strip() else None
     page_number = raw.get("page_number")

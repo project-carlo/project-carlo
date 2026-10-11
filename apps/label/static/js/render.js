@@ -68,6 +68,21 @@ function sourceChips(candidate) {
   if (candidate.page_number) {
     chips.push(el("span", { class: "chip", text: `p. ${candidate.page_number}` }));
   }
+  // Runs that filed this same slot under a single date instead of weekly. Shown
+  // rather than asked about: the recurrence pass settles that from history
+  // across bulletins, and one bulletin usually cannot.
+  for (const reading of candidate.also_read_as || []) {
+    chips.push(
+      el("span", {
+        class: "chip chip--muted",
+        title:
+          `${reading.sources.join(", ")} read this slot as ${reading.when}. ` +
+          "Weekly vs. a single date is settled from history across bulletins, " +
+          "so it is not a question here.",
+        text: `also read as ${reading.when}`,
+      }),
+    );
+  }
   for (const note of candidate.notes || []) {
     chips.push(el("span", { class: "chip", title: `${note.run}: ${note.note}`, text: note.note }));
   }

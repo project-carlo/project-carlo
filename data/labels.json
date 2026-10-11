@@ -1,0 +1,87 @@
+{
+  "https://parishesonline.com/publication-page/st-michael-s-church-st-joseph-the-worker-and-blessed-trinity-catholic-church?selectedPublication=https://container.parishesonline.com/bulletins/06/0326/20260503B.pdf": {
+    "bulletin_source_url": "https://parishesonline.com/publication-page/st-michael-s-church-st-joseph-the-worker-and-blessed-trinity-catholic-church?selectedPublication=https://container.parishesonline.com/bulletins/06/0326/20260503B.pdf",
+    "parish_slug": "catholic-parishes-eastern-wayne-county",
+    "content_hash": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+    "status": "in_progress",
+    "wrong_bulletin": false,
+    "published_date": "2026-05-03",
+    "events": [
+      {
+        "church_slug": "st-mary-magdalene",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "9:00 AM",
+        "end_time": null,
+        "cancelled": false,
+        "key_id": "333d69e20e37c7f6",
+        "origin": "model",
+        "sources": [
+          "gemini-flash"
+        ],
+        "note": null,
+        "page_number": 3
+      },
+      {
+        "church_slug": "st-john-evangelist-clyde",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30 AM",
+        "end_time": null,
+        "cancelled": false,
+        "key_id": "a9be9d044468e8ba",
+        "origin": "model",
+        "sources": [
+          "gemini-flash"
+        ],
+        "note": null,
+        "page_number": 4
+      },
+      {
+        "church_slug": "st-john-evangelist-clyde",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "8:30 AM",
+        "end_time": null,
+        "cancelled": false,
+        "key_id": "95af281824fa340b",
+        "origin": "model",
+        "sources": [
+          "gemini-flash"
+        ],
+        "note": null,
+        "page_number": 4
+      }
+    ],
+    "rejected": [
+      {
+        "church_slug": "st-john-evangelist-clyde",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-05-07",
+        "start_time": "8:30 AM",
+        "end_time": null,
+        "cancelled": false,
+        "key_id": "d1c969d3d3c2d136",
+        "origin": "model",
+        "sources": [
+          "gpt-5.4-mini"
+        ],
+        "note": null,
+        "page_number": 4
+      }
+    ],
+    "notes": null,
+    "skip_reason": null,
+    "labeler": null,
+    "labeled_at": "2026-09-12T17:26:54Z",
+    "seconds_spent": 111
+  }
+}

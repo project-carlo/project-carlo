@@ -137,6 +137,9 @@ export function buildLabel(status) {
       origin: "model",
       sources: candidate.sources,
       page_number: candidate.page_number,
+      // The runs split over weekly vs. a single date and the card took the
+      // weekly reading without asking, so the stored row says so.
+      when_undetermined: (candidate.also_read_as || []).length > 0,
     };
     (verdict === "accept" ? events : rejected).push(row);
   }

@@ -13,6 +13,14 @@ ruled on, reported separately as `decided_only`.
 Beyond the headline numbers, mismatches are attributed to a logical field: a
 false positive one field away from a false negative is the model reading a real
 event slightly wrong, which is a different problem from inventing one.
+
+One axis is deliberately not scored. Whether a slot is weekly or a one-off on a
+given date is settled by `pdf_extract.recurrence` from history across bulletins,
+not by a labeler reading one, so the labeling app never asks about it and ground
+truth carries whichever reading the models offered. Scoring a run against that
+would be scoring a coin toss, so a prediction that differs from a truth row only
+on that axis counts as a hit — and the count is reported, because how often the
+extractor equivocates is worth knowing on its own.
 """
 
 from __future__ import annotations
@@ -57,6 +65,66 @@ def _event_from_key(key: EventKey) -> dict[str, Any]:
     }
 
 
+def _key_order(key: EventKey) -> tuple[Any, ...]:
+    """Total order over event keys, for stable reporting.
+
+    Event keys carry `None` in the nullable columns, and Python will not compare
+    `None` with a string, so sorting them raw raises the moment two keys first
+    differ at `day_of_week`, `date` or `end_time` — two false positives that
+    differ only in having an end time, say.
+    """
+    return tuple("" if part is None else part for part in key)
+
+
+def _pair_when_variants(
+    extras: set[EventKey],
+    misses: set[EventKey],
+) -> list[tuple[EventKey, EventKey]]:
+    """Predicted/truth pairs that are one slot filed weekly and dated.
+
+    Greedy and one-to-one, like `attribute_errors`: two predictions cannot both
+    be excused against the same truth row. Sorted so the pairing is stable.
+    """
+    remaining = sorted(extras, key=_key_order)
+    pairs: list[tuple[EventKey, EventKey]] = []
+    for truth in sorted(misses, key=_key_order):
+        truth_event = _event_from_key(truth)
+        match = next(
+            (
+                key
+                for key in remaining
+                if ev.is_when_variant(_event_from_key(key), truth_event)
+            ),
+            None,
+        )
+        if match is None:
+            continue
+        remaining.remove(match)
+        pairs.append((match, truth))
+    return pairs
+
+
+def match_predictions(
+    predicted: set[EventKey],
+    truth: set[EventKey],
+) -> tuple[set[EventKey], set[EventKey], set[EventKey], int]:
+    """Split predictions against truth into hits, false positives, misses.
+
+    Exact key matches first; the leftovers are matched again allowing only the
+    weekly-vs-dated axis to differ, and those count as hits. Returns the excused
+    count alongside, so the report can say how often it happened.
+    """
+    hits = predicted & truth
+    extras = predicted - truth
+    misses = truth - predicted
+    pairs = _pair_when_variants(extras, misses)
+    for predicted_key, truth_key in pairs:
+        hits.add(predicted_key)
+        extras.discard(predicted_key)
+        misses.discard(truth_key)
+    return hits, extras, misses, len(pairs)
+
+
 def attribute_errors(
     false_positives: list[EventKey],
     false_negatives: list[EventKey],
@@ -66,6 +134,10 @@ def attribute_errors(
     A false positive that sits one logical field from a false negative is the
     same slot read wrong, not an invented one; pairing them greedily keeps the
     `spurious` and `missed` buckets for genuine additions and omissions.
+
+    Weekly-vs-dated pairs never arrive here — `match_predictions` has already
+    counted them as hits — so a near miss on `when` is a genuinely wrong day or
+    a genuinely wrong date.
     """
     unmatched_fp = [_event_from_key(key) for key in false_positives]
     unmatched_fn = [_event_from_key(key) for key in false_negatives]
@@ -117,6 +189,7 @@ def score_run(
     all_fp: list[EventKey] = []
     all_fn: list[EventKey] = []
     partial_bulletins = 0
+    total_excused = 0
 
     for source_url, label in sorted(labels.items()):
         if source_url not in run.covered:
@@ -127,9 +200,11 @@ def score_run(
         accepted = store.accepted_keys(label)
         rejected = {event_key(row) for row in label.get("rejected") or []}
 
+        hits, extras, misses, excused = match_predictions(predicted, accepted)
+
         # Partial labels still score precision over candidates that were ruled on.
-        ruled_on = predicted & (accepted | rejected)
-        decided_hits += len(predicted & accepted)
+        ruled_on, _, _, _ = match_predictions(predicted, accepted | rejected)
+        decided_hits += len(hits)
         decided_total += len(ruled_on)
 
         if label.get("status") != store.STATUS_COMPLETE:
@@ -137,12 +212,10 @@ def score_run(
                 partial_bulletins += 1
             continue
 
-        hits = predicted & accepted
-        misses = accepted - predicted
-        extras = predicted - accepted
         true_positives += len(hits)
         total_fn += len(misses)
         total_fp += len(extras)
+        total_excused += excused
         all_fp.extend(extras)
         all_fn.extend(misses)
 
@@ -157,10 +230,13 @@ def score_run(
                 "true_positives": len(hits),
                 "false_positives": len(extras),
                 "false_negatives": len(misses),
+                "when_variants_excused": excused,
                 "precision": precision,
                 "recall": recall,
                 "f1": _f1(precision, recall),
-                "errors": attribute_errors(sorted(extras), sorted(misses)),
+                "errors": attribute_errors(
+                    sorted(extras, key=_key_order), sorted(misses, key=_key_order)
+                ),
             }
         )
 
@@ -174,6 +250,7 @@ def score_run(
         "true_positives": true_positives,
         "false_positives": total_fp,
         "false_negatives": total_fn,
+        "when_variants_excused": total_excused,
         "precision": precision,
         "recall": recall,
         "f1": _f1(precision, recall),
@@ -249,6 +326,11 @@ def format_markdown(report: dict[str, Any]) -> str:
                 lines.append(f"  - {ev.FIELD_LABELS.get(name, name)}: {count}")
         lines.append(f"Invented events: {len(attribution['spurious'])}")
         lines.append(f"Missed events: {len(attribution['missed'])}")
+        if run["when_variants_excused"]:
+            lines.append(
+                f"Weekly vs. dated, not scored either way "
+                f"(pnpm recurrence:backfill settles it): {run['when_variants_excused']}"
+            )
         decided = run["decided_only"]
         if decided["candidates_ruled_on"]:
             lines.append(
