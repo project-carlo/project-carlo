@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { SeedEntry, SeedFile, SeedSlot } from "../types";
+import type { SeedEntry, SeedFile, SeedQueueRow, SeedSlot } from "../types";
 import { parseRoute } from "./route";
 import {
   approve,
@@ -9,6 +9,7 @@ import {
   editSlot,
   fromEditorRow,
   newestReadBulletin,
+  nextSeedToReview,
   openCount,
   reopenSlot,
   replaceSlot,
@@ -76,6 +77,60 @@ const seed = (slots: SeedSlot[], status: SeedFile["status"] = "needs_review"): S
   ],
   calls: [],
   slots,
+});
+
+const queueRow = (parish_slug: string, status: SeedQueueRow["status"]): SeedQueueRow => ({
+  parish_slug,
+  parish_name: parish_slug,
+  status,
+  open_questions: status === "needs_review" ? 1 : 0,
+  slots: 1,
+  included: 1,
+  calls: 0,
+  cost_usd: 0,
+  as_of: null,
+  reviewer: null,
+  summary: "",
+  blocked_reason: null,
+  problem: null,
+  loaded: false,
+});
+
+describe("the next seed to review", () => {
+  it("prefers ready seeds even when a seed needing review appears first", () => {
+    const ready = queueRow("ready", "ready");
+    expect(nextSeedToReview([queueRow("questions", "needs_review"), ready])).toBe(ready);
+  });
+
+  it("continues after the current parish among ready seeds, wrapping if needed", () => {
+    const first = queueRow("first", "ready");
+    const current = queueRow("current", "ready");
+    const last = queueRow("last", "ready");
+    const queue = [first, current, last];
+    expect(nextSeedToReview(queue, "current")).toBe(last);
+    expect(nextSeedToReview(queue, "last")).toBe(first);
+  });
+
+  it("wraps to a ready seed before choosing a later seed needing review", () => {
+    const ready = queueRow("ready", "ready");
+    const queue = [ready, queueRow("current", "approved"), queueRow("questions", "needs_review")];
+    expect(nextSeedToReview(queue, "current")).toBe(ready);
+  });
+
+  it("falls back to questions, skipping the current parish and other statuses", () => {
+    const questions = queueRow("questions", "needs_review");
+    const current = queueRow("current", "ready");
+    const queue = [questions, current, ...(["approved", "drafting", "blocked", "invalid"] as const).map((s) => queueRow(s, s))];
+    expect(nextSeedToReview(queue, "current")).toBe(questions);
+    expect(nextSeedToReview(queue, "missing")).toBe(current);
+  });
+
+  it("returns nothing when there are no other reviewable seeds", () => {
+    expect(nextSeedToReview([])).toBeUndefined();
+    expect(nextSeedToReview([queueRow("current", "ready")], "current")).toBeUndefined();
+    expect(nextSeedToReview([queueRow("current", "needs_review")], "current")).toBeUndefined();
+    expect(nextSeedToReview((["approved", "drafting", "blocked", "invalid"] as const).map((s) => queueRow(s, s)))).toBeUndefined();
+  });
 });
 
 describe("answering a question", () => {
