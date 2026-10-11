@@ -230,6 +230,8 @@ def test_finalize_names_the_one_church_and_settles_status(seed):
     assert finalize_seed({**seed, "status": "blocked"}, [HF])["status"] == "blocked"
     approved = {**seed, "status": APPROVED, "as_of": None}
     assert finalize_seed(approved, [HF]) == approved
+    misshapen = {"s1": seed["slots"][0]}
+    assert finalize_seed({**seed, "slots": misshapen}, [HF])["slots"] == misshapen
 
 
 # ── Checks against the database ─────────────────────────────────────────────

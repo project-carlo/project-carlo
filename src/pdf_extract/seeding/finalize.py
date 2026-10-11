@@ -100,12 +100,17 @@ def finalize_seed(seed: dict[str, Any], churches: list[str]) -> dict[str, Any]:
         return seed
     seed = dict(seed)
     church = churches[0] if len(churches) == 1 else None
-    slots = seed.get("slots") if isinstance(seed.get("slots"), list) else []
-    taken = {s["id"] for s in slots if isinstance(s, dict) and isinstance(s.get("id"), str)}
-    seed["slots"] = [_fill_slot(s, church, taken) if isinstance(s, dict) else s for s in slots]
+    slots = seed.get("slots")
+    if isinstance(slots, list):  # anything else is left for `seed check` to report
+        taken = {s["id"] for s in slots if isinstance(s, dict) and isinstance(s.get("id"), str)}
+        slots = seed["slots"] = [
+            _fill_slot(s, church, taken) if isinstance(s, dict) else s for s in slots
+        ]
+    else:
+        slots = []
 
     cited = set()
-    for slot in seed["slots"]:
+    for slot in slots:
         sources = slot.get("sources") if isinstance(slot, dict) else None
         for source in sources if isinstance(sources, list) else []:
             if isinstance(source, dict) and source.get("source") == AGENT:
