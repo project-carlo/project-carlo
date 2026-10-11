@@ -383,6 +383,9 @@ and the labeler's `views/SeedPage.tsx` and `lib/seeds.ts`.
   `edited` (the reviewer's own entry), or `dropped` (the slot left out). An
   excluded slot keeps an entry for review: its own, or else the option the
   agent leaned to.
+- **Only included entries must be the parish's churches.** A slot left out,
+  or an option, may name a chapel elsewhere, so the agent can record what it
+  left out as it is.
 - **`seed check`** also reports a file still `drafting`, since it is a draft's
   last step, a dated included entry before `as_of`'s date (outside a seed's
   scope), and status that the file contradicts (`needs_review` with no open
@@ -396,8 +399,13 @@ and the labeler's `views/SeedPage.tsx` and `lib/seeds.ts`.
   itself, and runs `seed check` before saving an approval.
 - **Any change takes back an approval**: the file goes back to `ready` or
   `needs_review`, and must be approved again.
-- **Reopening** (`r`) turns a settled slot into a question with its current
-  decision as the leaning answer, or its earlier options if it had them.
+- **Reopening** (`r`) turns a settled slot into a question, Include or Leave
+  out, with its current decision as the leaning answer, or its earlier options
+  if it had them.
+- **One save at a time.** Each save sends the whole file, so the page waits
+  for one to finish before taking the next action, and the server saves one
+  review at a time. A file too malformed to show comes back as its problems
+  only.
 
 ### Loading
 

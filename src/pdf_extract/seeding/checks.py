@@ -4,7 +4,8 @@
 database (docs/seeding-plan.md, "Tools"):
 
 - every entry parses as `pnpm schedule seed` would (`schedule.entries.parse_entry`),
-  with its church one of the parish's;
+  with an included entry's church one of the parish's (one left out, or an
+  option, may name a chapel elsewhere);
 - no two included entries share a slot;
 - the dated entries a seed holds are on or after its `as_of` date;
 - the file's bulletins are the parish's, and `as_of` is the fetch time of the
@@ -16,7 +17,7 @@ from __future__ import annotations
 import sqlite3
 from typing import Any
 
-from pdf_extract.schedule.entries import EntryError, parse_entry
+from pdf_extract.schedule.entries import UNKNOWN_CHURCH, EntryError, parse_entry
 from pdf_extract.schedule.store import normalize_as_of, parish_churches
 from pdf_extract.seeding.files import (
     BLOCKED,
@@ -33,10 +34,16 @@ def _parish_id(conn: sqlite3.Connection, parish_slug: str) -> int | None:
     return None if row is None else int(row[0])
 
 
-def _entry_problem(raw: dict[str, Any], churches: dict[str, int], where: str) -> str | None:
+def _entry_problem(
+    raw: dict[str, Any], churches: dict[str, int], where: str, *, outside_ok: bool = False,
+) -> str | None:
+    """Why the entry can't be stored, or None. With `outside_ok`, a church that isn't the
+    parish's is fine: an entry left out on purpose may be a chapel elsewhere."""
     try:
         parse_entry(raw, churches)
     except EntryError as exc:
+        if outside_ok and exc.reason == UNKNOWN_CHURCH:
+            return None
         return f"{where}: {exc.reason}: {exc}"
     return None
 
@@ -74,11 +81,14 @@ def check_seed(
     slots_by_identity: dict[str, str] = {}
     for i, slot in enumerate(seed["slots"]):
         where = f"slots[{i}] ({slot['id']})"
+        included = slot["decision"] == INCLUDE and slot["status"] != NEEDS_HUMAN
         if slot["entry"] is not None:
-            problem = _entry_problem(slot["entry"], churches, f"{where}.entry")
+            problem = _entry_problem(
+                slot["entry"], churches, f"{where}.entry", outside_ok=not included,
+            )
             if problem:
                 problems.append(problem)
-            elif slot["decision"] == INCLUDE and slot["status"] != NEEDS_HUMAN:
+            elif included:
                 identity = parse_entry(slot["entry"], churches).identity_key
                 if identity in slots_by_identity:
                     problems.append(
@@ -94,7 +104,11 @@ def check_seed(
                     )
         for j, option in enumerate(slot["options"] or []):
             if option.get("entry") is not None:
-                problem = _entry_problem(option["entry"], churches, f"{where}.options[{j}].entry")
+                # An option is only a proposal: choosing one that names a church
+                # outside the parish fails the included slot's check instead.
+                problem = _entry_problem(
+                    option["entry"], churches, f"{where}.options[{j}].entry", outside_ok=True,
+                )
                 if problem:
                     problems.append(problem)
 

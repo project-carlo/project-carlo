@@ -99,43 +99,53 @@ def load_approved_seeds(
     """Load every approved seed file not loaded yet. Returns what loaded and what was skipped."""
     loaded: list[dict[str, Any]] = []
     skipped: list[dict[str, Any]] = []
-    latest_seeds: dict[int, str] | None = None
+    latest_seeds = update_mode_parishes(conn)
     for slug in seed_slugs(seeds_dir):
         try:
-            seed = read_seed(slug, seeds_dir)
-        except SeedFileError as exc:
-            skipped.append({"parish": slug, "reason": str(exc)})
+            result = _load_one(conn, seeds_dir, slug, run_id, latest_seeds)
+        except Exception as exc:  # one bad file must not stop every pipeline command
+            LOGGER.exception("Loading the seed file for %s failed", slug)
+            result = {"parish": slug, "reason": f"{type(exc).__name__}: {exc}"}
+        if result is None:
             continue
-        if not isinstance(seed, dict) or seed.get("status") != APPROVED:
-            continue
-        problems = check_seed(conn, seed, parish_slug=slug, check_bulletins=False)
-        if problems:
-            skipped.append({"parish": slug, "reason": "; ".join(problems[:3])})
-            continue
-        parish_id = int(conn.execute(
-            "SELECT id FROM parish WHERE slug = ?", (slug,),
-        ).fetchone()[0])
-        if is_loaded(conn, parish_id, seed):
-            continue
-        if latest_seeds is None:
-            latest_seeds = update_mode_parishes(conn)
-        latest = latest_seeds.get(parish_id)
-        if latest is not None and normalize_as_of(seed["as_of"]) <= latest:
-            skipped.append({
-                "parish": slug,
-                "reason": f"changed, but its as_of ({seed['as_of']}) is not later than the "
-                f"parish's latest seed ({latest}): re-loading it would undo what update mode "
-                "has applied since",
-            })
-            continue
-        try:
-            result = load_seed(conn, seed, parish_id, run_id=run_id)
-        except ValueError as exc:
-            skipped.append({"parish": slug, "reason": str(exc)})
-            continue
-        latest_seeds[parish_id] = result["as_of"]
-        LOGGER.info("Loaded seed for %s as revision %s", slug, result["revision"])
-        loaded.append(result)
+        if "reason" in result:
+            skipped.append(result)
+        else:
+            LOGGER.info("Loaded seed for %s as revision %s", slug, result["revision"])
+            loaded.append(result)
     for item in skipped:
         LOGGER.warning("Seed file for %s not loaded: %s", item["parish"], item["reason"])
     return {"loaded": loaded, "skipped": skipped}
+
+
+def _load_one(
+    conn: sqlite3.Connection, seeds_dir: Path, slug: str, run_id: str | None,
+    latest_seeds: dict[int, str],
+) -> dict[str, Any] | None:
+    """Load one file: what loaded, `{"parish", "reason"}` when skipped, None when not due."""
+    try:
+        seed = read_seed(slug, seeds_dir)
+    except SeedFileError as exc:
+        return {"parish": slug, "reason": str(exc)}
+    if not isinstance(seed, dict) or seed.get("status") != APPROVED:
+        return None
+    problems = check_seed(conn, seed, parish_slug=slug, check_bulletins=False)
+    if problems:
+        return {"parish": slug, "reason": "; ".join(problems[:3])}
+    parish_id = int(conn.execute("SELECT id FROM parish WHERE slug = ?", (slug,)).fetchone()[0])
+    if is_loaded(conn, parish_id, seed):
+        return None
+    latest = latest_seeds.get(parish_id)
+    if latest is not None and normalize_as_of(seed["as_of"]) <= latest:
+        return {
+            "parish": slug,
+            "reason": f"changed, but its as_of ({seed['as_of']}) is not later than the "
+            f"parish's latest seed ({latest}): re-loading it would undo what update mode "
+            "has applied since",
+        }
+    try:
+        result = load_seed(conn, seed, parish_id, run_id=run_id)
+    except ValueError as exc:
+        return {"parish": slug, "reason": str(exc)}
+    latest_seeds[parish_id] = result["as_of"]
+    return result

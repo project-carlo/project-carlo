@@ -48,8 +48,13 @@ from pdf_extract.seeding.queries import (
     resolve_bulletin,
     start_eval_run,
 )
-from pdf_extract.seeding.review import SeedReviewError, save_reviewed_seed, seed_queue
-from pdf_extract.seeding.score import score_run
+from pdf_extract.seeding.review import (
+    SeedReviewError,
+    save_reviewed_seed,
+    seed_detail,
+    seed_queue,
+)
+from pdf_extract.seeding.score import score_parish, score_run
 from pdf_extract.storage import connect_db
 
 PARISH = "holy-family-demo"
@@ -490,3 +495,65 @@ def test_seed_command_prints_text_or_json(pipeline_dir: Path, capsys):
     assert "no seed file" in capsys.readouterr().out
     assert main(["seed", "bulletins", "nope"]) == 1
     assert "Parish not found" in capsys.readouterr().err
+
+
+# ── Review findings ─────────────────────────────────────────────────────────
+def test_a_slot_left_out_may_name_a_chapel_outside_the_parish(conn, seed):
+    _slot(seed, "s11")["entry"]["church_slug"] = "st-ann-chapel-elsewhere"
+    _slot(seed, "s16")["options"][1]["entry"] = {
+        **_slot(seed, "s16")["options"][0]["entry"], "church_slug": "st-ann-chapel-elsewhere"}
+    assert check_seed(conn, seed, parish_slug=PARISH) == []
+    _slot(seed, "s1")["entry"]["church_slug"] = "st-ann-chapel-elsewhere"
+    assert any("unknown_church" in p for p in check_seed(conn, seed, parish_slug=PARISH))
+
+
+def test_malformed_files_are_reported_not_crashed_on(conn, demo, seed):
+    _slot(seed, "s1")["sources"][0]["source"] = ["agent"]
+    seed["calls"] = "none"
+    assert validate_seed(seed)
+    write_seed_file({**seed, "status": APPROVED}, demo["seeds_dir"])
+    result = load_approved_seeds(conn, demo["seeds_dir"])
+    assert result["loaded"] == [] and result["skipped"][0]["parish"] == PARISH
+    assert seed_queue(conn, demo["seeds_dir"])[0]["calls"] == 0
+    detail = seed_detail(conn, PARISH, demo["seeds_dir"])
+    assert detail["seed"] is None and detail["problems"]
+
+
+def test_one_seed_file_that_raises_does_not_stop_the_others(conn, demo, seed, monkeypatch):
+    write_seed_file(_approved(seed), demo["seeds_dir"])
+    monkeypatch.setattr("pdf_extract.seeding.loader.load_seed",
+                        lambda *a, **k: (_ for _ in ()).throw(RuntimeError("boom")))
+    result = load_approved_seeds(conn, demo["seeds_dir"])
+    assert result["skipped"] == [{"parish": PARISH, "reason": "RuntimeError: boom"}]
+
+
+def test_total_precision_leaves_out_slots_matching_only_optional_rows():
+    sunday = {"church_slug": HF, "event_type": "mass", "event_kind": "weekly",
+              "day_of_week": "Sunday", "date": None, "start_time": "09:00", "end_time": None,
+              "cancelled": False, "weeks_of_month": [], "season": None, "note": None}
+    monday = {**sunday, "day_of_week": "Monday", "start_time": "08:00"}
+    slots = [{"id": f"s{i}", "status": "settled", "decision": "include", "entry": e}
+             for i, e in enumerate((sunday, monday))]
+    label = {"events": [{**sunday, "optional": None}, {**monday, "optional": "include"}]}
+    parish = score_parish({"slots": slots, "calls": []}, label, "2026-10-01")
+    assert parish["settled_scored"] == 1
+    assert parish["settled"]["strict"] == {"precision": 1.0, "recall": 1.0, "found": 1,
+                                           "covered": 1}
+
+
+def test_a_call_keeps_what_the_file_gained_while_it_ran(conn, demo, monkeypatch):
+    ctx = SeedContext(seeds_dir=demo["seeds_dir"])
+    extract = _FakeClassifier.extract
+
+    def extract_while_the_agent_saves(self, pdf, *, churches, today):
+        saved = read_seed(PARISH, demo["seeds_dir"])
+        saved["summary"] = "Written while the call ran."
+        write_seed_file(saved, demo["seeds_dir"])
+        return extract(self, pdf, churches=churches, today=today)
+
+    monkeypatch.setattr(_FakeClassifier, "extract", extract_while_the_agent_saves)
+    monkeypatch.setattr(seed_calls, "extraction_classifier", lambda model: _FakeClassifier())
+    seed_calls.run_extract(conn, ctx, PARISH, "latest", OPENAI_MODEL)
+    saved = read_seed(PARISH, demo["seeds_dir"])
+    assert saved["summary"] == "Written while the call ran." and len(saved["calls"]) == 1
+

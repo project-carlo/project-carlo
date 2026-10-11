@@ -61,7 +61,7 @@ export function reopenSlot(slot: SeedSlot): SeedSlot {
     slot.options && slot.options.some((o) => o.leaning)
       ? slot.options
       : [
-          { label: "Keep as drafted", entry: slot.entry, leaning: included },
+          { label: "Include", entry: slot.entry, leaning: included },
           { label: "Leave out", entry: null, leaning: !included },
         ];
   return {
@@ -115,6 +115,19 @@ export function describeEntry(entry: SeedEntry | null): string {
   if (entry.season) parts.push(describeSeason(entry.season));
   if (entry.note) parts.push(entry.note);
   return parts.join(" · ");
+}
+
+/**
+ * The newest bulletin the agent read: the one `as_of` names and a slot's page
+ * refers to (as `newest_read_bulletin` on the server; times compared parsed).
+ */
+export function newestReadBulletin(seed: SeedFile): SeedFile["bulletins"][number] | null {
+  let newest: SeedFile["bulletins"][number] | null = null;
+  for (const b of seed.bulletins) {
+    if (!b.read) continue;
+    if (!newest || Date.parse(b.fetched_at) > Date.parse(newest.fetched_at)) newest = b;
+  }
+  return newest;
 }
 
 /** The full content hash a source or call's `bulletin` names (a hash or a prefix of one). */

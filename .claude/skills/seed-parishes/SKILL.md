@@ -61,11 +61,12 @@ most the parish it was on.
    Saturday confessions at St. Mary's?"`. A full extraction (`pnpm seed extract <parish>
    <hash> --model gpt-6.1-sol`) is for a bulletin you can't make sense of. Both are cached
    and recorded in the file's `calls` (cite them by id in a slot's sources), and both refuse
-   after 4 paid calls per parish (`CARLO_SEED_CALL_LIMIT`). A clear parish needs no call.
+   after 4 paid calls per parish (`CARLO_SEED_CALL_LIMIT`). Run a parish's calls one at a time,
+   not in parallel: each records itself in the file. A clear parish needs no call.
 7. **Decide each slot** and mark it:
    - `settled`: printed clearly, the policy is clear about it, and nothing you read
      contradicts it. `decision` is `include`, or `exclude` for something you leave out on
-     purpose (keep its entry and say why).
+     purpose (keep its entry and say why; a chapel elsewhere may keep its own church slug).
    - `needs_human`: the sources conflict and the bulletins don't settle it; the policy leaves
      it a judgment call; the print is unreadable; or which church or chapel it belongs to is
      unclear. Write a short `question`, the `options` you are choosing between (an option's

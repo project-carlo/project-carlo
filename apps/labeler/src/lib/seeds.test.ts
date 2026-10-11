@@ -8,6 +8,7 @@ import {
   dropSlot,
   editSlot,
   fromEditorRow,
+  newestReadBulletin,
   openCount,
   reopenSlot,
   replaceSlot,
@@ -102,7 +103,7 @@ describe("other review actions", () => {
     const reopened = reopenSlot(settled);
     expect(reopened.status).toBe("needs_human");
     expect(reopened.options?.map((o) => [o.label, o.leaning])).toEqual([
-      ["Keep as drafted", true],
+      ["Include", true],
       ["Leave out", false],
     ]);
     expect(reopenSlot(dropSlot(settled, "Ann")!).options?.[1].leaning).toBe(true);
@@ -148,6 +149,14 @@ describe("helpers", () => {
   it("round-trips an entry through the row editor", () => {
     const dated = entry({ event_kind: "specific_date", day_of_week: null, date: "2026-10-10", cancelled: true });
     expect(fromEditorRow(toEditorRow(dated, 4))).toEqual({ entry: dated, page: 4 });
+  });
+
+  it("finds the newest bulletin read whatever form its time is in", () => {
+    const file = seed([]);
+    file.bulletins[1] = { ...file.bulletins[1], fetched_at: "2026-10-04T08:00:00+00:00" };
+    expect(newestReadBulletin(file)?.content_hash).toBe(file.bulletins[1].content_hash);
+    file.bulletins[1].read = false;
+    expect(newestReadBulletin(file)?.content_hash).toBe(file.bulletins[0].content_hash);
   });
 
   it("routes the seeds pages", () => {

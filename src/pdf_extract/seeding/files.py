@@ -155,33 +155,39 @@ def new_seed(parish_slug: str, bulletins: list[dict[str, Any]]) -> dict[str, Any
 
 
 # ── Reading a file ──────────────────────────────────────────────────────────
+def _list(value: Any) -> list[Any]:
+    """A list field of a file that may be malformed: anything but a list reads as empty."""
+    return value if isinstance(value, list) else []
+
+
 def open_questions(seed: dict[str, Any]) -> list[dict[str, Any]]:
-    return [s for s in seed.get("slots") or [] if isinstance(s, dict)
+    return [s for s in _list(seed.get("slots")) if isinstance(s, dict)
             and s.get("status") == NEEDS_HUMAN]
 
 
 def included_slots(seed: dict[str, Any]) -> list[dict[str, Any]]:
     """The settled slots the seed would load."""
     return [
-        s for s in seed.get("slots") or []
+        s for s in _list(seed.get("slots"))
         if isinstance(s, dict) and s.get("status") == SETTLED and s.get("decision") == INCLUDE
     ]
 
 
 def paid_calls(seed: dict[str, Any]) -> int:
     """External model calls that were not served from a cache."""
-    return sum(1 for c in seed.get("calls") or [] if isinstance(c, dict) and not c.get("cached"))
+    return sum(1 for c in _list(seed.get("calls")) if isinstance(c, dict) and not c.get("cached"))
 
 
 def calls_cost(seed: dict[str, Any]) -> float:
     return sum(
-        c["cost_usd"] for c in seed.get("calls") or []
+        c["cost_usd"] for c in _list(seed.get("calls"))
         if isinstance(c, dict) and isinstance(c.get("cost_usd"), (int, float))
     )
 
 
 def next_call_id(seed: dict[str, Any]) -> str:
-    taken = {c.get("id") for c in seed.get("calls") or [] if isinstance(c, dict)}
+    taken = {c.get("id") for c in _list(seed.get("calls"))
+             if isinstance(c, dict) and isinstance(c.get("id"), str)}
     n = len(taken) + 1
     while f"c{n}" in taken:
         n += 1
@@ -194,7 +200,7 @@ def resolve_hash(seed: dict[str, Any], ref: Any) -> str | None:
         return None
     ref = ref.removesuffix("…").lower()
     hashes = [
-        b["content_hash"] for b in seed.get("bulletins") or []
+        b["content_hash"] for b in _list(seed.get("bulletins"))
         if isinstance(b, dict) and isinstance(b.get("content_hash"), str)
         and b["content_hash"].startswith(ref)
     ]
@@ -204,7 +210,7 @@ def resolve_hash(seed: dict[str, Any], ref: Any) -> str | None:
 def newest_read_bulletin(seed: dict[str, Any]) -> dict[str, Any] | None:
     """The newest bulletin the agent read: the one `as_of` names and `page` refers to."""
     read = [
-        b for b in seed.get("bulletins") or []
+        b for b in _list(seed.get("bulletins"))
         if isinstance(b, dict) and b.get("read") and isinstance(b.get("fetched_at"), str)
     ]
     return max(read, key=lambda b: normalize_as_of(b["fetched_at"]), default=None)
@@ -395,7 +401,8 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
             if extra:
                 errors.append(f"{at}: unknown {', '.join(extra)}")
             name = source.get("source")
-            if name not in (AGENT, HISTORY) and name not in call_ids:
+            if not isinstance(name, str) or (name not in (AGENT, HISTORY)
+                                             and name not in call_ids):
                 errors.append(f"{at}.source must be agent, history or a call's id")
             if source.get("bulletin") is not None and resolve_hash(seed, source["bulletin"]) is None:
                 errors.append(f"{at}.bulletin must name one of the file's bulletins")
@@ -520,15 +527,15 @@ class SeedSummary:
 
     @classmethod
     def of(cls, slug: str, seed: dict[str, Any] | None, problem: str | None = None):
-        seed = seed or {}
-        slots = [s for s in seed.get("slots") or [] if isinstance(s, dict)]
+        seed = seed if isinstance(seed, dict) else {}
+        slots = [s for s in _list(seed.get("slots")) if isinstance(s, dict)]
         return cls(
             parish_slug=slug,
             status=seed.get("status") if seed.get("status") in STATUSES else "invalid",
             open_questions=len(open_questions(seed)),
             slots=len(slots),
             included=len(included_slots(seed)),
-            calls=len(seed.get("calls") or []),
+            calls=len(_list(seed.get("calls"))),
             cost_usd=round(calls_cost(seed), 4),
             as_of=seed.get("as_of") if isinstance(seed.get("as_of"), str) else None,
             reviewer=seed.get("reviewer") if isinstance(seed.get("reviewer"), str) else None,

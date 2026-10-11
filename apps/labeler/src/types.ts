@@ -286,7 +286,8 @@ export interface SeedQueueRow {
 }
 
 export interface SeedDetail {
-  seed: SeedFile;
+  /** Null when the file is malformed: `problems` says what to fix. */
+  seed: SeedFile | null;
   parish: { slug: string; name: string };
   churches: Church[];
   bulletins_in_db: string[];

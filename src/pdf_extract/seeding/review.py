@@ -10,6 +10,7 @@ pass `seed check`, and its `approved_at` is stamped here.
 from __future__ import annotations
 
 import sqlite3
+import threading
 from pathlib import Path
 from typing import Any
 
@@ -35,6 +36,9 @@ QUEUE_ORDER = (NEEDS_REVIEW, READY, DRAFTING, BLOCKED, APPROVED)
 REVIEW_STATUSES = (NEEDS_REVIEW, READY, APPROVED, BLOCKED)
 # What a review may change; everything else stays as the agent wrote it.
 REVIEWED_KEYS = ("slots", "status", "reviewer", "blocked_reason")
+
+
+_save_lock = threading.Lock()
 
 
 class SeedReviewError(ValueError):
@@ -81,9 +85,12 @@ def seed_detail(
                 "SELECT content_hash FROM bulletin WHERE parish_id = ?", (parish["id"],),
             ).fetchall()
         }
-    problems = check_seed(conn, seed, parish_slug=parish_slug)
+    shape = validate_seed(seed, parish_slug=parish_slug)
+    problems = shape or check_seed(conn, seed, parish_slug=parish_slug)
     return {
-        "seed": seed,
+        # A file the page can't show (a key missing, a list that isn't one) comes
+        # back as its problems only, to be fixed in the file.
+        "seed": None if shape else seed,
         "parish": {"slug": parish_slug, "name": parish["name"] if parish else parish_slug},
         "churches": church_list_for_prompt(conn, parish["id"]) if parish else [],
         "bulletins_in_db": sorted(known),
@@ -95,7 +102,17 @@ def seed_detail(
 def save_reviewed_seed(
     conn: sqlite3.Connection, parish_slug: str, body: Any, seeds_dir: Path = SEEDS_DIR,
 ) -> dict[str, Any]:
-    """Validate and save a review of a seed file. Returns the saved file's detail."""
+    """Validate and save a review of a seed file. Returns the saved file's detail.
+
+    Saves are one at a time, so two in flight can't interleave their read and write.
+    """
+    with _save_lock:
+        return _save(conn, parish_slug, body, seeds_dir)
+
+
+def _save(
+    conn: sqlite3.Connection, parish_slug: str, body: Any, seeds_dir: Path,
+) -> dict[str, Any]:
     current = read_seed(parish_slug, seeds_dir)
     if current is None:
         raise SeedReviewError("No seed file for this parish")

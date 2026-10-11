@@ -13,6 +13,7 @@ import {
   editSlot,
   fromEditorRow,
   isOpen,
+  newestReadBulletin,
   openCount,
   reopenSlot,
   replaceSlot,
@@ -63,14 +64,32 @@ export function SeedPage(props: Props) {
     );
   }
   if (!detail) return <div className="p-8 text-slate-500">Loading seed…</div>;
-  return <SeedReview key={parish} initial={detail} {...props} />;
+  if (!detail.seed) {
+    return (
+      <div className="p-8">
+        <p className="mb-2 text-red-700">This seed file can't be reviewed until it is fixed:</p>
+        <ul className="mb-4 list-disc pl-5 text-sm text-red-700" data-testid="seed-problems">
+          {detail.problems.map((p) => (
+            <li key={p}>{p}</li>
+          ))}
+        </ul>
+        <a className="btn" href={SEEDS_HREF}>
+          Back to the seeds
+        </a>
+      </div>
+    );
+  }
+  return <SeedReview key={parish} initial={{ ...detail, seed: detail.seed }} {...props} />;
 }
 
-function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { initial: SeedDetail }) {
-  const [detail, setDetail] = useState(initial);
+function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { initial: SeedDetail & { seed: SeedFile } }) {
+  const [detail, setDetail] = useState<SeedDetail>(initial);
   const [seed, setSeed] = useState<SeedFile>(initial.seed);
   const [message, setMessage] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  // Saves go one at a time: each sends the whole file, so two in flight could
+  // land out of order. A ref, so keys pressed before a re-render see it too.
+  const savingRef = useRef(false);
   const [showSettled, setShowSettled] = useState(false);
   const [editing, setEditing] = useState<{ slotId: string; row: EditorRow } | null>(null);
   const tabs = useMemo(() => {
@@ -93,27 +112,40 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
     (next: SeedFile) => {
       const previous = seed;
       setSeed(next);
+      savingRef.current = true;
       setSaving(true);
       setMessage(null);
       api
         .saveSeed(next)
         .then((d) => {
           setDetail(d);
-          setSeed(d.seed);
+          // A save is validated, so the file comes back whole.
+          if (d.seed) setSeed(d.seed);
         })
         .catch((e: Error) => {
           setSeed(previous);
           setMessage(`Not saved: ${e.message}`);
         })
-        .finally(() => setSaving(false));
+        .finally(() => {
+          savingRef.current = false;
+          setSaving(false);
+        });
     },
     [seed],
   );
 
+  /** Whether a review action may run now; says why not when it can't. */
+  const canAct = (): boolean => {
+    let why: string | null = null;
+    if (savingRef.current) why = "Still saving the last change; try again in a moment.";
+    else if (drafting) why = "A subagent is still drafting this parish.";
+    else if (!reviewer) why = "Type your name as the reviewer first.";
+    if (why) setMessage(why);
+    return !why;
+  };
+
   const act = (slot: SeedSlot | null, change: (slot: SeedSlot) => SeedSlot | null, failure: string) => {
-    if (!slot) return;
-    if (drafting) return setMessage("A subagent is still drafting this parish.");
-    if (!reviewer) return setMessage("Type your name as the reviewer first.");
+    if (!slot || !canAct()) return;
     const next = change(slot);
     if (!next) return setMessage(failure);
     save(replaceSlot(seed, next));
@@ -134,12 +166,13 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
     const problems = rowProblems(editing.row);
     if (problems.length) return setMessage(`Fill in: ${problems.join(", ")}`);
     if (editing.row.pending_split) return setMessage("A slot is one day or date; add the others as their own slots in the file.");
+    if (!slot || !canAct()) return;
     const { entry, page } = fromEditorRow(editing.row);
     setEditing(null);
-    act(slot ?? null, (s) => editSlot(s, entry, page, reviewer), "");
+    act(slot, (s) => editSlot(s, entry, page, reviewer), "");
   };
   const doApprove = () => {
-    if (!reviewer) return setMessage("Type your name as the reviewer first.");
+    if (!canAct()) return;
     const next = approve(seed, reviewer);
     if (!next) return setMessage("Answer every open question first.");
     save(next);
@@ -207,6 +240,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   }, [selected]);
 
   const activeBulletin = seed.bulletins.find((b) => b.content_hash === activeHash) ?? null;
+  const asOfHash = newestReadBulletin(seed)?.content_hash ?? null;
   const n_open = openCount(seed);
   const missing = new Set(seed.bulletins.map((b) => b.content_hash).filter((h) => !detail.bulletins_in_db.includes(h)));
 
@@ -224,7 +258,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
               title={`${b.content_hash}\nfetched ${b.fetched_at}${missing.has(b.content_hash) ? "\nnot in the local database" : ""}`}
             >
               {b.published_date ? `Issue ${formatDate(b.published_date)}` : `Fetched ${b.fetched_at.slice(0, 10)}`}
-              {b.fetched_at === seed.as_of && " · as of"}
+              {b.content_hash === asOfHash && " · as of"}
               {!b.read && " · unread"}
             </button>
           ))}
@@ -391,7 +425,7 @@ function SlotCard(props: SlotCardProps) {
   const church = (slug: string | undefined) => churches.find((c) => c.slug === slug)?.name ?? slug ?? "";
   const open = isOpen(slot);
   const calls = new Map(seed.calls.map((c) => [c.id, c]));
-  const newest = seed.bulletins.find((b) => b.fetched_at === seed.as_of)?.content_hash ?? null;
+  const newest = newestReadBulletin(seed)?.content_hash ?? null;
   return (
     <div
       data-slot-id={slot.id}

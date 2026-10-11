@@ -126,6 +126,9 @@ def _cost(model: str | None, usage: dict[str, Any]) -> float | None:
 def _record(
     ctx: SeedContext, seed: dict[str, Any], bulletin: dict[str, Any], call: dict[str, Any],
 ) -> dict[str, Any]:
+    # Read the file again: a call takes a while, and the agent may have saved its
+    # draft (or recorded another call) meanwhile.
+    seed = read_seed(seed["parish_slug"], ctx.seeds_dir) or seed
     _list_bulletin(seed, bulletin)
     call = {"id": next_call_id(seed), **call, "bulletin": bulletin["content_hash"],
             "at": utc_now_iso()}

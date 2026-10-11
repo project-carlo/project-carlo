@@ -121,6 +121,9 @@ def score_parish(seed: dict[str, Any], label: dict[str, Any], as_of_date: str) -
         "label_events": len(required),
         "optional_label_events": sum(1 for r in records if r["tier"] == OPTIONAL),
         "settled_included": len(settled),
+        # Settled slots scored: those paired only with optional label rows are left
+        # out, as the eval report leaves them out of precision.
+        "settled_scored": scores["predicted_events"],
         "settled": {
             level: {
                 "precision": scores["levels"][level]["precision"],
@@ -175,7 +178,7 @@ def score_run(eval_run: str, *, labels_dir: Path = LABELS_DIR, ctx: SeedContext 
     totals: dict[str, Any] = {"parishes": len(parishes)}
     for level in ("strict", "core"):
         found = sum(p["settled"][level]["found"] for p in parishes.values())
-        settled = sum(p["settled_included"] for p in parishes.values())
+        settled = sum(p["settled_scored"] for p in parishes.values())
         totals[f"settled_precision_{level}"] = _ratio(found, settled)
     covered = sum(p["settled"]["core"]["covered"] for p in parishes.values())
     labels_total = sum(p["label_events"] for p in parishes.values())
