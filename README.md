@@ -90,7 +90,7 @@ committed to git. Each file (`schema_version` 1) holds:
 - `events`: one per event, each with:
   - `church_slug`, `event_type` (`mass`/`confession`/`adoration`), `event_kind` (`weekly`/`specific_date`)
   - `day_of_week` or `date`, `start_time` and `end_time` (24-hour `HH:MM`), `cancelled`, `page_number`, `note`
-  - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These two apply to weekly rows only.
+  - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week), `exclude_weeks` (true when the listed weeks are the ones skipped: "every Sunday except the last" is `["last"]` excluded; an exclusion the remaining weeks can say, such as "every week except the first", is written as those weeks instead; files saved before this field existed lack it, which reads as false) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These apply to weekly rows only.
   - `origin`: `human`, `gemini` or `gemini-edited`
   - `optional`: `null` for a required event; `include` or `exclude` for one where it is a judgment call whether it belongs at all, naming the preferred answer (press `o` on a row to cycle). Files saved before this field existed lack it, which reads as `null`.
 
@@ -136,7 +136,7 @@ schema:
   served from the prompt cache, then the parish's churches and today's date,
   then the PDF;
 - the schema in `classifiers/qualified_schedule.py`: the production schema plus
-  `weeks_of_month` and `season` on weekly slots.
+  `weeks_of_month`, `exclude_weeks` and `season` on weekly slots.
 
 Editing either changes the version of every classifier that uses them.
 

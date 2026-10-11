@@ -118,6 +118,7 @@ function toEventSummary(ev: RawEvent): EventSummary {
     page_number: ev.page_number,
     note: ev.note,
     weeks_of_month: ev.weeks_of_month,
+    exclude_weeks: ev.exclude_weeks,
     season: seasonOf(ev),
   };
 }

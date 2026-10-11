@@ -27,6 +27,7 @@ const entry = (overrides: Partial<SeedEntry> = {}): SeedEntry => ({
   end_time: "15:45",
   cancelled: false,
   weeks_of_month: [],
+  exclude_weeks: false,
   season: null,
   note: null,
   ...overrides,

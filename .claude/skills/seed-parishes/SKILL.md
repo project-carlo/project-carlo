@@ -156,8 +156,11 @@ cancellation, and an open question:
 - `entry` is a label event without `page_number`, `origin` and `optional`, times 24-hour
   `HH:MM`. `event_kind` is `weekly` or `specific_date` (never "dated"; `finalize` sets it from
   whether the entry has a `date`). A weekly entry has `day_of_week`, and may have
-  `weeks_of_month` and `season`; a dated one has `date`, and `cancelled` true when the
-  bulletin calls it off. `finalize` fills `church_slug` when the parish has one church.
+  `weeks_of_month` and `season`, and `exclude_weeks` true when the listed weeks are the
+  ones it skips ("every Sunday except the last" is `["last"]` with `exclude_weeks` true;
+  "except the first" is still the weeks that remain); a dated one has `date`, and
+  `cancelled` true when the bulletin calls it off. `finalize` fills `church_slug` when the
+  parish has one church.
 - `page` is where the **newest** bulletin prints the slot (null when it doesn't). It becomes
   the entry's sighting when the seed is loaded.
 - `sources[].source` is `agent` (your reading), `history`, `website` (with its `url`), or a

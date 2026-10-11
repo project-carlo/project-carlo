@@ -111,7 +111,7 @@ export function describeEntry(entry: SeedEntry | null): string {
     `${when} ${formatTime(entry.start_time)}${end}`,
   ];
   if (entry.cancelled) parts.push("cancelled");
-  if (entry.weeks_of_month.length) parts.push(describeWeeks(entry.weeks_of_month));
+  if (entry.weeks_of_month.length) parts.push(describeWeeks(entry.weeks_of_month, entry.exclude_weeks));
   if (entry.season) parts.push(describeSeason(entry.season));
   if (entry.note) parts.push(entry.note);
   return parts.join(" · ");
@@ -140,7 +140,14 @@ export function resolveBulletin(seed: SeedFile, ref: string | null | undefined):
 
 /** A slot's entry as an editor row, so RowEditor can edit it. */
 export function toEditorRow(entry: SeedEntry, page: number | null): EditorRow {
-  return { ...entry, id: newId(), page_number: page, origin: "human", optional: null };
+  return {
+    ...entry,
+    exclude_weeks: entry.exclude_weeks ?? false,
+    id: newId(),
+    page_number: page,
+    origin: "human",
+    optional: null,
+  };
 }
 
 export function fromEditorRow(row: EditorRow): { entry: SeedEntry; page: number | null } {
@@ -156,6 +163,7 @@ export function fromEditorRow(row: EditorRow): { entry: SeedEntry; page: number 
       end_time: row.end_time || null,
       cancelled: weekly ? false : row.cancelled,
       weeks_of_month: weekly ? row.weeks_of_month : [],
+      exclude_weeks: weekly && row.exclude_weeks,
       season: weekly ? row.season : null,
       note: row.note?.trim() ? row.note.trim() : null,
     },

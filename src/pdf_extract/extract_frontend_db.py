@@ -48,6 +48,11 @@ row before the build date. `read_snapshot` still reads version 1, as every
 week, no season and no cancellations, so a run can be checked against a
 version 1 snapshot.
 
+`exclude_weeks` was added to version 2 later, last: true when the row's
+`weeks_of_month` are the weeks it skips ("every Sunday except the last" is
+`["last"]` excluded). A snapshot written before it reads as null there, which
+the app takes as false.
+
 Bump SNAPSHOT_VERSION (and the app's) on any change the app would misread.
 A new column needs no bump when its absence reads as null: list it in
 ADDED_COLUMNS, and the app and `read_snapshot` take a snapshot written before
@@ -69,7 +74,7 @@ from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date, week_order_sql
 from pdf_extract.labeling.labels import DAYS
-from pdf_extract.schedule.qualifiers import mask_to_weeks
+from pdf_extract.schedule.qualifiers import mask_excludes_weeks, mask_to_weeks
 from pdf_extract.storage import (
     DEFAULT_DB_PATH,
     configure_sqlite_connection,
@@ -95,7 +100,7 @@ EVENT_COLUMNS = (
     "id", "church_id", "event_type", "event_kind", "day_of_week", "date", "start_time",
     "end_time", "cancelled", "page_number", "note",
     "weeks_of_month", "season_start_month", "season_start_day", "season_end_month",
-    "season_end_day", "cancels_event_id",
+    "season_end_day", "cancels_event_id", "exclude_weeks",
 )
 # The columns version 2 added. A version 1 snapshot's rows read as every
 # week ([]), no season and no cancellation (None) in them.
@@ -105,7 +110,7 @@ _V2_DEFAULTS = frozenset({
 })
 # Columns added since version 1 shipped. A snapshot written before one was
 # added lacks it; readers take it as all nulls.
-ADDED_COLUMNS = {"churches": {"bulletin_week"}, "events": set()}
+ADDED_COLUMNS = {"churches": {"bulletin_week"}, "events": {"exclude_weeks"}}
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
@@ -230,7 +235,7 @@ def _extract_mode_events(conn: sqlite3.Connection, update_mode: set[int]) -> lis
         """
     ).fetchall()
     return [
-        (*row[:11], [], None, None, None, None, None)
+        (*row[:11], [], None, None, None, None, None, False)
         for row in rows if row[11] not in update_mode
     ]
 
@@ -258,7 +263,11 @@ def _update_mode_events(conn: sqlite3.Connection) -> list[tuple]:
         """
     ).fetchall()
     return [
-        (-row[0], *row[1:11], mask_to_weeks(row[11]), *row[12:16], None) for row in rows
+        (
+            -row[0], *row[1:11], mask_to_weeks(row[11]), *row[12:16], None,
+            mask_excludes_weeks(row[11]),
+        )
+        for row in rows
     ]
 
 

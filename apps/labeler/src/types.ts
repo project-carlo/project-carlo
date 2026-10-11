@@ -51,6 +51,11 @@ export interface LabelEvent {
   end_time: string | null;
   cancelled: boolean;
   weeks_of_month: WeekOfMonth[];
+  /**
+   * The listed weeks are the ones skipped: "every Sunday except the last" is
+   * `["last"]` excluded. Labels and seeds saved before this existed lack it.
+   */
+  exclude_weeks?: boolean;
   season: Season | null;
   page_number: number | null;
   note: string | null;
@@ -75,10 +80,11 @@ export interface Label {
 }
 
 /** A ground-truth row being edited: a label event that may still be incomplete. */
-export interface EditorRow extends Omit<LabelEvent, "church_slug" | "start_time"> {
+export interface EditorRow extends Omit<LabelEvent, "church_slug" | "start_time" | "exclude_weeks"> {
   id: string;
   church_slug: string;
   start_time: string;
+  exclude_weeks: boolean;
   /** The Gemini row this came from, while this browser remembers it. */
   gemini_id?: string;
   /**
@@ -100,6 +106,7 @@ export interface GeminiRow {
   end_time: string | null;
   cancelled: boolean;
   weeks_of_month: WeekOfMonth[];
+  exclude_weeks: boolean;
   season: Season | null;
   page_number: number | null;
   note: string | null;

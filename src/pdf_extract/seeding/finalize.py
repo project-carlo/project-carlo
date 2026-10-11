@@ -5,8 +5,8 @@ decision, rationale and question) and leaves the rest to this:
 
 - every key an entry, option entry or slot may leave out is filled with its default
   (`weeks_of_month` [], `season`, `end_time`, `note` and the like null, `cancelled`
-  false), `event_kind` from whether the entry has a `date`, and `church_slug` when
-  the parish has one church;
+  and `exclude_weeks` false), `event_kind` from whether the entry has a `date`, and
+  `church_slug` when the parish has one church;
 - `"dated"` is read as `specific_date`, the name the files use;
 - a slot without an `id` gets the next free `sN`;
 - every bulletin a slot's `agent` source cites is marked read (none is unmarked);
@@ -42,7 +42,7 @@ DATED_ALIASES = ("dated", "date", "single", "single_event")
 
 _ENTRY_DEFAULTS: dict[str, Any] = {
     "day_of_week": None, "date": None, "end_time": None, "cancelled": False,
-    "weeks_of_month": [], "season": None, "note": None,
+    "weeks_of_month": [], "exclude_weeks": False, "season": None, "note": None,
 }
 _SLOT_DEFAULTS: dict[str, Any] = {
     "decision": None, "entry": None, "page": None, "question": None, "options": None,

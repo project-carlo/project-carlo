@@ -3,6 +3,7 @@ import type { Season } from "../types";
 import {
   allBut,
   allButWeek,
+  canonicalWeeks,
   describeSeason,
   describeWeeks,
   inSeason,
@@ -30,22 +31,33 @@ describe("weeks of the month", () => {
     expect(toggleWeek(["first", "second", "third", "fifth", "last"], "fourth")).toEqual([]);
   });
 
-  it("saves all-but as the remaining numbered weeks", () => {
-    expect(allBut("second")).toEqual(["first", "third", "fourth", "fifth"]);
-    expect(allBut("fifth")).toEqual(["first", "second", "third", "fourth"]);
-    expect(allBut("last")).toBeNull();
+  it("saves all-but as the remaining numbered weeks, and all-but-last as an exclusion", () => {
+    expect(allBut("second")).toEqual({ weeks: ["first", "third", "fourth", "fifth"], exclude: false });
+    expect(allBut("fifth")).toEqual({ weeks: ["first", "second", "third", "fourth"], exclude: false });
+    expect(allBut("last")).toEqual({ weeks: ["last"], exclude: true });
   });
 
-  it("recognises an all-but list", () => {
+  it("recognises an all-but selection", () => {
     expect(allButWeek(["first", "third", "fourth", "fifth"])).toBe("second");
     expect(allButWeek(["first", "third", "fourth", "last"])).toBeNull();
     expect(allButWeek(["first", "third"])).toBeNull();
+    expect(allButWeek(["last"], true)).toBe("last");
+    expect(allButWeek(["first", "last"], true)).toBeNull();
+  });
+
+  it("writes each selection one way", () => {
+    expect(canonicalWeeks(["second"], true)).toEqual({ weeks: ["first", "third", "fourth", "fifth"], exclude: false });
+    expect(canonicalWeeks(["last", "fifth", "first"], true)).toEqual({ weeks: ["first", "last"], exclude: true });
+    expect(canonicalWeeks([], true)).toEqual({ weeks: [], exclude: false });
+    expect(canonicalWeeks(["third", "first"], false)).toEqual({ weeks: ["first", "third"], exclude: false });
   });
 
   it("describes weeks", () => {
     expect(describeWeeks([])).toBe("Every week");
     expect(describeWeeks(["first", "third"])).toBe("1st & 3rd");
     expect(describeWeeks(["first", "third", "fourth", "fifth"])).toBe("All but 2nd");
+    expect(describeWeeks(["last"], true)).toBe("All but Last");
+    expect(describeWeeks(["last", "first"], true)).toBe("All but 1st & Last");
   });
 });
 

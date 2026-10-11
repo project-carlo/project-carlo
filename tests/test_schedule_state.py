@@ -30,6 +30,7 @@ from pdf_extract.report import build_report, diff_databases, render_markdown
 from pdf_extract.runs import parish_results, start_run
 from pdf_extract.schedule.edits import EditError, apply_proposals, edit_entry
 from pdf_extract.schedule.entries import (
+    ENTRY_COLUMNS,
     INVALID_ENTRY,
     UNKNOWN_CHURCH,
     EntryError,
@@ -56,13 +57,17 @@ from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,
     describe_schedule_pattern,
+    mask_excludes_weeks,
     mask_to_weeks,
     season_to_columns,
     weeks_to_mask,
 )
+from pdf_extract.schedule.report import describe_entry
 from pdf_extract.schedule.store import (
     current_revision,
+    intern_entry,
     live_entries,
+    load_entries,
     parish_churches,
     rebuild_current_schedule,
     render_view,
@@ -238,6 +243,10 @@ def test_qualifiers_are_described_as_the_web_app_describes_them() -> None:
         "June 4 through September 10")
     assert describe_schedule_pattern(["first"], season(10, None, 6, None), "Friday") == (
         "First Friday of the month, October through June")
+    assert describe_schedule_pattern(["last"], None, "sunday", True) == (
+        "Every Sunday except the last")
+    assert describe_schedule_pattern(["first", "last"], None, None, True) == (
+        "Every week except the first and last")
 
 
 def test_weeks_and_seasons_convert_both_ways() -> None:
@@ -252,6 +261,57 @@ def test_weeks_and_seasons_convert_both_ways() -> None:
     assert columns_to_season(None, None, None, None) is None
     with pytest.raises(QualifierError):
         weeks_to_mask(["first", "first"])
+
+
+def test_excluded_weeks_are_stored_in_their_canonical_form() -> None:
+    # Every week except the last: the listed week plus the exclusion bit.
+    assert weeks_to_mask(["last"], True) == 0b1100000
+    assert (mask_to_weeks(0b1100000), mask_excludes_weeks(0b1100000)) == (["last"], True)
+    assert not mask_excludes_weeks(0b100001)
+    # An exclusion the remaining weeks can say is stored as them.
+    assert weeks_to_mask(["second"], True) == weeks_to_mask(["first", "third", "fourth", "fifth"])
+    # A fifth week is always the last, so excluding both is excluding the last.
+    assert weeks_to_mask(["fifth", "last"], True) == weeks_to_mask(["last"], True)
+    # Excluding nothing is every week.
+    assert weeks_to_mask([], True) == 0
+    for never in (["first", "second", "third", "fourth", "fifth"],
+                  ["first", "second", "third", "fourth", "last"]):
+        with pytest.raises(QualifierError):
+            weeks_to_mask(never, True)
+    with pytest.raises(QualifierError):
+        weeks_to_mask(["last"], "yes")
+
+
+def test_an_excluded_week_round_trips_through_the_database(conn: sqlite3.Connection) -> None:
+    churches = _churches(conn)
+    except_last = parse_entry({**SUN_9, "weeks_of_month": ["last"], "exclude_weeks": True},
+                              churches)
+    assert except_last.identity_key == parse_entry(SUN_9, churches).identity_key
+    with conn:
+        entry_id = intern_entry(conn, except_last)
+    stored = load_entries(conn, [entry_id])[entry_id]
+    assert stored == except_last
+    form = stored.labels_form("test-church")
+    assert (form["weeks_of_month"], form["exclude_weeks"]) == (["last"], True)
+    assert describe_entry(stored).endswith("(Every Sunday except the last)")
+    # The same slot written as the weeks it keeps when it can be.
+    except_first = parse_entry({**SUN_9, "weeks_of_month": ["first"], "exclude_weeks": True},
+                               churches)
+    assert except_first.labels_form("")["weeks_of_month"] == [
+        "second", "third", "fourth", "fifth"]
+    assert except_first.labels_form("")["exclude_weeks"] is False
+
+
+def test_the_database_refuses_an_exclusion_of_no_weeks(conn: sqlite3.Connection) -> None:
+    entry = parse_entry(SUN_9, _churches(conn))
+    with pytest.raises(sqlite3.IntegrityError), conn:
+        conn.execute(
+            f"INSERT INTO schedule_entry (hash, identity_key, {', '.join(ENTRY_COLUMNS)}) "
+            f"VALUES (?, ?, {', '.join('?' * len(ENTRY_COLUMNS))})",
+            ("x", entry.identity_key,
+             *(64 if name == "weeks_of_month" else getattr(entry, name)
+               for name in ENTRY_COLUMNS)),
+        )
     with pytest.raises(QualifierError):
         season_to_columns({"start_month": 2, "start_day": 30, "end_month": 3, "end_day": None})
 
@@ -282,6 +342,11 @@ def test_an_entry_is_read_and_its_identity_leaves_out_end_time_weeks_and_note(
          INVALID_ENTRY),
         ({"event_kind": "specific_date", "date": "2026-10-10", "weeks_of_month": ["first"]},
          INVALID_ENTRY),
+        ({"event_kind": "specific_date", "date": "2026-10-10", "weeks_of_month": ["last"],
+          "exclude_weeks": True}, INVALID_ENTRY),
+        ({"weeks_of_month": ["first", "second", "third", "fourth", "last"],
+          "exclude_weeks": True}, INVALID_ENTRY),
+        ({"weeks_of_month": ["last"], "exclude_weeks": "true"}, INVALID_ENTRY),
         ({"colour": "green"}, INVALID_ENTRY),
     ],
 )
@@ -648,7 +713,9 @@ def test_the_process_stage_splits_parishes_by_mode(
 def test_an_update_mode_parish_is_snapshotted_from_its_believed_schedule(
     conn: sqlite3.Connection, tmp_path: Path,
 ) -> None:
-    _seed(conn, [SUN_9, CONFESSION])
+    _seed(conn, [
+        SUN_9, CONFESSION, {**SUN_11, "weeks_of_month": ["last"], "exclude_weeks": True},
+    ])
     ids = _ids(conn)
     _bulletin(conn, "b1", "2026-10-10T12:00:00Z")
     _run(conn, FakeUpdater(_reply(
@@ -671,6 +738,9 @@ def test_an_update_mode_parish_is_snapshotted_from_its_believed_schedule(
     assert sun9["page_number"] == 2
     confession = events[-ids["confession Saturday 900"]]
     assert (confession["weeks_of_month"], confession["page_number"]) == (["first"], None)
+    assert confession["exclude_weeks"] is False
+    sun11 = events[-ids["mass Sunday 660"]]
+    assert (sun11["weeks_of_month"], sun11["exclude_weeks"]) == (["last"], True)
     [cancellation] = [e for e in events.values() if e["cancelled"]]
     assert cancellation["id"] < 0
     assert cancellation["cancels_event_id"] == sun9["id"]

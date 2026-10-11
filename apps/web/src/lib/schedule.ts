@@ -34,6 +34,8 @@ export interface OccurrenceInput {
   date: string | null;
   /** Weekly only; missing or empty for every week (see `WeekOfMonth`). */
   weeks_of_month?: readonly WeekOfMonth[];
+  /** Weekly only: `weeks_of_month` are the weeks skipped; missing or null for false. */
+  exclude_weeks?: boolean | null;
   /** Weekly only; all missing or null for all year (see `Season`). */
   season_start_month?: number | null;
   season_start_day?: number | null;
@@ -103,6 +105,7 @@ function nextForWeekly(
   if (jsDay < 0) return null;
   const pattern = {
     weeks_of_month: event.weeks_of_month ?? [],
+    exclude_weeks: event.exclude_weeks ?? false,
     season: seasonOf(event),
   };
   const hours = Math.floor(event.start_time / 60);

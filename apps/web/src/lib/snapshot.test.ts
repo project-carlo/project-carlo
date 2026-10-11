@@ -55,11 +55,17 @@ describe("parseSnapshot", () => {
       page_number: null,
       note: null,
       weeks_of_month: ["fourth", "last"],
+      exclude_weeks: false,
       season_start_month: 10,
       season_start_day: null,
       season_end_month: 6,
       season_end_day: 15,
       cancels_event_id: null,
+    });
+    expect(events[1]).toMatchObject({
+      day_of_week: "Sunday",
+      weeks_of_month: ["last"],
+      exclude_weeks: true,
     });
     expect(events[2]).toMatchObject({
       church_id: 3,
@@ -138,6 +144,18 @@ describe("parseSnapshot", () => {
     delete churches.bulletin_week;
     const older = parseSnapshot(JSON.stringify({ ...fixture, churches }));
     expect(older.churchDetail("b")?.bulletin_week).toBeNull();
+  });
+
+  it("reads a snapshot without exclude_weeks as no exclusions", () => {
+    const events: Partial<typeof fixture.events> = { ...fixture.events };
+    delete events.exclude_weeks;
+    const older = parseSnapshot(JSON.stringify({ ...fixture, events }));
+    expect(older.events.map((ev) => ev.exclude_weeks)).toEqual([
+      false,
+      false,
+      false,
+      false,
+    ]);
   });
 
   it("groups events by church, in id order", () => {

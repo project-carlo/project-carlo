@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "parish_slug": "ss-columba-and-brigid-buffalo",
-  "status": "needs_review",
+  "status": "ready",
   "as_of": "2026-10-04T14:27:35Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T16:33:44Z",
   "reviewer": null,
   "approved_at": null,
-  "summary": "One church. Saturday 4 PM every week; Sunday 9 AM (Spanish) and 11 AM, except the last Sunday of the month when one bilingual 10 AM Mass replaces both; First Friday Adoration 4-7 PM. Open question: how to record 'every Sunday but the last' for the 9 and 11 AM Masses, since weeks_of_month cannot exclude the last week. No Confession times (by appointment); holy-day 7 PM Mass left out (no dates).",
+  "summary": "One church. Saturday 4 PM every week; Sunday 9 AM (Spanish) and 11 AM every Sunday except the last of the month, when one bilingual 10 AM Mass replaces both; First Friday Adoration 4-7 PM. No Confession times (by appointment); holy-day 7 PM Mass left out (no dates).",
   "blocked_reason": null,
   "bulletins": [
     {
@@ -39,6 +39,7 @@
         "end_time": null,
         "cancelled": false,
         "weeks_of_month": [],
+        "exclude_weeks": false,
         "season": null,
         "note": null
       },
@@ -80,9 +81,24 @@
     },
     {
       "id": "s2",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-columba-and-brigid-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": "Spanish"
+      },
       "page": 1,
       "sources": [
         {
@@ -114,79 +130,31 @@
           "said": "weekly Sunday 09:00 (every week)"
         }
       ],
-      "rationale": "The Sunday 09:00 Mass is held every Sunday except the last of the month, when the single bilingual 10:00 Mass replaces it (both bulletins' intentions list only the 10:00 on the last Sunday; the website says 'instead of having two Masses'). weeks_of_month cannot say 'all but the last': first-fourth wrongly shows it on the last Sunday of a four-Sunday month (7-8 times a year); first-third leaves out the fourth Sunday of a five-Sunday month (4-5 times a year), a missing time rather than a wrong one, which the policy prefers. History records it every week.",
-      "question": "Sunday 09:00 Mass skips the last Sunday (bilingual 10:00 instead). Which weeks to record?",
-      "options": [
-        {
-          "label": "1st-3rd Sundays (never wrong, misses the 4th of a 5-Sunday month)",
-          "leaning": true,
-          "entry": {
-            "church_slug": "ss-columba-and-brigid-buffalo",
-            "event_type": "mass",
-            "event_kind": "weekly",
-            "day_of_week": "Sunday",
-            "date": null,
-            "start_time": "09:00",
-            "end_time": null,
-            "cancelled": false,
-            "weeks_of_month": [
-              "first",
-              "second",
-              "third"
-            ],
-            "season": null,
-            "note": "Spanish"
-          }
-        },
-        {
-          "label": "1st-4th Sundays (wrong on the last Sunday of a 4-Sunday month)",
-          "entry": {
-            "church_slug": "ss-columba-and-brigid-buffalo",
-            "event_type": "mass",
-            "event_kind": "weekly",
-            "day_of_week": "Sunday",
-            "date": null,
-            "start_time": "09:00",
-            "end_time": null,
-            "cancelled": false,
-            "weeks_of_month": [
-              "first",
-              "second",
-              "third",
-              "fourth"
-            ],
-            "season": null,
-            "note": "Spanish"
-          }
-        },
-        {
-          "label": "Every Sunday (wrong every last Sunday)",
-          "entry": {
-            "church_slug": "ss-columba-and-brigid-buffalo",
-            "event_type": "mass",
-            "event_kind": "weekly",
-            "day_of_week": "Sunday",
-            "date": null,
-            "start_time": "09:00",
-            "end_time": null,
-            "cancelled": false,
-            "weeks_of_month": [],
-            "season": null,
-            "note": "Spanish"
-          }
-        },
-        {
-          "label": "Leave out",
-          "entry": null
-        }
-      ],
+      "rationale": "The Sunday 09:00 Mass is held every Sunday except the last of the month, when the single bilingual 10:00 Mass replaces it (both bulletins' intentions list only the 10:00 on the last Sunday; the website says 'instead of having two Masses'), so the last week is excluded (lyonsl2/project-carlo#112). History records it every week.",
+      "question": null,
+      "options": null,
       "answer": null
     },
     {
       "id": "s3",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-columba-and-brigid-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -218,72 +186,9 @@
           "said": "weekly Sunday 11:00 (every week)"
         }
       ],
-      "rationale": "The Sunday 11:00 Mass is held every Sunday except the last of the month, when the single bilingual 10:00 Mass replaces it (both bulletins' intentions list only the 10:00 on the last Sunday; the website says 'instead of having two Masses'). weeks_of_month cannot say 'all but the last': first-fourth wrongly shows it on the last Sunday of a four-Sunday month (7-8 times a year); first-third leaves out the fourth Sunday of a five-Sunday month (4-5 times a year), a missing time rather than a wrong one, which the policy prefers. History records it every week.",
-      "question": "Sunday 11:00 Mass skips the last Sunday (bilingual 10:00 instead). Which weeks to record?",
-      "options": [
-        {
-          "label": "1st-3rd Sundays (never wrong, misses the 4th of a 5-Sunday month)",
-          "leaning": true,
-          "entry": {
-            "church_slug": "ss-columba-and-brigid-buffalo",
-            "event_type": "mass",
-            "event_kind": "weekly",
-            "day_of_week": "Sunday",
-            "date": null,
-            "start_time": "11:00",
-            "end_time": null,
-            "cancelled": false,
-            "weeks_of_month": [
-              "first",
-              "second",
-              "third"
-            ],
-            "season": null,
-            "note": null
-          }
-        },
-        {
-          "label": "1st-4th Sundays (wrong on the last Sunday of a 4-Sunday month)",
-          "entry": {
-            "church_slug": "ss-columba-and-brigid-buffalo",
-            "event_type": "mass",
-            "event_kind": "weekly",
-            "day_of_week": "Sunday",
-            "date": null,
-            "start_time": "11:00",
-            "end_time": null,
-            "cancelled": false,
-            "weeks_of_month": [
-              "first",
-              "second",
-              "third",
-              "fourth"
-            ],
-            "season": null,
-            "note": null
-          }
-        },
-        {
-          "label": "Every Sunday (wrong every last Sunday)",
-          "entry": {
-            "church_slug": "ss-columba-and-brigid-buffalo",
-            "event_type": "mass",
-            "event_kind": "weekly",
-            "day_of_week": "Sunday",
-            "date": null,
-            "start_time": "11:00",
-            "end_time": null,
-            "cancelled": false,
-            "weeks_of_month": [],
-            "season": null,
-            "note": null
-          }
-        },
-        {
-          "label": "Leave out",
-          "entry": null
-        }
-      ],
+      "rationale": "The Sunday 11:00 Mass is held every Sunday except the last of the month, when the single bilingual 10:00 Mass replaces it (both bulletins' intentions list only the 10:00 on the last Sunday; the website says 'instead of having two Masses'), so the last week is excluded (lyonsl2/project-carlo#112). History records it every week.",
+      "question": null,
+      "options": null,
       "answer": null
     },
     {
@@ -302,6 +207,7 @@
         "weeks_of_month": [
           "last"
         ],
+        "exclude_weeks": false,
         "season": null,
         "note": "Bilingual"
       },
@@ -357,6 +263,7 @@
         "weeks_of_month": [
           "first"
         ],
+        "exclude_weeks": false,
         "season": null,
         "note": null
       },
@@ -405,6 +312,7 @@
         "end_time": null,
         "cancelled": false,
         "weeks_of_month": [],
+        "exclude_weeks": false,
         "season": null,
         "note": "Holy Days, bilingual"
       },

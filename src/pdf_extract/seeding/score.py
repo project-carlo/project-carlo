@@ -61,6 +61,7 @@ def _event(entry: dict[str, Any]) -> dict[str, Any]:
         "end_time": entry.get("end_time"),
         "cancelled": bool(entry.get("cancelled")),
         "weeks_of_month": list(entry.get("weeks_of_month") or []) if weekly else [],
+        "exclude_weeks": weekly and entry.get("exclude_weeks") is True,
         "season": entry.get("season") if weekly else None,
         "page_number": None,
         "note": entry.get("note"),
@@ -146,7 +147,9 @@ def score_parish(seed: dict[str, Any], label: dict[str, Any], as_of_date: str) -
 
 def _brief(event: dict[str, Any]) -> str:
     when = event.get("day_of_week") or event.get("date") or "?"
-    weeks = f" {'/'.join(event['weeks_of_month'])}" if event.get("weeks_of_month") else ""
+    weeks = "/".join(event.get("weeks_of_month") or [])
+    if weeks:
+        weeks = f" except {weeks}" if event.get("exclude_weeks") else f" {weeks}"
     cancelled = " cancelled" if event.get("cancelled") else ""
     return (f"{event.get('church_slug')} {event.get('event_type')} {when}{weeks} "
             f"{event.get('start_time')}{cancelled}")

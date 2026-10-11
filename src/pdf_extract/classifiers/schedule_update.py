@@ -99,7 +99,7 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 # Weekly qualifiers
 
 - `weeks_of_month`: for slots that only happen on some occurrences of the weekday in a month, such as `["first"]` for "First Friday Adoration" or `["first", "third"]` for "1st and 3rd Saturdays"; "last" is not "fourth". Leave it empty (`[]`) for every week.
-- `weeks_of_month` lists only the weeks a slot does happen on; it cannot express an exclusion. Write an exclusion as the weeks that remain: "every Saturday except the first" is `["second", "third", "fourth", "fifth"]`. Do not describe the exclusion in the `note`.
+- `exclude_weeks`: false, except for an exclusion the remaining weeks can't say. Write an exclusion as the weeks that remain: "every Saturday except the first" is `["second", "third", "fourth", "fifth"]`. An exclusion of the last week can't be written that way, since the last is the fourth in some months and the fifth in others: list the weeks the slot skips in `weeks_of_month` and set `exclude_weeks` to true, so "every Sunday except the last" is `["last"]` and "every Sunday except the first and last" is `["first", "last"]`. Do not describe the exclusion in the `note`.
 - `season`: for slots the bulletin limits to part of the year ("October through June", "summer schedule"), with the months it gives; null for a slot that runs all year. Give a day only where the bulletin dates the boundary ("June 4 through September 10"); never invent the 1st or the 30th. A half-stated season ("runs from October", no end) is no season. A start later in the year than the end wraps the new year.
 
 # Times
@@ -114,7 +114,7 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 
 # Notes
 
-Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month` or `season` already say.
+Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month`, `exclude_weeks` or `season` already say.
 
 # Changes
 
@@ -248,9 +248,19 @@ class ScheduleEntry(BaseModel):
         description=(
             "weekly only: which occurrences of `day_of_week` within the month the entry "
             "falls on. `last` is not `fourth`. Examples: `[\"first\"]` for First Friday "
-            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. Only the "
-            "weeks it happens on: 'every Saturday except the first' is "
-            "`[\"second\", \"third\", \"fourth\", \"fifth\"]`. Empty for every week."
+            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. The "
+            "weeks it happens on, unless `exclude_weeks`: 'every Saturday except the "
+            "first' is `[\"second\", \"third\", \"fourth\", \"fifth\"]`. Empty for "
+            "every week."
+        ),
+    )
+    exclude_weeks: bool = Field(
+        default=False,
+        description=(
+            "weekly only: true when `weeks_of_month` lists the weeks the entry skips, "
+            "for an exclusion of the last week, which the remaining weeks can't say: "
+            "'every Sunday except the last' is `[\"last\"]` with this true. False "
+            "otherwise."
         ),
     )
     season: Season | None = Field(
@@ -268,7 +278,7 @@ class ScheduleEntry(BaseModel):
             "Short phrase only when there is genuinely special context (language, "
             "location nuance, `Benediction`, etc.). Do not restate what "
             "`weeks_of_month` or `season` already say, and do not describe an "
-            "exclusion: list the weeks that remain in `weeks_of_month`."
+            "exclusion: say it with `weeks_of_month` and `exclude_weeks`."
         ),
     )
 

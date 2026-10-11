@@ -5,6 +5,9 @@
  * are canonical ordinals with "last" distinct from "fourth" (a five-Friday
  * month has both), an empty list means every week, and a season is an
  * inclusive month/day range that may wrap past New Year (Sep-May = 9-5).
+ * With `exclude_weeks` the listed weeks are the ones skipped: "all but last"
+ * is `["last"]` excluded, since no list of ordinals can say it (the week it
+ * drops is the fourth in some months and the fifth in others).
  */
 import { WEEKS_OF_MONTH, type Season, type WeekOfMonth } from "../types";
 import { MONTHS, monthFromName } from "./dates";
@@ -39,32 +42,51 @@ export function toggleWeek(weeks: WeekOfMonth[], week: WeekOfMonth): WeekOfMonth
   );
 }
 
-/**
- * "All but <week>" as stored weeks: "all but 2nd" is [first, third, fourth,
- * fifth]. "All but last" cannot be written as a set of ordinals (the week it
- * drops is the fourth in some months and the fifth in others), so it returns
- * null and belongs in the row's note.
- */
-export function allBut(week: WeekOfMonth): WeekOfMonth[] | null {
-  if (week === "last") return null;
-  return NUMBERED_WEEKS.filter((w) => w !== week);
+export interface WeeksSelection {
+  weeks: WeekOfMonth[];
+  exclude: boolean;
 }
 
-/** The single week an "all but" list leaves out, if the list is one. */
-export function allButWeek(weeks: WeekOfMonth[]): WeekOfMonth | null {
+/**
+ * The one way to write a selection, as the pipeline's `canonical_weeks`: an
+ * exclusion without "last" is the weeks that remain, one with "last" drops
+ * "fifth" (a fifth weekday is always the last), and excluding nothing is
+ * every week.
+ */
+export function canonicalWeeks(weeks: WeekOfMonth[], exclude: boolean): WeeksSelection {
+  const sorted = sortWeeks(weeks);
+  if (!exclude || sorted.length === 0) return { weeks: sorted, exclude: false };
+  if (!sorted.includes("last")) {
+    const remaining = NUMBERED_WEEKS.filter((w) => !sorted.includes(w));
+    return remaining.length ? { weeks: remaining, exclude: false } : { weeks: sorted, exclude: true };
+  }
+  return { weeks: sorted.filter((w) => w !== "fifth"), exclude: true };
+}
+
+/**
+ * "All but <week>" as stored weeks: "all but 2nd" is [first, third, fourth,
+ * fifth], and "all but last" is [last] excluded.
+ */
+export function allBut(week: WeekOfMonth): WeeksSelection {
+  if (week === "last") return { weeks: ["last"], exclude: true };
+  return { weeks: NUMBERED_WEEKS.filter((w) => w !== week), exclude: false };
+}
+
+/** The single week an "all but" selection leaves out, if the selection is one. */
+export function allButWeek(weeks: WeekOfMonth[], exclude = false): WeekOfMonth | null {
+  if (exclude) return weeks.length === 1 ? weeks[0] : null;
   if (weeks.length !== 4 || weeks.includes("last")) return null;
   const missing = NUMBERED_WEEKS.filter((w) => !weeks.includes(w));
   return missing.length === 1 ? missing[0] : null;
 }
 
-export function describeWeeks(weeks: WeekOfMonth[]): string {
+export function describeWeeks(weeks: WeekOfMonth[], exclude = false): string {
   if (weeks.length === 0) return "Every week";
+  if (exclude) return `All but ${sortWeeks(weeks).map((w) => WEEK_LABELS[w]).join(" & ")}`;
   const skipped = allButWeek(weeks);
   if (skipped) return `All but ${WEEK_LABELS[skipped]}`;
   return sortWeeks(weeks).map((w) => WEEK_LABELS[w]).join(" & ");
 }
-
-export const ALL_BUT_LAST_NOTE = "All but last week of the month";
 
 // ── Seasons ────────────────────────────────────────────────────────────────
 export function seasonProblems(season: Season): string[] {
