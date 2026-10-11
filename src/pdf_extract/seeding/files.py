@@ -424,8 +424,8 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
     if status == SETTLED:
         if slot["decision"] not in DECISIONS:
             errors.append(f"{where}.decision must be include or exclude for a settled slot")
-        if slot["entry"] is None:
-            errors.append(f"{where}.entry is required for a settled slot")
+        if slot["entry"] is None and slot["decision"] != EXCLUDE:
+            errors.append(f"{where}.entry is required for an included slot")
         if slot["answer"] is not None:
             errors.extend(_validate_answer(slot["answer"], slot["options"], f"{where}.answer"))
     elif status == NEEDS_HUMAN:

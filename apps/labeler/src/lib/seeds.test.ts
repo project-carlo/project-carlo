@@ -100,17 +100,26 @@ describe("other review actions", () => {
     expect(dropSlot(settled, "Ann")).toMatchObject({ decision: "exclude", answer: { choice: "dropped" } });
     const edited = editSlot(question, entry({ start_time: "14:30" }), 3, "Ann");
     expect(edited).toMatchObject({ status: "settled", decision: "include", page: 3, answer: { choice: "edited" } });
-    const reopened = reopenSlot(settled);
+    const reopened = reopenSlot(settled)!;
     expect(reopened.status).toBe("needs_human");
     expect(reopened.options?.map((o) => [o.label, o.leaning])).toEqual([
       ["Include", true],
       ["Leave out", false],
     ]);
-    expect(reopenSlot(dropSlot(settled, "Ann")!).options?.[1].leaning).toBe(true);
+    expect(reopenSlot(dropSlot(settled, "Ann"))!.options?.[1].leaning).toBe(true);
+  });
+
+  it("leaves out a slot with no entry, which can't then be reopened", () => {
+    const untimed: SeedSlot = { ...question, options: [{ label: "Leave out", entry: null, leaning: true }, { label: "Ask", entry: null }] };
+    const answered = chooseOption(untimed, 0, "Ann")!;
+    expect(answered).toMatchObject({ status: "settled", decision: "exclude", entry: null });
+    const dropped = dropSlot({ ...untimed, options: null }, "Ann");
+    expect(dropped).toMatchObject({ decision: "exclude", entry: null });
+    expect(reopenSlot(dropped)).toBeNull();
   });
 
   it("keeps a question's own options when it is reopened after an answer", () => {
-    const reopened = reopenSlot(chooseOption(question, 0, "Ann")!);
+    const reopened = reopenSlot(chooseOption(question, 0, "Ann")!)!;
     expect(reopened.options).toBe(question.options);
     expect(reopened.answer).toBeNull();
   });
@@ -126,11 +135,11 @@ describe("the parish's status", () => {
     expect(approve(file, " ")).toBeNull();
     const approved = approve(file, "Ann")!;
     expect(approved).toMatchObject({ status: "approved", reviewer: "Ann" });
-    expect(replaceSlot(approved, dropSlot(settled, "Ann")!).status).toBe("ready");
+    expect(replaceSlot(approved, dropSlot(settled, "Ann")).status).toBe("ready");
   });
 
   it("groups slots as open, settled and left out", () => {
-    const groups = slotGroups(seed([settled, question, dropSlot(settled, "Ann")!]));
+    const groups = slotGroups(seed([settled, question, dropSlot(settled, "Ann")]));
     expect([groups.open.length, groups.settled.length, groups.excluded.length]).toEqual([1, 1, 1]);
   });
 });

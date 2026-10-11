@@ -71,6 +71,7 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 - `start_time` and `end_time` are formatted as `h:MM AM` or `h:MM PM`; "noon" is `12:00 PM`.
 - For Mass, leave `end_time` null. For Confession and Adoration, give `end_time` when the bulletin gives one or a duration ("one hour"); leave it null for "until all are heard" or no end.
 - A clock time stated in the bulletin always wins. When the bulletin gives one, use it, even if it also places the event relative to a Mass: "Confession after the 8:00 AM Mass, 8:40-9:15 AM" starts at 8:40 AM.
+- A clock time that runs until a Mass, with no end time of its own ("Confession 11:30 AM, before the 12:10 PM Mass"), starts at that time and has no `end_time`: some end well before the Mass, so do not end it at the Mass. Add a note naming the Mass ("before the 12:10 PM Mass").
 - Only when the bulletin times an event relative to a Mass and gives no clock time for it, work it out from that Mass's start time:
   - "After" or "following" a weekend Mass (Saturday evening vigil or Sunday): 1 hour after the Mass starts.
   - "After" or "following" a weekday Mass: 30 minutes after the Mass starts.

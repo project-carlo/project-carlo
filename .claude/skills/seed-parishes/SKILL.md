@@ -17,15 +17,17 @@ Benediction, Masses closed to the public, weekly vs dated, weeks of the month, s
 times to give. This page does not restate it.
 
 Every command reads the local database (`pnpm data:pull` first) and the blob store (the R2
-read keys). Output is compact text; add `--json` for the full result.
+read keys). Output is compact text; add `--json` for the full result. Run them as plain
+`pnpm seed ...`: this pnpm rejects `-s`.
 
 ## If you are the orchestrator
 
 1. `pnpm seed pick [--limit N] [--diocese D]`: parishes with no seed and no seed file,
    easiest first (one church, a recent bulletin, extract mode stable week to week).
-2. Split them among subagents, **3 to 8 parishes each** (your choice per batch): 5 to 8 of
-   `pick`'s easy one-church parishes fit one subagent comfortably, fewer when a parish has
-   several churches. Give each subagent this skill's path, its parish list, the test run's
+2. Split them among subagents, **3 parishes each** unless asked otherwise, fewer when a
+   parish has several churches. Every page a subagent reads stays in its context and is paid
+   for again on each later request, so its third parish already costs about twice its first.
+   Give each subagent this skill's path, its parish list, the test run's
    `--eval RUN` if there is one, and **its own scratch folder** (`<scratchpad>/seed-a/`,
    `seed-b/`, ...): subagents share one scratchpad, and two writing the same file name
    overwrite each other's work. Tell it to write each parish's file before starting the
@@ -61,7 +63,11 @@ most the parish it was on.
 4. `pnpm seed history <parish> [--bulletins N]`: what extract mode stored for recent
    bulletins. Free. It came from an older prompt, so a difference is a reason to look closer,
    not a vote.
-5. **Read further back, one bulletin at a time,** when a question needs it:
+5. **Read further back, one bulletin at a time,** when a question needs it, by its text:
+   `pnpm seed text <parish> <hash> [--page N]` prints each page's text layer for a tenth of
+   what the PDF costs. Read a page as an image (`seed pages --page N`) only when `seed text`
+   says it is only an image, or its layout matters (a schedule grid whose text comes out
+   scrambled). Read these when:
    - a slot printed in only one bulletin (weekly, or a one-off?)
    - a time or day that differs from history or between bulletins
    - a seasonal hint ("summer schedule", "beginning in Advent")
@@ -86,6 +92,8 @@ most the parish it was on.
    - `settled`: printed clearly, the policy is clear about it, and nothing you read
      contradicts it. `decision` is `include`, or `exclude` for something you leave out on
      purpose (keep its entry and say why; a chapel elsewhere may keep its own church slug).
+     Something left out with no time to record (a chapel open only by arrangement,
+     confession by appointment) gets `"entry": null`: never invent a time to fill it.
    - `needs_human`: the sources conflict and the bulletins don't settle it; the policy leaves
      it a judgment call; the print is unreadable; or which church or chapel it belongs to is
      unclear. Write a short `question`, the `options` you are choosing between (an option's

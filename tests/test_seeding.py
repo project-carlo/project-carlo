@@ -43,6 +43,7 @@ from pdf_extract.seeding.queries import (
     export_pdf,
     history,
     list_bulletins,
+    page_texts,
     parish_bulletins,
     pick,
     render_pages,
@@ -132,6 +133,7 @@ def test_the_demo_draft_is_a_valid_seed(conn, seed):
     (lambda s: _slot(s, "s1")["entry"].update(start_time="4:00 PM"), "HH:MM"),
     (lambda s: _slot(s, "s1")["entry"].pop("note"), "missing note"),
     (lambda s: _slot(s, "s1").update(decision=None), "include or exclude for a settled"),
+    (lambda s: _slot(s, "s1").update(entry=None), "required for an included slot"),
     (lambda s: _slot(s, "s2").update(id="s1"), "used twice"),
     (lambda s: s.update(status=READY), "questions are still open"),
     (lambda s: s.update(status=APPROVED), "questions are still open"),
@@ -153,6 +155,13 @@ def test_a_website_source_cites_the_page_read(seed):
     _slot(seed, "s1")["sources"].append(
         {"source": "website", "url": "https://example.org/mass-times", "said": "Sat 4 PM"})
     assert validate_seed(seed, parish_slug=PARISH) == []
+
+
+def test_a_slot_left_out_needs_no_entry(conn, seed):
+    # A chapel open only by arrangement has no time to record, only the call.
+    _slot(seed, "s1").update(decision="exclude", entry=None)
+    assert validate_seed(seed, parish_slug=PARISH) == []
+    assert check_seed(conn, seed, parish_slug=PARISH) == []
 
 
 def test_a_ready_file_must_have_no_open_question_and_an_approval_needs_a_reviewer(seed):
@@ -334,6 +343,16 @@ def test_pdf_and_pages_are_written_for_the_agent(conn, tmp_path: Path):
     assert len(pages["paths"]) == 1 and Path(pages["paths"][0]).read_bytes()[:4] == b"\x89PNG"
     with pytest.raises(SeedError, match="pages 1 to 3"):
         render_pages(conn, PARISH, "latest", page=9, work_dir=tmp_path)
+
+
+
+def test_text_reads_each_page_and_marks_the_ones_that_are_only_images(conn):
+    texts = page_texts(conn, PARISH, "latest")
+    assert texts["pages"] == 3 and [p["page"] for p in texts["texts"]] == [1, 2, 3]
+    assert any("Mass" in p["text"] and not p["image_only"] for p in texts["texts"])
+    assert [p["page"] for p in page_texts(conn, PARISH, "latest", page=2)["texts"]] == [2]
+    with pytest.raises(SeedError, match="pages 1 to 3"):
+        page_texts(conn, PARISH, "latest", page=9)
 
 
 def test_pick_leaves_out_drafted_parishes_and_takes_one_church_first(conn, demo):

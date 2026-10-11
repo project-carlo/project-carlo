@@ -161,8 +161,8 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
 
   const choose = (slot: SeedSlot, index: number) =>
     act(slot, (s) => (isOpen(s) ? chooseOption(s, index, reviewer) : null), "That option can't settle this slot.");
-  const drop = (slot: SeedSlot) => act(slot, (s) => dropSlot(s, reviewer), "This slot has no entry to keep.");
-  const reopen = (slot: SeedSlot) => act(slot, (s) => reopenSlot(s), "");
+  const drop = (slot: SeedSlot) => act(slot, (s) => dropSlot(s, reviewer), "");
+  const reopen = (slot: SeedSlot) => act(slot, (s) => reopenSlot(s), "This slot was left out with no entry to include.");
   const startEdit = (slot: SeedSlot) => {
     const entry = slot.entry ?? slot.options?.find((o) => o.leaning && o.entry)?.entry ?? slot.options?.find((o) => o.entry)?.entry;
     if (!entry) return setMessage("This slot has no entry to edit.");
@@ -450,7 +450,7 @@ function SlotCard(props: SlotCardProps) {
             {describeEntry(slot.entry)} <span className="font-normal text-slate-500">· {church(slot.entry.church_slug)}</span>
           </span>
         ) : (
-          <span className="font-medium text-slate-500">No entry yet</span>
+          <span className="font-medium text-slate-500">{open ? "No entry yet" : "No time (left out)"}</span>
         )}
         {slot.page && (
           <button className="text-xs text-sky-700 hover:underline" onClick={() => props.onSource(newest, slot.page)}>
