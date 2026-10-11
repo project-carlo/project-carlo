@@ -16,13 +16,15 @@ from pdf_extract.__main__ import main
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, bulletin_pdf_key, set_store
 from pdf_extract.classifiers.seed_ask import GEMINI_MODEL, OPENAI_MODEL, SeedAsker
 from pdf_extract.db import create_db, ensure_db
-from pdf_extract.labeling.demo import build_demo
+from pdf_extract.labeling.demo import build_demo, make_pdf
 from pdf_extract.labeling.labels import write_label
 from pdf_extract.labeling.server import LabelerApp, make_server
 from pdf_extract.report import render_seeds
 from pdf_extract.schedule.store import live_entries, update_mode_parishes
 from pdf_extract.seeding import calls as seed_calls
+from pdf_extract.seeding import cli as seed_cli
 from pdf_extract.seeding.checks import check_seed
+from pdf_extract.seeding.coverage import diff, matches, missing_warning
 from pdf_extract.seeding.files import (
     APPROVED,
     NEEDS_REVIEW,
@@ -40,12 +42,16 @@ from pdf_extract.seeding.loader import is_loaded, load_approved_seeds
 from pdf_extract.seeding.queries import (
     SeedContext,
     SeedError,
+    brief,
     export_pdf,
+    find_churches,
+    grep_bulletins,
     history,
     list_bulletins,
     page_texts,
     parish_bulletins,
     pick,
+    recent_history,
     render_pages,
     resolve_bulletin,
     start_eval_run,
@@ -244,6 +250,135 @@ def test_finalize_names_the_one_church_and_settles_status(seed):
     assert finalize_seed({**seed, "slots": misshapen}, [HF])["slots"] == misshapen
 
 
+def test_finalize_splits_a_source_citing_several_bulletins(conn, seed):
+    new, old = (b["content_hash"] for b in seed["bulletins"])
+    s1 = _slot(seed, "s1")
+    expected = copy.deepcopy(s1["sources"][:2])
+    for source in expected:
+        source["said"] = "Saturday Vigil: 4:00 PM"
+    s1["sources"][:2] = [{"source": "agent", "bulletins": [new[:8], old[:10]], "page": 2,
+                          "said": "Saturday Vigil: 4:00 PM"}]
+    assert any("drafting shorthand" in e for e in validate_seed(seed, parish_slug=PARISH))
+    for b in seed["bulletins"]:
+        b["read"] = False
+    finalized = finalize_seed(seed, [HF, SJ])
+    sources = _slot(finalized, "s1")["sources"]
+    assert [s["bulletin"] for s in sources[:2]] == [new[:8], old[:10]]
+    assert [{**s, "bulletin": None} for s in sources[:2]] == [
+        {**s, "bulletin": None} for s in expected]
+    assert all(b["read"] for b in finalized["bulletins"])
+    assert check_seed(conn, finalized, parish_slug=PARISH) == []
+
+
+def _without_history(seed: dict[str, Any]) -> dict[str, Any]:
+    seed = copy.deepcopy(seed)
+    for slot in seed["slots"]:
+        slot["sources"] = [s for s in slot["sources"] if s["source"] != "history"]
+    return seed
+
+
+def test_finalize_attaches_the_history_that_matches_each_slot_once(conn, seed):
+    new, old = (b["content_hash"] for b in seed["bulletins"])
+    past = recent_history(conn, PARISH)
+    assert [b["content_hash"] for b in past] == [new, old]
+    bare = _without_history(seed)
+    bare["slots"][15]["sources"].append(seed["slots"][15]["sources"][2])  # the drafter's own
+    finalized = finalize_seed(bare, [HF, SJ], past)
+
+    def cited(slot_id: str) -> list[tuple[str, str]]:
+        return [(s["bulletin"][:8], s["said"]) for s in _slot(finalized, slot_id)["sources"]
+                if s["source"] == "history"]
+
+    assert cited("s1") == [(new[:8], f"weekly mass Saturday 16:00 {HF}"),
+                           (old[:8], f"weekly mass Saturday 16:00 {HF}")]
+    assert cited("s9") == [(new[:8], f"specific_date mass 2026-10-02 19:00 {SJ}  "
+                                     "“Feast of the Guardian Angels”")]
+    # s16's option is a weekly Monday Mass; the drafter already cited the older bulletin.
+    assert cited("s16") == [(old[:8], "no weekday Masses stored"),
+                            (new[:8], f"weekly mass Monday 08:00 {HF}")]
+    assert cited("s11") == []  # a Saturday 9:00 AM "Mass" history never had
+    assert finalize_seed(finalized, [HF, SJ], past) == finalized
+    assert check_seed(conn, finalized, parish_slug=PARISH) == []
+
+
+_SUNDAY = {"church_slug": HF, "event_type": "mass", "event_kind": "weekly",
+           "day_of_week": "Sunday", "date": None, "start_time": "09:00"}
+_DATED = {**_SUNDAY, "event_kind": "specific_date", "day_of_week": None, "date": "2026-10-04"}
+
+
+@pytest.mark.parametrize("entry, event, matched", [
+    (_SUNDAY, _SUNDAY, True),
+    ({**_SUNDAY, "church_slug": None}, _SUNDAY, True),  # a draft not finalized yet
+    ({**_SUNDAY, "weeks_of_month": ["first"], "end_time": "10:00"}, _SUNDAY, True),
+    ({**_SUNDAY, "church_slug": SJ}, _SUNDAY, False),
+    ({**_SUNDAY, "event_type": "confession"}, _SUNDAY, False),
+    ({**_SUNDAY, "start_time": "09:30"}, _SUNDAY, False),
+    ({**_SUNDAY, "day_of_week": "Saturday"}, _SUNDAY, False),
+    (_DATED, _SUNDAY, False),
+    (_DATED, _DATED, True),
+    ({**_DATED, "date": "2026-10-11"}, _DATED, False),
+    (_SUNDAY, _DATED, True),  # October 4, 2026 is a Sunday: the weekly slot that week
+    (_SUNDAY, {**_DATED, "cancelled": True}, False),  # calling it off is news
+    ({**_DATED, "cancelled": True}, {**_DATED, "cancelled": True}, True),
+])
+def test_history_matches_a_slot_by_type_day_or_date_time_and_church(entry, event, matched):
+    assert matches(entry, event) is matched
+
+
+def _history_of(*events: dict[str, Any], short: str = "aaaaaaaaaaaa") -> dict[str, Any]:
+    return {"short": short, "content_hash": short + "0" * 52, "wrong_bulletin": False,
+            "events": [{"end_time": None, "cancelled": False, "page_number": 2, "note": None,
+                        **ev} for ev in events]}
+
+
+def test_diff_lists_what_history_and_the_seed_disagree_on(seed):
+    _slot(seed, "s3")["entry"]["start_time"] = "11:00"
+    seed["slots"] = [s for s in seed["slots"] if s["id"] != "s4"]
+    past = [
+        _history_of({**_SUNDAY, "start_time": "10:30"},  # s3 says 11:00 now
+                    {**_SUNDAY, "church_slug": SJ},  # s4 is gone
+                    {**_SUNDAY, "event_type": "confession"},  # never in the seed
+                    {**_DATED, "date": "2026-09-20"},  # before as_of: outside a seed
+                    {**_DATED, "date": "2026-10-05", "start_time": "08:00", "cancelled": True}),
+        _history_of({**_SUNDAY, "church_slug": SJ}, short="bbbbbbbbbbbb"),
+        {**_history_of({**_SUNDAY, "start_time": "07:00"}, short="cccccccccccc"),
+         "wrong_bulletin": True},
+    ]
+    found = diff(seed, past)
+    assert found["bulletins"] == ["aaaaaaaaaaaa", "bbbbbbbbbbbb"]
+    assert found["scope_date"] == "2026-09-25"
+    assert {row["said"]: row["bulletins"] for row in found["missing"]} == {
+        f"weekly mass Sunday 10:30 {HF}": ["aaaaaaaaaaaa"],
+        f"weekly mass Sunday 09:00 {SJ}": ["aaaaaaaaaaaa", "bbbbbbbbbbbb"],
+        f"weekly confession Sunday 09:00 {HF}": ["aaaaaaaaaaaa"],
+    }
+    # History here has only s10, the dated cancellation, of the seed's included slots.
+    assert {u["slot"] for u in found["unseen"]} == {
+        s["id"] for s in included_slots(seed)} - {"s10"}
+    assert missing_warning(found["missing"][1], 2) == (
+        f"history has weekly mass Sunday 09:00 {SJ} (2 of 2 bulletins, p2) and no slot or "
+        "option covers it")
+
+
+def test_diff_leaves_out_a_cancellation_of_a_weekly_slot_left_out(seed):
+    # s11, a Saturday 9:00 AM "Mass", is left out; October 3 is a Saturday.
+    cancelled = {**_DATED, "date": "2026-10-03", "cancelled": True}
+    assert diff(seed, [_history_of(cancelled)])["missing"] == []
+    _slot(seed, "s11")["decision"] = "include"
+    assert len(diff(seed, [_history_of(cancelled)])["missing"]) == 1
+
+
+def test_diff_with_the_demo_history(conn, seed):
+    found = diff(seed, recent_history(conn, PARISH))
+    assert found["missing"] == [] and found["unseen"] == []
+    seed["slots"] = [s for s in seed["slots"] if s["id"] != "s5"]
+    found = diff(seed, recent_history(conn, PARISH, bulletins=1))
+    assert found["missing"] == []  # only the older bulletin has the Wednesday Spanish Mass
+    found = diff(seed, recent_history(conn, PARISH))
+    assert [row["said"] for row in found["missing"]] == [
+        f"weekly mass Wednesday 19:00 {SJ}  “Spanish”"]
+
+
 # ── Checks against the database ─────────────────────────────────────────────
 def test_check_finds_what_needs_the_database(conn, seed):
     bad = copy.deepcopy(seed)
@@ -352,6 +487,89 @@ def test_text_reads_each_page_and_marks_the_ones_that_are_only_images(conn):
     assert [p["page"] for p in page_texts(conn, PARISH, "latest", page=2)["texts"]] == [2]
     with pytest.raises(SeedError, match="pages 1 to 3"):
         page_texts(conn, PARISH, "latest", page=9)
+
+
+def _grep_lines(result: dict[str, Any]) -> dict[str, list[str]]:
+    """Each bulletin's matching lines, by its date, `>` marking a match."""
+    return {
+        b["published_date"]: [f"p{p['page']} {'>' if line['match'] else ' '} {line['text']}"
+                              for p in b["pages"] for hunk in p["hunks"] for line in hunk]
+        for b in result["bulletins"]
+    }
+
+
+def test_grep_finds_schedule_words_with_a_line_of_context(conn):
+    found = grep_bulletins(conn, PARISH)
+    assert [b["published_date"] for b in found["bulletins"]] == ["2026-09-27", "2026-09-20"]
+    assert _grep_lines(found)["2026-09-20"] == [
+        "p2 > MASS SCHEDULE",
+        "p2   Holy Family: Saturday 4:00 PM; Sunday 8:00 AM, 10:30 AM; weekdays 8:00 AM",
+        "p2   St. Joseph: Sunday 9:00 AM; Wednesday 7:00 PM (Spanish)",
+        "p2 > CONFESSIONS",
+        "p2   Holy Family: Saturday 3:00 - 3:45 PM",
+    ]
+    newest = _grep_lines(found)["2026-09-27"]
+    assert newest[-5:] == [
+        "p3   THIS WEEK AT THE PARISH",
+        "p3 > Please note: the 8:00 AM Mass at Holy Family on Monday, October 5 is cancelled.",
+        "p3 > Feast of the Guardian Angels: Mass at St. Joseph on Friday, October 2 at 7:00 PM.",
+        "p3 > Parish picnic: Sunday, October 4 after the 10:30 AM Mass on the lawn.",
+        "p3   Food pantry volunteers needed Saturdays from 9:00 to 11:00 AM.",
+    ]
+    for word in ("CONFESSION", "First Friday", "ADORATION", "Holy Hour", "Vigil"):
+        assert any(word in line for line in newest if " > " in line), word
+
+
+def test_grep_takes_a_pattern_and_flags_pages_that_are_only_images(conn, demo):
+    found = grep_bulletins(conn, PARISH, "PICNIC|bible study")
+    assert _grep_lines(found)["2026-09-27"] == [
+        "p3   Feast of the Guardian Angels: Mass at St. Joseph on Friday, October 2 at 7:00 PM.",
+        "p3 > Parish picnic: Sunday, October 4 after the 10:30 AM Mass on the lawn.",
+        "p3   Food pantry volunteers needed Saturdays from 9:00 to 11:00 AM.",
+        "p3 > Bible study meets Tuesdays at 10:00 AM in the parish hall.",
+    ]
+    assert _grep_lines(found)["2026-09-20"] == []
+    assert len(grep_bulletins(conn, PARISH, "picnic", bulletins=1)["bulletins"]) == 1
+    with pytest.raises(SeedError, match="regular expression"):
+        grep_bulletins(conn, PARISH, "(unclosed")
+    image = make_pdf([[(11, "")], [(11, "Masses: Saturday 4:00 PM and Sunday 8:00 AM, 10:30 AM")]])
+    newest = parish_bulletins(conn, PARISH)[0]
+    LocalBlobStore(demo["root"]).put(bulletin_pdf_key(PARISH, newest["content_hash"]), image)
+    pages = grep_bulletins(conn, PARISH, bulletins=1)["bulletins"][0]["pages"]
+    assert [(p["page"], p["image_only"], len(p["hunks"])) for p in pages] == [
+        (1, True, 0), (2, False, 1)]
+
+
+def test_church_looks_up_by_slug_name_town_or_address(conn):
+    def found(query: str) -> list[str]:
+        return [c["church"] for c in find_churches(conn, query)["churches"]]
+
+    assert found("PENFIELD") == [SJ]
+    assert found("st. joseph") == [SJ]
+    assert found("9 church st") == ["st-anne-demo-fairport"]
+    assert found("holy-family-demo") == [HF, SJ]  # the parish's slug
+    assert found("nowhere") == []
+    assert find_churches(conn, "oak ave")["churches"] == [{
+        "church": SJ, "parish": PARISH, "name": "St. Joseph Church",
+        "address": "45 Oak Ave, Penfield, NY 14526"}]
+    with pytest.raises(SeedError, match="Name something"):
+        find_churches(conn, " ")
+
+
+def test_brief_is_where_a_draft_starts(conn, tmp_path):
+    result = brief(conn, PARISH, work_dir=tmp_path)
+    assert result["website"] == "https://example.org/holy-family"
+    assert [c["church"] for c in result["churches"]] == [HF, SJ]
+    assert result["churches"][0]["address"] == "123 Main St, Rochester, NY 14620"
+    assert [b["published_date"] for b in result["bulletins"]["bulletins"]] == [
+        "2026-09-27", "2026-09-20"]
+    assert Path(result["pdf"]["path"]).read_bytes().startswith(b"%PDF")
+    seen = {(h["event"]["day_of_week"] or h["event"]["date"], h["event"]["start_time"],
+             h["event"]["church_slug"]): h["bulletins"] for h in result["history"]}
+    assert seen[("Saturday", "16:00", HF)] == 2 and seen[("Monday", "08:00", HF)] == 1
+    assert ("2026-10-05", "08:00", HF) in seen  # dated after the newest bulletin's fetch
+    our_lady = brief(conn, "our-lady-demo", work_dir=tmp_path)
+    assert our_lady["history"] == [] and "path" in our_lady["pdf"]
 
 
 def test_pick_leaves_out_drafted_parishes_and_takes_one_church_first(conn, demo):
@@ -604,6 +822,38 @@ def test_seed_command_prints_text_or_json(pipeline_dir: Path, capsys):
     assert "no seed file" in capsys.readouterr().out
     assert main(["seed", "bulletins", "nope"]) == 1
     assert "Parish not found" in capsys.readouterr().err
+
+
+@pytest.fixture
+def demo_cli(demo, tmp_path, monkeypatch):
+    """`main` on the demo dataset, its seed files in `demo["seeds_dir"]`."""
+    monkeypatch.chdir(tmp_path)  # `seed pdf` writes under data/seed-work/
+    monkeypatch.setattr(seed_cli, "_connect", lambda: connect_db(demo["db_path"]))
+    monkeypatch.setattr(seed_cli, "_ctx", lambda args: SeedContext(seeds_dir=demo["seeds_dir"]))
+    return demo
+
+
+def test_init_prints_where_the_draft_starts(demo_cli, capsys):
+    assert main(["seed", "init", "st-anne-demo"]) == 0
+    out = capsys.readouterr().out
+    assert "a draft listing 1 bulletins" in out
+    assert "https://example.org/st-anne" in out
+    assert "st-anne-demo-fairport                    St. Anne Church, 9 Church St, Fairport" in out
+    assert "newest PDF: data/seed-work/st-anne-demo/" in out
+    assert main(["seed", "init", "st-anne-demo"]) == 1
+    assert "seed brief st-anne-demo" in capsys.readouterr().err
+
+
+def test_finalize_warns_of_history_no_slot_covers_and_still_passes(demo_cli, seed, capsys):
+    seed["slots"] = [s for s in seed["slots"] if s["id"] != "s4"]
+    write_seed_file(seed, demo_cli["seeds_dir"])
+    assert main(["seed", "finalize", PARISH]) == 0
+    out = capsys.readouterr().out.splitlines()
+    assert out[0] == f"{PARISH}: needs_review, 2 open questions  OK"
+    assert out[1:] == [f"  ! history has weekly mass Sunday 09:00 {SJ} (2 of 2 bulletins, p2) "
+                       "and no slot or option covers it"]
+    assert main(["seed", "diff", PARISH]) == 0
+    assert f"weekly mass Sunday 09:00 {SJ}  (2/2 bulletins, p2)" in capsys.readouterr().out
 
 
 # ── Review findings ─────────────────────────────────────────────────────────
