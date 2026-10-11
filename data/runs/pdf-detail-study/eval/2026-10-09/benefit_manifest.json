@@ -1,0 +1,45 @@
+{
+  "qualification": "Observed source-supported gains, not guaranteed repeatable benefits",
+  "bulletins": [
+    {
+      "parish_slug": "all-saints-corning",
+      "content_hash": "6630e7edcca1c06ea64f06e426a839681f8b0ba950dabd7d0ee1e2981a08a05e",
+      "published_date": "2026-09-26",
+      "reference_date": "2026-09-25",
+      "source_url": "https://parishesonline.com/publication-page/all-saints-parish?selectedPublication=https://container.parishesonline.com/bulletins/06/0144/20260927B.pdf",
+      "category": "native-semantic-observed-gain",
+      "pdf_copy": "data/out/pdf-detail-study/2026-10-09/native-semantic-observed-gain/all-saints-corning-6630e7edcca1.pdf",
+      "review": "Initial high adds printed No Mass cancellations September 28 08:00, September 30 18:00, October 2 12:15. Labels omit all three, so raw F1 falls despite valid extraction. Both repeat runs capture them. Native text, not a scan-related improvement."
+    },
+    {
+      "parish_slug": "beloved-disciples-lancaster",
+      "content_hash": "06de9de8a2a023f5cc7640062775fb687f5dee02a1e79df27e5c9738a9dee7b6",
+      "published_date": "2026-09-27",
+      "reference_date": "2026-09-26",
+      "source_url": "https://parishesonline.com/publication-page/beloved-disciples-of-christ-the-lord-parish?selectedPublication=https://container.parishesonline.com/bulletins/14/1888/20260927B.pdf",
+      "category": "native-semantic-observed-gain",
+      "pdf_copy": "data/out/pdf-detail-study/2026-10-09/native-semantic-observed-gain/beloved-disciples-lancaster-06de9de8a2a0.pdf",
+      "review": "Initial high restores October 2 08:30 OLP Mass; directory resolves OLP to Our Lady of Pompeii. Native-text row omission. Repeat low restores it too; repeat high additionally inherits noon onto SPA row with no independent time, an ambiguous change."
+    },
+    {
+      "parish_slug": "blessed-trinity-buffalo",
+      "content_hash": "70221b6b414169422aa60b1ee1e871ea68893c77175118073c4cd1b1eaa883d5",
+      "published_date": "2026-09-27",
+      "reference_date": "2026-09-27",
+      "source_url": "https://drive.google.com/file/d/1jZL0fgkog0pNK0IwTsKLSdkis1V1S3aT/view",
+      "category": "raster-observed-gain",
+      "pdf_copy": "data/out/pdf-detail-study/2026-10-09/raster-observed-gain/blessed-trinity-buffalo-70221b6b4141.pdf",
+      "review": "All five pages scanned. Initial high removes invented Thursday 11:00 Mass (cover and intentions show Mon Tue Wed Fri only) and restores October 28 healing Mass 19:00 printed on page 4. Repeat and targeted third pair both omit healing Mass, with no Thursday hallucination. Confirmed observed raster gain, not a consistently reproduced gain."
+    },
+    {
+      "parish_slug": "sacred-heart-auburn-cluster",
+      "content_hash": "79b41c2c30f9a25f7c31d67b3f69917f687853da21857cc506007b1daf071511",
+      "published_date": "2026-09-27",
+      "reference_date": "2026-09-25",
+      "source_url": "https://www.sacredheartauburn.org/wp-content/uploads/Sacred-Heart-092726.pdf.pdf",
+      "category": "native-semantic-observed-gain",
+      "pdf_copy": "data/out/pdf-detail-study/2026-10-09/native-semantic-observed-gain/sacred-heart-auburn-cluster-79b41c2c30f9.pdf",
+      "review": "Initial high restores printed September 25 07:30 St Alphonsus cancellation. Repeat high correctly classifies First Friday 11:30 Sacred Heart Mass as monthly recurrence instead of one dated occurrence. Both gains native-text. High repeat also drops a raster Children's Adoration flyer with third Friday 09:30 printed; label omission makes that F1 gain questionable. Third pair ties."
+    }
+  ]
+}

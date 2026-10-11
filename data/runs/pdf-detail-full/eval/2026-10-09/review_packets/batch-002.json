@@ -1,0 +1,2531 @@
+{
+  "cases": [
+    {
+      "cohort": {
+        "parish_slug": "catholic-parishes-eastern-wayne-county",
+        "content_hash": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+        "source_url": "https://parishesonline.com/publication-page/st-michael-s-church-st-joseph-the-worker-and-blessed-trinity-catholic-church?selectedPublication=https://container.parishesonline.com/bulletins/06/0326/20260503B.pdf",
+        "fetched_at": "2026-05-04T18:42:48Z",
+        "reference_date": "2026-05-04",
+        "churches": [
+          {
+            "slug": "st-mary-magdalene",
+            "name": "St. Mary Magdalene",
+            "address": "15 Northup Avenue, Wolcott, NY 14590"
+          },
+          {
+            "slug": "st-thomas",
+            "name": "St. Thomas Church",
+            "address": "6927 Main Street, Red Creek, NY 13143"
+          },
+          {
+            "slug": "st-jude",
+            "name": "St. Jude Church",
+            "address": "580 Main Street, Fair Haven, NY 13064"
+          },
+          {
+            "slug": "st-john-evangelist-clyde",
+            "name": "St. John the Evangelist",
+            "address": "114 Sodus Street, Clyde, NY 14433"
+          },
+          {
+            "slug": "st-michael-lyons",
+            "name": "St. Michael",
+            "address": "3 Holley Street, Lyons, NY 14489"
+          },
+          {
+            "slug": "st-patrick-savannah",
+            "name": "St. Patrick",
+            "address": "1583 Grand Avenue, Savannah, NY 13146"
+          },
+          {
+            "slug": "st-michael-newark",
+            "name": "St. Michael Church",
+            "address": "401 South Main Street, Newark, NY 14513"
+          }
+        ],
+        "gemini_source": {
+          "key": "runs/gemini-flash/cache/5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075.json",
+          "kind": "local_legacy_raw_cache",
+          "modified_at": null,
+          "timestamp_caveat": "Local mtime is not an extraction timestamp; legacy fallback only"
+        },
+        "gemini_church_context_matches": null,
+        "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/catholic-parishes-eastern-wayne-county/5f4daa8098e8.pdf",
+        "pdf_sha256": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+        "label_status": "unlabeled"
+      },
+      "comparison": {
+        "parish_slug": "catholic-parishes-eastern-wayne-county",
+        "content_hash": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+        "schedule_different": true,
+        "metadata_differences": {},
+        "review_needed": true,
+        "low_only": [
+          {
+            "cancelled": false,
+            "church_slug": "st-jude",
+            "date": null,
+            "day_of_week": "Sunday",
+            "end_time": null,
+            "event_kind": "weekly",
+            "event_type": "mass",
+            "season": null,
+            "start_time": "10:30",
+            "weeks_of_month": []
+          },
+          {
+            "cancelled": false,
+            "church_slug": "st-jude",
+            "date": "2026-05-07",
+            "day_of_week": null,
+            "end_time": null,
+            "event_kind": "specific_date",
+            "event_type": "mass",
+            "season": null,
+            "start_time": "08:30",
+            "weeks_of_month": []
+          }
+        ],
+        "high_only": [
+          {
+            "cancelled": false,
+            "church_slug": "st-john-evangelist-clyde",
+            "date": null,
+            "day_of_week": "Sunday",
+            "end_time": null,
+            "event_kind": "weekly",
+            "event_type": "mass",
+            "season": null,
+            "start_time": "10:30",
+            "weeks_of_month": []
+          },
+          {
+            "cancelled": false,
+            "church_slug": "st-john-evangelist-clyde",
+            "date": null,
+            "day_of_week": "Thursday",
+            "end_time": null,
+            "event_kind": "weekly",
+            "event_type": "adoration",
+            "season": null,
+            "start_time": "09:00",
+            "weeks_of_month": [
+              "last"
+            ]
+          },
+          {
+            "cancelled": false,
+            "church_slug": "st-john-evangelist-clyde",
+            "date": "2026-05-07",
+            "day_of_week": null,
+            "end_time": null,
+            "event_kind": "specific_date",
+            "event_type": "mass",
+            "season": null,
+            "start_time": "08:30",
+            "weeks_of_month": []
+          }
+        ]
+      },
+      "low": {
+        "classifier": "gpt-6-luna",
+        "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+        "parish_slug": "catholic-parishes-eastern-wayne-county",
+        "content_hash": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+        "source_url": "https://parishesonline.com/publication-page/st-michael-s-church-st-joseph-the-worker-and-blessed-trinity-catholic-church?selectedPublication=https://container.parishesonline.com/bulletins/06/0326/20260503B.pdf",
+        "label_status": "unlabeled",
+        "today": "2026-05-04",
+        "from_cache": false,
+        "published_date": "2026-05-03",
+        "wrong_bulletin": false,
+        "church_list_needs_review": false,
+        "usage": {
+          "input_tokens": 10622,
+          "cached_tokens": 4007,
+          "cache_write_tokens": 0,
+          "output_tokens": 4134,
+          "reasoning_tokens": 2667
+        },
+        "seconds": 37.955,
+        "response_id": "resp_015d0325be7ec421016ac90c70f99087d2b52717f61ff189a4",
+        "events": [
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:30 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-thomas",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-jude",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:15 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:30 PM",
+              "end_time": "4:15 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-thomas",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:20",
+            "end_time": "07:50",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "7:20 AM",
+              "end_time": "7:50 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:15",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:15 PM",
+              "end_time": "3:45 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": "Benediction; after the 8:30 AM Mass",
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "9:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-04",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "date": "2026-05-04",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-08",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "date": "2026-05-08",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-jude",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "6:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-jude",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-07",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "date": "2026-05-07",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-08",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "date": "2026-05-08",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-05",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "date": "2026-05-05",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "6:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-jude",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "17:20",
+            "end_time": "17:50",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "5:20 PM",
+              "end_time": "5:50 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "18:45",
+            "end_time": "19:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "6:45 PM",
+              "end_time": "7:15 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "18:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "6:30 PM",
+              "end_time": "7:30 PM"
+            },
+            "problems": []
+          }
+        ],
+        "pdf_sha256": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075"
+      },
+      "high": {
+        "classifier": "gpt-6-luna",
+        "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+        "parish_slug": "catholic-parishes-eastern-wayne-county",
+        "content_hash": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+        "source_url": "https://parishesonline.com/publication-page/st-michael-s-church-st-joseph-the-worker-and-blessed-trinity-catholic-church?selectedPublication=https://container.parishesonline.com/bulletins/06/0326/20260503B.pdf",
+        "label_status": "unlabeled",
+        "today": "2026-05-04",
+        "from_cache": false,
+        "published_date": "2026-05-03",
+        "wrong_bulletin": false,
+        "church_list_needs_review": false,
+        "usage": {
+          "input_tokens": 21898,
+          "cached_tokens": 4007,
+          "cache_write_tokens": 0,
+          "output_tokens": 5820,
+          "reasoning_tokens": 4260
+        },
+        "seconds": 87.682,
+        "response_id": "resp_0dc69a27dc242d3e016ac90ca9298487d2a1d5d5ddb534c279",
+        "events": [
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:30 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-thomas",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-john-evangelist-clyde",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:15 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:30 PM",
+              "end_time": "4:15 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-thomas",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:20",
+            "end_time": "07:50",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "7:20 AM",
+              "end_time": "7:50 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:15",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:15 PM",
+              "end_time": "3:45 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": "Benediction",
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "9:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-john-evangelist-clyde",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "last"
+            ],
+            "season": null,
+            "page_number": 4,
+            "note": "After the Novena Mass; Benediction",
+            "raw": {
+              "day_of_week": "Thursday",
+              "start_time": "9:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-04",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "date": "2026-05-04",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-08",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "date": "2026-05-08",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-jude",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "6:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-john-evangelist-clyde",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-07",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "date": "2026-05-07",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-08",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "date": "2026-05-08",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-05",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "date": "2026-05-05",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "6:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-jude",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "17:20",
+            "end_time": "17:50",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "5:20 PM",
+              "end_time": "5:50 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "18:45",
+            "end_time": "19:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "6:45 PM",
+              "end_time": "7:15 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-05-06",
+            "start_time": "18:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Holy Hour",
+            "raw": {
+              "date": "2026-05-06",
+              "start_time": "6:30 PM",
+              "end_time": "7:30 PM"
+            },
+            "problems": []
+          }
+        ],
+        "pdf_sha256": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075"
+      },
+      "gemini": {
+        "classifier": "latest-recorded-gemini",
+        "parish_slug": "catholic-parishes-eastern-wayne-county",
+        "content_hash": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+        "source_url": "https://parishesonline.com/publication-page/st-michael-s-church-st-joseph-the-worker-and-blessed-trinity-catholic-church?selectedPublication=https://container.parishesonline.com/bulletins/06/0326/20260503B.pdf",
+        "fetched_at": "2026-05-04T18:42:48Z",
+        "reference_date": "2026-05-04",
+        "churches": [
+          {
+            "slug": "st-mary-magdalene",
+            "name": "St. Mary Magdalene",
+            "address": "15 Northup Avenue, Wolcott, NY 14590"
+          },
+          {
+            "slug": "st-thomas",
+            "name": "St. Thomas Church",
+            "address": "6927 Main Street, Red Creek, NY 13143"
+          },
+          {
+            "slug": "st-jude",
+            "name": "St. Jude Church",
+            "address": "580 Main Street, Fair Haven, NY 13064"
+          },
+          {
+            "slug": "st-john-evangelist-clyde",
+            "name": "St. John the Evangelist",
+            "address": "114 Sodus Street, Clyde, NY 14433"
+          },
+          {
+            "slug": "st-michael-lyons",
+            "name": "St. Michael",
+            "address": "3 Holley Street, Lyons, NY 14489"
+          },
+          {
+            "slug": "st-patrick-savannah",
+            "name": "St. Patrick",
+            "address": "1583 Grand Avenue, Savannah, NY 13146"
+          },
+          {
+            "slug": "st-michael-newark",
+            "name": "St. Michael Church",
+            "address": "401 South Main Street, Newark, NY 14513"
+          }
+        ],
+        "gemini_source": {
+          "key": "runs/gemini-flash/cache/5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075.json",
+          "kind": "local_legacy_raw_cache",
+          "modified_at": null,
+          "timestamp_caveat": "Local mtime is not an extraction timestamp; legacy fallback only"
+        },
+        "gemini_church_context_matches": null,
+        "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/catholic-parishes-eastern-wayne-county/5f4daa8098e8.pdf",
+        "pdf_sha256": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+        "label_status": "unlabeled",
+        "published_date": "2026-05-03",
+        "wrong_bulletin": false,
+        "events": [
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Friday",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:30 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-thomas",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Friday",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-john-evangelist-clyde",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-john-evangelist-clyde",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "6:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-john-evangelist-clyde",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Thursday",
+              "start_time": "8:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:15 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "day_of_week": "Tuesday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "6:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:30 PM",
+              "end_time": "4:15 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-thomas",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:20",
+            "end_time": "07:50",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "7:20 AM",
+              "end_time": "7:50 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-lyons",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:15",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:15 PM",
+              "end_time": "3:45 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-john-evangelist-clyde",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "17:20",
+            "end_time": "17:50",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "5:20 PM",
+              "end_time": "5:50 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:45",
+            "end_time": "19:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "During Holy Hour",
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "6:45 PM",
+              "end_time": "7:15 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-magdalene",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 3,
+            "note": "Exposition and Benediction following 8:30 AM Mass",
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "9:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-michael-newark",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Holy Hour",
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "6:30 PM",
+              "end_time": "7:30 PM"
+            },
+            "problems": []
+          }
+        ],
+        "usage": {}
+      }
+    },
+    {
+      "cohort": {
+        "parish_slug": "cattaraugus-creek-catholic",
+        "content_hash": "4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b",
+        "source_url": "https://parishesonline.com/publication-page/cattargus-catholic-community?selectedPublication=https://container.parishesonline.com/bulletins/14/0156/20260927B.pdf",
+        "fetched_at": "2026-09-26T18:53:24Z",
+        "reference_date": "2026-09-26",
+        "churches": [
+          {
+            "slug": "st-aloysius-springville",
+            "name": "St. Aloysius Church",
+            "address": "190 Franklin Street, Springville, NY 14141"
+          },
+          {
+            "slug": "st-joseph-holland",
+            "name": "St. Joseph Church",
+            "address": "46 North Main Street, Holland, NY 14080"
+          },
+          {
+            "slug": "st-mary-arcade",
+            "name": "St. Mary Church",
+            "address": "417 West Main Street, Arcade, NY 14009"
+          },
+          {
+            "slug": "st-mary-east-arcade",
+            "name": "St. Mary Church",
+            "address": "6785 East Arcade Road, East Arcade, NY 14009"
+          }
+        ],
+        "gemini_source": {
+          "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b-5fdeee7931aa.json",
+          "modified_at": "2026-09-26T17:22:25.240000+00:00",
+          "kind": "remote_raw_cache"
+        },
+        "gemini_church_context_matches": true,
+        "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/cattaraugus-creek-catholic/4cfe9fb86af6.pdf",
+        "pdf_sha256": "193ac2fba50e902626c8555aa3826fbc19aff3d20ad42ac29e13a42eb1f5a543",
+        "label_status": "unlabeled"
+      },
+      "comparison": {
+        "parish_slug": "cattaraugus-creek-catholic",
+        "content_hash": "4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b",
+        "schedule_different": true,
+        "metadata_differences": {},
+        "review_needed": true,
+        "low_only": [
+          {
+            "cancelled": false,
+            "church_slug": "st-mary-east-arcade",
+            "date": null,
+            "day_of_week": "Saturday",
+            "end_time": null,
+            "event_kind": "weekly",
+            "event_type": "mass",
+            "season": null,
+            "start_time": "19:00",
+            "weeks_of_month": []
+          }
+        ],
+        "high_only": []
+      },
+      "low": {
+        "classifier": "gpt-6-luna",
+        "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+        "parish_slug": "cattaraugus-creek-catholic",
+        "content_hash": "4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b",
+        "source_url": "https://parishesonline.com/publication-page/cattargus-catholic-community?selectedPublication=https://container.parishesonline.com/bulletins/14/0156/20260927B.pdf",
+        "label_status": "unlabeled",
+        "today": "2026-09-26",
+        "from_cache": false,
+        "published_date": "2026-09-27",
+        "wrong_bulletin": false,
+        "church_list_needs_review": false,
+        "usage": {
+          "input_tokens": 13209,
+          "cached_tokens": 4007,
+          "cache_write_tokens": 0,
+          "output_tokens": 1718,
+          "reasoning_tokens": 365
+        },
+        "seconds": 12.351,
+        "response_id": "resp_0a0b0e79d3b99b78016ac90c75012087d299bcf7dde15a5cb3",
+        "events": [
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-east-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "7:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "9:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-joseph-holland",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "11:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Tuesday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Tuesday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Thursday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Thursday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Friday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Friday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:00 PM"
+            },
+            "problems": []
+          }
+        ],
+        "pdf_sha256": "193ac2fba50e902626c8555aa3826fbc19aff3d20ad42ac29e13a42eb1f5a543"
+      },
+      "high": {
+        "classifier": "gpt-6-luna",
+        "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+        "parish_slug": "cattaraugus-creek-catholic",
+        "content_hash": "4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b",
+        "source_url": "https://parishesonline.com/publication-page/cattargus-catholic-community?selectedPublication=https://container.parishesonline.com/bulletins/14/0156/20260927B.pdf",
+        "label_status": "unlabeled",
+        "today": "2026-09-26",
+        "from_cache": false,
+        "published_date": "2026-09-27",
+        "wrong_bulletin": false,
+        "church_list_needs_review": true,
+        "usage": {
+          "input_tokens": 22747,
+          "cached_tokens": 4007,
+          "cache_write_tokens": 0,
+          "output_tokens": 1928,
+          "reasoning_tokens": 647
+        },
+        "seconds": 14.689,
+        "response_id": "resp_0ad5cf47875d5f23016ac90cc129b887d285106c1e1ea0c302",
+        "events": [
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "9:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-joseph-holland",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "11:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Tuesday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Tuesday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Thursday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Thursday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Friday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Friday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:00 PM"
+            },
+            "problems": []
+          }
+        ],
+        "pdf_sha256": "193ac2fba50e902626c8555aa3826fbc19aff3d20ad42ac29e13a42eb1f5a543"
+      },
+      "gemini": {
+        "classifier": "latest-recorded-gemini",
+        "parish_slug": "cattaraugus-creek-catholic",
+        "content_hash": "4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b",
+        "source_url": "https://parishesonline.com/publication-page/cattargus-catholic-community?selectedPublication=https://container.parishesonline.com/bulletins/14/0156/20260927B.pdf",
+        "fetched_at": "2026-09-26T18:53:24Z",
+        "reference_date": "2026-09-26",
+        "churches": [
+          {
+            "slug": "st-aloysius-springville",
+            "name": "St. Aloysius Church",
+            "address": "190 Franklin Street, Springville, NY 14141"
+          },
+          {
+            "slug": "st-joseph-holland",
+            "name": "St. Joseph Church",
+            "address": "46 North Main Street, Holland, NY 14080"
+          },
+          {
+            "slug": "st-mary-arcade",
+            "name": "St. Mary Church",
+            "address": "417 West Main Street, Arcade, NY 14009"
+          },
+          {
+            "slug": "st-mary-east-arcade",
+            "name": "St. Mary Church",
+            "address": "6785 East Arcade Road, East Arcade, NY 14009"
+          }
+        ],
+        "gemini_source": {
+          "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b-5fdeee7931aa.json",
+          "modified_at": "2026-09-26T17:22:25.240000+00:00",
+          "kind": "remote_raw_cache"
+        },
+        "gemini_church_context_matches": true,
+        "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/cattaraugus-creek-catholic/4cfe9fb86af6.pdf",
+        "pdf_sha256": "193ac2fba50e902626c8555aa3826fbc19aff3d20ad42ac29e13a42eb1f5a543",
+        "label_status": "unlabeled",
+        "published_date": "2026-09-27",
+        "wrong_bulletin": false,
+        "events": [
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "4:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-east-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "7:00 PM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "9:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "10:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-joseph-holland",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Sunday",
+              "start_time": "11:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Monday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Tuesday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Tuesday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Wednesday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Thursday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Thursday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Friday",
+              "start_time": "7:30 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-mary-arcade",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Friday",
+              "start_time": "8:00 AM"
+            },
+            "problems": []
+          },
+          {
+            "church_slug": "st-aloysius-springville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null,
+            "raw": {
+              "day_of_week": "Saturday",
+              "start_time": "3:00 PM"
+            },
+            "problems": []
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3104,
+          "output_tokens": 1387
+        }
+      }
+    }
+  ]
+}

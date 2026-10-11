@@ -1,0 +1,70 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-stephen-hagaman",
+  "content_hash": "c1d598740dade557f9b1228618b680283fd277d9b7770f607fff77de39bae4b8",
+  "source_url": "https://parishesonline.com/publication-page/st-stephen-church-12086?selectedPublication=https://container.parishesonline.com/bulletins/03/1004/20260927B.pdf",
+  "fetched_at": "2026-09-28T22:09:08Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-stephen-hagaman",
+      "name": "St. Stephen's Church",
+      "address": "51 Pawling St., Hagaman, NY 12086"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/c1d598740dade557f9b1228618b680283fd277d9b7770f607fff77de39bae4b8-d8a2bac6e8e7.json",
+    "modified_at": "2026-09-28T22:18:47.022000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-stephen-hagaman/c1d598740dad.pdf",
+  "pdf_sha256": "63bdc2bc1db9b67d86959c5d95b24975314679328b0a8940fed1641c30da0bc6",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-stephen-hagaman",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-stephen-hagaman",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2458,
+    "output_tokens": 289
+  }
+}

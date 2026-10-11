@@ -1,0 +1,120 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "sacred-heart-stamford",
+  "content_hash": "7adade1581ea7933646a87c009c04ed98c0d1869c1e20820905ae18d7c742e2f",
+  "source_url": "https://sacredheartstamford.org/wp-content/uploads/2026/10/output.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 10179,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1460,
+    "reasoning_tokens": 955
+  },
+  "seconds": 14.848,
+  "response_id": "resp_09a82e00469bb69a016ac90fd5a9ec87d2886d5c817680ff8a",
+  "events": [
+    {
+      "church_slug": "st-philip-neri-grand-gorge",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-stamford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "12:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "12:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-stamford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-stamford",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "13:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After the 12:30 PM Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "1:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-stamford",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After the 9:00 AM Mass",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "33cc02ef2f5cf80e7944175bce64ba2696e409e0b99df2daa3f57c2ee06bf495"
+}

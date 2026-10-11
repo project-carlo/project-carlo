@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "parish_slug": "ss-columba-and-brigid-buffalo",
+  "content_hash": "a0e3e8be419b1de8aeab719d5fd351110dc8df87ee7a9301c97ca3d790b6da4d",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/ss-columba-and-brigid-buffalo/a0e3e8be419b.pdf",
+  "pdf_sha256": "a1bb122f3a7df24faac9ec50f394d302bff7ad1dd4f51efbec48ff353fcc5fd2",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 2,
+    "analyzed_page_count": 2,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 5680,
+        "image_count": 1,
+        "image_coverage_fraction_estimate": 0.027844785167855036,
+        "max_displayed_image_area_fraction_estimate": 0.027844785167855036,
+        "width_pt": 1224.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 4605,
+        "native_char_height_p10_pt": 5.93951416015625,
+        "native_char_height_median_pt": 7.70794677734375,
+        "native_char_height_p10_low_detail_px": 2.4845026552287583,
+        "render_width_px": 1700,
+        "render_height_px": 1100,
+        "ink_density": 0.17299304812834224,
+        "projection_line_count": 52,
+        "line_pitch_px": 17.0,
+        "line_pitch_low_detail_px": 5.119999999999999,
+        "connected_component_count": 4038,
+        "text_like_component_count": 4000,
+        "text_like_height_p10_px": 4.0,
+        "text_like_height_median_px": 11.0,
+        "text_like_width_median_px": 9.0,
+        "text_like_height_median_low_detail_px": 3.312941176470588
+      },
+      {
+        "page_number": 2,
+        "errors": [],
+        "text_chars": 8184,
+        "image_count": 0,
+        "image_coverage_fraction_estimate": 0.0,
+        "max_displayed_image_area_fraction_estimate": 0.0,
+        "width_pt": 1224.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 6557,
+        "native_char_height_p10_pt": 6.45599365234375,
+        "native_char_height_median_pt": 7.399078369140625,
+        "native_char_height_p10_low_detail_px": 2.700546364379085,
+        "render_width_px": 1700,
+        "render_height_px": 1100,
+        "ink_density": 0.18036363636363636,
+        "projection_line_count": 47,
+        "line_pitch_px": 18.5,
+        "line_pitch_low_detail_px": 5.5717647058823525,
+        "connected_component_count": 5886,
+        "text_like_component_count": 5845,
+        "text_like_height_p10_px": 3.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 2.7105882352941175
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 2,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 2,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 4.418257899997116,
+  "resumed": false,
+  "walltime_seconds": 4.484816799995315
+}

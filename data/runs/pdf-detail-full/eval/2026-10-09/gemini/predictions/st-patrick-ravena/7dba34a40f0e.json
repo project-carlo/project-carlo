@@ -1,0 +1,109 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-patrick-ravena",
+  "content_hash": "7dba34a40f0e42150914ed2a7be7808e2b8d0171503d5436498e3e50d7dd2c85",
+  "source_url": "https://66067635-7ce2-4a3b-8ee4-2d7aacecd675.filesusr.com/ugd/eb6be9_047b24e2076843a4a39cc7e2d47bd9ab.pdf",
+  "fetched_at": "2026-09-28T22:08:00Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-patrick-ravena",
+      "name": "St. Patrick's Church",
+      "address": "21 Main St., Ravena, NY 12143"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/7dba34a40f0e42150914ed2a7be7808e2b8d0171503d5436498e3e50d7dd2c85-e2a747529143.json",
+    "modified_at": "2026-09-28T22:18:13.586000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-patrick-ravena/7dba34a40f0e.pdf",
+  "pdf_sha256": "3b7b65005184754541aef0c07283c2ee3b6f8caff03d806244bbbdef085ed5f7",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-20",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-patrick-ravena",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-ravena",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-ravena",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "2nd & 4th Tuesday of each month",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-ravena",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "2nd & 4th Thursday of each month",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "5:30 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4536,
+    "output_tokens": 461
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "bulletins": [
+    {
+      "parish_slug": "all-saints-corning",
+      "content_hash": "161d97532d0046a7ab7ca88484b9f675e15e1dd6e404d72792961d3873c66a63",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": null,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "ambiguous",
+      "verdict": "HIGH recovers the printed Friday 1:00 PM-midnight adoration line, but its attribution to St. Mary's cannot be safely adjudicated: the trailing Anawim qualifier is not located in this PDF. This is native-text venue interpretation, not optical correction.",
+      "pages": [
+        2
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/all-saints-corning-161d97532d00-p2.png"
+      ],
+      "supported_high_gains": [],
+      "supported_high_harms": [],
+      "ambiguities": [
+        "Page 2 bottom-right: Fridays 1:00pm-12:00am Anawim. No address or explanation of Anawim is supplied by the PDF native text. It could name a separate venue or a ministry; a same-site chapel must not be assumed. The only known church is St. Mary's. The times themselves are visually explicit."
+      ],
+      "native_text_check": "pypdf page 2 includes Adoration of the Blessed Sacrament, Fridays, 1:00pm, 12:00am and Anawim. Searching every PDF page found no other Anawim reference. The changed phrase is native, not raster-only.",
+      "source_label_inconsistencies": [],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: unlabeled. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "all-saints-corning",
+      "content_hash": "6630e7edcca1c06ea64f06e426a839681f8b0ba950dabd7d0ee1e2981a08a05e",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": null,
+      "has_supported_raster_gain": false,
+      "mechanism": "mixed",
+      "verdict": "HIGH correctly adds three explicit cancellations and the dated Thursday confession. The additional October 3 noon-1 PM adoration is not net-safe: a raster diocesan invitation and a local rosary announcement do not unambiguously establish that this parish actually holds the full Holy Hour.",
+      "pages": [
+        1,
+        2,
+        4
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/all-saints-corning-6630e7edcca1-p1.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/all-saints-corning-6630e7edcca1-p2.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/all-saints-corning-6630e7edcca1-p4.png"
+      ],
+      "supported_high_gains": [
+        {
+          "page": 2,
+          "change": "Adds cancellations: September 28 08:00, September 30 18:00, October 2 12:15. Each dated row visibly says No Mass."
+        },
+        {
+          "page": 1,
+          "corroborating_page": 2,
+          "change": "Adds October 1 confession 17:00-17:45, explicitly printed on cover and in the dated confession box."
+        }
+      ],
+      "supported_high_harms": [],
+      "ambiguities": [
+        "Page 4 bishop letter requests each parish host a Holy Hour and Rosary for Life on October 3, 12:00-13:00, and explicitly names his own celebration at Sacred Heart Cathedral (not a known church). The local box commits only to a rosary at noon in the gym and says the gym remains open for prayer afterward. It does not explicitly promise local Eucharistic adoration or a 13:00 end. This prevents confirming the extra HIGH adoration.",
+        "Page 1 says October 1 Mass is 18:00; page 2 intentions print 08:30. This source conflict is shared context, not a low/high canonical difference."
+      ],
+      "native_text_check": "pypdf pages 1/2 contain all four supported changes, including No Mass and confession clock times. Page 4 native text contains only the local rosary/gym note, not the raster bishop letter. The raster text supplies a general request, not an unambiguous small-text correction of an actual parish event.",
+      "source_label_inconsistencies": [
+        "Source has conflicting October 1 Mass times (cover 18:00 versus intentions 08:30)."
+      ],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: done. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "all-saints-corning",
+      "content_hash": "cf81d48fee92a065e4aa378fa54873f2af183788f4ceab7874c0068d256f9425",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "HIGH adds three source-explicit Mass cancellations omitted by LOW; all added dates and times are correct. No harmful changed event is demonstrated.",
+      "pages": [
+        2
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/all-saints-corning-cf81d48fee92-p2.png"
+      ],
+      "supported_high_gains": [
+        {
+          "page": 2,
+          "change": "Adds October 5 08:00, October 8 18:00 and October 9 12:15 Mass cancellations; each row says No Mass."
+        }
+      ],
+      "supported_high_harms": [],
+      "ambiguities": [],
+      "native_text_check": "pypdf page 2 contains every changed date, clock time and No Mass. The gain is cancellation semantics in native schedule rows, not small raster-text recovery.",
+      "source_label_inconsistencies": [],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: unlabeled. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "all-saints-syracuse",
+      "content_hash": "4d97573f1cb3de6176e5f5697db5144ce717d88b6051c4ded2fb5151b55fd352",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": null,
+      "has_supported_harm": null,
+      "has_supported_raster_gain": false,
+      "mechanism": "ambiguous",
+      "verdict": "HIGH adds an October 5 11:30 Mass cancellation supported by the calendar but contradicted by the same-page Mass intentions. Neither schedule is visibly marked as superseding the other; source conflict prevents a safe net verdict.",
+      "pages": [
+        5
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/all-saints-syracuse-4d97573f1cb3-p5.png"
+      ],
+      "supported_high_gains": [],
+      "supported_high_harms": [],
+      "ambiguities": [
+        "Page 5 Monday 10/5 calendar cell says 11:30am Liturgy of the Word w/ Communion, which would require a Mass cancellation under policy. The Mass intentions above instead assign October 5 11:30 to Fr. Francis Rusin. The cancellation could be correct or could suppress an actual Mass; the PDF does not resolve this."
+      ],
+      "native_text_check": "Both contradictory Monday entries and the calendar column heading are present in pypdf page 5 native text. This is semantic/layout conflict, not raster text.",
+      "source_label_inconsistencies": [
+        "Source/intentions-versus-calendar inconsistency on October 5, page 5."
+      ],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: unlabeled. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "assumption-resurrection",
+      "content_hash": "23cf1550b7fee85085fa3cdc63eb96517c4289cd33dc42cd6355c74388f3a320",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": true,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "Mixed HIGH changes: noon Wednesday confession is supported by an explicit clock time, but both new Ascension dated Masses duplicate existing Thursday weekly church/time slots, contrary to the no-duplication policy. Do not count this as a net-safe improvement.",
+      "pages": [
+        1,
+        3
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/assumption-resurrection-23cf1550b7fe-p1.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/assumption-resurrection-23cf1550b7fe-p3.png"
+      ],
+      "supported_high_gains": [
+        {
+          "page": 3,
+          "corroborating_page": 1,
+          "change": "Changes Wednesday Assumption confession from inferred 11:45 to explicit 12:00. Calendar prints 12:00 PM Confession after 11:15 AM Mass; policy gives the printed clock time priority over relative-time inference."
+        }
+      ],
+      "supported_high_harms": [
+        {
+          "page": 3,
+          "corroborating_page": 1,
+          "change": "Adds May 14 Assumption 07:30 and Resurrection 08:30 dated Masses despite identical Thursday weekly slots already present in both predictions and on the cover. The holy-day announcement supports the services, but policy excludes dated duplicates of a weekly slot; these are outside neither church's weekly schedule."
+        }
+      ],
+      "ambiguities": [
+        "The confession calendar pins noon to Wednesday May 6, while cover only says Wednesdays after 11:15 Mass. Noon is source-supported for that week; indefinite weekly extrapolation is less certain. This additional qualification reinforces a mixed, not net-positive verdict."
+      ],
+      "native_text_check": "pypdf page 1 includes church-specific Thursday weekly schedules and relative Wednesday confession. Page 3 contains explicit 12:00 PM confession, May 14, 7:30 AM and 8:30 AM. No changed phrase is raster-only.",
+      "source_label_inconsistencies": [],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: unlabeled. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "assumption-resurrection",
+      "content_hash": "9ae4cae7223ab4da20849d5b5ad2fd9edfb8e7187a66c72dcffc4252bc88b9ac",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": null,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "HIGH correctly adds the explicit October 7 noon confession while keeping the inferred weekly 11:45 entry. It also removes both Divine Mercy Holy Hour end times. Whether the service title itself establishes a one-hour duration is not safely resolved by the printed source; preserve the supported gain but set aside net credit.",
+      "pages": [
+        4,
+        5
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/assumption-resurrection-9ae4cae7223a-p4.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/assumption-resurrection-9ae4cae7223a-p5.png"
+      ],
+      "supported_high_gains": [
+        {
+          "page": 5,
+          "change": "Adds October 7 Assumption confession at 12:00, visibly printed as 12:00 PM (A) Confession after 11:15 AM Mass. This differs from the standing inferred 11:45 slot, so the dated noon event is not a same-time weekly duplicate."
+        }
+      ],
+      "supported_high_harms": [],
+      "ambiguities": [
+        "Pages 4/5 label October 6 19:00 and October 7 15:00 as Divine Mercy Holy Hour but print no separate end clock times. LOW uses 20:00/16:00; HIGH removes them. Policy permits a stated duration (one hour), but the PDF uses Holy Hour as the service name rather than explicitly saying it lasts one hour. If that title counts as a duration, HIGH harms two ends; otherwise HIGH removes two unsupported ends. No safe net adjudication.",
+        "The 40 Hours adoration announcement elsewhere on page 5 is a different event; its 17:00 next-day end does not establish these Holy Hour end times."
+      ],
+      "native_text_check": "pypdf page 5 contains the changed confession clock time and both Divine Mercy Holy Hour calendar entries; page 4 contains their start times. Neither page prints 20:00 or 16:00 end times. All relevant changed content is native, not raster-only.",
+      "source_label_inconsistencies": [],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: unlabeled. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "basilica-sacred-heart-syracuse",
+      "content_hash": "293f8e0883f580b45555035407243271d59729f9f4ec7df61cb38889e6269f5f",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "HIGH adds the October 9 16:00 wedding service explicitly placed in the parish Mass-intentions table. There is no printed private/invitation-only restriction, and it does not duplicate a Friday weekly 16:00 Mass. Source supports inclusion under the supplied policy.",
+      "pages": [
+        2
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/basilica-sacred-heart-syracuse-293f8e0883f5-p2.png"
+      ],
+      "supported_high_gains": [
+        {
+          "page": 2,
+          "change": "Adds October 9 16:00 wedding Mass: dated 4:00 p.m. row in Mass Intentions names Sandy L. Sokolowski and Robert J. Bregande."
+        }
+      ],
+      "supported_high_harms": [],
+      "ambiguities": [],
+      "native_text_check": "pypdf page 2 contains Friday October 9 2026, 4:00 p.m. and (Wedding) with the couple names. The gain is interpreting a native Mass-intentions row, not optical recovery.",
+      "source_label_inconsistencies": [
+        "Page 2 final Sunday 11:00 row repeats October 4 after an October 11 row; unrelated source date anomaly does not affect the reviewed Friday wedding."
+      ],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: unlabeled. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "beloved-disciples-lancaster",
+      "content_hash": "06de9de8a2a023f5cc7640062775fb687f5dee02a1e79df27e5c9738a9dee7b6",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": null,
+      "has_supported_harm": null,
+      "has_supported_raster_gain": false,
+      "mechanism": "ambiguous",
+      "verdict": "HIGH assigns noon October 2 to St. Philip (SPA), but the SPA line has no printed clock time. Noon is printed only beside the preceding SMA entry. A shared-time continuation is possible but not explicit; do not count the transfer as a confirmed gain or as confirmed harm.",
+      "pages": [
+        3
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/beloved-disciples-lancaster-06de9de8a2a0-p3.png"
+      ],
+      "supported_high_gains": [],
+      "supported_high_harms": [],
+      "ambiguities": [
+        "Friday October 2 block: 8:15 SMC, 8:30 OLP, 12 Noon SMA - Eugene Kosiemski, then an untimed SPA - All Souls; Parishioners of the BDCL Family of Parishes line. The SPA line begins in the venue column with an empty time column. It could share noon or be missing its own time. Policy requires a definite event time and prohibits copying another church's usual time. Native or visual layout does not conclusively resolve that omission."
+      ],
+      "native_text_check": "pypdf page 3 contains both 12 Noon and SPA - All Souls. Original rendered layout shows noon aligned with SMA, not SPA. This is native table association ambiguity, not missing small raster text.",
+      "source_label_inconsistencies": [
+        "Packet label status is done; the packet does not provide the actual label payload to verify whether this untimed SPA service was assigned a time there. Labels are unchanged."
+      ],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: done. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "blessed-family-7-west-seneca",
+      "content_hash": "8325cc0232e347c9fa21a49bd503d22cac694dd572338c625def7a028bcce502",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": true,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": true,
+      "mechanism": "raster_small_text",
+      "verdict": "HIGH correctly removes seven LOW events falsely attached to St. John Vianney. The small scanned schedule headings assign those six Mass slots and the Saturday confession to St. John XXIII, an unlisted church. HIGH retains the separately printed Vianney first/third-Tuesday schedule.",
+      "pages": [
+        2
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/blessed-family-7-west-seneca-8325cc0232e3-p2.png"
+      ],
+      "supported_high_gains": [
+        {
+          "page": 2,
+          "change": "Removes Vianney Monday/Wednesday/Friday 08:30 Mass, Saturday 16:00 Mass, Sunday 08:30 and 10:30 Mass, and Saturday 15:00 confession. Upper-right and lower-right schedule headings explicitly place these at St. John XXIII, not St. John Vianney."
+        }
+      ],
+      "supported_high_harms": [],
+      "ambiguities": [],
+      "native_text_check": "pypdf page 2 extract_text() is empty. All changed church-specific headings and their small schedule lines are raster-only. Original PDF render clearly separates St. John Vianney first/third Tuesday 18:00 Mass and 17:00-17:45 confession from St. John XXIII weekly entries. This is an unambiguous raster-text church-heading correction independent of Gemini.",
+      "source_label_inconsistencies": [
+        "St. John XXIII, St. Gabriel and other schedules appear in the source but not in the frozen three-church context. They must not be reassigned to Vianney."
+      ],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: unlabeled. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    },
+    {
+      "parish_slug": "blessed-sacrament-st-vincent-de-paul-syracuse",
+      "content_hash": "a43633ed2d73c4f58c2a66fd81a6ad8592318a2827a705b1a3b552f750f9aeab",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "HIGH adds the September 26 13:00 marriage service under the explicit St. Vincent de Paul Church Mass Intentions heading. No private/restricted attendance is stated, and the 13:00 service is distinct from the 16:00 weekly Mass. Source supports inclusion; being before the frozen reference date does not itself exclude a printed event.",
+      "pages": [
+        3
+      ],
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-000/blessed-sacrament-st-vincent-de-paul-syracuse-a43633ed2d73-p3.png"
+      ],
+      "supported_high_gains": [
+        {
+          "page": 3,
+          "change": "Adds St. Vincent de Paul September 26 13:00 wedding Mass: Saturday Sept 26, 1 pm The Marriage of Olivia Fottrell & Philip Toro is printed inside that church's Mass Intentions box."
+        }
+      ],
+      "supported_high_harms": [],
+      "ambiguities": [],
+      "native_text_check": "pypdf page 3 contains the St. Vincent church heading and Saturday Sept 26, 1 pm The Marriage text. No relevant changed phrase is raster-only.",
+      "source_label_inconsistencies": [
+        "Packet label status is done, but actual label events are not included for independent label adjudication. The same page lists a separate Blessed Sacrament School Mass for Students and Families; that unchanged baseline issue is not treated as a HIGH gain."
+      ],
+      "baseline_note": "Frozen Gemini predictions are comparison-only, not ground truth. Label status: done. No existing labels were changed; the packet supplies label status, not a source-verified label payload.",
+      "artifact_hash_note": "content_hash identifies original downloaded bytes; pdf_sha256 identifies compacted/truncated classification bytes. Different hashes are expected, not a source/label inconsistency. Reviewed artifact matches packet pdf_sha256."
+    }
+  ]
+}

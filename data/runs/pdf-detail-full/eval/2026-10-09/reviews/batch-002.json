@@ -1,0 +1,32 @@
+{
+  "bulletins": [
+    {
+      "parish_slug": "catholic-parishes-eastern-wayne-county",
+      "content_hash": "5f4daa8098e8ccec784874fdfccb002d0f93a74ee05f95280cce3784aa5fd075",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": null,
+      "has_supported_gain": true,
+      "has_supported_raster_gain": true,
+      "has_supported_harm": null,
+      "mechanism": "mixed",
+      "verdict": "High correctly resolves page-4 SJ Sunday 10:30 and May 7 08:30 Masses to St John Evangelist Clyde; low assigns St Jude Fair Haven. Page 4 explicitly repeatedly names St Johns, including memorials and adoration text. Pages 1-5 have no native text, so the venue corrections recover raster-only context. High additionally creates last-Thursday adoration 09:00 after Novena Mass. The text prints last Thursdays after Novena Mass but no explicit time for that recurring Novena; only a dated May 7 08:30 Mass provides an anchor. That extrapolation is unresolved, so net-superiority judgment is withheld while the two raster venue corrections are retained as supported gains.",
+      "pages": [4],
+      "evidence_paths": ["data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-002/catholic-parishes-eastern-wayne-county-5f4daa8098e8-p4.png"]
+    },
+    {
+      "parish_slug": "cattaraugus-creek-catholic",
+      "content_hash": "4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": false,
+      "observed_raster_advantage": false,
+      "has_supported_gain": false,
+      "has_supported_raster_gain": false,
+      "has_supported_harm": true,
+      "mechanism": "native_semantics",
+      "verdict": "Cover page 1 explicitly lists Saturday 7:00 pm St Mary East Arcade in standing weekend schedule; East Arcade is a known church at its own address. Low preserves this weekly Mass and high omits it. Full-document contact sheet reveals no replacing schedule announcement. The cover text is native-extractable. This is a high-detail regression, not a scan gain.",
+      "pages": [1],
+      "evidence_paths": ["data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-002/cattaraugus-creek-catholic-4cfe9fb86af6-p1.png"]
+    }
+  ]
+}

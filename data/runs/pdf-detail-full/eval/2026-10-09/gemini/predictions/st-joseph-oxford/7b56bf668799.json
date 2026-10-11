@@ -1,0 +1,108 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-joseph-oxford",
+  "content_hash": "7b56bf668799c33b3b54a0dc92f29ae81331979bbc6ee3ae7865b4b63782e01b",
+  "source_url": "http://www.stjosephsoxfordny.com/resources/bulletin.pdf",
+  "fetched_at": "2026-09-28T00:13:26Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-joseph-oxford",
+      "name": "St. Joseph",
+      "address": "3 Scott St., Oxford, NY 13830"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/7b56bf668799c33b3b54a0dc92f29ae81331979bbc6ee3ae7865b4b63782e01b-61c842cbfbde.json",
+    "modified_at": "2026-09-28T00:22:46.548000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-joseph-oxford/7b56bf668799.pdf",
+  "pdf_sha256": "b1cbe224fc8b8aba451a1bbfae255c52fe5ece304ca35fea66aa110cb733b42d",
+  "label_status": "unlabeled",
+  "published_date": "2026-08-30",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-joseph-oxford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Vigil",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-oxford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-oxford",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-08-29",
+      "start_time": "17:45",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "During Father Paul’s vacation",
+      "raw": {
+        "date": "2026-08-29",
+        "start_time": "5:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-oxford",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-05",
+      "start_time": "17:45",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "During Father Paul’s vacation",
+      "raw": {
+        "date": "2026-09-05",
+        "start_time": "5:45 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4012,
+    "output_tokens": 465
+  }
+}

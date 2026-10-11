@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-cross-morris",
+  "content_hash": "11a782daabd4e0177c2a186eb24a1d4dfbb9c59501ab7134bc5641c9dde1e8a7",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/holy-cross-morris/11a782daabd4.pdf",
+  "pdf_sha256": "69601b3ec27ffa79f4b09d8828c3ae8f9ff8c869616a3dddc3dc952a320b6702",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 2,
+    "analyzed_page_count": 2,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 6953,
+        "image_count": 1,
+        "image_coverage_fraction_estimate": 0.012186228804855277,
+        "max_displayed_image_area_fraction_estimate": 0.012186228804855277,
+        "width_pt": 1008.0,
+        "height_pt": 612.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 4989,
+        "native_char_height_p10_pt": 4.97198486328125,
+        "native_char_height_median_pt": 5.126007080078125,
+        "native_char_height_p10_low_detail_px": 2.525452628968254,
+        "render_width_px": 1400,
+        "render_height_px": 850,
+        "ink_density": 0.18185210084033612,
+        "projection_line_count": 61,
+        "line_pitch_px": 9.25,
+        "line_pitch_low_detail_px": 3.382857142857143,
+        "connected_component_count": 2934,
+        "text_like_component_count": 2849,
+        "text_like_height_p10_px": 2.0,
+        "text_like_height_median_px": 8.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 2.9257142857142857
+      },
+      {
+        "page_number": 2,
+        "errors": [],
+        "text_chars": 6523,
+        "image_count": 1,
+        "image_coverage_fraction_estimate": 0.0024721685827108634,
+        "max_displayed_image_area_fraction_estimate": 0.0024721685827108634,
+        "width_pt": 1008.0,
+        "height_pt": 612.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 4922,
+        "native_char_height_p10_pt": 4.8590087890625,
+        "native_char_height_median_pt": 5.5200042724609375,
+        "native_char_height_p10_low_detail_px": 2.4680679563492065,
+        "render_width_px": 1400,
+        "render_height_px": 850,
+        "ink_density": 0.14217983193277312,
+        "projection_line_count": 65,
+        "line_pitch_px": 9.25,
+        "line_pitch_low_detail_px": 3.382857142857143,
+        "connected_component_count": 3500,
+        "text_like_component_count": 3425,
+        "text_like_height_p10_px": 3.0,
+        "text_like_height_median_px": 8.0,
+        "text_like_width_median_px": 7.0,
+        "text_like_height_median_low_detail_px": 2.9257142857142857
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 2,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 2,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 7.382106999997632,
+  "resumed": false,
+  "walltime_seconds": 7.38317869999446
+}

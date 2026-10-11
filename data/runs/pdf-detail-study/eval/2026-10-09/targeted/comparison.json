@@ -1,0 +1,386 @@
+[
+  {
+    "parish_slug": "blessed-family-7-west-seneca",
+    "content_hash": "eb8eb69432bdd690bcb85a11089a091919b508877dbf75514cc34b45f513ade1",
+    "schedule_different": false,
+    "raw_events_different": true,
+    "low_only": [],
+    "high_only": [],
+    "scores": {
+      "low": {
+        "levels": {
+          "strict": {
+            "found": 25,
+            "found_predicted": 25,
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403
+          },
+          "core": {
+            "found": 25,
+            "found_predicted": 25,
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403
+          },
+          "loose": {
+            "found": 25,
+            "found_predicted": 25,
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403
+          },
+          "any_time": {
+            "found": 25,
+            "found_predicted": 25,
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403
+          }
+        },
+        "outcomes": {
+          "exact": 25,
+          "core": 0,
+          "weekly_vs_dated": 0,
+          "wrong_time": 0,
+          "wrong_church": 0,
+          "wrong_type": 0,
+          "missed": 7
+        },
+        "spurious": 0,
+        "optional": {
+          "events": 0,
+          "preferred": 0,
+          "rate": null,
+          "by_preference": {
+            "include": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            },
+            "exclude": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            }
+          }
+        }
+      },
+      "high": {
+        "levels": {
+          "strict": {
+            "found": 25,
+            "found_predicted": 25,
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403
+          },
+          "core": {
+            "found": 25,
+            "found_predicted": 25,
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403
+          },
+          "loose": {
+            "found": 25,
+            "found_predicted": 25,
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403
+          },
+          "any_time": {
+            "found": 25,
+            "found_predicted": 25,
+            "precision": 1.0,
+            "recall": 0.78125,
+            "f1": 0.8771929824561403
+          }
+        },
+        "outcomes": {
+          "exact": 25,
+          "core": 0,
+          "weekly_vs_dated": 0,
+          "wrong_time": 0,
+          "wrong_church": 0,
+          "wrong_type": 0,
+          "missed": 7
+        },
+        "spurious": 0,
+        "optional": {
+          "events": 0,
+          "preferred": 0,
+          "rate": null,
+          "by_preference": {
+            "include": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            },
+            "exclude": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "parish_slug": "blessed-trinity-buffalo",
+    "content_hash": "70221b6b414169422aa60b1ee1e871ea68893c77175118073c4cd1b1eaa883d5",
+    "schedule_different": false,
+    "raw_events_different": false,
+    "low_only": [],
+    "high_only": [],
+    "scores": {
+      "low": {
+        "levels": {
+          "strict": {
+            "found": 7,
+            "found_predicted": 7,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "core": {
+            "found": 7,
+            "found_predicted": 7,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "loose": {
+            "found": 7,
+            "found_predicted": 7,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "any_time": {
+            "found": 7,
+            "found_predicted": 7,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          }
+        },
+        "outcomes": {
+          "exact": 7,
+          "core": 0,
+          "weekly_vs_dated": 0,
+          "wrong_time": 0,
+          "wrong_church": 0,
+          "wrong_type": 0,
+          "missed": 1
+        },
+        "spurious": 0,
+        "optional": {
+          "events": 0,
+          "preferred": 0,
+          "rate": null,
+          "by_preference": {
+            "include": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            },
+            "exclude": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            }
+          }
+        }
+      },
+      "high": {
+        "levels": {
+          "strict": {
+            "found": 7,
+            "found_predicted": 7,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "core": {
+            "found": 7,
+            "found_predicted": 7,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "loose": {
+            "found": 7,
+            "found_predicted": 7,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "any_time": {
+            "found": 7,
+            "found_predicted": 7,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          }
+        },
+        "outcomes": {
+          "exact": 7,
+          "core": 0,
+          "weekly_vs_dated": 0,
+          "wrong_time": 0,
+          "wrong_church": 0,
+          "wrong_type": 0,
+          "missed": 1
+        },
+        "spurious": 0,
+        "optional": {
+          "events": 0,
+          "preferred": 0,
+          "rate": null,
+          "by_preference": {
+            "include": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            },
+            "exclude": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "parish_slug": "sacred-heart-auburn-cluster",
+    "content_hash": "79b41c2c30f9a25f7c31d67b3f69917f687853da21857cc506007b1daf071511",
+    "schedule_different": false,
+    "raw_events_different": true,
+    "low_only": [],
+    "high_only": [],
+    "scores": {
+      "low": {
+        "levels": {
+          "strict": {
+            "found": 20,
+            "found_predicted": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          },
+          "core": {
+            "found": 20,
+            "found_predicted": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          },
+          "loose": {
+            "found": 20,
+            "found_predicted": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          },
+          "any_time": {
+            "found": 20,
+            "found_predicted": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          }
+        },
+        "outcomes": {
+          "exact": 20,
+          "core": 0,
+          "weekly_vs_dated": 0,
+          "wrong_time": 0,
+          "wrong_church": 0,
+          "wrong_type": 0,
+          "missed": 0
+        },
+        "spurious": 1,
+        "optional": {
+          "events": 0,
+          "preferred": 0,
+          "rate": null,
+          "by_preference": {
+            "include": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            },
+            "exclude": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            }
+          }
+        }
+      },
+      "high": {
+        "levels": {
+          "strict": {
+            "found": 20,
+            "found_predicted": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          },
+          "core": {
+            "found": 20,
+            "found_predicted": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          },
+          "loose": {
+            "found": 20,
+            "found_predicted": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          },
+          "any_time": {
+            "found": 20,
+            "found_predicted": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          }
+        },
+        "outcomes": {
+          "exact": 20,
+          "core": 0,
+          "weekly_vs_dated": 0,
+          "wrong_time": 0,
+          "wrong_church": 0,
+          "wrong_type": 0,
+          "missed": 0
+        },
+        "spurious": 1,
+        "optional": {
+          "events": 0,
+          "preferred": 0,
+          "rate": null,
+          "by_preference": {
+            "include": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            },
+            "exclude": {
+              "events": 0,
+              "preferred": 0,
+              "rate": null
+            }
+          }
+        }
+      }
+    }
+  }
+]

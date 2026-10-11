@@ -1,0 +1,82 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "our-lady-of-hope-fort-plain",
+  "content_hash": "6f83b27d8400778426fb0911ca27faf922d31b79238d849be09343e33349c402",
+  "source_url": "https://parishesonline.com/publication-page/our-lady-of-hope-13339?selectedPublication=https://container.parishesonline.com/bulletins/04/0656/20261004B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 9797,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 613,
+    "reasoning_tokens": 261
+  },
+  "seconds": 7.341,
+  "response_id": "resp_0f51f360a5b1a513016ac90ea8623887d2ac4deee83e4edf84",
+  "events": [
+    {
+      "church_slug": "our-lady-of-hope-fort-plain",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-fort-plain",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-fort-plain",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:45 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "1319822ec675786e86a68878917f17682c0e49a00488debb39590150569a154f"
+}

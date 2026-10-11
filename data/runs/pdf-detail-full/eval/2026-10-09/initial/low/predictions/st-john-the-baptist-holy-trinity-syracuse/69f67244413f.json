@@ -1,0 +1,64 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-john-the-baptist-holy-trinity-syracuse",
+  "content_hash": "69f67244413f19dfd5f52300a6788f0fe89de91f38729615791cbb3423691feb",
+  "source_url": "https://www.stjohnthebaptist-holytrinity.com/wp-content/uploads/sites/13/2026/09/september-27.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 9636,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1006,
+    "reasoning_tokens": 717
+  },
+  "seconds": 10.705,
+  "response_id": "resp_0b4a3d81e2debde1016ac91140e12c87d28a2da0ba3197f6ee",
+  "events": [
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "17:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:00 PM",
+        "end_time": "5:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "aaf670ac87fbe356a0e4c2300ada3948ad8abb2f69669e18ad35dd643b78adf8"
+}

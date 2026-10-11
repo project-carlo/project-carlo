@@ -62,6 +62,9 @@ data/runs/*
 !data/runs/*/
 data/runs/*/*
 !data/runs/*/eval/
+data/runs/pdf-detail-study/eval/**/evidence/
+data/runs/pdf-detail-full/eval/**/evidence/
+scratch-detail-*.log
 data/out/
 data/pipeline/
 # PDFs and page images `pnpm seed pdf|pages` write for the seeding agent to read.

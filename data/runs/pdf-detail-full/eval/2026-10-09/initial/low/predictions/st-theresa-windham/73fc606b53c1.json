@@ -1,0 +1,102 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-theresa-windham",
+  "content_hash": "73fc606b53c1211826e00657dafd5dfa20a7cf5884050b80679d81faa1304f6f",
+  "source_url": "https://www.sttheresawindham.org/s/St-Theresas-Bulletin_October-3-2026.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-03",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 10373,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1381,
+    "reasoning_tokens": 978
+  },
+  "seconds": 13.647,
+  "response_id": "resp_05872c17e163992c016ac91390aa5087d28798b29203c155cd",
+  "events": [
+    {
+      "church_slug": "st-theresa-windham",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theresa-windham",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "16:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM",
+        "end_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theresa-windham",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theresa-windham",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-11-05",
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "Installation Mass",
+      "raw": {
+        "date": "2026-11-05",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "cd3383f3cebc00e9975fd93aee474235215a5cadf6b60615f7303a22d20ed2aa"
+}
