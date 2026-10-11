@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "parish_slug": "all-saints-albany",
+  "status": "ready",
+  "as_of": "2026-10-04T14:45:49Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:49:27Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. A clear Liturgy Schedule box (page 2) agrees with the cover and the two-week calendar and with history in both bulletins: Sat vigil, three Sunday Masses, Mon/Wed 9 AM and Thu 5:30 PM Masses, Thu 4:30 Adoration & Confession, Sat 3-3:30 and Sun 6-7 PM Confession, Sun 6-7 PM Adoration. Thursday's adoration/confession has no printed end time, so it is left null.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "59528ecbc42902836c27b802e2035d1676f95c4c3ec4980bfaf0ccd6da744247",
+      "fetched_at": "2026-10-04T14:45:49Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "b2e40cfaa8dc23ec2c00c5a3ce715d38e9c9361abb8d461a8863400d90aeda03",
+      "fetched_at": "2026-09-28T21:55:29Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "4PM SATURDAY VIGIL"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Saturday 16:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Liturgy Schedule box on page 2, cover and the page-6 calendar agree; history agrees in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "7:30AM, 9:30AM & 7PM SUNDAY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Sunday 07:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Sunday 07:30"
+        }
+      ],
+      "rationale": "Liturgy Schedule box on page 2, cover and the page-6 calendar agree; history agrees in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "7:30AM, 9:30AM & 7PM SUNDAY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Sunday 09:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Sunday 09:30"
+        }
+      ],
+      "rationale": "Liturgy Schedule box on page 2, cover and the page-6 calendar agree; history agrees in both bulletins. (The intentions list's '9:30 PM' on Oct 4 is a typo for 9:30 AM.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "7:30AM, 9:30AM & 7PM SUNDAY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Sunday 19:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Sunday 19:00"
+        }
+      ],
+      "rationale": "Liturgy Schedule box on page 2, cover and the page-6 calendar agree; history agrees in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "9AM MONDAY MASS & ROSARY"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Monday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Monday 09:00"
+        }
+      ],
+      "rationale": "Liturgy Schedule box on page 2, cover and the page-6 calendar agree; history agrees in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "9AM WEDNESDAY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Wednesday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Wednesday 09:00"
+        }
+      ],
+      "rationale": "Liturgy Schedule box on page 2, cover and the page-6 calendar agree; history agrees in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "5:30PM THURSDAY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Thursday 17:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Thursday 17:30"
+        }
+      ],
+      "rationale": "Liturgy Schedule box on page 2, cover and the page-6 calendar agree; history agrees in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "4:30PM THURSDAY ADORATION & CONFESSION"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Thursday 16:30-17:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Thursday 16:30-17:30"
+        }
+      ],
+      "rationale": "Printed on page 2, the cover and the calendar. No end time is printed (history's 17:30 is inferred from the 5:30 Mass), so end_time is left null per the policy.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "4:30PM THURSDAY ADORATION & CONFESSION"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Thursday 16:30-17:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Thursday 16:30-17:30"
+        }
+      ],
+      "rationale": "Printed on page 2, the cover and the calendar. No end time is printed (history's 17:30 is inferred from the 5:30 Mass), so end_time is left null per the policy.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 2,
+          "said": "RECONCILIATION: 3-3:30PM SATURDAY OR BY APPOINTMENT"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Saturday 15:00-15:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Saturday 15:00-15:30"
+        }
+      ],
+      "rationale": "Page 2 gives 3-3:30PM; the page-6 calendar lists '3pm Confession' both Saturdays. History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 6,
+          "said": "6-7pm Adoration & Confession (Sun Oct 4 and Oct 11)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 1,
+          "said": "6pm Sunday Adoration & Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Sunday 18:00-19:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Sunday 18:00-19:00"
+        }
+      ],
+      "rationale": "Listed for both Sundays in the page-6 calendar and on the cover, so weekly; history agrees in both bulletins. Not in the page-2 Liturgy Schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 6,
+          "said": "6-7pm Adoration & Confession (Sun Oct 4 and Oct 11)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 1,
+          "said": "6pm Sunday Adoration & Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "weekly Sunday 18:00-19:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "b2e40cfaa8dc",
+          "said": "weekly Sunday 18:00-19:00"
+        }
+      ],
+      "rationale": "Listed for both Sundays in the page-6 calendar and on the cover, so weekly; history agrees in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "The Promenade Nursing Home"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 6,
+          "said": "Wednesday October 7th ... 11:00 AM The Promenade Nursing Home"
+        }
+      ],
+      "rationale": "Off-site at a nursing home, not a listed church, and the item doesn't even say it is a Mass. Left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-albany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Marriage Convalidation Ceremony"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59528ecbc429",
+          "page": 4,
+          "said": "Bishop Mark will be celebrating a Marriage Convalidation Ceremony on November 29 at 2:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "59528ecbc429",
+          "said": "dated mass 2026-11-29 14:00"
+        }
+      ],
+      "rationale": "A convalidation ceremony for registered couples, not described as a Mass and not a public Mass; history recorded it as one. Left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

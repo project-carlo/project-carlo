@@ -1,0 +1,800 @@
+{
+  "schema_version": 1,
+  "parish_slug": "cathedral-immaculate-conception-syracuse",
+  "status": "ready",
+  "as_of": "2026-10-04T14:32:54Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:55:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Page-1 schedule matches the week's intentions and history in both bulletins: Mon-Fri 7:00 and 12:00, Sat 5:10 PM, Sun 7:30, 9:45 and 5:10 PM; confession Wed 11:00-11:30 and Sat 4:15-4:45. Both Monday Masses on Columbus Day (Oct 12) are cancelled (Cathedral closed). No adoration is listed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e3798b357fdf861428217868544fe5b4c5211c6c425cd3dc7aad42d3e57d9277",
+      "fetched_at": "2026-10-04T14:32:54Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "e61ecc120acff7997493ce01edcc9a417c87e1e223121ea1f6fefec8d8d275e8",
+      "fetched_at": "2026-09-28T00:04:26Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Monday 07:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Monday 07:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Monday 12:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Monday 12:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Tuesday 07:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Tuesday 07:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Tuesday 12:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Tuesday 12:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Wednesday 07:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Wednesday 07:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Wednesday 12:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Wednesday 12:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Thursday 07:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Thursday 07:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Thursday 12:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Thursday 12:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Friday 07:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Friday 07:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekday: Mon.-Fri. 7 am & 12 noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Friday 12:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Friday 12:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Weekend: Sat. 5:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Saturday 17:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Saturday 17:10"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Sun. 7:30 am, 9:45 am, 5:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Sunday 07:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Sunday 07:30"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Sun. 7:30 am, 9:45 am, 5:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Sunday 09:45"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Sunday 09:45"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Sun. 7:30 am, 9:45 am, 5:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Sunday 17:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Sunday 17:10"
+        }
+      ],
+      "rationale": "Printed in the page-1 Mass Schedule and in the page-4 Mass intentions for the week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Wed. 11:00-11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 3,
+          "said": "Wednesday, October 7, 2026 11-11:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Wednesday 11:00-11:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Wednesday 11:00-11:30"
+        }
+      ],
+      "rationale": "Standing page-1 schedule; page 3 repeats it for this week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 1,
+          "said": "Sat.4:15-4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 3,
+          "said": "Saturday, October 10, 2026 4:15-4:45 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "weekly Saturday 16:15-16:45"
+        },
+        {
+          "source": "history",
+          "bulletin": "e61ecc120acf",
+          "said": "weekly Saturday 16:15-16:45"
+        }
+      ],
+      "rationale": "Standing page-1 schedule; page 3 repeats it for this week; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Columbus Day; Cathedral closed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 3,
+          "said": "Cathedral will be CLOSED and NO MASS Columbus Day, Monday, October 12, 2026"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "dated 2026-10-12 07:00 CANCELLED"
+        }
+      ],
+      "rationale": "Explicit closure on a date after as_of; cancels both Monday weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Columbus Day; Cathedral closed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 3,
+          "said": "Cathedral will be CLOSED and NO MASS Columbus Day, Monday, October 12, 2026"
+        },
+        {
+          "source": "history",
+          "bulletin": "e3798b357fdf",
+          "said": "dated 2026-10-12 12:00 CANCELLED"
+        }
+      ],
+      "rationale": "Explicit closure on a date after as_of; cancels both Monday weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "17:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "With Bishop Lucia; St. Bernadette relics"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e3798b357fdf",
+          "page": 3,
+          "said": "Sunday, October 25, 2026 ... Special 5:10 pm Mass with Bishop Lucia and Rector Michel Daubanes from the shrine of Our Lady of Lourdes"
+        }
+      ],
+      "rationale": "A special occasion at the regular Sunday 5:10 PM Mass; per the policy only the weekly slot is recorded. Left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

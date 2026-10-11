@@ -1,0 +1,663 @@
+{
+  "schema_version": 1,
+  "parish_slug": "historic-old-st-johns-utica",
+  "status": "needs_review",
+  "as_of": "2026-10-04T14:34:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:53:09Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single church; no schedule box, so the Masses come from the two-weekend Mass-intentions lists in the Sep 27 and Oct 4 bulletins, which agree: Sat 4:00 PM and 7:00 PM (Spanish), Sun 9:00 and 11:00 AM, Mon-Fri 12:10 PM; Saturday confession 3:00-3:30 PM; a dated Oct 12 adoration hour. Open questions: the alternating Sunday-afternoon Vietnamese (1:30 PM) and Tagalog (2:00 PM) Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "02522a50284ca86c21242360b2420a33f6fb9c05d8b27a070896184bad844d11",
+      "fetched_at": "2026-10-04T14:34:00Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ed627eaafbfdf9bc0f06ea5195ab7366b0c2da251a08e415373eabee17fd59f6",
+      "fetched_at": "2026-09-28T00:05:29Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "This Week We Pray For: 'Sat 4:00 pm' under both Oct 3/4 and Oct 10/11",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "This Week We Pray For: 'Sat 4:00 pm' under both Sep 26/27 and Oct 3/4",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Saturday 16:00"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box; the Mass-intentions list gives this slot in each of the two weekends it covers, in both bulletins (rule 4: same slot in every week shown is weekly). The 4:00 PM Saturday, 9:00 and 11:00 AM Sunday Masses are also named on the page-3 ministry sign-up form.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "This Week We Pray For: 'Sábado 7:00 pm La Misa en Español' under both Oct 3/4 and Oct 10/11",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "This Week We Pray For: 'Sábado 7:00 pm La Misa en Español' under both Sep 26/27 and Oct 3/4",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Saturday 19:00 'Spanish'"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box; the Mass-intentions list gives this slot in each of the two weekends it covers, in both bulletins (rule 4: same slot in every week shown is weekly).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "This Week We Pray For: 'Sun 9:00 am' under both Oct 3/4 and Oct 10/11",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "This Week We Pray For: 'Sun 9:00 am' under both Sep 26/27 and Oct 3/4",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Sunday 09:00"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box; the Mass-intentions list gives this slot in each of the two weekends it covers, in both bulletins (rule 4: same slot in every week shown is weekly). The 4:00 PM Saturday, 9:00 and 11:00 AM Sunday Masses are also named on the page-3 ministry sign-up form.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "This Week We Pray For: 'Sun 11:00 am' under both Oct 3/4 and Oct 10/11",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "This Week We Pray For: 'Sun 11:00 am' under both Sep 26/27 and Oct 3/4",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Sunday 11:00"
+        }
+      ],
+      "rationale": "The bulletins print no schedule box; the Mass-intentions list gives this slot in each of the two weekends it covers, in both bulletins (rule 4: same slot in every week shown is weekly). The 4:00 PM Saturday, 9:00 and 11:00 AM Sunday Masses are also named on the page-3 ministry sign-up form.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "Mon, Oct 5 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "Mon, Sept 28 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Monday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "ed627eaafbfd",
+          "said": "weekly mass Monday 12:10"
+        }
+      ],
+      "rationale": "Each bulletin's Mass-intentions list covers one weekday week, and both list Mon-Fri at 12:10 PM; the stewardship report has a 'Weekday Mass Contributions' line. Two consecutive weeks agree and history records it weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "Tues, Oct 6 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "Tues Sept 29 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Tuesday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "ed627eaafbfd",
+          "said": "weekly mass Tuesday 12:10"
+        }
+      ],
+      "rationale": "Each bulletin's Mass-intentions list covers one weekday week, and both list Mon-Fri at 12:10 PM; the stewardship report has a 'Weekday Mass Contributions' line. Two consecutive weeks agree and history records it weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "Wed, Oct 7 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "Wed, Sept 30 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Wednesday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "ed627eaafbfd",
+          "said": "weekly mass Wednesday 12:10"
+        }
+      ],
+      "rationale": "Each bulletin's Mass-intentions list covers one weekday week, and both list Mon-Fri at 12:10 PM; the stewardship report has a 'Weekday Mass Contributions' line. Two consecutive weeks agree and history records it weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "Thurs, Oct 8 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "Thur, Oct 1 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Thursday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "ed627eaafbfd",
+          "said": "weekly mass Thursday 12:10"
+        }
+      ],
+      "rationale": "Each bulletin's Mass-intentions list covers one weekday week, and both list Mon-Fri at 12:10 PM; the stewardship report has a 'Weekday Mass Contributions' line. Two consecutive weeks agree and history records it weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "Fri, Oct 9 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "Fri, Oct 2 12:10 pm",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly mass Friday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "ed627eaafbfd",
+          "said": "weekly mass Friday 12:10"
+        }
+      ],
+      "rationale": "Each bulletin's Mass-intentions list covers one weekday week, and both list Mon-Fri at 12:10 PM; the stewardship report has a 'Weekday Mass Contributions' line. Two consecutive weeks agree and history records it weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "Sacraments of Anointing of the Sick and Reconciliation Saturdays Afternoons 3:00 pm —3:30 pm and by appointment.",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "same box, same text",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "weekly confession Saturday 15:00-15:30"
+        }
+      ],
+      "rationale": "Printed in the 'Sacraments of Healing' box in both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "End-of-the-Day Adoration: Monday, October 12th 5:00 pm—6:00 pm. Side Door to Church will be open.",
+          "page": 2
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "same notice, Monday, October 12th 5:00 pm—6:00 pm",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "dated adoration 2026-10-12 17:00-18:00"
+        }
+      ],
+      "rationale": "A one-off dated adoration hour at the church, after as_of; same date and time in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "Sun 1:30 pm Mass in Vietnamese (listed under the Oct 10/11 weekend only)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "Sun 1:30 pm Mass in Vietnamese (listed under the Sep 26/27 weekend only)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "02522a50284c",
+          "said": "dated mass 2026-10-11 13:30 'Vietnamese'"
+        },
+        {
+          "source": "history",
+          "bulletin": "ed627eaafbfd",
+          "said": "dated mass 2026-09-27 13:30 'Vietnamese'"
+        }
+      ],
+      "rationale": "Vietnamese Mass appears on Sep 27 and Oct 11 but not Oct 4, alternating with the Tagalog Mass; that fits 2nd and 4th Sundays but could equally be 'every other Sunday', which weeks_of_month cannot express, and the bulletin never states a rule. The Vietnamese community has its own priest listed. Oct 11 is the only date on or after as_of.",
+      "question": "Vietnamese Mass Sun 1:30 PM: record only the dated Oct 11 Mass, or a weekly 2nd/4th-Sunday slot?",
+      "options": [
+        {
+          "label": "Dated: Sunday Oct 11, 1:30 PM only (policy rule 5: prefer dated when unclear)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "historic-old-st-johns-utica",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-11",
+            "start_time": "13:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": "Vietnamese"
+          }
+        },
+        {
+          "label": "Weekly: 2nd and 4th Sundays 1:30 PM",
+          "entry": {
+            "church_slug": "historic-old-st-johns-utica",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "13:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second",
+              "fourth"
+            ],
+            "season": null,
+            "note": "Vietnamese"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02522a50284c",
+          "said": "FYI: The next Mass in Tagalog will be on Sun, Oct 18th.",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed627eaafbfd",
+          "said": "Sun 2:00 pm Mass in Tagalog (under the Oct 3/4 weekend)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ed627eaafbfd",
+          "said": "dated mass 2026-10-04 14:00 'Tagalog'"
+        }
+      ],
+      "rationale": "The Tagalog Mass was Oct 4 at 2:00 PM and is next Oct 18 (1st and 3rd Sundays, or every other week). The newest bulletin gives Oct 18 without a time, so the 2:00 PM comes from the older bulletin; strict policy skips an event without a printed time.",
+      "question": "Tagalog Mass: add Oct 18 at 2:00 PM (time only in the older bulletin), a weekly 1st/3rd-Sunday slot, or leave it out?",
+      "options": [
+        {
+          "label": "Dated: Sunday Oct 18, 2:00 PM (time from the Sep 27 bulletin)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "historic-old-st-johns-utica",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-18",
+            "start_time": "14:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": "Tagalog"
+          }
+        },
+        {
+          "label": "Weekly: 1st and 3rd Sundays 2:00 PM",
+          "entry": {
+            "church_slug": "historic-old-st-johns-utica",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third"
+            ],
+            "season": null,
+            "note": "Tagalog"
+          }
+        },
+        {
+          "label": "Leave out (newest bulletin gives no time)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
