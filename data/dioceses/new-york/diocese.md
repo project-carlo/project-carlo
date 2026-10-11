@@ -179,3 +179,5 @@ It is not labeled permanently closed and no final-Mass date is invented.
   has zero errors and zero incomplete records; New York retains 43 explicit-closure
   warnings without a known exact final-Mass day. Actual last-Mass evidence is distinguished
   from merger, relegation, sale and scheduled dates; no missing days are invented.
+  Final post-promotion Python suite: 976 passed, using `PYTHONUTF8=1` on Windows to
+  avoid the platform-default cp1252 report-reading issue. `git diff --check` passes.
