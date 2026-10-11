@@ -30,8 +30,11 @@ read keys). Output is compact text; add `--json` for the full result.
    `seed-b/`, ...): subagents share one scratchpad, and two writing the same file name
    overwrite each other's work. Tell it to write each parish's file before starting the
    next.
-3. When they finish: `pnpm seed check --all` and `pnpm seed status`. Report the parishes by
-   status with their open questions.
+3. When they finish: `pnpm seed check --all` and `pnpm seed status`. For a file that fails,
+   run `pnpm seed finalize <parish>...` rather than fixing it by hand: it does only the
+   bookkeeping (defaulted keys, bulletins read, `as_of`, status) and changes no decision. What
+   it still reports is a drafting problem: hand that parish back to a subagent (step 4).
+   Report the parishes by status with their open questions.
 4. **Never edit a subagent's decisions.** A file that looks wrong is re-drafted by a
    subagent (delete it and hand the parish out again), or left to the reviewer.
 

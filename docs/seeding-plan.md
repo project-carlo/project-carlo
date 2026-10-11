@@ -119,7 +119,9 @@ reason, and the subagent moves on.
 - Picks the batch, splits it among subagents, and gives each the skill, its
   parish list and its own scratch folder (subagents share one scratchpad).
 - When the subagents finish, runs `pnpm seed check` over the batch and lists
-  the parishes by status, with the number of open questions each.
+  the parishes by status, with the number of open questions each. A file that
+  fails gets `pnpm seed finalize`, which does only the bookkeeping; what it
+  still reports goes back to a subagent.
 - Never edits a subagent's decisions. A file that looks wrong is re-drafted by
   a subagent or left to the reviewer.
 
