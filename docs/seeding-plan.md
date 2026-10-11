@@ -1,9 +1,11 @@
 # Project Carlo: seeding believed schedules with an agent
 
-Status: proposed. Builds on [the schedule-state plan](schedule-state-plan.md)
-(implemented in lyonsl2/project-carlo#105), whose rollout step 3 is "seed
-parishes in batches" and leaves the seeding method out of scope. This is that
-method.
+Status: implemented, with no parish seeded yet. Builds on [the schedule-state
+plan](schedule-state-plan.md) (implemented in lyonsl2/project-carlo#105), whose
+rollout step 3 is "seed parishes in batches" and leaves the seeding method out
+of scope. This is that method. Where the implementation had to decide
+something this plan left open, see
+[Implementation decisions](#implementation-decisions).
 
 A parish moves from extract mode to update mode when it gets its first `seed`
 revision: the schedule the weekly run then keeps up to date, one bulletin at a
@@ -336,3 +338,105 @@ size costs accuracy.
   person in this plan. If the test run shows `settled` slots are reliable
   enough, `ready` parishes could be approved in bulk.
 - **Subagent batch size**, settled by the test run.
+
+## Implementation decisions
+
+Decisions made while implementing this plan, where it was silent or where the
+code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
+`classifiers/seed_ask.py`, the skill `.claude/skills/seed-parishes/SKILL.md`,
+and the labeler's `views/SeedPage.tsx` and `lib/seeds.ts`.
+
+### Commands
+
+- **`seed init <parish>`** starts a parish's file: a `drafting` draft listing
+  its bulletins, none read yet. `extract` and `ask` start one the same way when
+  the parish has none, so a call always has a file to be recorded in.
+- **Naming bulletins.** Commands take `latest` or at least 6 hex characters of
+  a content hash. Inside a file, `content_hash` in `bulletins` is the full hash,
+  and a source's or call's `bulletin` may be any prefix of at least 8
+  characters that names one of the file's bulletins.
+- **`seed bulletins`** counts the pages of the newest 8 bulletins (`--limit`),
+  which downloads those PDFs, as the agent will read them anyway. A bulletin
+  whose PDF is another row's (stored before fetch compared downloads by their
+  bytes) is listed as a duplicate, and the other commands skip it.
+- **`seed pick`'s "easiest"**, in order: one church, a newest bulletin fetched
+  in the last 14 days, and extract mode's weekly slots alike in the two newest
+  processed bulletins (their Jaccard similarity).
+- **`seed pdf` and `seed pages`** write to `data/seed-work/<parish>/`
+  (gitignored): the PDF the pipeline reads, and PNGs at `--dpi` (150).
+- **Calls.** Both ask the bulletin as of its fetch date, as the evals do, so a
+  replay is served from the cache. `extract` runs the eval classifiers
+  (`gpt-6-luna --model gpt-6.1-sol`, `gemini-flash-qualified`) and shares their
+  result cache. `ask` is cached under `runs/seed-ask/cache/`, by model and
+  prompt version, PDF, church list, date and question; on OpenAI it reads the
+  PDF at high detail with medium reasoning, since a question is about small
+  print. `gpt-6.1-sol` has no price in `evals/pricing.py`, so its calls record
+  `cost_usd` as null.
+- **Output** is compact text, `--json` the full result: `__main__` prints a
+  command's `render` when it sets one.
+
+### The file
+
+- **Every key is present** in the file, slot and option, as in the labels.
+  Entries have 24-hour `HH:MM` times (what the labels and the scorer use).
+- **An answer** is `{"choice", "by", "at"}`: `choice` is the option's index,
+  `edited` (the reviewer's own entry), or `dropped` (the slot left out). An
+  excluded slot keeps an entry for review: its own, or else the option the
+  agent leaned to.
+- **Only included entries must be the parish's churches.** A slot left out,
+  or an option, may name a chapel elsewhere, so the agent can record what it
+  left out as it is.
+- **`seed check`** also reports a file still `drafting`, since it is a draft's
+  last step, a dated included entry before `as_of`'s date (outside a seed's
+  scope), and status that the file contradicts (`needs_review` with no open
+  question, `ready` with one, `approved` without a reviewer).
+
+### Review
+
+- **What a review may change.** The server takes `slots`, `status`,
+  `reviewer` and `blocked_reason` from the labeler and keeps the rest as the
+  agent wrote it. It refuses a file still `drafting`, stamps `approved_at`
+  itself, and runs `seed check` before saving an approval.
+- **Any change takes back an approval**: the file goes back to `ready` or
+  `needs_review`, and must be approved again.
+- **Reopening** (`r`) turns a settled slot into a question, Include or Leave
+  out, with its current decision as the leaning answer, or its earlier options
+  if it had them.
+- **One save at a time.** Each save sends the whole file, so the page waits
+  for one to finish before taking the next action, and the server saves one
+  review at a time. A file too malformed to show comes back as its problems
+  only.
+
+### Loading
+
+- **The weekly run loads seeds after taking its before-copy**, so its
+  snapshot checks compare a newly seeded parish with its last extracted
+  schedule, as [Batches and the run's change gate](#loading-seeds) says. Every
+  other command loads them in `db.ensure_db`, after the CSVs. A deploy
+  (`data snapshot`) never loads them: like a CSV removal, a seed goes live
+  through a weekly run.
+- **Loaded once per digest.** The revision's note is `seed file <parish>
+  <digest>`, and a file is loaded when no seed revision of its parish carries
+  that note. A changed file whose `as_of` is not later than the parish's latest
+  seed is skipped and reported, on every command, until it is.
+- **The loader's checks** are `seed check`'s without the comparison of the
+  file's bulletins with the database's: it needs only the entries, and writes a
+  sighting only when the newest bulletin read is in the database.
+- **The run report** has a Seeds section: what loaded and what was skipped.
+
+### Test runs
+
+- **`seed pick --labeled --eval RUN`** writes `data/seed-evals/RUN/run.json`:
+  each labeled parish (a label marked done) with the fetch time of its newest
+  labeled bulletin, the cutoff. A run keeps its manifest once written. Every
+  command takes `--eval RUN`, reading and writing drafts in
+  `data/seed-evals/RUN/seeds/` and hiding bulletins fetched after the cutoff,
+  and `seed check` requires `as_of` to be the cutoff.
+- **`seed score RUN`** writes `report.md` and `report.json` beside the drafts.
+  Settled precision is reported at the eval report's strict and core levels.
+  A leaning answer matches when its entry pairs with a row the label wants
+  (required, or optional and preferably included), or, when it leans to
+  leaving the slot out, when no option pairs with a required row. It also
+  counts settled slots left out that a required label row the settled slots
+  miss matches.
+

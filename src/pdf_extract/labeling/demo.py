@@ -7,6 +7,8 @@
 - `runs/gemini-flash/cache/...`: fake Gemini results, under the current
   classifier version for one bulletin and an older version for another
 - `labels/`: where the demo's labels go (kept when the dataset is rebuilt)
+- `seeds/holy-family-demo.json`: a drafted seed with open questions, for the
+  Seeds mode (written once; a rebuild keeps the review made of it)
 
 Each Gemini source is covered: a cached result for the current version, one
 for an older version, a bulletin with only post-processed rows in the `event`
@@ -25,6 +27,7 @@ from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, bulletin_pdf_
 from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.db import migrate, seed_reference_data
 from pdf_extract.runner import cache_key, flatten_extracted_events
+from pdf_extract.seeding.files import new_seed, read_seed, write_seed_file
 from pdf_extract.storage import (
     church_list_for_prompt,
     connect_db,
@@ -277,6 +280,126 @@ HOLY_FAMILY_SEP20_ROWS = [
 ]
 
 
+def _entry(church: str, event_type: str, when: str, start: str, *, end: str | None = None,
+           weekly: bool = True, cancelled: bool = False, weeks: list[str] | None = None,
+           season: dict[str, Any] | None = None, note: str | None = None) -> dict[str, Any]:
+    return {
+        "church_slug": church, "event_type": event_type,
+        "event_kind": "weekly" if weekly else "specific_date",
+        "day_of_week": when if weekly else None, "date": None if weekly else when,
+        "start_time": start, "end_time": end, "cancelled": cancelled,
+        "weeks_of_month": weeks or [], "season": season, "note": note,
+    }
+
+
+def _slot(slot_id: str, entry: dict[str, Any], said: str, rationale: str, *, page: int = 2,
+          older: str | None = None, decision: str = "include") -> dict[str, Any]:
+    sources = [{"source": "agent", "bulletin": "NEW", "page": page, "said": said}]
+    if older:
+        sources.append({"source": "agent", "bulletin": "OLD", "page": 2, "said": older})
+    return {
+        "id": slot_id, "decision": decision, "status": "settled", "entry": entry,
+        "page": page, "sources": sources, "rationale": rationale,
+        "question": None, "options": None, "answer": None,
+    }
+
+
+def demo_seed(new: dict[str, Any], old: dict[str, Any]) -> dict[str, Any]:
+    """A drafted seed for Holy Family, two bulletins read, two questions left open."""
+    seed = new_seed("holy-family-demo", [new, old])
+    for b in seed["bulletins"]:
+        b["read"] = True
+    seed.update(status="needs_review", as_of=new["fetched_at"], summary=(
+        "Two churches. Weekend and daily Masses agree across both bulletins. Two questions: "
+        "whether the Monday Mass is weekly, and which Tuesdays the St. Joseph Holy Hour runs."
+    ))
+    weekend = "Printed in the Mass schedule of both bulletins read; history agrees."
+    slots = [
+        _slot("s1", _entry(HF, "mass", "Saturday", "16:00", note="Vigil"),
+              "Saturday Vigil: 4:00 PM", weekend, older="Saturday 4:00 PM"),
+        _slot("s2", _entry(HF, "mass", "Sunday", "08:00"), "Sunday: 8:00 AM and 10:30 AM",
+              weekend, older="Sunday 8:00 AM, 10:30 AM"),
+        _slot("s3", _entry(HF, "mass", "Sunday", "10:30"), "Sunday: 8:00 AM and 10:30 AM",
+              weekend, older="Sunday 8:00 AM, 10:30 AM"),
+        _slot("s4", _entry(SJ, "mass", "Sunday", "09:00"), "Sunday: 9:00 AM", weekend,
+              older="St. Joseph: Sunday 9:00 AM"),
+        _slot("s5", _entry(SJ, "mass", "Wednesday", "19:00", note="Spanish"),
+              "Wednesday: 7:00 PM (Spanish)", weekend, older="Wednesday 7:00 PM (Spanish)"),
+        _slot("s6", _entry(HF, "confession", "Saturday", "15:00", end="15:45"),
+              "Holy Family: Saturday 3:00 - 3:45 PM", weekend,
+              older="Holy Family: Saturday 3:00 - 3:45 PM"),
+        _slot("s7", _entry(SJ, "confession", "Friday", "18:00", end="19:00", weeks=["first"]),
+              "St. Joseph: First Friday of the month, 6:00 - 7:00 PM",
+              "Printed in the newest bulletin only, as first Fridays: a monthly slot."),
+        _slot("s8", _entry(HF, "adoration", "Thursday", "09:00", end="19:00", season={
+            "start_month": 9, "start_day": None, "end_month": 5, "end_day": None}),
+              "Holy Family: Thursdays 9:00 AM - 7:00 PM, September through May",
+              "The bulletin gives the season; the policy keeps it on the slot."),
+        _slot("s9", _entry(SJ, "mass", "2026-10-02", "19:00", weekly=False,
+                           note="Feast of the Guardian Angels"),
+              "Feast of the Guardian Angels: Mass at St. Joseph on Friday, October 2 at 7:00 PM.",
+              "A one-off Mass printed with its date.", page=3),
+        _slot("s10", _entry(HF, "mass", "2026-10-05", "08:00", weekly=False, cancelled=True),
+              "the 8:00 AM Mass at Holy Family on Monday, October 5 is cancelled.",
+              "A dated cancellation of the weekday Mass, after as_of: the seed keeps it.",
+              page=3),
+        _slot("s11", _entry(HF, "mass", "Saturday", "09:00",
+                            note="Food pantry volunteers"),
+              "Food pantry volunteers needed Saturdays from 9:00 to 11:00 AM.",
+              "Not a Mass: a volunteer shift. Left out, as the policy asks.", page=3,
+              decision="exclude"),
+    ]
+    for i, day in enumerate(("Tuesday", "Wednesday", "Thursday", "Friday"), start=12):
+        slots.append(_slot(f"s{i}", _entry(HF, "mass", day, "08:00"), "Monday - Friday: 8:00 AM",
+                           weekend, older="weekdays 8:00 AM"))
+    slots.append({
+        "id": "s16", "decision": None, "status": "needs_human", "entry": None, "page": 2,
+        "sources": [
+            {"source": "agent", "bulletin": "NEW", "page": 2, "said": "Monday - Friday: 8:00 AM"},
+            {"source": "agent", "bulletin": "OLD", "page": 2, "said": "weekdays 8:00 AM"},
+            {"source": "history", "bulletin": "OLD", "said": "no weekday Masses stored"},
+        ],
+        "rationale": "Both bulletins print a weekday Mass, but the newest also cancels the "
+        "Monday, October 5 Mass, and extract mode never stored a weekday Mass. Monday is "
+        "likely weekly with one date cancelled.",
+        "question": "Holy Family: is the Monday 8:00 AM Mass weekly?",
+        "options": [
+            {"label": "Every Monday, 8:00 AM", "entry": _entry(HF, "mass", "Monday", "08:00"),
+             "leaning": True},
+            {"label": "Leave out", "entry": None},
+        ],
+        "answer": None,
+    })
+    slots.append({
+        "id": "s17", "decision": None, "status": "needs_human", "entry": None, "page": 2,
+        "sources": [{
+            "source": "agent", "bulletin": "NEW", "page": 2,
+            "said": "Holy Hour at St. Joseph: every Tuesday except the second Tuesday, "
+            "6:00 - 7:00 PM",
+        }],
+        "rationale": "Adoration with an exception. The weeks that remain are first, third, "
+        "fourth and fifth, but a reviewer should confirm that reading.",
+        "question": "St. Joseph Holy Hour on Tuesdays: every week but the second?",
+        "options": [
+            {"label": "First, third, fourth and fifth Tuesdays",
+             "entry": _entry(SJ, "adoration", "Tuesday", "18:00", end="19:00",
+                             weeks=["first", "third", "fourth", "fifth"], note="Holy Hour"),
+             "leaning": True},
+            {"label": "Every Tuesday",
+             "entry": _entry(SJ, "adoration", "Tuesday", "18:00", end="19:00",
+                             note="Holy Hour")},
+            {"label": "Leave out", "entry": None},
+        ],
+        "answer": None,
+    })
+    names = {"NEW": new["content_hash"], "OLD": old["content_hash"]}
+    for slot in slots:
+        for source in slot["sources"]:
+            source["bulletin"] = names[source["bulletin"]]
+    seed["slots"] = slots
+    return seed
+
+
 # ── Building it ─────────────────────────────────────────────────────────────
 def _write_csv(path: Path, rows: list[dict[str, str]]) -> None:
     fields = list(dict.fromkeys(k for row in rows for k in row))
@@ -323,7 +446,7 @@ def build_demo(root: Path) -> dict[str, Path]:
             save_processed_bulletin(conn, bulletin_id, rows, processed_at=at,
                                     published_date=published)
 
-        old_id, _ = add("holy-family-demo", HOLY_FAMILY_SEP20,
+        old_id, old_hash = add("holy-family-demo", HOLY_FAMILY_SEP20,
                         "https://example.org/holy-family/bulletins/2026-09-20.pdf",
                         "2026-09-18T21:00:00Z")
         processed(old_id, HOLY_FAMILY_SEP20_ROWS, "2026-09-20", "2026-09-18T21:05:00Z")
@@ -347,4 +470,13 @@ def build_demo(root: Path) -> dict[str, Path]:
             "https://example.org/our-lady/2026-09-27.pdf", "2026-09-25T21:02:00Z")
     finally:
         conn.close()
-    return {"root": root, "db_path": db_path, "labels_dir": root / "labels"}
+    seeds_dir = root / "seeds"
+    if read_seed("holy-family-demo", seeds_dir) is None:
+        write_seed_file(demo_seed(
+            {"content_hash": new_hash, "fetched_at": "2026-09-25T21:00:00Z",
+             "published_date": "2026-09-27"},
+            {"content_hash": old_hash, "fetched_at": "2026-09-18T21:00:00Z",
+             "published_date": "2026-09-20"},
+        ), seeds_dir)
+    return {"root": root, "db_path": db_path, "labels_dir": root / "labels",
+            "seeds_dir": seeds_dir}

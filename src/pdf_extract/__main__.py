@@ -3,8 +3,9 @@
 Each subparser carries its own handler (`set_defaults(handler=...)`), so a
 command's arguments and the call they feed sit next to each other and `main`
 stays a dispatcher. Handlers return the JSON-serialisable result dict that gets
-printed; returning None means "no subcommand given", which prints help and
-exits non-zero.
+printed (or, for a command that sets `render`, that text unless `--json`);
+returning None means "no subcommand given", which prints help and exits
+non-zero.
 
 Imports are eager on purpose: `pdf_extract/__init__.py` re-exports the pipeline
 stages, so importing anything from this package already pulls in playwright,
@@ -62,6 +63,8 @@ from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence
 from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
+from pdf_extract.seeding.cli import add_seed_parser
+from pdf_extract.seeding.queries import SeedError
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, delete_db, utc_now_iso
 from pdf_extract.verify import verify_churches
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
@@ -329,7 +332,8 @@ def _cmd_label_serve(args: argparse.Namespace) -> Result:
     if args.demo:
         paths = build_demo(Path(args.demo_dir))
         set_store(CachedBlobStore(LocalBlobStore(paths["root"])))
-        app = LabelerApp(db_path=paths["db_path"], labels_dir=paths["labels_dir"], mode="demo")
+        app = LabelerApp(db_path=paths["db_path"], labels_dir=paths["labels_dir"], mode="demo",
+                         seeds_dir=paths["seeds_dir"])
     else:
         _ensure_db()
         set_store(CachedBlobStore(LocalBlobStore(DATA_DIR), remote_from_env(), remote_write=False))
@@ -669,6 +673,9 @@ def _build_parser() -> argparse.ArgumentParser:
     # -- schedule (believed schedules of update-mode parishes) --
     add_schedule_parser(subparsers, _add_common_args)
 
+    # -- seed (the seeding agent's tools; quiet by default, text output) --
+    add_seed_parser(subparsers, lambda p: _add_common_args(p, default_level="WARNING"))
+
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
     db_parser.set_defaults(help_parser=db_parser)
@@ -744,7 +751,9 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         result = handler(args)
-    except (DioceseError, RunScopeError, ClassifierOptionError, ScheduleCommandError) as e:
+    except (
+        DioceseError, RunScopeError, ClassifierOptionError, ScheduleCommandError, SeedError,
+    ) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -754,7 +763,12 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     LOGGER.info("Command completed: %s", result)
-    print(json.dumps(result, indent=2))
+    # A command for agents (`seed`) prints compact text unless --json is given.
+    render = getattr(args, "render", None)
+    if render is not None and not getattr(args, "json", False):
+        print(render(result))
+    else:
+        print(json.dumps(result, indent=2))
     if getattr(args, "fail_on_verification_error", False) and not result.get("passed", False):
         return 1
     if getattr(args, "exit_code_from_status", False):
