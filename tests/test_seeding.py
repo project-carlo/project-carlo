@@ -48,6 +48,7 @@ from pdf_extract.seeding.queries import (
     render_pages,
     resolve_bulletin,
     start_eval_run,
+    stored_pdfs,
 )
 from pdf_extract.seeding.review import (
     SeedReviewError,
@@ -281,6 +282,24 @@ def test_a_bulletin_whose_pdf_is_gone_is_listed_but_not_read(conn, demo):
     assert listed[1]["stored"] is False and listed[1]["pages"] is None
     with pytest.raises(SeedError, match="no longer stored"):
         export_pdf(conn, PARISH, older["content_hash"][:8])
+
+
+def test_stored_pdfs_lists_the_remote_and_the_local_cache_once(conn, demo, tmp_path):
+    newest, older = parish_bulletins(conn, PARISH)
+    local = LocalBlobStore(demo["root"])
+    remote = LocalBlobStore(tmp_path / "remote")
+    remote.put(bulletin_pdf_key(PARISH, newest["content_hash"]), b"%PDF")
+    remote.put(bulletin_pdf_key("another-parish", "f" * 64), b"%PDF")
+    local.delete([bulletin_pdf_key(PARISH, newest["content_hash"])])
+
+    class NoLookups(CachedBlobStore):
+        def exists(self, key: str) -> bool:
+            raise AssertionError(f"looked up {key}")
+
+    set_store(NoLookups(local, remote))
+    # The newest is only in R2, the older only in the local cache (pruned from R2).
+    assert stored_pdfs(PARISH) == {newest["content_hash"], older["content_hash"]}
+    assert all(b["stored"] for b in list_bulletins(conn, PARISH)["bulletins"])
 
 
 def test_resolve_bulletin_by_latest_or_prefix(conn):

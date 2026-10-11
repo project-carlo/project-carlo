@@ -90,8 +90,9 @@ def _init(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
         raise SeedError(f"{seed_path(args.parish, ctx.seeds_dir)} exists already")
     seed = load_or_start(conn, ctx, args.parish)
     path = write_seed_file(seed, ctx.seeds_dir)
+    held = queries.stored_pdfs(args.parish)
     stored = [b["content_hash"][:12] for b in seed["bulletins"]
-              if queries.pdf_stored(args.parish, b["content_hash"])]
+              if held is None or b["content_hash"] in held]
     return {"parish": args.parish, "path": Path(os.path.relpath(path)).as_posix(),
             "bulletins": len(seed["bulletins"]), "stored": stored}
 

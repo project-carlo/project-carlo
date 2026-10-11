@@ -23,7 +23,7 @@ from typing import Any
 import pypdfium2 as pdfium
 from pypdf import PdfReader
 
-from pdf_extract.blobstore import bulletin_pdf_key, get_store
+from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.dioceses.records import PARISH, diocese_dir
 from pdf_extract.labeling.labels import LABELS_DIR, is_valid_hash, is_valid_slug
 from pdf_extract.schedule.store import normalize_as_of, update_mode_slugs
@@ -172,6 +172,10 @@ def bulletin_pdf(parish_slug: str, content_hash: str) -> bytes:
             f"The PDF of {parish_slug}/{content_hash[:12]} is no longer stored: its history "
             "can still be cited, but it can't be read"
         )
+    return _read_pdf(parish_slug, content_hash)
+
+
+def _read_pdf(parish_slug: str, content_hash: str) -> bytes:
     data = read_bulletin_pdf(parish_slug, content_hash)
     if data is None:
         raise SeedError(
@@ -193,6 +197,25 @@ def pdf_stored(parish_slug: str, content_hash: str) -> bool:
         return True
 
 
+def stored_pdfs(parish_slug: str) -> set[str] | None:
+    """The content hashes of the parish's bulletins whose PDF the blob store holds.
+
+    One listing of the parish's folder rather than a lookup per bulletin (each a
+    request to R2). A PDF pruned from R2 may still be in the local cache, where
+    reading it works, so both are listed. None when the store can't be listed.
+    """
+    key = bulletin_pdf_key(parish_slug, "")
+    prefix = key[:key.rindex("/") + 1]
+    store = get_store()
+    try:
+        keys = set(store.list(prefix))
+        if isinstance(store, CachedBlobStore) and store.remote is not None:
+            keys |= set(store.local.list(prefix))
+    except Exception:  # an unreachable store: let reading the PDF say why
+        return None
+    return {k[len(prefix):-len(".pdf")] for k in keys if k.endswith(".pdf")}
+
+
 def list_bulletins(
     conn: sqlite3.Connection, parish_slug: str, *, cutoff: str | None = None, limit: int = 8,
 ) -> dict[str, Any]:
@@ -203,13 +226,14 @@ def list_bulletins(
     """
     bulletins = parish_bulletins(conn, parish_slug, cutoff=cutoff)
     shown = bulletins[:limit] if limit > 0 else bulletins
+    stored = stored_pdfs(parish_slug) if shown else set()
     for b in shown:
         b["pages"] = None
-        b["stored"] = pdf_stored(parish_slug, b["content_hash"])
+        b["stored"] = stored is None or b["content_hash"] in stored
         if not b["stored"]:
             continue
         try:
-            b["pages"] = page_count(bulletin_pdf(parish_slug, b["content_hash"]))
+            b["pages"] = page_count(_read_pdf(parish_slug, b["content_hash"]))
         except Exception:  # unreadable: say so, don't stop
             pass
     return {
