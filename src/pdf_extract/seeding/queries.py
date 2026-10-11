@@ -28,7 +28,13 @@ from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.dioceses.records import PARISH, diocese_dir
 from pdf_extract.labeling.labels import LABELS_DIR, is_valid_hash, is_valid_slug
 from pdf_extract.schedule.store import normalize_as_of, update_mode_slugs
-from pdf_extract.seeding.files import SEED_EVALS_DIR, SEEDS_DIR, WORK_DIR, seed_slugs
+from pdf_extract.seeding.files import (
+    SEED_EVALS_DIR,
+    SEEDS_DIR,
+    WORK_DIR,
+    drafting_slugs,
+    seed_slugs,
+)
 from pdf_extract.storage import (
     list_churches,
     load_events,
@@ -656,6 +662,7 @@ def pick(
     diocese: str | None = None,
     seeds_dir: Path = SEEDS_DIR,
     now: datetime | None = None,
+    resume: bool = False,
 ) -> dict[str, Any]:
     """`seed pick`: parishes with no seed and no seed file, easiest first.
 
@@ -665,11 +672,13 @@ def pick(
     now = now or datetime.now(UTC)
     in_update_mode = update_mode_slugs(conn)
     drafted = set(seed_slugs(seeds_dir))
+    unfinished = drafting_slugs(seeds_dir) if resume else set()
     only = diocese_parishes(diocese) if diocese else None
     candidates = []
     for parish in conn.execute("SELECT id, slug, name FROM parish ORDER BY slug").fetchall():
         slug = parish["slug"]
-        if slug in in_update_mode or slug in drafted or (only is not None and slug not in only):
+        if (slug in in_update_mode or (slug in drafted and slug not in unfinished)
+                or (only is not None and slug not in only)):
             continue
         bulletins = parish_bulletins(conn, slug)
         if not bulletins:
@@ -704,6 +713,7 @@ def start_eval_run(
     limit: int = 0,
     labels_dir: Path = LABELS_DIR,
     evals_dir: Path = SEED_EVALS_DIR,
+    resume: bool = False,
 ) -> dict[str, Any]:
     """`seed pick --labeled --eval RUN`: the labeled parishes, and the run's manifest.
 
@@ -736,9 +746,11 @@ def start_eval_run(
         run_dir.mkdir(parents=True, exist_ok=True)
         manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     drafted = set(seed_slugs(run_dir / "seeds"))
+    unfinished = drafting_slugs(run_dir / "seeds") if resume else set()
     pending = [
         {"parish": slug, "cutoff": info["fetched_at"], "label_hash": info["label_hash"]}
-        for slug, info in sorted(manifest["parishes"].items()) if slug not in drafted
+        for slug, info in sorted(manifest["parishes"].items())
+        if slug not in drafted or slug in unfinished
     ]
     shown = pending[:limit] if limit > 0 else pending
     return {

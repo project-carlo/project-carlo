@@ -923,3 +923,228 @@ def test_a_call_keeps_what_the_file_gained_while_it_ran(conn, demo, monkeypatch)
     saved = read_seed(PARISH, demo["seeds_dir"])
     assert saved["summary"] == "Written while the call ran." and len(saved["calls"]) == 1
 
+
+@pytest.fixture
+def routed_cli(demo, tmp_path, monkeypatch):
+    """Keep the real CLI context routing, with an isolated database and data tree."""
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(seed_cli, "_connect", lambda: connect_db(demo["db_path"]))
+    return demo
+
+
+def test_cli_starts_an_eval_and_routes_all_parish_commands(routed_cli, seed, capsys):
+    newest = seed["bulletins"][0]
+    labels = Path("data/labels") / PARISH
+    labels.mkdir(parents=True)
+    (labels / f"{newest['content_hash']}.json").write_text('{"status": "done"}')
+    production = {**seed, "summary": "Production must remain unchanged."}
+    write_seed_file(production)
+
+    assert main(["seed", "pick", "--labeled", "--eval", "new-run"]) == 0
+    manifest = Path("data/seed-evals/new-run/run.json")
+    original_manifest = manifest.read_bytes()
+    ctx = SeedContext.for_run("new-run")
+    assert ctx.cutoff(PARISH) == newest["fetched_at"]
+    assert main(["seed", "init", PARISH, "--eval", "new-run"]) == 0
+    assert read_seed(PARISH, ctx.seeds_dir)["status"] == "drafting"
+    assert main(["seed", "mark-read", PARISH, "latest", "--eval", "new-run"]) == 0
+    assert read_seed(PARISH, ctx.seeds_dir)["bulletins"][0]["read"]
+    assert main(["seed", "church", "rochester", "--eval", "new-run"]) == 0
+
+    # Picking again keeps cutoffs; --resume offers an interrupted eval draft.
+    capsys.readouterr()
+    assert main(["seed", "pick", "--labeled", "--eval", "new-run", "--json"]) == 0
+    assert json.loads(capsys.readouterr().out)["parishes"] == []
+    assert main(["seed", "pick", "--labeled", "--eval", "new-run", "--resume",
+                 "--json"]) == 0
+    picked = json.loads(capsys.readouterr().out)
+    assert [p["parish"] for p in picked["parishes"]] == [PARISH]
+    assert manifest.read_bytes() == original_manifest
+
+    write_seed_file(seed, ctx.seeds_dir)
+    assert main(["seed", "finalize", PARISH, "--eval", "new-run"]) == 0
+    assert main(["seed", "check", "--all", "--eval", "new-run"]) == 0
+    capsys.readouterr()
+    assert main(["seed", "status", "--eval", "new-run", "--json"]) == 0
+    status = json.loads(capsys.readouterr().out)
+    assert status["eval_run"] == "new-run"
+    assert status["seeds"][0]["loaded"] is None
+    assert read_seed(PARISH) == production
+
+
+def test_resume_preserves_decisions_evidence_and_paid_call_limit(
+    demo_cli, conn, seed, monkeypatch,
+):
+    seed["status"] = "drafting"
+    seed["calls"] = [{"id": "c1", "kind": "ask", "model": GEMINI_MODEL,
+                      "bulletin": seed["bulletins"][0]["content_hash"], "cached": False,
+                      "question": "When?", "answer": "Saturday", "page": 2,
+                      "quote": "Sat 4 PM", "cost_usd": 0.01}]
+    path = write_seed_file(seed, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "init", PARISH, "--resume"]) == 0
+    assert path.read_bytes() == before
+    monkeypatch.setenv("CARLO_SEED_CALL_LIMIT", "1")
+    _FakeClassifier.calls = 0
+    monkeypatch.setattr(seed_calls, "extraction_classifier", lambda model: _FakeClassifier())
+    with pytest.raises(SeedError, match="used its 1 external calls"):
+        seed_calls.run_extract(conn, SeedContext(seeds_dir=demo_cli["seeds_dir"]),
+                               PARISH, "latest", OPENAI_MODEL)
+    assert _FakeClassifier.calls == 0
+
+
+def test_pick_resume_offers_only_unfinished_existing_drafts(conn, demo, seed):
+    seed["status"] = "drafting"
+    write_seed_file(seed, demo["seeds_dir"])
+    assert PARISH not in {p["parish"] for p in pick(conn, seeds_dir=demo["seeds_dir"])["parishes"]}
+    assert PARISH in {p["parish"] for p in pick(
+        conn, seeds_dir=demo["seeds_dir"], resume=True)["parishes"]}
+    for status in (READY, APPROVED, "blocked"):
+        write_seed_file({**seed, "status": status}, demo["seeds_dir"])
+        assert PARISH not in {p["parish"] for p in pick(
+            conn, seeds_dir=demo["seeds_dir"], resume=True)["parishes"]}
+
+
+def test_mark_read_preserves_a_consulted_bulletin_without_slot_citations(demo_cli, seed, capsys):
+    old = seed["bulletins"][1]["content_hash"]
+    seed["slots"] = [_slot(seed, "s1")]
+    seed["slots"][0]["sources"] = [
+        {"source": "agent", "bulletin": old, "page": 2, "said": "Saturday 4 PM"}]
+    seed["status"] = "drafting"
+    for b in seed["bulletins"]:
+        b["read"] = False
+    write_seed_file(seed, demo_cli["seeds_dir"])
+    assert main(["seed", "mark-read", PARISH, "latest"]) == 0
+    assert main(["seed", "finalize", PARISH]) == 1  # older-only settled inclusion
+    assert "settled inclusion needs an agent source" in capsys.readouterr().out
+    saved = read_seed(PARISH, demo_cli["seeds_dir"])
+    assert saved["bulletins"][0]["read"]
+    assert saved["as_of"] == seed["bulletins"][0]["fetched_at"]
+
+
+@pytest.mark.parametrize("source", ["history", "website", "older_agent", "no_bulletin"])
+def test_settled_inclusions_need_agent_evidence_on_the_anchor(conn, seed, source):
+    slot = _slot(seed, "s1")
+    old = seed["bulletins"][1]["content_hash"]
+    if source == "website":
+        slot["sources"] = [{"source": "website", "url": "https://example.org/times",
+                            "said": "Saturday 4 PM"}]
+    elif source == "no_bulletin":
+        slot["sources"] = [{"source": "agent", "page": 2, "said": "Saturday 4 PM"}]
+    else:
+        slot["sources"] = [{"source": "agent" if source == "older_agent" else "history",
+                            "bulletin": old, "page": 2, "said": "Saturday 4 PM"}]
+    assert any("settled inclusion needs an agent source" in p
+               for p in check_seed(conn, seed, parish_slug=PARISH))
+
+
+def test_review_can_explicitly_include_an_older_bulletin_candidate(conn, demo, seed):
+    slot = _slot(seed, "s1")
+    old = seed["bulletins"][1]["content_hash"]
+    candidate = copy.deepcopy(slot["entry"])
+    slot.update(status="needs_human", decision=None, entry=None, page=None,
+                question="Keep the older Saturday Mass?", options=[
+                    {"label": "Keep", "entry": candidate, "leaning": True},
+                    {"label": "Leave out", "entry": None}],
+                sources=[{"source": "agent", "bulletin": old, "page": 2,
+                          "said": "Saturday 4 PM"}])
+    write_seed_file(seed, demo["seeds_dir"])
+    assert check_seed(conn, seed, parish_slug=PARISH) == []
+    reviewed = _settle_all(seed)
+    approved = save_reviewed_seed(conn, PARISH, {**reviewed, "status": APPROVED,
+                                                "reviewer": "Reviewer"}, demo["seeds_dir"])
+    assert approved["problems"] == []
+    result = load_approved_seeds(conn, demo["seeds_dir"])
+    assert result["loaded"][0]["entries"] == 16
+
+
+def test_new_approvals_require_evidence_but_older_approved_seeds_keep_loading(conn, demo, seed):
+    reviewed = _settle_all(seed)
+    slot = _slot(reviewed, "s1")
+    slot["sources"] = [{"source": "history", "bulletin": reviewed["bulletins"][1]["content_hash"],
+                        "said": "Saturday 4 PM"}]
+    slot["page"] = None
+    write_seed_file(reviewed, demo["seeds_dir"])
+    with pytest.raises(SeedReviewError, match="settled inclusion needs an agent source"):
+        save_reviewed_seed(conn, PARISH, {**reviewed, "status": APPROVED, "reviewer": "R"},
+                           demo["seeds_dir"])
+    # A seed approved before these drafting checks still loads without changing its file.
+    legacy = {**reviewed, "status": APPROVED, "reviewer": "R",
+              "approved_at": "2026-10-10T12:05:00Z"}
+    path = write_seed_file(legacy, demo["seeds_dir"])
+    before = path.read_bytes()
+    result = load_approved_seeds(conn, demo["seeds_dir"])
+    assert result["skipped"] == [] and result["loaded"][0]["entries"] == 16
+    assert path.read_bytes() == before
+
+
+def test_check_requires_reading_the_newest_listed_bulletin(conn, seed):
+    seed["bulletins"][0]["read"] = False
+    seed["as_of"] = seed["bulletins"][1]["fetched_at"]
+    assert any("newest listed bulletin" in p for p in check_seed(conn, seed, parish_slug=PARISH))
+
+
+def test_historical_evals_reject_live_website_evidence(conn, seed):
+    _slot(seed, "s1")["sources"].append(
+        {"source": "website", "url": "https://example.org/times", "said": "Saturday 4 PM"})
+    assert check_seed(conn, seed, parish_slug=PARISH) == []
+    assert any("website sources are not allowed" in p for p in check_seed(
+        conn, seed, parish_slug=PARISH, cutoff=seed["as_of"]))
+
+
+def test_a_settled_inclusions_page_must_match_its_newest_agent_source(conn, seed):
+    _slot(seed, "s1")["page"] = 3
+    assert any("settled inclusion needs an agent source" in p
+               for p in check_seed(conn, seed, parish_slug=PARISH))
+
+
+def test_each_excluded_history_event_needs_a_structured_slot(seed):
+    first = copy.deepcopy(_slot(seed, "s1"))
+    second = copy.deepcopy(_slot(seed, "s2"))
+    for slot in (first, second):
+        slot.update(decision="exclude", rationale="Leave out both Masses from another parish.")
+    past = [_history_of(first["entry"], second["entry"])]
+    # Mentioning both in a rationale alone does not account for the second event.
+    assert len(diff({**seed, "slots": [first]}, past)["missing"]) == 1
+    assert diff({**seed, "slots": [first, second]}, past)["missing"] == []
+
+
+def test_mark_read_obeys_the_eval_cutoff_and_preserves_the_file(routed_cli, seed, capsys):
+    old = seed["bulletins"][1]
+    folder = Path("data/seed-evals/old-run")
+    folder.mkdir(parents=True)
+    (folder / "run.json").write_text(json.dumps({"parishes": {
+        PARISH: {"fetched_at": old["fetched_at"], "label_hash": old["content_hash"]}}}))
+    assert main(["seed", "init", PARISH, "--eval", "old-run"]) == 0
+    path = seed_path(PARISH, folder / "seeds")
+    before = path.read_bytes()
+    assert main(["seed", "mark-read", PARISH, seed["bulletins"][0]["content_hash"],
+                 "--eval", "old-run"]) == 1
+    assert "cutoff" in capsys.readouterr().err
+    assert path.read_bytes() == before
+    assert main(["seed", "mark-read", PARISH, "latest", "--eval", "old-run"]) == 0
+    marked = read_seed(PARISH, folder / "seeds")
+    assert [(b["content_hash"], b["read"]) for b in marked["bulletins"]] == [
+        (old["content_hash"], True)]
+
+
+@pytest.mark.parametrize("command", ["check", "finalize"])
+def test_batch_validation_reports_broken_json_and_continues(demo_cli, capsys, command):
+    path = seed_path("a-broken", demo_cli["seeds_dir"])
+    path.write_text('{')
+    args = ["seed", command, "--all"] if command == "check" else [
+        "seed", command, "a-broken", PARISH]
+    assert main(args) == 1
+    out = capsys.readouterr().out
+    assert "a-broken: invalid" in out and "is not JSON" in out
+    assert f"{PARISH}: needs_review, 2 open questions  OK" in out
+    assert path.read_text() == '{'
+
+
+def test_agents_cannot_resume_or_mark_read_an_approved_file(demo_cli, seed, capsys):
+    path = write_seed_file(_approved(seed), demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "init", PARISH, "--resume"]) == 1
+    assert main(["seed", "mark-read", PARISH, "latest"]) == 1
+    assert "belongs to its reviewer" in capsys.readouterr().err
+    assert path.read_bytes() == before

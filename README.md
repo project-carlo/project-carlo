@@ -651,7 +651,9 @@ pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
 
 A parish's first seed is drafted by a Claude Code agent and approved by a
 person ([docs/seeding-plan.md](docs/seeding-plan.md)). The agent follows the
-`seed-parishes` skill in `.claude/skills/`: it reads the parish's bulletins
+`seed-parishes` orchestrator skill assigns batches to `seed-drafter`, which
+loads only `draft-parish-seed`. Both use [the shared file reference](docs/seeding-file.md).
+The drafter reads the parish's bulletins
 itself against the extraction policy, compares them with extract mode's stored
 history, asks `gpt-6.1-sol` or `gemini-3-flash-preview` only when those leave
 doubt, and writes `data/seeds/<parish>.json` with every slot's sources,
@@ -660,6 +662,9 @@ decision and rationale, and a question for each slot it couldn't decide.
 ```bash
 pnpm seed pick                                # parishes to seed next, easiest first
 pnpm seed init st-mary-albany                 # start a parish's seed file; prints `seed brief`
+pnpm seed init st-mary-albany --resume        # resume or repair, preserving evidence and calls
+pnpm seed pick --resume                       # also offer interrupted drafts
+pnpm seed mark-read st-mary-albany latest     # record reading, even without slot citations
 pnpm seed brief st-mary-albany                # churches, website, bulletins, history, newest PDF
 pnpm seed bulletins st-mary-albany            # its bulletins, newest first
 pnpm seed pdf st-mary-albany latest           # the stored PDF, as a local file to read
@@ -670,7 +675,8 @@ pnpm seed diff st-mary-albany                 # history no slot covers, and the 
 pnpm seed church "lodge st"                   # which parish a church belongs to
 pnpm seed ask st-mary-albany 9f2c41 --model gemini-3-flash-preview "Page 2: Saturday confessions?"
 pnpm seed extract st-mary-albany 9f2c41 --model gpt-6.1-sol
-pnpm seed check st-mary-albany                # or --all
+pnpm seed finalize st-mary-albany             # fill defaults, add history sources and check
+pnpm seed check st-mary-albany                # or --all; bad files are reported individually
 pnpm seed status                              # every seed file, and whether it is loaded
 ```
 
@@ -693,7 +699,10 @@ Test the agent on the labeled parishes first:
 
 ```bash
 pnpm seed pick --labeled --eval try-1   # starts data/seed-evals/try-1/ (drafts are never loaded)
-# ...the agent drafts with --eval try-1 on every command; newer bulletins are hidden...
+# Every parish command takes --eval try-1; newer bulletins are hidden.
+# Skip live websites during historical evals.
+pnpm seed check --all --eval try-1
+pnpm seed status --eval try-1
 pnpm seed score try-1                   # data/seed-evals/try-1/report.md
 ```
 
