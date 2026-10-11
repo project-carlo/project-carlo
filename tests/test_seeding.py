@@ -13,7 +13,7 @@ from typing import Any
 import pytest
 
 from pdf_extract.__main__ import main
-from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, set_store
+from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, bulletin_pdf_key, set_store
 from pdf_extract.classifiers.seed_ask import GEMINI_MODEL, OPENAI_MODEL, SeedAsker
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.labeling.demo import build_demo
@@ -35,6 +35,7 @@ from pdf_extract.seeding.files import (
     validate_seed,
     write_seed_file,
 )
+from pdf_extract.seeding.finalize import finalize_seed
 from pdf_extract.seeding.loader import is_loaded, load_approved_seeds
 from pdf_extract.seeding.queries import (
     SeedContext,
@@ -47,6 +48,7 @@ from pdf_extract.seeding.queries import (
     render_pages,
     resolve_bulletin,
     start_eval_run,
+    stored_pdfs,
 )
 from pdf_extract.seeding.review import (
     SeedReviewError,
@@ -126,7 +128,7 @@ def test_the_demo_draft_is_a_valid_seed(conn, seed):
     (lambda s: _slot(s, "s1").update(sources=[]), "at least one source"),
     (lambda s: _slot(s, "s1")["sources"][0].update(bulletin="deadbeef"),
      "must name one of the file's bulletins"),
-    (lambda s: _slot(s, "s1")["sources"][0].update(source="c9"), "agent, history or a call"),
+    (lambda s: _slot(s, "s1")["sources"][0].update(source="c9"), "agent, history, website or a call"),
     (lambda s: _slot(s, "s1")["entry"].update(start_time="4:00 PM"), "HH:MM"),
     (lambda s: _slot(s, "s1")["entry"].pop("note"), "missing note"),
     (lambda s: _slot(s, "s1").update(decision=None), "include or exclude for a settled"),
@@ -135,11 +137,22 @@ def test_the_demo_draft_is_a_valid_seed(conn, seed):
     (lambda s: s.update(status=APPROVED), "questions are still open"),
     (lambda s: s.update(status="blocked"), "blocked_reason"),
     (lambda s: s.update(as_of=None), "as_of is required"),
+    (lambda s: s.update(summary=" "), "summary is required"),
+    (lambda s: _slot(s, "s1")["sources"].append({"source": "website", "said": "Sat 4 PM"}),
+     "url is required for a website source"),
+    (lambda s: _slot(s, "s1")["sources"][0].update(url="https://example.org"),
+     "url is only for a website source"),
 ])
 def test_validate_seed_rejects_malformed_files(seed, change, message):
     change(seed)
     errors = validate_seed(seed, parish_slug=PARISH)
     assert any(message in e for e in errors), errors
+
+
+def test_a_website_source_cites_the_page_read(seed):
+    _slot(seed, "s1")["sources"].append(
+        {"source": "website", "url": "https://example.org/mass-times", "said": "Sat 4 PM"})
+    assert validate_seed(seed, parish_slug=PARISH) == []
 
 
 def test_a_ready_file_must_have_no_open_question_and_an_approval_needs_a_reviewer(seed):
@@ -170,6 +183,56 @@ def test_digest_covers_entries_pages_and_as_of_only(seed):
     moved = copy.deepcopy(seed)
     moved["as_of"] = "2026-09-25T22:00:00Z"
     assert seed_digest(moved) != digest
+
+
+# ── Finalizing a draft ──────────────────────────────────────────────────────
+_ENTRY_DEFAULTED = ("event_kind", "day_of_week", "date", "end_time", "cancelled",
+                    "weeks_of_month", "season", "note")
+
+
+def _bare(entry: dict[str, Any] | None) -> dict[str, Any] | None:
+    """`entry` as an agent may write it: only the keys that say something."""
+    if entry is None:
+        return None
+    return {k: v for k, v in entry.items()
+            if k not in _ENTRY_DEFAULTED or v not in (None, False, [], "weekly")}
+
+
+def test_finalize_does_the_bookkeeping_of_a_bare_draft(conn, seed):
+    bare = copy.deepcopy(seed)
+    bare.update(status="drafting", as_of=None)
+    for b in bare["bulletins"]:
+        b["read"] = False
+    for slot in bare["slots"]:
+        for key in ("page", "question", "options", "answer"):
+            if slot[key] is None:
+                del slot[key]
+        slot["entry"] = _bare(slot["entry"])
+        if slot["entry"] is None:
+            del slot["entry"]
+        for option in slot.get("options") or []:
+            option["entry"] = _bare(option["entry"])
+            if not option.get("leaning"):
+                option.pop("leaning", None)
+        if slot.get("entry") and slot["entry"].get("event_kind") == "specific_date":
+            slot["entry"]["event_kind"] = "dated"
+    del bare["slots"][0]["id"], bare["slots"][0]["status"]
+    finalized = finalize_seed(bare, [HF, SJ])
+    assert finalized == seed
+    assert check_seed(conn, finalized, parish_slug=PARISH) == []
+
+
+def test_finalize_names_the_one_church_and_settles_status(seed):
+    seed["slots"] = [s for s in seed["slots"] if s["status"] != "needs_human"]
+    seed["slots"][0]["entry"].pop("church_slug")
+    finalized = finalize_seed(seed, [HF])
+    assert finalized["slots"][0]["entry"]["church_slug"] == HF
+    assert finalized["status"] == READY
+    assert finalize_seed({**seed, "status": "blocked"}, [HF])["status"] == "blocked"
+    approved = {**seed, "status": APPROVED, "as_of": None}
+    assert finalize_seed(approved, [HF]) == approved
+    misshapen = {"s1": seed["slots"][0]}
+    assert finalize_seed({**seed, "slots": misshapen}, [HF])["slots"] == misshapen
 
 
 # ── Checks against the database ─────────────────────────────────────────────
@@ -208,7 +271,35 @@ def test_bulletins_newest_first_and_hidden_after_a_cutoff(conn):
     assert [b["published_date"] for b in hidden] == ["2026-09-20"]
     listed = list_bulletins(conn, PARISH)
     assert listed["bulletins"][0]["pages"] == 3
+    assert listed["bulletins"][0]["stored"] is True
     assert listed["not_shown"] == 0
+
+
+def test_a_bulletin_whose_pdf_is_gone_is_listed_but_not_read(conn, demo):
+    older = parish_bulletins(conn, PARISH)[1]
+    LocalBlobStore(demo["root"]).delete([bulletin_pdf_key(PARISH, older["content_hash"])])
+    listed = list_bulletins(conn, PARISH)["bulletins"]
+    assert listed[1]["stored"] is False and listed[1]["pages"] is None
+    with pytest.raises(SeedError, match="no longer stored"):
+        export_pdf(conn, PARISH, older["content_hash"][:8])
+
+
+def test_stored_pdfs_lists_the_remote_and_the_local_cache_once(conn, demo, tmp_path):
+    newest, older = parish_bulletins(conn, PARISH)
+    local = LocalBlobStore(demo["root"])
+    remote = LocalBlobStore(tmp_path / "remote")
+    remote.put(bulletin_pdf_key(PARISH, newest["content_hash"]), b"%PDF")
+    remote.put(bulletin_pdf_key("another-parish", "f" * 64), b"%PDF")
+    local.delete([bulletin_pdf_key(PARISH, newest["content_hash"])])
+
+    class NoLookups(CachedBlobStore):
+        def exists(self, key: str) -> bool:
+            raise AssertionError(f"looked up {key}")
+
+    set_store(NoLookups(local, remote))
+    # The newest is only in R2, the older only in the local cache (pruned from R2).
+    assert stored_pdfs(PARISH) == {newest["content_hash"], older["content_hash"]}
+    assert all(b["stored"] for b in list_bulletins(conn, PARISH)["bulletins"])
 
 
 def test_resolve_bulletin_by_latest_or_prefix(conn):

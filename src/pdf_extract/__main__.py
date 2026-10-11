@@ -766,6 +766,9 @@ def main(argv: list[str] | None = None) -> int:
     # A command for agents (`seed`) prints compact text unless --json is given.
     render = getattr(args, "render", None)
     if render is not None and not getattr(args, "json", False):
+        # The text has dashes and quotes; a Windows console or pipe would garble them.
+        if hasattr(sys.stdout, "reconfigure"):
+            sys.stdout.reconfigure(encoding="utf-8")
         print(render(result))
     else:
         print(json.dumps(result, indent=2))

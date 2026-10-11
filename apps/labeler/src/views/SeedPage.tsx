@@ -35,6 +35,14 @@ function isTyping(el: Element | null): boolean {
   return !!el?.matches('input:not([type="checkbox"]), textarea, select, [contenteditable="true"]');
 }
 
+function hostOf(url: string): string {
+  try {
+    return new URL(url).host;
+  } catch {
+    return url;
+  }
+}
+
 export function SeedPage(props: Props) {
   const { parish } = props;
   const [detail, setDetail] = useState<SeedDetail | null>(null);
@@ -527,6 +535,21 @@ function SlotCard(props: SlotCardProps) {
 
       <div className="mt-1.5 grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-1.5">
         {slot.sources.map((source, i) => {
+          if (source.url && /^https?:\/\//.test(source.url)) {
+            return (
+              <a
+                key={i}
+                href={source.url}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded border border-slate-200 bg-slate-50 px-1.5 py-1 text-left text-xs hover:border-sky-400"
+              >
+                <span className="font-semibold text-slate-600">{source.source}</span>
+                <span className="text-slate-400"> · {hostOf(source.url)}</span>
+                <span className="block text-slate-800">{source.said}</span>
+              </a>
+            );
+          }
           const call = calls.get(source.source);
           const hash = resolveBulletin(seed, source.bulletin ?? call?.bulletin);
           const bulletin = seed.bulletins.find((b) => b.content_hash === hash);

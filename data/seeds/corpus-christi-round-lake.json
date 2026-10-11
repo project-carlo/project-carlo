@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "parish_slug": "corpus-christi-round-lake",
+  "status": "approved",
+  "as_of": "2026-10-04T14:46:48Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:51:02Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:50:32Z",
+  "summary": "Single church. The Sep 27 and Oct 4 bulletins print the same schedule sidebar (Sat 4:00 PM, Sun 8:00 and 11:00 AM; Mon/Tue/Fri 9:00 AM, Thu 6:00 PM; no Wednesday Mass; confession 15 minutes before weekday Masses and Sat 3:30-3:45 PM), confirmed by both weekly calendars and history. One question: a first-Friday 9:45 AM Holy Hour seen only in the older calendar. A Nov 2 All Souls Mass is included as dated.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f9b0a9bfb77693f0e13ec8ec35c94944c6209dfb8bb43a119d921a16c9f1ba5a",
+      "fetched_at": "2026-10-04T14:46:48Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6e549da90079fd4eee6bc2eb160255b31658e88a46160ad0c02207d74a8f2e5f",
+      "fetched_at": "2026-09-28T21:57:21Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Saturday | 4:00pm Vigil",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Saturday | 4:00pm Vigil",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly mass Saturday 16:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "6e549da90079",
+          "said": "weekly mass Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE sidebar on page 1 of both bulletins read; the page-6 weekly calendars of both list 'Mass - Church' at this time on each such day; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Sunday | 8:00am, 11:00am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Sunday | 8:00am, 11:00am",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly mass Sunday 08:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "6e549da90079",
+          "said": "weekly mass Sunday 08:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE sidebar on page 1 of both bulletins read; the page-6 weekly calendars of both list 'Mass - Church' at this time on each such day; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Sunday | 8:00am, 11:00am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Sunday | 8:00am, 11:00am",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly mass Sunday 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "6e549da90079",
+          "said": "weekly mass Sunday 11:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE sidebar on page 1 of both bulletins read; the page-6 weekly calendars of both list 'Mass - Church' at this time on each such day; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Monday | 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Monday | 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly mass Monday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "6e549da90079",
+          "said": "weekly mass Monday 09:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE sidebar on page 1 of both bulletins read; the page-6 weekly calendars of both list 'Mass - Church' at this time on each such day; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Tuesday | 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Tuesday | 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly mass Tuesday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "6e549da90079",
+          "said": "weekly mass Tuesday 09:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE sidebar on page 1 of both bulletins read; the page-6 weekly calendars of both list 'Mass - Church' at this time on each such day; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Thursday | 6:00 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Thursday | 6:00 pm",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly mass Thursday 18:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "6e549da90079",
+          "said": "weekly mass Thursday 18:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE sidebar on page 1 of both bulletins read; the page-6 weekly calendars of both list 'Mass - Church' at this time on each such day; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Friday | 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Friday | 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly mass Friday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "6e549da90079",
+          "said": "weekly mass Friday 09:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE sidebar on page 1 of both bulletins read; the page-6 weekly calendars of both list 'Mass - Church' at this time on each such day; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "15 minutes before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "RECONCILIATION 15 minutes before weekday Masses",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "RECONCILIATION 15 minutes before weekday Masses",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly confession Monday 08:45 '15 minutes before weekday Mass'"
+        }
+      ],
+      "rationale": "Both bulletins: reconciliation 15 minutes before weekday Masses. Per policy that is 08:45, ending when the 9:00 AM Mass starts. History has the same start (without an end time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "15 minutes before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "RECONCILIATION 15 minutes before weekday Masses",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "RECONCILIATION 15 minutes before weekday Masses",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly confession Tuesday 08:45 '15 minutes before weekday Mass'"
+        }
+      ],
+      "rationale": "Both bulletins: reconciliation 15 minutes before weekday Masses. Per policy that is 08:45, ending when the 9:00 AM Mass starts. History has the same start (without an end time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:45",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "15 minutes before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "RECONCILIATION 15 minutes before weekday Masses",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "RECONCILIATION 15 minutes before weekday Masses",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly confession Thursday 17:45 '15 minutes before weekday Mass'"
+        }
+      ],
+      "rationale": "Both bulletins: reconciliation 15 minutes before weekday Masses. Per policy that is 17:45, ending when the 6:00 PM Mass starts. History has the same start (without an end time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "15 minutes before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "RECONCILIATION 15 minutes before weekday Masses",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "RECONCILIATION 15 minutes before weekday Masses",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly confession Friday 08:45 '15 minutes before weekday Mass'"
+        }
+      ],
+      "rationale": "Both bulletins: reconciliation 15 minutes before weekday Masses. Per policy that is 08:45, ending when the 9:00 AM Mass starts. History has the same start (without an end time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Saturday | 3:30pm - 3:45pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Saturday | 3:30pm - 3:45pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Weekly calendar Sat Sep 26 and Sat Oct 3: 3:30 pm Reconciliation",
+          "page": 6
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Weekly calendar Sat Oct 10: 3:30 pm Reconciliation (Sat Oct 3 shows 4:00 pm)",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "weekly confession Saturday 15:30-15:45"
+        }
+      ],
+      "rationale": "Sidebar box in both bulletins says 3:30-3:45 PM; three of four calendar Saturdays say 3:30 pm. The newest calendar's '4:00 pm Reconciliation' on Oct 3 (past, and the older calendar said 3:30 for that day) looks like a typo.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "All Souls Day Mass of Remembrance"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "On Monday, November 2, 2026 at 6:00 pm, Father George and the Corpus Christi Community will celebrate a special All Souls Day Mass",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b0a9bfb776",
+          "said": "dated mass 2026-11-02 18:00 'All Souls Day Mass of Remembrance'"
+        }
+      ],
+      "rationale": "A special Mass at Corpus Christi outside the weekly schedule (Monday evening), on a date after as_of: dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-21",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Anointing of the Sick Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "Anointing of the Sick ... Wednesday, October 21, 2026 at St. Mary's Crescent. ... Mass is scheduled for 11:00 am.",
+          "page": 5
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "same notice, page 5",
+          "page": 5
+        }
+      ],
+      "rationale": "Held at St. Mary's, Crescent, another parish: off-site, left out.",
+      "question": null,
+      "options": null,
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:50:29Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e549da90079",
+          "said": "Weekly calendar, Friday, October 2: 9:45 am Holy Hour for First Friday",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "6e549da90079",
+          "said": "dated adoration 2026-10-02 09:45 'Holy Hour for First Friday'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b0a9bfb776",
+          "said": "not printed (its calendar Oct 3-11 holds no first Friday)"
+        }
+      ],
+      "rationale": "Seen once, in the older bulletin's calendar, with no location and no end time. Policy rule 2 makes a First Friday slot weekly with weeks_of_month ['first'], and a Holy Hour after the 9:00 Mass is very likely in the church, but there is only one sighting and the schedule sidebar never mentions adoration.",
+      "question": "Add a first-Friday 9:45 AM Holy Hour (adoration) at Corpus Christi? Seen only in the Sep 27 calendar.",
+      "options": [
+        {
+          "label": "Include: first Fridays 9:45 AM Holy Hour (after the 9:00 AM Mass)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "corpus-christi-round-lake",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "season": null,
+            "note": "Holy Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:50:18Z"
+      }
+    }
+  ]
+}

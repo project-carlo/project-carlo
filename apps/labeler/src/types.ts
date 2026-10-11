@@ -206,10 +206,11 @@ export interface SeedBulletin {
 }
 
 export interface SeedSource {
-  /** "agent", "history", or the id of one of the file's calls. */
+  /** "agent", "history", "website" (with its `url`), or the id of one of the file's calls. */
   source: string;
   bulletin?: string | null;
   page?: number | null;
+  url?: string | null;
   said: string;
 }
 

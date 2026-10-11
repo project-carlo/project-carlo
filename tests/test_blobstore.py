@@ -88,6 +88,9 @@ def test_local_store_list_filters_by_prefix_and_skips_hidden_files(tmp_path: Pat
     assert list(store.list("bulletins/")) == ["bulletins/p1/a.pdf", "bulletins/p2/b.pdf"]
     assert list(store.list("pipeline/")) == ["pipeline/latest.json"]
     assert list(store.list("nothing/")) == []
+    assert list(store.list("bulletins/p1/")) == ["bulletins/p1/a.pdf"]
+    assert list(store.list("bulletins/p")) == ["bulletins/p1/a.pdf", "bulletins/p2/b.pdf"]
+    assert list(store.list("pipe")) == ["pipeline/latest.json"]
 
 
 def test_local_store_exists_is_false_for_directories(tmp_path: Path) -> None:

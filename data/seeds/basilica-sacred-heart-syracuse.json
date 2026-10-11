@@ -1,0 +1,724 @@
+{
+  "schema_version": 1,
+  "parish_slug": "basilica-sacred-heart-syracuse",
+  "status": "approved",
+  "as_of": "2026-10-04T14:32:37Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:53:47Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:48:40Z",
+  "summary": "One church. Identical page-1 schedule box in both bulletins and history agrees throughout: Sat 4 PM vigil, Sun 9:00 and 11:00 (bilingual), weekday Masses Mon/Wed-Fri 12:10 and Tue 7:00, confession Mon/Wed-Fri 11:40 and Sat 3:00, First Friday adoration after the 12:10 Mass until 3 PM. No cancellations in the newest bulletin (the older one had two Communion Services, now past).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "293f8e0883f580b45555035407243271d59729f9f4ec7df61cb38889e6269f5f",
+      "fetched_at": "2026-10-04T14:32:37Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "a0d84f1f29116c5e4336081aa818d6bfac4c2667d740c4048136b7069dfa8df4",
+      "fetched_at": "2026-09-28T00:04:06Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "Saturday Vigil– 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "Saturday Vigil– 4:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Saturday 16:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read (Oct 4, Sep 27) and in the week's Mass intentions; history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "Sunday– 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "Sunday– 9:00 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Sunday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Sunday 09:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read (Oct 4, Sep 27) and in the week's Mass intentions; history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "11:00 a.m. (Bi-Lingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "11:00 a.m. (Bi-Lingual)"
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Sunday 11:00 'Bilingual'"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Sunday 11:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read (Oct 4, Sep 27) and in the week's Mass intentions; history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "Monday, Wednesday thru Friday—12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "Monday, Wednesday thru Friday—12:10 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Monday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Monday 12:10"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read (Oct 4, Sep 27) and in the week's Mass intentions; history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "Tuesday—7:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "Tuesday—7:00 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Tuesday 07:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Tuesday 07:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read (Oct 4, Sep 27) and in the week's Mass intentions; history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "Monday, Wednesday thru Friday—12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "Monday, Wednesday thru Friday—12:10 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Wednesday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Wednesday 12:10"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read (Oct 4, Sep 27) and in the week's Mass intentions; history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "Monday, Wednesday thru Friday—12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "Monday, Wednesday thru Friday—12:10 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Thursday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Thursday 12:10"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read (Oct 4, Sep 27) and in the week's Mass intentions; history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "Monday, Wednesday thru Friday—12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "Monday, Wednesday thru Friday—12:10 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Friday 12:10"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Friday 12:10"
+        }
+      ],
+      "rationale": "Printed in the page-1 schedule box of both bulletins read (Oct 4, Sep 27) and in the week's Mass intentions; history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:40",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "RECONCILIATION Monday, Wednesday-Friday - 11:40 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "RECONCILIATION Monday, Wednesday-Friday - 11:40 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Monday 11:40"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Monday 11:40"
+        }
+      ],
+      "rationale": "Printed in the page-1 RECONCILIATION box of both bulletins read; history agrees. No end time is printed (it presumably runs until the Mass), so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:40",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "RECONCILIATION Monday, Wednesday-Friday - 11:40 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "RECONCILIATION Monday, Wednesday-Friday - 11:40 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Wednesday 11:40"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Wednesday 11:40"
+        }
+      ],
+      "rationale": "Printed in the page-1 RECONCILIATION box of both bulletins read; history agrees. No end time is printed (it presumably runs until the Mass), so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:40",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "RECONCILIATION Monday, Wednesday-Friday - 11:40 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "RECONCILIATION Monday, Wednesday-Friday - 11:40 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Thursday 11:40"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Thursday 11:40"
+        }
+      ],
+      "rationale": "Printed in the page-1 RECONCILIATION box of both bulletins read; history agrees. No end time is printed (it presumably runs until the Mass), so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:40",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "RECONCILIATION Monday, Wednesday-Friday - 11:40 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "RECONCILIATION Monday, Wednesday-Friday - 11:40 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Friday 11:40"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Friday 11:40"
+        }
+      ],
+      "rationale": "Printed in the page-1 RECONCILIATION box of both bulletins read; history agrees. No end time is printed (it presumably runs until the Mass), so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "Saturday - 3:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "Saturday - 3:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Saturday 15:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Saturday 15:00"
+        }
+      ],
+      "rationale": "Printed in the RECONCILIATION box of both bulletins; history agrees. No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:40",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": "After the 12:10 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 1,
+          "said": "First Friday Adoration : following the 12:10 p.m. Mass until 3:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d84f1f2911",
+          "page": 1,
+          "said": "First Friday Adoration : following the 12:10 p.m. Mass until 3:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "293f8e0883f5",
+          "said": "weekly Friday 12:40-15:00 'First Friday only; following the 12:10 p.m. Mass'"
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d84f1f2911",
+          "said": "weekly Friday 12:40-15:00"
+        }
+      ],
+      "rationale": "Standing Devotion Schedule in both bulletins. First Friday, so weeks_of_month ['first'] (history put it in the note). No clock start is given; per the policy 'following' a weekday Mass starts 30 minutes after it (12:40); end 3:00 PM is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-09",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Wedding"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "293f8e0883f5",
+          "page": 2,
+          "said": "Friday, October 9, 2026 4:00 p.m. (Wedding) Sandy L. Sokolowski & Robert J. Bregande"
+        }
+      ],
+      "rationale": "A wedding, not a scheduled public Mass. Left out.",
+      "question": null,
+      "options": null,
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:48:38Z"
+      }
+    }
+  ]
+}

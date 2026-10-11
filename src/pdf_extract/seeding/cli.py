@@ -8,6 +8,7 @@
     seed history   <parish> [--bulletins N]
     seed extract   <parish> <bulletin> --model M
     seed ask       <parish> <bulletin> --model M "question"
+    seed finalize  <parish>...
     seed check     <parish>... | --all
     seed status
     seed score     <run>
@@ -29,6 +30,7 @@ from typing import Any
 
 from pdf_extract.classifiers.seed_ask import MODELS
 from pdf_extract.db import ensure_db
+from pdf_extract.schedule.store import parish_churches
 from pdf_extract.seeding import queries
 from pdf_extract.seeding.calls import call_limit, load_or_start, run_ask, run_extract
 from pdf_extract.seeding.checks import check_seed
@@ -40,6 +42,7 @@ from pdf_extract.seeding.files import (
     seed_slugs,
     write_seed_file,
 )
+from pdf_extract.seeding.finalize import finalize_seed
 from pdf_extract.seeding.loader import is_loaded
 from pdf_extract.seeding.queries import SeedContext, SeedError
 from pdf_extract.seeding.score import score_run
@@ -87,8 +90,11 @@ def _init(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
         raise SeedError(f"{seed_path(args.parish, ctx.seeds_dir)} exists already")
     seed = load_or_start(conn, ctx, args.parish)
     path = write_seed_file(seed, ctx.seeds_dir)
+    held = queries.stored_pdfs(args.parish)
+    stored = [b["content_hash"][:12] for b in seed["bulletins"]
+              if held is None or b["content_hash"] in held]
     return {"parish": args.parish, "path": Path(os.path.relpath(path)).as_posix(),
-            "bulletins": len(seed["bulletins"])}
+            "bulletins": len(seed["bulletins"]), "stored": stored}
 
 
 def _bulletins(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
@@ -124,8 +130,19 @@ def _ask(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return {"parish": args.parish, "call": call, "limit": call_limit()}
 
 
+def _finalize(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    for slug in args.parish:
+        seed = read_seed(slug, ctx.seeds_dir)
+        if seed is None:
+            continue  # the check below reports it
+        parish = queries.parish_row(conn, slug)
+        churches = sorted(parish_churches(conn, parish["id"]))
+        write_seed_file({**finalize_seed(seed, churches), "parish_slug": slug}, ctx.seeds_dir)
+    return _check(conn, ctx, args)
+
+
 def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    slugs = seed_slugs(ctx.seeds_dir) if args.all else args.parish
+    slugs = seed_slugs(ctx.seeds_dir) if getattr(args, "all", False) else args.parish
     if not slugs:
         raise SeedError("Name the parishes to check, or pass --all")
     files = []
@@ -193,8 +210,8 @@ def _row(ev: dict[str, Any]) -> str:
     if ev.get("note"):
         extra.append(f"“{ev['note']}”")
     page = ev.get("page_number")
-    kind = "weekly" if ev.get("event_kind") == "weekly" else "dated"
-    return (f"  {kind:6} {ev.get('event_type') or '?':10} {when:10} "
+    kind = ev.get("event_kind") or "?"
+    return (f"  {kind:13} {ev.get('event_type') or '?':10} {when:10} "
             f"{(ev.get('start_time') or '?') + end:11} p{page if page else '-':<3} "
             f"{ev.get('church_slug') or '?'}" + (f"  {'; '.join(extra)}" if extra else ""))
 
@@ -226,9 +243,12 @@ def _text_bulletins(r: Result) -> str:
             flags.append("extract mode: WRONG BULLETIN")
         if b["duplicate_of"]:
             flags.append(f"duplicate of {b['duplicate_of']}")
-        pages = "?" if b["pages"] is None else str(b["pages"])
+        if not b["stored"]:
+            pages = "no PDF (history only)"
+        else:
+            pages = "unreadable" if b["pages"] is None else f"{b['pages']:>2} pp"
         lines.append(f"  {b['short']}  fetched {_when(b['fetched_at'])}  issue "
-                     f"{b['published_date'] or '—':10}  {pages:>2} pp" +
+                     f"{b['published_date'] or '—':10}  {pages}" +
                      (f"  {'; '.join(flags)}" if flags else ""))
     if r["not_shown"]:
         lines.append(f"  …{r['not_shown']} older (--limit 0 lists all)")
@@ -322,7 +342,11 @@ def _text_score(r: Result) -> str:
 
 
 def _text_init(r: Result) -> str:
-    return f"{r['path']}: a draft listing {r['bulletins']} bulletins"
+    text = f"{r['path']}: a draft listing {r['bulletins']} bulletins"
+    if len(r["stored"]) < r["bulletins"]:
+        text += (f"; only {len(r['stored'])} have a stored PDF to read "
+                 f"({', '.join(r['stored']) or 'none'}), the rest only history")
+    return text
 
 
 # ── Parser ──────────────────────────────────────────────────────────────────
@@ -392,6 +416,11 @@ def add_seed_parser(
     bulletin(p)
     p.add_argument("--model", required=True, choices=MODELS)
     p.add_argument("question", help="The question, naming the page if you know it")
+
+    p = leaf("finalize", "Fill in a draft's defaults, read bulletins, as_of and status; check it",
+             _with_conn(_finalize), _text_check)
+    p.add_argument("parish", nargs="+", help="Parish slugs")
+    p.set_defaults(fail_on_verification_error=True)
 
     p = leaf("check", "Check seed files against the database", _with_conn(_check), _text_check)
     p.add_argument("parish", nargs="*", help="Parish slugs")

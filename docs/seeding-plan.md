@@ -94,7 +94,9 @@ restate it.
    targeted question (`pnpm seed ask`) is preferred to a full extraction
    (`pnpm seed extract`): it's cheaper, and its answer is about exactly the
    thing in doubt. The agent need not call any model for a parish whose
-   bulletins are clear.
+   bulletins are clear. The parish's website is another source it may look at
+   when a question needs it (never by default): it can back a reading up, but
+   websites go stale, so it doesn't outweigh the newest bulletin.
 6. **Decide each slot**, and mark it:
    - `settled`: printed clearly, the policy is clear about it, and nothing
      the agent read contradicts it.
@@ -103,7 +105,10 @@ restate it.
      church or chapel it belongs to is unclear. The agent writes a short
      question and the answers it's choosing between, and says which it leans
      to and why.
-7. **Run `pnpm seed check <parish>`** and fix anything it reports.
+7. **Run `pnpm seed finalize <parish>`** and fix anything it reports. It does
+   the file's bookkeeping (defaulted keys, which bulletins were read, `as_of`,
+   the parish's status) and then runs `seed check`, so the agent writes only
+   its reading and its decisions.
 
 A parish that can't be seeded now (no usable bulletin, no schedule in its
 bulletins, a church missing from `churches.csv`) is marked `blocked` with the
@@ -111,10 +116,12 @@ reason, and the subagent moves on.
 
 ### What the orchestrator does
 
-- Picks the batch, splits it among subagents, and gives each the skill and
-  its parish list.
+- Picks the batch, splits it among subagents, and gives each the skill, its
+  parish list and its own scratch folder (subagents share one scratchpad).
 - When the subagents finish, runs `pnpm seed check` over the batch and lists
-  the parishes by status, with the number of open questions each.
+  the parishes by status, with the number of open questions each. A file that
+  fails gets `pnpm seed finalize`, which does only the bookkeeping; what it
+  still reports goes back to a subagent.
 - Never edits a subagent's decisions. A file that looks wrong is re-drafted by
   a subagent or left to the reviewer.
 
@@ -127,12 +134,13 @@ prints compact text by default, `--json` on request.
 | Command | What it does |
 | :-- | :-- |
 | `seed pick [--limit N] [--diocese D] [--labeled]` | Parishes with no seed and no seed file, easiest first: one church, a recent bulletin, extract-mode output stable from week to week. `--labeled` picks the parishes with labels instead, for the [test run](#testing-it-first). |
-| `seed bulletins <parish>` | The parish's bulletins, newest first: short hash, fetch date, issue date if known, page count, whether extract mode flagged it as a wrong bulletin, and whether it's a duplicate of another. |
+| `seed bulletins <parish>` | The parish's bulletins, newest first: short hash, fetch date, issue date if known, page count (or `no PDF` once the PDF is pruned: its history can still be cited), whether extract mode flagged it as a wrong bulletin, and whether it's a duplicate of another. |
 | `seed pdf <parish> <bulletin>` | Writes the stored compacted PDF (the first 10 pages, or the parish's limit) to a local path and prints it, so page numbers match the pipeline's and the labeler's. |
 | `seed pages <parish> <bulletin> [--page N] [--dpi D]` | Renders pages as PNGs, for bulletins that are only images or a dense table to zoom into. |
 | `seed history <parish> [--bulletins N]` | Extract mode's stored events for the parish's last N bulletins, one table per bulletin, with pages. |
 | `seed extract <parish> <bulletin> --model M` | A full extraction with `POLICY`, through the existing classifiers (`gpt-6-luna --model gpt-6.1-sol`, `gemini-flash-qualified`) and the runner's result cache, so asking twice costs one call. The result is appended to the seed file's `calls`. |
 | `seed ask <parish> <bulletin> --model M "question"` | One question about one bulletin, answered with an answer, the page and the words it read there. Appended to `calls`. |
+| `seed finalize <parish>...` | The bookkeeping that finishes a draft: fills in every key a slot or entry leaves at its default (`event_kind` from whether it has a `date`, `church_slug` for a one-church parish), marks read the bulletins the agent's sources cite, sets `as_of` to the newest one's fetch time and the status from the open questions, then runs `seed check`. |
 | `seed check <parish>... [--all]` | The file is well formed, every entry parses as `pnpm schedule seed` would (`schedule.entries.parse_entry`), churches belong to the parish, no two included entries share a slot, every slot has a source and a rationale, every open question has options, and `as_of` is the newest bulletin consulted. |
 | `seed status` | Every seed file's status and open questions, and whether the local database has loaded it. |
 
@@ -222,7 +230,8 @@ There is no `seed load`: loading is what the pipeline does with approved files.
   entry's sighting in that bulletin when the seed is loaded; null when the
   newest bulletin doesn't print it.
 - **`sources[].source`** is `agent` (the agent's own reading), `history`
-  (extract mode's stored events), or the id of a `calls` item.
+  (extract mode's stored events), `website` (a page of the parish's site, with
+  its `url`), or the id of a `calls` item.
 - **`decision`** is `include` or `exclude`. Excluded slots keep their entry
   and rationale, for review, and are never loaded.
 - **An answered question** has `answer` set to the chosen option's index, or
