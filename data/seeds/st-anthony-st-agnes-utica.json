@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-st-agnes-utica",
+  "status": "approved",
+  "as_of": "2026-10-11T16:27:42Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:46:06Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:34:32Z",
+  "summary": "One church. Saturday 4:30 PM and Sunday 9:30 AM Masses, Monday and Tuesday 8:30 AM, identical across three bulletins and history; Monday Oct 12 Mass cancelled for Columbus Day. Mt. Carmel's Masses belong to another parish and are left out. Open question: Saturday 3:45 PM Confession appears only on the website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fda85449ef15a35f806e404353a04baf7febb69bc3eda48f0530cd7b9b473152",
+      "fetched_at": "2026-10-11T16:27:42Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c138ee71fda8927379fd94c44c38d123d4d46bb3e59120522b444b20bc6c160b",
+      "fetched_at": "2026-10-04T14:39:46Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "a51ad886b2dc402aeb8fe6e07d99b3062dfef411c18222b1d2683756adaba6cd",
+      "fetched_at": "2026-09-28T00:10:34Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fda85449ef15",
+          "page": 1,
+          "said": "MASS SCHEDULE at St. Anthony & St. Agnes Saturday 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c138ee71fda8",
+          "page": 1,
+          "said": "MASS SCHEDULE at St. Anthony & St. Agnes Saturday 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a51ad886b2dc",
+          "page": 1,
+          "said": "MASS SCHEDULE at St. Anthony & St. Agnes Saturday 4:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "fda85449ef15",
+          "said": "weekly Saturday 16:30"
+        }
+      ],
+      "rationale": "Printed in the Liturgical Schedule box on page 1 of all three bulletins (and on page 2's Masses for the Week); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fda85449ef15",
+          "page": 1,
+          "said": "MASS SCHEDULE at St. Anthony & St. Agnes ... Sunday 9:30a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c138ee71fda8",
+          "page": 1,
+          "said": "MASS SCHEDULE at St. Anthony & St. Agnes ... Sunday 9:30a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a51ad886b2dc",
+          "page": 1,
+          "said": "MASS SCHEDULE at St. Anthony & St. Agnes ... Sunday 9:30a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "fda85449ef15",
+          "said": "weekly Sunday 09:30"
+        }
+      ],
+      "rationale": "Printed in the Liturgical Schedule box on page 1 of all three bulletins (and on page 2's Masses for the Week); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fda85449ef15",
+          "page": 1,
+          "said": "Weekdays at St. Anthony & St. Agnes Monday & Tuesday 8:30 a.m. No Mass on Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c138ee71fda8",
+          "page": 1,
+          "said": "Weekdays at St. Anthony & St. Agnes Monday & Tuesday 8:30 a.m. No Mass on Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a51ad886b2dc",
+          "page": 1,
+          "said": "Weekdays at St. Anthony & St. Agnes Monday & Tuesday 8:30 a.m. No Mass on Wednesdays"
+        },
+        {
+          "source": "history",
+          "bulletin": "fda85449ef15",
+          "said": "weekly Monday 08:30"
+        }
+      ],
+      "rationale": "Printed in the Liturgical Schedule box on page 1 of all three bulletins (and on page 2's Masses for the Week); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fda85449ef15",
+          "page": 1,
+          "said": "Weekdays at St. Anthony & St. Agnes Monday & Tuesday 8:30 a.m. No Mass on Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c138ee71fda8",
+          "page": 1,
+          "said": "Weekdays at St. Anthony & St. Agnes Monday & Tuesday 8:30 a.m. No Mass on Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a51ad886b2dc",
+          "page": 1,
+          "said": "Weekdays at St. Anthony & St. Agnes Monday & Tuesday 8:30 a.m. No Mass on Wednesdays"
+        },
+        {
+          "source": "history",
+          "bulletin": "fda85449ef15",
+          "said": "weekly Tuesday 08:30"
+        }
+      ],
+      "rationale": "Printed in the Liturgical Schedule box on page 1 of all three bulletins (and on page 2's Masses for the Week); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fda85449ef15",
+          "page": 2,
+          "said": "MONDAY NO MASS - RECTORY CLOSED IN OBERVANCE OF Columbus Day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c138ee71fda8",
+          "page": 3,
+          "said": "Columbus Day will be celebrated on Monday, October 12th. In observance of the Holiday, there will not be mass and the Rectory will be closed."
+        },
+        {
+          "source": "history",
+          "bulletin": "fda85449ef15",
+          "said": "2026-10-12 08:30 mass CANCELLED, Observance of Columbus Day"
+        }
+      ],
+      "rationale": "Both of the two newest bulletins cancel the Monday 8:30 Mass on October 12, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Mt. Carmel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fda85449ef15",
+          "page": 1,
+          "said": "MASS SCHEDULE at Mt. Carmel Sunday 8:00 and 11:00 a.m. ... at Mt. Carmel Thursday & Friday 8:30 am"
+        }
+      ],
+      "rationale": "Masses at Mt. Carmel (St. Mary of Mount Carmel, 648 Jay St., a church of another parish, st-mary-of-mount-carmel-blessed-sacrament-utica): Sunday 8:00 and 11:00, Thursday and Friday 8:30. Not this parish's church; all left out, this entry stands for them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-09-26",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Sts. Cosmas and Damian pilgrimage"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a51ad886b2dc",
+          "page": 2,
+          "said": "SATURDAY 6:00 PM For all Intentions of the Pilgrims visiting our Shrine this week. After Mass There will be a candlelight procession and benediction ... SUNDAY 11:00 AM For all Intentions of the Pilgrims"
+        }
+      ],
+      "rationale": "Pilgrimage-weekend Masses (Sat Sept 26 6:00 PM, Sun Sept 27 11:00 AM) and the Benediction after the procession are dated before as_of, so not seeded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stanthonystagnes.com",
+          "said": "Weekend: Saturday Reconciliation, 3:45 p.m.; Vigil Mass, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fda85449ef15",
+          "page": 1,
+          "said": "(no Confession time anywhere in the bulletin; Sacramental Life box lists Marriage, Baptism, RCIA, Anointing only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c138ee71fda8",
+          "page": 1,
+          "said": "(no Confession time printed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a51ad886b2dc",
+          "page": 1,
+          "said": "(no Confession time printed)"
+        }
+      ],
+      "rationale": "None of the three bulletins prints a Confession time, and history has none. The parish website's schedule gives Saturday Reconciliation 3:45 p.m. before the 4:30 Vigil; its Mass times match the bulletins exactly (including Mt. Carmel Thu/Fri), so it looks current. Since no bulletin will ever print it, update mode would never add it if left out.",
+      "question": "Add Saturday 3:45 PM Confession at St. Anthony & St. Agnes, given only on the parish website?",
+      "options": [
+        {
+          "label": "Saturday 3:45 PM (website)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-anthony-st-agnes-utica",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T21:34:14Z"
+      }
+    }
+  ]
+}

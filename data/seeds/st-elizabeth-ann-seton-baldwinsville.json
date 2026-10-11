@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-elizabeth-ann-seton-baldwinsville",
+  "status": "approved",
+  "as_of": "2026-10-11T16:30:35Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:48:13Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:10:40Z",
+  "summary": "One church in a three-parish Baldwinsville grouping whose shared schedule is identical in all three bulletins: Sat 5:30pm, Sun 7:30 & 10:30, Thu 6:45am, Fri 9am, adoration Wed 5-7pm and Fri 7:30-9am, confession Sat 4:30pm. St. Mary's and St. Augustine's times are left out as separate parishes, and the rotating First Friday adoration is left out. No open questions; note the newest bulletin is the Oct 4 issue.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f240cad95b18c8e3a96be94ce38d0420cbd6c8b7e7b14003f8f8fb52908f4461",
+      "fetched_at": "2026-10-11T16:30:35Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "3c0055e47a480ebccefa4282a021f731da177804e6b801534b8f3d66ca15f491",
+      "fetched_at": "2026-10-04T14:40:53Z",
+      "published_date": "2026-09-27",
+      "read": true
+    },
+    {
+      "content_hash": "707bc65556cdee2d9b19b259b8fe09ad28d7b0500ad4202ea229b86527c0c8e8",
+      "fetched_at": "2026-09-28T00:11:40Z",
+      "published_date": "2026-09-20",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 1,
+          "said": "Saturday 5:30pm – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 1,
+          "said": "Saturday 5:30pm – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 1,
+          "said": "Saturday 5:30pm – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 4,
+          "said": "Mass Times for the Week: Saturday 5:30pm; Sunday 7:30am, 10:30am; Thursday 6:45AM St EAS; Friday 9:00 AM St. EAS"
+        },
+        {
+          "source": "history",
+          "bulletin": "f240cad95b18",
+          "said": "weekly mass Saturday 17:30"
+        }
+      ],
+      "rationale": "Printed under St. EAS in the Baldwinsville parishes' Mass schedule on page 1 of all three bulletins and in the page 4 Mass Times for the Week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 1,
+          "said": "Sunday 7:30am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 1,
+          "said": "Sunday 7:30am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 1,
+          "said": "Sunday 7:30am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 4,
+          "said": "Mass Times for the Week: Saturday 5:30pm; Sunday 7:30am, 10:30am; Thursday 6:45AM St EAS; Friday 9:00 AM St. EAS"
+        },
+        {
+          "source": "history",
+          "bulletin": "f240cad95b18",
+          "said": "weekly mass Sunday 07:30"
+        }
+      ],
+      "rationale": "Printed under St. EAS in the Baldwinsville parishes' Mass schedule on page 1 of all three bulletins and in the page 4 Mass Times for the Week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 1,
+          "said": "Sunday 10:30am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 1,
+          "said": "Sunday 10:30am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 1,
+          "said": "Sunday 10:30am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 4,
+          "said": "Mass Times for the Week: Saturday 5:30pm; Sunday 7:30am, 10:30am; Thursday 6:45AM St EAS; Friday 9:00 AM St. EAS"
+        },
+        {
+          "source": "history",
+          "bulletin": "f240cad95b18",
+          "said": "weekly mass Sunday 10:30"
+        }
+      ],
+      "rationale": "Printed under St. EAS in the Baldwinsville parishes' Mass schedule on page 1 of all three bulletins and in the page 4 Mass Times for the Week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 1,
+          "said": "Thursday 6:45am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 1,
+          "said": "Thursday 6:45am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 1,
+          "said": "Thursday 6:45am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 4,
+          "said": "Mass Times for the Week: Saturday 5:30pm; Sunday 7:30am, 10:30am; Thursday 6:45AM St EAS; Friday 9:00 AM St. EAS"
+        },
+        {
+          "source": "history",
+          "bulletin": "f240cad95b18",
+          "said": "weekly mass Thursday 06:45"
+        }
+      ],
+      "rationale": "Printed under St. EAS in the Baldwinsville parishes' Mass schedule on page 1 of all three bulletins and in the page 4 Mass Times for the Week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 1,
+          "said": "Friday 9:00am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 1,
+          "said": "Friday 9:00am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 1,
+          "said": "Friday 9:00am – St. EAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 4,
+          "said": "Mass Times for the Week: Saturday 5:30pm; Sunday 7:30am, 10:30am; Thursday 6:45AM St EAS; Friday 9:00 AM St. EAS"
+        },
+        {
+          "source": "history",
+          "bulletin": "f240cad95b18",
+          "said": "weekly mass Friday 09:00"
+        }
+      ],
+      "rationale": "Printed under St. EAS in the Baldwinsville parishes' Mass schedule on page 1 of all three bulletins and in the page 4 Mass Times for the Week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 1,
+          "said": "Prayer and Adoration will precede Mass beginning at 7:30am on Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 1,
+          "said": "Prayer and Adoration will precede Mass beginning at 7:30am on Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 1,
+          "said": "Prayer and Adoration will precede Mass beginning at 7:30am on Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 2,
+          "said": "St. EAS offers adoration on Wednesday from 5 to 7 pm and Friday from 7:30 to 9 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "f240cad95b18",
+          "said": "weekly adoration Friday 07:30-09:00"
+        }
+      ],
+      "rationale": "Printed on page 1 of all three bulletins as preceding the 9:00 Friday Mass from 7:30, and the page 2 'Invitation to Adoration' gives 7:30 to 9 am; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 2,
+          "said": "St. EAS offers adoration on Wednesday from 5 to 7 pm and Friday from 7:30 to 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 2,
+          "said": "Eucharistic Adoration, offered at St. EAS on Wednesday from 5 to 7 and Friday from 7:30 to 9."
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 2,
+          "said": "offered at St. EAS on Wednesday from 5 to 7 pm and Friday from 7:30 to 9 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "f240cad95b18",
+          "said": "weekly adoration Wednesday 17:00-19:00"
+        }
+      ],
+      "rationale": "Stated as St. EAS's regular adoration in the page 2 'Invitation to Adoration' of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 4,
+          "said": "Reconciliation: SEAS: Saturdays at 4:30 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 4,
+          "said": "Reconciliation: SEAS: Saturdays at 4:30 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 4,
+          "said": "Reconciliation: SEAS: Saturdays at 4:30 PM."
+        },
+        {
+          "source": "history",
+          "bulletin": "f240cad95b18",
+          "said": "weekly confession Saturday 16:30"
+        }
+      ],
+      "rationale": "Printed on page 4 of all three bulletins with no end time; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 1,
+          "said": "Saturday 4:00pm – St. Mary; Sunday 9:00am – St. Mary; 10:30am – St. Augustine; Monday 9:00am - St Mary; Tuesday 7:00pm – St. Mary; Wednesday 10:00am – St. Augustine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 1,
+          "said": "Saturday 4:00pm – St. Mary; Sunday 9:00am – St. Mary; 10:30am – St. Augustine; Monday 9:00am - St Mary; Tuesday 7:00pm – St. Mary; Wednesday 10:00am – St. Augustine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "707bc65556cd",
+          "page": 1,
+          "said": "Saturday 4:00pm – St. Mary; Sunday 9:00am – St. Mary; 10:30am – St. Augustine; Monday 9:00am - St Mary; Tuesday 7:00pm – St. Mary; Wednesday 10:00am – St. Augustine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 2,
+          "said": "St Mary's offers adoration on Tuesday from 9 am to 6:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 4,
+          "said": "St Mary's/St Augustine: Tuesday evenings or Wednesday mornings. Check their website for details."
+        }
+      ],
+      "rationale": "The shared Baldwinsville schedule also lists St. Mary of the Assumption (Sat 4pm, Sun 9am, Mon 9am, Tue 7pm, Tue adoration 9am-6:30pm) and St. Augustine (Sun 10:30am, Wed 10am). Both are separate parishes in parishes.csv with their own bulletins, so none of their times belong to this seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 2,
+          "said": "The parishes of St. EAS, St. Mary of the Assumption, and St. Augustine's are offering eucharistic Adoration on a rotating schedule every First Friday. ... On Friday, October 2nd St. EAS will be hosting First Friday adoration from 6 to 10 pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "3c0055e47a48",
+          "said": "specific_date adoration 2026-10-02 18:00-22:00, First Friday Adoration"
+        }
+      ],
+      "rationale": "First Friday adoration rotates among the three Baldwinsville parishes, so it is at St. EAS only some months; the one dated occurrence (Oct 2) is before as_of and the newest bulletin names no next host. A first-Friday weekly slot would be wrong most months, so left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f240cad95b18",
+          "page": 3,
+          "said": "fall workshop at St. Elizabeth Ann Seton on Saturday, October 10th from 9am-3pm ... the day will begin with Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c0055e47a48",
+          "page": 3,
+          "said": "No Daily Masses: ... No Daily Mass on Tuesday, Sept 29th or Wednesday, Sept 30th"
+        }
+      ],
+      "rationale": "The Oct 10 workshop Mass (no clock time beyond the 9am start of a registration event) and the Sept 29/30 cancellations (at St. Mary/St. Augustine) are all before as_of, so nothing dated is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

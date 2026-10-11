@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-clement-saratoga-springs",
+  "status": "approved",
+  "as_of": "2026-10-11T16:28:50Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:45:20Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:10:26Z",
+  "summary": "One church, schedule printed identically on page 1 of all three bulletins (shared Catholic Community of Saratoga Springs bulletin with St. Peter's): daily 8am Mon-Fri, Sat 4pm vigil, Sun 8/10/11:30, Wednesday confession 4:30-5:45 PM. St. Peter's column is left out as a separate parish. No adoration printed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "784b608446039c05bd778a2c51bcfc6db1c0e8e60de16f152e18d7ca642ae302",
+      "fetched_at": "2026-10-11T16:28:50Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d0693dbac25d418369bba03b3a02b5e5661b34864158b1990427e27725a90fd7",
+      "fetched_at": "2026-10-04T14:52:42Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "0b187e341a74e7d830cc6b41c2fee566e5f9017c6b3dde6b841dd4c46f5aea9c",
+      "fetched_at": "2026-09-28T22:02:35Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Mass Intentions list 8:00 am Masses Monday Oct 12 through Friday Oct 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Monday 08:00"
+        }
+      ],
+      "rationale": "Printed in St. Clement's Mass Times box on page 1 of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Mass Intentions list 8:00 am Masses Monday Oct 12 through Friday Oct 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Tuesday 08:00"
+        }
+      ],
+      "rationale": "Printed in St. Clement's Mass Times box on page 1 of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Mass Intentions list 8:00 am Masses Monday Oct 12 through Friday Oct 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Wednesday 08:00"
+        }
+      ],
+      "rationale": "Printed in St. Clement's Mass Times box on page 1 of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Mass Intentions list 8:00 am Masses Monday Oct 12 through Friday Oct 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Thursday 08:00"
+        }
+      ],
+      "rationale": "Printed in St. Clement's Mass Times box on page 1 of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "St. Clement's Parish Mass Times: Monday-Friday 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Mass Intentions list 8:00 am Masses Monday Oct 12 through Friday Oct 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Friday 08:00"
+        }
+      ],
+      "rationale": "Printed in St. Clement's Mass Times box on page 1 of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "Saturday Vigil 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "Saturday Vigil 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "Saturday Vigil 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Saturday, October 17 4:00 pm intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Times box of all three bulletins; intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Sunday, October 18 8am intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Sunday 08:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Times box of all three bulletins; intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Sunday, October 18 10am intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Sunday 10:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Times box of all three bulletins; intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "Sunday 8am, 10am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 4,
+          "said": "Sunday, October 18 11:30am intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Sunday 11:30"
+        }
+      ],
+      "rationale": "Printed in the Mass Times box of all three bulletins; intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-saratoga-springs",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "Reconciliation: Wednesday 4:30-5:45 or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "Reconciliation: Wednesday 4:30-5:45 or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "Reconciliation: Wednesday 4:30-5:45 or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "784b60844603",
+          "said": "weekly Wednesday confession 16:30-17:45"
+        }
+      ],
+      "rationale": "Printed under St. Clement's column in all three bulletins; no AM/PM given but an afternoon time is the only sensible reading; history agrees. 'By appointment' part has no time and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "The Church of St. Peter Mass Times: Tuesday and Friday 8am, Saturday 5pm, Sunday 7:30am, 9am; Reconciliation Saturday 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "The Church of St. Peter Mass Times: Tuesday and Friday 8am, Saturday 5pm, Sunday 7:30am, 9am; Reconciliation Saturday 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "The Church of St. Peter Mass Times: Tuesday and Friday 8am, Saturday 5pm, Sunday 7:30am, 9am; Reconciliation Saturday 4pm"
+        }
+      ],
+      "rationale": "The shared bulletin also prints the Church of St. Peter's column (Tue/Fri 8am, Sat 5pm, Sun 7:30am & 9am, Reconciliation Sat 4pm, Holy Day 12:15pm). St. Peter is its own parish (st-peter-saratoga-springs) with its own bulletin source, so none of it belongs to this seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "784b60844603",
+          "page": 1,
+          "said": "Holy Day of Obligation Mass Time: 8am, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0693dbac25d",
+          "page": 1,
+          "said": "Holy Day of Obligation Mass Time: 8am, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b187e341a74",
+          "page": 1,
+          "said": "Holy Day of Obligation Mass Time: 8am, 6pm"
+        }
+      ],
+      "rationale": "Holy Day Mass times are generic, with no date in the window after as_of (next holy day is Nov 1, a Sunday in 2026, and Dec 8 is not mentioned); nothing weekly to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

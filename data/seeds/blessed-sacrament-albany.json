@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "parish_slug": "blessed-sacrament-albany",
+  "status": "approved",
+  "as_of": "2026-10-11T16:31:30Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:45:20Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:07:59Z",
+  "summary": "One church. The Mass, Reconciliation and Adoration box on page 1 is identical in both bulletins and matches history; first-Saturday 7:30 Adoration/Confession and 9 AM Mass carry weeks_of_month first. The mission Shrine of Our Lady of the Americas is a separate parish and is excluded here; one dated All Souls Mass (Nov 2, 5:30 PM) is included.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4b26e0bb4b85489bef78d997efe7f5df70fc21451e2ec2bacaeb0b2ffadb4b4b",
+      "fetched_at": "2026-10-11T16:31:30Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "673e93e2286409919d9808e6a3c30687b97682cf4f22603f01b661ba6e3b6e08",
+      "fetched_at": "2026-09-28T21:56:04Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "Daily Mass Monday | 7 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "Daily Mass Monday | 7 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Monday 07:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "Tuesday & Thursday | 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "Tuesday & Thursday | 12 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Tuesday 12:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "Wednesday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "Wednesday | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Wednesday 09:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "Tuesday & Thursday | 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "Tuesday & Thursday | 12 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Thursday 12:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "SUNDAY 9 am & 6 pm Urdu"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "SUNDAY 9 am & 6 pm Urdu"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Sunday 09:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Urdu"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "SUNDAY 9 am & 6 pm Urdu"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "SUNDAY 9 am & 6 pm Urdu"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Sunday 18:00 Urdu"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 3,
+          "said": "Every Sunday evening at 6 p.m. at Blessed Sacrament, we offer Mass in Urdu. All are welcome"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Tuesday | 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Tuesday | 12:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Tuesday 12:30"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday | 3 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday | 3 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Saturday 15:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "ADORATION Tuesday | 12:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "ADORATION Tuesday | 12:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Tuesday 12:30"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "1ST SATURDAY OF EACH MONTH Adoration & Reconciliation | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "1ST SATURDAY OF EACH MONTH Adoration & Reconciliation | 7:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Saturday 07:30 1st Saturday"
+        }
+      ],
+      "rationale": "Printed under '1st Saturday of each month' in the schedule box of both bulletins; no end time is given (history's 07:30-09:00 on the older bulletin was inferred from the 9 am Mass), so end_time is left null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "1ST SATURDAY OF EACH MONTH Adoration & Reconciliation | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "1ST SATURDAY OF EACH MONTH Adoration & Reconciliation | 7:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Saturday 07:30 1st Saturday"
+        }
+      ],
+      "rationale": "Printed under '1st Saturday of each month' in the schedule box of both bulletins; no end time is given (history's 07:30-09:00 on the older bulletin was inferred from the 9 am Mass), so end_time is left null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 1,
+          "said": "1ST SATURDAY OF EACH MONTH Mass | 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "673e93e22864",
+          "page": 1,
+          "said": "1ST SATURDAY OF EACH MONTH Mass | 9 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "weekly Saturday 09:00 1st Saturday"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-albany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "All Souls Day Memorial Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 4,
+          "said": "All Souls Day Memorial Mass - We will have Mass on Monday, November 2 @ 5:30 pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "4b26e0bb4b85",
+          "said": "specific_date 2026-11-02 17:30 All Souls Day Memorial Mass"
+        }
+      ],
+      "rationale": "A dated special Mass outside the weekly schedule, after as_of; the newest bulletin prints it at the parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-americas-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 3,
+          "said": "Shrine Church of Our Lady of the Americas, a mission of Blessed Sacrament Parish, 273 Central Ave... Mass Schedule: Sundays, 9a.m. (English) and 11 a.m. (Spanish): Mass & Adoration on the 1a Fridays of each month 6:30 p.m."
+        }
+      ],
+      "rationale": "The mission shrine at 273 Central Ave is its own parish in data/parishes.csv (our-lady-of-the-americas-albany) with its own bulletin; its Sunday 9 & 11 AM Masses and first-Friday 6:30 PM Mass & Adoration belong to that parish's seed, not this one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b26e0bb4b85",
+          "page": 2,
+          "said": "The will be a special Mass at Sacred Heart Church in N. Albany on Monday Oct. 19 ... 6:00 Mass"
+        }
+      ],
+      "rationale": "Held at another parish (Sacred Heart, North Albany); off-site, left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

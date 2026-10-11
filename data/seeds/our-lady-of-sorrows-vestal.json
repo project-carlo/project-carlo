@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-sorrows-vestal",
+  "status": "approved",
+  "as_of": "2026-10-11T16:35:45Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:47:02Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:10:02Z",
+  "summary": "One church with a clear schedule box repeated in all three bulletins: Sat 5:15 PM, Sun 8:30 and 11:30 AM, Tue-Thu 8 AM, Saturday confessions 4-4:45 PM and Wednesday adoration 8:30-9:30 AM. A Confirmation Mass on Sun 18 Oct at 2 PM is added as dated; nursing-home Masses and Communion Services are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fde15e3ed8da8b04c58714dd5c433d74f18ea3ce48f0f31531f1d4e80e9fc8f9",
+      "fetched_at": "2026-10-11T16:35:45Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "9fab18a5d6828c69b72cff8c6f42cd25533a2efd6ec5c7c6b742f0179528be35",
+      "fetched_at": "2026-10-04T14:37:30Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "9096d989735c3f1a466a0bf8e3cce92b63589b3048523efa29ca8d45961d0c10",
+      "fetched_at": "2026-09-28T00:08:39Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 1,
+          "said": "Mass Times: Saturday Vigil 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 1,
+          "said": "Saturday Vigil 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9096d989",
+          "page": 1,
+          "said": "Saturday Vigil 5:15 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "weekly Saturday 17:15"
+        }
+      ],
+      "rationale": "Mass Times box of all three bulletins; also the parish calendar and intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 1,
+          "said": "Sunday 8:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 1,
+          "said": "Sunday 8:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9096d989",
+          "page": 1,
+          "said": "Sunday 8:30 am & 11:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "weekly Sunday 08:30"
+        }
+      ],
+      "rationale": "Mass Times box of all three bulletins (8:30 am); calendar agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 1,
+          "said": "Sunday 8:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 1,
+          "said": "Sunday 8:30 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9096d989",
+          "page": 1,
+          "said": "Sunday 8:30 am & 11:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "weekly Sunday 11:30"
+        }
+      ],
+      "rationale": "Mass Times box of all three bulletins (11:30 am); calendar agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 6,
+          "said": "Daily Mass (Church) Tuesday-Thursday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9096d989",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "weekly Tuesday 08:00"
+        }
+      ],
+      "rationale": "Daily Mass box of all three bulletins, Tuesday through Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 6,
+          "said": "Daily Mass (Church) Tuesday-Thursday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9096d989",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "weekly Wednesday 08:00"
+        }
+      ],
+      "rationale": "Daily Mass box of all three bulletins, Tuesday through Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 6,
+          "said": "Daily Mass (Church) Tuesday-Thursday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9096d989",
+          "page": 1,
+          "said": "Daily Mass Tuesday - Thursday 8:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "weekly Thursday 08:00"
+        }
+      ],
+      "rationale": "Daily Mass box of all three bulletins, Tuesday through Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 1,
+          "said": "Reconciliation Saturday 4pm-4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 1,
+          "said": "Saturday 4pm-4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9096d989",
+          "page": 1,
+          "said": "Saturday 4 pm-4:45 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "weekly Saturday confession 16:00-16:45"
+        }
+      ],
+      "rationale": "Reconciliation box of all three bulletins; calendar lists 4-4:45pm Confessions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 1,
+          "said": "Adoration Wednesday 8:30 - 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 6,
+          "said": "Wednesday, October 14: 8:30am Adoration & Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 1,
+          "said": "Adoration Wednesday 8:30 - 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 6,
+          "said": "Adoration & Divine Mercy (Wednesday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "weekly Wednesday adoration 08:30-09:30 Divine Mercy"
+        }
+      ],
+      "rationale": "In the schedule box of the two newest bulletins (not the 27 Sep one, whose box omits it) and in their parish calendars, after the Wednesday 8 AM Mass at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-18",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Confirmation"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 5,
+          "said": "Sunday, October 18 2:00pm (Confirmation) The People of Our Lady of Sorrows & Prince of Peace Parishes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 6,
+          "said": "Sunday, October 18 2:00pm Confirmation with Reception following in the Cafe"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "specific_date 2026-10-18 14:00 Confirmation"
+        }
+      ],
+      "rationale": "A Confirmation Mass at the church outside the weekly schedule, after as_of: dated. It is listed in the public Mass intentions with no restriction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-vestal",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Willow Point"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 5,
+          "said": "Wednesday, October 14 10:30am (Willow Point) The People of OLS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fde15e3e",
+          "page": 6,
+          "said": "10:30am Mass at Willow Point"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9fab18a5",
+          "page": 6,
+          "said": "Mass at Vestal Park (Wed 7 Oct)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fde15e3e",
+          "said": "specific_date 2026-10-14 10:30 at Willow Point"
+        }
+      ],
+      "rationale": "Off-site: Willow Point and Vestal Park are nursing homes the parish rotates Wednesday 10:30 Masses through, not the church. Also excluded: Communion Services at Vestal Park, Willow Point and Castle Gardens (not Masses, and off-site).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

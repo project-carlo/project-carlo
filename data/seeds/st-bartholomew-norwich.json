@@ -1,0 +1,480 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bartholomew-norwich",
+  "status": "approved",
+  "as_of": "2026-10-11T16:30:38Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:45:23Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:33:31Z",
+  "summary": "One church, in a cluster with St. Paul, St. Malachy and St. Theresa. Saturday 4:00 PM vigil runs October-March only (in September the vigil was at St. Paul), Sunday 8:30 AM, Tuesday 9:00 AM daily Mass, Saturday confessions 3:15-3:45 PM. The newest bulletin announces a new daily Mass rotation from the first week of November (Monday 9 AM at St. Bartholomew, Tuesday moves to St. Malachy): two open questions on how to seed that.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "40be6c670e609c4f53e9f308f26123094b00b15ba4d84e6d6396a5e0da1bc75b",
+      "fetched_at": "2026-10-11T16:30:38Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "51e3f0be0a20683cc4985ad807f85edc7c8be44dc0f1d25b926d47c30a0da3e6",
+      "fetched_at": "2026-10-04T14:40:23Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "02a41f204ed507d3aeb772706cad4f462456f6674b464099cd00682437626532",
+      "fetched_at": "2026-09-28T00:11:09Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 3,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 1,
+          "said": "LORD'S DAY MASSES Saturday (Vigil) 4:00 p.m. (October - March)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51e3f0be",
+          "page": 1,
+          "said": "Saturday (Vigil) 4:00 p.m. (October - March)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02a41f20",
+          "page": 2,
+          "said": "Saturday, September 26th ... 4:00 PM Mass at St. Paul"
+        },
+        {
+          "source": "history",
+          "bulletin": "40be6c67",
+          "said": "weekly Saturday 16:00 'October - March'"
+        }
+      ],
+      "rationale": "Printed in the schedule box of all three bulletins with the season October-March; the September 26 intentions put that Saturday's vigil at St. Paul, consistent with the season. Mass intentions list 4:00 PM on Oct 3, 10 and 17.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 1,
+          "said": "Sunday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "51e3f0be",
+          "page": 1,
+          "said": "Sunday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "02a41f20",
+          "page": 1,
+          "said": "Sunday 8:30 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "40be6c67",
+          "said": "weekly Sunday 08:30"
+        }
+      ],
+      "rationale": "Printed in the schedule box and the Mass intentions of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 2,
+          "said": "Confessions are heard on Saturdays from 3:15 - 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "51e3f0be",
+          "page": 2,
+          "said": "Confessions are heard on Saturdays from 3:15 - 3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "40be6c67",
+          "said": "weekly Saturday 15:15-15:45"
+        }
+      ],
+      "rationale": "Printed as a standing notice on page 2 of the two newest bulletins (not in the Sept 27 one). Page 1 still says 'Sacrament of Reconciliation: please call the office', which is the by-appointment option and doesn't contradict the Saturday time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 1,
+          "said": "WEEKDAY LITURGIES Mass: Tuesdays at 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "51e3f0be",
+          "page": 2,
+          "said": "Tuesday, October 6 ... 9:00 AM John Taranto by daughters"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 2,
+          "said": "Starting the first week of November, the following is the daily Mass schedule: Monday - St. Bartholomew, Tuesday - St. Malachy, Wednesday - St. Theresa, Friday - St. Paul. All Mass times are 9 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "40be6c67",
+          "said": "weekly Tuesday 09:00"
+        }
+      ],
+      "rationale": "Tuesday 9:00 AM is the current printed weekday Mass (Oct 6 held; Oct 13 cancelled; the pastor is away Oct 19-23 too). From the first week of November the rotation moves Tuesday to St. Malachy, so this slot likely ends within weeks. Leaning include: it is the schedule as printed today, and update mode should drop it when the November bulletins print the new box; leave it out if the seed is approved in November or later.",
+      "question": "Keep the Tuesday 9:00 AM Mass at St. Bartholomew, which the newest bulletin says moves to St. Malachy from the first week of November?",
+      "options": [
+        {
+          "label": "Include Tuesday 9:00 AM (current schedule)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-bartholomew-norwich",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out (ends in November)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T21:33:09Z"
+      }
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 2,
+          "said": "Starting the first week of November, the following is the daily Mass schedule: Monday - St. Bartholomew ... All Mass times are 9 AM"
+        }
+      ],
+      "rationale": "Announced once, in the newest bulletin, as the daily schedule from the first week of November; not yet in the page 1 schedule box. A seed can't hold a start date for a weekly slot. Leaning leave out: update mode adds it when the November bulletins print it; include it if the seed is approved after it has started.",
+      "question": "Add the Monday 9:00 AM daily Mass at St. Bartholomew that starts the first week of November?",
+      "options": [
+        {
+          "label": "Leave out for now (update mode adds it in November)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Include Monday 9:00 AM",
+          "entry": {
+            "church_slug": "st-bartholomew-norwich",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T21:33:15Z"
+      }
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 2,
+          "said": "Tuesday, October 13th NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "40be6c67",
+          "said": "2026-10-13 09:00 CANCELLED"
+        }
+      ],
+      "rationale": "The Mass intentions call off the Tuesday Mass on Oct 13 (Fr. Dan not available Oct 13-16). If the Tuesday slot is left out, this cancellation is moot. The bulletin also says he is away Oct 19-23 but doesn't list that week's Masses, so no Oct 20 cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02a41f20",
+          "page": 1,
+          "said": "Mass: Tuesday and Thursday at 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "51e3f0be",
+          "page": 1,
+          "said": "Mass: Tuesdays at 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 1,
+          "said": "Mass: Tuesdays at 9:00 a.m."
+        }
+      ],
+      "rationale": "Thursday 9:00 AM was in the Sept 27 schedule box but was dropped from the two newer ones, and the Oct 8 and Oct 15 intentions say NO MASS.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 2,
+          "said": "Monday, October 12th, Columbus Day 5:30 PM Mass at St. Theresa's Church"
+        }
+      ],
+      "rationale": "Off-site: the cluster's weekday Masses at St. Theresa's, St. Paul and St. Malachy are listed in St. Bartholomew's intentions (Mon 5:30 PM St. Theresa, Wed 9 AM St. Paul, Fri 9 AM St. Malachy in the Oct 4 bulletin) but are not at this church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 1,
+          "said": "HOLY DAY MASSES 5:30 p.m. Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Please call the office at 607-337-2215"
+        }
+      ],
+      "rationale": "Holy day vigil time has no date (no holy day within the bulletin's weeks); reconciliation by calling the office has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "100th anniversary Mass with Bishop Lucia"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40be6c67",
+          "page": 3,
+          "said": "Anniversary Mass at 4 PM on October 24th with Bishop Lucia"
+        },
+        {
+          "source": "history",
+          "bulletin": "02a41f20",
+          "said": "2026-10-24 16:00 Special Anniversary Mass with Bishop Lucia"
+        }
+      ],
+      "rationale": "Celebrated at the regular Saturday 4:00 PM vigil, so per policy only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
