@@ -4,11 +4,18 @@
  * "Review in the labeler") and src/pdf_extract/seeding/files.py, which the
  * server validates every save against.
  */
-import type { EditorRow, SeedAnswer, SeedEntry, SeedFile, SeedSlot, SeedStatus } from "../types";
+import type { EditorRow, SeedAnswer, SeedEntry, SeedFile, SeedQueueRow, SeedSlot, SeedStatus } from "../types";
 import { formatDate } from "./dates";
 import { describeSeason, describeWeeks } from "./pattern";
 import { newId } from "./rows";
 import { formatTime } from "./time";
+
+/** Ready seeds first, then questions; continue after the current parish and wrap. */
+export function nextSeedToReview(seeds: readonly SeedQueueRow[], currentParish?: string): SeedQueueRow | undefined {
+  const index = seeds.findIndex((s) => s.parish_slug === currentParish);
+  const candidates = index < 0 ? seeds : [...seeds.slice(index + 1), ...seeds.slice(0, index)];
+  return candidates.find((s) => s.status === "ready") ?? candidates.find((s) => s.status === "needs_review");
+}
 
 function answer(choice: SeedAnswer["choice"], by: string): SeedAnswer {
   return { choice, by, at: new Date().toISOString().replace(/\.\d{3}Z$/, "Z") };

@@ -3,7 +3,7 @@ import { api, pdfUrl } from "../api";
 import { PdfViewer, type ScrollRequest } from "../components/PdfViewer";
 import { RowEditor } from "../components/RowEditor";
 import { formatDate } from "../lib/dates";
-import { SEEDS_HREF } from "../lib/route";
+import { navigate, seedHref, SEEDS_HREF } from "../lib/route";
 import { asDated, editRow, rowProblems } from "../lib/rows";
 import {
   approve,
@@ -14,6 +14,7 @@ import {
   fromEditorRow,
   isOpen,
   newestReadBulletin,
+  nextSeedToReview,
   openCount,
   reopenSlot,
   replaceSlot,
@@ -95,6 +96,8 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   const [seed, setSeed] = useState<SeedFile>(initial.seed);
   const [message, setMessage] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  const [advancing, setAdvancing] = useState(false);
+  const advancingRef = useRef(false);
   // Saves go one at a time: each sends the whole file, so two in flight could
   // land out of order. A ref, so keys pressed before a re-render see it too.
   const savingRef = useRef(false);
@@ -146,6 +149,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   const canAct = (): boolean => {
     let why: string | null = null;
     if (savingRef.current) why = "Still saving the last change; try again in a moment.";
+    else if (advancingRef.current) why = "Still finding the next seed; try again in a moment.";
     else if (drafting) why = "A subagent is still drafting this parish.";
     else if (!reviewer) why = "Type your name as the reviewer first.";
     if (why) setMessage(why);
@@ -164,6 +168,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   const drop = (slot: SeedSlot) => act(slot, (s) => dropSlot(s, reviewer), "");
   const reopen = (slot: SeedSlot) => act(slot, (s) => reopenSlot(s), "This slot was left out with no entry to include.");
   const startEdit = (slot: SeedSlot) => {
+    if (advancingRef.current) return;
     const entry = slot.entry ?? slot.options?.find((o) => o.leaning && o.entry)?.entry ?? slot.options?.find((o) => o.entry)?.entry;
     if (!entry) return setMessage("This slot has no entry to edit.");
     setEditing({ slotId: slot.id, row: toEditorRow(entry, slot.page) });
@@ -184,6 +189,24 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
     const next = approve(seed, reviewer);
     if (!next) return setMessage("Answer every open question first.");
     save(next);
+  };
+
+  const goNext = async () => {
+    if (savingRef.current || advancingRef.current || editing) return;
+    advancingRef.current = true;
+    setAdvancing(true);
+    setMessage(null);
+    try {
+      const { seeds } = await api.seeds();
+      const next = nextSeedToReview(seeds, parish);
+      if (next) navigate(seedHref(next.parish_slug));
+      else setMessage("No other seeds are ready to approve or need review.");
+    } catch (e) {
+      setMessage(`Could not find the next seed: ${(e as Error).message}`);
+    } finally {
+      advancingRef.current = false;
+      setAdvancing(false);
+    }
   };
 
   const showSource = (hash: string | null, page: number | null | undefined) => {
@@ -305,12 +328,21 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
             </label>
             <button
               className="btn-primary"
-              disabled={n_open > 0 || drafting || seed.status === "approved" || seed.status === "blocked" || saving}
+              disabled={n_open > 0 || drafting || seed.status === "approved" || seed.status === "blocked" || saving || advancing}
               onClick={doApprove}
               title={n_open ? `${n_open} questions still open` : "Approve: the next pipeline command loads it once merged"}
               data-testid="approve"
             >
               {seed.status === "approved" ? "Approved" : "Approve"}
+            </button>
+            <button
+              className="btn"
+              disabled={saving || advancing || !!editing}
+              onClick={goNext}
+              title="Open the next ready-to-approve seed, then seeds needing review"
+              data-testid="next-seed"
+            >
+              {advancing ? "Finding next…" : "Next to review →"}
             </button>
           </div>
           {seed.summary && <p className="text-sm text-slate-700">{seed.summary}</p>}
