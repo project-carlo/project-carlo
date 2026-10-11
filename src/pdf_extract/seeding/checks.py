@@ -9,7 +9,10 @@ database (docs/seeding-plan.md, "Tools"):
 - no two included entries share a slot;
 - the dated entries a seed holds are on or after its `as_of` date;
 - the file's bulletins are the parish's, and `as_of` is the fetch time of the
-  newest one the agent read (in a test run, of the labeled bulletin).
+  newest one the agent read (in a test run, of the labeled bulletin);
+- the newest listed bulletin is marked read, and an agent's settled inclusions
+  cite its own reading there at their page (reviewer answers may include older slots);
+- a historical eval contains no live website evidence.
 """
 
 from __future__ import annotations
@@ -20,11 +23,14 @@ from typing import Any
 from pdf_extract.schedule.entries import UNKNOWN_CHURCH, EntryError, parse_entry
 from pdf_extract.schedule.store import normalize_as_of, parish_churches
 from pdf_extract.seeding.files import (
+    AGENT,
     BLOCKED,
     DRAFTING,
     INCLUDE,
     NEEDS_HUMAN,
+    WEBSITE,
     newest_read_bulletin,
+    resolve_hash,
     validate_seed,
 )
 
@@ -55,6 +61,7 @@ def check_seed(
     parish_slug: str,
     cutoff: str | None = None,
     check_bulletins: bool = True,
+    check_evidence: bool = True,
 ) -> list[str]:
     """Every problem with a seed file (empty when it can be reviewed and loaded).
 
@@ -62,6 +69,8 @@ def check_seed(
     last step of a draft. `check_bulletins` off skips comparing the file's
     bulletins with the database's, for a database that may not hold them all
     (the loader resolves what it can and needs only the entries).
+    `check_evidence` off trusts a person's already-approved decisions: newer
+    drafting evidence rules must not prevent previously approved seeds loading.
     """
     problems = validate_seed(seed, parish_slug=parish_slug)
     if problems:
@@ -77,11 +86,37 @@ def check_seed(
         return problems
 
     churches = parish_churches(conn, parish_id)
+    newest = newest_read_bulletin(seed)
+    latest = max(seed["bulletins"], key=lambda b: normalize_as_of(b["fetched_at"]), default=None)
+    if check_evidence and latest is not None and not latest["read"]:
+        problems.append(
+            f"newest listed bulletin {latest['content_hash'][:12]} must be marked read: "
+            "use `pnpm seed mark-read` after reading it, even when no slot cites it"
+        )
     as_of_date = normalize_as_of(seed["as_of"])[:10] if seed["as_of"] else None
     slots_by_identity: dict[str, str] = {}
     for i, slot in enumerate(seed["slots"]):
         where = f"slots[{i}] ({slot['id']})"
         included = slot["decision"] == INCLUDE and slot["status"] != NEEDS_HUMAN
+        if check_evidence and included and slot["answer"] is None:
+            # A reviewer may explicitly include an older/website-backed option.
+            # An agent's settled inclusion needs its own reading of the anchor PDF.
+            anchored = newest is not None and slot["page"] is not None and any(
+                source.get("source") == AGENT
+                and resolve_hash(seed, source.get("bulletin")) == newest["content_hash"]
+                and source.get("page") == slot["page"]
+                for source in slot["sources"]
+            )
+            if not anchored:
+                problems.append(
+                    f"{where}: a settled inclusion needs an agent source on the newest "
+                    "bulletin at its page; otherwise leave it needs_human with page null"
+                )
+        if cutoff is not None and any(s.get("source") == WEBSITE for s in slot["sources"]):
+            problems.append(
+                f"{where}: website sources are not allowed in a historical test run; "
+                "use only bulletins and history within its cutoff"
+            )
         if slot["entry"] is not None:
             problem = _entry_problem(
                 slot["entry"], churches, f"{where}.entry", outside_ok=not included,
@@ -112,7 +147,6 @@ def check_seed(
                 if problem:
                     problems.append(problem)
 
-    newest = newest_read_bulletin(seed)
     if seed["as_of"] is not None:
         as_of = normalize_as_of(seed["as_of"])
         if newest is None:

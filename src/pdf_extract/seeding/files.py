@@ -118,6 +118,23 @@ def read_seed(parish_slug: str, seeds_dir: Path = SEEDS_DIR) -> dict[str, Any] |
     return data
 
 
+def drafting_slugs(seeds_dir: Path = SEEDS_DIR) -> set[str]:
+    """Unfinished drafts to offer again with `seed pick --resume`.
+
+    Malformed files are reported by `seed check --all`, rather than assigned
+    automatically to a new writer.
+    """
+    slugs = set()
+    for slug in seed_slugs(seeds_dir):
+        try:
+            seed = read_seed(slug, seeds_dir)
+        except SeedFileError:
+            continue
+        if seed is not None and seed.get("status") == DRAFTING:
+            slugs.add(slug)
+    return slugs
+
+
 def write_seed_file(seed: dict[str, Any], seeds_dir: Path = SEEDS_DIR) -> Path:
     """Write a seed file as it is (callers validate first). Returns its path."""
     path = seed_path(seed["parish_slug"], seeds_dir)

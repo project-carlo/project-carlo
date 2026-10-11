@@ -1,7 +1,8 @@
 """`python -m pdf_extract seed ...` (`pnpm seed ...`): the seeding agent's tools.
 
-    seed pick      [--limit N] [--diocese D] [--labeled --eval RUN]
-    seed init      <parish>
+    seed pick      [--limit N] [--diocese D] [--labeled --eval RUN] [--resume]
+    seed init      <parish> [--resume]
+    seed mark-read <parish> <bulletin>
     seed brief     <parish>
     seed bulletins <parish> [--limit N]
     seed pdf       <parish> <bulletin>
@@ -65,6 +66,9 @@ def _connect():
 
 
 def _ctx(args: argparse.Namespace) -> SeedContext:
+    if args.seed_command == "pick":
+        # `pick --labeled` creates the manifest that other commands require.
+        return SeedContext()
     return SeedContext.for_run(getattr(args, "eval", None))
 
 
@@ -86,25 +90,55 @@ def _pick(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     if args.labeled:
         if not args.eval:
             raise SeedError("--labeled starts a test run: name it with --eval RUN")
-        return queries.start_eval_run(conn, args.eval, limit=args.limit)
+        return queries.start_eval_run(conn, args.eval, limit=args.limit, resume=args.resume)
     if args.eval:
         raise SeedError("--eval with pick needs --labeled")
-    return queries.pick(conn, limit=args.limit, diocese=args.diocese, seeds_dir=ctx.seeds_dir)
+    return queries.pick(conn, limit=args.limit, diocese=args.diocese, seeds_dir=ctx.seeds_dir,
+                        resume=args.resume)
 
 
 def _init(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     queries.parish_row(conn, args.parish)
-    if read_seed(args.parish, ctx.seeds_dir) is not None:
+    seed = read_seed(args.parish, ctx.seeds_dir)
+    resumed = seed is not None
+    if resumed and not args.resume:
         raise SeedError(f"{seed_path(args.parish, ctx.seeds_dir)} exists already "
-                        f"(`pnpm seed brief {args.parish}` prints where it starts from)")
-    seed = load_or_start(conn, ctx, args.parish)
-    path = write_seed_file(seed, ctx.seeds_dir)
+                        f"(use `pnpm seed init {args.parish} --resume` to continue, or "
+                        f"`pnpm seed brief {args.parish}` to inspect it)")
+    if resumed:
+        if seed.get("status") == APPROVED:
+            raise SeedError("An approved seed belongs to its reviewer; it cannot be resumed")
+        ctx.cutoff(args.parish)
+        path = seed_path(args.parish, ctx.seeds_dir)
+    else:
+        seed = load_or_start(conn, ctx, args.parish)
+        path = write_seed_file(seed, ctx.seeds_dir)
     held = queries.stored_pdfs(args.parish)
     stored = [b["content_hash"][:12] for b in seed["bulletins"]
               if held is None or b["content_hash"] in held]
     return {"parish": args.parish, "path": Path(os.path.relpath(path)).as_posix(),
             "bulletins": len(seed["bulletins"]), "stored": stored,
-            "brief": _brief(conn, ctx, args)}
+            "resumed": resumed, "brief": _brief(conn, ctx, args)}
+
+
+def _mark_read(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    seed = read_seed(args.parish, ctx.seeds_dir)
+    if seed is None:
+        raise SeedError(f"{args.parish} has no seed file: start one with `pnpm seed init`")
+    if seed.get("status") == APPROVED:
+        raise SeedError("An approved seed belongs to its reviewer; it cannot be changed")
+    bulletin = queries.resolve_bulletin(
+        conn, args.parish, args.bulletin, cutoff=ctx.cutoff(args.parish),
+    )
+    listed = next((b for b in seed["bulletins"]
+                   if b["content_hash"] == bulletin["content_hash"]), None)
+    if listed is None:
+        listed = {k: bulletin[k] for k in ("content_hash", "fetched_at", "published_date")}
+        seed["bulletins"].append(listed)
+        seed["bulletins"].sort(key=lambda b: b["fetched_at"], reverse=True)
+    listed["read"] = True
+    write_seed_file(seed, ctx.seeds_dir)
+    return {"parish": args.parish, "bulletin": bulletin["content_hash"], "read": True}
 
 
 def _brief(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
@@ -173,24 +207,31 @@ def _ask(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 
 def _finalize(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     warnings: dict[str, list[str]] = {}
+    errors: dict[str, str] = {}
     for slug in args.parish:
-        seed = read_seed(slug, ctx.seeds_dir)
-        if seed is None:
-            continue  # the check below reports it
-        parish = queries.parish_row(conn, slug)
-        churches = sorted(parish_churches(conn, parish["id"]))
-        past = queries.recent_history(conn, slug, cutoff=ctx.cutoff(slug))
-        seed = {**finalize_seed(seed, churches, past), "parish_slug": slug}
-        write_seed_file(seed, ctx.seeds_dir)
-        if seed.get("status") not in (APPROVED, BLOCKED):
-            # An omission is what update mode is worst at recovering from: say so, but
-            # as a warning, since history is a hint and may be wrong.
-            found = diff(seed, past)
-            warnings[slug] = [missing_warning(row, len(found["bulletins"]))
-                              for row in found["missing"]]
+        try:
+            seed = read_seed(slug, ctx.seeds_dir)
+            if seed is None:
+                continue  # the check below reports it
+            parish = queries.parish_row(conn, slug)
+            churches = sorted(parish_churches(conn, parish["id"]))
+            past = queries.recent_history(conn, slug, cutoff=ctx.cutoff(slug))
+            seed = {**finalize_seed(seed, churches, past), "parish_slug": slug}
+            write_seed_file(seed, ctx.seeds_dir)
+            if seed.get("status") not in (APPROVED, BLOCKED):
+                # History is a hint, so uncovered events are warnings, not failures.
+                found = diff(seed, past)
+                warnings[slug] = [missing_warning(row, len(found["bulletins"]))
+                                  for row in found["missing"]]
+        except (SeedFileError, SeedError, ValueError, TypeError, KeyError) as exc:
+            errors[slug] = f"could not finalize: {exc}"
+            continue
     result = _check(conn, ctx, args)
     for f in result["files"]:
         f["warnings"] = warnings.get(f["parish"], [])
+        if f["parish"] in errors:
+            f["problems"].append(errors[f["parish"]])
+    result["passed"] = all(not f["problems"] for f in result["files"])
     return result
 
 
@@ -200,11 +241,16 @@ def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
         raise SeedError("Name the parishes to check, or pass --all")
     files = []
     for slug in slugs:
-        seed = read_seed(slug, ctx.seeds_dir)
+        try:
+            seed = read_seed(slug, ctx.seeds_dir)
+            cutoff = ctx.cutoff(slug)
+        except (SeedFileError, SeedError) as exc:
+            files.append({"parish": slug, "status": "invalid", "problems": [str(exc)]})
+            continue
         if seed is None:
             files.append({"parish": slug, "status": None, "problems": ["no seed file"]})
             continue
-        problems = check_seed(conn, seed, parish_slug=slug, cutoff=ctx.cutoff(slug))
+        problems = check_seed(conn, seed, parish_slug=slug, cutoff=cutoff)
         summary = SeedSummary.of(slug, seed)
         files.append({
             "parish": slug, "status": summary.status,
@@ -393,7 +439,8 @@ def _text_score(r: Result) -> str:
 
 
 def _text_init(r: Result) -> str:
-    text = f"{r['path']}: a draft listing {r['bulletins']} bulletins"
+    state = "resumed draft" if r["resumed"] else "a draft"
+    text = f"{r['path']}: {state} listing {r['bulletins']} bulletins"
     if len(r["stored"]) < r["bulletins"]:
         text += (f"; only {len(r['stored'])} have a stored PDF to read "
                  f"({', '.join(r['stored']) or 'none'}), the rest only history")
@@ -501,10 +548,18 @@ def add_seed_parser(
     p.add_argument("--diocese", help="Only this diocese's parishes")
     p.add_argument("--labeled", action="store_true",
                    help="The labeled parishes instead, for a test run (with --eval RUN)")
+    p.add_argument("--resume", action="store_true", help="Also offer unfinished drafts")
 
     p = leaf("init", "Start a parish's seed file, and print where it starts from",
              _with_conn(_init), _text_init)
     parish(p)
+    p.add_argument("--resume", action="store_true",
+                   help="Continue an existing draft, preserving its decisions and calls")
+
+    p = leaf("mark-read", "Record a bulletin read, even when no slot cites it",
+             _with_conn(_mark_read), lambda r: f"{r['parish']}: {r['bulletin'][:12]} marked read")
+    parish(p)
+    bulletin(p)
 
     p = leaf("brief", "A parish's churches, website, bulletins, history and newest PDF",
              _with_conn(_brief), _text_brief)
@@ -551,7 +606,7 @@ def add_seed_parser(
                    help="The newest N processed bulletins (default: those with a stored PDF)")
 
     p = leaf("church", "Look a church up by slug, name, town or address", _with_conn(_church),
-             _text_church, eval_run=False)
+             _text_church)
     p.add_argument("query", help="Any part of a slug, name, town or address")
 
     p = leaf("extract", "A full extraction by an external model (cached, recorded)",
