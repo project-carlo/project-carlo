@@ -82,7 +82,74 @@ dashboard → My Profile → API Tokens. Use a separate token from the deploy on
 Count with `SUM(_sample_interval)`, not `COUNT()`. Count visits with
 `SUM(_sample_interval * double1)` on pageviews. See the
 [SQL reference](https://developers.cloudflare.com/analytics/analytics-engine/sql-reference/)
-for the dialect. The same SQL API also works from Grafana if you want dashboards.
+for the dialect. The reports themselves live in
+`apps/web/src/lib/analyticsReports.ts`, shared with the dashboard below.
+
+## The dashboard
+
+The same reports are on a web page at
+[projectcarlo.com/admin/analytics](https://projectcarlo.com/admin/analytics),
+laid out for a phone: totals, visits by day, then each ranked report, with
+7, 30 and 90 day periods and a picker for preview hosts. The page reads
+`/api/admin/analytics`, where the Worker runs the queries with its own read
+token. The dashboard's own views are not recorded.
+
+Two locks keep it private:
+
+1. **Cloudflare Access** stands in front of both paths and lets in only the
+   people its policy names, after a one-time code by email.
+2. **The Worker checks Access's sign-in itself.** It verifies the
+   `Cf-Access-Jwt-Assertion` token against the Access application's
+   audience tag before it answers (`src/lib/accessAuth.ts`). Access on
+   projectcarlo.com doesn't cover the Worker's workers.dev and preview URLs,
+   so the check is what keeps those closed. Without the settings below, the
+   endpoint answers 503 and never the data.
+
+### Setting it up (once)
+
+1. **A read token.** Create one under My Profile → API Tokens with
+   **Account → Account Analytics → Read**, as for `pnpm analytics` (the same
+   token works). Never the deploy token.
+2. **An Access application.** In the Cloudflare dashboard, open Zero Trust →
+   Access → Applications → Add an application → Self-hosted. Add two public
+   hostnames on `projectcarlo.com`, one with path `admin/analytics` and one
+   with path `api/admin/*`. Add a policy with action Allow that includes your
+   email address, and turn on the One-time PIN login method if no other is
+   set up. Save it, then copy the application's **Application Audience (AUD)
+   tag** from its overview. Your **team domain** (`<team>.cloudflareaccess.com`)
+   is under Zero Trust → Settings → Team name and domain.
+3. **The Worker's secrets.** From `apps/web`, set each one. Secrets survive
+   deploys, which plain vars in `wrangler.jsonc` would overwrite.
+
+   ```bash
+   pnpm exec wrangler secret put CLOUDFLARE_ACCOUNT_ID
+   pnpm exec wrangler secret put ANALYTICS_API_TOKEN   # the read token
+   pnpm exec wrangler secret put ACCESS_TEAM_DOMAIN    # <team>.cloudflareaccess.com
+   pnpm exec wrangler secret put ACCESS_AUD            # the AUD tag
+   ```
+
+4. **On your phone**, open projectcarlo.com/admin/analytics, sign in with the
+   emailed code, and add the page to your home screen. When the sign-in
+   lapses (24 hours by default, set on the Access application), the page asks
+   you to sign in again.
+
+A dashboard load runs 11 queries, well inside Workers Free's 50 subrequests
+per invocation and 10,000 SQL API queries a day.
+
+### Trying it locally
+
+Put the read token in `apps/web/.dev.vars` (gitignored):
+
+```bash
+CLOUDFLARE_ACCOUNT_ID=...
+ANALYTICS_API_TOKEN=...
+ANALYTICS_DASHBOARD_LOCAL=1
+```
+
+Then run `pnpm preview` and open
+<http://localhost:8787/admin/analytics?host=projectcarlo.com>.
+`ANALYTICS_DASHBOARD_LOCAL` skips Access only for requests to `localhost` or
+`127.0.0.1`, which no request through Cloudflare can be.
 
 ## Adding an event
 

@@ -617,8 +617,10 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 
 The site records pageviews and a few actions (search picks, filters, bulletin
 clicks) itself, in Cloudflare Workers Analytics Engine: no cookies, no third
-party. `pnpm analytics` prints a report. See [docs/analytics.md](docs/analytics.md)
-for what's recorded, the token the report needs, and how to add an event.
+party. `pnpm analytics` prints a report, and `/admin/analytics` shows the same
+reports as a page you can open on a phone, behind Cloudflare Access. See
+[docs/analytics.md](docs/analytics.md) for what's recorded, the tokens and
+Access setup they need, and how to add an event.
 
 ## Believed schedules (update mode)
 

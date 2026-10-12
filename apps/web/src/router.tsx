@@ -9,6 +9,7 @@ import { LandingPage } from "./views/LandingPage";
 import { NotFoundPage } from "./views/NotFoundPage";
 import { RouteError } from "./views/RouteError";
 import { isAboutPageEnabled } from "./lib/featureFlags";
+import { ANALYTICS_DASHBOARD_PATH } from "./lib/analyticsReports";
 
 const lazyPageFallback = (
   <main className="flex min-h-svh items-center justify-center bg-paper px-4">
@@ -64,6 +65,14 @@ function routes(queryClient: QueryClient): RouteObject[] {
         await prefetchCityPage(queryClient, params.citySlug);
         return null;
       },
+    },
+    {
+      // Behind Cloudflare Access (docs/analytics.md); linked from nowhere.
+      path: ANALYTICS_DASHBOARD_PATH,
+      lazy: () =>
+        import("./views/AnalyticsDashboardPage").then((m) => ({
+          Component: m.AnalyticsDashboardPage,
+        })),
     },
   ];
 

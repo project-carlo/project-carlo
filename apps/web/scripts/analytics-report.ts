@@ -1,7 +1,8 @@
 /**
  * Prints what visitors did on the site, from the Analytics Engine dataset the
  * Worker writes (see docs/analytics.md): visits and pageviews by day, the top
- * pages, where visitors came from, and what they did.
+ * pages, where visitors came from, and what they did. The reports are shared
+ * with the dashboard at /admin/analytics (src/lib/analyticsReports.ts).
  *
  *   pnpm analytics                       # the last 7 days on projectcarlo.com
  *   pnpm analytics --days 30
@@ -14,12 +15,15 @@
 import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { parseArgs } from "node:util";
+import {
+  analyticsReports,
+  parseReportOptions,
+  queryAnalytics,
+  type AnalyticsRow,
+} from "../src/lib/analyticsReports";
 import { SITE_ORIGIN } from "../src/lib/seo";
 
-const DATASET = "project_carlo_events";
 const ROOT_ENV = resolve(import.meta.dirname, "..", "..", "..", ".env");
-
-type Row = Record<string, string | number>;
 
 const { values } = parseArgs({
   options: {
@@ -30,13 +34,13 @@ const { values } = parseArgs({
   },
 });
 
-const days = Number(values.days);
-const limit = Number(values.limit);
-if (!Number.isInteger(days) || days < 1 || days > 90) {
-  throw new Error("--days must be a whole number from 1 to 90 (the dataset keeps three months).");
-}
-if (!Number.isInteger(limit) || limit < 1) throw new Error("--limit must be a positive whole number.");
-if (!/^[a-z0-9.-]+$/i.test(values.host)) throw new Error(`--host isn't a hostname: ${values.host}`);
+const options = parseReportOptions({
+  days: values.days,
+  host: values.host,
+  limit: values.limit,
+  defaultHost: new URL(SITE_ORIGIN).hostname,
+});
+if ("error" in options) throw new Error(`--${options.error}`);
 
 if (existsSync(ROOT_ENV)) process.loadEnvFile(ROOT_ENV);
 const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
@@ -47,22 +51,9 @@ if (!accountId || !apiToken) {
       "in the environment or the repo's .env.",
   );
 }
+const credentials = { accountId, apiToken };
 
-async function query(sql: string): Promise<Row[]> {
-  const res = await fetch(
-    `https://api.cloudflare.com/client/v4/accounts/${accountId}/analytics_engine/sql`,
-    {
-      method: "POST",
-      headers: { Authorization: `Bearer ${apiToken}` },
-      body: sql,
-    },
-  );
-  const text = await res.text();
-  if (!res.ok) throw new Error(`Analytics Engine answered HTTP ${res.status}: ${text}`);
-  return (JSON.parse(text) as { data: Row[] }).data;
-}
-
-function printTable(title: string, rows: Row[]): void {
+function printTable(title: string, rows: AnalyticsRow[]): void {
   console.log(`\n${title}`);
   if (rows.length === 0) {
     console.log("  (nothing yet)");
@@ -80,51 +71,12 @@ function printTable(title: string, rows: Row[]): void {
 }
 
 if (values.sql) {
-  printTable("Query", await query(values.sql));
+  printTable("Query", await queryAnalytics(values.sql, credentials));
   process.exit(0);
 }
 
-// Analytics Engine samples heavy traffic, so counts sum each row's
-// _sample_interval (how many events it stands for) rather than COUNT().
-const scope = `blob3 = '${values.host}' AND timestamp > NOW() - INTERVAL '${days}' DAY`;
-const pageviews = `${scope} AND blob1 = 'pageview'`;
-
-/** Events counted by `column`, most first; `where` narrows them. */
-function breakdown(column: string, label: string, where: string): string {
-  return (
-    `SELECT ${column} AS ${label}, SUM(_sample_interval) AS count FROM ${DATASET} ` +
-    `WHERE ${where} GROUP BY ${label} ORDER BY count DESC LIMIT ${limit}`
-  );
-}
-
-const reports: [string, string][] = [
-  [
-    "Visits and pageviews by day (UTC)",
-    `SELECT toStartOfInterval(timestamp, INTERVAL '1' DAY) AS day, ` +
-      `SUM(_sample_interval * double1) AS visits, SUM(_sample_interval) AS pageviews ` +
-      `FROM ${DATASET} WHERE ${pageviews} GROUP BY day ORDER BY day`,
-  ],
-  ["Top pages", breakdown("blob2", "page", pageviews)],
-  ["Landing pages (where visits began)", breakdown("blob2", "page", `${pageviews} AND double1 = 1`)],
-  ["Referring sites", breakdown("blob9", "referrer", `${pageviews} AND blob9 != ''`)],
-  ["Campaigns (utm_source)", breakdown("blob10", "campaign", `${pageviews} AND blob10 != ''`)],
-  ["Countries", breakdown("blob4", "country", pageviews)],
-  ["Devices", breakdown("blob5", "device", pageviews)],
-  [
-    "Actions",
-    `SELECT blob1 AS event, blob6 AS kind, SUM(_sample_interval) AS count FROM ${DATASET} ` +
-      `WHERE ${scope} AND blob1 != 'pageview' GROUP BY event, kind ORDER BY count DESC LIMIT ${limit * 2}`,
-  ],
-  [
-    "Churches picked in search",
-    breakdown("blob7", "church", `${scope} AND blob1 = 'search_select' AND blob6 = 'church'`),
-  ],
-  [
-    "Links followed off the site",
-    `SELECT blob6 AS kind, blob7 AS host, SUM(_sample_interval) AS count FROM ${DATASET} ` +
-      `WHERE ${scope} AND blob1 = 'outbound' GROUP BY kind, host ORDER BY count DESC LIMIT ${limit}`,
-  ],
-];
-
-console.log(`${values.host}, last ${days} day${days === 1 ? "" : "s"}`);
-for (const [title, sql] of reports) printTable(title, await query(sql));
+const { host, days } = options;
+console.log(`${host}, last ${days} day${days === 1 ? "" : "s"}`);
+const reports = analyticsReports(options);
+const results = await Promise.all(reports.map((report) => queryAnalytics(report.sql, credentials)));
+reports.forEach((report, i) => printTable(report.title, results[i]));

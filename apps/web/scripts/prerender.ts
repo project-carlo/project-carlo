@@ -15,6 +15,7 @@ import {
 } from "../src/api";
 import { cityPath, type CityCenters } from "../src/lib/cities";
 import { ANALYTICS_ENTRY, CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "../src/lib/cityMapEntry";
+import { ANALYTICS_DASHBOARD_PATH } from "../src/lib/analyticsReports";
 import { HOME_LINK_ATTRIBUTE, HOME_SEARCH_KEY } from "../src/hooks/useHomeHref";
 import cityCentersJson from "../src/data/cityCenters.json";
 import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
@@ -232,13 +233,16 @@ function noindexShell(shell: string): string {
  * with a 404 status, for any URL no file matches, so every page the app
  * routes to needs a file of its own: `/landing` is served from landing.html.
  *
- * /landing, an alternate entry point that overlaps the homepage, is noindex.
- * 404.html is the shell too, so the router still renders the right "not
+ * /landing, an alternate entry point that overlaps the homepage, is noindex,
+ * as is the analytics dashboard (admin/analytics.html), which Cloudflare
+ * Access keeps to the site's owners anyway. 404.html is the shell too, so the router still renders the right "not
  * found" page (church, city or generic), and is noindex as well.
  */
 function writeShellCopies(distDir: string, origin: string): void {
   const shell = readFileSync(resolve(distDir, "index.html"), "utf-8");
   writeFileSync(resolve(distDir, "landing.html"), noindexShell(shell), "utf-8");
+  mkdirSync(resolve(distDir, "admin"), { recursive: true });
+  writeFileSync(resolve(distDir, `${ANALYTICS_DASHBOARD_PATH.slice(1)}.html`), noindexShell(shell), "utf-8");
   if (isAboutPageEnabledAtBuild()) {
     const url = absoluteUrl(origin, "/about");
     let html = replaceShellTag(shell, SHELL_CANONICAL, `<link rel="canonical" href="${url}" />`);

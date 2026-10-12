@@ -12,5 +12,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["worker", "src/lib/approximateLocationApi.ts", "src/lib/analyticsApi.ts"]
+  "include": [
+    "worker",
+    "src/lib/approximateLocationApi.ts",
+    "src/lib/analyticsApi.ts",
+    "src/lib/analyticsReports.ts",
+    "src/lib/accessAuth.ts"
+  ]
 }

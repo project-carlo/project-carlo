@@ -8,9 +8,11 @@
   // fixes each invocation at 10ms of CPU and 50 subrequests, with 100,000
   // requests a day for the whole account. On moving to Paid, where the
   // defaults are 30s of CPU and 10,000 subrequests, add:
-  //   "limits": { "cpu_ms": 10, "subrequests": 5 },
+  //   "limits": { "cpu_ms": 10, "subrequests": 15 },
   // The Worker does microseconds of work and at most one fetch (the ASSETS
-  // passthrough), so those caps only ever stop a bug.
+  // passthrough), except the analytics dashboard's endpoint, which makes up
+  // to 13 (Access's keys and 11 queries; docs/analytics.md). So those caps
+  // only ever stop a bug.
   "observability": {
     "enabled": true,
     // Workers Logs bill per event past the plan's allowance; one in ten
