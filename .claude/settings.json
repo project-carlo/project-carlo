@@ -10,5 +10,10 @@
         ]
       }
     ]
-  }
+  },
+  "skillOverrides": {
+    "claude-api": "user-invocable-only"
+  },
+  "disableClaudeAiConnectors": true,
+  "enableArtifact": false
 }
