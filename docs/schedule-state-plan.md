@@ -781,6 +781,15 @@ code departs from it.
   chapels, weekly vs dated, dates, exclusions as the weeks that remain, times,
   notes and the final source checks), worded for changes, and the response
   schema's qualifier and note descriptions are the eval schema's.
+- **Update calls run at the flex tier.** Each call asks for
+  `service_tier: "flex"`, half the standard price. The trade-off is slower
+  replies (the client timeout is 15 minutes) and the occasional 429 when flex
+  has no capacity. Once the client's retries are spent, such a call is asked
+  again at the standard tier, so a busy week costs more instead of failing.
+  The tier isn't in `params_json`: it changes neither the request's content
+  nor the reply, so leaving it out keeps request keys, and with them stored
+  replies, unchanged. The stored call record has the tier the response
+  reports in `service_tier`, and `cost_usd` uses that tier's price.
 
 ### Deciding
 

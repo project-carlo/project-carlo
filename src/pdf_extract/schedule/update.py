@@ -254,6 +254,7 @@ def store_call_record(prepared: Prepared, updater: OpenAIScheduleUpdater, reply:
         "provider": updater.provider,
         "model": updater.model,
         "served_model": reply.served_model,
+        "service_tier": reply.service_tier,
         "params": updater.params,
         "version": updater.version,
         "policy_hash": POLICY_HASH,
@@ -297,7 +298,8 @@ def _insert_call(
     store_prompt_blob(conn, "context_template", CONTEXT_TEMPLATE)
     store_view(conn, prepared.view_text)
     usage = (record or {}).get("usage") or {}
-    cost = call_cost(updater.model, usage) if usage else None
+    tier = (record or {}).get("service_tier")
+    cost = call_cost(updater.model, usage, service_tier=tier) if usage else None
     cursor = conn.execute(
         """INSERT INTO llm_call (
                run_id, parish_id, bulletin_id, task, provider, model, served_model,

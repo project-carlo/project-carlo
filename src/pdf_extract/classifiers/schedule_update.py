@@ -14,6 +14,14 @@ an explicit prompt-cache breakpoint, then the per-bulletin context
 the response schema enforced by strict decoding. Reasoning effort is high and
 the PDF is read at low detail.
 
+Calls ask for the flex service tier, billed at half the standard rate in
+exchange for slower replies and, at times, a 429 when flex has no capacity.
+Such a call is asked again at the standard tier, so a busy week costs more
+but no parish is held back. The tier changes neither the request nor the
+reply, so it is left out of `params` (and so of `version` and the request key,
+keeping stored replies reusable); the tier that served each call is recorded
+with it and prices it.
+
 Every call is stored (`llm_call`) with the hashes of the policy, the response
 schema and the context template, its parameters, and `version`, a digest of all
 of them with the provider and model. `parse_response` reads a reply strictly,
@@ -30,7 +38,7 @@ from datetime import date
 from hashlib import sha256
 from typing import Any, Literal
 
-from openai import OpenAI
+from openai import OpenAI, RateLimitError
 from openai.lib._pydantic import to_strict_json_schema
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
@@ -447,12 +455,18 @@ class RawReply:
     served_model: str | None
     usage: dict[str, int]
     latency_ms: int
+    service_tier: str | None = None
+    """The tier that served the call, as the response reports it."""
 
 
 # The model and settings every update call runs with.
 UPDATE_MODEL = "gpt-6-luna"
 UPDATE_REASONING_EFFORT: ReasoningEffort = "high"
 UPDATE_FILE_DETAIL: ImageDetail = "low"
+UPDATE_SERVICE_TIER = "flex"
+
+# Flex replies are slower; OpenAI suggests raising the 10-minute default to 15.
+FLEX_TIMEOUT_SECONDS = 900.0
 
 # What strict decoding is given: every field required, no defaults.
 STRICT_SCHEMA = _without_defaults(to_strict_json_schema(ScheduleUpdatePayload))
@@ -469,6 +483,7 @@ class OpenAIScheduleUpdater:
         model: str = UPDATE_MODEL,
         reasoning_effort: ReasoningEffort = UPDATE_REASONING_EFFORT,
         file_detail: ImageDetail = UPDATE_FILE_DETAIL,
+        service_tier: str = UPDATE_SERVICE_TIER,
         max_retries: int = 5,
     ) -> None:
         if reasoning_effort not in REASONING_EFFORTS:
@@ -481,6 +496,7 @@ class OpenAIScheduleUpdater:
             "reasoning_effort": reasoning_effort,
             "strict": True,
         }
+        self.service_tier = service_tier
         self._max_retries = max_retries
         self._client: OpenAI | None = None
 
@@ -496,7 +512,9 @@ class OpenAIScheduleUpdater:
     def _openai(self) -> OpenAI:
         # Built on first use, so a run with no update-mode parish needs no API key.
         if self._client is None:
-            self._client = OpenAI(max_retries=self._max_retries, timeout=REQUEST_TIMEOUT_SECONDS)
+            flex = self.service_tier == "flex"
+            timeout = FLEX_TIMEOUT_SECONDS if flex else REQUEST_TIMEOUT_SECONDS
+            self._client = OpenAI(max_retries=self._max_retries, timeout=timeout)
         return self._client
 
     def request(self, pdf_bytes: bytes, context: str) -> dict[str, Any]:
@@ -537,12 +555,23 @@ class OpenAIScheduleUpdater:
                 },
             },
             "prompt_cache_options": {"mode": "explicit"},
+            "service_tier": self.service_tier,
             "store": False,
         }
 
     def call(self, pdf_bytes: bytes, context: str) -> RawReply:
         started = time.monotonic()
-        response = self._openai().responses.create(**self.request(pdf_bytes, context))
+        request = self.request(pdf_bytes, context)
+        try:
+            response = self._openai().responses.create(**request)
+        except RateLimitError as exc:
+            # The client has already backed off and retried; flex is still full.
+            if request["service_tier"] != "flex":
+                raise
+            LOGGER.warning(
+                "%s has no flex capacity (%s); asking at the standard tier", self.model, exc,
+            )
+            response = self._openai().responses.create(**{**request, "service_tier": "default"})
         if response.status != "completed":
             LOGGER.warning(
                 "%s response %s is %s (%s)",
@@ -553,6 +582,7 @@ class OpenAIScheduleUpdater:
             served_model=getattr(response, "model", None),
             usage=_usage(response),
             latency_ms=int((time.monotonic() - started) * 1000),
+            service_tier=getattr(response, "service_tier", None),
         )
 
 

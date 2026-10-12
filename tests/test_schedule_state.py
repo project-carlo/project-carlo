@@ -9,7 +9,9 @@ from pathlib import Path
 from types import SimpleNamespace
 from typing import Any
 
+import httpx
 import pytest
+from openai import RateLimitError
 
 from pdf_extract import process
 from pdf_extract.blobstore import get_store
@@ -890,6 +892,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
         return SimpleNamespace(
             id="resp_1", status="completed", incomplete_details=None,
             model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="flex",
             usage=SimpleNamespace(
                 input_tokens=3000,
                 input_tokens_details=SimpleNamespace(cached_tokens=1200, cache_write_tokens=0),
@@ -907,6 +910,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     assert request["reasoning"] == {"effort": "high"}
     assert request["text"]["format"]["strict"] is True
     assert request["store"] is False
+    assert request["service_tier"] == "flex"
     developer, user = request["input"]
     assert developer["role"] == "developer"
     assert developer["content"] == [{
@@ -917,6 +921,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     assert user["content"][1]["detail"] == "low"
     assert reply.served_model == "gpt-6-luna-2026-09-01"
     assert reply.usage["reasoning_tokens"] == 600
+    assert reply.service_tier == "flex"
     assert parse_response(reply.text).status == OK
 
     # Strict decoding needs every field required and no defaults.
@@ -935,6 +940,31 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     for obj in objects(STRICT_SCHEMA):
         assert obj["additionalProperties"] is False
         assert set(obj["required"]) == set(obj["properties"])
+
+
+def test_an_update_call_falls_back_to_the_standard_tier_when_flex_is_full() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            request = httpx.Request("POST", "https://api.openai.com/v1/responses")
+            raise RateLimitError(
+                "Resource Unavailable", response=httpx.Response(429, request=request), body=None,
+            )
+        return SimpleNamespace(
+            id="resp_1", status="completed", incomplete_details=None,
+            model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="default", usage=None,
+        )
+
+    updater._client = SimpleNamespace(responses=SimpleNamespace(create=create))
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+    assert parse_response(reply.text).status == OK
 
 
 def test_update_policy_carries_the_eval_policy_rules() -> None:
