@@ -6,6 +6,7 @@ import {
   useNavigation,
 } from "react-router-dom";
 import { trackPageview } from "../lib/analytics";
+import { ANALYTICS_DASHBOARD_PATH } from "../lib/analyticsReports";
 
 /**
  * Every page. Moving between pages, the router loads the next one's code
@@ -17,12 +18,15 @@ import { trackPageview } from "../lib/analytics";
  * itself, as it scrolls before the page it returns to is shown. Opening or
  * closing a city page's map (src/lib/cityMap.ts) keeps its history entry, so
  * the page stays where it is. Each page shown counts as a pageview
- * (src/lib/analytics.ts); the map's query string changing doesn't.
+ * (src/lib/analytics.ts); the map's query string changing doesn't, and
+ * neither does the analytics dashboard, which would otherwise count itself.
  */
 export function AppLayout() {
   const navigation = useNavigation();
   const { pathname } = useLocation();
-  useEffect(() => trackPageview(), [pathname]);
+  useEffect(() => {
+    if (pathname !== ANALYTICS_DASHBOARD_PATH) trackPageview();
+  }, [pathname]);
   return (
     <>
       {navigation.state === "loading" ? (

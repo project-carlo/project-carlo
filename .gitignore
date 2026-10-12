@@ -23,6 +23,8 @@ eggs/
 .env.*
 !apps/web/.env.production
 !apps/web/.env.development
+# Worker secrets for wrangler dev (docs/analytics.md)
+.dev.vars*
 *.log
 
 # IDE

@@ -5,6 +5,7 @@
  * answer with 404.html.
  */
 
+import { ACCESS_JWT_HEADER, verifyAccessJwt } from "../src/lib/accessAuth";
 import {
   APPROXIMATE_LOCATION_PATH,
   type ApproximateLocationResponse,
@@ -17,12 +18,28 @@ import {
   parseAnalyticsBatch,
   type AnalyticsDataPoint,
 } from "../src/lib/analyticsApi";
+import {
+  ANALYTICS_DASHBOARD_API_PATH,
+  loadAnalyticsDashboard,
+  parseReportOptions,
+} from "../src/lib/analyticsReports";
 
 interface Env {
   ASSETS: { fetch(request: Request): Promise<Response> };
   /** Workers Analytics Engine (wrangler.jsonc). Optional, so a Worker
    *  deployed without the binding still serves the site. */
   ANALYTICS?: { writeDataPoint(point: AnalyticsDataPoint): void };
+  /** The analytics dashboard's settings, all secrets (docs/analytics.md).
+   *  Without them the dashboard endpoint answers 503. */
+  CLOUDFLARE_ACCOUNT_ID?: string;
+  /** Account → Account Analytics → Read; not the deploy token. */
+  ANALYTICS_API_TOKEN?: string;
+  /** The Zero Trust team domain, `<team>.cloudflareaccess.com`. */
+  ACCESS_TEAM_DOMAIN?: string;
+  /** The Access application's Application Audience (AUD) tag. */
+  ACCESS_AUD?: string;
+  /** "1" in .dev.vars lets `wrangler dev` on localhost skip Access. */
+  ANALYTICS_DASHBOARD_LOCAL?: string;
 }
 
 /** The slice of Cloudflare's `request.cf` geolocation this Worker reads. */
@@ -43,6 +60,9 @@ export default {
     }
     if (url.pathname === ANALYTICS_PATH) {
       return recordEvents(request, url, env);
+    }
+    if (url.pathname === ANALYTICS_DASHBOARD_API_PATH) {
+      return analyticsDashboard(request, url, env);
     }
     return env.ASSETS.fetch(request);
   },
@@ -105,6 +125,61 @@ async function recordEvents(request: Request, url: URL, env: Env): Promise<Respo
     }
   }
   return new Response(null, { status: 204 });
+}
+
+/** Hosts `wrangler dev` serves on, which no request to Cloudflare can carry. */
+const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1"]);
+
+/**
+ * The analytics dashboard's data (src/views/AnalyticsDashboardPage.tsx): every
+ * report `pnpm analytics` prints, as JSON, for whoever Cloudflare Access has
+ * signed in. The Worker checks Access's token itself, so the workers.dev and
+ * preview URLs, which the Access application on projectcarlo.com doesn't
+ * cover, refuse too. Unconfigured, it answers 503, never the data.
+ */
+async function analyticsDashboard(request: Request, url: URL, env: Env): Promise<Response> {
+  const headers = { "Cache-Control": "private, no-store" };
+  const fail = (status: number, error: string) => Response.json({ error }, { status, headers });
+  if (request.method !== "GET") {
+    return new Response(null, { status: 405, headers: { Allow: "GET" } });
+  }
+
+  const local = env.ANALYTICS_DASHBOARD_LOCAL === "1" && LOCAL_HOSTS.has(url.hostname);
+  if (!local) {
+    if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) {
+      return fail(503, "Cloudflare Access isn't set up for the dashboard (docs/analytics.md).");
+    }
+    let identity;
+    try {
+      identity = await verifyAccessJwt(request.headers.get(ACCESS_JWT_HEADER), {
+        teamDomain: env.ACCESS_TEAM_DOMAIN,
+        audience: env.ACCESS_AUD,
+      });
+    } catch {
+      return fail(502, "Couldn't fetch Cloudflare Access's signing keys.");
+    }
+    if (!identity) return fail(403, "Sign in through Cloudflare Access to see the dashboard.");
+  }
+
+  if (!env.CLOUDFLARE_ACCOUNT_ID || !env.ANALYTICS_API_TOKEN) {
+    return fail(503, "The dashboard's Analytics Engine token isn't set (docs/analytics.md).");
+  }
+  const options = parseReportOptions({
+    days: url.searchParams.get("days"),
+    host: url.searchParams.get("host"),
+    // The site the dashboard is opened on: projectcarlo.com, or a preview.
+    defaultHost: url.hostname,
+  });
+  if ("error" in options) return fail(400, options.error);
+  try {
+    const data = await loadAnalyticsDashboard(options, {
+      accountId: env.CLOUDFLARE_ACCOUNT_ID,
+      apiToken: env.ANALYTICS_API_TOKEN,
+    });
+    return Response.json(data, { headers });
+  } catch (error) {
+    return fail(502, error instanceof Error ? error.message : String(error));
+  }
 }
 
 function parseCoordinate(raw: string | undefined, limit: number): number | null {
