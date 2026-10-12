@@ -783,9 +783,11 @@ code departs from it.
   schema's qualifier and note descriptions are the eval schema's.
 - **Update calls run at the flex tier.** Each call asks for
   `service_tier: "flex"`, half the standard price. The trade-off is slower
-  replies (the client timeout is 15 minutes) and the occasional 429 when flex
-  has no capacity. Once the client's retries are spent, such a call is asked
-  again at the standard tier, so a busy week costs more instead of failing.
+  replies (the client timeout is 15 minutes) and, at times, no flex capacity.
+  That shows up as a 429, a 5xx, or a response that was accepted and then
+  ends `failed` with a `server_error` and no output. Once the client's
+  retries are spent, such a call is asked again at the standard tier, so a
+  busy week costs more instead of failing.
   The tier isn't in `params_json`: it changes neither the request's content
   nor the reply, so leaving it out keeps request keys, and with them stored
   replies, unchanged. The stored call record has the tier the response

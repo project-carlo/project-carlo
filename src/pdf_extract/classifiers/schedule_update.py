@@ -15,9 +15,10 @@ the response schema enforced by strict decoding. Reasoning effort is high and
 the PDF is read at low detail.
 
 Calls ask for the flex service tier, billed at half the standard rate in
-exchange for slower replies and, at times, a 429 when flex has no capacity.
-Such a call is asked again at the standard tier, so a busy week costs more
-but no parish is held back. The tier changes neither the request nor the
+exchange for slower replies and, at times, no capacity: a 429, a 5xx, or a
+response that was accepted and then ends `failed` with a `server_error`. Once
+the client's retries are spent, such a call is asked again at the standard
+tier, so a busy week costs more but no parish is held back. The tier changes neither the request nor the
 reply, so it is left out of `params` (and so of `version` and the request key,
 keeping stored replies reusable); the tier that served each call is recorded
 with it and prices it.
@@ -38,7 +39,7 @@ from datetime import date
 from hashlib import sha256
 from typing import Any, Literal
 
-from openai import OpenAI, RateLimitError
+from openai import InternalServerError, OpenAI, RateLimitError
 from openai.lib._pydantic import to_strict_json_schema
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
@@ -564,12 +565,17 @@ class OpenAIScheduleUpdater:
         request = self.request(pdf_bytes, context)
         try:
             response = self._openai().responses.create(**request)
-        except RateLimitError as exc:
+        except (RateLimitError, InternalServerError) as exc:
             # The client has already backed off and retried; flex is still full.
             if request["service_tier"] != "flex":
                 raise
+            no_capacity: str | None = str(exc)
+        else:
+            no_capacity = _flex_capacity_lost(request, response)
+        if no_capacity is not None:
             LOGGER.warning(
-                "%s has no flex capacity (%s); asking at the standard tier", self.model, exc,
+                "%s has no flex capacity (%s); asking at the standard tier",
+                self.model, no_capacity,
             )
             response = self._openai().responses.create(**{**request, "service_tier": "default"})
         if response.status != "completed":
@@ -584,6 +590,21 @@ class OpenAIScheduleUpdater:
             latency_ms=int((time.monotonic() - started) * 1000),
             service_tier=getattr(response, "service_tier", None),
         )
+
+
+def _flex_capacity_lost(request: dict[str, Any], response: Any) -> str | None:
+    """Why a flex call that was accepted then lost its capacity failed, or None.
+
+    Flex capacity can run out after a request is accepted. The reply is then no
+    429 but a `failed` response with a `server_error` ("Flex processing is
+    temporarily unavailable"), no output and no usage.
+    """
+    if request["service_tier"] != "flex" or response.status != "failed":
+        return None
+    error = getattr(response, "error", None)
+    if getattr(error, "code", None) != "server_error":
+        return None
+    return getattr(error, "message", None) or "server_error"
 
 
 def _sha(text: str) -> str:
