@@ -307,9 +307,9 @@ def _insert_call(
                base_revision, view_hash, call_date, church_list_hash, request_key,
                status, error, response_key, published_date, wrong_bulletin,
                church_list_needs_review, input_tokens, cached_input_tokens, output_tokens,
-               thinking_tokens, cost_usd, latency_ms, started_at, finished_at
+               thinking_tokens, cost_usd, latency_ms, started_at, finished_at, service_tier
            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-                     ?, ?, ?, ?, ?, ?, ?)""",
+                     ?, ?, ?, ?, ?, ?, ?, ?)""",
         (
             run_id, prepared.bulletin["parish_id"], prepared.bulletin["id"], TASK,
             updater.provider, updater.model, (record or {}).get("served_model"),
@@ -328,6 +328,7 @@ def _insert_call(
             (record or {}).get("latency_ms"),
             (record or {}).get("started_at") or prepared.started_at,
             (record or {}).get("finished_at") or utc_now_iso(),
+            tier,
         ),
     )
     return int(cursor.lastrowid)
@@ -479,10 +480,11 @@ def finish_call(
 ) -> CallOutcome:
     """Store and decide one call's reply (a fresh one, a stored record, or the error)."""
     if isinstance(reply, BaseException):
+        # Notes say what was tried first, such as the flex call before a standard one.
+        error = "; ".join([f"{type(reply).__name__}: {reply}", *getattr(reply, "__notes__", ())])
         with conn:
             call_id = _insert_call(
-                conn, prepared, updater, run_id=run_id, status=API_ERROR,
-                error=f"{type(reply).__name__}: {reply}"[:2000],
+                conn, prepared, updater, run_id=run_id, status=API_ERROR, error=error[:2000],
             )
         return CallOutcome(
             PROCESS_FAILED, f"#{prepared.bulletin['id']}: {type(reply).__name__}: {reply}",
