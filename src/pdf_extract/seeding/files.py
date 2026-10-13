@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import threading
 from dataclasses import dataclass
 from pathlib import Path
@@ -142,6 +143,14 @@ def drafting_slugs(seeds_dir: Path = SEEDS_DIR) -> set[str]:
     return slugs
 
 
+def eval_drafts(parish_slug: str, evals_dir: Path = SEED_EVALS_DIR) -> list[str]:
+    """The test runs holding a draft of the parish, for a command that forgot `--eval`."""
+    seed_path(parish_slug, evals_dir)  # rejects an unsafe slug
+    if not evals_dir.is_dir():
+        return []
+    return sorted(p.parent.parent.name for p in evals_dir.glob(f"*/seeds/{parish_slug}.json"))
+
+
 def write_seed_file(seed: dict[str, Any], seeds_dir: Path = SEEDS_DIR) -> Path:
     """Write a seed file as it is (callers validate first). Returns its path."""
     path = seed_path(seed["parish_slug"], seeds_dir)
@@ -205,6 +214,51 @@ def question_count(seed: dict[str, Any]) -> int:
             groups.add(group)
         count += 1
     return count
+
+
+# Rule and candidate IDs of the seeding rules (.claude/skills/draft-parish-seed/rules.md).
+RULE_ID = re.compile(r"\b[RC]\d+\b")
+
+
+def asked_questions(seed: dict[str, Any]) -> list[dict[str, Any]]:
+    """Every question the file asked, open or answered: a group's once, by its first slot.
+
+    `match` says how the answer relates to the leaning: `leaning`, `other` (another
+    option), `dropped` or `edited`, or None while open. `matched` is true when the
+    outcome is the leaning's, including a drop when the leaning was to leave it out.
+    """
+    found: dict[str, dict[str, Any]] = {}
+    for slot in _list(seed.get("slots")):
+        if not isinstance(slot, dict) or not _nonempty(slot.get("question")):
+            continue
+        group = slot.get("group") if _nonempty(slot.get("group")) else None
+        key = f"group:{group}" if group else f"slot:{slot.get('id')}"
+        if key in found:
+            found[key]["slots"].append(slot.get("id"))
+            continue
+        options = [o for o in _list(slot.get("options")) if isinstance(o, dict)]
+        leaning = next((i for i, o in enumerate(options) if o.get("leaning") is True), None)
+        answer = slot.get("answer") if isinstance(slot.get("answer"), dict) else None
+        choice = answer.get("choice") if answer else None
+        if answer is None:
+            match = None
+        elif choice in (EDITED, DROPPED):
+            match = choice
+        else:
+            match = "leaning" if choice == leaning else "other"
+        leaned_out = leaning is not None and options[leaning].get("entry") is None
+        rationale = slot.get("rationale") if isinstance(slot.get("rationale"), str) else ""
+        found[key] = {
+            "group": group, "slots": [slot.get("id")], "status": slot.get("status"),
+            "question": slot["question"], "rationale": rationale,
+            "options": [{"label": o.get("label"), "leaning": o.get("leaning") is True,
+                         "entry": o.get("entry")} for o in options],
+            "answer": answer, "match": match,
+            "matched": None if answer is None else (
+                match == "leaning" or (match == DROPPED and leaned_out)),
+            "cites": sorted(set(RULE_ID.findall(rationale)), key=lambda c: (c[0], int(c[1:]))),
+        }
+    return list(found.values())
 
 
 def church_list_issues(seed: dict[str, Any]) -> list[dict[str, Any]]:

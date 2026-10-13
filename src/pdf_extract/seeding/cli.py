@@ -1,30 +1,45 @@
 """`python -m pdf_extract seed ...` (`pnpm seed ...`): the seeding agent's tools.
 
-    seed pick      [--limit N] [--diocese D] [--labeled --eval RUN] [--resume]
-    seed init      <parish> [--resume]
-    seed mark-read <parish> <bulletin>
-    seed brief     <parish>
-    seed bulletins <parish> [--limit N]
-    seed pdf       <parish> <bulletin>
-    seed text      <parish> <bulletin> [--page N]
-    seed pages     <parish> <bulletin> [--page N] [--dpi D]
-    seed grep      <parish> [pattern] [--bulletins N]
-    seed history   <parish> [--bulletins N]
-    seed diff      <parish> [--bulletins N]
-    seed church    <query>
-    seed site      <parish> [path or address] [--fresh] [--no-browser]
-    seed extract   <parish> <bulletin> --model M
-    seed ask       <parish> <bulletin> --model M "question"
-    seed finalize  <parish>...
-    seed check     <parish>... | --all
-    seed status
-    seed score     <run>
+Batch: choosing parishes, verifying drafts, learning from reviews (the orchestrator)
+  pick      [--limit N] [--diocese D] [--resume]   parishes to seed next, easiest first
+            --labeled --eval RUN [--resume]         start or reuse a test run's manifest
+  status                                            every file's status, questions, loaded
+  check     <parish>... | --all                     check files against the database
+  score     <run>                                   a test run's drafts against the labels
+  questions [--open | --answered]                   every question, its leaning and answer
 
-A bulletin is `latest` or a prefix of its content hash. Every command but
-`score` takes `--eval RUN` to work on a test run's drafts
-(docs/seeding-plan.md, "Testing it first"). Output is compact text, or the
-JSON result with `--json`. The workflow around these is the
-`seed-parishes` skill (.claude/skills/seed-parishes/SKILL.md).
+Draft: one parish's file (the drafter)
+  start     <parish>                    start a draft, or resume one; prints the brief
+  brief     <parish>                    churches, website, bulletins, history, newest PDF
+  mark-read <parish> <bulletin>         record a bulletin read, even when no slot cites it
+  finalize  <parish>...                 fill in defaults, read marks, as_of, status; check
+
+Read: the stored bulletins
+  bulletins <parish> [--limit N]                      newest first, with pages and flags
+  pdf       <parish> <bulletin>                       the PDF the pipeline reads, locally
+  text      <parish> <bulletin> [--page N]            its text, page by page
+  pages     <parish> <bulletin> [--page N] [--dpi D]  pages as PNGs
+  grep      <parish> [pattern] [--bulletins N]        search every stored bulletin's text
+
+Compare: other sources
+  history   <parish> [--bulletins N]    extract mode's stored events (free; a hint)
+  diff      <parish> [--bulletins N]    history no slot covers, and slots history lacks
+  church    <query>                     whose church a name, town or address is
+  site      <parish> [path or address] [--fresh] [--no-browser]
+                                        a website page as text (never in a test run)
+
+Paid calls: cached, recorded in the file's `calls`, CARLO_SEED_CALL_LIMIT per parish (4)
+  ask       <parish> <bulletin> --model M "question"   one question about one bulletin
+  extract   <parish> <bulletin> --model M              a full extraction with POLICY
+
+A bulletin is `latest` or a prefix of its content hash; M is gpt-6.1-sol or
+gemini-3-flash-preview. Every command but `score` takes `--eval RUN` to work on
+a test run's drafts (data/seed-evals/RUN/seeds/); one that needs a file and
+finds only a test run's draft asks whether you meant `--eval RUN`. Output is
+compact text, or the JSON result with `--json`. Drafters run `finalize`,
+which checks; orchestrators run `check`.
+Workflow: .claude/skills/seed-parishes/ (batches) and
+.claude/skills/draft-parish-seed/ (drafting; rules.md holds the decision rules).
 """
 
 from __future__ import annotations
@@ -45,8 +60,11 @@ from pdf_extract.seeding.coverage import diff, event_parts, missing_warning
 from pdf_extract.seeding.files import (
     APPROVED,
     BLOCKED,
+    NEEDS_HUMAN,
     SeedFileError,
     SeedSummary,
+    asked_questions,
+    eval_drafts,
     read_seed,
     seed_path,
     seed_slugs,
@@ -99,34 +117,47 @@ def _pick(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
                         resume=args.resume)
 
 
-def _init(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+def _no_seed_file(ctx: SeedContext, slug: str) -> str:
+    """Why a command needing the parish's file can't run: often a forgotten `--eval`."""
+    runs = eval_drafts(slug) if ctx.eval_run is None else []
+    if runs:
+        return (f"no seed file in data/seeds/, but test run {', '.join(runs)} has a draft "
+                f"of it: did you mean {' or '.join(f'--eval {r}' for r in runs)}?")
+    return f"no seed file: start one with `pnpm seed start {slug}`"
+
+
+def _start(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     queries.parish_row(conn, args.parish)
     seed = read_seed(args.parish, ctx.seeds_dir)
     resumed = seed is not None
-    if resumed and not args.resume:
-        raise SeedError(f"{seed_path(args.parish, ctx.seeds_dir)} exists already "
-                        f"(use `pnpm seed init {args.parish} --resume` to continue, or "
-                        f"`pnpm seed brief {args.parish}` to inspect it)")
+    warnings = []
     if resumed:
         if seed.get("status") == APPROVED:
             raise SeedError("An approved seed belongs to its reviewer; it cannot be resumed")
         ctx.cutoff(args.parish)
         path = seed_path(args.parish, ctx.seeds_dir)
     else:
+        runs = eval_drafts(args.parish) if ctx.eval_run is None else []
+        if runs:
+            # Not an error: a test run's parish can be seeded for real too.
+            warnings.append(f"test run {', '.join(runs)} has a draft of {args.parish}; this "
+                            "started a production draft (to resume that one, pass --eval RUN)")
         seed = load_or_start(conn, ctx, args.parish)
         path = write_seed_file(seed, ctx.seeds_dir)
     held = queries.stored_pdfs(args.parish)
     stored = [b["content_hash"][:12] for b in seed["bulletins"]
               if held is None or b["content_hash"] in held]
     return {"parish": args.parish, "path": Path(os.path.relpath(path)).as_posix(),
-            "bulletins": len(seed["bulletins"]), "stored": stored,
-            "resumed": resumed, "brief": _brief(conn, ctx, args)}
+            "bulletins": len(seed["bulletins"]), "stored": stored, "resumed": resumed,
+            "status": seed.get("status"), "slots": len(seed.get("slots") or []),
+            "calls": len(seed.get("calls") or []), "warnings": warnings,
+            "brief": _brief(conn, ctx, args)}
 
 
 def _mark_read(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     seed = read_seed(args.parish, ctx.seeds_dir)
     if seed is None:
-        raise SeedError(f"{args.parish} has no seed file: start one with `pnpm seed init`")
+        raise SeedError(f"{args.parish} has {_no_seed_file(ctx, args.parish)}")
     if seed.get("status") == APPROVED:
         raise SeedError("An approved seed belongs to its reviewer; it cannot be changed")
     bulletin = queries.resolve_bulletin(
@@ -193,7 +224,7 @@ def _site(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 def _diff(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     seed = read_seed(args.parish, ctx.seeds_dir)
     if seed is None:
-        raise SeedError(f"{args.parish} has no seed file: start one with `pnpm seed init`")
+        raise SeedError(f"{args.parish} has {_no_seed_file(ctx, args.parish)}")
     past = queries.recent_history(
         conn, args.parish, bulletins=args.bulletins, cutoff=ctx.cutoff(args.parish),
     )
@@ -259,7 +290,8 @@ def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
             files.append({"parish": slug, "status": "invalid", "problems": [str(exc)]})
             continue
         if seed is None:
-            files.append({"parish": slug, "status": None, "problems": ["no seed file"]})
+            files.append({"parish": slug, "status": None,
+                          "problems": [_no_seed_file(ctx, slug)]})
             continue
         # An approved file is its reviewer's: newer drafting evidence rules don't apply.
         problems = check_seed(conn, seed, parish_slug=slug, cutoff=cutoff,
@@ -289,6 +321,27 @@ def _status(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
     return {"eval_run": ctx.eval_run, "counts": counts, "seeds": rows}
+
+
+def _questions(args: argparse.Namespace) -> Result:
+    ctx = _ctx(args)
+    questions, problems = [], []
+    for slug in seed_slugs(ctx.seeds_dir):
+        try:
+            seed = read_seed(slug, ctx.seeds_dir)
+        except SeedFileError as exc:
+            problems.append({"parish": slug, "problem": str(exc)})
+            continue
+        for q in asked_questions(seed or {}):
+            if args.open and q["status"] != NEEDS_HUMAN or args.answered and not q["answer"]:
+                continue
+            questions.append({"parish": slug, **q})
+    answered = [q for q in questions if q["answer"]]
+    return {
+        "eval_run": ctx.eval_run, "questions": questions, "problems": problems,
+        "totals": {"questions": len(questions), "answered": len(answered),
+                   "matched_leaning": sum(1 for q in answered if q["matched"])},
+    }
 
 
 def _score(args: argparse.Namespace) -> Result:
@@ -453,13 +506,41 @@ def _text_score(r: Result) -> str:
     ])
 
 
-def _text_init(r: Result) -> str:
-    state = "resumed draft" if r["resumed"] else "a draft"
-    text = f"{r['path']}: {state} listing {r['bulletins']} bulletins"
+def _text_start(r: Result) -> str:
+    if r["resumed"]:
+        text = (f"{r['path']}: resumed an existing draft ({r['status']}, {r['slots']} slots, "
+                f"{r['calls']} calls) listing {r['bulletins']} bulletins. Read it before "
+                "editing; change only what needs correcting")
+    else:
+        text = f"{r['path']}: a new draft listing {r['bulletins']} bulletins"
     if len(r["stored"]) < r["bulletins"]:
         text += (f"; only {len(r['stored'])} have a stored PDF to read "
                  f"({', '.join(r['stored']) or 'none'}), the rest only history")
+    text += "".join(f"\nwarning: {w}" for w in r["warnings"])
     return text + "\n\n" + _text_brief(r["brief"])
+
+
+def _text_questions(r: Result) -> str:
+    lines = []
+    for q in r["questions"]:
+        where = q["group"] + f" ({', '.join(q['slots'])})" if q["group"] else q["slots"][0]
+        lines.append(f"{q['parish']} {where}: {q['question']}")
+        for i, o in enumerate(q["options"]):
+            lines.append(f"  {'*' if o['leaning'] else ' '}{i} {o['label']}")
+        a = q["answer"]
+        if a is None:
+            got = "open"
+        else:
+            got = {"leaning": f"answer: {a.get('choice')}, the leaning",
+                   "other": f"answer: {a.get('choice')}, not the leaning"}.get(
+                q["match"], f"answer: {q['match']}" + (", as leaning" if q["matched"] else ""))
+            got += f"; {a.get('by')} {str(a.get('at') or '')[:10]}"
+        lines.append(f"  {got}" + (f"  cites {', '.join(q['cites'])}" if q["cites"] else ""))
+    lines += [f"{p['parish']}: {p['problem']}" for p in r["problems"]]
+    t = r["totals"]
+    lines.append(f"{t['questions']} questions, {t['answered']} answered, "
+                 f"{t['matched_leaning']} matched the leaning (* marks it)")
+    return "\n".join(lines)
 
 
 def _text_brief(r: Result) -> str:
@@ -558,14 +639,20 @@ def add_seed_parser(
     subparsers: argparse._SubParsersAction,
     add_common_args: Callable[[argparse.ArgumentParser], None],
 ) -> None:
+    # argparse has no subcommand groups, so `seed --help` prints this module's
+    # docstring, which lists the commands by phase, instead of its own list.
     parser = subparsers.add_parser(
         "seed", help="Draft, check and score parish seeds (docs/seeding-plan.md)",
+        description=__doc__, usage="%(prog)s <command> ...",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.set_defaults(help_parser=parser)
-    sub = parser.add_subparsers(dest="seed_command")
+    sub = parser.add_subparsers(dest="seed_command", metavar="<command>", help=argparse.SUPPRESS)
 
-    def leaf(name: str, help_text: str, handler, render, *, eval_run: bool = True):
-        p = sub.add_parser(name, help=help_text)
+    def leaf(name: str, help_text: str, handler, render, *, eval_run: bool = True,
+             listed: bool = True):
+        p = sub.add_parser(name, help=help_text if listed else None, description=help_text,
+                           prog=f"{parser.prog} {name}")
         p.set_defaults(handler=handler, render=render)
         p.add_argument("--json", action="store_true", help="Print the JSON result")
         if eval_run:
@@ -579,28 +666,57 @@ def add_seed_parser(
     def bulletin(p: argparse.ArgumentParser) -> None:
         p.add_argument("bulletin", help="`latest` or a prefix of the content hash")
 
+    # Batch
     p = leaf("pick", "Parishes to seed next, easiest first", _with_conn(_pick), _text_pick)
     p.add_argument("--limit", type=int, default=8, help="How many (0: all; default 8)")
     p.add_argument("--diocese", help="Only this diocese's parishes")
     p.add_argument("--labeled", action="store_true",
                    help="The labeled parishes instead, for a test run (with --eval RUN)")
-    p.add_argument("--resume", action="store_true", help="Also offer unfinished drafts")
-
-    p = leaf("init", "Start a parish's seed file, and print where it starts from",
-             _with_conn(_init), _text_init)
-    parish(p)
     p.add_argument("--resume", action="store_true",
-                   help="Continue an existing draft, preserving its decisions and calls")
+                   help="Also offer unfinished drafts (each resumed with `seed start`)")
+
+    leaf("status", "Every seed file's status, and whether it is loaded", _with_conn(_status),
+         _text_status)
+
+    p = leaf("check", "Check seed files against the database", _with_conn(_check), _text_check)
+    p.add_argument("parish", nargs="*", help="Parish slugs")
+    p.add_argument("--all", action="store_true", help="Every seed file")
+    p.set_defaults(fail_on_verification_error=True)
+
+    p = leaf("score", "Score a test run's drafts against the labels", _score, _text_score,
+             eval_run=False)
+    p.add_argument("run", help="The test run's name")
+
+    p = leaf("questions", "Every question the seed files asked: options, leaning, answer, "
+             "and the rules its rationale cites", _questions, _text_questions)
+    only = p.add_mutually_exclusive_group()
+    only.add_argument("--open", action="store_true", help="Only questions still open")
+    only.add_argument("--answered", action="store_true", help="Only answered questions")
+
+    # Draft
+    for name in ("start", "init"):  # `init` is the old name, kept for old instructions
+        p = leaf(name, "Start a parish's seed file, or resume the existing one, and print "
+                 "where it starts from", _with_conn(_start), _text_start,
+                 listed=name == "start")
+        parish(p)
+        if name == "init":
+            p.add_argument("--resume", action="store_true", help=argparse.SUPPRESS)
+
+    p = leaf("brief", "A parish's churches, website, bulletins, history and newest PDF",
+             _with_conn(_brief), _text_brief)
+    parish(p)
 
     p = leaf("mark-read", "Record a bulletin read, even when no slot cites it",
              _with_conn(_mark_read), lambda r: f"{r['parish']}: {r['bulletin'][:12]} marked read")
     parish(p)
     bulletin(p)
 
-    p = leaf("brief", "A parish's churches, website, bulletins, history and newest PDF",
-             _with_conn(_brief), _text_brief)
-    parish(p)
+    p = leaf("finalize", "Fill in a draft's defaults, read bulletins, as_of and status; check it",
+             _with_conn(_finalize), _text_check)
+    p.add_argument("parish", nargs="+", help="Parish slugs")
+    p.set_defaults(fail_on_verification_error=True)
 
+    # Read
     p = leaf("bulletins", "A parish's stored bulletins, newest first", _with_conn(_bulletins),
              _text_bulletins)
     parish(p)
@@ -629,6 +745,7 @@ def add_seed_parser(
     p.add_argument("--bulletins", type=int, default=0,
                    help="Only the newest N (default 0: all)")
 
+    # Compare
     p = leaf("history", "Extract mode's stored events for recent bulletins",
              _with_conn(_history), _text_history)
     parish(p)
@@ -655,12 +772,7 @@ def add_seed_parser(
     p.add_argument("--no-browser", action="store_true",
                    help="Only a plain request: never fall back to the stealth browser")
 
-    p = leaf("extract", "A full extraction by an external model (cached, recorded)",
-             _with_conn(_extract), _text_extract)
-    parish(p)
-    bulletin(p)
-    p.add_argument("--model", required=True, choices=MODELS)
-
+    # Paid calls
     p = leaf("ask", "One question about one bulletin (cached, recorded)", _with_conn(_ask),
              _text_ask)
     parish(p)
@@ -668,19 +780,8 @@ def add_seed_parser(
     p.add_argument("--model", required=True, choices=MODELS)
     p.add_argument("question", help="The question, naming the page if you know it")
 
-    p = leaf("finalize", "Fill in a draft's defaults, read bulletins, as_of and status; check it",
-             _with_conn(_finalize), _text_check)
-    p.add_argument("parish", nargs="+", help="Parish slugs")
-    p.set_defaults(fail_on_verification_error=True)
-
-    p = leaf("check", "Check seed files against the database", _with_conn(_check), _text_check)
-    p.add_argument("parish", nargs="*", help="Parish slugs")
-    p.add_argument("--all", action="store_true", help="Every seed file")
-    p.set_defaults(fail_on_verification_error=True)
-
-    leaf("status", "Every seed file's status, and whether it is loaded", _with_conn(_status),
-         _text_status)
-
-    p = leaf("score", "Score a test run's drafts against the labels", _score, _text_score,
-             eval_run=False)
-    p.add_argument("run", help="The test run's name")
+    p = leaf("extract", "A full extraction by an external model (cached, recorded)",
+             _with_conn(_extract), _text_extract)
+    parish(p)
+    bulletin(p)
+    p.add_argument("--model", required=True, choices=MODELS)

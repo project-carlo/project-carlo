@@ -840,15 +840,105 @@ def demo_cli(demo, tmp_path, monkeypatch):
     return demo
 
 
-def test_init_prints_where_the_draft_starts(demo_cli, capsys):
-    assert main(["seed", "init", "st-anne-demo"]) == 0
+def test_start_prints_where_the_draft_starts_and_then_resumes_it(demo_cli, capsys):
+    assert main(["seed", "start", "st-anne-demo"]) == 0
     out = capsys.readouterr().out
-    assert "a draft listing 1 bulletins" in out
+    assert "a new draft listing 1 bulletins" in out
     assert "https://example.org/st-anne" in out
     assert "st-anne-demo-fairport                    St. Anne Church, 9 Church St, Fairport" in out
     assert "newest PDF: data/seed-work/st-anne-demo/" in out
-    assert main(["seed", "init", "st-anne-demo"]) == 1
-    assert "seed brief st-anne-demo" in capsys.readouterr().err
+    assert "warning" not in out
+    path = seed_path("st-anne-demo", demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "start", "st-anne-demo"]) == 0
+    out = capsys.readouterr().out
+    assert "resumed an existing draft (drafting, 0 slots, 0 calls)" in out
+    assert "Read it before editing" in out and "newest PDF:" in out
+    assert path.read_bytes() == before
+
+
+def test_init_is_an_alias_of_start_that_ignores_resume(demo_cli, capsys):
+    assert main(["seed", "init", "st-anne-demo"]) == 0
+    assert "a new draft" in capsys.readouterr().out
+    path = seed_path("st-anne-demo", demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    for args in (["seed", "init", "st-anne-demo"], ["seed", "init", "st-anne-demo", "--resume"]):
+        assert main(args) == 0
+        assert "resumed an existing draft" in capsys.readouterr().out
+    assert path.read_bytes() == before
+
+
+def test_seed_help_lists_every_command_by_phase(capsys):
+    with pytest.raises(SystemExit):
+        main(["seed", "--help"])
+    out = capsys.readouterr().out
+    heads = [out.index(h) for h in ("\nBatch:", "\nDraft:", "\nRead:", "\nCompare:",
+                                    "\nPaid calls:")]
+    assert heads == sorted(heads)
+    listed = {line.split()[0] for line in out.splitlines() if line.startswith("  ")}
+    assert listed >= {"pick", "status", "check", "score", "questions", "start", "brief",
+                      "mark-read", "finalize", "bulletins", "pdf", "text", "pages", "grep",
+                      "history", "diff", "church", "site", "ask", "extract"}
+    assert "init" not in listed
+
+
+def test_a_command_missing_eval_names_the_test_run_holding_the_draft(demo_cli, seed, capsys):
+    other = "st-anne-demo"
+    write_seed_file({**seed, "parish_slug": other}, Path("data/seed-evals/try-1/seeds"))
+    for args in (["mark-read", other, "latest"], ["diff", other]):
+        assert main(["seed", *args]) == 1
+        assert "has no seed file in data/seeds/, but test run try-1 has a draft of it: " \
+            "did you mean --eval try-1?" in capsys.readouterr().err
+    for command in ("check", "finalize"):
+        assert main(["seed", command, other]) == 1
+        assert "did you mean --eval try-1?" in capsys.readouterr().out
+    # Without a test run's draft, the hint is to start one.
+    assert main(["seed", "diff", "no-such-demo"]) == 1
+    assert "start one with `pnpm seed start no-such-demo`" in capsys.readouterr().err
+    # A test run's parish may still be seeded for real: start warns, and goes on.
+    assert main(["seed", "start", other]) == 0
+    out = capsys.readouterr().out
+    assert out.startswith(f"{seed_path(other, demo_cli['seeds_dir']).relative_to(Path.cwd())}"
+                          ": a new draft")
+    assert "warning: test run try-1 has a draft of st-anne-demo" in out
+    assert main(["seed", "mark-read", other, "latest"]) == 0
+
+
+def test_questions_lists_each_question_its_leaning_and_answer(demo_cli, seed, capsys):
+    s16, s17 = _slot(seed, "s16"), _slot(seed, "s17")
+    s16["rationale"] += " Leaning per C2; R12 does not settle it."
+    s17.update(status="settled", decision="exclude", answer={
+        "choice": 1, "by": "Reviewer", "at": "2026-10-10T12:00:00Z"})
+    for slot_id in ("s15", "s14"):  # a group is one question
+        _slot(seed, slot_id).update(copy.deepcopy({k: s16[k] for k in (
+            "status", "decision", "question", "options", "answer", "rationale")}),
+            group="weekday")
+    s16["group"] = "weekday"
+    write_seed_file(seed, demo_cli["seeds_dir"])
+
+    assert main(["seed", "questions"]) == 0
+    out = capsys.readouterr().out.splitlines()
+    assert out[-1] == "2 questions, 1 answered, 0 matched the leaning (* marks it)"
+    assert f"{PARISH} weekday (s14, s15, s16): Holy Family: is the Monday 8:00 AM Mass " \
+        "weekly?" in out
+    assert "  *0 Every Monday, 8:00 AM" in out and "   1 Leave out" in out
+    assert "  open  cites C2, R12" in out
+    assert "  answer: 1, not the leaning; Reviewer 2026-10-10" in out
+
+    assert main(["seed", "questions", "--open", "--json"]) == 0
+    result = json.loads(capsys.readouterr().out)
+    assert [q["slots"] for q in result["questions"]] == [["s14", "s15", "s16"]]
+    assert result["questions"][0]["cites"] == ["C2", "R12"]
+    _slot(seed, "s17")["answer"]["choice"] = 0
+    s16.update(status="settled", answer={"choice": "dropped", "by": "R", "at": "2026-10-11"})
+    s16["options"][0]["leaning"], s16["options"][1]["leaning"] = False, True
+    seed["slots"] = [s for s in seed["slots"] if s["id"] not in ("s14", "s15")]
+    write_seed_file(seed, demo_cli["seeds_dir"])
+    assert main(["seed", "questions", "--answered", "--json"]) == 0
+    result = json.loads(capsys.readouterr().out)
+    assert [(q["match"], q["matched"]) for q in result["questions"]] == [
+        ("dropped", True), ("leaning", True)]
+    assert result["totals"] == {"questions": 2, "answered": 2, "matched_leaning": 2}
 
 
 def test_finalize_warns_of_history_no_slot_covers_and_still_passes(demo_cli, seed, capsys):
@@ -945,7 +1035,7 @@ def test_cli_starts_an_eval_and_routes_all_parish_commands(routed_cli, seed, cap
     original_manifest = manifest.read_bytes()
     ctx = SeedContext.for_run("new-run")
     assert ctx.cutoff(PARISH) == newest["fetched_at"]
-    assert main(["seed", "init", PARISH, "--eval", "new-run"]) == 0
+    assert main(["seed", "start", PARISH, "--eval", "new-run"]) == 0
     assert read_seed(PARISH, ctx.seeds_dir)["status"] == "drafting"
     assert main(["seed", "mark-read", PARISH, "latest", "--eval", "new-run"]) == 0
     assert read_seed(PARISH, ctx.seeds_dir)["bulletins"][0]["read"]
@@ -1115,7 +1205,7 @@ def test_mark_read_obeys_the_eval_cutoff_and_preserves_the_file(routed_cli, seed
     folder.mkdir(parents=True)
     (folder / "run.json").write_text(json.dumps({"parishes": {
         PARISH: {"fetched_at": old["fetched_at"], "label_hash": old["content_hash"]}}}))
-    assert main(["seed", "init", PARISH, "--eval", "old-run"]) == 0
+    assert main(["seed", "start", PARISH, "--eval", "old-run"]) == 0
     path = seed_path(PARISH, folder / "seeds")
     before = path.read_bytes()
     assert main(["seed", "mark-read", PARISH, seed["bulletins"][0]["content_hash"],
@@ -1144,6 +1234,7 @@ def test_batch_validation_reports_broken_json_and_continues(demo_cli, capsys, co
 def test_agents_cannot_resume_or_mark_read_an_approved_file(demo_cli, seed, capsys):
     path = write_seed_file(_approved(seed), demo_cli["seeds_dir"])
     before = path.read_bytes()
+    assert main(["seed", "start", PARISH]) == 1
     assert main(["seed", "init", PARISH, "--resume"]) == 1
     assert main(["seed", "mark-read", PARISH, "latest"]) == 1
     assert "belongs to its reviewer" in capsys.readouterr().err
