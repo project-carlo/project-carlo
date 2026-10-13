@@ -782,3 +782,20 @@ database and snapshot `pnpm data:pull` fetches) are licensed under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse them for any
 purpose with credit to Project Carlo. The bulletins themselves belong to their
 parishes and are not covered.
+
+Two exceptions in that data:
+
+- Church coordinates taken from OpenStreetMap are © OpenStreetMap contributors
+  and available under the
+  [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/),
+  not CC BY. These are the churches whose record in
+  `data/dioceses/<diocese>/churches/` says `coordinates_from: osm-node` or
+  `nominatim`, or `geocode-stage` (the `pnpm geocode` stage looks addresses up
+  in OpenStreetMap's Nominatim). Their latitude and longitude carry the same
+  terms in `data/churches.csv` and the published database.
+- Other coordinates come from the sources their record names, most from
+  [GCatholic](https://gcatholic.org)'s Plus Codes (`gcatholic-plus-code`);
+  credit those sources too when you reuse them.
+
+The fonts, map tiles and other third-party material the site uses are listed,
+with their licenses, in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
