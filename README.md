@@ -781,6 +781,6 @@ people who use it.
 
 The curated data in `data/` and the schedule data the site publishes (the
 database and snapshot `pnpm data:pull` fetches) are licensed under
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/): reuse them
-with credit to Project Carlo, and share what you build from them under the same
-terms. The bulletins themselves belong to their parishes and are not covered.
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse them for any
+purpose with credit to Project Carlo. The bulletins themselves belong to their
+parishes and are not covered.
