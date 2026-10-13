@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-norwich",
+  "status": "ready",
+  "as_of": "2026-10-11T16:31:24Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:13:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. Paul's regular schedule is the page 1 box: Sunday 11:00 AM Mass, Wednesday 9:00 AM Mass, first-Friday 9:00 AM Mass, Friday 9:30-4:00 Adoration in the chapel, and Sunday 10:40 Confession all year; the Saturday 4:00 PM vigil and Saturday 3:15-3:45 Confession run April-September only (kept as seasons). It matches history in all three bulletins. Masses printed for St. Bartholomew's, St. Malachy's and St. Theresa's are other churches' and are excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "60ce69efd0e71eae07cac0c86af65f30fe07c1b2b5fc47c5bbc4d089000e8922",
+      "fetched_at": "2026-10-11T16:31:24Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "42d1a33f56c5ae773334ddc94ad1187e73512194fe93fe4b47a567577ad98138",
+      "fetched_at": "2026-10-04T14:44:45Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6d62817dde408442d40ce3cd34b0490d762b80dce64f49496b2c02dcdf056f4a",
+      "fetched_at": "2026-09-28T00:16:20Z",
+      "published_date": "2026-09-20",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 1,
+          "said": "Sunday 11:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "60ce69efd0e7",
+          "said": "weekly mass Sunday 11:00 st-paul-norwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42d1a33f56c5",
+          "said": "weekly mass Sunday 11:00 st-paul-norwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d62817dde40",
+          "said": "weekly mass Sunday 11:00 st-paul-norwich",
+          "page": 1
+        }
+      ],
+      "rationale": "Lord's Day Masses box on page 1; page 2 intentions list the 11:00 AM Sunday Mass at St. Paul's in each week. History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 4,
+          "start_day": null,
+          "end_month": 9,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 1,
+          "said": "Saturday vigil 4PM April-September"
+        },
+        {
+          "source": "history",
+          "bulletin": "60ce69efd0e7",
+          "said": "weekly mass Saturday 16:00 st-paul-norwich  “April through September”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42d1a33f56c5",
+          "said": "weekly mass Saturday 16:00 st-paul-norwich  “April-September”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d62817dde40",
+          "said": "weekly mass Saturday 16:00 st-paul-norwich  “April-September”",
+          "page": 1
+        }
+      ],
+      "rationale": "The box limits the vigil to April-September, so the policy keeps that as the season. In October the Saturday vigil is held at St. Bartholomew's (page 2), consistent with the off-season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 1,
+          "said": "Weekday Liturgies Wednesday @ 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "60ce69efd0e7",
+          "said": "weekly mass Wednesday 09:00 st-paul-norwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42d1a33f56c5",
+          "said": "weekly mass Wednesday 09:00 st-paul-norwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d62817dde40",
+          "said": "weekly mass Wednesday 09:00 st-paul-norwich",
+          "page": 1
+        }
+      ],
+      "rationale": "Page 1 box; page 2 lists the 9:00 AM Wednesday Mass at St. Paul's (Oct 14).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-norwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 1,
+          "said": "First Friday's @ 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "60ce69efd0e7",
+          "said": "weekly mass Friday 09:00 st-paul-norwich  “First Friday only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42d1a33f56c5",
+          "said": "weekly mass Friday 09:00 st-paul-norwich  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d62817dde40",
+          "said": "weekly mass Friday 09:00 st-paul-norwich  “First Friday”",
+          "page": 1
+        }
+      ],
+      "rationale": "Page 1 box. Other Fridays' 9:00 AM Mass is at St. Malachy's (Oct 16 on page 2, Sept 25 in an older bulletin), consistent with first Fridays only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-norwich",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Paul's Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: Friday's 9:30 am-4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "60ce69efd0e7",
+          "said": "weekly adoration Friday 09:30–16:00 st-paul-norwich  “In the chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42d1a33f56c5",
+          "said": "weekly adoration Friday 09:30–16:00 st-paul-norwich  “Except holidays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d62817dde40",
+          "said": "weekly adoration Friday 09:30–16:00 st-paul-norwich  “St. Paul's Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Page 1 box; page 2 'Exposition of the Blessed Sacrament ... in the chapel from 9:30AM to 4PM (Except Holidays!)' and the calendar lists 'Exposition, St. Paul's Chapel' each Friday. The chapel is St. Paul's own, so it is recorded here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-norwich",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 4,
+          "start_day": null,
+          "end_month": 9,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 1,
+          "said": "Saturday 3:15-3:45 pm (Apr-Sept)"
+        },
+        {
+          "source": "history",
+          "bulletin": "60ce69efd0e7",
+          "said": "weekly confession Saturday 15:15–15:45 st-paul-norwich  “April through September”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42d1a33f56c5",
+          "said": "weekly confession Saturday 15:15–15:45 st-paul-norwich  “April-September”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d62817dde40",
+          "said": "weekly confession Saturday 15:15–15:45 st-paul-norwich  “April-September”",
+          "page": 1
+        }
+      ],
+      "rationale": "Page 1 box gives April-September, kept as the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-norwich",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:40",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 1,
+          "said": "Sunday 10:40 am or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "60ce69efd0e7",
+          "said": "weekly confession Sunday 10:40 st-paul-norwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42d1a33f56c5",
+          "said": "weekly confession Sunday 10:40 st-paul-norwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d62817dde40",
+          "said": "weekly confession Sunday 10:40 st-paul-norwich",
+          "page": 1
+        }
+      ],
+      "rationale": "Page 1 box gives a definite Sunday time; the 'or by appointment' part is not a time and is not recorded. No end time printed (11:00 AM Mass follows).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 1,
+          "said": "HOLY DAY MASS 9:00 am"
+        }
+      ],
+      "rationale": "Holy day Masses are listed with a time but no date; the policy treats them as dated, and no holy day falls in the coming week, so nothing is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 2,
+          "said": "Tuesday, October 13th 9:00 AM Mass at St. Bartholomew's."
+        }
+      ],
+      "rationale": "The bulletin lists this Mass at another parish's church, not St. Paul's; the policy records only events at this parish's listed churches. It belongs in that parish's own seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-norwich",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 2,
+          "said": "Saturday Vigil, October 17th 4:00 PM Mass at St. Bartholomew's"
+        }
+      ],
+      "rationale": "The bulletin lists this Mass at another parish's church, not St. Paul's; the policy records only events at this parish's listed churches. It belongs in that parish's own seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 2,
+          "said": "28th Sunday in Ordinary Time, October 11th 8:30 AM Mass at St. Bart's."
+        }
+      ],
+      "rationale": "The bulletin lists this Mass at another parish's church, not St. Paul's; the policy records only events at this parish's listed churches. It belongs in that parish's own seed. It is a weekly Sunday Mass of St. Bartholomew's, printed for Oct 11 only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 2,
+          "said": "Friday, October 16th 9:00 AM Mass at St. Malachy's."
+        }
+      ],
+      "rationale": "St. Malachy's (Sherburne, a different town and parish) is not a church of St. Paul's parish; nothing recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60ce69ef",
+          "page": 2,
+          "said": "Monday, October 12th Columbus Day 5:30 PM Mass at St. Theresa's."
+        }
+      ],
+      "rationale": "St. Theresa's is not one of this parish's churches (the only St. Theresa in churches.csv is in Windham); nothing recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
