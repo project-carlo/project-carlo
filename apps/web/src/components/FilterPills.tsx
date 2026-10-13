@@ -1,25 +1,23 @@
 import { FILTER_DAY_LABELS } from "../constants/days";
-import { formatMinutesMissal, titleCase } from "../utils";
+import { formatMinutesMissal } from "../utils";
 import { MINUTES_PER_DAY, type FilterState } from "./filterState";
 
 interface FilterPillsProps {
   filters: FilterState;
 }
 
-/** Active filter summary: small-caps labels separated by middots. (Mobile only; see md:hidden on root.) */
+/**
+ * Active day and time filters: small-caps labels separated by middots. The
+ * service isn't among them: the filter button beside the search names it.
+ * (Mobile only; see md:hidden on root.)
+ */
 export function FilterPills({ filters }: FilterPillsProps) {
   const isFullDay =
     filters.timeFrom <= 0 && filters.timeTo >= MINUTES_PER_DAY - 1;
-  const isDefaultView =
-    filters.eventType === "mass" &&
-    filters.daysOfWeek.length === 0 &&
-    isFullDay;
 
-  if (isDefaultView) return null;
+  if (filters.daysOfWeek.length === 0 && isFullDay) return null;
 
   const parts: string[] = [];
-
-  parts.push(titleCase(filters.eventType));
 
   if (filters.daysOfWeek.length > 0) {
     if (filters.daysOfWeek.length <= 3) {

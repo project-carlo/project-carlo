@@ -149,13 +149,6 @@ export default function CityMapView({
     onReady();
     void loadOpenControls();
   }, [data, onReady]);
-  const mappedChurchCount = useMemo(
-    () =>
-      data?.filter(
-        (church) => church.latitude !== null && church.longitude !== null,
-      ).length,
-    [data],
-  );
 
   // Read once, on mount, like every start.
   const start = useMemo<MapStart>(() => ({ kind: "view", view }), [view]);
@@ -219,7 +212,7 @@ export default function CityMapView({
             filters={filters}
             appliedFilters={appliedFilters}
             onFiltersChange={handleFiltersChange}
-            resultCount={mappedChurchCount}
+            churches={data}
             selection={selection}
             onClose={onClose}
           />

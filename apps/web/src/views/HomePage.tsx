@@ -35,6 +35,7 @@ import { fetchApproximateLocation } from "../lib/approximateLocation";
 import { firstVisitStart, type MapStart } from "../lib/mapStart";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { useMapSelection } from "../hooks/useMapSelection";
+import { useChurchesInView } from "../hooks/useChurchesInView";
 import { currentLocationPlace } from "../placeSearch";
 import { FINDING_YOUR_LOCATION, USE_MY_LOCATION } from "../copy";
 import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
@@ -196,7 +197,7 @@ export function HomePage() {
     [],
   );
 
-  // On the way to another page (a link from the map, say "All churches"), a
+  // On the way to another page (a link from the map, say "Church list"), a
   // view still waiting on the debounce goes into this page's history entry
   // at once, around the router: through it, it would cancel the page change.
   // Back then returns to the map as it was left.
@@ -286,15 +287,6 @@ export function HomePage() {
     }
   }, [mapStart, allChurches, approximateSettled, approximateLocation, isDesktop]);
 
-  // Churches without coordinates aren't on the map, so they don't count.
-  const mappedChurchCount = useMemo(
-    () =>
-      data?.filter(
-        (church) => church.latitude !== null && church.longitude !== null,
-      ).length,
-    [data],
-  );
-
   // Filters apply as they change on every viewport, so the panel never shows
   // a selection the map isn't using.
   const handleFiltersChange = useCallback((next: FilterState) => {
@@ -316,6 +308,13 @@ export function HomePage() {
       ({ lat, lng }) => handlePlaceSelect(currentLocationPlace(lat, lng)),
       [handlePlaceSelect],
     ),
+  );
+
+  // The phone's filter sheet counts only the churches it will show.
+  const churchesInView = useChurchesInView(
+    map,
+    data,
+    filterPanelOpen && !isDesktop,
   );
 
   const pinnedPlaceTitle = centerOn?.placeTitle;
@@ -379,7 +378,7 @@ export function HomePage() {
         filters={filters}
         appliedFilters={appliedFilters}
         onFiltersChange={handleFiltersChange}
-        resultCount={mappedChurchCount}
+        resultCount={churchesInView}
         filterPanelOpen={filterPanelOpen}
         onFilterPanelOpenChange={setFilterPanelOpen}
         onChurchSelect={handleChurchSelect}

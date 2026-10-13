@@ -309,10 +309,8 @@ CSV change that removes a parish or church: that deletes events, so deploys
 build the snapshot from the published database as it stands, without the CSV
 edits, until a reviewed weekly run publishes the removal.
 
-Pushes to `main` deploy the site. Pull requests get a preview only on request:
-add the `preview` label and **Deploy Web** uploads the pull request's latest
-commit and comments the link. The run takes the label off when it ends, so
-adding it again after more pushes deploys a fresh preview.
+Pushes to `main` deploy the site. Every pull request that touches the site gets
+a preview: **Deploy Web** uploads each push to it and comments the link.
 
 CI (`.github/workflows/ci.yml`) runs on pull requests in two jobs, `python`
 (ruff, pytest) and `node` (web lint, type check and unit tests; the labeler's
@@ -772,3 +770,15 @@ Run tests:
 ```bash
 pnpm test
 ```
+
+## License
+
+The code is licensed under the [GNU Affero General Public License v3.0](LICENSE).
+If you run a modified version as a website, you must offer its source to the
+people who use it.
+
+The curated data in `data/` and the schedule data the site publishes (the
+database and snapshot `pnpm data:pull` fetches) are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse them for any
+purpose with credit to Project Carlo. The bulletins themselves belong to their
+parishes and are not covered.

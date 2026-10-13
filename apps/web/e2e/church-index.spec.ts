@@ -85,9 +85,9 @@ test("in the app, the index's Map link goes back to the map as it was, without r
     window.dispatchEvent(new PopStateEvent("popstate", { state: window.history.state }));
   }, churchHref);
   const breadcrumb = page.getByRole("navigation", { name: "Breadcrumb" });
-  await breadcrumb.getByRole("link", { name: "All churches" }).click();
+  await breadcrumb.getByRole("link", { name: "Church list" }).click();
   await expect(page).toHaveURL(/\/churches\/$/);
-  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Church list" })).toBeVisible();
 
   // Its search works in the app too.
   const searchBox = page.getByRole("searchbox", { name: "Search churches and cities" });
@@ -122,8 +122,8 @@ test("leaving the map straight after moving it keeps where it was left", async (
     await route.continue();
   });
   await zoomIn.click();
-  await page.getByRole("link", { name: "All churches" }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+  await page.getByRole("link", { name: "Church list" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Church list" })).toBeVisible();
 
   await page.getByRole("link", { name: "Map", exact: true }).click();
   await expect(page.locator(".leaflet-container")).toBeVisible();
@@ -131,7 +131,7 @@ test("leaving the map straight after moving it keeps where it was left", async (
 
   // Back to the index, and back again to the map as it was left.
   await page.goBack();
-  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Church list" })).toBeVisible();
   await page.goBack();
   await expect(page.locator(".leaflet-container")).toBeVisible();
   await expect(page).toHaveURL(/[?&]z=11(&|$)/);
@@ -150,8 +150,8 @@ test("in the app, back to the index returns to where it was left", async ({ page
   await page.goto("/");
   await expect(page.locator(".leaflet-container")).toBeVisible({ timeout: 15_000 });
   const loads = countLoads(page);
-  await page.getByRole("link", { name: "All churches" }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+  await page.getByRole("link", { name: "Church list" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Church list" })).toBeVisible();
 
   const church = page.locator('[data-city-group] li a[href^="/churches/"]').nth(150);
   await church.scrollIntoViewIfNeeded();
@@ -164,7 +164,7 @@ test("in the app, back to the index returns to where it was left", async ({ page
   expect(await page.evaluate(() => window.scrollY)).toBe(0);
 
   await page.goBack();
-  await expect(page.getByRole("heading", { level: 1, name: "All churches" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Church list" })).toBeVisible();
   expect(await page.evaluate(() => window.scrollY)).toBe(scrollY);
   expect(loads()).toBe(0);
 });

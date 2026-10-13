@@ -384,7 +384,7 @@ test.describe("on a phone", () => {
     await expect(dialog.getByRole("button", { name: "Zoom in" })).toBeVisible();
 
     await dialog.getByRole("button", { name: /^Filters/ }).tap();
-    await expect(page.getByRole("button", { name: /^Show \d+ churches?$/ })).toBeVisible();
+    await expect(page.getByRole("button", { name: /^Show \d+ church(es)?$/ })).toBeVisible();
     await page.keyboard.press("Escape");
     await expect(dialog).toBeVisible();
 

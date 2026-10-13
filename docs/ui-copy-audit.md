@@ -73,7 +73,7 @@ Choose one term for each concept and use it everywhere. Suggested choices:
 | Browser geolocation | **"Use my location"** / **"Finding your location…"** | the seven variants listed in the summary |
 | A searched place's marker | **"pin"** throughout: "Pinned: Buffalo" / "Remove pin" | "Searched place" (popup kicker) |
 | Clearing a filter | **"Any day"** / **"Any time"** / **"Clear filters"** | "Reset" / "Reset all" |
-| The church list page | **"All churches"** | "Browse all churches" (footer) next to the "All churches" breadcrumb |
+| The church list page | **"Church list"** | "Browse all churches" (footer), "All churches" (the earlier name) |
 | Link to the map | **"Map"** or **"Open the map"** | "Back to map" on pages entered directly |
 
 **Fallback name.** Use `"Unnamed church"` in the UI and the same string in

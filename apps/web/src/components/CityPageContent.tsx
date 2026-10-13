@@ -14,7 +14,7 @@ import type { CityMapConfig } from "@/lib/cityMap";
 import type { ScheduleRollupRow } from "@/lib/eventRollup";
 import { weeklyScheduleRows } from "@/lib/scheduleSummary";
 import { CHURCH_INDEX_PATH, churchPath } from "@/lib/seo";
-import { ALL_CHURCHES, DISCLAIMER, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";
+import { CHURCH_LIST, DISCLAIMER, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";
 
 /** The services a card tucks behind "Confession & Adoration times". */
 const SECONDARY_TYPES: EventType[] = ["confession", "adoration"];
@@ -216,7 +216,7 @@ export function CityPageContent({
             <Breadcrumbs
               className="mb-6"
               crumbs={[
-                { label: ALL_CHURCHES, to: CHURCH_INDEX_PATH },
+                { label: CHURCH_LIST, to: CHURCH_INDEX_PATH },
                 { label: city.label },
               ]}
             />
@@ -278,7 +278,7 @@ export function CityPageContent({
       </main>
       <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
         <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-          {ALL_CHURCHES}
+          {CHURCH_LIST}
         </Link>
       </footer>
     </>

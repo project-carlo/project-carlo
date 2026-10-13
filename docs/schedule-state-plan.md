@@ -132,7 +132,8 @@ CREATE TABLE llm_call (
     cost_usd REAL,
     latency_ms INTEGER,
     started_at TEXT NOT NULL,
-    finished_at TEXT
+    finished_at TEXT,
+    service_tier TEXT                 -- (migration 0006) flex | default, as the API reported it
 );
 CREATE INDEX idx_llm_call_bulletin ON llm_call(bulletin_id);
 CREATE INDEX idx_llm_call_parish ON llm_call(parish_id, id);
@@ -781,6 +782,21 @@ code departs from it.
   chapels, weekly vs dated, dates, exclusions as the weeks that remain, times,
   notes and the final source checks), worded for changes, and the response
   schema's qualifier and note descriptions are the eval schema's.
+- **Update calls run at the flex tier.** Each call asks for
+  `service_tier: "flex"`, half the standard price. The trade-off is slower
+  replies (the client timeout is 15 minutes) and, at times, no flex capacity.
+  That shows up as a 429, a 5xx, a timeout, or a response that was accepted
+  and then ends `failed` with a `server_error` and no output. Once the flex
+  client's 2 retries are spent (the standard tier keeps 5), such a call is
+  asked again at the standard tier, so a busy week costs more instead of
+  failing. A 429 for `insufficient_quota` is not: the standard tier would
+  refuse it too. A call that fails at both tiers stores both errors.
+  The tier isn't in `params_json`: it changes neither the request's content
+  nor the reply, so leaving it out keeps request keys, and with them stored
+  replies, unchanged. The tier the response reports (or the one asked for,
+  when it reports none) is in the stored call record and in
+  `llm_call.service_tier`, and `cost_usd` uses that tier's price.
+  `latency_ms` is the call that answered, not the flex tries before it.
 
 ### Deciding
 

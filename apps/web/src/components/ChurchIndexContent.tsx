@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import type { ChurchBase } from "../types";
 import { cityPath, citySlugFor, type City } from "@/lib/cities";
 import { churchPath } from "@/lib/seo";
-import { ALL_CHURCHES, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";
+import { CHURCH_LIST, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";
 import { SiteHeader } from "@/components/SiteHeader";
 
 /** What the all-churches index lists for each church. */
@@ -62,7 +62,7 @@ export function ChurchIndexContent({
       <div className="mx-auto w-full max-w-3xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         <section className="mx-auto max-w-2xl text-center">
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
-            {ALL_CHURCHES}
+            {CHURCH_LIST}
           </h1>
           <p className="mt-4 font-serif text-[1rem] text-ink-soft">
             Mass, Confession, and Adoration times at {churches.length} Catholic

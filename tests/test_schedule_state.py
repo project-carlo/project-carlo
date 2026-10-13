@@ -9,7 +9,9 @@ from pathlib import Path
 from types import SimpleNamespace
 from typing import Any
 
+import httpx
 import pytest
+from openai import APITimeoutError, InternalServerError, RateLimitError
 
 from pdf_extract import process
 from pdf_extract.blobstore import get_store
@@ -191,7 +193,7 @@ class FakeUpdater(OpenAIScheduleUpdater):
         return RawReply(
             text=text, served_model="fake-model-001",
             usage={"prompt_tokens": 100, "cached_tokens": 10, "output_tokens": 20},
-            latency_ms=5,
+            latency_ms=5, service_tier="flex",
         )
 
 
@@ -542,6 +544,7 @@ def test_a_bulletin_is_read_against_the_believed_schedule(conn: sqlite3.Connecti
     assert (call["status"], call["base_revision"], call["call_date"]) == (OK, 1, "2026-10-10")
     assert (call["served_model"], call["input_tokens"], call["output_tokens"]) == (
         "fake-model-001", 100, 20)
+    assert call["service_tier"] == "flex"
     assert call["response_key"] == call_record_key(call["request_key"])
     assert get_store().get(call["response_key"]) is not None
     assert {r[0] for r in conn.execute("SELECT kind FROM prompt_blob")} == {
@@ -636,6 +639,19 @@ def test_a_failed_call_is_retried_until_it_is_given_up(conn: sqlite3.Connection)
     assert statuses == [PARSE_FAILED, "api_error", "api_error"]
     stats = _run(conn, FakeUpdater())
     assert (stats["update_calls"], stats["update_gave_up"]) == (0, 1)
+
+
+def test_a_failed_call_keeps_what_was_tried_before_it(conn: sqlite3.Connection) -> None:
+    _seed(conn, [SUN_9])
+    _bulletin(conn, "b1", "2026-10-10T12:00:00Z")
+    error = RuntimeError("standard tier down")
+    error.add_note("asked at the standard tier after flex failed: flex full")
+    _run(conn, FakeUpdater(error))
+    [stored] = [r[0] for r in conn.execute("SELECT error FROM llm_call")]
+    assert stored == (
+        "RuntimeError: standard tier down; "
+        "asked at the standard tier after flex failed: flex full"
+    )
 
 
 def test_a_stored_reply_is_decided_without_calling_again(conn: sqlite3.Connection) -> None:
@@ -881,6 +897,23 @@ def test_replies_are_read_strictly_then_leniently() -> None:
     assert parse_response("[]").status == PARSE_FAILED
 
 
+def _fake_clients(create: Any) -> dict[str, Any]:
+    client = SimpleNamespace(responses=SimpleNamespace(create=create))
+    return {"flex": client, "default": client}
+
+
+def _api_request() -> httpx.Request:
+    return httpx.Request("POST", "https://api.openai.com/v1/responses")
+
+
+def _completed(tier: str | None) -> SimpleNamespace:
+    return SimpleNamespace(
+        id="resp_2", status="completed", incomplete_details=None,
+        model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+        service_tier=tier, usage=None,
+    )
+
+
 def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     updater = OpenAIScheduleUpdater()
     calls: list[dict[str, Any]] = []
@@ -890,6 +923,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
         return SimpleNamespace(
             id="resp_1", status="completed", incomplete_details=None,
             model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="flex",
             usage=SimpleNamespace(
                 input_tokens=3000,
                 input_tokens_details=SimpleNamespace(cached_tokens=1200, cache_write_tokens=0),
@@ -898,7 +932,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
             ),
         )
 
-    updater._client = SimpleNamespace(responses=SimpleNamespace(create=create))
+    updater._clients = _fake_clients(create)
     reply = updater.call(b"%PDF-1.4", "the context")
 
     assert (updater.provider, updater.model) == ("openai", "gpt-6-luna")
@@ -907,6 +941,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     assert request["reasoning"] == {"effort": "high"}
     assert request["text"]["format"]["strict"] is True
     assert request["store"] is False
+    assert request["service_tier"] == "flex"
     developer, user = request["input"]
     assert developer["role"] == "developer"
     assert developer["content"] == [{
@@ -917,6 +952,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     assert user["content"][1]["detail"] == "low"
     assert reply.served_model == "gpt-6-luna-2026-09-01"
     assert reply.usage["reasoning_tokens"] == 600
+    assert reply.service_tier == "flex"
     assert parse_response(reply.text).status == OK
 
     # Strict decoding needs every field required and no defaults.
@@ -935,6 +971,171 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     for obj in objects(STRICT_SCHEMA):
         assert obj["additionalProperties"] is False
         assert set(obj["required"]) == set(obj["properties"])
+
+
+def test_an_update_call_falls_back_to_the_standard_tier_when_flex_is_full() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            request = httpx.Request("POST", "https://api.openai.com/v1/responses")
+            raise RateLimitError(
+                "Resource Unavailable", response=httpx.Response(429, request=request), body=None,
+            )
+        return SimpleNamespace(
+            id="resp_1", status="completed", incomplete_details=None,
+            model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="default", usage=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+    assert parse_response(reply.text).status == OK
+
+
+def test_an_update_call_falls_back_when_flex_capacity_is_lost_after_acceptance() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            return SimpleNamespace(
+                id="resp_1", status="failed", incomplete_details=None,
+                error=SimpleNamespace(
+                    code="server_error",
+                    message="Flex processing is temporarily unavailable. Please try again later.",
+                ),
+                model="gpt-6-luna-2026-09-01", output_text="", service_tier="flex", usage=None,
+            )
+        return SimpleNamespace(
+            id="resp_2", status="completed", incomplete_details=None,
+            model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="default", usage=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+    assert parse_response(reply.text).status == OK
+
+
+def test_an_update_call_falls_back_when_flex_keeps_failing_with_a_server_error() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            request = httpx.Request("POST", "https://api.openai.com/v1/responses")
+            raise InternalServerError(
+                "server error", response=httpx.Response(500, request=request), body=None,
+            )
+        return SimpleNamespace(
+            id="resp_1", status="completed", incomplete_details=None,
+            model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="default", usage=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+
+
+def test_a_standard_tier_call_that_fails_is_not_asked_again() -> None:
+    updater = OpenAIScheduleUpdater(service_tier="default")
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        return SimpleNamespace(
+            id="resp_1", status="failed", incomplete_details=None,
+            error=SimpleNamespace(code="server_error", message="boom"),
+            model="gpt-6-luna-2026-09-01", output_text="", service_tier="default", usage=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["default"]
+    assert reply.text == ""
+
+
+def test_an_update_call_falls_back_when_flex_times_out() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            raise APITimeoutError(request=_api_request())
+        return _completed("default")
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+
+
+def test_an_update_call_out_of_quota_is_not_asked_at_the_standard_tier() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        raise RateLimitError(
+            "You exceeded your current quota",
+            response=httpx.Response(429, request=_api_request()),
+            body={"code": "insufficient_quota", "message": "You exceeded your current quota"},
+        )
+
+    updater._clients = _fake_clients(create)
+    with pytest.raises(RateLimitError):
+        updater.call(b"%PDF-1.4", "the context")
+    assert tiers == ["flex"]
+
+
+def test_an_update_call_failing_at_both_tiers_says_flex_failed_first() -> None:
+    updater = OpenAIScheduleUpdater()
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        raise InternalServerError(
+            f"{kwargs['service_tier']} down",
+            response=httpx.Response(500, request=_api_request()), body=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    with pytest.raises(InternalServerError, match="default down") as raised:
+        updater.call(b"%PDF-1.4", "the context")
+    [note] = raised.value.__notes__
+    assert "flex failed: InternalServerError: flex down" in note
+
+
+def test_an_update_call_takes_the_tier_asked_when_the_response_has_none() -> None:
+    updater = OpenAIScheduleUpdater()
+    updater._clients = _fake_clients(lambda **kwargs: _completed(None))
+    assert updater.call(b"%PDF-1.4", "the context").service_tier == "flex"
+
+
+def test_flex_calls_retry_less_and_wait_longer_than_standard_ones(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+    updater = OpenAIScheduleUpdater()
+    flex, default = updater._openai("flex"), updater._openai("default")
+    assert (flex.max_retries, flex.timeout) == (2, 900.0)
+    assert (default.max_retries, default.timeout) == (5, 600.0)
+    assert updater._openai("flex") is flex
 
 
 def test_update_policy_carries_the_eval_policy_rules() -> None:

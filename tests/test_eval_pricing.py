@@ -28,6 +28,25 @@ def test_openai_long_context_bills_the_whole_request_at_the_higher_rate():
     assert call_cost("gpt-6-luna", usage) == pytest.approx(0.3 * 0.20 + 0.01 * 0.75)
 
 
+def test_flex_calls_are_billed_at_the_flex_rate():
+    usage = {
+        "input_tokens": 100_000, "cached_tokens": 20_000, "cache_write_tokens": 10_000,
+        "output_tokens": 10_000,
+    }
+    standard = call_cost("gpt-6-luna", usage)
+    assert call_cost("gpt-6-luna", usage, service_tier="flex") == pytest.approx(standard / 2)
+    assert call_cost("gpt-6-luna", usage, service_tier="default") == pytest.approx(standard)
+    long = {"input_tokens": 300_000, "output_tokens": 10_000}
+    assert call_cost("gpt-6-luna", long, service_tier="flex") == pytest.approx(
+        0.3 * 0.10 + 0.01 * 0.375
+    )
+
+
+def test_a_flex_call_on_a_model_with_no_flex_price_is_unpriced():
+    usage = {"prompt_tokens": 1_000}
+    assert call_cost("gemini-3-flash-preview", usage, service_tier="flex") is None
+
+
 def test_gemini_thinking_is_billed_as_output():
     usage = {
         "prompt_tokens": 100_000, "cached_tokens": 40_000,

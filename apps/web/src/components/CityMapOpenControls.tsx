@@ -7,10 +7,12 @@ import { MapOverlay } from "./MapOverlay";
 import { filtersEqual, DEFAULT_FILTER_STATE, type FilterState } from "./filterState";
 import { SlidersHorizontalIcon, XIcon } from "@/components/icons";
 import { useBrowserLocation } from "@/hooks/useBrowserLocation";
+import { useChurchesInView } from "@/hooks/useChurchesInView";
 import type { useMapSelection } from "@/hooks/useMapSelection";
 import { CITY_MAP_CHIP_CLASS } from "@/lib/cityMap";
 import { cn } from "@/lib/utils";
 import { currentLocationPlace } from "../placeSearch";
+import type { ChurchMapItem } from "../types";
 
 const noop = () => {};
 
@@ -28,7 +30,7 @@ export default function CityMapOpenControls({
   filters,
   appliedFilters,
   onFiltersChange,
-  resultCount,
+  churches,
   selection,
   onClose,
 }: {
@@ -37,11 +39,18 @@ export default function CityMapOpenControls({
   filters: FilterState;
   appliedFilters: FilterState;
   onFiltersChange: (filters: FilterState) => void;
-  resultCount?: number;
+  /** The churches on the map. */
+  churches: readonly ChurchMapItem[] | undefined;
   selection: ReturnType<typeof useMapSelection>;
   onClose: () => void;
 }) {
   const [filterPanelOpen, setFilterPanelOpen] = useState(false);
+  // The filter sheet counts only the churches it will show.
+  const churchesInView = useChurchesInView(
+    map,
+    churches,
+    filterPanelOpen && !isDesktop,
+  );
   const { selectChurch, selectPlace, clearPlace, centerOn } = selection;
   const {
     status: locateStatus,
@@ -85,7 +94,6 @@ export default function CityMapOpenControls({
           filters={filters}
           appliedFilters={appliedFilters}
           onFiltersChange={onFiltersChange}
-          resultCount={resultCount}
           filterPanelOpen={false}
           onFilterPanelOpenChange={noop}
           onChurchSelect={selectChurch}
@@ -139,7 +147,7 @@ export default function CityMapOpenControls({
         onClose={() => setFilterPanelOpen(false)}
         filters={filters}
         onChange={onFiltersChange}
-        resultCount={resultCount}
+        resultCount={churchesInView}
       />
       {centering}
     </>
