@@ -40,11 +40,11 @@ export function Masthead({
 
   // The tagline is the <h1>: it carries the intent keywords ("Mass,
   // Confession & Adoration times near you") that the branded wordmark lacks.
-  // Visually unchanged — only the heading semantics are swapped.
+  // On a phone it's read but not shown, so the map gets the room.
   return (
     <header className={cn("space-y-2", className)}>
-      <div className="flex items-start justify-between gap-4">
-        <p className="font-display text-[2rem] leading-none font-normal tracking-tight text-ink sm:text-[2.5rem]">
+      <div className="flex items-center justify-between gap-4 md:items-start">
+        <p className="font-display text-[1.625rem] leading-none font-normal tracking-tight text-ink md:text-[2.5rem]">
           <Link to="/" reloadDocument={documentLinks} aria-label="Project Carlo — home">
             Project <span className="italic text-rubric">Carlo</span>
           </Link>
@@ -53,7 +53,7 @@ export function Masthead({
       </div>
       {/* A sentence, so it stays in the body serif — small caps is for
           labels. Italic gives it the subtitle voice without shouting. */}
-      <h1 className="font-serif text-[1rem] font-normal italic text-ink-soft sm:text-[1.0625rem]">
+      <h1 className="sr-only font-serif text-[1.0625rem] font-normal italic text-ink-soft md:not-sr-only">
         {tagline}
       </h1>
     </header>

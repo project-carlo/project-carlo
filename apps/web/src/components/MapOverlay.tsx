@@ -4,12 +4,14 @@ import type { ChurchSearchResult } from "../api";
 import { FilterPanel } from "./FilterPanel";
 import { FilterPills } from "./FilterPills";
 import { Masthead } from "./Masthead";
+import { ListIcon, SlidersHorizontalIcon } from "./icons";
 import { SearchTypeahead } from "./SearchTypeahead";
 import type { FilterState } from "./filterState";
 import { useDocumentLinks } from "../lib/documentLinks";
 import { isAboutPageEnabled } from "../lib/featureFlags";
 import { CHURCH_INDEX_PATH } from "../lib/seo";
 import { ALL_CHURCHES } from "../copy";
+import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
 import type { PlaceSearchResult } from "../placeSearch";
 
 const aboutPageEnabled = isAboutPageEnabled();
@@ -40,6 +42,10 @@ interface MapOverlayProps {
  * The parts that cover the map carry `data-map-overlay`, so the map can
  * centre what it zooms to in the ground they leave clear; the phone's filter
  * sheet blocks the map while it's open, so it isn't marked.
+ *
+ * On a phone the card is kept short for the map's sake: the wordmark on one
+ * line, the filter button naming what the map shows, and the link to the
+ * index moved to the map's bottom-left corner.
  */
 export function MapOverlay({
   isDesktop,
@@ -56,23 +62,24 @@ export function MapOverlay({
   children,
 }: MapOverlayProps) {
   const documentLinks = useDocumentLinks();
+  const eventLabel = EVENT_TYPE_LABELS[appliedFilters.eventType];
   return (
     <div className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-[900] flex justify-center px-4 pt-[calc(1rem+var(--safe-area-inset-top))] pb-[calc(1rem+var(--safe-area-inset-bottom))] md:justify-start md:px-6 md:pt-6 md:pb-6">
       <div className="pointer-events-none flex w-full max-w-[28rem] flex-col gap-4">
         <div
           data-map-overlay
-          className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-6 pt-5 pb-4 shadow-missal-floating backdrop-blur-sm"
+          className="pointer-events-auto rise-in shrink-0 border border-rule-strong bg-paper/96 px-4 pt-3 pb-3 shadow-missal-floating backdrop-blur-sm md:px-6 md:pt-5 md:pb-4"
         >
           <Masthead
             aside={
               // Beside the wordmark only, so the tagline keeps one line. The
               // index is also the homepage's one crawlable path into the
-              // church and city pages.
-              <div className="mt-1 flex shrink-0 flex-col items-end gap-1">
+              // church and city pages; a phone has it in the map's corner.
+              <div className="flex shrink-0 flex-col items-end gap-1 md:mt-1">
                 <Link
                   to={CHURCH_INDEX_PATH}
                   reloadDocument={documentLinks}
-                  className="rubric-link font-serif text-[0.9375rem]"
+                  className="rubric-link hidden font-serif text-[0.9375rem] md:inline-flex"
                 >
                   {ALL_CHURCHES}
                 </Link>
@@ -88,20 +95,26 @@ export function MapOverlay({
               </div>
             }
           />
-          <div className="mt-5">
+          <div className="mt-3 md:mt-5">
             <SearchTypeahead
               hideModeToggle
+              placePlaceholder={
+                isDesktop ? undefined : "City, ZIP, or address…"
+              }
               onChurchSelect={onChurchSelect}
               onPlaceSelect={onPlaceSelect}
               filterButton={
+                // A button, not a link, and named for what the map shows, so
+                // it's plain both that it's a control and what it controls.
+                // No chevron: it opens a sheet, not a menu under it.
                 <button
                   type="button"
                   onClick={() => onFilterPanelOpenChange(true)}
-                  aria-label="Open filters"
-                  data-active={filterPanelOpen}
-                  className="rubric-link ml-1 whitespace-nowrap font-serif text-[0.9375rem] md:hidden"
+                  aria-label={`Filters: ${eventLabel}`}
+                  className="missal-focus ml-1 inline-flex h-8 items-center gap-1.5 border border-rule-strong bg-paper px-2.5 whitespace-nowrap font-serif text-[0.9375rem] text-rubric transition-colors hover:text-rubric-deep md:hidden"
                 >
-                  Filters
+                  <SlidersHorizontalIcon aria-hidden className="size-3.5" />
+                  {eventLabel}
                 </button>
               }
             />
@@ -143,6 +156,18 @@ export function MapOverlay({
           />
         </div>
       </div>
+
+      {/* The index's link on a phone, in the corner opposite the locate
+       *  button and level with it. A corner button, like that one, so not a
+       *  `data-map-overlay`. */}
+      <Link
+        to={CHURCH_INDEX_PATH}
+        reloadDocument={documentLinks}
+        className="missal-focus pointer-events-auto absolute bottom-[calc(2.25rem+var(--safe-area-inset-bottom))] left-4 inline-flex h-11 items-center gap-2 border border-rule-strong bg-paper/96 px-3.5 font-serif text-[1rem] text-rubric shadow-missal-floating backdrop-blur-sm transition-colors hover:text-rubric-deep md:hidden"
+      >
+        <ListIcon aria-hidden className="size-4" />
+        Church list
+      </Link>
     </div>
   );
 }
