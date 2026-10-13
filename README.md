@@ -772,3 +772,15 @@ Run tests:
 ```bash
 pnpm test
 ```
+
+## License
+
+The code is licensed under the [GNU Affero General Public License v3.0](LICENSE).
+If you run a modified version as a website, you must offer its source to the
+people who use it.
+
+The curated data in `data/` and the schedule data the site publishes (the
+database and snapshot `pnpm data:pull` fetches) are licensed under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/): reuse them
+with credit to Project Carlo, and share what you build from them under the same
+terms. The bulletins themselves belong to their parishes and are not covered.
