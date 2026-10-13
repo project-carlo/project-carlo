@@ -11,7 +11,7 @@ import {
   formatMinutesMissal,
   titleCase,
 } from "../utils";
-import { ALL_CHURCHES, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
+import { CHURCH_LIST, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
 import {
   ExternalLinkIcon,
   FileTextIcon,
@@ -221,9 +221,9 @@ function BulletinLabel({ week }: { week: string | null }) {
   );
 }
 
-/** All churches › {City} › {Church}, without the city when the address has none. */
+/** Church list › {City} › {Church}, without the city when the address has none. */
 function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
-  const crumbs: Crumb[] = [{ label: ALL_CHURCHES, to: CHURCH_INDEX_PATH }];
+  const crumbs: Crumb[] = [{ label: CHURCH_LIST, to: CHURCH_INDEX_PATH }];
   if (city) crumbs.push({ label: city.label, to: cityPath(city.slug) });
   crumbs.push({ label: church.name ?? UNNAMED_CHURCH });
   return crumbs;
@@ -479,7 +479,7 @@ export function ChurchPageContent({
     </main>
     <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
       <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-        {ALL_CHURCHES}
+        {CHURCH_LIST}
       </Link>
     </footer>
     </>

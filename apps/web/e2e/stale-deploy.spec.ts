@@ -78,11 +78,11 @@ test("a chunk gone on the way to another page reloads into that page", async ({
   );
   const loads = countLoads(page);
 
-  await page.getByRole("link", { name: "All churches" }).click();
+  await page.getByRole("link", { name: "Church list" }).click();
 
   await expect(page).toHaveURL(/\/churches\/$/);
   await expect(
-    page.getByRole("heading", { level: 1, name: "All churches" }),
+    page.getByRole("heading", { level: 1, name: "Church list" }),
   ).toBeVisible({ timeout: 15_000 });
   await expect.poll(loads).toBe(1);
 });

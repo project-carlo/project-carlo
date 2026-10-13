@@ -24,7 +24,7 @@ export const UNNAMED_CHURCH = "Unnamed church";
 export const MAP_LINK = "Map";
 
 /** The all-churches index, as links and breadcrumbs name it. */
-export const ALL_CHURCHES = "All churches";
+export const CHURCH_LIST = "Church list";
 
 /** Asking the browser for the visitor's position, and the wait for it. */
 export const USE_MY_LOCATION = "Use my location";

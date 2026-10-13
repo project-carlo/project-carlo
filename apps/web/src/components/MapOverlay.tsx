@@ -10,7 +10,7 @@ import type { FilterState } from "./filterState";
 import { useDocumentLinks } from "../lib/documentLinks";
 import { isAboutPageEnabled } from "../lib/featureFlags";
 import { CHURCH_INDEX_PATH } from "../lib/seo";
-import { ALL_CHURCHES } from "../copy";
+import { CHURCH_LIST } from "../copy";
 import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
 import type { PlaceSearchResult } from "../placeSearch";
 
@@ -81,7 +81,7 @@ export function MapOverlay({
                   reloadDocument={documentLinks}
                   className="rubric-link hidden font-serif text-[0.9375rem] md:inline-flex"
                 >
-                  {ALL_CHURCHES}
+                  {CHURCH_LIST}
                 </Link>
                 {aboutPageEnabled ? (
                   <Link
@@ -166,7 +166,7 @@ export function MapOverlay({
         className="missal-focus pointer-events-auto absolute bottom-[calc(2.25rem+var(--safe-area-inset-bottom))] left-4 inline-flex h-11 items-center gap-2 border border-rule-strong bg-paper/96 px-3.5 font-serif text-[1rem] text-rubric shadow-missal-floating backdrop-blur-sm transition-colors hover:text-rubric-deep md:hidden"
       >
         <ListIcon aria-hidden className="size-4" />
-        Church list
+        {CHURCH_LIST}
       </Link>
     </div>
   );

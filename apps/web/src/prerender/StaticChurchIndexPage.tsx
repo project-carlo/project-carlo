@@ -10,7 +10,7 @@ import {
   absoluteUrl,
   buildChurchIndexDescription,
 } from "../lib/seo";
-import { ALL_CHURCHES } from "../copy";
+import { CHURCH_LIST } from "../copy";
 import { StaticPageHead } from "./StaticPageHead";
 
 interface StaticChurchIndexPageProps {
@@ -62,7 +62,7 @@ export function StaticChurchIndexPage({
         {
           "@type": "ListItem",
           position: 2,
-          name: ALL_CHURCHES,
+          name: CHURCH_LIST,
           item: canonicalUrl,
         },
       ],

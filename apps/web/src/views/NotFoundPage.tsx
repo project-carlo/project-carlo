@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapIcon } from "@/components/icons";
-import { ALL_CHURCHES, MAP_LINK } from "@/copy";
+import { CHURCH_LIST, MAP_LINK } from "@/copy";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 import { useHomeHref } from "@/hooks/useHomeHref";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
@@ -30,7 +30,7 @@ export function NotFoundPage({
           {MAP_LINK}
         </Link>
         <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-          {ALL_CHURCHES}
+          {CHURCH_LIST}
         </Link>
       </div>
     </main>
