@@ -1,13 +1,19 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import "./shadcn.css";
 
 /* Liturgical-missal typography: Cardo for display (literally designed for
  * classical + liturgical texts) and EB Garamond as a warm body serif. Both
  * are self-hosted via fontsource, no external CDN fetches. */
-@import "@fontsource/cardo/400.css";
-@import "@fontsource/cardo/400-italic.css";
-@import "@fontsource/cardo/700.css";
+/* Cardo's Latin subsets only. Its whole-weight files also carry Gothic, Old
+ * Italic and Runic, small enough that Vite inlined them into this stylesheet,
+ * so every visitor downloaded them, though no page uses them. */
+@import "@fontsource/cardo/latin-400.css";
+@import "@fontsource/cardo/latin-ext-400.css";
+@import "@fontsource/cardo/latin-400-italic.css";
+@import "@fontsource/cardo/latin-ext-400-italic.css";
+@import "@fontsource/cardo/latin-700.css";
+@import "@fontsource/cardo/latin-ext-700.css";
 @import "@fontsource-variable/eb-garamond";
 @import "@fontsource-variable/eb-garamond/wght-italic.css";
 
