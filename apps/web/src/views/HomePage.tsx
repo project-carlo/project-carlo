@@ -196,7 +196,7 @@ export function HomePage() {
     [],
   );
 
-  // On the way to another page (a link from the map, say "All churches"), a
+  // On the way to another page (a link from the map, say "Church list"), a
   // view still waiting on the debounce goes into this page's history entry
   // at once, around the router: through it, it would cancel the page change.
   // Back then returns to the map as it was left.

@@ -51,6 +51,8 @@ interface SearchTypeaheadProps {
   hideModeToggle?: boolean;
   /** Input/icon sizing variant. `md` (default) matches the map header; `lg` renders the hero size used on the landing page. */
   size?: "md" | "lg";
+  /** The place search's placeholder, where the default won't fit. */
+  placePlaceholder?: string;
 }
 
 export function SearchTypeahead({
@@ -59,6 +61,7 @@ export function SearchTypeahead({
   filterButton,
   hideModeToggle = false,
   size = "md",
+  placePlaceholder = "Search for a city, ZIP, or address…",
 }: SearchTypeaheadProps) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -147,9 +150,7 @@ export function SearchTypeahead({
   const hasResults = activeResults.length > 0;
   const isLoading = isPlaceMode ? placesLoading : churchesLoading;
   const heading = isPlaceMode ? "Places" : "Matching churches";
-  const placeholder = isPlaceMode
-    ? "Search for a city, ZIP, or address…"
-    : "Search for a church…";
+  const placeholder = isPlaceMode ? placePlaceholder : "Search for a church…";
   // "No results" only once a search has run on what's in the box: not while
   // the debounce lags the typing, and not for a query too short to search,
   // which would otherwise read as a search that found nothing.

@@ -5,7 +5,7 @@
  */
 import type { ChurchBase, ChurchDetail } from "../types";
 import { cityPath, type City, type CityLink } from "./cities";
-import { ALL_CHURCHES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
+import { CHURCH_LIST, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -167,7 +167,7 @@ export function churchWebPageJsonLd(
 }
 
 /**
- * BreadcrumbList: Home → All churches → {City} → {Church}, without the city level
+ * BreadcrumbList: Home → Church list → {City} → {Church}, without the city level
  * when the church's address has none.
  */
 export function churchBreadcrumbJsonLd(
@@ -178,7 +178,7 @@ export function churchBreadcrumbJsonLd(
   const origin = new URL(canonicalUrl).origin;
   const crumbs: { name: string; item: string }[] = [
     { name: SITE_NAME, item: absoluteUrl(origin, "/") },
-    { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+    { name: CHURCH_LIST, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
   ];
   if (city) {
     crumbs.push({ name: city.label, item: absoluteUrl(origin, cityPath(city.slug)) });
@@ -221,7 +221,7 @@ export function buildCityDescription(
 
 /**
  * Structured data for a city page: the page as a CollectionPage of its
- * churches' pages, and its breadcrumbs (Home → All churches → {City}).
+ * churches' pages, and its breadcrumbs (Home → Church list → {City}).
  */
 export function cityJsonLd(
   city: Pick<City, "label" | "churches">,
@@ -250,7 +250,7 @@ export function cityJsonLd(
     },
     breadcrumbList([
       { name: SITE_NAME, item: absoluteUrl(origin, "/") },
-      { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+      { name: CHURCH_LIST, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
       { name: city.label, item: canonicalUrl },
     ]),
   ];
