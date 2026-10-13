@@ -585,7 +585,7 @@ def brief(
     conn: sqlite3.Connection, parish_slug: str, *, cutoff: str | None = None,
     work_dir: Path = WORK_DIR,
 ) -> dict[str, Any]:
-    """`seed brief`, which `seed init` prints too: what a drafter starts a parish from.
+    """`seed brief`, which `seed start` prints too: what a drafter starts a parish from.
 
     The parish's website and churches, its bulletins (`seed bulletins`), the
     distinct events of its last `HISTORY_BULLETINS` processed bulletins with how

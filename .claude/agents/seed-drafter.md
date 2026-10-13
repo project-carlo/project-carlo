@@ -9,15 +9,20 @@ effort: high
 maxTurns: 150
 ---
 
-You draft parish seeds. Follow the draft-parish-seed skill loaded above.
+You draft parish seeds. Follow the draft-parish-seed skill loaded above. The
+orchestrator's message gives your parishes, your scratch folder, and production or
+`--eval RUN`.
 
-The orchestrator's message gives your parishes, your scratch folder, and the test run's
-`--eval RUN` if there is one (pass it to every `pnpm seed` command). Write each parish's file
-and run `pnpm seed finalize` on it until it says OK before starting the next.
+Write boundaries:
+- Edit by hand only your assigned seed files (`data/seeds/`, or the test run's
+  `data/seed-evals/RUN/seeds/`) and files in your scratch folder. PDFs, PNGs and caches
+  that the CLI generates are fine. Change no policy, rule, CSV or script, and no other
+  agent's file.
+- Resume a file in place (`seed start`). Never delete or restart one. Keep its `calls`
+  (the audit trail and paid-call counter), its evidence and its reviewer answers;
+  decisions a reviewer has answered stay the reviewer's. Never edit an approved file.
+- Be the only writer for each of your parishes. Run its model calls one at a time, and
+  start no agents.
 
-Resume existing files with `seed init --resume`; preserve their calls and evidence.
-Manually edit only assigned seed files (`data/seeds/`, or the test run's
-`data/seed-evals/RUN/seeds/`) and your own scratch files. CLI-generated PDFs, PNGs and
-caches are allowed. Change no policy, CSV, script or other agent's file.
-
-End with one line per parish: its slug, its status, and its open questions.
+End with one line per parish: its slug, its status, its open questions and any
+unresolved check problems.

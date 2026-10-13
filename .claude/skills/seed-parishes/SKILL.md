@@ -5,83 +5,86 @@ description: Orchestrate batches of parish believed-schedule seeds, including hi
 
 # Seeding parish batches
 
-A person reviews and approves every seed before the pipeline loads it. The design is
-`docs/seeding-plan.md`; the shared file contract is
-[docs/seeding-file.md](../../../docs/seeding-file.md). The drafter reads `POLICY` and makes
-slot decisions. Your job is to prepare, assign, verify and report the batch.
+A person reviews and approves every seed before the pipeline loads it. The design is in
+`docs/seeding-plan.md`. Drafters follow `.claude/skills/draft-parish-seed/`, whose
+[rules.md](../draft-parish-seed/rules.md) holds every slot decision. Your job is to
+prepare, assign, verify and report the batch, and to propose new rules from the reviews.
+Don't make slot decisions yourself.
 
 ## Prepare and select
 
-Run `pnpm data:pull` once before assigning work. Commands use the local database and R2
-read keys. Only model second opinions need their API keys. Run plain `pnpm seed ...`;
-this pnpm rejects `-s`. Use `--json` when you need the full result.
+Run `pnpm data:pull` once before assigning work. Commands use the local database and the
+R2 read keys; only model second opinions need API keys. Run plain `pnpm seed ...` (this
+pnpm rejects `-s`). `pnpm seed --help` lists the commands by phase.
 
-Choose the context first and keep it on every subsequent command:
+Choose the context first, and keep it on every command that follows:
 
 - Production: `pnpm seed pick [--limit N] [--diocese D] [--resume]` selects unseeded
   parishes, easiest first. `--resume` also offers files still `drafting`.
-- Historical eval: `pnpm seed pick --labeled --eval RUN [--limit N] [--resume]` creates
-  the run manifest or reuses it. Every parish command then needs `--eval RUN`, including
-  batch `check`, `finalize` and `status`. Drafts are never loaded. Live website lookup is
-  forbidden because it can reveal information after the cutoff.
+- Historical eval: `pnpm seed pick --labeled --eval RUN [--limit N] [--resume]` creates the
+  run's manifest or reuses it. Pass `--eval RUN` to every command after that, including
+  `check`, `finalize` and `status`. Eval drafts are never loaded.
 
-Inspect `pnpm seed status [--eval RUN]` for interrupted, blocked or invalid files. Assign
-requested repairs explicitly; `pick --resume` offers unfinished drafts, not completed ones.
+Look at `pnpm seed status [--eval RUN]` for interrupted, blocked or invalid files. Assign
+requested repairs explicitly: `pick --resume` offers unfinished drafts, not finished ones.
 
 ## Assign
 
-Split the selected parishes into disjoint assignments for `seed-drafter`
-(`.claude/agents/seed-drafter.md`), which preloads only `draft-parish-seed`. Default to
-3 parishes per agent, fewer for complex parishes; change this when the user requests it
-or an eval supplies evidence for another batch size. Larger assignments retain more PDF
-context, but their cost depends on the runtime and prompt caching. The agent definition
-owns the default model; override it only for a requested model comparison in an eval.
+Split the selected parishes into separate assignments for `seed-drafter`
+(`.claude/agents/seed-drafter.md`), which preloads only `draft-parish-seed`. Give each agent
+3 parishes by default, fewer for complex parishes. Change this when the user asks, or when
+an eval gives evidence for another batch size. Larger assignments keep more PDF context,
+but their cost depends on the runtime and on prompt caching. The agent definition sets the
+default model; override it only for a requested model comparison in an eval.
 
-Create a private scratch folder for each agent before spawning it (`mkdir -p`). Include:
+Make a private scratch folder for each agent before you start it (`mkdir -p`). Its message
+gives:
 
-- Its parish slugs, production or the exact `--eval RUN`, and its output directory.
-- Its private scratch folder.
-- Which files already exist and the concrete problems to repair, if any.
-- The instruction to resume existing files in place, preserve calls and evidence, and
-  finish and write each parish before starting the next.
+- its parish slugs, production or the exact `--eval RUN`, and its output directory;
+- its private scratch folder;
+- which files already exist, and the exact problems to repair, if any.
 
-Do not assign the same parish to two active writers. The drafter's instructions cover
-policy reading, evidence, websites, model calls and writing boundaries; do not duplicate
-those instructions in every assignment.
+Never give one parish to two active writers. The skill and the agent definition cover
+everything else; don't repeat their instructions in assignments.
 
-Parallel drafters share one usage limit. Ten at once exhausted a session's limit three
-minutes in and six failed mid-parish; start about five, and more as they finish. When an
-agent fails on a usage limit, its files are safe: after the limit resets, resume the same
-agent (`SendMessage` to it) rather than starting a new one, and paste its parishes' lines
-from `pnpm seed status` as they are, not counts restated from memory.
+Parallel drafters share one usage limit. Ten at once used up a session's limit three
+minutes in, and six failed mid-parish. Start about five, and add more as they finish.
+When an agent fails on a usage limit, its files are safe. After the limit resets, resume
+that same agent (`SendMessage` to it) instead of starting a new one. Paste its parishes'
+lines from `pnpm seed status` as they are, not counts restated from memory.
 
 ## Verify and recover
 
-After the agents finish, verify the assigned slugs with
-`pnpm seed check <parish>... [--eval RUN]`, and inspect
-`pnpm seed status [--eval RUN]`. To audit the whole selected directory, use
-`pnpm seed check --all [--eval RUN]`; malformed files are reported individually.
+When the agents finish, run `pnpm seed check <parish>... [--eval RUN]` on the assigned
+slugs, and look at `pnpm seed status [--eval RUN]`. `pnpm seed check --all [--eval RUN]`
+audits the whole directory and reports malformed files one by one.
 
-For bookkeeping problems, run `pnpm seed finalize <parish>... [--eval RUN]`. Its defaults,
-source expansion, read marks, history sources, `as_of` and status do not change decisions.
-Return remaining problems to a drafter with their exact messages. Never edit its substantive
-decisions or delete its seed file: deletion loses evidence and resets the paid-call counter.
-If the drafter cannot resolve a problem, preserve the draft and report its blocked reason
-or leave the decision to the reviewer. Approved files belong to their reviewer.
+For bookkeeping problems, run `pnpm seed finalize <parish>... [--eval RUN]`. It doesn't
+change decisions. Send any remaining problems back to a drafter with their exact messages.
+Recovery follows the drafter's write boundaries: never edit a draft's decisions, and never
+delete a seed file. Approved files belong to their reviewer.
 
-Report the assigned parishes by status, with open questions and unresolved checks, and the
-churches files list in `church_list_issues` (for whoever maintains `data/churches.csv`).
-The reviewer sees the seed in the labeler, so substantive doubts must also be in its
-questions. A ready file whose rationale holds a doubt it never asked about goes back to
-its drafter as a question.
+Report the assigned parishes by status, with their open questions and unresolved checks,
+and the churches the files list in `church_list_issues` (for whoever maintains
+`data/churches.csv`). A ready file whose rationale holds a doubt it never asked about goes
+back to its drafter, to become a question (rules.md asks by default).
+
+## Learn from reviews
+
+After a batch has been reviewed, run `pnpm seed questions --answered [--eval RUN]`. Look
+for answers that repeat a situation, and above all answers that go against the leaning.
+In your report, propose each as a candidate for rules.md, in the same form as its
+Candidates section: a When, a Lean, and the parishes and slots as evidence. Don't edit
+rules.md yourself: the owner adds the candidates and promotes them.
 
 ## Eval and handoff
 
-`pnpm seed score RUN` writes `data/seed-evals/RUN/report.md` and `report.json`. Compare settled
-precision alongside recall, wrongly excluded slots, questions, calls and cost. Use a new
-run name for each batch-size or model comparison; reusing a run preserves its manifest
-and existing drafts. Historical evals use only cutoff-visible bulletins and history.
+`pnpm seed score RUN` writes `data/seed-evals/RUN/report.md` and `report.json`. Compare
+settled precision with recall, wrongly excluded slots, questions, calls and cost. Use a
+new run name for each batch-size or model comparison; reusing a run keeps its manifest
+and its existing drafts.
 
-A person opens Seeds mode (`pnpm label`), answers questions and approves. Approved files
-are committed and merged in batches: the weekly run's before-copy compares newly seeded
-schedules with the previous extracted schedules, so a large batch can hold its change gate.
+A person opens Seeds mode (`pnpm label`), answers the questions and approves. Approved
+files are committed and merged in batches. The weekly run's before-copy compares newly
+seeded schedules with the previous extracted ones, so a large batch can hold its change
+gate.

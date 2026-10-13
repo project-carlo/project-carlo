@@ -649,62 +649,27 @@ pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
 
 ## Seeding parishes
 
-A parish's first seed is drafted by a Claude Code agent and approved by a
-person ([docs/seeding-plan.md](docs/seeding-plan.md)). The agent follows the
-`seed-parishes` orchestrator skill assigns batches to `seed-drafter`, which
-loads only `draft-parish-seed`. Both use [the shared file reference](docs/seeding-file.md).
-The drafter reads the parish's bulletins
-itself against the extraction policy, compares them with extract mode's stored
-history, asks `gpt-6.1-sol` or `gemini-3-flash-preview` only when those leave
-doubt, and writes `data/seeds/<parish>.json` with every slot's sources,
-decision and rationale, and a question for each slot it couldn't decide.
+A parish's first seed (`data/seeds/<parish>.json`) is drafted by Claude Code agents from its
+bulletins and approved by a person ([docs/seeding-plan.md](docs/seeding-plan.md)). The
+`seed-parishes` skill runs batches through `seed-drafter` agents, which follow the
+`draft-parish-seed` skill. Its [rules.md](.claude/skills/draft-parish-seed/rules.md) holds
+every seeding decision (a slot no rule covers becomes a question for the reviewer), and
+[file-format.md](.claude/skills/draft-parish-seed/file-format.md) holds the file format.
+`pnpm seed --help` lists every command by phase.
 
 ```bash
-pnpm seed pick                                # parishes to seed next, easiest first
-pnpm seed init st-mary-albany                 # start a parish's seed file; prints `seed brief`
-pnpm seed init st-mary-albany --resume        # resume or repair, preserving evidence and calls
-pnpm seed pick --resume                       # also offer interrupted drafts
-pnpm seed mark-read st-mary-albany latest     # record reading, even without slot citations
-pnpm seed brief st-mary-albany                # churches, website, bulletins, history, newest PDF
-pnpm seed bulletins st-mary-albany            # its bulletins, newest first
-pnpm seed pdf st-mary-albany latest           # the stored PDF, as a local file to read
-pnpm seed pages st-mary-albany 9f2c41 --page 2  # one page as a PNG
-pnpm seed grep st-mary-albany "holy hour"     # search every stored bulletin's text
-pnpm seed history st-mary-albany              # what extract mode stored (free)
-pnpm seed diff st-mary-albany                 # history no slot covers, and the reverse
-pnpm seed church "lodge st"                   # which parish a church belongs to
-pnpm seed ask st-mary-albany 9f2c41 --model gemini-3-flash-preview "Page 2: Saturday confessions?"
-pnpm seed extract st-mary-albany 9f2c41 --model gpt-6.1-sol
-pnpm seed finalize st-mary-albany             # fill defaults, add history sources and check
-pnpm seed check st-mary-albany                # or --all; bad files are reported individually
-pnpm seed status                              # every seed file, and whether it is loaded
+pnpm seed pick                          # parishes to seed next, easiest first
+pnpm seed start st-mary-albany          # start or resume a draft; prints where it starts from
+pnpm seed finalize st-mary-albany       # the drafter's last step: bookkeeping, then check
+pnpm seed check --all                   # the orchestrator's check; `status` lists every file
+pnpm seed questions --answered          # reviewers' answers against the leanings, to find new rules
+pnpm seed pick --labeled --eval try-1   # start a test run on the labeled parishes
+pnpm seed score try-1                   # score its drafts against the labels
 ```
 
-Output is compact text (`--json` for the full result). `ask` and `extract`
-are cached and recorded in the seed file, and refuse after
-`CARLO_SEED_CALL_LIMIT` (default 4) calls per parish that weren't cache hits.
-They need `OPENAI_API_KEY` or `GEMINI_API_KEY`.
-
-A person reviews the drafts in the labeler's **Seeds** mode (`pnpm label`, then
-Seeds): the open questions next to the PDFs, `1`-`9` to choose an option, `e`
-to edit a slot, `x` to leave it out, `r` to reopen a settled one, then Approve.
-Approved files are committed. Every pipeline command loads the approved seed
-files not yet in its database as `seed` revisions, which puts those parishes
-in update mode. A changed approved file is loaded again only when its `as_of` is
-later than the parish's latest seed. The weekly run loads them after taking its
-before-copy, so a large batch can hold the run's change checks, and a deploy
-never loads them.
-
-Test the agent on the labeled parishes first:
-
-```bash
-pnpm seed pick --labeled --eval try-1   # starts data/seed-evals/try-1/ (drafts are never loaded)
-# Every parish command takes --eval try-1; newer bulletins are hidden.
-# Skip live websites during historical evals.
-pnpm seed check --all --eval try-1
-pnpm seed status --eval try-1
-pnpm seed score try-1                   # data/seed-evals/try-1/report.md
-```
+Reviewers answer the questions and approve in the labeler's **Seeds** mode (`pnpm label`).
+Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
+in update mode (a deploy never loads them).
 
 ## Project layout
 
