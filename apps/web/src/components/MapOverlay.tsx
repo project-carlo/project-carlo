@@ -43,9 +43,8 @@ interface MapOverlayProps {
  * centre what it zooms to in the ground they leave clear; the phone's filter
  * sheet blocks the map while it's open, so it isn't marked.
  *
- * On a phone the card is kept short for the map's sake: the wordmark on one
- * line, the filter button naming what the map shows, and the link to the
- * index moved to the map's bottom-left corner.
+ * On a phone the card is kept short for the map's sake: the wordmark and the
+ * links share one line, and the filter button names what the map shows.
  */
 export function MapOverlay({
   isDesktop,
@@ -74,13 +73,15 @@ export function MapOverlay({
             aside={
               // Beside the wordmark only, so the tagline keeps one line. The
               // index is also the homepage's one crawlable path into the
-              // church and city pages; a phone has it in the map's corner.
-              <div className="flex shrink-0 flex-col items-end gap-1 md:mt-1">
+              // church and city pages. On a phone the links sit in a row,
+              // level with the wordmark, so the card stays one line deep.
+              <div className="flex shrink-0 items-center gap-3 md:mt-1 md:flex-col md:items-end md:gap-1">
                 <Link
                   to={CHURCH_INDEX_PATH}
                   reloadDocument={documentLinks}
-                  className="rubric-link hidden font-serif text-[0.9375rem] md:inline-flex"
+                  className="rubric-link font-serif text-[0.9375rem]"
                 >
+                  <ListIcon aria-hidden className="size-3.5 self-center md:hidden" />
                   {CHURCH_LIST}
                 </Link>
                 {aboutPageEnabled ? (
@@ -156,18 +157,6 @@ export function MapOverlay({
           />
         </div>
       </div>
-
-      {/* The index's link on a phone, in the corner opposite the locate
-       *  button and level with it. A corner button, like that one, so not a
-       *  `data-map-overlay`. */}
-      <Link
-        to={CHURCH_INDEX_PATH}
-        reloadDocument={documentLinks}
-        className="missal-focus pointer-events-auto absolute bottom-[calc(2.25rem+var(--safe-area-inset-bottom))] left-4 inline-flex h-11 items-center gap-2 border border-rule-strong bg-paper/96 px-3.5 font-serif text-[1rem] text-rubric shadow-missal-floating backdrop-blur-sm transition-colors hover:text-rubric-deep md:hidden"
-      >
-        <ListIcon aria-hidden className="size-4" />
-        {CHURCH_LIST}
-      </Link>
     </div>
   );
 }
