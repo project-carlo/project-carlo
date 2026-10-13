@@ -32,7 +32,7 @@ interface FilterPanelProps {
   onClose: () => void;
   filters: FilterState;
   onChange: (filters: FilterState) => void;
-  /** Mapped churches matching the current filters, shown on the mobile close button. */
+  /** Churches matching the current filters within the map's view, shown on the mobile close button. */
   resultCount?: number;
 }
 
