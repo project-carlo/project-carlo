@@ -3,10 +3,12 @@ import type { SeedEntry, SeedFile, SeedQueueRow, SeedSlot } from "../types";
 import { parseRoute } from "./route";
 import {
   approve,
+  chooseForGroup,
   chooseOption,
   describeEntry,
   dropSlot,
   editSlot,
+  expiredQuestions,
   fromEditorRow,
   newestReadBulletin,
   nextSeedToReview,
@@ -93,6 +95,7 @@ const queueRow = (parish_slug: string, status: SeedQueueRow["status"]): SeedQueu
   reviewer: null,
   summary: "",
   blocked_reason: null,
+  church_list_issues: 0,
   problem: null,
   loaded: false,
 });
@@ -227,5 +230,51 @@ describe("helpers", () => {
   it("routes the seeds pages", () => {
     expect(parseRoute("#/seeds")).toEqual({ page: "seeds" });
     expect(parseRoute("#/s/st-mary")).toEqual({ page: "seed", parish: "st-mary" });
+  });
+});
+
+describe("grouped questions", () => {
+  const day = (id: string, day_of_week: SeedEntry["day_of_week"]): SeedSlot => ({
+    ...question,
+    id,
+    group: "chapel",
+    question: "Record the 24-hour adoration chapel?",
+    options: [
+      { label: "24 hours", entry: entry({ event_type: "adoration", day_of_week, start_time: "00:00", end_time: "23:59" }), leaning: true },
+      { label: "Leave out", entry: null },
+    ],
+  });
+  const grouped = seed([settled, day("s3", "Monday"), day("s4", "Tuesday"), question]);
+
+  it("count once and list once", () => {
+    expect(openCount(grouped)).toBe(2);
+    expect(slotGroups(grouped).open.map((s) => s.id)).toEqual(["s3", "s2"]);
+  });
+
+  it("are settled together by one answer", () => {
+    const next = chooseForGroup(grouped, grouped.slots[1], 0, "Luke")!;
+    const [mon, tue] = [next.slots[1], next.slots[2]];
+    expect(mon.status).toBe("settled");
+    expect(tue.decision).toBe("include");
+    expect(tue.entry?.day_of_week).toBe("Tuesday");
+    expect(tue.answer?.choice).toBe(0);
+    expect(next.slots[3].status).toBe("needs_human");
+    expect(next.status).toBe("needs_review");
+  });
+});
+
+describe("questions about dates that have passed", () => {
+  const dated = (id: string, date: string): SeedSlot => ({
+    ...question,
+    id,
+    options: [
+      { label: "Cancel it", entry: entry({ event_type: "mass", event_kind: "specific_date", day_of_week: null, date, cancelled: true }), leaning: true },
+      { label: "Leave out", entry: null },
+    ],
+  });
+
+  it("are the open ones whose every entry is dated before today", () => {
+    const file = seed([dated("s5", "2026-10-12"), dated("s6", "2026-10-20"), question]);
+    expect(expiredQuestions(file, "2026-10-13").map((s) => s.id)).toEqual(["s5"]);
   });
 });

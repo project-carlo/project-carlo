@@ -25,8 +25,39 @@ export function isOpen(slot: SeedSlot): boolean {
   return slot.status === "needs_human";
 }
 
+/** The open slots answered with `slot`: its group's, or itself alone. */
+export function groupOf(seed: SeedFile, slot: SeedSlot): SeedSlot[] {
+  if (!slot.group) return [slot];
+  return seed.slots.filter((s) => s.id === slot.id || (isOpen(s) && s.group === slot.group));
+}
+
+/** One open slot per question: a group's first slot stands for the rest. */
+export function openQuestions(seed: SeedFile): SeedSlot[] {
+  const seen = new Set<string>();
+  return seed.slots.filter((s) => {
+    if (!isOpen(s)) return false;
+    if (!s.group) return true;
+    if (seen.has(s.group)) return false;
+    seen.add(s.group);
+    return true;
+  });
+}
+
+/** How many questions are open: a group counts once. */
 export function openCount(seed: SeedFile): number {
-  return seed.slots.filter(isOpen).length;
+  return openQuestions(seed).length;
+}
+
+/**
+ * Open slots every proposed entry of which is dated before `today` (YYYY-MM-DD):
+ * whatever the answer, nothing would reach the site.
+ */
+export function expiredQuestions(seed: SeedFile, today: string): SeedSlot[] {
+  return seed.slots.filter((s) => {
+    if (!isOpen(s)) return false;
+    const entries = (s.options ?? []).map((o) => o.entry).filter((e): e is SeedEntry => !!e);
+    return entries.length > 0 && entries.every((e) => e.event_kind !== "weekly" && !!e.date && e.date < today);
+  });
 }
 
 /** The entry an excluded slot keeps for review: its own, or one its options name, or none. */
@@ -90,8 +121,20 @@ export function statusAfterChange(seed: SeedFile): SeedStatus {
 }
 
 export function replaceSlot(seed: SeedFile, next: SeedSlot): SeedFile {
-  const changed = { ...seed, slots: seed.slots.map((s) => (s.id === next.id ? next : s)) };
+  return replaceSlots(seed, [next]);
+}
+
+export function replaceSlots(seed: SeedFile, nexts: readonly SeedSlot[]): SeedFile {
+  const byId = new Map(nexts.map((s) => [s.id, s]));
+  const changed = { ...seed, slots: seed.slots.map((s) => byId.get(s.id) ?? s) };
   return { ...changed, status: statusAfterChange(changed), approved_at: null };
+}
+
+/** Answer a question for every slot of its group (or the slot alone). Null when an option can't settle one. */
+export function chooseForGroup(seed: SeedFile, slot: SeedSlot, index: number, by: string): SeedFile | null {
+  const chosen = groupOf(seed, slot).map((s) => (isOpen(s) ? chooseOption(s, index, by) : null));
+  if (chosen.some((s) => !s)) return null;
+  return replaceSlots(seed, chosen as SeedSlot[]);
 }
 
 export function approve(seed: SeedFile, reviewer: string): SeedFile | null {
@@ -99,10 +142,10 @@ export function approve(seed: SeedFile, reviewer: string): SeedFile | null {
   return { ...seed, status: "approved", reviewer: reviewer.trim() };
 }
 
-/** Slots in the order the page lists them: open questions, settled, left out. */
+/** Slots in the order the page lists them: open questions (one per group), settled, left out. */
 export function slotGroups(seed: SeedFile): { open: SeedSlot[]; settled: SeedSlot[]; excluded: SeedSlot[] } {
   return {
-    open: seed.slots.filter(isOpen),
+    open: openQuestions(seed),
     settled: seed.slots.filter((s) => !isOpen(s) && s.decision === "include"),
     excluded: seed.slots.filter((s) => !isOpen(s) && s.decision !== "include"),
   };

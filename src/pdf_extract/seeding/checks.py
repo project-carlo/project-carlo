@@ -11,15 +11,22 @@ database (docs/seeding-plan.md, "Tools"):
 - the file's bulletins are the parish's, and `as_of` is the fetch time of the
   newest one the agent read (in a test run, of the labeled bulletin);
 - the newest listed bulletin is marked read, and an agent's settled inclusions
-  cite its own reading there at their page (reviewer answers may include older slots);
+  cite its own reading there at their page (reviewer answers may include older slots),
+  except what the newest bulletin can't be expected to print (`older_evidence_ok`):
+  a weeks-of-the-month slot none of whose weeks fall in the newest bulletin's
+  week, or a dated entry from `as_of` on that an older bulletin announced;
 - a historical eval contains no live website evidence.
 """
 
 from __future__ import annotations
 
+import calendar
 import sqlite3
+from datetime import date, timedelta
 from typing import Any
 
+from pdf_extract.bulletin_week import bulletin_week
+from pdf_extract.labeling.labels import DAYS, WEEKS_OF_MONTH
 from pdf_extract.schedule.entries import UNKNOWN_CHURCH, EntryError, parse_entry
 from pdf_extract.schedule.store import normalize_as_of, parish_churches
 from pdf_extract.seeding.files import (
@@ -33,6 +40,78 @@ from pdf_extract.seeding.files import (
     resolve_hash,
     validate_seed,
 )
+
+# The days a bulletin's calendar is taken to cover: its week's Sunday through
+# the next Sunday (an issue's calendar usually runs from its Sunday to the next).
+COVERED_DAYS = 8
+
+
+def weeks_of(day: date) -> set[str]:
+    """Which of `weeks_of_month`'s weeks `day` is in for its weekday: `first` to
+    `fifth`, and `last` when it is that weekday's last in the month."""
+    weeks = {WEEKS_OF_MONTH[(day.day - 1) // 7]}
+    if day.day + 7 > calendar.monthrange(day.year, day.month)[1]:
+        weeks.add("last")
+    return weeks
+
+
+def covered_weeks(bulletin: dict[str, Any], day_of_week: str) -> set[str] | None:
+    """The weeks of the month `day_of_week` falls in during the days `bulletin` covers,
+    or None when the bulletin has no date to tell."""
+    start = bulletin_week(bulletin)
+    if start is None or day_of_week not in DAYS:
+        return None
+    weeks: set[str] = set()
+    for offset in range(COVERED_DAYS):
+        day = start + timedelta(days=offset)
+        if DAYS[day.weekday()] == day_of_week:
+            weeks |= weeks_of(day)
+    return weeks
+
+
+def older_evidence_ok(
+    seed: dict[str, Any], slot: dict[str, Any], newest: dict[str, Any], as_of_date: str | None,
+) -> bool:
+    """Whether a settled inclusion may rest on an older bulletin than the newest read.
+
+    Two kinds of slot don't appear in every issue, so the newest one not printing
+    them says nothing:
+
+    - a weekly slot on some weeks of the month ("First Friday"), when none of its
+      weeks falls in the newest bulletin's week. It must cite the newest bulletin
+      read whose week does hold one of them, if any does: that one would print it.
+    - a dated entry on or after `as_of` an older bulletin announced (a Mass on
+      All Souls Day printed a month ahead).
+
+    Either way the slot has no `page` (the newest bulletin doesn't print it) and
+    an agent source on a read bulletin at a page.
+    """
+    entry = slot["entry"]
+    if slot["page"] is not None or not isinstance(entry, dict):
+        return False
+    read = sorted(
+        (b for b in seed["bulletins"] if b["read"]),
+        key=lambda b: normalize_as_of(b["fetched_at"]), reverse=True,
+    )
+    cited = {
+        resolve_hash(seed, s.get("bulletin")) for s in slot["sources"]
+        if s.get("source") == AGENT and s.get("page") is not None
+    }
+    cited_read = [b for b in read if b["content_hash"] in cited]
+    if not cited_read:
+        return False
+    if entry.get("event_kind") == "weekly":
+        weeks = set(entry.get("weeks_of_month") or [])
+        if not weeks or entry.get("exclude_weeks"):
+            return False
+        here = covered_weeks(newest, entry.get("day_of_week") or "")
+        if here is None or here & weeks:
+            return False
+        covering = [b for b in read if (covered_weeks(b, entry["day_of_week"]) or set()) & weeks]
+        if not covering:
+            return True
+        return covering[0]["content_hash"] in cited
+    return bool(as_of_date and entry.get("date") and entry["date"] >= as_of_date)
 
 
 def _parish_id(conn: sqlite3.Connection, parish_slug: str) -> int | None:
@@ -107,10 +186,15 @@ def check_seed(
                 and source.get("page") == slot["page"]
                 for source in slot["sources"]
             )
-            if not anchored:
+            if not anchored and not (
+                newest is not None and older_evidence_ok(seed, slot, newest, as_of_date)
+            ):
                 problems.append(
                     f"{where}: a settled inclusion needs an agent source on the newest "
-                    "bulletin at its page; otherwise leave it needs_human with page null"
+                    "bulletin at its page; otherwise leave it needs_human with page null "
+                    "(a weeks-of-the-month slot whose weeks the newest bulletin's week "
+                    "doesn't hold, or a dated entry from as_of on, may instead cite an older "
+                    "bulletin read, with page null)"
                 )
         if cutoff is not None and any(s.get("source") == WEBSITE for s in slot["sources"]):
             problems.append(

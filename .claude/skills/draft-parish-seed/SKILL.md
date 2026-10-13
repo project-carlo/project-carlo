@@ -71,16 +71,23 @@ Finish and write each parish's file before starting the next. Resume an interrup
    Mark each bulletin read with `seed mark-read`; cite the evidence for each slot in
    an `agent` source. Do not invent a slot just to record that you read a bulletin. Before
    calling a weeks-of-the-month slot (First Friday Holy Hour) "seen once", check whether the
-   other bulletins' calendars even cover a week it falls in. For a church or chapel the
+   other bulletins' calendars even cover a week it falls in (`seed brief` prints which
+   weeks of the month the newest bulletin's week holds). For a church or chapel the
    bulletin names, `pnpm seed church <name, town or street>` says whether it is in
-   `data/churches.csv` and whose it is.
+   `data/churches.csv` and whose it is; it matches every word in any order, so try the
+   name with its town ("Immaculate Conception Ithaca") and then the town alone before
+   concluding a church is missing.
 5. **The parish website is an extra source, not a step.** In a historical eval, skip
    website lookup entirely: live pages may reveal changes after the cutoff and `check`
-   rejects website sources. In production, look at it with WebFetch at the
-   address `init` printed only when a question
-   needs it: the bulletins and history disagree, or a slot's location or regularity is
-   unclear. Cite what it says as `{"source": "website", "url": "<the page read>", "said":
-   "..."}`. Websites go stale: one can back a reading up or raise a question, but it doesn't
+   rejects website sources. In production, look at it only when a question needs it: the
+   bulletins disagree, or a slot's location or regularity is unclear. `pnpm seed site
+   <parish>` prints the homepage's own text and the links on it that look like schedules;
+   `pnpm seed site <parish> /mass-times` (or a full address) prints one of those. It gets
+   past most Cloudflare checks and pages a script draws, and keeps each page for a day.
+   Quote it as `{"source": "website", "url": "<the address it printed>", "said": "..."}`,
+   in the page's words, never a time you worked out. If it can't read the site, say so in
+   the rationale and rely on the bulletins. Websites go stale: one can back a reading up,
+   or settle where a chapel is or that a "First Saturday" Mass is monthly, but it doesn't
    outweigh the newest bulletin.
 6. **Ask a model only when your reading and history still leave doubt.** Prefer a targeted
    question: `pnpm seed ask <parish> <hash> --model gemini-3-flash-preview "Page 2: when are
@@ -95,21 +102,65 @@ Finish and write each parish's file before starting the next. Resume an interrup
      purpose (keep its entry and say why; a chapel elsewhere may keep its own church slug).
      Something left out with no time to record (a chapel open only by arrangement,
      confession by appointment) gets `"entry": null`: never invent a time to fill it.
-   - `needs_human`: the sources conflict and the bulletins don't settle it; the policy leaves
-     it a judgment call; the print is unreadable; or which church or chapel it belongs to is
-     unclear. Write a short `question`, the `options` you are choosing between (an option's
-     `entry` is null for "leave it out"), mark exactly one `"leaning": true`, and say why in
-     the rationale.
+   - `needs_human`: the bulletins contradict each other and don't settle it; the policy
+     leaves it a judgment call; the print is unreadable; or which listed church it belongs
+     to is unclear. Write a short `question`, the `options` you are choosing between (an
+     option's `entry` is null for "leave it out"), mark exactly one `"leaning": true`, and
+     say why in the rationale.
 
-   Three cases are always `needs_human`, leaning as you judge:
-   - **Anything you would flag to the reviewer.** The reviewer works in the labeler and
-     never sees your report: a doubt that is only in your report is lost, and the slot is
-     approved as settled.
-   - **A slot the newest bulletin doesn't print**, backed only by the website or older
-     bulletins.
-   - **A schedule the file can't express**, such as "every other Wednesday": offer weekly
-     with a note saying so, the next dated occurrence (on or after `as_of`), and leaving it
-     out. Don't invent a field for it.
+   A question costs a reviewer time on every parish, so ask only what a person must
+   decide. **Settle these by rule** (say which rule in the rationale):
+   - **A time the policy works out.** "After the 11:30 AM Mass" on a weekday starts at
+     12:00; after a weekend Mass, an hour after it starts; "an hour before each Mass" runs
+     from an hour before to the Mass's start; Confession during Adoration has the
+     Adoration's hours and the note `During Adoration`. History reading 11:30 or 12:15
+     instead is not a conflict: `seed diff` lists it as a different reading of your slot,
+     and `finalize` cites it there.
+   - **History disagreeing with the bulletins.** History came from an older prompt. When
+     your reading of the bulletins and the policy is clear, settle it and say what history
+     got wrong. A history event that reads your slot at another time needs no slot of its
+     own; any other history event you leave out still gets an excluded slot (step 9).
+   - **What the policy leaves out**: a chapel or church elsewhere or whose place is
+     unclear, another parish's church, a devotion that is not Mass, Confession or
+     Adoration (a Rosary, Anointing of the Sick), a wedding, funeral or memorial Mass for
+     one person, an event with no definite time. Settle it `exclude`. A church or chapel
+     with times of its own that `data/churches.csv` lacks also goes in the file's
+     `church_list_issues` (see the seed file reference), once, not as a question.
+   - **A cancellation the bulletin doesn't state.** A holiday listing that shows a 9:00 AM
+     Mass and not the usual 6:45 does not cancel the 6:45: record the dated 9:00 AM Mass
+     and leave the weekly slot alone. Record a cancellation only when the bulletin says a
+     Mass is cancelled, moved, or replaced by a Communion Service.
+   - **A weekly slot the newest bulletin skips for a reason it gives.** "No Mass Monday,
+     Columbus Day" or a retreat day confirms the weekly slot: include it with the newest
+     bulletin's page for that line, citing the line and the older bulletins that print the
+     slot, with the dated cancellation when the date is on or after `as_of`.
+   - **What the newest bulletin can't show** (the seed file reference has the check's
+     terms): a slot the bulletin names by its week of the month ("First Friday Adoration",
+     "First Saturday Mass") when the newest bulletin's week holds none of those weeks, and
+     a dated event on or after `as_of` an older bulletin announced (an All Souls Mass on
+     November 2). Include them settled with `page: null`, citing the older bulletin. A time
+     printed only as a dated item that happens to fall on a first Friday, with no "First
+     Friday" in the bulletin, is dated: left out once its date has passed.
+   - **A change announced for later** ("from November 1, the Friday Mass moves to
+     Tuesday"): keep the current schedule, leave the future one out, and say so. Update
+     mode reads the bulletins that show the change.
+   - **A schedule the file can't express whose dates the bulletin prints** ("every other
+     Tuesday", with the next ones dated): record the dated occurrences on or after
+     `as_of`.
+
+   Ask (`needs_human`, leaning as you judge) for:
+   - **Anything else you would flag to the reviewer.** The reviewer works in the labeler
+     and never sees your report: a doubt that is only in your report is lost, and the slot
+     is approved as settled.
+   - **Any other slot the newest bulletin doesn't print**, backed only by the website or
+     older bulletins (a weekly Mass missing with no reason given).
+   - **A schedule the file can't express with no dates printed**, such as "every other
+     Wednesday": offer weekly with a note saying so, and leaving it out. Don't invent a
+     field for it.
+
+   One answer, one question: when the same decision covers several slots (seven days of a
+   chapel, a confession window before every Mass), give them one `group` (see the seed
+   file reference).
 8. Write the `summary`: two or three sentences a reviewer reads first.
 9. `pnpm seed finalize <parish>` does the bookkeeping, then checks the file: it fills in
    every key a slot or entry leaves at its default, splits a source citing `bulletins` into
@@ -123,8 +174,9 @@ Finish and write each parish's file before starting the next. Resume an interrup
    other events does not cover them in `diff`. If a problem cannot be resolved, preserve
    the evidence, mark the parish blocked with its reason, and report it. Warnings (`!`)
    are omissions from history; address them even when the command says OK. Update mode
-   recovers omissions poorly. `pnpm seed diff <parish>` lists the same warnings, plus
-   included slots history never had.
+   recovers omissions poorly. `pnpm seed diff <parish>` lists the same warnings, history
+   events that read one of your slots at another time (check your time; no slot needed),
+   and included slots history never had.
 
 A parish that can't be seeded now (no usable bulletin, no schedule in its bulletins, a church
 missing from `data/churches.csv`) gets `"status": "blocked"` with `blocked_reason`, and you

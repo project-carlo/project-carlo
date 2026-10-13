@@ -22,10 +22,12 @@ Extract Mass, Confession, and Adoration schedule information from the attached C
 
 # What to extract
 
-- Only extract Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin.
+- Only extract Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin, including a Rosary, Novena, Anointing of the Sick or other devotion the bulletin does not call a Mass, Confession or Adoration.
+- A Holy Hour is Adoration even when other prayer goes with it ("Holy Hour and Night Prayer"), unless the bulletin says the Blessed Sacrament is not exposed.
 - Benediction implies Adoration: record Benediction as an Adoration event with the note `Benediction`. "Adoration and Benediction" or "Holy Hour with Benediction" is one Adoration event with that note, not two events.
 - A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, record that Mass under `cancellations` for that date.
-- Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation).
+- Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation). A wedding, a funeral, or a memorial or anniversary Mass for one person is closed unless the bulletin invites everyone to it.
+- A Mass the regular schedule lists "with" a school or group ("First Friday Mass with St. Mary's School") is open unless the bulletin limits it.
 - Skip anything without a definite start time, such as "Confession by appointment" or "call the office".
 
 # Churches and chapels
@@ -47,7 +49,7 @@ Sort each event into exactly one bucket:
 To decide between weekly and dated:
 
 1. Times presented as the parish's regular schedule ("Weekend Masses", "Daily Mass", "Mass Schedule", "Confessions: Saturdays 3:00-3:45 PM") are weekly. A range of days ("Monday-Friday 8:00 AM") is one weekly entry per day.
-2. Slots tied to certain weeks of the month ("First Friday Adoration", "1st and 3rd Tuesdays", "last Sunday of the month") are always weekly, with `weeks_of_month` set, never dated. This holds even when the bulletin also gives this month's date for it ("First Friday, October 2"), unless it says the event is a one-time occurrence.
+2. Slots tied to certain weeks of the month ("First Friday Adoration", "1st and 3rd Tuesdays", "last Sunday of the month") are always weekly, with `weeks_of_month` set, never dated. This holds even when the bulletin also gives this month's date for it ("First Friday, October 2"), unless it says the event is a one-time occurrence. It needs the bulletin to name the week: a dated time that only happens to fall on a first Friday is dated (rule 3).
 3. Times given only with a date, or with a date and its weekday ("Tuesday, October 6, 7:00 PM Adoration"), are dated, including the dated times in a weekly calendar or a list of Mass intentions. So are one-off times given with a weekday that means one particular day ("this Saturday at 9:00 AM"; see Dates).
 4. Exception: if the bulletin shows dated times for two or more weeks and the same slot (church, type, weekday and time) appears in each of those weeks, record it as weekly, unless the bulletin marks it as special or one-off.
 5. When it is unclear, prefer dated (rule 2 still wins for weeks-of-the-month slots). A slot recorded as dated that turns up again in later bulletins is promoted to weekly automatically; a slot wrongly recorded as weekly stays wrong.
@@ -75,7 +77,8 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 - Only when the bulletin times an event relative to a Mass and gives no clock time for it, work it out from that Mass's start time:
   - "After" or "following" a weekend Mass (Saturday evening vigil or Sunday): 1 hour after the Mass starts.
   - "After" or "following" a weekday Mass: 30 minutes after the Mass starts.
-  - "N minutes before Mass": N minutes before it, ending when the Mass starts. "Before every Mass" is one entry for each Mass it refers to.
+  - "N minutes before Mass": N minutes before it, ending when the Mass starts. "Before every Mass" is one entry for each Mass it refers to. A general line like this covers the regular weekly Masses, not dated special Masses (a holy day, a feast, a Mass in another language once a month), unless the bulletin gives those a Confession of their own.
+- Confession offered during Adoration ("Confessions are heard during Adoration") has the Adoration's start and end times, with the note `During Adoration`.
 
 # Notes
 
@@ -93,7 +96,7 @@ Read the whole bulletin, including calendars, sidebars and the back page, and ca
 
 - Keep church-specific schedule headings separate: an unlisted church's times must not be assigned to a similar-named listed church. A parish-wide heading, parish-office address, or photograph caption is not a different church-specific schedule heading.
 - Preserve a dated Mass with an explicit known church and time even when another church has a usual weekly Mass at that time. Different churches are not duplicates; the dated venue overrides a conflicting standing schedule for that date.
-- An event that includes Confession or Adoration does not establish those components' start/end times. Do not copy the larger event's full hours onto its components; record a component only with its own definite timing or a permitted relative-to-Mass anchor.
+- An event that includes Confession or Adoration does not establish those components' start/end times. Do not copy the larger event's full hours onto its components; record a component only with its own definite timing or a permitted relative-to-Mass anchor. The one exception is Confession offered during Adoration, which takes the Adoration's times (see Times).
 - Apply the off-site rules to Mass-intentions entries too, resolving venue abbreviations from the bulletin's own context.
 - When the bulletin's printed issue date is clearly from the wrong year relative to the provided current date, set wrong_bulletin=true even if its schedule can still be extracted. Do not mistake dates of other events or historical references for the issue date.
 """

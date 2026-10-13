@@ -107,6 +107,11 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
                   <a href={seedHref(s.parish_slug)} className="font-medium text-slate-800 hover:underline">
                     {s.parish_name}
                   </a>
+                  {s.church_list_issues > 0 && (
+                    <span className="ml-2 text-xs text-slate-500" title="Churches or chapels the bulletins name that the church list lacks">
+                      {s.church_list_issues} for the church list
+                    </span>
+                  )}
                 </td>
                 <td className="px-3 py-1.5">
                   <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${SEED_STATUS_STYLE[s.status]}`}>{SEED_STATUS_LABEL[s.status]}</span>

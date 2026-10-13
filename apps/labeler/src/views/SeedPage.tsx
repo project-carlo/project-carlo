@@ -7,17 +7,20 @@ import { navigate, seedHref, SEEDS_HREF } from "../lib/route";
 import { asDated, editRow, rowProblems } from "../lib/rows";
 import {
   approve,
-  chooseOption,
+  chooseForGroup,
   describeEntry,
   dropSlot,
   editSlot,
+  expiredQuestions,
   fromEditorRow,
+  groupOf,
   isOpen,
   newestReadBulletin,
   nextSeedToReview,
   openCount,
   reopenSlot,
   replaceSlot,
+  replaceSlots,
   resolveBulletin,
   slotGroups,
   toEditorRow,
@@ -163,9 +166,22 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
     save(replaceSlot(seed, next));
   };
 
-  const choose = (slot: SeedSlot, index: number) =>
-    act(slot, (s) => (isOpen(s) ? chooseOption(s, index, reviewer) : null), "That option can't settle this slot.");
-  const drop = (slot: SeedSlot) => act(slot, (s) => dropSlot(s, reviewer), "");
+  const choose = (slot: SeedSlot, index: number) => {
+    if (!canAct()) return;
+    const next = isOpen(slot) ? chooseForGroup(seed, slot, index, reviewer) : null;
+    if (!next) return setMessage("That option can't settle this slot.");
+    save(next);
+  };
+  /** Leave a slot out: an open question's whole group with it. */
+  const drop = (slot: SeedSlot) => {
+    if (!canAct()) return;
+    const slots = isOpen(slot) ? groupOf(seed, slot) : [slot];
+    save(replaceSlots(seed, slots.map((s) => dropSlot(s, reviewer))));
+  };
+  const dropExpired = () => {
+    if (!canAct() || !expired.length) return;
+    save(replaceSlots(seed, expired.map((s) => dropSlot(s, reviewer))));
+  };
   const reopen = (slot: SeedSlot) => act(slot, (s) => reopenSlot(s), "This slot was left out with no entry to include.");
   const startEdit = (slot: SeedSlot) => {
     if (advancingRef.current) return;
@@ -273,6 +289,11 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   const activeBulletin = seed.bulletins.find((b) => b.content_hash === activeHash) ?? null;
   const asOfHash = newestReadBulletin(seed)?.content_hash ?? null;
   const n_open = openCount(seed);
+  const today = new Date().toLocaleDateString("en-CA");
+  const expired = expiredQuestions(seed, today);
+  const expiredIds = new Set(expired.map((s) => s.id));
+  const expiredCount = new Set(expired.map((s) => s.group || s.id)).size;
+  const churchIssues = seed.church_list_issues ?? [];
   const missing = new Set(seed.bulletins.map((b) => b.content_hash).filter((h) => !detail.bulletins_in_db.includes(h)));
 
   return (
@@ -361,6 +382,34 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
               ))}
             </ul>
           )}
+          {churchIssues.length > 0 && (
+            <div className="text-xs text-slate-700" data-testid="church-list-issues">
+              <p className="font-medium">For the church list (not seeded):</p>
+              <ul className="list-disc pl-5">
+                {churchIssues.map((issue, i) => {
+                  const hash = resolveBulletin(seed, issue.bulletin);
+                  return (
+                    <li key={i}>
+                      <span className="font-medium">{issue.church}</span>: {issue.said}
+                      {hash && (
+                        <button className="ml-1 text-sky-700 hover:underline" onClick={() => showSource(hash, issue.page)}>
+                          {issue.page ? `p. ${issue.page}` : "bulletin"}
+                        </button>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+          {expired.length > 0 && !drafting && (
+            <p className="flex items-center gap-2 text-xs text-amber-800">
+              {expiredCount} {expiredCount === 1 ? "question asks" : "questions ask"} about dates that have passed.
+              <button className="btn px-1.5 py-0 text-xs" onClick={dropExpired} disabled={saving} data-testid="drop-expired">
+                Leave them out
+              </button>
+            </p>
+          )}
           {message && <p className="text-sm text-red-700" data-testid="seed-message">{message}</p>}
         </header>
 
@@ -400,6 +449,8 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
       seed,
       churches: detail.churches,
       selected: slot.id === selectedId,
+      groupmates: isOpen(slot) ? groupOf(seed, slot) : [slot],
+      expired: expiredIds.has(slot.id),
       editing: editing?.slotId === slot.id ? editing.row : null,
       refDate: activeBulletin?.published_date ?? null,
       onSelect: () => setSelectedId(slot.id),
@@ -444,6 +495,9 @@ function Section({
 
 interface SlotCardProps {
   slot: SeedSlot;
+  /** The slots an answer to this one settles: its open group, or itself. */
+  groupmates: SeedSlot[];
+  expired: boolean;
   seed: SeedFile;
   churches: Church[];
   selected: boolean;
@@ -461,7 +515,7 @@ interface SlotCardProps {
 }
 
 function SlotCard(props: SlotCardProps) {
-  const { slot, seed, churches, selected, editing } = props;
+  const { slot, seed, churches, selected, editing, groupmates } = props;
   const church = (slug: string | undefined) => churches.find((c) => c.slug === slug)?.name ?? slug ?? "";
   const open = isOpen(slot);
   const calls = new Map(seed.calls.map((c) => [c.id, c]));
@@ -489,6 +543,7 @@ function SlotCard(props: SlotCardProps) {
             p. {slot.page}
           </button>
         )}
+        {props.expired && <span className="text-xs text-amber-800">date passed</span>}
         {!open && (
           <span className={`text-xs ${slot.decision === "include" ? "text-emerald-700" : "text-zinc-500"}`}>
             {slot.decision === "include" ? "included" : "left out"}
@@ -513,6 +568,11 @@ function SlotCard(props: SlotCardProps) {
       {open && (
         <div className="mt-1.5 rounded bg-amber-50 p-2">
           <p className="font-medium text-amber-900">{slot.question}</p>
+          {groupmates.length > 1 && (
+            <p className="text-xs text-amber-800" data-testid={`group-${slot.id}`}>
+              One answer for {groupmates.length} slots: {groupmates.map((s) => s.id).join(", ")}
+            </p>
+          )}
           <div className="mt-1 flex flex-col gap-1">
             {(slot.options ?? []).map((option, i) => (
               <button
@@ -526,7 +586,20 @@ function SlotCard(props: SlotCardProps) {
                 <kbd>{i + 1}</kbd>
                 <span>
                   {option.label}
-                  {option.entry && <span className="block text-xs text-slate-600">{describeEntry(option.entry)} · {church(option.entry.church_slug)}</span>}
+                  {groupmates.length > 1
+                    ? groupmates.map((g) => {
+                        const entry = g.options?.[i]?.entry;
+                        return entry ? (
+                          <span key={g.id} className="block text-xs text-slate-600">
+                            {describeEntry(entry)} · {church(entry.church_slug)}
+                          </span>
+                        ) : null;
+                      })
+                    : option.entry && (
+                        <span className="block text-xs text-slate-600">
+                          {describeEntry(option.entry)} · {church(option.entry.church_slug)}
+                        </span>
+                      )}
                 </span>
                 {option.leaning && <span className="ml-auto text-xs text-amber-800">agent leans to this</span>}
               </button>

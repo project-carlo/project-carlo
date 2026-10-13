@@ -15,9 +15,19 @@ be read before a nonblocked draft passes `check`; `as_of` is the newest read bul
 time. Reading a newer bulletin requires reconsidering the draft against that bulletin.
 
 A settled inclusion without a reviewer answer must have an `agent` source citing the newest
-read bulletin at the slot's `page`. An older or website-only candidate is `needs_human`,
-with `page: null` when the newest bulletin does not print it. A reviewer can explicitly
-include such a candidate by answering the question. Historical evals reject website sources.
+read bulletin at the slot's `page`, with two exceptions for what the newest bulletin can't
+be expected to print. Each is settled with `page: null` and an `agent` source at a page of
+the older bulletin that prints it:
+
+- A weeks-of-the-month slot ("First Friday") none of whose weeks falls in the newest
+  bulletin's week (`seed brief` prints which weeks it holds). Cite the newest bulletin
+  whose week does hold one, if any read bulletin's does: that issue would print it.
+- A dated entry or cancellation on or after `as_of` an older bulletin announced (an
+  All Souls Mass printed a month ahead), when nothing newer contradicts it.
+
+Any other older or website-only candidate is `needs_human`, with `page: null` when the
+newest bulletin does not print it. A reviewer can explicitly include such a candidate by
+answering the question. Historical evals reject website sources.
 New approvals run these checks; loading already-approved seeds trusts their reviewer
 without retroactively imposing new drafting evidence requirements.
 
@@ -112,6 +122,18 @@ one, a dated cancellation, and an open question:
 - One slot per day and time: "Mon–Fri 8:00 AM" is five slots. Record each excluded
   history event as its own slot too: `seed diff` matches entries and options, not events
   mentioned only in a rationale. Reuse a rationale for a group excluded for the same reason.
+- One question per decision. When one answer decides several slots (a perpetual
+  adoration chapel's seven days, "an hour before each Mass" for every Mass), give
+  them the same `"group"` name, the same `question`, and options with the same labels
+  in the same order and the same leaning; each slot keeps its own entries. The labeler
+  shows the group once and its answer settles them all.
+- A church or chapel the bulletins name that `data/churches.csv` lacks or can't place
+  (the parish's chapel at a mall, a mission church, an adoration chapel with no address)
+  is not a question. Leave its slots out (settled `exclude`, saying why) and list it once
+  in the file's top-level `church_list_issues`:
+  `{"church": "The Franciscan Place, Destiny USA", "said": "Mon-Thu 12:15 Mass;
+  Confession Wed 11-12", "bulletin": "9f2c41d0", "page": 2}`. Another parish's listed
+  church is not an issue: its events are that parish's (`seed church` says whose).
 - In new drafts, leave `reviewer`, `approved_at` and every `answer` null: the reviewer
   sets them. During repair, preserve existing reviewer answers and leave changes to
   answered decisions to the reviewer in the labeler.

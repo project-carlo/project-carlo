@@ -17,7 +17,7 @@ import json
 import re
 import sqlite3
 from dataclasses import dataclass, field
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -25,9 +25,17 @@ import pypdfium2 as pdfium
 from pypdf import PdfReader
 
 from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
+from pdf_extract.bulletin_week import bulletin_week
 from pdf_extract.dioceses.records import PARISH, diocese_dir
-from pdf_extract.labeling.labels import LABELS_DIR, is_valid_hash, is_valid_slug
+from pdf_extract.labeling.labels import (
+    DAYS,
+    LABELS_DIR,
+    WEEKS_OF_MONTH,
+    is_valid_hash,
+    is_valid_slug,
+)
 from pdf_extract.schedule.store import normalize_as_of, update_mode_slugs
+from pdf_extract.seeding.checks import COVERED_DAYS, covered_weeks
 from pdf_extract.seeding.files import (
     SEED_EVALS_DIR,
     SEEDS_DIR,
@@ -116,7 +124,7 @@ def _visible(fetched_at: str | None, cutoff: str | None) -> bool:
 # ── Parishes and bulletins ──────────────────────────────────────────────────
 def parish_row(conn: sqlite3.Connection, parish_slug: str) -> sqlite3.Row:
     row = conn.execute(
-        "SELECT id, slug, name FROM parish WHERE slug = ?", (parish_slug,),
+        "SELECT id, slug, name, homepage_url FROM parish WHERE slug = ?", (parish_slug,),
     ).fetchone()
     if row is None:
         raise SeedError(f"Parish not found: {parish_slug} (is it in data/parishes.csv?)")
@@ -518,12 +526,22 @@ def _address(row: sqlite3.Row) -> str:
                      if x)
 
 
+def _church_words(text: str) -> str:
+    """`text` lowercased, punctuation and hyphens as spaces, and "saint" as "st", so a
+    bulletin's "St. Mary's, Oswego" and a slug's "st-marys-oswego" compare alike."""
+    text = re.sub(r"['’]", "", re.sub(r"['’]s\b", "", text.lower()))
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return f" {re.sub(r'\bsaint\b', 'st', text).strip()} "
+
+
 def find_churches(conn: sqlite3.Connection, query: str) -> dict[str, Any]:
-    """`seed church`: the churches whose slug, name or address (town included), or whose
-    parish's slug or name, contains `query` in any case. Read from churches.csv and
-    parishes.csv as the database loaded them, retired churches left out."""
-    needle = query.strip().lower()
-    if not needle:
+    """`seed church`: the churches whose slug, name and address (town included), with
+    their parish's slug and name, hold every word of `query` in any case and order
+    ("Immaculate Conception Ithaca" finds the church named one in the town of the
+    other). Read from churches.csv and parishes.csv as the database loaded them,
+    retired churches left out."""
+    words = _church_words(query).split()
+    if not words:
         raise SeedError("Name something to look for: a slug, a name, a town or an address")
     rows = conn.execute(
         """SELECT c.slug, c.name, c.address_line1, c.address_line2, c.city, c.state,
@@ -535,7 +553,8 @@ def find_churches(conn: sqlite3.Connection, query: str) -> dict[str, Any]:
     for row in rows:
         address = _address(row)
         fields = (row["slug"], row["name"], address, row["parish"], row["parish_name"])
-        if any(needle in (f or "").lower() for f in fields):
+        haystack = _church_words(" ".join(f or "" for f in fields))
+        if all(f" {word}" in haystack for word in words):
             found.append({"church": row["slug"], "parish": row["parish"], "name": row["name"],
                           "address": address})
     return {"query": query, "churches": found}
@@ -572,8 +591,10 @@ def brief(
     distinct events of its last `HISTORY_BULLETINS` processed bulletins with how
     many each is in, but dated ones before the newest bulletin's fetch date
     (outside a seed's scope; `history` null past `BRIEF_HISTORY_ROWS`, for a
-    pointer to `seed history`), and the newest PDF, written as `seed pdf <parish>
-    latest` writes it.
+    pointer to `seed history`), the newest PDF, written as `seed pdf <parish>
+    latest` writes it, and the days the newest bulletin covers with the weeks of
+    the month each weekday falls in then (`checks.covered_weeks`): a "First
+    Friday" slot it can't hold may be settled from an older bulletin.
     """
     parish = conn.execute(
         "SELECT id, slug, name, homepage_url FROM parish WHERE slug = ?", (parish_slug,),
@@ -592,12 +613,24 @@ def brief(
                                          work_dir=work_dir)
     except Exception as exc:  # no PDF to read: say why, don't stop
         pdf = {"error": str(exc)}
+    week = None
+    if bulletins["bulletins"]:
+        first = bulletins["bulletins"][0]
+        start = bulletin_week(first)
+        if start is not None:
+            week = {
+                "from": start.isoformat(),
+                "to": (start + timedelta(days=COVERED_DAYS - 1)).isoformat(),
+                "weeks": {day: sorted(covered_weeks(first, day) or [], key=WEEKS_OF_MONTH.index)
+                          for day in DAYS},
+            }
     return {
         "parish": parish_slug,
         "name": parish["name"],
         "website": parish["homepage_url"],
         "churches": churches,
         "bulletins": bulletins,
+        "newest_week": week,
         "history_bulletins": [b["short"] for b in past if not b["wrong_bulletin"]],
         "history_since": since,
         "history_events": len(summary),
