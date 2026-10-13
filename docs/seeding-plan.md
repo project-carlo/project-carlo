@@ -98,17 +98,22 @@ The policy stays in `schedule_policy.POLICY`, which the drafter reads in full.
    (`pnpm seed extract`): it's cheaper, and its answer is about exactly the
    thing in doubt. The agent need not call any model for a parish whose
    bulletins are clear. The parish's website is another source it may look at
-   when a question needs it (never by default): it can back a reading up, but
-   websites go stale, so it doesn't outweigh the newest bulletin. Historical
-   evals never consult live websites, and their checks reject website sources.
+   (`pnpm seed site`, the page's own text) when a question needs it (never by
+   default): it can back a reading up, but websites go stale, so it doesn't
+   outweigh the newest bulletin. Historical evals never consult live websites,
+   and their checks reject website sources.
 6. **Decide each slot**, and mark it:
    - `settled`: printed clearly, the policy is clear about it, and nothing
-     the agent read contradicts it.
+     the agent read contradicts it. Much is settled by a rule rather than by a
+     reviewer: a time the policy works out from a Mass, a chapel the policy
+     leaves out, a cancellation the bulletin doesn't state. History reading
+     a slot differently is not a conflict.
    - `needs_human`: the sources conflict and the bulletins don't settle it;
      the policy leaves it a judgment call; the print is unreadable; or the
      church or chapel it belongs to is unclear. The agent writes a short
      question and the answers it's choosing between, and says which it leans
-     to and why.
+     to and why. Slots one answer decides (the seven days of a perpetual
+     adoration chapel) share a `group` and are one question.
 7. **Run `pnpm seed finalize <parish>`** and fix anything it reports. It does
    the file's bookkeeping (defaulted keys, which bulletins were read, `as_of`,
    the parish's status) and then runs `seed check`, so the agent writes only
@@ -143,20 +148,21 @@ prints compact text by default, `--json` on request.
 | `seed pick [--limit N] [--diocese D] [--labeled --eval RUN] [--resume]` | Parishes with no seed and no seed file, easiest first: one church, a recent bulletin, extract-mode output stable from week to week. `--resume` also offers unfinished drafts. `--labeled --eval RUN` picks labeled parishes for the [test run](#testing-it-first). |
 | `seed init <parish> [--resume]` | Starts a new file, or preserves an existing one with `--resume`, and prints `seed brief`. |
 | `seed mark-read <parish> <bulletin>` | Records that the agent read a bulletin, even if no slot cites it. |
-| `seed brief <parish>` | Where a draft starts: the parish's website, its churches with their addresses, `seed bulletins`, each event of recent history with the number of bulletins it is in (a pointer to `seed history` when there are too many), and the newest PDF, written as `seed pdf <parish> latest` writes it. |
+| `seed brief <parish>` | Where a draft starts: the parish's website, its churches with their addresses, `seed bulletins`, the days the newest bulletin covers with the weeks of the month each weekday falls in then, each event of recent history with the number of bulletins it is in (a pointer to `seed history` when there are too many), and the newest PDF, written as `seed pdf <parish> latest` writes it. |
 | `seed bulletins <parish>` | The parish's bulletins, newest first: short hash, fetch date, issue date if known, page count (or `no PDF` once the PDF is pruned: its history can still be cited), whether extract mode flagged it as a wrong bulletin, and whether it's a duplicate of another. |
 | `seed pdf <parish> <bulletin>` | Writes the stored compacted PDF (the first 10 pages, or the parish's limit) to a local path and prints it, so page numbers match the pipeline's and the labeler's. |
 | `seed text <parish> <bulletin> [--page N]` | Each page's text layer, marking the pages that are only images. A tenth of what reading the PDF costs, for corroborating an older bulletin. |
 | `seed pages <parish> <bulletin> [--page N] [--dpi D]` | Renders pages as PNGs, for bulletins that are only images or a dense table to zoom into. |
 | `seed grep <parish> [pattern] [--bulletins N]` | Searches the text layer of every bulletin with a stored PDF, newest first, printing each matching line with a line of context and flagging pages that are only images. With no pattern, schedule words (Mass, confession, adoration, cancelled, Communion Service, First Friday...). |
 | `seed history <parish> [--bulletins N]` | Extract mode's stored events for the parish's last N bulletins, one table per bulletin, with pages. |
-| `seed diff <parish> [--bulletins N]` | History events (of the bulletins with a stored PDF, or the newest N) that no slot or option of the file covers, and included slots history never had. |
-| `seed church <query>` | Churches whose slug, name, town or address, or whose parish's, contains the query: church slug, parish slug, name and address. For deciding whether a church a bulletin names is another parish's. |
+| `seed diff <parish> [--bulletins N]` | History events (of the bulletins with a stored PDF, or the newest N) that no slot or option of the file covers; history events that read a slot at another time (only the time sets them apart from one slot, and nothing else in their bulletin matches it); and included slots history never had. |
+| `seed church <query>` | Churches whose slug, name and address, with their parish's slug and name, hold every word of the query in any order ("Immaculate Conception Ithaca"): church slug, parish slug, name and address. For deciding whether a church a bulletin names is another parish's. |
+| `seed site <parish> [path or address] [--fresh] [--no-browser]` | A page of the parish's website (its homepage by default) as plain text, with the links on it that look like schedules. A plain request first, then the stealth browser when that is refused or draws almost nothing; each page is kept a day under `data/seed-work/<parish>/site/`. Refused in a historical test run. |
 | `seed extract <parish> <bulletin> --model M` | A full extraction with `POLICY`, through the existing classifiers (`gpt-6-luna --model gpt-6.1-sol`, `gemini-flash-qualified`) and the runner's result cache, so asking twice costs one call. The result is appended to the seed file's `calls`. |
 | `seed ask <parish> <bulletin> --model M "question"` | One question about one bulletin, answered with an answer, the page and the words it read there. Appended to `calls`. |
-| `seed finalize <parish>...` | The bookkeeping that finishes a draft: fills in every key a slot or entry leaves at its default (`event_kind` from whether it has a `date`, `church_slug` for a one-church parish), splits a source citing several `bulletins` into one per bulletin, adds the matching `history` sources, preserves explicit read marks and also marks the bulletins the agent's sources cite, sets `as_of` to the newest one's fetch time and the status from the open questions, then runs `seed check`. It warns of the history events `seed diff` finds no slot for, and still passes. |
-| `seed check <parish>... [--all]` | The file is well formed, every entry parses as `pnpm schedule seed` would (`schedule.entries.parse_entry`), churches belong to the parish, no two included entries share a slot, every slot has a source and a rationale, every open question has options, and `as_of` is the newest bulletin consulted. |
-| `seed status` | Every seed file's status and open questions, and whether the local database has loaded it. |
+| `seed finalize <parish>...` | The bookkeeping that finishes a draft: fills in every key a slot or entry leaves at its default (`event_kind` from whether it has a `date`, `church_slug` for a one-church parish), splits a source citing several `bulletins` into one per bulletin, adds the matching `history` sources (and those reading a slot at another time), preserves explicit read marks and also marks the bulletins the agent's sources cite, sets `as_of` to the newest one's fetch time and the status from the open questions, then runs `seed check`. It warns of the history events `seed diff` finds no slot for, and still passes. |
+| `seed check <parish>... [--all]` | The file is well formed, every entry parses as `pnpm schedule seed` would (`schedule.entries.parse_entry`), churches belong to the parish, no two included entries share a slot, every slot has a source and a rationale, every open question has options (a group's alike), and `as_of` is the newest bulletin consulted. An approved file is its reviewer's: the drafting evidence rules are not applied to it. |
+| `seed status` | Every seed file's status, open questions (a group counts once) and church-list issues, and whether the local database has loaded it. |
 
 `M` is `gpt-6.1-sol` or `gemini-3-flash-preview`. `extract` and `ask` refuse
 once a parish has used its call limit (`CARLO_SEED_CALL_LIMIT`, default 4),
@@ -179,20 +185,27 @@ statuses, evidence rules and slot examples are in
 bulletins fetched after it. `seed mark-read` records consulted bulletins
 independently of slot citations. The newest listed bulletin must be read,
 and an agent's settled inclusion must cite its own reading of that bulletin
-at the slot's page. Older-only or website-only candidates stay questions
-until a reviewer explicitly answers them. Every excluded history event gets
-its own slot so `seed diff` can account for it.
+at the slot's page, except what the newest bulletin can't be expected to
+print: a weeks-of-the-month slot none of whose weeks fall in its week, or a
+dated entry from `as_of` on that an older bulletin announced. Other
+older-only or website-only candidates stay questions until a reviewer
+explicitly answers them. Every excluded history event gets its own slot so
+`seed diff` can account for it. Churches or chapels the church list lacks go
+in the file's `church_list_issues`, not in questions.
 
 ## Review in the labeler
 
 A Seeds mode in the labeler (`pnpm label`), next to the bulletin queue.
 
 - **Queue:** parishes by status, `needs_review` first, with the number of
-  open questions each.
+  open questions each (a group counts once) and any church-list issues.
 - **Parish page:**
   - The existing `PdfViewer`, with a tab for each bulletin the agent read.
-  - The agent's summary, then the open questions, then the settled slots
+  - The agent's summary and church-list issues, then the open questions (a
+    group's once: one answer settles all its slots), then the settled slots
     (collapsed by default), then the excluded ones.
+  - Questions whose every proposed entry is dated before today are marked,
+    and one button leaves them all out.
   - Each slot shows its sources side by side and the agent's rationale.
     Clicking a source opens its bulletin at its page.
 - **Keys:** `1`/`2`/`3` choose an option; `e` edits the entry with
@@ -346,8 +359,11 @@ reference `docs/seeding-file.md`, and the labeler's `views/SeedPage.tsx` and `li
   without requiring a slot citation. `finalize` preserves these marks and
   also marks cited bulletins; merely downloading a PDF does not mark it read.
 - **Evidence checks.** A settled included slot without a reviewer answer
-  needs an agent source at its page in the newest read bulletin. A reviewer
-  may explicitly include an older candidate. The newest listed bulletin must
+  needs an agent source at its page in the newest read bulletin, or, for a
+  weeks-of-the-month slot whose weeks the newest bulletin's week doesn't hold
+  or a dated entry from `as_of` on, an agent source at a page of an older
+  read bulletin, with the slot's page null. A reviewer may explicitly include
+  an older candidate. The newest listed bulletin must
   be marked read, and historical evals reject website sources.
 - **Batch failures.** `check --all` and multi-parish `finalize` report malformed
   files individually and continue with the other parishes.

@@ -12,8 +12,9 @@ decision, rationale and question) and leaves the rest to this:
 - a source citing several bulletins (`"bulletins": [...]` for `bulletin`, the same
   `said` in each) becomes one source per bulletin, as the files store them;
 - a slot gets a `history` source for each event of extract mode's recent history
-  that matches its entry or an option's (`coverage.attach_history`), for each
-  bulletin it has none for yet;
+  that matches its entry or an option's (`coverage.attach_history`), or that reads
+  it at another time (`coverage.attach_variants`), for each bulletin it has none
+  for yet;
 - every bulletin a slot's `agent` source cites is marked read (none is unmarked);
 - `as_of` is the fetch time of the newest bulletin read;
 - `status` is `needs_review` while a question is open, else `ready` (a blocked file
@@ -30,7 +31,7 @@ from __future__ import annotations
 from typing import Any
 
 from pdf_extract.labeling.labels import ENTRY_KEYS
-from pdf_extract.seeding.coverage import attach_history
+from pdf_extract.seeding.coverage import attach_history, attach_variants
 from pdf_extract.seeding.files import (
     AGENT,
     APPROVED,
@@ -142,6 +143,8 @@ def finalize_seed(
             if isinstance(s, dict) else s
             for s in slots
         ]
+        seed = attach_variants(seed, history or [])
+        slots = seed["slots"]
     else:
         slots = []
 

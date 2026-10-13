@@ -244,6 +244,16 @@ export interface SeedSlot {
   question: string | null;
   options: SeedOption[] | null;
   answer: SeedAnswer | null;
+  /** Open questions sharing a group are one question, answered together. */
+  group?: string | null;
+}
+
+/** A church or chapel the bulletins name that the church list lacks or can't place. */
+export interface SeedChurchIssue {
+  church: string;
+  said: string;
+  bulletin?: string | null;
+  page?: number | null;
 }
 
 export interface SeedCall {
@@ -274,6 +284,7 @@ export interface SeedFile {
   bulletins: SeedBulletin[];
   calls: SeedCall[];
   slots: SeedSlot[];
+  church_list_issues?: SeedChurchIssue[];
 }
 
 export interface SeedQueueRow {
@@ -289,6 +300,7 @@ export interface SeedQueueRow {
   reviewer: string | null;
   summary: string;
   blocked_reason: string | null;
+  church_list_issues: number;
   problem: string | null;
   loaded: boolean;
 }

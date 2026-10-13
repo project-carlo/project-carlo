@@ -38,8 +38,8 @@ from pdf_extract.seeding.files import (
     NEEDS_HUMAN,
     SETTLED,
     calls_cost,
-    open_questions,
     paid_calls,
+    question_count,
     read_seed,
 )
 from pdf_extract.seeding.queries import SeedContext, SeedError
@@ -137,7 +137,7 @@ def score_parish(seed: dict[str, Any], label: dict[str, Any], as_of_date: str) -
         "spurious": [_brief(r["pred"]) for r in records if r["tier"] == "spurious"],
         "missed": [_brief(e) for e in missed],
         "wrongly_excluded": wrongly_excluded,
-        "open_questions": len(open_questions(seed)),
+        "open_questions": question_count(seed),
         "leaning": leanings,
         "calls": len(seed.get("calls") or []),
         "paid_calls": paid_calls(seed),

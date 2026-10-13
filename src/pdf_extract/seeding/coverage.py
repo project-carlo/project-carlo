@@ -13,6 +13,13 @@ entry's, its church is the entry's (when the entry names one), and:
 For `seed diff` alone, a cancellation is also accounted for by a weekly slot
 left out on that weekday and time: the Mass it calls off isn't in the seed.
 
+A history event no entry matches may be a slot read at another time: history
+said adoration starts 12:15 where the drafter, applying the policy, wrote 12:00.
+It is one (`variants`) when exactly one slot would match it at its time and no
+other event of the same bulletin matches that slot. `finalize` cites it on that
+slot, and `diff` lists it apart, as a difference to confirm rather than an
+event to cover.
+
 `weeks_of_month`, `season` and end times are not compared: they are what a
 drafter reads the bulletin for, and history's are often missing.
 
@@ -95,6 +102,30 @@ def matches(entry: Any, event: dict[str, Any]) -> bool:
     return not event.get("cancelled") and entry.get("day_of_week") == _weekday(event.get("date"))
 
 
+def _matches_but_time(entry: Any, event: dict[str, Any]) -> bool:
+    return isinstance(entry, dict) and matches({**entry, "start_time": event.get("start_time")},
+                                               event)
+
+
+def variants(
+    slots: list[dict[str, Any]], events: list[dict[str, Any]],
+) -> list[tuple[dict[str, Any], dict[str, Any]]]:
+    """(event, slot) for each of one bulletin's `events` that only its time sets
+    apart from one of `slots` (see the module's docstring)."""
+    slots = [s for s in slots if isinstance(s, dict)]
+    exact = [ev for ev in events if any(matches(e, ev) for s in slots for e in slot_entries(s))]
+    seen = [s for s in slots if any(matches(e, ev) for e in slot_entries(s) for ev in exact)]
+    found = []
+    for ev in events:
+        if any(ev is x for x in exact):
+            continue
+        near = [s for s in slots if not any(s is x for x in seen)
+                and any(_matches_but_time(e, ev) for e in slot_entries(s))]
+        if len(near) == 1:
+            found.append((ev, near[0]))
+    return found
+
+
 def slot_entries(slot: dict[str, Any]) -> list[dict[str, Any]]:
     """A slot's entry and its options' entries: every reading of it the file proposes."""
     entries = [slot.get("entry")]
@@ -149,6 +180,38 @@ def attach_history(
     return {**slot, "sources": sources + added} if added else slot
 
 
+def attach_variants(seed: dict[str, Any], history: list[dict[str, Any]]) -> dict[str, Any]:
+    """`seed` with a history source on each slot for each history event that reads it at
+    another time (`variants`), for each bulletin the slot has no history source for yet."""
+    slots = seed.get("slots")
+    if not isinstance(slots, list):
+        return seed
+    added: dict[int, list[dict[str, Any]]] = {}
+    for bulletin in _usable(history):
+        full = resolve_hash(seed, bulletin["content_hash"])
+        if full is None:
+            continue
+        for ev, slot in variants(slots, bulletin["events"]):
+            sources = slot.get("sources")
+            if not isinstance(sources, list) or any(
+                isinstance(s, dict) and s.get("source") == HISTORY
+                and resolve_hash(seed, s.get("bulletin")) == full for s in sources
+            ):
+                continue
+            source = {"source": HISTORY, "bulletin": full[:12],
+                      "said": f"{event_said(ev)}  (a different time)"}
+            if ev.get("page_number"):
+                source["page"] = ev["page_number"]
+            rows = added.setdefault(id(slot), [])
+            if source not in rows:
+                rows.append(source)
+    if not added:
+        return seed
+    return {**seed, "slots": [
+        {**s, "sources": s["sources"] + added[id(s)]} if id(s) in added else s for s in slots
+    ]}
+
+
 # ── seed diff ───────────────────────────────────────────────────────────────
 def scope_date(seed: dict[str, Any]) -> str | None:
     """The first date a seed's dated entries may have: `as_of`'s, or the newest bulletin's."""
@@ -173,6 +236,8 @@ def diff(seed: dict[str, Any], history: list[dict[str, Any]]) -> dict[str, Any]:
     `missing`: history events no slot or option entry matches, included or left
     out, one row per event with the bulletins it is in. A dated event before the
     seed's scope (`scope_date`) is left out: a seed doesn't hold it.
+    `differs`: history events that read a slot at another time (`variants`), one
+    row per event with the slot and the bulletins it is in.
     `unseen`: included slots no history event matches.
     """
     slots = [s for s in seed.get("slots") or [] if isinstance(s, dict)]
@@ -182,11 +247,23 @@ def diff(seed: dict[str, Any], history: list[dict[str, Any]]) -> dict[str, Any]:
     first = scope_date(seed)
     usable = _usable(history)
     missing: dict[str, dict[str, Any]] = {}
+    differs: dict[str, dict[str, Any]] = {}
     for bulletin in usable:
+        variant_of = {id(ev): slot for ev, slot in variants(slots, bulletin["events"])}
         for ev in bulletin["events"]:
             if ev.get("event_kind") != "weekly" and first and (ev.get("date") or "") < first:
                 continue
             if any(matches(e, ev) for e in entries):
+                continue
+            slot = variant_of.get(id(ev))
+            if slot is not None:
+                said = event_said(ev)
+                row = differs.setdefault(f"{said} {slot.get('id')}", {
+                    "said": said, "slot": slot.get("id"), "event": ev, "bulletins": [],
+                    "slot_said": event_said(slot_entries(slot)[0]),
+                })
+                if bulletin["short"] not in row["bulletins"]:
+                    row["bulletins"].append(bulletin["short"])
                 continue
             if ev.get("cancelled") and any(
                 matches(e, {**ev, "cancelled": False}) for e in left_out
@@ -209,6 +286,7 @@ def diff(seed: dict[str, Any], history: list[dict[str, Any]]) -> dict[str, Any]:
         "bulletins": [b["short"] for b in usable],
         "scope_date": first,
         "missing": list(missing.values()),
+        "differs": list(differs.values()),
         "unseen": unseen,
     }
 

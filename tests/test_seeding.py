@@ -1148,3 +1148,205 @@ def test_agents_cannot_resume_or_mark_read_an_approved_file(demo_cli, seed, caps
     assert main(["seed", "mark-read", PARISH, "latest"]) == 1
     assert "belongs to its reviewer" in capsys.readouterr().err
     assert path.read_bytes() == before
+
+
+# ── Fewer questions: rules a drafter can settle by ──────────────────────────
+def test_weeks_of_the_month_a_day_and_a_bulletins_week_hold():
+    from datetime import date
+
+    from pdf_extract.seeding.checks import covered_weeks, weeks_of
+
+    assert weeks_of(date(2026, 10, 2)) == {"first"}
+    assert weeks_of(date(2026, 10, 30)) == {"fifth", "last"}
+    assert weeks_of(date(2026, 9, 24)) == {"fourth", "last"}
+    # Issue of Sunday, October 11: its week runs to Sunday the 18th.
+    issue = {"published_date": "2026-10-11", "fetched_at": "2026-10-11T16:00:00Z"}
+    assert covered_weeks(issue, "Friday") == {"third"}
+    assert covered_weeks(issue, "Sunday") == {"second", "third"}
+    assert covered_weeks({"published_date": None, "fetched_at": None}, "Friday") is None
+
+
+def _older_slot(seed: dict[str, Any], entry: dict[str, Any], *, source: str = "agent"):
+    """s8 rewritten as a settled inclusion only the older demo bulletin prints."""
+    slot = _slot(seed, "s8")
+    slot.update(entry={**slot["entry"], **entry}, page=None, sources=[
+        {"source": source, "bulletin": seed["bulletins"][1]["content_hash"], "page": 2,
+         "said": "Holy Hour"}])
+    return slot
+
+
+def _evidence_problems(conn, seed) -> list[str]:
+    problems = check_seed(conn, seed, parish_slug=PARISH)
+    assert all("settled inclusion needs" in p for p in problems), problems
+    return problems
+
+
+def test_a_weeks_of_the_month_slot_the_newest_week_cant_hold_may_cite_an_older_bulletin(
+    conn, seed,
+):
+    # The newest demo issue covers Sunday Sep 27 to Sunday Oct 4: Thursday Oct 1 is a first.
+    _older_slot(seed, {"weeks_of_month": ["third"]})
+    assert _evidence_problems(conn, seed) == []
+    # A fourth Thursday: the older issue's week holds one (Sep 24), and it is cited.
+    _older_slot(seed, {"weeks_of_month": ["fourth"]})
+    assert _evidence_problems(conn, seed) == []
+
+
+@pytest.mark.parametrize("entry, source", [
+    ({"weeks_of_month": ["first"]}, "agent"),  # Oct 1: the newest issue would print it
+    ({"weeks_of_month": []}, "agent"),  # every week: the newest issue would print it
+    ({"weeks_of_month": ["third"], "exclude_weeks": True}, "agent"),
+    ({"weeks_of_month": ["third"]}, "history"),  # history alone is no reading
+])
+def test_older_evidence_is_not_enough_for_a_slot_the_newest_week_holds(conn, seed, entry, source):
+    _older_slot(seed, entry, source=source)
+    assert _evidence_problems(conn, seed)
+
+
+def test_a_dated_entry_an_older_bulletin_announced_may_be_settled(conn, seed):
+    dated = {"event_kind": "specific_date", "day_of_week": None, "date": "2026-11-02",
+             "season": None, "weeks_of_month": []}
+    _older_slot(seed, dated)
+    assert _evidence_problems(conn, seed) == []
+    _slot(seed, "s8")["page"] = 2  # it isn't on the newest bulletin's page 2
+    assert _evidence_problems(conn, seed)
+
+
+def test_a_history_event_that_reads_a_slot_at_another_time_is_a_variant_not_missing(seed):
+    past = [_history_of(
+        {**_SUNDAY, "event_type": "adoration", "day_of_week": "Thursday", "start_time": "09:30"},
+        {**_SUNDAY, "start_time": "09:30"},  # Sunday 8:00 or 10:30? Not for diff to guess
+    )]
+    found = diff(seed, past)
+    assert [(d["slot"], d["said"]) for d in found["differs"]] == [
+        ("s8", f"weekly adoration Thursday 09:30 {HF}")]
+    assert [row["said"] for row in found["missing"]] == [f"weekly mass Sunday 09:30 {HF}"]
+
+    finalized = finalize_seed(_without_history(seed), [HF, SJ], [
+        {**past[0], "short": seed["bulletins"][0]["content_hash"][:12],
+         "content_hash": seed["bulletins"][0]["content_hash"]}])
+    history = [s for s in _slot(finalized, "s8")["sources"] if s["source"] == "history"]
+    assert [s["said"] for s in history] == [
+        f"weekly adoration Thursday 09:30 {HF}  (a different time)"]
+    assert finalize_seed(finalized, [HF, SJ], past) == finalized
+
+
+def test_a_variant_needs_its_bulletin_to_leave_the_slot_unmatched(seed):
+    adoration = {**_SUNDAY, "event_type": "adoration", "day_of_week": "Thursday"}
+    past = [_history_of({**adoration, "start_time": "09:00"}, {**adoration, "start_time": "19:00"})]
+    found = diff(seed, past)
+    assert found["differs"] == []
+    assert [row["said"] for row in found["missing"]] == [f"weekly adoration Thursday 19:00 {HF}"]
+
+
+def _group(seed: dict[str, Any]) -> None:
+    for slot_id in ("s16", "s17"):
+        slot = _slot(seed, slot_id)
+        slot["group"] = "weekday"
+        slot["question"] = "Add the weekday Masses?"
+        slot["options"] = [{"label": "Add", "leaning": True, "entry": {
+            **_slot(seed, "s12")["entry"], "day_of_week": "Monday" if slot_id == "s16"
+            else "Saturday"}}, {"label": "Leave out", "entry": None}]
+
+
+def test_a_group_of_slots_is_one_question(conn, seed):
+    from pdf_extract.seeding.files import question_count
+
+    assert question_count(seed) == 2
+    _group(seed)
+    assert validate_seed(seed, parish_slug=PARISH) == []
+    assert check_seed(conn, seed, parish_slug=PARISH) == []
+    assert question_count(seed) == 1
+    _slot(seed, "s17")["options"][0]["label"] = "Add Saturday"
+    assert any("in group 'weekday' with s16 but asks a different question" in p
+               for p in validate_seed(seed, parish_slug=PARISH))
+
+
+def test_church_list_issues_are_listed_once_and_checked(conn, seed):
+    seed["church_list_issues"] = [{"church": "The Franciscan Place, Destiny USA",
+                                   "said": "Mon-Thu 12:15 Mass", "bulletin":
+                                   seed["bulletins"][0]["content_hash"][:8], "page": 2}]
+    assert check_seed(conn, seed, parish_slug=PARISH) == []
+    seed["church_list_issues"].append({"church": "", "said": "x", "bulletin": "deadbeef0",
+                                       "where": "?"})
+    problems = validate_seed(seed, parish_slug=PARISH)
+    assert any("church_list_issues[1]: unknown where" in p for p in problems)
+    assert any("church_list_issues[1].church is required" in p for p in problems)
+    assert any("church_list_issues[1].bulletin must name" in p for p in problems)
+
+
+def test_church_search_matches_every_word_in_any_order(conn):
+    def found(query: str) -> list[str]:
+        return [c["church"] for c in find_churches(conn, query)["churches"]]
+
+    assert found("joseph penfield") == [SJ]
+    assert found("Saint Joseph's, Penfield") == [SJ]
+    assert found("penfield st joseph") == [SJ]
+    assert found("joseph fairport") == []
+
+
+def test_check_leaves_an_approved_file_to_its_reviewer(demo_cli, seed, capsys):
+    legacy = _approved(seed)
+    _slot(legacy, "s1").update(page=None, sources=[
+        {"source": "history", "bulletin": legacy["bulletins"][1]["content_hash"],
+         "said": "Saturday 4 PM"}])
+    write_seed_file(legacy, demo_cli["seeds_dir"])
+    assert main(["seed", "check", "--all"]) == 0
+    assert f"{PARISH}: approved  OK" in capsys.readouterr().out
+
+
+def test_site_reads_a_page_as_text_with_its_schedule_links(demo_cli, monkeypatch, capsys):
+    from pdf_extract.dioceses.web import Response
+    from pdf_extract.seeding import site
+
+    page = ("<html><body><nav><a href='/mass-times'>Mass Times</a> <a href='/give'>Give</a>"
+            "<a href='https://elsewhere.org/mass'>Diocese</a></nav>"
+            + "<p>Saturday Vigil 4:00 PM</p>" * 40 + "</body></html>")
+    calls: list[str] = []
+
+    def fake_fetch(url: str) -> Response:
+        calls.append(url)
+        return Response(url, 200, url, "text/html", page.encode())
+
+    monkeypatch.setattr(site, "fetch", fake_fetch)
+    monkeypatch.setattr(site, "_browser_html", lambda url: pytest.fail("no browser needed"))
+    assert main(["seed", "site", "st-anne-demo", "times"]) == 0
+    out = capsys.readouterr().out
+    assert out.splitlines()[0].startswith("https://example.org/st-anne/times  (http at ")
+    assert "  https://example.org/mass-times  Mass Times" in out
+    assert "elsewhere.org" not in out and "/give" not in out
+    assert "Saturday Vigil 4:00 PM" in out
+    assert main(["seed", "site", "st-anne-demo", "times"]) == 0  # read again: today's copy
+    assert "(read earlier, http at" in capsys.readouterr().out
+    assert calls == ["https://example.org/st-anne/times"]
+
+
+def test_site_falls_back_to_the_browser_and_says_when_it_cant_read(tmp_path, monkeypatch):
+    from pdf_extract.dioceses.web import Response
+    from pdf_extract.seeding import site
+
+    challenge = b"<html><title>Just a moment...</title>Enable JavaScript and cookies</html>"
+    monkeypatch.setattr(site, "fetch", lambda url: Response(url, 403, url, "text/html",
+                                                            challenge, error="HTTP 403"))
+    rendered = "<p>Confession Saturday 3:00 PM</p>" * 30
+    monkeypatch.setattr(site, "_browser_html", lambda url: (rendered, url))
+    read = site.read_site("p", "https://example.org/", work_dir=tmp_path)
+    assert read["via"] == "browser" and "Confession Saturday 3:00 PM" in read["text"]
+    assert read["notes"] == ["plain request: HTTP 403"]
+
+    def no_browser(url):
+        raise RuntimeError("Missing X server or $DISPLAY")
+
+    monkeypatch.setattr(site, "_browser_html", no_browser)
+    with pytest.raises(SeedError, match="Could not read .*Missing X server"):
+        site.read_site("p", "https://example.org/x", work_dir=tmp_path)
+
+
+def test_site_is_refused_in_a_historical_test_run(routed_cli, seed, capsys):
+    labels = Path("data/labels") / PARISH
+    labels.mkdir(parents=True)
+    (labels / f"{seed['bulletins'][0]['content_hash']}.json").write_text('{"status": "done"}')
+    assert main(["seed", "pick", "--labeled", "--eval", "run1"]) == 0
+    capsys.readouterr()
+    assert main(["seed", "site", PARISH, "--eval", "run1"]) == 1
+    assert "may not read live websites" in capsys.readouterr().err

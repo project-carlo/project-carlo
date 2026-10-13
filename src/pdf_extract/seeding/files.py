@@ -76,6 +76,13 @@ SLOT_KEYS = (
     "id", "decision", "status", "entry", "page", "sources", "rationale", "question",
     "options", "answer",
 )
+# Keys a file may leave out (files written before they existed have none).
+# `church_list_issues`: churches or chapels the bulletins name that the church
+# list lacks or can't place, for whoever maintains data/churches.csv. A slot's
+# `group`: open questions that share one are one question, answered together.
+OPTIONAL_SEED_KEYS = ("church_list_issues",)
+OPTIONAL_SLOT_KEYS = ("group",)
+CHURCH_ISSUE_KEYS = ("church", "said", "bulletin", "page")
 # Shortest prefix of a content hash that may name a bulletin inside a file.
 MIN_HASH_PREFIX = 8
 
@@ -181,8 +188,27 @@ def _list(value: Any) -> list[Any]:
 
 
 def open_questions(seed: dict[str, Any]) -> list[dict[str, Any]]:
+    """The open slots: one per slot, so a group's slots are each listed."""
     return [s for s in _list(seed.get("slots")) if isinstance(s, dict)
             and s.get("status") == NEEDS_HUMAN]
+
+
+def question_count(seed: dict[str, Any]) -> int:
+    """How many questions a reviewer answers: an open group counts once."""
+    groups = set()
+    count = 0
+    for slot in open_questions(seed):
+        group = slot.get("group")
+        if isinstance(group, str) and group:
+            if group in groups:
+                continue
+            groups.add(group)
+        count += 1
+    return count
+
+
+def church_list_issues(seed: dict[str, Any]) -> list[dict[str, Any]]:
+    return [i for i in _list(seed.get("church_list_issues")) if isinstance(i, dict)]
 
 
 def included_slots(seed: dict[str, Any]) -> list[dict[str, Any]]:
@@ -258,10 +284,12 @@ def revision_note(seed: dict[str, Any]) -> str:
 
 
 # ── Validation ──────────────────────────────────────────────────────────────
-def _keys(obj: dict[str, Any], expected: tuple[str, ...], where: str) -> list[str]:
+def _keys(
+    obj: dict[str, Any], expected: tuple[str, ...], where: str, optional: tuple[str, ...] = (),
+) -> list[str]:
     errors = []
     missing = [k for k in expected if k not in obj]
-    extra = sorted(k for k in obj if k not in expected)
+    extra = sorted(k for k in obj if k not in expected and k not in optional)
     if missing:
         errors.append(f"{where}: missing {', '.join(missing)}")
     if extra:
@@ -393,11 +421,13 @@ def _validate_options(options: Any, where: str) -> list[str]:
 def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[str]) -> list[str]:
     if not isinstance(slot, dict):
         return [f"{where} must be an object"]
-    errors = _keys(slot, SLOT_KEYS, where)
+    errors = _keys(slot, SLOT_KEYS, where, OPTIONAL_SLOT_KEYS)
     if errors:
         return errors
     if not _nonempty(slot["id"]):
         errors.append(f"{where}.id is required")
+    if slot.get("group") is not None and not _nonempty(slot["group"]):
+        errors.append(f"{where}.group must be null or a name its question's other slots share")
     status = slot["status"]
     if status not in SLOT_STATUSES:
         errors.append(f"{where}.status must be one of {', '.join(SLOT_STATUSES)}")
@@ -470,7 +500,7 @@ def validate_seed(seed: Any, *, parish_slug: str | None = None) -> list[str]:
     """
     if not isinstance(seed, dict):
         return ["seed must be a JSON object"]
-    errors = _keys(seed, SEED_KEYS, "seed")
+    errors = _keys(seed, SEED_KEYS, "seed", OPTIONAL_SEED_KEYS)
     if errors:
         return errors
     if seed["schema_version"] != SCHEMA_VERSION:
@@ -495,6 +525,7 @@ def validate_seed(seed: Any, *, parish_slug: str | None = None) -> list[str]:
             errors.append(f"{key} must be null or a string")
     errors.extend(_validate_bulletins(seed))
     errors.extend(_validate_calls(seed))
+    errors.extend(_validate_church_issues(seed))
     if errors:
         return errors
 
@@ -509,9 +540,64 @@ def validate_seed(seed: Any, *, parish_slug: str | None = None) -> list[str]:
             if slot["id"] in ids:
                 errors.append(f"slots[{i}].id {slot['id']} is used twice")
             ids.add(slot["id"])
+    errors.extend(_group_errors(slots))
     if errors:
         return errors
     return status_errors(seed)
+
+
+def _validate_church_issues(seed: dict[str, Any]) -> list[str]:
+    issues = seed.get("church_list_issues")
+    if issues is None:
+        return []
+    if not isinstance(issues, list):
+        return ["church_list_issues must be a list"]
+    errors: list[str] = []
+    for i, issue in enumerate(issues):
+        where = f"church_list_issues[{i}]"
+        if not isinstance(issue, dict):
+            errors.append(f"{where} must be an object")
+            continue
+        extra = sorted(set(issue) - set(CHURCH_ISSUE_KEYS))
+        if extra:
+            errors.append(f"{where}: unknown {', '.join(extra)}")
+        if not _nonempty(issue.get("church")):
+            errors.append(f"{where}.church is required: the church or chapel as the bulletin "
+                          "names it")
+        if not _nonempty(issue.get("said")):
+            errors.append(f"{where}.said is required: what the bulletin holds there, in its "
+                          "words")
+        if issue.get("bulletin") is not None and resolve_hash(seed, issue["bulletin"]) is None:
+            errors.append(f"{where}.bulletin must name one of the file's bulletins")
+        if issue.get("page") is not None and not _is_page(issue["page"]):
+            errors.append(f"{where}.page must be null or a page number")
+    return errors
+
+
+def _group_errors(slots: list[dict[str, Any]]) -> list[str]:
+    """A group's open slots are answered with one choice, so they ask the same question
+    with the same option labels, in the same order, leaning the same way."""
+    errors = []
+    first: dict[str, dict[str, Any]] = {}
+    for i, slot in enumerate(slots):
+        group = slot.get("group")
+        if not group or slot["status"] != NEEDS_HUMAN:
+            continue
+        lead = first.setdefault(group, slot)
+        if lead is slot:
+            continue
+
+        def shape(s: dict[str, Any]) -> list[tuple[Any, bool, bool]]:
+            return [(o.get("label"), o.get("leaning") is True, o.get("entry") is None)
+                    for o in s["options"]]
+
+        if slot["question"] != lead["question"] or shape(slot) != shape(lead):
+            errors.append(
+                f"slots[{i}] ({slot['id']}) is in group {group!r} with {lead['id']} but asks a "
+                "different question: a group shares its question, its option labels (in order, "
+                "with the same leaning) and which options leave the slot out"
+            )
+    return errors
 
 
 def status_errors(seed: dict[str, Any]) -> list[str]:
@@ -556,6 +642,7 @@ class SeedSummary:
     reviewer: str | None
     summary: str
     blocked_reason: str | None
+    church_list_issues: int = 0
     problem: str | None = None
 
     @classmethod
@@ -565,7 +652,7 @@ class SeedSummary:
         return cls(
             parish_slug=slug,
             status=seed.get("status") if seed.get("status") in STATUSES else "invalid",
-            open_questions=len(open_questions(seed)),
+            open_questions=question_count(seed),
             slots=len(slots),
             included=len(included_slots(seed)),
             calls=len(_list(seed.get("calls"))),
@@ -575,5 +662,6 @@ class SeedSummary:
             summary=seed.get("summary") if isinstance(seed.get("summary"), str) else "",
             blocked_reason=seed.get("blocked_reason")
             if isinstance(seed.get("blocked_reason"), str) else None,
+            church_list_issues=len(church_list_issues(seed)),
             problem=problem,
         )

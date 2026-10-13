@@ -49,6 +49,12 @@ Do not assign the same parish to two active writers. The drafter's instructions 
 policy reading, evidence, websites, model calls and writing boundaries; do not duplicate
 those instructions in every assignment.
 
+Parallel drafters share one usage limit. Ten at once exhausted a session's limit three
+minutes in and six failed mid-parish; start about five, and more as they finish. When an
+agent fails on a usage limit, its files are safe: after the limit resets, resume the same
+agent (`SendMessage` to it) rather than starting a new one, and paste its parishes' lines
+from `pnpm seed status` as they are, not counts restated from memory.
+
 ## Verify and recover
 
 After the agents finish, verify the assigned slugs with
@@ -63,8 +69,11 @@ decisions or delete its seed file: deletion loses evidence and resets the paid-c
 If the drafter cannot resolve a problem, preserve the draft and report its blocked reason
 or leave the decision to the reviewer. Approved files belong to their reviewer.
 
-Report the assigned parishes by status, with open questions and unresolved checks. The
-reviewer sees the seed in the labeler, so substantive doubts must also be in its questions.
+Report the assigned parishes by status, with open questions and unresolved checks, and the
+churches files list in `church_list_issues` (for whoever maintains `data/churches.csv`).
+The reviewer sees the seed in the labeler, so substantive doubts must also be in its
+questions. A ready file whose rationale holds a doubt it never asked about goes back to
+its drafter as a question.
 
 ## Eval and handoff
 

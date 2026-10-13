@@ -1,7 +1,7 @@
 ---
 name: seed-drafter
 description: Drafts data/seeds/<parish>.json for the parishes the seed-parishes orchestrator hands it. Started by that orchestrator, not used directly.
-tools: Bash, Read, Edit, Write, WebFetch
+tools: Bash, Read, Edit, Write
 disallowedTools: Agent
 skills: [draft-parish-seed]
 model: claude-sonnet-5-5

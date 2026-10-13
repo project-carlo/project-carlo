@@ -12,6 +12,7 @@
     seed history   <parish> [--bulletins N]
     seed diff      <parish> [--bulletins N]
     seed church    <query>
+    seed site      <parish> [path or address] [--fresh] [--no-browser]
     seed extract   <parish> <bulletin> --model M
     seed ask       <parish> <bulletin> --model M "question"
     seed finalize  <parish>...
@@ -55,6 +56,7 @@ from pdf_extract.seeding.finalize import finalize_seed
 from pdf_extract.seeding.loader import is_loaded
 from pdf_extract.seeding.queries import SeedContext, SeedError
 from pdf_extract.seeding.score import score_run
+from pdf_extract.seeding.site import read_site, resolve_url
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
 
 Result = dict[str, Any]
@@ -179,6 +181,15 @@ def _church(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.find_churches(conn, args.query)
 
 
+def _site(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    if ctx.eval_run is not None:
+        raise SeedError("A historical test run may not read live websites: they can show "
+                        "changes after its cutoff")
+    parish = queries.parish_row(conn, args.parish)
+    url = resolve_url(parish["homepage_url"], args.where)
+    return read_site(args.parish, url, browser=not args.no_browser, fresh=args.fresh)
+
+
 def _diff(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     seed = read_seed(args.parish, ctx.seeds_dir)
     if seed is None:
@@ -250,7 +261,9 @@ def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
         if seed is None:
             files.append({"parish": slug, "status": None, "problems": ["no seed file"]})
             continue
-        problems = check_seed(conn, seed, parish_slug=slug, cutoff=cutoff)
+        # An approved file is its reviewer's: newer drafting evidence rules don't apply.
+        problems = check_seed(conn, seed, parish_slug=slug, cutoff=cutoff,
+                              check_evidence=seed.get("status") != APPROVED)
         summary = SeedSummary.of(slug, seed)
         files.append({
             "parish": slug, "status": summary.status,
@@ -414,6 +427,8 @@ def _text_status(r: Result) -> str:
     for s in r["seeds"]:
         loaded = {True: "loaded", False: "not loaded", None: ""}[s["loaded"]]
         detail = s["problem"] or s["blocked_reason"] or ""
+        if s["church_list_issues"] and not detail:
+            detail = f"{s['church_list_issues']} for the church list"
         lines.append(f"  {s['parish_slug']:45} {s['status']:12} {s['open_questions']:2} open  "
                      f"{s['included']:3} slots  {loaded:10} {detail}")
     return "\n".join(lines)
@@ -452,6 +467,11 @@ def _text_brief(r: Result) -> str:
     lines += [f"  {c['church']:40} {c['name']}, {c['address'] or '(no address)'}"
               for c in r["churches"]]
     lines.append(_text_bulletins(r["bulletins"]))
+    week = r.get("newest_week")
+    if week:
+        held = " · ".join(f"{day[:3]} {'/'.join(w)}" for day, w in week["weeks"].items())
+        lines.append(f"newest bulletin's week: {week['from']} to {week['to']}; weeks of the "
+                     f"month it holds: {held}")
     n = len(r["history_bulletins"])
     if r["history"] is None:
         lines.append(f"history: {r['history_events']} distinct events in {n} bulletins: "
@@ -499,6 +519,19 @@ def _text_church(r: Result) -> str:
                      for c in r["churches"])
 
 
+def _text_site(r: Result) -> str:
+    when = "read earlier, " if r["cached"] else ""
+    lines = [f"{r['final_url']}  ({when}{r['via']} at {r['read_at'][:16].replace('T', ' ')}; "
+             f"cite it as {{\"source\": \"website\", \"url\": \"{r['final_url']}\"}})"]
+    lines += [f"  note: {n}" for n in r["notes"]]
+    if r["links"]:
+        lines.append("schedule-like links on this page:")
+        lines += [f"  {link['url']}  {link['text']}" for link in r["links"]]
+    lines.append("=== text")
+    lines.append(r["text"])
+    return "\n".join(lines)
+
+
 def _text_diff(r: Result) -> str:
     n = len(r["bulletins"])
     lines = [f"{r['parish']}: the seed against extract mode's history of {n} bulletins "
@@ -512,6 +545,9 @@ def _text_diff(r: Result) -> str:
                      + (f", {pages}" if pages else "") + ")")
     if not r["missing"]:
         lines.append("  none")
+    lines.append("History events that read a slot at another time (confirm the slot's time):")
+    lines += [f"  {d['slot']:5} {d['slot_said']}  history: {d['said']}  "
+              f"({len(d['bulletins'])}/{n} bulletins)" for d in r["differs"]] or ["  none"]
     lines.append("Included slots history never had:")
     lines += [f"  {u['slot']:5} {u['said']}" for u in r["unseen"]] or ["  none"]
     return "\n".join(lines)
@@ -608,6 +644,16 @@ def add_seed_parser(
     p = leaf("church", "Look a church up by slug, name, town or address", _with_conn(_church),
              _text_church)
     p.add_argument("query", help="Any part of a slug, name, town or address")
+
+    p = leaf("site", "A page of the parish's website as text, with its schedule links",
+             _with_conn(_site), _text_site)
+    parish(p)
+    p.add_argument("where", nargs="?",
+                   help="A path on the parish's site (/mass-times) or a full address "
+                        "(default: its homepage)")
+    p.add_argument("--fresh", action="store_true", help="Read it again, not from today's copy")
+    p.add_argument("--no-browser", action="store_true",
+                   help="Only a plain request: never fall back to the stealth browser")
 
     p = leaf("extract", "A full extraction by an external model (cached, recorded)",
              _with_conn(_extract), _text_extract)
