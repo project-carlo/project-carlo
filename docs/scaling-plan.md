@@ -36,7 +36,7 @@ It is now column-oriented JSON; see [Phase 2](#phase-2--slim-the-payload-cheap-b
 - `apps/web/src/api.ts` downloads and gunzips it, and `apps/web/src/lib/snapshot.ts`
   decodes **every** church and event into JS objects once; filters run in JS on
   every filter change (`collectMapItems`).
-- `apps/web/src/components/ChurchMap.tsx` renders one react-leaflet `<Marker>`
+- `apps/web/src/components/ChurchMap.tsx` renders one Leaflet marker
   (an SVG `divIcon`) per matching church or cluster in and around the viewport
   (see [Phase 1](#phase-1--draw-only-whats-on-screen-needed-at-500-churches)).
 - `scripts/prerender.ts` writes one static HTML page per church, plus

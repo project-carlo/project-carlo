@@ -126,7 +126,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          map: ["leaflet", "react-leaflet"],
+          map: ["leaflet"],
           vendor: ["react", "react-dom", "react-dom/client", "react-router-dom"],
         },
       },
