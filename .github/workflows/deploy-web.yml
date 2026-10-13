@@ -15,12 +15,25 @@ on:
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
       - ".github/workflows/deploy-web.yml"
-  # Previews are on demand: adding the `preview` label to a pull request deploys
-  # its latest commit. The run takes the label off when it ends, so adding it
-  # again later deploys a fresh preview.
+  # Every pull request that touches the site gets a preview, refreshed on each
+  # push to it.
   pull_request:
     types:
-      - labeled
+      - opened
+      - synchronize
+      - reopened
+    paths:
+      - "apps/web/**"
+      - "data/**"
+      # Deploys build the snapshot with the pipeline code.
+      - "src/pdf_extract/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".python-version"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - ".github/workflows/deploy-web.yml"
   workflow_dispatch:
     inputs:
       mode:
@@ -40,13 +53,11 @@ jobs:
     name: Deploy web
     runs-on: ubuntu-24.04
     timeout-minutes: 30
-    if: >-
-      github.event_name != 'pull_request' ||
-      (github.event.label.name == 'preview' && github.event.pull_request.head.repo.full_name == github.repository)
+    # Fork pull requests get no secrets, so they can't deploy a preview.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
 
-    # On the job, not the workflow, so adding some other label never cancels a
-    # preview. Adding `preview` again cancels a preview still running for the
-    # same branch; deploys on main queue instead.
+    # A newer push to a pull request cancels its preview still running; deploys
+    # on main queue instead.
     concurrency:
       group: web-deploy-${{ github.head_ref || github.ref_name }}
       cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
@@ -286,7 +297,7 @@ jobs:
             fi
             echo "| Commit | \`${HEAD_SHA:0:7}\` |"
             echo
-            echo "<sub>Add the \`preview\` label again to deploy the latest commit.</sub>"
+            echo "<sub>Updated automatically on every push to this pull request.</sub>"
           } > "$body"
 
           comment_id="$(gh api --paginate "repos/${GH_REPO}/issues/${pr_number}/comments" \
@@ -321,13 +332,3 @@ jobs:
             echo "$COMMAND_OUTPUT"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
-
-      # Taking the label off lets a person add it again for a newer commit. It
-      # comes off after a failure too, so a retry is the same gesture.
-      - name: Remove preview label
-        if: always() && github.event_name == 'pull_request'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: gh api -X DELETE "repos/${GH_REPO}/issues/${PR_NUMBER}/labels/preview" --silent || true

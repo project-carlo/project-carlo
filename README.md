@@ -309,10 +309,8 @@ CSV change that removes a parish or church: that deletes events, so deploys
 build the snapshot from the published database as it stands, without the CSV
 edits, until a reviewed weekly run publishes the removal.
 
-Pushes to `main` deploy the site. Pull requests get a preview only on request:
-add the `preview` label and **Deploy Web** uploads the pull request's latest
-commit and comments the link. The run takes the label off when it ends, so
-adding it again after more pushes deploys a fresh preview.
+Pushes to `main` deploy the site. Every pull request that touches the site gets
+a preview: **Deploy Web** uploads each push to it and comments the link.
 
 CI (`.github/workflows/ci.yml`) runs on pull requests in two jobs, `python`
 (ruff, pytest) and `node` (web lint, type check and unit tests; the labeler's
