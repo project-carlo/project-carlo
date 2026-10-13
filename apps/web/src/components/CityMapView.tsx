@@ -10,7 +10,7 @@ import {
 } from "react";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import type { Map as LeafletMap } from "leaflet";
-import { useMap } from "react-leaflet";
+import { useMap } from "@/lib/leafletMap";
 import { fetchChurches, fetchMapChurch } from "../api";
 import { ChurchMap } from "./ChurchMap";
 import { MapCornerControls } from "./MapCornerControls";
