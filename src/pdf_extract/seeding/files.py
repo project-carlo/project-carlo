@@ -2,7 +2,7 @@
 
 A seed file holds every slot an agent drafted for a parish, what each source
 said about it, what it decided and why, and the questions it left for a
-person (docs/seeding-plan.md, "The seed file"). This module reads, writes and
+person (.claude/skills/draft-parish-seed/file-format.md). This module reads, writes and
 checks the file's shape; `checks` checks it against the database, and
 `loader` turns an approved one into a `seed` revision.
 

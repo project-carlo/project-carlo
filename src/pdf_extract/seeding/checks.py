@@ -1,7 +1,8 @@
 """`seed check`: a seed file against the database, as the loader and the labeler need it.
 
 `files.validate_seed` checks the file's shape. This adds what needs the
-database (docs/seeding-plan.md, "Tools"):
+database (docs/seeding-plan.md, "Implementation decisions"; the drafting
+rules it enforces are .claude/skills/draft-parish-seed/rules.md R1, R2, R5):
 
 - every entry parses as `pnpm schedule seed` would (`schedule.entries.parse_entry`),
   with an included entry's church one of the parish's (one left out, or an
