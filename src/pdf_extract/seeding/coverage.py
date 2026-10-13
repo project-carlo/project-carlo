@@ -15,8 +15,9 @@ left out on that weekday and time: the Mass it calls off isn't in the seed.
 
 A history event no entry matches may be a slot read at another time: history
 said adoration starts 12:15 where the drafter, applying the policy, wrote 12:00.
-It is one (`variants`) when exactly one slot would match it at its time and no
-other event of the same bulletin matches that slot. `finalize` cites it on that
+It is one (`variants`) when exactly one slot would match it at its time, no
+other event of the same bulletin matches that slot, and no other event of it
+would match that slot at its own time. `finalize` cites it on that
 slot, and `diff` lists it apart, as a difference to confirm rather than an
 event to cover.
 
@@ -115,15 +116,19 @@ def variants(
     slots = [s for s in slots if isinstance(s, dict)]
     exact = [ev for ev in events if any(matches(e, ev) for s in slots for e in slot_entries(s))]
     seen = [s for s in slots if any(matches(e, ev) for e in slot_entries(s) for ev in exact)]
-    found = []
-    for ev in events:
-        if any(ev is x for x in exact):
-            continue
-        near = [s for s in slots if not any(s is x for x in seen)
-                and any(_matches_but_time(e, ev) for e in slot_entries(s))]
-        if len(near) == 1:
-            found.append((ev, near[0]))
-    return found
+    near = [
+        (ev, [s for s in slots if not any(s is x for x in seen)
+              and any(_matches_but_time(e, ev) for e in slot_entries(s))])
+        for ev in events if not any(ev is x for x in exact)
+    ]
+    # Both ways unambiguous: the event nears one slot, and that slot one reading
+    # (a 09:30 and a 19:00 near a 09:00 slot are two services, not two readings).
+    readings: dict[int, set[str]] = {}
+    for ev, slots_near in near:
+        for s in slots_near:
+            readings.setdefault(id(s), set()).add(event_said(ev))
+    return [(ev, slots_near[0]) for ev, slots_near in near
+            if len(slots_near) == 1 and len(readings[id(slots_near[0])]) == 1]
 
 
 def slot_entries(slot: dict[str, Any]) -> list[dict[str, Any]]:

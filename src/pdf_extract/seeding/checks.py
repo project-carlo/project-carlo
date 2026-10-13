@@ -110,8 +110,7 @@ def older_evidence_ok(
         covering = [b for b in read if (covered_weeks(b, entry["day_of_week"]) or set()) & weeks]
         if not covering:
             return True
-        latest = normalize_as_of(covering[0]["fetched_at"])
-        return any(normalize_as_of(b["fetched_at"]) >= latest for b in cited_read)
+        return covering[0]["content_hash"] in cited
     return bool(as_of_date and entry.get("date") and entry["date"] >= as_of_date)
 
 

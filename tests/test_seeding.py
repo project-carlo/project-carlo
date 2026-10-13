@@ -1203,6 +1203,14 @@ def test_older_evidence_is_not_enough_for_a_slot_the_newest_week_holds(conn, see
     assert _evidence_problems(conn, seed)
 
 
+def test_a_weeks_of_the_month_slot_must_cite_the_newest_bulletin_whose_week_holds_it(conn, seed):
+    # A fourth Thursday: the older issue's week holds one (Sep 24), the newest's doesn't,
+    # so citing the newest issue, newer though it is, is no reading of it.
+    slot = _older_slot(seed, {"weeks_of_month": ["fourth"]})
+    slot["sources"][0]["bulletin"] = seed["bulletins"][0]["content_hash"]
+    assert _evidence_problems(conn, seed)
+
+
 def test_a_dated_entry_an_older_bulletin_announced_may_be_settled(conn, seed):
     dated = {"event_kind": "specific_date", "day_of_week": None, "date": "2026-11-02",
              "season": None, "weeks_of_month": []}
@@ -1239,6 +1247,19 @@ def test_a_variant_needs_its_bulletin_to_leave_the_slot_unmatched(seed):
     assert [row["said"] for row in found["missing"]] == [f"weekly adoration Thursday 19:00 {HF}"]
 
 
+def test_two_events_near_one_slot_are_two_services_not_variants(seed):
+    adoration = {**_SUNDAY, "event_type": "adoration", "day_of_week": "Thursday"}
+    past = [_history_of({**adoration, "start_time": "09:30"}, {**adoration, "start_time": "19:00"})]
+    found = diff(seed, past)
+    assert found["differs"] == []
+    assert sorted(row["said"] for row in found["missing"]) == [
+        f"weekly adoration Thursday 09:30 {HF}", f"weekly adoration Thursday 19:00 {HF}"]
+    # One reading printed on two pages is still one variant.
+    found = diff(seed, [_history_of({**adoration, "start_time": "09:30"},
+                                    {**adoration, "start_time": "09:30", "page_number": 3})])
+    assert [d["slot"] for d in found["differs"]] == ["s8"]
+
+
 def _group(seed: dict[str, Any]) -> None:
     for slot_id in ("s16", "s17"):
         slot = _slot(seed, slot_id)
@@ -1260,6 +1281,17 @@ def test_a_group_of_slots_is_one_question(conn, seed):
     _slot(seed, "s17")["options"][0]["label"] = "Add Saturday"
     assert any("in group 'weekday' with s16 but asks a different question" in p
                for p in validate_seed(seed, parish_slug=PARISH))
+
+
+@pytest.mark.parametrize("break_it", [
+    lambda seed: seed["slots"].append(None),
+    lambda seed: _slot(seed, "s17").update(group=["weekday"]),
+    lambda seed: _slot(seed, "s17").update(options="Add"),
+])
+def test_a_malformed_slot_in_a_group_is_an_error_not_a_crash(seed, break_it):
+    _group(seed)
+    break_it(seed)
+    assert validate_seed(seed, parish_slug=PARISH)
 
 
 def test_church_list_issues_are_listed_once_and_checked(conn, seed):

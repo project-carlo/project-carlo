@@ -292,6 +292,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   const today = new Date().toLocaleDateString("en-CA");
   const expired = expiredQuestions(seed, today);
   const expiredIds = new Set(expired.map((s) => s.id));
+  const expiredCount = new Set(expired.map((s) => s.group || s.id)).size;
   const churchIssues = seed.church_list_issues ?? [];
   const missing = new Set(seed.bulletins.map((b) => b.content_hash).filter((h) => !detail.bulletins_in_db.includes(h)));
 
@@ -403,7 +404,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
           )}
           {expired.length > 0 && !drafting && (
             <p className="flex items-center gap-2 text-xs text-amber-800">
-              {expired.length} {expired.length === 1 ? "question asks" : "questions ask"} about dates that have passed.
+              {expiredCount} {expiredCount === 1 ? "question asks" : "questions ask"} about dates that have passed.
               <button className="btn px-1.5 py-0 text-xs" onClick={dropExpired} disabled={saving} data-testid="drop-expired">
                 Leave them out
               </button>

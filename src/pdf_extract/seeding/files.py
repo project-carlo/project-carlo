@@ -540,7 +540,9 @@ def validate_seed(seed: Any, *, parish_slug: str | None = None) -> list[str]:
             if slot["id"] in ids:
                 errors.append(f"slots[{i}].id {slot['id']} is used twice")
             ids.add(slot["id"])
-    errors.extend(_group_errors(slots))
+    if errors:
+        return errors
+    errors = _group_errors(slots)
     if errors:
         return errors
     return status_errors(seed)
