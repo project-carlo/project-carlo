@@ -1,0 +1,620 @@
+{
+  "schema_version": 1,
+  "parish_slug": "all-saints-syracuse",
+  "status": "ready",
+  "as_of": "2026-10-11T16:29:24Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:51:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Small Syracuse parish with a stable schedule across all three bulletins: Sat 4 PM, Sun 9 and 11:30 AM Masses, Sat 3-3:45 PM Reconciliation, and Mon-Wed 11:30 AM Mass. The 'Daily Liturgy' Thursday and Friday 11:30 AM is a Liturgy of the Word with Communion every week, so it is left out as not a Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ea230e83a58a929f13e29086221b4565aa781db6990a164682ec968623afda69",
+      "fetched_at": "2026-10-11T16:29:24Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "4d97573f1cb3de6176e5f5697db5144ce717d88b6051c4ded2fb5151b55fd352",
+      "fetched_at": "2026-10-04T14:32:19Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "62b6fa5f86560bba9d4c9154ee41fec54877ab9c5794c3b28454d1710fce643e",
+      "fetched_at": "2026-09-28T00:03:47Z",
+      "published_date": "2026-09-26",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "SAT.: 4pm Mass (Traditional Music)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "SAT.: 4pm Mass (Traditional Music)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "SAT.: 4pm Mass (Traditional Music)"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly mass Saturday 16:00 all-saints-syracuse  “Traditional Music”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4d97573f1cb3",
+          "said": "weekly mass Saturday 16:00 all-saints-syracuse  “Traditional Music”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62b6fa5f8656",
+          "said": "weekly mass Saturday 16:00 all-saints-syracuse  “Traditional Music”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: in the liturgy schedule of all three bulletins read; the weekly intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "SUN.: 9am Mass (Gospel Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "SUN.: 9am Mass (Gospel Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "SUN.: 9am Mass (Gospel Choir)"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly mass Sunday 09:00 all-saints-syracuse  “Gospel Choir”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4d97573f1cb3",
+          "said": "weekly mass Sunday 09:00 all-saints-syracuse  “Gospel Choir”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62b6fa5f8656",
+          "said": "weekly mass Sunday 09:00 all-saints-syracuse  “Gospel Choir”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: in the liturgy schedule of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "11:30am Mass (Contemporary Music & African Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "11:30am Mass (Contemporary Music & African Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "11:30am Mass (Contemporary Music & African Choir)"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly mass Sunday 11:30 all-saints-syracuse  “Contemporary Music & African Choir”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4d97573f1cb3",
+          "said": "weekly mass Sunday 11:30 all-saints-syracuse  “Contemporary Music & African Choir”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62b6fa5f8656",
+          "said": "weekly mass Sunday 11:30 all-saints-syracuse  “Contemporary Music & African Choir”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: in the liturgy schedule of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "Sacrament of Reconciliation: SAT. 3 – 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "Sacrament of Reconciliation: SAT. 3 – 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "Sacrament of Reconciliation: SAT. 3 – 3:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly confession Saturday 15:00–15:45 all-saints-syracuse",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4d97573f1cb3",
+          "said": "weekly confession Saturday 15:00–15:45 all-saints-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62b6fa5f8656",
+          "said": "weekly confession Saturday 15:00–15:45 all-saints-syracuse",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: in the liturgy schedule of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; Mass Intentions: Mon. Oct. 12 11:30am (a Mass intention); weekly calendar: 11:30am: Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; calendar and intentions show Mon-Wed 11:30am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; calendar and intentions show Mon-Wed 11:30am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintssyracuse.org/mass",
+          "said": "Daily Liturgy - Monday - Friday 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly mass Monday 11:30 all-saints-syracuse  “Daily Liturgy”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the newest bulletin's calendar and Mass intentions show a Mass at 11:30 AM on Monday to Wednesday, and the two older bulletins show the same. The Monday listing the week of Columbus Day (office closed) still shows the 11:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; Mass Intentions: Tues. Oct. 13 11:30am (a Mass intention); weekly calendar: 11:30am: Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; calendar and intentions show Mon-Wed 11:30am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; calendar and intentions show Mon-Wed 11:30am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintssyracuse.org/mass",
+          "said": "Daily Liturgy - Monday - Friday 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly mass Tuesday 11:30 all-saints-syracuse  “Daily Liturgy”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4d97573f1cb3",
+          "said": "weekly mass Tuesday 11:30 all-saints-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62b6fa5f8656",
+          "said": "specific_date mass 2026-09-29 11:30 all-saints-syracuse",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the newest bulletin's calendar and Mass intentions show a Mass at 11:30 AM on Monday to Wednesday, and the two older bulletins show the same. The Monday listing the week of Columbus Day (office closed) still shows the 11:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; Mass Intentions: Wed. Oct. 14 11:30am (a Mass intention); weekly calendar: 11:30am: Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; calendar and intentions show Mon-Wed 11:30am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "Mon.–Fri.: 11:30am Daily Liturgy; calendar and intentions show Mon-Wed 11:30am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintssyracuse.org/mass",
+          "said": "Daily Liturgy - Monday - Friday 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly mass Wednesday 11:30 all-saints-syracuse  “Daily Liturgy”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4d97573f1cb3",
+          "said": "weekly mass Wednesday 11:30 all-saints-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62b6fa5f8656",
+          "said": "specific_date mass 2026-09-30 11:30 all-saints-syracuse",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the newest bulletin's calendar and Mass intentions show a Mass at 11:30 AM on Monday to Wednesday, and the two older bulletins show the same. The Monday listing the week of Columbus Day (office closed) still shows the 11:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "Thurs. Oct. 15 11:30am: Liturgy of the Word w/ Communion"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "Thurs. Oct. 8 / Fri. Oct. 9 11:30am: Liturgy of the Word w/ Communion"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "Thurs. Oct. 1 / Fri. Oct. 2 11:30am: Liturgy of the Word w/ Communion"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintssyracuse.org/mass",
+          "said": "Daily Liturgy - Monday - Friday 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly mass Thursday 11:30 all-saints-syracuse  “Daily Liturgy”",
+          "page": 4
+        }
+      ],
+      "rationale": "POLICY (Communion Service is never a Mass), R25: the schedule line says Mon.-Fri. 11:30am Daily Liturgy, but in all three bulletins read the Thursday and Friday intentions and calendar say 'Liturgy of the Word w/ Communion' every week, not Mass. Extract history read these as Mass (R7). No cancellation is recorded: the bulletin does not say a Mass is replaced, and no Thursday/Friday Mass is in the seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "Fri. Oct. 16 11:30am: Liturgy of the Word w/ Communion"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d97573f",
+          "page": 5,
+          "said": "Thurs. Oct. 8 / Fri. Oct. 9 11:30am: Liturgy of the Word w/ Communion"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62b6fa5f",
+          "page": 5,
+          "said": "Thurs. Oct. 1 / Fri. Oct. 2 11:30am: Liturgy of the Word w/ Communion"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintssyracuse.org/mass",
+          "said": "Daily Liturgy - Monday - Friday 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea230e83a58a",
+          "said": "weekly mass Friday 11:30 all-saints-syracuse  “Daily Liturgy”",
+          "page": 4
+        }
+      ],
+      "rationale": "POLICY (Communion Service is never a Mass), R25: the schedule line says Mon.-Fri. 11:30am Daily Liturgy, but in all three bulletins read the Thursday and Friday intentions and calendar say 'Liturgy of the Word w/ Communion' every week, not Mass. Extract history read these as Mass (R7). No cancellation is recorded: the bulletin does not say a Mass is replaced, and no Thursday/Friday Mass is in the seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "Taizé Prayer: Wed. Nov. 4 – 6:30pm in church (also live-streamed)"
+        }
+      ],
+      "rationale": "R24: Taizé Prayer is a devotion the bulletin does not call Adoration, Mass or Confession. Extract history had read the earlier Oct. 7 Taizé as Adoration (before as_of, so out of scope anyway, R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea230e83",
+          "page": 4,
+          "said": "Rosary w/ Legion: Tues. following 11:30am liturgy (cancelled this week); Legion of Mary Meeting: Sat. 11:30am"
+        }
+      ],
+      "rationale": "R24: Rosary and the Legion of Mary meeting are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

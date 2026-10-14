@@ -1,0 +1,1197 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-luke-schenectady",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:38:34Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:56:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. Luke's has one church. The weekend Masses, Monday/Tuesday/Thursday/Friday 11:00 AM Mass, Saturday 3:00 PM Reconciliation and the Friday Adoration after the 11:00 AM Mass (not First Fridays) are settled from the bulletins. I ask about a Saturday 11:00 AM Mass (in the intentions but not the website), First Friday Adoration with Benediction until 4:00 PM (website only) and a 7-8 PM Nocturnal Adoration hour (website only, day unclear). Weekday Reconciliation is at St. Joseph's, not here.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ec8b7af8a18ee2f0d38fb6cb0bdb2bfd63f28d0497655ea05813aaeed17aa9d4",
+      "fetched_at": "2026-10-11T16:38:34Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "893067f00d95bfed9c76df7f77eecfac4834468138bef03ff3b91ce315894696",
+      "fetched_at": "2026-10-04T14:55:19Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "642ba91bd7e48d300cd694bdffc0725ec0cb6227f1514c26da89b673d32d8efb",
+      "fetched_at": "2026-09-28T22:05:29Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 1,
+          "said": "CELEBRATION OF THE EUCHARIST Saturday Vigil: 4:00pm, Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 1,
+          "said": "CELEBRATION OF THE EUCHARIST Saturday Vigil: 4:00pm, Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 1,
+          "said": "CELEBRATION OF THE EUCHARIST Saturday Vigil: 4:00pm, Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Saturday: 4:00 pm Vigil Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly mass Saturday 16:00 st-luke-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Saturday 16:00 st-luke-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly mass Saturday 16:00 st-luke-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Celebration of the Eucharist box on page 1 of all three bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 1,
+          "said": "Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 1,
+          "said": "Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 1,
+          "said": "Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Sunday: 8:00 am and 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly mass Sunday 08:00 st-luke-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Sunday 08:00 st-luke-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly mass Sunday 08:00 st-luke-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: page 1 box of all three bulletins; the website agrees. The October 18 Bishop O'Connell Mass is at this regular slot, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 1,
+          "said": "Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 1,
+          "said": "Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 1,
+          "said": "Sunday: 8:00am and 11:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Sunday: 8:00 am and 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly mass Sunday 11:00 st-luke-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Sunday 11:00 st-luke-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly mass Sunday 11:00 st-luke-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: page 1 box of all three bulletins; the website agrees. The October 18 Feast Day Mass with Bishop O'Connell (11 AM) is this regular slot (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Mon line)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Mon line)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Mon line)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Daily Mass: Monday, Tuesday, Thursday & Friday: 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly mass Monday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Monday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly mass Monday 11:00 st-luke-schenectady",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the page 2 heading 'DAILY MASS at 11:00am' with a Monday intention in all three bulletins; the website lists Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Tue line)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Tue line)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Tue line)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Daily Mass: Monday, Tuesday, Thursday & Friday: 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly mass Tuesday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Tuesday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly mass Tuesday 11:00 st-luke-schenectady",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the page 2 heading 'DAILY MASS at 11:00am' with a Tuesday intention in all three bulletins; the website lists Tuesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Thu line)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Thu line)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Thu line)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Daily Mass: Monday, Tuesday, Thursday & Friday: 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly mass Thursday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Thursday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly mass Thursday 11:00 st-luke-schenectady",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the page 2 heading 'DAILY MASS at 11:00am' with a Thursday intention in all three bulletins; the website lists Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Fri line)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Fri line)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "DAILY MASS at 11:00am (Fri line)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Daily Mass: Monday, Tuesday, Thursday & Friday: 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly mass Friday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Friday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly mass Friday 11:00 st-luke-schenectady",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the page 2 heading 'DAILY MASS at 11:00am' with a Friday intention in all three bulletins; the website lists Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday, 3:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday, 3:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday, 3:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated each Saturday at 3pm at St. Luke's"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/prayer-worshipsacraments/",
+          "said": "Sacrament of Reconciliation is celebrated on Saturdays at 3:00 pm or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly confession Saturday 15:00 st-luke-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly confession Saturday 15:00 st-luke-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly confession Saturday 15:00 st-luke-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: a clock start with no end time in all three bulletins and on the website; the 'or by appointment' part is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly adoration Friday 11:30–13:00 st-luke-schenectady  “Following 11:00 AM Mass; not on First Fridays”",
+          "page": 2
+        }
+      ],
+      "rationale": "R10 and POLICY, Times: 'follow the 11am Mass' with no clock time starts 30 minutes after a weekday Mass, 11:30 AM, and runs to 1 PM; the bulletins say it is not held on First Fridays, so it is every Friday but the first (POLICY, Weekly qualifiers). History read the start as 11:00, 11:30 or 11:45 (R8). 'Coming in October' gives no season (R15); the slot is already printed on September 27 and October 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "Sat Tina Mclaine req Family (under DAILY MASS at 11:00am, October 12 - 18)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "Sat Phyllis Miele req Mike & Eileen Clark / Sat Onnie Nappi req Rosalie Nappi (under DAILY MASS at 11:00am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "Sat Phyllis Miele req Mike & Eileen Clark / Sat Onnie Nappi req Rosalie Nappi (under DAILY MASS at 11:00am)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Daily Mass: Monday, Tuesday, Thursday & Friday: 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly mass Saturday 11:00 st-luke-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Saturday 11:00 st-luke-schenectady",
+          "page": 2
+        }
+      ],
+      "rationale": "R28: all three bulletins list a Saturday intention under 'DAILY MASS at 11:00am', but the Saturday morning Mass is in neither the page 1 box nor the website, which lists daily Mass on Monday, Tuesday, Thursday and Friday only. History has it (2/3). The newest bulletin prints it and the website does not outweigh it (R6), so I lean include. This is not C1: no schedule box lists the weekday Masses either.",
+      "question": "Is there a Saturday 11:00 AM Daily Mass?",
+      "options": [
+        {
+          "label": "Include Saturday 11:00 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-luke-schenectady",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "Eucharistic Adoration ... on days other than First Fridays."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/prayer-worshipsacraments/",
+          "said": "the ancient and beautiful tradition of Eucharistic Adoration and Benediction is also celebrated on the first Friday of each month following the 11:00 am Mass and continuing until 4:00 pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly adoration Friday 11:30–13:00 st-luke-schenectady  “Following 11:00 AM Mass; not on First Fridays”",
+          "page": 2
+        }
+      ],
+      "rationale": "R29: only the website gives First Friday Adoration and Benediction (to 4:00 PM); the bulletins only say the Friday Adoration is held 'on days other than First Fridays', which implies a separate First Friday one. No bulletin read holds a first Friday (R11: the newest week holds the third Friday). The start is worked out per R10 (11:30 AM, 30 minutes after the 11:00 AM weekday Mass), with Benediction as the note. Leaning include since the bulletins' wording supports it and nothing contradicts it.",
+      "question": "Add First Friday Adoration with Benediction, 11:30 AM to 4:00 PM?",
+      "options": [
+        {
+          "label": "First Fridays 11:30 AM-4:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-luke-schenectady",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/prayer-worshipsacraments/",
+          "said": "The Nocturnal Adoration Society continues Eucharistic Adoration from 7:00 - 8:00 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 4,
+          "said": "Ministries & Services: Nocturnal Adoration Society (no time)"
+        }
+      ],
+      "rationale": "R29 and R30: the website says the Nocturnal Adoration Society 'continues' Adoration from 7:00-8:00 pm after the First Friday afternoon Adoration, but it does not clearly say that is on First Fridays only, and no bulletin gives a time. Leaning leave out since the day is not clear.",
+      "question": "Add First Friday evening Adoration, 7:00-8:00 PM (Nocturnal Adoration Society)?",
+      "options": [
+        {
+          "label": "First Fridays 7:00-8:00 PM",
+          "entry": {
+            "church_slug": "st-luke-schenectady",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Nocturnal Adoration Society"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "Wed NO SERVICES"
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "Wed NO SERVICES"
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "Wed NO SERVICES"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Daily Mass: Monday, Tuesday, Thursday & Friday: 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "893067f00d95",
+          "said": "weekly mass Wednesday 11:00 st-luke-schenectady",
+          "page": 2
+        }
+      ],
+      "rationale": "R7 and R9: all three bulletins print 'Wed NO SERVICES' under DAILY MASS and the website lists no Wednesday Mass; one older history extraction read a Wednesday Mass, which the bulletins contradict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated each Saturday at 3pm at St. Luke's and Monday-Friday following the 12:15pm Mass at St. Joseph's."
+        }
+      ],
+      "rationale": "R22: the bulletin's 'Monday-Friday following the 12:15pm Mass at St. Joseph's' is at St. Joseph's Church, another parish's church (not St. Luke's), so those events belong to that parish. Worked out at 12:45 PM only to record them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated each Saturday at 3pm at St. Luke's and Monday-Friday following the 12:15pm Mass at St. Joseph's."
+        }
+      ],
+      "rationale": "R22: the bulletin's 'Monday-Friday following the 12:15pm Mass at St. Joseph's' is at St. Joseph's Church, another parish's church (not St. Luke's), so those events belong to that parish. Worked out at 12:45 PM only to record them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated each Saturday at 3pm at St. Luke's and Monday-Friday following the 12:15pm Mass at St. Joseph's."
+        }
+      ],
+      "rationale": "R22: the bulletin's 'Monday-Friday following the 12:15pm Mass at St. Joseph's' is at St. Joseph's Church, another parish's church (not St. Luke's), so those events belong to that parish. Worked out at 12:45 PM only to record them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated each Saturday at 3pm at St. Luke's and Monday-Friday following the 12:15pm Mass at St. Joseph's."
+        }
+      ],
+      "rationale": "R22: the bulletin's 'Monday-Friday following the 12:15pm Mass at St. Joseph's' is at St. Joseph's Church, another parish's church (not St. Luke's), so those events belong to that parish. Worked out at 12:45 PM only to record them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation is celebrated each Saturday at 3pm at St. Luke's and Monday-Friday following the 12:15pm Mass at St. Joseph's."
+        }
+      ],
+      "rationale": "R22: the bulletin's 'Monday-Friday following the 12:15pm Mass at St. Joseph's' is at St. Joseph's Church, another parish's church (not St. Luke's), so those events belong to that parish. Worked out at 12:45 PM only to record them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "The Altar Rosary Society is leading the Rosary at 10:20am, before the 11am Mass on Sundays."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlukesschenectady.org/",
+          "said": "Tuesday, join us for a Novena, Our Lady of Atonement in Our Lady's Chapel after Mass."
+        }
+      ],
+      "rationale": "R24: the Sunday Rosary and the Tuesday novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "Celebration of the Sacrament of the Sick October 24/25 at all the Masses"
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is celebrated at the regular weekend Masses on October 24/25, so it is not a separate event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-schenectady",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-31",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Confirmation"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "Celebration of the Sacrament of Confirmation Saturday, October 31, 11:00am Hosted by St. John the Evangelist Church"
+        }
+      ],
+      "rationale": "R22: the Confirmation is hosted at St. John the Evangelist, another parish's church, and is not announced as a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "history",
+          "bulletin": "ec8b7af8a18e",
+          "said": "weekly adoration Friday 11:00–13:00 st-luke-schenectady  “Follows 11:00 AM Mass; excluding First Fridays”",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R8 and R9: an older history extraction read this Friday Adoration as starting at 11:00 with no First Friday exclusion. The bulletins give no clock start; POLICY, Times, puts 'follow the 11am Mass' at 11:30 AM and the settled slot is every Friday but the first, so this reading is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec8b7af8a18e",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "893067f00d95",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "642ba91bd7e4",
+          "page": 2,
+          "said": "Eucharistic Adoration will follow the 11am Mass on Fridays and continue until 1pm ... on days other than First Fridays."
+        },
+        {
+          "source": "history",
+          "bulletin": "642ba91bd7e4",
+          "said": "weekly adoration Friday 11:45–13:00 st-luke-schenectady  “Follows 11:00 AM Mass; not held on First Fridays”",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R8 and R9: an older history extraction read this Friday Adoration as starting at 11:45 with no First Friday exclusion. The bulletins give no clock start; POLICY, Times, puts 'follow the 11am Mass' at 11:30 AM and the settled slot is every Friday but the first, so this reading is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

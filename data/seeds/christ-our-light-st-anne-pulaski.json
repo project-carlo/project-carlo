@@ -1,0 +1,1075 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-our-light-st-anne-pulaski",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:31:50Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T22:01:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two linked churches (Pulaski and Mexico). The bulletins print no schedule box, only a Mass Intentions table: the weekend Masses and Saturday/Sunday Confessions repeat in every week listed, so they are weekly. The pastor is in Ghana, so weekday Masses and Confession are cancelled Oct 6 to Nov 20 and Adoration times are in question: Tuesday at St. Anne (table 4-10 PM vs announcement 2-5 PM), Wednesday at Christ Our Light (2-5 PM now). First Friday and First Saturday morning slots at Christ Our Light come from the Sept 27 bulletin; one question asks whether the Nov 6 First Friday Mass and Confession are cancelled.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "09416c75d03778347e02c98c617d5514d239272c6996192a37e6c856cba166d6",
+      "fetched_at": "2026-10-11T16:31:50Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "0ff3cfb030c1ebf9d09f6b2ec0d4aba4a12ace6212d955a1ac81c796c92ac658",
+      "fetched_at": "2026-10-04T14:33:28Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "585723d97927456e6fa0dcd162d62b7245b86c29951a22729fb6aafb4228f674",
+      "fetched_at": "2026-09-28T00:05:02Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "COL Confessions 3:15pm-3:50pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "COL Confessions 3:15pm-3:50pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "COL Confessions 3:15pm-3:50pm (Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/sacraments",
+          "said": "Saturday COL: 3:15 PM to 3:50 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "weekly confession Saturday 15:15–15:50 christ-our-light-pulaski",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "weekly confession Saturday 15:15–15:50 christ-our-light-pulaski",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "weekly confession Saturday 15:15–15:50 christ-our-light-pulaski",
+          "page": 3
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): the bulletins print no separate schedule box; the Mass Intentions table on page 3 lists this same slot at the same time on both weekends it covers (Oct 10-11 and Oct 17-18) and in both older bulletins. History has it weekly in 3/3 bulletins. The website's Sacraments page agrees (Saturday, COL: 3:15 PM to 3:50 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "COL Mass 4:00pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "COL Mass 4:00pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "COL Mass 4:00pm (Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/",
+          "said": "Saturday Vigil Masses: COL 4pm ; SAMOM 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "weekly mass Saturday 16:00 christ-our-light-pulaski",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "weekly mass Saturday 16:00 christ-our-light-pulaski",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "weekly mass Saturday 16:00 christ-our-light-pulaski",
+          "page": 3
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): the bulletins print no separate schedule box; the Mass Intentions table on page 3 lists this same slot at the same time on both weekends it covers (Oct 10-11 and Oct 17-18) and in both older bulletins. History has it weekly in 3/3 bulletins. The website's home page agrees (COL 4pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "COL Mass 10:15am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "COL Mass 10:15am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "COL Mass 10:15am (Sunday)"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/",
+          "said": "Sunday : SAMOM 8:30am; COL 10:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "weekly mass Sunday 10:15 christ-our-light-pulaski",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "weekly mass Sunday 10:15 christ-our-light-pulaski",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "weekly mass Sunday 10:15 christ-our-light-pulaski",
+          "page": 3
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): the bulletins print no separate schedule box; the Mass Intentions table on page 3 lists this same slot at the same time on both weekends it covers (Oct 10-11 and Oct 17-18) and in both older bulletins. History has it weekly in 3/3 bulletins. The website's home page agrees (COL 10:15am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-mother-of-mary-mexico",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "SAMOM Mass 5:30pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "SAMOM Mass 5:30pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "SAMOM Mass 5:30pm (Saturday)"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/",
+          "said": "Saturday Vigil Masses: COL 4pm ; SAMOM 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "weekly mass Saturday 17:30 st-anne-mother-of-mary-mexico",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "weekly mass Saturday 17:30 st-anne-mother-of-mary-mexico",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "weekly mass Saturday 17:30 st-anne-mother-of-mary-mexico",
+          "page": 3
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): the bulletins print no separate schedule box; the Mass Intentions table on page 3 lists this same slot at the same time on both weekends it covers (Oct 10-11 and Oct 17-18) and in both older bulletins. History has it weekly in 3/3 bulletins. The website's home page agrees (SAMOM 5:30pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-mother-of-mary-mexico",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "SAMOM Confessions 8:00am-8:25am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "SAMOM Confessions 8:00am-8:25am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "SAMOM Confessions 8:00am-8:25am (Sunday)"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/sacraments",
+          "said": "Sunday SAMOM: 8:00 AM to 8:25 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "weekly confession Sunday 08:00–08:25 st-anne-mother-of-mary-mexico",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "weekly confession Sunday 08:00–08:25 st-anne-mother-of-mary-mexico",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "weekly confession Sunday 08:00–08:25 st-anne-mother-of-mary-mexico",
+          "page": 3
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): the bulletins print no separate schedule box; the Mass Intentions table on page 3 lists this same slot at the same time on both weekends it covers (Oct 10-11 and Oct 17-18) and in both older bulletins. History has it weekly in 3/3 bulletins. The website's Confession page says 8:00 AM to 8:20 AM, but the newest bulletin prints 8:25 in both weekends, and the website never outweighs it (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-mother-of-mary-mexico",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "SAMOM Mass 8:30am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "SAMOM Mass 8:30am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "SAMOM Mass 8:30am (Sunday)"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/",
+          "said": "Sunday : SAMOM 8:30am; COL 10:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "weekly mass Sunday 08:30 st-anne-mother-of-mary-mexico",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "weekly mass Sunday 08:30 st-anne-mother-of-mary-mexico",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "weekly mass Sunday 08:30 st-anne-mother-of-mary-mexico",
+          "page": 3
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): the bulletins print no separate schedule box; the Mass Intentions table on page 3 lists this same slot at the same time on both weekends it covers (Oct 10-11 and Oct 17-18) and in both older bulletins. History has it weekly in 3/3 bulletins. The website's home page agrees (SAMOM 8:30am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "FIRST FRIDAY - OCTOBER 2, 2026: COL Adoration 9:00am-10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "specific_date adoration 2026-10-02 09:00–10:00 christ-our-light-pulaski  “First Friday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R12: the table names FIRST FRIDAY - OCTOBER 2 (POLICY, Weekly or dated 2: weeks of the month, weekly even with a date given). The newest bulletin's week (Oct 11-18) holds no first Friday; the Sept 27 bulletin, the newest read whose week holds one, prints it. Not printed in the Oct 4 bulletin, whose week holds no first Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "09:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "FIRST FRIDAY - OCTOBER 2, 2026: COL Confessions 9:30am-9:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "specific_date confession 2026-10-02 09:30–09:50 christ-our-light-pulaski  “First Friday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R12: the table names FIRST FRIDAY - OCTOBER 2 (POLICY, Weekly or dated 2: weeks of the month, weekly even with a date given). The newest bulletin's week (Oct 11-18) holds no first Friday; the Sept 27 bulletin, the newest read whose week holds one, prints it. Not printed in the Oct 4 bulletin, whose week holds no first Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "FIRST FRIDAY - OCTOBER 2, 2026: COL Mass 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "specific_date mass 2026-10-02 10:00 christ-our-light-pulaski  “First Friday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R12: the table names FIRST FRIDAY - OCTOBER 2 (POLICY, Weekly or dated 2: weeks of the month, weekly even with a date given). The newest bulletin's week (Oct 11-18) holds no first Friday; the Sept 27 bulletin, the newest read whose week holds one, prints it. Not printed in the Oct 4 bulletin, whose week holds no first Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "FIRST SATURDAY - OCTOBER 3, 2026: COL Adoration 9:00am-10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "specific_date adoration 2026-10-03 09:00–10:00 christ-our-light-pulaski  “First Saturday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R12: the table names FIRST SATURDAY - OCTOBER 3 (POLICY, Weekly or dated 2: weeks of the month, weekly even with a date given). The newest bulletin's week (Oct 11-18) holds no first Saturday; the Sept 27 bulletin, the newest read whose week holds one, prints it. Not printed in the Oct 4 bulletin, whose week holds no first Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "09:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "FIRST SATURDAY - OCTOBER 3, 2026: COL Confessions 9:30am-9:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "specific_date confession 2026-10-03 09:30–09:50 christ-our-light-pulaski  “First Saturday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R12: the table names FIRST SATURDAY - OCTOBER 3 (POLICY, Weekly or dated 2: weeks of the month, weekly even with a date given). The newest bulletin's week (Oct 11-18) holds no first Saturday; the Sept 27 bulletin, the newest read whose week holds one, prints it. Not printed in the Oct 4 bulletin, whose week holds no first Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-pulaski",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "FIRST SATURDAY - OCTOBER 3, 2026: COL Mass 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "specific_date mass 2026-10-03 10:00 christ-our-light-pulaski  “First Saturday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R12: the table names FIRST SATURDAY - OCTOBER 3 (POLICY, Weekly or dated 2: weeks of the month, weekly even with a date given). The newest bulletin's week (Oct 11-18) holds no first Saturday; the Sept 27 bulletin, the newest read whose week holds one, prints it. Not printed in the Oct 4 bulletin, whose week holds no first Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "ANNOUNCEMENT: Fr. Francis will be in Ghana for several weeks. As such, weekday Masses and Confession from Oct 6 to Nov 20 will be canceled. ... Weekend Masses will remain as usual during this time."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "ANNOUNCEMENT: Fr. Francis will be in Ghana for several weeks. As such, weekday Masses and Confession from Oct 6 to Nov 20 will be canceled. ... Weekend Masses will remain as usual during this time."
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/news/weekday-masses-confession-canceled-oct-6-nov-24",
+          "said": "Fr. Francis will be in Ghana for several weeks. As such, weekday Masses and Confession from Oct 6th to Nov 24th will be canceled, and Wednesday Adoration will be moved to 2pm-5pm."
+        }
+      ],
+      "rationale": "R17, R16: the announcement cancels 'weekday Masses and Confession' but names no First Friday; Friday Nov 6 falls inside the stated period and the priest is away, so a cancellation is likely, but the bulletin does not say so for this Mass. Leaning toward recording it. First Friday Adoration on Nov 6 is not said to be cancelled, so it stays. First Saturday (Nov 7) is not a weekday and 'weekend Masses remain as usual', so nothing is recorded for it. The website gives the end as Nov 24, which covers Nov 6 either way.",
+      "question": "Does the weekday cancellation (Oct 6 to Nov 20) cancel the First Friday, November 6 Mass and Confession at Christ Our Light?",
+      "options": [
+        {
+          "label": "Cancel the Nov 6 occurrence",
+          "leaning": true,
+          "entry": {
+            "church_slug": "christ-our-light-pulaski",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-06",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Friday"
+          }
+        },
+        {
+          "label": "No cancellation",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "first-friday-nov-6"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "ANNOUNCEMENT: Fr. Francis will be in Ghana for several weeks. As such, weekday Masses and Confession from Oct 6 to Nov 20 will be canceled. ... Weekend Masses will remain as usual during this time."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "ANNOUNCEMENT: Fr. Francis will be in Ghana for several weeks. As such, weekday Masses and Confession from Oct 6 to Nov 20 will be canceled. ... Weekend Masses will remain as usual during this time."
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/news/weekday-masses-confession-canceled-oct-6-nov-24",
+          "said": "Fr. Francis will be in Ghana for several weeks. As such, weekday Masses and Confession from Oct 6th to Nov 24th will be canceled, and Wednesday Adoration will be moved to 2pm-5pm."
+        }
+      ],
+      "rationale": "R17, R16: the announcement cancels 'weekday Masses and Confession' but names no First Friday; Friday Nov 6 falls inside the stated period and the priest is away, so a cancellation is likely, but the bulletin does not say so for this Mass. Leaning toward recording it. First Friday Adoration on Nov 6 is not said to be cancelled, so it stays. First Saturday (Nov 7) is not a weekday and 'weekend Masses remain as usual', so nothing is recorded for it. The website gives the end as Nov 24, which covers Nov 6 either way.",
+      "question": "Does the weekday cancellation (Oct 6 to Nov 20) cancel the First Friday, November 6 Mass and Confession at Christ Our Light?",
+      "options": [
+        {
+          "label": "Cancel the Nov 6 occurrence",
+          "leaning": true,
+          "entry": {
+            "church_slug": "christ-our-light-pulaski",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-06",
+            "start_time": "09:30",
+            "end_time": "09:50",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Friday"
+          }
+        },
+        {
+          "label": "No cancellation",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "first-friday-nov-6"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "TUESDAY - OCTOBER 13, 2026: SAMOM Adoration 4:00pm-10:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "Adoration will continue on Tuesdays at SAMOM and Wednesdays at COL, now 2pm-5pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "TUESDAY: SAMOM Adoration 4:00pm-10:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "TUESDAY: SAMOM Adoration 4:00pm-10:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/adoration",
+          "said": "Tuesday: 4:00 PM to 10:00 PM at St. Anne, Mother of Mary"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/news/weekday-masses-confession-canceled-oct-6-nov-24",
+          "said": "weekday Masses and Confession from Oct 6th to Nov 24th will be canceled, and Wednesday Adoration will be moved to 2pm-5pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "weekly adoration Tuesday 16:00–22:00 st-anne-mother-of-mary-mexico",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "specific_date adoration 2026-10-13 14:00–17:00 st-anne-mother-of-mary-mexico  “Temporary time during pastor's absence”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "weekly adoration Tuesday 16:00–22:00 st-anne-mother-of-mary-mexico",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "specific_date adoration 2026-10-06 14:00–17:00 st-anne-mother-of-mary-mexico  “Temporary time change during priest absence”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "weekly adoration Tuesday 16:00–22:00 st-anne-mother-of-mary-mexico",
+          "page": 3
+        }
+      ],
+      "rationale": "R28: the newest bulletin contradicts itself. Its dated table lists Tuesday Oct 13 SAMOM Adoration 4:00-10:00 pm (the same as the Oct 4 bulletin and 3/3 history), but the announcement says Tuesday SAMOM and Wednesday COL adoration are 'now 2pm-5pm'. The website's notice moves only Wednesday Adoration to 2-5, and its Adoration page keeps Tuesday 4-10 PM at St. Anne. Leaning 4-10 PM (table, website, older bulletins). History also read a dated Oct 13 2-5 PM adoration with the 4-10 PM cancelled, from the announcement.",
+      "question": "What time is the Tuesday Adoration at St. Anne, Mother of Mary (Mexico) now?",
+      "options": [
+        {
+          "label": "Tuesdays 4:00-10:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-anne-mother-of-mary-mexico",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "22:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Tuesdays 2:00-5:00 PM",
+          "entry": {
+            "church_slug": "st-anne-mother-of-mary-mexico",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "WEDNESDAY - OCTOBER 14, 2026: COL Adoration 2:00pm-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "Adoration will continue on Tuesdays at SAMOM and Wednesdays at COL, now 2pm-5pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "WEDNESDAY - OCTOBER 7, 2026: COL Adoration 2:00pm-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "585723d97927",
+          "page": 3,
+          "said": "WEDNESDAY - SEPTEMBER 30, 2026: COL Adoration 2:00pm-4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/adoration",
+          "said": "Wednesday: 2:00 PM to 6:15 PM at Christ Our Light"
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/news/weekday-masses-confession-canceled-oct-6-nov-24",
+          "said": "Wednesday Adoration will be moved to 2pm-5pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "weekly adoration Wednesday 14:00–17:00 christ-our-light-pulaski",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "0ff3cfb030c1",
+          "said": "weekly adoration Wednesday 14:00–17:00 christ-our-light-pulaski",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "585723d97927",
+          "said": "weekly adoration Wednesday 14:00–16:00 christ-our-light-pulaski",
+          "page": 3
+        }
+      ],
+      "rationale": "R28, R20, leaning per C2: the newest bulletin clearly prints Wednesday 2:00-5:00 PM and says 'now', a change tied to the pastor's absence (Oct 6 to Nov 20). Before that it was 2:00-4:00 PM (Sept 27 bulletin; the website's Adoration page says 2:00-6:15 PM, probably stale). Nothing says what it returns to, so the usual time is unknown. Leaning toward the time in force now, at one of the parish's own churches; update mode will read the change back.",
+      "question": "What is the Wednesday Adoration time at Christ Our Light?",
+      "options": [
+        {
+          "label": "Wednesdays 2:00-5:00 PM (current time)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "christ-our-light-pulaski",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Wednesdays 2:00-4:00 PM (earlier time)",
+          "entry": {
+            "church_slug": "christ-our-light-pulaski",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "ANNOUNCEMENT: Fr. Francis will be in Ghana for several weeks. As such, weekday Masses and Confession from Oct 6 to Nov 20 will be canceled. ... Weekend Masses will remain as usual during this time."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ff3cfb030c1",
+          "page": 3,
+          "said": "ANNOUNCEMENT: Fr. Francis will be in Ghana for several weeks. As such, weekday Masses and Confession from Oct 6 to Nov 20 will be canceled. ... Weekend Masses will remain as usual during this time."
+        },
+        {
+          "source": "website",
+          "url": "https://stannechristourlight.com/sacraments",
+          "said": "Reconciliation (Confessions): Friday COL 9:30-9:50 AM; Tuesday SAMOM 5:45-6:20 PM; Wednesday SAMOM 9:00-9:20 AM, COL 5:45-6:20 PM (the website's Confession page instead says Tuesday SAMOM 5:00-6:00 PM)"
+        }
+      ],
+      "rationale": "R26, R25, leaning per C2: weekday Masses and Confession are cancelled Oct 6 to Nov 20 (the website says Nov 24), so none is in force. No bulletin prints a weekday Mass or weekday Confession time, so no cancellation can be dated (R17). The website's weekday Confession times conflict between its own pages and are not in the bulletins (R29); they are left out for the same reason.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-mother-of-mary-mexico",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "16:00",
+        "end_time": "22:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved to 2-5 PM during pastor's absence"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09416c75d037",
+          "page": 3,
+          "said": "TUESDAY - OCTOBER 13, 2026: SAMOM Adoration 4:00pm-10:00pm; Adoration will continue on Tuesdays at SAMOM and Wednesdays at COL, now 2pm-5pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "09416c75d037",
+          "said": "specific_date adoration 2026-10-13 16:00–22:00 st-anne-mother-of-mary-mexico  CANCELLED; “Adjusted to 2pm-5pm during pastor's absence”",
+          "page": 3
+        }
+      ],
+      "rationale": "R9, R17: history read a cancellation of the Oct 13 4-10 PM adoration (moved to 2-5) from the announcement. The same bulletin's table still lists Tuesday Oct 13 at 4:00-10:00 pm and the announcement is ambiguous for Tuesday, so no cancellation is stated. The Tuesday time is asked in its own question (4-10 PM or 2-5 PM); a dated change for one Tuesday is not recorded here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,747 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-evangelist-schenectady",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:31:55Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:56:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. John the Evangelist, Schenectady shares a bulletin with St. Kateri Tekakwitha and St. Anthony's. Its own Saturday 4:00 PM and Sunday 10:30 AM Masses are printed in the Mass Times box of all three bulletins (confession is by appointment only, so left out); the other clusters' Masses are left out as other parishes' churches. One question: the Wednesday and Thursday 9:00 AM Masses at St. John appear only in the weekly calendar, never in the schedule box or the website, so the reviewer decides whether they are weekly or only the dated Masses of Oct 14 and 15.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3e19210a000b6db02743aed035493a6659dada4a349f4059bfa5a7d3c3ae7345",
+      "fetched_at": "2026-10-11T16:31:55Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "b3e2a112e201ee9aec9acc72d6e5b7e5ae7d3a32dd53ffa7e396f4892ea2c4e7",
+      "fetched_at": "2026-10-04T14:54:16Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "eff15d7e78a5b863882c3c170ba7b574ea8bdad5d1a72daa0e37d9458dcb55e1",
+      "fetched_at": "2026-09-28T22:03:37Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 1,
+          "said": "Saturday Mass: 4:00 p.m. Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3e2a112e201",
+          "page": 1,
+          "said": "Saturday Mass: 4:00 p.m. Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff15d7e78a5",
+          "page": 1,
+          "said": "Saturday Mass: 4:00 p.m. Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "SATURDAY 10 - 17 - 26 4:00 PM Mass at St. John"
+        },
+        {
+          "source": "website",
+          "url": "https://sjechurch.com/",
+          "said": "SATURDAY Vigil Mass: 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e19210a000b",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-schenectady  “Live-streamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b3e2a112e201",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff15d7e78a5",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on page 1 of all three bulletins and in the newest week's calendar. Live-streamed (page 3) needs no note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 1,
+          "said": "Sunday Masses: 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3e2a112e201",
+          "page": 1,
+          "said": "Sunday Masses: 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff15d7e78a5",
+          "page": 1,
+          "said": "Sunday Masses: 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "SUNDAY 10 -18 - 26 10:30 AM Mass at St. John"
+        },
+        {
+          "source": "website",
+          "url": "https://sjechurch.com/",
+          "said": "SUNDAY 10:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e19210a000b",
+          "said": "weekly mass Sunday 10:30 st-john-the-evangelist-schenectady  “Includes Children's Liturgy of the Word”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b3e2a112e201",
+          "said": "weekly mass Sunday 10:30 st-john-the-evangelist-schenectady  “Children's Mass on the first Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff15d7e78a5",
+          "said": "weekly mass Sunday 10:30 st-john-the-evangelist-schenectady  “Children’s Liturgy of the Word; monthly Children's Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on page 1 of all three bulletins and in the newest week's calendar. The Children's Liturgy of the Word is part of this Mass (page 2), not a separate event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 1,
+          "said": "Confessions: By appointment only."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3e2a112e201",
+          "page": 1,
+          "said": "Confessions: By appointment only."
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff15d7e78a5",
+          "page": 1,
+          "said": "Confessions: By appointment only."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 2,
+          "said": "OFFERING CONFESSION BY APPOINTMENT ONLY ... call Fr. Carlino ... no later than 3:00 PM the Wednesday before"
+        }
+      ],
+      "rationale": "R24, R26: Confession is by appointment only, so there is no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "WEDNESDAY 10 – 14 - 26 9:00 AM Mass at St. John"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3e2a112e201",
+          "page": 4,
+          "said": "WEDNESDAY 9:00 AM Mass at St. John (Oct 7)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff15d7e78a5",
+          "page": 4,
+          "said": "WEDNESDAY 9:00 AM Mass at St. John (Sept 30)"
+        },
+        {
+          "source": "website",
+          "url": "https://sjechurch.com/",
+          "said": "SCHEDULES, St. John the Evangelist Church: Saturday Vigil Mass 4:00 PM; Sunday 10:30 AM (no weekday Masses listed; the page also shows 2023 items, so it looks stale)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e19210a000b",
+          "said": "weekly mass Wednesday 09:00 st-john-the-evangelist-schenectady",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b3e2a112e201",
+          "said": "specific_date mass 2026-10-07 09:00 st-john-the-evangelist-schenectady",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "eff15d7e78a5",
+          "said": "specific_date mass 2026-09-30 09:00 st-john-the-evangelist-schenectady",
+          "page": 4
+        }
+      ],
+      "rationale": "C1, POLICY rule 4/5: the weekly calendar (page 4) of all three bulletins shows a 9:00 AM Wednesday Mass at St. John (the cluster rotates weekday Masses among St. John, St. Kateri and St. Anthony's), but the Mass Times box (page 1: Saturday and Sunday only) and the website list no weekday Mass. Like C1, a Mass only in the weekly listing, so not a weekly slot on this evidence. The dated Mass in the newest bulletin (2026-10-14) is on or after as_of and printed with its date, so I lean toward recording just that; update mode promotes it to weekly if it keeps recurring (POLICY rule 5). History has it weekly (only from the newest bulletin).",
+      "question": "Are the Wednesday and Thursday 9:00 AM Masses at St. John regular weekly Masses?",
+      "options": [
+        {
+          "label": "Weekly 9:00 AM Mass",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-schenectady",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Only the dated Mass in the newest bulletin",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-john-the-evangelist-schenectady",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-14",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-9am-at-st-john"
+    },
+    {
+      "id": "s5",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "THURSDAY, 10 – 15 - 26 9:00 AM Mass at St. John"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3e2a112e201",
+          "page": 4,
+          "said": "THURSDAY 9:00 AM Mass at St. John (Oct 8)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff15d7e78a5",
+          "page": 4,
+          "said": "THURSDAY 9:00 AM Mass at St. John (Oct 1)"
+        },
+        {
+          "source": "website",
+          "url": "https://sjechurch.com/",
+          "said": "SCHEDULES, St. John the Evangelist Church: Saturday Vigil Mass 4:00 PM; Sunday 10:30 AM (no weekday Masses listed; the page also shows 2023 items, so it looks stale)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e19210a000b",
+          "said": "weekly mass Thursday 09:00 st-john-the-evangelist-schenectady",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b3e2a112e201",
+          "said": "specific_date mass 2026-10-08 09:00 st-john-the-evangelist-schenectady",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "eff15d7e78a5",
+          "said": "specific_date mass 2026-10-01 09:00 st-john-the-evangelist-schenectady",
+          "page": 4
+        }
+      ],
+      "rationale": "C1, POLICY rule 4/5: the weekly calendar (page 4) of all three bulletins shows a 9:00 AM Thursday Mass at St. John (the cluster rotates weekday Masses among St. John, St. Kateri and St. Anthony's), but the Mass Times box (page 1: Saturday and Sunday only) and the website list no weekday Mass. Like C1, a Mass only in the weekly listing, so not a weekly slot on this evidence. The dated Mass in the newest bulletin (2026-10-15) is on or after as_of and printed with its date, so I lean toward recording just that; update mode promotes it to weekly if it keeps recurring (POLICY rule 5). History has it weekly (only from the newest bulletin).",
+      "question": "Are the Wednesday and Thursday 9:00 AM Masses at St. John regular weekly Masses?",
+      "options": [
+        {
+          "label": "Weekly 9:00 AM Mass",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-schenectady",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Only the dated Mass in the newest bulletin",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-john-the-evangelist-schenectady",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-15",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-9am-at-st-john"
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "MONDAY, 10 – 12 - 26 9:00 AM Mass at St. Kateri, Union Street"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "TUESDAY 10 – 13 - 26 9:00 AM Mass at St. Kateri Union Street"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "SATURDAY 10 - 17 - 26 5:00 PM Mass at St. Kateri, Union St."
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "SUNDAY 10 –18 - 26 9:30 AM Mass at St. Kateri Union Street"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "THURSDAY, 10 – 15 - 26 6:00 PM St. Kateri, Rosa Road"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "FRIDAY, 10 - 16 - 26 9:00 AM St. Kateri, Rosa Road"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "SUNDAY 10 –18 - 26 11:30 AM Mass at St. Kateri, Rosa Road"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "SUNDAY 10 –18 - 26 8:30 AM Mass at St. Anthony's"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "SUNDAY 10 –18 - 26 11:45 AM Spanish Mass at St. Anthony's"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "SUNDAY 10 –18 - 26 4:00 PM Mass at St. Anthony's"
+        }
+      ],
+      "rationale": "R22, R25: Mass at another church of the cluster, which has its own entry in data/churches.csv under another parish; its times belong to that parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e19210a000b",
+          "page": 4,
+          "said": "Health Care Professionals and Respect Life Month Mass with Bishop Mark O'Connell will be held on Sunday, October 18, 5:00 PM at the Cathedral of the Immaculate Conception."
+        }
+      ],
+      "rationale": "R22: a diocesan Mass at the Cathedral, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

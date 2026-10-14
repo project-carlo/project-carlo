@@ -1,0 +1,860 @@
+{
+  "schema_version": 1,
+  "parish_slug": "prince-of-peace-our-lady-of-good-counsel-endicott",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:35:49Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:53:36Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single-church parish (Our Lady of Good Counsel, Endicott). Weekend and Friday Masses and Saturday 8:00 AM Confession are settled from all three bulletins and the website; a December 24 4:00 PM Mass is settled as dated. Open questions: whether Friday 8:30 AM Adoration is weekly (absent in one bulletin), a website-only Wednesday 6:30 PM Adoration (lean leave out), and the five dates of a Family Holy Half Hour (lean include). The Tuesday Mass at Ideal (elsewhere) and the Saturday Rosary are excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "266081c9e4d513d831b2ef57d1657a16e13d926496a0e69f367be3f114cc3ac3",
+      "fetched_at": "2026-10-11T16:35:49Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "cd24053671bd1966c9aac834917c1d86bb983c6348ac191b7d81501baa98b146",
+      "fetched_at": "2026-10-04T14:37:59Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "0ee8149d847736371a794f201c97839a2c01e06e1888df488c9b548df064156c",
+      "fetched_at": "2026-09-28T00:08:53Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Friday 8:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "Friday 8:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ee8149d",
+          "page": 7,
+          "said": "Friday 8:00 AM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olgcendicott.org/",
+          "said": "Masses: Friday, 8:00 AM (M.Medal Novena)"
+        },
+        {
+          "source": "history",
+          "bulletin": "266081c9e4d5",
+          "said": "weekly mass Friday 08:00 our-lady-of-good-counsel-endicott",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "cd24053671bd",
+          "said": "weekly mass Friday 08:00 our-lady-of-good-counsel-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0ee8149d8477",
+          "said": "weekly mass Friday 08:00 our-lady-of-good-counsel-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: listed in THIS WEEK'S SCHEDULE (page 7) and in OLGC DAILY MASSES & INTENTIONS (page 2) of all three bulletins read; R6: the website's Liturgical Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Saturday 9:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "Saturday 9:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ee8149d",
+          "page": 7,
+          "said": "Saturday 9:00 AM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olgcendicott.org/",
+          "said": "Saturday, 9:00 AM, 8:30 AM (Rosary)"
+        },
+        {
+          "source": "history",
+          "bulletin": "266081c9e4d5",
+          "said": "weekly mass Saturday 09:00 our-lady-of-good-counsel-endicott",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "cd24053671bd",
+          "said": "weekly mass Saturday 09:00 our-lady-of-good-counsel-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0ee8149d8477",
+          "said": "weekly mass Saturday 09:00 our-lady-of-good-counsel-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: listed in THIS WEEK'S SCHEDULE (page 7) and in OLGC DAILY MASSES & INTENTIONS (page 2) of all three bulletins read; R6: the website's Liturgical Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Sunday 7:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "Sunday 7:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ee8149d",
+          "page": 7,
+          "said": "Sunday 7:00 AM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olgcendicott.org/",
+          "said": "Sunday, 7:00 AM, 10:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "266081c9e4d5",
+          "said": "weekly mass Sunday 07:00 our-lady-of-good-counsel-endicott",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "cd24053671bd",
+          "said": "weekly mass Sunday 07:00 our-lady-of-good-counsel-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0ee8149d8477",
+          "said": "weekly mass Sunday 07:00 our-lady-of-good-counsel-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: listed in THIS WEEK'S SCHEDULE (page 7) and in OLGC DAILY MASSES & INTENTIONS (page 2) of all three bulletins read; R6: the website's Liturgical Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Sunday 10:00 AM Mass (Livestreamed on the OLGC YouTube Channel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "Sunday 10:00 AM Mass (Livestreamed on the OLGC YouTube Channel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ee8149d",
+          "page": 7,
+          "said": "Sunday 10:00 AM Mass (Livestreamed on the OLGC YouTube Channel)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olgcendicott.org/",
+          "said": "Sunday, 7:00 AM, 10:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "266081c9e4d5",
+          "said": "weekly mass Sunday 10:00 our-lady-of-good-counsel-endicott  “Livestreamed”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "cd24053671bd",
+          "said": "weekly mass Sunday 10:00 our-lady-of-good-counsel-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0ee8149d8477",
+          "said": "weekly mass Sunday 10:00 our-lady-of-good-counsel-endicott  “Livestreamed”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: listed in THIS WEEK'S SCHEDULE (page 7) and in OLGC DAILY MASSES & INTENTIONS (page 2) of all three bulletins read; R6: the website's Liturgical Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-endicott",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Until the 9:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 3,
+          "said": "Confession is held on Saturday mornings at 8 am up until the 9 am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 3,
+          "said": "Confession is held on Saturday mornings at 8 am up until the 9 am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ee8149d",
+          "page": 3,
+          "said": "Confession is held on Saturday mornings at 8 am up until the 9 am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Saturday 8:00 AM Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "Saturday 8:00 AM Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ee8149d",
+          "page": 7,
+          "said": "Saturday 8:00 AM Confession"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olgcendicott.org/",
+          "said": "Confessions: Saturday, 8:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "266081c9e4d5",
+          "said": "weekly confession Saturday 08:00–09:00 our-lady-of-good-counsel-endicott  “Held until the 9:00 AM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd24053671bd",
+          "said": "weekly confession Saturday 08:00–09:00 our-lady-of-good-counsel-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0ee8149d8477",
+          "said": "weekly confession Saturday 08:00–09:00 our-lady-of-good-counsel-endicott",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: page 3 sacraments text, and page 2 and page 7 listings, in all three bulletins; R6: website agrees. POLICY, Times: a clock time that runs until a Mass has no end time of its own, so no end_time. History stored 8:00-9:00; R7: POLICY gives no end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-endicott",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Open Mass Intentions -- We have the following Mass open for intentions: December 13th, 10:00 a.m.; December 24th, 4:00 p.m.; December 27th, 7:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "same Open Mass Intentions list"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 3 and Dates: a dated Mass with its date and time printed. December 13 and 27 in the same list are the regular Sunday Masses; December 24 4:00 PM is not a weekly slot. The bulletin gives no occasion name; 'Christmas Eve' in the note is the date's, not the bulletin's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "at Ideal"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 2,
+          "said": "Tuesday, October 6th -- 1:00 PM Mass at Ideal + The People of Prince of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "Tuesday, October 6th ... 1:00 PM Mass at Ideal"
+        },
+        {
+          "source": "history",
+          "bulletin": "cd24053671bd",
+          "said": "weekly mass Tuesday 13:00 our-lady-of-good-counsel-endicott  “at Ideal”",
+          "page": 2
+        }
+      ],
+      "rationale": "R22, R9: held at Ideal, a facility elsewhere, not a listed church. Printed in the October 4 bulletin only, one Tuesday; the other two bulletins have no Tuesday Mass. Not at one of the parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Saturday 8:30 AM Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "Saturday 8:30 AM Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ee8149d",
+          "page": 7,
+          "said": "Saturday 8:30 AM Rosary"
+        }
+      ],
+      "rationale": "R24, R25: a Rosary is a devotion that is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Friday, October 16th 8:00 AM Mass / 8:30 AM Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ee8149d",
+          "page": 7,
+          "said": "Friday, October 2nd 8:00 AM Mass / 8:30 AM Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd240536",
+          "page": 7,
+          "said": "Friday, October 9th 8:00 AM Mass / 5:00 PM Soup Kitchen (no Adoration listed)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olgcendicott.org/liturgical",
+          "said": "Eucharistic Adoration is every Wednesday at 6:30 p.m. and Friday morning following the 8:30 a.m. Mass."
+        },
+        {
+          "source": "history",
+          "bulletin": "266081c9e4d5",
+          "said": "weekly adoration Friday 08:30 our-lady-of-good-counsel-endicott",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "0ee8149d8477",
+          "said": "weekly adoration Friday 08:30 our-lady-of-good-counsel-endicott",
+          "page": 7
+        }
+      ],
+      "rationale": "R28: the Friday 8:30 AM Adoration is listed on October 16 (third Friday, newest bulletin) and October 2 (first Friday), but not October 9 (second Friday). The weekly list may simply skip it that week, or it may be on certain Fridays only; no bulletin names weeks. The website says Friday mornings following the Mass, but names an 8:30 AM Mass the bulletins no longer show (the Mass is now 8:00), so it may be stale. No end time is printed. Leaning every Friday: it is printed in the newest bulletin and the website says Fridays.",
+      "question": "Is there Adoration at 8:30 AM every Friday?",
+      "options": [
+        {
+          "label": "Every Friday 8:30 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-endicott",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "First and third Fridays 8:30 AM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-endicott",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olgcendicott.org/liturgical",
+          "said": "Eucharistic Adoration is every Wednesday at 6:30 p.m. and Friday morning following the 8:30 a.m. Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 7,
+          "said": "Wednesday, October 14th 10:30 AM Book Club / Church Hall (no Adoration listed)"
+        }
+      ],
+      "rationale": "R29: Wednesday 6:30 PM Adoration appears only on the website's Eucharistic Adoration page; the newest bulletin's Wednesday listing and the other two bulletins show none (the week's list shows Friday Adoration, so a Wednesday one would likely show too). The same website sentence still names an 8:30 AM Friday Mass, which looks out of date. Leaning toward leaving it out.",
+      "question": "Add weekly Wednesday 6:30 PM Adoration (website only)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Wednesdays 6:30 PM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-endicott",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 4,
+          "said": "Family Holy 1/2 Hour, Sunday, October 25, 4:30pm - 5:00pm, food and fellowship to follow"
+        },
+        {
+          "source": "history",
+          "bulletin": "266081c9e4d5",
+          "said": "specific_date adoration 2026-10-25 16:30–17:00 our-lady-of-good-counsel-endicott  “Family Holy Half Hour”",
+          "page": 4
+        }
+      ],
+      "rationale": "R30: a flyer on page 4 (an image) for a 'family friendly Holy Half Hour designed for young ones', with a monstrance in the picture; POLICY counts a Holy Hour as Adoration, but this is a 'Half Hour' for children, and the flyer never says Adoration or Exposition. Printed in the newest bulletin only, and a dated series, not a weekly slot. Leaning toward including, since POLICY treats a Holy Hour as Adoration and the flyer pictures the Blessed Sacrament exposed.",
+      "question": "Is the Family Holy Half Hour Adoration, and are its additional dates (12/13, 2/21, 4/18, 6/13) included?",
+      "options": [
+        {
+          "label": "Include as Adoration 4:30-5:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-endicott",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-25",
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Family Holy Half Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "family-holy-half-hour"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 4,
+          "said": "Additional Dates: 12/13, 2/21, 4/18, 6/13 (12/13)"
+        }
+      ],
+      "rationale": "R30: one of the 'Additional Dates' on the same flyer, which gives the time only for October 25; the same 4:30-5:00 PM is assumed. The year is inferred from the sequence (all Sundays: December 13, 2026; February 21, April 18 and June 13, 2027). Leaning toward including, since POLICY treats a Holy Hour as Adoration and the flyer pictures the Blessed Sacrament exposed.",
+      "question": "Is the Family Holy Half Hour Adoration, and are its additional dates (12/13, 2/21, 4/18, 6/13) included?",
+      "options": [
+        {
+          "label": "Include as Adoration 4:30-5:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-endicott",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-13",
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Family Holy Half Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "family-holy-half-hour"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 4,
+          "said": "Additional Dates: 12/13, 2/21, 4/18, 6/13 (2/21)"
+        }
+      ],
+      "rationale": "R30: one of the 'Additional Dates' on the same flyer, which gives the time only for October 25; the same 4:30-5:00 PM is assumed. The year is inferred from the sequence (all Sundays: December 13, 2026; February 21, April 18 and June 13, 2027). Leaning toward including, since POLICY treats a Holy Hour as Adoration and the flyer pictures the Blessed Sacrament exposed.",
+      "question": "Is the Family Holy Half Hour Adoration, and are its additional dates (12/13, 2/21, 4/18, 6/13) included?",
+      "options": [
+        {
+          "label": "Include as Adoration 4:30-5:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-endicott",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-02-21",
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Family Holy Half Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "family-holy-half-hour"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 4,
+          "said": "Additional Dates: 12/13, 2/21, 4/18, 6/13 (4/18)"
+        }
+      ],
+      "rationale": "R30: one of the 'Additional Dates' on the same flyer, which gives the time only for October 25; the same 4:30-5:00 PM is assumed. The year is inferred from the sequence (all Sundays: December 13, 2026; February 21, April 18 and June 13, 2027). Leaning toward including, since POLICY treats a Holy Hour as Adoration and the flyer pictures the Blessed Sacrament exposed.",
+      "question": "Is the Family Holy Half Hour Adoration, and are its additional dates (12/13, 2/21, 4/18, 6/13) included?",
+      "options": [
+        {
+          "label": "Include as Adoration 4:30-5:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-endicott",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-04-18",
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Family Holy Half Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "family-holy-half-hour"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "266081c9",
+          "page": 4,
+          "said": "Additional Dates: 12/13, 2/21, 4/18, 6/13 (6/13)"
+        }
+      ],
+      "rationale": "R30: one of the 'Additional Dates' on the same flyer, which gives the time only for October 25; the same 4:30-5:00 PM is assumed. The year is inferred from the sequence (all Sundays: December 13, 2026; February 21, April 18 and June 13, 2027). Leaning toward including, since POLICY treats a Holy Hour as Adoration and the flyer pictures the Blessed Sacrament exposed.",
+      "question": "Is the Family Holy Half Hour Adoration, and are its additional dates (12/13, 2/21, 4/18, 6/13) included?",
+      "options": [
+        {
+          "label": "Include as Adoration 4:30-5:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-endicott",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2027-06-13",
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Family Holy Half Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "family-holy-half-hour"
+    }
+  ]
+}
