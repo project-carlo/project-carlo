@@ -5,7 +5,8 @@ file's shape; what to decide for each slot is in [rules.md](rules.md).
 
 `seed start` creates the complete top-level object. Keep its `schema_version`,
 `parish_slug`, `drafted_by`, `drafted_at`, `bulletins` and `calls`, and add your `summary`
-(two or three sentences a reviewer reads first) and `slots`. `calls` is the audit trail and
+(two or three sentences a reviewer reads first) and `slots` with the write commands
+("Writing slots", below). `calls` is the audit trail and
 the paid-call counter. Each entry of `bulletins` has `read`, which `seed mark-read` and
 `finalize` set. `as_of` is the newest read bulletin's fetch time, and `finalize` sets it.
 
@@ -60,6 +61,15 @@ one, a dated cancellation, and an open question, each rationale citing its rule:
     "rationale": "R1, R16: the newest bulletin cancels one date of the weekly Monday Mass."
   },
   {
+    "decision": "exclude", "status": "settled", "page": 2,
+    "entry": {"church_slug": "st-marys-oswego", "event_type": "mass",
+              "day_of_week": "Monday", "start_time": "12:15",
+              "note": "At the Franciscan Place, Destiny USA"},
+    "sources": [{"source": "agent", "bulletin": "9f2c41d0", "page": 2,
+                 "said": "Franciscan Place: Mon-Thu 12:15 Mass"}],
+    "rationale": "R23: the chapel at Destiny USA is not on the church list."
+  },
+  {
     "status": "needs_human", "page": 2,
     "sources": [{"source": "agent", "bulletin": "9f2c41d0", "page": 2,
                  "said": "First Friday Holy Hour 9:45 AM"}],
@@ -106,3 +116,64 @@ one, a dated cancellation, and an open question, each rationale citing its rule:
 - `blocked_reason` says why a `blocked` file can't be seeded now.
 - `reviewer`, `approved_at` and every `answer` are the reviewer's: null in a new draft,
   and left as they are in a repair.
+
+## Writing slots
+
+Write slots with `pnpm seed slot ...`, never by editing the JSON or with a script. Each
+command checks what it wrote against the file's validation and the parish's churches, and
+writes nothing if a check fails. `pnpm seed slot --help` has the full syntax.
+
+- An **entry** is words in any order: type (`mass`, `confession`, `adoration`); days
+  (`Sat`, `Mon-Fri`, `Tue,Thu`) or a date (`2026-10-12`); times (`16:00`, `15:00-15:45`,
+  `08:00,10:30`, or `4pm`); `@church` (a slug, or a unique part of one of the parish's;
+  needed when it has several); weeks (`first`, `2nd,4th`, `last`, or `except=last` for
+  the weeks it skips); `season=9-5` or `season=9/15-5/31`; `cancelled`; and last,
+  `note=` with the rest of the text. Several days or times make one slot each.
+- A **source** is `"HEAD: what it said"`. The head is `latest p2` (the newest listed
+  bulletin), hash prefixes `9f2c41d0,1ab3e7c2 p2` (one source each), `web URL`,
+  `history`, or a call's id (`c1 p3`). A slot's `page` defaults to its source's page on
+  the newest bulletin.
+- An **option** is `--option "LABEL" "ENTRY"`, or just `--option "LABEL"` for leaving it
+  out. `*` before one label marks the leaning. An entry `+ ...` is the first option's
+  entry with those changes (`+ except=first`).
+
+The slots above, plus a grouped question, as one batch (`pnpm seed slot batch <parish>
+plan.txt`; each line is a `seed slot` command without `slot` and the parish):
+
+```
+include "mass Sat 16:00" --src "latest,1ab3e7c2,77d0be19 p2: Sat 4:00 PM Vigil" \
+    --src "5e60aa31 p3: Saturday 4 PM" --why "R1: printed in the Mass schedule box of all four bulletins read."
+include "adoration Thu 09:00-19:00 season=9-5" \
+    --src "latest p2: Thursdays 9 AM - 7 PM, September through May" \
+    --why "R1: the schedule box gives the months; POLICY keeps them as the season."
+include "mass 2026-10-12 08:00 cancelled note=Columbus Day" \
+    --src "latest p3: No 8 AM Mass on Monday, October 12" \
+    --why "R1, R16: the newest bulletin cancels one date of the weekly Monday Mass."
+exclude "mass Mon-Thu 12:15 note=At the Franciscan Place, Destiny USA" \
+    --src "latest p2: Franciscan Place: Mon-Thu 12:15 Mass" \
+    --why "R23: the chapel at Destiny USA is not on the church list."
+exclude - --src "latest p3: Confession by appointment" --why "R26: by appointment has no time."
+ask "Add a first-Friday 9:45 AM Holy Hour at St. Mary's?" \
+    --option "*First Fridays 9:45 AM" "adoration Fri 09:45 first" --option "Leave out" \
+    --src "latest p2: First Friday Holy Hour 9:45 AM" \
+    --why "R32: no place given. Printed once; no other week read holds a first Friday."
+ask "Add the convent chapel's 7 AM weekday Mass?" --group convent \
+    --option "*Weekdays 7 AM" "mass Mon-Fri 07:00 note=Convent chapel" --option "Leave out" \
+    --src "latest p4: Convent chapel, weekdays 7 AM" --why "R32: the chapel may be St. Mary's."
+church-issue "The Franciscan Place, Destiny USA" "latest p2: Mon-Thu 12:15 Mass; Confession Wed 11-12"
+summary "One church. Weekend, weekday and Adoration times agree in all four bulletins. Open: a first-Friday Holy Hour and the convent chapel's weekday Mass."
+```
+
+The last `ask` makes five slots, Monday to Friday, in group `convent`: one answer settles
+them all. Then:
+
+- `seed slot list <parish>` lists every slot with its id; `slot show <parish> s3` prints
+  one in full, its sources numbered.
+- `seed slot edit <parish> s3 [s4 ...]` changes slots and keeps their ids: `--entry
+  "16:30 note="` (only what it names), `--include`, `--exclude` or `--ask "Q" --option
+  ...` (a question settled by `--include` takes its leaning option's entry), `--page`,
+  `--src` (adds), `--drop-src N`, `--why`, `--group`.
+- `seed slot rm <parish> s3` removes a slot you added. A slot a reviewer answered keeps
+  its decision, and a call's evidence stays.
+- `seed summary`, `seed church-issue <parish> "church" "HEAD: said"` (`--rm` takes one
+  off) and `seed block <parish> "reason"` (`--clear` undoes it) set the file's fields.

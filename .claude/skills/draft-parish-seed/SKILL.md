@@ -25,8 +25,9 @@ Do one parish at a time. Finish and finalize each before starting the next.
    history, and the newest PDF's path. `seed brief <parish>` prints the brief again. If
    the command says it resumed a draft, read the file before editing and change only
    what needs correcting. A bulletin marked `no PDF (history only)` was pruned: you can
-   cite its history but can't read it. Edit the JSON directly. Keep any helper scripts in
-   your scratch folder.
+   cite its history but can't read it. Write the file with `seed slot` and the other write
+   commands (step 7), not by editing the JSON or writing scripts. `seed slot list <parish>`
+   shows the draft's slots and their ids.
 2. **Read the newest bulletin in full** (R2), from the PDF `start` wrote. `seed pdf
    <parish> <hash>` writes any other bulletin's PDF, with the pipeline's page numbers. For
    a page that is only an image, or a dense table, `seed pages <parish> <hash> --page N
@@ -48,11 +49,17 @@ Do one parish at a time. Finish and finalize each before starting the next.
    <parish> <hash> --model gpt-6.1-sol` runs a full extraction. Both are cached and
    recorded in the file's `calls`. Run them one at a time; each parish gets 4 paid calls.
 7. **Decide each slot** by [rules.md](rules.md). Settle a slot only by a rule, and cite
-   the rule in its rationale; ask about everything else. Then write the `summary`.
+   the rule in its rationale; ask about everything else. `seed slot include`, `slot
+   exclude` and `slot ask` add slots (one per day and time), and `seed slot batch
+   <parish> plan.txt` writes a whole parish at once; the syntax and an example are in
+   [file-format.md](file-format.md), "Writing slots", and `pnpm seed slot --help`. Each
+   write is checked before it is saved. Then `seed summary <parish> "..."`, and `seed
+   church-issue` (R23) or `seed block` (R34) where they apply.
 8. **Finalize.** `pnpm seed finalize <parish>` does the bookkeeping and then checks the
    file. It fills in defaults, splits `bulletins` sources, adds `history` sources, marks
-   the bulletins you cited as read, and sets `as_of` and `status`. Fix what it reports and
-   run it again until it says OK. Deal with every `!` warning (R9). `seed diff <parish>`
-   lists those warnings, history events that read a slot at another time (R8), and
-   included slots that history never had. If a problem can't be resolved, block the
-   parish (R34).
+   the bulletins you cited as read, and sets `as_of` and `status`. Fix what it reports
+   with `seed slot edit <parish> <id> ...` (or `slot rm` for a slot you added) and run it
+   again until it says OK; `slot show <parish> <id>` prints a slot in full. Deal with
+   every `!` warning (R9). `seed diff <parish>` lists those warnings, history events that
+   read a slot at another time (R8), and included slots that history never had. If a
+   problem can't be resolved, block the parish (R34).
