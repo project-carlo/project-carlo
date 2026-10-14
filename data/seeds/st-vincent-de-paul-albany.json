@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-vincent-de-paul-albany",
+  "status": "ready",
+  "as_of": "2026-10-11T16:35:04Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Newest bulletin's Mass Schedule box (p4) gives Sat 5:00 PM and Sun 8:30 AM and 11:00 AM; the p2 calendar confirms them, and p4 lists Reconciliation at 4:30 PM Saturdays. History agrees on all four slots. No weekday Masses or adoration are printed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "89bcc1223e3400508481e98a30b1813502a6272a1a0e205781d2063cfd747bae",
+      "fetched_at": "2026-10-11T16:35:04Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d5e9e646aa89fae939827300631da946ae8121307bee6a18497412a0bd3d4ad4",
+      "fetched_at": "2026-10-04T14:59:33Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "096e0d796f523b961eb09c89c4a499d40b1a5da112ede1c25a7f0c0bc9f81b95",
+      "fetched_at": "2026-09-28T22:09:26Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89bcc1223e34",
+          "page": 4,
+          "said": "MASS SCHEDULE Saturday 5:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "89bcc1223e34",
+          "said": "weekly mass Saturday 17:00 st-vincent-de-paul-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d5e9e646aa89",
+          "said": "weekly mass Saturday 17:00 st-vincent-de-paul-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "096e0d796f52",
+          "said": "weekly mass Saturday 17:00 st-vincent-de-paul-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "096e0d796f52",
+          "said": "specific_date mass 2026-10-03 17:00 st-vincent-de-paul-albany  “Anointing of the Sick”",
+          "page": 4
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89bcc1223e34",
+          "page": 4,
+          "said": "Sunday 8:30AM & 11:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "89bcc1223e34",
+          "said": "weekly mass Sunday 08:30 st-vincent-de-paul-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d5e9e646aa89",
+          "said": "weekly mass Sunday 08:30 st-vincent-de-paul-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "096e0d796f52",
+          "said": "weekly mass Sunday 08:30 st-vincent-de-paul-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "096e0d796f52",
+          "said": "specific_date mass 2026-10-04 08:30 st-vincent-de-paul-albany  “Anointing of the Sick”",
+          "page": 4
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89bcc1223e34",
+          "page": 4,
+          "said": "Sunday 8:30AM & 11:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "89bcc1223e34",
+          "said": "weekly mass Sunday 11:00 st-vincent-de-paul-albany  “Includes Children's Liturgy”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d5e9e646aa89",
+          "said": "weekly mass Sunday 11:00 st-vincent-de-paul-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "096e0d796f52",
+          "said": "weekly mass Sunday 11:00 st-vincent-de-paul-albany  “Children's Liturgy”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "096e0d796f52",
+          "said": "specific_date mass 2026-10-04 11:00 st-vincent-de-paul-albany  “Anointing of the Sick”",
+          "page": 4
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "89bcc1223e34",
+          "page": 4,
+          "said": "Reconciliation - By appointment or 4:30PM Saturdays"
+        },
+        {
+          "source": "history",
+          "bulletin": "89bcc1223e34",
+          "said": "weekly confession Saturday 16:30 st-vincent-de-paul-albany  “Also available by appointment”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d5e9e646aa89",
+          "said": "weekly confession Saturday 16:30 st-vincent-de-paul-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "096e0d796f52",
+          "said": "weekly confession Saturday 16:30 st-vincent-de-paul-albany  “Or by appointment”",
+          "page": 4
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

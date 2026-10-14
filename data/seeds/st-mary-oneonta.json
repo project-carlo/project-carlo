@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-oneonta",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:38:48Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:50:12Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One-church parish with a clear Mass Schedule box on page 3: Mon-Wed 8:30 AM, Sat 5:00 PM vigil, Sun 10:30 AM, Saturday confession 4:15-4:45 PM; all match history. The Oct 12 daily Mass is cancelled for Columbus Day. One open question: a one-time Holy Hour and Night Prayer on Oct 21 with no stated location in the bulletin.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "40d21cd7a4b4fe4e9a1ad154274ae1bdb4e4195ff4ff9b3f64bb89040aadef31",
+      "fetched_at": "2026-10-11T16:38:48Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "b6145fc00455ed4a650f000e8b784b7b575076501f6765524ac317a3aaa35f05",
+      "fetched_at": "2026-10-04T14:56:39Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "2159e4807c77fc9fb7d6cf635345ee529092ce130c1e1d8e16d6c2140233aecb",
+      "fetched_at": "2026-09-28T22:06:37Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 3,
+          "said": "WEEKDAY MASSES Monday, Tuesday, Wednesday 8:10 AM Morning Prayer | 8:30 AM Daily Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "40d21cd7a4b4",
+          "said": "weekly mass Monday 08:30 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b6145fc00455",
+          "said": "weekly mass Monday 08:30 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2159e4807c77",
+          "said": "weekly mass Monday 08:30 st-mary-oneonta  “Daily Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "Mass Schedule box on page 3 of the Oct 11 bulletin; history agrees (3/3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 3,
+          "said": "WEEKDAY MASSES Monday, Tuesday, Wednesday 8:10 AM Morning Prayer | 8:30 AM Daily Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "40d21cd7a4b4",
+          "said": "weekly mass Tuesday 08:30 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b6145fc00455",
+          "said": "weekly mass Tuesday 08:30 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2159e4807c77",
+          "said": "weekly mass Tuesday 08:30 st-mary-oneonta  “Daily Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "Mass Schedule box on page 3 of the Oct 11 bulletin; history agrees (3/3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 3,
+          "said": "WEEKDAY MASSES Monday, Tuesday, Wednesday 8:10 AM Morning Prayer | 8:30 AM Daily Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "40d21cd7a4b4",
+          "said": "weekly mass Wednesday 08:30 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b6145fc00455",
+          "said": "weekly mass Wednesday 08:30 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2159e4807c77",
+          "said": "weekly mass Wednesday 08:30 st-mary-oneonta  “Daily Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "Mass Schedule box on page 3 of the Oct 11 bulletin; history agrees (3/3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 3,
+          "said": "WEEKEND MASSES Saturday Vigil | 5:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "40d21cd7a4b4",
+          "said": "weekly mass Saturday 17:00 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b6145fc00455",
+          "said": "weekly mass Saturday 17:00 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2159e4807c77",
+          "said": "weekly mass Saturday 17:00 st-mary-oneonta",
+          "page": 3
+        }
+      ],
+      "rationale": "Mass Schedule box on page 3 of the Oct 11 bulletin; history agrees (3/3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 3,
+          "said": "Sunday | 10:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "40d21cd7a4b4",
+          "said": "weekly mass Sunday 10:30 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b6145fc00455",
+          "said": "weekly mass Sunday 10:30 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2159e4807c77",
+          "said": "weekly mass Sunday 10:30 st-mary-oneonta",
+          "page": 3
+        }
+      ],
+      "rationale": "Mass Schedule box on page 3 of the Oct 11 bulletin; history agrees (3/3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 3,
+          "said": "RECONCILIATION Saturday | 4:15 PM - 4:45 PM; Other | By Appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "40d21cd7a4b4",
+          "said": "weekly confession Saturday 16:15–16:45 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b6145fc00455",
+          "said": "weekly confession Saturday 16:15–16:45 st-mary-oneonta",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2159e4807c77",
+          "said": "weekly confession Saturday 16:15–16:45 st-mary-oneonta",
+          "page": 3
+        }
+      ],
+      "rationale": "Mass Schedule box on page 3 of the Oct 11 bulletin; history agrees (3/3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day/Indigenous Peoples Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 2,
+          "said": "Monday, October 12, 2026, 8:30 AM - No Daily Mass (Columbus Day/Indigenous Peoples Day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 1,
+          "said": "Parish Office and Food Pantry Closed for Columbus Day/Indigenous Peoples' Day Monday, October 12"
+        },
+        {
+          "source": "history",
+          "bulletin": "40d21cd7a4b4",
+          "said": "specific_date mass 2026-10-12 08:30 st-mary-oneonta  CANCELLED; “Columbus Day/Indigenous Peoples' Day”",
+          "page": 2
+        }
+      ],
+      "rationale": "Mass intentions list says no daily Mass on Oct 12; cancels one date of the weekly Monday 8:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 3,
+          "said": "8:10 AM | Morning Prayer"
+        }
+      ],
+      "rationale": "Morning Prayer is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40d21cd7",
+          "page": 1,
+          "said": "Holy Hour and Night Prayer Wednesday, October 21, 6:30 PM (Headlines)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.smcconeonta.org/",
+          "said": "Holy Hour and Night Prayer: Wednesday, October 21, 6:30 PM, in the Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "40d21cd7a4b4",
+          "said": "specific_date adoration 2026-10-21 18:30 st-mary-oneonta  “Holy Hour and Night Prayer”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed once in the page 1 headlines with no place or end time (website says in the Church). It is a one-off dated Holy Hour; unclear whether it is Eucharistic Adoration or a prayer service. Not in earlier bulletins.",
+      "question": "Add a one-time Holy Hour and Night Prayer on Wed Oct 21 at 6:30 PM as an Adoration event at St. Mary's?",
+      "options": [
+        {
+          "label": "Dated Adoration Oct 21 6:30 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-oneonta",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-21",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour and Night Prayer"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

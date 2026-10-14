@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-st-patrick-utica",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:36:29Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:54:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. Joseph & St. Patrick has one church and prints no schedule box; its Saturday 5:30 PM and Sunday 8:45 AM Masses come from the weekly Mass intentions and the website and are settled. The one question is the Monday 5:30 PM Mass 'in Chapel', where the chapel is never placed; it and its October 12 Columbus Day cancellation are asked together. The 24/7 Perpetual Adoration, the Rosary and novena, and the relic visit at Old St. John's are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2054a8d796bae08730f94ad6a098a9641fd3fff426bc97b52d685a834e24af18",
+      "fetched_at": "2026-10-11T16:36:29Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "38a89b9b55ce167405c5acdfd8ced021358cbfdc436e8e40d54a6832776d86d2",
+      "fetched_at": "2026-10-04T14:42:15Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "7c31f81218c436dad58e81eaf1464b69c119a9d0614ca31d94b4e39af854cb22",
+      "fetched_at": "2026-09-28T00:13:33Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-st-patrick-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2054a8d796ba",
+          "page": 2,
+          "said": "Saturday, October 10th 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38a89b9b55ce",
+          "page": 2,
+          "said": "Saturday, October 10th 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31f81218c4",
+          "page": 2,
+          "said": "Saturday, October 10th 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31f81218c4",
+          "page": 2,
+          "said": "Weekend & All Other Liturgies are held in Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoestpat.org/index.html",
+          "said": "Mass Schedule: Saturdays @ 5:30PM (Church)"
+        },
+        {
+          "source": "history",
+          "bulletin": "2054a8d796ba",
+          "said": "weekly mass Saturday 17:30 st-joseph-st-patrick-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "38a89b9b55ce",
+          "said": "weekly mass Saturday 17:30 st-joseph-st-patrick-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31f81218c4",
+          "said": "weekly mass Saturday 17:30 st-joseph-st-patrick-utica",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the Mass intentions of all three bulletins list it every week (these bulletins print no schedule box), and the website's Mass Schedule line gives the same time at the Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-st-patrick-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2054a8d796ba",
+          "page": 2,
+          "said": "Sunday, October 11th 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38a89b9b55ce",
+          "page": 2,
+          "said": "Sunday, October 11th 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31f81218c4",
+          "page": 2,
+          "said": "Sunday, October 11th 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31f81218c4",
+          "page": 2,
+          "said": "Weekend & All Other Liturgies are held in Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoestpat.org/index.html",
+          "said": "Sundays @ 8:45AM(Church)"
+        },
+        {
+          "source": "history",
+          "bulletin": "2054a8d796ba",
+          "said": "weekly mass Sunday 08:45 st-joseph-st-patrick-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "38a89b9b55ce",
+          "said": "weekly mass Sunday 08:45 st-joseph-st-patrick-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31f81218c4",
+          "said": "weekly mass Sunday 08:45 st-joseph-st-patrick-utica",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the Mass intentions of all three bulletins list it every week (these bulletins print no schedule box), and the website's Mass Schedule line gives the same time at the Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2054a8d796ba",
+          "page": 2,
+          "said": "Monday, October 12th 5:30 pm NO MASS - HOLIDAY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38a89b9b55ce",
+          "page": 2,
+          "said": "Monday, October 5th 5:30 pm (in Chapel) For the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31f81218c4",
+          "page": 2,
+          "said": "Monday, September 28th 5:30 pm For the Parish; Unless otherwise indicated, Daily Liturgies are held in the Chapel."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoestpat.org/index.html",
+          "said": "Mass Schedule: Saturdays @ 5:30PM (Church), Sundays @ 8:45AM(Church) Mondays @5:30PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "2054a8d796ba",
+          "said": "weekly mass Monday 17:30 st-joseph-st-patrick-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "38a89b9b55ce",
+          "said": "weekly mass Monday 17:30 st-joseph-st-patrick-utica  “In Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31f81218c4",
+          "said": "specific_date mass 2026-09-28 17:30 st-joseph-st-patrick-utica  “In the Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R18 and R30: the newest bulletin skips the Monday 5:30 PM Mass for a stated reason (Columbus Day), and the Sept 28 and Oct 5 intentions and the website show it weekly. But the bulletins place it 'in Chapel' and never say where the chapel is (POLICY, Churches and chapels: a chapel of the church itself belongs to it; one elsewhere is left out), and the website gives no place. Leaning include as a chapel of this church, since the website lists it with the church's own Masses. Same decision as the October 12 cancellation (R16, R27).",
+      "question": "Is the Monday 5:30 PM Mass (held in the chapel) at this church, and does it count as weekly?",
+      "options": [
+        {
+          "label": "Include (chapel of this church)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-joseph-st-patrick-utica",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "monday-chapel-mass"
+    },
+    {
+      "id": "s4",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2054a8d796ba",
+          "page": 2,
+          "said": "Monday, October 12th 5:30 pm NO MASS - HOLIDAY"
+        },
+        {
+          "source": "history",
+          "bulletin": "2054a8d796ba",
+          "said": "specific_date mass 2026-10-12 17:30 st-joseph-st-patrick-utica  CANCELLED; “Holiday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "38a89b9b55ce",
+          "said": "specific_date mass 2026-10-12 17:30 st-joseph-st-patrick-utica  CANCELLED; “Holiday”",
+          "page": 2
+        }
+      ],
+      "rationale": "R18 and R30: the newest bulletin skips the Monday 5:30 PM Mass for a stated reason (Columbus Day), and the Sept 28 and Oct 5 intentions and the website show it weekly. But the bulletins place it 'in Chapel' and never say where the chapel is (POLICY, Churches and chapels: a chapel of the church itself belongs to it; one elsewhere is left out), and the website gives no place. Leaning include as a chapel of this church, since the website lists it with the church's own Masses. Same decision as the October 12 cancellation (R16, R27).",
+      "question": "Is the Monday 5:30 PM Mass (held in the chapel) at this church, and does it count as weekly?",
+      "options": [
+        {
+          "label": "Include (chapel of this church)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-joseph-st-patrick-utica",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-12",
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holiday"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "monday-chapel-mass"
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-st-patrick-utica",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2054a8d796ba",
+          "page": 2,
+          "said": "Perpetual Adoration: Come, spend some time before the Blessed Sacrament. ... contact Karen Slocum"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoestpat.org/perpetual-adoration.html",
+          "said": "Open 24/7 for 26 years"
+        },
+        {
+          "source": "history",
+          "bulletin": "38a89b9b55ce",
+          "said": "weekly adoration Monday 00:00 st-joseph-st-patrick-utica  “Perpetual Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31f81218c4",
+          "said": "weekly adoration Monday 00:00 st-joseph-st-patrick-utica  “Perpetual Adoration”",
+          "page": 2
+        }
+      ],
+      "rationale": "R26: the Perpetual Adoration chapel is open around the clock, so no definite start time is printed; history's Monday 00:00 adoration was invented from it. Left out; the entry here only mirrors that history event so seed diff can match it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2054a8d796ba",
+          "page": 1,
+          "said": "Rosary: Sundays at 9:45 am (After the 8:45 am Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2054a8d796ba",
+          "page": 2,
+          "said": "Novena to Saint Marianne Cope: Nine Wednesdays thru October 14, 6:30-7:30 p.m. in Church. Litany of Saint Marianne Cope, Weekly Novena Prayer, Rosary of the Seven Joys"
+        }
+      ],
+      "rationale": "R24: the Sunday Rosary and the Wednesday Marianne Cope novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Bernadette relics visit"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2054a8d796ba",
+          "page": 3,
+          "said": "Relics of St. Bernadette ... will stop at Historic Old St. John's (Downtown) on Tuesday, October 27th ... 12:10 pm Mass"
+        }
+      ],
+      "rationale": "R22: this Mass is at Historic Old St. John's, another parish's church, so it belongs to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

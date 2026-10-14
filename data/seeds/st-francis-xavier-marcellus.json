@@ -1,0 +1,647 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-xavier-marcellus",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:30:32Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:05Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single-church parish with a clear front-page schedule box: weekend Masses, Mon/Thu/Fri 6:45 AM, Tue 6:00 PM, Tuesday and Saturday Penance. Oct 12 Monday Mass is cancelled. Two monthly slots (First Friday exposition with Benediction, First Saturday 9 AM Mass) appear only in older bulletins and are questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "97e449dafce31149d4161b37f6132dad9321ba9b7deab96e5d3ec4c9f14f4890",
+      "fetched_at": "2026-10-11T16:30:32Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "3406666f704e7c3cec92e7f0529b6f8b3a3bde9752a0ef0300c170d009cd117c",
+      "fetched_at": "2026-10-04T14:41:07Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "66694bc5667d19983de9e4d33a218142b53c545c034c3bf9d4f27a89e79f718e",
+      "fetched_at": "2026-09-28T00:11:54Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Saturday Evening Vigil 4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly mass Saturday 16:30 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly mass Saturday 16:30 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly mass Saturday 16:30 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page schedule box of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Sunday Masses 8:30 am & 10:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly mass Sunday 08:30 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly mass Sunday 08:30 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly mass Sunday 08:30 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page schedule box of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Sunday Masses 8:30 am & 10:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly mass Sunday 10:45 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly mass Sunday 10:45 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly mass Sunday 10:45 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page schedule box of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Daily Mass Monday, Thursday, Friday 6:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly mass Monday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly mass Monday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly mass Monday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page schedule box of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Daily Mass Monday, Thursday, Friday 6:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly mass Thursday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly mass Thursday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly mass Thursday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page schedule box of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Daily Mass Monday, Thursday, Friday 6:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly mass Friday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly mass Friday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly mass Friday 06:45 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page schedule box of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Daily Mass Tuesday 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly mass Tuesday 18:00 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly mass Tuesday 18:00 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly mass Tuesday 18:00 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page schedule box of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Penance Tuesday 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3406666f704e",
+          "page": 2,
+          "said": "On Tuesday we have Mass at 6:00 PM with Confession from 5:30 to 6 PM."
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly confession Tuesday 17:30 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly confession Tuesday 17:30–18:00 st-francis-xavier-marcellus",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly confession Tuesday 17:30–18:00 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Newest bulletin prints the Tuesday start 5:30 pm; the Oct 4 bulletin's pastor note gives the 5:30 to 6 PM range, so end_time 6:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 1,
+          "said": "Penance Saturday 3:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "weekly confession Saturday 15:30 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "weekly confession Saturday 15:30 st-francis-xavier-marcellus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "weekly confession Saturday 15:30–16:30 st-francis-xavier-marcellus",
+          "page": 1
+        }
+      ],
+      "rationale": "Newest bulletin prints Saturday 3:30 pm with no end time (one history bulletin had 4:30 PM end; not printed in any bulletin text read), so no end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97e449dafce3",
+          "page": 2,
+          "said": "Monday October 12 6:45 AM NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "97e449dafce3",
+          "said": "specific_date mass 2026-10-12 06:45 st-francis-xavier-marcellus  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "Newest bulletin cancels the regular Monday 6:45 AM Mass on Oct 12.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66694bc5667d",
+          "page": 3,
+          "said": "October 3 First Saturday 9:00 AM First Saturday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3406666f704e",
+          "page": 2,
+          "said": "...come to Benediction on First Friday, or the First Saturday Mass at 9 AM."
+        },
+        {
+          "source": "history",
+          "bulletin": "3406666f704e",
+          "said": "specific_date mass 2026-10-03 09:00 st-francis-xavier-marcellus  “First Saturday Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "specific_date mass 2026-10-03 09:00 st-francis-xavier-marcellus  “First Saturday Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "A First Saturday 9:00 AM Mass is in the Sept 27 calendar (dated Oct 3, also listed in Mass intentions) and mentioned in the Oct 4 pastor note, but the newest bulletin (covers Oct 10-18, no first Saturday) does not print it. Probably a standing monthly Mass but not stated as a schedule.",
+      "question": "Add a First Saturday 9:00 AM Mass at St. Francis Xavier?",
+      "options": [
+        {
+          "label": "First Saturdays 9:00 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-francis-xavier-marcellus",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "66694bc5667d",
+          "page": 3,
+          "said": "October 2 First Friday 7:00 AM Exposition of the Blessed Sacrament; 7:00 PM Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3406666f704e",
+          "page": 2,
+          "said": "on the First Friday when we have exposition of the Blessed Sacrament right after the 6:45 Mass until Benediction at 7 PM."
+        },
+        {
+          "source": "history",
+          "bulletin": "66694bc5667d",
+          "said": "specific_date adoration 2026-10-02 07:00–19:00 st-francis-xavier-marcellus  “First Friday; ends with Benediction at 7:00 PM”",
+          "page": 3
+        }
+      ],
+      "rationale": "First Friday exposition 7:00 AM (Sept 27 calendar) / right after the 6:45 Mass (Oct 4 note) until Benediction 7:00 PM. Not in the newest bulletin, whose Oct 10-18 week has no first Friday. Policy says first-of-month slots are weekly with weeks_of_month.",
+      "question": "Add First Friday Adoration (7:00 AM to 7:00 PM Benediction) at St. Francis Xavier?",
+      "options": [
+        {
+          "label": "First Fridays 7:00 AM-7:00 PM, Benediction",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-francis-xavier-marcellus",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

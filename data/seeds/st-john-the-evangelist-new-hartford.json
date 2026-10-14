@@ -1,0 +1,587 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-evangelist-new-hartford",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:32:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:12:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Mass times (Sat 5:30 PM, Sun 8 and 11 AM, Mon/Wed/Fri 6:45 AM) are not printed as a schedule but come from the Mass-intentions page (p6), repeating across consecutive weeks; history agrees. Tuesday 6-7 PM Holy Hour and Confession and Thursday 1-7 PM Adoration (3 PM Holy Hour with Benediction) repeat weekly in the page-1 announcements and are recorded as weekly. The Nov 2 All Souls Mass is at Annunciation, Clark Mills, an unlisted church, and is raised as a question.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "be8b5199da67ac19bde93871e5e10ff601749d6c950b1749574284510d6e7f28",
+      "fetched_at": "2026-10-11T16:32:00Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "50469645a04477b681c4826ea8e4f00704e0412fe8380583faf8cdc38a7cc4be",
+      "fetched_at": "2026-10-04T14:41:45Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "4cea40aeb2ac9cf49a0949efade91ec4ea432dafe2ae7c632f155b8acd091217",
+      "fetched_at": "2026-09-28T00:13:01Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 6,
+          "said": "Saturday, October 10 (Vigil) 5:30 ...; Saturday, October 17 (Vigil) 5:30 ..."
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 6,
+          "said": "Saturday, October 3 (Vigil) 5:30; Saturday, October 10 5:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "weekly mass Saturday 17:30 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "weekly mass Saturday 17:30 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "4cea40aeb2ac",
+          "said": "weekly mass Saturday 17:30 st-john-the-evangelist-new-hartford",
+          "page": 6
+        }
+      ],
+      "rationale": "Mass intentions list the slot in two consecutive weekends (Oct 3-4 and Oct 10-11 in the previous bulletin; Oct 10-11 and 17-18 in the newest); the bulletin prints no separate Mass schedule, so policy rule 4 makes it weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 6,
+          "said": "Sunday, October 11 8:00 ...; Sunday, October 18 8:00 ..."
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 6,
+          "said": "Sunday, October 4 8:00; October 11 8:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "weekly mass Sunday 08:00 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "weekly mass Sunday 08:00 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "4cea40aeb2ac",
+          "said": "weekly mass Sunday 08:00 st-john-the-evangelist-new-hartford",
+          "page": 6
+        }
+      ],
+      "rationale": "Mass intentions list the slot in two consecutive weekends (Oct 3-4 and Oct 10-11 in the previous bulletin; Oct 10-11 and 17-18 in the newest); the bulletin prints no separate Mass schedule, so policy rule 4 makes it weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 6,
+          "said": "Sunday, October 11 11:00 ...; Sunday, October 18 11:00 ..."
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 6,
+          "said": "Sunday, October 4 11:00; October 11 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "weekly mass Sunday 11:00 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "weekly mass Sunday 11:00 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "4cea40aeb2ac",
+          "said": "weekly mass Sunday 11:00 st-john-the-evangelist-new-hartford",
+          "page": 6
+        }
+      ],
+      "rationale": "Mass intentions list the slot in two consecutive weekends (Oct 3-4 and Oct 10-11 in the previous bulletin; Oct 10-11 and 17-18 in the newest); the bulletin prints no separate Mass schedule, so policy rule 4 makes it weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 6,
+          "said": "Monday, October 12 - Weekday 6:45 (+ p1: 6:45 AM Mass will be held as normal)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 6,
+          "said": "Mon Oct 5, Wed Oct 7, Fri Oct 9 6:45"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "weekly mass Monday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "weekly mass Monday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "4cea40aeb2ac",
+          "said": "weekly mass Monday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        }
+      ],
+      "rationale": "Weekday Mass intention is listed for this day in both weeks of the newest bulletin's predecessor (Oct 5/7/9 and Oct 12/14/16 across the two bulletins); newest p1 says the 6:45 AM Mass is held as normal on Columbus Day; the Sept 27 bulletin cancels the Wed Sept 30 6:45 Mass as a temporary change, implying it is standing. No Tuesday or Thursday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 6,
+          "said": "Wednesday, October 14 - Weekday 6:45 (+ p1: 6:45 AM Mass will be held as normal)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 6,
+          "said": "Mon Oct 5, Wed Oct 7, Fri Oct 9 6:45"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "weekly mass Wednesday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "weekly mass Wednesday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "4cea40aeb2ac",
+          "said": "weekly mass Wednesday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        }
+      ],
+      "rationale": "Weekday Mass intention is listed for this day in both weeks of the newest bulletin's predecessor (Oct 5/7/9 and Oct 12/14/16 across the two bulletins); newest p1 says the 6:45 AM Mass is held as normal on Columbus Day; the Sept 27 bulletin cancels the Wed Sept 30 6:45 Mass as a temporary change, implying it is standing. No Tuesday or Thursday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 6,
+          "said": "Friday, October 16 - Weekday 6:45 (+ p1: 6:45 AM Mass will be held as normal)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 6,
+          "said": "Mon Oct 5, Wed Oct 7, Fri Oct 9 6:45"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "weekly mass Friday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "weekly mass Friday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "4cea40aeb2ac",
+          "said": "weekly mass Friday 06:45 st-john-the-evangelist-new-hartford",
+          "page": 6
+        }
+      ],
+      "rationale": "Weekday Mass intention is listed for this day in both weeks of the newest bulletin's predecessor (Oct 5/7/9 and Oct 12/14/16 across the two bulletins); newest p1 says the 6:45 AM Mass is held as normal on Columbus Day; the Sept 27 bulletin cancels the Wed Sept 30 6:45 Mass as a temporary change, implying it is standing. No Tuesday or Thursday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 1,
+          "said": "Holy hour and confession will be held this Tuesday, October 13th from 6:00-7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 1,
+          "said": "Holy hour and confession ... Tuesday, October 6th from 6:00-7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cea40aeb2ac",
+          "page": 1,
+          "said": "no Holy Hour or Confessions on Tuesday, September 29 (temporary schedule change)"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "specific_date adoration 2026-10-13 18:00–19:00 st-john-the-evangelist-new-hartford  “Holy Hour”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "specific_date adoration 2026-10-06 18:00–19:00 st-john-the-evangelist-new-hartford  “Holy Hour”",
+          "page": 1
+        }
+      ],
+      "rationale": "Same 6-7 PM Tuesday slot in two consecutive bulletins (Oct 6, Oct 13), and the Sept 27 bulletin lists skipping it as a temporary change, so it is a standing weekly slot (policy rule 4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 1,
+          "said": "Holy hour and confession will be held this Tuesday, October 13th from 6:00-7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 1,
+          "said": "... Tuesday, October 6th from 6:00-7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cea40aeb2ac",
+          "page": 1,
+          "said": "no Holy Hour or Confessions on Tuesday, September 29"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "specific_date confession 2026-10-13 18:00–19:00 st-john-the-evangelist-new-hartford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "specific_date confession 2026-10-06 18:00–19:00 st-john-the-evangelist-new-hartford",
+          "page": 1
+        }
+      ],
+      "rationale": "Same reasoning as the Tuesday Holy Hour: the identical time repeats in two weeks and its cancellation is a \"temporary change\".",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour with Benediction at 3:00 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 1,
+          "said": "Eucharistic Adoration will be held on Thursday, October 15th from 1:00 PM - 7:00 PM. A holy hour, led by Deacon Ed, and concluding with Benediction, will be held at 3:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "50469645a044",
+          "page": 1,
+          "said": "Adoration ... Thursday, October 8th from 1:00-7:00 PM; holy hour with Benediction at 3:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cea40aeb2ac",
+          "page": 1,
+          "said": "Adoration and Holy Hour will still be held on Thursday, October 1st 1:00-7:00 PM; Benediction at 3:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "be8b5199da67",
+          "said": "weekly adoration Thursday 13:00–19:00 st-john-the-evangelist-new-hartford  “Holy Hour and Benediction at 3:00 PM”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "50469645a044",
+          "said": "specific_date adoration 2026-10-08 13:00–19:00 st-john-the-evangelist-new-hartford  “Benediction and Holy Hour at 3:00 PM”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cea40aeb2ac",
+          "said": "weekly adoration Thursday 13:00–19:00 st-john-the-evangelist-new-hartford",
+          "page": 1
+        }
+      ],
+      "rationale": "Identical Thursday 1-7 PM adoration in three consecutive bulletins (Oct 1, 8, 15), so weekly (rule 4). The 3 PM Holy Hour with Benediction is inside it and is kept as a note rather than a second event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be8b5199da67",
+          "page": 1,
+          "said": "On Monday, November 2nd, at 5:30 p.m. at Annunciation Church in Clark Mills, we will celebrate our annual All Souls' Day Mass"
+        }
+      ],
+      "rationale": "All Souls Day Mass of this parish is held at Annunciation Church, Clark Mills, which is not in data/churches.csv (seed church finds nothing). Policy leaves out events at an unlisted church and says to flag when the church list may need review.",
+      "question": "All Souls Mass on Nov 2, 5:30 PM is at Annunciation Church, Clark Mills (not a listed church). Leave it out?",
+      "options": [
+        {
+          "label": "Leave out (church not listed)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Record as dated Mass (only if Annunciation is added to the church list)",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-new-hartford",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-02",
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Souls' Day, at Annunciation Church, Clark Mills"
+          }
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

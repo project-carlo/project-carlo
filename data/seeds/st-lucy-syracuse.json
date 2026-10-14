@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-lucy-syracuse",
+  "status": "ready",
+  "as_of": "2026-10-11T16:31:08Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:50:55Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. Lucy's prints only two Masses in its p1 schedule box: Saturday 5:00 PM and Sunday 10:00 AM (also on Zoom, ASL interpreted). No Confession or Adoration times are printed (Reconciliation is via the parish office). The Kateri Chapel is in the church and has no separate times. Fr. Jim retires Dec 31; Mass times may change with the Costello Project, but nothing is announced yet.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8da00775c511a0cf930493073b919ebe0dac98a33e58f946a63848ea7fda6b17",
+      "fetched_at": "2026-10-11T16:31:08Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "4bcaa60341781d1664049bcbe46dca4f339833a7672e0f6eeadd1e217a2ee71d",
+      "fetched_at": "2026-09-28T00:13:37Z",
+      "published_date": "2026-09-26",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8da00775",
+          "page": 1,
+          "said": "Saturday - 5:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4bcaa603",
+          "page": 1,
+          "said": "Saturday - 5:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8da00775c511",
+          "said": "weekly mass Saturday 17:00 st-lucy-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4bcaa6034178",
+          "said": "weekly mass Saturday 17:00 st-lucy-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on p1 of both bulletins read; history agrees. No other Mass, Confession or Adoration times appear anywhere in either bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In person and on Zoom; ASL interpreted"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8da00775",
+          "page": 1,
+          "said": "Sunday - 10:00 - in person and on Zoom, ASL interpreted, Gluten-free hosts available"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4bcaa603",
+          "page": 1,
+          "said": "Sunday - 10:00 - in person and on Zoom, ASL interpreted, Gluten-free hosts available"
+        },
+        {
+          "source": "history",
+          "bulletin": "8da00775c511",
+          "said": "weekly mass Sunday 10:00 st-lucy-syracuse  “In person and on Zoom; ASL interpreted; Gluten-free hosts available”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4bcaa6034178",
+          "said": "weekly mass Sunday 10:00 st-lucy-syracuse  “ASL interpreted; also available on Zoom; gluten-free hosts available”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on p1 of both bulletins read; history agrees. No other Mass, Confession or Adoration times appear anywhere in either bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

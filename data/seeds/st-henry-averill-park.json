@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-henry-averill-park",
+  "status": "ready",
+  "as_of": "2026-10-11T16:38:23Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:50:34Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single-church parish with a clear Mass Schedule box on page 2: weekend Masses, Wed-Fri 8:30 AM, Saturday confession, First Friday adoration. Fr. John is away so the Oct 14-16 weekday Masses are cancelled, and a dated All Souls Remembrance Mass is Nov 2 at 6:30 PM. Tuesday 9:30 AM Mass is at St. Mary's in Nassau and is excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d1eff7a0952cd4fd498a64695f90c9f28ffd158e672900d2955c1bab071fc8b3",
+      "fetched_at": "2026-10-11T16:38:23Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "84035b95af58f2b8171d9f54438baa888b21393d534c1b01b868390acbde511f",
+      "fetched_at": "2026-10-04T14:53:11Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "532c7691472ab283c89fcc6bc333dbf524eaf4f83a7dd9db4fa93702bbe00315",
+      "fetched_at": "2026-09-28T22:03:08Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Weekend Saturday 04:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "weekly mass Saturday 16:00 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "weekly mass Saturday 16:00 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "weekly mass Saturday 16:00 st-henry-averill-park",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 2 of the newest bulletin; unchanged in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Sunday 08:00am, 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "weekly mass Sunday 08:00 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "weekly mass Sunday 08:00 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "weekly mass Sunday 08:00 st-henry-averill-park",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 2 of the newest bulletin; unchanged in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Sunday 08:00am, 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "weekly mass Sunday 10:00 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "weekly mass Sunday 10:00 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "weekly mass Sunday 10:00 st-henry-averill-park",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 2 of the newest bulletin; unchanged in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Weekday Wednesday 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "weekly mass Wednesday 08:30 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "weekly mass Wednesday 08:30 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "weekly mass Wednesday 08:30 st-henry-averill-park",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 2 of the newest bulletin; unchanged in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Weekday Thursday 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "weekly mass Thursday 08:30 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "weekly mass Thursday 08:30 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "weekly mass Thursday 08:30 st-henry-averill-park",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 2 of the newest bulletin; unchanged in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Weekday Friday 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "weekly mass Friday 08:30 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "weekly mass Friday 08:30 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "weekly mass Friday 08:30 st-henry-averill-park",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 2 of the newest bulletin; unchanged in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Confession Saturday 03:15pm-03:45pm or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "weekly confession Saturday 15:15–15:45 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "weekly confession Saturday 15:15–15:45 st-henry-averill-park",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "weekly confession Saturday 15:15–15:45 st-henry-averill-park",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 2 of the newest bulletin; unchanged in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Eucharistic Adoration First Fridays 9:00-11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "weekly adoration Friday 09:00–11:00 st-henry-averill-park  “First Fridays”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "weekly adoration Friday 09:00–11:00 st-henry-averill-park  “First Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "weekly adoration Friday 09:00–11:00 st-henry-averill-park  “First Fridays”",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 2 of the newest bulletin; unchanged in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 3,
+          "said": "WEDNESDAY, OCTOBER 14: No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 5,
+          "said": "NO MORNING MASSES THIS WEEK. There will be no morning Masses this week, the 13-16, due to Fr. John being away."
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "specific_date mass 2026-10-14 08:30 st-henry-averill-park  CANCELLED; “Morning Mass cancelled”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "specific_date mass 2026-10-14 08:30 st-henry-averill-park  CANCELLED; “Priest away”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "specific_date mass 2026-10-14 08:30 st-henry-averill-park  CANCELLED; “No morning Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "Newest bulletin cancels the weekday morning Mass on this date (Mass intentions, calendar and news item).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 3,
+          "said": "THURSDAY, OCTOBER 15: No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 5,
+          "said": "NO MORNING MASSES THIS WEEK. There will be no morning Masses this week, the 13-16, due to Fr. John being away."
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "specific_date mass 2026-10-15 08:30 st-henry-averill-park  CANCELLED; “Morning Mass cancelled”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "specific_date mass 2026-10-15 08:30 st-henry-averill-park  CANCELLED; “Priest away”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "specific_date mass 2026-10-15 08:30 st-henry-averill-park  CANCELLED; “No morning Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "Newest bulletin cancels the weekday morning Mass on this date (Mass intentions, calendar and news item).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 3,
+          "said": "FRIDAY, OCTOBER 16: No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 5,
+          "said": "NO MORNING MASSES THIS WEEK. There will be no morning Masses this week, the 13-16, due to Fr. John being away."
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "specific_date mass 2026-10-16 08:30 st-henry-averill-park  CANCELLED; “Morning Mass cancelled”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "84035b95af58",
+          "said": "specific_date mass 2026-10-16 08:30 st-henry-averill-park  CANCELLED; “Priest away”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "532c7691472a",
+          "said": "specific_date mass 2026-10-16 08:30 st-henry-averill-park  CANCELLED; “No morning Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "Newest bulletin cancels the weekday morning Mass on this date (Mass intentions, calendar and news item).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-averill-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Remembrance Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 5,
+          "said": "On Monday, November 2nd, at the 6:30 pm Mass, we will recall and celebrate those parishioners who have died this past year."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 4,
+          "said": "Nov 2: 6:30pm All Souls Day Remembrance Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d1eff7a0952c",
+          "said": "specific_date mass 2026-11-02 18:30 st-henry-averill-park  “All Souls Day Remembrance Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "A dated special Mass outside the weekly schedule (Monday has no regular Mass); the policy records it as a dated event at St. Henry's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-nassau",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d1eff7a0952c",
+          "page": 2,
+          "said": "Tuesday 09:30am (St. Mary's, Nassau)"
+        }
+      ],
+      "rationale": "Held at St. Mary's in Nassau, a separate church with its own slug in churches.csv, not at St. Henry's; left out per policy. No other Tuesday Mass at St. Henry's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

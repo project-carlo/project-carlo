@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-pompei-st-peter-syracuse",
+  "status": "ready",
+  "as_of": "2026-09-28T00:08:29Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T22:00:36Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One bulletin (issue Aug 30, 2026), with a clear Weekly Mass Schedule box and Sacrament of Penance list on p1. The Mon-Thu 9:00 am, Mon-Fri 5:00 pm Vietnamese and Sat 8:00 am Vietnamese Masses are 'in the Chapel'; the website's Weekly Mass Schedule puts them at OLP / St. Peter, so they are recorded at the parish's church with a note. Thursday Confession is at another parish's church (SJB/HT) and is excluded, and Holy Day times are TBA. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f916c5625f68b2070de6bdcb57fc403000aa20fe1d16ca98b7b5fff8ffb686e6",
+      "fetched_at": "2026-09-28T00:08:29Z",
+      "published_date": "2026-08-30",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Mass: Mon -Thurs 9:00 am in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 4,
+          "said": "Monday 9:00 am Mass in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "DAILY MASSES Monday - Thursday 9:00 am at Our Lady of Pompei /St. Peter"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Monday 09:00 our-lady-of-pompei-st-peter-syracuse  “In the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says the Mass is in the Chapel; the website's Weekly Mass Schedule puts the daily Masses at Our Lady of Pompei / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels) and the note says where.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Mass: Mon -Thurs 9:00 am in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 4,
+          "said": "Tuesday 9:00 am Mass in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "DAILY MASSES Monday - Thursday 9:00 am at Our Lady of Pompei /St. Peter"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-pompei-st-peter-syracuse  “In the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says the Mass is in the Chapel; the website's Weekly Mass Schedule puts the daily Masses at Our Lady of Pompei / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels) and the note says where.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Mass: Mon -Thurs 9:00 am in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 4,
+          "said": "Wednesday 9:00 am Mass in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "DAILY MASSES Monday - Thursday 9:00 am at Our Lady of Pompei /St. Peter"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Wednesday 09:00 our-lady-of-pompei-st-peter-syracuse  “In the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says the Mass is in the Chapel; the website's Weekly Mass Schedule puts the daily Masses at Our Lady of Pompei / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels) and the note says where.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Mass: Mon -Thurs 9:00 am in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 4,
+          "said": "Thursday 9:00 am Mass in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "DAILY MASSES Monday - Thursday 9:00 am at Our Lady of Pompei /St. Peter"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Thursday 09:00 our-lady-of-pompei-st-peter-syracuse  “In the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says the Mass is in the Chapel; the website's Weekly Mass Schedule puts the daily Masses at Our Lady of Pompei / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels) and the note says where.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Vietnamese Mass: Mon-Fri 5:00 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Monday - Friday 5:00 pm at OLP /St. Peter (Vietnamese)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Monday 17:00 our-lady-of-pompei-st-peter-syracuse  “Vietnamese; in the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says in the Chapel; the website's Weekly Mass Schedule puts the Vietnamese Masses at OLP / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Vietnamese Mass: Mon-Fri 5:00 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Monday - Friday 5:00 pm at OLP /St. Peter (Vietnamese)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Tuesday 17:00 our-lady-of-pompei-st-peter-syracuse  “Vietnamese; in the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says in the Chapel; the website's Weekly Mass Schedule puts the Vietnamese Masses at OLP / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Vietnamese Mass: Mon-Fri 5:00 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Monday - Friday 5:00 pm at OLP /St. Peter (Vietnamese)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Wednesday 17:00 our-lady-of-pompei-st-peter-syracuse  “Vietnamese; in the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says in the Chapel; the website's Weekly Mass Schedule puts the Vietnamese Masses at OLP / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Vietnamese Mass: Mon-Fri 5:00 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Monday - Friday 5:00 pm at OLP /St. Peter (Vietnamese)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Thursday 17:00 our-lady-of-pompei-st-peter-syracuse  “Vietnamese; in the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says in the Chapel; the website's Weekly Mass Schedule puts the Vietnamese Masses at OLP / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Vietnamese Mass: Mon-Fri 5:00 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Monday - Friday 5:00 pm at OLP /St. Peter (Vietnamese)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Friday 17:00 our-lady-of-pompei-st-peter-syracuse  “Vietnamese; in the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says in the Chapel; the website's Weekly Mass Schedule puts the Vietnamese Masses at OLP / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese; in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Daily Vietnamese Mass: ... Sat 8:00 am in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Saturday 8:00 am at OLP /St. Peter (Vietnamese)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Saturday 08:00 our-lady-of-pompei-st-peter-syracuse  “Vietnamese; in the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The bulletin says in the Chapel; the website's Weekly Mass Schedule puts the Vietnamese Masses at OLP / St. Peter, so the chapel is the parish's own (R6, POLICY Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 pm Vigil"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Saturday 4:00 pm at Our Lady of Pompei /St. Peter"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Saturday 16:00 our-lady-of-pompei-st-peter-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1; the p4 intentions list Saturday, September 5 4:00 pm Mass in the Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Sunday Masses: 7:30 am - 11:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Sunday 7:30 am at Our Lady of Pompei /St. Peter"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Sunday 07:30 our-lady-of-pompei-st-peter-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the box gives 7:30 am - 11:30 am; the p4 intentions list Sunday September 6 Masses at 7:30 am and 11:30 am, and the website lists 7:30 am, so the range means those two Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Sunday Vietnamese Mass: 9:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Sunday 9:00 am at OLP /St. Peter (Vietnamese)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Sunday 09:00 our-lady-of-pompei-st-peter-syracuse  “Vietnamese”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Weekly Mass Schedule box on p1. The website places it at OLP / St. Peter (its separate Sunday 9:00 am at St. John the Baptist / Holy Trinity is another parish's Mass and is not in this bulletin's box).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Sunday Masses: 7:30 am - 11:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofpompei-stpeters.org/",
+          "said": "Sunday 11:30 am at Our Lady of Pompei /St. Peter"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly mass Sunday 11:30 our-lady-of-pompei-st-peter-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the box gives 7:30 am - 11:30 am; the p4 intentions list a Sunday 11:30 am Mass, and the website lists 11:30 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Sacrament of Penance Wednesday: 4:00-5:00 at OLP/St. Peter"
+        },
+        {
+          "source": "history",
+          "bulletin": "f916c5625f68",
+          "said": "weekly confession Wednesday 16:00–17:00 our-lady-of-pompei-st-peter-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Sacrament of Penance list on p1 names OLP/St. Peter for Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Sacrament of Penance Thursday: 4:00-5:00 at SJB/HT"
+        }
+      ],
+      "rationale": "R22: Thursday Confession is at SJB/HT (St. John the Baptist and Holy Trinity, 406 Court Street, which `seed church` places in its own parish, st-john-the-baptist-holy-trinity-syracuse), not at this parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f916c5625f68",
+          "page": 1,
+          "said": "Mass Schedule for Holy Days TBA"
+        }
+      ],
+      "rationale": "R26, POLICY (What to extract): holy day Mass times are 'TBA', with no definite time, so nothing is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

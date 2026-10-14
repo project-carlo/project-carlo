@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-worcester",
+  "status": "ready",
+  "as_of": "2026-10-11T16:28:06Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Small one-church parish with a clear, stable schedule: Sat 3:45 PM and Sun 10:30 AM Masses, Mon and Wed 9 AM Masses, Wed 10 AM Adoration, Sat 3:00-3:30 PM Confession. The newest bulletin prints all of them; the earlier two agree and history matches. Baptism Saturday 10 AM is not in scope.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2d69f9f2b19f1be1325b657d5ef9e479ffcaa9e735cf5507d828ff55e5067898",
+      "fetched_at": "2026-10-11T16:28:06Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "dac1e0aa914f6fd33a6476f495bc93472a9fa1b5fb25788c4e7ffc38e8d0178f",
+      "fetched_at": "2026-10-04T14:54:59Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "96a4cae1b1f72364af1748bcc709808dd182fd676215d1d1453f86975927dd52",
+      "fetched_at": "2026-09-28T22:04:32Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-worcester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2d69f9f2",
+          "page": 2,
+          "said": "Weekend Masses Saturday Evening: 3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "2d69f9f2b19f",
+          "said": "weekly mass Saturday 15:45 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dac1e0aa914f",
+          "said": "weekly mass Saturday 15:45 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "96a4cae1b1f7",
+          "said": "weekly mass Saturday 15:45 st-joseph-worcester",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the page 2 schedule box and the page 1 intentions of the newest bulletin; also in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-worcester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2d69f9f2",
+          "page": 2,
+          "said": "Sunday Morning: 10:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "2d69f9f2b19f",
+          "said": "weekly mass Sunday 10:30 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dac1e0aa914f",
+          "said": "weekly mass Sunday 10:30 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "96a4cae1b1f7",
+          "said": "weekly mass Sunday 10:30 st-joseph-worcester",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the page 2 schedule box and the page 1 intentions of the newest bulletin; also in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-worcester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2d69f9f2",
+          "page": 2,
+          "said": "Monday: Mass 9 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "2d69f9f2b19f",
+          "said": "weekly mass Monday 09:00 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dac1e0aa914f",
+          "said": "weekly mass Monday 09:00 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "96a4cae1b1f7",
+          "said": "weekly mass Monday 09:00 st-joseph-worcester",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the page 2 schedule box and the page 1 intentions of the newest bulletin; also in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-worcester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2d69f9f2",
+          "page": 2,
+          "said": "Wednesday: Mass 9 AM Adoration 10 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "2d69f9f2b19f",
+          "said": "weekly mass Wednesday 09:00 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dac1e0aa914f",
+          "said": "weekly mass Wednesday 09:00 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "96a4cae1b1f7",
+          "said": "weekly mass Wednesday 09:00 st-joseph-worcester",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the page 2 schedule box and the page 1 intentions of the newest bulletin; also in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-worcester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2d69f9f2",
+          "page": 2,
+          "said": "Wednesday: Mass 9 AM Adoration 10 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "2d69f9f2b19f",
+          "said": "weekly adoration Wednesday 10:00 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dac1e0aa914f",
+          "said": "weekly adoration Wednesday 10:00 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "96a4cae1b1f7",
+          "said": "weekly adoration Wednesday 10:00 st-joseph-worcester",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed with no end time; Printed in the page 2 schedule box and the page 1 intentions of the newest bulletin; also in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-worcester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2d69f9f2",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation Saturday: 3:00 PM -3:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "2d69f9f2b19f",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dac1e0aa914f",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-worcester",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "96a4cae1b1f7",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-worcester",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the page 2 schedule box and the page 1 intentions of the newest bulletin; also in the two earlier bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

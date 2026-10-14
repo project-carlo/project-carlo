@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-peter-saratoga-springs",
+  "status": "ready",
+  "as_of": "2026-10-11T16:39:07Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:12:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (st-peter-saratoga-springs). The newest bulletin prints Sat 5:00 PM, Sun 7:30 and 9:00 AM, Tue and Fri 8:00 AM, Saturday 4:00 PM Confession and a weekly Tuesday 7:00 PM Holy Hour, all clear and consistent with the two earlier bulletins. No end times are printed for Confession or Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a098ec4842f63029eb9cad8ab920aea0a17dd492832e3268d4599ccccc4c854f",
+      "fetched_at": "2026-10-11T16:39:07Z",
+      "published_date": "2026-10-10",
+      "read": true
+    },
+    {
+      "content_hash": "4b451953c35e8380cb02728bdf11d72d01bc722ae2d49141f6cb0e0725f6daae",
+      "fetched_at": "2026-10-04T14:58:34Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "fbb608081bc0fe46e39e97ceeae06f4eb11f19974d08857b90458f0624a96ac6",
+      "fetched_at": "2026-09-28T22:08:51Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a098ec48",
+          "page": 1,
+          "said": "Anticipated on Saturday 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a098ec4842f6",
+          "said": "weekly mass Saturday 17:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b451953c35e",
+          "said": "weekly mass Saturday 17:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fbb608081bc0",
+          "said": "weekly mass Saturday 17:00 st-peter-saratoga-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Eucharist box on page 1 and repeated on page 6 of the newest bulletin; the two bulletins before it print the same; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a098ec48",
+          "page": 1,
+          "said": "Sunday Liturgy 7:30am and 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a098ec4842f6",
+          "said": "weekly mass Sunday 07:30 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b451953c35e",
+          "said": "weekly mass Sunday 07:30 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fbb608081bc0",
+          "said": "weekly mass Sunday 07:30 st-peter-saratoga-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Eucharist box on page 1 and repeated on page 6 of the newest bulletin; the two bulletins before it print the same; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a098ec48",
+          "page": 1,
+          "said": "Sunday Liturgy 7:30am and 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a098ec4842f6",
+          "said": "weekly mass Sunday 09:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b451953c35e",
+          "said": "weekly mass Sunday 09:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fbb608081bc0",
+          "said": "weekly mass Sunday 09:00 st-peter-saratoga-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Eucharist box on page 1 and repeated on page 6 of the newest bulletin; the two bulletins before it print the same; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a098ec48",
+          "page": 1,
+          "said": "Tuesday and Friday 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a098ec4842f6",
+          "said": "weekly mass Tuesday 08:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b451953c35e",
+          "said": "weekly mass Tuesday 08:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fbb608081bc0",
+          "said": "weekly mass Tuesday 08:00 st-peter-saratoga-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Eucharist box on page 1 and repeated on page 6 of the newest bulletin; the two bulletins before it print the same; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-saratoga-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a098ec48",
+          "page": 1,
+          "said": "Tuesday and Friday 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a098ec4842f6",
+          "said": "weekly mass Friday 08:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b451953c35e",
+          "said": "weekly mass Friday 08:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fbb608081bc0",
+          "said": "weekly mass Friday 08:00 st-peter-saratoga-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Eucharist box on page 1 and repeated on page 6 of the newest bulletin; the two bulletins before it print the same; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-saratoga-springs",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a098ec48",
+          "page": 1,
+          "said": "Reconciliation/Confession Saturday at 4:00 PM and by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "a098ec4842f6",
+          "said": "weekly confession Saturday 16:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b451953c35e",
+          "said": "weekly confession Saturday 16:00 st-peter-saratoga-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fbb608081bc0",
+          "said": "weekly confession Saturday 16:00 st-peter-saratoga-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on page 1 of all three bulletins; no end time given, so none recorded. 'By appointment' has no time and is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-saratoga-springs",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a098ec48",
+          "page": 4,
+          "said": "We are continuing a weekly Holy Hour of Eucharistic adoration here in the parish on Tuesday evenings at 7:00 p.m.; calendar: 7:00 p.m. Tuesday October 13 Adoration of the Blessed Sacrament"
+        },
+        {
+          "source": "history",
+          "bulletin": "a098ec4842f6",
+          "said": "weekly adoration Tuesday 19:00 st-peter-saratoga-springs  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4b451953c35e",
+          "said": "weekly adoration Tuesday 19:00–20:00 st-peter-saratoga-springs  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "fbb608081bc0",
+          "said": "weekly adoration Tuesday 19:00 st-peter-saratoga-springs  “Holy Hour”",
+          "page": 4
+        }
+      ],
+      "rationale": "Described as a weekly Tuesday 7:00 PM Holy Hour and listed in each week's Mass-intention calendar. No end time is printed (one history extraction had 8:00 PM, which no bulletin states), so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

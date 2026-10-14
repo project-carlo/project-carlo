@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+  "status": "ready",
+  "as_of": "2026-10-11T16:37:03Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:12:22Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Page 1 lists Masses Tue-Fri 9:00 AM, Sat 4:00 PM, Sun 10:15 AM and Saturday Reconciliation 3:00-3:30 PM; history agrees. The p3 calendar also prints daily 6:30 AM, Sat 4:00 PM and Sun 8:30 AM Masses and Wednesday adoration at Sts. John & Andrew, a different parish not in the churches list, so those are excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "da219c15acac9cffa8eec1b13cd51beea6d25b71a949c2761bec8569d1d02957",
+      "fetched_at": "2026-10-11T16:37:03Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "5145667b809a353809b94acf2da6845f40fcd065a9f4344ae951f352b674f538",
+      "fetched_at": "2026-10-04T14:45:24Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "9f9f883b809048b5e12cc276f6cd8849b8a8e2a68e66d8306c7df3e5cf72c0cd",
+      "fetched_at": "2026-09-28T00:17:00Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novena of the Miraculous Medal"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 1,
+          "said": "Mass Schedule: Tuesday through Friday 9:00 am; Novena of the Miraculous Medal Tuesdays during Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "da219c15acac",
+          "said": "weekly mass Tuesday 09:00 st-vincent-de-paul-blessed-sacrament-vestal  “Includes Novena of the Miraculous Medal”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5145667b809a",
+          "said": "weekly mass Tuesday 09:00 st-vincent-de-paul-blessed-sacrament-vestal  “Novena of the Miraculous Medal during Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9f9f883b8090",
+          "said": "weekly mass Tuesday 09:00 st-vincent-de-paul-blessed-sacrament-vestal  “Includes Novena of the Miraculous Medal”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 1,
+          "said": "Mass Schedule: Tuesday through Friday 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "da219c15acac",
+          "said": "weekly mass Wednesday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5145667b809a",
+          "said": "weekly mass Wednesday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9f9f883b8090",
+          "said": "weekly mass Wednesday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 1,
+          "said": "Mass Schedule: Tuesday through Friday 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "da219c15acac",
+          "said": "weekly mass Thursday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5145667b809a",
+          "said": "weekly mass Thursday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9f9f883b8090",
+          "said": "weekly mass Thursday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 1,
+          "said": "Mass Schedule: Tuesday through Friday 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "da219c15acac",
+          "said": "weekly mass Friday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5145667b809a",
+          "said": "weekly mass Friday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9f9f883b8090",
+          "said": "weekly mass Friday 09:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 1,
+          "said": "Saturday 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "da219c15acac",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5145667b809a",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9f9f883b8090",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 1,
+          "said": "Sunday 10:15 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "da219c15acac",
+          "said": "weekly mass Sunday 10:15 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5145667b809a",
+          "said": "weekly mass Sunday 10:15 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9f9f883b8090",
+          "said": "weekly mass Sunday 10:15 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 1,
+          "said": "Reconciliation: Saturdays from 3:00-3:30 pm or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "da219c15acac",
+          "said": "weekly confession Saturday 15:00–15:30 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5145667b809a",
+          "said": "weekly confession Saturday 15:00–15:30 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9f9f883b8090",
+          "said": "weekly confession Saturday 15:00–15:30 st-vincent-de-paul-blessed-sacrament-vestal",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 3,
+          "said": "6:30 am Mass at Sts. John & Andrew (Mon-Fri); 4:00 pm Sat and 8:30 am Sun Mass at Sts. John & Andrew"
+        }
+      ],
+      "rationale": "The Masses are held at Sts. John & Andrew in Binghamton, a different parish that is not in the churches list (seed church finds no match), so the policy's off-site rule leaves them out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da219c15acac",
+          "page": 3,
+          "said": "Wednesday, October 14: 7:00 am-3:00 pm Eucharistic Adoration at Sts. John & Andrew Parish"
+        }
+      ],
+      "rationale": "Adoration is at Sts. John & Andrew, another parish not in the churches list; off-site, left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
