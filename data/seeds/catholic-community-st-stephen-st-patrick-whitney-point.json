@@ -1,0 +1,863 @@
+{
+  "schema_version": 1,
+  "parish_slug": "catholic-community-st-stephen-st-patrick-whitney-point",
+  "status": "ready",
+  "as_of": "2026-10-11T16:35:07Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:41:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches, one community. The weekly schedule on p1/p2 matches history in all three bulletins. Columbus Day (Oct 12) changes the Monday schedule: one 10 AM Mass at St. Patrick, with the 6 PM Mass, Confession and evening Adoration cancelled, all recorded as dated entries. A winter schedule (Saturday vigil 4 PM, confession 3-3:45) starts Oct 31/Nov 1 and is left out per R20. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4416ef5e4ff3e1f627d25cc822457b3e4c93c998470edbb586cf5ffe3a1286c8",
+      "fetched_at": "2026-10-11T16:35:07Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "906acbc9bef6b7104d65ce6c3ee0f7d334f51f1daf3805535810d4f9de02651d",
+      "fetched_at": "2026-10-04T14:33:12Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "30f986ea75e8eaf93e8332fcfc49f35833051e3409b23fd5050a4de3e497dff6",
+      "fetched_at": "2026-09-28T00:04:38Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-marathon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 1,
+          "said": "Saturday Vigil 5:00PM St. Stephen, Marathon"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly mass Saturday 17:00 st-stephen-marathon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly mass Saturday 17:00 st-stephen-marathon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly mass Saturday 17:00 st-stephen-marathon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule on p1. The winter change to 4 PM starts the weekend of Oct 31/Nov 1; kept at the current 5 PM and the later time left out (R20).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 1,
+          "said": "Sunday 8:30AM St. Patrick, Whitney Point"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly mass Sunday 08:30 st-patrick-whitney-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly mass Sunday 08:30 st-patrick-whitney-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly mass Sunday 08:30 st-patrick-whitney-point",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule on p1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-cincinnatus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 1,
+          "said": "11:00AM Our Lady of Perpetual Help, Cincinnatus"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly mass Sunday 11:00 our-lady-of-perpetual-help-cincinnatus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly mass Sunday 11:00 our-lady-of-perpetual-help-cincinnatus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly mass Sunday 11:00 our-lady-of-perpetual-help-cincinnatus",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule on p1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 1,
+          "said": "Monday 6:00PM St. Patrick"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly mass Monday 18:00 st-patrick-whitney-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly mass Monday 18:00 st-patrick-whitney-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly mass Monday 18:00 st-patrick-whitney-point",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule on p1. The Oct 12 cancellation is recorded separately; the weekly slot stays (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 1,
+          "said": "Tuesday 10:00AM St. Patrick; Thursday 10:00AM St. Patrick"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly mass Tuesday 10:00 st-patrick-whitney-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly mass Tuesday 10:00 st-patrick-whitney-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly mass Tuesday 10:00 st-patrick-whitney-point",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule on p1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 1,
+          "said": "Tuesday 10:00AM St. Patrick; Thursday 10:00AM St. Patrick"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly mass Thursday 10:00 st-patrick-whitney-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly mass Thursday 10:00 st-patrick-whitney-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly mass Thursday 10:00 st-patrick-whitney-point",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule on p1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-cincinnatus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 1,
+          "said": "First Thursday Weekday Mass 11:00AM Our Lady of Perpetual Help"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly mass Thursday 11:00 our-lady-of-perpetual-help-cincinnatus  “First Thursday only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly mass Thursday 11:00 our-lady-of-perpetual-help-cincinnatus  “First Thursday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly mass Thursday 11:00 our-lady-of-perpetual-help-cincinnatus  “First Thursday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule on p1 as a First Thursday Mass; history read it as 'First Thursday only' too. This week holds no first Thursday, but the schedule box prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-marathon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "Sacrament of Reconciliation: Saturdays, 4:00-4:45PM, at St. Stephen's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly confession Saturday 16:00–16:45 st-stephen-marathon",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly confession Saturday 16:00–16:45 st-stephen-marathon",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly confession Saturday 16:00–16:45 st-stephen-marathon",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed on p2. The winter change to 3-3:45 PM starts the weekend of Oct 31/Nov 1 and is left out (R20).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-cincinnatus",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "10:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "Sundays, 10:30-10:50AM, at Our Lady of Perpetual Help Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly confession Sunday 10:30–10:50 our-lady-of-perpetual-help-cincinnatus",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly confession Sunday 10:30–10:50 our-lady-of-perpetual-help-cincinnatus",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly confession Sunday 10:30–10:50 our-lady-of-perpetual-help-cincinnatus",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "Mondays, 5:00-5:45PM, at St. Patrick's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly confession Monday 17:00–17:45 st-patrick-whitney-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly confession Monday 17:00–17:45 st-patrick-whitney-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly confession Monday 17:00–17:45 st-patrick-whitney-point",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "HOLY HOUR Mondays, from 4:45-5:45PM, at St. Patrick's Church, Whitney Point."
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "weekly adoration Monday 16:45–17:45 st-patrick-whitney-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "weekly adoration Monday 16:45–17:45 st-patrick-whitney-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "weekly adoration Monday 16:45–17:45 st-patrick-whitney-point",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: POLICY counts a Holy Hour as Adoration; printed on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "There will be ONE Mass on that day at 10 AM at St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 3,
+          "said": "Monday, October 12, 2026, 10:00AM for The People of Our Parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "specific_date mass 2026-10-12 10:00 st-patrick-whitney-point  “Columbus Day”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "specific_date mass 2026-10-12 10:00 st-patrick-whitney-point  “Columbus Day”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "specific_date mass 2026-10-12 10:00 st-patrick-whitney-point  “Columbus Day”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass at a listed church on or after as_of (Oct 11); not part of the weekly schedule (Monday is 6 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "there will be NO 6 PM Mass or Confessions or evening adoration on that day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 4,
+          "said": "No 6:00PM Mass, Confessions or Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "specific_date mass 2026-10-12 18:00 st-patrick-whitney-point  CANCELLED; “Cancelled for Columbus Day”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "specific_date mass 2026-10-12 18:00 st-patrick-whitney-point  CANCELLED; “Columbus Day cancellation”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "specific_date mass 2026-10-12 18:00 st-patrick-whitney-point  CANCELLED; “Columbus Day”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: the bulletin says the Monday 6 PM Mass is cancelled on Oct 12.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "17:00",
+        "end_time": "17:45",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "NO 6 PM Mass or Confessions or evening adoration on that day"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "specific_date confession 2026-10-12 17:00–17:45 st-patrick-whitney-point  CANCELLED; “Cancelled for Columbus Day”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "specific_date confession 2026-10-12 17:00–17:45 st-patrick-whitney-point  CANCELLED; “Columbus Day cancellation”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "specific_date confession 2026-10-12 17:00–17:45 st-patrick-whitney-point  CANCELLED; “Columbus Day”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: the bulletin cancels Monday confession on Oct 12.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-whitney-point",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "16:45",
+        "end_time": "17:45",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "NO 6 PM Mass or Confessions or evening adoration on that day"
+        },
+        {
+          "source": "history",
+          "bulletin": "4416ef5e4ff3",
+          "said": "specific_date adoration 2026-10-12 16:45–17:45 st-patrick-whitney-point  CANCELLED; “Cancelled for Columbus Day”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "906acbc9bef6",
+          "said": "specific_date adoration 2026-10-12 16:45–17:45 st-patrick-whitney-point  CANCELLED; “Columbus Day cancellation”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "30f986ea75e8",
+          "said": "specific_date adoration 2026-10-12 16:45–17:45 st-patrick-whitney-point  CANCELLED; “Columbus Day”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: the bulletin cancels Monday evening adoration on Oct 12.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-marathon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Winter schedule"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "Starting that weekend (Oct 31/Nov 1), we will switch to 4 PM for the Vigil Mass at St. Stephen's"
+        }
+      ],
+      "rationale": "R20: a change announced for later; the current 5 PM stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-marathon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Winter schedule"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4416ef5e",
+          "page": 2,
+          "said": "The time for Saturday Confessions at St. Stephen's will also move that weekend to 3-3:45 PM"
+        }
+      ],
+      "rationale": "R20: a change announced for later; the current 4-4:45 PM stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

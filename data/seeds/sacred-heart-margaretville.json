@@ -1,0 +1,566 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-margaretville",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:31:47Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:28:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Sacred Heart in Margaretville and St. Anne's Mission in Andes. Weekend, Thursday and Friday Adoration times agree in all three bulletins, and three Spanish Masses are dated in October. Open: whether the Friday Mass after Adoration gets a time. Confession before Mass and the First Saturday Mass have no definite time and are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "197ab28626a40adca5ff9e43097c6374c392e264042d3e5625efea5a40c66b1b",
+      "fetched_at": "2026-10-11T16:31:47Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "8476e9e4d4e2742934767726f3782f59009849d093ff50f470441fd605c2f778",
+      "fetched_at": "2026-10-04T14:51:16Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "77db5bf79b699ca84e6542960c165441a3df7f5c8ebe410ce6770e4fa371f83c",
+      "fetched_at": "2026-09-28T22:01:22Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-margaretville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 1,
+          "said": "Weekend: Sunday 9:00 am – Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8476e9e4",
+          "page": 1,
+          "said": "Sunday 9:00 am – Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77db5bf7",
+          "page": 1,
+          "said": "Sunday 9:00 am – Sacred Heart Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "197ab28626a4",
+          "said": "weekly mass Sunday 09:00 sacred-heart-margaretville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8476e9e4d4e2",
+          "said": "weekly mass Sunday 09:00 sacred-heart-margaretville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "77db5bf79b69",
+          "said": "weekly mass Sunday 09:00 sacred-heart-margaretville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and the intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-andes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 1,
+          "said": "Saturday 4:00 pm – St. Anne's Mission Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8476e9e4",
+          "page": 1,
+          "said": "Saturday 4:00 pm – St. Anne's Mission Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77db5bf7",
+          "page": 1,
+          "said": "Saturday 4:00 pm – St. Anne's Mission Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "197ab28626a4",
+          "said": "weekly mass Saturday 16:00 st-anne-andes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8476e9e4d4e2",
+          "said": "weekly mass Saturday 16:00 st-anne-andes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "77db5bf79b69",
+          "said": "weekly mass Saturday 16:00 st-anne-andes",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and the intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-margaretville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 1,
+          "said": "Weekday Mass at Sacred Heart: Thursday 9:00 am (chapel at the Rectory)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 2,
+          "said": "Thursday, October 15, 2026 9:00 AM — Mass: Sacred Heart Chapel (Rectory)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8476e9e4",
+          "page": 1,
+          "said": "Thursday 9:00 am (Chapel at the Rectory)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77db5bf7",
+          "page": 1,
+          "said": "Thursday 9:00 am (Chapel at the Rectory)"
+        },
+        {
+          "source": "history",
+          "bulletin": "197ab28626a4",
+          "said": "weekly mass Thursday 09:00 sacred-heart-margaretville  “Rectory Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8476e9e4d4e2",
+          "said": "weekly mass Thursday 09:00 sacred-heart-margaretville  “In the rectory chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "77db5bf79b69",
+          "said": "weekly mass Thursday 09:00 sacred-heart-margaretville  “Rectory Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): the Rectory chapel is at 38 Academy St., the address data/churches.csv gives for Sacred Heart Church, so it belongs to that church. The Sep 27 bulletin explains the time moved from Thursday 5:30 PM to 9:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-margaretville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 1,
+          "said": "Friday 11 am Adoration followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 3,
+          "said": "ADORATION Fridays @ 11 AM at Sacred Heart Church in Margaretville followed by"
+        },
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 2,
+          "said": "Friday, October 16, 2026 11:00 AM — Sacred Heart Church Adoration followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8476e9e4",
+          "page": 1,
+          "said": "Friday 11 am Adoration followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "77db5bf7",
+          "page": 1,
+          "said": "Friday 11 am Adoration followed by Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "197ab28626a4",
+          "said": "weekly adoration Friday 11:00 sacred-heart-margaretville  “Rectory Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8476e9e4d4e2",
+          "said": "weekly adoration Friday 11:00 sacred-heart-margaretville  “Followed by Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "77db5bf79b69",
+          "said": "weekly adoration Friday 11:00 sacred-heart-margaretville  “Main Church; followed by Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekly in the schedule box, the Adoration box and the intentions of all three bulletins. No end time is given. The bulletins say Church (Sep 27), Rectory chapel (Oct 11 box) and Sacred Heart Church (Adoration box, intentions); the Rectory is the church list's address, so the slug is the same either way.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 1,
+          "said": "Friday 11 am Adoration followed by Mass (chapel at the Rectory)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 2,
+          "said": "Friday, October 16, 2026 11:00 AM — Sacred Heart Church Adoration followed by Mass — No Intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "197ab28626a4",
+          "said": "weekly mass Friday 11:00 sacred-heart-margaretville  “Follows 11:00 AM Adoration; Rectory Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8476e9e4d4e2",
+          "said": "weekly mass Friday 11:00 sacred-heart-margaretville  “Following adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "77db5bf79b69",
+          "said": "weekly mass Friday 11:30 sacred-heart-margaretville  “Approximate time; follows 11:00 AM Adoration in Main Church”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R30: the bulletins print only the Adoration time; the Mass has no clock time, and POLICY works out only times after a Mass. Stored history reads it at 11:00 (twice) and 11:30 (once, marked approximate). A wrong time is worse than a missing one, so leaning leave out.",
+      "question": "Add a Friday Mass after the 11:00 AM Adoration at Sacred Heart?",
+      "options": [
+        {
+          "label": "Friday Mass 11:00 AM",
+          "entry": {
+            "church_slug": "sacred-heart-margaretville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Follows Adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "friday"
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-margaretville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory chapel; follows 9:00 AM Devotion"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77db5bf7",
+          "page": 1,
+          "said": "First Saturday – 9 am - Devotion followed by Mass (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 1,
+          "said": "Weekend and weekday Mass schedule box has no First Saturday line"
+        },
+        {
+          "source": "history",
+          "bulletin": "77db5bf79b69",
+          "said": "weekly mass Saturday 09:30 sacred-heart-margaretville  “First Saturday of the month; Rectory Chapel; follows 9:00 AM Devotion”",
+          "page": 1
+        }
+      ],
+      "rationale": "R24: the Sep 27 bulletin gives the 9:00 AM Devotion but no clock time for the Mass, and the Oct 4 and Oct 11 schedule boxes no longer list a First Saturday at all. History read 9:30 as a guess.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-margaretville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 4,
+          "said": "Misas en español en la Iglesia del Sagrado Corazón los sábados 17, 24 y 31 de octubre a las 6:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "197ab28626a4",
+          "said": "specific_date mass 2026-10-17 18:00 sacred-heart-margaretville  “Spanish”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Weekly or dated): a Spanish Mass at Sacred Heart Church on a printed date after as_of. Different church from the 4 PM Mass at St. Anne's, so not a duplicate.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-margaretville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 4,
+          "said": "Misas en español en la Iglesia del Sagrado Corazón los sábados 17, 24 y 31 de octubre a las 6:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "197ab28626a4",
+          "said": "specific_date mass 2026-10-24 18:00 sacred-heart-margaretville  “Spanish”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Weekly or dated): a Spanish Mass at Sacred Heart Church on a printed date after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-margaretville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-31",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 4,
+          "said": "Misas en español en la Iglesia del Sagrado Corazón los sábados 17, 24 y 31 de octubre a las 6:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "197ab28626a4",
+          "said": "specific_date mass 2026-10-31 18:00 sacred-heart-margaretville  “Spanish”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Weekly or dated): a Spanish Mass at Sacred Heart Church on a printed date after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Margaretville & Andes before Mass. Margaretville also before weekday Masses or by appointment"
+        }
+      ],
+      "rationale": "R26: confession before Mass or by appointment gives no minutes or clock time, so POLICY (Times) can't work out a start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "197ab286",
+          "page": 3,
+          "said": "Join us for the Rosary at 8:30 before 9 am Mass, Sundays."
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

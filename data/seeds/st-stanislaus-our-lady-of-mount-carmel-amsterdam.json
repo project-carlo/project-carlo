@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stanislaus-our-lady-of-mount-carmel-amsterdam",
+  "status": "ready",
+  "as_of": "2026-10-11T16:39:10Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:39:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, each with a Saturday vigil and a Sunday Mass: St. Stanislaus Sat 4:00 PM and Sun 9:00 AM, Our Lady of Mt. Carmel Sat 5:30 PM and Sun 10:30 AM. All three bulletins agree. The Saturday 3:00-3:30 Reconciliation is at St. Mary's Church (another parish), and no weekday Mass is printed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8a6d0aa899205a522003ff9f1b984ab3af078b4c38c4376b5139a0e1143ff437",
+      "fetched_at": "2026-10-11T16:39:10Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "2e44b95d182ea2a0bba3bc76388a34bdab55686d9396925314280f4f2a69a3fd",
+      "fetched_at": "2026-10-04T14:58:39Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6a6fa60a6038e4a76b6425c5c55b2551e54b23c9371dd20dbd95fb229b536fbe",
+      "fetched_at": "2026-09-28T22:09:01Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e44b95d",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a6fa60a",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 5,
+          "said": "SATURDAY, October 10, 4:00 p.m.-St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "8a6d0aa89920",
+          "said": "weekly mass Saturday 16:00 st-stanislaus-amsterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2e44b95d182e",
+          "said": "weekly mass Saturday 16:00 st-stanislaus-amsterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a6fa60a6038",
+          "said": "weekly mass Saturday 16:00 st-stanislaus-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the St. Stanislaus Mass schedule box of all three bulletins; the intentions page labels the 4:00 p.m. Mass St. Stanislaus.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 1,
+          "said": "Sunday: 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e44b95d",
+          "page": 1,
+          "said": "Sunday: 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a6fa60a",
+          "page": 1,
+          "said": "Sunday: 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 5,
+          "said": "SUNDAY, October 11, 2026, 9:00 a.m.-St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "8a6d0aa89920",
+          "said": "weekly mass Sunday 09:00 st-stanislaus-amsterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2e44b95d182e",
+          "said": "weekly mass Sunday 09:00 st-stanislaus-amsterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a6fa60a6038",
+          "said": "weekly mass Sunday 09:00 st-stanislaus-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the St. Stanislaus Mass schedule box of all three bulletins; the intentions page labels the 9:00 a.m. Mass St. Stanislaus.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 1,
+          "said": "Saturday Vigil: 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e44b95d",
+          "page": 1,
+          "said": "Saturday Vigil: 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a6fa60a",
+          "page": 1,
+          "said": "Saturday Vigil: 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 4,
+          "said": "OUR LADY OF MOUNT CARMEL ... Oct. 10-5:30 pm-mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8a6d0aa89920",
+          "said": "weekly mass Saturday 17:30 our-lady-of-mount-carmel-amsterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2e44b95d182e",
+          "said": "weekly mass Saturday 17:30 our-lady-of-mount-carmel-amsterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a6fa60a6038",
+          "said": "weekly mass Saturday 17:30 our-lady-of-mount-carmel-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Our Lady of Mt. Carmel Mass schedule box of all three bulletins; the ministries list gives the Saturday 5:30 pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 1,
+          "said": "Sunday: 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e44b95d",
+          "page": 1,
+          "said": "Sunday: 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a6fa60a",
+          "page": 1,
+          "said": "Sunday: 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 4,
+          "said": "Oct. 11-10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8a6d0aa89920",
+          "said": "weekly mass Sunday 10:30 our-lady-of-mount-carmel-amsterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2e44b95d182e",
+          "said": "weekly mass Sunday 10:30 our-lady-of-mount-carmel-amsterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a6fa60a6038",
+          "said": "weekly mass Sunday 10:30 our-lady-of-mount-carmel-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Our Lady of Mt. Carmel Mass schedule box of all three bulletins; the ministries list gives the Sunday 10:30 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is available every Saturday between 3:00 and 3:30 p.m. at St. Mary's Church in Amsterdam or by appointment by calling your Parish Office."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e44b95d",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is available every Saturday between 3:00 and 3:30 p.m. at St. Mary's Church in Amsterdam or by appointment by calling your Parish Office."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a6fa60a",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation is available every Saturday between 3:00 and 3:30 p.m. at St. Mary's Church in Amsterdam or by appointment by calling your Parish Office."
+        }
+      ],
+      "rationale": "R22: held at St. Mary's Church, Amsterdam, which is another parish's church; its events belong to that parish. 'By appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8a6d0aa8",
+          "page": 1,
+          "said": "Daily Mass: Check bulletin for schedule"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e44b95d",
+          "page": 1,
+          "said": "Daily Mass: Check bulletin for schedule"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a6fa60a",
+          "page": 1,
+          "said": "Daily Mass: Check bulletin for schedule"
+        }
+      ],
+      "rationale": "R26: both schedule boxes say to check the bulletin for daily Masses, and the bulletins print no weekday Mass (the Mass intentions list only Saturday and Sunday), so there is nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,1227 @@
+{
+  "schema_version": 1,
+  "parish_slug": "cheektowaga-kaisertown-sloan-catholic",
+  "status": "ready",
+  "as_of": "2026-10-11T16:33:03Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:38:42Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (OLC Cheektowaga, St. Andrew Sloan, St. Casimir Buffalo). The Mass Times box on page 1, an image page, gives every Mass and one Saturday Confession time for OLC and St. Andrew; it is the same in all three bulletins and matches history and the Mass intentions. Nothing is open. The bulletin prints OLC at 23 Willowlawn Parkway, but data/churches.csv lists 2158 Clinton Street; the address may need a look.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0cb0b8595a57721568640a2d603f7d12f9aa04d5d89da7b9c9abd9f71ad7c1eb",
+      "fetched_at": "2026-10-11T16:33:03Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "08cfc7f2d8f4ce543b65b07a9445742e4ec58219c3fa2c09dcb74398327fc7e1",
+      "fetched_at": "2026-10-04T14:23:56Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "bffb52f292b04e233978f1eb10d736d7aba9e142217a319dd8426d20af30c047",
+      "fetched_at": "2026-09-26T18:53:31Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at OLC each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Monday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Monday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Monday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at OLC each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at OLC each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Wednesday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Wednesday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Wednesday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at OLC each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Thursday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Thursday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Thursday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at OLC each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Friday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Friday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Friday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekend Mass Saturday: 4:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekend Mass Saturday: 4:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekend Mass Saturday: 4:00pm Vigil"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Saturday 16:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Saturday 16:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Saturday 16:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read; intentions on p5 list the 4:00 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekend Mass Sunday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekend Mass Sunday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Our Lady of Czestochowa Weekend Mass Sunday: 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Sunday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Sunday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Sunday 08:00 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-sloan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at St. Andrew each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Monday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Monday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Monday 08:00 st-andrew-sloan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-sloan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at St. Andrew each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Tuesday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Tuesday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Tuesday 08:00 st-andrew-sloan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-sloan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at St. Andrew each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Wednesday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Wednesday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Wednesday 08:00 st-andrew-sloan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-sloan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at St. Andrew each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Thursday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Thursday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Thursday 08:00 st-andrew-sloan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-sloan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Saint Andrew Weekday Mass Monday-Friday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 5,
+          "said": "Mass intentions list an 8:00 AM Mass at St. Andrew each weekday, Oct 12-16"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Friday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Friday 08:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Friday 08:00 st-andrew-sloan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read, and the intentions list each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-sloan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Saint Andrew Weekend Mass Saturday: 4:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Saint Andrew Weekend Mass Saturday: 4:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Saint Andrew Weekend Mass Saturday: 4:00pm Vigil"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Saturday 16:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Saturday 16:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Saturday 16:00 st-andrew-sloan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read; intentions on p5 list the 4:00 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-sloan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "Saint Andrew Weekend Mass Sunday: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "Saint Andrew Weekend Mass Sunday: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "Saint Andrew Weekend Mass Sunday: 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Sunday 11:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Sunday 11:00 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Sunday 11:00 st-andrew-sloan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "St. Casimir Weekend Mass Sunday: 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "St. Casimir Weekend Mass Sunday: 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "St. Casimir Weekend Mass Sunday: 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly mass Sunday 10:00 st-casimir-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly mass Sunday 10:00 st-casimir-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly mass Sunday 10:00 st-casimir-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of all three bulletins read; p5 lists the 10:00 AM Mass for Oct 11 and 18.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "CONFESSIONS Our Lady of Czestochowa & Saint Andrew Saturdays: 3:15-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "CONFESSIONS Our Lady of Czestochowa & Saint Andrew Saturdays: 3:15-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "CONFESSIONS Our Lady of Czestochowa & Saint Andrew Saturdays: 3:15-3:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-czestochowa-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confessions box names both churches with one time; the same box appears in all three bulletins. Both churches also have a 4:00 PM vigil, so simultaneous Confession at each is plausible.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-sloan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 1,
+          "said": "CONFESSIONS Our Lady of Czestochowa & Saint Andrew Saturdays: 3:15-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08cfc7f2",
+          "page": 1,
+          "said": "CONFESSIONS Our Lady of Czestochowa & Saint Andrew Saturdays: 3:15-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bffb52f2",
+          "page": 1,
+          "said": "CONFESSIONS Our Lady of Czestochowa & Saint Andrew Saturdays: 3:15-3:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "0cb0b8595a57",
+          "said": "weekly confession Saturday 15:15–15:45 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "08cfc7f2d8f4",
+          "said": "weekly confession Saturday 15:15–15:45 st-andrew-sloan",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bffb52f292b0",
+          "said": "weekly confession Saturday 15:15–15:45 st-andrew-sloan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confessions box names both churches with one time; the same box appears in all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 3,
+          "said": "Rosary in the Garden will be held in Our Lady of Czestochowa Church every Tuesday at 6:30 PM through October"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 4,
+          "said": "Timothy Cardinal Dolan will celebrate Holy Mass at St. Stanislaus Bishop & Martyr Church, Friday, October 23, 2026, 10:30 AM; Polish Remembrance Mass, October 25, 2026, Noon Mass, St. Stanislaus B&M Church, Peckham & Fillmore Ave."
+        }
+      ],
+      "rationale": "R22: both Masses are at St. Stanislaus Bishop & Martyr, Buffalo (Peckham & Fillmore), which is not one of this parish's churches; POLICY leaves out events held elsewhere.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-18",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass Mob"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0cb0b859",
+          "page": 4,
+          "said": "St. Casimir's Mass Mob, Sunday, October 18, 2026 @ 10am. All are welcome!"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the Mass Mob is a special occasion at the regular Sunday 10:00 AM Mass at St. Casimir, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Our Lady of Czestochowa Church (address mismatch: bulletin 23 Willowlawn Parkway, Cheektowaga, NY 14206; churches.csv 2158 Clinton Street)",
+      "said": "OUR LADY OF CZESTOCHOWA 23 Willowlawn Parkway Cheektowaga, NY 14206",
+      "bulletin": "0cb0b859",
+      "page": 1
+    }
+  ]
+}
