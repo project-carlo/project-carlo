@@ -75,7 +75,7 @@ def _fill_entry(entry: Any, church: str | None) -> Any:
     return {**{k: filled[k] for k in known}, **{k: v for k, v in filled.items() if k not in known}}
 
 
-def _next_id(taken: set[str]) -> str:
+def next_slot_id(taken: set[str]) -> str:
     n = 1
     while f"s{n}" in taken:
         n += 1
@@ -106,12 +106,12 @@ def _expand_sources(sources: Any) -> Any:
     return out
 
 
-def _fill_slot(slot: dict[str, Any], church: str | None, taken: set[str]) -> dict[str, Any]:
+def fill_slot(slot: dict[str, Any], church: str | None, taken: set[str]) -> dict[str, Any]:
     filled = dict(slot)
     if "sources" in filled:
         filled["sources"] = _expand_sources(filled["sources"])
     if not isinstance(filled.get("id"), str) or not filled["id"].strip():
-        filled["id"] = _next_id(taken)
+        filled["id"] = next_slot_id(taken)
     for key, default in _SLOT_DEFAULTS.items():
         filled.setdefault(key, default)
     if "status" not in filled:
@@ -139,7 +139,7 @@ def finalize_seed(
     if isinstance(slots, list):  # anything else is left for `seed check` to report
         taken = {s["id"] for s in slots if isinstance(s, dict) and isinstance(s.get("id"), str)}
         slots = seed["slots"] = [
-            attach_history(seed, _fill_slot(s, church, taken), history or [])
+            attach_history(seed, fill_slot(s, church, taken), history or [])
             if isinstance(s, dict) else s
             for s in slots
         ]

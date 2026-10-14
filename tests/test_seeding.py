@@ -1473,3 +1473,311 @@ def test_site_is_refused_in_a_historical_test_run(routed_cli, seed, capsys):
     capsys.readouterr()
     assert main(["seed", "site", PARISH, "--eval", "run1"]) == 1
     assert "may not read live websites" in capsys.readouterr().err
+
+
+# ── Writing slots by command (`seed slot`, `summary`, `church-issue`, `block`) ──
+ANNE = "st-anne-demo"
+ANNE_BATCH = """\
+# St. Anne, from the newest bulletin's page 2
+include "mass Sat 17:00 note=Vigil" --src "latest p2: Saturday 5:00 PM" --why "R1: Masses box."
+include "mass Sun 09:30,11:30" --src "latest p2: Sunday 9:30 AM and 11:30 AM" \\
+    --why "R1: Masses box."
+include "mass Tue,Thu 12:10" --src "latest: Tuesday and Thursday 12:10 PM" --page 2 \\
+    --why "R1: Masses box."
+include "confession Sat 3:30pm-4:30pm" --src "latest p2: Saturday 3:30 - 4:30 PM" \\
+    --why "R1: Confessions box."
+exclude - --src "latest p2: or by appointment" --why "R26: by appointment has no time."
+include "mass 2026-10-13 12:10 cancelled note=Father on retreat" \\
+    --src "latest p2: No Tuesday Mass on October 13 (Father on retreat)." \\
+    --why "R1, R16: a dated cancellation after as_of."
+ask "Add first-Friday Adoration, 9 AM to noon?" \\
+    --option "*First Fridays 9 AM-noon" "adoration Fri 09:00-12:00 first" \\
+    --option "Every Friday" "+ weeks=" --option "Leave out" \\
+    --src "latest p2: First Friday of each month, 9:00 AM until noon" \\
+    --why "Printed once; leaning to the weeks it names."
+summary "One church; every slot is in the newest bulletin's boxes. Open: first-Friday Adoration."
+church-issue "Fairport hospital chapel" "latest p2: Communion Wednesdays"
+"""
+
+
+def _start_anne(capsys) -> None:
+    assert main(["seed", "start", ANNE]) == 0
+    capsys.readouterr()
+
+
+def test_slot_entry_specs_say_a_slot_in_a_few_words():
+    from pdf_extract.seeding.slots import build_entries, format_entry, parse_entry_spec
+
+    def one(text: str, churches=(SJ,)) -> dict[str, Any]:
+        [entry] = build_entries(parse_entry_spec(text), list(churches))
+        return entry
+
+    assert one("mass Sat 4pm note=Vigil Mass, in Spanish") == {
+        "church_slug": SJ, "event_type": "mass", "event_kind": "weekly",
+        "day_of_week": "Saturday", "date": None, "start_time": "16:00", "end_time": None,
+        "note": "Vigil Mass, in Spanish"}
+    entry = one("adoration Thu 09:00-7pm season=sep-may")
+    assert (entry["end_time"], entry["season"]) == ("19:00", {
+        "start_month": 9, "start_day": None, "end_month": 5, "end_day": None})
+    assert one("adoration Thu 09:00 season=9/15-5/31")["season"] == {
+        "start_month": 9, "start_day": 15, "end_month": 5, "end_day": 31}
+    assert one("confession Fri 18:00 1st,3rd")["weeks_of_month"] == ["first", "third"]
+    skips = one("mass Sun 10:30 except=last")
+    assert (skips["weeks_of_month"], skips["exclude_weeks"]) == (["last"], True)
+    assert one("mass 2026-10-12 08:00 cancelled @holy-family", [HF, SJ])["church_slug"] == HF
+    dated = one("mass 2026-10-12 noon cancelled", [HF])
+    assert (dated["event_kind"], dated["date"], dated["day_of_week"], dated["start_time"],
+            dated["cancelled"]) == ("specific_date", "2026-10-12", None, "12:00", True)
+    many = build_entries(parse_entry_spec("mass Mon-Wed,Fri 07:00,08:00"), [SJ])
+    assert [(e["day_of_week"][:3], e["start_time"]) for e in many] == [
+        (d, t) for d in ("Mon", "Tue", "Wed", "Fri") for t in ("07:00", "08:00")]
+    # `+` (and edit) change only what they name, on top of another entry.
+    base = one("adoration Fri 09:45 first note=Holy Hour")
+    [changed] = build_entries(parse_entry_spec("+ weeks= 10:00 note="), [SJ], base)
+    assert changed == {**base, "weeks_of_month": [], "exclude_weeks": False,
+                       "start_time": "10:00", "end_time": None, "note": None}
+    assert format_entry(base) == f"adoration Fri 09:45 @{SJ} first note=Holy Hour"
+    for text, message in [
+        ("mass Sat 4:00", "must be 24-hour HH:MM"),
+        ("Sat 16:00", "name its type"),
+        ("mass 16:00", "name its day"),
+        ("mass Sat", "give its time"),
+        ("mass Sat 16:00 weeks=6th", "not a week of the month"),
+        ("mass Sat 16:00 season=9", "both ends given"),
+        ("mass Sat 16:00 sometimes", "don't know 'sometimes'"),
+        ("mass Fri-Mon 16:00", "runs backwards"),
+    ]:
+        with pytest.raises(SeedError, match=message):
+            build_entries(parse_entry_spec(text), [SJ])
+    with pytest.raises(SeedError, match="several churches: name it with @"):
+        build_entries(parse_entry_spec("mass Sat 16:00"), [HF, SJ])
+    with pytest.raises(SeedError, match="could be"):
+        build_entries(parse_entry_spec("mass Sat 16:00 @demo"), [HF, SJ])
+
+
+def test_slot_batch_drafts_a_whole_parish_that_finalizes(demo_cli, capsys, tmp_path):
+    _start_anne(capsys)
+    plan = tmp_path / "plan.txt"
+    plan.write_text(ANNE_BATCH)
+    assert main(["seed", "slot", "batch", ANNE, str(plan)]) == 0
+    out = capsys.readouterr().out
+    assert f"{ANNE}: drafting, 9 slots, 1 open questions" in out
+    assert "s1   include p2   mass Sat 17:00 @st-anne-demo-fairport note=Vigil  (1 src)" in out
+    assert "church list: Fairport hospital chapel: Communion Wednesdays" in out
+    saved = read_seed(ANNE, demo_cli["seeds_dir"])
+    newest = saved["bulletins"][0]["content_hash"]
+    by_id = {s["id"]: s for s in saved["slots"]}
+    assert [by_id[i]["entry"]["day_of_week"] for i in ("s4", "s5")] == ["Tuesday", "Thursday"]
+    # A source on the newest bulletin without a page takes the slot's --page.
+    assert by_id["s4"]["sources"] == [{"source": "agent", "bulletin": newest[:8], "page": 2,
+                                       "said": "Tuesday and Thursday 12:10 PM"}]
+    assert by_id["s6"]["entry"]["start_time"] == "15:30"
+    assert by_id["s7"]["entry"] is None and by_id["s7"]["decision"] == "exclude"
+    ask = by_id["s9"]
+    assert ask["status"] == "needs_human" and ask["page"] == 2
+    assert [(o["label"], o.get("leaning", False), (o["entry"] or {}).get("weeks_of_month"))
+            for o in ask["options"]] == [("First Fridays 9 AM-noon", True, ["first"]),
+                                         ("Every Friday", False, []), ("Leave out", False, None)]
+    assert saved["church_list_issues"] == [{"church": "Fairport hospital chapel",
+                                            "said": "Communion Wednesdays",
+                                            "bulletin": newest[:8], "page": 2}]
+    assert main(["seed", "finalize", ANNE]) == 0
+    assert capsys.readouterr().out.splitlines()[0] == f"{ANNE}: needs_review, 1 open questions  OK"
+
+    assert main(["seed", "slot", "list", ANNE]) == 0
+    listed = capsys.readouterr().out
+    assert "s9   ask     p2   Add first-Friday Adoration, 9 AM to noon?" in listed
+    assert "       * First Fridays 9 AM-noon = adoration Fri 09:00-12:00 " \
+        "@st-anne-demo-fairport first" in listed
+    assert main(["seed", "slot", "show", ANNE, "s8", "--json"]) == 0
+    assert json.loads(capsys.readouterr().out)["slots"][0]["entry"]["cancelled"] is True
+
+
+def test_the_file_format_batch_example_writes_a_draft_that_finalizes(demo_cli, capsys):
+    doc = (Path(__file__).resolve().parents[1] / ".claude/skills/draft-parish-seed/"
+           "file-format.md").read_text(encoding="utf-8")
+    example = doc.split("## Writing slots", 1)[1].split("```\n", 2)[1]
+    for other in ("1ab3e7c2", "77d0be19", "5e60aa31"):  # older bulletins St. Anne lacks
+        example = example.replace(other, "latest")
+    _start_anne(capsys)
+    Path("plan.txt").write_text(example)
+    assert main(["seed", "slot", "batch", ANNE, "plan.txt"]) == 0
+    capsys.readouterr()
+    saved = read_seed(ANNE, demo_cli["seeds_dir"])
+    assert len(saved["slots"]) == 14
+    assert [s["entry"] for s in saved["slots"] if s["decision"] == "exclude"][-1] is None
+    convent = [s for s in saved["slots"] if s.get("group") == "convent"]
+    assert [s["options"][0]["entry"]["day_of_week"][:3] for s in convent] == [
+        "Mon", "Tue", "Wed", "Thu", "Fri"]
+    assert main(["seed", "finalize", ANNE]) == 0
+    assert capsys.readouterr().out.splitlines()[0] == f"{ANNE}: needs_review, 2 open questions  OK"
+
+
+def test_slot_writes_check_what_they_write_and_write_nothing_on_a_problem(demo_cli, seed, capsys):
+    path = seed_path(PARISH, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    newest = seed["bulletins"][0]["content_hash"][:8]
+    for args, message in [
+        (["include", "mass Sat 16:00", "--src", "latest p2: Sat 4", "--why", "R1"],
+         "several churches: name it with @"),
+        (["include", "mass Sat 16:00 @holy-family", "--src", "latest p2: Sat 4", "--why", "R1"],
+         "s1 and s18 are the same slot"),
+        (["include", "mass Sat 18:00 @holy-family", "--src", "ffffffff p2: Sat", "--why", "R1"],
+         "'ffffffff' names none of the file's bulletins"),
+        (["include", "mass Sat 18:00 @holy-family", "--src", "Sat 6 PM", "--why", "R1"],
+         "no `: ` after its head"),
+        (["include", "mass Sat 18:00 @elsewhere-chapel", "--src", "latest p2: x", "--why", "R1"],
+         "s18.entry: unknown_church"),
+        (["ask", "Which?", "--option", "*A", "mass Sat 18:00 @holy-family", "--option", "*B",
+          "--src", "latest p2: x", "--why", "?"], "exactly one option must be the one"),
+        (["edit", "s99", "--why", "R1"], "no slot s99"),
+        (["edit", "s1"], "say what to change"),
+    ]:
+        assert main(["seed", "slot", args[0], PARISH, *args[1:]]) == 1
+        err = capsys.readouterr().err
+        assert message in err, (args, err)
+        assert path.read_bytes() == before
+    with pytest.raises(SystemExit):
+        main(["seed", "slot", "edit", PARISH, "s1", "--include", "--exclude"])
+    assert "not allowed with argument" in capsys.readouterr().err
+    # A slot left out may name a church elsewhere; a settled one without a rule warns.
+    assert main(["seed", "slot", "exclude", PARISH, "mass Sat 18:00 @elsewhere-chapel",
+                 "--src", f"{newest} p3: Mass at the chapel", "--why", "Elsewhere."]) == 0
+    out = capsys.readouterr().out
+    assert "s18  exclude p3   mass Sat 18:00 @elsewhere-chapel" in out
+    assert "! s18: a settled slot's rationale starts with the rule it rests on" in out
+
+
+def test_slot_edit_and_rm_change_what_they_name_and_keep_the_reviewers(demo_cli, seed, capsys):
+    s17 = _slot(seed, "s17")
+    s17.update(status="settled", decision="exclude", answer={
+        "choice": 2, "by": "Reviewer", "at": "2026-10-10T12:00:00Z"})
+    write_seed_file(seed, demo_cli["seeds_dir"])
+    newest = seed["bulletins"][0]["content_hash"][:8]
+
+    def run(*args: str) -> tuple[int, str]:
+        code = main(["seed", "slot", *args])
+        captured = capsys.readouterr()
+        return code, captured.out + captured.err
+
+    assert run("edit", PARISH, "s1", "--entry", "16:30 note=", "--src",
+               f"{newest} p2: Sat 4:30")[0] == 0
+    s1 = _slot(read_seed(PARISH, demo_cli["seeds_dir"]), "s1")
+    assert (s1["entry"]["start_time"], s1["entry"]["note"], s1["entry"]["church_slug"]) == (
+        "16:30", None, HF)
+    assert len(s1["sources"]) == 3 and s1["rationale"] == _slot(seed, "s1")["rationale"]
+    assert run("edit", PARISH, "s1", "--drop-src", "3")[0] == 0
+    assert len(_slot(read_seed(PARISH, demo_cli["seeds_dir"]), "s1")["sources"]) == 2
+
+    # A question settled by its leaning option, then asked again with a `+` option.
+    assert run("edit", PARISH, "s16", "--include", "--why", "R1: weekly.")[0] == 0
+    s16 = _slot(read_seed(PARISH, demo_cli["seeds_dir"]), "s16")
+    assert (s16["status"], s16["decision"], s16["question"], s16["entry"]["day_of_week"]) == (
+        "settled", "include", None, "Monday")
+    assert run("edit", PARISH, "s16", "--ask", "Monday weekly?", "--option", "*Yes", "+",
+               "--option", "Leave out")[0] == 0
+    s16 = _slot(read_seed(PARISH, demo_cli["seeds_dir"]), "s16")
+    assert (s16["status"], s16["entry"], s16["options"][0]["entry"]["day_of_week"]) == (
+        "needs_human", None, "Monday")
+
+    # The reviewer's answer stays: only evidence may be added to the slot.
+    code, out = run("edit", PARISH, "s17", "--why", "R1")
+    assert code == 1 and "answered by Reviewer" in out
+    assert run("edit", PARISH, "s17", "--src", f"{newest} p2: Holy Hour")[0] == 0
+    code, out = run("rm", PARISH, "s17")
+    assert code == 1 and "it stays" in out
+    assert run("rm", PARISH, "s11", "s12")[0] == 0
+    ids = [s["id"] for s in read_seed(PARISH, demo_cli["seeds_dir"])["slots"]]
+    assert "s11" not in ids and "s12" not in ids and "s13" in ids
+    code, out = run("show", PARISH, "s17")
+    assert f"[2] {newest} p2: Holy Hour" in out and "answered 2 by Reviewer" in out
+
+
+def test_ask_about_several_days_asks_one_grouped_slot_each(demo_cli, seed, capsys):
+    newest = seed["bulletins"][0]["content_hash"][:8]
+    assert main(["seed", "slot", "ask", PARISH, "St. Joseph weekday Mass at 7 AM?",
+                 "--option", "*Mon-Wed 7 AM", "mass Mon-Wed 07:00 @st-joseph",
+                 "--option", "First weeks only", "+ first", "--option", "Leave out",
+                 "--src", f"{newest} p2: Mon-Wed 7 AM", "--why", "Seen once."]) == 0
+    capsys.readouterr()
+    saved = read_seed(PARISH, demo_cli["seeds_dir"])
+    asked = [s for s in saved["slots"] if s.get("group") == "s18"]
+    assert [s["id"] for s in asked] == ["s18", "s19", "s20"]
+    assert [s["options"][1]["entry"]["day_of_week"] for s in asked] == [
+        "Monday", "Tuesday", "Wednesday"]
+    assert all(s["options"][1]["entry"]["weeks_of_month"] == ["first"] for s in asked)
+    assert validate_seed(saved, parish_slug=PARISH) == []
+    # Another slot joins the group, taking its question.
+    assert main(["seed", "slot", "ask", PARISH, "--group", "s18",
+                 "--option", "*Mon-Wed 7 AM", "mass Thu 07:00 @st-joseph",
+                 "--option", "First weeks only", "+ first", "--option", "Leave out",
+                 "--src", f"{newest} p2: Thu 7 AM", "--why", "Seen once."]) == 0
+    assert _slot(read_seed(PARISH, demo_cli["seeds_dir"]), "s21")["question"] == \
+        "St. Joseph weekday Mass at 7 AM?"
+
+
+def test_slot_batch_is_all_or_nothing_and_says_which_line(demo_cli, capsys):
+    _start_anne(capsys)
+    path = seed_path(ANNE, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    bad = 'include "mass Sat 17:00" --src "latest p2: Sat 5" --why "R1"\n# fine so far\n' \
+          'include "mass Sun 9:30" --src "latest p2: Sun" --why "R1"\n'
+    for text, message in [(bad, "line 3 (include): entry 'mass Sun 9:30': time '9:30'"),
+                          ("frobnicate s1\n", "line 1: 'frobnicate' is not one of"),
+                          ("rm\n", "line 1 (rm): the following arguments are required"),
+                          ("", "the batch is empty")]:
+        Path("plan.txt").write_text(text)
+        assert main(["seed", "slot", "batch", ANNE, "plan.txt"]) == 1
+        assert message in capsys.readouterr().err
+        assert path.read_bytes() == before
+
+
+def test_summary_church_issue_and_block_set_the_file(demo_cli, seed, capsys):
+    newest = seed["bulletins"][0]["content_hash"][:8]
+    assert main(["seed", "summary", PARISH, "Two churches, all clear."]) == 0
+    assert main(["seed", "church-issue", PARISH, "Mall chapel", f"{newest} p2: Mon 12:15"]) == 0
+    assert main(["seed", "church-issue", PARISH, "Mall chapel", "Mon 12:15 Mass"]) == 0
+    assert main(["seed", "church-issue", PARISH, "Hospital", "p3: Sun 8 AM"]) == 0
+    saved = read_seed(PARISH, demo_cli["seeds_dir"])
+    assert saved["summary"] == "Two churches, all clear."
+    assert saved["church_list_issues"] == [{"church": "Mall chapel", "said": "Mon 12:15 Mass"},
+                                           {"church": "Hospital", "said": "Sun 8 AM", "page": 3}]
+    assert main(["seed", "church-issue", PARISH, "Hospital", "--rm"]) == 0
+    assert main(["seed", "block", PARISH, "No bulletin prints a schedule."]) == 0
+    saved = read_seed(PARISH, demo_cli["seeds_dir"])
+    assert len(saved["church_list_issues"]) == 1
+    assert (saved["status"], saved["blocked_reason"]) == (
+        "blocked", "No bulletin prints a schedule.")
+    assert main(["seed", "block", PARISH, "--clear", "--json"]) == 0
+    capsys.readouterr()
+    assert read_seed(PARISH, demo_cli["seeds_dir"])["status"] == "drafting"
+
+
+def test_slot_writes_refuse_an_approved_file(demo_cli, seed, capsys):
+    path = write_seed_file(_approved(seed), demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    for args in (["slot", "include", PARISH, "mass Sat 18:00 @holy-family", "--src",
+                  "latest p2: x", "--why", "R1"], ["slot", "rm", PARISH, "s1"],
+                 ["summary", PARISH, "x"], ["block", PARISH, "x"]):
+        assert main(["seed", *args]) == 1
+        assert "belongs to its reviewer" in capsys.readouterr().err
+    assert path.read_bytes() == before
+    assert main(["seed", "slot", "list", PARISH]) == 0  # reading is fine
+
+
+def test_slot_writes_follow_eval_and_refuse_websites_there(routed_cli, seed, capsys):
+    labels = Path("data/labels") / PARISH
+    labels.mkdir(parents=True)
+    (labels / f"{seed['bulletins'][0]['content_hash']}.json").write_text('{"status": "done"}')
+    assert main(["seed", "pick", "--labeled", "--eval", "run1"]) == 0
+    assert main(["seed", "start", PARISH, "--eval", "run1"]) == 0
+    capsys.readouterr()
+    args = ["seed", "slot", "include", PARISH, "mass Sat 16:00 @holy-family", "--why", "R1: x",
+            "--eval", "run1", "--src", "latest p2: Sat 4"]
+    assert main([*args, "--src", "web https://example.org/times: Sat 4 PM"]) == 1
+    assert "website sources are not allowed in a historical test run" in capsys.readouterr().err
+    assert main(args) == 0
+    capsys.readouterr()
+    assert [s["id"] for s in read_seed(PARISH, SeedContext.for_run("run1").seeds_dir)[
+        "slots"]] == ["s1"]
+    assert read_seed(PARISH) is None

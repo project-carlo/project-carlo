@@ -222,7 +222,7 @@ _STRIP_PATTERNS = [
     re.compile(r"<!--.*?-->", re.DOTALL),
     re.compile(r"<(?:link|meta)\b[^>]*>", re.IGNORECASE),
 ]
-_SCRIPT = re.compile(r"<script\b.*?</script>", re.IGNORECASE | re.DOTALL)
+_SCRIPT = re.compile(r"<script\b.*?</script\b[^>]*>", re.IGNORECASE | re.DOTALL)
 
 
 def _slim_html(html: str) -> str:

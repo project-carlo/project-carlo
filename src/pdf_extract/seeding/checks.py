@@ -120,7 +120,7 @@ def _parish_id(conn: sqlite3.Connection, parish_slug: str) -> int | None:
     return None if row is None else int(row[0])
 
 
-def _entry_problem(
+def entry_problem(
     raw: dict[str, Any], churches: dict[str, int], where: str, *, outside_ok: bool = False,
 ) -> str | None:
     """Why the entry can't be stored, or None. With `outside_ok`, a church that isn't the
@@ -203,7 +203,7 @@ def check_seed(
                 "use only bulletins and history within its cutoff"
             )
         if slot["entry"] is not None:
-            problem = _entry_problem(
+            problem = entry_problem(
                 slot["entry"], churches, f"{where}.entry", outside_ok=not included,
             )
             if problem:
@@ -226,7 +226,7 @@ def check_seed(
             if option.get("entry") is not None:
                 # An option is only a proposal: choosing one that names a church
                 # outside the parish fails the included slot's check instead.
-                problem = _entry_problem(
+                problem = entry_problem(
                     option["entry"], churches, f"{where}.options[{j}].entry", outside_ok=True,
                 )
                 if problem:

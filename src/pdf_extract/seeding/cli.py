@@ -14,6 +14,20 @@ Draft: one parish's file (the drafter)
   mark-read <parish> <bulletin>         record a bulletin read, even when no slot cites it
   finalize  <parish>...                 fill in defaults, read marks, as_of, status; check
 
+Write: the draft's slots, checked as they are written (`seed slot --help`: the specs)
+  slot list    <parish>                            every slot: id, decision, page, entry
+  slot show    <parish> <id>...                    slots in full, their sources numbered
+  slot include <parish> ENTRY --src S... --why R   settled inclusions, one per day and time
+  slot exclude <parish> [ENTRY] --src S... --why R slots left out (no ENTRY: nothing to record)
+  slot ask     <parish> "Q" --option "*L" ENTRY --option L --src S --why R [--group G]
+  slot edit    <parish> <id>... [--entry E] [--include|--exclude|--ask Q] [--option ...]
+               [--page N] [--src S] [--drop-src N] [--why R] [--group G]
+  slot rm      <parish> <id>...                    remove slots (never an answered one)
+  slot batch   <parish> [file]                     those writes, one per line (- or none: stdin)
+  summary      <parish> "text"                     what a reviewer reads first
+  church-issue <parish> "church" "HEAD: said" [--rm]   a church the list lacks (R23)
+  block        <parish> "reason" | --clear         R34
+
 Read: the stored bulletins
   bulletins <parish> [--limit N]                      newest first, with pages and flags
   pdf       <parish> <bulletin>                       the PDF the pipeline reads, locally
@@ -46,6 +60,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import sys
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -54,6 +69,7 @@ from pdf_extract.classifiers.seed_ask import MODELS
 from pdf_extract.db import ensure_db
 from pdf_extract.schedule.store import parish_churches
 from pdf_extract.seeding import queries
+from pdf_extract.seeding import slots as slot_writes
 from pdf_extract.seeding.calls import call_limit, load_or_start, run_ask, run_extract
 from pdf_extract.seeding.checks import check_seed
 from pdf_extract.seeding.coverage import diff, event_parts, missing_warning
@@ -355,6 +371,72 @@ def _score(args: argparse.Namespace) -> Result:
     }
 
 
+def _read_for_slots(ctx: SeedContext, slug: str) -> dict[str, Any]:
+    seed = read_seed(slug, ctx.seeds_dir)
+    if seed is None:
+        raise SeedError(f"{slug} has {_no_seed_file(ctx, slug)}")
+    if seed.get("parish_slug") != slug:
+        raise SeedError(f"the file's parish_slug is {seed.get('parish_slug')!r}, not {slug}")
+    return seed
+
+
+def _file_view(slug: str, seed: dict[str, Any]) -> Result:
+    return {
+        "parish": slug, "status": seed.get("status"), "summary": seed.get("summary"),
+        "blocked_reason": seed.get("blocked_reason"),
+        "open_questions": SeedSummary.of(slug, seed).open_questions,
+        "church_list_issues": seed.get("church_list_issues") or [],
+    }
+
+
+def _writer(verb: str):
+    """A write command (`seed slot include`, `seed summary`, …, or a whole `slot batch`):
+    apply it to the file in memory, check the slots it touched, and write the file."""
+    def handler(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+        seed = _read_for_slots(ctx, args.parish)
+        ctx.cutoff(args.parish)  # a test run's parish must be in the run
+        parish = queries.parish_row(conn, args.parish)
+        draft = slot_writes.Draft(seed, parish_churches(conn, parish["id"]), ctx.eval_run)
+        if verb == "batch":
+            if args.file in (None, "-"):
+                text = sys.stdin.read()
+            else:
+                try:
+                    text = Path(args.file).read_text(encoding="utf-8")
+                except OSError as exc:
+                    raise SeedError(f"can't read the batch {args.file}: {exc}") from exc
+            slot_writes.run_batch(draft, text)
+        else:
+            slot_writes.WRITES[verb](draft, args)
+        draft.check()
+        path = write_seed_file(draft.seed, ctx.seeds_dir)
+        return {
+            **_file_view(args.parish, draft.seed), "verb": verb,
+            "path": Path(os.path.relpath(path)).as_posix(),
+            "slots": [draft.slot(i) for i in draft.touched], "removed": draft.removed,
+            "total_slots": len(draft.slots), "warnings": draft.warnings,
+        }
+    return handler
+
+
+def _slot_list(args: argparse.Namespace) -> Result:
+    ctx = _ctx(args)
+    seed = _read_for_slots(ctx, args.parish)
+    slots = seed.get("slots") if isinstance(seed.get("slots"), list) else []
+    return {**_file_view(args.parish, seed), "slots": slots}
+
+
+def _slot_show(args: argparse.Namespace) -> Result:
+    ctx = _ctx(args)
+    seed = _read_for_slots(ctx, args.parish)
+    by_id = {s.get("id"): s for s in seed.get("slots") or [] if isinstance(s, dict)}
+    missing = [i for i in args.ids if i not in by_id]
+    if missing:
+        raise SeedError(f"no slot {', '.join(missing)} in {args.parish} "
+                        f"(`pnpm seed slot list {args.parish}`)")
+    return {"parish": args.parish, "slots": [by_id[i] for i in args.ids]}
+
+
 # ── Text output ─────────────────────────────────────────────────────────────
 def _when(value: str | None) -> str:
     return (value or "—")[:16].replace("T", " ")
@@ -506,6 +588,49 @@ def _text_score(r: Result) -> str:
     ])
 
 
+def _text_file_head(r: Result, n_slots: int) -> list[str]:
+    head = f"{r['parish']}: {r['status']}, {n_slots} slots"
+    if r["open_questions"]:
+        head += f", {r['open_questions']} open questions"
+    if r.get("blocked_reason"):
+        head += f"; blocked: {r['blocked_reason']}"
+    return [head]
+
+
+def _text_issues(r: Result) -> list[str]:
+    return [f"church list: {i.get('church')}: {i.get('said')}"
+            + (f" ({i['bulletin']}" + (f" p{i['page']}" if i.get("page") else "") + ")"
+               if i.get("bulletin") else "")
+            for i in r["church_list_issues"] if isinstance(i, dict)]
+
+
+def _text_slot_list(r: Result) -> str:
+    lines = _text_file_head(r, len(r["slots"]))
+    lines.append(f"summary: {r['summary'] or '(none yet: `seed summary`)'}")
+    for slot in r["slots"]:
+        lines += slot_writes.slot_lines(slot)
+    return "\n".join(lines + _text_issues(r))
+
+
+def _text_slot_show(r: Result) -> str:
+    return "\n".join(line for slot in r["slots"] for line in slot_writes.slot_lines(slot,
+                                                                                    full=True))
+
+
+def _text_written(r: Result) -> str:
+    lines = [f"{r['path']}: written"] + _text_file_head(r, r["total_slots"])
+    if r["verb"] in ("summary", "batch") and r["summary"]:
+        lines.append(f"summary: {r['summary']}")
+    for slot in r["slots"]:
+        lines += slot_writes.slot_lines(slot)
+    if r["removed"]:
+        lines.append(f"removed {', '.join(r['removed'])}")
+    if r["verb"] in ("church-issue", "batch"):
+        lines += _text_issues(r)
+    lines += [f"! {w}" for w in r["warnings"]]
+    return "\n".join(lines)
+
+
 def _text_start(r: Result) -> str:
     if r["resumed"]:
         text = (f"{r['path']}: resumed an existing draft ({r['status']}, {r['slots']} slots, "
@@ -650,9 +775,10 @@ def add_seed_parser(
     sub = parser.add_subparsers(dest="seed_command", metavar="<command>", help=argparse.SUPPRESS)
 
     def leaf(name: str, help_text: str, handler, render, *, eval_run: bool = True,
-             listed: bool = True):
-        p = sub.add_parser(name, help=help_text if listed else None, description=help_text,
-                           prog=f"{parser.prog} {name}")
+             listed: bool = True, under: Any = None, prog: str | None = None):
+        p = (under or sub).add_parser(name, help=help_text if listed else None,
+                                      description=help_text,
+                                      prog=f"{prog or parser.prog} {name}")
         p.set_defaults(handler=handler, render=render)
         p.add_argument("--json", action="store_true", help="Print the JSON result")
         if eval_run:
@@ -715,6 +841,49 @@ def add_seed_parser(
              _with_conn(_finalize), _text_check)
     p.add_argument("parish", nargs="+", help="Parish slugs")
     p.set_defaults(fail_on_verification_error=True)
+
+    # Write
+    slot = sub.add_parser("slot", help="List, add, change and remove a draft's slots",
+                          description=slot_writes.USAGE, usage="%(prog)s <command> ...",
+                          prog=f"{parser.prog} slot",
+                          formatter_class=argparse.RawDescriptionHelpFormatter)
+    slot.set_defaults(help_parser=slot)
+    slot_sub = slot.add_subparsers(dest="slot_command", metavar="<command>")
+    in_slot = {"under": slot_sub, "prog": slot.prog}
+
+    p = leaf("list", "Every slot of a parish's file: id, decision, page, entry or question",
+             _slot_list, _text_slot_list, **in_slot)
+    parish(p)
+    p = leaf("show", "Slots in full: entry, options, numbered sources, rationale, answer",
+             _slot_show, _text_slot_show, **in_slot)
+    parish(p)
+    p.add_argument("ids", nargs="+", metavar="ID", help="Slot ids (s3 s4)")
+    for name, help_text in (
+        ("include", "Add settled inclusions: one slot per day or date and time"),
+        ("exclude", "Add slots left out on purpose, each with its reason"),
+        ("ask", "Add an open question (several days: one grouped slot each)"),
+        ("edit", "Change slots' entry, decision, question, options, page, sources or "
+                 "rationale; ids stay"),
+        ("rm", "Remove slots the drafter added (never an answered one)"),
+    ):
+        p = leaf(name, help_text, _with_conn(_writer(name)), _text_written, **in_slot)
+        parish(p)
+        slot_writes.add_write_args(name, p)
+    p = leaf("batch", "Apply write commands, one per line without `pnpm seed slot` and the "
+             "parish (`include mass Sun 08:00,10:30 --src 'latest p2: …' --why 'R1: …'`); "
+             "`\\` continues a line, `#` comments. All are written or none",
+             _with_conn(_writer("batch")), _text_written, **in_slot)
+    parish(p)
+    p.add_argument("file", nargs="?", help="The batch file (default, or -: stdin)")
+
+    for name, help_text in (
+        ("summary", "Set the file's summary, which a reviewer reads first"),
+        ("church-issue", "List a church or chapel the church list lacks, once (R23)"),
+        ("block", "Block the parish with its reason (R34), or --clear it"),
+    ):
+        p = leaf(name, help_text, _with_conn(_writer(name)), _text_written)
+        parish(p)
+        slot_writes.add_write_args(name, p)
 
     # Read
     p = leaf("bulletins", "A parish's stored bulletins, newest first", _with_conn(_bulletins),
