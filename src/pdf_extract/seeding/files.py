@@ -630,14 +630,32 @@ def _validate_church_issues(seed: dict[str, Any]) -> list[str]:
     return errors
 
 
-def _group_errors(slots: list[dict[str, Any]]) -> list[str]:
+def slot_problems(seed: dict[str, Any], slot: Any, where: str) -> list[str]:
+    """Every reason one slot is malformed, as `validate_seed` reports it (`seed slot`)."""
+    call_ids = {c["id"] for c in _list(seed.get("calls"))
+                if isinstance(c, dict) and isinstance(c.get("id"), str)}
+    return _validate_slot(seed, slot, where, call_ids)
+
+
+def church_issue_problems(seed: dict[str, Any]) -> list[str]:
+    """`validate_seed`'s check of the file's `church_list_issues` (`seed church-issue`)."""
+    return _validate_church_issues(seed)
+
+
+def group_problems(slots: list[Any], groups: set[str]) -> list[str]:
+    """`validate_seed`'s check that each of `groups` asks one question."""
+    return _group_errors([s for s in slots if isinstance(s, dict)], groups)
+
+
+def _group_errors(slots: list[dict[str, Any]], only: set[str] | None = None) -> list[str]:
     """A group's open slots are answered with one choice, so they ask the same question
     with the same option labels, in the same order, leaning the same way."""
     errors = []
     first: dict[str, dict[str, Any]] = {}
     for i, slot in enumerate(slots):
         group = slot.get("group")
-        if not group or slot["status"] != NEEDS_HUMAN:
+        if not group or slot.get("status") != NEEDS_HUMAN or (only is not None
+                                                              and group not in only):
             continue
         lead = first.setdefault(group, slot)
         if lead is slot:
