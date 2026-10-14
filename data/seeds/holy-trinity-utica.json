@@ -1,0 +1,1016 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-utica",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:35:27Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:32:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, Holy Trinity (Utica) and Sacred Heart - St. Mary's (New York Mills). Neither bulletin prints a schedule box, so weekly slots come from the Mass intentions, which agree across the three bulletins read. Included: the Monday cancellation on October 12 and the second-Monday 6 PM Charismatic Mass. Open: two Holy Trinity confession times found only on its stale website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "46071daf4cf6908bed63083dac70fbb6a3d10ccc43f4d6d36d1e2c0eb27dd839",
+      "fetched_at": "2026-10-11T16:35:27Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "e8bf973acbcf4d0cf2312f4318a165b1a75a443a7a5c82765298af2419276287",
+      "fetched_at": "2026-10-04T14:35:09Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "80aa68d22c75c35fc1628c475e1e01c74a40e3aebc9ba491250a77ad6b62a4fd",
+      "fetched_at": "2026-09-28T00:06:33Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Sunday, October 11 / Next Sunday, October 18, Holy Trinity Church 8:00am, 9:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Sunday Holy Trinity Church 8:00am, 9:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Sunday Holy Trinity Church 8:00am, 9:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Sunday 08:00 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Sunday 08:00 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Sunday 08:00 holy-trinity-utica",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the Mass intentions list both Masses on every Sunday of all three bulletins read (POLICY, Weekly or dated, rule 4). There is no schedule box; the Holy Trinity website agrees (Sunday Masses 8:00am, 9:45am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Sunday, October 11 / Next Sunday, October 18, Holy Trinity Church 8:00am, 9:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Sunday Holy Trinity Church 8:00am, 9:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Sunday Holy Trinity Church 8:00am, 9:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Sunday 09:45 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Sunday 09:45 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Sunday 09:45 holy-trinity-utica",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the Mass intentions list both Masses on every Sunday of all three bulletins read (POLICY, Weekly or dated, rule 4). There is no schedule box; the Holy Trinity website agrees (Sunday Masses 8:00am, 9:45am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Wednesday, October 14 and Thursday, October 15, Holy Trinity Church 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Wednesday and Thursday, Holy Trinity Church 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Wednesday and Thursday, Holy Trinity Church 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Wednesday 08:00 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Wednesday 08:00 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Wednesday 08:00 holy-trinity-utica",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: listed in the Mass intentions of all three bulletins read (POLICY, Weekly or dated, rule 4); the Holy Trinity website agrees (8:00am Wednesday & Thursday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Wednesday, October 14 and Thursday, October 15, Holy Trinity Church 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Wednesday and Thursday, Holy Trinity Church 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Wednesday and Thursday, Holy Trinity Church 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Thursday 08:00 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Thursday 08:00 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Thursday 08:00 holy-trinity-utica",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: listed in the Mass intentions of all three bulletins read (POLICY, Weekly or dated, rule 4); the Holy Trinity website agrees (8:00am Wednesday & Thursday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Friday, October 16, Holy Trinity Church 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Friday, Holy Trinity Church 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Friday, Holy Trinity Church 12:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Friday 12:15 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Friday 12:15 holy-trinity-utica",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Friday 12:15 holy-trinity-utica",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: listed in the Mass intentions of all three bulletins read (POLICY, Weekly or dated, rule 4); the Holy Trinity website agrees (12:15pm Friday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Saturday, October 10 and 17, Sacred Heart - St. Mary's Church 4:00pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Saturday 4:00pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Saturday 4:00pm (Vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Saturday 16:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Saturday 16:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Saturday 16:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the vigil is listed every Saturday in all three bulletins read (POLICY, Weekly or dated, rule 4). There is no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Sunday, October 11 / Next Sunday, October 18, Sacred Heart - St. Mary's Church 8:00am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Sunday Sacred Heart - St. Mary's Church 8:00am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Sunday Sacred Heart - St. Mary's Church 8:00am, 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Sunday 08:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Sunday 08:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Sunday 08:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: listed every Sunday in all three bulletins read (POLICY, Weekly or dated, rule 4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Sunday, October 11 / Next Sunday, October 18, Sacred Heart - St. Mary's Church 8:00am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Sunday Sacred Heart - St. Mary's Church 8:00am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Sunday Sacred Heart - St. Mary's Church 8:00am, 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Sunday 11:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Sunday 11:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Sunday 11:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: listed every Sunday in all three bulletins read (POLICY, Weekly or dated, rule 4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Saturday, October 10 and 17, Sacred Heart - St. Mary's Church 3:00pm Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Saturday 3:00pm Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Saturday 3:00pm Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly confession Saturday 15:00–16:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly confession Saturday 15:00–16:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly confession Saturday 15:00 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: '3:00pm Confession' is printed above the 4:00pm vigil every Saturday in all three bulletins. No end time is printed, so none is given (POLICY, Times). The Sacred Heart - St. Mary's website says 3:15pm; the bulletin wins (R6). History read it as 3:00-4:00 in 2 of 3 (R7, R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Tuesday, October 13, Sacred Heart - St. Mary's Church 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Tuesday, October 6, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Tuesday, September 29, 12:15pm NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Tuesday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Tuesday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Tuesday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R3: the Mass is listed at 12:15 in the newest two bulletins. The September 27 bulletin printed 'NO MASS' for Monday through Wednesday of that week (no reason given), so the weekday Masses were suspended once; the newest two bulletins show them held.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Wednesday, October 14, Sacred Heart - St. Mary's Church 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Wednesday, October 7, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Wednesday, September 30, 12:15pm NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Wednesday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Wednesday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Wednesday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R3: the Mass is listed at 12:15 in the newest two bulletins. The September 27 bulletin printed 'NO MASS' that week, so it was suspended once; the newest two bulletins show it held.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Monday, October 12, Sacred Heart - St. Mary's Church 12:15pm NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 1,
+          "said": "Parish offices closed on Columbus Day, October 12th"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e8bf973a",
+          "page": 4,
+          "said": "Monday, October 5, 12:15pm Richard Niemiec (BD)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80aa68d2",
+          "page": 4,
+          "said": "Monday, September 28, 12:15pm NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "weekly mass Monday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "weekly mass Monday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Monday 12:15 sacred-heart-st-mary-new-york-mills",
+          "page": 4
+        }
+      ],
+      "rationale": "R18, R3: the newest bulletin skips Monday October 12 with 'NO MASS' on the Columbus Day holiday (offices closed), and the October 4 bulletin lists the Monday Mass on October 5. The September 27 bulletin's 'NO MASS' on Monday through Wednesday that week was a one-time suspension, as for Tuesday and Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 4,
+          "said": "Monday, October 12, Sacred Heart - St. Mary's Church 12:15pm NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "specific_date mass 2026-10-12 12:15 sacred-heart-st-mary-new-york-mills  CANCELLED; “Columbus Day”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16, R18: the newest bulletin prints NO MASS for this date, which is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-st-mary-new-york-mills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Charismatic Mass with Healing Prayers"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 3,
+          "said": "Charismatic Mass With Healing Prayers celebrated by Fr. Amadeo Guida on the 2nd Monday of each month at 6 PM at Sacred Heart - St. Mary's (October 12). The Mass is open to all people"
+        },
+        {
+          "source": "history",
+          "bulletin": "46071daf4cf6",
+          "said": "specific_date mass 2026-10-12 18:00 sacred-heart-st-mary-new-york-mills  “Charismatic Mass with Healing Prayers”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "e8bf973acbcf",
+          "said": "specific_date mass 2026-10-12 18:00 sacred-heart-st-mary-new-york-mills  “Charismatic Mass with Healing Prayers”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "80aa68d22c75",
+          "said": "weekly mass Monday 18:00 sacred-heart-st-mary-new-york-mills  “2nd Monday of each month; Charismatic Mass with Healing Prayers”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: POLICY (Weekly or dated, rule 2) makes a slot tied to a week of the month weekly with weeks_of_month, even with this month's date given. The newest bulletin's week holds the second Monday and prints it; the Mass is open to all. The regular Monday 12:15 Mass is a separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-utica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-03",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday at Our Lady of Lourdes"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46071daf",
+          "page": 2,
+          "said": "FIRST SATURDAY SCHEDULE at Our Lady of Lourdes Church, October 3rd, 7:45 a.m. Rosary, 8:15 a.m. Mass, Confessions following Mass until all are heard"
+        }
+      ],
+      "rationale": "R22: Our Lady of Lourdes belongs to Mary, Mother of Our Savior (Utica), another parish, and the date is also before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holytrinityutica.com/masses.php",
+          "said": "Confessions: Saturday 4:00pm"
+        }
+      ],
+      "rationale": "R29, leaning per C9 against: only the Holy Trinity website prints it, and that page is stale (COVID-era mask and 25% attendance notices). No bulletin read lists a Holy Trinity Saturday Mass or confession; the Saturday 3:00pm confession and 4:00pm vigil are at Sacred Heart - St. Mary's.",
+      "question": "Add the Holy Trinity confession times that only its website lists (Saturday 4:00 PM, first Thursday 5:00 PM)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include the website time",
+          "entry": {
+            "church_slug": "holy-trinity-utica",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "ht-site-confession"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holytrinityutica.com/masses.php",
+          "said": "Confessions: First Thursdays 5:00pm"
+        }
+      ],
+      "rationale": "R29, leaning per C9 against: only the stale Holy Trinity website prints it (COVID-era notices on the same page). No bulletin read mentions it; no first Thursday falls in the newest bulletin's week, so the newest bulletin could not have shown it (R11), but the October 4 and September 27 bulletins hold the first Thursday of October and do not print it.",
+      "question": "Add the Holy Trinity confession times that only its website lists (Saturday 4:00 PM, first Thursday 5:00 PM)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include the website time",
+          "entry": {
+            "church_slug": "holy-trinity-utica",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "ht-site-confession"
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holytrinityutica.com/masses.php",
+          "said": "Confessions: Daily before the 8:00am mass"
+        },
+        {
+          "source": "website",
+          "url": "https://sacredheart-saintmary.org/massschedule.php",
+          "said": "Reconciliation: 1st Thursday of the month after the 12:10pm Mass"
+        }
+      ],
+      "rationale": "R26: 'before the 8:00am mass' gives no definite start, and the Sacred Heart - St. Mary's first-Thursday confession follows a 12:10pm Thursday Mass that no bulletin lists; both are only on websites.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

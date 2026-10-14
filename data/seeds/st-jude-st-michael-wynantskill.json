@@ -1,0 +1,979 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-jude-st-michael-wynantskill",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:34:31Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:37:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, St. Jude (Wynantskill) and St. Michael (Troy). Weekend, weekday and Adoration times print identically in the Mass schedule box of all three bulletins. The newest bulletin adds cancellations for Oct 12 and Oct 15, and a Veterans Day Mass at St. Jude on Nov 11 that replaces the 8:15 AM Mass. Open: which church holds the Saturday 3:00 Reconciliation (Sept 27 said St. Jude, the newer two say St. Michael).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "995a0b17c6902fc10e504f3dfae0a135c49a75e241da70ab55293bb1a57cc8e6",
+      "fetched_at": "2026-10-11T16:34:31Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "aba4d4523b4528af7b9d8560a3b54bcff277547b14f91e590fa6c7eabd71f196",
+      "fetched_at": "2026-10-04T14:55:03Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "49fcc9bd22ad3131d1de2ff1a7884b4a3897e3e35a8bb7ef56c2fa68548c4fad",
+      "fetched_at": "2026-09-28T22:04:42Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-wynantskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Saturday 4:00 PM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Saturday 4:00 PM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Saturday 4:00 PM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Saturday, October 17 4:00 PM | Saint Jude the Apostle"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly mass Saturday 16:00 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly mass Saturday 16:00 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly mass Saturday 16:00 st-jude-the-apostle-wynantskill",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Saturday 4:00 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Saturday 4:00 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Saturday 4:00 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Saturday, October 17 4:00 PM | Saint Michael the Archangel"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly mass Saturday 16:00 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly mass Saturday 16:00 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly mass Saturday 16:00 st-michael-the-archangel-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-wynantskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Sunday 10:30 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Sunday 10:30 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Sunday 10:30 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly mass Sunday 10:30 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly mass Sunday 10:30 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly mass Sunday 10:30 st-jude-the-apostle-wynantskill",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Sunday 8:30 AM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Sunday 8:30 AM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Sunday 8:30 AM | St. Michael the Archangel"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly mass Sunday 08:30 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly mass Sunday 08:30 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly mass Sunday 08:30 st-michael-the-archangel-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Monday 12:10 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Monday 12:10 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Monday 12:10 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Monday, October 12 12:10 PM: Office closed, no 12:10 PM Mass."
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly mass Monday 12:10 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly mass Monday 12:10 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly mass Monday 12:10 st-michael-the-archangel-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: printed in the schedule box of all three bulletins; the newest skips Oct 12 for a reason it gives (offices closed), so the weekly slot is confirmed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Tuesday 12:10 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Tuesday 12:10 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Tuesday 12:10 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly mass Tuesday 12:10 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly mass Tuesday 12:10 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly mass Tuesday 12:10 st-michael-the-archangel-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-wynantskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Wednesday 8:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Wednesday 8:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Wednesday 8:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly mass Wednesday 08:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly mass Wednesday 08:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly mass Wednesday 08:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-wynantskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Thursday 8:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Thursday 8:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Thursday 8:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Thursday, October 15 8:15 AM | Saint Jude the Apostle: No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly mass Thursday 08:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly mass Thursday 08:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly mass Thursday 08:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: printed in the schedule box of all three bulletins; the newest skips Oct 15 with a No Mass line, so the weekly slot is confirmed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Adoration Tuesday 11:30 AM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Adoration Tuesday 11:30 AM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Adoration Tuesday 11:30 AM | St. Michael the Archangel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudestmichael.org/holy-hour-eucharistic-adoration",
+          "said": "St. Michael the Archangel Tuesdays beginning at 11:30 AM, prior to the 12:10 PM Mass."
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly adoration Tuesday 11:30 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly adoration Tuesday 11:30 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly adoration Tuesday 11:30 st-michael-the-archangel-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: start time printed, no end time in the bulletin or website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-wynantskill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Adoration Wednesday 8:45-9:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Adoration Wednesday 8:45-9:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Adoration Wednesday 8:45-9:15 AM | St. Jude the Apostle"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudestmichael.org/holy-hour-eucharistic-adoration",
+          "said": "Wednesdays ... Adoration at St. Jude will begin at approximately 8:45 AM following Mass and continue until 9:30 AM."
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly adoration Wednesday 08:45–09:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly adoration Wednesday 08:45–09:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly adoration Wednesday 08:45–09:15 st-jude-the-apostle-wynantskill",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R6: the bulletins print 8:45-9:15 in all three issues; the website says until 9:30 but never outweighs the newest bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-troy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Offices closed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Monday, October 12 12:10 PM | Saint Michael the Archangel: Office closed, no 12:10 PM Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 2,
+          "said": "Parish offices will be closed on Monday, October 12."
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "specific_date mass 2026-10-12 12:10 st-michael-the-archangel-troy  CANCELLED; “Office closed”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says there is no 12:10 PM Mass on this date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-wynantskill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Thursday, October 15 8:15 AM | Saint Jude the Apostle: No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "specific_date mass 2026-10-15 08:15 st-jude-the-apostle-wynantskill  CANCELLED; “No Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says No Mass on this date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-wynantskill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-11",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Veterans Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Veterans Day Mass, 10:00 AM Wednesday, November 11 at Saint Jude the Apostle: we will cancel the regular 8:15 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "specific_date mass 2026-11-11 08:15 st-jude-the-apostle-wynantskill  CANCELLED; “Cancelled for Veterans Day celebration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's notice cancels the regular 8:15 AM Mass on this date. History read this as a Veterans Day cancellation too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-wynantskill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-11",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Veterans Day Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Veterans Day Mass, 10:00 AM Wednesday, November 11 at Saint Jude the Apostle ... join us for the special 10:00 AM Mass honoring our veterans"
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "specific_date mass 2026-11-11 10:00 st-jude-the-apostle-wynantskill  “Veterans Day Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass open to all, at a time outside the weekly schedule (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Reconciliation Saturday 3:00-3:40 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aba4d452",
+          "page": 1,
+          "said": "Reconciliation Saturday 3:00-3:40 PM | St. Michael the Archangel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49fcc9bd",
+          "page": 1,
+          "said": "Reconciliation Saturday 3:00-3:40 PM | St. Jude the Apostle"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudestmichael.org/reconciliation",
+          "said": "The Sacrament of Reconciliation is available before the Saturday Vigil Mass from 3:00-3:40 PM when Fr. Joe O'Brien is the celebrant."
+        },
+        {
+          "source": "history",
+          "bulletin": "995a0b17c690",
+          "said": "weekly confession Saturday 15:00–15:40 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aba4d4523b45",
+          "said": "weekly confession Saturday 15:00–15:40 st-michael-the-archangel-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "49fcc9bd22ad",
+          "said": "weekly confession Saturday 15:00–15:40 st-jude-the-apostle-wynantskill",
+          "page": 1
+        }
+      ],
+      "rationale": "R28: the Sept 27 bulletin gives St. Jude, the Oct 4 and Oct 11 bulletins give St. Michael, and the website names no church. Leaning to the newest two (and history: Oct 4 and 11 read St. Michael, Sept 27 St. Jude), which may be a corrected typo.",
+      "question": "Which church holds the Saturday 3:00-3:40 PM Reconciliation?",
+      "options": [
+        {
+          "label": "St. Michael the Archangel",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-troy",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "15:40",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude the Apostle",
+          "entry": {
+            "church_slug": "st-jude-the-apostle-wynantskill",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "15:40",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 1,
+          "said": "Rosary Saturday 3:30 PM, Sunday 10:00 AM | St. Jude the Apostle"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "995a0b17",
+          "page": 3,
+          "said": "Additional Veterans Day Celebration, Sunday, November 8, after the 8:30 AM Mass at St. Michael the Archangel"
+        }
+      ],
+      "rationale": "R24: a celebration after the regular Mass, not a Mass, Confession or Adoration with a time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-st-mary-st-paul-fort-edward",
+  "status": "ready",
+  "as_of": "2026-10-11T16:38:30Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:35:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, St. Joseph's Fort Edward and St. Mary's/St. Paul's Hudson Falls, with times in the cover boxes of all bulletins read. Weekend Masses, Wednesday and Friday Adoration/Confession/Mass at 4:30 and 5:30, Sunday 9:00 Adoration and Confession, and Saturday 3:00 Confession agree across bulletins. No end times are printed, so none are recorded. The Nov 2 All Souls Mass at St. Joseph's comes from the Oct 4 bulletin. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3d241597b4f1de675a738fe06858741e2ec5968ec407fc77686e81ea3036a966",
+      "fetched_at": "2026-10-11T16:38:30Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "46a50283551157f6b369babd153cf242f72489ef95085eb51b162d31f4fcb77f",
+      "fetched_at": "2026-10-04T14:54:34Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6d916639592a0bc759c9eab81826b0d74567e7b1f400e80120dfb941cabcc595",
+      "fetched_at": "2026-09-28T22:04:10Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-fort-edward",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Saturday Mass 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Saturday Mass 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 2,
+          "said": "St. Joseph's Mass Intention Saturday - October 10, Saturday - October 17"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly mass Saturday 16:00 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly mass Saturday 16:00 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly mass Saturday 16:00 st-joseph-fort-edward",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the St. Joseph's cover box of both bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-fort-edward",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Daily Mass: Friday in the Church: Adoration & Confession at 4:30pm, Rosary at 4:45pm, Mass 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Daily Mass: Friday in the Church: Adoration & Confession at 4:30pm, Rosary at 4:45pm, Mass 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly mass Friday 17:30 st-joseph-fort-edward  “In the Church”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly mass Friday 17:30 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly mass Friday 17:30 st-joseph-fort-edward",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the St. Joseph's cover box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-fort-edward",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Friday in the Church: Adoration & Confession at 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Friday in the Church: Adoration & Confession at 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly adoration Friday 16:30 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly adoration Friday 16:30–17:30 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly adoration Friday 16:30–17:30 st-joseph-fort-edward",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: start printed; no end time is given in the bulletins (Rosary follows at 4:45, so POLICY gives no end). History's 5:30 end in some bulletins is not printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-fort-edward",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Friday ... Adoration & Confession at 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Friday ... Adoration & Confession at 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly confession Friday 16:30 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly confession Friday 16:30–17:30 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly confession Friday 16:30–17:30 st-joseph-fort-edward",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: clock time printed with no end time; an end of 5:30 in some history events is not printed (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-fort-edward",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Confession 3:00pm Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Confession 3:00pm Saturday"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly confession Saturday 15:00 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly confession Saturday 15:00–16:00 st-joseph-fort-edward",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly confession Saturday 15:00–16:00 st-joseph-fort-edward",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: clock time printed with no end time; history's 4:00 end in some bulletins is not printed (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-st-paul-hudson-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Sunday Mass 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Sunday Mass 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 2,
+          "said": "St. Mary's/St. Paul's Mass Intentions Sunday - October 11, Sunday - October 18"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly mass Sunday 10:00 st-mary-st-paul-hudson-falls  “Includes Children’s Liturgy”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly mass Sunday 10:00 st-mary-st-paul-hudson-falls  “Includes Children's Liturgy”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly mass Sunday 10:00 st-mary-st-paul-hudson-falls  “Includes Children's Liturgy”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the St. Mary's/St. Paul's cover box of both bulletins read; history agrees. Children's Liturgy at this Mass is not a separate event (POLICY, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-st-paul-hudson-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Confession & Adoration Sunday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Confession & Adoration Sunday 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly adoration Sunday 09:00 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly adoration Sunday 09:00–10:00 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly adoration Sunday 09:00–10:00 st-mary-st-paul-hudson-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: start printed; no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-st-paul-hudson-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Confession & Adoration Sunday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Confession & Adoration Sunday 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly confession Sunday 09:00 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly confession Sunday 09:00–10:00 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly confession Sunday 09:00–10:00 st-mary-st-paul-hudson-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: clock time printed with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-st-paul-hudson-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Daily Mass Wednesday - Adoration & Confession at 4:30, Rosary at 4:45pm, Mass at 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Daily Mass Wednesday - Adoration & Confession at 4:30, Rosary at 4:45pm, Mass at 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly mass Wednesday 17:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly mass Wednesday 17:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly mass Wednesday 17:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the St. Mary's/St. Paul's cover box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-st-paul-hudson-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Wednesday - Adoration & Confession at 4:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Wednesday - Adoration & Confession at 4:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly adoration Wednesday 16:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly adoration Wednesday 16:30–17:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly adoration Wednesday 16:30–17:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: start printed; no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-st-paul-hudson-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Wednesday - Adoration & Confession at 4:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Wednesday - Adoration & Confession at 4:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d241597b4f1",
+          "said": "weekly confession Wednesday 16:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "weekly confession Wednesday 16:30–17:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "weekly confession Wednesday 16:30–17:30 st-mary-st-paul-hudson-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: clock time printed with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-fort-edward",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 4,
+          "said": "All Souls' Day Mass, St. Joseph's - Monday, Nov. 2 - 5:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "46a502835511",
+          "said": "specific_date mass 2026-11-02 17:30 st-joseph-fort-edward  “All Souls' Day Mass”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "6d916639592a",
+          "said": "specific_date mass 2026-11-02 17:30 st-joseph-fort-edward  “All Souls' Day Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R19: announced in the Oct 4 bulletin (Dates to Remember), on or after as_of, and the Oct 11 bulletin does not contradict it. November 2, 2026 is a Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 1,
+          "said": "Rosary at 4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46a50283",
+          "page": 1,
+          "said": "Rosary at 4:45pm"
+        }
+      ],
+      "rationale": "R24: a Rosary (Wednesdays at St. Mary's/St. Paul's, Fridays at St. Joseph's) is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 3,
+          "said": "Health Care Professionals & Respect Life Month Mass, Sunday, Oct. 18 at 5 pm, Cathedral of the Immaculate Conception, 125 Eagle St., Albany"
+        }
+      ],
+      "rationale": "R22: held at the Albany cathedral, not one of the parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d241597",
+          "page": 3,
+          "said": "Annual Memorial Services St. Mary's-St. Paul's - Sunday, Nov. 8 - 1 pm; St. Joseph's - Sunday, Nov. 15 - 1 pm"
+        }
+      ],
+      "rationale": "R24: a memorial service for the deceased, not called a Mass; not a Mass, Confession or Adoration time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

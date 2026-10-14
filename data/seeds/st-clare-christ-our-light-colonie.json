@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-clare-christ-our-light-colonie",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:38:11Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:32:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, St. Clare (Colonie) and Christ Our Light (Loudonville). Weekend Masses, the two weekday chapel Masses and the Saturday 3:15-3:45 PM Confession at both agree in all three bulletins. Dated: a Charismatic Mass on October 14 at Christ Our Light. Open: whether the Syro-Malabar Community Mass on October 11 at St. Clare's is open to all.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6b0f71691b8c2d094841667f2e9e62131bd6f9e3f0d1111835bdc9af41c86902",
+      "fetched_at": "2026-10-11T16:38:11Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "9a002a1387926943cad3d28283ac150a24f3a19474ffb255300ae304f52c4135",
+      "fetched_at": "2026-10-04T14:52:33Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "98084eaa09fb119102742817c7942b6c89fbf724a334ed2baef32bb3b4eaea7e",
+      "fetched_at": "2026-09-28T22:02:29Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-colonie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Sun. 11-Oct Mass ~ St. Clare's 9:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "SAINT CLARE Sunday 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 3,
+          "said": "Mass ~ St. Clare's 9:30 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 3,
+          "said": "Mass ~ St. Clare's 9:30 AM Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "weekly mass Sunday 09:30 st-clare-colonie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "weekly mass Sunday 09:30 st-clare-colonie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "98084eaa09fb",
+          "said": "weekly mass Sunday 09:30 st-clare-colonie",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Sunday 9:30 AM in the Weekly Events Calendar and the intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-loudonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Sun. 11-Oct Mass ~ Christ Our Light 10:00 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "CHRIST OUR LIGHT Sunday 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 3,
+          "said": "Mass ~ Christ Our Light 10:00 AM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 3,
+          "said": "Mass ~ Christ Our Light 10:00 AM Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "weekly mass Sunday 10:00 christ-our-light-loudonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "weekly mass Sunday 10:00 christ-our-light-loudonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "98084eaa09fb",
+          "said": "weekly mass Sunday 10:00 christ-our-light-loudonville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Sunday 10:00 AM in the Weekly Events Calendar and the intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-colonie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Sat. 17-Oct Vigil ~ St. Clare's & Christ Our Light 4:00 PM Churches"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "SAINT CLARE Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 3,
+          "said": "Vigil ~ St. Clare's & Christ Our Light 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 3,
+          "said": "Vigil ~ St. Clare's & Christ Our Light 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "weekly mass Saturday 16:00 st-clare-colonie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "weekly mass Saturday 16:00 st-clare-colonie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "98084eaa09fb",
+          "said": "weekly mass Saturday 16:00 st-clare-colonie",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Saturday 4:00 PM Vigil at both churches in the Weekly Events Calendar and the intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-loudonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Sat. 17-Oct Vigil ~ St. Clare's & Christ Our Light 4:00 PM Churches"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "CHRIST OUR LIGHT Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 3,
+          "said": "Vigil ~ St. Clare's & Christ Our Light 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 3,
+          "said": "Vigil ~ St. Clare's & Christ Our Light 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "weekly mass Saturday 16:00 christ-our-light-loudonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "weekly mass Saturday 16:00 christ-our-light-loudonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "98084eaa09fb",
+          "said": "weekly mass Saturday 16:00 christ-our-light-loudonville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Saturday 4:00 PM Vigil at both churches in the Weekly Events Calendar and the intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-loudonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Tue. 13-Oct Daily Mass ~ Christ Our Light 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "CHRIST OUR LIGHT October 13 Tuesday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 3,
+          "said": "Daily Mass ~ Christ Our Light 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 3,
+          "said": "Daily Mass ~ Christ Our Light 9:00 AM Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "weekly mass Tuesday 09:00 christ-our-light-loudonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "weekly mass Tuesday 09:00 christ-our-light-loudonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "98084eaa09fb",
+          "said": "weekly mass Tuesday 09:00 christ-our-light-loudonville  “Daily Mass in the chapel”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: weekly Daily Mass in the chapel of Christ Our Light, printed in the calendar of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-colonie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Wed. 14-Oct Daily Mass ~ St. Clare's 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "SAINT CLARE October 14 Wednesday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 3,
+          "said": "Daily Mass ~ St. Clare's 9:00 AM Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 3,
+          "said": "Daily Mass ~ St. Clare's 9:00 AM Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "weekly mass Wednesday 09:00 st-clare-colonie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "weekly mass Wednesday 09:00 st-clare-colonie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "98084eaa09fb",
+          "said": "weekly mass Wednesday 09:00 st-clare-colonie  “Daily Mass in the chapel”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: weekly Daily Mass in the chapel of St. Clare's, printed in the calendar of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-colonie",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "RECONCILIATION: Is offered in both parishes from 3:15–3:45 PM, prior to the Saturday Vigil Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Sat. 17-Oct Penance and Reconciliation 3:15 PM-3:45 PM Both Parishes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 2,
+          "said": "RECONCILIATION: Is offered in both parishes from 3:15–3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 2,
+          "said": "RECONCILIATION: Is offered in both parishes from 3:15–3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "weekly confession Saturday 15:15–15:45 st-clare-colonie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "weekly confession Saturday 15:15–15:45 st-clare-colonie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "98084eaa09fb",
+          "said": "weekly confession Saturday 15:15–15:45 st-clare-colonie",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: clock times printed in the Sacraments box and the calendar of all three bulletins read, for both parishes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-loudonville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "RECONCILIATION: Is offered in both parishes from 3:15–3:45 PM, prior to the Saturday Vigil Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Sat. 17-Oct Penance and Reconciliation 3:15 PM-3:45 PM Both Parishes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 2,
+          "said": "RECONCILIATION: Is offered in both parishes from 3:15–3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 2,
+          "said": "RECONCILIATION: Is offered in both parishes from 3:15–3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "weekly confession Saturday 15:15–15:45 christ-our-light-loudonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "weekly confession Saturday 15:15–15:45 christ-our-light-loudonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "98084eaa09fb",
+          "said": "weekly confession Saturday 15:15–15:45 christ-our-light-loudonville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: clock times printed in the Sacraments box and the calendar of all three bulletins read, for both parishes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-loudonville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Charismatic Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Wed. 14-Oct Charismatic Mass ~ Christ Our Light 7:00 PM-8:30 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 3,
+          "said": "no Charismatic Mass on Wed. Oct 7 or Sep 30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 3,
+          "said": "no Charismatic Mass on Wed. Oct 7 or Sep 30"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "specific_date mass 2026-10-14 19:00–20:30 christ-our-light-loudonville  “Charismatic Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Weekly or dated): a Mass named as such, with a printed date after as_of, at a listed church. Printed in one bulletin only and not on the earlier Wednesdays, so dated. The 8:30 PM end is not kept for a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Sun. 11-Oct Syro-Malabar Catholic Community Mass ~ St. Clare's 4:00 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a002a13",
+          "page": 3,
+          "said": "Sun. 11-Oct Syro-Malabar Catholic Community Mass ~ St. Clare's 4:00 PM Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98084eaa",
+          "page": 3,
+          "said": "Sun. 27-Sep Syro-Malabar Catholic Community Mass ~ St. Clare's 4:00 PM Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "6b0f71691b8c",
+          "said": "specific_date mass 2026-10-11 16:00 st-clare-colonie  “Syro-Malabar Catholic Community Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9a002a138792",
+          "said": "specific_date mass 2026-10-11 16:00 st-clare-colonie  “Syro-Malabar Catholic Community Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R30: POLICY leaves out a Mass limited to a group; the bulletin lists this community's Mass among the parish events without saying it is closed, so leaning include. It is dated: shown on Sep 27 and Oct 11 but not Oct 4 or Oct 18, with no 'weeks of the month' wording. Its date is the same as as_of (2026-10-11).",
+      "question": "Include the Syro-Malabar Community Mass at St. Clare's on Sunday, October 11 at 4:00 PM?",
+      "options": [
+        {
+          "label": "Include on 2026-10-11",
+          "entry": {
+            "church_slug": "st-clare-colonie",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-11",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Syro-Malabar Catholic Community Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Fri. 16-Oct BLD Albany: Worship at Christ Our Light 7:00 PM Chapel; Fellowship Following Mass Hall"
+        }
+      ],
+      "rationale": "R24: a Worship and a Fellowship event, not a Mass. History called the Oct 9 one a Mass (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 3,
+          "said": "Wed. 14-Oct Rosary Group ~ Christ Our Light 5:00 PM Chapel; Rosary Society - Wreath and Center Piece Sale After Mass"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6b0f7169",
+          "page": 2,
+          "said": "ANOINTING OF THE SICK: Is offered on the first weekend of each month following the Saturday 4:00 PM Mass at Christ Our Light and the Sunday 9:30 AM Mass at St. Clare's."
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
