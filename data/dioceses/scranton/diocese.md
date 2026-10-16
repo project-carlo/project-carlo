@@ -26,7 +26,11 @@ several worship sites.
   Eastern Catholic (marked `rite`: Ruthenian, Ukrainian, Maronite, Melkite). Its list
   includes churches closed in the 2008–2010 consolidation; `group` is GCatholic's canonical
   parish when it differs from the church.
-- **Mass times:** https://www.dioceseofscranton.org/find-a-mass/ (not yet read).
+- **Mass times:** https://www.dioceseofscranton.org/find-a-mass/ ("138 Worship Sites Found",
+  read 2026-10-16) is the same data as the finder's worship sites, one card per site with
+  `data-latitude`/`data-longitude` and the Mass table. It has one site the parish pages
+  omit: "Saint John Neumann Shrine", Sugar Ridge (no address, under Immaculate Heart of
+  Mary, Dushore).
 - **The Catholic Light** (the diocesan paper, on dioceseofscranton.org news) reports
   closures, mergers and church sales.
 - Clusters / families of parishes: the diocese does not run a family system; the finder's
