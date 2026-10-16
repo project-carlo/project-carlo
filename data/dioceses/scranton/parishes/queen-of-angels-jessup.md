@@ -22,8 +22,8 @@ evidence:
     creation and publication" among the items to discuss.'
 - url: https://queenofangelsjessup.org/news-bulletins/
   seen: 2026-10-16
-  quote: Bulletins October 11th, 2026
-  note: The parish site's News & Bulletins page links the latest issue as a bulletins.discovermass.com
+  quote: News & Bulletins
+  note: The parish site's News & Bulletins page links the latest issue (on 16 October dated "October 11th, 2026", later that day "October 18th, 2026") as a bulletins.discovermass.com
     download.
 - url: https://queenofangelsjessup.org/about/
   seen: 2026-10-16

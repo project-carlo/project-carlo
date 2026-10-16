@@ -1,7 +1,7 @@
 ---
 parish: immaculate-conception-good-shepherd-freeland
-name: St. Patrick
-line1: 411 Allegheny St.
+name: St. Patrick Church
+line1: 411 Allegheny Street
 line2: ''
 city: White Haven
 state: PA
@@ -9,8 +9,8 @@ postal_code: '18661'
 latitude: 41.0586875
 longitude: -75.7761875
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:24077', 'directory:107-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24077
@@ -22,14 +22,26 @@ evidence:
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Patrick Church'', 411 Allegheny
     Street, White Haven, PA, 18661; kind: worship-site; group: Our Lady of the Immaculate Conception Parish'
+- url: https://drive.google.com/uc?export=download&id=19PIsk77S1SnnHw-5zfLXHWhm5s_fb-xp
+  seen: 2026-10-16
+  quote: Sat 10/17 5:00 PM Chris Alford by His Parents, Tyra and Mike Sun 10/18 9:45 AM
+  note: 18 October 2026 bulletin, page 5, headed "St. Patrick's Worship Site"; also weekday Masses Wednesday
+    to Friday at noon.
+- url: https://sites.google.com/view/olichome-freeland-pa/home/mass-schedule
+  seen: 2026-10-16
+  quote: St. Patrick’s will celebrate mass on SATURDAYS at 5:00 PM and SUNDAYS at 9:45 AM.
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin's "St. Patrick's Worship Site" page lists Saturday 5 pm,
+Sunday 9:45 am and Wednesday to Friday noon Masses. St. Patrick's Parish merged into Our
+Lady of the Immaculate Conception on 1 July 2026 (see the parish row) but the church stays
+open ("we are not closing St. Patrick's", 6 June 2026 letter). That letter says the
+Saturday 5 pm Mass will end once Father O'Rourke retires; worth watching.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+St. Patrick, 411 Allegheny Street, White Haven, 18661 in the diocese finder ("Saint
+Patrick Church") and GCatholic ("St. Patrick", 411 Allegheny St.); the bulletin calls it
+St. Patrick's. Both flags true. Coordinates are GCatholic's Plus Code (87H6365F+FG).

@@ -12,6 +12,11 @@ evidence:
   note: 'Page 1 of the 11 October 2026 issue: masthead "SACRED HEART OF JESUS CHURCH", 1101 Willow Street,
     Peckville; Mass schedule Wednesday-Friday 12:00pm, Saturday 4:00pm, Sunday 8:00am & 10:00am; pastor
     Rev. Andrew Kurovsky. One church.'
+revisit: Queen of Angels, Jessup, announced on 18 October 2026 a "linkage to consolidation" with "Fr.
+  Andy" (Fr. Andrew Kurovsky is this parish's pastor), covering "bulletin creation and publication". Check
+  whether Sacred Heart and Queen of Angels start one bulletin; if so, merge queen-of-angels-jessup into
+  the shared row.
+revisit_after: 2027-01-15
 ---
 
 ## Publisher
@@ -34,4 +39,7 @@ through 11 October 2026.
 
 ## Not yet confirmed
 
-Nothing.
+Queen of Angels Parish, Jessup, announced in its 18 October 2026 bulletin a transition team
+for a "linkage to consolidation" with "Fr. Andy and his team" (Fr. Andrew Kurovsky is pastor
+here), with bulletin publication among the items. Until a shared bulletin appears, separate
+rows; see `revisit`.
