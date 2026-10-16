@@ -202,7 +202,9 @@ def _verdict(url: str, status: int | None, page, web) -> str:  # type: ignore[no
     status = status or 0
     if web.looks_squatted(html):
         return "SPAM-SQUAT"
-    if web._registrable(web._host(page.url)) != web._registrable(web._host(url)):
+    from pdf_extract.parish_sites.links import registrable_domain, url_host
+
+    if registrable_domain(url_host(page.url)) != registrable_domain(url_host(url)):
         return "REDIRECT-OFFSITE"
     if status >= 500:
         return "HTTP5XX"
