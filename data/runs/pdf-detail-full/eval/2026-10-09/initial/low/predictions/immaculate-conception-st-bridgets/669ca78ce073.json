@@ -1,0 +1,44 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "immaculate-conception-st-bridgets",
+  "content_hash": "669ca78ce07319e3555daa779c54c473cfe9c4721fb8e4e0eabf5883699ae06e",
+  "source_url": "https://www.immaculateconceptionrochester.org/_files/ugd/309cee_8abae253aa794d1382e0a22d6872d95a.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-25",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 9949,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 605,
+    "reasoning_tokens": 408
+  },
+  "seconds": 6.89,
+  "response_id": "resp_0f30fe4c6789e764016ac90df7783087d28de22de16a5ad3b3",
+  "events": [
+    {
+      "church_slug": "immaculate-conception-st-bridgets",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "f6ad43a203d2178b4eb5c9d824fc120407a7070c54fd7adb8a25eb990322d999"
+}

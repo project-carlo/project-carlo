@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "parish_slug": "ss-columba-and-brigid-buffalo",
+  "status": "approved",
+  "as_of": "2026-10-04T14:27:35Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:33:44Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:36:35Z",
+  "summary": "One church. Saturday 4 PM every week; Sunday 9 AM (Spanish) and 11 AM every Sunday except the last of the month, when one bilingual 10 AM Mass replaces both; First Friday Adoration 4-7 PM. No Confession times (by appointment); holy-day 7 PM Mass left out (no dates).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a0e3e8be419b1de8aeab719d5fd351110dc8df87ee7a9301c97ca3d790b6da4d",
+      "fetched_at": "2026-10-04T14:27:35Z",
+      "published_date": "2026-09-27",
+      "read": true
+    },
+    {
+      "content_hash": "3b957ab822aa16849207c6bf6c92e278912d02a507e1f7534b8ee94247ba8ea7",
+      "fetched_at": "2026-09-26T18:54:28Z",
+      "published_date": "2026-08-30",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-columba-and-brigid-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 1,
+          "said": "Mass Schedule: Saturday: 4 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 2,
+          "said": "Saturday, September 26, 2026 4:00 p.m. ... Saturday, October 3, 2026 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b957ab822aa",
+          "page": 1,
+          "said": "Saturday: 4 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sscolumbabrigid.org",
+          "said": "Saturday 4 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "a0e3e8be419b",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the schedule box of both bulletins and on the website; the intentions list it on the last-Sunday weekend too, so it is every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-columba-and-brigid-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 1,
+          "said": "Sunday: 9 a.m. (Spanish/Español) ... Last Sunday of Month: 10 a.m. (bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 2,
+          "said": "Sunday, September 27, 2026 Bilingual 10:00 a.m. (only Mass listed that Sunday); Sunday, October 4, 2026 9:00 a.m. / 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b957ab822aa",
+          "page": 2,
+          "said": "Sunday, August 30, 2026 Bilingual 10:00 a.m. (only Mass listed); Sunday, September 6, 2026 9:00 a.m. / 11:00 a.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sscolumbabrigid.org",
+          "said": "On the last Sunday of the month, instead of having two Masses, one in Spanish and one in English, we come together for one bilingual Mass at 10 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "a0e3e8be419b",
+          "said": "weekly Sunday 09:00 (every week)"
+        }
+      ],
+      "rationale": "The Sunday 09:00 Mass is held every Sunday except the last of the month, when the single bilingual 10:00 Mass replaces it (both bulletins' intentions list only the 10:00 on the last Sunday; the website says 'instead of having two Masses'), so the last week is excluded (lyonsl2/project-carlo#112). History records it every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-columba-and-brigid-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 1,
+          "said": "Sunday: 11 a.m. ... Last Sunday of Month: 10 a.m. (bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 2,
+          "said": "Sunday, September 27, 2026 Bilingual 10:00 a.m. (only Mass listed that Sunday); Sunday, October 4, 2026 9:00 a.m. / 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b957ab822aa",
+          "page": 2,
+          "said": "Sunday, August 30, 2026 Bilingual 10:00 a.m. (only Mass listed); Sunday, September 6, 2026 9:00 a.m. / 11:00 a.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sscolumbabrigid.org",
+          "said": "On the last Sunday of the month, instead of having two Masses, one in Spanish and one in English, we come together for one bilingual Mass at 10 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "a0e3e8be419b",
+          "said": "weekly Sunday 11:00 (every week)"
+        }
+      ],
+      "rationale": "The Sunday 11:00 Mass is held every Sunday except the last of the month, when the single bilingual 10:00 Mass replaces it (both bulletins' intentions list only the 10:00 on the last Sunday; the website says 'instead of having two Masses'), so the last week is excluded (lyonsl2/project-carlo#112). History records it every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-columba-and-brigid-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 1,
+          "said": "Last Sunday of Month: 10 a.m. (bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 2,
+          "said": "Sunday, September 27, 2026 Bilingual 10:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b957ab822aa",
+          "page": 2,
+          "said": "Sunday, August 30, 2026 Bilingual 10:00 a.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sscolumbabrigid.org",
+          "said": "on the last Sunday of the month ... one bilingual Mass at 10 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "a0e3e8be419b",
+          "said": "weekly Sunday 10:00, Bilingual; last Sunday of the month"
+        }
+      ],
+      "rationale": "A last-Sunday-of-the-month slot in the schedule box, borne out by both bulletins' last-Sunday intentions and the website; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-columba-and-brigid-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 2,
+          "said": "Friday, October 2, 2026—First Friday of the month Adoration of the Eucharistic from 4-7pm. ... Friday, November 6, 2026—First Friday of the month Adoration of the Eucharistic from 4-7pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 2,
+          "said": "Adoration of the Eucharistic: Will on Friday October 2, 2026 from 4-7pm at SsCB."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b957ab822aa",
+          "page": 2,
+          "said": "Friday, September 4, 2026 - Eucharistic Adoration at SsCB from 4-7pm. / Eucharistic Adoration: Will be on Friday, September 4, 2026 from 3:30pm-7:00pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "a0e3e8be419b",
+          "said": "specific_date 2026-10-02 and 2026-11-06 16:00-19:00, First Friday of the month"
+        }
+      ],
+      "rationale": "The newest bulletin calls it 'First Friday of the month' Adoration, 4-7pm, for both October and November, and the older one has it on Sept 4 (also a first Friday); policy rule 2 makes a first-Friday slot weekly with weeks_of_month. The older bulletin's 3:30 start appears once against 4-7pm three times; the newest is followed. History stored the dates only (older prompt).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-columba-and-brigid-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Days, bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0e3e8be419b",
+          "page": 1,
+          "said": "Holy Days: 7 p.m. (Bilingual)"
+        }
+      ],
+      "rationale": "A holy-day Mass time with no date given; holy days are dated and the bulletin pins none down, so it is left out (placeholder entry). Reconciliation is by appointment only (no time), also left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

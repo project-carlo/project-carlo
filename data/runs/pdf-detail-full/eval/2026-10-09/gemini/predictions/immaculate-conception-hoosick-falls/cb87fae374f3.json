@@ -1,0 +1,214 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "immaculate-conception-hoosick-falls",
+  "content_hash": "cb87fae374f3981b3dfdf0ac7c90c9f437e4c57580ef74df4cee49e11b36a1f4",
+  "source_url": "https://files.ecatholic.com/11172/bulletins/20260927.pdf?t=1790178665000",
+  "fetched_at": "2026-09-28T21:58:48Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "holy-cross-salem",
+      "name": "Holy Cross",
+      "address": "249 N Main St., Salem, NY 12865"
+    },
+    {
+      "slug": "immaculate-conception-hoosick-falls",
+      "name": "Immaculate Conception Church",
+      "address": "73 Main St., Hoosick Falls, NY 12090"
+    },
+    {
+      "slug": "st-patrick-cambridge",
+      "name": "St. Patrick",
+      "address": "17 S Park St., Cambridge, NY 12816"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/cb87fae374f3981b3dfdf0ac7c90c9f437e4c57580ef74df4cee49e11b36a1f4-ef04797ed16b.json",
+    "modified_at": "2026-09-28T22:12:10.124000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/immaculate-conception-hoosick-falls/cb87fae374f3.pdf",
+  "pdf_sha256": "e2056fae3911bdd1d38d909a140b145fa52b1c91824132c548f6c7a3f387b167",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-26",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "immaculate-conception-hoosick-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-hoosick-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-hoosick-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "In the Chapel",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-cambridge",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-cambridge",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-salem",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-salem",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-hoosick-falls",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-hoosick-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "First Monday of the month; immediately after 9:00 AM Mass",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3059,
+    "output_tokens": 849
+  }
+}

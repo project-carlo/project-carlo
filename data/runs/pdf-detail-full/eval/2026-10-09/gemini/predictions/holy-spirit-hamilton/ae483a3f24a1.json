@@ -1,0 +1,319 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "holy-spirit-hamilton",
+  "content_hash": "ae483a3f24a12f5b9c0fa1a85b1acdc1be207f4bb6dcd1f169faf74c41c253b0",
+  "source_url": "https://files.ecatholic.com/39636/bulletins/20261002.pdf?t=1790953235000",
+  "fetched_at": "2026-10-04T14:34:55Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "colgate-memorial-chapel-hamilton",
+      "name": "Colgate Memorial Chapel",
+      "address": "13 Oak Dr., Hamilton, NY 13346"
+    },
+    {
+      "slug": "st-bernard-waterville",
+      "name": "St. Bernard's Church",
+      "address": "199 Stafford Ave., Waterville, NY 13480"
+    },
+    {
+      "slug": "st-joan-of-arc-morrisville",
+      "name": "St. Joan of Arc Mission",
+      "address": "6 Brookside Dr., Morrisville, NY 13408"
+    },
+    {
+      "slug": "st-joseph-oriskany-falls",
+      "name": "St. Joseph's Church",
+      "address": "229 Main St., Oriskany Falls, NY 13425"
+    },
+    {
+      "slug": "st-mary-hamilton",
+      "name": "St. Mary's Church",
+      "address": "16 Wylie St., Hamilton, NY 13346"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/ae483a3f24a12f5b9c0fa1a85b1acdc1be207f4bb6dcd1f169faf74c41c253b0-228bf585ba5e.json",
+    "modified_at": "2026-10-04T15:14:11.195000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/holy-spirit-hamilton/ae483a3f24a1.pdf",
+  "pdf_sha256": "b7c8135fafb144b1bc0f8a5a5ead321c9fe877b5a05e797af64d79c83781e125",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-joan-of-arc-morrisville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-oriskany-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-bernard-waterville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-hamilton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "colgate-memorial-chapel-hamilton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "20:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "When in session",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-bernard-waterville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-bernard-waterville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-hamilton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-hamilton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joan-of-arc-morrisville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "During the Parish Holy Hour",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-bernard-waterville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "First Friday",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:00 AM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joan-of-arc-morrisville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "PCA Holy Hour",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-bernard-waterville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-10",
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "Funeral Mass",
+      "raw": {
+        "date": "2026-10-10",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "colgate-memorial-chapel-hamilton",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-11",
+      "start_time": "20:30",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "On break",
+      "raw": {
+        "date": "2026-10-11",
+        "start_time": "8:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5762,
+    "output_tokens": 1243
+  }
+}

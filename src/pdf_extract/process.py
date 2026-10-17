@@ -1,6 +1,10 @@
 """Bulletin process pipeline: extract schedules from PDFs with Gemini AI.
 
-Runs the production Gemini classifier over each parish's latest fetched
+Each parish is processed in its own mode. A parish with a seed revision is in
+update mode (`pdf_extract.schedule.update`): its bulletins are read against
+its believed schedule. Every other parish is in extract mode, below.
+
+Extract mode runs the production Gemini classifier over each parish's latest fetched
 bulletin. `bulletin.processed_at` is the gate that keeps a bulletin from being
 re-extracted; the shared result cache in the blob store (keyed by classifier
 version + bulletin content hash) is a second layer that lets a re-run skip the
@@ -29,6 +33,7 @@ from pdf_extract.bulletin_week import (
     place_bulletin,
 )
 from pdf_extract.classifiers.gemini import GeminiClassifier
+from pdf_extract.classifiers.schedule_update import OpenAIScheduleUpdater
 from pdf_extract.recurrence import (
     History,
     load_history_from_db,
@@ -56,10 +61,13 @@ from pdf_extract.runs import (
     join_details,
     record_parish_result,
 )
+from pdf_extract.schedule.store import update_mode_slugs
+from pdf_extract.schedule.update import process_update_mode
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import (
     churches_for_parish,
     connect_db,
+    fetch_only_slugs,
     get_parish_by_name,
     list_parishes,
     load_bulletins,
@@ -143,7 +151,15 @@ def process_bulletins(
     model: str = DEFAULT_GEMINI_MODEL,
     concurrency: int = 5,
     run_id: str | None = None,
+    include_fetch_only: bool = False,
 ) -> dict[str, int]:
+    """Extract (or update) the schedules of the parishes with unprocessed bulletins.
+
+    Fetch-only parishes (`fetch_only` in parishes.csv) are left out: their
+    bulletins stay unprocessed and no model call is made for them, unless
+    `include_fetch_only`. Once the flag is cleared, the next run processes
+    each one's latest bulletin.
+    """
     LOGGER.info(
         "Starting process stage (parish_name=%s, slugs=%s, model=%s, concurrency=%s)",
         parish_name or "*all*",
@@ -169,7 +185,13 @@ def process_bulletins(
             by_slug.setdefault(bulletin["parish_slug"], []).append(bulletin)
         # Keep only the latest fetched bulletin per parish, then process those still pending.
         latest = latest_per_parish(bulletins)
-        pending = [m for m in latest if m.get("processed_at") is None]
+        # Update-mode parishes are processed by their own stage, below.
+        update_mode = update_mode_slugs(conn)
+        pending = [
+            m for m in latest
+            if m.get("processed_at") is None and m["parish_slug"] not in update_mode
+        ]
+        update_scope: Collection[str] | None = slugs
 
         if parish_name:
             parish_row = get_parish_by_name(conn, parish_name)
@@ -182,9 +204,11 @@ def process_bulletins(
                     "cache_hits": 0,
                     "weekly_promotions": 0,
                     "failed_bulletins": 0,
+                    "fetch_only_parishes": 0,
                 }
             target_slug = parish_row["slug"]
             pending = [m for m in pending if m["parish_slug"] == target_slug]
+            update_scope = [target_slug]
         elif slugs is not None:
             known = {row["slug"] for row in list_parishes(conn)}
             missing = sorted(set(slugs) - known)
@@ -192,6 +216,23 @@ def process_bulletins(
                 raise ValueError(f"Parish not found: {', '.join(missing)}")
             wanted = set(slugs)
             pending = [m for m in pending if m["parish_slug"] in wanted]
+
+        # Fetch-only parishes make no model call, in either mode.
+        held = set() if include_fetch_only else fetch_only_slugs(conn)
+        if update_scope is not None:
+            held &= set(update_scope)
+        if held:
+            if parish_name:
+                LOGGER.warning(
+                    "Parish %s is fetch-only; pass --include-fetch-only to process it anyway",
+                    parish_name,
+                )
+            else:
+                LOGGER.info("Leaving %d fetch-only parishes unprocessed", len(held))
+            pending = [m for m in pending if m["parish_slug"] not in held]
+            if update_scope is None:
+                update_scope = [row["slug"] for row in list_parishes(conn)]
+            update_scope = [slug for slug in update_scope if slug not in held]
 
         history = load_history_from_db(conn)
         pruned = prune_history(history)
@@ -297,6 +338,11 @@ def process_bulletins(
                     churches_for_parish(conn, entry["parish_slug"]), outcome.extracted,
                 )
             commit(entry, outcome.extracted, PROCESS_EXTRACTED)
+
+        update_stats = process_update_mode(
+            conn, slugs=update_scope, run_id=run_id,
+            updater=OpenAIScheduleUpdater(), concurrency=concurrency,
+        )
     finally:
         conn.close()
 
@@ -307,7 +353,9 @@ def process_bulletins(
         "cache_hits": cache_hits,
         "weekly_promotions": promoted_events,
         "failed_bulletins": failed,
+        "fetch_only_parishes": len(held),
         **tokens,
+        **update_stats,
     }
     LOGGER.info("Process stage finished: %s", result)
     return result

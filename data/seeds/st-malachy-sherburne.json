@@ -1,0 +1,520 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-malachy-sherburne",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:31:14Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:51:31Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. Malachy's p1 gives Saturday 4:00 PM, Sunday 8:30 AM and Friday 9:00 AM Masses, Saturday 3:10-3:40 and Tuesday 6-7 PM Reconciliation and Tuesday 6-7 PM Adoration. Fr. Dan's absence cancels Fridays Oct 16 and 23. Open: p2 announces that from Nov 1 the weekday Mass becomes Tuesday 9:00 AM at St. Malachy (Friday moves to St. Paul's), which the file cannot date.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "855f1eabc4f5f4d52f47c7d858f240f26b82badc606af7bf6840020956c57455",
+      "fetched_at": "2026-10-11T16:31:14Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "6a9f09da6958400e5d99cb84014daa42fa335e288c618792b705c5d1c4420cf6",
+      "fetched_at": "2026-10-04T14:42:26Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "783ae853ea5404c1221527ddc0233f7219079525eb32754a4cbb6d67af522eda",
+      "fetched_at": "2026-09-28T00:13:40Z",
+      "published_date": "2026-09-20",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 1,
+          "said": "Saturday Vigil – 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "855f1eabc4f5",
+          "said": "weekly mass Saturday 16:00 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a9f09da6958",
+          "said": "weekly mass Saturday 16:00 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "783ae853ea54",
+          "said": "weekly mass Saturday 16:00 st-malachy-sherburne",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the p1 sacrament/Mass box of the newest bulletin; history agrees (all three bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 1,
+          "said": "Sunday – 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "855f1eabc4f5",
+          "said": "weekly mass Sunday 08:30 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a9f09da6958",
+          "said": "weekly mass Sunday 08:30 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "783ae853ea54",
+          "said": "weekly mass Sunday 08:30 st-malachy-sherburne",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the p1 sacrament/Mass box of the newest bulletin; history agrees (all three bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:10",
+        "end_time": "15:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ... Saturday 3:10-3:40 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "855f1eabc4f5",
+          "said": "weekly confession Saturday 15:10–15:40 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a9f09da6958",
+          "said": "weekly confession Saturday 15:10–15:40 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "783ae853ea54",
+          "said": "weekly confession Saturday 15:10–15:40 st-malachy-sherburne",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the p1 sacrament/Mass box of the newest bulletin; history agrees (all three bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Tuesday 6:00-7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "855f1eabc4f5",
+          "said": "weekly confession Tuesday 18:00–19:00 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a9f09da6958",
+          "said": "weekly confession Tuesday 18:00–19:00 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "783ae853ea54",
+          "said": "weekly confession Tuesday 18:00–19:00 st-malachy-sherburne",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the p1 sacrament/Mass box of the newest bulletin; history agrees (all three bulletins). Fr. Dan is away Oct 13-16 and Oct 19-23 and the bulletin says only 'no weekday Masses'; it does not cancel the Tuesday Oct 13 and 20 confession/adoration, so they are kept as weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Tuesday 6:00-7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "855f1eabc4f5",
+          "said": "weekly adoration Tuesday 18:00–19:00 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a9f09da6958",
+          "said": "weekly adoration Tuesday 18:00–19:00 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "783ae853ea54",
+          "said": "weekly adoration Tuesday 18:00–19:00 st-malachy-sherburne",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the p1 sacrament/Mass box of the newest bulletin; history agrees (all three bulletins). Fr. Dan is away Oct 13-16 and Oct 19-23 and the bulletin says only 'no weekday Masses'; it does not cancel the Tuesday Oct 13 and 20 confession/adoration, so they are kept as weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Father Dan away"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 2,
+          "said": "Friday, October 16th 9:00am- No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "855f1eabc4f5",
+          "said": "specific_date mass 2026-10-16 09:00 st-malachy-sherburne  CANCELLED; “Father Dan away”",
+          "page": 2
+        }
+      ],
+      "rationale": "Fr. Dan's absence cancels the regular Friday 9:00 AM Mass: Oct 16 is listed 'No Mass' and Oct 23 falls in the Oct 19-23 'NO WEEKDAY MASSES' range.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-23",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Father Dan away"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 2,
+          "said": "Father Dan will be away October 13-16 and October 19-23. There will be NO WEEKDAY MASSES."
+        },
+        {
+          "source": "history",
+          "bulletin": "855f1eabc4f5",
+          "said": "specific_date mass 2026-10-23 09:00 st-malachy-sherburne  CANCELLED; “Father Dan away”",
+          "page": 2
+        }
+      ],
+      "rationale": "Fr. Dan's absence cancels the regular Friday 9:00 AM Mass: Oct 16 is listed 'No Mass' and Oct 23 falls in the Oct 19-23 'NO WEEKDAY MASSES' range.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass at St. Theresa's"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 2,
+          "said": "Monday, October 12th 5:30pm- Mass at St. Theresa's"
+        }
+      ],
+      "rationale": "Held at St. Theresa's, which is a different church and not this parish's (data/churches.csv only has St. Theresa in Windham, NY, which is not near Sherburne); off-site Mass is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 2,
+          "said": "Starting November 1st and going forward, there will be a new weekday Mass schedule. Monday: 9:00 AM @ St. Bart's; Tuesday: 9:00 AM @ St. Malachy's; Wednesday: 9:00 AM @ St. Theresa's; Thursday: NO MASS; Friday: 9:00 AM @ St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a9f09da",
+          "page": 1,
+          "said": "Friday – 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "855f1eabc4f5",
+          "said": "weekly mass Friday 09:00 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a9f09da6958",
+          "said": "weekly mass Friday 09:00 st-malachy-sherburne",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "783ae853ea54",
+          "said": "weekly mass Friday 09:00 st-malachy-sherburne",
+          "page": 1
+        }
+      ],
+      "rationale": "The newest bulletin still prints the Friday 9:00 AM Mass at St. Malachy (p1, and Friday Oct 9/16/23 are shown on p2), but p2 announces that from November 1 the Friday Mass moves to St. Paul's and St. Malachy's weekday Mass becomes Tuesday 9:00 AM. The file cannot express a start date, so the Friday slot is kept for now; update mode should drop it once a post-Nov 1 bulletin appears.",
+      "question": "Keep the weekly Friday 9:00 AM Mass at St. Malachy even though it ends on Nov 1?",
+      "options": [
+        {
+          "label": "Keep weekly Friday 9:00 AM (current schedule)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-malachy-sherburne",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 2,
+          "said": "Starting November 1st and going forward ... Tuesday: 9:00 AM @ St. Malachy's"
+        }
+      ],
+      "rationale": "Announced for 'November 1st and going forward' only, so it is not the current schedule (Tuesdays now have 'No Mass' on Oct 13). The file cannot express a start date; a season needs both months. Leaving it out keeps the site correct until a post-Nov 1 bulletin arrives.",
+      "question": "Add a weekly Tuesday 9:00 AM Mass at St. Malachy that starts Nov 1?",
+      "options": [
+        {
+          "label": "Leave out for now",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Weekly Tuesday 9:00 AM (starts Nov 1)",
+          "entry": {
+            "church_slug": "st-malachy-sherburne",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "855f1eab",
+          "page": 2,
+          "said": "Monday: 9:00 AM @ St. Bart's; Wednesday: 9:00 AM @ St. Theresa's; Friday: 9:00 AM @ St. Paul's"
+        }
+      ],
+      "rationale": "From Nov 1 the Monday, Wednesday and Friday weekday Masses are at other parishes' churches, not St. Malachy's; left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

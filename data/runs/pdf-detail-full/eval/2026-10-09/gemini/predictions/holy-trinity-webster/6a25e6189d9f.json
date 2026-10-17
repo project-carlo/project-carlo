@@ -1,0 +1,323 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "holy-trinity-webster",
+  "content_hash": "6a25e6189d9f13c04414e1a1e674da9e44d12eb8f42be67714239c254f123690",
+  "source_url": "https://holytrinityweb.org/wp-content/uploads/2026/09/20260927B.pdf",
+  "fetched_at": "2026-09-25T17:22:38Z",
+  "reference_date": "2026-09-25",
+  "churches": [
+    {
+      "slug": "holy-trinity",
+      "name": "Holy Trinity Church",
+      "address": "1460 Ridge Road, Webster, NY 14580"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/6a25e6189d9f13c04414e1a1e674da9e44d12eb8f42be67714239c254f123690-72af1eb47324.json",
+    "modified_at": "2026-09-25T17:32:21.311000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/holy-trinity-webster/6a25e6189d9f.pdf",
+  "pdf_sha256": "62dd8147d79c69741db93a8cd5a17856e82e63c04937c1d8fc503dda9888dc25",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "October through June",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "4:30 PM",
+        "end_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "3:00 PM",
+        "end_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "18:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "Spanish",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "15:30",
+      "end_time": "16:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "Special time due to wedding",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "3:30 PM",
+        "end_time": "4:15 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-29",
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "No Tuesday confessions July - September",
+      "raw": {
+        "date": "2026-09-29",
+        "start_time": "4:30 PM",
+        "end_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-trinity",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "Time changed due to wedding",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "3:00 PM",
+        "end_time": "4:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3492,
+    "output_tokens": 788
+  }
+}

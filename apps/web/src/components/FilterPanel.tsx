@@ -13,7 +13,16 @@ import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
 import { TimeRangeSlider } from "./TimeRangeSlider";
 import { FeedbackTrigger } from "./FeedbackTrigger";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
+import {
+  ANY_DAY,
+  ANY_TIME,
+  CLEAR_FILTERS,
+  FILTER_DAY_HEADING,
+  FILTER_SERVICE_HEADING,
+  FILTER_TIME_HEADING,
+} from "../copy";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { track } from "@/lib/analytics";
 
 const TIME_STEP_MINUTES = 15;
 
@@ -23,7 +32,7 @@ interface FilterPanelProps {
   onClose: () => void;
   filters: FilterState;
   onChange: (filters: FilterState) => void;
-  /** Mapped churches matching the current filters, shown on the mobile close button. */
+  /** Churches matching the current filters within the map's view, shown on the mobile close button. */
   resultCount?: number;
 }
 
@@ -45,6 +54,7 @@ export function FilterPanel({
 
   const selectDay = useCallback(
     (dayIndex: number) => {
+      track("filter", { kind: "days" });
       const current = filters.daysOfWeek;
       if (current.length === 0) {
         onChange({ ...filters, daysOfWeek: [dayIndex] });
@@ -61,6 +71,7 @@ export function FilterPanel({
 
   const selectEventType = useCallback(
     (type: EventType) => {
+      track("filter", { kind: "event_type", detail: type });
       onChange({ ...filters, eventType: type });
     },
     [filters, onChange],
@@ -90,6 +101,7 @@ export function FilterPanel({
   }, [filters, onChange]);
 
   const handleClear = useCallback(() => {
+    track("filter", { kind: "clear" });
     onChange({ ...DEFAULT_FILTER_STATE });
   }, [onChange]);
 
@@ -100,7 +112,7 @@ export function FilterPanel({
         <section>
           <div className="mb-3 flex items-baseline justify-between">
             <h3 className="smallcaps text-[0.875rem] text-ink-soft">
-              Service type
+              {FILTER_SERVICE_HEADING}
             </h3>
           </div>
           <div className="flex gap-2">
@@ -129,7 +141,7 @@ export function FilterPanel({
         <section>
           <div className="mb-3 flex min-h-[1.125rem] items-baseline justify-between gap-3">
             <h3 className="smallcaps text-[0.875rem] text-ink-soft">
-              Day of week
+              {FILTER_DAY_HEADING}
             </h3>
             <button
               type="button"
@@ -140,7 +152,7 @@ export function FilterPanel({
                 isDaysDefault ? "invisible" : ""
               }`}
             >
-              Reset
+              {ANY_DAY}
             </button>
           </div>
           <div className="grid grid-cols-7 border border-rule-strong">
@@ -174,7 +186,7 @@ export function FilterPanel({
         <section>
           <div className="mb-3 flex min-h-[1.125rem] items-baseline justify-between gap-3">
             <h3 className="smallcaps text-[0.875rem] text-ink-soft">
-              Time of day
+              {FILTER_TIME_HEADING}
             </h3>
             <button
               type="button"
@@ -185,7 +197,7 @@ export function FilterPanel({
                 isTimeDefault ? "invisible" : ""
               }`}
             >
-              Reset
+              {ANY_TIME}
             </button>
           </div>
           <TimeRangeSlider
@@ -214,7 +226,7 @@ export function FilterPanel({
             onClick={handleClear}
             className="rubric-link font-serif text-[0.9375rem] text-rubric hover:text-rubric-deep"
           >
-            Reset all
+            {CLEAR_FILTERS}
           </button>
         ) : null}
         <div className="flex-1" />

@@ -1,0 +1,166 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-mary-glens-falls",
+  "content_hash": "8d2585337fe0736f1e9c3ae75852d6f7d3f4a9ba25eb01cd11348216c564a5dd",
+  "source_url": "https://www.stmarysglensfalls.org/_files/ugd/91aab8_46b62d4f6d98443aa19cf10317ca1878.pdf",
+  "fetched_at": "2026-10-04T14:56:29Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "st-mary-glens-falls",
+      "name": "St. Mary",
+      "address": "62 Warren St., Glens Falls, NY 12801"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/8d2585337fe0736f1e9c3ae75852d6f7d3f4a9ba25eb01cd11348216c564a5dd-fc8453537f4d.json",
+    "modified_at": "2026-10-04T15:24:22.133000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-mary-glens-falls/8d2585337fe0.pdf",
+  "pdf_sha256": "ef1286e7b94378e7472e34a906c6094a55514839f286efdece1d37e0ee5c849b",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-mary-glens-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-glens-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-glens-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-glens-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "12:10",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "12:10 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-glens-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "12:10",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "12:10 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-glens-falls",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "13:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "1:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-glens-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "13:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "1:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4536,
+    "output_tokens": 675
+  }
+}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowLeftIcon } from "@/components/icons";
+import { MapIcon } from "@/components/icons";
+import { MAP_LINK, SOURCE_PHRASE } from "@/copy";
 import { Masthead } from "@/components/Masthead";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 import { useHomeHref } from "@/hooks/useHomeHref";
@@ -9,7 +10,7 @@ export function AboutPage() {
   useDocumentMeta({
     title: "About · Project Carlo",
     description:
-      "About Project Carlo — a directory of Catholic parishes with Mass, Confession, and Adoration times parsed from weekly bulletins.",
+      `About Project Carlo: a directory of Catholic churches with Mass, Confession, and Adoration times ${SOURCE_PHRASE}.`,
     canonicalUrl: canonicalForPath("/about"),
   });
   const homeHref = useHomeHref();
@@ -19,8 +20,8 @@ export function AboutPage() {
       <div className="mx-auto flex w-full max-w-[40rem] flex-col gap-8">
         <header className="space-y-4">
           <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-            <ArrowLeftIcon className="size-3" />
-            Back to map
+            <MapIcon className="size-3.5" />
+            {MAP_LINK}
           </Link>
           <Masthead compact />
         </header>
@@ -31,7 +32,7 @@ export function AboutPage() {
           </h1>
           <p className="font-serif text-base text-ink-soft">
             Placeholder intro paragraph. Replace this copy with a short
-            description of what Project Carlo is and who it's for.
+            description of what Project Carlo is and who it’s for.
           </p>
         </section>
 
@@ -39,7 +40,7 @@ export function AboutPage() {
           <h2 className="smallcaps text-[1.0625rem] text-ink">What this is</h2>
           <p className="font-serif text-base text-ink-soft">
             Placeholder body. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Replace with a paragraph or two explaining the project's
+            elit. Replace with a paragraph or two explaining the project’s
             purpose.
           </p>
         </section>

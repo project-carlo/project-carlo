@@ -19,6 +19,9 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.schedule.store import DELETE, REFERENCE, Change, append_revision
+from pdf_extract.seeding.files import SEEDS_DIR
+from pdf_extract.seeding.loader import load_approved_seeds
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
@@ -148,13 +151,23 @@ def seed_reference_data(
     them, survive. A parish or church removed from its CSV is deleted along
     with its bulletins and events; the previous published database still holds
     them if that was a mistake.
+
+    A church is different once it has believed-schedule entries, since its
+    parish's change log points at them and is never rewritten
+    (docs/schedule-state-plan.md, "Churches leaving the CSV"). When such a
+    church leaves the CSV or names another parish, its live entries are
+    deleted from its old parish's schedule by a `reference` revision; one that
+    leaves is retired (`retired_at`) rather than deleted, and comes back with
+    its id if it returns to the CSV.
     """
     stats = {
         "parishes_upserted": 0,
         "parishes_deleted": 0,
         "churches_upserted": 0,
         "churches_deleted": 0,
+        "churches_retired": 0,
         "churches_skipped": 0,
+        "schedule_entries_removed": 0,
     }
     now = utc_now_iso()
 
@@ -178,19 +191,22 @@ def seed_reference_data(
             parish_slugs.add(slug)
             conn.execute(
                 """INSERT INTO parish(
-                       slug, name, homepage_url, bulletin_provider, provider_id, created_at
-                   ) VALUES (?, ?, ?, ?, ?, ?)
+                       slug, name, homepage_url, bulletin_provider, provider_id, fetch_only,
+                       created_at
+                   ) VALUES (?, ?, ?, ?, ?, ?, ?)
                    ON CONFLICT(slug) DO UPDATE SET
                        name = excluded.name,
                        homepage_url = excluded.homepage_url,
                        bulletin_provider = excluded.bulletin_provider,
-                       provider_id = excluded.provider_id""",
+                       provider_id = excluded.provider_id,
+                       fetch_only = excluded.fetch_only""",
                 (
                     slug,
                     row["name"],
                     row["website"],
                     (row.get("bulletin_provider") or "").strip() or None,
                     (row.get("provider_id") or "").strip() or None,
+                    _csv_bool(row.get("fetch_only")),
                     now,
                 ),
             )
@@ -201,9 +217,17 @@ def seed_reference_data(
         for parish in conn.execute("SELECT id, slug FROM parish").fetchall():
             if parish["slug"] not in parish_slugs:
                 LOGGER.warning("Parish %s is no longer in parishes.csv; deleting", parish["slug"])
+                stats["churches_retired"] += keep_churches_other_parishes_reference(
+                    conn, parish["id"], now,
+                )
                 conn.execute("DELETE FROM parish WHERE id = ?", (parish["id"],))
                 stats["parishes_deleted"] += 1
 
+        existing = {
+            r["slug"]: r for r in conn.execute(
+                "SELECT id, slug, parish_id, retired_at FROM church"
+            ).fetchall()
+        }
         church_slugs = set()
         for row in church_rows:
             parish = conn.execute(
@@ -217,6 +241,11 @@ def seed_reference_data(
                 stats["churches_skipped"] += 1
                 continue
             church_slugs.add(row["slug"])
+            old = existing.get(row["slug"])
+            if old is not None and old["parish_id"] != parish["id"]:
+                stats["schedule_entries_removed"] += remove_church_entries(
+                    conn, old["id"], old["parish_id"], reason="moved to another parish",
+                )
             conn.execute(
                 """INSERT INTO church(
                        parish_id, slug, name, address_line1, address_line2, city, state,
@@ -234,7 +263,8 @@ def seed_reference_data(
                        name_verified = excluded.name_verified,
                        address_verified = excluded.address_verified,
                        latitude = excluded.latitude,
-                       longitude = excluded.longitude""",
+                       longitude = excluded.longitude,
+                       retired_at = NULL""",
                 (
                     parish["id"],
                     row["slug"],
@@ -253,13 +283,95 @@ def seed_reference_data(
             )
             stats["churches_upserted"] += 1
 
-        for church in conn.execute("SELECT id, slug FROM church").fetchall():
-            if church["slug"] not in church_slugs:
+        for church in conn.execute(
+            "SELECT id, slug, parish_id, retired_at FROM church"
+        ).fetchall():
+            if church["slug"] in church_slugs:
+                continue
+            stats["schedule_entries_removed"] += remove_church_entries(
+                conn, church["id"], church["parish_id"], reason="left churches.csv",
+            )
+            has_entries = conn.execute(
+                "SELECT 1 FROM schedule_entry WHERE church_id = ? LIMIT 1", (church["id"],)
+            ).fetchone()
+            if has_entries is None:
                 LOGGER.warning("Church %s is no longer in churches.csv; deleting", church["slug"])
                 conn.execute("DELETE FROM church WHERE id = ?", (church["id"],))
                 stats["churches_deleted"] += 1
+            elif church["retired_at"] is None:
+                LOGGER.warning(
+                    "Church %s is no longer in churches.csv; retiring it (its schedule "
+                    "entries stay in the log)", church["slug"],
+                )
+                conn.execute(
+                    "UPDATE church SET retired_at = ? WHERE id = ?", (now, church["id"]),
+                )
+                stats["churches_retired"] += 1
 
     return stats
+
+
+def keep_churches_other_parishes_reference(
+    conn: sqlite3.Connection, parish_id: int, now: str,
+) -> int:
+    """Before a parish is deleted, move out the churches another parish's log still names.
+
+    A church that moved to this parish keeps its entries in its old parish's
+    log, proposals and sightings, which are never rewritten. Deleting this
+    parish would delete the church and its entries by cascade, under those
+    rows. Such a church is instead moved back to (the lowest-id) parish that
+    references it and retired there; it comes back if churches.csv lists it
+    again. Returns how many churches were kept.
+    """
+    rows = conn.execute(
+        """SELECT c.id AS church_id, MIN(ref.parish_id) AS parish_id
+           FROM church c
+           JOIN schedule_entry e ON e.church_id = c.id
+           JOIN (
+               SELECT parish_id, before_entry_id AS entry_id FROM schedule_change
+               UNION ALL SELECT parish_id, after_entry_id FROM schedule_change
+               UNION ALL SELECT l.parish_id, p.entry_id FROM proposed_change p
+                   JOIN llm_call l ON l.id = p.llm_call_id
+               UNION ALL SELECT b.parish_id, s.entry_id FROM entry_sighting s
+                   JOIN bulletin b ON b.id = s.bulletin_id
+           ) ref ON ref.entry_id = e.id
+           WHERE c.parish_id = ? AND ref.parish_id != ?
+           GROUP BY c.id""",
+        (parish_id, parish_id),
+    ).fetchall()
+    for row in rows:
+        LOGGER.warning(
+            "Church %s is still named by parish %s's schedule log; moving it there, retired",
+            row["church_id"], row["parish_id"],
+        )
+        conn.execute(
+            "UPDATE church SET parish_id = ?, retired_at = COALESCE(retired_at, ?) WHERE id = ?",
+            (row["parish_id"], now, row["church_id"]),
+        )
+    return len(rows)
+
+
+def remove_church_entries(
+    conn: sqlite3.Connection, church_id: int, parish_id: int, *, reason: str,
+) -> int:
+    """Delete a church's live entries from its parish's schedule with one `reference` revision.
+
+    Returns how many entries were removed (0, and no revision, when it had none).
+    """
+    rows = conn.execute(
+        """SELECT s.entry_id FROM current_schedule s
+           JOIN schedule_entry e ON e.id = s.entry_id
+           WHERE s.parish_id = ? AND e.church_id = ? ORDER BY s.entry_id""",
+        (parish_id, church_id),
+    ).fetchall()
+    if not rows:
+        return 0
+    append_revision(
+        conn, parish_id, source_kind=REFERENCE,
+        changes=[Change(DELETE, before_entry_id=row["entry_id"]) for row in rows],
+        actor="churches.csv", note=f"church {church_id} {reason}",
+    )
+    return len(rows)
 
 
 # ── Opening the database ────────────────────────────────────────────────────
@@ -280,12 +392,22 @@ def create_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     return {"db_path": str(db_path), "migrations_applied": migrations, **seeded}
 
 
-def ensure_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
+def ensure_db(
+    db_path: Path = DEFAULT_DB_PATH,
+    *,
+    load_seeds: bool = True,
+    seeds_dir: Path = SEEDS_DIR,
+) -> dict[str, Any]:
     """Bring an existing database up to date before a pipeline command runs.
 
-    Applies pending migrations and re-seeds the reference tables from the
-    CSVs. Refuses to invent a database: running the pipeline against an empty
-    one would look like every parish had lost its schedule.
+    Applies pending migrations, re-seeds the reference tables from the CSVs,
+    and loads the approved seed files not loaded yet (`seeding.loader`; the
+    result is under `seeds`). Refuses to invent a database: running the
+    pipeline against an empty one would look like every parish had lost its
+    schedule.
+
+    `load_seeds` off leaves the seed files for later: the weekly run loads
+    them after taking its before-copy, so its change checks see them.
     """
     if not db_path.exists():
         raise DatabaseMissingError(
@@ -296,6 +418,20 @@ def ensure_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     try:
         migrations = migrate(conn)
         seeded = seed_reference_data(conn)
+        result: dict[str, Any] = {"migrations_applied": migrations, **seeded}
+        if load_seeds:
+            result["seeds"] = load_approved_seeds(conn, seeds_dir)
     finally:
         conn.close()
-    return {"migrations_applied": migrations, **seeded}
+    return result
+
+
+def load_seeds(
+    db_path: Path = DEFAULT_DB_PATH, *, seeds_dir: Path = SEEDS_DIR, run_id: str | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    """Load the approved seed files into the database at `db_path` (see `ensure_db`)."""
+    conn = connect_db(db_path)
+    try:
+        return load_approved_seeds(conn, seeds_dir, run_id=run_id)
+    finally:
+        conn.close()

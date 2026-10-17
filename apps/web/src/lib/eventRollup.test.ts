@@ -25,6 +25,9 @@ function event(overrides: Partial<EventSummary>): EventSummary {
     next_occurrence: null,
     page_number: null,
     note: null,
+    weeks_of_month: [],
+    exclude_weeks: false,
+    season: null,
     ...overrides,
   };
 }
@@ -38,7 +41,7 @@ describe("rollUpEventsByDay", () => {
     ]);
 
     expect(rows).toHaveLength(1);
-    expect(rows[0].label).toBe("Sundays");
+    expect(rows[0].label).toBe("Sunday");
     expect(rows[0].times).toEqual(["7:30 a.m.", "9 a.m.", "11 a.m."]);
   });
 
@@ -51,9 +54,9 @@ describe("rollUpEventsByDay", () => {
     ]);
 
     expect(rows.map((row) => row.label)).toEqual([
-      "Sundays",
-      "Saturdays",
-      "Mondays",
+      "Sunday",
+      "Saturday",
+      "Monday",
     ]);
   });
 
@@ -123,6 +126,32 @@ describe("rollUpEventsByDay", () => {
 
     expect(rows).toHaveLength(2);
     expect(rows.map((row) => row.label)).toEqual(["", ""]);
+  });
+
+  it("gives a slot that isn't every week its own row, with its qualifier", () => {
+    const rows = rollUpEventsByDay([
+      weekly("sunday", 9 * 60),
+      event({
+        kind: "weekly",
+        day_of_week: "sunday",
+        start_time: 9 * 60,
+        weeks_of_month: ["first", "third"],
+      }),
+      event({
+        kind: "weekly",
+        day_of_week: "sunday",
+        start_time: 8 * 60,
+        season: { start_month: 5, start_day: null, end_month: 10, end_day: null },
+      }),
+    ]);
+
+    expect(rows.map((r) => [r.label, r.times, r.note])).toEqual([
+      ["Sunday", ["9 a.m."], null],
+      ["Sunday", ["9 a.m."], "First and third Sundays of the month"],
+      ["Sunday", ["8 a.m."], "May through October"],
+    ]);
+    // A first-Sunday slot is never folded into the every-week row.
+    expect(new Set(rows.map((r) => r.key)).size).toBe(3);
   });
 
   it("returns no rows for an empty schedule", () => {

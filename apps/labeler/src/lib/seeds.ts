@@ -1,0 +1,222 @@
+/**
+ * Reviewing a seed file: what each review action does to a slot, and the
+ * parish's status after it. See docs/seeding-plan.md ("The seed file",
+ * "Review in the labeler") and src/pdf_extract/seeding/files.py, which the
+ * server validates every save against.
+ */
+import type { EditorRow, SeedAnswer, SeedEntry, SeedFile, SeedQueueRow, SeedSlot, SeedStatus } from "../types";
+import { formatDate } from "./dates";
+import { describeSeason, describeWeeks } from "./pattern";
+import { newId } from "./rows";
+import { formatTime } from "./time";
+
+/** Ready seeds first, then questions; continue after the current parish and wrap. */
+export function nextSeedToReview(seeds: readonly SeedQueueRow[], currentParish?: string): SeedQueueRow | undefined {
+  const index = seeds.findIndex((s) => s.parish_slug === currentParish);
+  const candidates = index < 0 ? seeds : [...seeds.slice(index + 1), ...seeds.slice(0, index)];
+  return candidates.find((s) => s.status === "ready") ?? candidates.find((s) => s.status === "needs_review");
+}
+
+function answer(choice: SeedAnswer["choice"], by: string): SeedAnswer {
+  return { choice, by, at: new Date().toISOString().replace(/\.\d{3}Z$/, "Z") };
+}
+
+export function isOpen(slot: SeedSlot): boolean {
+  return slot.status === "needs_human";
+}
+
+/** The open slots answered with `slot`: its group's, or itself alone. */
+export function groupOf(seed: SeedFile, slot: SeedSlot): SeedSlot[] {
+  if (!slot.group) return [slot];
+  return seed.slots.filter((s) => s.id === slot.id || (isOpen(s) && s.group === slot.group));
+}
+
+/** One open slot per question: a group's first slot stands for the rest. */
+export function openQuestions(seed: SeedFile): SeedSlot[] {
+  const seen = new Set<string>();
+  return seed.slots.filter((s) => {
+    if (!isOpen(s)) return false;
+    if (!s.group) return true;
+    if (seen.has(s.group)) return false;
+    seen.add(s.group);
+    return true;
+  });
+}
+
+/** How many questions are open: a group counts once. */
+export function openCount(seed: SeedFile): number {
+  return openQuestions(seed).length;
+}
+
+/**
+ * Open slots every proposed entry of which is dated before `today` (YYYY-MM-DD):
+ * whatever the answer, nothing would reach the site.
+ */
+export function expiredQuestions(seed: SeedFile, today: string): SeedSlot[] {
+  return seed.slots.filter((s) => {
+    if (!isOpen(s)) return false;
+    const entries = (s.options ?? []).map((o) => o.entry).filter((e): e is SeedEntry => !!e);
+    return entries.length > 0 && entries.every((e) => e.event_kind !== "weekly" && !!e.date && e.date < today);
+  });
+}
+
+/** The entry an excluded slot keeps for review: its own, or one its options name, or none. */
+function keptEntry(slot: SeedSlot): SeedEntry | null {
+  if (slot.entry) return slot.entry;
+  const options = slot.options ?? [];
+  return options.find((o) => o.leaning && o.entry)?.entry ?? options.find((o) => o.entry)?.entry ?? null;
+}
+
+/** Settle an open question with one of its options. Null when that can't be done. */
+export function chooseOption(slot: SeedSlot, index: number, by: string): SeedSlot | null {
+  const option = slot.options?.[index];
+  if (!option) return null;
+  if (option.entry) {
+    return { ...slot, status: "settled", decision: "include", entry: option.entry, answer: answer(index, by) };
+  }
+  return { ...slot, status: "settled", decision: "exclude", entry: keptEntry(slot), answer: answer(index, by) };
+}
+
+/** Leave a slot out, whatever it was. */
+export function dropSlot(slot: SeedSlot, by: string): SeedSlot {
+  return { ...slot, status: "settled", decision: "exclude", entry: keptEntry(slot), answer: answer("dropped", by) };
+}
+
+/** Settle a slot as the reviewer edited it. */
+export function editSlot(slot: SeedSlot, entry: SeedEntry, page: number | null, by: string): SeedSlot {
+  return { ...slot, status: "settled", decision: "include", entry, page, answer: answer("edited", by) };
+}
+
+/**
+ * Open a settled slot again as a question, its current decision as the leaning
+ * answer. Null for a slot left out with no entry: there is nothing to include.
+ */
+export function reopenSlot(slot: SeedSlot): SeedSlot | null {
+  if (isOpen(slot)) return slot;
+  if (!slot.entry && !slot.options?.some((o) => o.leaning)) return null;
+  const included = slot.decision === "include";
+  const options =
+    slot.options && slot.options.some((o) => o.leaning)
+      ? slot.options
+      : [
+          { label: "Include", entry: slot.entry, leaning: included },
+          { label: "Leave out", entry: null, leaning: !included },
+        ];
+  return {
+    ...slot,
+    status: "needs_human",
+    question: slot.question ?? `Reopened by the reviewer: ${describeEntry(slot.entry)}`,
+    options,
+    answer: null,
+  };
+}
+
+/**
+ * The parish's status once a slot changed: needs_review while a question is
+ * open, otherwise ready. Any change takes back an approval; blocked stays.
+ */
+export function statusAfterChange(seed: SeedFile): SeedStatus {
+  if (seed.status === "blocked" || seed.status === "drafting") return seed.status;
+  return openCount(seed) ? "needs_review" : "ready";
+}
+
+export function replaceSlot(seed: SeedFile, next: SeedSlot): SeedFile {
+  return replaceSlots(seed, [next]);
+}
+
+export function replaceSlots(seed: SeedFile, nexts: readonly SeedSlot[]): SeedFile {
+  const byId = new Map(nexts.map((s) => [s.id, s]));
+  const changed = { ...seed, slots: seed.slots.map((s) => byId.get(s.id) ?? s) };
+  return { ...changed, status: statusAfterChange(changed), approved_at: null };
+}
+
+/** Answer a question for every slot of its group (or the slot alone). Null when an option can't settle one. */
+export function chooseForGroup(seed: SeedFile, slot: SeedSlot, index: number, by: string): SeedFile | null {
+  const chosen = groupOf(seed, slot).map((s) => (isOpen(s) ? chooseOption(s, index, by) : null));
+  if (chosen.some((s) => !s)) return null;
+  return replaceSlots(seed, chosen as SeedSlot[]);
+}
+
+export function approve(seed: SeedFile, reviewer: string): SeedFile | null {
+  if (openCount(seed) || !reviewer.trim()) return null;
+  return { ...seed, status: "approved", reviewer: reviewer.trim() };
+}
+
+/** Slots in the order the page lists them: open questions (one per group), settled, left out. */
+export function slotGroups(seed: SeedFile): { open: SeedSlot[]; settled: SeedSlot[]; excluded: SeedSlot[] } {
+  return {
+    open: openQuestions(seed),
+    settled: seed.slots.filter((s) => !isOpen(s) && s.decision === "include"),
+    excluded: seed.slots.filter((s) => !isOpen(s) && s.decision !== "include"),
+  };
+}
+
+/** "Mass · Sun 9:00 AM · first, third · Sep–May · note" */
+export function describeEntry(entry: SeedEntry | null): string {
+  if (!entry) return "Leave out";
+  const when = entry.event_kind === "weekly" ? (entry.day_of_week ?? "?") : formatDate(entry.date);
+  const end = entry.end_time ? `–${formatTime(entry.end_time)}` : "";
+  const parts = [
+    `${entry.event_type[0].toUpperCase()}${entry.event_type.slice(1)}`,
+    `${when} ${formatTime(entry.start_time)}${end}`,
+  ];
+  if (entry.cancelled) parts.push("cancelled");
+  if (entry.weeks_of_month.length) parts.push(describeWeeks(entry.weeks_of_month, entry.exclude_weeks));
+  if (entry.season) parts.push(describeSeason(entry.season));
+  if (entry.note) parts.push(entry.note);
+  return parts.join(" · ");
+}
+
+/**
+ * The newest bulletin the agent read: the one `as_of` names and a slot's page
+ * refers to (as `newest_read_bulletin` on the server; times compared parsed).
+ */
+export function newestReadBulletin(seed: SeedFile): SeedFile["bulletins"][number] | null {
+  let newest: SeedFile["bulletins"][number] | null = null;
+  for (const b of seed.bulletins) {
+    if (!b.read) continue;
+    if (!newest || Date.parse(b.fetched_at) > Date.parse(newest.fetched_at)) newest = b;
+  }
+  return newest;
+}
+
+/** The full content hash a source or call's `bulletin` names (a hash or a prefix of one). */
+export function resolveBulletin(seed: SeedFile, ref: string | null | undefined): string | null {
+  if (!ref || ref.length < 8) return null;
+  const prefix = ref.replace(/…$/, "").toLowerCase();
+  const matches = seed.bulletins.filter((b) => b.content_hash.startsWith(prefix));
+  return matches.length === 1 ? matches[0].content_hash : null;
+}
+
+/** A slot's entry as an editor row, so RowEditor can edit it. */
+export function toEditorRow(entry: SeedEntry, page: number | null): EditorRow {
+  return {
+    ...entry,
+    exclude_weeks: entry.exclude_weeks ?? false,
+    id: newId(),
+    page_number: page,
+    origin: "human",
+    optional: null,
+  };
+}
+
+export function fromEditorRow(row: EditorRow): { entry: SeedEntry; page: number | null } {
+  const weekly = row.event_kind === "weekly";
+  return {
+    entry: {
+      church_slug: row.church_slug,
+      event_type: row.event_type,
+      event_kind: row.event_kind,
+      day_of_week: weekly ? row.day_of_week : null,
+      date: weekly ? null : row.date,
+      start_time: row.start_time,
+      end_time: row.end_time || null,
+      cancelled: weekly ? false : row.cancelled,
+      weeks_of_month: weekly ? row.weeks_of_month : [],
+      exclude_weeks: weekly && row.exclude_weeks,
+      season: weekly ? row.season : null,
+      note: row.note?.trim() ? row.note.trim() : null,
+    },
+    page: row.page_number,
+  };
+}

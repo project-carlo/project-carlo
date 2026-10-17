@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-hope-copake-falls",
+  "status": "approved",
+  "as_of": "2026-10-04T14:49:47Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T13:08:53Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:35:24Z",
+  "summary": "Single church led by a Parish Life Director. Both bulletins print only Sat 5:00 PM and Sun 10:00 AM 'Eucharistic Liturgies', plus Thursday Adoration 5:00-6:00 PM in the church; history agrees. Left out: the Wednesday 11 AM 'Rosary & Communion' (a Communion Service) and confession by appointment.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "70c2c6529fb5b97ba8a95b1dc803c002be14207d5d085a08ff89c564caca6714",
+      "fetched_at": "2026-10-04T14:49:47Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "fe7bac16c8920c4ec3a309202b5113407d0bd4ee86c77b422f36ce21150475d4",
+      "fetched_at": "2026-09-28T21:59:50Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-copake-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70c2c6529fb5",
+          "page": 1,
+          "said": "Eucharistic Liturgies: Saturday 5pm - Sunday 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe7bac16c892",
+          "page": 1,
+          "said": "Eucharistic Liturgies: Saturday 5pm - Sunday 10am"
+        },
+        {
+          "source": "history",
+          "bulletin": "70c2c6529fb5",
+          "said": "weekly mass Saturday 17:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "fe7bac16c892",
+          "said": "weekly mass Saturday 17:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 header of both bulletins read ('Eucharistic Liturgies'); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-copake-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70c2c6529fb5",
+          "page": 1,
+          "said": "Eucharistic Liturgies: Saturday 5pm - Sunday 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe7bac16c892",
+          "page": 1,
+          "said": "Eucharistic Liturgies: Saturday 5pm - Sunday 10am"
+        },
+        {
+          "source": "history",
+          "bulletin": "70c2c6529fb5",
+          "said": "weekly mass Sunday 10:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "fe7bac16c892",
+          "said": "weekly mass Sunday 10:00"
+        }
+      ],
+      "rationale": "Printed in the page-1 header of both bulletins read ('Eucharistic Liturgies'); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-copake-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70c2c6529fb5",
+          "page": 2,
+          "said": "Worship/Study Groups: Thursdays: Adoration (5-6pm) / Jueves 5pm-6pm Adoración en la iglesia, Contacto-Dunia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe7bac16c892",
+          "page": 2,
+          "said": "Worship/Study Groups: Thursdays: Adoration (5-6pm) / Jueves 5pm-6pm Adoración en la iglesia, Contacto-Dunia"
+        },
+        {
+          "source": "history",
+          "bulletin": "70c2c6529fb5",
+          "said": "weekly adoration Thursday 17:00-18:00 'Bilingual'"
+        },
+        {
+          "source": "history",
+          "bulletin": "fe7bac16c892",
+          "said": "weekly adoration Thursday 17:00-18:00 'Bilingual'"
+        }
+      ],
+      "rationale": "Listed weekly in the Worship/Study Groups box on page 2 of both bulletins, 'en la iglesia', with an end time; history agrees. History's 'Bilingual' note is left off: the box simply prints the line in both languages, it does not say the Adoration itself is bilingual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-copake-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70c2c6529fb5",
+          "page": 2,
+          "said": "Wednesdays: Rosary & Communion (11am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe7bac16c892",
+          "page": 2,
+          "said": "Wednesdays: Rosary & Communion (11am)"
+        }
+      ],
+      "rationale": "A Rosary with Communion (the parish is led by a Parish Life Director, with a visiting sacramental minister), i.e. a Communion Service, not a Mass, so left out per the policy. Confession is 'by appointment' / 'by sign up sheet' with no time, also left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

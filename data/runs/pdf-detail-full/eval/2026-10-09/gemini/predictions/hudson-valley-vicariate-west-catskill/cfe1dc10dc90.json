@@ -1,0 +1,264 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "hudson-valley-vicariate-west-catskill",
+  "content_hash": "cfe1dc10dc90eb0d404b3ede91532abc2533b6fbd48c7afb9f0ccce0727186e8",
+  "source_url": "https://stmaryscoxsackie.com/wp-content/uploads/2026/09/Coxsackie-Bulletin-September-27.pdf",
+  "fetched_at": "2026-09-28T21:58:46Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "immaculate-conception-haines-falls",
+      "name": "Immaculate Conception",
+      "address": "67 N Lake Rd., Haines Falls, NY 12436"
+    },
+    {
+      "slug": "sacred-heart-palenville",
+      "name": "Sacred Heart",
+      "address": "710 Route 23A, Palenville, NY 12463"
+    },
+    {
+      "slug": "st-mary-coxsackie",
+      "name": "St. Mary",
+      "address": "80 Mansion St., Coxsackie, NY 12051"
+    },
+    {
+      "slug": "st-patrick-athens",
+      "name": "St. Patrick",
+      "address": "24 N Washington St., Athens, NY 12015"
+    },
+    {
+      "slug": "st-patrick-catskill",
+      "name": "St. Patrick",
+      "address": "157 Bridge St., Catskill, NY 12414"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/cfe1dc10dc90eb0d404b3ede91532abc2533b6fbd48c7afb9f0ccce0727186e8-e01d1309929a.json",
+    "modified_at": "2026-09-28T22:12:02.380000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/hudson-valley-vicariate-west-catskill/cfe1dc10dc90.pdf",
+  "pdf_sha256": "6e13cba660e909f7c804e8095146a3140fa51f84a612a47f82771be7965f4392",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-patrick-catskill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-catskill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "2nd, 4th, and 5th Saturdays of the month",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-athens",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-athens",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "1st and 3rd Saturdays of the month",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-coxsackie",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-coxsackie",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-palenville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-haines-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-coxsackie",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "1st and 3rd Thursdays of the month",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "5:30 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-athens",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "1st and 3rd Saturdays of the month",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-catskill",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "2nd, 4th, and 5th Saturdays of the month",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4705,
+    "output_tokens": 1030
+  }
+}

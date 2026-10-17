@@ -1,0 +1,139 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "assumption-syracuse",
+  "content_hash": "402615eeacaf39207b589676c8351bca57d4823cb6c49cf7f92b2d607564c0d7",
+  "source_url": "https://parishesonline.com/publication-page/franciscan-church-of-the-assumption?selectedPublication=https://container.parishesonline.com/bulletins/06/0033/20261011B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-11",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 9262,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 2432,
+    "reasoning_tokens": 1920
+  },
+  "seconds": 23.213,
+  "response_id": "resp_068b7ae1ed3f89c1016ac90bc2ca4c87d299ac032b6bbc83a1",
+  "events": [
+    {
+      "church_slug": "assumption-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption-syracuse",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-12",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "date": "2026-10-12",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption-syracuse",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-13",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "date": "2026-10-13",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption-syracuse",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-14",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "date": "2026-10-14",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption-syracuse",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-15",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "St. Teresa of Jesus",
+      "raw": {
+        "date": "2026-10-15",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "8124f6acb7cbc4398e7e2763b50e8063e00b6defab695b9c5ed5fca677e64ff8"
+}

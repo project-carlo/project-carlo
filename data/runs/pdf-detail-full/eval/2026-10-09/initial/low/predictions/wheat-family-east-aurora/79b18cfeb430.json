@@ -1,0 +1,821 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "wheat-family-east-aurora",
+  "content_hash": "79b18cfeb430892083383851af83a9026378aa01547a24b072b1f61f86e5cdc3",
+  "source_url": "https://parishesonline.com/publication-page/wheat-roman-catholic-family-of-parishes-st-vincent-de-paul?selectedPublication=https://container.parishesonline.com/bulletins/14/0467/20261004B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 12901,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 7425,
+    "reasoning_tokens": 4394
+  },
+  "seconds": 58.286,
+  "response_id": "resp_0fb4b709dd73b422016ac913f6136087d28c99da278bf9ed21",
+  "events": [
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "7:00 AM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:00 AM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "7:00 AM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "7:00 AM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "7:00 AM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "7:00 AM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "7:00 AM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": "10:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Chapel",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:30 AM",
+        "end_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "18:30",
+      "end_time": "19:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "6:30 PM",
+        "end_time": "7:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "18:30",
+      "end_time": "19:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "6:30 PM",
+        "end_time": "7:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": "12:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM",
+        "end_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "20:00",
+      "end_time": "06:00",
+      "cancelled": false,
+      "weeks_of_month": [
+        "first"
+      ],
+      "season": null,
+      "page_number": 3,
+      "note": "Nocturnal Adoration",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:00 PM",
+        "end_time": "6:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": "19:30",
+      "cancelled": false,
+      "weeks_of_month": [
+        "third"
+      ],
+      "season": null,
+      "page_number": 2,
+      "note": "Starts at 11:30 AM if there is a 10:00 AM funeral",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:30 AM",
+        "end_time": "7:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-05",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-05",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-07",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-07",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "church-of-the-annunciation-elma",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-09",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-09",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-05",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-05",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-07",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-07",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-08",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-08",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-08",
+      "start_time": "09:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-08",
+        "start_time": "9:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-09",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-09",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-10",
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-10",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-11",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-11",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-east-aurora",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-11",
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-11",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-05",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-05",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "memorare-chapel-west-falls",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-10",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-10",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-06",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-06",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-06",
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-06",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-08",
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-08",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-10",
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-10",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-11",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-11",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-springbrook",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-04",
+      "start_time": "09:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "Rosary",
+      "raw": {
+        "date": "2026-10-04",
+        "start_time": "9:15 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "eb20dafd806fe3ceb9cfbf563e5aa55426e2fe21154c861efd0e356d863dd982"
+}

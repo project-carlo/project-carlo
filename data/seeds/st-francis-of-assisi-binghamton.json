@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-of-assisi-binghamton",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:36:26Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:56:13Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single-church parish (St. Francis of Assisi, Binghamton). Saturday 4:00 PM, Sunday 10:30 AM and 2nd/4th Saturday 3:00 PM Confession are settled from all three bulletins. Weekday Masses appear only in the intentions list and the website gives none: Tuesday/Thursday 8:00 AM (two of three weeks) and Monday/Wednesday 12:00 PM (one week, with a holiday no-Mass and a time change in the newest week) are asked in two groups, leaning weekly. The dated October 14 8:00 AM Mass is settled.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "20dbb7f67eb98a0946e14a0ffe20cf35a7a03d93a40f01327d0e22a84f99b8d8",
+      "fetched_at": "2026-10-11T16:36:26Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "82f4598083b9513879c734fdadd1d69a391c2c7b8a7d3c4cf018d3b49b18a0be",
+      "fetched_at": "2026-10-04T14:40:57Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "e6d4763af4a419ef1b59e871506ddeca52a2301c1f738d91547206e19341b00f",
+      "fetched_at": "2026-09-28T00:11:50Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Saturday, Vigil of Sunday 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "82f45980",
+          "page": 2,
+          "said": "Saturday, Vigil of Sunday 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6d4763a",
+          "page": 2,
+          "said": "Saturday, Vigil of Sunday 4:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stfrancisbing.org/",
+          "said": "Hours M-TH: 7:30am - 4:30pm SAT: 4:00PM SUN: 10:30AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "20dbb7f67eb9",
+          "said": "weekly mass Saturday 16:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "82f4598083b9",
+          "said": "weekly mass Saturday 16:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e6d4763af4a4",
+          "said": "weekly mass Saturday 16:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the Saturday 4:00 p.m. vigil is listed on page 2 of all three bulletins; R6: the website's hours agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Sunday 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "82f45980",
+          "page": 2,
+          "said": "Sunday 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6d4763a",
+          "page": 2,
+          "said": "Sunday 10:30 a.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stfrancisbing.org/",
+          "said": "Hours M-TH: 7:30am - 4:30pm SAT: 4:00PM SUN: 10:30AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "20dbb7f67eb9",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-binghamton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "82f4598083b9",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-binghamton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e6d4763af4a4",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-binghamton",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the Sunday 10:30 a.m. Mass is listed on page 2 of all three bulletins; R6: the website's hours agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 1,
+          "said": "CONFESSION 2nd & 4th Saturday of every month at 3:00PM in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "82f45980",
+          "page": 1,
+          "said": "Confession: 2nd & 4th Saturday of every month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6d4763a",
+          "page": 1,
+          "said": "Confession: 2nd & 4th Saturday of every month"
+        },
+        {
+          "source": "history",
+          "bulletin": "20dbb7f67eb9",
+          "said": "weekly confession Saturday 15:00 st-francis-of-assisi-binghamton  “2nd & 4th Saturday of every month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "82f4598083b9",
+          "said": "weekly confession Saturday 15:00 st-francis-of-assisi-binghamton  “2nd & 4th Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e6d4763af4a4",
+          "said": "weekly confession Saturday 15:00 st-francis-of-assisi-binghamton  “2nd & 4th Saturday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the page 1 box in all three bulletins names the weeks and the time. The newest bulletin's week (October 11-18) holds no second or fourth Saturday, but it prints the line anyway.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Time change"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Wednesday, October 14 - (NOTE: time change) 8:00 a.m. Liturgy for the People"
+        },
+        {
+          "source": "history",
+          "bulletin": "20dbb7f67eb9",
+          "said": "specific_date mass 2026-10-14 08:00 st-francis-of-assisi-binghamton  “Time change”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R17: the newest bulletin prints a dated 8:00 AM Mass on Wednesday October 14, with a note that the time changed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Tuesday, October 13 8:00 a.m. Dan Grady by Chuck & Linda Bucci"
+        },
+        {
+          "source": "agent",
+          "bulletin": "82f45980",
+          "page": 2,
+          "said": "Tuesday, October 6 8:00 a.m. Marie Jones by St. Francis Special Sunshine Committee"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6d4763a",
+          "page": 2,
+          "said": "Tuesday, September 29 NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "20dbb7f67eb9",
+          "said": "weekly mass Tuesday 08:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "82f4598083b9",
+          "said": "weekly mass Tuesday 08:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        }
+      ],
+      "rationale": "R28: the Mass-intentions list is the only place these Masses appear (no schedule box; the website gives only Saturday 4:00 PM and Sunday 10:30 AM). Tuesday 8:00 AM is listed in the newest bulletin (October 13) and in the October 4 bulletin (October 6), but the September 27 bulletin lists NO MASS for every weekday of September 28-October 2, so the slot is not in each week read (POLICY, Weekly or dated rule 4 needs that). Leaning weekly: it is in both weeks that have weekday Masses, and the empty week looks like an absence.",
+      "question": "Are the Tuesday and Thursday 8:00 AM Masses weekly?",
+      "options": [
+        {
+          "label": "Weekly at 8:00 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-francis-of-assisi-binghamton",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-8am"
+    },
+    {
+      "id": "s6",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Thursday, October 15 8:00 a.m. Donna Gavula by The Mother's Club"
+        },
+        {
+          "source": "agent",
+          "bulletin": "82f45980",
+          "page": 2,
+          "said": "Thursday, October 8 8:00 a.m. Liturgy for the People"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6d4763a",
+          "page": 2,
+          "said": "Thursday, October 1 NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "20dbb7f67eb9",
+          "said": "weekly mass Thursday 08:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "82f4598083b9",
+          "said": "weekly mass Thursday 08:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        }
+      ],
+      "rationale": "R28: the Mass-intentions list is the only place these Masses appear (no schedule box; the website gives only Saturday 4:00 PM and Sunday 10:30 AM). Thursday 8:00 AM is listed in the newest bulletin (October 15) and in the October 4 bulletin (October 8), but the September 27 bulletin lists NO MASS for every weekday of September 28-October 2, so the slot is not in each week read (POLICY, Weekly or dated rule 4 needs that). Leaning weekly: it is in both weeks that have weekday Masses, and the empty week looks like an absence.",
+      "question": "Are the Tuesday and Thursday 8:00 AM Masses weekly?",
+      "options": [
+        {
+          "label": "Weekly at 8:00 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-francis-of-assisi-binghamton",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-8am"
+    },
+    {
+      "id": "s7",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82f45980",
+          "page": 2,
+          "said": "Monday, October 5 12:00 p.m. Julie Wiktorek by Susan Lee"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Monday, October 12, Indigenous Peoples' Day NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6d4763a",
+          "page": 2,
+          "said": "Monday, September 28 NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "82f4598083b9",
+          "said": "weekly mass Monday 12:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        }
+      ],
+      "rationale": "R28: Monday 12:00 PM is printed in the October 4 bulletin only (October 5, Julie Wiktorek). The newest bulletin shows 'Monday, October 12, Indigenous Peoples' Day NO MASS', a reason that fits R18 (weekly slot skipped for a stated reason), but the September 27 bulletin lists NO MASS all of September 28-October 2, and the website lists no weekday Masses, so a single occurrence is thin evidence of a weekly Mass. Leaning include (R18) with the October 12 cancellation (R16: after as_of).",
+      "question": "Are Monday and Wednesday 12:00 PM Masses weekly, with this week's changes?",
+      "options": [
+        {
+          "label": "Include",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-francis-of-assisi-binghamton",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-noon"
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "82f45980",
+          "page": 2,
+          "said": "Wednesday, October 7 12:00 p.m. 6th Anniversary - Bob Shields by Betsy & Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Wednesday, October 14 - (NOTE: time change) 8:00 a.m. Liturgy for the People"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6d4763a",
+          "page": 2,
+          "said": "Wednesday, September 30 NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "82f4598083b9",
+          "said": "weekly mass Wednesday 12:00 st-francis-of-assisi-binghamton",
+          "page": 2
+        }
+      ],
+      "rationale": "R28: Wednesday 12:00 PM is printed in the October 4 bulletin only (October 7, 6th Anniversary - Bob Shields). The newest bulletin lists Wednesday October 14 at 8:00 a.m. with '(NOTE: time change)', which implies noon is the usual time, but the September 27 bulletin lists NO MASS all of September 28-October 2 and the website lists no weekday Masses. Leaning include as weekly noon, with the October 14 12:00 PM Mass cancelled (R17: the bulletin says the time changed; the dated 8:00 AM Mass is its own settled slot).",
+      "question": "Are Monday and Wednesday 12:00 PM Masses weekly, with this week's changes?",
+      "options": [
+        {
+          "label": "Include",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-francis-of-assisi-binghamton",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-noon"
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Monday, October 12, Indigenous Peoples' Day NO MASS"
+        }
+      ],
+      "rationale": "R18, R16: dated cancellation of the Monday 12:00 PM Mass for Indigenous Peoples' Day (October 12 is after as_of); only meaningful if the weekly Monday Mass is kept, so it goes with that answer.",
+      "question": "Are Monday and Wednesday 12:00 PM Masses weekly, with this week's changes?",
+      "options": [
+        {
+          "label": "Include",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-francis-of-assisi-binghamton",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-12",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Indigenous Peoples' Day"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-noon"
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Wednesday, October 14 - (NOTE: time change) 8:00 a.m. Liturgy for the People"
+        }
+      ],
+      "rationale": "R17, R16: the 12:00 PM Wednesday Mass is moved to 8:00 AM on October 14 (the bulletin says 'time change'), so the noon Mass that day is cancelled. Only meaningful if the weekly Wednesday noon Mass is kept, so it goes with that answer.",
+      "question": "Are Monday and Wednesday 12:00 PM Masses weekly, with this week's changes?",
+      "options": [
+        {
+          "label": "Include",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-francis-of-assisi-binghamton",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-14",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Moved to 8:00 AM"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-noon"
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20dbb7f6",
+          "page": 2,
+          "said": "Friday, October 16 NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "82f45980",
+          "page": 2,
+          "said": "Friday, October 9 NO MASS"
+        }
+      ],
+      "rationale": "R26: Fridays print 'NO MASS' in every weekday list read; no Friday Mass is shown.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

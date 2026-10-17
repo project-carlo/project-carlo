@@ -1,0 +1,2495 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "generated_at": "2026-10-09T14:40:42Z",
+  "eval_dir": "data/runs/pdf-detail-study/eval/2026-10-09/targeted/high",
+  "label_statuses": [
+    "done"
+  ],
+  "unpredicted": [],
+  "run_errors": [],
+  "overall": {
+    "label_events": 60,
+    "predicted_events": 53,
+    "outcomes": {
+      "exact": 52,
+      "core": 0,
+      "weekly_vs_dated": 0,
+      "wrong_time": 0,
+      "wrong_church": 0,
+      "wrong_type": 0,
+      "missed": 8
+    },
+    "spurious": 1,
+    "rates": {
+      "wrong_church": 0.0,
+      "wrong_type": 0.0,
+      "missed": 0.13333333333333333,
+      "spurious": 0.018867924528301886
+    },
+    "levels": {
+      "strict": {
+        "found": 52,
+        "found_predicted": 52,
+        "precision": 0.9811320754716981,
+        "recall": 0.8666666666666667,
+        "f1": 0.9203539823008849
+      },
+      "core": {
+        "found": 52,
+        "found_predicted": 52,
+        "precision": 0.9811320754716981,
+        "recall": 0.8666666666666667,
+        "f1": 0.9203539823008849
+      },
+      "loose": {
+        "found": 52,
+        "found_predicted": 52,
+        "precision": 0.9811320754716981,
+        "recall": 0.8666666666666667,
+        "f1": 0.9203539823008849
+      },
+      "any_time": {
+        "found": 52,
+        "found_predicted": 52,
+        "precision": 0.9811320754716981,
+        "recall": 0.8666666666666667,
+        "f1": 0.9203539823008849
+      }
+    }
+  },
+  "optional": {
+    "events": 0,
+    "preferred": 0,
+    "rate": null,
+    "by_preference": {
+      "include": {
+        "events": 0,
+        "preferred": 0,
+        "rate": null
+      },
+      "exclude": {
+        "events": 0,
+        "preferred": 0,
+        "rate": null
+      }
+    }
+  },
+  "macro_f1": {
+    "strict": 0.9287120239623449,
+    "core": 0.9287120239623449,
+    "loose": 0.9287120239623449,
+    "any_time": 0.9287120239623449
+  },
+  "by_event_type": {
+    "adoration": {
+      "label_events": 9,
+      "predicted_events": 3,
+      "outcomes": {
+        "exact": 2,
+        "core": 0,
+        "weekly_vs_dated": 0,
+        "wrong_time": 0,
+        "wrong_church": 0,
+        "wrong_type": 0,
+        "missed": 7
+      },
+      "spurious": 1,
+      "rates": {
+        "wrong_church": 0.0,
+        "wrong_type": 0.0,
+        "missed": 0.7777777777777778,
+        "spurious": 0.3333333333333333
+      },
+      "levels": {
+        "strict": {
+          "found": 2,
+          "found_predicted": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.2222222222222222,
+          "f1": 0.3333333333333333
+        },
+        "core": {
+          "found": 2,
+          "found_predicted": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.2222222222222222,
+          "f1": 0.3333333333333333
+        },
+        "loose": {
+          "found": 2,
+          "found_predicted": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.2222222222222222,
+          "f1": 0.3333333333333333
+        },
+        "any_time": {
+          "found": 2,
+          "found_predicted": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.2222222222222222,
+          "f1": 0.3333333333333333
+        }
+      }
+    },
+    "confession": {
+      "label_events": 6,
+      "predicted_events": 6,
+      "outcomes": {
+        "exact": 6,
+        "core": 0,
+        "weekly_vs_dated": 0,
+        "wrong_time": 0,
+        "wrong_church": 0,
+        "wrong_type": 0,
+        "missed": 0
+      },
+      "spurious": 0,
+      "rates": {
+        "wrong_church": 0.0,
+        "wrong_type": 0.0,
+        "missed": 0.0,
+        "spurious": 0.0
+      },
+      "levels": {
+        "strict": {
+          "found": 6,
+          "found_predicted": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "core": {
+          "found": 6,
+          "found_predicted": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "loose": {
+          "found": 6,
+          "found_predicted": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "any_time": {
+          "found": 6,
+          "found_predicted": 6,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "mass": {
+      "label_events": 45,
+      "predicted_events": 44,
+      "outcomes": {
+        "exact": 44,
+        "core": 0,
+        "weekly_vs_dated": 0,
+        "wrong_time": 0,
+        "wrong_church": 0,
+        "wrong_type": 0,
+        "missed": 1
+      },
+      "spurious": 0,
+      "rates": {
+        "wrong_church": 0.0,
+        "wrong_type": 0.0,
+        "missed": 0.022222222222222223,
+        "spurious": 0.0
+      },
+      "levels": {
+        "strict": {
+          "found": 44,
+          "found_predicted": 44,
+          "precision": 1.0,
+          "recall": 0.9777777777777777,
+          "f1": 0.9887640449438202
+        },
+        "core": {
+          "found": 44,
+          "found_predicted": 44,
+          "precision": 1.0,
+          "recall": 0.9777777777777777,
+          "f1": 0.9887640449438202
+        },
+        "loose": {
+          "found": 44,
+          "found_predicted": 44,
+          "precision": 1.0,
+          "recall": 0.9777777777777777,
+          "f1": 0.9887640449438202
+        },
+        "any_time": {
+          "found": 44,
+          "found_predicted": 44,
+          "precision": 1.0,
+          "recall": 0.9777777777777777,
+          "f1": 0.9887640449438202
+        }
+      }
+    }
+  },
+  "by_event_kind": {
+    "specific_date": {
+      "label_events": 9,
+      "predicted_events": 8,
+      "outcomes": {
+        "exact": 8,
+        "core": 0,
+        "weekly_vs_dated": 0,
+        "wrong_time": 0,
+        "wrong_church": 0,
+        "wrong_type": 0,
+        "missed": 1
+      },
+      "spurious": 0,
+      "rates": {
+        "wrong_church": 0.0,
+        "wrong_type": 0.0,
+        "missed": 0.1111111111111111,
+        "spurious": 0.0
+      },
+      "levels": {
+        "strict": {
+          "found": 8,
+          "found_predicted": 8,
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        },
+        "core": {
+          "found": 8,
+          "found_predicted": 8,
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        },
+        "loose": {
+          "found": 8,
+          "found_predicted": 8,
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        },
+        "any_time": {
+          "found": 8,
+          "found_predicted": 8,
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353
+        }
+      }
+    },
+    "weekly": {
+      "label_events": 51,
+      "predicted_events": 45,
+      "outcomes": {
+        "exact": 44,
+        "core": 0,
+        "weekly_vs_dated": 0,
+        "wrong_time": 0,
+        "wrong_church": 0,
+        "wrong_type": 0,
+        "missed": 7
+      },
+      "spurious": 1,
+      "rates": {
+        "wrong_church": 0.0,
+        "wrong_type": 0.0,
+        "missed": 0.13725490196078433,
+        "spurious": 0.022222222222222223
+      },
+      "levels": {
+        "strict": {
+          "found": 44,
+          "found_predicted": 44,
+          "precision": 0.9777777777777777,
+          "recall": 0.8627450980392157,
+          "f1": 0.9166666666666666
+        },
+        "core": {
+          "found": 44,
+          "found_predicted": 44,
+          "precision": 0.9777777777777777,
+          "recall": 0.8627450980392157,
+          "f1": 0.9166666666666666
+        },
+        "loose": {
+          "found": 44,
+          "found_predicted": 44,
+          "precision": 0.9777777777777777,
+          "recall": 0.8627450980392157,
+          "f1": 0.9166666666666666
+        },
+        "any_time": {
+          "found": 44,
+          "found_predicted": 44,
+          "precision": 0.9777777777777777,
+          "recall": 0.8627450980392157,
+          "f1": 0.9166666666666666
+        }
+      }
+    }
+  },
+  "fields": {
+    "end_time": {
+      "pairs": 52,
+      "accuracy": 1.0,
+      "both_empty": 48,
+      "match": 4,
+      "different": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "weeks_of_month": {
+      "pairs": 44,
+      "accuracy": 1.0,
+      "both_empty": 40,
+      "match": 4,
+      "different": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "season": {
+      "pairs": 44,
+      "accuracy": 1.0,
+      "both_empty": 44,
+      "match": 0,
+      "different": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "note": {
+      "pairs": 52,
+      "accuracy": 0.9423076923076923,
+      "both_empty": 45,
+      "match": 4,
+      "different": 0,
+      "missing": 3,
+      "extra": 0
+    }
+  },
+  "bulletin_level": {
+    "bulletins": 3,
+    "perfect": {
+      "strict": 0,
+      "core": 0,
+      "loose": 0,
+      "any_time": 0
+    },
+    "perfect_rate": {
+      "strict": 0.0,
+      "core": 0.0,
+      "loose": 0.0,
+      "any_time": 0.0
+    },
+    "published_date": {
+      "labeled": 2,
+      "correct": 2,
+      "missing": 0,
+      "accuracy": 1.0
+    },
+    "wrong_bulletin": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 3
+    },
+    "event_count": {
+      "mean_abs_error": 3.0,
+      "over": 1,
+      "under": 2,
+      "exact": 0
+    }
+  },
+  "cost": {
+    "models": [
+      "gpt-6-luna"
+    ],
+    "usd": {
+      "total": 0.012171,
+      "per_bulletin": 0.004057,
+      "priced_bulletins": 3,
+      "unpriced_bulletins": 0,
+      "thinking_unrecorded": 0,
+      "prices_per_million": {
+        "gpt-6-luna": {
+          "input": 0.1,
+          "cached_input": 0.01,
+          "output": 0.5,
+          "cache_write": 0.125,
+          "long_context_over": 272000,
+          "long_context": {
+            "input": 0.2,
+            "cached_input": 0.02,
+            "output": 0.75,
+            "cache_write": 0.25,
+            "long_context_over": null,
+            "long_context": null,
+            "source": ""
+          },
+          "source": "https://developers.openai.com/api/docs/pricing"
+        }
+      },
+      "prices_as_of": "2026-10-05"
+    },
+    "usage": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 12021,
+      "input_tokens": 72426,
+      "output_tokens": 12020,
+      "reasoning_tokens": 7818
+    },
+    "from_cache": 0,
+    "seconds_total": 161.566,
+    "seconds_mean": 53.855,
+    "seconds_median": 45.875
+  },
+  "bulletins": [
+    {
+      "parish_slug": "blessed-family-7-west-seneca",
+      "content_hash": "eb8eb69432bdd690bcb85a11089a091919b508877dbf75514cc34b45f513ade1",
+      "label_events": 32,
+      "predicted_events": 25,
+      "outcomes": {
+        "exact": 25,
+        "core": 0,
+        "weekly_vs_dated": 0,
+        "wrong_time": 0,
+        "wrong_church": 0,
+        "wrong_type": 0,
+        "missed": 7
+      },
+      "spurious": 0,
+      "rates": {
+        "wrong_church": 0.0,
+        "wrong_type": 0.0,
+        "missed": 0.21875,
+        "spurious": 0.0
+      },
+      "levels": {
+        "strict": {
+          "found": 25,
+          "found_predicted": 25,
+          "precision": 1.0,
+          "recall": 0.78125,
+          "f1": 0.8771929824561403
+        },
+        "core": {
+          "found": 25,
+          "found_predicted": 25,
+          "precision": 1.0,
+          "recall": 0.78125,
+          "f1": 0.8771929824561403
+        },
+        "loose": {
+          "found": 25,
+          "found_predicted": 25,
+          "precision": 1.0,
+          "recall": 0.78125,
+          "f1": 0.8771929824561403
+        },
+        "any_time": {
+          "found": 25,
+          "found_predicted": 25,
+          "precision": 1.0,
+          "recall": 0.78125,
+          "f1": 0.8771929824561403
+        }
+      },
+      "optional": {
+        "events": 0,
+        "preferred": 0,
+        "rate": null,
+        "by_preference": {
+          "include": {
+            "events": 0,
+            "preferred": 0,
+            "rate": null
+          },
+          "exclude": {
+            "events": 0,
+            "preferred": 0,
+            "rate": null
+          }
+        }
+      },
+      "records": [
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": "Live streamed",
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": "ASL Interpreter",
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "season": null,
+            "page_number": 2,
+            "note": "In honor of the Blessed Virgin Mary",
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "season": null,
+            "page_number": 2,
+            "note": "In honor of the Blessed Virgin Mary"
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-john-vianney-orchard-park",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third"
+            ],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "st-john-vianney-orchard-park",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third"
+            ],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-john-vianney-orchard-park",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": "17:45",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third"
+            ],
+            "season": null,
+            "page_number": 2,
+            "note": null,
+            "optional": null
+          },
+          "pred": {
+            "church_slug": "st-john-vianney-orchard-park",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": "17:45",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third"
+            ],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "missed",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Eucharistic Exposition",
+            "optional": null
+          },
+          "pred": null
+        },
+        {
+          "tier": "missed",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Eucharistic Exposition",
+            "optional": null
+          },
+          "pred": null
+        },
+        {
+          "tier": "missed",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Eucharistic Exposition",
+            "optional": null
+          },
+          "pred": null
+        },
+        {
+          "tier": "missed",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Eucharistic Exposition",
+            "optional": null
+          },
+          "pred": null
+        },
+        {
+          "tier": "missed",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Continuous exposition starts at 6:00 AM Friday",
+            "optional": null
+          },
+          "pred": null
+        },
+        {
+          "tier": "missed",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Continuous exposition",
+            "optional": null
+          },
+          "pred": null
+        },
+        {
+          "tier": "missed",
+          "label": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": "Continuous exposition ends at 11:00 PM Sunday",
+            "optional": null
+          },
+          "pred": null
+        }
+      ]
+    },
+    {
+      "parish_slug": "blessed-trinity-buffalo",
+      "content_hash": "70221b6b414169422aa60b1ee1e871ea68893c77175118073c4cd1b1eaa883d5",
+      "label_events": 8,
+      "predicted_events": 7,
+      "outcomes": {
+        "exact": 7,
+        "core": 0,
+        "weekly_vs_dated": 0,
+        "wrong_time": 0,
+        "wrong_church": 0,
+        "wrong_type": 0,
+        "missed": 1
+      },
+      "spurious": 0,
+      "rates": {
+        "wrong_church": 0.0,
+        "wrong_type": 0.0,
+        "missed": 0.125,
+        "spurious": 0.0
+      },
+      "levels": {
+        "strict": {
+          "found": 7,
+          "found_predicted": 7,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333333333333333
+        },
+        "core": {
+          "found": 7,
+          "found_predicted": 7,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333333333333333
+        },
+        "loose": {
+          "found": 7,
+          "found_predicted": 7,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333333333333333
+        },
+        "any_time": {
+          "found": 7,
+          "found_predicted": 7,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333333333333333
+        }
+      },
+      "optional": {
+        "events": 0,
+        "preferred": 0,
+        "rate": null,
+        "by_preference": {
+          "include": {
+            "events": 0,
+            "preferred": 0,
+            "rate": null
+          },
+          "exclude": {
+            "events": 0,
+            "preferred": 0,
+            "rate": null
+          }
+        }
+      },
+      "records": [
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:50",
+            "end_time": "16:20",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:50",
+            "end_time": "16:20",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "missed",
+          "label": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-28",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 4,
+            "note": "Healing Mass"
+          },
+          "pred": null
+        }
+      ]
+    },
+    {
+      "parish_slug": "sacred-heart-auburn-cluster",
+      "content_hash": "79b41c2c30f9a25f7c31d67b3f69917f687853da21857cc506007b1daf071511",
+      "label_events": 20,
+      "predicted_events": 21,
+      "outcomes": {
+        "exact": 20,
+        "core": 0,
+        "weekly_vs_dated": 0,
+        "wrong_time": 0,
+        "wrong_church": 0,
+        "wrong_type": 0,
+        "missed": 0
+      },
+      "spurious": 1,
+      "rates": {
+        "wrong_church": 0.0,
+        "wrong_type": 0.0,
+        "missed": 0.0,
+        "spurious": 0.047619047619047616
+      },
+      "levels": {
+        "strict": {
+          "found": 20,
+          "found_predicted": 20,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1": 0.975609756097561
+        },
+        "core": {
+          "found": 20,
+          "found_predicted": 20,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1": 0.975609756097561
+        },
+        "loose": {
+          "found": 20,
+          "found_predicted": 20,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1": 0.975609756097561
+        },
+        "any_time": {
+          "found": 20,
+          "found_predicted": 20,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1": 0.975609756097561
+        }
+      },
+      "optional": {
+        "events": 0,
+        "preferred": 0,
+        "rate": null,
+        "by_preference": {
+          "include": {
+            "events": 0,
+            "preferred": 0,
+            "rate": null
+          },
+          "exclude": {
+            "events": 0,
+            "preferred": 0,
+            "rate": null
+          }
+        }
+      },
+      "records": [
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "season": null,
+            "page_number": 3,
+            "note": "Held in Sacred Heart Parish Hall"
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "season": null,
+            "page_number": 3,
+            "note": "Sacred Heart Parish Hall"
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-28",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-28",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-29",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-29",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": "Follows 8:30 AM Mass; includes Vespers at 4:30 PM and Benediction at 5:00 PM"
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": "After the 8:30 AM Mass; Benediction"
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "sacred-heart",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-03",
+            "start_time": "12:00",
+            "end_time": "13:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": "Diocesan Holy Hour & Rosary for Life"
+          },
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-03",
+            "start_time": "12:00",
+            "end_time": "13:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": "Holy Hour and Rosary for Life"
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-28",
+            "start_time": "12:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-28",
+            "start_time": "12:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-29",
+            "start_time": "12:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-29",
+            "start_time": "12:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-30",
+            "start_time": "12:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-30",
+            "start_time": "12:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-01",
+            "start_time": "17:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-01",
+            "start_time": "17:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-25",
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": "Regular 7:30 AM Mass discontinued"
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-09-25",
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 2,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-alphonsus",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-alphonsus",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 1,
+            "note": null
+          }
+        },
+        {
+          "tier": "exact",
+          "label": {
+            "church_slug": "st-ann",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          },
+          "pred": {
+            "church_slug": "st-ann",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "page_number": 5,
+            "note": null
+          }
+        },
+        {
+          "tier": "spurious",
+          "label": null,
+          "pred": {
+            "church_slug": "sacred-heart",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "third"
+            ],
+            "season": null,
+            "page_number": 2,
+            "note": "Children's Adoration"
+          }
+        }
+      ]
+    }
+  ]
+}

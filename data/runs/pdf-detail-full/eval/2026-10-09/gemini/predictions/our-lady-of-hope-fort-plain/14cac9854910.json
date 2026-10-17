@@ -1,0 +1,108 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "our-lady-of-hope-fort-plain",
+  "content_hash": "14cac9854910ae42e04233aff981e5b4dad20ca4bd3476df91567450ca69e73f",
+  "source_url": "https://parishesonline.com/publication-page/our-lady-of-hope-13339?selectedPublication=https://container.parishesonline.com/bulletins/04/0656/20260927B.pdf",
+  "fetched_at": "2026-09-28T22:00:00Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "our-lady-of-hope-fort-plain",
+      "name": "Our Lady of Hope",
+      "address": "115 Reid St., Fort Plain, NY 13339"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/14cac9854910ae42e04233aff981e5b4dad20ca4bd3476df91567450ca69e73f-47e5047fba52.json",
+    "modified_at": "2026-09-28T22:12:50.555000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/our-lady-of-hope-fort-plain/14cac9854910.pdf",
+  "pdf_sha256": "3636514cb600d3a8ec31ca1683285aa4d90b70cf04778a67f50298405bb63f9b",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "our-lady-of-hope-fort-plain",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-fort-plain",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-fort-plain",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-fort-plain",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Liturgy of the Word with Holy Communion",
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2460,
+    "output_tokens": 297
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-luke-the-evangelist",
+  "content_hash": "66ef6f909f9ea0fc22a1ec5d81fb02390ddeda6d3458353ed5b57f98e05e3ac6",
+  "source_url": "https://parishesonline.com/publication-page/st-luke-the-evangelist?selectedPublication=https://container.parishesonline.com/bulletins/06/0103/20260927B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-25",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 22170,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 3669,
+    "reasoning_tokens": 2553
+  },
+  "seconds": 31.061,
+  "response_id": "resp_00e037f21c49a998016ac9121f55d087d29057c14c0126fd57",
+  "events": [
+    {
+      "church_slug": "st-lucy",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-angels",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-mount-morris",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-geneseo",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-angels",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-juan-diego-community",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "second",
+        "fourth"
+      ],
+      "season": null,
+      "page_number": 4,
+      "note": "Spanish",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lucy",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-geneseo",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "17:10",
+      "end_time": "18:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "5:10 PM",
+        "end_time": "6:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-geneseo",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Benediction",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "5:00 PM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-geneseo",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-28",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-09-28",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-mount-morris",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-29",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-09-29",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-juan-diego-community",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-01",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-01",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-geneseo",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-13",
+      "start_time": "19:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Fulton J. Sheen relic veneration",
+      "raw": {
+        "date": "2026-10-13",
+        "start_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-mount-morris",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-15",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Benediction",
+      "raw": {
+        "date": "2026-10-15",
+        "start_time": "9:00 AM",
+        "end_time": "10:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "b8b311974878db9b601611f5d0f9ae4c12f17f9768347fd0bf22a9489dad91d5"
+}

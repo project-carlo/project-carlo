@@ -119,7 +119,45 @@ Confession, and Adoration times parsed from weekly bulletins
   - WebSite/Organization JSON-LD injected into `index.html` at build time from
     `src/lib/seo.ts` (single source of truth); JSON-LD serialization escapes
     `<` to keep `</script>`-safe.
-- [ ] Phase 3 — local long-tail expansion
+- [x] Phase 3 — local long-tail expansion (step 8)
+  - Prerendered city pages at `/mass-times/{city}-{state}/` (e.g.
+    `/mass-times/east-aurora-ny/`), one per city or town with at least one
+    church: its churches with their weekly Mass times (weekly Confession &
+    Adoration behind a native `<details>`), then the six closest churches
+    outside it (within 40 miles of the town's center), each expandable to its
+    weekly Mass times. Grouping, slugs and distances live in
+    `src/lib/cities.ts`, shared by the SPA route and the prerenderer.
+  - Town centers come from OpenStreetMap (Nominatim) via
+    `pnpm geocode:cities`, committed in `apps/web/src/data/cityCenters.json`
+    (with where each came from in `cityCenterSources.json`, which the app
+    doesn't load).
+    Rerun it after adding a diocese: it looks up only the new cities, and the
+    build warns about any city still missing (whose page then measures from
+    the mean position of its churches).
+  - Visible breadcrumbs on church and city pages (Church list › City ›
+    Church), and a city level in the church pages' `BreadcrumbList`; city
+    pages carry `CollectionPage` + `ItemList` + `BreadcrumbList` JSON-LD.
+  - Added to the sitemap; each city heading on `/churches/` links to its page.
+  - Step 9 (per-page OG images) not done.
+- [x] Pre-submission crawl audit (2026-10-06): every sitemap URL returned 200
+      with a self-canonical and valid JSON-LD; fixed what wasn't right:
+  - Unknown URLs are real 404s: `not_found_handling: "404-page"` serves
+    `404.html` (the SPA shell, `noindex`, no canonical) instead of a 200 shell.
+    Client routes need their own shell copy (`landing.html`, `about.html` when
+    enabled), written by `scripts/prerender.ts`.
+  - The homepage links to `/churches/`; before, its only links were to itself
+    and the map credits, so no link path led to any church or city page.
+  - `/landing` is hidden from search engines (orphaned, overlaps the
+    homepage): out of the sitemap, `noindex` in both its shell and the app.
+    `/map` is a 301 to `/` instead of a 200 shell.
+  - Sitemap `<lastmod>` and JSON-LD `dateModified` date each page by when
+    its content last changed, not the build: each build publishes
+    `lastmod.json` (content hash + date per page) and the next one keeps a
+    page's date while its hash is unchanged (`src/lib/lastmod.ts`). If the
+    live file can't be read, every page is dated today and the chain restarts.
+  - Cloudflare zone: "Always Use HTTPS" turned on 2026-10-06 (http:// had
+    served a 200, http://www a 522). "Automatic HTTPS Rewrites" is a different
+    setting: it rewrites links inside pages and redirects nothing.
 - [ ] Phase 4 — polish & measurement (submit sitemap to Google Search Console
       + Bing Webmaster Tools after the next deploy; validate with the Rich
       Results Test and Facebook Sharing Debugger — zero-code, do first)

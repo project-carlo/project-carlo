@@ -1,9 +1,9 @@
 ---
 name: St. John the Baptist, St. Peter's and Holy Family
 website: https://stjohnthebaptistwalton.com/schedule-of-services/
-bulletin_provider: other
-provider_id: ''
-publication: ['url:https://stjohnthebaptistwalton.com/schedule-of-services/']
+bulletin_provider: google_drive
+provider_id: drive-folder https://drive.google.com/drive/folders/1TGq51SjI0RD7HGKSlS8PkKW3ZbPZUV_w
+publication: ['url:https://stjohnthebaptistwalton.com/schedule-of-services/', 'url:https://drive.google.com/drive/folders/1TGq51SjI0RD7HGKSlS8PkKW3ZbPZUV_w']
 group: St. John the Baptist; St. Peter's Church; Church of the Holy Family
 evidence:
 - url: https://drive.google.com/uc?export=download&id=1SkwVr1m6FWsl6cTmyFL0oYTphD2YXk5d
@@ -27,6 +27,16 @@ evidence:
   quote: St. John the Baptist and St. Peter’s Church are open each day from 9 am to 4 pm
   note: The older joint site (the diocese's link for Holy Family). A frozen COVID-era letter from Rev.
     Edward Golding; no bulletins. Not the bulletin's home.
+- url: https://stjohnthebaptistwalton.com/schedule-of-services/
+  seen: 2026-10-07
+  quote: const folderId = "1TGq51SjI0RD7HGKSlS8PkKW3ZbPZUV_w";
+  note: The page's inline script, read in headed Chrome. It lists the public Drive folder through the
+    Drive API and builds the BULLETINS list from it after the page loads.
+- url: https://drive.google.com/uc?export=download&id=1izTRFcmvzj9y3qa2whsWkkFISsQyRQcA
+  seen: 2026-10-07
+  quote: Mass Intentions October 5 – 11
+  note: '"October 4, 2026 Bulletin.pdf", the newest file in that folder on 7 October 2026; page 1 is
+    headed "Roman Catholic Churches of" St. John the Baptist, Holy Family, St. Peter, as before.'
 promoted: 2026-09-28
 ---
 
@@ -62,8 +72,18 @@ Screen"; a headed Chrome that waits a few seconds gets through, though later loa
 an interactive captcha. The Drive files themselves download without a browser
 (`drive.google.com/uc?export=download&id=<id>`), which is how the quoted issue was read.
 
+**Changed 2026-10-07 to `google_drive`.** As `other` the row never fetched a bulletin: the
+weekly runs of 27 September and 4 October both failed with `resolve_failed` ("No PDF links
+found on bulletin post page: https://drive.google.com/file/d/1izTRFcm…/view"). The site builds
+its BULLETINS list in the browser after the page loads, from a public Drive folder
+(`1TGq51SjI0RD7HGKSlS8PkKW3ZbPZUV_w`, named in the page's inline script), so the resolver read
+the page before the list was there and then opened a Drive file link as if it were a post. The
+row now reads that folder directly (`provider_id: drive-folder <folder URL>`, as
+`our-lady-of-victory-st-joseph` does), which never touches the SiteGround challenge. `fetch-check`
+resolved it on 2026-10-07 to "October 11, 2026 Bulletin.pdf" (`1W5Z4gEJheeWDgJDCQP5YNjP9PrD-RG5L`),
+posted that day after the 4 October issue. `website` stays the parish page, where a person
+finds the bulletin.
+
 ## Not yet confirmed
 
-Whether the pipeline's `other` fetcher can get past the SiteGround challenge and follow
-per-file Drive links; if not, this row needs a tool change (noted for the lead). The 27
-September issue was not yet posted on 2026-09-28.
+Nothing. There was no 27 September issue in the folder.

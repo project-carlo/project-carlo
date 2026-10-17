@@ -1,0 +1,195 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "mary-mother-of-mercy",
+  "content_hash": "25152c59dd884ae86937452e7d5486ef6106fdef77b12362e3dd52aeab97f09e",
+  "source_url": "https://www.marymotherofmercy.com/wp-content/uploads/Bulletin-September-27-2026.pdf",
+  "fetched_at": "2026-09-25T21:24:58Z",
+  "reference_date": "2026-09-25",
+  "churches": [
+    {
+      "slug": "holy-cross-ovid",
+      "name": "Holy Cross Church",
+      "address": "7231 Main Street, Ovid, NY 14521"
+    },
+    {
+      "slug": "st-francis-solanus",
+      "name": "St. Francis Solanus Church",
+      "address": "3660 Orchard Street, Interlaken, NY 14847"
+    },
+    {
+      "slug": "st-james-apostle",
+      "name": "St. James the Apostle",
+      "address": "17 Whig Street, Trumansburg, NY 14886"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/25152c59dd884ae86937452e7d5486ef6106fdef77b12362e3dd52aeab97f09e-283190ef02e4.json",
+    "modified_at": "2026-09-25T21:27:51.994000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/mary-mother-of-mercy/25152c59dd88.pdf",
+  "pdf_sha256": "5e0f1f6127293fca6f52c6e1ce9294f84e6063cafc9a569b3d57011924d4b677",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-francis-solanus",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis-solanus",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis-solanus",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis-solanus",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis-solanus",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-apostle",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-ovid",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis-solanus",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "18:30",
+      "end_time": "19:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "6:30 PM",
+        "end_time": "7:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3064,
+    "output_tokens": 734
+  }
+}

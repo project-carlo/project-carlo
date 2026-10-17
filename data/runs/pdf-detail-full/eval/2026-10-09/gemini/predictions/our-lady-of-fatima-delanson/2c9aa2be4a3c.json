@@ -1,0 +1,108 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "our-lady-of-fatima-delanson",
+  "content_hash": "2c9aa2be4a3c130f3bec94da386b1022b099ad77cfb392e69643029be8f5d551",
+  "source_url": "http://parishes.rcda.org/OurLadyOfFatima/bulletins/2026/September_27.pdf",
+  "fetched_at": "2026-09-28T21:59:44Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "our-lady-of-fatima-delanson",
+      "name": "Our Lady of Fatima",
+      "address": "1735 Alexander Rd., Delanson, NY 12053"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/2c9aa2be4a3c130f3bec94da386b1022b099ad77cfb392e69643029be8f5d551-00ae26f3201f.json",
+    "modified_at": "2026-09-28T22:12:26.101000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/our-lady-of-fatima-delanson/2c9aa2be4a3c.pdf",
+  "pdf_sha256": "1cbf1f3ec209799a7657b085ccf5b2afa3218d7b691c982c57bafb5a409561d6",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "our-lady-of-fatima-delanson",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-fatima-delanson",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-fatima-delanson",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-fatima-delanson",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "14:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "2:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2461,
+    "output_tokens": 455
+  }
+}

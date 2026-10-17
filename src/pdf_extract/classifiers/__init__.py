@@ -14,13 +14,16 @@ from typing import Any
 
 from pdf_extract.classifiers.base import Classifier, ClassifierOptionError
 from pdf_extract.classifiers.gemini import GeminiClassifier
+from pdf_extract.classifiers.gemini_qualified import gemini_qualified_classifier
 from pdf_extract.classifiers.openai_gpt import OpenAIClassifier
 from pdf_extract.classifiers.openai_responses import responses_classifier
 
 REGISTRY: dict[str, Callable[..., Classifier]] = {
     "gemini-flash": lambda: GeminiClassifier(),
     "gpt-5.4-mini": lambda: OpenAIClassifier(model="gpt-5.4-mini"),
-    # Qualified schema (weeks of the month, seasons), for scoring against labels.
+    # Qualified schema (weeks of the month, seasons) and the shared policy prompt
+    # (schedule_policy.POLICY), for scoring against labels.
+    "gemini-flash-qualified": gemini_qualified_classifier,
     "gpt-6-luna": lambda **options: responses_classifier("gpt-6-luna", **options),
     "gpt-6-luna-nonstrict": lambda **options: responses_classifier(
         "gpt-6-luna", strict=False, **options,
@@ -29,6 +32,7 @@ REGISTRY: dict[str, Callable[..., Classifier]] = {
 
 _RESPONSES_OPTIONS = frozenset({"model", "reasoning_effort", "file_detail", "pdf_as_images"})
 CLASSIFIER_OPTIONS: dict[str, frozenset[str]] = {
+    "gemini-flash-qualified": frozenset({"model"}),
     "gpt-6-luna": _RESPONSES_OPTIONS,
     "gpt-6-luna-nonstrict": _RESPONSES_OPTIONS,
 }

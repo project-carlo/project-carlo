@@ -1,0 +1,375 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "our-mother-of-sorrows-holy-cross",
+  "content_hash": "f3f6ac9facc19722cdf655a9b8e8c4fa1a57e910c7d3ccae50fccb67e5357b9c",
+  "source_url": "https://parishesonline.com/publication-page/our-mother-of-sorrows-church?selectedPublication=https://container.parishesonline.com/bulletins/04/0821/20260927B.pdf",
+  "fetched_at": "2026-09-25T17:22:28Z",
+  "reference_date": "2026-09-25",
+  "churches": [
+    {
+      "slug": "our-mother-of-sorrows",
+      "name": "Our Mother of Sorrows",
+      "address": "5000 Mount Read Boulevard, Rochester, NY 14612"
+    },
+    {
+      "slug": "holy-cross-rochester",
+      "name": "Holy Cross Church",
+      "address": "4492 Lake Avenue, Rochester, NY 14612"
+    }
+  ],
+  "gemini_source": {
+    "kind": "qualified_eval",
+    "path": "data/runs/gemini-3-flash-preview-qualified/eval/prompt-0c3297072125-0ada6e8be280/predictions/our-mother-of-sorrows-holy-cross/f3f6ac9facc1.json",
+    "ran_at": "2026-10-05T21:28:49Z"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/our-mother-of-sorrows-holy-cross/f3f6ac9facc1.pdf",
+  "pdf_sha256": "debe247df70a5d79e248bde662d75ec58fb86ee7a82406dfc34bd19fc94fbf14",
+  "label_status": "done",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "second",
+        "third",
+        "fourth",
+        "fifth",
+        "last"
+      ],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "14:30",
+      "end_time": "15:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "In church",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "2:30 PM",
+        "end_time": "3:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-rochester",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "16:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM",
+        "end_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "holy-cross-rochester",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "13:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "1:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "13:00",
+      "end_time": "15:30",
+      "cancelled": false,
+      "weeks_of_month": [
+        "first"
+      ],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "1:00 PM",
+        "end_time": "3:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-mother-of-sorrows",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "13:00",
+      "end_time": "15:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "In chapel",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "1:00 PM",
+        "end_time": "3:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6210,
+    "cached_tokens": 2487,
+    "output_tokens": 1740,
+    "thinking_tokens": 0
+  }
+}

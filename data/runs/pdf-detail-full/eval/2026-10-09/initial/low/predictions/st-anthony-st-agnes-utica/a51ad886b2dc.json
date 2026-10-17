@@ -1,0 +1,139 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-anthony-st-agnes-utica",
+  "content_hash": "a51ad886b2dc402aeb8fe6e07d99b3062dfef411c18222b1d2683756adaba6cd",
+  "source_url": "https://bulletins.discovermass.com/download.php?bulletin=ojtk2SPHor1k6KViOPo9CXT2Af7YOQFs9lTFy7r2Ok3wQ5cRsP%2Blbp0wgfzI9%2F1dVLP1TtdQpXqpvUJi%2FWDcnmZdSSiDPEX3uyhylo6ObmY%3D",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 11156,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1738,
+    "reasoning_tokens": 1168
+  },
+  "seconds": 17.404,
+  "response_id": "resp_00da3d4d13579988016ac910574e8087d2961198d8b6bb2071",
+  "events": [
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-26",
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "For pilgrims visiting the shrine",
+      "raw": {
+        "date": "2026-09-26",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-26",
+      "start_time": "19:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Benediction; after the 6:00 PM Mass",
+      "raw": {
+        "date": "2026-09-26",
+        "start_time": "7:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "79dd449204d64559a3da81c930ff2b5e42bfc626de00fd838087dfffb370ee76"
+}

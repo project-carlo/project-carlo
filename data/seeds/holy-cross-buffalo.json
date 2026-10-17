@@ -1,0 +1,577 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-cross-buffalo",
+  "status": "approved",
+  "as_of": "2026-10-04T14:25:34Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:54:38Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:42:11Z",
+  "summary": "Single church. The Sep 27 and Oct 4 bulletins print the same LITURGIES box: Sun 9:30 AM (English) and 12:30 PM (Spanish), Mon-Fri 8:15 AM (bilingual), last-Saturday 6:00 PM (French), confessions 20 minutes before each weekend Mass; the page-2 weekly Mass lists and history agree. No adoration is listed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "44587f7d07ce24bf1e7a80e3891a797d93742b285ffca66e0bbd260f6a3ebffd",
+      "fetched_at": "2026-10-04T14:25:34Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "2daa42078a01a8c18991c5a6e29640f4901354704c2998e8d81f4ff7a4ba28e0",
+      "fetched_at": "2026-09-26T18:54:05Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Sunday: 9:30 AM (English), 12:30 PM (Spanish)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Sunday: 9:30 AM (English), 12:30 PM (Spanish)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Mass schedule for the week: Oct 4 and Oct 11 9:30 AM",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly mass Sunday 09:30 'English'"
+        }
+      ],
+      "rationale": "Printed in the LITURGIES box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 weekly Mass list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Sunday: 9:30 AM (English), 12:30 PM (Spanish)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Sunday: 9:30 AM (English), 12:30 PM (Spanish)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Mass schedule for the week: Oct 4 and Oct 11 12:30 PM",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly mass Sunday 12:30 'Spanish'"
+        }
+      ],
+      "rationale": "Printed in the LITURGIES box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 weekly Mass list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Mass schedule for the week: Monday 8:15 AM",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly mass Monday 08:15 'Bilingual'"
+        }
+      ],
+      "rationale": "Printed in the LITURGIES box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 weekly Mass lists of both bulletins show 8:15 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Mass schedule for the week: Tuesday 8:15 AM",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly mass Tuesday 08:15 'Bilingual'"
+        }
+      ],
+      "rationale": "Printed in the LITURGIES box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 weekly Mass lists of both bulletins show 8:15 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Mass schedule for the week: Wednesday 8:15 AM",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly mass Wednesday 08:15 'Bilingual'"
+        }
+      ],
+      "rationale": "Printed in the LITURGIES box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 weekly Mass lists of both bulletins show 8:15 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Mass schedule for the week: Thursday 8:15 AM",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly mass Thursday 08:15 'Bilingual'"
+        }
+      ],
+      "rationale": "Printed in the LITURGIES box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 weekly Mass lists of both bulletins show 8:15 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Monday to Friday: 8:15 AM (Bilingual)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Mass schedule for the week: Friday 8:15 AM",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly mass Friday 08:15 'Bilingual'"
+        }
+      ],
+      "rationale": "Printed in the LITURGIES box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 weekly Mass lists of both bulletins show 8:15 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "season": null,
+        "note": "French"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "Last Saturday of Month: 6:00 PM (French)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Last Saturday of Month: 6:00 PM (French)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly mass Saturday 18:00 'French; Last Saturday of month'"
+        }
+      ],
+      "rationale": "Printed in the LITURGIES box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. No last Saturday falls inside either bulletin's page-2 week, so it is not cross-checked there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:10",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "20 minutes before the 9:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "RECONCILIATION (Confessions) 20 minutes before each weekend Mass, or anytime upon request.",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "RECONCILIATION (Confessions) 20 minutes before each weekend Mass, or anytime upon request.",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly confession Sunday 09:10-09:30"
+        }
+      ],
+      "rationale": "Both bulletins: confessions 20 minutes before each weekend Mass; per policy that is 09:10-09:30 before the 9:30 AM Mass. History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "20 minutes before the 12:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "RECONCILIATION (Confessions) 20 minutes before each weekend Mass, or anytime upon request.",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "RECONCILIATION (Confessions) 20 minutes before each weekend Mass, or anytime upon request.",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly confession Sunday 12:10-12:30"
+        }
+      ],
+      "rationale": "Both bulletins: confessions 20 minutes before each weekend Mass; per policy that is 12:10-12:30 before the 12:30 PM Mass. History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:40",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "season": null,
+        "note": "20 minutes before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44587f7d07ce",
+          "said": "RECONCILIATION (Confessions) 20 minutes before each weekend Mass, or anytime upon request.",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "RECONCILIATION (Confessions) 20 minutes before each weekend Mass, or anytime upon request.",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44587f7d07ce",
+          "said": "weekly confession Saturday 17:40-18:00"
+        }
+      ],
+      "rationale": "Both bulletins: confessions 20 minutes before each weekend Mass; per policy that is 17:40-18:00 before the 6:00 PM Mass (last Saturdays only, like the French Mass). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-03",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "St. Josephine Bakhita Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2daa42078a01",
+          "said": "Saturday, October 3: 4:00 PM In Honor of Josephine Bakhita; St. Josephine Bakhita Mass—4:00 PM—Church",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2daa42078a01",
+          "said": "dated mass 2026-10-03 16:00"
+        }
+      ],
+      "rationale": "A one-off special Mass on Oct 3, before as_of (Oct 4): a seed only holds dated entries on or after as_of, so it is left out.",
+      "question": null,
+      "options": null,
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:41:55Z"
+      }
+    }
+  ]
+}

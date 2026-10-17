@@ -1,0 +1,560 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-crescent",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:38:44Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Small one-church parish; the Oct 11 bulletin's p7 box gives the weekend Masses and Saturday Confession, and its calendar shows Monday/Thursday/Friday 9 AM Mass. Friday Mass is temporarily here through mid-January (St. Edward's construction); Tue/Wed/Sat daily Masses are at St. Edward's and left out. One question: the first-Monday 'Mercy Monday' Confession, printed only in older bulletins.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6814a6ebc9dc0c1c04861c00cb656631a66c7a5de532f16dba3dadec5f2e3acc",
+      "fetched_at": "2026-10-11T16:38:44Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "acb1fe00d677996739467668654ae79be7f92054533d9cf7ed8539171e2e9870",
+      "fetched_at": "2026-10-04T14:56:14Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "36528bbdd13252f588d7da752462409baf89b5b238040634b79034e37f112173",
+      "fetched_at": "2026-09-28T22:06:13Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 7,
+          "said": "Saturday Vigil Mass: 4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "weekly mass Saturday 16:30 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "weekly mass Saturday 16:30 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "weekly mass Saturday 16:30 st-mary-crescent",
+          "page": 7
+        }
+      ],
+      "rationale": "Weekend schedule box on p7 (WEEKEND MASS SCHEDULE); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 7,
+          "said": "Sunday Masses: 9:00 am, 10:30 am, & 7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "weekly mass Sunday 09:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "weekly mass Sunday 09:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "weekly mass Sunday 09:00 st-mary-crescent",
+          "page": 7
+        }
+      ],
+      "rationale": "Weekend schedule box on p7 (WEEKEND MASS SCHEDULE); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 7,
+          "said": "Sunday Masses: 9:00 am, 10:30 am, & 7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "weekly mass Sunday 10:30 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "weekly mass Sunday 10:30 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "weekly mass Sunday 10:30 st-mary-crescent",
+          "page": 7
+        }
+      ],
+      "rationale": "Weekend schedule box on p7 (WEEKEND MASS SCHEDULE); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 7,
+          "said": "Sunday Masses: 9:00 am, 10:30 am, & 7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "weekly mass Sunday 19:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "weekly mass Sunday 19:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "weekly mass Sunday 19:00 st-mary-crescent",
+          "page": 7
+        }
+      ],
+      "rationale": "Weekend schedule box on p7 (WEEKEND MASS SCHEDULE); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 7,
+          "said": "Confessions every Saturday 3:00-4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "weekly confession Saturday 15:00–16:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "weekly confession Saturday 15:00–16:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "weekly confession Saturday 15:00–16:00 st-mary-crescent",
+          "page": 7
+        }
+      ],
+      "rationale": "Weekend schedule box on p7 (WEEKEND MASS SCHEDULE); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 7,
+          "said": "Monday, October 12th 9:00 am - Daily Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "weekly mass Monday 09:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "weekly mass Monday 09:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "weekly mass Monday 09:00 st-mary-crescent",
+          "page": 7
+        }
+      ],
+      "rationale": "Daily Mass listed on the p7 calendar and p2 intentions; Monday also in the two older bulletins read. Not in a Mass-schedule box, but a regular daily Mass with no sign of being one-off.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 7,
+          "said": "Thursday, October 15th 9:00 am - Daily Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "weekly mass Thursday 09:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "weekly mass Thursday 09:00 st-mary-crescent",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "weekly mass Thursday 09:00 st-mary-crescent",
+          "page": 7
+        }
+      ],
+      "rationale": "Daily Mass on the p7 calendar and p2 intentions each week; same in older bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Held here through mid-January due to construction at St. Edward the Confessor"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 7,
+          "said": "Friday Daily Masses will continue to be held at St. Mary's through mid-January."
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "weekly mass Friday 09:00 st-mary-crescent  “Through mid-January”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "weekly mass Friday 09:00 st-mary-crescent  “Held at St. Mary's through mid-January due to construction at St. Edward's”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "weekly mass Friday 09:00 st-mary-crescent  “Held here during construction at St. Edward the Confessor through mid-January”",
+          "page": 6
+        }
+      ],
+      "rationale": "Friday Mass is at St. Mary's Crescent temporarily (through mid-January); no start date, so no season is recorded and the end is in the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-21",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Network-wide Anointing of the Sick"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 5,
+          "said": "The sacrament of the Anointing of the Sick will be celebrated at a special Mass at 11:00 am on Wednesday, October 21st, at St. Mary's Church, Crescent"
+        },
+        {
+          "source": "history",
+          "bulletin": "6814a6ebc9dc",
+          "said": "specific_date mass 2026-10-21 11:00 st-mary-crescent  “Anointing of the Sick”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "specific_date mass 2026-10-21 11:00 st-mary-crescent  “Special Mass for Anointing of the Sick”",
+          "page": 4
+        }
+      ],
+      "rationale": "One-time special Mass at this church, outside the weekly schedule, with date printed; open to network parishes (not closed).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6814a6ebc9dc",
+          "page": 6,
+          "said": "Daily Mass - Tuesdays, Wednesdays & Saturdays at 9:00AM. Due to construction at St. Edward the Confessor, Friday Daily Masses will be celebrated at St. Mary's, Crescent"
+        }
+      ],
+      "rationale": "Tuesday, Wednesday and Saturday 9:00 AM Daily Masses are in the 'Our Friends at St. Ed's' section, i.e. held at St. Edward the Confessor, a different parish and church; left out. No time recorded here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "acb1fe00d677",
+          "page": 5,
+          "said": "Confessions are offered at St. Mary's, Crescent on the first Monday of each month from 5:00-8:00 pm. We call it 'Mercy Monday'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36528bbdd132",
+          "page": 5,
+          "said": "Confessions ... first Monday of each month from 5:00-8:00 pm ... Mercy Monday, October 5"
+        },
+        {
+          "source": "history",
+          "bulletin": "acb1fe00d677",
+          "said": "specific_date confession 2026-10-05 17:00–20:00 st-mary-crescent  “Mercy Monday”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "36528bbdd132",
+          "said": "specific_date confession 2026-10-05 17:00–20:00 st-mary-crescent  “Mercy Monday”",
+          "page": 5
+        }
+      ],
+      "rationale": "Two older bulletins say Confession is offered the first Monday of each month, 5-8 PM (a recurring slot, so weeks_of_month first). The newest bulletin (Oct 11) does not print it, though its calendar covers no first Monday (Oct 12 is the second Monday), so its absence says nothing. History recorded it only as a one-off on Oct 5, which has passed.",
+      "question": "Add first-Monday 'Mercy Monday' Confession 5:00-8:00 PM at St. Mary's Crescent?",
+      "options": [
+        {
+          "label": "First Mondays 5:00-8:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-crescent",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mercy Monday"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

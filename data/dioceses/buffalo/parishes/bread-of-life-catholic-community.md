@@ -29,6 +29,8 @@ Christ the King Church; Infant of Prague Church; Saints Peter & Paul Church; St.
 
 The bulletin is at https://container.parishesonline.com/bulletins/14/2022/20260920B.pdf. Provider `parishes_online`, id `bread-of-life-catholic-community`.
 
+**Page limit 12** (`data/bulletin_page_limits.csv`, 2026-10-07). The bulletin gives each church its own page of Mass intentions, on pages 6 to 11 of the 4 October 2026 issue (16 pages); Ss. Peter & Paul's is page 11 ("SAINTS PETER AND PAUL | 11"). With the default limit of 10, the pipeline never read it and Ss. Peter & Paul showed on the site with a confession time (from page 3) and no Masses. Pages 12 and up are school news and ads.
+
 ## Not yet confirmed
 
 Nothing beyond the per-church notes.

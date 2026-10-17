@@ -76,6 +76,14 @@ than reopening them):
    column.
 3. The dataset tracks real worship sites, not a diocesan list. A place with solid evidence
    goes in whether or not the diocese's directory lists it.
+4. The site shows only places it can give a schedule for. A `no_bulletin` parish row and its
+   churches stay in the records, with their evidence and a `revisit`, but `promote` leaves
+   them out of the live CSVs (and removes them if they were live, which `validate` warns about
+   until it is done), and they carry no `promoted` stamp. `coverage` counts their churches as
+   accounted for but not in its `modelled` figure. Setting the row to a real provider when a
+   bulletin turns up puts it back. (Settled 2026-10-07; until then these rows
+   were kept on the map with no Mass times.) A place that was never a parish row of its own
+   goes in `excluded/` with `reason: no-bulletin` as before.
 
 ## Files
 
@@ -128,7 +136,8 @@ Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to c
 **parish**
 - `website`: where the bulletin can be found (required, unique across the dataset).
 - `bulletin_provider`: `parishes_online`, `ecatholic`, `discover_mass`, `other`,
-  `google_drive` or `no_bulletin`. `fetch` reads ParishesOnline and DiscoverMass by
+  `google_drive` or `no_bulletin` (kept in the records, left off the site: Settled policy
+  4). `fetch` reads ParishesOnline and DiscoverMass by
   `provider_id` (the org slug from `parishesonline.com/organization/<slug>`, the church slug
   from `discovermass.com/church/<slug>/`). It reads eCatholic, `other` and `google_drive`
   from `website`, so for eCatholic the website has to be the eCatholic-hosted site, and for
@@ -305,9 +314,11 @@ Work in this order and only fall through when a step can't answer. Commit as you
 
 **Promotion:** when `todo` shows no errors or incomplete records, run `pnpm diocese promote
 <d> --dry-run`, read it, then `pnpm diocese promote <d>` and `pnpm test`. The next pipeline
-command seeds the new rows into the database.
+command seeds the new rows into the database. New parish rows go in with `fetch_only` set:
+the weekly run fetches their bulletins but doesn't process them or show their churches until
+the flag is cleared (README, "Fetch-only parishes").
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
-retired (merged, renamed or excluded). Retiring a church deletes its events, and retiring a
+retired (merged, renamed, excluded, moved to open/, or `no_bulletin`). Retiring a church deletes its events, and retiring a
 parish deletes its bulletins and the events read from them, even for churches moved to another
 parish. The dry run lists the churches that would lose events (`removed_rows_with_events`).
 Removals don't go live on merge: deploys keep serving the published data, and the next weekly
@@ -374,6 +385,7 @@ pnpm diocese new open     <d> --name ... --revisit "next step" [--revisit-after 
 pnpm diocese merge   <d> <parish>... --into <parish> [--note "why"]
 pnpm diocese rename  <d> <kind> <old> <new>
 pnpm diocese exclude <d> <church> --reason <r> [--last-mass date]
+pnpm diocese question <d> <church> --revisit "next step" [--revisit-after date]
 
 pnpm diocese roster fetch  <d> gcatholic [key] | wpsl <finder URL>
 pnpm diocese roster import <d> <name> <file.json|csv> [--title --url --notes]

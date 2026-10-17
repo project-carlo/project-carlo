@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ambrose-latham",
+  "status": "approved",
+  "as_of": "2026-10-04T14:51:40Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:35:07Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:36:44Z",
+  "summary": "One church. Saturday 4 PM, Sunday 9 and 11 AM, Mon-Thu 12:10 PM Masses; Confession Wednesday 5-6 PM and Saturday 2:30-3:30 PM; Adoration Wednesday 11 AM-6 PM. Both bulletins print the same schedule box (a new pastor arrived between them, schedule unchanged) and history agrees; nothing open.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "83669c850dbbeef8f6c9ada078c0822893e7296a7fc6a40bf5486df546e8b644",
+      "fetched_at": "2026-10-04T14:51:40Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "4d76cac27ff4e55447fa0af5fe2728ac84fe2a7c391618436ea3ea21ebe44e3c",
+      "fetched_at": "2026-09-28T22:02:00Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday | 04:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 6,
+          "said": "Saturday, October 3rd 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "WEEKEND MASS Saturday | 04:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box of both bulletins (unchanged across the change of pastor) and in the intentions; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "Sunday | 09:00am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 6,
+          "said": "Sunday, October 4th 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "Sunday | 09:00am, 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Sunday 09:00"
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box of both bulletins (unchanged across the change of pastor) and in the intentions; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "Sunday | 09:00am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 6,
+          "said": "Sunday, October 4th 11 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "Sunday | 09:00am, 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Sunday 11:00"
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box of both bulletins (unchanged across the change of pastor) and in the intentions; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday |12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 6,
+          "said": "Monday, October ... 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "WEEKDAY MASS Monday |12:10pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Monday 12:10"
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box of both bulletins (unchanged across the change of pastor) and in the intentions; history agrees. No Friday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "WEEKDAY MASS Tuesday |12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 6,
+          "said": "Tuesday, October ... 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "WEEKDAY MASS Tuesday |12:10pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Tuesday 12:10"
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box of both bulletins (unchanged across the change of pastor) and in the intentions; history agrees. No Friday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "WEEKDAY MASS Wednesday |12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 6,
+          "said": "Wednesday, October ... 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "WEEKDAY MASS Wednesday |12:10pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Wednesday 12:10"
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box of both bulletins (unchanged across the change of pastor) and in the intentions; history agrees. No Friday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "WEEKDAY MASS Thursday |12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 6,
+          "said": "Thursday, October ... 12:10 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "WEEKDAY MASS Thursday |12:10pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Thursday 12:10"
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box of both bulletins (unchanged across the change of pastor) and in the intentions; history agrees. No Friday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "RECONCILIATION Wednesday | 5:00pm - 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "RECONCILIATION Wednesday | 05:00pm - 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Wednesday 17:00-18:00"
+        }
+      ],
+      "rationale": "Printed in both bulletins' schedule box; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "Saturday | 2:30pm - 3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "Saturday | 2:30pm - 3:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Saturday 14:30-15:30"
+        }
+      ],
+      "rationale": "Printed in both bulletins' schedule box; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 1,
+          "said": "ADORATION Wednesday | 11:00 am - 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d76cac27ff4",
+          "page": 1,
+          "said": "ADORATION Wednesday | 11:00 am - 6:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83669c850dbb",
+          "said": "weekly Wednesday 11:00-18:00"
+        }
+      ],
+      "rationale": "Printed in both bulletins' schedule box; history agrees. No other place is named, so it is at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-latham",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-09-23",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Albany Catholic Medical Guild, St. John/St. Joseph, Rensselaer"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83669c850dbb",
+          "page": 5,
+          "said": "Date: Wednesday, September 23, 2026 ... Time: 5:30pm Mass (The Parish of St. John the Evangelist and St. Joseph) ... 54 Herrick St. Rensselaer"
+        }
+      ],
+      "rationale": "A Medical Guild Mass at another parish in Rensselaer, on a date already past; off-site under the policy. The Monday Rosary, the nursing-home Loving Hearts visits and the convalidation ceremony at the Cathedral are not Mass, Confession or Adoration at this church either.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

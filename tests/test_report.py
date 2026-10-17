@@ -250,6 +250,9 @@ def test_report_passes_and_summarises_changes(pipeline_dir: Path) -> None:
         "events_removed": 1,
         "parishes_changed": 1,
         "parishes_with_new_bulletin": 1,
+        "update_mode_parishes": 0,
+        "update_changes_applied": 0,
+        "update_proposals_rejected": 0,
     }
     [change] = report["changes"]
     assert [e["summary"] for e in change["added"]] == ["Confession · Sat 2:00 PM–4:00 PM"]

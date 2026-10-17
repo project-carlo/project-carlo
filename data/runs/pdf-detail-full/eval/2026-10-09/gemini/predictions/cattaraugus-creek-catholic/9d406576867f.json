@@ -1,0 +1,370 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "cattaraugus-creek-catholic",
+  "content_hash": "9d406576867faa8cbc629e16c87de33f766d72b794c883cc47b52132c5abc979",
+  "source_url": "https://parishesonline.com/publication-page/cattargus-catholic-community?selectedPublication=https://container.parishesonline.com/bulletins/14/0156/20261004B.pdf",
+  "fetched_at": "2026-10-04T14:23:11Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "st-aloysius-springville",
+      "name": "St. Aloysius Church",
+      "address": "190 Franklin Street, Springville, NY 14141"
+    },
+    {
+      "slug": "st-joseph-holland",
+      "name": "St. Joseph Church",
+      "address": "46 North Main Street, Holland, NY 14080"
+    },
+    {
+      "slug": "st-mary-arcade",
+      "name": "St. Mary Church",
+      "address": "417 West Main Street, Arcade, NY 14009"
+    },
+    {
+      "slug": "st-mary-east-arcade",
+      "name": "St. Mary Church",
+      "address": "6785 East Arcade Road, East Arcade, NY 14009"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/9d406576867faa8cbc629e16c87de33f766d72b794c883cc47b52132c5abc979-5fdeee7931aa.json",
+    "modified_at": "2026-10-04T15:08:07.717000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/cattaraugus-creek-catholic/9d406576867f.pdf",
+  "pdf_sha256": "dd2b7a2db25cc179ad133f874cdb9461ffa4fc476c0ffcef786bc73e5d8fbf39",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-east-arcade",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-arcade",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-holland",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-arcade",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-arcade",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-arcade",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-arcade",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-arcade",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-aloysius-springville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3104,
+    "output_tokens": 1387
+  }
+}

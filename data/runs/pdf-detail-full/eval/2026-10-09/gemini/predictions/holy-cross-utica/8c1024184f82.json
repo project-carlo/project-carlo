@@ -1,0 +1,133 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "holy-cross-utica",
+  "content_hash": "8c1024184f82720199ff80645890f1a8748bef67ba18b0aa0470b31ed04effab",
+  "source_url": "https://parishesonline.com/publication-page/st-mark-church-13502?selectedPublication=https://container.parishesonline.com/bulletins/06/0233/20260927B.pdf",
+  "fetched_at": "2026-09-28T00:05:45Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-mark-utica",
+      "name": "St. Mark's Church (Holy Cross Parish)",
+      "address": "440 Keyes Rd., Utica, NY 13502"
+    },
+    {
+      "slug": "st-peter-utica",
+      "name": "St. Peter's Church (Holy Cross Parish)",
+      "address": "422 Coventry Ave., Utica, NY 13502"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/8c1024184f82720199ff80645890f1a8748bef67ba18b0aa0470b31ed04effab-6b8ec5497030.json",
+    "modified_at": "2026-09-28T00:18:47.819000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/holy-cross-utica/8c1024184f82.pdf",
+  "pdf_sha256": "232a23da5b2a2fa574753161e90298c133f6b4521d2c9659deb4140eec7c42e3",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-mark-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mark-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mark-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-peter-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mark-utica",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2504,
+    "output_tokens": 509
+  }
+}

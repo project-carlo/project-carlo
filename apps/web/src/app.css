@@ -1,13 +1,19 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import "./shadcn.css";
 
 /* Liturgical-missal typography: Cardo for display (literally designed for
  * classical + liturgical texts) and EB Garamond as a warm body serif. Both
  * are self-hosted via fontsource, no external CDN fetches. */
-@import "@fontsource/cardo/400.css";
-@import "@fontsource/cardo/400-italic.css";
-@import "@fontsource/cardo/700.css";
+/* Cardo's Latin subsets only. Its whole-weight files also carry Gothic, Old
+ * Italic and Runic, small enough that Vite inlined them into this stylesheet,
+ * so every visitor downloaded them, though no page uses them. */
+@import "@fontsource/cardo/latin-400.css";
+@import "@fontsource/cardo/latin-ext-400.css";
+@import "@fontsource/cardo/latin-400-italic.css";
+@import "@fontsource/cardo/latin-ext-400-italic.css";
+@import "@fontsource/cardo/latin-700.css";
+@import "@fontsource/cardo/latin-ext-700.css";
 @import "@fontsource-variable/eb-garamond";
 @import "@fontsource-variable/eb-garamond/wght-italic.css";
 
@@ -130,7 +136,7 @@
     text-decoration: none;
   }
 
-  /* Drop cap utility, used on parish names and masthead titles. */
+  /* Drop cap utility, used on church names and masthead titles. */
   .dropcap::first-letter {
     font-family: var(--font-display);
     font-weight: 700;
@@ -201,6 +207,16 @@
     outline-offset: 3px;
   }
 
+  /* Tailwind's reset leaves buttons with the arrow cursor, as native ones
+   * have; here every button gets the hand a link has, so whatever can be
+   * clicked says so. A disabled one keeps the arrow, and a utility (say
+   * `disabled:cursor-wait`) still has the last word. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+
   /* A hairline rule used everywhere instead of box borders. */
   .hairline {
     border: none;
@@ -246,6 +262,35 @@
       0 18px 40px -18px rgb(22 18 16 / 0.32),
       0 2px 6px -2px rgb(22 18 16 / 0.1);
   }
+
+  /* The bar across the top while the next page loads (src/router.tsx). It
+   * waits a beat before showing, so a quick move between pages shows
+   * nothing, then creeps toward the far edge without reaching it. */
+  .nav-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1300;
+    height: 2px;
+    background: var(--rubric);
+    transform-origin: left center;
+    transform: scaleX(0);
+    pointer-events: none;
+    animation: nav-progress 8s cubic-bezier(0.1, 0.7, 0.2, 1) 150ms forwards;
+  }
+  @keyframes nav-progress {
+    from {
+      transform: scaleX(0.08);
+    }
+    to {
+      transform: scaleX(0.9);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    /* Still after the beat, just without the creep. */
+    .nav-progress {
+      animation-duration: 1ms;
+    }
+  }
 }
 
 /* ---- Leaflet overrides ---------------------------------------------------
@@ -273,9 +318,70 @@
   border: none;
 }
 
-/* OSM tiles: muted to match the missal card UI (ChurchMap). */
-.leaflet-container.church-map .leaflet-tile-pane {
+/* OSM tiles: muted to match the missal card UI (ChurchMap, and the city
+ * page's still preview in CityMapPreview). */
+.leaflet-container.church-map .leaflet-tile-pane,
+.city-map-tiles {
   filter: saturate(0.78) brightness(1.02) contrast(1.08) hue-rotate(-8deg);
+}
+
+/* The city page's map (CityMapPreview, CityMapLive). The still preview
+ * draws what the live map will, on the same pixels; the live map, mounted
+ * over it, stays hidden until its markers are in, then takes over in one
+ * frame: the still markers and controls go as the live ones show, and until
+ * the live tiles paint, the still tiles show through. */
+.city-map-attribution {
+  background: color-mix(in oklch, var(--paper) 82%, transparent);
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-family: var(--font-sans);
+}
+/* Without round() (see staticMapPlacement), plain centering, by the canvas
+ * size CityMapPreview sets. */
+.city-map-canvas {
+  left: calc(50% - var(--city-map-canvas-width) / 2);
+  top: calc(50% - var(--city-map-canvas-height) / 2);
+}
+.city-map-live:not([data-ready]) {
+  visibility: hidden;
+}
+.city-map:has(.city-map-live[data-ready]) .city-map-static-pins,
+.city-map:has(.city-map-live[data-ready]) .city-map-static-control {
+  display: none;
+}
+/* The still tiles only line up with the live map on the view they were drawn
+ * for. Once it moves, they go too: otherwise, wherever the live map has no
+ * tile yet (around the shrinking old tiles as it zooms out, or the edge it's
+ * dragged in from), the transparent live map shows them through at the old
+ * zoom and offset. The preview's paper shows there instead, as on the open
+ * map. */
+.city-map:has(.city-map-live[data-moved]) .city-map-tiles {
+  display: none;
+}
+/* Once the live map is mounting, the preview stops being a link to the home
+ * map: it's about to be the map itself. Hidden rather than only let clicks
+ * through, so it's out of the tab order and the accessibility tree too. */
+.city-map:has(.city-map-live) .city-map-link {
+  visibility: hidden;
+}
+.city-map-live .leaflet-container {
+  background: transparent;
+}
+/* In the page, the still preview's attribution stays, over the live map. */
+.city-map-live .leaflet-control-attribution {
+  display: none;
+}
+/* Markers appear in place, without the home map's settle: the still ones
+ * are already there, and the live ones arrive on top of them. */
+.city-map .church-map-marker,
+.city-map .church-map-marker svg,
+.city-map .church-map-cluster,
+.city-map .church-map-cluster-disc,
+.city-map-host .church-map-marker,
+.city-map-host .church-map-marker svg,
+.city-map-host .church-map-cluster,
+.city-map-host .church-map-cluster-disc {
+  animation: none;
 }
 
 /* Links inside the map (popup body, attribution) are rubric, not Leaflet's
@@ -392,6 +498,26 @@
  * has to clear the close button. */
 .map-popup-solo {
   padding: 0.7rem 2.1rem 0.75rem 0.9rem;
+}
+
+/* The name-only card, for a map too small for the full one (the city and
+ * church pages' previews). It has no close button: a tap anywhere else on the
+ * map closes it, and the button would be most of the card. */
+.map-popup-compact {
+  padding: 0.3rem 0.6rem 0.35rem;
+}
+.leaflet-popup:has(.map-popup-compact) .leaflet-popup-close-button {
+  display: none;
+}
+/* Scoped through `.leaflet-container` for the reason the foot link is. */
+.leaflet-container .map-popup-compact-link {
+  display: block;
+  color: var(--ink);
+  transition: color 160ms ease;
+}
+.leaflet-container .map-popup-compact-link:hover,
+.leaflet-container .map-popup-compact-link:focus-visible {
+  color: var(--rubric);
 }
 
 /* The foot has no padding of its own: the link fills it so the whole strip is

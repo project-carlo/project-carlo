@@ -1,0 +1,875 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-buffalo",
+  "status": "approved",
+  "as_of": "2026-10-04T14:27:39Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:34:44Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:37:19Z",
+  "summary": "One church (Latin/Italian oratory). The page-1 Liturgical Schedule box is identical in both bulletins and matches history: Sunday 7:15, 9:15, 11:15 AM, Mon-Fri 6:00 PM and Saturday 9:00 AM Masses, with confession 40 minutes before each Mass (one entry per Mass). Sung Masses at regular times, the past Forty Hours and Masses elsewhere (Corpus Christi 10/10, Felician Sisters) are not recorded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3fa1a118f53b416810cb0e64db0b781a5c7bbec48da6d2cf05e7719f3f04e878",
+      "fetched_at": "2026-10-04T14:27:39Z",
+      "published_date": "2026-09-27",
+      "read": true
+    },
+    {
+      "content_hash": "8fc7ae8773e7a7084a6c2a1dca49fe7c148d9bcb94fde0ee5a506ce0fc07f168",
+      "fetched_at": "2026-09-26T18:54:30Z",
+      "published_date": "2026-09-13",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin Low"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "SUNDAY 7:15 AM Latin Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "SUNDAY 7:15 AM Latin Low"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Sunday 07:15 mass 'Latin Low'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Sunday 07:15 mass 'Latin Low'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin Sung"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "SUNDAY 9:15 AM Latin Sung"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "SUNDAY 9:15 AM Latin Sung"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Sunday 09:15 mass 'Latin Sung'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Sunday 09:15 mass 'Latin Sung'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Italian/English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "SUNDAY 11:15 AM Italian/English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "SUNDAY 11:15 AM Italian/English"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Sunday 11:15 mass 'Italian/English'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Sunday 11:15 mass 'Italian/English'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin Low"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Monday 18:00 mass 'Latin Low'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Monday 18:00 mass 'Latin Low'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees. 'Weekdays' taken as Monday-Friday, Saturday being listed separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin Low"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Tuesday 18:00 mass 'Latin Low'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Tuesday 18:00 mass 'Latin Low'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees. 'Weekdays' taken as Monday-Friday, Saturday being listed separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin Low"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Wednesday 18:00 mass 'Latin Low'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Wednesday 18:00 mass 'Latin Low'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees. 'Weekdays' taken as Monday-Friday, Saturday being listed separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin Low"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Thursday 18:00 mass 'Latin Low'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Thursday 18:00 mass 'Latin Low'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees. 'Weekdays' taken as Monday-Friday, Saturday being listed separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin Low"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "WEEKDAYS: 6 PM Latin Low"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Friday 18:00 mass 'Latin Low'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Friday 18:00 mass 'Latin Low'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees. 'Weekdays' taken as Monday-Friday, Saturday being listed separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin Low"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "SATURDAY: 9 AM Latin Low"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "SATURDAY: 9 AM Latin Low"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Saturday 09:00 mass 'Latin Low'"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Saturday 09:00 mass 'Latin Low'"
+        }
+      ],
+      "rationale": "Liturgical Schedule box on page 1 of both bulletins read; the page-1 Mass calendar lists a Mass every day of the week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:35",
+        "end_time": "07:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 7:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Sunday confession 06:35-07:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Sunday confession 06:35-07:15"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Sunday 7:15 AM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:35",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 9:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Sunday confession 08:35-09:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Sunday confession 08:35-09:15"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Sunday 9:15 AM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:35",
+        "end_time": "11:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 11:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Sunday confession 10:35-11:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Sunday confession 10:35-11:15"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Sunday 11:15 AM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:20",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Monday confession 17:20-18:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Monday confession 17:20-18:00"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Monday 6:00 PM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:20",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Tuesday confession 17:20-18:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Tuesday confession 17:20-18:00"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Tuesday 6:00 PM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:20",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Wednesday confession 17:20-18:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Wednesday confession 17:20-18:00"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Wednesday 6:00 PM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:20",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Thursday confession 17:20-18:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Thursday confession 17:20-18:00"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Thursday 6:00 PM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:20",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Friday confession 17:20-18:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Friday confession 17:20-18:00"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Friday 6:00 PM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:20",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "40 min before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fa1a118f53b",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fc7ae8773e7",
+          "page": 1,
+          "said": "Confessions 40 min. before each Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3fa1a118f53b",
+          "said": "weekly Saturday confession 08:20-09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8fc7ae8773e7",
+          "said": "weekly Saturday confession 08:20-09:00"
+        }
+      ],
+      "rationale": "'Confessions 40 min. before each Mass' in the Liturgical Schedule box of both bulletins: one entry for each Mass, here the Saturday 9:00 AM Mass, ending when it starts (policy). History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

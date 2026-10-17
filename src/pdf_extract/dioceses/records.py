@@ -40,9 +40,11 @@ META_FILE = "diocese.md"
 ROSTERS_DIR = "rosters"
 LIVE = "live"  # how `search` labels rows of data/parishes.csv and data/churches.csv
 
-# Every value data/parishes.csv uses. `fetch` reads the first four.
+# Every value a parish record may use. `fetch` reads the first four; `no_bulletin`
+# rows stay out of data/parishes.csv (see `unpublished`).
+NO_BULLETIN = "no_bulletin"
 KNOWN_BULLETIN_PROVIDERS = frozenset(
-    {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive", "no_bulletin"}
+    {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive", NO_BULLETIN}
 )
 # Providers `fetch` looks up by account id rather than by the parish website.
 PROVIDERS_NEEDING_ID = frozenset({"parishes_online", "discover_mass"})
@@ -181,7 +183,7 @@ OPEN = Kind(
     name="open",
     dir="open",
     always=("name", "revisit", "revisit_after", "roster", "evidence"),
-    optional=("parish", *_ADDRESS),
+    optional=("parish", *_ADDRESS, "promoted"),
     template="""\
 ## What is known
 
@@ -630,7 +632,7 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         problem = publication_problem(str(pub))
         if problem:
             p.errors.append(f"{label}: publication {pub!r}: {problem}")
-    if not r.get("publication") and provider != "no_bulletin":
+    if not r.get("publication") and provider != NO_BULLETIN:
         p.warnings.append(
             f"{label}: no publication id recorded, so nothing can check that no other "
             "row publishes the same bulletin"
@@ -814,28 +816,45 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
     return p
 
 
+def unpublished(d: Diocese) -> tuple[set[str], set[str]]:
+    """Parishes and churches kept in the records but left off the site.
+
+    A `no_bulletin` parish publishes nothing the pipeline can read, so its
+    churches would only ever show an empty schedule. Its records stay, with
+    their evidence and revisit date, and go live when a bulletin turns up.
+    """
+    parishes = {slug for slug, r in d.of(PARISH).items()
+                if r.get("bulletin_provider") == NO_BULLETIN}
+    churches = {slug for slug, r in d.of(CHURCH).items() if r.get("parish") in parishes}
+    return parishes, churches
+
+
 def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
-    """The diocese's rows in the column layout of the live CSVs."""
+    """The diocese's rows in the column layout of the live CSVs, without `unpublished` ones."""
     def cell(value: Any) -> str:
         if isinstance(value, bool):
             return "true" if value else "false"
         return "" if value is None else str(value)
 
+    skip_p, skip_c = unpublished(d)
     parishes = [
         {"slug": slug, "name": cell(r.get("name")), "website": cell(r.get("website")),
          "bulletin_provider": cell(r.get("bulletin_provider")),
          "provider_id": cell(r.get("provider_id"))}
-        for slug, r in sorted(d.of(PARISH).items())
+        for slug, r in sorted(d.of(PARISH).items()) if slug not in skip_p
     ]
     churches = [
         {"parish_id": cell(r.get("parish")), "slug": slug,
          **{c: cell(r.get(c)) for c in CHURCH_CSV_FIELDS[2:]}}
         for slug, r in sorted(d.of(CHURCH).items(), key=lambda kv: (kv[1].get("parish"), kv[0]))
+        if slug not in skip_c
     ]
     return parishes, churches
 
 
 PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id"]
+# Set on the parish rows `promote` adds; kept as it is on rows already live.
+FETCH_ONLY_COLUMN = "fetch_only"
 CHURCH_CSV_FIELDS = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
     "name_verified", "address_verified", "latitude", "longitude",
@@ -852,7 +871,13 @@ def _same_cell(a: str, b: str) -> bool:
 
 
 def _check_drift(d: Diocese, owners: _Owners, p: Problems) -> None:
-    """Promoted records whose live row has since changed (or gone)."""
+    """Promoted records whose live row has since changed (or gone, or should go)."""
+    for kind, off_site, live in zip((PARISH, CHURCH), unpublished(d),
+                                    (owners.live_parish, owners.live_church), strict=True):
+        for slug in sorted(off_site & live.keys()):
+            if d.of(kind)[slug].get("promoted"):
+                p.warnings.append(f"{_label(kind, slug)}: no_bulletin, but still in "
+                                  f"data/{kind.dir}.csv; run `diocese promote` to take it off")
     parishes, churches = export_rows(d)
     for kind, rows, live in ((PARISH, parishes, owners.live_parish),
                              (CHURCH, churches, owners.live_church)):
@@ -1113,6 +1138,34 @@ def exclude_church(diocese: str, slug: str, *, reason: str, last_mass: str = "",
     return {"excluded": slug, "reason": reason, **_commit(before, after)}
 
 
+def question_church(diocese: str, slug: str, *, revisit: str,
+                    revisit_after: str = "") -> dict[str, Any]:
+    """Turn a church row into an open question: no current Mass found, nothing says it closed.
+
+    Carries over what `exclude_church` does. If the church was promoted,
+    `promote` will delete its live row until the question is settled.
+    """
+    if not revisit.strip():
+        raise DioceseError("revisit (the next thing to check) is required")
+    before = load(diocese)
+    after = before.copy()
+    church = _get(after, CHURCH, slug)
+    if slug in after.of(OPEN):
+        raise DioceseError(f"open/{slug}.md already exists")
+    old_body = re.sub(r"^(#+) ", r"#\1 ", (church.get("body") or "").strip(), flags=re.M)
+    question = {
+        "slug": slug, "name": church.get("name", ""), "revisit": revisit.strip(),
+        "revisit_after": revisit_after or None, "parish": church.get("parish", ""),
+        **{f: church.get(f, "") for f in _ADDRESS},
+        "roster": church.get("roster") or [], "evidence": church.get("evidence") or [],
+        "promoted": church.get("promoted"),
+        "body": f"{OPEN.template.rstrip()}\n\n## When it was a church row\n\n{old_body}",
+    }
+    del after.of(CHURCH)[slug]
+    after.of(OPEN)[slug] = question
+    return {"question": slug, **_commit(before, after)}
+
+
 def show_diocese(diocese: str) -> dict[str, Any]:
     """The diocese at a glance: parishes with their churches, exclusions, open questions."""
     meta = load_meta(diocese)
@@ -1179,8 +1232,10 @@ def export_csv(diocese: str, out_dir: Path) -> dict[str, Any]:
 
 
 def _write_live_csv(path: Path, columns: list[str], rows: list[dict[str, str]]) -> None:
+    """Write `rows` under the file's own header, adding any of `columns` it lacks."""
     with open(path, encoding="utf-8", newline="") as f:
-        header = next(csv.reader(f), columns)
+        header = next(csv.reader(f), [])
+    header += [col for col in columns if col not in header]
     tmp = path.with_suffix(".csv.tmp")
     with open(tmp, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=header, lineterminator="\n", extrasaction="ignore")
@@ -1194,11 +1249,16 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
 
     New rows are appended and promoted rows updated in place. Live rows the
     diocese has retired are deleted: slugs in a record's `replaces` (merged or
-    renamed away) and promoted churches that are now in excluded/. A record
+    renamed away), promoted churches that are now in excluded/ or open/, and `no_bulletin`
+    parishes with their churches (see `unpublished`). A record
     that is blank where the live row has a value (coordinates from `geocode`,
     flags from `verify`) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share
-    its slug with a live row from then on.
+    its slug with a live row from then on; an `unpublished` one loses its stamp.
+
+    A parish row added here is marked `fetch_only`: the weekly run fetches its
+    bulletins but makes no model call for it and leaves it off the website
+    until the flag is cleared. Rows already live keep their flag.
     """
     d = _ready(diocese)
     after = d.copy()
@@ -1210,7 +1270,11 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
 
     retired_p = {old for r in d.of(PARISH).values() for old in r.get("replaces") or []}
     retired_c = {old for r in d.of(CHURCH).values() for old in r.get("replaces") or []}
-    retired_c |= {slug for slug, r in d.of(EXCLUDED).items() if r.get("promoted")}
+    retired_c |= {slug for kind in (EXCLUDED, OPEN) for slug, r in d.of(kind).items()
+                  if r.get("promoted")}
+    unpublished_p, unpublished_c = unpublished(d)
+    retired_p |= unpublished_p
+    retired_c |= unpublished_c
 
     def apply(kind: Kind, live: list[dict[str, str]], rows: list[dict[str, str]],
               retired: set[str]) -> tuple[list[dict[str, str]], dict[str, Any]]:
@@ -1245,6 +1309,10 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
                      "kept_live_values": adopted}
 
     new_p, report["parishes"] = apply(PARISH, live_p, parish_rows, retired_p)
+    added_p = set(report["parishes"]["added"])
+    for row in new_p:
+        if row.get("slug") in added_p:
+            row[FETCH_ONLY_COLUMN] = "true"
     new_c, report["churches"] = apply(CHURCH, live_c, church_rows, retired_c)
 
     live_church_parents = {row.get("parish_id") for row in new_c}
@@ -1256,10 +1324,16 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     )
 
     if not dry_run:
-        for kind in (PARISH, CHURCH):
-            for r in after.of(kind).values():
-                r["promoted"] = r.get("promoted") or stamp
-        _write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
+        # The stamp means "owns a live row", so an unpublished record carries none.
+        for kind, off_site in ((PARISH, unpublished_p), (CHURCH, unpublished_c)):
+            for slug, r in after.of(kind).items():
+                if slug in off_site:
+                    r.pop("promoted", None)
+                else:
+                    r["promoted"] = r.get("promoted") or stamp
+        _write_live_csv(
+            storage.PARISHES_CSV_PATH, [*PARISH_CSV_FIELDS, FETCH_ONLY_COLUMN], new_p,
+        )
         _write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
         _save(d, after)
         meta_path = diocese_dir(diocese) / META_FILE
@@ -1268,6 +1342,11 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
         _write_text(meta_path, f"---\n{_dump_front(front)}---\n\n{body}\n")
         report["next"] = (
             "run `pnpm test`; the next pipeline command seeds the new rows into the database"
+            + (
+                f". The {len(added_p)} new parishes are fetch-only: clear `fetch_only` in"
+                " data/parishes.csv to process them and show them on the site"
+                if added_p else ""
+            )
         )
     return report
 

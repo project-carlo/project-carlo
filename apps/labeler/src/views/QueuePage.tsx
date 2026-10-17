@@ -6,7 +6,7 @@ import {
   unlabeledParishCursor,
   unlabeledParishesOn,
 } from "../lib/queuePrefs";
-import { bulletinHref, navigate } from "../lib/route";
+import { bulletinHref, navigate, SEEDS_HREF } from "../lib/route";
 import type { BulletinSummary, Config, Progress } from "../types";
 
 const STATUS_STYLE: Record<BulletinSummary["status"], string> = {
@@ -110,7 +110,10 @@ export function QueuePage({ config, labeler, onLabelerChange }: Props) {
             {config.mode === "live" && (config.remote ? " · R2 connected (read-only)" : " · local files only")}
           </span>
         )}
-        <label className="ml-auto flex items-center gap-2 text-sm text-slate-600">
+        <a href={SEEDS_HREF} className="ml-auto text-sm text-sky-700 hover:underline" data-testid="seeds-link">
+          Seeds →
+        </a>
+        <label className="flex items-center gap-2 text-sm text-slate-600">
           Labeler
           <input
             value={labeler}

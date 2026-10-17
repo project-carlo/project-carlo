@@ -1,0 +1,217 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "good-shepherd-catholic-community",
+  "content_hash": "61dacd4226a9ba1cce1da74c58bd2cb5dc750be250ae0cad4c5be8a7107c2e56",
+  "source_url": "https://parishesonline.com/publication-page/good-shepherd-catholic-community?selectedPublication=https://container.parishesonline.com/bulletins/06/0198/20260503B.pdf",
+  "fetched_at": "2026-05-04T18:43:08Z",
+  "reference_date": "2026-05-04",
+  "churches": [
+    {
+      "slug": "st-patricks-moravia",
+      "name": "St. Patrick's Church",
+      "address": "51 Grove Street, Moravia, NY 13118"
+    },
+    {
+      "slug": "st-patricks-aurora",
+      "name": "St. Patrick's Church",
+      "address": "303 Main Street, Aurora, NY 13026"
+    },
+    {
+      "slug": "our-lady-of-the-lake",
+      "name": "Our Lady of the Lake",
+      "address": "8695 State Route 90, King Ferry, NY 13081"
+    },
+    {
+      "slug": "st-michaels",
+      "name": "St. Michael's Church",
+      "address": "162 Cayuga Street, Union Springs, NY 13160"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/61dacd4226a9ba1cce1da74c58bd2cb5dc750be250ae0cad4c5be8a7107c2e56.json",
+    "kind": "local_legacy_raw_cache",
+    "modified_at": null,
+    "timestamp_caveat": "Local mtime is not an extraction timestamp; legacy fallback only"
+  },
+  "gemini_church_context_matches": null,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/good-shepherd-catholic-community/61dacd4226a9.pdf",
+  "pdf_sha256": "61dacd4226a9ba1cce1da74c58bd2cb5dc750be250ae0cad4c5be8a7107c2e56",
+  "label_status": "unlabeled",
+  "published_date": "2026-05-03",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-michaels",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-moravia",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-aurora",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-the-lake",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-aurora",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-moravia",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-michaels",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-aurora",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-moravia",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": "08:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Before Sunday Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM",
+        "end_time": "8:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {}
+}

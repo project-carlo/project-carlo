@@ -24,6 +24,8 @@
  *   where small roundels would otherwise pile up on each other.
  */
 
+import { TILE_SIZE } from "./staticMap";
+
 /**
  * The last zoom that clusters: here and further out, every church is in a
  * roundel. Zoom 10 takes in a few counties. The default view (zoom 11) and a
@@ -44,8 +46,6 @@ export function clusterRadiusPx(zoom: number): number {
   return Math.min(60, 40 + (CLUSTER_MAX_ZOOM - zoom) * 6);
 }
 
-/** Leaflet's tile size: a zoom-z world is `TILE_SIZE * 2^z` pixels wide. */
-const TILE_SIZE = 256;
 
 /** `[west, south, east, north]`, in degrees. */
 export type BBox = [number, number, number, number];

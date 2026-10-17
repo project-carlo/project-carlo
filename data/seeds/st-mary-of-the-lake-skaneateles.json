@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-of-the-lake-skaneateles",
+  "status": "ready",
+  "as_of": "2026-10-11T16:36:45Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:05Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Small one-church parish with a clear Liturgy Schedule on page 1 of the Oct 11 bulletin (image-only pages, read as images). Weekly Masses, Saturday confession and 2nd/4th Wednesday Adoration with Benediction match history in all three bulletins. Monday noon Communion Service is deliberately excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c42450bbfbede37f7b9ca060d98fc74b2adba7c8692f84c194665cc09bb59f8e",
+      "fetched_at": "2026-10-11T16:36:45Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "bbb3694a5a26b72623ac5f73ca899b32dbe3ea9089d2434b5317f9d76a6fb6ac",
+      "fetched_at": "2026-10-04T14:43:28Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "1d394c2fd861debe2e72c844c23d722c8e3fcf4249186dbec2a42611f4750ca5",
+      "fetched_at": "2026-09-28T00:15:19Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Daily Mass: 8:15am, Tuesday - Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly mass Tuesday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly mass Tuesday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly mass Tuesday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        }
+      ],
+      "rationale": "Liturgy schedule on page 1; the week calendar on page 2 agrees; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Daily Mass: 8:15am, Tuesday - Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly mass Wednesday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly mass Wednesday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly mass Wednesday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        }
+      ],
+      "rationale": "Liturgy schedule on page 1; the week calendar on page 2 agrees; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Daily Mass: 8:15am, Tuesday - Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly mass Thursday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly mass Thursday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly mass Thursday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        }
+      ],
+      "rationale": "Liturgy schedule on page 1; the week calendar on page 2 agrees; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Daily Mass: 8:15am, Tuesday - Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly mass Friday 08:15 st-mary-of-the-lake-skaneateles  “Followed by Anointing of the Sick”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly mass Friday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly mass Friday 08:15 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        }
+      ],
+      "rationale": "Liturgy schedule on page 1; the week calendar on page 2 agrees; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Saturday Evening Vigil - 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly mass Saturday 16:30 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly mass Saturday 16:30 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly mass Saturday 16:30 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        }
+      ],
+      "rationale": "Liturgy schedule on page 1; the week calendar on page 2 agrees; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Sunday - 8:00am & 10:15am (Live Streamed)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly mass Sunday 08:00 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly mass Sunday 08:00 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly mass Sunday 08:00 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        }
+      ],
+      "rationale": "Liturgy schedule on page 1; the week calendar on page 2 agrees; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Sunday - 8:00am & 10:15am (Live Streamed)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly mass Sunday 10:15 st-mary-of-the-lake-skaneateles  “Live Streamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly mass Sunday 10:15 st-mary-of-the-lake-skaneateles  “Live Streamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly mass Sunday 10:15 st-mary-of-the-lake-skaneateles  “Live streamed”",
+          "page": 1
+        }
+      ],
+      "rationale": "Liturgy schedule on page 1; the week calendar on page 2 agrees; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Reconciliation (Confession): Saturday - 3:30-4:00pm or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly confession Saturday 15:30–16:00 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly confession Saturday 15:30–16:00 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly confession Saturday 15:30–16:00 st-mary-of-the-lake-skaneateles",
+          "page": 1
+        }
+      ],
+      "rationale": "Liturgy schedule on page 1; the week calendar on page 2 agrees; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Adoration & Benediction: 7:00pm, the 2nd & 4th Wednesday of the month"
+        },
+        {
+          "source": "history",
+          "bulletin": "c42450bbfbed",
+          "said": "weekly adoration Wednesday 19:00 st-mary-of-the-lake-skaneateles  “2nd & 4th Wednesday of the month; includes benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bbb3694a5a26",
+          "said": "weekly adoration Wednesday 19:00 st-mary-of-the-lake-skaneateles  “2nd & 4th Wednesday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1d394c2fd861",
+          "said": "weekly adoration Wednesday 19:00 st-mary-of-the-lake-skaneateles  “2nd & 4th Wednesday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on page 1 as 2nd and 4th Wednesdays; page 4 and the Oct 14 week calendar also show it (Oct 14 is a 2nd Wednesday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-skaneateles",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Communion Service: 12 noon on Monday"
+        }
+      ],
+      "rationale": "A Communion Service is not a Mass under the policy. The Oct 12 'No Communion Service' is likewise not a Mass cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c42450bb",
+          "page": 1,
+          "said": "Holy Day Masses: Usually 8:15am & 6:00pm"
+        }
+      ],
+      "rationale": "Holy day Masses have no date in this bulletin; 'usually' is not a pinned schedule. Reconciliation 'or by appointment' is also left out (no time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

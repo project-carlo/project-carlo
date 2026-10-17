@@ -1,14 +1,14 @@
-// Minimal static file server for the built app (apps/web/dist).
+// Minimal static file server for the built app (apps/web/dist/client).
 //
 // The e2e suite runs against `wrangler dev` because it needs the production
 // Worker semantics; the benchmark deliberately does not. A plain Node server
 // starts in milliseconds, adds no proxy/miniflare layer between the browser and
 // the bytes, and keeps run-to-run timing noise down — which is what a
-// measurement harness needs. SPA fallback mirrors wrangler's
-// `not_found_handling: "single-page-application"`.
+// measurement harness needs. Unknown paths fall back to index.html, unlike
+// production (which serves 404.html); the benchmark only loads `/`.
 import { createReadStream, existsSync, statSync } from "node:fs";
 import { createServer } from "node:http";
-import { extname, join, normalize, resolve, sep } from "node:path";
+import { extname, isAbsolute, join, normalize, relative, resolve } from "node:path";
 
 const MIME = {
   ".css": "text/css; charset=utf-8",
@@ -35,10 +35,10 @@ function resolveFile(root, urlPath) {
     return null;
   }
   const candidate = resolve(join(root, normalize(decoded)));
-  // Compare against `root + sep`, not a bare prefix: `startsWith(root)` also
-  // admits a sibling directory whose name merely begins with root's ("dist"
-  // would match "dist-other").
-  if (candidate !== root && !candidate.startsWith(root + sep)) return null;
+  // A path inside root is relative to it without climbing; this also rejects
+  // a sibling directory whose name merely begins with root's ("dist-other").
+  const rel = relative(root, candidate);
+  if (rel.startsWith("..") || isAbsolute(rel)) return null;
   if (existsSync(candidate) && statSync(candidate).isDirectory()) {
     const index = join(candidate, "index.html");
     return existsSync(index) ? index : null;

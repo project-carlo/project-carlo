@@ -1,0 +1,267 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-clare-christ-our-light-colonie",
+  "content_hash": "98084eaa09fb119102742817c7942b6c89fbf724a334ed2baef32bb3b4eaea7e",
+  "source_url": "https://parishesonline.com/publication-page/church-of-saint-clare?selectedPublication=https://container.parishesonline.com/bulletins/03/1389/20260927B.pdf",
+  "fetched_at": "2026-09-28T22:02:29Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "christ-our-light-loudonville",
+      "name": "Christ Our Light Catholic Church",
+      "address": "1 Maria Dr., Loudonville, NY 12211"
+    },
+    {
+      "slug": "st-clare-colonie",
+      "name": "Church of Saint Clare",
+      "address": "1947 Central Ave., Colonie, NY 12205"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/98084eaa09fb119102742817c7942b6c89fbf724a334ed2baef32bb3b4eaea7e-4cd370188fc0.json",
+    "modified_at": "2026-09-28T22:14:58.310000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-clare-christ-our-light-colonie/98084eaa09fb.pdf",
+  "pdf_sha256": "7f75bdcbf9593fe876bb88d76be5034e7f84a03cc6c698cd7f3281f7b2f474c4",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "christ-our-light-loudonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Daily Mass in the chapel",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-clare-colonie",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Daily Mass in the chapel",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-clare-colonie",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-our-light-loudonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-clare-colonie",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-our-light-loudonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-our-light-loudonville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-clare-colonie",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-our-light-loudonville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-27",
+      "start_time": "15:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Diocesan Marriage Jubilee",
+      "raw": {
+        "date": "2026-09-27",
+        "start_time": "3:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-clare-colonie",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-27",
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Syro-Malabar Catholic Community Mass",
+      "raw": {
+        "date": "2026-09-27",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-our-light-loudonville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-27",
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Confirmation Liturgical Rite: Oil",
+      "raw": {
+        "date": "2026-09-27",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-clare-colonie",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-04",
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Confirmation Liturgical Rite: Bread",
+      "raw": {
+        "date": "2026-10-04",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2500,
+    "output_tokens": 1103
+  }
+}

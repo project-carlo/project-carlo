@@ -1,0 +1,160 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-vincent-de-paul-cobleskill",
+  "content_hash": "3999d3001141dd9ed43329c0971b9317d82a7645cc76150627fa3cc609e16740",
+  "source_url": "https://files.ecatholic.com/5247/bulletins/20261004.pdf?t=1791051277000",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 9010,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1029,
+    "reasoning_tokens": 346
+  },
+  "seconds": 37.673,
+  "response_id": "resp_0b2d7a10f736edc6016ac913ae56a887d2ac7447e35b4799a4",
+  "events": [
+    {
+      "church_slug": "st-vincent-de-paul-cobleskill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:15 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-cobleskill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-cobleskill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-cobleskill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-cobleskill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "first"
+      ],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-cobleskill",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "18:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After the 5:15 PM Mass",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "6:15 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-cobleskill",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After the 9:00 AM Mass",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "759bd16274912a5bac69362fb5964cda58254ee38455da2254900b00145d4652"
+}

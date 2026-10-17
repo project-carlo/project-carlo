@@ -1,0 +1,457 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "assumption-resurrection",
+  "content_hash": "d0a744a7d97e0a10e5109192c73608987246b1f47a3876f39536a400f6b9cac0",
+  "source_url": "https://files.ecatholic.com/1021/bulletins/20260927.pdf?t=1790396679000",
+  "fetched_at": "2026-09-26T18:49:16Z",
+  "reference_date": "2026-09-26",
+  "churches": [
+    {
+      "slug": "assumption",
+      "name": "Church of the Assumption",
+      "address": "20 East Avenue, Fairport, NY 14450"
+    },
+    {
+      "slug": "resurrection",
+      "name": "Church of the Resurrection",
+      "address": "63 Mason Road, Fairport, NY 14450"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/d0a744a7d97e0a10e5109192c73608987246b1f47a3876f39536a400f6b9cac0-1c8621efd288.json",
+    "modified_at": "2026-09-26T17:21:27.008000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/assumption-resurrection/d0a744a7d97e.pdf",
+  "pdf_sha256": "8d8d0ac11c4e4e14a78c0651f1e35a5a88aa25ddc085efbce244240d2d5c1299",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "resurrection",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "resurrection",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "resurrection",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "resurrection",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "resurrection",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Following the 11:15 AM Mass",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Following the 4:00 PM Mass",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "resurrection",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "First Saturday Mass",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "resurrection",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "07:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "1st Saturday",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "7:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-27",
+      "start_time": "12:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "3rd Annual Eucharistic Procession",
+      "raw": {
+        "date": "2026-09-27",
+        "start_time": "12:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-02",
+      "start_time": "12:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "First Friday Adoration",
+      "raw": {
+        "date": "2026-10-02",
+        "start_time": "12:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "assumption",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "12:00",
+      "end_time": "13:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "Holy Hour and Rosary for Life",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "12:00 PM",
+        "end_time": "1:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "resurrection",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-06",
+      "start_time": "00:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "40 Hours Adoration; continues until Wednesday Oct 7 at 5:00 PM",
+      "raw": {
+        "date": "2026-10-06",
+        "start_time": "12:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5605,
+    "output_tokens": 1756
+  }
+}

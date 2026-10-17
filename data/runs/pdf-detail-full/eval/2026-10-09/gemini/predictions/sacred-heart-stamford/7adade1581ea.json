@@ -1,0 +1,94 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "sacred-heart-stamford",
+  "content_hash": "7adade1581ea7933646a87c009c04ed98c0d1869c1e20820905ae18d7c742e2f",
+  "source_url": "https://sacredheartstamford.org/wp-content/uploads/2026/10/output.pdf",
+  "fetched_at": "2026-10-04T14:51:31Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "sacred-heart-stamford",
+      "name": "Sacred Heart Church",
+      "address": "27 Harper St., Stamford, NY 12167"
+    },
+    {
+      "slug": "st-philip-neri-grand-gorge",
+      "name": "St. Philip Neri Church",
+      "address": "60676 State Highway 30, Grand Gorge, NY 12434"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/7adade1581ea7933646a87c009c04ed98c0d1869c1e20820905ae18d7c742e2f-43ec641c4df2.json",
+    "modified_at": "2026-10-04T15:21:50.232000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/sacred-heart-stamford/7adade1581ea.pdf",
+  "pdf_sha256": "33cc02ef2f5cf80e7944175bce64ba2696e409e0b99df2daa3f57c2ee06bf495",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-philip-neri-grand-gorge",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-stamford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "12:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "12:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-stamford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2507,
+    "output_tokens": 228
+  }
+}

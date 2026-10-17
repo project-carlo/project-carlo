@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-james-cazenovia",
+  "status": "ready",
+  "as_of": "2026-09-28T00:12:13Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:58:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single-church parish with one stored bulletin (Sept. 27, 2026). Weekly Masses Thu 6:45 and 11:00 AM, Sat 5:30 PM and Sun 9:00 AM, and Confession on 2nd and 4th Saturdays 2:00-2:45 PM, all printed in the schedule box; the Oct. 1 6:45 AM Mass is cancelled. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "200b5d99956bc93d6fcb69377e846a35470962c055f9b69fb68bb3c91843387d",
+      "fetched_at": "2026-09-28T00:12:13Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-cazenovia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "200b5d99",
+          "page": 1,
+          "said": "Daily Mass: Thursdays 6:45am & 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "200b5d99956b",
+          "said": "weekly mass Thursday 06:45 st-james-cazenovia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1. Only one bulletin is stored for this parish, so there is nothing older to compare. The Oct. 1 occurrence is cancelled separately (R18).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-cazenovia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "200b5d99",
+          "page": 1,
+          "said": "Daily Mass: Thursdays 6:45am & 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "200b5d99956b",
+          "said": "weekly mass Thursday 11:00 st-james-cazenovia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 and in the calendar (p. 2, 'Thursday, October 1 11:00a Daily Mass-Ch').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-cazenovia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "200b5d99",
+          "page": 1,
+          "said": "Saturday: 5:30pm (Lived streamed on website)"
+        },
+        {
+          "source": "history",
+          "bulletin": "200b5d99956b",
+          "said": "weekly mass Saturday 17:30 st-james-cazenovia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 and in the calendar on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-cazenovia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "200b5d99",
+          "page": 1,
+          "said": "Sunday: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "200b5d99956b",
+          "said": "weekly mass Sunday 09:00 st-james-cazenovia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 and in the calendar on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-cazenovia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "14:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "200b5d99",
+          "page": 1,
+          "said": "Sacrament of Reconciliation 2nd & 4th Saturday of the month, 2:00-2:45pm, or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "200b5d99956b",
+          "said": "weekly confession Saturday 14:00–14:45 st-james-cazenovia  “2nd & 4th Saturday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly qualifiers): second and fourth Saturdays, 2:00-2:45 PM; 'or by appointment' has no time and is not recorded. The newest bulletin's week holds only a first Saturday, so it can't show the slot in the calendar (R11); the schedule box prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-cazenovia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-01",
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "200b5d99",
+          "page": 2,
+          "said": "Thursday, October 1: 6:45a NO Daily Mass-Ch; Thurs., Oct. 1 ~ 6:45am Mass: NO Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "200b5d99956b",
+          "said": "specific_date mass 2026-10-01 06:45 st-james-cazenovia  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says there is no 6:45 AM Mass on Oct. 1, which is on or after as_of. No reason is given. The weekly Thursday 6:45 slot is kept.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "200b5d99",
+          "page": 2,
+          "said": "Friday, October 2: 8:30a Divine Mercy Chaplet-Chapel"
+        }
+      ],
+      "rationale": "R24, R25: a Divine Mercy Chaplet is a devotion, not a Mass, Confession or Adoration (POLICY, What to extract). It appears once in the calendar and the schedule box does not list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

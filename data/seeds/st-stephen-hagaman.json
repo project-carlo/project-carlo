@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stephen-hagaman",
+  "status": "ready",
+  "as_of": "2026-10-11T16:39:14Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:12:29Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. Stephen's has only two weekly Masses: Saturday 5:30 PM and Sunday 8:00 AM, printed identically in all three bulletins. The bulletin's other Masses (Saturday 4:00 PM, Sunday 10:00 AM and noon Spanish, weekday 8:00 AM) and Confession are at St. Mary's in Amsterdam, a different church, and are excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cbc5cfbc68c37b5abb2b32fe41ffd883bc33c917bbda10f4a81a19597dfb4ce0",
+      "fetched_at": "2026-10-11T16:39:14Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "9b6e508fbd194a2d77297f007963d1c9f812bcb2d3cac73e876b112b1fab3eca",
+      "fetched_at": "2026-10-04T14:58:55Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "c1d598740dade557f9b1228618b680283fd277d9b7770f607fff77de39bae4b8",
+      "fetched_at": "2026-09-28T22:09:08Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-hagaman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 1,
+          "said": "Saturday 5:30 pm — St. Stephen's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b6e508f",
+          "page": 1,
+          "said": "Saturday 5:30 pm — St. Stephen's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1d59874",
+          "page": 1,
+          "said": "Saturday 5:30 pm — St. Stephen's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        },
+        {
+          "source": "history",
+          "bulletin": "cbc5cfbc68c3",
+          "said": "weekly mass Saturday 17:30 st-stephen-hagaman",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9b6e508fbd19",
+          "said": "weekly mass Saturday 17:30 st-stephen-hagaman",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c1d598740dad",
+          "said": "weekly mass Saturday 17:30 st-stephen-hagaman",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass schedule box, page 1 (read as image); the Mass-intentions calendar on page 2 also lists Saturday 5:30 PM. Same in all three bulletins and history.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-hagaman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 1,
+          "said": "Sunday 8:00 am St. Stephen's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b6e508f",
+          "page": 1,
+          "said": "Sunday 8:00 am St. Stephen's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1d59874",
+          "page": 1,
+          "said": "Sunday 8:00 am St. Stephen's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        },
+        {
+          "source": "history",
+          "bulletin": "cbc5cfbc68c3",
+          "said": "weekly mass Sunday 08:00 st-stephen-hagaman",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9b6e508fbd19",
+          "said": "weekly mass Sunday 08:00 st-stephen-hagaman",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c1d598740dad",
+          "said": "weekly mass Sunday 08:00 st-stephen-hagaman",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass schedule box, page 1; page 2 intentions list Sunday 8:00 AM. Same in all three bulletins and history.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 1,
+          "said": "Saturday 4:00 pm — St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b6e508f",
+          "page": 1,
+          "said": "Saturday 4:00 pm — St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1d59874",
+          "page": 1,
+          "said": "Saturday 4:00 pm — St. Mary's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        }
+      ],
+      "rationale": "Held at St. Mary's, which the bulletin does not place but the parish website says is in Amsterdam; that church is a separate listed church (st-mary-amsterdam, 156 E Main St.), not St. Stephen's, so it is out of this parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 1,
+          "said": "Sunday 10:00 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b6e508f",
+          "page": 1,
+          "said": "Sunday 10:00 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1d59874",
+          "page": 1,
+          "said": "Sunday 10:00 am St. Mary's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        }
+      ],
+      "rationale": "Held at St. Mary's, which the bulletin does not place but the parish website says is in Amsterdam; that church is a separate listed church (st-mary-amsterdam, 156 E Main St.), not St. Stephen's, so it is out of this parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 1,
+          "said": "Sunday 12:00 noon St. Mary's (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b6e508f",
+          "page": 1,
+          "said": "Sunday 12:00 noon St. Mary's (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1d59874",
+          "page": 1,
+          "said": "Sunday 12:00 noon St. Mary's (Spanish)"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        }
+      ],
+      "rationale": "Held at St. Mary's, which the bulletin does not place but the parish website says is in Amsterdam; that church is a separate listed church (st-mary-amsterdam, 156 E Main St.), not St. Stephen's, so it is out of this parish's seed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 2,
+          "said": "Monday, October 12-October 16: 8:00 am Masses at St. Mary's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        }
+      ],
+      "rationale": "Weekday Masses are at St. Mary's in Amsterdam, not St. Stephen's. Only the intentions calendar (page 2) mentions them, as a range Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 2,
+          "said": "Monday, October 12-October 16: 8:00 am Masses at St. Mary's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        }
+      ],
+      "rationale": "Weekday Masses are at St. Mary's in Amsterdam, not St. Stephen's. Only the intentions calendar (page 2) mentions them, as a range Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 2,
+          "said": "Monday, October 12-October 16: 8:00 am Masses at St. Mary's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        }
+      ],
+      "rationale": "Weekday Masses are at St. Mary's in Amsterdam, not St. Stephen's. Only the intentions calendar (page 2) mentions them, as a range Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 2,
+          "said": "Monday, October 12-October 16: 8:00 am Masses at St. Mary's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        }
+      ],
+      "rationale": "Weekday Masses are at St. Mary's in Amsterdam, not St. Stephen's. Only the intentions calendar (page 2) mentions them, as a range Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 2,
+          "said": "Monday, October 12-October 16: 8:00 am Masses at St. Mary's"
+        },
+        {
+          "source": "website",
+          "url": "https://ststephenshagaman.org/mass",
+          "said": "Weekend Mass at St. Stephen's: Sat 5:30 PM, Sun 8:00 AM; Weekday Mass at St. Mary's 8:00 AM; St. Mary's is in Amsterdam"
+        }
+      ],
+      "rationale": "Weekday Masses are at St. Mary's in Amsterdam, not St. Stephen's. Only the intentions calendar (page 2) mentions them, as a range Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cbc5cfbc",
+          "page": 1,
+          "said": "Confessions at St Mary's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b6e508f",
+          "page": 1,
+          "said": "Confessions at St Mary's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1d59874",
+          "page": 1,
+          "said": "Confessions at St Mary's Church"
+        }
+      ],
+      "rationale": "Confession is stated as at St. Mary's (Amsterdam) with no time printed; no St. Stephen's confession time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-matthew-voorheesville",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:38:56Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:41Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; the page 1 Mass Schedule box (an image in the newest bulletin, read as a picture; identical text in the two older ones) gives Sat 5:15 PM, Sun 9:30 AM, Wed and Fri 8:30 AM, Friday 8:00 confession, Saturday confession after the vigil, and First Friday Adoration 9-11. Two questions: whether the First Friday confession should be kept, and whether the Friday Oct 16 'Morning Liturgy' replaces the Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f21c1ef1707766fd567449dccab39b900f424d773c8abf3b77a75adbd1c22f0b",
+      "fetched_at": "2026-10-11T16:38:56Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "199a50c69147adfb1ee421d18415b28cb0a456db190080f525f4dc234e0fe86a",
+      "fetched_at": "2026-10-04T14:57:05Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "430d77c696d1a67cf60c35be9371acf1ef4bfaa70e1ac92aad3743861cc8ba5a",
+      "fetched_at": "2026-09-28T22:06:58Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Saturday Vigil 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "199a50c69147",
+          "page": 1,
+          "said": "Saturday Vigil 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "430d77c696d1",
+          "page": 1,
+          "said": "Saturday Vigil 5:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "f21c1ef17077",
+          "said": "weekly mass Saturday 17:15 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "199a50c69147",
+          "said": "weekly mass Saturday 17:15 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "430d77c696d1",
+          "said": "weekly mass Saturday 17:15 st-matthew-voorheesville",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on page 1 of all three bulletins; also Mass Intentions on page 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Sunday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "199a50c69147",
+          "page": 1,
+          "said": "Sunday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "430d77c696d1",
+          "page": 1,
+          "said": "Sunday 9:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "f21c1ef17077",
+          "said": "weekly mass Sunday 09:30 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "199a50c69147",
+          "said": "weekly mass Sunday 09:30 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "430d77c696d1",
+          "said": "weekly mass Sunday 09:30 st-matthew-voorheesville",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Weekdays (Wed., Friday) 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "199a50c69147",
+          "page": 1,
+          "said": "Weekdays (Wed., Friday) 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "430d77c696d1",
+          "page": 1,
+          "said": "Weekdays (Wed., Friday) 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "f21c1ef17077",
+          "said": "weekly mass Wednesday 08:30 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "199a50c69147",
+          "said": "weekly mass Wednesday 08:30 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "430d77c696d1",
+          "said": "weekly mass Wednesday 08:30 st-matthew-voorheesville",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box; the Mass Intentions list Wed Oct 14 8:30AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Weekdays (Wed., Friday) 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "199a50c69147",
+          "page": 1,
+          "said": "Weekdays (Wed., Friday) 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "430d77c696d1",
+          "page": 1,
+          "said": "Weekdays (Wed., Friday) 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "f21c1ef17077",
+          "said": "weekly mass Friday 08:30 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "199a50c69147",
+          "said": "weekly mass Friday 08:30 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "430d77c696d1",
+          "said": "weekly mass Friday 08:30 st-matthew-voorheesville  “Second Friday of the month followed by Anointing of the Sick”",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box. The Oct 16 Friday is a 'Morning Liturgy' (see the question); the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Sacramental Reconciliation: Fridays 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "199a50c69147",
+          "page": 1,
+          "said": "Sacramental Reconciliation: Fridays 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "430d77c696d1",
+          "page": 1,
+          "said": "Sacramental Reconciliation: Fridays 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "f21c1ef17077",
+          "said": "weekly confession Friday 08:00 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "199a50c69147",
+          "said": "weekly confession Friday 08:00 st-matthew-voorheesville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "430d77c696d1",
+          "said": "weekly confession Friday 08:00 st-matthew-voorheesville",
+          "page": 1
+        }
+      ],
+      "rationale": "Clock time printed in the box on page 1 of all three bulletins; no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 5:15 PM Vigil Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Saturday evenings after the Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "199a50c69147",
+          "page": 1,
+          "said": "Saturday evenings after the Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "430d77c696d1",
+          "page": 1,
+          "said": "Saturday evenings after the Vigil Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "f21c1ef17077",
+          "said": "weekly confession Saturday 18:15 st-matthew-voorheesville  “Following the 5:15 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "199a50c69147",
+          "said": "weekly confession Saturday 18:15 st-matthew-voorheesville  “Following the 5:15 PM Vigil Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "430d77c696d1",
+          "said": "weekly confession Saturday 18:15 st-matthew-voorheesville  “Following the 5:15 PM Vigil Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The bulletin gives no clock time, so by policy one hour after the 5:15 PM weekend Mass starts; no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Eucharistic Adoration - First Friday of the month 9:00am - 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "199a50c69147",
+          "page": 1,
+          "said": "Eucharistic Adoration - First Friday of the month 9:00am - 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "430d77c696d1",
+          "page": 1,
+          "said": "Eucharistic Adoration - First Friday of the month 9:00am - 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "f21c1ef17077",
+          "said": "weekly adoration Friday 09:00–11:00 st-matthew-voorheesville  “First Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "199a50c69147",
+          "said": "weekly adoration Friday 09:00–11:00 st-matthew-voorheesville  “First Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "430d77c696d1",
+          "said": "weekly adoration Friday 09:00–11:00 st-matthew-voorheesville  “First Friday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in all three bulletins on page 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Sacramental Reconciliation: During Adoration on First Fridays or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "199a50c69147",
+          "page": 1,
+          "said": "Sacramental Reconciliation: During Adoration on First Fridays or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "430d77c696d1",
+          "page": 1,
+          "said": "Sacramental Reconciliation: During Adoration on First Fridays or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "f21c1ef17077",
+          "said": "weekly confession Friday 09:00–11:00 st-matthew-voorheesville  “First Friday of the month during Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "199a50c69147",
+          "said": "weekly confession Friday 09:00–11:00 st-matthew-voorheesville  “First Friday of the month, during Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "430d77c696d1",
+          "said": "weekly confession Friday 09:00–11:00 st-matthew-voorheesville  “First Friday of the month during Adoration”",
+          "page": 1
+        }
+      ],
+      "rationale": "The bulletin gives no clock time for this confession; it only says 'during Adoration on First Fridays', and Adoration is 9:00-11:00 AM. The policy says not to copy a larger event's hours onto a component without its own timing; history carries it as 9:00-11:00.",
+      "question": "Record First Friday confession 9:00-11:00 AM (during Adoration)?",
+      "options": [
+        {
+          "label": "First Fridays 9:00-11:00 AM, during Adoration",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-matthew-voorheesville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "11:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "During Adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 4,
+          "said": "Friday, October 16, 2026 Memorial of St. Hedwig & St. Margaret Mary Alacoque 8:30AM Morning Liturgy (no intention listed)"
+        }
+      ],
+      "rationale": "Mass Intentions list the Fridays Oct 2 and 9 as '8:30AM' with an intention, but Friday Oct 16 as '8:30AM Morning Liturgy' with no intention. It may be a Communion Service replacing the Mass (the policy then wants the Mass cancelled for that date), but the bulletin does not say so, and Mon/Tue/Thu are marked 'NO MORNING LITURGY' in the same style.",
+      "question": "Is the Friday Oct 16 8:30 AM 'Morning Liturgy' a Communion Service in place of Mass (cancel that Mass)?",
+      "options": [
+        {
+          "label": "Leave the weekly Friday Mass alone (unclear)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Cancel Fri Oct 16 8:30 AM Mass",
+          "entry": {
+            "church_slug": "st-matthew-voorheesville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-16",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Morning Liturgy listed instead"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f21c1ef17077",
+          "page": 1,
+          "said": "Anointing of the Sick - Second Friday of the month immediately following 8:30am Mass; Rosary & Novena 6:30pm on Mondays; Holy Days As Announced"
+        }
+      ],
+      "rationale": "Anointing, Rosary and Novena are not Mass, Confession or Adoration; Holy Days have no definite times. Nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

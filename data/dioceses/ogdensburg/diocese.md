@@ -4,7 +4,7 @@ state: NY
 website: https://www.rcdony.org
 status: promoted
 gcatholic: ogde0
-promoted: 2026-09-30
+promoted: 2026-10-17
 ---
 
 The North Country: Clinton, Essex, Franklin, St. Lawrence, Jefferson, Lewis and Hamilton

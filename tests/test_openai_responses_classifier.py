@@ -16,7 +16,14 @@ from pdf_extract.classifiers.openai_responses import (
     OpenAIResponsesClassifier,
     render_pages,
 )
-from pdf_extract.classifiers.qualified_schedule import INSTRUCTIONS, flatten_events
+from pdf_extract.classifiers.qualified_schedule import (
+    CONTEXT_TEMPLATE,
+    SCHEMA_FINGERPRINT,
+    QualifiedSchedulePayload,
+    fingerprint,
+    flatten_events,
+)
+from pdf_extract.classifiers.schedule_policy import POLICY
 
 CHURCHES = [{"slug": "st-mary", "name": "St. Mary", "address": "123 Main"}]
 TODAY = date(2026, 9, 18)
@@ -76,7 +83,7 @@ def test_static_prompt_comes_before_the_bulletin_and_is_the_cache_breakpoint():
     assert developer["role"] == "developer"
     assert developer["content"] == [{
         "type": "input_text",
-        "text": INSTRUCTIONS,
+        "text": POLICY,
         "prompt_cache_breakpoint": {"mode": "explicit"},
     }]
     assert request["prompt_cache_options"] == {"mode": "explicit"}
@@ -90,7 +97,7 @@ def test_static_prompt_comes_before_the_bulletin_and_is_the_cache_breakpoint():
         "data:application/pdf;base64," + base64.b64encode(pdf).decode("ascii")
     )
     # Nothing per-bulletin may sit in the cached prefix.
-    assert "st-mary" not in INSTRUCTIONS and "{" not in INSTRUCTIONS
+    assert "st-mary" not in POLICY and "{" not in POLICY
 
 
 def test_request_settings_and_strict_toggle():
@@ -107,6 +114,14 @@ def test_request_settings_and_strict_toggle():
     assert fake.calls[0]["text"]["format"]["strict"] is False
     assert fake.calls[0]["text"]["format"]["schema"] == request["text"]["format"]["schema"]
     assert nonstrict.version != classifier.version
+
+
+def test_policy_changes_invalidate_the_qualified_cache_fingerprint():
+    schema = json.dumps(QualifiedSchedulePayload.model_json_schema(), sort_keys=True)
+    assert SCHEMA_FINGERPRINT == fingerprint(POLICY, CONTEXT_TEMPLATE, schema)
+    assert fingerprint(POLICY + "\nChanged policy", CONTEXT_TEMPLATE, schema) != SCHEMA_FINGERPRINT
+    classifier = OpenAIResponsesClassifier(model="gpt-6-luna")
+    assert classifier.version.endswith(f"+prompt-{SCHEMA_FINGERPRINT}")
 
 
 def test_schema_is_strict_compatible_and_carries_the_qualifiers():
@@ -153,6 +168,16 @@ def test_qualifiers_are_flattened_like_pr_22():
         "output_tokens": 900, "reasoning_tokens": 600,
     }
     assert result["response_id"] == "resp_1"
+
+
+def test_excluded_weeks_are_flattened_in_their_canonical_form():
+    [event] = flatten_events(_payload(weeks_of_month=["last"], exclude_weeks=True))["events"]
+    assert (event["weeks_of_month"], event["exclude_weeks"]) == (["last"], True)
+    [event] = flatten_events(_payload(weeks_of_month=["first"], exclude_weeks=True))["events"]
+    assert (event["weeks_of_month"], event["exclude_weeks"]) == (
+        ["second", "third", "fourth", "fifth"], False)
+    [event] = flatten_events(_payload())["events"]
+    assert event["exclude_weeks"] is False
 
 
 def test_lenient_reading_drops_impossible_qualifiers():
@@ -264,7 +289,7 @@ def test_model_option_runs_another_openai_model_under_its_own_name():
     sol.extract(b"%PDF", churches=CHURCHES, today=TODAY)
     assert sol._client.responses.calls[0]["model"] == "gpt-6.1-sol"
 
-    with pytest.raises(ClassifierOptionError, match="not an OpenAI model name"):
+    with pytest.raises(ClassifierOptionError, match="not a valid OpenAI model name"):
         get_classifier("gpt-6-luna", model="../gpt")
     with pytest.raises(ClassifierOptionError, match="does not take model"):
         get_classifier("gemini-flash", model="gpt-6.1-sol")

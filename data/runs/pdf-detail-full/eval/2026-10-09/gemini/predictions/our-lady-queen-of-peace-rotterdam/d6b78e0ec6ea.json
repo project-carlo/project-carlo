@@ -1,0 +1,210 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "our-lady-queen-of-peace-rotterdam",
+  "content_hash": "d6b78e0ec6ea0c919512cfbe36be032f3b3d75ea6aae09dda3145d91da8f8466",
+  "source_url": "https://bulletins.discovermass.com/download.php?bulletin=hBwK41Dn3YKLySc0Mcb7wxxRqIHUUsNYa7nn%2B%2BQrkrF3EleC4gAE3UqqRkBlnEwW50%2FOGw7bn7EYCBIYutU2wCatT641iRCgxVd2y0H6vBQ%3D",
+  "fetched_at": "2026-10-04T14:50:55Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "our-lady-queen-of-peace-rotterdam",
+      "name": "Our Lady Queen of Peace",
+      "address": "210 Princetown Rd., Schenectady, NY 12306"
+    },
+    {
+      "slug": "st-margaret-of-cortona-rotterdam-junction",
+      "name": "St. Margaret of Cortona",
+      "address": "1228 Main St., Rotterdam Junction, NY 12150"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/d6b78e0ec6ea0c919512cfbe36be032f3b3d75ea6aae09dda3145d91da8f8466-0f9cec0ce3fb.json",
+    "modified_at": "2026-10-04T15:21:46.825000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/our-lady-queen-of-peace-rotterdam/d6b78e0ec6ea.pdf",
+  "pdf_sha256": "cf7a0479266687921a4882a5bad04412549d628b49d69d3c895151f9471befc0",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "our-lady-queen-of-peace-rotterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-queen-of-peace-rotterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-queen-of-peace-rotterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-queen-of-peace-rotterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-queen-of-peace-rotterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-queen-of-peace-rotterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-margaret-of-cortona-rotterdam-junction",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-queen-of-peace-rotterdam",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-queen-of-peace-rotterdam",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-11-07",
+      "start_time": "07:30",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "First Saturday Devotion; includes Rosary and Benediction",
+      "raw": {
+        "date": "2026-11-07",
+        "start_time": "7:30 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2514,
+    "output_tokens": 881
+  }
+}

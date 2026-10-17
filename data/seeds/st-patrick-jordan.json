@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patrick-jordan",
+  "status": "ready",
+  "as_of": "2026-09-28T00:15:55Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:59:17Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Small one-church parish. The weekend Masses (Sat 5:00 PM vigil, Sun 8:00 and 10:00 AM), Saturday 4:00-4:30 PM Confession, Tuesday and Thursday 9:00 AM Mass in the chapel, and Tuesday and Friday adoration in the Parish Center Chapel are all printed clearly in the one bulletin we have (Sept 27). The bulletin cancels the Tuesday, September 29 Mass. The website's weekday times (Mon-Wed 9:00) are out of date, so I did not use them. Mon/Wed/Fri 9:00 AM Masses are at St. Joseph, Camillus (a different parish), and are excluded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "76fab9ee3aae8228e8b5a318ab1e081e343e1a1c9b5125d0f79c0c1da6057836",
+      "fetched_at": "2026-09-28T00:15:55Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 1,
+          "said": "Vigil Mass Saturday 5:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "weekly mass Saturday 17:00 st-patrick-jordan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule on page 1 and in the Mass intentions on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 1,
+          "said": "Sunday 8:00 & 10:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "weekly mass Sunday 08:00 st-patrick-jordan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule on page 1 and in the Mass intentions on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 1,
+          "said": "Sunday 8:00 & 10:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "weekly mass Sunday 10:00 st-patrick-jordan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule on page 1 and in the Mass intentions on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 1,
+          "said": "Confessions Saturday 4:00-4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "weekly confession Saturday 16:00–16:30 st-patrick-jordan",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on page 1 and in the page 2 weekly calendar (Saturday 4:00pm - Confessions).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 2,
+          "said": "St. Patrick, Jordan- Tues. & Thurs. – 9:00am (Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "weekly mass Tuesday 09:00 st-patrick-jordan  “In Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): Daily Masses in our area lists it under St. Patrick, Jordan, in the chapel; a chapel of the listed church belongs to it. The Thursday Mass is also in the Oct 1 intentions (9:00am Shirley McGuire).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 2,
+          "said": "St. Patrick, Jordan- Tues. & Thurs. – 9:00am (Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "weekly mass Thursday 09:00 st-patrick-jordan  “In Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): Daily Masses in our area lists it under St. Patrick, Jordan, in the chapel; a chapel of the listed church belongs to it. The Thursday Mass is also in the Oct 1 intentions (9:00am Shirley McGuire).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 3,
+          "said": "Tuesdays 10am to 3pm & Fridays 6am to 6pm in the Parish Center Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "weekly adoration Tuesday 10:00–15:00 st-patrick-jordan  “In Parish Center Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): the Parish Center is at the parish's own address, 28 N. Main Street (page 1), the same as the church, so its chapel belongs to St. Patrick's. Also on page 2 (10:00am to 3:00pm Adoration, Parish Center Chapel).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 3,
+          "said": "Tuesdays 10am to 3pm & Fridays 6am to 6pm in the Parish Center Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "weekly adoration Friday 06:00–18:00 st-patrick-jordan  “In Parish Center Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): same Parish Center Chapel as Tuesday adoration; also on page 2 (6:00am to 6:00pm Adoration, Parish Center Chapel).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-jordan",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-09-29",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Archangels feast"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 2,
+          "said": "TUESDAY, SEPTEMBER 29 Sts. Michael, Gabriel, and Raphael, Archangels NO MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "76fab9ee3aae",
+          "said": "specific_date mass 2026-09-29 09:00 st-patrick-jordan  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says there is no Mass on Tuesday, September 29, a date after as_of; the weekly Tuesday Mass stays. The note is mine; the bulletin gives no reason beyond the feast heading.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 2,
+          "said": "MONDAY, SEPTEMBER 28 No Mass (9am Mass at St. Joseph, Camillus)"
+        }
+      ],
+      "rationale": "R22: the 9am Mass Monday, Wednesday and Friday is at St. Joseph, Camillus, another parish's church (in the church list). Its events belong to that parish. St. Patrick has no Monday, Wednesday or Friday Mass. The Wednesday and Friday Camillus Masses are left out for the same reason.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76fab9ee",
+          "page": 3,
+          "said": "ROSARY RALLY ... Saturday, October 10, at Noon. We will gather at the front of St. Patrick's Church to pray."
+        }
+      ],
+      "rationale": "R24: a Rosary Rally is a devotion, not a Mass, Confession or Adoration. Likewise the Respect Life Divine Mercy Chaplet (Tuesday 3pm) and the Wednesday Rosary at the Pieta Shrine.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

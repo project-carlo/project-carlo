@@ -13,6 +13,7 @@ from pdf_extract.db import DatabaseMissingError, create_db
 from pdf_extract.dioceses.records import DioceseError
 from pdf_extract.extract_frontend_db import read_snapshot
 from pdf_extract.runs import record_parish_result
+from pdf_extract.seeding.files import write_seed_file
 from pdf_extract.storage import (
     DEFAULT_DB_PATH,
     connect_db,
@@ -114,6 +115,44 @@ def _snapshot_event_count(path: Path) -> int:
 
 
 # ── run_weekly ──────────────────────────────────────────────────────────────
+def test_weekly_run_loads_approved_seeds_after_its_before_copy(
+    published_db: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    _install_stages(monkeypatch, EVENTS)
+    seed = {
+        "schema_version": 1, "parish_slug": "test-parish", "status": "approved",
+        "as_of": "2026-09-14T00:00:00Z", "drafted_by": "test", "drafted_at": None,
+        "reviewer": "R", "approved_at": "2026-09-15T00:00:00Z", "summary": "",
+        "blocked_reason": None, "calls": [],
+        "bulletins": [{"content_hash": "a" * 64, "fetched_at": "2026-09-14T00:00:00Z",
+                       "published_date": None, "read": True}],
+        "slots": [{
+            "id": "s1", "decision": "include", "status": "settled", "page": 1,
+            "entry": {**EVENTS[0], "start_time": "08:00", "weeks_of_month": [],
+                      "season": None, "note": None},
+            "sources": [{"source": "agent", "said": "Sunday 8 AM"}], "rationale": "Printed.",
+            "question": None, "options": None, "answer": None,
+        }],
+    }
+    write_seed_file(seed, Path("data") / "seeds")
+
+    result = run_weekly(run_id="run-seeds", model="m")
+
+    assert [s["parish"] for s in result["seeds"]["loaded"]] == ["test-parish"]
+    assert "test-parish** seeded" in (run_out_dir("run-seeds") / "report.md").read_text(encoding="utf-8")
+    before = sqlite3.connect(run_out_dir("run-seeds") / "before.db")
+    try:
+        assert before.execute("SELECT count(*) FROM schedule_revision").fetchone()[0] == 0
+    finally:
+        before.close()
+    conn = connect_db()
+    try:
+        row = conn.execute("SELECT run_id, actor FROM schedule_revision").fetchone()
+        assert (row["run_id"], row["actor"]) == ("run-seeds", "R")
+    finally:
+        conn.close()
+
+
 def test_weekly_run_passes_and_writes_outputs(
     published_db: Path, monkeypatch: pytest.MonkeyPatch,
 ) -> None:

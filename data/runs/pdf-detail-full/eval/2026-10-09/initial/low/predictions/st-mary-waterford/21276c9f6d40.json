@@ -1,0 +1,123 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-mary-waterford",
+  "content_hash": "21276c9f6d400dbe02675febebfc498b071493f81aea56c563139415d00f2a84",
+  "source_url": "https://parishesonline.com/publication-page/st-mary-of-the-assumption-church?selectedPublication=https://container.parishesonline.com/bulletins/03/0818/20261004B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 10708,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 930,
+    "reasoning_tokens": 438
+  },
+  "seconds": 38.755,
+  "response_id": "resp_01b6ccbda13f44b3016ac912b4ff5487d2893084f610cd55df",
+  "events": [
+    {
+      "church_slug": "st-mary-waterford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-waterford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-waterford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-waterford",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "first"
+      ],
+      "season": null,
+      "page_number": 1,
+      "note": "With St. Mary's School",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-waterford",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "77e0e1009f0fefe54e2568ff9a8f53127493439ff6d18124ed5299c9d09f8da7"
+}

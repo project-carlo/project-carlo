@@ -1,0 +1,44 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "holy-cross-morris",
+  "content_hash": "11a782daabd4e0177c2a186eb24a1d4dfbb9c59501ab7134bc5641c9dde1e8a7",
+  "source_url": "https://parishes.rcda.org/holycross/bulletins/2026/October_04.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 14343,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 465,
+    "reasoning_tokens": 271
+  },
+  "seconds": 5.119,
+  "response_id": "resp_0955c0624e6b54d3016ac90d8ea29c87d28622b1c081147b2c",
+  "events": [
+    {
+      "church_slug": "holy-cross-morris",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "69601b3ec27ffa79f4b09d8828c3ae8f9ff8c869616a3dddc3dc952a320b6702"
+}

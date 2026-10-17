@@ -1,0 +1,992 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-good-counsel-verona",
+  "status": "approved",
+  "as_of": "2026-10-11T16:30:04Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:45:22Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:31:33Z",
+  "summary": "One church, a traditional parish with no weekday schedule box: weekday Masses come from the intentions list of three bulletins, confirmed by the website. Weekend, weekday and confession times agree everywhere; this Monday's 8 AM Mass is cancelled for a pilgrimage. Open: first-Friday pattern (7 PM Mass and 6:30 confession seen once, and whether the 8 AM Mass is skipped that day).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5a473cfe4978e3356ea52dcec56d2bca4339377b265c035f285920cceba1f640",
+      "fetched_at": "2026-10-11T16:30:04Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "62ffdad9ca772fe974de599231bbe3f6504dca058ab496f972b3847e312bab50",
+      "fetched_at": "2026-10-04T14:37:00Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "7f26b6a4608e914780ad21fb6f236caea1e602847dc3acef4630f79fd80b5c01",
+      "fetched_at": "2026-09-28T00:08:27Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Sunday Mass: Anticipated Sat. 4PM/Sun. 8AM Ancient Rite Latin Mass; Sunday 10AM Mass with Choir"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Anticipated Sat.4PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Anticipated Sat.4PM"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "SAT | 8:00 AM, 4:00 PM Vigil"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Anticipated Sunday Mass in the header of all three bulletins and on the website; the intentions list has a 4 PM Mass each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin (Ancient Rite)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Sunday Mass: Anticipated Sat. 4PM/Sun. 8AM Ancient Rite Latin Mass; Sunday 10AM Mass with Choir"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Sun. 8AM Ancient Rite Latin Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Sun. 8AM Ancient Rite Latin Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "SUN | 8:00 AM Latin, 10:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Sunday 08:00 Ancient Rite Latin Mass"
+        }
+      ],
+      "rationale": "Header of all three bulletins and website. Note keeps the language (Traditional Latin Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Sunday 10AM Mass with Choir, Live-streamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Sunday 10 AM Mass with Choir (Live-streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Sunday 10AM Mass with Choir Live-streamed"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "SUN | 8:00 AM Latin, 10:00 AM (sidebar also lists 9:30 am and 11:00 am, apparently stale)"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Sunday 10:00"
+        }
+      ],
+      "rationale": "Header of all three bulletins. The website sidebar's 9:30/11:00 list looks stale; the bulletins and the homepage list agree on 10 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Latin (Ancient Rite)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Mon. 5 Oct. 8 AM Ancient Rite Latin Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Mon. 28 Sep. 8 AM Ancient Rite Latin Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Mon. 12 Oct. NO 8 AM MASS PILGRIMAGE TO AURIESVILLE TODAY"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "MON | 8:00 AM Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "62ffdad9",
+          "said": "weekly Monday 08:00 Ancient Rite Latin Mass"
+        }
+      ],
+      "rationale": "No weekday schedule box; the Monday 8 AM Latin Mass is in the intentions list of both older bulletins and on the website. The newest bulletin cancels this week's (separate slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Parish pilgrimage to Auriesville"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Mon. 12 Oct. NO 8 AM MASS PILGRIMAGE TO AURIESVILLE TODAY"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "specific_date 2026-10-12 08:00 CANCELLED"
+        }
+      ],
+      "rationale": "The newest bulletin cancels the Monday 8 AM Mass on 12 October (after as_of).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Tue. 13 Oct. 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Tue. 6 Oct. 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Tue. 29 Sep. 8 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "TUE | 8:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Tuesday 08:00"
+        }
+      ],
+      "rationale": "8 AM Mass on Tuesday in the intentions list of all three bulletins (rule 4 across weeks) and on the website's Mass times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Thu. 15 Oct. 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Thu. 8 Oct. 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Thu. 1 Oct. 8 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "THU | 8:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Thursday 08:00"
+        }
+      ],
+      "rationale": "8 AM Mass on Thursday in the intentions list of all three bulletins (rule 4 across weeks) and on the website's Mass times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Wed. 14 Oct. 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Wed. 7 Oct. 7 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Wed. 30 Sep. 7 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "WED | 7:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Wednesday 19:00"
+        }
+      ],
+      "rationale": "7 PM Wednesday Mass in all three bulletins' intentions and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Sat. 17 Oct. 8 AM For: Special Intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Sat. 10 Oct. NOTE: NO 8 AM MASS TODAY (wedding)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Sat. 3 Oct. 8 AM First Saturday of the Month"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "SAT | 8:00 AM, 4:00 PM Vigil"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Saturday 08:00"
+        }
+      ],
+      "rationale": "Saturday 8 AM Mass in the intentions of the newest and oldest bulletins and on the website; the 10 Oct cancellation (a wedding) is past as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Fri. 16 Oct. 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Fri. 9 Oct. 8 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Fri. 2 Oct. 7 PM First Friday of the Month (no 8 AM listed)"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "FRI | 8:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Friday 08:00"
+        }
+      ],
+      "rationale": "Friday 8 AM is in two bulletins' intentions and on the website, but the one first Friday the bulletins cover (2 Oct) lists only a 7 PM First Friday Mass and no 8 AM. One sighting: the 8 AM may simply move to 7 PM on first Fridays, so I lean toward excluding the first week.",
+      "question": "Friday 8 AM Mass: every Friday, or every Friday except the first (when a 7 PM First Friday Mass is said)?",
+      "options": [
+        {
+          "label": "Fridays 8 AM except first Fridays",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-verona",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second",
+              "third",
+              "fourth",
+              "fifth"
+            ],
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Every Friday 8 AM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-verona",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T21:31:08Z"
+      }
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Fri. 2 Oct. 7 PM First Friday of the Month"
+        },
+        {
+          "source": "history",
+          "bulletin": "7f26b6a4",
+          "said": "specific_date 2026-10-02 19:00 First Friday of the Month"
+        }
+      ],
+      "rationale": "Printed once, in the 27 Sep bulletin's intentions for 2 Oct and labeled First Friday of the Month (rule 2 makes it a weeks-of-month slot). The two newer bulletins' calendars (5-18 Oct) cover no first Friday, and the website does not mention it.",
+      "question": "Add a first-Friday 7 PM Mass?",
+      "options": [
+        {
+          "label": "First Fridays 7 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-verona",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T21:31:21Z"
+      }
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Confessions: Wed. & Fri. 6:30-6:55PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Confessions: Wed. 6:30-6:55PM (no Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7f26b6a4",
+          "said": "weekly Friday confession 18:30-18:55"
+        }
+      ],
+      "rationale": "Only the 27 Sep bulletin (whose week had a 7 PM First Friday Mass) adds Friday to the 6:30-6:55 PM confession line; the next two weeks list Wednesday only. It looks like confession before the First Friday evening Mass.",
+      "question": "Add first-Friday confessions 6:30-6:55 PM?",
+      "options": [
+        {
+          "label": "First Fridays 6:30-6:55 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-verona",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "18:55",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T21:31:31Z"
+      }
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Confessions: Wed. 6:30-6:55PM/Sat. 7:30-7:55AM; 2:30-3:30 & 6:30-7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Wed. 6:30-6:55PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Wed. & Fri. 6:30-6:55PM"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "WED | 6:30-7:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Wednesday confession 18:30-18:55"
+        }
+      ],
+      "rationale": "Confession header of all three bulletins (website rounds to 7:00; the bulletins' 6:55 is used).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Confessions: Wed. 6:30-6:55PM/Sat. 7:30-7:55AM; 2:30-3:30 & 6:30-7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Sat. 7:30-7:55AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Note: No 7:30 AM Confessions next Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "SAT | 7:30-8 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Saturday confession 07:30-07:55"
+        }
+      ],
+      "rationale": "Saturday morning confessions before the 8 AM Mass, in the header of the newest and oldest bulletins; the 4 Oct issue only drops it for the 10 Oct wedding (past).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Confessions: Wed. 6:30-6:55PM/Sat. 7:30-7:55AM; 2:30-3:30 & 6:30-7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Sat. 2:30-3:30 & 6:30-7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "Sat. 7:30-7:55AM; 2:30-3:30; 6:30-7:30PM"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "SAT | ... 2:30-3:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Saturday confession 14:30-15:30"
+        }
+      ],
+      "rationale": "Header of all three bulletins and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 1,
+          "said": "Confessions: Wed. 6:30-6:55PM/Sat. 7:30-7:55AM; 2:30-3:30 & 6:30-7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 1,
+          "said": "Sat. 2:30-3:30 & 6:30-7:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f26b6a4",
+          "page": 1,
+          "said": "6:30-7:30PM"
+        },
+        {
+          "source": "website",
+          "url": "https://olgcc.org/",
+          "said": "SAT | ... 6:30-7:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a473cfe",
+          "said": "weekly Saturday confession 18:30-19:30"
+        }
+      ],
+      "rationale": "Evening Saturday confessions, unusual but printed in all three bulletins and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-verona",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Pilgrimage Mass at the Shrine of the North American Martyrs, Auriesville"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a473cfe",
+          "page": 2,
+          "said": "PILGRIMAGE TO AURIESVILLE SHRINE: MON. 12 OCT 9 AM ... we will attend Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62ffdad9",
+          "page": 2,
+          "said": "At 11 AM we will offer Holy Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "62ffdad9",
+          "said": "specific_date 2026-10-12 11:00 At the Shrine of the North American Martyrs"
+        }
+      ],
+      "rationale": "Off-site: the pilgrimage Mass is at the Auriesville shrine, not at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

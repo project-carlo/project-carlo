@@ -1,0 +1,3104 @@
+{
+  "schema_version": 1,
+  "parish_slug": "blessed-family-7-west-seneca",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:31:33Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:37:58Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three listed churches (Queen of Heaven, Fourteen Holy Helpers, St. John Vianney) with an unchanged Mass schedule box in all three bulletins; the bulletin is image-only so it was read from rendered pages. First Saturday 8 AM Mass at Queen of Heaven is first-Saturday only (history read it as weekly). Left out: St. Gabriel's (not on the church list) and St. John XXIII (another parish). Open: the Oct 19 School Mass in the school open house, and whether the Adoration Chapel at 839 Mill Rd (hours only in the Sept 27 bulletin) belongs to Queen of Heaven.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "120ce627bbead5948ddc80a8ab599ec93f749562e750b5bb0c7847bd9e1c101c",
+      "fetched_at": "2026-10-11T16:31:33Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "8325cc0232e347c9fa21a49bd503d22cac694dd572338c625def7a028bcce502",
+      "fetched_at": "2026-10-04T14:19:14Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "eb8eb69432bdd690bcb85a11089a091919b508877dbf75514cc34b45f513ade1",
+      "fetched_at": "2026-09-26T18:52:36Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Monday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Monday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Monday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Monday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Monday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Monday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Tuesday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Tuesday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Tuesday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Tuesday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Tuesday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Tuesday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Wednesday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Wednesday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Wednesday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Wednesday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Wednesday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Wednesday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Thursday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Thursday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Thursday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Thursday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Thursday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Thursday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Friday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Friday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Friday 07:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Monday - Friday 7:30am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Friday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Friday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Friday 11:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Blessed Family 7 Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Saturday 16:00 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Saturday 16:00 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Saturday 16:00 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Sunday 08:00 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Sunday 08:00 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Sunday 08:00 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Sunday 09:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Sunday 09:30 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Sunday 09:30 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Queen of Heaven Sunday: 8:00am, 9:30am & 11:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Sunday 11:15 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Sunday 11:15 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Sunday 11:15 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "First Saturday Mass in honor of The Blessed Virgin Mary: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "First Saturday Mass in honor of The Blessed Virgin Mary: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "First Saturday Mass in honor of The Blessed Virgin Mary: 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Saturday 08:00 queen-of-heaven-west-seneca  “First Saturday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Saturday 08:00 queen-of-heaven-west-seneca  “First Saturday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Saturday 08:00 queen-of-heaven-west-seneca  “First Saturday of the month; in honor of the Blessed Virgin Mary”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the schedule box names it a First Saturday Mass in all three bulletins. History read it as every Saturday at 8:00; the bulletins say first Saturday only (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Sacrament of Reconciliation, Queen of Heaven, Saturdays at 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Sacrament of Reconciliation, Queen of Heaven, Saturdays at 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Sacrament of Reconciliation, Queen of Heaven, Saturdays at 3:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly confession Saturday 15:00 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly confession Saturday 15:00 queen-of-heaven-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly confession Saturday 15:00 queen-of-heaven-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Tuesday & Thursday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Tuesday & Thursday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Tuesday & Thursday: 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Tuesday 08:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Tuesday 08:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Tuesday 08:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Tuesday & Thursday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Tuesday & Thursday: 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Tuesday & Thursday: 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Thursday 08:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Thursday 08:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Thursday 08:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Wednesday: 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Wednesday: 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Wednesday: 7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Wednesday 19:00 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Wednesday 19:00 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "specific_date mass 2026-10-21 19:00 fourteen-holy-helpers-west-seneca  “Anointing of the Sick Healing Mass”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Wednesday 19:00 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Saturday Vigil: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Saturday Vigil: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Saturday Vigil: 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Saturday 16:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Saturday 16:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Saturday 16:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Sunday: 9am (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Sunday: 9am (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Fourteen Holy Helpers Sunday: 9am (live streamed)"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Sunday 09:00 fourteen-holy-helpers-west-seneca  “Live streamed”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Sunday 09:00 fourteen-holy-helpers-west-seneca  “Live streamed”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Sunday 09:00 fourteen-holy-helpers-west-seneca  “Live streamed”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "ASL interpreter"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "Sunday: ... & 11:00am (ASL interpreter)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "Sunday: ... & 11:00am (ASL interpreter)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "Sunday: ... & 11:00am (ASL interpreter)"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Sunday 11:00 fourteen-holy-helpers-west-seneca  “ASL interpreter”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Sunday 11:00 fourteen-holy-helpers-west-seneca  “ASL interpreter”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Sunday 11:00 fourteen-holy-helpers-west-seneca  “ASL Interpreter”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read; POLICY, Notes: the ASL interpreter is worth a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "14 Holy Helpers Saturdays at 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "14 Holy Helpers Saturdays at 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "14 Holy Helpers Saturdays at 3:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly confession Saturday 15:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly confession Saturday 15:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly confession Saturday 15:30 fourteen-holy-helpers-west-seneca",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John Vianney First & Third Tuesday of the Month: 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "St. John Vianney First & Third Tuesday of the Month: 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "St. John Vianney First & Third Tuesday of the Month: 6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly mass Tuesday 18:00 st-john-vianney-orchard-park  “First and third Tuesday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly mass Tuesday 18:00 st-john-vianney-orchard-park  “First and third Tuesday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly mass Tuesday 18:00 st-john-vianney-orchard-park  “First and Third Tuesday of the Month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins read. Newest bulletin's intentions also show Tuesday Oct 20 (a third Tuesday) 6:00pm (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-orchard-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John Vianney 1st & 3rd Tuesdays at 5:00-5:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 2,
+          "said": "St. John Vianney 1st & 3rd Tuesdays at 5:00-5:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 2,
+          "said": "St. John Vianney 1st & 3rd Tuesdays at 5:00-5:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "weekly confession Tuesday 17:00–17:45 st-john-vianney-orchard-park  “First and third Tuesday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "weekly confession Tuesday 17:00–17:45 st-john-vianney-orchard-park  “First and third Tuesday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly confession Tuesday 17:00–17:45 st-john-vianney-orchard-park  “First and Third Tuesday of the Month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick Healing Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 5,
+          "said": "Anointing of the Sick Healing Mass will take place on Wednesday, October 21 at 7:00pm at Fourteen Holy Helpers Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8325cc02",
+          "page": 6,
+          "said": "Anointing of the Sick Healing Mass Wednesday, October 21 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8325cc0232e3",
+          "said": "specific_date mass 2026-10-21 19:00 fourteen-holy-helpers-west-seneca  “Anointing of the Sick Healing Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass at a listed church on or after as_of, open to all seeking healing; the Mass itself counts, not the sacrament (POLICY).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Mass of Remembrance"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "the Mass of Remembrance at 14 Holy Helpers Church will be on All Souls Day, Monday, November 2 at 7:00 p.m. ... All are welcome to attend"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "specific_date mass 2026-11-02 19:00 fourteen-holy-helpers-west-seneca  “All Souls Day Mass of Remembrance”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass for all who died in the past year, open to everyone (not a single person's memorial), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-heaven-west-seneca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-04",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "On Wednesday, November 4, the Mass of Remembrance will be at Queen of Heaven Church at 7:00 p.m. All are welcome"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "specific_date mass 2026-11-04 19:00 queen-of-heaven-west-seneca  “Mass of Remembrance”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass for all who died in the past year, open to everyone, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 4,
+          "said": "Queen of Heaven School Fall 2026 Open House, Monday, October 19, 8:30-11:00 AM: 8:30 AM School Mass (Queen of Heaven Church), 9:30 AM School Tour, 10:30 AM Student Panel"
+        },
+        {
+          "source": "history",
+          "bulletin": "120ce627bbea",
+          "said": "specific_date mass 2026-10-19 08:30 queen-of-heaven-west-seneca  “School Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R30: a school Mass is closed only when limited to students; this one is the first item of a public Open House for prospective families, but it does not say everyone is invited to the Mass. I lean include because the Open House invites visitors.",
+      "question": "Add the 8:30 AM School Mass on Monday, Oct 19 at Queen of Heaven (listed in the school Open House)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null
+        },
+        {
+          "label": "Add 2026-10-19 8:30",
+          "entry": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-19",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "School Mass, Open House"
+          },
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John XXIII Monday, Wednesday & Friday 8:30am"
+        }
+      ],
+      "rationale": "R22: St. John XXIII is another parish's church on the church list (st-john-xxiii-west-seneca); its Masses belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John XXIII Monday, Wednesday & Friday 8:30am"
+        }
+      ],
+      "rationale": "R22: St. John XXIII is another parish's church on the church list (st-john-xxiii-west-seneca); its Masses belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John XXIII Monday, Wednesday & Friday 8:30am"
+        }
+      ],
+      "rationale": "R22: St. John XXIII is another parish's church on the church list (st-john-xxiii-west-seneca); its Masses belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John XXIII Saturday Vigil 4:00pm"
+        }
+      ],
+      "rationale": "R22: another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John XXIII Sunday: 8:30am & 10:30am"
+        }
+      ],
+      "rationale": "R22: another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John XXIII Sunday: 8:30am & 10:30am"
+        }
+      ],
+      "rationale": "R22: another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. John XXIII Saturdays at 3:00pm"
+        }
+      ],
+      "rationale": "R22: another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s44",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s45",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s46",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Monday - Friday 8:00am & 11:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv, so no slot can attach.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s47",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Saturday Vigil 4:00pm & 6:00pm"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s48",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Saturday Vigil 4:00pm & 6:00pm"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s49",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Sunday: 6:00am, 8:00am, 10:00am & 12:00pm"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s50",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Sunday: 6:00am, 8:00am, 10:00am & 12:00pm"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s51",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Sunday: 6:00am, 8:00am, 10:00am & 12:00pm"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s52",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel's Sunday: 6:00am, 8:00am, 10:00am & 12:00pm"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s53",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel Weekdays at 7:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s54",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel Weekdays at 7:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s55",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel Weekdays at 7:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s56",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel Weekdays at 7:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s57",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel Weekdays at 7:30am"
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s58",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel First Friday of each month 11 a.m.-11:15 a.m."
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s59",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriels-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 2,
+          "said": "St. Gabriel Saturdays at 3:15 p.m.-3:45 p.m."
+        }
+      ],
+      "rationale": "R23: St. Gabriel's is not in data/churches.csv.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s60",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 5,
+          "said": "Reminder about new times for Exhibition of the Eucharist. The Eucharist is exposed: Weekdays: Monday through Thursday: 6am-11pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 8,
+          "said": "Queen of Heaven Eucharistic Adoration Chapel, 839 Mill Rd., West Seneca, NY 14224"
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly adoration Monday 06:00–23:00 queen-of-heaven-west-seneca  “Eucharistic Exposition”",
+          "page": 5
+        }
+      ],
+      "rationale": "R29/R32: the newest bulletin (p8) prints only the chapel's name and address, 839 Mill Rd, with no hours; the hours (Mon-Thu 6am-11pm, Friday 6am through Sunday 11pm, open 24 hours with a code) are in the Sept 27 bulletin (p5). The church list puts Queen of Heaven Church at 4220 Seneca Street, but the bulletin also calls 839 Mill St the church's front lawn (Legion of Mary rally) and the school is at 839 Mill Road, so it is unclear whether the chapel is on the church grounds. I lean leave out (POLICY: unclear location or another address, R22/R23).",
+      "question": "Record Queen of Heaven's Eucharistic Adoration Chapel (839 Mill Rd) at Queen of Heaven Church?",
+      "options": [
+        {
+          "label": "Leave out (chapel at another address)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at Queen of Heaven (Mon-Thu 6 AM-11 PM; Fri 6 AM through Sun 11 PM)",
+          "entry": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s61",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 5,
+          "said": "Reminder about new times for Exhibition of the Eucharist. The Eucharist is exposed: Weekdays: Monday through Thursday: 6am-11pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 8,
+          "said": "Queen of Heaven Eucharistic Adoration Chapel, 839 Mill Rd., West Seneca, NY 14224"
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly adoration Tuesday 06:00–23:00 queen-of-heaven-west-seneca  “Eucharistic Exposition”",
+          "page": 5
+        }
+      ],
+      "rationale": "R29/R32: the newest bulletin (p8) prints only the chapel's name and address, 839 Mill Rd, with no hours; the hours (Mon-Thu 6am-11pm, Friday 6am through Sunday 11pm, open 24 hours with a code) are in the Sept 27 bulletin (p5). The church list puts Queen of Heaven Church at 4220 Seneca Street, but the bulletin also calls 839 Mill St the church's front lawn (Legion of Mary rally) and the school is at 839 Mill Road, so it is unclear whether the chapel is on the church grounds. I lean leave out (POLICY: unclear location or another address, R22/R23).",
+      "question": "Record Queen of Heaven's Eucharistic Adoration Chapel (839 Mill Rd) at Queen of Heaven Church?",
+      "options": [
+        {
+          "label": "Leave out (chapel at another address)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at Queen of Heaven (Mon-Thu 6 AM-11 PM; Fri 6 AM through Sun 11 PM)",
+          "entry": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s62",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 5,
+          "said": "Reminder about new times for Exhibition of the Eucharist. The Eucharist is exposed: Weekdays: Monday through Thursday: 6am-11pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 8,
+          "said": "Queen of Heaven Eucharistic Adoration Chapel, 839 Mill Rd., West Seneca, NY 14224"
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly adoration Wednesday 06:00–23:00 queen-of-heaven-west-seneca  “Eucharistic Exposition”",
+          "page": 5
+        }
+      ],
+      "rationale": "R29/R32: the newest bulletin (p8) prints only the chapel's name and address, 839 Mill Rd, with no hours; the hours (Mon-Thu 6am-11pm, Friday 6am through Sunday 11pm, open 24 hours with a code) are in the Sept 27 bulletin (p5). The church list puts Queen of Heaven Church at 4220 Seneca Street, but the bulletin also calls 839 Mill St the church's front lawn (Legion of Mary rally) and the school is at 839 Mill Road, so it is unclear whether the chapel is on the church grounds. I lean leave out (POLICY: unclear location or another address, R22/R23).",
+      "question": "Record Queen of Heaven's Eucharistic Adoration Chapel (839 Mill Rd) at Queen of Heaven Church?",
+      "options": [
+        {
+          "label": "Leave out (chapel at another address)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at Queen of Heaven (Mon-Thu 6 AM-11 PM; Fri 6 AM through Sun 11 PM)",
+          "entry": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s63",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 5,
+          "said": "Reminder about new times for Exhibition of the Eucharist. The Eucharist is exposed: Weekdays: Monday through Thursday: 6am-11pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "120ce627",
+          "page": 8,
+          "said": "Queen of Heaven Eucharistic Adoration Chapel, 839 Mill Rd., West Seneca, NY 14224"
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly adoration Thursday 06:00–23:00 queen-of-heaven-west-seneca  “Eucharistic Exposition”",
+          "page": 5
+        }
+      ],
+      "rationale": "R29/R32: the newest bulletin (p8) prints only the chapel's name and address, 839 Mill Rd, with no hours; the hours (Mon-Thu 6am-11pm, Friday 6am through Sunday 11pm, open 24 hours with a code) are in the Sept 27 bulletin (p5). The church list puts Queen of Heaven Church at 4220 Seneca Street, but the bulletin also calls 839 Mill St the church's front lawn (Legion of Mary rally) and the school is at 839 Mill Road, so it is unclear whether the chapel is on the church grounds. I lean leave out (POLICY: unclear location or another address, R22/R23).",
+      "question": "Record Queen of Heaven's Eucharistic Adoration Chapel (839 Mill Rd) at Queen of Heaven Church?",
+      "options": [
+        {
+          "label": "Leave out (chapel at another address)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at Queen of Heaven (Mon-Thu 6 AM-11 PM; Fri 6 AM through Sun 11 PM)",
+          "entry": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s64",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 5,
+          "said": "Weekends: Friday at 6am through Sunday at 11pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly adoration Friday 06:00–23:59 queen-of-heaven-west-seneca  “Continuous exposition starts at 6:00 AM Friday”",
+          "page": 5
+        }
+      ],
+      "rationale": "R29/R32: the newest bulletin (p8) prints only the chapel's name and address, 839 Mill Rd, with no hours; the hours (Mon-Thu 6am-11pm, Friday 6am through Sunday 11pm, open 24 hours with a code) are in the Sept 27 bulletin (p5). The church list puts Queen of Heaven Church at 4220 Seneca Street, but the bulletin also calls 839 Mill St the church's front lawn (Legion of Mary rally) and the school is at 839 Mill Road, so it is unclear whether the chapel is on the church grounds. I lean leave out (POLICY: unclear location or another address, R22/R23).",
+      "question": "Record Queen of Heaven's Eucharistic Adoration Chapel (839 Mill Rd) at Queen of Heaven Church?",
+      "options": [
+        {
+          "label": "Leave out (chapel at another address)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at Queen of Heaven (Mon-Thu 6 AM-11 PM; Fri 6 AM through Sun 11 PM)",
+          "entry": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s65",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 5,
+          "said": "Weekends: Friday at 6am through Sunday at 11pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly adoration Saturday 00:00–23:59 queen-of-heaven-west-seneca  “Continuous exposition”",
+          "page": 5
+        }
+      ],
+      "rationale": "R29/R32: the newest bulletin (p8) prints only the chapel's name and address, 839 Mill Rd, with no hours; the hours (Mon-Thu 6am-11pm, Friday 6am through Sunday 11pm, open 24 hours with a code) are in the Sept 27 bulletin (p5). The church list puts Queen of Heaven Church at 4220 Seneca Street, but the bulletin also calls 839 Mill St the church's front lawn (Legion of Mary rally) and the school is at 839 Mill Road, so it is unclear whether the chapel is on the church grounds. I lean leave out (POLICY: unclear location or another address, R22/R23).",
+      "question": "Record Queen of Heaven's Eucharistic Adoration Chapel (839 Mill Rd) at Queen of Heaven Church?",
+      "options": [
+        {
+          "label": "Leave out (chapel at another address)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at Queen of Heaven (Mon-Thu 6 AM-11 PM; Fri 6 AM through Sun 11 PM)",
+          "entry": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s66",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb8eb694",
+          "page": 5,
+          "said": "Weekends: Friday at 6am through Sunday at 11pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "eb8eb69432bd",
+          "said": "weekly adoration Sunday 00:00–23:00 queen-of-heaven-west-seneca  “Continuous exposition ends at 11:00 PM Sunday”",
+          "page": 5
+        }
+      ],
+      "rationale": "R29/R32: the newest bulletin (p8) prints only the chapel's name and address, 839 Mill Rd, with no hours; the hours (Mon-Thu 6am-11pm, Friday 6am through Sunday 11pm, open 24 hours with a code) are in the Sept 27 bulletin (p5). The church list puts Queen of Heaven Church at 4220 Seneca Street, but the bulletin also calls 839 Mill St the church's front lawn (Legion of Mary rally) and the school is at 839 Mill Road, so it is unclear whether the chapel is on the church grounds. I lean leave out (POLICY: unclear location or another address, R22/R23).",
+      "question": "Record Queen of Heaven's Eucharistic Adoration Chapel (839 Mill Rd) at Queen of Heaven Church?",
+      "options": [
+        {
+          "label": "Leave out (chapel at another address)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include at Queen of Heaven (Mon-Thu 6 AM-11 PM; Fri 6 AM through Sun 11 PM)",
+          "entry": {
+            "church_slug": "queen-of-heaven-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "St. Gabriel's (Blessed Family 7 member parish)",
+      "said": "Mon-Fri 8:00am & 11:30am; Sat Vigil 4:00pm & 6:00pm; Sun 6:00, 8:00, 10:00am & 12:00pm; Confession weekdays 7:30am, Sat 3:15-3:45pm",
+      "bulletin": "120ce627",
+      "page": 2
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "parish_slug": "blessed-trinity-buffalo",
+  "status": "approved",
+  "as_of": "2026-10-04T14:19:47Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:54:53Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:51:42Z",
+  "summary": "One church. Page 1 and the page-4 family-of-parishes table agree and history agrees in both bulletins: Sat 4:30 PM, Sun 10:00, Mon/Tue/Wed/Fri 11:00, Sat confession 3:50-4:20. Sister parishes' times in the shared table are left out. One question: whether the Oct 28 Healing Mass 'for members of HOBCCE' is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1224cf29410be6614b1ab69036e4f65c49c3ad9740200a7e2fed86856dfb411b",
+      "fetched_at": "2026-10-04T14:19:47Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "70221b6b414169422aa60b1ee1e871ea68893c77175118073c4cd1b1eaa883d5",
+      "fetched_at": "2026-09-27T14:03:19Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 1,
+          "said": "Saturday Mass: 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "HOBCCE table, BT column: Sat 16:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "1224cf29410b",
+          "said": "weekly Saturday 16:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "70221b6b4141",
+          "said": "weekly Saturday 16:30"
+        }
+      ],
+      "rationale": "Printed on page 1 and in the page-4 HOBCCE schedule table (BT column), and in the week's Mass intentions; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 1,
+          "said": "Sunday Mass: 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "HOBCCE table, BT column: Sun 10:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "1224cf29410b",
+          "said": "weekly Sunday 10:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "70221b6b4141",
+          "said": "weekly Sunday 10:00"
+        }
+      ],
+      "rationale": "Printed on page 1 and in the page-4 HOBCCE schedule table (BT column), and in the week's Mass intentions; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 1,
+          "said": "Daily Mass: Mon, Tues, Wed, Fri - 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "HOBCCE table, BT column: Mon 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "1224cf29410b",
+          "said": "weekly Monday 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "70221b6b4141",
+          "said": "weekly Monday 11:00"
+        }
+      ],
+      "rationale": "Printed on page 1 and in the page-4 HOBCCE schedule table (BT column), and in the week's Mass intentions; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 1,
+          "said": "Daily Mass: Mon, Tues, Wed, Fri - 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "HOBCCE table, BT column: Tue 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "1224cf29410b",
+          "said": "weekly Tuesday 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "70221b6b4141",
+          "said": "weekly Tuesday 11:00"
+        }
+      ],
+      "rationale": "Printed on page 1 and in the page-4 HOBCCE schedule table (BT column), and in the week's Mass intentions; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 1,
+          "said": "Daily Mass: Mon, Tues, Wed, Fri - 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "HOBCCE table, BT column: Wed 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "1224cf29410b",
+          "said": "weekly Wednesday 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "70221b6b4141",
+          "said": "weekly Wednesday 11:00"
+        }
+      ],
+      "rationale": "Printed on page 1 and in the page-4 HOBCCE schedule table (BT column), and in the week's Mass intentions; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 1,
+          "said": "Daily Mass: Mon, Tues, Wed, Fri - 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "HOBCCE table, BT column: Fri 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "1224cf29410b",
+          "said": "weekly Friday 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "70221b6b4141",
+          "said": "weekly Friday 11:00"
+        }
+      ],
+      "rationale": "Printed on page 1 and in the page-4 HOBCCE schedule table (BT column), and in the week's Mass intentions; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:50",
+        "end_time": "16:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 3:50 - 4:20 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "Confessions by appointment or 3:50 – 4:20pm Saturday afternoons"
+        },
+        {
+          "source": "history",
+          "bulletin": "1224cf29410b",
+          "said": "weekly Saturday 15:50-16:20"
+        },
+        {
+          "source": "history",
+          "bulletin": "70221b6b4141",
+          "said": "weekly Saturday 15:50-16:20"
+        }
+      ],
+      "rationale": "Printed on pages 1 and 4; history agrees for both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "Oct. 28: Healing Mass Officiated by Fr. Richard DiGiulio, 7:00 PM @ BT for members of HOBCCE."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "What's Happening in HOBCCE: All events open to members of any parish."
+        },
+        {
+          "source": "history",
+          "bulletin": "1224cf29410b",
+          "said": "dated 2026-10-28 19:00 'Healing Mass'"
+        },
+        {
+          "source": "history",
+          "bulletin": "70221b6b4141",
+          "said": "dated 2026-10-28 19:00 'Healing Mass'"
+        }
+      ],
+      "rationale": "A dated special Mass at Blessed Trinity after as_of. The line says 'for members of HOBCCE' (the policy leaves out a Mass limited to a group), but the section heading says all events are open to members of any parish, so it reads as an invitation rather than a restriction. Leaning include.",
+      "question": "Oct 28, 7:00 PM Healing Mass at Blessed Trinity 'for members of HOBCCE' (section says all events open to any parish): public or restricted?",
+      "options": [
+        {
+          "label": "Include as a dated Mass (heading says open to any parish)",
+          "entry": {
+            "church_slug": "blessed-trinity-buffalo",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-28",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": "Healing Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (limited to HOBCCE members)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:51:28Z"
+      }
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-trinity-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "St. Martin de Porres"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1224cf29410b",
+          "page": 4,
+          "said": "HOBCCE table: SMdP Sun 8:00AM, 9:30AM; CB Sat 4PM, Sun 9AM; 11AM, 10AM last Sun. of month bilingual"
+        }
+      ],
+      "rationale": "The page-4 table also lists St. Martin de Porres (SMdP) and Ss. Columba-Brigid (CB), sister parishes in the family of parishes, not churches of this parish. Their times are left out here.",
+      "question": null,
+      "options": null,
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-11T12:51:39Z"
+      }
+    }
+  ]
+}

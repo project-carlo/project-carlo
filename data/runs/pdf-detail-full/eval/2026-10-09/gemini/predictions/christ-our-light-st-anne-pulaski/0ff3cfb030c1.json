@@ -1,0 +1,233 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "christ-our-light-st-anne-pulaski",
+  "content_hash": "0ff3cfb030c1ebf9d09f6b2ec0d4aba4a12ace6212d955a1ac81c796c92ac658",
+  "source_url": "https://files.ecatholic.com/25311/bulletins/20261004.pdf?t=1790890236000",
+  "fetched_at": "2026-10-04T14:33:28Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "christ-our-light-pulaski",
+      "name": "Christ Our Light",
+      "address": "23 Niagara St., Pulaski, NY 13142"
+    },
+    {
+      "slug": "st-anne-mother-of-mary-mexico",
+      "name": "St. Anne, Mother of Mary",
+      "address": "3352 Main St., Mexico, NY 13114"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/0ff3cfb030c1ebf9d09f6b2ec0d4aba4a12ace6212d955a1ac81c796c92ac658-a3d2b00089ff.json",
+    "modified_at": "2026-10-04T15:13:34.351000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/christ-our-light-st-anne-pulaski/0ff3cfb030c1.pdf",
+  "pdf_sha256": "dbc0964e3ca96c51c43401ec1b1f4f6dc321a3af1254e8587cb82f183229c919",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "christ-our-light-pulaski",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anne-mother-of-mary-mexico",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anne-mother-of-mary-mexico",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-our-light-pulaski",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-our-light-pulaski",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": "15:50",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM",
+        "end_time": "3:50 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anne-mother-of-mary-mexico",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": "08:25",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM",
+        "end_time": "8:25 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anne-mother-of-mary-mexico",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "22:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "4:00 PM",
+        "end_time": "10:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-our-light-pulaski",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "14:00",
+      "end_time": "17:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "2:00 PM",
+        "end_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anne-mother-of-mary-mexico",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-06",
+      "start_time": "14:00",
+      "end_time": "17:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Temporary time change during priest absence",
+      "raw": {
+        "date": "2026-10-06",
+        "start_time": "2:00 PM",
+        "end_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anne-mother-of-mary-mexico",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-06",
+      "start_time": "16:00",
+      "end_time": "22:00",
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Time changed to 2:00 PM - 5:00 PM",
+      "raw": {
+        "date": "2026-10-06",
+        "start_time": "4:00 PM",
+        "end_time": "10:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3025,
+    "output_tokens": 986
+  }
+}

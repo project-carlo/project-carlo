@@ -1,0 +1,122 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-mary-nassau",
+  "content_hash": "59f599d9006fcd056e4b324f14ea5a6ccce1fec9bbe56f104bad7aa61e4c8505",
+  "source_url": "https://parishes.rcda.org/St.MarysNassau/bulletins/2026/September_27.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 25790,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 2572,
+    "reasoning_tokens": 2070
+  },
+  "seconds": 25.512,
+  "response_id": "resp_043045f64a14c4fd016ac912b1fa3c87d2b55cbe1e4a634673",
+  "events": [
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "In the rectory during winter months",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "In the rectory during winter months",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "first"
+      ],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "58aa0ae4b4b7748f9620f9b88dceadbc6e4e366c45fe1b250db069f79922b9f9"
+}

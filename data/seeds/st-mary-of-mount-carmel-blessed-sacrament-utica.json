@@ -1,0 +1,503 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-of-mount-carmel-blessed-sacrament-utica",
+  "status": "ready",
+  "as_of": "2026-10-11T16:36:38Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:05Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Mount Carmel has four weekly Masses of its own: Sunday 8 and 11 AM, Thursday and Friday 8:30 AM, identical in all three bulletins and in history. The Saturday vigil, Sunday 9:30, Monday and Tuesday Masses and Saturday 3:45 Confession are at St. Anthony & St. Agnes (another parish's church) and are excluded. No Adoration is printed; Confession at Mount Carmel is by appointment only.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d81c55c74c2e55eaebb008edbe6bb63b3e9a1e4766c1d5a16c980df1c809d27f",
+      "fetched_at": "2026-10-11T16:36:38Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d2acc22f900aa2834397a2bcaab74ea3dea608b466602524445f1d43898383fd",
+      "fetched_at": "2026-10-04T14:42:57Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "a0d210aba72e4d5bf14ebe6d0b68a32b9e4c2fca287b1d561dc9cfbd3f348691",
+      "fetched_at": "2026-09-28T00:14:37Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-carmel-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "Sunday: 8 and 11 a.m. at Mount Carmel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "Sunday: 8 and 11 a.m. at Mount Carmel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "Sunday: 8 and 11 a.m. at Mount Carmel"
+        },
+        {
+          "source": "history",
+          "bulletin": "d81c55c74c2e",
+          "said": "weekly mass Sunday 08:00 st-mary-of-mount-carmel-utica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d2acc22f900a",
+          "said": "weekly mass Sunday 08:00 st-mary-of-mount-carmel-utica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d210aba72e",
+          "said": "weekly mass Sunday 08:00 st-mary-of-mount-carmel-utica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedules box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-carmel-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "Sunday: 8 and 11 a.m. at Mount Carmel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "Sunday: 8 and 11 a.m. at Mount Carmel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "Sunday: 8 and 11 a.m. at Mount Carmel"
+        },
+        {
+          "source": "history",
+          "bulletin": "d81c55c74c2e",
+          "said": "weekly mass Sunday 11:00 st-mary-of-mount-carmel-utica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d2acc22f900a",
+          "said": "weekly mass Sunday 11:00 st-mary-of-mount-carmel-utica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d210aba72e",
+          "said": "weekly mass Sunday 11:00 st-mary-of-mount-carmel-utica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedules box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-carmel-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "Thursday and Friday: 8:30 a.m. in our parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "Thursday and Friday: 8:30 a.m. in our parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "Thursday and Friday: 8:30 a.m. in our parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "d81c55c74c2e",
+          "said": "weekly mass Thursday 08:30 st-mary-of-mount-carmel-utica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d2acc22f900a",
+          "said": "weekly mass Thursday 08:30 st-mary-of-mount-carmel-utica  “No morning Mass if Utica schools are closed due to inclement weather”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d210aba72e",
+          "said": "weekly mass Thursday 08:30 st-mary-of-mount-carmel-utica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedules box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-carmel-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "Thursday and Friday: 8:30 a.m. in our parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "Thursday and Friday: 8:30 a.m. in our parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "Thursday and Friday: 8:30 a.m. in our parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "d81c55c74c2e",
+          "said": "weekly mass Friday 08:30 st-mary-of-mount-carmel-utica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d2acc22f900a",
+          "said": "weekly mass Friday 08:30 st-mary-of-mount-carmel-utica  “No morning Mass if Utica schools are closed due to inclement weather”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a0d210aba72e",
+          "said": "weekly mass Friday 08:30 st-mary-of-mount-carmel-utica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedules box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "Saturday: 4:30 p.m. at St. Anthony & St. Agnes Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "Saturday: 4:30 p.m. at St. Anthony & St. Agnes Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "Saturday: 4:30 p.m. at St. Anthony & St. Agnes Parish"
+        }
+      ],
+      "rationale": "Held at St. Anthony & St. Agnes, a church of another parish (st-anthony-st-agnes-utica), not one of this parish's listed churches; its own seed covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "9:30 a.m. at St. Anthony"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "9:30 a.m. at St. Anthony"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "9:30 a.m. at St. Anthony"
+        }
+      ],
+      "rationale": "Held at St. Anthony & St. Agnes, a church of another parish (st-anthony-st-agnes-utica), not one of this parish's listed churches; its own seed covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "Monday and Tuesday: 8:30 a.m. at St. Anthony & St. Agnes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "Monday and Tuesday: 8:30 a.m. at St. Anthony & St. Agnes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "Monday and Tuesday: 8:30 a.m. at St. Anthony & St. Agnes"
+        }
+      ],
+      "rationale": "Held at St. Anthony & St. Agnes, a church of another parish (st-anthony-st-agnes-utica), not one of this parish's listed churches; its own seed covers it. The Oct 12 Columbus Day 'no morning Mass' therefore also concerns that church's Monday Mass and is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "Monday and Tuesday: 8:30 a.m. at St. Anthony & St. Agnes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "Monday and Tuesday: 8:30 a.m. at St. Anthony & St. Agnes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "Monday and Tuesday: 8:30 a.m. at St. Anthony & St. Agnes"
+        }
+      ],
+      "rationale": "Held at St. Anthony & St. Agnes, a church of another parish (st-anthony-st-agnes-utica), not one of this parish's listed churches; its own seed covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-st-agnes-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d81c55c74c2e",
+          "page": 1,
+          "said": "Saturday: 3:45 p.m. at St. Anthony & St. Agnes Parish and by appointment by calling Mount Carmel parish office"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2acc22f900a",
+          "page": 1,
+          "said": "Saturday: 3:45 p.m. at St. Anthony & St. Agnes Parish and by appointment by calling Mount Carmel parish office"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0d210aba72e",
+          "page": 1,
+          "said": "Saturday: 3:45 p.m. at St. Anthony & St. Agnes Parish and by appointment by calling Mount Carmel parish office"
+        }
+      ],
+      "rationale": "Held at St. Anthony & St. Agnes, a church of another parish (st-anthony-st-agnes-utica), not one of this parish's listed churches; its own seed covers it. The 'by appointment' Confession at Mount Carmel has no time and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

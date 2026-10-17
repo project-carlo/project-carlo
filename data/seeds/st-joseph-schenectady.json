@@ -1,0 +1,1064 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-schenectady",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:38:26Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:50:23Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single-church parish with Sat 5:30 PM, Sun 9:30 AM and weekday 12:15 PM Masses, with Reconciliation after the weekday Mass (12:45 by the policy's relative-time rule). Oct 12 is closed for Columbus Day and cancelled. Open questions: Wednesdays say 'No Mass - Church Closed' in all three bulletins and on the website while history had a weekly Wednesday Mass, and a one-time-printed First Friday exposition.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "99448c20c715e021d4d681a3e0034cd1aaf5db02d5566329406f02c778d6168d",
+      "fetched_at": "2026-10-11T16:38:26Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "917c909725598d6cfee15cd6116044c7312584400214e928765b3b0082e3eb89",
+      "fetched_at": "2026-10-04T14:54:20Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "7484d011ef27ff6093ebd6bd332b535c02b2c51cc6597802ab8b918f6b264370",
+      "fetched_at": "2026-09-28T22:03:44Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Saturday Vigil: 5:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly mass Saturday 17:30 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly mass Saturday 17:30 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly mass Saturday 17:30 st-joseph-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "Page 1 header and the weekly intentions list (page 2) agree; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Sunday: 9:30 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly mass Sunday 09:30 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly mass Sunday 09:30 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly mass Sunday 09:30 st-joseph-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "Page 1 header and weekly intentions list agree; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Weekdays: 12:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Monday 12:15 PM intention listed"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly mass Monday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly mass Monday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly mass Monday 12:15 st-joseph-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "Weekday 12:15 Mass; the weekly intentions list has it on this weekday and the website agrees. Wednesday is handled in its own question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Weekdays: 12:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Tuesday 12:15 PM intention listed"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly mass Tuesday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly mass Tuesday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly mass Tuesday 12:15 st-joseph-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "Weekday 12:15 Mass; the weekly intentions list has it on this weekday and the website agrees. Wednesday is handled in its own question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Weekdays: 12:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Thursday 12:15 PM intention listed"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly mass Thursday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly mass Thursday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly mass Thursday 12:15 st-joseph-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "Weekday 12:15 Mass; the weekly intentions list has it on this weekday and the website agrees. Wednesday is handled in its own question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Weekdays: 12:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Friday 12:15 PM intention listed"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly mass Friday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly mass Friday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly mass Friday 12:15 st-joseph-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "Weekday 12:15 Mass; the weekly intentions list has it on this weekday and the website agrees. Wednesday is handled in its own question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following the 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly confession Monday 12:45 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly confession Monday 12:45 st-joseph-schenectady  “Following the 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "No clock time is printed; the policy puts 'following a weekday Mass' 30 minutes after it starts, so 12:45. Recorded Monday-Friday because only weekday Masses are at 12:15; the 'or by appointment' option is not recorded. History has the same 12:45 time (one older bulletin put 12:15, which the policy reading contradicts).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following the 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly confession Tuesday 12:45 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly confession Tuesday 12:45 st-joseph-schenectady  “Following the 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "No clock time is printed; the policy puts 'following a weekday Mass' 30 minutes after it starts, so 12:45. Recorded Monday-Friday because only weekday Masses are at 12:15; the 'or by appointment' option is not recorded. History has the same 12:45 time (one older bulletin put 12:15, which the policy reading contradicts).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following the 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly confession Thursday 12:45 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly confession Thursday 12:45 st-joseph-schenectady  “Following the 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "No clock time is printed; the policy puts 'following a weekday Mass' 30 minutes after it starts, so 12:45. Recorded Monday-Friday because only weekday Masses are at 12:15; the 'or by appointment' option is not recorded. History has the same 12:45 time (one older bulletin put 12:15, which the policy reading contradicts).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following the 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly confession Friday 12:45 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly confession Friday 12:45 st-joseph-schenectady  “Following the 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "No clock time is printed; the policy puts 'following a weekday Mass' 30 minutes after it starts, so 12:45. Recorded Monday-Friday because only weekday Masses are at 12:15; the 'or by appointment' option is not recorded. History has the same 12:45 time (one older bulletin put 12:15, which the policy reading contradicts).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Weekdays: 12:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Wednesday 12:15 PM No Mass - Church Closed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "917c9097",
+          "page": 2,
+          "said": "Wednesday 12:15 PM No Mass - Church Closed (also in the 10-04 and 09-27 weekly lists)"
+        },
+        {
+          "source": "website",
+          "url": "http://parishes.rcda.org/StJosephSchenectady/",
+          "said": "Weekday Mass 12:15 pm Monday, Tuesday, Thursday and Friday; Wednesday closed, no weekday Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly mass Wednesday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly mass Wednesday 12:15 st-joseph-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly mass Wednesday 12:15 st-joseph-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "The weekly intentions list says 'No Mass - Church Closed' for Wednesday in all three bulletins (Sept 28, Oct 5, Oct 12 weeks), and the website lists no Wednesday Mass, but the page 1 header says 'Weekdays: 12:15 p.m.' and history recorded a weekly Wednesday Mass. It looks like a standing closure, not a one-off.",
+      "question": "Is there a weekly Wednesday 12:15 PM Mass at St. Joseph's?",
+      "options": [
+        {
+          "label": "Leave out (Wednesday is closed)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Wednesdays 12:15 PM Mass",
+          "entry": {
+            "church_slug": "st-joseph-schenectady",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Wednesday 12:15 PM No Mass - Church Closed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "weekly confession Wednesday 12:45 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "917c90972559",
+          "said": "weekly confession Wednesday 12:45 st-joseph-schenectady  “Following the 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Follows the Wednesday Mass question: with no Wednesday Mass there is no Mass for Reconciliation to follow. The 12:45 time would be derived as 30 minutes after the 12:15 Mass.",
+      "question": "Is there a weekly Wednesday 12:45 PM Reconciliation at St. Joseph's?",
+      "options": [
+        {
+          "label": "Leave out (Wednesday is closed)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Wednesdays 12:45 PM Reconciliation",
+          "entry": {
+            "church_slug": "st-joseph-schenectady",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Following the 12:15 PM Mass"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day; church closed"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Monday 12:15 PM Church and Offices Closed for Columbus Day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "917c9097",
+          "page": 2,
+          "said": "St. Joseph's Church and Parish Offices will be closed MONDAY, OCTOBER 12th in observance of Columbus Day"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "specific_date mass 2026-10-12 12:15 st-joseph-schenectady  CANCELLED; “Columbus Day; Church and Offices Closed”",
+          "page": 2
+        }
+      ],
+      "rationale": "Newest bulletin lists the church closed Monday Oct 12, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church closed"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Monday 12:15 PM Church and Offices Closed for Columbus Day"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "specific_date confession 2026-10-12 12:45 st-joseph-schenectady  CANCELLED; “Mass cancelled; Church closed”",
+          "page": 2
+        }
+      ],
+      "rationale": "The church is closed, so Reconciliation after the Mass does not take place either.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church closed"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Wednesday 12:15 PM No Mass - Church Closed"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "specific_date mass 2026-10-14 12:15 st-joseph-schenectady  CANCELLED; “Church Closed”",
+          "page": 2
+        }
+      ],
+      "rationale": "Wednesday's closure is printed every week, so it is a standing closure, not a dated cancellation; handled by the Wednesday questions (history had these as Oct 14 cancellations).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church closed"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 2,
+          "said": "Wednesday 12:15 PM No Mass - Church Closed"
+        },
+        {
+          "source": "history",
+          "bulletin": "99448c20c715",
+          "said": "specific_date confession 2026-10-14 12:45 st-joseph-schenectady  CANCELLED; “Mass cancelled; Church closed”",
+          "page": 2
+        }
+      ],
+      "rationale": "Wednesday's closure is printed every week, so it is a standing closure, not a dated cancellation; handled by the Wednesday questions (history had these as Oct 14 cancellations).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7484d011",
+          "page": 2,
+          "said": "FIRST FRIDAY DEVOTIONS. Come and worship in His presence for Exposition of the Blessed Sacrament and Devotions to the Sacred Heart of Jesus this coming Friday, October 2nd following the 12:15 p.m. Mass."
+        }
+      ],
+      "rationale": "Only the Sept 27 bulletin prints this, for Friday Oct 2; the newest bulletin does not (the Oct 12-18 week has no first Friday), and the website does not mention it. 'First Friday' suggests a monthly slot, but the time is only 'following the 12:15 Mass' (policy: 12:45 for a weekday Mass) and no end is given.",
+      "question": "Add a first-Friday Exposition/Sacred Heart devotions after the 12:15 PM Mass?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "First Fridays 12:45 PM Adoration",
+          "entry": {
+            "church_slug": "st-joseph-schenectady",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Friday Devotions following the 12:15 PM Mass"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly confession Monday 12:15 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "One older history extraction started Reconciliation at 12:15, the Mass's own start time. The policy puts 'following' a weekday Mass 30 minutes later, so the 12:45 slot is used and this duplicate is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly confession Tuesday 12:15 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "One older history extraction started Reconciliation at 12:15, the Mass's own start time. The policy puts 'following' a weekday Mass 30 minutes later, so the 12:45 slot is used and this duplicate is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly confession Wednesday 12:15 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "One older history extraction started Reconciliation at 12:15, the Mass's own start time. The policy puts 'following' a weekday Mass 30 minutes later, so the 12:45 slot is used and this duplicate is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly confession Thursday 12:15 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "One older history extraction started Reconciliation at 12:15, the Mass's own start time. The policy puts 'following' a weekday Mass 30 minutes later, so the 12:45 slot is used and this duplicate is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "99448c20",
+          "page": 1,
+          "said": "Reconciliation is celebrated each day following the 12:15 pm Mass or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "7484d011ef27",
+          "said": "weekly confession Friday 12:15 st-joseph-schenectady  “Following 12:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "One older history extraction started Reconciliation at 12:15, the Mass's own start time. The policy puts 'following' a weekday Mass 30 minutes later, so the 12:45 slot is used and this duplicate is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

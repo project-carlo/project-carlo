@@ -1,0 +1,109 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-anthony-schenectady",
+  "content_hash": "c317e9690794a1fb4e688ccd48e72f9474fc08032fc2402f22a458221f0747dc",
+  "source_url": "https://stanthonyschurch.net/bulletin/09-27-26.pdf",
+  "fetched_at": "2026-09-28T22:02:07Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-anthony-schenectady",
+      "name": "St. Anthony's Church",
+      "address": "331 Seward Pl., Schenectady, NY 12305"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/c317e9690794a1fb4e688ccd48e72f9474fc08032fc2402f22a458221f0747dc-8415d099e5ec.json",
+    "modified_at": "2026-09-28T22:14:43.291000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-anthony-schenectady/c317e9690794.pdf",
+  "pdf_sha256": "932a115ec3de287bbf42c635c234928f2e26e98b3d2dd5daa6706b6913745fcc",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-anthony-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Spanish; First Sunday of the month is Children's Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-schenectady",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Holy Hour",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2977,
+    "output_tokens": 287
+  }
+}

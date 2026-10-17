@@ -1,0 +1,182 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-lawrence",
+  "content_hash": "7997d452d2c77e7070a8af1b6d1a810d75be7cd6a9ad956ac068cb6d119eb049",
+  "source_url": "https://www.stlawrencegreeceny.org/wp-content/uploads/20260419.pdf",
+  "fetched_at": "2026-05-04T18:45:23Z",
+  "reference_date": "2026-05-04",
+  "churches": [
+    {
+      "slug": "st-lawrence",
+      "name": "St. Lawrence Church",
+      "address": "1000 North Greece Road, Rochester, NY 14626"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/7997d452d2c77e7070a8af1b6d1a810d75be7cd6a9ad956ac068cb6d119eb049.json",
+    "kind": "local_legacy_raw_cache",
+    "modified_at": null,
+    "timestamp_caveat": "Local mtime is not an extraction timestamp; legacy fallback only"
+  },
+  "gemini_church_context_matches": null,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-lawrence/7997d452d2c7.pdf",
+  "pdf_sha256": "7997d452d2c77e7070a8af1b6d1a810d75be7cd6a9ad956ac068cb6d119eb049",
+  "label_status": "unlabeled",
+  "published_date": "2026-04-19",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-lawrence",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lawrence",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lawrence",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lawrence",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lawrence",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lawrence",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lawrence",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lawrence",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {}
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-lucy-st-bernadette-altamont",
+  "status": "needs_review",
+  "as_of": "2026-09-28T22:04:53Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:58:17Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One bulletin (issue Sept 6, 2026). It prints no Mass schedule box: the only Mass times are the one-week calendar on p4 (Sunday 9 am Mass; Friday Sept 11 10 am anniversary Mass). The website lists 'Sunday 9:00am' as the Mass Schedule. One open question: whether the Sunday 9:00 AM Mass is weekly (POLICY would call the bulletin's single dated listing dated). Confession is by appointment only.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "af28c460f40e8f9b266daddcb6f9c9118021c46bb317e746110c075bfa30f762",
+      "fetched_at": "2026-09-28T22:04:53Z",
+      "published_date": "2026-09-06",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "af28c460f40e",
+          "page": 4,
+          "said": "Weekly Calendar - September 6, 2026 - September 12, 2026: Sunday September 6 - 9 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af28c460f40e",
+          "page": 3,
+          "said": "Mass Intentions: Sunday - September 6 Richard Lyons; Sunday - September 13 RoseAnn Asmus (no times)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlstb.org/",
+          "said": "Mass Schedule Sunday 9:00am 109 Grand St. Altamont, NY 12009"
+        },
+        {
+          "source": "history",
+          "bulletin": "af28c460f40e",
+          "said": "weekly mass Sunday 09:00 st-lucy-st-bernadette-altamont",
+          "page": 4
+        }
+      ],
+      "rationale": "The newest (only) bulletin prints the 9 am Mass only under one date in a one-week calendar, which POLICY (Weekly or dated, rule 3) sorts as dated, and rule 4 needs two weeks. The Mass intentions list a second Sunday (Sept 13) without a time. The website's Mass Schedule says Sunday 9:00am, and extract history also stored it weekly. Leaning weekly because the website gives it as the regular schedule (R6: the website backs up a reading but can't outweigh the bulletin, so asked). A dated Sept 6 entry would be before as_of and out of scope (R16), so the alternative is leaving it out.",
+      "question": "Is the Sunday 9:00 AM Mass at St. Lucy/St. Bernadette weekly?",
+      "options": [
+        {
+          "label": "Weekly Sundays 9:00 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-lucy-st-bernadette-altamont",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-st-bernadette-altamont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-09-11",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "25th Anniversary"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "af28c460f40e",
+          "page": 4,
+          "said": "Friday September 11: 10am Mass 25th Anniversary"
+        },
+        {
+          "source": "history",
+          "bulletin": "af28c460f40e",
+          "said": "specific_date mass 2026-09-11 10:00 st-lucy-st-bernadette-altamont  “25th Anniversary”",
+          "page": 4
+        }
+      ],
+      "rationale": "R16: a dated Mass on September 11, before as_of (2026-09-28), so it is out of scope. It is also a special occasion Mass (the 25th anniversary), not part of the regular schedule. Recorded so history's event for it is matched (R9).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "af28c460f40e",
+          "page": 3,
+          "said": "Confession Confession times will be scheduled seasonally. Contact Fr. Matt to set an appointment at any time."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stlstb.org/about/sacraments",
+          "said": "Confessions are always available by appointment, please contact the office or Fr. Matt Duclos"
+        }
+      ],
+      "rationale": "R26, POLICY (What to extract): confession by appointment has no definite time, so nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

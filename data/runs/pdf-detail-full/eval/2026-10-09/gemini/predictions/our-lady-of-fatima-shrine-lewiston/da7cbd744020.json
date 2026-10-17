@@ -1,0 +1,31 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "our-lady-of-fatima-shrine-lewiston",
+  "content_hash": "da7cbd744020b4a954d9a54ec8d1ebfe033ad79c6f933dd752fd0a07cf47764e",
+  "source_url": "https://fatimashrine.com/wp-content/uploads/2020/05/SELF-GUIDED-TOUR.pdf",
+  "fetched_at": "2026-09-26T18:54:19Z",
+  "reference_date": "2026-09-26",
+  "churches": [
+    {
+      "slug": "our-lady-of-fatima-shrine-lewiston",
+      "name": "Our Lady of Fatima Shrine",
+      "address": "1023 Swann Road, Lewiston, NY 14174"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/da7cbd744020b4a954d9a54ec8d1ebfe033ad79c6f933dd752fd0a07cf47764e-91dfcd61c4db.json",
+    "modified_at": "2026-09-26T17:24:28.138000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/our-lady-of-fatima-shrine-lewiston/da7cbd744020.pdf",
+  "pdf_sha256": "bcbefb54698e7c2586adfd902d22422c2d754987009c49b6a6f9dc7a92c666f1",
+  "label_status": "unlabeled",
+  "published_date": "2019-05-15",
+  "wrong_bulletin": true,
+  "events": [],
+  "usage": {
+    "prompt_tokens": 1465,
+    "output_tokens": 84
+  }
+}

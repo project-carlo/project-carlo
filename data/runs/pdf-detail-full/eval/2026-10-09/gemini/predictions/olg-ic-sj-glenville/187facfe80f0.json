@@ -1,0 +1,447 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "olg-ic-sj-glenville",
+  "content_hash": "187facfe80f072dfdc4ed11b59319371795377ea62b3fdb6730b0f4bcb9b95df",
+  "source_url": "https://parishesonline.com/publication-page/immaculate-conception-church-12302?selectedPublication=https://container.parishesonline.com/bulletins/04/0687/20261004B.pdf",
+  "fetched_at": "2026-10-04T14:49:19Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "immaculate-conception-glenville",
+      "name": "Immaculate Conception",
+      "address": "400 Saratoga Rd., Glenville, NY 12302"
+    },
+    {
+      "slug": "our-lady-of-grace-ballston-lake",
+      "name": "Our Lady of Grace",
+      "address": "73 Midline Rd., Ballston Lake, NY 12019"
+    },
+    {
+      "slug": "st-joseph-scotia",
+      "name": "St. Joseph's Church",
+      "address": "231 Second St., Scotia, NY 12302"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/187facfe80f072dfdc4ed11b59319371795377ea62b3fdb6730b0f4bcb9b95df-e213e90c5d83.json",
+    "modified_at": "2026-10-04T15:21:02.487000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/olg-ic-sj-glenville/187facfe80f0.pdf",
+  "pdf_sha256": "6a5c95dbe465eb31006db43a9fff8179ed1e396dd072e4b735a5dab57f6178f7",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-joseph-scotia",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-scotia",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-grace-ballston-lake",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-scotia",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-grace-ballston-lake",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-scotia",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "First Saturday of the month",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-scotia",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 8,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "16:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 8,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM",
+        "end_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-scotia",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-scotia",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "Following 8 am Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "13:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "1:00 PM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-grace-ballston-lake",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": "12:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "Only when morning Mass occurs",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:30 AM",
+        "end_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": "08:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "First Saturday of the month",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "7:30 AM",
+        "end_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-19",
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Special Anointing Mass",
+      "raw": {
+        "date": "2026-10-19",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-conception-glenville",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-09",
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "Start of 40 Hours Devotion",
+      "raw": {
+        "date": "2026-10-09",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4629,
+    "output_tokens": 1151
+  }
+}

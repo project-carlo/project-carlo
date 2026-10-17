@@ -1,0 +1,123 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "ss-columba-and-brigid-buffalo",
+  "content_hash": "3b957ab822aa16849207c6bf6c92e278912d02a507e1f7534b8ee94247ba8ea7",
+  "source_url": "https://www.sscolumbabrigid.org/_files/ugd/1e676d_d5c38cae9e68474a9f0f7a66ef357bb4.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-26",
+  "from_cache": false,
+  "published_date": "2026-08-29",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 19158,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 2415,
+    "reasoning_tokens": 1915
+  },
+  "seconds": 51.919,
+  "response_id": "resp_09d0b322bc4e8e35016ac9101a803c87d2b915ba1512629fa3",
+  "events": [
+    {
+      "church_slug": "ss-columba-and-brigid-buffalo",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "ss-columba-and-brigid-buffalo",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Spanish",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "ss-columba-and-brigid-buffalo",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "ss-columba-and-brigid-buffalo",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "last"
+      ],
+      "season": null,
+      "page_number": 1,
+      "note": "Bilingual",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "ss-columba-and-brigid-buffalo",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-04",
+      "start_time": "15:30",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-09-04",
+        "start_time": "3:30 PM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "2deee4998903aa0f02168faed25a909eef212ca7d0af22cd74f71a51765acea3"
+}

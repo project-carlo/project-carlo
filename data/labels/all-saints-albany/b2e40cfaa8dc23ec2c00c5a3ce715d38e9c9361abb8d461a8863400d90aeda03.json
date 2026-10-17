@@ -14,8 +14,8 @@
   "published_date": null,
   "note": "",
   "labeler": "lyonsl2",
-  "seconds_spent": 390,
-  "updated_at": "2026-10-01T23:56:44Z",
+  "seconds_spent": 461,
+  "updated_at": "2026-10-04T22:25:14Z",
   "events": [
     {
       "church_slug": "all-saints-albany",
@@ -30,7 +30,8 @@
       "season": null,
       "page_number": 2,
       "note": "Followed by Rosary",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -45,7 +46,8 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -60,7 +62,8 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -75,7 +78,8 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -90,7 +94,8 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -105,7 +110,8 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -120,7 +126,8 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -135,14 +142,15 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
       "event_type": "confession",
-      "event_kind": "specific_date",
-      "day_of_week": null,
-      "date": "2026-09-27",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
       "start_time": "18:00",
       "end_time": "19:00",
       "cancelled": false,
@@ -150,14 +158,15 @@
       "season": null,
       "page_number": 7,
       "note": null,
-      "origin": "gemini-edited"
+      "origin": "gemini-edited",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
-      "event_type": "confession",
-      "event_kind": "specific_date",
-      "day_of_week": null,
-      "date": "2026-10-04",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
       "start_time": "18:00",
       "end_time": "19:00",
       "cancelled": false,
@@ -165,7 +174,8 @@
       "season": null,
       "page_number": 7,
       "note": null,
-      "origin": "human"
+      "origin": "human",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -180,37 +190,8 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
-    },
-    {
-      "church_slug": "all-saints-albany",
-      "event_type": "adoration",
-      "event_kind": "specific_date",
-      "day_of_week": null,
-      "date": "2026-09-27",
-      "start_time": "18:00",
-      "end_time": "19:00",
-      "cancelled": false,
-      "weeks_of_month": [],
-      "season": null,
-      "page_number": 7,
-      "note": null,
-      "origin": "gemini-edited"
-    },
-    {
-      "church_slug": "all-saints-albany",
-      "event_type": "adoration",
-      "event_kind": "specific_date",
-      "day_of_week": null,
-      "date": "2026-10-04",
-      "start_time": "18:00",
-      "end_time": "19:00",
-      "cancelled": false,
-      "weeks_of_month": [],
-      "season": null,
-      "page_number": 7,
-      "note": null,
-      "origin": "human"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-albany",
@@ -225,7 +206,8 @@
       "season": null,
       "page_number": 2,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     }
   ]
 }

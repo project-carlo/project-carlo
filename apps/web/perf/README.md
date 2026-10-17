@@ -8,7 +8,7 @@ much the main thread was blocked while it happened.
 
 ```bash
 pnpm --filter web test:e2e:install  # once: the harness drives Playwright's Chromium
-pnpm --filter web build             # the harness measures dist/, not the dev server
+pnpm --filter web build             # the harness measures dist/client/, not the dev server
 pnpm --filter web perf              # run everything, print a table
 pnpm --filter web perf --save mine
 # …change some code, rebuild…
@@ -79,7 +79,7 @@ at it — measuring both on the same machine, back to back, is the only way the
 numbers mean anything:
 
 ```bash
-git stash && pnpm --filter web build && cp -r apps/web/dist /tmp/base-dist
+git stash && pnpm --filter web build && cp -r apps/web/dist/client /tmp/base-dist
 git stash pop && pnpm --filter web build
 pnpm --filter web perf --dist /tmp/base-dist --save baseline
 pnpm --filter web perf --save candidate --compare baseline

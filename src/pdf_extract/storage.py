@@ -14,7 +14,7 @@ from pdf_extract.address import format_address
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import week_order_sql
 from pdf_extract.paths import DATA_DIR, ROOT
-from pdf_extract.pdf_truncate import ensure_truncated_pdf
+from pdf_extract.pdf_truncate import ensure_truncated_pdf, max_pages_for
 from pdf_extract.timeparse import minutes_to_time, normalize_event_date, time_to_minutes
 
 LOGGER = logging.getLogger(__name__)
@@ -101,10 +101,23 @@ def get_parish_by_name(conn: sqlite3.Connection, name: str) -> sqlite3.Row | Non
     ).fetchone()
 
 
+def fetch_only_slugs(conn: sqlite3.Connection) -> set[str]:
+    """Slugs of the fetch-only parishes: fetched, but not processed or shown.
+
+    Empty for a database from before migration 7, which has no such parishes.
+    """
+    columns = {row[1] for row in conn.execute("PRAGMA table_info(parish)").fetchall()}
+    if "fetch_only" not in columns:
+        return set()
+    rows = conn.execute("SELECT slug FROM parish WHERE fetch_only = 1").fetchall()
+    return {row[0] for row in rows}
+
+
 def list_churches(conn: sqlite3.Connection, parish_id: int) -> list[sqlite3.Row]:
+    """The parish's churches, retired ones (no longer in churches.csv) left out."""
     return conn.execute(
         "SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code"
-        " FROM church WHERE parish_id = ? ORDER BY id",
+        " FROM church WHERE parish_id = ? AND retired_at IS NULL ORDER BY id",
         (parish_id,),
     ).fetchall()
 
@@ -219,7 +232,7 @@ def event_row_values(conn: sqlite3.Connection, row: dict[str, Any]) -> tuple | N
     """
     church_slug = row.get("church_slug")
     church = conn.execute(
-        "SELECT id FROM church WHERE slug = ?", (church_slug,)
+        "SELECT id FROM church WHERE slug = ? AND retired_at IS NULL", (church_slug,)
     ).fetchone() if isinstance(church_slug, str) and church_slug else None
     if church is None:
         LOGGER.warning("Skipping event: unknown church %r", church_slug)
@@ -368,7 +381,7 @@ def read_bulletin_pdf(parish_slug: str, content_hash: str) -> bytes | None:
         return None
 
     try:
-        read_path = ensure_truncated_pdf(pdf_path)
+        read_path = ensure_truncated_pdf(pdf_path, max_pages=max_pages_for(parish_slug))
     except Exception:
         LOGGER.warning("Skipping: failed truncating PDF at %s", pdf_path, exc_info=True)
         return None

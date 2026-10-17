@@ -1,0 +1,410 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "prince-of-peace-north-endicott",
+  "content_hash": "d34eb15eb3f4a566fe38f696004d473f1db60535c3448d802cfe59756987e2e9",
+  "source_url": "https://bulletins.discovermass.com/download.php?bulletin=QynE5zjN9Phkxs2Qtr5Dk3B507w9SGJy9bFKG%2FhCq2fA%2FLacmaO7dTnGKb39KVg8GhPhnWmPekg%2Bzu8mGJN9PKpBsESpoVyHYhY%2BB2a3u6A%3D",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 37927,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 5404,
+    "reasoning_tokens": 3932
+  },
+  "seconds": 45.274,
+  "response_id": "resp_0a87c9314a230a36016ac90fadf37487d2b138ab07c885ace1",
+  "events": [
+    {
+      "church_slug": "st-ambrose-endicott",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "12:05",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "12:05 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose-endicott",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM",
+        "end_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "second"
+      ],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-endicott",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "third"
+      ],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-26",
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "date": "2026-09-26",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-27",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "date": "2026-09-27",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-27",
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": null,
+      "raw": {
+        "date": "2026-09-27",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-28",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-09-28",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-01",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-01",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-04",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-04",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-04",
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-04",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-08",
+      "start_time": "18:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Healing Mass",
+      "raw": {
+        "date": "2026-10-08",
+        "start_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-of-padua-endicott",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-28",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-09-28",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-endicott",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-01",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-01",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose-endicott",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "15:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "3:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose-endicott",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-29",
+      "start_time": "12:05",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "date": "2026-09-29",
+        "start_time": "12:05 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose-endicott",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-29",
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-09-29",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "0ebf2a7de7d5660f63a2528eaa365c86b8471101b2e30a48c80db5c117acea0b"
+}

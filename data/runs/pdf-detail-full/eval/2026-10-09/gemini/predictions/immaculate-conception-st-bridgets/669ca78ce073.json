@@ -1,0 +1,51 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "immaculate-conception-st-bridgets",
+  "content_hash": "669ca78ce07319e3555daa779c54c473cfe9c4721fb8e4e0eabf5883699ae06e",
+  "source_url": "https://www.immaculateconceptionrochester.org/_files/ugd/309cee_8abae253aa794d1382e0a22d6872d95a.pdf",
+  "fetched_at": "2026-09-25T17:22:58Z",
+  "reference_date": "2026-09-25",
+  "churches": [
+    {
+      "slug": "immaculate-conception-st-bridgets",
+      "name": "Immaculate Conception/St. Bridget's Church",
+      "address": "445 Frederick Douglass Street, Rochester, NY 14608"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/669ca78ce07319e3555daa779c54c473cfe9c4721fb8e4e0eabf5883699ae06e-221ea06528cd.json",
+    "modified_at": "2026-09-25T17:31:53.165000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/immaculate-conception-st-bridgets/669ca78ce073.pdf",
+  "pdf_sha256": "f6ad43a203d2178b4eb5c9d824fc120407a7070c54fd7adb8a25eb990322d999",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "immaculate-conception-st-bridgets",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2467,
+    "output_tokens": 134
+  }
+}

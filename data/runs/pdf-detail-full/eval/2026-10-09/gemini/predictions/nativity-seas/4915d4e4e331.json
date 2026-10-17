@@ -1,0 +1,246 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "nativity-seas",
+  "content_hash": "4915d4e4e331f69b0e1ed38b95eebca9a9c052afcf8061a06ddcebcf6682dacc",
+  "source_url": "https://parishesonline.com/publication-page/church-of-the-nativity-of-the-blessed-virgin-mary-and-st-elizabeth-ann-seton?selectedPublication=https://container.parishesonline.com/bulletins/06/0124/20260503B.pdf",
+  "fetched_at": "2026-05-04T18:43:00Z",
+  "reference_date": "2026-05-04",
+  "churches": [
+    {
+      "slug": "nativity-of-blessed-virgin-mary",
+      "name": "Church of the Nativity of the Blessed Virgin Mary",
+      "address": "152 Main Street, Brockport, NY 14420"
+    },
+    {
+      "slug": "st-elizabeth-ann-seton",
+      "name": "Saint Elizabeth Ann Seton Church",
+      "address": "3747 Brick Schoolhouse Road, Hamlin, NY 14464"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/4915d4e4e331f69b0e1ed38b95eebca9a9c052afcf8061a06ddcebcf6682dacc.json",
+    "kind": "local_legacy_raw_cache",
+    "modified_at": null,
+    "timestamp_caveat": "Local mtime is not an extraction timestamp; legacy fallback only"
+  },
+  "gemini_church_context_matches": null,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/nativity-seas/4915d4e4e331.pdf",
+  "pdf_sha256": "4915d4e4e331f69b0e1ed38b95eebca9a9c052afcf8061a06ddcebcf6682dacc",
+  "label_status": "unlabeled",
+  "published_date": "2026-05-03",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "nativity-of-blessed-virgin-mary",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "nativity-of-blessed-virgin-mary",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "nativity-of-blessed-virgin-mary",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "nativity-of-blessed-virgin-mary",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "nativity-of-blessed-virgin-mary",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "13:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Spanish",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "1:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-elizabeth-ann-seton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-elizabeth-ann-seton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "1st, 2nd, and 4th weeks of the month",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-elizabeth-ann-seton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "nativity-of-blessed-virgin-mary",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:30 PM",
+        "end_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "nativity-of-blessed-virgin-mary",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-elizabeth-ann-seton",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": "12:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "1st Saturday of the month",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "9:00 AM",
+        "end_time": "12:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {}
+}

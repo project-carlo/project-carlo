@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joan-of-arc-menands",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:27:48Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:58Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Single-church parish; the Masses box and masthead agree in all three bulletins: daily 8 AM, Sat 4 PM vigil, Sun 9 AM and 10:15 AM Black Apostolate Mass, Sat 3:30 PM Reconciliation. One question: the Oct 17 intentions list shows a Saturday 3:00pm line, probably a copy of the Oct 10 special Mass (Cardinal Turkson).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f32fbd244429647c685553132895c6bb73e140a1ea82b88c6e4a069f285ac177",
+      "fetched_at": "2026-10-11T16:27:48Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "f9184ac7e149c12a2b3d83d788e3ab9b2952b09af762661d9729e67c02c85188",
+      "fetched_at": "2026-10-04T14:53:26Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "b94bac95cfbd95dc19ac0286e78a7feeeff2026ca97c641c0160f29a6accace2",
+      "fetched_at": "2026-09-28T22:03:20Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly mass Monday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly mass Monday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly mass Monday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Masses box (page 2) and masthead (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly mass Tuesday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly mass Tuesday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly mass Tuesday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Masses box (page 2) and masthead (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly mass Wednesday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly mass Wednesday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly mass Wednesday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Masses box (page 2) and masthead (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly mass Thursday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly mass Thursday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly mass Thursday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Masses box (page 2) and masthead (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "DAILY MASS: 8:00am (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly mass Friday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly mass Friday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly mass Friday 08:00 st-joan-of-arc-menands",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Masses box (page 2) and masthead (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "SATURDAY VIGIL MASS: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "SATURDAY VIGIL MASS: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "SATURDAY VIGIL MASS: 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly mass Saturday 16:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly mass Saturday 16:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly mass Saturday 16:00 st-joan-of-arc-menands",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Masses box (page 2) and masthead (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "SUNDAY MASSES: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "SUNDAY MASSES: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "SUNDAY MASSES: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly mass Sunday 09:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly mass Sunday 09:00 st-joan-of-arc-menands",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly mass Sunday 09:00 st-joan-of-arc-menands",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Masses box (page 2) and masthead (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Black Apostolate Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "10:15am (Black Apostolate)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "10:15am (Black Apostolate)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "10:15am (Black Apostolate)"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly mass Sunday 10:15 st-joan-of-arc-menands  “Black Apostolate”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly mass Sunday 10:15 st-joan-of-arc-menands  “Black Apostolate”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly mass Sunday 10:15 st-joan-of-arc-menands  “Black Apostolate Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Masses box and masthead of all three bulletins; Mass at the church itself, so kept with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "RECONCILIATION: Saturday 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 2,
+          "said": "RECONCILIATION: Saturday 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b94bac95",
+          "page": 2,
+          "said": "RECONCILIATION: Saturday 3:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "f32fbd244429",
+          "said": "weekly confession Saturday 15:30 st-joan-of-arc-menands",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f9184ac7e149",
+          "said": "weekly confession Saturday 15:30 st-joan-of-arc-menands",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b94bac95cfbd",
+          "said": "weekly confession Saturday 15:30 st-joan-of-arc-menands",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed on page 2 of all three bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f32fbd24",
+          "page": 2,
+          "said": "Saturday, October 17 / 3:00pm: -"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9184ac7",
+          "page": 1,
+          "said": "His Eminence Peter Cardinal Turkson will be celebrating the Holy Mass on Saturday, October 10, 2026, at 3:00PM."
+        }
+      ],
+      "rationale": "The Mass-intentions list for Saturday Oct 17 shows a blank 3:00pm line, like the Oct 10 line for Cardinal Turkson's special 3 PM Mass. The regular vigil is 4:00pm everywhere else, so this is probably a copied template line, but the bulletin does not say so.",
+      "question": "Is there a 3:00 PM Mass on Saturday, Oct 17 (instead of or besides the 4:00 PM vigil)?",
+      "options": [
+        {
+          "label": "Leave out (3:00pm is a copied template line)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Add one-off Sat Oct 17 3:00 PM Mass",
+          "entry": {
+            "church_slug": "st-joan-of-arc-menands",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-17",
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

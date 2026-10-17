@@ -3,8 +3,9 @@
 Each subparser carries its own handler (`set_defaults(handler=...)`), so a
 command's arguments and the call they feed sit next to each other and `main`
 stays a dispatcher. Handlers return the JSON-serialisable result dict that gets
-printed; returning None means "no subcommand given", which prints help and
-exits non-zero.
+printed (or, for a command that sets `render`, that text unless `--json`);
+returning None means "no subcommand given", which prints help and exits
+non-zero.
 
 Imports are eager on purpose: `pdf_extract/__init__.py` re-exports the pipeline
 stages, so importing anything from this package already pulls in playwright,
@@ -49,7 +50,7 @@ from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
 from pdf_extract.evals.run import run as run_eval
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
-from pdf_extract.fetch import fetch_bulletins
+from pdf_extract.fetch import FETCH_WORKERS, fetch_bulletins
 from pdf_extract.fetch_check import check_fetch
 from pdf_extract.geocode import run_backfill
 from pdf_extract.labeling.demo import build_demo
@@ -60,7 +61,10 @@ from pdf_extract.labeling.server import serve as serve_labeler
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence
+from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
+from pdf_extract.seeding.cli import add_seed_parser
+from pdf_extract.seeding.queries import SeedError
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, delete_db, utc_now_iso
 from pdf_extract.verify import verify_churches
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
@@ -119,8 +123,9 @@ def _add_eval_model_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--model",
         help=(
-            "OpenAI model to run in place of the classifier's own, e.g. gpt-6.1-sol; "
-            "output goes under data/runs/<model>/ (default: gpt-6-luna)"
+            "Model to run in place of the classifier's own, from the same provider: "
+            "e.g. gpt-6.1-sol for gpt-6-luna (output under data/runs/<model>/), or a "
+            "Gemini model for gemini-flash-qualified (under data/runs/<model>-qualified/)"
         ),
     )
     parser.add_argument(
@@ -148,7 +153,7 @@ def _ensure_db() -> None:
 # ── Command handlers ────────────────────────────────────────────────────────
 def _cmd_fetch(args: argparse.Namespace) -> Result:
     _ensure_db()
-    return fetch_bulletins(parish_name=args.parish)
+    return fetch_bulletins(parish_name=args.parish, workers=args.workers)
 
 
 def _cmd_fetch_check(args: argparse.Namespace) -> Result:
@@ -170,6 +175,7 @@ def _cmd_process(args: argparse.Namespace) -> Result:
     _ensure_db()
     return process_bulletins(
         parish_name=args.parish, model=args.model, concurrency=args.concurrency,
+        include_fetch_only=args.include_fetch_only,
     )
 
 
@@ -327,7 +333,8 @@ def _cmd_label_serve(args: argparse.Namespace) -> Result:
     if args.demo:
         paths = build_demo(Path(args.demo_dir))
         set_store(CachedBlobStore(LocalBlobStore(paths["root"])))
-        app = LabelerApp(db_path=paths["db_path"], labels_dir=paths["labels_dir"], mode="demo")
+        app = LabelerApp(db_path=paths["db_path"], labels_dir=paths["labels_dir"], mode="demo",
+                         seeds_dir=paths["seeds_dir"])
     else:
         _ensure_db()
         set_store(CachedBlobStore(LocalBlobStore(DATA_DIR), remote_from_env(), remote_write=False))
@@ -355,6 +362,10 @@ def _build_parser() -> argparse.ArgumentParser:
     # -- fetch --
     fetch_parser = subparsers.add_parser("fetch", help="Fetch latest PDFs and save to disk")
     fetch_parser.add_argument("--parish", help="Parish name (omit to run for all)")
+    fetch_parser.add_argument(
+        "--workers", type=int, default=FETCH_WORKERS,
+        help="Parishes fetched at once, one per site at most (1 fetches one at a time)",
+    )
     fetch_parser.set_defaults(handler=_cmd_fetch)
     _add_common_args(fetch_parser)
 
@@ -385,11 +396,18 @@ def _build_parser() -> argparse.ArgumentParser:
     process_parser.add_argument("--parish", help="Parish name (omit to run for all)")
     process_parser.add_argument(
         "--model", default=DEFAULT_GEMINI_MODEL,
-        help=f"Gemini model (default: {DEFAULT_GEMINI_MODEL})",
+        help=(
+            f"Gemini model for extract-mode parishes (default: {DEFAULT_GEMINI_MODEL}); "
+            "update-mode parishes always run on gpt-6-luna"
+        ),
     )
     process_parser.add_argument(
         "--concurrency", type=int, default=5,
-        help="Number of parallel Gemini calls (default: 5)",
+        help="Number of parallel model calls (default: 5)",
+    )
+    process_parser.add_argument(
+        "--include-fetch-only", action="store_true",
+        help="Also process fetch-only parishes (fetch_only in parishes.csv), e.g. to try a few",
     )
     process_parser.set_defaults(handler=_cmd_process)
     _add_common_args(process_parser)
@@ -657,6 +675,12 @@ def _build_parser() -> argparse.ArgumentParser:
         subparsers, lambda p: _add_common_args(p, default_level="WARNING"),
     )
 
+    # -- schedule (believed schedules of update-mode parishes) --
+    add_schedule_parser(subparsers, _add_common_args)
+
+    # -- seed (the seeding agent's tools; quiet by default, text output) --
+    add_seed_parser(subparsers, lambda p: _add_common_args(p, default_level="WARNING"))
+
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
     db_parser.set_defaults(help_parser=db_parser)
@@ -732,7 +756,9 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         result = handler(args)
-    except (DioceseError, RunScopeError, ClassifierOptionError) as e:
+    except (
+        DioceseError, RunScopeError, ClassifierOptionError, ScheduleCommandError, SeedError,
+    ) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -742,7 +768,15 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     LOGGER.info("Command completed: %s", result)
-    print(json.dumps(result, indent=2))
+    # A command for agents (`seed`) prints compact text unless --json is given.
+    render = getattr(args, "render", None)
+    if render is not None and not getattr(args, "json", False):
+        # The text has dashes and quotes; a Windows console or pipe would garble them.
+        if hasattr(sys.stdout, "reconfigure"):
+            sys.stdout.reconfigure(encoding="utf-8")
+        print(render(result))
+    else:
+        print(json.dumps(result, indent=2))
     if getattr(args, "fail_on_verification_error", False) and not result.get("passed", False):
         return 1
     if getattr(args, "exit_code_from_status", False):

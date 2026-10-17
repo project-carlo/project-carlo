@@ -1,0 +1,245 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-benedicts-st-marys-lake",
+  "content_hash": "80ac910bf3f12712efc09f1ebfdd6608906e61cf69a247d08ca3835b9be91d15",
+  "source_url": "https://parishesonline.com/publication-page/st-marys-on-the-lake-st-benedicts?selectedPublication=https://container.parishesonline.com/bulletins/06/0201/20260503B.pdf",
+  "fetched_at": "2026-05-04T18:44:34Z",
+  "reference_date": "2026-05-04",
+  "churches": [
+    {
+      "slug": "st-benedicts",
+      "name": "St. Benedict's Church",
+      "address": "304 Speedway Road, Odessa, NY 14869"
+    },
+    {
+      "slug": "st-marys-of-lake-watkins-glen",
+      "name": "St. Mary's of the Lake",
+      "address": "905 North Decatur Street, Watkins Glen, NY 14891"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/80ac910bf3f12712efc09f1ebfdd6608906e61cf69a247d08ca3835b9be91d15.json",
+    "kind": "local_legacy_raw_cache",
+    "modified_at": null,
+    "timestamp_caveat": "Local mtime is not an extraction timestamp; legacy fallback only"
+  },
+  "gemini_church_context_matches": null,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-benedicts-st-marys-lake/80ac910bf3f1.pdf",
+  "pdf_sha256": "80ac910bf3f12712efc09f1ebfdd6608906e61cf69a247d08ca3835b9be91d15",
+  "label_status": "unlabeled",
+  "published_date": "2026-05-03",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-marys-of-lake-watkins-glen",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-of-lake-watkins-glen",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-of-lake-watkins-glen",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-of-lake-watkins-glen",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-of-lake-watkins-glen",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-of-lake-watkins-glen",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-of-lake-watkins-glen",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-benedicts",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-benedicts",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "19:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "Spanish Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "7:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-benedicts",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:30 PM",
+        "end_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-of-lake-watkins-glen",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-05-05",
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "Church is unlocked at 9:00 AM",
+      "raw": {
+        "date": "2026-05-05",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {}
+}

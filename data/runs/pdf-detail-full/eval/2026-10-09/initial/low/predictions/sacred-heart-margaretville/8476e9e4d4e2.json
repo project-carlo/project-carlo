@@ -1,0 +1,101 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "sacred-heart-margaretville",
+  "content_hash": "8476e9e4d4e2742934767726f3782f59009849d093ff50f470441fd605c2f778",
+  "source_url": "https://sacredheartmargaretville.org/wp-content/uploads/2026/10/10-04-26-1.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 9950,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 2592,
+    "reasoning_tokens": 2171
+  },
+  "seconds": 53.763,
+  "response_id": "resp_0a2cd2c612859ee4016ac90fbfcc2887d28a28b21d05842866",
+  "events": [
+    {
+      "church_slug": "st-anne-andes",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-margaretville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-margaretville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "Chapel (Rectory)",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-margaretville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "50261dba13573555ab7781c8a562b3e24db76b3910e0bebdcd23226f3b399ecb"
+}

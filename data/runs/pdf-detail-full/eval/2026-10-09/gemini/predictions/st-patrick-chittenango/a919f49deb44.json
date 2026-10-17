@@ -1,0 +1,129 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-patrick-chittenango",
+  "content_hash": "a919f49deb44de0ccf38989790714c81a81b899cacfbd3eb79d099edeb0222d8",
+  "source_url": "https://parishesonline.com/publication-page/st-patricks-roman-catholic-church?selectedPublication=https://container.parishesonline.com/bulletins/03/0872/20261004B.pdf",
+  "fetched_at": "2026-10-04T14:44:07Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "st-patrick-chittenango",
+      "name": "St. Patrick",
+      "address": "1341 Murray Drive, Chittenango, NY 13037"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/a919f49deb44de0ccf38989790714c81a81b899cacfbd3eb79d099edeb0222d8-fd2c461f14ec.json",
+    "modified_at": "2026-10-04T15:18:20.764000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-patrick-chittenango/a919f49deb44.pdf",
+  "pdf_sha256": "ea19a50ba08661867a90bac54481a5b40b6c5bfcb508b2f3c2bcdb26f7253848",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-patrick-chittenango",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-chittenango",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-chittenango",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-chittenango",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "14:00",
+      "end_time": "14:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "1st & 3rd Saturdays of the month",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "2:00 PM",
+        "end_time": "2:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-chittenango",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "18:30",
+      "end_time": "19:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "2nd Monday of the Month",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "6:30 PM",
+        "end_time": "7:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2977,
+    "output_tokens": 544
+  }
+}

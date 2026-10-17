@@ -1,0 +1,454 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "chautauqua-family-catholic",
+  "content_hash": "62351eb1ce0ef24849701a06af9218c492dd1da6235d4ed243e48fe8b70f953f",
+  "source_url": "https://parishesonline.com/publication-page/chautauqua-family-of-catholic-churches?selectedPublication=https://container.parishesonline.com/bulletins/14/0681/20260927B.pdf",
+  "fetched_at": "2026-09-26T18:53:29Z",
+  "reference_date": "2026-09-26",
+  "churches": [
+    {
+      "slug": "our-lady-of-lourdes-bemus-point",
+      "name": "Our Lady of Lourdes Church",
+      "address": "41 Main Street, Bemus Point, NY 14712"
+    },
+    {
+      "slug": "st-james-major-westfield",
+      "name": "St. James Major Church",
+      "address": "15 Union Street, Westfield, NY 14787"
+    },
+    {
+      "slug": "st-mary-mayville",
+      "name": "St. Mary Church",
+      "address": "22 East Chautauqua Street, Mayville, NY 14757"
+    },
+    {
+      "slug": "st-matthias-clymer",
+      "name": "St. Matthias Church",
+      "address": "1762 French Creek Mina Road, Clymer, NY 14724"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/62351eb1ce0ef24849701a06af9218c492dd1da6235d4ed243e48fe8b70f953f-9fddf855f4f5.json",
+    "modified_at": "2026-09-26T17:22:59.543000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/chautauqua-family-catholic/62351eb1ce0e.pdf",
+  "pdf_sha256": "89256c955ca08ec9bfe60b680f70046e8894a5944ef381ae6d26d8214aacb2fb",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "our-lady-of-lourdes-bemus-point",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-major-westfield",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-lourdes-bemus-point",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-mayville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-matthias-clymer",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-major-westfield",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-matthias-clymer",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-mayville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-lourdes-bemus-point",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-major-westfield",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-mayville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "Devotion/Mass to Our Lady of Perpetual Help",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-matthias-clymer",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "After daily Mass",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-major-westfield",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-lourdes-bemus-point",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-mayville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": "08:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM",
+        "end_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-mayville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "During Holy Hour",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "3:00 PM",
+        "end_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-major-westfield",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Adoration and devotion",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:00 AM",
+        "end_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-lourdes-bemus-point",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "22:45",
+      "end_time": "23:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "10:45 PM",
+        "end_time": "11:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-mayville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "Holy Hour; Exposition of the Blessed Sacrament, Benediction",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "3:00 PM",
+        "end_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-matthias-clymer",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-10",
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "Rosary Rally Mass",
+      "raw": {
+        "date": "2026-10-10",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-major-westfield",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-02",
+      "start_time": "09:00",
+      "end_time": "15:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "First Friday Adoration",
+      "raw": {
+        "date": "2026-10-02",
+        "start_time": "9:00 AM",
+        "end_time": "3:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4676,
+    "output_tokens": 1830
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "christ-sun-of-justice-troy",
+  "content_hash": "8f60bdbdab083fa47c38265164418203aa405cf41bd529a406babd6c8ffdc605",
+  "source_url": "https://eadn-wc03-5826237.nxedge.io/cdn/wp-content/uploads/2026/09/CSJ-2026_9_27-bulletin-combined.pdf",
+  "fetched_at": "2026-09-28T21:56:53Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "christ-sun-of-justice-troy",
+      "name": "Christ Sun of Justice (Chapel + Cultural Center)",
+      "address": "2125 Burdett Ave., Troy, NY 12180"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/8f60bdbdab083fa47c38265164418203aa405cf41bd529a406babd6c8ffdc605-d68f5acddfb2.json",
+    "modified_at": "2026-09-28T22:10:29.476000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/christ-sun-of-justice-troy/8f60bdbdab08.pdf",
+  "pdf_sha256": "347319449410fce9dfefef88f850850f44f9c49e6a1e7bb39d04eb07ea4fc653",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "christ-sun-of-justice-troy",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-sun-of-justice-troy",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-sun-of-justice-troy",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-sun-of-justice-troy",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Livestream on YouTube",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-sun-of-justice-troy",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "christ-sun-of-justice-troy",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Before Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:15 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2006,
+    "output_tokens": 611
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-victory-st-joseph",
+  "content_hash": "da2e019ad8b3ee8356c216da0f3d2c97312bf6305194680807fde42d3a0d3dc3",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/our-lady-of-victory-st-joseph/da2e019ad8b3.pdf",
+  "pdf_sha256": "238fc278cc7081aa1fcace5370213f79fd15f9aa718a15d4c6c190e7572a980d",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 1,
+    "analyzed_page_count": 1,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 1474,
+        "image_count": 6,
+        "image_coverage_fraction_estimate": 0.11406280451574573,
+        "max_displayed_image_area_fraction_estimate": 0.051270944741532966,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 1221,
+        "native_char_height_p10_pt": 5.700000762939453,
+        "native_char_height_median_pt": 8.06402587890625,
+        "native_char_height_p10_low_detail_px": 3.6848489780618685,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.12322566844919786,
+        "projection_line_count": 47,
+        "line_pitch_px": 16.75,
+        "line_pitch_low_detail_px": 7.796363636363636,
+        "connected_component_count": 1119,
+        "text_like_component_count": 1102,
+        "text_like_height_p10_px": 3.0,
+        "text_like_height_median_px": 12.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 5.585454545454546
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 1,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 0.8370009999998729,
+  "resumed": false,
+  "walltime_seconds": 0.8378558000040357
+}

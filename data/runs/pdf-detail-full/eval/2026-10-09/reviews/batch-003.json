@@ -1,0 +1,206 @@
+{
+  "bulletins": [
+    {
+      "parish_slug": "catholic-family-holy-rosary",
+      "content_hash": "da176a5df8fe3a4a104c7a2e957e5136103725554a2144739dfc1bc3ade9d1f5",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": false,
+      "observed_raster_advantage": false,
+      "has_supported_gain": false,
+      "has_supported_raster_gain": false,
+      "has_supported_harm": true,
+      "mechanism": "Raster ordinal/date confusion; an anniversary number becomes an invented calendar date.",
+      "verdict": "PDF page 3 places 'EPH 20th Anniversary Mass with luncheon to follow 11:30 am' in the October 4 upcoming-events entry. The superscript th belongs to the twentieth anniversary, not October 20. Page 1 also gives the regular Sunday EPH Mass at 11:30 AM. High adds an unsupported October 20, 2026 11:30 AM Mass at Epiphany of Our Lord; the October 4 anniversary is already covered by the Sunday weekly slot and should not be duplicated. Low is safer. The printed October 4, 2026 issue date and unchanged wrong_bulletin=false/church_list_needs_review=false are supported.",
+      "native_text_check": "All five PDF pages have zero native extracted characters, including the corrected phrase's page 3. This is a raster-origin harm, not a raster gain.",
+      "pdf_sha256": "e145f0ee466a90b7d64c18315989943f7170b7c865d3287e200587f86aebe95c",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-01-da176a5df8fe-page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/issue-date-panels.png"
+      ]
+    },
+    {
+      "parish_slug": "catholic-neighbors-in-faith",
+      "content_hash": "40e5b613e4e053f1eda5ed4fa05a5396c8b222f6cbec77fba13740c79376b3d4",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": null,
+      "has_supported_gain": true,
+      "has_supported_raster_gain": true,
+      "has_supported_harm": true,
+      "mechanism": "Raster calendar recovers First Friday Benediction, but high loses supported weekly Mass recurrence and holiday cancellations; other weekday dating has contextual ambiguity.",
+      "verdict": "PDF page 7's October 2 cell prints 'SPP: 1st Fri Devotions & Benediction - 11:15am w/Confession 12:10pm Mass'. High's first-Friday 11:15 AM Adoration with note Benediction is individually supported by the policy's Benediction rule, whereas low misses this Adoration. Confession is mentioned as an accompanying component, so its own precise start should not be assumed solely from the larger devotions' hours. High also converts ten weekday Mass slots into September 28-October 2 dated entries. Page 2 prints those dated intentions, but page 3 explicitly describes Ss. Peter & Paul Monday/Friday Rosary 'prior to the 12:10pm Mass', establishing those two regular weekly Mass slots; replacing them with dated entries loses recurrence. The other churches' recurring Rosary descriptions imply regular weekday Masses but give less explicit Mass timing, so not every dating change is independently adjudicated as a harm. Page 7's October 12 cell says 'JMS: 8am Mass only'; low's cancellations of Sacred Heart 9:00 AM and Ss. Peter & Paul 12:10 PM that day are supported, and high drops both. This raster recovery is not a net-safe high advantage. Printed issue date September 27, 2026 and unchanged false bulletin/church-review flags are supported.",
+      "native_text_check": "Page 7 extracts only 48 native characters, the footer '7 September 27, 2026 Catholic Neighbors In Faith'; none of the calendar, 11:15 AM, First Friday, Benediction, or Columbus Day notice is native text. Benediction recovery is genuinely raster-only. Pages 2 and 3 contain native intentions and Rosary/Mass semantics; recurrence changes there are not raster-only gains.",
+      "pdf_sha256": "d3f52fca714f069bbe9fef6ae26d5474e792776c657ef86ed622085e87c1b0e7",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-02-40e5b613e4e0-page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-02-40e5b613e4e0-page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-02-40e5b613e4e0-page-07.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-02-40e5b613e4e0-page-07-rotated.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/issue-date-panels.png"
+      ]
+    },
+    {
+      "parish_slug": "catholic-parishes-eastern-wayne-county",
+      "content_hash": "ccd482cd5b7d865cfdc9365d16df58f4520b8140306b045a007f1d8fb01bec86",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_raster_gain": false,
+      "has_supported_harm": true,
+      "mechanism": "Native-text venue-review metadata improvement mixed with loss of regular Mass/Adoration recurrence and an explicitly timed Confession; canonical metadata summary omits a real flag change.",
+      "verdict": "Page 3 says Eucharistic Exposition is 'on Mondays at the conclusion of the 8:30 AM Mass at St. Mary Magdalene Church', and page 5 says Wednesday-evening Exposition is after the 6 PM Mass at St. Michael, Newark. These identify regular weekly anchors; high replacing the corresponding Monday 8:30 AM and Wednesday 6:00 PM Masses with October 5 and October 7 dated entries loses those regular slots. Page 4 explicitly gives October 7 St. John the Evangelist, Clyde Confession 5:15-5:45 PM; high deletes it. The page 4 sidebar establishes first-Friday Adoration after Mass at St. Michael, Lyons and last-Thursday Adoration after the Novena Mass at St. John, Clyde, with the adjacent 8:30 AM Mass anchors supporting 9:00 AM using the weekday-after-Mass rule; high removes both qualified weekly Adorations. Separately, page 5's October 5 10:00 AM Mass is explicitly at Wayne County NH, not the listed Newark church. Both omit that off-site Mass, but high's church_list_needs_review=true correctly surfaces the separately located nursing-home worship venue; low leaves it false. This flag differs in the full outputs even though comparison.metadata_differences is empty. Mixed metadata gain and schedule harm: no net-safe advantage. Printed issue date October 4, 2026 and wrong_bulletin=false are supported. The reordered Benediction notes add no substantive gain.",
+      "native_text_check": "Pages 3, 4 and 5 extract 2657, 2254 and 1966 native characters respectively. The Monday 8:30 AM, Wednesday 6 PM, First Fridays/Last Thursdays, dated Clyde Confession, and Wayne County NH venue are present in native text. No individually supported raster-only correction was found.",
+      "pdf_sha256": "ba839217f7b3f12bf9a8da18a8cb0bb0501501ff3b3e50a42cbf00348772923e",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-03-ccd482cd5b7d-page-01.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-03-ccd482cd5b7d-page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-03-ccd482cd5b7d-page-04.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-03-ccd482cd5b7d-page-05.png"
+      ]
+    },
+    {
+      "parish_slug": "central-niagara-catholic",
+      "content_hash": "23c17e5338d5cd0ba25fa29d97ddfe5f97d3df85379ee7f1baa077181df015f0",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": true,
+      "has_supported_gain": true,
+      "has_supported_raster_gain": true,
+      "has_supported_harm": false,
+      "mechanism": "Raster schedule layout and abbreviation legend resolve Olcott versus Wilson and recover the alternate seasonal vigil venue.",
+      "verdict": "Page 1 prints Sunday 11:00 AM 'St. Brendan on the Lake (SBO) (Memorial Day - Labor Day)'; page 2's legend explicitly distinguishes SBW in Wilson, SBN in Newfane, and SBO in Olcott. Given the frozen known churches, SBO belongs to st-charles-borromeo-olcott, not our-lady-of-the-rosary-wilson. High corrects that venue, retaining the May-September season approximation used by both outputs. Page 1's Saturday vigil block places '(ASP January - June)' immediately under the 4:00 PM St. John Baptist seasonal line, supporting the alternate 4:00 PM All Saints January-June Mass that high adds and low misses. These are qualified weekly slots, not dated occurrences. No changed schedule item introduces a supported harm. Page 1 prints October 3 & 4, 2026; choosing October 3 as published_date is supported, and both false bulletin/church-review flags are consistent. Spanish versus Spanish Mass note wording is equivalent.",
+      "native_text_check": "Every page of this ten-page PDF extracts zero native characters. Both the page 1 schedule/season and page 2 SBO/ASP venue legend are entirely raster, so the source-supported corrections are genuinely raster-only.",
+      "pdf_sha256": "32582bb8174490a91d6e48d13956e6427b51e8f534421833632695e4994c4927",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-04-23c17e5338d5-page-01.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-04-23c17e5338d5-page-02.png"
+      ]
+    },
+    {
+      "parish_slug": "central-niagara-catholic",
+      "content_hash": "8f344188ddbc81296b65231b12f80314c96e3fe229d97e51fe7c8d970d7a28bb",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": null,
+      "has_supported_gain": true,
+      "has_supported_raster_gain": true,
+      "has_supported_harm": true,
+      "mechanism": "Raster church-attribution improvements mixed with deletion of an explicit alternate-site seasonal restriction.",
+      "verdict": "Page 1's 11:00 AM Sunday SBO Mass, limited to Memorial Day-Labor Day, and page 2's SBO in Olcott legend support high moving that weekly Mass from Wilson to st-charles-borromeo-olcott. Page 1's St. Brendan Confession block explicitly prints Saturday 3:15-3:50 PM '(Wilson)', so high moving that Confession from Newfane to our-lady-of-the-rosary-wilson is also supported. However, page 1's 4:00 PM Saturday vigil line says 'St. John Baptist (SJB - December)' with '(ASP January - June)' directly below it, while its separate St. John Confession block explicitly says July-December. Read together, the alternate All Saints January-June / St. John July-December venue pattern supports low's seasonal restriction; high removing the St. John July-December season makes it year-round and conflicts with the printed alternate-site schedule. Net mixed, despite two genuine raster gains. Page 1's September 26 & 27, 2026 supports published_date September 26, and unchanged false bulletin/church-review metadata is consistent.",
+      "native_text_check": "All ten pages extract zero native characters. The page 1 Wilson Confession, seasonal vigil layout, and Sunday SBO line, plus page 2 Olcott legend, are absent from native text. Both venue gains and the seasonal harm are raster-origin.",
+      "pdf_sha256": "c92e2a1f7ded26d86c9b42c2120dad71cee2d353ab55ba95709a4ba96cfea040",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-05-8f344188ddbc-page-01.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-05-8f344188ddbc-page-02.png"
+      ]
+    },
+    {
+      "parish_slug": "chautauqua-family-catholic",
+      "content_hash": "30ef1e19398fef707ed29541a93f79532d0b863fb31c97e1fb0ad915b69a3315",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_raster_gain": false,
+      "has_supported_harm": false,
+      "mechanism": "Native-text list grouping resolves the weekday of an indented Adoration line; this is not recovery of raster-only information.",
+      "verdict": "Page 3's EVERY WEEK list places '[BP] Adoration 10:45-11:45pm' under the Friday Adoration group, after 'Fri [W] Adoration and devotion 9-10am' and 'First Fridays 9-3pm'. The Saturday heading begins only below that BP line and is explicitly 'SATURDAY NIGHT ROSARY'. High correctly moves the weekly Bemus Point Adoration from Saturday to Friday, preserving the printed 10:45-11:45 PM times. The BP line has no First Fridays qualifier of its own, so it remains every Friday, not first-Friday-only. Page 5's flyer confirms the equivalent Divine Mercy chapel wording and the public invitation to Fr. Romey's personal daily Mass; high's alternate note wording does not change eligibility or timing. Printed issue date October 4, 2026 and unchanged false bulletin/church-review flags are supported. No supported harm in the changes.",
+      "native_text_check": "Page 3 has 2368 native characters and contains the Friday heading, First Fridays line, '[BP] Adoration 10:45-11:45pm', and following SATURDAY NIGHT ROSARY heading. The corrected phrase and grouping anchors exist natively; visual confirmation of layout is not evidence of a genuine raster-only gain.",
+      "pdf_sha256": "736bd0c0dd2f7e11a2da5ceb600a672ee46e68a16a73fd59a836e27bc8445369",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-06-30ef1e19398f-page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-06-30ef1e19398f-page-05.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/issue-date-panels.png"
+      ]
+    },
+    {
+      "parish_slug": "chautauqua-family-catholic",
+      "content_hash": "62351eb1ce0ef24849701a06af9218c492dd1da6235d4ed243e48fe8b70f953f",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": null,
+      "has_supported_gain": true,
+      "has_supported_raster_gain": true,
+      "has_supported_harm": true,
+      "mechanism": "Raster-only flyer separates Holy Hour from Mass and avoids assigning the larger event's hours to Confession, but high adds an unsupported church-review flag.",
+      "verdict": "Page 6's Mayville flyer specifies Wednesdays May 13-October 28: '3-4pm Holy Hour, Exposition of the Blessed Sacrament ... Confession, Benediction', then '4-5pm Novena to Our Mother of Perpetual Help, Holy Mass'. High correctly replaces low's 4-5 PM Adoration with 3-4 PM weekly Adoration with Benediction and adds the 4 PM weekly Mass, preserving the exact May 13-October 28 season. The flyer expressly invites people to Fr. Romey's personal daily Mass, so it is not a closed/private Mass excluded by policy. Removing low's 4-5 PM Confession is supported: Confession is part of the earlier Holy Hour and lacks its own definite component start/end, so the larger event's hours must not be copied. However, high changes church_list_needs_review from false to true, a real full-output difference omitted by comparison.metadata_differences. The flyer explicitly places the chapel/Holy Hour at St. Mary of Lourdes R.C. Church, Mayville, and page 2 maps Mayville to 22 East Chautauqua Street, the known st-mary-mayville venue. No separately located unlisted worship venue is established on the reviewed eight pages; the chapel is at a listed church, so the true review flag is unsupported. Mixed raster schedule gains and metadata harm prevent a net-safe advantage. September 27, 2026 published_date and wrong_bulletin=false are supported. Page 7's New Year's notes are equivalent special-occasion wording, not timing corrections.",
+      "native_text_check": "Page 6 has zero native characters; its distinct 3-4 PM Holy Hour, 4-5 PM Holy Mass, precise season, public invitation, and chapel-at-Mayville text are entirely raster. Page 7 is also raster-only. Page 3's native weekly list says only Devotion/Mass 3-5 PM, not the corrected component times, so it cannot supply those corrections without the raster flyer.",
+      "pdf_sha256": "89256c955ca08ec9bfe60b680f70046e8894a5944ef381ae6d26d8214aacb2fb",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-07-62351eb1ce0e-page-01.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-07-62351eb1ce0e-page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-07-62351eb1ce0e-page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-07-62351eb1ce0e-page-04.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-07-62351eb1ce0e-page-05.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-07-62351eb1ce0e-page-06.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-07-62351eb1ce0e-page-07.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-07-62351eb1ce0e-page-08.png"
+      ]
+    },
+    {
+      "parish_slug": "christ-our-light-family",
+      "content_hash": "17e6d67d97f5c7c4428a00f6851e02dbe152d73ff56308be23997b56cd09ddb6",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": null,
+      "has_supported_raster_gain": false,
+      "has_supported_harm": null,
+      "mechanism": "Native-text perpetual-Adoration interval encoding ambiguity, not a recovered time or venue.",
+      "verdict": "Page 2 explicitly prints 'Immaculate Conception-Adoration 24/7 (call office for code to Chapel)'. Both outputs retain all seven weekly Immaculate Conception, Wellsville entries with midnight starts and a 24/7 chapel note; low ends each at 11:59 PM, while high leaves each end null. The source supports continuous availability, not a literal nightly 11:59 PM closure, but neither prints a midnight start or a finite end, and current schedule_policy.py specifies no dedicated representation for perpetual Adoration. A null end plus 24/7 note and a whole-day interval plus the same note are competing encodings of the same printed schedule. The PDF alone does not establish a definite net improvement or harm from this representational change; individual gain/harm remain unknown rather than forced negative. This is not a missing raster phrase. September 27, 2026 issue date and unchanged false bulletin/church-review flags are supported; calling for an access code does not mean Adoration is merely by appointment.",
+      "native_text_check": "Page 2 contains 2588 native characters and explicitly extracts 'Immaculate Conception...Adoration 24/7' and the chapel access-code parenthesis. No corrected phrase is absent from native text; raster gain is false even though supported interval advantage is unresolved.",
+      "pdf_sha256": "5f7d2470a13830b327cf4f45a61104c5ffaf5f3cc1e2aa3630e1c0ea60722e8b",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-08-17e6d67d97f5-page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/issue-date-panels.png"
+      ]
+    },
+    {
+      "parish_slug": "christ-our-light-family",
+      "content_hash": "57ead4eadbcf89c498853bb929077bab9f3fa27d576e981d15baf265f3073668",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": false,
+      "observed_raster_advantage": false,
+      "has_supported_gain": false,
+      "has_supported_raster_gain": false,
+      "has_supported_harm": true,
+      "mechanism": "Native-text supported perpetual-Adoration availability is deleted rather than represented conservatively.",
+      "verdict": "Page 2 prints 'Immaculate Conception-Adoration 24/7 (call office for code to Chapel)' under Adoration & Rosary, at the listed Wellsville church identified on page 1. High deletes all seven daily weekly Adoration entries and provides no replacement for the explicit 24/7 chapel availability. The access-code instruction does not cancel Adoration, establish an off-site chapel, or turn it into an appointment-only event. Low's precise 11:59 PM ends are a representational approximation, not a printed closure, and the perpetual-interval encoding is not specified by policy; that uncertainty does not source-support dropping the entire clearly advertised continuous service. The deletion loses supported availability and is not a demonstrated correction. Printed October 4, 2026 issue date and unchanged false bulletin/church-review flags are supported.",
+      "native_text_check": "Page 2 extracts 2556 native characters including the exact 24/7 Adoration phrase and chapel access-code instruction. This omission is native semantic coverage loss, not a raster recovery.",
+      "pdf_sha256": "eb8bb119d9506fe66e5292a595f4074ce35ab310ff63e5e690d54a53adb2a925",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-09-57ead4eadbcf-page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/issue-date-panels.png"
+      ]
+    },
+    {
+      "parish_slug": "christ-our-light-st-anne-pulaski",
+      "content_hash": "0ff3cfb030c1ebf9d09f6b2ec0d4aba4a12ace6212d955a1ac81c796c92ac658",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": false,
+      "observed_raster_advantage": false,
+      "has_supported_gain": false,
+      "has_supported_raster_gain": false,
+      "has_supported_harm": true,
+      "mechanism": "Native-text cancellation scope inversion: Mass/Confession suspension is incorrectly extended to explicitly continuing Adoration.",
+      "verdict": "Page 3's Tuesday October 6, 2026 row explicitly schedules SAMOM Adoration 4:00-10:00 PM. Its announcement cancels 'weekday Masses and Confession from Oct 6th to Nov 20th', then explicitly says 'Adoration will continue on Tuesdays at SAMOM and Wednesdays at COL, now 2pm-5pm.' The continued SAMOM Tuesday service is not cancelled; the 2-5 PM wording is corroborated by the Wednesday COL row. High's new October 6 St. Anne, Mother of Mary Adoration cancellation 4:00-10:00 PM contradicts both the Tuesday row and the explicit continuation exception. Low is safer. October 4, 2026 published_date and unchanged wrong_bulletin=false/church_list_needs_review=false are supported by the printed cover and listed venues.",
+      "native_text_check": "Page 3 extracts 1364 native characters including SAMOM Adoration 4:00pm-10:00pm, the Mass/Confession cancellation, and the explicit Adoration-will-continue exception. This is native semantic scope harm, not an image-only change.",
+      "pdf_sha256": "dbc0964e3ca96c51c43401ec1b1f4f6dc321a3af1254e8587cb82f183229c919",
+      "pdf_bytes_hash_verified": true,
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/case-10-0ff3cfb030c1-page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-003/issue-date-panels.png"
+      ]
+    }
+  ]
+}

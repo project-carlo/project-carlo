@@ -1,0 +1,2158 @@
+{
+  "schema_version": 1,
+  "parish_slug": "catholic-family-holy-spirit-alden",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:32:13Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:35:46Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (OLP Clarence, SJB Alden, STA Akron). The schedule boxes on page 1 give Mass, Confession and Adoration times and agree in all three bulletins read, and history matches. Open: whether to list two dated OLP Masses, the Oct 17 Mass for Rita Grabowski and the Oct 31 Mass of Remembrance.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7c5524d67b9081e87c509cd88c501039e3209f1daec80956674bba4961e2e20d",
+      "fetched_at": "2026-10-11T16:32:13Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "5efb17cb5463e746b6d217f2c52af0631aeedefd89ef90bf034a69bc66325595",
+      "fetched_at": "2026-10-04T14:20:43Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "d96f6a8c90e98db4fdabfc584bea8a3f093630a8b9f6c7ed4ed3a9553317e607",
+      "fetched_at": "2026-09-26T18:53:15Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Monday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Monday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Monday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Wednesday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Wednesday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Wednesday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Monday 8AM OLP; Tuesday 8AM OLP; Wednesday 8AM OLP; Thursday 8AM OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Thursday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Thursday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Thursday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "4:30PM Our Lady of Peace (Saturday Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "4:30PM Our Lady of Peace (Saturday Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "4:30PM Our Lady of Peace (Saturday Vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Saturday 16:30 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Saturday 16:30 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Saturday 16:30 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "8:00AM Our Lady of Peace; 10:00 Our Lady of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "8:00AM Our Lady of Peace; 10:00 Our Lady of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "8:00AM Our Lady of Peace; 10:00 Our Lady of Peace"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Sunday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Sunday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Sunday 08:00 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "8:00AM Our Lady of Peace; 10:00 Our Lady of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "8:00AM Our Lady of Peace; 10:00 Our Lady of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "8:00AM Our Lady of Peace; 10:00 Our Lady of Peace"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Sunday 10:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Sunday 10:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Sunday 10:00 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Our Lady of Peace Wednesday 8:30AM-6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Our Lady of Peace Wednesday 8:30AM-6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Our Lady of Peace Wednesday 8:30AM-6:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly adoration Wednesday 08:30–18:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly adoration Wednesday 08:30–18:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly adoration Wednesday 08:30–18:00 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Adoration box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Our Lady of Peace Saturday 3-4PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Our Lady of Peace Saturday 3-4PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Our Lady of Peace Saturday 3-4PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-peace-clarence",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-peace-clarence",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Monday ... 7PM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Monday ... 7PM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Monday ... 7PM SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Monday 19:00 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Monday 19:00 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Monday 19:00 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Tuesday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Tuesday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Tuesday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Wednesday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Wednesday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Wednesday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Thursday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Thursday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Thursday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Tuesday 8:30AM SJB; Wednesday 8:30AM SJB; Thursday 8:30AM SJB; Friday 8:30AM SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Friday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Friday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Friday 08:30 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "4:00PM St. John the Baptist (Saturday Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "4:00PM St. John the Baptist (Saturday Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "4:00PM St. John the Baptist (Saturday Vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "8:00AM St. John the Baptist; 11:00 St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "8:00AM St. John the Baptist; 11:00 St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "8:00AM St. John the Baptist; 11:00 St. John the Baptist"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Sunday 08:00 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Sunday 08:00 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Sunday 08:00 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "8:00AM St. John the Baptist; 11:00 St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "8:00AM St. John the Baptist; 11:00 St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "8:00AM St. John the Baptist; 11:00 St. John the Baptist"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Sunday 11:00 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Sunday 11:00 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Sunday 11:00 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "St. John the Baptist ... Monday's 7:30PM-8:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "St. John the Baptist ... Monday's 7:30PM-8:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "St. John the Baptist ... Monday's 7:30PM-8:30PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly adoration Monday 19:30–20:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly adoration Monday 19:30–20:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly adoration Monday 19:30–20:30 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Adoration box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "St. John the Baptist First Friday's 9AM-5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "St. John the Baptist First Friday's 9AM-5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "St. John the Baptist First Friday's 9AM-5PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly adoration Friday 09:00–17:00 st-john-the-baptist-alden  “First Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly adoration Friday 09:00–17:00 st-john-the-baptist-alden  “First Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly adoration Friday 09:00–17:00 st-john-the-baptist-alden  “First Friday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Adoration box of all three bulletins; POLICY, Weekly or dated rule 2 makes First Friday a weekly slot with weeks_of_month. (The newest bulletin's week holds no first Friday, but the box prints it.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-alden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "St. John the Baptist Saturday 2:30-3:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "St. John the Baptist Saturday 2:30-3:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "St. John the Baptist Saturday 2:30-3:30PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly confession Saturday 14:30–15:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly confession Saturday 14:30–15:30 st-john-the-baptist-alden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly confession Saturday 14:30–15:30 st-john-the-baptist-alden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Monday 8AM STA; Tuesday 8AM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Monday 8AM STA; Tuesday 8AM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Monday 8AM STA; Tuesday 8AM STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Monday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Monday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Monday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Monday 8AM STA; Tuesday 8AM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Monday 8AM STA; Tuesday 8AM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Monday 8AM STA; Tuesday 8AM STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Tuesday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Tuesday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Tuesday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Wednesday ... 5:30PM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Wednesday ... 5:30PM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Wednesday ... 5:30PM STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Wednesday 17:30 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Wednesday 17:30 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Wednesday 17:30 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Thursday ... 8:00 STA; Friday 8AM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Thursday ... 8:00 STA; Friday 8AM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Thursday ... 8:00 STA; Friday 8AM STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Thursday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Thursday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Thursday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Thursday ... 8:00 STA; Friday 8AM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Thursday ... 8:00 STA; Friday 8AM STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Thursday ... 8:00 STA; Friday 8AM STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Friday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Friday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Friday 08:00 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Saturday 9AM STA; 4PM SJB & STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Saturday 9AM STA; 4PM SJB & STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Saturday 9AM STA; 4PM SJB & STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Saturday 09:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Saturday 09:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Saturday 09:00 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box (Saturday line) and Saturday Vigil list of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "Saturday 9AM STA; 4PM SJB & STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "Saturday 9AM STA; 4PM SJB & STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "Saturday 9AM STA; 4PM SJB & STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Saturday 16:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Saturday 16:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Saturday 16:00 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box (Saturday line) and Saturday Vigil list of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "9:00AM St. Teresa of Avila"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "9:00AM St. Teresa of Avila"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "9:00AM St. Teresa of Avila"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly mass Sunday 09:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly mass Sunday 09:00 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly mass Sunday 09:00 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "St. Teresa of Avila Wednesday's 4:45-5:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "St. Teresa of Avila Wednesday's 4:45-5:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "St. Teresa of Avila Wednesday's 4:45-5:15PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly confession Wednesday 16:45–17:15 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly confession Wednesday 16:45–17:15 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly confession Wednesday 16:45–17:15 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "St. Teresa of Avila Saturday 2:30-3:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "St. Teresa of Avila Saturday 2:30-3:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "St. Teresa of Avila Saturday 2:30-3:30PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly confession Saturday 14:30–15:30 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly confession Saturday 14:30–15:30 st-teresa-of-avila-akron",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly confession Saturday 14:30–15:30 st-teresa-of-avila-akron",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "First Saturday 8:15-8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "First Saturday 8:15-8:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "First Saturday 8:15-8:45AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly confession Saturday 08:15–08:45 st-teresa-of-avila-akron  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly confession Saturday 08:15–08:45 st-teresa-of-avila-akron  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly confession Saturday 08:15–08:45 st-teresa-of-avila-akron  “First Saturday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of all three bulletins; POLICY makes a named week a weekly slot with weeks_of_month.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-avila-akron",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 1,
+          "said": "St. Teresa of Avila Every 2nd Friday 7:30-8:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 1,
+          "said": "St. Teresa of Avila Every 2nd Friday 7:30-8:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96f6a8c",
+          "page": 1,
+          "said": "St. Teresa of Avila Every 2nd Friday 7:30-8:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 4,
+          "said": "Adoration Friday, October 9th. The Blessed Sacrament will be exposed beginning at 7:30 p.m. ... Benediction takes place by 8:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "weekly adoration Friday 19:30–20:30 st-teresa-of-avila-akron  “Second Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "weekly adoration Friday 19:30–20:30 st-teresa-of-avila-akron  “Every 2nd Friday; Benediction at 8:30 PM”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d96f6a8c90e9",
+          "said": "weekly adoration Friday 19:30–20:30 st-teresa-of-avila-akron  “Second Friday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Adoration box of all three bulletins; POLICY makes a named week a weekly slot. The Oct 4 bulletin adds Benediction by 8:30 for the Oct 9 occurrence only; the newest bulletin does not mention it, so no note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 5,
+          "said": "Altar & Rosary members will be reciting the Holy Rosary at 4:10pm each Saturday in October"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 5,
+          "said": "All Parishioners are welcome to attend Mass for Rita Grabowski on Sat. October 17 at 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5efb17cb",
+          "page": 5,
+          "said": "Mass for Rita Grabowski"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "specific_date mass 2026-10-17 09:30 our-lady-of-peace-clarence  “Memorial Mass for Rita Grabowski”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5efb17cb5463",
+          "said": "specific_date mass 2026-10-17 09:30 our-lady-of-peace-clarence  “Mass for Rita Grabowski”",
+          "page": 5
+        }
+      ],
+      "rationale": "R30: a memorial Mass for one person is closed under POLICY unless the bulletin invites everyone; this one says all parishioners are welcome, so it leans open. The church is OLP (printed on the OLP page, 'Our Lady of Peace' staff column). History reads it as a dated Mass at OLP.",
+      "question": "Add the 9:30 AM Mass for Rita Grabowski at Our Lady of Peace on Saturday, Oct 17?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "our-lady-of-peace-clarence",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-17",
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass for Rita Grabowski"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5524d6",
+          "page": 5,
+          "said": "You & Your family are invited to a Special Mass of Remembrance on Saturday, October 31st 9am Mass ... Please RSVP Cheryl by October 20, 2026. Our Lady of Peace Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5524d67b90",
+          "said": "specific_date mass 2026-10-31 09:00 our-lady-of-peace-clarence  “Special Mass of Remembrance”",
+          "page": 5
+        }
+      ],
+      "rationale": "R30: an invitation with an RSVP; it is not a Mass for one person, but the invitation may be aimed at bereaved families and not the public. Leans include. Printed only in the newest bulletin (a notice on the OLP page).",
+      "question": "Add the 9:00 AM Special Mass of Remembrance at Our Lady of Peace on Saturday, Oct 31?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "our-lady-of-peace-clarence",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-31",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Special Mass of Remembrance"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

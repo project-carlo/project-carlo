@@ -1,0 +1,364 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "holy-family-schuylerville",
+  "content_hash": "b41b6bbc04ca7d8982b3cfbb358478cef11edde42789f799cc508ef82e3e64fc",
+  "source_url": "https://bulletins.discovermass.com/download.php?bulletin=s%2BuPEunjWHJtWTXc%2FUcSpdb%2BYI69qBcnGT1zdRbp8IfxKaZ9GeLVmQwJt7sfxTR8p5COjein3PiL0clg30LZO%2BS05s%2Ba98a2O%2BkynJYrwRg%3D",
+  "fetched_at": "2026-09-28T21:57:45Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "notre-dame-visitation-schuylerville",
+      "name": "Notre Dame-Visitation Church",
+      "address": "18 Pearl St., Schuylerville, NY 12871"
+    },
+    {
+      "slug": "st-joseph-greenwich",
+      "name": "St. Joseph",
+      "address": "35 Hill St., Greenwich, NY 12834"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/b41b6bbc04ca7d8982b3cfbb358478cef11edde42789f799cc508ef82e3e64fc-ec9b4422b14e.json",
+    "modified_at": "2026-09-28T22:11:30.434000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/holy-family-schuylerville/b41b6bbc04ca.pdf",
+  "pdf_sha256": "71879bd4bc731d0d6a0068bbbba25c396949ba48758e7287c95d0ea064c61703",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Spanish Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "3:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-greenwich",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-greenwich",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-greenwich",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "5:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-greenwich",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After 10:30am Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-greenwich",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After 9:00am Mass",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-greenwich",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After 9:00am Mass",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "5:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-greenwich",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": "08:50",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "In the chapel",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:00 AM",
+        "end_time": "8:50 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "First Saturday Devotion",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "notre-dame-visitation-schuylerville",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-03",
+      "start_time": "09:30",
+      "end_time": "10:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "First Saturday; follows 9:00am Mass",
+      "raw": {
+        "date": "2026-10-03",
+        "start_time": "9:30 AM",
+        "end_time": "10:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2502,
+    "output_tokens": 993
+  }
+}

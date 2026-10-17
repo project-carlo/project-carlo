@@ -1,0 +1,83 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "our-lady-of-hope-copake-falls",
+  "content_hash": "70c2c6529fb5b97ba8a95b1dc803c002be14207d5d085a08ff89c564caca6714",
+  "source_url": "https://parishesonline.com/publication-page/our-lady-of-hope-12517?selectedPublication=https://container.parishesonline.com/bulletins/04/0813/20261004B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 18076,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 508,
+    "reasoning_tokens": 149
+  },
+  "seconds": 8.043,
+  "response_id": "resp_0485f46bb0726fbf016ac90ed9701087d2aec90b9ec01371a8",
+  "events": [
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "5:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "b0bf62fbec0b3fd6dc7cf2a02940e2d90a9972fdf91e02ce0e77e96c5482edfe"
+}

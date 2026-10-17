@@ -1,0 +1,63 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-lucy-syracuse",
+  "content_hash": "4bcaa60341781d1664049bcbe46dca4f339833a7672e0f6eeadd1e217a2ee71d",
+  "source_url": "https://www.saintlucys.org/_files/ugd/c1e347_12fb56eec72045d68a6bb961d6882190.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-26",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 14500,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 533,
+    "reasoning_tokens": 264
+  },
+  "seconds": 6.573,
+  "response_id": "resp_0424cbefbdede65b016ac911f84f7087d2a093f58a03222e63",
+  "events": [
+    {
+      "church_slug": "st-lucy-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-lucy-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "5421eb3fc207b85a22de1165d09be967c44c57d58698110c2ead4d86288e5b4a"
+}

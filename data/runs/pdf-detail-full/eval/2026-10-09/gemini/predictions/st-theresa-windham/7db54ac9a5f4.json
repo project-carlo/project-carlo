@@ -1,0 +1,109 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-theresa-windham",
+  "content_hash": "7db54ac9a5f4e7e4742e380358924bfa666759c1b75c7ca86c08edae496fbd9f",
+  "source_url": "https://www.sttheresawindham.org/s/St-Theresas-Bulletin_September-12-2026.pdf",
+  "fetched_at": "2026-09-28T22:09:11Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-theresa-windham",
+      "name": "St. Theresa of the Child Jesus",
+      "address": "5188 State Route 23, Windham, NY 12496"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/7db54ac9a5f4e7e4742e380358924bfa666759c1b75c7ca86c08edae496fbd9f-cf8c403816a9.json",
+    "modified_at": "2026-09-28T22:18:49.763000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-theresa-windham/7db54ac9a5f4.pdf",
+  "pdf_sha256": "ebbfadda50f07c8e35b2dc9da00e0b76c2fb60d0547675db8da5141d8a343a68",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-12",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-theresa-windham",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theresa-windham",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theresa-windham",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "16:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM",
+        "end_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theresa-windham",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-17",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Diocesan Priest Retreat",
+      "raw": {
+        "date": "2026-09-17",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1423,
+    "output_tokens": 457
+  }
+}

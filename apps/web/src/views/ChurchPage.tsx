@@ -1,42 +1,38 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { ChurchNotFoundError, fetchChurch, fetchChurchEvents } from "../api";
-import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
-import { ArrowLeftIcon } from "@/components/icons";
+import { ChurchNotFoundError } from "../api";
 import { InlineQueryError } from "@/components/InlineQueryError";
-import { Masthead } from "@/components/Masthead";
+import { SiteHeader } from "@/components/SiteHeader";
 import { ChurchPageContent } from "@/components/ChurchPageContent";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
-import { useHomeHref } from "@/hooks/useHomeHref";
+import {
+  churchEventsQuery as churchEventsQueryOptions,
+  churchQuery as churchQueryOptions,
+} from "@/lib/pageQueries";
 import {
   buildChurchDescription,
   buildChurchTitle,
   canonicalForPath,
+  churchPath,
 } from "@/lib/seo";
+import { liveMap } from "./liveMap";
 import { NotFoundPage } from "./NotFoundPage";
 
 export function ChurchPage() {
   const { churchSlug } = useParams();
-  const homeHref = useHomeHref();
   const enabled = typeof churchSlug === "string" && churchSlug.length > 0;
 
   const churchQuery = useQuery({
-    queryKey: ["church", churchSlug],
-    queryFn: () => fetchChurch(churchSlug!),
+    ...churchQueryOptions(churchSlug ?? ""),
     enabled,
-    retry: (_failureCount, error) =>
-      !(error instanceof ChurchNotFoundError),
   });
   const eventsQuery = useQuery({
-    queryKey: ["church-events", churchSlug],
-    queryFn: () => fetchChurchEvents(churchSlug!, [...EVENT_TYPE_ORDER]),
+    ...churchEventsQueryOptions(churchSlug ?? ""),
     enabled,
-    retry: (_failureCount, error) =>
-      !(error instanceof ChurchNotFoundError),
   });
 
   const events = eventsQuery.data;
-  const church = churchQuery.data;
+  const church = churchQuery.data?.church;
 
   const notFound =
     !enabled ||
@@ -45,14 +41,14 @@ export function ChurchPage() {
 
   useDocumentMeta({
     title: notFound
-      ? "Parish not found · Project Carlo"
+      ? "Church not found · Project Carlo"
       : church
         ? buildChurchTitle(church)
-        : "Parish · Project Carlo",
+        : "Church · Project Carlo",
     description: !notFound && church ? buildChurchDescription(church) : undefined,
     canonicalUrl:
       !notFound && church && churchSlug
-        ? canonicalForPath(`/churches/${encodeURIComponent(churchSlug)}/`)
+        ? canonicalForPath(churchPath(churchSlug))
         : undefined,
     noindex: notFound,
   });
@@ -60,8 +56,8 @@ export function ChurchPage() {
   if (!enabled) {
     return (
       <NotFoundPage
-        title="Parish not found"
-        message="We couldn't find that parish."
+        title="Church not found"
+        message="That link may be out of date, or the church may have closed or merged with another."
       />
     );
   }
@@ -72,35 +68,35 @@ export function ChurchPage() {
   ) {
     return (
       <NotFoundPage
-        title="Parish not found"
-        message="We couldn't find that parish."
+        title="Church not found"
+        message="That link may be out of date, or the church may have closed or merged with another."
       />
     );
   }
 
   if (church && events) {
-    return <ChurchPageContent church={church} events={events} />;
+    return (
+      <ChurchPageContent
+        church={church}
+        city={churchQuery.data?.city ?? null}
+        map={churchQuery.data?.map ?? null}
+        events={events}
+        liveMap={liveMap}
+      />
+    );
   }
 
   return (
     <main className="min-h-svh bg-paper">
-      <header className="sticky top-0 z-40 border-b border-rule-strong bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 pt-[calc(0.85rem+var(--safe-area-inset-top))] pb-3">
-          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-            <ArrowLeftIcon className="size-3" />
-            Back to map
-          </Link>
-          <Masthead compact />
-        </div>
-      </header>
+      <SiteHeader />
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         {churchQuery.isLoading ? (
-          <p className="font-serif text-sm text-ink-soft">Loading parish…</p>
+          <p className="font-serif text-sm text-ink-soft">Loading church…</p>
         ) : null}
         {churchQuery.error ? (
           <InlineQueryError
-            message={"We couldn't load this parish."}
+            message="We couldn’t load this church."
             onRetry={() => churchQuery.refetch()}
           />
         ) : null}
@@ -112,7 +108,7 @@ export function ChurchPage() {
         {eventsQuery.error ? (
           <InlineQueryError
             className="mx-auto max-w-2xl"
-            message={"We couldn't load times for this parish."}
+            message="We couldn’t load times for this church."
             onRetry={() => eventsQuery.refetch()}
           />
         ) : null}

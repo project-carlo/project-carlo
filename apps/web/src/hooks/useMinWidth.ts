@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+/** Where the layouts switch from phone to desktop: Tailwind's `md` breakpoint. */
+export const DESKTOP_MIN_WIDTH = 768;
+
 /** True when `window` matches `(min-width: ${minWidth}px)`. SSR-safe (false until mounted). */
 export function useMinWidth(minWidth: number): boolean {
   const query = `(min-width: ${minWidth}px)`;

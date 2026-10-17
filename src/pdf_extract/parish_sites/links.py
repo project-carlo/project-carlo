@@ -5,8 +5,44 @@ These only read addresses; nothing here opens a page.
 
 from __future__ import annotations
 
+import base64
+import binascii
+import ipaddress
 import re
 from urllib.parse import parse_qs, urlparse
+
+# ── Hosts ───────────────────────────────────────────────────────────────────
+
+_SCHEME = re.compile(r"^[a-z][a-z0-9+.-]*://", flags=re.IGNORECASE)
+# Second-level labels that are, under a country code, a public suffix of their
+# own: stmary.org.au is St Mary's domain, not one shared with every .org.au.
+_COUNTRY_SECOND_LEVELS = frozenset({"ac", "co", "com", "edu", "gov", "net", "org"})
+
+
+def url_host(url: str) -> str:
+    """The lower-cased host of `url`, which may leave out its scheme; "" for none."""
+    try:
+        return (urlparse(url if _SCHEME.match(url) else f"//{url}").hostname or "").lower()
+    except ValueError:  # a malformed address, such as an unclosed "[" in its host
+        return ""
+
+
+def registrable_domain(host: str) -> str:
+    """The domain one owner registered `host` under: parishes.rcda.org -> rcda.org.
+
+    An IP address is its own domain.
+    """
+    host = host.lower().rstrip(".").removeprefix("www.")
+    try:
+        ipaddress.ip_address(host)
+        return host
+    except ValueError:
+        pass
+    labels = host.split(".")
+    keep = 2
+    if len(labels) > 2 and len(labels[-1]) == 2 and labels[-2] in _COUNTRY_SECOND_LEVELS:
+        keep = 3
+    return ".".join(labels[-keep:])
 
 # ── Google Drive ────────────────────────────────────────────────────────────
 
@@ -36,12 +72,33 @@ def google_drive_folder_id(url: str) -> str | None:
 _CONCRETE_DOWNLOAD_RE = re.compile(r"^https?://[^/]+/download_file/(?:view/)?\d+(?:/\d+)?/?$")
 
 
+# DotNetNuke links each uploaded file as /LinkClick.aspx?fileticket=<id>&...,
+# which redirects to the file (Saints Peter & Paul, Plains).
+_DNN_LINKCLICK_RE = re.compile(
+    r"^https?://[^/]+(?:/[^?]*)?/linkclick\.aspx\?(?:[^#]*&)?fileticket=", flags=re.IGNORECASE,
+)
+# GoDaddy's older Website Builder links each uploaded file by its hash, with
+# no file name: nebula.wsimg.com/<hash>?AccessKeyId=... (St. Joseph, Matamoras).
+_GODADDY_NEBULA_RE = re.compile(
+    r"^https?://nebula\.wsimg\.com/[0-9a-f]{32}\?(?:[^#]*&)?accesskeyid=", flags=re.IGNORECASE,
+)
+# A shared Google Doc (Most Holy Trinity, Susquehanna writes its bulletin in
+# one) downloads as a PDF from its export address.
+_GOOGLE_DOC_RE = re.compile(r"^https?://docs\.google\.com/document/d/([\w-]+)")
+GOOGLE_DOC_PDF_EXPORT_URL_TEMPLATE = (
+    "https://docs.google.com/document/d/{doc_id}/export?format=pdf"
+)
+
+
 def document_download_url(url: str) -> str | None:
     """Where to download a link that is a PDF though its address doesn't say so."""
     match = _GOOGLE_DRIVE_FILE_RE.match(url)
     if match:
         return GOOGLE_DRIVE_FILE_DOWNLOAD_URL_TEMPLATE.format(file_id=match.group(1))
-    if _CONCRETE_DOWNLOAD_RE.match(url):
+    match = _GOOGLE_DOC_RE.match(url)
+    if match:
+        return GOOGLE_DOC_PDF_EXPORT_URL_TEMPLATE.format(doc_id=match.group(1))
+    if any(r.match(url) for r in (_CONCRETE_DOWNLOAD_RE, _DNN_LINKCLICK_RE, _GODADDY_NEBULA_RE)):
         return url
     return None
 
@@ -49,6 +106,19 @@ def document_download_url(url: str) -> str | None:
 # Query parameters that online PDF viewers take the document's own URL in:
 # Google Docs' `gview?url=` and pdf.js' `viewer.html?file=`.
 _PDF_VIEWER_URL_PARAMS = ("url", "file", "src")
+
+
+# Pilot Bulletins (thebostonpilot.com/bcd) links each issue as an embed page,
+# bulletinclick_embed.asp?Id=<parish>_<YYMMDD>.pdf, that opens a viewer; the
+# PDF is at Bulletins/<YYMMDD>/<parish>_<YYMMDD>.pdf (St. Therese, Shavertown).
+_PILOT_EMBED_RE = re.compile(
+    r"^https?://(?:www\.)?thebostonpilot\.com/bcd/bulletinclick_embed\.asp"
+    r"\?id=(?P<parish>\d+)_(?P<issue>\d{6})\.pdf$",
+    flags=re.IGNORECASE,
+)
+PILOT_BULLETIN_PDF_URL_TEMPLATE = (
+    "https://www.thebostonpilot.com/bcd/Bulletins/{issue}/{parish}_{issue}.pdf"
+)
 
 
 def unwrap_pdf_viewer_url(url: str) -> str:
@@ -59,6 +129,9 @@ def unwrap_pdf_viewer_url(url: str) -> str:
     parsed = urlparse(url)
     if parsed.path.lower().endswith(".pdf"):
         return url
+    pilot = _PILOT_EMBED_RE.match(url)
+    if pilot:
+        return PILOT_BULLETIN_PDF_URL_TEMPLATE.format(**pilot.groupdict())
     params = parse_qs(parsed.query)
     for name in _PDF_VIEWER_URL_PARAMS:
         for value in params.get(name, []):
@@ -85,6 +158,14 @@ def is_publisher_listing(url: str) -> bool:
     return bool(_PUBLISHER_LISTING_URL.match(url))
 
 
+_IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp")
+
+
+def is_image_url(url: str) -> bool:
+    """An address that names a photo or scan (a JPEG, PNG or WebP file)."""
+    return urlparse(url).path.lower().endswith(_IMAGE_EXTENSIONS)
+
+
 def is_pdf_url(url: str) -> bool:
     """An address that names a PDF, query string or not ("bulletin.pdf?download"),
     and is not a publisher's listing named like one."""
@@ -100,6 +181,30 @@ FLIPBOOK_HOSTS = frozenset({"designrr.page"})
 
 # The viewer the PDF Embedder WordPress plugin renders in place of its PDF link.
 PDF_EMBEDDER_VIEWER_CLASS = "pdfemb-viewer"
+
+# Viewer plugins can hand their settings to the page as base64-encoded JSON,
+# with the PDF's address only inside it: PDF Embedder's iframe
+# (`?pdfemb-data=eyJ...`, Our Lady of Victory, Tannersville) and 3D FlipBook's
+# `FB3D_CLIENT_DATA.push('eyJ...')` (St. Thomas More, Lake Ariel). Base64 of a
+# JSON object starts "eyJ" ('{"').
+_BASE64_JSON_RE = re.compile(r"eyJ[A-Za-z0-9+/_-]{16,}={0,2}")
+
+
+def decoded_base64_json(html: str) -> list[str]:
+    """The base64-encoded JSON objects in `html`, decoded, that name a PDF."""
+    decoded: list[str] = []
+    for match in _BASE64_JSON_RE.finditer(html):
+        blob = match.group(0).rstrip("=")
+        try:
+            text = base64.b64decode(
+                blob.replace("-", "+").replace("_", "/") + "=" * (-len(blob) % 4),
+            ).decode("utf-8")
+        except (binascii.Error, UnicodeDecodeError):
+            continue
+        if ".pdf" in text.lower():
+            decoded.append(text)
+    return decoded
+
 
 # Up to the ".pdf" that ends the path: WordPress uploads can be named
 # "9-20-26.pdf.pdf.pdf", and stopping at the first ".pdf" names a file that 404s.

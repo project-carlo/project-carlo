@@ -1,0 +1,317 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-peters-ontario-county",
+  "content_hash": "bd3e3182b4999117b87a31c72ccdb55ea827b72cd270fa066b709023647dc187",
+  "source_url": "https://media.thechurchcoassets.com/accounts/4026/258f55ad-c215-4428-98cb-000d2a9a6c53-./OT-27-October-4,-2026.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 14946,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 2755,
+    "reasoning_tokens": 1644
+  },
+  "seconds": 21.776,
+  "response_id": "resp_09ee20c64171804a016ac9135973e887d2845b694a0829d80c",
+  "events": [
+    {
+      "church_slug": "st-dominic",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-felix",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-dominic",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-dominic",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-05",
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "date": "2026-10-05",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-felix",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-07",
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Memorial of Our Lady of the Rosary",
+      "raw": {
+        "date": "2026-10-07",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-08",
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "date": "2026-10-08",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-dominic",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-09",
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "date": "2026-10-09",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-felix",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-04",
+      "start_time": "07:15",
+      "end_time": "07:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "date": "2026-10-04",
+        "start_time": "7:15 AM",
+        "end_time": "7:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-felix",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-07",
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "date": "2026-10-07",
+        "start_time": "5:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-08",
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "date": "2026-10-08",
+        "start_time": "5:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-dominic",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-09",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "date": "2026-10-09",
+        "start_time": "11:00 AM",
+        "end_time": "11:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-dominic",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-10",
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "date": "2026-10-10",
+        "start_time": "3:00 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-felix",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-07",
+      "start_time": "12:30",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After the 12:00 PM Mass; Benediction",
+      "raw": {
+        "date": "2026-10-07",
+        "start_time": "12:30 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-francis",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-08",
+      "start_time": "12:30",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After the 12:00 PM Mass; Benediction",
+      "raw": {
+        "date": "2026-10-08",
+        "start_time": "12:30 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "e034b46032f5569440aab3a0c1dc3781097ed2c1e336485f8351cb1204e29fe7"
+}

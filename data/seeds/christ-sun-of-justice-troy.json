@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-sun-of-justice-troy",
+  "status": "approved",
+  "as_of": "2026-10-04T14:46:39Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:49:35Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:47:14Z",
+  "summary": "Single-church RPI university parish. Two bulletins (Sep 27, Oct 4) print an identical schedule box: Mon-Tue 5:00 PM, Wed 9:00 AM, Sun 10:00 AM and 5:00 PM Masses, Sunday confession at 9:15 AM; history agrees. No Saturday vigil and no adoration are listed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "188db4d003ec67065ffac5f34f7ceefdf5b73016667c8e8deaa547b7c047f9da",
+      "fetched_at": "2026-10-04T14:46:39Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "8f60bdbdab083fa47c38265164418203aa405cf41bd529a406babd6c8ffdc605",
+      "fetched_at": "2026-09-28T21:56:53Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-sun-of-justice-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "188db4d003ec",
+          "said": "Monday – Tuesday 5:00 PM",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f60bdbdab08",
+          "said": "Monday – Tuesday 5:00 PM",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "188db4d003ec",
+          "said": "weekly mass Monday 17:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8f60bdbdab08",
+          "said": "weekly mass Monday 17:00"
+        }
+      ],
+      "rationale": "Printed in the MASS/LITURGY SCHEDULE box on page 1 of both bulletins read (Oct 4 and Sep 27); history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-sun-of-justice-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "188db4d003ec",
+          "said": "Monday – Tuesday 5:00 PM",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f60bdbdab08",
+          "said": "Monday – Tuesday 5:00 PM",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "188db4d003ec",
+          "said": "weekly mass Tuesday 17:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8f60bdbdab08",
+          "said": "weekly mass Tuesday 17:00"
+        }
+      ],
+      "rationale": "Printed in the MASS/LITURGY SCHEDULE box on page 1 of both bulletins read (Oct 4 and Sep 27); history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-sun-of-justice-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "188db4d003ec",
+          "said": "Wednesday 9:00 AM",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f60bdbdab08",
+          "said": "Wednesday 9:00 AM",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "188db4d003ec",
+          "said": "weekly mass Wednesday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8f60bdbdab08",
+          "said": "weekly mass Wednesday 09:00"
+        }
+      ],
+      "rationale": "Printed in the MASS/LITURGY SCHEDULE box on page 1 of both bulletins read (Oct 4 and Sep 27); history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-sun-of-justice-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "188db4d003ec",
+          "said": "Sunday 10:00 AM (livestream on YouTube)",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f60bdbdab08",
+          "said": "Sunday 10:00 AM (livestream on YouTube)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "188db4d003ec",
+          "said": "weekly mass Sunday 10:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8f60bdbdab08",
+          "said": "weekly mass Sunday 10:00"
+        }
+      ],
+      "rationale": "Printed in the MASS/LITURGY SCHEDULE box on page 1 of both bulletins read (Oct 4 and Sep 27); history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-sun-of-justice-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "188db4d003ec",
+          "said": "Sunday 5:00 PM Mass",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f60bdbdab08",
+          "said": "Sunday 5:00 PM Mass",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "188db4d003ec",
+          "said": "weekly mass Sunday 17:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "8f60bdbdab08",
+          "said": "weekly mass Sunday 17:00"
+        }
+      ],
+      "rationale": "Printed in the MASS/LITURGY SCHEDULE box on page 1 of both bulletins read (Oct 4 and Sep 27); history agrees for both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-sun-of-justice-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "188db4d003ec",
+          "said": "The Sacrament of Reconciliation is available Sundays at 9:15 AM before Mass and by appointment.",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f60bdbdab08",
+          "said": "The Sacrament of Reconciliation is available Sundays at 9:15 AM before Mass and by appointment.",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "188db4d003ec",
+          "said": "weekly confession Sunday 09:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "8f60bdbdab08",
+          "said": "weekly confession Sunday 09:15 'Before Mass'"
+        }
+      ],
+      "rationale": "Same wording in both bulletins; history agrees. No end time is printed, so end_time is left null (it presumably runs until the 10:00 AM Mass). 'By appointment' has no time and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

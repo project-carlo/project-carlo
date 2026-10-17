@@ -1,0 +1,480 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-patricks-victor",
+  "content_hash": "c9f0f261b6c0641fb8e910f4e2218de71f2d2caad133004e7ffd70c42064c610",
+  "source_url": "https://bulletins.discovermass.com/download.php?bulletin=rkAAPqnlhDOJAS9VBQLbckAfqnFUSK4yW3SmzHi98d0sUS%2Bm3C7wedl4as%2FWQiLRHnXjWP7z%2BweIeK27qjReaqIZ9isyx%2FC%2BojdrjUd6H5E%3D",
+  "fetched_at": "2026-05-04T18:46:00Z",
+  "reference_date": "2026-05-04",
+  "churches": [
+    {
+      "slug": "st-patricks-victor",
+      "name": "St. Patrick's Church",
+      "address": "115 Maple Avenue, Victor, NY 14564"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/c9f0f261b6c0641fb8e910f4e2218de71f2d2caad133004e7ffd70c42064c610.json",
+    "kind": "local_legacy_raw_cache",
+    "modified_at": null,
+    "timestamp_caveat": "Local mtime is not an extraction timestamp; legacy fallback only"
+  },
+  "gemini_church_context_matches": null,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-patricks-victor/c9f0f261b6c0.pdf",
+  "pdf_sha256": "c9f0f261b6c0641fb8e910f4e2218de71f2d2caad133004e7ffd70c42064c610",
+  "label_status": "unlabeled",
+  "published_date": "2026-05-03",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Asian Catholic Communities",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ends 15 minutes before Mass",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "7:30 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ends 15 minutes before Mass",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:30 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ends 15 minutes before Mass",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "7:30 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ends 15 minutes before Mass",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "7:30 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:30",
+      "end_time": "16:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ends 15 minutes before Mass",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:30 PM",
+        "end_time": "4:15 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ends 15 minutes before Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "7:30 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": "10:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ends 15 minutes before Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM",
+        "end_time": "10:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "18:30",
+      "end_time": "19:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "6:30 PM",
+        "end_time": "7:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-05-02",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "First Saturday Mass",
+      "raw": {
+        "date": "2026-05-02",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-05-13",
+      "start_time": "19:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Ascension Vigil",
+      "raw": {
+        "date": "2026-05-13",
+        "start_time": "7:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-05-14",
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Ascension of the Lord",
+      "raw": {
+        "date": "2026-05-14",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-05-02",
+      "start_time": "08:00",
+      "end_time": "08:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "First Saturday; ends 15 minutes before Mass",
+      "raw": {
+        "date": "2026-05-02",
+        "start_time": "8:00 AM",
+        "end_time": "8:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-05-13",
+      "start_time": "18:00",
+      "end_time": "18:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ascension Vigil; ends 15 minutes before Mass",
+      "raw": {
+        "date": "2026-05-13",
+        "start_time": "6:00 PM",
+        "end_time": "6:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-05-14",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 7,
+      "note": "Ascension Day; ends 15 minutes before Mass",
+      "raw": {
+        "date": "2026-05-14",
+        "start_time": "11:00 AM",
+        "end_time": "11:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-05-02",
+      "start_time": "09:30",
+      "end_time": "14:55",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "First Saturday; closes with Benediction",
+      "raw": {
+        "date": "2026-05-02",
+        "start_time": "9:30 AM",
+        "end_time": "2:55 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patricks-victor",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-06-06",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "Young Adult Group event",
+      "raw": {
+        "date": "2026-06-06",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {}
+}

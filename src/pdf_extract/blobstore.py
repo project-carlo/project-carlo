@@ -100,11 +100,13 @@ class LocalBlobStore:
             self.path(key).unlink(missing_ok=True)
 
     def list(self, prefix: str) -> Iterator[str]:
-        base = self.root
+        # Walk only the folder the prefix names, not the whole cache.
+        folder = prefix.rsplit("/", 1)[0] if "/" in prefix else ""
+        base = self.root / _check_key(folder) if folder else self.root
         for path in sorted(base.rglob("*")):
             if not path.is_file() or path.name.startswith("."):
                 continue
-            key = path.relative_to(base).as_posix()
+            key = path.relative_to(self.root).as_posix()
             if key.startswith(prefix):
                 yield key
 

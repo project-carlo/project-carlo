@@ -60,6 +60,7 @@ secrets; use the website in a mobile browser.)
 | `R2_READ_ACCESS_KEY_ID` | Access Key ID of `project-carlo-read` |
 | `R2_READ_SECRET_ACCESS_KEY` | Secret Access Key of `project-carlo-read` |
 | `GEMINI_API_KEY` | the Gemini API key |
+| `OPENAI_API_KEY` | the OpenAI API key, for update-mode (seeded) parishes, which run on `gpt-6-luna` |
 
 Optional: `HEALTHCHECK_URL`, a ping URL from a service such as
 [healthchecks.io](https://healthchecks.io) (free). Set its schedule to weekly

@@ -1,0 +1,581 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-sacred-heart-orchard-park",
+  "status": "approved",
+  "as_of": "2026-10-04T14:26:51Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:34:50Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:36:03Z",
+  "summary": "One church. Mon-Fri 8:30 AM, Saturday 4:30 PM and Sunday 9:00/11:00 AM Masses, Saturday 3:30-4:00 PM confessions, and a first-Friday 3:00 PM Divine Mercy Holy Hour with Benediction in the chapel agree across both bulletins, history and the website. The partner parish Our Lady of Victory's schedule printed on p3 is excluded. Note the Holy Hour's 'next one' dates (Oct 4, Nov 5) don't fall on first Fridays; the standing first-Friday pattern is kept.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "84c32f4a1e95464f055e849e9656edb6edf86f9a30df33e907bda2b35031a6eb",
+      "fetched_at": "2026-10-04T14:26:51Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ad4e87da020f6ee8e862dfa73e19201fad48628ee57008fe333bb5c3883b3e9e",
+      "fetched_at": "2026-09-26T18:54:21Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "SATURDAY 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "October 10th Saturday 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 1,
+          "said": "SATURDAY 4:30PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly mass Saturday 16:30"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Saturday - 4:30 PM"
+        }
+      ],
+      "rationale": "Mass Times box on the cover of both bulletins and the Mass intentions table; history and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "SUNDAY 9:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "October 11th Sunday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 1,
+          "said": "SUNDAY 9:00AM & 11:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly mass Sunday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Sunday - 9:00 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "Mass Times box on the cover of both bulletins and the Mass intentions table; history and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "SUNDAY 9:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "October 11th Sunday 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 1,
+          "said": "SUNDAY 9:00AM & 11:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly mass Sunday 11:00"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Sunday - 9:00 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "Mass Times box on the cover of both bulletins and the Mass intentions table; history and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "WEEKDAY 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "Monday 8:30am (Mass intentions, Oct 5-9)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 3,
+          "said": "Monday 8:30am (Mass intentions, Sep 28-Oct 2)"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly mass Monday 08:30"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Weekday - Monday through Friday 8:30 AM"
+        }
+      ],
+      "rationale": "Cover says 'WEEKDAY 8:30AM'; both weeks' intention tables show 8:30am Monday through Friday (Saturday has only the 4:30pm), and the website says Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "WEEKDAY 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "Tuesday 8:30am (Mass intentions, Oct 5-9)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 3,
+          "said": "Tuesday 8:30am (Mass intentions, Sep 28-Oct 2)"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly mass Tuesday 08:30"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Weekday - Monday through Friday 8:30 AM"
+        }
+      ],
+      "rationale": "Cover says 'WEEKDAY 8:30AM'; both weeks' intention tables show 8:30am Monday through Friday (Saturday has only the 4:30pm), and the website says Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "WEEKDAY 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "Wednesday 8:30am (Mass intentions, Oct 5-9)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 3,
+          "said": "Wednesday 8:30am (Mass intentions, Sep 28-Oct 2)"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly mass Wednesday 08:30"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Weekday - Monday through Friday 8:30 AM"
+        }
+      ],
+      "rationale": "Cover says 'WEEKDAY 8:30AM'; both weeks' intention tables show 8:30am Monday through Friday (Saturday has only the 4:30pm), and the website says Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "WEEKDAY 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "Thursday 8:30am (Mass intentions, Oct 5-9)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 3,
+          "said": "Thursday 8:30am (Mass intentions, Sep 28-Oct 2)"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly mass Thursday 08:30"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Weekday - Monday through Friday 8:30 AM"
+        }
+      ],
+      "rationale": "Cover says 'WEEKDAY 8:30AM'; both weeks' intention tables show 8:30am Monday through Friday (Saturday has only the 4:30pm), and the website says Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "WEEKDAY 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "Friday 8:30am (Mass intentions, Oct 5-9)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 3,
+          "said": "Friday 8:30am (Mass intentions, Sep 28-Oct 2)"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly mass Friday 08:30"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Weekday - Monday through Friday 8:30 AM"
+        }
+      ],
+      "rationale": "Cover says 'WEEKDAY 8:30AM'; both weeks' intention tables show 8:30am Monday through Friday (Saturday has only the 4:30pm), and the website says Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 1,
+          "said": "CONFESSIONS: SATURDAY 3:30-4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 1,
+          "said": "CONFESSIONS: SATURDAY 3:30-4:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly confession Saturday 15:30-16:00"
+        },
+        {
+          "source": "website",
+          "url": "https://olshop.org/mass-schedule.html",
+          "said": "Every Saturday 3:30 to 4:00PM at Our Lady of the Sacred Heart"
+        }
+      ],
+      "rationale": "Same line on both covers; history and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-sacred-heart-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": "Divine Mercy Holy Hour in the chapel; Benediction"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 4,
+          "said": "DIVINE MERCY HOLY HOUR Join us in the Chapel on the 1st Friday of each month at 3pm for: Exposition of the Blessed Sacrament & Eucharistic Adoration ... Benediction. The Next one will be on November 5th"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 4,
+          "said": "... 1st Friday of each month at 3pm ... The Next one will be on October 4th"
+        },
+        {
+          "source": "history",
+          "bulletin": "84c32f4a1e95",
+          "said": "weekly adoration Friday 15:00 first, 'in the chapel; includes Benediction'"
+        }
+      ],
+      "rationale": "Both bulletins state the standing pattern: 1st Friday of each month, 3pm, in the chapel, with Exposition and Benediction. Weeks-of-the-month slots are weekly per the policy. The chapel is read as the parish church's own chapel (the Contemplative Prayer Group also meets 'in the chapel' or on 'the church patio'); no other address is given. 'Holy Hour' alone is not a stated duration, so end_time is left null. Caveat: the 'next one' dates printed are October 4 (a Sunday) and November 5 (a Thursday), neither a first Friday (Oct 2, Nov 6); they look like stale or mistyped dates rather than a change of day, so no dated entry is added. History's older run read the Oct 4 note as a move; that date is past anyway.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "84c32f4a1e95",
+          "page": 3,
+          "said": "Our Lady of Victory ... Weekday Masses: Monday - Saturday: 7:30am & 12:10pm Weekend Masses: Saturday Vigil: 4:30pm Sunday: 8am, 10am, Noon, 4:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad4e87da020f",
+          "page": 3,
+          "said": "same Our Lady of Victory footer"
+        }
+      ],
+      "rationale": "The footer on p3 gives the schedule of Our Lady of Victory Basilica (Lackawanna), the partner parish in the family, which is a different parish's church. All its times (Mon-Sat 7:30 & 12:10, Sat 4:30, Sun 8, 10, Noon, 4:30) are left out of this parish's seed; one entry stands for the group.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

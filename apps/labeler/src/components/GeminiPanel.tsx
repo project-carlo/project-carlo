@@ -46,6 +46,15 @@ function SourceLine({ source }: { source: BulletinDetail["gemini"]["source"] }) 
       </span>
     );
   }
+  if (source.kind === "update") {
+    return (
+      <span title="An update-mode parish: the schedule the call was shown, with the changes the call applied.">
+        <span className="rounded bg-sky-100 px-1 text-xs font-semibold text-sky-800">update</span>{" "}
+        call #{source.llm_call_id} · <b>{source.model ?? "unknown model"}</b> · believed schedule
+        with its applied changes
+      </span>
+    );
+  }
   if (source.kind === "post-processing") {
     return (
       <span title="No cached result for this PDF: these are the bulletin's rows in the event table, after storage and weekly promotion. The model and prompt are not recorded there.">
@@ -213,6 +222,7 @@ export function GeminiPanel({
                   g.event_kind === "weekly" &&
                   g.weeks_of_month.length === 1 &&
                   g.weeks_of_month[0] === "first" &&
+                  !g.exclude_weeks &&
                   !g.note?.trim();
                 return (
                   <div
@@ -232,7 +242,7 @@ export function GeminiPanel({
                     </span>
                     <span className="tabular-nums">{describe(g)}</span>
                     {g.cancelled && <span className="rounded bg-red-100 px-1 text-xs text-red-700 no-underline">cancelled</span>}
-                    {g.weeks_of_month.length > 0 && <span className="text-xs text-sky-700">{describeWeeks(g.weeks_of_month)}</span>}
+                    {g.weeks_of_month.length > 0 && <span className="text-xs text-sky-700">{describeWeeks(g.weeks_of_month, g.exclude_weeks)}</span>}
                     {g.season && <span className="text-xs text-sky-700">{describeSeason(g.season)}</span>}
                     {g.note && <span className="truncate text-xs text-slate-500 italic">{g.note}</span>}
                     {g.problems.length > 0 && (

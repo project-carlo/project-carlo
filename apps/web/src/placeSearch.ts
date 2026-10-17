@@ -1,3 +1,5 @@
+import { YOUR_LOCATION } from "./copy";
+
 const GEOAPIFY_AUTOCOMPLETE_URL =
   "https://api.geoapify.com/v1/geocode/autocomplete";
 
@@ -54,6 +56,21 @@ export interface PlaceSearchResult {
   lat: number;
   lng: number;
   resultType: PlaceResultType;
+  /** The visitor's own position rather than a place they searched for. */
+  isCurrentLocation?: boolean;
+}
+
+/** The pin for where the browser says the visitor is. */
+export function currentLocationPlace(lat: number, lng: number): PlaceSearchResult {
+  return {
+    id: `current-location-${lat}-${lng}`,
+    title: YOUR_LOCATION,
+    subtitle: null,
+    lat,
+    lng,
+    resultType: "unknown",
+    isCurrentLocation: true,
+  };
 }
 
 export class PlaceSearchConfigurationError extends Error {

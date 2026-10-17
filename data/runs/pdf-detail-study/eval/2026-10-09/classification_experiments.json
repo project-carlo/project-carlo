@@ -1,0 +1,2802 @@
+{
+  "false_negative_weight": 5,
+  "false_positive_weight": 1,
+  "targets": {
+    "observed_supported_advantage": {
+      "positives": [
+        "all-saints-corning",
+        "beloved-disciples-lancaster",
+        "blessed-trinity-buffalo",
+        "sacred-heart-auburn-cluster"
+      ],
+      "fitted_stump": {
+        "feature": "min_native_height_low_px",
+        "operator": ">=",
+        "threshold": 2.934451941287879
+      },
+      "experiments": {
+        "all_low": {
+          "tp": 0,
+          "fn": 4,
+          "fp": 0,
+          "tn": 15,
+          "recall": 0.0,
+          "precision": null,
+          "high_detail_count": 0,
+          "weighted_loss_fn5_fp1": 20,
+          "selected": [],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 352,
+            "outcomes": {
+              "exact": 339,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 15
+            },
+            "spurious": 6,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.04155124653739612,
+              "spurious": 0.017045454545454544
+            },
+            "levels": {
+              "strict": {
+                "found": 339,
+                "found_predicted": 339,
+                "precision": 0.9630681818181818,
+                "recall": 0.9390581717451524,
+                "f1": 0.9509116409537167
+              },
+              "core": {
+                "found": 342,
+                "found_predicted": 342,
+                "precision": 0.9715909090909091,
+                "recall": 0.9473684210526315,
+                "f1": 0.9593267882187938
+              },
+              "loose": {
+                "found": 345,
+                "found_predicted": 345,
+                "precision": 0.9801136363636364,
+                "recall": 0.9556786703601108,
+                "f1": 0.967741935483871
+              },
+              "any_time": {
+                "found": 345,
+                "found_predicted": 345,
+                "precision": 0.9801136363636364,
+                "recall": 0.9556786703601108,
+                "f1": 0.967741935483871
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 339,
+            "outcomes": {
+              "exact": 327,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 27
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.07479224376731301,
+              "spurious": 0.014749262536873156
+            },
+            "levels": {
+              "strict": {
+                "found": 327,
+                "found_predicted": 327,
+                "precision": 0.9646017699115044,
+                "recall": 0.9058171745152355,
+                "f1": 0.9342857142857143
+              },
+              "core": {
+                "found": 330,
+                "found_predicted": 330,
+                "precision": 0.9734513274336283,
+                "recall": 0.9141274238227147,
+                "f1": 0.9428571428571428
+              },
+              "loose": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              },
+              "any_time": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              }
+            }
+          }
+        },
+        "all_high": {
+          "tp": 4,
+          "fn": 0,
+          "fp": 15,
+          "tn": 0,
+          "recall": 1.0,
+          "precision": 0.21052631578947367,
+          "high_detail_count": 19,
+          "weighted_loss_fn5_fp1": 15,
+          "selected": [
+            "all-saints-albany",
+            "all-saints-corning",
+            "all-saints-on-the-hudson-mechanicville",
+            "all-saints-syracuse",
+            "assumption-resurrection",
+            "basilica-sacred-heart-syracuse",
+            "beloved-disciples-lancaster",
+            "blessed-family-7-west-seneca",
+            "blessed-sacrament-albany",
+            "blessed-trinity-buffalo",
+            "cathedral-immaculate-conception-syracuse",
+            "catholic-community-buffalo-north",
+            "our-lady-of-fatima-shrine-lewiston",
+            "our-lady-of-the-lakes",
+            "our-lady-of-the-snow-saints-mary-and-martha",
+            "our-lady-of-the-valley",
+            "our-lady-queen-of-peace-st-thomas-more",
+            "our-mother-of-sorrows-holy-cross",
+            "sacred-heart-auburn-cluster"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 343,
+            "outcomes": {
+              "exact": 332,
+              "core": 3,
+              "weekly_vs_dated": 2,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 23
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.06371191135734072,
+              "spurious": 0.014577259475218658
+            },
+            "levels": {
+              "strict": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.967930029154519,
+                "recall": 0.9196675900277008,
+                "f1": 0.9431818181818182
+              },
+              "core": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.9766763848396501,
+                "recall": 0.9279778393351801,
+                "f1": 0.9517045454545454
+              },
+              "loose": {
+                "found": 337,
+                "found_predicted": 337,
+                "precision": 0.9825072886297376,
+                "recall": 0.9335180055401662,
+                "f1": 0.9573863636363636
+              },
+              "any_time": {
+                "found": 337,
+                "found_predicted": 337,
+                "precision": 0.9825072886297376,
+                "recall": 0.9335180055401662,
+                "f1": 0.9573863636363636
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 341,
+            "outcomes": {
+              "exact": 330,
+              "core": 3,
+              "weekly_vs_dated": 2,
+              "wrong_time": 0,
+              "wrong_church": 0,
+              "wrong_type": 0,
+              "missed": 26
+            },
+            "spurious": 6,
+            "rates": {
+              "wrong_church": 0.0,
+              "wrong_type": 0.0,
+              "missed": 0.07202216066481995,
+              "spurious": 0.017595307917888565
+            },
+            "levels": {
+              "strict": {
+                "found": 330,
+                "found_predicted": 330,
+                "precision": 0.967741935483871,
+                "recall": 0.9141274238227147,
+                "f1": 0.9401709401709402
+              },
+              "core": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9765395894428153,
+                "recall": 0.9224376731301939,
+                "f1": 0.9487179487179487
+              },
+              "loose": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.9824046920821115,
+                "recall": 0.9279778393351801,
+                "f1": 0.9544159544159544
+              },
+              "any_time": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.9824046920821115,
+                "recall": 0.9279778393351801,
+                "f1": 0.9544159544159544
+              }
+            }
+          }
+        },
+        "scan_risk": {
+          "tp": 1,
+          "fn": 3,
+          "fp": 1,
+          "tn": 14,
+          "recall": 0.25,
+          "precision": 0.5,
+          "high_detail_count": 2,
+          "weighted_loss_fn5_fp1": 16,
+          "selected": [
+            "blessed-family-7-west-seneca",
+            "blessed-trinity-buffalo"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 352,
+            "outcomes": {
+              "exact": 340,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 14
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.038781163434903045,
+              "spurious": 0.014204545454545454
+            },
+            "levels": {
+              "strict": {
+                "found": 340,
+                "found_predicted": 340,
+                "precision": 0.9659090909090909,
+                "recall": 0.9418282548476454,
+                "f1": 0.9537166900420757
+              },
+              "core": {
+                "found": 343,
+                "found_predicted": 343,
+                "precision": 0.9744318181818182,
+                "recall": 0.9501385041551247,
+                "f1": 0.9621318373071529
+              },
+              "loose": {
+                "found": 346,
+                "found_predicted": 346,
+                "precision": 0.9829545454545454,
+                "recall": 0.9584487534626038,
+                "f1": 0.97054698457223
+              },
+              "any_time": {
+                "found": 346,
+                "found_predicted": 346,
+                "precision": 0.9829545454545454,
+                "recall": 0.9584487534626038,
+                "f1": 0.97054698457223
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 338,
+            "outcomes": {
+              "exact": 326,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 28
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.07756232686980609,
+              "spurious": 0.014792899408284023
+            },
+            "levels": {
+              "strict": {
+                "found": 326,
+                "found_predicted": 326,
+                "precision": 0.9644970414201184,
+                "recall": 0.9030470914127424,
+                "f1": 0.932761087267525
+              },
+              "core": {
+                "found": 329,
+                "found_predicted": 329,
+                "precision": 0.9733727810650887,
+                "recall": 0.9113573407202216,
+                "f1": 0.9413447782546495
+              },
+              "loose": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.9822485207100592,
+                "recall": 0.9196675900277008,
+                "f1": 0.949928469241774
+              },
+              "any_time": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.9822485207100592,
+                "recall": 0.9196675900277008,
+                "f1": 0.949928469241774
+              }
+            }
+          }
+        },
+        "exploratory_native_and_raster": {
+          "tp": 3,
+          "fn": 1,
+          "fp": 14,
+          "tn": 1,
+          "recall": 0.75,
+          "precision": 0.17647058823529413,
+          "high_detail_count": 17,
+          "weighted_loss_fn5_fp1": 19,
+          "selected": [
+            "all-saints-albany",
+            "all-saints-corning",
+            "all-saints-on-the-hudson-mechanicville",
+            "all-saints-syracuse",
+            "basilica-sacred-heart-syracuse",
+            "beloved-disciples-lancaster",
+            "blessed-family-7-west-seneca",
+            "blessed-sacrament-albany",
+            "blessed-trinity-buffalo",
+            "cathedral-immaculate-conception-syracuse",
+            "catholic-community-buffalo-north",
+            "our-lady-of-fatima-shrine-lewiston",
+            "our-lady-of-the-lakes",
+            "our-lady-of-the-snow-saints-mary-and-martha",
+            "our-lady-of-the-valley",
+            "our-lady-queen-of-peace-st-thomas-more",
+            "our-mother-of-sorrows-holy-cross"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 343,
+            "outcomes": {
+              "exact": 330,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 24
+            },
+            "spurious": 6,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.0664819944598338,
+              "spurious": 0.01749271137026239
+            },
+            "levels": {
+              "strict": {
+                "found": 330,
+                "found_predicted": 330,
+                "precision": 0.9620991253644315,
+                "recall": 0.9141274238227147,
+                "f1": 0.9375
+              },
+              "core": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9708454810495627,
+                "recall": 0.9224376731301939,
+                "f1": 0.9460227272727273
+              },
+              "loose": {
+                "found": 336,
+                "found_predicted": 336,
+                "precision": 0.9795918367346939,
+                "recall": 0.9307479224376731,
+                "f1": 0.9545454545454546
+              },
+              "any_time": {
+                "found": 336,
+                "found_predicted": 336,
+                "precision": 0.9795918367346939,
+                "recall": 0.9307479224376731,
+                "f1": 0.9545454545454546
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 342,
+            "outcomes": {
+              "exact": 329,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 0,
+              "wrong_type": 0,
+              "missed": 26
+            },
+            "spurious": 7,
+            "rates": {
+              "wrong_church": 0.0,
+              "wrong_type": 0.0,
+              "missed": 0.07202216066481995,
+              "spurious": 0.02046783625730994
+            },
+            "levels": {
+              "strict": {
+                "found": 329,
+                "found_predicted": 329,
+                "precision": 0.9619883040935673,
+                "recall": 0.9113573407202216,
+                "f1": 0.9359886201991465
+              },
+              "core": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.9707602339181286,
+                "recall": 0.9196675900277008,
+                "f1": 0.9445234708392604
+              },
+              "loose": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.97953216374269,
+                "recall": 0.9279778393351801,
+                "f1": 0.9530583214793741
+              },
+              "any_time": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.97953216374269,
+                "recall": 0.9279778393351801,
+                "f1": 0.9530583214793741
+              }
+            }
+          }
+        },
+        "fitted_stump_in_sample": {
+          "tp": 4,
+          "fn": 0,
+          "fp": 1,
+          "tn": 14,
+          "recall": 1.0,
+          "precision": 0.8,
+          "high_detail_count": 5,
+          "weighted_loss_fn5_fp1": 1,
+          "selected": [
+            "all-saints-corning",
+            "beloved-disciples-lancaster",
+            "blessed-sacrament-albany",
+            "blessed-trinity-buffalo",
+            "sacred-heart-auburn-cluster"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 357,
+            "outcomes": {
+              "exact": 342,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 12
+            },
+            "spurious": 8,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.0332409972299169,
+              "spurious": 0.022408963585434174
+            },
+            "levels": {
+              "strict": {
+                "found": 342,
+                "found_predicted": 342,
+                "precision": 0.957983193277311,
+                "recall": 0.9473684210526315,
+                "f1": 0.9526462395543176
+              },
+              "core": {
+                "found": 345,
+                "found_predicted": 345,
+                "precision": 0.9663865546218487,
+                "recall": 0.9556786703601108,
+                "f1": 0.9610027855153204
+              },
+              "loose": {
+                "found": 348,
+                "found_predicted": 348,
+                "precision": 0.9747899159663865,
+                "recall": 0.96398891966759,
+                "f1": 0.9693593314763231
+              },
+              "any_time": {
+                "found": 348,
+                "found_predicted": 348,
+                "precision": 0.9747899159663865,
+                "recall": 0.96398891966759,
+                "f1": 0.9693593314763231
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 339,
+            "outcomes": {
+              "exact": 328,
+              "core": 3,
+              "weekly_vs_dated": 2,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 27
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.07479224376731301,
+              "spurious": 0.014749262536873156
+            },
+            "levels": {
+              "strict": {
+                "found": 328,
+                "found_predicted": 328,
+                "precision": 0.967551622418879,
+                "recall": 0.9085872576177285,
+                "f1": 0.9371428571428572
+              },
+              "core": {
+                "found": 331,
+                "found_predicted": 331,
+                "precision": 0.976401179941003,
+                "recall": 0.9168975069252078,
+                "f1": 0.9457142857142857
+              },
+              "loose": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              },
+              "any_time": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              }
+            }
+          }
+        },
+        "fitted_stump_leave_one_out": {
+          "tp": 1,
+          "fn": 3,
+          "fp": 1,
+          "tn": 14,
+          "recall": 0.25,
+          "precision": 0.5,
+          "high_detail_count": 2,
+          "weighted_loss_fn5_fp1": 16,
+          "selected": [
+            "blessed-sacrament-albany",
+            "blessed-trinity-buffalo"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 352,
+            "outcomes": {
+              "exact": 340,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 14
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.038781163434903045,
+              "spurious": 0.014204545454545454
+            },
+            "levels": {
+              "strict": {
+                "found": 340,
+                "found_predicted": 340,
+                "precision": 0.9659090909090909,
+                "recall": 0.9418282548476454,
+                "f1": 0.9537166900420757
+              },
+              "core": {
+                "found": 343,
+                "found_predicted": 343,
+                "precision": 0.9744318181818182,
+                "recall": 0.9501385041551247,
+                "f1": 0.9621318373071529
+              },
+              "loose": {
+                "found": 346,
+                "found_predicted": 346,
+                "precision": 0.9829545454545454,
+                "recall": 0.9584487534626038,
+                "f1": 0.97054698457223
+              },
+              "any_time": {
+                "found": 346,
+                "found_predicted": 346,
+                "precision": 0.9829545454545454,
+                "recall": 0.9584487534626038,
+                "f1": 0.97054698457223
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 339,
+            "outcomes": {
+              "exact": 327,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 27
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.07479224376731301,
+              "spurious": 0.014749262536873156
+            },
+            "levels": {
+              "strict": {
+                "found": 327,
+                "found_predicted": 327,
+                "precision": 0.9646017699115044,
+                "recall": 0.9058171745152355,
+                "f1": 0.9342857142857143
+              },
+              "core": {
+                "found": 330,
+                "found_predicted": 330,
+                "precision": 0.9734513274336283,
+                "recall": 0.9141274238227147,
+                "f1": 0.9428571428571428
+              },
+              "loose": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              },
+              "any_time": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              }
+            }
+          }
+        }
+      }
+    },
+    "observed_raster_advantage": {
+      "positives": [
+        "blessed-trinity-buffalo"
+      ],
+      "fitted_stump": {
+        "feature": "mean_image_coverage",
+        "operator": ">=",
+        "threshold": 0.9580423582574504
+      },
+      "experiments": {
+        "all_low": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0,
+          "tn": 18,
+          "recall": 0.0,
+          "precision": null,
+          "high_detail_count": 0,
+          "weighted_loss_fn5_fp1": 5,
+          "selected": [],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 352,
+            "outcomes": {
+              "exact": 339,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 15
+            },
+            "spurious": 6,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.04155124653739612,
+              "spurious": 0.017045454545454544
+            },
+            "levels": {
+              "strict": {
+                "found": 339,
+                "found_predicted": 339,
+                "precision": 0.9630681818181818,
+                "recall": 0.9390581717451524,
+                "f1": 0.9509116409537167
+              },
+              "core": {
+                "found": 342,
+                "found_predicted": 342,
+                "precision": 0.9715909090909091,
+                "recall": 0.9473684210526315,
+                "f1": 0.9593267882187938
+              },
+              "loose": {
+                "found": 345,
+                "found_predicted": 345,
+                "precision": 0.9801136363636364,
+                "recall": 0.9556786703601108,
+                "f1": 0.967741935483871
+              },
+              "any_time": {
+                "found": 345,
+                "found_predicted": 345,
+                "precision": 0.9801136363636364,
+                "recall": 0.9556786703601108,
+                "f1": 0.967741935483871
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 339,
+            "outcomes": {
+              "exact": 327,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 27
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.07479224376731301,
+              "spurious": 0.014749262536873156
+            },
+            "levels": {
+              "strict": {
+                "found": 327,
+                "found_predicted": 327,
+                "precision": 0.9646017699115044,
+                "recall": 0.9058171745152355,
+                "f1": 0.9342857142857143
+              },
+              "core": {
+                "found": 330,
+                "found_predicted": 330,
+                "precision": 0.9734513274336283,
+                "recall": 0.9141274238227147,
+                "f1": 0.9428571428571428
+              },
+              "loose": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              },
+              "any_time": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              }
+            }
+          }
+        },
+        "all_high": {
+          "tp": 1,
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "recall": 1.0,
+          "precision": 0.05263157894736842,
+          "high_detail_count": 19,
+          "weighted_loss_fn5_fp1": 18,
+          "selected": [
+            "all-saints-albany",
+            "all-saints-corning",
+            "all-saints-on-the-hudson-mechanicville",
+            "all-saints-syracuse",
+            "assumption-resurrection",
+            "basilica-sacred-heart-syracuse",
+            "beloved-disciples-lancaster",
+            "blessed-family-7-west-seneca",
+            "blessed-sacrament-albany",
+            "blessed-trinity-buffalo",
+            "cathedral-immaculate-conception-syracuse",
+            "catholic-community-buffalo-north",
+            "our-lady-of-fatima-shrine-lewiston",
+            "our-lady-of-the-lakes",
+            "our-lady-of-the-snow-saints-mary-and-martha",
+            "our-lady-of-the-valley",
+            "our-lady-queen-of-peace-st-thomas-more",
+            "our-mother-of-sorrows-holy-cross",
+            "sacred-heart-auburn-cluster"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 343,
+            "outcomes": {
+              "exact": 332,
+              "core": 3,
+              "weekly_vs_dated": 2,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 23
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.06371191135734072,
+              "spurious": 0.014577259475218658
+            },
+            "levels": {
+              "strict": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.967930029154519,
+                "recall": 0.9196675900277008,
+                "f1": 0.9431818181818182
+              },
+              "core": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.9766763848396501,
+                "recall": 0.9279778393351801,
+                "f1": 0.9517045454545454
+              },
+              "loose": {
+                "found": 337,
+                "found_predicted": 337,
+                "precision": 0.9825072886297376,
+                "recall": 0.9335180055401662,
+                "f1": 0.9573863636363636
+              },
+              "any_time": {
+                "found": 337,
+                "found_predicted": 337,
+                "precision": 0.9825072886297376,
+                "recall": 0.9335180055401662,
+                "f1": 0.9573863636363636
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 341,
+            "outcomes": {
+              "exact": 330,
+              "core": 3,
+              "weekly_vs_dated": 2,
+              "wrong_time": 0,
+              "wrong_church": 0,
+              "wrong_type": 0,
+              "missed": 26
+            },
+            "spurious": 6,
+            "rates": {
+              "wrong_church": 0.0,
+              "wrong_type": 0.0,
+              "missed": 0.07202216066481995,
+              "spurious": 0.017595307917888565
+            },
+            "levels": {
+              "strict": {
+                "found": 330,
+                "found_predicted": 330,
+                "precision": 0.967741935483871,
+                "recall": 0.9141274238227147,
+                "f1": 0.9401709401709402
+              },
+              "core": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9765395894428153,
+                "recall": 0.9224376731301939,
+                "f1": 0.9487179487179487
+              },
+              "loose": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.9824046920821115,
+                "recall": 0.9279778393351801,
+                "f1": 0.9544159544159544
+              },
+              "any_time": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.9824046920821115,
+                "recall": 0.9279778393351801,
+                "f1": 0.9544159544159544
+              }
+            }
+          }
+        },
+        "scan_risk": {
+          "tp": 1,
+          "fn": 0,
+          "fp": 1,
+          "tn": 17,
+          "recall": 1.0,
+          "precision": 0.5,
+          "high_detail_count": 2,
+          "weighted_loss_fn5_fp1": 1,
+          "selected": [
+            "blessed-family-7-west-seneca",
+            "blessed-trinity-buffalo"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 352,
+            "outcomes": {
+              "exact": 340,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 14
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.038781163434903045,
+              "spurious": 0.014204545454545454
+            },
+            "levels": {
+              "strict": {
+                "found": 340,
+                "found_predicted": 340,
+                "precision": 0.9659090909090909,
+                "recall": 0.9418282548476454,
+                "f1": 0.9537166900420757
+              },
+              "core": {
+                "found": 343,
+                "found_predicted": 343,
+                "precision": 0.9744318181818182,
+                "recall": 0.9501385041551247,
+                "f1": 0.9621318373071529
+              },
+              "loose": {
+                "found": 346,
+                "found_predicted": 346,
+                "precision": 0.9829545454545454,
+                "recall": 0.9584487534626038,
+                "f1": 0.97054698457223
+              },
+              "any_time": {
+                "found": 346,
+                "found_predicted": 346,
+                "precision": 0.9829545454545454,
+                "recall": 0.9584487534626038,
+                "f1": 0.97054698457223
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 338,
+            "outcomes": {
+              "exact": 326,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 28
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.07756232686980609,
+              "spurious": 0.014792899408284023
+            },
+            "levels": {
+              "strict": {
+                "found": 326,
+                "found_predicted": 326,
+                "precision": 0.9644970414201184,
+                "recall": 0.9030470914127424,
+                "f1": 0.932761087267525
+              },
+              "core": {
+                "found": 329,
+                "found_predicted": 329,
+                "precision": 0.9733727810650887,
+                "recall": 0.9113573407202216,
+                "f1": 0.9413447782546495
+              },
+              "loose": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.9822485207100592,
+                "recall": 0.9196675900277008,
+                "f1": 0.949928469241774
+              },
+              "any_time": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.9822485207100592,
+                "recall": 0.9196675900277008,
+                "f1": 0.949928469241774
+              }
+            }
+          }
+        },
+        "exploratory_native_and_raster": {
+          "tp": 1,
+          "fn": 0,
+          "fp": 16,
+          "tn": 2,
+          "recall": 1.0,
+          "precision": 0.058823529411764705,
+          "high_detail_count": 17,
+          "weighted_loss_fn5_fp1": 16,
+          "selected": [
+            "all-saints-albany",
+            "all-saints-corning",
+            "all-saints-on-the-hudson-mechanicville",
+            "all-saints-syracuse",
+            "basilica-sacred-heart-syracuse",
+            "beloved-disciples-lancaster",
+            "blessed-family-7-west-seneca",
+            "blessed-sacrament-albany",
+            "blessed-trinity-buffalo",
+            "cathedral-immaculate-conception-syracuse",
+            "catholic-community-buffalo-north",
+            "our-lady-of-fatima-shrine-lewiston",
+            "our-lady-of-the-lakes",
+            "our-lady-of-the-snow-saints-mary-and-martha",
+            "our-lady-of-the-valley",
+            "our-lady-queen-of-peace-st-thomas-more",
+            "our-mother-of-sorrows-holy-cross"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 343,
+            "outcomes": {
+              "exact": 330,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 24
+            },
+            "spurious": 6,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.0664819944598338,
+              "spurious": 0.01749271137026239
+            },
+            "levels": {
+              "strict": {
+                "found": 330,
+                "found_predicted": 330,
+                "precision": 0.9620991253644315,
+                "recall": 0.9141274238227147,
+                "f1": 0.9375
+              },
+              "core": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9708454810495627,
+                "recall": 0.9224376731301939,
+                "f1": 0.9460227272727273
+              },
+              "loose": {
+                "found": 336,
+                "found_predicted": 336,
+                "precision": 0.9795918367346939,
+                "recall": 0.9307479224376731,
+                "f1": 0.9545454545454546
+              },
+              "any_time": {
+                "found": 336,
+                "found_predicted": 336,
+                "precision": 0.9795918367346939,
+                "recall": 0.9307479224376731,
+                "f1": 0.9545454545454546
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 342,
+            "outcomes": {
+              "exact": 329,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 0,
+              "wrong_type": 0,
+              "missed": 26
+            },
+            "spurious": 7,
+            "rates": {
+              "wrong_church": 0.0,
+              "wrong_type": 0.0,
+              "missed": 0.07202216066481995,
+              "spurious": 0.02046783625730994
+            },
+            "levels": {
+              "strict": {
+                "found": 329,
+                "found_predicted": 329,
+                "precision": 0.9619883040935673,
+                "recall": 0.9113573407202216,
+                "f1": 0.9359886201991465
+              },
+              "core": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.9707602339181286,
+                "recall": 0.9196675900277008,
+                "f1": 0.9445234708392604
+              },
+              "loose": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.97953216374269,
+                "recall": 0.9279778393351801,
+                "f1": 0.9530583214793741
+              },
+              "any_time": {
+                "found": 335,
+                "found_predicted": 335,
+                "precision": 0.97953216374269,
+                "recall": 0.9279778393351801,
+                "f1": 0.9530583214793741
+              }
+            }
+          }
+        },
+        "fitted_stump_in_sample": {
+          "tp": 1,
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "recall": 1.0,
+          "precision": 1.0,
+          "high_detail_count": 1,
+          "weighted_loss_fn5_fp1": 0,
+          "selected": [
+            "blessed-trinity-buffalo"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 352,
+            "outcomes": {
+              "exact": 340,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 14
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.038781163434903045,
+              "spurious": 0.014204545454545454
+            },
+            "levels": {
+              "strict": {
+                "found": 340,
+                "found_predicted": 340,
+                "precision": 0.9659090909090909,
+                "recall": 0.9418282548476454,
+                "f1": 0.9537166900420757
+              },
+              "core": {
+                "found": 343,
+                "found_predicted": 343,
+                "precision": 0.9744318181818182,
+                "recall": 0.9501385041551247,
+                "f1": 0.9621318373071529
+              },
+              "loose": {
+                "found": 346,
+                "found_predicted": 346,
+                "precision": 0.9829545454545454,
+                "recall": 0.9584487534626038,
+                "f1": 0.97054698457223
+              },
+              "any_time": {
+                "found": 346,
+                "found_predicted": 346,
+                "precision": 0.9829545454545454,
+                "recall": 0.9584487534626038,
+                "f1": 0.97054698457223
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 339,
+            "outcomes": {
+              "exact": 327,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 27
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.07479224376731301,
+              "spurious": 0.014749262536873156
+            },
+            "levels": {
+              "strict": {
+                "found": 327,
+                "found_predicted": 327,
+                "precision": 0.9646017699115044,
+                "recall": 0.9058171745152355,
+                "f1": 0.9342857142857143
+              },
+              "core": {
+                "found": 330,
+                "found_predicted": 330,
+                "precision": 0.9734513274336283,
+                "recall": 0.9141274238227147,
+                "f1": 0.9428571428571428
+              },
+              "loose": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              },
+              "any_time": {
+                "found": 333,
+                "found_predicted": 333,
+                "precision": 0.9823008849557522,
+                "recall": 0.9224376731301939,
+                "f1": 0.9514285714285714
+              }
+            }
+          }
+        },
+        "fitted_stump_leave_one_out": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 2,
+          "tn": 16,
+          "recall": 0.0,
+          "precision": 0.0,
+          "high_detail_count": 2,
+          "weighted_loss_fn5_fp1": 7,
+          "selected": [
+            "blessed-family-7-west-seneca",
+            "our-lady-of-the-lakes"
+          ],
+          "initial_hybrid": {
+            "label_events": 361,
+            "predicted_events": 352,
+            "outcomes": {
+              "exact": 339,
+              "core": 3,
+              "weekly_vs_dated": 3,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 15
+            },
+            "spurious": 6,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.04155124653739612,
+              "spurious": 0.017045454545454544
+            },
+            "levels": {
+              "strict": {
+                "found": 339,
+                "found_predicted": 339,
+                "precision": 0.9630681818181818,
+                "recall": 0.9390581717451524,
+                "f1": 0.9509116409537167
+              },
+              "core": {
+                "found": 342,
+                "found_predicted": 342,
+                "precision": 0.9715909090909091,
+                "recall": 0.9473684210526315,
+                "f1": 0.9593267882187938
+              },
+              "loose": {
+                "found": 345,
+                "found_predicted": 345,
+                "precision": 0.9801136363636364,
+                "recall": 0.9556786703601108,
+                "f1": 0.967741935483871
+              },
+              "any_time": {
+                "found": 345,
+                "found_predicted": 345,
+                "precision": 0.9801136363636364,
+                "recall": 0.9556786703601108,
+                "f1": 0.967741935483871
+              }
+            }
+          },
+          "repeat_hybrid": {
+            "label_events": 361,
+            "predicted_events": 338,
+            "outcomes": {
+              "exact": 324,
+              "core": 3,
+              "weekly_vs_dated": 5,
+              "wrong_time": 0,
+              "wrong_church": 1,
+              "wrong_type": 0,
+              "missed": 28
+            },
+            "spurious": 5,
+            "rates": {
+              "wrong_church": 0.002770083102493075,
+              "wrong_type": 0.0,
+              "missed": 0.07756232686980609,
+              "spurious": 0.014792899408284023
+            },
+            "levels": {
+              "strict": {
+                "found": 324,
+                "found_predicted": 324,
+                "precision": 0.9585798816568047,
+                "recall": 0.8975069252077562,
+                "f1": 0.927038626609442
+              },
+              "core": {
+                "found": 327,
+                "found_predicted": 327,
+                "precision": 0.9674556213017751,
+                "recall": 0.9058171745152355,
+                "f1": 0.9356223175965666
+              },
+              "loose": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.9822485207100592,
+                "recall": 0.9196675900277008,
+                "f1": 0.949928469241774
+              },
+              "any_time": {
+                "found": 332,
+                "found_predicted": 332,
+                "precision": 0.9822485207100592,
+                "recall": 0.9196675900277008,
+                "f1": 0.949928469241774
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "vectors": [
+    {
+      "parish_slug": "all-saints-albany",
+      "page_count": 7.0,
+      "mean_text_chars": 2131.285714285714,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.5724291353525892,
+      "mean_image_count": 5.428571428571429,
+      "min_line_pitch_low_px": 6.050909090909091,
+      "min_native_height_low_px": 2.5171440972222223,
+      "mean_components": 1306.857142857143
+    },
+    {
+      "parish_slug": "all-saints-corning",
+      "page_count": 8.0,
+      "mean_text_chars": 1256.5,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.23854763037673513,
+      "mean_image_count": 1.25,
+      "min_line_pitch_low_px": 6.516363636363637,
+      "min_native_height_low_px": 3.031032986111111,
+      "mean_components": 712.0
+    },
+    {
+      "parish_slug": "all-saints-on-the-hudson-mechanicville",
+      "page_count": 4.0,
+      "mean_text_chars": 3376.5,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.16330104975829837,
+      "mean_image_count": 2.75,
+      "min_line_pitch_low_px": 5.119999999999999,
+      "min_native_height_low_px": 1.9456444035947713,
+      "mean_components": 1267.0
+    },
+    {
+      "parish_slug": "all-saints-syracuse",
+      "page_count": 6.0,
+      "mean_text_chars": 4355.5,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.03468789381423164,
+      "mean_image_count": 2.5,
+      "min_line_pitch_low_px": 4.887272727272728,
+      "min_native_height_low_px": 2.81018189709596,
+      "mean_components": 3026.8333333333335
+    },
+    {
+      "parish_slug": "assumption-resurrection",
+      "page_count": 6.0,
+      "mean_text_chars": 3129.1666666666665,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.1584657423131781,
+      "mean_image_count": 3.0,
+      "min_line_pitch_low_px": 3.84,
+      "min_native_height_low_px": 0.7214330808080808,
+      "mean_components": 1571.0
+    },
+    {
+      "parish_slug": "basilica-sacred-heart-syracuse",
+      "page_count": 6.0,
+      "mean_text_chars": 2285.5,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.33989148336248154,
+      "mean_image_count": 7.5,
+      "min_line_pitch_low_px": 5.701818181818182,
+      "min_native_height_low_px": 2.0970052083333335,
+      "mean_components": 1102.8333333333333
+    },
+    {
+      "parish_slug": "beloved-disciples-lancaster",
+      "page_count": 10.0,
+      "mean_text_chars": 1838.7,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.2888481060852644,
+      "mean_image_count": 3.7,
+      "min_line_pitch_low_px": 2.792727272727273,
+      "min_native_height_low_px": 3.3948074494949494,
+      "mean_components": 1405.6
+    },
+    {
+      "parish_slug": "blessed-family-7-west-seneca",
+      "page_count": 10.0,
+      "mean_text_chars": 239.5,
+      "scan_fraction": 0.9,
+      "early_scan_count": 3.0,
+      "mean_image_coverage": 0.9160847165149008,
+      "mean_image_count": 2.4,
+      "min_line_pitch_low_px": 4.654545454545454,
+      "min_native_height_low_px": 2.7490727588383836,
+      "mean_components": 1526.2
+    },
+    {
+      "parish_slug": "blessed-sacrament-albany",
+      "page_count": 4.0,
+      "mean_text_chars": 2741.5,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.594164041231267,
+      "mean_image_count": 7.0,
+      "min_line_pitch_low_px": 5.585454545454546,
+      "min_native_height_low_px": 3.0400094696969697,
+      "mean_components": 1920.25
+    },
+    {
+      "parish_slug": "blessed-trinity-buffalo",
+      "page_count": 5.0,
+      "mean_text_chars": 0.0,
+      "scan_fraction": 1.0,
+      "early_scan_count": 3.0,
+      "mean_image_coverage": 1.0,
+      "mean_image_count": 1.0,
+      "min_line_pitch_low_px": 7.447272727272727,
+      "min_native_height_low_px": 512,
+      "mean_components": 1683.6
+    },
+    {
+      "parish_slug": "cathedral-immaculate-conception-syracuse",
+      "page_count": 5.0,
+      "mean_text_chars": 3088.8,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.23882357765910744,
+      "mean_image_count": 8.0,
+      "min_line_pitch_low_px": 5.585454545454546,
+      "min_native_height_low_px": 1.9393939393939394,
+      "mean_components": 1594.6
+    },
+    {
+      "parish_slug": "catholic-community-buffalo-north",
+      "page_count": 8.0,
+      "mean_text_chars": 3178.875,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.1406831211926506,
+      "mean_image_count": 7.875,
+      "min_line_pitch_low_px": 7.214545454545455,
+      "min_native_height_low_px": 1.534051452020202,
+      "mean_components": 2222.75
+    },
+    {
+      "parish_slug": "our-lady-of-fatima-shrine-lewiston",
+      "page_count": 5.0,
+      "mean_text_chars": 2222.0,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.3341480715396437,
+      "mean_image_count": 10.4,
+      "min_line_pitch_low_px": 4.388571428571429,
+      "min_native_height_low_px": 1.9565662202380953,
+      "mean_components": 1289.2
+    },
+    {
+      "parish_slug": "our-lady-of-the-lakes",
+      "page_count": 6.0,
+      "mean_text_chars": 2616.8333333333335,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.02061343161954513,
+      "mean_image_count": 0.5,
+      "min_line_pitch_low_px": 4.421818181818182,
+      "min_native_height_low_px": 2.731790561868687,
+      "mean_components": 1579.0
+    },
+    {
+      "parish_slug": "our-lady-of-the-snow-saints-mary-and-martha",
+      "page_count": 8.0,
+      "mean_text_chars": 2762.25,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.1561028104233821,
+      "mean_image_count": 2.625,
+      "min_line_pitch_low_px": 3.4909090909090907,
+      "min_native_height_low_px": 1.5075547960069444,
+      "mean_components": 1763.625
+    },
+    {
+      "parish_slug": "our-lady-of-the-valley",
+      "page_count": 8.0,
+      "mean_text_chars": 3027.125,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.22374522331433758,
+      "mean_image_count": 55.0,
+      "min_line_pitch_low_px": 6.283636363636363,
+      "min_native_height_low_px": 1.6582919034090908,
+      "mean_components": 1655.0
+    },
+    {
+      "parish_slug": "our-lady-queen-of-peace-st-thomas-more",
+      "page_count": 6.0,
+      "mean_text_chars": 2806.3333333333335,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.1492033063993695,
+      "mean_image_count": 2.5,
+      "min_line_pitch_low_px": 5.12,
+      "min_native_height_low_px": 2.8378708964646466,
+      "mean_components": 1439.8333333333333
+    },
+    {
+      "parish_slug": "our-mother-of-sorrows-holy-cross",
+      "page_count": 8.0,
+      "mean_text_chars": 2757.5,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.1660513853827336,
+      "mean_image_count": 2.75,
+      "min_line_pitch_low_px": 6.516363636363637,
+      "min_native_height_low_px": 2.717092803030303,
+      "mean_components": 1274.125
+    },
+    {
+      "parish_slug": "sacred-heart-auburn-cluster",
+      "page_count": 7.0,
+      "mean_text_chars": 2559.1428571428573,
+      "scan_fraction": 0.0,
+      "early_scan_count": 0.0,
+      "mean_image_coverage": 0.11486811230273382,
+      "mean_image_count": 1.1428571428571428,
+      "min_line_pitch_low_px": 5.585454545454546,
+      "min_native_height_low_px": 3.219854797979798,
+      "mean_components": 1822.0
+    }
+  ],
+  "feature_resolution_experiments": {
+    "dpi60_max250k": {
+      "settings": {
+        "dpi": 60,
+        "max_render_pixels": 250000,
+        "low_detail_max_side": 512,
+        "ink_threshold": 200,
+        "max_pages": null
+      },
+      "current_rule_selected": [
+        "blessed-family-7-west-seneca",
+        "blessed-trinity-buffalo"
+      ],
+      "current_rule_decisions": {
+        "all-saints-albany": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 7,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "all-saints-corning": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 8,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 8,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "all-saints-on-the-hudson-mechanicville": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 4,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "all-saints-syracuse": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 6,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "assumption-resurrection": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 6,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "basilica-sacred-heart-syracuse": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 6,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "beloved-disciples-lancaster": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 10,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 8,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 9,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 10,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "blessed-family-7-west-seneca": {
+          "detail": "high",
+          "reasons": [
+            "early_scan_small_text",
+            "predominantly_scanned_with_small_text"
+          ],
+          "scan_small_page_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "scan_page_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "early_scan_small_page_numbers": [
+            1,
+            2,
+            3
+          ],
+          "error_page_numbers": [],
+          "analyzed_page_count": 10,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 8,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 9,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 10,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "blessed-sacrament-albany": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 4,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "blessed-trinity-buffalo": {
+          "detail": "high",
+          "reasons": [
+            "predominantly_scanned_with_small_text"
+          ],
+          "scan_small_page_numbers": [
+            4
+          ],
+          "scan_page_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 5,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": true,
+              "reasons": [
+                "scan_small_text_evidence"
+              ]
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "cathedral-immaculate-conception-syracuse": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 5,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "catholic-community-buffalo-north": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 8,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 8,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "our-lady-of-fatima-shrine-lewiston": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 5,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "our-lady-of-the-lakes": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 6,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "our-lady-of-the-snow-saints-mary-and-martha": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 8,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 8,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "our-lady-of-the-valley": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 8,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 8,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "our-lady-queen-of-peace-st-thomas-more": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 6,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "our-mother-of-sorrows-holy-cross": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 8,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 8,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        },
+        "sacred-heart-auburn-cluster": {
+          "detail": "low",
+          "reasons": [],
+          "scan_small_page_numbers": [],
+          "scan_page_numbers": [],
+          "early_scan_small_page_numbers": [],
+          "error_page_numbers": [],
+          "analyzed_page_count": 7,
+          "thresholds": {
+            "first_pages": 3,
+            "min_scan_coverage": 0.7,
+            "text_poor_chars": 80,
+            "min_text_like_components": 100,
+            "min_ink_density": 0.015,
+            "max_ink_density": 0.35,
+            "max_component_height_low_detail_px": 6.0,
+            "max_line_pitch_low_detail_px": 12.0
+          },
+          "pages": [
+            {
+              "page_number": 1,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 2,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 3,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 4,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 5,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 6,
+              "scan_small_text": false,
+              "reasons": []
+            },
+            {
+              "page_number": 7,
+              "scan_small_text": false,
+              "reasons": []
+            }
+          ]
+        }
+      },
+      "previous_rule_selected": [
+        "blessed-family-7-west-seneca"
+      ]
+    }
+  }
+}

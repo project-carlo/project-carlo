@@ -2,3 +2,16 @@
   Content-Type: application/octet-stream
   Cache-Control: public, no-cache, must-revalidate
   X-Content-Type-Options: nosniff
+
+# Page dates for the next build's sitemap (scripts/prerender.ts); never a
+# search result, and always fresh so a build never compares against a stale copy.
+/lastmod.json
+  Cache-Control: public, no-cache, must-revalidate
+  X-Robots-Tag: noindex
+
+# The files under /assets/ each build carries over from the previous ones, with
+# the date each left the build (scripts/carry-assets.ts); never a search result,
+# and always fresh so a deploy never carries from a stale copy.
+/asset-manifest.json
+  Cache-Control: public, no-cache, must-revalidate
+  X-Robots-Tag: noindex

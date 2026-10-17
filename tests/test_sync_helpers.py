@@ -19,6 +19,7 @@ from pdf_extract.fetch import (
     _normalize_url_for_request,
     _parse_ecatholic_pdf_date,
     _pick_latest_ecatholic_pdf_url,
+    _pick_parishes_online_issue,
     _resolve_ecatholic_latest_link,
     _resolve_fetch_source,
     _resolve_latest_anchor_link_with_playwright,
@@ -734,3 +735,20 @@ def test_parse_ecatholic_pdf_date() -> None:
     ) == date(2026, 8, 23)
     assert _parse_ecatholic_pdf_date("https://files.ecatholic.com/1/bulletins/latest.pdf") is None
     assert _parse_ecatholic_pdf_date("https://files.ecatholic.com/1/bulletins/20261332.pdf") is None
+
+
+def test_parishes_online_prefers_the_weekly_bulletin_unless_it_is_stale() -> None:
+    def issue(name: str) -> tuple[str, str]:
+        url = f"https://container.parishesonline.com/bulletins/03/0863/{name}.pdf"
+        return f"https://parishesonline.com/publication-page/x?selectedPublication={url}", url
+
+    special_ahead = [issue("20261011S"), issue("20261004B"), issue("20261004S")]
+    assert _pick_parishes_online_issue(special_ahead) == issue("20261004B")
+    same_day = [issue("20261004S"), issue("20261004B")]
+    assert _pick_parishes_online_issue(same_day) == issue("20261004B")
+    # A parish that stopped posting "B" issues: an old one is not chosen.
+    stopped = [issue("20261011S"), issue("20261004S"), issue("20260920B")]
+    assert _pick_parishes_online_issue(stopped) == issue("20261011S")
+    assert _pick_parishes_online_issue([issue("20261004F")]) == issue("20261004F")
+    oldest_first = [issue("20260927B"), issue("20261004S"), issue("20261004B")]
+    assert _pick_parishes_online_issue(oldest_first) == issue("20261004B")

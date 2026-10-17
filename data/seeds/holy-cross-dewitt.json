@@ -1,0 +1,1105 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-cross-dewitt",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:29:58Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:51:45Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Holy Cross, DeWitt, has one church. The eleven weekly Masses are printed in the schedule box of both bulletins and are settled. Reconciliation and Wednesday Adoration appear only in the dated This Week at HC calendar, so I ask whether each is weekly (the Sept 6 bulletin, the website and history say weekly); Saturday 3:30 PM Reconciliation also conflicts with the website's 3:00-3:30 PM.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e642c5c65a9f8db1f88b34f1afdf3c856948a41e1d3d2383842ec6ba17dbd0fe",
+      "fetched_at": "2026-10-11T16:29:58Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "db1313ed873b3c0b548c6a258e3a3c3b42178bbb6e6f84e3fb1ba9ede090b031",
+      "fetched_at": "2026-09-28T00:05:38Z",
+      "published_date": "2026-09-06",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Tuesday 07:45 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Tuesday 07:45 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Wednesday 07:45 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Wednesday 07:45 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Thursday 07:45 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Thursday 07:45 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Friday 07:45 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Friday 07:45 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 3,
+          "said": "The parish office will be closed Monday, October 12 in observance of the holiday. Daily Mass will still take place at 7:45 AM in the church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Weekdays 7:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Monday 07:45 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Monday 07:45 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R18: Columbus Day closes the office but the newest bulletin says the 7:45 AM Mass still takes place; the weekly slot is confirmed, and no cancellation is needed. R1: also in the weekly box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Saturdays 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Saturdays 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Saturday 09:00 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Saturday 09:00 holy-cross-dewitt  “Daily Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Saturdays 4:00 PM VIGIL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Saturdays 4:00 PM VIGIL"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Saturday 16:00 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Saturday 16:00 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Sundays 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Sundays 7:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Sunday 07:30 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Sunday 07:30 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Sundays 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Sundays 10:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Sunday 10:30 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Sunday 10:30 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-dewitt",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "Sundays 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "Sundays 5:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly mass Sunday 17:00 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly mass Sunday 17:00 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Weekly Mass Schedule box and the This Week at HC calendar of the newest bulletin, and in the Sept 6 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "WEDNESDAY, OCTOBER 14 ... 6:30 PM Reconciliation, Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holycrossdewitt.org/penance",
+          "said": "additionally on Wednesday evenings from 6:30 PM - 8:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly confession Wednesday 18:30 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R30/R3: POLICY, Weekly or dated, rule 3, reads a time printed only in a dated weekly calendar as dated, but the same slot recurs in the Sept 6 bulletin and on the website (R6), and extract-mode history has it weekly (R7). Leaning weekly. The Sept 6 bulletin lists no 6:30 PM line. The newest bulletin gives no end time, so none is recorded (the website says 8:00 PM).",
+      "question": "Is this a regular weekly time, or only this week's listing?",
+      "options": [
+        {
+          "label": "Weekly",
+          "leaning": true,
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Only the date printed",
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-14",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekly-recon-adoration"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "THURSDAY, OCTOBER 15 ... 8:15 AM Reconciliation, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 3,
+          "said": "No morning confessions until 9/12"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holycrossdewitt.org/penance",
+          "said": "Priests are available for confession following 7:45 AM Masses on Tuesday and Thursday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly confession Thursday 08:15 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R30/R3: POLICY, Weekly or dated, rule 3, reads a time printed only in a dated weekly calendar as dated, but the same slot recurs in the Sept 6 bulletin and on the website (R6), and extract-mode history has it weekly (R7). Leaning weekly. The Sept 6 bulletin's 'No morning confessions until 9/12' implies regular morning confessions. 8:15 matches the website's 'following the 7:45 AM Mass' worked out per R10.",
+      "question": "Is this a regular weekly time, or only this week's listing?",
+      "options": [
+        {
+          "label": "Weekly",
+          "leaning": true,
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Only the date printed",
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-15",
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekly-recon-adoration"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "SATURDAY, OCTOBER 17 ... 9:30 AM Reconciliation, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 3,
+          "said": "No morning confessions until 9/12"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holycrossdewitt.org/penance",
+          "said": "following ... 9:00 AM Mass on Saturday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly confession Saturday 09:30 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R30/R3: POLICY, Weekly or dated, rule 3, reads a time printed only in a dated weekly calendar as dated, but the same slot recurs in the Sept 6 bulletin and on the website (R6), and extract-mode history has it weekly (R7). Leaning weekly. 9:30 matches the website's 'following the 9:00 AM Mass' (R10, 30 minutes after a weekday Mass).",
+      "question": "Is this a regular weekly time, or only this week's listing?",
+      "options": [
+        {
+          "label": "Weekly",
+          "leaning": true,
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Only the date printed",
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-17",
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekly-recon-adoration"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "WEDNESDAY, OCTOBER 14 ... 7:00 PM Adoration, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 3,
+          "said": "Adoration will still take place with Dc. Dare from 7:00 PM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holycrossdewitt.org/adoration",
+          "said": "Every Wednesday the parish community has Adoration of the Blessed Sacrament available in the main church from 7:00 PM - 8:00 PM."
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly adoration Wednesday 19:00 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly adoration Wednesday 19:00–20:00 holy-cross-dewitt",
+          "page": 3
+        }
+      ],
+      "rationale": "R30/R3: POLICY, Weekly or dated, rule 3, reads a time printed only in a dated weekly calendar as dated, but the same slot recurs in the Sept 6 bulletin and on the website (R6), and extract-mode history has it weekly (R7). Leaning weekly. The newest bulletin gives only the 7:00 PM start; the Sept 6 bulletin and the website give 7:00-8:00 PM, so the weekly option has an 8:00 PM end and the dated option has none. The website adds Evening Prayer and Solemn Benediction at 8:00 PM; not recorded (no bulletin says it).",
+      "question": "Is this a regular weekly time, or only this week's listing?",
+      "options": [
+        {
+          "label": "Weekly",
+          "leaning": true,
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Only the date printed",
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-14",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekly-recon-adoration"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "SATURDAY, OCTOBER 17 ... 3:30 PM Reconciliation, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 5,
+          "said": "SATURDAY, SEPTEMBER 12 ... 3:30 PM Reconciliation, Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holycrossdewitt.org/penance",
+          "said": "Saturdays from 3:00 PM - 3:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "e642c5c65a9f",
+          "said": "weekly confession Saturday 15:30 holy-cross-dewitt",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly confession Saturday 15:30 holy-cross-dewitt",
+          "page": 5
+        }
+      ],
+      "rationale": "R28: both bulletins (different weeks) print 3:30 PM Reconciliation before the 4:00 PM Mass; the website says 3:00 PM - 3:30 PM, which would make the bulletin's 3:30 an end time. POLICY says a clock time stated in the bulletin wins, and R6 says the website never outweighs the newest bulletin, so I lean 3:30 PM weekly (R7: history has it weekly 2/2). The reviewer may know which is right.",
+      "question": "When is Saturday afternoon Reconciliation?",
+      "options": [
+        {
+          "label": "Weekly 3:30 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Weekly 3:00-3:30 PM (website)",
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "15:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Only the date printed (Oct 17, 3:30 PM)",
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-17",
+            "start_time": "15:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db1313ed873b",
+          "page": 3,
+          "said": "No confession on Wednesday, September 9 during Adoration. Adoration will still take place with Dc. Dare from 7:00 PM - 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holycrossdewitt.org/adoration",
+          "said": "Sacrament of Reconciliation is also offered during this time."
+        },
+        {
+          "source": "history",
+          "bulletin": "db1313ed873b",
+          "said": "weekly confession Wednesday 19:00 holy-cross-dewitt  “During Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R29: only the Sept 6 bulletin and the website say Confession is heard during Wednesday Adoration; the newest bulletin lists a separate 6:30 PM Reconciliation and a 7:00 PM Adoration and does not say 'during Adoration'. History has it (1/2). If included it takes the Adoration's hours (R10) with the note During Adoration, overlapping the 6:30 PM Reconciliation above. Leaning include: nothing contradicts it.",
+      "question": "Add Wednesday Confession during Adoration, 7:00-8:00 PM?",
+      "options": [
+        {
+          "label": "Weekly 7:00-8:00 PM, During Adoration",
+          "leaning": true,
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "During Adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holycrossdewitt.org/penance",
+          "said": "Priests are available for confession following 7:45 AM Masses on Tuesday and Thursday and 9:00 AM Mass on Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "TUESDAY, OCTOBER 13: 6:45 AM Faith Formation, 7:45 AM Daily Mass, Church (no Reconciliation listed)"
+        }
+      ],
+      "rationale": "R29 and C9: Tuesday confession after the 7:45 AM Mass is only on the website. The newest bulletin's Tuesday has no Reconciliation line though it lists Thursday's and Saturday's, so the two disagree; leaning leave out (R6: the website does not outweigh the newest bulletin). If included, 8:15 AM per R10.",
+      "question": "Add Tuesday Confession after the 7:45 AM Mass (8:15 AM)?",
+      "options": [
+        {
+          "label": "Weekly Tuesday 8:15 AM",
+          "entry": {
+            "church_slug": "holy-cross-dewitt",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Following 7:45 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 5,
+          "said": "SATURDAY, OCTOBER 17: 12:00 PM Rosary Rally, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 4,
+          "said": "Rosary and Reception THURSDAY, OCTOBER 22, 2026 | 6:00 PM ... pray the Rosary led by Deacon Dare Dutter"
+        }
+      ],
+      "rationale": "R24: a Rosary (the Saturday Rosary Rally and the October 22 Rosary and Reception) is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 4,
+          "said": "SATURDAY, OCTOBER 24 ... The day begins at the Cathedral of the Immaculate Conception with Adoration, Veneration of St. Bernadette Relic, Mass celebrated by Bishop Douglas Lucia"
+        }
+      ],
+      "rationale": "R22, R24: the Syracuse Catholic Women's conference opens with Adoration and Mass at the Cathedral, another parish's church, and the bulletin gives no times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e642c5c65a9f",
+          "page": 6,
+          "said": "The church & chapel are also open for prayer & devotion during this time (Monday through Friday office hours)"
+        }
+      ],
+      "rationale": "R26, POLICY, Churches and chapels: the chapel in the church is open for prayer and adoration during office hours, but no definite Adoration time is given, so nothing is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

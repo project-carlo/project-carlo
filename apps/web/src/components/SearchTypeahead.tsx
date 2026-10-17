@@ -12,13 +12,21 @@ import type FuseType from "fuse.js";
 import { fetchAllChurchesForSearch, type ChurchSearchResult } from "../api";
 import { formatAddress } from "../utils";
 import { wantsCurrentLocation } from "../lib/currentLocationQuery";
+import { useBrowserLocation } from "../hooks/useBrowserLocation";
+import { track } from "../lib/analytics";
 import {
   canSearchPlaces,
+  currentLocationPlace,
   PlaceSearchConfigurationError,
   searchPlaces,
   type PlaceSearchResult,
 } from "../placeSearch";
 import { SearchIcon, XIcon } from "@/components/icons";
+import {
+  FINDING_YOUR_LOCATION,
+  UNNAMED_CHURCH,
+  USE_MY_LOCATION,
+} from "../copy";
 import {
   Command,
   CommandEmpty,
@@ -34,7 +42,6 @@ import {
 
 const DEBOUNCE_MS = 200;
 type SearchMode = "place" | "parish";
-type LocationStatus = "idle" | "requesting" | "error";
 
 interface SearchTypeaheadProps {
   onChurchSelect: (church: ChurchSearchResult) => void;
@@ -44,6 +51,8 @@ interface SearchTypeaheadProps {
   hideModeToggle?: boolean;
   /** Input/icon sizing variant. `md` (default) matches the map header; `lg` renders the hero size used on the landing page. */
   size?: "md" | "lg";
+  /** The place search's placeholder, where the default won't fit. */
+  placePlaceholder?: string;
 }
 
 export function SearchTypeahead({
@@ -52,15 +61,13 @@ export function SearchTypeahead({
   filterButton,
   hideModeToggle = false,
   size = "md",
+  placePlaceholder = "Search for a city, ZIP, or address…",
 }: SearchTypeaheadProps) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [searchMode, setSearchMode] = useState<SearchMode>("place");
-  const [locationStatus, setLocationStatus] =
-    useState<LocationStatus>("idle");
-  const [locationError, setLocationError] = useState<string | null>(null);
   const searchAnchorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -142,14 +149,26 @@ export function SearchTypeahead({
   const activeResults = isPlaceMode ? placeResults : parishResults;
   const hasResults = activeResults.length > 0;
   const isLoading = isPlaceMode ? placesLoading : churchesLoading;
-  const heading = isPlaceMode ? "Places" : "Matching parishes";
-  const placeholder = isPlaceMode
-    ? "Search for a city, ZIP, or address…"
-    : "Search for a parish…";
-  const emptyMessage = isPlaceMode
-    ? "No matching places."
-    : "No matching parishes.";
-  const modeButtonLabel = isPlaceMode ? "Search parishes" : "Search places";
+  const heading = isPlaceMode ? "Places" : "Matching churches";
+  const placeholder = isPlaceMode ? placePlaceholder : "Search for a church…";
+  // "No results" only once a search has run on what's in the box: not while
+  // the debounce lags the typing, and not for a query too short to search,
+  // which would otherwise read as a search that found nothing.
+  const searchSettled = debouncedQuery === query;
+  const searchRan = isPlaceMode
+    ? shouldSearchPlaces
+    : trimmedDebouncedQuery.length >= 2 && fuse != null;
+  // Echo what was searched, so a typo is easy to spot, and say what to try.
+  const emptyMessage = !searchSettled
+    ? null
+    : !searchRan
+      ? isPlaceMode
+        ? "Keep typing a town, ZIP code, or address."
+        : "Keep typing a church name."
+      : isPlaceMode
+        ? `No places match “${trimmedDebouncedQuery}”. Try a town name or ZIP code.`
+        : `No churches match “${trimmedDebouncedQuery}”. Try fewer words, or part of the name.`;
+  const modeButtonLabel = isPlaceMode ? "Search churches" : "Search places";
   const placeSearchNotConfigured =
     isPlaceMode && placeError instanceof PlaceSearchConfigurationError;
 
@@ -161,6 +180,7 @@ export function SearchTypeahead({
 
   const handleChurchSelect = useCallback(
     (church: ChurchSearchResult) => {
+      track("search_select", { kind: "church", target: church.slug });
       onChurchSelect(church);
       clearQuery();
     },
@@ -169,49 +189,27 @@ export function SearchTypeahead({
 
   const handlePlaceSelect = useCallback(
     (place: PlaceSearchResult) => {
+      // Never the place itself: it could be where the visitor lives.
+      track("search_select", { kind: "place" });
       onPlaceSelect(place);
       clearQuery();
     },
     [clearQuery, onPlaceSelect],
   );
 
-  const handleCurrentLocationSelect = useCallback(() => {
-    if (!navigator.geolocation) {
-      setLocationStatus("error");
-      setLocationError("Location is not available in this browser.");
-      return;
-    }
-
-    setLocationStatus("requesting");
-    setLocationError(null);
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        onPlaceSelect({
-          id: `current-location-${position.coords.latitude}-${position.coords.longitude}`,
-          title: "Your current location",
-          subtitle: "From your browser",
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-          resultType: "unknown",
-        });
-        setLocationStatus("idle");
+  const {
+    status: locationStatus,
+    error: locationError,
+    request: handleCurrentLocationSelect,
+  } = useBrowserLocation(
+    useCallback(
+      ({ lat, lng }) => {
+        onPlaceSelect(currentLocationPlace(lat, lng));
         clearQuery();
       },
-      (error) => {
-        setLocationStatus("error");
-        setLocationError(
-          error.code === error.PERMISSION_DENIED
-            ? "Location permission was denied."
-            : "Couldn't get your current location.",
-        );
-      },
-      {
-        enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 60000,
-      },
-    );
-  }, [clearQuery, onPlaceSelect]);
+      [clearQuery, onPlaceSelect],
+    ),
+  );
 
   const getChurchLocationText = useCallback((church: ChurchSearchResult) => {
     const address = formatAddress(church);
@@ -274,7 +272,7 @@ export function SearchTypeahead({
                 aria-label={
                   isPlaceMode
                     ? "Search for a city, ZIP code, or address"
-                    : "Search for parish by name"
+                    : "Search for a church by name"
                 }
                 autoComplete="off"
                 className={`min-w-0 flex-1 bg-transparent font-serif text-ink outline-none placeholder:text-ink-soft placeholder:italic ${
@@ -342,7 +340,7 @@ export function SearchTypeahead({
             {showCurrentLocationOption ? (
               <CommandGroup className="[&_[cmdk-group-heading]]:hidden">
                 <CommandItem
-                  value="Use your current location"
+                  value={USE_MY_LOCATION}
                   onSelect={handleCurrentLocationSelect}
                   disabled={locationStatus === "requesting"}
                   className="group relative cursor-pointer gap-0 rounded-none border-l-2 border-transparent px-3 py-2.5 font-serif text-base text-ink data-[disabled=true]:pointer-events-none data-[selected=true]:border-rubric data-[selected=true]:bg-paper-deep/60 data-[selected=true]:text-ink"
@@ -350,11 +348,13 @@ export function SearchTypeahead({
                   <div className="min-w-0">
                     <div className="truncate">
                       {locationStatus === "requesting"
-                        ? "Requesting your location…"
-                        : "Use your current location"}
+                        ? FINDING_YOUR_LOCATION
+                        : USE_MY_LOCATION}
                     </div>
-                    <div className="mt-0.5 truncate text-sm text-ink-soft">
-                      {locationError ?? "Center the map where you are"}
+                    <div
+                      className={`mt-0.5 text-sm text-ink-soft ${locationError ? "" : "truncate"}`}
+                    >
+                      {locationError ?? "Show churches around you"}
                     </div>
                   </div>
                 </CommandItem>
@@ -363,15 +363,19 @@ export function SearchTypeahead({
             {showSearchStatus ? (
               isLoading ? (
                 <div className="px-3 py-4 font-serif text-sm text-ink-soft">
-                  {isPlaceMode ? "Searching places…" : "Loading parishes…"}
+                  {isPlaceMode ? "Searching places…" : "Loading churches…"}
                 </div>
               ) : placeSearchNotConfigured ? (
+                // A setup problem: name it for a developer; a visitor can
+                // only be told it won't work, since trying again won't help.
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
-                  Place search needs a Geoapify API key.
+                  {import.meta.env.DEV
+                    ? "Place search needs a Geoapify API key."
+                    : "Place search isn’t available right now."}
                 </CommandEmpty>
               ) : isPlaceMode && placeError ? (
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
-                  Place search failed. Try again.
+                  Couldn’t search places just now. Try again in a moment.
                 </CommandEmpty>
               ) : hasResults ? (
                 <CommandGroup className="[&_[cmdk-group-heading]]:hidden">
@@ -404,7 +408,7 @@ export function SearchTypeahead({
                           >
                             <div className="min-w-0">
                               <div className="truncate">
-                                {church.name ?? "Unnamed parish"}
+                                {church.name ?? UNNAMED_CHURCH}
                               </div>
                               {locationText ? (
                                 <div className="mt-0.5 truncate text-sm text-ink-soft">
@@ -416,11 +420,11 @@ export function SearchTypeahead({
                         );
                       })}
                 </CommandGroup>
-              ) : (
+              ) : emptyMessage ? (
                 <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
                   {emptyMessage}
                 </CommandEmpty>
-              )
+              ) : null
             ) : null}
           </CommandList>
           {isPlaceMode ? (

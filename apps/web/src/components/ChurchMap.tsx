@@ -7,25 +7,19 @@ import {
   useRef,
   useState,
 } from "react";
-import type { RefObject } from "react";
+import type { ReactNode, Ref, RefObject } from "react";
 import { Link } from "react-router-dom";
-import {
-  MapContainer,
-  Marker,
-  Polygon,
-  Popup,
-  TileLayer,
-  useMap,
-  useMapEvents,
-} from "react-leaflet";
 import type {
   LeafletEventHandlerFnMap,
   Map as LeafletMap,
   Marker as LeafletMarker,
 } from "leaflet";
 import L from "leaflet";
-import type { ChurchMapItem } from "../types";
+import { MapContainer, Marker, Polygon, Popup, TileLayer } from "./Leaflet";
+import { useMap, useMapEvents } from "../lib/leafletMap";
+import type { ChurchMapItem, EventSummary } from "../types";
 import type { MapView } from "../lib/mapView";
+import type { MapStart } from "../lib/mapStart";
 import {
   buildClusterIndex,
   convexHull,
@@ -34,8 +28,22 @@ import {
   type ClusterIndex,
   type MapCluster,
 } from "../lib/mapClusters";
+import {
+  CHURCH_PIN_ANCHOR,
+  CHURCH_PIN_BODY,
+  CHURCH_PIN_SIZE,
+  clusterAnchor,
+  clusterDiameter,
+  CLUSTER_Z_INDEX_OFFSET,
+  CURRENT_CHURCH_PIN_BODY,
+  CURRENT_CHURCH_Z_INDEX_OFFSET,
+} from "../lib/churchPin";
+import { useDocumentLinks } from "../lib/documentLinks";
+import { OSM_TILE_URL } from "../lib/staticMap";
 import { rollUpEventsByDay } from "../lib/eventRollup";
 import { formatAddress } from "../utils";
+import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
+import { UNNAMED_CHURCH } from "../copy";
 import { Fleuron } from "@/components/Fleuron";
 
 const OSM_ATTRIBUTION =
@@ -51,6 +59,11 @@ const POPUP_DAY_ROWS = 3;
 const POPUP_MIN_WIDTH = 225;
 const POPUP_MAX_WIDTH = 275;
 
+/** The name-only popup is cut to its name instead, up to a width that wraps
+ *  a long one rather than covering the small map it opens on. */
+const COMPACT_POPUP_MIN_WIDTH = 0;
+const COMPACT_POPUP_MAX_WIDTH = 240;
+
 /* A cross-in-roundel pin: cream disc with a brass ring, a rubric-red Latin
  * cross at the center — and, for a searched place, a solid rubric pin. Both
  * shapes live in one hidden sprite so nothing is fetched from a CDN at runtime
@@ -65,6 +78,7 @@ const POPUP_MAX_WIDTH = 275;
  * The searched-place pin has no CSS shadow, so it keeps its filter. */
 const MARKER_SPRITE_ID = "church-map-pin-sprite";
 const CHURCH_PIN_ID = "church-map-pin";
+const CURRENT_CHURCH_PIN_ID = "church-map-current-pin";
 const PLACE_PIN_ID = "church-map-place-pin";
 
 const markerSpriteSvg = `
@@ -76,13 +90,10 @@ const markerSpriteSvg = `
     </filter>
   </defs>
   <symbol id="${CHURCH_PIN_ID}" viewBox="0 0 34 42" fill="none">
-    <path d="M17 2C9.27 2 3 8.27 3 16c0 3.7 1.73 7.3 4 10.5C9.5 30 13.5 34.4 15.8 38.6a1.35 1.35 0 0 0 2.4 0C20.5 34.4 24.5 30 27 26.5 29.27 23.3 31 19.7 31 16 31 8.27 24.73 2 17 2Z"
-          fill="var(--paper)" stroke="var(--brass)" stroke-width="1.3" />
-    <circle cx="17" cy="16" r="9.5" fill="none" stroke="var(--rule-strong)" stroke-width="0.8" />
-    <g stroke="var(--rubric)" stroke-width="2" stroke-linecap="round">
-      <path d="M17 9.5 V 21.5" />
-      <path d="M12.5 13.5 H 21.5" />
-    </g>
+    ${CHURCH_PIN_BODY}
+  </symbol>
+  <symbol id="${CURRENT_CHURCH_PIN_ID}" viewBox="0 0 34 42" fill="none">
+    ${CURRENT_CHURCH_PIN_BODY}
   </symbol>
   <symbol id="${PLACE_PIN_ID}" viewBox="0 0 32 42" fill="none">
     <g filter="url(#place-pin-shadow)">
@@ -109,10 +120,19 @@ const pinHtml = (symbolId: string, width: number, height: number) =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" aria-hidden="true"><use href="#${symbolId}" /></svg>`;
 
 const markerIcon = L.divIcon({
-  html: pinHtml(CHURCH_PIN_ID, 34, 42),
+  html: pinHtml(CHURCH_PIN_ID, ...CHURCH_PIN_SIZE),
   className: "church-map-marker",
-  iconSize: [34, 42],
-  iconAnchor: [17, 40],
+  iconSize: CHURCH_PIN_SIZE,
+  iconAnchor: CHURCH_PIN_ANCHOR,
+  popupAnchor: [0, -34],
+});
+
+/** A church page's own church, on its map. */
+const currentMarkerIcon = L.divIcon({
+  html: pinHtml(CURRENT_CHURCH_PIN_ID, ...CHURCH_PIN_SIZE),
+  className: "church-map-marker is-current",
+  iconSize: CHURCH_PIN_SIZE,
+  iconAnchor: CHURCH_PIN_ANCHOR,
   popupAnchor: [0, -34],
 });
 
@@ -132,15 +152,27 @@ interface ChurchMapProps {
     churchId?: number;
     placeTitle?: string;
     placeSubtitle?: string | null;
+    /** False leaves the pin's popup closed until it's clicked. */
+    openPlacePopup?: boolean;
     zoom?: number;
     requestId?: number;
   } | null;
-  /** Camera to mount the map at; falls back to the Rochester-area default. */
-  initialView?: MapView | null;
+  /** Where to mount the map; falls back to the Rochester-area default. Read
+   *  once, on mount. */
+  start?: MapStart | null;
   /** Fires after the user finishes panning/zooming so the view can be persisted. */
   onViewChange?: (view: MapView) => void;
   /** Removes the searched-place pin; the popup offers it as a button. */
   onClearPlace?: () => void;
+  /** Extra layers and behaviors, rendered inside the map so they can `useMap`. */
+  children?: ReactNode;
+  /** Gets the Leaflet map, for controls laid over it (MapCornerControls). */
+  mapRef?: Ref<LeafletMap | null>;
+  /** On a church page's map, its church, whose pin is marked as the page's. */
+  currentChurchId?: number;
+  /** Church pins open a small card with only the church's name, for a map
+   *  too small to hold the full one (the city and church pages' previews). */
+  compactPopups?: boolean;
 }
 
 /**
@@ -304,6 +336,95 @@ function ChangeView({
   return null;
 }
 
+/** Room kept between the covered area and the edges of the free area. */
+const START_AREA_MARGIN = 24;
+
+/**
+ * Moves the map, without animating, so the pin the open popup points at is
+ * in the middle of the part of the map the floating UI leaves clear, both
+ * across and down, or, if that would put the card above it under the UI or
+ * off the top, as near the middle as keeps the card's top clear. Does
+ * nothing with no popup open.
+ */
+function centerOpenPopup(map: LeafletMap): void {
+  const open: L.Popup[] = [];
+  map.eachLayer((layer) => {
+    if (layer instanceof L.Popup && layer.isOpen()) open.push(layer);
+  });
+  const element = open[0]?.getElement();
+  const latlng = open[0]?.getLatLng();
+  if (!element || !latlng) return;
+
+  const insets = overlayInsets(map);
+  const size = map.getSize();
+  const pin = map.latLngToContainerPoint(latlng);
+  // From the card's top down to the point the pin stands on, measured within
+  // the popup pane: PopupPaneElevator brings that pane's offset in line with
+  // the map's only once the running script is done, so just after the map
+  // has moved (as it does as it opens and resizes) the card isn't over the
+  // pin yet.
+  const pane = map.getPane("popupPane");
+  if (!pane) return;
+  const above =
+    map.latLngToLayerPoint(latlng).y -
+    (element.getBoundingClientRect().top - pane.getBoundingClientRect().top);
+  const wanted = L.point(
+    (insets.x + size.x) / 2,
+    Math.max((insets.y + size.y) / 2, insets.y + START_AREA_MARGIN + above),
+  );
+  // setView, not panBy: it also stops the pan the popup's own autoPan may
+  // have started for the map's old size.
+  map.setView(
+    map.containerPointToLatLng(size.divideBy(2).add(pin.subtract(wanted))),
+    map.getZoom(),
+    { animate: false },
+  );
+}
+
+/**
+ * Centres the open popup's pin (centerOpenPopup), as it mounts. For
+ * the city or church page's map opening over the whole window, which otherwise keeps
+ * the centre it had in the page, so a pin picked there could open anywhere
+ * on the big map, its card under the panel or off the top. Mounted with the
+ * open map's controls, so by then the map has its new size, the pin its
+ * full card, and the panels it must clear are in place.
+ */
+export function CenterOpenPopupOnMount({ map }: { map: LeafletMap | null }) {
+  const mapRef = useRef(map);
+  useEffect(() => {
+    if (mapRef.current) centerOpenPopup(mapRef.current);
+  }, []);
+  return null;
+}
+
+/**
+ * Puts a start chosen for the visitor in the part of the map the floating UI
+ * leaves clear: the point of a "near" start where a search result would go,
+ * every church of an "area" start in view. Run as the map is created, before
+ * any layer or listener is added, so no tiles load for the provisional view
+ * and the move isn't reported as the visitor's own (which would write a
+ * location they never chose into the URL).
+ */
+function placeStart(map: LeafletMap, start: MapStart): void {
+  if (start.kind === "near") {
+    const { lat, lng, zoom } = start.view;
+    map.setView(
+      centerInFreeArea(map, [lat, lng], zoom, overlayInsets(map)),
+      zoom,
+      { animate: false },
+    );
+  } else if (start.kind === "area") {
+    map.fitBounds(start.bounds, {
+      paddingTopLeft: overlayInsets(map).add([
+        START_AREA_MARGIN,
+        START_AREA_MARGIN,
+      ]),
+      paddingBottomRight: [START_AREA_MARGIN, START_AREA_MARGIN],
+      animate: false,
+    });
+  }
+}
+
 /**
  * Reports the map's camera up to the parent after each pan/zoom settles, so the
  * view can be persisted to the URL. Read-only — it never moves the map itself.
@@ -319,15 +440,29 @@ function ViewReporter({ onViewChange }: { onViewChange: (view: MapView) => void 
 }
 
 /**
- * Popup body for one parish.
+ * The popup schedule's caption: the service its times are for. The map shows
+ * one service at a time, so every time in a popup is the same service; the
+ * caption says which, since the rows themselves are only days and times.
+ */
+function scheduleCaption(events: EventSummary[]): string {
+  const types = new Set(events.map((event) => event.type));
+  if (types.size === 1) {
+    const [type] = types;
+    return EVENT_TYPE_LABELS[type];
+  }
+  return "Times";
+}
+
+/**
+ * Popup body for one church.
  *
- * Split out of `ChurchMarker` on purpose: react-leaflet renders a popup's
- * children only once Leaflet has opened it, so keeping this in its own
- * component means the rollup, the date formatting and ~20 elements per parish
- * are built for the one open popup rather than for all ~130 pins on every
- * filter change.
+ * Split out of `ChurchMarker` on purpose: `Popup` renders its children only
+ * once Leaflet has opened it, so keeping this in its own component means the
+ * rollup, the date formatting and ~20 elements per church are built for the
+ * one open popup rather than for all ~130 pins on every filter change.
  */
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
+  const documentLinks = useDocumentLinks();
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
   // that order while collapsing each day's several times onto one row.
   const dayRows = useMemo(
@@ -345,7 +480,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
           `.map-popup-*` in app.css. */}
       <div className="map-popup-head space-y-1">
         <h3 className="font-display text-[1.35rem] leading-[1.15] font-normal text-ink">
-          {church.name ?? "Unnamed parish"}
+          {church.name ?? UNNAMED_CHURCH}
         </h3>
         {addressLine ? (
           <p className="font-serif text-[0.875rem] leading-snug text-ink-soft">
@@ -357,36 +492,45 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
       <div className="map-popup-body">
         {/* The caption rides in the rule rather than sitting on its own line
             below it — one divider instead of two in a 250px-wide card. */}
-        <Fleuron label="Upcoming" className="mb-2.5" />
+        <Fleuron
+          label={scheduleCaption(church.upcoming_events)}
+          className="mb-2.5"
+        />
 
         <ul role="list" className="m-0 space-y-1.5 p-0 list-none">
           {visibleRows.length > 0 ? (
             visibleRows.map((row) => (
-              <li
-                key={row.key}
-                className="flex items-baseline gap-2 font-serif text-[0.9rem]"
-              >
-                {/* Small caps here so a day reads the same in the popup
-                    as it does in the church page's schedule column. */}
-                <span className="smallcaps text-[0.9375rem] text-ink">
-                  {row.label || "Upcoming"}
-                </span>
-                <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
-                <span className="text-right tabular-nums text-rubric">
-                  {row.times.map((time, index) => (
-                    // The separator sits outside the nowrap span so a long
-                    // day wraps between times, never inside "10:30 a.m.".
-                    <Fragment key={time}>
-                      {index > 0 ? " · " : null}
-                      <span className="whitespace-nowrap">{time}</span>
-                    </Fragment>
-                  ))}
-                </span>
+              <li key={row.key} className="font-serif text-[0.9rem]">
+                <div className="flex items-baseline gap-2">
+                  {/* Small caps here so a day reads the same in the popup
+                      as it does in the church page's schedule column. */}
+                  <span className="smallcaps text-[0.9375rem] text-ink">
+                    {row.label || "Upcoming"}
+                  </span>
+                  <span className="min-w-3 flex-1 translate-y-[-3px] border-b border-dotted border-rule-strong" />
+                  <span className="text-right tabular-nums text-rubric">
+                    {row.times.map((time, index) => (
+                      // The separator sits outside the nowrap span so a long
+                      // day wraps between times, never inside "10:30 a.m.".
+                      <Fragment key={time}>
+                        {index > 0 ? " · " : null}
+                        <span className="whitespace-nowrap">{time}</span>
+                      </Fragment>
+                    ))}
+                  </span>
+                </div>
+                {/* A monthly or seasonal slot needs its qualifier here: the
+                    day heading above says "Friday" either way. */}
+                {row.note ? (
+                  <div className="text-[0.8125rem] leading-snug italic text-ink-faint">
+                    {row.note}
+                  </div>
+                ) : null}
               </li>
             ))
           ) : (
             <li className="font-serif text-[0.9rem] italic text-ink-faint">
-              No services listed yet.
+              No times listed yet.
             </li>
           )}
           {hiddenRowCount > 0 ? (
@@ -400,6 +544,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
       <div className="map-popup-foot">
         <Link
           to={`/churches/${church.slug}/`}
+          reloadDocument={documentLinks}
           className="map-popup-foot-link font-serif text-[0.9375rem]"
         >
           <span>Full schedule</span>
@@ -410,14 +555,33 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
   );
 }
 
+/**
+ * Popup body for one church on a map too small for ChurchPopupBody: just its
+ * name, linking to its page.
+ */
+function ChurchPopupName({ church }: { church: ChurchMapItem }) {
+  const documentLinks = useDocumentLinks();
+  return (
+    <div className="map-popup-compact">
+      <Link
+        to={`/churches/${church.slug}/`}
+        reloadDocument={documentLinks}
+        className="map-popup-compact-link font-display text-[0.9375rem] leading-[1.2]"
+      >
+        {church.name ?? UNNAMED_CHURCH}
+      </Link>
+    </div>
+  );
+}
+
 const SELECTED_MARKER_CLASS = "is-selected";
 
 /**
  * Marks the pin whose popup is open. Leaflet gives that marker no class of
  * its own, so along a city street the card could be pointing at any one of a
  * dozen pins; `.church-map-marker.is-selected` in app.css lifts and haloes
- * the right one. The handler object is memoized because react-leaflet
- * re-binds every listener when its identity changes.
+ * the right one. The handler object is memoized because `Marker` re-binds
+ * every listener when its identity changes.
  */
 function useSelectedMarkerClass(markerRef: RefObject<LeafletMarker | null>) {
   return useMemo(
@@ -435,10 +599,14 @@ function useSelectedMarkerClass(markerRef: RefObject<LeafletMarker | null>) {
 
 const ChurchMarker = memo(function ChurchMarker({
   church,
+  current,
   openPopupRequestId,
   onPopupRequestHandled,
+  compact,
 }: {
   church: MappedChurch;
+  /** The church a church page is about, on its map. */
+  current: boolean;
   /**
    * Set only on the marker a selection targets, and bumped on every repeat
    * selection. Leaving it undefined everywhere else keeps the other markers'
@@ -451,6 +619,8 @@ const ChurchMarker = memo(function ChurchMarker({
    * would re-open its popup every time zooming brought it back.
    */
   onPopupRequestHandled: (requestId: number) => void;
+  /** Whether the popup shows only the church's name. */
+  compact: boolean;
 }) {
   const markerRef = useRef<LeafletMarker | null>(null);
   useEffect(() => {
@@ -460,24 +630,25 @@ const ChurchMarker = memo(function ChurchMarker({
     }
   }, [openPopupRequestId, onPopupRequestHandled]);
 
-  // A fresh array literal here would look like a moved marker to react-leaflet,
-  // which would call setLatLng (and re-project and re-transform the pin) on
-  // every render.
-  const position = useMemo<[number, number]>(
-    () => [church.latitude, church.longitude],
-    [church.latitude, church.longitude],
-  );
   const eventHandlers = useSelectedMarkerClass(markerRef);
 
   return (
     <Marker
       ref={markerRef}
-      icon={markerIcon}
-      position={position}
+      icon={current ? currentMarkerIcon : markerIcon}
+      position={[church.latitude, church.longitude]}
+      zIndexOffset={current ? CURRENT_CHURCH_Z_INDEX_OFFSET : 0}
       eventHandlers={eventHandlers}
     >
-      <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
-        <ChurchPopupBody church={church} />
+      <Popup
+        minWidth={compact ? COMPACT_POPUP_MIN_WIDTH : POPUP_MIN_WIDTH}
+        maxWidth={compact ? COMPACT_POPUP_MAX_WIDTH : POPUP_MAX_WIDTH}
+      >
+        {compact ? (
+          <ChurchPopupName church={church} />
+        ) : (
+          <ChurchPopupBody church={church} />
+        )}
       </Popup>
     </Marker>
   );
@@ -490,22 +661,8 @@ function hasCoords(church: ChurchMapItem): church is MappedChurch {
   return church.latitude !== null && church.longitude !== null;
 }
 
-/** From a church pin's tip (its anchor) up to the middle of its round head. */
-const PIN_HEAD_RISE = 24;
-
-/** Roundel diameter by cluster size: a lone church's is the size of a pin's
- *  head, a small group's about a pin wide, and a city-sized one reads as
- *  bigger without swallowing its neighbours. */
-function clusterDiameter(count: number): number {
-  if (count === 1) return 28;
-  if (count < 10) return 32;
-  if (count < 50) return 38;
-  if (count < 100) return 44;
-  return 50;
-}
-
 // One icon per count: `L.divIcon` options are plain data, and reusing the
-// same object keeps react-leaflet from calling setIcon on every re-render.
+// same object keeps `Marker` from calling setIcon on every re-render.
 const clusterIcons = new Map<number, L.DivIcon>();
 
 function clusterIcon(count: number): L.DivIcon {
@@ -516,9 +673,7 @@ function clusterIcon(count: number): L.DivIcon {
       html: `<span class="church-map-cluster-disc" style="width:${size}px;height:${size}px"><span class="church-map-cluster-count">${count}</span></span>`,
       className: "church-map-cluster",
       iconSize: [size, size],
-      // Centred where a pin's head would be, not on the point itself (where a
-      // pin puts its tip), so a roundel splits into pins at the same height.
-      iconAnchor: [size / 2, size / 2 + PIN_HEAD_RISE],
+      iconAnchor: clusterAnchor(size),
     });
     clusterIcons.set(count, icon);
   }
@@ -534,10 +689,6 @@ const ClusterMarker = memo(function ClusterMarker({
   onSelect: (cluster: MapCluster) => void;
   onHover: (cluster: MapCluster | null) => void;
 }) {
-  const position = useMemo<[number, number]>(
-    () => [cluster.lat, cluster.lng],
-    [cluster.lat, cluster.lng],
-  );
   const eventHandlers = useMemo<LeafletEventHandlerFnMap>(
     () => ({
       click: () => onSelect(cluster),
@@ -549,10 +700,9 @@ const ClusterMarker = memo(function ClusterMarker({
   return (
     <Marker
       icon={clusterIcon(cluster.count)}
-      position={position}
+      position={[cluster.lat, cluster.lng]}
       title={`${cluster.count} ${cluster.count === 1 ? "church" : "churches"} — zoom in`}
-      // Above the pins, so a count is never hidden behind a neighbour's pin.
-      zIndexOffset={500}
+      zIndexOffset={CLUSTER_Z_INDEX_OFFSET}
       eventHandlers={eventHandlers}
     />
   );
@@ -588,23 +738,49 @@ function readViewport(map: LeafletMap): Viewport {
  * The church pins and cluster roundels for the current view.
  *
  * Only what falls in (and just around) the viewport is rendered, and the set
- * is recomputed once each pan or zoom settles, so the DOM holds tens of
- * markers however many churches the snapshot has.
+ * is recomputed once each pan or zoom settles, and as a pan nears the edge of
+ * what's drawn, so the DOM holds tens of markers however many churches the
+ * snapshot has.
  */
 function ClusteredChurchMarkers({
   index,
+  currentChurchId,
   popupRequest,
   onPopupRequestHandled,
+  compactPopups,
 }: {
   index: ClusterIndex<MappedChurch>;
+  currentChurchId: number | undefined;
   popupRequest: { churchId: number; requestId: number } | null;
   onPopupRequestHandled: (requestId: number) => void;
+  compactPopups: boolean;
 }) {
   const map = useMap();
   const [viewport, setViewport] = useState(() => readViewport(map));
   const [hovered, setHovered] = useState<MapCluster | null>(null);
+  // What's drawn, or about to be: kept as it's set rather than once React has
+  // rendered it, so the move events a drag fires before then don't each ask
+  // for the same redraw again.
+  const drawnRef = useRef(viewport);
+  const redraw = () => {
+    drawnRef.current = readViewport(map);
+    setViewport(drawnRef.current);
+  };
   useMapEvents({
-    moveend: () => setViewport(readViewport(map)),
+    moveend: redraw,
+    // A pan can outrun the padding (one swipe across a city or church page's
+    // small map does), and the ground it drags in would have no markers until it
+    // stopped. So once the view is within half the padding of the edge of
+    // what's drawn, the set is redrawn around it. Not while zooming: the
+    // zoom is between levels then, and moveend redraws it.
+    move: () => {
+      const drawn = drawnRef.current;
+      if (map.getZoom() !== drawn.zoom) return;
+      const [west, south, east, north] = drawn.bbox;
+      const ahead = map.getBounds().pad(VIEWPORT_PADDING / 2);
+      if (L.latLngBounds([south, west], [north, east]).contains(ahead)) return;
+      redraw();
+    },
   });
 
   const entries = useMemo(
@@ -674,8 +850,6 @@ function ClusteredChurchMarkers({
   return (
     <>
       {coverage ? (
-        // Options as props, not `pathOptions`: react-leaflet applies those
-        // through setStyle, which ignores `className`.
         <Polygon
           positions={coverage}
           className="church-map-coverage"
@@ -696,12 +870,14 @@ function ClusteredChurchMarkers({
           <ChurchMarker
             key={entry.item.id}
             church={entry.item}
+            current={entry.item.id === currentChurchId}
             openPopupRequestId={
               popupRequest?.churchId === entry.item.id
                 ? popupRequest.requestId
                 : undefined
             }
             onPopupRequestHandled={onPopupRequestHandled}
+            compact={compactPopups}
           />
         ),
       )}
@@ -718,14 +894,16 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
     lng: number;
     title: string;
     subtitle?: string | null;
+    openPopup?: boolean;
     requestId?: number;
   };
   onClear?: () => void;
 }) {
   const markerRef = useRef<LeafletMarker | null>(null);
+  const openPopup = place.openPopup ?? true;
   useEffect(() => {
-    markerRef.current?.openPopup();
-  }, [place.requestId]);
+    if (openPopup) markerRef.current?.openPopup();
+  }, [place.requestId, openPopup]);
 
   return (
     <Marker
@@ -737,7 +915,7 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
       <Popup minWidth={POPUP_MIN_WIDTH} maxWidth={POPUP_MAX_WIDTH}>
         <div className="map-popup-solo space-y-1.5">
           <div className="smallcaps text-[0.8125rem] text-ink-faint">
-            Searched place
+            Pinned place
           </div>
           <h3 className="font-display text-[1.25rem] leading-[1.15] font-normal text-ink">
             {place.title}
@@ -765,21 +943,32 @@ const SearchPlaceMarker = memo(function SearchPlaceMarker({
 export const ChurchMap = memo(function ChurchMap({
   churches,
   centerOn,
-  initialView,
+  start,
   onViewChange,
   onClearPlace,
+  children,
+  mapRef,
+  currentChurchId,
+  compactPopups = false,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
     () => buildClusterIndex(withCoords),
     [withCoords],
   );
-  // MapContainer only reads center/zoom on mount, which is exactly what we want:
-  // restore the persisted view once, then let the user (and `centerOn`) drive it.
+  // MapContainer only reads center/zoom (and whenReady) on mount, which is
+  // exactly what we want: open on the start once, then let the user (and
+  // `centerOn`) drive it. A view from the URL is mounted as it is; any other
+  // start is placed by `placeStart`, which MapContainer runs synchronously
+  // once the map has a view, before it renders a single layer.
+  const initialView = start?.kind === "view" ? start.view : null;
   const center: [number, number] = initialView
     ? [initialView.lat, initialView.lng]
     : defaultCenter;
   const zoom = initialView?.zoom ?? 11;
+  function handleReady(map: LeafletMap) {
+    if (start) placeStart(map, start);
+  }
 
   // The last selection whose popup has been opened; see ChurchMarker.
   const [handledRequestId, setHandledRequestId] = useState<number | null>(
@@ -799,24 +988,28 @@ export const ChurchMap = memo(function ChurchMap({
 
   return (
     <MapContainer
+      ref={mapRef}
       center={center}
       zoom={zoom}
       className="church-map h-full w-full"
       scrollWheelZoom
       zoomControl={false}
+      whenReady={handleReady}
     >
       {centerOn && <ChangeView center={centerOn} minZoom={selectedSoloZoom} />}
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
       <PopupPaneElevator />
       <TileLayer
         attribution={OSM_ATTRIBUTION}
-        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url={OSM_TILE_URL}
         maxZoom={19}
       />
       <ClusteredChurchMarkers
         index={clusterIndex}
+        currentChurchId={currentChurchId}
         popupRequest={popupRequest}
         onPopupRequestHandled={setHandledRequestId}
+        compactPopups={compactPopups}
       />
       {centerOn?.placeTitle ? (
         <SearchPlaceMarker
@@ -825,11 +1018,13 @@ export const ChurchMap = memo(function ChurchMap({
             lng: centerOn.lng,
             title: centerOn.placeTitle,
             subtitle: centerOn.placeSubtitle,
+            openPopup: centerOn.openPlacePopup,
             requestId: centerOn.requestId,
           }}
           onClear={onClearPlace}
         />
       ) : null}
+      {children}
     </MapContainer>
   );
 });

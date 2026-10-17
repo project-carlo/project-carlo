@@ -14,8 +14,8 @@
   "published_date": "2026-09-27",
   "note": "",
   "labeler": "lyonsl2",
-  "seconds_spent": 334,
-  "updated_at": "2026-10-02T21:24:25Z",
+  "seconds_spent": 400,
+  "updated_at": "2026-10-04T22:40:34Z",
   "events": [
     {
       "church_slug": "all-saints-syracuse",
@@ -30,7 +30,8 @@
       "season": null,
       "page_number": 5,
       "note": "Traditional Music",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -45,7 +46,8 @@
       "season": null,
       "page_number": 5,
       "note": "Gospel Choir",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -60,7 +62,8 @@
       "season": null,
       "page_number": 5,
       "note": "Contemporary Music & African Choir",
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -75,7 +78,8 @@
       "season": null,
       "page_number": 5,
       "note": null,
-      "origin": "gemini"
+      "origin": "gemini",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -90,7 +94,8 @@
       "season": null,
       "page_number": 5,
       "note": null,
-      "origin": "gemini-edited"
+      "origin": "gemini-edited",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -105,7 +110,8 @@
       "season": null,
       "page_number": 5,
       "note": null,
-      "origin": "human"
+      "origin": "human",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -120,7 +126,8 @@
       "season": null,
       "page_number": 5,
       "note": null,
-      "origin": "human"
+      "origin": "human",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -135,7 +142,8 @@
       "season": null,
       "page_number": 5,
       "note": null,
-      "origin": "human"
+      "origin": "human",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -150,7 +158,8 @@
       "season": null,
       "page_number": 5,
       "note": null,
-      "origin": "human"
+      "origin": "human",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -165,7 +174,8 @@
       "season": null,
       "page_number": 5,
       "note": "Replaced by Liturgy of the Word with Communion",
-      "origin": "gemini-edited"
+      "origin": "gemini-edited",
+      "optional": null
     },
     {
       "church_slug": "all-saints-syracuse",
@@ -180,7 +190,24 @@
       "season": null,
       "page_number": 5,
       "note": "Replaced by Liturgy of the Word with Communion",
-      "origin": "human"
+      "origin": "human",
+      "optional": null
+    },
+    {
+      "church_slug": "all-saints-syracuse",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-28",
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "Replaced by Liturgy of the Word with Communion",
+      "origin": "human",
+      "optional": "include"
     }
   ]
 }

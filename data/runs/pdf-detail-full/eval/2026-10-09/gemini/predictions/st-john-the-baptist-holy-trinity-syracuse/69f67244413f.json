@@ -1,0 +1,71 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-john-the-baptist-holy-trinity-syracuse",
+  "content_hash": "69f67244413f19dfd5f52300a6788f0fe89de91f38729615791cbb3423691feb",
+  "source_url": "https://www.stjohnthebaptist-holytrinity.com/wp-content/uploads/sites/13/2026/09/september-27.pdf",
+  "fetched_at": "2026-09-28T00:12:36Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "name": "St. John the Baptist and Holy Trinity Church",
+      "address": "406 Court Street, Syracuse, NY 13208"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/69f67244413f19dfd5f52300a6788f0fe89de91f38729615791cbb3423691feb-e70f6de25763.json",
+    "modified_at": "2026-09-28T00:22:31.209000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-john-the-baptist-holy-trinity-syracuse/69f67244413f.pdf",
+  "pdf_sha256": "aaf670ac87fbe356a0e4c2300ada3948ad8abb2f69669e18ad35dd643b78adf8",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "17:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:00 PM",
+        "end_time": "5:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1950,
+    "output_tokens": 317
+  }
+}

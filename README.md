@@ -72,7 +72,8 @@ pnpm label --demo    # the same on a generated dataset (data/labeler-demo/, untr
 pnpm dev:labeler     # Vite dev server on :5174, proxying /api to a running `pnpm label`
 ```
 
-The PDF shown is the stored compacted copy (the first 10 pages), so page
+The PDF shown is the stored compacted copy (the first 10 pages, or the parish's
+limit in `data/bulletin_page_limits.csv`), so page
 numbers match what Gemini saw. Gemini's output is shown read-only: the cached
 result for the bulletin's content hash (the current classifier version first),
 or else the database's post-processed events. Accept rows one at a time
@@ -89,7 +90,7 @@ committed to git. Each file (`schema_version` 1) holds:
 - `events`: one per event, each with:
   - `church_slug`, `event_type` (`mass`/`confession`/`adoration`), `event_kind` (`weekly`/`specific_date`)
   - `day_of_week` or `date`, `start_time` and `end_time` (24-hour `HH:MM`), `cancelled`, `page_number`, `note`
-  - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These two apply to weekly rows only.
+  - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week), `exclude_weeks` (true when the listed weeks are the ones skipped: "every Sunday except the last" is `["last"]` excluded; an exclusion the remaining weeks can say, such as "every week except the first", is written as those weeks instead; files saved before this field existed lack it, which reads as false) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These apply to weekly rows only.
   - `origin`: `human`, `gemini` or `gemini-edited`
   - `optional`: `null` for a required event; `include` or `exclude` for one where it is a judgment call whether it belongs at all, naming the preferred answer (press `o` on a row to cycle). Files saved before this field existed lack it, which reads as `null`.
 
@@ -102,12 +103,14 @@ rejects any slug or hash that would put it outside `data/labels`.
 pnpm eval --classifier gpt-6-luna --limit 2   # smoke test on two bulletins
 pnpm eval --classifier gpt-6-luna             # every label marked done
 pnpm eval --classifier gpt-6-luna --status done --status in_progress --parish all-saints-albany
+pnpm eval --classifier gemini-flash-qualified
 ```
 
 Any classifier in `src/pdf_extract/classifiers/__init__.py` can be run
-(`gemini-flash`, `gpt-6-luna`, `gpt-6-luna-nonstrict`, ...). Each bulletin is
-classified as of the day it was fetched, and results are cached by classifier
-version (model, prompt, schema and settings), PDF and church list, so re-running
+(`gemini-flash`, `gemini-flash-qualified`, `gpt-6-luna`, `gpt-6-luna-nonstrict`,
+...). Each bulletin is classified as of the day it was fetched, and results are
+cached by classifier version (model, prompt, schema and settings), PDF and
+church list, so re-running
 an unchanged classifier makes no API calls (`--refresh` forces them). Output
 goes to `data/runs/<classifier>/eval/<version>/`, which is committed (the rest of
 `data/runs/`, including the result cache, stays gitignored). `<version>` is
@@ -120,14 +123,32 @@ so paths stay inside Windows' 260-character limit:
   `wrong_bulletin`, token usage and timing, so each file lines up with its label.
 - `run.json`: cache hits, errors, skipped bulletins and summed token usage.
 
-The `gpt-6-luna` classifiers (`classifiers/openai_responses.py`) use the
-Responses API with the schema and prompt in `classifiers/qualified_schedule.py`:
-the production schema plus `weeks_of_month` and `season` on weekly slots, and the
-production Gemini prompt extended with the labeling rules (weekly vs dated,
-chapels, Communion Services, times given relative to a Mass), its static part
-sent first as an explicit prompt-cache breakpoint. They need `OPENAI_API_KEY`.
+The classifiers built for scoring against the labels share one prompt and one
+schema:
 
-Their model settings can be changed per run:
+- the policy in `classifiers/schedule_policy.py` (`POLICY`): the production
+  Gemini prompt extended with the rules the labels follow (weekly vs dated,
+  chapels and parish adoration chapels, Communion Services, Benediction, Masses
+  closed to the public, special occasions in a regular slot, positive weeks of
+  the month only, stated clock times over times worked out from a Mass, only
+  dates the bulletin prints or pins to one clear day such as "this Saturday"),
+  sent first and unchanged so it can be
+  served from the prompt cache, then the parish's churches and today's date,
+  then the PDF;
+- the schema in `classifiers/qualified_schedule.py`: the production schema plus
+  `weeks_of_month`, `exclude_weeks` and `season` on weekly slots.
+
+Editing either changes the version of every classifier that uses them.
+
+- `gpt-6-luna` and `gpt-6-luna-nonstrict` (`classifiers/openai_responses.py`)
+  run them on the OpenAI Responses API, the policy as an explicit prompt-cache
+  breakpoint. They need `OPENAI_API_KEY`.
+- `gemini-flash-qualified` (`classifiers/gemini_qualified.py`) runs them through
+  the production Gemini call (same model, client, timeout, backoff and lenient
+  parse as `gemini-flash`). It needs `GEMINI_API_KEY`, and takes only `--model`
+  (another Gemini model, written under `data/runs/<model>-qualified/`).
+
+The `gpt-6-luna` model settings can be changed per run:
 
 ```bash
 pnpm eval --classifier gpt-6-luna --reasoning high --image-detail high
@@ -155,6 +176,7 @@ the same flags to find that run.
 pnpm eval:report --classifier gpt-6-luna                  # its current version
 pnpm eval:report --classifier gpt-6-luna --pdf-as-images  # the run made with those flags
 pnpm eval:report --classifier gpt-6-luna --model gpt-6.1-sol
+pnpm eval:report --classifier gemini-flash-qualified
 pnpm eval:report --classifier gpt-6-luna --version <ver>  # an older version's output
 ```
 
@@ -162,13 +184,16 @@ Writes `report.md` and `report.json` next to the predictions
 (`src/pdf_extract/evals/report.py`). Labels marked done are scored (`--status
 in_progress` adds those); skipped labels never are. Within each bulletin every
 label event is paired with at most one prediction, in tiers tried strictest
-first:
+first. Pairing is one-to-one except in `weekly_vs_dated`, where one weekly
+prediction covers every dated label event of its slot (church, type, start,
+cancelled and weekday, on a date its weeks of month and season include); recall
+counts each of those label events and precision counts the prediction once.
 
 | Tier | Agrees on | Counts as found |
 |---|---|---|
 | `exact` | church, type, weekly/dated, weekday or date, start, cancelled, end time, weeks of month, season | strict, core, loose, any_time |
 | `core` | the same, but end time, weeks of month or season differ | core, loose, any_time |
-| `weekly_vs_dated` | weekly on one side, dated on the other, same weekday; church, type, start, cancelled agree | loose, any_time |
+| `weekly_vs_dated` | weekly on one side, dated on the other, same weekday, the date in the weekly side's weeks of month and season; church, type, start, cancelled agree | loose, any_time |
 | `wrong_church` | everything in `core` but the church | never |
 | `wrong_type` | everything in `core` but the event type | never |
 | `wrong_time` | church, type, kind, weekday or date, cancelled; the start time differs | any_time |
@@ -177,14 +202,21 @@ The report gives precision, recall and F1 (pooled and per-bulletin average) at
 the strict, core, loose and any_time levels; the wrong-church, wrong-type, missed and
 spurious rates; the same broken down by event type and by weekly/dated; how
 often end time, weeks of month, season and the presence of a note agree on the
-pairs found at the loose level; per-bulletin perfect rate, published-date accuracy, wrong-bulletin
-agreement and event-count error; token usage and timing; and every bulletin's
-differences, worst bulletin first.
+pairs found at the loose level (a covering weekly prediction is one pair); per-bulletin perfect rate, published-date accuracy, wrong-bulletin
+agreement and event-count error; token usage, its cost at standard-tier list
+prices and timing; and every bulletin's differences, worst bulletin first.
+Prices are kept for `gpt-6-luna` and `gemini-3-flash-preview` only
+(`src/pdf_extract/evals/pricing.py`); other models' runs are reported unpriced.
+Gemini predictions made before thinking tokens were recorded are flagged, as
+their cost leaves out that billed output.
 
 Optional label events are left out of all of those numbers. They are paired
 after the required events, against the predictions still unpaired, in the tiers
-that count as found at any_time; a prediction paired with one is neither found
-nor spurious. The report's "Optional events" section counts how often the
+that count as found at any_time and in the same order; in `weekly_vs_dated` a
+weekly prediction already covering a slot's required dated events covers its
+optional ones too. A dated `exclude` event is never paired with a weekly
+prediction. A prediction paired only with optional events is neither found nor
+spurious. The report's "Optional events" section counts how often the
 classifier made the preferred choice: predicted an `include` event, or left out
 an `exclude` one.
 
@@ -225,6 +257,18 @@ is stored but never shown. The report lists the old issues, and flags a third
 bulletin for one week for a person to look at. A parish is stale when its
 newest bulletin is two weeks old, however recently the site served it.
 
+`fetch` works on several parishes at once (`pnpm fetch -- --workers N`,
+default 6, each with its own browser), but never has two workers fetching
+from one site: all ParishesOnline parishes count as one site, as do all
+eCatholic and all Discover Mass parishes, and any other site counts by its
+domain (so `parishes.rcda.org` and `www.rcda.org` are one). A worker holds one
+site at a time: its parish's while its browser finds the bulletin, then the
+PDF's while it downloads it, and lets go before compacting the PDF, so the
+next parish on a site starts then. Requests a page makes to other sites, and
+redirects, are not held back; with only a few workers, no site gets more than
+a few at once. A worker whose browser will not launch, or stops answering,
+gets a new one; the fetch fails only when no worker can.
+
 The run's status decides what happens next:
 
 | Status | Exit code | Meaning |
@@ -234,6 +278,22 @@ The run's status decides what happens next:
 | `failed` | 1 | A stage crashed. |
 
 A local run never publishes anything.
+
+### Fetch-only parishes
+
+A parish with `fetch_only` set to `true` in `data/parishes.csv` has its
+bulletins fetched and stored every week, but `process` makes no model call for
+it (Gemini or OpenAI), and the snapshot leaves out its churches, so the site
+doesn't show them yet. Its fetch results get their own section of the run
+report, and its failures don't count toward the publishing checks.
+`pnpm diocese promote` marks every parish row it adds this way, so a new
+diocese's bulletins can be checked before any money goes on extracting them.
+
+To switch parishes on, clear the flag (leave the cell empty). The next run
+processes each one's latest bulletin, not the weeks it was fetch-only.
+Expect that run to be held if many parishes go live at once: their events
+move the total past the 10% check. `pnpm process -- --include-fetch-only`
+processes fetch-only parishes anyway, e.g. to try a few with `--parish`.
 
 ### GitHub Actions
 
@@ -264,6 +324,28 @@ edits to the CSVs show up in previews and go live on merge. The exception is a
 CSV change that removes a parish or church: that deletes events, so deploys
 build the snapshot from the published database as it stands, without the CSV
 edits, until a reviewed weekly run publishes the removal.
+
+Pushes to `main` deploy the site. Every pull request that touches the site gets
+a preview: **Deploy Web** uploads each push to it and comments the link.
+
+CI (`.github/workflows/ci.yml`) runs on pull requests in two jobs, `python`
+(ruff, pytest) and `node` (web lint, type check and unit tests; the labeler's
+checks and build). A job whose files the pull request doesn't touch skips its
+checks and passes.
+
+A deploy replaces the site's files, so a page opened before one would 404 on the
+hashed chunks (`/assets/*`) its scripts still load. The production deploy
+therefore runs `apps/web/scripts/carry-assets.ts` first: it downloads the files
+the live site's `asset-manifest.json` lists that the new build no longer has,
+for 14 days after they left it, into the build. Storage is free and wrangler
+uploads only files Cloudflare doesn't already have; if the deploy would pass
+15,000 files (the Free plan allows 20,000) the earliest retired go first. A
+failed download or an unreachable site only means fewer files are carried; it
+never fails the deploy.
+
+A page whose chunk is gone anyway (open longer than that, or a file that wasn't
+carried) reloads once into the new version (`apps/web/src/lib/staleDeploy.ts`),
+as does one that fetches a snapshot in a format its code can't read.
 
 The change report is always in the job summary, and kept as a workflow
 artifact for 90 days.
@@ -306,7 +388,8 @@ year, each month's last run that passed or was published; those are the runs
 you can roll back to.
 
 `fetch` stores a compacted copy of each bulletin: the first 10 pages (all the
-classifiers read) with images downsampled to 150 dpi by Ghostscript, falling
+classifiers read; `data/bulletin_page_limits.csv` raises the limit for a parish whose
+schedule runs past page 10, with the reason) with images downsampled to 150 dpi by Ghostscript, falling
 back to the PDF as downloaded when that fails or saves nothing. The key's
 hash is of the PDF as downloaded. Without `gs` installed, long bulletins are
 only truncated.
@@ -409,10 +492,18 @@ prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
    is the PDF), `page-pdfs` (links, or addresses in the page's markup),
    `linked-issue-page` (an embedded flipbook or a publisher's listing) and
    `dated-post` (a weekly post that wraps the PDF). They run in that order
-   until one finds a convincing set.
+   until one finds a convincing set. `page-pdfs` also reads PDF addresses a
+   viewer plugin keeps in base64 JSON (PDF Embedder's `pdfemb-data`, 3D
+   FlipBook's `FB3D_CLIENT_DATA`), and takes Google Drive files, Google Docs
+   (exported as PDF), Concrete CMS and DotNetNuke (`LinkClick.aspx`) downloads
+   as PDFs. One more collector runs only when a recipe names it:
+   `page-images`, for a parish that posts each issue as an image (a JPEG per
+   weekend); `fetch` stores the image as a one-page PDF.
 3. **Choose** this week's issue among them (`choose.py`), and say why:
    `current` (dated this week), or a fallback (`newest-recent`, `titled`,
-   `first-listed`).
+   `first-listed`). `newest-recent` is the newest issue dated in the last 45
+   days, taken when the first listed is plainly old, or when it is neither
+   dated nor labelled "bulletin" and the page lists a dated series.
 
 Each fetch result records how its bulletin was found ("page-pdfs on
 https://…/bulletins: current"), and the run report lists any new bulletin the
@@ -524,7 +615,9 @@ Commands read a `.env` file in the repo root if there is one (without
 overriding variables already set).
 
 - `GEMINI_API_KEY`: automatically picked up by the Gemini client.
-- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`).
+- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`),
+  the update-mode calls of `pnpm process` and `pnpm weekly:run`, and `pnpm seed ask|extract`.
+- `CARLO_SEED_CALL_LIMIT`: external calls `pnpm seed ask|extract` may make per parish (default 4).
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
   access. Without them everything runs on local files only.
 - `R2_BUCKET`: bucket name (default `project-carlo-data`).
@@ -542,6 +635,66 @@ Comments and corrections are collected with [Tally](https://tally.so). The form 
 
 Review submissions in the Tally dashboard for your form → **Submissions**. Export CSV when batching data fixes.
 
+## Visitor analytics
+
+The site records pageviews and a few actions (search picks, filters, bulletin
+clicks) itself, in Cloudflare Workers Analytics Engine: no cookies, no third
+party. `pnpm analytics` prints a report, and `/admin/analytics` shows the same
+reports as a page you can open on a phone, behind Cloudflare Access. See
+[docs/analytics.md](docs/analytics.md) for what's recorded, the tokens and
+Access setup they need, and how to add an event.
+
+## Believed schedules (update mode)
+
+A parish can instead keep a **believed schedule**, changed only through
+recorded changes: each new bulletin is shown to the model together with the
+schedule we believe, the model proposes changes, and a code policy applies or
+rejects each one. The design is
+[docs/schedule-state-plan.md](docs/schedule-state-plan.md). A parish is in this
+mode once it has a seed revision; every other parish is extracted from scratch
+as above, and a weekly run handles both.
+
+Update calls run on `gpt-6-luna` (OpenAI Responses API, high reasoning, the PDF
+at low detail, strict decoding), set up like the eval module's `gpt-6-luna`
+classifier, and need `OPENAI_API_KEY`. Their prompt
+(`classifiers/schedule_update.py`) carries every rule of the eval policy
+(`classifiers/schedule_policy.py`), worded for changes to the believed
+schedule. `--model` on `pnpm process` only picks the Gemini model for
+extract-mode parishes.
+
+`pnpm schedule` looks at and hand-edits believed schedules:
+
+```bash
+pnpm schedule show --parish st-mary-albany          # the schedule as the model sees it
+pnpm schedule apply --call 123 --actor you --note "checked the bulletin"   # a rejected call's proposals
+pnpm schedule modify --parish st-mary-albany --entry-id 118 --entry '{...}' --actor you
+pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
+```
+
+## Seeding parishes
+
+A parish's first seed (`data/seeds/<parish>.json`) is drafted by Claude Code agents from its
+bulletins and approved by a person ([docs/seeding-plan.md](docs/seeding-plan.md)). The
+`seed-parishes` skill runs batches through `seed-drafter` agents, which follow the
+`draft-parish-seed` skill. Its [rules.md](.claude/skills/draft-parish-seed/rules.md) holds
+every seeding decision (a slot no rule covers becomes a question for the reviewer), and
+[file-format.md](.claude/skills/draft-parish-seed/file-format.md) holds the file format.
+`pnpm seed --help` lists every command by phase.
+
+```bash
+pnpm seed pick                          # parishes to seed next, easiest first
+pnpm seed start st-mary-albany          # start or resume a draft; prints where it starts from
+pnpm seed finalize st-mary-albany       # the drafter's last step: bookkeeping, then check
+pnpm seed check --all                   # the orchestrator's check; `status` lists every file
+pnpm seed questions --answered          # reviewers' answers against the leanings, to find new rules
+pnpm seed pick --labeled --eval try-1   # start a test run on the labeled parishes
+pnpm seed score try-1                   # score its drafts against the labels
+```
+
+Reviewers answer the questions and approve in the labeler's **Seeds** mode (`pnpm label`).
+Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
+in update mode (a deploy never loads them).
+
 ## Project layout
 
 - `pyproject.toml` - project metadata and dependencies
@@ -552,9 +705,11 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 - `data/dioceses/` - parishes and churches of dioceses still being explored
 - `data/` (untracked) - the local database, bulletin PDF cache and run outputs
 - `docs/data-setup.md` - R2 bucket, API tokens, GitHub secrets, and running the published data
+- `docs/analytics.md` - visitor analytics: what's recorded and how to query it
 - `apps/web/` - React + TypeScript + Vite frontend
 - `apps/labeler/` - the local bulletin labeling UI (never deployed)
 - `data/labels/` - ground-truth labels, one JSON file per bulletin (committed)
+- `data/seeds/` - parish seed files, drafted by an agent and approved in the labeler (committed); `data/seed-evals/` holds test runs on the labeled parishes
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
@@ -569,6 +724,8 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
   - `weekly.py` - the weekly run; `report.py` its change report; `runs.py` run records
   - `detect.py` - bulletin provider detection (Playwright)
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
+  - `schedule/` - believed schedules for update-mode parishes: the change log, the decision policy, the update stage, hand edits (`pnpm schedule`)
+  - `seeding/` - seed files: their format and checks, the agent's tools (`pnpm seed`), loading approved ones, scoring test runs, the labeler's review
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
@@ -602,3 +759,32 @@ Run tests:
 ```bash
 pnpm test
 ```
+
+## License
+
+The code is licensed under the [GNU Affero General Public License v3.0](LICENSE).
+If you run a modified version as a website, you must offer its source to the
+people who use it.
+
+The curated data in `data/` and the schedule data the site publishes (the
+database and snapshot `pnpm data:pull` fetches) are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse them for any
+purpose with credit to Project Carlo. The bulletins themselves belong to their
+parishes and are not covered.
+
+Two exceptions in that data:
+
+- Church coordinates taken from OpenStreetMap are © OpenStreetMap contributors
+  and available under the
+  [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/),
+  not CC BY. These are the churches whose record in
+  `data/dioceses/<diocese>/churches/` says `coordinates_from: osm-node` or
+  `nominatim`, or `geocode-stage` (the `pnpm geocode` stage looks addresses up
+  in OpenStreetMap's Nominatim). Their latitude and longitude carry the same
+  terms in `data/churches.csv` and the published database.
+- Other coordinates come from the sources their record names, most from
+  [GCatholic](https://gcatholic.org)'s Plus Codes (`gcatholic-plus-code`);
+  credit those sources too when you reuse them.
+
+The fonts, map tiles and other third-party material the site uses are listed,
+with their licenses, in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

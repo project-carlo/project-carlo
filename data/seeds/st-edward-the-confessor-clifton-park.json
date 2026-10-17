@@ -1,0 +1,846 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-edward-the-confessor-clifton-park",
+  "status": "approved",
+  "as_of": "2026-10-11T16:38:15Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:46:15Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:13:00Z",
+  "summary": "One church; the schedule box is identical in all three bulletins (Sat 4pm, Sun 7:30/9/11, Tue/Wed/Fri/Sat 9am, Spanish Mass 1st & 3rd Sat 6pm in the chapel, confession Sat 2:30-3:30 and 1st Fri 7-8pm, adoration Fri 7pm and Wed after Mass). One open question: the newest bulletin puts the Oct 16 Friday Mass at St. Mary's, Crescent and the website says Friday Mass stays there until early January; leaning keep weekly Friday with Oct 16 cancelled.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "290ac05b74b3355f0a8ce5d5c2173e748caf4499faa4ec764d430ea06173a417",
+      "fetched_at": "2026-10-11T16:38:15Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "128fa8d43b93426c5ca81578067685368d6721c9b6dac6002f8c62bab26ed628",
+      "fetched_at": "2026-10-04T14:52:49Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6c53897923ac127b68243f913a7928d90be7b4f08ffa6c2576be3a757bce5d93",
+      "fetched_at": "2026-09-28T22:02:46Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "Weekend Masses: Saturday | 4:00 pm (*Livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "Weekend Masses: Saturday | 4:00 pm (*Livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "Weekend Masses: Saturday | 4:00 pm (*Livestreamed)"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule (p1) and Full Worship Schedule (p2) of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Sunday 07:30"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule (p1) and Full Worship Schedule (p2) of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Sunday 09:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule (p1) and Full Worship Schedule (p2) of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "Sunday | 7:30 am, 9:00 am, 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Sunday 11:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule (p1) and Full Worship Schedule (p2) of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Tuesday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org/mass-times-popup",
+          "said": "Tues, Wed, Fri & Sat | 9:00 am (in Church)"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule (p1) and Full Worship Schedule (p2) of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Wednesday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org/mass-times-popup",
+          "said": "Tues, Wed, Fri & Sat | 9:00 am (in Church)"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule (p1) and Full Worship Schedule (p2) of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "Daily Masses: Tuesday - Wednesday | 9:00 am; Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Saturday 09:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org/mass-times-popup",
+          "said": "Tues, Wed, Fri & Sat | 9:00 am (in Church)"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule (p1) and Full Worship Schedule (p2) of all three bulletins; Mass intentions and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 1,
+          "said": "Daily Masses: Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 1,
+          "said": "Daily Masses: Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 1,
+          "said": "Daily Masses: Friday - Saturday | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "Mass Intentions: FRIDAY, OCTOBER 16TH 9:00 AM *AT ST. MARY'S"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "Mass Intentions: FRIDAY, OCTOBER 9TH 9:00 AM (no location note)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "Mass Intentions: FRIDAY, OCTOBER 2ND 9:00 AM (no location note)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 6,
+          "said": "The Friday morning breakfast will be moved to St. Mary's Church, until early January."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org",
+          "said": "Friday morning Mass and the Knights breakfast will remain at St. Mary's a bit longer ... through the completion of our kitchen renovation in early January."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org/mass-times-popup",
+          "said": "Tues, Wed, Fri & Sat | 9:00 am (in Church); Monday & Thursday Morning Mass will be celebrated at St. Mary's, Crescent"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Friday 09:00"
+        }
+      ],
+      "rationale": "Every bulletin's schedule box still lists Friday 9:00 am at St. Edward's, and the Oct 2 and Oct 9 intentions carry no location note, but the newest bulletin's Oct 16 intention is marked *AT ST. MARY'S and the parish homepage says Friday morning Mass stays at St. Mary's, Crescent until the kitchen renovation ends in early January (its own Mass-times popup still says Friday in Church). Leaning to keep the regular weekly slot (it returns in January) with the dated Oct 16 cancellation recorded separately; the reviewer may prefer to leave Friday out until it returns.",
+      "question": "Friday 9:00 AM Mass at St. Edward's: keep as weekly (with Oct 16 cancelled), or leave out while Friday Mass is at St. Mary's, Crescent until early January?",
+      "options": [
+        {
+          "label": "Keep weekly Friday 9:00 AM (Oct 16 cancellation recorded separately)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-edward-the-confessor-clifton-park",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out until it returns from St. Mary's",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-11T21:12:52Z"
+      }
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Moved to St. Mary's, Crescent"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 16TH 9:00 AM *AT ST. MARY'S"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org",
+          "said": "Friday morning Mass and the Knights breakfast will remain at St. Mary's a bit longer"
+        }
+      ],
+      "rationale": "The newest bulletin's Mass intentions put the Oct 16 Friday Mass at St. Mary's, Crescent (another parish), so the St. Edward's Friday Mass does not take place there that day. Holds whichever way the weekly Friday question goes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "season": null,
+        "note": "Spanish; in the Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "SPANISH MASS ... 1st & 3rd Saturday | 6:00pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "SPANISH MASS ... 1st & 3rd Saturday | 6:00pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "SPANISH MASS ... 1st & 3rd Saturday | 6:00pm (Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Saturday 18:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org/mass-times-popup",
+          "said": "1st & 3rd Saturday | 6:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "Printed in the Full Worship Schedule of all three bulletins as 1st & 3rd Saturdays in the chapel of the church; website and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "in the Parlor"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION Saturday | 2:30pm-3:30pm (Parlor)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION Saturday | 2:30pm-3:30pm (Parlor)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "SACRAMENT OF RECONCILIATION Saturday | 2:30pm-3:30pm (Parlor)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org/mass-times-popup",
+          "said": "Saturday | 2:30 - 3:30 pm or by appointment (in Parlor)"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Saturday confession 14:30-15:30"
+        }
+      ],
+      "rationale": "Printed in all three bulletins; website and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "season": null,
+        "note": "in the Parlor"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "1st Friday | 7:00pm-8:00pm (Parlor)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "1st Friday | 7:00pm-8:00pm (Parlor)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "1st Friday | 7:00pm-8:00pm (Parlor)"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Friday confession 19:00-20:00, 1st Friday only"
+        }
+      ],
+      "rationale": "Printed under Reconciliation in all three bulletins as first Fridays; history agrees. (The website lists only Saturday.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "ADORATION Friday | 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "ADORATION Friday | 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "ADORATION Friday | 7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Friday adoration 19:00"
+        }
+      ],
+      "rationale": "Printed as every Friday (no week qualifier, unlike the 1st Friday confession beside it) in all three bulletins; no end time given; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-clifton-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "ADORATION ... Wednesday | After Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "ADORATION ... Wednesday | After Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "ADORATION ... Wednesday | After Daily Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "290ac05b74b3",
+          "said": "weekly Wednesday adoration 09:30, after daily Mass"
+        }
+      ],
+      "rationale": "Printed in all three bulletins with no clock time; per policy, after a weekday Mass starts 30 minutes after the 9:00 AM Mass. History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 2,
+          "said": "MERCY MONDAY - AT ST. MARY'S CHURCH, CRESCENT: Reconciliation if offered the 1st Monday of each month from 5-8 pm AT St. Mary's Church, Crescent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "128fa8d43b93",
+          "page": 2,
+          "said": "MERCY MONDAY - AT ST. MARY'S CHURCH, CRESCENT: Reconciliation if offered the 1st Monday of each month from 5-8 pm AT St. Mary's Church, Crescent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c53897923ac",
+          "page": 2,
+          "said": "MERCY MONDAY - AT ST. MARY'S CHURCH, CRESCENT: Reconciliation if offered the 1st Monday of each month from 5-8 pm AT St. Mary's Church, Crescent"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stedwardsny.org/mass-times-popup",
+          "said": "Monday & Thursday Morning Mass will be celebrated at St. Mary's, Crescent"
+        }
+      ],
+      "rationale": "Held at St. Mary's Church, Crescent, another parish, so left out; likewise the Monday/Thursday Masses the website places at St. Mary's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 3,
+          "said": "Anointing of the Sick ... special Mass at 11:00 am on Wednesday, October 21st, at St. Mary's Church, Crescent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "290ac05b74b3",
+          "page": 4,
+          "said": "Healthcare Professionals ... Mass with Bishop Mark, Sunday, October 18, 2026 5:00 PM at the Cathedral of the Immaculate Conception, Albany"
+        }
+      ],
+      "rationale": "Both dated Masses are at other churches (St. Mary's, Crescent; the Albany cathedral), so off-site and left out. Miraculous Medal Novena, First Saturday Devotion and Centering Prayer are not Mass/Confession/Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-patrick-ravena",
+  "content_hash": "7dba34a40f0e42150914ed2a7be7808e2b8d0171503d5436498e3e50d7dd2c85",
+  "source_url": "https://66067635-7ce2-4a3b-8ee4-2d7aacecd675.filesusr.com/ugd/eb6be9_047b24e2076843a4a39cc7e2d47bd9ab.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-19",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 27313,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 2221,
+    "reasoning_tokens": 1780
+  },
+  "seconds": 82.412,
+  "response_id": "resp_070c3d7696ac53b6016ac9132d79b487d29cb9c8f2c2ed017f",
+  "events": [
+    {
+      "church_slug": "st-patrick-ravena",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-ravena",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-ravena",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "second",
+        "fourth"
+      ],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-ravena",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [
+        "second",
+        "fourth"
+      ],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "5:30 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "3b7b65005184754541aef0c07283c2ee3b6f8caff03d806244bbbdef085ed5f7"
+}

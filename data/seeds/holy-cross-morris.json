@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-cross-morris",
+  "status": "approved",
+  "as_of": "2026-10-11T16:26:48Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:46:14Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:09:11Z",
+  "summary": "One church with a single Mass, Sunday 8:30 AM, printed identically in all three bulletins. The Thursday 10 AM Liturgy of the Word is excluded as not a Mass, and Reconciliation is only offered at St. Mary's Oneonta (another parish), so it is excluded too. No Adoration at Holy Cross.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cb82c328ca5242769ffc53140d21f7fd91bcd4d7c1d2e3c7e64118296453a786",
+      "fetched_at": "2026-10-11T16:26:48Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "11a782daabd4e0177c2a186eb24a1d4dfbb9c59501ab7134bc5641c9dde1e8a7",
+      "fetched_at": "2026-10-04T14:47:30Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "33fadfbf734ab933e87fd2501b23ca9bf8db5b1e53f0cc196bf20029f2b488fb",
+      "fetched_at": "2026-09-28T21:57:27Z",
+      "published_date": "2026-09-20",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-morris",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb82c328ca52",
+          "page": 2,
+          "said": "Schedule — Mass: Sunday, 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a782daabd4",
+          "page": 2,
+          "said": "Mass: Sunday, 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "33fadfbf734a",
+          "page": 2,
+          "said": "Mass: Sunday, 8:30 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "cb82c328ca52",
+          "said": "weekly Sunday 08:30"
+        }
+      ],
+      "rationale": "The parish's only Mass, printed in the Schedule panel of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-morris",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Liturgy of the Word"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb82c328ca52",
+          "page": 2,
+          "said": "Liturgy of the Word: Thursday, 10 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb82c328ca52",
+          "page": 1,
+          "said": "10/15: Liturgy of the Word ... 10/22: Liturgy of the Word"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33fadfbf734a",
+          "page": 2,
+          "said": "Liturgy of the Word: Thursday, 10 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "33fadfbf734a",
+          "said": "weekly mass Thursday 10:00 “Liturgy of the Word”"
+        }
+      ],
+      "rationale": "Listed separately from Mass in the Schedule panel as a Liturgy of the Word (a lay-led service in a parish run by a pastoral associate), not a Mass; the policy never records a Communion Service as a Mass. The oldest bulletin's history wrongly stored it as a Mass; the two newer ones dropped it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb82c328ca52",
+          "page": 2,
+          "said": "Reconciliation: St. Mary’s Oneonta, every Saturday 4–4:45 p.m."
+        }
+      ],
+      "rationale": "Held at St. Mary's in Oneonta, another parish; off-site for Holy Cross. Likewise the 11/06 First Friday and 11/07 First Saturday devotions listed on page 1 are at St. Mary's Oneonta.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

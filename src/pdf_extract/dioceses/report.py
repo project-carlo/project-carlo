@@ -149,6 +149,7 @@ def coverage(diocese: str, roster: str | None = None, *, link: bool = False,
     aliases = _aliases(diocese)
     idx = _index(d, aliases)
     explicit = _links(d)
+    _, off_site = records.unpublished(d)
     to_link: dict[str, set[str]] = {}
     reports = []
     in_any_roster: set[str] = set()
@@ -157,7 +158,8 @@ def coverage(diocese: str, roster: str | None = None, *, link: bool = False,
         rep: dict[str, Any] = {"roster": name, "title": data.get("title", ""),
                                "fetched": data.get("fetched", ""), "entries": len(data["entries"])}
         seen: dict[str, dict[str, Any]] = {}
-        counts = {"church": 0, "excluded": 0, "open": 0, "repeat": 0, "unmatched": 0}
+        counts = {"church": 0, "excluded": 0, "open": 0, "repeat": 0, "unmatched": 0,
+                  "off_site": 0}
         unmatched, auto, loose, ambiguous, repeats = [], [], [], [], []
         for entry in data["entries"]:
             ref = f"{name}:{entry.get('id')}"
@@ -168,6 +170,7 @@ def coverage(diocese: str, roster: str | None = None, *, link: bool = False,
             if ref in explicit:
                 labels = explicit[ref]
                 counts[labels[0].split(":")[0]] += 1
+                counts["off_site"] += labels[0].removeprefix("church:") in off_site
                 in_any_roster.update(labels)
                 continue
             key = f"{norm_name(entry.get('name', ''))}|{norm_city(entry.get('city', ''), aliases)}"
@@ -189,6 +192,7 @@ def coverage(diocese: str, roster: str | None = None, *, link: bool = False,
                 ambiguous.append({**brief, "candidates": hits, "net": net})
                 continue
             counts[hits[0].split(":")[0]] += 1
+            counts["off_site"] += hits[0].removeprefix("church:") in off_site
             in_any_roster.add(hits[0])
             match = {**brief, "matched": hits[0], "net": net}
             if net == "street-only":
@@ -202,9 +206,11 @@ def coverage(diocese: str, roster: str | None = None, *, link: bool = False,
         rep["counts"] = counts
         rep["accounted_for"] = f"{accounted}/{unique}" + (
             f" ({accounted / unique:.0%})" if unique else "")
-        live = unique - counts["excluded"]
-        rep["modelled"] = f"{counts['church']}/{live}" + (
-            f" ({counts['church'] / live:.0%}) of the entries not excluded" if live else "")
+        # Churches of a `no_bulletin` parish are accounted for, but not on the site.
+        live, shown = unique - counts["excluded"], counts["church"] - counts["off_site"]
+        rep["modelled"] = f"{shown}/{live}" + (
+            f" ({shown / live:.0%}) of the entries not excluded, as churches on the site"
+            if live else "")
         rep["unmatched"] = _group(unmatched)
         if ambiguous:
             rep["ambiguous"] = ambiguous

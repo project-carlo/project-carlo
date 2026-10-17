@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-family-endwell",
+  "status": "approved",
+  "as_of": "2026-10-04T14:34:28Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T11:55:46Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T12:44:05Z",
+  "summary": "Single church (Church of the Holy Family), sharing a pastor and bulletin pages with Most Holy Rosary, Maine (its own parish). Both bulletins print Sat 4:00 PM, Sun 8:00 and 11:00 AM, Wed and Thu 9:00 AM, and Saturday confession at 3:00 PM; calendars and history agree. Left out: the Tue/Fri 9:00 AM Masses and an Oct 20 Holy Hour, both at Most Holy Rosary; the adoration chapel lists no hours (access code only).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "44ce575e00c4c7ac22068855c46b69658b254c7460159e83d3f7ea0e2836083e",
+      "fetched_at": "2026-10-04T14:34:28Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "7cb848ea2b047b2ac127e853d0fef2b8b3724ba64ff0cf9af7dd9b31ccae9291",
+      "fetched_at": "2026-09-28T00:05:50Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-endwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Saturday: 4:00 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "Saturday: 4:00 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Masses For The Week: SAT 10/10 4:00 pm (Oct 4); SAT 10/3 4:00 pm (Sep 27)",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44ce575e00c4",
+          "said": "weekly mass Saturday 16:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb848ea2b04",
+          "said": "weekly mass Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 Mass list / page-4 weekly calendar of both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-endwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Sunday: 8:00 am & 11:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "Sunday: 8:00 am & 11:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Masses For The Week: SUN 10/11 8:00 am (Oct 4); SUN 10/4 8:00 am (Sep 27)",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44ce575e00c4",
+          "said": "weekly mass Sunday 08:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb848ea2b04",
+          "said": "weekly mass Sunday 08:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 Mass list / page-4 weekly calendar of both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-endwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Sunday: 8:00 am & 11:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "Sunday: 8:00 am & 11:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Masses For The Week: SUN 10/11 11:00 am (Oct 4); SUN 10/4 11:00 am (Sep 27)",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "44ce575e00c4",
+          "said": "weekly mass Sunday 11:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb848ea2b04",
+          "said": "weekly mass Sunday 11:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 Mass list / page-4 weekly calendar of both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-endwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Wednesday & Thursday: 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "Wednesday & Thursday: 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "This Week at our Parish: 9:00 am - Daily Mass at CHF on Wed 10/7 (Oct 4) and Wed 9/30 (Sep 27)",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "44ce575e00c4",
+          "said": "weekly mass Wednesday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb848ea2b04",
+          "said": "weekly mass Wednesday 09:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 Mass list / page-4 weekly calendar of both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-endwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Wednesday & Thursday: 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "Wednesday & Thursday: 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "This Week at our Parish: 9:00 am - Daily Mass at CHF on Thu 10/8 (Oct 4) and Thu 10/1 (Sep 27)",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "44ce575e00c4",
+          "said": "weekly mass Thursday 09:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb848ea2b04",
+          "said": "weekly mass Thursday 09:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. The page-2 Mass list / page-4 weekly calendar of both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-endwell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Confessions: Saturday, 3:00 pm",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "Confessions: Saturday, 3:00 pm",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ce575e00c4",
+          "said": "weekly confession Saturday 15:00"
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 1 of both bulletins read (Sep 27, Oct 4); history agrees. No end time is printed, so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-rosary-maine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Tuesday & Friday - Most Holy Rosary: 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Tuesday 10/6: No Daily Mass at CHF; 9:00 am - Mass at MHR",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "Tuesday & Friday - Most Holy Rosary: 9:00 am",
+          "page": 1
+        }
+      ],
+      "rationale": "Celebrated at Most Holy Rosary, Maine (MHR), a separate parish with its own row (most-holy-rosary-maine) that shares this pastor; the calendar says 'No Daily Mass at CHF'. It belongs to MHR's seed, not this one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-rosary-maine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Tuesday & Friday - Most Holy Rosary: 9:00 am",
+          "page": 1
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Friday 10/9: No Daily Mass at CHF; 9:00 am - Mass at MHR",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "Tuesday & Friday - Most Holy Rosary: 9:00 am",
+          "page": 1
+        }
+      ],
+      "rationale": "Celebrated at Most Holy Rosary, Maine (MHR), a separate parish with its own row (most-holy-rosary-maine) that shares this pastor; the calendar says 'No Daily Mass at CHF'. It belongs to MHR's seed, not this one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-rosary-maine",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-20",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Holy Hour & Patriotic Rosary"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ce575e00c4",
+          "said": "Most Holy Rosary box: Holy Hour & Patriotic Rosary will be held on Tuesday, October 20th at 6:00 pm.",
+          "page": 7
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb848ea2b04",
+          "said": "same item in the Most Holy Rosary box",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "44ce575e00c4",
+          "said": "dated adoration 2026-10-20 18:00 at holy-family-endwell 'Holy Hour & Patriotic Rosary'"
+        }
+      ],
+      "rationale": "Listed under the 'Most Holy Rosary' box (MHR's chaplet/rosary, Oktoberfest, MHR parish office), so it is at Most Holy Rosary, Maine, not Church of the Holy Family. History attached it to Holy Family; left out here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -33,6 +33,14 @@ _HEX_ID_RE = re.compile(
 _WORDPRESS_UPLOAD_FOLDER_RE = re.compile(r"/uploads/20\d{2}/\d{2}/")
 
 
+# Weebly files its uploads under single-digit folders and the site's number
+# ("/uploads/3/4/1/2/34124530/"), where "3/4" would read as 4 March.
+_WEEBLY_UPLOAD_FOLDER_RE = re.compile(r"/uploads(?:/\d){4}/\d+/")
+
+
+_PILOT_ISSUE_RE = re.compile(r"/(\d{2})(\d{2})(\d{2})/\d+_\1\2\3\.pdf")
+
+
 # Stands in for an ordinal's suffix ("4th" reads "4º") once it is stripped.
 _ORDINAL = "º"
 
@@ -61,7 +69,12 @@ def parse_date(
             return safe_date(year, month, day)
         return _resolve_yearless_date(month=month, day=day, reference_date=reference_date)
 
-    normalized = _WORDPRESS_UPLOAD_FOLDER_RE.sub("/", _HEX_ID_RE.sub(" ", text.lower()))
+    normalized = _HEX_ID_RE.sub(" ", text.lower())
+    for upload_folder in (_WORDPRESS_UPLOAD_FOLDER_RE, _WEEBLY_UPLOAD_FOLDER_RE):
+        normalized = upload_folder.sub("/", normalized)
+    # A file name's spaces can come URL-encoded as "+" ("10+18+26.pdf",
+    # "August+2-+2026.pdf"): between two numbers it separates a date's parts.
+    normalized = re.sub(r"(?<=\d)\+(?=\d)", "-", normalized).replace("+", " ")
     # An ordinal is a day, never a month or a year: "Oct.-4th-27th-Sun" is 4
     # October in the 27th week, not 27 April. Mark where one was.
     normalized = re.sub(r"(\d+)(st|nd|rd|th)", rf"\1{_ORDINAL}", normalized)
@@ -76,10 +89,15 @@ def parse_date(
     # A day is never part of a longer number ("October 2026" is not October 20).
     # A weekend can be named by both its days before the year ("September 26 &
     # 27, 2026", "Oct-4-5-2025"); the year is still the issue's.
+    # The year can also come first ("bulletin-2022-october-23"): without it,
+    # that reads as this October 23.
     month_day_pattern = re.compile(
+        rf"(?:(?<!\d)(?P<lead_year>20\d{{2}})\s+)?"
         rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?!\d){_ORDINAL}?"
         rf"(?:\s*(?:&|and|-|\s)\s*\d{{1,2}}{_ORDINAL}?(?=\s+\d{{4}}(?!\d)))?"
-        rf"(?:\s+(?P<year>\d{{2,4}})(?![\d{_ORDINAL}]))?",
+        # "Bulletin_October 12_2025": an underscore can join the year on. A
+        # longer number is no year (a mistyped "20026").
+        rf"(?:[\s_]+(?P<year>\d{{2,4}})(?![\d{_ORDINAL}]))?",
         flags=re.IGNORECASE,
     )
     day_month_pattern = re.compile(
@@ -94,7 +112,7 @@ def parse_date(
             if month_num is None:
                 continue
             day = int(match.group("day"))
-            raw_year = match.group("year")
+            raw_year = match.group("year") or match.groupdict().get("lead_year")
             if raw_year:
                 parsed = safe_date(_normalize_year(raw_year, reference_date), month_num, day)
             else:
@@ -111,7 +129,9 @@ def parse_date(
             return parsed
 
     for match in re.finditer(
-        r"(?<!\d)(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})[-/.](?P<c>\d{2,4})(?!\d)", normalized,
+        # "10/4-27th Sunday" is 4 October, the 27th Sunday: not 2027.
+        rf"(?<!\d)(?P<a>\d{{1,2}})[-/.](?P<b>\d{{1,2}})[-/.](?P<c>\d{{2,4}})(?![\d{_ORDINAL}])",
+        normalized,
     ):
         parsed = safe_date(
             _normalize_year(match.group("c"), reference_date),
@@ -125,6 +145,13 @@ def parse_date(
         r"(?<!\d)(?<!\d[-/.])(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)(?![-/.]\d)", normalized,
     ):
         parsed = yearless(int(match.group("a")), int(match.group("b")))
+        if parsed is not None:
+            return parsed
+
+    # Pilot Bulletins files each issue under its date as YYMMDD, in both the
+    # folder and the file name: /bcd/Bulletins/261018/32223_261018.pdf.
+    for match in _PILOT_ISSUE_RE.finditer(normalized):
+        parsed = safe_date(2000 + int(match.group(1)), int(match.group(2)), int(match.group(3)))
         if parsed is not None:
             return parsed
 

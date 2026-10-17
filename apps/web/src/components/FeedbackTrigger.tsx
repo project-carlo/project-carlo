@@ -2,9 +2,10 @@ import { useCallback, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { buildFeedbackContext } from "@/lib/feedbackContext";
 import { getTallyFormId, openFeedbackPopup } from "@/lib/tally";
+import { track } from "@/lib/analytics";
 
 interface FeedbackTriggerProps {
-  /** Shown on church pages so the parish is attached to the submission. */
+  /** Shown on church pages so the church is attached to the submission. */
   church?: { slug: string; name: string | null };
   label?: string;
   icon?: ReactNode;
@@ -12,7 +13,7 @@ interface FeedbackTriggerProps {
   className?: string;
 }
 
-/** Opens the Tally feedback popup with page and parish context. */
+/** Opens the Tally feedback popup with page and church context. */
 export function FeedbackTrigger({
   church,
   label = "Share feedback",
@@ -23,6 +24,7 @@ export function FeedbackTrigger({
   const formId = getTallyFormId();
 
   const handleClick = useCallback(() => {
+    track("feedback_open", { target: church?.slug });
     const context = buildFeedbackContext(church);
     void openFeedbackPopup(context);
   }, [church]);

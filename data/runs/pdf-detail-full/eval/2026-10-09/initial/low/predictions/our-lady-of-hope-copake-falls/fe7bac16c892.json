@@ -1,0 +1,83 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "our-lady-of-hope-copake-falls",
+  "content_hash": "fe7bac16c8920c4ec3a309202b5113407d0bd4ee86c77b422f36ce21150475d4",
+  "source_url": "https://parishesonline.com/publication-page/our-lady-of-hope-12517?selectedPublication=https://container.parishesonline.com/bulletins/04/0813/20260927B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 11186,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 656,
+    "reasoning_tokens": 294
+  },
+  "seconds": 6.908,
+  "response_id": "resp_05f6fcdc6288f596016ac90ea17f2c87d2837232f2a8caaa6e",
+  "events": [
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "In the church",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "5:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "40c5d8751f0b3ac6a553db25c415c83b23fad679bb12a9a9055d7a8bae706332"
+}

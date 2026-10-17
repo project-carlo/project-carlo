@@ -1,9 +1,10 @@
 import type { EventSummary } from "../types";
 import { formatMinutesMissal, titleCase } from "../utils";
+import { describeSchedulePattern, patternKey } from "./schedulePattern";
 
 /**
- * Rolls a church's upcoming events up into one row per day, so a parish with
- * three Sunday Masses reads as a single "Sundays — 8 a.m. · 10:30 a.m. · 5
+ * Rolls a church's upcoming events up into one row per day, so a church with
+ * three Sunday Masses reads as a single "Sunday — 8 a.m. · 10:30 a.m. · 5
  * p.m." line in the map popup instead of filling the preview with three
  * near-identical rows.
  *
@@ -13,7 +14,7 @@ import { formatMinutesMissal, titleCase } from "../utils";
 export interface ScheduleRollupRow {
   /** Stable key for React lists. */
   key: string;
-  /** Day heading, e.g. "Sundays" or "Tue, Mar 17". */
+  /** Day heading, e.g. "Sunday" or "Tue, Mar 17". */
   label: string;
   /**
    * Distinct start times for the day, earliest first, each formatted with its
@@ -21,11 +22,27 @@ export interface ScheduleRollupRow {
    * day.
    */
   times: string[];
+  /**
+   * When the slot does not simply happen every week, the qualifier that says
+   * so: "First Friday of the month". Without it the day heading alone would
+   * promise a monthly devotion every week.
+   */
+  note: string | null;
+}
+
+/** A weekly event's qualifier ("First Friday of the month"), else null. */
+export function slotQualifier(event: EventSummary): string | null {
+  return event.kind === "weekly"
+    ? describeSchedulePattern(event, event.day_of_week)
+    : null;
 }
 
 function rollupKey(event: EventSummary): string {
   if (event.kind === "weekly" && event.day_of_week) {
-    return `weekly:${event.day_of_week.toLowerCase()}`;
+    // Slots on the same weekday still get their own rows when they keep
+    // different schedules, so a first-Friday devotion is never folded into the
+    // times of a Mass that runs every Friday.
+    return `weekly:${event.day_of_week.toLowerCase()}:${patternKey(event)}`;
   }
   if (event.date) return `date:${event.date}`;
   // Nothing to group on — keep the event on a row of its own.
@@ -34,7 +51,7 @@ function rollupKey(event: EventSummary): string {
 
 function rollupLabel(event: EventSummary): string {
   if (event.kind === "weekly" && event.day_of_week) {
-    return titleCase(event.day_of_week) + "s";
+    return titleCase(event.day_of_week);
   }
   if (event.date) return formatCompactDate(event.date);
   return "";
@@ -70,13 +87,20 @@ function formatCompactDate(dateStr: string): string {
 export function rollUpEventsByDay(
   events: EventSummary[],
 ): ScheduleRollupRow[] {
-  const rows = new Map<string, { label: string; startTimes: number[] }>();
+  const rows = new Map<
+    string,
+    { label: string; startTimes: number[]; note: string | null }
+  >();
 
   for (const event of events) {
     const key = rollupKey(event);
     let row = rows.get(key);
     if (!row) {
-      row = { label: rollupLabel(event), startTimes: [] };
+      row = {
+        label: rollupLabel(event),
+        startTimes: [],
+        note: slotQualifier(event),
+      };
       rows.set(key, row);
     }
     // Two events can share a slot (e.g. a Mass and a Confession at 4 p.m.);
@@ -90,5 +114,6 @@ export function rollUpEventsByDay(
     key,
     label: row.label,
     times: [...row.startTimes].sort((a, b) => a - b).map(formatMinutesMissal),
+    note: row.note,
   }));
 }

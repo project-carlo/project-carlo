@@ -87,6 +87,9 @@ class Recipe:
     def text(self, *, website: str) -> str:
         """The recipe as `parse` reads it, leaving out a page that is the website."""
         page = None if self.page == website and self.collector else self.page
+        # parse splits on whitespace, so a page whose URL has spaces (eCatholic
+        # file names do) is written with them encoded.
+        page = page.replace(" ", "%20") if page else page
         return " ".join(part for part in (self.collector, page) if part)
 
 
@@ -135,7 +138,8 @@ def resolve_parish_site(
             page_url=url, collector="redirected-pdf", reason=ONLY_LINK,
         )
     collectors = (
-        [COLLECTORS[recipe.collector]] if recipe.collector else list(COLLECTORS.values())
+        [COLLECTORS[recipe.collector]] if recipe.collector
+        else [c for c in COLLECTORS.values() if c.automatic]
     )
     if recipe.page:
         return _resolve_bulletin_page(

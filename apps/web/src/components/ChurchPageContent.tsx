@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { DAY_ORDER } from "../constants/days";
 import { EVENT_TYPE_LABELS, EVENT_TYPE_ORDER } from "../constants/eventTypes";
@@ -5,10 +6,13 @@ import type { ChurchDetail, EventSummary, EventType } from "../types";
 import {
   formatAddress,
   formatEventDate,
+  formatLongMonthDay,
+  formatMonthDay,
   formatMinutesMissal,
+  titleCase,
 } from "../utils";
+import { CHURCH_LIST, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
 import {
-  ArrowLeftIcon,
   ExternalLinkIcon,
   FileTextIcon,
   MapPinIcon,
@@ -16,9 +20,15 @@ import {
 } from "@/components/icons";
 import { FeedbackTrigger } from "@/components/FeedbackTrigger";
 import { Fleuron } from "@/components/Fleuron";
-import { Masthead } from "@/components/Masthead";
-import { useHomeHref } from "@/hooks/useHomeHref";
+import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
+import { CityMapPreview } from "@/components/CityMapPreview";
+import { SiteHeader } from "@/components/SiteHeader";
+import { cityPath, type CityLink } from "@/lib/cities";
+import type { CityMapConfig } from "@/lib/cityMap";
+import type { CityMapData } from "@/lib/cityMapLayout";
+import { slotQualifier } from "@/lib/eventRollup";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
+import { LASTMOD_EXEMPT_ATTRIBUTE } from "@/lib/lastmod";
 
 /** Inline annotations on a schedule line — the bulletin page a time came
  *  from, and any qualifier on the slot. One size and one voice for all of
@@ -72,13 +82,6 @@ function partitionEventsByType(
   return result;
 }
 
-function formatDayLabel(day: string): string {
-  const d = day.toLowerCase();
-  if (d === "sunday") return "Sundays";
-  if (d === "saturday") return "Saturdays";
-  return d.charAt(0).toUpperCase() + d.slice(1) + "s";
-}
-
 function formatTimeValue(event: EventSummary): string {
   const main = formatMinutesMissal(event.start_time);
   if (event.end_time != null) {
@@ -129,6 +132,7 @@ function SectionPageRef({
         href={`${bulletinUrl}#page=${pageNumber}`}
         target="_blank"
         rel="noopener noreferrer"
+        data-track="bulletin_page"
         title={title}
         className={`${baseClass} ${ANNOTATION_LINK_CLASS}`}
       >
@@ -152,6 +156,23 @@ function EventNote({ note }: { note: string | null }) {
   );
 }
 
+/**
+ * What qualifies this time beyond its weekday: when the slot only runs part of
+ * the year or only on certain weeks of the month, plus whatever the bulletin
+ * added.
+ *
+ * The church page lists a slot whether or not it is running today (someone
+ * looking up a parish wants its whole schedule), so the qualifier is what tells
+ * them the October-to-June confession slot they can see here is not on offer in
+ * September, and why the map did not show it.
+ */
+function eventQualifier(event: EventSummary): string | null {
+  const parts = [slotQualifier(event), event.note].filter(
+    (part): part is string => Boolean(part),
+  );
+  return parts.length > 0 ? parts.join(" · ") : null;
+}
+
 function PageRef({
   event,
   bulletinUrl,
@@ -168,6 +189,7 @@ function PageRef({
         href={`${bulletinUrl}#page=${event.page_number}`}
         target="_blank"
         rel="noopener noreferrer"
+        data-track="bulletin_page"
         title={title}
         className={`ml-2.5 ${ANNOTATION_CLASS} ${ANNOTATION_LINK_CLASS}`}
       >
@@ -185,32 +207,62 @@ function PageRef({
   );
 }
 
-interface ChurchPageContentProps {
-  church: ChurchDetail;
-  events: EventSummary[];
+/**
+ * The current bulletin, dated by its week when it has a date: how fresh the
+ * times are, beside the bulletin they come from. Exempt from the sitemap's
+ * change dates, which would otherwise move every week with the bulletin. One
+ * string, so the element holds text only.
+ */
+function BulletinLabel({ week }: { week: string | null }) {
+  return (
+    <span {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}>
+      {week ? `Bulletin for the week of ${formatLongMonthDay(week)}` : "Parish bulletin"}
+    </span>
+  );
 }
 
-export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
+/** Church list › {City} › {Church}, without the city when the address has none. */
+function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
+  const crumbs: Crumb[] = [{ label: CHURCH_LIST, to: CHURCH_INDEX_PATH }];
+  if (city) crumbs.push({ label: city.label, to: cityPath(city.slug) });
+  crumbs.push({ label: church.name ?? UNNAMED_CHURCH });
+  return crumbs;
+}
+
+interface ChurchPageContentProps {
+  church: ChurchDetail;
+  /** The city page the church is listed on, as that page names it. */
+  city: CityLink | null;
+  /** The church's map as it opens; null for a church with no known position. */
+  map: CityMapData | null;
+  events: EventSummary[];
+  /**
+   * Makes the map preview live (see CityMapPreview); the prerendered page
+   * leaves it out and src/islands/cityMap.ts does the same.
+   */
+  liveMap?: (config: CityMapConfig) => ReactNode;
+}
+
+export function ChurchPageContent({
+  church,
+  city,
+  map,
+  events,
+  liveMap,
+}: ChurchPageContentProps) {
   const byType = partitionEventsByType(events);
-  const homeHref = useHomeHref();
+  const name = church.name ?? UNNAMED_CHURCH;
 
   return (
     <>
     <main className="min-h-svh bg-paper">
-      <header className="sticky top-0 z-40 border-b border-rule-strong bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 pt-[calc(0.85rem+var(--safe-area-inset-top))] pb-3">
-          <Link to={homeHref} className="rubric-link font-serif text-[0.9375rem]">
-            <ArrowLeftIcon className="size-3.5" />
-            Back to map
-          </Link>
-          <Masthead compact />
-        </div>
-      </header>
+      <SiteHeader />
 
       <div className="mx-auto w-full max-w-5xl px-6 py-10 pb-[calc(3rem+var(--safe-area-inset-bottom))] md:py-14">
         <section className="rise-in mx-auto max-w-2xl text-center">
+          <Breadcrumbs className="mb-6" crumbs={churchCrumbs(church, city)} />
           <h1 className="font-display text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-normal tracking-tight text-ink">
-            {church.name ?? "Unnamed parish"}
+            {name}
           </h1>
 
           {formatAddress(church) ? (
@@ -228,6 +280,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                 href={church.homepage_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="parish_website"
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <ExternalLinkIcon className="size-3.5" />
@@ -239,11 +292,17 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                 href={church.bulletin_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="bulletin"
                 className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
               >
                 <FileTextIcon className="size-3.5" />
-                Latest parish bulletin (PDF)
+                <BulletinLabel week={church.bulletin_week} />
               </a>
+            ) : church.bulletin_week ? (
+              <span className="inline-flex items-center gap-2 font-serif text-[0.9375rem] text-ink-soft">
+                <FileTextIcon className="size-3.5" />
+                <BulletinLabel week={church.bulletin_week} />
+              </span>
             ) : null}
             <FeedbackTrigger
               church={church}
@@ -256,8 +315,11 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
 
         {events.length === 0 ? (
           <p className="mx-auto mt-6 max-w-2xl text-center font-serif text-sm text-ink-soft md:mt-8">
-            No Mass, Confession, or Adoration times are listed for this
-            parish yet.
+            No times listed yet. The parish bulletin may not include them, or
+            we couldn’t read it.
+            {church.homepage_url
+              ? " Check the parish website, or suggest an edit."
+              : " Check with the parish, or suggest an edit."}
           </p>
         ) : null}
 
@@ -301,7 +363,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                             className="grid grid-cols-[6rem_1fr] items-baseline gap-4 py-2.5"
                           >
                             <dt className="smallcaps text-[0.875rem] text-ink-soft">
-                              {formatDayLabel(day)}
+                              {titleCase(day)}
                             </dt>
                             <dd className="font-serif text-[1.05rem] leading-snug text-ink">
                               {dayEvents.map((event, idx) => (
@@ -314,7 +376,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                                   <span className="tabular-nums">
                                     {formatTimeValue(event)}
                                   </span>
-                                  <EventNote note={event.note} />
+                                  <EventNote note={eventQualifier(event)} />
                                   {event.page_number !== sectionPage ? (
                                     <PageRef
                                       event={event}
@@ -335,13 +397,23 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                               key={event.id}
                               className="grid grid-cols-[6rem_1fr] items-baseline gap-4 py-2.5"
                             >
-                              <dt className="smallcaps text-[0.875rem] text-rubric">
-                                {event.date
-                                  ? formatEventDate(event.date).replace(
+                              {/* The weekday with its date beneath, so a
+                                  one-off service reads apart from the
+                                  weekly rows above it. */}
+                              <dt className="smallcaps text-[0.875rem] leading-tight text-rubric">
+                                {event.date ? (
+                                  <>
+                                    {formatEventDate(event.date).replace(
                                       /, .+$/,
                                       "",
-                                    )
-                                  : "Special"}
+                                    )}
+                                    <span className="block">
+                                      {formatMonthDay(event.date)}
+                                    </span>
+                                  </>
+                                ) : (
+                                  "Special"
+                                )}
                               </dt>
                               <dd className="font-serif text-[1.05rem] leading-snug text-ink">
                                 <span className="tabular-nums">
@@ -350,12 +422,7 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
                                     ? ` – ${formatMinutesMissal(event.end_time)}`
                                     : ""}
                                 </span>
-                                {event.date ? (
-                                  <span className="ml-2 font-serif text-[0.9rem] italic text-ink-faint">
-                                    {formatEventDate(event.date)}
-                                  </span>
-                                ) : null}
-                                <EventNote note={event.note} />
+                                <EventNote note={eventQualifier(event)} />
                                 {event.page_number !== sectionPage ? (
                                   <PageRef
                                     event={event}
@@ -375,20 +442,45 @@ export function ChurchPageContent({ church, events }: ChurchPageContentProps) {
           </div>
         ) : null}
 
+        {/* After the times, which are what the page is for: where the church
+         *  is, among its neighbours, and the way into the full map. */}
+        {map ? (
+          <section
+            aria-labelledby="church-map-heading"
+            className="rise-in mx-auto mt-12 max-w-4xl"
+            style={{ animationDelay: "120ms" }}
+          >
+            <h2
+              id="church-map-heading"
+              className="mb-5 font-display text-[1.75rem] leading-none font-normal text-ink"
+            >
+              Map
+            </h2>
+            {/* Keyed by church: when the app goes from one church's page
+             *  straight to another's, the live map starts again on the new
+             *  church. */}
+            <CityMapPreview
+              key={church.id}
+              label={name}
+              map={map}
+              churchId={church.id}
+              live={liveMap}
+            />
+          </section>
+        ) : null}
+
         <div className="mx-auto mt-16 max-w-2xl">
           <Fleuron solo className="text-brass" />
           <p className="mt-4 text-center font-serif text-[0.9rem] text-ink-faint">
-            Mass times are extracted with AI from each parish&apos;s latest
-            available bulletin and may not always be accurate. Please
-            confirm details with the parish before attending.
+            {DISCLAIMER}
           </p>
         </div>
       </div>
     </main>
     <footer className="bg-paper pb-[calc(3rem+var(--safe-area-inset-bottom))] text-center">
-      <a href={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
-        Browse all parishes
-      </a>
+      <Link to={CHURCH_INDEX_PATH} className="rubric-link font-serif text-[0.9375rem]">
+        {CHURCH_LIST}
+      </Link>
     </footer>
     </>
   );

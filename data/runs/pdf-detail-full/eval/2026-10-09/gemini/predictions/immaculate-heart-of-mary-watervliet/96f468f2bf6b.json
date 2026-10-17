@@ -1,0 +1,147 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "immaculate-heart-of-mary-watervliet",
+  "content_hash": "96f468f2bf6b1f52b89be59f25688865b1c33008318d6f38be89b191094a847a",
+  "source_url": "https://parishesonline.com/publication-page/immaculate-heart-of-mary-parish?selectedPublication=https://container.parishesonline.com/bulletins/04/0820/20261004B.pdf",
+  "fetched_at": "2026-10-04T14:48:54Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "immaculate-heart-of-mary-watervliet",
+      "name": "Immaculate Heart of Mary",
+      "address": "2416 - 7th Ave., Watervliet, NY 12189"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/96f468f2bf6b1f52b89be59f25688865b1c33008318d6f38be89b191094a847a-0b81b6af18c7.json",
+    "modified_at": "2026-10-04T15:20:13.688000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/immaculate-heart-of-mary-watervliet/96f468f2bf6b.pdf",
+  "pdf_sha256": "10031394d3761769e012bbb1314b4de9477dc28835ea27bd61e0b60e111dc545",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "immaculate-heart-of-mary-watervliet",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-heart-of-mary-watervliet",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-heart-of-mary-watervliet",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-heart-of-mary-watervliet",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-heart-of-mary-watervliet",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": "10:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Following 9:00 AM Mass",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:30 AM",
+        "end_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "immaculate-heart-of-mary-watervliet",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-08",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Previously scheduled intention",
+      "raw": {
+        "date": "2026-10-08",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2468,
+    "output_tokens": 643
+  }
+}

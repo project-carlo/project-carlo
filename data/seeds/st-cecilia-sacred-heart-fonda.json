@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-cecilia-sacred-heart-fonda",
+  "status": "needs_review",
+  "as_of": "2026-10-11T16:38:07Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:30:58Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, St. Cecilia (Fonda) and Sacred Heart (Tribes Hill). No bulletin prints a schedule box, so the weekly Masses come from the Mass intentions, which repeat the same days and times across the three bulletins read. Open: whether the website's Sunday 4:00 PM Mass at St. Cecilia exists. No Confession or Adoration is printed in the bulletins or on the website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "09bdafe4fc073484090073170968c62848c287d4a2a8735b437c1425a4c148d3",
+      "fetched_at": "2026-10-11T16:38:07Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "9a99941ad4195f52d144a1c67da953dfca4dbe9b0b999d340a080fc186649d79",
+      "fetched_at": "2026-10-04T14:52:24Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "3e2ab57d39dbb0a626c2142108a4b6de400ec41bc3a85210c5c09168d76a5403",
+      "fetched_at": "2026-09-28T22:02:21Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-tribes-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09bdafe4",
+          "page": 2,
+          "said": "Tue. Oct 13, 8:00 am (SH) - For the people of the parish."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a99941a",
+          "page": 2,
+          "said": "Tue. Oct 6, 8:00 am (SH)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e2ab57d",
+          "page": 2,
+          "said": "Tue. Sept 29, 8:00 am (SH)"
+        },
+        {
+          "source": "history",
+          "bulletin": "09bdafe4fc07",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-tribes-hill",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a99941ad419",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-tribes-hill",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e2ab57d39db",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-tribes-hill",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 4): no bulletin prints a regular schedule box; the intentions list the same Tuesday 8:00 AM Sacred Heart Mass in each of the three weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-fonda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09bdafe4",
+          "page": 2,
+          "said": "Wed. Oct 14, 8:00 am (SC) - For the people of the parish."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a99941a",
+          "page": 2,
+          "said": "Wed. Oct 7, 8:00 am (SC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e2ab57d",
+          "page": 2,
+          "said": "Wed. Sept 30, 8:00 am (SC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "09bdafe4fc07",
+          "said": "weekly mass Wednesday 08:00 st-cecilia-fonda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a99941ad419",
+          "said": "weekly mass Wednesday 08:00 st-cecilia-fonda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e2ab57d39db",
+          "said": "weekly mass Wednesday 08:00 st-cecilia-fonda",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 4): the intentions list the same Wednesday 8:00 AM St. Cecilia Mass in each of the three weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-tribes-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09bdafe4",
+          "page": 2,
+          "said": "Thur. Oct 15, 8:00 am (SH) - Birthday blessings for John Parry"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a99941a",
+          "page": 2,
+          "said": "Thur. Oct 8, 8:00 am (SH) - For the people of the parish."
+        },
+        {
+          "source": "history",
+          "bulletin": "09bdafe4fc07",
+          "said": "weekly mass Thursday 08:00 sacred-heart-tribes-hill",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a99941ad419",
+          "said": "weekly mass Thursday 08:00 sacred-heart-tribes-hill",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e2ab57d39db",
+          "said": "weekly mass Thursday 18:00 sacred-heart-tribes-hill  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 4): the same Thursday 8:00 AM Sacred Heart Mass is listed in the two newest weeks. The Sep 27 bulletin's Oct 1 6:00 PM healing Mass is a separate dated entry (see the excluded slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-fonda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09bdafe4",
+          "page": 2,
+          "said": "Fri. Oct 16, 8:00 am (SC) - + For the repose of the soul of Lynne Desautels"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a99941a",
+          "page": 2,
+          "said": "Fri. Oct 9, 8:00 am (SC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e2ab57d",
+          "page": 2,
+          "said": "Fri. Oct 2, 8:00 am (SC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "09bdafe4fc07",
+          "said": "weekly mass Friday 08:00 st-cecilia-fonda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a99941ad419",
+          "said": "weekly mass Friday 08:00 st-cecilia-fonda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e2ab57d39db",
+          "said": "weekly mass Friday 08:00 st-cecilia-fonda",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 4): the intentions list the same Friday 8:00 AM St. Cecilia Mass in each of the three weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-tribes-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09bdafe4",
+          "page": 2,
+          "said": "Sat. Oct 10, 4:00 pm (SH); Sat. Oct 17, 4:00 pm (SH)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a99941a",
+          "page": 2,
+          "said": "Sat. Oct 3, 4:00 pm (SH)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e2ab57d",
+          "page": 2,
+          "said": "Sat. Sept 26 and Oct 3, 4:00 pm (SH)"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/StCeciliaSacredHeart/",
+          "said": "Saturday: 4:00 pm (Sacred Heart Church)"
+        },
+        {
+          "source": "history",
+          "bulletin": "09bdafe4fc07",
+          "said": "weekly mass Saturday 16:00 sacred-heart-tribes-hill",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a99941ad419",
+          "said": "weekly mass Saturday 16:00 sacred-heart-tribes-hill",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e2ab57d39db",
+          "said": "weekly mass Saturday 16:00 sacred-heart-tribes-hill",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 4): listed every week in the intentions of all three bulletins, and the website's worship times give the same Saturday 4:00 PM Sacred Heart Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-fonda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09bdafe4",
+          "page": 2,
+          "said": "Sun. Oct 11, 9:00 am (SC); Sun. Oct 18, 9:00 am (SC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a99941a",
+          "page": 2,
+          "said": "Sun. Oct 4, 9:00 am (SC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e2ab57d",
+          "page": 2,
+          "said": "Sun. Sept 27 and Oct 4, 9:00 am (SC)"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/StCeciliaSacredHeart/",
+          "said": "Sunday: 9:00 am & 4:00 pm (St. Cecilia Church)"
+        },
+        {
+          "source": "history",
+          "bulletin": "09bdafe4fc07",
+          "said": "weekly mass Sunday 09:00 st-cecilia-fonda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9a99941ad419",
+          "said": "weekly mass Sunday 09:00 st-cecilia-fonda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e2ab57d39db",
+          "said": "weekly mass Sunday 09:00 st-cecilia-fonda",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 4): listed every week in the intentions of all three bulletins, and the website's worship times give the same Sunday 9:00 AM St. Cecilia Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/StCeciliaSacredHeart/",
+          "said": "Sunday: 9:00 am & 4:00 pm (St. Cecilia Church)"
+        }
+      ],
+      "rationale": "R29, C9: only the website prints it. The bulletins list every Mass in their intentions with Sunday only at 9:00 AM, and print no schedule box, so none confirms or denies a 4:00 PM Mass. Leaning leave out because the intentions list one Sunday Mass each week and a website can be stale; a wrong time is worse than a missing one.",
+      "question": "Add a Sunday 4:00 PM Mass at St. Cecilia?",
+      "options": [
+        {
+          "label": "Sundays 4:00 PM",
+          "entry": {
+            "church_slug": "st-cecilia-fonda",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-tribes-hill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-01",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e2ab57d",
+          "page": 2,
+          "said": "Thur. Oct 1, 6:00 pm (SH) - For those in need of physical, emotional and spiritual healing."
+        }
+      ],
+      "rationale": "R13, R16: printed once, only as a dated item (no 'first Thursday' wording), and its date is before as_of (2026-10-11). The two newer weeks list Thursday at 8:00 AM, so history's weekly Thursday 6:00 PM reading is wrong (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

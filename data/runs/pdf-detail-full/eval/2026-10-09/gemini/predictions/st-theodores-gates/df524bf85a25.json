@@ -1,0 +1,344 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-theodores-gates",
+  "content_hash": "df524bf85a25a01e48c3591e9487ffdd6130bdccebfff99f7a5143ccf15a17e2",
+  "source_url": "https://files.ecatholic.com/35761/bulletins/20260927.pdf?t=1790360499000",
+  "fetched_at": "2026-09-25T21:27:17Z",
+  "reference_date": "2026-09-25",
+  "churches": [
+    {
+      "slug": "st-theodores",
+      "name": "St. Theodore's Catholic Church",
+      "address": "168 Spencerport Road, Rochester, NY 14606"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/df524bf85a25a01e48c3591e9487ffdd6130bdccebfff99f7a5143ccf15a17e2-2c354a495e8d.json",
+    "modified_at": "2026-09-25T21:27:38.853000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-theodores-gates/df524bf85a25.pdf",
+  "pdf_sha256": "d0316d59db71ab0a4b5273a81f2558ded8cc917551d1ef04b10cc078a375156d",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-theodores",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Communion Service",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "14:30",
+      "end_time": "16:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "2:30 PM",
+        "end_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "06:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Eucharistic Chapel",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "6:00 AM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "06:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Eucharistic Chapel",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "6:00 AM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "06:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Eucharistic Chapel",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "6:00 AM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "06:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Eucharistic Chapel",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "6:00 AM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "06:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Eucharistic Chapel",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "6:00 AM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "06:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Eucharistic Chapel",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "6:00 AM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-theodores",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "06:00",
+      "end_time": "20:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Eucharistic Chapel",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "6:00 AM",
+        "end_time": "8:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2457,
+    "output_tokens": 1365
+  }
+}

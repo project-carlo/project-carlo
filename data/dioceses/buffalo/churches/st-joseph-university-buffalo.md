@@ -25,12 +25,20 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''St. Joseph University, Buffalo'':
     Sat. 4 p.m.; Sun. 8:30 a.m.; Sun. 11:30 a.m..'
+- url: https://stjosephbuffalo.org/preaching-schedule/
+  seen: 2026-10-07
+  quote: 'Weekend Mass Schedule Saturday: 4:00 PM Sunday: 8:30 AM, 10:00 AM, and 11:30 AM'
+- url: https://container.parishesonline.com/bulletins/14/1703/20261004B.pdf
+  seen: 2026-10-07
+  note: 'Campus Ministry Family bulletin, 4 October 2026, page 1 (an image, read rendered): "4:00 PM (SJUP)",
+    Sunday "8:30 AM (SJUP)", "10:00 AM (SJUP)", "11:30 AM (SJUP)", student Mass "7:00 PM (SJUP)", and "St.
+    Joseph University Parish 3269 Main Street Buffalo | NY | 14214".'
 promoted: 2026-09-26
 ---
 
 ## Holds Mass
 
-This church publishes no bulletin that could be read. The diocesan weekend Mass-times pages (roster evidence) list its Masses. Its own site was checked and gives no schedule, or blocked automated reads.
+Yes, weekly. The Campus Ministry Family bulletin of 4 October 2026 (page 1) and the parish's own schedule page (read 7 October 2026) give Saturday 4 pm and Sunday 8:30, 10 and 11:30 am, plus a Sunday 7 pm student Mass during the semesters. The diocesan Mass-times pages list Saturday 4 pm and Sunday 8:30 and 11:30 am, without the 10 am.
 
 ## Name and address
 
