@@ -632,6 +632,22 @@ def test_dotnetnuke_linkclick_downloads_are_bulletins() -> None:
     }) == f"{HOME}/LinkClick.aspx?fileticket=B%3d&tabid=2011&portalid=34&mid=3661"
 
 
+def test_godaddy_nebula_file_links_are_bulletins() -> None:
+    # St. Joseph, Matamoras: one hash-named file per Sunday, dated only in the
+    # link text, in no particular order.
+    def nebula(h: str) -> str:
+        return f"https://nebula.wsimg.com/{h * 32}?AccessKeyId=A3711114AD1870F3198A&amp;disposition=0"
+
+    assert _resolve({
+        HOME: '<a href="/bulletins-1.html">Bulletins</a>',
+        f"{HOME}/bulletins-1.html": (
+            f'<a href="{nebula("a")}">September 20, 2026</a>'
+            f'<a href="{nebula("b")}">September 27, 2026</a>'
+            f'<a href="{nebula("c")}">September 13, 2026</a>'
+        ),
+    }) == f"https://nebula.wsimg.com/{'b' * 32}?AccessKeyId=A3711114AD1870F3198A&disposition=0"
+
+
 def test_a_google_doc_is_downloaded_as_a_pdf() -> None:
     # Most Holy Trinity, Susquehanna links each issue as a shared Google Doc.
     doc = "https://docs.google.com/document/d/18ujWxlm2oDDbN16o-_x/edit?usp=sharing"

@@ -77,6 +77,11 @@ _CONCRETE_DOWNLOAD_RE = re.compile(r"^https?://[^/]+/download_file/(?:view/)?\d+
 _DNN_LINKCLICK_RE = re.compile(
     r"^https?://[^/]+(?:/[^?]*)?/linkclick\.aspx\?(?:[^#]*&)?fileticket=", flags=re.IGNORECASE,
 )
+# GoDaddy's older Website Builder links each uploaded file by its hash, with
+# no file name: nebula.wsimg.com/<hash>?AccessKeyId=... (St. Joseph, Matamoras).
+_GODADDY_NEBULA_RE = re.compile(
+    r"^https?://nebula\.wsimg\.com/[0-9a-f]{32}\?(?:[^#]*&)?accesskeyid=", flags=re.IGNORECASE,
+)
 # A shared Google Doc (Most Holy Trinity, Susquehanna writes its bulletin in
 # one) downloads as a PDF from its export address.
 _GOOGLE_DOC_RE = re.compile(r"^https?://docs\.google\.com/document/d/([\w-]+)")
@@ -93,7 +98,7 @@ def document_download_url(url: str) -> str | None:
     match = _GOOGLE_DOC_RE.match(url)
     if match:
         return GOOGLE_DOC_PDF_EXPORT_URL_TEMPLATE.format(doc_id=match.group(1))
-    if _CONCRETE_DOWNLOAD_RE.match(url) or _DNN_LINKCLICK_RE.match(url):
+    if any(r.match(url) for r in (_CONCRETE_DOWNLOAD_RE, _DNN_LINKCLICK_RE, _GODADDY_NEBULA_RE)):
         return url
     return None
 
