@@ -37,7 +37,7 @@ St." and lists the week's Masses (Sunday 8 and 10:30 am, Monday-Thursday 7:30 am
 
 One: St. Lucy's Church, 949 Scranton Street (`st-lucy-scranton`), the finder's only worship
 site for this parish. The parish's former church, St. Michael's at 1703 Jackson Street (still
-in GCatholic), had its closing Mass in 2025 when the parish moved to St. Lucy's; it is
+in GCatholic), had its last Mass on 28 September 2025, when the parish moved to St. Lucy's; it is
 `excluded/st-michael-scranton.md`.
 
 ## Website and bulletin provider

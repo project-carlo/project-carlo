@@ -45,45 +45,6 @@ evidence:
   seen: 2026-10-16
   note: 'St. Patrick''s own WordPress site (read with visit.py; plain fetches get 403). Its bulletin page
     lists "Bully-Sunday-..." PDFs, newest "Bully-Sunday-June-28-2026.pdf": nothing posted since the merger.'
-- url: https://drive.google.com/uc?export=download&id=19PIsk77S1SnnHw-5zfLXHWhm5s_fb-xp
-  seen: 2026-10-16
-  quote: OUR THREE PARISHES HAVE SOME EXCITING EVENTS COMING UP!
-  note: The 18 October 2026 bulletin ("10/18" on both parishes' 2026 Bulletins pages, the same Drive file),
-    page 3. Page 4 is headed "Our Lady of the Immaculate Conception", page 5 "St. Patrick's Worship Site",
-    page 6 "Good Shepherd Church", each with that church's Mass intentions.
-- url: https://drive.google.com/uc?export=download&id=19PIsk77S1SnnHw-5zfLXHWhm5s_fb-xp
-  seen: 2026-10-16
-  quote: Sat. 10/17 4:00 PM Rev. Francis Skitski by His Parishioners Sun. 10/18 11:00 AM
-  note: Page 4, Immaculate Conception's Mass intentions.
-- url: https://drive.google.com/uc?export=download&id=19PIsk77S1SnnHw-5zfLXHWhm5s_fb-xp
-  seen: 2026-10-16
-  quote: Sat 10/17 5:00 PM Chris Alford by His Parents, Tyra and Mike Sun 10/18 9:45 AM
-  note: Page 5, St. Patrick's Worship Site.
-- url: https://drive.google.com/uc?export=download&id=19PIsk77S1SnnHw-5zfLXHWhm5s_fb-xp
-  seen: 2026-10-16
-  quote: Saturday, October 17 6:00PM Pearl & John Sipple
-  note: Page 6, Good Shepherd Church.
-- url: https://drive.google.com/uc?export=download&id=1X3TR9axoQQ_9v0jWoruXKYb9Y6nREPd9
-  seen: 2026-10-16
-  quote: 'A nine-person Transition Team was formed, consisting of three members each from the parishes
-    affected by the merger: St. Patrick’s Parish, Our Lady of the Immaculate Conception, and Good Shepherd
-    Parish.'
-  note: Letter to St. Patrick's parishioners dated June 6, 2026, page 2 of the 6/7 bulletin (then headed
-    "Immaculate Conception Parish"). It also lists "Strengthen communication in the combined bulletin".
-- url: https://drive.google.com/uc?export=download&id=13NOlOS34rRg62XHyHyWXyIIPEfLC5Blj
-  seen: 2026-10-16
-  quote: 6:00 PM Welcoming Mass for the Parishioners of St. Patrick’s
-  note: 28 June 2026 bulletin, page 5 (Mass of Wednesday 7/1). From the 5 July issue on, the bulletin
-    carries a St. Patrick's section.
-- url: https://sites.google.com/view/olichome-freeland-pa/2026-bulletins
-  seen: 2026-10-16
-  note: Lists the 2026 issues as Drive file links labelled by date ("10/4", "10/11", "10/18", ...). The
-    Good Shepherd site (sites.google.com/view/good-shepherd-church-drums-pa/2026-bulletins) links the
-    very same Drive file ids for every week.
-- url: https://stpatrickswhitehaven.org/bulletin/
-  seen: 2026-10-16
-  note: 'St. Patrick''s own WordPress site (read with visit.py; plain fetches get 403). Its bulletin page
-    lists "Bully-Sunday-..." PDFs, newest "Bully-Sunday-June-28-2026.pdf": nothing posted since the merger.'
 ---
 
 ## Publisher

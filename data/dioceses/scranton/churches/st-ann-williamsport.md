@@ -30,6 +30,11 @@ evidence:
 - url: https://www.stbonifacecatholic.com/
   seen: 2026-10-16
   quote: St. Ann Parish Hall and the outdoor pavilion at 1305 Northway Road, Williamsport
+- url: https://discovermass.com/church/st-joseph-the-worker-williamsport-pa/
+  seen: 2026-10-16
+  quote: Ann Catholic Church, … 1306 Northway Rd.
+  note: St. Joseph the Worker's 18 October 2026 issue, page 2, on daily Mass at St. Ann during the priests'
+    convocation (26-30 October).
 ---
 
 ## Holds Mass
@@ -45,7 +50,9 @@ The street number disagrees, so `address_verified` is false:
 - The parishes' own site (stbonifacecatholic.com, 16 October 2026): "St. Ann Parish Hall and the
   outdoor pavilion at 1305 Northway Road" (the hall, on the same campus).
 - GCatholic: "1220 Northway Rd., Williamsport 17701-3890".
+- St. Joseph the Worker's 18 October 2026 bulletin (a neighbouring parish), announcing weekday
+  Masses during the priests' convocation: "St. Ann Catholic Church, 1306 Northway Rd., Williamsport".
 
-Followed the finder and the parish (1305). GCatholic's 1220 may be an older or mailing number.
+Followed the finder and the parish (1305); 1306 looks like a slip. GCatholic's 1220 may be an older or mailing number.
 The name agrees everywhere. Coordinates are GCatholic's Plus Code (87H5723H+QJ), which GCatholic
 places on the church building; a map check of the campus would settle the number.
