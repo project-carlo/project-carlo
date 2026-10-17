@@ -33,7 +33,12 @@ from pdf_extract.runs import (
 )
 from pdf_extract.schedule.report import render_update_mode, update_mode_report
 from pdf_extract.schedule.store import update_mode_slugs
-from pdf_extract.storage import latest_bulletin_ids, load_bulletins, load_events
+from pdf_extract.storage import (
+    fetch_only_slugs,
+    latest_bulletin_ids,
+    load_bulletins,
+    load_events,
+)
 from pdf_extract.timeparse import time_to_minutes
 
 # A parish that showed at least this many events and now shows none holds the
@@ -127,13 +132,14 @@ def diff_databases(before: Path, after: Path) -> list[ParishChange]:
     """What changed for each extract-mode parish.
 
     A parish in update mode in either database is left out: its changes are
-    reported from its calls' proposals (`schedule.report`).
+    reported from its calls' proposals (`schedule.report`). So is a parish
+    that is fetch-only in a database, as the website leaves it out.
     """
     before_conn, after_conn = _open_ro(before), _open_ro(after)
     try:
         update_mode = update_mode_slugs(before_conn) | update_mode_slugs(after_conn)
-        before_state = _current_state(before_conn, update_mode)
-        after_state = _current_state(after_conn, update_mode)
+        before_state = _current_state(before_conn, update_mode | fetch_only_slugs(before_conn))
+        after_state = _current_state(after_conn, update_mode | fetch_only_slugs(after_conn))
     finally:
         before_conn.close()
         after_conn.close()
@@ -183,6 +189,36 @@ def _stale_parishes(
     return out
 
 
+def _fetch_only_report(
+    conn: sqlite3.Connection, fetch_only: set[str], results: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """How the fetch-only parishes' bulletins came in this run.
+
+    These parishes are fetched but not processed, so this is the place to see
+    whether a new diocese's bulletins are being found before switching it on.
+    """
+    counts: dict[str, int] = {}
+    for r in results:
+        counts[r["status"]] = counts.get(r["status"], 0) + 1
+    return {
+        "parishes": len(fetch_only),
+        "attempted": len({r["parish_slug"] for r in results}),
+        "fetch": dict(sorted(counts.items())),
+        "failures": [
+            {
+                **r,
+                "consecutive_failures": consecutive_failures(conn, r["parish_slug"], r["stage"]),
+            }
+            for r in results if r["status"] in FAILED_STATUSES
+        ],
+        "old_picks": [
+            r for r in results
+            if r["status"] == FETCH_NEW and OLD_PICK_MARK in (r.get("detail") or "")
+        ],
+        "stale_parishes": _stale_parishes(conn, {r["parish_slug"] for r in results}),
+    }
+
+
 def build_report(
     *,
     run_id: str,
@@ -205,7 +241,14 @@ def build_report(
 
     conn = _open_ro(after_db)
     try:
-        results = parish_results(conn, run_id)
+        # Fetch-only parishes are reported on their own, below, and don't
+        # count toward the checks: they aren't on the site yet.
+        fetch_only = fetch_only_slugs(conn)
+        all_results = parish_results(conn, run_id)
+        results = [r for r in all_results if r["parish_slug"] not in fetch_only]
+        fetch_only_results = [
+            r for r in all_results if r["parish_slug"] in fetch_only and r["stage"] == "fetch"
+        ]
         attempted = {r["parish_slug"] for r in results if r["stage"] == "fetch"}
         failures = [
             {
@@ -215,6 +258,7 @@ def build_report(
             for r in results
             if r["status"] in FAILED_STATUSES
         ]
+        fetch_only_report = _fetch_only_report(conn, fetch_only, fetch_only_results)
         wrong_bulletins = [r for r in results if r["status"] == "wrong_bulletin"]
         # A third bulletin for one week: the site keeps changing it, or the
         # duplicate check is missing a server's rebuilds.
@@ -313,6 +357,7 @@ def build_report(
             "update_proposals_rejected": update_mode["rejected"],
         },
         "update_mode": update_mode,
+        "fetch_only": fetch_only_report,
         "seeds": {
             "loaded": (seeds or {}).get("loaded", []),
             "skipped": (seeds or {}).get("skipped", []),
@@ -383,6 +428,48 @@ def _describe_newest(newest: dict[str, str | None] | None) -> str:
     if seen and seen != fetched:
         text += f"; the site still served it {seen}"
     return text
+
+
+def _render_fetch_only(section: dict[str, Any], *, max_notes: int = 60) -> list[str]:
+    """The fetch-only parishes' fetch results, or nothing when there are none.
+
+    The notes stop at `max_notes`: a newly promoted diocese can have dozens of
+    parishes not found yet, and the report also goes into a GitHub issue.
+    """
+    if not section.get("parishes"):
+        return []
+    counts = ", ".join(f"{status} {n}" for status, n in section.get("fetch", {}).items())
+    lines = [
+        "", "### Fetch-only parishes", "",
+        f"{section['parishes']} parishes are fetched but not processed or shown "
+        f"(`fetch_only` in data/parishes.csv). This run fetched {section['attempted']}"
+        + (f": {counts}." if counts else "."),
+    ]
+    notes: list[str] = []
+    for failure in section.get("failures", []):
+        streak = failure["consecutive_failures"]
+        streak_note = f" — {streak} runs in a row" if streak > 1 else ""
+        detail = f": {failure['detail']}" if failure.get("detail") else ""
+        notes.append(
+            f"- **{failure['parish_slug']}** {failure['stage']} {failure['status']}"
+            f"{streak_note}{detail}"
+        )
+    for result in section.get("old_picks", []):
+        notes.append(
+            f"- **{result['parish_slug']}**: took a bulletin not dated this week "
+            f"({result['detail']}; {result.get('source_url')})"
+        )
+    for slug, newest in section.get("stale_parishes", {}).items():
+        notes.append(
+            f"- **{slug}** has no bulletin from the last {STALE_BULLETIN_AGE_DAYS} days "
+            f"({_describe_newest(newest)})"
+        )
+    if len(notes) > max_notes:
+        hidden = len(notes) - max_notes
+        notes = notes[:max_notes] + [f"- … and {hidden} more (all in report.json)"]
+    if notes:
+        lines += [""] + notes
+    return lines
 
 
 def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -> str:
@@ -463,6 +550,7 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
         )
     lines += ["", "### Needs attention", ""]
     lines += notes or ["Nothing."]
+    lines += _render_fetch_only(report.get("fetch_only") or {})
 
     changes = report["changes"]
     lines += ["", "### Schedule changes", ""]
