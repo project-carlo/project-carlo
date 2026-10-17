@@ -2,7 +2,7 @@
 name: Ascension Parish and St. Katharine Drexel Parish
 website: https://apskdp.org/community/weekly-bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://apskdp.org/community/weekly-bulletin/']
 group: Ascension Parish; Saint Katharine Drexel Parish
 evidence:
@@ -63,9 +63,9 @@ has church pages for St. James and St. Juliana but lists no issues. Hence `other
 bulletin page as the publication.
 
 **The bulletin's pages 1 to 5 are images with no text layer** (probe pdf: readable page 6
-only, the advertisers' page), so the pipeline has to read it as images. No `fetch:check`
-recipe pinned yet: run it after promotion; `page-pdfs` on the bulletin page should be the
-collector.
+only, the advertisers' page), so the pipeline has to read it as images. Recipe `page-pdfs` (the
+website is the bulletin page) pinned from `fetch:check` on 2026-10-17, after promotion, which picked the 18 October issue
+(`Bulletin-10.18.26.pdf`, `current`).
 
 ## Not yet confirmed
 

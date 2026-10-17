@@ -55,7 +55,13 @@ collector reads a self-hosted image flipbook (the flipbook collector only knows 
 hosts). The pipeline will need a collector for this format, and will have to read the issue
 as images.
 
+`fetch:check` after promotion (2026-10-17): "No PDF links found on bulletin page:
+https://stannsbasilicaparish.org/bulletin/", as expected. The `page-images` collector reads
+one image per issue; this book has four (`files/page/1.jpg` to `4.jpg`, listed in its
+`javascript/config.js`), and the fetch stage downloads one file per bulletin, so it is not
+pinned. Reading it needs a fetch that assembles several images into one PDF.
+
 ## Not yet confirmed
 
-Whether the pipeline can fetch this bulletin at all (see above). A `fetch:check` run after
-promotion will show what it picks; until a collector exists, expect no PDF.
+Whether the pipeline can fetch this bulletin at all (see above): until multi-image issues are
+supported, expect no PDF.

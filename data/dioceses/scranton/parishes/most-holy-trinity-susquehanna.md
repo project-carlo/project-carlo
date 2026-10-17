@@ -2,7 +2,7 @@
 name: Most Holy Trinity Parish
 website: https://sites.google.com/view/mostholytrinitynepa/bulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://sites.google.com/view/mostholytrinitynepa/bulletin']
 group: Most Holy Trinity Parish Susquehanna
 evidence:
@@ -56,11 +56,13 @@ The website is the Google Sites "Bulletin" page, which links one Google Doc
 (`docs.google.com/document/d/<id>/edit`) titled with the issue date. The Doc exports as PDF
 (`/export?format=pdf`, 4 pages) **with no text layer** (the content is images), so the
 pipeline has to read it as images; the plain-text export is empty. Not a shared Drive
-folder, so `other` rather than `google_drive`; whether the `other` resolver follows a
-Google Doc link has not been checked (`fetch:check` after promotion). Discover Mass has an
+folder, so `other` rather than `google_drive`; the resolver downloads a linked Google Doc through its PDF
+export, and with recipe `page-pdfs` (the website is the bulletin page) `fetch:check` after
+promotion (2026-10-17) picked the Doc (`first-listed`: the link has no text or date) and got
+a 4-page PDF. Discover Mass has an
 empty page for St. John's.
 
 ## Not yet confirmed
 
 Whether each week's issue is a new Doc or the same Doc overwritten (the page showed one
-link on 2026-10-16). The `other` resolver's handling of a Google Doc link.
+link on 2026-10-16). If the parish links several Docs at once, the resolver takes the first.

@@ -57,8 +57,11 @@ The website is the News & Events list (stritaspa.org/News-Events), where each we
 links the PDF on Net Driven's CDN (`c1.nd-cdn.us/PDFs/<number><name>.pdf`, file names not
 date-based). The posts are not always dated to the week: "23rd Sunday ... August 9, 2026"
 and "22 Sunday ... August 30, 2026" were posted on 4 September. The PDF is text. No
-publisher id, so `other`. No `fetch:check` recipe yet; the collector will have to follow the
-newest post (`dated-post` or `linked-issue-page`).
+publisher id, so `other`. `fetch:check` after promotion (2026-10-17) failed twice with "Execution context was
+destroyed" (the page navigates by script while it is read). No recipe would read it yet
+either: `dated-post` follows only posts labelled "bulletin", or, on a listing whose address
+says "bulletin", posts dated this week, and these posts are titled by their Sunday alone and
+run two weeks late (newest 4 October on 17 October). Left without a recipe.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. Mary Parish
 website: https://stmaryswaymart.com/newbulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: page-images
 publication: ['url:https://stmaryswaymart.com/newbulletin']
 group: Saint Mary Parish
 evidence:
@@ -47,10 +47,14 @@ stmaryswaymart.com/newbulletin (reached from the "Bulletins" page's "Click here 
 bulletin") lists each weekend's bulletin as a captioned image on images.squarespace-cdn.com
 (the caption is the date, e.g. "October 10-11, 2026"); the full-size image is the whole
 bulletin spread. **There is no PDF and no text: the pipeline has to read an image.** Plain
-curl reads the page. No publisher id, so `other`; whether the `other` resolver reads image
-bulletins at all has not been checked (`fetch:check` after promotion).
+curl reads the page. No publisher id, so `other`, with recipe `page-images`: a collector that reads a page's
+images only when a recipe names it, taking those dated or labelled "bulletin" (the
+gallery's undated "2026 BULLETIN COVER TEMPLATE" image is dropped once dated ones are
+found). `fetch` stores the image as a one-page PDF. `fetch:check` after promotion
+(2026-10-17) picked `Bulletin+2026+October+10-11.jpg` (`current`) and downloaded it as a
+PDF. The cover template (a fixed front page, not fetched) is not part of the stored issue;
+the weekly image carries the week's Mass schedule.
 
 ## Not yet confirmed
 
-Whether the pipeline can use an image-only, non-PDF bulletin; if not, this row may have to
-become `no_bulletin` with its church kept.
+How well the extractor reads a 1500-pixel spread of small type, once fetched.

@@ -2,7 +2,7 @@
 name: St. Jude Parish
 website: https://www.stjc.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs http://sponsors.bonventure.net/?page=1647
 publication: ['url:http://sponsors.bonventure.net/?page=1647']
 group: Saint Jude Parish; Our Lady Help of Christians Parish (St. Mary's)
 evidence:
@@ -61,9 +61,10 @@ finder lists for its parish.
 `other`, website stjc.org. Its Bulletin page links "Weekly Bulletins" to
 sponsors.bonventure.net/?page=1647, which links the current PDF
 (pdfs/1647/<yyyy-mm-dd>.pdf) and lists older issues in a dropdown. Recorded as
-`url:http://sponsors.bonventure.net/?page=1647`. No recipe pinned: the resolver has never
-read a Bonventure page (this diocese has at least two: 1647 and 3087), so check `fetch:check`
-after promotion. Dorrance's own page (stmarydorrance.org/bulletins, an LPi weconnect site
+`url:http://sponsors.bonventure.net/?page=1647`. Recipe `page-pdfs http://sponsors.bonventure.net/?page=1647`: the first `fetch:check`
+after promotion (2026-10-17) read stjc.org's homepage as the bulletin page (its Bulletin page
+links only the Bonventure page, which the resolver does not follow) and picked a "Flocknote
+website flyer" PDF. Pinned, it picked `pdfs/1647/2026-10-18.pdf` (`current`). Dorrance's own page (stmarydorrance.org/bulletins, an LPi weconnect site
 with no ParishesOnline org found) is not recorded as a publication of this row because it
 carried Dorrance's separate bulletin.
 

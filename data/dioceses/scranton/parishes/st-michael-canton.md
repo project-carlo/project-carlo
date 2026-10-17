@@ -2,7 +2,7 @@
 name: St. Michael Parish
 website: https://stmichaelscanton.com/bulletins/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://stmichaelscanton.com/bulletins/']
 group: Saint Michael Parish Canton
 evidence:
@@ -57,8 +57,9 @@ by Diocesan/Crossroads) links one PDF per Sunday under
 with the newest issue (18 October 2026) already up on 16 October. The file names carry the
 liturgical Sunday, not a date, so the `other` resolver has to read the page. No ParishesOnline,
 eCatholic or Discover Mass id was found (`probe url` on the homepage found none).
-`provider_id` is left empty until a `fetch:check` run after promotion suggests a recipe
-(likely `page-pdfs`).
+Recipe `page-pdfs` (the website is the bulletin page) pinned from `fetch:check` on 2026-10-17, after promotion, which
+picked the first-listed `2026-29th-Sunday-in-Ordinary-Time-bulletin-7.pdf` (18 October); the
+pick is `first-listed`, relying on the newest issue being listed first.
 
 ## Not yet confirmed
 

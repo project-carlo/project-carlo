@@ -2,7 +2,7 @@
 name: Sacred Heart of Jesus Parish (Dupont) and Queen of the Apostles Parish (Avoca)
 website: https://stmaryavoca.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://stmaryavoca.com/bulletin/
 publication: ['url:https://stmaryavoca.com/bulletin/', 'url:https://sacredheartdupont.com/blog/']
 group: Sacred Heart of Jesus Parish Dupont; Queen of the Apostles Parish
 evidence:
@@ -55,9 +55,8 @@ The bulletin is self-hosted twice: on stmaryavoca.com's Bulletin page (/bulletin
 sacredheartdupont.com's Blog page (/blog/), each linking WordPress uploads named by date
 (`/wp-content/uploads/2026/10/10-11-26-final.pdf`). `website` is the Avoca site, whose homepage
 links its Bulletin page directly; both listing pages are recorded as `publication` so that neither
-can be claimed by another row. `bulletin_provider: other` with no recipe pinned: `fetch:check` reads
-only promoted rows, so it could not be run here. The Avoca recipe is likely `page-pdfs
-https://stmaryavoca.com/bulletin/`.
+can be claimed by another row. `bulletin_provider: other` with recipe `page-pdfs https://stmaryavoca.com/bulletin/`,
+pinned from `fetch:check` on 2026-10-17, after promotion, which picked `10-18-26-final.pdf` (`current`).
 
 ## Not yet confirmed
 

@@ -25,9 +25,6 @@ evidence:
   note: 'The bulletin page links one PDF per week on the Duda CDN (irp.cdn-website.com/110e99de/...),
     with irregular file names: "Bulletin+for+July+5.pdf", "August+2-+2026.pdf", "9.20.26+bulletin.pdf",
     "10.4.26.pdf". Newest on 2026-10-16: 4 October 2026.'
-revisit: fetch:check picks 'Parish Consolidation' PDF instead of the bulletin (undated file names like
-  10.4.26.pdf); re-run after a chooser fix.
-revisit_after: 2026-11-15
 promoted: 2026-10-17
 ---
 
@@ -58,14 +55,15 @@ Its /bulletin page lists the PDFs, which embed no publisher id, so provider `oth
 `url:` the bulletin page as the publication. Recipe `page-pdfs
 https://www.olpphazleton.org/bulletin` is pinned by inspection (the page links the PDFs
 directly). `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this
-row) picked the wrong file: "Parish+Consolidation-1bcc83bd.pdf" ("first-listed"), a
-document linked on the same page, because it cannot date the irregular file names
-("10.4.26.pdf", "9.20.26+bulletin.pdf", "August+2-+2026.pdf"). **Until the chooser can date
-these names (or skip non-bulletin PDFs), the row fetches the wrong PDF.** Page 1 (masthead
-and Mass times) is an image; inner pages have text.
+row, and again after promotion) picked the wrong file: "Parish+Consolidation-1bcc83bd.pdf"
+("first-listed"), a document listed above the issues, because no issue was dated this week
+and it could not date names with "+" for spaces ("10+18+26.pdf", "August+2-+2026.pdf"). The
+resolver now reads those names, and passes over an undated, unlabelled first PDF when the
+page lists a dated series, taking the newest recent issue; the re-run picked `10+18+26.pdf`
+(18 October, `current`). Page 1 (masthead and Mass times) is an image; inner pages have
+text.
 
 ## Not yet confirmed
 
 The 11 October issue was not yet posted on 2026-10-16 (newest 4 October), so the parish
-posts a week or two late at times. The resolver's wrong pick (above) needs a fix in the
-`other` chooser before this row yields bulletins.
+posts a week or two late at times; by 17 October the 11 and 18 October issues were both up.

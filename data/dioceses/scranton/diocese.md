@@ -118,8 +118,47 @@ wrong issue, and twelve rows were not read at all:
   the TLS hello). They may work from the pipeline's own runner.
 
 Every row stays `other` with its evidence: each publishes a current bulletin, so none is
-`no_bulletin`. Re-run `fetch:check -- --parish <slug>` after promotion and pin the recipes it
-prints for the `first-listed` picks once they are this week's issue.
+`no_bulletin`.
+
+### Fetch check (2026-10-17, after promotion)
+
+`fetch:check` over the 44 `other` rows, before and after resolver changes made for them:
+**32 resolved before, 38 after**, and the picks that were wrong are now this week's issue.
+The changes, all general (unit-tested, and replayed against the 77 other dioceses'
+`other`/`google_drive` sites recorded the same day with no pick changed):
+
+- **Dates:** an ordinal after a date is the Sunday's number ("10/4-27th Sunday", St. John
+  Bosco); Weebly's `/uploads/3/4/1/2/<site>/` folders are no date (Nativity, Duryea); "+" is a
+  space in file names ("10+18+26.pdf", Our Lady of Peace); a year before the month or joined
+  by "_" is the issue's ("bulletin-2022-october-23", "Bulletin_October 12_2025": St. Michael
+  the Archangel had picked a 2022 issue as this week's).
+- **Choosing:** a first PDF neither dated nor labelled "bulletin" (Our Lady of Peace's
+  "Parish Consolidation") gives way to the newest recent issue when the page lists a dated
+  series.
+- **Formats:** base64 JSON viewer settings (PDF Embedder `pdfemb-data`, Our Lady of Victory;
+  3D FlipBook `FB3D_CLIENT_DATA`, St. Thomas More); Google Docs, exported as PDF (Most Holy
+  Trinity); DotNetNuke `LinkClick.aspx` tickets (Plains); Pilot Bulletins embed links, read
+  as their dated PDF (St. Therese had picked a registration form); GoDaddy `nebula.wsimg.com`
+  file links (Milford, untested live); and a recipe-only `page-images` collector, with `fetch`
+  storing an image bulletin as a one-page PDF (St. Mary, Waymart).
+
+Recipes are pinned on the 22 rows whose pick was checked by hand (including the
+`first-listed` ones: Holy Child, St. Michael Canton, Towanda, Montoursville, Most Holy
+Trinity and Hunlock Creek, each this week's issue or the only one posted), and St. Jude now
+reads its Bonventure page (the homepage guess had picked a Flocknote flyer). St. Monica's
+printed recipe names one week's file, so it is not pinned. Plains' "October 11, 2026" link
+still serves a 2017 file (the parish's upload mistake).
+
+Not read on the after-run (6):
+- **St. Ann's Basilica:** a FlipHTML5 book of four page JPEGs; the fetch stage downloads one
+  file per bulletin, so a multi-image issue needs a fetch that assembles pages into a PDF.
+- **St. Rita, Gouldsboro:** the Net Driven page navigates while it is read, and its posts
+  are titled by the Sunday alone and run two weeks late, which `dated-post` does not follow.
+- **Our Lady of Perpetual Help, Wyalusing:** Cloudflare challenged every load.
+- **Holy Name of Mary, Montrose; St. Patrick/St. Joseph, Milford; Our Lady of Hope:** the
+  sites reset the sandbox's connections. Our Lady of Hope and NEPA Catholic each resolved on
+  one run and were reset on another (both are pinned, to the issue they picked); the other
+  two never loaded here, so they have no recipe.
 
 ## Rules settled for this diocese
 
@@ -154,6 +193,10 @@ prints for the `first-listed` picks once they are this week's issue.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-10-17: After promotion, `fetch:check` over the 44 `other` rows: 32 resolved; resolver
+  changes for dates, an undated first PDF, base64 viewer settings, Google Docs, DNN, Pilot
+  Bulletins, GoDaddy file links and image bulletins brought it to 38, with 22 recipes pinned
+  (see "Fetch check (after promotion)"). Six rows still unread.
 - 2026-10-17: Explored the whole diocese in seven regions (Scranton city; north Lackawanna and
   Wyoming; Wilkes-Barre; Pittston, West Side and Back Mountain; Hazleton and Monroe; Pike, Wayne
   and Susquehanna; Bradford, Tioga, Sullivan and Lycoming), one agent each, then a

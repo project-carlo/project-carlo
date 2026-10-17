@@ -2,7 +2,7 @@
 name: Saints Peter & Paul Parish
 website: https://sspeterandpaulplains.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://sspeterandpaulplains.com/Sunday-Bulletin
 publication: ['url:https://sspeterandpaulplains.com/Sunday-Bulletin']
 group: Saints Peter & Paul Parish
 evidence:
@@ -45,7 +45,12 @@ church is also closed (`excluded/holy-saviour-wilkes-barre.md`).
 `other`: sspeterandpaulplains.com/Sunday-Bulletin (DotNetNuke) lists one
 `LinkClick.aspx?fileticket=` download per Sunday, labelled with the date. The links have
 no .pdf in the URL, and recent issues are scanned images (the 4 October one entirely), so
-the pipeline will need to read them as images. No recipe pinned.
+the pipeline will need to read them as images. The resolver now takes DNN file tickets as
+PDFs, and recipe `page-pdfs https://sspeterandpaulplains.com/Sunday-Bulletin` is pinned from
+`fetch:check` after promotion (2026-10-17), which picked the "October 11, 2026" link
+(`current`). That link still served the 1 January 2017 file that day, so this week's fetch
+gets the wrong issue until the parish fixes the upload; the pipeline dates a bulletin by its
+content, so the 2017 issue will not pass for the current one.
 
 ## Not yet confirmed
 

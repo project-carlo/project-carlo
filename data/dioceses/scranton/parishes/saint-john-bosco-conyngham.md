@@ -57,7 +57,11 @@ here; it is in neither roster and has no record.
 The parish's Google Site (the diocese finder's link). Its "2026 Bulletins" page links one
 Google Drive PDF per week, so provider `other` (its resolver reads Drive file links), with
 recipe `page-pdfs https://sites.google.com/view/stjohnboscochurchconyngham/2026-bulletins`
-pinned by inspection; `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this row) picked the 4 October issue, not the newest (11 October): it read the label "10/4-27th Sunday" as 2027-10-04 ("first-listed, dated 2027-10-04"). The chooser needs to stop reading "27th" as a year, or the parish to drop the Sunday name from its labels. As
+pinned by inspection; `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this row, and
+again after promotion) picked the 4 October issue, not the newest: it read the label
+"10/4-27th Sunday" as 2027-10-04 ("first-listed, dated 2027-10-04"). The resolver now reads
+an ordinal after a date as the Sunday's number, not a year, and the re-run picked the 18
+October issue ("10/18-29th Sunday", `current`). As
 with Freeland's site, the yearly page will likely move in January 2027 (the 2025 page now
 sits at /2026-bulletins/2025-bulletins). The PDFs have text.
 

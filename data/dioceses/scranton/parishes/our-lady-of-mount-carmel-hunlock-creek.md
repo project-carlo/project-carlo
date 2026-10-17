@@ -2,7 +2,7 @@
 name: Our Lady of Mount Carmel Parish
 website: https://www.olmcsilkworth.com
 bulletin_provider: other
-provider_id: ''
+provider_id: dated-post https://www.olmcsilkworth.com/bulletins
 publication: ['url:https://www.olmcsilkworth.com/bulletins']
 group: Our Lady of Mount Carmel Parish
 evidence:
@@ -46,9 +46,9 @@ Lady of Mount Carmel Parish". Holy Spirit's other churches went to St. Faustina 
 ## Website and bulletin provider
 
 `other`: olmcsilkworth.com (Squarespace) posts each bulletin as a blog post under
-/bulletins/<yyyy>/<m>/<d>/<title>, each linking a PDF under /s/. Likely recipe `dated-post
-https://www.olmcsilkworth.com/bulletins`, not pinned (`fetch:check` reads
-`data/parishes.csv`). One post title is mistyped ("august-23-2023" for the 23 August 2026
+/bulletins/<yyyy>/<m>/<d>/<title>, each linking a PDF under /s/. Recipe `dated-post
+https://www.olmcsilkworth.com/bulletins` pinned from `fetch:check` on 2026-10-17, after promotion, which followed the
+newest post to `OLMC-101826-Bulletin-003.pdf` (18 October). One post title is mistyped ("august-23-2023" for the 23 August 2026
 issue), so the post date is more reliable than its title.
 
 ## Not yet confirmed

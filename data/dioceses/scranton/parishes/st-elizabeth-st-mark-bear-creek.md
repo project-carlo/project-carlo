@@ -2,7 +2,7 @@
 name: St. Elizabeth of Hungary and St. Mark
 website: https://www.churchofstelizabethstmark.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.churchofstelizabethstmark.org/bulletin
 publication: ['url:https://www.churchofstelizabethstmark.org/bulletin']
 group: Saint Elizabeth Parish
 evidence:
@@ -40,8 +40,9 @@ Labor Day; the 11 October bulletin still lists it.
 ## Website and bulletin provider
 
 `other`: the parish's own site churchofstelizabethstmark.org posts each issue as a PDF on
-its /bulletin page (and older ones on /bulletin-archive). No recipe pinned (`fetch:check`
-reads `data/parishes.csv`, which this row is not in yet).
+its /bulletin page (and older ones on /bulletin-archive). Recipe `page-pdfs
+https://www.churchofstelizabethstmark.org/bulletin` pinned from `fetch:check` on 2026-10-17, after promotion, which picked
+the 11 October issue (`current`).
 
 ## Not yet confirmed
 

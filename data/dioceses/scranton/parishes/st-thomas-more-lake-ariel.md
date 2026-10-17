@@ -2,7 +2,7 @@
 name: St. Thomas More Parish
 website: https://stthomas-stmary.com/bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://stthomas-stmary.com/bulletin/']
 group: Saint Thomas More Parish
 evidence:
@@ -49,8 +49,9 @@ address is in the page's FB3D_CLIENT_DATA (base64 JSON), as
 PDF. The PDF has a text layer, but its lines are split one character late ("S t. Thomas
 More1 05 Gravity Rd."), which may trouble extraction. No publisher id, so `other`.
 The homepage answered curl with a "Please wait while your request is being verified"
-challenge page once. No `fetch:check` recipe yet; the collector needs `linked-issue-page`
-(flipbook) handling.
+challenge page once. Recipe `page-pdfs` (the website is the bulletin page): the resolver now decodes the
+base64 JSON, and `fetch:check` after promotion (2026-10-17) picked
+`bul-october-11-2026.pdf` (`current`, the issue the viewer showed that day).
 
 ## Not yet confirmed
 

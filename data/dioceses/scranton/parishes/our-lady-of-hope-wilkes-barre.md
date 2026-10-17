@@ -2,7 +2,7 @@
 name: Our Lady of Hope Parish
 website: https://ourladyofhope.us
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://ourladyofhope.us/bulletin
 publication: ['url:https://ourladyofhope.us/bulletin']
 group: Our Lady of Hope Parish
 evidence:
@@ -35,7 +35,10 @@ finder and GCatholic list for the parish.
 
 `other`: ourladyofhope.us (GoDaddy Website Builder) lists each issue on /bulletin as a PDF
 hosted on img1.wsimg.com; file names are free-form ("Bulletin, September 27, 2026",
-"October 11,2026"). No recipe pinned.
+"October 11,2026"). Recipe `page-pdfs https://ourladyofhope.us/bulletin` pinned from
+`fetch:check` on 2026-10-17, after promotion, which picked "Bulletin October 18,2026"
+(`current`). The site resets the sandbox's connections some of the time (a second run the
+same day failed with `ERR_CONNECTION_RESET`).
 
 ## Not yet confirmed
 

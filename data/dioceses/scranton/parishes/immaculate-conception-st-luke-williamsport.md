@@ -2,7 +2,7 @@
 name: Immaculate Conception and Saint Luke Parishes
 website: https://www.icslchurch.net/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.icslchurch.net/']
 group: Immaculate Conception of the B.V.M. Parish; Saint Luke Parish Jersey Shore
 evidence:
@@ -51,8 +51,9 @@ No other building is listed for either parish by the finder or GCatholic.
 The homepage (a mychurchwebsite.net site) links the current issue as
 `files.mychurchwebsite.net/c2546/bulletin_<yymmdd>.pdf`, one file per Sunday with the date in
 the name. `probe url` found that link and no ParishesOnline, eCatholic or Discover Mass id, so
-the provider is `other`, read from the homepage. `provider_id` is left empty until a
-`fetch:check` run after promotion suggests a recipe (likely `redirected-pdf` or `page-pdfs`).
+the provider is `other`, read from the homepage. Recipe `page-pdfs` (on the
+homepage, the website) pinned from `fetch:check` on 2026-10-17, after promotion, which picked `bulletin_261018.pdf` (18
+October; `titled`, since the resolver does not read a YYMMDD date).
 
 ## Not yet confirmed
 

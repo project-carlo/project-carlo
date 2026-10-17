@@ -48,7 +48,10 @@ bulletin's own address, fsspscranton.org, redirects there too (`curl -I`, 2026-1
 WordPress site is used as `website`. Its "Bulletins" page (/sunday-bulletin/) links every
 issue as a PDF named by date (`wp-content/uploads/<YYYY>/<MM>/bulletin_<month>_<d>_<yyyy>.pdf`),
 so the row is `other` with the recipe `page-pdfs https://fsspscranton.wordpress.com/sunday-bulletin/`,
-written by hand (`fetch:check` reads only promoted rows). The PDF has a text layer.
+written by hand. The first `fetch:check` after promotion (2026-10-17) picked
+`bulletin-2022-october-23.pdf` from the page's archive, reading "Bulletin 2022 October 23" as
+this coming 23 October; with the year read, it picks `bulletin_october_11_2026.pdf`
+(`current`, the newest posted on 17 October). The PDF has a text layer.
 
 ## Not yet confirmed
 

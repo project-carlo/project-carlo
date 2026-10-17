@@ -2,7 +2,7 @@
 name: The Parishes of St. Peter and St. Thomas the Apostle
 website: http://www.stpeterswellsboro.com/weekly-bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:http://www.stpeterswellsboro.com/weekly-bulletin/', 'url:http://www.stthomaselklandpa.com/bulletins.html']
 group: Saint Peter Parish; Saint Thomas the Apostle Parish
 evidence:
@@ -61,8 +61,9 @@ in Wellsboro, Elkland and Westfield.
 `/storage/<Month> <d> <yyyy>.pdf` (dated file names; the 18 October issue was up on 16
 October). It is self-hosted (`other`); no ParishesOnline, eCatholic or Discover Mass id was
 found. St. Thomas's page (stthomaselklandpa.com/bulletins.html) is recorded as a second
-`publication` because it posts the same bulletin, as images. `provider_id` is left empty
-until a `fetch:check` run after promotion suggests a recipe.
+`publication` because it posts the same bulletin, as images. Recipe `page-pdfs` (the
+website is the bulletin page) pinned from `fetch:check` on 2026-10-17, after promotion, which picked `October 18 2026.pdf`
+(`current`).
 
 ## Not yet confirmed
 

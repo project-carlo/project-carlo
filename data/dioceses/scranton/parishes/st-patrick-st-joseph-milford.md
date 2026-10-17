@@ -56,8 +56,10 @@ on GoDaddy's file host (`nebula.wsimg.com/<hash>?AccessKeyId=...`), with the dat
 the link text and the links in no particular order. St. Patrick's own site
 (saintpatricksmilford.com) reset every connection here, so whether it posts the bulletin
 too is unknown; the website is St. Joseph's page, which does. The PDF has a text layer. No
-publisher id, so `other`. The collector will need to choose by link text (`titled`), since
-the file names carry no date.
+publisher id, so `other`. The file names carry no date, so the resolver dates each link by its text; it takes
+these `nebula.wsimg.com` links as PDFs since 2026-10-17. `fetch:check` after promotion
+(2026-10-17) could not load the page (`ERR_CONNECTION_RESET` from the sandbox), so no recipe
+is pinned; `page-pdfs` on the website should read it.
 
 ## Not yet confirmed
 

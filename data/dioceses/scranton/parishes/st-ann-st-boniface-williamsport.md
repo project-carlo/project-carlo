@@ -2,7 +2,7 @@
 name: The Parishes of Saint Ann & Saint Boniface
 website: http://sponsors.bonventure.net/?page=1801
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:http://sponsors.bonventure.net/?page=1801']
 group: Saint Ann Parish Williamsport; Saint Boniface Parish
 evidence:
@@ -60,8 +60,9 @@ not a church row.
 The bulletin is published on Bonventure's sponsor site, page 1801, which links the current issue
 and every earlier one as `pdfs/1801/<yyyy-mm-dd>.pdf` (dated file names; the 18 October issue was
 up on 16 October). `website` is that page over **http**, because its https certificate chain is
-incomplete and fails verification (a server problem, not the proxy). Provider `other`;
-`provider_id` is left empty until a `fetch:check` run after promotion suggests a recipe. The
+incomplete and fails verification (a server problem, not the proxy). Provider `other`, with
+recipe `page-pdfs` (the website is the Bonventure page) pinned from `fetch:check` on 2026-10-17, after promotion, which
+picked `pdfs/1801/2026-10-18.pdf` (`current`). The
 parish sites (stannrcc.org, stbonifacecatholic.com) only link to Bonventure.
 
 ## Not yet confirmed

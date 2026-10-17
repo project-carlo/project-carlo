@@ -2,7 +2,7 @@
 name: Our Lady of Lourdes Parish
 website: https://www.ourladyoflourdesmontoursville.org/general-8
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.ourladyoflourdesmontoursville.org/general-8']
 group: Our Lady of Lourdes Parish
 evidence:
@@ -46,8 +46,9 @@ The bulletin page `/general-8` of the parish's Wix site posts only the current i
 PDF under `/_files/ugd/<hash>.pdf` whose name changes every week; the link is in the page's
 raw HTML. `probe url` on the homepage found no bulletin link (the menu item is "Bulletin" ->
 /general-8, rendered by Wix), and no ParishesOnline, eCatholic or Discover Mass id. So
-`website` is the bulletin page itself and the provider is `other`; `provider_id` is left empty
-until a `fetch:check` run after promotion suggests a recipe (probably `page-pdfs`).
+`website` is the bulletin page itself and the provider is `other`; Recipe `page-pdfs` pinned from
+`fetch:check` on 2026-10-17, after promotion, which picked the page's only PDF, the 11 October 2026 issue (`first-listed`; the
+hashed file name carries no date).
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: Nativity of Our Lord Parish
 website: https://www.nativityduryea.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.nativityduryea.org/bulletins.html
 publication: ['url:https://www.nativityduryea.org/bulletins.html']
 group: Nativity of Our Lord Parish
 evidence:
@@ -45,11 +45,12 @@ list and is in no roster here.
 
 nativityduryea.org (the finder's website, and the masthead's "Web:") has a Bulletins page
 (`/bulletins.html`) linking one PDF per Sunday under `/uploads/3/4/1/2/34124530/` with free-form
-names (`11th__october_2026_bulletin_.pdf`). `bulletin_provider: other`, no recipe pinned:
-`fetch:check` only reads promoted rows. The likely recipe is `page-pdfs
-https://www.nativityduryea.org/bulletins.html`; the file names carry the date only loosely.
+names (`11th__october_2026_bulletin_.pdf`). `bulletin_provider: other`, with recipe `page-pdfs
+https://www.nativityduryea.org/bulletins.html`, pinned from `fetch:check` after promotion
+(2026-10-17). It picked `11th__october_2026_bulletin_.pdf` (`current`); before a resolver
+fix the same file was dated 4 March, from Weebly's upload folder `/uploads/3/4/...`.
 
 ## Not yet confirmed
 
 That every Mass in the schedule is at Holy Rosary (the bulletin names no church; inferred from the
-finder). Pin the `fetch:check` recipe after promotion.
+finder).

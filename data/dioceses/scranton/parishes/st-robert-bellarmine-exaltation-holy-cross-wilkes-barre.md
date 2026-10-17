@@ -2,7 +2,7 @@
 name: St. Robert Bellarmine and Exaltation of the Holy Cross Parishes
 website: https://www.stalschurchwb.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs http://sponsors.bonventure.net/?page=3087
 publication: ['url:http://sponsors.bonventure.net/?page=3087']
 group: Saint Robert Bellarmine Parish; Exaltation of the Holy Cross Parish
 evidence:
@@ -49,8 +49,9 @@ parishes.
 
 `other`, website stalschurchwb.com (an OSV site whose BULLETIN menu item links
 http://sponsors.bonventure.net/?page=3087). exhc.org (Squarespace) links the same page.
-Recorded as `url:http://sponsors.bonventure.net/?page=3087`. No recipe pinned; the
-resolver has not read a Bonventure page before (see `st-jude-mountain-top`).
+Recorded as `url:http://sponsors.bonventure.net/?page=3087`. Recipe `page-pdfs
+http://sponsors.bonventure.net/?page=3087` pinned from `fetch:check` on 2026-10-17, after promotion, which picked
+`pdfs/3087/2026-10-18.pdf` (`current`), as for the other Bonventure rows.
 
 ## Not yet confirmed
 

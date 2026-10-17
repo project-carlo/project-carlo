@@ -53,7 +53,9 @@ img1.wsimg.com host (e.g. "10-11-2026 bulletin.pdf"). Provider `other` with the 
 `page-pdfs https://nepacatholic.com/bulletin`, which is a guess from the page's shape:
 from this sandbox nepacatholic.com refuses every connection (curl, probe url and the
 browser all got "connection reset"; the img1.wsimg.com PDFs download fine), so the page was
-read with a fetch tool and neither probe url nor fetch:check has run on it. GCatholic gives
+read with a fetch tool. A `fetch:check` after promotion (2026-10-17) got through once, with
+this recipe, and picked `10-18-2026 bulletin.pdf` (`current`); another run the same day was
+reset. GCatholic gives
 an older site for St. Mary of the Lake (bvm-sml.org), not checked. St. Patrick's
 ParishesOnline organization `st-patrick-church-18446` has no publications.
 

@@ -56,7 +56,9 @@ times come from Towanda's 18 October 2026 bulletin.
 
 `website` is the bulletin page Towanda links. Provider `other` (a self-hosted page; nothing at
 ParishesOnline, Discover Mass lists no issues, no eCatholic id seen). No `provider_id` and no
-publication id beyond the page URL, because the page has not been read.
+publication id beyond the page URL, because the page has not been read: `fetch:check` after
+promotion (2026-10-17) was `blocked` by Cloudflare twice, and so was visit.py the same day.
+The weekly run's browser may get through.
 
 ## Not yet confirmed
 

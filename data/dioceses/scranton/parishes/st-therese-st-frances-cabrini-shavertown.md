@@ -2,7 +2,7 @@
 name: St. Therese and St. Frances X. Cabrini
 website: https://stthereses-shavertown.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://stthereses-shavertown.com/bulletins/
 publication: ['url:https://stthereses-shavertown.com/bulletins/', 'url:https://sfcbsp.org/bulletin-2/',
   'url:https://www.thebostonpilot.com/bcd/bulletinclick_AD_ED_Code.asp?ED_Code=32223']
 group: Saint Therese Parish; Saint Frances X. Cabrini Parish (Carverton)
@@ -58,10 +58,12 @@ that parish; its Bulletins page links each issue at
 `thebostonpilot.com/bcd/bulletinclick_embed.asp?Id=32223_<YYMMDD>.pdf`, which is an HTML page that
 meta-refreshes to `Bulletin_embed.asp?BULLETINID=<YYMMDD>/32223_<YYMMDD>.pdf`, an Adobe-viewer page
 whose PDF is `thebostonpilot.com/bcd/Bulletins/<YYMMDD>/32223_<YYMMDD>.pdf` (fetches without a
-browser). sfcbsp.org's /bulletin-2/ page links the same. `bulletin_provider: other` with no recipe:
-`fetch:check` reads only promoted rows, and the `other` resolver may not follow the Pilot embed
-pages to the PDF. **This publisher (Pilot Bulletins, thebostonpilot.com/bcd) is new to the
-dataset**; the PDF path is predictable from the date, so a small collector would read it reliably.
+browser). sfcbsp.org's /bulletin-2/ page links the same. `bulletin_provider: other`, recipe `page-pdfs https://stthereses-shavertown.com/bulletins/`.
+The first `fetch:check` after promotion (2026-10-17) picked the site menu's 2024 "Parish
+Registration Form" PDF, because it could not read the Pilot embed links. The resolver now reads
+an embed link as the PDF behind it and dates it by its YYMMDD (**Pilot Bulletins,
+thebostonpilot.com/bcd, is new to the dataset**), and the re-run picked
+`Bulletins/261018/32223_261018.pdf` (18 October, `current`).
 
 ## Not yet confirmed
 

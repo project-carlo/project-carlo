@@ -2,7 +2,7 @@
 name: Corpus Christi Parish
 website: https://www.corpuschristinepa.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.corpuschristinepa.com/bulletins.htm
 publication: ['url:https://www.corpuschristinepa.com/bulletins.htm']
 group: Corpus Christi Parish
 evidence:
@@ -49,8 +49,9 @@ record).
 corpuschristinepa.com (named in the masthead; the finder's website) has a Bulletins page
 (`/bulletins.htm`) listing `Bulletins/Bulletin<YYMMDD>.pdf` for every Sunday. Use the `www.` host:
 `https://corpuschristinepa.com` has a certificate for another name, and the finder's link is
-`http://`. `bulletin_provider: other`; no recipe pinned (`fetch:check` reads only promoted rows),
-likely `page-pdfs https://www.corpuschristinepa.com/bulletins.htm`.
+`http://`. `bulletin_provider: other`, with recipe `page-pdfs https://www.corpuschristinepa.com/bulletins.htm`
+pinned from `fetch:check` on 2026-10-17, after promotion, which picked `Bulletin261011.pdf` (11 October, the newest listed;
+`current`).
 
 ## Not yet confirmed
 

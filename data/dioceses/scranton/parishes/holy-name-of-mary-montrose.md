@@ -79,7 +79,9 @@ holynameofmary.com/bulletins (GoDaddy Website Builder) shows a "CURRENT BULLETIN
 on 2026-10-16), plus older issues as .docx downloads. The page loaded in a browser
 (parish-site-access visit.py); plain curl through the proxy was cut off twice. The PDF has a
 text layer. No publisher id, so `other`, with the bulletin page as publication. No
-`fetch:check` recipe pinned yet; `page-pdfs` on the bulletin page should find the one PDF.
+`fetch:check` recipe pinned: after promotion (2026-10-17) it could not load the page
+(`ERR_CONNECTION_RESET` from the sandbox, twice). `page-pdfs` on the bulletin page should
+find the one PDF, whose name (`10.11.26.pdf`) the resolver dates.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: Holy Child Parish
 website: https://holychildparish.com/about-us/bulletins/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://holychildparish.com/about-us/bulletins/']
 group: Holy Child Parish
 evidence:
@@ -45,8 +45,10 @@ GCatholic has in Mansfield and Blossburg.
 holychildparish.com/about-us/bulletins/ (a Diocesan/Crossroads WordPress site, like Canton's)
 links one PDF per Sunday under `cdn.diocesanweb.org/crossroads/holychildparish/wp-content/uploads/<yyyy>/<mm>/<yyyy>-<Nth>-Sunday-in-Ordinary-Time-year-a.pdf`.
 File names carry the liturgical Sunday, not a date. No ParishesOnline, eCatholic or Discover
-Mass id found. `provider_id` is left empty until a `fetch:check` run after promotion suggests
-a recipe.
+Mass id found. Recipe `page-pdfs` (the website is the bulletin page) pinned from `fetch:check` on 2026-10-17, after promotion, which
+picked the first-listed `2026-29th-Sunday-in-Ordinary-Time-year-a_high-quality.pdf`: the 29th
+Sunday is 18 October 2026, this week's issue. The pick is `first-listed` because the names
+carry no date, so it relies on the page listing the newest issue first.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. Leo the Great and St. Andrew Parishes
 website: https://www.standrewwilkesbarre.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.standrewwilkesbarre.org/bulletin0283fa5e
 publication: ['url:https://www.standrewwilkesbarre.org/bulletin0283fa5e', 'url:https://stleos-holyrosary.org/bulletins/']
 group: Saint Leo the Great Parish; Saint Andrew Parish
 evidence:
@@ -61,10 +61,9 @@ finder, so no record was made for it.
 `other`. The website is St. Andrew's (standrewwilkesbarre.org), because its bulletin page
 answers plain fetches and links every issue as a PDF; St. Leo's site
 (stleos-holyrosary.org) carries the same issue but blocks non-browser clients. Both pages
-are recorded as `url:` publications so that no second row can claim either. No recipe has
-been pinned: `fetch:check` reads `data/parishes.csv`, which this row is not in yet; the
-bulletin page is https://www.standrewwilkesbarre.org/bulletin0283fa5e (page-pdfs; newest
-link is the current issue, file names carry the date in words).
+are recorded as `url:` publications so that no second row can claim either. Recipe `page-pdfs
+https://www.standrewwilkesbarre.org/bulletin0283fa5e` pinned from `fetch:check` on 2026-10-17, after promotion, which
+picked `bulletin_october_11_2026.pdf` (`current`; file names carry the date in words).
 
 ## Not yet confirmed
 

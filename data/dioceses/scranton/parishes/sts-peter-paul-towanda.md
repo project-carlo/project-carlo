@@ -2,7 +2,7 @@
 name: Saints Peter and Paul Church
 website: https://sspeterandpaulchurch.net/bulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://sspeterandpaulchurch.net/bulletin']
 group: Saints Peter and Paul Parish Towanda
 evidence:
@@ -53,8 +53,10 @@ GCatholic has no other Towanda church.
 The bulletin page (a mychurchwebsite.net site) lists one PDF per Sunday at
 `files.mychurchwebsite.net/c2794/<liturgical-sunday>_2026.pdf`; names carry the Sunday, not
 a date, and some have suffixes (`fourth_sunday_of_easter_20266.pdf`). No ParishesOnline,
-eCatholic or Discover Mass id found. `provider_id` is left empty until a `fetch:check` run
-after promotion suggests a recipe.
+eCatholic or Discover Mass id found. Recipe `page-pdfs` (the website is the bulletin page)
+pinned from `fetch:check` on 2026-10-17, after promotion, which picked the first-listed
+`twenty_ninth_sunday_in_ordinary_time_2026.pdf` (18 October); `first-listed`, relying on
+the newest issue being listed first.
 
 ## Not yet confirmed
 
