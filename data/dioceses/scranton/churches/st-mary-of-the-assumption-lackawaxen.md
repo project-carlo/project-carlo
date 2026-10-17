@@ -6,15 +6,18 @@ line2: ''
 city: Lackawaxen
 state: PA
 postal_code: '18428'
-latitude: null
-longitude: null
-coordinates_from: ''
+latitude: 41.480053
+longitude: -74.987128
+coordinates_from: diocese-directory
 name_verified: true
 address_verified: true
 roster:
 - gcatholic:24058
 - directory:169-2
 evidence:
+- url: https://www.dioceseofscranton.org/find-a-mass/
+  seen: 2026-10-16
+  note: 'Coordinates from the diocese''s Find a Mass card for "Saint Mary of the Assumption Church" (data-latitude 41.480053, data-longitude -74.987128).'
 - url: https://gcatholic.org/churches/usa-03/24058
   seen: 2026-10-16
   quote: 720 Route 590, Lackawaxen, Pennsylvania 18428

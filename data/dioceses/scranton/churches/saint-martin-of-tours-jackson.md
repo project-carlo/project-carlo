@@ -6,15 +6,18 @@ line2: ''
 city: Jackson
 state: PA
 postal_code: '18825'
-latitude: null
-longitude: null
-coordinates_from: ''
+latitude: 41.837345
+longitude: -75.591414
+coordinates_from: diocese-directory
 name_verified: true
 address_verified: true
 roster:
 - directory:174-3
 - gcatholic:23983
 evidence:
+- url: https://www.dioceseofscranton.org/find-a-mass/
+  seen: 2026-10-16
+  note: 'Coordinates from the diocese''s Find a Mass card for "Saint Martin of Tours Church" (data-latitude 41.837345, data-longitude -75.591414).'
 - url: https://www.dioceseofscranton.org/find-a-parish/most-holy-trinity-parish-susquehanna-susquehanna
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Martin of Tours Church'',

@@ -6,13 +6,16 @@ line2: ''
 city: Eagles Mere
 state: PA
 postal_code: '17731'
-latitude: null
-longitude: null
-coordinates_from: ''
+latitude: 41.411397
+longitude: -76.586727
+coordinates_from: diocese-directory
 name_verified: true
 address_verified: true
 roster: ['directory:100-2']
 evidence:
+- url: https://www.dioceseofscranton.org/find-a-mass/
+  seen: 2026-10-16
+  note: 'Coordinates from the diocese''s Find a Mass card for "Saint Francis of Assisi Chapel" (data-latitude 41.411397, data-longitude -76.586727).'
 - url: https://www.dioceseofscranton.org/find-a-parish/immaculate-heart-of-mary-parish-dushore
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Francis of Assisi Chapel'',

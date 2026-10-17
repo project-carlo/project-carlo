@@ -6,13 +6,16 @@ line2: ''
 city: Scranton
 state: PA
 postal_code: '18504'
-latitude: null
-longitude: null
-coordinates_from: ''
+latitude: 41.402881
+longitude: -75.690753
+coordinates_from: diocese-directory
 name_verified: false
 address_verified: false
 roster: ['directory:160-1']
 evidence:
+- url: https://www.dioceseofscranton.org/find-a-mass/
+  seen: 2026-10-16
+  note: 'Coordinates from the diocese''s Find a Mass card for "Saint Ann Basilica" (data-latitude 41.402881, data-longitude -75.690753).'
 - url: https://stannsbasilicaparish.org/bulletin/
   seen: 2026-10-16
   quote: 'St. Ann''s Mass Schedule: Mon (Novena): 8AM, 12PM, 3:30PM, 6:00PM Tues- Fri: 8:30AM, 7:00 PM

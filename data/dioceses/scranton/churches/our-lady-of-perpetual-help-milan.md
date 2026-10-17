@@ -6,13 +6,16 @@ line2: ''
 city: Milan
 state: PA
 postal_code: '18831'
-latitude: null
-longitude: null
-coordinates_from: ''
+latitude: 41.905227
+longitude: -76.628878
+coordinates_from: diocese-directory
 name_verified: true
 address_verified: false
 roster: ['directory:155-2', 'gcatholic:24038']
 evidence:
+- url: https://www.dioceseofscranton.org/find-a-mass/
+  seen: 2026-10-16
+  note: 'Coordinates from the diocese''s Find a Mass card for "Our Lady of Perpetual Help Church" (data-latitude 41.905227, data-longitude -76.628878).'
 - url: https://www.dioceseofscranton.org/find-a-parish/epiphany-parish-sayre
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Our Lady of Perpetual Help Church'',
