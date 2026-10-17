@@ -15,7 +15,7 @@ evidence:
     750 N Vine St., Hazleton, PA, 18201; kind: Church; group: Queen of Heaven Parish'
 - url: https://irp.cdn-website.com/110e99de/files/uploaded/August+2-+2026.pdf
   seen: 2026-10-16
-  quote: The final Mass at Our Lady of Grace church will be celebrated on Sunday, August 2, 2026, beginning
+  quote: The final Mass at Our Lady of Grace church will be celebrated on Sunday, Au…gust 2, 2026, beginning
     at 1:30 pm. At the conclusion of the Mass, the doors will be locked to the church for the last time.
   note: Our Lady of Peace Parish bulletin, 2 August 2026, page 5.
 - url: https://irp.cdn-website.com/06e2aa28/files/uploaded/FINAL+FOR+DISTRIBUTION+-+New+Hazleton+Deanery+Mass+Schedule+July+2026+Announcement+%28English%29.pdf

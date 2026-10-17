@@ -39,8 +39,7 @@ qopchurch.org (the finder's link; a one-page site whose bulletin link goes to Bo
 Venture's `?page=1435`). `probe url` found no publisher id because the link is to Bon
 Venture's listing, not a PDF. Provider `other`, publication `url:` that listing, recipe
 `page-pdfs http://sponsors.bonventure.net/?page=1435` (as the other Scranton Bon Venture
-rows), pinned by inspection; `fetch:check` was not run (the row is not in parishes.csv
-yet). The PDFs have text, with some garbled glyphs.
+rows), pinned by inspection; `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this row) picked the 18 October 2026 issue ("current"). The PDFs have text, with some garbled glyphs.
 
 ## Not yet confirmed
 

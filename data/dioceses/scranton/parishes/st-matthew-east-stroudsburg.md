@@ -44,8 +44,7 @@ stmatthewspa.org (the finder's link). Its Bulletin page links Bon Venture's list
 `sponsors.bonventure.net/?page=9183`, which links one dated PDF per Sunday
 (`pdfs/9183/2026-10-18.pdf`). Provider `other`, publication `url:` that listing, recipe
 `page-pdfs http://sponsors.bonventure.net/?page=9183` (as other Scranton rows on Bon
-Venture), pinned by inspection; `fetch:check` was not run (the row is not in parishes.csv
-yet). The PDFs have text (page 7 is an image).
+Venture), pinned by inspection; `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this row) picked the 18 October 2026 issue ("current"). The PDFs have text (page 7 is an image).
 
 ## Not yet confirmed
 

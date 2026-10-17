@@ -45,6 +45,9 @@ evidence:
   seen: 2026-10-16
   note: 'St. Patrick''s own WordPress site (read with visit.py; plain fetches get 403). Its bulletin page
     lists "Bully-Sunday-..." PDFs, newest "Bully-Sunday-June-28-2026.pdf": nothing posted since the merger.'
+revisit: Check that the 2026-bulletins page (or its 2027 successor) still lists new issues and repin the
+  recipe if the page moved.
+revisit_after: 2027-01-15
 ---
 
 ## Publisher
@@ -87,7 +90,7 @@ The Our Lady of the Immaculate Conception Google Site (the finder's link for tha
 whose "2026 Bulletins" page links one Google Drive PDF per week. Provider `other`: its
 resolver reads Drive file links. Recipe `page-pdfs
 https://sites.google.com/view/olichome-freeland-pa/2026-bulletins` is pinned by inspection;
-`fetch:check` was not run (the row is not in parishes.csv yet). The links are labelled by
+`fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this row) picked the 18 October 2026 Drive file ("current"). The links are labelled by
 date ("10/18") but not listed in date order, and the page is yearly: the 2025 page now
 lives at /2026-bulletins/2025-bulletins, so expect the recipe's page to change in January
 2027. Both parishes' bulletin pages are recorded as `publication`s. Page 7 is an image

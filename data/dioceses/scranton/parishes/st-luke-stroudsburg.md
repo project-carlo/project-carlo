@@ -39,7 +39,7 @@ One: St. Luke Church, 818 Main Street (`st-luke-stroudsburg`).
 churchofsaintluke.org (the finder's link). Its Bulletin page links Bon Venture's listing
 `?page=1480`, which links one dated PDF per Sunday. Provider `other`, publication `url:`
 that listing, recipe `page-pdfs http://sponsors.bonventure.net/?page=1480`, pinned by
-inspection; `fetch:check` was not run (the row is not in parishes.csv yet). The PDFs have
+inspection; `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this row) picked the 18 October 2026 issue ("current"). The PDFs have
 text (page 8 is an image).
 
 ## Not yet confirmed

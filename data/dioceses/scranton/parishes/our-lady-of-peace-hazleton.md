@@ -18,13 +18,16 @@ evidence:
     a.m. & 11:00 a.m. Daily Mass: 8:00 a.m. Thursday & Friday". recheck cannot find this text.'
 - url: https://irp.cdn-website.com/110e99de/files/uploaded/August+2-+2026.pdf
   seen: 2026-10-16
-  quote: The final Mass at Our Lady of Grace church will be celebrated on Sunday, August 2, 2026, beginning
+  quote: The final Mass at Our Lady of Grace church will be celebrated on Sunday, Au…gust 2, 2026, beginning
     at 1:30 pm.
 - url: https://www.olpphazleton.org/bulletin
   seen: 2026-10-16
   note: 'The bulletin page links one PDF per week on the Duda CDN (irp.cdn-website.com/110e99de/...),
     with irregular file names: "Bulletin+for+July+5.pdf", "August+2-+2026.pdf", "9.20.26+bulletin.pdf",
     "10.4.26.pdf". Newest on 2026-10-16: 4 October 2026.'
+revisit: fetch:check picks 'Parish Consolidation' PDF instead of the bulletin (undated file names like
+  10.4.26.pdf); re-run after a chooser fix.
+revisit_after: 2026-11-15
 ---
 
 ## Publisher
@@ -53,12 +56,15 @@ olpphazleton.org (the finder's link and the bulletin's own "VIEW THIS BULLETIN O
 Its /bulletin page lists the PDFs, which embed no publisher id, so provider `other` with
 `url:` the bulletin page as the publication. Recipe `page-pdfs
 https://www.olpphazleton.org/bulletin` is pinned by inspection (the page links the PDFs
-directly); `fetch:check` was not run because the row is not in parishes.csv yet. File names
-are irregular, so the chooser may need the newest-listed fallback. Page 1 (masthead and
-Mass times) is an image; inner pages have text.
+directly). `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this
+row) picked the wrong file: "Parish+Consolidation-1bcc83bd.pdf" ("first-listed"), a
+document linked on the same page, because it cannot date the irregular file names
+("10.4.26.pdf", "9.20.26+bulletin.pdf", "August+2-+2026.pdf"). **Until the chooser can date
+these names (or skip non-bulletin PDFs), the row fetches the wrong PDF.** Page 1 (masthead
+and Mass times) is an image; inner pages have text.
 
 ## Not yet confirmed
 
 The 11 October issue was not yet posted on 2026-10-16 (newest 4 October), so the parish
-posts a week or two late at times. Re-check after promotion with `fetch:check` that the
-recipe picks the newest issue.
+posts a week or two late at times. The resolver's wrong pick (above) needs a fix in the
+`other` chooser before this row yields bulletins.

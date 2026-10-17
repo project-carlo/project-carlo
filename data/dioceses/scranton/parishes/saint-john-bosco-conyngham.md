@@ -23,6 +23,9 @@ evidence:
   note: Lists the 2026 issues as Google Drive file links titled by date and Sunday ("10/4-27th Sunday
     in Ordinary Time", "10/11-28th Sunday in Ordinary Time", ...); newest 11 October on 2026-10-16. Its
     Drive file ids differ from the Good Shepherd/Immaculate Conception bulletin's.
+revisit: Check that the 2026-bulletins page (or its 2027 successor) still lists new issues and repin the
+  recipe if the page moved.
+revisit_after: 2027-01-15
 ---
 
 ## Publisher
@@ -53,7 +56,7 @@ here; it is in neither roster and has no record.
 The parish's Google Site (the diocese finder's link). Its "2026 Bulletins" page links one
 Google Drive PDF per week, so provider `other` (its resolver reads Drive file links), with
 recipe `page-pdfs https://sites.google.com/view/stjohnboscochurchconyngham/2026-bulletins`
-pinned by inspection; `fetch:check` was not run (the row is not in parishes.csv yet). As
+pinned by inspection; `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this row) picked the 4 October issue, not the newest (11 October): it read the label "10/4-27th Sunday" as 2027-10-04 ("first-listed, dated 2027-10-04"). The chooser needs to stop reading "27th" as a year, or the parish to drop the Sunday name from its labels. As
 with Freeland's site, the yearly page will likely move in January 2027 (the 2025 page now
 sits at /2026-bulletins/2025-bulletins). The PDFs have text.
 

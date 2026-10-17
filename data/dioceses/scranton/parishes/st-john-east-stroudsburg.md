@@ -41,7 +41,7 @@ and loads in a browser. Its "This Week's Bulletin" link (a Kartra redirect) land
 /Bulletin, which links each issue as a PDF on Kartra's CloudFront bucket; the file names
 carry the date after a numeric prefix ("…October_18_2026.pdf"), older ones are named
 "…060Aweb_37.pdf". Provider `other`, recipe `page-pdfs https://www.churchofstjohn.com/Bulletin`
-pinned by inspection; `fetch:check` was not run (the row is not in parishes.csv yet). The
+pinned by inspection; `fetch:check` (run on 2026-10-17 against a temporary parishes.csv holding this row) picked the 18 October 2026 issue ("current"), so its browser got past the bot-blocking. The
 PDFs have text.
 
 ## Not yet confirmed

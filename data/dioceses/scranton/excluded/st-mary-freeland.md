@@ -1,5 +1,5 @@
 ---
-name: St. Mary
+name: St. Mary Byzantine Catholic Church
 reason: other-jurisdiction
 line1: 643 Fern St.
 city: Freeland
@@ -17,10 +17,12 @@ evidence:
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+Eastern Catholic. GCatholic lists it among the churches in the Diocese of Scranton's
+territory but marks it with the Ruthenian rite, so it belongs to the Ruthenian (Byzantine Catholic) Eparchy of Passaic, not to the Latin
+diocese. The diocese's Find a Parish finder does not list it. Under the rule settled in
+`diocese.md`, Eastern Catholic churches are excluded as `other-jurisdiction`: a scope
+decision, not a judgement on whether it holds services (not checked).
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A project decision to cover Eastern Catholic eparchies.
