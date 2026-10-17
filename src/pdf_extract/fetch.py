@@ -46,7 +46,7 @@ from pdf_extract.duplicates import (
 from pdf_extract.parish_sites import Recipe, resolve_parish_site
 from pdf_extract.parish_sites.dates import safe_date
 from pdf_extract.parish_sites.links import registrable_domain, url_host
-from pdf_extract.pdf_compact import compact_bulletin_pdf
+from pdf_extract.pdf_compact import as_bulletin_pdf, compact_bulletin_pdf
 from pdf_extract.pdf_truncate import max_pages_for
 from pdf_extract.runs import (
     FETCH_CURRENT,
@@ -612,8 +612,12 @@ def _download_bulletin(
             return Download(pdf=None)
         LOGGER.warning("Primary fetch failed (%s), falling back to source URL: %s", exc, source_url)
         # The validators belong to the fetch URL, so none are kept from here.
-        return Download(pdf=_http_get(source_url, referer=source_url).body)
-    return Download(pdf=response.body, etag=response.etag, last_modified=response.last_modified)
+        return Download(pdf=as_bulletin_pdf(_http_get(source_url, referer=source_url).body))
+    # A bulletin posted as an image is kept as a PDF, like every other.
+    return Download(
+        pdf=as_bulletin_pdf(response.body), etag=response.etag,
+        last_modified=response.last_modified,
+    )
 
 
 def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:

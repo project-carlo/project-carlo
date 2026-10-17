@@ -33,6 +33,7 @@ from pdf_extract import fetch
 from pdf_extract.browser import PageLike, launch_stealth_browser
 from pdf_extract.parish_sites import Recipe
 from pdf_extract.parish_sites.dates import parse_date
+from pdf_extract.parish_sites.links import decoded_base64_json
 from pdf_extract.storage import PARISHES_CSV_PATH
 
 LOGGER = logging.getLogger(__name__)
@@ -228,8 +229,13 @@ _SCRIPT = re.compile(r"<script\b.*?</script\b[^>]*>", re.IGNORECASE | re.DOTALL)
 def _slim_html(html: str) -> str:
     for pattern in _STRIP_PATTERNS:
         html = pattern.sub("", html)
-    # A script can hold a PDF URL (flipbook viewers); any other is dead weight.
-    return _SCRIPT.sub(lambda m: m.group(0) if ".pdf" in m.group(0).lower() else "", html)
+    # A script can hold a PDF URL (flipbook viewers), in plain sight or in
+    # base64 JSON (3D FlipBook); any other is dead weight.
+    return _SCRIPT.sub(
+        lambda m: m.group(0)
+        if ".pdf" in m.group(0).lower() or decoded_base64_json(m.group(0)) else "",
+        html,
+    )
 
 
 class _RecordingRequest:

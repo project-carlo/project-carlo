@@ -34,8 +34,10 @@ from pdf_extract.parish_sites.links import (
     GOOGLE_DRIVE_FILE_VIEW_URL_TEMPLATE,
     HTML_PDF_URL_PATTERN,
     PDF_EMBEDDER_VIEWER_CLASS,
+    decoded_base64_json,
     document_download_url,
     google_drive_folder_id,
+    is_image_url,
     is_publisher_listing,
     unwrap_pdf_viewer_url,
 )
@@ -82,6 +84,9 @@ class Collector:
     """Candidates on the page, given those the collectors before it found."""
     final: bool = False
     """When it finds anything, no later collector runs."""
+    automatic: bool = True
+    """Tried on a site without a recipe. One that is not runs only when a
+    parish's recipe names it: it reads what most sites have for other uses."""
 
 
 # ── Shared reading ──────────────────────────────────────────────────────────
@@ -152,8 +157,9 @@ def _pdf_candidates_in_html(
     if not html:
         return []
     # Unescape JSON-escaped slashes so URLs like "https:\/\/site\/file.pdf"
-    # (as embedded by flipbook/PDF-viewer plugins) match a plain URL regex.
-    normalized = html.replace("\\/", "/")
+    # (as embedded by flipbook/PDF-viewer plugins) match a plain URL regex. A
+    # viewer's settings can be base64 JSON; their PDFs come after the page's own.
+    normalized = "\n".join([html, *decoded_base64_json(html)]).replace("\\/", "/")
     candidates: list[Candidate] = []
     seen: set[str] = set()
     for raw in HTML_PDF_URL_PATTERN.findall(normalized):
@@ -346,6 +352,52 @@ def latest_bulletin_post(site: BulletinPage) -> tuple[date, str] | None:
     return max(posts, key=lambda pair: pair[0])
 
 
+# Where an <img> keeps its picture: Squarespace galleries load the full-size
+# file from data-image or data-src, after the page's script has run.
+_IMAGE_SOURCE_ATTRIBUTES = ("data-image", "data-src", "src")
+
+
+def collect_page_images(site: BulletinPage, found: list[Candidate]) -> list[Candidate]:
+    """Each issue posted as an image, not a PDF: St. Mary, Waymart's Squarespace
+    gallery shows each weekend's bulletin as one JPEG ("Bulletin 2026 October
+    10-11.jpg"). The download is wrapped in a PDF.
+
+    Only for a parish whose recipe names it: every site has images, and one
+    labelled "bulletin" (an icon) is no issue. A picture counts if its address
+    or text says "bulletin" or a date; once some are dated, the undated ones
+    (a cover template, a logo) are dropped.
+    """
+    if found:
+        return []
+    candidates: list[Candidate] = []
+    seen: set[str] = set()
+    for element in site.page.query_selector_all("img, a[href]"):
+        if element.get_attribute("href") is not None:
+            sources = [element.get_attribute("href")]
+            text = anchor_text(element)
+        else:
+            sources = [element.get_attribute(name) for name in _IMAGE_SOURCE_ATTRIBUTES]
+            text = element.get_attribute("alt") or ""
+        for source in sources:
+            if not source:
+                continue
+            url = urljoin(site.url, source)
+            if not is_image_url(url) or url in seen:
+                continue
+            seen.add(url)
+            parsed_date = parse_date_from_texts([text, url], site.reference_date)
+            labelled = "bulletin" in f"{text} {url}".lower()
+            if parsed_date is None and not labelled:
+                continue
+            candidates.append(
+                Candidate(
+                    source_url=url, fetch_url=url, parsed_date=parsed_date, labelled=labelled,
+                )
+            )
+    dated = [c for c in candidates if c.parsed_date is not None]
+    return dated or candidates
+
+
 COLLECTORS: dict[str, Collector] = {
     c.name: c
     for c in (
@@ -354,5 +406,6 @@ COLLECTORS: dict[str, Collector] = {
         Collector("page-pdfs", collect_page_pdfs),
         Collector("linked-issue-page", collect_linked_issue_page, final=True),
         Collector("dated-post", collect_dated_post),
+        Collector("page-images", collect_page_images, automatic=False),
     )
 }
