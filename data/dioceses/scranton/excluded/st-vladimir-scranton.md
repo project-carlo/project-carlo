@@ -1,5 +1,5 @@
 ---
-name: St. Vladimir
+name: St. Vladimir Ukrainian Catholic Church
 reason: other-jurisdiction
 line1: 430 N 7th Ave.
 city: Scranton
@@ -17,10 +17,8 @@ evidence:
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+GCatholic lists this church (id 17533) among the churches in the Diocese of Scranton's territory but marks it with the Ukrainian rite: it belongs to the Ukrainian Catholic Archeparchy of Philadelphia, an Eastern Catholic jurisdiction, not to the Roman Catholic Diocese of Scranton. This is the scope rule settled in `diocese.md` (Eastern Catholic churches are `other-jurisdiction`), not a judgement about the church: it was not checked for current services. The diocesan finder does not list it. The rite field on GCatholic is the evidence.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A project decision to cover Eastern Catholic eparchies (here the Ukrainian Catholic Archeparchy of Philadelphia).
