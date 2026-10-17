@@ -36,7 +36,7 @@ Street, Towanda", with its own Mass schedule (Saturday 4:00 pm, Sunday 9:00 am, 
 Tuesday to Friday).
 
 The same page carries a second box, "Schedule at Our Lady of Perpetual Help, Wyalusing", and the
-parish homepage lists Wyalusing's Masses too: the two canonical parishes appear to share a
+parish homepage lists Wyalusing's Masses too: the two canonical parishes share a
 pastor. But the homepage sends readers to Wyalusing's own bulletin for its times ("or as posted
 in their bulletin", linking olophparish.org/bulletins/), and this masthead names Towanda alone,
 so Wyalusing is a separate publisher and is not folded in here (see
@@ -57,5 +57,7 @@ after promotion suggests a recipe.
 
 ## Not yet confirmed
 
-Whether Fr. Kuriappilly is formally pastor of both parishes (inferred from the shared schedule
-box; not read on a Wyalusing page, which is behind Cloudflare).
+The shared pastor is confirmed (the diocesan finder names Rev. Jose Joseph Kuriappilly as pastor
+of both Towanda and Wyalusing, read 2026-10-17). What is not confirmed is the content of
+Wyalusing's own bulletin page, which Cloudflare blocked; if it turns out to post this same
+bulletin, the Wyalusing row should be merged into this one.

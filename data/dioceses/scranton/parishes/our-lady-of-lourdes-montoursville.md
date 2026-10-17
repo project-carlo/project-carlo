@@ -8,8 +8,7 @@ group: Our Lady of Lourdes Parish
 evidence:
 - url: https://www.ourladyoflourdesmontoursville.org/_files/ugd/05a2ee_b9ce758f90df4f09aefd03d8c9a6b0ed.pdf
   seen: 2026-10-16
-  quote: Saturday 4:00 pm- OLOL … Sunday 10:30 am - OLOL … Rev. Sean G. Carpenter, Pastor … 800 Mulberry
-    Street, Montoursville, PA 17754
+  quote: Rev. Sean G. Carpenter, Pastor … 800 Mulberry Street, Montoursville, PA 17754 … Saturday 4:00 pm- OLOL … Sunday 10:30 am - OLOL
   note: Page 1 of the 11 October 2026 issue, headed "OUR LADY OF LOURDES PARISH / TWENTY-EIGHTH SUNDAY
     IN ORDINARY TIME / OCTOBER 11, 2026" (the heading is not in the PDF text layer; read with pdftotext
     -layout). Its Mass Schedule also lists the Resurrection, Muncy Masses (Saturday 5:30 pm, Sunday 8:30
