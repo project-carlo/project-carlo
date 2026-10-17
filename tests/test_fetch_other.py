@@ -80,6 +80,11 @@ def _resolve(
         ("/uploads/3/8/1/3/38133239/02-12-2017_6th_sun.pdf", date(2017, 2, 12)),
         # A ParishesOnline container number is no month and day.
         ("/bulletins/03/0408/20260927B.pdf", date(2026, 9, 27)),
+        # Nor are Weebly's numbered folders a month and day ("1/3" of
+        # "/1/3/1/4/"), or a mistyped five-digit year a year.
+        ("/uploads/1/3/1/4/131484079/bulletin_sept_13.pdf", date(2026, 9, 13)),
+        ("September 27, 20026", date(2026, 9, 27)),
+        ("/var/m_8/8d/8dc/64111/1024614-09-27-2026-aab32.pdf?download", date(2026, 9, 27)),
         # Ids and timestamps are not dates.
         ("/bulletins/1790326230.pdf", None),
         ("/_files/ugd/cea846_00334ad9684947469dd533a9f70fcc50.pdf", None),
@@ -735,6 +740,36 @@ def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:
     pdf = f"{HOME}/uploads/bulletin-2026-09-27.pdf"
     assert fetch._download_pdf(fetch_url=pdf, source_url=pdf) == b"%PDF-1.7"
     assert calls == [pdf, pdf]
+
+
+def test_a_website_that_is_the_bulletin_pdf_is_taken_as_it_is() -> None:
+    # No page to read: the diocese hosts the parish's one weekly file.
+    pdf = "https://www.rcdony.org/images/Harrisvillebulletin-1.pdf"
+    assert _resolve_other(provider_id=pdf, reference_date=TODAY, page=_site({})) == (pdf, pdf)
+
+
+def test_a_homepage_download_link_dated_this_week_is_the_bulletin() -> None:
+    # cathcommsbse.org: "Download File" links, the week's date only in the file name.
+    files = f"{HOME}/var/m_8/8d/8dc/64111"
+    assert _resolve({
+        HOME: (
+            f'<a href="{files}/1024129-Registration_for_RE-6512b.pdf?download">Download File</a>'
+            f'<a href="{files}/1024614-09-27-2026-aab32.pdf?download">Download File</a>'
+        ),
+    }) == f"{files}/1024614-09-27-2026-aab32.pdf?download"
+
+
+def test_a_publishers_listing_beats_pdfs_that_are_not_the_bulletin() -> None:
+    # St. Agnes, Lake Placid: a survey report beside "recent bulletins".
+    listing = "https://church-bulletin.org/?id=4047"
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f"{HOME}/bulletin": (
+            f'<a href="{listing}">recent bulletins</a>'
+            f'<a href="{HOME}/s/Gallup-ME25-2024.pdf">the complete survey report</a>'
+        ),
+        listing: LISTING_HTML,
+    }) == "https://www.church-bulletin.org/bulletin/saint-joseph-camillus-ny-13031/2026-09-27.pdf"
 
 
 def test_a_conditional_download_answered_304_brings_back_no_pdf(monkeypatch) -> None:

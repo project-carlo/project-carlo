@@ -95,13 +95,14 @@ def parse_date(
         rf"(?:(?<!\d)(?P<lead_year>20\d{{2}})\s+)?"
         rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?!\d){_ORDINAL}?"
         rf"(?:\s*(?:&|and|-|\s)\s*\d{{1,2}}{_ORDINAL}?(?=\s+\d{{4}}(?!\d)))?"
-        # "Bulletin_October 12_2025": an underscore can join the year on.
-        rf"(?:[\s_]+(?P<year>\d{{2,4}})(?!{_ORDINAL}))?",
+        # "Bulletin_October 12_2025": an underscore can join the year on. A
+        # longer number is no year (a mistyped "20026").
+        rf"(?:[\s_]+(?P<year>\d{{2,4}})(?![\d{_ORDINAL}]))?",
         flags=re.IGNORECASE,
     )
     day_month_pattern = re.compile(
         rf"(?<!\d)(?P<day>\d{{1,2}}){_ORDINAL}?\s+(?P<month>{month_name})"
-        rf"(?:\s+(?P<year>\d{{2,4}})(?!{_ORDINAL}))?",
+        rf"(?:\s+(?P<year>\d{{2,4}})(?![\d{_ORDINAL}]))?",
         flags=re.IGNORECASE,
     )
 
@@ -139,7 +140,10 @@ def parse_date(
         if parsed is not None:
             return parsed
 
-    for match in re.finditer(r"(?<!\d)(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)", normalized):
+    # Not a run of numbered folders either: Weebly's "/uploads/1/3/1/4/" is no 3 January.
+    for match in re.finditer(
+        r"(?<!\d)(?<!\d[-/.])(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)(?![-/.]\d)", normalized,
+    ):
         parsed = yearless(int(match.group("a")), int(match.group("b")))
         if parsed is not None:
             return parsed

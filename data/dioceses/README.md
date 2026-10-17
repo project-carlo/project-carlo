@@ -56,7 +56,7 @@ lists them):
 
 | reason | use it for |
 |---|---|
-| `closed` | no Mass any more: closed, merged away, sold, demolished. Put the date in `last_mass` when a source gives it |
+| `closed` | no Mass any more: closed, merged away, sold, demolished. Put the date in `last_mass` when a source gives it (`2017` or `2017-06` when it gives no day) |
 | `no-bulletin` | **open**, with public Mass, but nothing the pipeline could read. Don't file these under `closed`; that list has to stay a record of what actually shut down |
 | `no-public-mass` | offices, schools, pregnancy centers, cemeteries, private convent or hospital chapels |
 | `not-catholic` | a same-named Orthodox, Episcopal, Lutheran... church |
@@ -397,7 +397,7 @@ pnpm diocese probe url <url>...
 pnpm diocese probe sites <d> [--all]
 pnpm diocese probe po <org slug | LPi id>... [--issues N]
 pnpm diocese probe container <a/b> [--weeks N --from date --step N --all --pages N]
-pnpm diocese probe pdf <url> [--pages N] [--grep text ...]
+pnpm diocese probe pdf <url> [--pages N] [--chars N] [--grep text] [--grep text2 ...]
 pnpm diocese recheck <d> [slug ...] [--kind k] [--all]
 
 pnpm diocese export  <d> --out-dir DIR

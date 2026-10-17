@@ -23,6 +23,7 @@ from pdf_extract.browser import PageLike, goto_with_retry, wait_for_selector_qui
 from pdf_extract.parish_sites.choose import (
     CURRENT,
     FALLBACK_MAX_AGE_DAYS,
+    ONLY_LINK,
     Choice,
     OldBulletinOnly,
     choose,
@@ -34,6 +35,7 @@ from pdf_extract.parish_sites.collectors import (
     Collector,
     NoBulletin,
 )
+from pdf_extract.parish_sites.links import is_pdf_url
 from pdf_extract.parish_sites.locate import find_bulletin_page_urls, links_bulletin_pdf
 
 LOGGER = logging.getLogger(__name__)
@@ -127,6 +129,14 @@ def resolve_parish_site(
     *, homepage_url: str, reference_date: date, page: PageLike, recipe: Recipe | None = None,
 ) -> Resolution:
     recipe = recipe or Recipe()
+    # A parish with no site of its own can have only a PDF the diocese or the
+    # parish overwrites each week (rcdony.org/images/Harrisvillebulletin-1.pdf).
+    if is_pdf_url(recipe.page or homepage_url):
+        url = recipe.page or homepage_url
+        return Resolution(
+            candidate=Candidate(source_url=url, fetch_url=url, parsed_date=None),
+            page_url=url, collector="redirected-pdf", reason=ONLY_LINK,
+        )
     collectors = (
         [COLLECTORS[recipe.collector]] if recipe.collector
         else [c for c in COLLECTORS.values() if c.automatic]
@@ -181,7 +191,7 @@ def _locate_bulletin_pages(
     urls = find_bulletin_page_urls(page=page, base_url=base_url, reference_date=reference_date)
     # Some homepages link this week's bulletin PDF itself, with no page for
     # it: read the homepage as the bulletin page, after any real one.
-    if links_bulletin_pdf(page=page, base_url=base_url):
+    if links_bulletin_pdf(page=page, base_url=base_url, reference_date=reference_date):
         urls.append(homepage_url)
     if not urls:
         raise NoBulletin(f"No bulletin page link found for other provider at {homepage_url}")

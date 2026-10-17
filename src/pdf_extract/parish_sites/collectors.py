@@ -251,9 +251,16 @@ def collect_page_pdfs(site: BulletinPage, found: list[Candidate]) -> list[Candid
 def collect_linked_issue_page(site: BulletinPage, found: list[Candidate]) -> list[Candidate]:
     """A page that links no PDF can still hand readers the issue elsewhere: a
     flipbook it embeds (this week's, while it lists only older ones), or a
-    publisher's listing of dated PDFs."""
+    publisher's listing of dated PDFs.
+
+    So can one whose PDFs are something else (a survey, a history) beside a
+    link to the publisher's listing: St. Agnes, Lake Placid's "recent bulletins".
+    """
     if found:
-        return []
+        if is_convincing(found, site.reference_date):
+            return []
+        listing_url = _publisher_listing_url(site)
+        return _candidates_on(site, listing_url) if listing_url is not None else []
     issue_page_url = _embedded_flipbook_url(site) or _publisher_listing_url(site)
     if issue_page_url is None:
         return []

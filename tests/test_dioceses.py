@@ -219,6 +219,19 @@ def test_rename_moves_references(root: Path) -> None:
     assert "replaces" not in d.of(records.PARISH)["st-ann-town"]  # never promoted
 
 
+def test_last_mass_may_be_a_year_or_month_when_no_source_gives_the_day(root: Path) -> None:
+    _parish()
+    _church()
+    records.exclude_church("test", "st-ann-town", reason="closed", last_mass="2019-02")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    path = root / "excluded" / "st-ann-town.md"
+    path.write_text(path.read_text().replace("last_mass: 2019-02", "last_mass: 2017"))
+    assert records.load("test").of(records.EXCLUDED)["st-ann-town"]["last_mass"] == "2017"
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    path.write_text(path.read_text().replace("last_mass: 2017", "last_mass: 2017-13"))
+    assert any("last_mass" in e for e in records.validate("test")["dioceses"]["test"]["errors"])
+
+
 def test_exclude_turns_a_church_into_an_exclusion(root: Path) -> None:
     _parish()
     _church(roster=["gcatholic:1"])
@@ -512,6 +525,30 @@ def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
     broken = web.Response("u", 200, "u", "application/pdf", b"%PDF-1.7\n1 0 obj")
     monkeypatch.setattr(web, "fetch", lambda url, **kw: broken)
     assert web.pdf_text("https://example.org/x.pdf")["error"].startswith("could not read")
+
+
+def test_recheck_reports_a_bot_check_page_as_unreachable(monkeypatch: pytest.MonkeyPatch) -> None:
+    loader = b"<html><head><title>One moment, please...</title></head><body>Loader</body></html>"
+    calls = []
+
+    def fake_fetch(url: str, **_: object) -> web.Response:
+        calls.append(url)
+        return web.Response(url, 200, url, "text/html", loader)
+
+    monkeypatch.setattr(web, "fetch", fake_fetch)
+    monkeypatch.setattr(web, "BOT_CHECK_RETRY_SECONDS", 0)
+    out = web.recheck_evidence([("church x", {"url": "https://gcatholic.org/c/1", "quote": "17 Grove St."})])
+    assert out[0]["result"] == "unreachable"
+    assert len(calls) == 2  # retried once before giving up
+
+
+def test_probe_url_takes_a_bare_domain(monkeypatch: pytest.MonkeyPatch) -> None:
+    page = b"<html><title>St. Ann Parish</title>Mass times, bulletin</html>"
+    monkeypatch.setattr(web, "_resolves", lambda host: True)
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: web.Response(url, 200, url, "text/html", page))
+    out = web.probe_url("stann.org")
+    assert out["url_tried"] == "https://stann.org" and out["verdict"] == "ok"
+    assert web.probe_url("not a url")["verdict"] == "BAD-URL"
 
 
 def test_quote_found_tolerates_layout_and_elisions() -> None:

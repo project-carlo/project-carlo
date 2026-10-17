@@ -146,8 +146,11 @@ def unwrap_pdf_viewer_url(url: str) -> str:
 # John Patrick Publishing's "current bulletin" link names a PDF, but redirects
 # to the parish's listing on church-bulletin.org, whose issues are dated PDFs
 # (/bulletin/<parish>/2026-09-27.pdf).
+# A church-bulletin.org listing can be linked directly too ("/?id=4047").
 _PUBLISHER_LISTING_URL = re.compile(
-    r"^https?://(?:www\.)?jppc\.net/onlinebulletins/\d+template\.pdf$", flags=re.IGNORECASE,
+    r"^https?://(?:www\.)?(?:jppc\.net/onlinebulletins/\d+template\.pdf"
+    r"|church-bulletin\.org/(?:\?id=\d+|[\w-]+/?))$",
+    flags=re.IGNORECASE,
 )
 
 
@@ -164,8 +167,9 @@ def is_image_url(url: str) -> bool:
 
 
 def is_pdf_url(url: str) -> bool:
-    """An address that names a PDF, and is not a publisher's listing named like one."""
-    return url.lower().endswith(".pdf") and not is_publisher_listing(url)
+    """An address that names a PDF, query string or not ("bulletin.pdf?download"),
+    and is not a publisher's listing named like one."""
+    return urlparse(url).path.lower().endswith(".pdf") and not is_publisher_listing(url)
 
 
 # Flipbook services a bulletin page can link each week's issue on. Their pages

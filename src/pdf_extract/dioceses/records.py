@@ -85,6 +85,7 @@ _STATE_RE = re.compile(r"^[A-Z]{2}$")
 _POSTAL_RE = re.compile(r"^\d{5}(?:-\d{4})?$")
 _URL_RE = re.compile(r"^https?://\S+$")
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+_PARTIAL_DATE_RE = re.compile(r"^\d{4}(-(0[1-9]|1[0-2]))?$")
 _ROSTER_REF_RE = re.compile(r"^([a-z0-9-]+):(\S+)$")
 
 
@@ -305,7 +306,10 @@ def parse_file(path: Path) -> tuple[dict[str, Any], str]:
         raise DioceseError(f"{path}: frontmatter is not valid YAML: {e}") from None
     if not isinstance(front, dict):
         raise DioceseError(f"{path}: frontmatter must be a mapping of field: value")
-    return _plain(front), m.group(2).strip("\n")
+    front = _plain(front)
+    if isinstance(front, dict) and type(front.get("last_mass")) is int:
+        front["last_mass"] = str(front["last_mass"])  # a bare year: last_mass: 2017
+    return front, m.group(2).strip("\n")
 
 
 class _Flow(list):
@@ -496,8 +500,11 @@ def _label(kind: Kind, slug: str) -> str:
 def _check_date(label: str, fname: str, value: Any, p: Problems) -> None:
     if value in (None, ""):
         return
+    if fname == "last_mass" and isinstance(value, str) and _PARTIAL_DATE_RE.match(value):
+        return  # a source that gives only the year or month ("final Mass in 2017")
     if not isinstance(value, str) or not _DATE_RE.match(value):
-        p.errors.append(f"{label}: {fname} must be a date like 2026-09-06, got {value!r}")
+        hint = " (or 2017, or 2017-06, when a source gives no day)" if fname == "last_mass" else ""
+        p.errors.append(f"{label}: {fname} must be a date like 2026-09-06{hint}, got {value!r}")
 
 
 def _check_evidence(label: str, evidence: Any, p: Problems) -> None:

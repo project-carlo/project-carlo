@@ -23,6 +23,7 @@ import html
 import io
 import re
 import socket
+import time
 import unicodedata
 from collections.abc import Iterable
 from concurrent.futures import ThreadPoolExecutor
@@ -116,6 +117,19 @@ def pdf_pages(data: bytes) -> list[str]:
         except Exception:  # noqa: BLE001 - one bad page should not lose the rest
             pages.append("")
     return pages
+
+
+# Interstitials served with HTTP 200 in place of the page: Cloudflare's
+# "Just a moment...", and GCatholic's "One moment, please..." / "Loader"
+# ("your request is being verified") when it sees a burst of requests.
+_BOT_CHECK_TITLE_RE = re.compile(
+    r"<title>\s*(Just a moment|One moment, please|Loader)\b", re.IGNORECASE)
+BOT_CHECK_RETRY_SECONDS = 5
+
+
+def is_bot_check(resp: Response) -> bool:
+    """A challenge page served in place of the content (never a PDF)."""
+    return not _is_pdf(resp) and bool(_BOT_CHECK_TITLE_RE.search(resp.text()[:5000]))
 
 
 def _is_pdf(resp: Response) -> bool:
@@ -289,8 +303,11 @@ def _resolves(host: str) -> bool:
 def probe_url(url: str) -> dict[str, Any]:
     """What is at a parish website now, and which bulletin does it embed?"""
     out: dict[str, Any] = {"url": url}
-    # An address without a host part ("stmary.org", "https:/x", "mailto:")
-    # cannot be fetched as it is.
+    if ":" not in url and "." in url.split("/", 1)[0]:
+        url = f"https://{url}"  # a bare domain, as parish directories print them
+        out["url_tried"] = url
+    # Any other address without a host part ("https:/x", "mailto:") cannot be
+    # fetched as it is.
     host = url_host(url) if urlsplit(url).netloc else ""
     if not host:
         return {**out, "verdict": "BAD-URL"}
@@ -514,8 +531,14 @@ def recheck_evidence(items: list[tuple[str, dict[str, Any]]], workers: int = 6
 
     def load(url: str) -> tuple[str, str | None, str]:
         resp = fetch(url)
+        if resp.ok and is_bot_check(resp):
+            # GCatholic serves one to bursts of requests; it passes a moment later.
+            time.sleep(BOT_CHECK_RETRY_SECONDS)
+            resp = fetch(url)
         if not resp.ok:
             return url, None, resp.error or f"HTTP {resp.status}"
+        if is_bot_check(resp):
+            return url, None, "bot check page instead of the content"
         try:
             text = page_text(resp)
             if DISCOVER_MASS_CHURCH_RE.search(url):

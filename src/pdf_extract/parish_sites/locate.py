@@ -6,6 +6,8 @@ from datetime import date
 from urllib.parse import urljoin
 
 from pdf_extract.browser import PageLike, anchor_text
+from pdf_extract.parish_sites.choose import is_current
+from pdf_extract.parish_sites.dates import parse_date_from_texts
 from pdf_extract.parish_sites.links import (
     document_download_url,
     is_pdf_url,
@@ -53,16 +55,27 @@ def find_bulletin_page_urls(
     return list(dict.fromkeys(_ranked(both_matches) + _ranked(either_matches)))
 
 
-def links_bulletin_pdf(*, page: PageLike, base_url: str) -> bool:
-    """Whether the page links a PDF labelled as the bulletin."""
+def links_bulletin_pdf(
+    *, page: PageLike, base_url: str, reference_date: date | None = None,
+) -> bool:
+    """Whether the page links a PDF labelled as the bulletin, or one dated this week.
+
+    Some homepages post the week's bulletin as a bare "Download File" link
+    whose file name carries the date (cathcommsbse.org's
+    ".../1024614-09-27-2026-aab32.pdf?download").
+    """
     for anchor in page.query_selector_all("a[href]"):
         href = anchor.get_attribute("href")
         if not isinstance(href, str):
             continue
         resolved = urljoin(base_url, href)
-        if (
-            (is_pdf_url(resolved) or document_download_url(resolved) is not None)
-            and "bulletin" in f"{anchor_text(anchor)} {resolved}".lower()
+        if not (is_pdf_url(resolved) or document_download_url(resolved) is not None):
+            continue
+        text = anchor_text(anchor)
+        if "bulletin" in f"{text} {resolved}".lower():
+            return True
+        if reference_date is not None and is_current(
+            parse_date_from_texts([text, resolved], reference_date), reference_date,
         ):
             return True
     return False
