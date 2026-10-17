@@ -2,30 +2,51 @@
 name: Saint Matthew Parish
 website: https://www.stmatthewspa.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs http://sponsors.bonventure.net/?page=9183
 publication: ['url:http://sponsors.bonventure.net/?page=9183']
 group: Saint Matthew Parish
-evidence: []
+evidence:
+- url: http://sponsors.bonventure.net/pdfs/9183/2026-10-18.pdf
+  seen: 2026-10-16
+  quote: CHURCH OF SAINT MATTHEW 78 Ridgeway Street Stroudsburg, Pennsylvania 18301
+  note: Masthead, page 1 of the 18 October 2026 issue. St. Matthew alone.
+- url: http://sponsors.bonventure.net/pdfs/9183/2026-10-18.pdf
+  seen: 2026-10-16
+  quote: Saturday…8:00 am & 4:00 pm Vigil Sunday…8:00 am, 9:15 am (Spanish), 10:45 am, 12:15 pm, 2:00
+    pm (Spanish), 6:00 pm
+- url: http://sponsors.bonventure.net/?page=9183
+  seen: 2026-10-16
+  note: 'Bon Venture''s page for the parish: one PDF per Sunday at pdfs/9183/<YYYY-MM-DD>.pdf, from 2019
+    to 2026-10-18.'
+- url: https://www.stmatthewspa.org/bulletin
+  seen: 2026-10-16
+  note: 'The parish site''s Bulletin page (Duda/OSV; links render in a browser): "This Week''s Bulletin
+    Download" links http://sponsors.bonventure.net/?page=9183.'
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Matthew Parish publishes its own weekly bulletin through Bon Venture. The 18 October
+2026 issue's masthead reads "CHURCH OF SAINT MATTHEW, 78 Ridgeway Street, Stroudsburg,
+Pennsylvania 18301" (Fr. Donald J. Williams, Pastor), with one Mass schedule: weekdays
+noon and 8 am (Spanish), Friday 6:30 pm (Spanish), Saturday 7 am (Spanish), 8 am and 4 pm,
+Sunday 8 am, 9:15 am (Spanish), 10:45 am, 12:15 pm, 2 pm (Spanish) and 6 pm. Not shared
+with another parish.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One: St. Matthew Church (`st-matthew-east-stroudsburg`). The diocese finder and GCatholic
+list no other building for it.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+stmatthewspa.org (the finder's link). Its Bulletin page links Bon Venture's listing
+`sponsors.bonventure.net/?page=9183`, which links one dated PDF per Sunday
+(`pdfs/9183/2026-10-18.pdf`). Provider `other`, publication `url:` that listing, recipe
+`page-pdfs http://sponsors.bonventure.net/?page=9183` (as other Scranton rows on Bon
+Venture), pinned by inspection; `fetch:check` was not run (the row is not in parishes.csv
+yet). The PDFs have text (page 7 is an image).
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

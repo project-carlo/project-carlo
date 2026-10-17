@@ -8,13 +8,13 @@ group: Ascension Parish; Saint Katharine Drexel Parish
 evidence:
 - url: https://apskdp.org/wp-content/uploads/Bulletin-10.11.26.pdf
   seen: 2026-10-16
-  quote: 'ASCENSION PARISH and ST. KATHARINE DREXEL PARISH 612 Hudson Street, Forest City, PA 18421'
-  note: 'Masthead, page 1 of the 11 October 2026 issue. The page is an image with no text layer (read
-    by rendering it, parish-site-access render.py), so recheck cannot find this quote in the PDF text.
-    Its Mass Schedule box on the same page: "Saturday Vigil Mass 4:00 PM St. Joseph; Sunday Masses 8:00
+  quote: 133E (BC) - Ascension/Saint Katharine Drexel, Forest City
+  note: 'Page 6 (the only page with a text layer), the publisher''s footer. Page 1 of the 11 October
+    2026 issue is an image (read by rendering it, parish-site-access render.py), so it cannot be quoted
+    for recheck. Its masthead reads "ASCENSION PARISH and ST. KATHARINE DREXEL PARISH, 612 Hudson Street,
+    Forest City, PA 18421", and its Mass Schedule box on the same page: "Saturday Vigil Mass 4:00 PM St. Joseph; Sunday Masses 8:00
     AM St. Juliana, 9:30 AM St. Joseph, 11:00 AM St. James; Daily Mass Monday, Wednesday (Friday - Communion
-    service only) 8:30 AM St. Joseph; Tuesday, Thursday 9:00 AM St. James". Page 6 (text) names the publisher:
-    "133E (BC) - Ascension/Saint Katharine Drexel, Forest City ... Bon Venture Services".'
+    service only) 8:30 AM St. Joseph; Tuesday, Thursday 9:00 AM St. James".'
 - url: https://apskdp.org/community/weekly-bulletin/
   seen: 2026-10-16
   quote: Download this week’s bulletin! October 11, 2026 October 4, 2026 September 27, 2026

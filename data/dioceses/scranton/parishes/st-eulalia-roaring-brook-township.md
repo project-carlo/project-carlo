@@ -18,6 +18,12 @@ evidence:
   quote: 'Weekday Mass: 8:00am (T/Th) | Weekend Masses: Sat. 4pm and Sun. 8:30am & 10:30am'
   note: The parish's Wix homepage. Its "Weekly Bulletin" block links "Read This Week's Bulletin bulletin-2026-10-11.pdf"
     (a Wix file); the site also embeds discovermass:st-eulalia-elmhurst-pa, found by probe url.
+- url: https://container.parishesonline.com/bulletins/03/1138/20261018B.pdf
+  seen: 2026-10-16
+  quote: REV. THOMAS M. MULDOWNEY
+  note: St. Catherine of Siena, Moscow's own ParishesOnline bulletin (18 October 2026), page 1, under
+    "Pastor". Same pastor as St. Eulalia, separate bulletin with St. Catherine's own masthead (region
+    B's row).
 ---
 
 ## Publisher
@@ -29,6 +35,16 @@ Eulalia Parish" and gives the Mass intentions for 19 to 25 October (Tuesday and 
 8 am, Saturday 4 pm, Sunday 8:30 and 10:30 am), page 3 the attendance at those three weekend
 Masses. The diocesan finder lists it as a single-site parish, and no neighbouring parish shares
 it.
+
+St. Eulalia shares its pastor, Father Thomas M. Muldowney, with St. Catherine of Siena,
+Moscow (region B's row; ParishesOnline container 03/1138), whose bulletin names Father
+Muldowney as pastor and sends its parishioners to "St. Eulalia Parish" for Tuesday and Thursday
+8 am Mass. The two still publish separate bulletins, checked on 16 October 2026: St.
+Eulalia's issues on Discover Mass carry only St. Eulalia's own Masses, intentions and
+collections (the 18 October issue does not mention St. Catherine at all; earlier ones mention
+it only for joint events such as a women's gathering "of St. Catherine's and St. Eulalia's"),
+and St. Catherine's ParishesOnline masthead names St. Catherine alone. Two live channels with
+two mastheads, so two rows.
 
 ## Worship sites
 

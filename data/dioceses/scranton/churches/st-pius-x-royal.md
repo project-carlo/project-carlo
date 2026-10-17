@@ -11,7 +11,7 @@ longitude: -75.6149375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster: ['directory:137-2']
+roster: ['directory:137-2', 'gcatholic:24036']
 evidence:
 - url: https://www.dioceseofscranton.org/find-a-parish/saint-john-vianney-parish-scott-township
   seen: 2026-10-16
