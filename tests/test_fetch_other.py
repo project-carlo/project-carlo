@@ -6,6 +6,8 @@ sites these come from are replayed in test_fetch_replay.py.
 
 from __future__ import annotations
 
+import base64
+import json
 from datetime import date
 
 import pytest
@@ -355,6 +357,70 @@ def test_pdf_embedder_post_is_read_as_served() -> None:
     ) == pdf
 
 
+def _base64_json(value: dict[str, object]) -> str:
+    return base64.b64encode(json.dumps(value).encode()).decode()
+
+
+def test_pilot_bulletins_embed_pages_resolve_to_their_dated_pdfs() -> None:
+    # St. Therese, Shavertown: the bulletin page lists Pilot Bulletins embed
+    # pages, below the site menu's undated registration form.
+    def embed(issue: str) -> str:
+        return f"https://www.thebostonpilot.com/bcd/bulletinclick_embed.asp?Id=32223_{issue}.pdf"
+
+    assert _resolve({
+        HOME: '<a href="/bulletins/">Weekly Parish Bulletin</a>',
+        f"{HOME}/bulletins/": (
+            '<a href="/wp-content/uploads/2024/05/Registration-Form.pdf">Registration</a>'
+            f'<a href="{embed("260927")}"><img></a><a href="{embed("260920")}"><img></a>'
+        ),
+    }) == "https://www.thebostonpilot.com/bcd/Bulletins/260927/32223_260927.pdf"
+
+
+def test_a_script_naming_a_pdf_in_base64_is_kept_in_a_recording() -> None:
+    from pdf_extract.fetch_check import _slim_html
+
+    data = _base64_json({"url": "https://parish.example/b.pdf"})
+    kept = f"<script>FB3D_CLIENT_DATA.push('{data}');</script>"
+    assert _slim_html(f"{kept}<script>var x = 'eyJhbGciOiJIUzI1NiJ9';</script>") == kept
+
+
+def test_pdf_embedder_iframe_names_its_pdf_in_base64() -> None:
+    # Our Lady of Victory, Tannersville: the PDF Embedder iframe's settings,
+    # with the PDF's address, are only in its base64 pdfemb-data parameter.
+    pdf = "https://parish.example/wp-content/uploads/2026/09/bulletin9-27-2026.pdf"
+    data = _base64_json({"pdfID": 11570, "url": pdf, "title": "bulletin9-27-2026"})
+    assert _resolve({
+        HOME: '<a href="/bulletin/">Bulletin</a>',
+        f"{HOME}/bulletin/": (
+            '<a href="/wp-content/uploads/2024/01/Annual-Report-2023.pdf">Annual Report</a>'
+            f'<iframe class="pdfembed-iframe" src="{HOME}/?pdfemb-data={data}"></iframe>'
+        ),
+    }) == pdf
+
+
+def test_3d_flipbook_names_its_pdf_in_base64_client_data() -> None:
+    # St. Thomas More, Lake Ariel: 3D FlipBook pushes its books' settings as
+    # base64 JSON, with JSON-escaped slashes.
+    pdf = "https://parish.example/download/19/bulletin/18800/bul-september-27-2026.pdf"
+    settings = '{"posts":{"1":{"data":{"guid":"%s"}}}}' % pdf.replace("/", "\\/")
+    data = base64.b64encode(settings.encode()).decode()
+    script = (
+        "<script>var FB3D_CLIENT_DATA=window.FB3D_CLIENT_DATA||[];"
+        f"FB3D_CLIENT_DATA.push('{data}');</script>"
+    )
+    assert _resolve({
+        HOME: '<a href="/bulletin/">Bulletin</a>',
+        f"{HOME}/bulletin/": f'<div class="_3d-flip-book"></div>{script}',
+    }) == pdf
+
+
+def test_base64_that_is_not_json_naming_a_pdf_is_ignored() -> None:
+    from pdf_extract.parish_sites.links import decoded_base64_json
+
+    no_pdf = _base64_json({"url": "https://parish.example/page"})
+    assert decoded_base64_json(f"x={no_pdf} y=eyJ!!notbase64 z=eyJhbGciOiJIUzI1NiJ9xx") == []
+
+
 def test_pdf_linked_by_script_wins_over_an_unrelated_footer_pdf() -> None:
     post = f"{HOME}/bulletin-27-september-2026/"
     pdf = f"{HOME}/wp-content/uploads/09-27-2026-Bulletin.pdf"
@@ -550,6 +616,88 @@ def test_concrete_cms_download_links_are_bulletins() -> None:
         }),
     )
     assert source_url == f"{site}/download_file/view/4445/2079"
+
+
+def test_dotnetnuke_linkclick_downloads_are_bulletins() -> None:
+    # Saints Peter & Paul, Plains: each issue is a DNN file ticket, labelled by date.
+    def ticket(t: str) -> str:
+        return f"/LinkClick.aspx?fileticket={t}%3d&amp;tabid=2011&amp;portalid=34&amp;mid=3661"
+
+    assert _resolve({
+        HOME: '<a href="/Sunday-Bulletin">Sunday Bulletin</a>',
+        f"{HOME}/Sunday-Bulletin": (
+            f'<a href="{ticket("A")}">September 20, 2026</a><a href="{ticket("A")}">Download</a>'
+            f'<a href="{ticket("B")}">September 27, 2026</a><a href="{ticket("B")}">Download</a>'
+        ),
+    }) == f"{HOME}/LinkClick.aspx?fileticket=B%3d&tabid=2011&portalid=34&mid=3661"
+
+
+def test_a_google_doc_is_downloaded_as_a_pdf() -> None:
+    # Most Holy Trinity, Susquehanna links each issue as a shared Google Doc.
+    doc = "https://docs.google.com/document/d/18ujWxlm2oDDbN16o-_x/edit?usp=sharing"
+    page = f"{HOME}/bulletin"
+    source_url, fetch_url = _resolve_other(
+        provider_id=page, reference_date=TODAY, recipe="page-pdfs",
+        page=_site({page: f'<a href="/bulletin">Bulletin</a><a href="{doc}"></a>'}),
+    )
+    assert source_url == doc
+    assert fetch_url == "https://docs.google.com/document/d/18ujWxlm2oDDbN16o-_x/export?format=pdf"
+
+
+# ── Bulletins posted as images ──────────────────────────────────────────────
+
+CDN = "https://images.squarespace-cdn.com/content/v1/56b2"
+_GALLERY = (
+    f'<img data-src="{CDN}/a1/2026+BULLETIN+COVER+TEMPLATE.jpg" '
+    f'data-image="{CDN}/a1/2026+BULLETIN+COVER+TEMPLATE.jpg">'
+    f'<img src="{CDN}/logo.png" alt="St. Mary">'
+    f'<img data-src="{CDN}/b2/Bulletin+2026+September+26-27.jpg?format=1500w" '
+    f'data-image="{CDN}/b2/Bulletin+2026+September+26-27.jpg">'
+    f'<img data-image="{CDN}/c3/Bulletin+2026+September+19-20.jpg">'
+)
+
+
+def test_a_bulletin_posted_as_an_image_is_read_by_recipe() -> None:
+    # St. Mary, Waymart: a Squarespace gallery of one image per weekend, after
+    # a cover template that is not an issue.
+    page = f"{HOME}/newbulletin"
+    link = build_latest_other_bulletin_links(
+        provider_id=page, reference_date=TODAY, page=_site({page: _GALLERY}),
+        recipe="page-images",
+    )
+    assert link.source_url == f"{CDN}/b2/Bulletin+2026+September+26-27.jpg"
+    assert link.how == f"page-images on {page}: current"
+
+
+def test_images_are_not_read_without_a_recipe() -> None:
+    page = f"{HOME}/newbulletin"
+    with pytest.raises(ValueError, match="No PDF links found"):
+        _resolve({HOME: '<a href="/newbulletin">Bulletin</a>', page: _GALLERY})
+
+
+def test_a_downloaded_image_is_kept_as_a_pdf(monkeypatch) -> None:
+    from io import BytesIO
+
+    from PIL import Image
+
+    from pdf_extract import fetch
+
+    jpeg = BytesIO()
+    Image.new("RGB", (300, 150), "white").save(jpeg, format="JPEG")
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(jpeg.getvalue()))
+    url = f"{CDN}/b2/Bulletin+2026+September+26-27.jpg"
+    pdf = fetch._download_pdf(fetch_url=url, source_url=url)
+    assert pdf.startswith(b"%PDF-")
+    # The same image makes the same PDF, so a re-fetch is seen as a duplicate.
+    assert fetch._download_pdf(fetch_url=url, source_url=url) == pdf
+
+
+def test_a_download_that_is_neither_pdf_nor_image_is_left_as_it_is(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b"<html>"))
+    url = f"{HOME}/bulletin.pdf"
+    assert fetch._download_pdf(fetch_url=url, source_url=url) == b"<html>"
 
 
 def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:

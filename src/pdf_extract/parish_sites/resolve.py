@@ -128,7 +128,8 @@ def resolve_parish_site(
 ) -> Resolution:
     recipe = recipe or Recipe()
     collectors = (
-        [COLLECTORS[recipe.collector]] if recipe.collector else list(COLLECTORS.values())
+        [COLLECTORS[recipe.collector]] if recipe.collector
+        else [c for c in COLLECTORS.values() if c.automatic]
     )
     if recipe.page:
         return _resolve_bulletin_page(

@@ -476,7 +476,13 @@ prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
    is the PDF), `page-pdfs` (links, or addresses in the page's markup),
    `linked-issue-page` (an embedded flipbook or a publisher's listing) and
    `dated-post` (a weekly post that wraps the PDF). They run in that order
-   until one finds a convincing set.
+   until one finds a convincing set. `page-pdfs` also reads PDF addresses a
+   viewer plugin keeps in base64 JSON (PDF Embedder's `pdfemb-data`, 3D
+   FlipBook's `FB3D_CLIENT_DATA`), and takes Google Drive files, Google Docs
+   (exported as PDF), Concrete CMS and DotNetNuke (`LinkClick.aspx`) downloads
+   as PDFs. One more collector runs only when a recipe names it:
+   `page-images`, for a parish that posts each issue as an image (a JPEG per
+   weekend); `fetch` stores the image as a one-page PDF.
 3. **Choose** this week's issue among them (`choose.py`), and say why:
    `current` (dated this week), or a fallback (`newest-recent`, `titled`,
    `first-listed`). `newest-recent` is the newest issue dated in the last 45
