@@ -2,7 +2,7 @@
 name: St. Bartholomew's, Old Forge and St. Anthony of Padua, Inlet and Raquette Lake
 website: https://fultonchaincatholics.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://fultonchaincatholics.org/files/bulletin.pdf']
 group: ''
 evidence:
@@ -49,6 +49,8 @@ St. Bartholomew's, Old Forge and St. Anthony of Padua, Inlet (and its Raquette L
 ## Website and bulletin provider
 
 fultonchaincatholics.org is a self-hosted site (`probe url` 200, no ParishesOnline or eCatholic id); its "Bulletin" link is the PDF above. `bulletin_provider: other`, publication `url:` of the PDF. The diocesan directory's older addresses (fultonchaincatholic.rcdony.org, .dioogdensburg.org) were not tested. The bulletin has a complete text layer. Nothing on the site or in the PDF is dated, so the bulletin cannot be archived by its URL.
+
+Recipe `page-pdfs`, pinned after `fetch:check` on 2026-10-17 picked the fixed `files/bulletin.pdf`, then carrying the 18 October 2026 issue (`titled`).
 
 ## Not yet confirmed
 

@@ -134,6 +134,30 @@ Of the 36 parish rows, 14 are ParishesOnline, 11 eCatholic and 11 `other`.
   Canva, and Lowville is changing its publishing system from 4 October 2026 (`revisit` on
   its row).
 
+### Fetch check (2026-10-17, after re-promotion)
+
+The rows were promoted again on 2026-10-17 after main gained fetch-only parishes, so every
+Ogdensburg parish is `fetch_only`: its bulletins are fetched weekly but not extracted or shown
+until the flag is cleared. `fetch:check` over all 36 rows that day: **36 ok, none blocked**
+(the five eCatholic sites Cloudflare blocked on 30 September all loaded). Each pick was
+checked by hand:
+
+- **This week's issue (18 October)** for 30 rows: all 14 ParishesOnline, 8 of the 11
+  eCatholic, and 8 `other` (Cape Vincent, Old Forge, Waddington and Harrisville by the
+  content of their overwritten PDFs; Carthage, Ellenburg and Lake Placid by date; River
+  Catholics by its link text, as the file is misnamed "October 11 2026 -1.pdf").
+- **The newest posted, a week old (11 October)**, for Chateaugay (18168), Mooers Forks
+  (17009) and Tupper Lake (15094): `issues.py` found no 18 October file for any of them yet;
+  and Schroon Lake's overwritten PDF.
+- **Stale at the source:** Southern Lewis County's page lists nothing after 13 September,
+  and Heuvelton/Lisbon's PDF is still the 13 September issue (Last-Modified 14 September,
+  still the diocese's link for both towns). `fetch` downloads both addresses again each week,
+  so a new issue is picked up when the parish posts it.
+
+Recipes are pinned on all 11 `other` rows (each record says what its recipe picked), and a
+second run with them pinned picked the same 11 files. Cape Vincent, Old Forge, Carthage and
+Waddington are new replay fixtures, so 11 Ogdensburg sites are recorded.
+
 ## Rules settled for this diocese
 
 - **Two rows stay separate although both bulletins print the same Masses,** because each has
@@ -174,6 +198,10 @@ Of the 36 parish rows, 14 are ParishesOnline, 11 eCatholic and 11 `other`.
 
 ## Log
 
+- 2026-10-17: Re-promoted as fetch-only after merging main (36 parishes, 92 churches,
+  unchanged). `fetch:check`: 36 of 36 ok; 11 recipes pinned (see "Fetch check (after
+  re-promotion)"). Two rows are stale at the source: Southern Lewis County and
+  Heuvelton/Lisbon.
 - 2026-09-30: Explored the whole diocese. I scraped the diocese's parish directory into
   `rosters/directory.json` (101 entries) and fetched GCatholic's list (126). Both were
   split into eight regions, researched in parallel, and followed by a cross-region pass.

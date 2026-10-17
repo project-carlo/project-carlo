@@ -2,7 +2,7 @@
 name: St. James and St. Mary's Parish Community (Carthage and Copenhagen)
 website: http://www.catholicsofcarthagecopenhagen.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs http://www.catholicsofcarthagecopenhagen.org/bulletins.html
 publication: ['url:http://www.catholicsofcarthagecopenhagen.org/bulletins.html']
 group: ''
 evidence:
@@ -61,6 +61,8 @@ itself, with no ParishesOnline, eCatholic or Discover Mass id (`probe url` found
 the provider is `other` and the publication is `url:` of the bulletins page.
 **The 27 September bulletin is an image-only PDF** (no text layer), so the pipeline will need
 to read the pages as images.
+
+Recipe `page-pdfs http://www.catholicsofcarthagecopenhagen.org/bulletins.html`, pinned after `fetch:check` on 2026-10-17 picked `Bulletin_-_October_18,_2026.pdf`, this week's issue (`current`).
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. Mary's Parish (Waddington and Madrid)
 website: https://mwcatholics.org/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://mwcatholics.org/files/bulletin.pdf']
 group: St. Mary's Parish, Waddington (formerly St. Mary's and St. John the Baptist, Madrid)
 evidence:
@@ -61,6 +61,8 @@ The directory's Waddington and Madrid entries are the same two buildings, GCatho
 ## Website and bulletin provider
 
 mwcatholics.org (a small self-hosted site; `probe url` reads it, 200) links "Bulletin" to `mwcatholics.org/files/bulletin.pdf`, which is overwritten each week, so provider `other` with `url:https://mwcatholics.org/files/bulletin.pdf` as the publication. The diocese's Parish Bulletins page links the same PDF for Madrid and Waddington. There is no ParishesOnline, eCatholic or Discover Mass account: the page embeds no id (`visit.py --bulletin`: "looks self-hosted"). Because the URL never changes, dated quotes from the PDF are lost each week; the site's home page text is the more durable evidence.
+
+Recipe `page-pdfs`, pinned after `fetch:check` on 2026-10-17 picked the fixed `files/bulletin.pdf`, then carrying the 18 October 2026 issue (`titled`).
 
 ## Not yet confirmed
 

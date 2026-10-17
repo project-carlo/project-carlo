@@ -2,7 +2,7 @@
 name: St. Francis Solanus Church, Harrisville
 website: https://www.rcdony.org/images/Harrisvillebulletin-1.pdf
 bulletin_provider: other
-provider_id: ''
+provider_id: redirected-pdf
 publication: ['url:https://www.rcdony.org/images/Harrisvillebulletin-1.pdf']
 group: ''
 evidence:
@@ -49,6 +49,8 @@ used as the `website` (where the bulletin can be found) and as the `url:` public
 provider is `other`. There is no ParishesOnline, eCatholic or Discover Mass bulletin (Discover
 Mass has a listing with no issues). As the file is overwritten weekly, the pipeline reads
 whatever the current issue is.
+
+Recipe `redirected-pdf`, pinned after `fetch:check` on 2026-10-17 picked the PDF itself, then carrying the 18 October 2026 issue (`only-link`).
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. Agnes & St. Brendan's
 website: https://stagneslakeplacid.com
 bulletin_provider: other
-provider_id: ''
+provider_id: linked-issue-page https://stagneslakeplacid.com/bulletin
 publication: ['url:https://www.church-bulletin.org/saint-agnes-saint-brendan-lake-placid-ny-12946', 'url:https://stagneslakeplacid.com/bulletin']
 group: ''
 evidence:
@@ -84,6 +84,8 @@ bulletin hosts"), fetchable without a browser. Publication ids are the archive p
 parish's own bulletin page; there is no ParishesOnline, eCatholic or Discover Mass id. Several
 issues are image-only (13 and 6 September, 27 September; the 20 September and 16 August ones
 have a text layer), so the pipeline will need to read some weeks as images.
+
+Recipe `linked-issue-page https://stagneslakeplacid.com/bulletin`, pinned after `fetch:check` on 2026-10-17 picked church-bulletin.org's `2026-10-18.pdf`, this week's issue (`current`).
 
 ## Not yet confirmed
 

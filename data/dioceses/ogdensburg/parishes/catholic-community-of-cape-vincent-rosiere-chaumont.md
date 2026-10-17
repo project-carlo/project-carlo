@@ -2,7 +2,7 @@
 name: Catholic Community of Cape Vincent, Rosiere and Chaumont
 website: https://www.cvrchparish.org
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:http://www.cvrchparish.org/files/bulletin.pdf']
 group: The Roman Catholic Community of Cape Vincent, Rosiere and Chaumont
 evidence:
@@ -62,6 +62,8 @@ page's link. Its "Bulletin" menu item is the fixed PDF, so the bulletin is `othe
 ParishesOnline, eCatholic or Discover Mass id on the site (`probe url` and visit.py both
 found none; `probe url` reports the one bulletin link). Because the file name never
 changes, the pipeline gets the current issue each time; there are no dated issues to cite.
+
+Recipe `page-pdfs`, pinned after `fetch:check` on 2026-10-17 picked the fixed `files/bulletin.pdf`, then carrying the 18 October 2026 issue (`titled`).
 
 ## Not yet confirmed
 

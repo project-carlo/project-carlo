@@ -2,7 +2,7 @@
 name: Our Lady of Lourdes, Schroon Lake
 website: https://www.rcdony.org/images/ourladylourdes.pdf
 bulletin_provider: other
-provider_id: ''
+provider_id: redirected-pdf
 publication: ['url:https://www.rcdony.org/images/ourladylourdes.pdf']
 group: Southern Adirondack Catholic Community (St. Mary's, Sacred Heart, Our Lady of Lourdes)
 evidence:
@@ -49,6 +49,8 @@ Nothing else in the rosters belongs to this row.
 ## Website and bulletin provider
 
 There is no separate Our Lady of Lourdes website: the community site (southernadirondackcatholics.org) is used by all three, so the parish `website` is the PDF's URL (a website must be unique across rows), as other rows here do for a self-hosted PDF. `bulletin_provider: other`, publication `url:` of the PDF. The PDF sits at a fixed, undated URL and is replaced each week, so nothing can be archived from it; `recheck` quotes will drift with the issue.
+
+Recipe `redirected-pdf`, pinned after `fetch:check` on 2026-10-17 picked the PDF itself, then carrying the 11 October 2026 issue (`only-link`).
 
 ## Not yet confirmed
 

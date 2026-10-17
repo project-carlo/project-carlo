@@ -2,7 +2,7 @@
 name: St. Bernard's and St. Edmund's Parish
 website: http://www.cathcommsbse.org/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:http://www.cathcommsbse.org/']
 group: St. Bernard's and St. Edmund's Parish
 evidence:
@@ -51,6 +51,8 @@ Both Mass-schedule lists (bulletin and home page) cover exactly these two. The b
 ## Website and bulletin provider
 
 `cathcommsbse.org` is a self-hosted site (file paths `/var/m_8/.../<n>-<date>-<hash>.pdf?download`, no Cloudflare; `probe url` ok, title "Home - St.Bernard's and St Edmund's Parishes") that posts the current bulletin on its home page as a dated PDF link; there is no archive. Provider `other`, publication `url:http://www.cathcommsbse.org/` (the page that lists the bulletin), no provider id. The pipeline resolves the PDF by the link text "Bulletin for the Weekend of ...".
+
+Recipe `page-pdfs`, pinned after `fetch:check` on 2026-10-17 picked the home page's `...-10-18-2026-c9f0f.pdf?download`, this week's issue (`current`).
 
 ## Not yet confirmed
 

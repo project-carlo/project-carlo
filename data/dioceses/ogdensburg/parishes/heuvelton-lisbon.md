@@ -2,7 +2,7 @@
 name: St. Raphael's Heuvelton and Saints Philip and James Lisbon
 website: https://www.rcdony.org/images/SR-SSPJbulletin.pdf
 bulletin_provider: other
-provider_id: ''
+provider_id: redirected-pdf
 publication: ['url:https://www.rcdony.org/images/SR-SSPJbulletin.pdf']
 group: ''
 evidence:
@@ -68,9 +68,14 @@ parish site, ParishesOnline or eCatholic page exists for either church (the dire
 website; `probe url` on the PDF says NO-PARISH-WORDS because it is not HTML). The publication id is
 `url:` the PDF address. The PDF has a text layer; the first page holds the masthead and the Mass list.
 
+Recipe `redirected-pdf`, pinned after `fetch:check` on 2026-10-17 picked the PDF itself, still the 13 September 2026 issue (Last-Modified 14 September; the diocese's bulletin page still links it for both towns) (`only-link`).
+
 ## Not yet confirmed
 
 - The bulletin does not say which church each Mass is at. Discover Mass lists St. Raphael with
   Saturday 4:30 pm and Sunday 10:30 am (undated), so the Sunday 9:00 am Mass is taken to be Lisbon's
   by elimination. See `sts-philip-and-james-lisbon`.
-- Whether the PDF is still updated weekly. Check it after mid-October 2026.
+- Whether the PDF is still updated weekly. On 2026-10-17 it still carried the 13 September issue
+  (Last-Modified 14 September 2026), and the diocese's bulletin page still linked it for both towns.
+  `fetch` downloads the address again each week, so a new upload is picked up when it comes; if it
+  stays stale, look for a new home for the bulletin.

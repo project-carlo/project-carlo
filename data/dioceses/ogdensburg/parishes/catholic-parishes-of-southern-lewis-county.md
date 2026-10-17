@@ -2,7 +2,7 @@
 name: Catholic Parishes of Southern Lewis County
 website: https://catholicparishesofslc.weebly.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://catholicparishesofslc.weebly.com/bulletins.html
 publication: ['url:https://catholicparishesofslc.weebly.com/bulletins.html']
 group: ''
 evidence:
@@ -71,6 +71,8 @@ diocese's bulletin page's link. It hosts the bulletins itself as PDFs under
 Discover Mass id), so the provider is `other` and the publication `url:` of the bulletins page,
 which lists one PDF per Sunday from July 2024. File names are irregular (bulletin_sept_13.pdf,
 sept_6.pdf, august_23__2026.pdf), so the pipeline needs the page, not a pattern.
+
+Recipe `page-pdfs https://catholicparishesofslc.weebly.com/bulletins.html`, pinned after `fetch:check` on 2026-10-17 picked the 13 September 2026 issue, the newest the page lists (none posted since) (`first-listed, dated 2026-09-13`).
 
 ## Not yet confirmed
 

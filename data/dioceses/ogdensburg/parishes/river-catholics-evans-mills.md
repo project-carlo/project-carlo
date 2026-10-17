@@ -2,7 +2,7 @@
 name: River Catholics (St. Mary's and St. Paul's)
 website: https://rivercatholics.org/bulletins-1
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['ecatholic:21398', 'url:https://rivercatholics.org/bulletins-1']
 group: River Catholics
 evidence:
@@ -76,6 +76,8 @@ rivercatholics.org is an eCatholic-hosted site (id 21398). Its Bulletins page li
 uploaded documents, so the row uses provider `other` with the Bulletins page as `website`, like Holy
 Family, Little Falls in Albany, and records both `ecatholic:21398` and `url:https://rivercatholics.org/bulletins-1`.
 `probe url` gets 403 (Cloudflare); a browser loads the pages.
+
+Recipe `page-pdfs`, pinned after `fetch:check` on 2026-10-17 picked the file the page labels "October 18, 2026" (the parish named it `October 11  2026 -1.pdf`), this week's issue (`current`).
 
 ## Not yet confirmed
 
