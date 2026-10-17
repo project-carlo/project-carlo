@@ -93,6 +93,33 @@ ParishesOnline, 7 Discover Mass, 3 eCatholic, 3 `no_bulletin`.
   (down all session), olophparish.org (Cloudflare every load), stleos-holyrosary.org and
   Mary, Mother of God's site (refuse plain fetchers).
 
+### Fetch check (2026-10-17, before promotion)
+
+`fetch:check` reads only `data/parishes.csv`, so it was run on the unpromoted rows by calling
+`fetch_check.check_fetch(parishes_csv=...)` on a temporary CSV built from `parishes/`, one
+parish at a time, under `xvfb-run` with `PLAYWRIGHT_BROWSER_CHANNEL=chrome`. Of the 73 rows
+with a provider, **61 resolved** (all 19 ParishesOnline, 7 Discover Mass and 3 eCatholic,
+and 32 of 44 `other`), after pinning two recipes (St. Ignatius: Bon Venture over `http://`;
+Seton: its archive page) and fixing a crash on recipe URLs with spaces (St. Monica). Two of the 61 picked the
+wrong issue, and twelve rows were not read at all:
+
+- **Wrong or misdated picks:** St. John Bosco reads "10/4-27th Sunday" as 2027 and picks the
+  previous issue; Our Lady of Peace's file names (`10.4.26.pdf`) can't be dated and it picked
+  a "Parish Consolidation" PDF; Nativity, Duryea picks the right file (11 October) but dates
+  it 2026-03-04.
+- **Formats the resolver doesn't read (8):** Our Lady of Victory, Tannersville (PDF Embedder
+  `pdfemb-data`), St. Thomas More, Lake Ariel (3D FlipBook), St. Ann's Basilica (FlipHTML5 of
+  JPEGs), St. Mary, Waymart (one JPEG), Most Holy Trinity, Susquehanna (Google Doc), Plains
+  (DotNetNuke `LinkClick` posts), St. Rita, Gouldsboro (Net Driven JavaScript page whose
+  static HTML embeds a 2024 PDF), Wyalusing (Cloudflare on every load).
+- **Hosts that close the sandbox's connection (4):** holynameofmary.com, nepacatholic.com,
+  ourladyofhope.us, stjosephsmatamoras.com (the proxy logs `ws_closed_mid_exchange` after
+  the TLS hello). They may work from the pipeline's own runner.
+
+Every row stays `other` with its evidence: each publishes a current bulletin, so none is
+`no_bulletin`. Re-run `fetch:check -- --parish <slug>` after promotion and pin the recipes it
+prints for the `first-listed` picks once they are this week's issue.
+
 ## Rules settled for this diocese
 
 - **Eastern Catholic churches and the Personal Ordinariate** are excluded as
@@ -126,5 +153,18 @@ ParishesOnline, 7 Discover Mass, 3 eCatholic, 3 `no_bulletin`.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-10-17: Explored the whole diocese in seven regions (Scranton city; north Lackawanna and
+  Wyoming; Wilkes-Barre; Pittston, West Side and Back Mountain; Hazleton and Monroe; Pike, Wayne
+  and Susquehanna; Bradford, Tioga, Sullivan and Lycoming), one agent each, then a
+  cross-region pass. Result: 76 parish rows for 98 canonical parishes (19 ParishesOnline, 7
+  Discover Mass, 3 eCatholic, 44 other, 3 no_bulletin: St. Patrick, Scranton; Prince of Peace,
+  Old Forge; St. Pius of Pietrelcina, Hazleton), 137 churches, 54 exclusions (32
+  other-jurisdiction, 19 closed, 2 no-public-mass, 1 not-catholic) and 9 open questions.
+  Coverage: directory 137/137, GCatholic 193/193; two churches are in no roster (Holy Family
+  Chapel, Williamsport; Sts. Philip and James / St. John Neumann Shrine, Sugar Ridge, from the
+  Find a Mass page). `audit`: two GCatholic groups span rows, both with separate bulletins
+  recorded. `recheck` per region found every quote except on pages that refuse plain
+  fetchers. Coordinates for five churches GCatholic doesn't place came from the Find a Mass
+  page. Fetch check: 61 of 73 rows resolve, 59 to the current issue (see above). Not yet promoted.
 - 2026-10-16: Initialised. Fetched GCatholic (193 entries) and scraped the diocesan finder's
   worship sites (137 entries from 98 parishes) as `rosters/directory.json`.

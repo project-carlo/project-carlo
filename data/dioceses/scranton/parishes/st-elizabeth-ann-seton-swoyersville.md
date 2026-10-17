@@ -2,7 +2,7 @@
 name: St. Elizabeth Ann Seton Parish
 website: https://www.setonpa.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.setonpa.com/seton-sentinel-archives
 publication: ['url:https://www.setonpa.com/seton-sentinel-archives']
 group: Saint Elizabeth Ann Seton Parish
 evidence:
@@ -44,6 +44,8 @@ have to take the link titled SETON SENTINEL on the homepage (choose `titled`), n
 archive. St. Ignatius's Wix site uses the same Wix account (160730), but its bulletin is a different
 publication (Bonventure).
 
+`provider_id` pins the recipe `page-pdfs https://www.setonpa.com/seton-sentinel-archives`. Without it the resolver found no bulletin page from the homepage. With it, `fetch:check` on 2026-10-17 read the archive page ("page-pdfs on https://www.setonpa.com/seton-sentinel-archives: current").
+
 ## Not yet confirmed
 
-Which pick `fetch:check` makes on the homepage; pin the recipe after promotion.
+Nothing about the fetch: the recipe above is pinned (2026-10-17).

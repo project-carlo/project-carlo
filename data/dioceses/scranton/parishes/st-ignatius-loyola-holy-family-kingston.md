@@ -2,7 +2,7 @@
 name: The Parishes of St. Ignatius of Loyola and Holy Family
 website: https://www.stignatiuspa.com
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs http://sponsors.bonventure.net/?page=1732
 publication: ['url:https://sponsors.bonventure.net/?page=1732']
 group: Saint Ignatius Loyola Parish; Holy Family Parish Luzerne
 evidence:
@@ -55,6 +55,8 @@ sponsors.bonventure.net fails certificate verification for curl and Python ("una
 issuer certificate"), while plain HTTP works and Chrome loads the HTTPS page; evidence cites the
 http:// URLs. The resolver may need the http:// listing (`page-pdfs
 http://sponsors.bonventure.net/?page=1732`) as its recipe; check with `fetch:check` after promotion.
+
+`provider_id` pins the recipe `page-pdfs http://sponsors.bonventure.net/?page=1732`. Without it the resolver reached the Bon Venture PDF over https and failed certificate verification (Bon Venture's chain is broken server-side). With it, `fetch:check` on 2026-10-17 picked the 18 October 2026 issue ("page-pdfs on http://sponsors.bonventure.net/?page=1732: current").
 
 ## Not yet confirmed
 
