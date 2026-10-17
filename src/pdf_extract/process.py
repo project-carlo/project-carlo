@@ -67,6 +67,7 @@ from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import (
     churches_for_parish,
     connect_db,
+    fetch_only_slugs,
     get_parish_by_name,
     list_parishes,
     load_bulletins,
@@ -150,7 +151,15 @@ def process_bulletins(
     model: str = DEFAULT_GEMINI_MODEL,
     concurrency: int = 5,
     run_id: str | None = None,
+    include_fetch_only: bool = False,
 ) -> dict[str, int]:
+    """Extract (or update) the schedules of the parishes with unprocessed bulletins.
+
+    Fetch-only parishes (`fetch_only` in parishes.csv) are left out: their
+    bulletins stay unprocessed and no model call is made for them, unless
+    `include_fetch_only`. Once the flag is cleared, the next run processes
+    each one's latest bulletin.
+    """
     LOGGER.info(
         "Starting process stage (parish_name=%s, slugs=%s, model=%s, concurrency=%s)",
         parish_name or "*all*",
@@ -195,6 +204,7 @@ def process_bulletins(
                     "cache_hits": 0,
                     "weekly_promotions": 0,
                     "failed_bulletins": 0,
+                    "fetch_only_parishes": 0,
                 }
             target_slug = parish_row["slug"]
             pending = [m for m in pending if m["parish_slug"] == target_slug]
@@ -206,6 +216,23 @@ def process_bulletins(
                 raise ValueError(f"Parish not found: {', '.join(missing)}")
             wanted = set(slugs)
             pending = [m for m in pending if m["parish_slug"] in wanted]
+
+        # Fetch-only parishes make no model call, in either mode.
+        held = set() if include_fetch_only else fetch_only_slugs(conn)
+        if update_scope is not None:
+            held &= set(update_scope)
+        if held:
+            if parish_name:
+                LOGGER.warning(
+                    "Parish %s is fetch-only; pass --include-fetch-only to process it anyway",
+                    parish_name,
+                )
+            else:
+                LOGGER.info("Leaving %d fetch-only parishes unprocessed", len(held))
+            pending = [m for m in pending if m["parish_slug"] not in held]
+            if update_scope is None:
+                update_scope = [row["slug"] for row in list_parishes(conn)]
+            update_scope = [slug for slug in update_scope if slug not in held]
 
         history = load_history_from_db(conn)
         pruned = prune_history(history)
@@ -326,6 +353,7 @@ def process_bulletins(
         "cache_hits": cache_hits,
         "weekly_promotions": promoted_events,
         "failed_bulletins": failed,
+        "fetch_only_parishes": len(held),
         **tokens,
         **update_stats,
     }

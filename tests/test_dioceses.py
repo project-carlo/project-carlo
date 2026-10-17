@@ -570,3 +570,24 @@ def test_rows_losing_events_come_from_the_database(root: Path, tmp_path: Path) -
     assert records._referenced_by_events(["st-live", "st-quiet", "st-gone"]) == ["st-live"]
     assert records._referenced_by_events([], ["retired"]) == ["st-moved"]
     assert records._referenced_by_events([], []) == []
+
+
+def test_promote_adds_parishes_as_fetch_only(root: Path) -> None:
+    _parish()
+    _church()
+    report_ = records.promote("test")
+    assert "1 new parishes are fetch-only" in report_["next"]
+    rows = {r["slug"]: r for r in _live("PARISHES_CSV_PATH")}
+    assert rows["live-parish"]["fetch_only"] == ""
+    assert rows["st-ann"]["fetch_only"] == "true"
+
+    # Switched on by hand, the row stays on when the diocese is promoted again.
+    text = storage.PARISHES_CSV_PATH.read_text(encoding="utf-8")
+    storage.PARISHES_CSV_PATH.write_text(text.replace(",true\n", ",\n"), encoding="utf-8")
+    _parish("st-bede")
+    _church("st-bede-town", parish="st-bede")
+    records.promote("test")
+    rows = {r["slug"]: r for r in _live("PARISHES_CSV_PATH")}
+    assert [rows[s]["fetch_only"] for s in ("live-parish", "st-ann", "st-bede")] == [
+        "", "", "true",
+    ]

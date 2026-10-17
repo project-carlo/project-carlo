@@ -20,6 +20,8 @@ from pdf_extract.storage import (
 LOGGER = logging.getLogger(__name__)
 
 _PARISHES_FIELDNAMES = ["slug", "name", "website", "bulletin_provider", "provider_id"]
+# Columns the CSV may carry beyond those, kept when it is rewritten.
+_PARISHES_OPTIONAL = ["fetch_only"]
 _CHURCHES_FIELDNAMES = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
     "name_verified", "address_verified", "latitude", "longitude",
@@ -65,7 +67,10 @@ def apply_detect_results() -> dict[str, int]:
             row.setdefault("provider_id", "")
             unchanged += 1
 
-    _write_csv(PARISHES_CSV_PATH, _PARISHES_FIELDNAMES, rows)
+    fieldnames = _PARISHES_FIELDNAMES + [
+        col for col in _PARISHES_OPTIONAL if any(col in row for row in rows)
+    ]
+    _write_csv(PARISHES_CSV_PATH, fieldnames, rows)
     DETECT_RESULTS_PATH.unlink()
     LOGGER.info("Applied detect results to parishes.csv: %d updated, %d unchanged", updated, unchanged)
     return {"updated": updated, "unchanged": unchanged}
