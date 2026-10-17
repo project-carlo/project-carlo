@@ -575,6 +575,10 @@ def test_recipe_reads_collector_page_or_both() -> None:
         Recipe.parse("pdfs", website=HOME)
     with pytest.raises(ValueError, match="two pages"):
         Recipe.parse(f"{page} {HOME}", website=HOME)
+    # A page with spaces in its URL is written so that parse reads it back.
+    spaced = f"{HOME}/documents/Parish Bulletin - October 18 2026.pdf"
+    text = Recipe(spaced, "redirected-pdf").text(website=HOME)
+    assert Recipe.parse(text, website=HOME) == Recipe(spaced.replace(" ", "%20"), "redirected-pdf")
 
 
 def test_a_recipe_skips_the_homepage_and_runs_only_its_collector() -> None:

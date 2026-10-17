@@ -85,6 +85,9 @@ class Recipe:
     def text(self, *, website: str) -> str:
         """The recipe as `parse` reads it, leaving out a page that is the website."""
         page = None if self.page == website and self.collector else self.page
+        # parse splits on whitespace, so a page whose URL has spaces (eCatholic
+        # file names do) is written with them encoded.
+        page = page.replace(" ", "%20") if page else page
         return " ".join(part for part in (self.collector, page) if part)
 
 
