@@ -11,6 +11,9 @@ CURRENT_WINDOW_DAYS = 7
 # current one: a fallback page's pick that old is refused, and a first-listed
 # PDF that old gives way to a recent one listed after it.
 FALLBACK_MAX_AGE_DAYS = 45
+# Recent dated PDFs that make a page's list a series of issues, so that an
+# undated, unlabelled one listed first is something else.
+MIN_RECENT_SERIES = 2
 
 
 @dataclass(frozen=True)
@@ -71,7 +74,11 @@ def choose(
       dated within that, when one is listed: a listing oldest first (St.
       Joseph, Troy) or a parish a few weeks behind;
     - a link whose whole text is "Bulletin" beats a first one that is not
-      dated (St. Mary's, Glens Falls lists a Confirmation PDF first).
+      dated (St. Mary's, Glens Falls lists a Confirmation PDF first);
+    - a first one neither dated nor labelled "bulletin" gives way to the
+      newest recent one when the page lists a dated series of them (Our Lady
+      of Peace, Hazleton lists a "Parish Consolidation" PDF above its weekly
+      issues, which can be a week or two late).
     With `max_age_days`, a pick dated further than that from today is refused
     with OldBulletinOnly.
     """
@@ -80,19 +87,25 @@ def choose(
         return Choice(max(current, key=lambda c: c.parsed_date or date.min), CURRENT)
 
     first = candidates[0]
+    recent = [
+        c for c in candidates
+        if c.parsed_date is not None
+        and -CURRENT_WINDOW_DAYS <= _age_days(c, reference_date) <= FALLBACK_MAX_AGE_DAYS
+    ]
+
+    def newest_recent() -> Choice:
+        return Choice(max(recent, key=lambda c: c.parsed_date or date.min), NEWEST_RECENT)
+
     if first.parsed_date is not None and _age_days(first, reference_date) > FALLBACK_MAX_AGE_DAYS:
-        recent = [
-            c for c in candidates
-            if c.parsed_date is not None
-            and -CURRENT_WINDOW_DAYS <= _age_days(c, reference_date) <= FALLBACK_MAX_AGE_DAYS
-        ]
         if recent:
-            return Choice(max(recent, key=lambda c: c.parsed_date or date.min), NEWEST_RECENT)
+            return newest_recent()
     reason = FIRST_LISTED
     if first.parsed_date is None:
         titled = next((c for c in candidates if c.titled_bulletin), None)
         if titled is not None:
             first, reason = titled, TITLED
+        elif not first.labelled and len(recent) >= MIN_RECENT_SERIES:
+            return newest_recent()
     if (
         max_age_days is not None
         and first.parsed_date is not None

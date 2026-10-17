@@ -97,6 +97,25 @@ def _resolve(
         # A run of digits that is no month-day-year gives a later yearless
         # date no year.
         ("scan 13-45-19 bulletin 9-27", date(2026, 9, 27)),
+        # An ordinal after a date is the Sunday's number, not a two-digit year
+        # (Saint John Bosco, Conyngham).
+        ("10/4-27th Sunday in Ordinary Time", date(2025, 10, 4)),
+        ("9/20-25th Sunday in Ordinary Time", date(2026, 9, 20)),
+        # Weebly's upload folders are no date: "3/4" is not 4 March
+        # (Nativity of Our Lord, Duryea).
+        ("/uploads/3/4/1/2/34124530/11th__october_2026_bulletin_.pdf", date(2026, 10, 11)),
+        # A file name's spaces as "+" (Our Lady of Peace, Hazleton).
+        ("/files/uploaded/10+18+26.pdf", date(2026, 10, 18)),
+        ("/files/uploaded/9.20.26+bulletin.pdf", date(2026, 9, 20)),
+        ("/files/uploaded/August+2-+2026.pdf", date(2026, 8, 2)),
+        ("/files/uploaded/Bulletin+for+July+5.pdf", date(2026, 7, 5)),
+        # A year before the month is the issue's (St. Michael the Archangel,
+        # Scranton lists a 2022 issue among this year's).
+        ("/wp-content/uploads/2022/10/bulletin-2022-october-23.pdf", date(2022, 10, 23)),
+        ("Bulletin 2026 October 10-11", date(2026, 10, 10)),
+        ("Bulletin_October 12_2025", date(2025, 10, 12)),
+        # Pilot Bulletins: the issue's YYMMDD names its folder and its file.
+        ("https://www.thebostonpilot.com/bcd/Bulletins/260927/32223_260927.pdf", date(2026, 9, 27)),
     ],
 )
 def test_parse_relaxed_date_reads_file_name_and_abbreviated_dates(text, expected) -> None:
@@ -397,6 +416,41 @@ def test_a_link_titled_bulletin_beats_an_undated_first_pdf() -> None:
             '<a href="/_files/ugd/c3.pdf">Bulletin</a>'
         ),
     }) == f"{HOME}/_files/ugd/c3.pdf"
+
+
+def test_a_dated_series_beats_an_undated_unlabelled_first_pdf() -> None:
+    # Our Lady of Peace, Hazleton lists a "Parish Consolidation" PDF above its
+    # weekly issues, the newest of which can be two weeks old.
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f"{HOME}/bulletin": (
+            '<a href="/files/Parish+Consolidation-1bcc83bd.pdf">Parish Consolidation</a>'
+            '<a href="/files/9.13.26.pdf">24th Sunday in Ordinary Time</a>'
+            '<a href="/files/9.6.26.pdf">23rd Sunday in Ordinary Time</a>'
+        ),
+    }) == f"{HOME}/files/9.13.26.pdf"
+
+
+def test_an_undated_first_pdf_labelled_bulletin_is_kept_over_a_dated_series() -> None:
+    # A bulletin overwritten each week under one name is not dated.
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f"{HOME}/bulletin": (
+            '<a href="/files/current-bulletin.pdf">This week</a>'
+            '<a href="/files/festival-9.13.26.pdf">Festival</a>'
+            '<a href="/files/picnic-9.6.26.pdf">Picnic</a>'
+        ),
+    }) == f"{HOME}/files/current-bulletin.pdf"
+
+
+def test_one_dated_pdf_does_not_make_a_series() -> None:
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f"{HOME}/bulletin": (
+            '<a href="/files/latest.pdf">Latest</a>'
+            '<a href="/files/festival-9.13.26.pdf">Festival</a>'
+        ),
+    }) == f"{HOME}/files/latest.pdf"
 
 
 def test_drive_files_listed_on_the_website_itself_are_read_there() -> None:

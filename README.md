@@ -479,7 +479,9 @@ prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
    until one finds a convincing set.
 3. **Choose** this week's issue among them (`choose.py`), and say why:
    `current` (dated this week), or a fallback (`newest-recent`, `titled`,
-   `first-listed`).
+   `first-listed`). `newest-recent` is the newest issue dated in the last 45
+   days, taken when the first listed is plainly old, or when it is neither
+   dated nor labelled "bulletin" and the page lists a dated series.
 
 Each fetch result records how its bulletin was found ("page-pdfs on
 https://…/bulletins: current"), and the run report lists any new bulletin the
