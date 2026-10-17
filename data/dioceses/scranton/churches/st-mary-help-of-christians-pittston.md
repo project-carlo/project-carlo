@@ -1,6 +1,6 @@
 ---
 parish: communion-of-saints-pittston
-name: 'Saint Mary, Help of Christians Church'
+name: Saint Mary, Help of Christians Church
 line1: 535 N Main St.
 line2: ''
 city: Pittston
@@ -26,11 +26,15 @@ evidence:
     Parish'
 - url: https://container.parishesonline.com/bulletins/03/1275/20261018B.pdf
   seen: 2026-10-16
-  quote: 'North Main Street in Pittston.'
-  note: 'Page 3 of the 17-18 October 2026 bulletin: the St. Jude Novena "will be celebrated in St. Mary, Help of Christians Church, 535 North Main Street in Pittston". Page 1 schedules Sunday 8:00 AM and Tue/Thu 8:00 AM here.'
+  quote: North Main Street in Pittston.
+  note: 'Page 3 of the 17-18 October 2026 bulletin: the St. Jude Novena "will be celebrated in St. Mary,
+    Help of Christians Church, 535 North Main Street in Pittston". Page 1 schedules Sunday 8:00 AM and
+    Tue/Thu 8:00 AM here.'
 - url: https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-12-20-23-updated-as-of-July-1-2024.pdf
   seen: 2026-10-16
-  note: 'Diocese''s consolidated-parishes list, Pittston: "St. Mary, Help of Christians Church (11/2010)", Our Lady of the Eucharist (no closure).'
+  note: 'Diocese''s consolidated-parishes list, Pittston: "St. Mary, Help of Christians Church (11/2010)",
+    Our Lady of the Eucharist (no closure).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

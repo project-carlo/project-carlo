@@ -1,6 +1,6 @@
 ---
 parish: nativity-of-our-lord-duryea
-name: 'Holy Rosary Church'
+name: Holy Rosary Church
 line1: 127 Stephenson St.
 line2: ''
 city: Duryea
@@ -24,11 +24,15 @@ evidence:
     Street, Duryea, PA, 18642; kind: worship-site; group: Nativity of Our Lord Parish'
 - url: https://www.nativityduryea.org/uploads/3/4/1/2/34124530/11th__october_2026_bulletin_.pdf
   seen: 2026-10-16
-  quote: 'Sunday- 8 & 11am, & 7pm'
-  note: 'Page 1 of the parish bulletin, 11 October 2026: the parish schedule, under the masthead address 127 Stephenson Street. The bulletin does not name the church.'
+  quote: Sunday- 8 & 11am, & 7pm
+  note: 'Page 1 of the parish bulletin, 11 October 2026: the parish schedule, under the masthead address
+    127 Stephenson Street. The bulletin does not name the church.'
 - url: https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-12-20-23-updated-as-of-July-1-2024.pdf
   seen: 2026-10-16
-  note: 'Diocese''s consolidated-parishes list (updated 1 July 2024), Duryea: Holy Rosary Church (11/2010) and Sacred Heart of Jesus Church (11/2010), St. Joseph Church (closed 3/21/2010), all Nativity of Our Lord Parish.'
+  note: 'Diocese''s consolidated-parishes list (updated 1 July 2024), Duryea: Holy Rosary Church (11/2010)
+    and Sacred Heart of Jesus Church (11/2010), St. Joseph Church (closed 3/21/2010), all Nativity of
+    Our Lord Parish.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

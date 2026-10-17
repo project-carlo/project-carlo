@@ -19,6 +19,7 @@ evidence:
   seen: 2026-10-16
   note: 'Bulletin page (Duda site): one PDF per Sunday, named ''Bulletin <Sunday name> <m-d-yyyy>.pdf'',
     newest 10-11-2026 on 2026-10-16.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

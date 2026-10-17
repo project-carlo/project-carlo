@@ -9,22 +9,28 @@ group: Saint Therese Parish; Saint Frances X. Cabrini Parish (Carverton)
 evidence:
 - url: https://www.thebostonpilot.com/bcd/Bulletins/261011/32223_261011.pdf
   seen: 2026-10-16
-  quote: 'A Publication of St. Therese and St. Frances X. Cabrini Churches'
-  note: 'Cover, page 1 of the 11 October 2026 issue (Pilot Bulletins, ED code 32223), with both churches'' addresses: 64 Davis Street, Shavertown and 585 Mount Olivet Road, Wyoming.'
+  quote: A Publication of St. Therese and St. Frances X. Cabrini Churches
+  note: 'Cover, page 1 of the 11 October 2026 issue (Pilot Bulletins, ED code 32223), with both churches''
+    addresses: 64 Davis Street, Shavertown and 585 Mount Olivet Road, Wyoming.'
 - url: https://www.thebostonpilot.com/bcd/Bulletins/261011/32223_261011.pdf
   seen: 2026-10-16
-  quote: 'Rev. Joseph J. Pisaneschi'
-  note: 'Page 2 PASTORAL STAFF: one pastor and staff for both churches, with separate office hours for St. Therese and St. Frances Cabrini.'
+  quote: Rev. Joseph J. Pisaneschi
+  note: 'Page 2 PASTORAL STAFF: one pastor and staff for both churches, with separate office hours for
+    St. Therese and St. Frances Cabrini.'
 - url: https://www.thebostonpilot.com/bcd/Bulletins/261011/32223_261011.pdf
   seen: 2026-10-16
-  quote: '9:30AM (SFC) Nowell Young Hann'
-  note: 'Page 5 REMEMBERING (Mass intentions, 12-18 October): Mon, Wed, Thu, Fri 9:00AM (ST); Tue 9:00AM (SFC); Sat 4:00PM (SFC), 5:30PM (ST); Sun 8:00AM (ST), 9:30AM (SFC), 11:00AM (ST).'
+  quote: 9:30AM (SFC) Nowell Young Hann
+  note: 'Page 5 REMEMBERING (Mass intentions, 12-18 October): Mon, Wed, Thu, Fri 9:00AM (ST); Tue 9:00AM
+    (SFC); Sat 4:00PM (SFC), 5:30PM (ST); Sun 8:00AM (ST), 9:30AM (SFC), 11:00AM (ST).'
 - url: https://stthereses-shavertown.com/bulletins/
   seen: 2026-10-16
-  note: 'St. Therese''s Bulletins page (read in a browser; 403 to plain fetches) links thebostonpilot.com/bcd/bulletinclick_embed.asp?Id=32223_<YYMMDD>.pdf for each Sunday, 16 August to 11 October 2026.'
+  note: St. Therese's Bulletins page (read in a browser; 403 to plain fetches) links thebostonpilot.com/bcd/bulletinclick_embed.asp?Id=32223_<YYMMDD>.pdf
+    for each Sunday, 16 August to 11 October 2026.
 - url: https://sfcbsp.org/bulletin-2/
   seen: 2026-10-16
-  note: 'St. Frances X. Cabrini''s Bulletin page (read in a browser) links the same Pilot ids, 32223_260802 to 32223_261011. Its older /bulletin/ page lists self-hosted PDFs only up to 26 July 2026.'
+  note: St. Frances X. Cabrini's Bulletin page (read in a browser) links the same Pilot ids, 32223_260802
+    to 32223_261011. Its older /bulletin/ page lists self-hosted PDFs only up to 26 July 2026.
+promoted: 2026-10-17
 ---
 
 ## Publisher

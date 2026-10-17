@@ -20,6 +20,7 @@ evidence:
   seen: 2026-10-16
   note: The parish's bulletin page lists one PDF per Sunday on cdn.diocesanweb.org, newest the 11 October
     2026 issue (read 2026-10-16).
+promoted: 2026-10-17
 ---
 
 ## Publisher

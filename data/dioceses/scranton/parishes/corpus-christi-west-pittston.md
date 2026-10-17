@@ -8,15 +8,20 @@ group: Corpus Christi Parish
 evidence:
 - url: https://www.corpuschristinepa.com/Bulletins/Bulletin261011.pdf
   seen: 2026-10-16
-  quote: 'Msgr. John J. Sempa,'
-  note: 'Masthead, page 1 of the 11 October 2026 issue: Immaculate Conception Church, Holy Redeemer Church, St. Anthony Church; Corpus Christi Parish, 605 Luzerne Avenue, West Pittston.'
+  quote: Msgr. John J. Sempa,
+  note: 'Masthead, page 1 of the 11 October 2026 issue: Immaculate Conception Church, Holy Redeemer Church,
+    St. Anthony Church; Corpus Christi Parish, 605 Luzerne Avenue, West Pittston.'
 - url: https://www.corpuschristinepa.com/Bulletins/Bulletin261011.pdf
   seen: 2026-10-16
-  quote: '9:00AM Holy Redeemer'
-  note: 'Page 1 Weekend Mass Schedule: Saturday 4:00PM St. Anthony, 5:30PM Immaculate Conception; Sunday 7:30AM St. Anthony, 9:00AM Holy Redeemer, 10:30AM Immaculate Conception. Daily: Mon-Fri 7:30AM Immaculate Conception, Tue and Thu 8:30AM Holy Redeemer.'
+  quote: 9:00AM Holy Redeemer
+  note: 'Page 1 Weekend Mass Schedule: Saturday 4:00PM St. Anthony, 5:30PM Immaculate Conception; Sunday
+    7:30AM St. Anthony, 9:00AM Holy Redeemer, 10:30AM Immaculate Conception. Daily: Mon-Fri 7:30AM Immaculate
+    Conception, Tue and Thu 8:30AM Holy Redeemer.'
 - url: https://www.corpuschristinepa.com/bulletins.htm
   seen: 2026-10-16
-  note: 'The parish''s Bulletins page lists Bulletins/Bulletin<YYMMDD>.pdf for every Sunday from 13 July 2025 to 11 October 2026.'
+  note: The parish's Bulletins page lists Bulletins/Bulletin<YYMMDD>.pdf for every Sunday from 13 July
+    2025 to 11 October 2026.
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -11,9 +11,7 @@ longitude: -75.4564375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23965
-- directory:109-1
+roster: ['gcatholic:23965', 'directory:109-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23965
   seen: 2026-10-16
@@ -25,15 +23,16 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Rita Church'', 512 Main
     Street, Gouldsboro, PA, 18424; kind: worship-site; group: Saint Rita Parish'
 - url: https://www.stritaspa.org/Mass-Schedule
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Sunday 9:00 a.m and 10:30 a.m.
   note: Parish Mass Schedule page, with Saturday vigil 4:00 p.m. and Tuesday & Thursday 9:00 a.m.; header
     "512 Main Street • Gouldsboro, PA • (570) 842-4995".
 - url: https://c1.nd-cdn.us/PDFs/3547627TH_ORD_10_04_26-1.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Sat. Oct. 3 VIGIL-TWENTY-SEVENTH SUNDAY IN ORDINARY TIME
   note: '4 October 2026 bulletin, page 1: intentions for Saturday 4:00pm and Sunday 9:00am and 10:30am,
     with attendance figures for all three on page 2.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

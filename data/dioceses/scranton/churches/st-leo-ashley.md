@@ -27,6 +27,7 @@ evidence:
   quote: Saturday 4:00 p.m. (St. Leo
   note: '11 October 2026 combined St. Leo / St. Andrew bulletin, page 1: weekend Saturday 4:00 p.m. and
     Sunday 8:30 a.m. at St. Leo; weekdays Monday, Tuesday, Thursday, Friday 8:00 a.m.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

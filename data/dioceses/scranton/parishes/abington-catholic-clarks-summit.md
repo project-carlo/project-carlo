@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-16
   note: 'probe po: St. Gregory''s own ParishesOnline org (lpi 0018000000Qx8K5AAJ) has no publications;
     St. Gregory publishes nowhere else.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

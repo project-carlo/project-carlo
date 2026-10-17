@@ -3,41 +3,41 @@ name: Holy Name of Mary Parish and St. Brigid Parish
 website: https://holynameofmary.com/bulletins
 bulletin_provider: other
 provider_id: ''
-publication:
-- url:https://holynameofmary.com/bulletins
+publication: ['url:https://holynameofmary.com/bulletins']
 group: Holy Name of Mary Parish; Saint Brigid Parish
 evidence:
 - url: https://img1.wsimg.com/blobby/go/05fa032b-63a4-434f-9af9-1ca3c845125d/10.11.26.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Holy Name of Mary Church
   note: Page 1 of the 11 October 2026 issue (28th Sunday in Ordinary Time), bilingual; masthead names
     Holy Name of Mary Church, 278 South Main Street, Montrose, and "Pastor ... Father Kevin Miller".
 - url: https://img1.wsimg.com/blobby/go/05fa032b-63a4-434f-9af9-1ca3c845125d/10.11.26.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: MASS TIMES until OCTOBER 31/NOVEMBER 1, 2026
   note: 'Page 2: the schedule covers three churches: Holy Name of Mary Montrose (Sat 4:00pm bilingual,
     Sun 12:30pm, Mon and Thu 12:00pm), St. Francis Xavier Friendsville (Sat 6:30pm, Sun 7:30am, Fri 12:00pm)
     and St. Augustine Silver Lake (Sun 10:00am, Tue, Wed and Sat 8:30am).'
 - url: https://img1.wsimg.com/blobby/go/05fa032b-63a4-434f-9af9-1ca3c845125d/10.11.26.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Beginning on October 31 and November 1, our NEW Mass Schedule will start!
   note: 'Page 7: from 31 October HNM moves to Sat 6:30pm, Sun 8:00am (English) and Sun 1:00pm (Spanish);
     the date list keeps St. Francis Xavier Friendsville (Sat 4:00pm) and St. Augustine Silver Lake (Sun
     10:00am).'
 - url: http://www.tiogaweb.com/church/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: The St. Brigid bulletins are online CLICK ABOVE FOR BULLETINS
   note: St. Brigid Parish site (finder homepage). Its bulletin link goes to issuu.com/search?q=st+brigid+parish;
     the uploader (issuu.com/tiogaweb, read in a browser 2026-10-16) has no St. Brigid bulletin after "AUGUST
     3, 2025 BULLETIN"; its later uploads are a monthly "CommunityPress". The older link issuu.com/stbrigid
     answers 404.
 - url: https://www.dioceseofscranton.org/find-a-parish/saint-brigid-parish-friendsville
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Reverend Kevin M. Miller – Pastor
   note: 'Diocese finder page for St. Brigid Parish: the same pastor as Holy Name of Mary.'
 - url: https://discovermass.com/church/st-francis-xavier-friendsville-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: Discover Mass page "St. Brigid (St. Francis Xavier)" lists no bulletins (issues.py, 2026-10-16).
+promoted: 2026-10-17
 ---
 
 ## Publisher

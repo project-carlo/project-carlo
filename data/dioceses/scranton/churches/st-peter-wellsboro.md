@@ -27,6 +27,7 @@ evidence:
   quote: 47 Central Avenue, Wellsboro, Pennsylvania 16901
   note: 'Masthead of the 18 October 2026 bulletin, with "Saturday Vigil: 5:00pm (livestreamed) / Sunday:
     8:30am" and weekday Masses Tuesday-Friday 12:10pm.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

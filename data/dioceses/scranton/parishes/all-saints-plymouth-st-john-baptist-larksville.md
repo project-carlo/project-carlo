@@ -18,6 +18,7 @@ evidence:
   seen: 2026-10-16
   note: 'Page 2 Mass list codes each Mass (AS) or (SJB): Monday and Tuesday 9:00 AM (AS), Thursday and
     Friday 9:00 AM (SJB), Saturday 4:00 PM (SJB), Sunday 8:00 AM (SJB) and 10:00 AM (AS).'
+promoted: 2026-10-17
 ---
 
 ## Publisher

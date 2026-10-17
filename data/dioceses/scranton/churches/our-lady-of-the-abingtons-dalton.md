@@ -27,6 +27,7 @@ evidence:
   quote: 4:00 pm (OLA) Chester, Ann, & Wesley Brzostek
   note: 'Page 2 of the 11 October 2026 NEPA Catholic bulletin: Saturday 4:00 pm and Tuesday 8:00am Masses
     at OLA.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

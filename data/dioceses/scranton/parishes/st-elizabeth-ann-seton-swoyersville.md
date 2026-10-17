@@ -8,15 +8,18 @@ group: Saint Elizabeth Ann Seton Parish
 evidence:
 - url: https://www.setonpa.com/_files/ugd/160730_80dc95dc23914bed9e21760f1f57e7b6.pdf
   seen: 2026-10-16
-  quote: 'No Mass on Wednesday'
-  note: 'Page 1 of the 18 October 2026 "Seton Sentinel": St. Elizabeth Ann Seton, 116 Hughes Street, Swoyersville; Monday, Tuesday, Thursday & Friday 8:00am, Saturday 4:00pm (vigil), Sundays 8:30am, 11:00am & 5:30pm.'
+  quote: No Mass on Wednesday
+  note: 'Page 1 of the 18 October 2026 "Seton Sentinel": St. Elizabeth Ann Seton, 116 Hughes Street, Swoyersville;
+    Monday, Tuesday, Thursday & Friday 8:00am, Saturday 4:00pm (vigil), Sundays 8:30am, 11:00am & 5:30pm.'
 - url: https://www.setonpa.com/_files/ugd/160730_80dc95dc23914bed9e21760f1f57e7b6.pdf
   seen: 2026-10-16
-  quote: 'St. Elizabeth Ann Seton, Pray for us!'
+  quote: St. Elizabeth Ann Seton, Pray for us!
   note: 'Page 2: Mass intentions for 19-25 October at the same times; no other church named.'
 - url: https://www.setonpa.com
   seen: 2026-10-16
-  note: 'Parish homepage (Wix; read in a browser): link "SETON SENTINEL" to the current issue (a /_files/ugd/160730_<hash>.pdf file) and "SETON SENTINEL ARCHIVES" to /seton-sentinel-archives.'
+  note: 'Parish homepage (Wix; read in a browser): link "SETON SENTINEL" to the current issue (a /_files/ugd/160730_<hash>.pdf
+    file) and "SETON SENTINEL ARCHIVES" to /seton-sentinel-archives.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -11,9 +11,7 @@ longitude: -75.4099375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:24070
-- directory:180-1
+roster: ['gcatholic:24070', 'directory:180-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24070
   seen: 2026-10-16
@@ -25,11 +23,12 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Mary Church'', 242 Carbondale
     Road, Waymart, PA, 18472; kind: worship-site; group: Saint Mary Parish'
 - url: https://stmaryswaymart.com/our-story-1
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Saturday (Vigil of Sunday) 4:00 PM
   note: 'Parish site home page: Sunday 8:00 AM and 9:45 AM, Monday-Friday 9:00 AM; "The Church and Parish
     Office are located at 242 Carbondale Road, Waymart, PA 18472". The 10-11 October 2026 bulletin (an
     image) gives the same week''s Masses.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

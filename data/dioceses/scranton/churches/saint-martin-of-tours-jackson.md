@@ -11,13 +11,12 @@ longitude: -75.591414
 coordinates_from: diocese-directory
 name_verified: true
 address_verified: true
-roster:
-- directory:174-3
-- gcatholic:23983
+roster: ['directory:174-3', 'gcatholic:23983']
 evidence:
 - url: https://www.dioceseofscranton.org/find-a-mass/
   seen: 2026-10-16
-  note: 'Coordinates from the diocese''s Find a Mass card for "Saint Martin of Tours Church" (data-latitude 41.837345, data-longitude -75.591414).'
+  note: Coordinates from the diocese's Find a Mass card for "Saint Martin of Tours Church" (data-latitude
+    41.837345, data-longitude -75.591414).
 - url: https://www.dioceseofscranton.org/find-a-parish/most-holy-trinity-parish-susquehanna-susquehanna
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Martin of Tours Church'',
@@ -28,11 +27,12 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Scranton as ''St. Martin of Tours'',
     R.R. #1, Jackson, PA, 17814; kind: Church'
 - url: https://docs.google.com/document/d/18ujWxlm2oDDbN16oYTV8bTVI-l6ncVaqohnf9IWN50s/edit?usp=sharing
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: '18 October 2026 bulletin, page 1: "St. Martin of Tours 8175 State Route 492 Jackson, PA 18825";
     Sunday 10:30 AM and Monday 8 AM at St. Martin''s. Read by exporting the Google Doc as PDF (docs.google.com/document/d/18ujWxlm2oDDbN16oYTV8bTVI-l6ncVaqohnf9IWN50s/export?format=pdf)
     and rendering it (parish-site-access render.py): the export has no text layer, so recheck cannot find
     this.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

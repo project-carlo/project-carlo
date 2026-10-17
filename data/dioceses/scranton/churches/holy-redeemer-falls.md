@@ -1,6 +1,6 @@
 ---
 parish: corpus-christi-west-pittston
-name: 'Church of the Holy Redeemer'
+name: Church of the Holy Redeemer
 line1: 2435 State Route 92
 line2: ''
 city: Falls
@@ -24,16 +24,19 @@ evidence:
     2435 State Route 92, Falls, PA, 18615; kind: worship-site; group: Corpus Christi Parish'
 - url: https://www.corpuschristinepa.com/Bulletins/Bulletin261011.pdf
   seen: 2026-10-16
-  quote: '9:00AM Holy Redeemer'
-  note: 'Page 1 of the 11 October 2026 bulletin: Sunday 9:00AM and Tue/Thu 8:30AM at Holy Redeemer; the same page notes "there is no daily Mass on Tuesday, October 13 at 8:30AM at Holy Redeemer Church".'
+  quote: 9:00AM Holy Redeemer
+  note: 'Page 1 of the 11 October 2026 bulletin: Sunday 9:00AM and Tue/Thu 8:30AM at Holy Redeemer; the
+    same page notes "there is no daily Mass on Tuesday, October 13 at 8:30AM at Holy Redeemer Church".'
 - url: https://www.corpuschristinepa.com/
   seen: 2026-10-16
-  quote: '2435 State Route 92'
+  quote: 2435 State Route 92
   note: 'Parish homepage footer: "Church of the Holy Redeemer 2435 State Route 92 Falls, PA 18615".'
 - url: https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-12-20-23-updated-as-of-July-1-2024.pdf
   seen: 2026-10-16
-  quote: 'Harding Holy Redeemer (closed 9/2010) Corpus Christi Parish, West'
-  note: 'The diocese''s consolidated-parishes list (updated 1 July 2024) calls it closed; the current bulletin contradicts this.'
+  quote: Harding Holy Redeemer (closed 9/2010) Corpus Christi Parish, West
+  note: The diocese's consolidated-parishes list (updated 1 July 2024) calls it closed; the current bulletin
+    contradicts this.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

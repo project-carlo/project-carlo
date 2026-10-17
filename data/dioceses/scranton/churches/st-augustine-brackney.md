@@ -11,9 +11,7 @@ longitude: -75.9538125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23963
-- directory:108-1
+roster: ['gcatholic:23963', 'directory:108-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23963
   seen: 2026-10-16
@@ -25,15 +23,16 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Augustine Church'', 295
     Church Road, Brackney, PA, 18812; kind: worship-site; group: Saint Brigid Parish'
 - url: https://img1.wsimg.com/blobby/go/05fa032b-63a4-434f-9af9-1ca3c845125d/10.11.26.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Sunday 10:00am St. Augustine Silver Lake
   note: Page 2 of the 11 October 2026 Holy Name of Mary bulletin; also Tuesday, Wednesday and Saturday
     8:30am.
 - url: http://www.tiogaweb.com/church/churches.html
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: St. Augustine Church is on Church Road, just off either Rt. 167 or Rt. 4002 in Silver Lake Township,
     PA
   note: St. Brigid Parish site, Our Churches page (updated 2013).
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

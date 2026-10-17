@@ -11,9 +11,7 @@ longitude: -75.1850625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23971
-- directory:113-1
+roster: ['gcatholic:23971', 'directory:113-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23971
   seen: 2026-10-16
@@ -26,10 +24,11 @@ evidence:
     Peace Church'', 314 Chestnut Avenue, Hawley, PA, 18426; kind: worship-site; group: Blessed Virgin
     Mary  Queen of Peace Parish'
 - url: https://files.ecatholic.com/24839/bulletins/20261011.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 5:30PM Mass - QP
   note: '11 October 2026 bulletin, page 1: Saturday 5:30PM, Sunday 8:00AM and 12:00 Noon, weekdays 9:00AM
     (Thursday 5:00PM) at QP; masthead 314 Chestnut Ave., Hawley, PA 18428.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

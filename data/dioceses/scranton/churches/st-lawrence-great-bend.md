@@ -11,9 +11,7 @@ longitude: -75.7446875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23967
-- directory:174-2
+roster: ['gcatholic:23967', 'directory:174-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23967
   seen: 2026-10-16
@@ -25,11 +23,12 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Lawrence Church'', 380
     Franklin Street, Great Bend, PA, 18821; kind: worship-site; group: Most Holy Trinity Parish Susquehanna'
 - url: https://docs.google.com/document/d/18ujWxlm2oDDbN16oYTV8bTVI-l6ncVaqohnf9IWN50s/edit?usp=sharing
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: '18 October 2026 bulletin, page 1: "St. Lawrence 380 Franklin Street Great Bend, PA 18821"; Saturday
     4 PM and Wednesday 8 AM at St. Lawrence''s. Read by exporting the Google Doc as PDF (docs.google.com/document/d/18ujWxlm2oDDbN16oYTV8bTVI-l6ncVaqohnf9IWN50s/export?format=pdf)
     and rendering it (parish-site-access render.py): the export has no text layer, so recheck cannot find
     this.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

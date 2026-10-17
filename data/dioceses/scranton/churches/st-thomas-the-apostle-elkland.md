@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   quote: '111 First Street, Elkland, PA 16920 … Sunday: 11:30am (St. Thomas)'
   note: Page 1 of the 18 October 2026 bulletin, St. Thomas the Apostle column.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Sacred Hearts of Jesus & Mary
     Church'', 1217 Prospect Avenue, Scranton, PA, 18505; kind: worship-site; group: Saint Teresa of Calcutta
     Parish Scranton'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

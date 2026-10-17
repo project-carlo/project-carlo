@@ -30,6 +30,7 @@ evidence:
 - url: https://irp.cdn-website.com/06e2aa28/files/uploaded/FINAL+FOR+DISTRIBUTION+-+New+Hazleton+Deanery+Mass+Schedule+July+2026+Announcement+%28English%29.pdf
   seen: 2026-10-16
   quote: 5:30 p.m. Mass - Our Lady of Peace Parish (Most Precious Blood Church)
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   quote: Exaltation of the Holy Cross Parish 420 Main Road Hanover Twp, PA 18706
   note: '11 October 2026 issue, page 1: Exaltation of the Holy Cross Mass schedule Saturday 5:30 pm, Sunday
     9:30 am.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

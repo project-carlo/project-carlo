@@ -11,9 +11,7 @@ longitude: -75.1500625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23982
-- directory:119-1
+roster: ['gcatholic:23982', 'directory:119-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23982
   seen: 2026-10-16
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Bernard Church'', 300 Catholic
     Church Road, Beach Lake, PA, 18405; kind: worship-site; group: Saint John the Evangelist Parish'
 - url: https://discovermass.com/church/st-john-the-evangelist-honesdale-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Saturday Vigil - 4:00PM - St. Bernard, Beach Lake
   note: Page 4 of the 18 October 2026 bulletin.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

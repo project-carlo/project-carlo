@@ -22,6 +22,7 @@ evidence:
   note: '`probe po resurrection-church`: 75 Musser Ln, Muncy, LPi id 0018000000Qc0EZAAZ, container 03/0730,
     weekly issues to 2026-10-18. Linked from the parish''s /bulletin page (seen in a browser, visit.py,
     2026-10-16).'
+promoted: 2026-10-17
 ---
 
 ## Publisher

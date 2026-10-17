@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Lucy Church'', 949 Scranton
     Street, Scranton, PA, 18504; kind: worship-site; group: Saint Michael the Archangel Parish'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: Saturday 4:00 PM Holy Child … Sunday 11:15 AM Holy Child
   note: Regular Schedule of Masses, 11 October 2026 bulletin; also Wednesday and Friday 8:30 am and Thursday
     6:00 pm at Holy Child.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -34,6 +34,7 @@ evidence:
 - url: https://sites.google.com/view/olichome-freeland-pa/home/mass-schedule
   seen: 2026-10-16
   quote: 'IMMACULATE CONCEPTION WEEKEND SCHEDULE: Saturday Vigil 4:00 PM Sunday 11:00 AM'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

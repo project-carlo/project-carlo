@@ -8,27 +8,28 @@ group: Christ the King Parish
 evidence:
 - url: https://www.church-bulletin.org/bulletin/christ-the-king-parish-archbald-pa-18403/2026-10-18.pdf
   seen: 2026-10-16
-  note: 'Page 1 of the 18 October 2026 issue (the whole PDF is scanned images with no text layer;
-    read rendered). Masthead "Christ the King Parish"; SUNDAY MASS TIMES "Saturday Vigil: 4:00pm
-    (St. Thomas Aquinas) / Sunday: 7:30am (St. Mary of Czestochowa) 9:00am (St. Thomas Aquinas)
-    10:30am (St. Thomas Aquinas)"; "All daily Masses & Adoration at St. Thomas Aquinas Church";
-    footer gives ST. THOMAS AQUINAS CHURCH, 429 Church Street, Archbald and ST. MARY OF
-    CZESTOCHOWA CHURCH, 417 Main Street, Eynon. No third church.'
+  note: 'Page 1 of the 18 October 2026 issue (the whole PDF is scanned images with no text layer; read
+    rendered). Masthead "Christ the King Parish"; SUNDAY MASS TIMES "Saturday Vigil: 4:00pm (St. Thomas
+    Aquinas) / Sunday: 7:30am (St. Mary of Czestochowa) 9:00am (St. Thomas Aquinas) 10:30am (St. Thomas
+    Aquinas)"; "All daily Masses & Adoration at St. Thomas Aquinas Church"; footer gives ST. THOMAS AQUINAS
+    CHURCH, 429 Church Street, Archbald and ST. MARY OF CZESTOCHOWA CHURCH, 417 Main Street, Eynon. No
+    third church.'
 - url: https://www.church-bulletin.org/bulletin/christ-the-king-parish-archbald-pa-18403/2026-06-07.pdf
   seen: 2026-10-16
-  note: 'Page 1 of the 7 June 2026 issue (image; read rendered) still names three churches:
-    St. Thomas Aquinas Church, St. Mary of Czestochowa Church, Sacred Heart of Mary Church. The
-    October issue has dropped Sacred Heart of Mary (closed 7 June 2026, see excluded/).'
+  note: 'Page 1 of the 7 June 2026 issue (image; read rendered) still names three churches: St. Thomas
+    Aquinas Church, St. Mary of Czestochowa Church, Sacred Heart of Mary Church. The October issue has
+    dropped Sacred Heart of Mary (closed 7 June 2026, see excluded/).'
 - url: https://www.church-bulletin.org/christ-the-king-parish-archbald-pa-18403
   seen: 2026-10-16
   quote: Christ the King Parish Archbald, PA 18403
-  note: John Patrick Publishing's listing for the parish (church-bulletin.org/?id=257 and
-    church-bulletin.org/257 land here). Weekly PDFs at /bulletin/christ-the-king-parish-archbald-pa-18403/YYYY-MM-DD.pdf,
-    newest 18 October 2026, archive back to October 2024.
+  note: John Patrick Publishing's listing for the parish (church-bulletin.org/?id=257 and church-bulletin.org/257
+    land here). Weekly PDFs at /bulletin/christ-the-king-parish-archbald-pa-18403/YYYY-MM-DD.pdf, newest
+    18 October 2026, archive back to October 2024.
 - url: https://christthekingpa.org/
   seen: 2026-10-16
   note: The parish homepage (WordPress). probe url found its bulletin link https://church-bulletin.org/?id=257
     and the relegation notice for Sacred Heart of Mary Church, Jermyn.
+promoted: 2026-10-17
 ---
 
 ## Publisher

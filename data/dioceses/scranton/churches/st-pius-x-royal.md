@@ -28,6 +28,7 @@ evidence:
   note: 'GCatholic lists "St. Pius X", Route 106, Royal, Clifford, PA 18470, under St. John Vianney Parish,
     with Plus Code coordinates (41.6728, -75.6149) used here. Not linked in roster: the entry is in another
     region''s assignment (F); it is the same building.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

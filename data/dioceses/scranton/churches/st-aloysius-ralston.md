@@ -31,6 +31,7 @@ evidence:
 - url: https://stmichaelscanton.com/about-us/
   seen: 2026-10-16
   quote: Saint Aloysius Church at the corner of Green Street and Division Alley, Ralston
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

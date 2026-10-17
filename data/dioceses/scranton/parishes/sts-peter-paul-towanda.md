@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   note: Bulletin page listing the 2026 issues as files.mychurchwebsite.net/c2794/<liturgical Sunday>_2026.pdf,
     newest "2026 Twenty Ninth Sunday in Ordinary Time"; older years on /bulletin_archive.
+promoted: 2026-10-17
 ---
 
 ## Publisher

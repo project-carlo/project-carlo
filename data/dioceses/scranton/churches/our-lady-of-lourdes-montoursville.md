@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   quote: Saturday 4:00 pm- OLOL … Sunday 10:30 am - OLOL
   note: 11 October 2026 bulletin, page 1 Mass Schedule; also Monday and Wednesday 9:00 am at OLOL.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

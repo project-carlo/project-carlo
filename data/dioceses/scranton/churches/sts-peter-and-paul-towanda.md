@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   quote: 'Sun: 9:00 AM, Tue 6:00 PM, Wed: 8:30 AM … Sat: 4:00 PM'
   note: Page 1 "Mass Schedule at SS. Peter & Paul Church, This Week", 18 October 2026 issue.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

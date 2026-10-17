@@ -24,6 +24,7 @@ evidence:
   note: Homepage, whose "Weekly Bulletin" link pointed to files.mychurchwebsite.net/c2546/bulletin_261011.pdf
     on 2026-10-16. Its Regular Schedule lists Vigil Mass IC 4:00 PM, SL 6:00 PM, Sunday IC 8:30 AM, SL
     10:30 AM.
+promoted: 2026-10-17
 ---
 
 ## Publisher

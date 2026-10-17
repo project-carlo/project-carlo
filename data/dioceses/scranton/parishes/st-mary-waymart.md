@@ -3,27 +3,27 @@ name: St. Mary Parish
 website: https://stmaryswaymart.com/newbulletin
 bulletin_provider: other
 provider_id: ''
-publication:
-- url:https://stmaryswaymart.com/newbulletin
+publication: ['url:https://stmaryswaymart.com/newbulletin']
 group: Saint Mary Parish
 evidence:
 - url: https://stmaryswaymart.com/newbulletin
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: October 10-11, 2026
   note: 'The parish site''s Bulletins page (Squarespace), listing one captioned image per weekend from
     June to 10-11 October 2026. The page also gives "Parish Life Coordinator: Deacon Edward T. Kelly"
     and "Sacramental Minister: Reverend Joseph S. Sitko".'
 - url: https://images.squarespace-cdn.com/content/v1/56b29d4a2eeb817ddb26b146/ff6824bd-b761-4165-b283-9a0a57d84349/Bulletin+2026+October+10-11.jpg?format=1500w
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: 'The 11 October 2026 issue: a single JPEG (1500x911) of one bulletin spread, read by viewing the
     image. Headed "Sunday, October 11, 2026, Twenty-Eighth Sunday in Ordinary Time"; "Mass Schedule for
     the Week": 10/10 Saturday 4:00 PM, 10/11 Sunday 8:00 AM and 9:45 AM, 10/12-10/16 Monday to Friday
     9:00 AM, 10/17 4:00 PM, 10/18 8:00 AM and 9:45 AM, no church named (one church). Image only, so recheck
     cannot find any quote in it.'
 - url: https://discovermass.com/church/st-mary-of-the-assumption-waymart-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: Discover Mass pages "St. Mary of the Assumption" and "St. Patrick" (st-patrick-waymart-pa), Waymart,
     list no bulletins (issues.py).
+promoted: 2026-10-17
 ---
 
 ## Publisher

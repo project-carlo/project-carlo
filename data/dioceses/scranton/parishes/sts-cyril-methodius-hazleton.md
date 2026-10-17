@@ -30,6 +30,7 @@ evidence:
   quote: 4:00 p.m. Mass - Saints Cyril & Methodius Parish
   note: 'Joint letter of the Hazleton clergy dated June 27 & 28, 2026: the city-wide weekend schedule
     effective 3 August 2026. It names SSCM Masses without a church name (the parish has one church).'
+promoted: 2026-10-17
 ---
 
 ## Publisher

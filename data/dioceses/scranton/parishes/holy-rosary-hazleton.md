@@ -16,6 +16,7 @@ evidence:
 - url: https://www.holyrosaryhaz.com
   seen: 2026-10-16
   note: '`probe url`: the parish site embeds discovermass:holy-rosary-hazleton-pa.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

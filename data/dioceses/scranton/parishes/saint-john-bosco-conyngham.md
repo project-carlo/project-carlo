@@ -26,6 +26,7 @@ evidence:
 revisit: Check that the 2026-bulletins page (or its 2027 successor) still lists new issues and repin the
   recipe if the page moved.
 revisit_after: 2027-01-15
+promoted: 2026-10-17
 ---
 
 ## Publisher

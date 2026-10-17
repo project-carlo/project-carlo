@@ -1,6 +1,6 @@
 ---
 parish: gate-of-heaven-our-lady-of-victory-dallas
-name: 'Our Lady of Victory Church'
+name: Our Lady of Victory Church
 line1: 16 2nd St.
 line2: ''
 city: Harveys Lake
@@ -24,8 +24,10 @@ evidence:
     16 Second Street, Harveys Lake, PA, 18618; kind: worship-site; group: Our Lady of Victory Parish'
 - url: https://container.parishesonline.com/bulletins/04/0475/20261018B.pdf
   seen: 2026-10-16
-  quote: '16 Second Street'
-  note: 'Page 3 of the 18 October 2026 bulletin. Page 1 schedules Saturday 4:00pm, Sunday 7:30am and 10:30am, Tuesday 9:00am and Friday 12 Noon at OLV.'
+  quote: 16 Second Street
+  note: Page 3 of the 18 October 2026 bulletin. Page 1 schedules Saturday 4:00pm, Sunday 7:30am and 10:30am,
+    Tuesday 9:00am and Friday 12 Noon at OLV.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

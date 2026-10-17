@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-16
   note: 'OSM place_of_worship "Church of The Ressurection", 75 Musser Lane, Muncy 17756 (Nominatim, 2026-10-16),
     at 41.19157, -76.78593: the same spot as GCatholic''s Plus Code.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

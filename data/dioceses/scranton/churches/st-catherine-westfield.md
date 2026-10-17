@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   quote: 'Mission Church: St. Catherine of Siena … 146 Lincoln Street, Westfield, PA 16950'
   note: 'Page 1 of the 18 October 2026 bulletin, St. Thomas column: "Saturday: 7:00pm (St. Catherine)".'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

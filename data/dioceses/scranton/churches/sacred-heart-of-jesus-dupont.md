@@ -1,6 +1,6 @@
 ---
 parish: sacred-heart-dupont-queen-of-the-apostles-avoca
-name: 'Sacred Heart of Jesus Church'
+name: Sacred Heart of Jesus Church
 line1: 215 Lackawanna Ave.
 line2: ''
 city: Dupont
@@ -25,12 +25,14 @@ evidence:
     Dupont'
 - url: https://stmaryavoca.com/wp-content/uploads/2026/10/10-11-26-final.pdf
   seen: 2026-10-16
-  quote: '10:30 am (SH) George Vojta'
-  note: 'Page 2 Mass intentions for 12-18 October 2026: Mon, Wed, Fri 7:30 am, Saturday 4:00 pm and Sunday 10:30 am at SH.'
+  quote: 10:30 am (SH) George Vojta
+  note: 'Page 2 Mass intentions for 12-18 October 2026: Mon, Wed, Fri 7:30 am, Saturday 4:00 pm and Sunday
+    10:30 am at SH.'
 - url: https://sacredheartdupont.com/
   seen: 2026-10-16
-  quote: '215 Lackawanna Avenue, Dupont, Pennsylvania 18641'
-  note: 'Parish site page title.'
+  quote: 215 Lackawanna Avenue, Dupont, Pennsylvania 18641
+  note: Parish site page title.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

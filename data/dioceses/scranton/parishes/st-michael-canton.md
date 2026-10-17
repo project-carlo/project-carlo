@@ -9,8 +9,8 @@ evidence:
 - url: https://cdn.diocesanweb.org/crossroads/micanton/wp-content/uploads/2026/10/2026-29th-Sunday-in-Ordinary-Time-bulletin-7.pdf
   seen: 2026-10-16
   quote: (covering worship sites in Ralston, Canton & Troy)
-  note: 'Masthead, page 1 of the 18 October 2026 issue (29th Sunday in Ordinary Time), under "Reverend
-    Joseph P. Kutch, MA, Pastor / 106 N. Washington Street, Canton, PA 17724".'
+  note: Masthead, page 1 of the 18 October 2026 issue (29th Sunday in Ordinary Time), under "Reverend
+    Joseph P. Kutch, MA, Pastor / 106 N. Washington Street, Canton, PA 17724".
 - url: https://cdn.diocesanweb.org/crossroads/micanton/wp-content/uploads/2026/10/2026-29th-Sunday-in-Ordinary-Time-bulletin-7.pdf
   seen: 2026-10-16
   quote: 8:00 am, Ralston … 9:30 am, Canton … 11:15 am, Troy
@@ -23,7 +23,9 @@ evidence:
     the 18 October 2026 issue).
 - url: https://stmichaelscanton.com/mass-times/
   seen: 2026-10-16
-  quote: 8:00 AM Saint Aloysius Church, Ralston; 9:30 AM Saint Michael Church, Canton; 11:15 AM Saint John Nepomucene Church, Troy
+  quote: 8:00 AM Saint Aloysius Church, Ralston; 9:30 AM Saint Michael Church, Canton; 11:15 AM Saint
+    John Nepomucene Church, Troy
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -27,6 +27,7 @@ evidence:
   quote: 10:00 AM (AS)
   note: '11 October 2026 bulletin, page 2: Monday and Tuesday 9:00 AM (AS), Sunday 10:00 AM (AS). AS =
     All Saints, whose rectory is at 66 Willow St., Plymouth.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

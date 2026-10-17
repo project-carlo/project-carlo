@@ -8,19 +8,26 @@ group: Sacred Heart of Jesus Parish Dupont; Queen of the Apostles Parish
 evidence:
 - url: https://stmaryavoca.com/wp-content/uploads/2026/10/10-11-26-final.pdf
   seen: 2026-10-16
-  quote: 'Both parish offices will be closed on Monday, October 12. The SM'
-  note: 'Page 1 of the 11 October 2026 issue, from St. Mary Avoca''s Bulletin page. The issue speaks for both parishes throughout, coding them SH (Sacred Heart, Dupont) and SM (St. Mary, Avoca).'
+  quote: Both parish offices will be closed on Monday, October 12. The SM
+  note: Page 1 of the 11 October 2026 issue, from St. Mary Avoca's Bulletin page. The issue speaks for
+    both parishes throughout, coding them SH (Sacred Heart, Dupont) and SM (St. Mary, Avoca).
 - url: https://stmaryavoca.com/wp-content/uploads/2026/10/10-11-26-final.pdf
   seen: 2026-10-16
-  quote: '5:30pm (SM) Jason Kuna'
-  note: 'Page 2 MASS INTENTIONS for 12-18 October: Mon, Wed, Fri 7:30 am (SH); Tue, Thu 9:00 am (SM); Saturday 4:00 pm (SH) and 5:30pm (SM); Sunday 8:00 am (SM) and 10:30 am (SH). Page 3 is a blank image page.'
+  quote: 5:30pm (SM) Jason Kuna
+  note: 'Page 2 MASS INTENTIONS for 12-18 October: Mon, Wed, Fri 7:30 am (SH); Tue, Thu 9:00 am (SM);
+    Saturday 4:00 pm (SH) and 5:30pm (SM); Sunday 8:00 am (SM) and 10:30 am (SH). Page 3 is a blank image
+    page.'
 - url: https://sacredheartdupont.com/wp-content/uploads/2026/10/10-11-26-final.pdf
   seen: 2026-10-16
-  note: 'The same issue as linked from Sacred Heart Dupont''s Blog page: byte-identical to the Avoca copy (same MD5, 541,703 bytes). Both sites list the same five issues, 13 September to 11 October 2026, under the same file names.'
+  note: 'The same issue as linked from Sacred Heart Dupont''s Blog page: byte-identical to the Avoca copy
+    (same MD5, 541,703 bytes). Both sites list the same five issues, 13 September to 11 October 2026,
+    under the same file names.'
 - url: https://sacredheartdupont.com/schedule/
   seen: 2026-10-16
-  quote: 'was named also the pastor of Queen of the Apostles Parish in Avoca'
-  note: 'Parish history on the Dupont site: Rev. Thomas J. Petro, pastor in Dupont, named pastor of Queen of the Apostles on 1 July 2025.'
+  quote: was named also the pastor of Queen of the Apostles Parish in Avoca
+  note: 'Parish history on the Dupont site: Rev. Thomas J. Petro, pastor in Dupont, named pastor of Queen
+    of the Apostles on 1 July 2025.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

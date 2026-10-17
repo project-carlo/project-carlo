@@ -28,6 +28,7 @@ evidence:
     4:00pm (St. Thomas Aquinas)", Sunday 9:00am and 10:30am (St. Thomas Aquinas), "All daily Masses &
     Adoration at St. Thomas Aquinas Church"; footer "ST. THOMAS AQUINAS CHURCH 429 Church Street Archbald,
     PA 18403".'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

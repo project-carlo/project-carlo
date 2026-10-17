@@ -33,6 +33,7 @@ evidence:
 - url: https://www.dioceseofscranton.org/find-a-parish/our-lady-of-perpetual-help-parish-wyalusing
   seen: 2026-10-16
   quote: Saint Mary of the Assumption Church … 245 State Street
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

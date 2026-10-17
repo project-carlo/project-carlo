@@ -19,6 +19,7 @@ evidence:
   seen: 2026-10-16
   note: Bon Venture's listing for the parish, one PDF per Sunday at pdfs/1435/<YYYY-MM-DD>.pdf, newest
     2026-10-18. Linked from qopchurch.org's home page.
+promoted: 2026-10-17
 ---
 
 ## Publisher

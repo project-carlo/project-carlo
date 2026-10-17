@@ -27,6 +27,7 @@ evidence:
   quote: Sterling Street, Meshoppen, PA 18630
   note: 'Page 1 of the 18 October 2026 bulletin, SAINT JOACHIM CHURCH: Sunday 9:00 AM, Thursday 9:00 AM;
     page 2 intentions "Sun. 10/18/26 - 9am" and "Thurs. 10/22/26 - 9am" at St. Joachim.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

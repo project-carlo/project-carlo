@@ -28,6 +28,7 @@ evidence:
   quote: 'Sunday: 7:30 AM, and 11:00 AM'
   note: 'Page 1 of the 18 October 2026 bulletin, under NATIVITY BVM, 99 East Tioga Street: Saturday 5:00
     PM, Sunday 7:30 AM and 11:00 AM, Monday & Wednesday 7:00 AM.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

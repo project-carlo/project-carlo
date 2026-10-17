@@ -27,6 +27,7 @@ evidence:
   quote: Sunday 8:30AM (M)
   note: '11 October 2026 issue, page 2: Saturday 4:00PM (M) and Sunday 8:30AM (M); page 3 lists both Masses
     with intentions for 10-11 and 17-18 October.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

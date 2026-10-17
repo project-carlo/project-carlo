@@ -1,9 +1,9 @@
 ---
 parish: corpus-christi-west-pittston
-name: 'Immaculate Conception Church'
-line1: '605 Luzerne Avenue'
+name: Immaculate Conception Church
+line1: 605 Luzerne Avenue
 line2: ''
-city: 'West Pittston'
+city: West Pittston
 state: PA
 postal_code: '18643'
 latitude: 41.3333125
@@ -24,8 +24,10 @@ evidence:
     605 Luzerne Avenue, West Pittston, PA, 18643; kind: worship-site; group: Corpus Christi Parish'
 - url: https://www.corpuschristinepa.com/Bulletins/Bulletin261011.pdf
   seen: 2026-10-16
-  quote: '10:30AM Immaculate Conception'
-  note: 'Page 1 of the 11 October 2026 bulletin: Saturday 5:30PM and Sunday 10:30AM, and Mon-Fri 7:30AM, at Immaculate Conception; parish address 605 Luzerne Avenue, West Pittston.'
+  quote: 10:30AM Immaculate Conception
+  note: 'Page 1 of the 11 October 2026 bulletin: Saturday 5:30PM and Sunday 10:30AM, and Mon-Fri 7:30AM,
+    at Immaculate Conception; parish address 605 Luzerne Avenue, West Pittston.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

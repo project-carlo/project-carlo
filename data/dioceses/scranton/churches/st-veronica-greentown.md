@@ -11,9 +11,7 @@ longitude: -75.2404375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23972
-- directory:113-2
+roster: ['gcatholic:23972', 'directory:113-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23972
   seen: 2026-10-16
@@ -26,10 +24,11 @@ evidence:
     Shiny Mountain Road, Greentown, PA, 18426; kind: worship-site; group: Blessed Virgin Mary  Queen of
     Peace Parish'
 - url: https://files.ecatholic.com/24839/bulletins/20261011.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 133 Shiny Mt. Rd.
   note: '11 October 2026 bulletin, page 1 masthead: "133 Shiny Mt. Rd. Greentown, PA St. Veronica"; Masses
     Saturday 4:00PM and Sunday 10:00AM (SV).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

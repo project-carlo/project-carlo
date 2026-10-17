@@ -27,6 +27,7 @@ evidence:
   quote: Saturday 5:00pm-Jack Paucke … 10:30am(CH) Mr.& Mrs. Russel Holmes
   note: 18 October 2026 issue, Mass intentions (CH = Church). Page 1 gives weekend Masses Saturday 5:00pm,
     Sunday 8:00am, 10:30am, 5:00pm "all in the Church", Church at 702 W. 4th St.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: Masses at Corpus Christi will be changed to 8:30a.m.
   note: 'Page 1 (image) of the 11 October 2026 St. John Vianney bulletin: Saturday 5:00 p.m. C.C., Sunday
     11:00 a.m. C.C., weekday Masses at C.C. ("WEEKDAY MASSES WILL BE IN THE CHAPEL UNLESS NOTED OTHERWISE").'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

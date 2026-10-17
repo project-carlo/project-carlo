@@ -27,6 +27,7 @@ evidence:
   quote: Saturday…8:00 am & 4:00 pm Vigil Sunday…8:00 am, 9:15 am (Spanish), 10:45 am, 12:15 pm, 2:00
     pm (Spanish), 6:00 pm
   note: 18 October 2026 issue, page 1, under "CHURCH OF SAINT MATTHEW 78 Ridgeway Street".
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

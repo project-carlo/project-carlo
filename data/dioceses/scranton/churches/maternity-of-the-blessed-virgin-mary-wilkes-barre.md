@@ -29,6 +29,7 @@ evidence:
   quote: 'Saturday: 4:00 p.m. Sunday: 9:00 a.m.'
   note: 11 October 2026 Our Lady of Hope bulletin, page 1; Mass at 'Main Church', parish address 40 Park
     Avenue.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

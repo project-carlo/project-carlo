@@ -27,6 +27,7 @@ evidence:
   quote: 'Epiphany Church, Office, and Rectory: … 304 S. Elmer Avenue'
   note: 'Masthead of the 18 October 2026 issue; its Mass Schedule: Saturday (Vigil) 4:00 pm, Sunday 9:00
     am and 11:00 am, daily as scheduled.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

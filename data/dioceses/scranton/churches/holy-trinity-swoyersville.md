@@ -1,6 +1,6 @@
 ---
 parish: st-elizabeth-ann-seton-swoyersville
-name: 'Holy Trinity Church'
+name: Holy Trinity Church
 line1: 116 Hughes St.
 line2: ''
 city: Swoyersville
@@ -24,8 +24,10 @@ evidence:
     116 Hughes Street, Swoyersville, PA, 18704; kind: worship-site; group: Saint Elizabeth Ann Seton Parish'
 - url: https://www.setonpa.com/_files/ugd/160730_80dc95dc23914bed9e21760f1f57e7b6.pdf
   seen: 2026-10-16
-  quote: 'No Mass on Wednesday'
-  note: 'Page 1 of the 18 October 2026 Seton Sentinel, under St. Elizabeth Ann Seton, 116 Hughes Street: weekday 8:00am (not Wednesday), Saturday 4:00pm, Sunday 8:30am, 11:00am & 5:30pm.'
+  quote: No Mass on Wednesday
+  note: 'Page 1 of the 18 October 2026 Seton Sentinel, under St. Elizabeth Ann Seton, 116 Hughes Street:
+    weekday 8:00am (not Wednesday), Saturday 4:00pm, Sunday 8:30am, 11:00am & 5:30pm.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

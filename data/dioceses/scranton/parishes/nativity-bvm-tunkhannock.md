@@ -17,6 +17,7 @@ evidence:
   seen: 2026-10-16
   note: 'Read with a fetch tool (the sandbox cannot connect to the site; probe url got 503 / connection
     reset): the parish site''s Weekly Bulletin page links its bulletin header image to parishesonline.com/organization/nativity-of-the-blessed-virgin-church.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

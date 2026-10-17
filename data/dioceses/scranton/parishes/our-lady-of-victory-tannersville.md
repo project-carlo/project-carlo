@@ -24,6 +24,7 @@ evidence:
 revisit: Run fetch:check -- --parish our-lady-of-victory-tannersville after promotion; the PDF is only
   in a base64 pdfemb-data iframe parameter.
 revisit_after: 2026-11-15
+promoted: 2026-10-17
 ---
 
 ## Publisher

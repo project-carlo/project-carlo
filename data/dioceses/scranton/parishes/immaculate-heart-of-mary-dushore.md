@@ -22,6 +22,7 @@ evidence:
   note: '`probe po`: 101 Churchill Street, Dushore, LPi id 0018000000Qx8KJAAZ, container 03/1303, weekly
     issues through 2026-10-18. The parish site embeds this issue list (seen in a browser with visit.py
     on 2026-10-16, after Cloudflare challenged the first 18 loads).'
+promoted: 2026-10-17
 ---
 
 ## Publisher

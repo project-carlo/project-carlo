@@ -11,9 +11,7 @@ longitude: -75.3053125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23993
-- directory:126-1
+roster: ['gcatholic:23993', 'directory:126-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23993
   seen: 2026-10-16
@@ -25,10 +23,11 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Mary Church'', 334 St.
     Mary Church Road, Lake Ariel, PA, 18436; kind: worship-site; group: Saint Thomas More Parish'
 - url: https://stthomas-stmary.com/download/19/bulletin/18800/bul-october-11-2026.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 4:00pm(SM)
   note: 'Page 4 of the 11 October 2026 bulletin: Thursday and Saturday 8:15am, Saturday 4:00pm and Sunday
     9:30am at St. Mary''s (SM). Masthead (page 1): "St. Mary 334 St. Mary Church Rd."'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   quote: Saint Martha’s Church 260 Bonnieville Road, Stillwater, PA 17878
   note: '11 October 2026 issue; page 2 Mass intentions at SM: Tuesday 8:00 a.m., Sunday 10:30 a.m.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

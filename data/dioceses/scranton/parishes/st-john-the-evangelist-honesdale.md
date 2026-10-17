@@ -3,29 +3,29 @@ name: Catholic Community of St. John the Evangelist, Honesdale
 website: https://honesdalecatholic.com/weekly-bulletins/
 bulletin_provider: discover_mass
 provider_id: st-john-the-evangelist-honesdale-pa
-publication:
-- discovermass:st-john-the-evangelist-honesdale-pa
+publication: ['discovermass:st-john-the-evangelist-honesdale-pa']
 group: Saint John the Evangelist Parish
 evidence:
 - url: https://discovermass.com/church/st-john-the-evangelist-honesdale-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: THE CATHOLIC COMMUNITY OF ST. JOHN THE EVANGELIST, ST. MARY MAGDALEN, Honesdale ST. JOSEPH, Rileyville
     ST. BERNARD, Beach Lake
   note: 'Masthead, page 1 of the 18 October 2026 issue on Discover Mass (issues.py), with "Parish Office:
     414 Church Street, Honesdale, 18431".'
 - url: https://discovermass.com/church/st-john-the-evangelist-honesdale-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Saturday Vigil - 4:00PM - St. Bernard, Beach Lake
   note: 'Page 4, "THE LORD''S DAY": Saturday 4:00PM St. Bernard and 5:30PM St. Mary Magdalen; Sunday 7:30AM
     St. Mary Magdalen, 9:00AM St. Joseph, Rileyville, 10:30AM St. John the Evangelist; weekdays 7:25AM
     and Mon, Wed and Fri 12:05PM at St. Mary Magdalen. Pastor Rev. William J.P. Langan.'
 - url: https://honesdalecatholic.com/weekly-bulletins/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: The parish site's Weekly Bulletins page links https://discovermass.com/church/st-john-the-evangelist-honesdale-pa/#bulletins.
 - url: https://discovermass.com/church/st-mary-magdalen-honesdale-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: Discover Mass also has pages for St. Mary Magdalen, St. Bernard (st-bernard-beach-lake-pa) and
     St. Joseph (st-joseph-rileyville-pa); all three list no bulletins (issues.py, 2026-10-16).
+promoted: 2026-10-17
 ---
 
 ## Publisher

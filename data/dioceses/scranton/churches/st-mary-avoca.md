@@ -1,6 +1,6 @@
 ---
 parish: sacred-heart-dupont-queen-of-the-apostles-avoca
-name: 'Saint Mary Church'
+name: Saint Mary Church
 line1: 715 Hawthorne St.
 line2: ''
 city: Avoca
@@ -24,12 +24,15 @@ evidence:
     Street, Avoca, PA, 18641; kind: worship-site; group: Queen of the Apostles Parish'
 - url: https://stmaryavoca.com/wp-content/uploads/2026/10/10-11-26-final.pdf
   seen: 2026-10-16
-  quote: '8:00 am (SM) Our Parishioners (Missa pro populo)'
-  note: 'Page 2 Mass intentions for 12-18 October 2026: Tue, Thu 9:00 am, Saturday 5:30pm and Sunday 8:00 am at SM.'
+  quote: 8:00 am (SM) Our Parishioners (Missa pro populo)
+  note: 'Page 2 Mass intentions for 12-18 October 2026: Tue, Thu 9:00 am, Saturday 5:30pm and Sunday 8:00
+    am at SM.'
 - url: https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-12-20-23-updated-as-of-July-1-2024.pdf
   seen: 2026-10-16
-  quote: 'Avoca St. Mary Church (10/2011) Queen of the Apostles Parish,'
-  note: 'The diocese''s list of church buildings of consolidated parishes (updated 1 July 2024): St. Mary is the Avoca building of Queen of the Apostles Parish, with no closure.'
+  quote: Avoca St. Mary Church (10/2011) Queen of the Apostles Parish,
+  note: 'The diocese''s list of church buildings of consolidated parishes (updated 1 July 2024): St. Mary
+    is the Avoca building of Queen of the Apostles Parish, with no closure.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

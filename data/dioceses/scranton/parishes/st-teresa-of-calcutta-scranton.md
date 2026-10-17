@@ -37,6 +37,7 @@ evidence:
     consolidated on Nov. 26
   note: Catholic Light, 2023. It names the new parish's worship sites as Nativity of Our Lord (633 Orchard
     St.) and Sacred Hearts of Jesus & Mary (1217 Prospect Ave.) only.
+promoted: 2026-10-17
 ---
 
 ## Publisher

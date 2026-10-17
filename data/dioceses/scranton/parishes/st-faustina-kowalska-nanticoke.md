@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-16
   quote: Saint Mary Church has now become a secondary worship site of Saint Faustina Kowalska Parish in
     Nanticoke
+promoted: 2026-10-17
 ---
 
 ## Publisher

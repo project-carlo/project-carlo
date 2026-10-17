@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Cathedral of Saint Peter'', 315
     Wyoming Avenue, Scranton, PA, 18503; kind: worship-site; group: Cathedral of Saint Peter Parish'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

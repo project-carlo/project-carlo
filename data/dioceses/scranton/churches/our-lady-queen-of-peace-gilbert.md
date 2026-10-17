@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-16
   quote: WEEKEND Saturday 5:00 PM Sunday 8:00 & 11:00 am, 1:00 pm (Español)
   note: 18 October 2026 issue, page 1, with "PHYSICALL ADDRESS 1402 US-209 Gilbert, PA 18331".
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

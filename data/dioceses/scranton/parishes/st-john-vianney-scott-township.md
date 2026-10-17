@@ -17,6 +17,7 @@ evidence:
   quote: The first week of November Tuesday and Thursday
   note: 'Page 2: "Masses at Corpus Christi will be changed to 8:30a.m. The Wednesday Mass at St. Pius
     will be changed to 12:00p.m."'
+promoted: 2026-10-17
 ---
 
 ## Publisher

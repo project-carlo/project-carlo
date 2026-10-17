@@ -23,8 +23,8 @@ evidence:
 - url: https://queenofangelsjessup.org/news-bulletins/
   seen: 2026-10-16
   quote: News & Bulletins
-  note: The parish site's News & Bulletins page links the latest issue (on 16 October dated "October 11th, 2026", later that day "October 18th, 2026") as a bulletins.discovermass.com
-    download.
+  note: The parish site's News & Bulletins page links the latest issue (on 16 October dated "October 11th,
+    2026", later that day "October 18th, 2026") as a bulletins.discovermass.com download.
 - url: https://queenofangelsjessup.org/about/
   seen: 2026-10-16
   quote: The former individual parishes were St. James, St. Michael the Archangel, St. Mary of the Assumption,
@@ -33,6 +33,7 @@ revisit: Queen of Angels has formed a transition team for a "linkage to consolid
   (probably Fr. Andrew Kurovsky of Sacred Heart of Jesus, Peckville), covering "bulletin creation and
   publication". Check whether the two start one bulletin; if so, merge.
 revisit_after: 2027-01-15
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -1,6 +1,6 @@
 ---
 parish: gate-of-heaven-our-lady-of-victory-dallas
-name: 'Gate of Heaven Church'
+name: Gate of Heaven Church
 line1: 40 Machell Ave.
 line2: ''
 city: Dallas
@@ -24,8 +24,10 @@ evidence:
     Avenue, Dallas, PA, 18612; kind: worship-site; group: Gate of Heaven Parish'
 - url: https://container.parishesonline.com/bulletins/04/0475/20261018B.pdf
   seen: 2026-10-16
-  quote: '5:30pm | GOH'
-  note: 'Page 1 Mass schedule of the 18 October 2026 bulletin: Saturday 5:30pm, Sunday 9:00am, Monday 6:00pm and Wednesday 9:00am at GOH. Page 4 gives 40 Machell Avenue.'
+  quote: 5:30pm | GOH
+  note: 'Page 1 Mass schedule of the 18 October 2026 bulletin: Saturday 5:30pm, Sunday 9:00am, Monday
+    6:00pm and Wednesday 9:00am at GOH. Page 4 gives 40 Machell Avenue.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

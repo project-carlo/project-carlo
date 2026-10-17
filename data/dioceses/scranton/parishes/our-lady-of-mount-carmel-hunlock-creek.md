@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-16
   quote: Saint Martha Church has become a secondary worship site of Our Lady of Mount Carmel Parish in
     Hunlock Creek
+promoted: 2026-10-17
 ---
 
 ## Publisher

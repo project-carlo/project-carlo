@@ -29,6 +29,7 @@ evidence:
   quote: Daily Mass | Mon-Fri 9:15am Saturday Vigil | 4:00pm Sunday Mass | 8:00am, 10:30am
   note: St. Maximilian Kolbe column of the 18 October 2026 masthead, with "5112 Pocono Crest Rd, Pocono
     Pines, PA 18350". Page 3 lists the week's St. Max Masses.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

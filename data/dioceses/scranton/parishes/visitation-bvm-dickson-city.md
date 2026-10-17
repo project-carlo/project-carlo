@@ -20,6 +20,7 @@ evidence:
   quote: Previous editions of the bulletin may be retrieved at
   note: The parish site's Bulletin page embeds the current container 04/1115 PDF in an iframe and points
     to ParishesOnline for older issues.
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -31,6 +31,7 @@ evidence:
   quote: Weston Sacred Heart of Jesus (closed 2021) St. John Bosco Parish
   note: Diocese list of church buildings of consolidated parishes, page 12. Contradicted by the current
     bulletin; read as the 2021 merger of the parish.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: Saturday 6:00PM (E)
   note: '11 October 2026 issue, page 2 worship schedule: Saturday 6:00PM (E), Sunday 10:30AM (E), weekdays
     9:00AM (E).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

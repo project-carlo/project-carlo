@@ -8,20 +8,31 @@ group: Saint John Paul II Parish
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/9249/2026-10-11.pdf
   seen: 2026-10-16
-  quote: 'MONDAY - FRIDAY 8:00 AM (St. Anthony’s Church) 12:00 NOON (St. Mary’s Church) SATURDAY 4:00 PM (St. Mary’s Church) 5:15 PM (St. Anthony’s Church)'
-  note: 'Page 1 (cover) of the 11 October 2026 issue: the parish Mass schedule, then the three church addresses (St. Anthony of Padua, 208 Smith St.; St. Mary of Mount Carmel, 322 Chestnut St.; St. Rocco, 118 Kurtz St.). Sunday: 8:30 and 11:15 am St. Anthony''s, 10 am St. Mary''s. No Mass is scheduled at St. Rocco.'
+  quote: MONDAY - FRIDAY 8:00 AM (St. Anthony’s Church) 12:00 NOON (St. Mary’s Church) SATURDAY 4:00 PM
+    (St. Mary’s Church) 5:15 PM (St. Anthony’s Church)
+  note: 'Page 1 (cover) of the 11 October 2026 issue: the parish Mass schedule, then the three church
+    addresses (St. Anthony of Padua, 208 Smith St.; St. Mary of Mount Carmel, 322 Chestnut St.; St. Rocco,
+    118 Kurtz St.). Sunday: 8:30 and 11:15 am St. Anthony''s, 10 am St. Mary''s. No Mass is scheduled
+    at St. Rocco.'
 - url: http://sponsors.bonventure.net/pdfs/9249/2026-10-11.pdf
   seen: 2026-10-16
-  quote: 'St. Rocco Church 118 Kurtz Street Dunmore, PA 18510'
-  note: Page 1 lists St. Rocco among the parish's churches, after the Mass schedule, which names only St. Anthony's and St. Mary's.
+  quote: St. Rocco Church 118 Kurtz Street Dunmore, PA 18510
+  note: Page 1 lists St. Rocco among the parish's churches, after the Mass schedule, which names only
+    St. Anthony's and St. Mary's.
 - url: http://sponsors.bonventure.net/?page=9249
   seen: 2026-10-16
   quote: St. John Paul II Parish 303 Smith Street • Dunmore, PA 18512-2919
-  note: 'Bon Venture Services'' "Our Sponsors" page for the parish: "Click to View Current Bulletin" links pdfs/9249/2026-10-11.pdf, and a drop-down lists weekly issues back through 2025. Reached from the "Bulletins" item in sjp2parish.com''s menu (a Google redirect to this page).'
+  note: 'Bon Venture Services'' "Our Sponsors" page for the parish: "Click to View Current Bulletin" links
+    pdfs/9249/2026-10-11.pdf, and a drop-down lists weekly issues back through 2025. Reached from the
+    "Bulletins" item in sjp2parish.com''s menu (a Google redirect to this page).'
 - url: https://www.sjp2parish.com
   seen: 2026-10-16
-  quote: 'Daily Mass: 8:00 a.m. Monday-Friday Daily Mass: 12 Noon Monday - Frida y Saturday: 5:15 p.m. Saturday : 4:00 p.m. Sunday: 8:30 a.m. and 11:15 a.m. Sunday: 10:00 a.m.'
-  note: 'The parish''s Google Sites homepage: a two-column Mass schedule headed "St. Anthony of Padua Church" and "St. Mary of Mount Carmel Church" (columns run together in the text), the same times as the bulletin.'
+  quote: 'Daily Mass: 8:00 a.m. Monday-Friday Daily Mass: 12 Noon Monday - Frida y Saturday: 5:15 p.m.
+    Saturday : 4:00 p.m. Sunday: 8:30 a.m. and 11:15 a.m. Sunday: 10:00 a.m.'
+  note: 'The parish''s Google Sites homepage: a two-column Mass schedule headed "St. Anthony of Padua
+    Church" and "St. Mary of Mount Carmel Church" (columns run together in the text), the same times as
+    the bulletin.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

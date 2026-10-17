@@ -15,7 +15,8 @@ roster: ['directory:100-2']
 evidence:
 - url: https://www.dioceseofscranton.org/find-a-mass/
   seen: 2026-10-16
-  note: 'Coordinates from the diocese''s Find a Mass card for "Saint Francis of Assisi Chapel" (data-latitude 41.411397, data-longitude -76.586727).'
+  note: Coordinates from the diocese's Find a Mass card for "Saint Francis of Assisi Chapel" (data-latitude
+    41.411397, data-longitude -76.586727).
 - url: https://www.dioceseofscranton.org/find-a-parish/immaculate-heart-of-mary-parish-dushore
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Francis of Assisi Chapel'',
@@ -26,6 +27,7 @@ evidence:
   quote: St. Francis of Assisi Chapel in Eagles Mere is open July 4, 2027 through September 5, 2027 …
     Mass is held at 11:30 AM … 226 Eagles Mere Avenue
   note: Page 1 "Seasonal Offerings" and Worship Sites of the 18 October 2026 bulletin.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

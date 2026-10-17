@@ -30,6 +30,7 @@ evidence:
 - url: https://www.icslchurch.net/
   seen: 2026-10-16
   quote: Sunday Mass - SL – 10:30 AM
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

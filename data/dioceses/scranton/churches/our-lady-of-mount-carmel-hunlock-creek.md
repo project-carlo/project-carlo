@@ -28,6 +28,7 @@ evidence:
   quote: Our Lady of Mount Carmel Church 2011 State Route 29, Hunlock Creek, PA 18621
   note: '11 October 2026 issue; page 2 Mass intentions at OLMC: weekdays 8:00 a.m., Saturday 4:00 p.m.,
     Sunday 8:30 a.m.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

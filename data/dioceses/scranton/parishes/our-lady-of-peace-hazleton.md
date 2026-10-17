@@ -28,6 +28,7 @@ evidence:
 revisit: fetch:check picks 'Parish Consolidation' PDF instead of the bulletin (undated file names like
   10.4.26.pdf); re-run after a chooser fix.
 revisit_after: 2026-11-15
+promoted: 2026-10-17
 ---
 
 ## Publisher

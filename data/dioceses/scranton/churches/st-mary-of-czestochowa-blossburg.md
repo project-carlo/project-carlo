@@ -27,6 +27,7 @@ evidence:
   quote: 144 St Marys St, Blossburg, PA 16912 … Sunday 9:00 AM Saint Mary’s
   note: Masthead and Regular Schedule of Masses of the 11 October 2026 bulletin; also Monday and Tuesday
     12:10 pm at Saint Mary's.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

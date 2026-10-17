@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-16
   note: DNN page listing one LinkClick.aspx?fileticket=... link per Sunday (read with visit.py). On 2026-10-16
     the link labelled 'October 11, 2026' served a 1 January 2017 bulletin, an upload mistake.
+promoted: 2026-10-17
 ---
 
 ## Publisher

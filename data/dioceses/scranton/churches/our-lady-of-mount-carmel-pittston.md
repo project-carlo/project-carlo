@@ -1,6 +1,6 @@
 ---
 parish: communion-of-saints-pittston
-name: 'Our Lady of Mt. Carmel Church'
+name: Our Lady of Mt. Carmel Church
 line1: 237 William St.
 line2: ''
 city: Pittston
@@ -24,8 +24,11 @@ evidence:
     237 William Street, Pittston, PA, 18640; kind: worship-site; group: Communion of Saints Parish'
 - url: https://container.parishesonline.com/bulletins/03/1275/20261018B.pdf
   seen: 2026-10-16
-  quote: 'Our Lady of Mt. Carmel Church'
-  note: 'Masthead and page 1 schedule of the 17-18 October 2026 bulletin: Saturday 4:00 PM, Sunday 11:00 AM, Tue-Fri 11:30 AM. Page 5 places the parish center "of Our Lady of Mt. Carmel Church, 237 William Street in Pittston".'
+  quote: Our Lady of Mt. Carmel Church
+  note: 'Masthead and page 1 schedule of the 17-18 October 2026 bulletin: Saturday 4:00 PM, Sunday 11:00
+    AM, Tue-Fri 11:30 AM. Page 5 places the parish center "of Our Lady of Mt. Carmel Church, 237 William
+    Street in Pittston".'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

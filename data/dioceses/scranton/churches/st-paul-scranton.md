@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Paul Church'', 1510 Penn
     Ave., Scranton, PA, 18509; kind: worship-site; group: Saint Paul Parish'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

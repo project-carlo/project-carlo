@@ -8,15 +8,18 @@ group: Nativity of Our Lord Parish
 evidence:
 - url: https://www.nativityduryea.org/uploads/3/4/1/2/34124530/11th__october_2026_bulletin_.pdf
   seen: 2026-10-16
-  quote: 'NATIVITY OF OUR LORD PARISH, DURYEA'
-  note: 'Masthead, page 1 of the 11 October 2026 issue: 127 Stephenson Street, Rev. Michael M. Bryant, Pastor. One parish, no other church named.'
+  quote: NATIVITY OF OUR LORD PARISH, DURYEA
+  note: 'Masthead, page 1 of the 11 October 2026 issue: 127 Stephenson Street, Rev. Michael M. Bryant,
+    Pastor. One parish, no other church named.'
 - url: https://www.nativityduryea.org/uploads/3/4/1/2/34124530/11th__october_2026_bulletin_.pdf
   seen: 2026-10-16
-  quote: 'Sunday- 8 & 11am, & 7pm'
-  note: 'Page 1: Masses daily M-F 7:00am, Saturday (Vigil) 4:00 pm, Sunday 8 & 11am & 7pm; confession daily 6:35-6:50am and Saturday 3:15-3:45pm.'
+  quote: Sunday- 8 & 11am, & 7pm
+  note: 'Page 1: Masses daily M-F 7:00am, Saturday (Vigil) 4:00 pm, Sunday 8 & 11am & 7pm; confession
+    daily 6:35-6:50am and Saturday 3:15-3:45pm.'
 - url: https://www.nativityduryea.org/bulletins.html
   seen: 2026-10-16
-  note: 'The parish site''s Bulletins page lists weekly PDFs (Weebly uploads), 16 August to 11 October 2026.'
+  note: The parish site's Bulletins page lists weekly PDFs (Weebly uploads), 16 August to 11 October 2026.
+promoted: 2026-10-17
 ---
 
 ## Publisher

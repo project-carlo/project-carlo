@@ -27,6 +27,7 @@ evidence:
   quote: ST. ANDREW PARISH 316 Parrish Street Wilkes-Barre, PA 18702
   note: '11 October 2026 bulletin, page 1: Saturday 5:30 p.m. and Sunday 11:00 a.m. at ''St. Andrew'';
     St. Andrew Mass intentions are weekends and holy days only.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

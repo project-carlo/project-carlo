@@ -8,15 +8,21 @@ group: Saint Monica Parish
 evidence:
 - url: https://files.ecatholic.com/13540/documents/2026/10/Saint%20Monica%20Bulletin%20-%20October%2011%202026-2.pdf
   seen: 2026-10-16
-  quote: 'Reverend Peter A. Tomczak, Pastor'
-  note: 'Masthead, page 1 of the 11 October 2026 issue: Saint Monica Parish, Catholic Community of Wyoming & West Wyoming, 363 West 8th St., West Wyoming. Mass schedule: Saturday Vigil 4:00 PM; Sunday 8:30 AM & 11:00 AM; Monday, Tuesday, Wednesday, Friday 8:00 AM.'
+  quote: Reverend Peter A. Tomczak, Pastor
+  note: 'Masthead, page 1 of the 11 October 2026 issue: Saint Monica Parish, Catholic Community of Wyoming
+    & West Wyoming, 363 West 8th St., West Wyoming. Mass schedule: Saturday Vigil 4:00 PM; Sunday 8:30
+    AM & 11:00 AM; Monday, Tuesday, Wednesday, Friday 8:00 AM.'
 - url: https://files.ecatholic.com/13540/documents/2026/10/Saint%20Monica%20Bulletin%20-%20October%2011%202026-2.pdf
   seen: 2026-10-16
-  quote: '11:00AM – Giampiero Tafani'
-  note: 'Page 2 Mass intentions for 12-18 October at the same times; no other church named.'
+  quote: 11:00AM – Giampiero Tafani
+  note: Page 2 Mass intentions for 12-18 October at the same times; no other church named.
 - url: https://www.stmonicanepa.com/
   seen: 2026-10-16
-  note: 'eCatholic site 13540 (403 to plain fetches; read in a browser). The homepage links the current issue as a document, files.ecatholic.com/13540/documents/2026/10/Saint Monica Bulletin - October 11 2026-2.pdf. Its /bulletins page lists only an old issue, files.ecatholic.com/13540/bulletins/20250525.pdf (25 May 2025).'
+  note: eCatholic site 13540 (403 to plain fetches; read in a browser). The homepage links the current
+    issue as a document, files.ecatholic.com/13540/documents/2026/10/Saint Monica Bulletin - October 11
+    2026-2.pdf. Its /bulletins page lists only an old issue, files.ecatholic.com/13540/bulletins/20250525.pdf
+    (25 May 2025).
+promoted: 2026-10-17
 ---
 
 ## Publisher

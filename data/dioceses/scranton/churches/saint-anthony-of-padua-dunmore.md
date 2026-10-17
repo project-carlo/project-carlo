@@ -27,6 +27,7 @@ evidence:
   quote: 208 Smith St., Dunmore, Pennsylvania 18512-2919
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Scranton as ''St. Anthony'', 208
     Smith St., Dunmore, PA, 18512; kind: Church'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

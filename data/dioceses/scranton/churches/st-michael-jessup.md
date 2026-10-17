@@ -28,6 +28,7 @@ evidence:
   note: 'The 18 October 2026 Queen of Angels bulletin, page 1: "QUEEN OF ANGELS PARISH at SAINT MICHAEL''S
     CHURCH 320 FIRST AVENUE, JESSUP"; Saturday 4:00 P.M., Sunday 8:00 and 10:30 A.M. Weekday Masses are
     temporarily at the rectory (page 2).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

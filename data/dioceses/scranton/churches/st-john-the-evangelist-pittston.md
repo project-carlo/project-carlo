@@ -1,6 +1,6 @@
 ---
 parish: communion-of-saints-pittston
-name: 'Saint John the Evangelist Church'
+name: Saint John the Evangelist Church
 line1: 35 William St.
 line2: ''
 city: Pittston
@@ -24,8 +24,10 @@ evidence:
     35 William Street, Pittston, PA, 18640; kind: worship-site; group: Communion of Saints Parish'
 - url: https://container.parishesonline.com/bulletins/03/1275/20261018B.pdf
   seen: 2026-10-16
-  quote: 'St. John the Evangelist Church'
-  note: 'Masthead and page 1 schedule of the 17-18 October 2026 bulletin: Saturday 5:30 PM, Sunday 9:30 AM, Mon/Wed/Fri 8:00 AM.'
+  quote: St. John the Evangelist Church
+  note: 'Masthead and page 1 schedule of the 17-18 October 2026 bulletin: Saturday 5:30 PM, Sunday 9:30
+    AM, Mon/Wed/Fri 8:00 AM.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Joseph Church'', 312 Davis
     Street, Scranton, PA, 18505; kind: worship-site; group: Divine Mercy Parish'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

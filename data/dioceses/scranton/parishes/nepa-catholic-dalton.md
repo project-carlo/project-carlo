@@ -23,6 +23,7 @@ evidence:
     so it was read with a fetch tool, not quoted): "Weekly Bulletin" linking img1.wsimg.com/blobby/go/e126fb61-2499-4188-a27d-56245bc4d6a9/10-11-2026
     bulletin.pdf, and "Past Bulletins" back to 7-19-2026. The homepage links pages for /our-lady-of-the-abingtons,
     /saint-mary-of-the-lake and /saint-patricks.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

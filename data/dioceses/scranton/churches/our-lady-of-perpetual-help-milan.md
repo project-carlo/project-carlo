@@ -15,7 +15,8 @@ roster: ['directory:155-2', 'gcatholic:24038']
 evidence:
 - url: https://www.dioceseofscranton.org/find-a-mass/
   seen: 2026-10-16
-  note: 'Coordinates from the diocese''s Find a Mass card for "Our Lady of Perpetual Help Church" (data-latitude 41.905227, data-longitude -76.628878).'
+  note: Coordinates from the diocese's Find a Mass card for "Our Lady of Perpetual Help Church" (data-latitude
+    41.905227, data-longitude -76.628878).
 - url: https://www.dioceseofscranton.org/find-a-parish/epiphany-parish-sayre
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Our Lady of Perpetual Help Church'',
@@ -29,6 +30,7 @@ evidence:
   seen: 2026-10-16
   quote: 'Our Lady of Perpetual Help (OLPH): … 3418 Chapel Road … Milan, PA 18831 … 6:00 pm (OLPH) Ridgebury'
   note: Masthead and Mass Schedule of the 18 October 2026 Epiphany bulletin.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

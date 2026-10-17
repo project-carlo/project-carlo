@@ -1,7 +1,7 @@
 ---
 parish: st-monica-west-wyoming
-name: 'Our Lady of Sorrows Church'
-line1: '363 West Eighth Street'
+name: Our Lady of Sorrows Church
+line1: 363 West Eighth Street
 line2: ''
 city: West Wyoming
 state: PA
@@ -24,12 +24,15 @@ evidence:
     363 West Eighth Street, West Wyoming, PA, 18644; kind: worship-site; group: Saint Monica Parish'
 - url: https://files.ecatholic.com/13540/documents/2026/10/Saint%20Monica%20Bulletin%20-%20October%2011%202026-2.pdf
   seen: 2026-10-16
-  quote: 'Reverend Peter A. Tomczak, Pastor'
-  note: 'Masthead of the 11 October 2026 St. Monica bulletin, 363 West 8th St., West Wyoming: Saturday 4:00 PM, Sunday 8:30 & 11:00 AM, Mon/Tue/Wed/Fri 8:00 AM.'
+  quote: Reverend Peter A. Tomczak, Pastor
+  note: 'Masthead of the 11 October 2026 St. Monica bulletin, 363 West 8th St., West Wyoming: Saturday
+    4:00 PM, Sunday 8:30 & 11:00 AM, Mon/Tue/Wed/Fri 8:00 AM.'
 - url: https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-12-20-23-updated-as-of-July-1-2024.pdf
   seen: 2026-10-16
-  quote: 'West Wyoming Our Lady of Sorrows Church (11/2010) St. Monica Parish, West'
-  note: 'Diocese''s consolidated-parishes list: Our Lady of Sorrows is St. Monica Parish''s building (no closure).'
+  quote: West Wyoming Our Lady of Sorrows Church (11/2010) St. Monica Parish, West
+  note: 'Diocese''s consolidated-parishes list: Our Lady of Sorrows is St. Monica Parish''s building (no
+    closure).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

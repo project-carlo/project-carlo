@@ -1,7 +1,7 @@
 ---
 parish: corpus-christi-west-pittston
-name: 'Saint Anthony of Padua Church'
-line1: '224 Memorial Street'
+name: Saint Anthony of Padua Church
+line1: 224 Memorial Street
 line2: ''
 city: Exeter
 state: PA
@@ -24,16 +24,18 @@ evidence:
     212 Memorial Avenue, Exeter, PA, 18643; kind: worship-site; group: Corpus Christi Parish'
 - url: https://www.corpuschristinepa.com/Bulletins/Bulletin261011.pdf
   seen: 2026-10-16
-  quote: '4:00PM St. Anthony'
-  note: 'Page 1 of the 11 October 2026 bulletin: Saturday 4:00PM and Sunday 7:30AM at St. Anthony, confessions Saturday 3:00-3:30PM at St. Anthony Church.'
+  quote: 4:00PM St. Anthony
+  note: 'Page 1 of the 11 October 2026 bulletin: Saturday 4:00PM and Sunday 7:30AM at St. Anthony, confessions
+    Saturday 3:00-3:30PM at St. Anthony Church.'
 - url: https://www.corpuschristinepa.com/
   seen: 2026-10-16
-  quote: '224 Memorial Street'
+  quote: 224 Memorial Street
   note: 'Parish homepage footer: "St. Anthony Church 224 Memorial Street Exeter, PA 18643".'
 - url: https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-12-20-23-updated-as-of-July-1-2024.pdf
   seen: 2026-10-16
-  quote: 'Exeter  St. Anthony of Padua Church (6/2011)'
+  quote: Exeter  St. Anthony of Padua Church (6/2011)
   note: 'Diocese''s consolidated-parishes list: under Corpus Christi Parish, no closure.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

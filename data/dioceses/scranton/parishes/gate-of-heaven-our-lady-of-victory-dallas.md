@@ -9,26 +9,27 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/04/0475/20261018B.pdf
   seen: 2026-10-16
   quote: Two Parishes, One Faith Community
-  note: 'Masthead, page 1 of the 18 October 2026 issue: "GATE OF HEAVEN & OUR LADY OF VICTORY", one pastor (Rev.
-    Andrew S. Hvozdovic) and one staff for both parishes.'
+  note: 'Masthead, page 1 of the 18 October 2026 issue: "GATE OF HEAVEN & OUR LADY OF VICTORY", one pastor
+    (Rev. Andrew S. Hvozdovic) and one staff for both parishes.'
 - url: https://container.parishesonline.com/bulletins/04/0475/20261018B.pdf
   seen: 2026-10-16
   quote: 5:30pm | GOH
-  note: 'Page 1 MASS SCHEDULE: Saturday 4:00pm OLV, 5:30pm GOH; Sunday 7:30am OLV, 9:00am GOH, 10:30am OLV; Monday
-    6:00pm GOH, Tuesday 9:00am OLV, Wednesday 9:00am GOH, Friday 12 Noon OLV.'
+  note: 'Page 1 MASS SCHEDULE: Saturday 4:00pm OLV, 5:30pm GOH; Sunday 7:30am OLV, 9:00am GOH, 10:30am
+    OLV; Monday 6:00pm GOH, Tuesday 9:00am OLV, Wednesday 9:00am GOH, Friday 12 Noon OLV.'
 - url: https://container.parishesonline.com/bulletins/04/0475/20261018B.pdf
   seen: 2026-10-16
   quote: Due to the renovations at Gate of Heaven, Confessions will occur at Our
   note: Page 1. Only confessions are moved to Our Lady of Victory; the Mass schedule still lists GOH Masses.
 - url: https://parishesonline.com/organization/gate-of-heaven-and-our-lady-of-victory
   seen: 2026-10-16
-  note: '`probe po`: "Gate of Heaven and Our Lady of Victory", 40 Machell Ave, Dallas, PA 18612, LPi id 0018000000Qbz97AAB,
-    container 04/0475, weekly issues through 2026-10-18.'
+  note: '`probe po`: "Gate of Heaven and Our Lady of Victory", 40 Machell Ave, Dallas, PA 18612, LPi id
+    0018000000Qbz97AAB, container 04/0475, weekly issues through 2026-10-18.'
 - url: https://www.goholv.org/
   seen: 2026-10-16
-  note: 'Site title "Roman Catholic Community of Gate of Heaven & Our Lady of Victory". Its BULLETIN menu link goes to
-    parishesonline.com/find/gate-of-heaven-and-our-lady-of-victory. The site answers 403 to plain fetches; read in a
-    browser (parish-site-access visit.py).'
+  note: Site title "Roman Catholic Community of Gate of Heaven & Our Lady of Victory". Its BULLETIN menu
+    link goes to parishesonline.com/find/gate-of-heaven-and-our-lady-of-victory. The site answers 403
+    to plain fetches; read in a browser (parish-site-access visit.py).
+promoted: 2026-10-17
 ---
 
 ## Publisher

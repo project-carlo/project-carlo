@@ -23,6 +23,7 @@ evidence:
   note: The parish's bulletin page lists Discover Mass download links (bulletins.discovermass.com/download.php?bulletin=...),
     read 2026-10-16. The church slug was confirmed by fetching discovermass.com/church/st-joseph-the-worker-williamsport-pa/
     (HTTP 200, issues to 18 October 2026).
+promoted: 2026-10-17
 ---
 
 ## Publisher

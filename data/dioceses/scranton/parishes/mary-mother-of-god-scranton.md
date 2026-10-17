@@ -24,6 +24,7 @@ evidence:
     Read through WebFetch only to find links: its "Sunday Bulletin" link is http://sponsors.bonventure.net/?page=1884,
     and it gives "Monday - Friday: 8:00 a.m. Saturday: 4:00 p.m. Sunday: 7:15 a.m. - 8:30 a.m. - 11:00
     a.m." Not quoted, since it was not read directly.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

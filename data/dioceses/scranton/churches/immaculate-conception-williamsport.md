@@ -33,6 +33,7 @@ evidence:
   quote: 5973 Jacks Hollow Rd.
   note: Homepage contact block, "Parish Office for IC and SL"; Regular Schedule "Sunday Mass - IC – 8:30
     AM".
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

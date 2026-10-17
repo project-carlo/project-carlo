@@ -30,6 +30,7 @@ evidence:
   note: The diocese's Find a Mass page (one of its 138 worship sites), under Immaculate Heart of Mary
     Parish, Dushore; no street address. The finder's parish page mentions it only inside St. Francis,
     Mildred's Mass-times text, so the directory roster has no entry for it.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

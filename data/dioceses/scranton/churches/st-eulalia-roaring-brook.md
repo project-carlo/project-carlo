@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Eulalia Church'', 214 Blue
     Shutters Road, Roaring Brook Twp., PA, 18444; kind: worship-site; group: Saint Eulalia Parish'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

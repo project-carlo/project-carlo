@@ -32,6 +32,7 @@ evidence:
   quote: St. Patrick’s will celebrate mass on SATURDAYS at 5:00 PM and SUNDAYS at 9:45 AM.
 revisit: The 5 pm Saturday Mass is to end when Fr. Peter O'Rourke retires; re-read the schedule.
 revisit_after: 2027-04-01
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

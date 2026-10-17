@@ -11,9 +11,7 @@ longitude: -75.2556875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23979
-- directory:119-2
+roster: ['gcatholic:23979', 'directory:119-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23979
   seen: 2026-10-16
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint John the Evangelist Church'',
     150 Terrace Street, Honesdale, PA, 18431; kind: worship-site; group: Saint John the Evangelist Parish'
 - url: https://discovermass.com/church/st-john-the-evangelist-honesdale-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 10:30AM - St. John the Evangelist, Honesdale
   note: Page 4 of the 18 October 2026 bulletin.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

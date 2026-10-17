@@ -17,6 +17,7 @@ revisit: Queen of Angels, Jessup, announced on 18 October 2026 a "linkage to con
   whether Sacred Heart and Queen of Angels start one bulletin; if so, merge queen-of-angels-jessup into
   the shared row.
 revisit_after: 2027-01-15
+promoted: 2026-10-17
 ---
 
 ## Publisher

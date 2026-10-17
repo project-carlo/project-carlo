@@ -30,6 +30,7 @@ evidence:
 - url: https://www.abingtoncatholic.org/
   seen: 2026-10-16
   quote: Our Lady of the Snows Church 301 South State Street Clarks Summit, PA 18411
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

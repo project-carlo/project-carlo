@@ -11,9 +11,7 @@ longitude: -75.1271875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23998
-- directory:130-1
+roster: ['gcatholic:23998', 'directory:130-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23998
   seen: 2026-10-16
@@ -25,11 +23,12 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Good Shepherd Church'', Blooming
     Grove, PA, 18428; kind: worship-site; group: Saint John Neumann Parish'
 - url: https://discovermass.com/church/st-ann-shohola-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Good Shepherd Church - Memorial Weekend, July Fourth
   note: 'Page 11 of the 11 October 2026 joint bulletin, St. John Neumann Parish: "Good Shepherd Church
     - Memorial Weekend, July Fourth Weekend and Labor Day Weekend at 5:30pm on Saturday". The 30 August
     issue''s intentions (page 2) list "5:30p.m.(GS)" for Saturday 5 September.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

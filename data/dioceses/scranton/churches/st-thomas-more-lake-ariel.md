@@ -11,9 +11,7 @@ longitude: -75.3843125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23992
-- directory:126-2
+roster: ['gcatholic:23992', 'directory:126-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23992
   seen: 2026-10-16
@@ -25,10 +23,11 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Thomas More Church'', 105
     Gravity Road, Lake Ariel, PA, 18436; kind: worship-site; group: Saint Thomas More Parish'
 - url: https://stthomas-stmary.com/download/19/bulletin/18800/bul-october-11-2026.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 6:30pm(STM)
   note: 'Page 4 of the 11 October 2026 bulletin: Monday 6:30pm, Wednesday and Friday 8:15am, Saturday
     6:00pm, Sunday 8:00am and 11:00am at St. Thomas More (STM).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

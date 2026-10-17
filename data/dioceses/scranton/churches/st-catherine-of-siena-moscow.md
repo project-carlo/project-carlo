@@ -27,6 +27,7 @@ evidence:
   quote: 8:00 am at St. Catherine of Siena
   note: 'Page 2 of the 11 October 2026 bulletin: Mon/Wed/Fri 8:00 am and weekend Masses Saturday 5:00
     pm, Sunday 9:00 & 11:30 am at St. Catherine of Siena; parish address 220 Church St., Moscow.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

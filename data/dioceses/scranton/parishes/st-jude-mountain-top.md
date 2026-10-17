@@ -32,6 +32,7 @@ evidence:
 revisit: 'Check stmarydorrance.org/bulletins: if Our Lady Help of Christians starts posting its own bulletin
   again, decide whether Dorrance needs its own row.'
 revisit_after: 2027-01-15
+promoted: 2026-10-17
 ---
 
 ## Publisher

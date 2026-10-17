@@ -23,6 +23,7 @@ evidence:
   note: The parish site's Bulletin page. It embeds this week's issue as an iframe, https://stannsbasilicaparish.org/SABP-Bulletin/SABPBulletin101126/SABP-Bulletin-Oct-11-26.html
     (a FlipHTML5 export whose pages are JPEGs, files/page/1.jpg ... 4.jpg, with an empty text index),
     and links /bulletin-archive/.
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-16
   note: 'Dorrance''s own 16 August 2026 bulletin (image-only): ''Parish Office 3529 Saint Marys Road,
     Wapwallopen, PA 18660''; Saturday 5:30 PM, Sunday 9:00 AM.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

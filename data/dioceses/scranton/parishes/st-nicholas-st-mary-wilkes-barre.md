@@ -20,6 +20,7 @@ evidence:
   seen: 2026-10-16
   note: '`probe po 0018000000Qx8J8AAJ` (the widget id on parishwb.com/bulletin): org st-nicholas-st-mary-parish,
     ''St. Nicholas Church'', 226 S Washington St, container 03/1201, latest issue 18 October 2026.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   note: 'Page 1 (image) of the 18 October 2026 Saint Carlo Acutis bulletin: "Church of St. Patrick 200
     Delaware Ave. Olyphant"; SP Masses Mon/Wed/Fri 8:00 am, Saturday 4:00pm, Sunday 8:00 am and 11:00am.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   note: 'The parish site''s Bulletins page (eCatholic, site id 35192; read in a browser, plain fetches
     get 403): "To view our parish bulletin, please click the following link:" and a "Bulletins" link to
     https://sponsors.bonventure.net/?page=10266.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

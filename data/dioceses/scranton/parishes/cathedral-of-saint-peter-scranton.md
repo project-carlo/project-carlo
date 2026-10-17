@@ -37,6 +37,7 @@ evidence:
     Confessions: Saturday from 10:30 to 11:30 a.m. at the Cathedral of Saint Peter'
   note: 'Immaculate Conception''s own Wix site: same pastor (Father Tudgay), no bulletin link. Its only
     PDF (036cbc_1902927f...pdf) is the "2025 Financial Trend Analysis" report, three scanned pages.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

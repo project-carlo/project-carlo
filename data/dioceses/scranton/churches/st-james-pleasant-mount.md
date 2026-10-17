@@ -11,9 +11,7 @@ longitude: -75.4349375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:24031
-- directory:152-1
+roster: ['gcatholic:24031', 'directory:152-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24031
   seen: 2026-10-16
@@ -25,10 +23,11 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint James Church'', 361 Great
     Bend Turnpike, Pleasant Mount, PA, 18453; kind: worship-site; group: Saint Katharine Drexel Parish'
 - url: https://apskdp.org/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 11:00 a.m. St. James, Pleasant Mount
   note: Homepage weekend schedule; the 11 October 2026 bulletin (page 1, an image) gives Sunday 11:00
     AM and Tuesday and Thursday 9:00 AM at St. James.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

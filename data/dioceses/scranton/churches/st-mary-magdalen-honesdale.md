@@ -11,9 +11,7 @@ longitude: -75.2530625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23980
-- directory:119-4
+roster: ['gcatholic:23980', 'directory:119-4']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23980
   seen: 2026-10-16
@@ -25,10 +23,11 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Mary Magdalen Church'',
     416 Church Street, Honesdale, PA, 18431; kind: worship-site; group: Saint John the Evangelist Parish'
 - url: https://discovermass.com/church/st-john-the-evangelist-honesdale-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Sunday - 7:30AM - St Mary Magdalen, Honesdale
   note: Page 4 of the 18 October 2026 bulletin; also Saturday 5:30PM and weekdays 7:25AM (Mon, Wed, Fri
     also 12:05PM).
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

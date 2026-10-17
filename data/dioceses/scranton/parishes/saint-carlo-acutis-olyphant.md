@@ -26,6 +26,7 @@ evidence:
 - url: https://parishesonline.com/organization/blessed-sacrament-parish-18512
   seen: 2026-10-16
   note: probe po on Blessed Sacrament's old org (lpi 0018000000Qx8IdAAJ) finds no publications.
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -29,6 +29,7 @@ evidence:
 - url: https://www.abingtoncatholic.org/
   seen: 2026-10-16
   quote: Church of Saint Gregory 330 North Abington Road Clarks Green, PA 18411
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -1,7 +1,7 @@
 ---
 parish: st-ignatius-loyola-holy-family-kingston
-name: 'Saint Ignatius Loyola Church'
-line1: '339 North Maple Avenue'
+name: Saint Ignatius Loyola Church
+line1: 339 North Maple Avenue
 line2: ''
 city: Kingston
 state: PA
@@ -24,8 +24,10 @@ evidence:
     North Maple Street, Kingston, PA, 18704; kind: worship-site; group: Saint Ignatius Loyola Parish'
 - url: http://sponsors.bonventure.net/pdfs/1732/2026-10-18.pdf
   seen: 2026-10-16
-  quote: '339 NORTH MAPLE AVENUE'
-  note: 'Cover of the 18 October 2026 bulletin: ST. IGNATIUS Saturday 4:00 PM, Sunday 7:00 & 10:30 AM, Monday-Friday 7:30 AM.'
+  quote: 339 NORTH MAPLE AVENUE
+  note: 'Cover of the 18 October 2026 bulletin: ST. IGNATIUS Saturday 4:00 PM, Sunday 7:00 & 10:30 AM,
+    Monday-Friday 7:30 AM.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

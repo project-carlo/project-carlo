@@ -22,6 +22,7 @@ evidence:
   note: The parish's "Bulletins & Inserts" page embeds the Discover Mass bulletin (visit.py --bulletin,
     2026-10-16, found discovermass:church-of-the-epiphany-sayre-pa). Plain `probe url` gets HTTP 202 and
     no parish words (JavaScript site).
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -11,9 +11,7 @@ longitude: -76.0475625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23962
-- directory:108-2
+roster: ['gcatholic:23962', 'directory:108-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23962
   seen: 2026-10-16
@@ -25,14 +23,15 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Francis Xavier Church'',
     17 Cottage Street, Friendsville, PA, 18818; kind: worship-site; group: Saint Brigid Parish'
 - url: https://img1.wsimg.com/blobby/go/05fa032b-63a4-434f-9af9-1ca3c845125d/10.11.26.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Saturday 6:30pm St. Francis Xavier Friendsville
   note: Page 2 of the 11 October 2026 Holy Name of Mary bulletin; also Sunday 7:30am and Friday 12:00pm.
 - url: http://www.tiogaweb.com/church/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: PO Box 75, 17 Cottage St., Friendsville, Pa. 18818
   note: 'St. Brigid Parish homepage: the parish office address. Its "Our Churches" page (http://www.tiogaweb.com/church/churches.html,
     updated 2013) says the church "is on Rt. 4014 (Main Street) in Friendsville Boro".'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

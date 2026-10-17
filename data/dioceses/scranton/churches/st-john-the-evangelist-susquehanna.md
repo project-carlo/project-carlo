@@ -11,9 +11,7 @@ longitude: -75.6006875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:24063
-- directory:174-1
+roster: ['gcatholic:24063', 'directory:174-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24063
   seen: 2026-10-16
@@ -26,13 +24,14 @@ evidence:
     15 East Church Street, Susquehanna, PA, 18847; kind: worship-site; group: Most Holy Trinity Parish
     Susquehanna'
 - url: https://docs.google.com/document/d/18ujWxlm2oDDbN16oYTV8bTVI-l6ncVaqohnf9IWN50s/edit?usp=sharing
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: '18 October 2026 bulletin, page 1: "St. John the Evangelist 15 E. Church Street Susquehanna, PA
     18847"; Sunday 8:30 AM at St. John''s; daily Mass Tuesday and Thursday 8 AM in the IHM Chapel at St.
     John''s. Page 2 intentions: Sunday 18 and 25 October 8:30 AM St. John''s. Read by exporting the Google
     Doc as PDF (docs.google.com/document/d/18ujWxlm2oDDbN16oYTV8bTVI-l6ncVaqohnf9IWN50s/export?format=pdf)
     and rendering it (parish-site-access render.py): the export has no text layer, so recheck cannot find
     this.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

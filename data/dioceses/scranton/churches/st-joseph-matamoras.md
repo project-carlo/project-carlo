@@ -11,9 +11,7 @@ longitude: -74.7045625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:24002
-- directory:133-1
+roster: ['gcatholic:24002', 'directory:133-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24002
   seen: 2026-10-16
@@ -25,10 +23,11 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Joseph Church'', 309 Avenue
     F, Matamoras, PA, 18336; kind: worship-site; group: Saint Joseph Parish'
 - url: https://nebula.wsimg.com/ca0c0f691c16a8720a72464f253cc00b?AccessKeyId=A3711114AD1870F3198A&disposition=0&alloworigin=1
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 309 Avenue F Matamoras,PA18336
   note: 'Page 1 of the 4 October 2026 bulletin, St. Joseph''s "CONTACT US". Schedule: Saturday 4:00pm
     and Sunday 8:30am at St. Joseph, Monday and Thursday 12:00pm.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

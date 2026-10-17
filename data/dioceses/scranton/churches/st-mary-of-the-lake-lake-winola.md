@@ -27,6 +27,7 @@ evidence:
   quote: 9:00am (SML) Andrea Walsh
   note: 'Page 2 of the 11 October 2026 NEPA Catholic bulletin: Sunday 9:00 am and Thursday 8:00 am Masses
     at SML.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

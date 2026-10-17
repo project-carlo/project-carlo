@@ -29,6 +29,7 @@ evidence:
   quote: as we celebrate the first anniversary of the linkage of St. Ann and St. Boniface parishes
   note: Homepage, read 2026-10-16. Its bulletin posts ("This Week's Bulletin October 11") link sponsors.bonventure.net/pdfs/1801/2026-10-11.pdf;
     stannrcc.org's "Weekly Bulletin" tile links sponsors.bonventure.net/?page=1801.
+promoted: 2026-10-17
 ---
 
 ## Publisher

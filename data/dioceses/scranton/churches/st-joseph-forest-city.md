@@ -11,9 +11,7 @@ longitude: -75.4675625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23960
-- directory:106-1
+roster: ['gcatholic:23960', 'directory:106-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23960
   seen: 2026-10-16
@@ -25,10 +23,11 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Joseph Church'', 741 Delaware
     Street, Forest City, PA, 18421; kind: worship-site; group: Ascension Parish'
 - url: https://apskdp.org/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 9:30 a.m. St. Joseph, Forest City
   note: 'Homepage weekend schedule; the 11 October 2026 bulletin (page 1, an image) gives the same: Saturday
     4:00 PM and Sunday 9:30 AM St. Joseph, Monday and Wednesday 8:30 AM.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

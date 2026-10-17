@@ -11,9 +11,7 @@ longitude: -75.0433125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23997
-- directory:130-2
+roster: ['gcatholic:23997', 'directory:130-2']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23997
   seen: 2026-10-16
@@ -25,11 +23,12 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint John Neumann Church'',
     705 Route 739, HC 8, Lords Valley, PA, 18428; kind: worship-site; group: Saint John Neumann Parish'
 - url: https://discovermass.com/church/st-ann-shohola-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Adoration on Friday 10:00am
   note: 'Page 11 of the 11 October 2026 joint bulletin, "ST. JOHN NEUMANN PARISH 705 Route 739 Lords Valley,
     PA 18428": Monday, Tuesday, Thursday and Friday 9:30am; Saturday Vigil 4:00pm and Sunday 11:30am at
     St. John Neumann Church.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

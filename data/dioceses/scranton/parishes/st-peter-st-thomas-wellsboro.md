@@ -27,6 +27,7 @@ evidence:
   note: St. Thomas's own Weebly site posts the same combined bulletin as page images (june-21-2026-1_orig.jpg
     ... -8), newest 21 June 2026, whose page 1 has the same "The Parishes of St. Peter and St. Thomas
     the Apostle" masthead (read as an image 2026-10-16). Nothing newer posted there.
+promoted: 2026-10-17
 ---
 
 ## Publisher

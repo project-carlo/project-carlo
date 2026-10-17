@@ -3,14 +3,11 @@ name: Catholic Communities of St. Ann, St. John Neumann & St. Vincent de Paul
 website: https://www.stannshohola.org
 bulletin_provider: discover_mass
 provider_id: st-ann-shohola-pa
-publication:
-- discovermass:st-ann-shohola-pa
-- discovermass:st-john-neumann-lords-valley-pa
-- discovermass:st-vincent-de-paul-milford-pa
+publication: ['discovermass:st-ann-shohola-pa', 'discovermass:st-john-neumann-lords-valley-pa', 'discovermass:st-vincent-de-paul-milford-pa']
 group: Saint Ann Parish Shohola; Saint John Neumann Parish; Saint Vincent de Paul Parish
 evidence:
 - url: https://discovermass.com/church/st-ann-shohola-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: View this bulletin online at www.DiscoverMass.com
   note: 'Discover Mass church page "St. Ann", issues weekly through 18 October 2026 (issues.py). Page
     1 of the 18 October issue: "Welcome to the Catholic Communities of St. Ann, St. John Neumann & St.
@@ -18,23 +15,24 @@ evidence:
     &S �. Vincen� d  Paul"). Page 2 is St. John Neumann''s page, page 3 St. Ann''s, page 4 St. Vincent
     de Paul''s, each with its own Mass intentions.'
 - url: https://discovermass.com/church/st-ann-shohola-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Good Shepherd Church - Memorial Weekend, July Fourth
   note: 'Page 11 of the 11 October 2026 issue: the three parishes'' standing Mass schedules (St. Ann''s,
     St. Vincent de Paul, St. John Neumann), with Good Shepherd''s Saturday 5:30pm only on Memorial Day,
     July Fourth and Labor Day weekends.'
 - url: https://discovermass.com/church/st-vincent-de-paul-milford-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: 'Discover Mass page "St. Vincent de Paul" (embedded on stvdepaulchurch.org): its 18 October 2026
     issue is the same joint bulletin (page 1 "Welcome to the Catholic Communities of St. Ann, St. John
     Neumann & St. Vincent de Paul").'
 - url: https://discovermass.com/church/st-john-neumann-lords-valley-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: 'Discover Mass page "St. John Neumann": the same joint bulletin, 18 October 2026.'
 - url: https://www.sjneumannchurch.com
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: St. John Neumann's site links its BULLETIN menu to https://discovermass.com/church/st-ann-shohola-pa/#bulletins,
     the St. Ann listing.
+promoted: 2026-10-17
 ---
 
 ## Publisher

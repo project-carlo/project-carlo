@@ -30,6 +30,7 @@ evidence:
 - url: https://sites.google.com/view/olichome-freeland-pa/home/mass-schedule
   seen: 2026-10-16
   quote: 'GOOD SHEPHERD WEEKEND SCHEDULE: Saturday Vigil 6:00 PM Sunday 8:00 AM Sunday 9:30 AM'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-16
   note: 'The finder lists only "Annunciation Church" for the parish, with "Mon: 8:00am (Holy Family Chapel)
     ..." among its Mass times (roster entry directory:194-1).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

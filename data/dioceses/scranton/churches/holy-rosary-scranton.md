@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-16
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Holy Rosary Church'', 316 William
     Street, Scranton, PA, 18508; kind: worship-site; group: Mary, Mother of God Parish'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

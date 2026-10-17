@@ -13,6 +13,7 @@ evidence:
     Street ... Moscow, PA 18444"; MASS SCHEDULE "Mon.—Wed.—Fri: 8:00 am at St. Catherine of Siena / Tues
     & Thurs. 8:00 am at St. Eulalia Parish / Weekend Masses at St. Catherine of Siena: Saturday: 5:00
     pm Sunday: 9:00 & 11:30 am". Pastor Rev. Thomas M. Muldowney.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

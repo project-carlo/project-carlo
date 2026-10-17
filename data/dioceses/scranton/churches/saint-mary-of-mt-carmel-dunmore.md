@@ -27,6 +27,7 @@ evidence:
   quote: 322 Chestnut St., Dunmore, Pennsylvania 18512-2902
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Scranton as ''Our Lady of Mount
     Carmel'', 322 Chestnut St., Dunmore, PA, 18512; kind: Church'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

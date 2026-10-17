@@ -27,6 +27,7 @@ evidence:
   quote: Saturday Vigil Mass
   note: '11 October 2026 issue, page 1 worship schedule: Saturday Vigil 4:00 pm, Sunday 8:30 & 11:00 am,
     daily Monday-Friday 7:00 am.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

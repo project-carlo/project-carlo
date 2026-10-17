@@ -27,6 +27,7 @@ evidence:
   quote: 11 am (SP) Jill D’Antoni
   note: 'Page 2 of the 11 October 2026 NEPA Catholic bulletin: Sunday 11 am and Wednesday 8:00am Masses
     at SP.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

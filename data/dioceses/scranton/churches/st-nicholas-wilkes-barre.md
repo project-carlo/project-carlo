@@ -28,6 +28,7 @@ evidence:
   quote: The Parish Community of Saint Nicholas-Saint Mary 226 S. Washington Street
   note: '11 October 2026 issue; page 3 Mass list: Saturday 4:00 PM, Sunday 7:15, 8:30, 10:15 AM and 12:30
     PM (Spanish), weekdays 6:30 AM and 12:10 PM, Thursday 6:00 PM Spanish.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

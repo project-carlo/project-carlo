@@ -1,9 +1,9 @@
 ---
 parish: st-therese-st-frances-cabrini-shavertown
-name: 'Saint Frances X. Cabrini Church'
-line1: '585 Mount Olivet Road'
+name: Saint Frances X. Cabrini Church
+line1: 585 Mount Olivet Road
 line2: ''
-city: 'Wyoming'
+city: Wyoming
 state: PA
 postal_code: '18644'
 latitude: 41.3483125
@@ -25,8 +25,10 @@ evidence:
     (Carverton)'
 - url: https://www.thebostonpilot.com/bcd/Bulletins/261011/32223_261011.pdf
   seen: 2026-10-16
-  quote: '585 Mount Olivet Road | Wyoming, PA 18644'
-  note: 'Cover of the 11 October 2026 bulletin ("The Church of Saint Frances X. Cabrini"). Page 5 schedules Tuesday 9:00AM, Saturday 4:00PM and Sunday 9:30AM at SFC.'
+  quote: 585 Mount Olivet Road | Wyoming, PA 18644
+  note: Cover of the 11 October 2026 bulletin ("The Church of Saint Frances X. Cabrini"). Page 5 schedules
+    Tuesday 9:00AM, Saturday 4:00PM and Sunday 9:30AM at SFC.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

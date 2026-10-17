@@ -3,12 +3,11 @@ name: St. Thomas More Parish
 website: https://stthomas-stmary.com/bulletin/
 bulletin_provider: other
 provider_id: ''
-publication:
-- url:https://stthomas-stmary.com/bulletin/
+publication: ['url:https://stthomas-stmary.com/bulletin/']
 group: Saint Thomas More Parish
 evidence:
 - url: https://stthomas-stmary.com/download/19/bulletin/18800/bul-october-11-2026.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Fr. Stephen Bosomafi Pastor
   note: 'Page 1 of the 11 October 2026 issue ("The Bully", Volume V, #13): masthead with both churches,
     "St. Thomas More 105 Gravity Rd." and "St. Mary 334 St. Mary Church Rd.", PO Box 188, Lake Ariel,
@@ -16,14 +15,15 @@ evidence:
     More, 9:30am St. Mary''s, 11:00am St. Thomas More). The text layer splits lines oddly, so these words
     are paraphrased in this note, not quoted.'
 - url: https://stthomas-stmary.com/download/19/bulletin/18800/bul-october-11-2026.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 6:00pm(STM)
   note: Page 4, Mass intentions for the week of 12-18 October 2026, coded (STM) St. Thomas More, (SM)
     St. Mary's, and (JR) for a Tuesday 10:00am Mass.
 - url: https://stthomas-stmary.com/bulletin/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: The parish site's Bulletin page embeds the current issue in a 3D FlipBook (WordPress plugin);
     the page's FB3D_CLIENT_DATA (base64 JSON) holds the PDF address https://stthomas-stmary.com/download/19/bulletin/18800/bul-october-11-2026.pdf.
+promoted: 2026-10-17
 ---
 
 ## Publisher

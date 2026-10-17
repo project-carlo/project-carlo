@@ -24,6 +24,7 @@ evidence:
   note: 'Bonventure sponsor page titled ''St. Robert Bellarmine/Exaltation of the Holy Cross'', 143 West
     Division Street: current issue pdfs/3087/2026-10-18.pdf. Linked as BULLETIN from stalschurchwb.com
     and as PARISH BULLETIN from exhc.org (both read with visit.py, 2026-10-16).'
+promoted: 2026-10-17
 ---
 
 ## Publisher

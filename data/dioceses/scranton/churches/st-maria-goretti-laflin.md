@@ -1,6 +1,6 @@
 ---
 parish: st-maria-goretti-laflin
-name: 'Saint Maria Goretti Church'
+name: Saint Maria Goretti Church
 line1: 42 Redwood Dr.
 line2: ''
 city: Laflin
@@ -25,7 +25,8 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/04/1093/20261018B.pdf
   seen: 2026-10-16
   quote: 'Saturday: 4:30PM Sunday: 9:00AM and 11:00AM'
-  note: 'Page 1 of the 18 October 2026 bulletin, under the masthead address 42 Redwood Drive, Laflin.'
+  note: Page 1 of the 18 October 2026 bulletin, under the masthead address 42 Redwood Drive, Laflin.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   note: Page 1 Mass Schedule and Worship Sites of the 18 October 2026 bulletin, which gives both addresses
     one under the other ("St. Francis of Assisi / 7706 Route 487 / 1 St. Francis Drive / Mildred, Pa 18632");
     1 St Francis Drive is also the parish office.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

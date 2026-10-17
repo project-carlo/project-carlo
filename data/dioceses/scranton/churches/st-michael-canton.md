@@ -30,6 +30,7 @@ evidence:
 - url: https://stmichaelscanton.com/about-us/
   seen: 2026-10-16
   quote: Saint Michael the Archangel Church, 107 North Washington Street, Canton
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

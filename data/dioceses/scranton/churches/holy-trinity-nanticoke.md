@@ -29,6 +29,7 @@ evidence:
   note: '11 October 2026 St. Faustina bulletin; page 2: Saturday 4:00pm and 5:30pm (Spanish), Sunday 8:00am
     and 11:00am, weekday Masses Wednesday 6:00pm, Thursday and Friday 8:00am, all except the Mocanaqua
     ones in Nanticoke.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

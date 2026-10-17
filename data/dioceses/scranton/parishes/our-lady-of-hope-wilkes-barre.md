@@ -15,6 +15,7 @@ evidence:
   seen: 2026-10-16
   note: 'GoDaddy site''s Bulletin page (read with visit.py): PDFs at img1.wsimg.com/blobby/go/<site>/downloads/<id>/<title>.pdf?ver=...,
     newest ''October 11,2026''.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

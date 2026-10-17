@@ -27,6 +27,7 @@ evidence:
   quote: Saturday – 4:00 PM Sunday – 8:30 AM, 11:00 AM, and First Sunday of each month at 1:30 PM (Spanish
     Mass)
   note: 18 October 2026 issue, page 1, with "5171 Milford Road East Stroudsburg, PA 18302-9106".
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

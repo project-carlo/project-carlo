@@ -11,9 +11,7 @@ longitude: -75.8805625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:24013
-- directory:139-1
+roster: ['gcatholic:24013', 'directory:139-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24013
   seen: 2026-10-16
@@ -25,10 +23,11 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Holy Name of Mary Church'', 278
     South Main Street, Montrose, PA, 18801; kind: worship-site; group: Holy Name of Mary Parish'
 - url: https://img1.wsimg.com/blobby/go/05fa032b-63a4-434f-9af9-1ca3c845125d/10.11.26.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Saturday 4:00pm (Bilingual) Holy Name of Mary Montrose
   note: 'Page 2 of the 11 October 2026 bulletin; also Sunday 12:30pm and Monday and Thursday 12:00pm.
     Page 1: 278 South Main Street, Montrose, PA 18801.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

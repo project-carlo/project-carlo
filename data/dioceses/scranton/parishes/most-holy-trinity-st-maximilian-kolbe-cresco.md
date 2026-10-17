@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-16
   quote: Most Holy Trinity Parish is the culmination of the jointure of Saint Mary in the Mount, Saint
     Ann in Tobyhanna, and Saint Bernadette in Canadensis
+promoted: 2026-10-17
 ---
 
 ## Publisher

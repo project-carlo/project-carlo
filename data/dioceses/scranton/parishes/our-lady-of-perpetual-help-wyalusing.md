@@ -20,8 +20,8 @@ evidence:
 - url: https://olophparish.org/bulletins/
   seen: 2026-10-16
   note: 'Behind Cloudflare: `probe url` got HTTP 403; visit.py (headed Chrome) was challenged on every
-    load in five runs on 2026-10-16 and 2026-10-17 (8, 10, 14, 12 and 20 loads), for both the homepage and
-    /bulletins/. Not read.'
+    load in five runs on 2026-10-16 and 2026-10-17 (8, 10, 14, 12 and 20 loads), for both the homepage
+    and /bulletins/. Not read.'
 - url: https://discovermass.com/church/st-mary-of-the-assumption-wyalusing-pa/
   seen: 2026-10-16
   note: Discover Mass has a page for "Our Lady of Perpetual Help, 245 State St., Wyalusing" but lists
@@ -33,6 +33,7 @@ revisit: Open https://olophparish.org/bulletins/ in a browser (parish-site-acces
   record its publication id and file pattern, and confirm it is a separate bulletin from Towanda's. If
   the page carries no bulletin, ask the parish office (570-746-1006) and consider no_bulletin.
 revisit_after: 2026-10-24
+promoted: 2026-10-17
 ---
 
 ## Publisher

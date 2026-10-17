@@ -11,9 +11,7 @@ longitude: -75.3435625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- directory:152-2
-- gcatholic:24032
+roster: ['directory:152-2', 'gcatholic:24032']
 evidence:
 - url: https://www.dioceseofscranton.org/find-a-parish/saint-katharine-drexel-parish-forest-city
   seen: 2026-10-16
@@ -26,10 +24,11 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Scranton as ''St. Juliana'', 612
     Hudson St., Rock Lake, PA, 18453; kind: Church; group: St. Katharine Drexel Parish'
 - url: https://apskdp.org/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 8:00 a.m. St. Juliana, Rock Lake
   note: Homepage weekend schedule; the 11 October 2026 bulletin (page 1, an image) has Sunday 8:00 AM
     at St. Juliana.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

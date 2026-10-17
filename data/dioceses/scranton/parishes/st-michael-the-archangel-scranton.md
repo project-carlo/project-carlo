@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-16
   quote: 'Mass Times: Sunday: 8:00 am (Low), 10:30 am (High) Monday – Thursday: 7:30 am Friday: 6:00 pm
     Saturday: 9:00 am'
+promoted: 2026-10-17
 ---
 
 ## Publisher

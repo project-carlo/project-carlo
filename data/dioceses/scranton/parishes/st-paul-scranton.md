@@ -26,6 +26,7 @@ evidence:
     a.m. & 4:30 p.m.– (Vigil Mass) Sunday 8:00a.m. & 10:30a.m. ST. CLARE CHURCH 2235 North Washington
     Ave. Scranton, PA. 18509 Eucharistic Adoration & Rosary
   note: Parish homepage. St. Clare has Adoration, Rosary and the food pantry, no Mass.
+promoted: 2026-10-17
 ---
 
 ## Publisher

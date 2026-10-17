@@ -30,6 +30,7 @@ evidence:
 - url: https://www.abingtoncatholic.org/
   seen: 2026-10-16
   quote: Church of Saint Benedict 1849 Newton Ransom Boulevard Clarks Summit, PA 18411
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

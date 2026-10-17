@@ -24,6 +24,7 @@ evidence:
   note: St. Catherine of Siena, Moscow's own ParishesOnline bulletin (18 October 2026), page 1, under
     "Pastor". Same pastor as St. Eulalia, separate bulletin with St. Catherine's own masthead (region
     B's row).
+promoted: 2026-10-17
 ---
 
 ## Publisher

@@ -22,6 +22,7 @@ evidence:
   note: 'probe po: the older ParishesOnline organization "Our Lady of Mount Carmel Church" (lpi 0018000000Qx8K4AAJ)
     serves the same container 04/0488, latest issue 11 October 2026: the same bulletin, so its ids are
     recorded here too.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

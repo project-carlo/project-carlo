@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   note: 'Page 1 (image) of the 18 October 2026 Saint Carlo Acutis bulletin: "Church of St. Anthony of
     Padua 215 Rebecca St. Throop, PA 18512"; SA Masses Tuesday/Thursday 8:00 am and Sunday 9:30 am.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   quote: 'Weekend & Daily Masses in: St. Aloysius Church'
   note: '11 October 2026 issue, page 3 (St. Robert Bellarmine''s page): Tuesday and Wednesday 8:00am,
     Saturday 4:00pm, Sunday 7:00am and 11:00am.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

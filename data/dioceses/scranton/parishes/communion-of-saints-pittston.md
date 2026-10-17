@@ -8,18 +8,28 @@ group: Communion of Saints Parish
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1275/20261018B.pdf
   seen: 2026-10-16
-  quote: 'COMMUNION OF SAINTS PARISH'
-  note: 'Masthead, page 1 of the 17-18 October 2026 issue ("The Weekly Word"): Communion of Saints Parish, Pittston, naming Our Lady of Mt. Carmel Church, St. John the Evangelist Church and St. Mary, Help of Christians Church.'
+  quote: COMMUNION OF SAINTS PARISH
+  note: 'Masthead, page 1 of the 17-18 October 2026 issue ("The Weekly Word"): Communion of Saints Parish,
+    Pittston, naming Our Lady of Mt. Carmel Church, St. John the Evangelist Church and St. Mary, Help
+    of Christians Church.'
 - url: https://container.parishesonline.com/bulletins/03/1275/20261018B.pdf
   seen: 2026-10-16
-  quote: 'St. Mary, Help of Christians'
-  note: 'Page 1 MASS SCHEDULE: Saturday 4:00 PM Our Lady of Mt. Carmel, 5:30 PM St. John the Evangelist; Sunday 8:00 AM St. Mary, Help of Christians, 9:30 AM St. John the Evangelist, 11:00 AM Our Lady of Mt. Carmel; daily 8:00 AM Mon/Wed/Fri St. John the Evangelist, 8:00 AM Tue/Thu St. Mary, Help of Christians, 11:30 AM Tue-Fri Our Lady of Mt. Carmel.'
+  quote: St. Mary, Help of Christians
+  note: 'Page 1 MASS SCHEDULE: Saturday 4:00 PM Our Lady of Mt. Carmel, 5:30 PM St. John the Evangelist;
+    Sunday 8:00 AM St. Mary, Help of Christians, 9:30 AM St. John the Evangelist, 11:00 AM Our Lady of
+    Mt. Carmel; daily 8:00 AM Mon/Wed/Fri St. John the Evangelist, 8:00 AM Tue/Thu St. Mary, Help of Christians,
+    11:30 AM Tue-Fri Our Lady of Mt. Carmel.'
 - url: https://parishesonline.com/organization/st-john-evangelist-church-st-joseph-marello-church
   seen: 2026-10-16
-  note: '`probe po`: "Communion of Saints Parish", 37 William Street, Pittston, LPi id 0018000000Qx8IoAAJ, container 03/1275, weekly issues through 2026-10-18. The org slug keeps two older parish names (St. John the Evangelist, St. Joseph Marello).'
+  note: '`probe po`: "Communion of Saints Parish", 37 William Street, Pittston, LPi id 0018000000Qx8IoAAJ,
+    container 03/1275, weekly issues through 2026-10-18. The org slug keeps two older parish names (St.
+    John the Evangelist, St. Joseph Marello).'
 - url: https://www.stjohnspittston.com/bulletins
   seen: 2026-10-16
-  note: '"The Roman Catholic Parishes of Pittston" (Google Sites; read in a browser): "We have two weekly bulletins for our three Parishes: The Weekly Word and Monday Messenger." The Weekly Word page embeds the ParishesOnline widget for this organization; Monday Messenger is an email newsletter.'
+  note: '"The Roman Catholic Parishes of Pittston" (Google Sites; read in a browser): "We have two weekly
+    bulletins for our three Parishes: The Weekly Word and Monday Messenger." The Weekly Word page embeds
+    the ParishesOnline widget for this organization; Monday Messenger is an email newsletter.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

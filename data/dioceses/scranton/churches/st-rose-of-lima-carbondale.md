@@ -28,6 +28,7 @@ evidence:
   note: 'Page 4 of the 11 October 2026 Our Lady of the Rosary bulletin: Saturday 4:00 pm, Sunday 7:30
     and 11:30 am, and Mon/Wed/Fri 8:00 am at SR; page 1 "Confessions: Saturdays at Saint Rose 3:15 to
     3:45 pm".'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

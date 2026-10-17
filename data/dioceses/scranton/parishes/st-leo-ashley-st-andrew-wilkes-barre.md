@@ -16,7 +16,7 @@ evidence:
   quote: Sunday 8:30 a.m. (St. Leo), 11:00 a.m. (St. Andrew)
 - url: https://irp.cdn-website.com/2c459b39/files/uploaded/bulletin_october_11_2026.pdf
   seen: 2026-10-16
-  quote: 'St. Leo the Great Mission Statement … St. Andrew Mission Statement'
+  quote: St. Leo the Great Mission Statement … St. Andrew Mission Statement
 - url: https://stleos-holyrosary.org/wp-content/uploads/2026/10/101126-Combined-bulletin.pdf-.pdf
   seen: 2026-10-16
   quote: ST. LEO the GREAT and ST. ANDREW MASS SCHEDULE
@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-16
   note: 'St. Leo''s Bulletins page (WordPress, read with visit.py): one post per Sunday linking ''<mmddyy>-Combined-bulletin.pdf'',
     newest 101826 (18 October 2026).'
+promoted: 2026-10-17
 ---
 
 ## Publisher

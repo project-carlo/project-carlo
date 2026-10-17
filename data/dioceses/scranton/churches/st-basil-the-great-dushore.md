@@ -27,6 +27,7 @@ evidence:
   quote: Monday—Friday at 9:00 AM … 4:00PM on Saturday at St. Basil the Great, Dushore … 101 Churchill
     Street
   note: Page 1 of the 18 October 2026 bulletin; Sunday 9:30 AM at St. Basil as well.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

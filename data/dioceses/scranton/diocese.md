@@ -2,8 +2,9 @@
 name: Roman Catholic Diocese of Scranton
 state: PA
 website: https://www.dioceseofscranton.org
-status: exploring
+status: promoted
 gcatholic: scra0
+promoted: 2026-10-17
 ---
 
 Eleven counties of northeastern Pennsylvania: Lackawanna (Scranton), Luzerne (Wilkes-Barre,

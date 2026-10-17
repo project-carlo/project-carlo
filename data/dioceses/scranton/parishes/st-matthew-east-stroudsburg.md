@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-16
   note: 'The parish site''s Bulletin page (Duda/OSV; links render in a browser): "This Week''s Bulletin
     Download" links http://sponsors.bonventure.net/?page=9183.'
+promoted: 2026-10-17
 ---
 
 ## Publisher

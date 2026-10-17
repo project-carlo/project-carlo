@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-16
   quote: Mailing Address PO Box 919 Conyngham, PA 18219-0919 GPS Only 573 State Route 93 Sugarloaf, PA
     18249
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

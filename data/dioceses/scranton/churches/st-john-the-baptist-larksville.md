@@ -27,6 +27,7 @@ evidence:
   quote: 4:00 PM (SJB)
   note: '11 October 2026 bulletin, page 2: Thursday and Friday 9:00 AM (SJB), Saturday 4:00 PM (SJB),
     Sunday 8:00 AM (SJB).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

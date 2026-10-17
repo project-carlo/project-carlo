@@ -3,17 +3,16 @@ name: Most Holy Trinity Parish
 website: https://sites.google.com/view/mostholytrinitynepa/bulletin
 bulletin_provider: other
 provider_id: ''
-publication:
-- url:https://sites.google.com/view/mostholytrinitynepa/bulletin
+publication: ['url:https://sites.google.com/view/mostholytrinitynepa/bulletin']
 group: Most Holy Trinity Parish Susquehanna
 evidence:
 - url: https://sites.google.com/view/mostholytrinitynepa/bulletin
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: October 18, 2026 Bulletin
   note: The parish's Google Sites "Bulletin" page, which links the current issue as a shared Google Doc
     (https://docs.google.com/document/d/18ujWxlm2oDDbN16oYTV8bTVI-l6ncVaqohnf9IWN50s/edit?usp=sharing).
 - url: https://docs.google.com/document/d/18ujWxlm2oDDbN16oYTV8bTVI-l6ncVaqohnf9IWN50s/edit?usp=sharing
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: '18 October 2026 issue, page 1 masthead: "Most Holy Trinity Parish, October 17-18, 2026—29th Sunday
     in Ordinary Time—Year A", the three churches with addresses (St. John the Evangelist, 15 E. Church
     Street, Susquehanna; St. Lawrence, 380 Franklin Street, Great Bend; St. Martin of Tours, 8175 State
@@ -23,8 +22,9 @@ evidence:
     and rendering it (parish-site-access render.py): the export has no text layer, so recheck cannot find
     this.'
 - url: https://discovermass.com/church/st-john-the-evangelist-susquehanna-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: Discover Mass page for St. John the Evangelist, Susquehanna lists no bulletins (issues.py).
+promoted: 2026-10-17
 ---
 
 ## Publisher

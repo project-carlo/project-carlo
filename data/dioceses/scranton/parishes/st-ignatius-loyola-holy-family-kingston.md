@@ -8,20 +8,27 @@ group: Saint Ignatius Loyola Parish; Holy Family Parish Luzerne
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/1732/2026-10-18.pdf
   seen: 2026-10-16
-  quote: '339 NORTH MAPLE AVENUE'
-  note: 'Cover (page 1) of the 18 October 2026 issue, "THE PARISHES OF" St. Ignatius and Holy Family: both addresses (339 North Maple Avenue, Kingston; 574 Rear Bennett Street, Luzerne), both Mass schedules, both offices and both websites.'
+  quote: 339 NORTH MAPLE AVENUE
+  note: 'Cover (page 1) of the 18 October 2026 issue, "THE PARISHES OF" St. Ignatius and Holy Family:
+    both addresses (339 North Maple Avenue, Kingston; 574 Rear Bennett Street, Luzerne), both Mass schedules,
+    both offices and both websites.'
 - url: http://sponsors.bonventure.net/pdfs/1732/2026-10-18.pdf
   seen: 2026-10-16
-  quote: 'LUZERNE, PENNSYLVANIA 18709-1332'
-  note: 'Page 1. St. Ignatius: Saturday 4:00 PM, Sunday 7:00 & 10:30 AM, Monday-Friday 7:30 AM. Holy Family: Saturday 5:15 PM, Sunday 9:00 AM, Monday-Friday 12:10 PM.'
+  quote: LUZERNE, PENNSYLVANIA 18709-1332
+  note: 'Page 1. St. Ignatius: Saturday 4:00 PM, Sunday 7:00 & 10:30 AM, Monday-Friday 7:30 AM. Holy Family:
+    Saturday 5:15 PM, Sunday 9:00 AM, Monday-Friday 12:10 PM.'
 - url: http://sponsors.bonventure.net/pdfs/1732/2026-10-18.pdf
   seen: 2026-10-16
-  quote: 'Holy Family Parish Staff'
-  note: 'Page 2: one pastoral staff (Monsignor David L. Tressler, Pastor; Rev. Michael Boris, Assistant Pastor) for both parishes, with each parish''s own staff and mission statement.'
+  quote: Holy Family Parish Staff
+  note: 'Page 2: one pastoral staff (Monsignor David L. Tressler, Pastor; Rev. Michael Boris, Assistant
+    Pastor) for both parishes, with each parish''s own staff and mission statement.'
 - url: http://sponsors.bonventure.net/?page=1732
   seen: 2026-10-16
-  quote: 'Click to View Current Bulletin'
-  note: 'Bonventure bulletin page 1732, headed "The Parishes of St. Ignatius of Loyola and Holy Family (Luzerne, PA)": weekly issues at pdfs/1732/<YYYY-MM-DD>.pdf back to 2024. Linked as PARISH BULLETIN from stignatiuspa.com and as BULLETIN & SPONSORS from holyfamilyluzerne.org (both read in a browser).'
+  quote: Click to View Current Bulletin
+  note: 'Bonventure bulletin page 1732, headed "The Parishes of St. Ignatius of Loyola and Holy Family
+    (Luzerne, PA)": weekly issues at pdfs/1732/<YYYY-MM-DD>.pdf back to 2024. Linked as PARISH BULLETIN
+    from stignatiuspa.com and as BULLETIN & SPONSORS from holyfamilyluzerne.org (both read in a browser).'
+promoted: 2026-10-17
 ---
 
 ## Publisher

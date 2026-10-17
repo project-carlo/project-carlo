@@ -3,30 +3,30 @@ name: St. Rita Parish
 website: https://www.stritaspa.org/News-Events
 bulletin_provider: other
 provider_id: ''
-publication:
-- url:https://www.stritaspa.org/News-Events
+publication: ['url:https://www.stritaspa.org/News-Events']
 group: Saint Rita Parish
 evidence:
 - url: https://www.stritaspa.org/News-Events/ID/5176/27th-Sunday-In-Ordinary-Time--October-4-2026
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: View the bulletin regarding the 27th Sunday Ordinary
   note: The parish site's News & Events post of Friday 2 October 2026, which embeds the 4 October bulletin
     PDF from c1.nd-cdn.us (read in a browser, parish-site-access visit.py; the Net Driven site gave curl
     a Cloudflare 502 once).
 - url: https://c1.nd-cdn.us/PDFs/3547627TH_ORD_10_04_26-1.pdf
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Sat. Oct. 3 VIGIL-TWENTY-SEVENTH SUNDAY IN ORDINARY TIME
   note: 'Page 1 of the 4 October 2026 bulletin: Mass intentions Saturday 4:00pm, Sunday 9:00am and 10:30am,
     Tuesday and Thursday 9:00am, all unnamed (one church), and the prayer list "by calling the parish
     office at 570-842-4995" (St. Rita''s number).'
 - url: https://www.stritaspa.org/Mass-Schedule
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Saturday-Vigil 4:00 p.m
   note: 'Parish Mass Schedule page: Sunday 9:00 a.m and 10:30 a.m., daily Tuesday & Thursday 9:00 a.m.,
     and "Please check the current bulletin which can be found on the News Page".'
 - url: https://discovermass.com/church/st-rita-gouldsboro-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   note: Discover Mass page for St. Rita lists no bulletins (issues.py, 2026-10-16).
+promoted: 2026-10-17
 ---
 
 ## Publisher

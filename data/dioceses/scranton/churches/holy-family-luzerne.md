@@ -1,6 +1,6 @@
 ---
 parish: st-ignatius-loyola-holy-family-kingston
-name: 'Holy Family Church'
+name: Holy Family Church
 line1: 574 Bennett St.
 line2: ''
 city: Luzerne
@@ -24,11 +24,14 @@ evidence:
     Street, Luzerne, PA, 18709; kind: worship-site; group: Holy Family Parish Luzerne'
 - url: http://sponsors.bonventure.net/pdfs/1732/2026-10-18.pdf
   seen: 2026-10-16
-  quote: '574 REAR BENNETT STREET'
-  note: 'Cover of the 18 October 2026 bulletin: HOLY FAMILY Saturday 5:15 PM, Sunday 9:00 AM, Monday-Friday 12:10 PM.'
+  quote: 574 REAR BENNETT STREET
+  note: 'Cover of the 18 October 2026 bulletin: HOLY FAMILY Saturday 5:15 PM, Sunday 9:00 AM, Monday-Friday
+    12:10 PM.'
 - url: https://www.holyfamilyluzerne.org/
   seen: 2026-10-16
-  note: 'Parish homepage (read in a browser): "574 Bennett Street, Luzerne, PA 18709"; its calendar lists "Mass at Holy Family Church" at 12:10p on 15 and 16 October 2026.'
+  note: 'Parish homepage (read in a browser): "574 Bennett Street, Luzerne, PA 18709"; its calendar lists
+    "Mass at Holy Family Church" at 12:10p on 15 and 16 October 2026.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

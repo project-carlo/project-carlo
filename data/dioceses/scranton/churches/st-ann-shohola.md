@@ -11,9 +11,7 @@ longitude: -74.9174375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:24056
-- directory:169-1
+roster: ['gcatholic:24056', 'directory:169-1']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24056
   seen: 2026-10-16
@@ -25,11 +23,12 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Ann Church'', 121 Richardson
     Avenue, Shohola, PA, 18458; kind: worship-site; group: Saint Ann Parish Shohola'
 - url: https://discovermass.com/church/st-ann-shohola-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: Confessions on Sunday 9:30am-10:00am
   note: 'Page 11 of the 11 October 2026 joint bulletin, St. Ann''s Parish, 125 Richardson Avenue, Shohola:
     Monday, Tuesday, Thursday and Friday 8:30am; Sunday 8:30am and 10:15am at St. Ann''s Church. Page
     3 of the 18 October issue: Saturday 24 October 5:30pm vigil (SA).'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -35,6 +35,7 @@ evidence:
   quote: Ann Catholic Church, … 1306 Northway Rd.
   note: St. Joseph the Worker's 18 October 2026 issue, page 2, on daily Mass at St. Ann during the priests'
     convocation (26-30 October).
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

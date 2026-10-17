@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-16
   quote: 'Sunday Mass Saturday Evening: 4:00 pm Sunday: 8:00 am, 10:30 am, 12:00 pm (Polish Mass)'
   note: 18 October 2026 issue, page 1, with "818 MAIN STREET • STROUDSBURG, PA 18360".
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

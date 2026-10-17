@@ -28,6 +28,7 @@ evidence:
   note: 'Page 4 of the 11 October 2026 Our Lady of the Rosary bulletin: Sunday 10:00 am and Tue/Thu 8:00
     am at OLMC; page 2 announces the Confirmation enrolment "at the 10:00 am Mass, Our Lady of Mt. Carmel
     Church".'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

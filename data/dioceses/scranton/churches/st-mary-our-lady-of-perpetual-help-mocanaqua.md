@@ -28,6 +28,7 @@ evidence:
   quote: Masses will be celebrated at St. Mary Mocanaqua
   note: '11 October 2026 St. Faustina bulletin, page 2: Monday 8:00am and Saturday 5:30pm (English) at
     St. Mary Mocanaqua.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

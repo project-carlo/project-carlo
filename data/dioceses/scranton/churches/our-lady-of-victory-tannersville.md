@@ -33,6 +33,7 @@ evidence:
 - url: https://olvchurch.com/
   seen: 2026-10-16
   quote: 'Physical Address: 327 Cherry Lane Rd Tannersville PA 18372'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-16
   quote: The new church for Most Holy Trinity Parish is located in the former gymnasium/auditorium of
     the now-closed Monsignor McHugh School located on Route 390 in Paradise Township.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

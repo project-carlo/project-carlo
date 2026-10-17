@@ -1,6 +1,6 @@
 ---
 parish: st-therese-st-frances-cabrini-shavertown
-name: 'Saint Therese Church'
+name: Saint Therese Church
 line1: 64 Davis St.
 line2: ''
 city: Shavertown
@@ -24,8 +24,10 @@ evidence:
     Street, Shavertown, PA, 18708; kind: worship-site; group: Saint Therese Parish'
 - url: https://www.thebostonpilot.com/bcd/Bulletins/261011/32223_261011.pdf
   seen: 2026-10-16
-  quote: '64 Davis Street | Shavertown, PA 18708'
-  note: 'Cover of the 11 October 2026 bulletin ("The Church of Saint Therese Lisieux"). Page 5 schedules Saturday 5:30PM, Sunday 8:00AM and 11:00AM and four weekday 9:00AM Masses at ST.'
+  quote: 64 Davis Street | Shavertown, PA 18708
+  note: Cover of the 11 October 2026 bulletin ("The Church of Saint Therese Lisieux"). Page 5 schedules
+    Saturday 5:30PM, Sunday 8:00AM and 11:00AM and four weekday 9:00AM Masses at ST.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

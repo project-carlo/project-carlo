@@ -30,6 +30,7 @@ evidence:
 - url: https://stmichaelscanton.com/about-us/
   seen: 2026-10-16
   quote: Saint John Nepomucene Church, 133 Exchange Street, Troy
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

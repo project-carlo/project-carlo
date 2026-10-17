@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-16
   note: 'Page 1 (image) of the 18 October 2026 bulletin: "Weekdays: Mon. - Fri. 7:30 AM / Saturday Vigil:
     4:00 PM / Sunday: 8:00 AM & 10:30 AM", 1090 Carmalt Street.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

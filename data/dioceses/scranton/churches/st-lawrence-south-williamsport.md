@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-16
   quote: 800 West Central Avenue
   note: Homepage contact block for St. Lawrence, read 2026-10-16.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

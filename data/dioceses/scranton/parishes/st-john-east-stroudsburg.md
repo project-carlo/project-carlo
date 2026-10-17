@@ -20,6 +20,7 @@ evidence:
   note: The parish site (Kartra; plain fetches get 403, read with visit.py) links "This Week's Bulletin"
     to /Bulletin, which lists the PDFs on a Kartra CloudFront bucket (d11n7da8rpqbjy.cloudfront.net/creditprimeusa/<number><Month>_<D>_<YYYY>.pdf),
     newest October_18_2026.
+promoted: 2026-10-17
 ---
 
 ## Publisher

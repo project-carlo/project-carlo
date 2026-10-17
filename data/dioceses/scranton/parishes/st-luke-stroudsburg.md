@@ -20,6 +20,7 @@ evidence:
   seen: 2026-10-16
   note: The parish site's Bulletin page (Squarespace; read with visit.py) links "Click Here for Bulletin"
     to https://sponsors.bonventure.net/?page=1480.
+promoted: 2026-10-17
 ---
 
 ## Publisher

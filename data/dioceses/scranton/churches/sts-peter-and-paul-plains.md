@@ -27,6 +27,7 @@ evidence:
   quote: 'Saturday: 4:00pm - Saints Peter & Paul'
   note: '20 September 2026 issue: Saturday 4:00pm, Sunday 7:30am and 10:30am, Tuesday-Friday 12:15pm.
     The 4 October issue (image-only) has the same weekend schedule.'
+promoted: 2026-10-17
 ---
 
 ## Holds Mass

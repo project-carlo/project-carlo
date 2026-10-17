@@ -11,9 +11,7 @@ longitude: -75.1974375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23981
-- directory:119-3
+roster: ['gcatholic:23981', 'directory:119-3']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23981
   seen: 2026-10-16
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Scranton Find a Parish: worship sites as ''Saint Joseph Church'', 2270 Hancock
     Highway, Equinunk, PA, 18417; kind: worship-site; group: Saint John the Evangelist Parish'
 - url: https://discovermass.com/church/st-john-the-evangelist-honesdale-pa/
-  seen: '2026-10-16'
+  seen: 2026-10-16
   quote: 9:00AM - St. Joseph, Rileyville
   note: Page 4 of the 18 October 2026 bulletin.
+promoted: 2026-10-17
 ---
 
 ## Holds Mass
