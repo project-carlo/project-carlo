@@ -28,7 +28,8 @@ church's `bulletin_url` and `bulletin_week` describe its parish's current
 bulletin, the one its events come from: `bulletin_week` is the ISO date of
 the Sunday of the week that bulletin is for (`bulletin_week.bulletin_week`),
 or null when the bulletin has no date at all. Churches retired from
-churches.csv are left out.
+churches.csv are left out, and so are the churches (and events) of fetch-only
+parishes, which are fetched but not yet processed.
 
 Each parish's events come from its own mode (docs/schedule-state-plan.md):
 
@@ -271,6 +272,14 @@ def _update_mode_events(conn: sqlite3.Connection) -> list[tuple]:
     ]
 
 
+def _fetch_only_parish_ids(conn: sqlite3.Connection) -> set[int]:
+    """Parishes the site leaves out until their bulletins are processed (none before migration 7)."""
+    columns = {row[1] for row in conn.execute("PRAGMA table_info(parish)").fetchall()}
+    if "fetch_only" not in columns:
+        return set()
+    return {row[0] for row in conn.execute("SELECT id FROM parish WHERE fetch_only = 1")}
+
+
 _ID, _CHURCH, _TYPE, _KIND, _DAY, _DATE, _START = range(7)
 _CANCELLED = EVENT_COLUMNS.index("cancelled")
 _CANCELS = EVENT_COLUMNS.index("cancels_event_id")
@@ -346,6 +355,11 @@ def extract(
             _extract_mode_events(src, update_mode) + _update_mode_events(src),
             build_date or date.today(),
         )
+        hidden = _fetch_only_parish_ids(src)
+        if hidden:
+            churches = [row for row in churches if row[1] not in hidden]
+            shown = {row[0] for row in churches}
+            events = [row for row in events if row[_CHURCH] in shown]
     finally:
         src.close()
 

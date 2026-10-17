@@ -279,6 +279,22 @@ The run's status decides what happens next:
 
 A local run never publishes anything.
 
+### Fetch-only parishes
+
+A parish with `fetch_only` set to `true` in `data/parishes.csv` has its
+bulletins fetched and stored every week, but `process` makes no model call for
+it (Gemini or OpenAI), and the snapshot leaves out its churches, so the site
+doesn't show them yet. Its fetch results get their own section of the run
+report, and its failures don't count toward the publishing checks.
+`pnpm diocese promote` marks every parish row it adds this way, so a new
+diocese's bulletins can be checked before any money goes on extracting them.
+
+To switch parishes on, clear the flag (leave the cell empty). The next run
+processes each one's latest bulletin, not the weeks it was fetch-only.
+Expect that run to be held if many parishes go live at once: their events
+move the total past the 10% check. `pnpm process -- --include-fetch-only`
+processes fetch-only parishes anyway, e.g. to try a few with `--parish`.
+
 ### GitHub Actions
 
 `.github/workflows/weekly-docker.yml` runs Sundays at 08:17 UTC (and on

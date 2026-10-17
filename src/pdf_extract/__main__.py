@@ -175,6 +175,7 @@ def _cmd_process(args: argparse.Namespace) -> Result:
     _ensure_db()
     return process_bulletins(
         parish_name=args.parish, model=args.model, concurrency=args.concurrency,
+        include_fetch_only=args.include_fetch_only,
     )
 
 
@@ -403,6 +404,10 @@ def _build_parser() -> argparse.ArgumentParser:
     process_parser.add_argument(
         "--concurrency", type=int, default=5,
         help="Number of parallel model calls (default: 5)",
+    )
+    process_parser.add_argument(
+        "--include-fetch-only", action="store_true",
+        help="Also process fetch-only parishes (fetch_only in parishes.csv), e.g. to try a few",
     )
     process_parser.set_defaults(handler=_cmd_process)
     _add_common_args(process_parser)

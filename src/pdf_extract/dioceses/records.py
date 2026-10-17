@@ -846,6 +846,8 @@ def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]
 
 
 PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id"]
+# Set on the parish rows `promote` adds; kept as it is on rows already live.
+FETCH_ONLY_COLUMN = "fetch_only"
 CHURCH_CSV_FIELDS = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
     "name_verified", "address_verified", "latitude", "longitude",
@@ -1223,8 +1225,10 @@ def export_csv(diocese: str, out_dir: Path) -> dict[str, Any]:
 
 
 def _write_live_csv(path: Path, columns: list[str], rows: list[dict[str, str]]) -> None:
+    """Write `rows` under the file's own header, adding any of `columns` it lacks."""
     with open(path, encoding="utf-8", newline="") as f:
-        header = next(csv.reader(f), columns)
+        header = next(csv.reader(f), [])
+    header += [col for col in columns if col not in header]
     tmp = path.with_suffix(".csv.tmp")
     with open(tmp, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=header, lineterminator="\n", extrasaction="ignore")
@@ -1244,6 +1248,10 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     flags from `verify`) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share
     its slug with a live row from then on; an `unpublished` one loses its stamp.
+
+    A parish row added here is marked `fetch_only`: the weekly run fetches its
+    bulletins but makes no model call for it and leaves it off the website
+    until the flag is cleared. Rows already live keep their flag.
     """
     d = _ready(diocese)
     after = d.copy()
@@ -1294,6 +1302,10 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
                      "kept_live_values": adopted}
 
     new_p, report["parishes"] = apply(PARISH, live_p, parish_rows, retired_p)
+    added_p = set(report["parishes"]["added"])
+    for row in new_p:
+        if row.get("slug") in added_p:
+            row[FETCH_ONLY_COLUMN] = "true"
     new_c, report["churches"] = apply(CHURCH, live_c, church_rows, retired_c)
 
     live_church_parents = {row.get("parish_id") for row in new_c}
@@ -1312,7 +1324,9 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
                     r.pop("promoted", None)
                 else:
                     r["promoted"] = r.get("promoted") or stamp
-        _write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
+        _write_live_csv(
+            storage.PARISHES_CSV_PATH, [*PARISH_CSV_FIELDS, FETCH_ONLY_COLUMN], new_p,
+        )
         _write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
         _save(d, after)
         meta_path = diocese_dir(diocese) / META_FILE
@@ -1321,6 +1335,11 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
         _write_text(meta_path, f"---\n{_dump_front(front)}---\n\n{body}\n")
         report["next"] = (
             "run `pnpm test`; the next pipeline command seeds the new rows into the database"
+            + (
+                f". The {len(added_p)} new parishes are fetch-only: clear `fetch_only` in"
+                " data/parishes.csv to process them and show them on the site"
+                if added_p else ""
+            )
         )
     return report
 

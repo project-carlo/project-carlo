@@ -191,19 +191,22 @@ def seed_reference_data(
             parish_slugs.add(slug)
             conn.execute(
                 """INSERT INTO parish(
-                       slug, name, homepage_url, bulletin_provider, provider_id, created_at
-                   ) VALUES (?, ?, ?, ?, ?, ?)
+                       slug, name, homepage_url, bulletin_provider, provider_id, fetch_only,
+                       created_at
+                   ) VALUES (?, ?, ?, ?, ?, ?, ?)
                    ON CONFLICT(slug) DO UPDATE SET
                        name = excluded.name,
                        homepage_url = excluded.homepage_url,
                        bulletin_provider = excluded.bulletin_provider,
-                       provider_id = excluded.provider_id""",
+                       provider_id = excluded.provider_id,
+                       fetch_only = excluded.fetch_only""",
                 (
                     slug,
                     row["name"],
                     row["website"],
                     (row.get("bulletin_provider") or "").strip() or None,
                     (row.get("provider_id") or "").strip() or None,
+                    _csv_bool(row.get("fetch_only")),
                     now,
                 ),
             )
