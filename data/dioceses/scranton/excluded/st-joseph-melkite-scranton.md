@@ -1,5 +1,5 @@
 ---
-name: St. Joseph
+name: St. Joseph Melkite Catholic Church
 reason: other-jurisdiction
 line1: 130 St Francis Cabrini Ave.
 city: Scranton
@@ -17,10 +17,8 @@ evidence:
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+GCatholic lists this church (id 16566) among the churches in the Diocese of Scranton's territory but marks it with the Greek-Melkite rite: it belongs to the Melkite Eparchy of Newton, an Eastern Catholic jurisdiction, not to the Roman Catholic Diocese of Scranton. This is the scope rule settled in `diocese.md` (Eastern Catholic churches are `other-jurisdiction`), not a judgement about the church: it was not checked for current services. The diocesan finder does not list it. The rite field on GCatholic is the evidence.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+A project decision to cover Eastern Catholic eparchies (here the Melkite Eparchy of Newton).
