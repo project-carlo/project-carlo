@@ -1,7 +1,7 @@
 ---
 parish: st-ann-emmaus
 name: St. Ann
-line1: 500 Block Wood St.
+line1: 500 Wood Street
 line2: ''
 city: Emmaus
 state: PA
@@ -9,7 +9,7 @@ postal_code: '18049'
 latitude: 40.5291875
 longitude: -75.4909375
 coordinates_from: gcatholic-plus-code
-name_verified: false
+name_verified: true
 address_verified: false
 roster: ['gcatholic:23644', 'directory:8054']
 evidence:
@@ -22,14 +22,20 @@ evidence:
   seen: 2026-10-18
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Ann'', 500 Wood Street, Emmaus, PA,
     18049; kind: place'
+- url: https://www.churchstann.org/s/20261018B.pdf
+  seen: 2026-10-18
+  quote: 4:30pm (Vigil)
+  note: Page 1 of the 18 October 2026 issue (Sunday 7:30am, 9:00am, 11:00am; weekdays 8:00am Mon.-Sat.).
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin: Saturday 4:30 pm, Sunday 7:30, 9 and 11 am, weekdays
+8 am.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The diocesan map gives "500 Wood Street" and GCatholic "500 Block Wood St."; the bulletin
+gives only the rectory, 415 S. Sixth Street. No source gives an exact street number for
+the church, so `address_verified` stays false. Coordinates are GCatholic's Plus Code
+(87G6GGH5+MJ), next to the diocesan pin.

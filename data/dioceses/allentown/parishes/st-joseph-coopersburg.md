@@ -4,28 +4,34 @@ website: https://www.stjoescoopersburg.org/bulletin-newsletter/
 bulletin_provider: other
 provider_id: ''
 publication: ['url:https://www.stjoescoopersburg.org/bulletin-newsletter/']
-group: ''
-evidence: []
+group: St. Joseph Parish, Coopersburg
+evidence:
+- url: https://www.stjoescoopersburg.org/app/download/7249717477/stjosephchurch_bulletin_oct112026_rev.pdf
+  seen: 2026-10-18
+  quote: 5050 St. Joseph Road, Coopersburg, PA 18036
+  note: 'Page 1 of the 11 October 2026 issue (newest on 18 October). Same issue: "Saturday Evening Vigil
+    - 5:15PM", "Sunday Morning - 9:00AM and 11:00AM", "Weekday Mass - 8:00AM".'
+- url: https://www.stjoescoopersburg.org/bulletin-newsletter/
+  seen: 2026-10-18
+  note: Bulletin page (Jimdo / IONOS "app/download" links) listing the 20 Sep, 27 Sep, 4 Oct and 11 Oct
+    2026 issues; dates are in the file names (stjosephchurch_bulletin_oct112026_rev.pdf).
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Joseph, 5050 St. Joseph's Road, Coopersburg, posts its own bulletin on its website.
+The 11 October 2026 issue (the newest on 18 October) names St. Joseph alone and gives
+Saturday 5:15 PM vigil, Sunday 9 and 11 AM, and weekdays 8 AM.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- `st-joseph-coopersburg`.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`other`, self-hosted (Jimdo `app/download/<n>/<name>.pdf`). The file names carry the
+date as "oct112026".
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

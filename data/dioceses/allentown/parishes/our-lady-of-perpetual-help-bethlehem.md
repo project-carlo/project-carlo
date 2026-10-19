@@ -41,6 +41,8 @@ eCatholic, so the provider is `other` and the recipe pins the Bon Venture page o
 org `our-lady-of-perpetual-help-church-18020` and the Discover Mass page
 `our-lady-of-perpetual-help-bethlehem-pa` exist with no bulletins; not recorded.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved, `page-pdfs on http://sponsors.bonventure.net/?page=1588: current`, pdfs/1588/2026-10-18.pdf.
+
 ## Not yet confirmed
 
 Nothing.

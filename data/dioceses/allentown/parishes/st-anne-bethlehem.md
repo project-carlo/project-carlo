@@ -35,6 +35,8 @@ template PDF, which redirects to the church-bulletin.org listing. Provider `othe
 Weekly Bulletins page. An empty ParishesOnline org `st-anne-church-18017` exists with no
 publications; not recorded.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved, `page-pdfs on https://church-bulletin.org/263: current`, the 18 October 2026 PDF.
+
 ## Not yet confirmed
 
 Nothing.

@@ -2,7 +2,7 @@
 name: Incarnation of Our Lord Parish
 website: https://www.incarnationofourlord.org/bulletins/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.incarnationofourlord.org/bulletins/']
 group: 'Rev. Andrew N. Gehringer, pastor of Holy Infancy and Incarnation of Our Lord'
 revisit: 'Confirm a new issue after 2026.10.03 has been posted, and that the pipeline can fetch over the incomplete TLS chain.'
@@ -51,7 +51,9 @@ finances, and this site keeps posting Incarnation's own issues, so the two are s
 
 `other`, self-hosted: the website is the /bulletins page that lists the PDFs. The site's TLS
 certificate chain is incomplete (curl: "unable to get local issuer certificate"; Chrome
-completes it). See the fetch check below for whether the pipeline can read it.
+completes it).
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): **download failed**. The resolver picked the right file (`page-pdfs on https://www.incarnationofourlord.org/bulletins/: first-listed, dated 2026-10-03`, the newest posted), and the recipe it printed, `page-pdfs`, is pinned; but the download fails on the server's incomplete TLS chain (`CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate`, also on the fallback). The pipeline cannot read this bulletin until the site fixes its certificate chain or the fetcher completes chains (AIA) as Chrome does.
 
 ## Not yet confirmed
 

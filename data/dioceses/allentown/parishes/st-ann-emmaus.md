@@ -4,28 +4,34 @@ website: https://www.churchstann.org/bulletinnews/bulletin
 bulletin_provider: other
 provider_id: ''
 publication: ['url:https://www.churchstann.org/bulletinnews/bulletin']
-group: ''
-evidence: []
+group: St. Ann Parish, Emmaus
+evidence:
+- url: https://www.churchstann.org/s/20261018B.pdf
+  seen: 2026-10-18
+  quote: 7:30am, 9:00am*, 11:00am*
+  note: 'Page 1 of the 18 October 2026 issue: MASS SCHEDULE Saturday 4:30pm (Vigil), Sunday 7:30am, 9:00am*,
+    11:00am*, Weekday 8:00am* (Mon.-Sat.); footer "415 S. Sixth Street, Emmaus, PA 18049 | www.churchstann.org".'
+- url: https://www.churchstann.org/bulletinnews/bulletin
+  seen: 2026-10-18
+  note: Squarespace bulletin page linking /s/YYYYMMDDB.pdf (LPi-style names, but self-hosted; no LPi id
+    on the site) plus inserts cwb_MM-DD.pdf and pwb_MM-DD.pdf.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Ann, Emmaus, posts its own weekly bulletin on its Squarespace site. The 18 October
+2026 issue gives Masses Saturday 4:30 pm, Sunday 7:30, 9 and 11 am, weekdays 8 am, all
+at St. Ann's; no other church is named.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- `st-ann-emmaus`, 500 block of Wood Street (the rectory is 415 S. Sixth Street).
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`other`, Squarespace. The bulletin is `/s/YYYYMMDDB.pdf`; the page also links two weekly
+inserts (`cwb_`, `pwb_`), which are not the bulletin.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

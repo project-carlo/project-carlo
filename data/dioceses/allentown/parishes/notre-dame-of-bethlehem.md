@@ -36,6 +36,8 @@ churchofndbeth.org redirects there). Its /bulletins page embeds the ParishesOnli
 `probe po notre-dame-of-bethlehem-church` gives the ids in `publication` and issues to 18
 October 2026.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to container 04/0848, 20261018B.pdf.
+
 ## Not yet confirmed
 
 Nothing.

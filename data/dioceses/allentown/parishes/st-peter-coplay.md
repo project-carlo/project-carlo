@@ -4,28 +4,41 @@ website: https://www.stpeterchurchcoplay.com/weekly-bulletin
 bulletin_provider: other
 provider_id: ''
 publication: ['url:https://www.stpeterchurchcoplay.com/weekly-bulletin']
-group: ''
-evidence: []
+group: St. Peter Parish, Coplay (same pastor as St. John the Baptist, Whitehall)
+evidence:
+- url: https://www.stpeterchurchcoplay.com/_files/ugd/c48b49_1fcb589607e8461d844ffb3f903bb9e7.pdf
+  seen: 2026-10-18
+  quote: 'Saturday Evening: 4:30 P.M. Sunday: 10:30 A.M.'
+  note: 'Page 1 of the 18 October 2026 issue ("Sunday, October 18, 2026 Saint Peter Church"; linked as
+    "Bulletin 10-18-2026"): PASTOR Rev. Msgr. David L. James; MASS SCHEDULE 8 A.M Wednesdays and Fridays,
+    Saturday 4:30 P.M., Sunday 10:30 A.M.'
+- url: https://www.stpeterchurchcoplay.com/weekly-bulletin
+  seen: 2026-10-18
+  quote: Bulletin 10-18-2026
+  note: Wix "Weekly Bulletin/Letters" page, one /_files/ugd/ PDF per Sunday back to 1 March 2026, links
+    not in date order.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Peter, 4 S. Fifth Street, Coplay, posts its own weekly bulletin on its Wix site. The
+18 October 2026 issue is headed "Saint Peter Church", with Masses Wednesday and Friday
+8 AM, Saturday 4:30 PM and Sunday 10:30 AM.
+
+Msgr. David L. James is pastor of both St. Peter and St. John the Baptist, Whitehall
+(Stiles); they share a deacon and the Saint Carlo Acutis regional PREP. But each
+publishes its own bulletin: St. John's 18 October issue is a separate John Patrick
+publication with its own masthead and a weekday intention "MASS at St. Peter". Two rows.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- `st-peter-coplay`.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`other`, Wix. File names are hashes; the date is only in the link text, and the links
+are not in date order.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

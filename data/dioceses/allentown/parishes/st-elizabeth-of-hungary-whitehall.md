@@ -4,28 +4,38 @@ website: https://www.sercc.org/st-elizabeth-church/weekly-bulletin/
 bulletin_provider: other
 provider_id: ''
 publication: ['url:https://www.sercc.org/st-elizabeth-church/weekly-bulletin/']
-group: ''
-evidence: []
+group: St. Elizabeth of Hungary Parish (with former Ss. Peter and Paul, Allentown)
+evidence:
+- url: https://www.sercc.org/st-elizabeth-church/wp-content/uploads/2026/10/October-18-2026.pdf
+  seen: 2026-10-18
+  quote: ST. ELIZABETH OF HUNGARY CHURCH
+  note: 'Page 2 header of the 18 October 2026 issue. Mass intentions 19-25 October: weekdays 9:00 AM (Thursday
+    7:00 PM), Saturday 4:30 PM, Sunday 8:00 and 10:00 AM; "MASS ATTENDANCE ON OCTOBER 10 – 11" Saturday
+    4:30 pm, Sunday 8:00 am and 10:00am.'
+- url: https://www.sercc.org/st-elizabeth-church/weekly-bulletin/
+  seen: 2026-10-18
+  note: WordPress "Weekly Bulletin" page with one PDF per Sunday named <Month>-<D>-<YYYY>.pdf, newest
+    October-18-2026.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Elizabeth of Hungary, 618 Fullerton Avenue, Whitehall, posts its own weekly bulletin
+on sercc.org. The 18 October 2026 issue gives weekday Masses at 9 AM (Thursday 7 PM),
+Saturday 4:30 PM and Sunday 8 and 10 AM, all at St. Elizabeth.
+
+Ss. Peter and Paul Parish, Allentown, was consolidated into St. Elizabeth in 2021 (AD
+Today, 22 March 2021). Its church was to stay open for funerals and two Masses a year;
+no 2026 bulletin read here mentions it (see `open/sts-peter-and-paul-allentown`).
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- `st-elizabeth-of-hungary-whitehall`.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`other`, WordPress; dated file names (October-18-2026.pdf).
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing for this row.

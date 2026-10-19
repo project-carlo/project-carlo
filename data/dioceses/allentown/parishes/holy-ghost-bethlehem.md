@@ -37,13 +37,11 @@ Sunday Masses at 7:00, 8:30 and 10:30 AM and daily Masses at 7:00 and 8:00 AM.
 
 - Holy Ghost, 417 Carlton Avenue, Bethlehem (`holy-ghost-bethlehem`): Sunday 8:30 and
   10:30 AM, weekdays 8:00 AM.
-- **St. Stephen of Hungary Oratory, 510 Union Street, Allentown** (Lehigh County, outside
-  this region): the bulletin marks the Sunday 7:00 AM and the weekday 7:00 AM Masses
-  "Offered at St. Stephen of Hungary Oratory". The diocesan directory's entry for the oratory
-  (`directory:8146`) gives Holy Ghost's website, holyghost-church.org, and no Masses of its
-  own. Its church record belongs to the Lehigh region's records and was not created here; it
-  should be a church under this parish row (`--parish holy-ghost-bethlehem`), since this is
-  the bulletin that carries its schedule.
+- St. Stephen of Hungary Oratory, 510 Union Street, Allentown
+  (`st-stephen-of-hungary-oratory-allentown`, recorded by the Lehigh-region pass): the
+  bulletin marks the Sunday 7:00 AM and the weekday 7:00 AM Masses "Offered at St. Stephen of
+  Hungary Oratory". The diocesan directory's entry for the oratory (`directory:8146`) gives
+  Holy Ghost's website, holyghost-church.org, and no Masses of its own.
 
 ## Website and bulletin provider
 
@@ -51,8 +49,10 @@ holyghost-church.org links its bulletin as https://church-bulletin.org/227, whic
 to the John Patrick Publishing listing recorded in `publication`; that lists one PDF per
 Sunday at `/bulletin/<slug>/<YYYY-MM-DD>.pdf`, newest 18 October 2026. Provider `other`, with
 the recipe `page-pdfs https://church-bulletin.org/227` (the form Scranton's Christ the King
-uses for this publisher; see fetch check below).
+uses for this publisher).
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved, `page-pdfs on https://church-bulletin.org/227: current`, the 18 October 2026 PDF; the pinned recipe is the one it printed.
 
 ## Not yet confirmed
 
-Nothing for this row; the oratory's church record is for the Lehigh region.
+Nothing.

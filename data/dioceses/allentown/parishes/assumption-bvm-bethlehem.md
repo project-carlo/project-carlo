@@ -41,6 +41,8 @@ The bulletin was found by trying the Discover Mass church page for the parish's 
 parish homepage itself links no bulletin. Discover Mass lists issues up to 18 October 2026
 (and 11 October), so `discover_mass` with that church slug as `provider_id`.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to this week's Discover Mass issue.
+
 ## Not yet confirmed
 
 Nothing.

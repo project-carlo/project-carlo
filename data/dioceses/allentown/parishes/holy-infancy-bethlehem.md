@@ -45,6 +45,8 @@ holyinfancychurch.com is the parish site in the diocesan directory and the bulle
 /bulletins page embeds the ParishesOnline widget. `probe po holy-infancy-church` gives the ids
 in `publication` and issues to 18 October 2026.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to container 03/1407, 20261018B.pdf.
+
 ## Not yet confirmed
 
 Nothing. The bulletin is mostly image pages; the pipeline will have to read them as images.

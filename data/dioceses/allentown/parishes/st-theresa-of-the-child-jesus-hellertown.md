@@ -39,6 +39,8 @@ Provider `ecatholic`. Until summer 2026 the parish posted bulletins on a Duda si
 engines still index; those are earlier issues of this same bulletin. Discover Mass
 `st-theresa-of-the-child-jesus-hellertown-pa` lists no bulletins.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to files.ecatholic.com/39015/bulletins/20261018.pdf.
+
 ## Not yet confirmed
 
 Nothing.

@@ -38,6 +38,8 @@ sacredheartbethlehem.com, an eCatholic site whose bulletin page embeds site id 3
 `ecatholic`, website that site. The ParishesOnline org `sacred-heart-church-18020` and the
 Discover Mass page `sacred-heart-bethlehem-pa` exist with no bulletins; not recorded.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to files.ecatholic.com/35958/bulletins/20261011.pdf, the newest posted.
+
 ## Not yet confirmed
 
 The 18 October issue was not posted by 18 October (the 11 October one covers that weekend's

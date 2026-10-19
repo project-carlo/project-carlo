@@ -63,8 +63,9 @@ in Chrome. Provider `other`, website the homepage. The ParishesOnline org
 `our-lady-of-mount-carmel-church-18013` (lpi 0018000000QxAkdAAF) and the Discover Mass page
 `our-lady-of-mount-carmel-italian-roseto-pa` exist but have no bulletins; not recorded.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): read, but **one issue behind**: `page-pdfs on https://olmcroseto.org/: first-listed, dated 2026-10-11`, the issue the homepage links, while the 18 October issue (143) had been in the WordPress media library since 14 October. The homepage seems to be updated late in the week; not pinned. Re-check later in a week whether it picks the current issue.
+
 ## Not yet confirmed
 
 The homepage lagged one issue behind the media library on 18 October (it linked 11 October
-while the 18 October issue was uploaded on the 14th). See the fetch check for what the
-resolver picks.
+while the 18 October issue was uploaded on the 14th). See the fetch check above.

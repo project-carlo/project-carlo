@@ -38,6 +38,8 @@ redirects to the church-bulletin.org listing (one PDF per Sunday, newest 18 Octo
 Provider `other`. An empty ParishesOnline org `st-rocco-church-18063` exists with no
 publications; not recorded.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved, `page-pdfs on https://church-bulletin.org/270: current`, the 18 October 2026 PDF.
+
 ## Not yet confirmed
 
 Nothing.

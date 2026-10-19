@@ -69,6 +69,8 @@ org's widget. The directory's Queenship address, queenshipofmary.weconnect.com, 
 `assumption-bvm-church-18067` (lpi 0018000000QxAjZAAV), with no publications; they are not
 this bulletin and are not recorded.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to container 04/0555, 20261018B.pdf.
+
 ## Not yet confirmed
 
 Nothing.

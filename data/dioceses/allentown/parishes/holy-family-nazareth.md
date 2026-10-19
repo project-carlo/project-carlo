@@ -45,6 +45,8 @@ holy-family-church-18064` gives the org's ids (recorded in `publication`) and is
 October 2026. GCatholic's website for the parish (holyfamilyparish.myownparish.com) is an
 old address and was not used.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to container 03/1198, 20261018B.pdf.
+
 ## Not yet confirmed
 
 Nothing.

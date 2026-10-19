@@ -48,6 +48,8 @@ belongs to OLHC's row (Lehigh region), not this one.
 simonandjudepa.org (in the directory and GCatholic) links the Discover Mass church page, which
 lists issues to 18 October 2026. Provider `discover_mass` with that slug.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to this week's Discover Mass issue.
+
 ## Not yet confirmed
 
 Nothing.

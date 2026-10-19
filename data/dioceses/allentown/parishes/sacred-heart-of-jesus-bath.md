@@ -36,9 +36,11 @@ diocesan directory. The diocese lists no partner parish.
 sacredheartbath.org is the parish site in the directory (GCatholic's sacredheartchurch.com
 redirects there). It links the bulletin as jppc.net/onlinebulletins/259template.pdf, which
 redirects to the church-bulletin.org listing (one PDF per Sunday, newest 18 October 2026).
-Provider `other`; the recipe is the one fetch:check printed (see the fetch check below).
+Provider `other`; the recipe pins the church-bulletin.org listing.
 An empty ParishesOnline org `sacred-heart-church-18014` exists with no publications; not
 recorded.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved, `page-pdfs on https://church-bulletin.org/259: current`, the 18 October 2026 PDF.
 
 ## Not yet confirmed
 

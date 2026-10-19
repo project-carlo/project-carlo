@@ -50,6 +50,8 @@ images (18 October issue: no text on any of its 8 pages), so the pipeline will h
 as images. Empty ParishesOnline orgs exist for each church (`our-lady-of-mercy-church-18042`,
 `st-anthony-of-padua-church-18042`) with no publications; not recorded.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved, `page-pdfs on https://church-bulletin.org/207: current`, the 18 October 2026 PDF (image-only).
+
 ## Not yet confirmed
 
 The directory still names Rev. Keith R. Laskowski as pastor; the bulletin names Rev. Mark

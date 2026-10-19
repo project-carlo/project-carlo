@@ -4,28 +4,55 @@ website: http://www.immaculateconceptionallentown.org/news.html
 bulletin_provider: other
 provider_id: ''
 publication: ['url:http://www.immaculateconceptionallentown.org/latestbulletin.pdf']
-group: ''
-evidence: []
+group: Immaculate Conception BVM Parish (same pastor as Sacred Heart of Jesus)
+evidence:
+- url: http://www.immaculateconceptionallentown.org/latestbulletin.pdf
+  seen: 2026-10-18
+  quote: Immaculate Conception BVM Church
+  note: 'Page 1 masthead of the issue dated "29th Sunday in Ordinary Time OCTOBER 18, 2026" (file Last-Modified
+    13 Oct 2026): 501 Ridge Avenue, Rev. John M. Gibbons, Pastor; MASS SCHEDULE Saturdays 4:00 PM, Sundays
+    9:00 AM (English) and 10:30 AM (Polish), Daily 8:00 AM. This file is overwritten weekly, so the quote
+    is good only until the next issue.'
+- url: http://www.immaculateconceptionallentown.org/latestbulletin.pdf
+  seen: 2026-10-18
+  quote: SHRINE OF OUR LADY OF GUADALUPE
+  note: Same page; "Mass & Novena Mondays 8:00 AM" at the shrine, which is inside this church (the diocesan
+    map says the church was "Declared National Shrine of Our Lady of Guadalupe").
+- url: http://www.immaculateconceptionallentown.org/news.html
+  seen: 2026-10-18
+  quote: Please click HERE for our Latest Bulletin
+  note: The parish site's News page links latestbulletin.pdf ("Latest Bulletin") and archive.pdf ("Bulletin
+    Archive"). The home page does not link the bulletin, so the News page is the website.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+Immaculate Conception BVM, 501 Ridge Avenue, publishes its own bulletin as one PDF that is
+overwritten each week (`latestbulletin.pdf`). The issue read on 18 October 2026 is dated
+"29th Sunday in Ordinary Time, October 18, 2026"; its page-1 masthead names this church
+alone, with Masses Saturday 4 PM, Sunday 9 AM (English) and 10:30 AM (Polish), and daily
+8 AM.
+
+Its pastor, Fr. John M. Gibbons, and assistant, Fr. David J. Kozak, also serve Sacred
+Heart of Jesus (diocesan map), but Sacred Heart publishes a separate bulletin on its own
+site (`sacred-heart-of-jesus-allentown`): the 18 October issues are different documents
+with different mastheads and schedules. Two rows.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- `immaculate-conception-bvm-allentown`, 501 Ridge Avenue (also the National Shrine of
+  Our Lady of Guadalupe).
+
+GCatholic lists "Our Lady of Mercy" (Syriac rite) at the same address, 501 Ridge Ave.;
+that is a Syriac Catholic community, excluded as `other-jurisdiction`
+(`our-lady-of-mercy-syriac-allentown`). This bulletin does not mention it.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`other`, self-hosted on the parish's own static site (JMS). The website is the News page
+because that is the only page linking the PDF. The PDF keeps one address, so the pipeline
+has to fetch it again each week and tell issues apart by content.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

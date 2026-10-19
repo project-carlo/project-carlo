@@ -1,7 +1,7 @@
 ---
 parish: annunciation-bvm-catasauqua
 name: Annunciation of the Blessed Virgin Mary
-line1: 122 Union St.
+line1: 122 Union Street
 line2: ''
 city: Catasauqua
 state: PA
@@ -9,8 +9,8 @@ postal_code: '18032'
 latitude: 40.6506875
 longitude: -75.4685625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:23602', 'directory:7978']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23602
@@ -22,14 +22,25 @@ evidence:
   seen: 2026-10-18
   note: 'Listed in Diocese of Allentown parish map: places as ''Annunciation BVM'', 122 Union Street,
     Catasauqua, PA; kind: place'
+- url: https://annunciationbvm.net/
+  seen: 2026-10-18
+  quote: Annunciation BVM Church Located at 122 Union Street, Catasauqua, PA
+  note: 'Same page: "Saturday Vigil Mass: 4:00 PM St. John Fisher and 6:00 PM St. Mary’s", "Sunday Morning
+    Masses: 8:00 AM St. Mary’s and 10:30 AM at St. John Fisher".'
+- url: https://drive.google.com/file/d/1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y/view?usp=sharing
+  seen: 2026-10-18
+  quote: The Parishioners of St. Mary’s
+  note: 'Page 1 of the 18 October 2026 bulletin: Saturday 24 Oct "6:00 PM The Parishioners of St. Mary’s
+    / St. Mary’s"; Sunday 25 Oct 8:00 AM St. Mary’s.'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin and the homepage schedule (effective 3 August 2026):
+Tuesday, Thursday and Saturday 8 AM, Saturday 6 PM, Sunday 8 AM at St. Mary's.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic ("Annunciation of the Blessed Virgin Mary", 122 Union St.), the diocesan map
+("Annunciation BVM", 122 Union Street) and the parish site agree; locally it is "St.
+Mary's". Coordinates are GCatholic's Plus Code (87G6MG2J+7H).

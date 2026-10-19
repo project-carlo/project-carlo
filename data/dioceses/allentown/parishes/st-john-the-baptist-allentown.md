@@ -4,28 +4,41 @@ website: https://www.sjbchurchallentown.org/
 bulletin_provider: parishes_online
 provider_id: st-john-the-baptist-slovak-catholic-church
 publication: ['po-org:st-john-the-baptist-slovak-catholic-church', 'lpi:0018000000QxAjkAAF', 'po-container:03/1258']
-group: ''
-evidence: []
+group: St. John the Baptist Slovak Parish
+evidence:
+- url: https://container.parishesonline.com/bulletins/03/1258/20261018B.pdf
+  seen: 2026-10-18
+  quote: 924 North Front St., Allentown, PA 18102
+  note: 'Page 1 masthead of the 18 October 2026 issue: "ST. JOHN THE BAPTIST Slovak Catholic Church",
+    Rev. Speratus Kamanzi, AJ - Pastor; MASS SCHEDULES 8:00AM Daily (Monday to Friday), 4:00PM Saturday,
+    9:00AM Sunday.'
+- url: https://parishesonline.com/organization/st-john-the-baptist-slovak-catholic-church
+  seen: 2026-10-18
+  note: '`probe po`: "St. John the Baptist Slovak Catholic Church", 924 N Front St, LPi id 0018000000QxAjkAAF,
+    container 03/1258, weekly issues through 2026-10-18.'
+- url: https://www.sjbchurchallentown.org/
+  seen: 2026-10-18
+  note: The parish's Wix site; its "Bulletin" link goes to the ParishesOnline organization (probe url
+    found po-org:st-john-the-baptist-slovak-catholic-church). The diocesan map gives the ParishesOnline
+    page itself as the website.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. John the Baptist Slovak Catholic Church publishes a weekly LPi bulletin (container
+03/1258). The 18 October 2026 issue's masthead names this church alone, 924 North Front
+St., with Masses Monday to Friday 8 AM, Saturday 4 PM and Sunday 9 AM.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- `st-john-the-baptist-allentown`, 924 N. Front Street.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`parishes_online` by org slug. sjbchurchallentown.org is the parish's own site (its
+Bulletin link goes to the ParishesOnline organization); GCatholic's
+saintjohnthebaptist.net no longer resolves (DEAD-DNS, 18 October 2026).
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

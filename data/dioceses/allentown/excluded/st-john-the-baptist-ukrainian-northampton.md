@@ -6,21 +6,24 @@ city: Northampton
 state: PA
 postal_code: '18067'
 decided: 2026-10-19
-roster: ['gcatholic:17520']
+roster:
+- gcatholic:17520
 evidence:
 - url: https://gcatholic.org/churches/usa-03/17520
   seen: 2026-10-18
   quote: 1343 Newport Ave., Northampton, Pennsylvania 18067
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''St. John the Baptist'',
-    1343 Newport Ave., Northampton, PA, 18067; kind: Church; rite: Ukrainian'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''St. John the Baptist'', 1343
+    Newport Ave., Northampton, PA, 18067; kind: Church; rite: Ukrainian'
+- url: https://gcatholic.org/churches/usa-03/17520
+  seen: 2026-10-18
+  quote: 'Jurisdiction: Ukrainian Metropolitan Archdiocese of Philadelphia'
+  note: 'The same page: "Location: within the territory of the Roman Diocese of Allentown", "Rite: Ukrainian (Byzantine)".'
 ---
 
 ## Why it is excluded
 
-TODO: The claim (closed on <date>, no public Mass, publishes nothing, ...) and the source
-that states it, quoted and dated. Being absent from a list is not enough on its own: say
-which current bulletin or schedule you read and that it does not include this place.
+St. John the Baptist, 1343 Newport Ave., Northampton is a Ukrainian Greek Catholic church. Its GCatholic page (read 2026-10-18) gives "Jurisdiction: Ukrainian Metropolitan Archdiocese of Philadelphia", "within the territory of the Roman Diocese of Allentown". It is in the Allentown roster only because GCatholic lists Eastern churches by territory; the diocesan parish map does not list it. Excluded as `other-jurisdiction` under the rule in `diocese.md` for Eastern Catholic churches; whether it is open was not checked.
 
 ## What would change this
 
-TODO: A pending appeal, a reopening, a new bulletin... or "Nothing expected."
+Nothing expected: it belongs to an eparchy's dataset, not the Diocese of Allentown's.

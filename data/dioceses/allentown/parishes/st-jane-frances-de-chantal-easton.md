@@ -41,6 +41,8 @@ read through a fetch service, links the Bon Venture page, so the recipe pins tha
 indexed by search engines). Discover Mass `st-jane-frances-de-chantal-easton-pa` lists no
 bulletins.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved, `page-pdfs on http://sponsors.bonventure.net/?page=1817: current`, pdfs/1817/2026-10-18.pdf.
+
 ## Not yet confirmed
 
 Nothing beyond the site block above.

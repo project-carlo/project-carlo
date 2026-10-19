@@ -9,8 +9,8 @@ postal_code: '18069'
 latitude: 40.6085625
 longitude: -75.5899375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:23675', 'directory:8110']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23675
@@ -22,14 +22,19 @@ evidence:
   seen: 2026-10-18
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Joseph the Worker'', 1879 Applewood
     Drive, Orefield, PA, 18069; kind: place'
+- url: http://sponsors.bonventure.net/pdfs/1599/2026-10-18.pdf
+  seen: 2026-10-18
+  quote: 'Sunday: 7:00, 9:00, & 11:00 AM'
+  note: Page 1 of the 18 October 2026 issue (Saturday Vigil 4:00 PM; daily 6:30 & 8:30 AM); 1879 Applewood
+    Drive, Orefield.
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin: Saturday 4 PM, Sunday 7, 9 and 11 AM, weekdays 6:30
+and 8:30 AM, Saturday 8:30 AM.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic, the diocesan map, ParishesOnline and the bulletin all give 1879 Applewood
+Drive, Orefield. Coordinates are GCatholic's Plus Code (87G6JC56+C2).

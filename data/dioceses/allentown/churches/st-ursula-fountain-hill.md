@@ -9,8 +9,8 @@ postal_code: '18015'
 latitude: 40.6003125
 longitude: -75.3985625
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:23702', 'directory:8152']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23702
@@ -22,14 +22,19 @@ evidence:
   seen: 2026-10-18
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Ursula'', 1300 Broadway, Fountain
     Hill, PA, 18015; kind: place'
+- url: https://discovermass.com/church/st-ursula-fountain-hill-pa/
+  seen: 2026-10-18
+  quote: 10:00 a.m. Anna Sopko
+  note: 18 October 2026 issue, page 2 Mass intentions (Saturday 4 p.m., Sunday 10:00 a.m., daily 8:00
+    a.m.).
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 St. Ursula bulletin lists Saturday 4 pm, Sunday 10 am and daily
+8 am Masses.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic ("St. Ursula", 1300 Broadway, Fountain Hill) and the diocesan map agree.
+Coordinates are GCatholic's Plus Code (87G6JJ22+4H).

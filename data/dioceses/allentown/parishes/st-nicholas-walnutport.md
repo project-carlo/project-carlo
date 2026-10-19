@@ -35,6 +35,8 @@ The diocesan directory's website for the parish is its ParishesOnline page; the 
 parish's own site as www.stnicholaswalnutport.org, used here as `website`. Provider
 `parishes_online` with the org slug.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of the unpromoted rows): resolved to container 03/1177, 20261018B.pdf.
+
 ## Not yet confirmed
 
 Nothing.
