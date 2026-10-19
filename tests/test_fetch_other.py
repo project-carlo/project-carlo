@@ -868,3 +868,66 @@ def test_a_recipe_written_differently_is_the_same_recipe() -> None:
     assert _same_recipe(f"{HOME}/b page-pdfs", source._replace(recipe=f"page-pdfs {HOME}/b"))
     assert not _same_recipe(f"page-pdfs {HOME}/b", source)
     assert not _same_recipe("page-pdfs", source._replace(recipe=""))
+
+
+def _wix_card(day: str, sunday: str, file: str) -> str:
+    return (
+        f'<div role="listitem"><div><p><span>{day}</span></p></div>'
+        f'<div><p>{sunday}</p></div>'
+        f'<div><a href="/_files/ugd/{file}.pdf" aria-label="View"><span>View</span></a></div></div>'
+    )
+
+
+def test_a_wix_card_dates_the_hash_named_pdf_it_links() -> None:
+    # St. Charles Borromeo, Ashland: a header "Coat of Arms" PDF, then a grid of
+    # cards, each a date, the Sunday's name and a "View" link to a hash-named PDF.
+    assert _resolve({
+        HOME: '<a href="/bulletins">Bulletins</a>',
+        f"{HOME}/bulletins": (
+            '<a href="/_files/ugd/23b1db_arms.pdf">Coat of Arms</a>'
+            '<div role="list">'
+            + _wix_card("August 30, 2026", "Twenty-second Sunday in Ordinary Time", "23b1db_aa")
+            + _wix_card("September 27, 2026", "Twenty-sixth Sunday in Ordinary Time", "23b1db_bb")
+            + _wix_card("September 20, 2026", "Twenty-fifth Sunday in Ordinary Time", "23b1db_cc")
+            + "</div>"
+        ),
+    }) == f"{HOME}/_files/ugd/23b1db_bb.pdf"
+
+
+def test_a_card_naming_two_dates_does_not_date_its_link() -> None:
+    # An events card giving two days is no issue date: the link stays undated,
+    # and the PDF titled "Bulletin" wins.
+    assert _resolve({
+        HOME: (
+            '<div role="listitem"><p>Festival</p><p>September 27, 2026</p>'
+            '<p>October 4, 2026</p>'
+            '<a href="/_files/ugd/flyer.pdf">View</a></div>'
+            '<a href="/_files/ugd/c3.pdf">Bulletin</a>'
+        ),
+    }) == f"{HOME}/_files/ugd/c3.pdf"
+
+
+def test_a_page_whose_cards_render_late_is_read_again() -> None:
+    # St. Joseph the Worker, Frackville: on a busy run the Wix repeater is still
+    # empty when the page is first read, which finds only the header PDF.
+    bulletins = f"{HOME}/bulletins"
+    early = '<a href="/_files/ugd/23b1db_arms.pdf">Coat of Arms</a><div role="list"></div>'
+    late = (
+        '<a href="/_files/ugd/23b1db_arms.pdf">Coat of Arms</a><div role="list">'
+        + _wix_card("September 27, 2026", "Twenty-sixth Sunday in Ordinary Time", "23b1db_bb")
+        + "</div>"
+    )
+
+    class LatePage(SnapshotPage):
+        def wait_for_timeout(self, timeout: int) -> None:
+            self._by_url[bulletins] = PageSnapshot(
+                requested_url=bulletins, final_url=bulletins, html=late,
+            )
+            self.goto(bulletins)
+
+    page = LatePage([
+        PageSnapshot(requested_url=HOME, final_url=HOME, html='<a href="/bulletins">Bulletins</a>'),
+        PageSnapshot(requested_url=bulletins, final_url=bulletins, html=early),
+    ])
+    source_url, _ = _resolve_other(provider_id=HOME, reference_date=TODAY, page=page)
+    assert source_url == f"{HOME}/_files/ugd/23b1db_bb.pdf"
