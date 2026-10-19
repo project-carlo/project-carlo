@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-18
   quote: 8:00 A.M. Catherine & Charles LeCinque
   note: 'Sunday 18 October 8:00 A.M. intention in the 18 October 2026 issue; masthead "Sunday: ... 8:00AM".'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

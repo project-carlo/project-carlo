@@ -31,6 +31,7 @@ evidence:
 - url: https://stjscatholicchurch.org/
   seen: 2026-10-18
   quote: Saint Joseph Parish 462 W. Ludlow St. Summit Hill, PA 18250
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -10,14 +10,16 @@ evidence:
   seen: 2026-10-18
   quote: SACRED HEART OF JESUS PARISH
   note: 'Page 1 of the 18 October 2026 issue: "SACRED HEART OF JESUS PARISH, 117 Washington Street, Bath,
-    Pennsylvania 18014-1524", "TWENTY-NINTH SUNDAY IN ORDINARY TIME OCTOBER 18, 2026". Page 2 SCHEDULE OF MASSES:
-    "Saturday Evening (Vigil): 5:00 PM / Sunday Mass: 7 AM,9 AM and 11 AM / Weekdays: Monday – Friday 8:00 AM".'
+    Pennsylvania 18014-1524", "TWENTY-NINTH SUNDAY IN ORDINARY TIME OCTOBER 18, 2026". Page 2 SCHEDULE
+    OF MASSES: "Saturday Evening (Vigil): 5:00 PM / Sunday Mass: 7 AM,9 AM and 11 AM / Weekdays: Monday
+    – Friday 8:00 AM".'
 - url: https://sacredheartbath.org/
   seen: 2026-10-18
   quote: Sacred Heart Church
-  note: The parish site (title "Sacred Heart Church – 210 East Northampton Street, Bath, Pennsylvania 18014-1625");
-    probe url found its bulletin link https://jppc.net/onlinebulletins/259template.pdf, which redirects to the
-    John Patrick Publishing listing in publication, and a /bulletin-archive/ page.
+  note: The parish site (title "Sacred Heart Church – 210 East Northampton Street, Bath, Pennsylvania
+    18014-1625"); probe url found its bulletin link https://jppc.net/onlinebulletins/259template.pdf,
+    which redirects to the John Patrick Publishing listing in publication, and a /bulletin-archive/ page.
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -11,24 +11,23 @@ longitude: -75.3906875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23632
-- directory:8032
+roster: ['gcatholic:23632', 'directory:8032']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23632
   seen: 2026-10-18
   quote: 117 Washington St., Bath, Pennsylvania 18014-1625
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Sacred Heart'', 117 Washington
-    St., Bath, PA, 18014; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Sacred Heart'',
+    117 Washington St., Bath, PA, 18014; kind: Church'
 - url: https://www.allentowndiocese.org/places/sacred-heart-bath
   seen: 2026-10-18
-  note: 'Listed in Diocese of Allentown parish map: places as ''Sacred Heart of Jesus'', 117 Washington Street,
-    Bath, PA, 18014; kind: place'
+  note: 'Listed in Diocese of Allentown parish map: places as ''Sacred Heart of Jesus'', 117 Washington
+    Street, Bath, PA, 18014; kind: place'
 - url: https://www.church-bulletin.org/bulletin/sacred-heart-of-jesus-parish-bath-pa-18014/2026-10-18.pdf
   seen: 2026-10-18
   quote: SACRED HEART OF JESUS PARISH
-  note: 'Page 2 of the 18 October 2026 issue: SCHEDULE OF MASSES Saturday 5:00 PM, Sunday 7 AM, 9 AM and 11 AM,
-    Monday-Friday 8:00 AM; page 1 gives 117 Washington Street, Bath.'
+  note: 'Page 2 of the 18 October 2026 issue: SCHEDULE OF MASSES Saturday 5:00 PM, Sunday 7 AM, 9 AM and
+    11 AM, Monday-Friday 8:00 AM; page 1 gives 117 Washington Street, Bath.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -11,9 +11,7 @@ longitude: -75.9728125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23663
-- directory:8086
+roster: ['gcatholic:23663', 'directory:8086']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23663
   seen: 2026-10-18
@@ -25,13 +23,14 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. John Baptist de LaSalle'', 42 Kerrick
     Road, Shillington, PA, 19607; kind: place'
 - url: http://sponsors.bonventure.net/pdfs/1920/2026-10-18.pdf
+  seen: 2026-10-18
   quote: Thirtieth Sunday in Ordinary Time
   note: 'Page 3: October 24 & 25, 4:00 p.m., 8:30 a.m., 10:30 a.m. Page 1 (image): MASS SCHEDULE Saturday
     Vigil 4:00PM, Sunday 8:30AM & 10:30AM.'
-  seen: 2026-10-18
 - url: https://www.stjohnsfamilyoffaith.com/mass-schedule/
-  quote: 42 Kerrick Road
   seen: 2026-10-18
+  quote: 42 Kerrick Road
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -11,9 +11,7 @@ longitude: -76.2311875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23682
-- directory:8122
+roster: ['gcatholic:23682', 'directory:8122']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23682
   seen: 2026-10-18
@@ -32,6 +30,7 @@ evidence:
 - url: https://www.stmarystjoseph.net/
   seen: 2026-10-18
   quote: St. Mary Parish Saturdays @ 3:00pm Sundays @ 10:00am
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -15,6 +15,7 @@ evidence:
   seen: 2026-10-18
   note: Bulletin page (Jimdo / IONOS "app/download" links) listing the 20 Sep, 27 Sep, 4 Oct and 11 Oct
     2026 issues; dates are in the file names (stjosephchurch_bulletin_oct112026_rev.pdf).
+promoted: 2026-10-19
 ---
 
 ## Publisher

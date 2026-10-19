@@ -3,20 +3,20 @@ name: Holy Rosary Parish
 website: https://holyrosaryreading.org/
 bulletin_provider: discover_mass
 provider_id: holy-rosary-reading-pa
-publication:
-- discovermass:holy-rosary-reading-pa
+publication: ['discovermass:holy-rosary-reading-pa']
 group: Msgr. Joseph A. DeSantis, pastor of Holy Rosary and Sacred Heart
 evidence:
 - url: https://discovermass.com/church/holy-rosary-reading-pa/
+  seen: 2026-10-18
   quote: SUNDAY, OCTOBER 18TH —10:00 AM
   note: Discover Mass church page; issues 4, 11 and 18 October 2026 listed. 18 October issue (8 pages),
     page 2 Mass intentions; the same page has "MASS & CONFESSION SCHEDULE" giving HOLY ROSARY (Sunday
     Mass 10:00 AM; Tuesday-Thursday and First Saturday 7:00 AM) and then SACRED HEART's schedule. Page
     1 gives Location 237 Franklin St, Reading, Pastor Rev. Msgr. Joseph A. DeSantis.
-  seen: 2026-10-18
 - url: https://holyrosaryreading.org/bulletins/
-  note: The parish site's Bulletins page lists bulletins.discovermass.com download links and links discovermass.com/church/holy-rosary-reading-pa/.
   seen: 2026-10-18
+  note: The parish site's Bulletins page lists bulletins.discovermass.com download links and links discovermass.com/church/holy-rosary-reading-pa/.
+promoted: 2026-10-19
 ---
 
 ## Publisher

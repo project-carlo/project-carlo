@@ -11,9 +11,7 @@ longitude: -75.9199375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23690
-- directory:8134
+roster: ['gcatholic:23690', 'directory:8134']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23690
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Paul'', 151 North 9th Street, Reading,
     PA, 19601; kind: place'
 - url: https://discovermass.com/church/st-paul-reading-pa/
+  seen: 2026-10-18
   quote: St.PaulRomanCatholicChurch-Reading,PA
   note: 18 October 2026 issue, page 1 Worship box (text runs words together).
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

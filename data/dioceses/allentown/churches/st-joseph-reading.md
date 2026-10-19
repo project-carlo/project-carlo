@@ -11,9 +11,7 @@ longitude: -75.9199375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23672
-- directory:8104
+roster: ['gcatholic:23672', 'directory:8104']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23672
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Joseph'', 1022 North 8th Street, Reading,
     PA, 19604; kind: place'
 - url: https://discovermass.com/church/st-joseph-reading-pa/
+  seen: 2026-10-18
   quote: St. Joseph Catholic Church ● Iglesia Católica de San José
   note: 18 October 2026 issue, page 1 Worship box.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

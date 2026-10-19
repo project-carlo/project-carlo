@@ -9,15 +9,16 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/03/1198/20261018B.pdf
   seen: 2026-10-18
   quote: Holy Family Parish of Nazareth is a Christ centered sacramental
-  note: 'Page 1 of the 18 October 2026 issue: masthead "HOLY FAMILY", "Holy Family Catholic Church, 23 Forest
-    Drive, Nazareth PA 18064", Rev. Jason Stokes. Page 3 (Mass intentions) lists Sunday 7:00, 9:00, 11:00
-    AM and Saturday 5:00 PM, weekdays 8:30 AM, plus a "Moravian Hall Square Mass" and a "Gracedale Mass"
-    (nursing homes).'
+  note: 'Page 1 of the 18 October 2026 issue: masthead "HOLY FAMILY", "Holy Family Catholic Church, 23
+    Forest Drive, Nazareth PA 18064", Rev. Jason Stokes. Page 3 (Mass intentions) lists Sunday 7:00, 9:00,
+    11:00 AM and Saturday 5:00 PM, weekdays 8:30 AM, plus a "Moravian Hall Square Mass" and a "Gracedale
+    Mass" (nursing homes).'
 - url: https://www.holyfamilynazarethpa.com/bulletins
   seen: 2026-10-18
-  note: 'The parish site''s Bulletins page (read in a browser, parish-site-access visit.py) embeds the LPi
+  note: The parish site's Bulletins page (read in a browser, parish-site-access visit.py) embeds the LPi
     widget for parishesonline.com/organization/holy-family-church-18064 with the 18, 11 and 4 October
-    and 27 September 2026 issues of container 03/1198.'
+    and 27 September 2026 issues of container 03/1198.
+promoted: 2026-10-19
 ---
 
 ## Publisher

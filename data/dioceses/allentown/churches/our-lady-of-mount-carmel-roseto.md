@@ -11,28 +11,27 @@ longitude: -75.2140625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23629
-- directory:8026
+roster: ['gcatholic:23629', 'directory:8026']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23629
   seen: 2026-10-18
   quote: 560 N 6th Ave., Roseto, Pennsylvania 18013-1752
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Our Lady of Mount Carmel'',
-    560 N 6th Ave., Roseto, PA, 18013; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Our Lady of Mount
+    Carmel'', 560 N 6th Ave., Roseto, PA, 18013; kind: Church'
 - url: https://www.allentowndiocese.org/places/our-lady-of-mt-carmel
   seen: 2026-10-18
-  note: 'Listed in Diocese of Allentown parish map: places as ''Our Lady of Mt. Carmel'', 80 Ridge Street, Roseto,
-    PA, 18013; kind: place'
+  note: 'Listed in Diocese of Allentown parish map: places as ''Our Lady of Mt. Carmel'', 80 Ridge Street,
+    Roseto, PA, 18013; kind: place'
 - url: https://olmcroseto.org/wp-content/uploads/2026/10/143-Mount-Carmel-Bulletin-Oct-18-2026.doc-pdf.pdf
   seen: 2026-10-18
   quote: While the church has an address in Bangor, the altar and sacristy reside in Roseto.
-  note: 'Issue 143, 18 October 2026: Mass Schedule Saturday 4:30pm, Sunday 8:00am and 10:00am, weekdays 7:30am except
-    Tuesday; "Our Lady of Mount Carmel, 560 N. 6th Street, Bangor, Pennsylvania 18013".'
+  note: 'Issue 143, 18 October 2026: Mass Schedule Saturday 4:30pm, Sunday 8:00am and 10:00am, weekdays
+    7:30am except Tuesday; "Our Lady of Mount Carmel, 560 N. 6th Street, Bangor, Pennsylvania 18013".'
 - url: https://www.openstreetmap.org/way/456415314
   seen: 2026-10-18
-  note: 'OpenStreetMap: "Our Lady of Mount Carmel Catholic Church, 560, Garibaldi Avenue, Roseto" (Nominatim, read
-    2026-10-18), at 40.87486, -75.21402.'
+  note: 'OpenStreetMap: "Our Lady of Mount Carmel Catholic Church, 560, Garibaldi Avenue, Roseto" (Nominatim,
+    read 2026-10-18), at 40.87486, -75.21402.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

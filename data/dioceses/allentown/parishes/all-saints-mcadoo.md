@@ -3,8 +3,7 @@ name: All Saints Parish
 website: https://sites.google.com/view/asphome/2026-bulletins
 bulletin_provider: other
 provider_id: page-pdfs https://sites.google.com/view/asphome/2026-bulletins
-publication:
-- url:https://sites.google.com/view/asphome/2026-bulletins
+publication: ['url:https://sites.google.com/view/asphome/2026-bulletins']
 group: All Saints Parish
 evidence:
 - url: https://drive.google.com/uc?export=download&id=1HoghqYb35YkcCXkfEF7b2N7bcZxOKHOs
@@ -36,6 +35,7 @@ revisit: In January 2027, check that the bulletins page is still https://sites.g
   (the 2025 archive moved under it as /2026-bulletins/2025-bulletins); if the parish starts a new yearly
   page, update website and the provider_id recipe.
 revisit_after: 2027-01-15
+promoted: 2026-10-19
 ---
 
 ## Publisher

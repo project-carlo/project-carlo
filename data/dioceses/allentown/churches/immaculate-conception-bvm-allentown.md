@@ -27,6 +27,7 @@ evidence:
   quote: 501 Ridge Ave., Allentown, Pennsylvania 18102
   note: GCatholic's only entry at this address is the Syriac-rite "Our Lady of Mercy" (excluded as other-jurisdiction);
     it has no entry for Immaculate Conception itself.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

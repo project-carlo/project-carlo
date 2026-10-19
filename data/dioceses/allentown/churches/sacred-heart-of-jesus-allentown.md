@@ -27,6 +27,7 @@ evidence:
   quote: SACRED HEART CHURCH TWENTY- NINTH SUNDAY IN ORDINARY TIME
   note: 'Page 1 of the 18 October 2026 issue: intentions Saturday 5:30 p.m. (Bil.), Sunday 8:00 a.m. (Sp.),
     10:00 a.m. (Eng.), 12:00 p.m. (Sp.).'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

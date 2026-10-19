@@ -3,24 +3,24 @@ name: St. Mary's Parish
 website: https://stmaryskutztown.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/195
-publication:
-- url:https://www.church-bulletin.org/saint-mary-s-church-kutztown-pa-19530
+publication: ['url:https://www.church-bulletin.org/saint-mary-s-church-kutztown-pa-19530']
 group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-mary-s-church-kutztown-pa-19530/2026-10-18.pdf
+  seen: 2026-10-18
   quote: Saturday Vigil 4:30 pm
   note: 18 October 2026 issue, page 1 MASS SCHEDULE "Saturday Vigil 4:30 pm Sunday 8:30, 11:00am Daily
     Masses 7:30am (Mon., Wed. Thu., Fri)"; "Welcome to St. Mary's Parish!"; page 2 Mass intentions Sat
     10-24 4:30p, Sun 10-25 8:30a and 11:00a. One church.
-  seen: 2026-10-18
 - url: https://www.church-bulletin.org/saint-mary-s-church-kutztown-pa-19530
+  seen: 2026-10-18
   quote: Saint Mary's Church Kutztown, PA 19530
   note: John Patrick Publishing listing (church-bulletin.org/?id=195 redirects here), newest 18 October
     2026.
-  seen: 2026-10-18
 - url: https://stmaryskutztown.com/
-  note: The parish homepage links https://www.jppc.net/onlinebulletins/195template.pdf (redirects to church-bulletin.org/?id=195).
   seen: 2026-10-18
+  note: The parish homepage links https://www.jppc.net/onlinebulletins/195template.pdf (redirects to church-bulletin.org/?id=195).
+promoted: 2026-10-19
 ---
 
 ## Publisher

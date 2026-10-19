@@ -25,6 +25,7 @@ evidence:
   note: 'Ss. Simon and Jude''s own 18 October 2026 issue (row ss-simon-and-jude-bethlehem, Northampton
     region) has a different masthead ("SAINTS SIMON & JUDE CHURCH", 730 West Broad Street) and finances,
     and lists "Sunday: 9:00am, 10:30am(OLHC)".'
+promoted: 2026-10-19
 ---
 
 ## Publisher

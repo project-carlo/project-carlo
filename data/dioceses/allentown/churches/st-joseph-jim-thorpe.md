@@ -31,6 +31,7 @@ evidence:
 - url: https://www.catholicchurchesofjimthorpe.org/Pray-With-Us/Masses
   seen: 2026-10-18
   quote: 'Sunday: 8:30 AM Saint Joseph Church'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

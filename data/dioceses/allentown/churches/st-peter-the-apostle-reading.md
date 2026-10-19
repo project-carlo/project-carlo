@@ -11,9 +11,7 @@ longitude: -75.9281875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23692
-- directory:8138
+roster: ['gcatholic:23692', 'directory:8138']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23692
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Peter the Apostle'', 326 South 5th
     Street, Reading, PA, 19602; kind: place'
 - url: https://www.church-bulletin.org/bulletin/saint-peter-the-apostle-roman-catholic-parish-reading-pa-19602/2026-10-18.pdf
+  seen: 2026-10-18
   quote: Saint Peter the Apostle Roman Catholic Parish
   note: Page 1 masthead and Mass Schedule.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

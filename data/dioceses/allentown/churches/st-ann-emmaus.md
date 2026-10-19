@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-18
   quote: 4:30pm (Vigil)
   note: Page 1 of the 18 October 2026 issue (Sunday 7:30am, 9:00am, 11:00am; weekdays 8:00am Mon.-Sat.).
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

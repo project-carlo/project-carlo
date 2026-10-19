@@ -11,9 +11,7 @@ longitude: -75.9145625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23681
-- directory:8120
+roster: ['gcatholic:23681', 'directory:8120']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23681
   seen: 2026-10-18
@@ -25,13 +23,14 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Mary Church Worship Site for St. Catharine
     of Siena Parish'', 248 South 12th Street, Reading, PA, 19602; kind: place'
 - url: https://www.scsreading.org/scsparish/wp/wp-content/uploads/2026/10/1018030.pdf
+  seen: 2026-10-18
   note: 'Page 2 (image, read rendered): "St. Mary''s Masses" Saturday October 17th 3:30 p.m., Sunday October
     18th 10:30 a.m., Saturday October 24th 3:30 p.m., Sunday October 26th [sic] 10:30 a.m.'
-  seen: 2026-10-18
 - url: https://berkstlm.beehiiv.com/p/berks-latin-mass-this-sunday-071d
+  seen: 2026-10-18
   quote: this Sunday at 12:30pm we'll be having our monthly Traditional Latin Mass at St. Mary's in Reading
   note: Berks TLM Newsletter, 6 August 2026; address given as 250 S 12th St, Reading PA.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

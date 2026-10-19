@@ -21,6 +21,7 @@ evidence:
   note: The parish's Wix site; its "Bulletin" link goes to the ParishesOnline organization (probe url
     found po-org:st-john-the-baptist-slovak-catholic-church). The diocesan map gives the ParishesOnline
     page itself as the website.
+promoted: 2026-10-19
 ---
 
 ## Publisher

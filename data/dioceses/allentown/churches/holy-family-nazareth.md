@@ -11,24 +11,23 @@ longitude: -75.3190625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23610
-- directory:7994
+roster: ['gcatholic:23610', 'directory:7994']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23610
   seen: 2026-10-18
   quote: 410 W Center St., Nazareth, Pennsylvania 18064-1300
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Holy Family'', 410 W Center
-    St., Nazareth, PA, 18064; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Holy Family'',
+    410 W Center St., Nazareth, PA, 18064; kind: Church'
 - url: https://www.allentowndiocese.org/places/holy-family
   seen: 2026-10-18
-  note: 'Listed in Diocese of Allentown parish map: places as ''Holy Family Parish'', 410 West Center Street, Nazareth,
-    PA, 18064; kind: place'
+  note: 'Listed in Diocese of Allentown parish map: places as ''Holy Family Parish'', 410 West Center
+    Street, Nazareth, PA, 18064; kind: place'
 - url: https://container.parishesonline.com/bulletins/03/1198/20261018B.pdf
   seen: 2026-10-18
   quote: Holy Family Parish of Nazareth is a Christ centered sacramental
-  note: 'Page 3 of the 18 October 2026 issue: Sunday 7:00, 9:00, 11:00 AM; Saturday 24 October 5:00 PM; weekdays
-    8:30 AM.'
+  note: 'Page 3 of the 18 October 2026 issue: Sunday 7:00, 9:00, 11:00 AM; Saturday 24 October 5:00 PM;
+    weekdays 8:30 AM.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

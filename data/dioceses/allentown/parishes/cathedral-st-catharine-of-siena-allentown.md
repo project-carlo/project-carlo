@@ -23,6 +23,7 @@ evidence:
 - url: https://cathedral-church.org/
   seen: 2026-10-18
   note: The cathedral's WordPress site; `probe url` found its bulletin link https://church-bulletin.org/226.
+promoted: 2026-10-19
 ---
 
 ## Publisher

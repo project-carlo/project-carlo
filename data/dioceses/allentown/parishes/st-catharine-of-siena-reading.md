@@ -3,31 +3,30 @@ name: St. Catharine of Siena Parish
 website: https://www.scsreading.org/scsparish/wp/
 bulletin_provider: discover_mass
 provider_id: st-catharine-of-siena-reading-pa
-publication:
-- discovermass:st-catharine-of-siena-reading-pa
-- url:https://www.scsreading.org/scsparish/wp/category/bulletin/
+publication: ['discovermass:st-catharine-of-siena-reading-pa', 'url:https://www.scsreading.org/scsparish/wp/category/bulletin/']
 group: ''
 evidence:
 - url: https://discovermass.com/church/st-catharine-of-siena-reading-pa/
+  seen: 2026-10-18
   quote: EUCHARISTIC ADORATION – following the 7:15 a.m. Mass until
   note: Discover Mass church page; 18 October 2026 issue (8 pages; pages 1-2 are images). Page 3 header
     "ST. CATHARINE OF SIENA PARISH READING, PENNSYLVANIA OCTOBER 18, 2026". Page 2 (image) has the "St.
     Mary's Masses" box (see the self-hosted copy below).
-  seen: 2026-10-18
 - url: https://www.scsreading.org/scsparish/wp/wp-content/uploads/2026/10/1018030.pdf
+  seen: 2026-10-18
   note: 'The parish''s self-hosted copy of the 18 October 2026 bulletin (6 pages, without the Discover
     Mass ad pages), linked from the post "Weekly Bulletin 10/18/2026". Page 2 is an image (read rendered):
     a box "St. Mary''s Masses" lists Saturday October 17th 3:30 p.m., Sunday October 18th 10:30 a.m.,
     Saturday October 24th 3:30 p.m., Sunday October 26th 10:30 a.m., each with an intention; the sanctuary-candle
     box names "St. Catharine''s Church" and "St. Mary''s".'
-  seen: 2026-10-18
 - url: https://www.scsreading.org/scsparish/wp/mass-schedule/
+  seen: 2026-10-18
   quote: 'Saturday: 4:30PM Church'
   note: 'Parish Mass schedule page: Saturday 4:30PM, Sunday 7:30, 9:30, 11:30AM, weekdays 7:15AM, all
     in the Church at 4975 Boyertown Pike; it refers St. Mary''s (250 South 12th St) to "the St. Mary''s
     website", stmaryrdg.com, which on 2026-10-18 redirected to a domain auction (nicsell.com). The site
     answers plain curl with 406 (Mod Security) unless a browser User-Agent is sent.'
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Publisher

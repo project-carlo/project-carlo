@@ -11,9 +11,7 @@ longitude: -76.3450625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23667
-- directory:8068
+roster: ['gcatholic:23667', 'directory:8068']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23667
   seen: 2026-10-18
@@ -33,6 +31,7 @@ evidence:
   quote: St. Charles Borromeo Church 1115 Walnut St., Ashland, PA 17921
   note: Parish home page; also "Saturday Vigil 4:00 pm St. Charles Borromeo Church", "Sunday 9:00 am St.
     Charles Borromeo Church", daily Mass in "St. Anne Chapel (lower level of the church)".
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

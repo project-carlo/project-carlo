@@ -9,16 +9,17 @@ evidence:
 - url: https://discovermass.com/church/assumption-of-the-blessed-virgin-mary-bethlehem-pa/
   seen: 2026-10-18
   quote: 'Saturday Evening Vigil:'
-  note: 'The 18 October 2026 issue (8 pages; download links carry a per-request token, so cited by the church
-    page). Page 1 masthead (its text layer is split into single letters): "Assumption of the Blessed Virgin
-    Mary Roman Catholic Church, Monsignor John B. McCann S.T.L., M.S.W., Pastor, 4101 Old Bethlehem Pike,
-    Bethlehem, Pennsylvania, 18015, 610-867-7424 - assumptionbethlehem.com, October 18, 2026". Page 2 MASS
-    SCHEDULE: Saturday Evening Vigil 5:00 p.m.; Sunday Morning 8:00 a.m., 10:00 a.m., 11:30 a.m.; Monday-Friday
-    9:00 a.m.'
+  note: 'The 18 October 2026 issue (8 pages; download links carry a per-request token, so cited by the
+    church page). Page 1 masthead (its text layer is split into single letters): "Assumption of the Blessed
+    Virgin Mary Roman Catholic Church, Monsignor John B. McCann S.T.L., M.S.W., Pastor, 4101 Old Bethlehem
+    Pike, Bethlehem, Pennsylvania, 18015, 610-867-7424 - assumptionbethlehem.com, October 18, 2026". Page
+    2 MASS SCHEDULE: Saturday Evening Vigil 5:00 p.m.; Sunday Morning 8:00 a.m., 10:00 a.m., 11:30 a.m.;
+    Monday-Friday 9:00 a.m.'
 - url: https://www.assumptionbethlehem.com/
   seen: 2026-10-18
-  note: The parish homepage (named in the diocesan directory and on the bulletin) loads, but neither probe url
-    nor a browser found a bulletin link or publication id on it.
+  note: The parish homepage (named in the diocesan directory and on the bulletin) loads, but neither probe
+    url nor a browser found a bulletin link or publication id on it.
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -9,9 +9,10 @@ evidence:
 - url: http://sponsors.bonventure.net/pdfs/1572/2026-10-18.pdf
   seen: 2026-10-18
   quote: The Catholic Presence in Lehighton since 1850 + Established as a Parish in 1885
-  note: 'Page 1 of the 18 October 2026 issue (8 pages, text PDF), under the masthead "SAINTS PETER & PAUL PARISH" (its letters are spaced, so not quoted): "260 NORTH THIRD STREET • LEHIGHTON,
-    PENNSYLVANIA 18235", "Saturday Vigil … 4:00 pm Sunday … 7:45 & 10:00 am Daily Mass - M/T/Th/F … 8:00
-    am", "Rev. Philip J. Maas … Parochial Administrator". Page 3 lists the intentions, all at one church.'
+  note: 'Page 1 of the 18 October 2026 issue (8 pages, text PDF), under the masthead "SAINTS PETER & PAUL
+    PARISH" (its letters are spaced, so not quoted): "260 NORTH THIRD STREET • LEHIGHTON, PENNSYLVANIA
+    18235", "Saturday Vigil … 4:00 pm Sunday … 7:45 & 10:00 am Daily Mass - M/T/Th/F … 8:00 am", "Rev.
+    Philip J. Maas … Parochial Administrator". Page 3 lists the intentions, all at one church.'
 - url: http://sponsors.bonventure.net/?page=1572
   seen: 2026-10-18
   quote: Saints Peter & Paul Parish 260 North Third Street • Lehighton, PA 18235
@@ -19,10 +20,11 @@ evidence:
     bulletins" from October 18, 2026 back to January 2026 at pdfs/1572/YYYY-MM-DD.pdf.
 - url: https://peterandpaulchurch.com/
   seen: 2026-10-18
-  note: 'Read with a fetch tool (the sandbox gets a connection reset from this GoDaddy-hosted site, in curl
-    and in Chrome): the menu item "Bulletins" and the link "Click here for the weekly parish bulletin"
+  note: 'Read with a fetch tool (the sandbox gets a connection reset from this GoDaddy-hosted site, in
+    curl and in Chrome): the menu item "Bulletins" and the link "Click here for the weekly parish bulletin"
     both go to sponsors.bonventure.net/?page=1572. The home page gives "Saturdays: 4:00 pm Sundays: 7:45
     and 10:00 am".'
+promoted: 2026-10-19
 ---
 
 ## Publisher

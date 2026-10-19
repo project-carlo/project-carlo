@@ -8,21 +8,23 @@ group: 'Twin parishes: St. Anthony of Padua and Our Lady of Mercy, Easton'
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-anthony-of-padua-our-lady-of-mercy-easton-pa-18042/2026-10-18.pdf
   seen: 2026-10-18
-  note: 'Page 1 of the 18 October 2026 issue (all 8 pages are images with no text layer; read rendered with
-    parish-site-access render.py). One masthead: "OUR LADY OF MERCY, 132 S. 5th Street, Easton, PA 18042" and
-    "SAINT ANTHONY OF PADUA, 900 Washington Street, Easton, PA 18042", "www.rccofeaston.org", clergy Rev. Mark
-    Searles, Parochial Administrator. Two MASS & LITURGY SCHEDULE boxes: Our Lady of Mercy "Sunday @ 8:00 am
-    English & 12:00 pm Spanish", Monday & Friday 8:00 am, Wednesday 12:10 pm & 7:00 pm Spanish; St. Anthony
-    "Saturday @ 4:30pm, Sunday @ 10:30am", Tuesday & Thursday 8:00am.'
+  note: 'Page 1 of the 18 October 2026 issue (all 8 pages are images with no text layer; read rendered
+    with parish-site-access render.py). One masthead: "OUR LADY OF MERCY, 132 S. 5th Street, Easton, PA
+    18042" and "SAINT ANTHONY OF PADUA, 900 Washington Street, Easton, PA 18042", "www.rccofeaston.org",
+    clergy Rev. Mark Searles, Parochial Administrator. Two MASS & LITURGY SCHEDULE boxes: Our Lady of
+    Mercy "Sunday @ 8:00 am English & 12:00 pm Spanish", Monday & Friday 8:00 am, Wednesday 12:10 pm &
+    7:00 pm Spanish; St. Anthony "Saturday @ 4:30pm, Sunday @ 10:30am", Tuesday & Thursday 8:00am.'
 - url: https://www.church-bulletin.org/saint-anthony-of-padua-our-lady-of-mercy-easton-pa-18042
   seen: 2026-10-18
   quote: Easton
-  note: John Patrick Publishing's listing (church-bulletin.org/?id=207 lands here), one PDF per Sunday, newest 2026-10-18.
+  note: John Patrick Publishing's listing (church-bulletin.org/?id=207 lands here), one PDF per Sunday,
+    newest 2026-10-18.
 - url: https://rccofeaston.org/
   seen: 2026-10-18
   quote: Roman Catholic Churches of Easton
-  note: The joint parish site (title "Roman Catholic Churches of Easton"); probe url found its bulletin link
-    https://church-bulletin.org/?id=207.
+  note: The joint parish site (title "Roman Catholic Churches of Easton"); probe url found its bulletin
+    link https://church-bulletin.org/?id=207.
+promoted: 2026-10-19
 ---
 
 ## Publisher

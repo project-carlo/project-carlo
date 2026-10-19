@@ -17,6 +17,7 @@ evidence:
   quote: Bulletin 10-18-26
   note: WordPress bulletin page; weekly PDFs under wp-content/uploads/YYYY/MM/ with non-date file names
     (38211-N.pdf, Bulletin_Affinity-N.pdf), each labelled "Bulletin MM-DD-YY – <Sunday>".
+promoted: 2026-10-19
 ---
 
 ## Publisher

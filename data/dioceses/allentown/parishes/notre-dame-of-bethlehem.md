@@ -9,13 +9,15 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/04/0848/20261018B.pdf
   seen: 2026-10-18
   quote: 1861 CATASAUQUA ROAD BETHLEHEM, PA 18018-1298
-  note: 'Page 1 of the 18 October 2026 issue: "MASS TIMES Saturday Vigil: 4:30PM Sunday: 7:30, 9, 10:30AM & 12
-    Noon Weekdays: Monday through Friday: 6:30 & 8:45AM Saturday: 8AM", Pastor Rev. Msgr. Thomas D. Baddick,
-    website www.ndbethlehemchurch.org. Page 2 is headed "NOTRE DAME OF BETHLEHEM CHURCH BETHLEHEM, PENNSYLVANIA".'
+  note: 'Page 1 of the 18 October 2026 issue: "MASS TIMES Saturday Vigil: 4:30PM Sunday: 7:30, 9, 10:30AM
+    & 12 Noon Weekdays: Monday through Friday: 6:30 & 8:45AM Saturday: 8AM", Pastor Rev. Msgr. Thomas
+    D. Baddick, website www.ndbethlehemchurch.org. Page 2 is headed "NOTRE DAME OF BETHLEHEM CHURCH BETHLEHEM,
+    PENNSYLVANIA".'
 - url: https://www.ndbethlehemchurch.org/bulletins
   seen: 2026-10-18
   note: The parish's Bulletins page (read in a browser) embeds the LPi widget for parishesonline.com/organization/notre-dame-of-bethlehem-church
     with the 18, 11, 4 October and 27 September 2026 issues of container 04/0848.
+promoted: 2026-10-19
 ---
 
 ## Publisher

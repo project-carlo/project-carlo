@@ -16,6 +16,7 @@ evidence:
   seen: 2026-10-18
   note: WordPress "Weekly Bulletin" page with one PDF per Sunday named <Month>-<D>-<YYYY>.pdf, newest
     October-18-2026.
+promoted: 2026-10-19
 ---
 
 ## Publisher

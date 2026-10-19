@@ -24,8 +24,10 @@ evidence:
     Palmerton, PA, 18071; kind: place'
 - url: https://www.church-bulletin.org/bulletin/sacred-heart-church-palmerton-pa-18071/2026-10-18.pdf
   seen: 2026-10-18
-  quote: Saturday October 17 5:00 PM Denise Homlak … Sunday October 18 9:30 AM Parishioners of Sacred Heart
+  quote: Saturday October 17 5:00 PM Denise Homlak … Sunday October 18 9:30 AM Parishioners of Sacred
+    Heart
   note: Page 2 of the 18 October 2026 issue; weekday Masses Monday, Wednesday, Thursday, Friday 8:30 AM.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

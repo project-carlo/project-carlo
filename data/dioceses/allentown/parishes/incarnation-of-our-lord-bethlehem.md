@@ -4,26 +4,28 @@ website: https://www.incarnationofourlord.org/bulletins/
 bulletin_provider: other
 provider_id: page-pdfs
 publication: ['url:https://www.incarnationofourlord.org/bulletins/']
-group: 'Rev. Andrew N. Gehringer, pastor of Holy Infancy and Incarnation of Our Lord'
-revisit: 'Confirm a new issue after 2026.10.03 has been posted, and that the pipeline can fetch over the incomplete TLS chain.'
-revisit_after: 2026-10-26
+group: Rev. Andrew N. Gehringer, pastor of Holy Infancy and Incarnation of Our Lord
 evidence:
 - url: https://www.incarnationofourlord.org/wp-content/uploads/2026/10/2026.10.03.pdf
   seen: 2026-10-18
   quote: Incarnation of our lord parish
-  note: 'Page 1 of the issue dated "OCTOBER 3rd – 11th, 2026" (two weekends per issue): "Incarnation of our lord
-    parish, 617 Pierce St., Bethlehem, PA 18015-3427", Pastor Rev. Andrew N. Gehringer, Parish Secretary Beth
-    Perkins. Saturday "Confessions/Adoration 3:00PM – 4:00PM", "Vigil – 27th Sunday in Ordinary Time 4:15PM";
-    Sunday "10:00AM – Mass in Ordinariate Form". The site''s TLS chain is incomplete: curl and Python refuse it,
-    so the PDF was downloaded through Chrome.'
+  note: 'Page 1 of the issue dated "OCTOBER 3rd – 11th, 2026" (two weekends per issue): "Incarnation of
+    our lord parish, 617 Pierce St., Bethlehem, PA 18015-3427", Pastor Rev. Andrew N. Gehringer, Parish
+    Secretary Beth Perkins. Saturday "Confessions/Adoration 3:00PM – 4:00PM", "Vigil – 27th Sunday in
+    Ordinary Time 4:15PM"; Sunday "10:00AM – Mass in Ordinariate Form". The site''s TLS chain is incomplete:
+    curl and Python refuse it, so the PDF was downloaded through Chrome.'
 - url: https://www.incarnationofourlord.org/bulletins/
   seen: 2026-10-18
-  note: The parish's Bulletins page (WordPress; read in a browser) lists self-hosted PDFs newest first, 2026.10.03,
-    2026.09.26, 2026.09.19, 2026.09.12, 2026.08.29, 2026.08.15 ...
+  note: The parish's Bulletins page (WordPress; read in a browser) lists self-hosted PDFs newest first,
+    2026.10.03, 2026.09.26, 2026.09.19, 2026.09.12, 2026.08.29, 2026.08.15 ...
 - url: https://container.parishesonline.com/bulletins/03/1407/20261018B.pdf
   seen: 2026-10-18
-  note: 'Holy Infancy''s 18 October 2026 bulletin (page 2, image) announces "3 PM to 4 PM Confessions and 4:15 PM
-    Vigil Mass at Incarnation Church, 617 Pierce St., Bethlehem" for Saturday 24 October.'
+  note: Holy Infancy's 18 October 2026 bulletin (page 2, image) announces "3 PM to 4 PM Confessions and
+    4:15 PM Vigil Mass at Incarnation Church, 617 Pierce St., Bethlehem" for Saturday 24 October.
+revisit: Confirm a new issue after 2026.10.03 has been posted, and that the pipeline can fetch over the
+  incomplete TLS chain.
+revisit_after: 2026-10-26
+promoted: 2026-10-19
 ---
 
 ## Publisher

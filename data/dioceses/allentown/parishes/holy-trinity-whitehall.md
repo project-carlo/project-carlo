@@ -21,6 +21,7 @@ evidence:
   note: The diocesan map's website for Holy Trinity. GCatholic's holytrinitywhitehall.4lpi.com no longer
     resolves. A web search found older LPi issues in container 04/0981 (e.g. 20251026C.pdf); `probe container
     04/0981` found no B issue in the 12 Sundays to 18 October 2026.
+promoted: 2026-10-19
 ---
 
 ## Publisher

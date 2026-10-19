@@ -17,6 +17,7 @@ evidence:
   quote: Sunday, October 11, 2026
   note: The Wix site's BULLETIN page (menu label "BULLETIN"; its URL is copy-of-template-page-3). One
     /_files/ugd/ PDF per Sunday, the date only in the link text.
+promoted: 2026-10-19
 ---
 
 ## Publisher

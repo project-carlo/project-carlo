@@ -3,25 +3,25 @@ name: Holy Guardian Angels Parish
 website: https://www.hgaparish.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/199
-publication:
-- url:https://www.church-bulletin.org/holy-guardian-angels-parish-reading-pa-19605
+publication: ['url:https://www.church-bulletin.org/holy-guardian-angels-parish-reading-pa-19605']
 group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/holy-guardian-angels-parish-reading-pa-19605/2026-10-18.pdf
+  seen: 2026-10-18
   note: '18 October 2026 issue, 12 pages, all scanned images with no text layer (read rendered, parish-site-access
     render.py). Page 1: "HOLY GUARDIAN ANGELS PARISH EST. 1929"; MASS SCHEDULE "Saturday Vigil – 4:15
     pm | Sunday – 8:00, 9:45 & 11:30 am"; Daily Mon., Tues., Thur., Fri. 8:00 am, Wed. 8:00 am & 12:10
     pm; footer "HGA Rectory | 3121 Kutztown Road Reading, PA 19605". One church named.'
-  seen: 2026-10-18
 - url: https://www.church-bulletin.org/holy-guardian-angels-parish-reading-pa-19605
+  seen: 2026-10-18
   quote: Holy Guardian Angels Parish Reading, PA 19605
   note: 'John Patrick Publishing listing (church-bulletin.org/?id=199 redirects here): one PDF per Sunday
     at /bulletin/holy-guardian-angels-parish-reading-pa-19605/YYYY-MM-DD.pdf, newest 18 October 2026.'
-  seen: 2026-10-18
 - url: https://www.hgaparish.com/bulletins
+  seen: 2026-10-18
   note: The parish site's Bulletins page links https://www.jppc.net/onlinebulletins/199template.pdf, which
     301-redirects to https://church-bulletin.org/?id=199 (curl -I, 2026-10-18).
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Publisher

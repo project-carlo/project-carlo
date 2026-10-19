@@ -28,6 +28,7 @@ evidence:
   note: 'Page 1 of Holy Ghost Parish''s 18 October 2026 issue: the asterisked 7:00AM Masses (Sunday 18
     and 25 October, and weekdays) are "Offered at St. Stephen of Hungary Oratory". Page 2: "On Mon., Oct.
     19, the 7AM Mass at St. Stephen is cancelled."'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

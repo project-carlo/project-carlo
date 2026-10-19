@@ -27,6 +27,7 @@ evidence:
   quote: 'Sunday: 7:00, 9:00, & 11:00 AM'
   note: Page 1 of the 18 October 2026 issue (Saturday Vigil 4:00 PM; daily 6:30 & 8:30 AM); 1879 Applewood
     Drive, Orefield.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -11,28 +11,27 @@ longitude: -75.5605625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23687
-- directory:8128
+roster: ['gcatholic:23687', 'directory:8128']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23687
   seen: 2026-10-18
   quote: 4412 Mount View Drive, Walnutport, Pennsylvania 18088-9728
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''St. Nicholas'', 4412 Mount
-    View Drive, Walnutport, PA, 18088; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''St. Nicholas'',
+    4412 Mount View Drive, Walnutport, PA, 18088; kind: Church'
 - url: https://www.allentowndiocese.org/places/st-nicholas
   seen: 2026-10-18
-  note: 'Listed in Diocese of Allentown parish map: places as ''St. Nicholas'', 4412 West Mountain View Drive, Walnutport,
-    PA, 18088; kind: place'
+  note: 'Listed in Diocese of Allentown parish map: places as ''St. Nicholas'', 4412 West Mountain View
+    Drive, Walnutport, PA, 18088; kind: place'
 - url: https://container.parishesonline.com/bulletins/03/1177/20261018B.pdf
   seen: 2026-10-18
   quote: St. Nicholas Catholic Church
-  note: 'Page 1 of the 18 October 2026 issue: Saturday Vigil 4:30 PM, Sunday 8:30 & 10:30 AM, Monday-Thursday 8:30
-    AM; masthead address 1152 Oak Road (the parish office/rectory).'
+  note: 'Page 1 of the 18 October 2026 issue: Saturday Vigil 4:30 PM, Sunday 8:30 & 10:30 AM, Monday-Thursday
+    8:30 AM; masthead address 1152 Oak Road (the parish office/rectory).'
 - url: https://www.openstreetmap.org/way/1076365673
   seen: 2026-10-18
   note: 'OpenStreetMap: "Saint Nicholas Catholic Church, 4412, West Mountain View Drive, Walnutport" (Nominatim,
     read 2026-10-18).'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

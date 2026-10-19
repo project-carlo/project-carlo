@@ -3,21 +3,21 @@ name: St. Francis de Sales Parish
 website: https://www.stfrancisroby.org/
 bulletin_provider: other
 provider_id: page-pdfs https://www.stfrancisroby.org/bulletin
-publication:
-- url:https://www.stfrancisroby.org/bulletin
+publication: ['url:https://www.stfrancisroby.org/bulletin']
 group: ''
 evidence:
 - url: https://www.stfrancisroby.org/_files/ugd/be01c3_f09f64e73b7c4089859a143defed7bae.pdf
+  seen: 2026-10-18
   quote: Intentions for Kathleen Hart
   note: 'The 11 October 2026 issue (newest posted on 2026-10-18), page 2 "Mass Schedule for the Week":
     Saturday 5:00PM, Sunday 8:00AM and 10:30AM, weekdays 9:00 AM, and the same for 17/18 October. Pages
     1 and 6 are images.'
-  seen: 2026-10-18
 - url: https://www.stfrancisroby.org/bulletin
+  seen: 2026-10-18
   quote: October 11, 2026
   note: 'Wix bulletin page: one link per issue labelled with its date (April 5 to October 11, 2026), files
     under /_files/ugd/.'
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Publisher

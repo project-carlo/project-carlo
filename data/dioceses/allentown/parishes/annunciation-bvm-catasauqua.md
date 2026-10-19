@@ -34,6 +34,7 @@ evidence:
 revisit: Check whether St. John Fisher, North Catasauqua publishes a bulletin of its own (ask the office,
   610-264-1972, or its Facebook page); if it does, give it its own parish row.
 revisit_after: 2027-01-15
+promoted: 2026-10-19
 ---
 
 ## Publisher

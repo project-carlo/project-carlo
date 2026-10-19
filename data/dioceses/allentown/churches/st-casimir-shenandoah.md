@@ -11,9 +11,7 @@ longitude: -76.2031875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23650
-- directory:8064
+roster: ['gcatholic:23650', 'directory:8064']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23650
   seen: 2026-10-18
@@ -51,6 +49,7 @@ revisit: 'Seasonal site: Sunday Masses here ended for the winter on 27 September
   2027 Divine Mercy bulletins for "SC" Masses; if there are none by 1 August 2027, move this church to
   open/.'
 revisit_after: 2027-07-01
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

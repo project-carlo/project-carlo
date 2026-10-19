@@ -11,9 +11,7 @@ longitude: -75.6519375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23653
-- directory:8072
+roster: ['gcatholic:23653', 'directory:8072']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23653
   seen: 2026-10-18
@@ -25,8 +23,9 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Columbkill'', 200 Indian Spring Road,
     Boyertown, PA, 19512; kind: place'
 - url: https://www.church-bulletin.org/bulletin/saint-columbkill-parish-boyertown-pa-19512/2026-10-18.pdf
-  note: 'Page 1 (image, read rendered): "Vigil Mass: Saturday 4:00 pm Sunday: 8:00 am, 10:00 am".'
   seen: 2026-10-18
+  note: 'Page 1 (image, read rendered): "Vigil Mass: Saturday 4:00 pm Sunday: 8:00 am, 10:00 am".'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

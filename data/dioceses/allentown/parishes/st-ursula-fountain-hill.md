@@ -17,6 +17,7 @@ evidence:
   seen: 2026-10-18
   note: 'The parish''s Google Sites "Bulletin" page embeds the Discover Mass widget: rendered in Chrome
     (visit.py) it lists 12 bulletins.discovermass.com download links and publication discovermass:st-ursula-fountain-hill-pa.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

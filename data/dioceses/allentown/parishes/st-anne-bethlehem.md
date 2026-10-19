@@ -10,12 +10,13 @@ evidence:
   seen: 2026-10-18
   quote: 'Weekend: Saturday Vigil 4:30 PM'
   note: 'Page 1 of the 18 October 2026 issue: "St. Anne Catholic Church", website www.stannechurchbethlehem.org,
-    Rev. Giuseppe C. Esposito, Pastor; "Mass Schedule Weekend: Saturday Vigil 4:30 PM Sunday 8:00, 10:00, 12
-    Noon". Page 2 "Page Two October 18, 2026" Mass intentions.'
+    Rev. Giuseppe C. Esposito, Pastor; "Mass Schedule Weekend: Saturday Vigil 4:30 PM Sunday 8:00, 10:00,
+    12 Noon". Page 2 "Page Two October 18, 2026" Mass intentions.'
 - url: https://www.stannechurchbethlehem.org/weekly_bulletins
   seen: 2026-10-18
-  note: The parish's Weekly Bulletins page links http://www.jppc.net/onlinebulletins/263template.pdf, which
-    redirects to the church-bulletin.org listing in publication (newest 2026-10-18).
+  note: The parish's Weekly Bulletins page links http://www.jppc.net/onlinebulletins/263template.pdf,
+    which redirects to the church-bulletin.org listing in publication (newest 2026-10-18).
+promoted: 2026-10-19
 ---
 
 ## Publisher

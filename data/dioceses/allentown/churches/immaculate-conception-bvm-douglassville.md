@@ -11,9 +11,7 @@ longitude: -75.7963125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23618
-- directory:8010
+roster: ['gcatholic:23618', 'directory:8010']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23618
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''Immaculate Conception BVM'', 905 Chestnut
     Street, Douglassville, PA, 19518; kind: place'
 - url: https://www.church-bulletin.org/bulletin/immaculate-conception-church-douglassville-pa-19518/2026-10-18.pdf
+  seen: 2026-10-18
   quote: Immaculate Conception BVM Church
   note: 'Page 1: Saturday 5:15 PM; Sunday 8:00 AM, 10:30 AM.'
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

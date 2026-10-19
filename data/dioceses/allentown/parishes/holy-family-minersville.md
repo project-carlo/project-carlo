@@ -9,14 +9,14 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/03/1413/20261018B.pdf
   seen: 2026-10-18
   quote: Holy Family Parish of Minersville is a Christ-centered sacramental family
-  note: 'Page 1 of the 18 October 2026 issue: masthead "HOLY FAMILY PARISH OF MINERSVILLE", parish
-    office 538 Sunbury Street, and the Mass schedule below.'
+  note: 'Page 1 of the 18 October 2026 issue: masthead "HOLY FAMILY PARISH OF MINERSVILLE", parish office
+    538 Sunbury Street, and the Mass schedule below.'
 - url: https://container.parishesonline.com/bulletins/03/1413/20261018B.pdf
   seen: 2026-10-18
   quote: 'Saturday: 4:00pm St. Matthew 5:30pm St. Michael Sunday: 8:30am St. Michael 10:00am St. Matthew'
-  note: 'Page 1 Mass schedule. Weekdays alternate between the two churches (Monday and Wednesday 8:00am
-    St. Matthew, Tuesday and Friday 8:00am St. Michael, Thursday 5:30pm alternating). Page 5 "Week at a
-    Glance" repeats this for 17-25 October.'
+  note: Page 1 Mass schedule. Weekdays alternate between the two churches (Monday and Wednesday 8:00am
+    St. Matthew, Tuesday and Friday 8:00am St. Michael, Thursday 5:30pm alternating). Page 5 "Week at
+    a Glance" repeats this for 17-25 October.
 - url: https://parishesonline.com/organization/holy-family-parish-17954
   seen: 2026-10-18
   note: 'probe po: org "Holy Family Parish of Minersville", 538 Sunbury Street, lpi 0018000000QxAizAAF,
@@ -30,19 +30,20 @@ evidence:
     of Minersville.
 - url: https://es.ad-today.com/holy-family-parish-of-minersville/two-minersville-parishes-to-merge
   seen: 2026-10-18
-  quote: the Finance and Advisory committees at St. Matthew the Evangelist have recommended unanimously that
-    the underutilized St. Francis of Assisi church building be closed
+  quote: the Finance and Advisory committees at St. Matthew the Evangelist have recommended unanimously
+    that the underutilized St. Francis of Assisi church building be closed
   note: 'The same article: St. Francis "has been open in recent years only for one Mass per year, on the
     feast day of St. Francis of Assisi, and for funerals".'
 - url: https://parishesonline.com/organization/st-matthew-the-evangelist-parish
   seen: 2026-10-18
   note: 'probe po: St. Matthew the Evangelist''s old ParishesOnline org (lpi 001C000001B3qozIAB, 139 Spruce
-    Street) has no publications; its website stmatthewtheevangelistparish.org does not resolve (probe url
-    DEAD-DNS).'
+    Street) has no publications; its website stmatthewtheevangelistparish.org does not resolve (probe
+    url DEAD-DNS).'
 - url: http://minersvillecatholic.com/
   seen: 2026-10-18
-  note: 'The website the diocesan parish map gives for Holy Family redirects to saaar.co, a betting spam page
-    (probe url SPAM-SQUAT). Not used.'
+  note: The website the diocesan parish map gives for Holy Family redirects to saaar.co, a betting spam
+    page (probe url SPAM-SQUAT). Not used.
+promoted: 2026-10-19
 ---
 
 ## Publisher

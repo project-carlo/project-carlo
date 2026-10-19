@@ -8,22 +8,24 @@ group: ''
 evidence:
 - url: https://abvm.church/bulletins/10.18.2026.pdf
   seen: 2026-10-18
-  quote: 'Assumption of the Blessed Virgin Mary Catholic Church 633-649 W. Washington St. Slatington, PA 18080-1618 Website: abvm.church PASTOR: Rev. Eric R. Arnout'
+  quote: 'Assumption of the Blessed Virgin Mary Catholic Church 633-649 W. Washington St. Slatington,
+    PA 18080-1618 Website: abvm.church PASTOR: Rev. Eric R. Arnout'
   note: 'Page 1 of the 18 October 2026 issue (3 pages, text PDF). Same page: "Saturday 5 PM Sunday 8:30
     & 10:30 AM Daily: Monday 7 PM Tues. Wed. Thurs. - 8:30 AM". Page 2 lists the week''s intentions, all
     at the one church.'
 - url: https://abvm.church/
   seen: 2026-10-18
   quote: Weekend Mass Saturday — 5:00 PM Sunday — 8:30 AM & 10:30 AM
-  note: 'The parish''s own site (built by Stonegate Web Security). Its "Latest Bulletins" block links
-    /bulletins/10.18.2026.pdf, 10.11.2026.pdf and 10.04.2026.pdf, with a .webp thumbnail of each; the
-    first card''s caption still read "October 11th Bulletin" while linking the 18 October file.'
+  note: The parish's own site (built by Stonegate Web Security). Its "Latest Bulletins" block links /bulletins/10.18.2026.pdf,
+    10.11.2026.pdf and 10.04.2026.pdf, with a .webp thumbnail of each; the first card's caption still
+    read "October 11th Bulletin" while linking the 18 October file.
 - url: https://www.allentowndiocese.org/places/assumption-bvm-slatington
   seen: 2026-10-18
   quote: 'Weekend Masses: | Saturday 5 p.m.; Sunday 8:30, 10:30 a.m.'
   note: The diocesan map still gives the old website http://abvmslat.weconnect.com/, which answers "Temporarily
     Unavailable" (as do the other two diocesan weconnect.com sites, Holy Trinity Whitehall and Queenship
     of Mary).
+promoted: 2026-10-19
 ---
 
 ## Publisher

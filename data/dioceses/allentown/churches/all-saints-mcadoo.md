@@ -11,9 +11,7 @@ longitude: -75.9921875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23601
-- directory:7976
+roster: ['gcatholic:23601', 'directory:7976']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23601
   seen: 2026-10-18
@@ -29,6 +27,7 @@ evidence:
   quote: Daily Mass (All Saints Church) Monday, Thursday … 5:45 PM Tuesday, Wednesday, Friday … 8:00 AM
   note: Page 1 of the 18 October 2026 All Saints Parish bulletin; weekend Masses here Saturday 4:00 PM
     and Sunday 8:00 AM.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

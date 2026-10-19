@@ -9,15 +9,17 @@ evidence:
 - url: http://sponsors.bonventure.net/pdfs/1588/2026-10-18.pdf
   seen: 2026-10-18
   quote: 'Sunday: 7:30, 9:30 and 11:30'
-  note: 'Page 1 of the 18 October 2026 issue (12 pages): "Our Lady of Perpetual Help Parish Center, 3219 Santee
-    Road, Bethlehem, PA 18020", Pastor Rev. Martin F. Kern; "LITURGICAL SCHEDULE: Weekend Masses: Saturday:
-    5:00 PM Sunday: 7:30, 9:30 and 11:30"; weekdays Monday-Thursday 6:45 & 8:00 AM. Page 2 header "Web Site -
-    www.my-olph.org".'
+  note: 'Page 1 of the 18 October 2026 issue (12 pages): "Our Lady of Perpetual Help Parish Center, 3219
+    Santee Road, Bethlehem, PA 18020", Pastor Rev. Martin F. Kern; "LITURGICAL SCHEDULE: Weekend Masses:
+    Saturday: 5:00 PM Sunday: 7:30, 9:30 and 11:30"; weekdays Monday-Thursday 6:45 & 8:00 AM. Page 2 header
+    "Web Site - www.my-olph.org".'
 - url: https://my-olph.org/
   seen: 2026-10-18
-  note: 'The parish''s eCatholic site (site id 1414; Cloudflare, read in a browser with parish-site-access visit.py)
-    links "Weekly Bulletin" and "Parish Bulletin" to sponsors.bonventure.net/?page=1588. Its eCatholic bulletin
-    feed is unused: files.ecatholic.com/1414/bulletins/ answers 403 for the last four Sundays.'
+  note: 'The parish''s eCatholic site (site id 1414; Cloudflare, read in a browser with parish-site-access
+    visit.py) links "Weekly Bulletin" and "Parish Bulletin" to sponsors.bonventure.net/?page=1588. Its
+    eCatholic bulletin feed is unused: files.ecatholic.com/1414/bulletins/ answers 403 for the last four
+    Sundays.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

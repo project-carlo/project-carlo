@@ -11,9 +11,7 @@ longitude: -76.0048125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23660
-- directory:8082
+roster: ['gcatholic:23660', 'directory:8082']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23660
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Ignatius of Loyola'', 2810 Saint Albans
     Drive, Reading, PA, 19608; kind: place'
 - url: https://www.church-bulletin.org/bulletin/saint-ignatius-of-loyola-reading-pa-19608/2026-10-18.pdf
+  seen: 2026-10-18
   note: 'Page 2 (image, read rendered): "ANNOUNCED MASSES FOR THE WEEK" … Saturday, October 24 4:00 p.m.;
     Sunday, October 25 7:30, 9:00, 10:30 a.m., 12:00 p.m.'
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

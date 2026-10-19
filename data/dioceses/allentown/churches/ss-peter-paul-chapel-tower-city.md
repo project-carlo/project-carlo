@@ -15,8 +15,8 @@ roster: []
 evidence:
 - url: https://mostblessedtrinity.us/wp-content/uploads/2026/10/10-18-26-The-Twenty-Ninth-Sunday-in-Ordinary-Time-Website-Edition.pdf
   seen: 2026-10-18
-  note: 'Page 1 (image, rendered and read): "Chapel: 840 E. Grand Avenue, Tower City, PA 17980"; "Chapel: Sunday
-    9:00 AM"; Holy Days "Chapel: Vigil 7:00 PM".'
+  note: 'Page 1 (image, rendered and read): "Chapel: 840 E. Grand Avenue, Tower City, PA 17980"; "Chapel:
+    Sunday 9:00 AM"; Holy Days "Chapel: Vigil 7:00 PM".'
 - url: https://mostblessedtrinity.us/
   seen: 2026-10-18
   quote: 9:00 AM - Mass (Chapel - Tower City)
@@ -26,8 +26,9 @@ evidence:
   quote: 'Weekend Mass Tower City: | Sunday 9 a.m.'
 - url: https://www.openstreetmap.org/node/5797307889
   seen: 2026-10-18
-  note: 'OSM (via Nominatim): "Saints Peter & Paul Roman Catholic Church, 840, East Grand Avenue, Tower City,
-    Schuylkill County, Pennsylvania, 17980", amenity=place_of_worship, at 40.5898987, -76.5469012.'
+  note: 'OSM (via Nominatim): "Saints Peter & Paul Roman Catholic Church, 840, East Grand Avenue, Tower
+    City, Schuylkill County, Pennsylvania, 17980", amenity=place_of_worship, at 40.5898987, -76.5469012.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

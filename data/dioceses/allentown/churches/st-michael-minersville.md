@@ -30,9 +30,10 @@ evidence:
 - url: https://www.allentowndiocese.org/places/holy-family-minersville-2
   seen: 2026-10-18
   quote: 'St. Michael the Archangel Church: | 541 Sunbury St.'
-  note: 'The diocesan parish map''s Holy Family page (text as scraped, "|" marks a field break); also "Parish Office: 538 Sunbury Street",
-    "Convent: 531 Sunbury St.", and weekend Masses "St. Michael, Saturday 5:30 p.m., Sunday 8:30 a.m.".'
-
+  note: 'The diocesan parish map''s Holy Family page (text as scraped, "|" marks a field break); also
+    "Parish Office: 538 Sunbury Street", "Convent: 531 Sunbury St.", and weekend Masses "St. Michael,
+    Saturday 5:30 p.m., Sunday 8:30 a.m.".'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

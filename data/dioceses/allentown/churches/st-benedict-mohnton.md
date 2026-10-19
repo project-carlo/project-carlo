@@ -11,9 +11,7 @@ longitude: -75.9104375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23649
-- directory:8062
+roster: ['gcatholic:23649', 'directory:8062']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23649
   seen: 2026-10-18
@@ -25,8 +23,9 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Benedict'', 2020 Chestnut Hill Road,
     Mohnton, PA, 19540; kind: place'
 - url: https://churchofsaintbenedict.com/wp-content/uploads/Bulletin-October-18-2026.pdf
-  quote: Saturday Vigil 5:00pm; Sunday 8:30am, 11:00am
   seen: 2026-10-18
+  quote: Saturday Vigil 5:00pm; Sunday 8:30am, 11:00am
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

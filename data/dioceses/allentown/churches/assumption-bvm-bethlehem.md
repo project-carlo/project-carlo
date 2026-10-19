@@ -11,24 +11,23 @@ longitude: -75.3939375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23605
-- directory:7982
+roster: ['gcatholic:23605', 'directory:7982']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23605
   seen: 2026-10-18
   quote: 4101 Old Bethlehem Pike, Bethlehem, Pennsylvania 18015-9097
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Assumption of the Blessed
-    Virgin Mary'', 4101 Old Bethlehem Pike, Bethlehem, PA, 18015; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Assumption of the
+    Blessed Virgin Mary'', 4101 Old Bethlehem Pike, Bethlehem, PA, 18015; kind: Church'
 - url: https://www.allentowndiocese.org/places/assumption-bvm-bethlehem
   seen: 2026-10-18
-  note: 'Listed in Diocese of Allentown parish map: places as ''Assumption BVM'', 4101 Old Bethlehem Pike, Bethlehem,
-    PA, 18015; kind: place'
+  note: 'Listed in Diocese of Allentown parish map: places as ''Assumption BVM'', 4101 Old Bethlehem Pike,
+    Bethlehem, PA, 18015; kind: place'
 - url: https://discovermass.com/church/assumption-of-the-blessed-virgin-mary-bethlehem-pa/
   seen: 2026-10-18
   quote: 'Saturday Evening Vigil:'
-  note: '18 October 2026 issue, page 2 MASS SCHEDULE: Saturday Evening Vigil 5:00 p.m.; Sunday Morning 8:00, 10:00,
-    11:30 a.m.; Monday-Friday 9:00 a.m. Page 1 gives 4101 Old Bethlehem Pike.'
+  note: '18 October 2026 issue, page 2 MASS SCHEDULE: Saturday Evening Vigil 5:00 p.m.; Sunday Morning
+    8:00, 10:00, 11:30 a.m.; Monday-Friday 9:00 a.m. Page 1 gives 4101 Old Bethlehem Pike.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

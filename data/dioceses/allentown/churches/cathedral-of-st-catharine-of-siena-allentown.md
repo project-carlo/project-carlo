@@ -22,6 +22,7 @@ evidence:
   quote: 1825 West Turner St, Allentown, PA 18104
   note: 'Page 1 masthead of the 18 October 2026 issue; page 2: "Sunday Vigil - 4:15 PM Saturdays", "Sunday
     7:30 AM, 9:30 AM & 11:30 AM".'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

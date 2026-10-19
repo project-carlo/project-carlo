@@ -11,9 +11,7 @@ longitude: -75.9685625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23640
-- directory:8090
+roster: ['gcatholic:23640', 'directory:8090']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23640
   seen: 2026-10-18
@@ -33,6 +31,7 @@ evidence:
   seen: 2026-10-18
   quote: the decision was made to close St. Jerome’s Church and unite the Parish into one building at
     SS. Peter & Paul Church
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

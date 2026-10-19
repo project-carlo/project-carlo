@@ -3,8 +3,7 @@ name: St. Charles Borromeo Parish
 website: https://www.stcharlesashland.com/
 bulletin_provider: other
 provider_id: page-pdfs https://www.stcharlesashland.com/s-projects-side-by-side
-publication:
-- url:https://www.stcharlesashland.com/s-projects-side-by-side
+publication: ['url:https://www.stcharlesashland.com/s-projects-side-by-side']
 group: St. Charles Borromeo Parish
 evidence:
 - url: https://www.stcharlesashland.com/_files/ugd/23b1db_5ff7151c62a641f59cf5dbc1925ba022.pdf
@@ -29,6 +28,7 @@ evidence:
   quote: Rev. Christopher M. Zelonis has been assigned as Pastor of St. Charles Borromeo Parish in Ashland
     and St. Joseph the Worker Parish in Frackville.
   note: Shenandoah Sentinel, 17 May 2026; effective June 16.
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -3,8 +3,7 @@ name: St. Joseph the Worker Parish
 website: https://www.stjoesfrackville.com/
 bulletin_provider: other
 provider_id: page-pdfs https://www.stjoesfrackville.com/services-9
-publication:
-- url:https://www.stjoesfrackville.com/services-9
+publication: ['url:https://www.stjoesfrackville.com/services-9']
 group: St. Joseph the Worker Parish
 evidence:
 - url: https://www.stjoesfrackville.com/_files/ugd/23b1db_dff889f82b4142f098cf8eb5635b0c90.pdf
@@ -26,6 +25,7 @@ evidence:
   quote: Saturday Vigil 5:30 pm
   note: 'The parish site''s Mass Times page: Saturday Vigil 5:30 pm, Sunday 11:00 am, Monday 5:30 pm,
     Thursday 8:30 am.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -11,9 +11,7 @@ longitude: -75.8354375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23626
-- directory:8024
+roster: ['gcatholic:23626', 'directory:8024']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23626
   seen: 2026-10-18
@@ -29,6 +27,7 @@ evidence:
   quote: (Our Lady of Lourdes Church) Sunday … 10:30 AM
   note: Page 1 of the 18 October 2026 All Saints Parish bulletin. Page 3 lists "Sun 10/25/26 10:30 AM
     Our Lady Of Lourdes"; first Fridays have exposition here 5–6 pm.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

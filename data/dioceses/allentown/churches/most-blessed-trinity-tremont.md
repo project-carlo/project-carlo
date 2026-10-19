@@ -25,14 +25,15 @@ evidence:
 - url: https://mostblessedtrinity.us/wp-content/uploads/2026/10/10-18-26-The-Twenty-Ninth-Sunday-in-Ordinary-Time-Website-Edition.pdf
   seen: 2026-10-18
   note: 'Page 1 (image, rendered and read): "Church/Rectory: 113 Cherry Street, Tremont, PA 17981"; "Church:
-    Saturday Vigil 4:00 PM, Sunday 10:30 AM"; daily Masses "9:00 AM, except for Tuesday at 6:00 PM in the
-    Tremont Church, no Saturdays."'
+    Saturday Vigil 4:00 PM, Sunday 10:30 AM"; daily Masses "9:00 AM, except for Tuesday at 6:00 PM in
+    the Tremont Church, no Saturdays."'
 - url: https://mostblessedtrinity.us/
   seen: 2026-10-18
   quote: 4:00 PM - Mass (Church - Tremont)
 - url: https://www.allentowndiocese.org/places/most-blessed-trinity
   seen: 2026-10-18
   quote: 'Rectory: | 113 Cherry St. (17981-1531)'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

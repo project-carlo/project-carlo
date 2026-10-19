@@ -27,6 +27,7 @@ evidence:
   quote: 11:30 am     Joyce Wlodek from Holy Trinity Bell Choir
   note: Page 1 Mass intentions of the 18 October 2026 issue (Saturday 4:00 pm; Sunday 7:30, 9:30, 11:30
     am).
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

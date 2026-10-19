@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-18
   quote: THIS SUNDAY'S BULLETIN View here
   note: The parish site's bulletin page; "View here" links https://www.jppc.net/onlinebulletins/258template.pdf.
+promoted: 2026-10-19
 ---
 
 ## Publisher

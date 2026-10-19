@@ -25,11 +25,13 @@ evidence:
 - url: https://stclareassisi.weebly.com/uploads/5/6/4/5/56457441/137b_2026_10_11.pdf
   seen: 2026-10-18
   quote: '5:30 PM @ Holy Cross Sundays: 8:30 AM @ St. Clare 10:45 AM @ Holy Cross'
-  note: 'Page 1 of the 11 October 2026 St. Clare bulletin; also Tuesdays 6:00 PM and Wednesdays 8:30AM @ Holy Cross.'
+  note: Page 1 of the 11 October 2026 St. Clare bulletin; also Tuesdays 6:00 PM and Wednesdays 8:30AM
+    @ Holy Cross.
 - url: https://www.allentowndiocese.org/places/holy-cross
   seen: 2026-10-18
   quote: 'Mailing Address, Parish Office and Rectory: | 99 Valley St. (17959)'
-  note: 'The map pin and page heading give the place itself as "Holy Cross, 101 Valley Street, New Philadelphia".'
+  note: The map pin and page heading give the place itself as "Holy Cross, 101 Valley Street, New Philadelphia".
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

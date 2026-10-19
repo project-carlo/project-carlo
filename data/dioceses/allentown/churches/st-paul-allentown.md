@@ -30,6 +30,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=920+South+2nd+Street,+Allentown,+PA&format=json
   seen: 2026-10-19
   note: 'OpenStreetMap: "St. Paul Catholic Church, 920, South 2nd Street", 40.5907, -75.4562.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -3,8 +3,7 @@ name: St. Mary and St. Joseph Parishes
 website: https://www.stmarystjoseph.net/
 bulletin_provider: other
 provider_id: page-pdfs
-publication:
-- url:https://www.stmarystjoseph.net/
+publication: ['url:https://www.stmarystjoseph.net/']
 group: St. Mary Parish
 evidence:
 - url: https://drive.google.com/uc?export=download&id=112WWQdzPg3r6lDRP-uIBfT7CmoHXA6XN
@@ -24,6 +23,7 @@ evidence:
   note: 'Home page "St. Mary and St. Joseph Roman Catholic Parishes, Ringtown / Sheppton, PA", Fr. Dominic
     Pham, pastor; its weekend schedule: St. Mary Saturdays 3:00pm, Sundays 10:00am; St. Joseph Saturdays
     4:30pm, Sundays 8:30am.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

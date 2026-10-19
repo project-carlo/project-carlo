@@ -11,9 +11,7 @@ longitude: -75.9195625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23612
-- directory:7998
+roster: ['gcatholic:23612', 'directory:7998']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23612
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''Holy Guardian Angels'', 3121 Kutztown
     Road, Reading, PA, 19605; kind: place'
 - url: https://www.church-bulletin.org/bulletin/holy-guardian-angels-parish-reading-pa-19605/2026-10-18.pdf
+  seen: 2026-10-18
   note: 'Page 1 (image, read rendered): MASS SCHEDULE "Saturday Vigil – 4:15 pm | Sunday – 8:00, 9:45
     & 11:30 am".'
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   note: 'The old ParishesOnline organization (LPi id 0018000000QxAjbAAF, website stjw.org) lists only
     LPi generic inserts (generic-publications/pol/YYYYMMDDGB.pdf), not a parish bulletin; `probe po`:
     "no publications".'
+promoted: 2026-10-19
 ---
 
 ## Publisher

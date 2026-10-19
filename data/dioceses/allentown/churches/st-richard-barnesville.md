@@ -11,9 +11,7 @@ longitude: -76.0486875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23694
-- directory:8142
+roster: ['gcatholic:23694', 'directory:8142']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23694
   seen: 2026-10-18
@@ -31,6 +29,7 @@ evidence:
 - url: https://irp.cdn-website.com/4af99d44/files/uploaded/10+Oct+18+2026.pdf
   seen: 2026-10-18
   quote: Church of St. Richard 799 Barnesville Drive, Barnesville, PA 18214
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

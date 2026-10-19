@@ -32,6 +32,7 @@ evidence:
   quote: The Parishioners of St. Mary’s
   note: 'Page 1 of the 18 October 2026 bulletin: Saturday 24 Oct "6:00 PM The Parishioners of St. Mary’s
     / St. Mary’s"; Sunday 25 Oct 8:00 AM St. Mary’s.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

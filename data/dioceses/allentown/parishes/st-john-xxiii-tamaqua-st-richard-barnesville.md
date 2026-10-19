@@ -3,8 +3,7 @@ name: St. John XXIII and St. Richard Parishes
 website: https://www.sj23tamaqua.org/
 bulletin_provider: other
 provider_id: page-pdfs https://www.sj23tamaqua.org/bulletin
-publication:
-- url:https://www.sj23tamaqua.org/bulletin
+publication: ['url:https://www.sj23tamaqua.org/bulletin']
 group: St. John XXIII Parish
 evidence:
 - url: https://irp.cdn-website.com/4af99d44/files/uploaded/10+Oct+18+2026.pdf
@@ -37,6 +36,7 @@ evidence:
 revisit: Retry https://strichard.org (connection reset from the sandbox on 2026-10-18) and check whether
   St. Richard posts the same joint bulletin or one of its own; split the row only if it has its own.
 revisit_after: 2026-11-15
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -11,9 +11,7 @@ longitude: -75.8051875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23680
-- directory:8118
+roster: ['gcatholic:23680', 'directory:8118']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23680
   seen: 2026-10-18
@@ -25,8 +23,9 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Mary'', 14833 Kutztown Road, Kutztown,
     PA, 19530; kind: place'
 - url: https://www.church-bulletin.org/bulletin/saint-mary-s-church-kutztown-pa-19530/2026-10-18.pdf
-  quote: Saturday Vigil 4:30 pm
   seen: 2026-10-18
+  quote: Saturday Vigil 4:30 pm
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

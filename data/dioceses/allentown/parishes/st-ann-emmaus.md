@@ -15,6 +15,7 @@ evidence:
   seen: 2026-10-18
   note: Squarespace bulletin page linking /s/YYYYMMDDB.pdf (LPi-style names, but self-hosted; no LPi id
     on the site) plus inserts cwb_MM-DD.pdf and pwb_MM-DD.pdf.
+promoted: 2026-10-19
 ---
 
 ## Publisher

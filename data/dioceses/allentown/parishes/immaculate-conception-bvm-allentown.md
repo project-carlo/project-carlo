@@ -23,6 +23,7 @@ evidence:
   quote: Please click HERE for our Latest Bulletin
   note: The parish site's News page links latestbulletin.pdf ("Latest Bulletin") and archive.pdf ("Bulletin
     Archive"). The home page does not link the bulletin, so the News page is the website.
+promoted: 2026-10-19
 ---
 
 ## Publisher

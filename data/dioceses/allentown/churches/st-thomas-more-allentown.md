@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-19
   note: 'OpenStreetMap: "Saint Thomas More Catholic Church, 1050, Flexer Avenue", 40.5766, -75.5155; the
     school is 1040 Flexer Avenue.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

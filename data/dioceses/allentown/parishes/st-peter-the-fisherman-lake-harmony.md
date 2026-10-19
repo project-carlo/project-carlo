@@ -8,7 +8,8 @@ group: ''
 evidence:
 - url: https://discovermass.com/church/st-peter-the-fisherman-lake-harmony-pa/
   seen: 2026-10-18
-  quote: 'SAINT PETER THE FISHERMAN CATHOLIC CHURCH 33 Trinity Circle Rd. (PO Box 237) Lake Harmony, PA 18624'
+  quote: SAINT PETER THE FISHERMAN CATHOLIC CHURCH 33 Trinity Circle Rd. (PO Box 237) Lake Harmony, PA
+    18624
   note: 'Page 1 of the 18 October 2026 issue (listed issues 18, 11 and 4 October; 4 pages, text PDF):
     "MASS SCHEDULE Saturday: 4:00 PM Sunday: 9:00 AM & 11:00 AM Weekdays: 8:00 AM (Tues, Wed, Thurs)".
     Page 2 "MASSES OF THE WEEK", all at the one church.'
@@ -16,6 +17,7 @@ evidence:
   seen: 2026-10-18
   quote: Saturday Vigil 4:00 PM Sunday Mass 9:00 AM 11:00 AM Tuesday, Wednesday, Thursday 8:00 AM
   note: The parish's own site (static HTML) has no bulletin link; its only outside link is OSV Hub giving.
+promoted: 2026-10-19
 ---
 
 ## Publisher

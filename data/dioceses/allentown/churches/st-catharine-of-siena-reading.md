@@ -11,9 +11,7 @@ longitude: -75.832911
 coordinates_from: diocese-directory
 name_verified: true
 address_verified: true
-roster:
-- directory:8158
-- gcatholic:23651
+roster: ['directory:8158', 'gcatholic:23651']
 evidence:
 - url: https://www.allentowndiocese.org/places/st-catharine-of-siena-church
   seen: 2026-10-18
@@ -25,12 +23,13 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''St. Catharine of
     Siena'', 2427 Perkiomen Ave., Reading, PA, 19606; kind: Church'
 - url: https://www.scsreading.org/scsparish/wp/mass-schedule/
-  quote: 'Saturday: 4:30PM Church'
   seen: 2026-10-18
+  quote: 'Saturday: 4:30PM Church'
 - url: https://discovermass.com/church/st-catharine-of-siena-reading-pa/
+  seen: 2026-10-18
   quote: EUCHARISTIC ADORATION – following the 7:15 a.m. Mass until
   note: 18 October 2026 issue, page 3.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

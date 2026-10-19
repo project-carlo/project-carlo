@@ -11,28 +11,27 @@ longitude: -75.2130625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23627
-- directory:7970
+roster: ['gcatholic:23627', 'directory:7970']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23627
   seen: 2026-10-18
   quote: 129 Davis St., Easton, Pennsylvania 18042-6295
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Our Lady of Mercy'', 129
-    Davis St., Easton, PA, 18042; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Our Lady of Mercy'',
+    129 Davis St., Easton, PA, 18042; kind: Church'
 - url: https://www.allentowndiocese.org/places/our-lady-of-mercy
   seen: 2026-10-18
-  note: 'Listed in Diocese of Allentown parish map: places as ''Our Lady of Mercy'', 132 S. 5th St, Easton, PA;
-    kind: place'
+  note: 'Listed in Diocese of Allentown parish map: places as ''Our Lady of Mercy'', 132 S. 5th St, Easton,
+    PA; kind: place'
 - url: https://www.church-bulletin.org/bulletin/saint-anthony-of-padua-our-lady-of-mercy-easton-pa-18042/2026-10-18.pdf
   seen: 2026-10-18
-  note: 'Page 1 of the 18 October 2026 issue (image; read rendered): "OUR LADY OF MERCY, 132 S. 5th Street, Easton,
-    PA 18042"; MASS & LITURGY SCHEDULE "Sunday @ 8:00 am English & 12:00 pm Spanish, Monday & Friday @ 8:00 am,
-    Wednesday @ 12:10 pm & 7:00 pm Spanish".'
+  note: 'Page 1 of the 18 October 2026 issue (image; read rendered): "OUR LADY OF MERCY, 132 S. 5th Street,
+    Easton, PA 18042"; MASS & LITURGY SCHEDULE "Sunday @ 8:00 am English & 12:00 pm Spanish, Monday &
+    Friday @ 8:00 am, Wednesday @ 12:10 pm & 7:00 pm Spanish".'
 - url: https://www.openstreetmap.org/way/1038807825
   seen: 2026-10-18
-  note: 'OpenStreetMap: "Our Lady of Mercy Catholic Church, 129, Davis Street, South Easton" (Nominatim, read 2026-10-18),
-    at 40.68234, -75.21339.'
+  note: 'OpenStreetMap: "Our Lady of Mercy Catholic Church, 129, Davis Street, South Easton" (Nominatim,
+    read 2026-10-18), at 40.68234, -75.21339.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -11,9 +11,7 @@ longitude: -76.1160625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23673
-- directory:8106
+roster: ['gcatholic:23673', 'directory:8106']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23673
   seen: 2026-10-18
@@ -32,6 +30,7 @@ evidence:
 - url: https://www.stmarystjoseph.net/
   seen: 2026-10-18
   quote: St. Joseph Parish Saturdays @ 4:30pm Sundays @ 8:30am
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

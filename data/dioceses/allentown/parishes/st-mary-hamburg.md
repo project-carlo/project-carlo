@@ -3,23 +3,23 @@ name: Saint Mary Roman Catholic Parish
 website: https://stmaryhamburg.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/273
-publication:
-- url:https://www.church-bulletin.org/saint-mary-roman-catholic-parish-hamburg-pa-19526
+publication: ['url:https://www.church-bulletin.org/saint-mary-roman-catholic-parish-hamburg-pa-19526']
 group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-mary-roman-catholic-parish-hamburg-pa-19526/2026-10-18.pdf
+  seen: 2026-10-18
   quote: 'Sunday Weekend Masses: Saturday Vigil, 4:00 PM; Sundays, 8:00 AM and 10:45 AM'
   note: 18 October 2026 issue, page 1 masthead "Saint Mary Roman Catholic Parish 94 Walnut Road, Hamburg,
     Pennsylvania 19526"; Rev. David J. Loeper, Pastor. One church.
-  seen: 2026-10-18
 - url: https://www.church-bulletin.org/saint-mary-roman-catholic-parish-hamburg-pa-19526
+  seen: 2026-10-18
   quote: Saint Mary Roman Catholic Parish Hamburg, PA 19526
   note: John Patrick Publishing listing (church-bulletin.org/?id=273 redirects here), newest 18 October
     2026.
-  seen: 2026-10-18
 - url: https://stmaryhamburg.org/parish-info/parish-bulletins/
-  note: 'JavaScript-built WordPress page (probe url NO-PARISH-WORDS; read with visit.py): links https://jppc.net/onlinebulletins/273template.pdf.'
   seen: 2026-10-18
+  note: 'JavaScript-built WordPress page (probe url NO-PARISH-WORDS; read with visit.py): links https://jppc.net/onlinebulletins/273template.pdf.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

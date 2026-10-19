@@ -27,6 +27,7 @@ evidence:
   quote: 7:45 AM pro populo 10:00 AM Josephine Noll
   note: 'Page 3 of the 18 October 2026 issue, the week''s Masses (Saturday vigil, Sunday 7:45 and 10:00,
     weekdays 8:00). Page 1: "260 NORTH THIRD STREET • LEHIGHTON".'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

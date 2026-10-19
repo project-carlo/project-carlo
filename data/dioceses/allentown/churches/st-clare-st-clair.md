@@ -25,11 +25,12 @@ evidence:
 - url: https://stclareassisi.weebly.com/uploads/5/6/4/5/56457441/137b_2026_10_11.pdf
   seen: 2026-10-18
   quote: 'Saturdays: 4:00 PM @ St. Clare'
-  note: 'Page 1 of the 11 October 2026 issue: Saturday 4:00 PM, Sunday 8:30 AM, Thursday and Friday 8:00 AM
-    @ St. Clare; parish address 250 E. Hancock Street, Saint Clair, PA 17970.'
+  note: 'Page 1 of the 11 October 2026 issue: Saturday 4:00 PM, Sunday 8:30 AM, Thursday and Friday 8:00
+    AM @ St. Clare; parish address 250 E. Hancock Street, Saint Clair, PA 17970.'
 - url: https://www.allentowndiocese.org/places/st-clare-of-assisi
   seen: 2026-10-18
   quote: 'Rectory: | 250 E. Hancock St. (17970-1049)'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

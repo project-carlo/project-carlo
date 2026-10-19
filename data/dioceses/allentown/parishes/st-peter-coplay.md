@@ -17,6 +17,7 @@ evidence:
   quote: Bulletin 10-18-2026
   note: Wix "Weekly Bulletin/Letters" page, one /_files/ugd/ PDF per Sunday back to 1 March 2026, links
     not in date order.
+promoted: 2026-10-19
 ---
 
 ## Publisher

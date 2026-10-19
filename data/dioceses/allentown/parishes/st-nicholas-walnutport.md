@@ -9,13 +9,16 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/03/1177/20261018B.pdf
   seen: 2026-10-18
   quote: St. Nicholas Catholic Church
-  note: 'Page 1 of the 18 October 2026 issue: "St. Nicholas Catholic Church, 1152 Oak Road Walnutport, PA 18088,
-    www.stnicholaswalnutport.org", Pastor Rev. Abraham Ha; "Saturday Vigil: 4:30 PM Sunday: 8:30 & 10:30 AM",
-    Monday-Thursday 8:30 AM. Page 3 intentions for Sat 10/17 4:30 PM and Sun 10/18 8:30 and 10:30 AM.'
+  note: 'Page 1 of the 18 October 2026 issue: "St. Nicholas Catholic Church, 1152 Oak Road Walnutport,
+    PA 18088, www.stnicholaswalnutport.org", Pastor Rev. Abraham Ha; "Saturday Vigil: 4:30 PM Sunday:
+    8:30 & 10:30 AM", Monday-Thursday 8:30 AM. Page 3 intentions for Sat 10/17 4:30 PM and Sun 10/18 8:30
+    and 10:30 AM.'
 - url: https://parishesonline.com/organization/st-nicholas-church-18088
   seen: 2026-10-18
   note: probe po st-nicholas-church-18088 (the diocesan directory's website is parishesonline.com/find/st-nicholas-church-18088)
-    gives lpi 0018000000QxAkmAAF, container 03/1177, website www.stnicholaswalnutport.org, issues weekly to 2026-10-18.
+    gives lpi 0018000000QxAkmAAF, container 03/1177, website www.stnicholaswalnutport.org, issues weekly
+    to 2026-10-18.
+promoted: 2026-10-19
 ---
 
 ## Publisher

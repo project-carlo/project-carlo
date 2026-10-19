@@ -11,24 +11,23 @@ longitude: -75.3390625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23630
-- directory:8028
+roster: ['gcatholic:23630', 'directory:8028']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23630
   seen: 2026-10-18
   quote: 3219 Santee Rd., Bethlehem, Pennsylvania 18020-2833
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Our Lady of Perpetual Help'',
-    3219 Santee Rd., Bethlehem, PA, 18020; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''Our Lady of Perpetual
+    Help'', 3219 Santee Rd., Bethlehem, PA, 18020; kind: Church'
 - url: https://www.allentowndiocese.org/places/our-lady-of-perpetual-help
   seen: 2026-10-18
-  note: 'Listed in Diocese of Allentown parish map: places as ''Our Lady of Perpetual Help'', 3219 Santee Road,
-    Bethlehem, PA, 18020; kind: place'
+  note: 'Listed in Diocese of Allentown parish map: places as ''Our Lady of Perpetual Help'', 3219 Santee
+    Road, Bethlehem, PA, 18020; kind: place'
 - url: http://sponsors.bonventure.net/pdfs/1588/2026-10-18.pdf
   seen: 2026-10-18
   quote: 'Sunday: 7:30, 9:30 and 11:30'
-  note: 'Page 1 of the 18 October 2026 issue: Weekend Masses Saturday 5:00 PM, Sunday 7:30, 9:30 and 11:30; weekdays
-    6:45 & 8:00 AM; 3219 Santee Road.'
+  note: 'Page 1 of the 18 October 2026 issue: Weekend Masses Saturday 5:00 PM, Sunday 7:30, 9:30 and 11:30;
+    weekdays 6:45 & 8:00 AM; 3219 Santee Road.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

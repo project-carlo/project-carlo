@@ -8,9 +8,9 @@ group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1329/20261018B.pdf
   seen: 2026-10-18
-  quote: 'Saturday | 5:00pm Vigil Sunday | 8:15am, 10:30am 201 Randel Street Schuylkill Haven, PA 17972'
-  note: 'Page 1 of the 18 October 2026 issue: "ST. AMBROSE CATHOLIC CHURCH", "A Haven in the Storm for 175
-    Years"; weekdays Monday-Friday 8:30am. Page 2: "Pastor Rev. Msgr. Edward S. Zemanik". One church.'
+  quote: Saturday | 5:00pm Vigil Sunday | 8:15am, 10:30am 201 Randel Street Schuylkill Haven, PA 17972
+  note: 'Page 1 of the 18 October 2026 issue: "ST. AMBROSE CATHOLIC CHURCH", "A Haven in the Storm for
+    175 Years"; weekdays Monday-Friday 8:30am. Page 2: "Pastor Rev. Msgr. Edward S. Zemanik". One church.'
 - url: https://www.stambrosehaven.com/bulletin9ab2b387
   seen: 2026-10-18
   note: 'probe url: the parish site''s Bulletin page embeds the ParishesOnline widget for lpi:0018000000Qc09PAAR
@@ -19,6 +19,7 @@ evidence:
   seen: 2026-10-18
   note: 'probe po: "St. Ambrose Church", 201 Randel St, Schuylkill Haven; container 03/1329, weekly issues
     through 18 October 2026.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

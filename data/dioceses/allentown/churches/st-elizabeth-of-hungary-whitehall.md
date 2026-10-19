@@ -28,6 +28,7 @@ evidence:
   note: '"MASS ATTENDANCE ON OCTOBER 10 – 11" in the 18 October 2026 issue (Saturday 4:30 pm – 125, Sunday
     8:00 am – 116); the intentions list weekday 9:00 AM Masses and Saturday 4:30, Sunday 8:00 and 10:00
     AM.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

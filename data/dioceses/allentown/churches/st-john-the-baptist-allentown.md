@@ -27,6 +27,7 @@ evidence:
   quote: 9:00AM ~ Sunday
   note: Page 1 of the 18 October 2026 issue, MASS SCHEDULES (8:00AM Daily Monday to Friday, 4:00PM Saturday,
     9:00AM Sunday), 924 North Front St.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

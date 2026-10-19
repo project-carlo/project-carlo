@@ -3,20 +3,20 @@ name: St. Columbkill Parish
 website: http://www.stcolumbkill.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/238
-publication:
-- url:https://www.church-bulletin.org/saint-columbkill-parish-boyertown-pa-19512
+publication: ['url:https://www.church-bulletin.org/saint-columbkill-parish-boyertown-pa-19512']
 group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-columbkill-parish-boyertown-pa-19512/2026-10-18.pdf
+  seen: 2026-10-18
   note: '18 October 2026 issue, 12 pages, scanned images (read rendered). Page 1: "ST. COLUMBKILL PARISH
     200 INDIAN SPRING RD., BOYERTOWN, PA 19512"; Weekend Mass Schedule "Vigil Mass: Saturday 4:00 pm Sunday:
     8:00 am, 10:00 am"; weekdays Tuesday 7:00 pm, Wednesday-Friday 9:00 am. One church.'
-  seen: 2026-10-18
 - url: https://www.church-bulletin.org/saint-columbkill-parish-boyertown-pa-19512
+  seen: 2026-10-18
   quote: Saint Columbkill Parish Boyertown, PA 19512
   note: John Patrick Publishing listing (church-bulletin.org/?id=238 redirects here), newest issue 18
     October 2026. Found by scanning church-bulletin.org/?id=1..1200 for Berks County ZIP codes.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Publisher

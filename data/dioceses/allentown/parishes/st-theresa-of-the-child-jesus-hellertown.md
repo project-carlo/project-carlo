@@ -9,13 +9,14 @@ evidence:
 - url: https://files.ecatholic.com/39015/bulletins/20261018.pdf
   seen: 2026-10-18
   quote: 'Saturday Vigil Mass:'
-  note: 'Page 1 of the 18 October 2026 issue (10 pages): "St. Theresa of the Child Jesus Parish, 1408 Easton Road,
-    Hellertown, PA", Rev. John Anthony Hutta II, Pastor; "Sunday Masses: 8:00am, 9:30am, 11:00am"; Monday 6:00pm,
-    Tuesday-Friday 8:00am; "October 18, 2026 - 29th Sunday in Ordinary Time".'
+  note: 'Page 1 of the 18 October 2026 issue (10 pages): "St. Theresa of the Child Jesus Parish, 1408
+    Easton Road, Hellertown, PA", Rev. John Anthony Hutta II, Pastor; "Sunday Masses: 8:00am, 9:30am,
+    11:00am"; Monday 6:00pm, Tuesday-Friday 8:00am; "October 18, 2026 - 29th Sunday in Ordinary Time".'
 - url: https://sttheresaotcj.org/
   seen: 2026-10-18
   note: The parish site (Cloudflare; probe url HTTP 403, loaded on the first try in a browser with parish-site-access
     visit.py) is an eCatholic site, id 39015, with a /bulletins page.
+promoted: 2026-10-19
 ---
 
 ## Publisher

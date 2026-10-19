@@ -30,6 +30,7 @@ evidence:
 - url: https://www.catholicchurchesofjimthorpe.org/Pray-With-Us/Masses
   seen: 2026-10-18
   quote: 'Monday & Thursday: 8 AM - Immaculate Conception Church'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

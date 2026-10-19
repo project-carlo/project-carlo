@@ -9,30 +9,35 @@ evidence:
 - url: https://www.catholicchurchesofjimthorpe.org/LinkClick.aspx?fileticket=q5bOa0_NCc8%3d&tabid=8565&portalid=114&mid=16625
   seen: 2026-10-18
   quote: Catholic Churches of Jim Thorpe 11 October 2026 Twenty-Eighth Sunday in Ordinary Time
-  note: 'Page 1 of the 11 October 2026 issue (6 pages, text PDF), the newest posted on 18 October. The
+  note: Page 1 of the 11 October 2026 issue (6 pages, text PDF), the newest posted on 18 October. The
     masthead names "Immaculate Conception Parish 180 W. Broadway, Jim Thorpe" and "Saint Joseph Church
-    526 North Street, Jim Thorpe", one office, "Rev. Ronald J. Minner, Pastor".'
+    526 North Street, Jim Thorpe", one office, "Rev. Ronald J. Minner, Pastor".
 - url: https://www.catholicchurchesofjimthorpe.org/LinkClick.aspx?fileticket=q5bOa0_NCc8%3d&tabid=8565&portalid=114&mid=16625
   seen: 2026-10-18
-  quote: Saturday, October 17 - Vigil … 4:00 pm (SJC) … Sunday, October 18 … 8:30 am (SJC) … 10:45 am (ICC)
+  quote: Saturday, October 17 - Vigil … 4:00 pm (SJC) … Sunday, October 18 … 8:30 am (SJC) … 10:45 am
+    (ICC)
   note: Page 2, the week's Mass intentions, each marked SJC (St. Joseph Church) or ICC (Immaculate Conception
     Church); weekday Masses alternate between the two. A box on the page reads "Note - Location change
     4:00 pm Mass at Saint Joseph".
 - url: https://www.catholicchurchesofjimthorpe.org/Resources/Sunday-Bulletin
   seen: 2026-10-18
-  quote: Sunday Bulletins Title October 11, 2026 Download October 4, 2026 Download September 27, 2026 Download
+  quote: Sunday Bulletins Title October 11, 2026 Download October 4, 2026 Download September 27, 2026
+    Download
   note: The site's bulletin page (DotNetNuke Documents module); each title links a /LinkClick.aspx?fileticket=…
     URL that serves the PDF.
 - url: https://www.catholicchurchesofjimthorpe.org/Pray-With-Us/Masses
   seen: 2026-10-18
-  quote: 'Saturday Vigil: 4:00 PM Immaculate Conception Church Sunday: 8:30 AM Saint Joseph Church 10:45 AM Immaculate Conception Church'
+  quote: 'Saturday Vigil: 4:00 PM Immaculate Conception Church Sunday: 8:30 AM Saint Joseph Church 10:45
+    AM Immaculate Conception Church'
   note: The site's standing schedule still puts the Saturday vigil at Immaculate Conception; the October
     bulletins move it to St. Joseph.
 - url: https://www.tnonline.com/20200622/jim-thorpe-parishes-consolidate/
   seen: 2026-10-18
-  quote: On Sunday, the diocese announced that St. Joseph Parish is consolidated into Immaculate Conception parish.
+  quote: On Sunday, the diocese announced that St. Joseph Parish is consolidated into Immaculate Conception
+    parish.
   note: Times News, 22 June 2020 (date in the URL), which adds that "Both church buildings will remain
     open and will use the existing Mass schedule".
+promoted: 2026-10-19
 ---
 
 ## Publisher

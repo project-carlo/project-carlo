@@ -17,6 +17,7 @@ evidence:
   quote: October 18, 2026 Bulletin
   note: John Patrick Publishing listing (church-bulletin.org/208 and jppc.net/onlinebulletins/208template.pdf,
     both linked from stjohnsstiles.com, land here); archive back to October 2024.
+promoted: 2026-10-19
 ---
 
 ## Publisher

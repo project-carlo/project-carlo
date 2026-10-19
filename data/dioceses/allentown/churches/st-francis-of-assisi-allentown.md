@@ -33,6 +33,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=St.+Francis+of+Assisi,+Allentown&format=json
   seen: 2026-10-19
   note: 'OpenStreetMap: "Saint Francis of Assisi Catholic Church, 825, North 11th Street", 40.6117, -75.4851.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

@@ -9,15 +9,16 @@ evidence:
 - url: http://sponsors.bonventure.net/pdfs/1817/2026-10-18.pdf
   seen: 2026-10-18
   quote: 'Sunday: 8:00AM, 10:00AM & 12:00PM'
-  note: 'Page 1 of the 18 October 2026 issue (12 pages): "Twenty-Ninth Sunday in Ordinary Time October 18, 2026 /
-    St. Jane Frances de Chantal Church / 4049 Hartley Avenue, Easton, Pa 18045", Pastor Rev. Philip Rodgers;
-    "Weekend Masses: Saturday: 5:00PM Sunday: 8:00AM, 10:00AM & 12:00PM"; weekdays Monday-Friday 6:30AM & 8:15AM.
-    (Page 1 also keeps a stray "August 9, 2026 Nineteenth Sunday" line from a template.)'
+  note: 'Page 1 of the 18 October 2026 issue (12 pages): "Twenty-Ninth Sunday in Ordinary Time October
+    18, 2026 / St. Jane Frances de Chantal Church / 4049 Hartley Avenue, Easton, Pa 18045", Pastor Rev.
+    Philip Rodgers; "Weekend Masses: Saturday: 5:00PM Sunday: 8:00AM, 10:00AM & 12:00PM"; weekdays Monday-Friday
+    6:30AM & 8:15AM. (Page 1 also keeps a stray "August 9, 2026 Nineteenth Sunday" line from a template.)'
 - url: https://www.stjanesofeastonpa.com/about/office-and-mass-schedule
   seen: 2026-10-18
-  note: 'The parish site''s Office and Mass Schedule page gives the bulletin link https://sponsors.bonventure.net/?page=1817.
-    The site answers 403 to curl and to the sandbox''s Chrome (a StackProtect WAF); the page was read through
-    WebFetch, so this is a lead, not a quote; the Bon Venture page itself was read with curl.'
+  note: The parish site's Office and Mass Schedule page gives the bulletin link https://sponsors.bonventure.net/?page=1817.
+    The site answers 403 to curl and to the sandbox's Chrome (a StackProtect WAF); the page was read through
+    WebFetch, so this is a lead, not a quote; the Bon Venture page itself was read with curl.
+promoted: 2026-10-19
 ---
 
 ## Publisher

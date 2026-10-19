@@ -27,6 +27,7 @@ evidence:
   quote: Thomas Petroll
   note: 18 October 2026 issue, page 2 intentions, Sunday 25 October 10:30AM at OLHC; Sunday 18 October
     10:30AM likewise; Monday and Wednesday 8:00AM at OLHC.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

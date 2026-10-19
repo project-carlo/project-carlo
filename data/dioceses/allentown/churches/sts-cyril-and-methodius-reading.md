@@ -11,9 +11,7 @@ longitude: -75.9260625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23637
-- directory:8042
+roster: ['gcatholic:23637', 'directory:8042']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23637
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''SS. Cyril and Methodius Worship Site for
     St. Peter the Apostle Parish'', 451 South 6th Street, Reading, PA, 19602; kind: place'
 - url: https://www.church-bulletin.org/bulletin/saint-peter-the-apostle-roman-catholic-parish-reading-pa-19602/2026-10-18.pdf
+  seen: 2026-10-18
   quote: 10:00 AM (C&M, 451 S. 6th St.)
   note: Page 1 Mass Schedule.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

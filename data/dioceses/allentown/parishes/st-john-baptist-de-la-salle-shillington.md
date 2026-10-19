@@ -3,22 +3,22 @@ name: St. John Baptist de la Salle Parish
 website: https://www.stjohnsfamilyoffaith.com/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=1920
-publication:
-- url:http://sponsors.bonventure.net/?page=1920
+publication: ['url:http://sponsors.bonventure.net/?page=1920']
 group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/1920/2026-10-18.pdf
+  seen: 2026-10-18
   quote: Thirtieth Sunday in Ordinary Time
   note: '18 October 2026 issue (Bon Venture Services). Page 1 (image, read rendered): "St John Baptist
     de la Salle, a Catholic Family of Faith"; MASS SCHEDULE "Saturday Vigil: 4:00PM Sunday: 8:30AM & 10:30AM",
     daily Mon, Tue, Wed, Fri 8AM, Thu 7PM. Page 3: Masses for October 24 & 25 at 4:00 p.m., 8:30 a.m.
     and 10:30 a.m. One church.'
-  seen: 2026-10-18
 - url: https://www.stjohnsfamilyoffaith.com/
+  seen: 2026-10-18
   quote: DOWNLOAD ST. JOHN’S WEEKLY BULLETIN
   note: Homepage link (read in headed Chrome, visit.py --links) to https://sponsors.bonventure.net/?page=1920.
     The site's own /archived-bulletins/ page stops in 2022.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -11,9 +11,7 @@ longitude: -76.2038125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23604
-- directory:7990
+roster: ['gcatholic:23604', 'directory:7990']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23604
   seen: 2026-10-18
@@ -38,6 +36,7 @@ evidence:
     West Cherry
   note: Discover Mass's listing, under the slug "annunciation-b-v-m-shenandoah-pa", is titled "Divine
     Mercy Church", 108 West Cherry St. (the parish office).
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

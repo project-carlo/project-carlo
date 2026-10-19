@@ -10,22 +10,24 @@ evidence:
 - url: http://www.saintjohnpottsville.org/Resources/Bulletin%2010-18-26.pdf
   seen: 2026-10-18
   quote: St. John the Baptist Roman Catholic Parish Family 10th & Mahantongo Sts.
-  note: 'Page 1 of the 18 October 2026 issue (a cover page; its only text is the masthead and the date). Page 2:
-    "Pastor ... Rev. Kevin J. Bobbin". The PDF''s "tt"/"ti" ligatures extract as U+FFFD, e.g. "Po�sville".'
+  note: 'Page 1 of the 18 October 2026 issue (a cover page; its only text is the masthead and the date).
+    Page 2: "Pastor ... Rev. Kevin J. Bobbin". The PDF''s "tt"/"ti" ligatures extract as U+FFFD, e.g.
+    "Po�sville".'
 - url: http://www.saintjohnpottsville.org/Resources/Bulletin%2010-18-26.pdf
   seen: 2026-10-18
   quote: Sunday, October 18 8:15 a.m. R.J. Post
-  note: 'Page 3 Mass intentions: Saturday 5:00 p.m., Sunday 8:15 a.m. and 10:30 a.m., weekdays 9:00 a.m. (Monday
-    6:30 p.m.), no place named but the one church. Page 4 has "October 25 - 8:15 a.m. Mass" and "10:30 a.m." in
-    the parish calendar.'
+  note: 'Page 3 Mass intentions: Saturday 5:00 p.m., Sunday 8:15 a.m. and 10:30 a.m., weekdays 9:00 a.m.
+    (Monday 6:30 p.m.), no place named but the one church. Page 4 has "October 25 - 8:15 a.m. Mass" and
+    "10:30 a.m." in the parish calendar.'
 - url: http://www.saintjohnpottsville.org/Bulletins/
   seen: 2026-10-18
-  note: 'probe url: the "Bulletins" page links one PDF per Sunday, "Resources/Bulletin 10-18-26.pdf" back to
-    "Bulletin 09-13-26.pdf" (the 4 October file is "Bulletin 10-04-26 .pdf", with a stray space).'
+  note: 'probe url: the "Bulletins" page links one PDF per Sunday, "Resources/Bulletin 10-18-26.pdf" back
+    to "Bulletin 09-13-26.pdf" (the 4 October file is "Bulletin 10-04-26 .pdf", with a stray space).'
 - url: https://parishesonline.com/organization/st-john-the-baptist-church-longinus
   seen: 2026-10-18
-  note: 'probe po: an old ParishesOnline org, "St. John the Baptist Church Longinus" (lpi 0018000000QxAimAAF, 913
-    Mahantongo St), with no publications. "Longinus Hall" is the parish hall named in the bulletin.'
+  note: 'probe po: an old ParishesOnline org, "St. John the Baptist Church Longinus" (lpi 0018000000QxAimAAF,
+    913 Mahantongo St), with no publications. "Longinus Hall" is the parish hall named in the bulletin.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

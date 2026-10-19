@@ -9,14 +9,17 @@ evidence:
 - url: https://files.ecatholic.com/35958/bulletins/20261011.pdf
   seen: 2026-10-18
   quote: 'Saturday Vigil: 5:00 pm'
-  note: 'Page 1 of the issue for "October 10-11, 2026": "Sacred Heart Church, Father Frans J. Berkhout, Pastor",
-    "1817 1st Street Bethlehem, PA 18020"; Mass Schedule daily Monday-Friday 7:30am, Saturday 8am, "Saturday
-    Vigil: 5:00 pm", "Sunday: 8:00am & 10:00am". Page 2 lists the Masses through Sunday 18 October.'
+  note: 'Page 1 of the issue for "October 10-11, 2026": "Sacred Heart Church, Father Frans J. Berkhout,
+    Pastor", "1817 1st Street Bethlehem, PA 18020"; Mass Schedule daily Monday-Friday 7:30am, Saturday
+    8am, "Saturday Vigil: 5:00 pm", "Sunday: 8:00am & 10:00am". Page 2 lists the Masses through Sunday
+    18 October.'
 - url: https://sacredheartbethlehem.com/bulletins
   seen: 2026-10-18
   note: The parish's eCatholic Bulletin page (403 to plain fetchers; read in a browser with parish-site-access
-    visit.py, site id 35958) lists issues "October 11, 2026", "October 4, 2026", "September 27, 2026" ... at
-    files.ecatholic.com/35958/bulletins/<YYYYMMDD>.pdf. The 18 October file answered 403 on 18 October.
+    visit.py, site id 35958) lists issues "October 11, 2026", "October 4, 2026", "September 27, 2026"
+    ... at files.ecatholic.com/35958/bulletins/<YYYYMMDD>.pdf. The 18 October file answered 403 on 18
+    October.
+promoted: 2026-10-19
 ---
 
 ## Publisher

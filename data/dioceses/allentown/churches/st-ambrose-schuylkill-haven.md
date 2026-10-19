@@ -24,11 +24,12 @@ evidence:
     Haven, PA, 17972; kind: place'
 - url: https://container.parishesonline.com/bulletins/03/1329/20261018B.pdf
   seen: 2026-10-18
-  quote: 'Saturday | 5:00pm Vigil Sunday | 8:15am, 10:30am 201 Randel Street'
+  quote: Saturday | 5:00pm Vigil Sunday | 8:15am, 10:30am 201 Randel Street
   note: Page 1 of the 18 October 2026 issue.
 - url: https://www.allentowndiocese.org/places/st-ambrose
   seen: 2026-10-18
   quote: 'Rectory: | 201 Randel St. (17972-1495)'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

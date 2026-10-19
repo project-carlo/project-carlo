@@ -3,26 +3,26 @@ name: St. Joseph Parish
 website: https://www.sjcreading.org/
 bulletin_provider: discover_mass
 provider_id: st-joseph-reading-pa
-publication:
-- discovermass:st-joseph-reading-pa
+publication: ['discovermass:st-joseph-reading-pa']
 group: Msgr. John J. Grabish, pastor of St. Joseph and St. Paul
 evidence:
 - url: https://discovermass.com/church/st-joseph-reading-pa/
+  seen: 2026-10-18
   quote: St. Joseph Catholic Church ● Iglesia Católica de San José
   note: 'Discover Mass church page; 18 October 2026 issue, page 1 masthead with "1018 N. 8th St. ● Reading,
     PA 19604". Its Worship box lists both parishes'' Masses: Saturday 4:00 PM St. Joseph (English), 6:00
     PM St. Paul (Español); Sunday 8:30 AM St. Joseph (2nd & 4th Sundays), 8:30 AM St. Paul (1st, 3rd &
     5th), 10:00 AM St. Paul (Vietnamese), 11:00 AM St. Joseph (Español), 12:30 PM St. Paul (Español).'
-  seen: 2026-10-18
 - url: https://www.sjcreading.org/about-us/bulletins/
+  seen: 2026-10-18
   note: 'The parish site (sjcreading.org; the diocesan map''s sjcreading.com does not resolve) has a Bulletins
     page whose newest PDF is cdn.diocesanweb.org/beacon/sjcreading/wp-content/uploads/2025/08/00003507.pdf
     (August 2025): stale.'
-  seen: 2026-10-18
 - url: https://www.church-bulletin.org/saint-joseph-catholic-church-iglesia-de-san-jose-reading-pa-19604
+  seen: 2026-10-18
   note: 'A John Patrick listing (church-bulletin.org/?id=249) exists for St. Joseph but lists no issues
     on 2026-10-18: a former channel, not recorded as a publication.'
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Publisher

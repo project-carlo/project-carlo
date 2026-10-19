@@ -14,15 +14,16 @@ evidence:
 - url: https://files.ecatholic.com/14122/bulletins/20261018.pdf
   seen: 2026-10-18
   quote: SCHEDULE OF MASSES Saturday … 4:00 pm Sunday … 8:00 am & 10:00 am
-  note: 'Page 1: weekday Masses Mon., Tue., Wed., Fri. & Sat. 8:00 am, Thursday 6:00 pm. One church; page 2
-    candle intentions name "Our Lady''s Chapel", a side chapel.'
+  note: 'Page 1: weekday Masses Mon., Tue., Wed., Fri. & Sat. 8:00 am, Thursday 6:00 pm. One church; page
+    2 candle intentions name "Our Lady''s Chapel", a side chapel.'
 - url: https://www.stpatrickpottsville.org/
   seen: 2026-10-18
-  note: 'Behind Cloudflare (probe url HTTP403; read in a browser with parish-site-access visit.py, which loaded
-    it on the second run): an eCatholic site, ecatholic:14122, with a /bulletins page.'
+  note: 'Behind Cloudflare (probe url HTTP403; read in a browser with parish-site-access visit.py, which
+    loaded it on the second run): an eCatholic site, ecatholic:14122, with a /bulletins page.'
 - url: https://parishesonline.com/organization/st-patrick-church-17901
   seen: 2026-10-18
   note: 'probe po: an old ParishesOnline org (lpi 0018000000QxAinAAF, 319 Mahantongo St) with no publications.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

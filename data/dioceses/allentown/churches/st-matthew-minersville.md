@@ -26,9 +26,10 @@ evidence:
 - url: https://www.allentowndiocese.org/places/holy-family-minersville-2
   seen: 2026-10-18
   quote: 'St. Matthew the Evangelist Church: | 139 Spruce St.'
-  note: 'The diocesan parish map''s Holy Family page (text as scraped into rosters/directory.json, "|" marks a field break): "St. Matthew,
-    Saturday 4p.m., Sunday 10a.m.". It gives 139 Spruce St., which it also gives for the rectory.'
-
+  note: 'The diocesan parish map''s Holy Family page (text as scraped into rosters/directory.json, "|"
+    marks a field break): "St. Matthew, Saturday 4p.m., Sunday 10a.m.". It gives 139 Spruce St., which
+    it also gives for the rectory.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

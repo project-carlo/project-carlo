@@ -27,6 +27,7 @@ evidence:
   quote: 10:00 a.m. Anna Sopko
   note: 18 October 2026 issue, page 2 Mass intentions (Saturday 4 p.m., Sunday 10:00 a.m., daily 8:00
     a.m.).
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

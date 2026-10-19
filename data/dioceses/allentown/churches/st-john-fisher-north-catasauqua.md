@@ -41,6 +41,7 @@ evidence:
   seen: 2026-10-19
   note: 'OpenStreetMap: "Saint John Fisher Catholic Church, 1239, 3rd Street, Catasauqua, Northampton
     County", 40.6611, -75.4804.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

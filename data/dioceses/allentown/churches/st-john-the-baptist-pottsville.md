@@ -25,10 +25,12 @@ evidence:
 - url: http://www.saintjohnpottsville.org/Resources/Bulletin%2010-18-26.pdf
   seen: 2026-10-18
   quote: Sunday, October 18 10:30 a.m. Carl & Barbara Weiss
-  note: 'Page 3 Mass intentions of the 18 October 2026 issue: Saturday 5:00 p.m., Sunday 8:15 and 10:30 a.m.'
+  note: 'Page 3 Mass intentions of the 18 October 2026 issue: Saturday 5:00 p.m., Sunday 8:15 and 10:30
+    a.m.'
 - url: https://www.allentowndiocese.org/places/st-john-the-baptist-pottsville
   seen: 2026-10-18
   quote: 'Rectory: | 913 Mahantongo St. (17901-3024)'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

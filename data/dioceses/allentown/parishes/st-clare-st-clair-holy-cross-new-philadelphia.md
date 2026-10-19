@@ -6,8 +6,6 @@ provider_id: ''
 publication: ['url:https://stclareassisi.weebly.com/2026_weekly-bulletin.html', 'po-org:st-clare-of-assisi-parish-17970',
   'lpi:001C000001CRr1pIAD', 'po-org:holy-cross-', 'lpi:0018000000QxAkZAAV']
 group: ''
-revisit: 'Run the fetch check again: the resolver should move from 2026_weekly-bulletin.html to the 2027 page; if it does not, pin a recipe for the 2027 page.'
-revisit_after: 2027-01-17
 evidence:
 - url: https://stclareassisi.weebly.com/uploads/5/6/4/5/56457441/137b_2026_10_11.pdf
   seen: 2026-10-18
@@ -16,23 +14,29 @@ evidence:
     F. Glosser, V.F., pastor; 250 E. Hancock Street, Saint Clair.'
 - url: https://stclareassisi.weebly.com/uploads/5/6/4/5/56457441/137b_2026_10_11.pdf
   seen: 2026-10-18
-  quote: 'Saturdays: 4:00 PM @ St. Clare 5:30 PM @ Holy Cross Sundays: 8:30 AM @ St. Clare 10:45 AM @ Holy Cross'
-  note: 'Page 1 "MASS TIMES": also Tuesdays 6:00 PM and Wednesdays 8:30AM @ Holy Cross, Thursdays and Fridays
-    8:00 AM @ St. Clare. No other church is named.'
+  quote: 'Saturdays: 4:00 PM @ St. Clare 5:30 PM @ Holy Cross Sundays: 8:30 AM @ St. Clare 10:45 AM @
+    Holy Cross'
+  note: 'Page 1 "MASS TIMES": also Tuesdays 6:00 PM and Wednesdays 8:30AM @ Holy Cross, Thursdays and
+    Fridays 8:00 AM @ St. Clare. No other church is named.'
 - url: https://stclareassisi.weebly.com/2026_weekly-bulletin.html
   seen: 2026-10-18
-  note: 'The "2026_Weekly Bulletin" page lists one PDF per Sunday, 137b_2026_MM_DD.pdf, newest 11 October 2026
-    (probe url). Earlier years are on 2025_weekly-bulletin.html and 2024_weekly-bulletin.html.'
+  note: The "2026_Weekly Bulletin" page lists one PDF per Sunday, 137b_2026_MM_DD.pdf, newest 11 October
+    2026 (probe url). Earlier years are on 2025_weekly-bulletin.html and 2024_weekly-bulletin.html.
 - url: https://www.allentowndiocese.org/places/holy-cross
   seen: 2026-10-18
   quote: 'Pastor: | Rev. Msgr. William F. Glosser, V.F.'
-  note: 'Holy Cross''s own map page: the same pastor as St. Clare (whose page also names Msgr. Glosser); website
-    "https://parishesonline.com/organization/holy-cross-".'
+  note: 'Holy Cross''s own map page: the same pastor as St. Clare (whose page also names Msgr. Glosser);
+    website "https://parishesonline.com/organization/holy-cross-".'
 - url: https://parishesonline.com/organization/holy-cross-
   seen: 2026-10-18
-  note: 'probe po: Holy Cross''s ParishesOnline org (lpi 0018000000QxAkZAAV, 99 Valley Street) has no publications;
-    the website it gives, theholycrosschurch.com, does not resolve (probe url DEAD-DNS). St. Clare''s own org,
-    st-clare-of-assisi-parish-17970 (lpi 001C000001CRr1pIAD), has no publications either.'
+  note: 'probe po: Holy Cross''s ParishesOnline org (lpi 0018000000QxAkZAAV, 99 Valley Street) has no
+    publications; the website it gives, theholycrosschurch.com, does not resolve (probe url DEAD-DNS).
+    St. Clare''s own org, st-clare-of-assisi-parish-17970 (lpi 001C000001CRr1pIAD), has no publications
+    either.'
+revisit: 'Run the fetch check again: the resolver should move from 2026_weekly-bulletin.html to the 2027
+  page; if it does not, pin a recipe for the 2027 page.'
+revisit_after: 2027-01-17
+promoted: 2026-10-19
 ---
 
 ## Publisher

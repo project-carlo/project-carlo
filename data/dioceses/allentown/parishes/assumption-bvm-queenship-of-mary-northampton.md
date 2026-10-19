@@ -3,32 +3,35 @@ name: Assumption BVM and Queenship of Mary Parishes
 website: https://www.queenshipofmary.org/
 bulletin_provider: parishes_online
 provider_id: queenship-of-mary-assumption-of-the-blessed-virgin-mary-church
-publication: ['po-org:queenship-of-mary-assumption-of-the-blessed-virgin-mary-church', 'lpi:0018000000Qc02NAAR', 'po-container:04/0555', 'ecatholic:16004']
-group: 'Rev. Patrick H. Lamb, pastor of both'
+publication: ['po-org:queenship-of-mary-assumption-of-the-blessed-virgin-mary-church', 'lpi:0018000000Qc02NAAR',
+  'po-container:04/0555', 'ecatholic:16004']
+group: Rev. Patrick H. Lamb, pastor of both
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0555/20261018B.pdf
   seen: 2026-10-18
   quote: 22nd & Washington Ave. Northampton, PA
-  note: 'Page 1 of the 18 October 2026 issue. One masthead for two churches: "Assumption of the Blessed Virgin
-    Mary Church, 22nd & Washington Ave. Northampton, PA" (rectory 2174 Lincoln Ave.) and "Queenship of Mary
-    Church, 1324 Newport Ave. Northampton, PA", both with Rev. Patrick H. Lamb, Pastor. Two MASS TIMES boxes:
-    "Saturday: 4:00 PM / Sunday: 10:30 AM / Mon. 8:00AM Fri. 9:15 AM (SCHOOL MASS)" and "Saturday: 5:30 PM /
-    Sunday: 8:00 AM / Tues. 4:00 PM Wed.7:00AM".'
+  note: 'Page 1 of the 18 October 2026 issue. One masthead for two churches: "Assumption of the Blessed
+    Virgin Mary Church, 22nd & Washington Ave. Northampton, PA" (rectory 2174 Lincoln Ave.) and "Queenship
+    of Mary Church, 1324 Newport Ave. Northampton, PA", both with Rev. Patrick H. Lamb, Pastor. Two MASS
+    TIMES boxes: "Saturday: 4:00 PM / Sunday: 10:30 AM / Mon. 8:00AM Fri. 9:15 AM (SCHOOL MASS)" and "Saturday:
+    5:30 PM / Sunday: 8:00 AM / Tues. 4:00 PM Wed.7:00AM".'
 - url: https://container.parishesonline.com/bulletins/04/0555/20261018B.pdf
   seen: 2026-10-18
   quote: Queenship of Mary Church
-  note: Page 2 gives separate Mass-intention columns headed "Queenship of Mary" and "Assumption of the Blessed
-    Virgin Mary".
+  note: Page 2 gives separate Mass-intention columns headed "Queenship of Mary" and "Assumption of the
+    Blessed Virgin Mary".
 - url: https://files.ecatholic.com/16004/bulletins/20261018.pdf
   seen: 2026-10-18
   quote: 22nd & Washington Ave. Northampton, PA
-  note: The same 18 October 2026 issue (same masthead and Mass times, 8 pages) posted on Assumption BVM's eCatholic
-    site, bvm-northampton.com (Cloudflare; read in a browser with parish-site-access visit.py, site id 16004).
+  note: The same 18 October 2026 issue (same masthead and Mass times, 8 pages) posted on Assumption BVM's
+    eCatholic site, bvm-northampton.com (Cloudflare; read in a browser with parish-site-access visit.py,
+    site id 16004).
 - url: https://www.queenshipofmary.org/bulletin9ab2b387
   seen: 2026-10-18
-  note: Queenship of Mary's own site (the bulletin gives "Website queenshipofmary.org") embeds the LPi widget
-    for parishesonline.com/organization/queenship-of-mary-assumption-of-the-blessed-virgin-mary-church with
-    the 18, 11, 4 October and 27 September 2026 issues of container 04/0555.
+  note: Queenship of Mary's own site (the bulletin gives "Website queenshipofmary.org") embeds the LPi
+    widget for parishesonline.com/organization/queenship-of-mary-assumption-of-the-blessed-virgin-mary-church
+    with the 18, 11, 4 October and 27 September 2026 issues of container 04/0555.
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -3,9 +3,7 @@ name: Divine Mercy Parish
 website: https://dmparish.com/
 bulletin_provider: other
 provider_id: page-pdfs http://www.jppc.net/onlinebulletins/218template.pdf
-publication:
-- url:https://www.church-bulletin.org/divine-mercy-parish-shenandoah-pa-17976
-- url:https://dmparish.com/bulletin-archive/
+publication: ['url:https://www.church-bulletin.org/divine-mercy-parish-shenandoah-pa-17976', 'url:https://dmparish.com/bulletin-archive/']
 group: Divine Mercy Parish
 evidence:
 - url: https://www.church-bulletin.org/bulletin/divine-mercy-parish-shenandoah-pa-17976/2026-10-18.pdf
@@ -46,6 +44,7 @@ revisit: 'St. Casimir is a seasonal worship site: Sunday Masses moved back to Di
   (church-bulletin.org) for the return of "SC" Sunday Masses; if none by August 2027, move st-casimir-shenandoah
   to open/.'
 revisit_after: 2027-07-01
+promoted: 2026-10-19
 ---
 
 ## Publisher

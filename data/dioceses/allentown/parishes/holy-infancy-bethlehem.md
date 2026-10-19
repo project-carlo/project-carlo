@@ -4,20 +4,21 @@ website: https://www.holyinfancychurch.com/
 bulletin_provider: parishes_online
 provider_id: holy-infancy-church
 publication: ['po-org:holy-infancy-church', 'lpi:0018000000QxAj9AAF', 'po-container:03/1407']
-group: 'Rev. Andrew N. Gehringer, pastor of Holy Infancy and Incarnation of Our Lord'
+group: Rev. Andrew N. Gehringer, pastor of Holy Infancy and Incarnation of Our Lord
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1407/20261018B.pdf
   seen: 2026-10-18
   quote: Holy Infancy Church, Bethlehem, PA 03-1407
   note: 'Page 6 footer (text). Pages 1-5 are images with no text layer; read rendered (parish-site-access
-    render.py). Page 1: "HOLY INFANCY CATHOLIC CHURCH, 312 E 4th St. Bethlehem, PA 18015", "October 18, 2026,
-    29th Sunday in Ordinary Time", Pastor Rev. Andrew N. Gehringer. Page 2 "Schedule of Masses": Sunday 7:00
-    am English, 8:15 am Portuguese, 10:00am Spanish, 12:00pm English; weekdays at Holy Infancy; Saturday "3 PM
-    to 4 PM Confessions and 4:15 PM Vigil Mass at Incarnation Church, 617 Pierce St., Bethlehem".'
+    render.py). Page 1: "HOLY INFANCY CATHOLIC CHURCH, 312 E 4th St. Bethlehem, PA 18015", "October 18,
+    2026, 29th Sunday in Ordinary Time", Pastor Rev. Andrew N. Gehringer. Page 2 "Schedule of Masses":
+    Sunday 7:00 am English, 8:15 am Portuguese, 10:00am Spanish, 12:00pm English; weekdays at Holy Infancy;
+    Saturday "3 PM to 4 PM Confessions and 4:15 PM Vigil Mass at Incarnation Church, 617 Pierce St., Bethlehem".'
 - url: https://www.holyinfancychurch.com/bulletins/
   seen: 2026-10-18
   note: The parish's Bulletins page (read in a browser) embeds the LPi widget for parishesonline.com/organization/holy-infancy-church
     with the 18, 11, 4 October and 27 September 2026 issues of container 03/1407.
+promoted: 2026-10-19
 ---
 
 ## Publisher

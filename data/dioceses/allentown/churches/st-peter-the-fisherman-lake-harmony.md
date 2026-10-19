@@ -29,8 +29,9 @@ evidence:
     33 Trinity Circle Rd. (PO Box 237) Lake Harmony, PA 18624".
 - url: https://www.openstreetmap.org/way/1410239868
   seen: 2026-10-18
-  note: 'OSM way 1410239868, amenity=place_of_worship "Saint Peter the Fisherman Catholic Church", 33 Trinity
-    Circle Road, Lake Harmony 18624 (Nominatim), centre 41.0480551, -75.5799942.'
+  note: OSM way 1410239868, amenity=place_of_worship "Saint Peter the Fisherman Catholic Church", 33 Trinity
+    Circle Road, Lake Harmony 18624 (Nominatim), centre 41.0480551, -75.5799942.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

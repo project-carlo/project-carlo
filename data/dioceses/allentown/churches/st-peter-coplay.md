@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-18
   quote: 'Saturday Evening: 4:30 P.M. Sunday: 10:30 A.M.'
   note: Page 1 of the 18 October 2026 issue (Wednesday and Friday 8 A.M. as well).
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

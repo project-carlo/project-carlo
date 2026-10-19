@@ -27,6 +27,7 @@ evidence:
   quote: Sunday Morning - 9:00AM and 11:00AM
   note: 11 October 2026 issue, "Mass & Confessions Schedule" (Saturday Evening Vigil 5:15PM, Weekday Mass
     8:00AM); masthead 5050 St. Joseph Road, Coopersburg.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

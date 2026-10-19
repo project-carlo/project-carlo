@@ -20,6 +20,7 @@ evidence:
   note: The parish WordPress homepage's "Parish Bulletin" button links https://sponsors.bonventure.net/?page=1838
     (read in the HTML; plain curl needs --compressed, and the site sits behind Cloudflare for headed Chrome,
     which timed out twice).
+promoted: 2026-10-19
 ---
 
 ## Publisher

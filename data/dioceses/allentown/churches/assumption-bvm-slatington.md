@@ -25,7 +25,9 @@ evidence:
 - url: https://abvm.church/bulletins/10.18.2026.pdf
   seen: 2026-10-18
   quote: Saturday 5 PM Sunday 8:30 & 10:30 AM
-  note: 'Page 1 of the 18 October 2026 issue; the masthead gives the address as "633-649 W. Washington St."'
+  note: Page 1 of the 18 October 2026 issue; the masthead gives the address as "633-649 W. Washington
+    St."
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

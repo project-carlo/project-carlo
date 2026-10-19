@@ -11,9 +11,7 @@ longitude: -76.0234375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23679
-- directory:8116
+roster: ['gcatholic:23679', 'directory:8116']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23679
   seen: 2026-10-18
@@ -25,8 +23,9 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Mary'', 94 Walnut Road, Hamburg, PA,
     19526; kind: place'
 - url: https://www.church-bulletin.org/bulletin/saint-mary-roman-catholic-parish-hamburg-pa-19526/2026-10-18.pdf
-  quote: 'Sunday Weekend Masses: Saturday Vigil, 4:00 PM; Sundays, 8:00 AM and 10:45 AM'
   seen: 2026-10-18
+  quote: 'Sunday Weekend Masses: Saturday Vigil, 4:00 PM; Sundays, 8:00 AM and 10:45 AM'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

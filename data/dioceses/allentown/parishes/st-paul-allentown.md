@@ -21,6 +21,7 @@ evidence:
 - url: https://www.stpaulrc.com/bulletin
   seen: 2026-10-18
   note: The parish site's Bulletin page links https://church-bulletin.org/281.
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -9,21 +9,22 @@ evidence:
 - url: https://olmcroseto.org/wp-content/uploads/2026/10/143-Mount-Carmel-Bulletin-Oct-18-2026.doc-pdf.pdf
   seen: 2026-10-18
   quote: While the church has an address in Bangor, the altar and sacristy reside in Roseto.
-  note: 'Issue 143, 18 October 2026 (uploaded 14 October; found through the site''s WordPress media list, not yet
-    linked from the homepage). Page 3 Mass Schedule: Monday, Wednesday, Thursday, Friday 7:30am, Tuesday NO MASS,
-    Saturday 4:30pm, Sunday 8:00am and 10:00am. Page 2: "Our Lady of Mount Carmel, 560 N. 6th Street, Bangor,
-    Pennsylvania 18013". No other church named.'
+  note: 'Issue 143, 18 October 2026 (uploaded 14 October; found through the site''s WordPress media list,
+    not yet linked from the homepage). Page 3 Mass Schedule: Monday, Wednesday, Thursday, Friday 7:30am,
+    Tuesday NO MASS, Saturday 4:30pm, Sunday 8:00am and 10:00am. Page 2: "Our Lady of Mount Carmel, 560
+    N. 6th Street, Bangor, Pennsylvania 18013". No other church named.'
 - url: https://olmcroseto.org/wp-content/uploads/2026/10/142-Mount-Carmel-Bulletin-Oct-11-2026.doc-pdf.pdf
   seen: 2026-10-18
   quote: OUR LADY OF MOUNT CARMEL CHURCH
-  note: 'Page 1 masthead of issue 142, 11 October 2026: "OUR LADY OF MOUNT CARMEL CHURCH / PASTOR: REVEREND DANIEL
-    KRAVATZ". The homepage links this issue (read in a browser; the host closes plain connections).'
+  note: 'Page 1 masthead of issue 142, 11 October 2026: "OUR LADY OF MOUNT CARMEL CHURCH / PASTOR: REVEREND
+    DANIEL KRAVATZ". The homepage links this issue (read in a browser; the host closes plain connections).'
 - url: https://olmcroseto.org/wp-content/uploads/2026/02/107-Mount-Carmel-Bulletin-Feb-08-2026.doc-pdf.pdf
   seen: 2026-10-18
   quote: OUR LADY OF GOOD COUNSEL AND OUR LADY OF MOUNT CARMEL
-  note: 'Page 1 masthead of the 8 February 2026 issue still names both churches; page 4: "The final Mass at Our
-    Lady of Good Counsel Church will be on Sat., February 7, 2026 at 4:00pm." From the 15 February issue the
-    masthead is Our Lady of Mount Carmel alone.'
+  note: 'Page 1 masthead of the 8 February 2026 issue still names both churches; page 4: "The final Mass
+    at Our Lady of Good Counsel Church will be on Sat., February 7, 2026 at 4:00pm." From the 15 February
+    issue the masthead is Our Lady of Mount Carmel alone.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

@@ -11,24 +11,23 @@ longitude: -75.3359375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23700
-- directory:8148
+roster: ['gcatholic:23700', 'directory:8148']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23700
   seen: 2026-10-18
   quote: 1408 Easton Rd., Hellertown, Pennsylvania 18055-1127
-  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''St. Theresa of the Child
-    Jesus'', 1408 Easton Rd., Hellertown, PA, 18055; kind: Church'
+  note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Allentown as ''St. Theresa of
+    the Child Jesus'', 1408 Easton Rd., Hellertown, PA, 18055; kind: Church'
 - url: https://www.allentowndiocese.org/places/st-theresa-of-the-child-jesus
   seen: 2026-10-18
-  note: 'Listed in Diocese of Allentown parish map: places as ''St. Theresa of the Child Jesus'', 1408 Easton Road,
-    Hellertown, PA, 18055; kind: place'
+  note: 'Listed in Diocese of Allentown parish map: places as ''St. Theresa of the Child Jesus'', 1408
+    Easton Road, Hellertown, PA, 18055; kind: place'
 - url: https://files.ecatholic.com/39015/bulletins/20261018.pdf
   seen: 2026-10-18
   quote: 'Saturday Vigil Mass:'
-  note: 'Page 1 of the 18 October 2026 issue: Saturday Vigil Mass 4:15pm, Sunday Masses 8:00am, 9:30am, 11:00am;
-    Monday 6:00pm, Tuesday-Friday 8:00am; 1408 Easton Road, Hellertown.'
+  note: 'Page 1 of the 18 October 2026 issue: Saturday Vigil Mass 4:15pm, Sunday Masses 8:00am, 9:30am,
+    11:00am; Monday 6:00pm, Tuesday-Friday 8:00am; 1408 Easton Road, Hellertown.'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

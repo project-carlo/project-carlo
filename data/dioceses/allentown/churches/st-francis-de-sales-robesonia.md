@@ -11,9 +11,7 @@ longitude: -76.1358125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23656
-- directory:8076
+roster: ['gcatholic:23656', 'directory:8076']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23656
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Francis de Sales'', 320 N. Church
     Street, Robesonia, PA, 19551; kind: place'
 - url: https://www.stfrancisroby.org/_files/ugd/be01c3_f09f64e73b7c4089859a143defed7bae.pdf
+  seen: 2026-10-18
   quote: Intentions for Kathleen Hart
   note: '11 October 2026 issue, page 2: Sunday October 11 8:00AM.'
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

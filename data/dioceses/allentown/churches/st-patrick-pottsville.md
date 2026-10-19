@@ -25,10 +25,12 @@ evidence:
 - url: https://files.ecatholic.com/14122/bulletins/20261018.pdf
   seen: 2026-10-18
   quote: SCHEDULE OF MASSES Saturday … 4:00 pm Sunday … 8:00 am & 10:00 am
-  note: 'Page 1 of the 18 October 2026 issue; page 2 lists the intentions for each of these Masses through 25 October.'
+  note: Page 1 of the 18 October 2026 issue; page 2 lists the intentions for each of these Masses through
+    25 October.
 - url: https://www.allentowndiocese.org/places/st-patrick
   seen: 2026-10-18
   quote: 'Rectory: | 319 Mahantongo St. (17901-3012)'
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

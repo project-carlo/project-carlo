@@ -11,9 +11,7 @@ longitude: -75.5813125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23620
-- directory:8014
+roster: ['gcatholic:23620', 'directory:8014']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23620
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''Most Blessed Sacrament'', 610 Pine Street,
     Bally, PA, 19503; kind: place'
 - url: https://files.ecatholic.com/15730/bulletins/20261018.pdf
+  seen: 2026-10-18
   note: 'Page 1 (image, read rendered): "Weekend Mass Schedule Saturday Vigil 4:30 PM Sunday 6:00 AM 7:30
     AM 10:15 AM".'
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

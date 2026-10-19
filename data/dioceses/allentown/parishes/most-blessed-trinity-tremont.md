@@ -9,28 +9,31 @@ evidence:
 - url: https://mostblessedtrinity.us/wp-content/uploads/2026/10/10-18-26-The-Twenty-Ninth-Sunday-in-Ordinary-Time-Website-Edition.pdf
   seen: 2026-10-18
   note: 'Page 1 of the 18 October 2026 issue, an image with no text layer (rendered with parish-site-access
-    render.py and read): "Most Blessed Trinity Parish of the Diocese of Allentown", "Church/Rectory: 113 Cherry
-    Street, Tremont, PA 17981", "Chapel: 840 E. Grand Avenue, Tower City, PA 17980"; "Liturgical Schedule
-    Church: Saturday Vigil 4:00 PM, Sunday 10:30 AM Chapel: Sunday 9:00 AM Daily Masses: 9:00 AM, except for
-    Tuesday at 6:00 PM in the Tremont Church, no Saturdays."'
+    render.py and read): "Most Blessed Trinity Parish of the Diocese of Allentown", "Church/Rectory: 113
+    Cherry Street, Tremont, PA 17981", "Chapel: 840 E. Grand Avenue, Tower City, PA 17980"; "Liturgical
+    Schedule Church: Saturday Vigil 4:00 PM, Sunday 10:30 AM Chapel: Sunday 9:00 AM Daily Masses: 9:00
+    AM, except for Tuesday at 6:00 PM in the Tremont Church, no Saturdays."'
 - url: https://mostblessedtrinity.us/
   seen: 2026-10-18
   quote: 9:00 AM - Mass (Chapel - Tower City) 10:30 AM - Mass (Church - Tremont)
-  note: 'Homepage "Sunday Liturgy Schedule": also "4:00 PM - Mass (Church - Tremont)" on Saturday; footer "Ss.
-    Peter & Paul Chapel 840 E. Grand Avenue Tower City, PA 17980".'
+  note: 'Homepage "Sunday Liturgy Schedule": also "4:00 PM - Mass (Church - Tremont)" on Saturday; footer
+    "Ss. Peter & Paul Chapel 840 E. Grand Avenue Tower City, PA 17980".'
 - url: https://mostblessedtrinity.us/parish-history/
   seen: 2026-10-18
-  quote: Most Blessed Trinity Church now occupies the former Immaculate Conception Church building in Tremont
-    and the parish also has a Chapel located in the former Ss. Peter & Paul Church building in Tower City.
+  quote: Most Blessed Trinity Church now occupies the former Immaculate Conception Church building in
+    Tremont and the parish also has a Chapel located in the former Ss. Peter & Paul Church building in
+    Tower City.
   note: 'The same page: the parish "was established on July 15, 2008" from Sacred Heart of Jesus in Newtown,
     Immaculate Conception in Tremont and Saints Peter & Paul in Tower City.'
 - url: https://mostblessedtrinity.us/parish-bulletins/
   seen: 2026-10-18
   note: 'probe url: the "Parish Bulletins" page links one PDF per Sunday under /wp-content/uploads/YYYY/MM/,
-    named like "10-18-26-The-Twenty-Ninth-Sunday-in-Ordinary-Time-Website-Edition.pdf", newest 18 October 2026.'
+    named like "10-18-26-The-Twenty-Ninth-Sunday-in-Ordinary-Time-Website-Edition.pdf", newest 18 October
+    2026.'
 - url: https://www.allentowndiocese.org/places/most-blessed-trinity
   seen: 2026-10-18
   quote: 'Weekend Mass Tower City: | Sunday 9 a.m.'
+promoted: 2026-10-19
 ---
 
 ## Publisher

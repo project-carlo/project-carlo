@@ -9,15 +9,16 @@ evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-rocco-s-roman-catholic-church-martins-creek-pa-18063/2026-10-18.pdf
   seen: 2026-10-18
   quote: 'Saturday Vigil: 4:30pm'
-  note: 'Page 1 of the 18 October 2026 issue: "St. Rocco’s Roman Catholic Church, 6658 School Street | P.O. Box 421
-    | Martins Creek, PA 18063", Very Rev. Anthony P. Mongiello, Pastor; "October 18, 2026 ~ Twenty-Ninth Sunday in
-    Ordinary Time"; weekday Mass 8:00am Monday, Tuesday, Wednesday and Friday.'
+  note: 'Page 1 of the 18 October 2026 issue: "St. Rocco’s Roman Catholic Church, 6658 School Street |
+    P.O. Box 421 | Martins Creek, PA 18063", Very Rev. Anthony P. Mongiello, Pastor; "October 18, 2026
+    ~ Twenty-Ninth Sunday in Ordinary Time"; weekday Mass 8:00am Monday, Tuesday, Wednesday and Friday.'
 - url: https://strocco.org/
   seen: 2026-10-18
   quote: St. Rocco
-  note: The parish site (title "Your Local Church | St. Rocco's Church - Martins Creek, PA"); probe url found the
-    bulletin link https://www.jppc.net/onlinebulletins/270template.pdf, which redirects to the church-bulletin.org
-    listing in publication.
+  note: The parish site (title "Your Local Church | St. Rocco's Church - Martins Creek, PA"); probe url
+    found the bulletin link https://www.jppc.net/onlinebulletins/270template.pdf, which redirects to the
+    church-bulletin.org listing in publication.
+promoted: 2026-10-19
 ---
 
 ## Publisher

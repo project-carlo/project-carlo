@@ -11,9 +11,7 @@ longitude: -75.9534375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23635
-- directory:8038
+roster: ['gcatholic:23635', 'directory:8038']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23635
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''Sacred Heart'', 701 Franklin Street, West
     Reading, PA, 19611; kind: place'
 - url: https://discovermass.com/church/sacred-heart-west-reading-pa/
+  seen: 2026-10-18
   quote: 9:30am HELENSUTHERLAND- Robert&AnnSutherland
   note: 18 October 2026 issue, page 2 liturgies.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

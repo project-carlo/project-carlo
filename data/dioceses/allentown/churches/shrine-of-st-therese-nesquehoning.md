@@ -38,11 +38,13 @@ evidence:
   note: The shrine's history page is the history of Our Lady of Mount Carmel Church, New Columbus (Nesquehoning).
 - url: https://www.tnonline.com/20121222/shrine-to-be-established-to-st-therese-in-nesquehoning/
   seen: 2026-10-18
-  quote: A Shrine to St. Therese of Lisieux will be established at the closed Our Lady of Mount Carmel Catholic Church, Nesquehoning
+  quote: A Shrine to St. Therese of Lisieux will be established at the closed Our Lady of Mount Carmel
+    Catholic Church, Nesquehoning
   note: Times News, 22 December 2012 (date in the URL).
 - url: https://www.tnonline.com/20170808/pv-native-makes-another-push-to-save-church/
   seen: 2026-10-18
   quote: While St. Theresa holds a Saturday morning Mass, it does not satisfy the Sunday Mass obligation.
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

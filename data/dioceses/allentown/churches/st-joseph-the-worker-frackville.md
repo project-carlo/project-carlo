@@ -11,9 +11,7 @@ longitude: -76.2278125
 coordinates_from: gcatholic-plus-code
 name_verified: false
 address_verified: true
-roster:
-- gcatholic:23645
-- directory:8100
+roster: ['gcatholic:23645', 'directory:8100']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23645
   seen: 2026-10-18
@@ -32,6 +30,7 @@ evidence:
 - url: https://www.stjoesfrackville.com/copy-of-mass-times
   seen: 2026-10-18
   quote: Saturday Vigil 5:30 pm
+promoted: 2026-10-19
 ---
 
 ## Holds Mass

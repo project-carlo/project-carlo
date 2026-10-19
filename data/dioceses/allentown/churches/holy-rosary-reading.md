@@ -11,9 +11,7 @@ longitude: -75.9319375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23614
-- directory:8002
+roster: ['gcatholic:23614', 'directory:8002']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23614
   seen: 2026-10-18
@@ -25,9 +23,10 @@ evidence:
   note: 'Listed in Diocese of Allentown parish map: places as ''Holy Rosary'', 237 Franklin Street, Reading,
     PA, 19602; kind: place'
 - url: https://discovermass.com/church/holy-rosary-reading-pa/
+  seen: 2026-10-18
   quote: SUNDAY, OCTOBER 18TH —10:00 AM
   note: 18 October 2026 issue, page 2 Mass intentions.
-  seen: 2026-10-18
+promoted: 2026-10-19
 ---
 
 ## Holds Mass
