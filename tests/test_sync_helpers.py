@@ -89,6 +89,9 @@ def test_build_latest_discover_mass_bulletin_links() -> None:
             assert url == "https://discovermass.com/church/st-joseph-rush/"
             assert wait_until == "domcontentloaded"
 
+        def wait_for_timeout(self, timeout: int) -> None:
+            return None
+
         def wait_for_selector(self, selector: str, timeout: int, state=None) -> None:
             assert selector == "a#bulletin-current[href]"
             assert timeout == 15000
@@ -124,6 +127,9 @@ def test_build_latest_discover_mass_bulletin_links_raises_when_bulletin_anchor_m
         def goto(self, url: str, wait_until: str) -> None:
             assert url == "https://discovermass.com/church/st-joseph-rush/"
             assert wait_until == "domcontentloaded"
+
+        def wait_for_timeout(self, timeout: int) -> None:
+            return None
 
         def wait_for_selector(self, selector: str, timeout: int, state=None) -> None:
             assert selector == "a#bulletin-current[href]"
@@ -212,6 +218,9 @@ def test_resolve_latest_anchor_link_with_playwright_uses_first_valid_anchor() ->
         def goto(self, url: str, wait_until: str) -> None:
             assert url == "https://example.org/bulletins"
             assert wait_until == "domcontentloaded"
+
+        def wait_for_timeout(self, timeout: int) -> None:
+            return None
 
         def wait_for_selector(self, selector: str, timeout: int, state=None) -> None:
             assert selector == "a[href*='bulletins']"
@@ -354,6 +363,9 @@ def test_resolve_other_latest_link_prefers_latest_parseable_within_plus_minus_we
             assert wait_until == "domcontentloaded"
             self.url = url
 
+        def wait_for_timeout(self, timeout: int) -> None:
+            return None
+
         def wait_for_selector(self, selector: str, timeout: int, state=None) -> None:
             assert selector == "a[href]"
             assert timeout == 15000
@@ -401,6 +413,9 @@ def test_resolve_other_latest_link_falls_back_to_first_pdf_when_no_date_match() 
 
         def goto(self, url: str, wait_until: str) -> None:
             self.url = url
+
+        def wait_for_timeout(self, timeout: int) -> None:
+            return None
 
         def wait_for_selector(self, selector: str, timeout: int, state=None) -> None:
             assert selector == "a[href]"
@@ -466,6 +481,9 @@ def test_resolve_other_latest_link_finds_pdf_embedded_in_script_on_post_page() -
         def goto(self, url: str, wait_until: str) -> None:
             assert wait_until == "domcontentloaded"
             self.url = url
+
+        def wait_for_timeout(self, timeout: int) -> None:
+            return None
 
         def wait_for_selector(self, selector: str, timeout: int, state=None) -> None:
             assert selector == "a[href]"
@@ -535,6 +553,9 @@ def test_resolve_other_latest_link_descends_into_latest_bulletin_post_when_no_pd
         def goto(self, url: str, wait_until: str) -> None:
             assert wait_until == "domcontentloaded"
             self.url = url
+
+        def wait_for_timeout(self, timeout: int) -> None:
+            return None
 
         def wait_for_selector(self, selector: str, timeout: int, state=None) -> None:
             assert selector == "a[href]"

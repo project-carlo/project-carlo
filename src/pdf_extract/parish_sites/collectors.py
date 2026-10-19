@@ -16,8 +16,9 @@ from __future__ import annotations
 import logging
 import re
 from collections.abc import Callable
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from datetime import date
+from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
 
 from pdf_extract.browser import (
@@ -121,6 +122,9 @@ def page_pdf_candidates(
                 titled_bulletin=bool(_BULLETIN_TITLE_RE.fullmatch(text.strip().lower())),
             )
         )
+    if any(c.parsed_date is None for c in candidates):
+        candidates = _dated_by_card(_rendered_html(page), base_url=base_url,
+                                    reference_date=reference_date, candidates=candidates)
     if is_convincing(candidates, reference_date):
         return candidates
 
@@ -129,15 +133,17 @@ def page_pdf_candidates(
     # PDF URL as JSON inside a <script> tag rather than a plain <a href="..pdf">,
     # or link a whole block to it by script (Divi). Scan the rendered HTML when
     # the page's links are no bulletin, after those links.
-    try:
-        html = page.content()
-    except Exception:
-        html = ""
+    html = _rendered_html(page)
     linked = {c.source_url for c in candidates}
     candidates += [
         c for c in _pdf_candidates_in_html(html, base_url=base_url, reference_date=reference_date)
         if c.source_url not in linked
     ]
+    # Cards a repeater rendered after its links were read (St. Joseph the
+    # Worker, Frackville) date their PDFs from this later look at the page.
+    candidates = _dated_by_card(
+        html, base_url=base_url, reference_date=reference_date, candidates=candidates,
+    )
     if candidates or PDF_EMBEDDER_VIEWER_CLASS not in html:
         return candidates
 
@@ -149,6 +155,85 @@ def page_pdf_candidates(
         LOGGER.info("Could not read the served page %s: %s", page.url or base_url, exc)
         return []
     return _pdf_candidates_in_html(source, base_url=base_url, reference_date=reference_date)
+
+
+class _ListItemReader(HTMLParser):
+    """Each `role="listitem"` element's text pieces and the links inside it."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.items: list[tuple[list[str], list[str]]] = []
+        self._open: list[tuple[int, int]] = []  # open listitems: (depth, index in items)
+        self._depth = 0
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in _VOID_TAGS:
+            self.handle_startendtag(tag, attrs)
+            return
+        self._depth += 1
+        values = dict(attrs)
+        if values.get("role") == "listitem":
+            self._open.append((self._depth, len(self.items)))
+            self.items.append(([], []))
+        if tag == "a" and self._open and values.get("href"):
+            self.items[self._open[-1][1]][1].append(values["href"] or "")
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        return None
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in _VOID_TAGS:
+            return
+        if self._open and self._open[-1][0] == self._depth:
+            self._open.pop()
+        self._depth = max(0, self._depth - 1)
+
+    def handle_data(self, data: str) -> None:
+        if self._open and data.strip():
+            self.items[self._open[-1][1]][0].append(data.strip())
+
+
+_VOID_TAGS = frozenset({
+    "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
+    "param", "source", "track", "wbr",
+})
+
+
+def _rendered_html(page: PageLike) -> str:
+    try:
+        return page.content()
+    except Exception:
+        return ""
+
+
+def _dated_by_card(
+    html: str, *, base_url: str, reference_date: date, candidates: list[Candidate],
+) -> list[Candidate]:
+    """Date undated PDF links by the one date written in their card.
+
+    Wix repeaters list each issue as a card (`role="listitem"`): a date, the
+    Sunday's name and a "View" button linking a hash-named PDF (St. Charles
+    Borromeo, Ashland). The link alone is undated, so a header PDF listed first
+    ("Coat of Arms") was picked. A card naming more than one date is left alone.
+    """
+    if 'role="listitem"' not in html or all(c.parsed_date for c in candidates):
+        return candidates
+    reader = _ListItemReader()
+    reader.feed(html)
+    reader.close()
+    card_dates: dict[str, date] = {}
+    for texts, hrefs in reader.items:
+        dates = {d for d in (parse_date(t, reference_date) for t in texts) if d is not None}
+        if len(dates) != 1:
+            continue
+        (card_date,) = dates
+        for href in hrefs:
+            card_dates.setdefault(unwrap_pdf_viewer_url(urljoin(base_url, href)), card_date)
+    return [
+        replace(c, parsed_date=card_dates[c.source_url])
+        if c.parsed_date is None and c.source_url in card_dates else c
+        for c in candidates
+    ]
 
 
 def _pdf_candidates_in_html(
@@ -188,6 +273,10 @@ def _candidates_on(site: BulletinPage, url: str) -> list[Candidate]:
 
 
 # ── Collectors ──────────────────────────────────────────────────────────────
+
+# How long a bulletin page whose first read found no bulletin gets for its
+# scripts to finish building it before it is read again.
+LATE_CONTENT_WAIT_MS = 3000
 
 # Each file in a shared folder's listing is a row carrying the file's id.
 GOOGLE_DRIVE_ITEM_SELECTOR = "[data-id]"
@@ -240,12 +329,25 @@ def collect_redirected_pdf(site: BulletinPage, found: list[Candidate]) -> list[C
 
 
 def collect_page_pdfs(site: BulletinPage, found: list[Candidate]) -> list[Candidate]:
-    """The PDFs the bulletin page links, or names in its markup."""
+    """The PDFs the bulletin page links, or names in its markup.
+
+    A list built by script after the page loads (a Wix repeater of dated cards:
+    St. Joseph the Worker, Frackville) can be missing from the first read, which
+    then finds only a header PDF. When that read is no bulletin, the page gets a
+    moment more and is read again.
+    """
     if found:
         return []
-    return page_pdf_candidates(
+    candidates = page_pdf_candidates(
         page=site.page, base_url=site.url, reference_date=site.reference_date,
     )
+    if is_convincing(candidates, site.reference_date):
+        return candidates
+    site.page.wait_for_timeout(LATE_CONTENT_WAIT_MS)
+    later = page_pdf_candidates(
+        page=site.page, base_url=site.url, reference_date=site.reference_date,
+    )
+    return later if is_convincing(later, site.reference_date) else candidates
 
 
 def collect_linked_issue_page(site: BulletinPage, found: list[Candidate]) -> list[Candidate]:
