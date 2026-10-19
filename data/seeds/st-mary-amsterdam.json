@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-amsterdam",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:55:46Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:51:50Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:26:18Z",
   "summary": "St. Mary's, Amsterdam. The newest bulletin (Oct 4) is the installation issue with no schedule box, so its Mass intentions confirm the weekday 8:00, Saturday 4:00 and Sunday 10:00 Masses; the Sept 27 box and the website supply First Saturday Mass, Thursday Adoration and Confession, Saturday Confession and the Sunday noon Spanish Mass, which are asked (R29), plus the Oct 4 Installation Mass as a dated Mass. Saturday Confession ends 3:45 in the bulletin but 4:00 on the website.",
   "blocked_reason": null,
   "bulletins": [
@@ -629,9 +629,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction at 6:00 PM"
+      },
       "page": null,
       "sources": [
         {
@@ -701,13 +714,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:25:46Z"
+      }
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -754,13 +784,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:25:55Z"
+      }
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -824,13 +871,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:26:04Z"
+      }
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
       "page": null,
       "sources": [
         {
@@ -889,7 +953,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:26:16Z"
+      }
     }
   ],
   "church_list_issues": [

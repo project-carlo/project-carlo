@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "immaculate-conception-fayetteville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:35:30Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:53:19Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:28:51Z",
   "summary": "Single-church parish with a stable Mon-Fri 7:30 AM and Sunday 7:30, 9:00 and 11:30 AM Mass schedule in all three bulletins and on the website. Three open questions: whether 'Daily' includes a Saturday 7:30 Mass (leaning no), whether Saturday 4:00-4:30 Confession (older bulletins and website, dropped from the newest box) stays (leaning yes), and whether a once-printed, apparently stale Monday evening Exposition with Reconciliation is current (leaning leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -599,9 +599,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -670,13 +683,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:24Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -741,13 +771,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:34Z"
+      }
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Reflective prayer"
+      },
       "page": null,
       "sources": [
         {
@@ -824,14 +873,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 2,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:49Z"
+      },
       "group": "monday-exposition"
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First half hour of Exposition"
+      },
       "page": null,
       "sources": [
         {
@@ -908,7 +976,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 2,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:49Z"
+      },
       "group": "monday-exposition"
     }
   ]

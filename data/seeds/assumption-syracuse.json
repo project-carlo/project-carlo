@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "assumption-syracuse",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-04T14:32:23Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:13:40Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:22:13Z",
   "summary": "Assumption (812 N Salina) prints the Saturday 4:00 PM vigil, Sunday 10:00 AM and Tue-Thu 8:30 AM Masses clearly; all confession, adoration and the daily 12:15 Mass are held at The Franciscan Place chapel at Destiny USA, which is not in the church list, so they are excluded and flagged. The regular Monday time (8:30 vs the printed Oct 12 9:00) and Friday/Saturday 8:30 weekday Masses (only in the older bulletin) are open questions.",
   "blocked_reason": null,
   "bulletins": [
@@ -321,9 +321,22 @@
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 4,
       "sources": [
         {
@@ -394,13 +407,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:22:01Z"
+      }
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -448,13 +478,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:22:08Z"
+      }
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -502,7 +549,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:22:09Z"
+      }
     },
     {
       "id": "s10",
@@ -996,8 +1047,8 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
+      "decision": "exclude",
+      "status": "settled",
       "entry": null,
       "page": 4,
       "sources": [
@@ -1026,7 +1077,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:22:12Z"
+      }
     }
   ]
 }

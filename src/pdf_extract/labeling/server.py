@@ -17,6 +17,8 @@ API:
 - `GET  /api/bulletins/<parish>/<hash>/pdf`   the stored PDF Gemini read
 - `PUT  /api/labels/<parish>/<hash>`          validate and save a label
 - `GET  /api/seeds`                           every seed file, with its open questions
+- `POST /api/seeds/approve-ready`             approve all ready files with a reviewer name;
+                                              returns approvals, failures and the queue
 - `GET  /api/seeds/<parish>`                  a seed file, the parish's churches and the
                                               problems `seed check` finds
 - `PUT  /api/seeds/<parish>`                  validate and save a reviewed seed file; an
@@ -58,6 +60,7 @@ from pdf_extract.paths import ROOT
 from pdf_extract.seeding.files import SEEDS_DIR, SeedFileError
 from pdf_extract.seeding.review import (
     SeedReviewError,
+    approve_ready_seeds,
     save_reviewed_seed,
     seed_detail,
     seed_queue,
@@ -220,6 +223,11 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
             if parts == ["seeds"] and reading:
                 return self._with_db(lambda conn: self._json(
                     {"seeds": seed_queue(conn, app.seeds_dir)}))
+            if parts == ["seeds", "approve-ready"] and method == "POST":
+                body = self._body()
+                reviewer = body.get("reviewer") if isinstance(body, dict) else None
+                return self._with_db(lambda conn: self._json(
+                    approve_ready_seeds(conn, reviewer, app.seeds_dir)))
             if len(parts) == 2 and parts[0] == "seeds" and is_valid_slug(parts[1]):
                 if reading:
                     return self._seed(parts[1])
