@@ -1,0 +1,95 @@
+{
+  "policy_hash": "5c534c3ac8fa9aabe4e3c07f06c2fc1f51e3c52a92c1a61a006b58f55aaca501",
+  "version": "50a63b97dc1dbe0f50a3537849db70e99ad87a26e1557151a4e69f08a09db819",
+  "service_tier": "default",
+  "results": [
+    {
+      "parish": "holy-trinity-webster",
+      "trial": 1,
+      "checks": {
+        "entry_155_retained": true,
+        "present_{\"date\": \"2026-10-25\", \"event_type\": \"mass\", \"start_time\": 1110}": false,
+        "responses_valid": true
+      },
+      "passed": false
+    },
+    {
+      "parish": "holy-trinity-webster",
+      "trial": 2,
+      "checks": {
+        "entry_155_retained": true,
+        "present_{\"date\": \"2026-10-25\", \"event_type\": \"mass\", \"start_time\": 1110}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "holy-trinity-webster",
+      "trial": 3,
+      "checks": {
+        "entry_155_retained": true,
+        "present_{\"date\": \"2026-10-25\", \"event_type\": \"mass\", \"start_time\": 1110}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "mary-mother-of-our-savior-utica",
+      "trial": 1,
+      "checks": {
+        "entry_190_retained": true,
+        "entry_195_retained": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "mary-mother-of-our-savior-utica",
+      "trial": 2,
+      "checks": {
+        "entry_190_retained": true,
+        "entry_195_retained": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "mary-mother-of-our-savior-utica",
+      "trial": 3,
+      "checks": {
+        "entry_190_retained": true,
+        "entry_195_retained": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-edward-the-confessor-clifton-park",
+      "trial": 1,
+      "checks": {
+        "absent_{\"day_of_week\": \"Friday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 540}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-edward-the-confessor-clifton-park",
+      "trial": 2,
+      "checks": {
+        "absent_{\"day_of_week\": \"Friday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 540}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-edward-the-confessor-clifton-park",
+      "trial": 3,
+      "checks": {
+        "absent_{\"day_of_week\": \"Friday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 540}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": false
+}

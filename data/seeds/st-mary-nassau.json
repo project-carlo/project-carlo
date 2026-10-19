@@ -351,9 +351,22 @@
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-nassau",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Anthony Novena"
+      },
       "page": 2,
       "sources": [
         {
@@ -381,7 +394,7 @@
           "page": 2
         }
       ],
-      "rationale": "The bulletin gives only an end time (10:30 AM) for Adoration after the Tuesday 9:30 Mass; no start time. History stored 10:00-10:30 in two bulletins and 9:30-10:30 in one. A wrong time is worse than a missing one.",
+      "rationale": "The bulletin gives only an end time (10:30 AM) for Adoration after the Tuesday 9:30 Mass; no start time. History stored 10:00-10:30 in two bulletins and 9:30-10:30 in one. A wrong time is worse than a missing one. Reviewer timing rule (2026-10-14): Adoration with no printed start follows the Tuesday 9:30 AM Mass, so it starts 30 minutes later at 10:00 AM; keep the printed 10:30 AM end.",
       "question": "Add the Tuesday Adoration (St. Anthony Novena) that runs 'until 10:30 am', with what start time?",
       "options": [
         {
@@ -424,7 +437,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     }
   ]
 }

@@ -662,6 +662,28 @@ classifier, and need `OPENAI_API_KEY`. Their prompt
 schedule. `--model` on `pnpm process` only picks the Gemini model for
 extract-mode parishes.
 
+The update view also carries `reviewed_seed_context` from the parish's latest
+imported, approved seed: excluded slots, answered questions, and monthly or
+seasonal entries with their evidence. These explain intentional omissions and
+unusual services; ordinary included slots are already in the live schedule.
+The updater honors the resolved decision until new evidence addresses its
+reason, and does not treat routine panel omissions as discontinuing a monthly
+service. Draft summaries are left out. Context is stored and hashed with the
+view, so editing a reviewed rationale changes the request/cache key without
+re-seeding or replacing the current schedule.
+
+When a cancellation's duration is unclear, update mode keeps the weekly slot
+and cancels only the dated occurrences the bulletin establishes. Repeated
+omissions or cancellations do not establish permanent discontinuation on their
+own. An explicit ongoing change can still replace or remove a weekly slot.
+History-based promotion of repeated cancellations is tracked in
+[issue #141](https://github.com/project-carlo/project-carlo/issues/141).
+
+The [October 18 replay report](data/update-evals/2026-10-18/report.md) records
+the source cases, real model reruns, remaining ambiguity, and the guarded data
+repair in migration 0008. Replays can be repeated with
+`uv run python scripts/replay-schedule-updates.py --help`.
+
 `pnpm schedule` looks at and hand-edits believed schedules:
 
 ```bash
@@ -692,6 +714,9 @@ pnpm seed score try-1                   # score its drafts against the labels
 ```
 
 Reviewers answer the questions and approve in the labeler's **Seeds** mode (`pnpm label`).
+Enter your reviewer name and click **Approve all ready (N)** in the Seeds queue to
+approve every **Ready to approve** seed, regardless of the status filter. Each file
+runs the usual approval checks; failures stay unapproved and appear with their problems.
 Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
 in update mode (a deploy never loads them).
 

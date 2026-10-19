@@ -1,0 +1,120 @@
+{
+  "parish": "corpus-christi-round-lake",
+  "trial": 2,
+  "required": true,
+  "checks": {
+    "entry_69_retained": true,
+    "entry_77_retained": true,
+    "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"mass\", \"start_time\": 1080}": true,
+    "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"confession\", \"start_time\": 1065}": true,
+    "responses_valid": true
+  },
+  "passed": true,
+  "calls": [
+    {
+      "original_call_id": 21,
+      "context_sha256": "296ecda20c2f9ad35eacdf0a6233d09fb3de7498bd922885e91b0f034f94f67f",
+      "served_model": "gpt-6-luna",
+      "service_tier": "default",
+      "usage": {
+        "input_tokens": 15089,
+        "cached_tokens": 4923,
+        "cache_write_tokens": 0,
+        "output_tokens": 2394,
+        "reasoning_tokens": 1981
+      },
+      "latency_ms": 29938,
+      "published_date": "2026-10-18",
+      "wrong_bulletin": false,
+      "church_list_needs_review": false,
+      "changes": [
+        {
+          "op": "add",
+          "entry_id": null,
+          "entry": {
+            "church_slug": "corpus-christi-round-lake",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-22",
+            "start_time": "6:00 PM",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "page_number": 2,
+          "rationale": "The Mass intentions list says \u201cThursday October 22nd \u2014 No Mass\u201d (page 2), cancelling the regular 6:00 PM Mass that date."
+        },
+        {
+          "op": "add",
+          "entry_id": null,
+          "entry": {
+            "church_slug": "corpus-christi-round-lake",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-22",
+            "start_time": "5:45 PM",
+            "end_time": "6:00 PM",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "page_number": 2,
+          "rationale": "The bulletin says there is \u201cNo Mass\u201d on Thursday October 22 (page 2); the believed schedule places this Confession 15 minutes before that Mass."
+        }
+      ],
+      "seen": [
+        {
+          "entry_id": 67,
+          "page_number": 1
+        },
+        {
+          "entry_id": 73,
+          "page_number": 1
+        },
+        {
+          "entry_id": 70,
+          "page_number": 1
+        },
+        {
+          "entry_id": 78,
+          "page_number": 1
+        },
+        {
+          "entry_id": 66,
+          "page_number": 1
+        },
+        {
+          "entry_id": 72,
+          "page_number": 1
+        },
+        {
+          "entry_id": 68,
+          "page_number": 1
+        },
+        {
+          "entry_id": 74,
+          "page_number": 1
+        },
+        {
+          "entry_id": 75,
+          "page_number": 1
+        },
+        {
+          "entry_id": 76,
+          "page_number": 1
+        },
+        {
+          "entry_id": 71,
+          "page_number": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-martin-de-porres-buffalo",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-09-27T14:05:15Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:59:42Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:34:18Z",
   "summary": "Single-church parish with one stored bulletin (Sept. 27, 2026) that prints no schedule box. Sunday 8:00 AM and 9:30 AM Masses are weekly from the repeated intentions and lectors lists and the website. One grouped question asks about a Tue-Thu noon chapel Mass that only the website lists, as cancelled until further notice.",
   "blocked_reason": null,
   "bulletins": [
@@ -107,9 +107,22 @@
     },
     {
       "id": "s3",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-de-porres-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -150,14 +163,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:34:17Z"
+      },
       "group": "weekday-chapel-mass"
     },
     {
       "id": "s4",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-de-porres-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -198,14 +228,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:34:17Z"
+      },
       "group": "weekday-chapel-mass"
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-de-porres-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -246,7 +293,11 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:34:17Z"
+      },
       "group": "weekday-chapel-mass"
     }
   ]

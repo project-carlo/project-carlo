@@ -1523,9 +1523,24 @@
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Follows 11:30 AM Mass; ends with Benediction"
+      },
       "page": 2,
       "sources": [
         {
@@ -1565,7 +1580,7 @@
           "page": 2
         }
       ],
-      "rationale": "No clock start is printed ('immediately following the 11:30am Mass through 6pm Benediction'). Policy puts an adoration after a weekday Mass 30 minutes after it starts (12:00); history read 11:30, 12:00 and 12:15 on different runs. End 6 PM is printed.",
+      "rationale": "No clock start is printed ('immediately following the 11:30am Mass through 6pm Benediction'). Policy puts an adoration after a weekday Mass 30 minutes after it starts (12:00); history read 11:30, 12:00 and 12:15 on different runs. End 6 PM is printed. Reviewer timing rule (2026-10-14): Adoration with no printed start follows the 11:30 AM weekday Mass, so it starts 30 minutes later at 12:00 PM; keep the printed 6:00 PM Benediction end.",
       "question": "First Friday adoration start time?",
       "options": [
         {
@@ -1631,7 +1646,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s26",

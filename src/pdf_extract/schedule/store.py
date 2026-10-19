@@ -171,6 +171,9 @@ def render_view(
     church (every non-retired church is listed, even with no entries), then
     ordered weekly before dated, by weekday or date, then time.
     """
+    # Imported here because seed-file helpers share this module's JSON/hash helpers.
+    from pdf_extract.schedule.context import reviewed_seed_context
+
     live = live_entries(conn, parish_id)
     churches = parish_churches(conn, parish_id)
     slugs = church_slugs(conn, [e.church_id for e in live.values()])
@@ -186,6 +189,9 @@ def render_view(
             for slug, items in sorted(by_church.items())
         ]
     }
+    context = reviewed_seed_context(conn, parish_id)
+    if context is not None:
+        view["reviewed_seed_context"] = context
     text = canonical_json(view)
     return text, sha256_text(text)
 

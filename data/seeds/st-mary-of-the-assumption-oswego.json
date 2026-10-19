@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-of-the-assumption-oswego",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:32:50Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:51:22Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-15T11:49:11Z",
   "summary": "Latin Rite shrine with a clear schedule in all three bulletins: Sunday 9 and 11, a 7:30 AM Low Mass Mon-Wed/Fri/Sat, Thursday 12:10, English Masses Tue/Wed 12:10 and Saturday 4:00, a first-Friday 6:00 PM Mass, plus adoration Thursday 6 PM and Friday noon. Confessions are 30 minutes before each Latin Mass (recorded as the policy's relative rule, 30 minutes ending at Mass). Open questions: confession during adoration (Thu, Fri), first-Friday confession, and an unspecified Oct 25 Benediction; the Oct 24 relic veneration, Oct 12 and Oct 25 specials and the Nov 5 cemetery Mass are left out.",
   "blocked_reason": null,
   "bulletins": [
@@ -1473,9 +1473,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
       "page": 1,
       "sources": [
         {
@@ -1542,13 +1555,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:48:58Z"
+      }
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
       "page": 1,
       "sources": [
         {
@@ -1615,13 +1645,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:49:02Z"
+      }
     },
     {
       "id": "s26",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:00 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -1690,13 +1739,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:49:09Z"
+      }
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction after the 11:00 AM High Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -1706,7 +1772,7 @@
           "said": "Sunday, October 25th ... 9:00 a.m. Low Mass, 11:00 High Mass featuring the \"Missa Brevis\" of Mariano Garau & Benediction of the Blessed Sacrament"
         }
       ],
-      "rationale": "Benediction of the Blessed Sacrament is announced for the Feast of Christ the King on Oct 25 but with no start time; it is part of the 11:00 High Mass announcement. Policy treats Benediction as Adoration, and a relative 'after' a weekend Mass would be one hour after the Mass starts (12:00 PM), a guess. Left out as the leaning because there is no definite time.",
+      "rationale": "Benediction of the Blessed Sacrament is announced for the Feast of Christ the King on Oct 25 but with no start time; it is part of the 11:00 High Mass announcement. Policy treats Benediction as Adoration, and a relative 'after' a weekend Mass would be one hour after the Mass starts (12:00 PM), a guess. Left out as the leaning because there is no definite time. Reviewer timing rule (2026-10-14), confirmed by the user pointing out this parish: record the Benediction associated with the 11:00 AM Sunday High Mass one hour after Mass starts, at 12:00 PM. No end time is stated.",
       "question": "Add an Oct 25 Benediction (Adoration) at 12:00 PM, one hour after the 11:00 AM High Mass?",
       "options": [
         {
@@ -1733,7 +1799,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:18:44Z"
+      }
     },
     {
       "id": "s28",

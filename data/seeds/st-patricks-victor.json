@@ -756,9 +756,24 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "14:55",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Follows 9:00 AM Mass; closes with Benediction"
+      },
       "page": 3,
       "sources": [
         {
@@ -798,7 +813,7 @@
           "page": 3
         }
       ],
-      "rationale": "No adoration start time is printed ('begins with Mass at 9 AM, followed by Adoration'). The policy would put it 30 minutes after a weekday Mass (9:30); history had 9:30 once and 9:00 once. End is the Benediction at 2:55 PM.",
+      "rationale": "No adoration start time is printed ('begins with Mass at 9 AM, followed by Adoration'). The policy would put it 30 minutes after a weekday Mass (9:30); history had 9:30 once and 9:00 once. End is the Benediction at 2:55 PM. Reviewer timing rule (2026-10-14): Adoration with no printed start follows the first-Saturday 9:00 AM morning Mass, so it starts 30 minutes later at 9:30 AM; this is a morning Mass, not a Saturday vigil. Keep the printed 2:55 PM Benediction end.",
       "question": "First Saturday adoration start time?",
       "options": [
         {
@@ -845,13 +860,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -891,7 +923,7 @@
           "page": 7
         }
       ],
-      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass).",
+      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
       "question": "Monday confession before the 08:30 Mass: which window?",
       "options": [
         {
@@ -934,13 +966,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -980,7 +1029,7 @@
           "page": 7
         }
       ],
-      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass).",
+      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
       "question": "Tuesday confession before the 08:30 Mass: which window?",
       "options": [
         {
@@ -1023,13 +1072,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -1069,7 +1135,7 @@
           "page": 7
         }
       ],
-      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass).",
+      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
       "question": "Wednesday confession before the 08:30 Mass: which window?",
       "options": [
         {
@@ -1112,13 +1178,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -1158,7 +1241,7 @@
           "page": 7
         }
       ],
-      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass).",
+      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
       "question": "Friday confession before the 08:30 Mass: which window?",
       "options": [
         {
@@ -1201,13 +1284,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -1247,7 +1347,7 @@
           "page": 7
         }
       ],
-      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass).",
+      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
       "question": "Saturday confession before the 4:30 Mass: which window?",
       "options": [
         {
@@ -1290,13 +1390,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -1336,7 +1453,7 @@
           "page": 7
         }
       ],
-      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass).",
+      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
       "question": "Sunday confession before the 08:30 Mass: which window?",
       "options": [
         {
@@ -1379,13 +1496,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -1425,7 +1559,7 @@
           "page": 7
         }
       ],
-      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass).",
+      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
       "question": "Sunday confession before the 10:30 Mass: which window?",
       "options": [
         {
@@ -1468,13 +1602,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-victor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -1508,7 +1661,7 @@
           "page": 7
         }
       ],
-      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). This is for the first-Saturday Mass only; history recorded 8:00-8:45 once.",
+      "rationale": "No clock time is printed; confession is 'generally' an hour before each Mass, and the bulletin also asks for the priest's last 15 minutes before Mass. The policy ends a 'before Mass' window when the Mass starts, but the 15-minute request could mean it ends 15 minutes before. History split (3 bulletins 15 minutes before the Mass, 1 at the Mass). This is for the first-Saturday Mass only; history recorded 8:00-8:45 once. Reviewer timing rule (2026-10-14): For confession before Mass, the bulletin explicitly asks for the priest to have 15 minutes to prepare. End confession 15 minutes before Mass, keeping the stated one-hour-before-Mass start.",
       "question": "First Saturday confession before the 9:00 AM Mass: which window?",
       "options": [
         {
@@ -1555,7 +1708,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
     },
     {
       "id": "s20",

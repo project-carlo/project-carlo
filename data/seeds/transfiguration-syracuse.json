@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "transfiguration-syracuse",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:33:00Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:58:10Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-15T11:53:31Z",
   "summary": "Traditional Latin Mass parish with one church. Sunday (8 and 10 AM with Confession and Adoration around each) and Saturday are fixed, but the website says weekday Masses vary, so only weekday slots printed in both bulletins are weekly and the rest of the Oct 12-16 calendar is dated. Three questions are open: Thursday morning Adoration's end time, the monthly 24-hour First Friday/Saturday Adoration, and a first-Friday 5:15 PM Mass with Confession.",
   "blocked_reason": null,
   "bulletins": [
@@ -937,9 +937,22 @@
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "07:05",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -1027,13 +1040,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 2,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:52:26Z"
+      }
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration begins; continues overnight to 9:00 AM Saturday"
+      },
       "page": null,
       "sources": [
         {
@@ -1100,14 +1132,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:53:13Z"
+      },
       "group": "first-friday-24hr"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration from Friday ends at 9:00 AM"
+      },
       "page": null,
       "sources": [
         {
@@ -1168,14 +1219,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:53:13Z"
+      },
       "group": "first-friday-24hr"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1236,14 +1306,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:53:29Z"
+      },
       "group": "first-friday-evening"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1304,7 +1393,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:53:29Z"
+      },
       "group": "first-friday-evening"
     },
     {

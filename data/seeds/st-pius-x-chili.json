@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-pius-x-chili",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:31:07Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:13:27Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-15T11:50:13Z",
   "summary": "St. Pius X (one church) prints a clear schedule on page 1: Sat 4:00 PM vigil, Sun 7:30 and 9:30 AM (ASL), Mon-Fri 7:30 AM, First Monday 6:30 PM Healing Mass, Saturday 2:30-3:15 PM Confession. Three open questions: a First Friday Adoration with Benediction seen only in the Sept 27 bulletin, a third-Monday Praise and Adoration seen only in history, and an Oct 17 1:00 PM wedding listed in the intentions.",
   "blocked_reason": null,
   "bulletins": [
@@ -679,9 +679,24 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
       "page": null,
       "sources": [
         {
@@ -725,13 +740,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:49:28Z"
+      }
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Praise and Adoration"
+      },
       "page": null,
       "sources": [
         {
@@ -769,13 +803,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:49:46Z"
+      }
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Wedding"
+      },
       "page": 9,
       "sources": [
         {
@@ -817,7 +868,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:50:11Z"
+      }
     },
     {
       "id": "s14",

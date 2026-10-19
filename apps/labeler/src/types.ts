@@ -314,3 +314,9 @@ export interface SeedDetail {
   problems: string[];
   loaded: boolean;
 }
+
+export interface SeedApprovalResult {
+  approved: string[];
+  failed: { parish_slug: string; error: string }[];
+  seeds: SeedQueueRow[];
+}

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-schenectady",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:26Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:50:23Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:28:06Z",
   "summary": "Single-church parish with Sat 5:30 PM, Sun 9:30 AM and weekday 12:15 PM Masses, with Reconciliation after the weekday Mass (12:45 by the policy's relative-time rule). Oct 12 is closed for Columbus Day and cancelled. Open questions: Wednesdays say 'No Mass - Church Closed' in all three bulletins and on the website while history had a weekly Wednesday Mass, and a one-time-printed First Friday exposition.",
   "blocked_reason": null,
   "bulletins": [
@@ -533,9 +533,22 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -606,13 +619,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:27:32Z"
+      }
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following the 12:15 PM Mass"
+      },
       "page": 2,
       "sources": [
         {
@@ -666,7 +696,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:27:34Z"
+      }
     },
     {
       "id": "s13",
@@ -828,9 +862,24 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-schenectady",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Devotions following the 12:15 PM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -868,7 +917,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:04Z"
+      }
     },
     {
       "id": "s18",

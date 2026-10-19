@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-marianne-cope",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:30:39Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:13:35Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:35:21Z",
   "summary": "St. Marianne Cope parish (one listed church, Guardian Angels). The bulletin prints no Mass schedule box; times come from the weekly Mass-intentions calendar and the website, which agree on Sat 4:30, Sun 8:00 and 10:30, Tue and Thu 8:00, Wed 12:10. Open: Monday 12:10 (newest shows only a 9:00 AM Columbus Day Mass), and whether Saturday 3:00 Confessions end at 4:00 as the website says.",
   "blocked_reason": null,
   "bulletins": [
@@ -579,9 +579,22 @@
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -646,7 +659,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:34:36Z"
+      }
     },
     {
       "id": "s8",
@@ -682,9 +699,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holiday Mass at 9:00 AM"
+      },
       "page": 3,
       "sources": [
         {
@@ -720,13 +750,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:34:40Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -814,7 +861,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:35:18Z"
+      }
     },
     {
       "id": "s11",
