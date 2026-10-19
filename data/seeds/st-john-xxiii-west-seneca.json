@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-xxiii-west-seneca",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:34:12Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:50:11Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:32:12Z",
   "summary": "One-church parish: Sat 4:00 PM, Sun 8:30 and 10:30 AM, Mon/Wed/Fri 8:30 AM Masses and Saturday 3:00 PM Reconciliation, all in the header of the newest bulletin; plus the dated Nov 4 7:00 PM All Souls Mass. Three questions: the Oct 17 5:00 PM Anointing of the Sick, another parish's Oct 21 healing Mass, and whether Friday Adoration seen only on Oct 2 is a monthly First Friday slot.",
   "blocked_reason": null,
   "bulletins": [
@@ -511,9 +511,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick"
+      },
       "page": 4,
       "sources": [
         {
@@ -555,13 +568,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:52Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick Healing Mass"
+      },
       "page": 2,
       "sources": [
         {
@@ -597,13 +627,32 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:54Z"
+      }
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -652,7 +701,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:32:09Z"
+      }
     }
   ]
 }

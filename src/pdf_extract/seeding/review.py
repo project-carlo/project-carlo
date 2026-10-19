@@ -110,6 +110,36 @@ def save_reviewed_seed(
         return _save(conn, parish_slug, body, seeds_dir)
 
 
+def approve_ready_seeds(
+    conn: sqlite3.Connection, reviewer: Any, seeds_dir: Path = SEEDS_DIR,
+) -> dict[str, Any]:
+    """Approve every currently ready file, reporting failures without stopping the batch.
+
+    Use the same validation and timestamps as a parish's Approve button. Hold
+    the review lock so other review saves cannot change the files mid-batch.
+    """
+    if not isinstance(reviewer, str) or not reviewer.strip():
+        raise SeedReviewError("Say who you are (the reviewer) before approving")
+    approved: list[str] = []
+    failed: list[dict[str, str]] = []
+    with _save_lock:
+        for row in seed_queue(conn, seeds_dir):
+            if row["status"] != READY:
+                continue
+            slug = row["parish_slug"]
+            try:
+                current = read_seed(slug, seeds_dir)
+                if current is None or current.get("status") != READY:
+                    raise SeedReviewError("This seed is no longer ready to approve")
+                _save(conn, slug, {**current, "status": APPROVED,
+                                  "reviewer": reviewer.strip()}, seeds_dir)
+            except (SeedFileError, SeedReviewError, OSError) as exc:
+                failed.append({"parish_slug": slug, "error": str(exc)})
+            else:
+                approved.append(slug)
+        return {"approved": approved, "failed": failed, "seeds": seed_queue(conn, seeds_dir)}
+
+
 def _save(
     conn: sqlite3.Connection, parish_slug: str, body: Any, seeds_dir: Path,
 ) -> dict[str, Any]:

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "saints-john-and-andrew-binghamton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:36:01Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:11:20Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:21:49Z",
   "summary": "Saints John and Andrew (Binghamton) one-church parish. Weekend Masses, MWF 6:30 AM, Wednesday 7-3 Adoration, and Saturday Reconciliation are clear from the masthead and calendar; the calendar also prints Tuesday and Thursday 6:30 AM Masses that the masthead and website do not list, the Reconciliation end time differs (3:30 vs 3:00), and the Wednesday evening Adoration was dropped from the newest bulletin. Black calendar lines are Masses at the separate St. Vincent de Paul Blessed Sacrament church and are left out.",
   "blocked_reason": null,
   "bulletins": [
@@ -358,9 +358,22 @@
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 4,
       "sources": [
         {
@@ -431,13 +444,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:56Z"
+      }
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 4,
       "sources": [
         {
@@ -508,13 +538,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:59Z"
+      }
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 4,
       "sources": [
         {
@@ -608,7 +655,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:21:13Z"
+      }
     },
     {
       "id": "s9",
@@ -698,9 +749,22 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
       "page": null,
       "sources": [
         {
@@ -765,7 +829,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:21:45Z"
+      }
     },
     {
       "id": "s12",
@@ -813,9 +881,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Replaced by holiday Mass at 9:00 AM"
+      },
       "page": 4,
       "sources": [
         {
@@ -863,7 +944,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:21:47Z"
+      }
     },
     {
       "id": "s14",

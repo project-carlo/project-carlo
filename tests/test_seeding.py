@@ -818,6 +818,86 @@ def test_http_seed_queue_detail_and_save(server, seed):
     assert _request(server, "GET", "/api/seeds/Bad_Slug")[0] == 404
 
 
+def test_http_bulk_approval_only_approves_ready_files_and_reports_failures(server, demo, seed):
+    ready = _settle_all(seed)
+    write_seed_file(ready, demo["seeds_dir"])
+    # This shape-valid ready file fails the database checks before the valid one.
+    failed = {**ready, "parish_slug": "a-failed-ready"}
+    write_seed_file(failed, demo["seeds_dir"])
+    untouched = []
+    for status in ("needs_review", "drafting", "blocked", "approved"):
+        other = copy.deepcopy(_approved(seed) if status == "approved" else seed)
+        other.update(parish_slug=f"skip-{status.replace('_', '-')}", status=status)
+        if status == "blocked":
+            other["blocked_reason"] = "Needs more evidence"
+        untouched.append(write_seed_file(other, demo["seeds_dir"]))
+    unreadable = demo["seeds_dir"] / "unreadable.json"
+    unreadable.write_text("{broken JSON")
+    untouched.append(unreadable)
+    before = {p: p.read_bytes() for p in untouched}
+    failed_before = seed_path("a-failed-ready", demo["seeds_dir"]).read_bytes()
+
+    status, result = _request(server, "POST", "/api/seeds/approve-ready",
+                              {"reviewer": "  Bulk Reviewer  "})
+    assert status == 200
+    assert result["approved"] == [PARISH]
+    assert len(result["failed"]) == 1
+    assert result["failed"][0]["parish_slug"] == "a-failed-ready"
+    assert "not in data/parishes.csv" in result["failed"][0]["error"]
+    approved = read_seed(PARISH, demo["seeds_dir"])
+    assert approved["status"] == APPROVED
+    assert approved["reviewer"] == "Bulk Reviewer" and approved["approved_at"]
+    assert approved == {**ready, "status": APPROVED, "reviewer": "Bulk Reviewer",
+                        "approved_at": approved["approved_at"]}
+    assert {p: p.read_bytes() for p in untouched} == before
+    assert seed_path("a-failed-ready", demo["seeds_dir"]).read_bytes() == failed_before
+    assert result["seeds"] == _request(server, "GET", "/api/seeds")[1]["seeds"]
+
+    # A repeated click cannot reapprove the successes or change their timestamps.
+    status, again = _request(server, "POST", "/api/seeds/approve-ready", {"reviewer": "R"})
+    assert status == 200 and again["approved"] == []
+    assert read_seed(PARISH, demo["seeds_dir"]) == approved
+
+
+@pytest.mark.parametrize("body", [{}, {"reviewer": ""}, {"reviewer": " "},
+                                  {"reviewer": 123}, {"reviewer": None}, []])
+def test_http_bulk_approval_requires_a_reviewer(server, demo, seed, body):
+    path = write_seed_file(_settle_all(seed), demo["seeds_dir"])
+    before = path.read_bytes()
+    status, result = _request(server, "POST", "/api/seeds/approve-ready", body)
+    assert status == 400 and "reviewer" in result["error"]
+    assert path.read_bytes() == before
+
+
+@pytest.mark.parametrize("problem", ["open", "evidence", "church"])
+def test_http_bulk_approval_runs_the_usual_approval_checks(server, demo, seed, problem):
+    ready = _settle_all(seed)
+    if problem == "open":
+        ready = {**seed, "status": READY}
+        message = "questions are still open"
+    elif problem == "evidence":
+        _slot(ready, "s1")["sources"][0]["source"] = "history"
+        message = "needs an agent source"
+    else:
+        _slot(ready, "s1")["entry"]["church_slug"] = "unknown-church"
+        message = "unknown-church"
+    path = write_seed_file(ready, demo["seeds_dir"])
+    before = path.read_bytes()
+    status, result = _request(server, "POST", "/api/seeds/approve-ready", {"reviewer": "R"})
+    assert status == 200 and result["approved"] == []
+    assert result["failed"][0]["parish_slug"] == PARISH
+    assert message in result["failed"][0]["error"]
+    assert path.read_bytes() == before
+
+
+def test_http_bulk_approval_with_no_ready_seeds_is_a_noop(server, demo):
+    before = seed_path(PARISH, demo["seeds_dir"]).read_bytes()
+    status, result = _request(server, "POST", "/api/seeds/approve-ready", {"reviewer": "R"})
+    assert status == 200 and result["approved"] == [] and result["failed"] == []
+    assert result["seeds"][0]["status"] == NEEDS_REVIEW
+    assert seed_path(PARISH, demo["seeds_dir"]).read_bytes() == before
+
+
 # ── The command ─────────────────────────────────────────────────────────────
 def test_seed_command_prints_text_or_json(pipeline_dir: Path, capsys):
     create_db()

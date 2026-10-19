@@ -116,6 +116,9 @@ A Seeds mode in the labeler (`pnpm label`), next to the bulletin queue.
 
 - **Queue:** parishes by status, `needs_review` first, with the number of
   open questions each (a group counts once) and any church-list issues.
+  **Approve all ready (N)** approves every `ready` file using the reviewer name,
+  regardless of the status filter. Each file passes the usual approval checks;
+  failures stay unapproved and are listed with links to their parish pages.
 - **Parish page:**
   - The existing `PdfViewer`, with a tab for each bulletin the agent read.
   - The agent's summary and church-list issues, then the open questions (a
@@ -131,7 +134,9 @@ A Seeds mode in the labeler (`pnpm label`), next to the bulletin queue.
   and `approved_at`, and runs the same checks as `seed check`.
 
 New API routes beside the labels': `GET /api/seeds`, `GET
-/api/seeds/<parish>`, `PUT /api/seeds/<parish>`. The PDF route the labeler
+/api/seeds/<parish>`, `PUT /api/seeds/<parish>`, and `POST /api/seeds/approve-ready`
+(body: `{ "reviewer": "Your name" }`; returns approved slugs, per-file failures,
+and the updated queue). The PDF route the labeler
 already has (`/api/bulletins/<parish>/<hash>/pdf`) serves the bulletins. The
 server validates every write and confines paths to `data/seeds`, as for the
 labels.

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-fatima-shrine-lewiston",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:28:59Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:11:13Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:29:34Z",
   "summary": "Weekday, Saturday and Sunday Masses and 'Confessions 15 minutes before every Mass' come from the page 1 schedule box of all three usable bulletins, with Wed/Fri 12-4 chapel Adoration, First Saturday Adoration 12:15, Sunday 3 PM Rosary & Benediction, and a fourth-Sunday Tagalog Mass. Dated: Spanish Mass Oct 11 6:15 PM and Healing Mass Nov 1 6:30 PM. Open: confessions before the two special Masses, and an unlabeled 'To Jesus Through Mary' Saturday 5:30 PM devotion. The 2019 bulletin is a wrong bulletin.",
   "blocked_reason": null,
   "bulletins": [
@@ -2444,9 +2444,22 @@
     },
     {
       "id": "s40",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-11",
+        "start_time": "18:00",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the Spanish Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2494,7 +2507,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:55Z"
+      }
     },
     {
       "id": "s41",
@@ -2536,9 +2553,22 @@
     },
     {
       "id": "s42",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "18:15",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the Healing Mass"
+      },
       "page": 6,
       "sources": [
         {
@@ -2580,13 +2610,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:29:05Z"
+      }
     },
     {
       "id": "s43",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "To Jesus Through Mary, in the Basilica"
+      },
       "page": 1,
       "sources": [
         {
@@ -2639,7 +2686,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:29:11Z"
+      }
     }
   ]
 }

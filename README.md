@@ -692,6 +692,9 @@ pnpm seed score try-1                   # score its drafts against the labels
 ```
 
 Reviewers answer the questions and approve in the labeler's **Seeds** mode (`pnpm label`).
+Enter your reviewer name and click **Approve all ready (N)** in the Seeds queue to
+approve every **Ready to approve** seed, regardless of the status filter. Each file
+runs the usual approval checks; failures stay unapproved and appear with their problems.
 Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
 in update mode (a deploy never loads them).
 
