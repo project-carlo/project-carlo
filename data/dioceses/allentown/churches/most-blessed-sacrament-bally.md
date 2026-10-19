@@ -1,6 +1,6 @@
 ---
 parish: most-blessed-sacrament-bally
-name: Blessed Sacrament
+name: Most Blessed Sacrament
 line1: 610 Pine St.
 line2: ''
 city: Bally
@@ -9,9 +9,11 @@ postal_code: '19503'
 latitude: 40.3979375
 longitude: -75.5813125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
-roster: ['gcatholic:23620', 'directory:8014']
+name_verified: true
+address_verified: true
+roster:
+- gcatholic:23620
+- directory:8014
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23620
   seen: 2026-10-18
@@ -22,14 +24,16 @@ evidence:
   seen: 2026-10-18
   note: 'Listed in Diocese of Allentown parish map: places as ''Most Blessed Sacrament'', 610 Pine Street,
     Bally, PA, 19503; kind: place'
+- url: https://files.ecatholic.com/15730/bulletins/20261018.pdf
+  note: 'Page 1 (image, read rendered): "Weekend Mass Schedule Saturday Vigil 4:30 PM Sunday 6:00 AM 7:30
+    AM 10:15 AM".'
+  seen: 2026-10-18
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin (page 1, image) gives Saturday Vigil 4:30 PM and Sunday 6:00, 7:30 and 10:15 AM, and weekday Masses at 8:15 AM.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin ("MOST BLESSED SACRAMENT CHURCH 610 PINE STREET") and the diocesan map ("Most Blessed Sacrament", 610 Pine Street) agree; GCatholic has "Blessed Sacrament", 610 Pine St. Coordinates are GCatholic's Plus Code (87G69CX9+5F), which falls on the building; the diocesan map pin agrees to within a few metres.

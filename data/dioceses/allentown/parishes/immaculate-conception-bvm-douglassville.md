@@ -3,29 +3,43 @@ name: Immaculate Conception BVM Parish
 website: https://www.icbvm.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/288
-publication: ['url:https://www.church-bulletin.org/immaculate-conception-church-douglassville-pa-19518']
+publication:
+- url:https://www.church-bulletin.org/immaculate-conception-church-douglassville-pa-19518
 group: ''
-evidence: []
+evidence:
+- url: https://www.church-bulletin.org/bulletin/immaculate-conception-church-douglassville-pa-19518/2026-10-18.pdf
+  quote: 905 Chestnut Street, Douglassville, PA 19518
+  note: '18 October 2026 issue, page 1: "Immaculate Conception BVM Church … Mass Schedule … Saturday:
+    5:15 PM Sunday: 8:00 AM, 10:30 AM*"; daily Tuesday 6:30 PM, Wednesday-Friday 7:30 AM. One church.'
+  seen: 2026-10-18
+- url: https://www.church-bulletin.org/immaculate-conception-church-douglassville-pa-19518
+  quote: Immaculate Conception Church Douglassville, PA 19518
+  note: John Patrick Publishing listing (church-bulletin.org/?id=288 redirects here), newest issue 18
+    October 2026.
+  seen: 2026-10-18
+- url: https://www.icbvm.org/bulletins.html
+  note: The parish site's Bulletins page links https://church-bulletin.org/?id=288.
+  seen: 2026-10-18
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+Immaculate Conception BVM, Douglassville, publishes its own weekly bulletin through John
+Patrick Publishing. I read the 18 October 2026 issue: page 1 names "Immaculate Conception
+BVM Church", 905 Chestnut Street, with one schedule (Saturday 5:15 pm; Sunday 8:00 and
+10:30 am). The diocesan map still gives Sunday 7:30, 9 and 11 a.m.; the bulletin is newer.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- Immaculate Conception BVM, 905 Chestnut Street, Douglassville
+  (`immaculate-conception-bvm-douglassville`).
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+icbvm.org links the John Patrick listing (`?id=288`). Provider `other`, recipe
+`page-pdfs https://church-bulletin.org/288`; fetch:check on 2026-10-18 picked the 18
+October 2026 PDF ("current"). The PDF has a text layer.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

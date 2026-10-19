@@ -9,9 +9,11 @@ postal_code: '19601'
 latitude: 40.3379375
 longitude: -75.9199375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
-roster: ['gcatholic:23690', 'directory:8134']
+name_verified: true
+address_verified: true
+roster:
+- gcatholic:23690
+- directory:8134
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23690
   seen: 2026-10-18
@@ -22,14 +24,16 @@ evidence:
   seen: 2026-10-18
   note: 'Listed in Diocese of Allentown parish map: places as ''St. Paul'', 151 North 9th Street, Reading,
     PA, 19601; kind: place'
+- url: https://discovermass.com/church/st-paul-reading-pa/
+  quote: St.PaulRomanCatholicChurch-Reading,PA
+  note: 18 October 2026 issue, page 1 Worship box (text runs words together).
+  seen: 2026-10-18
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 St. Paul bulletin gives Saturday 6:00 PM (Spanish), Sunday 8:30 AM (English, 1st, 3rd and 5th Sundays), 10:00 AM (Vietnamese) and 12:30 PM (Spanish) at St. Paul, and weekday Masses.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic (151 N 9th St.), the diocesan map (151 North 9th Street) and the bulletin ("151 N 9th St., Reading, PA 19601") agree. Coordinates are GCatholic's Plus Code (87G683QJ+52), which falls on the building; the diocesan map pin agrees to within a few metres.

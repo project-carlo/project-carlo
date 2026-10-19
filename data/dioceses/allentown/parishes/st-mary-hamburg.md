@@ -3,29 +3,43 @@ name: Saint Mary Roman Catholic Parish
 website: https://stmaryhamburg.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/273
-publication: ['url:https://www.church-bulletin.org/saint-mary-roman-catholic-parish-hamburg-pa-19526']
+publication:
+- url:https://www.church-bulletin.org/saint-mary-roman-catholic-parish-hamburg-pa-19526
 group: ''
-evidence: []
+evidence:
+- url: https://www.church-bulletin.org/bulletin/saint-mary-roman-catholic-parish-hamburg-pa-19526/2026-10-18.pdf
+  quote: 'Sunday Weekend Masses: Saturday Vigil, 4:00 PM; Sundays, 8:00 AM and 10:45 AM'
+  note: 18 October 2026 issue, page 1 masthead "Saint Mary Roman Catholic Parish 94 Walnut Road, Hamburg,
+    Pennsylvania 19526"; Rev. David J. Loeper, Pastor. One church.
+  seen: 2026-10-18
+- url: https://www.church-bulletin.org/saint-mary-roman-catholic-parish-hamburg-pa-19526
+  quote: Saint Mary Roman Catholic Parish Hamburg, PA 19526
+  note: John Patrick Publishing listing (church-bulletin.org/?id=273 redirects here), newest 18 October
+    2026.
+  seen: 2026-10-18
+- url: https://stmaryhamburg.org/parish-info/parish-bulletins/
+  note: 'JavaScript-built WordPress page (probe url NO-PARISH-WORDS; read with visit.py): links https://jppc.net/onlinebulletins/273template.pdf.'
+  seen: 2026-10-18
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+Saint Mary Roman Catholic Parish, Hamburg, publishes its own weekly bulletin through John
+Patrick Publishing. I read the 18 October 2026 issue: page 1 is the parish masthead (94
+Walnut Road) with one schedule (Saturday Vigil 4:00 pm; Sunday 8:00 and 10:45 am). The
+diocesan map still gives Saturday 4:30 p.m.; the bulletin is newer.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- St. Mary, 94 Walnut Road, Hamburg (`st-mary-hamburg`).
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+stmaryhamburg.org's Parish Bulletins page (rendered by JavaScript) links the John Patrick
+template for id 273. Provider `other`, recipe `page-pdfs https://church-bulletin.org/273`;
+fetch:check on 2026-10-18 picked the 18 October 2026 PDF ("current"). Page 7 is an image;
+the rest has text.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

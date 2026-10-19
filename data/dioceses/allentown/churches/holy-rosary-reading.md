@@ -9,9 +9,11 @@ postal_code: '19602'
 latitude: 40.3339375
 longitude: -75.9319375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
-roster: ['gcatholic:23614', 'directory:8002']
+name_verified: true
+address_verified: true
+roster:
+- gcatholic:23614
+- directory:8002
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23614
   seen: 2026-10-18
@@ -22,14 +24,16 @@ evidence:
   seen: 2026-10-18
   note: 'Listed in Diocese of Allentown parish map: places as ''Holy Rosary'', 237 Franklin Street, Reading,
     PA, 19602; kind: place'
+- url: https://discovermass.com/church/holy-rosary-reading-pa/
+  quote: SUNDAY, OCTOBER 18TH —10:00 AM
+  note: 18 October 2026 issue, page 2 Mass intentions.
+  seen: 2026-10-18
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 Holy Rosary bulletin lists Sunday Mass at 10:00 AM and weekday Masses Tuesday to Thursday at 7:00 AM, with intentions.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+GCatholic and the diocesan map give 237 Franklin Street; the bulletin's page 1 gives "237 Franklin St, Reading, PA 19602". Coordinates are GCatholic's Plus Code (87G683M9+H6), which falls on the building; the diocesan map pin agrees to within a few metres. The diocesan map gives the rectory at Lakeview Drive and Cherry St., West Reading (shared with Sacred Heart).

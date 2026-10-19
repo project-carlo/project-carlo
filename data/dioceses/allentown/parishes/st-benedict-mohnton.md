@@ -2,30 +2,41 @@
 name: St. Benedict Parish
 website: https://churchofsaintbenedict.com/bulletins/
 bulletin_provider: other
-provider_id: ''
-publication: ['url:https://churchofsaintbenedict.com/bulletins/']
+provider_id: page-pdfs
+publication:
+- url:https://churchofsaintbenedict.com/bulletins/
 group: ''
-evidence: []
+evidence:
+- url: https://churchofsaintbenedict.com/wp-content/uploads/Bulletin-October-18-2026.pdf
+  quote: Saturday Vigil 5:00pm; Sunday 8:30am, 11:00am
+  note: 18 October 2026 issue, page 1 MASS SCHEDULE; the same page gives the rectory at 2020 Chestnut
+    Hill Rd, Mohnton and Rev. Stanley Moczydlowski, pastor. One church.
+  seen: 2026-10-18
+- url: https://churchofsaintbenedict.com/bulletins/
+  quote: October 18, 2026
+  note: WordPress bulletins page listing PDFs named Bulletin-<Month>-<D>-<YYYY>.pdf from September 13
+    to October 18, 2026 (each link labelled with its date, e.g. "October 18, 2026").
+  seen: 2026-10-18
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Benedict Parish (Plowville, Mohnton) posts its own weekly bulletin on its WordPress
+site. The site's icons are John Patrick Publishing's (JPPC), but no church-bulletin.org
+listing for it was found (a scan of ids 1–1200 on 2026-10-18). I read the 18 October 2026
+issue: page 1 gives one schedule (Saturday Vigil 5:00 pm; Sunday 8:30 and 11:00 am) at 2020
+Chestnut Hill Road.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- St. Benedict, 2020 Chestnut Hill Road, Mohnton (`st-benedict-mohnton`).
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`website` is the bulletins page itself. Provider `other`; fetch:check on 2026-10-18 picked
+Bulletin-October-18-2026.pdf ("page-pdfs on https://churchofsaintbenedict.com/bulletins/:
+current") and printed the recipe `page-pdfs`, now pinned. Text layer present.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

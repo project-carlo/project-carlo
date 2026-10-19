@@ -2,7 +2,7 @@
 name: St. Charles Borromeo Parish
 website: https://www.stcharlesashland.com/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stcharlesashland.com/s-projects-side-by-side
 publication:
 - url:https://www.stcharlesashland.com/s-projects-side-by-side
 group: St. Charles Borromeo Parish
@@ -57,14 +57,16 @@ Ashland; Our Lady of Good Counsel, Gordon (all named as closed churches in 2019)
 ## Website and bulletin provider
 
 `other`: stcharlesashland.com (the diocese map's website) lists the PDFs on its "2026
-Bulletins" page (/s-projects-side-by-side). **Fetch check fails**: `fetch_check_rows.py` on
-2026-10-18 picked `23b1db_b2e89158728245ffb01ce935bd08daa3.pdf` ("page-pdfs on
-https://www.stcharlesashland.com/s-projects-side-by-side: first-listed"), which is the
-parish's one-page coat-of-arms description linked from the site header ("Coat of Arms") on
-every page, not a bulletin. The bulletin PDFs have undated hash names; their dates are only in
-the card text. No recipe is pinned. This needs a resolver change (date a Wix file link by
-its card's text, or skip a header PDF repeated on every page).
+Bulletins" page (/s-projects-side-by-side). The bulletin PDFs have undated hash names; each
+sits in a Wix card (`role="listitem"`) whose text gives its date ("October 18, 2026") and
+Sunday. The first `fetch_check_rows.py` run on 2026-10-18 picked
+`23b1db_b2e89158728245ffb01ce935bd08daa3.pdf` ("first-listed"), the parish's one-page
+coat-of-arms description linked from the site header on every page. The resolver now dates
+an undated PDF link by the one date in its card; on 2026-10-19 it picked
+`23b1db_5ff7151c62a641f59cf5dbc1925ba022.pdf`, the 18 October issue ("page-pdfs on
+https://www.stcharlesashland.com/s-projects-side-by-side: current"), and that recipe is
+pinned.
 
 ## Not yet confirmed
 
-Nothing about the publisher. The pipeline cannot pick this bulletin yet (above).
+Nothing about the publisher.

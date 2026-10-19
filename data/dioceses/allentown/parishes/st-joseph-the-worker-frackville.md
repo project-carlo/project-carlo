@@ -2,7 +2,7 @@
 name: St. Joseph the Worker Parish
 website: https://www.stjoesfrackville.com/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stjoesfrackville.com/services-9
 publication:
 - url:https://www.stjoesfrackville.com/services-9
 group: St. Joseph the Worker Parish
@@ -57,10 +57,13 @@ jurisdiction.
 ## Website and bulletin provider
 
 `other`: stjoesfrackville.com (the diocese map's website) lists the PDFs on "2026 Bulletins"
-(/services-9). **Fetch check fails**: `fetch_check_rows.py` on 2026-10-18 picked
+(/services-9), one Wix card per issue (date, Sunday, "view" link to a hash-named PDF). The
+first `fetch_check_rows.py` run on 2026-10-18 picked
 `23b1db_ede965826aac4635ad5cecf39b338d0f.pdf` ("first-listed"), the header's "Coat of Arms"
-PDF, not a bulletin (the same Wix pattern as St. Charles Borromeo). No recipe pinned. The
-bulletin is image-only, so the pipeline must also read it as images.
+PDF (the same Wix pattern as St. Charles Borromeo). With the resolver now dating a link by
+its card, and reading the page again when its cards render late, three runs on 2026-10-19
+each picked `23b1db_dff889f82b4142f098cf8eb5635b0c90.pdf`, the 18 October issue ("current");
+that recipe is pinned. The bulletin is image-only, so the pipeline must also read it as images.
 
 ## Not yet confirmed
 

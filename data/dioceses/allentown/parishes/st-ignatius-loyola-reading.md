@@ -3,29 +3,43 @@ name: St. Ignatius Loyola Parish
 website: https://www.stignatiusreading.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/235
-publication: ['url:https://www.church-bulletin.org/saint-ignatius-of-loyola-reading-pa-19608']
+publication:
+- url:https://www.church-bulletin.org/saint-ignatius-of-loyola-reading-pa-19608
 group: ''
-evidence: []
+evidence:
+- url: https://www.church-bulletin.org/bulletin/saint-ignatius-of-loyola-reading-pa-19608/2026-10-18.pdf
+  note: '18 October 2026 issue, 12 pages, scanned images (read rendered). Page 1: "October 18, 2026 ~
+    TWENTY-NINTH SUNDAY IN ORDINARY TIME", "ST. IGNATIUS", "ST. IGNATIUS LOYOLA RECTORY 2810 ST. ALBANS
+    DRIVE ~ READING, PA 19608". Page 2 "ANNOUNCED MASSES FOR THE WEEK": Saturday October 24 4:00 p.m.;
+    Sunday October 25 7:30, 9:00, 10:30 a.m. and 12:00 p.m.; weekdays 6:30 and 8:00 a.m.'
+  seen: 2026-10-18
+- url: https://www.church-bulletin.org/saint-ignatius-of-loyola-reading-pa-19608
+  quote: Saint Ignatius of Loyola Reading, PA 19608
+  note: John Patrick Publishing listing (church-bulletin.org/?id=235 redirects here), newest 18 October
+    2026.
+  seen: 2026-10-18
+- url: https://www.stignatiusreading.org/
+  note: The parish homepage links https://church-bulletin.org/?id=235 (probe url, 2026-10-18).
+  seen: 2026-10-18
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. Ignatius Loyola Parish (Sinking Spring / West Lawn, Reading mailing address) publishes
+its own weekly bulletin through John Patrick Publishing. I read the 18 October 2026 issue:
+page 1 names St. Ignatius and its rectory at 2810 St. Albans Drive; page 2's announced
+Masses (Saturday 4:00 pm; Sunday 7:30, 9:00, 10:30 am and noon) name no other place.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- St. Ignatius of Loyola, 2810 St. Albans Drive, Sinking Spring (`st-ignatius-loyola-reading`).
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+stignatiusreading.org links the John Patrick listing (id 235). Provider `other`, recipe
+`page-pdfs https://church-bulletin.org/235`; fetch:check on 2026-10-18 picked the 18
+October 2026 PDF ("current"). Image-only bulletin.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.
