@@ -1,5 +1,10 @@
 # Review of the other recurring changes in the October 18 weekly run
 
+Historical investigation, before the follow-up decision to prefer dated cancellations.
+The current prompt policy and reruns are recorded in [report.md](report.md);
+the Corpus recommendation below explains the earlier interpretation, not the
+updated cancellation preference.
+
 Read-only investigation of stored run `20261018T123547Z-gh39127931592` and approved seed decisions. No production data or source code changed. No model calls made.
 
 ## Scope

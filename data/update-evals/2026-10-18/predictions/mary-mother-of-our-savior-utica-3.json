@@ -1,6 +1,7 @@
 {
   "parish": "mary-mother-of-our-savior-utica",
   "trial": 3,
+  "required": true,
   "checks": {
     "entry_190_retained": true,
     "entry_195_retained": true,
@@ -14,13 +15,13 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 15575,
-        "cached_tokens": 4638,
+        "input_tokens": 15860,
+        "cached_tokens": 4923,
         "cache_write_tokens": 0,
-        "output_tokens": 1264,
-        "reasoning_tokens": 948
+        "output_tokens": 1042,
+        "reasoning_tokens": 869
       },
-      "latency_ms": 17528,
+      "latency_ms": 13632,
       "published_date": "2026-10-11",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
@@ -40,6 +41,14 @@
         },
         {
           "entry_id": 203,
+          "page_number": 1
+        },
+        {
+          "entry_id": 189,
+          "page_number": 3
+        },
+        {
+          "entry_id": 191,
           "page_number": 1
         },
         {
@@ -67,14 +76,6 @@
           "page_number": 1
         },
         {
-          "entry_id": 191,
-          "page_number": 1
-        },
-        {
-          "entry_id": 189,
-          "page_number": 3
-        },
-        {
           "entry_id": 192,
           "page_number": 6
         }
@@ -86,13 +87,13 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 16487,
-        "cached_tokens": 4638,
+        "input_tokens": 16772,
+        "cached_tokens": 4923,
         "cache_write_tokens": 0,
-        "output_tokens": 1266,
-        "reasoning_tokens": 1015
+        "output_tokens": 1249,
+        "reasoning_tokens": 1076
       },
-      "latency_ms": 16032,
+      "latency_ms": 16510,
       "published_date": "2026-10-18",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
@@ -152,6 +153,5 @@
         }
       ]
     }
-  ],
-  "required": true
+  ]
 }

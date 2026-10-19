@@ -1,6 +1,7 @@
 {
   "parish": "st-edward-the-confessor-clifton-park",
   "trial": 3,
+  "required": true,
   "checks": {
     "absent_{\"day_of_week\": \"Friday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 540}": true,
     "responses_valid": true
@@ -13,13 +14,13 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 14823,
-        "cached_tokens": 4638,
+        "input_tokens": 15108,
+        "cached_tokens": 4923,
         "cache_write_tokens": 0,
-        "output_tokens": 1537,
-        "reasoning_tokens": 1289
+        "output_tokens": 1250,
+        "reasoning_tokens": 954
       },
-      "latency_ms": 19626,
+      "latency_ms": 17135,
       "published_date": "2026-10-18",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
@@ -75,6 +76,5 @@
         }
       ]
     }
-  ],
-  "required": true
+  ]
 }

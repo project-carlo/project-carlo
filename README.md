@@ -672,6 +672,13 @@ service. Draft summaries are left out. Context is stored and hashed with the
 view, so editing a reviewed rationale changes the request/cache key without
 re-seeding or replacing the current schedule.
 
+When a cancellation's duration is unclear, update mode keeps the weekly slot
+and cancels only the dated occurrences the bulletin establishes. Repeated
+omissions or cancellations do not establish permanent discontinuation on their
+own. An explicit ongoing change can still replace or remove a weekly slot.
+History-based promotion of repeated cancellations is tracked in
+[issue #141](https://github.com/project-carlo/project-carlo/issues/141).
+
 The [October 18 replay report](data/update-evals/2026-10-18/report.md) records
 the source cases, real model reruns, remaining ambiguity, and the guarded data
 repair in migration 0008. Replays can be repeated with

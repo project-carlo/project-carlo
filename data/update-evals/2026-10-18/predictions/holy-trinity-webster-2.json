@@ -1,6 +1,7 @@
 {
   "parish": "holy-trinity-webster",
   "trial": 2,
+  "required": true,
   "checks": {
     "entry_155_retained": true,
     "present_{\"date\": \"2026-10-25\", \"event_type\": \"mass\", \"start_time\": 1110}": true,
@@ -14,13 +15,13 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 17423,
+        "input_tokens": 17708,
         "cached_tokens": 0,
-        "cache_write_tokens": 4638,
-        "output_tokens": 897,
-        "reasoning_tokens": 694
+        "cache_write_tokens": 4923,
+        "output_tokens": 1132,
+        "reasoning_tokens": 929
       },
-      "latency_ms": 13835,
+      "latency_ms": 16125,
       "published_date": "2026-10-11",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
@@ -35,10 +36,6 @@
           "page_number": 2
         },
         {
-          "entry_id": 152,
-          "page_number": 2
-        },
-        {
           "entry_id": 161,
           "page_number": 2
         },
@@ -47,15 +44,7 @@
           "page_number": 2
         },
         {
-          "entry_id": 148,
-          "page_number": 2
-        },
-        {
           "entry_id": 153,
-          "page_number": 2
-        },
-        {
-          "entry_id": 151,
           "page_number": 2
         },
         {
@@ -68,6 +57,18 @@
         },
         {
           "entry_id": 158,
+          "page_number": 2
+        },
+        {
+          "entry_id": 151,
+          "page_number": 2
+        },
+        {
+          "entry_id": 152,
+          "page_number": 2
+        },
+        {
+          "entry_id": 148,
           "page_number": 2
         },
         {
@@ -98,13 +99,13 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 17850,
-        "cached_tokens": 4638,
+        "input_tokens": 18135,
+        "cached_tokens": 4923,
         "cache_write_tokens": 0,
-        "output_tokens": 1847,
-        "reasoning_tokens": 1305
+        "output_tokens": 2281,
+        "reasoning_tokens": 1807
       },
-      "latency_ms": 22282,
+      "latency_ms": 27232,
       "published_date": "2026-10-18",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
@@ -127,7 +128,7 @@
             "note": "Youth Mass"
           },
           "page_number": 5,
-          "rationale": "The October 25 listing on page 5 says \u201c6:30 p.m. - Youth Mass - Church.\u201d"
+          "rationale": "The October 25 listing says \u201c6:30 p.m. - Youth Mass - Church.\u201d"
         }
       ],
       "seen": [
@@ -197,6 +198,5 @@
         }
       ]
     }
-  ],
-  "required": true
+  ]
 }

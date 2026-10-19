@@ -69,21 +69,26 @@
       "calls": [
         21
       ],
-      "absent": [
+      "retain_entry_ids": [
+        69,
+        77
+      ],
+      "present": [
         {
           "event_type": "mass",
-          "event_kind": "weekly",
-          "day_of_week": "Thursday",
-          "start_time": 1080
+          "event_kind": "specific_date",
+          "date": "2026-10-22",
+          "start_time": 1080,
+          "cancelled": 1
         },
         {
           "event_type": "confession",
-          "event_kind": "weekly",
-          "day_of_week": "Thursday",
-          "start_time": 1065
+          "event_kind": "specific_date",
+          "date": "2026-10-22",
+          "start_time": 1065,
+          "cancelled": 1
         }
-      ],
-      "required": false
+      ]
     }
   ]
 }

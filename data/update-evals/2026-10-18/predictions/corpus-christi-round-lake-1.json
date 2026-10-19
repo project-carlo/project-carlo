@@ -1,12 +1,15 @@
 {
   "parish": "corpus-christi-round-lake",
   "trial": 1,
+  "required": true,
   "checks": {
-    "absent_{\"day_of_week\": \"Thursday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 1080}": false,
-    "absent_{\"day_of_week\": \"Thursday\", \"event_kind\": \"weekly\", \"event_type\": \"confession\", \"start_time\": 1065}": false,
+    "entry_69_retained": true,
+    "entry_77_retained": true,
+    "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"mass\", \"start_time\": 1080}": true,
+    "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"confession\", \"start_time\": 1065}": true,
     "responses_valid": true
   },
-  "passed": false,
+  "passed": true,
   "calls": [
     {
       "original_call_id": 21,
@@ -14,13 +17,13 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 14804,
-        "cached_tokens": 4638,
+        "input_tokens": 15089,
+        "cached_tokens": 4923,
         "cache_write_tokens": 0,
-        "output_tokens": 4289,
-        "reasoning_tokens": 4024
+        "output_tokens": 3818,
+        "reasoning_tokens": 3185
       },
-      "latency_ms": 51528,
+      "latency_ms": 47298,
       "published_date": "2026-10-18",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
@@ -43,12 +46,40 @@
             "note": null
           },
           "page_number": 2,
-          "rationale": "The Mass intentions list says, \u201cThursday October 22nd \u2014 No Mass.\u201d"
+          "rationale": "The Mass intentions list says \u201cThursday October 22nd \u2014 No Mass\u201d (p. 2)."
+        },
+        {
+          "op": "add",
+          "entry_id": null,
+          "entry": {
+            "church_slug": "corpus-christi-round-lake",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-22",
+            "start_time": "5:45 PM",
+            "end_time": "6:00 PM",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "15 minutes before the 6:00 PM Mass"
+          },
+          "page_number": 2,
+          "rationale": "The bulletin says there is no Mass on Thursday, October 22, and this confession is scheduled 15 minutes before that Mass (p. 2)."
         }
       ],
       "seen": [
         {
+          "entry_id": 67,
+          "page_number": 1
+        },
+        {
           "entry_id": 73,
+          "page_number": 1
+        },
+        {
+          "entry_id": 70,
           "page_number": 1
         },
         {
@@ -56,7 +87,15 @@
           "page_number": 1
         },
         {
+          "entry_id": 66,
+          "page_number": 1
+        },
+        {
           "entry_id": 72,
+          "page_number": 1
+        },
+        {
+          "entry_id": 68,
           "page_number": 1
         },
         {
@@ -72,27 +111,10 @@
           "page_number": 1
         },
         {
-          "entry_id": 67,
-          "page_number": 1
-        },
-        {
-          "entry_id": 70,
-          "page_number": 1
-        },
-        {
-          "entry_id": 66,
-          "page_number": 1
-        },
-        {
-          "entry_id": 68,
-          "page_number": 1
-        },
-        {
           "entry_id": 71,
           "page_number": 5
         }
       ]
     }
-  ],
-  "required": false
+  ]
 }

@@ -15,11 +15,22 @@ replace the current schedule or prevent explicit new evidence from changing it.
 Prompt rules now require evidence addressing an occasional service before
 deleting it, honor intentional exclusions, and cross-check generic panels
 against explicit venue notices. A separate dated-calendar pass preserves new
-one-off events while retaining monthly services.
+one-off events while retaining monthly services. Ambiguous interruptions now keep
+the weekly slot and add cancellations only for dates established by the bulletin.
+Only explicit discontinuation or an explicit ongoing replacement removes a weekly
+service; repeated omissions and cancellations do not establish permanence.
+Explicitly dependent Confession/Adoration is cancelled for the affected date too,
+while independently scheduled services are preserved.
+
+Context selection is automatic for every eligible update-mode parish, not a
+handpicked parish exception. It includes settled exclusions, answered questions,
+and monthly/seasonal slots, with their rationale, sources and reviewer answers.
+On this run’s database, 45 of 50 seeded parishes have selected context. No new
+handwritten parish context or draft summaries were injected.
 
 ## Real model replays
 
-**All 12 targeted parish trials passed**, comprising **18 real API requests**.
+**All 15 targeted parish trials passed**, comprising **21 real API requests**.
 Each parish was replayed three times independently, starting from the historical
 schedule shown to its first call and applying new answers in bulletin order.
 The same stored PDFs, original fetch dates and production model/settings were
@@ -33,6 +44,7 @@ run database or remote data was changed.
 | Mary, Mother of Our Savior | 34, 39 | Keep First Saturday 8:15 AM Mass and 8:45 AM Confession through both bulletins | 3/3 |
 | St. Edward the Confessor | 81 | Do not restore Friday 9 AM Mass at the wrong church | 3/3 |
 | All Saints Corning | 19 | Honor reviewed Saturday 4 PM exclusion; still add Oct 22 8:30 AM Mass | 3/3 |
+| Corpus Christi Round Lake | 21 | Keep Thursday Mass and dependent Confession; cancel both Oct 22 occurrences | 3/3 |
 
 None of the targeted erroneous proposals occurred, including at intermediate
 steps of the two-bulletin trials. These repeated observations support the fix;
@@ -43,22 +55,32 @@ Youth Mass in one of three trials. The final version adds reviewed context and
 the separate dated-calendar pass; the Youth Mass was present in all final trials.
 The earlier outcomes are retained in [prompt-only-summary.json](prompt-only-summary.json).
 
-### Exploratory Corpus Christi control: a remaining ambiguity
+### Cancellation preference and earlier trials
 
-Three additional real calls replayed Corpus Christi #21. Two removed the Thursday
-weekly Mass/Confession, matching the original run. One kept the weekly entries
-and instead cancelled October 22 Mass; it did not cancel the dependent Confession.
-Thus the strict exploratory deletion expectation passed **2/3**, and
-`all_expectations_passed` is false in the summary. Corpus is explicitly marked
-non-gating in the spec because the user's targeted regressions concern the other
-four parishes; this variation is retained for the next policy decision.
+The earlier prompt produced two recurring removals and one dated Mass cancellation
+in three Corpus trials; the cancellation-only answer missed dependent Confession.
+Those original outcomes remain in [the archived summary](before-cancellation-preference/summary.json)
+and the three Corpus predictions beside it. The delegated investigation supported
+the removals as one possible interpretation of the changed standing panel. The
+follow-up policy decision is more conservative: preserve the weekly service until
+there is explicit ongoing evidence, and accumulate dated cancellations instead.
 
-The delegated investigation found the Corpus deletions defensible: the standing
-weekday panel actually changed in consecutive issues. This differs from the
-First Saturday cases, whose routine panels already omitted the monthly services
-when those services were established. The current repair leaves Corpus unchanged.
-The redundant cancellation and treatment of dependent Confession when a Mass
-is cancelled remain follow-up work.
+An initial cancellation-preference run passed all three Corpus cases but restored
+Corning’s excluded Mass in one trial. The prompt was clarified: an excluded entry
+is a rejected candidate, not a venue fact; a generic venue statement plus repeated
+intentions cannot establish a reviewed service’s public venue. Reversal requires
+service-specific clarification and a rationale identifying the new evidence.
+Those intermediate outcomes remain in [cancellation-preference-initial-summary.json](cancellation-preference-initial-summary.json).
+The current predictions and summary were rerun with that clarification; all five
+parishes passed three independent trials each.
+
+Promotion of repeated cancellations is future work, tracked in
+[GitHub issue #141](https://github.com/project-carlo/project-carlo/issues/141).
+The issue covers thresholds, independent evidence, duplicate/corrected bulletins,
+known bounded closures, resumption, qualifiers, dependencies and auditable retirement.
+No promotion code is implemented in this change. The new prompt affects subsequent
+model calls; the existing five-entry data repair below remains unchanged and does
+not retrospectively restore Corpus’s deleted entries.
 
 ## Correcting the published run's errors
 
@@ -91,8 +113,8 @@ publish directly from a local machine.
 ## Delegated investigation
 
 [The subagent's full report](other-weekly-changes-review.md) identifies Corning
-as the same lost-reviewed-exclusion issue and recommends retaining Corpus's
-changes. It gives source-backed context wording and distinguishes facts from
+as the same lost-reviewed-exclusion issue and documents why Corpus's
+removals were defensible before the cancellation preference was chosen. It gives source-backed context wording and distinguishes facts from
 hypotheses. Existing resolved seed decisions provide immediate context; a
 separately maintained parish context field remains a useful future option for
 knowledge that evolves after seeding. No new parish database field is required
@@ -113,6 +135,6 @@ The command makes paid model calls and writes only local replay results.
 [Source call metadata](source-calls.json) records original PDF hashes and
 call dates. [Predictions](predictions/) retain each answer's changes, sightings,
 usage and request-context hash. [Summary](summary.json) keeps every targeted and
-exploratory expectation, including the Corpus discrepancy.
+expectation. Earlier Corpus ambiguity is preserved in the archived results.
 
 Validation: `uv run ruff check .`; `uv run pytest -q` — **1185 passed**.

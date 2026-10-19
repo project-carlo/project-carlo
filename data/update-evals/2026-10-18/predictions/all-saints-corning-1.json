@@ -1,6 +1,7 @@
 {
   "parish": "all-saints-corning",
   "trial": 1,
+  "required": true,
   "checks": {
     "absent_{\"day_of_week\": \"Saturday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 960}": true,
     "present_{\"date\": \"2026-10-22\", \"event_type\": \"mass\", \"start_time\": 510}": true,
@@ -14,14 +15,14 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 15894,
-        "cached_tokens": 4638,
+        "input_tokens": 16179,
+        "cached_tokens": 4923,
         "cache_write_tokens": 0,
-        "output_tokens": 2977,
-        "reasoning_tokens": 2779
+        "output_tokens": 2615,
+        "reasoning_tokens": 2301
       },
-      "latency_ms": 32987,
-      "published_date": "2026-10-18",
+      "latency_ms": 29111,
+      "published_date": "2026-10-17",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
       "changes": [
@@ -40,10 +41,10 @@
             "weeks_of_month": [],
             "exclude_weeks": false,
             "season": null,
-            "note": null
+            "note": "In the gym"
           },
           "page_number": 2,
-          "rationale": "The Mass Schedule and Intentions lists a Mass on Thursday, October 22 at 8:30am."
+          "rationale": "The Mass schedule lists Thursday, October 22 at 8:30 AM, and page 1 says daily Mass this week will be Thursday morning rather than evening."
         }
       ],
       "seen": [
@@ -65,6 +66,5 @@
         }
       ]
     }
-  ],
-  "required": true
+  ]
 }

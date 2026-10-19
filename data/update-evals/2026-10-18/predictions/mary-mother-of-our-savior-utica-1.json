@@ -1,6 +1,7 @@
 {
   "parish": "mary-mother-of-our-savior-utica",
   "trial": 1,
+  "required": true,
   "checks": {
     "entry_190_retained": true,
     "entry_195_retained": true,
@@ -14,13 +15,13 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 15575,
-        "cached_tokens": 4638,
+        "input_tokens": 15860,
+        "cached_tokens": 4923,
         "cache_write_tokens": 0,
-        "output_tokens": 1271,
-        "reasoning_tokens": 1020
+        "output_tokens": 1423,
+        "reasoning_tokens": 1159
       },
-      "latency_ms": 17473,
+      "latency_ms": 16772,
       "published_date": "2026-10-11",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
@@ -86,13 +87,13 @@
       "served_model": "gpt-6-luna",
       "service_tier": "default",
       "usage": {
-        "input_tokens": 16487,
-        "cached_tokens": 4638,
+        "input_tokens": 16772,
+        "cached_tokens": 4923,
         "cache_write_tokens": 0,
-        "output_tokens": 1316,
-        "reasoning_tokens": 1000
+        "output_tokens": 851,
+        "reasoning_tokens": 678
       },
-      "latency_ms": 16265,
+      "latency_ms": 11473,
       "published_date": "2026-10-18",
       "wrong_bulletin": false,
       "church_list_needs_review": false,
@@ -152,6 +153,5 @@
         }
       ]
     }
-  ],
-  "required": true
+  ]
 }
