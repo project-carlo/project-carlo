@@ -1,0 +1,177 @@
+{
+  "policy_hash": "43296a6815c65bf2603e813a5ed4af5927871eba4c84163e21826d3e080c52c8",
+  "version": "8dc61acbe91cc31c745d6c5053c1c3aec82d82ad7c0ea0b57271a0325bd674e6",
+  "service_tier": "default",
+  "results": [
+    {
+      "parish": "holy-trinity-webster",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "entry_155_retained": true,
+        "present_{\"date\": \"2026-10-25\", \"event_type\": \"mass\", \"start_time\": 1110}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "holy-trinity-webster",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "entry_155_retained": true,
+        "present_{\"date\": \"2026-10-25\", \"event_type\": \"mass\", \"start_time\": 1110}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "holy-trinity-webster",
+      "trial": 3,
+      "required": true,
+      "checks": {
+        "entry_155_retained": true,
+        "present_{\"date\": \"2026-10-25\", \"event_type\": \"mass\", \"start_time\": 1110}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "mary-mother-of-our-savior-utica",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "entry_190_retained": true,
+        "entry_195_retained": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "mary-mother-of-our-savior-utica",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "entry_190_retained": true,
+        "entry_195_retained": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "mary-mother-of-our-savior-utica",
+      "trial": 3,
+      "required": true,
+      "checks": {
+        "entry_190_retained": true,
+        "entry_195_retained": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-edward-the-confessor-clifton-park",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "absent_{\"day_of_week\": \"Friday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 540}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-edward-the-confessor-clifton-park",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "absent_{\"day_of_week\": \"Friday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 540}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-edward-the-confessor-clifton-park",
+      "trial": 3,
+      "required": true,
+      "checks": {
+        "absent_{\"day_of_week\": \"Friday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 540}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "all-saints-corning",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "absent_{\"day_of_week\": \"Saturday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 960}": false,
+        "present_{\"date\": \"2026-10-22\", \"event_type\": \"mass\", \"start_time\": 510}": true,
+        "responses_valid": true
+      },
+      "passed": false
+    },
+    {
+      "parish": "all-saints-corning",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "absent_{\"day_of_week\": \"Saturday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 960}": true,
+        "present_{\"date\": \"2026-10-22\", \"event_type\": \"mass\", \"start_time\": 510}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "all-saints-corning",
+      "trial": 3,
+      "required": true,
+      "checks": {
+        "absent_{\"day_of_week\": \"Saturday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 960}": true,
+        "present_{\"date\": \"2026-10-22\", \"event_type\": \"mass\", \"start_time\": 510}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "corpus-christi-round-lake",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "entry_69_retained": true,
+        "entry_77_retained": true,
+        "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"mass\", \"start_time\": 1080}": true,
+        "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"confession\", \"start_time\": 1065}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "corpus-christi-round-lake",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "entry_69_retained": true,
+        "entry_77_retained": true,
+        "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"mass\", \"start_time\": 1080}": true,
+        "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"confession\", \"start_time\": 1065}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "corpus-christi-round-lake",
+      "trial": 3,
+      "required": true,
+      "checks": {
+        "entry_69_retained": true,
+        "entry_77_retained": true,
+        "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"mass\", \"start_time\": 1080}": true,
+        "present_{\"cancelled\": 1, \"date\": \"2026-10-22\", \"event_kind\": \"specific_date\", \"event_type\": \"confession\", \"start_time\": 1065}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "all_expectations_passed": false
+}

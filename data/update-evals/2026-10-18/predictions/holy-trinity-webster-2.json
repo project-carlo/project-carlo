@@ -1,0 +1,202 @@
+{
+  "parish": "holy-trinity-webster",
+  "trial": 2,
+  "required": true,
+  "checks": {
+    "entry_155_retained": true,
+    "present_{\"date\": \"2026-10-25\", \"event_type\": \"mass\", \"start_time\": 1110}": true,
+    "responses_valid": true
+  },
+  "passed": true,
+  "calls": [
+    {
+      "original_call_id": 20,
+      "context_sha256": "fb9c3229a8f10244e0d9486db135703a882827beb69f2cb7a3b6e371b1090ec0",
+      "served_model": "gpt-6-luna",
+      "service_tier": "default",
+      "usage": {
+        "input_tokens": 17708,
+        "cached_tokens": 0,
+        "cache_write_tokens": 4923,
+        "output_tokens": 1132,
+        "reasoning_tokens": 929
+      },
+      "latency_ms": 16125,
+      "published_date": "2026-10-11",
+      "wrong_bulletin": false,
+      "church_list_needs_review": false,
+      "changes": [],
+      "seen": [
+        {
+          "entry_id": 154,
+          "page_number": 2
+        },
+        {
+          "entry_id": 160,
+          "page_number": 2
+        },
+        {
+          "entry_id": 161,
+          "page_number": 2
+        },
+        {
+          "entry_id": 159,
+          "page_number": 2
+        },
+        {
+          "entry_id": 153,
+          "page_number": 2
+        },
+        {
+          "entry_id": 156,
+          "page_number": 2
+        },
+        {
+          "entry_id": 157,
+          "page_number": 2
+        },
+        {
+          "entry_id": 158,
+          "page_number": 2
+        },
+        {
+          "entry_id": 151,
+          "page_number": 2
+        },
+        {
+          "entry_id": 152,
+          "page_number": 2
+        },
+        {
+          "entry_id": 148,
+          "page_number": 2
+        },
+        {
+          "entry_id": 143,
+          "page_number": 2
+        },
+        {
+          "entry_id": 144,
+          "page_number": 2
+        },
+        {
+          "entry_id": 145,
+          "page_number": 2
+        },
+        {
+          "entry_id": 146,
+          "page_number": 2
+        },
+        {
+          "entry_id": 147,
+          "page_number": 2
+        }
+      ]
+    },
+    {
+      "original_call_id": 29,
+      "context_sha256": "05cae9cc572dfefe8e4174b9a57f951ba990fd4488399c337d8e1bd99e500b65",
+      "served_model": "gpt-6-luna",
+      "service_tier": "default",
+      "usage": {
+        "input_tokens": 18135,
+        "cached_tokens": 4923,
+        "cache_write_tokens": 0,
+        "output_tokens": 2281,
+        "reasoning_tokens": 1807
+      },
+      "latency_ms": 27232,
+      "published_date": "2026-10-18",
+      "wrong_bulletin": false,
+      "church_list_needs_review": false,
+      "changes": [
+        {
+          "op": "add",
+          "entry_id": null,
+          "entry": {
+            "church_slug": "holy-trinity",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-25",
+            "start_time": "6:30 PM",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Youth Mass"
+          },
+          "page_number": 5,
+          "rationale": "The October 25 listing says \u201c6:30 p.m. - Youth Mass - Church.\u201d"
+        }
+      ],
+      "seen": [
+        {
+          "entry_id": 154,
+          "page_number": 2
+        },
+        {
+          "entry_id": 160,
+          "page_number": 2
+        },
+        {
+          "entry_id": 152,
+          "page_number": 2
+        },
+        {
+          "entry_id": 161,
+          "page_number": 2
+        },
+        {
+          "entry_id": 159,
+          "page_number": 2
+        },
+        {
+          "entry_id": 148,
+          "page_number": 2
+        },
+        {
+          "entry_id": 153,
+          "page_number": 2
+        },
+        {
+          "entry_id": 151,
+          "page_number": 2
+        },
+        {
+          "entry_id": 156,
+          "page_number": 2
+        },
+        {
+          "entry_id": 157,
+          "page_number": 2
+        },
+        {
+          "entry_id": 158,
+          "page_number": 2
+        },
+        {
+          "entry_id": 143,
+          "page_number": 2
+        },
+        {
+          "entry_id": 144,
+          "page_number": 2
+        },
+        {
+          "entry_id": 145,
+          "page_number": 2
+        },
+        {
+          "entry_id": 146,
+          "page_number": 2
+        },
+        {
+          "entry_id": 147,
+          "page_number": 2
+        }
+      ]
+    }
+  ]
+}
