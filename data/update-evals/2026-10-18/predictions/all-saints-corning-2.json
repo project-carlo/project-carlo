@@ -1,0 +1,70 @@
+{
+  "parish": "all-saints-corning",
+  "trial": 2,
+  "checks": {
+    "absent_{\"day_of_week\": \"Saturday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 960}": true,
+    "present_{\"date\": \"2026-10-22\", \"event_type\": \"mass\", \"start_time\": 510}": true,
+    "responses_valid": true
+  },
+  "passed": true,
+  "calls": [
+    {
+      "original_call_id": 19,
+      "context_sha256": "e753aac15170511a736e3612bcfde8a65eb5d9ca4433baa502e37794e6b19b7e",
+      "served_model": "gpt-6-luna",
+      "service_tier": "default",
+      "usage": {
+        "input_tokens": 15894,
+        "cached_tokens": 4638,
+        "cache_write_tokens": 0,
+        "output_tokens": 1472,
+        "reasoning_tokens": 1258
+      },
+      "latency_ms": 18788,
+      "published_date": "2026-10-17",
+      "wrong_bulletin": false,
+      "church_list_needs_review": false,
+      "changes": [
+        {
+          "op": "add",
+          "entry_id": null,
+          "entry": {
+            "church_slug": "st-marys-corning",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-22",
+            "start_time": "8:30 AM",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the gym"
+          },
+          "page_number": 2,
+          "rationale": "The Mass Schedule and Intentions lists a Mass on Thursday, October 22 at 8:30 AM, and page 1 says all Masses are in the Gym."
+        }
+      ],
+      "seen": [
+        {
+          "entry_id": 14,
+          "page_number": 1
+        },
+        {
+          "entry_id": 16,
+          "page_number": 1
+        },
+        {
+          "entry_id": 17,
+          "page_number": 1
+        },
+        {
+          "entry_id": 18,
+          "page_number": 1
+        }
+      ]
+    }
+  ],
+  "required": true
+}

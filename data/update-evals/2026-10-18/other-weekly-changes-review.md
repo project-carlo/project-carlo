@@ -1,0 +1,57 @@
+# Review of the other recurring changes in the October 18 weekly run
+
+Read-only investigation of stored run `20261018T123547Z-gh39127931592` and approved seed decisions. No production data or source code changed. No model calls made.
+
+## Scope
+
+I checked every applied proposal in the stored run proposals against its added or deleted schedule entry in the downloaded run database (read-only SQLite). The complete recurring-change set contains seven rows: All Saints Saturday Mass add; Corpus Christi Thursday Mass and Confession deletes; Holy Trinity Webster First Saturday Mass delete; Mary Mother First Saturday Mass and Confession deletes; St Edward Friday Mass add. Excluding the four rows being fixed by the parent agent, the remaining three rows concern **All Saints Corning** and **Corpus Christi Round Lake**.
+
+## All Saints Corning: another reviewed exclusion was reversed
+
+**High confidence: the updater reversed an explicit approved decision without materially new evidence. Whether the actual 4 PM Mass is public and at St Mary's remains unresolved.**
+
+Call 19 added weekly Saturday 4 PM Mass at `st-marys-corning`, note “In the gym,” using October 17 and October 24 intentions on p2 and the generic p1 sentence “All Masses and Confessions are in the Gym.” However, `data/seeds/all-saints-corning.json`, slot `s5`, already reviewed exactly this conflict. The reviewer explicitly dropped this slot on October 11 at 12:52:12 UTC. Its rationale says that the intentions and attendance count recur, but the parish's WEEKEND MASS TIMES header and website list only Saturday 5 PM; the 4 PM location/public accessibility was not established. The seed's mention of a possible nursing home is a hypothesis, not a verified venue.
+
+The October 18 bulletin introduces no meaningful clarification: p1 still lists only Saturday 5 PM and Sunday 8/10:30 AM; p2 repeats Saturday 4 PM intentions and an attendance count (55). Earlier Sep 27/Oct 4 bulletins already had those same elements, including the gym sentence. Repetition of this reviewed conflict does not resolve it. The generic prompt currently treats two weeks of intentions as recurring; that rule explains recurrence but does not establish a venue/public admission or supersede a reviewed exclusion.
+
+**Schedule recommendation:** remove the run's newly added weekly Saturday 4 PM entry (entry 487) to restore the approved decision, while retaining Saturday 5 PM, Sunday 8/10:30 AM and Saturday Confession 2–3:30 PM, all with the gym note. Retain the supported October 22 8:30 AM dated Mass. This is restoration of an existing reviewed policy choice, not a claim that the 4 PM Mass does not exist. Public venue could be resolved later through parish confirmation or an explicit new bulletin announcement.
+
+**Proposed parish context, grounded in reviewed evidence:**
+
+> Reviewed October 11, 2026: Saturday 4:00 PM Mass is intentionally excluded. Repeated Mass intentions and attendance counts list 4 PM, but the bulletin's WEEKEND MASS TIMES header lists only the 5 PM Saturday vigil, and the review found the same omission on the parish website. The 4 PM venue and public accessibility are unresolved; no off-site venue has been confirmed. The generic statement that all Masses are in the gym was already present when this exclusion was reviewed. Do not restore 4 PM based only on repeated intentions, attendance counts, or that generic statement. Reconsider only if new evidence explicitly resolves the public venue or the reviewer changes the decision. Weekday Mass and weekday Confession times vary by week; add only the announced dated occurrences rather than inferring standing weekday slots.
+
+The last sentence is independently supported by the earlier bulletin's p6 “Mass Book Is Still Open!” notice: weekday Mass is not guaranteed to be Wednesday and requests may be rescheduled; p2 says weekday Confession times may change week to week. The October 18 run correctly added its Thursday morning Mass as dated.
+
+Sources: [approved seed](../../seeds/all-saints-corning.json), [October 18 PDF pp1–2](https://parishesonline.com/publication-page/all-saints-parish?selectedPublication=https://container.parishesonline.com/bulletins/06/0144/20261018B.pdf), [October 18 extracted text](https://parishesonline.com/publication-page/all-saints-parish?selectedPublication=https://container.parishesonline.com/bulletins/06/0144/20261018B.pdf), [October 4 extracted text pp1–2/6](https://parishesonline.com/publication-page/all-saints-parish?selectedPublication=https://container.parishesonline.com/bulletins/06/0144/20261004B.pdf), [September 27 extracted text pp1–2/6](https://parishesonline.com/publication-page/all-saints-parish?selectedPublication=https://container.parishesonline.com/bulletins/06/0144/20260927B.pdf). Original baseline PDFs remain in the local `data/bulletins/all-saints-corning/` cache.
+
+## Corpus Christi Round Lake: deletion is defensible; cancellation duplicates it
+
+**High confidence that the published standing schedule changed; moderate confidence about the intended duration of the removal. This does not look like the monthly-service deletion failure.**
+
+- September 27 and October 4 p1 standing “Weekday Masses” explicitly list Monday/Tuesday/Friday 9 AM and Thursday 6 PM. Reconciliation is “15 minutes before weekday Masses.” October 4 p2 lists the actual October 8 Thursday 6 PM Mass. The approved seed appropriately included Thursday Mass and its 5:45–6 PM Confession.
+- October 11 p1 removes the Thursday line while preserving the other three weekday lines. P2 says “Thursday October 15th — No Mass”; p6 calendar likewise has no Thursday Mass.
+- October 18 p1 again presents Monday/Tuesday/Friday only. P2 says “Thursday October 22nd — No Mass”; p6 calendar again omits it. Call 21 consequently removes the Thursday Mass and its dependent Confession.
+- This is a visible change in an otherwise matching standing weekly panel, sustained across two issues, corroborated by intentions and calendars. It is stronger than omission of a monthly service from a generic panel that never claimed to enumerate it. Keeping all omission-based weekly changes forbidden would miss plausible real changes like this one.
+- The October 18 p5 prayer mentions the pastor being on retreat without dates. That is a reason to avoid asserting that the Thursday removal is permanent. No explicit announcement of either permanent discontinuation or a return date appears in the inspected substantive pages. The present prompt's weekly replacement policy can represent the current standing schedule and restore Thursday if a later bulletin brings it back.
+
+**Schedule recommendation:** retain the two Thursday deletions unless additional evidence establishes that the standing schedule was temporarily edited for one specific week. Do not add special parish context asserting that Thursday is permanently discontinued; the evidence does not prove permanence. A dated October 22 6 PM cancellation has no matching weekly slot after deletion and adds no behavior. A generic prompt refinement can ask the model to choose between a recurring schedule removal and dated exceptions, and avoid a same-date cancellation when the corresponding recurring slot is removed in the same response.
+
+If the desired policy is more conservative, the alternative is to preserve Thursday and add dated Mass/Confession cancellations, while awaiting an explicit discontinuation or later corroboration. That is a product policy choice and could leave a stale weekly service in place beyond the visible week. Existing source evidence favors recognizing a changed standing schedule, with duration uncertainty stated.
+
+**Optional factual context only if useful:**
+
+> The September 27 and October 4, 2026 bulletins listed Thursday 6 PM Mass and Confession 15 minutes before it. The October 11 and October 18 standing Weekday Masses panels removed Thursday while retaining Monday, Tuesday and Friday 9 AM, and both weeks' intentions said No Mass on Thursday. The duration of this change is not stated. Confession is tied to weekday Masses, so its availability must follow the Mass schedule.
+
+This context is a dated provenance note rather than a needed exception. Generic prompting plus prior/current panel comparison should suffice. It should not become an instruction to ignore a later Thursday return.
+
+Sources: [October 4 PDF pp1–2/6](https://parishesonline.com/publication-page/corpus-christi-church-12151?selectedPublication=https://container.parishesonline.com/bulletins/04/0815/20261004B.pdf), [October 11 PDF pp1–2/6](https://parishesonline.com/publication-page/corpus-christi-church-12151?selectedPublication=https://container.parishesonline.com/bulletins/04/0815/20261011B.pdf), [October 18 PDF pp1–2/5–6](https://parishesonline.com/publication-page/corpus-christi-church-12151?selectedPublication=https://container.parishesonline.com/bulletins/04/0815/20261018B.pdf). The existing review's Corpus cancellation observation is confirmed.
+
+## Prompting and context design
+
+1. **Generic prompt:** preserve reviewed exclusions until new evidence addresses their recorded reason; repeated evidence known at review is not new evidence. Separately protect monthly/seasonal entries from routine-panel omissions. Preserve permission for a genuinely changed complete weekly panel to update unqualified weekly slots. Explain recurring deletion versus dated cancellation and avoid producing both redundantly for one slot/week.
+2. **Durable parish context:** suitable for unresolved public venue, confusing recurring omissions, and variable weekday schedules. Store review date, known facts, the actual reviewed decision, uncertainty, and what would justify revisiting it. Keep it factual and allow explicit new evidence to supersede it.
+3. **Approved seed context:** automatically including reviewed excluded slots with rationale is an appropriate immediate safety net; St Edward and All Saints both need it. Include structured decision/entry/review date/rationale (plus question/selected answer when useful), not the whole seed JSON. Included monthly entries' rationales can establish why their absence from later routine panels is expected. The schedule itself already provides ordinary included entries.
+4. **Do not indiscriminately inject seed summaries or all historical prose as permanent instructions.** All Saints' top-level summary still says “Open question” despite the later slot-level dropped decision. Draft rationales can mix verified facts with possibilities, as the possible nursing-home venue demonstrates. Use resolved slot-level decisions with provenance; preserve hypotheses as uncertain and give later explicit evidence precedence.
+5. A curated standalone parish context field is the stronger long-term home because it can evolve after seed import and be maintained alongside human corrections. It should participate in request/cache identity so editing it actually reruns the model. A field by itself will not help unless the update prompt explains how to honor reviewed decisions and when newer evidence can replace them.
+
+No additional wrongly retained recurring slots were established in this focused review. Corpus Christi's first-Friday 9:45 AM Holy Hour was correctly retained despite being absent from routine panels, and its approved seed decision explains why. All Saints' lack of a standing weekday Mass is intentional and the dated October 22 addition respects that distinction.

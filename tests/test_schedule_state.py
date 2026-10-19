@@ -25,7 +25,7 @@ from pdf_extract.classifiers.schedule_update import (
     RawReply,
     parse_response,
 )
-from pdf_extract.db import create_db, ensure_db
+from pdf_extract.db import create_db, ensure_db, migrate
 from pdf_extract.extract_frontend_db import extract, read_snapshot
 from pdf_extract.labeling.bulletins import load_gemini_source
 from pdf_extract.report import build_report, diff_databases, render_markdown
@@ -80,7 +80,9 @@ from pdf_extract.schedule.update import (
     MAX_FAILED_CALLS,
     call_record_key,
     process_update_mode,
+    request_key,
 )
+from pdf_extract.seeding.files import revision_note
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
@@ -420,6 +422,133 @@ def test_the_view_is_canonical_and_leaves_out_past_dated_entries(
     assert entries[3]["cancelled"] is True
     assert text == json.dumps(view, sort_keys=True, separators=(",", ":"))
     assert render_view(conn, _parish_id(conn), date(2026, 10, 10)) == (text, view_hash)
+
+
+def _reviewed_seed(conn, *, status="approved"):
+    seed = {
+        "parish_slug": "test-parish", "status": status, "reviewer": "Reviewer",
+        "as_of": SEED_AS_OF, "summary": "Stale draft summary: Friday is an open question.",
+        "slots": [
+            {"id": "s1", "status": "settled", "decision": "include", "entry": SUN_9},
+            {"id": "s2", "status": "settled", "decision": "include",
+             "entry": CONFESSION, "rationale": "Monthly service omitted by the routine panel."},
+            {"id": "s3", "status": "settled", "decision": "exclude",
+             "entry": {**SUN_9, "day_of_week": "Friday"},
+             "rationale": "Relocated to another church until January.",
+             "answer": {"choice": 1, "by": "Reviewer", "at": SEED_AS_OF}},
+        ],
+    }
+    Path("data/seeds").mkdir(parents=True)
+    Path("data/seeds/test-parish.json").write_text(json.dumps(seed))
+    with conn:
+        write_seed(conn, _parish_id(conn),
+                   [parse_entry(e, _churches(conn)) for e in (SUN_9, CONFESSION)],
+                   as_of=SEED_AS_OF, actor="Reviewer", note=revision_note(seed))
+    return seed
+
+
+def test_view_carries_resolved_exclusions_and_monthly_evidence_but_not_draft_summary(conn):
+    _reviewed_seed(conn)
+    text, _ = render_view(conn, _parish_id(conn), date(2026, 10, 18))
+    context = json.loads(text)["reviewed_seed_context"]
+    assert [d["id"] for d in context["decisions"]] == ["s2", "s3"]
+    assert context["decisions"][1]["decision"] == "exclude"
+    assert context["decisions"][1]["answer"]["choice"] == 1
+    assert "Stale draft summary" not in text
+    assert len(json.loads(text)["churches"][1]["entries"]) == 2
+
+
+def test_review_context_changes_invalidate_cached_questions_without_reseeding(conn):
+    seed = _reviewed_seed(conn)
+    today = date(2026, 10, 18)
+    entries = live_entries(conn, _parish_id(conn))
+    _, before = render_view(conn, _parish_id(conn), today)
+    seed["slots"][2]["rationale"] = "Now relocated until February."
+    Path("data/seeds/test-parish.json").write_text(json.dumps(seed))
+    _, after = render_view(conn, _parish_id(conn), today)
+    assert before != after
+    assert request_key("version", "pdf", before, today, "churches") != request_key(
+        "version", "pdf", after, today, "churches",
+    )
+    assert live_entries(conn, _parish_id(conn)) == entries
+
+
+@pytest.mark.parametrize("case", ["draft", "unimported", "newer_manual_seed"])
+def test_view_does_not_use_context_from_an_unapproved_or_superseded_seed(conn, case):
+    seed = _reviewed_seed(conn)
+    if case == "draft":
+        seed["status"] = "ready"
+    elif case == "unimported":
+        seed["slots"][0]["entry"] = SUN_11
+    else:
+        _seed(conn, [SUN_11], as_of="2026-10-17T00:00:00Z")
+    Path("data/seeds/test-parish.json").write_text(json.dumps(seed))
+    text, _ = render_view(conn, _parish_id(conn), date(2026, 10, 18))
+    assert "reviewed_seed_context" not in json.loads(text)
+
+
+@pytest.mark.parametrize("slug,church,event_type,day,time,weeks,op", [
+    ("all-saints-corning", "st-marys-corning", "mass", "Saturday", "4:00 PM", [], "add"),
+    ("st-edward-the-confessor-clifton-park", "st-edward-the-confessor-clifton-park",
+     "mass", "Friday", "9:00 AM", [], "add"),
+    ("holy-trinity-webster", "holy-trinity", "mass", "Saturday", "6:30 PM", ["first"], "delete"),
+    ("mary-mother-of-our-savior-utica", "our-lady-of-lourdes-utica", "mass", "Saturday",
+     "8:15 AM", ["first"], "delete"),
+    ("mary-mother-of-our-savior-utica", "our-lady-of-lourdes-utica", "confession", "Saturday",
+     "8:45 AM", ["first"], "delete"),
+])
+@pytest.mark.parametrize("later_review", [False, True])
+def test_weekly_repair_appends_inverse_changes_but_preserves_later_reviews(
+    conn, slug, church, event_type, day, time, weeks, op, later_review,
+):
+    parish_id = _parish_id(conn)
+    conn.execute("UPDATE parish SET slug=? WHERE id=?", (slug, parish_id))
+    conn.execute("UPDATE church SET slug=? WHERE slug='test-church'", (church,))
+    baseline = {**SUN_9, "church_slug": church}
+    target = {**baseline, "event_type": event_type, "day_of_week": day,
+              "start_time": time, "weeks_of_month": weeks}
+    _seed(conn, [baseline] + ([target] if op == "delete" else []), slug=slug)
+    target_id = next(iter(live_entries(conn, parish_id))) if op == "add" else next(
+        i for i, e in live_entries(conn, parish_id).items() if e.day_of_week == day
+    )
+    _bulletin(conn, "new", "2026-10-18T10:00:00Z", slug=slug)
+    run_id = "20261018T123547Z-gh39127931592"
+    start_run(conn, run_id, git_sha="test", trigger="test")
+    changes = [{"op": op, "entry": target} if op == "add" else
+               {"op": "delete", "entry_id": target_id}]
+    updater = FakeUpdater(_reply(published_date="2026-10-18", changes=changes))
+    result = process_update_mode(conn, slugs=[slug], updater=updater, run_id=run_id)
+    assert result["update_changes_applied"] == 1
+    target_id = intern_entry(conn, parse_entry(target, _churches(conn, slug)))
+    if later_review:
+        # Reaffirm the same final state as the bad proposal with new human edits.
+        # Content equality alone must not let the migration undo that later decision.
+        if op == "add":
+            edit_entry(conn, parish_id, "delete", target_entry_id=target_id, actor="Reviewer")
+            edit_entry(conn, parish_id, "add", entry=target, actor="Reviewer")
+        else:
+            edit_entry(conn, parish_id, "add", entry=target, actor="Reviewer")
+            edit_entry(conn, parish_id, "delete", target_entry_id=target_id, actor="Reviewer")
+    # An unrelated change after the faulty call must survive the repair too.
+    edit_entry(conn, parish_id, "add", entry={**baseline, "start_time": "11:00 AM"},
+               actor="Reviewer")
+    old_state = set(live_entries(conn, parish_id))
+    old_proposals = _proposals(conn)
+    conn.execute("PRAGMA user_version = 7")
+    conn.commit()
+    assert migrate(conn) == 1
+    state = set(live_entries(conn, parish_id))
+    if later_review:
+        assert state == old_state
+    else:
+        assert state == (old_state - {target_id} if op == "add" else old_state | {target_id})
+        revision = conn.execute(
+            "SELECT * FROM schedule_revision WHERE actor='weekly-run-review'",
+        ).fetchone()
+        assert revision["source_kind"] == "human"
+    assert _proposals(conn) == old_proposals
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+    assert migrate(conn) == 0
 
 
 # ── Policy ──────────────────────────────────────────────────────────────────

@@ -137,7 +137,8 @@ Answer with the changes the bulletin calls for, each with the bulletin page it i
 
 Rules:
 
-- **Silence is not a change.** An entry the bulletin doesn't mention stays. Propose a delete only when the bulletin says the entry is discontinued, or prints what is clearly the full schedule for that church and event type without it.
+- **Silence is not a change.** An entry the bulletin doesn't mention stays. Propose a delete only when the bulletin says the entry is discontinued, or prints what is clearly the full schedule for that church and event type without it. A routine weekend/weekday schedule panel is not necessarily complete: it may omit monthly, seasonal, language-specific or other occasional services. Never delete such an entry merely because that panel or this week's intentions omit it, even when the panel is headed "Full Schedule". Require an explicit discontinuation or replacement that actually addresses that service or its qualifying pattern. A calendar that does not cover the entry's next occurrence is no evidence that it stopped.
+- **Reviewed decisions.** The view may include `reviewed_seed_context`: historical slot-level decisions, evidence and reviewer answers. Its `decision` and `answer` describe the resolved review; the draft rationale may discuss alternatives the reviewer rejected or uncertain explanations. Honor an exclusion until the bulletin supplies new evidence that resolves its recorded reason. Repetition of intentions, attendance counts or generic panels already considered in that review is not new evidence. Do not invent a venue from a speculative explanation. This context is not another current schedule: do not restore old included entries just because they appear there, and let explicit later changes supersede historical evidence.
 - **Weekly changes wait until they are in effect.** Propose a change to a weekly entry only when it is already in effect in the bulletin's week. An announced future change ("from November 1 the vigil moves to 5 PM") waits for a bulletin from a week where it is in effect.
 - **Dated entries don't wait.** Propose dated entries (holy days, Christmas, Holy Week, one-off events) and cancellations for any date from today on. Never propose a dated entry before today.
 - **Cancelling a weekly slot** on one date is an `add` of a dated entry with `cancelled: true` for the same church, event type and start time on that date. Cancelling a dated entry is a `modify` of it with `cancelled: true`.
@@ -156,10 +157,12 @@ List in `seen` every entry from the believed schedule that the bulletin prints a
 - Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). Then propose no changes.
 
 Read the whole bulletin, including calendars, sidebars and the back page, and carefully find every event it lists.
+After comparing the regular schedule, make a separate pass through each dated calendar and announcement. For every Mass, Confession and Adoration there, check the exact church, date/weekday and time against the believed schedule; add a supported uncovered event. Preserving an existing monthly service does not cover a different dated service, even when their start times match.
 
 # Final source checks
 
 - Keep church-specific schedule headings separate: an unlisted church's times must not be assigned to a similar-named listed church. A parish-wide heading, parish-office address, or photograph caption is not a different church-specific schedule heading.
+- Cross-check a generic regular schedule against dated intentions and venue notices before adding a weekly slot. An explicit "at [another church]" or relocation notice overrides a generic schedule panel for that occurrence. Do not add a weekly slot at the listed church from boilerplate when the bulletin places that service at another church; an omitted slot may reflect a previously reviewed relocation. If the believed schedule already contains the weekly slot, cancel its explicitly moved occurrence at the original church. Record the replacement only if its venue is a known church. Never attach an off-site service to a listed church just to preserve its time.
 - Preserve a dated Mass with an explicit known church and time even when another church has a usual weekly Mass at that time. Different churches are not duplicates; the dated venue overrides a conflicting standing schedule for that date.
 - An event that includes Confession or Adoration does not establish those components' start/end times. Do not copy the larger event's full hours onto its components; record a component only with its own definite timing or a permitted relative-to-Mass anchor.
 - Apply the off-site rules to Mass-intentions entries too, resolving venue abbreviations from the bulletin's own context.
@@ -179,7 +182,7 @@ CONTEXT_TEMPLATE = """\
 
 # Believed schedule
 
-The schedule we currently believe, by church. Dated entries before today are left out. Refer to entries by `id`.
+The schedule we currently believe, by church, with historical reviewed seed context when available. Only `churches[].entries` are live entries; the context explains earlier decisions. Dated entries before today are left out. Refer to entries by `id`.
 
 ```json
 {view_json}
