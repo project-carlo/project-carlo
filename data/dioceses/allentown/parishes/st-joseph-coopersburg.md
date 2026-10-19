@@ -2,7 +2,7 @@
 name: St. Joseph Church
 website: https://www.stjoescoopersburg.org/bulletin-newsletter/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.stjoescoopersburg.org/bulletin-newsletter/']
 group: St. Joseph Parish, Coopersburg
 evidence:
@@ -31,6 +31,8 @@ Saturday 5:15 PM vigil, Sunday 9 and 11 AM, and weekdays 8 AM.
 
 `other`, self-hosted (Jimdo `app/download/<n>/<name>.pdf`). The file names carry the
 date as "oct112026".
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the first-listed PDF, the 11 October 2026 issue, the newest posted. Its recipe, `page-pdfs`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

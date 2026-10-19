@@ -4,7 +4,7 @@ website: https://stmchurchallentown.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=1838
 publication: ['url:http://sponsors.bonventure.net/?page=1838']
-group: St. Thomas More Parish
+group: St. Thomas More Parish, Allentown
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/1838/2026-10-18.pdf
   seen: 2026-10-19
@@ -38,6 +38,8 @@ noon, weekdays 7 and 8:45 am, Wednesday 6 pm.
 `other`, Bon Venture. The homepage's "Parish Bulletin" button links the sponsor page;
 `provider_id` pins it (`page-pdfs http://sponsors.bonventure.net/?page=1838`), over
 `http://` as for Scranton's Bon Venture rows. Text PDF.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked pinned `page-pdfs http://sponsors.bonventure.net/?page=1838`: the 18 October 2026 PDF ("current").
 
 ## Not yet confirmed
 

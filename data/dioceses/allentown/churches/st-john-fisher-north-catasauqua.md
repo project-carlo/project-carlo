@@ -22,7 +22,7 @@ evidence:
   seen: 2026-10-18
   note: 'Listed in Diocese of Allentown parish map: places as ''St. John Fisher'', 1237 Third Street,
     Catasauqua, PA, 18032; kind: place'
-- url: https://drive.google.com/file/d/1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y/view?usp=sharing
+- url: https://drive.google.com/uc?export=download&id=1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y
   seen: 2026-10-18
   quote: St. John Fisher Church, 1229 Third Street, N. Catasauqua
   note: 'St. Mary''s 18 October 2026 bulletin, announcing the 7 November spaghetti dinner. Page 1 Mass

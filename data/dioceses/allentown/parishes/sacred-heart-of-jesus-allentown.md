@@ -2,7 +2,7 @@
 name: Sacred Heart of Jesus Church
 website: https://www.sacredheartofallentown.com/bulletins/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.sacredheartofallentown.com/bulletins/']
 group: Sacred Heart of Jesus Parish (same pastor as Immaculate Conception BVM)
 evidence:
@@ -40,6 +40,8 @@ bulletin (`immaculate-conception-bvm-allentown`); see that row.
 link text; the file names carry no date. GCatholic still gives the old
 sacredheartallentown.parishesonline.com address; no ParishesOnline id was found on the
 current site.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the 18 October 2026 issue (Bulletin_Affinity-2.pdf, "current"). Its recipe, `page-pdfs`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

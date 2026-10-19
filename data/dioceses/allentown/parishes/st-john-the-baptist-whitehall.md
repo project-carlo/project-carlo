@@ -2,7 +2,7 @@
 name: St. John the Baptist Church (Stiles)
 website: http://www.stjohnsstiles.com/
 bulletin_provider: other
-provider_id: ''
+provider_id: dated-post https://church-bulletin.org/?id=208
 publication: ['url:https://www.church-bulletin.org/saint-john-the-baptist-whitehall-pa-18052']
 group: St. John the Baptist Parish, Stiles (same pastor as St. Peter, Coplay)
 evidence:
@@ -35,6 +35,8 @@ some of them "at St. Peter" (Coplay). St. Peter has the same pastor but its own 
 
 `other`: stjohnsstiles.com links church-bulletin.org/208. church-bulletin.org answers
 406 to a request with a bare "Mozilla/5.0" user agent; plain curl works.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the 18 October 2026 church-bulletin.org PDF ("current"). Its recipe, `dated-post https://church-bulletin.org/?id=208`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

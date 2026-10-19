@@ -2,7 +2,7 @@
 name: Holy Trinity Catholic Church
 website: https://www.holytrinityrcc.org/bulletins
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.holytrinityrcc.org/bulletins']
 group: Holy Trinity Parish, Whitehall
 evidence:
@@ -40,6 +40,8 @@ Peter, but not a bulletin.
 `other`, self-hosted on Duda (irp.cdn-website.com), file names "Bulletin+MM.DD.YY.pdf".
 The diocesan map's weconnect.com site answers "temporarily unavailable", and the
 parish's earlier LPi container 04/0981 has no recent issue under the usual B name.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked Bulletin+10.18.26.pdf, dated 18 October 2026 ("current"). Its recipe, `page-pdfs`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

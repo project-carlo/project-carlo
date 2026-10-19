@@ -39,6 +39,8 @@ St., with Masses Monday to Friday 8 AM, Saturday 4 PM and Sunday 9 AM.
 Bulletin link goes to the ParishesOnline organization); GCatholic's
 saintjohnthebaptist.net no longer resolves (DEAD-DNS, 18 October 2026).
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the 18 October 2026 issue in container 03/1258.
+
 ## Not yet confirmed
 
 Nothing.

@@ -2,7 +2,7 @@
 name: St. Peter Roman Catholic Church
 website: https://www.stpeterchurchcoplay.com/weekly-bulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.stpeterchurchcoplay.com/weekly-bulletin']
 group: St. Peter Parish, Coplay (same pastor as St. John the Baptist, Whitehall)
 evidence:
@@ -38,6 +38,8 @@ publication with its own masthead and a weekday intention "MASS at St. Peter". T
 
 `other`, Wix. File names are hashes; the date is only in the link text, and the links
 are not in date order.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the 18 October 2026 issue ("current"). Its recipe, `page-pdfs`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

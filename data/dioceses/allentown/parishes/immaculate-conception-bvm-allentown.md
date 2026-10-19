@@ -2,7 +2,7 @@
 name: Immaculate Conception BVM Church
 website: http://www.immaculateconceptionallentown.org/news.html
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:http://www.immaculateconceptionallentown.org/latestbulletin.pdf']
 group: Immaculate Conception BVM Parish (same pastor as Sacred Heart of Jesus)
 evidence:
@@ -52,6 +52,8 @@ that is a Syriac Catholic community, excluded as `other-jurisdiction`
 `other`, self-hosted on the parish's own static site (JMS). The website is the News page
 because that is the only page linking the PDF. The PDF keeps one address, so the pipeline
 has to fetch it again each week and tell issues apart by content.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked latestbulletin.pdf, the first PDF on the News page (the 18 October 2026 issue on that day). Its recipe, `page-pdfs`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

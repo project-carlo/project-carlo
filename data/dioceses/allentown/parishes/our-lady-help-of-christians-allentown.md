@@ -55,6 +55,8 @@ GCatholic), is a GoDaddy parked page, so the website is the Discover Mass church
 The text layer spaces letters irregularly ("Living &D eceased"), so quotes must be
 taken from the extracted text, not retyped.
 
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the newest Discover Mass issue (18 October 2026).
+
 ## Not yet confirmed
 
 Nothing.

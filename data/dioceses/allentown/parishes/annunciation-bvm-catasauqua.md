@@ -2,11 +2,11 @@
 name: Annunciation BVM (St. Mary's) and St. John Fisher
 website: https://annunciationbvm.net/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://annunciationbvm.net/']
 group: Annunciation BVM (St. Mary's) and St. John Fisher, one pastor
 evidence:
-- url: https://drive.google.com/file/d/1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y/view?usp=sharing
+- url: https://drive.google.com/uc?export=download&id=1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y
   seen: 2026-10-18
   quote: St. John Fisher Req. by Terri and Joe Gerny
   note: 'Page 1 of the 18 October 2026 bulletin (linked from annunciationbvm.net as "Bulletin ~ October
@@ -14,7 +14,7 @@ evidence:
     October put each Mass at "St. John Fisher" or "St. Mary''s": Saturday 24 Oct 4:00 PM St. John Fisher
     and 6:00 PM St. Mary''s, Sunday 25 Oct 8:00 AM St. Mary''s and 10:30 AM St. John Fisher. "Pastor''s
     Corner" is signed ~Fr. Gruber.'
-- url: https://drive.google.com/file/d/1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y/view?usp=sharing
+- url: https://drive.google.com/uc?export=download&id=1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y
   seen: 2026-10-18
   quote: ANNUNCIATION OF THE BLESSED VIRGIN MARY
   note: Heading of the parish financial report in the same issue; it mentions "the sharing of administrative
@@ -69,6 +69,8 @@ The former St. Lawrence the Martyr church, Catasauqua, closed on 28 October 2022
 
 `other`: the homepage links one `drive.google.com/file/d/<id>/view` per Sunday, labelled
 "Bulletin ~ <date>"; the resolver reads Drive file links as PDFs. Text PDF.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the 18 October 2026 Drive file ("current"). Its recipe, `page-pdfs`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

@@ -2,7 +2,7 @@
 name: St. Ann's Church
 website: https://www.churchstann.org/bulletinnews/bulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.churchstann.org/bulletinnews/bulletin']
 group: St. Ann Parish, Emmaus
 evidence:
@@ -31,6 +31,8 @@ at St. Ann's; no other church is named.
 
 `other`, Squarespace. The bulletin is `/s/YYYYMMDDB.pdf`; the page also links two weekly
 inserts (`cwb_`, `pwb_`), which are not the bulletin.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked 20261018B.pdf ("current"), not the cwb/pwb inserts. Its recipe, `page-pdfs`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

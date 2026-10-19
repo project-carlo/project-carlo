@@ -2,7 +2,7 @@
 name: Cathedral Parish of Saint Catharine of Siena
 website: https://cathedral-church.org/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://church-bulletin.org/226
 publication: ['url:https://www.church-bulletin.org/cathedral-parish-of-saint-catharine-of-siena-allentown-pa-18104']
 group: Cathedral Parish of St. Catharine of Siena
 evidence:
@@ -50,6 +50,8 @@ GCatholic's Allentown list does not include the cathedral; the diocesan map does
 cathedral-church.org is the parish's site (diocesan map, masthead); its bulletin link is
 church-bulletin.org/226, which lands on the John Patrick page recorded as the publication.
 `other`: the resolver follows the church-bulletin.org link from the site. Text PDF.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the 18 October 2026 PDF. Unpinned, it got there through an unrelated WordPress post (/home/bulletin-1-2026-baby-bottle-campaign-rev-9-16-26/) that links church-bulletin.org, so the row is pinned to `page-pdfs https://church-bulletin.org/226`, which picked the same issue ("current").
 
 ## Not yet confirmed
 

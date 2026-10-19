@@ -27,7 +27,7 @@ evidence:
   quote: Annunciation BVM Church Located at 122 Union Street, Catasauqua, PA
   note: 'Same page: "Saturday Vigil Mass: 4:00 PM St. John Fisher and 6:00 PM St. Mary’s", "Sunday Morning
     Masses: 8:00 AM St. Mary’s and 10:30 AM at St. John Fisher".'
-- url: https://drive.google.com/file/d/1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y/view?usp=sharing
+- url: https://drive.google.com/uc?export=download&id=1Kpuh1mP7-DY7W8p1WX7INglbOxxqie3Y
   seen: 2026-10-18
   quote: The Parishioners of St. Mary’s
   note: 'Page 1 of the 18 October 2026 bulletin: Saturday 24 Oct "6:00 PM The Parishioners of St. Mary’s

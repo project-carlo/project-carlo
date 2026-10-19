@@ -4,7 +4,7 @@ website: https://www.stursulafh.org/bulletin
 bulletin_provider: discover_mass
 provider_id: st-ursula-fountain-hill-pa
 publication: ['discovermass:st-ursula-fountain-hill-pa']
-group: St. Ursula Parish
+group: St. Ursula Parish, Fountain Hill
 evidence:
 - url: https://discovermass.com/church/st-ursula-fountain-hill-pa/
   seen: 2026-10-18
@@ -37,6 +37,8 @@ separate bulletins. Two rows.
 
 `discover_mass` by church slug. The site's Bulletin page is a Google Sites page that
 embeds the Discover Mass widget, so plain fetchers see no link.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the newest Discover Mass issue (18 October 2026).
 
 ## Not yet confirmed
 

@@ -2,9 +2,9 @@
 name: St. Francis of Assisi Parish
 website: https://www.stfrancisallentown.org/copy-of-template-page-3
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.stfrancisallentown.org/copy-of-template-page-3']
-group: St. Francis of Assisi Parish
+group: St. Francis of Assisi Parish, Allentown
 evidence:
 - url: https://www.stfrancisallentown.org/_files/ugd/5007fc_ed6c831cac8247da934d80ff966e0a68.pdf
   seen: 2026-10-18
@@ -36,6 +36,8 @@ with the cathedral, which publishes separately.
 `other`. The bulletin page's URL is the Wix slug `copy-of-template-page-3` (the menu calls
 it "BULLETIN"); `copy-of-bulletin` is the "Bulletin Advertisement Supporters" page. File
 names are hashes, so the date is only in the link text.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the first-listed PDF, dated 11 October 2026, the newest posted. Its recipe, `page-pdfs`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 

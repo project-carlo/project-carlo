@@ -4,7 +4,7 @@ website: https://www.stjwchurch.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=1599
 publication: ['url:http://sponsors.bonventure.net/?page=1599']
-group: St. Joseph the Worker Parish
+group: St. Joseph the Worker Parish, Orefield
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/1599/2026-10-18.pdf
   seen: 2026-10-18
@@ -42,6 +42,8 @@ the Orefield church complex, not a separate place.
 stjwchurch.org, the parish's current site, because stjw.org (diocesan map, GCatholic,
 ParishesOnline) does not answer from the sandbox. The ParishesOnline organization still
 exists but carries only LPi's generic insert, so it is not recorded as a publication.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked pinned `page-pdfs http://sponsors.bonventure.net/?page=1599`: the 18 October 2026 PDF ("current").
 
 ## Not yet confirmed
 

@@ -2,9 +2,9 @@
 name: St. Paul Catholic Parish
 website: https://www.stpaulrc.com/bulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: linked-issue-page
 publication: ['url:https://www.church-bulletin.org/saint-paul-roman-catholic-church-allentown-pa-18103']
-group: St. Paul Parish
+group: St. Paul Parish, Allentown
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-paul-roman-catholic-church-allentown-pa-18103/2026-10-18.pdf
   seen: 2026-10-19
@@ -40,6 +40,8 @@ weekday Masses in the chapel and church. No other worship site.
 
 `other`. stpaulrc.com's Bulletin page links church-bulletin.org/281. **The bulletin is
 image-only** (no text layer on any of its 8 pages): the pipeline must read it as images.
+
+Fetch check (2026-10-19, `fetch_check` on a temporary CSV of these records): the resolver picked the 18 October 2026 church-bulletin.org PDF ("current"). Its recipe, `linked-issue-page`, is recorded as `provider_id`.
 
 ## Not yet confirmed
 
