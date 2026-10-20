@@ -18,9 +18,14 @@ evidence:
     coded SHC and SGC.'
 - url: https://www.sacredheartofjesus.org/
   seen: 2026-10-19
-  note: 'The parish site (the diocese''s link for both Sacred Heart and St. George) is behind Cloudflare;
-    headed Chrome was challenged on every load on 19-20 October. probe po: ParishesOnline organizations
+  note: 'The parish homepage (the diocese''s link for both Sacred Heart and St. George) is behind Cloudflare;
+    headed Chrome was challenged on every load on 19-20 October (its /bulletins page loaded, below). probe po: ParishesOnline organizations
     sacred-heart-church-17837 and st-george-mission have no publications.'
+- url: https://www.sacredheartofjesus.org/bulletins
+  seen: 2026-10-20
+  note: 'Loaded in headed Chrome on 20 October (eCatholic site 11375, CNAME cf.sites.ecatholic.com): its
+    Bulletins page only links http://discovermass.com/church/sacred-heart-of-jesus-lewisburg-pa/#bulletins;
+    no eCatholic bulletin files.'
 ---
 
 ## Publisher
@@ -46,8 +51,9 @@ bulletin the pipeline can read (`excluded/rooke-chapel-bucknell-university-lewis
 ## Website and bulletin provider
 
 `discover_mass`, church slug sacred-heart-of-jesus-lewisburg-pa. The website is the
-parish's own site (behind Cloudflare).
+parish's own site (behind Cloudflare), whose Bulletins page links this Discover Mass page.
 
 ## Not yet confirmed
 
-Whether sacredheartofjesus.org links this Discover Mass page (not loaded).
+Nothing. (The parish site's /bulletins page, loaded on 20 October, links this Discover Mass
+page.)

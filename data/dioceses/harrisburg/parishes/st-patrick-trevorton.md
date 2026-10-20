@@ -45,6 +45,10 @@ each parish prints its own bulletin (see `mother-cabrini-shamokin`).
 `other`: a Wix pdf-flipbook on https://www.revivingtogether.com/trevorton, file names like
 "101826.pdf". The ParishesOnline organization and the Discover Mass page publish nothing.
 
+Fetch check (2026-10-20): as for Mother Cabrini, no bulletin link without a recipe; with
+`page-pdfs` pinned it picked the flipbook's "101826.pdf" (18 October). Undated URL: the pick
+rests on it being the only PDF on the page.
+
 ## Not yet confirmed
 
 The sheet names no parish in its text; the attribution rests on where it is posted and what

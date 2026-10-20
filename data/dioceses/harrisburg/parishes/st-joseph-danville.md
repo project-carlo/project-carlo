@@ -1,9 +1,9 @@
 ---
 name: St. Joseph Parish
 website: https://www.stjosephdanville.org/
-bulletin_provider: discover_mass
-provider_id: st-joseph-danville-pa
-publication: ['discovermass:st-joseph-danville-pa']
+bulletin_provider: ecatholic
+provider_id: ''
+publication: ['ecatholic:33992', 'discovermass:st-joseph-danville-pa']
 group: ''
 evidence:
 - url: https://discovermass.com/church/st-joseph-danville-pa/
@@ -16,14 +16,20 @@ evidence:
     6:30 A.M. Thursday: 6:15 P.M. Friday: 9:00 A.M.".'
 - url: https://www.stjosephdanville.org/
   seen: 2026-10-19
-  note: 'The parish site (the diocese''s link and the bulletin''s) is behind Cloudflare: probe url 403
-    and headed Chrome was challenged on every load on 19-20 October, so the bulletin link on it was not
-    seen. probe po: the ParishesOnline organization st-joseph-church-17821 has no publications.'
+  note: 'The parish homepage is behind Cloudflare (probe url 403; headed Chrome challenged on every load
+    on 19 October). probe po: the ParishesOnline organization st-joseph-church-17821 has no publications.'
+- url: https://files.ecatholic.com/33992/bulletins/20261018.pdf
+  seen: 2026-10-20
+  quote: 'Website: www.stjosephdanville.org Email: sjcd@verizon.net'
+  note: 'The same 18 October 2026 bulletin on the parish''s eCatholic site (5 pages; the Discover Mass
+    copy has 6). The site''s /bulletins page loaded in headed Chrome on 20 October: ecatholic:33992, issues
+    "October 18, 2026" back weekly.'
 ---
 
 ## Publisher
 
-St. Joseph, Danville publishes its own weekly bulletin through Discover Mass. The 18 October
+St. Joseph, Danville publishes its own weekly bulletin, posted on its eCatholic site and on
+Discover Mass. The 18 October
 2026 issue (6 pages) is headed "ST. JOSEPH CATHOLIC CHURCH, 68 Center St., Danville", Rev.
 Kenneth C. Roth, pastor, with one schedule: Saturday 5:00 pm, Sunday 8:00 and 10:30 am,
 Tuesday 9:00 am, Wednesday 6:30 am, Thursday 6:15 pm, Friday 9:00 am. No grouping in the
@@ -39,10 +45,13 @@ them was found, so no row.
 
 ## Website and bulletin provider
 
-`discover_mass`, church slug st-joseph-danville-pa. The website is the parish's own site
-(behind Cloudflare; it could not be loaded to confirm that it links Discover Mass).
+`ecatholic`: the parish's own site (stjosephdanville.org, the diocese's link) is an eCatholic
+site (id 33992) whose /bulletins page lists the same weekly issues as Discover Mass
+(st-joseph-danville-pa); both are recorded in `publication`. eCatholic was preferred because
+its files have no per-request token or daily download cap. The site is behind Cloudflare; its
+/bulletins page loaded in headed Chrome on 20 October after the homepage failed on every load
+on 19 October.
 
 ## Not yet confirmed
 
-Whether stjosephdanville.org links this Discover Mass page (a browser visit that gets past
-Cloudflare would show it).
+Nothing.

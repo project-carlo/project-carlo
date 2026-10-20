@@ -2,7 +2,7 @@
 name: Christ the King Mission
 website: https://www.ctkbenton.org/bulletins
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['discovermass:christ-the-king-benton-pa', 'url:https://www.ctkbenton.org/bulletins']
 group: Very Rev. Richard Mowery, pastor of St. Columba and Christ the King Mission
 evidence:
@@ -48,6 +48,10 @@ is a row of its own.
 dated PDF per Sunday and already had the 25 October issue on 19 October, while Discover Mass's
 newest was 18 October and that issue has no text layer. The Discover Mass page
 (christ-the-king-benton-pa) is recorded in `publication` as the fallback.
+
+Fetch check (`fetch_check.check_fetch` on a temporary CSV, 2026-10-20): "page-pdfs on
+https://www.ctkbenton.org/bulletins: current", picked October-25-2026-2.pdf, the coming
+Sunday's issue, posted early; recipe `page-pdfs` pinned.
 
 ## Not yet confirmed
 

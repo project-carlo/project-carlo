@@ -44,8 +44,10 @@ has a public Mass is unsettled: `open/carmelite-monastery-elysburg.md`.
 
 `other`, pinned `page-pdfs http://sponsors.bonventure.net/?page=2112`, as for Allentown's Bon
 Venture rows: the sponsor page links the current PDF at `pdfs/2112/<YYYY-MM-DD>.pdf`. The
-website is the parish's own site (the diocese's link), which links the sponsor page. See the
-fetch check below.
+website is the parish's own site (the diocese's link), which links the sponsor page. See the fetch check below.
+
+Fetch check (2026-10-20): "page-pdfs on http://sponsors.bonventure.net/?page=2112: current",
+picked pdfs/2112/2026-10-18.pdf.
 
 ## Not yet confirmed
 

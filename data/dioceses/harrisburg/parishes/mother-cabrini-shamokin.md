@@ -56,8 +56,12 @@ The weekday Masses this bulletin lists at Our Lady of Hope belong to that church
 `other`: the bulletin is a PDF in a Wix pdf-flipbook widget on
 https://www.revivingtogether.com/shamokin (the diocese's website for the parish). The archive
 page holds older, hash-named PDFs with no dates. The ParishesOnline organization and the
-Discover Mass page for Mother Cabrini publish nothing. See the fetch check in *Not yet
-confirmed*.
+Discover Mass page for Mother Cabrini publish nothing. See the fetch check below.
+
+Fetch check (2026-10-20): without a recipe the resolver found no bulletin link on the page
+("NoBulletin"); with `page-pdfs` pinned it reads the flipbook's PDF from the page ("page-pdfs
+on https://www.revivingtogether.com/shamokin: first-listed") and picked the 18 October issue.
+The PDF URL carries no date, so the pick rests on it being the only PDF on the page.
 
 ## Not yet confirmed
 
