@@ -27,6 +27,8 @@ class Candidate:
     labelled: bool = False
     # The link's whole text names the bulletin ("Bulletin", "Weekly Bulletin").
     titled_bulletin: bool = False
+    # ...and says it is this week's ("This Week's Bulletin", "Current Bulletin").
+    titled_current: bool = False
 
 
 # Why a candidate was chosen, most to least sure. Every reason but CURRENT
@@ -74,7 +76,9 @@ def choose(
       dated within that, when one is listed: a listing oldest first (St.
       Joseph, Troy) or a parish a few weeks behind;
     - a link whose whole text is "Bulletin" beats a first one that is not
-      dated (St. Mary's, Glens Falls lists a Confirmation PDF first);
+      dated (St. Mary's, Glens Falls lists a Confirmation PDF first), and one
+      titled "This Week's Bulletin" beats a bare "Bulletin" (St. Ignatius,
+      Orrtanna's site header links a 2018 issue as "Bulletin");
     - a first one neither dated nor labelled "bulletin" gives way to the
       newest recent one when the page lists a dated series of them (Our Lady
       of Peace, Hazleton lists a "Parish Consolidation" PDF above its weekly
@@ -101,7 +105,9 @@ def choose(
             return newest_recent()
     reason = FIRST_LISTED
     if first.parsed_date is None:
-        titled = next((c for c in candidates if c.titled_bulletin), None)
+        titled = next((c for c in candidates if c.titled_current), None) or next(
+            (c for c in candidates if c.titled_bulletin), None
+        )
         if titled is not None:
             first, reason = titled, TITLED
         elif not first.labelled and len(recent) >= MIN_RECENT_SERIES:

@@ -489,6 +489,16 @@ def test_a_link_titled_bulletin_beats_an_undated_first_pdf() -> None:
     }) == f"{HOME}/_files/ugd/c3.pdf"
 
 
+def test_a_link_titled_this_weeks_bulletin_beats_one_titled_bulletin() -> None:
+    # St. Ignatius, Orrtanna: the Wix header links a 2018 issue as "Bulletin".
+    assert _resolve({
+        HOME: (
+            '<a href="/_files/ugd/old.pdf">Bulletin</a>'
+            '<a href="/_files/ugd/new.pdf">This Weeks Bulletin</a>'
+        ),
+    }) == f"{HOME}/_files/ugd/new.pdf"
+
+
 def test_a_dated_series_beats_an_undated_unlabelled_first_pdf() -> None:
     # Our Lady of Peace, Hazleton lists a "Parish Consolidation" PDF above its
     # weekly issues, the newest of which can be two weeks old.

@@ -95,6 +95,7 @@ class Collector:
 _BULLETIN_TITLE_RE = re.compile(
     r"(?:(?:this week'?s|weekly|current|latest|parish|sunday)\s+)?bulletin"
 )
+_CURRENT_BULLETIN_TITLE_RE = re.compile(r"(?:this week'?s|current|latest)\s+bulletin")
 
 
 def page_pdf_candidates(
@@ -120,6 +121,9 @@ def page_pdf_candidates(
                 parsed_date=parse_date_from_texts([text, href, absolute_href], reference_date),
                 labelled="bulletin" in f"{text} {absolute_href}".lower(),
                 titled_bulletin=bool(_BULLETIN_TITLE_RE.fullmatch(text.strip().lower())),
+                titled_current=bool(
+                    _CURRENT_BULLETIN_TITLE_RE.fullmatch(text.strip().lower())
+                ),
             )
         )
     if any(c.parsed_date is None for c in candidates):
