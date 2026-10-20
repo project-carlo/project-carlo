@@ -57,7 +57,10 @@ attached to the Main Church.
 stjncath.org does not resolve: `probe url` DEAD-DNS). The bulletin is on FATA Online, whose
 page has a fixed "View Current Bulletin" link and a dated archive list of per-issue PDFs
 (`/bulletin/bulletin-<n>.pdf`); `url:` publication is that page. The 18 October PDF is 48 MB,
-large enough that `probe pdf` truncates it. Page 3 of the issue warns of a change: "as we
+large enough that `probe pdf` truncates it; the fetch check (2026-10-19) downloaded it
+whole and printed the recipe `page-pdfs https://www.fataonline.com/bulletins/StJohnNF`, pinned
+in `provider_id` because its pick ("View Current Bulletin", bulletin-781792006794.pdf) is the
+18 October issue I read. Page 3 of the issue warns of a change: "as we
 transition to a new publishing program", so the channel may move.
 
 ## Not yet confirmed

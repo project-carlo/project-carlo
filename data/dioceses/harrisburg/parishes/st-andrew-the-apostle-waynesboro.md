@@ -49,7 +49,10 @@ School Masses (page 2: "the school Masses on the First & Third Fridays will be h
 
 `other`. The parish's Squarespace page /bulletins-1 posts some issues itself (newest
 4 October on 2026-10-19) and links the church-bulletin.org listing, which had 18 October;
-the listing is the `url:` publication. The bulletin is image-only (all 8 pages of the 4, 11
+the listing is the `url:` publication. Unpinned, the fetch check (2026-10-19) read the
+parish page and picked its "Sacramental-Guidelines.pdf"; `provider_id` therefore pins
+`page-pdfs https://church-bulletin.org/253` (which redirects to the listing), and the re-run
+picked `.../2026-10-18.pdf` ("current"). The bulletin is image-only (all 8 pages of the 4, 11
 and 18 October issues): the pipeline must read it as images.
 
 ## Not yet confirmed

@@ -49,8 +49,10 @@ Haven building: no current source lists Mass there.
 
 `other`. The parish's own site (eCatholic, holyinfantparish.com) is behind Cloudflare; its
 Bulletins page links only to FATA Online, whose page has a fixed "View Current Bulletin"
-link and a dated archive of per-issue PDFs. `website` is the parish site (the coordinator
-can pin the FATA page as the recipe; see the fetch check in the report).
+link and a dated archive of per-issue PDFs. `website` is the parish site; `provider_id`
+pins the recipe the fetch check printed, `page-pdfs http://fataonline.com/bulletins/holyinfant`.
+The check (2026-10-19/20, Chrome under xvfb) picked the "View Current Bulletin" PDF
+(bulletin-661792005981.pdf, 3.5 MB), which I had read by hand as the 18 October 2026 issue.
 
 ## Not yet confirmed
 
