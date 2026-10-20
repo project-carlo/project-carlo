@@ -823,6 +823,24 @@ def test_a_304_to_an_unconditional_download_is_a_failure(monkeypatch) -> None:
         fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
 
 
+def test_a_bot_check_over_http_is_retried_over_https(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    asked: list[str] = []
+
+    def get(url: str, **_: object) -> fetch._Response:
+        asked.append(url)
+        if url.startswith("http://"):
+            return fetch._Response(b"<html><head><link rel=stylesheet href=/.well-known/sgcaptcha/>")
+        return fetch._Response(b"%PDF-1.5")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    pdf = "http://example.org/wp-content/uploads/10.18.26-bulletin.pdf"
+    download = fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
+    assert download.pdf == b"%PDF-1.5"
+    assert asked == [pdf, "https://example.org/wp-content/uploads/10.18.26-bulletin.pdf"]
+
+
 # ── Recipes ─────────────────────────────────────────────────────────────────
 
 def test_recipe_reads_collector_page_or_both() -> None:

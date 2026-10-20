@@ -613,11 +613,22 @@ def _download_bulletin(
         LOGGER.warning("Primary fetch failed (%s), falling back to source URL: %s", exc, source_url)
         # The validators belong to the fetch URL, so none are kept from here.
         return Download(pdf=as_bulletin_pdf(_http_get(source_url, referer=source_url).body))
+    pdf = as_bulletin_pdf(response.body)
+    if not pdf.startswith(b"%PDF") and fetch_url.startswith("http://"):
+        # Some hosts answer a bot check over http and the file over https:
+        # the Basilica of the Sacred Heart, Hanover links its PDFs over http,
+        # where SiteGround returns its sgcaptcha page.
+        secure_url = "https://" + fetch_url.removeprefix("http://")
+        try:
+            secure = _http_get(secure_url, referer=source_url, extra_headers=conditional)
+        except (OSError, HTTPException) as exc:
+            LOGGER.info("No better over https (%s): %s", exc, secure_url)
+        else:
+            if as_bulletin_pdf(secure.body).startswith(b"%PDF"):
+                LOGGER.info("Not a PDF over http; took %s", secure_url)
+                response, pdf = secure, as_bulletin_pdf(secure.body)
     # A bulletin posted as an image is kept as a PDF, like every other.
-    return Download(
-        pdf=as_bulletin_pdf(response.body), etag=response.etag,
-        last_modified=response.last_modified,
-    )
+    return Download(pdf=pdf, etag=response.etag, last_modified=response.last_modified)
 
 
 def _download_pdf(*, fetch_url: str, source_url: str) -> bytes:
