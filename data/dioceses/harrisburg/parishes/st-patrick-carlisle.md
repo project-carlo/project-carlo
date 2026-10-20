@@ -68,6 +68,8 @@ saintpatrickchurch.org's Bulletins page embeds the LPi widget for organization i
 slug. Discover Mass has an empty page for the parish (`st-patrick-parish-carlisle-pa`, no
 issues).
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV): ok, the 18 October 2026 issue (container 04/0437, 43.8 MB) on the second run; the first run's download came back as a 1,169-byte non-PDF, a transient failure through the proxy.
+
 ## Not yet confirmed
 
 - Whether the Sunday Masses are in the gym because a new Marsh Drive church is still being

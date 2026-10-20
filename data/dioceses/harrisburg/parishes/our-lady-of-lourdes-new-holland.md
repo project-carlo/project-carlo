@@ -2,7 +2,7 @@
 name: Our Lady of Lourdes Catholic Church
 website: https://www.fataonline.com/bulletin/ourladylourdespa
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.fataonline.com/bulletin/ourladylourdespa
 publication: ['url:https://www.fataonline.com/bulletin/ourladylourdespa']
 group: ''
 evidence:
@@ -49,6 +49,8 @@ date, and an archive; file names are FATA upload numbers, not dates, so the reso
 take the "View Current Bulletin" link. The parish site itself (ourladyoflourdesnh.com; GCatholic
 still gives ourladyoflourdesnh.org) posts only inserts. FATA Printing is a bulletin publisher
 not seen before in this dataset.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): "page-pdfs on https://www.fataonline.com/bulletin/ourladylourdespa: first-listed", which is the 18 October issue (bulletin-1201792006184.pdf, the "View Current Bulletin" link; the file name carries no date, which is why the check says first-listed), this week's bulletin, so the printed recipe is pinned as `provider_id`.
 
 ## Not yet confirmed
 

@@ -39,16 +39,15 @@ Masses only.
 
 Holy Trinity and St. Peter, Columbia share a pastor (Fr. Mark Wilke) and deacons, and the
 bulletin addresses "Parishioners of Holy Trinity and St. Peters" in a deacon's letter, but it
-is Holy Trinity's own bulletin: it lists no St. Peter Masses. St. Peter's own channel is
-`stpetercolumbiapa.org`, which the sandbox could not open (see `open/st-peter-columbia`), so
-the two are kept as separate rows.
+is Holy Trinity's own bulletin: it lists no St. Peter Masses, and St. Peter prints its own
+(eCatholic, 18 October 2026 issue read; `st-peter-columbia`). Two rows.
 
 ## Worship sites
 
 One church, `holy-trinity-columbia`. GCatholic omits it (it lists only St. Peter in Columbia);
 the diocese's directory lists it. Holy Trinity's Mass page points parishioners to weekday
-Masses at St. Peter Church and at St. Mary Chapel, Wrightsville; those belong to St. Peter's
-schedule and are not this bulletin's churches.
+Masses at St. Peter Church and at St. Mary Chapel, Wrightsville; those are in St. Peter's
+bulletin (`st-peter-columbia`, `mother-of-holy-purity-chapel-wrightsville`), not this one.
 
 ## Website and bulletin provider
 
@@ -57,6 +56,8 @@ Sunday's date as its text (file names vary: October-11.pdf, September-27th.pdf,
 August-30-2026-1.pdf). The 18 October issue had not been posted by 20 October; the site
 lags about a week. Holy Trinity's LPi organization (holy-trinity-church-17512) has no
 publications, and its Discover Mass page none.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): "page-pdfs on https://holytrinitycolumbiapa.com/parish-life/about/news/: first-listed, dated 2026-10-11". That is the newest issue the parish has posted, but not this week's, so no recipe is pinned yet; pin `page-pdfs <this page>` once a check picks the current Sunday.
 
 ## Not yet confirmed
 

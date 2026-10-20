@@ -1,6 +1,6 @@
 ---
 parish: st-james-lititz
-name: St. James
+name: St. James Catholic Church
 line1: 505 Woodcrest Ave.
 line2: ''
 city: Lititz
@@ -9,8 +9,8 @@ postal_code: '17543'
 latitude: 40.1463125
 longitude: -76.3121875
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:23754', 'directory:st-james-lititz']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23754
@@ -22,14 +22,19 @@ evidence:
   seen: 2026-10-19
   note: 'Listed in Diocese of Harrisburg: Find a Parish, Church or Mass Time as ''Saint James'', 505 Woodcrest
     Ave, Lititz, PA, 17543; kind: Parish in Lititz'
+- url: https://files.ecatholic.com/24609/bulletins/20261018.pdf
+  seen: 2026-10-20
+  note: 'Image-only 18 October 2026 bulletin, read rendered: "Sunday Masses: Saturday Evening 4:00pm,
+    Sunday Morning 8:30am & 10:30am ... Mass Tuesday-Friday 9:00am"; page 2 lists each Mass of 17-25 October
+    in the church.'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin gives Saturday 4:00pm, Sunday 8:30am and 10:30am, and
+Tuesday-Friday 9:00am, and its weekly calendar lists each of those Masses. The directory agrees.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+Bulletin ("505 Woodcrest Ave. Lititz, PA 17543"), directory and GCatholic agree; both flags
+true. Coordinates: GCatholic Plus Code 87G54MWQ+G4.

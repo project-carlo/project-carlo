@@ -2,7 +2,7 @@
 name: Saint Leo the Great Catholic Church
 website: https://www.stleos.org/category/bulletins/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.stleos.org/category/bulletins/
 publication: ['url:https://www.stleos.org/category/bulletins/']
 group: ''
 evidence:
@@ -44,6 +44,8 @@ buildings on the same campus, not a separate worship site.
 date (October-18-2026.pdf, October-11-2026.pdf, ...). **Image-only bulletin:** the 4, 11 and 18
 October issues all have no text layer, so the pipeline must read them as images. The Discover
 Mass page "st-leo-the-great-catholic-church-lancaster-pa" exists but lists no bulletins.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): "page-pdfs on https://www.stleos.org/category/bulletins/: current", which is the 2026-10-18 issue (October-18-2026.pdf), this week's bulletin, so the printed recipe is pinned as `provider_id`.
 
 ## Not yet confirmed
 

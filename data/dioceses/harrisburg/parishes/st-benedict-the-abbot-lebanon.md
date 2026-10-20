@@ -47,6 +47,8 @@ search for the ZIP code 17046 gives the church page `st-benedict-the-abbot-churc
 whose issues are the same (newest 18 October 2026). Provider `discover_mass` with that slug.
 GCatholic's website for the parish, sbaclpa.com, is an older domain.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): the resolver found the newest issue on the Discover Mass church page, but the download returned Discover Mass's 134-byte "Maximum number of files downloaded today" page (a per-IP daily cap the sandbox's shared egress reached; curl got the same page). Not a resolver fault; re-run on another day.
+
 ## Not yet confirmed
 
 Nothing.

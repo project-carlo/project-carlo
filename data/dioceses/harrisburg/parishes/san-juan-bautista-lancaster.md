@@ -2,7 +2,7 @@
 name: Iglesia Católica San Juan Bautista
 website: https://sanjuanbautistalancaster.com/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://sanjuanbautistalancaster.com/
 publication: ['url:https://sanjuanbautistalancaster.com/']
 group: ''
 evidence:
@@ -50,9 +50,8 @@ linked May 2026 schedule: Saturday 5:00 PM (Spanish), Sunday 9:00 AM (English) a
 Since 20-21 June 2026 San Juan Bautista and St. Anthony of Padua share a pastor and vicar
 (Bishop's letter of 23 May 2026, on this site), and the 11:00 AM Spanish Mass at St. Anthony
 is advertised on San Juan's homepage. The parishes stay canonically separate, and this bulletin
-(all text pages grepped, image pages viewed) never mentions St. Anthony. St. Anthony's own
-site could not be opened from the sandbox (`open/st-anthony-of-padua-lancaster`), so whether
-it still prints a bulletin of its own is not known; the two are not merged.
+(all text pages grepped, image pages viewed) never mentions St. Anthony, which prints its own
+18 October 2026 issue on its eCatholic site (`st-anthony-of-padua-lancaster`). Two rows.
 
 ## Worship sites
 
@@ -66,6 +65,8 @@ cultural centre at 441 S Lime St. hosts events (a retreat on 31 October), not Ma
 pages carry the masthead and Mass times. The LPi organization
 st-john-the-baptist-san-juan-bautista has no publications; the Discover Mass page
 san-juan-bautista-lancaster-pa lists none.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): "page-pdfs on https://sanjuanbautistalancaster.com/: current", which is the 2026-10-18 issue (/s/Bulletin-10-18-2026.pdf), this week's bulletin, so the printed recipe is pinned as `provider_id`.
 
 ## Not yet confirmed
 

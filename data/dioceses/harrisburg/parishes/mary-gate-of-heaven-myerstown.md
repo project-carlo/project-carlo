@@ -43,6 +43,8 @@ marygateofheaven.com's bulletin pages are built in JavaScript; in a browser
 bulletins of `mary-gate-of-heaven-myerstown-pa`. That church page lists the issues (newest
 25 October 2026). Provider `discover_mass` with that slug.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 Nothing.

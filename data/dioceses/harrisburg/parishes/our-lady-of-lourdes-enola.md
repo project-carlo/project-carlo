@@ -44,6 +44,8 @@ The parish site's Bulletins page has one post a month; the weekly issues are on 
 Mass, church page `our-lady-of-lourdes-enola-pa` (found with Discover Mass's search for
 "enola"; newest issue 18 October 2026). Provider `discover_mass` with that slug.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 What the monthly posts on the parish site are (a monthly newsletter or a monthly bundle of

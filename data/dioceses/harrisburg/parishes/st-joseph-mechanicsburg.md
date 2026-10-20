@@ -51,6 +51,8 @@ church page `st-joseph-mechanicsburg-pa` (found with its search for "mechanicsbu
 weekly issues through 18 October 2026 whose masthead is this parish's. Provider
 `discover_mass` with that slug.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): the resolver found the newest issue on the Discover Mass church page, but the download returned Discover Mass's 134-byte "Maximum number of files downloaded today" page (a per-IP daily cap the sandbox's shared egress reached; curl got the same page). Not a resolver fault; re-run on another day.
+
 ## Not yet confirmed
 
 That the parish site links Discover Mass (blocked); the bulletin's masthead settles whose it

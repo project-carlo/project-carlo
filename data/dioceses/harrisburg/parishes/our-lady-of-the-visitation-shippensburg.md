@@ -46,6 +46,8 @@ olvshippensburg.org embeds the Discover Mass church page
 `our-lady-of-the-visitation-shippensburg-pa` (newest issue 18 October 2026). Provider
 `discover_mass` with that slug.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 Where the semester-only Monday and Saturday Masses are held (church or a campus room). The

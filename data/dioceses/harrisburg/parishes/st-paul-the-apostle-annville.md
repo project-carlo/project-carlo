@@ -49,6 +49,8 @@ while Discover Mass's copy (church page `st-paul-the-apostle-church-annville-pa`
 issue 18 October 2026) has a text layer, so the row reads Discover Mass. Both ids are in
 `publication`.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 Nothing.

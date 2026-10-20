@@ -26,6 +26,9 @@ evidence:
   note: An LPi organization for the parish (lpi:0018000000Qx9Q9AAJ) exists with no publications ("this
     organization does not publish a bulletin here now", probe po); not a live channel, so not recorded
     as a publication.
+revisit: 'Re-run the fetch check: on 2026-10-20 Discover Mass refused the download with its daily cap
+  ("Maximum number of files downloaded today").'
+revisit_after: 2026-10-22
 ---
 
 ## Publisher
@@ -50,6 +53,8 @@ sites with public Mass; the bulletin mentions "lower church" only as a room in t
 page lists weekly issues through 18 October 2026, and the parish site
 (www.sacredheartlanc.org, from the directory) embeds that page. The parish's empty LPi
 organization is noted in evidence and not used.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): the resolver found the newest issue's download link but got a 134-byte page instead of the PDF: Discover Mass answered "Maximum number of files downloaded today", a daily download cap this sandbox had used up while the region was being researched (the same issues downloaded as PDFs on 19 October). Re-run the check on another day before treating it as a failure.
 
 ## Not yet confirmed
 

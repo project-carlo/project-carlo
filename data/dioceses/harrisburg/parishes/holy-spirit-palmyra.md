@@ -48,6 +48,8 @@ recipe `page-pdfs https://church-bulletin.org/230`, the form other John Patrick 
 on 18 October 2026): the pipeline will have to read it as images. Discover Mass has a page
 for the parish (`holy-spirit-catholic-church-palmyra-pa`) with no issues on it.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, `page-pdfs on https://church-bulletin.org/230: current`, the 18 October 2026 PDF, which is this week's issue; the pinned recipe is the one it printed.
+
 ## Not yet confirmed
 
 Nothing.

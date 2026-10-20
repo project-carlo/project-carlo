@@ -26,6 +26,9 @@ evidence:
   seen: 2026-10-19
   note: LPi organization lpi:0018000000Qx9Q4AAJ exists with no publications (probe po). Not a live channel;
     not recorded as a publication.
+revisit: 'Re-run the fetch check: on 2026-10-20 Discover Mass refused the download with its daily cap
+  ("Maximum number of files downloaded today").'
+revisit_after: 2026-10-22
 ---
 
 ## Publisher
@@ -51,6 +54,8 @@ Archeparchy of Philadelphia and is excluded as `other-jurisdiction`
 site whose "2026 bulletins" page links the same J.S. Paluch PDFs under hash names; Discover
 Mass dates each issue, so it is the cleaner source. Both are recorded as publications. The
 website is the parish homepage.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): the resolver found the newest issue's download link but got a 134-byte page instead of the PDF: Discover Mass answered "Maximum number of files downloaded today", a daily download cap this sandbox had used up while the region was being researched (the same issues downloaded as PDFs on 19 October). Re-run the check on another day before treating it as a failure.
 
 ## Not yet confirmed
 

@@ -46,6 +46,8 @@ page `st-katharine-drexel-mechanicsburg-pa` (found with its search for "mechanic
 weekly issues through 18 October 2026 whose masthead is this parish's. Provider
 `discover_mass` with that slug.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 That the parish site links Discover Mass (blocked).

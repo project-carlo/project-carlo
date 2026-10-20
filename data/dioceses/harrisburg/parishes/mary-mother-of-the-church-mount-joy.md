@@ -35,6 +35,8 @@ One church, `mary-mother-of-the-church-mount-joy`.
 (marymotherparish.org, from the directory) is behind Cloudflare: one browser run reported an
 error, others a challenge. Discover Mass lists issues through 18 October 2026.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, the resolver downloaded the newest Discover Mass issue (18 October 2026).
+
 ## Not yet confirmed
 
 The directory gives weekday Masses Tuesday, Thursday, Friday and first Saturday 8:30AM and

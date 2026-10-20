@@ -45,6 +45,8 @@ pastor's campus ministry at Millersville University has no Mass listed in the is
 (stphilipmillersville.com) resets plain connections from the sandbox (probe url UNREACHABLE)
 but loads in Chrome; its bulletins page is recorded as a second publication id.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, the resolver downloaded the newest Discover Mass issue (18 October 2026).
+
 ## Not yet confirmed
 
 The directory's Sunday 8:30AM differs from the bulletin's 8:00am; the bulletin is followed.

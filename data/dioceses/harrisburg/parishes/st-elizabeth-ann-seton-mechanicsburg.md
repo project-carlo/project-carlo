@@ -38,6 +38,8 @@ steas.net embeds the Discover Mass church page `st-elizabeth-ann-seton-mechanics
 (newest issue 18 October 2026). Provider `discover_mass` with that slug. GCatholic's
 steas-mech.org is an older domain.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 Nothing.

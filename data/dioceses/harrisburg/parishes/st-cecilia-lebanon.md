@@ -46,6 +46,8 @@ The parish site (eCatholic, behind Cloudflare) embeds both ids. Both carry the 1
 Mass is readable without a browser, while the eCatholic resolver reads from the
 Cloudflare-blocked website. Both ids are recorded in `publication`.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 Nothing.

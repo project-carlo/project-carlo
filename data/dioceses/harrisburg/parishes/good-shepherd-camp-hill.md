@@ -51,6 +51,8 @@ Discover Mass bulletins of church page `good-shepherd-camp-hill-pa` (newest issu
 parish (`good-shepherd-church-17011`, LPi 0018000000Qx9PMAAZ) with no publications: an old
 account, not the bulletin.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 Nothing.

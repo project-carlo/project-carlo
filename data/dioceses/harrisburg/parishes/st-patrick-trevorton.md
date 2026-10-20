@@ -2,7 +2,7 @@
 name: St. Patrick Parish
 website: https://www.revivingtogether.com/trevorton
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.revivingtogether.com/trevorton']
 group: Rev. Nicholas Spano, OFM Conv., pastor of Mother Cabrini, Our Lady of Hope and St. Patrick
 evidence:

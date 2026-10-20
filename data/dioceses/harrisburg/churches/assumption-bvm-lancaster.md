@@ -1,6 +1,6 @@
 ---
 parish: assumption-bvm-lancaster
-name: Assumption of the Blessed Virgin Mary
+name: Assumption of the Blessed Virgin Mary (Historic St. Mary's Church)
 line1: 119 S Prince St.
 line2: ''
 city: Lancaster
@@ -9,8 +9,8 @@ postal_code: '17603'
 latitude: 40.0360625
 longitude: -76.3069375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:23708', 'directory:assumption-of-the-blessed-virgin-mary-lancaster']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23708
@@ -22,14 +22,21 @@ evidence:
   seen: 2026-10-19
   note: 'Listed in Diocese of Harrisburg: Find a Parish, Church or Mass Time as ''Assumption of the BVM'',
     119 S Prince St, Lancaster, PA, 17603; kind: Parish in Lancaster'
+- url: https://www.church-bulletin.org/bulletin/assumption-of-the-blessed-virgin-mary-lancaster-pa-17603/2026-10-18.pdf
+  seen: 2026-10-20
+  note: 'Image-only 18 October 2026 bulletin, read rendered: "Daily Mass: Monday through Friday 12:05
+    PM. Sunday Mass: Saturday Vigil 4:30 PM; Sunday 8:30 AM, 11:00 AM", with intentions for each, 17-25
+    October.'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin gives Saturday Vigil 4:30 PM, Sunday 8:30 and 11:00 AM, and
+weekday Mass Monday-Friday 12:05 PM, with intentions for each Mass of 17-25 October. The
+directory agrees.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin ("Assumption of the Blessed Virgin Mary ... 119 S Prince St Lancaster, PA 17603",
+with a "Historic St. Mary's Church" seal), the directory and GCatholic (119 S Prince St.) agree;
+both flags true. Coordinates: GCatholic Plus Code 87G52MPV+C6.

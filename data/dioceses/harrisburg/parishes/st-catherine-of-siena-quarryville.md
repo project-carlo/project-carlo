@@ -2,7 +2,7 @@
 name: Saint Catherine of Siena Parish
 website: https://www.church-bulletin.org/saint-catherine-of-siena-parish-quarryville-pa-17566
 bulletin_provider: other
-provider_id: ''
+provider_id: dated-post https://www.church-bulletin.org/saint-catherine-of-siena-parish-quarryville-pa-17566
 publication: ['url:https://www.church-bulletin.org/saint-catherine-of-siena-parish-quarryville-pa-17566',
   'ecatholic:14978']
 group: ''
@@ -46,6 +46,8 @@ gives the old scsq.net) links only "Current Bulletin" =
 jppc.net/onlinebulletins/256template.pdf, which redirects to this listing.
 ecatholic:14978 is recorded as a publication id because the parish site carries it, but its
 eCatholic bulletin folder is empty.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): "dated-post on https://www.church-bulletin.org/saint-catherine-of-siena-parish-quarryville-pa-17566: current", which is the 2026-10-18 issue, this week's bulletin, so the printed recipe is pinned as `provider_id`.
 
 ## Not yet confirmed
 

@@ -45,6 +45,8 @@ A web search turns up saintrichard.org, but that is St. Richard, Swanton, Ohio (
 widget 0018000000Qx8m0AAB is a Swanton organization). The LPi organization was found with
 ParishesOnline's search.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, picked the 18 October issue from container 03/1168, this week's bulletin.
+
 ## Not yet confirmed
 
 Whether strichardcatholicchurch.org is down or only unreachable from the sandbox.

@@ -62,6 +62,8 @@ abvmlebpa.org's Bulletins page embeds the Discover Mass widget, and the Discover
 page `assumption-of-the-blessed-virgin-mary-lebanon-pa` lists the same issues (newest 18
 October 2026). Provider `discover_mass` with that slug.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): ok, the newest issue on the Discover Mass church page downloaded as a PDF.
+
 ## Not yet confirmed
 
 Nothing.

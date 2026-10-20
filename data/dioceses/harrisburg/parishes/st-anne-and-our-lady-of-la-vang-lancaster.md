@@ -44,6 +44,8 @@ and the 11 and 18 October issues were not up by 20 October. The parish's Discove
 (st-anne-catholic-church-lancaster-pa) and LPi organization (st-anne-church-17602) have no
 bulletins.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): "page-pdfs on https://www.stannechurch.org/parish-bulletins: first-listed, dated 2026-10-04". That is the newest issue the parish has posted, but not this week's, so no recipe is pinned yet; pin `page-pdfs <this page>` once a check picks the current Sunday.
+
 ## Not yet confirmed
 
 Whether the parish posts the 11 and 18 October issues (see `revisit`).
