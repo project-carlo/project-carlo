@@ -489,6 +489,16 @@ def test_a_link_titled_bulletin_beats_an_undated_first_pdf() -> None:
     }) == f"{HOME}/_files/ugd/c3.pdf"
 
 
+def test_a_link_titled_this_weeks_bulletin_beats_one_titled_bulletin() -> None:
+    # St. Ignatius, Orrtanna: the Wix header links a 2018 issue as "Bulletin".
+    assert _resolve({
+        HOME: (
+            '<a href="/_files/ugd/old.pdf">Bulletin</a>'
+            '<a href="/_files/ugd/new.pdf">This Weeks Bulletin</a>'
+        ),
+    }) == f"{HOME}/_files/ugd/new.pdf"
+
+
 def test_a_dated_series_beats_an_undated_unlabelled_first_pdf() -> None:
     # Our Lady of Peace, Hazleton lists a "Parish Consolidation" PDF above its
     # weekly issues, the newest of which can be two weeks old.
@@ -811,6 +821,24 @@ def test_a_304_to_an_unconditional_download_is_a_failure(monkeypatch) -> None:
     pdf = f"{HOME}/uploads/bulletin.pdf"
     with pytest.raises(HTTPError):
         fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
+
+
+def test_a_bot_check_over_http_is_retried_over_https(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    asked: list[str] = []
+
+    def get(url: str, **_: object) -> fetch._Response:
+        asked.append(url)
+        if url.startswith("http://"):
+            return fetch._Response(b"<html><head><link rel=stylesheet href=/.well-known/sgcaptcha/>")
+        return fetch._Response(b"%PDF-1.5")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    pdf = "http://example.org/wp-content/uploads/10.18.26-bulletin.pdf"
+    download = fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
+    assert download.pdf == b"%PDF-1.5"
+    assert asked == [pdf, "https://example.org/wp-content/uploads/10.18.26-bulletin.pdf"]
 
 
 # ── Recipes ─────────────────────────────────────────────────────────────────
