@@ -2,7 +2,7 @@
 name: St. Andrew the Apostle
 website: https://www.standrewwbo.org/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://church-bulletin.org/253
 publication:
 - url:https://www.church-bulletin.org/saint-andrew-catholic-church-waynesboro-pa-17268
 group: ''

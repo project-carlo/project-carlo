@@ -1,6 +1,6 @@
 ---
 parish: sacred-heart-of-jesus-lewisburg
-name: Sacred Heart
+name: Sacred Heart Church
 line1: 41 S 8th St.
 line2: ''
 city: Lewisburg
@@ -9,7 +9,7 @@ postal_code: '17837'
 latitude: 40.9601875
 longitude: -76.8894375
 coordinates_from: gcatholic-plus-code
-name_verified: false
+name_verified: true
 address_verified: false
 roster: ['gcatholic:23739', 'directory:sacred-heart-of-jesus-lewisburg']
 evidence:
@@ -22,14 +22,21 @@ evidence:
   seen: 2026-10-19
   note: 'Listed in Diocese of Harrisburg: Find a Parish, Church or Mass Time as ''Sacred Heart of Jesus'',
     814 St Louis St, Lewisburg, PA, 17837; kind: Parish in Lewisburg'
+- url: https://discovermass.com/church/sacred-heart-of-jesus-lewisburg-pa/
+  seen: 2026-10-19
+  quote: Sacred Heart Church Corner of 8th & St. Louis Streets Lewisburg, PA 17837
+  note: '18 October 2026 issue: Saturday 5:00 pm, Sunday 8:00 am and 12:00 noon, Monday, Tuesday, Thursday
+    and Friday 9:00 am, all SHC.'
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin: Saturday 5:00 pm, Sunday 8:00 am and 12:00 noon, and
+weekday Masses Monday, Tuesday, Thursday and Friday at 9:00 am.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin places the church at the "Corner of 8th & St. Louis Streets" and the parish
+office at 814 St. Louis Street (the address the diocese gives); GCatholic gives 41 S 8th St.
+Kept GCatholic's 41 S 8th St. and its Plus Code (87G5X466+36), which sits on the corner the
+bulletin names. Address flag false: the bulletin gives no street number for the church.

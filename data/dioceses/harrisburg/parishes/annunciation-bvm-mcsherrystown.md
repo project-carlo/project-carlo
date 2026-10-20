@@ -51,6 +51,8 @@ The parish homepage embeds its Discover Mass church page, which lists issues up 
 October 2026 (and 11 and 4 October), so `discover_mass` with that church slug as
 `provider_id`.
 
+Fetch check (2026-10-20): resolved to this week's Discover Mass issue.
+
 ## Not yet confirmed
 
 Nothing.

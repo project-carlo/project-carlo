@@ -2,7 +2,7 @@
 name: Holy Infant
 website: https://holyinfantparish.com/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs http://fataonline.com/bulletins/holyinfant
 publication:
 - url:https://www.fataonline.com/bulletins/holyinfant
 group: ''

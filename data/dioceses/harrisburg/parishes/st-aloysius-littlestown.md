@@ -5,27 +5,41 @@ bulletin_provider: discover_mass
 provider_id: st-aloysius-littlestown-pa
 publication: ['discovermass:st-aloysius-littlestown-pa']
 group: ''
-evidence: []
+evidence:
+- url: https://discovermass.com/church/st-aloysius-littlestown-pa/
+  seen: 2026-10-19
+  quote: Saint Aloysius Gonzaga Church
+  note: 'The 18 October 2026 issue (download links carry a per-request token, so cited by the church page).
+    Page 1 masthead: "Saint Aloysius Gonzaga Church, 29 South Queen Street, Littlestown, PA 17340, staloysiuslittlestown.com,
+    October 18, 2026 29th Sunday in Ordinary Time"; "Rev. C. Anthony Miller".'
+- url: https://discovermass.com/church/st-aloysius-littlestown-pa/
+  seen: 2026-10-19
+  quote: Sunday @7 :00a m& 10 am
+- url: https://www.staloysiuslittlestown.com/bulletins.html
+  seen: 2026-10-20
+  note: The parish's Bulletins page links its Discover Mass church page and the issue downloads. The site
+    answered 503 on 2026-10-19 and 200 on 2026-10-20.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+Saint Aloysius Gonzaga, 29 South Queen Street, Littlestown publishes its own weekly
+bulletin through Discover Mass. I read the 18 October 2026 issue: the page-1 masthead
+names this church alone, with Rev. C. Anthony Miller, and gives Saturday 5:00 pm and Sunday
+7:00 and 10:00 am, weekdays 8:30 am. Matches the diocesan directory. No partner parish.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+- Saint Aloysius, 29 S Queen St, Littlestown (`st-aloysius-littlestown`). The bulletin's
+  "Chapel" (Rosary, Adoration) is a chapel inside the parish buildings with no Mass of its own.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`website` is the parish's Bulletins page, which links the Discover Mass church page
+`st-aloysius-littlestown-pa` (issues to 18 October 2026), so `discover_mass`.
+
+Fetch check (2026-10-20): resolved to this week's Discover Mass issue.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.

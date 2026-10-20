@@ -2,7 +2,7 @@
 name: St. John the Baptist
 website: https://www.sjbnf.org/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.fataonline.com/bulletins/StJohnNF
 publication:
 - url:https://www.fataonline.com/bulletins/StJohnNF
 group: ''

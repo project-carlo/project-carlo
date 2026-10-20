@@ -1,6 +1,6 @@
 ---
 parish: holy-trinity-columbia
-name: Holy Trinity
+name: Holy Trinity Catholic Church
 line1: 409 Cherry St
 line2: ''
 city: Columbia
@@ -17,14 +17,24 @@ evidence:
   seen: 2026-10-19
   note: 'Listed in Diocese of Harrisburg: Find a Parish, Church or Mass Time as ''Holy Trinity'', 409
     Cherry St, Columbia, PA, 17512; kind: Parish in Columbia'
+- url: https://holytrinitycolumbiapa.com/wp-content/uploads/October-11.pdf
+  seen: 2026-10-19
+  quote: Weekend Masses Saturday 4:00 p.m. Sunday 8:00 a.m. Weekday Masses Monday and Friday 8:00 a.m.
+  note: Page 1 of the 11 October 2026 Holy Trinity bulletin (the newest posted on 20 October).
+- url: https://holytrinitycolumbiapa.com/parish-life/liturgy/the-mass/
+  seen: 2026-10-19
+  quote: Holy Trinity Church is located at 409 Cherry St, Columbia PA 17512
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 11 October 2026 bulletin gives Saturday 4:00 p.m., Sunday 8:00 a.m., and Monday and
+Friday 8:00 a.m., with intentions for the weekend of 17-18 October; the parish's Mass page
+gives the same.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin ("409 Cherry Street ~ Columbia"), the parish's Mass page and the diocese's
+directory agree on 409 Cherry St, Columbia; the parish's parking lot is 420 Cherry St.
+GCatholic omits the church, so there is no second independent source and both flags stay
+false. Coordinates are the directory's map pin (40.032336, -76.500107).

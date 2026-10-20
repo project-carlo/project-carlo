@@ -1,6 +1,6 @@
 ---
 parish: sacred-heart-of-jesus-lancaster
-name: Sacred Heart
+name: Sacred Heart of Jesus Church
 line1: 558 W Walnut St.
 line2: ''
 city: Lancaster
@@ -9,8 +9,8 @@ postal_code: '17603'
 latitude: 40.0415625
 longitude: -76.3176875
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:23738', 'directory:sacred-heart-of-jesus-lancaster']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23738
@@ -22,14 +22,21 @@ evidence:
   seen: 2026-10-19
   note: 'Listed in Diocese of Harrisburg: Find a Parish, Church or Mass Time as ''Sacred Heart of Jesus'',
     558 W Walnut St, Lancaster, PA, 17603; kind: Parish in Lancaster'
+- url: https://discovermass.com/church/sacred-heart-of-jesus-lancaster-pa/
+  seen: 2026-10-19
+  quote: 'MASS SCHEDULE: Vigil5 :00P MS unday8 :00A M1 0:30 AM 6:00 PM'
+  note: Page 1 masthead of the 18 October 2026 Sacred Heart of Jesus bulletin; weekday Mass 8:30 AM (page
+    2 intentions).
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The 18 October 2026 bulletin gives Vigil 5:00 PM, Sunday 8:00 AM, 10:30 AM and 6:00 PM, and
+weekday Mass 8:30 AM, and lists intentions for each. The directory agrees.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin masthead (558 W. Walnut St., Lancaster PA 17603), the diocese's directory
+("Sacred Heart of Jesus", 558 W Walnut St) and GCatholic ("Sacred Heart", 558 W Walnut St.)
+agree; both flags true. The directory has no map pin for it; coordinates are GCatholic's
+Plus Code (87G52MRJ+JW).

@@ -5,27 +5,53 @@ bulletin_provider: discover_mass
 provider_id: st-john-neumann-lancaster-pa
 publication: ['discovermass:st-john-neumann-lancaster-pa', 'url:https://www.sjnlancaster.org/2026bulletins']
 group: ''
-evidence: []
+evidence:
+- url: https://discovermass.com/church/st-john-neumann-lancaster-pa/
+  seen: 2026-10-19
+  quote: MASS SCHEDULE Saturday |4 :00p mV igil Sunday |7 :30a m, 9:00 am,1 1:00 am, 5:00 pm
+  note: Page 1 of the 18 October 2026 issue (J.S. Paluch; newest listed on Discover Mass). Text layer
+    garbles spacing, quoted as extracted. The same page gives weekday Masses Monday-Friday 9:00 am and
+    Thursday 6:00 pm.
+- url: https://discovermass.com/church/st-john-neumann-lancaster-pa/
+  seen: 2026-10-19
+  quote: 601 E. DelpR oad,L ancaster, PA 17601
+  note: Page 1 masthead of the same issue, after "ST.J OHNN EUMANN CA TH OL IC CH UR CH".
+- url: https://www.sjnlancaster.org/2026bulletins
+  seen: 2026-10-19
+  quote: The Twenty Ninth Sunday in Ordinary Time
+  note: The parish's own Wix "2026 bulletins" page lists one card per Sunday, newest first, each linking
+    a hash-named PDF (the 29th Sunday card links /_files/ugd/82f7a6_9c4a49c7d5ae4b4d8404d44ff28d8475.pdf,
+    the same issue as on Discover Mass; it prints "View this bulletin online at www.DiscoverMass.com").
+- url: https://parishesonline.com/organization/st-john-neumann-catholic-church-17601
+  seen: 2026-10-19
+  note: LPi organization lpi:0018000000Qx9Q4AAJ exists with no publications (probe po). Not a live channel;
+    not recorded as a publication.
 ---
 
 ## Publisher
 
-TODO: Who publishes this bulletin and which worship sites it covers. Name the issue you
-read (its date, and the page) and quote the masthead or Mass schedule that lists them. If
-the diocese groups this parish with others, say whether they share this bulletin and what
-shows it.
+St. John Neumann Catholic Church, 601 E. Delp Road, Lancaster, publishes its own weekly bulletin
+through J.S. Paluch. The 18 October 2026 issue (read 19 October on Discover Mass, and the same
+PDF on the parish's Wix page) has a page 1 masthead naming "St. John Neumann Catholic Church,
+601 E. Delp Road, Lancaster, PA 17601" with one Mass schedule: Saturday 4:00 pm vigil; Sunday
+7:30, 9:00, 11:00 am and 5:00 pm; weekdays Monday-Friday 9:00 am and Thursday 6:00 pm. Page 2
+gives Very Rev. Daniel F.X. Powell, V.F. as pastor. No other building is named.
 
 ## Worship sites
 
-TODO: Why exactly these churches. Name any building the bulletin, the diocese or a roster
-still lists that is not here, and where it went (excluded/, open/, another parish).
+One church, `st-john-neumann-lancaster`. GCatholic also lists a Ukrainian Catholic mission
+"Using the building: Church of St. John Neumann" (gcatholic:17542); it belongs to the Ukrainian
+Archeparchy of Philadelphia and is excluded as `other-jurisdiction`
+(`excluded/ukrainian-mission-lancaster`). The bulletin does not mention it.
 
 ## Website and bulletin provider
 
-TODO: Why this URL is where the bulletin can be found, and where bulletin_provider,
-provider_id and publication came from. For `other`, the provider_id recipe and the
-`fetch:check` run that suggested it.
+`discover_mass`, provider_id `st-john-neumann-lancaster-pa`. The parish site
+(www.sjnlancaster.org; GCatholic's saintjohnneumannlancaster.org is the old domain) is a Wix
+site whose "2026 bulletins" page links the same J.S. Paluch PDFs under hash names; Discover
+Mass dates each issue, so it is the cleaner source. Both are recorded as publications. The
+website is the parish homepage.
 
 ## Not yet confirmed
 
-TODO: Anything you could not check, and what would settle it. "Nothing." if nothing.
+Nothing.
