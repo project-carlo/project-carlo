@@ -2,7 +2,7 @@
 name: Saint Ignatius of Loyola
 website: https://www.stignatiusofloyola.org/bulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs
 publication: ['url:https://www.stignatiusofloyola.org/bulletin']
 group: ''
 evidence:
@@ -42,15 +42,16 @@ parish.
 `website` is the "Weekly Church Bulletin" page; each issue is an undated Wix file
 (`/_files/ugd/<hash>.pdf`), so `other` with `url:` publication.
 
-**The resolver picks the wrong file.** Fetch check (2026-10-20): `page-pdfs on
-https://www.stignatiusofloyola.org/bulletin: titled`, picking
+The first fetch check (2026-10-20) picked the wrong file: `page-pdfs on
+https://www.stignatiusofloyola.org/bulletin: titled`, choosing
 `b7c955_dda2d8e07f0049df9199c38f69969c76.pdf`, the site header's "Bulletin" link, which is
 the **27-28 January 2018** issue (Bishop Gainer, Fr. DiBiccaro). This week's issue is the link
-titled "This Weeks Bulletin". Every link on the page is undated, so the "titled" rule (a
-link whose whole text is "Bulletin") wins. No recipe can choose between two links on one
-page, so none is pinned; reported to the coordinator as a resolver issue (do not promote
-this row until the pick is right).
+titled "This Weeks Bulletin". Every link on the page is undated, and both titles counted as
+"titled", so the first listed won. The resolver now prefers a link titled "This Week's",
+"Current" or "Latest Bulletin" over a bare "Bulletin" (same PR). The re-run on 2026-10-20
+picked `b7c955_0f300c33c83d4f9285f82f5c43830804.pdf`, the 18 October issue quoted above, and
+the recipe `page-pdfs` is pinned.
 
 ## Not yet confirmed
 
-A correct fetch pick (see above). The issue itself is fine.
+Nothing open. The pick rests on the link's title, so if the site renames "This Weeks Bulletin" the fetch may fall back to the 2018 header link.

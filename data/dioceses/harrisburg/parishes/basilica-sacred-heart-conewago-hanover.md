@@ -49,11 +49,10 @@ Fetch check (2026-10-20, `fetch_check` on a temporary CSV of this region's rows)
 on https://sacredheartbasilica.com/bulletins/: current`, picking
 `http://sacredheartbasilica.com/wp-content/uploads/2026/10/10.18.26-bulletin.pdf`, the right
 issue, but the download was `not_pdf` (222 bytes: the sgcaptcha page, because the page
-links the PDFs over `http://`). Recipe `page-pdfs` pinned, since the pick is right; the
-download needs a resolver/downloader change (fetch the PDF over https, or in the browser),
-reported to the coordinator rather than changed here.
+links the PDFs over `http://`). Recipe `page-pdfs` pinned, since the pick is right. The
+downloader now retries over https when http answers with something other than a PDF (same
+PR), and the re-run on 2026-10-20 downloaded the 18 October issue (3,013,270 bytes, `ok`).
 
 ## Not yet confirmed
 
-Whether the weekly fetch can download the PDF (see above). Revisit after the downloader is
-looked at.
+Nothing open.
