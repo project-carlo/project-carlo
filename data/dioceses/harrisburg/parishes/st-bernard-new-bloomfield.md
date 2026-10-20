@@ -20,6 +20,7 @@ evidence:
   quote: October 18, 2026 Bulleitn
   note: The site's Online Bulletin page links one post per Sunday (the 18 October title is misspelt) and
     the PDFs wp-content/uploads/2026/10/October-18-Bulletin.pdf etc.
+promoted: 2026-10-20
 ---
 
 ## Publisher

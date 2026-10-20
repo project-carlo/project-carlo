@@ -22,6 +22,7 @@ evidence:
   note: The parish's WordPress bulletins page (read in a browser with parish-site-access visit.py; probe
     url could not connect) lists the same issues as wp-content/uploads/2026/10/2026.10.18.pdf, 2026.10.11.pdf,
     ...
+promoted: 2026-10-20
 ---
 
 ## Publisher

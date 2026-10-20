@@ -22,6 +22,7 @@ evidence:
 - url: https://stlawrence.cc/whats-new/bulletins
   seen: 2026-10-19
   note: The Bulletins page lists /images/bulletins/2026/Bulletin<MM.DD.YYYY>.pdf, newest 10.18.2026.
+promoted: 2026-10-20
 ---
 
 ## Publisher

@@ -3,8 +3,7 @@ name: St. Mark the Evangelist and St. Luke the Evangelist Mission
 website: https://www.stmarkstlukeparish.org/home/bulletins/
 bulletin_provider: discover_mass
 provider_id: st-mark-the-evangelist-greencastle-pa
-publication:
-- discovermass:st-mark-the-evangelist-greencastle-pa
+publication: ['discovermass:st-mark-the-evangelist-greencastle-pa']
 group: ''
 evidence:
 - url: https://discovermass.com/church/st-mark-the-evangelist-greencastle-pa/
@@ -18,6 +17,7 @@ evidence:
 - url: https://www.stmarkstlukeparish.org/home/bulletins/
   seen: 2026-10-19
   note: The shared parish site's Bulletins page links only https://discovermass.com/church/st-mark-the-evangelist-greencastle-pa/#bulletins.
+promoted: 2026-10-20
 ---
 
 ## Publisher

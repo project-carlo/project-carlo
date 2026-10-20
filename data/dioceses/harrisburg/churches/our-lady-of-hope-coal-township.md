@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-19
   note: 'OSM node "Our Lady of Hope" (place_of_worship, catholic), addr 863 West Chestnut Street (40.78715,
     -76.56640): about 130 m west of GCatholic''s Plus Code.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

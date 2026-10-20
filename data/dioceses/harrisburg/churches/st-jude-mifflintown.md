@@ -28,6 +28,7 @@ evidence:
   note: 'Page 4 of the 4 October 2026 issue: Sunday 4 and 11 October 9:00 am, Monday 5 October 9:00 am,
     Wednesday 7 October 6:30 pm; page 1: confession "at 6:00 pm on Wednesdays and 8:30 am on Sundays at
     St. Jude, Mifflintown".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
 - url: https://www.stleos.org/
   seen: 2026-10-20
   quote: Come meet our pastor, Rev. Peter I. Hahn and our Parochial Vicar, Rev. Thomas Meinert.
+promoted: 2026-10-20
 ---
 
 ## Publisher

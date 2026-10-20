@@ -20,6 +20,7 @@ evidence:
   note: 'probe po: "St. Richard Church", 110 N Oak St, Manheim, lpi:0018000000Qx9Q1AAJ, container 03/1168,
     weekly issues to 18 October 2026. Found with ParishesOnline''s own search for "Manheim, PA" (in a
     browser).'
+promoted: 2026-10-20
 ---
 
 ## Publisher

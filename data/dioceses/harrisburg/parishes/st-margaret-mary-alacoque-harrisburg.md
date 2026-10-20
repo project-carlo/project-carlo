@@ -21,6 +21,7 @@ evidence:
 - url: https://stmmparish.org/
   seen: 2026-10-19
   note: probe url found discovermass:st-margaret-mary-alacoque-harrisburg-pa on the parish homepage.
+promoted: 2026-10-20
 ---
 
 ## Publisher

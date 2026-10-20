@@ -24,9 +24,7 @@ evidence:
   quote: 'Masses are currently offered at two different locations: St. Joseph Church and Holy Family Chapel.'
   note: 'The Lancaster Latin Mass Community''s schedule: "St. Joseph Catholic Church 440 St. Joseph Street
     Lancaster, PA 17603 Sundays: 1:00 p.m."'
-revisit: 'Re-run the fetch check: on 2026-10-20 Discover Mass refused the download with its daily cap
-  ("Maximum number of files downloaded today").'
-revisit_after: 2026-10-22
+promoted: 2026-10-20
 ---
 
 ## Publisher
@@ -57,6 +55,7 @@ in about 20 browser loads on 19 October, so it is the website but not the source
 LPi organization is noted in evidence.
 
 Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): the resolver found the newest issue's download link but got a 134-byte page instead of the PDF: Discover Mass answered "Maximum number of files downloaded today", a daily download cap this sandbox had used up while the region was being researched (the same issues downloaded as PDFs on 19 October). Re-run the check on another day before treating it as a failure.
+Re-run on 2026-10-20 after the cap cleared: `ok`, the newest issue downloaded (2,146,364 bytes).
 
 ## Not yet confirmed
 

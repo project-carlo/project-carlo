@@ -25,12 +25,13 @@ evidence:
 - url: https://irp.cdn-website.com/4f92a0c3/files/uploaded/2026-10-18.pdf
   seen: 2026-10-19
   quote: 13219 Monterey Lane, PO Box 365 Blue Ridge Summit, PA 17214
-  note: 'Joint St. Mary''s/St. Rita bulletin, 18 October 2026, page 1, followed by "Mass Schedule Saturday
-    · 4:30pm Sunday · 8:30 & 11:00am Weekday · 9:00am".'
+  note: Joint St. Mary's/St. Rita bulletin, 18 October 2026, page 1, followed by "Mass Schedule Saturday
+    · 4:30pm Sunday · 8:30 & 11:00am Weekday · 9:00am".
 - url: https://discovermass.com/church/st-rita-blue-ridge-summit-pa/
   seen: 2026-10-19
-  quote: 'St. Rita Mass Intentions … 11:00amP eople of the Parish'
+  quote: St. Rita Mass Intentions … 11:00amP eople of the Parish
   note: 18 October 2026 issue, page 2 (the PDF's text layer splits "People" as quoted).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

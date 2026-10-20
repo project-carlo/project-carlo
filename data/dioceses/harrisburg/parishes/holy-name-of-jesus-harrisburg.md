@@ -19,6 +19,7 @@ evidence:
   seen: 2026-10-19
   note: probe url on the parish homepage found lpi:0018000000Qbz27AAB and po-org:holy-name-of-jesus-church-17112;
     probe po lists issues up to 2026-10-18 in container 04/0011.
+promoted: 2026-10-20
 ---
 
 ## Publisher

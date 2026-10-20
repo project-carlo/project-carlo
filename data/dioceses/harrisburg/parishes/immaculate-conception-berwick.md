@@ -20,6 +20,7 @@ evidence:
   note: 'eCatholic site behind Cloudflare (probe url 403), loaded on the first try in headed Chrome (visit.py):
     title "Immaculate Conception of the Blessed Virgin Mary - Berwick, PA", embeds ecatholic:29170. probe
     po: ParishesOnline organization immaculate-conception-b-v-m-st-marys-church has no publications.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

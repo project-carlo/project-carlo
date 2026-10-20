@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-19
   note: Discover Mass page with no bulletins listed (issues.py); LPi organization st-anthony-of-padua-church-17602
     also has none.
+promoted: 2026-10-20
 ---
 
 ## Publisher

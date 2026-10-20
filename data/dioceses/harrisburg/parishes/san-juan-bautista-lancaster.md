@@ -35,6 +35,7 @@ evidence:
     Parish": "Father Luis Rodriguez will be appointed Pastor of Saint Anthony Parish while remaining Pastor
     of San Juan Bautista Parish ... For the present, both parishes will remain proper canonical parishes,
     even though their mission, administration and operations will begin to work together."'
+promoted: 2026-10-20
 ---
 
 ## Publisher

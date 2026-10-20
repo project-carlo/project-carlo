@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-19
   quote: Saint Catherine of Siena Church 955 Robert Fulton Hwy., Quarryville, PA 17566-9543
   note: Footer of the parish's eCatholic site (behind Cloudflare; read in a browser with visit.py).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

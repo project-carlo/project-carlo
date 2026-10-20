@@ -3,10 +3,7 @@ name: Immaculate Conception of the BVM (St. Mary's)
 website: https://www.stmarysyork.org/
 bulletin_provider: parishes_online
 provider_id: immaculate-conception-church-17401
-publication:
-- po-org:immaculate-conception-church-17401
-- lpi:0018000000Qbz4EAAR
-- po-container:03/0654
+publication: ['po-org:immaculate-conception-church-17401', 'lpi:0018000000Qbz4EAAR', 'po-container:03/0654']
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0654/20261018B.pdf
@@ -23,6 +20,7 @@ evidence:
   quote: St. Mary’s Immaculate Conception Church
   note: Parish site title; `probe url` found the ParishesOnline organization po-org:immaculate-conception-church-17401
     embedded in it.
+promoted: 2026-10-20
 ---
 
 ## Publisher

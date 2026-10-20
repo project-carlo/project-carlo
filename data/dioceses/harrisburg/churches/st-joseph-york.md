@@ -11,9 +11,7 @@ longitude: -76.6679375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23764
-- directory:saint-joseph-york
+roster: ['gcatholic:23764', 'directory:saint-joseph-york']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23764
   seen: 2026-10-19
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: Saturday5:00PM Sunday7 :00/ 9:00/11:30AM
   note: 18 October 2026 issue, page 1, under "St. Joseph Church 2935 Kingston Road, York, PA 17402-4003".
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

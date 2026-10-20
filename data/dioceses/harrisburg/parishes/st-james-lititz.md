@@ -23,6 +23,7 @@ evidence:
   note: John Patrick Publishing has a listing "Saint James Catholic Church, Lititz, PA 17543" (redirects
     to church-bulletin.org/saint-james-catholic-church-lititz-pa-17543) with no bulletins on it (dated
     PDF paths for 27 Sep-25 Oct answer 404); not a live channel.
+promoted: 2026-10-20
 ---
 
 ## Publisher

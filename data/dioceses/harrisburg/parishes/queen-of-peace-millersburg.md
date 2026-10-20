@@ -18,6 +18,7 @@ evidence:
   seen: 2026-10-19
   note: 'Behind Cloudflare for curl (probe url HTTP4XX); visit.py loaded it on the first try: eCatholic
     site ecatholic:29106 with a /bulletins page.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

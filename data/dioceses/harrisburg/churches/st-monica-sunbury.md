@@ -27,6 +27,7 @@ evidence:
   quote: Masses - All Masses in Main Church
   note: 'Page 1, 18 October 2026: Saturday 5:30 pm, Sunday 10:00 am, Monday-Tuesday and Thursday-Friday
     9:00 am.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

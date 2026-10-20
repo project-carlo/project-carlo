@@ -10,16 +10,17 @@ evidence:
   seen: 2026-10-19
   quote: 1 Peter Drive, Mechanicsburg, PA 17050
   note: 'Issue of 18 October 2026 (8 pages), page 1: "Saint Katharine Drexel Church ... 1 Peter Drive,
-    Mechanicsburg, PA 17050, 717-697-8716 | www.skdparish.com", "October 18, 2026", "MASS TIMES Sunday -
-    8:30 & 11:00 am*, Monday - 9:00 am, Tuesday - 9:00 am, Wednesday - 7:00 pm, Thursday - 9:00 am,
+    Mechanicsburg, PA 17050, 717-697-8716 | www.skdparish.com", "October 18, 2026", "MASS TIMES Sunday
+    - 8:30 & 11:00 am*, Monday - 9:00 am, Tuesday - 9:00 am, Wednesday - 7:00 pm, Thursday - 9:00 am,
     Friday - 9:00 am, Saturday - 4:30 pm"; Rev. James E. Lease, Pastor.'
 - url: https://discovermass.com/church/st-katharine-drexel-mechanicsburg-pa/
   seen: 2026-10-19
   quote: Sunday - 8:30 & 11:00 am
 - url: https://skdparish.com/
   seen: 2026-10-19
-  note: Behind Cloudflare (probe url 403; parish-site-access visit.py BLOCKED on every load). The
-    bulletin was read on Discover Mass.
+  note: Behind Cloudflare (probe url 403; parish-site-access visit.py BLOCKED on every load). The bulletin
+    was read on Discover Mass.
+promoted: 2026-10-20
 ---
 
 ## Publisher

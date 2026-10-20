@@ -3,10 +3,7 @@ name: St. Rose of Lima
 website: https://www.saintroseoflimayorkpa.org/bulletins
 bulletin_provider: parishes_online
 provider_id: st-rose-of-lima-church-17401
-publication:
-- po-org:st-rose-of-lima-church-17401
-- lpi:0018000000Qc2S1AAJ
-- po-container:04/0034
+publication: ['po-org:st-rose-of-lima-church-17401', 'lpi:0018000000Qc2S1AAJ', 'po-container:04/0034']
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0034/20261018B.pdf
@@ -18,6 +15,7 @@ evidence:
 - url: https://www.saintroseoflimayorkpa.org/bulletins
   seen: 2026-10-19
   note: Parish bulletin page; embeds the ParishesOnline publication widget (publicationWidget?type=bulletin&id=0018000000Qc2S1AAJ).
+promoted: 2026-10-20
 ---
 
 ## Publisher

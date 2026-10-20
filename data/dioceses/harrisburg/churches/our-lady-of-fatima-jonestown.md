@@ -33,6 +33,7 @@ evidence:
   quote: 9:00am People of the Parish
   note: 'Issue of 18 October 2026, page 2: the Sunday 18 October 9:00am Mass is marked "FM"; Sunday 25
     October "9:00 am †Charles Shay ... FM".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

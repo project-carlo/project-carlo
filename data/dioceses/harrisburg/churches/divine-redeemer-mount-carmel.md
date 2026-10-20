@@ -33,6 +33,7 @@ evidence:
   note: 'OSM has two buildings named "Divine Redeemer Church": way 373847620 (place_of_worship, no address,
     by West Cherry Street, about 25 m from GCatholic''s Plus Code) and way 1076224088 (place_of_worship,
     addr 438 West Avenue, at the diocese''s map pin, about 150 m west).'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

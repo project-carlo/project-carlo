@@ -31,6 +31,7 @@ evidence:
 - url: https://discovermass.com/church/st-elizabeth-ann-seton-mechanicsburg-pa/
   seen: 2026-10-19
   quote: 310H ertzler Road,
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

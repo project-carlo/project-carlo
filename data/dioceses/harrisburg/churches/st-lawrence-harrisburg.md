@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: 'Monday to Friday: 7:10am'
   note: Page 1 MASS TIMES, 18 October 2026 issue.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

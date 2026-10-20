@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-19
   note: The parish's Bulletin page links irp.cdn-website.com/9b8424fc/files/uploaded/2026-10-18.pdf, 2026-10-11.pdf
     and 2026-10-04-c886d054.pdf.
+promoted: 2026-10-20
 ---
 
 ## Publisher

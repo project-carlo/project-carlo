@@ -19,6 +19,7 @@ evidence:
     headed Chrome on 20 October (the homepage never did): ecatholic:24789, issues "October 18, 2026" back
     weekly. ParishesOnline organization st-joseph-church-17847 has no publications; Discover Mass st-joseph-milton-pa
     lists none.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

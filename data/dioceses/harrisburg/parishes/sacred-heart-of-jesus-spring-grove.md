@@ -19,6 +19,7 @@ evidence:
 - url: https://sacredheartsg.com/bulletins/
   seen: 2026-10-19
   note: The parish's Bulletins page lists the Discover Mass download links (bulletins.discovermass.com).
+promoted: 2026-10-20
 ---
 
 ## Publisher

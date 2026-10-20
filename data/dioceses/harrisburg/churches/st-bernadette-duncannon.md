@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: 11 a.m. SB
   note: 'Page 2 of the 18 October 2026 issue: Sunday 25 October 11 a.m. at SB.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

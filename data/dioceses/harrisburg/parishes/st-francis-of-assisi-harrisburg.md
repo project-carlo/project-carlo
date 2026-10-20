@@ -27,6 +27,7 @@ evidence:
   note: The diocese's closed-parishes list (as of November 21, 2024) puts Holy Family, Harrisburg under
     St. Francis of Assisi. The diocese's site sometimes drops scripted connections (recheck on 2026-10-19
     got 'Remote end closed connection'); plain curl and a browser (visit.py) loaded it the same day.
+promoted: 2026-10-20
 ---
 
 ## Publisher

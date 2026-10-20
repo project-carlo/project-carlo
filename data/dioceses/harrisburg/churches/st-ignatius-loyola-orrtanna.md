@@ -32,6 +32,7 @@ evidence:
 - url: https://www.stignatiusofloyola.org/_files/ugd/b7c955_0f300c33c83d4f9285f82f5c43830804.pdf
   seen: 2026-10-19
   quote: 1095 Church Road, Orrtanna, Pennsylvania 17353
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

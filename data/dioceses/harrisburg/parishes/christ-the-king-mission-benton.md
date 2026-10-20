@@ -23,6 +23,7 @@ evidence:
   quote: 300 Mendenhall Lane,
   note: 'The same bulletin on Discover Mass: issues of 4, 11 and 18 October 2026 listed; the 4 and 11
     October issues have page 1 text "300 Mendenhall Lane,"; the 18 October one has no text layer.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

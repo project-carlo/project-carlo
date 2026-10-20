@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: Saturday:5:00PM(EN)
   note: Page 1 of the 18 October 2026 issue (cited by the Discover Mass church page).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

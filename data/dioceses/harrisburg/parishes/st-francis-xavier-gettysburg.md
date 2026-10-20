@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-19
   note: The parish's Bulletin page (Squarespace) links the Discover Mass downloads for 18 October, 11
     October, 4 October, 27 September and 20 September 2026 (read in a browser, visit.py).
+promoted: 2026-10-20
 ---
 
 ## Publisher

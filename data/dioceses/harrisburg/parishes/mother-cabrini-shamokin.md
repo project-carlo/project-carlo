@@ -27,6 +27,7 @@ evidence:
   note: 'probe po: ParishesOnline organization mother-cabrini-catholic-church (lpi:0018000000Qx9QOAAZ),
     website revivingtogether.com, has no publications: not a current channel. Discover Mass page mother-cabrini-shamokin-pa
     lists no bulletins.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

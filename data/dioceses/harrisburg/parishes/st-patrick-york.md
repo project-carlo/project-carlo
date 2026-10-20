@@ -3,8 +3,7 @@ name: St. Patrick
 website: https://www.stpatrickyork.org/
 bulletin_provider: discover_mass
 provider_id: st-patrick-york-pa
-publication:
-- discovermass:st-patrick-york-pa
+publication: ['discovermass:st-patrick-york-pa']
 group: ''
 evidence:
 - url: https://discovermass.com/church/st-patrick-york-pa/
@@ -13,6 +12,7 @@ evidence:
   note: 'Discover Mass church page; 18 October 2026 issue, page 1: "St. Patrick Church 219 S. Beaver Street,
     York, PA 17401", Pastor Fr. Stephen Kelley; Sunday 8:00 a.m., 11:00 a.m., 5:00 p.m.; weekdays Monday,
     Tuesday, Thursday, Friday 9:00 a.m., Wednesday 5:30 p.m.; "Good Shepherd Perpetual Adoration Chapel".'
+promoted: 2026-10-20
 ---
 
 ## Publisher
@@ -36,6 +36,10 @@ Cemetery (Violet Hill) is a cemetery.
 `discover_mass`, slug `st-patrick-york-pa`, issues listed to 18 October 2026 (checked
 2026-10-19). The parish site stpatrickyork.org is behind Cloudflare and never loaded in the
 sandbox (visit.py: BLOCKED), so its bulletin link was not seen.
+
+Fetch check (2026-10-20, temporary CSV, xvfb-run with Chrome): three runs got Discover Mass's
+134-byte "Maximum number of files downloaded today" reply (its per-IP daily cap); the re-run
+after the cap cleared was `ok` (1,920,793 bytes).
 
 ## Not yet confirmed
 

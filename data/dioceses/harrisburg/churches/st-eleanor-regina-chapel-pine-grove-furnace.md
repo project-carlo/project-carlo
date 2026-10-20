@@ -41,6 +41,7 @@ revisit: 'Seasonal: Sunday 11:30 am Mass ("ERC") from Memorial Day to Labor Day 
   bulletins of late May / June 2027 (container 04/0437) for "11:30 am ERC"; if absent by 1 July 2027,
   move this chapel to open/.'
 revisit_after: 2027-06-01
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

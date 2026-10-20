@@ -31,6 +31,7 @@ evidence:
 revisit: The newest issue on both eCatholic sites on 20 October 2026 was 4 October (11 and 18 October
   answer 403); check whether the bulletin is now fortnightly or has moved.
 revisit_after: 2026-10-27
+promoted: 2026-10-20
 ---
 
 ## Publisher

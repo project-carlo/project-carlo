@@ -28,6 +28,7 @@ evidence:
   note: Directory Mass times "9:00AM – Xavier Center/Centro Javier (Bilingual – Live Streamed)" and "12:00PM
     – Centro Javier (en Español)"; Associated Locations "Saint Francis Xavier School & Xavier Center,
     465 Table Rock Rd., Gettysburg". Not reachable by recheck (see the historic church).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

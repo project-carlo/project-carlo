@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-19
   quote: 'Address: 120 E. Lehman Street, Lebanon, PA 17046'
   note: Issue of 18 October 2026, page 3, staff and office information.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

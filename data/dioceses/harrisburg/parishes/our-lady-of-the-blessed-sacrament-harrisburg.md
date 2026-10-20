@@ -16,6 +16,7 @@ evidence:
 - url: https://olbsharrisburg.org/about-us/bulletin/
   seen: 2026-10-19
   note: The parish site's Bulletin page links discovermass.com/church/our-lady-of-the-blessed-sacrament-harrisburg-pa/#bulletins.
+promoted: 2026-10-20
 ---
 
 ## Publisher

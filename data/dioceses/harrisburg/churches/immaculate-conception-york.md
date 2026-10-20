@@ -11,9 +11,7 @@ longitude: -76.7251875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23719
-- directory:immaculate-conception-york
+roster: ['gcatholic:23719', 'directory:immaculate-conception-york']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23719
   seen: 2026-10-19
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-10-19
   note: 'Page 1 (an image, read rendered): Mass Schedule, Weekend Masses "Saturday 5:30 pm English, Sunday
     9:00 am English, 11:30 am Spanish"; footer "Immaculate Conception BVM 309 S. George St. York, PA 17401-5514".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

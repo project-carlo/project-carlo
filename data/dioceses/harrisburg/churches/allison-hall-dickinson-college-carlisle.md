@@ -32,6 +32,7 @@ evidence:
 revisit: 'Academic-year Mass: check that the St. Patrick bulletin still lists "7:30 pm Dickinson" (or
   a "DCCM" Mass) in the spring 2027 semester; if not, move to open/.'
 revisit_after: 2027-02-15
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

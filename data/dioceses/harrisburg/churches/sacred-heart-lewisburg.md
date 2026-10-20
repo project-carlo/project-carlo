@@ -27,6 +27,7 @@ evidence:
   quote: Sacred Heart Church Corner of 8th & St. Louis Streets Lewisburg, PA 17837
   note: '18 October 2026 issue: Saturday 5:00 pm, Sunday 8:00 am and 12:00 noon, Monday, Tuesday, Thursday
     and Friday 9:00 am, all SHC.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

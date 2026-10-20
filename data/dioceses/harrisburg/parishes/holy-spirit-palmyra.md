@@ -9,20 +9,20 @@ evidence:
 - url: https://www.church-bulletin.org/holy-spirit-catholic-church-palmyra-pa-17078
   seen: 2026-10-19
   quote: Holy Spirit Catholic Church Palmyra, PA 17078
-  note: 'John Patrick Publishing listing: "Latest Edition October 18, 2026", one PDF per Sunday at
-    /bulletin/holy-spirit-catholic-church-palmyra-pa-17078/<YYYY-MM-DD>.pdf; contact block "300 West
-    Pine Street Palmyra, PA 17078".'
+  note: 'John Patrick Publishing listing: "Latest Edition October 18, 2026", one PDF per Sunday at /bulletin/holy-spirit-catholic-church-palmyra-pa-17078/<YYYY-MM-DD>.pdf;
+    contact block "300 West Pine Street Palmyra, PA 17078".'
 - url: https://www.church-bulletin.org/bulletin/holy-spirit-catholic-church-palmyra-pa-17078/2026-10-18.pdf
   seen: 2026-10-19
   note: 'Page 1 is an image (no text layer; read rendered with parish-site-access render.py): masthead
-    "HOLY SPIRIT CATHOLIC CHURCH, 300 West Pine Street, Palmyra, PA 17078", "Fr. Michael Metzgar,
-    Pastor", "Twenty-Ninth Sunday in Ordinary Time, October 18, 2026"; Mass Schedule: Saturday Vigil
-    4pm, Sunday Mass 8:30am & 11am; Daily Mass Monday (Chapel) 9am, Wednesday 6pm, Thursday 9am, Friday
-    7am. All four pages are images.'
+    "HOLY SPIRIT CATHOLIC CHURCH, 300 West Pine Street, Palmyra, PA 17078", "Fr. Michael Metzgar, Pastor",
+    "Twenty-Ninth Sunday in Ordinary Time, October 18, 2026"; Mass Schedule: Saturday Vigil 4pm, Sunday
+    Mass 8:30am & 11am; Daily Mass Monday (Chapel) 9am, Wednesday 6pm, Thursday 9am, Friday 7am. All four
+    pages are images.'
 - url: https://holyspiritpalmyra.com/bulletins/
   seen: 2026-10-19
   note: The parish site links its bulletin as http://www.jppc.net/onlinebulletins/230template.pdf, which
     redirects to church-bulletin.org/?id=230 and then to the listing above.
+promoted: 2026-10-20
 ---
 
 ## Publisher

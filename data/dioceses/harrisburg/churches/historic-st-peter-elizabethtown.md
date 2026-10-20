@@ -31,6 +31,7 @@ evidence:
   quote: St. Peter's Catholic Church, Aspen Alley
   note: OSM node 2039151659 (40.1500722, -76.6037748), downtown Elizabethtown, 1.6 km from the present
     church.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

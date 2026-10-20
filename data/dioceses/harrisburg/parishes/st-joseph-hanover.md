@@ -21,6 +21,7 @@ evidence:
   note: probe po st-joseph-catholic-church-17331 - "St. Joseph Catholic Church", 5055 Grandview Rd, Hanover,
     LPi id 0018000000Qc1S9AAJ, container 03/0579, issues weekly to 18 October 2026. The parish homepage
     embeds this org (probe url).
+promoted: 2026-10-20
 ---
 
 ## Publisher

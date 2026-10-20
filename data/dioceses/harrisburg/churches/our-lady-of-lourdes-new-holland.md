@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-20
   quote: Our Lady of Lourdes Catholic Church, 150, Water Street, New Holland
   note: OSM way 542288683 (40.0964212, -76.1169304).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

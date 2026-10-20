@@ -11,9 +11,7 @@ longitude: -76.6919375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23757
-- directory:st-john-the-baptist
+roster: ['gcatholic:23757', 'directory:st-john-the-baptist']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23757
   seen: 2026-10-19
@@ -32,6 +30,7 @@ evidence:
 - url: https://www.sjbnf.org/welcome
   seen: 2026-10-19
   quote: holds our Main Church, Historic Church, Parish Education building, and Parish outreach building
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

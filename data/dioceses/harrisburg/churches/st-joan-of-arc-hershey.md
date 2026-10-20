@@ -27,6 +27,7 @@ evidence:
   quote: 359 West Areba Ave., Hershey
   note: Page 1 of the 18 October 2026 issue; Mass schedule Saturday Vigil 5:00 pm, Sunday 7:30, 9:30,
     11:30 am and 5:00 pm.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

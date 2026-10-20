@@ -22,6 +22,7 @@ evidence:
   note: 'The parish site (Google Sites) links http://sponsors.bonventure.net/?page=2112 (through a google.com/url
     redirect). probe po: the ParishesOnline organization queen-of-the-most-holy-rosary-17824 (lpi:0018000000Qx9QGAAZ)
     has no publications; the Discover Mass page queen-of-the-most-holy-rosary-elysburg-pa lists none.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

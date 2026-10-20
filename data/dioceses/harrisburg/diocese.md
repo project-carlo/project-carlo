@@ -2,7 +2,7 @@
 name: Roman Catholic Diocese of Harrisburg
 state: PA
 website: https://www.hbgdiocese.org
-status: exploring
+status: promoted
 gcatholic: harr0
 city_aliases:
   Mt Carmel: Mount Carmel
@@ -11,6 +11,7 @@ city_aliases:
   East York: York
   York Haven: Manchester
   Bonneauville: Gettysburg
+promoted: 2026-10-20
 ---
 
 Fifteen counties of south-central Pennsylvania: Dauphin (Harrisburg), Cumberland, Perry,
@@ -148,6 +149,16 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-10-20: Fetch check (`fetch_check.check_fetch` on a temporary CSV of every row, under
+  `xvfb-run` with `PLAYWRIGHT_BROWSER_CHANNEL=chrome`): all 86 rows with a provider resolve and
+  download. The 47 non-Discover Mass rows ran together; the Discover Mass rows were checked by
+  the region agents and, for the nine the daily cap had refused, again once it cleared. Four
+  pick the newest posted issue rather than this week's, because it is the newest the parish
+  has posted (Holy Angels and Holy Trinity, 11 October; St. Anne and Sacred Heart, Lewistown,
+  4 October), each with a revisit. Undated picks (FATA's "View Current Bulletin", the
+  revivingtogether.com flipbooks, Orrtanna's titled link, Bonneauville's newest post) were
+  checked against the issue by hand. Promoted: 86 parishes (fetch-only) and 99 churches; the
+  two no_bulletin rows and their churches stay in the records only.
 - 2026-10-20: Explored the whole diocese in six regions (Adams and the Hanover area; York
   and Franklin; Lancaster; Dauphin and Perry; Lebanon and Cumberland; the northern counties),
   one agent each, then a cross-region pass. Result: 88 parish rows (39 Discover Mass, 24

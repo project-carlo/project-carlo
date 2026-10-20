@@ -9,22 +9,23 @@ evidence:
 - url: https://discovermass.com/church/st-cecilia-lebanon-pa/
   seen: 2026-10-19
   quote: ST. CECILIA PARISH • LEBANON, PA
-  note: 'Issue of 18 October 2026, page 2: the week''s Masses (Sunday 18 October 8:00am and 10:30am,
-    Monday to Wednesday and Friday 9:00am, Thursday 12:05, Saturday 24 October 4:00pm, Sunday 25 October
-    8:00am and 10:30am). Page 1 is a cover whose text layer is unreadable.'
+  note: 'Issue of 18 October 2026, page 2: the week''s Masses (Sunday 18 October 8:00am and 10:30am, Monday
+    to Wednesday and Friday 9:00am, Thursday 12:05, Saturday 24 October 4:00pm, Sunday 25 October 8:00am
+    and 10:30am). Page 1 is a cover whose text layer is unreadable.'
 - url: https://discovermass.com/church/st-cecilia-lebanon-pa/
   seen: 2026-10-19
   quote: 'Address: 120 E. Lehman Street, Lebanon, PA 17046'
   note: Issue of 18 October 2026, page 3, "St Cecilia Parish Staff" (Pastor Very Rev. Michael M. Laicha).
 - url: https://files.ecatholic.com/28443/bulletins/20261018.pdf
   seen: 2026-10-19
-  note: The same 18 October 2026 issue (4 pages) on eCatholic's file host, posted by the parish's
-    eCatholic site.
+  note: The same 18 October 2026 issue (4 pages) on eCatholic's file host, posted by the parish's eCatholic
+    site.
 - url: https://www.stcecilia-lebanon.org/
   seen: 2026-10-19
   note: 'Behind Cloudflare (probe url: 403); loaded in a browser (parish-site-access visit.py), title
-    "Saint Cecilia''s Catholic Church - Lebanon, PA". It embeds both ecatholic:28443 and
-    discovermass:st-cecilia-lebanon-pa, and links /bulletins.'
+    "Saint Cecilia''s Catholic Church - Lebanon, PA". It embeds both ecatholic:28443 and discovermass:st-cecilia-lebanon-pa,
+    and links /bulletins.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

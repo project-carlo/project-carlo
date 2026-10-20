@@ -8,13 +8,12 @@ group: ''
 evidence:
 - url: https://discovermass.com/church/annunciation-of-the-blessed-virgin-mary-parish-mc-sherrystown-pa/
   seen: 2026-10-19
-  quote: 'Sunday. ............. 8:00am, 10:00am, &6 :00pm'
+  quote: Sunday. ............. 8:00am, 10:00am, &6 :00pm
   note: 'The 18 October 2026 issue (6 pages; download links carry a per-request token, so cited by the
-    church page). Page 1 masthead (its text layer splits words): "Annunciation of the Blessed Virgin
-    Mary Church, 26 North Third Street McSherrystown, PA 17344, 717.637.1191 abvmchurch.org", "Rev.
-    Richard Lyons Pastor", "Twenty-Ninth Sunday in Ordinary Time | October 18, 2026". Mass Schedule:
-    Saturday Vigil 4:00pm; Sunday 8:00am, 10:00am & 6:00pm; Monday 8:15am; Tuesday 6:00pm;
-    Wednesday-Friday 8:15am.'
+    church page). Page 1 masthead (its text layer splits words): "Annunciation of the Blessed Virgin Mary
+    Church, 26 North Third Street McSherrystown, PA 17344, 717.637.1191 abvmchurch.org", "Rev. Richard
+    Lyons Pastor", "Twenty-Ninth Sunday in Ordinary Time | October 18, 2026". Mass Schedule: Saturday
+    Vigil 4:00pm; Sunday 8:00am, 10:00am & 6:00pm; Monday 8:15am; Tuesday 6:00pm; Wednesday-Friday 8:15am.'
 - url: https://discovermass.com/church/annunciation-of-the-blessed-virgin-mary-parish-mc-sherrystown-pa/
   seen: 2026-10-19
   quote: Deacon Larry Wilson Pastoral Ministries
@@ -23,6 +22,7 @@ evidence:
   seen: 2026-10-19
   note: The parish homepage (the diocesan directory's "Website" link) embeds the Discover Mass church
     slug (probe url found discovermass:annunciation-of-the-blessed-virgin-mary-parish-mc-sherrystown-pa).
+promoted: 2026-10-20
 ---
 
 ## Publisher

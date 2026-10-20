@@ -27,6 +27,7 @@ evidence:
   quote: Saturday evening at 5:00pm Sunday at 8:00am and 10:30am, 9:00am (Swahili Mass) 2nd and 4thS undayso
     ft he month
   note: Weekend Mass box of the 18 October 2026 St. Joseph bulletin; weekdays Monday to Friday 6:30am.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -17,6 +17,7 @@ evidence:
   note: 'The parish site''s bulletin page embeds the ParishesOnline publication widget for lpi:0018000000Qx9QjAAJ;
     probe po: organization st-joseph-18603, 721 Monroe St, Berwick, container 04/0818, weekly issues to
     2026-10-18.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

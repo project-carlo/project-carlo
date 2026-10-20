@@ -3,8 +3,7 @@ name: Corpus Christi
 website: https://cburgcatholic.org/
 bulletin_provider: discover_mass
 provider_id: corpus-christi-chambersburg-pa
-publication:
-- discovermass:corpus-christi-chambersburg-pa
+publication: ['discovermass:corpus-christi-chambersburg-pa']
 group: ''
 evidence:
 - url: https://discovermass.com/church/corpus-christi-chambersburg-pa/
@@ -20,6 +19,7 @@ evidence:
   note: Parish site (Squarespace; corpuschristichbgpa.org, the directory's link, redirects here). Its
     "Bulletin" menu item links https://discovermass.com/church/corpus-christi-chambersburg-pa/#bulletins
     and /archived-bulletins.
+promoted: 2026-10-20
 ---
 
 ## Publisher

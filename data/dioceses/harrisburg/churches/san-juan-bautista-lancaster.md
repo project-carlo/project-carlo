@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-19
   quote: HORARIOS DE MISA / MASS TIMES Martes, Miércoles, Viernes 9:00 AM Lunes, Jueves 6:30 PM
   note: Page 3 of the 18 October 2026 bulletin; also "Sábado (Ad Orientem) 9:00 AM".
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

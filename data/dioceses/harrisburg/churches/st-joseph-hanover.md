@@ -33,6 +33,7 @@ evidence:
   quote: 5125 Grandview Road, Hanover, PA 17331
   note: 'Page 1: "St. Joseph Catholic Church and School 5125 Grandview Road, Hanover, PA 17331" and "Fr.
     Joseph F. Gotwalt Administrative Center 5055 Grandview Road, Hanover PA 17331".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

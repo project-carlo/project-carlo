@@ -25,8 +25,9 @@ evidence:
     Drexel and Saint Theresa.
 - url: https://www.stjosephmech.org/
   seen: 2026-10-19
-  note: Behind Cloudflare (probe url 403; parish-site-access visit.py BLOCKED on every load). The
-    bulletin was read on Discover Mass.
+  note: Behind Cloudflare (probe url 403; parish-site-access visit.py BLOCKED on every load). The bulletin
+    was read on Discover Mass.
+promoted: 2026-10-20
 ---
 
 ## Publisher
@@ -52,6 +53,7 @@ weekly issues through 18 October 2026 whose masthead is this parish's. Provider
 `discover_mass` with that slug.
 
 Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): the resolver found the newest issue on the Discover Mass church page, but the download returned Discover Mass's 134-byte "Maximum number of files downloaded today" page (a per-IP daily cap the sandbox's shared egress reached; curl got the same page). Not a resolver fault; re-run on another day.
+Re-run on 2026-10-20 after the cap cleared: `ok`, the newest issue downloaded (4,023,880 bytes).
 
 ## Not yet confirmed
 

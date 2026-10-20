@@ -37,6 +37,7 @@ evidence:
   quote: Marsh Drive Church
   note: 'Site footer: "SAINT PATRICK CHURCH, Marsh Drive Church, 85 Marsh Drive, Carlisle. PA 17015; Shrine
     Church, 152 East Pomfret Street ...".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

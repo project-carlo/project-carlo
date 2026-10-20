@@ -21,6 +21,7 @@ evidence:
     issue), then "Previous Bulletins" October 11, October 4, September 27 ... May 3, each an undated _files/ugd/<hash>.pdf
     link. The site header''s own "Bulletin" link points to a different file, b7c955_dda2d8e07f0049df9199c38f69969c76.pdf,
     which is the January 27 & 28, 2018 issue.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

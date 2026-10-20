@@ -21,6 +21,7 @@ evidence:
 - url: https://www.stjoanhershey.org/church-bulletins.html
   seen: 2026-10-19
   note: The parish's Bulletins page links bulletin-2026-10-18.pdf and the three before it.
+promoted: 2026-10-20
 ---
 
 ## Publisher

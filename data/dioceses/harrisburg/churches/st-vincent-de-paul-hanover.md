@@ -31,6 +31,7 @@ evidence:
 - url: https://www.svparish.org/wp-content/uploads/2026/10/2026-10-18-29th-Sunday-OT-A.pdf
   seen: 2026-10-19
   quote: 220 3rd Street, Hanover, Pennsylvania, USA 17331
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

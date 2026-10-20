@@ -29,6 +29,7 @@ evidence:
   quote: All Masses and Services are now held at Parish Center
   note: Followed by "1031 Sprenkle Rd, Spring Grove, PA 17362"; Saturday 4:30 pm, Sunday 9:30 am, Tuesday
     and Friday 12:00 pm.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

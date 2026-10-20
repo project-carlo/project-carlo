@@ -28,6 +28,7 @@ evidence:
   note: Page 2 Mass intentions of the 18 October 2026 bulletin (Saturday 17 October 6:00P, Sunday 18 October
     10:30A; no weekday Mass 19-23 October); page 1 gives Saturday 6:00 pm, Sunday 10:30 am, Tuesday &
     Thursday 8:00 am at St. Peter Church.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

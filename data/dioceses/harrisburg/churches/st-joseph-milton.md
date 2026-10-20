@@ -29,6 +29,7 @@ evidence:
 - url: https://www.openstreetmap.org/node/1889239530
   seen: 2026-10-20
   note: OSM node "St. Joseph's Catholic Church", Broadway Street, Milton (41.02053, -76.85124).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   quote: 5:00 PM RICHARDC URTAIN
   note: 'Issue of 18 October 2026, page 1 Mass schedule: Saturday 17 October 5:00 PM, Sunday 18 October
     8:00 AM and 10:30 AM, Saturday 24 October 5:00 PM, Sunday 25 October 8:00 and 10:30 AM.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

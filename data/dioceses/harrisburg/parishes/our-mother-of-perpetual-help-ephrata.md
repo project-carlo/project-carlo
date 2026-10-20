@@ -31,6 +31,7 @@ evidence:
   note: Found by web search, not read in full; the search summary says the parish "will return to the
     pastoral oversight of the Diocese of Harrisburg on June 30, 2026". The 18 October 2026 masthead still
     says "Staffed by the Redemptorists", so the bulletin is followed.
+promoted: 2026-10-20
 ---
 
 ## Publisher

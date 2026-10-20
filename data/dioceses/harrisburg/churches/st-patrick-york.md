@@ -11,9 +11,7 @@ longitude: -76.7276875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23776
-- directory:st-patrick-york
+roster: ['gcatholic:23776', 'directory:st-patrick-york']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23776
   seen: 2026-10-19
@@ -29,6 +27,7 @@ evidence:
   quote: 219 S. Beaver Street,Y ork, PA 17401
   note: 18 October 2026 issue, page 1, with "WEEKEND MASSES Saturday Vigil 4:30 p.m. Sunday 8:00 a.m.
     & 11:00 a.m. & 5:00 p.m.".
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

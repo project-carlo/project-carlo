@@ -27,6 +27,7 @@ evidence:
   quote: Sunday, October 25, 10:30 a.m.
   note: 'Page 2 Mass intentions of the 18 October 2026 issue: Monday-Thursday 8:00 a.m., Saturday 4:00
     p.m., Sunday 8:00 and 10:30 a.m.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

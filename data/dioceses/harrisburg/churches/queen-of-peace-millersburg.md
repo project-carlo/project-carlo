@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: 10:30 a.m. Mass– Celebration of Holy Mass
   note: Page 1 of the 18 October 2026 issue, MASS TIMES AND INTENTIONS.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

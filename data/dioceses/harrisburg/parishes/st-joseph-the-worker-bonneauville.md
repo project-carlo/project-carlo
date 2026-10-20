@@ -22,6 +22,7 @@ evidence:
     bot check); in a browser left to wait it shows "Bulletins October 18, 2026, October 11, 2026 ..."
     links to /notice/<date>/ posts, each embedding the PDF with PDF Embedder. The PDF files themselves
     download without the check. Found the file names from the site's /wp-json/wp/v2/media listing.
+promoted: 2026-10-20
 ---
 
 ## Publisher

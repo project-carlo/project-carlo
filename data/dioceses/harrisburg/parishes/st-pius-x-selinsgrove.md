@@ -18,6 +18,7 @@ evidence:
   note: 'eCatholic site (CNAME cf.sites.ecatholic.com) behind Cloudflare; /bulletins loaded in headed
     Chrome on 20 October: ecatholic:38462, issues "October 18, 2026" back weekly. ParishesOnline organization
     st-pius-x-church-17870 and Discover Mass st-pius-x-selinsgrove-pa publish nothing.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

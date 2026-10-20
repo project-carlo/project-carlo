@@ -23,6 +23,7 @@ evidence:
   note: The parish's eCatholic site (ecatholic:14978; behind Cloudflare, read in a browser with parish-site-access
     visit.py). Its "Current Bulletin" link is the jppc.net template above; files.ecatholic.com/14978/bulletins/
     has no issues for 11-25 October.
+promoted: 2026-10-20
 ---
 
 ## Publisher

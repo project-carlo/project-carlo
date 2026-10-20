@@ -19,6 +19,7 @@ evidence:
   seen: 2026-10-19
   note: The parish homepage loads (also in a browser) but links no bulletin and embeds no publication
     id; the Discover Mass page was found by its church slug.
+promoted: 2026-10-20
 ---
 
 ## Publisher

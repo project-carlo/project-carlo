@@ -21,6 +21,7 @@ evidence:
   quote: 4:30 pm + Kimberly Retallack 9:30 am + Alicia Gorlaski 12:00 pm Vietnamese Mass
   note: Page 5 Mass intentions for the weekend of 3-4 October, followed by weekday Masses (Monday 9:00
     am and 7:00 pm Vietnamese, Wednesday 7:00 pm, Thursday and Friday 9:00 am, Friday 7:00 pm Vietnamese).
+promoted: 2026-10-20
 ---
 
 ## Publisher

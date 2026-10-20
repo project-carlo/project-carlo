@@ -15,6 +15,7 @@ evidence:
   seen: 2026-10-19
   quote: MaryMotherofthe ChurchParish October18,2026 29thSundayinOrdinaryTime 625UnionSchoolRoad MountJoy,Pennsylvania17552
   note: Page 1 masthead of the same issue. Pastor "Rev.EdwardJ.(Ted)Keating".
+promoted: 2026-10-20
 ---
 
 ## Publisher

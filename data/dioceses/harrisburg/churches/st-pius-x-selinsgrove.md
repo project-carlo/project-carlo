@@ -27,6 +27,7 @@ evidence:
   quote: 'Saturday Vigil: 5 pm; Sunday: 9 am;'
   note: Page 1 of the 18 October 2026 issue; weekday Masses Tuesday, Thursday, Friday, Saturday 8 am and
     Wednesday 6 pm in the Adoration Chapel.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -3,8 +3,7 @@ name: St. John the Baptist
 website: https://www.sjbnf.org/
 bulletin_provider: other
 provider_id: page-pdfs https://www.fataonline.com/bulletins/StJohnNF
-publication:
-- url:https://www.fataonline.com/bulletins/StJohnNF
+publication: ['url:https://www.fataonline.com/bulletins/StJohnNF']
 group: ''
 evidence:
 - url: https://www.fataonline.com/bulletins/StJohnNF
@@ -27,7 +26,8 @@ evidence:
     Eucharistic Adoration, Entrance at the rear of the Main Church".
 revisit: Check whether the bulletin has left FATA Online ("transition to a new publishing program", 18
   Oct 2026 issue) and update website/provider_id.
-revisit_after: '2026-12-01'
+revisit_after: 2026-12-01
+promoted: 2026-10-20
 ---
 
 ## Publisher

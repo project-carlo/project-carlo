@@ -11,9 +11,7 @@ longitude: -76.7495625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23786
-- directory:st-rose-of-lima
+roster: ['gcatholic:23786', 'directory:st-rose-of-lima']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23786
   seen: 2026-10-19
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: Saturday 5:00 pm Sunday 7:30 am Sunday 10:00 am
   note: Page 1 of the 18 October 2026 bulletin, under "950 West Market Street York, PA 17401".
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

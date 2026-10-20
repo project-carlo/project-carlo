@@ -32,6 +32,7 @@ evidence:
   quote: Sunday 8AM& 10:30AM
   note: 'Issue of 18 October 2026, page 1 Mass Schedule: Saturday Vigil 5 PM, Sunday 8AM & 10:30AM, Daily
     Mass Tues-Sat 8AM; page 2 intentions through Sunday 25 October 8:00AM.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

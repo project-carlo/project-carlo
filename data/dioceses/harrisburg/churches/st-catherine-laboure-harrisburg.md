@@ -27,6 +27,7 @@ evidence:
   quote: The Perpetual Novena to Our Lady of the Miraculous Medal is prayed on Monday
   note: Page 1 of the 18 October 2026 issue, beside the Mass schedule (Saturday Vigil 4:30 pm; Sunday
     7:30 am, 9:30 am, 12:00 pm, 7:00 pm).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

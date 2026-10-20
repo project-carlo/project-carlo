@@ -30,6 +30,7 @@ evidence:
     Daily Mass is typically offered every Tuesday at 7:30 a.m.
   note: The Lancaster Latin Mass Community (of St. Joseph's parish) says the chapel "is on the 2nd floor
     of the old convent at Historic St. Mary's Church". Not in St. Mary's bulletin.
+promoted: 2026-10-20
 ---
 
 ## Publisher

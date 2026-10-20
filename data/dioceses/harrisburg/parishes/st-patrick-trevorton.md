@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-19
   note: 'probe po: organization st-patrick-church-17881 (lpi:0018000000Qx9QiAAJ) has no publications;
     the Discover Mass page st-patrick-trevorton-pa lists none.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

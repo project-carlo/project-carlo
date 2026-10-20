@@ -31,6 +31,7 @@ evidence:
 - url: http://stjosephtheworkerpa.org/wp-content/uploads/2026/10/10182026.pdf
   seen: 2026-10-19
   quote: 10:30 AM – People of the Parish
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

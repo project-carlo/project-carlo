@@ -27,6 +27,7 @@ evidence:
   quote: 'Tuesday-Friday: 7:30 am'
   note: 'Page 1 of the 25 October 2026 issue: "Sunday Masses: 5:00 pm (Saturday) 8:00 am & 10:30 am Daily
     Masses: Tuesday-Friday: 7:30 am, Sat: 8:00 am".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

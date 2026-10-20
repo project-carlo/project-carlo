@@ -31,6 +31,7 @@ evidence:
 - url: https://discovermass.com/church/st-aloysius-littlestown-pa/
   seen: 2026-10-19
   quote: Saturday Mass of Anticipation@ 5:00 pm
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-19
   quote: 300 West Pine Street Palmyra, PA 17078
   note: The John Patrick Publishing listings contact block.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

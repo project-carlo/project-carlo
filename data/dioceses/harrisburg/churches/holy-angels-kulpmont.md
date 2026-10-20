@@ -30,6 +30,7 @@ evidence:
 - url: https://www.openstreetmap.org/node/5766416474
   seen: 2026-10-20
   note: OSM node "Holy Angels Roman Catholic Church", 855 Scott Street, Kulpmont (40.79252, -76.47216).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

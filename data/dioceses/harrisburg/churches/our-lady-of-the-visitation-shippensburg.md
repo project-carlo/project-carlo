@@ -28,6 +28,7 @@ evidence:
   note: 'Issue of 18 October 2026, page 1: "Our Lady of the Visitation Catholic Church, 305 North Prince
     Street, Shippensburg Pa 17257"; Weekend Masses Saturday 5:00 pm, Sunday 8:00 am and 11:00 am; Daily
     Mass Tuesday, Thursday and Friday 8:30 am, Wednesday 6:30 pm.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

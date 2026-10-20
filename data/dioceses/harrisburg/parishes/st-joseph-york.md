@@ -3,8 +3,7 @@ name: St. Joseph
 website: https://www.sjy.org/
 bulletin_provider: discover_mass
 provider_id: st-joseph-york-pa
-publication:
-- discovermass:st-joseph-york-pa
+publication: ['discovermass:st-joseph-york-pa']
 group: ''
 evidence:
 - url: https://discovermass.com/church/st-joseph-york-pa/
@@ -14,6 +13,7 @@ evidence:
     York, Pennsylvania", "St. Joseph Church 2935 Kingston Road, York, PA 17402-4003", Pastor Fr. Kyle
     S. Sahd (the text layer runs words together). Page 3 lists the week's Masses; daily Mass moved to
     St. Rose of Lima for the priests' workshop week.
+promoted: 2026-10-20
 ---
 
 ## Publisher

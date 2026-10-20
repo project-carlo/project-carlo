@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: Sunday……8:00 a.m., 10:15 a.m.
   note: Page 1 MASSES box of the 18 October 2026 issue.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-20
   note: OpenStreetMap way 1251791839, "Basilica of the Sacred Heart of Jesus, Basilica Drive, Conewago
     Township", at 39.8189434, -77.0380705 (about 10 m from the diocesan directory pin).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

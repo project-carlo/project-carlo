@@ -18,6 +18,7 @@ evidence:
   note: 'eCatholic site behind Cloudflare (probe url 403); loaded on the first try in headed Chrome (parish-site-access
     visit.py): title "Saint Monica Parish - Sunbury, PA", embeds ecatholic:30602, links /bulletins. probe
     po: the ParishesOnline organization st-monica-church-17801 has no publications.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

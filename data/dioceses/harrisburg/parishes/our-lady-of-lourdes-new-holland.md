@@ -25,6 +25,7 @@ evidence:
   quote: 'WEEKEND MASSES: Saturday, 5:00 p.m. Sunday, 8:00 a.m. and 10:30 a.m. WEEKDAY MASS: Monday, Tuesday,
     Thursday & Friday at 9:00 a.m.'
   note: Page 1 "Parish Schedule" of the same issue.
+promoted: 2026-10-20
 ---
 
 ## Publisher

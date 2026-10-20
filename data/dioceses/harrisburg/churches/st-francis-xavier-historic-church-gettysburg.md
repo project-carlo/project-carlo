@@ -33,6 +33,7 @@ evidence:
   quote: 25 West High St, Gettysburg PA 17325
   note: 'Contacts: "Historic Church: 25 West High St, Gettysburg PA 17325". hbgdiocese.org drops connections
     from the recheck user agent; read with curl and a browser user agent.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

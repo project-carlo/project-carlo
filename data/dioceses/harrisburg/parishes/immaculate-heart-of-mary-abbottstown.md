@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-20
   quote: 11:15 a.m. Sunday Mass
   note: Homepage weekly calendar (changes weekly), listing the 17-18 October weekend Masses.
+promoted: 2026-10-20
 ---
 
 ## Publisher

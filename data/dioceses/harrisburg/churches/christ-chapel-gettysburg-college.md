@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-19
   note: OpenStreetMap way 777729854, amenity=place_of_worship "Christ Chapel", North Washington Street,
     Gettysburg 17325, at 39.8355273, -77.2328190.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-20
   quote: Saint Peter Catholic Church, 1840, Mill Road
   note: OSM way 101267932 (40.1602, -76.6145).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

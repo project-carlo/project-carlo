@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-19
   note: OSM way "St. Joseph's" on Fair Street, Berwick (41.05668, -76.24911), about 80 m from GCatholic's
     Plus Code.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

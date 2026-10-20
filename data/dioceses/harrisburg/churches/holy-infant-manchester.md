@@ -11,9 +11,7 @@ longitude: -76.747876
 coordinates_from: diocese-directory
 name_verified: true
 address_verified: false
-roster:
-- directory:holy-infant-manchester
-- gcatholic:23714
+roster: ['directory:holy-infant-manchester', 'gcatholic:23714']
 evidence:
 - url: https://www.hbgdiocese.org/parishes/holy-infant-manchester/
   seen: 2026-10-19
@@ -35,6 +33,7 @@ evidence:
   note: OpenStreetMap at GCatholic's Plus Code for 23714 (87G5476M+6F, York Haven) - way 667593921, place
     of worship, "37, Pennsylvania Avenue, York Haven". The building GCatholic pins is now another congregation's
     (inferred; no sale notice read).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

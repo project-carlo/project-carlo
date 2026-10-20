@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-19
   quote: Landing Page for Our Lady of Good Counsel & St. Bernadette
   note: One website for both churches (the directory's olgcsb.org).
+promoted: 2026-10-20
 ---
 
 ## Publisher

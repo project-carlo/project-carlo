@@ -22,6 +22,7 @@ evidence:
   note: 'Behind Cloudflare (visit.py challenged on every load on 19 October, through on the first load
     on 20 October). eCatholic bulletins page: "October 18, 2026" -> files.ecatholic.com/14732/bulletins/20261018.pdf,
     one issue per Sunday back to August 2026 and earlier.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

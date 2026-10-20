@@ -31,6 +31,7 @@ evidence:
 - url: https://discovermass.com/church/immaculate-conception-b-v-m-church-new-oxford-pa/
   seen: 2026-10-19
   quote: 'Saturday Vigil: 4:30 p.m.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

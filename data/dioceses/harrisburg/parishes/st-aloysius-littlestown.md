@@ -19,6 +19,7 @@ evidence:
   seen: 2026-10-20
   note: The parish's Bulletins page links its Discover Mass church page and the issue downloads. The site
     answered 503 on 2026-10-19 and 200 on 2026-10-20.
+promoted: 2026-10-20
 ---
 
 ## Publisher

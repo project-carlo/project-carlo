@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-20
   note: 'Page 2 (read rendered): "Mass Schedule: Saturday 4:00 PM Sunday 8:00 and 9:30 AM"; Friday 23
     October 9:00 AM, Saturday 24 October 4:00 PM, Sunday 25 October 8:00 AM and 9:30 AM.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

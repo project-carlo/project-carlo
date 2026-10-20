@@ -30,6 +30,7 @@ evidence:
 - url: https://www.openstreetmap.org/way/1209564262
   seen: 2026-10-19
   note: OSM way "St. Joseph Parish", 68 Center Street, Danville (40.96487, -76.61502).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

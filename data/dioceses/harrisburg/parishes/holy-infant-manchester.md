@@ -3,8 +3,7 @@ name: Holy Infant
 website: https://holyinfantparish.com/
 bulletin_provider: other
 provider_id: page-pdfs http://fataonline.com/bulletins/holyinfant
-publication:
-- url:https://www.fataonline.com/bulletins/holyinfant
+publication: ['url:https://www.fataonline.com/bulletins/holyinfant']
 group: ''
 evidence:
 - url: https://www.fataonline.com/bulletins/holyinfant
@@ -24,6 +23,7 @@ evidence:
   note: eCatholic site behind Cloudflare (read in a browser, parish-site-access visit.py; plain curl gets
     403). Its only bulletin link is "Weekly Bulletins" -> http://fataonline.com/bulletins/holyinfant.
     eCatholic site id 6740 has no files.ecatholic.com/6740/bulletins/ issues for 11, 18 or 25 October.
+promoted: 2026-10-20
 ---
 
 ## Publisher

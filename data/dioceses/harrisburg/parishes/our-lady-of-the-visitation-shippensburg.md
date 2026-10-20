@@ -21,8 +21,9 @@ evidence:
 - url: https://www.olvshippensburg.org/
   seen: 2026-10-19
   quote: only when College is in session
-  note: 'The parish homepage lists the same Mass times and the Shippensburg Catholic Campus Ministry
-    (CCM); probe url finds discovermass:our-lady-of-the-visitation-shippensburg-pa on it.'
+  note: The parish homepage lists the same Mass times and the Shippensburg Catholic Campus Ministry (CCM);
+    probe url finds discovermass:our-lady-of-the-visitation-shippensburg-pa on it.
+promoted: 2026-10-20
 ---
 
 ## Publisher

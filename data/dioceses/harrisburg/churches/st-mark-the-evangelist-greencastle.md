@@ -11,9 +11,7 @@ longitude: -77.7253125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23772
-- directory:st-mark-the-evangelist
+roster: ['gcatholic:23772', 'directory:st-mark-the-evangelist']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23772
   seen: 2026-10-19
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: 'St.MarktheEvangelist 395S.RidgeAvenue,Greencastle,PA17225 … Masses: Saturday5:00p.m. Sunday9:00a.m.'
   note: 18 October 2026 issue, page 3 (the text layer runs words together).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

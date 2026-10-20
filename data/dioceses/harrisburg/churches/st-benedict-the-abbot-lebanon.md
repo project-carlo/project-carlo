@@ -31,6 +31,7 @@ evidence:
 - url: https://discovermass.com/church/st-benedict-the-abbot-church-lebanon-pa/
   seen: 2026-10-19
   quote: 4:00 PM:JoseCollado
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

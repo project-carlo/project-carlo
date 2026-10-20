@@ -27,6 +27,7 @@ evidence:
   quote: 'Saturday (Sunday Vigil): 5:00 p.m. Sunday: 7:30 a.m., 9:00 a.m. (livestreamed), 11:00 a.m.,
     and 5:00 p.m. (LIFE TEEN/EDGE Mass)'
   note: Page 1 of the 18 October 2026 bulletin.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

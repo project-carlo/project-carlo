@@ -26,6 +26,7 @@ evidence:
     S 2nd St, Columbia, PA 17512'
   note: The parish's Mass page also points to St. Mary Chapel, 217 Maple St, Wrightsville (1st Wednesday);
     those are St. Peter parish's Masses, offered to Holy Trinity parishioners as weekday options.
+promoted: 2026-10-20
 ---
 
 ## Publisher

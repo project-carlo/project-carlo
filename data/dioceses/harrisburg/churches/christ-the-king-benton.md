@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-19
   note: OSM way "Christ The King Church", 255 Mendenhall Lane, Benton (41.20111, -76.38255), at the diocese's
     pin. GCatholic gives only "Benton, Pennsylvania 17814", and its Plus Code is about 440 m south.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

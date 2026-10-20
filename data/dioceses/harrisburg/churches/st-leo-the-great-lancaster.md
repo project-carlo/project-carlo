@@ -29,6 +29,7 @@ evidence:
 - url: https://www.stleos.org/
   seen: 2026-10-20
   quote: join us at Mass in person or online
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

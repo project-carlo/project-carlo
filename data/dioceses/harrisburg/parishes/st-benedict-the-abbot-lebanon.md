@@ -10,10 +10,9 @@ evidence:
   seen: 2026-10-19
   quote: '9:00 AM:M ass 12:00P M: Misa'
   note: 'Issue of 18 October 2026, page 1 (bilingual; the masthead''s text layer doubles every letter):
-    "Saint Benedict the Abbot, Rev. José Elías Mera Vallejos, 1300 Lehman St, Lebanon, PA, 17046,
-    October / Octubre 18, 2026". Mass schedule for 19-25 October: weekdays "NO MASS" (priests''
-    continuing-education week), Saturday 24 October 9:00 AM and 4:00 PM, Sunday 25 October 9:00 AM Mass
-    and 12:00 PM Misa.'
+    "Saint Benedict the Abbot, Rev. José Elías Mera Vallejos, 1300 Lehman St, Lebanon, PA, 17046, October
+    / Octubre 18, 2026". Mass schedule for 19-25 October: weekdays "NO MASS" (priests'' continuing-education
+    week), Saturday 24 October 9:00 AM and 4:00 PM, Sunday 25 October 9:00 AM Mass and 12:00 PM Misa.'
 - url: https://discovermass.com/church/st-benedict-the-abbot-church-lebanon-pa/
   seen: 2026-10-19
   quote: to have their child baptized at Saint Benedict the Abbot Parish
@@ -21,8 +20,9 @@ evidence:
 - url: https://stbenedictlebanon.org/bulletins/
   seen: 2026-10-19
   quote: Current Bulletin
-  note: 'The parish site''s Bulletins page embeds the Discover Mass (dpi-bulletins) widget: "Current
-    Bulletin October 18th, 2026" with bulletins.discovermass.com download links.'
+  note: 'The parish site''s Bulletins page embeds the Discover Mass (dpi-bulletins) widget: "Current Bulletin
+    October 18th, 2026" with bulletins.discovermass.com download links.'
+promoted: 2026-10-20
 ---
 
 ## Publisher
@@ -48,6 +48,7 @@ whose issues are the same (newest 18 October 2026). Provider `discover_mass` wit
 GCatholic's website for the parish, sbaclpa.com, is an older domain.
 
 Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): the resolver found the newest issue on the Discover Mass church page, but the download returned Discover Mass's 134-byte "Maximum number of files downloaded today" page (a per-IP daily cap the sandbox's shared egress reached; curl got the same page). Not a resolver fault; re-run on another day.
+Re-run on 2026-10-20 after the cap cleared: `ok`, the newest issue downloaded (1,728,887 bytes).
 
 ## Not yet confirmed
 

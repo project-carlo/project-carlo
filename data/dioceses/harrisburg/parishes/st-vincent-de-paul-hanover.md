@@ -16,6 +16,7 @@ evidence:
   seen: 2026-10-19
   note: The WordPress "Weekly Bulletin" page links one PDF per Sunday, e.g. 2026/10/2026-10-18-29th-Sunday-OT-A.pdf,
     2026-10-11-28th-Sunday-OT-A.pdf, 2026-10-04-27th-Sunday-OT-A.pdf, back to 2022.
+promoted: 2026-10-20
 ---
 
 ## Publisher

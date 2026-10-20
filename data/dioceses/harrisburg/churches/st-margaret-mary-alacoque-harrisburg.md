@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: 'Sunday Mass Times: 7:30, 9:30 and 11:30 a.m.'
   note: Page 3 of the 18 October 2026 issue.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

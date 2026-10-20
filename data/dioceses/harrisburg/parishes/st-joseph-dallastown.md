@@ -3,8 +3,7 @@ name: St. Joseph
 website: https://www.sjdrcc.org/
 bulletin_provider: discover_mass
 provider_id: st-joseph-dallastown-pa
-publication:
-- discovermass:st-joseph-dallastown-pa
+publication: ['discovermass:st-joseph-dallastown-pa']
 group: ''
 evidence:
 - url: https://discovermass.com/church/st-joseph-dallastown-pa/
@@ -19,6 +18,7 @@ evidence:
   note: 'John Patrick Publishing listing, reached from the site''s jppc.net/onlinebulletins/250template.pdf
     link (church-bulletin.org/?id=250). On 2026-10-19 it showed only the week''s readings and listed no
     bulletin PDFs: not a live channel.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

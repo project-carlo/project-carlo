@@ -23,6 +23,7 @@ evidence:
 revisit: The 18 October 2026 issue was not posted by 20 October (files.ecatholic.com/10894/bulletins/20261018.pdf
   answered 403); check that the newest issue on /bulletins is current.
 revisit_after: 2026-10-27
+promoted: 2026-10-20
 ---
 
 ## Publisher

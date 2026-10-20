@@ -24,6 +24,7 @@ evidence:
 - url: https://holytrinitycolumbiapa.com/parish-life/liturgy/the-mass/
   seen: 2026-10-19
   quote: Holy Trinity Church is located at 409 Cherry St, Columbia PA 17512
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

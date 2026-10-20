@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-19
   note: The website the diocese's directory (and the bulletin's footer) still give answers "Temporarily
     Unavailable" (every weconnect.com site does, as in Allentown), so it is not used.
+promoted: 2026-10-20
 ---
 
 ## Publisher

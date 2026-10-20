@@ -27,6 +27,7 @@ evidence:
   quote: 10:00 am - People of the Parish (St. Mary’s)
   note: 'Page 2 MASS SCHEDULE for 19-25 October 2026: Tuesday and Wednesday 8:30 am (St. Mary''s), Saturday
     5:30 pm (St. Mary''s), Sunday 10:00 am (St. Mary''s).'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

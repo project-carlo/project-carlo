@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: '8:30 am: Holy Mass +Bill Bekelja'
   note: Page 2 of the 18 October 2026 issue (Sunday 18 October).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

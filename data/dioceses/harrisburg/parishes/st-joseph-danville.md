@@ -24,6 +24,7 @@ evidence:
   note: 'The same 18 October 2026 bulletin on the parish''s eCatholic site (5 pages; the Discover Mass
     copy has 6). The site''s /bulletins page loaded in headed Chrome on 20 October: ecatholic:33992, issues
     "October 18, 2026" back weekly.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

@@ -31,6 +31,7 @@ evidence:
 - url: https://discovermass.com/church/st-katharine-drexel-mechanicsburg-pa/
   seen: 2026-10-19
   quote: Saturday - 4:30 pm
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

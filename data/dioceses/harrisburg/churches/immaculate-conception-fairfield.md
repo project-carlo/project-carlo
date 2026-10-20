@@ -24,9 +24,10 @@ evidence:
     of the Blessed Virgin Mary'', 256 Tract Road, Fairfield, PA, 17320; kind: Parish in Fairfield'
 - url: https://irp.cdn-website.com/4f92a0c3/files/uploaded/2026-10-18.pdf
   seen: 2026-10-19
-  quote: 'Mass Schedule · Saturday · 5:00pm | Sunday · 8:00 & 10:30am'
+  quote: Mass Schedule · Saturday · 5:00pm | Sunday · 8:00 & 10:30am
   note: 'Joint St. Mary''s/St. Rita bulletin, 18 October 2026, page 1, under "256 Tract Road · Fairfield,
     PA 17320" (the text layer drops the "fi" ligature: "Fair eld"). Page 2 has "St. Mary Mass Intentions".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
     - Friday at Marsh Drive church
   note: 'St. Joseph, Mechanicsburg bulletin of 18 October 2026: the deanerys weekday Mass list for the
     priests week away.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

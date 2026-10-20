@@ -18,6 +18,7 @@ evidence:
   note: 'The WordPress "Bulletins" page lists one PDF per Sunday under wp-content/uploads, newest first:
     10.18.26-bulletin.pdf, 10.11.26-bulletin.pdf, 10.04.26-bulletin.pdf ... (read in a browser with parish-site-access
     visit.py; the homepage answers plain fetchers with 202 and no content).'
+promoted: 2026-10-20
 ---
 
 ## Publisher

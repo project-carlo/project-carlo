@@ -9,11 +9,11 @@ evidence:
 - url: https://discovermass.com/church/good-shepherd-camp-hill-pa/
   seen: 2026-10-19
   quote: REVEREND NEIL S. SULLIVAN
-  note: 'Issue of 18 October 2026 (12 pages), page 4 header (text layer doubles letters): "PAGE 4
-    www.thegoodshep.org, Good Shepherd Catholic Church, October 18, 2026, PARISH OFFICE TELEPHONE:
-    717.761.1167", then "PASTOR REVEREND NEIL S. SULLIVAN". Page 1: Sunday Mass (Church, Entrances A, B,
-    E) Saturday 5:00 p.m., Sunday 7:30, 9:30 and 11:30 a.m.; weekday Mass Monday, Tuesday, Thursday,
-    Friday 8:30 a.m.; confessions and adoration in the Chapel.'
+  note: 'Issue of 18 October 2026 (12 pages), page 4 header (text layer doubles letters): "PAGE 4 www.thegoodshep.org,
+    Good Shepherd Catholic Church, October 18, 2026, PARISH OFFICE TELEPHONE: 717.761.1167", then "PASTOR
+    REVEREND NEIL S. SULLIVAN". Page 1: Sunday Mass (Church, Entrances A, B, E) Saturday 5:00 p.m., Sunday
+    7:30, 9:30 and 11:30 a.m.; weekday Mass Monday, Tuesday, Thursday, Friday 8:30 a.m.; confessions and
+    adoration in the Chapel.'
 - url: https://discovermass.com/church/good-shepherd-camp-hill-pa/
   seen: 2026-10-19
   quote: Sustains mission/ministries of Good Shepherd Parish
@@ -23,8 +23,9 @@ evidence:
     the bulletins.discovermass.com download links. Site title "Good Shepherd – Camp Hill, PA".'
 - url: http://www.goodshepherd-parish.com
   seen: 2026-10-19
-  note: GCatholic's (and ParishesOnline's) website for the parish is now a "Parking Page" (probe url
-    NO-PARISH-WORDS). The diocese's directory page gives no website.
+  note: GCatholic's (and ParishesOnline's) website for the parish is now a "Parking Page" (probe url NO-PARISH-WORDS).
+    The diocese's directory page gives no website.
+promoted: 2026-10-20
 ---
 
 ## Publisher

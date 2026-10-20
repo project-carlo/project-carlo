@@ -9,15 +9,16 @@ evidence:
 - url: https://discovermass.com/church/st-elizabeth-ann-seton-mechanicsburg-pa/
   seen: 2026-10-19
   quote: SUNDAY 7:30am, 9:00am, &1 1:00am
-  note: 'Issue of 18 October 2026 (16 pages), page 1: "MASS TIMES SATURDAY 4:00pm ... SUNDAY 7:30am,
-    9:00am, & 11:00am, MONDAY No Mass, TUESDAY 7:00am, WEDNESDAY 9:00am, THURSDAY 7:00am, FRIDAY 9:00am";
-    "hello@steas.net, www.steas.net, 310 Hertzler Road, Mechanicsburg, PA 17055".'
+  note: 'Issue of 18 October 2026 (16 pages), page 1: "MASS TIMES SATURDAY 4:00pm ... SUNDAY 7:30am, 9:00am,
+    & 11:00am, MONDAY No Mass, TUESDAY 7:00am, WEDNESDAY 9:00am, THURSDAY 7:00am, FRIDAY 9:00am"; "hello@steas.net,
+    www.steas.net, 310 Hertzler Road, Mechanicsburg, PA 17055".'
 - url: https://discovermass.com/church/st-elizabeth-ann-seton-mechanicsburg-pa/
   seen: 2026-10-19
   quote: MINISTRY AT SAINT ELIZABETH ANN SETON
 - url: https://www.steas.net/
   seen: 2026-10-19
   note: probe url finds discovermass:st-elizabeth-ann-seton-mechanicsburg-pa on the parish homepage.
+promoted: 2026-10-20
 ---
 
 ## Publisher

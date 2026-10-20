@@ -10,9 +10,8 @@ evidence:
   seen: 2026-10-19
   quote: OurLadyofLourdesCatholicChurch
   note: 'Issue of 18 October 2026, page 1 (the text layer drops spaces): "Our Lady of Lourdes Catholic
-    Church", Pastor Rev. Matthew Smith; "225 Salt Road Enola, PA 17025 (717) 732-9642 ...
-    www.ourladyoflourdesenola.org"; Mass Schedule: Weekend Schedule Saturday Vigil 5 PM, Sunday 8AM &
-    10:30AM; Daily Mass Tues-Sat 8AM.'
+    Church", Pastor Rev. Matthew Smith; "225 Salt Road Enola, PA 17025 (717) 732-9642 ... www.ourladyoflourdesenola.org";
+    Mass Schedule: Weekend Schedule Saturday Vigil 5 PM, Sunday 8AM & 10:30AM; Daily Mass Tues-Sat 8AM.'
 - url: https://discovermass.com/church/our-lady-of-lourdes-enola-pa/
   seen: 2026-10-19
   quote: 225 SaltR oad Enola,PA1 7025
@@ -22,8 +21,9 @@ evidence:
 - url: https://www.ourladyoflourdesenola.org/bulletins
   seen: 2026-10-19
   quote: October 2026
-  note: 'The parish site (Squarespace) posts one "Bulletins" entry a month ("October 2026", 10/1/26;
-    "September 2026"; "August 2026"; "July 2026"), not the weekly issue.'
+  note: The parish site (Squarespace) posts one "Bulletins" entry a month ("October 2026", 10/1/26; "September
+    2026"; "August 2026"; "July 2026"), not the weekly issue.
+promoted: 2026-10-20
 ---
 
 ## Publisher

@@ -20,6 +20,7 @@ evidence:
     Chrome on 20 October: ecatholic:28444, issues "October 18, 2026" back weekly. ParishesOnline organization
     our-lady-of-mercy-church-17820 has no publications; Discover Mass our-lady-of-mercy-catawissa-pa lists
     none.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

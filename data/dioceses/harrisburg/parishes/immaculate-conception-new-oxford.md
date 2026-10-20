@@ -21,6 +21,7 @@ evidence:
   note: The parish homepage (the diocesan directory's "Website") is behind Cloudflare; probe url got HTTP
     403 and the browser (visit.py) was challenged on all 8 loads. The bulletin was found by searching
     Discover Mass for "New Oxford".
+promoted: 2026-10-20
 ---
 
 ## Publisher

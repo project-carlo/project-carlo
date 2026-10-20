@@ -11,9 +11,7 @@ longitude: -77.9050625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23797
-- directory:st-luke-the-evangelist-mission
+roster: ['gcatholic:23797', 'directory:st-luke-the-evangelist-mission']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23797
   seen: 2026-10-19
@@ -29,6 +27,7 @@ evidence:
   quote: 'St.LuketheEvangelistMission … Overhill Drive& BlackR oad, Mercersburg, PA 17236 Mass: Sunday11:00a.m.'
   note: 18 October 2026 St. Mark/St. Luke bulletin, page 3; the intentions list "St.LukeMission 11:00AM"
     on Sundays 18 and 25 October.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

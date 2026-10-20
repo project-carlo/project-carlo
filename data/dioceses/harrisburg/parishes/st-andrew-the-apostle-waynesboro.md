@@ -3,8 +3,7 @@ name: St. Andrew the Apostle
 website: https://www.standrewwbo.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/253
-publication:
-- url:https://www.church-bulletin.org/saint-andrew-catholic-church-waynesboro-pa-17268
+publication: ['url:https://www.church-bulletin.org/saint-andrew-catholic-church-waynesboro-pa-17268']
 group: ''
 evidence:
 - url: https://www.church-bulletin.org/saint-andrew-catholic-church-waynesboro-pa-17268
@@ -26,6 +25,7 @@ evidence:
   quote: This is where you can find the last four week’s worth of bulletins
   note: Parish bulletin page (Squarespace). On 2026-10-19 its newest self-hosted copy was /s/bulletin_10_4_2026.pdf
     (4 October); it also links https://church-bulletin.org/?id=253, which had 18 October.
+promoted: 2026-10-20
 ---
 
 ## Publisher

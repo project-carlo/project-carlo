@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: Saturday, October 24 8:00 a.m.
   note: 'Page 1 of the 18 October 2026 English issue: Saturday 24 October 8:00 a.m. and 5:00 p.m.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

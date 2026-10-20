@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-19
   quote: Tuesday and Thursday, 8:00 AM @ St. Patrick’s
   note: Our Lady of Hope's 18 October 2026 bulletin, page 1; also "Vigil 6:00 PM - St. Patrick's Church".
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

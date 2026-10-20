@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-19
   quote: 212 State St, Harrisburg, PA 17101
   note: The cathedral parish's own site gives the same address as the directory.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

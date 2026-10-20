@@ -10,11 +10,11 @@ evidence:
   seen: 2026-10-19
   quote: Sunday | 8 am Shrine,9:30 & 11:30 am PAC Gym, 7:30 pm Dickinson
   note: 'Page 1 of the 18 October 2026 issue: "SAINT PATRICK CATHOLIC CHURCH"; Weekend Masses "Saturday
-    | 8:30 a.m. Shrine, 5:15 pm PAC Gym; Sunday | 8 am Shrine, 9:30 & 11:30 am PAC Gym, 7:30 pm
-    Dickinson"; Weekday Masses Monday and Tuesday 8:30 am Shrine, Wednesday and Thursday 8:30 am PAC
-    Classrooms, Friday 8:30 am PAC Gym; "Shrine & Parish Office 152 E. Pomfret Street, Carlisle, PA
-    17013"; "Marsh Drive & Parish Activity Ctr. 85 Marsh Drive, Carlisle, PA 17015"; "Dickinson Campus,
-    Allison Great Hall, Carlisle, PA".'
+    | 8:30 a.m. Shrine, 5:15 pm PAC Gym; Sunday | 8 am Shrine, 9:30 & 11:30 am PAC Gym, 7:30 pm Dickinson";
+    Weekday Masses Monday and Tuesday 8:30 am Shrine, Wednesday and Thursday 8:30 am PAC Classrooms, Friday
+    8:30 am PAC Gym; "Shrine & Parish Office 152 E. Pomfret Street, Carlisle, PA 17013"; "Marsh Drive
+    & Parish Activity Ctr. 85 Marsh Drive, Carlisle, PA 17015"; "Dickinson Campus, Allison Great Hall,
+    Carlisle, PA".'
 - url: https://container.parishesonline.com/bulletins/04/0437/20261018B.pdf
   seen: 2026-10-19
   quote: Adoration Chapel, 140 E. Pomfret Street
@@ -22,15 +22,15 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/04/0437/20260830B.pdf
   seen: 2026-10-19
   quote: PAC Gym, 11:30 am ERC
-  note: 'Page 1 of the 30 August 2026 issue: the summer schedule adds "11:30 am ERC" on Sundays (St.
-    Eleanor Regina Chapel); the same line is in the 24 May, 19 July (image), 23 August and 6 September
-    issues and not in the 18 October one.'
+  note: 'Page 1 of the 30 August 2026 issue: the summer schedule adds "11:30 am ERC" on Sundays (St. Eleanor
+    Regina Chapel); the same line is in the 24 May, 19 July (image), 23 August and 6 September issues
+    and not in the 18 October one.'
 - url: https://www.saintpatrickchurch.org/bulletins
   seen: 2026-10-19
-  note: The parish site's "Weekly Bulletin" page embeds the LPi publication widget
-    parishesonline.com/publicationWidget?type=bulletin&id=0018000000Qc2KcAAJ; probe po gives org
-    st-patrick-church-17013 ("Saint Patrick Church", 152 E Pomfret St, Carlisle), container 04/0437,
-    newest issue 18 October 2026.
+  note: The parish site's "Weekly Bulletin" page embeds the LPi publication widget parishesonline.com/publicationWidget?type=bulletin&id=0018000000Qc2KcAAJ;
+    probe po gives org st-patrick-church-17013 ("Saint Patrick Church", 152 E Pomfret St, Carlisle), container
+    04/0437, newest issue 18 October 2026.
+promoted: 2026-10-20
 ---
 
 ## Publisher

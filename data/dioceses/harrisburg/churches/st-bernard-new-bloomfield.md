@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: October 24 5:00 PM
   note: Page 1 of the 18 October 2026 issue (Mass intentions).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

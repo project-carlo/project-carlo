@@ -11,9 +11,7 @@ longitude: -77.6593125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23709
-- directory:corpus-christi-chambersburg
+roster: ['gcatholic:23709', 'directory:corpus-christi-chambersburg']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23709
   seen: 2026-10-19
@@ -28,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: Mass Schedule Saturday Vigil Mass - 5:00 PM
   note: 18 October 2026 issue, page 1, under "320 Philadelphia Avenue, Chambersburg, PA 17201".
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

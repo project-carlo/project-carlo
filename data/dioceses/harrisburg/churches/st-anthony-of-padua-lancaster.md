@@ -32,6 +32,7 @@ evidence:
   quote: Mass at 8:00 am (St. Anthony of Padua Church) on Saturday October 24th
   note: St. Joseph's 18 October 2026 bulletin announces a prison-ministry meeting beginning with this
     Mass.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
 - url: https://discovermass.com/church/st-theresa-of-the-infant-jesus-new-cumberland-pa/
   seen: 2026-10-19
   quote: Sunday, 8:00am, 10:00am, and
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

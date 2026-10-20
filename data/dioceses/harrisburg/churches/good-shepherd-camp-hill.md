@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-19
   note: 'ParishesOnline organization (no publications): "Good Shepherd Church", 3435 Trindle Rd, Camp
     Hill, Pennsylvania, 17011.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

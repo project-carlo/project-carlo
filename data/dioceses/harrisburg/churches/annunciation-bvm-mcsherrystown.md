@@ -28,6 +28,7 @@ evidence:
   note: 'The 18 October 2026 issue, page 1 Mass Schedule: Saturday Vigil 4:00pm; Sunday 8:00am, 10:00am
     & 6:00pm; Monday 8:15am; Tuesday 6:00pm; Wednesday-Friday 8:15am. Masthead address "26 North Third
     Street McSherrystown, PA 17344".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

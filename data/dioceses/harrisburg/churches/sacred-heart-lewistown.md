@@ -27,6 +27,7 @@ evidence:
   quote: 106 N. DORCAS ST., LEWISTOWN, PA | SACREDHEARTLEWISTOWN.COM
   note: 'Page 3 "Sacred Heart Mass Schedule": Saturday 3 and 10 October 4:00 pm, Sunday 4 and 11 October
     11:00 am, Thursday 8 and Friday 9 October 9:00 am.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

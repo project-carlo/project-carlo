@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-19
   note: OSM node "Mother Cabrini Catholic Church", 214 North Shamokin Street, Shamokin (40.78944, -76.55145),
     within a few metres of GCatholic's Plus Code.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

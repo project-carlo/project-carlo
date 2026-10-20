@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-19
   quote: SundayO ctober18-9am ForthePeopleoftheParish
   note: 'Issue of 18 October 2026, page 1 Mass schedule: Saturday 4pm, Sunday 9am, Monday to Friday 9am.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

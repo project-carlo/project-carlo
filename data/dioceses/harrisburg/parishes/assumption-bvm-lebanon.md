@@ -10,11 +10,11 @@ evidence:
   seen: 2026-10-19
   quote: Assumption of the Blessed Virgin Mary Church Lebanon ● Our Lady of Fatima Mission Jonestown
   note: 'Issue of 18 October 2026 (the newest on the church page), page 2 footer. Page 1 masthead (text
-    layer spaced oddly): "Assumption of the Blessed Virgin Mary Church, The Mother Church of Lebanon
-    County, 2 North 8th Street, Lebanon, PA 17046" and "Our Lady of Fatima Mission, The Mission Church,
-    US 22 & 560 N. Mill Street, Jonestown, PA 17038"; Mass at Assumption Saturday Vigil 5:30pm, Sunday
-    7:30 and 10:30am, Tuesday-Friday 8:00am; Mass at Our Lady of Fatima Sunday 9:00am, Holy Days 7:00pm
-    Vigil. Pastor Rev. Robert M. Gillelan, Jr.'
+    layer spaced oddly): "Assumption of the Blessed Virgin Mary Church, The Mother Church of Lebanon County,
+    2 North 8th Street, Lebanon, PA 17046" and "Our Lady of Fatima Mission, The Mission Church, US 22
+    & 560 N. Mill Street, Jonestown, PA 17038"; Mass at Assumption Saturday Vigil 5:30pm, Sunday 7:30
+    and 10:30am, Tuesday-Friday 8:00am; Mass at Our Lady of Fatima Sunday 9:00am, Holy Days 7:00pm Vigil.
+    Pastor Rev. Robert M. Gillelan, Jr.'
 - url: https://discovermass.com/church/assumption-of-the-blessed-virgin-mary-lebanon-pa/
   seen: 2026-10-19
   quote: 9:00am People of the Parish
@@ -29,10 +29,11 @@ evidence:
 - url: https://abvmlebpa.org/bulletins/
   seen: 2026-10-19
   quote: Current Bulletin
-  note: 'The parish site''s Bulletins page embeds the Discover Mass (dpi-bulletins) widget: "Current
-    Bulletin October 18th, 2026", past bulletins 11 October back to 13 September, each a
-    bulletins.discovermass.com download link. Site title: "Home - Assumption of the Blessed Virgin
-    Mary Parish and Our Lady of Fatima Mission".'
+  note: 'The parish site''s Bulletins page embeds the Discover Mass (dpi-bulletins) widget: "Current Bulletin
+    October 18th, 2026", past bulletins 11 October back to 13 September, each a bulletins.discovermass.com
+    download link. Site title: "Home - Assumption of the Blessed Virgin Mary Parish and Our Lady of Fatima
+    Mission".'
+promoted: 2026-10-20
 ---
 
 ## Publisher

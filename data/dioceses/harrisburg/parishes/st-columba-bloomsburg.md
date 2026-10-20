@@ -19,6 +19,7 @@ evidence:
   seen: 2026-10-19
   note: The parish site's Bulletins page lists bulletins.discovermass.com download links for 25 October
     back to 30 August 2026.
+promoted: 2026-10-20
 ---
 
 ## Publisher

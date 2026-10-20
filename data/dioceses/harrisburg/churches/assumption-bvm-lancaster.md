@@ -27,6 +27,7 @@ evidence:
   note: 'Image-only 18 October 2026 bulletin, read rendered: "Daily Mass: Monday through Friday 12:05
     PM. Sunday Mass: Saturday Vigil 4:30 PM; Sunday 8:30 AM, 11:00 AM", with intentions for each, 17-25
     October.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

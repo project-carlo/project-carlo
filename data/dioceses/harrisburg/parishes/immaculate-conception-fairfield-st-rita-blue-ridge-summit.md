@@ -10,22 +10,23 @@ evidence:
 - url: https://discovermass.com/church/st-rita-blue-ridge-summit-pa/
   seen: 2026-10-19
   quote: 'St. Rita Mass Intentions … Sunday 10/18 8: 30am'
-  note: 'Discover Mass church page (slug st-rita-blue-ridge-summit-pa); issues 4, 11 and 18 October 2026
-    listed. Page 1 of the 18 October issue is headed "The Catholic Churches of Immaculate Conception
-    of the BVM “St. Mary’s” Saint Rita’s Parish", gives 256 Tract Road, Fairfield and 13219 Monterey
-    Lane, Blue Ridge Summit with a Mass schedule for each; page 2 has "St. Mary Mass Intentions" and
-    "St. Rita Mass Intentions".'
+  note: Discover Mass church page (slug st-rita-blue-ridge-summit-pa); issues 4, 11 and 18 October 2026
+    listed. Page 1 of the 18 October issue is headed "The Catholic Churches of Immaculate Conception of
+    the BVM “St. Mary’s” Saint Rita’s Parish", gives 256 Tract Road, Fairfield and 13219 Monterey Lane,
+    Blue Ridge Summit with a Mass schedule for each; page 2 has "St. Mary Mass Intentions" and "St. Rita
+    Mass Intentions".
 - url: https://irp.cdn-website.com/4f92a0c3/files/uploaded/2026-10-18.pdf
   seen: 2026-10-19
-  quote: 'Mass Schedule Saturday · 4:30pm Sunday · 8:30 & 11:00am'
-  note: 'The same 18 October 2026 issue (4 pages), self-hosted by the Fairfield parish and linked from
-    https://www.stmarysfairfieldpa.org/bulletin. Page 1. The quoted schedule is St. Rita''s, printed
-    under its Blue Ridge Summit address; St. Mary''s is "Saturday · 5:00pm | Sunday · 8:00 & 10:30am".'
+  quote: Mass Schedule Saturday · 4:30pm Sunday · 8:30 & 11:00am
+  note: The same 18 October 2026 issue (4 pages), self-hosted by the Fairfield parish and linked from
+    https://www.stmarysfairfieldpa.org/bulletin. Page 1. The quoted schedule is St. Rita's, printed under
+    its Blue Ridge Summit address; St. Mary's is "Saturday · 5:00pm | Sunday · 8:00 & 10:30am".
 - url: https://stritacc.org/download/169/october-2026/3492/week-of-october-18-2026.pdf
   seen: 2026-10-19
   quote: Rev. Peter DiTomasso, MSSCC Pastor | Rev. Marsianus Leu, MSSCC Parochial Vicar
-  note: 'St. Rita''s own copy of the same issue ("Week of October 18, 2026", uploaded 2026-10-16) in the
-    WP File Download folder "October 2026" on https://stritacc.org/bulletins/.'
+  note: St. Rita's own copy of the same issue ("Week of October 18, 2026", uploaded 2026-10-16) in the
+    WP File Download folder "October 2026" on https://stritacc.org/bulletins/.
+promoted: 2026-10-20
 ---
 
 ## Publisher

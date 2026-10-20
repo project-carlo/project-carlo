@@ -28,6 +28,7 @@ evidence:
   note: 'Issue of 25 October 2026, page 2: "Mass times: Saturday 5pm, Sunday 8am & 10:30am, Mon 12pm,
     Tues—Fri 8am"; the intentions list Saturday 24 October 5pm, Sunday 25 October 8am and 10:30am, weekdays
     8am and Monday noon. The bulletin gives only the mailing address, PO Box 136, Cornwall, PA 17016.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

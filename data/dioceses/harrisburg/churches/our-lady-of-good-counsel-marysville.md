@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-19
   quote: 4p .m.O LGC
   note: 'Page 2 of the 18 October 2026 issue: Saturday 24 October 4 p.m. at OLGC; Sunday 9 a.m. OLGC.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: MASS SCHEDULE Saturday |4 :00p mV igil Sunday |7 :30a m, 9:00 am,1 1:00 am, 5:00 pm
   note: Page 1 of the 18 October 2026 St. John Neumann bulletin; weekdays Monday-Friday 9:00 am, Thursday
     6:00 pm.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

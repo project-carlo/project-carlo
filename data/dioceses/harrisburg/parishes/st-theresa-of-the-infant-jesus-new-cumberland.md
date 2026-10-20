@@ -9,17 +9,18 @@ evidence:
 - url: https://discovermass.com/church/st-theresa-of-the-infant-jesus-new-cumberland-pa/
   seen: 2026-10-19
   quote: 1300 Bridge Street — New Cumberland, PA 17070-1115
-  note: 'Issue of 18 October 2026 (8 pages), page 1: "SAINT THERESA OF THE INFANT JESUS PARISH, 1300
-    Bridge Street — New Cumberland, PA 17070-1115", Rev. Jonathan P. Sawicki, Pastor; Mass Schedule
-    Weekend Saturday 4:30pm, Sunday 8:00am, 10:00am, and 12:00pm; weekdays Monday to Saturday;
-    "Adoration Chapel: Monday thru Friday 6:00am to 9:00pm".'
+  note: 'Issue of 18 October 2026 (8 pages), page 1: "SAINT THERESA OF THE INFANT JESUS PARISH, 1300 Bridge
+    Street — New Cumberland, PA 17070-1115", Rev. Jonathan P. Sawicki, Pastor; Mass Schedule Weekend Saturday
+    4:30pm, Sunday 8:00am, 10:00am, and 12:00pm; weekdays Monday to Saturday; "Adoration Chapel: Monday
+    thru Friday 6:00am to 9:00pm".'
 - url: https://discovermass.com/church/st-theresa-of-the-infant-jesus-new-cumberland-pa/
   seen: 2026-10-19
   quote: SAINT THERESA OF THE INFANT JESUS PARISH
 - url: https://www.sainttheresaparish.org/
   seen: 2026-10-19
-  note: Behind Cloudflare (probe url 403; parish-site-access visit.py BLOCKED on every load). The
-    bulletin was read on Discover Mass.
+  note: Behind Cloudflare (probe url 403; parish-site-access visit.py BLOCKED on every load). The bulletin
+    was read on Discover Mass.
+promoted: 2026-10-20
 ---
 
 ## Publisher
@@ -46,6 +47,7 @@ parish's. Provider `discover_mass` with that slug. ParishesOnline has an organiz
 publications: an old account, not the bulletin.
 
 Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows): the resolver found the newest issue on the Discover Mass church page, but the download returned Discover Mass's 134-byte "Maximum number of files downloaded today" page (a per-IP daily cap the sandbox's shared egress reached; curl got the same page). Not a resolver fault; re-run on another day.
+Re-run on 2026-10-20 after the cap cleared: `ok`, the newest issue downloaded (3,278,067 bytes).
 
 ## Not yet confirmed
 

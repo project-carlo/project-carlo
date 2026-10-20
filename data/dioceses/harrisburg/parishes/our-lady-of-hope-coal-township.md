@@ -20,6 +20,7 @@ evidence:
   seen: 2026-10-19
   note: 'probe po: organization our-lady-of-hope-church, 863 W Chestnut St, Coal Township, lpi:0018000000Qbzy7AAB,
     container 03/0080, website https://www.revivingtogether.com/coaltownship, weekly issues to 2026-10-18.'
+promoted: 2026-10-20
 ---
 
 ## Publisher

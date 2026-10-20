@@ -10,9 +10,9 @@ evidence:
   seen: 2026-10-19
   quote: 125 S SPRUCE STREET | ANNVILLE, PENNSYLVANIA
   note: 'Issue of 18 October 2026, page 1: "ST. PAUL THE APOSTLE CATHOLIC CHURCH"; Mass schedule Saturday
-    17 October 5:00 PM, Sunday 18 October 8:00 AM and 10:30 AM, weekdays 19-23 October "NO MASS"
-    (priests'' continuing-education week), Saturday 24 October 5:00 PM, Sunday 25 October 8:00 and 10:30
-    AM. Page 2: Pastor Reverend Matthew E Cannon.'
+    17 October 5:00 PM, Sunday 18 October 8:00 AM and 10:30 AM, weekdays 19-23 October "NO MASS" (priests''
+    continuing-education week), Saturday 24 October 5:00 PM, Sunday 25 October 8:00 and 10:30 AM. Page
+    2: Pastor Reverend Matthew E Cannon.'
 - url: https://discovermass.com/church/st-paul-the-apostle-church-annville-pa/
   seen: 2026-10-19
   quote: 10:30 AM IRIS MARIAG ONZALEZ
@@ -22,9 +22,10 @@ evidence:
     parish-site-access render.py; page 2 footer "View this bulletin online at www.DiscoverMass.com").
 - url: https://www.annvillecatholic.org/
   seen: 2026-10-19
-  note: 'Title "Saint Paul the Apostle Church - Annville, PA"; eCatholic site 25304 with a /bulletins
-    page (read with parish-site-access visit.py). The diocese''s website for the parish,
-    saintpaulsinannville.org, redirects to stpaulsinannville.org, which also answers with this site.'
+  note: Title "Saint Paul the Apostle Church - Annville, PA"; eCatholic site 25304 with a /bulletins page
+    (read with parish-site-access visit.py). The diocese's website for the parish, saintpaulsinannville.org,
+    redirects to stpaulsinannville.org, which also answers with this site.
+promoted: 2026-10-20
 ---
 
 ## Publisher

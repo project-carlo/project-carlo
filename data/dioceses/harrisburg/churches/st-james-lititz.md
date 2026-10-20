@@ -27,6 +27,7 @@ evidence:
   note: 'Image-only 18 October 2026 bulletin, read rendered: "Sunday Masses: Saturday Evening 4:00pm,
     Sunday Morning 8:30am & 10:30am ... Mass Tuesday-Friday 9:00am"; page 2 lists each Mass of 17-25 October
     in the church.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

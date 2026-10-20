@@ -19,9 +19,9 @@ evidence:
     Friday 9am, Saturday 24 October 4pm.'
 - url: https://marygateofheaven.com/old-bulletins-and-events
   seen: 2026-10-19
-  note: The parish site's bulletin page embeds the Discover Mass bulletins for
-    mary-gate-of-heaven-myerstown-pa (found by parish-site-access visit.py --bulletin; the page is
-    built in JavaScript).
+  note: The parish site's bulletin page embeds the Discover Mass bulletins for mary-gate-of-heaven-myerstown-pa
+    (found by parish-site-access visit.py --bulletin; the page is built in JavaScript).
+promoted: 2026-10-20
 ---
 
 ## Publisher

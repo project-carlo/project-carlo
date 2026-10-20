@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-19
   note: 'Listed in Diocese of Harrisburg: Find a Parish, Church or Mass Time as ''Seven Sorrows of the
     Blessed Virgin Mary'', 280 N Race St, Middletown, PA, 17057; kind: Parish in Middletown'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

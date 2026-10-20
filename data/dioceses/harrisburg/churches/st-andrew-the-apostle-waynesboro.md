@@ -11,9 +11,7 @@ longitude: -77.5744375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23741
-- directory:st-andrew-the-apostle
+roster: ['gcatholic:23741', 'directory:st-andrew-the-apostle']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23741
   seen: 2026-10-19
@@ -29,6 +27,7 @@ evidence:
   note: 'Image-only issue, read rendered. Page 1 "12 North Broad Street in Waynesboro, PA 17268"; page
     3 "Mass Schedule": Mass of Anticipation 5:00 PM For the People; Sunday 18 October 8:00 AM, 11:00 AM;
     Saturday 24 October 5:00 PM; Sunday 25 October 8:00 AM, 11:00 AM, each with an intention.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

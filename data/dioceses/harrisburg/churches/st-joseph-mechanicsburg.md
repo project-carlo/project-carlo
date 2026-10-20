@@ -32,6 +32,7 @@ evidence:
   quote: 8:00 AM Mass -P eopleo ft he Parish
   note: 'Issue of 18 October 2026, page 2: Saturday 17 October 4:00 PM Mass; Sunday 18 October 8:00 AM,
     9:45 AM and 11:30 AM Masses.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

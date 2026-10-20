@@ -27,6 +27,7 @@ evidence:
   quote: 10:00am | SGC
   note: 'Sacred Heart of Jesus bulletin of 18 October 2026, page 2: "SGC - St. George Church, Mifflinburg";
     Sunday 18 and 25 October 10:00am at SGC; page 1 "Saint George Church 775 Forest Hill Road".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

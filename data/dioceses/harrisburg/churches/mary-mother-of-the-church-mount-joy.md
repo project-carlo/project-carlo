@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-20
   quote: Mary, Mother of the Church, Saint Marys Drive
   note: OSM node 2043904735, on Saint Marys Drive, East Donegal Township, at GCatholic's Plus Code.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

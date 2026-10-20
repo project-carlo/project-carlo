@@ -29,6 +29,7 @@ evidence:
 - url: https://www.hbgdiocese.org/parishes/st-peter-columbia/
   seen: 2026-10-19
   note: 'The diocese''s St. Peter entry: "1st Wednesday of the month 6:00PM (Saint Mary Chapel, Wrightsville)".'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

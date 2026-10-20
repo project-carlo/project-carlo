@@ -27,6 +27,7 @@ evidence:
   quote: 4:30 pm + Kimberly Retallack 9:30 am + Alicia Gorlaski 12:00 pm Vietnamese Mass
   note: Page 5 Mass intentions in the 4 October 2026 bulletin (the newest posted on 20 October), with
     weekday Masses through 11 October.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

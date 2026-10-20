@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-19
   quote: 2N orth 8thS treet
   note: 'Issue of 18 October 2026, page 1 (the text layer splits the words: "2 North 8th Street").'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

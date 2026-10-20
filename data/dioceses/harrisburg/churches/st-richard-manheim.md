@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-20
   quote: Saint Richards Catholic Church, 110, North Oak Street, Manheim
   note: OSM way 198763869; 201 East Adele Avenue is a separate building next to it (way 11955835).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

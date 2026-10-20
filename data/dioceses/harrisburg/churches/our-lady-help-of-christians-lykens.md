@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: 'Sunday Morning Mass: 8:00 a.m. Our Lady Help of Christians Church, Lykens'
   note: Page 1 of the 11 October 2026 issue.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

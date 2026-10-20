@@ -34,6 +34,7 @@ evidence:
     OCTOBER 17, 2026 5:00 PM + Peter Kovalevich; SUNDAY, OCTOBER 18, 2026 ... 8:15 AM + Lawrence Aumen;
     11:15 AM - People of the Parish"; Tuesday-Friday Masses "said privately by Fr. Sam" during the priests''
     workshop.'
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

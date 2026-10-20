@@ -27,6 +27,7 @@ evidence:
   quote: 'MASS SCHEDULE: Vigil5 :00P MS unday8 :00A M1 0:30 AM 6:00 PM'
   note: Page 1 masthead of the 18 October 2026 Sacred Heart of Jesus bulletin; weekday Mass 8:30 AM (page
     2 intentions).
+promoted: 2026-10-20
 ---
 
 ## Holds Mass

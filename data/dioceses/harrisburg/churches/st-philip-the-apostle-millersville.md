@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-19
   quote: 'WeekendM asses: Saturday - 5:00pm Sunday - 8:00am &1 1:00am'
   note: Page 1 of the 18 October 2026 St. Philip the Apostle bulletin.
+promoted: 2026-10-20
 ---
 
 ## Holds Mass
