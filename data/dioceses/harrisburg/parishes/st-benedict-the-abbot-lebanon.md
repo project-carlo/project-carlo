@@ -8,7 +8,7 @@ group: ''
 evidence:
 - url: https://discovermass.com/church/st-benedict-the-abbot-church-lebanon-pa/
   seen: 2026-10-19
-  quote: 9:00 AM:M ass 12:00P M: Misa
+  quote: '9:00 AM:M ass 12:00P M: Misa'
   note: 'Issue of 18 October 2026, page 1 (bilingual; the masthead''s text layer doubles every letter):
     "Saint Benedict the Abbot, Rev. José Elías Mera Vallejos, 1300 Lehman St, Lebanon, PA, 17046,
     October / Octubre 18, 2026". Mass schedule for 19-25 October: weekdays "NO MASS" (priests''

@@ -2,7 +2,7 @@
 name: Seven Sorrows of the Blessed Virgin Mary
 website: https://www.ssbvm.org/bulletin
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://www.ssbvm.org/bulletin
 publication: ['url:https://www.ssbvm.org/bulletin']
 group: ''
 evidence:
@@ -42,6 +42,8 @@ Mass site.
 ssbvm.org's Bulletin page links each issue as a PDF on Duda's CDN
 (`irp.cdn-website.com/9b8424fc/files/uploaded/<YYYY-MM-DD>.pdf`, sometimes with a hash suffix).
 `other`, website the Bulletin page. Page 1 (masthead and schedule) is an image; the rest has text.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): picked the 18 October 2026 issue (2026-10-18.pdf), which I read; recipe `page-pdfs` pinned.
 
 ## Not yet confirmed
 

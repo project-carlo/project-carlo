@@ -37,6 +37,8 @@ Masses Wednesday to Friday at noon plus Friday 7:00 p.m. in Vietnamese.
 The parish site (olbsharrisburg.org) links its Discover Mass page from its Bulletin page; the
 church page lists weekly issues to 18 October 2026. `discover_mass` with that church slug.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, resolved to the Discover Mass page's newest issue (18 October 2026).
+
 ## Not yet confirmed
 
 Nothing.

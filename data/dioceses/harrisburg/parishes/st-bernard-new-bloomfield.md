@@ -2,7 +2,7 @@
 name: Saint Bernard
 website: https://stbernardsnbpa.org/online-bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://stbernardsnbpa.org/online-bulletin/
 publication: ['url:https://stbernardsnbpa.org/online-bulletin/']
 group: ''
 evidence:
@@ -40,6 +40,8 @@ stbernardsnbpa.org's Online Bulletin page links a post per Sunday and the PDFs
 (`wp-content/uploads/<y>/<m>/October-18-Bulletin.pdf`; file names are free-form, e.g.
 `October-11-Bulletin-2.pdf`). `other`, website the Online Bulletin page. A Discover Mass page
 (`st-bernard-new-bloomfield-pa`) exists with no bulletins.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): picked the 18 October 2026 issue (October-18-Bulletin.pdf), which I read; recipe `page-pdfs` pinned.
 
 ## Not yet confirmed
 

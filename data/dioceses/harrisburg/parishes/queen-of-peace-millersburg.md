@@ -4,7 +4,7 @@ website: https://queenofpeace-millersburg.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:29106']
-group: ''
+group: Rev. Michael Opoki, AJ, pastor of Our Lady Help of Christians (Lykens) and Queen of Peace (Millersburg)
 evidence:
 - url: https://files.ecatholic.com/29106/bulletins/20261018.pdf
   seen: 2026-10-19
@@ -40,6 +40,8 @@ they are two rows.
 
 The parish's eCatholic site (id from `visit.py`); issues are at
 `files.ecatholic.com/29106/bulletins/<YYYYMMDD>.pdf`, 18 October 2026 the newest. `ecatholic`.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, picked the 18 October 2026 issue (20261018.pdf).
 
 ## Not yet confirmed
 

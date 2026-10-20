@@ -9,8 +9,8 @@ postal_code: '17340'
 latitude: 39.7435625
 longitude: -77.0878125
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:23740', 'directory:st-aloysius']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23740
@@ -22,14 +22,26 @@ evidence:
   seen: 2026-10-19
   note: 'Listed in Diocese of Harrisburg: Find a Parish, Church or Mass Time as ''Saint Aloysius'', 29
     South Queen Street, Littlestown, PA, 17340; kind: Parish in Littlestown'
+- url: https://discovermass.com/church/st-aloysius-littlestown-pa/
+  seen: 2026-10-19
+  quote: Saint Aloysius Gonzaga Church
+  note: 'The 18 October 2026 issue, page 1 masthead: "Saint Aloysius Gonzaga Church, 29 South Queen Street,
+    Littlestown, PA 17340"; "Weekends Saturday Mass of Anticipation @ 5:00 pm, Sunday @ 7:00 am & 10 am";
+    weekdays Monday, Tuesday, Wednesday & Friday 8:30 am.'
+- url: https://discovermass.com/church/st-aloysius-littlestown-pa/
+  seen: 2026-10-19
+  quote: Saturday Mass of Anticipation@ 5:00 pm
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+The parish's 18 October 2026 Discover Mass bulletin (page 1) gives Saturday 5:00 pm and
+Sunday 7:00 and 10:00 am, with weekday Masses at 8:30 am; page 2 lists the intentions for
+the week and the next weekend.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin ("Saint Aloysius Gonzaga Church, 29 South Queen Street, Littlestown"),
+GCatholic 23740 ("St. Aloysius", 29 S Queen St.) and the diocesan directory ("29 South
+Queen Street") agree. Coordinates from GCatholic's Plus Code 87F4PWV6+CV, which matches the
+directory pin (39.74378, -77.087908) to within a few metres.

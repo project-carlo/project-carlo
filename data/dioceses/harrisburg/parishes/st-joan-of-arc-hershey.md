@@ -45,6 +45,8 @@ Two channels carry the same bulletin: Discover Mass (`st-joan-of-arc-hershey-pa`
 October 2026) and the parish's Bulletins page (`church-bulletins.html`, dated PDFs). Both ids are
 recorded; `discover_mass` is used because its listing is structured.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, resolved to the Discover Mass page's newest issue (18 October 2026).
+
 ## Not yet confirmed
 
 Nothing.

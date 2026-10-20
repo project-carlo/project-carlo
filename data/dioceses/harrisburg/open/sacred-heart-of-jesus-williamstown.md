@@ -15,7 +15,8 @@ evidence:
   quote: Sacred Heart of Jesus, Williamstown
   note: 'Listed under "Our Lady Help of Christian, Lykens" on the diocese''s Closed Parishes and Records
     Locations page (as of November 21, 2024): the parish was closed or merged into Lykens, which holds
-    its records.'
+    its records. The diocese''s site sometimes drops scripted connections (recheck on 2026-10-19 got ''Remote
+    end closed connection''); plain curl and a browser (visit.py) loaded it the same day.'
 - url: https://files.ecatholic.com/29061/bulletins/20261011.pdf
   seen: 2026-10-19
   note: The 11 October 2026 Lykens bulletin's schedule lists Masses only at Our Lady Help of Christians,

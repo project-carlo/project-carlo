@@ -45,6 +45,8 @@ calendar marks weekday Masses "CH & LS" (church and livestream).
 The parish homepage embeds its Discover Mass id; the church page lists issues to 18 October 2026.
 `discover_mass`.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, resolved to the Discover Mass page's newest issue (18 October 2026).
+
 ## Not yet confirmed
 
 Nothing.

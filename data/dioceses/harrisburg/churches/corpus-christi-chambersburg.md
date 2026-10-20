@@ -40,4 +40,4 @@ Masses, and page 3 lists that week's Masses with intentions.
 
 GCatholic ("Corpus Christi", 320 Philadelphia Ave.), the diocesan directory ("Corpus
 Christi", 320 Philadelphia Ave) and the bulletin masthead (320 Philadelphia Avenue) agree.
-Coordinates are GCatholic's Plus Code (87F4W8RR+Q7), within 10 m of the directory's pin.
+Coordinates are GCatholic's Plus Code (87F4W8RR+Q7), about 25 m from the directory's pin.

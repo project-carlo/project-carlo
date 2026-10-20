@@ -43,6 +43,8 @@ The parish homepage embeds the LPi widget (`lpi:0018000000Qbz27AAB`), and `probe
 holy-name-of-jesus-church-17112` gives that organization's container 04/0011 with weekly issues
 to 18 October 2026, so `parishes_online` with the org slug as `provider_id`.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, picked the 18 October 2026 issue (container 04/0011, 20261018B.pdf).
+
 ## Not yet confirmed
 
 Nothing.

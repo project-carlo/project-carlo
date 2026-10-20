@@ -24,7 +24,9 @@ evidence:
   seen: 2026-10-19
   quote: Cathedral Parish of Saint Patrick, Harrisburg
   note: The diocese's closed-parishes list puts Saint Patrick, Sacred Heart of Jesus and Saint Lawrence
-    (Harrisburg) under the Cathedral Parish.
+    (Harrisburg) under the Cathedral Parish. The diocese's site sometimes drops scripted connections (recheck
+    on 2026-10-19 got 'Remote end closed connection'); plain curl and a browser (visit.py) loaded it the
+    same day.
 ---
 
 ## Publisher
@@ -52,6 +54,8 @@ are not a public worship site.
 The cathedral's site embeds the Discover Mass id; the church page lists issues to 18 October
 2026. `discover_mass`. GCatholic omits the cathedral, so its church row comes from the directory
 alone.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): ok, resolved to the Discover Mass page's newest issue (18 October 2026).
 
 ## Not yet confirmed
 

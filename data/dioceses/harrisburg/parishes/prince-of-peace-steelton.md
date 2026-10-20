@@ -24,7 +24,9 @@ evidence:
   seen: 2026-10-19
   quote: Prince of Peace, Steelton
   note: The diocese's closed-parishes list puts Assumption BVM, St. Ann, St. James, St. Peter the Apostle
-    (Steelton) and St. John the Evangelist (Enhaut) under Prince of Peace.
+    (Steelton) and St. John the Evangelist (Enhaut) under Prince of Peace. The diocese's site sometimes
+    drops scripted connections (recheck on 2026-10-19 got 'Remote end closed connection'); plain curl
+    and a browser (visit.py) loaded it the same day.
 ---
 
 ## Publisher
@@ -49,6 +51,8 @@ site.
 
 popsteelton.org's Bulletins page links Discover Mass downloads; the Discover Mass church page
 lists issues to 18 October 2026. `discover_mass`.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): the first run got a 134-byte non-PDF answer after a connection reset; a second run the same day resolved to the newest Discover Mass issue (18 October 2026). Transient.
 
 ## Not yet confirmed
 

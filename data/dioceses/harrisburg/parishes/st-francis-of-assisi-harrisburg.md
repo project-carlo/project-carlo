@@ -2,7 +2,7 @@
 name: Saint Francis of Assisi
 website: https://stfrancisharrisburg.org/bulletin/
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://stfrancisharrisburg.org/bulletin/
 publication: ['url:https://stfrancisharrisburg.org/bulletin/']
 group: ''
 evidence:
@@ -25,7 +25,8 @@ evidence:
   seen: 2026-10-19
   quote: Saint Francis of Assisi, Harrisburg
   note: The diocese's closed-parishes list (as of November 21, 2024) puts Holy Family, Harrisburg under
-    St. Francis of Assisi.
+    St. Francis of Assisi. The diocese's site sometimes drops scripted connections (recheck on 2026-10-19
+    got 'Remote end closed connection'); plain curl and a browser (visit.py) loaded it the same day.
 ---
 
 ## Publisher
@@ -52,6 +53,8 @@ exists (`st-francis-of-assisi-harrisburg-pa`) but lists no bulletins. `other`, w
 Bulletin page. The English and Spanish PDFs are one bulletin in two languages; the pipeline
 should take the `-en` file.
 
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): picked the 18 October 2026 English issue (bulletin-2026-10-18-en.pdf), which I read; recipe `page-pdfs` pinned.
+
 ## Not yet confirmed
 
-Whether the `other` resolver picks the English PDF from the post; see the fetch check.
+Nothing.

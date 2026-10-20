@@ -15,7 +15,7 @@ evidence:
     Sunday 8am & 10:30am, Mon 12pm, Tues—Fri 8am ... Mailing Address: PO BOX 136, Cornwall, PA 17016".'
 - url: https://discovermass.com/church/sacred-heart-of-jesus-cornwall-pa/
   seen: 2026-10-19
-  quote: WEBSITE: sacredheartcornwall.org
+  quote: 'WEBSITE: sacredheartcornwall.org'
 - url: https://www.sacredheartcornwall.org/
   seen: 2026-10-19
   note: Behind Cloudflare; probe url gets 403, and parish-site-access visit.py was challenged on every

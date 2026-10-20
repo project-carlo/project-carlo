@@ -23,7 +23,9 @@ evidence:
   quote: Holy Family, Harrisburg
   note: Listed under "Saint Francis of Assisi, Harrisburg" on the diocese's Closed Parishes and Records
     Locations page ("AS OF NOVEMBER 21, 2024"; the parish holding the records is the heading, "with the
-    closed/merged parishes listed directly below").
+    closed/merged parishes listed directly below"). The diocese's site sometimes drops scripted connections
+    (recheck on 2026-10-19 got 'Remote end closed connection'); plain curl and a browser (visit.py) loaded
+    it the same day.
 - url: https://stfrancisharrisburg.org/wp-content/uploads/2026/10/bulletin-2026-10-18-en.pdf
   seen: 2026-10-19
   note: St. Francis's 18 October 2026 bulletin lists all its Masses with no place other than its church;

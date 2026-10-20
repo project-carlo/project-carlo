@@ -17,6 +17,10 @@ evidence:
   seen: 2026-10-19
   note: The parish's Google Sites homepage (the diocesan directory's and GCatholic's website), with a
     'Bulletin' page.
+revisit: 'The `other` resolver cannot read this image-only Google Sites bulletin (fetch check 2026-10-20:
+  resolve_failed). Decide: a resolver for image pages, or no_bulletin; recheck whether the parish posts
+  a PDF'
+revisit_after: 2026-11-15
 ---
 
 ## Publisher
@@ -35,9 +39,10 @@ Sunday 8:00 and 10:15 a.m. Masses; the directory names Very Rev. Paul M. Clark a
 The bulletin is not a PDF: the 'Bulletin' page of
 `sites.google.com/site/saintmatthewcatholicchurch` is overwritten each week with the issue's pages
 as images (`sites.google.com/sitesv-images-rt/...`). It is image-only, so the pipeline would have
-to read the images. `other`, website the Bulletin page; see the fetch check for whether the
-resolver can read it.
+to read the images. `other`, website the Bulletin page.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): resolve_failed, "NoBulletin: No PDF links found on bulletin page". The page holds the issue as images, which the `other` resolver does not read; nothing in src/ was changed. Until a resolver reads Google Sites image pages (or the parish posts PDFs), this row fetches nothing.
 
 ## Not yet confirmed
 
-Whether the `other` resolver can take an issue from a page of images (fetch check).
+How this row should be read: the fetch check shows the `other` resolver gets nothing from the image-only page (see `revisit`).

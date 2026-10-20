@@ -2,7 +2,7 @@
 name: Saint Lawrence of Rome, Deacon and Martyr (Mater Dei)
 website: https://stlawrence.cc/whats-new/bulletins
 bulletin_provider: other
-provider_id: ''
+provider_id: page-pdfs https://stlawrence.cc/whats-new/bulletins
 publication: ['url:https://stlawrence.cc/whats-new/bulletins']
 group: ''
 evidence:
@@ -46,6 +46,8 @@ building is now this quasi-parish's church.
 stlawrence.cc's Bulletins page links one dated PDF per Sunday
 (`/images/bulletins/2026/Bulletin10.18.2026.pdf`). `other`, website the Bulletins page.
 GCatholic gives the old Mater Dei site (materdeipa.com) as the website.
+
+Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this region's rows, under xvfb-run with Chrome): picked the 18 October 2026 issue (Bulletin10.18.2026.pdf), which I read; recipe `page-pdfs` pinned.
 
 ## Not yet confirmed
 

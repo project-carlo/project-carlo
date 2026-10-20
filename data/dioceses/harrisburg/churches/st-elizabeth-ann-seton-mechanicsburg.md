@@ -1,6 +1,6 @@
 ---
 parish: st-elizabeth-ann-seton-mechanicsburg
-name: St. Elizabeth Ann Seton
+name: St. Elizabeth Ann Seton Church
 line1: 310 Hertzler Rd.
 line2: ''
 city: Mechanicsburg
@@ -9,8 +9,8 @@ postal_code: '17055'
 latitude: 40.1804375
 longitude: -76.9729375
 coordinates_from: gcatholic-plus-code
-name_verified: false
-address_verified: false
+name_verified: true
+address_verified: true
 roster: ['gcatholic:23750', 'directory:st-elizabeth-ann-seton']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23750
@@ -22,14 +22,24 @@ evidence:
   seen: 2026-10-19
   note: 'Listed in Diocese of Harrisburg: Find a Parish, Church or Mass Time as ''Saint Elizabeth Ann
     Seton'', 310 Hertzler Road, Mechanicsburg, PA, 17055; kind: Parish in Mechanicsburg'
+- url: https://discovermass.com/church/st-elizabeth-ann-seton-mechanicsburg-pa/
+  seen: 2026-10-19
+  quote: SUNDAY 7:30am, 9:00am, &1 1:00am
+  note: 'Issue of 18 October 2026, page 1: MASS TIMES Saturday 4:00pm, Sunday 7:30am, 9:00am & 11:00am,
+    Tuesday 7:00am, Wednesday 9:00am, Thursday 7:00am, Friday 9:00am; "310 Hertzler Road, Mechanicsburg,
+    PA 17055".'
+- url: https://discovermass.com/church/st-elizabeth-ann-seton-mechanicsburg-pa/
+  seen: 2026-10-19
+  quote: 310H ertzler Road,
 ---
 
 ## Holds Mass
 
-TODO: Evidence that Mass is celebrated here now: the current bulletin or the parish's own
-Mass schedule, with its date. Four Masses a year still counts; say so if that is all.
+Yes. The parish's 18 October 2026 bulletin (Discover Mass) gives Saturday 4:00pm, Sunday
+7:30, 9:00 and 11:00am and Tuesday to Friday weekday Masses.
 
 ## Name and address
 
-TODO: Which sources give this name and address, whether they agree, and which one you
-followed when they do not. Say where the coordinates came from.
+The bulletin, the diocese's directory and GCatholic all give 310 Hertzler Road,
+Mechanicsburg, PA 17055. Both flags true. Coordinates are GCatholic's Plus Code
+(87G552JG+5R), within a few metres of the diocese's pin.
