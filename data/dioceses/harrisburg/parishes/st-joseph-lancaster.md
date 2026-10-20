@@ -60,5 +60,7 @@ Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this re
 
 ## Not yet confirmed
 
-Whether the Lancaster Latin Mass Community's newsletter (lancasterlatinmass.com) should be a
-bulletin row of its own; its Masses are at this church and at Holy Family Chapel, St. Mary's.
+Nothing open. (Settled 2026-10-20: the Lancaster Latin Mass Community is not a bulletin row,
+because its newsletter archive stops in 2019. Its Sunday 1:00 p.m. Mass is in this church, and
+its Tuesday Mass in Holy Family Chapel is excluded as `no-bulletin`, see
+`excluded/holy-family-chapel-historic-st-marys-convent-lancaster`.)

@@ -63,6 +63,6 @@ Fetch check (2026-10-20, `fetch_check.check_fetch` on a temporary CSV of this re
 
 ## Not yet confirmed
 
-Whether Holy Family Chapel's weekly Latin Mass should be a church row of its own (a chapel in a
-separate building on the same campus, published by the Latin Mass community's own site and
-newsletter, not by this bulletin).
+Nothing open. Holy Family Chapel's Tuesday Latin Mass is in no bulletin, so the chapel is
+excluded as `no-bulletin` (`excluded/holy-family-chapel-historic-st-marys-convent-lancaster`,
+2026-10-20).
