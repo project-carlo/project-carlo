@@ -49,7 +49,12 @@ otherwise.
   list every church page: grep the town there (slugs can be unguessable: St. Mary, Altoona is
   `st-mary-immaculate-conception-altoona-pa`). Probe on the bare host (200 = exists, 404 =
   not; `www.` 301s). A church page's "Visit Website" link often gives the homepage the
-  directory lacks. A page can exist
+  directory lacks. Many pages here say "no bulletins available" (St. Joseph, Bellwood; St.
+  Matthew, Tyrone; St. Therese): not live channels. One bulletin under a parish slug and a
+  chapel slug (Mount Carmel and `our-lady-of-assumption-altoona-pa`) is one row with both ids.
+- **Directory homepages are often dead or stale** (sttheresealtoona.com dead DNS,
+  stmatthewtyrone.org SSL failure; the live sites are sainttheresealtoona.org and
+  stmatthewtyrone.com). Directory Mass times lag too (Tyrone 10:00 vs bulletin 10:30). A page can exist
   with "no bulletins available" (St. Mark and Holy Rosary, Altoona): not a live channel. St.
   Gregory, MacDonaldton's directory homepage is a Discover Mass page. One joint bulletin can appear under several
   church slugs: record every slug. Discover Mass caps downloads per IP per day (a 134-byte
@@ -74,8 +79,11 @@ otherwise.
 - **GoDaddy site builder** (PDFs on `img1.wsimg.com/blobby/...`; St. Mary & St. Michael,
   Hollidaysburg) resets the sandbox's connections intermittently: `probe url` may fail every
   time and `fetch:check` several times before passing. Rerun it; `curl` on the PDF blobs works.
-- **eCatholic** here so far: St. Catherine, Duncansville (37641), Our Lady of Lourdes, Altoona
-  (29859). Cloudflare 403s curl; headed Chrome opens them and `fetch:check` reads them.
+- **eCatholic** is common here: St. Catherine, Duncansville (37641), Our Lady of Lourdes (29859),
+  St. Therese (37141), St. Joseph, Bellwood (40290), St. Matthew, Tyrone (37833). Cloudflare
+  403s curl and `recheck`; headed Chrome (`visit.py`) opens them, sometimes on the second try,
+  and `issues.py ecatholic ecatholic:<id>` then reads the PDFs without a browser. Some date
+  files by the Saturday (St. Therese: `20261017.pdf` is the 18 Oct issue; `--day sat`).
 - **Image-only bulletins** are common in the region (St. John, Lakemont's WordPress scans).
   `pdftoppm -r 100 -f 1 -l 1 -png` renders a page to read; the evidence is then a note, not a
   quote, and says so.
@@ -87,6 +95,7 @@ otherwise.
 - **Both cathedrals may be missing from the GCatholic roster**: GCatholic links the Altoona
   cathedral at `gcatholic.org/churches/northamerica/2439`, outside the list the roster reads.
   Cite that page directly.
+- `tools/fill_record.py` fills evidence and body into a new record (see the tools README).
 - `pnpm diocese search` does not search rosters: an empty result says nothing about them.
 
 ## Rules settled for this diocese
