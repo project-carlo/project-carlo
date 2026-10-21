@@ -435,7 +435,7 @@ Run each stage independently:
 
 ```bash
 pnpm run fetch [-- --parish "..."]
-pnpm fetch:check [-- --parish SLUG --provider other --record tests/fixtures/fetch]
+pnpm fetch:check [-- --parish SLUG --provider other --diocese SLUG --record tests/fixtures/fetch]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm weekly:run [-- --parish SLUG --diocese SLUG]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]

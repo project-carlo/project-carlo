@@ -574,6 +574,28 @@ def test_new_exclusion_from_a_roster_drops_coordinates(root: Path, tmp_path: Pat
 
 
 # ── CLI and the committed data ──────────────────────────────────────────────
+def test_fetch_check_reads_a_diocese_before_promotion(
+    root: Path, monkeypatch: pytest.MonkeyPatch, capsys,
+) -> None:
+    import contextlib
+
+    from pdf_extract import fetch_check
+    _parish()
+    _parish("st-bede", bulletin_provider="no_bulletin")
+    checked: list[str] = []
+
+    def check_one(slug, source, page, **_):
+        checked.append(slug)
+        return {"slug": slug, "provider": source.provider, "status": "ok"}
+
+    monkeypatch.setattr(fetch_check, "launch_stealth_browser", contextlib.nullcontext)
+    monkeypatch.setattr(fetch_check, "_check_one", check_one)
+    # The live CSV only has live-parish; the diocese's unpromoted row is still found.
+    assert main(["fetch-check", "--diocese", "test", "--parish", "st-ann"]) == 0
+    assert checked == ["st-ann"]
+    assert '"ok": 1' in capsys.readouterr().out
+
+
 def test_cli_prints_errors_without_a_traceback(root: Path, capsys) -> None:
     assert main(["diocese", "new", "church", "test", "--name", "X", "--parish", "nope"]) == 1
     err = capsys.readouterr().err

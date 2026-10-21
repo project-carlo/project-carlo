@@ -44,6 +44,7 @@ from pdf_extract.datasync import status as data_status
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
 from pdf_extract.dioceses import DioceseError
+from pdf_extract.dioceses import records as diocese_records
 from pdf_extract.dioceses.cli import add_diocese_parser
 from pdf_extract.evals.report import write_report as write_eval_report
 from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
@@ -157,11 +158,16 @@ def _cmd_fetch(args: argparse.Namespace) -> Result:
 
 
 def _cmd_fetch_check(args: argparse.Namespace) -> Result:
+    parish_rows = None
+    if args.diocese:
+        # A diocese's records before promotion: the rows `promote` would write.
+        parish_rows, _ = diocese_records.export_rows(diocese_records.load(args.diocese))
     return check_fetch(
         slugs=_split_csv(args.parish),
         providers=_split_csv(args.provider),
         record_dir=args.record,
         download=not args.no_download,
+        parish_rows=parish_rows,
     )
 
 
@@ -387,6 +393,11 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     fetch_check_parser.add_argument(
         "--no-download", action="store_true", help="Resolve links only; skip the PDF download",
+    )
+    fetch_check_parser.add_argument(
+        "--diocese",
+        help="Read the parishes from data/dioceses/<diocese>/ instead of parishes.csv,"
+        " so rows can be checked before they are promoted",
     )
     fetch_check_parser.set_defaults(handler=_cmd_fetch_check)
     _add_common_args(fetch_check_parser)

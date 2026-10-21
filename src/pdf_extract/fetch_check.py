@@ -452,15 +452,21 @@ def check_fetch(
     download: bool = True,
     reference_date: date | None = None,
     parishes_csv: Path = PARISHES_CSV_PATH,
+    parish_rows: list[dict[str, str]] | None = None,
 ) -> dict[str, object]:
     """Resolve (and download) each parish's latest bulletin without saving it.
 
     Returns one row per parish with its status, so a resolver change can be
     compared site by site with the run before it. With `record_dir`, the pages
     each resolver read are saved there as `<slug>.json.gz` for `SnapshotPage`.
+    `parish_rows` (rows in the parishes.csv layout, such as a diocese's records
+    before promotion) replaces `parishes_csv`.
     """
     today = reference_date or date.today()
-    all_parishes = _read_parishes(parishes_csv)
+    all_parishes = (
+        _read_parishes(parishes_csv) if parish_rows is None
+        else [{**row, "homepage_url": row["website"]} for row in parish_rows]
+    )
     missing = sorted(set(slugs or ()) - {p["slug"] for p in all_parishes})
     if missing:
         raise ValueError(f"Parish not found: {', '.join(missing)}")
