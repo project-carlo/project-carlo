@@ -111,6 +111,13 @@ otherwise.
 - **`probe pdf` can't take a URL with spaces**: pass `%20`.
 - **Two homepages, one bulletin:** the two Cresson parishes' separate Weebly sites both point at
   one ParishesOnline org (14/1078). Follow each site's "Weekly Bulletin" link before making two rows.
+- **Word bulletins** (St. Michael, Saint Michael: Weebly `/uploads/.../MM-DD-YYYY_webbulletin.docx`):
+  the pipeline has no `.docx` reader, so `fetch:check` fails at download; `no_bulletin` with the
+  URL pattern recorded. Franciscan-staffed parishes here (OFM Conv., TOR) often post image-only
+  or Word bulletins.
+- `tools/fill_record.py` appends evidence after the last evidence line even when a key such as
+  `parish:` follows the list (as `new excluded --parish` writes it): move `parish:` above
+  `evidence:` first.
 - **Campus and shrine Masses** (Mount Aloysius College; Saint Francis University's chapel; the
   Loretto shrine's summer Sunday Mass) go to `open/` until a source says they are public.
 - **One pastor, one bulletin is common in Cambria**: Fr. Nale's stjic.org bulletin carries all
