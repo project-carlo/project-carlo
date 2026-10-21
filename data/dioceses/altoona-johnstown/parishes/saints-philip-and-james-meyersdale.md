@@ -65,3 +65,5 @@ Gregory, MacDonaldton". The `group` keeps the diocese's version; neither changes
 no bulletin was found either way. Whichever pastor is current, his parish office is the place to
 ask about a bulletin.
 
+
+- Re-checked 2026-10-21 (task 25): DuckDuckGo searches for the four Meyersdale-area parishes (by name, by Fr. Michael Wolfe, by town) found only Discover Mass, the stale webparish.com stubs, mass-time aggregators, the Sts. Philip and James Facebook page (login wall; mobile and mbasic Facebook URLs also redirect to login) and church-bulletin.org `?id=144`, which is Saints Philip and James, Exton (a look-alike). `discovermass-church-urls.txt` has no Discover Mass slug for these towns beyond the ones already recorded. St. Peter, Somerset's current bulletin (stpetersparish.com site_docs/10648.pdf; its parochial vicar is the sacramental minister at West Salisbury and Pocahontas) has no hit for Meyersdale, Salisbury, Pocahontas, Gregory or Wolfe. Still no bulletin; stays `no_bulletin`.

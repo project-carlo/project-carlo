@@ -66,3 +66,5 @@ is not used as the website because no posted bulletin was seen.
 Whether the Facebook page posts a weekly bulletin (a logged-in browser would show it), and who
 the pastor is. If a bulletin is found, change the provider and add the `publication` ids. Revisit
 after 2026-12-31.
+
+- Re-checked 2026-10-21 (task 25): DuckDuckGo found only the Facebook page `iccdudley` (login wall) and its 2018-era posts 'Our weekly bulletin has been posted to our website at www.iccdudley.com/bulletin' (facebook.com/iccdudley/posts/.../2096300583861691 and 2128164430675306), which point to the dead domain; iccdudley.org/.net and other guessed domains do not resolve. The findglocal mirror's newest posts (5 Sep 2026 back to Aug) are 'Spiritual Workout Wednesday' reflections by a Capuchin, with no bulletin. The clergy list shows 'Reid, Rev. Mark: Immaculate Conception Parish, Dudley - Administrator' (and pastor of Most Holy Trinity, Huntingdon; the entry before his on that list, Rev. Robert Reese, is pastor of Dysart and Frugality); Huntingdon's issue does not carry Dudley (recorded above). Still no bulletin; stays `no_bulletin`.

@@ -63,3 +63,5 @@ a unique URL and no live homepage exists (the directory has none). It is not a b
 Where, if anywhere, the bulletin is published: a Facebook post, a printed-only bulletin or one on
 the Newry page. Next step: open the Facebook page in a logged-in browser or phone the parish
 (814-224-4522); if a PDF turns up, change the provider and drop `no_bulletin`.
+
+- Re-checked 2026-10-21 (task 25): DuckDuckGo (name, town, pastor, 'facebook bulletin') found nothing new: the Facebook page `StThomasMoreCatholicChurchPA` (login wall; the one public post/video URL it returned is a 2020 reconciliation-schedule video), a churchesinusa listing that still names Fr. Leo Lynch, and look-alike St. Thomas More sites in other states (stthomasmorechurch.org, stmoside.org, stthomasmore.org). The pastor-sharing parish, Newry, was read earlier (no Roaring Spring bulletin); the clergy list (dioceseaj.org/clergy) shows Fr. Allen Zeth as administrator of both and nobody else. Still no bulletin; stays `no_bulletin`.

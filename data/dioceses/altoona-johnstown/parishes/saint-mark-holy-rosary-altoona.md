@@ -73,3 +73,5 @@ nothing for `fetch` to read. `website` is the St. Mark site that serves both par
   Discover Mass again.
 - Whether the weekly homepage notices should count as a bulletin. They are text on a Weebly
   page, not a document, so I did not treat them as one.
+
+- Re-checked 2026-10-21 (task 25): DuckDuckGo found no bulletin PDF for churchofsaintmarks.org; its results are the site's own pages, the Facebook page `saintmarksofaltoona` (login wall; no public post URL for a bulletin turned up) and the findglocal mirror of that page, whose posts to 11 Oct 2026 are photos, prayer lists and anniversaries with no bulletin. `holy-rosary.org` and `stmark-parish.org` in the results are other towns' parishes. The Discover Mass sitemap list has only the two pages already recorded. Still no bulletin; stays `no_bulletin`.

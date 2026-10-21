@@ -58,3 +58,5 @@ needs a unique URL and no live homepage exists (the directory has none). It is n
 Where, if anywhere, the bulletin is published, and who the administrator is. Next step: open the
 Facebook page in a logged-in browser or phone the parish (814-832-2137); if a PDF turns up, change
 the provider and drop `no_bulletin`.
+
+- Re-checked 2026-10-21 (task 25): DuckDuckGo (name, town, 'Deacon Nester', 'facebook bulletin') found no bulletin: only the webparish.com stub, the Facebook page `StJosephCatholicChurchWburg` (login wall; no public post URL returned) and St. Joseph look-alikes elsewhere. The clergy list (dioceseaj.org/clergy, 21 Oct 2026) shows 'Nester, Deacon Kevin: Saint Joseph Parish, Williamsburg - Administrator' and no priest, so no neighbouring pastor's bulletin is a candidate (this confirms the batch note). Guessed domains (stjosephwmsb.org, sjwilliamsburg.org, stjoewilliamsburg.org, saintjosephwilliamsburg.org) do not resolve. Still no bulletin; stays `no_bulletin`.

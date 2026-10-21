@@ -65,3 +65,5 @@ bulletin is found: Facebook may post one.
 
 Whether the Facebook page, or a paper bulletin in the pews, is published online; the next step
 is to look at the Facebook page logged in or call the parish. Revisit after 2026-12-31.
+
+- Re-checked 2026-10-21 (task 25): DuckDuckGo found the parish Weebly site (no bulletin page), scosmu.org's page for St. Mary Shade Gap (Mount Union's site: a history blurb, no bulletin) and the Facebook page 'St. Mary's Catholic Church, Shade Gap' (facebook.com/p/St-Marys-Catholic-Church-Shade-Gap-100079920891368, 75 likes, login wall; the only public post URL returned is a June 2026 photo). The `St. Mary's Bulletin` Facebook group and stmaryscc.com in the results are other parishes. Still no bulletin; stays `no_bulletin`.
