@@ -76,7 +76,11 @@ otherwise.
   broken https chain, use `http://`. **John Patrick Publishing** (`church-bulletin.org/<id>`):
   a listing with no PDFs is not a live channel. **FATA Online** (`fataonline.com/bulletins/
   <code>`): fixed "View Current Bulletin" link plus dated archive.
-- **ParishesOnline** prints St. Patrick, Newry (container 14/0551). Empty orgs: Roaring
+- **ParishesOnline** prints St. Patrick, Newry (14/0551), St. Clement, Johnstown (14/1971, image
+  pages) and St. John Vianney/Transfiguration (14/1788). tesseract is not installed: render pages
+  with `pdftoppm` and read them.
+- **`dated-post <bulletin page>`** reads a site with one child page per issue (St. Francis of
+  Assisi, Johnstown, /bulletin-3/; unpinned `page-pdfs` picked a 2021 PDF). Empty orgs: Roaring
   Spring, Williamsburg and the four Altoona ones.
 - **Small parishes with no bulletin anywhere** (St. Thomas More, Roaring Spring; St. Joseph,
   Williamsburg; Dudley; Shade Gap; all four of Fr. Wolfe's south Somerset parishes): `no_bulletin`
