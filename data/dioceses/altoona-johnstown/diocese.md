@@ -73,9 +73,17 @@ otherwise.
   broken https chain, use `http://`. **John Patrick Publishing** (`church-bulletin.org/<id>`):
   a listing with no PDFs is not a live channel. **FATA Online** (`fataonline.com/bulletins/
   <code>`): fixed "View Current Bulletin" link plus dated archive.
+- **ParishesOnline** prints St. Patrick, Newry (container 14/0551). Empty orgs: Roaring
+  Spring, Williamsburg and the four Altoona ones.
+- **Small parishes with no bulletin anywhere** (St. Thomas More, Roaring Spring; St. Joseph,
+  Williamsburg): `no_bulletin` rows with their Facebook pages noted (login wall in the sandbox).
+- **Web search in the sandbox:** `visit.py "https://duckduckgo.com/?q=..." --text` works;
+  curl to DuckDuckGo or Bing returns nothing. `church-bulletin.org/<any-slug>` answers 200 with a
+  generic page, so a 200 there proves nothing.
 - **webparish.com/aj/<name>/** is an old diocesan hosting scheme (St. Clare of Assisi,
   Johnstown; GCatholic's St. Mary, Hollidaysburg). Some of its pages are now stubs pointing
-  to a parish's newer site: follow the pointer before treating it as the bulletin's home.
+  to a parish's newer site, or dead stubs with nothing (Roaring Spring, Williamsburg): follow
+  the pointer before treating it as the bulletin's home.
 - **GoDaddy site builder** (PDFs on `img1.wsimg.com/blobby/...`; St. Mary & St. Michael,
   Hollidaysburg) resets the sandbox's connections intermittently: `probe url` may fail every
   time and `fetch:check` several times before passing. Rerun it; `curl` on the PDF blobs works.
