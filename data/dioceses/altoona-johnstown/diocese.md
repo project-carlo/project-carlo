@@ -126,6 +126,13 @@ otherwise.
   alt text `MMDDYYYY.jpg`; `page-images <page>` reads it (the date parser takes MMDDYYYY since
   batch 9). St. Peter, Somerset: PHP `bulletin.php` linking `site_docs/<n>.pdf`. New Baltimore:
   WordPress, posts about a week late.
+- **Partner bulletins:** in Johnstown both no-homepage parishes in batch 12 (St. Patrick; St.
+  Michael) are carried in their pastor's other parish's bulletin. Read the partner's cover
+  first. A parish domain redirecting to the partner's site (stpatrickjtown.com → the
+  cathedral; `probe url` says REDIRECT-OFFSITE) is a fold-in, not a squat.
+- **Duda** (the Johnstown cathedral, `irp.cdn-website.com`) resets curl intermittently; retry.
+  Its `/welcome#WeeklyBulletin` lists `files/uploaded/YYYY-MM-DD.pdf` (not always zero-padded).
+  omostoday.com (WordPress/Elementor) posts scanned issues: render with `pdftoppm`.
 - **Self-hosted, odd hosts:** SiteGround WordPress (mhtcc.org, Huntingdon) drops `probe pdf`
   and plain-http curl (RemoteDisconnected or an sgcaptcha page); use https with a Chrome user
   agent, or `visit.py --bulletin`. Homestead (scosmu.org, Mount Union) resets https; `http://www.`
