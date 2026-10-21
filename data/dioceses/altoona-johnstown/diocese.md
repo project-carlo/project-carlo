@@ -44,9 +44,11 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
 Carried over from Harrisburg, Scranton and Allentown; correct it as this diocese shows
 otherwise.
 
-- **J.S. Paluch on Discover Mass** printed half of Harrisburg. `discovermass.com/?s=<town or
-  ZIP>` finds a church page when the parish site is blocked; St. Gregory, MacDonaldton's
-  directory homepage is a Discover Mass page. One joint bulletin can appear under several
+- **J.S. Paluch on Discover Mass** printed half of Harrisburg. Its `?s=` search is broken
+  (PHP fatal error, 2026-10-21); guess the slug instead: `https://discovermass.com/church/
+  <name>-<town>-pa/` on the bare host (200 = exists, 404 = not; `www.` 301s). A page can exist
+  with "no bulletins available" (St. Mark and Holy Rosary, Altoona): not a live channel. St.
+  Gregory, MacDonaldton's directory homepage is a Discover Mass page. One joint bulletin can appear under several
   church slugs: record every slug. Discover Mass caps downloads per IP per day (a 134-byte
   "Maximum number of files downloaded today" reply, which `fetch:check` reports as
   `not_pdf`); its text layer is often garbled, and quotes keep the garble. Cite the church
@@ -74,6 +76,11 @@ otherwise.
 - **The directory's street addresses can be wrong**: St. John, Lakemont is 344 Baynton Ave in
   the directory but 309 Lotz Ave in its bulletin, its site and GCatholic. Check against a
   second source before verifying.
+- **Self-hosted `page-pdfs` sites:** the cathedral (dated PDFs at altoonacathedral.org/bulletin/),
+  Sacred Heart (one fixed `/bulletin/bulletin.pdf` overwritten weekly: check the issue date).
+- **Both cathedrals may be missing from the GCatholic roster**: GCatholic links the Altoona
+  cathedral at `gcatholic.org/churches/northamerica/2439`, outside the list the roster reads.
+  Cite that page directly.
 - `pnpm diocese search` does not search rosters: an empty result says nothing about them.
 
 ## Rules settled for this diocese
