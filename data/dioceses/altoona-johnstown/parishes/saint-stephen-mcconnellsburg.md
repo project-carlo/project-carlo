@@ -9,14 +9,19 @@ evidence:
 - url: https://www.fultoncatholic.com/uploads/1/2/2/0/122079007/2026-10-11.pdf
   seen: 2026-10-21
   quote: Father Derek Fairman, Pastor
-  note: 'The bulletin dated October 11, 2026 (Twenty-Eighth Sunday in Ordinary Time, 2 pages), page 1 masthead: "ST. STEPHEN CATHOLIC CHURCH ... 303 Lincoln Way East McConnellsburg, PA 17233 ... Phone Number: 814-652-5854 (Everett Parish Office)"; Mass times Saturday at 4:00 p.m., Sunday at 12:00 p.m. (Noon). It names no other church.'
+  note: 'The bulletin dated October 11, 2026 (Twenty-Eighth Sunday in Ordinary Time, 2 pages), page 1
+    masthead: "ST. STEPHEN CATHOLIC CHURCH ... 303 Lincoln Way East McConnellsburg, PA 17233 ... Phone
+    Number: 814-652-5854 (Everett Parish Office)"; Mass times Saturday at 4:00 p.m., Sunday at 12:00 p.m.
+    (Noon). It names no other church.'
 - url: https://www.fultoncatholic.com/bulletin.html
   seen: 2026-10-21
-  note: 'The parish site''s bulletin page (Weebly) links one PDF per Sunday, /uploads/1/2/2/0/122079007/2026-MM-DD.pdf, from 2026-01-04 to 2026-10-11 (the 18 October issue was not up on 21 October).'
+  note: The parish site's bulletin page (Weebly) links one PDF per Sunday, /uploads/1/2/2/0/122079007/2026-MM-DD.pdf,
+    from 2026-01-04 to 2026-10-11 (the 18 October issue was not up on 21 October).
 - url: http://stjohneverettpa.org/gallery/Bulletin%20October%2018%202026.pdf
   seen: 2026-10-21
   quote: Fr. Derek Fairman, Pastor
-  note: 'Everett''s bulletin names the same pastor but covers Everett alone; no hit for "McConnellsburg", "Fulton" or "Stephen" (see parishes/saint-john-the-evangelist-parish-everett).'
+  note: Everett's bulletin names the same pastor but covers Everett alone; no hit for "McConnellsburg",
+    "Fulton" or "Stephen" (see parishes/saint-john-the-evangelist-everett).
 - url: https://discovermass.com/church/st-stephen-mcconnellsburg-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for St. Stephen.

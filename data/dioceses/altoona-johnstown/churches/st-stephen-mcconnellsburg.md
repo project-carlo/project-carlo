@@ -1,5 +1,5 @@
 ---
-parish: saint-stephen-parish-mcconnellsburg
+parish: saint-stephen-mcconnellsburg
 name: St. Stephen
 line1: 303 Lincoln Way East
 line2: ''
@@ -26,7 +26,9 @@ evidence:
 - url: https://www.fultoncatholic.com/uploads/1/2/2/0/122079007/2026-10-11.pdf
   seen: 2026-10-21
   quote: Saturday at 4:00 p.m.
-  note: 'Page 1 of the bulletin for 11 October 2026 (2 pages): "ST. STEPHEN CATHOLIC CHURCH 303 Lincoln Way East McConnellsburg, PA 17233 Father Derek Fairman, Pastor"; Mass times Saturday 4:00 p.m., Sunday 12:00 p.m. (Noon); confession Saturday 3:30 p.m.'
+  note: 'Page 1 of the bulletin for 11 October 2026 (2 pages): "ST. STEPHEN CATHOLIC CHURCH 303 Lincoln
+    Way East McConnellsburg, PA 17233 Father Derek Fairman, Pastor"; Mass times Saturday 4:00 p.m., Sunday
+    12:00 p.m. (Noon); confession Saturday 3:30 p.m.'
 - url: https://discovermass.com/church/st-stephen-mcconnellsburg-pa/
   seen: 2026-10-21
   quote: 303 Lincoln Way East, Mcconnellsburg, PA 17233

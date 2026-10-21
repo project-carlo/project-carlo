@@ -21,6 +21,7 @@ evidence:
   seen: '2026-10-21'
   note: 'Directory: Saint Michael Parish, Saint Michael, 751 Locust Street 15951, homepage saintmichaelchurch.weebly.com; Masses Sat 4:00 PM, Sun 8:00 AM and 10:30 AM, Mon-Fri 9:00 AM (the bulletin says no Mass on Monday); Confession Saturday 3:30 PM.'
 revisit: Switch to a real provider if the pipeline reads .docx or the parish posts PDFs; the bulletin is a weekly .docx at saintmichaelchurch.weebly.com/bulletin.html
+revisit_after: 2027-01-15
 ---
 
 ## Publisher

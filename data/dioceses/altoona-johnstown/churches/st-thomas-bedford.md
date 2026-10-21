@@ -1,5 +1,5 @@
 ---
-parish: saint-thomas-the-apostle-parish-bedford
+parish: saint-thomas-the-apostle-bedford
 name: St. Thomas the Apostle
 line1: 215 East Penn Street
 line2: ''
@@ -26,7 +26,10 @@ evidence:
 - url: http://www.webparish.com/pdfs/Bulletin-10-18-2026.pdf
   seen: 2026-10-21
   quote: 5:00 p.m. Mass in the Church
-  note: 'Page 4 of the bulletin for 18 October 2026 (4 pages): "SAINT THOMAS THE APOSTLE CATHOLIC CHURCH 215 East Penn Street Bedford, Pennsylvania 15522 ... Rev. Richard B. Tomkosky, Pastor", MASS SCHEDULE Saturday 5:00 p.m., Sunday 7:00 a.m. and 9:30 a.m.; weekday Masses Monday, Wednesday, Thursday, Friday 8:00 AM on page 1.'
+  note: 'Page 4 of the bulletin for 18 October 2026 (4 pages): "SAINT THOMAS THE APOSTLE CATHOLIC CHURCH
+    215 East Penn Street Bedford, Pennsylvania 15522 ... Rev. Richard B. Tomkosky, Pastor", MASS SCHEDULE
+    Saturday 5:00 p.m., Sunday 7:00 a.m. and 9:30 a.m.; weekday Masses Monday, Wednesday, Thursday, Friday
+    8:00 AM on page 1.'
 - url: https://webparish.com/aj/thomas/
   seen: 2026-10-21
   quote: 'SUNDAY: 7:00am & 9:30am'

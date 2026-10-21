@@ -1,5 +1,5 @@
 ---
-parish: saint-john-the-evangelist-parish-everett
+parish: saint-john-the-evangelist-everett
 name: St. John the Evangelist
 line1: 161 East First Avenue
 line2: ''
@@ -26,7 +26,9 @@ evidence:
 - url: http://stjohneverettpa.org/gallery/Bulletin%20October%2018%202026.pdf
   seen: 2026-10-21
   quote: 'Mass Times: M, W, Th, F 8:30 a.m.'
-  note: 'Page 1 of the bulletin for 18 October 2026 (2 pages): "ST. JOHN THE EVANGELIST CATHOLIC CHURCH Fr. Derek Fairman, Pastor 161 East First Avenue, Everett, PA 15537"; Saturday 5:30 p.m., Sunday 9:00 a.m.; Holy Days 8:30 a.m., 7:00 p.m.'
+  note: 'Page 1 of the bulletin for 18 October 2026 (2 pages): "ST. JOHN THE EVANGELIST CATHOLIC CHURCH
+    Fr. Derek Fairman, Pastor 161 East First Avenue, Everett, PA 15537"; Saturday 5:30 p.m., Sunday 9:00
+    a.m.; Holy Days 8:30 a.m., 7:00 p.m.'
 ---
 
 ## Holds Mass

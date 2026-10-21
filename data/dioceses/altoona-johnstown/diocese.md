@@ -230,3 +230,16 @@ Decisions that apply to more than one record, and who made them.
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- **2026-10-21**, first mapping, by an orchestrator and 25 `parish-scout` agents run one at a
+  time (24 batches of 3–4 parishes grouped by town and shared pastor, plus one re-check of the
+  early `no_bulletin` rows). 71 parish rows: 52 with a readable bulletin (33 `other`, 7
+  eCatholic, 6 Discover Mass, 6 ParishesOnline) and 19 `no_bulletin`; 94 churches; 21
+  exclusions (15 Eastern Catholic `other-jurisdiction`, 2 closed, 2 `no-bulletin`, 1
+  `no-public-mass`, 1 `not-catholic`); 5 open questions (three campus or shrine Masses, St.
+  Boniface chapel, Hastings, and the Juniata College Mass). Coverage: directory 93/93 (100%),
+  72/93 modelled; GCatholic 109/109 (100%), 70/92 modelled. `audit --fetch`: the only groups
+  needing a look are pairs of `no_bulletin` rows with one pastor. Full `fetch:check`: 47 of 52
+  ok; the other 5 are Discover Mass rows refused by its daily download cap (134-byte replies),
+  each of which passed its scout's own check the same day. Three fetch-code fixes came out of
+  it: a non-ASCII Referer, `<base href>`, and MMDDYYYY dates.

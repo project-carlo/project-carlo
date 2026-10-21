@@ -9,19 +9,27 @@ evidence:
 - url: http://www.webparish.com/pdfs/Bulletin-10-18-2026.pdf
   seen: 2026-10-21
   quote: Rev. Richard B. Tomkosky, Pastor
-  note: 'The bulletin for 18 October 2026 (4 pages). Page 4 masthead: "SAINT THOMAS THE APOSTLE CATHOLIC CHURCH 215 East Penn Street Bedford, Pennsylvania 15522 ... WEB SITE: www.webparish.com/aj/thomas". Mass schedule Saturday 5:00 p.m., Sunday 7:00 a.m. and 9:30 a.m. Page 1 intentions for Sunday 10-25 7:00 AM read "ST. THOMAS AND SEVEN DOLORS" (the people of both). Same masthead in the 11 and 4 October issues.'
+  note: 'The bulletin for 18 October 2026 (4 pages). Page 4 masthead: "SAINT THOMAS THE APOSTLE CATHOLIC
+    CHURCH 215 East Penn Street Bedford, Pennsylvania 15522 ... WEB SITE: www.webparish.com/aj/thomas".
+    Mass schedule Saturday 5:00 p.m., Sunday 7:00 a.m. and 9:30 a.m. Page 1 intentions for Sunday 10-25
+    7:00 AM read "ST. THOMAS AND SEVEN DOLORS" (the people of both). Same masthead in the 11 and 4 October
+    issues.'
 - url: https://webparish.com/aj/thomas/index.php?PG=upcomingevents
   seen: 2026-10-21
   quote: October 18, 2026 Bulletin
-  note: 'The parish site''s "BULLETINS" list (reached from the CHURCH BULLETIN button on the home page): 18, 11 and 4 October 2026 issues linked to webparish.com/pdfs/Bulletin-M-D-2026.pdf.'
+  note: 'The parish site''s "BULLETINS" list (reached from the CHURCH BULLETIN button on the home page):
+    18, 11 and 4 October 2026 issues linked to webparish.com/pdfs/Bulletin-M-D-2026.pdf.'
 - url: https://webparish.com/aj/thomas/
   seen: 2026-10-21
-  quote: 'Fr. Rich also has a noon Mass at his mission parish, Seven Dolors of the Blessed Virgin in Beans Cove, PA.'
-  note: 'Home page: Pastor Father Richard Tomkosky; the Seven Dolors noon Mass is described as his mission parish, not a second publisher.'
+  quote: Fr. Rich also has a noon Mass at his mission parish, Seven Dolors of the Blessed Virgin in Beans
+    Cove, PA.
+  note: 'Home page: Pastor Father Richard Tomkosky; the Seven Dolors noon Mass is described as his mission
+    parish, not a second publisher.'
 - url: https://discovermass.com/church/st-thomas-bedford-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for St. Thomas.
-  note: Discover Mass has a page for each church of the pair, none with a bulletin (also seven-dolors-of-the-b-v-m-clearville-pa). Not a live channel.
+  note: Discover Mass has a page for each church of the pair, none with a bulletin (also seven-dolors-of-the-b-v-m-clearville-pa).
+    Not a live channel.
 ---
 
 ## Publisher
