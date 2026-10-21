@@ -60,9 +60,21 @@ otherwise.
   broken https chain, use `http://`. **John Patrick Publishing** (`church-bulletin.org/<id>`):
   a listing with no PDFs is not a live channel. **FATA Online** (`fataonline.com/bulletins/
   <code>`): fixed "View Current Bulletin" link plus dated archive.
-- **webparish.com/aj/<name>/** hosts at least St. Clare of Assisi, Johnstown: a diocesan
-  hosting scheme to look at on the first parish that uses it.
-- **Image-only bulletins** are common in the region; read them by rendering pages and say so.
+- **webparish.com/aj/<name>/** is an old diocesan hosting scheme (St. Clare of Assisi,
+  Johnstown; GCatholic's St. Mary, Hollidaysburg). Some of its pages are now stubs pointing
+  to a parish's newer site: follow the pointer before treating it as the bulletin's home.
+- **GoDaddy site builder** (PDFs on `img1.wsimg.com/blobby/...`; St. Mary & St. Michael,
+  Hollidaysburg) resets the sandbox's connections intermittently: `probe url` may fail every
+  time and `fetch:check` several times before passing. Rerun it; `curl` on the PDF blobs works.
+- **eCatholic** here so far: St. Catherine, Duncansville (site id 37641), Cloudflare on curl,
+  opens in headed Chrome, `fetch:check` reads it.
+- **Image-only bulletins** are common in the region (St. John, Lakemont's WordPress scans).
+  `pdftoppm -r 100 -f 1 -l 1 -png` renders a page to read; the evidence is then a note, not a
+  quote, and says so.
+- **The directory's street addresses can be wrong**: St. John, Lakemont is 344 Baynton Ave in
+  the directory but 309 Lotz Ave in its bulletin, its site and GCatholic. Check against a
+  second source before verifying.
+- `pnpm diocese search` does not search rosters: an empty result says nothing about them.
 
 ## Rules settled for this diocese
 
