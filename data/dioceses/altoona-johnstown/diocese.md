@@ -133,6 +133,15 @@ otherwise.
   Johnstown; GCatholic's St. Mary, Hollidaysburg). Some of its pages are now stubs pointing
   to a parish's newer site, or dead stubs with nothing (Roaring Spring, Williamsburg): follow
   the pointer before treating it as the bulletin's home.
+- **A page that links a Word calendar before its PDFs** (saintbenedictschurch.com, Carrolltown)
+  makes `page-pdfs` pick the `.docx` (`not_pdf`); use the Discover Mass copy. That GoDaddy site
+  fails https (certificate) and works over `http://www.`. An eCatholic homepage can point its
+  Bulletins menu at Discover Mass (Nicktown): read its links with `visit.py --links`.
+- **Discover Mass's daily cap** blocks raw curl before the pipeline's own fetch
+  (`tools/browser_get.py`) is refused: use that to read a cover. `recheck` gets 503s there.
+- **GCatholic-only entries can be open missions**: St. Joseph Mission, Carrolltown (Mass a few
+  times a year, own site sjmc1830.com) is in no directory. Absence from the directory settles
+  nothing.
 - **GoDaddy site builder** (PDFs on `img1.wsimg.com/blobby/...`; St. Mary & St. Michael,
   Hollidaysburg) resets the sandbox's connections intermittently: `probe url` may fail every
   time and `fetch:check` several times before passing. Rerun it; `curl` on the PDF blobs works.
