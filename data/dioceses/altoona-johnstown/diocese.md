@@ -109,6 +109,10 @@ otherwise.
   Oct issue was not up on 21 Oct): `newest-recent` is then expected, not a fault.
 - **2MHost** (stjohneverettpa.org) uses `<base href>`; the fetch code honours it since batch 7.
 - **`probe pdf` can't take a URL with spaces**: pass `%20`.
+- **One pastor, one bulletin is common in Cambria**: Fr. Nale's stjic.org bulletin carries all
+  four of his parishes (Summerhill, New Germany, South Fork, Wilmore), whose own Discover Mass
+  pages are empty. Directory Mass times lag the bulletin there by up to two hours.
+- **Nominatim** `q=<church name>+<town>` finds church nodes where `street=` fails.
 - **Nominatim** answers through the sandbox (`nominatim.openstreetmap.org/search?street=..&city=..
   &state=..&format=json`, with a user agent): use it to tell which of two GCatholic points is
   the building. Overpass resets the connection. GCatholic has duplicates here (Seven Dolors,
