@@ -95,8 +95,8 @@ Margaret, Reading; St. Teresa of Calcutta, Mahanoy City).
 
 ### Fetch check (2026-10-18/19, before promotion)
 
-`fetch:check` reads only `data/parishes.csv`, so each region ran
-`fetch_check.check_fetch(parishes_csv=...)` on a temporary CSV built from `parishes/`, under
+`fetch:check` then read only `data/parishes.csv` (it now takes `--diocese`), so each
+region ran `fetch_check.check_fetch(parishes_csv=...)` on a temporary CSV built from `parishes/`, under
 `xvfb-run` with `PLAYWRIGHT_BROWSER_CHANNEL=chrome`. Of the 69 rows with a provider, **68
 resolve and 67 pick the newest posted issue** (18 October, or 11 October where that is the
 newest). Recipes printed by the check are pinned on the `other` rows whose pick was checked

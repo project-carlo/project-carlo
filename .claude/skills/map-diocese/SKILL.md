@@ -49,10 +49,11 @@ So:
 4. Read the structure: the diocese's family or cluster list, its closed-parishes page, its
    pastoral plan. Write what you find in `diocese.md` *Sources*. This is the one place you
    read source pages yourself, because the batches depend on it.
-5. Copy the playbook from the dioceses already mapped: in `diocese.md`, under *Sources*,
-   start a *Bulletin publishers here* section with what earlier dioceses in the same region
-   found about the publishers likely to appear (e.g. Discover Mass's daily download cap,
-   eCatholic sites behind Cloudflare). Keep it to the lines a scout needs.
+5. Copy the playbook from the dioceses already mapped: in `diocese.md`, fill in the
+   *Bulletin publishers here* section that `init` put under *Sources* with what earlier
+   dioceses in the same region found about the publishers likely to appear (e.g. Discover
+   Mass's daily download cap, eCatholic sites behind Cloudflare). Keep it to the lines a
+   scout needs.
 
 ## 2. Plan the batches
 

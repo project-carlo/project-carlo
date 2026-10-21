@@ -19,6 +19,7 @@ import json
 import logging
 import os
 import sys
+from collections.abc import Collection
 from pathlib import Path
 from typing import Any
 
@@ -157,17 +158,29 @@ def _cmd_fetch(args: argparse.Namespace) -> Result:
     return fetch_bulletins(parish_name=args.parish, workers=args.workers)
 
 
+def _diocese_fetch_rows(diocese: str, slugs: Collection[str] | None) -> list[dict[str, str]]:
+    """A diocese's parish rows before promotion: the rows `promote` would write."""
+    d = diocese_records.load(diocese)
+    if d.unreadable:
+        raise DioceseError("fix these files first; they do not parse:\n  "
+                           + "\n  ".join(d.unreadable))
+    no_bulletin = sorted(set(slugs or ()) & diocese_records.unpublished(d)[0])
+    if no_bulletin:
+        raise DioceseError(f"no_bulletin, so there is nothing to fetch: {', '.join(no_bulletin)}")
+    rows, _ = diocese_records.export_rows(d)
+    return rows
+
+
 def _cmd_fetch_check(args: argparse.Namespace) -> Result:
-    parish_rows = None
-    if args.diocese:
-        # A diocese's records before promotion: the rows `promote` would write.
-        parish_rows, _ = diocese_records.export_rows(diocese_records.load(args.diocese))
+    slugs = _split_csv(args.parish)
     return check_fetch(
-        slugs=_split_csv(args.parish),
+        slugs=slugs,
         providers=_split_csv(args.provider),
         record_dir=args.record,
         download=not args.no_download,
-        parish_rows=parish_rows,
+        # `is not None`: an empty --diocese (an unset shell variable) must fail, not fall back.
+        parishes=(None if args.diocese is None
+                  else _diocese_fetch_rows(args.diocese, slugs)),
     )
 
 

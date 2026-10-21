@@ -435,7 +435,7 @@ Run each stage independently:
 
 ```bash
 pnpm run fetch [-- --parish "..."]
-pnpm fetch:check [-- --parish SLUG --provider other --diocese SLUG --record tests/fixtures/fetch]
+pnpm fetch:check [--parish SLUG --provider other --diocese SLUG --record tests/fixtures/fetch]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm weekly:run [-- --parish SLUG --diocese SLUG]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
@@ -533,7 +533,7 @@ recipe in `data/parishes.csv` as it is now. After changing `fetch.py` or
    A site that now opens a page the old resolver never did fails with "re-record
    this parish".
 2. Re-record the sites whose result should change, then check them by hand:
-   `pnpm fetch:check -- --parish SLUG --record tests/fixtures/fetch`.
+   `pnpm fetch:check --parish SLUG --record tests/fixtures/fetch`.
 3. Update their entries in `tests/fixtures/fetch/expected.json`. That diff is the
    coverage change.
 

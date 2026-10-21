@@ -393,10 +393,14 @@ def _challenged(page: PageLike) -> bool:
         return False
 
 
+def _fetch_rows(rows: Iterable[dict[str, str]]) -> list[dict[str, str]]:
+    """Rows in the parishes.csv layout, keyed the way the fetch stage reads the parish table."""
+    return [{**row, "homepage_url": row["website"]} for row in rows]
+
+
 def _read_parishes(path: Path) -> list[dict[str, str]]:
-    """parishes.csv rows, keyed the way the fetch stage reads the parish table."""
     with open(path, newline="", encoding="utf-8") as fh:
-        return [{**row, "homepage_url": row["website"]} for row in csv.DictReader(fh)]
+        return _fetch_rows(csv.DictReader(fh))
 
 
 def _same_recipe(recipe: str, source: fetch.FetchSource) -> bool:
@@ -451,26 +455,24 @@ def check_fetch(
     record_dir: Path | None = None,
     download: bool = True,
     reference_date: date | None = None,
-    parishes_csv: Path = PARISHES_CSV_PATH,
-    parish_rows: list[dict[str, str]] | None = None,
+    parishes: Iterable[dict[str, str]] | None = None,
 ) -> dict[str, object]:
     """Resolve (and download) each parish's latest bulletin without saving it.
 
     Returns one row per parish with its status, so a resolver change can be
     compared site by site with the run before it. With `record_dir`, the pages
     each resolver read are saved there as `<slug>.json.gz` for `SnapshotPage`.
-    `parish_rows` (rows in the parishes.csv layout, such as a diocese's records
-    before promotion) replaces `parishes_csv`.
+    `parishes` (rows in the parishes.csv layout, such as a diocese's records
+    before promotion) defaults to data/parishes.csv.
     """
     today = reference_date or date.today()
     all_parishes = (
-        _read_parishes(parishes_csv) if parish_rows is None
-        else [{**row, "homepage_url": row["website"]} for row in parish_rows]
+        _read_parishes(PARISHES_CSV_PATH) if parishes is None else _fetch_rows(parishes)
     )
     missing = sorted(set(slugs or ()) - {p["slug"] for p in all_parishes})
     if missing:
         raise ValueError(f"Parish not found: {', '.join(missing)}")
-    parishes = [
+    to_check = [
         p for p in all_parishes
         if fetch._resolve_fetch_source(p) is not None
         and (slugs is None or p["slug"] in slugs)
@@ -479,7 +481,7 @@ def check_fetch(
 
     rows: list[dict[str, object]] = []
     with launch_stealth_browser() as live_page:
-        for parish in parishes:
+        for parish in to_check:
             slug = parish["slug"]
             source = fetch._resolve_fetch_source(parish)
             assert source is not None
