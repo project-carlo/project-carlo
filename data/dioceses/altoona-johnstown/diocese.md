@@ -112,6 +112,10 @@ otherwise.
   403s curl and `recheck`; headed Chrome (`visit.py`) opens them, sometimes on the second try,
   and `issues.py ecatholic ecatholic:<id>` then reads the PDFs without a browser. Some date
   files by the Saturday (St. Therese: `20261017.pdf` is the 18 Oct issue; `--day sat`).
+- **Wix image bulletins** (St. Anne, Davidsville): one JPEG per week on the Bulletin page,
+  alt text `MMDDYYYY.jpg`; `page-images <page>` reads it (the date parser takes MMDDYYYY since
+  batch 9). St. Peter, Somerset: PHP `bulletin.php` linking `site_docs/<n>.pdf`. New Baltimore:
+  WordPress, posts about a week late.
 - **Self-hosted, odd hosts:** SiteGround WordPress (mhtcc.org, Huntingdon) drops `probe pdf`
   and plain-http curl (RemoteDisconnected or an sgcaptcha page); use https with a Chrome user
   agent, or `visit.py --bulletin`. Homestead (scosmu.org, Mount Union) resets https; `http://www.`

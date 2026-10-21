@@ -998,3 +998,11 @@ def test_document_base_url_honours_base_href():
     assert document_base_url(html, page) == "http://stjohneverettpa.org/"
     assert document_base_url("<html><body></body></html>", page) == page
     assert document_base_url("<base target='_blank'>", page) == page
+
+
+def test_parse_date_reads_an_unseparated_month_day_year_near_the_reference():
+    ref = date(2026, 10, 21)
+    assert parse_date_from_texts(["10112026.jpg"], ref) == date(2026, 10, 11)
+    # YYYYMMDD still wins, and an id whose year is far off is no date.
+    assert parse_date_from_texts(["20261018.pdf"], ref) == date(2026, 10, 18)
+    assert parse_date_from_texts(["photo-12312011.jpg"], ref) is None
