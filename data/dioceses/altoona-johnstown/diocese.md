@@ -133,6 +133,14 @@ otherwise.
 - **Duda** (the Johnstown cathedral, `irp.cdn-website.com`) resets curl intermittently; retry.
   Its `/welcome#WeeklyBulletin` lists `files/uploaded/YYYY-MM-DD.pdf` (not always zero-padded).
   omostoday.com (WordPress/Elementor) posts scanned issues: render with `pdftoppm`.
+- **Two parishes on one site** (St. Therese and St. Anne, sttheresejohnstown.com, one PDF each
+  per week): recipes can't filter by file name, so each row points at a different page whose
+  list puts its own PDF first (homepage vs `/bulletins/`), with `#fragment` publication ids to
+  keep them distinct. Fragile: re-check both picks if the site reorders.
+- **WordPress PDF Embedder** (Visitation BVM, Johnstown, found by DuckDuckGo) turns PDF links
+  into canvases; `page-pdfs <site>/category/<cat>/feed/` reads the RSS feed instead.
+- **Third-party Mass-time aggregators** (catholicmasstime.org, catholicchurch.directory)
+  disagree with each other and the directory: never a second source.
 - **An eCatholic id on a site doesn't mean the bulletin is there**: standrewjohnstown.org is
   eCatholic (36351) but its bulletin folder is empty and its Bulletins menu goes to Discover Mass.
 - **Self-hosted, odd hosts:** SiteGround WordPress (mhtcc.org, Huntingdon; stbenedictchurch.org,
