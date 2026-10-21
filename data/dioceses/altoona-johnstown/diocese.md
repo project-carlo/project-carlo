@@ -121,6 +121,9 @@ otherwise.
   Oct issue was not up on 21 Oct): `newest-recent` is then expected, not a fault.
 - **2MHost** (stjohneverettpa.org) uses `<base href>`; the fetch code honours it since batch 7.
 - **`probe pdf` can't take a URL with spaces**: pass `%20`.
+- **An iframe-embedded bulletin list** (Queen of Archangels, Clarence: Google Sites page with a
+  Railway-hosted iframe `qoaa-bulletin-embed-production.up.railway.app/` listing `.../MM-DD-YYYY.pdf/raw`):
+  point `page-pdfs` at the embed URL. Squarespace (Renovo) links `/s/M-D-YY.pdf` from buttons.
 - **Two sites, one PDF** (Bellefonte/Spring Mills, old Buford Design sites on `http://` with bad
   certificates): equal md5s of the two sites' copies prove one bulletin. The Bellefonte copies
   answer a JavaScript reload page without a browser, so the row reads the Kateri site.
