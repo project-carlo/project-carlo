@@ -121,6 +121,10 @@ otherwise.
   Oct issue was not up on 21 Oct): `newest-recent` is then expected, not a fault.
 - **2MHost** (stjohneverettpa.org) uses `<base href>`; the fetch code honours it since batch 7.
 - **`probe pdf` can't take a URL with spaces**: pass `%20`.
+- **Two sites, one PDF** (Bellefonte/Spring Mills, old Buford Design sites on `http://` with bad
+  certificates): equal md5s of the two sites' copies prove one bulletin. The Bellefonte copies
+  answer a JavaScript reload page without a browser, so the row reads the Kateri site.
+- **`dated-post`** also reads Our Lady of Victory, State College (`/bulletin-archive/<month-d-yyyy>/`).
 - **Two homepages, one bulletin:** the two Cresson parishes' separate Weebly sites both point at
   one ParishesOnline org (14/1078). Follow each site's "Weekly Bulletin" link before making two rows.
 - **Word bulletins** (St. Michael, Saint Michael: Weebly `/uploads/.../MM-DD-YYYY_webbulletin.docx`):
@@ -209,6 +213,14 @@ otherwise.
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
+
+- **Campus Masses** (orchestrator, 2026-10-21): a college chapel whose Mass no source calls
+  public goes in `open/` (Juniata, Mount Aloysius, Saint Francis University). One a source calls
+  public but that no readable bulletin lists is `excluded/` with `no-bulletin` (Penn State's
+  Nittany Catholic: "ALL ARE WELCOME AT OUR LITURGIES"). Either becomes a church under a row when
+  a bulletin lists it.
+- **Two linked parishes with no bulletin stay two `no_bulletin` rows** (Dysart/Frugality,
+  Chest Springs/Ashville, the four south Somerset parishes) until a bulletin shows one is shared.
 
 ## Log
 
