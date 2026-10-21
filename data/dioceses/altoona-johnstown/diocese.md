@@ -49,7 +49,10 @@ otherwise.
   list every church page: grep the town there (slugs can be unguessable: St. Mary, Altoona is
   `st-mary-immaculate-conception-altoona-pa`). Probe on the bare host (200 = exists, 404 =
   not; `www.` 301s). A church page's "Visit Website" link often gives the homepage the
-  directory lacks. Many pages here say "no bulletins available" (St. Joseph, Bellwood; St.
+  directory lacks. A joint bulletin may sit under only one of its churches' slugs (Our Lady
+  Queen of Angels, Central City carries the issue for Holy Family, Hooversville and All Saints,
+  Boswell, whose own pages are empty): a no-homepage parish can be a worship site of a
+  neighbour's row, so read the neighbours' mastheads before calling it `no_bulletin`. Many pages here say "no bulletins available" (St. Joseph, Bellwood; St.
   Matthew, Tyrone; St. Therese): not live channels. One bulletin under a parish slug and a
   chapel slug (Mount Carmel and `our-lady-of-assumption-altoona-pa`) is one row with both ids.
 - **Directory homepages are often dead or stale** (sttheresealtoona.com dead DNS,
@@ -100,7 +103,8 @@ otherwise.
   &state=..&format=json`, with a user agent): use it to tell which of two GCatholic points is
   the building. Overpass resets the connection. GCatholic has duplicates here (Seven Dolors,
   Beans Cove is both 23816 and 148968).
-- **webparish.com/aj/<name>/** is an old diocesan hosting scheme (St. Clare of Assisi,
+- **webparish.com/aj/<name>/** answers 406 (Mod_Security) to curl; headed Chrome needs the
+  explicit `/index.php`. It is an old diocesan hosting scheme (St. Clare of Assisi,
   Johnstown; GCatholic's St. Mary, Hollidaysburg). Some of its pages are now stubs pointing
   to a parish's newer site, or dead stubs with nothing (Roaring Spring, Williamsburg): follow
   the pointer before treating it as the bulletin's home.
