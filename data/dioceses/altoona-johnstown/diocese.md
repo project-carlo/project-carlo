@@ -92,7 +92,13 @@ otherwise.
 - **Web search in the sandbox:** `visit.py "https://duckduckgo.com/?q=..." --text` works;
   curl to DuckDuckGo or Bing returns nothing. `church-bulletin.org/<any-slug>` answers 200 with a
   generic page, so a 200 there proves nothing.
-- **WebParish still live** for St. Thomas, Bedford: the CHURCH BULLETIN button goes to
+- **WebParish is live for several parishes** (St. Thomas, Bedford; St. Anthony and St. Elizabeth
+  Ann Seton, Windber, `PDFs MMDDYY.pdf` and `SEAS<YYYY-MM-DD>Bulletin.pdf`). A parish's own
+  domain can redirect to its WebParish site (stelizabethannsetonwindber.com). For a parish with
+  no directory homepage, a DuckDuckGo search (`uv run python visit.py "https://duckduckgo.com/?q=..."`)
+  finds these. Sister parishes with one pastor can each post a bulletin listing the same
+  combined Mass rota (Windber): two rows while both channels are live.
+- For St. Thomas, Bedford: the CHURCH BULLETIN button goes to
   `webparish.com/aj/<name>/index.php?PG=upcomingevents`, which lists
   `webparish.com/pdfs/Bulletin-M-D-YYYY.pdf`; `page-pdfs` on that page reads it.
 - **Weebly** (fultoncatholic.com) posts `/uploads/.../YYYY-MM-DD.pdf` and uploads late (the 18
