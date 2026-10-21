@@ -55,3 +55,13 @@ One church, Saints Philip and James (see churches/saints-philip-and-james-meyers
 ## Not yet confirmed
 
 Where, if anywhere, the bulletin is published (a Facebook post, Flocknote only, or a printed-only bulletin), and whether the four share one. Next step: open the Sts. Philip and James Facebook page logged in, or phone the rectory ((814) 634-8150); if a bulletin turns up, set the provider and publication and merge the four rows if it carries them all.
+
+**Pastor sources disagree (2026-10-21).** The diocese's clergy list
+(https://www.dioceseaj.org/clergy/) names Rev. Michael Wolfe pastor of Saints Philip and James,
+Meyersdale, Saint Gregory, MacDonaldton, Saint Mary, Pocahontas and Saint Michael, West
+Salisbury. The New Baltimore parish's schedule page (https://newbaltimorecatholic.com/schedule/)
+says "In residence Fr. Stephen Shin, OFMcap Pastor of Ss. Philip & James, Meyersdale & St.
+Gregory, MacDonaldton". The `group` keeps the diocese's version; neither changes the row, since
+no bulletin was found either way. Whichever pastor is current, his parish office is the place to
+ask about a bulletin.
+
