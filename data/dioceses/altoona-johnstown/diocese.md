@@ -76,7 +76,16 @@ otherwise.
 - **ParishesOnline** prints St. Patrick, Newry (container 14/0551). Empty orgs: Roaring
   Spring, Williamsburg and the four Altoona ones.
 - **Small parishes with no bulletin anywhere** (St. Thomas More, Roaring Spring; St. Joseph,
-  Williamsburg): `no_bulletin` rows with their Facebook pages noted (login wall in the sandbox).
+  Williamsburg; Dudley; Shade Gap; all four of Fr. Wolfe's south Somerset parishes): `no_bulletin`
+  rows with their Facebook pages noted (login wall in the sandbox). Discover Mass pages with an
+  empty Bulletins tab and empty ParishesOnline orgs are common. Flocknote group pages
+  (`<name>.flocknote.com`) are sign-up pages, not bulletins, and render their title in JS
+  (evidence as a note). catholicindex.org and findglocal.com now challenge curl; a DuckDuckGo
+  snippet via `visit.py` reads them.
+- **Name look-alikes elsewhere:** church-bulletin.org "Saints Philip and James" is Exton;
+  `parishbulletins.com/bulletins/065` is Guelph, Ontario. Check the town before using one.
+- **The directory's address can be the rectory** (St. Gregory, MacDonaldton shows Sts. Philip
+  and James's 247 High St, Meyersdale).
 - **Web search in the sandbox:** `visit.py "https://duckduckgo.com/?q=..." --text` works;
   curl to DuckDuckGo or Bing returns nothing. `church-bulletin.org/<any-slug>` answers 200 with a
   generic page, so a 200 there proves nothing.
