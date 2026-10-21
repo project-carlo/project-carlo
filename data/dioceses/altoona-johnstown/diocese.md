@@ -92,6 +92,14 @@ otherwise.
   403s curl and `recheck`; headed Chrome (`visit.py`) opens them, sometimes on the second try,
   and `issues.py ecatholic ecatholic:<id>` then reads the PDFs without a browser. Some date
   files by the Saturday (St. Therese: `20261017.pdf` is the 18 Oct issue; `--day sat`).
+- **Self-hosted, odd hosts:** SiteGround WordPress (mhtcc.org, Huntingdon) drops `probe pdf`
+  and plain-http curl (RemoteDisconnected or an sgcaptcha page); use https with a Chrome user
+  agent, or `visit.py --bulletin`. Homestead (scosmu.org, Mount Union) resets https; `http://www.`
+  works, PDFs named `<Month>_<D>.pdf` on its About-Us page.
+- **findglocal.com/US/<town>/<id>/<page>** mirrors a Facebook page's posts and Mass times
+  without a login: useful evidence for `no_bulletin` parishes (Dudley).
+- **College campus Masses** (Juniata College, Tussey Hall) appear in the directory's Mass
+  times but in no bulletin: `open/` until someone confirms they are public.
 - **Image-only bulletins** are common in the region (St. John, Lakemont's WordPress scans).
   `pdftoppm -r 100 -f 1 -l 1 -png` renders a page to read; the evidence is then a note, not a
   quote, and says so.

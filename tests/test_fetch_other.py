@@ -959,3 +959,32 @@ def test_a_page_whose_cards_render_late_is_read_again() -> None:
     ])
     source_url, _ = _resolve_other(provider_id=HOME, reference_date=TODAY, page=page)
     assert source_url == f"{HOME}/_files/ugd/23b1db_bb.pdf"
+
+
+def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
+    # A WordPress file name with an en dash used to raise UnicodeEncodeError
+    # when it was sent as the Referer of the next request.
+    from pdf_extract import fetch
+
+    seen = {}
+
+    class _Resp:
+        headers = {}
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            return False
+
+        def read(self):
+            return b"%PDF"
+
+    def fake_urlopen(req, timeout):
+        seen["referer"] = req.get_header("Referer")
+        return _Resp()
+
+    monkeypatch.setattr(fetch, "urlopen", fake_urlopen)
+    fetch._http_get("https://example.org/b.pdf", referer="https://example.org/Bulletin – October 18.pdf")
+    assert seen["referer"] == "https://example.org/Bulletin%20%E2%80%93%20October%2018.pdf"
+    seen["referer"].encode("latin-1")
