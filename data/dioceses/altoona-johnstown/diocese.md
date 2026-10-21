@@ -45,8 +45,11 @@ Carried over from Harrisburg, Scranton and Allentown; correct it as this diocese
 otherwise.
 
 - **J.S. Paluch on Discover Mass** printed half of Harrisburg. Its `?s=` search is broken
-  (PHP fatal error, 2026-10-21); guess the slug instead: `https://discovermass.com/church/
-  <name>-<town>-pa/` on the bare host (200 = exists, 404 = not; `www.` 301s). A page can exist
+  (PHP fatal error, 2026-10-21). Its sitemaps (`discovermass.com/wp-sitemap-posts-item-{1..11}.xml`)
+  list every church page: grep the town there (slugs can be unguessable: St. Mary, Altoona is
+  `st-mary-immaculate-conception-altoona-pa`). Probe on the bare host (200 = exists, 404 =
+  not; `www.` 301s). A church page's "Visit Website" link often gives the homepage the
+  directory lacks. A page can exist
   with "no bulletins available" (St. Mark and Holy Rosary, Altoona): not a live channel. St.
   Gregory, MacDonaldton's directory homepage is a Discover Mass page. One joint bulletin can appear under several
   church slugs: record every slug. Discover Mass caps downloads per IP per day (a 134-byte
@@ -55,9 +58,12 @@ otherwise.
   page, not a tokenised download link.
 - **eCatholic** sites sit behind Cloudflare: `https://www.<domain>/bulletins` usually opens in
   headed Chrome (parish-site-access) when the homepage is challenged.
-- **LPi / ParishesOnline:** many parishes keep empty organizations, which are not fold-ins.
-  The search API (`/prod/search?searchType=organization&...&latitude=&longitude=`) lists
-  organizations near a point.
+- **LPi / ParishesOnline:** many parishes keep empty organizations, which are not fold-ins
+  (all four Altoona ones checked are empty). The search API
+  (`https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/search?searchType=organization&latitude=..&longitude=..&distance=3`)
+  lists organizations near a point.
+- **Wix** (St. Mary, Altoona's "The Marian"): the PDF name on `filesusr.com` changes weekly;
+  `page-pdfs` on the site reads it.
 - **Bon Venture** (`sponsors.bonventure.net/?page=<id>`, PDFs at `pdfs/<id>/<YYYY-MM-DD>.pdf`):
   broken https chain, use `http://`. **John Patrick Publishing** (`church-bulletin.org/<id>`):
   a listing with no PDFs is not a live channel. **FATA Online** (`fataonline.com/bulletins/
@@ -68,8 +74,8 @@ otherwise.
 - **GoDaddy site builder** (PDFs on `img1.wsimg.com/blobby/...`; St. Mary & St. Michael,
   Hollidaysburg) resets the sandbox's connections intermittently: `probe url` may fail every
   time and `fetch:check` several times before passing. Rerun it; `curl` on the PDF blobs works.
-- **eCatholic** here so far: St. Catherine, Duncansville (site id 37641), Cloudflare on curl,
-  opens in headed Chrome, `fetch:check` reads it.
+- **eCatholic** here so far: St. Catherine, Duncansville (37641), Our Lady of Lourdes, Altoona
+  (29859). Cloudflare 403s curl; headed Chrome opens them and `fetch:check` reads them.
 - **Image-only bulletins** are common in the region (St. John, Lakemont's WordPress scans).
   `pdftoppm -r 100 -f 1 -l 1 -png` renders a page to read; the evidence is then a note, not a
   quote, and says so.
