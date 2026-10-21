@@ -988,3 +988,13 @@ def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
     fetch._http_get("https://example.org/b.pdf", referer="https://example.org/Bulletin – October 18.pdf")
     assert seen["referer"] == "https://example.org/Bulletin%20%E2%80%93%20October%2018.pdf"
     seen["referer"].encode("latin-1")
+
+
+def test_document_base_url_honours_base_href():
+    from pdf_extract.parish_sites.collectors import document_base_url
+
+    html = '<html><head><base href="http://stjohneverettpa.org/"></head><body></body></html>'
+    page = "http://stjohneverettpa.org/Bulletins/"
+    assert document_base_url(html, page) == "http://stjohneverettpa.org/"
+    assert document_base_url("<html><body></body></html>", page) == page
+    assert document_base_url("<base target='_blank'>", page) == page

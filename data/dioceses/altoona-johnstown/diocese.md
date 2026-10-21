@@ -80,6 +80,17 @@ otherwise.
 - **Web search in the sandbox:** `visit.py "https://duckduckgo.com/?q=..." --text` works;
   curl to DuckDuckGo or Bing returns nothing. `church-bulletin.org/<any-slug>` answers 200 with a
   generic page, so a 200 there proves nothing.
+- **WebParish still live** for St. Thomas, Bedford: the CHURCH BULLETIN button goes to
+  `webparish.com/aj/<name>/index.php?PG=upcomingevents`, which lists
+  `webparish.com/pdfs/Bulletin-M-D-YYYY.pdf`; `page-pdfs` on that page reads it.
+- **Weebly** (fultoncatholic.com) posts `/uploads/.../YYYY-MM-DD.pdf` and uploads late (the 18
+  Oct issue was not up on 21 Oct): `newest-recent` is then expected, not a fault.
+- **2MHost** (stjohneverettpa.org) uses `<base href>`; the fetch code honours it since batch 7.
+- **`probe pdf` can't take a URL with spaces**: pass `%20`.
+- **Nominatim** answers through the sandbox (`nominatim.openstreetmap.org/search?street=..&city=..
+  &state=..&format=json`, with a user agent): use it to tell which of two GCatholic points is
+  the building. Overpass resets the connection. GCatholic has duplicates here (Seven Dolors,
+  Beans Cove is both 23816 and 148968).
 - **webparish.com/aj/<name>/** is an old diocesan hosting scheme (St. Clare of Assisi,
   Johnstown; GCatholic's St. Mary, Hollidaysburg). Some of its pages are now stubs pointing
   to a parish's newer site, or dead stubs with nothing (Roaring Spring, Williamsburg): follow
