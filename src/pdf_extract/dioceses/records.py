@@ -217,6 +217,12 @@ Fill this in as you find them (see data/dioceses/README.md, "Sources").
 - Closed parishes and where their records went:
 - Pastoral plan / closure announcements:
 
+### Bulletin publishers here
+
+Which publishers print this diocese's bulletins, how to read each, and which sites block the
+sandbox and where their bulletins are instead. Agents researching parishes start here, so
+keep it current rather than a log.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.

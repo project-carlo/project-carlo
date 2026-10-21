@@ -19,6 +19,7 @@ import json
 import logging
 import os
 import sys
+from collections.abc import Collection
 from pathlib import Path
 from typing import Any
 
@@ -44,6 +45,7 @@ from pdf_extract.datasync import status as data_status
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
 from pdf_extract.dioceses import DioceseError
+from pdf_extract.dioceses import records as diocese_records
 from pdf_extract.dioceses.cli import add_diocese_parser
 from pdf_extract.evals.report import write_report as write_eval_report
 from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
@@ -156,12 +158,29 @@ def _cmd_fetch(args: argparse.Namespace) -> Result:
     return fetch_bulletins(parish_name=args.parish, workers=args.workers)
 
 
+def _diocese_fetch_rows(diocese: str, slugs: Collection[str] | None) -> list[dict[str, str]]:
+    """A diocese's parish rows before promotion: the rows `promote` would write."""
+    d = diocese_records.load(diocese)
+    if d.unreadable:
+        raise DioceseError("fix these files first; they do not parse:\n  "
+                           + "\n  ".join(d.unreadable))
+    no_bulletin = sorted(set(slugs or ()) & diocese_records.unpublished(d)[0])
+    if no_bulletin:
+        raise DioceseError(f"no_bulletin, so there is nothing to fetch: {', '.join(no_bulletin)}")
+    rows, _ = diocese_records.export_rows(d)
+    return rows
+
+
 def _cmd_fetch_check(args: argparse.Namespace) -> Result:
+    slugs = _split_csv(args.parish)
     return check_fetch(
-        slugs=_split_csv(args.parish),
+        slugs=slugs,
         providers=_split_csv(args.provider),
         record_dir=args.record,
         download=not args.no_download,
+        # `is not None`: an empty --diocese (an unset shell variable) must fail, not fall back.
+        parishes=(None if args.diocese is None
+                  else _diocese_fetch_rows(args.diocese, slugs)),
     )
 
 
@@ -387,6 +406,11 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     fetch_check_parser.add_argument(
         "--no-download", action="store_true", help="Resolve links only; skip the PDF download",
+    )
+    fetch_check_parser.add_argument(
+        "--diocese",
+        help="Read the parishes from data/dioceses/<diocese>/ instead of parishes.csv,"
+        " so rows can be checked before they are promoted",
     )
     fetch_check_parser.set_defaults(handler=_cmd_fetch_check)
     _add_common_args(fetch_check_parser)

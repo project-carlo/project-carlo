@@ -144,7 +144,8 @@ Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to c
   `google_drive` it has to link the shared folder. For `other` and `google_drive`,
   `provider_id` may pin how to read the site, as a recipe: a collector, the bulletin page,
   or both (`page-pdfs https://example.org/bulletins`). Run
-  `pnpm fetch:check -- --parish <slug>` and record the `recipe` it prints once its pick is
+  `pnpm fetch:check --diocese <d> --parish <slug>` (which reads the rows from these
+  records, so it works before promotion) and record the `recipe` it prints once its pick is
   this week's bulletin (see "How the `other` resolver reads a site" in the main README).
 - `publication`: ids of the bulletin itself, as `scheme:value`. **Two parish rows may never
   share one**, and `validate` enforces that across every diocese: it catches "one bulletin

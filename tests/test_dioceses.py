@@ -574,6 +574,41 @@ def test_new_exclusion_from_a_roster_drops_coordinates(root: Path, tmp_path: Pat
 
 
 # ── CLI and the committed data ──────────────────────────────────────────────
+def test_fetch_check_reads_a_diocese_before_promotion(
+    root: Path, monkeypatch: pytest.MonkeyPatch, capsys,
+) -> None:
+    import contextlib
+
+    from pdf_extract import fetch_check
+    _parish()
+    _parish("st-bede", bulletin_provider="no_bulletin")
+    checked: list[str] = []
+
+    def check_one(slug, source, page, **_):
+        checked.append(slug)
+        return {"slug": slug, "provider": source.provider, "status": "ok"}
+
+    monkeypatch.setattr(fetch_check, "launch_stealth_browser", contextlib.nullcontext)
+    monkeypatch.setattr(fetch_check, "_check_one", check_one)
+    # The live CSV only has live-parish; the diocese's unpromoted row is still found.
+    assert main(["fetch-check", "--diocese", "test", "--parish", "st-ann"]) == 0
+    assert checked == ["st-ann"]
+    assert '"ok": 1' in capsys.readouterr().out
+
+    # A no_bulletin parish has a record but nothing to fetch: say so, not "not found".
+    assert main(["fetch-check", "--diocese", "test", "--parish", "st-bede"]) == 1
+    assert "no_bulletin, so there is nothing to fetch: st-bede" in capsys.readouterr().err
+    # An empty --diocese (an unset shell variable) fails instead of reading parishes.csv.
+    assert main(["fetch-check", "--diocese", "", "--parish", "live-parish"]) == 1
+    assert "diocese must be a slug" in capsys.readouterr().err
+    # A record that does not parse is reported, not silently left out.
+    _write(root / "parishes" / "st-cyr.md", "no frontmatter here\n")
+    assert main(["fetch-check", "--diocese", "test"]) == 1
+    err = capsys.readouterr().err
+    assert "do not parse" in err and "st-cyr.md" in err
+    assert checked == ["st-ann"]
+
+
 def test_cli_prints_errors_without_a_traceback(root: Path, capsys) -> None:
     assert main(["diocese", "new", "church", "test", "--name", "X", "--parish", "nope"]) == 1
     err = capsys.readouterr().err

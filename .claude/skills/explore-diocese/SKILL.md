@@ -9,6 +9,9 @@ Read `data/dioceses/README.md` before your first write. It has the rules, the fi
 the explanation standard, which sources to trust, and the traps. This page is the short
 version.
 
+To map a whole new diocese, follow the `map-diocese` skill: it splits the work into small
+batches for `parish-scout` agents. This page is the method each of them follows.
+
 ## The three rules
 
 1. **One parish row = one bulletin.** Families, clusters, canonical mergers and decrees
@@ -58,7 +61,10 @@ Then, cheapest first:
    gaps.
 7. **Audit structure every session:** `pnpm diocese audit <d> [--fetch]`. Coverage can't see
    two rows that are really one bulletin.
-8. **Finish:** `pnpm diocese validate <d>` (and `uv run pytest tests/test_dioceses.py`), a
+8. **Check the fetch:** `pnpm fetch:check --diocese <d> --parish <slug>` resolves and
+   downloads a row's bulletin before it is promoted (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome
+   xvfb-run -a` in the cloud sandbox).
+9. **Finish:** `pnpm diocese validate <d>` (and `uv run pytest tests/test_dioceses.py`), a
    dated line in `diocese.md`'s *Log* with the coverage numbers, commit.
 
 A closure after the fact: `pnpm diocese exclude <d> <church> --reason closed --last-mass
