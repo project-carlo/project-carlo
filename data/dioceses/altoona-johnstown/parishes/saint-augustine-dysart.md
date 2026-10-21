@@ -12,7 +12,6 @@ evidence:
   note: 'Discover Mass church page (curl, HTTP 200): empty Bulletins tab, no "Visit Website" link, phone (814) 674-8550. Not a live channel. Used as the row''s website because the directory gives no homepage and the GCatholic one is dead.'
 - url: https://parishesonline.com/organization/st-augustine-church-16636
   seen: 2026-10-21
-  quote: no publications
   note: 'probe po st-augustine-church-16636 (lpi:0018000000QxAltAAF), 803 Saint Augustine Rd, Dysart: "no publications: this organization does not publish a bulletin here now". An empty organization, not a channel (the lead suggested checking it).'
 - url: http://staugustinepa.org
   seen: 2026-10-21

@@ -4,6 +4,8 @@ state: PA
 website: https://www.dioceseaj.org
 status: exploring
 gcatholic: alto0
+city_aliases:
+  Frugality: Fallentimber
 ---
 
 Eight counties of west-central Pennsylvania: Blair (Altoona), Cambria (Johnstown, Ebensburg),
@@ -92,6 +94,9 @@ otherwise.
   (`<name>.flocknote.com`) are sign-up pages, not bulletins, and render their title in JS
   (evidence as a note). catholicindex.org and findglocal.com now challenge curl; a DuckDuckGo
   snippet via `visit.py` reads them.
+- **A public Facebook post URL** opens in headed Chrome (`visit.py --text`) without a login, though
+  the profile page doesn't: find post URLs with `ddg.sh`. Quote them as notes (`recheck` gets 400).
+  ParishesOnline's "no publications" text is not found by `recheck` either: note, not quote.
 - **Evidence for a `no_bulletin` church being open**: obituary snippets ("funeral Mass at
   <church>", via `tools/ddg.sh "<query>"`), alongside the directory and Discover Mass times.
   Discover Mass pages 503 and then Wordfence-block even headed Chrome after repeated hits:
