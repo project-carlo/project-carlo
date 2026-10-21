@@ -133,7 +133,10 @@ otherwise.
 - **Duda** (the Johnstown cathedral, `irp.cdn-website.com`) resets curl intermittently; retry.
   Its `/welcome#WeeklyBulletin` lists `files/uploaded/YYYY-MM-DD.pdf` (not always zero-padded).
   omostoday.com (WordPress/Elementor) posts scanned issues: render with `pdftoppm`.
-- **Self-hosted, odd hosts:** SiteGround WordPress (mhtcc.org, Huntingdon) drops `probe pdf`
+- **An eCatholic id on a site doesn't mean the bulletin is there**: standrewjohnstown.org is
+  eCatholic (36351) but its bulletin folder is empty and its Bulletins menu goes to Discover Mass.
+- **Self-hosted, odd hosts:** SiteGround WordPress (mhtcc.org, Huntingdon; stbenedictchurch.org,
+  Johnstown; `tools/browser_get.py <page> <pdf> <out>` downloads a PDF through Chrome) drops `probe pdf`
   and plain-http curl (RemoteDisconnected or an sgcaptcha page); use https with a Chrome user
   agent, or `visit.py --bulletin`. Homestead (scosmu.org, Mount Union) resets https; `http://www.`
   works, PDFs named `<Month>_<D>.pdf` on its About-Us page.
