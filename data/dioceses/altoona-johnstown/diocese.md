@@ -28,8 +28,10 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
   roster entry takes the parish's. Each entry has the directory's Mass times, pastor, phone and
   (for 55 parishes) a homepage. Pastors are the best lead for shared bulletins.
 - **GCatholic:** `rosters/gcatholic.json` (key `alto0`), 109 entries with Plus Codes. 15 of
-  them (ids 17xxx) are Byzantine or other Eastern Catholic churches in the territory
-  (Eparchy of Passaic / Archeparchy of Pittsburgh): `other-jurisdiction`. GCatholic still lists
+  them (ids 17xxx) are Eastern Catholic churches in the territory, each `excluded/` as
+  `other-jurisdiction`: 12 of the Ruthenian Metropolitanate of Pittsburgh and 3 (Johnstown,
+  Northern Cambria, Revloc) of the Ukrainian Eparchy of Saint Josaphat in Parma, per each
+  GCatholic page's "Jurisdiction:" line. GCatholic still lists
   churches the directory has dropped (St. Joseph, Carrolltown; St. Boniface, Hastings; St. John
   chapel, Central City; Our Lady of the Sacred Heart and St. Joseph, Portage; St. Mary,
   Meyersdale), each to be settled from a bulletin.
