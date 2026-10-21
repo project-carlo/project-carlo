@@ -31,6 +31,9 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
   churches the directory has dropped (St. Joseph, Carrolltown; St. Boniface, Hastings; St. John
   chapel, Central City; Our Lady of the Sacred Heart and St. Joseph, Portage; St. Mary,
   Meyersdale), each to be settled from a bulletin.
+- **Clergy list:** https://www.dioceseaj.org/clergy/ lists every priest with his parishes:
+  the quickest way to settle which parishes share a pastor. The `/daj_parish/<slug>/` pages are
+  JS-rendered and carry no pastor text; `/bishops-appointments-2/` 403s after many requests.
 - **Clusters / families of parishes:** none. The diocese's site has no grouping or pastoral
   plan page (sitemaps checked 2026-10-21).
 - **Mass times:** only in the directory entries above.
@@ -89,6 +92,10 @@ otherwise.
   (`<name>.flocknote.com`) are sign-up pages, not bulletins, and render their title in JS
   (evidence as a note). catholicindex.org and findglocal.com now challenge curl; a DuckDuckGo
   snippet via `visit.py` reads them.
+- **Evidence for a `no_bulletin` church being open**: obituary snippets ("funeral Mass at
+  <church>", via `tools/ddg.sh "<query>"`), alongside the directory and Discover Mass times.
+  Discover Mass pages 503 and then Wordfence-block even headed Chrome after repeated hits:
+  read each once.
 - **Name look-alikes elsewhere:** church-bulletin.org "Saints Philip and James" is Exton;
   `parishbulletins.com/bulletins/065` is Guelph, Ontario. Check the town before using one.
 - **The directory's address can be the rectory** (St. Gregory, MacDonaldton shows Sts. Philip
