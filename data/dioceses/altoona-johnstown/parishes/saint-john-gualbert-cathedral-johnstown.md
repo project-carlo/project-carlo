@@ -1,28 +1,44 @@
 ---
-name: 'Saint John Gualbert Cathedral Parish and Saint Patrick Parish, Johnstown'
+name: Saint John Gualbert Cathedral Parish and Saint Patrick Parish, Johnstown
 website: https://www.stjohngualbert.org/welcome
 bulletin_provider: other
-provider_id: 'page-pdfs https://www.stjohngualbert.org/welcome#WeeklyBulletin'
+provider_id: page-pdfs https://www.stjohngualbert.org/welcome#WeeklyBulletin
 publication: ['url:https://www.stjohngualbert.org/welcome']
 group: Very Rev. Matthew Baum (Johnstown)
 evidence:
 - url: https://irp.cdn-website.com/747b2262/files/uploaded/2026-10-18.pdf
   seen: 2026-10-21
   quote: Saint Patrick Church
-  note: 'Page 1 of the 18 October 2026 issue (12 pages, 16 MB; "Twenty Ninth Sunday in Ordinary Time"). The cover carries two Mass-time blocks. Block one: "Mass Times: Saturday 6PM Sunday 7AM, 11AM, 5PM ... Saint John Gualbert Cathedral ... V. Rev Matthew Baum, Rector". Block two: "Mass Times: Saturday 4PM Sunday 9AM Thursday 8AM ... Saint Patrick Church ... V. Rev Matthew Baum, Pastor". One bulletin therefore names both churches (the text layer has them on separate lines, so the quote is the heading alone).'
+  note: 'Page 1 of the 18 October 2026 issue (12 pages, 16 MB; "Twenty Ninth Sunday in Ordinary Time").
+    The cover carries two Mass-time blocks. Block one: "Mass Times: Saturday 6PM Sunday 7AM, 11AM, 5PM
+    ... Saint John Gualbert Cathedral ... V. Rev Matthew Baum, Rector". Block two: "Mass Times: Saturday
+    4PM Sunday 9AM Thursday 8AM ... Saint Patrick Church ... V. Rev Matthew Baum, Pastor". One bulletin
+    therefore names both churches (the text layer has them on separate lines, so the quote is the heading
+    alone).'
 - url: https://www.stjohngualbert.org/welcome
   seen: 2026-10-21
   quote: St. John Gualbert Cathedral & St. Patrick Catholic Parishes
-  note: 'The parish site''s page header (a Duda site). Its "Weekly Bulletin" section shows "Current Bulletin 2026-10-18" and past issues 2026-10-11, 10-04, 09-27 and 09-20, each a PDF under irp.cdn-website.com/747b2262/files/uploaded/. The page says "our combined activity calendar for both parishes" and carries both parishes'' addresses (cathedral 117 Clinton Street, St. Patrick 609 Park Ave) and offices.'
+  note: The parish site's page header (a Duda site). Its "Weekly Bulletin" section shows "Current Bulletin
+    2026-10-18" and past issues 2026-10-11, 10-04, 09-27 and 09-20, each a PDF under irp.cdn-website.com/747b2262/files/uploaded/.
+    The page says "our combined activity calendar for both parishes" and carries both parishes' addresses
+    (cathedral 117 Clinton Street, St. Patrick 609 Park Ave) and offices.
 - url: http://stpatrickjtown.com
   seen: 2026-10-21
-  note: 'The St. Patrick domain printed on the bulletin cover (the cover reads "http://stpatrickjtown.com") answers 200 after redirecting to https://www.stjohngualbert.org/ (checked with probe url and curl -L). So St. Patrick has no separate site or bulletin channel of its own: the redirect is a fold-in, not a squat, because the target is the pastor''s own parish site, whose title is "St John Gualbert Cathedral & St Patrick Parish".'
+  note: 'The St. Patrick domain printed on the bulletin cover (the cover reads "http://stpatrickjtown.com")
+    answers 200 after redirecting to https://www.stjohngualbert.org/ (checked with probe url and curl
+    -L). So St. Patrick has no separate site or bulletin channel of its own: the redirect is a fold-in,
+    not a squat, because the target is the pastor''s own parish site, whose title is "St John Gualbert
+    Cathedral & St Patrick Parish".'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'The directory lists the cathedral (117 Clinton Street, Johnstown 15901, homepage http://www.stjohngualbert.org/) and St. Patrick (609 Park Avenue, 15902, no homepage) as two parishes. The bulletin cover names Very Rev. Matthew Baum as rector of one and pastor of the other, matching the lead.'
+  note: The directory lists the cathedral (117 Clinton Street, Johnstown 15901, homepage http://www.stjohngualbert.org/)
+    and St. Patrick (609 Park Avenue, 15902, no homepage) as two parishes. The bulletin cover names Very
+    Rev. Matthew Baum as rector of one and pastor of the other, matching the lead.
 - url: https://stjohngualbert.flocknote.com/SJSP
   seen: 2026-10-21
-  note: 'The site''s Flocknote sign-up ("SJSP", text SJGC to 84576) serves both parishes. A sign-up page, not a bulletin source.'
+  note: The site's Flocknote sign-up ("SJSP", text SJGC to 84576) serves both parishes. A sign-up page,
+    not a bulletin source.
+promoted: 2026-10-21
 ---
 
 ## Publisher

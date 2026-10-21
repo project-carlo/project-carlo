@@ -25,15 +25,18 @@ evidence:
     group: Saint Bartholomew Parish, Wilmore'
 - url: http://www.stjic.org/wp-content/uploads/2026/10/October-18-2026.pdf
   seen: 2026-10-21
-  quote: '5:30 PM           SB -       Michael & Clara Luszik, John & Helen Grobosky, request Mary Grobosky'
-  note: 'Mass list of the 18 Oct 2026 bulletin: SB Mon 19 Oct 7:45 AM, Thu 22 Oct 7:45 AM, Sat 24 Oct 5:30 PM, Sun 25 Oct 9:00 AM. Masthead address 185 Church Hill, Wilmore; office stbartholomewwilmore@dioceseaj.org.'
+  quote: 5:30 PM           SB -       Michael & Clara Luszik, John & Helen Grobosky, request Mary Grobosky
+  note: 'Mass list of the 18 Oct 2026 bulletin: SB Mon 19 Oct 7:45 AM, Thu 22 Oct 7:45 AM, Sat 24 Oct
+    5:30 PM, Sun 25 Oct 9:00 AM. Masthead address 185 Church Hill, Wilmore; office stbartholomewwilmore@dioceseaj.org.'
 - url: https://discovermass.com/church/st-bartholomew-wilmore-pa/
   seen: 2026-10-21
-  quote: 'Saturday 5:30pm Sunday 9:00am Thursday 7:45am'
-  note: 'Discover Mass page, 185 Church Hill Road, Wilmore, PA 15962, (814) 495-4419; no bulletins on it.'
+  quote: Saturday 5:30pm Sunday 9:00am Thursday 7:45am
+  note: Discover Mass page, 185 Church Hill Road, Wilmore, PA 15962, (814) 495-4419; no bulletins on it.
 - url: https://nominatim.openstreetmap.org/search?q=Saint+Bartholomew+Catholic+Church+Wilmore&format=json
   seen: 2026-10-21
-  note: 'OSM: "Saint Bartholomew Catholic Church, 191, Church Hill Road, Wilmore" at 40.3912461, -78.7144065, about 25 m from the GCatholic point; OSM has number 191, the others 185.'
+  note: 'OSM: "Saint Bartholomew Catholic Church, 191, Church Hill Road, Wilmore" at 40.3912461, -78.7144065,
+    about 25 m from the GCatholic point; OSM has number 191, the others 185.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

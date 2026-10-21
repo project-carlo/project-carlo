@@ -26,11 +26,15 @@ evidence:
 - url: https://discovermass.com/church/our-lady-queen-of-angels-central-city-pa/
   seen: 2026-10-21
   quote: Current Bulletin
-  note: 'Shared bulletin of 18 Oct 2026: its Hooversville block gives "321 Sugar Street, Hooversville, PA 15936, Rectory Office (814) 701-6069, Worship Site", Saturday "Following 4pm Mass at Holy Family" for confessions, and the Mass list names Holy Family (garbled text layer).'
+  note: 'Shared bulletin of 18 Oct 2026: its Hooversville block gives "321 Sugar Street, Hooversville,
+    PA 15936, Rectory Office (814) 701-6069, Worship Site", Saturday "Following 4pm Mass at Holy Family"
+    for confessions, and the Mass list names Holy Family (garbled text layer).'
 - url: https://discovermass.com/church/holy-family-hooversville-pa/
   seen: 2026-10-21
   quote: Shucks! There are no bulletins available.
-  note: 'Its own Discover Mass page gives Mass times "Saturday 4:00pm Friday 12:00pm" and confessions Saturday 4:45-5:30 pm; no bulletins (the shared one is under the Central City page).'
+  note: Its own Discover Mass page gives Mass times "Saturday 4:00pm Friday 12:00pm" and confessions Saturday
+    4:45-5:30 pm; no bulletins (the shared one is under the Central City page).
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

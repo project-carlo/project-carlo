@@ -7,18 +7,32 @@ publication: ['po-org:st-clement-church-15905', 'lpi:0018000000QxAlFAAV', 'po-co
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1971/20261018B.pdf
-  seen: '2026-10-21'
-  note: 'ParishesOnline container 14/1971, issue of 18 Oct 2026 (page footer "St. Clement, Johnstown, PA 14-1971"). Image-only pages (no text layer), rendered with pdftoppm: page 1 is headed "CHURCH OF ST. CLEMENT", "Rev. William E. Rosenbaum, Pastor", MASS SCHEDULE Weekend Saturday Vigil 4:00pm, Sunday 9:30am; Weekday Monday, Tuesday, Thursday 8:00am; Confession Saturday 3:00pm; footer "114 Lindberg Avenue, Johnstown, PA 15905 | www.stclementjohnstown.org". It names St. Clement alone. Page 2 ("The Clementian") is readings and raffle winners. Read page 2 as well; pages 3-8 not read, so I cannot say none of them mentions another parish.'
+  seen: 2026-10-21
+  note: 'ParishesOnline container 14/1971, issue of 18 Oct 2026 (page footer "St. Clement, Johnstown,
+    PA 14-1971"). Image-only pages (no text layer), rendered with pdftoppm: page 1 is headed "CHURCH OF
+    ST. CLEMENT", "Rev. William E. Rosenbaum, Pastor", MASS SCHEDULE Weekend Saturday Vigil 4:00pm, Sunday
+    9:30am; Weekday Monday, Tuesday, Thursday 8:00am; Confession Saturday 3:00pm; footer "114 Lindberg
+    Avenue, Johnstown, PA 15905 | www.stclementjohnstown.org". It names St. Clement alone. Page 2 ("The
+    Clementian") is readings and raffle winners. Read page 2 as well; pages 3-8 not read, so I cannot
+    say none of them mentions another parish.'
 - url: https://parishesonline.com/organization/st-clement-church-15905
-  seen: '2026-10-21'
-  note: '`probe po st-clement-church-15905`: organization "St. Clement Church", 114 Lindberg Ave, website http://stclementjohnstown.org/, ids po-org:st-clement-church-15905, lpi:0018000000QxAlFAAV, po-container:14/1971; latest issue 2026-10-18, and container 14/1971 already holds the 2026-10-25 issue (20261025B.pdf, 200 OK).'
+  seen: 2026-10-21
+  note: '`probe po st-clement-church-15905`: organization "St. Clement Church", 114 Lindberg Ave, website
+    http://stclementjohnstown.org/, ids po-org:st-clement-church-15905, lpi:0018000000QxAlFAAV, po-container:14/1971;
+    latest issue 2026-10-18, and container 14/1971 already holds the 2026-10-25 issue (20261025B.pdf,
+    200 OK).'
 - url: https://stclementjohnstown.org/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: St. Clement Church - 114 Lindberg Avenue Johnstown PA 15905 814-255-4422
-  note: 'Parish WordPress site (probe url: verdict ok, embeds po-org:st-clement-church-15905). Its /bulletin-archive/ lists the same LPi-printed issues as dated PDFs (wp-content/uploads/2026/10/Bulletin-October-25-2026.pdf is the 14-1971 issue), so the site and ParishesOnline carry one bulletin; I chose ParishesOnline because it has a stable org id.'
+  note: 'Parish WordPress site (probe url: verdict ok, embeds po-org:st-clement-church-15905). Its /bulletin-archive/
+    lists the same LPi-printed issues as dated PDFs (wp-content/uploads/2026/10/Bulletin-October-25-2026.pdf
+    is the 14-1971 issue), so the site and ParishesOnline carry one bulletin; I chose ParishesOnline because
+    it has a stable org id.'
 - url: https://www.dioceseaj.org/parishes/
-  seen: '2026-10-21'
-  note: 'Directory: Saint Clement Parish, Johnstown, one church, 114 Lindberg Avenue 15905, homepage stclementjohnstown.org; Masses Sat 4:00 PM, Sun 9:30 AM, Mon/Tue/Thu 8:00 AM, which agrees with the bulletin.'
+  seen: 2026-10-21
+  note: 'Directory: Saint Clement Parish, Johnstown, one church, 114 Lindberg Avenue 15905, homepage stclementjohnstown.org;
+    Masses Sat 4:00 PM, Sun 9:30 AM, Mon/Tue/Thu 8:00 AM, which agrees with the bulletin.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

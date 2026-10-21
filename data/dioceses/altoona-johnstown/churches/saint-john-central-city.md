@@ -26,11 +26,15 @@ evidence:
 - url: https://discovermass.com/church/our-lady-queen-of-angels-central-city-pa/
   seen: 2026-10-21
   quote: Current Bulletin
-  note: 'Shared bulletin of 18 Oct 2026: cover lists "Chapel (St. John)", 162 Wheeler Street, with Sunday confessions "10:00-10:20 am at Saint John Site"; the weekly Mass list names it "OLQA Chapel" with Sunday 10:30 am (garbled text layer).'
+  note: 'Shared bulletin of 18 Oct 2026: cover lists "Chapel (St. John)", 162 Wheeler Street, with Sunday
+    confessions "10:00-10:20 am at Saint John Site"; the weekly Mass list names it "OLQA Chapel" with
+    Sunday 10:30 am (garbled text layer).'
 - url: https://www.ladyqueenofangels.org/
   seen: 2026-10-21
   quote: 'Sunday: 8AM (Sacred Heart) | 10:30AM (St. John)'
-  note: Parish home page, rendered in Chrome. Weekday Masses (Mon and Fri noon) are at St. John's from the first Sunday of Advent to Pentecost.
+  note: Parish home page, rendered in Chrome. Weekday Masses (Mon and Fri noon) are at St. John's from
+    the first Sunday of Advent to Pentecost.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

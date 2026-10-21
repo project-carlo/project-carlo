@@ -26,11 +26,16 @@ evidence:
 - url: https://standrewjohnstown.org/
   seen: 2026-10-21
   quote: Welcome to St Andrew Catholic Church!
-  note: 'Parish site Mass times (headed Chrome): Saturday 4:00 PM; Sunday 8:00 AM and 10:30 AM; Monday, Tuesday, Wednesday 8:00 AM; Thursday 7:00 PM Latin Extraordinary Form; Friday 8:00 AM (First Friday only 7:00 PM); Saturday 7:30 AM.'
+  note: 'Parish site Mass times (headed Chrome): Saturday 4:00 PM; Sunday 8:00 AM and 10:30 AM; Monday,
+    Tuesday, Wednesday 8:00 AM; Thursday 7:00 PM Latin Extraordinary Form; Friday 8:00 AM (First Friday
+    only 7:00 PM); Saturday 7:30 AM.'
 - url: https://discovermass.com/church/st-andrew-johnstown-pa/
   seen: 2026-10-21
   quote: St. Andrew | Discover Mass
-  note: 'Bulletin issue dated 2026-10-25, page 2: "ST. ANDREW CHURCH 1621 FERNDALE AVE JOHNSTOWN, PA. 15905" with "Saturday Vigil Mass: 4:00 PM Sunday Masses: 8:00 AM & 10:30 AM ... Thursday, 7:00 PM". Read via the page''s tokenised download link.'
+  note: 'Bulletin issue dated 2026-10-25, page 2: "ST. ANDREW CHURCH 1621 FERNDALE AVE JOHNSTOWN, PA.
+    15905" with "Saturday Vigil Mass: 4:00 PM Sunday Masses: 8:00 AM & 10:30 AM ... Thursday, 7:00 PM".
+    Read via the page''s tokenised download link.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

@@ -8,16 +8,22 @@ group: ''
 evidence:
 - url: https://files.ecatholic.com/29859/bulletins/20261018.pdf
   seen: 2026-10-21
-  quote: 'Pastor – Fr. James Dugan'
-  note: 'Masthead (page 1) of the 18 October 2026 issue: "Our Lady of Lourdes", 2716 Broad Ave. Altoona, with its own pastor and its own Mass list (4:30 p.m. Saturday, 8:00 a.m. and 10:30 a.m. Sunday). It names no other parish, so one parish, one church.'
+  quote: Pastor – Fr. James Dugan
+  note: 'Masthead (page 1) of the 18 October 2026 issue: "Our Lady of Lourdes", 2716 Broad Ave. Altoona,
+    with its own pastor and its own Mass list (4:30 p.m. Saturday, 8:00 a.m. and 10:30 a.m. Sunday). It
+    names no other parish, so one parish, one church.'
 - url: https://ourladyoflourdesaltoona.com/bulletins
   seen: 2026-10-21
-  quote: 'Bulletin Archive 2026 October 18, 2026 October 11, 2026'
-  note: 'The parish site''s Bulletin page (loaded in headed Chrome; plain curl gets a 403) lists a weekly PDF every Sunday through 18 October 2026, all at files.ecatholic.com/29859/bulletins/<YYYYMMDD>.pdf. The page embeds eCatholic site id 29859.'
+  quote: Bulletin Archive 2026 October 18, 2026 October 11, 2026
+  note: The parish site's Bulletin page (loaded in headed Chrome; plain curl gets a 403) lists a weekly
+    PDF every Sunday through 18 October 2026, all at files.ecatholic.com/29859/bulletins/<YYYYMMDD>.pdf.
+    The page embeds eCatholic site id 29859.
 - url: https://discovermass.com/church/our-lady-of-lourdes-altoona-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for Our Lady of Lourdes.
-  note: A Discover Mass page exists but carries no bulletin, so not a live channel. The ParishesOnline organization our-lady-of-lourdes-church-16601 (lpi:0018000000QxAlkAAF) also has no publications.
+  note: A Discover Mass page exists but carries no bulletin, so not a live channel. The ParishesOnline
+    organization our-lady-of-lourdes-church-16601 (lpi:0018000000QxAlkAAF) also has no publications.
+promoted: 2026-10-21
 ---
 
 ## Publisher

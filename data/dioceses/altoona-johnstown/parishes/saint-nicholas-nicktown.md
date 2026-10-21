@@ -4,19 +4,30 @@ website: https://saintnicholasparish.com/
 bulletin_provider: discover_mass
 provider_id: st-nicholas-nicktown-pa
 publication: ['discovermass:st-nicholas-nicktown-pa']
-group: 'Rev. Jeremiah G. Lange, O.S.B. (Nicktown)'
+group: Rev. Jeremiah G. Lange, O.S.B. (Nicktown)
 evidence:
 - url: https://discovermass.com/church/st-nicholas-nicktown-pa/
   seen: 2026-10-21
   quote: Oct 25, 2026
-  note: 'Discover Mass church page: "Current Bulletin" Oct 25, 2026 with an archive back to Aug 9, 2026 (Oct 18, Oct 11, Oct 4, Sep 27 ...). "Visit Website" goes to https://saintnicholasparish.com. fetch:check downloaded the current issue from it (1.1 MB, status ok). I read the 25 Oct 2026 PDF itself (4 pages): footer "Saint Nicholas Roman Catholic Church, 1169 Alverda Rd. Nicktown PA 15762 ... Fr. Jeremiah G. Lange O.S.B., Pastor ... View bulletins @ www.DiscoverMass.com". The cover and Mass list name this parish alone.'
+  note: 'Discover Mass church page: "Current Bulletin" Oct 25, 2026 with an archive back to Aug 9, 2026
+    (Oct 18, Oct 11, Oct 4, Sep 27 ...). "Visit Website" goes to https://saintnicholasparish.com. fetch:check
+    downloaded the current issue from it (1.1 MB, status ok). I read the 25 Oct 2026 PDF itself (4 pages):
+    footer "Saint Nicholas Roman Catholic Church, 1169 Alverda Rd. Nicktown PA 15762 ... Fr. Jeremiah
+    G. Lange O.S.B., Pastor ... View bulletins @ www.DiscoverMass.com". The cover and Mass list name this
+    parish alone.'
 - url: https://saintnicholasparish.com/
   seen: 2026-10-21
   quote: Bulletins
-  note: 'Rendered in headed Chrome (the homepage answers curl with Cloudflare "Just a moment", 403). It is an eCatholic site (ecatholic:25022) but its "Bulletins" menu link goes to https://discovermass.com/church/st-nicholas-nicktown-pa/#bulletins, and eCatholic bulletin PDFs for site 25022 answer 403/not found for every Sunday from 2026-08 (issues.py ecatholic): the eCatholic site holds no bulletin.'
+  note: 'Rendered in headed Chrome (the homepage answers curl with Cloudflare "Just a moment", 403). It
+    is an eCatholic site (ecatholic:25022) but its "Bulletins" menu link goes to https://discovermass.com/church/st-nicholas-nicktown-pa/#bulletins,
+    and eCatholic bulletin PDFs for site 25022 answer 403/not found for every Sunday from 2026-08 (issues.py
+    ecatholic): the eCatholic site holds no bulletin.'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory (page 8): "Saint Nicholas Parish, Nicktown, 1169 Alverda Road ... Clergy: Rev. Jeremiah G. Lange, OSB, Ph.D, Pastor ... http://saintnicholasparish.com/"; Masses Sat 8:00 AM and 5:00 PM, Sun 6:00 AM, 8:00 AM and 10:00 AM. No second worship site.'
+  note: 'Directory (page 8): "Saint Nicholas Parish, Nicktown, 1169 Alverda Road ... Clergy: Rev. Jeremiah
+    G. Lange, OSB, Ph.D, Pastor ... http://saintnicholasparish.com/"; Masses Sat 8:00 AM and 5:00 PM,
+    Sun 6:00 AM, 8:00 AM and 10:00 AM. No second worship site.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

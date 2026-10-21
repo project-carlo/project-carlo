@@ -26,7 +26,9 @@ evidence:
 - url: https://files.ecatholic.com/37641/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: 'Church Address: 308 Old Route 22, Duncansville, PA 16635'
-  note: 'Page 2 of the 18 October 2026 bulletin; the same page lists "Daily: M-F 7:00 AM" and the Sunday Masses at 8:00 AM & 11:00 AM with the 5:00PM Saturday vigil.'
+  note: 'Page 2 of the 18 October 2026 bulletin; the same page lists "Daily: M-F 7:00 AM" and the Sunday
+    Masses at 8:00 AM & 11:00 AM with the 5:00PM Saturday vigil.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

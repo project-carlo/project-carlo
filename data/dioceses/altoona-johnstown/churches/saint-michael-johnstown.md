@@ -26,14 +26,20 @@ evidence:
 - url: https://omostoday.com/st-michaels/
   seen: 2026-10-21
   quote: Saturday 6:00 pm (2nd, 3rd, 4th Saturdays)
-  note: 'St. Michael''s page on the OMOS site: "Our schedule St. Michael''s Church Sunday 9:00 am (1st Sundays*) Saturday 6:00 pm (2nd, 3rd, 4th Saturdays) *St. Michael''s does not have a 1st Sunday Mass in June, July or August." Confessions are all at OMOS.'
+  note: 'St. Michael''s page on the OMOS site: "Our schedule St. Michael''s Church Sunday 9:00 am (1st
+    Sundays*) Saturday 6:00 pm (2nd, 3rd, 4th Saturdays) *St. Michael''s does not have a 1st Sunday Mass
+    in June, July or August." Confessions are all at OMOS.'
 - url: https://omostoday.com/wp-content/uploads/2026/09/September-27-Twenty-Sixth-Sunday-in-Ordinary-Time-.pdf
   seen: 2026-10-21
   quote: 180 Gilbert St., Johnstown, PA 15906
-  note: 'Page 1 of the 27 September 2026 bulletin (text layer), under "ST MICHAEL CATHOLIC CHURCH". Page 5 lists "6:00 p.m. Mass at St. Michael''s" for several Saturdays. The 18 October issue (scan, page 1 read) repeats the 180 Gilbert St. line.'
+  note: Page 1 of the 27 September 2026 bulletin (text layer), under "ST MICHAEL CATHOLIC CHURCH". Page
+    5 lists "6:00 p.m. Mass at St. Michael's" for several Saturdays. The 18 October issue (scan, page
+    1 read) repeats the 180 Gilbert St. line.
 - url: https://nominatim.openstreetmap.org/search?q=Saint+Michael+Church+Gilbert+Street+Johnstown+PA&format=json
   seen: 2026-10-21
-  note: 'OpenStreetMap: "Saint Michael Catholic Church, 180, Gilbert Street, Johnstown" at 40.3322775, -78.9366977, about 40 m from the GCatholic point.'
+  note: 'OpenStreetMap: "Saint Michael Catholic Church, 180, Gilbert Street, Johnstown" at 40.3322775,
+    -78.9366977, about 40 m from the GCatholic point.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

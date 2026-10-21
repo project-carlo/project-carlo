@@ -26,7 +26,9 @@ evidence:
 - url: https://newbaltimorecatholic.com/schedule/
   seen: 2026-10-21
   quote: 101 Findley Street New Baltimore, PA 15553
-  note: 'Parish site: "St. John the Baptist Parish Schedule of Mass Times"; address and the Saturday 6:00 PM / Sunday 8:00 AM and 10:30 AM Masses in the church, weekday Masses in the chapel.'
+  note: 'Parish site: "St. John the Baptist Parish Schedule of Mass Times"; address and the Saturday 6:00
+    PM / Sunday 8:00 AM and 10:30 AM Masses in the church, weekday Masses in the chapel.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

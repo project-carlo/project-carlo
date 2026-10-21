@@ -9,22 +9,34 @@ evidence:
 - url: http://www.webparish.com/pdfs/101826.pdf
   seen: 2026-10-21
   quote: 9:00am Mass at St. Anthony of Padua
-  note: 'The 18 October 2026 bulletin linked first on the St. Anthony site (page 1 of 2, no masthead; the issue is identified by the site''s list). Page 1 is a Mass list for all three Windber churches in the week of 19-25 Oct: Mon 9:00am and Tue 12:00pm "Mass at St. Anthony of Padua", Wed 9:00am, Thu 12:00pm and Fri 9:00am "Mass at Ss. Cyril & Methodius", Sat 4:00pm Vigil "Mass at St. Anthony of Padua", Sun "8:00am (SEAS)", "10:00am (SA)", "12:00pm (SSCM)".'
+  note: 'The 18 October 2026 bulletin linked first on the St. Anthony site (page 1 of 2, no masthead;
+    the issue is identified by the site''s list). Page 1 is a Mass list for all three Windber churches
+    in the week of 19-25 Oct: Mon 9:00am and Tue 12:00pm "Mass at St. Anthony of Padua", Wed 9:00am, Thu
+    12:00pm and Fri 9:00am "Mass at Ss. Cyril & Methodius", Sat 4:00pm Vigil "Mass at St. Anthony of Padua",
+    Sun "8:00am (SEAS)", "10:00am (SA)", "12:00pm (SSCM)".'
 - url: http://www.webparish.com/pdfs/101826.pdf
   seen: 2026-10-21
   quote: Please stop at or call the parish office at
-  note: 'Same issue: "467-7292 to schedule Masses and/or the Sanctuary Candle for 2027" (467-7292 is the St. Anthony number on its site and in the SEAS masthead as "Fr. Soha 467-7292"). Also "We will honor and pray for all those from the three Windber Parishes who have passed away over the last year" at the 10AM All Souls Mass at St. Anthony.'
+  note: 'Same issue: "467-7292 to schedule Masses and/or the Sanctuary Candle for 2027" (467-7292 is the
+    St. Anthony number on its site and in the SEAS masthead as "Fr. Soha 467-7292"). Also "We will honor
+    and pray for all those from the three Windber Parishes who have passed away over the last year" at
+    the 10AM All Souls Mass at St. Anthony.'
 - url: https://webparish.com/aj/stanthonyswindber/index.php?PG=upcomingevents
   seen: 2026-10-21
   quote: October 18, 2026 Bulletin
-  note: 'The St. Anthony site''s Bulletin page (rendered in Chrome; curl gets Mod_Security 406): "Bulletins" list of 18, 11 and 4 October and 27 and 20 September 2026, linked to webparish.com/pdfs/MMDDYY.pdf (101826.pdf, 101126.pdf, 100426.pdf, 092726.pdf, 092026.pdf). The home page gives "2201 Graham Avenue Windber, PA 15963 Phone: 814-467-7292" and "Served by the Third Order Regular Franciscans since 1925".'
+  note: 'The St. Anthony site''s Bulletin page (rendered in Chrome; curl gets Mod_Security 406): "Bulletins"
+    list of 18, 11 and 4 October and 27 and 20 September 2026, linked to webparish.com/pdfs/MMDDYY.pdf
+    (101826.pdf, 101126.pdf, 100426.pdf, 092726.pdf, 092026.pdf). The home page gives "2201 Graham Avenue
+    Windber, PA 15963 Phone: 814-467-7292" and "Served by the Third Order Regular Franciscans since 1925".'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory entry for Saint Anthony of Padua Parish, Windber: pastor Rev. Roderick Soha, TOR, no homepage; Masses Sat 4:00 PM, Sun 10:00 AM, Mon 9:00 AM, Tue 12:00 PM (matches the bulletin).'
+  note: 'Directory entry for Saint Anthony of Padua Parish, Windber: pastor Rev. Roderick Soha, TOR, no
+    homepage; Masses Sat 4:00 PM, Sun 10:00 AM, Mon 9:00 AM, Tue 12:00 PM (matches the bulletin).'
 - url: https://discovermass.com/church/st-anthony-of-padua-windber-pa/
   seen: 2026-10-21
   quote: no bulletins available for St. Anthony of Padua
   note: Discover Mass page exists with an empty Bulletins tab. Not a live channel.
+promoted: 2026-10-21
 ---
 
 ## Publisher

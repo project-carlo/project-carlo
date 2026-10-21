@@ -1,6 +1,6 @@
 ---
 parish: saint-clement-johnstown
-name: "St. Clement"
+name: St. Clement
 line1: 114 Lindberg Ave.
 line2: ''
 city: Johnstown
@@ -24,12 +24,15 @@ evidence:
     Johnstown, PA, 15905; kind: church of Saint Clement Parish, Johnstown (cambria county); group: Saint
     Clement Parish, Johnstown'
 - url: https://container.parishesonline.com/bulletins/14/1971/20261018B.pdf
-  seen: '2026-10-21'
-  note: '18 Oct 2026 bulletin, page 1 (image, read by rendering): "CHURCH OF ST. CLEMENT", MASS SCHEDULE Saturday Vigil 4:00pm, Sunday 9:30am, Monday/Tuesday/Thursday 8:00am; footer "114 Lindberg Avenue, Johnstown, PA 15905".'
+  seen: 2026-10-21
+  note: '18 Oct 2026 bulletin, page 1 (image, read by rendering): "CHURCH OF ST. CLEMENT", MASS SCHEDULE
+    Saturday Vigil 4:00pm, Sunday 9:30am, Monday/Tuesday/Thursday 8:00am; footer "114 Lindberg Avenue,
+    Johnstown, PA 15905".'
 - url: https://stclementjohnstown.org/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: St. Clement Church - 114 Lindberg Avenue Johnstown PA 15905 814-255-4422
   note: Page title of the parish's own site.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

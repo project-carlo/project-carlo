@@ -26,7 +26,9 @@ evidence:
 - url: https://ourladyofvictory.com/wp-content/uploads/2026/10/October-18-2026.pdf
   seen: 2026-10-21
   quote: 820 Westerly Parkway, State College, PA 16801
-  note: 'Bulletin masthead, 17-18 Oct 2026; Mass schedule on page 1: Sat 5:00pm Vigil, Sun 7:30am, 9:30am, 11:30am.'
+  note: 'Bulletin masthead, 17-18 Oct 2026; Mass schedule on page 1: Sat 5:00pm Vigil, Sun 7:30am, 9:30am,
+    11:30am.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

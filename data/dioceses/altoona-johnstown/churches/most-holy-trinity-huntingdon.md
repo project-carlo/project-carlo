@@ -26,11 +26,15 @@ evidence:
 - url: https://mhtcc.org/wp-content/uploads/2026/10/Most-Holy-Trinity-Church-Bulletin-%E2%80%93-October-18-2026.pdf
   seen: 2026-10-21
   quote: 'Rev. Mark Reid: Administrator'
-  note: 'Masthead of the 18 October 2026 issue: "Most Holy Trinity Catholic Church / 524 Mifflin Street, Huntingdon, PA 16652". Mass Intentions: Saturday 24 October "Anticipated Mass 4:00 PM", Sunday 25 October "10:30 AM", Monday, Wednesday and Friday 11:00 AM.'
+  note: 'Masthead of the 18 October 2026 issue: "Most Holy Trinity Catholic Church / 524 Mifflin Street,
+    Huntingdon, PA 16652". Mass Intentions: Saturday 24 October "Anticipated Mass 4:00 PM", Sunday 25
+    October "10:30 AM", Monday, Wednesday and Friday 11:00 AM.'
 - url: https://mhtcc.org/sacraments-liturgies/about-us/
   seen: 2026-10-21
   quote: Mass Schedules
-  note: 'Parish site gives "Saturday – 4:00 PM  Sunday – 10:30 AM" plus weekday 11:00 AM in the "Daily Chapel", and an address block with 524 Mifflin Street, Huntingdon, PA 16652.'
+  note: Parish site gives "Saturday – 4:00 PM  Sunday – 10:30 AM" plus weekday 11:00 AM in the "Daily
+    Chapel", and an address block with 524 Mifflin Street, Huntingdon, PA 16652.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

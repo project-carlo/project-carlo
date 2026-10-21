@@ -9,21 +9,30 @@ evidence:
 - url: https://www.basilicasm-loretto.org/uploads/4/5/8/1/45811561/10-18-26.pdf
   seen: 2026-10-21
   quote: Basilica of Saint Michael the Archangel
-  note: 'Page 1 of the 18 Oct 2026 issue (Twenty-Ninth Sunday in Ordinary Time, 6 pages): masthead "Basilica of Saint Michael the Archangel ... Home of the Shrine of Our Lady of the Alleghenies and Prince Gallitzin Chapel House Trust ... A parish of the Diocese of Altoona-Johnstown", rector Very Rev. Father John David Byrnes, 321 St. Mary Street, Loretto. The bulletin covers this parish only.'
+  note: 'Page 1 of the 18 Oct 2026 issue (Twenty-Ninth Sunday in Ordinary Time, 6 pages): masthead "Basilica
+    of Saint Michael the Archangel ... Home of the Shrine of Our Lady of the Alleghenies and Prince Gallitzin
+    Chapel House Trust ... A parish of the Diocese of Altoona-Johnstown", rector Very Rev. Father John
+    David Byrnes, 321 St. Mary Street, Loretto. The bulletin covers this parish only.'
 - url: https://www.basilicasm-loretto.org/uploads/4/5/8/1/45811561/10-18-26.pdf
   seen: 2026-10-21
   quote: Sunday Vigil Mass
-  note: 'Page 1 MASS SCHEDULE: Fall/Winter/Spring Sunday Vigil 4PM Saturday, Sunday 8:00AM and 10:00AM; Summer (Memorial Day to Labor Day) Sunday 8:00AM and 7:00PM (Shrine); daily Monday and Tuesday 7:30AM, Wednesday 6:00PM, Friday 8:45AM; Reconciliation Saturdays 11:30-12:30.'
+  note: 'Page 1 MASS SCHEDULE: Fall/Winter/Spring Sunday Vigil 4PM Saturday, Sunday 8:00AM and 10:00AM;
+    Summer (Memorial Day to Labor Day) Sunday 8:00AM and 7:00PM (Shrine); daily Monday and Tuesday 7:30AM,
+    Wednesday 6:00PM, Friday 8:45AM; Reconciliation Saturdays 11:30-12:30.'
 - url: https://www.basilicasm-loretto.org/bulletins.html
   seen: 2026-10-21
-  note: 'Weebly "Bulletins" page links /uploads/4/5/8/1/45811561/10-18-26.pdf, 10-11-26.pdf and 10-4-26.pdf (weekly series, M-D-YY names). probe url on the homepage found no ParishesOnline or eCatholic id. fetch:check 2026-10-21: page-pdfs picked 10-18-26.pdf, url_date 2026-10-18, 963,776 bytes, current.'
+  note: 'Weebly "Bulletins" page links /uploads/4/5/8/1/45811561/10-18-26.pdf, 10-11-26.pdf and 10-4-26.pdf
+    (weekly series, M-D-YY names). probe url on the homepage found no ParishesOnline or eCatholic id.
+    fetch:check 2026-10-21: page-pdfs picked 10-18-26.pdf, url_date 2026-10-18, 963,776 bytes, current.'
 - url: https://discovermass.com/church/st-michael-loretto-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for St. Michael.
   note: 'Discover Mass page for Loretto (title "St. Michael") has an empty Bulletins tab: not a channel.'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory lists "Basilica of Saint Michael the Archangel", 321 St. Mary Street, homepage basilicasm-loretto.org; Mass times Sat 4:00 PM, Sun 8:00 AM and 10:00 AM, weekdays as in the bulletin.'
+  note: Directory lists "Basilica of Saint Michael the Archangel", 321 St. Mary Street, homepage basilicasm-loretto.org;
+    Mass times Sat 4:00 PM, Sun 8:00 AM and 10:00 AM, weekdays as in the bulletin.
+promoted: 2026-10-21
 ---
 
 ## Publisher

@@ -21,11 +21,16 @@ evidence:
 - url: https://www.altoonacathedral.org/download/24/bulletin-2026/2617/october-18-2026.pdf
   seen: 2026-10-21
   quote: Serving the People of God in the City of Altoona Since 1851
-  note: 'Page 2 (the masthead page) of the 18 October 2026 bulletin. The text layer scrambles the Mass-times block, which reads in extraction order "Sunday: Weekday: 5:00 PM (Vigil) 12:00 Noon 8:00 AM 10:00 AM Saturday: 5:00 PM 12:00 Noon"; the same page prints "THE CATHEDRAL OF THE BLESSED SACRAMENT" and "ONE CATHEDRAL SQUARE, Altoona, Pennsylvania 16601-3315".'
+  note: 'Page 2 (the masthead page) of the 18 October 2026 bulletin. The text layer scrambles the Mass-times
+    block, which reads in extraction order "Sunday: Weekday: 5:00 PM (Vigil) 12:00 Noon 8:00 AM 10:00
+    AM Saturday: 5:00 PM 12:00 Noon"; the same page prints "THE CATHEDRAL OF THE BLESSED SACRAMENT" and
+    "ONE CATHEDRAL SQUARE, Altoona, Pennsylvania 16601-3315".'
 - url: https://gcatholic.org/churches/northamerica/2439
   seen: 2026-10-21
-  quote: '1 Cathedral Square, Altoona, Pennsylvania 16601'
-  note: 'GCatholic lists the cathedral (Type: Cathedral, Plus Code 87G3GH8W+9H) on its own page, not on the diocese page''s ordinary list, so it is not in the gcatholic roster that was fetched (ids 23xxx).'
+  quote: 1 Cathedral Square, Altoona, Pennsylvania 16601
+  note: 'GCatholic lists the cathedral (Type: Cathedral, Plus Code 87G3GH8W+9H) on its own page, not on
+    the diocese page''s ordinary list, so it is not in the gcatholic roster that was fetched (ids 23xxx).'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

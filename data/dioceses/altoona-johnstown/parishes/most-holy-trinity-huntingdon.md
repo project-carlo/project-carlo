@@ -9,20 +9,28 @@ evidence:
 - url: https://mhtcc.org/wp-content/uploads/2026/10/Most-Holy-Trinity-Church-Bulletin-%E2%80%93-October-18-2026.pdf
   seen: 2026-10-21
   quote: 'Rev. Mark Reid: Administrator'
-  note: 'Newsletter for 18 October 2026 (3 pages, text layer; read with curl and a Chrome user agent, because probe pdf is refused). Page 1 masthead: "Most Holy Trinity Catholic Church" with "524 Mifflin Street, Huntingdon, PA 16652". Page 2 lists Saturday 24 October "Anticipated Mass 4:00 PM" and Sunday 25 October "10:30 AM", and weekday Masses at 11:00 AM on Monday, Wednesday and Friday. The word "Dudley" does not occur anywhere in it, and the only "Immaculate" is the closing prayer ("Through your Holy and Immaculate Conception").'
+  note: 'Newsletter for 18 October 2026 (3 pages, text layer; read with curl and a Chrome user agent,
+    because probe pdf is refused). Page 1 masthead: "Most Holy Trinity Catholic Church" with "524 Mifflin
+    Street, Huntingdon, PA 16652". Page 2 lists Saturday 24 October "Anticipated Mass 4:00 PM" and Sunday
+    25 October "10:30 AM", and weekday Masses at 11:00 AM on Monday, Wednesday and Friday. The word "Dudley"
+    does not occur anywhere in it, and the only "Immaculate" is the closing prayer ("Through your Holy
+    and Immaculate Conception").'
 - url: https://mhtcc.org/bulletins/
   seen: 2026-10-21
-  note: 'The parish site''s Bulletins page (WordPress, SiteGround) lists one dated PDF per week or two: 18 Oct, 4 Oct, 27 Sep, 20 Sep, 13 Sep, 6 Sep, 30 Aug, 23 Aug, 9 Aug and 2 Aug 2026, all at /wp-content/uploads/YYYY/MM/Most-Holy-Trinity-Church-Bulletin-%E2%80%93-<Month>-<D>-2026.pdf. No publisher id (visit.py --bulletin: "bulletin PDFs but no publisher id: looks self-hosted").'
+  note: 'The parish site''s Bulletins page (WordPress, SiteGround) lists one dated PDF per week or two:
+    18 Oct, 4 Oct, 27 Sep, 20 Sep, 13 Sep, 6 Sep, 30 Aug, 23 Aug, 9 Aug and 2 Aug 2026, all at /wp-content/uploads/YYYY/MM/Most-Holy-Trinity-Church-Bulletin-%E2%80%93-<Month>-<D>-2026.pdf.
+    No publisher id (visit.py --bulletin: "bulletin PDFs but no publisher id: looks self-hosted").'
 - url: https://mhtcc.org/sacraments-liturgies/about-us/
   seen: 2026-10-21
   quote: Mass Schedules
-  note: 'Parish site: "Saturday – 4:00 PM  Sunday – 10:30 AM  Monday – 11:00 AM (Daily Chapel)  Wednesday – 11:00 AM (Daily Chapel)  Friday – 11:00 AM (Daily Chapel)"; Confession Saturday 3:00 PM.'
+  note: 'Parish site: "Saturday – 4:00 PM  Sunday – 10:30 AM  Monday – 11:00 AM (Daily Chapel)  Wednesday
+    – 11:00 AM (Daily Chapel)  Friday – 11:00 AM (Daily Chapel)"; Confession Saturday 3:00 PM.'
 - url: https://discovermass.com/church/most-holy-trinity-huntingdon-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for Most Holy Trinity.
-  note: 'A Discover Mass page exists but carries no bulletin and no Visit Website link, so it is not a live channel.'
-
-
+  note: A Discover Mass page exists but carries no bulletin and no Visit Website link, so it is not a
+    live channel.
+promoted: 2026-10-21
 ---
 
 ## Publisher

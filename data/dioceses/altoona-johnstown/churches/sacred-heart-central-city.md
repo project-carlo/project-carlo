@@ -26,11 +26,15 @@ evidence:
 - url: https://discovermass.com/church/our-lady-queen-of-angels-central-city-pa/
   seen: 2026-10-21
   quote: Current Bulletin
-  note: 'Shared bulletin of 18 Oct 2026 (header "THE CATHOLIC CHURCHES OF QUEEN OF ANGELS, HOLY FAMILY, ALL SAINTS"): cover lists "Church (Sacred Heart)", 738 Sunshine Avenue, and a Sunday "8 am Mass at Sacred Heart Site" (garbled text layer). The weekly Mass list names it "OLQA Church".'
+  note: 'Shared bulletin of 18 Oct 2026 (header "THE CATHOLIC CHURCHES OF QUEEN OF ANGELS, HOLY FAMILY,
+    ALL SAINTS"): cover lists "Church (Sacred Heart)", 738 Sunshine Avenue, and a Sunday "8 am Mass at
+    Sacred Heart Site" (garbled text layer). The weekly Mass list names it "OLQA Church".'
 - url: https://www.ladyqueenofangels.org/
   seen: 2026-10-21
   quote: 'Sunday: 8AM (Sacred Heart) | 10:30AM (St. John)'
-  note: 'Parish home page, rendered in Chrome (curl gets a Cloudflare 403). It also says: Weekday Monday & Friday 12:00 PM, Monday after Pentecost until Christ the King at Sacred Heart.'
+  note: 'Parish home page, rendered in Chrome (curl gets a Cloudflare 403). It also says: Weekday Monday
+    & Friday 12:00 PM, Monday after Pentecost until Christ the King at Sacred Heart.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

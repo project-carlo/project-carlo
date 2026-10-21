@@ -9,17 +9,29 @@ evidence:
 - url: https://discovermass.com/church/st-benedict-carrolltown-pa/
   seen: 2026-10-21
   quote: Oct 25, 2026
-  note: 'Discover Mass church page for St. Benedict, Carrolltown: "Current Bulletin" is the 25 Oct 2026 issue, with an archive; its "Visit Website" link is http://www.saintbenedictschurch.com/. fetch:check downloaded the current bulletin from it (2.2 MB, status ok).'
+  note: 'Discover Mass church page for St. Benedict, Carrolltown: "Current Bulletin" is the 25 Oct 2026
+    issue, with an archive; its "Visit Website" link is http://www.saintbenedictschurch.com/. fetch:check
+    downloaded the current bulletin from it (2.2 MB, status ok).'
 - url: https://nebula.wsimg.com/4c630251c629f5591d4477ab2735d2ab?AccessKeyId=F4B3D0444D0AAD568211&disposition=0&alloworigin=1
   seen: 2026-10-21
-  note: 'The parish site''s own copy of the 25 Oct 2026 bulletin (4 pages, PDF created 21 Oct 2026). Masthead: "Saint Benedict Church, PO Box 447, 100 Main Street, Carrolltown, PA 15722", "Father Michael J. Gabler, O.S.B. ... Pastor". It names this parish alone: no other church or parish in the masthead, intentions or Mass list. Mass list for the week: Sun 8:00 and 10:00 a.m., Mon 8:00 a.m. and 6:30 p.m., Tue-Wed-Fri 8:00, Thu 8:15, Sat 4:00 p.m.'
+  note: 'The parish site''s own copy of the 25 Oct 2026 bulletin (4 pages, PDF created 21 Oct 2026). Masthead:
+    "Saint Benedict Church, PO Box 447, 100 Main Street, Carrolltown, PA 15722", "Father Michael J. Gabler,
+    O.S.B. ... Pastor". It names this parish alone: no other church or parish in the masthead, intentions
+    or Mass list. Mass list for the week: Sun 8:00 and 10:00 a.m., Mon 8:00 a.m. and 6:30 p.m., Tue-Wed-Fri
+    8:00, Thu 8:15, Sat 4:00 p.m.'
 - url: http://www.saintbenedictschurch.com/bulletin-calendar.html
   seen: 2026-10-21
   quote: Bulletin October 18th
-  note: 'The parish''s Bulletin/Calendar page (GoDaddy site builder) shows three file links: a Word calendar, the 18 Oct and the 25 Oct bulletin PDFs on nebula.wsimg.com. A `page-pdfs` read picks the Word calendar first (not_pdf), so the row uses Discover Mass instead. The site answers over http:// only (https gives ERR_CERT_COMMON_NAME_INVALID; the bare host sometimes times out).'
+  note: 'The parish''s Bulletin/Calendar page (GoDaddy site builder) shows three file links: a Word calendar,
+    the 18 Oct and the 25 Oct bulletin PDFs on nebula.wsimg.com. A `page-pdfs` read picks the Word calendar
+    first (not_pdf), so the row uses Discover Mass instead. The site answers over http:// only (https
+    gives ERR_CERT_COMMON_NAME_INVALID; the bare host sometimes times out).'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Diocese directory (page 4 of the parish list): "Saint Benedict Parish, Carrolltown, 100 S Main Street ... Clergy: Rev. Michael Gabler, O.S.B., Pastor ... http://www.saintbenedictschurch.com/"; Masses Sat 4:00 PM, Sun 8:00 AM and 10:00 AM, weekdays 8:00 AM. It lists no second worship site.'
+  note: 'Diocese directory (page 4 of the parish list): "Saint Benedict Parish, Carrolltown, 100 S Main
+    Street ... Clergy: Rev. Michael Gabler, O.S.B., Pastor ... http://www.saintbenedictschurch.com/";
+    Masses Sat 4:00 PM, Sun 8:00 AM and 10:00 AM, weekdays 8:00 AM. It lists no second worship site.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

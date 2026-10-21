@@ -26,13 +26,17 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1078/20261018B.pdf
   seen: 2026-10-21
   quote: Sam Cafeo (L. Hoffman)
-  note: 'Page 4, Mass schedule of 19-25 Oct 2026, entries coded FX: Fri 23 Oct 9:00am FX, Sat 24 Oct 4:00pm FX (Rosary 3:30pm, adoration and confessions 11:00am), Sun 25 Oct 11:00am FX. Masthead page 1: 211 Powell Avenue, Cresson, Pennsylvania 16630.'
+  note: 'Page 4, Mass schedule of 19-25 Oct 2026, entries coded FX: Fri 23 Oct 9:00am FX, Sat 24 Oct 4:00pm
+    FX (Rosary 3:30pm, adoration and confessions 11:00am), Sun 25 Oct 11:00am FX. Masthead page 1: 211
+    Powell Avenue, Cresson, Pennsylvania 16630.'
 - url: https://nominatim.openstreetmap.org/search?q=St+Francis+Xavier+Church+Cresson&format=json
   seen: 2026-10-21
-  note: 'OSM way 398742247 "Saint Francis Xavier Catholic Church", 211 Powell Avenue, Cresson, at 40.4650086, -78.5866622.'
+  note: OSM way 398742247 "Saint Francis Xavier Catholic Church", 211 Powell Avenue, Cresson, at 40.4650086,
+    -78.5866622.
 - url: https://parishesonline.com/organization/parishes-of-st-aloysius-st-francis-xavier
   seen: 2026-10-21
-  note: 'PO org (the bulletin publisher) lists 211 Powell Ave, Cresson, PA 16630 at 40.4647598, -78.5868073.'
+  note: PO org (the bulletin publisher) lists 211 Powell Ave, Cresson, PA 16630 at 40.4647598, -78.5868073.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

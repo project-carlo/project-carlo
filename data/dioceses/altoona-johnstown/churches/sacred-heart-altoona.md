@@ -26,7 +26,9 @@ evidence:
 - url: https://www.sacredheartaltoona.org/bulletin/bulletin.pdf
   seen: 2026-10-21
   quote: 'Saturday: (Vigil) 5:30 P.M. • Sunday: 7:45 a.m., 10:00 a.m., 12:00 Noon'
-  note: 'Page 1 of the 18 October 2026 bulletin, whose masthead reads "511 TWENTIETH STREET, ALTOONA, PA  16602". The URL is a fixed file replaced each week, so the issue will differ later.'
+  note: Page 1 of the 18 October 2026 bulletin, whose masthead reads "511 TWENTIETH STREET, ALTOONA, PA  16602".
+    The URL is a fixed file replaced each week, so the issue will differ later.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

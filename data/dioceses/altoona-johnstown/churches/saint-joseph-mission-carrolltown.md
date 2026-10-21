@@ -21,14 +21,22 @@ evidence:
 - url: https://www.sjmc1830.com/mass-times-events
   seen: 2026-10-21
   quote: Saturday, October 10th at 4 pm, Mass with Bishop Mark celebrating the 196th anniversary
-  note: 'The mission church''s own Google Site, "Mass Times & Events", 2026 schedule: Sunday 24 May at noon, Mass (Fr. Michael); visitation 28 June and 30 August from noon to 3; Saturday 10 October at 4 pm, Mass with Bishop Mark for the 196th anniversary; Christmas Eve, Thursday 24 December, at 6 pm.'
+  note: 'The mission church''s own Google Site, "Mass Times & Events", 2026 schedule: Sunday 24 May at
+    noon, Mass (Fr. Michael); visitation 28 June and 30 August from noon to 3; Saturday 10 October at
+    4 pm, Mass with Bishop Mark for the 196th anniversary; Christmas Eve, Thursday 24 December, at 6 pm.'
 - url: https://www.sjmc1830.com/
   seen: 2026-10-21
-  quote: Today Masses are celebrated on the Sunday before Memorial Day, Christmas Eve, and in October in honor of its anniversary of its dedication.
-  note: 'Home page: "St. Joseph''s Mission Church 326 Strip Road Carrolltown, PA 15722"; donations go through Saint Benedict Church; "Masses can be celebrated by special request at St. Joseph''s, please contact Fr. Michael Gabler, O.S.B., St. Benedict Church".'
+  quote: Today Masses are celebrated on the Sunday before Memorial Day, Christmas Eve, and in October
+    in honor of its anniversary of its dedication.
+  note: 'Home page: "St. Joseph''s Mission Church 326 Strip Road Carrolltown, PA 15722"; donations go
+    through Saint Benedict Church; "Masses can be celebrated by special request at St. Joseph''s, please
+    contact Fr. Michael Gabler, O.S.B., St. Benedict Church".'
 - url: http://www.saintbenedictschurch.com/bulletin-calendar.html
   seen: 2026-10-21
-  note: 'The parish''s October 2026 Word calendar (linked from its Bulletin/Calendar page, nebula.wsimg.com c728cca6...) lists on Saturday 10 October "St. Joseph Mission Church Anniversary Mass 4 pm". The file is a .docx, so it is a note, not a findable quote.'
+  note: The parish's October 2026 Word calendar (linked from its Bulletin/Calendar page, nebula.wsimg.com
+    c728cca6...) lists on Saturday 10 October "St. Joseph Mission Church Anniversary Mass 4 pm". The file
+    is a .docx, so it is a note, not a findable quote.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

@@ -21,14 +21,20 @@ evidence:
 - url: https://gcatholic.org/churches/northamerica/1332
   seen: 2026-10-21
   quote: 321 St. Mary’s St.
-  note: 'GCatholic page "Basilica of St. Michael the Archangel, Loretto, Pennsylvania, USA", Plus Code 87G3G929+XQ (decoded by hand to 40.502378, -78.630622). It is in no roster entry (linked from the diocese page alto0 as churches/northamerica/1332, not usa-03/<id>).'
+  note: GCatholic page "Basilica of St. Michael the Archangel, Loretto, Pennsylvania, USA", Plus Code
+    87G3G929+XQ (decoded by hand to 40.502378, -78.630622). It is in no roster entry (linked from the
+    diocese page alto0 as churches/northamerica/1332, not usa-03/<id>).
 - url: https://www.basilicasm-loretto.org/uploads/4/5/8/1/45811561/10-18-26.pdf
   seen: 2026-10-21
   quote: Sunday Masses
-  note: 'Page 1: masthead "321 St. Mary Street PO Box 10 Loretto, PA 15940-0144"; Mass intentions Sun 18 Oct 8:00AM and 10:00AM, Sat 24 Oct 4:00PM, Sun 25 Oct 8:00AM and 10:00AM; Mon-Fri 19-23 Oct no Mass (rector at the clergy conference).'
+  note: 'Page 1: masthead "321 St. Mary Street PO Box 10 Loretto, PA 15940-0144"; Mass intentions Sun
+    18 Oct 8:00AM and 10:00AM, Sat 24 Oct 4:00PM, Sun 25 Oct 8:00AM and 10:00AM; Mon-Fri 19-23 Oct no
+    Mass (rector at the clergy conference).'
 - url: https://nominatim.openstreetmap.org/search?q=Basilica+of+St.+Michael+the+Archangel+Loretto&format=json
   seen: 2026-10-21
-  note: 'OSM way 1023136672 "Basilica of Saint Michael the Archangel", 319 Saint Mary Street, Loretto 15940, at 40.50255, -78.6302609 (about 35 m from the GCatholic point; OSM numbers it 319).'
+  note: OSM way 1023136672 "Basilica of Saint Michael the Archangel", 319 Saint Mary Street, Loretto 15940,
+    at 40.50255, -78.6302609 (about 35 m from the GCatholic point; OSM numbers it 319).
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

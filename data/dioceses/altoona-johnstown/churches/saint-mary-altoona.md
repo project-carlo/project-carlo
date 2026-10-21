@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-21
   note: 'Listed in Diocese of Altoona-Johnstown parish directory as ''Saint Mary'', 1405 5th Avenue, Altoona,
     PA, 16602; kind: church of Saint Mary Parish, Altoona (blair county); group: Saint Mary Parish, Altoona'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

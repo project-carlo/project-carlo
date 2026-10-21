@@ -25,14 +25,19 @@ evidence:
     county); group: Saint John the Baptist Parish, Summerhill'
 - url: http://www.stjic.org/wp-content/uploads/2026/10/October-18-2026.pdf
   seen: 2026-10-21
-  quote: '5:30 PM           SJ -        Twila Brown & For the Parish'
-  note: 'Mass list of the 18 Oct 2026 bulletin: SJ Mon 19 Oct 7:45 AM, Wed 21 Oct 7:45 AM (NO MASS that day), Sat 24 Oct 5:30 PM, Sun 25 Oct 8:30 AM. Masthead address 540 Main St. Summerhill.'
+  quote: 5:30 PM           SJ -        Twila Brown & For the Parish
+  note: 'Mass list of the 18 Oct 2026 bulletin: SJ Mon 19 Oct 7:45 AM, Wed 21 Oct 7:45 AM (NO MASS that
+    day), Sat 24 Oct 5:30 PM, Sun 25 Oct 8:30 AM. Masthead address 540 Main St. Summerhill.'
 - url: https://www.stjic.org/
   seen: 2026-10-21
-  note: 'Home page shows both "540 Main Street | Summerhill, PA 15958" (header) and "538 Main Street, Summerhill, PA 15958" (footer) for St. John the Baptist, with "SJ - Mass Schedule: Mon, Wed, Sat & Sun".'
+  note: 'Home page shows both "540 Main Street | Summerhill, PA 15958" (header) and "538 Main Street,
+    Summerhill, PA 15958" (footer) for St. John the Baptist, with "SJ - Mass Schedule: Mon, Wed, Sat &
+    Sun".'
 - url: https://nominatim.openstreetmap.org/search?street=540%20Main%20Street&city=Summerhill&state=PA&format=json
   seen: 2026-10-21
-  note: 'OSM way 1414142315, "Saint John the Baptist Catholic Church", amenity=place_of_worship at 40.3768257, -78.7611366 (about 20 m from the GCatholic Plus Code point).'
+  note: OSM way 1414142315, "Saint John the Baptist Catholic Church", amenity=place_of_worship at 40.3768257,
+    -78.7611366 (about 20 m from the GCatholic Plus Code point).
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

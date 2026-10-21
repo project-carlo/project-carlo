@@ -24,8 +24,11 @@ evidence:
     Nanty Glo, PA, 15943; kind: church of Saint Mary Parish, Nanty Glo (cambria county); group: Saint
     Mary Parish, Nanty Glo'
 - url: https://stmarysnantyglo.org/wp-content/uploads/2026/10/Oct-18.pdf
-  seen: '2026-10-21'
-  note: 'Image-only bulletin read from a render of page 1: "SAINT MARY''S PARISH COMMUNITY, 1020 CAROLINE STREET, NANTY GLO, PA 15943"; MASS SCHEDULE Daily Monday through Friday 8:30 AM, Saturday 4:30 PM, Sunday 8:00 AM & 10:30 AM.'
+  seen: 2026-10-21
+  note: 'Image-only bulletin read from a render of page 1: "SAINT MARY''S PARISH COMMUNITY, 1020 CAROLINE
+    STREET, NANTY GLO, PA 15943"; MASS SCHEDULE Daily Monday through Friday 8:30 AM, Saturday 4:30 PM,
+    Sunday 8:00 AM & 10:30 AM.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

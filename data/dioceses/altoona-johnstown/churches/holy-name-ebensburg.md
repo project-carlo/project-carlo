@@ -24,11 +24,14 @@ evidence:
     Ebensburg, PA, 15931; kind: church of Holy Name Parish, Ebensburg (cambria county); group: Holy Name
     Parish, Ebensburg'
 - url: https://container.parishesonline.com/bulletins/14/4019/20261018B.pdf
-  seen: '2026-10-21'
-  note: 'Bulletin of 18 Oct 2026, page 2 (render): Mass intentions for Saturday 4:00PM and Sunday 7:45AM, 9:15AM, 10:30AM, plus weekday Masses; staff list headed by Fr. Brian L. Warchola, Pastor.'
+  seen: 2026-10-21
+  note: 'Bulletin of 18 Oct 2026, page 2 (render): Mass intentions for Saturday 4:00PM and Sunday 7:45AM,
+    9:15AM, 10:30AM, plus weekday Masses; staff list headed by Fr. Brian L. Warchola, Pastor.'
 - url: https://parishesonline.com/organization/holy-name-church-15931
-  seen: '2026-10-21'
-  note: 'ParishesOnline organization address "500 N Julian St, Ebensburg, PA, 15931", coordinates 40.4887791, -78.7269595 (GCatholic''s Plus Code point is 40.4885625, -78.7269375, about 25 m away).'
+  seen: 2026-10-21
+  note: ParishesOnline organization address "500 N Julian St, Ebensburg, PA, 15931", coordinates 40.4887791,
+    -78.7269595 (GCatholic's Plus Code point is 40.4885625, -78.7269375, about 25 m away).
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

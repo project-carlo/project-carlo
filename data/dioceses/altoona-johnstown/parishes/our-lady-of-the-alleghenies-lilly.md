@@ -9,17 +9,26 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1731/20261018B.pdf
   seen: 2026-10-21
   quote: 608 MAIN STREET LILLY, PA 15938
-  note: 'Page 1 masthead of the 18 October 2026 issue (the issue fetch:check picked): names Our Lady of the Alleghenies alone; "Saturday | 4:00pm (Vigil)", Sunday 8:00am and 10:00am, "FATHER MATTHEW REESE, PASTOR". The same text (probe pdf --grep) finds no mention of Dysart or Frugality, so it carries this parish only.'
+  note: 'Page 1 masthead of the 18 October 2026 issue (the issue fetch:check picked): names Our Lady of
+    the Alleghenies alone; "Saturday | 4:00pm (Vigil)", Sunday 8:00am and 10:00am, "FATHER MATTHEW REESE,
+    PASTOR". The same text (probe pdf --grep) finds no mention of Dysart or Frugality, so it carries this
+    parish only.'
 - url: https://parishesonline.com/organization/our-lady-of-the-alleghenies-church
   seen: 2026-10-21
-  note: 'probe po 0018000000QxAmWAAV: org "Our Lady of the Alleghenies Church", 608 Main St, Lilly, website https://www.oloalilly.org, publication ids po-org:our-lady-of-the-alleghenies-church, lpi:0018000000QxAmWAAV, po-container:14/1731, latest issue 2026-10-18 and weekly back to at least 2026-09-13.'
+  note: 'probe po 0018000000QxAmWAAV: org "Our Lady of the Alleghenies Church", 608 Main St, Lilly, website
+    https://www.oloalilly.org, publication ids po-org:our-lady-of-the-alleghenies-church, lpi:0018000000QxAmWAAV,
+    po-container:14/1731, latest issue 2026-10-18 and weekly back to at least 2026-09-13.'
 - url: https://www.oloalilly.org/bulletins
   seen: 2026-10-21
-  note: 'probe url https://oloalilly.org: HTTP 200, final URL https://www.oloalilly.org/ (Duda site), embeds lpi:0018000000QxAmWAAV and links /bulletins. The parish site and ParishesOnline are one bulletin.'
+  note: 'probe url https://oloalilly.org: HTTP 200, final URL https://www.oloalilly.org/ (Duda site),
+    embeds lpi:0018000000QxAmWAAV and links /bulletins. The parish site and ParishesOnline are one bulletin.'
 - url: https://www.dioceseaj.org/clergy/
   seen: 2026-10-21
   quote: Reese, Rev. Matthew
-  note: 'Clergy page lists him with Our Lady of the Alleghenies Parish, Lilly - Pastor, and no other parish (Rev. Robert Reese, a different priest, has Dysart and Frugality). So Lilly has no pastor-sharing neighbour whose bulletin could carry it.'
+  note: Clergy page lists him with Our Lady of the Alleghenies Parish, Lilly - Pastor, and no other parish
+    (Rev. Robert Reese, a different priest, has Dysart and Frugality). So Lilly has no pastor-sharing
+    neighbour whose bulletin could carry it.
+promoted: 2026-10-21
 ---
 
 ## Publisher

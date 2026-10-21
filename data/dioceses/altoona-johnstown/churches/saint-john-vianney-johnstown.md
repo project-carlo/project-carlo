@@ -24,13 +24,16 @@ evidence:
     Penn Avenue, Johnstown, PA, 15909; kind: church of Saint John Vianney Parish, Mundys Corner (cambria
     county); group: Saint John Vianney Parish, Mundys Corner'
 - url: https://container.parishesonline.com/bulletins/14/1788/20261018B.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: S.J.V .  Weekly Mass Intentions
-  note: '18 Oct 2026 bulletin, page 2: Monday-Friday 8:00 AM (19-23 Oct), Saturday 4:00 PM (24 Oct), Sunday 11:00 AM (25 Oct); attendance "4:00 PM Vigil" and "11:00 AM".'
+  note: '18 Oct 2026 bulletin, page 2: Monday-Friday 8:00 AM (19-23 Oct), Saturday 4:00 PM (24 Oct), Sunday
+    11:00 AM (25 Oct); attendance "4:00 PM Vigil" and "11:00 AM".'
 - url: https://www.sjvcc.com/contact/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: 'St. John Vianney Mass Schedule: Saturday Vigil: 4 PM Sunday Morning: 11 AM'
-  note: 'Parish site contact page: "Saint John Vianney Catholic Church 3513 William Penn Avenue" (Mundys Corner, Johnstown), office (814) 322-4789; Mass Mon-Fri 8 AM; first Saturday Mass 10:30 AM.'
+  note: 'Parish site contact page: "Saint John Vianney Catholic Church 3513 William Penn Avenue" (Mundys
+    Corner, Johnstown), office (814) 322-4789; Mass Mon-Fri 8 AM; first Saturday Mass 10:30 AM.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

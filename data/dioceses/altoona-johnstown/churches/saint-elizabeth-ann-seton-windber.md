@@ -26,10 +26,14 @@ evidence:
 - url: http://www.webparish.com/pdfs/SEAS2026-10-25Bulletin.pdf
   seen: 2026-10-21
   quote: 8:00 AM (SEAS) IMO Genevieve Borovicka by Daughter, Teresa
-  note: 'Sunday 1 Nov 8:00 AM (SEAS) in the 25 Oct 2026 bulletin of St. Elizabeth Ann Seton Church, 605 Graham Avenue (masthead). Matches the diocese directory (Sunday 8:00 AM) and the parish Mass page ("Sunday - 8:00 a.m.").'
+  note: Sunday 1 Nov 8:00 AM (SEAS) in the 25 Oct 2026 bulletin of St. Elizabeth Ann Seton Church, 605
+    Graham Avenue (masthead). Matches the diocese directory (Sunday 8:00 AM) and the parish Mass page
+    ("Sunday - 8:00 a.m.").
 - url: https://nominatim.openstreetmap.org/search?street=605+Graham+Avenue&city=Windber&state=PA&format=json
   seen: 2026-10-21
-  note: 'OpenStreetMap (Nominatim): "Saint Elizabeth Ann Seton Catholic Church, 605, Graham Avenue, Windber" at 40.2411168, -78.8378244, within 60 m of the GCatholic Plus Code point.'
+  note: 'OpenStreetMap (Nominatim): "Saint Elizabeth Ann Seton Catholic Church, 605, Graham Avenue, Windber"
+    at 40.2411168, -78.8378244, within 60 m of the GCatholic Plus Code point.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

@@ -26,14 +26,19 @@ evidence:
 - url: https://irp.cdn-website.com/747b2262/files/uploaded/2026-10-18.pdf
   seen: 2026-10-21
   quote: Saint Patrick Church
-  note: 'Page 1 of the 18 October 2026 bulletin, second Mass-time block: "Mass Times: Saturday 4PM Sunday 9AM Thursday 8AM Rosary: 30 minutes before all Masses Confessions: Saturday 3PM ... Saint Patrick Church ... V. Rev Matthew Baum, Pastor". The same bulletin carries the cathedral (see parish record).'
+  note: 'Page 1 of the 18 October 2026 bulletin, second Mass-time block: "Mass Times: Saturday 4PM Sunday
+    9AM Thursday 8AM Rosary: 30 minutes before all Masses Confessions: Saturday 3PM ... Saint Patrick
+    Church ... V. Rev Matthew Baum, Pastor". The same bulletin carries the cathedral (see parish record).'
 - url: https://www.stjohngualbert.org/welcome
   seen: 2026-10-21
   quote: 609 Park Ave
-  note: 'The cathedral/St. Patrick site footer: "St. Patrick 609 Park Ave Johnstown, PA 15902 814-539-2186 stpatrickjtown@dioceseaj.org".'
+  note: 'The cathedral/St. Patrick site footer: "St. Patrick 609 Park Ave Johnstown, PA 15902 814-539-2186
+    stpatrickjtown@dioceseaj.org".'
 - url: https://nominatim.openstreetmap.org/search?street=609%20Park%20Avenue&city=Johnstown&state=PA&format=json
   seen: 2026-10-21
-  note: 'OpenStreetMap geocodes "Saint Patrick Catholic Church, 609, Park Avenue, Moxham, Johnstown" at 40.2966507, -78.9113579, about 10 m from the GCatholic point.'
+  note: OpenStreetMap geocodes "Saint Patrick Catholic Church, 609, Park Avenue, Moxham, Johnstown" at
+    40.2966507, -78.9113579, about 10 m from the GCatholic point.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

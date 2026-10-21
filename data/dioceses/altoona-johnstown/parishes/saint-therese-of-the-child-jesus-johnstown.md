@@ -3,42 +3,42 @@ name: Saint Therese of the Child Jesus Parish, Johnstown
 website: https://sttheresejohnstown.com/
 bulletin_provider: other
 provider_id: page-pdfs
-publication:
-- url:https://sttheresejohnstown.com/#st-therese
+publication: ['url:https://sttheresejohnstown.com/#st-therese']
 group: ''
 evidence:
 - url: https://sttheresejohnstown.com/wp-content/uploads/2026/10/STTHERESESBULLETIN-Oct-18-2026-BP.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: ST. THERESE OF THE CHILD JESUS
   note: 'Masthead of the 18 Oct 2026 St. Therese issue (page 1): "THE CHURCH OF THE FRANCISCANS / FR.
     BERNARD KARMANOCKY, OFM, PASTOR / FR. FRANCIS BALESTINO, IN RESIDENCE", church/rectory 536 Decker
     Avenue, "Website: StThereseJohnstown.com". It names St. Therese alone and carries only its own Mass
     intentions (weekdays 7:50AM, Sat 4:00PM, Sun 7:30AM and 10:30AM).'
 - url: https://sttheresejohnstown.com/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: Welcome to the St Therese and St Anne website.
   note: 'One WordPress site for both churches. Homepage "Liturgy Schedule": St Therese daily 7:50 AM,
     Saturday vigil 4:00 PM, Sunday 7:30 & 10:30 AM; St Anne daily 7:00 AM, Saturday vigil 5:30 PM, Sunday
     9:00 AM. It lists the bulletins in two groups, "St Therese" and "St Anne", each with its own PDFs.'
 - url: https://sttheresejohnstown.com/bulletins/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: St Therese Bulletin Oct 18
   note: 'Bulletins page: a St Anne PDF and a St Therese PDF for every Sunday ("St Anne Oct 18", "St Therese
     Oct 18", "St Anne Oct 11", ...), so two separate weekly files.'
 - url: https://www.dioceseaj.org/parishes/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   note: 'Directory: Saint Therese of the Child Jesus Parish, Johnstown, 536 Decker Avenue 15906, no homepage;
     Masses Saturday 4:00 PM, Sunday 7:30 AM and 10:30 AM, weekdays 7:50 AM. Saint Anne Parish lists homepage
     sttheresejohnstown.com.'
 - url: https://discovermass.com/church/st-therese-of-the-child-jesus-johnstown-pa/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: There are currently no bulletins available for St. Therese of the Child Jesus.
   note: 'Discover Mass page exists with its Visit Website link to sttheresejohnstown.com but no bulletins:
     not a live channel.'
 - url: https://parishesonline.com/organization/st-therese-church-15906
-  seen: '2026-10-21'
+  seen: 2026-10-21
   note: 'ParishesOnline organization "St. Therese Church", 551 Decker Ave, empty (`probe po`: "this organization
     does not publish a bulletin here now").'
+promoted: 2026-10-21
 ---
 
 ## Publisher

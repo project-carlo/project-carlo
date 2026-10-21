@@ -6,17 +6,26 @@ provider_id: page-pdfs https://stmichael-hldg-pa.org/bulletins
 publication: ['url:https://stmichael-hldg-pa.org/bulletins']
 group: ''
 evidence:
-- url: 'https://img1.wsimg.com/blobby/go/04d20257-8d78-4404-bc76-b4eabd903c10/downloads/ea4c8410-f270-4f9a-9f00-e862cc738ee7/Oct%2018%202026.pdf?ver=1792175665993'
+- url: https://img1.wsimg.com/blobby/go/04d20257-8d78-4404-bc76-b4eabd903c10/downloads/ea4c8410-f270-4f9a-9f00-e862cc738ee7/Oct%2018%202026.pdf?ver=1792175665993
   seen: 2026-10-21
   quote: 'Joint Parish website:   www.stmichael-hldg-pa.org (Bulletins are available on the website)'
-  note: 'Page 1 of the 18 October 2026 issue (4 pages, text layer readable). Masthead "St. Mary & St. Michael Parishes, One Body in Christ", pastor Very Reverend Alan E. Thomas, VG; St. Mary Parish, 312 Clark Street, and St. Michael the Archangel Parish, 301 Spruce Street, side by side; one Mass schedule (Saturday vigil 4:00 PM St. Mary; Sunday 7:30 AM and 10:00 AM St. Mary, 10:00 AM and 11:30 AM St. Michael) and a joint Mass-intentions table "MASS INTENTIONS FOR ST. MARY AND ST. MICHAEL PARISHES".'
+  note: Page 1 of the 18 October 2026 issue (4 pages, text layer readable). Masthead "St. Mary & St. Michael
+    Parishes, One Body in Christ", pastor Very Reverend Alan E. Thomas, VG; St. Mary Parish, 312 Clark
+    Street, and St. Michael the Archangel Parish, 301 Spruce Street, side by side; one Mass schedule (Saturday
+    vigil 4:00 PM St. Mary; Sunday 7:30 AM and 10:00 AM St. Mary, 10:00 AM and 11:30 AM St. Michael) and
+    a joint Mass-intentions table "MASS INTENTIONS FOR ST. MARY AND ST. MICHAEL PARISHES".
 - url: https://www.webparish.com/aj/saintmarys/
   seen: 2026-10-21
   quote: St. Mary church has joined their website with St. Michael church also in Hollidaysburg.
-  note: 'St. Mary''s own old site (the homepage GCatholic lists for it, webparish.com/aj/saintmarys) now only says this and points to the St. Michael site. It carries no bulletin.'
+  note: St. Mary's own old site (the homepage GCatholic lists for it, webparish.com/aj/saintmarys) now
+    only says this and points to the St. Michael site. It carries no bulletin.
 - url: https://stmichael-hldg-pa.org/bulletins
   seen: 2026-10-21
-  note: 'The joint site (GoDaddy-hosted, PDFs on img1.wsimg.com) lists one PDF per Sunday: Sept 6, 13, 20, 27, Oct 4, 11 and 18 2026. Found with visit.py --bulletin from the home page; fetched once through the home-page link, but a direct browser load of /bulletins, and often of the home page, answers ERR_CONNECTION_RESET from this sandbox (intermittent).'
+  note: 'The joint site (GoDaddy-hosted, PDFs on img1.wsimg.com) lists one PDF per Sunday: Sept 6, 13,
+    20, 27, Oct 4, 11 and 18 2026. Found with visit.py --bulletin from the home page; fetched once through
+    the home-page link, but a direct browser load of /bulletins, and often of the home page, answers ERR_CONNECTION_RESET
+    from this sandbox (intermittent).'
+promoted: 2026-10-21
 ---
 
 ## Publisher

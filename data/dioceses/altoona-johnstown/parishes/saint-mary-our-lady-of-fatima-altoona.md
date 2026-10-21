@@ -9,23 +9,35 @@ evidence:
 - url: https://f7215a4e-4b96-4958-8089-d2d9fdaf4048.filesusr.com/ugd/f5da8b_6e4b6189fecf46e08bd1598ed191e615.pdf
   seen: 2026-10-21
   quote: Weekend Mass at Our Lady of Fatima Church
-  note: 'Page 1 of "THE MARIAN, ST. MARY''S ROMAN CATHOLIC CHURCH, ALTOONA, PENNSYLVANIA", the 18 October 2026 issue (uploaded 15 Oct 2026), Rev. Mariusz Gorazd, Pastor. Its Mass schedule lists St. Mary''s weekend and weekday Masses and then Fatima''s Sunday 11:30 AM Mass; the Thursday 22 October intention reads "Living & Deceased Members of St. Mary''s and Our Lady of Fatima Parishes". Page 4 says religious education "for all public school children from St. Mary''s and Our Lady of Fatima".'
+  note: Page 1 of "THE MARIAN, ST. MARY'S ROMAN CATHOLIC CHURCH, ALTOONA, PENNSYLVANIA", the 18 October
+    2026 issue (uploaded 15 Oct 2026), Rev. Mariusz Gorazd, Pastor. Its Mass schedule lists St. Mary's
+    weekend and weekday Masses and then Fatima's Sunday 11:30 AM Mass; the Thursday 22 October intention
+    reads "Living & Deceased Members of St. Mary's and Our Lady of Fatima Parishes". Page 4 says religious
+    education "for all public school children from St. Mary's and Our Lady of Fatima".
 - url: https://stmaryschurchaltoona.wixsite.com/saintmarys/mass-schedule
   seen: 2026-10-21
   quote: Sunday Morning Mass at Our Lady of Fatima - 11:30 AM
-  note: The St. Mary site's own Mass & Confession Schedule page (opened in headed Chrome) lists Fatima's Mass beside St. Mary's. Its header names "Fr. Mariusz Gorazd, Pastor".
+  note: The St. Mary site's own Mass & Confession Schedule page (opened in headed Chrome) lists Fatima's
+    Mass beside St. Mary's. Its header names "Fr. Mariusz Gorazd, Pastor".
 - url: https://www.ourladyoffatimaaltoona.org/
   seen: 2026-10-21
   quote: Residing at St. Mary’s Rectory, Altoona
-  note: 'Fatima''s own site (the homepage the directory lacks; Discover Mass and ParishesOnline both link it) gives "Rev. Mariusz Gorazd, Administrator" and says "Religious Education-Contact St. Mary''s". It is stale: footer "Updated 1-15-2026"; Last-Modified Thu, 15 Jan 2026.'
+  note: 'Fatima''s own site (the homepage the directory lacks; Discover Mass and ParishesOnline both link
+    it) gives "Rev. Mariusz Gorazd, Administrator" and says "Religious Education-Contact St. Mary''s".
+    It is stale: footer "Updated 1-15-2026"; Last-Modified Thu, 15 Jan 2026.'
 - url: https://www.ourladyoffatimaaltoona.org/bulletins-2026.html
   seen: 2026-10-21
   quote: January 18th, 2026
-  note: 'The "2026 Archived Bulletins" page lists only January 4th, 11th and 18th, 2026; the last is olf-data/january2026/olf_01-18-2026.pdf; guessed later file names (olf-data/february2026/olf_02-01-2026.pdf, october2026/olf_10-18-2026.pdf and others) return 404 on 2026-10-21. So Fatima''s own channel has been silent since January.'
+  note: The "2026 Archived Bulletins" page lists only January 4th, 11th and 18th, 2026; the last is olf-data/january2026/olf_01-18-2026.pdf;
+    guessed later file names (olf-data/february2026/olf_02-01-2026.pdf, october2026/olf_10-18-2026.pdf
+    and others) return 404 on 2026-10-21. So Fatima's own channel has been silent since January.
 - url: https://discovermass.com/church/our-lady-of-fatima-altoona-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for Our Lady of Fatima.
-  note: 'Discover Mass pages for both churches exist and carry no bulletins (St. Mary: discovermass.com/church/st-mary-immaculate-conception-altoona-pa/, same wording). ParishesOnline organizations st-mary-immaculate-conception-16602 and our-lady-of-fatima-church-16601 have no publications.'
+  note: 'Discover Mass pages for both churches exist and carry no bulletins (St. Mary: discovermass.com/church/st-mary-immaculate-conception-altoona-pa/,
+    same wording). ParishesOnline organizations st-mary-immaculate-conception-16602 and our-lady-of-fatima-church-16601
+    have no publications.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

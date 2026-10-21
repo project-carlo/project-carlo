@@ -26,14 +26,17 @@ evidence:
 - url: http://www.stjosephchurchrenovopa.org/s/10-4-26.pdf
   seen: 2026-10-21
   quote: SUNDAY, 10/11 12:00 Noon Mass (Church)
-  note: 'Weekly schedule on page 1 of the 4 Oct 2026 issue; lector table lists "12 Noon" for Oct 4, 11 and 18 Sunday Masses. No weekday Mass (Tuesday is a 8:30 AM "Communion Service").'
+  note: Weekly schedule on page 1 of the 4 Oct 2026 issue; lector table lists "12 Noon" for Oct 4, 11
+    and 18 Sunday Masses. No weekday Mass (Tuesday is a 8:30 AM "Communion Service").
 - url: https://holyspiritlockhaven.org/wp-content/uploads/2026/10/October-18.pdf
   seen: 2026-10-21
   quote: Sunday, 12:00 Noon – St. Joseph Church, Renovo
-  note: 'Second source for the Sunday noon Mass, from the neighbouring parish''s bulletin.'
+  note: Second source for the Sunday noon Mass, from the neighbouring parish's bulletin.
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory lists Saint Joseph, 925 Huron Avenue, Renovo, PA 17764, Sunday 12:00 PM only, homepage stjosephchurchrenovopa.org.'
+  note: Directory lists Saint Joseph, 925 Huron Avenue, Renovo, PA 17764, Sunday 12:00 PM only, homepage
+    stjosephchurchrenovopa.org.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

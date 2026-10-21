@@ -26,10 +26,14 @@ evidence:
 - url: https://files.ecatholic.com/19026/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: High Mass Latin 11:00 am
-  note: 'Page 1 of the 18 October 2026 bulletin: Mass intentions for the week of 19 October list weekday Masses at 7:30 am, "Sat.-October 25, 5:00 pm", "Sun.-October 26, 8:00 am" and the 11:00 am High Mass in Latin; "Confession Saturday at 4:00 - 4:45 PM".'
+  note: 'Page 1 of the 18 October 2026 bulletin: Mass intentions for the week of 19 October list weekday
+    Masses at 7:30 am, "Sat.-October 25, 5:00 pm", "Sun.-October 26, 8:00 am" and the 11:00 am High Mass
+    in Latin; "Confession Saturday at 4:00 - 4:45 PM".'
 - url: https://queenofpeacepatton.org/bulletins
   seen: 2026-10-21
-  note: 'Parish website (eCatholic 19026) rendered in headed Chrome, title "Queen of Peace Church Patton - Patton, PA"; its bulletin shows 907 Sixth Avenue, Patton.'
+  note: Parish website (eCatholic 19026) rendered in headed Chrome, title "Queen of Peace Church Patton
+    - Patton, PA"; its bulletin shows 907 Sixth Avenue, Patton.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

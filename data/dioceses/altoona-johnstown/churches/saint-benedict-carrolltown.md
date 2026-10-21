@@ -25,7 +25,10 @@ evidence:
     Saint Benedict Parish, Carrolltown'
 - url: https://nebula.wsimg.com/4c630251c629f5591d4477ab2735d2ab?AccessKeyId=F4B3D0444D0AAD568211&disposition=0&alloworigin=1
   seen: 2026-10-21
-  note: 'Masthead of the 25 Oct 2026 bulletin: "Saint Benedict Church ... 100 Main Street ... Carrolltown, PA 15722". Mass list that week: Sun 25 Oct 8:00 and 10:00 a.m.; Sat 31 Oct 4:00 p.m.; weekdays 8:00 a.m. (Mon also 6:30 p.m.).'
+  note: 'Masthead of the 25 Oct 2026 bulletin: "Saint Benedict Church ... 100 Main Street ... Carrolltown,
+    PA 15722". Mass list that week: Sun 25 Oct 8:00 and 10:00 a.m.; Sat 31 Oct 4:00 p.m.; weekdays 8:00
+    a.m. (Mon also 6:30 p.m.).'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

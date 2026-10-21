@@ -56,6 +56,7 @@ evidence:
   note: 'Page 1 of the Bedford bulletin for 18 October 2026, under SUNDAY 10-25 7:00 AM "PEOPLE OF THE
     PARISH": the Bedford bulletin names Seven Dolors. Its Mass schedule (page 4) lists Bedford Masses
     only and does not list the noon Mass.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

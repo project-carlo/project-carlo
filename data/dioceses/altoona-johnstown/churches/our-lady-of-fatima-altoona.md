@@ -23,6 +23,7 @@ evidence:
   note: 'Listed in Diocese of Altoona-Johnstown parish directory as ''Our Lady of Fatima'', 2010 12th
     Avenue, Altoona, PA, 16601; kind: church of Our Lady of Fatima Parish, Altoona (blair county); group:
     Our Lady of Fatima Parish, Altoona'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

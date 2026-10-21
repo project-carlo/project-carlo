@@ -26,11 +26,16 @@ evidence:
 - url: https://discovermass.com/church/our-lady-queen-of-angels-central-city-pa/
   seen: 2026-10-21
   quote: Current Bulletin
-  note: 'Shared bulletin of 18 Oct 2026: its Boswell block gives "325 Quemahoning Street, Boswell, PA 15531, Rectory Office (814) 629-5551, Worship Site", Sunday confessions "10:00 am All Saints Church", and the Mass list names All Saints with Sunday 10:30 am (garbled text layer).'
+  note: 'Shared bulletin of 18 Oct 2026: its Boswell block gives "325 Quemahoning Street, Boswell, PA
+    15531, Rectory Office (814) 629-5551, Worship Site", Sunday confessions "10:00 am All Saints Church",
+    and the Mass list names All Saints with Sunday 10:30 am (garbled text layer).'
 - url: https://discovermass.com/church/all-saints-boswell-pa/
   seen: 2026-10-21
   quote: Shucks! There are no bulletins available.
-  note: 'Its own Discover Mass page gives Mass times "Sunday 10:30am Monday 8:30am - Outside Mass Tuesday 8:30am - Outside Mass Wednesday 6:30pm Thursday 8:30am - Outside Mass Friday 8:30am - Outside Mass"; no bulletins (the shared one is under the Central City page).'
+  note: Its own Discover Mass page gives Mass times "Sunday 10:30am Monday 8:30am - Outside Mass Tuesday
+    8:30am - Outside Mass Wednesday 6:30pm Thursday 8:30am - Outside Mass Friday 8:30am - Outside Mass";
+    no bulletins (the shared one is under the Central City page).
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

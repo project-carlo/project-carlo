@@ -11,9 +11,7 @@ longitude: -78.9536875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster:
-- gcatholic:23852
-- directory:saint-therese-of-the-child-jesus-johnstown
+roster: ['gcatholic:23852', 'directory:saint-therese-of-the-child-jesus-johnstown']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23852
   seen: 2026-10-21
@@ -26,20 +24,21 @@ evidence:
     536 Decker Avenue, Johnstown, PA, 15906; kind: church of Saint Therese of the Child Jesus Parish,
     Johnstown (cambria county); group: Saint Therese of the Child Jesus Parish, Johnstown'
 - url: https://sttheresejohnstown.com/wp-content/uploads/2026/10/STTHERESESBULLETIN-Oct-18-2026-BP.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: 536 Decker Avenue
   note: '18 Oct 2026 St. Therese bulletin, page 1: "ST. THERESE OF THE CHILD JESUS / THE CHURCH OF THE
     FRANCISCANS", CHURCH/RECTORY 536 Decker Avenue, Johnstown PA 15906; intentions Mon-Fri 7:50AM, Sat
     4:00PM, Sun 7:30AM and 10:30AM.'
 - url: https://sttheresejohnstown.com/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: Welcome to the St Therese and St Anne website.
   note: 'Liturgy Schedule: St Therese daily Mass 7:50 AM Monday through Friday, Saturday vigil 4:00 PM,
     Sunday 7:30 & 10:30 AM.'
 - url: https://parishesonline.com/organization/st-therese-church-15906
-  seen: '2026-10-21'
+  seen: 2026-10-21
   note: 'ParishesOnline lists "St. Therese Church, 551 Decker Ave" (40.354324, -78.954653), an empty organization:
     a number variant on the same block, not used.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

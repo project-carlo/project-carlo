@@ -7,16 +7,23 @@ publication: ['url:https://www.holyfamilyportage.org']
 group: ''
 evidence:
 - url: https://www.holyfamilyportage.org/_files/ugd/5092b5_065eb85ea76841b48fc262bb62ef66af.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: 'Weekend Masses: Saturday at 4 PM, Sunday, 8 AM and 10:30 AM.'
-  note: 'Page 1 of the bulletin headed "29th Sunday in Ordinary Time October 18, 2026" (2 pages, text layer): pastor Fr. Tom Stabile, T.O.R., phone 814-736-4279, "Weekdays: Mass is celebrated at 8 AM Monday through Friday." One parish, one Mass schedule; no other Portage church is named.'
+  note: 'Page 1 of the bulletin headed "29th Sunday in Ordinary Time October 18, 2026" (2 pages, text
+    layer): pastor Fr. Tom Stabile, T.O.R., phone 814-736-4279, "Weekdays: Mass is celebrated at 8 AM
+    Monday through Friday." One parish, one Mass schedule; no other Portage church is named.'
 - url: https://www.holyfamilyportage.org/about-8
-  seen: '2026-10-21'
-  quote: 'On August 17, 2015, Saint Joseph Parish and Our Lady of the Sacred Heart officially merged. With the completion of renovations and remodeling, Saint Joseph Church was renamed Holy Family Church.'
-  note: The parish's own history page. It also says Holy Family is "the current site of all the Roman Catholic Parishes that were originally in Portage".
+  seen: 2026-10-21
+  quote: On August 17, 2015, Saint Joseph Parish and Our Lady of the Sacred Heart officially merged. With
+    the completion of renovations and remodeling, Saint Joseph Church was renamed Holy Family Church.
+  note: The parish's own history page. It also says Holy Family is "the current site of all the Roman
+    Catholic Parishes that were originally in Portage".
 - url: https://www.holyfamilyportage.org
-  seen: '2026-10-21'
-  note: 'Wix site (footer "509 Caldwell Avenue", "Proudly created with Wix.com"). Homepage embeds the weekly bulletin PDFs as /_files/ugd/<id>.pdf links; the first listed is the 18 Oct 2026 issue. Mass Schedule on the homepage: Saturdays 4:00 PM; Sundays 8:00 AM and 10:30 AM; Monday-Friday 8:00 AM.'
+  seen: 2026-10-21
+  note: 'Wix site (footer "509 Caldwell Avenue", "Proudly created with Wix.com"). Homepage embeds the
+    weekly bulletin PDFs as /_files/ugd/<id>.pdf links; the first listed is the 18 Oct 2026 issue. Mass
+    Schedule on the homepage: Saturdays 4:00 PM; Sundays 8:00 AM and 10:30 AM; Monday-Friday 8:00 AM.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

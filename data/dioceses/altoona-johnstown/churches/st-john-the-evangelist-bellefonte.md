@@ -26,7 +26,11 @@ evidence:
 - url: http://www.stkaterichurch.org/bulletins/Bulletin10.11.26.pdf
   seen: 2026-10-21
   quote: Fr. Brian Saylor, Pastor | Deacon Tom Boldin
-  note: 'Masthead of the 10 Oct 2026 issue names "ST. JOHN THE EVANGELIST CATHOLIC CHURCH 134 East Bishop Street, Bellefonte, PA 16823"; Mass schedule Saturday 5:00 p.m., Sunday 8:00 a.m. & 10:15 a.m.; page 2 lists the week''s Masses at 5:00 PM, 8:00 AM, 10:15 AM, weekday 9:00 AM Mon, 8:00 AM Tue and Wed, 6:00 PM Thu, 8:00 AM Fri.'
+  note: Masthead of the 10 Oct 2026 issue names "ST. JOHN THE EVANGELIST CATHOLIC CHURCH 134 East Bishop
+    Street, Bellefonte, PA 16823"; Mass schedule Saturday 5:00 p.m., Sunday 8:00 a.m. & 10:15 a.m.; page
+    2 lists the week's Masses at 5:00 PM, 8:00 AM, 10:15 AM, weekday 9:00 AM Mon, 8:00 AM Tue and Wed,
+    6:00 PM Thu, 8:00 AM Fri.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

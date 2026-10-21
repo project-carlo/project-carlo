@@ -24,13 +24,15 @@ evidence:
     Portage, PA, 15946; kind: church of Holy Family Parish, Portage (cambria county); group: Holy Family
     Parish, Portage'
 - url: https://www.holyfamilyportage.org/_files/ugd/5092b5_065eb85ea76841b48fc262bb62ef66af.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: 'Weekend Masses: Saturday at 4 PM, Sunday, 8 AM and 10:30 AM.'
   note: Bulletin of 18 October 2026, page 1; the parish's only church.
 - url: https://cs.observer-reporter.com/news/2017/mar/12/borough-urges-reuse-of-churches
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: Mass is now held in the former St. Joseph building on Caldwell Avenue.
-  note: 'Observer-Reporter, 12 March 2017: independent confirmation that Holy Family worships in the former St. Joseph building and that the Sacred Heart buildings were vacant.'
+  note: 'Observer-Reporter, 12 March 2017: independent confirmation that Holy Family worships in the former
+    St. Joseph building and that the Sacred Heart buildings were vacant.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

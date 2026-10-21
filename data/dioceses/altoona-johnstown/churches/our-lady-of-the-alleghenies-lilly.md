@@ -26,7 +26,11 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1731/20261018B.pdf
   seen: 2026-10-21
   quote: Saturday | 4:00pm (Vigil)
-  note: 'Page 1 of the 18 October 2026 bulletin: "OUR LADY OF THE ALLEGHENIES ROMAN CATHOLIC PARISH, 608 MAIN STREET LILLY, PA 15938"; Sunday 8:00am and 10:00am; weekdays Monday to Saturday 8:00am; Confessions Saturdays 3:15pm to 3:45pm. Attendance line for 17/18 October (page 2 of the 25 Oct issue): 4:00pm = 145; 8:00am = 120; 10:00am = 137.'
+  note: 'Page 1 of the 18 October 2026 bulletin: "OUR LADY OF THE ALLEGHENIES ROMAN CATHOLIC PARISH, 608
+    MAIN STREET LILLY, PA 15938"; Sunday 8:00am and 10:00am; weekdays Monday to Saturday 8:00am; Confessions
+    Saturdays 3:15pm to 3:45pm. Attendance line for 17/18 October (page 2 of the 25 Oct issue): 4:00pm
+    = 145; 8:00am = 120; 10:00am = 137.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

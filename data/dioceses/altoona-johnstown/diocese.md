@@ -2,10 +2,11 @@
 name: Roman Catholic Diocese of Altoona-Johnstown
 state: PA
 website: https://www.dioceseaj.org
-status: exploring
+status: promoted
 gcatholic: alto0
 city_aliases:
   Frugality: Fallentimber
+promoted: 2026-10-21
 ---
 
 Eight counties of west-central Pennsylvania: Blair (Altoona), Cambria (Johnstown, Ebensburg),

@@ -26,14 +26,22 @@ evidence:
 - url: https://files.ecatholic.com/37141/bulletins/20261017.pdf
   seen: 2026-10-21
   quote: Father Brian Norris, Pastor
-  note: 'Page 1 of the 18 October 2026 issue: "Weekend Mass Schedule  Saturday Evening: ... 5:00 PM  Sunday Morning: ... 8:00 AM & 10:30 AM"; weekday Masses "Monday, Tuesday, Thursday, Friday at 7:45 AM, Wednesday at 8:30 AM ... Saturday at 8:00 AM"; the intentions table for 24-25 October lists Saturday 8:00 AM and 5:00 PM and Sunday 8:00 AM and 10:30 AM.'
+  note: 'Page 1 of the 18 October 2026 issue: "Weekend Mass Schedule  Saturday Evening: ... 5:00 PM  Sunday
+    Morning: ... 8:00 AM & 10:30 AM"; weekday Masses "Monday, Tuesday, Thursday, Friday at 7:45 AM, Wednesday
+    at 8:30 AM ... Saturday at 8:00 AM"; the intentions table for 24-25 October lists Saturday 8:00 AM
+    and 5:00 PM and Sunday 8:00 AM and 10:30 AM.'
 - url: https://sainttheresealtoona.org/bulletins
   seen: 2026-10-21
   quote: 411 Wopsononock Avenue, Altoona, PA 16601
-  note: 'The parish site footer gives 411 Wopsononock Avenue (the diocese directory has the same), with the Parish Office at 417 25th Ave.'
+  note: The parish site footer gives 411 Wopsononock Avenue (the diocese directory has the same), with
+    the Parish Office at 417 25th Ave.
 - url: https://nominatim.openstreetmap.org/search?format=json&q=St+Therese+Altoona+church
   seen: 2026-10-21
-  note: 'OSM geocoder: "Saint Therese of the Child Jesus Catholic Church, 2301, 5th Street, Alta Manor, Juniata, Altoona" at 40.52790, -78.40659. The same geocoder puts 411 Wopsononock Avenue at 40.52841, -78.40675 and 417 25th Avenue at 40.52853, -78.40729: all within about 100 m, so the three are one campus.'
+  note: 'OSM geocoder: "Saint Therese of the Child Jesus Catholic Church, 2301, 5th Street, Alta Manor,
+    Juniata, Altoona" at 40.52790, -78.40659. The same geocoder puts 411 Wopsononock Avenue at 40.52841,
+    -78.40675 and 417 25th Avenue at 40.52853, -78.40729: all within about 100 m, so the three are one
+    campus.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

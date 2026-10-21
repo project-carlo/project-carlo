@@ -9,14 +9,20 @@ evidence:
 - url: https://files.ecatholic.com/40290/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: 'MASS SCHEDULE & INTENTIONS: OCT 17-OCT 25, 2026'
-  note: 'Issue dated "OCT 18, 2026" (2 pages, text layer), masthead "623 E. Third Street, Bellwood, PA 16617 www.saintjosephbellwood.org ... SAINT JOSEPH CATHOLIC CHURCH". It lists Masses for St. Joseph only (Sat 4:00 PM, Sun 9:00 AM, Mon 8:00 AM, Tue 6:00 PM, Wed 7:30 AM Holy Hour) and names no other parish or church.'
+  note: Issue dated "OCT 18, 2026" (2 pages, text layer), masthead "623 E. Third Street, Bellwood, PA
+    16617 www.saintjosephbellwood.org ... SAINT JOSEPH CATHOLIC CHURCH". It lists Masses for St. Joseph
+    only (Sat 4:00 PM, Sun 9:00 AM, Mon 8:00 AM, Tue 6:00 PM, Wed 7:30 AM Holy Hour) and names no other
+    parish or church.
 - url: https://saintjosephbellwood.org/bulletins
   seen: 2026-10-21
-  note: 'eCatholic site id 40290 (found by headed Chrome visit.py on the home page; curl and probe url get a Cloudflare 403). The /bulletins page links files.ecatholic.com/40290/bulletins/<YYYYMMDD>.pdf, dated by the Sunday (20261018.pdf).'
+  note: eCatholic site id 40290 (found by headed Chrome visit.py on the home page; curl and probe url
+    get a Cloudflare 403). The /bulletins page links files.ecatholic.com/40290/bulletins/<YYYYMMDD>.pdf,
+    dated by the Sunday (20261018.pdf).
 - url: https://discovermass.com/church/st-joseph-bellwood-pa/
   seen: 2026-10-21
   quote: no bulletins available for St. Joseph.
   note: 'A Discover Mass page exists for the church but carries no bulletin: not a live channel.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

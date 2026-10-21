@@ -9,15 +9,23 @@ evidence:
 - url: https://files.ecatholic.com/37141/bulletins/20261017.pdf
   seen: 2026-10-21
   quote: Father Brian Norris, Pastor
-  note: 'Page 1 of the issue for Sunday 18 October 2026 (listed as "October 17, 2026" in the site archive; 4 pages, text layer). Masthead "Saint Therese of the Child Jesus", parish office 417 25th Avenue, Altoona PA 16601-3842; "Weekend Mass Schedule  Saturday Evening: ... 5:00 PM  Sunday Morning: ... 8:00 AM & 10:30 AM". The issue names no other parish or church as part of this bulletin.'
+  note: 'Page 1 of the issue for Sunday 18 October 2026 (listed as "October 17, 2026" in the site archive;
+    4 pages, text layer). Masthead "Saint Therese of the Child Jesus", parish office 417 25th Avenue,
+    Altoona PA 16601-3842; "Weekend Mass Schedule  Saturday Evening: ... 5:00 PM  Sunday Morning: ...
+    8:00 AM & 10:30 AM". The issue names no other parish or church as part of this bulletin.'
 - url: https://sainttheresealtoona.org/bulletins
   seen: 2026-10-21
   quote: October 17, 2026
-  note: 'eCatholic bulletin archive (headed Chrome; curl gets a Cloudflare 403). Links are files.ecatholic.com/37141/bulletins/<YYYYMMDD>.pdf, dated by the Saturday before the Sunday (20261017.pdf, 20261010.pdf, 20261003.pdf, ...), weekly back to 3 January 2026. Footer: "St. Thérèse of the Child Jesus 411 Wopsononock Avenue, Altoona, PA 16601 Parish Office: 417 25th Ave".'
+  note: 'eCatholic bulletin archive (headed Chrome; curl gets a Cloudflare 403). Links are files.ecatholic.com/37141/bulletins/<YYYYMMDD>.pdf,
+    dated by the Saturday before the Sunday (20261017.pdf, 20261010.pdf, 20261003.pdf, ...), weekly back
+    to 3 January 2026. Footer: "St. Thérèse of the Child Jesus 411 Wopsononock Avenue, Altoona, PA 16601
+    Parish Office: 417 25th Ave".'
 - url: https://discovermass.com/church/st-therese-of-the-child-jesus-altoona-pa/
   seen: 2026-10-21
   quote: no bulletins available for St. Therese of the Child Jesus.
-  note: 'The Discover Mass page exists (its Visit Website link is https://sainttheresealtoona.org/) but carries no bulletin: not a live channel.'
+  note: 'The Discover Mass page exists (its Visit Website link is https://sainttheresealtoona.org/) but
+    carries no bulletin: not a live channel.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

@@ -9,14 +9,23 @@ evidence:
 - url: https://discovermass.com/church/st-rose-of-lima-altoona-pa/
   seen: 2026-10-21
   quote: Bulletin Archive
-  note: 'Discover Mass church page lists "Current Bulletin Oct 18, 2026" and a weekly archive back to 2 Aug 2026 (Oct 11, Oct 4, Sep 27 ... Aug 9, Aug 2). The current download is a tokenised link, so the masthead is quoted below from the PDF, not from this page.'
+  note: Discover Mass church page lists "Current Bulletin Oct 18, 2026" and a weekly archive back to 2
+    Aug 2026 (Oct 11, Oct 4, Sep 27 ... Aug 9, Aug 2). The current download is a tokenised link, so the
+    masthead is quoted below from the PDF, not from this page.
 - url: https://saintroselima.wordpress.com/bulletin/
   seen: 2026-10-21
   quote: Bulletins Archived by our Publisher
-  note: The parish WordPress site's Current Bulletin page embeds the Discover Mass listing (probe url finds discovermass:st-rose-of-lima-altoona-pa), so the parish itself points to Discover Mass for its bulletin.
+  note: The parish WordPress site's Current Bulletin page embeds the Discover Mass listing (probe url
+    finds discovermass:st-rose-of-lima-altoona-pa), so the parish itself points to Discover Mass for its
+    bulletin.
 - url: https://discovermass.com/church/st-rose-of-lima-altoona-pa/
   seen: 2026-10-21
-  note: 'Masthead (page 1) of the 18 October 2026 issue, read from the Discover Mass download with probe pdf; the text layer is garbled ("St.R oseo fL imaC hurch / 5514 Roselawn Avenue • A ltoona, PA 16602 ... Pastor Very Rev. John Lynam, VF"). It names this church alone; page 3 is headed "ST. ROSE OF LIMA ALTOONA, PENNSYLVANIA October 18, 2026" with its own liturgy schedule (Saturday 9:30 AM and 4:00 PM; Sunday 8:00 AM and 10:30 AM).'
+  note: Masthead (page 1) of the 18 October 2026 issue, read from the Discover Mass download with probe
+    pdf; the text layer is garbled ("St.R oseo fL imaC hurch / 5514 Roselawn Avenue • A ltoona, PA 16602
+    ... Pastor Very Rev. John Lynam, VF"). It names this church alone; page 3 is headed "ST. ROSE OF LIMA
+    ALTOONA, PENNSYLVANIA October 18, 2026" with its own liturgy schedule (Saturday 9:30 AM and 4:00 PM;
+    Sunday 8:00 AM and 10:30 AM).
+promoted: 2026-10-21
 ---
 
 ## Publisher

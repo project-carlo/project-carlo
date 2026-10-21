@@ -26,11 +26,16 @@ evidence:
 - url: https://www.resurrectionparishjohnstown.com/uploads/1/1/4/3/114314907/bulletin10182026.pdf
   seen: 2026-10-21
   quote: St. Clare of Assisi Church 124 Maple Avenue, Johnstown, Pa. 15901
-  note: 'Page 1 of the 18 October 2026 bulletin (the Resurrection Parish bulletin that also covers St. Clare): "St. Clare of Assisi Mass Schedule: Saturday 4:00 PM; Monday 6:30 PM; Holy Days & Holidays as announced. Confessions: Saturday 3:30 - 4:00 PM". The weekly table has Monday 19 Oct 6:30 PM and Saturday 24 Oct 4:00 PM at "St. Clare of Assisi".'
+  note: 'Page 1 of the 18 October 2026 bulletin (the Resurrection Parish bulletin that also covers St.
+    Clare): "St. Clare of Assisi Mass Schedule: Saturday 4:00 PM; Monday 6:30 PM; Holy Days & Holidays
+    as announced. Confessions: Saturday 3:30 - 4:00 PM". The weekly table has Monday 19 Oct 6:30 PM and
+    Saturday 24 Oct 4:00 PM at "St. Clare of Assisi".'
 - url: https://www.webparish.com/aj/Clare/index.php?PG=masstimeschedule
   seen: 2026-10-21
   quote: WEEKEND MASSES - SAINT CLARE OF ASSISI
-  note: 'St. Clare''s own site (headed Chrome; curl gets 406): "Saturday: 4:00 PM"; weekday "Monday: 6:30 PM"; Eucharistic adoration after the 6:30 PM Monday Mass on the second Monday.'
+  note: 'St. Clare''s own site (headed Chrome; curl gets 406): "Saturday: 4:00 PM"; weekday "Monday: 6:30
+    PM"; Eucharistic adoration after the 6:30 PM Monday Mass on the second Monday.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

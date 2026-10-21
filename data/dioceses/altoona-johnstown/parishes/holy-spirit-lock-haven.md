@@ -9,29 +9,42 @@ evidence:
 - url: https://holyspiritlockhaven.org/wp-content/uploads/2026/10/October-18.pdf
   seen: 2026-10-21
   quote: Pastor Rev. Fr. Joseph Orr
-  note: 'Page 1 of the 18 Oct 2026 issue (4 pages): parish staff list headed "HOLY SPIRIT PARISH STAFF", pastor Fr. Joseph Orr, 570-748-4594. The Mass-intention table marks each Mass SA (St. Agnes) or IC (Immaculate Conception).'
+  note: 'Page 1 of the 18 Oct 2026 issue (4 pages): parish staff list headed "HOLY SPIRIT PARISH STAFF",
+    pastor Fr. Joseph Orr, 570-748-4594. The Mass-intention table marks each Mass SA (St. Agnes) or IC
+    (Immaculate Conception).'
 - url: https://holyspiritlockhaven.org/wp-content/uploads/2026/10/October-18.pdf
   seen: 2026-10-21
   quote: Saturday, 5:00 PM – St. Agnes Church
-  note: 'Page 2, weekend schedule: Sat 5:00 PM St. Agnes; Sun 8:00 AM Immaculate Conception; Sun 9:30 AM St. Agnes; and a fourth line "Sunday, 12:00 Noon – St. Joseph Church, Renovo" (Renovo is a different row: see below). Weekdays: Mon/Wed/Fri 8:30 AM St. Agnes, Tue/Thu 8:30 AM Immaculate Conception.'
+  note: 'Page 2, weekend schedule: Sat 5:00 PM St. Agnes; Sun 8:00 AM Immaculate Conception; Sun 9:30
+    AM St. Agnes; and a fourth line "Sunday, 12:00 Noon – St. Joseph Church, Renovo" (Renovo is a different
+    row: see below). Weekdays: Mon/Wed/Fri 8:30 AM St. Agnes, Tue/Thu 8:30 AM Immaculate Conception.'
 - url: https://holyspiritlockhaven.org/wp-content/uploads/2026/10/October-18.pdf
   seen: 2026-10-21
   quote: Sunday, 12:00 Noon – St. Joseph Church, Renovo
-  note: 'The Lock Haven schedule lists Renovo''s noon Mass as a courtesy line only: no Renovo Mass intentions, lectors or events are in the Lock Haven tables, and Renovo publishes its own bulletin (see parish saint-joseph-renovo).'
+  note: 'The Lock Haven schedule lists Renovo''s noon Mass as a courtesy line only: no Renovo Mass intentions,
+    lectors or events are in the Lock Haven tables, and Renovo publishes its own bulletin (see parish
+    saint-joseph-renovo).'
 - url: https://holyspiritlockhaven.org/parish-news/sunday-bulletins/
   seen: 2026-10-21
-  note: 'WordPress page listing weekly PDFs wp-content/uploads/YYYY/MM/<Month>-<D>.pdf (October-4, -11, -18 present on 21 Oct). fetch:check 2026-10-21 with recipe page-pdfs on this page picked October-18.pdf, url_date 2026-10-18, 597,440 bytes, current. probe url on the homepage found no ParishesOnline/eCatholic id.'
+  note: WordPress page listing weekly PDFs wp-content/uploads/YYYY/MM/<Month>-<D>.pdf (October-4, -11,
+    -18 present on 21 Oct). fetch:check 2026-10-21 with recipe page-pdfs on this page picked October-18.pdf,
+    url_date 2026-10-18, 597,440 bytes, current. probe url on the homepage found no ParishesOnline/eCatholic
+    id.
 - url: https://parishesonline.com/organization/holy-spirit-parish-17745
   seen: 2026-10-21
-  note: 'probe po holy-spirit-parish-17745 (LPi 0018000000QxAmJAAV, website www.holyspiritlockhaven.org): "no publications: this organization does not publish a bulletin here now". Empty org, not a channel.'
+  note: 'probe po holy-spirit-parish-17745 (LPi 0018000000QxAmJAAV, website www.holyspiritlockhaven.org):
+    "no publications: this organization does not publish a bulletin here now". Empty org, not a channel.'
 - url: https://discovermass.com/church/st-agnes-holy-spirit-parish-lock-haven-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for St. Agnes (Holy Spirit Parish).
-  note: 'Discover Mass pages for both churches (st-agnes-holy-spirit-parish-lock-haven-pa and immaculate-conception-holy-spirit-parish-lock-haven-pa) have empty Bulletins tabs: not channels.'
+  note: 'Discover Mass pages for both churches (st-agnes-holy-spirit-parish-lock-haven-pa and immaculate-conception-holy-spirit-parish-lock-haven-pa)
+    have empty Bulletins tabs: not channels.'
 - url: https://www.dioceseaj.org/clergy/
   seen: 2026-10-21
   quote: Orr, Rev. Joseph
-  note: 'Clergy page lists him with "Holy Spirit Parish, Lock Haven – Pastor" and "Saint Joseph Parish, Renovo – Administrator".'
+  note: Clergy page lists him with "Holy Spirit Parish, Lock Haven – Pastor" and "Saint Joseph Parish,
+    Renovo – Administrator".
+promoted: 2026-10-21
 ---
 
 ## Publisher

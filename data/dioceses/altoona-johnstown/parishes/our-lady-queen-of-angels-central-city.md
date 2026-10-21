@@ -9,29 +9,48 @@ evidence:
 - url: https://discovermass.com/church/our-lady-queen-of-angels-central-city-pa/
   seen: 2026-10-21
   quote: Current Bulletin
-  note: 'Discover Mass page of Our Lady Queen of Angels; its Bulletins tab lists "Current Bulletin Oct 18, 2026" and weekly issues back to 2 Aug 2026 (Oct 11, Oct 4, Sep 27 ...). I read the 18 Oct 2026 issue (29th Sunday in Ordinary Time, 6 pages) through its download link (tokenised, so not cited as a URL). Its page 1 header is "THE CATHOLIC CHURCHES OF QUEEN OF ANGELS, HOLY FAMILY, ALL SAINTS", with Fr. Aron Maghsoudi as pastor and the rectory and "Worship Site" blocks for Hooversville (321 Sugar Street), Boswell (325 Quemahoning Street) and Central City (738 Sunshine Avenue; Church (Sacred Heart) and Chapel (St. John, 162 Wheeler Street)). Page 2 has the line (text layer garbled) "OurL adyQ ueen of Angels,C entral City, A ll Saints Parish,B oswell, H olyF amily, Hooversville". The text layer is garbled, so the quote above is of the page, not the PDF.'
+  note: Discover Mass page of Our Lady Queen of Angels; its Bulletins tab lists "Current Bulletin Oct
+    18, 2026" and weekly issues back to 2 Aug 2026 (Oct 11, Oct 4, Sep 27 ...). I read the 18 Oct 2026
+    issue (29th Sunday in Ordinary Time, 6 pages) through its download link (tokenised, so not cited as
+    a URL). Its page 1 header is "THE CATHOLIC CHURCHES OF QUEEN OF ANGELS, HOLY FAMILY, ALL SAINTS",
+    with Fr. Aron Maghsoudi as pastor and the rectory and "Worship Site" blocks for Hooversville (321
+    Sugar Street), Boswell (325 Quemahoning Street) and Central City (738 Sunshine Avenue; Church (Sacred
+    Heart) and Chapel (St. John, 162 Wheeler Street)). Page 2 has the line (text layer garbled) "OurL
+    adyQ ueen of Angels,C entral City, A ll Saints Parish,B oswell, H olyF amily, Hooversville". The text
+    layer is garbled, so the quote above is of the page, not the PDF.
 - url: https://discovermass.com/church/holy-family-hooversville-pa/
   seen: 2026-10-21
   quote: Shucks! There are no bulletins available.
-  note: Holy Family, Hooversville has its own Discover Mass page with an empty Bulletins tab, so it is not a separate live channel.
+  note: Holy Family, Hooversville has its own Discover Mass page with an empty Bulletins tab, so it is
+    not a separate live channel.
 - url: https://discovermass.com/church/all-saints-boswell-pa/
   seen: 2026-10-21
   quote: Shucks! There are no bulletins available.
-  note: All Saints, Boswell has its own Discover Mass page with an empty Bulletins tab, so it is not a separate live channel.
+  note: All Saints, Boswell has its own Discover Mass page with an empty Bulletins tab, so it is not a
+    separate live channel.
 - url: https://www.webparish.com/aj/AllSaints/index.php
   seen: 2026-10-21
   quote: This site maintained by
-  note: 'Old diocesan webparish.com stub for All Saints (325 Quemahoning St., allsaints.parish@verizon.net): a generic Catholic-links page with no Mass times or bulletin (opened in Chrome; curl gets a 406 from Mod_Security). The Holy Family stub (/aj/HolyFamilyHooversville/index.php) is the same. Neither is a bulletin source.'
+  note: 'Old diocesan webparish.com stub for All Saints (325 Quemahoning St., allsaints.parish@verizon.net):
+    a generic Catholic-links page with no Mass times or bulletin (opened in Chrome; curl gets a 406 from
+    Mod_Security). The Holy Family stub (/aj/HolyFamilyHooversville/index.php) is the same. Neither is
+    a bulletin source.'
 - url: https://www.ladyqueenofangels.org/bulletin/
   seen: 2026-10-21
-  note: 'The parish site (WordPress, behind Cloudflare: curl gets 403, headed Chrome opens it) has a Bulletin page of year accordions "Bulletin 2026" ... "Bulletin 2015" (WP File Download tree, loaded by script). I did not open them; the Discover Mass listing above is the channel used.'
+  note: 'The parish site (WordPress, behind Cloudflare: curl gets 403, headed Chrome opens it) has a Bulletin
+    page of year accordions "Bulletin 2026" ... "Bulletin 2015" (WP File Download tree, loaded by script).
+    I did not open them; the Discover Mass listing above is the channel used.'
 - url: https://www.ladyqueenofangels.org/
   seen: 2026-10-21
   quote: 'Sunday: 8AM (Sacred Heart) | 10:30AM (St. John)'
-  note: Home page Mass times (rendered in Chrome). The site names Our Lady Queen of Angels at 738 Sunshine Avenue and does not mention All Saints or Holy Family on the home page.
+  note: Home page Mass times (rendered in Chrome). The site names Our Lady Queen of Angels at 738 Sunshine
+    Avenue and does not mention All Saints or Holy Family on the home page.
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory: All Saints (Boswell), Holy Family (Hooversville) and Our Lady Queen of Angels (Central City, with its two worship sites) are three parishes with no homepage for the first two; the batch task names Rev. Aron M. Maghsoudi as pastor of all three, which the bulletin masthead matches.'
+  note: 'Directory: All Saints (Boswell), Holy Family (Hooversville) and Our Lady Queen of Angels (Central
+    City, with its two worship sites) are three parishes with no homepage for the first two; the batch
+    task names Rev. Aron M. Maghsoudi as pastor of all three, which the bulletin masthead matches.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

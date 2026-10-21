@@ -9,13 +9,22 @@ evidence:
 - url: https://files.ecatholic.com/19026/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: Fr. Ananias, O.S.B., Pastor
-  note: 'Page 1 of the 18 October 2026 bulletin (the Twenty-Ninth Sunday in Ordinary Time), read with probe pdf. Masthead "QUEEN OF PEACE ... Patton, PA. 16668 ... 907 Sixth Avenue", website https://queenofpeacepatton.org. A grep of the whole 2-page issue for Colver, Chest, Ashville, Monica, Aquinas and Holy Family finds nothing, so it is this parish''s alone and not shared with the other three Cambria parishes in batch 20.'
+  note: Page 1 of the 18 October 2026 bulletin (the Twenty-Ninth Sunday in Ordinary Time), read with probe
+    pdf. Masthead "QUEEN OF PEACE ... Patton, PA. 16668 ... 907 Sixth Avenue", website https://queenofpeacepatton.org.
+    A grep of the whole 2-page issue for Colver, Chest, Ashville, Monica, Aquinas and Holy Family finds
+    nothing, so it is this parish's alone and not shared with the other three Cambria parishes in batch
+    20.
 - url: https://queenofpeacepatton.org/bulletins
   seen: 2026-10-21
-  note: 'Rendered in headed Chrome (curl and probe url get Cloudflare 403). An eCatholic site: visit.py --bulletin finds ecatholic:19026 and the link /bulletins. issues.py ecatholic ecatholic:19026 found files.ecatholic.com/19026/bulletins/20261018.pdf (200); 25 Oct (20261025.pdf) was 403, not yet posted.'
+  note: 'Rendered in headed Chrome (curl and probe url get Cloudflare 403). An eCatholic site: visit.py
+    --bulletin finds ecatholic:19026 and the link /bulletins. issues.py ecatholic ecatholic:19026 found
+    files.ecatholic.com/19026/bulletins/20261018.pdf (200); 25 Oct (20261025.pdf) was 403, not yet posted.'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory: Queen of Peace Parish, Patton, 907 6th Avenue, homepage https://queenofpeacepatton.org; clergy list https://www.dioceseaj.org/clergy/ gives "Buccicone, Rev. Ananias, OSB | Queen of Peace Parish, Patton - Pastor".'
+  note: 'Directory: Queen of Peace Parish, Patton, 907 6th Avenue, homepage https://queenofpeacepatton.org;
+    clergy list https://www.dioceseaj.org/clergy/ gives "Buccicone, Rev. Ananias, OSB | Queen of Peace
+    Parish, Patton - Pastor".'
+promoted: 2026-10-21
 ---
 
 ## Publisher

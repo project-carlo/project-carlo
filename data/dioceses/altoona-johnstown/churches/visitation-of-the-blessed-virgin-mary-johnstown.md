@@ -11,9 +11,7 @@ longitude: -78.9198395
 coordinates_from: osm-node
 name_verified: true
 address_verified: false
-roster:
-- gcatholic:23855
-- directory:visitation-of-the-blessed-virgin-mary-johnstown
+roster: ['gcatholic:23855', 'directory:visitation-of-the-blessed-virgin-mary-johnstown']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/23855
   seen: 2026-10-21
@@ -26,17 +24,18 @@ evidence:
     Mary'', 1127 McKinley Avenue, Johnstown, PA, 15905; kind: church of Visitation of the Blessed Virgin
     Mary Parish, Johnstown (cambria county); group: Visitation of the Blessed Virgin Mary Parish, Johnstown'
 - url: https://visitationbvmchurch.com/wp-content/uploads/2026/10/Bulletin-10182026.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: 1127 McKinley Avenue
   note: '18 Oct 2026 bulletin, page 1: "Church of the Visitation of the Blessed Virgin Mary, 1127 McKinley
     Avenue, Johnstown, PA 15905". MASS SCHEDULE: Mon, Tue, Thu, Fri 12:05 PM; Wed 5:30 PM; Sat 4:00 PM;
     Sun 9:00 AM.'
 - url: https://nominatim.openstreetmap.org/search?q=Visitation+Church+Johnstown+PA&format=json
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: Visitation of the Blessed Virgin Mary Catholic Church
   note: OpenStreetMap way 1413322301 (place_of_worship), lat 40.3027171, lon -78.9198395, numbered 1137
     McKinley Avenue in OSM; a building numbered 1127 McKinley Avenue (way 1413322302) is about 35 m north-east.
     GCatholic gives no coordinates for this church.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

@@ -26,10 +26,15 @@ evidence:
 - url: https://holyspiritlockhaven.org/wp-content/uploads/2026/10/October-18.pdf
   seen: 2026-10-21
   quote: Sunday, 8:00 AM – Immaculate Conception Church
-  note: 'Page 2 of the 18 Oct 2026 Holy Spirit bulletin, weekend schedule; the same page gives "Tuesday and Thursday 8:30 AM – Immaculate Conception Church" and the heading "Immaculate Conception Church 310 West Water Street Lock Haven, PA 17745". Mass-intention table: Sun 10/25 8:00 AM IC; Tue 10/20 and Thu 10/22 8:30 AM IC.'
+  note: 'Page 2 of the 18 Oct 2026 Holy Spirit bulletin, weekend schedule; the same page gives "Tuesday
+    and Thursday 8:30 AM – Immaculate Conception Church" and the heading "Immaculate Conception Church
+    310 West Water Street Lock Haven, PA 17745". Mass-intention table: Sun 10/25 8:00 AM IC; Tue 10/20
+    and Thu 10/22 8:30 AM IC.'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory times for this church match the bulletin: Sunday 8:00 AM, Tuesday and Thursday 8:30 AM.'
+  note: 'Directory times for this church match the bulletin: Sunday 8:00 AM, Tuesday and Thursday 8:30
+    AM.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

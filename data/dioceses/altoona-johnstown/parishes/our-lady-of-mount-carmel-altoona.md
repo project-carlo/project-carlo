@@ -9,14 +9,27 @@ evidence:
 - url: https://discovermass.com/church/our-lady-of-mount-carmel-altoona-pa/
   seen: 2026-10-21
   quote: Current Bulletin
-  note: 'The church page lists a "Current Bulletin" dated 2026-10-18 (cover class "bulletin-current ... 2026-10-18") and about a dozen back issues. Its download link (tokenised, not cited) returned a 4-page PDF whose page 2 is headed "OUR LADY OF MOUNT CARMEL CHURCH ALTOONA, PENNSYLVANIA  OCTOBER 18, 2026" and whose page 1 gives "LITURGYS CHEDULE: Eucharist: Saturday 4:00 p.m. Sunday 8:00 a.m. and1 1:00 a.m." (text layer garbled; quotes keep the garble). Page 3 prints a Mass-intentions list headed "SUNDAY—MT. CARMEL  8 :00 A.M. ... 11:00 A.M." and then "ASSUMPTION CHAPEL  9 :30 A.M. M ary Jane Feigh (Husband, John)".'
+  note: 'The church page lists a "Current Bulletin" dated 2026-10-18 (cover class "bulletin-current ...
+    2026-10-18") and about a dozen back issues. Its download link (tokenised, not cited) returned a 4-page
+    PDF whose page 2 is headed "OUR LADY OF MOUNT CARMEL CHURCH ALTOONA, PENNSYLVANIA  OCTOBER 18, 2026"
+    and whose page 1 gives "LITURGYS CHEDULE: Eucharist: Saturday 4:00 p.m. Sunday 8:00 a.m. and1 1:00
+    a.m." (text layer garbled; quotes keep the garble). Page 3 prints a Mass-intentions list headed "SUNDAY—MT.
+    CARMEL  8 :00 A.M. ... 11:00 A.M." and then "ASSUMPTION CHAPEL  9 :30 A.M. M ary Jane Feigh (Husband,
+    John)".'
 - url: https://discovermass.com/church/our-lady-of-assumption-altoona-pa/
   seen: 2026-10-21
   quote: Our Lady of Assumption Chapel
-  note: 'A second Discover Mass church page, "Our Lady of Assumption Chapel", whose Visit Website link is https://mountcarmelaltoona.weebly.com/. Its "Current Bulletin" (cover dated 2026-10-18) downloaded as a PDF whose page 1 text is identical to Mount Carmel''s (same 4 pages, same masthead block: "Served by theF ranciscans T.O.R. Since1 909 806 11thS treetA ltoona,P A1 6602"). One bulletin under two Discover Mass slugs.'
+  note: 'A second Discover Mass church page, "Our Lady of Assumption Chapel", whose Visit Website link
+    is https://mountcarmelaltoona.weebly.com/. Its "Current Bulletin" (cover dated 2026-10-18) downloaded
+    as a PDF whose page 1 text is identical to Mount Carmel''s (same 4 pages, same masthead block: "Served
+    by theF ranciscans T.O.R. Since1 909 806 11thS treetA ltoona,P A1 6602"). One bulletin under two Discover
+    Mass slugs.'
 - url: http://mountcarmelaltoona.weebly.com/
   seen: 2026-10-21
-  note: 'http://www.mountcarmelaltoona.com (the directory and GCatholic homepage) 301-redirects here ("Our Lady of Mount Carmel - Home"). Weebly answers 429 to curl and probe url; headed Chrome loads it. It embeds no bulletin id and no bulletin link, so the bulletin is read from Discover Mass.'
+  note: http://www.mountcarmelaltoona.com (the directory and GCatholic homepage) 301-redirects here ("Our
+    Lady of Mount Carmel - Home"). Weebly answers 429 to curl and probe url; headed Chrome loads it. It
+    embeds no bulletin id and no bulletin link, so the bulletin is read from Discover Mass.
+promoted: 2026-10-21
 ---
 
 ## Publisher

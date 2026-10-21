@@ -26,7 +26,11 @@ evidence:
 - url: https://discovermass.com/church/st-nicholas-nicktown-pa/
   seen: 2026-10-21
   quote: Oct 25, 2026
-  note: 'The 25 Oct 2026 bulletin (PDF read in full): weekday and Saturday/Sunday Mass list headed "Saint Nicholas Roman Catholic Church, 1169 Alverda Rd. Nicktown PA 15762"; Sat 31 Oct 8:00 AM and "5:00 PM Vigil"; Sun 1 Nov "8:00 AM" and "10:00 AM"; Wed 28 Oct "7:00 PM". Confession "Saturday following 8:00 AM Mass and at 4:00 PM, Wednesday 6:00 - 6:45 PM".'
+  note: 'The 25 Oct 2026 bulletin (PDF read in full): weekday and Saturday/Sunday Mass list headed "Saint
+    Nicholas Roman Catholic Church, 1169 Alverda Rd. Nicktown PA 15762"; Sat 31 Oct 8:00 AM and "5:00
+    PM Vigil"; Sun 1 Nov "8:00 AM" and "10:00 AM"; Wed 28 Oct "7:00 PM". Confession "Saturday following
+    8:00 AM Mass and at 4:00 PM, Wednesday 6:00 - 6:45 PM".'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

@@ -9,18 +9,34 @@ evidence:
 - url: http://www.stkaterichurch.org/bulletins/Bulletin10.11.26.pdf
   seen: 2026-10-21
   quote: Fr. Brian Saylor, Pastor | Deacon Tom Boldin
-  note: 'Page 1 of the 10 Oct 2026 / 28th Sunday issue (6 pages): the masthead carries two churches, "ST. JOHN THE EVANGELIST CATHOLIC CHURCH 134 East Bishop Street, Bellefonte, PA 16823" and "ST. KATERI TEKAKWITHA CATHOLIC CHURCH PO Box 159, 3503 Penns Valley Rd, Spring Mills, PA 16875"; MASS SCHEDULE "Saturday: 5:00 p.m.", "Sunday: 8:00 a.m. & 10:15 a.m.", "St. Kateri Church: 12:00 p.m. Sunday". Page 2 has "Masses for the week" and "St. Kateri Masses for the week" side by side. This file is byte-identical (md5 70217c01160d84af3202f9a4edb15e8e) to the copy at http://www.bellefontecatholicchurch.org/10112026b.pdf, and the 27 Sep issues (09272026.pdf on the Bellefonte site, Bulletin9.27.26.pdf on the Kateri site) are identical too (md5 e4bae6d4174e8fa2b317dff1302dbb56).'
+  note: 'Page 1 of the 10 Oct 2026 / 28th Sunday issue (6 pages): the masthead carries two churches, "ST.
+    JOHN THE EVANGELIST CATHOLIC CHURCH 134 East Bishop Street, Bellefonte, PA 16823" and "ST. KATERI
+    TEKAKWITHA CATHOLIC CHURCH PO Box 159, 3503 Penns Valley Rd, Spring Mills, PA 16875"; MASS SCHEDULE
+    "Saturday: 5:00 p.m.", "Sunday: 8:00 a.m. & 10:15 a.m.", "St. Kateri Church: 12:00 p.m. Sunday". Page
+    2 has "Masses for the week" and "St. Kateri Masses for the week" side by side. This file is byte-identical
+    (md5 70217c01160d84af3202f9a4edb15e8e) to the copy at http://www.bellefontecatholicchurch.org/10112026b.pdf,
+    and the 27 Sep issues (09272026.pdf on the Bellefonte site, Bulletin9.27.26.pdf on the Kateri site)
+    are identical too (md5 e4bae6d4174e8fa2b317dff1302dbb56).'
 - url: http://www.stkaterichurch.org/bulletin.html
   seen: 2026-10-21
   quote: Our most recent bulletins are available for download below.
-  note: 'The Kateri site''s Weekly Bulletins page lists bulletins/Bulletin10.11.26.pdf, 10.4.26, 9.27.26 and 9.20.26 (the 9.20.26 link returns an HTML page, not a PDF). The 18 Oct issue was not posted on either site on 21 Oct (404).'
+  note: The Kateri site's Weekly Bulletins page lists bulletins/Bulletin10.11.26.pdf, 10.4.26, 9.27.26
+    and 9.20.26 (the 9.20.26 link returns an HTML page, not a PDF). The 18 Oct issue was not posted on
+    either site on 21 Oct (404).
 - url: http://www.bellefontecatholicchurch.org/
   seen: 2026-10-21
   quote: The Bulletins are in PDF Format.
-  note: 'Bellefonte''s homepage lists 10112026b.pdf, 10042026.pdf, 09272026.pdf, 09202026.pdf, 09132026.pdf under "Bulletins". Plain https fails (certificate for another host; probe url UNREACHABLE) and, to a client without a browser user agent, the PDFs answer a 12 KB JavaScript reload page (fetch:check `not_pdf`), so the row reads the Kateri site instead.'
+  note: Bellefonte's homepage lists 10112026b.pdf, 10042026.pdf, 09272026.pdf, 09202026.pdf, 09132026.pdf
+    under "Bulletins". Plain https fails (certificate for another host; probe url UNREACHABLE) and, to
+    a client without a browser user agent, the PDFs answer a 12 KB JavaScript reload page (fetch:check
+    `not_pdf`), so the row reads the Kateri site instead.
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory lists both as separate parishes: Saint John the Evangelist Parish, Bellefonte (homepage bellefontecatholicchurch.org; Sat 5:00 PM, Sun 8:00 and 10:15 AM, weekdays) and Saint Kateri Tekakwitha Parish, Spring Mills (homepage stkaterichurch.org; Sun 12:00 PM, Tue 11:00 AM Communion Service). Both match the one bulletin.'
+  note: 'Directory lists both as separate parishes: Saint John the Evangelist Parish, Bellefonte (homepage
+    bellefontecatholicchurch.org; Sat 5:00 PM, Sun 8:00 and 10:15 AM, weekdays) and Saint Kateri Tekakwitha
+    Parish, Spring Mills (homepage stkaterichurch.org; Sun 12:00 PM, Tue 11:00 AM Communion Service).
+    Both match the one bulletin.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

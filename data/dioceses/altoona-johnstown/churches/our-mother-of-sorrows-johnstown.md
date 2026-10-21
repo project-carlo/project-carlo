@@ -26,14 +26,20 @@ evidence:
 - url: https://omostoday.com/our-mother-of-sorrows/
   seen: 2026-10-21
   quote: Saturday Vigil 4:00 pm
-  note: 'OMOS page, "Our schedule OMOS": "Monday 8:00 am Tuesday 8:00 am Wednesday 6:00 pm Thursday 8:00 am (9:00 AM during school year) Friday 8:00 am Saturday Vigil 4:00 pm Sunday 8:30 am & 11:00 am", confessions Tuesday 7:15 am, Wednesday 5:00 pm, Saturday 3:00 pm. Same as the directory.'
+  note: 'OMOS page, "Our schedule OMOS": "Monday 8:00 am Tuesday 8:00 am Wednesday 6:00 pm Thursday 8:00
+    am (9:00 AM during school year) Friday 8:00 am Saturday Vigil 4:00 pm Sunday 8:30 am & 11:00 am",
+    confessions Tuesday 7:15 am, Wednesday 5:00 pm, Saturday 3:00 pm. Same as the directory.'
 - url: https://omostoday.com/wp-content/uploads/2026/09/September-27-Twenty-Sixth-Sunday-in-Ordinary-Time-.pdf
   seen: 2026-10-21
   quote: PRESBYTERY - 407 Tioga Street
-  note: 'Page 1 (text layer): "PARISH OFFICE 415 Tioga St., Johnstown, PA 15905" and "PRESBYTERY - 407 Tioga Street ... by appointment". The bulletin does not give a street number for the church itself.'
+  note: 'Page 1 (text layer): "PARISH OFFICE 415 Tioga St., Johnstown, PA 15905" and "PRESBYTERY - 407
+    Tioga Street ... by appointment". The bulletin does not give a street number for the church itself.'
 - url: https://nominatim.openstreetmap.org/search?q=Our+Mother+of+Sorrows+Church+Johnstown+PA&format=json
   seen: 2026-10-21
-  note: 'OpenStreetMap places "Our Mother of Sorrows Catholic Church" at 412 Tioga Street, 40.3208329, -78.9329472, about 35 m from the GCatholic point (40.3205625, -78.9328125). Street-number lookups put 407, 415 and 412 Tioga Street all on the same block.'
+  note: OpenStreetMap places "Our Mother of Sorrows Catholic Church" at 412 Tioga Street, 40.3208329,
+    -78.9329472, about 35 m from the GCatholic point (40.3205625, -78.9328125). Street-number lookups
+    put 407, 415 and 412 Tioga Street all on the same block.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

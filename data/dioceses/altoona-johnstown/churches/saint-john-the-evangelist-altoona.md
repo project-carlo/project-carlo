@@ -25,11 +25,14 @@ evidence:
     county); group: Saint John the Evangelist Parish, Lakemont'
 - url: https://stjohnsaltoona.org/wp-content/uploads/2026/10/October-18-2026.pdf
   seen: 2026-10-21
-  note: 'Image-only PDF, page 1 rendered: masthead "St. John the Evangelist Church, 309 Lotz Avenue, Altoona, PA 16602 814-942-5503" and "MASS SCHEDULE ... SATURDAY - 4:00 PM, SUNDAY - 8:00 AM & 11:00 AM".'
+  note: 'Image-only PDF, page 1 rendered: masthead "St. John the Evangelist Church, 309 Lotz Avenue, Altoona,
+    PA 16602 814-942-5503" and "MASS SCHEDULE ... SATURDAY - 4:00 PM, SUNDAY - 8:00 AM & 11:00 AM".'
 - url: https://stjohnsaltoona.org/
   seen: 2026-10-21
   quote: 309 Lotz Avenue, Lakemont
-  note: The parish home page gives the Mass schedule (Saturday 4:00 PM; after Labor Day the second Sunday Mass is 11:00 AM) beside this address.
+  note: The parish home page gives the Mass schedule (Saturday 4:00 PM; after Labor Day the second Sunday
+    Mass is 11:00 AM) beside this address.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

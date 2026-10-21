@@ -26,7 +26,10 @@ evidence:
 - url: https://stbenedictchurch.org/files/2026/10/Bulletin-101826-complete.pdf
   seen: 2026-10-21
   quote: Angel Tree Program
-  note: 'Cover (page 1, an image I rendered and read): "MASS SCHEDULE Saturday | 5:00pm Vigil Sunday | 8:30 am & 10:30 am"; "Weekday Masses Monday & Friday | 8:00 am Tuesday & Thursday | 12:05 pm Wednesday | 9:00 am"; "2310 Bedford Street Johnstown, PA 15904".'
+  note: 'Cover (page 1, an image I rendered and read): "MASS SCHEDULE Saturday | 5:00pm Vigil Sunday |
+    8:30 am & 10:30 am"; "Weekday Masses Monday & Friday | 8:00 am Tuesday & Thursday | 12:05 pm Wednesday
+    | 9:00 am"; "2310 Bedford Street Johnstown, PA 15904".'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

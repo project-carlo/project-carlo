@@ -25,15 +25,20 @@ evidence:
     Most Holy Trinity Parish, South Fork'
 - url: http://www.stjic.org/wp-content/uploads/2026/10/October-18-2026.pdf
   seen: 2026-10-21
-  quote: '4:00 PM           MHT-     Parishioners of MHT & St. B'
-  note: 'Mass list of the 18 Oct 2026 bulletin: MHT Tue 20 Oct 7:45 AM (NO MASS that day), Thu 22 Oct 7:45 AM, Sat 24 Oct 4:00 PM, Sun 25 Oct 10:30 AM. Masthead address 550 Main St. South Fork; office mostholytrinitysouthfork@dioceseaj.org.'
+  quote: 4:00 PM           MHT-     Parishioners of MHT & St. B
+  note: 'Mass list of the 18 Oct 2026 bulletin: MHT Tue 20 Oct 7:45 AM (NO MASS that day), Thu 22 Oct
+    7:45 AM, Sat 24 Oct 4:00 PM, Sun 25 Oct 10:30 AM. Masthead address 550 Main St. South Fork; office
+    mostholytrinitysouthfork@dioceseaj.org.'
 - url: https://discovermass.com/church/most-holy-trinity-south-fork-pa/
   seen: 2026-10-21
-  quote: 'Saturday 4:00pm Sunday 10:30am Tuesday 7:45am Thursday 7:45am'
-  note: 'Discover Mass page "Most Holy Trinity", South Fork, PA; matches the bulletin. No bulletins on it.'
+  quote: Saturday 4:00pm Sunday 10:30am Tuesday 7:45am Thursday 7:45am
+  note: Discover Mass page "Most Holy Trinity", South Fork, PA; matches the bulletin. No bulletins on
+    it.
 - url: https://nominatim.openstreetmap.org/search?q=Holy+Trinity+Catholic+Church+South+Fork&format=json
   seen: 2026-10-21
-  note: 'OSM: "Most Holy Trinity Catholic Church, 550, Main Street, South Fork, Cambria County, Pennsylvania, 15956" at 40.3622449, -78.7893458, within 10 m of the GCatholic point.'
+  note: 'OSM: "Most Holy Trinity Catholic Church, 550, Main Street, South Fork, Cambria County, Pennsylvania,
+    15956" at 40.3622449, -78.7893458, within 10 m of the GCatholic point.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

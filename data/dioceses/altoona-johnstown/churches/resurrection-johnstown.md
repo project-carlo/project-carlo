@@ -26,11 +26,15 @@ evidence:
 - url: https://www.resurrectionparishjohnstown.com/uploads/1/1/4/3/114314907/bulletin10182026.pdf
   seen: 2026-10-21
   quote: Resurrection Church 324 Chestnut Street, Johnstown, Pa. 15906
-  note: 'Page 1 of the 18 October 2026 bulletin: "Resurrection Parish Mass Schedule: Sunday 8:00 AM & 10:30 AM; Tuesday, Wednesday & Friday 8:00 AM"; the weekly table has 8:00 AM and 10:30 AM on Sunday 18 and 25 October and 8:00 AM Tuesday, Wednesday and Friday, each at "Resurrection Church" (Wednesday''s line says "Resurrection Parish").'
+  note: 'Page 1 of the 18 October 2026 bulletin: "Resurrection Parish Mass Schedule: Sunday 8:00 AM &
+    10:30 AM; Tuesday, Wednesday & Friday 8:00 AM"; the weekly table has 8:00 AM and 10:30 AM on Sunday
+    18 and 25 October and 8:00 AM Tuesday, Wednesday and Friday, each at "Resurrection Church" (Wednesday''s
+    line says "Resurrection Parish").'
 - url: https://www.webparish.com/aj/Clare/index.php?PG=masstimeschedule
   seen: 2026-10-21
   quote: WEEKEND MASSES - RESURRECTION ROMAN CATHOLIC CHURCH
-  note: 'Sunday 8:00 AM and 10:30 AM; Tuesday, Wednesday, Friday 8:00 AM; Thursday no Mass.'
+  note: Sunday 8:00 AM and 10:30 AM; Tuesday, Wednesday, Friday 8:00 AM; Thursday no Mass.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

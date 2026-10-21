@@ -23,6 +23,7 @@ evidence:
   note: 'Listed in Diocese of Altoona-Johnstown parish directory as ''Saint Rose of Lima'', 5514 Roselawn
     Avenue, Altoona, PA, 16602; kind: church of Saint Rose of Lima Parish, Altoona (blair county); group:
     Saint Rose of Lima Parish, Altoona'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

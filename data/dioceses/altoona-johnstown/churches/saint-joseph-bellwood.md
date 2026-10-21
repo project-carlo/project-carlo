@@ -26,10 +26,14 @@ evidence:
 - url: https://files.ecatholic.com/40290/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: 'MASS SCHEDULE & INTENTIONS: OCT 17-OCT 25, 2026'
-  note: 'Page 1 of the 18 October 2026 issue lists "Sat, Oct 17 4:00 PM", "Sun, Oct 18 9:00 AM", "Mon, Oct 19 8:00 AM", "Tue, Oct 20 6:00 PM", "Wed, Oct 21 7:30 AM HOLY HOUR", "Sat, Oct 24 4:00 PM", "Sun, Oct 25 9:00 AM"; masthead address "623 E. Third Street, Bellwood, PA 16617".'
+  note: Page 1 of the 18 October 2026 issue lists "Sat, Oct 17 4:00 PM", "Sun, Oct 18 9:00 AM", "Mon,
+    Oct 19 8:00 AM", "Tue, Oct 20 6:00 PM", "Wed, Oct 21 7:30 AM HOLY HOUR", "Sat, Oct 24 4:00 PM", "Sun,
+    Oct 25 9:00 AM"; masthead address "623 E. Third Street, Bellwood, PA 16617".
 - url: https://saintjosephbellwood.org/
   seen: 2026-10-21
-  note: 'Parish site (headed Chrome) Mass Times: Saturday 4:00 pm, Sunday 9:00 am, Monday 8:00 am, Tuesday 6:00 pm; Confession Saturday 3:30 pm; Adoration Wednesday 7:30 am. Same as the directory.'
+  note: 'Parish site (headed Chrome) Mass Times: Saturday 4:00 pm, Sunday 9:00 am, Monday 8:00 am, Tuesday
+    6:00 pm; Confession Saturday 3:30 pm; Adoration Wednesday 7:30 am. Same as the directory.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

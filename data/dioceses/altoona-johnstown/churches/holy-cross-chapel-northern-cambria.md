@@ -26,14 +26,19 @@ evidence:
 - url: https://www.popnc.net/uploads/1/2/6/9/126924659/2026-10-18_bulletin.pdf
   seen: 2026-10-21
   quote: Rev. Mark E. Groeger
-  note: 'Cover of the 18 Oct 2026 bulletin names "CHURCH & CHAPEL": "WEEKEND MASSES Saturday: 4:00pm (Church) Sunday: 8:00am (Chapel) Sunday: 10:30am (Church)"; the chapel''s address "2410 Campbell Avenue, N. Cambria, PA 15714" is printed on the cover.'
+  note: 'Cover of the 18 Oct 2026 bulletin names "CHURCH & CHAPEL": "WEEKEND MASSES Saturday: 4:00pm (Church)
+    Sunday: 8:00am (Chapel) Sunday: 10:30am (Church)"; the chapel''s address "2410 Campbell Avenue, N.
+    Cambria, PA 15714" is printed on the cover.'
 - url: https://www.popnc.net/mass-schedules.html
   seen: 2026-10-21
   quote: Holy Cross Chapel
-  note: 'Parish Mass Schedules page footer block: "Holy Cross Chapel 2410 Campbell Avenue Northern Cambria, PA 15714".'
+  note: 'Parish Mass Schedules page footer block: "Holy Cross Chapel 2410 Campbell Avenue Northern Cambria,
+    PA 15714".'
 - url: https://nominatim.openstreetmap.org/search?street=2410+Campbell+Avenue&city=Northern+Cambria&state=Pennsylvania&format=json
   seen: 2026-10-21
-  note: 'Nominatim returns an address point (type "yes") 2410, Campbell Avenue, Northern Cambria, 15714 at 40.6475135, -78.7758472, used for the coordinates since GCatholic gives no Plus Code for 23872.'
+  note: Nominatim returns an address point (type "yes") 2410, Campbell Avenue, Northern Cambria, 15714
+    at 40.6475135, -78.7758472, used for the coordinates since GCatholic gives no Plus Code for 23872.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

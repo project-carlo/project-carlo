@@ -9,15 +9,23 @@ evidence:
 - url: https://files.ecatholic.com/37833/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: SAINT MATTHEW
-  note: 'Issue for Sunday 18 October 2026 (2 pages, text layer; the Gospel is "Matthew 22: 15-21" and the sanctuary candle is "for the week of October 18th"). A "SAINT MATTHEW ROMAN CATHOLIC CHURCH" block heads the liturgical ministries schedule: "Sat. 5:30 pm ... Sun 7:30 am ... Sun. 10:30 am". It names no other parish.'
+  note: 'Issue for Sunday 18 October 2026 (2 pages, text layer; the Gospel is "Matthew 22: 15-21" and
+    the sanctuary candle is "for the week of October 18th"). A "SAINT MATTHEW ROMAN CATHOLIC CHURCH" block
+    heads the liturgical ministries schedule: "Sat. 5:30 pm ... Sun 7:30 am ... Sun. 10:30 am". It names
+    no other parish.'
 - url: https://stmatthewtyrone.com/
   seen: 2026-10-21
   quote: 1105 Cameron Avenue
-  note: 'Parish site (eCatholic, headed Chrome): Sunday Mass Schedule "Saturday: 5:30 PM  Sunday: 7:30 AM 10:30 AM"; weekday Wednesday, Thursday, Friday 8:00 AM; its Bulletin link goes to /bulletins (site id 37833). Curl and probe url get a Cloudflare 403 on stmatthewtyrone.com; the directory''s http://www.stmatthewtyrone.org does not answer (probe url on https://stmatthewtyrone.org: UNREACHABLE, SSL EOF).'
+  note: 'Parish site (eCatholic, headed Chrome): Sunday Mass Schedule "Saturday: 5:30 PM  Sunday: 7:30
+    AM 10:30 AM"; weekday Wednesday, Thursday, Friday 8:00 AM; its Bulletin link goes to /bulletins (site
+    id 37833). Curl and probe url get a Cloudflare 403 on stmatthewtyrone.com; the directory''s http://www.stmatthewtyrone.org
+    does not answer (probe url on https://stmatthewtyrone.org: UNREACHABLE, SSL EOF).'
 - url: https://discovermass.com/church/saint-matthew-roman-catholic-church-tyrone-pa/
   seen: 2026-10-21
   quote: no bulletins available for Saint Matthew Roman Catholic Church.
-  note: 'A Discover Mass page exists (Visit Website link https://stmatthewtyrone.com/) but carries no bulletin: not a live channel.'
+  note: 'A Discover Mass page exists (Visit Website link https://stmatthewtyrone.com/) but carries no
+    bulletin: not a live channel.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

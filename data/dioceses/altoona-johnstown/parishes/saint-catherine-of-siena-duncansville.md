@@ -9,10 +9,15 @@ evidence:
 - url: https://files.ecatholic.com/37641/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: 'Church Address: 308 Old Route 22, Duncansville, PA 16635'
-  note: 'Page 2 of the 18 October 2026 issue (2 pages). Page 1 headed "St. Catherine of Siena Church UPCOMING MASS & EVENTS SCHEDULE"; page 2 headed "Saint Catherine of Siena Parish ... Pastor - Reverend Jeremy J. Mohler". Names this parish alone.'
+  note: Page 2 of the 18 October 2026 issue (2 pages). Page 1 headed "St. Catherine of Siena Church UPCOMING
+    MASS & EVENTS SCHEDULE"; page 2 headed "Saint Catherine of Siena Parish ... Pastor - Reverend Jeremy
+    J. Mohler". Names this parish alone.
 - url: https://www.duncansvillecatholic.org/bulletins
   seen: 2026-10-21
-  note: 'The eCatholic site (id 37641, found by visit.py on the home page) links the current bulletin; fetch:check followed it to files.ecatholic.com/37641/bulletins/20261018.pdf. The site answers 403 to curl and probe url (Cloudflare) but opens in headed Chrome.'
+  note: The eCatholic site (id 37641, found by visit.py on the home page) links the current bulletin;
+    fetch:check followed it to files.ecatholic.com/37641/bulletins/20261018.pdf. The site answers 403
+    to curl and probe url (Cloudflare) but opens in headed Chrome.
+promoted: 2026-10-21
 ---
 
 ## Publisher

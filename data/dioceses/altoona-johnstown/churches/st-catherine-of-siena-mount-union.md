@@ -26,11 +26,14 @@ evidence:
 - url: http://www.scosmu.org/October_25.pdf
   seen: 2026-10-21
   quote: 4:00 p.m. MASS
-  note: 'Issue for 25 October 2026: "SATURDAY, October 24: VIGIL OF THIRTIETH SUNDAY IN ORDINARY TIME 4:00 p.m. MASS", "SUNDAY, October 25 ... 9:00 a.m. MASS", weekdays 8:00 a.m.; confession "3:15-3:45 p.m. every Saturday". Header gives the parish office as 203 West Market Street, Mount Union, PA 17066-1236.'
+  note: 'Issue for 25 October 2026: "SATURDAY, October 24: VIGIL OF THIRTIETH SUNDAY IN ORDINARY TIME
+    4:00 p.m. MASS", "SUNDAY, October 25 ... 9:00 a.m. MASS", weekdays 8:00 a.m.; confession "3:15-3:45
+    p.m. every Saturday". Header gives the parish office as 203 West Market Street, Mount Union, PA 17066-1236.'
 - url: http://www.scosmu.org/
   seen: 2026-10-21
   quote: 203 W Market St, Mount Union, PA  17066
   note: 'Parish site: Saturday 4:00 PM, Sunday 9:00 AM, Monday to Friday 8:00 AM.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

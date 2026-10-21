@@ -26,7 +26,9 @@ evidence:
 - url: https://files.ecatholic.com/37809/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: 'Address: 867 Gray’s Woods Boulevard'
-  note: 'Bulletin masthead, 18 Oct 2026: Port Matilda, PA 16870; Mass intentions page: Sat 5:00 p.m., Sun 8:30 a.m. and 10:30 a.m., Mon 8:30, Thu 8:30, Fri 12:00 p.m.'
+  note: 'Bulletin masthead, 18 Oct 2026: Port Matilda, PA 16870; Mass intentions page: Sat 5:00 p.m.,
+    Sun 8:30 a.m. and 10:30 a.m., Mon 8:30, Thu 8:30, Fri 12:00 p.m.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

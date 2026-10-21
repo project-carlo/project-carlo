@@ -9,17 +9,25 @@ evidence:
 - url: https://www.stpetersparish.com/site_docs/10648.pdf
   seen: 2026-10-21
   quote: 'ORDINARY SCHEDULE - Sat. Mass: 4PM, Sun. Masses:'
-  note: 'Page 1 of the 18 October 2026 issue (2 pages, text layer readable). Masthead: "ST. PETER’S CATHOLIC CHURCH", "SUNDAY, OCTOBER 18TH, 2026 - TWENTY-NINTH SUNDAY IN ORDINARY TIME", "433 WEST CHURCH STREET SOMERSET, PA. 15501", Rev. Fr. Angelo J. Patti, VF, Pastor. Names this church alone; no other worship site or parish appears.'
+  note: 'Page 1 of the 18 October 2026 issue (2 pages, text layer readable). Masthead: "ST. PETER’S CATHOLIC
+    CHURCH", "SUNDAY, OCTOBER 18TH, 2026 - TWENTY-NINTH SUNDAY IN ORDINARY TIME", "433 WEST CHURCH STREET
+    SOMERSET, PA. 15501", Rev. Fr. Angelo J. Patti, VF, Pastor. Names this church alone; no other worship
+    site or parish appears.'
 - url: https://www.stpetersparish.com/bulletin.php
   seen: 2026-10-21
-  note: 'Self-hosted bulletin page ("Bulletin | St Peter''s Catholic Church"). Lists dated links "10/18/2026 Bulletin" (site_docs/10648.pdf), "10/11/2026 Bulletin" (10647.pdf), "10/04/2026 Bulletin" and back to August 2026, plus quarterly ministry schedules. The page HTML was read with curl.'
+  note: Self-hosted bulletin page ("Bulletin | St Peter's Catholic Church"). Lists dated links "10/18/2026
+    Bulletin" (site_docs/10648.pdf), "10/11/2026 Bulletin" (10647.pdf), "10/04/2026 Bulletin" and back
+    to August 2026, plus quarterly ministry schedules. The page HTML was read with curl.
 - url: https://discovermass.com/church/st-peter-somerset-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for St. Peter.
-  note: 'Discover Mass page st-peter-somerset-pa exists (Mass times, (814) 443-6574) but its Bulletins tab is empty: not a live channel.'
+  note: 'Discover Mass page st-peter-somerset-pa exists (Mass times, (814) 443-6574) but its Bulletins
+    tab is empty: not a live channel.'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Diocese directory lists Saint Peter Parish, Somerset, one church, 433 West Church Street, homepage http://www.stpetersparish.com/, Masses Sat 4:00 PM; Sun 8:00 AM, 10:00 AM, 12:15 PM.'
+  note: Diocese directory lists Saint Peter Parish, Somerset, one church, 433 West Church Street, homepage
+    http://www.stpetersparish.com/, Masses Sat 4:00 PM; Sun 8:00 AM, 10:00 AM, 12:15 PM.
+promoted: 2026-10-21
 ---
 
 ## Publisher

@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-21
   quote: 'SUNDAY: 7:00am & 9:30am'
   note: Parish home page, REGULAR LITURGY SCHEDULE.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

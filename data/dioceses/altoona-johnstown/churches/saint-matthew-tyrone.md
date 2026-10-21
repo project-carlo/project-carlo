@@ -26,11 +26,15 @@ evidence:
 - url: https://stmatthewtyrone.com/
   seen: 2026-10-21
   quote: 1105 Cameron Avenue
-  note: 'Parish site: Sunday Mass Schedule "Saturday: 5:30 PM  Sunday: 7:30 AM 10:30 AM"; Daily "Wednesday: 8:00 AM  Thursday: 8:00 AM  Friday: 8:00 AM"; Confession Saturday 12:30 PM; address 1105 Cameron Avenue, Tyrone, PA 16686.'
+  note: 'Parish site: Sunday Mass Schedule "Saturday: 5:30 PM  Sunday: 7:30 AM 10:30 AM"; Daily "Wednesday:
+    8:00 AM  Thursday: 8:00 AM  Friday: 8:00 AM"; Confession Saturday 12:30 PM; address 1105 Cameron Avenue,
+    Tyrone, PA 16686.'
 - url: https://files.ecatholic.com/37833/bulletins/20261018.pdf
   seen: 2026-10-21
   quote: SAINT MATTHEW
-  note: 'The 18 October 2026 issue''s liturgical ministries schedule (weekend of 24-25 October) lists "Sat. 5:30 pm", "Sun 7:30 am" and "Sun. 10:30 am".'
+  note: The 18 October 2026 issue's liturgical ministries schedule (weekend of 24-25 October) lists "Sat.
+    5:30 pm", "Sun 7:30 am" and "Sun. 10:30 am".
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

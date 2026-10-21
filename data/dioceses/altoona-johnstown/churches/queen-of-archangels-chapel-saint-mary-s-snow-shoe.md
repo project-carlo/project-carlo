@@ -25,11 +25,17 @@ evidence:
 - url: https://queenofarchangels-bulletins.up.railway.app/Q5wDq/10-18-2026.pdf/raw
   seen: 2026-10-21
   quote: 7:30AM Mass—CHAPEL
-  note: 'Page 1 of the 18 Oct 2026 bulletin: "SUNDAY 7:30AM Snow Shoe Chapel" in the normal weekend schedule; "CHAPEL ADDRESS: 204 S. Fourth Street, Snow Shoe, PA"; a sanctuary candle memorial is listed "at Snow Shoe Chapel".'
+  note: 'Page 1 of the 18 Oct 2026 bulletin: "SUNDAY 7:30AM Snow Shoe Chapel" in the normal weekend schedule;
+    "CHAPEL ADDRESS: 204 S. Fourth Street, Snow Shoe, PA"; a sanctuary candle memorial is listed "at Snow
+    Shoe Chapel".'
 - url: https://nominatim.openstreetmap.org/search?street=204+S+4th+Street&city=Snow+Shoe&state=PA&format=json
   seen: 2026-10-21
-  quote: Saint Mary Catholic Church, 204, South 4th Street, Snow Shoe, Centre County, Pennsylvania, 16874, United States
-  note: 'OSM way 895101393, 41.0292511, -77.9517692: a Catholic church at the same address, named Saint Mary. Discover Mass''s pin for this church (41.0307, -77.9473) is about 400 m off; the parish site''s Google Maps link has ZIP 16871 (typo; Snow Shoe is 16874 per directory and OSM).'
+  quote: Saint Mary Catholic Church, 204, South 4th Street, Snow Shoe, Centre County, Pennsylvania, 16874,
+    United States
+  note: 'OSM way 895101393, 41.0292511, -77.9517692: a Catholic church at the same address, named Saint
+    Mary. Discover Mass''s pin for this church (41.0307, -77.9473) is about 400 m off; the parish site''s
+    Google Maps link has ZIP 16871 (typo; Snow Shoe is 16874 per directory and OSM).'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

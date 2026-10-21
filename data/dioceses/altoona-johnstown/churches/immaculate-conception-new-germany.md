@@ -25,14 +25,18 @@ evidence:
     county); group: Immaculate Conception Parish, New Germany'
 - url: http://www.stjic.org/wp-content/uploads/2026/10/October-18-2026.pdf
   seen: 2026-10-21
-  quote: '4:00 PM            IC -        L/D of Joseph & Eva Fisher Family'
-  note: 'Mass list of the 18 Oct 2026 bulletin: IC Fri 23 Oct 7:45 AM, Sat 24 Oct 4:00 PM, Sun 25 Oct 7:00 AM; Tue 20 and Wed 21 Oct "NO MASS". Masthead address 1640 New Germany Rd. New Germany.'
+  quote: 4:00 PM            IC -        L/D of Joseph & Eva Fisher Family
+  note: 'Mass list of the 18 Oct 2026 bulletin: IC Fri 23 Oct 7:45 AM, Sat 24 Oct 4:00 PM, Sun 25 Oct
+    7:00 AM; Tue 20 and Wed 21 Oct "NO MASS". Masthead address 1640 New Germany Rd. New Germany.'
 - url: https://www.stjic.org/
   seen: 2026-10-21
-  note: 'Home page: header "1640 New Germany Road | Summerhill, PA 15958", footer "1635 New Germany Road | Summerhill, PA 15958"; "IC - Mass Schedule: Tues, Wed, Fri, Sat & Sun".'
+  note: 'Home page: header "1640 New Germany Road | Summerhill, PA 15958", footer "1635 New Germany Road
+    | Summerhill, PA 15958"; "IC - Mass Schedule: Tues, Wed, Fri, Sat & Sun".'
 - url: https://nominatim.openstreetmap.org/search?q=Immaculate+Conception+Church+New+Germany+Cambria&format=json
   seen: 2026-10-21
-  note: 'OSM: "Immaculate Conception Catholic Church, 1635, New Germany Road, New Germany, Croyle Township, Cambria County, Pennsylvania, 15958" at 40.4122749, -78.7550710, within 30 m of the GCatholic point.'
+  note: 'OSM: "Immaculate Conception Catholic Church, 1635, New Germany Road, New Germany, Croyle Township,
+    Cambria County, Pennsylvania, 15958" at 40.4122749, -78.7550710, within 30 m of the GCatholic point.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

@@ -8,14 +8,23 @@ group: ''
 evidence:
 - url: https://www.stannedavidsvillepa.org/services
   seen: 2026-10-21
-  note: 'Wix page titled "Bulletin" (nav "Calendar / Bulletin / Server Schedules / Visit Us"; footer "Proudly created with Wix.com"). The only content is one JPEG (static.wixstatic.com/media/d147db_3e320d8812d94528a7de3f02ef366c56~mv2.jpg, alt text "10112026.jpg", 801,095 bytes), read as an image: header "ST. ANNE CHURCH 205 Woodstown Highway Davidsville, PA 15928-0500 ... Fr. Karl Kolodziejski, OFM Conv.- Administrator", "MASSES FOR THE WEEK: MON. OCT. 12 8:00AM ... THURS. OCT. 15 6:30PM ... SAT. OCT. 17 8:00AM / 4:00PM ... SUN. OCT. 18 8:30AM", "TWENTY-EIGHTH SUNDAY IN ORDINARY TIME". It is the bulletin for the week of 12-18 October 2026 (screenshot via visit.py). There is no text layer, so no quote.'
+  note: 'Wix page titled "Bulletin" (nav "Calendar / Bulletin / Server Schedules / Visit Us"; footer "Proudly
+    created with Wix.com"). The only content is one JPEG (static.wixstatic.com/media/d147db_3e320d8812d94528a7de3f02ef366c56~mv2.jpg,
+    alt text "10112026.jpg", 801,095 bytes), read as an image: header "ST. ANNE CHURCH 205 Woodstown Highway
+    Davidsville, PA 15928-0500 ... Fr. Karl Kolodziejski, OFM Conv.- Administrator", "MASSES FOR THE WEEK:
+    MON. OCT. 12 8:00AM ... THURS. OCT. 15 6:30PM ... SAT. OCT. 17 8:00AM / 4:00PM ... SUN. OCT. 18 8:30AM",
+    "TWENTY-EIGHTH SUNDAY IN ORDINARY TIME". It is the bulletin for the week of 12-18 October 2026 (screenshot
+    via visit.py). There is no text layer, so no quote.'
 - url: https://discovermass.com/church/st-anne-davidsville-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for St. Anne.
   note: 'Discover Mass page exists (814-479-2664) but its Bulletins tab is empty: not a live channel.'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Diocese directory lists Saint Anne Parish, Davidsville, one church, 205 Woodstown Highway, homepage https://www.stannedavidsvillepa.org, Masses Sat 4:00 PM, Sun 8:30 AM, Mon-Wed and Fri 8:00 AM, Thu 12:00 PM.'
+  note: Diocese directory lists Saint Anne Parish, Davidsville, one church, 205 Woodstown Highway, homepage
+    https://www.stannedavidsvillepa.org, Masses Sat 4:00 PM, Sun 8:30 AM, Mon-Wed and Fri 8:00 AM, Thu
+    12:00 PM.
+promoted: 2026-10-21
 ---
 
 ## Publisher

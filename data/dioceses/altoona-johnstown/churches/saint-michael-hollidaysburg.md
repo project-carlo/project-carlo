@@ -23,10 +23,13 @@ evidence:
   note: 'Listed in Diocese of Altoona-Johnstown parish directory as ''Saint Michael'', 301 Spruce Street,
     Hollidaysburg, PA, 16648; kind: church of Saint Michael Parish, Hollidaysburg (blair county); group:
     Saint Michael Parish, Hollidaysburg'
-- url: 'https://img1.wsimg.com/blobby/go/04d20257-8d78-4404-bc76-b4eabd903c10/downloads/ea4c8410-f270-4f9a-9f00-e862cc738ee7/Oct%2018%202026.pdf?ver=1792175665993'
+- url: https://img1.wsimg.com/blobby/go/04d20257-8d78-4404-bc76-b4eabd903c10/downloads/ea4c8410-f270-4f9a-9f00-e862cc738ee7/Oct%2018%202026.pdf?ver=1792175665993
   seen: 2026-10-21
   quote: 10:00 AM and 11:30 AM - St. Michael
-  note: 'Page 1 Mass schedule; the intentions table also lists Monday, Tuesday and Thursday 7:45 AM at St. Michael. Masthead gives "St. Michael the Archangel Parish 301 Spruce Street Hollidaysburg, PA 16648".'
+  note: Page 1 Mass schedule; the intentions table also lists Monday, Tuesday and Thursday 7:45 AM at
+    St. Michael. Masthead gives "St. Michael the Archangel Parish 301 Spruce Street Hollidaysburg, PA
+    16648".
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

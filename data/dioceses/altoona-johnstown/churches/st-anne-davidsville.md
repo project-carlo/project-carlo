@@ -25,7 +25,10 @@ evidence:
     Anne Parish, Davidsville'
 - url: https://www.stannedavidsvillepa.org/services
   seen: 2026-10-21
-  note: 'Bulletin image (read visually): "ST. ANNE CHURCH 205 Woodstown Highway Davidsville, PA 15928-0500"; Masses Sat. Oct. 17 4:00PM, Sun. Oct. 18 8:30AM, weekdays 8:00AM, Thurs. 6:30PM. No text layer, so no quote.'
+  note: 'Bulletin image (read visually): "ST. ANNE CHURCH 205 Woodstown Highway Davidsville, PA 15928-0500";
+    Masses Sat. Oct. 17 4:00PM, Sun. Oct. 18 8:30AM, weekdays 8:00AM, Thurs. 6:30PM. No text layer, so
+    no quote.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

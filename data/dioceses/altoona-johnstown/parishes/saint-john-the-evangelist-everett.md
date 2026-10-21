@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-21
   quote: There are currently no bulletins available for St. John the Evangelist.
   note: Discover Mass page exists but carries no bulletin; not a live channel.
+promoted: 2026-10-21
 ---
 
 ## Publisher

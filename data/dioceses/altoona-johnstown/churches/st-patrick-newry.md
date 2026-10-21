@@ -25,14 +25,18 @@ evidence:
     Parish, Newry'
 - url: https://container.parishesonline.com/bulletins/14/0551/20261018B.pdf
   seen: 2026-10-21
-  quote: 'Saturday (Anticipated) …………………………………4:30 PM'
-  note: 'Page 1 of the 18 October 2026 bulletin: "Monday - Friday ... 8:00 AM; Saturday (Anticipated) 4:30 PM; Sunday 7:00 AM, 11:00 AM", under "704 Patrick Lane ... Newry, PA 16665".'
+  quote: Saturday (Anticipated) …………………………………4:30 PM
+  note: 'Page 1 of the 18 October 2026 bulletin: "Monday - Friday ... 8:00 AM; Saturday (Anticipated)
+    4:30 PM; Sunday 7:00 AM, 11:00 AM", under "704 Patrick Lane ... Newry, PA 16665".'
 - url: https://stpatricknewry.org/
   seen: 2026-10-21
-  quote: 'Saint Patrick Roman Catholic Church 704 Patrick Lane Newry, PA 16665'
+  quote: Saint Patrick Roman Catholic Church 704 Patrick Lane Newry, PA 16665
 - url: https://nominatim.openstreetmap.org/search?q=St+Patrick+Catholic+Church+Newry+PA&format=json
   seen: 2026-10-21
-  note: 'OpenStreetMap has "Saint Patrick Catholic Church" at 708 Patrick Lane, 40.3927283, -78.4330767. Same building (within 1 m of the GCatholic Plus Code point); the street number 708 versus the 704 in the bulletin, parish site, GCatholic and directory is OSM''s only difference.'
+  note: OpenStreetMap has "Saint Patrick Catholic Church" at 708 Patrick Lane, 40.3927283, -78.4330767.
+    Same building (within 1 m of the GCatholic Plus Code point); the street number 708 versus the 704
+    in the bulletin, parish site, GCatholic and directory is OSM's only difference.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

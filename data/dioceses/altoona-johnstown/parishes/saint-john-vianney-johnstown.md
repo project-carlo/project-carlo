@@ -7,22 +7,38 @@ publication: ['po-org:st-john-vianney-church-15909', 'lpi:0018000000QxAlOAAV', '
 group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1788/20261018B.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: 'Pastor / Parochial Administrator: Fr Timothy J Harris, T.O.R.'
-  note: 'ParishesOnline container 14/1788, issue of 18 Oct 2026, page 1 masthead: "Twinned Parishes of the DIOCESE OF ALTOONA-JOHNSTOWN: www.sjvcc.com", "29th Sunday in Ordinary Time, October 18, 2026". Page 2 holds both churches: sanctuary lamps "at T.C.O.T." and "at S.J.V.", collections for "Transfiguration" and "St John Vianney", and two Mass-intention lists, "S.J.V. Weekly Mass Intentions" (Mon-Fri 8:00 AM, Sat 4:00 PM, Sun 11:00 AM) and "T.C.O.T. Weekly Mass Intentions" (Mon, Wed, Fri 12:00 PM, Sat 6:00 PM, Sun 8:00 AM). Page 7 letter: "To my Beloved Parishioners of Transfiguration and St John Vianney". One bulletin, two churches.'
+  note: 'ParishesOnline container 14/1788, issue of 18 Oct 2026, page 1 masthead: "Twinned Parishes of
+    the DIOCESE OF ALTOONA-JOHNSTOWN: www.sjvcc.com", "29th Sunday in Ordinary Time, October 18, 2026".
+    Page 2 holds both churches: sanctuary lamps "at T.C.O.T." and "at S.J.V.", collections for "Transfiguration"
+    and "St John Vianney", and two Mass-intention lists, "S.J.V. Weekly Mass Intentions" (Mon-Fri 8:00
+    AM, Sat 4:00 PM, Sun 11:00 AM) and "T.C.O.T. Weekly Mass Intentions" (Mon, Wed, Fri 12:00 PM, Sat
+    6:00 PM, Sun 8:00 AM). Page 7 letter: "To my Beloved Parishioners of Transfiguration and St John Vianney".
+    One bulletin, two churches.'
 - url: https://parishesonline.com/organization/st-john-vianney-church-15909
-  seen: '2026-10-21'
-  note: '`probe po st-john-vianney-church-15909`: organization "St. John Vianney Church", 3513 William Penn Ave, website https://www.sjvcc.com, ids po-org:st-john-vianney-church-15909, lpi:0018000000QxAlOAAV, po-container:14/1788; latest issue 2026-10-18.'
+  seen: 2026-10-21
+  note: '`probe po st-john-vianney-church-15909`: organization "St. John Vianney Church", 3513 William
+    Penn Ave, website https://www.sjvcc.com, ids po-org:st-john-vianney-church-15909, lpi:0018000000QxAlOAAV,
+    po-container:14/1788; latest issue 2026-10-18.'
 - url: https://www.sjvcc.com/contact/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: 'Transfiguration Mass Schedule: Saturday Vigil: 6 PM Sunday Morning: 8 AM Mon, Wed, Fri: 12 Noon'
-  note: 'Parish site (probe url: ok, links po-org:st-john-vianney-church-15909) gives one Mass schedule for both churches and both addresses, "Saint John Vianney Catholic Church 3513 William Penn Avenue" and "Church of the Transfiguration 220 Oak Street East Conemaugh, PA 15909", with one pastor, Fr. Timothy Harris, T.O.R. The site has no separate bulletin page: it links ParishesOnline.'
+  note: 'Parish site (probe url: ok, links po-org:st-john-vianney-church-15909) gives one Mass schedule
+    for both churches and both addresses, "Saint John Vianney Catholic Church 3513 William Penn Avenue"
+    and "Church of the Transfiguration 220 Oak Street East Conemaugh, PA 15909", with one pastor, Fr.
+    Timothy Harris, T.O.R. The site has no separate bulletin page: it links ParishesOnline.'
 - url: https://parishesonline.com/organization/church-of-the-transfiguration-15909
-  seen: '2026-10-21'
-  note: 'ParishesOnline organizations "Church of the Transfiguration" (340 2Nd St, Conemaugh) and "Sacred Heart Church" (219 Oak St, Conemaugh) are both empty (`probe po`: "this organization does not publish a bulletin here now"), so Transfiguration has no bulletin channel of its own.'
+  seen: 2026-10-21
+  note: 'ParishesOnline organizations "Church of the Transfiguration" (340 2Nd St, Conemaugh) and "Sacred
+    Heart Church" (219 Oak St, Conemaugh) are both empty (`probe po`: "this organization does not publish
+    a bulletin here now"), so Transfiguration has no bulletin channel of its own.'
 - url: https://www.dioceseaj.org/parishes/
-  seen: '2026-10-21'
-  note: 'Directory: two parishes, Church of the Transfiguration Parish, Conemaugh (220 Oak Street 15909) and Saint John Vianney Parish, Mundys Corner (3513 William Penn Avenue 15909), both with homepage sjvcc.com; Mass times agree with the bulletin.'
+  seen: 2026-10-21
+  note: 'Directory: two parishes, Church of the Transfiguration Parish, Conemaugh (220 Oak Street 15909)
+    and Saint John Vianney Parish, Mundys Corner (3513 William Penn Avenue 15909), both with homepage
+    sjvcc.com; Mass times agree with the bulletin.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

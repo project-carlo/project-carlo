@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-21
   quote: 303 Lincoln Way East, Mcconnellsburg, PA 17233
   note: Discover Mass gives the same address; it has no bulletin.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

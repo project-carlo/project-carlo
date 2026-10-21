@@ -3,36 +3,36 @@ name: Saint Anne Parish, Johnstown
 website: https://sttheresejohnstown.com/bulletins/
 bulletin_provider: other
 provider_id: page-pdfs https://sttheresejohnstown.com/bulletins/
-publication:
-- url:https://sttheresejohnstown.com/bulletins/#st-annes
+publication: ['url:https://sttheresejohnstown.com/bulletins/#st-annes']
 group: ''
 evidence:
 - url: https://sttheresejohnstown.com/wp-content/uploads/2026/10/St-Annes-Bulletin-Oct-18.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: ST. ANNE’S CHURCH
   note: 'Masthead of the 18 Oct 2026 St. Anne issue (page 1): "FR. BERNARD KARMANOCKY, OFM, PASTOR / FR.
     FRANCIS BALESTINO, IN RESIDENCE", church 533 Woodland Avenue, mailing address 536 Decker Avenue, "Website:
     StThereseJohnstown.com". Mass intentions: Mon-Fri 7:00AM, Sat 5:30PM, Sun 9:00AM. It names St. Anne
     alone.'
 - url: https://sttheresejohnstown.com/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: Welcome to the St Therese and St Anne website.
   note: Shared WordPress site; homepage Liturgy Schedule lists "St Anne / Daily Mass - 7:00 AM / Monday,
     Tuesday, Wednesday, Friday / Saturday Vigil 5:30 PM / Sunday 9:00 AM" and a separate "St Anne" bulletin
     list.
 - url: https://sttheresejohnstown.com/bulletins/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: St Anne Oct 18
   note: 'Bulletins page lists St Anne Oct 18, then St Therese Oct 18, and so on back to spring: a separate
     St. Anne PDF every week.'
 - url: https://www.dioceseaj.org/parishes/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   note: 'Directory: Saint Anne Parish, Johnstown, 531 Woodland Avenue 15902, homepage sttheresejohnstown.com;
     Saturday 5:30 PM, Sunday 9:00 AM, Monday-Friday 7:00 AM.'
 - url: https://discovermass.com/church/st-anne-johnstown-pa/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: There are currently no bulletins available for St Anne.
   note: 'Discover Mass page (Visit Website: sttheresejohnstown.com) with no bulletins: not a live channel.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

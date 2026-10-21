@@ -9,10 +9,14 @@ evidence:
 - url: https://www.altoonacathedral.org/download/24/bulletin-2026/2617/october-18-2026.pdf
   seen: 2026-10-21
   quote: Serving the People of God in the City of Altoona Since 1851
-  note: 'Page 2 of the 18 October 2026 issue (2 pages, 3,296,001 bytes; page 1 is a pizzelle-party notice). Page 2 is the masthead: "THE CATHEDRAL OF THE BLESSED SACRAMENT, ONE CATHEDRAL SQUARE, Altoona, Pennsylvania 16601-3315", Mass times, office phone 814-944-4603. It names the cathedral alone.'
+  note: 'Page 2 of the 18 October 2026 issue (2 pages, 3,296,001 bytes; page 1 is a pizzelle-party notice).
+    Page 2 is the masthead: "THE CATHEDRAL OF THE BLESSED SACRAMENT, ONE CATHEDRAL SQUARE, Altoona, Pennsylvania
+    16601-3315", Mass times, office phone 814-944-4603. It names the cathedral alone.'
 - url: https://www.altoonacathedral.org/bulletin/
   seen: 2026-10-21
-  note: 'The Bulletin page lists dated PDFs at /download/24/bulletin-2026/<id>/<month>-<day>-2026.pdf, weekly from january-11-2026 to october-18-2026 (the newest), and archive pages for 2014-2025.'
+  note: The Bulletin page lists dated PDFs at /download/24/bulletin-2026/<id>/<month>-<day>-2026.pdf,
+    weekly from january-11-2026 to october-18-2026 (the newest), and archive pages for 2014-2025.
+promoted: 2026-10-21
 ---
 
 ## Publisher

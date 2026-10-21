@@ -26,7 +26,10 @@ evidence:
 - url: https://www.popnc.net/uploads/1/2/6/9/126924659/2026-10-18_bulletin.pdf
   seen: 2026-10-21
   quote: Rev. Mark E. Groeger
-  note: 'Cover of the 18 Oct 2026 bulletin: "811 Chestnut Avenue N. Cambria, PA 15714"; "Saturday: 4:00pm (Church) ... Sunday: 10:30am (Church)"; "WEEKDAY MASSES Monday, Wednesday, Thursday & Friday: 8:00am (Church)".'
+  note: 'Cover of the 18 Oct 2026 bulletin: "811 Chestnut Avenue N. Cambria, PA 15714"; "Saturday: 4:00pm
+    (Church) ... Sunday: 10:30am (Church)"; "WEEKDAY MASSES Monday, Wednesday, Thursday & Friday: 8:00am
+    (Church)".'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

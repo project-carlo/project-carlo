@@ -8,23 +8,33 @@ group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/0551/20261018B.pdf
   seen: 2026-10-21
-  quote: 'Rev. Allen P. Zeth'
-  note: 'Issue dated "October 18, 2026 The 29th Sunday in Ordinary Time" (5 pages). Page 1 masthead: "704 Patrick Lane P.O.Box 398 Newry, PA 16665 ... Website www.stpatricknewry.org" and "SAINT PATRICK PARISH EDUCATION CENTER". Its Mass schedule is St. Patrick alone: Mon-Fri 8:00 AM, Saturday (Anticipated) 4:30 PM, Sunday 7:00 AM and 11:00 AM. Searched all five pages for "Thomas More", "Roaring" and "Williamsburg": no hit.'
+  quote: Rev. Allen P. Zeth
+  note: 'Issue dated "October 18, 2026 The 29th Sunday in Ordinary Time" (5 pages). Page 1 masthead: "704
+    Patrick Lane P.O.Box 398 Newry, PA 16665 ... Website www.stpatricknewry.org" and "SAINT PATRICK PARISH
+    EDUCATION CENTER". Its Mass schedule is St. Patrick alone: Mon-Fri 8:00 AM, Saturday (Anticipated)
+    4:30 PM, Sunday 7:00 AM and 11:00 AM. Searched all five pages for "Thomas More", "Roaring" and "Williamsburg":
+    no hit.'
 - url: https://container.parishesonline.com/bulletins/14/0551/20260906B.pdf
   seen: 2026-10-21
-  quote: 'St. Thomas More Church.  You donations totaled $1,731.23.'
-  note: 'The only mention of Roaring Spring in the issues grepped (18 Oct, 27 Sep, 6 Sep, 5 Jul 2026): a thanks for a donation from St. Thomas More, not a shared schedule. Page 2.'
+  quote: St. Thomas More Church.  You donations totaled $1,731.23.
+  note: 'The only mention of Roaring Spring in the issues grepped (18 Oct, 27 Sep, 6 Sep, 5 Jul 2026):
+    a thanks for a donation from St. Thomas More, not a shared schedule. Page 2.'
 - url: https://stpatricknewry.org/
   seen: 2026-10-21
   quote: 'Sunday at St. Thomas More, Roaring Spring: 9:00 AM'
-  note: 'Home page, under "Administrator Father Allen P. Zeth" and the Mass Schedule. "Check Bulletin for Updates to the Schedule". The Roaring Spring Mass is a one-line pointer; the site is a separate parish site and its news page says "Click here for the church bulletin" (the ParishesOnline link).'
+  note: Home page, under "Administrator Father Allen P. Zeth" and the Mass Schedule. "Check Bulletin for
+    Updates to the Schedule". The Roaring Spring Mass is a one-line pointer; the site is a separate parish
+    site and its news page says "Click here for the church bulletin" (the ParishesOnline link).
 - url: https://www.parishesonline.com/find/st-patrick-church-16665
   seen: 2026-10-21
-  note: 'Linked from the home page. `probe po st-patrick-church-16665`: LPi 0018000000Qc2MSAAZ, website https://www.stpatricknewry.org/, address 704 Patrick Lane, Newry, container 14/0551; latest issue 2026-10-18 (previous weeks 10-11, 10-04, 09-27 also present).'
+  note: 'Linked from the home page. `probe po st-patrick-church-16665`: LPi 0018000000Qc2MSAAZ, website
+    https://www.stpatricknewry.org/, address 704 Patrick Lane, Newry, container 14/0551; latest issue
+    2026-10-18 (previous weeks 10-11, 10-04, 09-27 also present).'
 - url: https://discovermass.com/church/st-patrick-newry-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for St. Patrick.
   note: 'A Discover Mass page exists but carries no bulletin: not a live channel.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

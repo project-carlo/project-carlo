@@ -26,10 +26,15 @@ evidence:
 - url: https://discovermass.com/church/our-lady-of-mount-carmel-altoona-pa/
   seen: 2026-10-21
   quote: Current Bulletin
-  note: 'The 2026-10-18 bulletin (PDF behind the Current Bulletin link) page 1: "806 11thS treetA ltoona,P A1 6602" (garbled text layer) and "LITURGYS CHEDULE: Eucharist: Saturday 4:00 p.m. Sunday 8:00 a.m. and1 1:00 a.m. Weekdays: Monday-Friday7 :00a .m."; page 3 lists intentions "SUNDAY—MT. CARMEL 8 :00 A.M. ... 11:00 A.M.".'
+  note: 'The 2026-10-18 bulletin (PDF behind the Current Bulletin link) page 1: "806 11thS treetA ltoona,P
+    A1 6602" (garbled text layer) and "LITURGYS CHEDULE: Eucharist: Saturday 4:00 p.m. Sunday 8:00 a.m.
+    and1 1:00 a.m. Weekdays: Monday-Friday7 :00a .m."; page 3 lists intentions "SUNDAY—MT. CARMEL 8 :00
+    A.M. ... 11:00 A.M.".'
 - url: https://nominatim.openstreetmap.org/search?format=json&q=806+11th+Street+Altoona+PA
   seen: 2026-10-21
-  note: 'OSM geocoder returns "806, 11th Street, Fairview, Altoona" at 40.51498, -78.39715; GCatholic Plus Code 87G3GJ73+Q5 decodes to 40.51444, -78.39706 (about 60 m apart).'
+  note: OSM geocoder returns "806, 11th Street, Fairview, Altoona" at 40.51498, -78.39715; GCatholic Plus
+    Code 87G3GJ73+Q5 decodes to 40.51444, -78.39706 (about 60 m apart).
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

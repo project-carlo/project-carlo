@@ -26,10 +26,14 @@ evidence:
 - url: https://discovermass.com/church/our-lady-of-assumption-altoona-pa/
   seen: 2026-10-21
   quote: Our Lady of Assumption Chapel
-  note: 'Discover Mass lists this chapel as a church of its own, with the same 2026-10-18 bulletin as Mount Carmel. That bulletin''s page 3 intentions list for the week gives, under its own heading, "ASSUMPTION CHAPEL 9 :30 A.M. M ary Jane Feigh (Husband, John)" (Sunday 25 October).'
+  note: Discover Mass lists this chapel as a church of its own, with the same 2026-10-18 bulletin as Mount
+    Carmel. That bulletin's page 3 intentions list for the week gives, under its own heading, "ASSUMPTION
+    CHAPEL 9 :30 A.M. M ary Jane Feigh (Husband, John)" (Sunday 25 October).
 - url: https://nominatim.openstreetmap.org/search?format=json&q=900+Hileman+Street+Altoona+PA
   seen: 2026-10-21
-  note: 'OSM geocoder returns "900, Hileman Street, Pleasant Valley, Altoona" at 40.50300, -78.38864; GCatholic Plus Code 87G3GJ36+6H decodes to 40.50306, -78.38856 (under 10 m apart).'
+  note: OSM geocoder returns "900, Hileman Street, Pleasant Valley, Altoona" at 40.50300, -78.38864; GCatholic
+    Plus Code 87G3GJ36+6H decodes to 40.50306, -78.38856 (under 10 m apart).
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

@@ -1,7 +1,7 @@
 ---
 parish: queen-of-archangels-clarence
 name: Queen of Archangels
-line1: '102 Church Street'
+line1: 102 Church Street
 line2: ''
 city: Clarence
 state: PA
@@ -26,15 +26,21 @@ evidence:
 - url: https://sites.google.com/view/queenofarchangelsparish/mass-times
   seen: 2026-10-21
   quote: The Clarence Church is located at 102 Church Street, Clarence, PA
-  note: 'Mass Times page: Saturday 4:30 PM, Sunday 10:00 AM, Tuesday 7:00 PM, Wednesday and Thursday and Friday 8:00 AM, all "Clarence Church"; holy-day Mass 8:00 AM and 7:00 PM.'
+  note: 'Mass Times page: Saturday 4:30 PM, Sunday 10:00 AM, Tuesday 7:00 PM, Wednesday and Thursday and
+    Friday 8:00 AM, all "Clarence Church"; holy-day Mass 8:00 AM and 7:00 PM.'
 - url: https://queenofarchangels-bulletins.up.railway.app/Q5wDq/10-18-2026.pdf/raw
   seen: 2026-10-21
   quote: 10AM Mass—CHURCH
-  note: 'Page 1 of the 18 Oct 2026 bulletin; "SATURDAY 4:30PM Clarence Church"; weekday Masses on 22 and 23 Oct 8AM Church (19-21 Oct NO MASS that week).'
+  note: Page 1 of the 18 Oct 2026 bulletin; "SATURDAY 4:30PM Clarence Church"; weekday Masses on 22 and
+    23 Oct 8AM Church (19-21 Oct NO MASS that week).
 - url: https://nominatim.openstreetmap.org/search?q=Queen+of+Archangels+Clarence+PA&format=json
   seen: 2026-10-21
-  quote: Queen of Archangels Catholic Church, 102, Church Street, Clarence, Snow Shoe Township, Centre County, Pennsylvania, 16829, United States
-  note: 'OSM way 895104532, 41.0538430, -77.9446507, matches GCatholic''s Plus Code point (41.05381, -77.94456) and the ParishesOnline org (41.054015, -77.94457). Discover Mass''s map link gives 41.0537, -77.9528, about 600 m west: not followed.'
+  quote: Queen of Archangels Catholic Church, 102, Church Street, Clarence, Snow Shoe Township, Centre
+    County, Pennsylvania, 16829, United States
+  note: 'OSM way 895104532, 41.0538430, -77.9446507, matches GCatholic''s Plus Code point (41.05381, -77.94456)
+    and the ParishesOnline org (41.054015, -77.94457). Discover Mass''s map link gives 41.0537, -77.9528,
+    about 600 m west: not followed.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   quote: There are currently no bulletins available for St. Thomas.
   note: Discover Mass has a page for each church of the pair, none with a bulletin (also seven-dolors-of-the-b-v-m-clearville-pa).
     Not a live channel.
+promoted: 2026-10-21
 ---
 
 ## Publisher

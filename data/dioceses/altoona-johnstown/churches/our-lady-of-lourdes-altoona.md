@@ -23,6 +23,7 @@ evidence:
   note: 'Listed in Diocese of Altoona-Johnstown parish directory as ''Our Lady of Lourdes'', 2716 Broad
     Avenue, Altoona, PA, 16601; kind: church of Our Lady of Lourdes Parish, Altoona (blair county); group:
     Our Lady of Lourdes Parish, Altoona'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

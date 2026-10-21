@@ -1,6 +1,6 @@
 ---
 parish: saint-john-vianney-johnstown
-name: "Church of the Transfiguration"
+name: Church of the Transfiguration
 line1: 220 Oak Street
 line2: ''
 city: Conemaugh
@@ -24,16 +24,23 @@ evidence:
     220 Oak Street, Conemaugh, PA, 15909; kind: church of Church of the Transfiguration Parish, Conemaugh
     (cambria county); group: Church of the Transfiguration Parish, Conemaugh'
 - url: https://container.parishesonline.com/bulletins/14/1788/20261018B.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: T.C.O.T. Weekly Mass Intentions
-  note: '18 Oct 2026 bulletin of the twinned parishes, page 2: Monday 12:00 PM, Wednesday 12:00 PM, Friday 12:00 PM, Saturday 6:00 PM (24 Oct), Sunday 8:00 AM (25 Oct); attendance "6:00 PM — 34; 8:00AM — 67". "T.C.O.T." is the Church of the Transfiguration.'
+  note: '18 Oct 2026 bulletin of the twinned parishes, page 2: Monday 12:00 PM, Wednesday 12:00 PM, Friday
+    12:00 PM, Saturday 6:00 PM (24 Oct), Sunday 8:00 AM (25 Oct); attendance "6:00 PM — 34; 8:00AM — 67".
+    "T.C.O.T." is the Church of the Transfiguration.'
 - url: https://www.sjvcc.com/contact/
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: Church of the Transfiguration 220 Oak Street East Conemaugh, PA 15909
-  note: 'Parish site contact page: "Transfiguration Mass Schedule: Saturday Vigil: 6 PM Sunday Morning: 8 AM Mon, Wed, Fri: 12 Noon"; office (814) 535-2250; First Friday Mass 5:30 (the site says "5:30 AM", the directory "5:30 PM": a typo on the site, not resolved).'
+  note: 'Parish site contact page: "Transfiguration Mass Schedule: Saturday Vigil: 6 PM Sunday Morning:
+    8 AM Mon, Wed, Fri: 12 Noon"; office (814) 535-2250; First Friday Mass 5:30 (the site says "5:30 AM",
+    the directory "5:30 PM": a typo on the site, not resolved).'
 - url: https://parishesonline.com/organization/sacred-heart-church-15909
-  seen: '2026-10-21'
-  note: 'ParishesOnline lists an empty organization "Sacred Heart Church" at 219 Oak St, Conemaugh, the same point as GCatholic''s Transfiguration (an older name or a former parish building; not settled). Its other empty org "Church of the Transfiguration" is at 340 2nd St, 0.2 mi away.'
+  seen: 2026-10-21
+  note: ParishesOnline lists an empty organization "Sacred Heart Church" at 219 Oak St, Conemaugh, the
+    same point as GCatholic's Transfiguration (an older name or a former parish building; not settled).
+    Its other empty org "Church of the Transfiguration" is at 340 2nd St, 0.2 mi away.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

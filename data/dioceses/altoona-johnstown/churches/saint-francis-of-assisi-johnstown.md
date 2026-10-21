@@ -24,9 +24,12 @@ evidence:
     Avenue, Johnstown, PA, 15906; kind: church of Saint Francis of Assisi Parish, Johnstown (cambria county);
     group: Saint Francis of Assisi Parish, Johnstown'
 - url: https://www.stfrancisofassisijohnstown.com/wp-content/uploads/2026/10/Bulletin-October-18-2026.pdf
-  seen: '2026-10-21'
+  seen: 2026-10-21
   quote: St. Francis of Assisi, 120 Barron Avenue
-  note: '18 Oct 2026 bulletin, page 1: "MASS SCHEDULE – Monday – 9:00AM, Tuesday – 6:15PM, Wednesday – Saturday – 9:00AM" and "Saturday Vigil– 4:00PM, Sunday – 7:30AM & 9:30AM"; address "120 Barron Avenue, Johnstown, PA 15906".'
+  note: '18 Oct 2026 bulletin, page 1: "MASS SCHEDULE – Monday – 9:00AM, Tuesday – 6:15PM, Wednesday –
+    Saturday – 9:00AM" and "Saturday Vigil– 4:00PM, Sunday – 7:30AM & 9:30AM"; address "120 Barron Avenue,
+    Johnstown, PA 15906".'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

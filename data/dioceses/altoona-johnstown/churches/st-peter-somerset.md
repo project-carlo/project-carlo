@@ -25,8 +25,10 @@ evidence:
     Peter Parish, Somerset'
 - url: https://www.stpetersparish.com/site_docs/10648.pdf
   seen: 2026-10-21
-  quote: '433 WEST CHURCH STREET'
-  note: 'Masthead of the 18 October 2026 bulletin: "ST. PETER’S CATHOLIC CHURCH", "433 WEST CHURCH STREET SOMERSET, PA. 15501"; Sat. 4PM, Sun. 8AM, 10AM, 12:15PM.'
+  quote: 433 WEST CHURCH STREET
+  note: 'Masthead of the 18 October 2026 bulletin: "ST. PETER’S CATHOLIC CHURCH", "433 WEST CHURCH STREET
+    SOMERSET, PA. 15501"; Sat. 4PM, Sun. 8AM, 10AM, 12:15PM.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

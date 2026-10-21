@@ -9,11 +9,14 @@ evidence:
 - url: https://www.sacredheartaltoona.org/bulletin/bulletin.pdf
   seen: 2026-10-21
   quote: SACRED HEART ROMAN CATHOLIC CHURCH
-  note: 'Page 1 of the issue dated October 18, 2026 (9 pages, text layer, 4,119,507 bytes, Last-Modified Fri 16 Oct 2026). The masthead names Sacred Heart alone; the directory section lists a Rev. as Pastor.'
+  note: Page 1 of the issue dated October 18, 2026 (9 pages, text layer, 4,119,507 bytes, Last-Modified
+    Fri 16 Oct 2026). The masthead names Sacred Heart alone; the directory section lists a Rev. as Pastor.
 - url: https://www.sacredheartaltoona.org/bulletin/bulletin.pdf
   seen: 2026-10-21
   quote: 'Saturday: (Vigil) 5:30 P.M. • Sunday: 7:45 a.m., 10:00 a.m., 12:00 Noon'
-  note: Mass schedule on page 1 of the same issue; page 2 is "MASS SCHEDULE AND INTENTIONS" for this church only.
+  note: Mass schedule on page 1 of the same issue; page 2 is "MASS SCHEDULE AND INTENTIONS" for this church
+    only.
+promoted: 2026-10-21
 ---
 
 ## Publisher

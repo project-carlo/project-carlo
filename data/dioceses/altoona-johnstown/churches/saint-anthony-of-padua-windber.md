@@ -26,14 +26,19 @@ evidence:
 - url: http://www.webparish.com/pdfs/101826.pdf
   seen: 2026-10-21
   quote: 12:00pm Mass at St. Anthony of Padua
-  note: St. Anthony's own bulletin for 18 Oct 2026 lists Mon 9:00am, Tue 12:00pm and Sat Vigil 4:00pm Masses "at St. Anthony of Padua" and Sunday "10:00am (SA)".
+  note: St. Anthony's own bulletin for 18 Oct 2026 lists Mon 9:00am, Tue 12:00pm and Sat Vigil 4:00pm
+    Masses "at St. Anthony of Padua" and Sunday "10:00am (SA)".
 - url: http://www.webparish.com/pdfs/SEAS2026-10-25Bulletin.pdf
   seen: 2026-10-21
   quote: 10:00 AM (SA) Anthony DiLoreto by Wife, Joann & Family
-  note: 'The Seton bulletin of 25 Oct 2026 lists Sunday 10:00 AM with the code (SA), Sat 4:00 PM (SA), Mon 9:00 AM (SA), Tue 12:00 PM (SA). The code is not expanded in the bulletin; (SA) = St. Anthony of Padua is read from the Seton site''s Mass page ("Monday - 9:00 AM at St. Anthony of Padua").'
+  note: The Seton bulletin of 25 Oct 2026 lists Sunday 10:00 AM with the code (SA), Sat 4:00 PM (SA),
+    Mon 9:00 AM (SA), Tue 12:00 PM (SA). The code is not expanded in the bulletin; (SA) = St. Anthony
+    of Padua is read from the Seton site's Mass page ("Monday - 9:00 AM at St. Anthony of Padua").
 - url: https://nominatim.openstreetmap.org/search?street=2201+Graham+Avenue&city=Windber&state=PA&format=json
   seen: 2026-10-21
-  note: 'OpenStreetMap (Nominatim): "Saint Anthony Catholic Church, 2201, Graham Avenue, Windber, Somerset County, Pennsylvania" at 40.2309983, -78.8245395, within 40 m of the GCatholic Plus Code point.'
+  note: 'OpenStreetMap (Nominatim): "Saint Anthony Catholic Church, 2201, Graham Avenue, Windber, Somerset
+    County, Pennsylvania" at 40.2309983, -78.8245395, within 40 m of the GCatholic Plus Code point.'
+promoted: 2026-10-21
 ---
 
 ## Holds Mass

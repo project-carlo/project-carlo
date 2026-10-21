@@ -9,23 +9,36 @@ evidence:
 - url: https://queenofarchangels-bulletins.up.railway.app/Q5wDq/10-18-2026.pdf/raw
   seen: 2026-10-21
   quote: Queen of Archangels Roman Catholic Parish
-  note: 'Page 1 of the 18 Oct 2026 issue (4 pages): masthead "Queen of Archangels Roman Catholic Parish ... Shaped by the faithful Catholics of Clarence and Snow Shoe", pastor Rev. Fr. Matthew Laffey, O.S.B., "CHURCH ADDRESS: 102 Church Street, Clarence, PA", "CHAPEL ADDRESS: 204 S. Fourth Street, Snow Shoe, PA". One Mass-intention list covers both sites.'
+  note: 'Page 1 of the 18 Oct 2026 issue (4 pages): masthead "Queen of Archangels Roman Catholic Parish
+    ... Shaped by the faithful Catholics of Clarence and Snow Shoe", pastor Rev. Fr. Matthew Laffey, O.S.B.,
+    "CHURCH ADDRESS: 102 Church Street, Clarence, PA", "CHAPEL ADDRESS: 204 S. Fourth Street, Snow Shoe,
+    PA". One Mass-intention list covers both sites.'
 - url: https://queenofarchangels-bulletins.up.railway.app/Q5wDq/10-18-2026.pdf/raw
   seen: 2026-10-21
   quote: 7:30AM Mass—CHAPEL
-  note: 'Page 1: "NORMAL WEEKEND MASS SCHEDULE SATURDAY 4:30PM Clarence Church; SUNDAY 7:30AM Snow Shoe Chapel; SUNDAY 10:00AM Clarence Church". The week of 19-21 Oct is marked NO MASS (the site banner says "Schedule Change: No weekday Masses on Tuesday, Oct. 20 & Wednesday, Oct. 21").'
+  note: 'Page 1: "NORMAL WEEKEND MASS SCHEDULE SATURDAY 4:30PM Clarence Church; SUNDAY 7:30AM Snow Shoe
+    Chapel; SUNDAY 10:00AM Clarence Church". The week of 19-21 Oct is marked NO MASS (the site banner
+    says "Schedule Change: No weekday Masses on Tuesday, Oct. 20 & Wednesday, Oct. 21").'
 - url: https://sites.google.com/view/queenofarchangelsparish/announcements
   seen: 2026-10-21
   quote: Weekly Bulletins
-  note: 'Google Sites page (reached from queenofarchangels.com, which redirects there). Its "Weekly Bulletins" section is an iframe, https://qoaa-bulletin-embed-production.up.railway.app/, holding buttons 09/13/2026 ... 10/18/2026 linking queenofarchangels-bulletins.up.railway.app/Q5wDq/<MM-DD-YYYY>.pdf/raw. fetch:check 2026-10-21 with recipe page-pdfs on the embed page picked 10-18-2026.pdf/raw ("current", url_date 2026-10-18, 430,001 bytes). page-pdfs on the Google Sites page itself finds no PDF links (the buttons are inside the iframe).'
+  note: Google Sites page (reached from queenofarchangels.com, which redirects there). Its "Weekly Bulletins"
+    section is an iframe, https://qoaa-bulletin-embed-production.up.railway.app/, holding buttons 09/13/2026
+    ... 10/18/2026 linking queenofarchangels-bulletins.up.railway.app/Q5wDq/<MM-DD-YYYY>.pdf/raw. fetch:check
+    2026-10-21 with recipe page-pdfs on the embed page picked 10-18-2026.pdf/raw ("current", url_date
+    2026-10-18, 430,001 bytes). page-pdfs on the Google Sites page itself finds no PDF links (the buttons
+    are inside the iframe).
 - url: https://www.dioceseaj.org/clergy/
   seen: 2026-10-21
   quote: Laffey, Rev. Matthew, OSB
-  note: 'Listed with "Queen of Archanges Parish, Clarence -Pastor" (sic). No other parish is his.'
+  note: Listed with "Queen of Archanges Parish, Clarence -Pastor" (sic). No other parish is his.
 - url: https://discovermass.com/church/queen-of-archangels-clarence-pa/
   seen: 2026-10-21
   quote: There are currently no bulletins available for Queen of Archangels.
-  note: 'Discover Mass pages for Clarence and Snow Shoe (queen-of-archangels-snow-shoe-pa) both have empty Bulletins tabs; the Clarence page links http://www.queenofarchangels.com. ParishesOnline org queen-of-archangels-church (LPi 0018000000QxAmfAAF): "no publications". None is a channel.'
+  note: 'Discover Mass pages for Clarence and Snow Shoe (queen-of-archangels-snow-shoe-pa) both have empty
+    Bulletins tabs; the Clarence page links http://www.queenofarchangels.com. ParishesOnline org queen-of-archangels-church
+    (LPi 0018000000QxAmfAAF): "no publications". None is a channel.'
+promoted: 2026-10-21
 ---
 
 ## Publisher

@@ -9,13 +9,23 @@ evidence:
 - url: https://stbenedictchurch.org/files/2026/10/Bulletin-101826-complete.pdf
   seen: 2026-10-21
   quote: Angel Tree Program
-  note: 'The 18 October 2026 issue (14 pages; downloaded with the fetch client, since SiteGround sgcaptchas curl). Pages 1-3 are images: I rendered page 1 and read it. It is headed "St. Benedict Church, OCTOBER 18, 2026 | 29TH SUNDAY ORDINARY TIME", "MASS SCHEDULE Saturday | 5:00pm Vigil Sunday | 8:30 am & 10:30 am", "Weekday Masses Monday & Friday | 8:00 am Tuesday & Thursday | 12:05 pm Wednesday | 9:00 am", and "GET IN TOUCH 2310 Bedford Street Johnstown, PA 15904 814-266-9718 sbpastor@stbenedictchurch.org www.stbenedictchurch.org". It names St. Benedict alone. The quote is from the text layer of a later page.'
+  note: 'The 18 October 2026 issue (14 pages; downloaded with the fetch client, since SiteGround sgcaptchas
+    curl). Pages 1-3 are images: I rendered page 1 and read it. It is headed "St. Benedict Church, OCTOBER
+    18, 2026 | 29TH SUNDAY ORDINARY TIME", "MASS SCHEDULE Saturday | 5:00pm Vigil Sunday | 8:30 am & 10:30
+    am", "Weekday Masses Monday & Friday | 8:00 am Tuesday & Thursday | 12:05 pm Wednesday | 9:00 am",
+    and "GET IN TOUCH 2310 Bedford Street Johnstown, PA 15904 814-266-9718 sbpastor@stbenedictchurch.org
+    www.stbenedictchurch.org". It names St. Benedict alone. The quote is from the text layer of a later
+    page.'
 - url: https://stbenedictchurch.org/about-us/weekly-bulletin/
   seen: 2026-10-21
-  note: 'St. Benedict''s Weekly Bulletin page (WordPress on SiteGround; read in headed Chrome) links /files/2026/10/Bulletin-101826-complete.pdf, Bulletin-101126-complete.pdf and Bulletin-100426-complete.pdf: one PDF per week, current. The home page links here.'
+  note: 'St. Benedict''s Weekly Bulletin page (WordPress on SiteGround; read in headed Chrome) links /files/2026/10/Bulletin-101826-complete.pdf,
+    Bulletin-101126-complete.pdf and Bulletin-100426-complete.pdf: one PDF per week, current. The home
+    page links here.'
 - url: https://www.dioceseaj.org/parishes/
   seen: 2026-10-21
-  note: 'Directory lists Saint Benedict, 2310 Bedford Street, Johnstown 15904, homepage stbenedictchurch.org; Saturday 5:00 PM, Sunday 8:30 AM and 10:30 AM, weekdays as the bulletin.'
+  note: Directory lists Saint Benedict, 2310 Bedford Street, Johnstown 15904, homepage stbenedictchurch.org;
+    Saturday 5:00 PM, Sunday 8:30 AM and 10:30 AM, weekdays as the bulletin.
+promoted: 2026-10-21
 ---
 
 ## Publisher

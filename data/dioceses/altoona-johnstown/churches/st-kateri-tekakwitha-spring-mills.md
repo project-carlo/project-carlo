@@ -26,11 +26,16 @@ evidence:
 - url: http://www.stkaterichurch.org/bulletins/Bulletin10.11.26.pdf
   seen: 2026-10-21
   quote: St. Kateri Masses for the week
-  note: 'Bulletin of 10 Oct 2026, page 1 masthead: "ST. KATERI TEKAKWITHA CATHOLIC CHURCH PO Box 159 3503 Penns Valley Rd, Spring Mills, PA 16875"; Mass schedule "St. Kateri Church: 12:00 p.m. Sunday". Page 2: Sunday 11 Oct 12:00 PM and Sunday 18 Oct 12:00 PM intentions; a communion service Tuesday 13 Oct at 11:00 AM; the rosary before Mass at 11:30 am.'
+  note: 'Bulletin of 10 Oct 2026, page 1 masthead: "ST. KATERI TEKAKWITHA CATHOLIC CHURCH PO Box 159 3503
+    Penns Valley Rd, Spring Mills, PA 16875"; Mass schedule "St. Kateri Church: 12:00 p.m. Sunday". Page
+    2: Sunday 11 Oct 12:00 PM and Sunday 18 Oct 12:00 PM intentions; a communion service Tuesday 13 Oct
+    at 11:00 AM; the rosary before Mass at 11:30 am.'
 - url: http://www.stkaterichurch.org/bulletin.html
   seen: 2026-10-21
   quote: Our most recent bulletins are available for download below.
-  note: 'The parish''s own site, Bulletins page (title "Saint Kateri Tekakwitha | Roman Catholic Church"; Spring Mills PA 16875; Mass, Bulletins, Sacraments pages) hosts the shared bulletin.'
+  note: The parish's own site, Bulletins page (title "Saint Kateri Tekakwitha | Roman Catholic Church";
+    Spring Mills PA 16875; Mass, Bulletins, Sacraments pages) hosts the shared bulletin.
+promoted: 2026-10-21
 ---
 
 ## Holds Mass
