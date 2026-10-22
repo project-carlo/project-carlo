@@ -150,6 +150,11 @@ keep it current rather than a log.
   (smmlb.org and newkensingtoncatholic.org both embed 001RP00000lUmSRYA0, container 14/2000).
   GCatholic's parish websites can be squatted (mountsaintpeter.org) or dead.
 
+- **Discover Mass here:** many parishes have empty church pages ("Shucks! There are no
+  bulletins available"), not channels. One issue can sit under both partners' slugs as
+  byte-identical files (Apollo/East Vandergrift): compare MD5s, record both slugs on one row.
+  evcatholic.org (Wix) challenges curl on its homepage, but `/bulletins` answers.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
