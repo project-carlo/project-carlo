@@ -106,6 +106,12 @@ keep it current rather than a log.
   is on Discover Mass): the parish site's "Bulletin" menu link shows the real channel.
 - `tools/fill_record.py` fills a just-created record from a small spec file.
 
+- **Diocese-template sites (`*.wpengine`) that 403 `probe url`** often answer curl with a
+  browser User-Agent (seasnh.org). Reposted container issues keep the container's file names
+  (`14-1083.MM.DD.YYYY.pdf`, Squarespace `/s/20261025B.pdf`). The GCatholic Plus Code and the
+  directory pin agree within ~20 m here; LPi org points don't. The directory/GCatholic address
+  can be an old office (Sacred Heart, Jeannette: 504 Cowan Ave vs the masthead's 310 N 7th St).
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
