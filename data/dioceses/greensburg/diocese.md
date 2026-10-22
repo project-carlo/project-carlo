@@ -85,6 +85,19 @@ keep it current rather than a log.
   house numbers are interpolated, not evidence. Send a generic User-Agent
   (`project-carlo-diocese-research`), never a personal email or name.
 
+- **Pin a recipe on diocese-template sites.** Unpinned, `fetch:check` guesses
+  `page-pdfs <home>/` and picks the diocese's footer privacy-policy PDF while reporting "ok":
+  pin `dated-post <site>/bulletins/` and check `source_url`. These sites post one dFlip
+  flipbook per issue whose PDF (`wp-content/uploads/<yyyy>/<mm>/*.pdf`) downloads plainly even
+  where the page answers 403.
+- **A ParishesOnline org page can render blank** while `probe po` still lists issues
+  (st-james-church-15670, 2026-10-22), and the PO fetch then fails; re-check before blaming
+  the row. LPi org coordinates can be ~15 km off: use the GCatholic Plus Code.
+- **Partnerships change faster than the directory.** The "Official" appointment posts
+  (plain HTML, e.g. https://www.dioceseofgreensburg.org/official-june-20-2026/) date splits
+  the "Partner Parishes" field hasn't caught up with (St. Sylvester left St. Ambrose/St.
+  Matthew in July 2026).
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
