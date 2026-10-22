@@ -89,6 +89,9 @@ keep it current rather than a log.
   pick a sidebar PDF (`Calendar.pdf` at saint-edward.org) and still report "ok"; issue files
   here start with a date (`MMDD189.pdf`, `MMDDYY.pdf`, `MM-DD-YY-<n>OT.pdf`). The issue PDF is
   in each post's dFlip data with escaped slashes (`sed 's#\\/#/#g'`, grep `uploads/2026/`).
+  Month-named issues (`October-25-2026.pdf`, mpcatholicchurches.org) need
+  `filename=*-20??.pdf` instead. A doubled-letter text layer ("SSaattuurrddaayy") still
+  passes `recheck` when quoted verbatim.
   stannerostraver.org's weekly `Bulletin-announcement-*.pdf` is the diocese's announcement
   packet, not a bulletin.
 - **Pin a recipe on diocese-template sites.** Unpinned, `fetch:check` guesses
