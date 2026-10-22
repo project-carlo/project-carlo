@@ -4,6 +4,9 @@ state: PA
 website: https://dioceseofgreensburg.org
 status: exploring
 gcatholic: gree1
+city_aliases:
+  Marguerite: Greensburg
+  South Greensburg: Greensburg
 ---
 
 ## Sources
@@ -50,6 +53,18 @@ Fill this in as you find them (see data/dioceses/README.md, "Sources").
 Which publishers print this diocese's bulletins, how to read each, and which sites block the
 sandbox and where their bulletins are instead. Agents researching parishes start here, so
 keep it current rather than a log.
+
+- **ParishesOnline is the main publisher here** (containers `14/xxxx`), even where a parish
+  site self-hosts the PDFs (pbcatholic.org's uploads ran two weeks behind its container). The
+  LPi geo-search (`.data.items[]`, `distance=6`) around a town lists every organization,
+  including second organizations of partners that share one container: `probe po` each and
+  compare containers. Partner pairs go both ways: St. Bruno and St. Paul share 14/1234; Our
+  Lady of Grace and St. Benedict keep their own. Canva image-only issues carry text only on the
+  LPi ad page, whose footer ("St. Paul and St. Bruno Parishes - South Greensburg, PA 14-1234")
+  is a recheckable quote; render page 1 for the masthead.
+- **Diocese-hosted WordPress parish sites** share one template, bulletin at
+  `/bulletin/read-our-weekly-bulletins/`. Some answer 403 to `probe url`
+  (blessedsacramentcathedral.org); headed `visit.py --bulletin` reads them.
 
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
