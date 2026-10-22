@@ -128,6 +128,13 @@ keep it current rather than a log.
   one page curl plus one download. Some template sites 403 even a browser User-Agent
   (saintflorian.org, sjbperry.org) but open headed.
 
+- **eCatholic** (youghcatholic.org = 36088): 403 to `probe url` and curl, opens headed;
+  `files.ecatholic.com/<id>/bulletins/<Saturday yyyymmdd>.pdf` downloads plainly, and the
+  plain `ecatholic` fetch works headed. Diocesan-printed eCatholic issues (footer "View this
+  bulletin online at www.DiscoverMass.com") also sit on Discover Mass under one church's slug:
+  record both ids on the row. Their text layer alternates clean/letter-spaced week to week.
+  Nominatim answers 429 after two quick requests.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
