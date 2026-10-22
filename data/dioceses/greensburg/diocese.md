@@ -78,6 +78,13 @@ keep it current rather than a log.
 - **Sites that drop `probe url` and `recheck` connections** ("RemoteDisconnected":
   stvincentbasilica.org) may still answer plain curl; quote the bulletin instead.
 
+- **Self-hosted pairs:** some partners have empty LPi orgs and self-host one shared bulletin
+  (stmartinstjoseph.org: 403 to plain fetches, `dated-post https://www.stmartinstjoseph.org/bulletin/bulletins/`
+  headed; saintcecilia.net: `page-pdfs`, file names carry the Wednesday upload date).
+- **Geocoding:** Overpass resets connections from the sandbox; Nominatim reverse works but its
+  house numbers are interpolated, not evidence. Send a generic User-Agent
+  (`project-carlo-diocese-research`), never a personal email or name.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
