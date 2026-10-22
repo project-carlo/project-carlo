@@ -163,6 +163,15 @@ def parse_date(
         if parsed is not None:
             return parsed
 
+    # Or as MMDDYYYY ("10112026.jpg", St. Anne, Davidsville's Wix image). Only a
+    # year next to the reference date's, so an eight-digit id doesn't read as one.
+    for match in re.finditer(r"(?<!\d)(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(20\d{2})(?!\d)", normalized):
+        month, day, match_year = (int(part) for part in match.groups())
+        if abs(match_year - reference_date.year) <= 1:
+            parsed = safe_date(match_year, month, day)
+            if parsed is not None:
+                return parsed
+
     # Slugs and file names join words with hyphens or underscores
     # ("september-27-twenty-sixth-sunday", "Bulletin_Sept_27_2026.pdf"), and
     # abbreviations end in a period ("Sept. 27"), where the month-name

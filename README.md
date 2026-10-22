@@ -517,6 +517,13 @@ changes rather than guessing, and no change made for another site can change
 what it picks. `fetch:check` prints the recipe that reproduces each pick it
 guessed; pin it once the pick is right.
 
+A shared page can be restricted to one parish's PDFs with a filename glob:
+`page-pdfs https://example.org/bulletins filename=St-Annes-Bulletin*.pdf`.
+The filter matches the decoded file name, ignores case and query parameters,
+and runs before choosing an issue. Patterns cannot contain whitespace. If
+no file matches, the fetch fails. Use a page that lists the newest issue first
+so the fallback also keeps the latest matching bulletin when uploads are late.
+
 When a site needs something new, add a collector rather than a branch inside
 an existing one, and record the site (below).
 

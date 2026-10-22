@@ -102,6 +102,7 @@ def page_pdf_candidates(
     *, page: PageLike, base_url: str, reference_date: date,
 ) -> list[Candidate]:
     """Every PDF the page in the tab offers: its links, else its markup."""
+    base_url = document_base_url(_rendered_html(page), base_url)
     candidates: list[Candidate] = []
     for anchor in page.query_selector_all("a[href]"):
         href = anchor.get_attribute("href")
@@ -201,6 +202,20 @@ _VOID_TAGS = frozenset({
     "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
     "param", "source", "track", "wbr",
 })
+
+
+_BASE_HREF_RE = re.compile(r"""<base\b[^>]*?\bhref\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
+
+
+def document_base_url(html: str, page_url: str) -> str:
+    """The URL a page's relative links resolve against: its `<base href>`, else the page.
+
+    stjohneverettpa.org serves its bulletins at /Bulletins/ with links like
+    `gallery/Bulletin October 18 2026.pdf` under `<base href="http://stjohneverettpa.org/">`,
+    so the files are at /gallery/, not /Bulletins/gallery/.
+    """
+    match = _BASE_HREF_RE.search(html)
+    return urljoin(page_url, match.group(1).strip()) if match else page_url
 
 
 def _rendered_html(page: PageLike) -> str:

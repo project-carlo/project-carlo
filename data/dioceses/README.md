@@ -143,7 +143,10 @@ Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to c
   from `website`, so for eCatholic the website has to be the eCatholic-hosted site, and for
   `google_drive` it has to link the shared folder. For `other` and `google_drive`,
   `provider_id` may pin how to read the site, as a recipe: a collector, the bulletin page,
-  or both (`page-pdfs https://example.org/bulletins`). Run
+  or both (`page-pdfs https://example.org/bulletins`). For a page serving several parishes,
+  add a filename glob such as `filename=St-Annes-Bulletin*.pdf` to keep only that parish's
+  files (case-insensitive; no whitespace). Use a newest-first page so late uploads still
+  select the latest matching issue. Run
   `pnpm fetch:check --diocese <d> --parish <slug>` (which reads the rows from these
   records, so it works before promotion) and record the `recipe` it prints once its pick is
   this week's bulletin (see "How the `other` resolver reads a site" in the main README).

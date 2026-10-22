@@ -554,7 +554,9 @@ def _http_get(
         "Accept": "*/*",
     }
     if referer:
-        headers["Referer"] = referer
+        # Header values must be latin-1; a file name with an en dash in it
+        # ("Bulletin – October 18.pdf") would otherwise crash the request.
+        headers["Referer"] = _normalize_url_for_request(referer)
     headers.update(extra_headers or {})
     req = Request(request_url, headers=headers)
     LOGGER.info("Fetching URL: %s", request_url)

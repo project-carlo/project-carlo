@@ -898,6 +898,77 @@ def test_a_recipe_written_differently_is_the_same_recipe() -> None:
     assert not _same_recipe("page-pdfs", source._replace(recipe=""))
 
 
+def test_recipe_filename_filter_round_trips_and_distinguishes_publishers() -> None:
+    recipe = Recipe(HOME, "page-pdfs", filename="St-Annes-Bulletin*.pdf")
+    text = "page-pdfs filename=St-Annes-Bulletin*.pdf"
+    assert recipe.text(website=HOME) == text
+    assert Recipe.parse(text, website=HOME) == recipe
+    source = FetchSource(OTHER_TYPE, HOME, text)
+    assert _same_recipe(f"{text} {HOME}", source)
+    assert not _same_recipe("page-pdfs", source)
+    assert not _same_recipe("page-pdfs filename=STTHERESESBULLETIN*.pdf", source)
+    with pytest.raises(ValueError, match="nonempty glob"):
+        Recipe.parse("page-pdfs filename=", website=HOME)
+    with pytest.raises(ValueError, match="two filename filters"):
+        Recipe.parse(f"{text} filename=other*.pdf", website=HOME)
+
+
+@pytest.mark.parametrize("prefix", ["St-Annes-Bulletin", "STTHERESESBULLETIN"])
+@pytest.mark.parametrize("other_day", [18, 25])
+@pytest.mark.parametrize("other_first", [False, True])
+@pytest.mark.parametrize("reference_date", [date(2026, 10, 21), date(2026, 10, 26)])
+def test_recipe_selects_its_own_parish_on_a_shared_newest_first_page(
+    prefix: str, other_day: int, other_first: bool, reference_date: date,
+) -> None:
+    other = "STTHERESESBULLETIN" if prefix == "St-Annes-Bulletin" else "St-Annes-Bulletin"
+    own_link = f'<a href="/{prefix}-Oct-18-2026.pdf">October 18, 2026</a>'
+    other_link = f'<a href="/{other}-Oct-{other_day}-2026.pdf">October {other_day}, 2026</a>'
+    links = [other_link, own_link] if other_first else [own_link, other_link]
+    links.append(f'<a href="/{prefix}-Oct-4-2026.pdf">October 4, 2026</a>')
+    page = f"{HOME}/bulletins/"
+    recipe = f"page-pdfs {page} filename={prefix}*.pdf"
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=reference_date, page=_site({page: "".join(links)}),
+        recipe=recipe,
+    )
+    assert link.source_url == f"{HOME}/{prefix}-Oct-18-2026.pdf"
+    assert link.recipe == recipe
+
+
+def test_recipe_filename_filter_decodes_the_name_and_ignores_case_and_query() -> None:
+    pdf = f"{HOME}/files/st%2Dannes-bulletin-20260927.PDF?download=1"
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=TODAY,
+        page=_site({HOME: f'<a href="{pdf}">Bulletin September 27</a>'}),
+        recipe="page-pdfs filename=St-Annes-Bulletin*.pdf",
+    )
+    assert link.source_url == pdf
+
+
+def test_recipe_filename_filter_fails_when_only_the_other_parish_is_available() -> None:
+    with pytest.raises(ValueError, match="No PDF links matching filename"):
+        build_latest_other_bulletin_links(
+            provider_id=HOME, reference_date=TODAY,
+            page=_site({HOME: '<a href="/STTHERESESBULLETIN-20260927.pdf">Bulletin</a>'}),
+            recipe="page-pdfs filename=St-Annes-Bulletin*.pdf",
+        )
+
+
+def test_recipe_filename_filter_is_applied_to_a_direct_pdf() -> None:
+    pdf = f"{HOME}/STTHERESESBULLETIN-20260927.pdf"
+    link = build_latest_other_bulletin_links(
+        provider_id=pdf, reference_date=TODAY, page=_site({}),
+        recipe="filename=STTHERESESBULLETIN*.pdf",
+    )
+    assert link.source_url == pdf
+    assert "filename=STTHERESESBULLETIN*.pdf" in link.recipe
+    with pytest.raises(ValueError, match="does not match filename"):
+        build_latest_other_bulletin_links(
+            provider_id=pdf, reference_date=TODAY, page=_site({}),
+            recipe="filename=St-Annes-Bulletin*.pdf",
+        )
+
+
 def _wix_card(day: str, sunday: str, file: str) -> str:
     return (
         f'<div role="listitem"><div><p><span>{day}</span></p></div>'
@@ -959,3 +1030,50 @@ def test_a_page_whose_cards_render_late_is_read_again() -> None:
     ])
     source_url, _ = _resolve_other(provider_id=HOME, reference_date=TODAY, page=page)
     assert source_url == f"{HOME}/_files/ugd/23b1db_bb.pdf"
+
+
+def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
+    # A WordPress file name with an en dash used to raise UnicodeEncodeError
+    # when it was sent as the Referer of the next request.
+    from pdf_extract import fetch
+
+    seen = {}
+
+    class _Resp:
+        headers = {}
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            return False
+
+        def read(self):
+            return b"%PDF"
+
+    def fake_urlopen(req, timeout):
+        seen["referer"] = req.get_header("Referer")
+        return _Resp()
+
+    monkeypatch.setattr(fetch, "urlopen", fake_urlopen)
+    fetch._http_get("https://example.org/b.pdf", referer="https://example.org/Bulletin – October 18.pdf")
+    assert seen["referer"] == "https://example.org/Bulletin%20%E2%80%93%20October%2018.pdf"
+    seen["referer"].encode("latin-1")
+
+
+def test_document_base_url_honours_base_href():
+    from pdf_extract.parish_sites.collectors import document_base_url
+
+    html = '<html><head><base href="http://stjohneverettpa.org/"></head><body></body></html>'
+    page = "http://stjohneverettpa.org/Bulletins/"
+    assert document_base_url(html, page) == "http://stjohneverettpa.org/"
+    assert document_base_url("<html><body></body></html>", page) == page
+    assert document_base_url("<base target='_blank'>", page) == page
+
+
+def test_parse_date_reads_an_unseparated_month_day_year_near_the_reference():
+    ref = date(2026, 10, 21)
+    assert parse_date_from_texts(["10112026.jpg"], ref) == date(2026, 10, 11)
+    # YYYYMMDD still wins, and an id whose year is far off is no date.
+    assert parse_date_from_texts(["20261018.pdf"], ref) == date(2026, 10, 18)
+    assert parse_date_from_texts(["photo-12312011.jpg"], ref) is None
