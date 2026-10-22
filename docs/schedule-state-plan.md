@@ -290,15 +290,18 @@ of its modify rows.
 
 **Identity.** `identity_key` is computed in code from the entry:
 
-- weekly: church, event type, weekday, start time
+- weekly: church, event type, weekday, start time, weeks of month and season
 - specific_date: church, event type, date, start time
 
-End time, weeks of month, season, cancelled and note are not part of identity,
-so a change to any of them is a modify of the existing entry, and "every
-Saturday 3 PM" and "first Saturday 3 PM" can't both be believed at once. The
-`UNIQUE (parish_id, identity_key)` on `current_schedule` refuses a second live
-entry for a slot, and the policy rejects a proposal that would create one as
-`duplicate`.
+End time, cancelled and note are not part of identity. Different weekly patterns
+may share a start when their occurrences do not overlap: first-Friday Adoration
+can end at 4 PM while the other Fridays end at 1 PM. The database's
+`UNIQUE (parish_id, identity_key)` rejects identical patterns; shared writer and
+policy checks also reject overlapping patterns as `duplicate`. Thus "every
+Saturday 3 PM" and "first Saturday 3 PM" still cannot both be believed at once.
+Migration 0009 updates these derived identity keys without changing entry IDs,
+hashes, content or history. A modify identifies its target by entry ID and can
+still change its week or season qualifiers.
 
 A modify may change the start time, weekday or date as well, and so move the
 entry to another slot ("the 5 PM vigil moves to 4:30" is one modify). It may
@@ -631,9 +634,10 @@ so seeding parishes changes no frontend code. It is version 2 because a weekly r
   `season_end_month`, `season_end_day`, `cancels_event_id`.
 - **Dated entries** before the build date are left out.
 - **`cancels_event_id`:** a cancelled dated entry cancels the live weekly entry
-  with the same church, event type and start time on its date's weekday. The
-  builder matches them on every build and writes that entry's id. After the
-  identity rules there is at most one match. A cancellation that matches
+  with the same church, event type and start time on its date's weekday, whose
+  week pattern and season apply on that date. The builder matches them on every
+  build and writes that entry's id. Disjoint patterns allow at most one applicable
+  update-mode match. A cancellation that matches
   nothing is left out of the snapshot, as cancelled events are hidden today.
 - **Reading version 1:** `read_snapshot` also reads a version 1 snapshot, as
   every week, no season and no cancellations, so the first v2 run's
