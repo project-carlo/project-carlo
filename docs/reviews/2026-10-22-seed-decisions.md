@@ -6,15 +6,27 @@ this pass name `lyonsl2 (via Codex)`; earlier reviewer answers remain unchanged.
 
 This resolves 63 of the original 72 questions, covering 89 of the 100 open
 slots. There are nine questions, covering 11 slots in eight parishes, still open.
-Forty-nine seeds have no questions left. Forty-eight were approved immediately;
-St. Luke, Schenectady awaits the engineering fix described below before approval.
+Forty-nine seeds were newly approved, including St. Luke, Schenectady after the
+disjoint-recurrence fix. There are now 162 approved seeds and eight still marked
+`needs_review`.
 No published database or website was changed by this review.
 
-Validation checked every changed seed against the local database. The 48
-approved files also loaded successfully into an in-memory database copy (578
-entries). Earlier reviewer answers and draft provenance were checked against
-the pre-review files and remain unchanged. St. Luke's disjoint-week collision
-is the only outstanding validation problem in this reviewed batch.
+Initial validation checked every changed seed against the local database;
+the first 48 approved files loaded into an in-memory database copy (578 entries).
+After integrating both engineering fixes, all 52 changed seed files passed
+validation against a temporary database copied through a read-only connection
+and migrated from schema 8 to 9. All 170 files passed loader-compatible checks,
+and all eight `needs_review` files passed full evidence checks.
+All 49 newly approved files loaded there once
+(589 entries), including St. Luke's 11 entries and both disjoint Friday Adoration
+patterns. Earlier reviewer answers, sources and draft provenance remain
+unchanged, including St. Luke's previously reviewed first-Friday slot `s11`.
+The root database was neither migrated nor written.
+
+Migration 0009 changed only derived identity keys; all other stored values,
+including entry IDs, hashes and history, were preserved. An independent combined
+engineering review found no material issues and verified that schedule replay
+matched all 113 parishes after migration, with no foreign-key violations.
 
 The saved seeds keep their original `as_of`, bulletin list, paid-call trail and
 draft summary. They describe the schedule at that earlier date, usually October
@@ -87,18 +99,23 @@ E8 still needs its recommended venue check.
   November 2, 7 PM remembrance Mass: St. Michael or St. Therese? The available
   parish calendar does not establish the venue.
 
-## Engineering work requested
+## Engineering work completed
 
 1. **Allow different hours on different weeks.** St. Luke has Friday Adoration
    at 11:30 AM–1 PM on non-first Fridays and 11:30 AM–4 PM on first Fridays.
-   The two patterns do not overlap. Entry identity currently ignores the week
-   pattern, so validation and loading reject them as duplicates. Preserve the
-   previously reviewed first-Friday decision and support both schedules.
+   The two patterns do not overlap. Weekly entry identity now includes recurrence
+   qualifiers, while shared conflict checks reject patterns that overlap.
+   Migration 0009 updates only derived identity keys. This fixes St. Luke's
+   approval blocker while preserving the previously reviewed first-Friday decision.
 2. **Allow a justified parish-website source.** Let an agent settle a real,
    quoted website schedule after explaining why it fits the bulletin and why
    it appears current. The exact time need not also be in the bulletin.
-   Keep live website evidence out of historical evaluations. Code can require
-   the explanation and sources; it cannot decide semantic freshness by itself.
+   Website sources now support `schedule_check` with the check time, an explanation
+   of why the schedule appears current, and why it fits the newest read bulletin.
+   The CLI accepts paired `--website-current` / `--website-context` explanations;
+   website-only slots have no bulletin page. Historical evaluations reject all
+   website sources. Code requires the explanation and sources; it cannot decide
+   semantic freshness by itself.
 
 ## Proposed wording for the guides
 
