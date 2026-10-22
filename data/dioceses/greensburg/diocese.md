@@ -118,6 +118,13 @@ keep it current rather than a log.
   directory pin agree within ~20 m here; LPi org points don't. The directory/GCatholic address
   can be an old office (Sacred Heart, Jeannette: 504 Cowan Ave vs the masthead's 310 N 7th St).
 
+- **Same-pastor parishes print each other's Mass boxes** (Perryopolis's Discover Mass issue
+  carries Monessen's and Belle Vernon's) while each keeps its own live bulletin: separate rows.
+  GCatholic can list a parish twice (old main church + current church, Epiphany 24169/24178).
+  Discover Mass's current issue is `<a id='bulletin-current' href='…download.php?bulletin=…'>`:
+  one page curl plus one download. Some template sites 403 even a browser User-Agent
+  (saintflorian.org, sjbperry.org) but open headed.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
