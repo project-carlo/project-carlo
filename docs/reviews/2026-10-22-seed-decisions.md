@@ -10,6 +10,12 @@ Forty-nine seeds have no questions left. Forty-eight were approved immediately;
 St. Luke, Schenectady awaits the engineering fix described below before approval.
 No published database or website was changed by this review.
 
+Validation checked every changed seed against the local database. The 48
+approved files also loaded successfully into an in-memory database copy (578
+entries). Earlier reviewer answers and draft provenance were checked against
+the pre-review files and remain unchanged. St. Luke's disjoint-week collision
+is the only outstanding validation problem in this reviewed batch.
+
 The saved seeds keep their original `as_of`, bulletin list, paid-call trail and
 draft summary. They describe the schedule at that earlier date, usually October
 11, rather than a newly researched October 22 schedule. Dates that have passed
