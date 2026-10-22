@@ -66,6 +66,18 @@ keep it current rather than a log.
   `/bulletin/read-our-weekly-bulletins/`. Some answer 403 to `probe url`
   (blessedsacramentcathedral.org); headed `visit.py --bulletin` reads them.
 
+- **A parish site can repost its container's PDF** (stjohnlatrobe.org's
+  `14-1543-October-25-2026.pdf`, one child post per issue; Holy Family's Wix `_files/ugd/` copy):
+  compare the file name and masthead with the container before calling it a separate bulletin.
+  Empty LPi orgs left from old pairings (`st-john-the-evangelist-st-rose`) are not fold-ins.
+- **GCatholic keeps minor basilicas off the diocese list** (St. Vincent is
+  `gcatholic.org/churches/northamerica/0772`), so they have no gcatholic roster id; decode its
+  Plus Code with `pdf_extract.dioceses.rosters.decode_plus_code`. Campus chapels with public
+  Mass and no bulletin go in `excluded/` as `no-bulletin` (Saint Vincent College's Mary,
+  Mother of Wisdom Chapel).
+- **Sites that drop `probe url` and `recheck` connections** ("RemoteDisconnected":
+  stvincentbasilica.org) may still answer plain curl; quote the bulletin instead.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
