@@ -11,12 +11,39 @@ gcatholic: gree1
 Diocese-wide lists worth reading, what each is good for, and how far to trust it here.
 Fill this in as you find them (see data/dioceses/README.md, "Sources").
 
-- Parish directory:
-- GCatholic:
-- Clusters / families of parishes:
-- Mass times:
-- Closed parishes and where their records went:
-- Pastoral plan / closure announcements:
+- **Parish directory:** `rosters/directory.json`, scraped 2026-10-22 from
+  https://www.dioceseofgreensburg.org/parishes/parish-directory/ (78 parishes; each
+  `/parish/?LocationID=NNN` page is plain HTML after a 301) with coordinates from the parish
+  map's WP Go Maps markers (`wp-json/wpgmza/v1/markers/`). 84 entries: three parishes have
+  several worship sites, listed only in the Mass Times Search form (Church of the Resurrection,
+  Clymer: five sites `060CS..060RS`; Our Lady of the Assumption, Coral/Lucernemines; St.
+  Francis of Assisi, Masontown/Footedale). Each entry keeps pastor, clergy, weekend Mass line,
+  website and the page's "Partner Parishes" field. Some pages are stale (Resurrection's base
+  page shows a former pastor and "no Mass"; Apollo and East Vandergrift still name a pastor on
+  leave since 2026-08).
+- **GCatholic:** `rosters/gcatholic.json` (key `gree1`; `gree0` is Green Bay), 110 entries.
+  24 are Byzantine Ruthenian or Ukrainian churches (ids 17xxx, 19565): `other-jurisdiction`.
+  It also lists St. Walburga (39112), St. Vincent (40409, the archabbey/seminary) and a
+  "Resurrection" at 596 Pineton Rd, Cameron's Bottom (24175) that no diocesan page has.
+- **Clusters / families of parishes:** none. The diocese keeps every parish open (the
+  bishop's 2024 pastoral letter asks for "parish partnerships"; a 2025 Catholic Accent article
+  quotes his "vision of keeping all of our parishes open"). The directory's "Partner Parishes"
+  field names 17 groups, mostly pairs, and many partners share one website
+  (pbcatholic.org, youghcatholic.org, newkensingtoncatholic.org, stjohnstmary.org,
+  partnerparishesmas.org...): shared-bulletin candidates, not decisions. Two shared websites go
+  beyond the listed partners (youghcatholic.org also has St. Aloysius, Dunbar;
+  newkensingtoncatholic.org also has Mount St. Peter). Several priests serve 3 to 8 parishes
+  (Uniontown/Fayette 8, Connellsville/Mt. Pleasant 8, New Kensington/Apollo 6, Armstrong 5).
+- **Mass times:** the directory's weekend line per parish; the Mass Times Search form lists
+  the multi-site parishes' sites.
+- **Closed parishes and where their records went:**
+  https://www.dioceseofgreensburg.org/parishes/former-churches-directory/ lists 104 former
+  churches, the latest closed in 2013. A former church is a lead for an `excluded/` record
+  only when a roster still lists it.
+- **Pastoral plan / closure announcements:** the 2023-2027 strategic plan has no merger or
+  cluster list (it speaks of regionalizing outreach and records disagreement "about parish
+  consolidation"). The 14 "Official" posts since 2023 only reassign clergy. The 12
+  faith-formation regions are catechesis regions, not bulletin groups.
 
 ### Bulletin publishers here
 
