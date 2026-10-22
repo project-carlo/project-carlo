@@ -146,6 +146,10 @@ keep it current rather than a log.
   latest issue before treating it as a channel; a dead predecessor's ids go on the row that
   took its churches.
 
+- **Quick shared-bulletin test:** compare the `publicationWidget?id=` each parish site embeds
+  (smmlb.org and newkensingtoncatholic.org both embed 001RP00000lUmSRYA0, container 14/2000).
+  GCatholic's parish websites can be squatted (mountsaintpeter.org) or dead.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
