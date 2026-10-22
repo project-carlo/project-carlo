@@ -85,6 +85,12 @@ keep it current rather than a log.
   house numbers are interpolated, not evidence. Send a generic User-Agent
   (`project-carlo-diocese-research`), never a personal email or name.
 
+- **Filter `dated-post` on template sites with `filename=[0-9]*.pdf`**: unfiltered it can
+  pick a sidebar PDF (`Calendar.pdf` at saint-edward.org) and still report "ok"; issue files
+  here start with a date (`MMDD189.pdf`, `MMDDYY.pdf`, `MM-DD-YY-<n>OT.pdf`). The issue PDF is
+  in each post's dFlip data with escaped slashes (`sed 's#\\/#/#g'`, grep `uploads/2026/`).
+  stannerostraver.org's weekly `Bulletin-announcement-*.pdf` is the diocese's announcement
+  packet, not a bulletin.
 - **Pin a recipe on diocese-template sites.** Unpinned, `fetch:check` guesses
   `page-pdfs <home>/` and picks the diocese's footer privacy-policy PDF while reporting "ok":
   pin `dated-post <site>/bulletins/` and check `source_url`. These sites post one dFlip
