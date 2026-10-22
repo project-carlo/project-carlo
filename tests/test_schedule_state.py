@@ -290,7 +290,8 @@ def test_an_excluded_week_round_trips_through_the_database(conn: sqlite3.Connect
     churches = _churches(conn)
     except_last = parse_entry({**SUN_9, "weeks_of_month": ["last"], "exclude_weeks": True},
                               churches)
-    assert except_last.identity_key == parse_entry(SUN_9, churches).identity_key
+    assert except_last.slot_key == parse_entry(SUN_9, churches).slot_key
+    assert except_last.identity_key != parse_entry(SUN_9, churches).identity_key
     with conn:
         entry_id = intern_entry(conn, except_last)
     stored = load_entries(conn, [entry_id])[entry_id]
@@ -320,16 +321,19 @@ def test_the_database_refuses_an_exclusion_of_no_weeks(conn: sqlite3.Connection)
         season_to_columns({"start_month": 2, "start_day": 30, "end_month": 3, "end_day": None})
 
 
-def test_an_entry_is_read_and_its_identity_leaves_out_end_time_weeks_and_note(
+def test_an_entry_identity_includes_recurrence_but_leaves_out_end_time_and_note(
     conn: sqlite3.Connection,
 ) -> None:
     churches = _churches(conn)
     entry = parse_entry(CONFESSION, churches)
     assert (entry.start_time, entry.end_time, entry.weeks_of_month) == (900, 945, 1)
-    changed = parse_entry({**CONFESSION, "end_time": "4:00 PM", "weeks_of_month": [],
+    changed = parse_entry({**CONFESSION, "end_time": "4:00 PM",
                            "note": "chapel"}, churches)
     assert changed.identity_key == entry.identity_key
     assert changed.hash != entry.hash
+    requalified = parse_entry({**CONFESSION, "weeks_of_month": []}, churches)
+    assert requalified.identity_key != entry.identity_key
+    assert requalified.slot_key == entry.slot_key
     moved = parse_entry({**CONFESSION, "start_time": "3:30 PM"}, churches)
     assert moved.identity_key != entry.identity_key
 
@@ -534,9 +538,10 @@ def test_weekly_repair_appends_inverse_changes_but_preserves_later_reviews(
                actor="Reviewer")
     old_state = set(live_entries(conn, parish_id))
     old_proposals = _proposals(conn)
+    latest_version = conn.execute("PRAGMA user_version").fetchone()[0]
     conn.execute("PRAGMA user_version = 7")
     conn.commit()
-    assert migrate(conn) == 1
+    assert migrate(conn) == latest_version - 7
     state = set(live_entries(conn, parish_id))
     if later_review:
         assert state == old_state
@@ -638,6 +643,30 @@ def test_the_mark_starts_at_the_newest_dated_bulletin_in_the_seed(
 
 
 # ── The update stage ────────────────────────────────────────────────────────
+def test_a_bulletin_can_modify_one_recurrence_and_add_its_disjoint_sibling(conn):
+    first = {**SUN_9, "event_type": "adoration", "day_of_week": "Friday",
+             "start_time": "11:30 AM", "end_time": "4:00 PM", "weeks_of_month": ["first"]}
+    remaining = {**first, "weeks_of_month": ["second", "third", "fourth", "fifth"],
+                 "end_time": "1:00 PM"}
+    _seed(conn, [first])
+    first_id = next(iter(live_entries(conn, _parish_id(conn))))
+    _bulletin(conn, "new", "2026-10-10T12:00:00Z")
+    updater = FakeUpdater(_reply(changes=[
+        {"op": "modify", "entry_id": first_id, "entry": {**first, "note": "Benediction"}},
+        {"op": "add", "entry": remaining},
+        {"op": "add", "entry": {**remaining, "weeks_of_month": ["third"]}},
+    ]))
+    stats = _run(conn, updater)
+    assert stats["update_changes_applied"] == 2
+    assert [p[2:] for p in _proposals(conn)] == [
+        ("modify", APPLIED, AUTO), ("add", APPLIED, AUTO), ("add", REJECTED, DUPLICATE),
+    ]
+    live = live_entries(conn, _parish_id(conn))
+    assert {(e.weeks_of_month, e.end_time) for e in live.values()} == {(1, 960), (30, 780)}
+    assert first_id not in live
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
 def test_a_bulletin_is_read_against_the_believed_schedule(conn: sqlite3.Connection) -> None:
     _seed(conn, [SUN_9, SAT_5, CONFESSION])
     ids = _ids(conn)

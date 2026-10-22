@@ -20,7 +20,12 @@ from pdf_extract.labeling.demo import build_demo, make_pdf
 from pdf_extract.labeling.labels import write_label
 from pdf_extract.labeling.server import LabelerApp, make_server
 from pdf_extract.report import render_seeds
-from pdf_extract.schedule.store import live_entries, update_mode_parishes
+from pdf_extract.schedule.store import (
+    live_entries,
+    parish_churches,
+    rebuild_current_schedule,
+    update_mode_parishes,
+)
 from pdf_extract.seeding import calls as seed_calls
 from pdf_extract.seeding import cli as seed_cli
 from pdf_extract.seeding.checks import check_seed
@@ -64,6 +69,7 @@ from pdf_extract.seeding.review import (
     seed_queue,
 )
 from pdf_extract.seeding.score import score_parish, score_run
+from pdf_extract.seeding.slots import Draft
 from pdf_extract.storage import connect_db
 
 PARISH = "holy-family-demo"
@@ -399,6 +405,36 @@ def test_check_finds_what_needs_the_database(conn, seed):
     assert any("before as_of" in p for p in problems)
 
 
+def _disjoint_friday_slots(seed):
+    first = _slot(seed, "s1")
+    first["entry"].update(event_type="adoration", day_of_week="Friday", start_time="11:30",
+                          end_time="16:00", weeks_of_month=["first"], note="Benediction")
+    remaining = copy.deepcopy(first)
+    remaining["id"] = "s18"
+    remaining["entry"].update(end_time="13:00",
+                              weeks_of_month=["second", "third", "fourth", "fifth"])
+    seed["slots"].append(remaining)
+    return first, remaining
+
+
+@pytest.mark.parametrize("overlap", [False, True])
+def test_seed_and_draft_checks_allow_only_disjoint_recurrence_variants(conn, seed, overlap):
+    seed = _settle_all(seed)
+    _, remaining = _disjoint_friday_slots(seed)
+    if overlap:
+        remaining["entry"]["weeks_of_month"].append("first")
+    problems = check_seed(conn, seed, parish_slug=PARISH, check_evidence=False)
+    assert bool(problems) is overlap
+    parish_id = conn.execute("SELECT id FROM parish WHERE slug=?", (PARISH,)).fetchone()[0]
+    draft = Draft(seed, parish_churches(conn, parish_id), touched=["s18"])
+    if overlap:
+        assert any("same slot as s1" in p for p in problems)
+        with pytest.raises(SeedError, match="s1 and s18 are the same slot"):
+            draft.check()
+    else:
+        draft.check()
+
+
 def test_check_requires_as_of_to_be_the_newest_bulletin_read(conn, seed):
     seed["as_of"] = seed["bulletins"][1]["fetched_at"]
     problems = check_seed(conn, seed, parish_slug=PARISH)
@@ -669,6 +705,28 @@ def test_review_refuses_a_draft_still_being_written(conn, demo, seed):
 
 
 # ── Loading ─────────────────────────────────────────────────────────────────
+def test_approved_disjoint_patterns_load_without_changing_reviewer_decisions(conn, demo, seed):
+    approved = _approved(seed)
+    first, _ = _disjoint_friday_slots(approved)
+    first["options"] = [
+        {"label": "First Fridays", "entry": copy.deepcopy(first["entry"]), "leaning": True},
+        {"label": "Leave out", "entry": None},
+    ]
+    first["answer"] = {"choice": 0, "by": "Reviewer", "at": "2026-10-10T12:00:00Z"}
+    path = write_seed_file(approved, demo["seeds_dir"])
+    before = path.read_bytes()
+    result = load_approved_seeds(conn, demo["seeds_dir"])
+    assert result["skipped"] == []
+    assert result["loaded"][0]["entries"] == len(included_slots(approved))
+    parish_id = conn.execute("SELECT id FROM parish WHERE slug=?", (PARISH,)).fetchone()[0]
+    friday = [e for e in live_entries(conn, parish_id).values()
+              if e.event_type == "adoration" and e.start_time == 690]
+    assert {(e.weeks_of_month, e.end_time) for e in friday} == {(1, 960), (30, 780)}
+    assert path.read_bytes() == before
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+    assert load_approved_seeds(conn, demo["seeds_dir"]) == {"loaded": [], "skipped": []}
+
+
 def test_an_approved_seed_loads_once_and_switches_the_parish(conn, demo, seed):
     assert load_approved_seeds(conn, demo["seeds_dir"]) == {"loaded": [], "skipped": []}
     approved = _approved(seed)

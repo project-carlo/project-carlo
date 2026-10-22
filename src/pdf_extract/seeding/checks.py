@@ -28,7 +28,7 @@ from typing import Any
 
 from pdf_extract.bulletin_week import bulletin_week
 from pdf_extract.labeling.labels import DAYS, WEEKS_OF_MONTH
-from pdf_extract.schedule.entries import UNKNOWN_CHURCH, EntryError, parse_entry
+from pdf_extract.schedule.entries import UNKNOWN_CHURCH, Entry, EntryError, parse_entry
 from pdf_extract.schedule.store import normalize_as_of, parish_churches
 from pdf_extract.seeding.files import (
     AGENT,
@@ -174,7 +174,7 @@ def check_seed(
             "use `pnpm seed mark-read` after reading it, even when no slot cites it"
         )
     as_of_date = normalize_as_of(seed["as_of"])[:10] if seed["as_of"] else None
-    slots_by_identity: dict[str, str] = {}
+    included_entries: list[tuple[Entry, str]] = []
     for i, slot in enumerate(seed["slots"]):
         where = f"slots[{i}] ({slot['id']})"
         included = slot["decision"] == INCLUDE and slot["status"] != NEEDS_HUMAN
@@ -209,13 +209,15 @@ def check_seed(
             if problem:
                 problems.append(problem)
             elif included:
-                identity = parse_entry(slot["entry"], churches).identity_key
-                if identity in slots_by_identity:
-                    problems.append(
-                        f"{where} is the same slot as {slots_by_identity[identity]}: "
-                        "one of them must go"
-                    )
-                slots_by_identity.setdefault(identity, slot["id"])
+                entry = parse_entry(slot["entry"], churches)
+                for other, slot_id in included_entries:
+                    if entry.conflicts_with(other):
+                        problems.append(
+                            f"{where} is the same slot as {slot_id}: "
+                            "their recurrence patterns overlap; one of them must go"
+                        )
+                        break
+                included_entries.append((entry, slot["id"]))
                 date = slot["entry"].get("date")
                 if as_of_date and slot["entry"]["event_kind"] != "weekly" and date < as_of_date:
                     problems.append(

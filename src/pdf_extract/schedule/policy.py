@@ -113,9 +113,9 @@ class Schedule:
     ids: dict[int, Entry]
     added: list[Entry] = field(default_factory=list)
 
-    def identities(self, *, excluding: int | None = None) -> set[str]:
-        keys = {e.identity_key for i, e in self.ids.items() if i != excluding}
-        return keys | {e.identity_key for e in self.added}
+    def conflicts(self, entry: Entry, *, excluding: int | None = None) -> bool:
+        return any(entry.conflicts_with(e) for i, e in self.ids.items() if i != excluding) \
+            or any(entry.conflicts_with(e) for e in self.added)
 
     def apply(self, op: str, target: int | None, entry: Entry | None) -> None:
         if target is not None:
@@ -162,7 +162,7 @@ def check_proposal(
         return entry, PAST_DATE, f"{entry.date} is before {today.isoformat()}"
     if op in (MODIFY, DELETE) and target is None:
         return entry, UNKNOWN_ITEM, f"entry {target_entry_id} is not in the current schedule"
-    if entry is not None and entry.identity_key in schedule.identities(excluding=target_entry_id):
+    if entry is not None and schedule.conflicts(entry, excluding=target_entry_id):
         return entry, DUPLICATE, "the schedule already has an entry for that slot"
     if op == MODIFY and entry == target:
         return entry, NO_CHANGE, "the new entry is the same as the old one"

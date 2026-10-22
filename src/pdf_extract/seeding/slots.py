@@ -22,7 +22,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from pdf_extract.labeling.labels import DAYS, WEEKS_OF_MONTH
-from pdf_extract.schedule.entries import parse_entry
+from pdf_extract.schedule.entries import Entry, parse_entry
 from pdf_extract.schedule.store import normalize_as_of
 from pdf_extract.seeding.checks import entry_problem
 from pdf_extract.seeding.files import (
@@ -495,17 +495,18 @@ class Draft:
         problems: list[str] = []
         live = [s for s in self.slots if isinstance(s, dict)]
         churches = self.church_ids
-        same: dict[str, list[str]] = {}
+        included: list[tuple[str, Entry]] = []
         for slot in live:
             if slot.get("status") == SETTLED and slot.get("decision") == INCLUDE \
                     and isinstance(slot.get("entry"), dict) \
                     and not entry_problem(slot["entry"], churches, ""):
-                identity = parse_entry(slot["entry"], churches).identity_key
-                same.setdefault(identity, []).append(str(slot.get("id")))
-        for ids in same.values():
-            if len(ids) > 1 and set(ids) & set(self.touched):
-                problems.append(f"{' and '.join(ids)} are the same slot (church, type, day or "
-                                "date, start): one of them must go")
+                entry = parse_entry(slot["entry"], churches)
+                slot_id = str(slot.get("id"))
+                for other_id, other in included:
+                    if {slot_id, other_id} & set(self.touched) and entry.conflicts_with(other):
+                        problems.append(f"{other_id} and {slot_id} are the same slot: "
+                                        "their recurrence patterns overlap; one of them must go")
+                included.append((slot_id, entry))
         groups = set()
         for slot in live:
             if slot.get("id") not in self.touched:

@@ -18,6 +18,7 @@ the month, October through June"), as the web app's
 
 from __future__ import annotations
 
+from functools import lru_cache
 from typing import Any
 
 from pdf_extract.labeling.labels import (
@@ -83,6 +84,43 @@ def mask_to_weeks(mask: int) -> list[str]:
 def mask_excludes_weeks(mask: int) -> bool:
     """Whether the mask's weeks are the ones the slot skips."""
     return bool(mask & EXCLUDE_WEEKS_BIT) and bool(mask & _WEEK_BITS)
+
+
+@lru_cache(maxsize=1024)
+def recurrence_mask(
+    weeks: int, start_month: int | None, start_day: int | None,
+    end_month: int | None, end_day: int | None,
+) -> int:
+    """Possible month-days of a weekly pattern, for testing recurrence overlap.
+
+    Each bit is a (month, month length, day) combination. February is checked
+    at both lengths: its last weekday may be the fourth in one and fifth in
+    the other. Any month-day can fall on the entry's weekday in some year;
+    callers compare only entries with the same weekday. Seasons are inclusive
+    and may cross New Year. This avoids choosing an arbitrary reference year.
+    """
+    start = (start_month, start_day or 1) if start_month else (1, 1)
+    end = (end_month, end_day or DAYS_IN_MONTH[end_month - 1]) if end_month else (12, 31)
+    selected = weeks & _WEEK_BITS
+    excluded = mask_excludes_weeks(weeks)
+    result = 0
+    bit = 0
+    for month, length in enumerate(DAYS_IN_MONTH, start=1):
+        for days in ((28, 29) if month == 2 else (length,)):
+            for day in range(1, days + 1):
+                point = (month, day)
+                in_season = (
+                    start <= point <= end if start <= end else point >= start or point <= end
+                )
+                week_bits = 1 << ((day - 1) // 7)
+                if day + 7 > days:
+                    week_bits |= 1 << 5  # last, which can also be fourth or fifth
+                listed = bool(selected & week_bits)
+                in_weeks = not selected or (not listed if excluded else listed)
+                if in_season and in_weeks:
+                    result |= 1 << bit
+                bit += 1
+    return result
 
 
 def _month(value: Any) -> int | None:

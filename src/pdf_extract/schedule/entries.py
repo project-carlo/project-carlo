@@ -4,12 +4,13 @@ An entry is immutable (`schedule_entry`): a change to a slot is a new entry.
 Its `hash` covers every column, so identical content is stored once and an
 entry id names its content. Its `identity_key` says which slot it is:
 
-- weekly: church, event type, weekday, start time
+- weekly: church, event type, weekday, start time, weeks and season
 - specific_date: church, event type, date, start time
 
-End time, weeks of the month (and whether they are excluded), season,
-cancelled and note are not part of identity, so changing any of them is a
-modify of the same slot.
+End time, cancelled and note are not part of identity. `slot_key` groups
+recurrence variants at the same weekday and time; `conflicts_with` checks
+whether two variants can occur together. A modify names its target by entry
+id, so it can still change qualifiers (or move a slot).
 
 Entries arrive in the labels' form (times as "h:MM AM", weeks of the month as
 a list with `exclude_weeks`, the season as an object, the church by slug), from
@@ -32,6 +33,7 @@ from pdf_extract.schedule.qualifiers import (
     columns_to_season,
     mask_excludes_weeks,
     mask_to_weeks,
+    recurrence_mask,
     season_to_columns,
     weeks_to_mask,
 )
@@ -72,9 +74,36 @@ class Entry:
         return sha256(json.dumps(astuple(self)).encode("utf-8")).hexdigest()
 
     @property
-    def identity_key(self) -> str:
+    def slot_key(self) -> str:
+        """The unqualified slot, shared by disjoint recurrence variants."""
         anchor = self.day_of_week if self.event_kind == "weekly" else self.date
         return f"{self.church_id}|{self.event_type}|{self.event_kind}|{anchor}|{self.start_time}"
+
+    @property
+    def identity_key(self) -> str:
+        if not self.weekly:
+            return self.slot_key
+        qualifiers = (self.weeks_of_month, self.season_start_month, self.season_start_day,
+                      self.season_end_month, self.season_end_day)
+        return self.slot_key + "|" + "|".join(str(value or 0) for value in qualifiers)
+
+    def conflicts_with(self, other: Entry) -> bool:
+        """Whether entries duplicate a pattern or claim the same occurrence.
+
+        Dated overrides and weekly entries retain their separate identities.
+        End times and notes never make overlapping recurrences distinct slots.
+        """
+        if self.slot_key != other.slot_key:
+            return False
+        if not self.weekly or self.identity_key == other.identity_key:
+            return True
+        return bool(self._recurrence_mask() & other._recurrence_mask())
+
+    def _recurrence_mask(self) -> int:
+        return recurrence_mask(
+            self.weeks_of_month, self.season_start_month, self.season_start_day,
+            self.season_end_month, self.season_end_day,
+        )
 
     @property
     def weekly(self) -> bool:

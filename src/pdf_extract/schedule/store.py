@@ -299,6 +299,9 @@ def _fold_change(
                 f"{row['before_entry_id']}, which is not in its current schedule"
             )
     if row["after_entry_id"] is not None:
+        entry = load_entries(conn, [row["after_entry_id"]])[row["after_entry_id"]]
+        if any(entry.conflicts_with(other) for other in live_entries(conn, parish_id).values()):
+            raise ValueError(f"the schedule already has an entry for that slot: {entry.slot_key}")
         conn.execute(
             """INSERT INTO current_schedule (parish_id, entry_id, identity_key, since_revision)
                SELECT ?, id, identity_key, ? FROM schedule_entry WHERE id = ?""",
@@ -379,20 +382,40 @@ def replace_sightings(
 def seed_changes(
     conn: sqlite3.Connection, live: dict[int, Entry], entries: list[Entry],
 ) -> list[Change]:
-    """The adds, modifies and deletes that turn `live` into exactly `entries`."""
+    """The adds, modifies and deletes that turn `live` into exactly `entries`.
+
+    Match recurrence identities first. A single unmatched old/new pair at an
+    unqualified slot is a qualifier modify. Ambiguous splits/merges use deletes
+    and adds, with deletions first so no temporary overlap enters the fold.
+    """
     by_identity: dict[str, Entry] = {}
     for entry in entries:
-        if entry.identity_key in by_identity:
-            raise ValueError(f"two seed entries are the same slot: {entry.identity_key}")
+        if any(entry.conflicts_with(other) for other in by_identity.values()):
+            raise ValueError(f"two seed entries are the same slot: {entry.slot_key}")
         by_identity[entry.identity_key] = entry
     live_by_identity = {entry.identity_key: entry_id for entry_id, entry in live.items()}
+    matched = {identity: live_by_identity[identity]
+               for identity in by_identity.keys() & live_by_identity.keys()}
+    old_by_slot: dict[str, list[int]] = {}
+    new_by_slot: dict[str, list[str]] = {}
+    for entry_id, entry in live.items():
+        if entry.identity_key not in matched:
+            old_by_slot.setdefault(entry.slot_key, []).append(entry_id)
+    for identity, entry in by_identity.items():
+        if identity not in matched:
+            new_by_slot.setdefault(entry.slot_key, []).append(identity)
+    for slot, identities in new_by_slot.items():
+        old_ids = old_by_slot.get(slot, [])
+        if len(identities) == len(old_ids) == 1:
+            matched[identities[0]] = old_ids[0]
+    retained = set(matched.values())
     changes: list[Change] = []
-    for identity, entry_id in sorted(live_by_identity.items()):
-        if identity not in by_identity:
+    for entry_id in sorted(live):
+        if entry_id not in retained:
             changes.append(Change(DELETE, before_entry_id=entry_id))
     for identity, entry in sorted(by_identity.items()):
         new_id = intern_entry(conn, entry)
-        old_id = live_by_identity.get(identity)
+        old_id = matched.get(identity)
         if old_id is None:
             changes.append(Change(ADD, after_entry_id=new_id))
         elif old_id != new_id:
