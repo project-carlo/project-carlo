@@ -114,6 +114,19 @@ one, a dated cancellation, and an open question, each rationale citing its rule:
   bulletin reference; the agent judges credibility and freshness. It imposes no
   fixed age or frequency threshold. Website sources remain forbidden in historical
   test runs. `finalize` preserves assessments and never creates one.
+- An every-week slot retained after one omission may carry `weekly_omission`:
+  `{"bulletin": "9f2c41d0", "reason": "..."}`. The reference must name the newest
+  read issue; `reason` explicitly assesses why that issue merely omits the established
+  service rather than cancelling it or changing its schedule. Keep `page` null and
+  cite paged `agent` quotes for this same church, service type, weekday and time from
+  at least two older read issue weeks. One must be the immediately preceding read
+  issue, dated exactly one issue week before newest. Duplicate citations, different
+  PDFs for the same week, and repeat fetches do not supply another week. Only valid,
+  plausible `published_date` values count; fetch dates cannot substitute for missing
+  issue dates. Validation checks this provenance; the agent must judge what the
+  quotes establish and whether newest contradicts them. Named monthly patterns
+  (`weeks_of_month` or `exclude_weeks`) use their existing targeted evidence rules,
+  never this fallback. `finalize` preserves the assessment and never creates one.
 - One slot per day and time: "Mon–Fri 8:00 AM" is five slots.
 - A question has a short `question`, `options` (an option's `entry` is null for "leave it
   out"), exactly one `"leaning": true`, and its reasons in `rationale`. Slots that share a
@@ -150,6 +163,12 @@ writes nothing if a check fails. `pnpm seed slot --help` has the full syntax.
   use `--page -` when editing a slot that previously had a bulletin page. Without
   those flags, website sources remain ordinary supporting evidence. For different
   assessments, add website sources in separate commands.
+- `slot include` and `slot edit` accept `--weekly-omission "why newest merely omits
+  this established service"` to record that judgment against the newest listed
+  bulletin. Supply the matching older quotes with `--src` and use `--page -`.
+  For example: `--src "1ab3e7c2,77d0be19 p2: Holy Family: Saturday Vigil Mass 4 PM"`.
+  Read and mark newest before finalizing; the evidence requirements above still
+  apply. `slot edit ... --weekly-omission -` removes the assessment.
 - An **option** is `--option "LABEL" "ENTRY"`, or just `--option "LABEL"` for leaving it
   out. `*` before one label marks the leaning. An entry `+ ...` is the first option's
   entry with those changes (`+ except=first`).

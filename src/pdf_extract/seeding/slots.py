@@ -80,6 +80,8 @@ SOURCE: "HEAD: what it said, in its words"
   With web --src, --website-current "why current" and --website-context "why it
   fits the newest bulletin" record a schedule_check on each website source added.
   A website-backed inclusion uses page null; finalize never invents this check.
+  --weekly-omission "why only an omission" records the judgment on the newest
+  issue; it still needs paged matching agent sources from distinct older weeks.
 
 OPTION: --option "LABEL" ["ENTRY"], repeated; `*` before one label marks the
   leaning, and an option without an entry leaves the slot out.
@@ -638,6 +640,17 @@ def _options(
     return per_slot
 
 
+def _weekly_omission(draft: Draft, reason: str) -> dict[str, str] | None:
+    if reason == "-":
+        return None
+    if not reason.strip():
+        raise SeedError("--weekly-omission needs the agent's omission judgment")
+    return {
+        "bulletin": short_hash(draft.seed, _bulletin_ref(draft.seed, "latest", "weekly omission")),
+        "reason": reason,
+    }
+
+
 def add_settled(draft: Draft, args: argparse.Namespace, decision: str) -> list[str]:
     """`slot include` / `slot exclude`: one settled slot per day/date and time."""
     if args.entry in (None, "-", "none"):
@@ -648,9 +661,12 @@ def add_settled(draft: Draft, args: argparse.Namespace, decision: str) -> list[s
         entries = list(build_entries(parse_entry_spec(args.entry), draft.churches))
     sources = draft.sources(args)
     page = _anchor(draft, args.page, sources)
+    omission = getattr(args, "weekly_omission", None)
+    assessment = _weekly_omission(draft, omission) if omission is not None else None
     return [draft.new_slot({
         "decision": decision, "status": SETTLED, "entry": entry, "page": page,
         "sources": copy.deepcopy(sources), "rationale": args.why or "",
+        **({"weekly_omission": assessment} if assessment is not None else {}),
     }) for entry in entries]
 
 
@@ -700,7 +716,7 @@ def edit_slots(draft: Draft, args: argparse.Namespace) -> list[str]:
     """`slot edit`: change the named slots' fields, keeping their ids."""
     changes = {k for k in ("entry", "no_entry", "include", "exclude", "ask", "option",
                            "src", "drop_src", "why", "group", "website_current",
-                           "website_context")
+                           "website_context", "weekly_omission")
                if getattr(args, k, None) not in (None, False, [])}
     if args.page is not UNSET:
         changes.add("page")
@@ -767,6 +783,12 @@ def _edit(draft: Draft, slot: dict[str, Any], args: argparse.Namespace, changes:
         slot["sources"] = (slot.get("sources") or []) + draft.sources(args)
     if "why" in changes:
         slot["rationale"] = args.why
+    if "weekly_omission" in changes:
+        assessment = _weekly_omission(draft, args.weekly_omission)
+        if assessment is None:
+            slot.pop("weekly_omission", None)
+        else:
+            slot["weekly_omission"] = assessment
     if "group" in changes:
         if args.group == "-":
             slot.pop("group", None)
@@ -850,6 +872,13 @@ def _why_arg(p: argparse.ArgumentParser, required: bool = True) -> None:
                    help="The rationale, starting with the rule it rests on (R1: …)")
 
 
+def _weekly_omission_arg(p: argparse.ArgumentParser) -> None:
+    p.add_argument("--weekly-omission", metavar="REASON",
+                   help="Why the newest issue merely omits an established every-week slot, "
+                        "rather than cancelling/changing it; cite matching older issues with "
+                        "--src, use --page -; - clears the assessment")
+
+
 def _page_arg(p: argparse.ArgumentParser, default: Any) -> None:
     p.add_argument("--page", type=_page, default=default,
                    help="Where the newest bulletin prints it, - for none (default: the page "
@@ -872,6 +901,8 @@ def add_write_args(name: str, p: argparse.ArgumentParser) -> None:
         _source_arg(p)
         _page_arg(p, UNSET)
         _why_arg(p)
+        if name == "include":
+            _weekly_omission_arg(p)
     elif name == "ask":
         p.add_argument("question", nargs="?",
                        help="The question (with --group of an existing group: its question)")
@@ -892,6 +923,7 @@ def add_write_args(name: str, p: argparse.ArgumentParser) -> None:
         _option_arg(p)
         _page_arg(p, UNSET)
         _source_arg(p)
+        _weekly_omission_arg(p)
         p.add_argument("--drop-src", action="append", type=int, metavar="N",
                        help="Remove the drafter's source N (`slot show` numbers them)")
         _why_arg(p, required=False)
@@ -1019,6 +1051,10 @@ def slot_lines(slot: Any, *, full: bool = False) -> list[str]:
                     f"           current: {check.get('current_because')}",
                     f"           fits bulletin {check.get('bulletin')}: {check.get('fits_because')}",
                 ]
+        omission = slot.get("weekly_omission")
+        if isinstance(omission, dict):
+            lines.append(f"       weekly omission in {omission.get('bulletin')}: "
+                         f"{omission.get('reason')}")
         lines.append(f"       why: {slot.get('rationale')}")
     else:
         lines.append(f"       {_clip(slot.get('rationale'))}")

@@ -82,7 +82,7 @@ SLOT_KEYS = (
 # list lacks or can't place, for whoever maintains data/churches.csv. A slot's
 # `group`: open questions that share one are one question, answered together.
 OPTIONAL_SEED_KEYS = ("church_list_issues",)
-OPTIONAL_SLOT_KEYS = ("group",)
+OPTIONAL_SLOT_KEYS = ("group", "weekly_omission")
 CHURCH_ISSUE_KEYS = ("church", "said", "bulletin", "page")
 # Shortest prefix of a content hash that may name a bulletin inside a file.
 MIN_HASH_PREFIX = 8
@@ -491,6 +491,17 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
         errors.append(f"{where}.page must be null or a page number")
     if not _nonempty(slot["rationale"]):
         errors.append(f"{where}.rationale is required")
+    if "weekly_omission" in slot:
+        check = slot["weekly_omission"]
+        at = f"{where}.weekly_omission"
+        if not isinstance(check, dict):
+            errors.append(f"{at} must be an object")
+        else:
+            errors.extend(_keys(check, ("bulletin", "reason"), at))
+            if resolve_hash(seed, check.get("bulletin")) is None:
+                errors.append(f"{at}.bulletin must name one of the file's bulletins")
+            if not _nonempty(check.get("reason")):
+                errors.append(f"{at}.reason must explain the agent's omission judgment")
 
     sources = slot["sources"]
     if not isinstance(sources, list) or not sources:

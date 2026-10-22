@@ -1542,6 +1542,134 @@ def test_a_dated_entry_an_older_bulletin_announced_may_be_settled(conn, seed):
     assert _evidence_problems(conn, seed)
 
 
+def _weekly_omission_slot(seed):
+    newest, previous = seed["bulletins"]
+    oldest = {**previous, "content_hash": "c" * 64, "published_date": "2026-09-13",
+              "fetched_at": "2026-09-12T12:00:00Z"}
+    seed["bulletins"].append(oldest)
+    slot = _slot(seed, "s1")
+    slot.update(page=None, sources=[
+        {"source": "agent", "bulletin": b["content_hash"][:8], "page": 2,
+         "said": "Holy Family: Saturday Vigil Mass 4 PM"} for b in (previous, oldest)
+    ], weekly_omission={
+        "bulletin": newest["content_hash"][:8],
+        "reason": "The same church, Mass, Saturday and 4 PM recur in both older issues. "
+                  "The newest issue omits that service once; its announcements and "
+                  "schedule give no cancellation or changed time.",
+    })
+    return slot
+
+
+def _omission_problems(conn, seed, **kwargs):
+    # The third synthetic issue exercises evidence without adding database fixtures.
+    return check_seed(conn, seed, parish_slug=PARISH, check_bulletins=False, **kwargs)
+
+
+def test_established_weekly_slot_can_survive_one_assessed_omission(conn, seed):
+    slot = _weekly_omission_slot(seed)
+    assert _omission_problems(conn, seed) == []
+    assert _omission_problems(conn, seed, cutoff=seed["as_of"]) == []
+    finalized = finalize_seed(seed, [HF, SJ])
+    assert _slot(finalized, "s1")["weekly_omission"] == slot["weekly_omission"]
+    assert _slot(finalized, "s1")["page"] is None
+    assert _omission_problems(conn, finalized) == []
+    # Published Saturdays and Sundays identify the same issue week.
+    seed["bulletins"][1]["published_date"] = "2026-09-19"
+    assert _omission_problems(conn, seed) == []
+
+
+@pytest.mark.parametrize("change", [
+    lambda s, slot: slot.pop("weekly_omission"),
+    lambda s, slot: slot["weekly_omission"].update(bulletin=s["bulletins"][1]["content_hash"]),
+    lambda s, slot: slot.update(page=2),
+    lambda s, slot: slot["sources"].pop(),
+    lambda s, slot: slot["sources"][1].update(bulletin=slot["sources"][0]["bulletin"]),
+    lambda s, slot: slot["sources"][0].update(source="history"),
+    lambda s, slot: slot["sources"][1].update(source="history"),
+    lambda s, slot: slot["sources"][0].update(page=None),
+    lambda s, slot: slot["sources"][1].update(page=None),
+    lambda s, slot: s["bulletins"][1].update(read=False),
+    lambda s, slot: s["bulletins"][2].update(read=False),
+    lambda s, slot: s["bulletins"][2].update(published_date="2026-09-20"),
+    lambda s, slot: s["bulletins"][1].update(published_date="2026-09-13"),
+    lambda s, slot: s["bulletins"][2].update(published_date="2026-09-27"),
+    lambda s, slot: s["bulletins"][2].update(published_date="2026-11-01"),
+    lambda s, slot: s["bulletins"][1].update(fetched_at=s["bulletins"][0]["fetched_at"]),
+    lambda s, slot: slot["entry"].update(weeks_of_month=["last"], exclude_weeks=True),
+])
+def test_weekly_omission_requires_distinct_read_issue_weeks_and_recent_support(
+    conn, seed, change,
+):
+    slot = _weekly_omission_slot(seed)
+    change(seed, slot)
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+
+
+@pytest.mark.parametrize("index", [0, 1, 2])
+@pytest.mark.parametrize("published", [None, "", "unknown", "2026-02-30"])
+def test_weekly_omission_never_uses_fetch_dates_to_manufacture_issue_weeks(
+    conn, seed, index, published,
+):
+    _weekly_omission_slot(seed)
+    seed["bulletins"][index]["published_date"] = published
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+
+
+def test_weekly_omission_must_cite_the_immediately_preceding_read_issue(conn, seed):
+    _weekly_omission_slot(seed)
+    # Another PDF of last week's issue was read more recently than the cited one.
+    previous = seed["bulletins"][1]
+    seed["bulletins"].append({**previous, "content_hash": "d" * 64,
+                              "fetched_at": "2026-09-24T12:00:00Z"})
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+    # Repeated fetches of identical content cannot create another listed issue.
+    seed["bulletins"][-1]["content_hash"] = previous["content_hash"]
+    assert any("listed twice" in p for p in _omission_problems(conn, seed))
+
+
+def test_weekly_omission_cannot_evade_targeted_monthly_evidence(conn, seed):
+    slot = _weekly_omission_slot(seed)
+    slot["entry"].update(day_of_week="Thursday", weeks_of_month=["first"])
+    # Newest covers Oct 1, so a missing first Thursday needs the targeted evidence.
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+    slot["entry"]["weeks_of_month"] = ["fourth"]
+    assert _omission_problems(conn, seed) == []  # existing monthly exception
+    # Sep 24 is the latest relevant occurrence; older repetitions can't replace it.
+    slot["sources"].pop(0)
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+    # Third Thursday was Sep 17. Cite two other weeks (including the preceding
+    # issue), but omit that relevant issue: the weekly fallback must not rescue it.
+    extra = {**seed["bulletins"][2], "content_hash": "d" * 64,
+             "published_date": "2026-09-06", "fetched_at": "2026-09-05T12:00:00Z"}
+    seed["bulletins"].append(extra)
+    slot["entry"]["weeks_of_month"] = ["third"]
+    slot["sources"] = [
+        {**slot["sources"][0], "bulletin": b["content_hash"][:8]}
+        for b in (seed["bulletins"][1], extra)
+    ]
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+
+
+@pytest.mark.parametrize("change, message", [
+    (lambda slot: slot.update(weekly_omission=True), "must be an object"),
+    (lambda slot: slot["weekly_omission"].pop("reason"), "missing reason"),
+    (lambda slot: slot["weekly_omission"].update(reason=" "), "omission judgment"),
+    (lambda slot: slot["weekly_omission"].update(bulletin="deadbeef"), "bulletin must name"),
+    (lambda slot: slot["weekly_omission"].update(approved=True), "unknown approved"),
+    (lambda slot: slot["sources"][0].update(said=" "), "said is required"),
+])
+def test_weekly_omission_keeps_assessment_and_quotes_auditable(conn, seed, change, message):
+    change(_weekly_omission_slot(seed))
+    assert any(message in p for p in _omission_problems(conn, seed))
+
+
+def test_finalize_does_not_invent_a_weekly_omission_assessment(conn, seed):
+    _weekly_omission_slot(seed).pop("weekly_omission")
+    finalized = finalize_seed(seed, [HF, SJ])
+    assert "weekly_omission" not in _slot(finalized, "s1")
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, finalized))
+
+
 def test_a_history_event_that_reads_a_slot_at_another_time_is_a_variant_not_missing(seed):
     past = [_history_of(
         {**_SUNDAY, "event_type": "adoration", "day_of_week": "Thursday", "start_time": "09:30"},
@@ -1822,6 +1950,54 @@ def test_slot_batch_drafts_a_whole_parish_that_finalizes(demo_cli, capsys, tmp_p
         "@st-anne-demo-fairport first" in listed
     assert main(["seed", "slot", "show", ANNE, "s8", "--json"]) == 0
     assert json.loads(capsys.readouterr().out)["slots"][0]["entry"]["cancelled"] is True
+
+
+def test_cli_records_edits_displays_and_clears_weekly_omission(
+    conn, demo_cli, seed, capsys, tmp_path,
+):
+    assessment = _weekly_omission_slot(seed)["weekly_omission"]
+    seed["slots"] = [s for s in seed["slots"] if s["id"] != "s1"]
+    write_seed_file(seed, demo_cli["seeds_dir"])
+    previous, oldest = [b["content_hash"][:8] for b in seed["bulletins"][1:]]
+    plan = tmp_path / "omission.txt"
+    plan.write_text(
+        f'include "mass Sat 16:00 @holy-family" --src "{previous},{oldest} p2: '
+        'Holy Family: Saturday Vigil Mass 4 PM" --page - '
+        f'--weekly-omission "{assessment["reason"]}" --why "R36: One omission."\n'
+    )
+    assert main(["seed", "slot", "batch", PARISH, str(plan)]) == 0
+    saved = read_seed(PARISH, demo_cli["seeds_dir"])
+    slot = next(s for s in saved["slots"] if "weekly_omission" in s)
+    assert slot["weekly_omission"] == assessment
+    assert slot["page"] is None and slot["answer"] is None
+    assert _omission_problems(conn, saved) == []
+    capsys.readouterr()
+    assert main(["seed", "slot", "show", PARISH, slot["id"]]) == 0
+    out = capsys.readouterr().out
+    assert assessment["bulletin"] in out and assessment["reason"] in out
+
+    assert main(["seed", "slot", "edit", PARISH, slot["id"], "--weekly-omission", "-"]) == 0
+    assert "weekly_omission" not in _slot(read_seed(PARISH, demo_cli["seeds_dir"]), slot["id"])
+    assert main(["seed", "slot", "edit", PARISH, slot["id"], "--page", "-",
+                 "--weekly-omission", assessment["reason"]]) == 0
+    assert _omission_problems(conn, read_seed(PARISH, demo_cli["seeds_dir"])) == []
+    path = seed_path(PARISH, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "slot", "edit", PARISH, slot["id"], "--weekly-omission", " "]) == 1
+    assert "omission judgment" in capsys.readouterr().err
+    assert path.read_bytes() == before
+
+
+def test_cli_cannot_replace_a_reviewers_judgment_with_a_weekly_omission(
+    demo_cli, seed, capsys,
+):
+    seed = _settle_all(seed)
+    path = write_seed_file(seed, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "slot", "edit", PARISH, "s16", "--weekly-omission",
+                 "Only an omission."]) == 1
+    assert "decision is the reviewer's" in capsys.readouterr().err
+    assert path.read_bytes() == before
 
 
 def test_cli_records_and_displays_website_schedule_assessments(demo_cli, capsys, tmp_path):
