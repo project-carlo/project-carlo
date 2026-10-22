@@ -219,6 +219,12 @@ export interface SeedSource {
   page?: number | null;
   url?: string | null;
   said: string;
+  schedule_check?: {
+    checked_at: string;
+    current_because: string;
+    bulletin: string;
+    fits_because: string;
+  };
 }
 
 export interface SeedOption {

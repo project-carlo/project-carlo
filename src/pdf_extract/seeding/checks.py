@@ -13,6 +13,7 @@ rules it enforces are .claude/skills/draft-parish-seed/rules.md R1, R2, R5):
   newest one the agent read (in a test run, of the labeled bulletin);
 - the newest listed bulletin is marked read, and an agent's settled inclusions
   cite its own reading there at their page (reviewer answers may include older slots),
+  or cite an assessed current website schedule in that bulletin's context;
   except what the newest bulletin can't be expected to print (`older_evidence_ok`):
   a weeks-of-the-month slot none of whose weeks fall in the newest bulletin's
   week, or a dated entry from `as_of` on that an older bulletin announced;
@@ -120,6 +121,23 @@ def _parish_id(conn: sqlite3.Connection, parish_slug: str) -> int | None:
     return None if row is None else int(row[0])
 
 
+def website_evidence_ok(
+    seed: dict[str, Any], slot: dict[str, Any], newest: dict[str, Any],
+) -> bool:
+    """A quoted website schedule assessed against the newest read bulletin.
+
+    Shape validation requires the URL, quote, check time and both explanations.
+    These record the agent's judgment; code cannot establish semantic freshness.
+    A website-only slot has no bulletin page or manufactured bulletin sighting.
+    """
+    return slot["page"] is None and any(
+        source.get("source") == WEBSITE
+        and isinstance(source.get("schedule_check"), dict)
+        and resolve_hash(seed, source["schedule_check"].get("bulletin")) == newest["content_hash"]
+        for source in slot["sources"]
+    )
+
+
 def entry_problem(
     raw: dict[str, Any], churches: dict[str, int], where: str, *, outside_ok: bool = False,
 ) -> str | None:
@@ -162,6 +180,13 @@ def check_seed(
         problems.append(
             "status is still drafting: set needs_review (open questions) or ready, or blocked"
         )
+    if cutoff is not None:
+        for i, slot in enumerate(seed["slots"]):
+            if any(source.get("source") == WEBSITE for source in slot["sources"]):
+                problems.append(
+                    f"slots[{i}] ({slot['id']}): website sources are not allowed in a "
+                    "historical test run; use only bulletins and history within its cutoff"
+                )
     if seed["status"] == BLOCKED:
         return problems
 
@@ -180,7 +205,7 @@ def check_seed(
         included = slot["decision"] == INCLUDE and slot["status"] != NEEDS_HUMAN
         if check_evidence and included and slot["answer"] is None:
             # A reviewer may explicitly include an older/website-backed option.
-            # An agent's settled inclusion needs its own reading of the anchor PDF.
+            # The agent may instead assess a quoted website schedule in its context.
             anchored = newest is not None and slot["page"] is not None and any(
                 source.get("source") == AGENT
                 and resolve_hash(seed, source.get("bulletin")) == newest["content_hash"]
@@ -188,20 +213,20 @@ def check_seed(
                 for source in slot["sources"]
             )
             if not anchored and not (
-                newest is not None and older_evidence_ok(seed, slot, newest, as_of_date)
+                newest is not None and (
+                    older_evidence_ok(seed, slot, newest, as_of_date)
+                    or website_evidence_ok(seed, slot, newest)
+                )
             ):
                 problems.append(
                     f"{where}: a settled inclusion needs an agent source on the newest "
                     "bulletin at its page; otherwise leave it needs_human with page null "
                     "(a weeks-of-the-month slot whose weeks the newest bulletin's week "
                     "doesn't hold, or a dated entry from as_of on, may instead cite an older "
-                    "bulletin read, with page null)"
+                    "bulletin read, with page null; or a quoted website schedule may use "
+                    "schedule_check explaining why it is current and fits the newest "
+                    "read bulletin, with page null)"
                 )
-        if cutoff is not None and any(s.get("source") == WEBSITE for s in slot["sources"]):
-            problems.append(
-                f"{where}: website sources are not allowed in a historical test run; "
-                "use only bulletins and history within its cutoff"
-            )
         if slot["entry"] is not None:
             problem = entry_problem(
                 slot["entry"], churches, f"{where}.entry", outside_ok=not included,

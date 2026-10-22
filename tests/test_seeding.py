@@ -1320,6 +1320,99 @@ def test_historical_evals_reject_live_website_evidence(conn, seed):
         conn, seed, parish_slug=PARISH, cutoff=seed["as_of"]))
 
 
+def _website_slot(seed):
+    slot = _slot(seed, "s1")
+    slot.update(page=None, sources=[{
+        "source": "website", "url": "https://example.org/times",
+        "said": "Fall schedule: Saturday Vigil Mass at 6:15 PM at Holy Family.",
+        "schedule_check": {
+            "checked_at": "2026-10-10T12:00:00Z",
+            "current_because": "Parish schedule linked from its current home page; the fall "
+                               "schedule matches this year's parish announcements.",
+            "bulletin": seed["bulletins"][0]["content_hash"][:8],
+            "fits_because": "The newest bulletin directs readers to the parish website for "
+                            "the fall Vigil schedule; it gives no conflicting Vigil time.",
+        },
+    }])
+    # A website-only time, with no agent source asserting that a bulletin prints it.
+    slot["entry"]["start_time"] = "18:15"
+    return slot
+
+
+def test_assessed_website_schedule_can_be_settled_without_a_bulletin_time(conn, seed):
+    slot = _website_slot(seed)
+    assert slot["answer"] is None
+    assert check_seed(conn, seed, parish_slug=PARISH) == []
+    finalized = finalize_seed(seed, [HF, SJ])
+    assert _slot(finalized, "s1")["sources"] == slot["sources"]
+    assert check_seed(conn, finalized, parish_slug=PARISH) == []
+    for evidence_check in (True, False):
+        assert any("website sources are not allowed" in p for p in check_seed(
+            conn, finalized, parish_slug=PARISH, cutoff=seed["as_of"],
+            check_evidence=evidence_check))
+    finalized.update(status="blocked", blocked_reason="Other schedules remain unclear.")
+    assert any("website sources are not allowed" in p for p in check_seed(
+        conn, finalized, parish_slug=PARISH, cutoff=seed["as_of"]))
+
+
+@pytest.mark.parametrize("change, message", [
+    (lambda s: s.update(page=2), "settled inclusion needs"),
+    (lambda s: s["sources"][0].pop("schedule_check"), "settled inclusion needs"),
+    (lambda s: s["sources"][0]["schedule_check"].update(bulletin="f" * 64),
+     "bulletin must name"),
+    (lambda s: s["sources"][0]["schedule_check"].update(current_because="  "),
+     "current_because must explain"),
+    (lambda s: s["sources"][0]["schedule_check"].pop("fits_because"), "missing fits_because"),
+    (lambda s: s["sources"][0]["schedule_check"].update(checked_at="yesterday"),
+     "checked_at must be an ISO time"),
+    (lambda s: s["sources"][0]["schedule_check"].update(fresh=True), "unknown fresh"),
+    (lambda s: s["sources"][0].update(schedule_check=True), "must be an object"),
+    (lambda s: s["sources"][0].update(said="  "), "said is required"),
+    (lambda s: s["sources"][0].pop("url"), "url is required"),
+    (lambda s: s["sources"][0].update(url="file:///tmp/times"), "url is required"),
+    (lambda s: s["sources"][0].update(bulletin="f" * 64), "website source names no bulletin"),
+    (lambda s: s["sources"][0].update(source="history"),
+     "schedule_check is only for a website source"),
+    (lambda s: s.update(website_ok=True), "unknown website_ok"),
+])
+def test_website_assessment_requires_quoted_evidence_and_explicit_shape(conn, seed, change, message):
+    slot = _website_slot(seed)
+    change(slot)
+    assert any(message in p for p in check_seed(conn, seed, parish_slug=PARISH))
+
+
+def test_website_assessment_must_fit_the_newest_read_bulletin(conn, seed):
+    slot = _website_slot(seed)
+    slot["sources"][0]["schedule_check"]["bulletin"] = seed["bulletins"][1]["content_hash"]
+    assert validate_seed(seed) == []  # known, but no longer the anchor for this assessment
+    assert _evidence_problems(conn, seed)
+    slot["sources"][0]["schedule_check"]["bulletin"] = seed["bulletins"][0]["content_hash"]
+    seed["bulletins"][0]["read"] = False
+    seed["as_of"] = seed["bulletins"][1]["fetched_at"]
+    assert any("newest listed bulletin" in p for p in check_seed(conn, seed, parish_slug=PARISH))
+
+
+def test_finalize_does_not_invent_a_website_assessment(conn, seed):
+    slot = _website_slot(seed)
+    del slot["sources"][0]["schedule_check"]
+    finalized = finalize_seed(seed, [HF, SJ])
+    assert "schedule_check" not in _slot(finalized, "s1")["sources"][0]
+    assert _evidence_problems(conn, finalized)
+
+
+def test_website_backed_agent_inclusion_can_be_reviewed_and_loaded(conn, demo, seed):
+    _website_slot(seed)
+    write_seed_file(seed, demo["seeds_dir"])
+    reviewed = _settle_all(seed)
+    saved = save_reviewed_seed(conn, PARISH, {
+        **reviewed, "status": APPROVED, "reviewer": "Reviewer",
+    }, demo["seeds_dir"])
+    assert saved["problems"] == []
+    assert load_approved_seeds(conn, demo["seeds_dir"])["loaded"][0]["entries"] == 16
+    slot = _slot(read_seed(PARISH, demo["seeds_dir"]), "s1")
+    assert slot["page"] is None and slot["answer"] is None
+
+
 def test_a_settled_inclusions_page_must_match_its_newest_agent_source(conn, seed):
     _slot(seed, "s1")["page"] = 3
     assert any("settled inclusion needs an agent source" in p
@@ -1731,6 +1824,61 @@ def test_slot_batch_drafts_a_whole_parish_that_finalizes(demo_cli, capsys, tmp_p
     assert json.loads(capsys.readouterr().out)["slots"][0]["entry"]["cancelled"] is True
 
 
+def test_cli_records_and_displays_website_schedule_assessments(demo_cli, capsys, tmp_path):
+    _start_anne(capsys)
+    plan = tmp_path / "website.txt"
+    plan.write_text(
+        'include "mass Sat 18:15" --src "web https://example.org/times: Saturday 6:15 PM" '
+        '--website-current "The parish home page links this fall schedule." '
+        '--website-context "The newest bulletin refers to the website for fall times." '
+        '--why "Website schedule assessed in the newest bulletin context."\n'
+        'summary "One church; the parish website supplies the fall Vigil schedule."\n'
+    )
+    assert main(["seed", "slot", "batch", ANNE, str(plan)]) == 0
+    saved = read_seed(ANNE, demo_cli["seeds_dir"])
+    slot = saved["slots"][0]
+    assessment = slot["sources"][0]["schedule_check"]
+    assert slot["page"] is None and slot["answer"] is None
+    assert assessment["bulletin"] == saved["bulletins"][0]["content_hash"][:8]
+    assert assessment["current_because"] == "The parish home page links this fall schedule."
+    assert validate_seed(saved) == []
+    assert main(["seed", "mark-read", ANNE, "latest"]) == 0
+    assert main(["seed", "finalize", ANNE]) == 0
+    assert read_seed(ANNE, demo_cli["seeds_dir"])["slots"][0]["sources"] == slot["sources"]
+    capsys.readouterr()
+    assert main(["seed", "slot", "show", ANNE, "s1"]) == 0
+    out = capsys.readouterr().out
+    assert assessment["checked_at"] in out
+    assert assessment["current_because"] in out
+    assert assessment["fits_because"] in out
+    # Adding another assessment through edit uses the same validation and representation.
+    assert main([
+        "seed", "slot", "edit", ANNE, "s1", "--src",
+        "web https://example.org/vigil: Fall Vigil Mass: Saturday 6:15 PM",
+        "--website-current", "The current parish calendar links this schedule.",
+        "--website-context", "The bulletin links that calendar for Vigil times.",
+    ]) == 0
+    assert len(read_seed(ANNE, demo_cli["seeds_dir"])["slots"][0]["sources"]) == 2
+    assert main(["seed", "finalize", ANNE]) == 0
+
+
+@pytest.mark.parametrize("flags, message", [
+    (["--website-current", "Current home page."], "give both --website-current"),
+    (["--website-context", "Fits the bulletin."], "give both --website-current"),
+    (["--website-current", " ", "--website-context", "Fits."], "give both --website-current"),
+    (["--website-current", "Current.", "--website-context", "Fits."],
+     "website explanations need a web --src"),
+])
+def test_cli_rejects_incomplete_or_unquoted_website_assessments(demo_cli, capsys, flags, message):
+    _start_anne(capsys)
+    path = seed_path(ANNE, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "slot", "include", ANNE, "mass Sat 18:15",
+                 "--why", "Website schedule.", *flags]) == 1
+    assert message in capsys.readouterr().err
+    assert path.read_bytes() == before
+
+
 def test_the_file_format_batch_example_writes_a_draft_that_finalizes(demo_cli, capsys):
     doc = (Path(__file__).resolve().parents[1] / ".claude/skills/draft-parish-seed/"
            "file-format.md").read_text(encoding="utf-8")
@@ -1913,6 +2061,10 @@ def test_slot_writes_follow_eval_and_refuse_websites_there(routed_cli, seed, cap
     args = ["seed", "slot", "include", PARISH, "mass Sat 16:00 @holy-family", "--why", "R1: x",
             "--eval", "run1", "--src", "latest p2: Sat 4"]
     assert main([*args, "--src", "web https://example.org/times: Sat 4 PM"]) == 1
+    assert "website sources are not allowed in a historical test run" in capsys.readouterr().err
+    assert main([*args, "--src", "web https://example.org/times: Sat 4 PM",
+                 "--website-current", "The parish home page links this schedule.",
+                 "--website-context", "The bulletin refers to the website."]) == 1
     assert "website sources are not allowed in a historical test run" in capsys.readouterr().err
     assert main(args) == 0
     capsys.readouterr()

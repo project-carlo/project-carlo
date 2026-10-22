@@ -45,6 +45,7 @@ from pdf_extract.seeding.files import (
 )
 from pdf_extract.seeding.finalize import fill_slot, next_slot_id
 from pdf_extract.seeding.queries import SeedError
+from pdf_extract.storage import utc_now_iso
 from pdf_extract.timeparse import time_to_minutes
 
 USAGE = """\
@@ -76,6 +77,9 @@ SOURCE: "HEAD: what it said, in its words"
   c1 p3: ...                 a paid call
   A slot's --page defaults to its source's page on the newest bulletin, and a
   source on the newest bulletin without a page takes the slot's.
+  With web --src, --website-current "why current" and --website-context "why it
+  fits the newest bulletin" record a schedule_check on each website source added.
+  A website-backed inclusion uses page null; finalize never invents this check.
 
 OPTION: --option "LABEL" ["ENTRY"], repeated; `*` before one label marks the
   leaning, and an option without an entry leaves the slot out.
@@ -472,10 +476,23 @@ class Draft:
         if slot_id not in self.touched:
             self.touched.append(slot_id)
 
-    def sources(self, specs: list[str] | None) -> list[dict[str, Any]]:
-        out = [s for spec in specs or [] for s in parse_source(self.seed, spec)]
+    def sources(self, args: argparse.Namespace) -> list[dict[str, Any]]:
+        out = [s for spec in args.src or [] for s in parse_source(self.seed, spec)]
         if self.eval_run is not None and any(s["source"] == WEBSITE for s in out):
             raise SeedError("website sources are not allowed in a historical test run (R5)")
+        current, context = args.website_current, args.website_context
+        if current is not None or context is not None:
+            if not (current and current.strip() and context and context.strip()):
+                raise SeedError("give both --website-current and --website-context explanations")
+            websites = [s for s in out if s["source"] == WEBSITE]
+            if not websites:
+                raise SeedError("website explanations need a web --src with the schedule's quote")
+            bulletin = _bulletin_ref(self.seed, "latest", "website schedule check")
+            for source in websites:
+                source["schedule_check"] = {
+                    "checked_at": utc_now_iso(), "current_because": current,
+                    "bulletin": short_hash(self.seed, bulletin), "fits_because": context,
+                }
         return out
 
     def new_slot(self, slot: dict[str, Any]) -> str:
@@ -629,7 +646,7 @@ def add_settled(draft: Draft, args: argparse.Namespace, decision: str) -> list[s
         entries: list[dict[str, Any] | None] = [None]  # R26: nothing to record
     else:
         entries = list(build_entries(parse_entry_spec(args.entry), draft.churches))
-    sources = draft.sources(args.src)
+    sources = draft.sources(args)
     page = _anchor(draft, args.page, sources)
     return [draft.new_slot({
         "decision": decision, "status": SETTLED, "entry": entry, "page": page,
@@ -652,7 +669,7 @@ def add_question(draft: Draft, args: argparse.Namespace) -> list[str]:
                   if len(o) == 2 and not o[1].lstrip().startswith("+")), None)
     n = len(build_entries(probe, draft.churches)) if probe else 1
     options = _options(draft, args.option, [None] * n)
-    sources = draft.sources(args.src)
+    sources = draft.sources(args)
     page = _anchor(draft, args.page, sources)
     group = args.group if args.group not in (None, "-") else None
     ids = []
@@ -676,13 +693,14 @@ def _cites_call(draft: Draft, slot: dict[str, Any]) -> bool:
     return any(isinstance(s, dict) and s.get("source") in calls for s in slot.get("sources") or [])
 
 
-_ANSWERED_ONLY = ("src",)
+_ANSWERED_ONLY = ("src", "website_current", "website_context")
 
 
 def edit_slots(draft: Draft, args: argparse.Namespace) -> list[str]:
     """`slot edit`: change the named slots' fields, keeping their ids."""
     changes = {k for k in ("entry", "no_entry", "include", "exclude", "ask", "option",
-                           "src", "drop_src", "why", "group")
+                           "src", "drop_src", "why", "group", "website_current",
+                           "website_context")
                if getattr(args, k, None) not in (None, False, [])}
     if args.page is not UNSET:
         changes.add("page")
@@ -745,8 +763,8 @@ def _edit(draft: Draft, slot: dict[str, Any], args: argparse.Namespace, changes:
             if _cites_call(draft, {"sources": [sources[n - 1]]}):
                 raise SeedError(f"{sid}: source {n} is a paid call's evidence and stays")
             del sources[n - 1]
-    if "src" in changes:
-        slot["sources"] = (slot.get("sources") or []) + draft.sources(args.src)
+    if changes & {"src", "website_current", "website_context"}:
+        slot["sources"] = (slot.get("sources") or []) + draft.sources(args)
     if "why" in changes:
         slot["rationale"] = args.why
     if "group" in changes:
@@ -820,6 +838,11 @@ def _source_arg(p: argparse.ArgumentParser) -> None:
     p.add_argument("--src", action="append", metavar="'HEAD: SAID'",
                    help="A source, repeatable: `latest p2: Sat 4 PM`, `9f2c41d0,1ab3e7c2 p2: …`, "
                         "`web URL: …`, `history: …`, `c1 p2: …`")
+    p.add_argument("--website-current", metavar="REASON",
+                   help="Why each web --src schedule appears current, after checking for staleness")
+    p.add_argument("--website-context", metavar="REASON",
+                   help="Why each web --src schedule fits the newest bulletin; requires "
+                        "--website-current and records a schedule_check with the check time")
 
 
 def _why_arg(p: argparse.ArgumentParser, required: bool = True) -> None:
@@ -987,7 +1010,15 @@ def slot_lines(slot: Any, *, full: bool = False) -> list[str]:
     if full:
         if slot.get("status") != NEEDS_HUMAN and slot.get("question"):
             lines.append(f"       entry {format_entry(slot.get('entry'))}")
-        lines += [f"       [{i}] {format_source(s)}" for i, s in enumerate(sources, start=1)]
+        for i, source in enumerate(sources, start=1):
+            lines.append(f"       [{i}] {format_source(source)}")
+            check = source.get("schedule_check") if isinstance(source, dict) else None
+            if isinstance(check, dict):
+                lines += [
+                    f"           checked {check.get('checked_at')}",
+                    f"           current: {check.get('current_because')}",
+                    f"           fits bulletin {check.get('bulletin')}: {check.get('fits_because')}",
+                ]
         lines.append(f"       why: {slot.get('rationale')}")
     else:
         lines.append(f"       {_clip(slot.get('rationale'))}")

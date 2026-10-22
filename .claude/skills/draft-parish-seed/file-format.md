@@ -104,6 +104,16 @@ one, a dated cancellation, and an open question, each rationale citing its rule:
   print the same words, one `agent` source may list them as `bulletins`, and `finalize`
   splits it into one source per bulletin. `finalize` adds the `history` sources that
   match. Write one yourself only to say what it can't ("no weekday Masses stored").
+- A website source may carry `schedule_check`: `checked_at` (ISO time of the agent's
+  assessment), `current_because` (why the schedule appears current after considering
+  stale-page clues), `bulletin` (the newest read bulletin's hash or prefix), and
+  `fits_because` (why the quoted schedule makes sense in that bulletin's context).
+  For an agent-settled website-backed inclusion, keep the website's actual schedule
+  quote in `said`, its URL in `url`, and the slot's `page` null. The exact time need
+  not appear in a bulletin. Validation requires the assessment's shape and newest
+  bulletin reference; the agent judges credibility and freshness. It imposes no
+  fixed age or frequency threshold. Website sources remain forbidden in historical
+  test runs. `finalize` preserves assessments and never creates one.
 - One slot per day and time: "Mon–Fri 8:00 AM" is five slots.
 - A question has a short `question`, `options` (an option's `entry` is null for "leave it
   out"), exactly one `"leaning": true`, and its reasons in `rationale`. Slots that share a
@@ -133,6 +143,13 @@ writes nothing if a check fails. `pnpm seed slot --help` has the full syntax.
   bulletin), hash prefixes `9f2c41d0,1ab3e7c2 p2` (one source each), `web URL`,
   `history`, or a call's id (`c1 p3`). A slot's `page` defaults to its source's page on
   the newest bulletin.
+- With a `web URL: quote` source, the paired flags `--website-current "why it appears
+  current" --website-context "why it fits the newest bulletin" add a `schedule_check`
+  to each website source added by that command. The CLI records the check time and
+  newest listed bulletin reference. Read and mark that bulletin before finalizing;
+  use `--page -` when editing a slot that previously had a bulletin page. Without
+  those flags, website sources remain ordinary supporting evidence. For different
+  assessments, add website sources in separate commands.
 - An **option** is `--option "LABEL" "ENTRY"`, or just `--option "LABEL"` for leaving it
   out. `*` before one label marks the leaning. An entry `+ ...` is the first option's
   entry with those changes (`+ except=first`).

@@ -652,6 +652,15 @@ function SlotCard(props: SlotCardProps) {
                 <span className="font-semibold text-slate-600">{source.source}</span>
                 <span className="text-slate-400"> · {hostOf(source.url)}</span>
                 <span className="block text-slate-800">{source.said}</span>
+                {source.schedule_check && (
+                  <span className="mt-1 block text-slate-600">
+                    <span className="block">Checked {source.schedule_check.checked_at}</span>
+                    <span className="block">Current: {source.schedule_check.current_because}</span>
+                    <span className="block">
+                      Fits bulletin {source.schedule_check.bulletin}: {source.schedule_check.fits_because}
+                    </span>
+                  </span>
+                )}
               </a>
             );
           }
