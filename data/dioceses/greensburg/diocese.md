@@ -150,6 +150,12 @@ keep it current rather than a log.
   (smmlb.org and newkensingtoncatholic.org both embed 001RP00000lUmSRYA0, container 14/2000).
   GCatholic's parish websites can be squatted (mountsaintpeter.org) or dead.
 
+- **Discover Mass bulletin number** is in the cover image class
+  (`bulletin-cover X-|2026-10-25|<ts>|3024`): two slugs with one number are one bulletin, and
+  template-site file names often end in it (`10182026-3396.pdf`). `recheck` on a church page
+  downloads ~12 issues and matches pypdf text, which is often letter-spaced: test quotes with
+  `web.pdf_pages`/`quote_found` locally first. Former churches can keep occasional Mass as
+  chapels (Guardian Angels, Nicholson Run): grep pastor's letters for "Chapel".
 - **Discover Mass here:** many parishes have empty church pages ("Shucks! There are no
   bulletins available"), not channels. One issue can sit under both partners' slugs as
   byte-identical files (Apollo/East Vandergrift): compare MD5s, record both slugs on one row.
