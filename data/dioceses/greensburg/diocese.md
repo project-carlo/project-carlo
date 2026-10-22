@@ -135,6 +135,11 @@ keep it current rather than a log.
   record both ids on the row. Their text layer alternates clean/letter-spaced week to week.
   Nominatim answers 429 after two quick requests.
 
+- **Directory websites can all redirect to one unlisted shared site** (four Uniontown domains
+  → faysouth.org, 14/1769 covering seven churches): `curl -L` with a browser User-Agent shows
+  the target where `probe url` gets 403. GCatholic Plus Codes can be off the building (St.
+  Joseph, Uniontown ~590 m): compare with the directory pin and OSM.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
