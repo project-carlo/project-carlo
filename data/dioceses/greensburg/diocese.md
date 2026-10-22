@@ -98,6 +98,14 @@ keep it current rather than a log.
   the "Partner Parishes" field hasn't caught up with (St. Sylvester left St. Ambrose/St.
   Matthew in July 2026).
 
+- **One issue in two LPi containers** (separate ad editions: 14/0550 and 14/1783 for
+  Delmont/Export/Murrysville): compare rendered pages 1-2, record both containers on one row.
+  The "Partner Parishes" field can under-report a group (Mother of Sorrows has none listed but
+  shares that bulletin): check same-pastor parishes' mastheads too.
+- **Empty LPi orgs for parishes that publish elsewhere** (st-barbara-church-15636; St. Barbara
+  is on Discover Mass): the parish site's "Bulletin" menu link shows the real channel.
+- `tools/fill_record.py` fills a just-created record from a small spec file.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
