@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-francis-and-st-clare",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:47Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:28:51Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches (St. Mary's, Waterloo, and St. Patrick's, Seneca Falls). Weekend, weekday, Adoration, Holy Hour and Confession times agree across all three bulletins read. Open: the Saturday 8:30 AM Mass at St. Patrick's (in the intentions and on the website but not the header box) and a website-only First Saturday Confession.",
   "blocked_reason": null,
   "bulletins": [
@@ -916,9 +916,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-seneca-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -967,7 +980,7 @@
           "page": 2
         }
       ],
-      "rationale": "R28/R30: the Mass intentions list a Saturday 8:30 AM Mass at St. Patrick's every week, but the header box lists only Thursday and Friday there. C1 does not apply cleanly, since the website and history both give the Saturday Mass, so I lean include.",
+      "rationale": "R28/R30: the Mass intentions list a Saturday 8:30 AM Mass at St. Patrick's every week, but the header box lists only Thursday and Friday there. C1 does not apply cleanly, since the website and history both give the Saturday Mass, so I lean include.\n\nReview 2026-10-22: Include weekly Saturday 8:30 AM Mass at St. Patrick’s: repeated intentions plus an explicit Thu–Sat website schedule outweigh omission from the header.",
       "question": "Add the 8:30 AM Saturday Mass at St. Patrick's?",
       "options": [
         {
@@ -993,13 +1006,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-seneca-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1008,7 +1040,7 @@
           "said": "First Fridays and First Saturdays from 9:00 to 10:00 am at St. Patrick's Church"
         }
       ],
-      "rationale": "R29/C9: found only on the website's Reconciliation text, not in any bulletin read (the bulletin box prints only 1st Friday). The page looks stale (it names Fr. Mike, who isn't in the bulletin), so I lean leave out.",
+      "rationale": "R29/C9: found only on the website's Reconciliation text, not in any bulletin read (the bulletin box prints only 1st Friday). The page looks stale (it names Fr. Mike, who isn't in the bulletin), so I lean leave out.\n\nReview 2026-10-22: Exclude website-only first-Saturday 9–10 AM Confession at St. Patrick’s: its page names an older priest and the bulletins list first Friday only.",
       "question": "Add First Saturday Confession 9:00-10:00 AM at St. Patrick's?",
       "options": [
         {
@@ -1036,7 +1068,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s15",

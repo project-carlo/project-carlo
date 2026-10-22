@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-lucy-st-bernadette-altamont",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-09-28T22:04:53Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:58:17Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "One bulletin (issue Sept 6, 2026). It prints no Mass schedule box: the only Mass times are the one-week calendar on p4 (Sunday 9 am Mass; Friday Sept 11 10 am anniversary Mass). The website lists 'Sunday 9:00am' as the Mass Schedule. One open question: whether the Sunday 9:00 AM Mass is weekly (POLICY would call the bulletin's single dated listing dated). Confession is by appointment only.",
   "blocked_reason": null,
   "bulletins": [
@@ -21,9 +21,22 @@
   "slots": [
     {
       "id": "s1",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-st-bernadette-altamont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 4,
       "sources": [
         {
@@ -50,7 +63,7 @@
           "page": 4
         }
       ],
-      "rationale": "The newest (only) bulletin prints the 9 am Mass only under one date in a one-week calendar, which POLICY (Weekly or dated, rule 3) sorts as dated, and rule 4 needs two weeks. The Mass intentions list a second Sunday (Sept 13) without a time. The website's Mass Schedule says Sunday 9:00am, and extract history also stored it weekly. Leaning weekly because the website gives it as the regular schedule (R6: the website backs up a reading but can't outweigh the bulletin, so asked). A dated Sept 6 entry would be before as_of and out of scope (R16), so the alternative is leaving it out.",
+      "rationale": "The newest (only) bulletin prints the 9 am Mass only under one date in a one-week calendar, which POLICY (Weekly or dated, rule 3) sorts as dated, and rule 4 needs two weeks. The Mass intentions list a second Sunday (Sept 13) without a time. The website's Mass Schedule says Sunday 9:00am, and extract history also stored it weekly. Leaning weekly because the website gives it as the regular schedule (R6: the website backs up a reading but can't outweigh the bulletin, so asked). A dated Sept 6 entry would be before as_of and out of scope (R16), so the alternative is leaving it out.\n\nReview 2026-10-22: Include Sunday 9 AM provisionally if the owner permits one dated bulletin listing plus an explicit matching website regular schedule. The only issue is dated Sept 6; this is the stalest seed (as_of Sept 28).",
       "question": "Is the Sunday 9:00 AM Mass at St. Lucy/St. Bernadette weekly?",
       "options": [
         {
@@ -76,7 +89,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s2",

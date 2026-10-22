@@ -5,7 +5,7 @@
   "as_of": "2026-10-11T16:38:59Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:35:02Z",
-  "reviewer": null,
+  "reviewer": "lyonsl2 (via Codex)",
   "approved_at": null,
   "summary": "Two churches: St. Michael's (Tue-Sat 8:30 AM, Saturday 3:00-3:45 Reconciliation and 4:00 PM vigil, Sunday 8, 11 and 5:30) and St. Therese Mission Chapel (Sunday 9:30). All three bulletins agree on the weekly schedule. Open: whether a 9:00 AM Columbus Day Mass was held on Oct 12 (the bulletin contradicts itself) and which church holds the Nov 2 All Souls Mass.",
   "blocked_reason": null,
@@ -613,9 +613,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day/Indigenous Peoples' Day"
+      },
       "page": 2,
       "sources": [
         {
@@ -637,7 +650,7 @@
           "page": 2
         }
       ],
-      "rationale": "R28: the pastor's letter invites everyone to a 9:00 AM Mass; the intentions page prints NO DAILY MASS (the same line every Monday, when there is no regular Mass). Leaning per C3: the specific dated listing. History has the 9:00 AM Mass.",
+      "rationale": "R28: the pastor's letter invites everyone to a 9:00 AM Mass; the intentions page prints NO DAILY MASS (the same line every Monday, when there is no regular Mass). Leaning per C3: the specific dated listing. History has the 9:00 AM Mass.\n\nReview 2026-10-22: Include the specifically invited Oct 12, 9 AM holiday Mass over the generic NO DAILY MASS line, following candidate C3. The date has passed; promote C3 only by an owner decision.",
       "question": "Was there a 9:00 AM Mass at St. Michael's on Monday, October 12 (Columbus Day)?",
       "options": [
         {
@@ -663,7 +676,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s13",

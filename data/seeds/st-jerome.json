@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-jerome",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:49Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:49:05Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish with a clear schedule box on page 1 of every stored bulletin: Mon-Fri 7:30 AM Mass, Sat 4:30 PM vigil, Sun 8 and 10 AM, Sat 3-4 PM Confession, Tuesday 8 AM-5 PM Adoration. One open question: the Nov 2 All Souls 7 PM memorial Mass appears in the two prior bulletins but not the newest.",
   "blocked_reason": null,
   "bulletins": [
@@ -743,9 +743,22 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jerome",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Annual Memorial Mass for All Souls Day"
+      },
       "page": null,
       "sources": [
         {
@@ -773,7 +786,7 @@
           "page": 2
         }
       ],
-      "rationale": "Dated special Mass at the church, printed in the two previous bulletins (page 2) but not in the newest (Oct 11), which does not mention it. Future date, after as_of.",
+      "rationale": "Dated special Mass at the church, printed in the two previous bulletins (page 2) but not in the newest (Oct 11), which does not mention it. Future date, after as_of.\n\nReview 2026-10-22: Include St. Jerome’s Nov 2, 7 PM annual memorial Mass under R19, despite omission from the newest issue.",
       "question": "Add the Monday, Nov 2, 2026 7:00 PM All Souls memorial Mass at St. Jerome?",
       "options": [
         {
@@ -799,7 +812,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

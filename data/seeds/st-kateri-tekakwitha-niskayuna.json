@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-kateri-tekakwitha-niskayuna",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:28:57Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:34:54Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches (Union Street and Rosa Road). Weekend, weekday and Confession times are identical in all three bulletins and match history. Open: whether the All Souls Day evening service on Nov 2 counts as a Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -667,9 +667,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Evening Service & Candle Ritual"
+      },
       "page": 5,
       "sources": [
         {
@@ -685,7 +698,7 @@
           "page": 5
         }
       ],
-      "rationale": "R30: titled a 'Service' but the text says the candle ritual is 'during the mass', open to all parishioners; history recorded it as a Mass. Dated and on or after as_of (R16); leaning to include.",
+      "rationale": "R30: titled a 'Service' but the text says the candle ritual is 'during the mass', open to all parishioners; history recorded it as a Mass. Dated and on or after as_of (R16); leaning to include.\n\nReview 2026-10-22: Include Nov 2, 6 PM Mass at Union Street. The full notice explicitly says the ritual is “during the mass” and invites all parishioners.",
       "question": "Add the All Souls Day Evening Service & Candle Ritual on Monday, November 2 at 6:00 PM as a Mass at Union Street?",
       "options": [
         {
@@ -711,7 +724,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

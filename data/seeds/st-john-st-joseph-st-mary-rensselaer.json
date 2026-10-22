@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-st-joseph-st-mary-rensselaer",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:34:04Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:30:58Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches (St. John the Evangelist & St. Joseph, and St. Mary at Clinton Heights, both Rensselaer). The cover's Mass, Reconciliation and Adoration boxes agree in all three bulletins. Open: one grouped question on the First Friday (St. John & St. Joseph) and First Saturday (St. Mary) Mass, Adoration and Reconciliation, announced only in the Sept 26 bulletin.",
   "blocked_reason": null,
   "bulletins": [
@@ -839,9 +839,24 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -863,7 +878,7 @@
           "page": 1
         }
       ],
-      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.",
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
       "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
       "options": [
         {
@@ -891,14 +906,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "first-fri-sat"
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -914,7 +948,7 @@
           "page": 1
         }
       ],
-      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.",
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
       "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
       "options": [
         {
@@ -942,14 +976,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "first-fri-sat"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -965,7 +1018,7 @@
           "page": 1
         }
       ],
-      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.",
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
       "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
       "options": [
         {
@@ -993,14 +1046,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "first-fri-sat"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1022,7 +1094,7 @@
           "page": 1
         }
       ],
-      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.",
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
       "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
       "options": [
         {
@@ -1050,14 +1122,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "first-fri-sat"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1073,7 +1164,7 @@
           "page": 1
         }
       ],
-      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.",
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
       "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
       "options": [
         {
@@ -1101,14 +1192,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "first-fri-sat"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1124,7 +1234,7 @@
           "page": 1
         }
       ],
-      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.",
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
       "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
       "options": [
         {
@@ -1152,7 +1262,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "first-fri-sat"
     },
     {

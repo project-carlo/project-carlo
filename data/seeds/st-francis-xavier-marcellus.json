@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-francis-xavier-marcellus",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:30:32Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:49:05Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish with a clear front-page schedule box: weekend Masses, Mon/Thu/Fri 6:45 AM, Tue 6:00 PM, Tuesday and Saturday Penance. Oct 12 Monday Mass is cancelled. Two monthly slots (First Friday exposition with Benediction, First Saturday 9 AM Mass) appear only in older bulletins and are questions.",
   "blocked_reason": null,
   "bulletins": [
@@ -527,9 +527,24 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -557,7 +572,7 @@
           "page": 3
         }
       ],
-      "rationale": "A First Saturday 9:00 AM Mass is in the Sept 27 calendar (dated Oct 3, also listed in Mass intentions) and mentioned in the Oct 4 pastor note, but the newest bulletin (covers Oct 10-18, no first Saturday) does not print it. Probably a standing monthly Mass but not stated as a schedule.",
+      "rationale": "A First Saturday 9:00 AM Mass is in the Sept 27 calendar (dated Oct 3, also listed in Mass intentions) and mentioned in the Oct 4 pastor note, but the newest bulletin (covers Oct 10-18, no first Saturday) does not print it. Probably a standing monthly Mass but not stated as a schedule.\n\nReview 2026-10-22: Include first-Saturday 9 AM Mass at St. Francis Xavier under R12; the source explicitly calls it First Saturday.",
       "question": "Add a First Saturday 9:00 AM Mass at St. Francis Xavier?",
       "options": [
         {
@@ -585,13 +600,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-xavier-marcellus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
       "page": null,
       "sources": [
         {
@@ -613,7 +647,7 @@
           "page": 3
         }
       ],
-      "rationale": "First Friday exposition 7:00 AM (Sept 27 calendar) / right after the 6:45 Mass (Oct 4 note) until Benediction 7:00 PM. Not in the newest bulletin, whose Oct 10-18 week has no first Friday. Policy says first-of-month slots are weekly with weeks_of_month.",
+      "rationale": "First Friday exposition 7:00 AM (Sept 27 calendar) / right after the 6:45 Mass (Oct 4 note) until Benediction 7:00 PM. Not in the newest bulletin, whose Oct 10-18 week has no first Friday. Policy says first-of-month slots are weekly with weeks_of_month.\n\nReview 2026-10-22: Include first-Friday 7 AM–7 PM Adoration with Benediction under R12. The printed 7 AM clock time wins over deriving 7:15 from Mass.",
       "question": "Add First Friday Adoration (7:00 AM to 7:00 PM Benediction) at St. Francis Xavier?",
       "options": [
         {
@@ -641,7 +675,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

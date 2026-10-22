@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-rita-webster",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:44Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:12:58Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Weekend Masses (Sat 5 PM, Sun 8 and 10:30 AM), daily Masses (Mon/Tue/Fri 8:15 AM, Thu 6 PM), Saturday 4:00-4:30 PM Confession and Thursday 5:30 PM Adoration are printed clearly in the newest bulletin. Oct 12 (holiday) and Oct 13 (retreat) daily Masses are cancelled, and Oct 12 Confession too. The Monday 8:45 AM Confession and Tuesday 9 AM Adoration appear in older bulletins but not in the newest (those days were off), so they are questions. The Wednesday Communion Service is excluded.",
   "blocked_reason": null,
   "bulletins": [
@@ -839,9 +839,22 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rita",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -881,7 +894,7 @@
           "page": 2
         }
       ],
-      "rationale": "Monday 8:45-9:15 AM Confessions are in the calendar of the two older bulletins with a stored PDF (and extract history in three of four recent bulletins). The newest bulletin's Monday is a holiday, so it prints no time, only that Confessions are off that day, which implies they are normally held. The newest bulletin does not print the slot.",
+      "rationale": "Monday 8:45-9:15 AM Confessions are in the calendar of the two older bulletins with a stored PDF (and extract history in three of four recent bulletins). The newest bulletin's Monday is a holiday, so it prints no time, only that Confessions are off that day, which implies they are normally held. The newest bulletin does not print the slot.\n\nReview 2026-10-22: Include weekly Monday 8:45–9:15 AM Confession and its explicit holiday cancellation under R18.",
       "question": "Add weekly Monday 8:45-9:15 AM Confession at St. Rita?",
       "options": [
         {
@@ -907,13 +920,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rita",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -947,7 +977,7 @@
           "page": 2
         }
       ],
-      "rationale": "Tuesday 9:00 AM Eucharistic Adoration (after the 8:15 Mass) is in the calendar of the two older bulletins read and in extract history for three of four recent bulletins. The newest bulletin's Tuesday is a retreat day with no Mass and lists no Adoration, so the newest bulletin does not print the slot; no end time is given.",
+      "rationale": "Tuesday 9:00 AM Eucharistic Adoration (after the 8:15 Mass) is in the calendar of the two older bulletins read and in extract history for three of four recent bulletins. The newest bulletin's Tuesday is a retreat day with no Mass and lists no Adoration, so the newest bulletin does not print the slot; no end time is given.\n\nReview 2026-10-22: Ask before carrying Tuesday 9 AM Adoration: the newest issue cancels Mass for a retreat but never explicitly cancels Adoration. Do not infer one service’s cancellation from another’s.",
       "question": "Add weekly Tuesday 9:00 AM Eucharistic Adoration at St. Rita?",
       "options": [
         {
@@ -973,7 +1003,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

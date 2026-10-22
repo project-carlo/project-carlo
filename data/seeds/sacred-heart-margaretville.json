@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "sacred-heart-margaretville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:31:47Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:28:47Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches: Sacred Heart in Margaretville and St. Anne's Mission in Andes. Weekend, Thursday and Friday Adoration times agree in all three bulletins, and three Spanish Masses are dated in October. Open: whether the Friday Mass after Adoration gets a time. Confession before Mass and the First Saturday Mass have no definite time and are left out.",
   "blocked_reason": null,
   "bulletins": [
@@ -299,9 +299,22 @@
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-margaretville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Follows Adoration"
+      },
       "page": 1,
       "sources": [
         {
@@ -335,7 +348,7 @@
           "page": 1
         }
       ],
-      "rationale": "R30: the bulletins print only the Adoration time; the Mass has no clock time, and POLICY works out only times after a Mass. Stored history reads it at 11:00 (twice) and 11:30 (once, marked approximate). A wrong time is worse than a missing one, so leaning leave out.",
+      "rationale": "R30: the bulletins print only the Adoration time; the Mass has no clock time, and POLICY works out only times after a Mass. Stored history reads it at 11:00 (twice) and 11:30 (once, marked approximate). A wrong time is worse than a missing one, so leaning leave out.\n\nReview 2026-10-22: Exclude a timed Friday Mass after 11 AM Adoration. Neither 11 AM nor an assumed half-hour later is licensed by POLICY.",
       "question": "Add a Friday Mass after the 11:00 AM Adoration at Sacred Heart?",
       "options": [
         {
@@ -361,7 +374,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "friday"
     },
     {

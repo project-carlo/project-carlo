@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-louis-pittsford",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:30:21Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:49:05Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "St. Louis, Pittsford has a clear schedule box on p1 of the newest bulletin: weekday Masses 11:00 (with Rosary), Sat 4:30 PM, Sun 8:00/10:30/5:00, and weekly and First Friday confession. Left out: a Heather Heights residence Mass, the All Saints Dress-Up Day (regular 10:30 Mass), a funeral Mass. Two open questions: a First Saturday 9:00 Mass and First Friday Adoration, each printed only in the 9/27 bulletin.",
   "blocked_reason": null,
   "bulletins": [
@@ -1012,9 +1012,24 @@
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1042,7 +1057,7 @@
           "page": 3
         }
       ],
-      "rationale": "Only the 9/27 bulletin (p4) mentions the normal First Saturday Mass at 9:00 am, as a side remark when moving it to 10:30 on Oct 3. The newest bulletin's calendar (through Oct 18) covers no first Saturday and the front-page box omits it. Extract history never had the 9:00 slot. Website could not be fetched (403).",
+      "rationale": "Only the 9/27 bulletin (p4) mentions the normal First Saturday Mass at 9:00 am, as a side remark when moving it to 10:30 on Oct 3. The newest bulletin's calendar (through Oct 18) covers no first Saturday and the front-page box omits it. Extract history never had the 9:00 slot. Website could not be fetched (403).\n\nReview 2026-10-22: Include normal first-Saturday 9 AM Mass at St. Louis: “10:30 (not 9:00)” identifies the usual time and a one-date exception. Cite that explanation with the exception.",
       "question": "Add a First Saturday 9:00 AM Mass at St. Louis?",
       "options": [
         {
@@ -1070,13 +1085,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1092,7 +1126,7 @@
           "page": 2
         }
       ],
-      "rationale": "Only the 9/27 upcoming-events box (p2) names Adoration with the First Friday Mass at 11:00 am; it gives no separate start or end time for Adoration. The newest bulletin does not print it. The 11:30-12:30 First Friday confession is the only timed item and is already included. Policy: a wrong time is worse than a missing one.",
+      "rationale": "Only the 9/27 upcoming-events box (p2) names Adoration with the First Friday Mass at 11:00 am; it gives no separate start or end time for Adoration. The newest bulletin does not print it. The 11:30-12:30 First Friday confession is the only timed item and is already included. Policy: a wrong time is worse than a missing one.\n\nReview 2026-10-22: Exclude First Friday Adoration timed from confession hours. A combined Mass/Adoration/Confession heading does not establish Adoration’s own interval.",
       "question": "Add First Friday Adoration at St. Louis (after the 11:00 AM Mass; time not printed)?",
       "options": [
         {
@@ -1120,7 +1154,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "assumption-resurrection",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:28:02Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T22:01:41Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches, one shared bulletin; page 1 prints a clear schedule by church, so every weekend and weekday Mass, the Saturday (5:00 PM) and Wednesday (12:00 PM) Assumption Confession and the first-Saturday Resurrection Confession are settled, and the three readable bulletins agree. The first-Saturday 8:00 AM Resurrection Mass is settled by R12 (only the Sept 27 bulletin's week holds one). One question: first-Friday Adoration at Assumption, because the website says it alternates between the two parishes (lean: leave out). The Columbus Day Mass (Oct 12, 9:00 AM at Resurrection) is a dated Mass; the bulletin does not say the usual Monday Masses are cancelled (R17).",
   "blocked_reason": null,
   "bulletins": [
@@ -1453,9 +1453,24 @@
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Alternates with Resurrection"
+      },
       "page": null,
       "sources": [
         {
@@ -1482,7 +1497,7 @@
           "page": 6
         }
       ],
-      "rationale": "R33, R12: the Sept 27 bulletin prints a First Friday Adoration at Assumption, 12:00-6:00 PM (its week holds the first Friday; the Oct 11 and Oct 4 bulletins do not). The website says first-Friday adoration alternates between the two parishes, so Assumption would not host every first Friday, and the file cannot say 'every other month'. Leaning toward leaving it out, since a wrong time is worse than a missing one; update mode can pick up each month's dated listing. Only Assumption's October time is known; none is printed for Resurrection.",
+      "rationale": "R33, R12: the Sept 27 bulletin prints a First Friday Adoration at Assumption, 12:00-6:00 PM (its week holds the first Friday; the Oct 11 and Oct 4 bulletins do not). The website says first-Friday adoration alternates between the two parishes, so Assumption would not host every first Friday, and the file cannot say 'every other month'. Leaning toward leaving it out, since a wrong time is worse than a missing one; update mode can pick up each month's dated listing. Only Assumption's October time is known; none is printed for Resurrection.\n\nReview 2026-10-22: Exclude the alternating-month pattern rather than publish it every first Friday. Keep only explicitly printed future dates; none in this question survives as_of.",
       "question": "Add First Friday Adoration at Assumption 12:00-6:00 PM, although it alternates with Resurrection?",
       "options": [
         {
@@ -1510,7 +1525,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s24",

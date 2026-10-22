@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-patrick-st-thomas-aquinas-binghamton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:36:56Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:36:37Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two linked churches, St. Patrick's and St. Thomas Aquinas. Weekend, weekday and Saturday Reconciliation times, the Divine Mercy Adoration Chapel and the third-Thursday young adult Confession and Mass are the same in all three bulletins. Open: the end time of Thursday Exposition at St. Thomas Aquinas (4:00 vs 4:30 PM, the bulletin disagrees with itself) and the First Saturday confessions.",
   "blocked_reason": null,
   "bulletins": [
@@ -1783,9 +1783,22 @@
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open Church"
+      },
       "page": 3,
       "sources": [
         {
@@ -1837,7 +1850,7 @@
           "page": 1
         }
       ],
-      "rationale": "R28: the schedule box on page 1 of all three bulletins says 4:30pm; the Spirituality page (all three) and this week's calendar (newest) say 4pm. Leaning 4:00 PM: the page that describes the Exposition itself and the weekly calendar agree, and history stored 16:00 in three of four readings.",
+      "rationale": "R28: the schedule box on page 1 of all three bulletins says 4:30pm; the Spirituality page (all three) and this week's calendar (newest) say 4pm. Leaning 4:00 PM: the page that describes the Exposition itself and the weekly calendar agree, and history stored 16:00 in three of four readings.\n\nReview 2026-10-22: Use Thursday 10:30 AM–4 PM for St. Thomas Aquinas Adoration: the service-specific exposition description and current calendar agree. The generic Open Church box’s 4:30 PM may describe building access rather than exposition.",
       "question": "What are the hours of Thursday Exposition at St. Thomas Aquinas ('Open Church')?",
       "options": [
         {
@@ -1880,14 +1893,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "sta-thursday"
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Devotion; after the 8:00 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -1915,7 +1947,7 @@
           "page": 1
         }
       ],
-      "rationale": "R30: the confessions come after a Rosary, talk and Consecration, so they have no definite start time of their own (POLICY, Final source checks); R10's half hour after the Mass would be a guess. History read a dated 08:45 confession for Oct 3 (before as_of, not carried over). Leaning leave out. The newest bulletin's week holds no first Saturday; the 9/27 bulletin's does and prints the same line.",
+      "rationale": "R30: the confessions come after a Rosary, talk and Consecration, so they have no definite start time of their own (POLICY, Final source checks); R10's half hour after the Mass would be a guess. History read a dated 08:45 confession for Oct 3 (before as_of, not carried over). Leaning leave out. The newest bulletin's week holds no first Saturday; the 9/27 bulletin's does and prints the same line.\n\nReview 2026-10-22: Exclude guessed first-Saturday 8:30 AM Confession: the larger devotion includes a Rosary, talk and consecration, with no definite confession start.",
       "question": "Add a confession on First Saturdays at St. Patrick's, after the 8:00 AM Mass?",
       "options": [
         {
@@ -1943,7 +1975,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s30",

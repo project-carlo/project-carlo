@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-of-rochester",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:29:42Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:56:14Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single church. The weekend and weekday Mass times (Sat 8:30 AM and 5 PM; Sun 7:30, 9, 11; Mon, Tue and Thu 6:30 AM; Wed 8:30 AM; no Friday Mass) and Saturday 4:00-4:45 PM Confession are printed identically in the newest and the two older bulletins read, so they are settled. Two questions (R29): the adoration chapel's open hours (Mon-Fri 7 AM-5 PM, Sat 9 AM-5 PM) and the Thursday 5-7 PM Knights of Columbus adoration appear in the Oct 4 and Sep 27 bulletins but not in the newest Oct 11 one; both lean include. The website's mass-times page has a stale 'Mass Schedule Changes' note that disagrees with the bulletins and says nothing of adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -833,9 +833,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-of-rochester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel; no Adoration during Masses, including weddings and funerals"
+      },
       "page": null,
       "sources": [
         {
@@ -863,7 +876,7 @@
           "page": 4
         }
       ],
-      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.",
+      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.\n\nReview 2026-10-22: Carry forward the repeated chapel hours provisionally if the owner adopts a carry-forward rule. Preserve “No Adoration during Masses including Weddings and Funerals”; the offered continuous intervals currently omit that important qualification.",
       "question": "Include the adoration chapel's open hours (Mon-Fri 7 AM-5 PM, Sat 9 AM-5 PM) as weekly Adoration, though the newest bulletin does not print them?",
       "options": [
         {
@@ -889,14 +902,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel-hours"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-of-rochester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel; no Adoration during Masses, including weddings and funerals"
+      },
       "page": null,
       "sources": [
         {
@@ -924,7 +954,7 @@
           "page": 4
         }
       ],
-      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.",
+      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.\n\nReview 2026-10-22: Carry forward the repeated chapel hours provisionally if the owner adopts a carry-forward rule. Preserve “No Adoration during Masses including Weddings and Funerals”; the offered continuous intervals currently omit that important qualification.",
       "question": "Include the adoration chapel's open hours (Mon-Fri 7 AM-5 PM, Sat 9 AM-5 PM) as weekly Adoration, though the newest bulletin does not print them?",
       "options": [
         {
@@ -950,14 +980,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel-hours"
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-of-rochester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel; no Adoration during Masses, including weddings and funerals"
+      },
       "page": null,
       "sources": [
         {
@@ -985,7 +1032,7 @@
           "page": 4
         }
       ],
-      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.",
+      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.\n\nReview 2026-10-22: Carry forward the repeated chapel hours provisionally if the owner adopts a carry-forward rule. Preserve “No Adoration during Masses including Weddings and Funerals”; the offered continuous intervals currently omit that important qualification.",
       "question": "Include the adoration chapel's open hours (Mon-Fri 7 AM-5 PM, Sat 9 AM-5 PM) as weekly Adoration, though the newest bulletin does not print them?",
       "options": [
         {
@@ -1011,14 +1058,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel-hours"
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-of-rochester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel; no Adoration during Masses, including weddings and funerals"
+      },
       "page": null,
       "sources": [
         {
@@ -1046,7 +1110,7 @@
           "page": 4
         }
       ],
-      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.",
+      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.\n\nReview 2026-10-22: Carry forward the repeated chapel hours provisionally if the owner adopts a carry-forward rule. Preserve “No Adoration during Masses including Weddings and Funerals”; the offered continuous intervals currently omit that important qualification.",
       "question": "Include the adoration chapel's open hours (Mon-Fri 7 AM-5 PM, Sat 9 AM-5 PM) as weekly Adoration, though the newest bulletin does not print them?",
       "options": [
         {
@@ -1072,14 +1136,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel-hours"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-of-rochester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel; no Adoration during Masses, including weddings and funerals"
+      },
       "page": null,
       "sources": [
         {
@@ -1107,7 +1188,7 @@
           "page": 4
         }
       ],
-      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.",
+      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.\n\nReview 2026-10-22: Carry forward the repeated chapel hours provisionally if the owner adopts a carry-forward rule. Preserve “No Adoration during Masses including Weddings and Funerals”; the offered continuous intervals currently omit that important qualification.",
       "question": "Include the adoration chapel's open hours (Mon-Fri 7 AM-5 PM, Sat 9 AM-5 PM) as weekly Adoration, though the newest bulletin does not print them?",
       "options": [
         {
@@ -1133,14 +1214,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel-hours"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-of-rochester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel; no Adoration during Masses, including weddings and funerals"
+      },
       "page": null,
       "sources": [
         {
@@ -1168,7 +1266,7 @@
           "page": 4
         }
       ],
-      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.",
+      "rationale": "R29: the 'SJR Eucharistic Adoration' box is on page 4 of the Oct 4 and Sep 27 bulletins (and, per history, Sep 20), but the newest bulletin (Oct 11) has Fr. Michael's note on that page instead, and nothing about adoration anywhere else in it. R5: the website's Mass & Confession page does not mention adoration. Leaning to include: three of the last four issues print the same box and the omission looks like one week's layout change, not a change of schedule. Caveats: the box also lists 'NEW Open Hours' (Mon 7AM, Tue 8AM & 2PM, ...), which may be the hours adorers are signed up for, so the 7-5 range is the box's own heading; it says 'Coming Soon: Chapel open until 7PM Mon-Fri'; and 'No Adoration during Masses', which would break up the Wed 8:30 AM Mass hour.\n\nReview 2026-10-22: Carry forward the repeated chapel hours provisionally if the owner adopts a carry-forward rule. Preserve “No Adoration during Masses including Weddings and Funerals”; the offered continuous intervals currently omit that important qualification.",
       "question": "Include the adoration chapel's open hours (Mon-Fri 7 AM-5 PM, Sat 9 AM-5 PM) as weekly Adoration, though the newest bulletin does not print them?",
       "options": [
         {
@@ -1194,14 +1292,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel-hours"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-of-rochester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Knights of Columbus; Rosary at 5:15 and 6:15 PM"
+      },
       "page": null,
       "sources": [
         {
@@ -1229,7 +1344,7 @@
           "page": 4
         }
       ],
-      "rationale": "R29: printed on page 4 of the Oct 4 and Sep 27 bulletins (and in history for Sep 20) but not in the newest. Leaning to include for the same reason as the chapel hours: the box repeats weekly and the newest issue simply replaced it. The newest calendar (page 5) lists a 'K of C Novena for Life' in the Chapel 6:30-7:15 PM on Oct 14-18, a devotion left out here (R24); it doesn't contradict the 5-7 PM adoration.",
+      "rationale": "R29: printed on page 4 of the Oct 4 and Sep 27 bulletins (and in history for Sep 20) but not in the newest. Leaning to include for the same reason as the chapel hours: the box repeats weekly and the newest issue simply replaced it. The newest calendar (page 5) lists a 'K of C Novena for Life' in the Chapel 6:30-7:15 PM on Oct 14-18, a devotion left out here (R24); it doesn't contradict the 5-7 PM adoration.\n\nReview 2026-10-22: Carry forward Thursday 5–7 PM public Knights of Columbus Adoration if a repeated standing schedule survives one silent bulletin. The earlier notice explicitly invites all parishioners.",
       "question": "Include the Knights of Columbus Thursday 5-7 PM adoration, though the newest bulletin does not print it?",
       "options": [
         {
@@ -1255,7 +1370,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s19",

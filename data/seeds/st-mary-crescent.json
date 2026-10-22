@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-crescent",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:44Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:49:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Small one-church parish; the Oct 11 bulletin's p7 box gives the weekend Masses and Saturday Confession, and its calendar shows Monday/Thursday/Friday 9 AM Mass. Friday Mass is temporarily here through mid-January (St. Edward's construction); Tue/Wed/Sat daily Masses are at St. Edward's and left out. One question: the first-Monday 'Mercy Monday' Confession, printed only in older bulletins.",
   "blocked_reason": null,
   "bulletins": [
@@ -496,9 +496,24 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-crescent",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mercy Monday"
+      },
       "page": null,
       "sources": [
         {
@@ -526,7 +541,7 @@
           "page": 5
         }
       ],
-      "rationale": "Two older bulletins say Confession is offered the first Monday of each month, 5-8 PM (a recurring slot, so weeks_of_month first). The newest bulletin (Oct 11) does not print it, though its calendar covers no first Monday (Oct 12 is the second Monday), so its absence says nothing. History recorded it only as a one-off on Oct 5, which has passed.",
+      "rationale": "Two older bulletins say Confession is offered the first Monday of each month, 5-8 PM (a recurring slot, so weeks_of_month first). The newest bulletin (Oct 11) does not print it, though its calendar covers no first Monday (Oct 12 is the second Monday), so its absence says nothing. History recorded it only as a one-off on Oct 5, which has passed.\n\nReview 2026-10-22: Include first-Monday 5–8 PM Mercy Monday Confession under R12.",
       "question": "Add first-Monday 'Mercy Monday' Confession 5:00-8:00 PM at St. Mary's Crescent?",
       "options": [
         {
@@ -554,7 +569,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

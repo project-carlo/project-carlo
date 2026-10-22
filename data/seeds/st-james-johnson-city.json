@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-james-johnson-city",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:48Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:52:14Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish with a clear schedule block on page 1: daily 6:45 AM Mass, Saturday 5 PM vigil, three Sunday Masses plus Vietnamese and Spanish Masses on set Sundays, Saturday reconciliation, First Monday adoration and a third-Monday Spanish Holy Hour. Dated items: Columbus Day Mass at 9:00 AM Oct 12 (one question on whether the 6:45 AM Mass is cancelled), the Revive Night Confession and Mass Oct 13, and the All Souls Mass Nov 2 at 6:30 AM. The Nov 2 cemetery Mass is excluded.",
   "blocked_reason": null,
   "bulletins": [
@@ -775,9 +775,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-johnson-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
       "page": 2,
       "sources": [
         {
@@ -799,7 +812,7 @@
           "page": 2
         }
       ],
-      "rationale": "The Columbus Day Mass intentions list only a 9:00 AM Mass; the bulletin never says the 6:45 AM Mass is cancelled. The 9:00 AM time matches the holiday Mass hours on page 1, so the 6:45 AM Mass is probably replaced, but that is an inference.",
+      "rationale": "The Columbus Day Mass intentions list only a 9:00 AM Mass; the bulletin never says the 6:45 AM Mass is cancelled. The 9:00 AM time matches the holiday Mass hours on page 1, so the 6:45 AM Mass is probably replaced, but that is an inference.\n\nReview 2026-10-22: Do not infer cancellation of the Oct 12 6:45 AM Mass just because a 9 AM holiday Mass is listed. R17 applies; the date has passed.",
       "question": "Is the regular 6:45 AM Mass on Monday Oct 12 (Columbus Day) cancelled in favor of the 9:00 AM Mass?",
       "options": [
         {
@@ -825,7 +838,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s17",

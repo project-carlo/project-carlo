@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-clinton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:32:16Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:51:46Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish (St. Mary's, Clinton). The page 1 box gives Saturday 5:30 PM and Sunday 9:00 AM Masses and Thursday 4:30-5:30 PM Confession. Wednesday and Friday 12:10 PM Masses appear only in the weekly intentions, in all three bulletins, and are settled as weekly by POLICY rule 4 and the website's Daily Mass Schedule. One question: a website-only Saturday confession after the vigil, leaning leave out.",
   "blocked_reason": null,
   "bulletins": [
@@ -352,9 +352,22 @@
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 5:30 PM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -369,7 +382,7 @@
           "said": "Sacrament of Reconciliation ** Thursday 4:30pm -5:30pm (no Saturday confession printed)"
         }
       ],
-      "rationale": "R29: found only on the website's Special Masses and Confession Schedule page; none of the three bulletins prints it, and the same website's Mass Times page lists only Thursday 4:30-5:30 PM. If included, R10 puts it an hour after the 5:30 PM vigil starts, 6:30 PM. Leaning toward leaving it out: it has no time of its own, the page looks like older generic text, and the newest bulletin and the Mass Times page agree on Thursday only.",
+      "rationale": "R29: found only on the website's Special Masses and Confession Schedule page; none of the three bulletins prints it, and the same website's Mass Times page lists only Thursday 4:30-5:30 PM. If included, R10 puts it an hour after the 5:30 PM vigil starts, 6:30 PM. Leaning toward leaving it out: it has no time of its own, the page looks like older generic text, and the newest bulletin and the Mass Times page agree on Thursday only.\n\nReview 2026-10-22: Exclude website-only after-vigil confession: the specific Mass Times page and bulletins agree on Thursday only.",
       "question": "Add Saturday Confession after the 5:30 PM vigil (website only)?",
       "options": [
         {
@@ -395,7 +408,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

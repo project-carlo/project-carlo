@@ -5,7 +5,7 @@
   "as_of": "2026-10-11T16:28:19Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:11:08Z",
-  "reviewer": null,
+  "reviewer": "lyonsl2 (via Codex)",
   "approved_at": null,
   "summary": "St. Paul's has one church (st-pauls) with a clear front-page schedule: Sat 4:00 PM, Sun 9:00 and 11:00 AM, Mon-Thu 8:30 AM, Wed 9:00 AM Adoration, Sat 2:00-3:00 PM Confession. The newest bulletin cancels the Tue Oct 13 daily Mass and lists a 10:00 AM Memorial Mass that day (question: public or private?). The Nov 2 All Souls Mass of Remembrance at 6:30 PM appears only in the two prior bulletins (question). The Oct 17 4:00 PM Mass with Bishop Bonnici is the regular Saturday Mass and is not recorded separately.",
   "blocked_reason": null,
@@ -689,9 +689,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pauls",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance, All Souls Day"
+      },
       "page": null,
       "sources": [
         {
@@ -719,7 +732,7 @@
           "page": 4
         }
       ],
-      "rationale": "Printed in the Oct 4 and Sept 27 bulletins (A Rose to Remember article), invited to all parishioners, but the newest bulletin (Oct 11) does not print it. Nov 2, 2026 is a Monday. History stored it at 18:30.",
+      "rationale": "Printed in the Oct 4 and Sept 27 bulletins (A Rose to Remember article), invited to all parishioners, but the newest bulletin (Oct 11) does not print it. Nov 2, 2026 is a Monday. History stored it at 18:30.\n\nReview 2026-10-22: Include Nov 2, 6:30 PM All Souls Mass at St. Paul’s under R19, supported by the older invitation.",
       "question": "Add a dated All Souls Day Mass of Remembrance on Nov 2, 2026 at 6:30 PM?",
       "options": [
         {
@@ -745,7 +758,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

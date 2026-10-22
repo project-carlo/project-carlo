@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-malachy-sherburne",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:31:14Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:51:31Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "St. Malachy's p1 gives Saturday 4:00 PM, Sunday 8:30 AM and Friday 9:00 AM Masses, Saturday 3:10-3:40 and Tuesday 6-7 PM Reconciliation and Tuesday 6-7 PM Adoration. Fr. Dan's absence cancels Fridays Oct 16 and 23. Open: p2 announces that from Nov 1 the weekday Mass becomes Tuesday 9:00 AM at St. Malachy (Friday moves to St. Paul's), which the file cannot date.",
   "blocked_reason": null,
   "bulletins": [
@@ -391,9 +391,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -427,7 +440,7 @@
           "page": 1
         }
       ],
-      "rationale": "The newest bulletin still prints the Friday 9:00 AM Mass at St. Malachy (p1, and Friday Oct 9/16/23 are shown on p2), but p2 announces that from November 1 the Friday Mass moves to St. Paul's and St. Malachy's weekday Mass becomes Tuesday 9:00 AM. The file cannot express a start date, so the Friday slot is kept for now; update mode should drop it once a post-Nov 1 bulletin appears.",
+      "rationale": "The newest bulletin still prints the Friday 9:00 AM Mass at St. Malachy (p1, and Friday Oct 9/16/23 are shown on p2), but p2 announces that from November 1 the Friday Mass moves to St. Paul's and St. Malachy's weekday Mass becomes Tuesday 9:00 AM. The file cannot express a start date, so the Friday slot is kept for now; update mode should drop it once a post-Nov 1 bulletin appears.\n\nReview 2026-10-22: Keep the Friday 9 AM Mass as current at the seed’s as_of, under R20. The announced Nov 1 move is future then.",
       "question": "Keep the weekly Friday 9:00 AM Mass at St. Malachy even though it ends on Nov 1?",
       "options": [
         {
@@ -453,13 +466,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-malachy-sherburne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -469,7 +499,7 @@
           "said": "Starting November 1st and going forward ... Tuesday: 9:00 AM @ St. Malachy's"
         }
       ],
-      "rationale": "Announced for 'November 1st and going forward' only, so it is not the current schedule (Tuesdays now have 'No Mass' on Oct 13). The file cannot express a start date; a season needs both months. Leaving it out keeps the site correct until a post-Nov 1 bulletin arrives.",
+      "rationale": "Announced for 'November 1st and going forward' only, so it is not the current schedule (Tuesdays now have 'No Mass' on Oct 13). The file cannot express a start date; a season needs both months. Leaving it out keeps the site correct until a post-Nov 1 bulletin arrives.\n\nReview 2026-10-22: Leave out the future Tuesday 9 AM standing slot until the Nov 1 change becomes current, under R20. Do not misuse an annually recurring season to encode it.",
       "question": "Add a weekly Tuesday 9:00 AM Mass at St. Malachy that starts Nov 1?",
       "options": [
         {
@@ -495,7 +525,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s11",

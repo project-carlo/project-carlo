@@ -5,7 +5,7 @@
   "as_of": "2026-10-11T16:32:13Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:35:46Z",
-  "reviewer": null,
+  "reviewer": "lyonsl2 (via Codex)",
   "approved_at": null,
   "summary": "Three churches (OLP Clarence, SJB Alden, STA Akron). The schedule boxes on page 1 give Mass, Confession and Adoration times and agree in all three bulletins read, and history matches. Open: whether to list two dated OLP Masses, the Oct 17 Mass for Rita Grabowski and the Oct 31 Mass of Remembrance.",
   "blocked_reason": null,
@@ -2048,9 +2048,22 @@
     },
     {
       "id": "s34",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass for Rita Grabowski"
+      },
       "page": 5,
       "sources": [
         {
@@ -2078,7 +2091,7 @@
           "page": 5
         }
       ],
-      "rationale": "R30: a memorial Mass for one person is closed under POLICY unless the bulletin invites everyone; this one says all parishioners are welcome, so it leans open. The church is OLP (printed on the OLP page, 'Our Lady of Peace' staff column). History reads it as a dated Mass at OLP.",
+      "rationale": "R30: a memorial Mass for one person is closed under POLICY unless the bulletin invites everyone; this one says all parishioners are welcome, so it leans open. The church is OLP (printed on the OLP page, 'Our Lady of Peace' staff column). History reads it as a dated Mass at OLP.\n\nReview 2026-10-22: Include the Oct 17, 9:30 AM Rita Grabowski Mass under the explicit invitation exception. It has now passed.",
       "question": "Add the 9:30 AM Mass for Rita Grabowski at Our Lady of Peace on Saturday, Oct 17?",
       "options": [
         {
@@ -2104,7 +2117,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s35",
