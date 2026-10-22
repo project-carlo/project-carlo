@@ -6,16 +6,20 @@ count, weekly or dated, times, churches. This file covers what is specific to se
 reading across bulletins, history and the website; `as_of`; evidence; and what is settled
 and what is asked. The JSON fields are in [file-format.md](file-format.md).
 
-**The default is to ask.** Settle a slot only when a rule below (R…) or POLICY clearly
-covers it. Everything else is `needs_human`: a short question, the options, exactly one
-`"leaning": true`, and in the rationale why you lean that way. Candidates (C…) are not in
-force: ask them too, and lean the way they say. The reviewer works in the labeler and
-never sees your report. A doubt kept only in the report or in a settled slot's rationale
-is lost, and the slot is approved as settled.
+**Apply the rules first; ask about what remains unclear.** Check POLICY and the active
+rules below (R…), including their exceptions, before making a question. A named monthly
+service need not appear in an issue covering a different week (R12), and a future event
+announced earlier need not be repeated in every issue (R19). Confession during Adoration
+has the explicit timing exception in POLICY. Do not ask again when a rule settles it.
+Everything still unclear is `needs_human`: a short question, the options, exactly one
+`"leaning": true`, and why you lean that way. Candidates (C…) are not in force and cannot
+override a clear active rule or POLICY. When no active rule settles a candidate's case,
+ask and lean as the candidate says. The reviewer works in the labeler and never sees your
+report. A doubt kept only in the report or a settled slot's rationale is lost.
 
 **Citing.** A settled slot's `rationale` starts with the rule it rests on ("R1: printed in
 the schedule box of all three bulletins") or names the POLICY section ("POLICY, Times").
-A question's rationale may name the candidate it leans on ("leaning per C3").
+A question's rationale may name the candidate it leans on ("leaning per C5").
 
 **How to change these rules** (maintainer): add a rule under the next unused ID in the
 section it belongs to. Never renumber or reuse an ID, since rationales cite them. To
@@ -28,8 +32,9 @@ questions` lists answered questions, their leanings and what they cite.
 - When: the newest bulletin prints the slot clearly, POLICY is clear about it, and nothing
   you read contradicts it.
 - Do: `settled` include, `page` where the newest bulletin prints it, with an `agent` source
-  at that page. Every inclusion you settle, under any rule, needs that source, except
-  under R12 and R19. `seed check` enforces this.
+  at that page. Every inclusion you settle needs that source, except an assessed website
+  schedule under R6, older evidence under R12/R19, or a repeated schedule retained under
+  R36. Those exceptions have `page: null`; never invent a newest-bulletin page.
 
 **R2. Read the newest bulletin first, and mark what you read.**
 - When: you start a parish, and whenever you read any bulletin.
@@ -59,9 +64,21 @@ questions` lists answered questions, their leanings and what they cite.
 
 **R6. The website: what it can settle.**
 - When: a website page bears on a slot.
-- Do: it can back up a reading, or settle where a chapel is or that a "First Saturday" Mass
-  is monthly. It never outweighs the newest bulletin, because websites go stale. A slot
-  found only on the website is asked (R29).
+- Do: use the parish's own website when it clearly describes a real service at a known
+  church and fits what you read in the bulletin. It may establish a time absent from the
+  bulletin, a chapel's location, or a monthly pattern. Quote the page and briefly explain
+  why you trust it. Watch for old priests, obsolete restrictions, conflicting schedules
+  and announcements clearly belonging to an earlier period. An old copyright year alone
+  does not make a schedule stale. A real conflict with the bulletin is still asked; a
+  missing mention alone is not a conflict. Ask if you still doubt the time, place or
+  whether the service continues. Never use a live website in a historical evaluation.
+- For an agent-settled website-backed inclusion, set `page: null` and record the website
+  source's `schedule_check`: when checked, why it appears current, the newest read
+  bulletin, and why it fits that bulletin. Use paired `--website-current` and
+  `--website-context` with `web URL: quote` (file-format.md). Code checks this evidence's
+  shape and provenance; judging whether the schedule is real remains your job.
+- This promotes C9. Its old case remains evidence, not an automatic instruction to
+  restore a previously excluded slot.
 
 ## History
 
@@ -123,6 +140,26 @@ questions` lists answered questions, their leanings and what they cite.
 - When: the bulletin gives only one end of a season ("from October").
 - Do: record no `season`.
 
+**R35. Matching times in multiple bulletins can be weekly.**
+- When: the same church, service, weekday and time appear in two or more bulletins
+  covering different weeks, without being marked special or one-off.
+- Do: record it as weekly and cite each reading. They need not all appear inside one
+  PDF: this is seeding's extension of POLICY, Weekly or dated rule 4. A weekend-only
+  schedule box does not disprove weekday Masses printed elsewhere. A single dated
+  occurrence is not enough by itself; a clear regular schedule, a credible website
+  schedule (R6), or a named monthly service follows its own rule. Do not restore a
+  reviewer-excluded slot without new evidence addressing why it was excluded.
+
+**R33. A pattern the file cannot express.**
+- When: for example, every other Wednesday, alternating months, or Saturday after first
+  Friday, and the format cannot express the actual pattern.
+- Do: record only occurrences on or after `as_of` whose dates, times and places the
+  source actually prints (R14). Otherwise settle the unrepresentable recurring entry as
+  excluded and explain why. Every other month is not every month; Saturday after first
+  Friday is not always first Saturday. A note cannot repair a false repeating schedule.
+  Never invent recurrence fields or dates. If a needed fact itself is unclear, ask about
+  that fact rather than offering an inaccurate weekly approximation.
+
 ## Changes over time
 
 **R16. Seed scope.**
@@ -154,6 +191,37 @@ questions` lists answered questions, their leanings and what they cite.
 - Do: keep the current schedule, leave the future one out, and say so in the rationale.
   Update mode will read the bulletins that show the change.
 
+**R36. One omission does not remove an established weekly service.**
+- When: readings of older bulletins establish the same weekly service, and the newest
+  issue simply omits it once, with no service-specific cancellation or change.
+- Do: retain it with `page: null`, cite the matching readings in older issues, including
+  the immediately preceding read issue, and explain the omission in the rationale.
+  Repeated fetches of the same issue do not establish cross-week recurrence. A named
+  monthly service still follows R11/R12; do not use this rule to skip its relevant week.
+  Ask if a continuing pattern is not established or there is a real contradiction.
+  Follow explicit cancellations and changes. A cancellation of Mass does not by itself
+  cancel independently scheduled Adoration. Follow explicit dependency wording when a
+  service is offered only with a particular Mass. Preserve qualifications such as
+  "No Adoration during Masses".
+
+**R40. Separate a standing schedule from one-date exceptions.**
+- When: a dated calendar listing differs from a standing schedule, or a newer source
+  clearly corrects an older church assignment or time.
+- Do: a dated exception changes that occurrence, not every future week. Keep the
+  standing schedule and record the dated exception within seed scope; a reviewed move
+  is a cancellation of the old occurrence plus the new one. A newer explicit church
+  assignment can correct an older one. Distinguish building-access hours from the
+  hours a service is offered. Still ask when current, service-specific sources genuinely
+  disagree and neither explains the difference. Do not infer a change merely from a
+  missing listing (R17).
+
+**R41. A specific dated invitation against a generic no-Mass template (was C3).**
+- When: a specific dated notice invites people to Mass while the same bulletin's generic
+  recurring line says no Mass for that day.
+- Do: use the specific dated invitation when its date, time and church are clear. A
+  direct conflict between two equally specific current notices remains a question.
+- Evidence: mater-christi-albany s18 and st-michael-the-archangel-south-glens-falls s12.
+
 ## Location and churches
 
 **R21. Look a church up before deciding it's missing.**
@@ -175,6 +243,10 @@ questions` lists answered questions, their leanings and what they cite.
 - Do: don't ask about it. Settle its slots as excluded, say why, and list the church once
   in the file's `church_list_issues`.
 
+When resolving a venue under R21–R23, a church-specific column heading is useful evidence.
+A parish-wide heading or office phone number alone is weaker evidence; do not invent a
+venue from it. Ask when it is unclear which listed church is intended (R32).
+
 ## What to leave out
 
 **R24. What POLICY leaves out.**
@@ -194,13 +266,35 @@ questions` lists answered questions, their leanings and what they cite.
   confession by appointment).
 - Do: `"entry": null`. Never make up a time to fill it.
 
+**R37. A Holy Hour inside an Adoration period already recorded.**
+- When: the Holy Hour is entirely inside Adoration at the same church on the same days.
+- Do: keep the longer Adoration period. Mention the Holy Hour in a note when useful;
+  do not add a second overlapping Adoration slot for the same availability.
+
+**R38. A parish's Eucharistic chapel hours can be Adoration.**
+- When: the parish identifies prayer before the Blessed Sacrament in an on-site chapel
+  as Adoration and gives its hours.
+- Do: include those hours at the listed church, naming the chapel in a note. Do not
+  claim the Sacrament is exposed unless the source says so. A building being open for
+  prayer alone does not establish an Adoration schedule. R6 covers website evidence;
+  unclear or off-site locations still follow R22/R23/R32.
+
+**R39. An empty intention is not proof of Mass or no Mass.**
+- When: a time is printed with no Mass intention or a generic "Morning Liturgy" label.
+- Do: read the headings, surrounding entries and regular schedule. If the line appears
+  to be a reused template and contradicts the clear schedule, leave it out and explain
+  the evidence. A blank intention alone proves neither a service nor a cancellation.
+  "Morning Liturgy" alone does not prove a Communion Service replacing Mass (R17).
+
 ## Asking
 
 **R27. One decision, one question.**
 - When: one answer decides several slots (the seven days of a chapel, a confession window
   before every Mass).
 - Do: give the slots one `group`, with the same question and the same options in the
-  same order, leaning the same way.
+  same order, leaning the same way. Do not group uncertain weekly recurrence with an
+  explicit dated cancellation: rejecting the weekly pattern must not discard that
+  cancellation. Preserve earlier reviewer answers when repairing a seed.
 
 ## Always ask
 
@@ -210,7 +304,7 @@ These cases are always `needs_human`. They are the standing examples of the defa
 
 **R29. The newest bulletin doesn't print it.**
 - When: a slot backed only by older bulletins or the website (a weekly Mass missing with no
-  reason given), and R12, R18 and R19 don't cover it.
+  reason given), and R6, R12, R18, R19 and R36 do not settle it.
 - Do: ask, with `page: null`. If the reviewer answers to include it, it is included.
 
 **R30. POLICY leaves it a judgment call.**
@@ -218,11 +312,6 @@ These cases are always `needs_human`. They are the standing examples of the defa
 **R31. The print is unreadable.**
 
 **R32. It's unclear which listed church it belongs to.**
-
-**R33. A schedule the file can't express, with no dates printed.**
-- When: for example, "every other Wednesday".
-- Do: offer weekly with a note that says so, and leaving it out. Don't invent a field for
-  it.
 
 ## Blocked parishes
 
@@ -241,8 +330,9 @@ These come from reviewers' answers. Ask them as `needs_human`, lean as shown, an
 C rule. The owner promotes them to R rules.
 
 **C1. A Mass only in the intentions.**
-- When: a Mass appears in the Mass intentions every week but is missing from the parish's
-  regular schedule box, and from its website.
+- When: a Mass appears only in intentions and there is an unresolved conflict with a
+  clearly stated regular schedule or public venue. A missing header or website mention
+  alone does not create this conflict; matching occurrences follow R35.
 - Lean: leave it out.
 - Evidence: all-saints-corning s5. Every week's intentions list a Saturday 4:00 PM Mass,
   but the schedule header and the website give only the 5 PM vigil. The agent leaned
@@ -255,12 +345,6 @@ C rule. The owner promotes them to R rules.
 - Evidence: st-edward-the-confessor-clifton-park s8. Friday 9:00 AM Mass was at St. Mary's,
   Crescent (another parish) until early January. The agent leaned toward keeping it weekly
   with the dated cancellation; the reviewer chose to leave it out until it returns.
-
-**C3. A dated special listing against a general "NO MASS" line for the same day.**
-- Lean: the specific dated listing.
-- Evidence: mater-christi-albany s18. A notice gave a 5:30 PM Mass on Monday, October 5,
-  while the intentions' template line said "NO MASS" for that day. The agent leaned toward
-  including the dated Mass, and the reviewer included it.
 
 **C4. A weeks-of-the-month service that replaces the regular weekday one.**
 - When: for example, a 7 PM First Friday Mass in place of the 8 AM Friday Mass.
@@ -275,29 +359,32 @@ C rule. The owner promotes them to R rules.
   where penitents are asked to tell Father first (the website gives it without that
   condition). The agent leaned toward 11:00 AM, and the reviewer included it.
 
-**C6. Adoration "with" a Mass, with no clock time and no "before" or "after".**
-- Lean: leave it out, since it has no definite time.
-- Evidence: our-lady-of-the-assumption-latham s10. "Simple Adoration" is attached to the
-  Friday 9:00 AM Mass line. The agent leaned toward leaving it out, and the reviewer
-  agreed.
-
 **C7. "For members of X" under a heading that says all events are open.**
 - Lean: include it.
 - Evidence: blessed-trinity-buffalo s8. An October 28 Healing Mass "for members of HOBCCE",
   in a section that says its events are open to members of any parish. The agent leaned
   toward including it, and the reviewer included it.
 
-**C8. The same slot at different times in the newest and an older bulletin.** (The owner
-hasn't decided.)
+**C8. Conflicting standing times that R40 does not resolve.**
+- When: two service-specific schedule statements conflict and neither explains a dated
+  exception or correction. Apply R40 first; do not ask solely because an old dated
+  occurrence differs from the current standing schedule.
 - Lean: not fixed. Lean as you judge, and say why.
 - Evidence: parish-of-the-holy-family s19. Second-Saturday Adoration was at 9:30 AM in the
   newest bulletin and 9:00 AM in the September 6 one. The agent leaned toward 9:30, and
   the reviewer left it out (dropped).
 
-**C9. A slot only on the parish website, with nothing in the bulletins against it.** (The
-owner hasn't decided.)
-- Lean: not fixed. Lean as you judge, and say why.
-- Evidence: st-anthony-st-agnes-utica s8. Saturday 3:45 PM Confession appears only on the
-  website, whose Mass times match the bulletins. The agent leaned toward including it, and
-  the reviewer included it. `seed check` doesn't allow a settled inclusion without a
-  newest-bulletin citation (R1), so promoting this would need a code change.
+## Former candidates
+
+These IDs remain here so earlier rationales can be understood; do not reuse them.
+
+- **C3:** promoted to R41, specific dated invitation over a generic no-Mass template.
+- **C6:** settled by POLICY, Final source checks, and R24/R26 when Adoration attached to
+  Mass has no separate or permitted relative start time. Evidence:
+  our-lady-of-the-assumption-latham s10, "Simple Adoration" on the Friday 9 AM Mass line.
+- **C9:** promoted into R6. Evidence: st-anthony-st-agnes-utica s8, website-only Saturday
+  3:45 PM Confession supported by the site's otherwise matching Mass schedule.
+
+Public/private Masses not already covered by POLICY, hedged availability such as "most
+Saturdays", and unlocated chapels or winter rectories still need a human decision. The
+new rules do not supply a default for those unresolved cases.
