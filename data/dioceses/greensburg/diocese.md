@@ -140,6 +140,12 @@ keep it current rather than a log.
   the target where `probe url` gets 403. GCatholic Plus Codes can be off the building (St.
   Joseph, Uniontown ~590 m): compare with the directory pin and OSM.
 
+- **If `visit.py` hangs with no output**, `tools/headed_open.py` (a plain
+  `launch_stealth_browser` script) opens the page in seconds. An old ParishesOnline org can
+  list a stopped container (st-hubert-church-15474 → 14/1792, last issue 2023-10-22): check its
+  latest issue before treating it as a channel; a dead predecessor's ids go on the row that
+  took its churches.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
