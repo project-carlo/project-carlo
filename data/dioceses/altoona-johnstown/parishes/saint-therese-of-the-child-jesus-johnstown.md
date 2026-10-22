@@ -2,7 +2,7 @@
 name: Saint Therese of the Child Jesus Parish, Johnstown
 website: https://sttheresejohnstown.com/
 bulletin_provider: other
-provider_id: page-pdfs
+provider_id: page-pdfs https://sttheresejohnstown.com/bulletins/ filename=STTHERESESBULLETIN*.pdf
 publication: ['url:https://sttheresejohnstown.com/#st-therese']
 group: ''
 evidence:
@@ -53,9 +53,9 @@ One: St. Therese of the Child Jesus Church, 536 Decker Avenue (`saint-therese-of
 
 ## Website and bulletin provider
 
-`bulletin_provider: other`, website https://sttheresejohnstown.com/ (the homepage lists "St Therese" bulletins first, then "St Anne"), `provider_id: page-pdfs`. `fetch:check` on 2026-10-21: "page-pdfs on https://sttheresejohnstown.com/: current", `STTHERESESBULLETIN-Oct-18-2026-BP.pdf`, 408,673 bytes, dated 2026-10-18. 
+`bulletin_provider: other`, website https://sttheresejohnstown.com/, `provider_id: page-pdfs https://sttheresejohnstown.com/bulletins/ filename=STTHERESESBULLETIN*.pdf`. The recipe reads the newest-first Bulletins page and restricts candidates to `STTHERESESBULLETIN*.pdf`. St. Anne's PDFs are excluded before date selection, even when its next issue is uploaded first or its link comes first. The homepage lists each parish's PDFs oldest first, so it is not used: when the latest issue leaves the seven-day current window, its first-listed fallback would select an older issue.
 
-**Fragile:** the same site serves St. Anne's PDFs, and the resolver chooses by position and date, not by name. On the homepage the St. Therese list comes first, so this row gets the right file; `saint-anne-johnstown` is pinned to the Bulletins page where the St. Anne PDF is listed first. If the site reorders either list, check both rows again. Publication id: no feed or container exists, so the id is the site address with a fragment naming the church (`url:https://sttheresejohnstown.com/#st-therese`), to keep it distinct from the St. Anne row.
+`fetch:check` on 2026-10-21 selected `STTHERESESBULLETIN-Oct-18-2026-BP.pdf`, 408,673 bytes, dated 2026-10-18. The downloaded Bulletins page was replayed on 2026-10-22 with the filtered recipe and reference dates of 21 and 26 October; both selected the 18 October St. Therese issue. The filter fails if no St. Therese file matches. Publication id: no feed or container exists, so the id is the site address with a fragment naming the church (`url:https://sttheresejohnstown.com/#st-therese`), to keep it distinct from the St. Anne row.
 
 ## Not yet confirmed
 

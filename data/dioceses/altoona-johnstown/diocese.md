@@ -184,9 +184,10 @@ otherwise.
   Its `/welcome#WeeklyBulletin` lists `files/uploaded/YYYY-MM-DD.pdf` (not always zero-padded).
   omostoday.com (WordPress/Elementor) posts scanned issues: render with `pdftoppm`.
 - **Two parishes on one site** (St. Therese and St. Anne, sttheresejohnstown.com, one PDF each
-  per week): recipes can't filter by file name, so each row points at a different page whose
-  list puts its own PDF first (homepage vs `/bulletins/`), with `#fragment` publication ids to
-  keep them distinct. Fragile: re-check both picks if the site reorders.
+  per week): both recipes read the newest-first `/bulletins/` page with a filename glob
+  (`filename=STTHERESESBULLETIN*.pdf` or `filename=St-Annes-Bulletin*.pdf`). This keeps the
+  publishers separate when one updates first or links change order, and avoids the homepage's
+  oldest-first fallback. The `#fragment` publication ids distinguish the two publications.
 - **WordPress PDF Embedder** (Visitation BVM, Johnstown, found by DuckDuckGo) turns PDF links
   into canvases; `page-pdfs <site>/category/<cat>/feed/` reads the RSS feed instead.
 - **Third-party Mass-time aggregators** (catholicmasstime.org, catholicchurch.directory)
@@ -231,6 +232,10 @@ Decisions that apply to more than one record, and who made them.
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- **2026-10-22**, corrected the two Johnstown shared-site recipes: filename filters separate
+  St. Anne and St. Therese, and both use the newest-first Bulletins page so a delayed upload
+  does not select the homepage's oldest issue. Coverage unchanged: directory 93/93, GCatholic 109/109.
 
 - **2026-10-21**, first mapping, by an orchestrator and 25 `parish-scout` agents run one at a
   time (24 batches of 3–4 parishes grouped by town and shared pastor, plus one re-check of the
