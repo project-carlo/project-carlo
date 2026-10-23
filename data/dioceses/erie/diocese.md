@@ -157,9 +157,12 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   faith-formation fliers. Check how far behind the page runs (Albion's newest on 2026-10-23 was 11
   October). Some of these sites also embed a ParishesOnline org (hcsjchurches.org,
   stelizabethsmethport.org, ststanserie.org, stgregoryparish.info): compare the two before
-  choosing a provider. An unlinked `weeklybulletin.php` can say "No Bulletin found." while the bulletin is on
-  Discover Mass, sometimes under both the parish's and its mission's slug (St. Charles, New
-  Bethlehem). A template site with no
+  choosing a provider. A `weeklybulletin.php` saying "No Bulletin found." is not a `no_bulletin` signal on its own:
+  the bulletin can be on Discover Mass, sometimes under both the parish's and its mission's
+  slug (St. Charles, New Bethlehem), or in the ParishesOnline org the site embeds (St.
+  Elizabeth, Smethport; St. Gregory, North East). Check both before calling a row
+  `no_bulletin`. A bulletin's pastor column can announce a pending relegation weeks before the
+  decree (St. Francis, Bradford): recheck decrees.html. A template site with no
   `weeklybulletin.php` may have a Bulletin menu entry that is a JavaScript `location.assign` to
   `parishesonline.com/find/<slug>`: read the nav HTML. `dioceseoferie.org/<Name>/` is the same host, with case-sensitive paths (`/HolyRosary/`
   works where `/holyrosary/` 404s) (Holy Rosary, Johnsonburg 403s
