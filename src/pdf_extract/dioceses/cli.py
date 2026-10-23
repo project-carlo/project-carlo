@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import json
+import sys
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -173,6 +175,18 @@ def _date(value: str) -> dt.date:
         raise argparse.ArgumentTypeError(f"not a date like 2026-09-06: {value!r}") from None
 
 
+def _write_record(args: argparse.Namespace) -> dict[str, Any]:
+    def invalid_constant(value: str) -> None:
+        raise ValueError(f"non-finite JSON value {value!r}")
+
+    try:
+        text = sys.stdin.read() if args.file == "-" else Path(args.file).read_text(encoding="utf-8")
+        payload = json.loads(text, parse_constant=invalid_constant)
+    except (OSError, ValueError) as exc:
+        raise DioceseError(f"cannot read record JSON: {exc}") from None
+    return records.write_record(args.diocese, args.kind, args.slug, payload, create=args.create)
+
+
 HANDLERS: dict[str, Handler] = {
     "list": lambda a: records.list_dioceses(),
     "init": lambda a: records.init_diocese(a.diocese, name=a.name, state=a.state or "",
@@ -180,6 +194,7 @@ HANDLERS: dict[str, Handler] = {
     "show": lambda a: records.show_diocese(a.diocese),
     "todo": lambda a: report.todo(a.diocese),
     "validate": lambda a: records.validate(a.diocese),
+    "write": _write_record,
     "search": lambda a: records.search(" ".join(a.query), diocese=a.diocese, kinds=a.kind,
                                        limit=a.limit),
     "merge": lambda a: records.merge_parishes(a.diocese, a.parishes, a.into, note=a.note or ""),
@@ -255,6 +270,13 @@ def add_diocese_parser(
     p = leaf("validate", "validate", "Check one diocese (or all); exits 1 on errors")
     p.add_argument("diocese", nargs="?")
     p.set_defaults(fail_on_verification_error=True)
+
+    p = leaf("write", "write", "Patch a record from JSON, validate, then atomically write it")
+    p.add_argument("diocese")
+    p.add_argument("kind", choices=list(KINDS))
+    p.add_argument("slug")
+    p.add_argument("--file", required=True, help="JSON fields plus optional body; '-' reads stdin")
+    p.add_argument("--create", action="store_true", help="create a new record; refuse overwrites")
 
     p = leaf("search", "search",
              "Search every diocese and the live CSVs (diocese 'live'); run it before adding")
