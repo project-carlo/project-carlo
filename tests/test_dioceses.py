@@ -332,7 +332,7 @@ def test_audit_sorts_groups_by_what_is_recorded(root: Path) -> None:
     _parish("c", group="Family #2", publication=["po-container:1/3"])
     _parish("d", group="Family #2")
     groups = {g["group"]: g["verdict"] for g in report.audit("test")["groups_spanning_rows"]}
-    assert groups["group: Family #1"].startswith("separate")
+    assert groups["group: Family #1"].startswith("unknown")
     assert groups["group: Family #2"].startswith("unknown")
 
 
@@ -586,7 +586,11 @@ def test_fetch_check_reads_a_diocese_before_promotion(
 
     def check_one(slug, source, page, **_):
         checked.append(slug)
-        return {"slug": slug, "provider": source.provider, "status": "ok"}
+        return {"slug": slug, "provider": source.provider, "status": "ok", "verification": {
+            **{dimension: {"status": "unknown"} for dimension in (
+                "transport", "document_type", "publication_identity", "issue_date", "freshness",
+            )}, "overall": "unverified",
+        }}
 
     monkeypatch.setattr(fetch_check, "launch_stealth_browser", contextlib.nullcontext)
     monkeypatch.setattr(fetch_check, "_check_one", check_one)

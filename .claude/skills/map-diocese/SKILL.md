@@ -11,28 +11,20 @@ work so it uses as little of the usage limit as it can.
 
 ## Why the work is split this way
 
-An agent reads its whole context again on every step, so the cost of running one grows
-with the square of how long it runs. Scranton, Allentown and Harrisburg each ran as six or
-seven region agents of 10 to 17 parishes, all at once and all on Opus. Each cost $60 to $100,
-about two-thirds of it spent re-reading contexts that had grown past 400k tokens of bulletin
-text, probe output and screenshots. In Allentown, four of the six agents hit the usage
-limit, and each resume rebuilt a large context.
-
-So:
+Keep bulky source reading in small batches and preserve its results on disk:
 
 - **Bulky reading happens in short-lived contexts.** A `parish-scout` agent
   (`.claude/agents/parish-scout.md`, on Sonnet) researches about four parishes, writes their
-  records and ends. The records, with their quoted evidence, are the result, so its report
-  to you is a few lines.
-- **Your context stays small.** Don't read bulletins, PDFs, probe output, rosters or whole
-  records yourself. Work from command summaries (`todo`, `coverage`, `audit`, `validate`,
-  `search`) and scout reports, filtered with `jq`. Read a record only to settle a question
-  that spans batches.
+  records and ends. Full evidence stays in records; a scratch batch manifest indexes changed
+  paths, counts, checks, decisions, leads and new lessons. Its JSON handoff targets 300 tokens.
+- **Your context stays small.** Work from command summaries (`todo`, `coverage`, `audit`,
+  `validate`, `search`) and JSON handoffs, filtered with `jq`. Read the relevant manifest
+  entries and record sections selectively when a decision needs them.
 - **One scout at a time.** Each scout starts from what the earlier ones learned, and the
-  run never stalls at the usage limit with several half-finished agents. Run two at once
-  only if the user asks for speed.
-- **What scouts learn goes into files, not into your context.** The playbook is the
-  diocese's `diocese.md`; reusable scripts go in the tools folder. After the diocese, lessons
+  amount of unfinished work stays bounded. Run two at once only if the user asks for speed.
+- **Keep the shared publisher playbook concise.** In `diocese.md`, keep only reusable
+  publisher methods and settled cross-parish rules; parish-specific details stay with the
+  parish. Reusable scripts go in the tools folder. After the diocese, lessons
   that apply everywhere go into the README, a skill or the CLI, where the next diocese gets
   them for free.
 
@@ -85,14 +77,17 @@ When it finishes:
 1. Check its records: `pnpm --silent diocese validate <d> | jq '.dioceses[] | {errors,
    incomplete}'`. Send any problem back to the same scout with `SendMessage`; its context
    still holds the parish.
-2. Add its learnings to *Bulletin publishers here* (or *Rules settled*, for a decision),
-   merged into what is there, not appended as a log.
+2. Read its scratch manifest selectively. Add only reusable new lessons to *Bulletin
+   publishers here* (or *Rules settled*, for a cross-parish decision), merged into existing
+   guidance. Keep full evidence and parish-specific decisions in records.
 3. Put each lead next to the batch it touches in `batches.md`, or settle it now if it
    spans batches (a merge, a church that belongs to another row).
 4. Commit: `<Diocese>: batch <n> (<area>)`.
 
 When a scout runs out of turns or hits the usage limit, resume it with `SendMessage` after
-the reset instead of starting a new one. Its records are on disk either way.
+the reset instead of starting a new one. Use its saved records and partial manifest to
+identify remaining work. Don't repeat exhausted research unless its method, source or
+recorded retry trigger changes (README, bounded research).
 
 ## 4. Other tasks for a scout
 
@@ -112,12 +107,15 @@ the whole diocese, `diocese.md`, promotion and the PR.
 ## 5. Finish
 
 1. `pnpm diocese coverage <d> --link`, then account for what is left.
-2. `pnpm diocese audit <d> --fetch`: the only check that catches two rows publishing one
-   bulletin. Settle each group it lists.
+2. `pnpm diocese audit <d> --fetch`: inspect the candidates and reported scope, including
+   fetch limitations. Resolve content identity from evidence; different URLs or publication
+   ids alone don't prove separate bulletins. Store supported peer decisions in parish
+   `publication_reviews` (README).
 3. A fetch check of every row, as a scout task:
    `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese <d>`.
-   Discover Mass limits downloads per IP per day; if it refuses some rows, check those
-   again once the limit resets.
+   Review transport, document type, parish identity and freshness separately. Record blocked
+   checks with a next action and retry trigger; a known daily download limit can justify a
+   scheduled retry after reset. Don't treat a download as proof of identity or recency.
 4. `pnpm diocese validate <d>` and `todo <d>`. Write a dated line in `diocese.md`'s *Log*
    with the coverage numbers, how many scouts ran and the batch size.
 5. `pnpm diocese promote <d> --dry-run`, read it, then `promote`, `uv run pytest` and the

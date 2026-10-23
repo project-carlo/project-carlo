@@ -20,6 +20,8 @@ import logging
 import os
 import sys
 from collections.abc import Collection
+from contextlib import nullcontext, redirect_stdout
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -88,6 +90,7 @@ def _configure_logging(level_name: str) -> None:
     logging.basicConfig(
         level=level,
         format="%(asctime)s %(levelname)s %(name)s - %(message)s",
+        stream=sys.stderr,
     )
 
 
@@ -172,6 +175,12 @@ def _diocese_fetch_rows(diocese: str, slugs: Collection[str] | None) -> list[dic
 
 
 def _cmd_fetch_check(args: argparse.Namespace) -> Result:
+    if args.max_issue_age_days < 0:
+        raise DioceseError("--max-issue-age-days must be nonnegative")
+    if args.expected_identity is not None and not any(
+        c.isalnum() or c == "_" for c in args.expected_identity
+    ):
+        raise DioceseError("--expected-identity must contain a nonempty phrase")
     slugs = _split_csv(args.parish)
     return check_fetch(
         slugs=slugs,
@@ -181,6 +190,10 @@ def _cmd_fetch_check(args: argparse.Namespace) -> Result:
         # `is not None`: an empty --diocese (an unset shell variable) must fail, not fall back.
         parishes=(None if args.diocese is None
                   else _diocese_fetch_rows(args.diocese, slugs)),
+        expected_identity=args.expected_identity,
+        expected_issue_date=args.expected_issue_date,
+        max_issue_age_days=args.max_issue_age_days,
+        reference_date=args.reference_date,
     )
 
 
@@ -411,6 +424,21 @@ def _build_parser() -> argparse.ArgumentParser:
         "--diocese",
         help="Read the parishes from data/dioceses/<diocese>/ instead of parishes.csv,"
         " so rows can be checked before they are promoted",
+    )
+    fetch_check_parser.add_argument(
+        "--expected-identity", help="Expected masthead phrase in the selected PDF's first page",
+    )
+    fetch_check_parser.add_argument(
+        "--expected-issue-date", type=date.fromisoformat,
+        help="Expected YYYY-MM-DD issue date; compared with observed evidence",
+    )
+    fetch_check_parser.add_argument(
+        "--max-issue-age-days", type=int, default=14,
+        help="Inclusive freshness threshold in days (default: 14)",
+    )
+    fetch_check_parser.add_argument(
+        "--reference-date", type=date.fromisoformat,
+        help="Use YYYY-MM-DD instead of today for resolution and freshness",
     )
     fetch_check_parser.set_defaults(handler=_cmd_fetch_check)
     _add_common_args(fetch_check_parser)
@@ -779,7 +807,12 @@ def main(argv: list[str] | None = None) -> int:
     _load_dotenv()
 
     try:
-        result = handler(args)
+        # Research commands are consumed by jq and agents. Incidental output from
+        # a scraper or browser is diagnostic, never part of their JSON document.
+        output = (redirect_stdout(sys.stderr) if args.command in ("diocese", "fetch-check")
+                  else nullcontext())
+        with output:
+            result = handler(args)
     except (
         DioceseError, RunScopeError, ClassifierOptionError, ScheduleCommandError, SeedError,
     ) as e:
@@ -791,7 +824,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Error: {e}", file=sys.stderr)
         return 1
 
-    LOGGER.info("Command completed: %s", result)
+    if args.command in ("diocese", "fetch-check"):
+        LOGGER.info("%s completed", args.command)
+    else:
+        LOGGER.info("Command completed: %s", result)
     # A command for agents (`seed`) prints compact text unless --json is given.
     render = getattr(args, "render", None)
     if render is not None and not getattr(args, "json", False):

@@ -33,7 +33,8 @@ large read early on is paid for many times over.
 - Take a screenshot or render a page only when the text can't answer the question.
 - Open `.claude/skills/parish-site-access/SKILL.md` only when `probe url` can't read a
   site. The orchestrator has already set up the browser.
-- Once a parish's records are written and valid, don't reread them.
+- Keep full evidence and parish-specific findings in the records; reread only the parts
+  needed to settle a new question. Shared playbook lessons must be reusable across parishes.
 
 ## Write boundaries
 
@@ -51,21 +52,34 @@ rest of these still hold.
 - A script the next scout could use goes in the tools folder, with one line in its
   `README.md`: what it does and how to run it.
 
+Write structured updates with `uv run python -m pdf_extract diocese write <d> <kind>
+<slug> --file record.json`; use `--create` only for explicit new records. See the README's
+payload example and list-replacement rules. Don't build scratch `fill_record` writers.
+
 Finish each parish (its records written, evidence quoted, its fetch check run) before
 starting the next. Check a row with `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm
 fetch:check --diocese <d> --parish <slug>`, and record the `recipe` it prints for `other`
-rows once its pick is this week's bulletin. At the end, run `pnpm diocese validate <d>` and
-fix every error and TODO in your own records.
+rows once its pick is the correct current bulletin. Distinguish transport, document type,
+parish identity and freshness; a successful download alone doesn't settle them. Use the
+README's bounded-research rules for blocked or exhausted checks; preserve uncertainty and
+retry triggers instead of repeating the same search. At the end, run
+`pnpm --silent diocese validate <d>` and fix errors and unfinished explanations in your own
+records. Unresolved research belongs in structured `research`, not fabricated certainty.
 
 ## Report
 
-End with this, and nothing longer:
+Write a small `manifest.json` in your assigned scratch folder: changed paths, counts by
+kind, checks run and their results/scope, decisions made or unresolved, outside-batch leads,
+and only reusable new lessons. Reference records for full evidence; don't copy their bodies
+or probe output into the manifest.
 
-- **Records:** one line per record you created or changed: slug, kind, then the provider
-  and publication ids (parishes), the reason (exclusions) or the revisit (open), and
-  anything you left unsettled.
-- **Leads:** things outside your batch, one line each, naming the record or roster entry.
-- **Learnings:** up to five lines for the playbook, each a fact a later scout can use
-  (a publisher's URL pattern, a site that blocks the sandbox and where its bulletin is
-  instead, a rate limit, a misleading roster). Leave out what the playbook already says.
-- **Validate:** errors and incomplete records of yours (none, or why not).
+Return only a small JSON handoff (target at most 300 tokens), for example:
+
+```json
+{"manifest":"scratch/map-<d>/scouts/<n>/manifest.json","changed":7,"validation":{"errors":0,"incomplete":0,"warnings":0},"unresolved":["Peer bulletin identity needs comparison; see manifest"],"lessons":["New publisher rule, absent from the playbook"]}
+```
+
+Use actual validation counts and identify whether they cover your batch or the diocese in
+the manifest. Empty arrays are fine. Summarize long lists in the handoff; don't return one
+line per church. If interrupted, leave completed records and a partial manifest showing
+what remains; continuation is the orchestrator's decision within the user's authorization.
