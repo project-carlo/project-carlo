@@ -169,6 +169,8 @@ Greensburg's playbook next door.
   directory are usually closed predecessors (St. Wendelin, St. Norbert, St. John Vianney).
   Check a predecessor building's current occupant before calling it closed: St. Pamphilus is
   now the Maronite Our Lady of Victory (`other-jurisdiction`).
+  Closure decrees are image scans on `files.ecatholic.com/<id>/documents/...` (curl works
+  where the parish domain gets Cloudflare): quote the bulletin or news text, not the scan.
   Find a successor parish's history page by DuckDuckGo (holy-spirit-new-castle dates five
   closures). diopitt.org answers 403 to `recheck`; read it with `visit.py` (headed:
   `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, long timeout: hsplc.org took over two
