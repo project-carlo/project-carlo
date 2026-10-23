@@ -145,6 +145,8 @@ Greensburg's playbook next door.
 - **diopitt.org history pages date closures** of predecessor churches ("closed in 2019", St.
   Alphonsus page on Epiphany, Boyers) while the closed church's own page can still say "remains
   open": quote the dated one and record the disagreement. diopitt.org answers 403 to `recheck`;
+  The predecessor pages use set phrases: "closed at the time of the merger" and "remained
+  open to serve the new parish"; read each predecessor's page.
   read it with `visit.py` (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, and a long
   timeout: hsplc.org took over two minutes). Find a successor parish's history page by
   DuckDuckGo (holy-spirit-new-castle dates five closures).
@@ -162,8 +164,8 @@ otherwise.
   (separate ad editions): compare rendered pages 1-2 and record both on one row.
 - **The masthead is often not on page 1** (LPi cover reflections); Canva image-only issues
   carry text only on the LPi ad page, whose footer names the parish and container. Render
-  pages with `render.py` (no tesseract here). Here too: All Saints, Butler is images on pages
-  1-13; its quotable line is the ad-page footer "All Saints Parish, Butler, PA 14-1322".
+  pages with `render.py` (no tesseract here). Here too: All Saints, Butler (pages 1-13) and St. Luke, Ambridge
+  (14/1208) are images; its quotable line is the ad-page footer "All Saints Parish, Butler, PA 14-1322".
 - **A ParishesOnline org page can render blank** while `probe po` still lists issues; pin
   `other` to `page-pdfs <publicationWidget URL> filename=*B.pdf`. An old org can list a stopped
   container: check its latest issue before treating it as a channel.
