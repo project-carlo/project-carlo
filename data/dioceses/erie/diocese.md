@@ -160,7 +160,11 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   churches, holy-cross-catholic-church, saint-james-roman-catholic-church, st-boniface-church-16509,
   st-gregory-church, st-elizabeth-of-hungary; containers 14/1173 (St. Callistus) and 14/1154 (St.
   Thomas, Corry); LPi ids on stjuliaerie.com, sainttitus.com, saintbartholomews.com. Org names
-  record past groupings ("st-mary-of-grace-st-agatha-st-brigid"): read the masthead.
+  record past groupings ("st-mary-of-grace-st-agatha-st-brigid"): read the masthead. A
+  partnership can have two org records on one container (St. John/Holy Trinity, 14/0962):
+  compare containers with `probe po`. `probe pdf` reads 4 pages by default; pass `--pages`
+  (or `pdftotext -layout`) for an 8-page issue's Mass columns. A ligature read as U+FFFD
+  ("Baptist") breaks `fetch:check --expected-identity`: use another masthead word.
 - **Discover Mass ids** on oilcitycatholic.com, ourladyofmercychurch.org, sttobias.com and the
   cathedral. See *Sources* for the many empty pages. A parish site's own PDF can be the same
   file as the Discover Mass download (Our Lady of Peace: same size, same bulletin number 3518):
