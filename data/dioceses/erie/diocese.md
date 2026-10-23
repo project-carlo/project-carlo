@@ -149,7 +149,8 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   stlawrencealbion.org, cpoecc.org, stbernardcatholic.org, stthomastheapostle.church, ...; footer
   "Diocese of Erie 429 East Grandview Blvd."). The page lists one PDF per issue at
   `images/weeklybulletin/<md5>.pdf`: the file name carries no date, the link text and `title` do
-  ("October 11, 2026"); `scratch/map-erie/tools/weeklybulletin_issues.sh <site>` lists them. The page can also list inserts and flyers (hash file names too): the first-listed file is the
+  ("October 11, 2026"); `scratch/map-erie/tools/weeklybulletin_issues.sh <site>` lists them. Its PDFs can be image-only print-to-PDF scans (St. Leo Magnus, Ridgway): render page 1.
+  The page can also list inserts and flyers (hash file names too): the first-listed file is the
   issue only when no insert sits above it (cpoecc.org), so re-run `fetch:check` on a later week.
   A `page-pdfs <site>/weeklybulletin.php` recipe passes `fetch:check`
   (St. Lawrence, Albion). Not every such page is the bulletin: hcsjchurches.org's holds only
@@ -160,7 +161,8 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   Discover Mass, sometimes under both the parish's and its mission's slug (St. Charles, New
   Bethlehem). A template site with no
   `weeklybulletin.php` may have a Bulletin menu entry that is a JavaScript `location.assign` to
-  `parishesonline.com/find/<slug>`: read the nav HTML. `dioceseoferie.org/<name>/` is the same host (Holy Rosary, Johnsonburg 403s
+  `parishesonline.com/find/<slug>`: read the nav HTML. `dioceseoferie.org/<Name>/` is the same host, with case-sensitive paths (`/HolyRosary/`
+  works where `/holyrosary/` 404s) (Holy Rosary, Johnsonburg 403s
   probe url; St. Charles, New Bethlehem shows no bulletin links).
 - **A diocese-hosted `weeklybulletin.php` page can repost a partner's ParishesOnline issue or
   a sister site's PDF** byte for byte (Our Mother of Sorrows = St. Stanislaus 14/1710, md5 over
