@@ -149,7 +149,9 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   stlawrencealbion.org, cpoecc.org, stbernardcatholic.org, stthomastheapostle.church, ...; footer
   "Diocese of Erie 429 East Grandview Blvd."). The page lists one PDF per issue at
   `images/weeklybulletin/<md5>.pdf`: the file name carries no date, the link text and `title` do
-  ("October 11, 2026"); `scratch/map-erie/tools/weeklybulletin_issues.sh <site>` lists them. A `page-pdfs <site>/weeklybulletin.php` recipe passes `fetch:check`
+  ("October 11, 2026"); `scratch/map-erie/tools/weeklybulletin_issues.sh <site>` lists them. The page can also list inserts and flyers (hash file names too): the first-listed file is the
+  issue only when no insert sits above it (cpoecc.org), so re-run `fetch:check` on a later week.
+  A `page-pdfs <site>/weeklybulletin.php` recipe passes `fetch:check`
   (St. Lawrence, Albion). Not every such page is the bulletin: hcsjchurches.org's holds only
   faith-formation fliers. Check how far behind the page runs (Albion's newest on 2026-10-23 was 11
   October). Some of these sites also embed a ParishesOnline org (hcsjchurches.org,
