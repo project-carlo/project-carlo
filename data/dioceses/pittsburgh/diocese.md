@@ -99,7 +99,8 @@ Greensburg's playbook next door.
   got 403 on 53 of 56 (2026-10-23); `visit.py` opens them headed (6 of 6 tried). `visit.py` reports the
   site's `ecatholic:<id>` even when the bulletin is on ParishesOnline. Don't record
   `ecatholic:16469` (the diocese's own site). The Mass Finder's address-less parish pins carry
-  the parish's eCatholic id.
+  the parish's eCatholic id. Some parish pins carry a church's street address (35656, 0,0
+  coordinates), and `coverage --link` then attaches them to that church: check such links.
 - **ParishesOnline is the main publisher** (containers `14/xxxx`): `probe po` on 2026-10-23
   found a live org (2026-10-25 issue; St. Paul of the Cross 10-18) for 23 of the 56 parishes;
   four more post on eCatholic and one on John Patrick; the rest are unknown. The LPi geo-search (`.data.items[]`, filter
@@ -146,6 +147,7 @@ Greensburg's playbook next door.
 - **diopitt.org history pages date closures** of predecessor churches ("closed in 2019", St.
   Alphonsus page on Epiphany, Boyers) while the closed church's own page can still say "remains
   open": quote the dated one and record the disagreement. diopitt.org answers 403 to `recheck`;
+  `visit.py --text` stops at 4000 characters (the diopitt.org nav): pass `--chars 30000`.
   The predecessor pages use set phrases: "closed at the time of the merger" and "remained
   open to serve the new parish"; read each predecessor's page.
   read it with `visit.py` (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, and a long
