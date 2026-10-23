@@ -9,7 +9,7 @@ import base64
 import binascii
 import ipaddress
 import re
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 # ── Hosts ───────────────────────────────────────────────────────────────────
 
@@ -133,6 +133,19 @@ def unwrap_pdf_viewer_url(url: str) -> str:
     if pilot:
         return PILOT_BULLETIN_PDF_URL_TEMPLATE.format(**pilot.groupdict())
     params = parse_qs(parsed.query)
+    # LPi's publication widget links to a viewer, even when the organization's
+    # own page is broken. Its PDF URL can be percent-encoded more than once.
+    if (parsed.netloc.lower() == "parishesonline.com"
+            and parsed.path.startswith("/publication-page/")):
+        for value in params.get("selectedPublication", []):
+            for _ in range(2):
+                value = unquote(value)
+            inner = urlparse(value)
+            if (inner.scheme == "https"
+                    and inner.netloc.lower() == "container.parishesonline.com"
+                    and inner.path.startswith("/bulletins/")
+                    and inner.path.lower().endswith(".pdf")):
+                return value
     for name in _PDF_VIEWER_URL_PARAMS:
         for value in params.get(name, []):
             inner = urlparse(value)
