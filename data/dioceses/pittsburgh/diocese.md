@@ -138,6 +138,10 @@ Greensburg's playbook next door.
   older issue, render the newest.
 - **Institute of Christ the King:** mostpreciousbloodparish.org redirects to
   institute-christ-king.org/pittsburgh-home; look there for Most Precious Blood's bulletin.
+- **A ParishesOnline org titled "PERMANENTLY CLOSED"** (St. Cecilia, Rochester) is a dead
+  predecessor account, not a church closure: the live bulletin still lists Masses there. A
+  GCatholic entry named for a merged parish in another town can be a closed predecessor's
+  building (gcatholic "St. Monica, Darlington" = St. Rose of Lima, closing Mass 2020-03-28).
 - **diopitt.org history pages date closures** of predecessor churches ("closed in 2019", St.
   Alphonsus page on Epiphany, Boyers) while the closed church's own page can still say "remains
   open": quote the dated one and record the disagreement. diopitt.org answers 403 to `recheck`;
