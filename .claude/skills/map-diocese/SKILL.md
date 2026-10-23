@@ -40,7 +40,8 @@ diocese-surveyor`, in the foreground, since nothing else can happen until it's d
 it the diocese's name, its slug if you've chosen one, and anything the user said about it.
 It runs `init`, sets up the browser and the scratch folders, fetches and scrapes the
 rosters, writes `diocese.md`'s intro, *Sources* and *Bulletin publishers here*, and plans
-the batches in `scratch/map-<d>/batches.md`. Its definition says how; don't repeat it.
+the batches in `data/dioceses/<d>/batches.json`, with scratch `batches.md` progress notes.
+Its definition says how; don't repeat it.
 
 If it runs out of turns or hits the usage limit, resume it with `SendMessage`; don't start
 the scouts on a half-finished survey.
@@ -49,23 +50,26 @@ the scouts on a half-finished survey.
 
 This is the one place you read files the survey wrote, because every batch depends on them.
 
-1. Read its handoff and `survey.json`, `diocese.md` and `batches.md`. Check the roster counts without reading
-   the JSON: `jq '.entries | length' data/dioceses/<d>/rosters/*.json`, and list a roster in
-   one line per entry if a batch looks wrong:
-   `jq -r '.entries[] | [.id, .name, .city, .group] | @tsv' data/dioceses/<d>/rosters/<r>.json`.
-2. Check that every roster entry is in one batch, that entries that might share a bulletin
-   (one family, one pastor, one town) are together, and that the first batch is a typical
-   one. Send anything missing or wrong back to the surveyor with `SendMessage`; its
-   context still holds the diocese.
+1. Read its handoff and `survey.json`, `diocese.md`, `batches.json` and scratch `batches.md`.
+   Run `pnpm --silent diocese batches validate <d>` and require `passed: true`: it checks
+   every local roster entry occurs exactly once, assigned or explicitly excluded with a
+   reason, and rejects missing/unknown refs, duplicate assignments and invalid first batches.
+2. Review the grouping and exclusion reasons: entries that might share a bulletin (one
+   family, one pastor, one town) belong together, and `first_batch` should be typical.
+   The validator cannot decide those meanings. Send anything missing or wrong back to the
+   surveyor with `SendMessage`; its context still holds the diocese. Rerun batch validation
+   whenever rosters or assignments change.
 3. Decide its proposed rules and write them in `diocese.md` *Rules settled*.
 4. `pnpm diocese validate <d>`, then commit: `<Diocese>: rosters, sources and batches`.
-   `batches.md` stays in `scratch/`; tick batches off there as they finish.
+   Commit `batches.json` with the rosters. `batches.md` stays in `scratch/`; tick batches
+   off there using the JSON batch ids.
 
 ## 3. Run the scouts, one at a time
 
 Start each scout with `Agent` (`subagent_type: parish-scout`), and give it:
 
-- the diocese slug and the batch's roster entries as `<roster>:<id>`, with name and town;
+- the diocese slug, stable batch id from `batches.json`, and its roster entries as
+  `<roster>:<id>`, with name and town;
 - its scratch folder `scratch/map-<d>/scouts/<n>/` and the tools folder
   `scratch/map-<d>/tools/`;
 - any leads from earlier batches that touch these entries.
@@ -106,7 +110,8 @@ the whole diocese, `diocese.md`, promotion and the PR.
 
 ## 5. Finish
 
-1. `pnpm diocese coverage <d> --link`, then account for what is left.
+1. `pnpm diocese batches validate <d>` must still pass after any roster refresh or batch
+   reassignment. Run `pnpm diocese coverage <d> --link`, then account for what is left.
 2. `pnpm diocese audit <d> --fetch`: inspect the candidates and reported scope, including
    fetch limitations. Resolve content identity from evidence; different URLs or publication
    ids alone don't prove separate bulletins. Store supported peer decisions in parish

@@ -36,6 +36,7 @@ import yaml
 
 from pdf_extract import storage
 from pdf_extract.dioceses import research
+from pdf_extract.dioceses.publications import separate_recipes, supported_review
 from pdf_extract.fetch import PROVIDERS_TAKING_RECIPE
 from pdf_extract.parish_sites import Recipe
 
@@ -817,7 +818,7 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
         for slug in d.of(a).keys() & d.of(b).keys():
             p.errors.append(f"{slug!r} is both in {a.dir}/ and {b.dir}/; keep one")
 
-    # Uniqueness the database enforces, across dioceses and the live CSVs. A
+    # Slug uniqueness, across dioceses and the live CSVs. A
     # record stamped `promoted` owns the live row with its slug.
     for kind, own, live in ((PARISH, owners.parish, owners.live_parish),
                             (CHURCH, owners.church, owners.live_church)):
@@ -829,9 +830,33 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
                     f"{_label(kind, slug)}: slug already used in data/{kind.dir}.csv; slugs are "
                     "unique across all dioceses"
                 )
-    live_sites = {url_key(row.get("website", "")): slug
-                  for slug, row in owners.live_parish.items()}
-    seen_sites: dict[str, str] = {}
+    def reviewed_separate(left: str, right: str) -> bool:
+        pair = tuple(sorted((left, right)))
+        if reviewed_pairs.get(pair) != "separate" or not separate_recipes(
+            parishes[left], parishes[right],
+        ):
+            return False
+        for owner, peer in ((left, right), (right, left)):
+            reviews = parishes[owner].get("publication_reviews")
+            for review in reviews if isinstance(reviews, list) else []:
+                if isinstance(review, Mapping) and review.get("parish") == peer \
+                        and review.get("decision") == "separate" and supported_review(review):
+                    return True
+        return False
+
+    # A merge/rename carries ownership in the promoted successor's `replaces`.
+    # Its source rows remain live until promote removes them, but no longer
+    # represent active peers that need separate-publication reviews. Apply this
+    # to every surviving publisher on the site, not only the merge destination.
+    retiring_parishes = {
+        old for record in parishes.values() if record.get("promoted")
+        for old in record.get("replaces") or []
+        if isinstance(old, str) and old not in parishes and old not in owners.parish
+    }
+    live_sites: dict[str, list[str]] = {}
+    for live_slug, row in owners.live_parish.items():
+        live_sites.setdefault(url_key(row.get("website", "")), []).append(live_slug)
+    seen_sites: dict[str, list[str]] = {}
     for slug, r in parishes.items():
         key = url_key(r.get("website", ""))
         if not key:
@@ -839,13 +864,24 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
         label = _label(PARISH, slug)
         if key in owners.website:
             p.errors.append(f"{label}: website already used by {owners.website[key]}")
-        elif key in live_sites and not (r.get("promoted") and live_sites[key] == slug):
+        for live_slug in live_sites.get(key, []):
+            if (r.get("promoted") and live_slug == slug) or live_slug in retiring_parishes:
+                continue
+            # A promoted same-diocese peer is checked below with its full
+            # evidence and recipe; a bare live CSV row cannot authorize sharing.
+            if live_slug in parishes and parishes[live_slug].get("promoted") \
+                    and reviewed_separate(slug, live_slug):
+                continue
             p.errors.append(f"{label}: website already used by data/parishes.csv "
-                            f"row {live_sites[key]!r}")
-        if key in seen_sites:
-            p.errors.append(f"{label}: website also used by parish {seen_sites[key]!r}; one "
-                            "website is one bulletin, so these are probably one parish")
-        seen_sites[key] = slug
+                            f"row {live_slug!r}")
+        for peer in seen_sites.get(key, []):
+            if not reviewed_separate(slug, peer):
+                p.errors.append(
+                    f"{label}: website also used by parish {peer!r}; shared sites need "
+                    "content-supported separate publication_reviews and filename filters "
+                    "with disjoint literal prefixes"
+                )
+        seen_sites.setdefault(key, []).append(slug)
 
     # One bulletin, one row: the check with no other symptom anywhere.
     pubs: dict[str, str] = {}

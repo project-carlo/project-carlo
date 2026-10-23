@@ -8,13 +8,13 @@ masthead or membership settles whether two rows share a bulletin.
 from __future__ import annotations
 
 import hashlib
-import re
 from collections.abc import Callable, Mapping
 from itertools import combinations
 from typing import Any
 from urllib.parse import urlsplit, urlunsplit
 
 from pdf_extract.dioceses import records, web
+from pdf_extract.dioceses.publications import supported_review
 from pdf_extract.dioceses.records import PARISH, Diocese
 from pdf_extract.fetch import PROVIDERS_TAKING_RECIPE
 from pdf_extract.parish_sites import Recipe
@@ -36,21 +36,6 @@ GENERIC_HOSTS = frozenset({
     "jppc.net", "church-bulletin.org", "thebostonpilot.com", "s3.amazonaws.com",
     "nebula.wsimg.com", "uploads.weconnect.com", "liturgicalpublications.com",
 })
-_CONTENT = re.compile(
-    r"\b(serves|serving|published by|bulletin (?:for|of))\b", re.I,
-)
-_MEMBER_DETAIL = re.compile(
-    r"\b(names?|lists?|includes?|identifies|shows?)\b",
-    re.I,
-)
-_NOT_OBSERVED = re.compile(
-    r"\b(?:not|never|haven't|hasn't|didn't|without)\b.{0,60}"
-    r"\b(?:read|inspect\w*|check\w*|observ\w*|compar\w*)\b|"
-    r"\b(?:unread|uninspected|unchecked|unverified)\b|"
-    r"\b(?:need(?:s)? to|must|will|should|plan to)\b.{0,40}"
-    r"\b(?:read|inspect|check|observe|compare)\b",
-    re.I,
-)
 _FAILED_SITES = frozenset({
     "BAD-URL", "DEAD-DNS", "UNREACHABLE", "HTTP4XX", "HTTP5XX", "SPAM-SQUAT",
 })
@@ -79,33 +64,6 @@ def _host(url: str) -> str:
 def _document(url: str) -> str:
     url = unwrap_pdf_viewer_url(url)
     return _url(document_download_url(url) or (url if is_pdf_url(url) else ""))
-
-
-def _supported(review: Mapping[str, Any]) -> bool:
-    """Require a content explanation, not just URL/account differences.
-
-    This is a conservative evidence gate, not automatic masthead analysis.
-    Keep unsupported reviews in the output so a person can improve them.
-    """
-    for evidence in review.get("evidence") or []:
-        if not isinstance(evidence, Mapping):
-            continue
-        text = " ".join(str(evidence.get(k) or "") for k in ("quote", "note"))
-        if _NOT_OBSERVED.search(text):
-            continue
-        content = _CONTENT.search(text) or (
-            re.search(r"\b(mastheads?|members?|membership)\b", text, re.I)
-            and _MEMBER_DETAIL.search(text)
-        )
-        # Calling ID differences "separate bulletins" is still only ID evidence.
-        if (re.search(r"\b(ids?|identifiers?|urls?|accounts?|containers?)\b", text, re.I)
-                and not re.search(r"\b(mastheads?|members?|membership|serves|serving|"
-                                  r"published|publishes|coverage)\b", text, re.I)):
-            content = False
-        if (_url(str(evidence.get("url") or "")) and evidence.get("seen")
-                and len(text.split()) >= 5 and content):
-            return True
-    return False
 
 
 def _verdict(status: str) -> str:
@@ -196,7 +154,7 @@ def audit_rows(d: Diocese, groups: Mapping[str, set[str]], *, fetch: bool = Fals
                 continue
             pair = tuple(sorted((slug, peer)))
             reviews.setdefault(pair, []).append({**review, "recorded_by": slug,
-                                                 "content_supported": _supported(review)})
+                                                 "content_supported": supported_review(review)})
             add("review", " / ".join(pair), slug)
             add("review", " / ".join(pair), peer)
 
