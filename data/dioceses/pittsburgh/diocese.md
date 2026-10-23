@@ -175,6 +175,9 @@ Greensburg's playbook next door.
   closures). diopitt.org answers 403 to `recheck`; read it with `visit.py` (headed:
   `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, long timeout: hsplc.org took over two
   minutes); `visit.py --text` stops at 4000 characters (the nav): pass `--chars 30000`.
+- **Wix and Google Sites:** the Oratory's bulletin is a hashed usrfiles.com PDF linked from
+  /publications (`page-pdfs` picks the first-listed; check page 2's heading by hand). A Google
+  Sites HTML "Weekly Bulletin" page (St. Paul of the Cross Monastery) has no PDF: `no-bulletin`.
 - **Web search:** `visit.py "https://duckduckgo.com/html/?q=..." --text` works (the plain
   `duckduckgo.com/?q=` page returns only the region menu); results begin after "Past Year".
   It finds diopitt.org history pages and church-bulletin.org issues.
