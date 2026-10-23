@@ -112,6 +112,17 @@ Greensburg's playbook next door.
   saint-teresa-of-kolkata-parish, christ-the-divine-shepherd-parish, blessed-trinity-parish-15227,
   saint-mary-magdalene-parish, st-benedict-the-moor-church-15219, divine-mercy-parish-15222) are
   not fold-ins: those parishes publish elsewhere.
+- **Find a parish's ParishesOnline org in `scratch/map-pittsburgh/raw/lpi-catholic.tsv`**, not
+  by `probe po <parish name>` (bare names hit same-named orgs elsewhere: `corpus-christi-parish`
+  is Winslow, Maine). Merged parishes keep one org per former church, all resolving to one
+  container: record every `po-org`/`lpi` id on the one row (Corpus Christi, Bridgeville).
+  A parish's eCatholic site can repost the container PDF a week later (Corpus Christi, 21066):
+  same bulletin, not a second one. Image covers put the Mass schedule on page 3 (Our Lady of
+  Hope); `probe pdf --pages N` returns pages 1..N, so pick the page with `jq`.
+- **`fetch:check` on ParishesOnline** reports freshness `future` about two days before the
+  Sunday and `publication_identity: unverified` (no expected identity given): read the
+  masthead yourself. `visit.py` prints a warning line before its JSON (`tail -n +2 | jq`).
+  Run `diocese write` from the repo root.
 - **eCatholic bulletins:** several parishes post on their own eCatholic site:
   `files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf` downloads without a browser and
   `issues.py ecatholic ecatholic:<id>` finds it (20435 Catholic Partner Parishes, 21574 Christ
