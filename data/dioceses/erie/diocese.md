@@ -168,8 +168,10 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   sacred-heart-church-16508, st-mary-of-grace-st-agatha-st-brigid-churches, st-mary-sacred-heart-
   churches, holy-cross-catholic-church, saint-james-roman-catholic-church, st-boniface-church-16509,
   st-gregory-church, st-elizabeth-of-hungary; containers 14/1173 (St. Callistus) and 14/1154 (St.
-  Thomas, Corry); LPi ids on stjuliaerie.com, sainttitus.com, saintbartholomews.com. An org's `website` field
-  matching a blocked parish domain is good identity evidence (St. Patrick, Franklin). Org names
+  Thomas, Corry); LPi ids on stjuliaerie.com, sainttitus.com, saintbartholomews.com. When a parish site is
+  blocked even in headed Chrome, the search API (below) at the parish's coordinates with
+  `distance=15` finds its org, and the org's `website` field matching the blocked domain is good
+  identity evidence (St. Patrick, Franklin; Holy Redeemer, Warren). Org names
   record past groupings ("st-mary-of-grace-st-agatha-st-brigid"): read the masthead. A
   partnership can have two org records on one container (St. John/Holy Trinity, 14/0962):
   compare containers with `probe po`. `probe pdf` reads 4 pages by default; pass `--pages`
