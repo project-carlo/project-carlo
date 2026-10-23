@@ -233,7 +233,10 @@ README's model and the Greensburg precedent:
 
 7. **Shrines of Pittsburgh is one row** (scout 18, 2026-10-23): container 14/1226, masthead
    "SHRINES OF PITTSBURGH", covers the four canonical parishes and six sites. The directory's
-   "No Masses Scheduled" hid St. Patrick's weekly Thursday Mass: Rule 2 in practice.
+   "No Masses Scheduled" hid St. Patrick's weekly Thursday Mass: Rule 2 in practice. Annual Masses
+   count too (St. Stephen, Hazelwood: a September dedication Mass in the events column): grep
+   September issues for the church's name. A parish site's statements page can link a closure
+   decree (St. Regis, effective 2025-09-29) that diopitt.org's history page hasn't caught up with.
 
 ## Log
 
