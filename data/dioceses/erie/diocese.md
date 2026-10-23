@@ -168,7 +168,8 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   sacred-heart-church-16508, st-mary-of-grace-st-agatha-st-brigid-churches, st-mary-sacred-heart-
   churches, holy-cross-catholic-church, saint-james-roman-catholic-church, st-boniface-church-16509,
   st-gregory-church, st-elizabeth-of-hungary; containers 14/1173 (St. Callistus) and 14/1154 (St.
-  Thomas, Corry); LPi ids on stjuliaerie.com, sainttitus.com, saintbartholomews.com. Org names
+  Thomas, Corry); LPi ids on stjuliaerie.com, sainttitus.com, saintbartholomews.com. An org's `website` field
+  matching a blocked parish domain is good identity evidence (St. Patrick, Franklin). Org names
   record past groupings ("st-mary-of-grace-st-agatha-st-brigid"): read the masthead. A
   partnership can have two org records on one container (St. John/Holy Trinity, 14/0962):
   compare containers with `probe po`. `probe pdf` reads 4 pages by default; pass `--pages`
@@ -184,7 +185,9 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   compare size and number, and use `discover_mass` with the slug. `recheck` finds quotes from
   the issue PDF cited under the church page URL, but not the cover-class number or page
   markup: put those in a note. `recheck` reads only the first pages, and page-1
-  mastheads often extract garbled: quote clean text from page 1 or 2. `fetch:check` reports issue date `unknown` when the masthead
+  mastheads often extract garbled: quote a clean full line from page 1 or 2 (link text is not
+  page text). A Discover Mass PDF can carry stale hidden text from an earlier week: don't read a
+  name found only there as a current Mass. `fetch:check` reports issue date `unknown` when the masthead
   date is split by the layout, and ParishesOnline issues posted early show as `future`;
   neither is a failure.
 - **Other hosts seen:** Wix (`_files/ugd/` PDFs; a blog post's file-upload-viewer attachment
@@ -275,8 +278,9 @@ Decisions that apply to more than one record, and who made them.
   2026-10-23).
 - **Secondary churches.** A church with a recurring public Mass in the current bulletin or
   schedule (weekend, weekday, monthly or seasonal) is a church row under the row whose
-  bulletin lists it. One whose only Masses are the patronal feast, funerals and weddings,
-  stated by a current source, is `no-public-mass`, as Scranton settled (St. Clare, St.
+  bulletin lists it. One whose only Masses are the patronal feast (and, under the 2016 merger
+  decrees, the dedication anniversary), funerals and weddings, stated by a current source, is
+  `no-public-mass` (St. Walburga, Titusville), as Scranton settled (St. Clare, St.
   Rocco). One no current source describes goes to `open/` with a revisit at its patronal
   feast (orchestrator, 2026-10-23).
 - **A GCatholic-only church that no current source mentions and no decree closed** goes to
