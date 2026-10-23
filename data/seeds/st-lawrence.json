@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-lawrence",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:28:10Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:49:41Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "One-church parish: Sat 4:00 PM, Sun 8:00 and 10:00 AM, Mon-Wed and Fri 8:30 AM Masses, Sat 3:00 PM Confession, all stable across bulletins read. The newest bulletin cancels the 8:30 AM Mass on Oct 12, 13, 14 and 16 (Communion Services or nothing); Thursday is a Communion Service, so left out. One open question about an occasional Monday 9-3:30 Adoration seen in two older calendars.",
   "blocked_reason": null,
   "bulletins": [
@@ -790,9 +790,22 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church"
+      },
       "page": null,
       "sources": [
         {
@@ -832,7 +845,7 @@
           "page": 4
         }
       ],
-      "rationale": "Calendar listings of church Adoration 9:00 am-3:30 pm appear on Mon Sep 14 and Mon Oct 5 only; absent on Sep 28 and Oct 12 (and not in the Mass Schedule box). Not weekly, no clear monthly pattern (second Monday, then first Monday), and the newest bulletin does not print it. The parish website did not mention it.",
+      "rationale": "Calendar listings of church Adoration 9:00 am-3:30 pm appear on Mon Sep 14 and Mon Oct 5 only; absent on Sep 28 and Oct 12 (and not in the Mass Schedule box). Not weekly, no clear monthly pattern (second Monday, then first Monday), and the newest bulletin does not print it. The parish website did not mention it.\n\nReview 2026-10-22: Exclude a weekly Monday Adoration inference. Sept 14 and Oct 5 do not form an established weekly or named monthly pattern.",
       "question": "Is there a recurring Monday 9:00 AM-3:30 PM Adoration at St. Lawrence?",
       "options": [
         {
@@ -858,7 +871,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

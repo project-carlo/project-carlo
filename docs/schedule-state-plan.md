@@ -207,7 +207,7 @@ CREATE TABLE schedule_revision (
 CREATE TABLE proposed_change (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     llm_call_id INTEGER NOT NULL REFERENCES llm_call(id) ON DELETE CASCADE,
-    seq INTEGER NOT NULL,             -- position in the model's answer; decided in this order
+    seq INTEGER NOT NULL,             -- position in the model's answer; decided in this order (see Decision policy)
     op TEXT NOT NULL CHECK (op IN ('add', 'modify', 'delete')),
     raw_json TEXT NOT NULL,           -- the proposal as the model wrote it
     -- modify, delete: the entry id as the model gave it. Not a foreign key: it
@@ -290,15 +290,18 @@ of its modify rows.
 
 **Identity.** `identity_key` is computed in code from the entry:
 
-- weekly: church, event type, weekday, start time
+- weekly: church, event type, weekday, start time, weeks of month and season
 - specific_date: church, event type, date, start time
 
-End time, weeks of month, season, cancelled and note are not part of identity,
-so a change to any of them is a modify of the existing entry, and "every
-Saturday 3 PM" and "first Saturday 3 PM" can't both be believed at once. The
-`UNIQUE (parish_id, identity_key)` on `current_schedule` refuses a second live
-entry for a slot, and the policy rejects a proposal that would create one as
-`duplicate`.
+End time, cancelled and note are not part of identity. Different weekly patterns
+may share a start when their occurrences do not overlap: first-Friday Adoration
+can end at 4 PM while the other Fridays end at 1 PM. The database's
+`UNIQUE (parish_id, identity_key)` rejects identical patterns; shared writer and
+policy checks also reject overlapping patterns as `duplicate`. Thus "every
+Saturday 3 PM" and "first Saturday 3 PM" still cannot both be believed at once.
+Migration 0009 updates these derived identity keys without changing entry IDs,
+hashes, content or history. A modify identifies its target by entry ID and can
+still change its week or season qualifiers.
 
 A modify may change the start time, weekday or date as well, and so move the
 entry to another slot ("the 5 PM vigil moves to 4:30" is one modify). It may
@@ -491,6 +494,21 @@ proposals before it left it, and is **rejected** when:
 Every other proposal is **applied** (`auto`): adds, modifies and deletes,
 weekly or dated. A call with no applied proposals writes no revision.
 
+One exception to deciding strictly in `seq` order keeps a merge whole
+whichever order the model lists it in (say first-Friday Adoration modified to
+every Friday, and the other-Fridays entry at the same start deleted). An add or
+modify that is a `duplicate` only of live entries that later proposals in the
+call modify or delete **waits**: it is checked again after each later proposal
+is applied, applied as soon as it passes, and otherwise rejected as a
+`duplicate` once nothing it duplicates can still be removed. A removal that is
+itself rejected removes nothing, so it can't let a duplicate through, and a
+duplicate of an entry the call added never waits. Waiting proposals are retried
+in `seq` order, so an earlier waiting proposal gets the first retry for the same
+slot. Circular dependencies where no proposal can apply remain rejected. Proposals
+keep their `seq`; the revision logs applied changes in the order they were
+applied (a waiting one after the removals it waited for), which is the order
+they fold and replay in.
+
 ### Which week a bulletin is for
 
 A call's week is `bulletin_week` of the `published_date` it read, with the
@@ -529,8 +547,9 @@ policy rejected or the report flagged:
 
 - **apply** a rejected call's proposals, all of them or chosen `seq`s. Each
   is checked against the current schedule with the per-proposal rules above
-  (the whole-call rules are what the person is overriding), and any that fail
-  are reported and skipped. The log rows carry the `proposed_change_id` they
+  (the whole-call rules are what the person is overriding), in `seq` order
+  with the same wait for later removals, and any that fail are reported and
+  skipped. The log rows carry the `proposed_change_id` they
   apply; the proposals' own decisions stay as the policy made them.
 - **add**, **modify** or **delete** entries directly, with the same checks.
 
@@ -631,9 +650,10 @@ so seeding parishes changes no frontend code. It is version 2 because a weekly r
   `season_end_month`, `season_end_day`, `cancels_event_id`.
 - **Dated entries** before the build date are left out.
 - **`cancels_event_id`:** a cancelled dated entry cancels the live weekly entry
-  with the same church, event type and start time on its date's weekday. The
-  builder matches them on every build and writes that entry's id. After the
-  identity rules there is at most one match. A cancellation that matches
+  with the same church, event type and start time on its date's weekday, whose
+  week pattern and season apply on that date. The builder matches them on every
+  build and writes that entry's id. Disjoint patterns allow at most one applicable
+  update-mode match. A cancellation that matches
   nothing is left out of the snapshot, as cancelled events are hidden today.
 - **Reading version 1:** `read_snapshot` also reads a version 1 snapshot, as
   every week, no season and no cancellations, so the first v2 run's

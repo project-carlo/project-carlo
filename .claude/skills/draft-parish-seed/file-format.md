@@ -104,6 +104,29 @@ one, a dated cancellation, and an open question, each rationale citing its rule:
   print the same words, one `agent` source may list them as `bulletins`, and `finalize`
   splits it into one source per bulletin. `finalize` adds the `history` sources that
   match. Write one yourself only to say what it can't ("no weekday Masses stored").
+- A website source may carry `schedule_check`: `checked_at` (ISO time of the agent's
+  assessment), `current_because` (why the schedule appears current after considering
+  stale-page clues), `bulletin` (the newest read bulletin's hash or prefix), and
+  `fits_because` (why the quoted schedule makes sense in that bulletin's context).
+  For an agent-settled website-backed inclusion, keep the website's actual schedule
+  quote in `said`, its URL in `url`, and the slot's `page` null. The exact time need
+  not appear in a bulletin. Validation requires the assessment's shape and newest
+  bulletin reference; the agent judges credibility and freshness. It imposes no
+  fixed age or frequency threshold. Website sources remain forbidden in historical
+  test runs. `finalize` preserves assessments and never creates one.
+- An every-week slot retained after one omission may carry `weekly_omission`:
+  `{"bulletin": "9f2c41d0", "reason": "..."}`. The reference must name the newest
+  read issue; `reason` explicitly assesses why that issue merely omits the established
+  service rather than cancelling it or changing its schedule. Keep `page` null and
+  cite paged `agent` quotes for this same church, service type, weekday and time from
+  at least two older read issue weeks. One must be the immediately preceding read
+  issue, dated exactly one issue week before newest. Duplicate citations, different
+  PDFs for the same week, and repeat fetches do not supply another week. Only valid,
+  plausible `published_date` values count; fetch dates cannot substitute for missing
+  issue dates. Validation checks this provenance; the agent must judge what the
+  quotes establish and whether newest contradicts them. Named monthly patterns
+  (`weeks_of_month` or `exclude_weeks`) use their existing targeted evidence rules,
+  never this fallback. `finalize` preserves the assessment and never creates one.
 - One slot per day and time: "Mon–Fri 8:00 AM" is five slots.
 - A question has a short `question`, `options` (an option's `entry` is null for "leave it
   out"), exactly one `"leaning": true`, and its reasons in `rationale`. Slots that share a
@@ -133,6 +156,19 @@ writes nothing if a check fails. `pnpm seed slot --help` has the full syntax.
   bulletin), hash prefixes `9f2c41d0,1ab3e7c2 p2` (one source each), `web URL`,
   `history`, or a call's id (`c1 p3`). A slot's `page` defaults to its source's page on
   the newest bulletin.
+- With a `web URL: quote` source, the paired flags `--website-current "why it appears
+  current" --website-context "why it fits the newest bulletin" add a `schedule_check`
+  to each website source added by that command. The CLI records the check time and
+  newest listed bulletin reference. Read and mark that bulletin before finalizing;
+  use `--page -` when editing a slot that previously had a bulletin page. Without
+  those flags, website sources remain ordinary supporting evidence. For different
+  assessments, add website sources in separate commands.
+- `slot include` and `slot edit` accept `--weekly-omission "why newest merely omits
+  this established service"` to record that judgment against the newest listed
+  bulletin. Supply the matching older quotes with `--src` and use `--page -`.
+  For example: `--src "1ab3e7c2,77d0be19 p2: Holy Family: Saturday Vigil Mass 4 PM"`.
+  Read and mark newest before finalizing; the evidence requirements above still
+  apply. `slot edit ... --weekly-omission -` removes the assessment.
 - An **option** is `--option "LABEL" "ENTRY"`, or just `--option "LABEL"` for leaving it
   out. `*` before one label marks the leaning. An entry `+ ...` is the first option's
   entry with those changes (`+ except=first`).

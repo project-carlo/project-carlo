@@ -49,7 +49,8 @@ border this one, for their *Sources*, *Bulletin publishers here* and *Rules sett
    a handful of parish sites from different towns if that shows which publishers are
    common here.
 6. **Plan the batches.** Group the roster entries into batches of about four parishes that
-   belong together: one town, one family or cluster, or one shared pastor. Entries that
+   belong together: one town, one family or cluster, or one shared pastor that a source
+   names explicitly (don't infer it from adjacent names or text). Entries that
    might share a bulletin go in the same batch, so one scout settles them. Use fewer
    parishes for a family with many churches or a city centre full of closures, and give
    the Eastern Catholic or other-jurisdiction entries a batch of their own. Write
@@ -69,16 +70,20 @@ border this one, for their *Sources*, *Bulletin publishers here* and *Rules sett
 - Don't commit or promote. The orchestrator does both.
 
 Keep bulky output (scraped pages, roster JSON, probe output) in files under
-`scratch/map-<d>/` and read only what you need from them.
+`scratch/map-<d>/` and read only what you need from them. Use `pnpm --silent diocese` when
+piping JSON into `jq`.
 
 ## Report
 
-End with this, and nothing longer:
+Write `scratch/map-<d>/survey.json`: the diocese (slug, GCatholic key, website, how it is
+organised), each roster (name, entry count, source URL, anything odd), the batches (count,
+sizes, which to run first), proposed rules for the orchestrator to decide before the
+scouts start, and anything you couldn't get (a directory that wouldn't scrape, a list you
+couldn't find) with what you tried. Point to `diocese.md` and `batches.md` rather than
+copying them.
 
-- **Diocese:** slug, GCatholic key, website, and how it is organised, in one line.
-- **Rosters:** one line each: name, entry count, source URL, and anything odd.
-- **Batches:** how many, their sizes, and which to run first.
-- **Proposed rules:** decisions the orchestrator should make before the scouts start, one
-  line each.
-- **Unsettled:** anything you couldn't get (a directory that wouldn't scrape, a list you
-  couldn't find), and what you tried.
+Return only a small JSON handoff (target at most 300 tokens), for example:
+
+```json
+{"manifest":"scratch/map-<d>/survey.json","rosters":{"gcatholic":109,"directory":93},"batches":24,"first":"batch 3 (Altoona east)","proposed_rules":2,"unsettled":["Family list is a PDF map; groups read by hand, see manifest"]}
+```

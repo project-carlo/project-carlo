@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-francis-of-assisi-binghamton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:36:26Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:56:13Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish (St. Francis of Assisi, Binghamton). Saturday 4:00 PM, Sunday 10:30 AM and 2nd/4th Saturday 3:00 PM Confession are settled from all three bulletins. Weekday Masses appear only in the intentions list and the website gives none: Tuesday/Thursday 8:00 AM (two of three weeks) and Monday/Wednesday 12:00 PM (one week, with a holiday no-Mass and a time change in the newest week) are asked in two groups, leaning weekly. The dated October 14 8:00 AM Mass is settled.",
   "blocked_reason": null,
   "bulletins": [
@@ -270,9 +270,22 @@
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -306,7 +319,7 @@
           "page": 2
         }
       ],
-      "rationale": "R28: the Mass-intentions list is the only place these Masses appear (no schedule box; the website gives only Saturday 4:00 PM and Sunday 10:30 AM). Tuesday 8:00 AM is listed in the newest bulletin (October 13) and in the October 4 bulletin (October 6), but the September 27 bulletin lists NO MASS for every weekday of September 28-October 2, so the slot is not in each week read (POLICY, Weekly or dated rule 4 needs that). Leaning weekly: it is in both weeks that have weekday Masses, and the empty week looks like an absence.",
+      "rationale": "R28: the Mass-intentions list is the only place these Masses appear (no schedule box; the website gives only Saturday 4:00 PM and Sunday 10:30 AM). Tuesday 8:00 AM is listed in the newest bulletin (October 13) and in the October 4 bulletin (October 6), but the September 27 bulletin lists NO MASS for every weekday of September 28-October 2, so the slot is not in each week read (POLICY, Weekly or dated rule 4 needs that). Leaning weekly: it is in both weeks that have weekday Masses, and the empty week looks like an absence.\n\nReview 2026-10-22: Include Tuesday and Thursday 8 AM Masses as weekly if recurrence may be established across consecutive bulletins. One earlier no-Mass week need not erase two agreeing weeks.",
       "question": "Are the Tuesday and Thursday 8:00 AM Masses weekly?",
       "options": [
         {
@@ -332,14 +345,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "weekday-8am"
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -373,7 +403,7 @@
           "page": 2
         }
       ],
-      "rationale": "R28: the Mass-intentions list is the only place these Masses appear (no schedule box; the website gives only Saturday 4:00 PM and Sunday 10:30 AM). Thursday 8:00 AM is listed in the newest bulletin (October 15) and in the October 4 bulletin (October 8), but the September 27 bulletin lists NO MASS for every weekday of September 28-October 2, so the slot is not in each week read (POLICY, Weekly or dated rule 4 needs that). Leaning weekly: it is in both weeks that have weekday Masses, and the empty week looks like an absence.",
+      "rationale": "R28: the Mass-intentions list is the only place these Masses appear (no schedule box; the website gives only Saturday 4:00 PM and Sunday 10:30 AM). Thursday 8:00 AM is listed in the newest bulletin (October 15) and in the October 4 bulletin (October 8), but the September 27 bulletin lists NO MASS for every weekday of September 28-October 2, so the slot is not in each week read (POLICY, Weekly or dated rule 4 needs that). Leaning weekly: it is in both weeks that have weekday Masses, and the empty week looks like an absence.\n\nReview 2026-10-22: Include Tuesday and Thursday 8 AM Masses as weekly if recurrence may be established across consecutive bulletins. One earlier no-Mass week need not erase two agreeing weeks.",
       "question": "Are the Tuesday and Thursday 8:00 AM Masses weekly?",
       "options": [
         {
@@ -399,14 +429,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "weekday-8am"
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -434,7 +481,7 @@
           "page": 2
         }
       ],
-      "rationale": "R28: Monday 12:00 PM is printed in the October 4 bulletin only (October 5, Julie Wiktorek). The newest bulletin shows 'Monday, October 12, Indigenous Peoples' Day NO MASS', a reason that fits R18 (weekly slot skipped for a stated reason), but the September 27 bulletin lists NO MASS all of September 28-October 2, and the website lists no weekday Masses, so a single occurrence is thin evidence of a weekly Mass. Leaning include (R18) with the October 12 cancellation (R16: after as_of).",
+      "rationale": "R28: Monday 12:00 PM is printed in the October 4 bulletin only (October 5, Julie Wiktorek). The newest bulletin shows 'Monday, October 12, Indigenous Peoples' Day NO MASS', a reason that fits R18 (weekly slot skipped for a stated reason), but the September 27 bulletin lists NO MASS all of September 28-October 2, and the website lists no weekday Masses, so a single occurrence is thin evidence of a weekly Mass. Leaning include (R18) with the October 12 cancellation (R16: after as_of).\n\nReview 2026-10-22: Do not promote Monday/Wednesday noon to weekly from one actual occurrence per day. Preserve the explicit holiday cancellation and Wednesday time change independently; the current four-slot group prevents that distinction.",
       "question": "Are Monday and Wednesday 12:00 PM Masses weekly, with this week's changes?",
       "options": [
         {
@@ -460,14 +507,30 @@
           "entry": null
         }
       ],
-      "answer": null,
-      "group": "weekday-noon"
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -495,7 +558,7 @@
           "page": 2
         }
       ],
-      "rationale": "R28: Wednesday 12:00 PM is printed in the October 4 bulletin only (October 7, 6th Anniversary - Bob Shields). The newest bulletin lists Wednesday October 14 at 8:00 a.m. with '(NOTE: time change)', which implies noon is the usual time, but the September 27 bulletin lists NO MASS all of September 28-October 2 and the website lists no weekday Masses. Leaning include as weekly noon, with the October 14 12:00 PM Mass cancelled (R17: the bulletin says the time changed; the dated 8:00 AM Mass is its own settled slot).",
+      "rationale": "R28: Wednesday 12:00 PM is printed in the October 4 bulletin only (October 7, 6th Anniversary - Bob Shields). The newest bulletin lists Wednesday October 14 at 8:00 a.m. with '(NOTE: time change)', which implies noon is the usual time, but the September 27 bulletin lists NO MASS all of September 28-October 2 and the website lists no weekday Masses. Leaning include as weekly noon, with the October 14 12:00 PM Mass cancelled (R17: the bulletin says the time changed; the dated 8:00 AM Mass is its own settled slot).\n\nReview 2026-10-22: Do not promote Monday/Wednesday noon to weekly from one actual occurrence per day. Preserve the explicit holiday cancellation and Wednesday time change independently; the current four-slot group prevents that distinction.",
       "question": "Are Monday and Wednesday 12:00 PM Masses weekly, with this week's changes?",
       "options": [
         {
@@ -521,14 +584,30 @@
           "entry": null
         }
       ],
-      "answer": null,
-      "group": "weekday-noon"
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Indigenous Peoples' Day"
+      },
       "page": 2,
       "sources": [
         {
@@ -538,7 +617,7 @@
           "said": "Monday, October 12, Indigenous Peoples' Day NO MASS"
         }
       ],
-      "rationale": "R18, R16: dated cancellation of the Monday 12:00 PM Mass for Indigenous Peoples' Day (October 12 is after as_of); only meaningful if the weekly Monday Mass is kept, so it goes with that answer.",
+      "rationale": "R18, R16: dated cancellation of the Monday 12:00 PM Mass for Indigenous Peoples' Day (October 12 is after as_of); only meaningful if the weekly Monday Mass is kept, so it goes with that answer.\n\nReview 2026-10-22: Do not promote Monday/Wednesday noon to weekly from one actual occurrence per day. Preserve the explicit holiday cancellation and Wednesday time change independently; the current four-slot group prevents that distinction.",
       "question": "Are Monday and Wednesday 12:00 PM Masses weekly, with this week's changes?",
       "options": [
         {
@@ -564,14 +643,30 @@
           "entry": null
         }
       ],
-      "answer": null,
-      "group": "weekday-noon"
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved to 8:00 AM"
+      },
       "page": 2,
       "sources": [
         {
@@ -581,7 +676,7 @@
           "said": "Wednesday, October 14 - (NOTE: time change) 8:00 a.m. Liturgy for the People"
         }
       ],
-      "rationale": "R17, R16: the 12:00 PM Wednesday Mass is moved to 8:00 AM on October 14 (the bulletin says 'time change'), so the noon Mass that day is cancelled. Only meaningful if the weekly Wednesday noon Mass is kept, so it goes with that answer.",
+      "rationale": "R17, R16: the 12:00 PM Wednesday Mass is moved to 8:00 AM on October 14 (the bulletin says 'time change'), so the noon Mass that day is cancelled. Only meaningful if the weekly Wednesday noon Mass is kept, so it goes with that answer.\n\nReview 2026-10-22: Do not promote Monday/Wednesday noon to weekly from one actual occurrence per day. Preserve the explicit holiday cancellation and Wednesday time change independently; the current four-slot group prevents that distinction.",
       "question": "Are Monday and Wednesday 12:00 PM Masses weekly, with this week's changes?",
       "options": [
         {
@@ -607,8 +702,11 @@
           "entry": null
         }
       ],
-      "answer": null,
-      "group": "weekday-noon"
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s11",

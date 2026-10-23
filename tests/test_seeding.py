@@ -20,7 +20,12 @@ from pdf_extract.labeling.demo import build_demo, make_pdf
 from pdf_extract.labeling.labels import write_label
 from pdf_extract.labeling.server import LabelerApp, make_server
 from pdf_extract.report import render_seeds
-from pdf_extract.schedule.store import live_entries, update_mode_parishes
+from pdf_extract.schedule.store import (
+    live_entries,
+    parish_churches,
+    rebuild_current_schedule,
+    update_mode_parishes,
+)
 from pdf_extract.seeding import calls as seed_calls
 from pdf_extract.seeding import cli as seed_cli
 from pdf_extract.seeding.checks import check_seed
@@ -64,6 +69,7 @@ from pdf_extract.seeding.review import (
     seed_queue,
 )
 from pdf_extract.seeding.score import score_parish, score_run
+from pdf_extract.seeding.slots import Draft
 from pdf_extract.storage import connect_db
 
 PARISH = "holy-family-demo"
@@ -399,6 +405,36 @@ def test_check_finds_what_needs_the_database(conn, seed):
     assert any("before as_of" in p for p in problems)
 
 
+def _disjoint_friday_slots(seed):
+    first = _slot(seed, "s1")
+    first["entry"].update(event_type="adoration", day_of_week="Friday", start_time="11:30",
+                          end_time="16:00", weeks_of_month=["first"], note="Benediction")
+    remaining = copy.deepcopy(first)
+    remaining["id"] = "s18"
+    remaining["entry"].update(end_time="13:00",
+                              weeks_of_month=["second", "third", "fourth", "fifth"])
+    seed["slots"].append(remaining)
+    return first, remaining
+
+
+@pytest.mark.parametrize("overlap", [False, True])
+def test_seed_and_draft_checks_allow_only_disjoint_recurrence_variants(conn, seed, overlap):
+    seed = _settle_all(seed)
+    _, remaining = _disjoint_friday_slots(seed)
+    if overlap:
+        remaining["entry"]["weeks_of_month"].append("first")
+    problems = check_seed(conn, seed, parish_slug=PARISH, check_evidence=False)
+    assert bool(problems) is overlap
+    parish_id = conn.execute("SELECT id FROM parish WHERE slug=?", (PARISH,)).fetchone()[0]
+    draft = Draft(seed, parish_churches(conn, parish_id), touched=["s18"])
+    if overlap:
+        assert any("same slot as s1" in p for p in problems)
+        with pytest.raises(SeedError, match="s1 and s18 are the same slot"):
+            draft.check()
+    else:
+        draft.check()
+
+
 def test_check_requires_as_of_to_be_the_newest_bulletin_read(conn, seed):
     seed["as_of"] = seed["bulletins"][1]["fetched_at"]
     problems = check_seed(conn, seed, parish_slug=PARISH)
@@ -669,6 +705,28 @@ def test_review_refuses_a_draft_still_being_written(conn, demo, seed):
 
 
 # ── Loading ─────────────────────────────────────────────────────────────────
+def test_approved_disjoint_patterns_load_without_changing_reviewer_decisions(conn, demo, seed):
+    approved = _approved(seed)
+    first, _ = _disjoint_friday_slots(approved)
+    first["options"] = [
+        {"label": "First Fridays", "entry": copy.deepcopy(first["entry"]), "leaning": True},
+        {"label": "Leave out", "entry": None},
+    ]
+    first["answer"] = {"choice": 0, "by": "Reviewer", "at": "2026-10-10T12:00:00Z"}
+    path = write_seed_file(approved, demo["seeds_dir"])
+    before = path.read_bytes()
+    result = load_approved_seeds(conn, demo["seeds_dir"])
+    assert result["skipped"] == []
+    assert result["loaded"][0]["entries"] == len(included_slots(approved))
+    parish_id = conn.execute("SELECT id FROM parish WHERE slug=?", (PARISH,)).fetchone()[0]
+    friday = [e for e in live_entries(conn, parish_id).values()
+              if e.event_type == "adoration" and e.start_time == 690]
+    assert {(e.weeks_of_month, e.end_time) for e in friday} == {(1, 960), (30, 780)}
+    assert path.read_bytes() == before
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+    assert load_approved_seeds(conn, demo["seeds_dir"]) == {"loaded": [], "skipped": []}
+
+
 def test_an_approved_seed_loads_once_and_switches_the_parish(conn, demo, seed):
     assert load_approved_seeds(conn, demo["seeds_dir"]) == {"loaded": [], "skipped": []}
     approved = _approved(seed)
@@ -1262,6 +1320,99 @@ def test_historical_evals_reject_live_website_evidence(conn, seed):
         conn, seed, parish_slug=PARISH, cutoff=seed["as_of"]))
 
 
+def _website_slot(seed):
+    slot = _slot(seed, "s1")
+    slot.update(page=None, sources=[{
+        "source": "website", "url": "https://example.org/times",
+        "said": "Fall schedule: Saturday Vigil Mass at 6:15 PM at Holy Family.",
+        "schedule_check": {
+            "checked_at": "2026-10-10T12:00:00Z",
+            "current_because": "Parish schedule linked from its current home page; the fall "
+                               "schedule matches this year's parish announcements.",
+            "bulletin": seed["bulletins"][0]["content_hash"][:8],
+            "fits_because": "The newest bulletin directs readers to the parish website for "
+                            "the fall Vigil schedule; it gives no conflicting Vigil time.",
+        },
+    }])
+    # A website-only time, with no agent source asserting that a bulletin prints it.
+    slot["entry"]["start_time"] = "18:15"
+    return slot
+
+
+def test_assessed_website_schedule_can_be_settled_without_a_bulletin_time(conn, seed):
+    slot = _website_slot(seed)
+    assert slot["answer"] is None
+    assert check_seed(conn, seed, parish_slug=PARISH) == []
+    finalized = finalize_seed(seed, [HF, SJ])
+    assert _slot(finalized, "s1")["sources"] == slot["sources"]
+    assert check_seed(conn, finalized, parish_slug=PARISH) == []
+    for evidence_check in (True, False):
+        assert any("website sources are not allowed" in p for p in check_seed(
+            conn, finalized, parish_slug=PARISH, cutoff=seed["as_of"],
+            check_evidence=evidence_check))
+    finalized.update(status="blocked", blocked_reason="Other schedules remain unclear.")
+    assert any("website sources are not allowed" in p for p in check_seed(
+        conn, finalized, parish_slug=PARISH, cutoff=seed["as_of"]))
+
+
+@pytest.mark.parametrize("change, message", [
+    (lambda s: s.update(page=2), "settled inclusion needs"),
+    (lambda s: s["sources"][0].pop("schedule_check"), "settled inclusion needs"),
+    (lambda s: s["sources"][0]["schedule_check"].update(bulletin="f" * 64),
+     "bulletin must name"),
+    (lambda s: s["sources"][0]["schedule_check"].update(current_because="  "),
+     "current_because must explain"),
+    (lambda s: s["sources"][0]["schedule_check"].pop("fits_because"), "missing fits_because"),
+    (lambda s: s["sources"][0]["schedule_check"].update(checked_at="yesterday"),
+     "checked_at must be an ISO time"),
+    (lambda s: s["sources"][0]["schedule_check"].update(fresh=True), "unknown fresh"),
+    (lambda s: s["sources"][0].update(schedule_check=True), "must be an object"),
+    (lambda s: s["sources"][0].update(said="  "), "said is required"),
+    (lambda s: s["sources"][0].pop("url"), "url is required"),
+    (lambda s: s["sources"][0].update(url="file:///tmp/times"), "url is required"),
+    (lambda s: s["sources"][0].update(bulletin="f" * 64), "website source names no bulletin"),
+    (lambda s: s["sources"][0].update(source="history"),
+     "schedule_check is only for a website source"),
+    (lambda s: s.update(website_ok=True), "unknown website_ok"),
+])
+def test_website_assessment_requires_quoted_evidence_and_explicit_shape(conn, seed, change, message):
+    slot = _website_slot(seed)
+    change(slot)
+    assert any(message in p for p in check_seed(conn, seed, parish_slug=PARISH))
+
+
+def test_website_assessment_must_fit_the_newest_read_bulletin(conn, seed):
+    slot = _website_slot(seed)
+    slot["sources"][0]["schedule_check"]["bulletin"] = seed["bulletins"][1]["content_hash"]
+    assert validate_seed(seed) == []  # known, but no longer the anchor for this assessment
+    assert _evidence_problems(conn, seed)
+    slot["sources"][0]["schedule_check"]["bulletin"] = seed["bulletins"][0]["content_hash"]
+    seed["bulletins"][0]["read"] = False
+    seed["as_of"] = seed["bulletins"][1]["fetched_at"]
+    assert any("newest listed bulletin" in p for p in check_seed(conn, seed, parish_slug=PARISH))
+
+
+def test_finalize_does_not_invent_a_website_assessment(conn, seed):
+    slot = _website_slot(seed)
+    del slot["sources"][0]["schedule_check"]
+    finalized = finalize_seed(seed, [HF, SJ])
+    assert "schedule_check" not in _slot(finalized, "s1")["sources"][0]
+    assert _evidence_problems(conn, finalized)
+
+
+def test_website_backed_agent_inclusion_can_be_reviewed_and_loaded(conn, demo, seed):
+    _website_slot(seed)
+    write_seed_file(seed, demo["seeds_dir"])
+    reviewed = _settle_all(seed)
+    saved = save_reviewed_seed(conn, PARISH, {
+        **reviewed, "status": APPROVED, "reviewer": "Reviewer",
+    }, demo["seeds_dir"])
+    assert saved["problems"] == []
+    assert load_approved_seeds(conn, demo["seeds_dir"])["loaded"][0]["entries"] == 16
+    slot = _slot(read_seed(PARISH, demo["seeds_dir"]), "s1")
+    assert slot["page"] is None and slot["answer"] is None
+
+
 def test_a_settled_inclusions_page_must_match_its_newest_agent_source(conn, seed):
     _slot(seed, "s1")["page"] = 3
     assert any("settled inclusion needs an agent source" in p
@@ -1389,6 +1540,134 @@ def test_a_dated_entry_an_older_bulletin_announced_may_be_settled(conn, seed):
     assert _evidence_problems(conn, seed) == []
     _slot(seed, "s8")["page"] = 2  # it isn't on the newest bulletin's page 2
     assert _evidence_problems(conn, seed)
+
+
+def _weekly_omission_slot(seed):
+    newest, previous = seed["bulletins"]
+    oldest = {**previous, "content_hash": "c" * 64, "published_date": "2026-09-13",
+              "fetched_at": "2026-09-12T12:00:00Z"}
+    seed["bulletins"].append(oldest)
+    slot = _slot(seed, "s1")
+    slot.update(page=None, sources=[
+        {"source": "agent", "bulletin": b["content_hash"][:8], "page": 2,
+         "said": "Holy Family: Saturday Vigil Mass 4 PM"} for b in (previous, oldest)
+    ], weekly_omission={
+        "bulletin": newest["content_hash"][:8],
+        "reason": "The same church, Mass, Saturday and 4 PM recur in both older issues. "
+                  "The newest issue omits that service once; its announcements and "
+                  "schedule give no cancellation or changed time.",
+    })
+    return slot
+
+
+def _omission_problems(conn, seed, **kwargs):
+    # The third synthetic issue exercises evidence without adding database fixtures.
+    return check_seed(conn, seed, parish_slug=PARISH, check_bulletins=False, **kwargs)
+
+
+def test_established_weekly_slot_can_survive_one_assessed_omission(conn, seed):
+    slot = _weekly_omission_slot(seed)
+    assert _omission_problems(conn, seed) == []
+    assert _omission_problems(conn, seed, cutoff=seed["as_of"]) == []
+    finalized = finalize_seed(seed, [HF, SJ])
+    assert _slot(finalized, "s1")["weekly_omission"] == slot["weekly_omission"]
+    assert _slot(finalized, "s1")["page"] is None
+    assert _omission_problems(conn, finalized) == []
+    # Published Saturdays and Sundays identify the same issue week.
+    seed["bulletins"][1]["published_date"] = "2026-09-19"
+    assert _omission_problems(conn, seed) == []
+
+
+@pytest.mark.parametrize("change", [
+    lambda s, slot: slot.pop("weekly_omission"),
+    lambda s, slot: slot["weekly_omission"].update(bulletin=s["bulletins"][1]["content_hash"]),
+    lambda s, slot: slot.update(page=2),
+    lambda s, slot: slot["sources"].pop(),
+    lambda s, slot: slot["sources"][1].update(bulletin=slot["sources"][0]["bulletin"]),
+    lambda s, slot: slot["sources"][0].update(source="history"),
+    lambda s, slot: slot["sources"][1].update(source="history"),
+    lambda s, slot: slot["sources"][0].update(page=None),
+    lambda s, slot: slot["sources"][1].update(page=None),
+    lambda s, slot: s["bulletins"][1].update(read=False),
+    lambda s, slot: s["bulletins"][2].update(read=False),
+    lambda s, slot: s["bulletins"][2].update(published_date="2026-09-20"),
+    lambda s, slot: s["bulletins"][1].update(published_date="2026-09-13"),
+    lambda s, slot: s["bulletins"][2].update(published_date="2026-09-27"),
+    lambda s, slot: s["bulletins"][2].update(published_date="2026-11-01"),
+    lambda s, slot: s["bulletins"][1].update(fetched_at=s["bulletins"][0]["fetched_at"]),
+    lambda s, slot: slot["entry"].update(weeks_of_month=["last"], exclude_weeks=True),
+])
+def test_weekly_omission_requires_distinct_read_issue_weeks_and_recent_support(
+    conn, seed, change,
+):
+    slot = _weekly_omission_slot(seed)
+    change(seed, slot)
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+
+
+@pytest.mark.parametrize("index", [0, 1, 2])
+@pytest.mark.parametrize("published", [None, "", "unknown", "2026-02-30"])
+def test_weekly_omission_never_uses_fetch_dates_to_manufacture_issue_weeks(
+    conn, seed, index, published,
+):
+    _weekly_omission_slot(seed)
+    seed["bulletins"][index]["published_date"] = published
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+
+
+def test_weekly_omission_must_cite_the_immediately_preceding_read_issue(conn, seed):
+    _weekly_omission_slot(seed)
+    # Another PDF of last week's issue was read more recently than the cited one.
+    previous = seed["bulletins"][1]
+    seed["bulletins"].append({**previous, "content_hash": "d" * 64,
+                              "fetched_at": "2026-09-24T12:00:00Z"})
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+    # Repeated fetches of identical content cannot create another listed issue.
+    seed["bulletins"][-1]["content_hash"] = previous["content_hash"]
+    assert any("listed twice" in p for p in _omission_problems(conn, seed))
+
+
+def test_weekly_omission_cannot_evade_targeted_monthly_evidence(conn, seed):
+    slot = _weekly_omission_slot(seed)
+    slot["entry"].update(day_of_week="Thursday", weeks_of_month=["first"])
+    # Newest covers Oct 1, so a missing first Thursday needs the targeted evidence.
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+    slot["entry"]["weeks_of_month"] = ["fourth"]
+    assert _omission_problems(conn, seed) == []  # existing monthly exception
+    # Sep 24 is the latest relevant occurrence; older repetitions can't replace it.
+    slot["sources"].pop(0)
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+    # Third Thursday was Sep 17. Cite two other weeks (including the preceding
+    # issue), but omit that relevant issue: the weekly fallback must not rescue it.
+    extra = {**seed["bulletins"][2], "content_hash": "d" * 64,
+             "published_date": "2026-09-06", "fetched_at": "2026-09-05T12:00:00Z"}
+    seed["bulletins"].append(extra)
+    slot["entry"]["weeks_of_month"] = ["third"]
+    slot["sources"] = [
+        {**slot["sources"][0], "bulletin": b["content_hash"][:8]}
+        for b in (seed["bulletins"][1], extra)
+    ]
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, seed))
+
+
+@pytest.mark.parametrize("change, message", [
+    (lambda slot: slot.update(weekly_omission=True), "must be an object"),
+    (lambda slot: slot["weekly_omission"].pop("reason"), "missing reason"),
+    (lambda slot: slot["weekly_omission"].update(reason=" "), "omission judgment"),
+    (lambda slot: slot["weekly_omission"].update(bulletin="deadbeef"), "bulletin must name"),
+    (lambda slot: slot["weekly_omission"].update(approved=True), "unknown approved"),
+    (lambda slot: slot["sources"][0].update(said=" "), "said is required"),
+])
+def test_weekly_omission_keeps_assessment_and_quotes_auditable(conn, seed, change, message):
+    change(_weekly_omission_slot(seed))
+    assert any(message in p for p in _omission_problems(conn, seed))
+
+
+def test_finalize_does_not_invent_a_weekly_omission_assessment(conn, seed):
+    _weekly_omission_slot(seed).pop("weekly_omission")
+    finalized = finalize_seed(seed, [HF, SJ])
+    assert "weekly_omission" not in _slot(finalized, "s1")
+    assert any("settled inclusion needs" in p for p in _omission_problems(conn, finalized))
 
 
 def test_a_history_event_that_reads_a_slot_at_another_time_is_a_variant_not_missing(seed):
@@ -1673,6 +1952,109 @@ def test_slot_batch_drafts_a_whole_parish_that_finalizes(demo_cli, capsys, tmp_p
     assert json.loads(capsys.readouterr().out)["slots"][0]["entry"]["cancelled"] is True
 
 
+def test_cli_records_edits_displays_and_clears_weekly_omission(
+    conn, demo_cli, seed, capsys, tmp_path,
+):
+    assessment = _weekly_omission_slot(seed)["weekly_omission"]
+    seed["slots"] = [s for s in seed["slots"] if s["id"] != "s1"]
+    write_seed_file(seed, demo_cli["seeds_dir"])
+    previous, oldest = [b["content_hash"][:8] for b in seed["bulletins"][1:]]
+    plan = tmp_path / "omission.txt"
+    plan.write_text(
+        f'include "mass Sat 16:00 @holy-family" --src "{previous},{oldest} p2: '
+        'Holy Family: Saturday Vigil Mass 4 PM" --page - '
+        f'--weekly-omission "{assessment["reason"]}" --why "R36: One omission."\n'
+    )
+    assert main(["seed", "slot", "batch", PARISH, str(plan)]) == 0
+    saved = read_seed(PARISH, demo_cli["seeds_dir"])
+    slot = next(s for s in saved["slots"] if "weekly_omission" in s)
+    assert slot["weekly_omission"] == assessment
+    assert slot["page"] is None and slot["answer"] is None
+    assert _omission_problems(conn, saved) == []
+    capsys.readouterr()
+    assert main(["seed", "slot", "show", PARISH, slot["id"]]) == 0
+    out = capsys.readouterr().out
+    assert assessment["bulletin"] in out and assessment["reason"] in out
+
+    assert main(["seed", "slot", "edit", PARISH, slot["id"], "--weekly-omission", "-"]) == 0
+    assert "weekly_omission" not in _slot(read_seed(PARISH, demo_cli["seeds_dir"]), slot["id"])
+    assert main(["seed", "slot", "edit", PARISH, slot["id"], "--page", "-",
+                 "--weekly-omission", assessment["reason"]]) == 0
+    assert _omission_problems(conn, read_seed(PARISH, demo_cli["seeds_dir"])) == []
+    path = seed_path(PARISH, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "slot", "edit", PARISH, slot["id"], "--weekly-omission", " "]) == 1
+    assert "omission judgment" in capsys.readouterr().err
+    assert path.read_bytes() == before
+
+
+def test_cli_cannot_replace_a_reviewers_judgment_with_a_weekly_omission(
+    demo_cli, seed, capsys,
+):
+    seed = _settle_all(seed)
+    path = write_seed_file(seed, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "slot", "edit", PARISH, "s16", "--weekly-omission",
+                 "Only an omission."]) == 1
+    assert "decision is the reviewer's" in capsys.readouterr().err
+    assert path.read_bytes() == before
+
+
+def test_cli_records_and_displays_website_schedule_assessments(demo_cli, capsys, tmp_path):
+    _start_anne(capsys)
+    plan = tmp_path / "website.txt"
+    plan.write_text(
+        'include "mass Sat 18:15" --src "web https://example.org/times: Saturday 6:15 PM" '
+        '--website-current "The parish home page links this fall schedule." '
+        '--website-context "The newest bulletin refers to the website for fall times." '
+        '--why "Website schedule assessed in the newest bulletin context."\n'
+        'summary "One church; the parish website supplies the fall Vigil schedule."\n'
+    )
+    assert main(["seed", "slot", "batch", ANNE, str(plan)]) == 0
+    saved = read_seed(ANNE, demo_cli["seeds_dir"])
+    slot = saved["slots"][0]
+    assessment = slot["sources"][0]["schedule_check"]
+    assert slot["page"] is None and slot["answer"] is None
+    assert assessment["bulletin"] == saved["bulletins"][0]["content_hash"][:8]
+    assert assessment["current_because"] == "The parish home page links this fall schedule."
+    assert validate_seed(saved) == []
+    assert main(["seed", "mark-read", ANNE, "latest"]) == 0
+    assert main(["seed", "finalize", ANNE]) == 0
+    assert read_seed(ANNE, demo_cli["seeds_dir"])["slots"][0]["sources"] == slot["sources"]
+    capsys.readouterr()
+    assert main(["seed", "slot", "show", ANNE, "s1"]) == 0
+    out = capsys.readouterr().out
+    assert assessment["checked_at"] in out
+    assert assessment["current_because"] in out
+    assert assessment["fits_because"] in out
+    # Adding another assessment through edit uses the same validation and representation.
+    assert main([
+        "seed", "slot", "edit", ANNE, "s1", "--src",
+        "web https://example.org/vigil: Fall Vigil Mass: Saturday 6:15 PM",
+        "--website-current", "The current parish calendar links this schedule.",
+        "--website-context", "The bulletin links that calendar for Vigil times.",
+    ]) == 0
+    assert len(read_seed(ANNE, demo_cli["seeds_dir"])["slots"][0]["sources"]) == 2
+    assert main(["seed", "finalize", ANNE]) == 0
+
+
+@pytest.mark.parametrize("flags, message", [
+    (["--website-current", "Current home page."], "give both --website-current"),
+    (["--website-context", "Fits the bulletin."], "give both --website-current"),
+    (["--website-current", " ", "--website-context", "Fits."], "give both --website-current"),
+    (["--website-current", "Current.", "--website-context", "Fits."],
+     "website explanations need a web --src"),
+])
+def test_cli_rejects_incomplete_or_unquoted_website_assessments(demo_cli, capsys, flags, message):
+    _start_anne(capsys)
+    path = seed_path(ANNE, demo_cli["seeds_dir"])
+    before = path.read_bytes()
+    assert main(["seed", "slot", "include", ANNE, "mass Sat 18:15",
+                 "--why", "Website schedule.", *flags]) == 1
+    assert message in capsys.readouterr().err
+    assert path.read_bytes() == before
+
+
 def test_the_file_format_batch_example_writes_a_draft_that_finalizes(demo_cli, capsys):
     doc = (Path(__file__).resolve().parents[1] / ".claude/skills/draft-parish-seed/"
            "file-format.md").read_text(encoding="utf-8")
@@ -1855,6 +2237,10 @@ def test_slot_writes_follow_eval_and_refuse_websites_there(routed_cli, seed, cap
     args = ["seed", "slot", "include", PARISH, "mass Sat 16:00 @holy-family", "--why", "R1: x",
             "--eval", "run1", "--src", "latest p2: Sat 4"]
     assert main([*args, "--src", "web https://example.org/times: Sat 4 PM"]) == 1
+    assert "website sources are not allowed in a historical test run" in capsys.readouterr().err
+    assert main([*args, "--src", "web https://example.org/times: Sat 4 PM",
+                 "--website-current", "The parish home page links this schedule.",
+                 "--website-context", "The bulletin refers to the website."]) == 1
     assert "website sources are not allowed in a historical test run" in capsys.readouterr().err
     assert main(args) == 0
     capsys.readouterr()

@@ -82,7 +82,7 @@ SLOT_KEYS = (
 # list lacks or can't place, for whoever maintains data/churches.csv. A slot's
 # `group`: open questions that share one are one question, answered together.
 OPTIONAL_SEED_KEYS = ("church_list_issues",)
-OPTIONAL_SLOT_KEYS = ("group",)
+OPTIONAL_SLOT_KEYS = ("group", "weekly_omission")
 CHURCH_ISSUE_KEYS = ("church", "said", "bulletin", "page")
 # Shortest prefix of a content hash that may name a bulletin inside a file.
 MIN_HASH_PREFIX = 8
@@ -491,6 +491,17 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
         errors.append(f"{where}.page must be null or a page number")
     if not _nonempty(slot["rationale"]):
         errors.append(f"{where}.rationale is required")
+    if "weekly_omission" in slot:
+        check = slot["weekly_omission"]
+        at = f"{where}.weekly_omission"
+        if not isinstance(check, dict):
+            errors.append(f"{at} must be an object")
+        else:
+            errors.extend(_keys(check, ("bulletin", "reason"), at))
+            if resolve_hash(seed, check.get("bulletin")) is None:
+                errors.append(f"{at}.bulletin must name one of the file's bulletins")
+            if not _nonempty(check.get("reason")):
+                errors.append(f"{at}.reason must explain the agent's omission judgment")
 
     sources = slot["sources"]
     if not isinstance(sources, list) or not sources:
@@ -505,7 +516,7 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
                 errors.append(f"{at}.bulletins is a drafting shorthand: `pnpm seed finalize` "
                               "splits it into one source per bulletin")
             extra = sorted(set(source) - {"source", "bulletin", "bulletins", "page", "said",
-                                          "url"})
+                                          "url", "schedule_check"})
             if extra:
                 errors.append(f"{at}: unknown {', '.join(extra)}")
             name = source.get("source")
@@ -519,6 +530,24 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
                     errors.append(f"{at}: a website source names no bulletin")
             elif source.get("url") is not None:
                 errors.append(f"{at}.url is only for a website source")
+            if "schedule_check" in source:
+                check = source["schedule_check"]
+                check_at = f"{at}.schedule_check"
+                if name != WEBSITE:
+                    errors.append(f"{check_at} is only for a website source")
+                if not isinstance(check, dict):
+                    errors.append(f"{check_at} must be an object")
+                else:
+                    errors.extend(_keys(check, (
+                        "checked_at", "current_because", "bulletin", "fits_because",
+                    ), check_at))
+                    if not _is_time(check.get("checked_at")):
+                        errors.append(f"{check_at}.checked_at must be an ISO time")
+                    for key in ("current_because", "fits_because"):
+                        if not _nonempty(check.get(key)):
+                            errors.append(f"{check_at}.{key} must explain the agent's judgment")
+                    if resolve_hash(seed, check.get("bulletin")) is None:
+                        errors.append(f"{check_at}.bulletin must name one of the file's bulletins")
             if source.get("bulletin") is not None and resolve_hash(seed, source["bulletin"]) is None:
                 errors.append(f"{at}.bulletin must name one of the file's bulletins")
             if source.get("page") is not None and not _is_page(source["page"]):

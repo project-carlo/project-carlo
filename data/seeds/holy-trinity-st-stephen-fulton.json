@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-trinity-st-stephen-fulton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:35:23Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:30:49Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches, Holy Trinity (Fulton) and St. Stephen (Phoenix). The page 1 schedule box and the Mass intentions agree in all three bulletins. First-Friday and first-Saturday Masses and the first-Saturday Confession are weeks-of-the-month slots. October 12 has a dated cancellation. Open: whether a blank Friday October 16 9 AM line at Holy Trinity is a Mass. Monday Adoration has no time anywhere and is left out.",
   "blocked_reason": null,
   "bulletins": [
@@ -867,9 +867,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -885,7 +898,7 @@
           "said": "Friday, October 9 No Mass 9:00 a.m. (HT)"
         }
       ],
-      "rationale": "R28: the intentions list a 9:00 a.m. (HT) line for Friday, October 16 with no intention and no 'No Mass' note, but the schedule box gives Friday Mass only on the first Friday. The October 9 bulletin printed the same blank line under 'No Mass'. Leaning to leave it out as an empty template line.",
+      "rationale": "R28: the intentions list a 9:00 a.m. (HT) line for Friday, October 16 with no intention and no 'No Mass' note, but the schedule box gives Friday Mass only on the first Friday. The October 9 bulletin printed the same blank line under 'No Mass'. Leaning to leave it out as an empty template line.\n\nReview 2026-10-22: Exclude the Oct 16, 9 AM blank template line on this evidence. Do not make missing intentions a universal exclusion rule. The date has passed.",
       "question": "Add a dated 9:00 AM Mass at Holy Trinity on Friday, October 16?",
       "options": [
         {
@@ -911,7 +924,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

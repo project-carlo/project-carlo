@@ -43,6 +43,8 @@ decide this:
   bulletins over four parishes, some with every member separate.
 
 Record the grouping in `group` anyway: `audit` uses it to find rows that may be one bulletin.
+For shared-pastor directories, preserve explicit pastor-to-parish associations and their
+source. Adjacency in extracted text isn't an association; leave ambiguous links unresolved.
 
 **One church row = one place where Mass is celebrated publicly now.** Missions, oratories,
 chapels, shrines and campus chapels count, and so does a building with Mass four times a
@@ -97,12 +99,12 @@ data/dioceses/<diocese>/
   rosters/<name>.json   outside lists the diocese is measured against (written by tools)
 ```
 
-Every record is YAML frontmatter plus a Markdown body. The slug is the file name. Edit the
-files directly: create them with `pnpm diocese new ...` (which fills in the frontmatter and
-an explanation template), write the explanation and evidence, and run `pnpm diocese
-validate`. Use the commands for anything that touches several files: `merge`, `rename`,
-`exclude`, `coverage --link`, `promote`. Those are refused, with nothing written, if they
-would add a validation error.
+Every record is YAML frontmatter plus a Markdown body. The slug is the file name. Prefer
+`uv run python -m pdf_extract diocese write <d> <kind> <slug> --file record.json` for
+structured updates (example below), rather than scratch `fill_record` scripts or hand-built
+YAML. `new` still creates templates and can prefill roster fields. Use the commands for
+anything that touches several files: `merge`, `rename`, `exclude`, `coverage --link`,
+`promote`. Those are refused, with nothing written, if they would add a validation error.
 
 ```markdown
 ---
@@ -131,7 +133,9 @@ shared bulletins, and a canonical merger dated from the news rather than a guess
 ### Fields
 
 Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to check) with
-`revisit_after` (a date). `todo` lists revisits that are due.
+`revisit_after` (a date), plus optional structured `research` (below). `todo` exposes
+unresolved research alongside due revisits, so the next researcher can inspect prior checks
+and retry triggers before making requests. Legacy records need no mass backfill.
 
 **parish**
 - `website`: where the bulletin can be found (required, unique across the dataset).
@@ -156,6 +160,13 @@ Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to c
   you find: `po-container:14/0434`, `po-org:<slug>`, `lpi:<18-character id>` (all three are
   one ParishesOnline bulletin), `ecatholic:<site id>`, `discovermass:<slug>`, or
   `url:<page>` for a self-hosted bulletin.
+- `bulletin_status` (optional): `available`, `not-found`, `access-blocked`,
+  `unsupported-format` or `not-published`. This describes research availability independently
+  of `bulletin_provider`; legacy `no_bulletin` still controls promotion (Settled policy 4).
+- `publication_reviews` (optional): supported peer decisions, independent of URL ids:
+  `[{parish: peer-slug, decision: separate|shared, evidence: [{url, seen, quote?, note?}]}]`.
+  Use dated content evidence; different URLs alone don't support `separate`. A `shared`
+  review records the finding; use `merge` to change structure after reviewing its effects.
 - `group`: the diocese's grouping, e.g. `Family #31`.
 - `replaces`: slugs of rows merged or renamed into this one. Maintained by `merge` and
   `rename`; `promote` deletes those live rows.
@@ -180,6 +191,49 @@ Every kind has `name`, `evidence`, and optionally `revisit` (the next thing to c
 **evidence** items: `url`, `seen` (the date you read it), and `quote` and/or `note`. A
 `quote` is copied **verbatim** from the page (`…` marks a gap). `pnpm diocese recheck`
 fetches each URL and checks the quote is still there, so write quotes that can be found.
+
+### Structured writes and bounded research
+
+`write <d> <kind> <slug> --file record.json` accepts flat record fields plus a `body`
+string, patches existing fields and replaces each supplied list in full. Preserve prior
+items when extending `evidence`, `research` or `publication_reviews`; omitted fields stay
+unchanged. It validates and writes atomically, returning slug, path and validation counts.
+`--file -` reads stdin. Use `--create` only when explicitly creating a new record; `new`
+and `merge` remain supported. Supplying `body` replaces the explanation, so include the
+complete intended body. For example, a patch to an existing parish (illustrative only):
+
+```bash
+uv run python -m pdf_extract diocese write example parish st-example --file - <<'JSON'
+{
+  "bulletin_status": "access-blocked",
+  "research": [{
+    "method": "probe url; publisher page returned HTTP 403",
+    "url": "https://example.org/bulletins",
+    "checked": "2026-10-22",
+    "outcome": "access-blocked",
+    "next_action": "Read the bulletin page with the browser access method",
+    "retry_when": "Browser access becomes available"
+  }],
+  "body": "## Not yet confirmed\n\nThe bulletin page blocked this check. Publication and current worship sites remain unconfirmed; see research for the next method.\n"
+}
+JSON
+```
+
+Each optional `research` item on any record kind has `method` (string), optional `url`,
+`checked` (`YYYY-MM-DD`), and `outcome`: `found`, `not-found`, `access-blocked`,
+`unsupported-format` or `not-published`. `next_action` and `retry_when` are required for
+every non-`found` outcome; both are optional for `found`. Optional `revisit_after`
+(`YYYY-MM-DD`) additionally schedules a check; a dependency belongs in `retry_when` even
+when no date can be known.
+
+`not-found` means the recorded method found nothing in its checked scope; `access-blocked`
+means access failed; `unsupported-format` means the material exists but the format can't
+be read by the method; `not-published` needs evidence that no bulletin is published.
+Record the scope and uncertainty rather than converting a failed search into a fact.
+Exhausted checks need no repeat without a changed method, source or satisfied retry trigger.
+Use a concrete next action and trigger to bound negative research, not a fixed network
+request budget that sacrifices evidence. Parish-specific attempts and decisions stay in
+the record; the shared publisher playbook keeps only reusable methods and new lessons.
 
 ## The explanation
 
@@ -276,7 +330,8 @@ Work in this order and only fall through when a step can't answer. Commit as you
 3. **Read structure before researching parishes.** From the family list and the directory,
    sketch which parishes might share a bulletin. For each group, find its bulletin (step 4)
    before creating rows. It's cheaper than creating four rows and merging them later.
-4. **Find each bulletin.** Two or three requests usually settle a publisher:
+4. **Find each bulletin.** Start with targeted checks; record negative outcomes and retry
+   triggers as above rather than repeatedly searching the same exhausted sources:
    - `pnpm diocese probe url <site>` shows whether the site is alive, where it redirects,
      whether it has been taken by a squatter, and which publication ids it embeds.
    - `probe po <org slug or LPi id>` returns a ParishesOnline organization's address, its
@@ -290,12 +345,14 @@ Work in this order and only fall through when a step can't answer. Commit as you
      week, then look for the issue that announces it.
    - When a parish site blocks every fetcher, DiscoverMass often serves the same PDF, one
      listing per church.
-5. **Decide one bulletin or several.** Merge only when the family's own bulletin is current
-   **and** each member's own old channel (container, widget, bulletin page) has gone silent,
-   or the member says itself that it has folded in ("St. Philomena Parish is now part of the
-   ... Family of Parishes ... Check Bulletin"). **One live member channel means no merge.**
+5. **Decide one bulletin or several.** Merge only with a current shared bulletin and
+   evidence that it covers each member. Check member channels (container, widget, bulletin
+   page): they may carry the same publication, have gone silent, or explicitly direct
+   readers to the shared bulletin. A live member channel with **distinct current content**
+   means no merge; a different URL serving the same bulletin doesn't.
    If you can't find a member's bulletin, that isn't evidence that it shares someone else's,
-   so keep its row and say so. Record `publication` ids on every row you settle.
+   so keep its row and say so. Record `publication` ids on every row you settle and supported
+   peer content decisions in `publication_reviews`, with dated evidence.
 6. **Add churches under their publisher** with `new church <d> --parish <p> --from
    gcatholic:<id> --from directory:<id>`. This prefills the address and Plus Code
    coordinates, links both entries, and adds them as evidence. Confirm Mass against the
@@ -307,12 +364,15 @@ Work in this order and only fall through when a step can't answer. Commit as you
    to be naming noise (hamlet vs town, parish name vs building name, "St. Jude" vs "St. Jude
    Chapel"). Add hamlet spellings to `city_aliases` in `diocese.md`. Once linked, an entry
    stays resolved, so the next run only shows new ones.
-8. **Audit structure.** `pnpm diocese audit <d> [--fetch]` lists groups whose churches span
-   several parish rows, and which ones have no `publication` ids to tell them apart. **Run it
-   every session.** It is the only check for Buffalo's most persistent mistake. "Every
-   family has been read" was declared twice while four families that each publish one
-   bulletin sat in the data as fourteen rows. Collapsing them changed no church row and no
-   coverage number, which is why nothing else noticed.
+8. **Audit structure.** `pnpm diocese audit <d> [--fetch]` reports candidate rows and the
+   scope checked, including incomplete fetches or comparisons. **Run it every session.**
+   Inspect scope before interpreting a clean result. Different URLs or ids don't establish
+   separate documents; compare current content and record supported peer decisions.
+   Coverage alone can't reveal several rows publishing one bulletin.
+   Run `pnpm fetch:check --diocese <d> --parish <slug>` before promotion and assess
+   transport, document type, parish identity and freshness separately. An HTTP success can
+   still be an HTML error page, the wrong parish or an old issue. Record unresolved checks
+   and retry triggers; consult command help for supported options.
 9. **Close the session.** `pnpm diocese validate <d>`, `pnpm diocese todo <d>`, a dated line
    in `diocese.md`'s *Log* with the coverage numbers, and a commit.
 
@@ -344,9 +404,9 @@ Each of these produced a confident wrong answer in Buffalo at least once.
 - **LPi ids are 18 characters** (`0018000000Qbyz4AAB`). Matched as digits, every id in a
   diocese truncates to `00180000` and unrelated parishes look like one bulletin.
   `validate` rejects the truncated form.
-- **Comparing files doesn't answer "same bulletin?"**. A parish that hosts its family's
-  bulletin itself serves a file with a different size, hash and even page count. Compare
-  mastheads.
+- **Different URLs, sizes, hashes or page counts don't prove separate bulletins.** A parish
+  can host a copy of its family's bulletin. Compare mastheads and current content; preserve
+  the supported decision in `publication_reviews` rather than treating URL ids as proof.
 - **A missing ParishesOnline issue answers 403, not 404.** "403 every week" means the
   container is dead only if the same probe finds issues in a container you know is live.
 - **A silent container means a fold-in only if a live one exists to fold into.** Otherwise
@@ -374,13 +434,15 @@ Each of these produced a confident wrong answer in Buffalo at least once.
 
 ## Commands
 
-`pnpm diocese <command> --help` gives every flag. Output is JSON (`pnpm --silent` drops pnpm's
-banner for `jq`). Without pnpm: `uv run python -m pdf_extract diocese ...`.
+`pnpm diocese <command> --help` gives every flag. CLI stdout is JSON; diagnostics go to
+stderr. For `jq`, use `pnpm --silent diocese ...` or direct
+`uv run python -m pdf_extract diocese ...`; never merge stderr with `2>&1` into `jq`.
 
 ```bash
 pnpm diocese list | show <d> | todo <d> | validate [<d>]
 pnpm diocese init <d> --name "..." --state NY [--website URL] [--gcatholic key]
 pnpm diocese search <words> [--diocese d|live] [--kind parish|church|excluded|open]
+pnpm --silent diocese write <d> <kind> <slug> --file record.json [--create]  # --file -: stdin
 
 pnpm diocese new parish   <d> --name ... --website ... [--bulletin-provider p --provider-id id --publication x:y --group g]
 pnpm diocese new church   <d> --parish <p> [--from roster:id ...] [--name ... --line1 ... --city ... ...]

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-matthew-voorheesville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:56Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:11:41Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "One church; the page 1 Mass Schedule box (an image in the newest bulletin, read as a picture; identical text in the two older ones) gives Sat 5:15 PM, Sun 9:30 AM, Wed and Fri 8:30 AM, Friday 8:00 confession, Saturday confession after the vigil, and First Friday Adoration 9-11. Two questions: whether the First Friday confession should be kept, and whether the Friday Oct 16 'Morning Liturgy' replaces the Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -469,9 +469,24 @@
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
       "page": 1,
       "sources": [
         {
@@ -511,7 +526,7 @@
           "page": 1
         }
       ],
-      "rationale": "The bulletin gives no clock time for this confession; it only says 'during Adoration on First Fridays', and Adoration is 9:00-11:00 AM. The policy says not to copy a larger event's hours onto a component without its own timing; history carries it as 9:00-11:00.",
+      "rationale": "The bulletin gives no clock time for this confession; it only says 'during Adoration on First Fridays', and Adoration is 9:00-11:00 AM. The policy says not to copy a larger event's hours onto a component without its own timing; history carries it as 9:00-11:00.\n\nReview 2026-10-22: Include first-Friday 9–11 AM Confession with note During Adoration. POLICY explicitly permits this exception to component timing.",
       "question": "Record First Friday confession 9:00-11:00 AM (during Adoration)?",
       "options": [
         {
@@ -539,13 +554,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-voorheesville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Morning Liturgy listed instead"
+      },
       "page": 4,
       "sources": [
         {
@@ -555,7 +587,7 @@
           "said": "Friday, October 16, 2026 Memorial of St. Hedwig & St. Margaret Mary Alacoque 8:30AM Morning Liturgy (no intention listed)"
         }
       ],
-      "rationale": "Mass Intentions list the Fridays Oct 2 and 9 as '8:30AM' with an intention, but Friday Oct 16 as '8:30AM Morning Liturgy' with no intention. It may be a Communion Service replacing the Mass (the policy then wants the Mass cancelled for that date), but the bulletin does not say so, and Mon/Tue/Thu are marked 'NO MORNING LITURGY' in the same style.",
+      "rationale": "Mass Intentions list the Fridays Oct 2 and 9 as '8:30AM' with an intention, but Friday Oct 16 as '8:30AM Morning Liturgy' with no intention. It may be a Communion Service replacing the Mass (the policy then wants the Mass cancelled for that date), but the bulletin does not say so, and Mon/Tue/Thu are marked 'NO MORNING LITURGY' in the same style.\n\nReview 2026-10-22: Do not infer cancellation from the generic label “Morning Liturgy.” A missing intention does not prove a Communion Service. The Oct 16 date has passed.",
       "question": "Is the Friday Oct 16 8:30 AM 'Morning Liturgy' a Communion Service in place of Mass (cancel that Mass)?",
       "options": [
         {
@@ -581,7 +613,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s10",

@@ -481,6 +481,27 @@ browser without touching the database, downloads what each one picks, and
 prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
 `not_pdf`, or `blocked` when Cloudflare challenged the browser instead).
 
+Those legacy statuses describe resolution and download. Each row also has a
+`verification` block, with aggregate `verification_counts`, separating transport,
+PDF validity, publication identity, issue date and freshness. For one parish:
+
+```bash
+pnpm --silent fetch:check --parish saint-joseph-renovo \
+  --expected-identity "Saint Joseph" --expected-issue-date 2026-10-18 \
+  --reference-date 2026-10-21 --max-issue-age-days 14
+```
+
+Expectations apply to every selected parish. Identity is a normalized literal phrase
+match within the first 2,000 characters of first-page PDF text, not semantic authorship.
+Missing/scanned text stays unknown; a missing expected phrase is reported as `not_matched`.
+Standalone or labeled dates in that text are observed; filename dates are inferred.
+Conflicting dates stay unresolved. The inclusive freshness threshold defaults to 14 days;
+future issues are reported separately. `verification.overall` becomes `verified` only
+with a parsed PDF, matched identity and an observed fresh issue date. URL dates alone
+cannot verify an issue. These checks inspect PDFs up to 25 MB without OCR. `--no-download`
+leaves document inspection unchecked. Inspect verification separately from legacy `ok`;
+the command's existing exit behavior is unchanged.
+
 #### How the `other` resolver reads a site
 
 `src/pdf_extract/parish_sites/` reads a parish's own site in three stages:

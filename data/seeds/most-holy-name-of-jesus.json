@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "most-holy-name-of-jesus",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:38Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:28:46Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches, St. Mary's and St. Patrick's, Elmira. Weekend and weekday Masses, Saturday confession and a Thursday 11:00 Holy Hour agree across the three bulletins read; dated confessions, an Oct 25 Anointing Mass and the Oct 12 and Oct 15 St. Patrick's 8:00 cancellations are from the newest bulletin. Open: a First Saturday 9:00 AM Mass that only the website lists.",
   "blocked_reason": null,
   "bulletins": [
@@ -1288,9 +1288,24 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-marys-elmira",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1305,7 +1320,7 @@
           "said": "Saturday, October 3 - Weekday - 4:00pm - St. Mary (no 9:00am Mass listed on a first Saturday)"
         }
       ],
-      "rationale": "R29, C9: only the website lists it; the Oct 4 bulletin's intentions for Saturday, October 3 (a first Saturday) show only the 4:00pm Mass, and no bulletin read prints it. Leaning to leave out because the one first-Saturday bulletin read contradicts the website.",
+      "rationale": "R29, C9: only the website lists it; the Oct 4 bulletin's intentions for Saturday, October 3 (a first Saturday) show only the 4:00pm Mass, and no bulletin read prints it. Leaning to leave out because the one first-Saturday bulletin read contradicts the website.\n\nReview 2026-10-22: Exclude the website-only first-Saturday 9 AM Mass at St. Mary’s, Elmira; the bulletin covering that Saturday lists only the vigil.",
       "question": "Add a First Saturday 9:00 AM Mass at St. Mary's?",
       "options": [
         {
@@ -1333,7 +1348,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

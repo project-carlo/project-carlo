@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-trinity-utica",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:35:27Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:32:35Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches, Holy Trinity (Utica) and Sacred Heart - St. Mary's (New York Mills). Neither bulletin prints a schedule box, so weekly slots come from the Mass intentions, which agree across the three bulletins read. Included: the Monday cancellation on October 12 and the second-Monday 6 PM Charismatic Mass. Open: two Holy Trinity confession times found only on its stale website.",
   "blocked_reason": null,
   "bulletins": [
@@ -905,9 +905,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -916,7 +929,7 @@
           "said": "Confessions: Saturday 4:00pm"
         }
       ],
-      "rationale": "R29, leaning per C9 against: only the Holy Trinity website prints it, and that page is stale (COVID-era mask and 25% attendance notices). No bulletin read lists a Holy Trinity Saturday Mass or confession; the Saturday 3:00pm confession and 4:00pm vigil are at Sacred Heart - St. Mary's.",
+      "rationale": "R29, leaning per C9 against: only the Holy Trinity website prints it, and that page is stale (COVID-era mask and 25% attendance notices). No bulletin read lists a Holy Trinity Saturday Mass or confession; the Saturday 3:00pm confession and 4:00pm vigil are at Sacred Heart - St. Mary's.\n\nReview 2026-10-22: Exclude both website-only Holy Trinity confession times: the page retains COVID occupancy notices and lacks bulletin confirmation.",
       "question": "Add the Holy Trinity confession times that only its website lists (Saturday 4:00 PM, first Thursday 5:00 PM)?",
       "options": [
         {
@@ -942,14 +955,33 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "ht-site-confession"
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -958,7 +990,7 @@
           "said": "Confessions: First Thursdays 5:00pm"
         }
       ],
-      "rationale": "R29, leaning per C9 against: only the stale Holy Trinity website prints it (COVID-era notices on the same page). No bulletin read mentions it; no first Thursday falls in the newest bulletin's week, so the newest bulletin could not have shown it (R11), but the October 4 and September 27 bulletins hold the first Thursday of October and do not print it.",
+      "rationale": "R29, leaning per C9 against: only the stale Holy Trinity website prints it (COVID-era notices on the same page). No bulletin read mentions it; no first Thursday falls in the newest bulletin's week, so the newest bulletin could not have shown it (R11), but the October 4 and September 27 bulletins hold the first Thursday of October and do not print it.\n\nReview 2026-10-22: Exclude both website-only Holy Trinity confession times: the page retains COVID occupancy notices and lacks bulletin confirmation.",
       "question": "Add the Holy Trinity confession times that only its website lists (Saturday 4:00 PM, first Thursday 5:00 PM)?",
       "options": [
         {
@@ -986,7 +1018,11 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "ht-site-confession"
     },
     {

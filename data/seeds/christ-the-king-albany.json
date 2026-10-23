@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "christ-the-king-albany",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:37:14Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T22:02:21Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish with a clear schedule box on page 1 of the Oct 11 bulletin (Sat 4 PM; Sun 8 and 11 AM; Tue-Thu 9 AM Mass; Sat 3 PM Confession; Tuesday Adoration). The two older bulletins are worship aids with no schedule. Oct 13 has no Daily Mass (recorded as a cancellation). One question is open: whether Tuesday Adoration starts at 9:30 or 9:45.",
   "blocked_reason": null,
   "bulletins": [
@@ -397,9 +397,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -426,7 +439,7 @@
           "page": 1
         }
       ],
-      "rationale": "R28: the page 1 schedule box gives Tuesday 9:30 AM - 8:00 PM, and the website's news item agrees; the calendar on page 4 lists Adoration at 9:45 AM on Oct 13, the day with no Daily Mass. The older bulletins show nothing. Leaning toward the box's 9:30.",
+      "rationale": "R28: the page 1 schedule box gives Tuesday 9:30 AM - 8:00 PM, and the website's news item agrees; the calendar on page 4 lists Adoration at 9:45 AM on Oct 13, the day with no Daily Mass. The older bulletins show nothing. Leaning toward the box's 9:30.\n\nReview 2026-10-22: Keep the regular Tuesday 9:30 AM–8 PM slot. Treat Oct 13’s 9:45 AM calendar start as a dated exception, rather than changing every Tuesday. That exception has passed.",
       "question": "Tuesday Adoration: start at 9:30 AM or 9:45 AM?",
       "options": [
         {
@@ -469,7 +482,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s10",
@@ -571,6 +588,112 @@
       "question": null,
       "options": null,
       "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "09:30",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration starts at 9:45 AM on October 13"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday | 9:30am - 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 4,
+          "said": "Tuesday, October 13: 9:45am Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/",
+          "said": "Adoration of the Blessed Sacrament occurs every Tuesday from 9:30am-8:00pm at Christ the King."
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly adoration Tuesday 09:30–20:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "Reviewer decision E1, 2026-10-22: retain Tuesday 9:30 AM as the regular schedule and apply the calendar’s 9:45 AM start only on October 13. Represent the reviewed move as a cancellation of 9:30 and a dated 9:45 occurrence.",
+      "question": null,
+      "options": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "09:45",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration starts at 9:45 AM on October 13"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday | 9:30am - 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 4,
+          "said": "Tuesday, October 13: 9:45am Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/",
+          "said": "Adoration of the Blessed Sacrament occurs every Tuesday from 9:30am-8:00pm at Christ the King."
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly adoration Tuesday 09:30–20:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "Reviewer decision E1, 2026-10-22: retain Tuesday 9:30 AM as the regular schedule and apply the calendar’s 9:45 AM start only on October 13. Represent the reviewed move as a cancellation of 9:30 and a dated 9:45 occurrence.",
+      "question": null,
+      "options": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

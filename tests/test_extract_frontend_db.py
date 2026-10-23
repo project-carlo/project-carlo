@@ -7,12 +7,16 @@ import pytest
 
 from pdf_extract.db import create_db
 from pdf_extract.extract_frontend_db import (
+    EVENT_COLUMNS,
     SNAPSHOT_VERSION,
     SnapshotFormatError,
     encode_snapshot,
     extract,
+    finish_events,
     read_snapshot,
 )
+from pdf_extract.schedule.entries import parse_entry
+from pdf_extract.schedule.store import live_entries, write_seed
 from pdf_extract.storage import (
     DEFAULT_DB_PATH,
     connect_db,
@@ -133,6 +137,135 @@ def test_a_cancellation_matching_no_weekly_row_is_left_out(
     extract(DEFAULT_DB_PATH, dest, build_date=BUILD_DATE)
 
     assert [e["event_kind"] for e in read_snapshot(dest.read_bytes())["events"]] == ["weekly"]
+
+
+def _event_row(event_id: int, **changes) -> tuple:
+    row = dict.fromkeys(EVENT_COLUMNS)
+    row.update(
+        id=event_id, church_id=1, event_type="adoration", event_kind="weekly",
+        day_of_week="Friday", start_time=690, cancelled=False, weeks_of_month=[],
+        exclude_weeks=False,
+    )
+    row.update(changes)
+    return tuple(row[name] for name in EVENT_COLUMNS)
+
+
+def _cancellation_row(event_id: int, day: str) -> tuple:
+    return _event_row(
+        event_id, event_kind="specific_date", day_of_week=None, date=day, cancelled=True,
+    )
+
+
+@pytest.mark.parametrize("reverse_ids", [False, True])
+@pytest.mark.parametrize("day,first", [
+    ("2026-10-02", True), ("2026-10-09", False), ("2026-10-30", False),
+])
+def test_cancellation_selects_first_or_remaining_fridays(day, first, reverse_ids):
+    first_id, remaining_id = (-1, -2) if reverse_ids else (-2, -1)
+    rows = [
+        _event_row(first_id, weeks_of_month=["first"]),
+        _event_row(remaining_id, weeks_of_month=["second", "third", "fourth", "fifth"]),
+        _cancellation_row(-3, day),
+    ]
+
+    events = [dict(zip(EVENT_COLUMNS, row, strict=True)) for row in finish_events(rows, BUILD_DATE)]
+
+    assert events[0]["cancels_event_id"] == (first_id if first else remaining_id)
+
+
+@pytest.mark.parametrize("day,last", [
+    ("2026-10-23", False), ("2026-10-30", True),
+    ("2027-02-19", False), ("2027-02-26", True),
+    ("2036-02-22", False), ("2036-02-29", True),
+])
+def test_cancellation_selects_last_or_except_last_fridays(day, last):
+    rows = [
+        _event_row(-2, weeks_of_month=["last"], exclude_weeks=True),
+        _event_row(-1, weeks_of_month=["last"]),
+        _cancellation_row(-3, day),
+    ]
+
+    [cancellation, *_] = finish_events(rows, BUILD_DATE)
+
+    assert cancellation[EVENT_COLUMNS.index("cancels_event_id")] == (-1 if last else -2)
+
+
+@pytest.mark.parametrize("day,winter", [
+    ("2026-10-02", False), ("2026-10-16", True), ("2027-01-01", True),
+    ("2027-10-15", True), ("2030-03-15", True), ("2029-03-16", False),
+    ("2036-02-29", True),
+])
+def test_cancellation_selects_the_season_containing_its_date(day, winter):
+    rows = [
+        _event_row(-2, season_start_month=3, season_start_day=16,
+                   season_end_month=10, season_end_day=14),
+        _event_row(-1, season_start_month=10, season_start_day=15,
+                   season_end_month=3, season_end_day=15),
+        _cancellation_row(-3, day),
+    ]
+
+    [cancellation, *_] = finish_events(rows, BUILD_DATE)
+
+    assert cancellation[EVENT_COLUMNS.index("cancels_event_id")] == (-1 if winter else -2)
+
+
+@pytest.mark.parametrize("pattern,day", [
+    ({"weeks_of_month": ["first"]}, "2026-10-09"),
+    ({"weeks_of_month": ["last"], "exclude_weeks": True}, "2026-10-30"),
+    ({"season_start_month": 11, "season_end_month": 3}, "2026-10-02"),
+    ({"weeks_of_month": ["first"], "season_start_month": 11, "season_end_month": 3},
+     "2026-10-02"),
+    ({}, "2026-10-03"),  # wrong weekday
+    ({}, "2026-13-01"),
+])
+def test_out_of_pattern_cancellations_are_left_out(pattern, day):
+    weekly = _event_row(-1, **pattern)
+
+    assert finish_events([weekly, _cancellation_row(-2, day)], BUILD_DATE) == [weekly]
+
+
+def test_duplicate_extract_mode_weekly_rows_still_target_the_lowest_id():
+    rows = [_event_row(20), _cancellation_row(30, "2026-10-02"), _event_row(10)]
+
+    events = finish_events(rows, BUILD_DATE)
+
+    assert [row[0] for row in events] == [10, 20, 30]
+    assert events[-1][EVENT_COLUMNS.index("cancels_event_id")] == 10
+
+
+@pytest.mark.parametrize("reverse_entries", [False, True])
+def test_snapshot_targets_the_active_recurrence_variant(
+    pipeline_dir: Path, tmp_path: Path, reverse_entries: bool,
+) -> None:
+    create_db()
+    base = {
+        "church_slug": "test-church", "event_type": "adoration", "event_kind": "weekly",
+        "day_of_week": "Friday", "start_time": "11:30 AM",
+    }
+    patterns = [
+        {**base, "weeks_of_month": ["first"]},
+        {**base, "weeks_of_month": ["first"], "exclude_weeks": True},
+    ]
+    if reverse_entries:
+        patterns.reverse()
+    cancellations = [
+        {**base, "event_kind": "specific_date", "day_of_week": None, "date": day,
+         "cancelled": True}
+        for day in ("2026-10-02", "2026-10-09")
+    ]
+    with connect_db() as conn:
+        write_seed(conn, 1, [parse_entry(e, {"test-church": 1}) for e in patterns + cancellations],
+                   as_of="2026-10-01")
+        weekly_ids = {e.weeks_of_month: -i for i, e in live_entries(conn, 1).items()
+                      if e.event_kind == "weekly"}
+    dest = tmp_path / "frontend.json.gz"
+
+    extract(DEFAULT_DB_PATH, dest, build_date=BUILD_DATE)
+
+    events = read_snapshot(dest.read_bytes())["events"]
+    targets = {e["date"]: e["cancels_event_id"] for e in events if e["cancelled"]}
+    assert targets == {"2026-10-02": weekly_ids[1], "2026-10-09": weekly_ids[30]}
+    assert len(events) == 4
 
 
 def test_a_version_1_snapshot_reads_as_every_week_with_no_cancellations() -> None:

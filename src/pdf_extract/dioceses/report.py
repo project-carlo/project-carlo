@@ -21,7 +21,8 @@ import unicodedata
 from collections.abc import Mapping
 from typing import Any
 
-from pdf_extract.dioceses import records, web
+from pdf_extract.dioceses import records, research
+from pdf_extract.dioceses.audit import audit_rows
 from pdf_extract.dioceses.records import CHURCH, EXCLUDED, OPEN, PARISH, Diocese, DioceseError
 from pdf_extract.dioceses.rosters import load_roster, roster_names
 
@@ -256,22 +257,12 @@ def _save_links(d: Diocese, to_link: Mapping[str, set[str]]) -> dict[str, Any]:
 
 # ── Structure audit ─────────────────────────────────────────────────────────
 def audit(diocese: str, *, fetch: bool = False) -> dict[str, Any]:
-    """Groups of parish rows that might be one bulletin.
+    """Find duplicate-bulletin candidates; only content-supported reviews settle them.
 
-    A group is a set of parishes the diocese or a roster ties together: rows
-    sharing a `group` value, or a roster group (canonical parish, family) whose
-    entries map to churches of more than one row. For each group spanning more
-    than one row, the rows' recorded publication ids decide it:
-
-    - all different -> separate bulletins, settled;
-    - any shared    -> one bulletin: merge the rows (validate already fails);
-    - any missing   -> unknown: read the bulletins (`probe container`, `probe pdf`)
-      and record the publication ids.
-
-    `fetch` also opens each row's website and lists the publication ids it
-    embeds: two rows embedding the same id is a lead, not a verdict. Confirm
-    by reading the masthead, and check each member's own old channel has gone
-    silent, before merging anything.
+    Offline evidence includes hosts, recorded publications, accounts, recipes,
+    and parish/roster groups. `fetch` adds bounded site and document probes,
+    reused within this invocation. Locations and matching bytes are leads;
+    different locations or bytes never establish separate publications.
     """
     d = records.load(diocese)
     parishes, churches = d.of(PARISH), d.of(CHURCH)
@@ -294,52 +285,7 @@ def audit(diocese: str, *, fetch: bool = False) -> dict[str, Any]:
                     groups.setdefault(f"{name}: {entry['group']}", set()).add(
                         churches[slug].get("parish", ""))
 
-    out_groups = []
-    for label, rows in sorted(groups.items()):
-        rows.discard("")
-        if len(rows) < 2:
-            continue
-        pubs = {slug: list(parishes[slug].get("publication") or []) for slug in sorted(rows)
-                if slug in parishes}
-        flat = [p for ps in pubs.values() for p in ps]
-        if len(flat) != len(set(flat)):
-            verdict = "shared publication: one bulletin, merge the rows"
-        elif any(not ps for ps in pubs.values()):
-            verdict = "unknown: some rows have no publication id; read their bulletins"
-        else:
-            verdict = "separate bulletins recorded"
-        group: dict[str, Any] = {"group": label, "verdict": verdict, "rows": [
-            {"parish": slug, "website": parishes[slug].get("website", ""), "publication": ps}
-            for slug, ps in pubs.items()
-        ]}
-        out_groups.append(group)
-
-    if fetch:
-        targets = sorted({row["website"] for g in out_groups for row in g["rows"]
-                          if row["website"] and not g["verdict"].startswith("separate")})
-        found = {p["url"]: p for p in web.probe_urls(targets)}
-        for g in out_groups:
-            seen: dict[str, list[str]] = {}
-            for row in g["rows"]:
-                probe = found.get(row["website"])
-                if probe:
-                    row["found_on_site"] = probe.get("publications", [])
-                    row["site_verdict"] = probe.get("verdict")
-                    for pub in row["found_on_site"]:
-                        seen.setdefault(pub, []).append(row["parish"])
-            shared = {p: rows for p, rows in seen.items() if len(rows) > 1}
-            if shared:
-                g["lead"] = {p: rows for p, rows in shared.items()}
-
-    unpinned = sorted(slug for slug, r in parishes.items()
-                      if not r.get("publication") and r.get("bulletin_provider") != "no_bulletin")
-    return {
-        "diocese": diocese,
-        "groups_spanning_rows": out_groups,
-        "needs_a_look": [g["group"] for g in out_groups
-                         if not g["verdict"].startswith("separate")],
-        "parishes_without_publication_id": unpinned,
-    }
+    return audit_rows(d, groups, fetch=fetch)
 
 
 # ── Todo ────────────────────────────────────────────────────────────────────
@@ -348,9 +294,15 @@ def todo(diocese: str, *, limit: int = 40) -> dict[str, Any]:
     d = records.load(diocese)
     p = records.problems(d, rosters=records.roster_ids(diocese))
     now = records.today()
-    due, later = [], []
+    due, later, research_pending = [], [], []
     for kind in records.KINDS.values():
         for slug, r in d.of(kind).items():
+            if not (kind is PARISH and r.get("bulletin_status") == "available"):
+                research_pending.extend(
+                    {"record": f"{kind.dir}/{slug}.md",
+                     "bulletin_status": r.get("bulletin_status", ""), **attempt}
+                    for attempt in research.pending(r, today=now)
+                )
             if kind is OPEN or r.get("revisit"):
                 item = {"record": f"{kind.dir}/{slug}.md", "revisit": r.get("revisit", ""),
                         "after": r.get("revisit_after") or ""}
@@ -359,6 +311,11 @@ def todo(diocese: str, *, limit: int = 40) -> dict[str, Any]:
     out["errors"] = p.errors[:limit]
     out["revisit_now"] = sorted(due, key=lambda i: i["after"])
     out["revisit_later"] = sorted(later, key=lambda i: i["after"])
+    out["research_pending"] = research_pending
+    out["research_summary"] = {
+        state: sum(a["state"] == state for a in research_pending)
+        for state in ("due", "scheduled", "waiting-for-trigger")
+    }
     if roster_names(diocese):
         cov = coverage(diocese)
         out["coverage"] = [

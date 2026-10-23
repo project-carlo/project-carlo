@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-the-baptist-holy-trinity-syracuse",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:31:23Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:49:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Small one-church parish: Sunday 9:00 AM Mass, Thursday 4-5 PM Confession with Adoration during the same hour, all printed in the newest bulletin. One question: a dated Oct 20 evening of Adoration in the Convent Chapel at the sister parish OLP/SP, whose location is unclear.",
   "blocked_reason": null,
   "bulletins": [
@@ -195,9 +195,22 @@
     },
     {
       "id": "s4",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-20",
+        "start_time": "17:45",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent Chapel; Benediction"
+      },
       "page": 3,
       "sources": [
         {
@@ -207,7 +220,7 @@
           "said": "Special Evening of Recollection, Eucharistic Adoration Tuesday Oct 20th from 5:45-7pm in the Convent Chapel at OLP/SP ... start to a (hopefully) monthly endeavor"
         }
       ],
-      "rationale": "Held at the Convent Chapel of OLP/SP (Our Lady of Pompei / St. Peter, 301 Ash St, a different listed church), not at SJB/HT. It is unclear whether the convent chapel is on the OLP/SP grounds, and the monthly recurrence is only hoped for. Leaning to leave out.",
+      "rationale": "Held at the Convent Chapel of OLP/SP (Our Lady of Pompei / St. Peter, 301 Ash St, a different listed church), not at SJB/HT. It is unclear whether the convent chapel is on the OLP/SP grounds, and the monthly recurrence is only hoped for. Leaning to leave out.\n\nReview 2026-10-22: Exclude the Oct 20 OLP/SP convent event from this other parish’s seed under R22; do not attach it to St. John the Baptist. It has passed.",
       "question": "Add the Oct 20 Adoration in the Convent Chapel at OLP/SP to Our Lady of Pompei / St. Peter?",
       "options": [
         {
@@ -233,7 +246,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s5",

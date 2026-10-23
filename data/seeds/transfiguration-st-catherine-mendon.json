@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "transfiguration-st-catherine-mendon",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:37Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:35:43Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches: Transfiguration (Pittsford) and St. Catherine of Siena (Mendon), with a stable weekly schedule across all three bulletins read (weekend Masses, Mon/Wed 6:45 at Transfiguration, Tue/Thu 9:00 at St. Catherine, Saturday 3 pm Confession at Transfiguration, no Friday services). First Thursday Adoration in the Transfiguration chapel was seen only in the 9/27 bulletin (R12). Open: the church for the Oct 31 Remembrance Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -838,9 +838,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-31",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Annual Remembrance Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -850,7 +863,7 @@
           "said": "Join us on Saturday, 10/31/26 at 10AM ... A light reception follows in our Gathering Area. ... contact Betsy Yerves ... parish office at 248-2427"
         }
       ],
-      "rationale": "R32: the notice names no church. The Transfiguration office number (248-2427) is given, and the 'Gathering Area' is Transfiguration's (Sharing Tree p4: Gathering Area at Transfiguration), so I lean Transfiguration. It is open to all (Mass for all deceased of the past year, not one person).",
+      "rationale": "R32: the notice names no church. The Transfiguration office number (248-2427) is given, and the 'Gathering Area' is Transfiguration's (Sharing Tree p4: Gathering Area at Transfiguration), so I lean Transfiguration. It is open to all (Mass for all deceased of the past year, not one person).\n\nReview 2026-10-22: Lean Transfiguration for Oct 31, 10 AM remembrance Mass: the office number and Gathering Area context support it. Verify the venue before treating those indirect clues as conclusive.",
       "question": "Add the Remembrance Mass on Saturday, Oct 31, 10:00 AM, and at which church?",
       "options": [
         {
@@ -893,7 +906,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

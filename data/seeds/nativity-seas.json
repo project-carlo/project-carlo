@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "nativity-seas",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:30Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:30:33Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches: Nativity (Brockport) and St. Elizabeth Ann Seton (Hamlin). The Mass, Reconciliation and Adoration times in the box and notices agree in the three bulletins read; the newest adds a Nov 2 Mass of Remembrance and a cancelled Oct 12 Mass. Open: whether the Wednesday 9:00 AM Mass at St. Elizabeth's also falls on a fifth Wednesday, since a calendar printed one on Sept 30.",
   "blocked_reason": null,
   "bulletins": [
@@ -899,9 +899,26 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -953,7 +970,7 @@
           "page": 2
         }
       ],
-      "rationale": "R28: the box in all three bulletins gives 1st, 2nd and 4th weeks, but the Sept 27 bulletin's calendar prints a 9:00 a.m. Mass (S) on Wednesday September 30, a fifth Wednesday. The newest bulletin's Wednesday October 14 (second week) fits both. Leaning to the box, since POLICY and R1 take the printed schedule and the 3rd Wednesday is the Elderwood Mass day.",
+      "rationale": "R28: the box in all three bulletins gives 1st, 2nd and 4th weeks, but the Sept 27 bulletin's calendar prints a 9:00 a.m. Mass (S) on Wednesday September 30, a fifth Wednesday. The newest bulletin's Wednesday October 14 (second week) fits both. Leaning to the box, since POLICY and R1 take the printed schedule and the 3rd Wednesday is the Elderwood Mass day.\n\nReview 2026-10-22: Keep St. Elizabeth’s 9 AM Mass on first, second and fourth Wednesdays. A dated fifth-Wednesday listing does not establish every future fifth Wednesday.",
       "question": "How often is the Wednesday 9:00 AM Mass at St. Elizabeth Ann Seton?",
       "options": [
         {
@@ -1005,7 +1022,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s14",

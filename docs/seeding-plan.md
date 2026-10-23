@@ -288,11 +288,13 @@ the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
 - **Explicit reading.** `seed mark-read <parish> <bulletin>` records reading
   without requiring a slot citation. `finalize` preserves these marks and
   also marks cited bulletins; merely downloading a PDF does not mark it read.
-- **Evidence checks.** `seed check` enforces rules.md's R1 (with its
-  exceptions R12 and R19: an agent source at an older read bulletin's page,
-  with the slot's page null) and R2's newest listed bulletin being marked
-  read, and rejects website sources in historical evals (R5). A reviewer's
-  answer may include an older candidate.
+- **Evidence checks.** `seed check` enforces rules.md's R1 and its explicit
+  exceptions: an assessed parish website schedule (R6), older read bulletin
+  evidence for monthly or future dated entries (R12/R19), and an established
+  weekly schedule retained after one omission (R36). These exceptions have a
+  null slot page rather than a manufactured newest-bulletin sighting. R2 still
+  requires the newest listed bulletin to be marked read; historical evals
+  reject website sources (R5). A reviewer's answer may include an older candidate.
 - **Batch failures.** `check --all` and multi-parish `finalize` report malformed
   files individually and continue with the other parishes.
 

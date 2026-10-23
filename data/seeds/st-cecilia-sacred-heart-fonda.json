@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-cecilia-sacred-heart-fonda",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:07Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:30:58Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches, St. Cecilia (Fonda) and Sacred Heart (Tribes Hill). No bulletin prints a schedule box, so the weekly Masses come from the Mass intentions, which repeat the same days and times across the three bulletins read. Open: whether the website's Sunday 4:00 PM Mass at St. Cecilia exists. No Confession or Adoration is printed in the bulletins or on the website.",
   "blocked_reason": null,
   "bulletins": [
@@ -409,9 +409,22 @@
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-fonda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -420,7 +433,7 @@
           "said": "Sunday: 9:00 am & 4:00 pm (St. Cecilia Church)"
         }
       ],
-      "rationale": "R29, C9: only the website prints it. The bulletins list every Mass in their intentions with Sunday only at 9:00 AM, and print no schedule box, so none confirms or denies a 4:00 PM Mass. Leaning leave out because the intentions list one Sunday Mass each week and a website can be stale; a wrong time is worse than a missing one.",
+      "rationale": "R29, C9: only the website prints it. The bulletins list every Mass in their intentions with Sunday only at 9:00 AM, and print no schedule box, so none confirms or denies a 4:00 PM Mass. Leaning leave out because the intentions list one Sunday Mass each week and a website can be stale; a wrong time is worse than a missing one.\n\nReview 2026-10-22: Exclude website-only Sunday 4 PM Mass at St. Cecilia; the recurring bulletin intentions consistently list only 9 AM.",
       "question": "Add a Sunday 4:00 PM Mass at St. Cecilia?",
       "options": [
         {
@@ -446,7 +459,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s8",

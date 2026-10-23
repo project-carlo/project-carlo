@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-st-patrick-utica",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:36:29Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:54:02Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
   "summary": "St. Joseph & St. Patrick has one church and prints no schedule box; its Saturday 5:30 PM and Sunday 8:45 AM Masses come from the weekly Mass intentions and the website and are settled. The one question is the Monday 5:30 PM Mass 'in Chapel', where the chapel is never placed; it and its October 12 Columbus Day cancellation are asked together. The 24/7 Perpetual Adoration, the Rosary and novena, and the relic visit at Old St. John's are left out.",
   "blocked_reason": null,
   "bulletins": [
@@ -179,8 +179,8 @@
     },
     {
       "id": "s3",
-      "decision": null,
-      "status": "needs_human",
+      "decision": "exclude",
+      "status": "settled",
       "entry": null,
       "page": 2,
       "sources": [
@@ -226,7 +226,7 @@
           "page": 2
         }
       ],
-      "rationale": "R18 and R30: the newest bulletin skips the Monday 5:30 PM Mass for a stated reason (Columbus Day), and the Sept 28 and Oct 5 intentions and the website show it weekly. But the bulletins place it 'in Chapel' and never say where the chapel is (POLICY, Churches and chapels: a chapel of the church itself belongs to it; one elsewhere is left out), and the website gives no place. Leaning include as a chapel of this church, since the website lists it with the church's own Masses. Same decision as the October 12 cancellation (R16, R27).",
+      "rationale": "R18 and R30: the newest bulletin skips the Monday 5:30 PM Mass for a stated reason (Columbus Day), and the Sept 28 and Oct 5 intentions and the website show it weekly. But the bulletins place it 'in Chapel' and never say where the chapel is (POLICY, Churches and chapels: a chapel of the church itself belongs to it; one elsewhere is left out), and the website gives no place. Leaning include as a chapel of this church, since the website lists it with the church's own Masses. Same decision as the October 12 cancellation (R16, R27).\n\nDelegated review (owner authorized best judgment on 2026-10-22): Exclude from the mapped schedule because the current Monday chapel location is unconfirmed. Recurrence is supported, but historic chapel references and the parish contact address do not identify the 2026 venue. Do not guess a church assignment.",
       "question": "Is the Monday 5:30 PM Mass (held in the chapel) at this church, and does it count as weekly?",
       "options": [
         {
@@ -252,13 +252,17 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      },
       "group": "monday-chapel-mass"
     },
     {
       "id": "s4",
-      "decision": null,
-      "status": "needs_human",
+      "decision": "exclude",
+      "status": "settled",
       "entry": null,
       "page": 2,
       "sources": [
@@ -281,7 +285,7 @@
           "page": 2
         }
       ],
-      "rationale": "R18 and R30: the newest bulletin skips the Monday 5:30 PM Mass for a stated reason (Columbus Day), and the Sept 28 and Oct 5 intentions and the website show it weekly. But the bulletins place it 'in Chapel' and never say where the chapel is (POLICY, Churches and chapels: a chapel of the church itself belongs to it; one elsewhere is left out), and the website gives no place. Leaning include as a chapel of this church, since the website lists it with the church's own Masses. Same decision as the October 12 cancellation (R16, R27).",
+      "rationale": "R18 and R30: the newest bulletin skips the Monday 5:30 PM Mass for a stated reason (Columbus Day), and the Sept 28 and Oct 5 intentions and the website show it weekly. But the bulletins place it 'in Chapel' and never say where the chapel is (POLICY, Churches and chapels: a chapel of the church itself belongs to it; one elsewhere is left out), and the website gives no place. Leaning include as a chapel of this church, since the website lists it with the church's own Masses. Same decision as the October 12 cancellation (R16, R27).\n\nDelegated review (owner authorized best judgment on 2026-10-22): The October 12 holiday cancellation is explicit, but the affected chapel venue is unconfirmed. Exclude this mapped cancellation for the same location uncertainty as its Monday service, not because recurrence is doubtful or because the date has passed.",
       "question": "Is the Monday 5:30 PM Mass (held in the chapel) at this church, and does it count as weekly?",
       "options": [
         {
@@ -307,7 +311,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      },
       "group": "monday-chapel-mass"
     },
     {

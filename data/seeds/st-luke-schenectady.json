@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-luke-schenectady",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:34Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:56:07Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:50:11Z",
   "summary": "St. Luke's has one church. The weekend Masses, Monday/Tuesday/Thursday/Friday 11:00 AM Mass, Saturday 3:00 PM Reconciliation and the Friday Adoration after the 11:00 AM Mass (not First Fridays) are settled from the bulletins. I ask about a Saturday 11:00 AM Mass (in the intentions but not the website), First Friday Adoration with Benediction until 4:00 PM (website only) and a 7-8 PM Nocturnal Adoration hour (website only, day unclear). Weekday Reconciliation is at St. Joseph's, not here.",
   "blocked_reason": null,
   "bulletins": [
@@ -792,9 +792,24 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-schenectady",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Nocturnal Adoration Society"
+      },
       "page": null,
       "sources": [
         {
@@ -809,7 +824,7 @@
           "said": "Ministries & Services: Nocturnal Adoration Society (no time)"
         }
       ],
-      "rationale": "R29 and R30: the website says the Nocturnal Adoration Society 'continues' Adoration from 7:00-8:00 pm after the First Friday afternoon Adoration, but it does not clearly say that is on First Fridays only, and no bulletin gives a time. Leaning leave out since the day is not clear.",
+      "rationale": "R29 and R30: the website says the Nocturnal Adoration Society 'continues' Adoration from 7:00-8:00 pm after the First Friday afternoon Adoration, but it does not clearly say that is on First Fridays only, and no bulletin gives a time. Leaning leave out since the day is not clear.\n\nReview 2026-10-22: Exclude Nocturnal Adoration’s 7–8 PM website time until its actual day/pattern is confirmed.",
       "question": "Add First Friday evening Adoration, 7:00-8:00 PM (Nocturnal Adoration Society)?",
       "options": [
         {
@@ -837,7 +852,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s13",

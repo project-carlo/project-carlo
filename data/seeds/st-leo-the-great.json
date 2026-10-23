@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-leo-the-great",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:29:53Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:51:15Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "One-church parish with a stable schedule: Mon 5:30 PM, Tue-Thu 8:30 AM Masses, Sat 4:00 PM, Sun 8:00 AM, 10:30 AM and 6:00 PM, Wed 9:00 AM-8:30 PM Adoration, Sat 2:30-3:30 PM Confession. Friday 8:30 AM is a Communion Service (left out). The newest bulletin cancels the Nov 2 5:30 PM Mass for a 7:00 PM All Souls Mass and adds a Nov 10 6:00 PM St. Leo Day Mass. One open question about a first-Friday Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -805,9 +805,24 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-the-great",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -829,7 +844,7 @@
           "page": 2
         }
       ],
-      "rationale": "Only the Sep 27 intentions box labels the first Friday 8:30 AM as an intention (Mass), contradicting its own calendar. No bulletin read covers a first Friday after that; the newest bulletin does not print it.",
+      "rationale": "Only the Sep 27 intentions box labels the first Friday 8:30 AM as an intention (Mass), contradicting its own calendar. No bulletin read covers a first Friday after that; the newest bulletin does not print it.\n\nReview 2026-10-22: Exclude a first-Friday Mass until the same issue’s “Mass intention” versus “Communion Service” contradiction is resolved. Do not treat a Communion Service as Mass.",
       "question": "Is there a first-Friday 8:30 AM Mass at St. Leo's (rather than the usual Friday Communion Service)?",
       "options": [
         {
@@ -857,7 +872,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }
