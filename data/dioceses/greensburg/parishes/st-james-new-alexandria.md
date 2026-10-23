@@ -1,8 +1,8 @@
 ---
 name: St. James Parish, New Alexandria
 website: https://www.stjamesnewalexandria.org
-bulletin_provider: parishes_online
-provider_id: st-james-church-15670
+bulletin_provider: other
+provider_id: page-pdfs https://parishesonline.com/publicationWidget?type=bulletin&color=gray&id=0018000000QxC0DAAV filename=*B.pdf
 publication: ['po-org:st-james-church-15670', 'lpi:0018000000QxC0DAAV', 'po-container:14/1661']
 group: ''
 evidence:
@@ -26,7 +26,7 @@ evidence:
   seen: 2026-10-22
   note: 'probe po: "St. James Catholic Church", 306 St James Lane, New Alexandria, website stjamesnewalexandria.org,
     container 14/1661, issues 2026-10-25, 10-18, 10-11, 10-04. The org page itself renders blank in headed
-    Chrome (screenshot 2026-10-22), so fetch:check fails (see Not yet confirmed). LPi''s coordinates for
+    Chrome (screenshot 2026-10-22), so the org-page fetch fails (the working widget recipe is described below). LPi''s coordinates for
     it (40.2594, -79.3723) are about 15 km off; not used.'
 - url: https://parishesonline.com/organization/st-james-church-15670
   seen: 2026-10-23
@@ -40,17 +40,18 @@ evidence:
     (and 10-18, 10-11, 10-04). Tried as `other` with `page-pdfs <widget URL>`: it resolved the 25 Oct
     link but downloaded the publication-page wrapper (not_pdf), because the resolver does not unwrap the
     selectedPublication parameter. container.parishesonline.com/bulletins/14/1661/ answers 403 (no listing).
-    Row restored to parishes_online.'
+    Row restored to parishes_online at that point.'
+- url: https://parishesonline.com/publicationWidget?type=bulletin&color=gray&id=0018000000QxC0DAAV
+  seen: 2026-10-23
+  note: 'After adding selectedPublication viewer unwrapping, fetch:check with provider other and recipe
+    page-pdfs on this widget, filename=*B.pdf, succeeded: source_url
+    https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf, url_date 2026-10-25,
+    25,335,309 bytes, status ok. The widget lists current issues even though the org page is broken.
+    Recorded its rendered page for the offline fetch replay regression test.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=217
   seen: 2026-10-22
   note: 'Directory: St. James Parish, 306 St. James Lane, New Alexandria, pastor Father Tyler J. Bandura,
     "Saturday: 4:30 p.m.; Sunday: 9:30 a.m.", no Partner Parishes, website stjamesnewalexandria.org.'
-revisit: 'fetch:check still fails (2026-10-23): the ParishesOnline org page throws a JavaScript error
-  ("Failed to construct ''URL'': Invalid URL") and renders blank, so no selectedPublication link. No supported
-  recipe reads it: the LPi widget renders the issue links but `other` downloads the publication-page wrapper
-  (not_pdf). Needs a pipeline change (unwrap selectedPublication in parish_sites links, or a container/widget
-  fallback for parishes_online), or LPi fixing the org page. Re-run fetch:check then.'
-revisit_after: 2026-10-29
 promoted: 2026-10-23
 ---
 
@@ -64,10 +65,12 @@ St. James church, New Alexandria. It is the only place in the 25 Oct Mass schedu
 
 ## Website and bulletin provider
 
-stjamesnewalexandria.org answers plain fetches. Its `/bulletins` page embeds the LPi publication widget with `id=0018000000QxC0DAAV`, which is the ParishesOnline organization st-james-church-15670 with container 14/1661 (`probe po`). Its newest issue is dated 2026-10-25, the coming Sunday. The provider is `parishes_online` and the provider_id is the org slug. All three ids (po-org, lpi, po-container) are recorded.
+stjamesnewalexandria.org answers plain fetches. Its `/bulletins` page embeds the LPi publication widget with `id=0018000000QxC0DAAV`, which is the ParishesOnline organization st-james-church-15670 with container 14/1661 (`probe po`). All three ids (po-org, lpi, po-container) are recorded.
 
-`fetch:check` on 2026-10-22 failed four times: "No matching anchor link found for parishes-online provider_id=st-james-church-15670". Both the org page and `/publication-page/st-james-church-15670` render blank in headed Chrome: a screenshot shows a white page and the text is empty. Our Lady of Grace's org page passed `fetch:check` in the same session, so ParishesOnline itself was up. Switching to `other` on the parish site was tried and failed ("No PDF links found on bulletin page", because the widget is rendered by JavaScript), so the row stays `parishes_online`.
+The organization page renders blank and throws "Failed to construct 'URL': Invalid URL", so the normal `parishes_online` resolver fails. The widget still lists each current issue as a `publication-page?selectedPublication=<PDF>` link. The `other` resolver now unwraps those viewer links to their container PDFs. The provider is `other`, pinned to `page-pdfs https://parishesonline.com/publicationWidget?type=bulletin&color=gray&id=0018000000QxC0DAAV filename=*B.pdf`. The filename filter keeps weekly bulletins (`YYYYMMDDB.pdf`) and excludes special inserts. The recipe follows the widget's issue list each week without relying on the broken org page or a fixed issue date.
+
+Live `fetch:check` on 2026-10-23 succeeded and downloaded `14/1661/20261025B.pdf` (url_date 2026-10-25, 25,335,309 bytes). The rendered widget page is also recorded in `tests/fixtures/fetch/st-james-new-alexandria.json.gz` for offline replay against the live CSV recipe.
 
 ## Not yet confirmed
 
-The fetch does not work yet. Re-checked 2026-10-23: the ParishesOnline organization page for this parish crashes in the browser ("Failed to construct 'URL': Invalid URL") and renders blank, so the `parishes_online` resolver, which reads only the org page, finds no issue link. The bulletin itself is live and current in container 14/1661 (25 Oct 2026 issue). No supported recipe works: the parish site's LPi widget lists the issues, but as `publication-page?selectedPublication=<PDF>` links that the `other` resolver downloads as HTML. The fix is a pipeline change (unwrap `selectedPublication` like other viewer parameters, or let `parishes_online` fall back to the widget by LPi id), or LPi repairing the org page. Next step (revisit 2026-10-29): re-run `fetch:check`.
+Nothing about bulletin access. The organization page remains broken; keep the working widget recipe pinned.

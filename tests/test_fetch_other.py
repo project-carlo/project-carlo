@@ -9,6 +9,7 @@ from __future__ import annotations
 import base64
 import json
 from datetime import date
+from urllib.parse import quote
 
 import pytest
 
@@ -138,6 +139,81 @@ def testunwrap_pdf_viewer_url() -> None:
     assert unwrap_pdf_viewer_url(direct) == direct
     relative = f"{HOME}/page?url=/relative.pdf"
     assert unwrap_pdf_viewer_url(relative) == relative
+
+
+@pytest.mark.parametrize("encoding_layers", [0, 1, 2])
+def test_parishes_online_viewer_unwraps_encoded_pdf(encoding_layers: int) -> None:
+    pdf = "https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf"
+    selected = pdf
+    for _ in range(encoding_layers):
+        selected = quote(selected, safe="")
+    viewer = (
+        "https://parishesonline.com/publication-page/st-james-church-15670"
+        f"?selectedPublication={selected}"
+    )
+    assert unwrap_pdf_viewer_url(viewer) == pdf
+
+
+@pytest.mark.parametrize(
+    ("viewer", "selected"),
+    [
+        (
+            "https://example.org/publication-page/st-james",
+            "https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/organization/st-james",
+            "https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "https://example.org/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "https://container.parishesonline.com.example.org/bulletins/14/1661/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "http://container.parishesonline.com/bulletins/14/1661/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "https://container.parishesonline.com/other/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "https://container.parishesonline.com/bulletins/14/1661/20261025B.html",
+        ),
+    ],
+)
+def test_parishes_online_viewer_leaves_unrecognized_links_alone(viewer: str, selected: str) -> None:
+    url = f"{viewer}?selectedPublication={quote(selected, safe='')}"
+    assert unwrap_pdf_viewer_url(url) == url
+
+
+def test_parishes_online_widget_recipe_picks_latest_weekly_pdf() -> None:
+    widget = "https://parishesonline.com/publicationWidget?type=bulletin&id=0018000000QxC0DAAV"
+    container = "https://container.parishesonline.com/bulletins/14/1661"
+
+    def anchor(issue: str, label: str) -> str:
+        selected = quote(f"{container}/{issue}.pdf", safe="")
+        return (
+            '<a href="/publication-page/st-james-church-15670'
+            f'?selectedPublication={selected}">{label}</a>'
+        )
+
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=TODAY,
+        recipe=f"page-pdfs {widget} filename=*B.pdf",
+        page=_site({widget: (
+            anchor("20261004S", "October 4, 2026 Special")
+            + anchor("20260920B", "September 20, 2026")
+            + anchor("20260927B", "September 27, 2026")
+        )}),
+    )
+    assert link.source_url == f"{container}/20260927B.pdf"
+    assert link.fetch_url == link.source_url
 
 
 def test_flipbook_pdf_named_with_repeated_extension_is_read_whole() -> None:

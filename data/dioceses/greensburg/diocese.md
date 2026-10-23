@@ -101,8 +101,10 @@ keep it current rather than a log.
   flipbook per issue whose PDF (`wp-content/uploads/<yyyy>/<mm>/*.pdf`) downloads plainly even
   where the page answers 403.
 - **A ParishesOnline org page can render blank** while `probe po` still lists issues
-  (st-james-church-15670, 2026-10-22), and the PO fetch then fails; re-check before blaming
-  the row. LPi org coordinates can be ~15 km off: use the GCatholic Plus Code.
+  (st-james-church-15670, 2026-10-22), and the PO fetch then fails. If its publication widget
+  still lists issues, pin `other` to `page-pdfs <widget URL> filename=*B.pdf`: viewer links
+  with `selectedPublication` now unwrap to the container PDF. St. James passed a live download
+  check using this recipe on 2026-10-23. LPi org coordinates can be ~15 km off: use the GCatholic Plus Code.
 - **Partnerships change faster than the directory.** The "Official" appointment posts
   (plain HTML, e.g. https://www.dioceseofgreensburg.org/official-june-20-2026/) date splits
   the "Partner Parishes" field hasn't caught up with (St. Sylvester left St. Ambrose/St.
@@ -219,6 +221,11 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-10-23: Fixed St. James bulletin fetching by unwrapping LPi `selectedPublication` links
+  and pinning the working publication widget with `filename=*B.pdf`. Live `fetch:check`
+  downloaded the 25 Oct 2026 bulletin (25,335,309 bytes); removed the resolved fetch revisit.
+  Added viewer-link and newest-weekly-issue tests plus the recorded widget for offline replay.
+  Coverage is unchanged: directory 84/84, GCatholic 110/110 accounted for.
 - 2026-10-23: Mapped the whole diocese and promoted it: 48 parish rows (one per bulletin) for
   the 78 canonical parishes, 86 churches, 28 exclusions (24 Eastern Catholic
   `other-jurisdiction`, 4 `no-bulletin`/`no-public-mass` chapels and the seminary) and 1 open
