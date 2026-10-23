@@ -9,8 +9,9 @@ Read `data/dioceses/README.md` before your first write. It has the rules, the fi
 the explanation standard, which sources to trust, and the traps. This page is the short
 version.
 
-To map a whole new diocese, follow the `map-diocese` skill: it splits the work into small
-batches for `parish-scout` agents. This page is the method each of them follows.
+To map a whole new diocese, follow the `map-diocese` skill: a `diocese-surveyor` agent sets
+it up and plans small batches for `parish-scout` agents. This page is the method each of
+them follows.
 
 ## The three rules
 

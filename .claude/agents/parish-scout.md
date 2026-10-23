@@ -32,7 +32,7 @@ large read early on is paid for many times over.
   need (`jq`, `grep`, `head`).
 - Take a screenshot or render a page only when the text can't answer the question.
 - Open `.claude/skills/parish-site-access/SKILL.md` only when `probe url` can't read a
-  site. The orchestrator has already set up the browser.
+  site. The browser is already set up.
 - Keep full evidence and parish-specific findings in the records; reread only the parts
   needed to settle a new question. Shared playbook lessons must be reusable across parishes.
 
