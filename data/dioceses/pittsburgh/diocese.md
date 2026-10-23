@@ -231,6 +231,10 @@ README's model and the Greensburg precedent:
    and Syro-Malabar entries) are `other-jurisdiction` exclusions; one record each, citing
    GCatholic's rite and eparchy.
 
+7. **Shrines of Pittsburgh is one row** (scout 18, 2026-10-23): container 14/1226, masthead
+   "SHRINES OF PITTSBURGH", covers the four canonical parishes and six sites. The directory's
+   "No Masses Scheduled" hid St. Patrick's weekly Thursday Mass: Rule 2 in practice.
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
