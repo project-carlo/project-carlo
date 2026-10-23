@@ -53,7 +53,8 @@ publication_reviews:
     seen: 2026-10-23
     quote: Our Lady of Fatima Parish
     note: Fatima's 24 Oct 2026 issue is its own four-page bulletin (Fatima pastor, ministry schedule,
-      Saturday 4:00 pm Mass) with no Sharon Mass times.
+      Saturday 4:00 pm Mass) with no Sharon Mass times. Fatima's masthead names only Our Lady of Fatima,
+      and the Sharon issue shows no Fatima Mass.
   - url: https://discovermass.com/church/st-joseph-sharon-pa/
     seen: 2026-10-23
     quote: 79 Case Ave., Sharon, PA 16146
@@ -67,7 +68,8 @@ publication_reviews:
     note: Good Shepherd's 25 Oct 2026 issue (Wix, image-only pages) is headed 'Church of the Good Shepherd'
       with its own Mass intention table (Saturday 6:00 pm, Sunday 9:00 and 11:30 am) and no Fatima Mass;
       Fatima's issue is a separate file on a separate site. Fatima's calendar mentions 'Making Fatima
-      Cavatelli In the Good Shepherd Social Hall', a shared venue, not a shared bulletin.
+      Cavatelli In the Good Shepherd Social Hall', a shared venue, not a shared bulletin. The Good Shepherd
+      masthead names only the Church of the Good Shepherd, and its Mass table shows no Fatima Mass.
 ---
 
 ## Publisher

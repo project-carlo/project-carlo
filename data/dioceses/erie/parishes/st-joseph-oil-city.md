@@ -54,7 +54,7 @@ publication_reviews:
       St. Joseph Church, 35 Pearl Avenue, different Mass times and intentions). Both are signed by the
       same pastor ('Fr. Dan') in near-identical welcome letters, but each describes its own parish. St.
       Titus's liturgy schedule printed '8:30 AM at St. Joseph' style cross-references through 29 March
-      2026 and none since.
+      2026 and none since. Each masthead names only its own church.
 ---
 
 ## Publisher

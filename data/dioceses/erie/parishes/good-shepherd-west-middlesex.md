@@ -52,7 +52,8 @@ publication_reviews:
     seen: 2026-10-23
     note: Good Shepherd's 25 Oct 2026 issue is headed 'Church of the Good Shepherd' with Saturday 6:00
       pm and Sunday 9:00/11:30 am Masses and no Fatima Mass; Fatima's 24 Oct issue is a different four-page
-      bulletin on fatimafarrell.org whose only Mass is Saturday 4:00 pm.
+      bulletin on fatimafarrell.org whose only Mass is Saturday 4:00 pm. The Good Shepherd masthead names
+      only the Church of the Good Shepherd, and its Mass table shows no Fatima Mass.
 ---
 
 ## Publisher

@@ -62,7 +62,7 @@ publication_reviews:
   - url: https://container.parishesonline.com/bulletins/14/1705/20261025B.pdf
     seen: 2026-10-23
     note: 'Notre Dame container 14/1705: masthead ''Church of Notre Dame'', footer ''Church of Notre Dame,
-      Hermitage, PA 14-1705'', md5 fae97ac5...'
+      Hermitage, PA 14-1705'', md5 fae97ac5... Each masthead names only its own parish.'
   - url: https://container.parishesonline.com/bulletins/14/0202/20261025B.pdf
     seen: 2026-10-23
     quote: St. Bartholomew, Sharpsville, PA 14-0202

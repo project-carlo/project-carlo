@@ -59,7 +59,9 @@ publication_reviews:
     note: St. Hippolyte's 4 October 2026 issue is a 2-page Publisher document (md5 4c2f6f8c...) with its
       own masthead for St. Hippolyte and Our Lady of Lourdes and its own Mass schedule; the Epiphany's
       4 October issue (container 14/1183, md5 c4f13b7c...) is an 8-page LPi bulletin. Page 1 tells readers
-      to read The Epiphany of the Lord bulletin at epiphanymeadville.org as a separate document.
+      to read The Epiphany of the Lord bulletin at epiphanymeadville.org as a separate document. The St.
+      Hippolyte masthead names St. Hippolyte and Our Lady of Lourdes; the Epiphany masthead names only
+      The Epiphany of the Lord Parish.
 ---
 
 ## Publisher

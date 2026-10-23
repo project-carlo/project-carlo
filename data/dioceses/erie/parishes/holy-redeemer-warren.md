@@ -60,7 +60,8 @@ publication_reviews:
       25 Oct issue (ParishesOnline 14/0961) is headed Holy Redeemer and St. Anthony of Padua, Sheffield,
       with Fr. O'Hern, and prints its own Mass schedule. The two publish different documents on different
       channels, though they cross-reference joint events (Faith Formation @ HR, All Saints Day coffee
-      'at HR and 10:45 am at SJ').
+      'at HR and 10:45 am at SJ'). The St. Joseph masthead names St. Joseph and St. Luke; the Holy Redeemer
+      masthead names Holy Redeemer and St. Anthony of Padua, Sheffield.
 ---
 
 ## Publisher

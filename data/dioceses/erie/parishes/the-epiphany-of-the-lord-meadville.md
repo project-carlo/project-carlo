@@ -55,7 +55,8 @@ publication_reviews:
       headed St. Hippolyte Church and Our Lady of Lourdes Church; the Epiphany''s (container 14/1183,
       md5 c4f13b7c...) is an 8-page LPi bulletin headed The Epiphany of the Lord Parish. The St. Hippolyte
       page 1 refers readers to the Epiphany bulletin at epiphanymeadville.org as a separate document,
-      and the Epiphany bulletin prints no St. Hippolyte Mass times.'
+      and the Epiphany bulletin prints no St. Hippolyte Mass times. The St. Hippolyte masthead names St.
+      Hippolyte and Our Lady of Lourdes; the Epiphany masthead names only The Epiphany of the Lord Parish.'
 ---
 
 ## Publisher
