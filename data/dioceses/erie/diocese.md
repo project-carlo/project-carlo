@@ -209,7 +209,9 @@ this diocese shows otherwise.
   list a stopped container (check its latest issue). The search API
   (`https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/search?searchType=organization&latitude=..&longitude=..&distance=3`)
   lists organizations near a point. Masthead often not on page 1; image-only pages: render with
-  `render.py` or `pdftoppm` (installed here) and say so in the evidence note. A parish site can
+  `render.py` or `pdftoppm` (installed here) and say so in the evidence note. When the first
+  pages are images (St. James, 14/1107: pages 1-6), `fetch:check` identity reads `unknown`;
+  cite a text-layer footer for `recheck`. A parish site can
   repost its container's PDF (compare file name and masthead). One issue can sit in two containers
   (separate ad editions): compare pages, record both. A widget's `publicationWidget?id=` shared by
   two sites means one bulletin.
