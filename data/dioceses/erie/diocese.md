@@ -116,8 +116,8 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
   City (2024); Our Mother of Perpetual Help, Lewis Run (2023-07-01); St. John the Evangelist,
   Girard (old church, 2022); St. Anthony, Walston (2021-05-03); St. Adalbert, Farrell
   (2020-09-20); Ss. John and Stephen, James City (2020-09-13); Holy Cross, Brandy Camp
-  (2020-07-26); Our Lady Help of Christians, Oil City (2020-07-19); St. Adrian, DeLancey and St.
-  Joseph, Anita (2020-01-26); St. Elizabeth, Corry and St. Joseph, DuBois (2019-12-01); Assumption
+  (2020-07-26); Our Lady Help of Christians, Oil City (2020-07-19); St. Adrian, DeLancey
+  (2020-02-16; the survey first gave Anita's date); St. Joseph, Anita (2020-01-26); St. Elizabeth, Corry and St. Joseph, DuBois (2019-12-01); Assumption
   BVM, Oil City (2019-07-19); St. Stanislaus Kostka, Sharon (2019); Sacred Heart, Sharon
   (2018-03-25); Holy Cross, Rasselas (2017-09-07). St. Francis of Assisi, Bradford became a
   secondary church with no Sunday Mass by decree. Read the decree itself for each exclusion; a
@@ -154,7 +154,9 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   faith-formation fliers. Check how far behind the page runs (Albion's newest on 2026-10-23 was 11
   October). Some of these sites also embed a ParishesOnline org (hcsjchurches.org,
   stelizabethsmethport.org, ststanserie.org, stgregoryparish.info): compare the two before
-  choosing a provider. A template site with no
+  choosing a provider. An unlinked `weeklybulletin.php` can say "No Bulletin found." while the bulletin is on
+  Discover Mass, sometimes under both the parish's and its mission's slug (St. Charles, New
+  Bethlehem). A template site with no
   `weeklybulletin.php` may have a Bulletin menu entry that is a JavaScript `location.assign` to
   `parishesonline.com/find/<slug>`: read the nav HTML. `dioceseoferie.org/<name>/` is the same host (Holy Rosary, Johnsonburg 403s
   probe url; St. Charles, New Bethlehem shows no bulletin links).
@@ -226,7 +228,9 @@ this diocese shows otherwise.
   lists organizations near a point. Masthead often not on page 1; image-only pages: render with
   `render.py` or `pdftoppm` (installed here) and say so in the evidence note. When the first
   pages are images (St. James, 14/1107: pages 1-6), `fetch:check` identity reads `unknown`;
-  cite a text-layer footer for `recheck`. A parish site can
+  cite the last page's text-layer footer (`<Parish> | 14-NNNN`) for `recheck`. `fetch:check`
+  inspects at most 25 MB (Punxsutawney's 25 Oct issue was over); that limits the check, not
+  the weekly fetch. A parish site can
   repost its container's PDF (compare file name and masthead). One issue can sit in two containers
   (separate ad editions): compare pages, record both. A widget's `publicationWidget?id=` shared by
   two sites means one bulletin.
