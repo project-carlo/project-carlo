@@ -196,7 +196,8 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
 - **Failed `probe url`:** HTTP 403 for holyredeemerwarren.com, steulaliacoudersport.org,
   stpatrickfranklin.org, weareholyspirit.com, dioceseoferie.org/holyrosary (try headed
   `visit.py`); DEAD-DNS for catholic-meadville.com and steulaliacouderport.org (a directory typo);
-  olp.org fails TLS on the bare host (try `www.`); saintpatrickparisherie.org resets the
+  olp.org fails TLS on the bare host (try `www.`), and the reverse
+  happens too (sainthippolytechurch.com: certificate mismatch on `www.`, bare host works); saintpatrickparisherie.org resets the
   connection.
 
 Carried over from Altoona-Johnstown, Greensburg, Scranton and Buffalo (2026-10); correct it as
