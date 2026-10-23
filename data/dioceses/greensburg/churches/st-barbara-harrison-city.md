@@ -25,9 +25,10 @@ evidence:
 - url: https://discovermass.com/church/st-barbara-harrison-city-pa/
   seen: 2026-10-22
   quote: 111 Raymaley Rd., Harrison City, PA 15636
-  note: 'Discover Mass church page. Its Oct 18, 2026 bulletin (downloaded once, 2026-10-22) gives Mass
+  note: Discover Mass church page. Its Oct 18, 2026 bulletin (downloaded once, 2026-10-22) gives Mass
     times "SATURDAY 5:30PM Vigil, SUNDAY 8:00AM /10:30AM", Mass intentions for every day 18-23 Oct, and
-    "Daily Mass Mon–Fri 9:00AM".'
+    "Daily Mass Mon–Fri 9:00AM".
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

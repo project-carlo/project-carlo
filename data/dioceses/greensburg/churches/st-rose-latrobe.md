@@ -25,8 +25,9 @@ evidence:
 - url: https://www.stroselatrobe.org/wp-content/uploads/2026/10/10182026.pdf
   seen: 2026-10-22
   quote: 4969 Route 982 · Latrobe, PA 15650
-  note: 'Page 1 masthead of the 18 Oct 2026 St. Rose bulletin; page 2 lists Masses for 17-24 Oct 2026
-    (Saturday 4:00 pm, Sunday 9:30 am, weekdays 8:30 am, Wednesday 6:00 pm).'
+  note: Page 1 masthead of the 18 Oct 2026 St. Rose bulletin; page 2 lists Masses for 17-24 Oct 2026 (Saturday
+    4:00 pm, Sunday 9:30 am, weekdays 8:30 am, Wednesday 6:00 pm).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

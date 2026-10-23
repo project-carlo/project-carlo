@@ -9,19 +9,33 @@ group: 'Partner Parishes: St. Mary, Our Lady of Guadalupe, Kittanning + St. Mary
 evidence:
 - url: https://www.stmarykittanning.org/wp-content/uploads/2026/10/BULLETIN-OCTOBER-25-2026-St.-Mary-Kittanning-and-St.-Mary-Yatesboro.pdf
   seen: 2026-10-22
-  quote: 'October 25, 2026 | Thirtieth Sunday in Ordinary Time … Saturday Vigil 4:00 pm Kittanning 6:00 pm Yatesboro … Sunday 9:00 am Kittanning 11:00 am Yatesboro … St. Mary, Our Lady of Guadalupe and St. Mary, Mother of God'
-  note: 'Page 1 of the 25 Oct 2026 issue as posted on stmarykittanning.org (child post /bulletin-october-25-2026/, 10 pages, no ads). The masthead gives both parishes'' addresses (101 West High Street, Kittanning; P.O. Box 327, 109 2nd Street, Yatesboro) and clergy (Very Rev. Eric J. Dinga, pastor; Rev. Juanito G. Lozano and Rev. Madhu Kodavatikanti, parochial vicars). It does not mention Ford City, Cadogan, St. Patrick or Brady''s Bend (grep, whole issue).'
+  quote: October 25, 2026 | Thirtieth Sunday in Ordinary Time … Saturday Vigil 4:00 pm Kittanning 6:00
+    pm Yatesboro … Sunday 9:00 am Kittanning 11:00 am Yatesboro … St. Mary, Our Lady of Guadalupe and
+    St. Mary, Mother of God
+  note: Page 1 of the 25 Oct 2026 issue as posted on stmarykittanning.org (child post /bulletin-october-25-2026/,
+    10 pages, no ads). The masthead gives both parishes' addresses (101 West High Street, Kittanning;
+    P.O. Box 327, 109 2nd Street, Yatesboro) and clergy (Very Rev. Eric J. Dinga, pastor; Rev. Juanito
+    G. Lozano and Rev. Madhu Kodavatikanti, parochial vicars). It does not mention Ford City, Cadogan,
+    St. Patrick or Brady's Bend (grep, whole issue).
 - url: https://www.saintmaryyatesboro.org/wp-content/uploads/2026/10/2026-10-25.pdf
   seen: 2026-10-22
   quote: View this bulletin online at www.DiscoverMass.com
-  note: 'The same 25 Oct 2026 issue as posted on saintmaryyatesboro.org (child post /bulletin-october-25-2026/). This is the printed edition: 12 pages, with the same masthead and pages plus two ad pages ("©2026 Diocesan View Our Parish Supporters at www.DiscoverMass.com"). Its text layer is letter-spaced. It is 2,208,816 bytes, the same size as the current Discover Mass issue that fetch:check downloaded on 2026-10-22, so the Yatesboro site reposts the Discover Mass file.'
+  note: 'The same 25 Oct 2026 issue as posted on saintmaryyatesboro.org (child post /bulletin-october-25-2026/).
+    This is the printed edition: 12 pages, with the same masthead and pages plus two ad pages ("©2026
+    Diocesan View Our Parish Supporters at www.DiscoverMass.com"). Its text layer is letter-spaced. It
+    is 2,208,816 bytes, the same size as the current Discover Mass issue that fetch:check downloaded on
+    2026-10-22, so the Yatesboro site reposts the Discover Mass file.'
 - url: https://discovermass.com/church/st-mary-our-lady-of-guadalupe-kittanning-pa/
   seen: 2026-10-22
   quote: St. Mary, Our Lady of Guadalupe Current Bulletin Oct 25, 2026
-  note: 'Weekly issues Aug 9 … Oct 25, 2026. The cover image class gives bulletin number 3024 ("X-|2026-10-25|1792711238|3024"). Read once with curl.'
+  note: Weekly issues Aug 9 … Oct 25, 2026. The cover image class gives bulletin number 3024 ("X-|2026-10-25|1792711238|3024").
+    Read once with curl.
 - url: https://discovermass.com/church/st-mary-yatesboro-pa/
   seen: 2026-10-22
-  note: 'The St. Mary, Yatesboro Discover Mass page lists the same weekly issues Aug 9 … Oct 25, 2026, and its cover image class carries the same bulletin number 3024 ("X-|2026-10-25|1792711239|3024"). One publication under both slugs. Read once with curl.'
+  note: The St. Mary, Yatesboro Discover Mass page lists the same weekly issues Aug 9 … Oct 25, 2026,
+    and its cover image class carries the same bulletin number 3024 ("X-|2026-10-25|1792711239|3024").
+    One publication under both slugs. Read once with curl.
+promoted: 2026-10-23
 ---
 
 ## Publisher

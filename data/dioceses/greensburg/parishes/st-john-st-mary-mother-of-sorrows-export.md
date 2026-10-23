@@ -15,36 +15,37 @@ evidence:
   note: 'LPi ad-page footer (pages 14-16) of the 25 Oct 2026 issue. Pages 1-13 are Canva images with no
     text layer; page 1, rendered and read, is a joint masthead with three columns: "St. John Baptist de
     La Salle, 497 Athena Drive, Delmont, PA 15626 ... Saturday anticipated Mass 4:00 PM, Sunday Mass 11:00
-    AM"; "Saint Mary, Our Lady of Lourdes, 5900 Kennedy Avenue, Export, PA 15632 ... Sunday Mass 9:00 AM";
-    "Mother of Sorrows, 4202 Old William Penn Highway, Murrysville, PA 15668, (724) 733-8870 ... Saturday
-    anticipated Mass 4:30 PM, Sunday Masses 7:30, 9:30, 11:30 AM & 6:00 PM". Reconciliation "Saturdays at
-    9:00 AM at MOS; Saturdays at 12:00 NN at St. John; Tuesdays at 5:00 PM at St. Mary".'
+    AM"; "Saint Mary, Our Lady of Lourdes, 5900 Kennedy Avenue, Export, PA 15632 ... Sunday Mass 9:00
+    AM"; "Mother of Sorrows, 4202 Old William Penn Highway, Murrysville, PA 15668, (724) 733-8870 ...
+    Saturday anticipated Mass 4:30 PM, Sunday Masses 7:30, 9:30, 11:30 AM & 6:00 PM". Reconciliation "Saturdays
+    at 9:00 AM at MOS; Saturdays at 12:00 NN at St. John; Tuesdays at 5:00 PM at St. Mary".'
 - url: https://container.parishesonline.com/bulletins/14/1783/20261025B.pdf
   seen: 2026-10-22
   quote: Mother of Sorrows Church, Murrysville, PA 14-1783
   note: 'LPi ad-page footer (pages 14-16) of the 25 Oct 2026 issue in the Mother of Sorrows container.
-    Pages 1-13 are image-only; page 1 rendered is the same three-parish masthead as 14/0550, and page 2
-    renders pixel-identical to 14/0550 page 2. Only the advertiser pages differ: one bulletin printed in
-    two LPi ad editions.'
+    Pages 1-13 are image-only; page 1 rendered is the same three-parish masthead as 14/0550, and page
+    2 renders pixel-identical to 14/0550 page 2. Only the advertiser pages differ: one bulletin printed
+    in two LPi ad editions.'
 - url: https://container.parishesonline.com/bulletins/14/1783/20260503B.pdf
   seen: 2026-10-22
-  note: 'Page 1 of the 3 May 2026 issue (rendered; image-only) already carries the three-parish masthead
+  note: Page 1 of the 3 May 2026 issue (rendered; image-only) already carries the three-parish masthead
     (St. John Baptist de La Salle, Saint Mary Our Lady of Lourdes, Mother of Sorrows), as does the same
-    date in 14/0550. The joint bulletin is at least six months old.'
+    date in 14/0550. The joint bulletin is at least six months old.
 - url: https://motherofsorrowschurch.org/bulletin/
   seen: 2026-10-22
   quote: Bulletin 10/25/2026
-  note: 'Mother of Sorrows'' own site links "10-25-26 30 OT.pdf", a 13-page Canva PDF whose page 1 is
-    the same three-parish masthead (the container edition minus the LPi ad pages). Not a separate bulletin.'
+  note: Mother of Sorrows' own site links "10-25-26 30 OT.pdf", a 13-page Canva PDF whose page 1 is the
+    same three-parish masthead (the container edition minus the LPi ad pages). Not a separate bulletin.
 - url: https://www.stjohnstmary.org/october-25-2026/
   seen: 2026-10-22
-  note: 'stjohnstmary.org (diocese WordPress template, one post per issue) posts SJSM102526.pdf
-    (wp-content/uploads/2026/10/), 16 pages, image-only: the same issue as the containers.'
+  note: 'stjohnstmary.org (diocese WordPress template, one post per issue) posts SJSM102526.pdf (wp-content/uploads/2026/10/),
+    16 pages, image-only: the same issue as the containers.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=215
   seen: 2026-10-22
   note: 'Directory: Mother of Sorrows Parish, Murrysville, website motherofsorrowschurch.org, pastor Msgr.
     Michael J. Begolly, no "Partner Parishes" field; 075 and 095 name each other as partners and share
     stjohnstmary.org, with the same pastor.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

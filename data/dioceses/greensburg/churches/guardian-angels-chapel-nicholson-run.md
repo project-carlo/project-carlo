@@ -12,20 +12,32 @@ coordinates_from: ''
 name_verified: false
 address_verified: false
 roster: []
-revisit: 'Pin the building (aerial imagery by Route 28 at Nicholson Run) and confirm the 2 Nov 2026 All Souls Mass in the November issues'
-revisit_after: '2026-11-10'
 evidence:
 - url: https://discovermass.com/church/christ-prince-of-peace-ford-city-pa/
   seen: 2026-10-22
   quote: at 9:00 AM at Guardian Angels Chapel
-  note: 'Pastor''s letter in the 25 Oct 2026 issue, which reads "Please note that Mass will also be celebrated on All Souls Day at 9:00 AM at Guardian Angels Chapel" (the text layer is letter-spaced, so the quote is the clean tail) of the Christ, Prince of Peace & St. Lawrence bulletin (current issue, downloaded once). The 27 Sep 2026 issue (same page, downloaded once) says "We are privileged to have in our parish territory, the Chapel dedicated to the Guardian Angels. This year, Mass will be celebrated there on All Souls Day (November 2)."'
+  note: Pastor's letter in the 25 Oct 2026 issue, which reads "Please note that Mass will also be celebrated
+    on All Souls Day at 9:00 AM at Guardian Angels Chapel" (the text layer is letter-spaced, so the quote
+    is the clean tail) of the Christ, Prince of Peace & St. Lawrence bulletin (current issue, downloaded
+    once). The 27 Sep 2026 issue (same page, downloaded once) says "We are privileged to have in our parish
+    territory, the Chapel dedicated to the Guardian Angels. This year, Mass will be celebrated there on
+    All Souls Day (November 2)."
 - url: https://www.leadertimes.com/news/guardian-angels-chapel-host-open-house/article_8d0ee1fc-8bb5-472d-a6e5-ea3d4f9e0585.html
   seen: 2026-10-22
   quote: Mass is currently celebrated there twice a year, which is the requirement for any Catholic church.
-  note: 'Kittanning Leader Times, 15 Oct 2025, read in headed Chrome. It places the chapel "on Cadogan Slate Lick Road in Nicholson Run", quotes the partner parishes'' administrative assistant, and says Mass is held on the Feast of the Guardian Angels (2 Oct) and on Memorial Day each year. It also calls it "the cute little chapel that can be seen from Route 28".'
+  note: Kittanning Leader Times, 15 Oct 2025, read in headed Chrome. It places the chapel "on Cadogan
+    Slate Lick Road in Nicholson Run", quotes the partner parishes' administrative assistant, and says
+    Mass is held on the Feast of the Guardian Angels (2 Oct) and on Memorial Day each year. It also calls
+    it "the cute little chapel that can be seen from Route 28".
 - url: https://www.dioceseofgreensburg.org/parishes/former-churches-directory/
   seen: 2026-10-22
-  note: 'Former Churches Directory row (as scraped to scratch/map-greensburg/tools/former-churches.tsv): "Nicholson''s Run, Church of the Guardian Angels Parish, 1872, 1994, St. Lawrence, Cadogan". The parish was closed in 1994; the building is kept as a chapel.'
+  note: 'Former Churches Directory row (as scraped to scratch/map-greensburg/tools/former-churches.tsv):
+    "Nicholson''s Run, Church of the Guardian Angels Parish, 1872, 1994, St. Lawrence, Cadogan". The parish
+    was closed in 1994; the building is kept as a chapel.'
+revisit: Pin the building (aerial imagery by Route 28 at Nicholson Run) and confirm the 2 Nov 2026 All
+  Souls Mass in the November issues
+revisit_after: 2026-11-10
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

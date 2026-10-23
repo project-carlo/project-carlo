@@ -24,7 +24,10 @@ evidence:
     Road, New Kensington, PA, 15068; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/2000/20261025B.pdf
   seen: 2026-10-22
-  note: 'Page 1 of the 25 Oct 2026 Valley Messenger (image, rendered and read): "MOUNT SAINT PETER 100 FREEPORT ROAD Weekend Mass Times Saturday | 4:30 PM Sunday | 8:30 AM & 10:30 AM Weekday Mass Times Tuesday - Friday | 8:30 AM".'
+  note: 'Page 1 of the 25 Oct 2026 Valley Messenger (image, rendered and read): "MOUNT SAINT PETER 100
+    FREEPORT ROAD Weekend Mass Times Saturday | 4:30 PM Sunday | 8:30 AM & 10:30 AM Weekday Mass Times
+    Tuesday - Friday | 8:30 AM".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

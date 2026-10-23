@@ -10,36 +10,38 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1162/20261025B.pdf
   seen: 2026-10-23
   quote: Saint Thomas More University and St. Bernard of Clairvaux
-  note: 'LPi footer of the 25 Oct 2026 issue (12 pages), followed by "14-1162". Page 1 is a generic LPi cover
-    (rendered and read: "SUNDAY, OCTOBER 25 / 30TH SUNDAY IN ORDINARY TIME"); page 2 is headed "ST.
-    BERNARD OF CLAIRVAUX PARISH", page 3 "ST. THOMAS MORE UNIVERSITY PARISH", each with its own Mass
-    intentions, Mass attendance, collection and Mass schedule.'
+  note: 'LPi footer of the 25 Oct 2026 issue (12 pages), followed by "14-1162". Page 1 is a generic LPi
+    cover (rendered and read: "SUNDAY, OCTOBER 25 / 30TH SUNDAY IN ORDINARY TIME"); page 2 is headed "ST.
+    BERNARD OF CLAIRVAUX PARISH", page 3 "ST. THOMAS MORE UNIVERSITY PARISH", each with its own Mass intentions,
+    Mass attendance, collection and Mass schedule.'
 - url: https://container.parishesonline.com/bulletins/14/1162/20261025B.pdf
   seen: 2026-10-23
   quote: Joint Parish Office is located at St. Thomas More
-  note: 'Page 10, "INDIANA CATHOLIC COMMUNITY DIRECTORY": one staff for both parishes (pastor Fr. Richard N.
-    Owens, OFM Cap; parochial vicar and IUP chaplain Fr. Jonathan Ulrick), "at 1200 Oakland Ave, Indiana, PA
-    15701", separate pastoral and finance councils for each parish. Page 2 Mass schedule (St. Bernard) "Saturday
-    Vigil Mass ... 4:00pm", "Sunday Mass ... 7:30am and 11:00am"; page 3 (St. Thomas More) "Saturday Vigil
-    Mass ... 6:00pm", "Sunday Mass ... 9:30am and 6:00pm". No other worship site in the issue.'
+  note: 'Page 10, "INDIANA CATHOLIC COMMUNITY DIRECTORY": one staff for both parishes (pastor Fr. Richard
+    N. Owens, OFM Cap; parochial vicar and IUP chaplain Fr. Jonathan Ulrick), "at 1200 Oakland Ave, Indiana,
+    PA 15701", separate pastoral and finance councils for each parish. Page 2 Mass schedule (St. Bernard)
+    "Saturday Vigil Mass ... 4:00pm", "Sunday Mass ... 7:30am and 11:00am"; page 3 (St. Thomas More) "Saturday
+    Vigil Mass ... 6:00pm", "Sunday Mass ... 9:30am and 6:00pm". No other worship site in the issue.'
 - url: https://parishesonline.com/organization/saint-thomas-more-university-and-st-bernard-of-clairvaux-parishes
   seen: 2026-10-23
   note: 'probe po: org "Saint Thomas More University and St. Bernard of Clairvaux Parishes", lpi:001C000000wXj5xIAC,
     1200 Oakland Ave, Indiana, website www.STMUP.org, container 14/1162, weekly issues 2026-10-04 to 2026-10-25.
-    A second org, st-bernard-of-clairvaux (lpi:0018000000Qc0E1AAJ, 200 Clairvaux Dr), lists container 14/1819
-    whose latest issue is 2024-12-29: St. Bernard''s old bulletin, stopped; its ids are kept on this row.'
+    A second org, st-bernard-of-clairvaux (lpi:0018000000Qc0E1AAJ, 200 Clairvaux Dr), lists container
+    14/1819 whose latest issue is 2024-12-29: St. Bernard''s old bulletin, stopped; its ids are kept on
+    this row.'
 - url: https://www.saintbernardparish.org/bulletins/
   seen: 2026-10-23
-  note: 'St. Bernard''s own site embeds parishesonline.com/publicationWidget?type=bulletin&id=001C000000wXj5xIAC,
-    the joint org, as does https://www.stmup.org/bulletin/bulletins/ (curl with a browser User-Agent; probe url
-    got 403 from stmup.org). Neither site posts bulletins itself any more (newest WordPress posts 2025-03-28 at
-    saintbernardparish.org, 2022-08-01 at stmup.org).'
+  note: St. Bernard's own site embeds parishesonline.com/publicationWidget?type=bulletin&id=001C000000wXj5xIAC,
+    the joint org, as does https://www.stmup.org/bulletin/bulletins/ (curl with a browser User-Agent;
+    probe url got 403 from stmup.org). Neither site posts bulletins itself any more (newest WordPress
+    posts 2025-03-28 at saintbernardparish.org, 2022-08-01 at stmup.org).
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=135
   seen: 2026-10-22
-  note: 'Directory: St. Bernard of Clairvaux Parish, 200 Clairvaux Drive, pastor Father Richard N. Owens, OFM
-    Cap, "Saturday: 4:00 p.m.; Sunday: 7:30 a.m., 11:00 a.m.", no partner parishes listed. LocationID=137, St.
-    Thomas More University Parish, 1200 Oakland Avenue: same pastor, "Saturday: 6:00 p.m.; Sunday: 9:30 a.m.,
-    6:00 p.m. (Regional Mass)", no partner parishes listed.'
+  note: 'Directory: St. Bernard of Clairvaux Parish, 200 Clairvaux Drive, pastor Father Richard N. Owens,
+    OFM Cap, "Saturday: 4:00 p.m.; Sunday: 7:30 a.m., 11:00 a.m.", no partner parishes listed. LocationID=137,
+    St. Thomas More University Parish, 1200 Oakland Avenue: same pastor, "Saturday: 6:00 p.m.; Sunday:
+    9:30 a.m., 6:00 p.m. (Regional Mass)", no partner parishes listed.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

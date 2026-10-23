@@ -25,13 +25,14 @@ evidence:
 - url: https://saintcecilia.net/wp-content/uploads/2026/10/bulletin-2026-10-21.pdf
   seen: 2026-10-22
   quote: Sunday 10:30am at Sacred Heart Church
-  note: 'Page 1 of the 25 Oct 2026 bulletin of Sacred Heart Parish & St. Cecilia Parish, "MASS TIMES": "Tues.
-    & Thurs. Mass 8am at Sacred Heart; ... Saturday 6:00pm at Sacred Heart Church ... Sunday 10:30am at
-    Sacred Heart Church". The masthead gives the church as "421 Main St. Youngstown, PA 15696".'
+  note: 'Page 1 of the 25 Oct 2026 bulletin of Sacred Heart Parish & St. Cecilia Parish, "MASS TIMES":
+    "Tues. & Thurs. Mass 8am at Sacred Heart; ... Saturday 6:00pm at Sacred Heart Church ... Sunday 10:30am
+    at Sacred Heart Church". The masthead gives the church as "421 Main St. Youngstown, PA 15696".'
 - url: https://parishesonline.com/organization/sacred-heart-church-15696
   seen: 2026-10-22
   note: 'probe po: LPi organization "Sacred Heart Church" (lpi:0018000000QxC0GAAV, no publications) gives
     "421 Main St, Youngstown, Pennsylvania, 15696".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

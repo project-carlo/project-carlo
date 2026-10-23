@@ -27,8 +27,9 @@ evidence:
   quote: Mother of Sorrows Church, Murrysville, PA 14-1783
   note: 'Page 1 of the 25 Oct 2026 issue (image-only, rendered and read): "Mother of Sorrows, 4202 Old
     William Penn Highway, Murrysville, PA 15668, (724) 733-8870 ... Saturday anticipated Mass 4:30 PM,
-    Sunday Masses 7:30, 9:30, 11:30 AM & 6:00 PM". The same page is in container 14/0550. The quote is the
-    LPi footer on pages 14-16.'
+    Sunday Masses 7:30, 9:30, 11:30 AM & 6:00 PM". The same page is in container 14/0550. The quote is
+    the LPi footer on pages 14-16.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

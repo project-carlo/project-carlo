@@ -25,7 +25,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1822/20261025B.pdf
   seen: 2026-10-23
   quote: Sunday | 8:00 AM & 10:30 AM
-  note: 'Page 1 of the 25 Oct 2026 St. Bartholomew bulletin (container 14/1822): "Saturday Vigil | 5:00 PM", "Monday -Friday 8:00AM", "First Saturday | 8:00 AM"; confession "Thursday | 8:00 AM & 7:00 PM", "Saturday | 4:00 PM". Mailing address only (P.O. Box A, Crabtree).'
+  note: 'Page 1 of the 25 Oct 2026 St. Bartholomew bulletin (container 14/1822): "Saturday Vigil | 5:00
+    PM", "Monday -Friday 8:00AM", "First Saturday | 8:00 AM"; confession "Thursday | 8:00 AM & 7:00 PM",
+    "Saturday | 4:00 PM". Mailing address only (P.O. Box A, Crabtree).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

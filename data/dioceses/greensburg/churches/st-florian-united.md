@@ -24,10 +24,11 @@ evidence:
     Mount Pleasant, PA, 15666; kind: Parish'
 - url: https://www.saintflorian.org/wp-content/uploads/2026/10/20261018.pdf
   seen: 2026-10-22
-  quote: 'Saturday, October 24, 2026 ~ 5:00 PM'
-  note: 'Page 2 intentions of the 18 Oct 2026 issue: Saturday 17 and 24 October 5:00 PM, Sunday 18 and 25 October 9:00
-    AM (and 11:00 AM); page 5 "MASS ATTENDANCE for October 10 -11 was 5:00 PM (118), 9:00 am (89), and 11:00 am (86)".
-    Page 1 mailing address "PO Box 187 4263 Route 981 United PA 15689".'
+  quote: Saturday, October 24, 2026 ~ 5:00 PM
+  note: 'Page 2 intentions of the 18 Oct 2026 issue: Saturday 17 and 24 October 5:00 PM, Sunday 18 and
+    25 October 9:00 AM (and 11:00 AM); page 5 "MASS ATTENDANCE for October 10 -11 was 5:00 PM (118), 9:00
+    am (89), and 11:00 am (86)". Page 1 mailing address "PO Box 187 4263 Route 981 United PA 15689".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

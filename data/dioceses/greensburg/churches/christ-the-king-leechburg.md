@@ -25,9 +25,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/4007/20261025B.pdf
   seen: 2026-10-22
   quote: 125 Park Road
-  note: 'Masthead of the 25 Oct 2026 shared bulletin: "CHRIST THE KING PARISH 125 Park Road Leechburg, PA
-    15656 ctkleechburg.org". Page 2 "Mass Times": Saturday "5:30pm ... Christ the King", Sunday "9:30am ...
-    Christ the King", and 8:30am on Tuesday, Thursday and Saturday.'
+  note: 'Masthead of the 25 Oct 2026 shared bulletin: "CHRIST THE KING PARISH 125 Park Road Leechburg,
+    PA 15656 ctkleechburg.org". Page 2 "Mass Times": Saturday "5:30pm ... Christ the King", Sunday "9:30am
+    ... Christ the King", and 8:30am on Tuesday, Thursday and Saturday.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

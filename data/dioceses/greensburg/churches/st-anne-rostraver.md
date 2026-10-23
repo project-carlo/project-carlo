@@ -24,9 +24,11 @@ evidence:
     Rostraver Township, PA, 15012; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1743/20261025B.pdf
   seen: 2026-10-22
-  quote: '1870 Rostraver Road, Rostraver Township, PA 15012'
-  note: 'Page 1 of the 25 Oct 2026 St. Anne and Holy Family bulletin: "CHURCH OF SAINT ANNE", Weekends Saturday 4:30pm,
-    Sunday 8:00 am & 11:00am; Weekdays Monday, Thursday & Friday 8:00 am. Page 2 intentions coded SA for 24 Oct - 1 Nov.'
+  quote: 1870 Rostraver Road, Rostraver Township, PA 15012
+  note: 'Page 1 of the 25 Oct 2026 St. Anne and Holy Family bulletin: "CHURCH OF SAINT ANNE", Weekends
+    Saturday 4:30pm, Sunday 8:00 am & 11:00am; Weekdays Monday, Thursday & Friday 8:00 am. Page 2 intentions
+    coded SA for 24 Oct - 1 Nov.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -8,18 +8,32 @@ group: ''
 evidence:
 - url: https://www.olaparishpa.org/wp-content/uploads/2026/10/OCTOBER-25-2026-1.pdf
   seen: 2026-10-23
-  quote: 'Mass Times SATURDAY 4:00 PM at Lucernemines 6:00 PM at Coral SUNDAY 9:00 AM at Coral 11:00 AM at Lucernemines'
-  note: 'Page 1 of the 25 Oct 2026 issue (5 pages; the text layer is one word per line). Same page: "P.O. Box G 2434 Neal Road Coral, PA 15731", "Pastor - The Very Reverend John A. Pavlik, OFM Cap, V.F.", "THIRTIETH SUNDAY OF ORDINARY TIME OCTOBER 25, 2026", "Our Lady of the Assumption Parish". Weekday Mass 8:00 AM at Coral (Tues-Fri). No LPi footer or container number.'
+  quote: Mass Times SATURDAY 4:00 PM at Lucernemines 6:00 PM at Coral SUNDAY 9:00 AM at Coral 11:00 AM
+    at Lucernemines
+  note: 'Page 1 of the 25 Oct 2026 issue (5 pages; the text layer is one word per line). Same page: "P.O.
+    Box G 2434 Neal Road Coral, PA 15731", "Pastor - The Very Reverend John A. Pavlik, OFM Cap, V.F.",
+    "THIRTIETH SUNDAY OF ORDINARY TIME OCTOBER 25, 2026", "Our Lady of the Assumption Parish". Weekday
+    Mass 8:00 AM at Coral (Tues-Fri). No LPi footer or container number.'
 - url: https://www.olaparishpa.org/bulletins/
   seen: 2026-10-23
-  note: 'Diocese-template WordPress site (403 to probe url; answers curl with a browser User-Agent). One child post per issue (/october-25-2026/, /october-18-2026/ ...), each with one PDF named <MONTH>-<D>-<YYYY>-1.pdf in wp-content/uploads/<yyyy>/<mm>/. wp-json posts: october-25-2026 posted 2026-10-21, october-18-2026 on 2026-10-15, weekly back through august-30-2026. The page also links an old LPi repost, 14-1598_August-7-2022-002.pdf.'
+  note: 'Diocese-template WordPress site (403 to probe url; answers curl with a browser User-Agent). One
+    child post per issue (/october-25-2026/, /october-18-2026/ ...), each with one PDF named <MONTH>-<D>-<YYYY>-1.pdf
+    in wp-content/uploads/<yyyy>/<mm>/. wp-json posts: october-25-2026 posted 2026-10-21, october-18-2026
+    on 2026-10-15, weekly back through august-30-2026. The page also links an old LPi repost, 14-1598_August-7-2022-002.pdf.'
 - url: https://www.olaparishpa.org/
   seen: 2026-10-23
-  quote: 'We have two church locations: St Louis, 403 Lucerne Road, Lucernemines, PA & St. Francis, 555 First Street, Coral, PA'
-  note: 'Homepage. Weekend Mass Times on the same page: Saturday 4:00 pm Lucerne Site, 6:00 pm Coral Site; Sunday 9:00 am Coral Site, 11:00 am Lucerne Site.'
+  quote: 'We have two church locations: St Louis, 403 Lucerne Road, Lucernemines, PA & St. Francis, 555
+    First Street, Coral, PA'
+  note: 'Homepage. Weekend Mass Times on the same page: Saturday 4:00 pm Lucerne Site, 6:00 pm Coral Site;
+    Sunday 9:00 am Coral Site, 11:00 am Lucerne Site.'
 - url: https://parishesonline.com/organization/our-lady-of-the-assumption-parish-15731
   seen: 2026-10-23
-  note: 'probe po: LPi orgs our-lady-of-the-assumption-parish-15731 (lpi:0018000000QxC0mAAF, 250 First St, Coral) and st-louis-church-15754 ("Our Lady of the Assumption-Lucerne Site", lpi:0018000000QxC0oAAF) both have no publications. Container 14/1598 (the 2022 repost''s number) answered 403 for 11, 18 and 25 Oct 2026 while 14/1395 answered for the same Sundays: the parish left LPi printing. Not recorded as publication ids.'
+  note: 'probe po: LPi orgs our-lady-of-the-assumption-parish-15731 (lpi:0018000000QxC0mAAF, 250 First
+    St, Coral) and st-louis-church-15754 ("Our Lady of the Assumption-Lucerne Site", lpi:0018000000QxC0oAAF)
+    both have no publications. Container 14/1598 (the 2022 repost''s number) answered 403 for 11, 18 and
+    25 Oct 2026 while 14/1395 answered for the same Sundays: the parish left LPi printing. Not recorded
+    as publication ids.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

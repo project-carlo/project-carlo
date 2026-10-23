@@ -25,14 +25,14 @@ evidence:
 - url: https://discovermass.com/church/st-james-the-greater-apollo-pa/
   seen: 2026-10-22
   quote: 109 Owens View Ave., Apollo, PA 15613
-  note: 'Discover Mass church page (Mass times "Saturday 4:30pm Sunday 9:00am Tuesday 7:30am", from
-    MassTimes.org). Its current bulletin, 25 Oct 2026 (downloaded once), is headed "Saint James the Greater
-    Church 109 Owens View Avenue Apollo, PA 15613" and mentions "the Saturday 4:30 p.m. and Sunday 9 a.m.
-    Masses".'
+  note: Discover Mass church page (Mass times "Saturday 4:30pm Sunday 9:00am Tuesday 7:30am", from MassTimes.org).
+    Its current bulletin, 25 Oct 2026 (downloaded once), is headed "Saint James the Greater Church 109
+    Owens View Avenue Apollo, PA 15613" and mentions "the Saturday 4:30 p.m. and Sunday 9 a.m. Masses".
 - url: https://www.evcatholic.org/
   seen: 2026-10-22
   note: 'Parish homepage (stjamesapollo.org redirects here), opened headed: "Saint James the Greater Church
     Saturday Vigil Mass, 4:30 p.m. Sunday Mass, 9 a.m." Plain curl gets a bot challenge, so no quote.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

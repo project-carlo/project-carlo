@@ -24,10 +24,15 @@ evidence:
     Pike, Farmington, PA, 15437; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1769/20261025B.pdf
   seen: 2026-10-22
-  note: 'Page 1 (image, rendered; no text layer) of the 25 Oct 2026 Southern Fayette bulletin: "St. Joan of Arc / 3523 National Pike/P O Box 92, Farmington, PA 15437 / Weekday Masses: Monday & Friday 9:00 AM / Weekend Masses: Saturday 5:30 PM & Sunday 9:30 AM / Eucharistic Adoration: Friday 9:30-10:30 AM". Its own office box: "St. Joan of Arc Parish, 3523 National Pike (P O Box 92), Farmington".'
+  note: 'Page 1 (image, rendered; no text layer) of the 25 Oct 2026 Southern Fayette bulletin: "St. Joan
+    of Arc / 3523 National Pike/P O Box 92, Farmington, PA 15437 / Weekday Masses: Monday & Friday 9:00
+    AM / Weekend Masses: Saturday 5:30 PM & Sunday 9:30 AM / Eucharistic Adoration: Friday 9:30-10:30
+    AM". Its own office box: "St. Joan of Arc Parish, 3523 National Pike (P O Box 92), Farmington".'
 - url: https://www.faysouth.org/
   seen: 2026-10-22
-  note: 'sjoafarmington.org (the directory website) redirects here in headed Chrome. The Mass Schedule block lists Saturday 5:30 PM and Sunday 9:30 AM at St. Joan of Arc.'
+  note: sjoafarmington.org (the directory website) redirects here in headed Chrome. The Mass Schedule
+    block lists Saturday 5:30 PM and Sunday 9:30 AM at St. Joan of Arc.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

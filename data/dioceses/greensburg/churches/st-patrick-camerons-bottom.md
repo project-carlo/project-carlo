@@ -20,16 +20,22 @@ evidence:
     596 Pineton Rd., Cameron’s Bottom, PA, 15772; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1395/20260419B.pdf
   seen: 2026-10-23
-  quote: 'Historic Saint Patrick’s Church … Cameron’s Bottom, PA … Mass will be celebrated: … Saturday, April 25th at 4 PM … (no PM mass in Heilwood)'
-  note: 'Notice in the 19 Apr 2026 Church of the Resurrection bulletin; the same issue''s intentions list "4:00 PM (Cameron’s Bottom)" for Saturday 25 April.'
+  quote: 'Historic Saint Patrick’s Church … Cameron’s Bottom, PA … Mass will be celebrated: … Saturday,
+    April 25th at 4 PM … (no PM mass in Heilwood)'
+  note: Notice in the 19 Apr 2026 Church of the Resurrection bulletin; the same issue's intentions list
+    "4:00 PM (Cameron’s Bottom)" for Saturday 25 April.
 - url: https://container.parishesonline.com/bulletins/14/1395/20261025B.pdf
   seen: 2026-10-23
-  quote: '4:00 pm (Cameron’s Bottom)'
-  note: 'Page 2 Mass intentions of the 25 Oct 2026 issue, under "Saturday, October 31". The page 1 Mass Schedule box does not list Cameron''s Bottom: its Masses are occasional and take the place of a Heilwood weekend Mass.'
+  quote: 4:00 pm (Cameron’s Bottom)
+  note: 'Page 2 Mass intentions of the 25 Oct 2026 issue, under "Saturday, October 31". The page 1 Mass
+    Schedule box does not list Cameron''s Bottom: its Masses are occasional and take the place of a Heilwood
+    weekend Mass.'
 - url: https://container.parishesonline.com/bulletins/14/1395/20261004B.pdf
   seen: 2026-10-23
-  quote: 'Outdoor Rosary … at Historic Saint Patrick’s Camerons Bottom Church … Heilwood, PA'
-  note: 'Page 4 of the 4 Oct 2026 issue: a rosary "in front of the Fatima Shrine" on Friday 9 October; the 3 May 2026 issue mentions "a complete renovation of St. Patrick" among parish projects.'
+  quote: Outdoor Rosary … at Historic Saint Patrick’s Camerons Bottom Church … Heilwood, PA
+  note: 'Page 4 of the 4 Oct 2026 issue: a rosary "in front of the Fatima Shrine" on Friday 9 October;
+    the 3 May 2026 issue mentions "a complete renovation of St. Patrick" among parish projects.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

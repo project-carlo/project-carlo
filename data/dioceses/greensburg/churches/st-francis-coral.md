@@ -25,12 +25,16 @@ evidence:
     Assumption'', 250 1st St., Coral, PA, 15731; kind: Parish'
 - url: https://www.olaparishpa.org/wp-content/uploads/2026/10/OCTOBER-25-2026-1.pdf
   seen: 2026-10-23
-  quote: '6:00 PM at Coral SUNDAY 9:00 AM at Coral'
-  note: 'Page 1 Mass Times of the 25 Oct 2026 Our Lady of the Assumption bulletin; also "WEEKDAY 8:00 AM at Coral (Tues-Fri)" and Sunday 8:30am confessions at Coral. No street address for the church in the bulletin.'
+  quote: 6:00 PM at Coral SUNDAY 9:00 AM at Coral
+  note: Page 1 Mass Times of the 25 Oct 2026 Our Lady of the Assumption bulletin; also "WEEKDAY 8:00 AM
+    at Coral (Tues-Fri)" and Sunday 8:30am confessions at Coral. No street address for the church in the
+    bulletin.
 - url: https://www.olaparishpa.org/
   seen: 2026-10-23
-  quote: 'St. Francis, 555 First Street, Coral, PA'
-  note: 'Homepage "Church Locations"; the footer Contact block also gives "555 First Street Coral, PA 15731" and the mailing address 2434 Neal Road, P.O. Box G, Coral, PA 15731-0250.'
+  quote: St. Francis, 555 First Street, Coral, PA
+  note: Homepage "Church Locations"; the footer Contact block also gives "555 First Street Coral, PA 15731"
+    and the mailing address 2434 Neal Road, P.O. Box G, Coral, PA 15731-0250.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

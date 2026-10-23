@@ -24,9 +24,10 @@ evidence:
     61 Mill Street, Uniontown, PA, 15401; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1769/20261025B.pdf
   seen: 2026-10-22
-  note: 'Page 1 (image, rendered) of the 25 Oct 2026 Southern Fayette bulletin: "St. Therese de Lisieux /
-    61 Mill Street, Uniontown, PA 15401 / Weekday Masses: Monday & Friday 7:00 AM / Wednesday 6:00 PM / Weekend
-    Masses: Saturday 4:00 PM & Sunday 11:00 AM".'
+  note: 'Page 1 (image, rendered) of the 25 Oct 2026 Southern Fayette bulletin: "St. Therese de Lisieux
+    / 61 Mill Street, Uniontown, PA 15401 / Weekday Masses: Monday & Friday 7:00 AM / Wednesday 6:00 PM
+    / Weekend Masses: Saturday 4:00 PM & Sunday 11:00 AM".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

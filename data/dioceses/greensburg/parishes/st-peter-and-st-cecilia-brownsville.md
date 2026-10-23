@@ -8,25 +8,25 @@ group: 'Partners: St. Peter, Brownsville + St. Cecilia, Grindstone'
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1809/20261025B.pdf
   seen: 2026-10-22
-  quote: 'CHURCHES OF ST. PETER
-
-    AND ST. CECILIA'
-  note: 'Page 1 masthead of the 25 Oct 2026 issue ("OCTOBER 25, 2026", 30th Sunday in Ordinary Time): both church
-    addresses ("1571 Grindstone Rd. Grindstone, PA 15442", "300 Shaffner Ave. Brownsville, PA 15417"), one "MASS
-    SCHEDULE" keyed "C=St. Cecilia  P=St. Peter", "PASTOR Fr . Efren C. Ambre". Page 12 LPi footer: "Church of
-    St. Peter & St. Cecilia, Brownsville, PA 14-1809".'
+  quote: |-
+    CHURCHES OF ST. PETER
+    AND ST. CECILIA
+  note: 'Page 1 masthead of the 25 Oct 2026 issue ("OCTOBER 25, 2026", 30th Sunday in Ordinary Time):
+    both church addresses ("1571 Grindstone Rd. Grindstone, PA 15442", "300 Shaffner Ave. Brownsville,
+    PA 15417"), one "MASS SCHEDULE" keyed "C=St. Cecilia  P=St. Peter", "PASTOR Fr . Efren C. Ambre".
+    Page 12 LPi footer: "Church of St. Peter & St. Cecilia, Brownsville, PA 14-1809".'
 - url: https://container.parishesonline.com/bulletins/14/1809/20261025B.pdf
   seen: 2026-10-22
   quote: C=St. Cecilia  P=St. Peter
-  note: 'Page 1 schedule: weekday Masses Mon/Wed 8:00 am (C), Tue/Thu 8:00 am (P); "WEEKEND MASSES SATURDAY 4:00
-    pm - (P) SUNDAY 9:00 am - (C) 11:00 am - (P)". Page 2 lists the same week by date plus an All Souls vigil 5:00
-    PM (P). No other place has Mass; "St. Mary Hall" (page 4) is the parish hall. The 20 Sep 2026 masthead is
-    identical apart from the date.'
+  note: 'Page 1 schedule: weekday Masses Mon/Wed 8:00 am (C), Tue/Thu 8:00 am (P); "WEEKEND MASSES SATURDAY
+    4:00 pm - (P) SUNDAY 9:00 am - (C) 11:00 am - (P)". Page 2 lists the same week by date plus an All
+    Souls vigil 5:00 PM (P). No other place has Mass; "St. Mary Hall" (page 4) is the parish hall. The
+    20 Sep 2026 masthead is identical apart from the date.'
 - url: https://www.stpeterstcecilia.org/
   seen: 2026-10-22
-  note: 'Shared site of both parishes (diocese WordPress template; 403 to probe url, 200 to curl with a browser
-    User-Agent). Its "Bulletins" menu item links https://parishesonline.com/organization/church-of-st-peter-st-cecilia;
-    /bulletin/read-our-weekly-bulletins/ and /bulletins/ answer 404, so the site hosts no bulletin copies.'
+  note: Shared site of both parishes (diocese WordPress template; 403 to probe url, 200 to curl with a
+    browser User-Agent). Its "Bulletins" menu item links https://parishesonline.com/organization/church-of-st-peter-st-cecilia;
+    /bulletin/read-our-weekly-bulletins/ and /bulletins/ answer 404, so the site hosts no bulletin copies.
 - url: https://parishesonline.com/organization/church-of-st-peter-st-cecilia
   seen: 2026-10-22
   note: 'probe po: "Church of St. Peter & St. Cecilia", 300 Shaffner Ave, Brownsville, PA 15417, lpi:0018000000QxBzbAAF,
@@ -34,10 +34,11 @@ evidence:
     lists no other organization for either parish (only St. Nicholas Byzantine and non-church advertisers).'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=041
   seen: 2026-10-22
-  note: 'Directory: St. Peter Parish, Brownsville, pastor Father Efren Ambre, "Saturday: 4:00 p.m.; Sunday: 11:00
-    a.m.", Partner Parishes "St. Cecilia Parish, Grindstone (125)", website stpeterstcecilia.org. LocationID=125
-    (St. Cecilia): same pastor, "Saturday: no Mass; Sunday: 9:00 a.m.", partner St. Peter, same website, mailing
-    address c/o 118 Church Street, Brownsville.'
+  note: 'Directory: St. Peter Parish, Brownsville, pastor Father Efren Ambre, "Saturday: 4:00 p.m.; Sunday:
+    11:00 a.m.", Partner Parishes "St. Cecilia Parish, Grindstone (125)", website stpeterstcecilia.org.
+    LocationID=125 (St. Cecilia): same pastor, "Saturday: no Mass; Sunday: 9:00 a.m.", partner St. Peter,
+    same website, mailing address c/o 118 Church Street, Brownsville.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

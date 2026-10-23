@@ -24,10 +24,11 @@ evidence:
     Belle Vernon, PA, 15012; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1696/20261025B.pdf
   seen: 2026-10-22
-  quote: 'Liturgies of the Week'
-  note: 'Page 7 "Liturgies of the Week" of the 25 Oct 2026 issue: Saturday Vigil 4:30 PM, Sunday 9:00 AM and 11:00 AM,
-    Tuesday and Friday 8:00 AM with intentions, 24 Oct to 1 Nov. Page 1 masthead "801 Broad Avenue · Belle Vernon, PA
-    15012".'
+  quote: Liturgies of the Week
+  note: 'Page 7 "Liturgies of the Week" of the 25 Oct 2026 issue: Saturday Vigil 4:30 PM, Sunday 9:00
+    AM and 11:00 AM, Tuesday and Friday 8:00 AM with intentions, 24 Oct to 1 Nov. Page 1 masthead "801
+    Broad Avenue · Belle Vernon, PA 15012".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

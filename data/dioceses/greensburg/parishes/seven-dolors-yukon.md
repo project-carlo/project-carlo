@@ -8,30 +8,33 @@ group: ''
 evidence:
 - url: https://www.sevendolors.org/wp-content/uploads/2026/10/101826.pdf
   seen: 2026-10-22
-  quote: 'Seven Dolors Catholic Church'
+  quote: Seven Dolors Catholic Church
   note: 'Page 1 masthead of the 18 Oct 2026 issue (5 pages; linked from https://www.sevendolors.org/october-18-2026/;
-    the PDF answers 403 to probe pdf but downloads with curl and a browser User-Agent): "Seven Dolors Catholic Church",
-    "102 Center St., PO Box 308, Yukon, PA 15698", "Year A - Twenty-Ninth Sunday in Ordinary Time October 18, 2026";
-    MASS SCHEDULE "Saturday Vigil 4:00 PM", "Sunday 11:00 AM", "Weekday Mass - Mon & Wed 9:00 a.m."; pastoral staff
-    "Rev. David J. Nazimek Pastor". Names Seven Dolors alone.'
+    the PDF answers 403 to probe pdf but downloads with curl and a browser User-Agent): "Seven Dolors
+    Catholic Church", "102 Center St., PO Box 308, Yukon, PA 15698", "Year A - Twenty-Ninth Sunday in
+    Ordinary Time October 18, 2026"; MASS SCHEDULE "Saturday Vigil 4:00 PM", "Sunday 11:00 AM", "Weekday
+    Mass - Mon & Wed 9:00 a.m."; pastoral staff "Rev. David J. Nazimek Pastor". Names Seven Dolors alone.'
 - url: https://www.sevendolors.org/wp-content/uploads/2026/10/101826.pdf
   seen: 2026-10-22
-  quote: 'Mass at St. Edward ~ 9:00am'
-  note: 'Page 2 intentions: Tuesday and Thursday weekday Masses are at St. Edward, Herminie (same pastor, its own
-    bulletin: row st-edward-herminie).'
+  quote: Mass at St. Edward ~ 9:00am
+  note: 'Page 2 intentions: Tuesday and Thursday weekday Masses are at St. Edward, Herminie (same pastor,
+    its own bulletin: row st-edward-herminie).'
 - url: https://www.sevendolors.org/bulletins/
   seen: 2026-10-22
-  note: 'Diocese-template WordPress page (403 to probe url; curl with a browser User-Agent reads it) listing one post per
-    issue: October 18, October 11, October 4, September 27 ... 2026. Each post embeds one dFlip PDF named MMDDYY.pdf
-    (101826, 101126, 092726, 083026). The sidebar also links an altar-ministry schedule PDF.'
+  note: 'Diocese-template WordPress page (403 to probe url; curl with a browser User-Agent reads it) listing
+    one post per issue: October 18, October 11, October 4, September 27 ... 2026. Each post embeds one
+    dFlip PDF named MMDDYY.pdf (101826, 101126, 092726, 083026). The sidebar also links an altar-ministry
+    schedule PDF.'
 - url: https://parishesonline.com/organization/seven-dolors-church-15698
   seen: 2026-10-22
-  note: 'probe po: LPi org "Seven Dolors Church", 102 Center St, Yukon (LPi 0018000000QxC0kAAF) has no publications and
-    no container: not a live channel, not recorded.'
+  note: 'probe po: LPi org "Seven Dolors Church", 102 Center St, Yukon (LPi 0018000000QxC0kAAF) has no
+    publications and no container: not a live channel, not recorded.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=311
   seen: 2026-10-22
-  note: 'Directory: Seven Dolors Parish, 102 Center Street, Yukon; pastor Father David J. Nazimek (also pastor of St.
-    Edward, Herminie, LocationID 129); "Saturday: 4:00 p.m.; Sunday: 11:00 a.m."; no Partner Parishes listed.'
+  note: 'Directory: Seven Dolors Parish, 102 Center Street, Yukon; pastor Father David J. Nazimek (also
+    pastor of St. Edward, Herminie, LocationID 129); "Saturday: 4:00 p.m.; Sunday: 11:00 a.m."; no Partner
+    Parishes listed.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

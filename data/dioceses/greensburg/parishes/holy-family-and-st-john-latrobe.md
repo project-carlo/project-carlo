@@ -10,10 +10,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1543/20261025B.pdf
   seen: 2026-10-22
   quote: THE PARTNER PARISHES OF
-  note: 'Page 1 masthead of the 25 Oct 2026 issue (12 pages): "THE PARTNER PARISHES OF HOLY FAMILY &
-    SAINT JOHN THE EVANGELIST", "SUNDAY, OCTOBER 25TH 2026 | THIRTIETH SUNDAY IN ORDINARY TIME",
-    "Reverend E. George Saletrik, Pastor", contact blocks for Holy Family (1200 Ligonier Street) and
-    Saint John (306 St. John Drive).'
+  note: 'Page 1 masthead of the 25 Oct 2026 issue (12 pages): "THE PARTNER PARISHES OF HOLY FAMILY & SAINT
+    JOHN THE EVANGELIST", "SUNDAY, OCTOBER 25TH 2026 | THIRTIETH SUNDAY IN ORDINARY TIME", "Reverend E.
+    George Saletrik, Pastor", contact blocks for Holy Family (1200 Ligonier Street) and Saint John (306
+    St. John Drive).'
 - url: https://container.parishesonline.com/bulletins/14/1543/20261025B.pdf
   seen: 2026-10-22
   quote: Saturday Vigil | 5:00 p.m.
@@ -22,19 +22,19 @@ evidence:
     Weekdays: Holy Family Tue & Fri 8:00, Wed 9:00; Saint John Mon & Thu 8:00.'
 - url: https://parishesonline.com/organization/holy-family-church-st-john-the-evangelist-parish
   seen: 2026-10-22
-  note: 'probe po: org "Holy Family Church", 1200 Ligonier St, Latrobe; LPi id 0018000000QxC05AAF;
-    container 14/1543; latest issues 2026-10-18 and 2026-10-25.'
+  note: 'probe po: org "Holy Family Church", 1200 Ligonier St, Latrobe; LPi id 0018000000QxC05AAF; container
+    14/1543; latest issues 2026-10-18 and 2026-10-25.'
 - url: https://www.stjohnlatrobe.org/october-25-2026/
   seen: 2026-10-22
-  note: 'St. John''s own site (WordPress on the diocese template; 403 to plain fetches, opened in headed
+  note: St. John's own site (WordPress on the diocese template; 403 to plain fetches, opened in headed
     Chrome with parish-site-access visit.py). Its "Read Our Weekly Bulletins" page links one post per
-    issue (October 25, 18, 11, 1, September 27 ...); the October 25 post links
-    wp-content/uploads/2026/10/14-1543-October-25-2026.pdf, i.e. the same container 14/1543 issue.'
+    issue (October 25, 18, 11, 1, September 27 ...); the October 25 post links wp-content/uploads/2026/10/14-1543-October-25-2026.pdf,
+    i.e. the same container 14/1543 issue.
 - url: https://www.holyfamilylatrobe.org/bulletinsandnewsletter
   seen: 2026-10-22
-  note: 'Holy Family''s Wix site lists weekly PDFs (October 11, October 4, September 27 ... 2026) plus
-    an undated newest one, _files/ugd/19bc24_81073d02b18e492d96c27691dc818cd1.pdf, whose page 1 is the
-    same partner-parishes masthead dated "SUNDAY, OCTOBER 18TH 2026".'
+  note: Holy Family's Wix site lists weekly PDFs (October 11, October 4, September 27 ... 2026) plus an
+    undated newest one, _files/ugd/19bc24_81073d02b18e492d96c27691dc818cd1.pdf, whose page 1 is the same
+    partner-parishes masthead dated "SUNDAY, OCTOBER 18TH 2026".
 - url: https://parishesonline.com/organization/st-john-the-evangelist-st-rose
   seen: 2026-10-22
   note: 'probe po: an older org "St. John the Evangelist" (306 Saint Johns Dr; LPi 0018000000QxC06AAF;
@@ -42,8 +42,9 @@ evidence:
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=159
   seen: 2026-10-22
   note: 'Directory: Holy Family Parish, pastor Father E. George Saletrik; "Saturday: 4:30 p.m.; Sunday:
-    8:00 a.m., 10:30 a.m., 3:00 p.m. (Extraordinary Form), 6:00 p.m."; no Partner Parishes listed.
-    LocationID=161 (St. John the Evangelist Parish): same pastor, "Saturday: 5:00 p.m.; Sunday: 8:30 a.m.".'
+    8:00 a.m., 10:30 a.m., 3:00 p.m. (Extraordinary Form), 6:00 p.m."; no Partner Parishes listed. LocationID=161
+    (St. John the Evangelist Parish): same pastor, "Saturday: 5:00 p.m.; Sunday: 8:30 a.m.".'
+promoted: 2026-10-23
 ---
 
 ## Publisher

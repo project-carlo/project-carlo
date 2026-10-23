@@ -25,8 +25,10 @@ evidence:
     Parish'
 - url: https://container.parishesonline.com/bulletins/14/1395/20261025B.pdf
   seen: 2026-10-23
-  quote: '10:30 am  Ernest'
-  note: 'Page 1 Mass Schedule box of the 25 Oct 2026 Church of the Resurrection bulletin: Ernest has Sunday 10:30 am, Tuesday 8:00 am. The bulletin names the site by town only and gives no street address.'
+  quote: 10:30 am  Ernest
+  note: 'Page 1 Mass Schedule box of the 25 Oct 2026 Church of the Resurrection bulletin: Ernest has Sunday
+    10:30 am, Tuesday 8:00 am. The bulletin names the site by town only and gives no street address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

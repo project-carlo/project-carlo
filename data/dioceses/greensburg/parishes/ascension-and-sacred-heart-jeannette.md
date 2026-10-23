@@ -8,21 +8,33 @@ group: 'Partners: Ascension + Sacred Heart, Jeannette'
 evidence:
 - url: https://www.ascensionsacredheartchurches.org/wp-content/uploads/2026/10/2026-10-18.pdf
   seen: 2026-10-22
-  quote: 'JEANNETTEC ATHOLICC OMMUNITY'
-  note: 'Page 1 masthead of the 18 Oct 2026 issue ("Twenty-ninth Sunday in Ordinary Time –O ctober 18,2 026"; the text layer splits words, quotes keep it): "Ascension Church 615 Division Street", "Sacred HeartC hurch 310 N7 th Street", one office at 615 Division Street, www.ascensionsacredheartchurches.org. One bulletin for both partner parishes.'
+  quote: JEANNETTEC ATHOLICC OMMUNITY
+  note: 'Page 1 masthead of the 18 Oct 2026 issue ("Twenty-ninth Sunday in Ordinary Time –O ctober 18,2
+    026"; the text layer splits words, quotes keep it): "Ascension Church 615 Division Street", "Sacred
+    HeartC hurch 310 N7 th Street", one office at 615 Division Street, www.ascensionsacredheartchurches.org.
+    One bulletin for both partner parishes.'
 - url: https://www.ascensionsacredheartchurches.org/wp-content/uploads/2026/10/2026-10-18.pdf
   seen: 2026-10-22
-  quote: 'Sunday 10:30a m Sacred Heart'
-  note: 'Page 1 Mass box: Saturday 4:30 pm Sacred Heart, Sunday 8:30 am Ascension, Sunday 10:30 am Sacred Heart, "Sunday (Spanish) 6:00 pmA scension"; weekdays Monday and Friday Sacred Heart, Wednesday and Thursday Ascension. No other place named; no "Chapel" anywhere in the 12 pages.'
+  quote: Sunday 10:30a m Sacred Heart
+  note: 'Page 1 Mass box: Saturday 4:30 pm Sacred Heart, Sunday 8:30 am Ascension, Sunday 10:30 am Sacred
+    Heart, "Sunday (Spanish) 6:00 pmA scension"; weekdays Monday and Friday Sacred Heart, Wednesday and
+    Thursday Ascension. No other place named; no "Chapel" anywhere in the 12 pages.'
 - url: https://www.ascensionsacredheartchurches.org/bulletin/bulletins/
   seen: 2026-10-22
-  note: 'Bulletin page lists one child post per issue, newest first ("october-18-2026", "october-11-2026" ... "august-16-2026"); the 18 Oct post links wp-content/uploads/2026/10/2026-10-18.pdf.'
+  note: Bulletin page lists one child post per issue, newest first ("october-18-2026", "october-11-2026"
+    ... "august-16-2026"); the 18 Oct post links wp-content/uploads/2026/10/2026-10-18.pdf.
 - url: https://parishesonline.com/organization/ascension-church-15644
   seen: 2026-10-22
-  note: 'probe po: LPi orgs ascension-church-15644 (lpi:0018000000QxC01AAF) and sacred-heart-church-15644 (lpi:0018000000QxC02AAF) both answer "no publications". Empty accounts, not a channel.'
+  note: 'probe po: LPi orgs ascension-church-15644 (lpi:0018000000QxC01AAF) and sacred-heart-church-15644
+    (lpi:0018000000QxC02AAF) both answer "no publications". Empty accounts, not a channel.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=147
   seen: 2026-10-22
-  note: 'Directory: Ascension Parish, 615 Division Street, administrator Deacon William D. Wilson, "Saturday: 4:30 p.m. (April-September); Sunday: 8:30 a.m., 6:00 p.m." (Spanish), Partner Parishes "Sacred Heart Parish, Jeannette (149)", website ascensionsacredheartchurches.org. LocationID=149 (Sacred Heart, 504 Cowan Avenue): same administrator and website, "Saturday: 4:30 p.m. (October-March); Sunday: 10:30 a.m.", mailing address 615 Division Street.'
+  note: 'Directory: Ascension Parish, 615 Division Street, administrator Deacon William D. Wilson, "Saturday:
+    4:30 p.m. (April-September); Sunday: 8:30 a.m., 6:00 p.m." (Spanish), Partner Parishes "Sacred Heart
+    Parish, Jeannette (149)", website ascensionsacredheartchurches.org. LocationID=149 (Sacred Heart,
+    504 Cowan Avenue): same administrator and website, "Saturday: 4:30 p.m. (October-March); Sunday: 10:30
+    a.m.", mailing address 615 Division Street.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

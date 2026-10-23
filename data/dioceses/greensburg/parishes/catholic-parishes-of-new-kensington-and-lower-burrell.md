@@ -17,39 +17,40 @@ evidence:
     "OCTOBER 25, 2026 ~ 30TH SUNDAY IN ORDINARY TIME"; Mass box "SAINT MARGARET MARY 3055 LEECHBURG ROAD
     ... Saturday | 4:00 PM Sunday | 8:30 & 11:00 AM ... Monday - Thursday | 7:30 AM"; "MOUNT SAINT PETER
     100 FREEPORT ROAD ... Saturday | 4:30 PM Sunday | 8:30 AM & 10:30 AM ... Tuesday - Friday | 8:30 AM";
-    "SAINT JOSEPH 1125 LEISHMAN AVENUE ... Saturday | 4:00 PM Sunday | 9:30 AM ... Mon., Tue., and Fri. |
-    12:30 PM Wednesday | 6:00 PM"; "SAINT MARY OF CZESTOCHOWA 857 KENNETH AVENUE ... Sunday | 7:30 AM &
-    11:30 AM ... Monday | 8:30 AM Thursday | 12:30 PM Friday | 9:30 AM". Footer: "New Kensington Parish
+    "SAINT JOSEPH 1125 LEISHMAN AVENUE ... Saturday | 4:00 PM Sunday | 9:30 AM ... Mon., Tue., and Fri.
+    | 12:30 PM Wednesday | 6:00 PM"; "SAINT MARY OF CZESTOCHOWA 857 KENNETH AVENUE ... Sunday | 7:30 AM
+    & 11:30 AM ... Monday | 8:30 AM Thursday | 12:30 PM Friday | 9:30 AM". Footer: "New Kensington Parish
     Office: 724-335-9877 | 100 Freeport Road" and "Lower Burrell Parish Office: 724-335-2336 | 3055 Leechburg
     Road". No other worship site.'
 - url: https://parishesonline.com/organization/roman-catholic-parishes-of-lower-burrell-new-kensington
   seen: 2026-10-22
   note: 'probe po: org "Roman Catholic Parishes of Lower Burrell New Kensington", 100 Freeport Road, lpi:001RP00000lUmSRYA0,
-    website www.newkensingtoncatholic.org, container 14/2000, weekly issues 2026-10-04 to 2026-10-25. A second
-    org, mount-st-peters-st-joseph-st-mary-of-czestochowa-parish (lpi:0018000000QxBzPAAV), lists the same
-    container. The older single-parish orgs st-joseph-church-15068 (lpi:0018000000QxBzQAAV), st-mary-of-czestochowa-church-15068
-    (lpi:0018000000QxBzTAAV) and saint-margaret-mary-church (lpi:0018000000QxBzRAAV) list no container and
-    no issues. Container 14/2000 answers 200 for every Sunday from 2026-06-28 checked; 2026-01-04 and earlier
-    dates checked answer 403.'
+    website www.newkensingtoncatholic.org, container 14/2000, weekly issues 2026-10-04 to 2026-10-25.
+    A second org, mount-st-peters-st-joseph-st-mary-of-czestochowa-parish (lpi:0018000000QxBzPAAV), lists
+    the same container. The older single-parish orgs st-joseph-church-15068 (lpi:0018000000QxBzQAAV),
+    st-mary-of-czestochowa-church-15068 (lpi:0018000000QxBzTAAV) and saint-margaret-mary-church (lpi:0018000000QxBzRAAV)
+    list no container and no issues. Container 14/2000 answers 200 for every Sunday from 2026-06-28 checked;
+    2026-01-04 and earlier dates checked answer 403.'
 - url: https://www.newkensingtoncatholic.org/bulletin
   seen: 2026-10-22
-  note: 'The New Kensington site''s Bulletin page embeds parishesonline.com/publicationWidget?type=bulletin&id=001RP00000lUmSRYA0.'
+  note: The New Kensington site's Bulletin page embeds parishesonline.com/publicationWidget?type=bulletin&id=001RP00000lUmSRYA0.
 - url: https://www.smmlb.org/bulletin
   seen: 2026-10-22
-  note: 'St. Margaret Mary''s own site''s Bulletin page embeds the same widget, id=001RP00000lUmSRYA0: it
-    has no bulletin of its own.'
+  note: 'St. Margaret Mary''s own site''s Bulletin page embeds the same widget, id=001RP00000lUmSRYA0:
+    it has no bulletin of its own.'
 - url: https://www.newkensingtoncatholic.org/
   seen: 2026-10-22
   quote: Mount Saint Peter church
-  note: 'Home page Mass times list "Saint Joseph church", "Saint Mary of Czestochowa church" and "Mount Saint
-    Peter church" with the same times as the bulletin, and "All business for St. Joseph, and St. Mary of
-    Czestochowa, and Mt. St. Peter parishes is handl[ed]" at one office.'
+  note: Home page Mass times list "Saint Joseph church", "Saint Mary of Czestochowa church" and "Mount
+    Saint Peter church" with the same times as the bulletin, and "All business for St. Joseph, and St.
+    Mary of Czestochowa, and Mt. St. Peter parishes is handl[ed]" at one office.
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=227
   seen: 2026-10-22
-  note: 'Directory: Mount St. Peter Parish, 100 Freeport Road, pastor Father Daniel L. Blout, website newkensingtoncatholic.org,
-    no partner listed. LocationID=223 (St. Joseph) and 225 (St. Mary of Czestochowa) list each other as Partner
-    Parishes, same pastor and website, mailing address c/o 100 Freeport Road. LocationID=179 (St. Margaret
-    Mary, Lower Burrell): same pastor, website smmlb.org, no partner listed.'
+  note: 'Directory: Mount St. Peter Parish, 100 Freeport Road, pastor Father Daniel L. Blout, website
+    newkensingtoncatholic.org, no partner listed. LocationID=223 (St. Joseph) and 225 (St. Mary of Czestochowa)
+    list each other as Partner Parishes, same pastor and website, mailing address c/o 100 Freeport Road.
+    LocationID=179 (St. Margaret Mary, Lower Burrell): same pastor, website smmlb.org, no partner listed.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

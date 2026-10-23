@@ -29,15 +29,16 @@ evidence:
 - url: https://www.pbcatholic.org/bulletin/read-our-weekly-bulletins/
   seen: 2026-10-22
   quote: Read our Weekly Bulletin - St. Paul and St. Bruno, Greensburg
-  note: 'The partners'' shared site also self-hosts the same Canva bulletin (WordPress uploads; latest
-    linked on 2026-10-22 is October-11-2026-final-1.pdf, page 1 the same masthead and Mass schedules).
-    It lags the ParishesOnline container by a week or more, so the container is the channel.'
+  note: The partners' shared site also self-hosts the same Canva bulletin (WordPress uploads; latest linked
+    on 2026-10-22 is October-11-2026-final-1.pdf, page 1 the same masthead and Mass schedules). It lags
+    the ParishesOnline container by a week or more, so the container is the channel.
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=003
   seen: 2026-10-22
   note: 'Directory: St. Bruno Parish, pastor Father Andrew J. Hamilton, "Saturday: 5:00 p.m.; Sunday:
-    11:00 a.m.", Partner Parishes "St. Paul Parish, Greensburg (007)", website pbcatholic.org, mailing address
-    c/o 820 Carbon Road. LocationID=007 (St. Paul): same pastor, "Saturday: 4:30 p.m.; Sunday: 9:00 a.m.",
-    partner St. Bruno, website pbcatholic.org.'
+    11:00 a.m.", Partner Parishes "St. Paul Parish, Greensburg (007)", website pbcatholic.org, mailing
+    address c/o 820 Carbon Road. LocationID=007 (St. Paul): same pastor, "Saturday: 4:30 p.m.; Sunday:
+    9:00 a.m.", partner St. Bruno, website pbcatholic.org.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

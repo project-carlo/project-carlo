@@ -8,21 +8,35 @@ group: 'Partners: St. John the Baptist, Scottdale + St. Joseph, Everson'
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/0732/20261025B.pdf
   seen: 2026-10-22
-  quote: 'Very Rev. Paul A. Lisik, V.F. - Pastor'
-  note: 'Page 1 masthead of the 25 Oct 2026 issue (8 pages): "ST. JOHN THE BAPTIST & ST. JOSEPH", WWW.STJOHNSANDSTJOSEPHS.ORG, "ST . JOHN THE BAPTIST 416 BROADWAY AVE. SCOTTDALE, PA 15683", "ST . JOSEPH 201 PAINTER STREET EVERSON, PA 15631". One office at 416 S. Broadway Ave. (page 2). One bulletin for both partner parishes.'
+  quote: Very Rev. Paul A. Lisik, V.F. - Pastor
+  note: 'Page 1 masthead of the 25 Oct 2026 issue (8 pages): "ST. JOHN THE BAPTIST & ST. JOSEPH", WWW.STJOHNSANDSTJOSEPHS.ORG,
+    "ST . JOHN THE BAPTIST 416 BROADWAY AVE. SCOTTDALE, PA 15683", "ST . JOSEPH 201 PAINTER STREET EVERSON,
+    PA 15631". One office at 416 S. Broadway Ave. (page 2). One bulletin for both partner parishes.'
 - url: https://container.parishesonline.com/bulletins/14/0732/20261025B.pdf
   seen: 2026-10-22
-  quote: 'Sunday-8:30am-SJE'
-  note: 'Page 1 liturgical schedule: weekdays "Mon., Tues., Wed. -8:30am-SJE", "Thurs., Fri. -8:30am-SJB"; weekend "Saturday Vigil-4:00pm-SJB", "Sunday-8:30am-SJE", "Sunday-10:30am-SJB"; holy days 6:00 pm vigil SJE, 9:00 am SJB. SJB = St. John the Baptist, SJE = St. Joseph, Everson. No other place; "Dunbar" does not occur, and "Connellsville" only in an ad and a Knights of Columbus item.'
+  quote: Sunday-8:30am-SJE
+  note: 'Page 1 liturgical schedule: weekdays "Mon., Tues., Wed. -8:30am-SJE", "Thurs., Fri. -8:30am-SJB";
+    weekend "Saturday Vigil-4:00pm-SJB", "Sunday-8:30am-SJE", "Sunday-10:30am-SJB"; holy days 6:00 pm
+    vigil SJE, 9:00 am SJB. SJB = St. John the Baptist, SJE = St. Joseph, Everson. No other place; "Dunbar"
+    does not occur, and "Connellsville" only in an ad and a Knights of Columbus item.'
 - url: https://parishesonline.com/organization/st-john-the-baptist-and-st-joseph-parishes
   seen: 2026-10-22
-  note: 'probe po: org st-john-the-baptist-and-st-joseph-parishes, lpi:0018000000Qc1QqAAJ, container 14/0732, 416 S Broadway St, Scottdale; weekly issues through 2026-10-25. The org st-joseph-church-15631 (lpi:0018000000QxBzvAAF, 201 Painter St, Everson) has no publications: an empty account, not a channel.'
+  note: 'probe po: org st-john-the-baptist-and-st-joseph-parishes, lpi:0018000000Qc1QqAAJ, container 14/0732,
+    416 S Broadway St, Scottdale; weekly issues through 2026-10-25. The org st-joseph-church-15631 (lpi:0018000000QxBzvAAF,
+    201 Painter St, Everson) has no publications: an empty account, not a channel.'
 - url: https://www.stjohnsandstjosephs.org/bulletin/bulletins/
   seen: 2026-10-22
-  note: 'The parish site (answers 403 to probe url, 200 to curl with a browser User-Agent) reposts the issue: one child post per week (/oct-25-2026/) linking wp-content/uploads/2026/10/Oct-25-2026.pdf, whose page 1 is the same masthead (7 pages: the LPi ad page left out). Same bulletin, not a second channel.'
+  note: 'The parish site (answers 403 to probe url, 200 to curl with a browser User-Agent) reposts the
+    issue: one child post per week (/oct-25-2026/) linking wp-content/uploads/2026/10/Oct-25-2026.pdf,
+    whose page 1 is the same masthead (7 pages: the LPi ad page left out). Same bulletin, not a second
+    channel.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=257
   seen: 2026-10-22
-  note: 'Directory: St. John the Baptist Parish, 416 South Broadway, Scottdale, pastor Father Paul A. Lisik, "Saturday: 4:00 p.m.; Sunday: 10:30 a.m.", Partner Parishes "St. Joseph Parish, Everson (093)", website stjohnsandstjosephs.org. LocationID=093 (St. Joseph, 201 Painter Street, Everson): same pastor and website, "Saturday: no Mass; Sunday: 8:30 a.m.".'
+  note: 'Directory: St. John the Baptist Parish, 416 South Broadway, Scottdale, pastor Father Paul A.
+    Lisik, "Saturday: 4:00 p.m.; Sunday: 10:30 a.m.", Partner Parishes "St. Joseph Parish, Everson (093)",
+    website stjohnsandstjosephs.org. LocationID=093 (St. Joseph, 201 Painter Street, Everson): same pastor
+    and website, "Saturday: no Mass; Sunday: 8:30 a.m.".'
+promoted: 2026-10-23
 ---
 
 ## Publisher

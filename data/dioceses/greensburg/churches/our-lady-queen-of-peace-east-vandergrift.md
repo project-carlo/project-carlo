@@ -25,10 +25,10 @@ evidence:
 - url: https://discovermass.com/church/our-lady-queen-of-peace-east-vandergrift-pa/
   seen: 2026-10-22
   quote: 420 McKinley Ave., East Vandergrift, PA 15629
-  note: 'Discover Mass church page (Mass times "Sunday 11:00am Thursday 12:00pm", from MassTimes.org). Its
-    current bulletin, 25 Oct 2026 (downloaded once), is headed "Our Lady, Queen of Peace Church 420
-    McKinley Avenue East Vandergrift, PA 15629 www.evcatholic.org" and reports that week''s offering for
-    "Our Lady, Queen of Peace Church".'
+  note: Discover Mass church page (Mass times "Sunday 11:00am Thursday 12:00pm", from MassTimes.org).
+    Its current bulletin, 25 Oct 2026 (downloaded once), is headed "Our Lady, Queen of Peace Church 420
+    McKinley Avenue East Vandergrift, PA 15629 www.evcatholic.org" and reports that week's offering for
+    "Our Lady, Queen of Peace Church".
 - url: https://www.evcatholic.org/
   seen: 2026-10-22
   note: 'Parish homepage, opened headed: "Mass Times Our Lady, Queen of Peace Church Sunday Mass, 11 a.m."
@@ -36,8 +36,9 @@ evidence:
     gets a bot challenge, so no quote.'
 - url: https://parishesonline.com/organization/our-lady-queen-of-peace-church-15629
   seen: 2026-10-22
-  note: 'Empty LPi organization (no publications), address "400 Kennedy Ave, East Vandergrift,
-    Pennsylvania, 15629".'
+  note: Empty LPi organization (no publications), address "400 Kennedy Ave, East Vandergrift, Pennsylvania,
+    15629".
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

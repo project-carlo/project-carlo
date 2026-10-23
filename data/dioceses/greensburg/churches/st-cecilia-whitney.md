@@ -25,14 +25,15 @@ evidence:
 - url: https://saintcecilia.net/wp-content/uploads/2026/10/bulletin-2026-10-21.pdf
   seen: 2026-10-22
   quote: Saturday 4:00pm at St Cecilia Church
-  note: 'Page 1 of the 25 Oct 2026 bulletin of Sacred Heart Parish & St. Cecilia Parish, "MASS TIMES": "Wed.
-    & Fri. Mass 8am at Saint Cecilia; Saturday 4:00pm at St Cecilia Church ... Sunday 8:00am at St Cecilia
-    Church". The masthead gives the church as "220 St. Cecilia Rd. Latrobe, PA 15650" and the parish office
-    as "222 St. Cecilia Road, Latrobe, PA 15650".'
+  note: 'Page 1 of the 25 Oct 2026 bulletin of Sacred Heart Parish & St. Cecilia Parish, "MASS TIMES":
+    "Wed. & Fri. Mass 8am at Saint Cecilia; Saturday 4:00pm at St Cecilia Church ... Sunday 8:00am at
+    St Cecilia Church". The masthead gives the church as "220 St. Cecilia Rd. Latrobe, PA 15650" and the
+    parish office as "222 St. Cecilia Road, Latrobe, PA 15650".'
 - url: https://parishesonline.com/organization/st-cecilia-church-15693
   seen: 2026-10-22
   note: 'probe po: LPi organization "St. Cecilia Church" (lpi:0018000000QxC0FAAV, no publications) gives
     "218 Saint Cecilia Rd, Whitney, Pennsylvania, 15693".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -9,8 +9,8 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1539/20261025B.pdf
   seen: 2026-10-22
   quote: Oct. 25th, 2026 - 30th Sunday in Ordinary Time
-  note: 'Page 1 masthead of the 25 Oct 2026 issue (12 pages): "OUR LADY OF GRACE CATHOLIC CHURCH ...
-    1011 Mount Pleasant Rd, Greensburg, PA 15601 ... www.ourladyofgracechurch.org". Names Our Lady of Grace
+  note: 'Page 1 masthead of the 25 Oct 2026 issue (12 pages): "OUR LADY OF GRACE CATHOLIC CHURCH ... 1011
+    Mount Pleasant Rd, Greensburg, PA 15601 ... www.ourladyofgracechurch.org". Names Our Lady of Grace
     alone; St. Benedict is not in the masthead.'
 - url: https://container.parishesonline.com/bulletins/14/1539/20261025B.pdf
   seen: 2026-10-22
@@ -20,13 +20,14 @@ evidence:
     (page 3).'
 - url: https://www.ourladyofgracechurch.org/bulletin9ab2b387
   seen: 2026-10-22
-  note: 'The parish site''s Bulletin page embeds the ParishesOnline publication widget for id 0018000000QxC0YAAV
-    and links parishesonline.com/organization/our-lady-of-grace-church-15601.'
+  note: The parish site's Bulletin page embeds the ParishesOnline publication widget for id 0018000000QxC0YAAV
+    and links parishesonline.com/organization/our-lady-of-grace-church-15601.
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=005
   seen: 2026-10-22
   note: 'Directory: Our Lady of Grace Parish, pastor Father Kenneth G. Zaccagnini; "Saturday: 4:00 p.m.;
-    Sunday: 8:00 a.m., 10:30 a.m., 6:00 p.m. (Regional Mass)"; Partner Parishes "St. Benedict Parish, Marguerite
-    (185)".'
+    Sunday: 8:00 a.m., 10:30 a.m., 6:00 p.m. (Regional Mass)"; Partner Parishes "St. Benedict Parish,
+    Marguerite (185)".'
+promoted: 2026-10-23
 ---
 
 ## Publisher

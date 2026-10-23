@@ -8,24 +8,24 @@ group: ''
 evidence:
 - url: https://www.saintflorian.org/wp-content/uploads/2026/10/20261018.pdf
   seen: 2026-10-22
-  quote: 'Pastor/Trust Administrator'
-  note: 'Page 1 of the 18 Oct 2026 issue (5 pages; linked from the post
-    https://www.saintflorian.org/the-twenty-ninth-sunday-in-ordinary-time-october-18th-2026/): "REV. JOHN A. SEDLAK
-    Pastor/Trust Administrator"; Mass Schedule "Weekday & Sat. Morning: 8:00 am", "Saturday Vigil: 5:00 pm",
-    "Sunday: 9:00 & 11:00 am"; Mailing Address "PO Box 187 4263 Route 981 United PA 15689"; Website
-    "www.saintflorian.org". One parish, one schedule; no other church or chapel named (grep Chapel, Stanislaus,
-    Trauger: none).'
+  quote: Pastor/Trust Administrator
+  note: 'Page 1 of the 18 Oct 2026 issue (5 pages; linked from the post https://www.saintflorian.org/the-twenty-ninth-sunday-in-ordinary-time-october-18th-2026/):
+    "REV. JOHN A. SEDLAK Pastor/Trust Administrator"; Mass Schedule "Weekday & Sat. Morning: 8:00 am",
+    "Saturday Vigil: 5:00 pm", "Sunday: 9:00 & 11:00 am"; Mailing Address "PO Box 187 4263 Route 981 United
+    PA 15689"; Website "www.saintflorian.org". One parish, one schedule; no other church or chapel named
+    (grep Chapel, Stanislaus, Trauger: none).'
 - url: https://www.saintflorian.org/category/bulletin/
   seen: 2026-10-22
   note: 'Diocese-template WordPress category page (403 to probe url and curl; read in headed Chrome with
-    parish-site-access visit.py), one post per issue, newest first: October 18th, October 11th, October 4th,
-    September 27th 2026 ... back to May 31st 2026 on page 1, 20 pages in all. Each post embeds one PDF named
-    YYYYMMDD.pdf (20261018.pdf).'
+    parish-site-access visit.py), one post per issue, newest first: October 18th, October 11th, October
+    4th, September 27th 2026 ... back to May 31st 2026 on page 1, 20 pages in all. Each post embeds one
+    PDF named YYYYMMDD.pdf (20261018.pdf).'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=291
   seen: 2026-10-22
-  note: 'Directory: St. Florian Parish, 4263 Route 981, Mount Pleasant 15666; mailing "P.O. Box 187, United, PA 15689";
-    pastor Father John A. Sedlak (no other parish); "Saturday: 5:00 p.m.; Sunday: 9:00 a.m., 11:00 a.m."; no Partner
-    Parishes listed.'
+  note: 'Directory: St. Florian Parish, 4263 Route 981, Mount Pleasant 15666; mailing "P.O. Box 187, United,
+    PA 15689"; pastor Father John A. Sedlak (no other parish); "Saturday: 5:00 p.m.; Sunday: 9:00 a.m.,
+    11:00 a.m."; no Partner Parishes listed.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

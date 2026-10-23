@@ -24,9 +24,11 @@ evidence:
     Lane, Herminie, PA, 15637; kind: Parish'
 - url: https://www.saint-edward.org/wp-content/uploads/2026/10/1018189.pdf
   seen: 2026-10-22
-  quote: '120 St. Edwards Lane, Herminie, PA 15637'
-  note: 'Page 1 masthead of the parish''s 18 Oct 2026 bulletin: "St. Edward Catholic Church"; MASS SCHEDULE Saturday
-    Vigil 6:00 p.m., Sunday 9:00 a.m., Weekdays Tues & Thurs 9:00 a.m. Page 2 lists Masses here for 17-25 October.'
+  quote: 120 St. Edwards Lane, Herminie, PA 15637
+  note: 'Page 1 masthead of the parish''s 18 Oct 2026 bulletin: "St. Edward Catholic Church"; MASS SCHEDULE
+    Saturday Vigil 6:00 p.m., Sunday 9:00 a.m., Weekdays Tues & Thurs 9:00 a.m. Page 2 lists Masses here
+    for 17-25 October.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

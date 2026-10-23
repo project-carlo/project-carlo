@@ -24,11 +24,15 @@ evidence:
     Rd, Lower Burrell, PA, 15068; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/2000/20261025B.pdf
   seen: 2026-10-22
-  note: 'Page 1 of the 25 Oct 2026 Valley Messenger (image, rendered and read): "SAINT MARGARET MARY 3055 LEECHBURG ROAD Weekend Mass Times Saturday | 4:00 PM Sunday | 8:30 AM & 11:00 AM Weekday Mass Times Monday - Thursday | 7:30 AM".'
+  note: 'Page 1 of the 25 Oct 2026 Valley Messenger (image, rendered and read): "SAINT MARGARET MARY 3055
+    LEECHBURG ROAD Weekend Mass Times Saturday | 4:00 PM Sunday | 8:30 AM & 11:00 AM Weekday Mass Times
+    Monday - Thursday | 7:30 AM".'
 - url: https://www.smmlb.org/
   seen: 2026-10-22
   quote: Contact St. Margaret Mary Catholic Church
-  note: 'The parish''s own site lists "Weekend Mass Saturday Vigil | 4:00 PM Sunday | 8:30 AM, 11:00 AM Weekday Mass Monday–Thursday | 7:30 AM", matching the bulletin.'
+  note: The parish's own site lists "Weekend Mass Saturday Vigil | 4:00 PM Sunday | 8:30 AM, 11:00 AM
+    Weekday Mass Monday–Thursday | 7:30 AM", matching the bulletin.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

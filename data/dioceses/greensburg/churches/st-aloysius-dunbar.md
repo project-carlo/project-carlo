@@ -24,14 +24,20 @@ evidence:
     Dunbar, PA, 15431; kind: Parish'
 - url: https://files.ecatholic.com/36088/bulletins/20261017.pdf
   seen: 2026-10-22
-  quote: 'St. Aloysius will host a pumpkin carving party on SAT, OCT 24 after 5pm Mass.'
-  note: 'Page 5 of the 17-18 Oct 2026 bulletin: the Saturday 5:00 pm Mass at St. Aloysius. The 24-25 Oct issue (page 5, "St.A loysiusi shostinga pies aleN OV 21/22a fter Mass.") and page 6 (image: All Souls Day Mass "8:30am St. Aloysius", 2 Nov) also name it. Page 1 masthead: "DUNBAR PARISH OFFICE 459 Ranch Road Dunbar, PA 15431".'
+  quote: St. Aloysius will host a pumpkin carving party on SAT, OCT 24 after 5pm Mass.
+  note: 'Page 5 of the 17-18 Oct 2026 bulletin: the Saturday 5:00 pm Mass at St. Aloysius. The 24-25 Oct
+    issue (page 5, "St.A loysiusi shostinga pies aleN OV 21/22a fter Mass.") and page 6 (image: All Souls
+    Day Mass "8:30am St. Aloysius", 2 Nov) also name it. Page 1 masthead: "DUNBAR PARISH OFFICE 459 Ranch
+    Road Dunbar, PA 15431".'
 - url: https://www.youghcatholic.org/mass-times
   seen: 2026-10-22
-  note: 'Read headed (403 to plain fetches): "5:00 PM St. Aloysius" (Saturday), "9:00 AM St. Aloysius" (Sunday), M/Tu/Th/F 8:30 AM St. Aloysius. The site''s /st-aloysius page is titled "St. Aloysius Gonzaga".'
+  note: 'Read headed (403 to plain fetches): "5:00 PM St. Aloysius" (Saturday), "9:00 AM St. Aloysius"
+    (Sunday), M/Tu/Th/F 8:30 AM St. Aloysius. The site''s /st-aloysius page is titled "St. Aloysius Gonzaga".'
 - url: https://parishesonline.com/organization/st-aloysius-parish
   seen: 2026-10-22
-  note: 'Empty LPi org (no publications), 459 Ranch Rd, Dunbar, at 39.974164, -79.629708: near the directory pin, about 180 m from the GCatholic Plus Code.'
+  note: 'Empty LPi org (no publications), 459 Ranch Rd, Dunbar, at 39.974164, -79.629708: near the directory
+    pin, about 180 m from the GCatholic Plus Code.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -26,7 +26,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/0702/20261025B.pdf
   seen: 2026-10-22
   quote: 101 West Church Avenue, Masontown, Pennsylvania 15461
-  note: 'Page 1 masthead of the 25 Oct 2026 issue; the "Masses in Masontown" box (rendered image; times in the text layer) lists Monday & Friday 8:00 am, Saturday 6:00 pm, Sunday 11:30 am, confessions Saturday 5:15-5:30 pm.'
+  note: Page 1 masthead of the 25 Oct 2026 issue; the "Masses in Masontown" box (rendered image; times
+    in the text layer) lists Monday & Friday 8:00 am, Saturday 6:00 pm, Sunday 11:30 am, confessions Saturday
+    5:15-5:30 pm.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

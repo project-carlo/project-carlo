@@ -24,8 +24,11 @@ evidence:
     Second Street, Yatesboro, PA, 16263; kind: Parish'
 - url: https://www.stmarykittanning.org/wp-content/uploads/2026/10/BULLETIN-OCTOBER-25-2026-St.-Mary-Kittanning-and-St.-Mary-Yatesboro.pdf
   seen: 2026-10-22
-  quote: '6:00 pm Yatesboro … 11:00 am Yatesboro … St. Mary, Mother of God P.O. Box 327, 109 2nd Street Yatesboro, PA 16263'
-  note: 'Page 1 of the 25 Oct 2026 joint bulletin. The weekday schedule in the same box gives Yatesboro on Tuesday and Thursday at 8:30 am.'
+  quote: 6:00 pm Yatesboro … 11:00 am Yatesboro … St. Mary, Mother of God P.O. Box 327, 109 2nd Street
+    Yatesboro, PA 16263
+  note: Page 1 of the 25 Oct 2026 joint bulletin. The weekday schedule in the same box gives Yatesboro
+    on Tuesday and Thursday at 8:30 am.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

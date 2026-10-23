@@ -25,9 +25,10 @@ evidence:
 - url: https://www.stsylvester.org/wp-content/uploads/2026/10/St.-Sylvester-Bulletin-Oct.-25.pdf
   seen: 2026-10-22
   quote: Sunday Mass 8:30 AM
-  note: 'Page 1 of the 25 Oct 2026 St. Sylvester bulletin: masthead "St. Sylvester Parish + 3028 Route 819 +
-    Slickville, PA 15684"; Masses October 25 and November 1, and All Souls November 2 at 6:30 PM, all with
-    Monsignor Michael Begolly.'
+  note: 'Page 1 of the 25 Oct 2026 St. Sylvester bulletin: masthead "St. Sylvester Parish + 3028 Route
+    819 + Slickville, PA 15684"; Masses October 25 and November 1, and All Souls November 2 at 6:30 PM,
+    all with Monsignor Michael Begolly.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

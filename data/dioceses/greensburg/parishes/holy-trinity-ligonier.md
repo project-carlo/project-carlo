@@ -9,7 +9,9 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1188/20261025B.pdf
   seen: 2026-10-23
   quote: October 25, 2026 Thirtieth Sunday in Ordinary Time
-  note: 'Page 1 masthead of the 25 Oct 2026 issue (text layer has its spaces stripped, e.g. "342WestMainStreetLigonier,PA"): "Holy Trinity Parish", Rev. Anthony J. Carbone, Pastor; Mass Schedule Saturday 5:30 p.m., Sunday 8:00 a.m. and 11:00 a.m., weekdays Monday to Friday 8:00 a.m. Names Holy Trinity alone.'
+  note: 'Page 1 masthead of the 25 Oct 2026 issue (text layer has its spaces stripped, e.g. "342WestMainStreetLigonier,PA"):
+    "Holy Trinity Parish", Rev. Anthony J. Carbone, Pastor; Mass Schedule Saturday 5:30 p.m., Sunday 8:00
+    a.m. and 11:00 a.m., weekdays Monday to Friday 8:00 a.m. Names Holy Trinity alone.'
 - url: https://container.parishesonline.com/bulletins/14/1188/20261025B.pdf
   seen: 2026-10-23
   quote: Holy Trinity Parish - Ligonier, PA 14-1188
@@ -17,13 +19,21 @@ evidence:
 - url: https://www.holytrinityligonier.org/wp-content/uploads/2026/10/October-18-2026.pdf
   seen: 2026-10-23
   quote: 'Sunday: 8:00 a.m. & 11:00 a.m.'
-  note: 'The parish site''s own copy of the 18 Oct 2026 issue (7 pages), linked from the dFlip post https://www.holytrinityligonier.org/october-18-2026/ on its /bulletins/ page. Same masthead as the container issue ("342 West Main Street Ligonier, PA", "Saturday: 5:30 p.m."). On 2026-10-23 the site''s newest post was 18 Oct while the container already had 25 Oct.'
+  note: 'The parish site''s own copy of the 18 Oct 2026 issue (7 pages), linked from the dFlip post https://www.holytrinityligonier.org/october-18-2026/
+    on its /bulletins/ page. Same masthead as the container issue ("342 West Main Street Ligonier, PA",
+    "Saturday: 5:30 p.m."). On 2026-10-23 the site''s newest post was 18 Oct while the container already
+    had 25 Oct.'
 - url: https://parishesonline.com/organization/holy-trinity-parish-15658
   seen: 2026-10-23
-  note: 'probe po: "Holy Trinity Parish", 342 W Main St, Ligonier, website www.holytrinityligonier.org, lpi 0018000000QxC0gAAF, container 14/1188, issues 2026-10-25, 10-18, 10-11. fetch:check 2026-10-23 ok, picked 20261025B.pdf.'
+  note: 'probe po: "Holy Trinity Parish", 342 W Main St, Ligonier, website www.holytrinityligonier.org,
+    lpi 0018000000QxC0gAAF, container 14/1188, issues 2026-10-25, 10-18, 10-11. fetch:check 2026-10-23
+    ok, picked 20261025B.pdf.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=177
   seen: 2026-10-22
-  note: 'Directory: Holy Trinity Parish, 342 West Main Street, Ligonier, pastor Father Anthony J. Carbone, "Saturday: 5:30 p.m.; Sunday: 8:00 a.m., 11:00 a.m.", no Partner Parishes. Fr. Carbone serves no other parish in the clergy directory (tools/pastors.tsv).'
+  note: 'Directory: Holy Trinity Parish, 342 West Main Street, Ligonier, pastor Father Anthony J. Carbone,
+    "Saturday: 5:30 p.m.; Sunday: 8:00 a.m., 11:00 a.m.", no Partner Parishes. Fr. Carbone serves no other
+    parish in the clergy directory (tools/pastors.tsv).'
+promoted: 2026-10-23
 ---
 
 ## Publisher

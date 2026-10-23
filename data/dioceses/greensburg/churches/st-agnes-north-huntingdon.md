@@ -24,8 +24,11 @@ evidence:
     North Huntingdon, PA, 15642; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1865/20261025B.pdf
   seen: 2026-10-22
-  quote: '9:00 AM & 11:15 AM'
-  note: 'Page 1 of the 25 Oct 2026 bulletin: "ST. AGNES PARISH 11400 St. Agnes Lane North Huntingdon, PA 15642"; Holy Mass schedule Saturday 8:00 AM & 4:30 PM Vigil, Sunday 9:00 AM & 11:15 AM, weekdays 7:30 AM.'
+  quote: 9:00 AM & 11:15 AM
+  note: 'Page 1 of the 25 Oct 2026 bulletin: "ST. AGNES PARISH 11400 St. Agnes Lane North Huntingdon,
+    PA 15642"; Holy Mass schedule Saturday 8:00 AM & 4:30 PM Vigil, Sunday 9:00 AM & 11:15 AM, weekdays
+    7:30 AM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

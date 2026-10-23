@@ -21,8 +21,8 @@ evidence:
   seen: 2026-10-22
   quote: 300 Fraser Purchase Rd., Latrobe, Pennsylvania 15650-2690
   note: 'GCatholic church 772 "St. Vincent Archabbey Basilica", Minor Basilica (decree 1955.08.22), served
-    by the American-Cassinese Benedictine Congregation, Location 87G27HVX+3W. Not in the diocese''s
-    GCatholic roster (it is listed under special churches), so no gcatholic: roster id.'
+    by the American-Cassinese Benedictine Congregation, Location 87G27HVX+3W. Not in the diocese''s GCatholic
+    roster (it is listed under special churches), so no gcatholic: roster id.'
 - url: https://discovermass.com/church/st-vincent-basilica-latrobe-pa/
   seen: 2026-10-22
   quote: 5:00 p.m. Community Mass (Archabbey, College ,P arish, Seminary)
@@ -33,6 +33,7 @@ evidence:
   quote: Saint Vincent Archabbey Basilica Masses Saturday - 5 p.m.
   note: 'Saint Vincent College event times: basilica Sunday 7:30, 9:30, 11:30 a.m. and 7 p.m.; Monday-Friday
     6:50 and 8 a.m.; Saturday 7:20 and 8:30 a.m.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

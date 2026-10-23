@@ -5,8 +5,6 @@ bulletin_provider: parishes_online
 provider_id: st-james-church-15670
 publication: ['po-org:st-james-church-15670', 'lpi:0018000000QxC0DAAV', 'po-container:14/1661']
 group: ''
-revisit: 'fetch:check fails because parishesonline.com/organization/st-james-church-15670 renders blank (no selectedPublication link). Re-run it. If it still fails, ask the orchestrator whether to switch the row to a container-based read; the container 14/1661 itself is live.'
-revisit_after: 2026-10-29
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf
   seen: 2026-10-22
@@ -17,23 +15,43 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf
   seen: 2026-10-22
   quote: Saturday | 4:30 p.m. Anticipated Mass Sunday | 9:30 a.m. | Livestreamed
-  note: 'Page 1 "Weekend Masses"; "Weekday Masses" Tuesday to Friday 8:00 a.m. Page 2 intentions (Sat 10/24
+  note: Page 1 "Weekend Masses"; "Weekday Masses" Tuesday to Friday 8:00 a.m. Page 2 intentions (Sat 10/24
     4:30 p.m., Sun 10/25 9:30 a.m., "No Morning Mass" Monday to Friday this week) name no other church.
-    grep "chapel" over all 12 pages finds nothing.'
+    grep "chapel" over all 12 pages finds nothing.
 - url: https://www.stjamesnewalexandria.org/bulletins
   seen: 2026-10-22
-  note: 'The parish site''s bulletin page embeds the LPi publication widget for organization
-    0018000000QxC0DAAV (plain fetch works). It serves no PDFs of its own.'
+  note: The parish site's bulletin page embeds the LPi publication widget for organization 0018000000QxC0DAAV
+    (plain fetch works). It serves no PDFs of its own.
 - url: https://parishesonline.com/organization/st-james-church-15670
   seen: 2026-10-22
-  note: 'probe po: "St. James Catholic Church", 306 St James Lane, New Alexandria, website
-    stjamesnewalexandria.org, container 14/1661, issues 2026-10-25, 10-18, 10-11, 10-04. The org page itself
-    renders blank in headed Chrome (screenshot 2026-10-22), so fetch:check fails (see Not yet confirmed).
-    LPi''s coordinates for it (40.2594, -79.3723) are about 15 km off; not used.'
+  note: 'probe po: "St. James Catholic Church", 306 St James Lane, New Alexandria, website stjamesnewalexandria.org,
+    container 14/1661, issues 2026-10-25, 10-18, 10-11, 10-04. The org page itself renders blank in headed
+    Chrome (screenshot 2026-10-22), so fetch:check fails (see Not yet confirmed). LPi''s coordinates for
+    it (40.2594, -79.3723) are about 15 km off; not used.'
+- url: https://parishesonline.com/organization/st-james-church-15670
+  seen: 2026-10-23
+  note: 'Full fetch:check of the diocese on 2026-10-23: 47 rows ok, this one resolve_failed again ("No
+    matching anchor link found for parishes-online provider_id=st-james-church-15670"). In headed Chrome
+    the org page''s title loads ("St. James Catholic Church - New Alexandria, PA | Parishes Online") but
+    the body is empty and the page throws "Failed to construct ''URL'': Invalid URL"; Our Lady of Grace''s
+    org page, opened the same way, renders 14 selectedPublication links and no error. The LPi geo-search
+    at the org''s coordinates lists only this one St. James organization. The parish site''s widget (https://parishesonline.com/publicationWidget?type=bulletin&color=gray&id=0018000000QxC0DAAV)
+    renders in headed Chrome with links to publication-page/st-james-church-15670?selectedPublication=.../14/1661/20261025B.pdf
+    (and 10-18, 10-11, 10-04). Tried as `other` with `page-pdfs <widget URL>`: it resolved the 25 Oct
+    link but downloaded the publication-page wrapper (not_pdf), because the resolver does not unwrap the
+    selectedPublication parameter. container.parishesonline.com/bulletins/14/1661/ answers 403 (no listing).
+    Row restored to parishes_online.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=217
   seen: 2026-10-22
   note: 'Directory: St. James Parish, 306 St. James Lane, New Alexandria, pastor Father Tyler J. Bandura,
     "Saturday: 4:30 p.m.; Sunday: 9:30 a.m.", no Partner Parishes, website stjamesnewalexandria.org.'
+revisit: 'fetch:check still fails (2026-10-23): the ParishesOnline org page throws a JavaScript error
+  ("Failed to construct ''URL'': Invalid URL") and renders blank, so no selectedPublication link. No supported
+  recipe reads it: the LPi widget renders the issue links but `other` downloads the publication-page wrapper
+  (not_pdf). Needs a pipeline change (unwrap selectedPublication in parish_sites links, or a container/widget
+  fallback for parishes_online), or LPi fixing the org page. Re-run fetch:check then.'
+revisit_after: 2026-10-29
+promoted: 2026-10-23
 ---
 
 ## Publisher
@@ -52,4 +70,4 @@ stjamesnewalexandria.org answers plain fetches. Its `/bulletins` page embeds the
 
 ## Not yet confirmed
 
-The fetch does not work yet: the ParishesOnline organization page for this parish renders blank. The bulletin itself is live and current in container 14/1661. Next step (revisit 2026-10-29): re-run `fetch:check`. If the page is still blank, the row needs a way to read the container directly, which is a pipeline decision for the orchestrator.
+The fetch does not work yet. Re-checked 2026-10-23: the ParishesOnline organization page for this parish crashes in the browser ("Failed to construct 'URL': Invalid URL") and renders blank, so the `parishes_online` resolver, which reads only the org page, finds no issue link. The bulletin itself is live and current in container 14/1661 (25 Oct 2026 issue). No supported recipe works: the parish site's LPi widget lists the issues, but as `publication-page?selectedPublication=<PDF>` links that the `other` resolver downloads as HTML. The fix is a pipeline change (unwrap `selectedPublication` like other viewer parameters, or let `parishes_online` fall back to the widget by LPi id), or LPi repairing the org page. Next step (revisit 2026-10-29): re-run `fetch:check`.

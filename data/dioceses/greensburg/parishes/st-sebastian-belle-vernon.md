@@ -4,29 +4,32 @@ website: https://www.saintsebastianchurch.org
 bulletin_provider: parishes_online
 provider_id: st-sebastian-church-15012
 publication: ['po-org:st-sebastian-church-15012', 'lpi:0018000000QxBzMAAV', 'po-container:14/1696']
-group: 'Shared pastor: Epiphany of Our Lord, Monessen + St. John the Baptist, Perryopolis + St. Sebastian, Belle Vernon'
+group: 'Shared pastor: Epiphany of Our Lord, Monessen + St. John the Baptist, Perryopolis + St. Sebastian,
+  Belle Vernon'
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1696/20261025B.pdf
   seen: 2026-10-22
-  quote: '801 Broad Avenue · Belle Vernon, PA 15012'
+  quote: 801 Broad Avenue · Belle Vernon, PA 15012
   note: 'Page 1 of the 25 Oct 2026 issue (8 pages): masthead "801 Broad Avenue · Belle Vernon", "saintsebastianchurch.org",
-    mission statement "We the Parish Family of Saint Sebastian, Belle Vernon". Page 7 "Liturgies of the Week": Vigil
-    4:30 PM, Sunday 9:00 AM and 11:00 AM, Tuesday and Friday 8:00 AM here; Monday/Thursday "Mass at Epiphany of Our
-    Lord", Wednesday "Mass at St. John the Baptist". Staff "Pastor - Rev. Anthony Onoko".'
+    mission statement "We the Parish Family of Saint Sebastian, Belle Vernon". Page 7 "Liturgies of the
+    Week": Vigil 4:30 PM, Sunday 9:00 AM and 11:00 AM, Tuesday and Friday 8:00 AM here; Monday/Thursday
+    "Mass at Epiphany of Our Lord", Wednesday "Mass at St. John the Baptist". Staff "Pastor - Rev. Anthony
+    Onoko".'
 - url: https://container.parishesonline.com/bulletins/14/1696/20261025B.pdf
   seen: 2026-10-22
-  quote: 'St. Sebastian Church, Belle Vernon, PA 14-1696'
-  note: 'Page 8 LPi ad-page footer.'
+  quote: St. Sebastian Church, Belle Vernon, PA 14-1696
+  note: Page 8 LPi ad-page footer.
 - url: https://parishesonline.com/organization/st-sebastian-church-15012
   seen: 2026-10-22
-  note: 'probe po: LPi org "St. Sebastian Church", 801 Broad Ave, Belle Vernon (LPi 0018000000QxBzMAAV), container
-    14/1696, issues weekly through 2026-10-25.'
+  note: 'probe po: LPi org "St. Sebastian Church", 801 Broad Ave, Belle Vernon (LPi 0018000000QxBzMAAV),
+    container 14/1696, issues weekly through 2026-10-25.'
 - url: https://www.saintsebastianchurch.org/october-18-2026/
   seen: 2026-10-22
-  note: 'Diocese-template site (403 to probe url and curl; read in headed Chrome with parish-site-access visit.py). Its
-    "Read Our Weekly Bulletin" page lists one post per issue (October 18, October 4, September 27 ... 2026); the 18 Oct
-    post embeds OCTOBER-18-2026.pdf, the same 8-page issue as container 14/1696/20261018B.pdf (same page-1 text and
-    the "14-1696" LPi footer). A repost, not a second channel.'
+  note: Diocese-template site (403 to probe url and curl; read in headed Chrome with parish-site-access
+    visit.py). Its "Read Our Weekly Bulletin" page lists one post per issue (October 18, October 4, September
+    27 ... 2026); the 18 Oct post embeds OCTOBER-18-2026.pdf, the same 8-page issue as container 14/1696/20261018B.pdf
+    (same page-1 text and the "14-1696" LPi footer). A repost, not a second channel.
+promoted: 2026-10-23
 ---
 
 ## Publisher

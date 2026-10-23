@@ -24,8 +24,11 @@ evidence:
     Jeannette, PA, 15644; kind: Parish'
 - url: https://www.ascensionsacredheartchurches.org/wp-content/uploads/2026/10/2026-10-18.pdf
   seen: 2026-10-22
-  quote: 'Sunday (Spanish) 6:00 pmA scension'
-  note: 'Page 1 of the 18 Oct 2026 bulletin: "Ascension Church 615 Division Street Jeannette", Sunday 8:30 am and 6:00 pm (Spanish) Masses here, weekday Masses Wednesday and Thursday 8:00 am, Adoration Wednesday.'
+  quote: Sunday (Spanish) 6:00 pmA scension
+  note: 'Page 1 of the 18 Oct 2026 bulletin: "Ascension Church 615 Division Street Jeannette", Sunday
+    8:30 am and 6:00 pm (Spanish) Masses here, weekday Masses Wednesday and Thursday 8:00 am, Adoration
+    Wednesday.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

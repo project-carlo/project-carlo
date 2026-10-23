@@ -25,8 +25,11 @@ evidence:
     Parish'
 - url: https://container.parishesonline.com/bulletins/14/1395/20261025B.pdf
   seen: 2026-10-23
-  quote: '6:00 pm  Clymer'
-  note: 'Page 1 Mass Schedule box of the 25 Oct 2026 Church of the Resurrection bulletin: Clymer has Saturday 6:00 pm, Sunday 11:00 am, Thursday 8:00 am. The bulletin names the site by town only and gives no street address.'
+  quote: 6:00 pm  Clymer
+  note: 'Page 1 Mass Schedule box of the 25 Oct 2026 Church of the Resurrection bulletin: Clymer has Saturday
+    6:00 pm, Sunday 11:00 am, Thursday 8:00 am. The bulletin names the site by town only and gives no
+    street address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

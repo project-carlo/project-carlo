@@ -25,9 +25,10 @@ evidence:
 - url: https://www.partnerparishesmas.org/wp-content/uploads/2026/10/St-A-bulletin-10.18.26.pdf
   seen: 2026-10-22
   quote: 'Saturday Vigil: 5:00 pm at St. Ambrose'
-  note: 'Page 1 of the 18 Oct 2026 bulletin of St. Ambrose and St. Matthew: masthead "St. Ambrose Church &
-    Main Office 505 Cambria Avenue P O Box 617 Avonmore, PA 15618"; intentions "Sat 10/17 5:00 pm St A",
-    "Mon 10/19 8:30 am St A", "Sat 10/24 5:00 pm St A".'
+  note: 'Page 1 of the 18 Oct 2026 bulletin of St. Ambrose and St. Matthew: masthead "St. Ambrose Church
+    & Main Office 505 Cambria Avenue P O Box 617 Avonmore, PA 15618"; intentions "Sat 10/17 5:00 pm St
+    A", "Mon 10/19 8:30 am St A", "Sat 10/24 5:00 pm St A".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

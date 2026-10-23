@@ -25,8 +25,9 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1158/20261025B.pdf
   seen: 2026-10-22
   quote: 5:00 pm - Mass - Peter Walker (the Walker Family)
-  note: 'Page 2 of the 25 Oct 2026 St. Regis bulletin: Saturday 24 Oct 5:00 pm Mass, Sunday 25 Oct 9:30 am
-    Mass, weekday Masses 8:00 am Mon-Thu. Masthead address "517 Homewood Avenue, Trafford, PA 15085".'
+  note: 'Page 2 of the 25 Oct 2026 St. Regis bulletin: Saturday 24 Oct 5:00 pm Mass, Sunday 25 Oct 9:30
+    am Mass, weekday Masses 8:00 am Mon-Thu. Masthead address "517 Homewood Avenue, Trafford, PA 15085".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

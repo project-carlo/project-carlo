@@ -25,13 +25,14 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1809/20261025B.pdf
   seen: 2026-10-22
   quote: 1571 Grindstone Rd.
-  note: 'Page 1 masthead of the 25 Oct 2026 issue gives "1571 Grindstone Rd. Grindstone, PA 15442" for St. Cecilia
-    (the 20 Sep 2026 masthead says the same). Schedule key "C=St. Cecilia".'
+  note: Page 1 masthead of the 25 Oct 2026 issue gives "1571 Grindstone Rd. Grindstone, PA 15442" for
+    St. Cecilia (the 20 Sep 2026 masthead says the same). Schedule key "C=St. Cecilia".
 - url: https://container.parishesonline.com/bulletins/14/1809/20261025B.pdf
   seen: 2026-10-22
   quote: 9:00 am - (C)
-  note: 'Page 1 "WEEKEND MASSES SATURDAY 4:00 pm - (P) SUNDAY 9:00 am - (C) 11:00 am - (P)"; weekday Masses Mon/Wed
-    8:00 am and 3rd Wednesday 8:00 am at St. Cecilia.'
+  note: Page 1 "WEEKEND MASSES SATURDAY 4:00 pm - (P) SUNDAY 9:00 am - (C) 11:00 am - (P)"; weekday Masses
+    Mon/Wed 8:00 am and 3rd Wednesday 8:00 am at St. Cecilia.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

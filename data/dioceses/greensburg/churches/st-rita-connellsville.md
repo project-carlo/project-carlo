@@ -24,11 +24,16 @@ evidence:
     Connellsville, PA, 15425; kind: Parish'
 - url: https://files.ecatholic.com/36088/bulletins/20261010.pdf
   seen: 2026-10-22
-  quote: 'St.RitaHolyNamewillmeetTHISSUNintheirsocialhallafter8amMass.'
-  note: 'Page 5 of the 10-11 Oct 2026 bulletin (text layer without spaces, quoted verbatim): the Sunday 8:00 am Mass at St. Rita. The 24-25 Oct issue (page 6, image) schedules the All Souls Day Mass "8:00am St. Rita" on 2 Nov.'
+  quote: St.RitaHolyNamewillmeetTHISSUNintheirsocialhallafter8amMass.
+  note: 'Page 5 of the 10-11 Oct 2026 bulletin (text layer without spaces, quoted verbatim): the Sunday
+    8:00 am Mass at St. Rita. The 24-25 Oct issue (page 6, image) schedules the All Souls Day Mass "8:00am
+    St. Rita" on 2 Nov.'
 - url: https://www.youghcatholic.org/mass-times
   seen: 2026-10-22
-  note: 'Read headed (403 to plain fetches): "4:00 PM St. Rita" (Saturday), "8:00 AM St. Rita" (Sunday), M/W/F 8:00 AM St. Rita; Wednesday adoration 8:30 AM to 1:00 PM at St. Rita. The page''s map embed is "116 S 2nd St, Connellsville, PA 15425".'
+  note: 'Read headed (403 to plain fetches): "4:00 PM St. Rita" (Saturday), "8:00 AM St. Rita" (Sunday),
+    M/W/F 8:00 AM St. Rita; Wednesday adoration 8:30 AM to 1:00 PM at St. Rita. The page''s map embed
+    is "116 S 2nd St, Connellsville, PA 15425".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

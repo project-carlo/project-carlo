@@ -24,11 +24,14 @@ evidence:
     Fourth Avenue, Ford City, PA, 16226; kind: Parish'
 - url: https://discovermass.com/church/christ-prince-of-peace-ford-city-pa/
   seen: 2026-10-22
-  quote: '8:00 AM -C hrist, Prince of Peace … 9:00 AM -C hrist, Prince of Peace'
-  note: 'Mass intentions in the 25 Oct 2026 issue (page 2; quoted with the letter-spaced text layer verbatim): Mon 8:00 AM, Wed 9:00 AM, Fri 8:00 AM, Sat 31 Oct 5:00 PM and Sun 1 Nov 11:00 AM at Christ, Prince of Peace. Masthead: "Partner Parish Office 718 4th Avenue Ford City, PA 16226".'
+  quote: 8:00 AM -C hrist, Prince of Peace … 9:00 AM -C hrist, Prince of Peace
+  note: 'Mass intentions in the 25 Oct 2026 issue (page 2; quoted with the letter-spaced text layer verbatim):
+    Mon 8:00 AM, Wed 9:00 AM, Fri 8:00 AM, Sat 31 Oct 5:00 PM and Sun 1 Nov 11:00 AM at Christ, Prince
+    of Peace. Masthead: "Partner Parish Office 718 4th Avenue Ford City, PA 16226".'
 - url: https://www.fccatholic.org/
   seen: 2026-10-22
-  quote: 'Saturday-5:00PM-Christ Prince of Peace … Sunday-11:00AM-Christ Prince of Peace'
+  quote: Saturday-5:00PM-Christ Prince of Peace … Sunday-11:00AM-Christ Prince of Peace
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

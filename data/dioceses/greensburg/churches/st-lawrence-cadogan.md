@@ -24,11 +24,13 @@ evidence:
     Cadogan, PA, 16212; kind: Parish'
 - url: https://discovermass.com/church/christ-prince-of-peace-ford-city-pa/
   seen: 2026-10-22
-  quote: '9:00 AM -S t. Lawrence … 6:00 PM -S t. Lawrence'
-  note: 'Mass intentions in the 25 Oct 2026 issue (page 2; quoted with the letter-spaced text layer verbatim): Tue and Thu 8:00 AM, Sun 1 Nov 9:00 AM and 6:00 PM at St. Lawrence.'
+  quote: 9:00 AM -S t. Lawrence … 6:00 PM -S t. Lawrence
+  note: 'Mass intentions in the 25 Oct 2026 issue (page 2; quoted with the letter-spaced text layer verbatim):
+    Tue and Thu 8:00 AM, Sun 1 Nov 9:00 AM and 6:00 PM at St. Lawrence.'
 - url: https://www.fccatholic.org/
   seen: 2026-10-22
-  quote: 'Sunday-9:00AM-St. Lawrence … Sunday-6:00PM-St. Lawrence (Note the time)'
+  quote: Sunday-9:00AM-St. Lawrence … Sunday-6:00PM-St. Lawrence (Note the time)
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

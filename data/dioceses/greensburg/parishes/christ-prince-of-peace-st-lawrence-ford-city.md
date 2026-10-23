@@ -8,20 +8,32 @@ group: 'Partner Parishes: Christ, Prince of Peace, Ford City + St. Lawrence, Cad
 evidence:
 - url: https://discovermass.com/church/christ-prince-of-peace-ford-city-pa/
   seen: 2026-10-22
-  quote: 'http://www.fccatholic.org … The Very Reverend Eric J. Dinga … Christ, Prince of Peace, St. Lawrence,'
-  note: 'Discover Mass church page (Diocesan Publications), weekly issues Aug 9 … Oct 25, 2026, current issue Oct 25, 2026 (bulletin number 3395 in the cover image class). Page 1 of the Oct 25 issue (downloaded once via its tokenised link, 2026-10-22) has the masthead, read with pdftotext: "Partner Parishes of Christ, Prince of Peace & St. Lawrence ... October 25, 2026 ... Partner Parish Office 718 4th Avenue Ford City, PA 16226". The title is not in the pypdf text layer, which is letter-spaced in this issue, so the quote is taken from the office and pastor boxes; the Mass intentions list only "Christ, Prince of Peace" and "St. Lawrence" (Sat 5:00 PM CPOP; Sun 9:00 AM St. Lawrence, 11:00 AM CPOP, 6:00 PM St. Lawrence; weekdays alternating).'
+  quote: http://www.fccatholic.org … The Very Reverend Eric J. Dinga … Christ, Prince of Peace, St. Lawrence,
+  note: 'Discover Mass church page (Diocesan Publications), weekly issues Aug 9 … Oct 25, 2026, current
+    issue Oct 25, 2026 (bulletin number 3395 in the cover image class). Page 1 of the Oct 25 issue (downloaded
+    once via its tokenised link, 2026-10-22) has the masthead, read with pdftotext: "Partner Parishes
+    of Christ, Prince of Peace & St. Lawrence ... October 25, 2026 ... Partner Parish Office 718 4th Avenue
+    Ford City, PA 16226". The title is not in the pypdf text layer, which is letter-spaced in this issue,
+    so the quote is taken from the office and pastor boxes; the Mass intentions list only "Christ, Prince
+    of Peace" and "St. Lawrence" (Sat 5:00 PM CPOP; Sun 9:00 AM St. Lawrence, 11:00 AM CPOP, 6:00 PM St.
+    Lawrence; weekdays alternating).'
 - url: https://www.fccatholic.org/bulletins/
   seen: 2026-10-22
   quote: Please CLICK HERE for the latest bulletin
-  note: 'The shared Christ, Prince of Peace & St. Lawrence site (diocese WordPress template; probe url and curl with a browser User-Agent got 200, recheck got 403 on 2026-10-22). Its Bulletins page hosts no PDFs; the link goes to https://discovermass.com/church/christ-prince-of-peace-ford-city-pa/.'
+  note: The shared Christ, Prince of Peace & St. Lawrence site (diocese WordPress template; probe url
+    and curl with a browser User-Agent got 200, recheck got 403 on 2026-10-22). Its Bulletins page hosts
+    no PDFs; the link goes to https://discovermass.com/church/christ-prince-of-peace-ford-city-pa/.
 - url: https://www.fccatholic.org/
   seen: 2026-10-22
-  quote: 'Saturday-5:00PM-Christ Prince of Peace … Sunday-9:00AM-St. Lawrence … Sunday-11:00AM-Christ Prince of Peace … Sunday-6:00PM-St. Lawrence'
-  note: 'Homepage title "Home - Christ, Prince of Peace & St. Lawrence"; its Mass Schedule box lists these two churches only.'
+  quote: Saturday-5:00PM-Christ Prince of Peace … Sunday-9:00AM-St. Lawrence … Sunday-11:00AM-Christ Prince
+    of Peace … Sunday-6:00PM-St. Lawrence
+  note: Homepage title "Home - Christ, Prince of Peace & St. Lawrence"; its Mass Schedule box lists these
+    two churches only.
 - url: https://discovermass.com/church/st-lawrence-cadogan-pa/
   seen: 2026-10-22
   quote: Shucks! There are no bulletins available.
   note: 'St. Lawrence''s own Discover Mass church page is empty: not a channel.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

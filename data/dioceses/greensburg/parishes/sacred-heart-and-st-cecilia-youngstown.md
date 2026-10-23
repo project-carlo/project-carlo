@@ -9,32 +9,32 @@ evidence:
 - url: https://saintcecilia.net/wp-content/uploads/2026/10/bulletin-2026-10-21.pdf
   seen: 2026-10-22
   quote: Sacred Heart Parish & St. Cecilia Parish
-  note: 'Page 1 of the 25 Oct 2026 issue: "October 25, 2026 Thirtieth Sunday in Ordinary Time", "Pastor: Fr.
-    James F. Podlesny, O.S.B.", both churches'' addresses ("421 Main St. Youngstown, PA 15696", "220 St. Cecilia
-    Rd. Latrobe, PA 15650"), "Partner Parishes of the Catholic Diocese of Greensburg", "Parish Office & Mailing
-    Address: 222 St. Cecilia Road, Latrobe, PA 15650", www.saintcecilia.net.'
+  note: 'Page 1 of the 25 Oct 2026 issue: "October 25, 2026 Thirtieth Sunday in Ordinary Time", "Pastor:
+    Fr. James F. Podlesny, O.S.B.", both churches'' addresses ("421 Main St. Youngstown, PA 15696", "220
+    St. Cecilia Rd. Latrobe, PA 15650"), "Partner Parishes of the Catholic Diocese of Greensburg", "Parish
+    Office & Mailing Address: 222 St. Cecilia Road, Latrobe, PA 15650", www.saintcecilia.net.'
 - url: https://saintcecilia.net/wp-content/uploads/2026/10/bulletin-2026-10-21.pdf
   seen: 2026-10-22
   quote: Saturday 6:00pm at Sacred Heart Church
-  note: 'Page 1 "MASS TIMES": "Tues. & Thurs. Mass 8am at Sacred Heart; Wed. & Fri. Mass 8am at Saint Cecilia;
-    Saturday 4:00pm at St Cecilia Church; Saturday 6:00pm at Sacred Heart Church; Sunday 8:00am at St Cecilia
-    Church; Sunday 10:30am at Sacred Heart Church". No other place.'
+  note: 'Page 1 "MASS TIMES": "Tues. & Thurs. Mass 8am at Sacred Heart; Wed. & Fri. Mass 8am at Saint
+    Cecilia; Saturday 4:00pm at St Cecilia Church; Saturday 6:00pm at Sacred Heart Church; Sunday 8:00am
+    at St Cecilia Church; Sunday 10:30am at Sacred Heart Church". No other place.'
 - url: https://saintcecilia.net/
   seen: 2026-10-22
-  note: 'Home page ("Saint Cecilia & Sacred Heart Church") links the bulletins directly as uploads:
-    wp-content/uploads/2026/10/bulletin-2026-10-21.pdf and bulletin-2026-10-12.pdf (file names carry the upload
-    date, not the Sunday: the 10-21 file is the 25 Oct issue). No ParishesOnline, eCatholic or Discover Mass id
-    on the page.'
+  note: 'Home page ("Saint Cecilia & Sacred Heart Church") links the bulletins directly as uploads: wp-content/uploads/2026/10/bulletin-2026-10-21.pdf
+    and bulletin-2026-10-12.pdf (file names carry the upload date, not the Sunday: the 10-21 file is the
+    25 Oct issue). No ParishesOnline, eCatholic or Discover Mass id on the page.'
 - url: https://parishesonline.com/organization/st-cecilia-church-15693
   seen: 2026-10-22
   note: 'probe po: LPi organizations st-cecilia-church-15693 (lpi:0018000000QxC0FAAV) and sacred-heart-church-15696
     (lpi:0018000000QxC0GAAV) both answer "no publications". Old, empty accounts, not a live channel.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=301
   seen: 2026-10-22
-  note: 'Directory: St. Cecilia Parish, Whitney, pastor Father James F. Podlesny, OSB, "Saturday: 4:00 p.m.; Sunday:
-    8:00 a.m.", Partner Parishes "Sacred Heart Parish, Youngstown (307)", website saintcecilia.net. LocationID=307
-    (Sacred Heart): same pastor, "Saturday: 6:00 p.m.; Sunday: 10:30 a.m.", partner St. Cecilia, same website,
-    mailing address c/o St. Cecilia Church.'
+  note: 'Directory: St. Cecilia Parish, Whitney, pastor Father James F. Podlesny, OSB, "Saturday: 4:00
+    p.m.; Sunday: 8:00 a.m.", Partner Parishes "Sacred Heart Parish, Youngstown (307)", website saintcecilia.net.
+    LocationID=307 (Sacred Heart): same pastor, "Saturday: 6:00 p.m.; Sunday: 10:30 a.m.", partner St.
+    Cecilia, same website, mailing address c/o St. Cecilia Church.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

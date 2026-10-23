@@ -25,9 +25,11 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1201/20261025B.pdf
   seen: 2026-10-23
   quote: 100 Good Shepherd Dr. Kent, PA 15752
-  note: 'Masthead (page 1) of the 25 Oct 2026 SS. Simon and Jude / Good Shepherd bulletin; Mass times for Church of the
-    Good Shepherd "Saturday | 6:00 pm", "Sunday | 11:00 am", "Monday | 5:00 pm Adoration | 6:00 pm Mass", "Tuesday |
-    8:30 am", "Thursday | 8:30 am". Its Mass intentions list "11:00am | For the People of Good Shepherd Parish".'
+  note: Masthead (page 1) of the 25 Oct 2026 SS. Simon and Jude / Good Shepherd bulletin; Mass times for
+    Church of the Good Shepherd "Saturday | 6:00 pm", "Sunday | 11:00 am", "Monday | 5:00 pm Adoration
+    | 6:00 pm Mass", "Tuesday | 8:30 am", "Thursday | 8:30 am". Its Mass intentions list "11:00am | For
+    the People of Good Shepherd Parish".
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

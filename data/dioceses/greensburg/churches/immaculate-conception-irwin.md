@@ -24,8 +24,10 @@ evidence:
     Street, Irwin, PA, 15642; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1204/20261025B.pdf
   seen: 2026-10-22
-  quote: '4:30 pm – 301 , 8:00 am – 247,'
-  note: 'Page 3 of the 25 Oct 2026 bulletin, "Mass Attendance - October 18": four weekend Masses (4:30 pm, 8:00, 10:00, 11:30 am) at the parish church.'
+  quote: 4:30 pm – 301 , 8:00 am – 247,
+  note: 'Page 3 of the 25 Oct 2026 bulletin, "Mass Attendance - October 18": four weekend Masses (4:30
+    pm, 8:00, 10:00, 11:30 am) at the parish church.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

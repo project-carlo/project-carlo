@@ -25,8 +25,11 @@ evidence:
     Parish'
 - url: https://container.parishesonline.com/bulletins/14/0702/20261025B.pdf
   seen: 2026-10-22
-  quote: 'Tuesday & Thursday .......... 8:00 am'
-  note: 'Page 1 of the 25 Oct 2026 issue: the second Mass box, headed "Masses in Footedale" in the rendered image (the heading is not in the text layer), lists Tuesday & Thursday 8:00 am, Saturday 4:00 pm, Sunday 9:30 am, confessions Saturday 3:00-3:30 pm. The bulletin gives no street address for Footedale.'
+  quote: Tuesday & Thursday .......... 8:00 am
+  note: 'Page 1 of the 25 Oct 2026 issue: the second Mass box, headed "Masses in Footedale" in the rendered
+    image (the heading is not in the text layer), lists Tuesday & Thursday 8:00 am, Saturday 4:00 pm,
+    Sunday 9:30 am, confessions Saturday 3:00-3:30 pm. The bulletin gives no street address for Footedale.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

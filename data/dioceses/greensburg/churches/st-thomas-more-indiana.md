@@ -25,9 +25,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1162/20261025B.pdf
   seen: 2026-10-23
   quote: ST. THOMAS MORE UNIVERSITY PARISH
-  note: 'Page 3 of the 25 Oct 2026 Indiana Catholic Community bulletin: "1200 Oakland Avenue / Indiana, PA 15701",
-    Mass schedule "Daily Mass: Tuesday – Friday ... 12:10pm", "Saturday Vigil Mass ... 6:00pm", "Sunday Mass ...
-    9:30am and 6:00pm"; Mass attendance for the weekend of October 17/18 "Total 453".'
+  note: 'Page 3 of the 25 Oct 2026 Indiana Catholic Community bulletin: "1200 Oakland Avenue / Indiana,
+    PA 15701", Mass schedule "Daily Mass: Tuesday – Friday ... 12:10pm", "Saturday Vigil Mass ... 6:00pm",
+    "Sunday Mass ... 9:30am and 6:00pm"; Mass attendance for the weekend of October 17/18 "Total 453".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

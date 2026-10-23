@@ -9,16 +9,27 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/0702/20261025B.pdf
   seen: 2026-10-22
   quote: St. Francis of Assisi, Masontown, PA 14-0702
-  note: 'LPi ad footer, last page, of the 25 Oct 2026 issue. Page 1 masthead (text layer and rendered image): "Saint Francis of Assisi / Western Fayette County / ROMAN CATHOLIC PARISH / 101 West Church Avenue, Masontown", "Website: www.sfoafayette.org", "Very Rev. Anthony J. Klimko, VF / Administrator" with four parochial vicars, and two Mass boxes, "Masses in Masontown" and "Masses in Footedale". No other worship site.'
+  note: 'LPi ad footer, last page, of the 25 Oct 2026 issue. Page 1 masthead (text layer and rendered
+    image): "Saint Francis of Assisi / Western Fayette County / ROMAN CATHOLIC PARISH / 101 West Church
+    Avenue, Masontown", "Website: www.sfoafayette.org", "Very Rev. Anthony J. Klimko, VF / Administrator"
+    with four parochial vicars, and two Mass boxes, "Masses in Masontown" and "Masses in Footedale". No
+    other worship site.'
 - url: https://parishesonline.com/organization/saint-francis-of-assisi-parish
   seen: 2026-10-22
-  note: 'probe po: org "Saint Francis of Assisi Parish", 101 W Church Ave, Masontown, website www.sfoafayette.org, lpi:0018000000QbyuIAAR, container 14/0702, weekly issues 2026-09-20 through 2026-10-25.'
+  note: 'probe po: org "Saint Francis of Assisi Parish", 101 W Church Ave, Masontown, website www.sfoafayette.org,
+    lpi:0018000000QbyuIAAR, container 14/0702, weekly issues 2026-09-20 through 2026-10-25.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=190MS
   seen: 2026-10-22
-  note: 'Directory site pages 190MS (Masontown) and 190FS (Footedale), website www.sfoafayette.org, pastor Father Anthony Klimko, no Partner Parishes. The base page LocationID=190 is stale: it names Father William G. Berkey and "Saturday: no Mass; Sunday: no Mass".'
+  note: 'Directory site pages 190MS (Masontown) and 190FS (Footedale), website www.sfoafayette.org, pastor
+    Father Anthony Klimko, no Partner Parishes. The base page LocationID=190 is stale: it names Father
+    William G. Berkey and "Saturday: no Mass; Sunday: no Mass".'
 - url: https://www.sfoafayette.org/
   seen: 2026-10-22
-  note: 'Opened in headed Chrome (403 to probe url and curl). Title "Home - St. Francis of Assisi, W. Fayette County"; its "BULLETINS" link goes to https://parishesonline.com/organization/saint-francis-of-assisi-parish. Other PDFs on the page are 2022 ministry schedules for Footedale and Masontown and the 2025 annual report, not bulletins.'
+  note: Opened in headed Chrome (403 to probe url and curl). Title "Home - St. Francis of Assisi, W. Fayette
+    County"; its "BULLETINS" link goes to https://parishesonline.com/organization/saint-francis-of-assisi-parish.
+    Other PDFs on the page are 2022 ministry schedules for Footedale and Masontown and the 2025 annual
+    report, not bulletins.
+promoted: 2026-10-23
 ---
 
 ## Publisher

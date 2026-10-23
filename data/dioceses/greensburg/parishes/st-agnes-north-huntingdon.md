@@ -8,25 +8,35 @@ group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1865/20261025B.pdf
   seen: 2026-10-22
-  quote: 'ST. AGNES PARISH'
-  note: 'Page 1 masthead of the 25 Oct 2026 issue (8 pages): "11400 St. Agnes Lane North Huntingdon, PA 15642", "Very Rev. Daniel J. Ulishney, J.C.L.", "30TH SUNDAY IN ORDINARY TIME OCTOBER 25, 2026", "StAgnesParishPA.com". Names this parish alone.'
+  quote: ST. AGNES PARISH
+  note: 'Page 1 masthead of the 25 Oct 2026 issue (8 pages): "11400 St. Agnes Lane North Huntingdon, PA
+    15642", "Very Rev. Daniel J. Ulishney, J.C.L.", "30TH SUNDAY IN ORDINARY TIME OCTOBER 25, 2026", "StAgnesParishPA.com".
+    Names this parish alone.'
 - url: https://container.parishesonline.com/bulletins/14/1865/20261025B.pdf
   seen: 2026-10-22
-  quote: '8:00 AM & 4:30 PM Vigil'
-  note: 'Page 1 "HOLY MASS SCHEDULE": weekday Mass Monday-Friday 7:30 AM; Saturday 8:00 AM & 4:30 PM Vigil; Sunday 9:00 AM & 11:15 AM. Page 2 liturgy schedule has the same times; no place other than the parish church.'
+  quote: 8:00 AM & 4:30 PM Vigil
+  note: 'Page 1 "HOLY MASS SCHEDULE": weekday Mass Monday-Friday 7:30 AM; Saturday 8:00 AM & 4:30 PM Vigil;
+    Sunday 9:00 AM & 11:15 AM. Page 2 liturgy schedule has the same times; no place other than the parish
+    church.'
 - url: https://container.parishesonline.com/bulletins/14/1865/20261025B.pdf
   seen: 2026-10-22
-  quote: 'St. Agnes Church, North Huntingdon, PA      14-1865'
-  note: 'LPi ad-page footer, page 8.'
+  quote: St. Agnes Church, North Huntingdon, PA      14-1865
+  note: LPi ad-page footer, page 8.
 - url: https://www.stagnesparishpa.com/bulletin
   seen: 2026-10-22
-  note: 'Squarespace site; stagneschurch.info (the directory and GCatholic homepage) redirects here. The Bulletin page links self-hosted copies, newest first: /s/20261025B.pdf (the container file name), /s/October-18-2026.pdf, /s/October-11-2026.pdf, /s/100426.pdf ...'
+  note: 'Squarespace site; stagneschurch.info (the directory and GCatholic homepage) redirects here. The
+    Bulletin page links self-hosted copies, newest first: /s/20261025B.pdf (the container file name),
+    /s/October-18-2026.pdf, /s/October-11-2026.pdf, /s/100426.pdf ...'
 - url: https://parishesonline.com/organization/st-agnes-church-15642
   seen: 2026-10-22
-  note: 'probe po: "St. Agnes Church", 11400 Saint Agnes Ln, North Huntingdon, lpi:0018000000QxC0dAAF, container 14/1865, latest issue 2026-10-25. The org''s map point (40.32753, -79.71702) is about 2 km from the church.'
+  note: 'probe po: "St. Agnes Church", 11400 Saint Agnes Ln, North Huntingdon, lpi:0018000000QxC0dAAF,
+    container 14/1865, latest issue 2026-10-25. The org''s map point (40.32753, -79.71702) is about 2
+    km from the church.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=234
   seen: 2026-10-22
-  note: 'Directory: St. Agnes Parish, 11400 St. Agnes Lane, North Huntingdon; pastor Father Daniel J. Ulishney; "Saturday: 4:30 p.m.; Sunday: 9:00 a.m., 11:15 a.m."; no partner parishes; website stagneschurch.info.'
+  note: 'Directory: St. Agnes Parish, 11400 St. Agnes Lane, North Huntingdon; pastor Father Daniel J.
+    Ulishney; "Saturday: 4:30 p.m.; Sunday: 9:00 a.m., 11:15 a.m."; no partner parishes; website stagneschurch.info.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

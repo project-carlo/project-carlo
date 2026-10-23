@@ -24,10 +24,11 @@ evidence:
     Road, Perryopolis, PA, 15473; kind: Parish'
 - url: https://discovermass.com/church/st-john-the-baptist-perryopolis-pa/
   seen: 2026-10-22
-  quote: '3332 Pittsburgh Rd., Perryopolis, PA 15473'
-  note: 'Discover Mass church page; its Oct 25, 2026 bulletin (downloaded once) gives "Weekend Masses: Sat. – 4:00 PM;
-    Sun. – 9:30 AM", weekday Masses Monday to Thursday 9 AM, and on page 3 intentions "Sunday, October 25 ... 9:30am
-    Pro Populo" and Mon-Thu 26-29 October at 9:00am.'
+  quote: 3332 Pittsburgh Rd., Perryopolis, PA 15473
+  note: 'Discover Mass church page; its Oct 25, 2026 bulletin (downloaded once) gives "Weekend Masses:
+    Sat. – 4:00 PM; Sun. – 9:30 AM", weekday Masses Monday to Thursday 9 AM, and on page 3 intentions
+    "Sunday, October 25 ... 9:30am Pro Populo" and Mon-Thu 26-29 October at 9:00am.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

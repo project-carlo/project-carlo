@@ -28,6 +28,7 @@ evidence:
   note: 'Masthead of the 18 Oct 2026 issue, page 1: "St. Patrick Parish Brady’s Bend, Pennsylvania ...
     915 State Route 68 East Brady, Pennsylvania 16028", Sunday 9:30 am. The 25 Oct 2026 issue on Discover
     Mass (st-patrick-east-brady-pa) has the same schedule and weekday Masses Tue-Fri 9:00 am.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

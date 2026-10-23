@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-22
   note: 'OSM at the GCatholic Plus Code: way 12101838, house number 1715 Poplar Street (no church name
     tagged). LPi organization st-paul-and-st-bruno-parishes also gives 1715 Poplar St, South Greensburg.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

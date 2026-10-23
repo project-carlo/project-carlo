@@ -24,9 +24,11 @@ evidence:
     Youngwood, PA, 15697; kind: Parish'
 - url: https://www.holycrossyoungwood.org/wp-content/uploads/2026/10/10-25-26-30OT.pdf
   seen: 2026-10-22
-  quote: 'Youngwood, PA 15697'
-  note: 'Page 1 of the parish''s 25 Oct 2026 bulletin: "HOLY CROSS CHURCH", "Contact: 711 Depot St. Youngwood, PA 15697";
-    Mass Times Saturday (Vigil) 5pm, Sunday 8am & 10am, Monday - Thursday 8am. Page 2 intentions for 24-31 October.'
+  quote: Youngwood, PA 15697
+  note: 'Page 1 of the parish''s 25 Oct 2026 bulletin: "HOLY CROSS CHURCH", "Contact: 711 Depot St. Youngwood,
+    PA 15697"; Mass Times Saturday (Vigil) 5pm, Sunday 8am & 10am, Monday - Thursday 8am. Page 2 intentions
+    for 24-31 October.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -23,14 +23,14 @@ evidence:
   seen: 2026-10-22
   quote: in the Archabbey Basilica join the Monastery, Seminary, Parish, and College communities
   note: 'Parish schedule page: Saturday 5:00 p.m. (Sunday Vigil); Sunday 7:30, 9:30, 11:30 a.m.; Monday-Friday
-    6:50 and 8:00 a.m.; confessions "all in the confessionals in the Basilica". The site''s Bulletins link
-    goes to discovermass.com/church/st-vincent-basilica-latrobe-pa/#bulletins. Read with plain curl; probe url and recheck get no answer from this host ("RemoteDisconnected").'
+    6:50 and 8:00 a.m.; confessions "all in the confessionals in the Basilica". The site''s Bulletins
+    link goes to discovermass.com/church/st-vincent-basilica-latrobe-pa/#bulletins. Read with plain curl;
+    probe url and recheck get no answer from this host ("RemoteDisconnected").'
 - url: https://www.basilicaparishstv.org
   seen: 2026-10-22
-  note: 'The directory''s homepage for the parish; in headed Chrome (parish-site-access visit.py) it
-    redirects to https://stvincentbasilica.org/ ("Saint Vincent Basilica Parish - Latrobe, PA"), which
-    embeds discovermass:st-vincent-basilica-latrobe-pa. probe url gets no answer from either host; curl reads
-    stvincentbasilica.org.'
+  note: The directory's homepage for the parish; in headed Chrome (parish-site-access visit.py) it redirects
+    to https://stvincentbasilica.org/ ("Saint Vincent Basilica Parish - Latrobe, PA"), which embeds discovermass:st-vincent-basilica-latrobe-pa.
+    probe url gets no answer from either host; curl reads stvincentbasilica.org.
 - url: https://parishesonline.com/organization/saint-vincent-basilica-parish
   seen: 2026-10-22
   note: 'probe po: LPi org "Saint Vincent Basilica Parish" (0018000000QxC07AAF, website basilicaparishstv.org)
@@ -39,6 +39,7 @@ evidence:
   seen: 2026-10-22
   note: 'Directory: St. Vincent Basilica Parish, 300 Fraser Purchase Road; pastor Father Killian Loch,
     OSB; "Saturday: 5:00 p.m.; Sunday: 9:30 a.m., 11:30 a.m."; no Partner Parishes.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

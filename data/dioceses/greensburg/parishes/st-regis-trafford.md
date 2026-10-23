@@ -9,25 +9,26 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1158/20261025B.pdf
   seen: 2026-10-22
   quote: 517 Homewood Avenue, Trafford, PA 15085
-  note: 'Page 1 masthead of the 25 Oct 2026 issue: "St. Regis Parish, A Pennsylvania Charitable Trust ...
-    www.stregistrafford.org ... A Parish of the Diocese of Greensburg". Names St. Regis alone. LPi footer
-    (page 8): "St. Regis, Trafford, PA 14-1158".'
+  note: 'Page 1 masthead of the 25 Oct 2026 issue: "St. Regis Parish, A Pennsylvania Charitable Trust
+    ... www.stregistrafford.org ... A Parish of the Diocese of Greensburg". Names St. Regis alone. LPi
+    footer (page 8): "St. Regis, Trafford, PA 14-1158".'
 - url: https://container.parishesonline.com/bulletins/14/1158/20261025B.pdf
   seen: 2026-10-22
   quote: 9:30 am - Mass with Baptism- Living and Deceased Members of St. Regis
   note: 'Page 2 weekly schedule: Saturday 5:00 pm and Sunday 9:30 am Mass, Mon-Thu 8:00 am. St. Barbara
-    appears only as a venue for shared youth events ("PTCT Youth Group (at St. Barbara)"); no Mass at St.
-    Barbara is listed.'
+    appears only as a venue for shared youth events ("PTCT Youth Group (at St. Barbara)"); no Mass at
+    St. Barbara is listed.'
 - url: https://www.stregistrafford.org/october-18-2026/
   seen: 2026-10-22
-  note: 'stregistrafford.org (diocese WordPress template) posts one flipbook per issue; this one serves
+  note: stregistrafford.org (diocese WordPress template) posts one flipbook per issue; this one serves
     wp-content/uploads/Bulletins/Bulletins2026/2026-10-October/October-18-2026.pdf. The site lags the
-    container by a week (25 Oct issue already in 14/1158 on 2026-10-22, not yet on the site).'
+    container by a week (25 Oct issue already in 14/1158 on 2026-10-22, not yet on the site).
 - url: https://www.dioceseofgreensburg.org/official-april-11-2026/
   seen: 2026-10-22
   quote: Administrator of Saint Barbara Parish, Harrison City, Pennsylvania
   note: 'Diocese Official post: Father Daniel Carr appointed Administrator of St. Barbara "while remaining
     as Pastor of Saint Regis Parish, Trafford". One priest, two parishes; not a bulletin decision.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

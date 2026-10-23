@@ -25,7 +25,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1384/20261025B.pdf
   seen: 2026-10-23
   quote: 'Sunday: 8:00 and 10:30 a.m.'
-  note: 'Page 1 of the 25 Oct 2026 St. Raymond bulletin (container 14/1384): "Sunday Masses: Saturday (Vigil): 4:30 p.m.", "Confessions: Saturday: 3:30 p.m."; masthead address "170 School House Lane, P.O. Box 330, Donegal, PA 15628".'
+  note: 'Page 1 of the 25 Oct 2026 St. Raymond bulletin (container 14/1384): "Sunday Masses: Saturday
+    (Vigil): 4:30 p.m.", "Confessions: Saturday: 3:30 p.m."; masthead address "170 School House Lane,
+    P.O. Box 330, Donegal, PA 15628".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

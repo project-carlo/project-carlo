@@ -9,27 +9,48 @@ group: 'Partners: Immaculate Conception + St. John the Evangelist + St. Rita, Co
 evidence:
 - url: https://files.ecatholic.com/36088/bulletins/20261017.pdf
   seen: 2026-10-22
-  quote: 'YOUGH CATHOLIC COMMUNITY OF CONNELLSVILLE & DUNBAR THE PARISHES OF IMMACULATE CONCEPTION , ST. ALOYSIUS GONZAGA, ST. JOHN THE EVANGELIST , & S T. RITA OF CASCIA'
-  note: 'Page 1 masthead of the 17-18 Oct 2026 issue (clean text layer). Same page: "CONNELLSVILLE PARISH OFFICE 116 South 2nd Street" and "DUNBAR PARISH OFFICE 459 Ranch Road", www.youghcatholic.org, one pastor and four parochial vicars for all four parishes.'
+  quote: YOUGH CATHOLIC COMMUNITY OF CONNELLSVILLE & DUNBAR THE PARISHES OF IMMACULATE CONCEPTION , ST.
+    ALOYSIUS GONZAGA, ST. JOHN THE EVANGELIST , & S T. RITA OF CASCIA
+  note: 'Page 1 masthead of the 17-18 Oct 2026 issue (clean text layer). Same page: "CONNELLSVILLE PARISH
+    OFFICE 116 South 2nd Street" and "DUNBAR PARISH OFFICE 459 Ranch Road", www.youghcatholic.org, one
+    pastor and four parochial vicars for all four parishes.'
 - url: https://files.ecatholic.com/36088/bulletins/20261024.pdf
   seen: 2026-10-22
-  quote: '30TH SUNDAY IN ORDINARY TIME OCTOBER 24-25, 2026'
-  note: 'Page 2 of the latest issue (8 pages, Diocesan/Discover Mass layout, ad page 8 "3457"). Page 1 (rendered; its text layer is letter-spaced) has the same four-parish masthead and "OCTOBER 24-25, 2026". Page 6 (image, rendered) has the All Souls Day schedule for MON, NOV 2: 8:00am St. Rita, 8:30am St. Aloysius, 12:10pm St. John, 6:30pm Immaculate Conception. No weekend Mass grid is printed in this or the two previous issues; announcements name Masses at each church (see the church records).'
+  quote: 30TH SUNDAY IN ORDINARY TIME OCTOBER 24-25, 2026
+  note: 'Page 2 of the latest issue (8 pages, Diocesan/Discover Mass layout, ad page 8 "3457"). Page 1
+    (rendered; its text layer is letter-spaced) has the same four-parish masthead and "OCTOBER 24-25,
+    2026". Page 6 (image, rendered) has the All Souls Day schedule for MON, NOV 2: 8:00am St. Rita, 8:30am
+    St. Aloysius, 12:10pm St. John, 6:30pm Immaculate Conception. No weekend Mass grid is printed in this
+    or the two previous issues; announcements name Masses at each church (see the church records).'
 - url: https://www.youghcatholic.org/bulletins
   seen: 2026-10-22
-  note: 'eCatholic site 36088 (answers 403 to probe url and to curl with a browser User-Agent; opens in headed Chrome). The Bulletins page lists 134 weekly issues, files.ecatholic.com/36088/bulletins/20240317.pdf through 20261024.pdf (file name = the Saturday of the weekend). The PDFs download with plain curl.'
+  note: eCatholic site 36088 (answers 403 to probe url and to curl with a browser User-Agent; opens in
+    headed Chrome). The Bulletins page lists 134 weekly issues, files.ecatholic.com/36088/bulletins/20240317.pdf
+    through 20261024.pdf (file name = the Saturday of the weekend). The PDFs download with plain curl.
 - url: https://www.youghcatholic.org/mass-times
   seen: 2026-10-22
-  note: 'Read headed (403 to plain fetches). "MASS TIMES SATURDAY: 4:00 PM St. Rita 5:00 PM St. Aloysius 6:00 PM Immaculate Conception SUNDAY: 8:00 AM St. Rita 9:00 AM St. Aloysius 9:30 AM Immaculate Conception 11:00 AM St. John the Evangelist"; weekdays M/W/F 8:00 AM St. Rita, M/Tu/Th/F 8:30 AM St. Aloysius, Tue 8:00 AM St. John, Thu 8:00 AM Immaculate Conception. No other place.'
+  note: 'Read headed (403 to plain fetches). "MASS TIMES SATURDAY: 4:00 PM St. Rita 5:00 PM St. Aloysius
+    6:00 PM Immaculate Conception SUNDAY: 8:00 AM St. Rita 9:00 AM St. Aloysius 9:30 AM Immaculate Conception
+    11:00 AM St. John the Evangelist"; weekdays M/W/F 8:00 AM St. Rita, M/Tu/Th/F 8:30 AM St. Aloysius,
+    Tue 8:00 AM St. John, Thu 8:00 AM Immaculate Conception. No other place.'
 - url: https://discovermass.com/church/st-rita-connellsville-pa/
   seen: 2026-10-22
-  note: 'The same Diocesan issue is on Discover Mass under St. Rita only: bulletin-cover "X-|2026-10-25|...|3457" with a bulletin-current download link. The slugs immaculate-conception-connellsville-pa, st-john-the-evangelist-connellsville-pa and st-aloysius-dunbar-pa exist but show no current bulletin.'
+  note: 'The same Diocesan issue is on Discover Mass under St. Rita only: bulletin-cover "X-|2026-10-25|...|3457"
+    with a bulletin-current download link. The slugs immaculate-conception-connellsville-pa, st-john-the-evangelist-connellsville-pa
+    and st-aloysius-dunbar-pa exist but show no current bulletin.'
 - url: https://parishesonline.com/organization/st-aloysius-parish
   seen: 2026-10-22
-  note: 'probe po: LPi orgs st-aloysius-parish (lpi:0018000000QxBzeAAF), st-rita-church-15425 (lpi:0018000000QxBzdAAF), immaculate-conception-church-15425 (lpi:0018000000QxC0TAAV), st-john-evangelist-church-15425 (lpi:0018000000QxBzcAAF) and holy-trinity-church-15425 all have no publications: empty accounts, not channels.'
+  note: 'probe po: LPi orgs st-aloysius-parish (lpi:0018000000QxBzeAAF), st-rita-church-15425 (lpi:0018000000QxBzdAAF),
+    immaculate-conception-church-15425 (lpi:0018000000QxC0TAAV), st-john-evangelist-church-15425 (lpi:0018000000QxBzcAAF)
+    and holy-trinity-church-15425 all have no publications: empty accounts, not channels.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=083
   seen: 2026-10-22
-  note: 'Directory: St. Aloysius Parish, 459 Ranch Road, Dunbar, website youghcatholic.org, same pastor, no Partner Parishes listed, "Saturday: 5:00 p.m.; Sunday: 9:00 a.m.". LocationIDs 065 (Immaculate Conception, "Saturday: 6:00 p.m.; Sunday: 9:30 a.m."), 067 (St. John the Evangelist, "Saturday: no Mass; Sunday: 11:00 a.m.") and 069 (St. Rita, "Saturday: 4:00 p.m.; Sunday: 8:00 a.m.") list each other as partners, website youghcatholic.org.'
+  note: 'Directory: St. Aloysius Parish, 459 Ranch Road, Dunbar, website youghcatholic.org, same pastor,
+    no Partner Parishes listed, "Saturday: 5:00 p.m.; Sunday: 9:00 a.m.". LocationIDs 065 (Immaculate
+    Conception, "Saturday: 6:00 p.m.; Sunday: 9:30 a.m."), 067 (St. John the Evangelist, "Saturday: no
+    Mass; Sunday: 11:00 a.m.") and 069 (St. Rita, "Saturday: 4:00 p.m.; Sunday: 8:00 a.m.") list each
+    other as partners, website youghcatholic.org.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

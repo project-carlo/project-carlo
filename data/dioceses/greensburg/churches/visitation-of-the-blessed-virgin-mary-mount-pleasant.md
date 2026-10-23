@@ -24,8 +24,12 @@ evidence:
     Parish'', 740 Walnut Street, Mt. Pleasant, PA, 15666; kind: Parish'
 - url: https://www.mpcatholicchurches.org/wp-content/uploads/2026/10/October-25-2026.pdf
   seen: 2026-10-22
-  quote: 'SSuunnddaayy:: VViissiittaattiioonn aatt 88::3300 aa..mm..;; SStt.. PPiiuuss XX aatt 1100::3300 aa..mm..'
-  note: 'Page 1 of the 25 Oct 2026 bulletin (doubled letters in the text layer): Saturday 4:00 pm and Sunday 8:30 am at Visitation. Masthead address "740 West Walnut Street", also the parish office ("Office: 740 W. Walnut St.").'
+  quote: 'SSuunnddaayy:: VViissiittaattiioonn aatt 88::3300 aa..mm..;; SStt.. PPiiuuss XX aatt 1100::3300
+    aa..mm..'
+  note: 'Page 1 of the 25 Oct 2026 bulletin (doubled letters in the text layer): Saturday 4:00 pm and
+    Sunday 8:30 am at Visitation. Masthead address "740 West Walnut Street", also the parish office ("Office:
+    740 W. Walnut St.").'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

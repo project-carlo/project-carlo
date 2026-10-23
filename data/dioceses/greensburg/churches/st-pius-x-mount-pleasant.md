@@ -25,7 +25,10 @@ evidence:
 - url: https://www.mpcatholicchurches.org/wp-content/uploads/2026/10/October-25-2026.pdf
   seen: 2026-10-22
   quote: 'DDaaiillyy ((wweeeekkddaayy)) MMaassss:: SStt.. PPiiuuss XX aatt 77::0000 aa..mm..'
-  note: 'Page 1 of the 25 Oct 2026 bulletin (doubled letters in the text layer): Saturday 6:00 pm and Sunday 10:30 am at St. Pius X, and the 7:00 am weekday Mass. The masthead pairs "224 Summit Street" with Mt. Pleasant and Visitation''s 740 West Walnut Street.'
+  note: 'Page 1 of the 25 Oct 2026 bulletin (doubled letters in the text layer): Saturday 6:00 pm and
+    Sunday 10:30 am at St. Pius X, and the 7:00 am weekday Mass. The masthead pairs "224 Summit Street"
+    with Mt. Pleasant and Visitation''s 740 West Walnut Street.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 (image, rendered) of the 25 Oct 2026 Southern Fayette bulletin: "St. Mary Nativity / 61
     N. Mount Vernon Avenue, Uniontown, PA 15401 / Weekday Masses: Monday, Tuesday, Friday 8:30 AM / Weekend
     Masses: Saturday 4:30 PM & Sunday 8:30 AM".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

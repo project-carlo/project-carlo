@@ -24,9 +24,11 @@ evidence:
     Yukon, PA, 15698; kind: Parish'
 - url: https://www.sevendolors.org/wp-content/uploads/2026/10/101826.pdf
   seen: 2026-10-22
-  quote: '102 Center St., PO Box 308'
-  note: 'Page 1 masthead of the parish''s 18 Oct 2026 bulletin: "Seven Dolors Catholic Church ... Yukon, PA 15698";
-    Saturday Vigil 4:00 PM, Sunday 11:00 AM, Weekday Mass Mon & Wed 9:00 a.m. Page 2 lists Masses here for 17-25 October.'
+  quote: 102 Center St., PO Box 308
+  note: 'Page 1 masthead of the parish''s 18 Oct 2026 bulletin: "Seven Dolors Catholic Church ... Yukon,
+    PA 15698"; Saturday Vigil 4:00 PM, Sunday 11:00 AM, Weekday Mass Mon & Wed 9:00 a.m. Page 2 lists
+    Masses here for 17-25 October.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

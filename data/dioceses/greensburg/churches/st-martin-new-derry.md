@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-22
   note: 'Listed in Diocese of Greensburg: Parish Directory as ''St. Martin Parish'', 5684 Route 982, Derry,
     PA, 15671; kind: Parish. Mass line "Saturday: no Mass; Sunday: 9:00 a.m."'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

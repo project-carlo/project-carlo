@@ -19,16 +19,17 @@ evidence:
     AM. Page 2 intentions list the same Masses for 24 Oct-1 Nov 2026, all at the cathedral.'
 - url: https://www.blessedsacramentcathedral.org/bulletin/read-our-weekly-bulletins/
   seen: 2026-10-22
-  note: 'Opened in headed Chrome (parish-site-access visit.py; plain fetches get 403). The page embeds
-    the ParishesOnline viewer for lpi:0018000000QxBzkAAF and links parishesonline.com/publication-page/blessed-sacrament-cathedral?selectedPublication=https://container.parishesonline.com/bulletins/14/1762/20261025B.pdf.'
+  note: Opened in headed Chrome (parish-site-access visit.py; plain fetches get 403). The page embeds
+    the ParishesOnline viewer for lpi:0018000000QxBzkAAF and links parishesonline.com/publication-page/blessed-sacrament-cathedral?selectedPublication=https://container.parishesonline.com/bulletins/14/1762/20261025B.pdf.
 - url: https://parishesonline.com/organization/blessed-sacrament-cathedral
   seen: 2026-10-22
-  note: 'probe po: org "Blessed Sacrament Cathedral", 300 N Main St, Greensburg; container 14/1762;
-    weekly issues 2026-09-20 through 2026-10-25.'
+  note: 'probe po: org "Blessed Sacrament Cathedral", 300 N Main St, Greensburg; container 14/1762; weekly
+    issues 2026-09-20 through 2026-10-25.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=001
   seen: 2026-10-22
   note: 'Directory: Blessed Sacrament Cathedral Parish, rector Msgr. Raymond E. Riffle; "Saturday: 4:30
     p.m.; Sunday: 8:30 a.m., 11:00 a.m."; no Partner Parishes; homepage blessedsacramentcathedral.org.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

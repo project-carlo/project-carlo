@@ -24,8 +24,11 @@ evidence:
     Everson, PA, 15631; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/0732/20261025B.pdf
   seen: 2026-10-22
-  quote: 'Mon., Tues., Wed. -8:30am-SJE'
-  note: 'Page 1 of the 25 Oct 2026 bulletin: masthead "ST . JOSEPH 201 PAINTER STREET EVERSON, PA 15631"; Sunday 8:30 am Mass ("Sunday-8:30am-SJE"), weekday Masses Monday to Wednesday 8:30 am and the 6:00 pm holy-day vigil at SJE. Page 3 announces 24-hour Adoration "at Saint Joseph Church October 27th-28th".'
+  quote: Mon., Tues., Wed. -8:30am-SJE
+  note: 'Page 1 of the 25 Oct 2026 bulletin: masthead "ST . JOSEPH 201 PAINTER STREET EVERSON, PA 15631";
+    Sunday 8:30 am Mass ("Sunday-8:30am-SJE"), weekday Masses Monday to Wednesday 8:30 am and the 6:00
+    pm holy-day vigil at SJE. Page 3 announces 24-hour Adoration "at Saint Joseph Church October 27th-28th".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -26,13 +26,14 @@ evidence:
   seen: 2026-10-22
   note: 'Page 1 (image, rendered) of the 25 Oct 2026 Southern Fayette bulletin: "St. John the Evangelist
     / 50 Jefferson Street, Uniontown, PA 15401 / Weekday Masses: Wednesday & 1st Thursday 8:30 AM / *9:00
-    AM on Remaining Thursdays during School Year / 8:00 AM on Saturday / Weekend Masses: Sunday 10:30 AM
-    & 5:00 PM".'
+    AM on Remaining Thursdays during School Year / 8:00 AM on Saturday / Weekend Masses: Sunday 10:30
+    AM & 5:00 PM".'
 - url: https://www.faysouth.org/
   seen: 2026-10-22
   note: 'Shared site Mass Schedule (read 2026-10-22, curl with a browser User-Agent): "10:30 AM at St.
     John the Evangelist", "5:00 PM at St. John the Evangelist" (Sunday), "8:00 AM at St. John" (Saturday
     morning).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

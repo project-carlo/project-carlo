@@ -4,34 +4,37 @@ website: https://www.eolparish.com
 bulletin_provider: parishes_online
 provider_id: epiphany-of-our-lord-church-15062
 publication: ['po-org:epiphany-of-our-lord-church-15062', 'lpi:0018000000QxBzNAAV', 'po-container:14/1319']
-group: 'Shared pastor: Epiphany of Our Lord, Monessen + St. John the Baptist, Perryopolis + St. Sebastian, Belle Vernon'
+group: 'Shared pastor: Epiphany of Our Lord, Monessen + St. John the Baptist, Perryopolis + St. Sebastian,
+  Belle Vernon'
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1319/20261025B.pdf
   seen: 2026-10-22
-  quote: 'Epiphany of Our Lord Catholic Church'
-  note: 'Page 1 of the 25 Oct 2026 issue (8 pages): OUR LOCATION "Epiphany of Our Lord Catholic Church 44 Pennsylvania
-    Blvd., Monessen, PA 15062", "Pastor: Rev. Anthony Onoko"; MASS SCHEDULE "Weekend Mass Saturday: 4:00 p.m.
-    Sunday: 8:30 a.m. 10:30 a.m.", weekday "Monday & Thursday: 8:00 a.m.". Names Epiphany alone.'
+  quote: Epiphany of Our Lord Catholic Church
+  note: 'Page 1 of the 25 Oct 2026 issue (8 pages): OUR LOCATION "Epiphany of Our Lord Catholic Church
+    44 Pennsylvania Blvd., Monessen, PA 15062", "Pastor: Rev. Anthony Onoko"; MASS SCHEDULE "Weekend Mass
+    Saturday: 4:00 p.m. Sunday: 8:30 a.m. 10:30 a.m.", weekday "Monday & Thursday: 8:00 a.m.". Names Epiphany
+    alone.'
 - url: https://container.parishesonline.com/bulletins/14/1319/20261025B.pdf
   seen: 2026-10-22
-  quote: '8:00 AM Mass at St. Sebastian'
-  note: 'Page 3 LITURGIES FOR THE WEEK: the Tue/Fri weekday Masses are "at St. Sebastian" and Wednesday "9:00 AM Mass
-    at St. John the Baptist" (the same pastor''s other two parishes, which publish their own bulletins). Page 2: Fr.
-    Onoko writes of "our three partner parishes".'
+  quote: 8:00 AM Mass at St. Sebastian
+  note: 'Page 3 LITURGIES FOR THE WEEK: the Tue/Fri weekday Masses are "at St. Sebastian" and Wednesday
+    "9:00 AM Mass at St. John the Baptist" (the same pastor''s other two parishes, which publish their
+    own bulletins). Page 2: Fr. Onoko writes of "our three partner parishes".'
 - url: https://parishesonline.com/organization/epiphany-of-our-lord-church-15062
   seen: 2026-10-22
   note: 'probe po: LPi org "Epiphany of Our Lord Church", 44 Pennsylvania Blvd., Monessen (LPi 0018000000QxBzNAAV),
     container 14/1319, issues weekly through 2026-10-25.'
 - url: https://www.eolparish.com/bulletins.html
   seen: 2026-10-22
-  note: 'The parish site''s Bulletins page reposts the container issues as eol_<m.d.yy>_final_14-1319.pdf (latest
-    eol_10.25.26__14-1319.pdf), some weeks with an extra "expanded" version, and links the LPi org page. Same bulletin,
-    not a second channel.'
+  note: The parish site's Bulletins page reposts the container issues as eol_<m.d.yy>_final_14-1319.pdf
+    (latest eol_10.25.26__14-1319.pdf), some weeks with an extra "expanded" version, and links the LPi
+    org page. Same bulletin, not a second channel.
 - url: https://container.parishesonline.com/bulletins/14/1696/20261025B.pdf
   seen: 2026-10-22
-  quote: '801 Broad Avenue · Belle Vernon, PA 15012'
-  note: 'St. Sebastian (same pastor) publishes its own 25 Oct 2026 issue in its own container 14/1696, with its own
-    masthead and weekend schedule (row st-sebastian-belle-vernon).'
+  quote: 801 Broad Avenue · Belle Vernon, PA 15012
+  note: St. Sebastian (same pastor) publishes its own 25 Oct 2026 issue in its own container 14/1696,
+    with its own masthead and weekend schedule (row st-sebastian-belle-vernon).
+promoted: 2026-10-23
 ---
 
 ## Publisher

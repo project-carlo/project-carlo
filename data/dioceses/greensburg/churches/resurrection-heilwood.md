@@ -25,8 +25,11 @@ evidence:
     Parish'
 - url: https://container.parishesonline.com/bulletins/14/1395/20261025B.pdf
   seen: 2026-10-23
-  quote: '9:00 am  Heilwood'
-  note: 'Page 1 Mass Schedule box of the 25 Oct 2026 Church of the Resurrection bulletin: Heilwood has Saturday 4:00 pm, Sunday 9:00 am, Wednesday 8:00 am. The bulletin names the site by town only and gives no street address.'
+  quote: 9:00 am  Heilwood
+  note: 'Page 1 Mass Schedule box of the 25 Oct 2026 Church of the Resurrection bulletin: Heilwood has
+    Saturday 4:00 pm, Sunday 9:00 am, Wednesday 8:00 am. The bulletin names the site by town only and
+    gives no street address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

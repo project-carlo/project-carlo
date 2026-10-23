@@ -25,10 +25,14 @@ evidence:
 - url: https://www.holyfamilyseward.org/wp-content/uploads/2026/10/2026-10-18-Bulletin.pdf
   seen: 2026-10-23
   quote: OUR PARISH BULLETIN FOR THE WEEKEND OF OCTOBER 18, 2026
-  note: '"LITURGY SCHEDULE": Saturday 10/17 Vigil 4:00 PM, Sunday 10/18 9:30 AM, Monday 6:30 PM, Tuesday, Thursday and Friday 12:00 NN, Wednesday "No Daily Mass", Saturday 10/24 4:00 PM, Sunday 10/25 9:30 AM.'
+  note: '"LITURGY SCHEDULE": Saturday 10/17 Vigil 4:00 PM, Sunday 10/18 9:30 AM, Monday 6:30 PM, Tuesday,
+    Thursday and Friday 12:00 NN, Wednesday "No Daily Mass", Saturday 10/24 4:00 PM, Sunday 10/25 9:30
+    AM.'
 - url: https://www.holyfamilyseward.org/
   seen: 2026-10-23
-  note: 'Parish homepage (curl with a browser User-Agent): "Mass Schedule / Weekend Mass: Saturdays at 4:00 PM Sundays at 9:30 AM"; footer "425 Bridge Street Seward, PA 15954 (P) 814-446-5759".'
+  note: 'Parish homepage (curl with a browser User-Agent): "Mass Schedule / Weekend Mass: Saturdays at
+    4:00 PM Sundays at 9:30 AM"; footer "425 Bridge Street Seward, PA 15954 (P) 814-446-5759".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

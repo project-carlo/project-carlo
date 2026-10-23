@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 25 Oct 2026 bulletin (image, rendered): masthead "820 Carbon Rd. Greensburg, PA
     15601 / 724-834-6880"; "St. Paul Mass Schedule: Monday, Wednesday, and Friday 8:00 AM Mass; Saturday
     Vigil 4:30 PM Mass; Sunday 9:00 AM Mass".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

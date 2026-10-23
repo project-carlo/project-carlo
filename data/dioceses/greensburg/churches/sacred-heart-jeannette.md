@@ -24,15 +24,20 @@ evidence:
     Jeannette, PA, 15644; kind: Parish'
 - url: https://www.ascensionsacredheartchurches.org/wp-content/uploads/2026/10/2026-10-18.pdf
   seen: 2026-10-22
-  quote: 'Sunday 10:30a m Sacred Heart'
-  note: 'Page 1 of the 18 Oct 2026 bulletin: masthead "Sacred HeartC hurch 310 N7 th Street Jeannette,P A1 5644"; Mass box Saturday 4:30 pm and Sunday 10:30 am here, weekday Masses Monday and Friday 8:00 am, First Saturday 9:00 am.'
+  quote: Sunday 10:30a m Sacred Heart
+  note: 'Page 1 of the 18 Oct 2026 bulletin: masthead "Sacred HeartC hurch 310 N7 th Street Jeannette,P
+    A1 5644"; Mass box Saturday 4:30 pm and Sunday 10:30 am here, weekday Masses Monday and Friday 8:00
+    am, First Saturday 9:00 am.'
 - url: https://www.ascensionsacredheartchurches.org/about/directions/
   seen: 2026-10-22
-  quote: 'Do not leave envelopes at Sacred Heart old office location.'
-  note: 'The directions page gives only the joint office at 615 Division Street.'
+  quote: Do not leave envelopes at Sacred Heart old office location.
+  note: The directions page gives only the joint office at 615 Division Street.
 - url: https://nominatim.openstreetmap.org/lookup?osm_ids=W1163504006&format=jsonv2
   seen: 2026-10-22
-  note: 'OSM way 1163504006 "Sacred Heart Catholic Church" (Beno Way, centroid 40.33183, -79.61659) contains the GCatholic Plus Code point. Nominatim places "310, North 7th Street" at 40.33170, -79.61723, about 50 m west of the building; it has no address point for 504 Cowan Ave.'
+  note: OSM way 1163504006 "Sacred Heart Catholic Church" (Beno Way, centroid 40.33183, -79.61659) contains
+    the GCatholic Plus Code point. Nominatim places "310, North 7th Street" at 40.33170, -79.61723, about
+    50 m west of the building; it has no address point for 504 Cowan Ave.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   note: 'Page 1 of the 25 Oct 2026 issue (image-only, rendered and read): "Saint Mary, Our Lady of Lourdes,
     5900 Kennedy Avenue, Export, PA 15632, (724) 327-0647 ... Sunday Mass 9:00 AM". The quote is the LPi
     footer on pages 14-16.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

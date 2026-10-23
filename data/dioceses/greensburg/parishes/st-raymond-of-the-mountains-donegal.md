@@ -10,20 +10,28 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1384/20261025B.pdf
   seen: 2026-10-23
   quote: October 25, 2026 - 30th Sunday in Ordinary Time
-  note: 'Page 1 of the 25 Oct 2026 issue (8 pages): "Sunday Masses: Saturday (Vigil): 4:30 p.m. / Sunday: 8:00 and 10:30 a.m.", "Rev. Matthew Udoh, Pastor", "St. Raymond of the Mountains / 170 School House Lane, P.O. Box 330, Donegal, PA 15628". Names St. Raymond alone; grep "Chapel" finds nothing.'
+  note: 'Page 1 of the 25 Oct 2026 issue (8 pages): "Sunday Masses: Saturday (Vigil): 4:30 p.m. / Sunday:
+    8:00 and 10:30 a.m.", "Rev. Matthew Udoh, Pastor", "St. Raymond of the Mountains / 170 School House
+    Lane, P.O. Box 330, Donegal, PA 15628". Names St. Raymond alone; grep "Chapel" finds nothing.'
 - url: https://container.parishesonline.com/bulletins/14/1384/20261025B.pdf
   seen: 2026-10-23
   quote: St. Raymond of the Mountains, Donegal, PA 14-1384
   note: Pages 7-8 LPi ad-page footer, naming the container.
 - url: https://www.straymondchurch.org/wp-content/uploads/2026/10/20261025B-1.pdf
   seen: 2026-10-23
-  note: 'The parish site reposts the container file under its own name (dFlip post https://www.straymondchurch.org/october-25-2026/ on /bulletin/bulletins/, one post per issue back to August 2026). Same bulletin, not a second channel.'
+  note: The parish site reposts the container file under its own name (dFlip post https://www.straymondchurch.org/october-25-2026/
+    on /bulletin/bulletins/, one post per issue back to August 2026). Same bulletin, not a second channel.
 - url: https://parishesonline.com/organization/st-raymond-of-the-mountains
   seen: 2026-10-23
-  note: 'probe po: "St. Raymond of the Mountains", 164 School House Ln, Donegal, website straymondchurch.org, lpi 0018000000QxBztAAF, container 14/1384, issues 2026-10-25, 10-18, 10-11. fetch:check 2026-10-23 ok, picked 20261025B.pdf.'
+  note: 'probe po: "St. Raymond of the Mountains", 164 School House Ln, Donegal, website straymondchurch.org,
+    lpi 0018000000QxBztAAF, container 14/1384, issues 2026-10-25, 10-18, 10-11. fetch:check 2026-10-23
+    ok, picked 20261025B.pdf.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=082
   seen: 2026-10-22
-  note: 'Directory: St. Raymond of the Mountains Parish, 170 School House Lane, Donegal, pastor Father Matthew Udoh, "Saturday: 4:30 p.m.; Sunday: 8:00 a.m., 10:30 a.m.", no Partner Parishes. Fr. Udoh serves no other parish in the clergy directory (tools/pastors.tsv).'
+  note: 'Directory: St. Raymond of the Mountains Parish, 170 School House Lane, Donegal, pastor Father
+    Matthew Udoh, "Saturday: 4:30 p.m.; Sunday: 8:00 a.m., 10:30 a.m.", no Partner Parishes. Fr. Udoh
+    serves no other parish in the clergy directory (tools/pastors.tsv).'
+promoted: 2026-10-23
 ---
 
 ## Publisher

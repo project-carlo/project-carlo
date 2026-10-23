@@ -15,18 +15,19 @@ evidence:
     Sylvester in the masthead or staff.'
 - url: https://www.partnerparishesmas.org/wp-content/uploads/2026/10/St-A-bulletin-10.18.26.pdf
   seen: 2026-10-22
-  quote: 'Saturday Vigil: 5:00 pm at St. Ambrose Sunday Mass: 11:00 am at St. Matthew Weekday Masses: to be announced'
-  note: 'Page 1 Mass schedule. The week''s Mass intentions use only "St A" and "St M" (Sat 5:00 pm St A, Sun
-    11:00 am St M, Mon 8:30 am St A, Fri 8:30 am St M). Page 2 keeps separate collection and attendance
+  quote: 'Saturday Vigil: 5:00 pm at St. Ambrose Sunday Mass: 11:00 am at St. Matthew Weekday Masses:
+    to be announced'
+  note: 'Page 1 Mass schedule. The week''s Mass intentions use only "St A" and "St M" (Sat 5:00 pm St
+    A, Sun 11:00 am St M, Mon 8:30 am St A, Fri 8:30 am St M). Page 2 keeps separate collection and attendance
     figures for the two churches. St. Sylvester appears only in a page-2 notice ("St. Sylvester, Slickville:
     is holding an apple ..."), as a neighbour.'
 - url: https://www.partnerparishesmas.org/bulletins/
   seen: 2026-10-22
   quote: Read our Weekly Bulletins October 18, 2026 October 11, 2026 October 4, 2026
-  note: 'Plain fetch works. One child post per issue, newest first, back to "August 16, 2026"; the 18 Oct
-    post (/october-18-2026/) embeds a dFlip flipbook whose source is
-    wp-content/uploads/2026/10/St-A-bulletin-10.18.26.pdf. Footer contact block names St. Ambrose Parish and
-    St. Matthew Parish only ("Mailing address same as St. Ambrose").'
+  note: Plain fetch works. One child post per issue, newest first, back to "August 16, 2026"; the 18 Oct
+    post (/october-18-2026/) embeds a dFlip flipbook whose source is wp-content/uploads/2026/10/St-A-bulletin-10.18.26.pdf.
+    Footer contact block names St. Ambrose Parish and St. Matthew Parish only ("Mailing address same as
+    St. Ambrose").
 - url: https://parishesonline.com/organization/st-ambrose-church-15618
   seen: 2026-10-22
   note: 'probe po: st-ambrose-church-15618 (lpi:0018000000QxC0ZAAV, website partnerparishesmas.org) and
@@ -34,17 +35,18 @@ evidence:
     empty accounts, not live channels; not recorded as publication ids.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=021
   seen: 2026-10-22
-  note: 'Directory: St. Ambrose Parish, pastor Father Tyler J. Bandura, "Saturday: 5:00 p.m.; Sunday: no
-    Mass", website partnerparishesmas.org, Partner Parishes St. Sylvester (265) and St. Matthew (253).
-    LocationID=253 (St. Matthew): same pastor and website, "Saturday: no Mass; Sunday: 11:00 a.m.",
-    mailing c/o P.O. Box 617, Avonmore.'
+  note: 'Directory: St. Ambrose Parish, pastor Father Tyler J. Bandura, "Saturday: 5:00 p.m.; Sunday:
+    no Mass", website partnerparishesmas.org, Partner Parishes St. Sylvester (265) and St. Matthew (253).
+    LocationID=253 (St. Matthew): same pastor and website, "Saturday: no Mass; Sunday: 11:00 a.m.", mailing
+    c/o P.O. Box 617, Avonmore.'
 - url: https://www.dioceseofgreensburg.org/official-june-20-2026/
   seen: 2026-10-22
   quote: Bandura, VF as Pastor at Saint Matthew Parish, Saltsburg and Saint Ambrose Parish, Avonmore
   note: 'Same post: Begolly "as Pastor of Saint Sylvester Parish, Slickville", and Frescura "resigns as
     Administrator of Saint Sylvester Parish, Slickville, Saint Matthew Parish Saltsburg and Saint Ambrose
-    Parish, Avonmore". The post gives July 7, 2026 as the effective date. This is the source of the
-    St. Sylvester split; the directory''s partner field predates it.'
+    Parish, Avonmore". The post gives July 7, 2026 as the effective date. This is the source of the St.
+    Sylvester split; the directory''s partner field predates it.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

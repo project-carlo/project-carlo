@@ -24,8 +24,11 @@ evidence:
     101 West High Street, Kittanning, PA, 16201; kind: Parish'
 - url: https://www.stmarykittanning.org/wp-content/uploads/2026/10/BULLETIN-OCTOBER-25-2026-St.-Mary-Kittanning-and-St.-Mary-Yatesboro.pdf
   seen: 2026-10-22
-  quote: 'Saturday Vigil 4:00 pm Kittanning … Sunday 9:00 am Kittanning … St. Mary, Our Lady of Guadalupe 101 West High Street Kittanning, PA 16201'
-  note: 'Page 1 of the 25 Oct 2026 joint bulletin. The weekday schedule in the same box gives Kittanning on Monday 8:00 am, Wednesday 6:00 pm and Friday 8:00 am.'
+  quote: Saturday Vigil 4:00 pm Kittanning … Sunday 9:00 am Kittanning … St. Mary, Our Lady of Guadalupe
+    101 West High Street Kittanning, PA 16201
+  note: Page 1 of the 25 Oct 2026 joint bulletin. The weekday schedule in the same box gives Kittanning
+    on Monday 8:00 am, Wednesday 6:00 pm and Friday 8:00 am.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

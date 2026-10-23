@@ -9,8 +9,8 @@ evidence:
 - url: https://www.stroselatrobe.org/wp-content/uploads/2026/10/10182026.pdf
   seen: 2026-10-22
   quote: ST. ROSE CATHOLIC CHURCH
-  note: 'Page 1 masthead of the 18 Oct 2026 issue (7 pages): "ST. ROSE CATHOLIC CHURCH 4969 Route 982 ·
-    Latrobe, PA 15650 (724) 537-3709 · www.stroselatrobe.org A Parish of the Diocese of Greensburg",
+  note: 'Page 1 masthead of the 18 Oct 2026 issue (7 pages): "ST. ROSE CATHOLIC CHURCH 4969 Route 982
+    · Latrobe, PA 15650 (724) 537-3709 · www.stroselatrobe.org A Parish of the Diocese of Greensburg",
     "October 18, 2026", "Reverend Fr. Ronald Maquinana ..........Pastor". Names no other parish or church.'
 - url: https://www.stroselatrobe.org/wp-content/uploads/2026/10/10182026.pdf
   seen: 2026-10-22
@@ -30,9 +30,10 @@ evidence:
     p.m.; Sunday: 9:30 a.m."; no Partner Parishes listed.'
 - url: https://parishesonline.com/organization/st-john-the-evangelist-st-rose
   seen: 2026-10-22
-  note: 'probe po: the only LPi organization with St. Rose in its name is an empty St. John the
-    Evangelist org (306 Saint Johns Dr, no issues, no container), left from a former pairing. The LPi
-    geo-search around Latrobe (6 miles) lists no St. Rose organization.'
+  note: 'probe po: the only LPi organization with St. Rose in its name is an empty St. John the Evangelist
+    org (306 Saint Johns Dr, no issues, no container), left from a former pairing. The LPi geo-search
+    around Latrobe (6 miles) lists no St. Rose organization.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

@@ -25,12 +25,13 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1233/20261025B.pdf
   seen: 2026-10-22
   quote: 260 Bruno Road • Greensburg, PA 15601
-  note: 'Masthead of the 25 Oct 2026 bulletin; MASS SCHEDULE Saturday Vigil 5:30 p.m., Sunday 9:30 a.m.,
-    weekdays 8:30 a.m.'
+  note: Masthead of the 25 Oct 2026 bulletin; MASS SCHEDULE Saturday Vigil 5:30 p.m., Sunday 9:30 a.m.,
+    weekdays 8:30 a.m.
 - url: https://nominatim.openstreetmap.org/search?q=St.+Benedict+Marguerite+PA&format=json
   seen: 2026-10-22
-  note: 'OSM node 4574107030 "Saint Benedict Church", amenity=place_of_worship, Bruno Road, hamlet Marguerite,
-    Unity Township, at 40.26895,-79.46683 (about 15 m from the GCatholic Plus Code).'
+  note: OSM node 4574107030 "Saint Benedict Church", amenity=place_of_worship, Bruno Road, hamlet Marguerite,
+    Unity Township, at 40.26895,-79.46683 (about 15 m from the GCatholic Plus Code).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -25,9 +25,10 @@ evidence:
 - url: https://www.partnerparishesmas.org/wp-content/uploads/2026/10/St-A-bulletin-10.18.26.pdf
   seen: 2026-10-22
   quote: 'Sunday Mass: 11:00 am at St. Matthew'
-  note: 'Page 1 of the 18 Oct 2026 bulletin of St. Ambrose and St. Matthew: masthead "St. Matthew Church: 501
-    Cathedral Street Saltsburg, PA 15681"; intentions "Sun 10/18 11:00 am St M", "Fri 10/23 8:30 am St M",
-    "Sun 10/25 11:00 am St M".'
+  note: 'Page 1 of the 18 Oct 2026 bulletin of St. Ambrose and St. Matthew: masthead "St. Matthew Church:
+    501 Cathedral Street Saltsburg, PA 15681"; intentions "Sun 10/18 11:00 am St M", "Fri 10/23 8:30 am
+    St M", "Sun 10/25 11:00 am St M".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

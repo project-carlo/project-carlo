@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-22
   note: 'probe po: LPi organization "St. Martin & St. Joseph Churches" (lpi:0018000000QxC0cAAF, no publications)
     gives 117 S Ligonier St, Derry, Pennsylvania, 15627-1989.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

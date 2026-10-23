@@ -24,15 +24,16 @@ evidence:
     Pennsylvania Boulevard, Monessen, PA, 15062; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1319/20261025B.pdf
   seen: 2026-10-22
-  quote: '44 Pennsylvania Blvd., Monessen, PA 15062'
-  note: 'Page 1 of the 25 Oct 2026 issue: OUR LOCATION "Epiphany of Our Lord Catholic Church"; Weekend Mass
-    Saturday 4:00 p.m., Sunday 8:30 and 10:30 a.m.; Monday and Thursday 8:00 a.m. Page 3 lists intentions for those
-    Masses, 24 Oct to 1 Nov.'
+  quote: 44 Pennsylvania Blvd., Monessen, PA 15062
+  note: 'Page 1 of the 25 Oct 2026 issue: OUR LOCATION "Epiphany of Our Lord Catholic Church"; Weekend
+    Mass Saturday 4:00 p.m., Sunday 8:30 and 10:30 a.m.; Monday and Thursday 8:00 a.m. Page 3 lists intentions
+    for those Masses, 24 Oct to 1 Nov.'
 - url: https://www.eolparish.com/epiphany-church-pennsylvania-blvd.html
   seen: 2026-10-22
-  quote: '44 Pennsylvania Blvd., Monessen, PA 15062'
-  note: 'Parish site page "Epiphany Church Pennsylvania Blvd" ("Epiphany of our Lord Church"), the only building under
-    its Site Locations menu.'
+  quote: 44 Pennsylvania Blvd., Monessen, PA 15062
+  note: Parish site page "Epiphany Church Pennsylvania Blvd" ("Epiphany of our Lord Church"), the only
+    building under its Site Locations menu.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

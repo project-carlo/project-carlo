@@ -25,10 +25,11 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1201/20261025B.pdf
   seen: 2026-10-23
   quote: SS. SIMON & JUDE PARISH NEWS & EVENTS
-  note: 'Masthead (page 1) of the 25 Oct 2026 bulletin: "155 North Brady St. Blairsville, PA 15717"; Mass times for
-    SS. Simon & Jude "Saturday | 3:00 pm Confessions | 4:00 pm Mass", "Sunday | 9:00 am", "Monday | 8:00 am",
-    "Wednesday | 8:00 am", "Friday | 8:00 am". Page 3: "SSJ WEEKLY MASS COUNT", Saturday October 17 - 104, Sunday
-    October 18 - 104.'
+  note: 'Masthead (page 1) of the 25 Oct 2026 bulletin: "155 North Brady St. Blairsville, PA 15717"; Mass
+    times for SS. Simon & Jude "Saturday | 3:00 pm Confessions | 4:00 pm Mass", "Sunday | 9:00 am", "Monday
+    | 8:00 am", "Wednesday | 8:00 am", "Friday | 8:00 am". Page 3: "SSJ WEEKLY MASS COUNT", Saturday October
+    17 - 104, Sunday October 18 - 104.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

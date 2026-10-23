@@ -24,9 +24,11 @@ evidence:
     Street, West Newton, PA, 15089-1609; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1743/20261025B.pdf
   seen: 2026-10-22
-  quote: '225 North Second Street, West Newton, PA 15089'
-  note: 'Page 1 of the 25 Oct 2026 St. Anne and Holy Family bulletin: "HOLY FAMILY CHURCH", Weekends Saturday 4:00 pm,
-    Sunday 11:00 am; Weekdays Tuesday & Wednesday 8:00 am. Page 2 intentions coded HF for 24 Oct - 1 Nov.'
+  quote: 225 North Second Street, West Newton, PA 15089
+  note: 'Page 1 of the 25 Oct 2026 St. Anne and Holy Family bulletin: "HOLY FAMILY CHURCH", Weekends Saturday
+    4:00 pm, Sunday 11:00 am; Weekdays Tuesday & Wednesday 8:00 am. Page 2 intentions coded HF for 24
+    Oct - 1 Nov.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

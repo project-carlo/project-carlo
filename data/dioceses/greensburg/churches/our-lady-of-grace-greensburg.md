@@ -25,12 +25,13 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1539/20261025B.pdf
   seen: 2026-10-22
   quote: 1011 Mount Pleasant Rd, Greensburg, PA 15601
-  note: 'Masthead of the 25 Oct 2026 bulletin; page 2 weekend Mass Saturday 4:00 p.m. (Vigil), Sunday
-    8:00 a.m., 10:30 a.m., 6:00 p.m.'
+  note: Masthead of the 25 Oct 2026 bulletin; page 2 weekend Mass Saturday 4:00 p.m. (Vigil), Sunday 8:00
+    a.m., 10:30 a.m., 6:00 p.m.
 - url: https://nominatim.openstreetmap.org/reverse?lat=40.2878125&lon=-79.5279375&format=json&zoom=18
   seen: 2026-10-22
   note: 'OSM at the GCatholic Plus Code: way 1064964852, an unnamed place_of_worship building (on Ridge
     Road per OSM''s nearest-street lookup). Confirms a church building at the point, not its address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

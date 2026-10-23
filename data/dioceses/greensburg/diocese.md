@@ -2,11 +2,12 @@
 name: Roman Catholic Diocese of Greensburg
 state: PA
 website: https://dioceseofgreensburg.org
-status: exploring
+status: promoted
 gcatholic: gree1
 city_aliases:
   Marguerite: Greensburg
   South Greensburg: Greensburg
+promoted: 2026-10-23
 ---
 
 ## Sources
@@ -217,3 +218,13 @@ Decisions that apply to more than one record, and who made them.
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-10-23: Mapped the whole diocese and promoted it: 48 parish rows (one per bulletin) for
+  the 78 canonical parishes, 86 churches, 28 exclusions (24 Eastern Catholic
+  `other-jurisdiction`, 4 `no-bulletin`/`no-public-mass` chapels and the seminary) and 1 open
+  question (Epiphany's Knox Ave. building, Monessen). Coverage: directory 84/84 (100%),
+  GCatholic 110/110 accounted for, 83/84 non-excluded entries modelled. `audit --fetch` found
+  no shared bulletins across rows. Full `fetch:check`: 47 ok, 1 `resolve_failed`
+  (st-james-new-alexandria: its ParishesOnline org page crashes in JS; the widget page lists
+  the issues but the fetcher can't unwrap `selectedPublication`). 23 parish-scout agents (one
+  roster task, 20 batches of 2 to 5 parishes, two finishing tasks), run one at a time on Opus.

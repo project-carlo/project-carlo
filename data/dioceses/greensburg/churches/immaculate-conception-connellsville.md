@@ -24,11 +24,15 @@ evidence:
     Crawford Avenue, Connellsville, PA, 15425; kind: Parish'
 - url: https://files.ecatholic.com/36088/bulletins/20261017.pdf
   seen: 2026-10-22
-  quote: 'IC Christian Mothers will meet THIS SUN in their social hall following the 9:30am Mass.'
-  note: 'Page 5 of the 17-18 Oct 2026 Yough Catholic Community bulletin: the Sunday 9:30 am Mass at IC (Immaculate Conception). The 24-25 Oct issue (page 6, image) schedules the All Souls Day Mass "6:30pm Immaculate Conception" on 2 Nov 2026.'
+  quote: IC Christian Mothers will meet THIS SUN in their social hall following the 9:30am Mass.
+  note: 'Page 5 of the 17-18 Oct 2026 Yough Catholic Community bulletin: the Sunday 9:30 am Mass at IC
+    (Immaculate Conception). The 24-25 Oct issue (page 6, image) schedules the All Souls Day Mass "6:30pm
+    Immaculate Conception" on 2 Nov 2026.'
 - url: https://www.youghcatholic.org/mass-times
   seen: 2026-10-22
-  note: 'Read headed (403 to plain fetches): "6:00 PM Immaculate Conception" (Saturday), "9:30 AM Immaculate Conception" (Sunday), "THURSDAY: 8:00 AM Immaculate Conception".'
+  note: 'Read headed (403 to plain fetches): "6:00 PM Immaculate Conception" (Saturday), "9:30 AM Immaculate
+    Conception" (Sunday), "THURSDAY: 8:00 AM Immaculate Conception".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

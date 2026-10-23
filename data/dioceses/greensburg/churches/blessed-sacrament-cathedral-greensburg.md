@@ -20,12 +20,13 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1762/20261025B.pdf
   seen: 2026-10-22
   quote: 300 NORTH MAIN STREET, GREENSBURG, PENNSYLVANIA 15601
-  note: 'Masthead of the 25 Oct 2026 bulletin; MASS box: Saturday 4:30 PM Vigil Mass, Sunday 8:30 AM
-    & 11:00 AM, Monday-Friday 11:45 AM.'
+  note: 'Masthead of the 25 Oct 2026 bulletin; MASS box: Saturday 4:30 PM Vigil Mass, Sunday 8:30 AM &
+    11:00 AM, Monday-Friday 11:45 AM.'
 - url: https://nominatim.openstreetmap.org/search?q=Blessed+Sacrament+Cathedral+Greensburg+PA&format=json
   seen: 2026-10-22
-  note: 'OSM way 751974428, amenity=place_of_worship "Blessed Sacrament Cathedral", 300 North Main Street,
-    Greensburg 15601, at 40.30647,-79.54632 (about 15 m from the directory pin).'
+  note: OSM way 751974428, amenity=place_of_worship "Blessed Sacrament Cathedral", 300 North Main Street,
+    Greensburg 15601, at 40.30647,-79.54632 (about 15 m from the directory pin).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

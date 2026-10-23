@@ -9,21 +9,22 @@ evidence:
 - url: https://discovermass.com/church/st-barbara-harrison-city-pa/
   seen: 2026-10-22
   quote: St. Barbara Current Bulletin Oct 18, 2026
-  note: 'Discover Mass church page (J.S. Paluch) with weekly issues back to Aug 2, 2026 (Aug 2 ... Oct 11,
-    Oct 18). Read once with curl. The Oct 18 issue (downloaded once via its tokenised link, 2026-10-22) has
-    the masthead "ST. BARBARA CATHOLIC CHURCH ... October 18, 2026 ... 111 Raymaley Rd. Harrison City, PA
-    15636 724-744-7474" and Mass times "SATURDAY 5:30PM Vigil, SUNDAY 8:00AM /10:30AM ... Daily Mass Mon–Fri
-    9:00AM". It names St. Barbara alone; the pastor''s letter says "I am the pastor/administrator at St.
-    Regis and St. Barbara".'
+  note: Discover Mass church page (J.S. Paluch) with weekly issues back to Aug 2, 2026 (Aug 2 ... Oct
+    11, Oct 18). Read once with curl. The Oct 18 issue (downloaded once via its tokenised link, 2026-10-22)
+    has the masthead "ST. BARBARA CATHOLIC CHURCH ... October 18, 2026 ... 111 Raymaley Rd. Harrison City,
+    PA 15636 724-744-7474" and Mass times "SATURDAY 5:30PM Vigil, SUNDAY 8:00AM /10:30AM ... Daily Mass
+    Mon–Fri 9:00AM". It names St. Barbara alone; the pastor's letter says "I am the pastor/administrator
+    at St. Regis and St. Barbara".
 - url: https://www.stbarbara.org/bulletins
   seen: 2026-10-22
-  note: 'eCatholic site (ecatholic:35057), 403 to plain fetches; opened headed with parish-site-access
+  note: eCatholic site (ecatholic:35057), 403 to plain fetches; opened headed with parish-site-access
     visit.py. Its bulletin list has one file, "July 30, 2023" (files.ecatholic.com/35057/bulletins/20230730.pdf),
-    and a "Bulletin" menu link to https://discovermass.com/church/st-barbara-harrison-city-pa/#bulletin.'
+    and a "Bulletin" menu link to https://discovermass.com/church/st-barbara-harrison-city-pa/#bulletin.
 - url: https://www.dioceseofgreensburg.org/official-april-11-2026/
   seen: 2026-10-22
   quote: Administrator of Saint Barbara Parish, Harrison City, Pennsylvania
-  note: 'Father Daniel Carr, pastor of St. Regis, Trafford, made administrator of St. Barbara.'
+  note: Father Daniel Carr, pastor of St. Regis, Trafford, made administrator of St. Barbara.
+promoted: 2026-10-23
 ---
 
 ## Publisher

@@ -9,16 +9,27 @@ evidence:
 - url: https://www.holyfamilyseward.org/wp-content/uploads/2026/10/2026-10-18-Bulletin.pdf
   seen: 2026-10-23
   quote: OUR PARISH BULLETIN FOR THE WEEKEND OF OCTOBER 18, 2026
-  note: 'The 18 Oct 2026 issue: a single page, headed "WHAT''S HAPPENING AT HOLY FAMILY", no masthead. Its "LITURGY SCHEDULE" lists Sat 10/17 4:00 PM, Sun 10/18 9:30 AM, weekday Masses (Mon 6:30 PM; Tue, Thu, Fri 12:00 NN; "No Daily Mass" Wednesday) and Sat 10/24 4:00 PM, Sun 10/25 9:30 AM, all with no church named; "For the People of Holy Family" on Friday. No other parish or church appears.'
+  note: 'The 18 Oct 2026 issue: a single page, headed "WHAT''S HAPPENING AT HOLY FAMILY", no masthead.
+    Its "LITURGY SCHEDULE" lists Sat 10/17 4:00 PM, Sun 10/18 9:30 AM, weekday Masses (Mon 6:30 PM; Tue,
+    Thu, Fri 12:00 NN; "No Daily Mass" Wednesday) and Sat 10/24 4:00 PM, Sun 10/25 9:30 AM, all with no
+    church named; "For the People of Holy Family" on Friday. No other parish or church appears.'
 - url: https://www.holyfamilyseward.org/bulletins/
   seen: 2026-10-23
-  note: 'Diocese-template WordPress page (403 to probe url, 200 to curl with a browser User-Agent) listing one dFlip post per issue, august-16-2026 to october-18-2026. Each post''s PDF is `wp-content/uploads/<yyyy>/<mm>/<yyyy>-<m>-<d>-Bulletin.pdf` (2026-9-13-Bulletin.pdf, 2026-10-4-Bulletin.pdf). wp-json shows october-18-2026 posted 2026-10-17 11:07, the Saturday of that weekend; the earlier issues were back-filled on 2026-10-12.'
+  note: Diocese-template WordPress page (403 to probe url, 200 to curl with a browser User-Agent) listing
+    one dFlip post per issue, august-16-2026 to october-18-2026. Each post's PDF is `wp-content/uploads/<yyyy>/<mm>/<yyyy>-<m>-<d>-Bulletin.pdf`
+    (2026-9-13-Bulletin.pdf, 2026-10-4-Bulletin.pdf). wp-json shows october-18-2026 posted 2026-10-17
+    11:07, the Saturday of that weekend; the earlier issues were back-filled on 2026-10-12.
 - url: https://parishesonline.com/organization/holy-family-church-15954
   seen: 2026-10-23
-  note: 'probe po: "Holy Family Church", 425 Bridge Street, Seward, website holyfamilyseward.org, lpi 0018000000QxC0pAAF, no container and no issues. An empty LPi org, recorded here so no other row claims it; not a channel.'
+  note: 'probe po: "Holy Family Church", 425 Bridge Street, Seward, website holyfamilyseward.org, lpi
+    0018000000QxC0pAAF, no container and no issues. An empty LPi org, recorded here so no other row claims
+    it; not a channel.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=261
   seen: 2026-10-22
-  note: 'Directory: Holy Family Parish, 425 Bridge Street, Seward, pastor Father John J. Harrold, "Saturday: 4:00 p.m.; Sunday: 9:30 a.m.", no Partner Parishes. Fr. Harrold serves no other parish in the clergy directory (tools/pastors.tsv).'
+  note: 'Directory: Holy Family Parish, 425 Bridge Street, Seward, pastor Father John J. Harrold, "Saturday:
+    4:00 p.m.; Sunday: 9:30 a.m.", no Partner Parishes. Fr. Harrold serves no other parish in the clergy
+    directory (tools/pastors.tsv).'
+promoted: 2026-10-23
 ---
 
 ## Publisher

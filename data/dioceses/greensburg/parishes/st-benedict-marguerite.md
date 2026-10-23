@@ -15,17 +15,18 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1233/20261025B.pdf
   seen: 2026-10-22
   quote: 'Saturday Vigil: 5:30 p.m.'
-  note: 'Page 1 MASS SCHEDULE: Mon.-Fri. 8:30 a.m., Saturday Vigil 5:30 p.m., Sunday 9:30 a.m., Holy
-    Days Vigil 7 p.m. & Holy Day 9:00 a.m. Page 2 announces an All Souls Mass "ST. BENEDICT TUESDAY, NOV.
-    3 - 6:30 PM".'
+  note: 'Page 1 MASS SCHEDULE: Mon.-Fri. 8:30 a.m., Saturday Vigil 5:30 p.m., Sunday 9:30 a.m., Holy Days
+    Vigil 7 p.m. & Holy Day 9:00 a.m. Page 2 announces an All Souls Mass "ST. BENEDICT TUESDAY, NOV. 3
+    - 6:30 PM".'
 - url: https://www.stbenchurch.org/bulletin
   seen: 2026-10-22
-  note: 'The parish site''s Bulletin page embeds the ParishesOnline widget for lpi:0018000000QxBzlAAF.'
+  note: The parish site's Bulletin page embeds the ParishesOnline widget for lpi:0018000000QxBzlAAF.
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=185
   seen: 2026-10-22
   note: 'Directory: St. Benedict Parish, 260 Bruno Road, Greensburg; pastor Father Kenneth G. Zaccagnini;
     "Saturday: 5:30 p.m.; Sunday: 9:30 a.m."; Partner Parishes "Our Lady of Grace Parish, Greensburg (005)".
     The directory lists it under Greensburg; its own Partner field calls it "St. Benedict Parish, Marguerite".'
+promoted: 2026-10-23
 ---
 
 ## Publisher

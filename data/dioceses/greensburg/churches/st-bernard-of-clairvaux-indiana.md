@@ -25,10 +25,11 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1162/20261025B.pdf
   seen: 2026-10-23
   quote: ST. BERNARD OF CLAIRVAUX PARISH
-  note: 'Page 2 of the 25 Oct 2026 Indiana Catholic Community bulletin: "200 Clairvaux Drive / Indiana, PA 15701",
-    Mass schedule "Daily Mass Monday, Tuesday, Thursday ... 7:30am", "Daily Mass Wednesday ... 9:30am", "Saturday
-    Vigil Mass ... 4:00pm", "Sunday Mass ... 7:30am and 11:00am"; Mass attendance for the weekend of October 17/18
-    "Total 522".'
+  note: 'Page 2 of the 25 Oct 2026 Indiana Catholic Community bulletin: "200 Clairvaux Drive / Indiana,
+    PA 15701", Mass schedule "Daily Mass Monday, Tuesday, Thursday ... 7:30am", "Daily Mass Wednesday
+    ... 9:30am", "Saturday Vigil Mass ... 4:00pm", "Sunday Mass ... 7:30am and 11:00am"; Mass attendance
+    for the weekend of October 17/18 "Total 522".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

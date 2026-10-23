@@ -25,12 +25,15 @@ evidence:
     Parish'
 - url: https://www.olaparishpa.org/wp-content/uploads/2026/10/OCTOBER-25-2026-1.pdf
   seen: 2026-10-23
-  quote: '4:00 PM at Lucernemines'
-  note: 'Page 1 Mass Times of the 25 Oct 2026 Our Lady of the Assumption bulletin: Saturday 4:00 PM and Sunday 11:00 AM at Lucernemines; confessions Saturday 3:00pm-3:30 at Lucernemines. No street address in the bulletin.'
+  quote: 4:00 PM at Lucernemines
+  note: 'Page 1 Mass Times of the 25 Oct 2026 Our Lady of the Assumption bulletin: Saturday 4:00 PM and
+    Sunday 11:00 AM at Lucernemines; confessions Saturday 3:00pm-3:30 at Lucernemines. No street address
+    in the bulletin.'
 - url: https://www.olaparishpa.org/
   seen: 2026-10-23
-  quote: 'St Louis, 403 Lucerne Road, Lucernemines, PA'
-  note: 'Homepage "Church Locations".'
+  quote: St Louis, 403 Lucerne Road, Lucernemines, PA
+  note: Homepage "Church Locations".
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

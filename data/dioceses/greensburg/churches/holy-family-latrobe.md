@@ -25,10 +25,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1543/20261025B.pdf
   seen: 2026-10-22
   quote: 1200 Ligonier Street, Latrobe, PA 15650
-  note: 'Page 1 of the 25 Oct 2026 partner-parish bulletin: Holy Family Saturday Vigil 4:30 p.m.,
-    Sunday 8:00 & 10:30 a.m., Latin Mass 3:00 p.m., Sunday Evening 6:00 p.m.; weekdays Tue & Fri 8:00,
-    Wed 9:00; contact block "CONTACT US AT HOLY FAMILY 1200 Ligonier Street, Latrobe, PA 15650".'
-
+  note: 'Page 1 of the 25 Oct 2026 partner-parish bulletin: Holy Family Saturday Vigil 4:30 p.m., Sunday
+    8:00 & 10:30 a.m., Latin Mass 3:00 p.m., Sunday Evening 6:00 p.m.; weekdays Tue & Fri 8:00, Wed 9:00;
+    contact block "CONTACT US AT HOLY FAMILY 1200 Ligonier Street, Latrobe, PA 15650".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

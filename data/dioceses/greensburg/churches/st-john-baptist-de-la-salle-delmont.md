@@ -26,8 +26,9 @@ evidence:
   seen: 2026-10-22
   quote: St. John Baptist de La Salle & St. Mary Our Lady of Lourdes Parishes, Export, PA 14-0550
   note: 'Page 1 of the 25 Oct 2026 issue (image-only, rendered and read): "St. John Baptist de La Salle,
-    497 Athena Drive, Delmont, PA 15626, (724) 327-0647 ... Saturday anticipated Mass 4:00 PM, Sunday Mass
-    11:00 AM". The quote is the LPi footer on pages 14-16.'
+    497 Athena Drive, Delmont, PA 15626, (724) 327-0647 ... Saturday anticipated Mass 4:00 PM, Sunday
+    Mass 11:00 AM". The quote is the LPi footer on pages 14-16.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

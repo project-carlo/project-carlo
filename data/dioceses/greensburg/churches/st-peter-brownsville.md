@@ -25,13 +25,15 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1809/20261025B.pdf
   seen: 2026-10-22
   quote: 300 Shaffner Ave.
-  note: 'Page 1 masthead of the 25 Oct 2026 issue gives "300 Shaffner Ave. Brownsville, PA 15417" for St. Peter
-    (the 20 Sep 2026 masthead says the same, and so does the LPi org record). Schedule key "P=St. Peter".'
+  note: Page 1 masthead of the 25 Oct 2026 issue gives "300 Shaffner Ave. Brownsville, PA 15417" for St.
+    Peter (the 20 Sep 2026 masthead says the same, and so does the LPi org record). Schedule key "P=St.
+    Peter".
 - url: https://container.parishesonline.com/bulletins/14/1809/20261025B.pdf
   seen: 2026-10-22
   quote: 4:00 pm - (P)
-  note: 'Page 1 "WEEKEND MASSES SATURDAY 4:00 pm - (P) SUNDAY 9:00 am - (C) 11:00 am - (P)"; weekday Masses Tue/Thu
-    8:00 am and 1st Friday 8:00 am at St. Peter.'
+  note: Page 1 "WEEKEND MASSES SATURDAY 4:00 pm - (P) SUNDAY 9:00 am - (C) 11:00 am - (P)"; weekday Masses
+    Tue/Thu 8:00 am and 1st Friday 8:00 am at St. Peter.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

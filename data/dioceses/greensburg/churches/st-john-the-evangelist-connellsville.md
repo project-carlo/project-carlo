@@ -24,14 +24,19 @@ evidence:
     West Crawford Avenue, Connellsville, PA, 15425; kind: Parish'
 - url: https://files.ecatholic.com/36088/bulletins/20261017.pdf
   seen: 2026-10-22
-  quote: 'There will be ONE Mass that day at 9am at St. John.'
-  note: 'Page 4 of the 17-18 Oct 2026 bulletin: the Thanksgiving Day (26 Nov 2026) Mass at St. John. Page 1: "CONFESSION is at St. John on Saturdays starting at 11:30am". The 24-25 Oct issue (page 6, image) schedules the All Souls Day Mass "12:10pm St. John" on 2 Nov.'
+  quote: There will be ONE Mass that day at 9am at St. John.
+  note: 'Page 4 of the 17-18 Oct 2026 bulletin: the Thanksgiving Day (26 Nov 2026) Mass at St. John. Page
+    1: "CONFESSION is at St. John on Saturdays starting at 11:30am". The 24-25 Oct issue (page 6, image)
+    schedules the All Souls Day Mass "12:10pm St. John" on 2 Nov.'
 - url: https://www.youghcatholic.org/mass-times
   seen: 2026-10-22
-  note: 'Read headed (403 to plain fetches): "11:00 AM St. John the Evangelist" (Sunday), "TUESDAY: 8:00 AM St. John the Evangelist"; no Saturday Mass here.'
+  note: 'Read headed (403 to plain fetches): "11:00 AM St. John the Evangelist" (Sunday), "TUESDAY: 8:00
+    AM St. John the Evangelist"; no Saturday Mass here.'
 - url: https://parishesonline.com/organization/st-john-evangelist-church-15425
   seen: 2026-10-22
-  note: 'Empty LPi org (no publications) giving the address as "903 W Crawford Ave"; GCatholic and the directory say 908.'
+  note: Empty LPi org (no publications) giving the address as "903 W Crawford Ave"; GCatholic and the
+    directory say 908.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

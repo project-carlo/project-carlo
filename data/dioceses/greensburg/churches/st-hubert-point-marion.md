@@ -24,10 +24,14 @@ evidence:
     Point Marion, PA, 15474; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1769/20261025B.pdf
   seen: 2026-10-22
-  note: 'Page 1 (image, rendered; no text layer) of the 25 Oct 2026 Southern Fayette bulletin: "St. Hubert / 9 Sadler Street, Point Marion, PA 15474 / Weekend Mass: Saturday 4:00 PM / Sacrament of Reconciliation: Saturday 3:00-3:45 PM". No weekday Mass listed.'
+  note: 'Page 1 (image, rendered; no text layer) of the 25 Oct 2026 Southern Fayette bulletin: "St. Hubert
+    / 9 Sadler Street, Point Marion, PA 15474 / Weekend Mass: Saturday 4:00 PM / Sacrament of Reconciliation:
+    Saturday 3:00-3:45 PM". No weekday Mass listed.'
 - url: https://www.faysouth.org/
   seen: 2026-10-22
-  note: 'Opened in headed Chrome (cmhparishes.org redirects here). The Mass Schedule block lists Saturday 4:00 PM at St. Hubert.'
+  note: Opened in headed Chrome (cmhparishes.org redirects here). The Mass Schedule block lists Saturday
+    4:00 PM at St. Hubert.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

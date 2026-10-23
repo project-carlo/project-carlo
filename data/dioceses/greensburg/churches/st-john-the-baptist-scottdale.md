@@ -24,8 +24,11 @@ evidence:
     Broadway, Scottdale, PA, 15683; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/0732/20261025B.pdf
   seen: 2026-10-22
-  quote: 'Saturday Vigil-4:00pm-SJB'
-  note: 'Page 1 of the 25 Oct 2026 bulletin: masthead "ST . JOHN THE BAPTIST 416 BROADWAY AVE. SCOTTDALE, PA 15683"; Saturday 4:00 pm vigil and Sunday 10:30 am Mass, Thursday and Friday 8:30 am weekday Masses at SJB. Page 2 office address "416 S. Broadway Ave."'
+  quote: Saturday Vigil-4:00pm-SJB
+  note: 'Page 1 of the 25 Oct 2026 bulletin: masthead "ST . JOHN THE BAPTIST 416 BROADWAY AVE. SCOTTDALE,
+    PA 15683"; Saturday 4:00 pm vigil and Sunday 10:30 am Mass, Thursday and Friday 8:30 am weekday Masses
+    at SJB. Page 2 office address "416 S. Broadway Ave."'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

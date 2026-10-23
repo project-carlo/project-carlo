@@ -9,29 +9,29 @@ evidence:
 - url: https://discovermass.com/church/st-james-the-greater-apollo-pa/
   seen: 2026-10-22
   quote: 109 Owens View Ave., Apollo, PA 15613
-  note: 'Discover Mass (J.S. Paluch) church page, read once with curl. Current Bulletin Oct 25, 2026; archive
-    weekly back to Aug 9, 2026. The Oct 25 issue (8 pages, downloaded once via its tokenised link) is headed
-    "Saint James the Greater Church 109 Owens View Avenue Apollo, PA 15613 www.stjamesapollo.org" beside
-    "Our Lady, Queen of Peace Church 420 McKinley Avenue East Vandergrift, PA 15629 www.evcatholic.org",
-    then "Partner Parishes of the Diocese of Greensburg ... Staffed by the Benedictine Monks of Saint Vincent
-    Archabbey" and "October 25, 2026". Staff box: "Pastor • Father Vincent Zidek", "Administrator • Father
-    Dan Blout". Its stewardship page reports offerings for both "Saint James the Greater Church" and "Our
-    Lady, Queen of Peace Church". Footer "View this bulletin online at www.DiscoverMass.com".'
+  note: 'Discover Mass (J.S. Paluch) church page, read once with curl. Current Bulletin Oct 25, 2026;
+    archive weekly back to Aug 9, 2026. The Oct 25 issue (8 pages, downloaded once via its tokenised link)
+    is headed "Saint James the Greater Church 109 Owens View Avenue Apollo, PA 15613 www.stjamesapollo.org"
+    beside "Our Lady, Queen of Peace Church 420 McKinley Avenue East Vandergrift, PA 15629 www.evcatholic.org",
+    then "Partner Parishes of the Diocese of Greensburg ... Staffed by the Benedictine Monks of Saint
+    Vincent Archabbey" and "October 25, 2026". Staff box: "Pastor • Father Vincent Zidek", "Administrator
+    • Father Dan Blout". Its stewardship page reports offerings for both "Saint James the Greater Church"
+    and "Our Lady, Queen of Peace Church". Footer "View this bulletin online at www.DiscoverMass.com".'
 - url: https://discovermass.com/church/our-lady-queen-of-peace-east-vandergrift-pa/
   seen: 2026-10-22
   quote: 420 McKinley Ave., East Vandergrift, PA 15629
   note: 'Discover Mass church page for Our Lady Queen of Peace, read once with curl. Its current bulletin
-    (Oct 25, 2026) downloaded once: MD5 9efc7d195555ea78fbc7723108387187, byte-identical to the issue under
-    st-james-the-greater-apollo-pa. One bulletin carried under both church slugs.'
+    (Oct 25, 2026) downloaded once: MD5 9efc7d195555ea78fbc7723108387187, byte-identical to the issue
+    under st-james-the-greater-apollo-pa. One bulletin carried under both church slugs.'
 - url: https://www.evcatholic.org/bulletins
   seen: 2026-10-22
   quote: View Latest Bulletin
-  note: 'Wix ("OneParish") site titled "Bulletins | St. James - Apollo"; https://www.stjamesapollo.org
-    redirects to https://www.evcatholic.org/. The "View Latest Bulletin" link is
-    https://discovermass.com/church/st-james-the-greater-apollo-pa/#bulletin-current. The homepage (opened
-    headed 2026-10-22; plain curl gets a "Checking Your Request" challenge) lists "Mass Times Our Lady,
-    Queen of Peace Church Sunday Mass, 11 a.m. Saint James the Greater Church Saturday Vigil Mass, 4:30
-    p.m. Sunday Mass, 9 a.m."'
+  note: Wix ("OneParish") site titled "Bulletins | St. James - Apollo"; https://www.stjamesapollo.org
+    redirects to https://www.evcatholic.org/. The "View Latest Bulletin" link is https://discovermass.com/church/st-james-the-greater-apollo-pa/#bulletin-current.
+    The homepage (opened headed 2026-10-22; plain curl gets a "Checking Your Request" challenge) lists
+    "Mass Times Our Lady, Queen of Peace Church Sunday Mass, 11 a.m. Saint James the Greater Church Saturday
+    Vigil Mass, 4:30 p.m. Sunday Mass, 9 a.m."
+promoted: 2026-10-23
 ---
 
 ## Publisher

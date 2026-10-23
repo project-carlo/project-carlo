@@ -10,20 +10,30 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1822/20261025B.pdf
   seen: 2026-10-23
   quote: 'Pastor: Rev. Justin Matro, O.S.B.'
-  note: 'Page 1 of the 25 Oct 2026 issue (6 pages): "ST. BARTHOLOMEW CATHOLIC CHURCH", "OCTOBER 25, 2026 | THIRTIETH SUNDAY IN ORDINARY TIM E", "Staffed by the Benedictine Monks of Saint Vincent Archabbey", "Mailing Address: P.O. Box A, Crabtree, PA 15624", website "http://stbartholomew.wpengine.com". One Mass schedule: "Saturday Vigil | 5:00 PM", "Sunday | 8:00 AM & 10:30 AM", "Monday -Friday 8:00AM", "First Saturday | 8:00 AM". grep "Chapel" finds nothing.'
+  note: 'Page 1 of the 25 Oct 2026 issue (6 pages): "ST. BARTHOLOMEW CATHOLIC CHURCH", "OCTOBER 25, 2026
+    | THIRTIETH SUNDAY IN ORDINARY TIM E", "Staffed by the Benedictine Monks of Saint Vincent Archabbey",
+    "Mailing Address: P.O. Box A, Crabtree, PA 15624", website "http://stbartholomew.wpengine.com". One
+    Mass schedule: "Saturday Vigil | 5:00 PM", "Sunday | 8:00 AM & 10:30 AM", "Monday -Friday 8:00AM",
+    "First Saturday | 8:00 AM". grep "Chapel" finds nothing.'
 - url: https://container.parishesonline.com/bulletins/14/1822/20261025B.pdf
   seen: 2026-10-23
   quote: St. Bartholomew Church  |  14-1822
   note: Page 6 LPi footer, naming the container.
 - url: https://www.stbartholomewcrabtree.org/wp-content/uploads/2026/10/October-25-2026-1.pdf
   seen: 2026-10-23
-  note: 'The parish site reposts each issue as a dFlip post on /bulletins/ (sunday-october-25-2026, posted 2026-10-20 per wp-json) with a month-named PDF. Same bulletin as the container, not a second channel.'
+  note: The parish site reposts each issue as a dFlip post on /bulletins/ (sunday-october-25-2026, posted
+    2026-10-20 per wp-json) with a month-named PDF. Same bulletin as the container, not a second channel.
 - url: https://parishesonline.com/organization/st-bartholomew-church-15624
   seen: 2026-10-23
-  note: 'probe po: "St. Bartholomew Church", 2538 State Route 119, Crabtree, website stbartholomewcrabtree.org, lpi 0018000000QxC0bAAF, container 14/1822, issues 2026-10-25, 10-18, 10-11. fetch:check 2026-10-23 ok, picked 20261025B.pdf.'
+  note: 'probe po: "St. Bartholomew Church", 2538 State Route 119, Crabtree, website stbartholomewcrabtree.org,
+    lpi 0018000000QxC0bAAF, container 14/1822, issues 2026-10-25, 10-18, 10-11. fetch:check 2026-10-23
+    ok, picked 20261025B.pdf.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=071
   seen: 2026-10-22
-  note: 'Directory: St. Bartholomew Parish, 2538 Route 119, Crabtree, mailing P.O. Box A, pastor Father Justin Matro, OSB, "Saturday: 5:00 p.m.; Sunday: 8:00 a.m., 10:30 a.m.", no Partner Parishes. Fr. Matro serves no other parish in the clergy directory (tools/pastors.tsv).'
+  note: 'Directory: St. Bartholomew Parish, 2538 Route 119, Crabtree, mailing P.O. Box A, pastor Father
+    Justin Matro, OSB, "Saturday: 5:00 p.m.; Sunday: 8:00 a.m., 10:30 a.m.", no Partner Parishes. Fr.
+    Matro serves no other parish in the clergy directory (tools/pastors.tsv).'
+promoted: 2026-10-23
 ---
 
 ## Publisher

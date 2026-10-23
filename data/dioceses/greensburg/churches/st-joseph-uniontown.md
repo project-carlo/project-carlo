@@ -24,14 +24,15 @@ evidence:
     Road, Uniontown, PA, 15401; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1769/20261025B.pdf
   seen: 2026-10-22
-  note: 'Page 1 (image, rendered) of the 25 Oct 2026 Southern Fayette bulletin: "St. Joseph / 180 Old Walnut
-    Hill Road, Uniontown, PA 15401 / Weekday Masses: Tuesday, Wednesday, Thursday 7:00 AM / Weekend Masses:
-    Sunday 7:30 AM & 10:00 AM".'
+  note: 'Page 1 (image, rendered) of the 25 Oct 2026 Southern Fayette bulletin: "St. Joseph / 180 Old
+    Walnut Hill Road, Uniontown, PA 15401 / Weekday Masses: Tuesday, Wednesday, Thursday 7:00 AM / Weekend
+    Masses: Sunday 7:30 AM & 10:00 AM".'
 - url: https://www.openstreetmap.org/way/1088231823
   seen: 2026-10-22
   note: 'Nominatim search "St Joseph Church Uniontown PA": way 1088231823 "St. Joseph, Saint James Drive,
     Hatfield, South Union Township", centre 39.8843196, -79.7435874. This is within ~5 m of the diocesan
     map pin (39.8842891, -79.743624) and ~590 m west of the GCatholic Plus Code point.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

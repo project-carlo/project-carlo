@@ -24,10 +24,16 @@ evidence:
     Morgantown Street, Fairchance, PA, 15436; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1769/20261025B.pdf
   seen: 2026-10-22
-  note: 'Page 1 (image, rendered; no text layer) of the 25 Oct 2026 Southern Fayette bulletin: "Ss. Cyril & Methodius / 50 N. Morgantown Street, Fairchance, PA 15436 / Weekday Masses: Tuesday, Wednesday, Thursday 8:00 AM / Weekend Mass: Sunday 9:00 AM / Eucharistic Adoration: Saturday 1:00-2:00 PM". The office box reads "Ss. Cyril & Methodius/St. Hubert Parish, 50 N. Morgantown Street, Fairchance".'
+  note: 'Page 1 (image, rendered; no text layer) of the 25 Oct 2026 Southern Fayette bulletin: "Ss. Cyril
+    & Methodius / 50 N. Morgantown Street, Fairchance, PA 15436 / Weekday Masses: Tuesday, Wednesday,
+    Thursday 8:00 AM / Weekend Mass: Sunday 9:00 AM / Eucharistic Adoration: Saturday 1:00-2:00 PM". The
+    office box reads "Ss. Cyril & Methodius/St. Hubert Parish, 50 N. Morgantown Street, Fairchance".'
 - url: https://www.faysouth.org/
   seen: 2026-10-22
-  note: 'cmhparishes.org (the directory website for Fairchance and Point Marion) redirects here in headed Chrome. The Mass Schedule block lists Sunday "9:00 AM at Ss. Cyril and Methodius"; the "BULLETINS" link goes to parishesonline.com/organization/the-roman-catholic-churches-of-southern-fayette.'
+  note: cmhparishes.org (the directory website for Fairchance and Point Marion) redirects here in headed
+    Chrome. The Mass Schedule block lists Sunday "9:00 AM at Ss. Cyril and Methodius"; the "BULLETINS"
+    link goes to parishesonline.com/organization/the-roman-catholic-churches-of-southern-fayette.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

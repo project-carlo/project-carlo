@@ -25,10 +25,10 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1543/20261025B.pdf
   seen: 2026-10-22
   quote: 306 St. John Drive, Latrobe, PA 15650
-  note: 'Page 1 of the 25 Oct 2026 partner-parish bulletin: Saint John Saturday Vigil 5:00 p.m.,
-    Sunday Morning 8:30 a.m.; weekdays Monday & Thursday 8:00 a.m.; contact block "CONTACT US AT SAINT
-    JOHN 306 St. John Drive, Latrobe, PA 15650".'
-
+  note: 'Page 1 of the 25 Oct 2026 partner-parish bulletin: Saint John Saturday Vigil 5:00 p.m., Sunday
+    Morning 8:30 a.m.; weekdays Monday & Thursday 8:00 a.m.; contact block "CONTACT US AT SAINT JOHN 306
+    St. John Drive, Latrobe, PA 15650".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

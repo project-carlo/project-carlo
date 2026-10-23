@@ -3,7 +3,9 @@ name: The Roman Catholic Churches of Southern Fayette
 website: https://www.faysouth.org
 bulletin_provider: parishes_online
 provider_id: the-roman-catholic-churches-of-southern-fayette
-publication: ['po-container:14/1769', 'po-org:the-roman-catholic-churches-of-southern-fayette', 'lpi:0018000000Qc2EhAAJ', 'po-container:14/1792', 'po-org:ss-cyril-and-methodius-parish-saint-hubert-parish', 'lpi:0018000000QxBzfAAF', 'po-org:st-hubert-church-15474', 'lpi:0018000000QxC0XAAV']
+publication: ['po-container:14/1769', 'po-org:the-roman-catholic-churches-of-southern-fayette', 'lpi:0018000000Qc2EhAAJ',
+  'po-container:14/1792', 'po-org:ss-cyril-and-methodius-parish-saint-hubert-parish', 'lpi:0018000000QxBzfAAF',
+  'po-org:st-hubert-church-15474', 'lpi:0018000000QxC0XAAV']
 group: Southern Fayette (Fr. Klimko)
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1769/20261025B.pdf
@@ -25,46 +27,63 @@ evidence:
     must be emailed to" the one administrative assistant.'
 - url: https://container.parishesonline.com/bulletins/14/1769/20260104B.pdf
   seen: 2026-10-22
-  note: 'Page 1 (image, rendered) of the 4 Jan 2026 issue: the same masthead and the same seven church boxes
-    in the same order, so the seven-church bulletin is at least ten months old.'
+  note: 'Page 1 (image, rendered) of the 4 Jan 2026 issue: the same masthead and the same seven church
+    boxes in the same order, so the seven-church bulletin is at least ten months old.'
 - url: https://parishesonline.com/organization/the-roman-catholic-churches-of-southern-fayette
   seen: 2026-10-22
   note: 'probe po: org "The Roman Catholic Churches Of Southern Fayette", 61 N Mount Vernon Ave, Uniontown,
     lpi:0018000000Qc2EhAAJ, container 14/1769, weekly issues 2026-09-20 through 2026-10-25; its website
     field is www.stmaryuniontown.org. The per-parish orgs st-john-the-evangelist-roman-catholic-church-15401
-    (lpi:0018000000QxBzWAAV), st-joseph-roman-catholic-church-15401 (0018000000QxBzXAAV) and
-    st-therese-church-15401 (0018000000QxBzYAAV) list no publications.'
+    (lpi:0018000000QxBzWAAV), st-joseph-roman-catholic-church-15401 (0018000000QxBzXAAV) and st-therese-church-15401
+    (0018000000QxBzYAAV) list no publications.'
 - url: https://www.faysouth.org/
   seen: 2026-10-22
-  note: 'sje-parish.org, stjosephuniontown.org, stmaryuniontown.org and stthereseuniontown.org (the four
-    directory websites) all redirect here (curl with a browser User-Agent; probe url gets 403). Title "Home
-    - The Roman Catholic Churches of Southern Fayette"; the Mass Schedule block lists Sunday "7:30 AM at St.
-    Joseph", "8:30 AM at St. Mary Nativity", "9:00 AM at Ss. Cyril and Methodius", "9:30 AM at St. Joan of
-    Arc", "10:00 AM at St. Joseph", "10:30 AM at St. John the Evangelist", "11:00 AM at St. Therese", "5:00
-    PM at St. John the Evangelist" and Saturday 4:00 PM St. Hubert and St. Therese, 4:30 PM St. Mary Nativity,
-    5:30 PM St. Joan of Arc; "JOIN One of Our Seven Parishes". The site hosts no bulletin PDFs; in headed Chrome (2026-10-22) its "BULLETINS" menu link goes to the ParishesOnline org page.'
+  note: sje-parish.org, stjosephuniontown.org, stmaryuniontown.org and stthereseuniontown.org (the four
+    directory websites) all redirect here (curl with a browser User-Agent; probe url gets 403). Title
+    "Home - The Roman Catholic Churches of Southern Fayette"; the Mass Schedule block lists Sunday "7:30
+    AM at St. Joseph", "8:30 AM at St. Mary Nativity", "9:00 AM at Ss. Cyril and Methodius", "9:30 AM
+    at St. Joan of Arc", "10:00 AM at St. Joseph", "10:30 AM at St. John the Evangelist", "11:00 AM at
+    St. Therese", "5:00 PM at St. John the Evangelist" and Saturday 4:00 PM St. Hubert and St. Therese,
+    4:30 PM St. Mary Nativity, 5:30 PM St. Joan of Arc; "JOIN One of Our Seven Parishes". The site hosts
+    no bulletin PDFs; in headed Chrome (2026-10-22) its "BULLETINS" menu link goes to the ParishesOnline
+    org page.
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=283
   seen: 2026-10-22
-  note: 'Directory pages 283 (St. John the Evangelist), 285 (St. Joseph), 287 (St. Mary (Nativity)) and 289
-    (St. Therese, Little Flower of Jesus): each pastor Father Anthony Klimko, phone 724-437-4441, mailing
-    address 61 North Mt. Vernon Avenue, no Partner Parishes, and its own (now redirecting) website.'
+  note: 'Directory pages 283 (St. John the Evangelist), 285 (St. Joseph), 287 (St. Mary (Nativity)) and
+    289 (St. Therese, Little Flower of Jesus): each pastor Father Anthony Klimko, phone 724-437-4441,
+    mailing address 61 North Mt. Vernon Avenue, no Partner Parishes, and its own (now redirecting) website.'
 - url: https://container.parishesonline.com/bulletins/14/1769/20231112B.pdf
   seen: 2026-10-22
   quote: SCM=Ss. Cyril & Methodius
-  note: 'Mass-intention key of the 12 Nov 2023 issue (pages 1-3, text layer): "SCM=Ss. Cyril & Methodius", "SJE=St. John the Evangelist", "SM=St. Mary (Nativity)", "SH=St. Hubert", "SJ=St. Joseph", "ST=St. Therese": six churches, St. Joan of Arc not yet among them. By the 4 Jan 2026 issue the masthead has all seven.'
+  note: 'Mass-intention key of the 12 Nov 2023 issue (pages 1-3, text layer): "SCM=Ss. Cyril & Methodius",
+    "SJE=St. John the Evangelist", "SM=St. Mary (Nativity)", "SH=St. Hubert", "SJ=St. Joseph", "ST=St.
+    Therese": six churches, St. Joan of Arc not yet among them. By the 4 Jan 2026 issue the masthead has
+    all seven.'
 - url: https://container.parishesonline.com/bulletins/14/1792/20231022B.pdf
   seen: 2026-10-22
   quote: THE PARTNER PARISHES OF
-  note: 'Last issue of the former Fairchance / Point Marion bulletin (container 14/1792; LPi footer "14-1792"): "THE PARTNER PARISHES OF Ss. Cyril & Methodius AND St. Hubert", pastor Rev. Anthony Klimko; its liturgical schedule already mixes in the Uniontown codes (ST, SM, SJ). probe po lists both of its orgs (ss-cyril-and-methodius-parish-saint-hubert-parish, lpi:0018000000QxBzfAAF; st-hubert-church-15474, lpi:0018000000QxC0XAAV) with newest issue 2023-10-22, and probe container found no 14/1792 issue on 11, 18 or 25 Oct 2026 while 14/1769 answered for 25 Oct.'
+  note: 'Last issue of the former Fairchance / Point Marion bulletin (container 14/1792; LPi footer "14-1792"):
+    "THE PARTNER PARISHES OF Ss. Cyril & Methodius AND St. Hubert", pastor Rev. Anthony Klimko; its liturgical
+    schedule already mixes in the Uniontown codes (ST, SM, SJ). probe po lists both of its orgs (ss-cyril-and-methodius-parish-saint-hubert-parish,
+    lpi:0018000000QxBzfAAF; st-hubert-church-15474, lpi:0018000000QxC0XAAV) with newest issue 2023-10-22,
+    and probe container found no 14/1792 issue on 11, 18 or 25 Oct 2026 while 14/1769 answered for 25
+    Oct.'
 - url: https://www.cmhparishes.org/
   seen: 2026-10-22
-  note: 'Directory website of Ss. Cyril & Methodius (097) and St. Hubert (245). 403 to probe url and curl; in headed Chrome it lands on https://www.faysouth.org/ ("Home - The Roman Catholic Churches of Southern Fayette"), whose "BULLETINS" link is https://www.parishesonline.com/organization/the-roman-catholic-churches-of-southern-fayette.'
+  note: Directory website of Ss. Cyril & Methodius (097) and St. Hubert (245). 403 to probe url and curl;
+    in headed Chrome it lands on https://www.faysouth.org/ ("Home - The Roman Catholic Churches of Southern
+    Fayette"), whose "BULLETINS" link is https://www.parishesonline.com/organization/the-roman-catholic-churches-of-southern-fayette.
 - url: https://www.sjoafarmington.org/
   seen: 2026-10-22
-  note: 'Directory website of St. Joan of Arc (099). 403 to probe url and curl; in headed Chrome it also lands on https://www.faysouth.org/. The LPi geo-search within 15 miles of Farmington (2026-10-22) lists no St. Joan of Arc organization, and Discover Mass''s sitemaps have no Farmington, PA church.'
+  note: Directory website of St. Joan of Arc (099). 403 to probe url and curl; in headed Chrome it also
+    lands on https://www.faysouth.org/. The LPi geo-search within 15 miles of Farmington (2026-10-22)
+    lists no St. Joan of Arc organization, and Discover Mass's sitemaps have no Farmington, PA church.
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=097
   seen: 2026-10-22
-  note: 'Directory pages 097 (SS. Cyril & Methodius, Fairchance), 245 (St. Hubert, Point Marion; Partner Parishes of each other) and 099 (St. Joan of Arc, Farmington; no partners): pastor Father Anthony Klimko with the same four parochial vicars as the Uniontown parishes.'
+  note: 'Directory pages 097 (SS. Cyril & Methodius, Fairchance), 245 (St. Hubert, Point Marion; Partner
+    Parishes of each other) and 099 (St. Joan of Arc, Farmington; no partners): pastor Father Anthony
+    Klimko with the same four parochial vicars as the Uniontown parishes.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

@@ -24,8 +24,10 @@ evidence:
     Leger Road, North Huntingdon, PA, 15642; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/1083/20261025B.pdf
   seen: 2026-10-22
-  quote: '8:30 am  For the Parish Family'
-  note: 'Page 1 of the 25 Oct 2026 bulletin: masthead "Saint Elizabeth Ann Seton 200 Leger Road North Huntingdon, PA 15642"; Mass intentions Saturday 4 pm, Sunday 8:30 and 10:30 am, weekdays 8:30 am.'
+  quote: 8:30 am  For the Parish Family
+  note: 'Page 1 of the 25 Oct 2026 bulletin: masthead "Saint Elizabeth Ann Seton 200 Leger Road North
+    Huntingdon, PA 15642"; Mass intentions Saturday 4 pm, Sunday 8:30 and 10:30 am, weekdays 8:30 am.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

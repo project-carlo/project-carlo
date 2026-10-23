@@ -24,7 +24,10 @@ evidence:
     New Kensington, PA, 15068; kind: Parish'
 - url: https://container.parishesonline.com/bulletins/14/2000/20261025B.pdf
   seen: 2026-10-22
-  note: 'Page 1 of the 25 Oct 2026 Valley Messenger (image, rendered and read): "SAINT JOSEPH 1125 LEISHMAN AVENUE Weekend Mass Times Saturday | 4:00 PM Sunday | 9:30 AM Weekday Mass Times Mon., Tue., and Fri. | 12:30 PM Wednesday | 6:00 PM".'
+  note: 'Page 1 of the 25 Oct 2026 Valley Messenger (image, rendered and read): "SAINT JOSEPH 1125 LEISHMAN
+    AVENUE Weekend Mass Times Saturday | 4:00 PM Sunday | 9:30 AM Weekday Mass Times Mon., Tue., and Fri.
+    | 12:30 PM Wednesday | 6:00 PM".'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

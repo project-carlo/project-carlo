@@ -8,17 +8,31 @@ group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1395/20261025B.pdf
   seen: 2026-10-23
-  quote: 'Pastoral Center - 349 Morris St. Clymer, PA 15728'
-  note: 'Page 1 masthead of the 25 Oct 2026 issue: "Church of the Resurrection / A Parish of the Diocese of Greensburg", "Reverend Craig Alexander, Pastor", www.churchresurrection.org. Its Mass Schedule box lists Saturday 4:00 pm Glen Campbell, 4:00 pm Heilwood, 6:00 pm Clymer; Sunday 8:30 am Rossiter, 9:00 am Heilwood, 10:30 am Ernest, 11:00 am Clymer; weekdays 8:00 am Monday Glen Campbell, Tuesday Ernest, Wednesday Heilwood, Thursday Clymer, Friday Rossiter. Page 2 Mass intentions add a Saturday 31 Oct 4:00 pm Mass at Cameron''s Bottom.'
+  quote: Pastoral Center - 349 Morris St. Clymer, PA 15728
+  note: 'Page 1 masthead of the 25 Oct 2026 issue: "Church of the Resurrection / A Parish of the Diocese
+    of Greensburg", "Reverend Craig Alexander, Pastor", www.churchresurrection.org. Its Mass Schedule
+    box lists Saturday 4:00 pm Glen Campbell, 4:00 pm Heilwood, 6:00 pm Clymer; Sunday 8:30 am Rossiter,
+    9:00 am Heilwood, 10:30 am Ernest, 11:00 am Clymer; weekdays 8:00 am Monday Glen Campbell, Tuesday
+    Ernest, Wednesday Heilwood, Thursday Clymer, Friday Rossiter. Page 2 Mass intentions add a Saturday
+    31 Oct 4:00 pm Mass at Cameron''s Bottom.'
 - url: https://parishesonline.com/organization/church-of-the-resurrection-15728
   seen: 2026-10-23
-  note: 'probe po: org "Church of the Resurrection", 349 Morris St, Clymer, PA 15728, website www.churchresurrection.org, lpi:0018000000QxC0JAAV, container 14/1395, weekly issues 2026-09-20 through 2026-10-25. Every Sunday from 2025-08-03 to 2026-10-25 answered (a 6-page issue each week).'
+  note: 'probe po: org "Church of the Resurrection", 349 Morris St, Clymer, PA 15728, website www.churchresurrection.org,
+    lpi:0018000000QxC0JAAV, container 14/1395, weekly issues 2026-09-20 through 2026-10-25. Every Sunday
+    from 2025-08-03 to 2026-10-25 answered (a 6-page issue each week).'
 - url: https://www.churchresurrection.org/bulletins/
   seen: 2026-10-23
-  note: 'Diocese-template WordPress site (403 to probe url; answers curl with a browser User-Agent). The Bulletins page embeds the LPi widget publicationWidget?type=bulletin&id=0018000000QxC0JAAV (the container above) and also lists 40 old self-hosted PDFs, the newest May-12-2024.pdf; wp-json posts stop at august-28-2022. The self-hosted copies are a dead channel, not a second bulletin.'
+  note: Diocese-template WordPress site (403 to probe url; answers curl with a browser User-Agent). The
+    Bulletins page embeds the LPi widget publicationWidget?type=bulletin&id=0018000000QxC0JAAV (the container
+    above) and also lists 40 old self-hosted PDFs, the newest May-12-2024.pdf; wp-json posts stop at august-28-2022.
+    The self-hosted copies are a dead channel, not a second bulletin.
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=060HS
   seen: 2026-10-23
-  note: 'Directory site pages 060CS, 060ES, 060GC, 060HS, 060RS (Clymer, Ernest, Glen Campbell, Heilwood, Rossiter) name pastor Father Craig E. Alexander and website www.churchresurrection.org, no Partner Parishes. The base page LocationID=060 is stale (a former pastor and "Saturday: no Mass; Sunday: no Mass").'
+  note: 'Directory site pages 060CS, 060ES, 060GC, 060HS, 060RS (Clymer, Ernest, Glen Campbell, Heilwood,
+    Rossiter) name pastor Father Craig E. Alexander and website www.churchresurrection.org, no Partner
+    Parishes. The base page LocationID=060 is stale (a former pastor and "Saturday: no Mass; Sunday: no
+    Mass").'
+promoted: 2026-10-23
 ---
 
 ## Publisher

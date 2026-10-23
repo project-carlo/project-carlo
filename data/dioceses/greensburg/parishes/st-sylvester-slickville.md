@@ -8,17 +8,18 @@ group: 'Partners: St. Ambrose, Avonmore + St. Matthew, Saltsburg + St. Sylvester
 evidence:
 - url: https://www.stsylvester.org/wp-content/uploads/2026/10/St.-Sylvester-Bulletin-Oct.-25.pdf
   seen: 2026-10-22
-  quote: St. Sylvester Parish + 3028 Route 819 + Slickville, PA 15684 Office 5900 Kennedy Avenue, Export, PA 15632
+  quote: St. Sylvester Parish + 3028 Route 819 + Slickville, PA 15684 Office 5900 Kennedy Avenue, Export,
+    PA 15632
   note: 'Page 1 masthead of the 25 Oct 2026 issue ("30th Sunday in Ordinary Time + October 25, 2026",
-    "WEBSITE: stsylvester.org"). Names St. Sylvester alone; the office address is St. Mary''s, Export, the
-    pastor''s other parish. Page 3 has no text layer.'
+    "WEBSITE: stsylvester.org"). Names St. Sylvester alone; the office address is St. Mary''s, Export,
+    the pastor''s other parish. Page 3 has no text layer.'
 - url: https://www.stsylvester.org/wp-content/uploads/2026/10/St.-Sylvester-Bulletin-Oct.-25.pdf
   seen: 2026-10-22
   quote: Sunday Mass 8:30 AM
   note: 'Page 1 Mass list: October 25, November 1 and November 2 (All Souls, 6:30 PM), each with "Monsignor
-    Michael Begolly". "CONFESSIONS are Saturdays at noon at St. John''s in Delmont, and 5:00 pm Tuesdays at
-    St. Mary''s in Export"; those two are the Delmont/Export parishes'' churches and have no Mass in this
-    bulletin.'
+    Michael Begolly". "CONFESSIONS are Saturdays at noon at St. John''s in Delmont, and 5:00 pm Tuesdays
+    at St. Mary''s in Export"; those two are the Delmont/Export parishes'' churches and have no Mass in
+    this bulletin.'
 - url: https://www.stsylvester.org/bulletins/
   seen: 2026-10-22
   note: 'Read in headed Chrome (parish-site-access visit.py; probe url gets 403). "Read our Weekly Bulletins"
@@ -27,15 +28,15 @@ evidence:
     whose source is wp-content/uploads/2026/10/St.-Sylvester-Bulletin-Oct.-25.pdf.'
 - url: https://container.parishesonline.com/bulletins/14/0550/20261025B.pdf
   seen: 2026-10-22
-  note: 'The St. John Baptist de La Salle / St. Mary (Delmont, Export) bulletin for 25 Oct 2026, container
-    14/0550, the other parishes Msgr. Begolly serves. probe pdf --grep "Sylvester" and "Slickville" finds no match.
-    St. Sylvester is not in that bulletin.'
+  note: The St. John Baptist de La Salle / St. Mary (Delmont, Export) bulletin for 25 Oct 2026, container
+    14/0550, the other parishes Msgr. Begolly serves. probe pdf --grep "Sylvester" and "Slickville" finds
+    no match. St. Sylvester is not in that bulletin.
 - url: https://www.dioceseofgreensburg.org/official-june-20-2026/
   seen: 2026-10-22
   quote: Begolly as Pastor of Saint Sylvester Parish, Slickville
-  note: 'Appointments effective July 7, 2026. The same post makes Fr. Tyler Bandura pastor of St. Matthew,
-    Saltsburg and St. Ambrose, Avonmore, ending the three-parish arrangement the directory''s partner field
-    still shows.'
+  note: Appointments effective July 7, 2026. The same post makes Fr. Tyler Bandura pastor of St. Matthew,
+    Saltsburg and St. Ambrose, Avonmore, ending the three-parish arrangement the directory's partner field
+    still shows.
 - url: https://parishesonline.com/organization/st-sylvester-church-15684
   seen: 2026-10-22
   note: 'probe po: st-sylvester-church-15684 (lpi:0018000000QxC0iAAF, 3028 State Route 819, Slickville)
@@ -45,6 +46,7 @@ evidence:
   note: 'Directory: St. Sylvester Parish, pastor Msgr. Michael J. Begolly, deacon Michael Orange, "Saturday:
     no Mass; Sunday: 8:30 a.m.", website stsylvester.org, Partner Parishes St. Matthew (253) and St. Ambrose
     (021), mailing address "c/o P.O. Box 617, Avonmore" (the St. Ambrose office, stale since July).'
+promoted: 2026-10-23
 ---
 
 ## Publisher

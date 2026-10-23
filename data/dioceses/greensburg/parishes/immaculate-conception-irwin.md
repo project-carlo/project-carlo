@@ -8,25 +8,33 @@ group: Pastor shared with St. Elizabeth Ann Seton, North Huntingdon
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1204/20261025B.pdf
   seen: 2026-10-22
-  quote: 'IMMACULATE CONCEPTION PARISH'
-  note: 'Page 1 masthead of the 25 Oct 2026 issue (16 pages): "Immaculate Conception Parish Office 308 Second Street Irwin, PA 15642", "OCTOBER 25, 2026 THIRTIETH SUNDAY IN ORDINARY TIME", "The Very Reverend James Morley, Pastor". Names this parish alone.'
+  quote: IMMACULATE CONCEPTION PARISH
+  note: 'Page 1 masthead of the 25 Oct 2026 issue (16 pages): "Immaculate Conception Parish Office 308
+    Second Street Irwin, PA 15642", "OCTOBER 25, 2026 THIRTIETH SUNDAY IN ORDINARY TIME", "The Very Reverend
+    James Morley, Pastor". Names this parish alone.'
 - url: https://container.parishesonline.com/bulletins/14/1204/20261025B.pdf
   seen: 2026-10-22
-  quote: 'Immaculate Conception Parish  |  14-1204'
-  note: 'LPi ad-page footer, pages 15-16.'
+  quote: Immaculate Conception Parish  |  14-1204
+  note: LPi ad-page footer, pages 15-16.
 - url: https://container.parishesonline.com/bulletins/14/1204/20261025B.pdf
   seen: 2026-10-22
-  quote: '10:00 am – 312, 11:30 am - 210'
-  note: 'Page 3, "Mass Attendance - October 18": 4:30 pm 301, 8:00 am 247, 10:00 am 312, 11:30 am 210. Four weekend Masses, matching the directory line, all at the one church.'
+  quote: 10:00 am – 312, 11:30 am - 210
+  note: 'Page 3, "Mass Attendance - October 18": 4:30 pm 301, 8:00 am 247, 10:00 am 312, 11:30 am 210.
+    Four weekend Masses, matching the directory line, all at the one church.'
 - url: https://www.icirwin.org/bulletins/
   seen: 2026-10-22
-  note: 'The parish site''s bulletin page links parishesonline.com/find/immaculate-conception-parish-15642 and container PDFs content.parishesonline.com/bulletins/14/1204/2026MMDDB.pdf.'
+  note: The parish site's bulletin page links parishesonline.com/find/immaculate-conception-parish-15642
+    and container PDFs content.parishesonline.com/bulletins/14/1204/2026MMDDB.pdf.
 - url: https://parishesonline.com/organization/immaculate-conception-parish-15642
   seen: 2026-10-22
-  note: 'probe po: "Immaculate Conception Parish", 308 2nd St, Irwin, lpi:0018000000QxBzyAAF, container 14/1204, latest issue 2026-10-25.'
+  note: 'probe po: "Immaculate Conception Parish", 308 2nd St, Irwin, lpi:0018000000QxBzyAAF, container
+    14/1204, latest issue 2026-10-25.'
 - url: https://www.dioceseofgreensburg.org/parish/?LocationID=141
   seen: 2026-10-22
-  note: 'Directory: Immaculate Conception Parish, 302 Second Street, Irwin; pastor Father James Morley; "Saturday: 4:30 p.m.; Sunday: 8:00 a.m., 10:00 a.m., 11:30 a.m."; no partner parishes listed. Fr. Morley is also pastor of St. Elizabeth Ann Seton, North Huntingdon (LocationID=233).'
+  note: 'Directory: Immaculate Conception Parish, 302 Second Street, Irwin; pastor Father James Morley;
+    "Saturday: 4:30 p.m.; Sunday: 8:00 a.m., 10:00 a.m., 11:30 a.m."; no partner parishes listed. Fr.
+    Morley is also pastor of St. Elizabeth Ann Seton, North Huntingdon (LocationID=233).'
+promoted: 2026-10-23
 ---
 
 ## Publisher

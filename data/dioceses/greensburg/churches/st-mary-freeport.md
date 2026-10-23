@@ -26,8 +26,9 @@ evidence:
   seen: 2026-10-22
   quote: 'Saturday (Vigil): 4:00 P.M.'
   note: 'Page 1 of the 18 Oct 2026 bulletin: "St. Mary, Mother of God Church ... 608 High Street ~ Freeport,
-    PA 16229", "Sunday: 8:30 & 11:00 A.M.", weekday Masses Mon/Tue/Thu/Fri 8:00 A.M., Wed 7:00 P.M. The 25 Oct
-    2026 issue (rendered page 1) has the same schedule.'
+    PA 16229", "Sunday: 8:30 & 11:00 A.M.", weekday Masses Mon/Tue/Thu/Fri 8:00 A.M., Wed 7:00 P.M. The
+    25 Oct 2026 issue (rendered page 1) has the same schedule.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass
