@@ -156,18 +156,16 @@ Greensburg's playbook next door.
   building (gcatholic "St. Monica, Darlington" = St. Rose of Lima, closing Mass 2020-03-28).
 - **diopitt.org history pages date closures** of predecessor churches ("closed in 2019", St.
   Alphonsus page on Epiphany, Boyers) while the closed church's own page can still say "remains
-  open": quote the dated one and record the disagreement. diopitt.org answers 403 to `recheck`;
-  `visit.py --text` stops at 4000 characters (the diopitt.org nav): pass `--chars 30000`.
-  TribLive (Valley News Dispatch) names relegated churches (Guardian Angels, Natrona Heights,
-  2022-10-01).
-  GCatholic churches missing from the directory are usually closed predecessors (St. Wendelin,
-  St. Norbert, St. John Vianney); a page saying "remained open" at a 2020 merger can predate
-  a 2024 demolition, so check news too.
-  The predecessor pages use set phrases: "closed at the time of the merger" and "remained
-  open to serve the new parish"; read each predecessor's page.
-  read it with `visit.py` (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, and a long
-  timeout: hsplc.org took over two minutes). Find a successor parish's history page by
-  DuckDuckGo (holy-spirit-new-castle dates five closures).
+  open": quote the dated one and record the disagreement. The predecessor pages use set
+  phrases: "closed at the time of the merger" and "remained open to serve the new parish";
+  read each predecessor's page. A "remained open" at a 2020 merger can predate a 2024
+  demolition, so check news too: TribLive (Valley News Dispatch) names relegated churches
+  (Guardian Angels, Natrona Heights, 2022-10-01). GCatholic churches missing from the
+  directory are usually closed predecessors (St. Wendelin, St. Norbert, St. John Vianney).
+  Find a successor parish's history page by DuckDuckGo (holy-spirit-new-castle dates five
+  closures). diopitt.org answers 403 to `recheck`; read it with `visit.py` (headed:
+  `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, long timeout: hsplc.org took over two
+  minutes); `visit.py --text` stops at 4000 characters (the nav): pass `--chars 30000`.
 - **Web search:** `visit.py "https://duckduckgo.com/html/?q=..." --text` works (the plain
   `duckduckgo.com/?q=` page returns only the region menu); results begin after "Past Year".
   It finds diopitt.org history pages and church-bulletin.org issues.
