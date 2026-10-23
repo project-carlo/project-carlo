@@ -237,7 +237,7 @@ def test_followed_pages_and_resolved_document_urls_create_leads(dataset, monkeyp
 def test_failed_sites_and_documents_report_errors_without_settling_candidates(dataset, monkeypatch):
     dataset({"a": {"group": "Family"}, "b": {"group": "Family"}})
     monkeypatch.setattr(web, "probe_urls", lambda urls: [
-        {"url": u, "verdict": "UNREACHABLE", "detail": "timeout"} if "a.org" in u
+        {"url": u, "verdict": "UNREACHABLE", "detail": "timeout"} if u == "https://a.org/"
         else successful_probe(u, links=["https://b.org/issue.pdf"]) for u in urls])
     monkeypatch.setattr(web, "fetch", lambda u, **kw: web.Response(u, error="timeout"))
     result = report.audit("test", fetch=True)
