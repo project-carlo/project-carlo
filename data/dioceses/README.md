@@ -179,7 +179,10 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   review records the finding; use `merge` to change structure after reviewing its effects.
 - `group`: the diocese's grouping, e.g. `Family #31`.
 - `replaces`: slugs of rows merged or renamed into this one. Maintained by `merge` and
-  `rename`; `promote` deletes those live rows.
+  `rename`; `promote` deletes those live rows. A promoted successor retains ownership of
+  its retired slugs while their CSV rows await deletion, so merging or renaming a shared-site
+  publisher does not create a website collision. Other active publishers still need peer
+  reviews, and unrelated live rows and other-diocese claims still block sharing.
 
 **church**
 - `parish`, the address fields, `latitude`/`longitude` (or `null`, and `pnpm geocode` fills

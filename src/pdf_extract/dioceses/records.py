@@ -844,6 +844,15 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
                     return True
         return False
 
+    # A merge/rename carries ownership in the promoted successor's `replaces`.
+    # Its source rows remain live until promote removes them, but no longer
+    # represent active peers that need separate-publication reviews. Apply this
+    # to every surviving publisher on the site, not only the merge destination.
+    retiring_parishes = {
+        old for record in parishes.values() if record.get("promoted")
+        for old in record.get("replaces") or []
+        if isinstance(old, str) and old not in parishes and old not in owners.parish
+    }
     live_sites: dict[str, list[str]] = {}
     for live_slug, row in owners.live_parish.items():
         live_sites.setdefault(url_key(row.get("website", "")), []).append(live_slug)
@@ -856,7 +865,7 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
         if key in owners.website:
             p.errors.append(f"{label}: website already used by {owners.website[key]}")
         for live_slug in live_sites.get(key, []):
-            if r.get("promoted") and live_slug == slug:
+            if (r.get("promoted") and live_slug == slug) or live_slug in retiring_parishes:
                 continue
             # A promoted same-diocese peer is checked below with its full
             # evidence and recipe; a bare live CSV row cannot authorize sharing.

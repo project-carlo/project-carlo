@@ -761,3 +761,71 @@ def test_shared_site_does_not_override_external_csv_or_diocese_claims(root):
             "name": "Another", "website": SHARED_SITE, "bulletin_provider": "other",
             "provider_id": "page-pdfs filename=Another*.pdf", "evidence": EVIDENCE,
         }, slug="another", body="Another publisher.")
+
+
+@pytest.mark.parametrize("keep_sibling", [False, True])
+def test_promoted_shared_site_can_merge_publishers_then_retire_the_source(root, keep_sibling):
+    _shared_parish("st-ann", "Anne*.pdf")
+    _church()
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    _church("st-bede-town", parish="st-bede")
+    if keep_sibling:
+        _shared_parish("st-cyr", "Cyr*.pdf",
+                       publication_reviews=[_separate_review(), _separate_review("st-bede")])
+        _church("st-cyr-town", parish="st-cyr")
+    records.promote("test")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+
+    merged = records.merge_parishes("test", ["st-bede"], "st-ann",
+                                    note="The new masthead now covers Ann and Bede together.")
+    assert merged["moved_churches"] == ["st-bede-town"]
+    assert not (root / "parishes/st-bede.md").exists()
+    assert "st-bede" in records.load("test").of(records.PARISH)["st-ann"]["replaces"]
+    assert "st-bede" in {r["slug"] for r in _live("PARISHES_CSV_PATH")}
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    assert records.promote("test", dry_run=True)["parishes"]["removed"] == ["st-bede"]
+    assert records.promote("test")["parishes"]["removed"] == ["st-bede"]
+    assert {r["slug"] for r in _live("PARISHES_CSV_PATH")} == (
+        {"live-parish", "st-ann", "st-cyr"} if keep_sibling else {"live-parish", "st-ann"}
+    )
+    parents = {r["slug"]: r["parish_id"] for r in _live("CHURCHES_CSV_PATH")}
+    assert parents["st-ann-town"] == parents["st-bede-town"] == "st-ann"
+    if keep_sibling:
+        assert parents["st-cyr-town"] == "st-cyr"
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+
+
+def test_pending_shared_site_retirement_does_not_hide_an_unrelated_live_row(root):
+    _shared_parish("st-ann", "Anne*.pdf")
+    _church()
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    _church("st-bede-town", parish="st-bede")
+    records.promote("test")
+    records.merge_parishes("test", ["st-bede"], "st-ann")
+    with storage.PARISHES_CSV_PATH.open("a") as file:
+        file.write(f"outside,Outside,{SHARED_SITE},other,page-pdfs\n")
+    errors = records.validate("test")["dioceses"]["test"]["errors"]
+    assert any("row 'outside'" in error for error in errors)
+    assert not any("row 'st-bede'" in error for error in errors)
+    with pytest.raises(DioceseError, match="row 'outside'"):
+        records.promote("test")
+    assert {r["slug"] for r in _live("PARISHES_CSV_PATH")} == {
+        "live-parish", "st-ann", "st-bede", "outside",
+    }
+
+
+def test_promoted_shared_site_can_rename_a_publisher_before_promotion(root):
+    _shared_parish("st-ann", "Anne*.pdf")
+    _church()
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    _church("st-bede-town", parish="st-bede")
+    records.promote("test")
+    records.rename_record("test", "parish", "st-ann", "st-ann-town")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    promoted = records.promote("test")
+    assert promoted["parishes"]["removed"] == ["st-ann"]
+    assert promoted["parishes"]["added"] == ["st-ann-town"]
+    parents = {r["slug"]: r["parish_id"] for r in _live("CHURCHES_CSV_PATH")}
+    assert parents["st-ann-town"] == "st-ann-town"
+    assert parents["st-bede-town"] == "st-bede"
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
