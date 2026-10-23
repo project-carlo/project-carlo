@@ -235,7 +235,8 @@ README's model and the Greensburg precedent:
    If one bulletin covers the four canonical Shrines parishes it is one row with all their
    churches; St. Anthony Chapel, Troy Hill is a church row of whichever row prints its Masses.
    St. James and St. Katharine Drexel likewise: one row only if the current mastheads show
-   one bulletin covering both.
+   one bulletin covering both. Settled by scout 29 (2026-10-23): one row, one eCatholic 20435
+   bulletin with one masthead for both parishes.
 4. **Personal parishes** (Most Precious Blood, Institute of Christ the King; St. Benedict
    the Moor) are ordinary parish rows when they publish a bulletin.
 5. **GCatholic predecessor churches.** The survey put 51 GCatholic entries with the nearest
