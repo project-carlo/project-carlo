@@ -1,0 +1,468 @@
+{
+ "version": 1,
+ "diocese": "erie",
+ "first_batch": "erie-south",
+ "batches": [
+  {
+   "id": "erie-south",
+   "name": "Erie south and west: Our Lady of Peace, St. George, St. Julia, St. Boniface (Hammett)",
+   "why": "Four single-church Erie County parishes the April 2024 Erie County plan lists as not changing; each has its own pastor (clergy PDF 2026-08-07) and its own site. Typical batch: confirm each bulletin is its own (St. Boniface embeds po-org st-boniface-church-16509, St. Julia an LPi id; olp.org fails TLS for its bare host). St. Julia: directory 3750 West Lake Rd vs GCatholic 638 Roslyn Ave.",
+   "entries": [
+    "directory:10303",
+    "directory:10307",
+    "directory:10311",
+    "directory:10206",
+    "gcatholic:24456",
+    "gcatholic:24507",
+    "gcatholic:24526",
+    "gcatholic:24491"
+   ]
+  },
+  {
+   "id": "erie-east-partners",
+   "name": "Erie east: St. John the Baptist, Holy Rosary, Holy Trinity; Our Lady of Mount Carmel and St. Luke",
+   "why": "Two partnerships decreed 2024-07-09: Holy Trinity with St. John the Baptist (Holy Rosary merged into St. John; one pastor, Rev. James Piszker) and Our Lady of Mount Carmel with St. Luke (one pastor, Rev. Lawrence Richards; one site stlukeolmc.org). holytrinityrc.org embeds St. John's ParishesOnline org (st-john-the-baptist-church-16504): check whether the three Erie east parishes print one bulletin. Holy Rosary's address differs (directory 1002 E 28th St, GCatholic 2701 East Ave).",
+   "entries": [
+    "directory:10210",
+    "directory:10201",
+    "directory:10202",
+    "directory:10205",
+    "directory:10211",
+    "gcatholic:24514",
+    "gcatholic:24441",
+    "gcatholic:24443",
+    "gcatholic:24455",
+    "gcatholic:24530"
+   ]
+  },
+  {
+   "id": "erie-stans-sorrows",
+   "name": "Erie east side: St. Stanislaus, St. Hedwig (Latin Mass), Our Mother of Sorrows (St. Casimir, St. Ann, Holy Family)",
+   "why": "Partnered 2024-07-09, one pastor (Rev. Jason Glover); ParishesOnline org st-stanislaus-our-mother-of-sorrows-churches suggests one bulletin, but St. Hedwig is the Latin Mass apostolate with its own posts at latinmasserie.org (a likely separate bulletin). Closures: Holy Family church relegated effective 2025-12-29 (decree; its directory page now 302s); St. Mary of the Immaculate Conception (GCatholic only) merged into St. Stanislaus 2015. Small parish count because of the closures.",
+   "entries": [
+    "directory:10220",
+    "directory:10217",
+    "directory:10221",
+    "directory:10216",
+    "directory:10215",
+    "directory:10213",
+    "gcatholic:24556",
+    "gcatholic:24509",
+    "gcatholic:24494",
+    "gcatholic:24475",
+    "gcatholic:24438",
+    "gcatholic:24540"
+   ]
+  },
+  {
+   "id": "erie-west-26th",
+   "name": "Erie west 26th St: St. Joseph/Bread of Life, Sacred Heart of Jesus, St. Paul; Blessed Sacrament",
+   "why": "St. Joseph/Bread of Life and Sacred Heart partnered 2024-07-09, one pastor (Rev. Stephen Schreiber), one site stjoseph-sacredheart.org with po-org sacred-heart-church-16508; St. Paul merged into Sacred Heart. Blessed Sacrament (same street, own pastor, own site bsparisherie.org on Duda) is a neighbour, not a partner.",
+   "entries": [
+    "directory:10309",
+    "directory:10305",
+    "directory:10316",
+    "directory:10301",
+    "gcatholic:24524",
+    "gcatholic:24465",
+    "gcatholic:24548",
+    "gcatholic:24432"
+   ]
+  },
+  {
+   "id": "erie-downtown-west",
+   "name": "Erie downtown and west: St. Jude, St. Andrew, St. Stephen of Hungary (Spanish); St. Peter Cathedral",
+   "why": "St. Jude and St. Stephen of Hungary partnered 2024-07-09 (St. Andrew merged into St. Jude, amended decree 2024-07-09). Clergy PDF names Rev. Michael Polinek pastor of St. Jude and Rev. Joseph Petrone pastor of St. Stephen (and sacramental assistant at the cathedral): check whether St. Jude and St. Stephen share a bulletin (hispanicapostolateerie.org vs saintjude.church). The cathedral (Discover Mass link on its site) is missing from the GCatholic roster: GCatholic lists it outside the church list.",
+   "entries": [
+    "directory:10310",
+    "directory:10315",
+    "directory:10314",
+    "directory:10317",
+    "gcatholic:24525",
+    "gcatholic:24473",
+    "gcatholic:24559"
+   ]
+  },
+  {
+   "id": "erie-northeast",
+   "name": "Erie north-east: St. James, St. Mark the Evangelist, Mount Calvary; St. Patrick; Our Lady of Mercy (Harborcreek)",
+   "why": "Mount Calvary and St. Mark merged into St. James (decree 2024); Mount Calvary church relegated (decree effective 2025, see decrees page); St. Mark has a 9:30 Sunday Mass in the directory ('Secondary Mission' in the printable directory, 'secondary church' in the web city list). St. Patrick (downtown, own site resets connections) and Our Lady of Mercy (Discover Mass id on its site) have their own pastors.",
+   "entries": [
+    "directory:10209",
+    "directory:10212",
+    "directory:10219",
+    "directory:10204",
+    "gcatholic:24511",
+    "gcatholic:24533",
+    "gcatholic:24449",
+    "gcatholic:24547",
+    "gcatholic:24454"
+   ]
+  },
+  {
+   "id": "erie-county-west",
+   "name": "West Erie County: Holy Cross (Fairview) and St. John the Evangelist (Girard); St. Francis Xavier (McKean); St. Lawrence (Albion) and St. Philip (Crossingville)",
+   "why": "Holy Cross and St. John share a pastor (Rev. Scott Detisch) and the site hcsjchurches.org (po-org holy-cross-catholic-church plus a weeklybulletin.php page): likely one bulletin. St. John's old church at 101 Olin Ave (the GCatholic address) was relegated in 2022; the directory now gives 1001 Main St E. St. Philip (Crossingville; the directory files it under Edinboro) is a secondary mission of St. Lawrence.",
+   "entries": [
+    "directory:10302",
+    "directory:10308",
+    "directory:10306",
+    "directory:10312",
+    "directory:31009",
+    "gcatholic:24436",
+    "gcatholic:24515",
+    "gcatholic:24505",
+    "gcatholic:24527",
+    "gcatholic:24552"
+   ]
+  },
+  {
+   "id": "erie-county-east",
+   "name": "East Erie County: St. Gregory (North East); All Saints (Waterford); St. Thomas (Corry) with St. Teresa (Union City)",
+   "why": "Three separate pastors. St. Teresa of Avila merged into St. Thomas the Apostle (decree 2024); closures in Corry: St. Elizabeth church relegated 2019-12-01, Our Lady of Fatima (Canadohta Lake) relegated 2024-08-14 (its directory page now 302s). St. Thomas has container 14/1154; All Saints and St. Gregory have weeklybulletin.php pages.",
+   "entries": [
+    "directory:10208",
+    "directory:10320",
+    "directory:10408",
+    "directory:10407",
+    "directory:10420",
+    "gcatholic:24508",
+    "gcatholic:24428",
+    "gcatholic:24562",
+    "gcatholic:24560",
+    "gcatholic:24499",
+    "gcatholic:24451"
+   ]
+  },
+  {
+   "id": "crawford-west",
+   "name": "West Crawford: Our Lady of the Lake (Edinboro) with St. Anthony and St. Bernadette; Our Lady Queen of the Americas (Conneaut Lake); St. Peter and St. Philip (Conneautville/Linesville)",
+   "why": "St. Anthony (Cambridge Springs) merged into Our Lady of the Lake, Edinboro (decree 2024); St. Bernadette (Saegertown) is a 'secondary church without mission status' in the web city list but a 'Secondary Mission' in the printable directory of 2026-10-06. The web directory still puts both under St. Stephen of Hungary in its locator (GroupID 10314) and lists St. Anthony at 415 S Main St vs GCatholic 165 Beach Ave. St. Peter and St. Philip are partnered, one pastor (Rev. Chris Hamlett), one site stspeterphilip.com.",
+   "entries": [
+    "directory:10304",
+    "directory:31003",
+    "directory:31004",
+    "directory:31001",
+    "directory:31008",
+    "directory:31010",
+    "gcatholic:24457",
+    "gcatholic:24478",
+    "gcatholic:24485",
+    "gcatholic:24459",
+    "gcatholic:24549",
+    "gcatholic:24551"
+   ]
+  },
+  {
+   "id": "meadville",
+   "name": "Meadville: The Epiphany of the Lord (St. Agatha, St. Mary of Grace, St. Brigid) and St. Hippolyte (Frenchtown) with Our Lady of Lourdes (Cochranton)",
+   "why": "Epiphany merged St. Agatha, St. Brigid and St. Mary of Grace (2021) and is partnered with St. Hippolyte (decree 2023-08-07, which also changed Our Lady of Lourdes' status). St. Brigid church relegated effective 2026-02-02 (its directory page now 302s). Epiphany embeds po-org st-mary-of-grace-st-agatha-st-brigid-churches; St. Hippolyte has its own weeklybulletin.php page: one bulletin or two. catholic-meadville.com (St. Mary of Grace's directory site) is dead DNS.",
+   "entries": [
+    "directory:31012",
+    "directory:31002",
+    "directory:31007",
+    "directory:31005",
+    "directory:31006",
+    "directory:31020",
+    "gcatholic:24471",
+    "gcatholic:24538",
+    "gcatholic:24492",
+    "gcatholic:24510",
+    "gcatholic:24453"
+   ]
+  },
+  {
+   "id": "venango",
+   "name": "Venango: St. Titus (Titusville) with St. Walburga and Immaculate Conception (Centerville); St. Joseph (Oil City) with St. Venantius; St. Patrick (Franklin)",
+   "why": "Rev. Daniel Hoffman is pastor of St. Titus and pastor pro tempore of St. Joseph, Oil City, with one parochial vicar for both (clergy PDF 2026-08-07): check for a shared bulletin (sainttitus.com LPi id vs oilcitycatholic.com on Discover Mass). Oil City closures by decree: Assumption BVM (2019-07-19), Our Lady Help of Christians (2020-07-19), St. Stephen (2024). St. Patrick, Franklin is separate (site 403s probe url).",
+   "entries": [
+    "directory:30913",
+    "directory:30915",
+    "directory:30920",
+    "directory:30907",
+    "directory:30914",
+    "directory:30911",
+    "gcatholic:24564",
+    "gcatholic:24567",
+    "gcatholic:24447",
+    "gcatholic:24518",
+    "gcatholic:24566",
+    "gcatholic:24430",
+    "gcatholic:24458",
+    "gcatholic:24558",
+    "gcatholic:24546"
+   ]
+  },
+  {
+   "id": "warren-forest",
+   "name": "Warren and Forest: Holy Redeemer with St. Anthony (Sheffield); St. Joseph with St. Luke (Youngsville); St. John (Tidioute) with St. Anthony (Tionesta)",
+   "why": "Three parishes, three pastors, each with one mission (Bradford Deanery plan Oct 2023: no change). holyredeemerwarren.com 403s probe url; St. Joseph has a weeklybulletin.php page; St. John, Tidioute has no website in the directory.",
+   "entries": [
+    "directory:10401",
+    "directory:10402",
+    "directory:10405",
+    "directory:10406",
+    "directory:10404",
+    "directory:10423",
+    "gcatholic:24439",
+    "gcatholic:24480",
+    "gcatholic:24517",
+    "gcatholic:24529",
+    "gcatholic:24513",
+    "gcatholic:24477"
+   ]
+  },
+  {
+   "id": "clarion-north",
+   "name": "Clarion and Forest: St. Joseph (Lucinda), St. Mary (Crown) with St. Ann (Marienville), St. Michael (Fryburg); Immaculate Conception (Clarion)",
+   "why": "Lucinda, Crown and Fryburg are partnered (decree 2023-10-30), one pastor (Very Rev. Brandon Kleckner) and one site watch4deercatholic.church: likely one bulletin. The directory calls St. Mary 'St. Mary Parish (Crown)' at Leeper. Immaculate Conception, Clarion is separate (WeConnect uploads).",
+   "entries": [
+    "directory:30906",
+    "directory:30908",
+    "directory:30921",
+    "directory:30910",
+    "directory:30902",
+    "gcatholic:24521",
+    "gcatholic:24536",
+    "gcatholic:24474",
+    "gcatholic:24543",
+    "gcatholic:24444"
+   ]
+  },
+  {
+   "id": "jefferson-clarion-south",
+   "name": "Brookville with St. Dominic (Sigel); Ss. Cosmas and Damian (Punxsutawney); St. Charles (New Bethlehem) with St. Nicholas; St. Eusebius (East Brady) with St. Richard",
+   "why": "St. Charles and St. Eusebius share a pastor (Rev. Kevin Holland). Punxsutawney's former missions were relegated: St. Joseph (Anita) and St. Adrian (DeLancey) 2020-01-26, St. Anthony (Walston) 2021-05-03. St. Charles' site is on dioceseoferie.org; St. Eusebius has no website in the directory. GCatholic gives Ss. Cosmas and Damian no directory match by name (it is 'Sts.').",
+   "entries": [
+    "directory:20802",
+    "directory:20822",
+    "directory:20806",
+    "directory:30904",
+    "directory:30923",
+    "directory:30905",
+    "directory:30924",
+    "gcatholic:24446",
+    "gcatholic:24498",
+    "gcatholic:24466",
+    "gcatholic:24496",
+    "gcatholic:24545",
+    "gcatholic:24502",
+    "gcatholic:24554",
+    "gcatholic:24470",
+    "gcatholic:24479"
+   ]
+  },
+  {
+   "id": "brockway-clearfield",
+   "name": "St. Tobias (Brockway); St. Timothy (Curwensville) with St. Bonaventure (Grampian); St. Francis of Assisi (Clearfield)",
+   "why": "Very Rev. John Detisch is pastor of St. Tobias and administrator of St. Timothy (clergy PDF 2026-08-07): check whether St. Tobias (Discover Mass id) and sttimbon.org print one bulletin. St. Bonaventure merged into St. Timothy 2023-12-02. St. Francis, Clearfield has no website in the directory.",
+   "entries": [
+    "directory:20810",
+    "directory:20710",
+    "directory:20706",
+    "directory:20708",
+    "gcatholic:24565",
+    "gcatholic:24563",
+    "gcatholic:24489",
+    "gcatholic:24503"
+   ]
+  },
+  {
+   "id": "dubois",
+   "name": "DuBois: Holy Spirit (St. Catherine, St. Michael, St. Bernard Falls Creek, St. Mary Reynoldsville, Assumption Sykesville)",
+   "why": "Holy Spirit was erected in 2023 from five merged parishes; one pastor and one site weareholyspirit.com (403s probe url). A family with many churches, so a batch of its own: which buildings still hold weekend Mass (the directory gives none for St. Bernard, St. Catherine, St. Michael and St. Mary). St. Joseph church, DuBois (GCatholic only) relegated 2019-12-01. St. Catherine, St. Michael, St. Bernard and St. Mary are missing from the locator JSON; the directory files St. Catherine and St. Michael as 'Parish' records.",
+   "entries": [
+    "directory:20824",
+    "directory:20805",
+    "directory:20809",
+    "directory:20804",
+    "directory:20808",
+    "directory:20801",
+    "gcatholic:24495",
+    "gcatholic:24544",
+    "gcatholic:24486",
+    "gcatholic:24535",
+    "gcatholic:24429",
+    "gcatholic:24519"
+   ]
+  },
+  {
+   "id": "clearfield-east",
+   "name": "Eastern Clearfield: Christ the King (Houtzdale) with Immaculate Conception (Osceola Mills); St. Agnes (Morrisdale) with Frenchville, Grassflat, Hawk Run, Drifting; St. Basil (Coalport) with Holy Trinity (Ramey)",
+   "why": "Clearfield Deanery plan (Oct 2023, effective 2023-12-01). Christ the King and St. Agnes share a pastor (Rev. Johnathan Schmolt) and the parochial vicar also serves St. Basil; all three use cpoecc.org (weeklybulletin.php). Probably one bulletin for nine buildings; Grassflat and Hawk Run lost weekend Mass in the plan. GCatholic and the directory name the Ss. Peter and Paul churches by different towns (Frenchville vs Grassflat).",
+   "entries": [
+    "directory:20701",
+    "directory:20703",
+    "directory:20704",
+    "directory:20709",
+    "directory:20722",
+    "directory:20723",
+    "directory:20724",
+    "directory:20705",
+    "directory:20702",
+    "gcatholic:24433",
+    "gcatholic:24445",
+    "gcatholic:24472",
+    "gcatholic:24539",
+    "gcatholic:24467",
+    "gcatholic:24468",
+    "gcatholic:24555",
+    "gcatholic:24484",
+    "gcatholic:24442"
+   ]
+  },
+  {
+   "id": "st-marys",
+   "name": "St. Marys and Kersey: Queen of the World; St. Mary and Sacred Heart; St. Boniface (Kersey)",
+   "why": "St. Mary and Sacred Heart partnered (decree 2023-09-20), one Benedictine pastor (Rev. Thomas Curry, OSB) and po-org st-mary-sacred-heart-churches on thesmchurch.com, but sacredheartparish.us has its own bulletins page: one bulletin or two. Queen of the World has its own pastor. Holy Cross, Brandy Camp merged into St. Boniface 2017 and its church was relegated 2020-07-26.",
+   "entries": [
+    "directory:20603",
+    "directory:20610",
+    "directory:20604",
+    "directory:20606",
+    "gcatholic:24461",
+    "gcatholic:24534",
+    "gcatholic:24463",
+    "gcatholic:24490",
+    "gcatholic:24435"
+   ]
+  },
+  {
+   "id": "elk-north",
+   "name": "Holy Rosary (Johnsonburg) with St. Anne (Wilcox); St. Leo Magnus (Ridgway); St. Joseph (Force); St. Callistus (Kane)",
+   "why": "Four parishes, four pastors. Holy Rosary's site on dioceseoferie.org 403s probe url. GCatholic still lists Holy Cross Devotional Chapel, Rasselas (church relegated 2017-09-07 by decree; check whether it still has devotional Masses). St. Callistus: container 14/1173.",
+   "entries": [
+    "directory:20602",
+    "directory:20605",
+    "directory:20608",
+    "directory:20607",
+    "directory:20504",
+    "gcatholic:24440",
+    "gcatholic:24476",
+    "gcatholic:24437",
+    "gcatholic:24528",
+    "gcatholic:24522",
+    "gcatholic:24493"
+   ]
+  },
+  {
+   "id": "mckean",
+   "name": "McKean: St. Bernard with St. Francis (Bradford); St. Raphael (Eldred) with St. Mary (Sartwell) and St. Theresa (Shinglehouse); St. Elizabeth (Smethport) with St. Gabriel (Port Allegany)",
+   "why": "Bradford Deanery plan (Oct 2023). St. Francis, Bradford became a secondary church without weekend Mass (decree). Closed by decree: Our Mother of Perpetual Help, Lewis Run (2023-07-01) and St. Joseph, Mount Jewett (2025-03-10; under St. Elizabeth, its directory page now 302s). Three pastors; weeklybulletin.php sites for all three plus po-org st-elizabeth-of-hungary.",
+   "entries": [
+    "directory:20502",
+    "directory:20507",
+    "directory:20510",
+    "directory:20527",
+    "directory:20511",
+    "directory:20505",
+    "directory:20508",
+    "directory:20509",
+    "gcatholic:24487",
+    "gcatholic:24504",
+    "gcatholic:24460",
+    "gcatholic:24553",
+    "gcatholic:24537",
+    "gcatholic:24561",
+    "gcatholic:24500",
+    "gcatholic:24506",
+    "gcatholic:24516"
+   ]
+  },
+  {
+   "id": "potter-cameron",
+   "name": "Potter and Cameron: St. Eulalia (Coudersport) with Sacred Heart (Genesee), St. Augustine (Austin), St. Bibiana (Galeton); St. Mark (Emporium) with St. James (Driftwood)",
+   "why": "St. Bibiana merged into St. Eulalia (Oct 2023 plan): Galeton and Austin have no weekend Mass. steulaliacoudersport.org 403s probe url and the directory also has a misspelt dead domain (steulaliacouderport.org); the printable directory gives steulalia-stgabriel.org for Austin. St. Mark, Emporium is separate (weeklybulletin.php).",
+   "entries": [
+    "directory:20506",
+    "directory:20520",
+    "directory:20521",
+    "directory:20503",
+    "directory:20609",
+    "directory:20623",
+    "gcatholic:24501",
+    "gcatholic:24464",
+    "gcatholic:24482",
+    "gcatholic:24488",
+    "gcatholic:24532",
+    "gcatholic:24512"
+   ]
+  },
+  {
+   "id": "sharon-farrell",
+   "name": "Sharon and Farrell: St. Joseph and St. Anthony (Sharon); Our Lady of Fatima (Farrell); Good Shepherd (West Middlesex)",
+   "why": "St. Joseph and St. Anthony share a pastor (Rev. James Power) and SharonCatholic.org (Wix). Our Lady of Fatima: the clergy PDF names Rev. Glenn Whitman pastor of Good Shepherd and Our Lady of Fatima, but the city list says Fatima is 'partnered with St. Anthony of Padua Parish, Sharon': read both bulletins. Closures by decree: Sacred Heart, Sharon (2018-03-25), St. Stanislaus Kostka-Holy Trinity, Sharon (2019), St. Adalbert, Farrell (2020-09-20).",
+   "entries": [
+    "directory:31113",
+    "directory:31110",
+    "directory:31116",
+    "directory:31102",
+    "gcatholic:24520",
+    "gcatholic:24481",
+    "gcatholic:24452",
+    "gcatholic:24434",
+    "gcatholic:24462",
+    "gcatholic:24557",
+    "gcatholic:24469"
+   ]
+  },
+  {
+   "id": "hermitage-greenville",
+   "name": "Notre Dame (Hermitage) and St. Bartholomew (Sharpsville); St. Michael (Greenville) with St. Margaret (Jamestown)",
+   "why": "Notre Dame and St. Bartholomew are partnered, one pastor (Rev. John Miller); saintbartholomews.com embeds an LPi id, notredame-pa.org has its own bulletin pages. St. Michael, Greenville (weeklybulletin.php) has St. Margaret as its mission; Thiel College campus ministry is served from St. Michael.",
+   "entries": [
+    "directory:31105",
+    "directory:31111",
+    "directory:31114",
+    "directory:31122",
+    "gcatholic:24450",
+    "gcatholic:24483",
+    "gcatholic:24541",
+    "gcatholic:24531"
+   ]
+  },
+  {
+   "id": "mercer-grove-city",
+   "name": "Immaculate Heart of Mary (Mercer) with St. Hermenegild and St. Columbkille (Stoneboro); Beloved Disciple (Grove City) with St. Michael (Emlenton)",
+   "why": "IHM and St. Columbkille share a pastor (Very Rev. Andrew Boyd) and ihmercer.org. St. Michael, Emlenton merged into Beloved Disciple (2023). St. Hermenegild (Pardoe) is a secondary church with no GCatholic entry.",
+   "entries": [
+    "directory:31104",
+    "directory:31120",
+    "directory:31112",
+    "directory:31101",
+    "directory:30909",
+    "gcatholic:24448",
+    "gcatholic:24497",
+    "gcatholic:24431",
+    "gcatholic:24542"
+   ]
+  },
+  {
+   "id": "eastern-catholic",
+   "name": "Eastern Catholic churches in the territory (GCatholic only)",
+   "why": "Eight Ruthenian (Byzantine Catholic Metropolia of Pittsburgh) and one Ukrainian church GCatholic lists in the diocese. Confirm each one's jurisdiction on its GCatholic page and exclude as other-jurisdiction; Hawk Run, Ramey, Sykesville and Punxsutawney share towns with Latin churches, so check names before linking.",
+   "entries": [
+    "gcatholic:17280",
+    "gcatholic:17284",
+    "gcatholic:17287",
+    "gcatholic:17290",
+    "gcatholic:17292",
+    "gcatholic:17316",
+    "gcatholic:17410",
+    "gcatholic:17318",
+    "gcatholic:17320"
+   ]
+  },
+  {
+   "id": "erie-chapels",
+   "name": "Erie institutions: Gannon University chapel, St. Mark Seminary, Mount St. Benedict Monastery",
+   "why": "GCatholic-only chapels: Mary, Seat of Wisdom Chapel (Gannon University), St. Mark Seminary (the diocesan centre) and the Benedictine Sisters' Mount St. Benedict Monastery. Decide public Mass vs private chapel under the campus/chapel rule the orchestrator sets. Leads not on any roster: Mercyhurst, Penn State Behrend (the clergy PDF names a Mass celebrant there), Edinboro, Clarion and Allegheny campus Masses.",
+   "entries": [
+    "gcatholic:90337",
+    "gcatholic:40408",
+    "gcatholic:59774"
+   ]
+  }
+ ],
+ "excluded": []
+}
