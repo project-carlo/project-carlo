@@ -187,6 +187,10 @@ otherwise.
   container: check its latest issue before treating it as a channel.
 - **Same-pastor parishes print each other's Mass boxes** while each keeps its own live
   bulletin: separate rows while both channels are live.
+- **Discover Mass here:** St. Mary Magdalene (three listings, one per church, one issue: one
+  row with all three ids) and a mirror of St. Benedict the Moor's eCatholic 26574 PDF
+  (byte-identical, posted a week ahead). Empty LPi orgs point here. web.archive.org is blocked
+  from the sandbox.
 - **Discover Mass (J.S. Paluch):** grep the town in `discovermass.com/wp-sitemap-posts-item-{1..11}.xml`;
   downloads are capped per IP per day (134-byte reply, `not_pdf`) and repeated page hits get
   Wordfence-blocked: read each page once. "No bulletins available" pages are not channels.
