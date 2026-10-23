@@ -15,7 +15,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.dioceses import records, report, rosters, web
+from pdf_extract.dioceses import batches, records, report, rosters, web
 from pdf_extract.dioceses.records import EXCLUSION_REASONS, KINDS, PARISH, DioceseError
 
 Handler = Callable[[argparse.Namespace], dict[str, Any]]
@@ -195,6 +195,7 @@ HANDLERS: dict[str, Handler] = {
     "todo": lambda a: report.todo(a.diocese),
     "validate": lambda a: records.validate(a.diocese),
     "write": _write_record,
+    "batches-validate": lambda a: batches.validate(a.diocese, Path(a.file) if a.file else None),
     "search": lambda a: records.search(" ".join(a.query), diocese=a.diocese, kinds=a.kind,
                                        limit=a.limit),
     "merge": lambda a: records.merge_parishes(a.diocese, a.parishes, a.into, note=a.note or ""),
@@ -269,6 +270,13 @@ def add_diocese_parser(
 
     p = leaf("validate", "validate", "Check one diocese (or all); exits 1 on errors")
     p.add_argument("diocese", nargs="?")
+    p.set_defaults(fail_on_verification_error=True)
+
+    batch_commands = group("batches", "Validate scout batch coverage against local rosters")
+    p = leaf("validate", "batches-validate", "Check a batch manifest; exits 1 on errors",
+             parent=batch_commands)
+    p.add_argument("diocese")
+    p.add_argument("--file", help="JSON manifest; defaults to data/dioceses/<diocese>/batches.json")
     p.set_defaults(fail_on_verification_error=True)
 
     p = leaf("write", "write", "Patch a record from JSON, validate, then atomically write it")

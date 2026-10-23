@@ -138,7 +138,14 @@ unresolved research alongside due revisits, so the next researcher can inspect p
 and retry triggers before making requests. Legacy records need no mass backfill.
 
 **parish**
-- `website`: where the bulletin can be found (required, unique across the dataset).
+- `website`: where the bulletin can be found (required). Sharing one URL within a diocese
+  requires content-supported `separate` peer reviews for **every pair**, and pinned
+  `page-pdfs` or `page-images` recipes with filename filters whose literal prefixes
+  cannot overlap (e.g. `Anne-Bulletin*.pdf` and `Therese-Bulletin*.pdf`). Different
+  globs alone are insufficient: `Anne*.pdf` and `*.pdf` can select the same file.
+  Reviews without observed masthead/member evidence, conflicting reviews, external
+  live CSV rows and other-diocese claims still block sharing. The exception survives
+  promotion and import; the database identifies parishes by slug, not website.
 - `bulletin_provider`: `parishes_online`, `ecatholic`, `discover_mass`, `other`,
   `google_drive` or `no_bulletin` (kept in the records, left off the site: Settled policy
   4). `fetch` reads ParishesOnline and DiscoverMass by
@@ -159,7 +166,10 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   carried as several rows", a mistake that shows up in no other check. Record every form
   you find: `po-container:14/0434`, `po-org:<slug>`, `lpi:<18-character id>` (all three are
   one ParishesOnline bulletin), `ecatholic:<site id>`, `discovermass:<slug>`, or
-  `url:<page>` for a self-hosted bulletin.
+  `url:<page>#<publisher>` for separate self-hosted bulletins on a shared page. A hosting
+  account or shared listing is a discovery lead, not a publication identity: record
+  only identifiers that identify this bulletin in `publication`, and keep shared
+  account/site evidence in `evidence`. Peer reviews never waive publication-id uniqueness.
 - `bulletin_status` (optional): `available`, `not-found`, `access-blocked`,
   `unsupported-format` or `not-published`. This describes research availability independently
   of `bulletin_provider`; legacy `no_bulletin` still controls promotion (Settled policy 4).
@@ -234,6 +244,41 @@ Exhausted checks need no repeat without a changed method, source or satisfied re
 Use a concrete next action and trigger to bound negative research, not a fixed network
 request budget that sacrifices evidence. Parish-specific attempts and decisions stay in
 the record; the shared publisher playbook keeps only reusable methods and new lessons.
+
+## Scout batch plans
+
+New whole-diocese surveys save their reviewable plan in
+`data/dioceses/<d>/batches.json`. Scratch `batches.md` may hold progress notes, but the
+JSON is the source of roster assignments. Existing mapped dioceses need no backfill.
+
+```json
+{
+  "version": 1,
+  "diocese": "test",
+  "first_batch": "town",
+  "batches": [{
+    "id": "town",
+    "name": "Town and its missions",
+    "why": "The directory names one shared pastor; check for a shared bulletin.",
+    "entries": ["directory:anne", "gcatholic:123"]
+  }],
+  "excluded": [{"ref": "gcatholic:999", "reason": "Duplicate of directory:anne"}]
+}
+```
+
+Run `pnpm --silent diocese batches validate <d>` before any scout starts and whenever
+rosters or assignments change. `--file <path>` checks a proposed manifest elsewhere.
+The command reads every local roster, fetches nothing and changes no files. It exits
+1 on errors and reports `passed`, counts, batch sizes, `missing`, `unknown` and duplicate
+reference locations. Every `<roster>:<id>` must occur exactly once, either in a nonempty
+batch or as an exclusion with a reason. Batch ids must be unique, names and grouping
+reasons nonempty, and `first_batch` must name a batch. Missing/malformed rosters cannot
+produce a successful check. Excluding a duplicate roster entry from scouting does not
+exclude the church from the diocese; normal coverage must still account for it.
+
+The validator checks assignments, not whether a shared pastor implies a shared bulletin.
+The orchestrator still reviews grouping and chooses a typical first batch. Commit the
+plan with the rosters so future reviewers can reproduce the assignment check.
 
 ## The explanation
 

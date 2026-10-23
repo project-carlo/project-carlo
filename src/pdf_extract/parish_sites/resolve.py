@@ -259,11 +259,13 @@ def _collect_bulletin_page(
     *, page: PageLike, url: str, reference_date: date, collectors: list[Collector],
     filename: str | None = None,
 ) -> _Collected:
-    site = BulletinPage(page=page, requested_url=url, reference_date=reference_date)
+    recipe = Recipe(filename=filename)
+    site = BulletinPage(
+        page=page, requested_url=url, reference_date=reference_date, matches=recipe.matches,
+    )
     site.load()
     found: list[Candidate] = []
     used: Collector | None = None
-    recipe = Recipe(filename=filename)
     for collector in collectors:
         if used is not None and used.final:
             break

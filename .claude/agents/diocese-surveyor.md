@@ -54,17 +54,20 @@ border this one, for their *Sources*, *Bulletin publishers here* and *Rules sett
    might share a bulletin go in the same batch, so one scout settles them. Use fewer
    parishes for a family with many churches or a city centre full of closures, and give
    the Eastern Catholic or other-jurisdiction entries a batch of their own. Write
-   `scratch/map-<d>/batches.md`: one heading per batch with a short name (town or family),
-   its entries as `<roster>:<id>` with name and town, and a line on why they are grouped
-   and what to look out for. Mark a typical batch to run first, not the hardest one, so
-   the playbook fills up before the difficult ones. Every roster entry is in exactly one
-   batch, or listed at the end with why it isn't (a duplicate of another roster's entry,
-   outside the diocese).
+   `data/dioceses/<d>/batches.json` in the README's version-1 format: each batch has a
+   stable `id`, `name`, `why` (grouping and what to look out for), and its `<roster>:<id>`
+   `entries`. Set `first_batch` to a typical batch, not the hardest one, so the playbook
+   fills up before the difficult ones. Every roster entry appears exactly once, either
+   in a batch or in `excluded` with a reason (duplicate of another roster's entry,
+   outside the diocese). Also write `scratch/map-<d>/batches.md` with names, towns and
+   progress notes for those batch ids; the JSON is the source of assignments.
+   Run `pnpm --silent diocese batches validate <d>` and fix every error before handing
+   the survey back. Rerun it after changing any roster or assignment.
 
 ## Write boundaries
 
-- Write `diocese.md`, the rosters, the tools folder and `batches.md`. Don't write parish,
-  church, excluded or open records; the scouts do, from your batches.
+- Write `diocese.md`, the rosters, the tools folder, `batches.json` and `batches.md`.
+  Don't write parish, church, excluded or open records; the scouts do, from your batches.
 - Don't decide diocese-wide rules (how to treat campus Masses, shrines, a family bulletin
   that some members still print their own of). Propose them in your report.
 - Don't commit or promote. The orchestrator does both.
@@ -79,8 +82,8 @@ Write `scratch/map-<d>/survey.json`: the diocese (slug, GCatholic key, website, 
 organised), each roster (name, entry count, source URL, anything odd), the batches (count,
 sizes, which to run first), proposed rules for the orchestrator to decide before the
 scouts start, and anything you couldn't get (a directory that wouldn't scrape, a list you
-couldn't find) with what you tried. Point to `diocese.md` and `batches.md` rather than
-copying them.
+couldn't find) with what you tried. Include the batch validation result and point to
+`diocese.md`, `batches.json` and `batches.md` rather than copying them.
 
 Return only a small JSON handoff (target at most 300 tokens), for example:
 

@@ -667,3 +667,97 @@ def test_promote_adds_parishes_as_fetch_only(root: Path) -> None:
     assert [rows[s]["fetch_only"] for s in ("live-parish", "st-ann", "st-bede")] == [
         "", "", "true",
     ]
+
+
+SHARED_SITE = "https://family.example/bulletins"
+
+
+def _separate_review(peer="st-ann", **changes):
+    return {"parish": peer, "decision": "separate", "evidence": [{
+        **EVIDENCE[0], "note": "Ann's masthead lists Ann alone; Bede's masthead lists Bede alone.",
+    }], **changes}
+
+
+def _shared_parish(slug, filename, **fields):
+    return _parish(slug, website=SHARED_SITE, bulletin_provider="other",
+                   provider_id=f"page-pdfs {SHARED_SITE} filename={filename}", **fields)
+
+
+def test_reviewed_shared_site_survives_promotion_import_and_fetch(root, tmp_path):
+    from datetime import date
+
+    from pdf_extract import db, fetch, fetch_check
+
+    _shared_parish("st-ann", "Anne-Bulletin*.pdf")
+    _church()
+    _shared_parish("st-bede", "Bede-Bulletin*.pdf", publication_reviews=[_separate_review()])
+    _church("st-bede-town", parish="st-bede")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    assert records.promote("test", dry_run=True)["parishes"]["added"] == ["st-ann", "st-bede"]
+    records.promote("test")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    assert records.promote("test")["parishes"]["updated"] == {}
+
+    html = ('<a href="/Bede-Bulletin-20260927.pdf">September 27, 2026 Bulletin</a>'
+            '<script>var file="https://family.example/Anne-Bulletin-20260927.pdf";</script>')
+    with storage.connect_db(tmp_path / "shared.db") as conn:
+        db.migrate(conn)
+        db.seed_reference_data(conn, parishes_csv=storage.PARISHES_CSV_PATH,
+                               churches_csv=storage.CHURCHES_CSV_PATH)
+        imported = conn.execute("SELECT * FROM parish WHERE slug IN ('st-ann', 'st-bede')").fetchall()
+        assert len(imported) == 2
+        assert {row["homepage_url"] for row in imported} == {SHARED_SITE}
+        for row in imported:
+            source = fetch._resolve_fetch_source(dict(row))
+            link = fetch_check._resolve(
+                source, reference_date=date(2026, 9, 26),
+                page=fetch_check.SnapshotPage([
+                    fetch_check.PageSnapshot(SHARED_SITE, SHARED_SITE, html),
+                ]),
+            )
+            expected = "Anne" if row["slug"] == "st-ann" else "Bede"
+            assert link.source_url == f"https://family.example/{expected}-Bulletin-20260927.pdf"
+
+
+@pytest.mark.parametrize("filename,reviews", [
+    ("Bede*.pdf", []),
+    ("Bede*.pdf", [_separate_review(evidence=[{**EVIDENCE[0], "note": "Different URL ids."}])]),
+    ("Bede*.pdf", [_separate_review(decision="shared")]),
+    ("anne-bulletin*.PDF", [_separate_review()]),
+    ("*.pdf", [_separate_review()]),
+    ("Anne*.pdf", [_separate_review()]),
+    ("Anne-Bulletin-2026*.pdf", [_separate_review()]),
+])
+def test_shared_site_requires_supported_review_and_provably_disjoint_filters(root, filename, reviews):
+    _shared_parish("st-ann", "Anne-Bulletin*.pdf")
+    with pytest.raises(DioceseError, match="website also used"):
+        _shared_parish("st-bede", filename, publication_reviews=reviews)
+    assert not (root / "parishes/st-bede.md").exists()
+
+
+def test_shared_site_checks_every_peer_and_preserves_publication_uniqueness(root):
+    _shared_parish("st-ann", "Anne*.pdf", publication=["po-container:14/0434"])
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    with pytest.raises(DioceseError, match="website also used by parish 'st-ann'"):
+        _shared_parish("st-cyr", "Cyr*.pdf", publication_reviews=[_separate_review("st-bede")])
+    with pytest.raises(DioceseError, match="both publish"):
+        _shared_parish("st-cyr", "Cyr*.pdf", publication=["po-container:14/0434"],
+                       publication_reviews=[_separate_review(), _separate_review("st-bede")])
+    _shared_parish("st-cyr", "Cyr*.pdf",
+                   publication_reviews=[_separate_review(), _separate_review("st-bede")])
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+
+
+def test_shared_site_does_not_override_external_csv_or_diocese_claims(root):
+    _shared_parish("st-ann", "Anne*.pdf")
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    with storage.PARISHES_CSV_PATH.open("a") as file:
+        file.write(f"outside,Outside,{SHARED_SITE},other,page-pdfs\n")
+    errors = records.validate("test")["dioceses"]["test"]["errors"]
+    assert sum("row 'outside'" in error for error in errors) == 2
+    records.init_diocese("other", name="Other")
+    with pytest.raises(DioceseError, match="diocese 'test'"):
+        records.new_record("other", "parish", {
+            "name": "Another", "website": SHARED_SITE, "bulletin_provider": "other",
+            "provider_id": "page-pdfs filename=Another*.pdf", "evidence": EVIDENCE,
+        }, slug="another", body="Another publisher.")

@@ -1077,3 +1077,34 @@ def test_parse_date_reads_an_unseparated_month_day_year_near_the_reference():
     # YYYYMMDD still wins, and an id whose year is far off is no date.
     assert parse_date_from_texts(["20261018.pdf"], ref) == date(2026, 10, 18)
     assert parse_date_from_texts(["photo-12312011.jpg"], ref) is None
+
+
+@pytest.mark.parametrize("location", ["script", "served-embed", "late-render"])
+def test_other_publishers_current_pdf_cannot_hide_a_filtered_issue(location):
+    bulletins = f"{HOME}/bulletins/"
+    own = f"{HOME}/Anne-Bulletin-20260927.pdf"
+    other = '<a href="/Therese-Bulletin-20260927.pdf">September 27, 2026 Bulletin</a>'
+    script = f'<script>var diviElementLinkData = [{{"url":"{own}"}}];</script>'
+    initial = other + (script if location == "script" else
+                       '<div class="pdfemb-viewer"></div>' if location == "served-embed" else "")
+
+    class LatePage(SnapshotPage):
+        waited = False
+
+        def wait_for_timeout(self, timeout):
+            self.waited = True
+            if location == "late-render":
+                self._by_url[bulletins.rstrip("/").lower()] = PageSnapshot(
+                    bulletins, bulletins, other + script,
+                )
+                self.goto(bulletins)
+
+    page = LatePage([PageSnapshot(bulletins, bulletins, initial)],
+                    {bulletins: other + script})
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=TODAY, page=page,
+        recipe=f"page-pdfs {bulletins} filename=Anne-Bulletin*.pdf",
+    )
+    assert link.source_url == own
+    assert link.fetch_url == own
+    assert page.waited is (location == "late-render")

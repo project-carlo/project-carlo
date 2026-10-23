@@ -61,6 +61,8 @@ class BulletinPage:
     page: PageLike
     requested_url: str
     reference_date: date
+    matches: Callable[[str], bool] | None = None
+    """An optional recipe constraint, applied before collection completeness checks."""
     url: str = field(init=False, default="")
 
     def load(self) -> None:
@@ -100,6 +102,7 @@ _CURRENT_BULLETIN_TITLE_RE = re.compile(r"(?:this week'?s|current|latest)\s+bull
 
 def page_pdf_candidates(
     *, page: PageLike, base_url: str, reference_date: date,
+    matches: Callable[[str], bool] | None = None,
 ) -> list[Candidate]:
     """Every PDF the page in the tab offers: its links, else its markup."""
     base_url = document_base_url(_rendered_html(page), base_url)
@@ -114,6 +117,8 @@ def page_pdf_candidates(
             fetch_url = document_download_url(absolute_href)
             if fetch_url is None:
                 continue
+        if matches is not None and not matches(absolute_href):
+            continue
         text = anchor_text(anchor)
         candidates.append(
             Candidate(
@@ -142,7 +147,7 @@ def page_pdf_candidates(
     linked = {c.source_url for c in candidates}
     candidates += [
         c for c in _pdf_candidates_in_html(html, base_url=base_url, reference_date=reference_date)
-        if c.source_url not in linked
+        if c.source_url not in linked and (matches is None or matches(c.source_url))
     ]
     # Cards a repeater rendered after its links were read (St. Joseph the
     # Worker, Frackville) date their PDFs from this later look at the page.
@@ -159,7 +164,9 @@ def page_pdf_candidates(
     except Exception as exc:
         LOGGER.info("Could not read the served page %s: %s", page.url or base_url, exc)
         return []
-    return _pdf_candidates_in_html(source, base_url=base_url, reference_date=reference_date)
+    return [c for c in _pdf_candidates_in_html(
+        source, base_url=base_url, reference_date=reference_date,
+    ) if matches is None or matches(c.source_url)]
 
 
 class _ListItemReader(HTMLParser):
@@ -288,6 +295,7 @@ def _candidates_on(site: BulletinPage, url: str) -> list[Candidate]:
     wait_for_selector_quietly(page=site.page, selector="a[href]", state="attached", source_label=url)
     return page_pdf_candidates(
         page=site.page, base_url=site.page.url or url, reference_date=site.reference_date,
+        matches=site.matches,
     )
 
 
@@ -359,12 +367,14 @@ def collect_page_pdfs(site: BulletinPage, found: list[Candidate]) -> list[Candid
         return []
     candidates = page_pdf_candidates(
         page=site.page, base_url=site.url, reference_date=site.reference_date,
+        matches=site.matches,
     )
     if is_convincing(candidates, site.reference_date):
         return candidates
     site.page.wait_for_timeout(LATE_CONTENT_WAIT_MS)
     later = page_pdf_candidates(
         page=site.page, base_url=site.url, reference_date=site.reference_date,
+        matches=site.matches,
     )
     return later if is_convincing(later, site.reference_date) else candidates
 
@@ -510,7 +520,8 @@ def collect_page_images(site: BulletinPage, found: list[Candidate]) -> list[Cand
             if not source:
                 continue
             url = urljoin(site.url, source)
-            if not is_image_url(url) or url in seen:
+            if (not is_image_url(url) or url in seen
+                    or (site.matches is not None and not site.matches(url))):
                 continue
             seen.add(url)
             parsed_date = parse_date_from_texts([text, url], site.reference_date)
