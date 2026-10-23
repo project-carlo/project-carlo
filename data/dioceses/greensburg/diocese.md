@@ -171,6 +171,12 @@ keep it current rather than a log.
   curl with a browser User-Agent and shows whether a site is behind its container or just
   posts on Saturday.
 
+- **Occasional Masses at former churches** show only in intentions or the monthly calendar,
+  not the Mass box: grep a year of issues (`probe pdf --pages 0 --grep <town>`) to find and
+  date them (St. Patrick, Cameron's Bottom). The Former Churches Directory lists suppressed
+  parish corporations whose buildings can still hold Mass. A ZIP+4 suffix equal to the
+  "street number" (250 First St / 15731-0250) is an old mailing address, not the building.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
