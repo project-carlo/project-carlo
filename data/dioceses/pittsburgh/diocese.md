@@ -131,6 +131,7 @@ Greensburg's playbook next door.
   `files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf` downloads without a browser and
   `issues.py ecatholic ecatholic:<id>` finds it (20435 Catholic Partner Parishes, 21574 Christ
   the Divine Shepherd, 23303 St. Matthias, 21158 St. Teresa of Kolkata all had 20261025.pdf).
+  eCatholic text layers can be space-stripped by `pdftotext`: copy quotes from `probe pdf`.
   `issues.py ecatholic --weeks N` returns only the newest issue; for older ones take the
   site's /bulletins archive links with `visit.py --links` (keep the `?t=` query).
   An eCatholic masthead can be a graphic over a letter-split text layer (22570): render page
@@ -162,6 +163,8 @@ Greensburg's playbook next door.
   demolition, so check news too: TribLive (Valley News Dispatch) names relegated churches
   (Guardian Angels, Natrona Heights, 2022-10-01). GCatholic churches missing from the
   directory are usually closed predecessors (St. Wendelin, St. Norbert, St. John Vianney).
+  Check a predecessor building's current occupant before calling it closed: St. Pamphilus is
+  now the Maronite Our Lady of Victory (`other-jurisdiction`).
   Find a successor parish's history page by DuckDuckGo (holy-spirit-new-castle dates five
   closures). diopitt.org answers 403 to `recheck`; read it with `visit.py` (headed:
   `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, long timeout: hsplc.org took over two
