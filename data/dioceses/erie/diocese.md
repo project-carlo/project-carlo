@@ -167,7 +167,10 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   partnership can have two org records on one container (St. John/Holy Trinity, 14/0962):
   compare containers with `probe po`. `probe pdf` reads 4 pages by default; pass `--pages`
   (or `pdftotext -layout`) for an 8-page issue's Mass columns. A ligature read as U+FFFD
-  ("Baptist") breaks `fetch:check --expected-identity`: use another masthead word.
+  ("Baptist") breaks `fetch:check --expected-identity`: use another masthead word; when the
+  parish name is a graphic, use the pastor's surname (Blessed Sacrament: `Pinczewski`). Up to
+  three org records can alias one container (St. Joseph/Sacred Heart/St. Paul, 14/1876): record
+  every org id on the row. GCatholic's parish websites here are often dead or squatted.
 - **Discover Mass ids** on oilcitycatholic.com, ourladyofmercychurch.org, sttobias.com and the
   cathedral. See *Sources* for the many empty pages. A parish site's own PDF can be the same
   file as the Discover Mass download (Our Lady of Peace: same size, same bulletin number 3518):
