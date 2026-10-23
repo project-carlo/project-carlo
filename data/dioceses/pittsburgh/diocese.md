@@ -268,5 +268,13 @@ README's model and the Greensburg precedent:
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-10-23: Mapped (map-diocese): 56 parish rows (39 ParishesOnline, 13 eCatholic, 1
+  Discover Mass, 3 other), 166 churches, 112 excluded (63 closed, 44 other-jurisdiction, 3
+  no-bulletin, 1 no-public-mass, 1 other), 10 open. Coverage: directory 169/169, GCatholic 273/273, Mass Finder 168/168
+  accounted for; modelled 163/168, 160/166, 164/165. 35 parish-scout batches (one restarted
+  after a container reset) of 1-3 parishes / 12-23 roster entries each, plus one fetch-check
+  scout: 56/56 rows fetched this week's issue. `audit --fetch`: one candidate pair (Christ Our
+  Savior / Most Precious Blood), content-supported `separate`. 9 warnings: closed exclusions
+  whose sources give a closure date but no last Mass.
 - 2026-10-23: Survey (diocese-surveyor): rosters directory 169, massfinder 168, gcatholic 273
   (610 entries); 35 scout batches in `batches.json`, all entries assigned. No records yet.

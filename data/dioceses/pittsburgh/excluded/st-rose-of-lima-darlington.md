@@ -6,7 +6,7 @@ city: Darlington
 state: PA
 postal_code: '16115'
 decided: 2026-10-23
-roster: ['gcatholic:17046', 'gcatholic:24354']
+roster: ['gcatholic:24354']
 evidence:
 - url: https://diopitt.org/saint-monica-parish-beaver-falls-chippewa-township-darlington
   seen: 2026-10-23
