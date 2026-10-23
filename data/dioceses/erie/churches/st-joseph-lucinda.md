@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 30906 (parish church): Saturday 4 p.m. (February, April, June, August, October
     and December), Sunday 9:30 a.m., Friday 8:30 a.m. with Adoration at 7:30 a.m. Matches the bulletin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

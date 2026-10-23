@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 20603: 134 Queens Road, St. Marys 15857; locator pin 41.420404, -78.549326 (about
     60 m from the Plus Code); Mass Sat 5:15 p.m., Sun 7:30, 10 a.m., Mon-Sat 7 a.m.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

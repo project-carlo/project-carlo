@@ -41,6 +41,7 @@ evidence:
     ''Daily Mass: 6:15AM Monday, Wednesday and Friday at Sacred Heart Church; 8:30AM Tuesday, Thursday
     and Saturday at St. Mary''s Church''; ''SM (ST. MARY''S) Saturday 4:30 PM, 315 Church Street St. Marys,
     PA 15857''.'
+promoted: 2026-10-23
 research:
 - method: probe po st-mary-sacred-heart-churches and sacred-heart-church-15857; probe pdf of 14/0966 25
     Oct 2026; md5 and masthead comparison of 14/0963 and 14/0966 for 11 Feb 2024; read sacredheartparish.us/bulletins.html

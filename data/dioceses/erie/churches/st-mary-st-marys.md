@@ -44,6 +44,7 @@ evidence:
   quote: 'Physical Address: 315 Church St., St. Marys, PA, 15857'
   note: Printable directory dated Oct. 6, 2026, St. Mary Parish entry (mailing address 325 Church St.);
     agrees with the web directory and the parish site.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

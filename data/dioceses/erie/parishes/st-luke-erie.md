@@ -47,6 +47,7 @@ evidence:
   note: 'Printable directory (Oct. 6, 2026): St. Luke Parish ''Partnered with Our Lady of Mount Carmel
     Parish'', pastor Reverend Lawrence R. Richards; Our Lady of Mount Carmel Parish ''Partnered with St.
     Luke Parish, Erie'', mailing ''c/o St. Luke Parish''. Both give website https://www.stlukeolmc.org.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-luke-erie --expected-identity "Mt. Carmel" --expected-issue-date
     2026-10-25 (headed Chrome)

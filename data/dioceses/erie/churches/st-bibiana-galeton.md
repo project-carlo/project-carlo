@@ -46,6 +46,7 @@ evidence:
 revisit: Check whether the Thursday 6:00PM Mass at St. Bibiana continues after 19 November 2026 (the church
   stays a row only while the bulletin lists a recurring Mass).
 revisit_after: 2026-12-01
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

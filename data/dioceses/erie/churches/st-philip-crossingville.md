@@ -39,6 +39,7 @@ evidence:
   quote: Route 98
   note: GCatholic 24552 'St. Philip', Crossingville 16412 (city_aliases map Crossingville to Edinboro),
     Plus Code 86HXRQJ7+F2 (41.8311875, -80.2374375), phone (814) 734-7395; founded 1840.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

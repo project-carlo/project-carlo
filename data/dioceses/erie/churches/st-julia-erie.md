@@ -32,6 +32,7 @@ evidence:
   note: OpenStreetMap way 863563693, amenity=place_of_worship 'Saint Julia Catholic Church', 3750 West
     Lake Road, Erie 16505, at 42.0972205, -80.1700664; a separate building at 638 Roslyn Avenue (way 863562592)
     sits about 55 m west.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

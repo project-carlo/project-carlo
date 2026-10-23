@@ -28,6 +28,7 @@ evidence:
     ''THE CATHOLIC COMMUNITY OF SHARON / St Joseph Roman Catholic Church / 79 Case Ave. Sharon, PA 16146'';
     ''Saturday Vigil 5:15 pm; Sunday 11:00 am; Monday, Tuesday, Thursday, Friday 8:00 am; Wednesday 12:10
     pm''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 30910: Sunday 11 a.m., Saturday 4 p.m. (January, March, May, July, September
     and November), Tuesday and Thursday 8:30 a.m.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

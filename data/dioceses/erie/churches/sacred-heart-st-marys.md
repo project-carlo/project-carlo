@@ -32,6 +32,7 @@ evidence:
   note: 'Directory record 20604: 337 Center St., St. Marys 15857; locator pin 41.427441, -78.565492 (about
     40 m from the Plus Code); Mass Sun 7, 10:30 a.m., Mon/Wed/Fri 6:15 a.m. Locator group: St. Mary Parish
     (20610).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

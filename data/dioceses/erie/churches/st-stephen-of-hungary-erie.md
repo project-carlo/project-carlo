@@ -36,6 +36,7 @@ evidence:
   note: 'The parish''s own site (title ''St. Stephen Parish, Erie'') lists Mass Times: Daily ''Thursday
     at 6:15 p.m. - St. Jude (Spanish)''; Saturday ''None''; Sunday ''12 p.m. (Spanish)''; Contact: ''St.
     Stephen of Hungary Parish/La Parroquia de San Esteban 1237 W. 21st St. Erie PA 16502''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

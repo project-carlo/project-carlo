@@ -26,6 +26,7 @@ evidence:
   quote: Fr. Robert Horgas, Pastor
   note: 25 October 2026 bulletin (number 3101) page 1 headed 'St. Francis of Assisi Church 212 South Front
     Street, Clearfield, PA 16830'; Discover Mass lists the same 212 S Front St.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

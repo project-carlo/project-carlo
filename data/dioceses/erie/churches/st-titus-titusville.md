@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 30913: 513 W. Main St., Titusville 16354, pin 41.627856, -79.681417; Mass Mon/Wed/Thu/Fri
     8:30 a.m., Tue 6:30 p.m., Sat 4:30 p.m., Sun 8 and 10 a.m. (matches the bulletin).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

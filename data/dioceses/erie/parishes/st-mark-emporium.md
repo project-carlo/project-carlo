@@ -35,6 +35,7 @@ evidence:
   quote: Pastor ....................................................................................................
     St. Mark, Emporium
   note: 'Clergy PDF (updated 8/7/2026): Rev. Paul S. Siebert, pastor of St. Mark, Emporium, one assignment.'
+promoted: 2026-10-23
 research:
 - method: probe url stmarkemporium.org (diocese-hosted site with weeklybulletin.php); probe po; compared
     the site's 18 October PDF with container 14/1738's 18 October issue

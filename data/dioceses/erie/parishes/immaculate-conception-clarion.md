@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-23
   note: 'Clergy list updated 8/7/2026: Feigh is pastor of Immaculate Conception, Clarion alone (one assignment);
     the diocese''s directory record 30902 lists no partner.'
+promoted: 2026-10-23
 research:
 - method: 'Campus Mass check: searched the 18 Oct 2026 bulletin text for campus/university/Newman; read
     the diocese''s printable directory (6 Oct 2026) and clergy list for a campus ministry listing; DuckDuckGo

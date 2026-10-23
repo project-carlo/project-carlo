@@ -28,6 +28,7 @@ evidence:
   quote: Kujawinski, Rev. Matthew J.
   note: 'Clergy list ''Updated 8/7/2026'': ''Pastor ... Our Lady of Mercy, Harborcreek, 837 Bartlett Road''.
     No other assignment.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish our-lady-of-mercy-harborcreek --expected-identity Kujawinski
     (headed Chrome); first try with 'Our Lady of Mercy' did not match the first-page text
@@ -39,6 +40,16 @@ research:
     reads 'unknown' because the masthead date 'October 25, 2026 — The Thirtieth Sunday' uses an em dash.
     I confirmed date and number 3528 by reading the downloaded PDF and the cover class on the church page.
     Not a failure.
+- method: 'pnpm fetch:check --diocese erie (headed Chrome), final fetch check; Discover Mass download.php
+    returned a 134-byte body (curl of the same URL: ''Maximum number of files downloaded today. Please
+    contact Discover Mass for support.'')'
+  checked: '2026-10-23'
+  outcome: access-blocked
+  next_action: Re-run fetch:check for this row after the Discover Mass per-IP daily cap resets; do not
+    retry in a loop. Resolution of the church page and the download URL succeeded, so only the PDF download
+    (document type, identity and issue date) is unverified in this run; see earlier evidence for the identity
+    read by the scout.
+  retry_when: Discover Mass daily cap resets
 ---
 
 ## Publisher

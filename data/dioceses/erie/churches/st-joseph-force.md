@@ -31,6 +31,7 @@ evidence:
 - url: https://www.eriercd.org/Parish20607-St-Joseph.html
   seen: 2026-10-23
   note: 'Diocese directory record 20607: 17764 Bennetts Valley Highway, Force, PA 15841; locator pin 41.258031,-78.501346.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

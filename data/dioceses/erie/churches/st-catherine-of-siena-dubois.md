@@ -41,6 +41,7 @@ evidence:
   quote: Saint Catherine of Siena church in DuBois be designated as the parish church of the new territorial
     parish
   note: Merger decree (petition 18 Aug 2023, presbyteral council 7 Sept 2023).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

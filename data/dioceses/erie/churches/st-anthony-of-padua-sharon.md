@@ -30,6 +30,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 bulletin (number 3537, the same issue as the St. Joseph page):
     ''ST. ANTHONY PARISH ... Mass Times Sunday 8:30 am''. Its intentions page lists candles ''at Saint
     Anthony Church'' for the week of 25 October.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

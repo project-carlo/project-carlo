@@ -34,6 +34,7 @@ evidence:
   note: 'Directory record 20702 (Mission): 52 Parish St., Ramey 16671; pin 40.796958, -78.396951. City
     list: ''secondary mission church'' of St. Basil the Great (Coalport); printable directory: ''Secondary
     Mission''. Mass 1st Monday 5:30 p.m. with social, 3rd Monday with Exposition.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

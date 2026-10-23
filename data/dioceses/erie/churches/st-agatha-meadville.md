@@ -35,6 +35,7 @@ evidence:
   note: 'Page 2 of the 8 February 2026 issue (text layer): ''Sat Feb 14 8:30 AM & 3:30 PM Confessions—St
     A Church''; weekday 8:00 am Masses and Sat 4:30 pm Vigil; Friday 12:05 pm Masses moved from St. Brigid
     to St. Agatha.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

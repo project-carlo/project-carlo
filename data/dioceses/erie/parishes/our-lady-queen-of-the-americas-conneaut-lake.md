@@ -29,6 +29,7 @@ evidence:
   note: Diocese-hosted site (footer 'Diocese of Erie 429 East Grandview Blvd.'); its Bulletins page links
     https://www.parishesonline.com/find/our-lady-queen-of-the-americas. No weeklybulletin.php PDFs; ParishesOnline
     is the channel.
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish our-lady-queen-of-the-americas-conneaut-lake --expected-identity
     Conneaut (headed Chrome)

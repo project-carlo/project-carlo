@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 10302: 7100 W. Ridge Road, rectory 7125 Old Ridge Road, locator pin 42.039569,
     -80.245258.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

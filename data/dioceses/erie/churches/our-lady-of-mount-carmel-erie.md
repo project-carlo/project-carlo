@@ -36,6 +36,7 @@ evidence:
     Grandview Boulevard at 42.10724, -80.02773; OSM way 823950284 'Our Lady of Mount Carmel Parish School'
     also at 1553 (42.10607, -80.02948). Nominatim's lookup of 1531 East Grandview Boulevard returns a
     house at 42.10781, -80.02941, about 150 m west of the church node.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

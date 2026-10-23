@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-23
   note: Diocese directory record 10305 'Sacred Heart of Jesus Parish', 816 W. 26th St., Erie PA 16508;
     Sun 8:45 a.m., holy day vigil 7 p.m. Locator pin 42.10618, -80.091254.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

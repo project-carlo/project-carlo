@@ -39,6 +39,7 @@ evidence:
   note: OSM place_of_worship 'Saint Anthony Church', 7222 Grand Army of the Republic Highway (US 6), Saybrook,
     Sheffield, at 41.7218886, -79.0499604; about 150 m from the directory locator pin (41.722272, -79.050007).
     GCatholic's Plus Code point (41.7045625, -79.0359375) is about 2.3 km away and was not used.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

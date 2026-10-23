@@ -46,6 +46,7 @@ evidence:
     Sacred Heart (city list: ''secondary church''). Directory Mass times: St. Joseph Sun 10:45 a.m. and
     weekdays; Sacred Heart Sun 8:45 a.m.; St. Paul Sat 4 p.m. The clergy PDF (diocese.md, Sources) gives
     Schreiber as pastor of both parishes.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-joseph-sacred-heart-erie --expected-identity 'Sacred
     Heart of Jesus' --expected-issue-date 2026-10-25 (headed Chrome)

@@ -30,6 +30,7 @@ evidence:
     Mass Sun 11 a.m., Fri 12 p.m. with Exposition, 5th Monday and Wednesday 5:30 p.m. The printable directory
     (Oct 6 2026) also gives a mailing address of 22 St. Agnes Drive for earlier entries; the physical
     address is Deer Creek Rd.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

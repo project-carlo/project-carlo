@@ -29,6 +29,7 @@ evidence:
     updated 8/7/2026: ''Pastor ... St. Boniface, Kersey''); Mass Sat 4:15 p.m., Sun 8, 10:30 a.m., Tue-Thu
     7:15 a.m. The locator''s ''Very Rev. Ross R. Miceli'' is stale. The printable directory (Oct. 6, 2026)
     lists St. Boniface Parish under Kersey with a single physical address and no Brandy Camp church.'
+promoted: 2026-10-23
 research:
 - method: probe url st-boniface.org; read church/bulletin page; read Discover Mass church page once; downloaded
     the current PDF and grepped it for Holy Cross and Brandy Camp
@@ -44,6 +45,16 @@ research:
   next_action: 'None. Resolver discover_mass: transport ok, PDF, identity matched on page 1 (''355 main
     street kersey pa 15846''); issue date ''unknown'' (the masthead date is split by the layout) so overall
     ''unverified'' for that reason only; the cover class carries 2026-10-25.'
+- method: 'pnpm fetch:check --diocese erie (headed Chrome), final fetch check; Discover Mass download.php
+    returned a 134-byte body (curl of the same URL: ''Maximum number of files downloaded today. Please
+    contact Discover Mass for support.'')'
+  checked: '2026-10-23'
+  outcome: access-blocked
+  next_action: Re-run fetch:check for this row after the Discover Mass per-IP daily cap resets; do not
+    retry in a loop. Resolution of the church page and the download URL succeeded, so only the PDF download
+    (document type, identity and issue date) is unverified in this run; see earlier evidence for the identity
+    read by the scout.
+  retry_when: Discover Mass daily cap resets
 ---
 
 ## Publisher

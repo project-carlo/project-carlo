@@ -32,6 +32,7 @@ evidence:
   note: '25 Oct 2026 bulletin page 1: ''Saturday Vigil Mass (Oct. 31) 5:30 PM - St. Nicholas''; calendar
     ''Saturday, October 31 ... 5:30 p.m. Mass (St. Nicholas)''; page 4 letter: ''Saturday Vigil Mass:
     5:30 PM, May - October - St. Nicholas, November - April - St. Richard''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

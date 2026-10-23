@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 10208: 48 S. Pearl St., North East 16428; Mass Sat 5 p.m.; Sun 7:30, 9, 12;
     daily Mon/Tue/Wed/Fri 8 a.m., Thu 12:10 p.m. Matches the bulletin.'
+promoted: 2026-10-23
 research:
 - method: Compared stgregoryparish.info/weeklybulletin.php with the ParishesOnline org st-gregory-church
     (probe po, probe pdf)

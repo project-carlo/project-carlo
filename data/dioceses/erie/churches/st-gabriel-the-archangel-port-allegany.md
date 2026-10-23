@@ -29,6 +29,7 @@ evidence:
   quote: 203 E Arnold Ave., Port Allegany, Pennsylvania 16743
   note: GCatholic address and Plus Code 87H3RP7C+C8; its website field (steulalia-stgabriel.org) is the
     former Coudersport partner's site, not a bulletin source here.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   note: 'Directory record 31111: 311 W. Ridge Ave., Sharpsville; Pastor Rev. John Miller; Sat 5:30 p.m.,
     Sun 8:30 a.m., Tue 5:30 p.m., Thu 7:30 a.m.; city list ''partnered with Notre Dame Parish, Hermitage''.
     The locator''s pastor (Strickenberger) is stale.'
+promoted: 2026-10-23
 research:
 - method: probe url; probe po on the embedded LPi id; masthead render; md5 comparison of 4 weeks against
     Notre Dame's container

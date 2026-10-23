@@ -36,6 +36,7 @@ evidence:
     gives ''For GPS use. Not for mail delivery: 6789 Kylertown-Drifting Highway'' and ''Physical Address:
     Route 53, Drifting, PA, 16834'', mailing c/o St. Agnes. Mass 2nd Wednesday 5:30 p.m. with social,
     4th Wednesday with Exposition.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

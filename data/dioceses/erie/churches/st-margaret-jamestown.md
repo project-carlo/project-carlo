@@ -29,6 +29,7 @@ evidence:
   note: 'Page 2 of the 25 October 2026 issue: ''Saint Margaret, Mission, 701 Denver Street, Jamestown,
     PA 16134''; MASS TIMES ''Sunday, 8:00am (Saint Margaret)''; Mass intentions ''Sunday, November 1:
     8am The People of the Parish''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

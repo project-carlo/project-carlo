@@ -28,6 +28,7 @@ evidence:
   note: 'Page 8 footer of the 25 October 2026 issue. Page 1 (rendered image): ''Church of Notre Dame,
     2325 Highland Rd, Hermitage, PA 16148''; ''MASS SCHEDULE [NOTRE DAME] Weekend Masses Saturday: 4 pm
     / Sunday: 11 am; Weekday Masses Wednesday & Friday: 9:00 am''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 bulletin (number 3528) downloaded from this page: ''Our Lady of
     Mercy Church ... Saturday 4:30 p.m.; Sunday 9:30 a.m.; Tuesday-Friday 8:30 a.m.''; ''837 Bartlett
     Rd. Harborcreek, PA 16421''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

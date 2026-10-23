@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-23
   quote: 7:30AM Living &D eceasedM embers of OLP
   note: Page 3 Mass intentions for the weekend of 31 Oct / 1 Nov 2026 (text layer splits words).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

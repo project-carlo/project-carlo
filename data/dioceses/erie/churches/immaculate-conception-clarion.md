@@ -31,6 +31,7 @@ evidence:
   note: '18 Oct 2026 bulletin page 1: ''Saturday | 4:00 pm / Sunday | 8:30 am and 11:00 am''; Mass Intentions
     list Mon Oct 19 7:30 am, Tue Oct 20 12:10 pm, Wed Oct 21 7:30 am, Thu Oct 22 8:30 am, Fri Oct 23 7:30
     am, Sat Oct 24 4:00 pm, Sun Oct 25 8:30 am and 11:00 am.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

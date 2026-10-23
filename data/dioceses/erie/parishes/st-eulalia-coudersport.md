@@ -40,6 +40,7 @@ evidence:
   note: 'probe po st-eulalia-st-gabriel: LPi 0018000000QxBkyAAF, 6 E Maple St, Coudersport, website http://www.steulalia-stgabriel.org/;
     no publications (''does not publish a bulletin here now''). A stale org name from before the merger;
     not a channel.'
+promoted: 2026-10-23
 research:
 - method: probe url on steulaliacoudersport.org (HTTP 403), then visit.py --bulletin in headed Chrome
   url: https://www.steulaliacoudersport.org/

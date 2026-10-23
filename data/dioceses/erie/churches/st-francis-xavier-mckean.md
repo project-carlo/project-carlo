@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-23
   note: probe po gives '8880 Main St, McKean' with a pin at 41.9957118, -80.143393, about 480 m south
     of the building; not used.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

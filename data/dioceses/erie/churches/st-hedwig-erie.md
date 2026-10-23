@@ -44,6 +44,7 @@ evidence:
   seen: 2026-10-23
   note: OSM node 9864166434 'Saint Hedwig Catholic Church' (place_of_worship) at 521 East 3rd Street,
     42.13636, -80.07578; about 15 m from the GCatholic Plus Code point.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

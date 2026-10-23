@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: organization st-paul-church-16502 (1617 Walnut St, lpi 0018000000QxBkQAAV) lists container
     14/1876, the same bulletin as Sacred Heart; no separate St. Paul bulletin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

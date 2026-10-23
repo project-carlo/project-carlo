@@ -28,6 +28,7 @@ evidence:
     Catholic Parish, 2635 Buffalo Road, Erie, Pa. 16510''; ''Saturday 5:00 PM, & 7:00 PM; Sunday 7:30,
     9:30 at St. Mark, 11:30, and 5:00 PM''; weekday ''Monday - Friday 7:00 AM, Saturday - 8:00 AM''. The
     quote is the text-layer footer of pages 7-8.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

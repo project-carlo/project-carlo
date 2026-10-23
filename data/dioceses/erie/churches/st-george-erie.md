@@ -26,6 +26,7 @@ evidence:
   note: '25 October 2026 bulletin (Discover Mass number 3303), page 1: ''Saint George Roman Catholic Church
     5145 Peach Street Erie, PA 16509'' and the Mass schedule ''Weekend Mass Times Saturday 4:30pm Vigil;
     Sunday 7:30am, 9:30am, 11:30am''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

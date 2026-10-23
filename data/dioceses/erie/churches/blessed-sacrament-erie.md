@@ -28,6 +28,7 @@ evidence:
   note: Diocese directory record 10301 'Blessed Sacrament Parish', 1626 W. 26th St., Erie PA 16508; Sat
     4 p.m.; Sun 8:30, 11 a.m., 7:30 p.m.; weekdays Mon-Thu 8 a.m. in the chapel. Locator pin 42.099396,
     -80.10936.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

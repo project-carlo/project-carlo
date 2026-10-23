@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 20603: Pastor Rev. Jeffery Noble; Mass Sat 5:15 p.m., Sun 7:30, 10 a.m., Mon-Sat
     7 a.m. The clergy list (Updated 8/7/2026) gives Noble as pastor of Queen of the World alone.'
+promoted: 2026-10-23
 research:
 - method: probe url qwchurch.com; probe po 0018000000Qc02MAAR; probe pdf of 14/1220 25 Oct 2026 and compared
     with the 14/0966 St. Mary/Sacred Heart issue of the same date

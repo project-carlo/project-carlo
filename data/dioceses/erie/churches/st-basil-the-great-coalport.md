@@ -29,6 +29,7 @@ evidence:
   note: 'Directory record 20705 (Parish): 183 Locust St., Coalport 16627; pin 40.756076, -78.531308. Mass
     Sat 4 p.m., Sun 8 a.m., Tue 8:30 a.m., Thu 8:30 a.m. with exposition; matches the bulletin. The bulletin
     notes there is no staff at the St. Basil rectory; mail goes to Christ the King.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

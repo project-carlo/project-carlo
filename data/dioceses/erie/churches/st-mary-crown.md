@@ -41,6 +41,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 30908 ''St. Mary Parish (Crown)'': 117 Lencer Drive, Leeper, PA 16235; Saturday
     6 p.m., Sunday 8 a.m., Monday and Wednesday 8:30 a.m. with Adoration 7:30 a.m. Matches the bulletin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

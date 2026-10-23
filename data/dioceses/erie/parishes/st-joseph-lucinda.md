@@ -33,6 +33,7 @@ evidence:
   note: 'Clergy list updated 8/7/2026 (read by the surveyor, see diocese.md): Kleckner is pastor of Fryburg,
     Lucinda and Crown. The bulletin staff box names ''Fr. Brandon Kleckner, Pastor'' and ''Fr. John Nwankwo,
     Parochial Vicar''.'
+promoted: 2026-10-23
 research:
 - method: fetch:check --diocese erie --parish st-joseph-lucinda (page-pdfs recipe on the bulletins page)
   url: https://www.watch4deercatholic.church/bulletins

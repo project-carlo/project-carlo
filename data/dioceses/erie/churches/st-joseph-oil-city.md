@@ -29,6 +29,7 @@ evidence:
   note: 'Directory record 30907: 35 Pearl Ave., Oil City 16301, pin 41.435073, -79.704111; Sat 4 p.m.,
     Sun 8 and 9:45 a.m., weekdays Mon and Fri 12:10 p.m. and Wed 8:30 a.m. (weekday times differ from
     the bulletin).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

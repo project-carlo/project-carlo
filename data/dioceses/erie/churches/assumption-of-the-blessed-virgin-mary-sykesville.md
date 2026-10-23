@@ -35,6 +35,7 @@ evidence:
   note: Diocese directory record 20801 'Assumption of the Blessed Virgin Mary Church', 20 Shaffer St.,
     Sykesville 15865, kind Mission, locator pin 41.052179, -78.822387; Mass Sat 5:30 p.m., Sun 8 a.m.;
     city list 'Secondary mission church; See Holy Spirit Parish, DuBois'.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

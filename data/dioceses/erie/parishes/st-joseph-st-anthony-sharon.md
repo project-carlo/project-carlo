@@ -36,6 +36,7 @@ evidence:
     St. Anthony of Padua, Sharon. Diocese directory records 31113 and 31110 both give ''Pastor: Rev. James
     Power'' and the same phone, 724-981-3232; St. Anthony''s mailing address is ''c/o St. Joseph Parish
     79 Case Ave.''.'
+promoted: 2026-10-23
 research:
 - method: grep of the 25 Oct 2026 bulletin text layer (pdftotext, 6 pages) for Fatima, Farrell, Good Shepherd,
     Middlesex, Whitman, Adalbert

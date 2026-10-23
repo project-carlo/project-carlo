@@ -27,6 +27,7 @@ evidence:
   note: 'Page 2 of the 25 October 2026 issue: ''85 North High Street, Greenville, PA 16125''; MASS TIMES
     ''Tuesday-Friday, 9:00am (Saint Michael); First Saturday, 9:00am (Saint Michael); Saturday, 4:30pm
     (Saint Michael); Sunday, 11:00am (Saint Michael)''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

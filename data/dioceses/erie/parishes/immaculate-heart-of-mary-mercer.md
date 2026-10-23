@@ -38,6 +38,7 @@ evidence:
     10 a.m., September-April 8, 11 a.m.; Tuesday-Friday 8 a.m.; website https://ihmercer.org. Record 31112
     (St. Columbkille Parish, Stoneboro) and 31120 (St. Hermenegild Church, secondary church) both name
     Immaculate Heart of Mary as parent (locator GroupID 31104) and give ihmercer.org as website.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish immaculate-heart-of-mary-mercer --expected-identity
     Columbkille --expected-issue-date 2026-10-25 (headed Chrome)
@@ -50,6 +51,16 @@ research:
     25, 2026''; the pick is 2,036,514 bytes, byte-identical in size to the 25 Oct 2026 issue I downloaded
     and read with pdftotext, so it is the current issue. Re-run on a later week to confirm it follows
     the newest link.'
+- method: 'pnpm fetch:check --diocese erie (headed Chrome), final fetch check; Discover Mass download.php
+    returned a 134-byte body (curl of the same URL: ''Maximum number of files downloaded today. Please
+    contact Discover Mass for support.'')'
+  checked: '2026-10-23'
+  outcome: access-blocked
+  next_action: Re-run fetch:check for this row after the Discover Mass per-IP daily cap resets; do not
+    retry in a loop. Resolution of the church page and the download URL succeeded, so only the PDF download
+    (document type, identity and issue date) is unverified in this run; see earlier evidence for the identity
+    read by the scout.
+  retry_when: Discover Mass daily cap resets
 ---
 
 ## Publisher

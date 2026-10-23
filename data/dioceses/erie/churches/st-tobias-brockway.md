@@ -28,6 +28,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 bulletin (number 3520), downloaded from this page: ''ST. TOBIAS
     CATHOLIC CHURCH 1135 HEWITT STREET * BROCKWAY, PA 15824''; ''SATURDAY VIGIL 5:00 PM SUNDAY 9:30 AM
     FIRST SUNDAY OF THE MONTH 6:00 PM''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

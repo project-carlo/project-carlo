@@ -31,6 +31,7 @@ evidence:
     (Mon, Tue, Wed, Fri), 6:00pm (Thu), 4:30pm Sat, 11:00am Sun. Page 7-8 footer: ''Church of the Beloved
     Disciple, Grove City, PA''. The parish site''s footer gives ''1310 South Center Street Ext, Grove
     City, PA 16127''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

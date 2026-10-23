@@ -35,6 +35,7 @@ evidence:
   quote: McCormick, Rev. James P.
   note: 'Clergy list ''Updated 8/7/2026'': ''Pastor ... St. James, Erie, 2635 Buffalo Road''. He is the
     pastor of this parish alone (no other assignment listed).'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-james-erie (headed Chrome), with --expected-identity
     James and 14-1107

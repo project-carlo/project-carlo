@@ -29,6 +29,7 @@ evidence:
   quote: 307 Franklin St., Smethport, Pennsylvania 16749
   note: GCatholic gives 307 Franklin St. (the parish's mailing address; the ParishesOnline org also uses
     it) with Plus Code 87H3RH54+VF at 41.80969, -78.44381, about 15 m from the directory pin.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

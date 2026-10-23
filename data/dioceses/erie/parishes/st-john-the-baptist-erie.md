@@ -60,6 +60,7 @@ evidence:
   note: 'Printable directory dated Oct. 6, 2026: St. John the Baptist Parish ''Partnered with Holy Trinity
     Parish, Erie''; Holy Rosary Church listed as ''Secondary Mission'' under it; Holy Trinity Parish ''Partnered
     with St. John the Baptist, Parish''.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-john-the-baptist-erie --expected-identity "Holy
     Rosary" --expected-issue-date 2026-10-25 (headed Chrome)

@@ -27,6 +27,7 @@ evidence:
   note: 'Page 8 footer of the 25 October 2026 issue. Page 1 (rendered image): ''St. Bartholomew Roman
     Catholic Church, 311 W. Ridge Ave. Sharpsville, PA 16150, 724-962-7130''; ''Weekend Mass Times Saturday
     5:30 PM, Sunday 8:30 AM; Daily Mass Tuesday 5:30PM, Thursday 7:30 AM''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

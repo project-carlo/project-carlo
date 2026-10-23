@@ -31,6 +31,7 @@ evidence:
 - url: https://parishesonline.com/organization/st-mark-church-15834
   seen: 2026-10-23
   note: ParishesOnline org 'St. Mark Church', 235 E 4th St, Emporium, PA 15834 (41.511342,-78.231852).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

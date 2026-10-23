@@ -33,6 +33,7 @@ evidence:
   note: OpenStreetMap way 961643834, amenity=place_of_worship 'Our Lady of the Lake Church', road Maple
     Drive, no house number, centre 41.8757337, -80.1372063; the diocese's locator pin is on this building.
     OSM's own '128 Sunset Drive' is a house at 41.8732, -80.1359 (about 280 m south).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

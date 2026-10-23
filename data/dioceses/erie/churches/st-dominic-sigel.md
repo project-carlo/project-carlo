@@ -30,6 +30,7 @@ evidence:
     8:30 a.m.; Holy Day (Vigil): Please consult the bulletin; Reconciliation: 8 a.m. Sunday''; page 2
     intentions ''SUNDAY, OCTOBER 25 8:30 AM (St. Dominic) Ree Shannon Morin''. The quote is the page 4
     text-layer footer naming the publication.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

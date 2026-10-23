@@ -27,6 +27,7 @@ evidence:
   note: '25 Oct 2026 bulletin page 1: ''Saint Charles Borromeo ... 201 Washington Street, New Bethlehem,
     PA 16242''; ''Sunday Mass (Nov. 1) ... 10:30 AM - St. Charles''; calendar ''Sunday, November 1 ...
     10:30 a.m. Mass (St. Charles) - George Veronesi''; weekday Masses Tue-Thu 8:30 a.m. ''No Mass''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

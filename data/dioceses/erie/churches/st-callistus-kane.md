@@ -30,6 +30,7 @@ evidence:
 - url: https://parishesonline.com/organization/st-callistus-catholic-church
   seen: 2026-10-23
   note: 'ParishesOnline org: 342 Chase St, Kane, Pennsylvania 16735; 41.6619186,-78.8096619.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

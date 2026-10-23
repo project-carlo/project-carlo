@@ -29,6 +29,7 @@ evidence:
     November 1 - All Saints Day 8:00 a.m. Mass (St. Eusebius) - For all the deceased priests of the Erie
     Diocese (Wiencek Family)''; page 4 letter: ''St. Eusebius traditionally had an 8:30 AM Sunday Mass,
     and now 8 AM is closer ... they have been changing from an 11:15 AM Mass for the last few months''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

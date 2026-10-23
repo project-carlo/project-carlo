@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-23
   note: 'Diocese directory record 20810: one parish record, no mission or secondary church. Sat 5 p.m.;
     Sun 9:30 a.m. and first Sunday 6 p.m.; Tuesday 6 p.m.; Wednesday-Friday 6:45 a.m.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-tobias-brockway --expected-identity Detisch (headed
     Chrome)

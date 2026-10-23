@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-23
   note: 'Nominatim: way ''Ford Memorial Chapel, North Main Street, Meadville'' at 41.6479908, -80.1464788;
     the Allegheny College way (520 N Main St) is at 41.6480894, -80.1452977.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

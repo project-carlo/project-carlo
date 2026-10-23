@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 issue: masthead ''SAINT PATRICK PARISH, 130 EAST 4TH STREET, ERIE,
     PA 16507''; ''MASS SCHEDULE Saturday: 5:00 pm; Sunday: 8:00 am & 10:30 am; Holy Day Mass: 12:00 pm''.
     The quote is the page-4 footer.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

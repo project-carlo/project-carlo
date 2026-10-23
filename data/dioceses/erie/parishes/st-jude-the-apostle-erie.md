@@ -71,6 +71,7 @@ evidence:
     Record 10315 (GCatholic 24473) St. Andrew Church is a Mission under it (city list: ''secondary church'');
     record 10314 (GCatholic 24559) is St. Stephen of Hungary Parish, ''partnered with St. Jude the Apostle
     Parish''.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-jude-the-apostle-erie --expected-identity 'Saint
     Jude' --expected-issue-date 2026-10-25 (headed Chrome)

@@ -31,6 +31,7 @@ evidence:
     St. Callistus, Kane
   note: 'Clergy PDF (updated 8/7/2026): O''Brien, Rev. William J. is pastor of St. Callistus, Kane, one
     assignment only.'
+promoted: 2026-10-23
 research:
 - method: probe url on the directory website; probe po; probe container 14/1173 --pages 2
   url: https://www.stcallistuskane.org/

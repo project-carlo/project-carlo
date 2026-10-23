@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-23
   note: 'Diocese directory record 20608: St. Leo Magnus Parish, 111 Depot St., Ridgway, PA 15853; locator
     pin 41.423976,-78.727421 (matches the Plus Code to about 1 m).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

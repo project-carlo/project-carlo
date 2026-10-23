@@ -28,6 +28,7 @@ evidence:
   note: 'Page 2 of the Oct. 25th, 2026 issue (image-only, rendered): ''Church of the Good Shepherd, Office
     Address: 3613 Sharon Road (PO Box 226) West Middlesex, PA 16159''; Mass intentions ''Saturday, Oct.
     31st at 6:00pm'', ''Sunday, Nov. 1st at 9:00am'' and ''at 11:30am'', Thursday and Friday 8:30am.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

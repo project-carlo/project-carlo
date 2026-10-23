@@ -36,6 +36,7 @@ evidence:
   note: 'Directory record 30921 (Church, ''secondary mission church'' under St. Mary Parish (Crown) in
     the city list): 101 Hemlock St., Marienville, PA 16239; Daily: Thursday at 6 p.m.; Saturday and Sunday
     none.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

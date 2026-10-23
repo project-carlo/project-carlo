@@ -38,6 +38,7 @@ evidence:
   quote: 222 Renner Ln., Saegertown, Pennsylvania 16433
   note: GCatholic entry 24485, Plus Code 86HXPV92+V2 (41.7196875, -80.1499375). OSM reverse at that point
     returns the road 'Renner Alley' (nearest building 220 Renner Alley, 41.71965, -80.14994, way 150488442).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

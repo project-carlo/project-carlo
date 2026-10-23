@@ -28,6 +28,7 @@ evidence:
     St. Joseph, Warren
   note: 'Clergy list updated 8/7/2026: ''Tomasone, Rev. Richard C. - Pastor - St. Joseph, Warren''. Only
     one assignment, so no shared pastor with Holy Redeemer (O''Hern) or St. John Tidioute (Kalinowski).'
+promoted: 2026-10-23
 research:
 - method: probe url www.stjosephwarrenpa.org; weeklybulletin_issues.sh; probe pdf of the newest issue
   url: https://www.stjosephwarrenpa.org/weeklybulletin.php

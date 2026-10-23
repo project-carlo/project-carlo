@@ -28,6 +28,7 @@ evidence:
   note: 'Directory detail page: ''St. Patrick Parish, 952 Buffalo St., Franklin'' (the parish office,
     a different building from the church at 949 Liberty St.); locator pin 41.392945, -79.825718 sits on
     the church. Mass times match the bulletin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

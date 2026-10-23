@@ -34,6 +34,7 @@ evidence:
   quote: Good Shepherd
   note: 'Clergy list updated 8/7/2026: Whitman, Rev. Glenn: pastor of Good Shepherd, West Middlesex and
     Our Lady of Fatima, Farrell.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish good-shepherd-west-middlesex --expected-identity Shepherd
     (headed Chrome)

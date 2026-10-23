@@ -44,6 +44,7 @@ evidence:
   note: OpenStreetMap way 860274448, amenity=place_of_worship "St. Anthony's Catholic Church", centre
     41.8008750, -80.0597333, on the Beach Avenue block (OSM lists the nearest road as Cummings Street);
     OSM's 415 S Main St is a separate house at 41.80075, -80.06052, about 90 m west.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

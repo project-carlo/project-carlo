@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-23
   note: OSM node 8358835471 'Saint John Baptist Church' (place_of_worship) and way 899640013 (church)
     at 509 East 26th Street, about 42.11566, -80.06217; about 30 m from the Plus Code.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
     Graham Avenue, Brookville; Mass Schedule ''Immaculate Conception Weekdays: 8:00 a.m. Tuesday through
     Friday; Saturday: 5:15 p.m.; Sunday: 10:30 a.m.''. The quote is the text-layer footer on page 4 naming
     the publication.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

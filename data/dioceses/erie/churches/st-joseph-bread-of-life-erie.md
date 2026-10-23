@@ -29,6 +29,7 @@ evidence:
   note: Diocese directory record 10309 'St. Joseph/Bread of Life Community Parish', 147 W. 24th St., Erie
     PA 16502; Sun 10:45 a.m.; daily Mon, Tue, Thu, Fri 7 a.m., Wed 6 p.m. Locator pin 42.112391, -80.077971.
     The ParishesOnline organization st-joseph-church-bread-of-life-community gives the same address.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

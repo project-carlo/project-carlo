@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 20502: 95 E. Corydon St., Bradford, PA 16701; locator pin 41.95472, -78.65126
     (about 350 m from the Plus Code point).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

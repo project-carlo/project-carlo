@@ -26,6 +26,7 @@ evidence:
   quote: 155 S 9th St., Conneaut Lake, Pennsylvania 16316
   note: GCatholic entry 24459, Plus Code 86HXJM3P+6G (41.6030625, -80.3136875), a few metres from the
     diocese pin.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -42,6 +42,7 @@ evidence:
   note: 'Press release dated 5.31.24 on the amended decree of 2024-05-29 (effective 2024-07-09): St. Andrew
     Parish merges into St. Jude but its church keeps Sunday and holy-day Mass ''so long as priests are
     available''. A plan only; the 25 Oct 2026 bulletin shows the Sunday Mass is happening.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

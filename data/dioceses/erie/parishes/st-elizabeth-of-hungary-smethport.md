@@ -41,6 +41,7 @@ evidence:
   note: 'Merger decree (letters dated March-June 2023): St. Gabriel the Archangel Parish, Port Allegany,
     merged into St. Elizabeth of Hungary Parish, Smethport. The bulletin (above) confirms one shared publication
     for both churches.'
+promoted: 2026-10-23
 publication_reviews:
 - parish: st-bernard-of-clairvaux-bradford
   decision: separate

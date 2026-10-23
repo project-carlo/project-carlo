@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   quote: 12:05 pm St M
   note: 'Text-layer page 2 of the 8 February 2026 issue: ''Tues Feb 10 ... 12:05 pm St M Ginny Yurisic''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

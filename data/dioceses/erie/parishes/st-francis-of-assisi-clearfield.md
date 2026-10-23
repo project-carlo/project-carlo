@@ -30,6 +30,7 @@ evidence:
   note: 'probe po st-francis-church-16830 (LPi 0018000000QxBkuAAF, 212 S Front St; website field http://www.stfrancisclearfield.com):
     ''no publications: this organization does not publish a bulletin here now''. probe url on stfrancisclearfield.com:
     DEAD-DNS. So the old domain is dead and the Discover Mass page is the channel.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-francis-of-assisi-clearfield --expected-identity
     Horgas (headed Chrome)

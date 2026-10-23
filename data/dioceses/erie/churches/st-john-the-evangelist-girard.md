@@ -36,6 +36,7 @@ evidence:
   quote: the celebration of all sacraments are to be transferred to the parish center on Main Street which
     is henceforth to serve in the manner of a parish church
   note: 'Decree of 9 June 2022: the Main Street parish center is the parish church.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

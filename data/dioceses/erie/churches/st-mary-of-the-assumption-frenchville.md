@@ -34,6 +34,7 @@ evidence:
     City list: ''See St. Agnes Parish; secondary mission church''; the printable directory (Oct 6 2026)
     says ''Secondary Church'' (no mission status). Mass 1st Wednesday 5:30 p.m. with social, 3rd Wednesday
     5:30 p.m. with exposition.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

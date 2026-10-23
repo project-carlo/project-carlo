@@ -42,6 +42,7 @@ evidence:
   note: 'Clergy list updated 8/7/2026: ''Holland, Rev. Kevin O. Pastor ... 1) St. Charles, New Bethlehem
     2) St. Eusebius, East Brady''. The directory''s locator and the parish''s own pages still name Rev.
     Samuel Bungo (retired, Winburne) as pastor; the clergy list and the bulletin say Holland.'
+promoted: 2026-10-23
 research:
 - method: 'Searched for a separate St. Eusebius / St. Richard bulletin: Discover Mass pages (st-eusebius-east-brady-pa,
     saint-richard-rimersburg-pa: no bulletins), ParishesOnline search near East Brady and Rimersburg (st-eusebius-catholic-church

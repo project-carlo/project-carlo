@@ -28,6 +28,7 @@ evidence:
   note: 'Page 1 of the issue dated October 24, 2026: ''Our Lady of Fatima Parish / 601 Roemer Blvd. /
     Farrell, Pa. 16121 / Mass time Saturday 4:00 PM''. Page 2: intentions for ''SATURDAY OCT 24 4:00PM
     MASS'' and ''Saturday Oct 31 at 4:00pm MASS ALL SAINTS MASS''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

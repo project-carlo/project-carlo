@@ -31,6 +31,7 @@ evidence:
   note: 'Clergy list updated 8/7/2026: ''Hoffman, Rev. Daniel R. Pastor ... St. Titus, Titusville'' and
     ''Pastor, pro tempore ... St. Joseph, Oil City''; ''Okoye, Rev. Festus Parochial Vicar ... 1) St.
     Joseph, Oil City, 2) St. Titus, Titusville''.'
+promoted: 2026-10-23
 research:
 - method: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese erie --parish st-titus-titusville
     --expected-identity Titus --expected-issue-date 2026-10-25

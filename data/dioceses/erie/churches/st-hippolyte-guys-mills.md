@@ -28,6 +28,7 @@ evidence:
   note: 'Page 1 of the 4 October 2026 issue: ''SAINT HIPPOLYTE CHURCH, 26012 N. Frenchtown Rd., Guys Mills
     PA 16327 (GPS only; send mail to the parish office) ... Sunday 11:00 am - Mass''; schedule ''Sunday
     October 11 ... 11:00am SH''; mail address 25997 State Highway 27.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-23
   quote: St. Hippolyte Parish, Frenchtown, is to be partnered with The Epiphany of the Lord Parish, Meadville
   note: Decree dated 14 July 2023, effective 7 August 2023.
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-hippolyte-guys-mills --expected-identity Hippolyte
     (headed Chrome); recipe is the provider_id (page-pdfs on weeklybulletin.php, first-listed)

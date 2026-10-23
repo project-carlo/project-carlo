@@ -29,6 +29,7 @@ evidence:
     7:30 am and 10:30 am Saint Jude; weekday Masses (Mon, Thu, Fri 8 am; Thu 6:15 pm Spanish) in the Chapel,
     Wednesday 10:15 school Mass in the Church. Page 1 and 2 address block: ''Saint Jude Parish Church,
     Parish Church and Office, 2801 W. 6th Street, Erie, PA 16505''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

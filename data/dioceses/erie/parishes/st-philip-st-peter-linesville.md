@@ -37,6 +37,7 @@ evidence:
   quote: 1) St. Philip, Linesville; 2) St. Peter, Conneautville
   note: 'Clergy list updated 8/7/2026: ''Hamlett, Rev. Chris M. Pastor ... 1) St. Philip, Linesville;
     2) St. Peter, Conneautville''.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-philip-st-peter-linesville --expected-identity Hamlett
     (headed Chrome); LPi organization search near Conneautville

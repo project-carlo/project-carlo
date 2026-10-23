@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 20606: 355 Main St., Kersey 15846; locator pin 41.361505, -78.601148 (about
     10 m from the Plus Code); Mass Sat 4:15 p.m., Sun 8, 10:30 a.m., Tue-Thu 7:15 a.m.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

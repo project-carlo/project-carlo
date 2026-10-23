@@ -39,6 +39,7 @@ evidence:
   note: 'Directory record 10408: 203 W. Washington St., Corry 16407; Saturday 4:30 pm alternates monthly
     between St. Thomas and St. Teresa; Sunday 8 am (Corry) and 11 am (Union City); pastor Rev. Thomas
     Whitman (the locator''s ''Rev. DG (Skip) Davis'' is stale).'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-thomas-the-apostle-corry --expected-identity Whitman
   url: https://stthomastheapostle.church/weeklybulletin.php

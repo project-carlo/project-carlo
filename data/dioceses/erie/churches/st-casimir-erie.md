@@ -48,6 +48,7 @@ evidence:
   seen: 2026-10-23
   note: OSM node 8009986378 'Saint Casimir Catholic Church' (place_of_worship) at 630 Hess Avenue, 42.13906,
     -80.05758. The next building, way 859304018, is 629 Hess Avenue (GCatholic's number).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

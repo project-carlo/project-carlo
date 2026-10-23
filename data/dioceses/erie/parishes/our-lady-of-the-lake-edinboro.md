@@ -40,6 +40,7 @@ evidence:
     ''a secondary church without mission status (i.e. no Mass on Saturday evening or on Sundays)''. The
     decree gives no effective date in the text I searched; the deanery plan and directory treat it as
     2024.'
+promoted: 2026-10-23
 research:
 - method: probe url ololake.com; curl of ololake.com/bulletin; one read of the Discover Mass church page
     and its current PDF

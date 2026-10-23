@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-23
   note: 'Diocese directory record 10301: one parish record, no group, partner or secondary church (locator_group_id
     is its own id); pastor Rev. Philip Pinczewski.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish blessed-sacrament-erie --expected-identity Pinczewski
     --expected-issue-date 2026-10-25 (headed Chrome)

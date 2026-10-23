@@ -39,6 +39,7 @@ evidence:
   note: 'Diocese directory record 20520: Sacred Heart Church, 263 Main St., Genesee, PA 16923, kind Mission,
     group St. Eulalia Parish; Sunday 8:30 a.m., Tuesday 6 p.m.; the city list calls it a ''secondary mission
     church''; the printable directory (6 Oct 2026) says ''Secondary Mission''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

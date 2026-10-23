@@ -28,6 +28,7 @@ evidence:
     Tuesday-Friday 8:00am. The 25 Oct 2026 bulletin PDF (bulletin number 3536) prints the masthead ''100
     Penn Ave | Mercer, PA | 16137'' and ''Daily Mass Tuesday - Friday: 8 AM'', ''Saturday Vigil Mass:
     4 PM - Immaculate Heart'', ''Sunday Mass at IHM: ... Sept - April - 8 AM & 11 AM''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

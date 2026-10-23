@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-23
   note: OSM node 8503902139 'Saint Luke Catholic Church' (place_of_worship) at 421 East 38th Street, 42.10517,
     -80.05712, about 30 m from the Plus Code.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

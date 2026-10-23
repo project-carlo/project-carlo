@@ -31,6 +31,7 @@ evidence:
   note: 'Printable directory of 6 October 2026, Franklin: St. Patrick Parish, 952 Buffalo St. (office),
     pastor Rev. James C. Campbell, Mass Mon, Tue, Thu, Fri 9 a.m., Wed 5 p.m., Sat 9 a.m. and 4:30 p.m.,
     Sun 8 a.m. and 10:30 a.m.; Website http://www.StPatrickFranklin.org. No secondary churches.'
+promoted: 2026-10-23
 research:
 - method: probe url on http://www.StPatrickFranklin.org, then parish-site-access visit.py --bulletin in
     headed Chrome

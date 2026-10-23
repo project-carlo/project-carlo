@@ -32,6 +32,7 @@ evidence:
     Martin Aubel, Frank Luciani'' (matches the bulletin; the locator''s ''Rev. Brandon Kleckner'' is stale;
     the clergy PDF lists Kleckner at Fryburg, Lucinda, Crown). Mission 31122 St. Margaret is its ''secondary
     mission church'' in the city list.'
+promoted: 2026-10-23
 research:
 - method: Grepped the four issues on weeklybulletin.php (4-25 October 2026) for Thiel, college, campus,
     university; read the home page; one DuckDuckGo search for Thiel Catholic campus Mass

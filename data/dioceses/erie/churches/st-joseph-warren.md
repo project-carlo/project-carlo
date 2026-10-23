@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-23
   quote: 'Physical Address: 600 Pennsylvania Ave., W., Warren, PA, 16365'
   note: 'Printable directory dated Oct. 6, 2026: St. Joseph Parish, Warren.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

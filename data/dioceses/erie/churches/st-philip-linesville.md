@@ -28,6 +28,7 @@ evidence:
   quote: 401 S Mercer St., Linesville, Pennsylvania 16424
   note: GCatholic entry 24551, Plus Code 86HXMH2F+HQ (41.6514375, -80.4255625). GCatholic's website for
     it, linesvillecatholic.com, is not the parish site (stspeterphilip.com is).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

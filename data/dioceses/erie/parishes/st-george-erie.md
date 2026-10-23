@@ -28,6 +28,7 @@ evidence:
 - url: https://www.eriercd.org/Parish10307-St-George.html
   seen: 2026-10-23
   note: 'Diocese directory record 10307 (also GCatholic 24507): one parish record, no mission or partner.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-george-erie --expected-identity 'Saint George' --expected-issue-date
     2026-10-25 (headed Chrome)

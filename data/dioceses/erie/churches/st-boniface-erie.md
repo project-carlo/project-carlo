@@ -30,6 +30,7 @@ evidence:
   quote: No Mass Today
   note: 'Mass times box: weekdays 26-30 Oct have no Mass; Saturday 31 Oct 8:00a.m. and 5:00p.m.; Sunday
     1 Nov 7:30a.m. and 10:30a.m.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -36,6 +36,7 @@ evidence:
   note: 'Diocese directory record 10219 (GCatholic 24547): one parish record, no mission or partner; Sat
     5 p.m.; Sun 8, 10:30 a.m. (livestream 10:30); holy day 12 p.m.; no daily Mass. Pastor Rev. Michael
     DeMartinis, priest in residence Rev. Dennis Veltri.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-patrick-erie --expected-identity 'SAINT PATRICK'
     --expected-issue-date 2026-10-25 (headed Chrome)

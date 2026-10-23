@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-23
   note: OSM node 8210169567 'Saint Stanislaus Catholic Church' (place_of_worship) at 516 East 13th Street,
     42.12713, -80.06954; about 40 m from the GCatholic Plus Code point.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

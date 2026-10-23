@@ -37,6 +37,7 @@ evidence:
   quote: There are currently no bulletins available for St Columbkille.
   note: Stoneboro's own Discover Mass page has no bulletin and stale Mass times (Saturday 4:30pm, Sunday
     9:00am, Tuesday-Friday 9:00am) that disagree with the current bulletin and the directory; not followed.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

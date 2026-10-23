@@ -31,6 +31,7 @@ evidence:
 - url: https://parishesonline.com/organization/ss-cosmas-damian-roman-catholic-church
   seen: 2026-10-23
   note: ParishesOnline org address 616 W Mahoning St, Punxsutawney 15767 (40.94242, -78.98456).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

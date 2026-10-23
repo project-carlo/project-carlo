@@ -31,6 +31,7 @@ evidence:
   note: 'Diocese directory record 10206 (also GCatholic 24491): one parish record, no mission, partner
     or secondary church. Directory Mass times: Sat 5 p.m.; Sun 7:30, 10:30 a.m.; daily 8 a.m. Tuesday
     through Saturday (check bulletin).'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-boniface-erie --expected-identity Boniface --expected-issue-date
     2026-10-25 (headed Chrome)

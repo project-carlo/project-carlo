@@ -30,6 +30,7 @@ evidence:
   note: 'Directory record 10408: 203 W. Washington St., Corry 16407; locator pin 41.922035, -79.644535
     (within 70 m of the Plus Code). Sunday 8 a.m. at Corry; the Saturday 4:30 p.m. Mass alternates monthly
     with St. Teresa.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

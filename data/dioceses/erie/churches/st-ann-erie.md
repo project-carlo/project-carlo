@@ -38,6 +38,7 @@ evidence:
   seen: 2026-10-23
   note: OSM node 9296606815 'Saint Ann Catholic Church' (place_of_worship) at 921 East Avenue, 42.13412,
     -80.06005. OSM's 931 East Avenue (way 159878368) is a house.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

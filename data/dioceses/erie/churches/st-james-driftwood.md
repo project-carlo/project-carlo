@@ -45,6 +45,7 @@ evidence:
 revisit: 'Spring 2027: check the first April 2027 bulletin (container 14/1738) for the resumed Saturday
   5:30 PM Mass at St. James, Driftwood.'
 revisit_after: 2027-04-15
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

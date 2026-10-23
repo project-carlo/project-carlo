@@ -36,6 +36,7 @@ evidence:
     be merged and subsumed into Saint Bernard of Clairvaux Parish''; St. Francis church becomes a secondary
     mission church; Our Mother of Perpetual Help, Lewis Run, a secondary church without mission status.
     The decree gives the structure; the bulletin is the Mass evidence.'
+promoted: 2026-10-23
 publication_reviews:
 - parish: st-elizabeth-of-hungary-smethport
   decision: separate

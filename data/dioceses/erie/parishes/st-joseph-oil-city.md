@@ -31,6 +31,7 @@ evidence:
   note: 'Clergy list updated 8/7/2026: ''Hoffman, Rev. Daniel R. ... Pastor, pro tempore ... St. Joseph,
     Oil City'' (and Pastor, St. Titus, Titusville); the directory''s St. Joseph record names Hoffman as
     pastor and Okoye as parochial vicar, though its locator still says ''Rev. John L. Miller''.'
+promoted: 2026-10-23
 research:
 - method: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese erie --parish st-joseph-oil-city
     --expected-identity 'Oil City' --expected-issue-date 2026-10-18

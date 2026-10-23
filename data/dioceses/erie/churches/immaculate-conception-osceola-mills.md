@@ -35,6 +35,7 @@ evidence:
   note: 'Directory record 20703 (Mission): 408 Stone St., Osceola Mills 16666; pin 40.853452, -78.26967.
     Directory: ''secondary mission church'' of Christ the King; Mass 2nd Monday 5:30 p.m. with social,
     4th Monday 5:30 p.m. with Exposition. No Saturday or Sunday Mass now (the 2023 plan expected one).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

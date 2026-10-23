@@ -40,6 +40,7 @@ evidence:
   quote: Sunday Mass, Emlenton, 9:00am
   note: 'Parish site home page: ''Saturday Vigil Mass, Grove City 4:30PM  Sunday Mass, Emlenton, 9:00am  Grove
     City, 11:00am  Father David Foradori Pastor''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

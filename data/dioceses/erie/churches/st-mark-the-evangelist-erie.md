@@ -37,6 +37,7 @@ evidence:
     Pa. 16511'', and ''Holy Day Masses ... 5:30 PM at St Mark''. Page 2: ''Holy Hours 11:00 at St. James
     & 6:30 at St. Mark'' (Wed. 28 Oct; a holy hour, not a Mass) and ''Sunday, November 1 ... SJ 9:30''
     in red. The quote is the text-layer footer of pages 7-8.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

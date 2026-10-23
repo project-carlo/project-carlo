@@ -24,6 +24,7 @@ evidence:
   note: 'Directory record 10320: 11264 Route 97 N, Waterford 16441; Mass Sat 4:30 p.m., Sun 9 a.m., no
     daily Mass; administrator Msgr. David Rubino (the locator''s ''Rev. Gregory P. Passauer'' is stale).
     Matches the bulletin.'
+promoted: 2026-10-23
 research:
 - method: probe url allsaintsrcc.org; weeklybulletin_issues.sh; probe pdf of the newest issue
   url: https://allsaintsrcc.org/weeklybulletin.php

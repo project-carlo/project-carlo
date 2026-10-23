@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 10320: 11264 Route 97 N, Waterford 16441; locator pin 41.97765, -79.995279 (within
     40 m). Mass Sat 4:30 p.m., Sun 9 a.m.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

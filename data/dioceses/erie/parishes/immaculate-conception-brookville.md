@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-23
   note: 'Clergy list updated 8/7/2026: ''Laska, Rev. William M. Pastor ... Immaculate Conception, Brookville''
     (one assignment). The directory lists St. Dominic, Sigel as its ''Secondary Mission''.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

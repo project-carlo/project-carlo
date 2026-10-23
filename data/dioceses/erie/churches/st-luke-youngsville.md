@@ -33,6 +33,7 @@ evidence:
   quote: 'Physical Address: 420 N. Main St., Youngsville, PA, 16371'
   note: 'Printable directory dated Oct. 6, 2026: St. Luke Church, Secondary Mission of St. Joseph Parish,
     Warren; Sunday 8 a.m.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

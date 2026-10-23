@@ -47,6 +47,7 @@ evidence:
   note: 'Merger decree: five parishes (St. Catherine of Siena, St. Michael the Archangel, St. Bernard,
     St. Mary, Assumption of the BVM) merged by extinctive union into Holy Spirit Parish; St. Catherine
     is the parish church and the other four are secondary churches. The decree closes no building.'
+promoted: 2026-10-23
 research:
 - method: probe url weareholyspirit.com; visit.py --bulletin in headed Chrome; the Bulletin page's PDF
     list; pdftotext of all 27 issues

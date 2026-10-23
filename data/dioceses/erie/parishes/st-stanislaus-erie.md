@@ -50,6 +50,7 @@ evidence:
   seen: 2026-10-23
   note: 'Clergy list ''Updated 8/7/2026'' (read via scratch/map-erie/raw/clergy_pdf.txt): Glover, Rev.
     Jason A., pastor of St. Stanislaus and Our Mother of Sorrows, Erie. Agrees with the bulletin masthead.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-stanislaus-erie --expected-identity "Mother of Sorrows"
     --expected-issue-date 2026-10-25 (headed Chrome)

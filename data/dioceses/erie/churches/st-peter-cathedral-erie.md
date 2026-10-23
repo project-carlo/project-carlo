@@ -32,6 +32,7 @@ evidence:
   note: '25 Oct 2026 bulletin (number 3511): staff block ''Cathedral Rectory Office, 230 West 10th Street,
     Erie, PA 16501''; Mass Intentions list daily Masses 26 Oct-1 Nov at the cathedral (weekday 6:30, 8:00,
     12:10 and 5:15; Saturday 8:00 and 4:00 pm; Sunday 6:30, 8:30, 11:00 am).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

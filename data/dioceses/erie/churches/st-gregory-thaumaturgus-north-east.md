@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-23
   note: 'Directory record 10208: 48 S. Pearl St., North East 16428; locator pin 42.212583, -79.836934
     (within 15 m of the Plus Code). Mass times match the bulletin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

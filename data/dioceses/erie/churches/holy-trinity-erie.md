@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-23
   note: OSM node 13043134809 'Holy Trinity Catholic Church' (place_of_worship) at 2220 Reed Street, 42.12043,
     -80.06040, about 40 m from the Plus Code.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

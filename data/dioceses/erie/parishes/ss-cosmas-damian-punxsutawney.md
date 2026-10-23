@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-23
   note: 'Clergy list updated 8/7/2026: ''Riccardo, Rev. Msgr. Joseph J. Pastor ... Ss. Cosmas & Damian,
     Punxsutawney'' (one assignment).'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

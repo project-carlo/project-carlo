@@ -29,6 +29,7 @@ evidence:
   note: 'Directory record 20701: 123 Good St., Houtzdale 16651; locator pin 40.830601, -78.350899 (within
     5 m of the Plus Code). Mass times Sat 5:30 p.m., Sun 9:30 a.m., Wed and Fri 8:30 a.m.; matches the
     bulletin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

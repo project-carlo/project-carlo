@@ -29,6 +29,7 @@ evidence:
   quote: 501 Washington St., Conneautville, Pennsylvania 16406
   note: GCatholic entry 24549, Plus Code 86HXQJ6G+MX (41.7616875, -80.3725625); OSM's nearest building
     (504 Washington St.) is about 20 m away.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

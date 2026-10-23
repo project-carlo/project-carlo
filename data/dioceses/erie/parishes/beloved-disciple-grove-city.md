@@ -37,6 +37,7 @@ evidence:
     Monday, Tuesday, Wednesday, Friday 8 a.m., Thursday 6 p.m. (the locator''s pastor field names Kujawinski,
     the detail page Foradori; the bulletin agrees with the detail page). Mission record 30909 (St. Michael
     the Archangel, Emlenton) is ''secondary mission church'' under it.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish beloved-disciple-grove-city --expected-identity Beloved
     --expected-issue-date 2026-10-25 (headed Chrome)

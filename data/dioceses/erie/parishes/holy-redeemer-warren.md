@@ -32,6 +32,7 @@ evidence:
   note: 'Clergy list updated 8/7/2026: ''O''Hern, Rev. Mark A. - Pastor - Holy Redeemer, Warren'' (one
     assignment). The directory''s locator lists ''Rev. Stephen Schreiber'' for this parish; the clergy
     list and the bulletin agree on O''Hern.'
+promoted: 2026-10-23
 research:
 - method: probe url; headed visit.py (8 loads); ParishesOnline search API near the church's coordinates;
     probe po

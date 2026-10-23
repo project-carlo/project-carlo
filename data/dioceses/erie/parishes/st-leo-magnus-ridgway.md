@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-23
   quote: Pino, VF, Very Rev. Justin P.
   note: 'Clergy PDF (8/7/2026): pastor of St. Leo Magnus, Ridgway; his only assignment.'
+promoted: 2026-10-23
 research:
 - method: probe url on the directory website; weeklybulletin_issues.sh; pdftotext (no text layer), pdftoppm
     render of page 1; fetch:check with recipe page-pdfs https://stleomagnus.org/weeklybulletin.php

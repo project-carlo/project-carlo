@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-23
   note: Directory record 10312 (pastor Rev. Michael Kesicki; locator pastor 'Fr. Marc Solomon' is stale);
     St. Philip is record 31009, a 'secondary mission church' under 10312 in the city list.
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-lawrence-the-martyr-albion --expected-identity Kesicki
     (headed Chrome)

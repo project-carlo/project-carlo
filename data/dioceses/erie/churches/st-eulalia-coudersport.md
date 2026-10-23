@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   note: 'Diocese directory record 20506: St. Eulalia Parish, 6 E. Maple St., Coudersport, PA 16915; Sat
     4 p.m., Sun 11 a.m.; locator pin 41.770761,-78.021345.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -37,6 +37,7 @@ evidence:
     says 'Saint Teresa of Avila parish, including its secondary church of Our Lady of Fatima, merged into
     Saint Thomas the Apostle parish on July 9, 2024' and that 'All of the sacraments and devotions are
     available at Saint Teresa of Avila church'.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

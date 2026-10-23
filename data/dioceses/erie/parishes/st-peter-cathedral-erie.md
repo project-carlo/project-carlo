@@ -40,6 +40,7 @@ evidence:
     Rev. Joseph A. Petrone Jr., pastor of St. Stephen of Hungary, is also ''Sacramental Assistant ...
     St. Peter Cathedral''; that does not make the bulletins shared (the cathedral bulletin names no San
     Esteban).'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-peter-cathedral-erie --expected-identity Ferrick
     --expected-issue-date 2026-10-25 (headed Chrome)

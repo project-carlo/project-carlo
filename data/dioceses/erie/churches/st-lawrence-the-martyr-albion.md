@@ -28,6 +28,7 @@ evidence:
   note: 'Directory record 10312: 180 E. State St., Albion 16401; locator pin 41.891404, -80.359725 (within
     130 m). Directory Mass times: Sat 4 p.m., Sun 10 a.m., weekdays Mon/Wed/Thu/Fri 8 a.m., matching the
     bulletin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

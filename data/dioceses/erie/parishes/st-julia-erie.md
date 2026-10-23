@@ -33,6 +33,7 @@ evidence:
   note: A Discover Mass page exists for St. Julia but carries no bulletin ('no bulletins available' in
     the copy of the page saved by the survey on 2026-10-23), so the ParishesOnline container is the only
     live channel.
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-julia-erie --expected-identity 'Saint Julia' --expected-issue-date
     2026-10-25 (headed Chrome)

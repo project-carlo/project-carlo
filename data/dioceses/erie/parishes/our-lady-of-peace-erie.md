@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-23
   note: 'Diocese directory record 10303 (also GCatholic 24456): one parish record, no mission or secondary
     church, no partner.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish our-lady-of-peace-erie --expected-identity 'Our Lady
     of Peace' --expected-issue-date 2026-10-25 (headed Chrome)
@@ -37,6 +38,16 @@ research:
     because the cover's date text is split by the layout. The downloaded file is 4,684,076 bytes, the
     same size as olp.org's 10.25.2026.pdf, whose last page prints bulletin number 3518 (the Discover Mass
     number).
+- method: 'pnpm fetch:check --diocese erie (headed Chrome), final fetch check; Discover Mass download.php
+    returned a 134-byte body (curl of the same URL: ''Maximum number of files downloaded today. Please
+    contact Discover Mass for support.'')'
+  checked: '2026-10-23'
+  outcome: access-blocked
+  next_action: Re-run fetch:check for this row after the Discover Mass per-IP daily cap resets; do not
+    retry in a loop. Resolution of the church page and the download URL succeeded, so only the PDF download
+    (document type, identity and issue date) is unverified in this run; see earlier evidence for the identity
+    read by the scout.
+  retry_when: Discover Mass daily cap resets
 ---
 
 ## Publisher

@@ -27,6 +27,7 @@ evidence:
 - url: https://www.eriercd.org/Parish20607-St-Joseph.html
   seen: 2026-10-23
   note: 'Diocese directory record 20607: St. Joseph Parish, Force; no mission or secondary church.'
+promoted: 2026-10-23
 research:
 - method: probe url on the directory website; weeklybulletin_issues.sh; probe pdf and pdftotext of the
     18 October issue; fetch:check with recipe page-pdfs https://stjosephforce.org/weeklybulletin.php

@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   note: 'ParishesOnline org record: 11 Russell Street, Warren, PA 16365, 41.8395273, -79.1322543 (about
     25 m from the GCatholic Plus Code point).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

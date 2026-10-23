@@ -2,7 +2,7 @@
 name: Roman Catholic Diocese of Erie
 state: PA
 website: https://www.eriercd.org
-status: exploring
+status: promoted
 gcatholic: erie0
 city_aliases:
   Leeper: Crown
@@ -18,6 +18,7 @@ city_aliases:
   Canadohta Lake: Union City
   Mageetown: Centerville
   Crates: Mayport
+promoted: 2026-10-23
 ---
 
 Thirteen counties of north-western Pennsylvania: Erie (Erie, North East, Corry, Girard), Crawford
@@ -223,7 +224,9 @@ Carried over from Altoona-Johnstown, Greensburg, Scranton and Buffalo (2026-10);
 this diocese shows otherwise.
 
 - **Discover Mass downloads** work with curl given `Referer: https://discovermass.com/`, so
-  past issues can be fetched and grepped (mind the daily cap). `probe pdf --grep` still prints
+  past issues can be fetched and grepped (mind the daily cap). The cap runs out partway through
+  a ~10-row `fetch:check`, after a day of scouting: later rows then return 134 bytes. Schedule
+  the full check for a fresh day. `probe pdf --grep` still prints
   every page: redirect it to a file.
 - **J.S. Paluch on Discover Mass.** Its `?s=` search is broken; grep the town in the sitemaps
   (`discovermass.com/wp-sitemap-posts-item-{1..11}.xml`; slugs here are mixed `saint-` and `st-`).
@@ -338,6 +341,14 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- **2026-10-23**, mapped (orchestrator, 26 batches by 25 parish-scout runs of 3–9 roster
+  pairs each, batches 25–26 combined, plus one fetch-check run): 61 parish rows (57 with a
+  readable bulletin, 4 `no_bulletin`), 110 churches, 42 exclusions, 9 open questions.
+  `coverage`: directory 128/128 accounted for, 103/117 non-excluded modelled (88%); GCatholic
+  150/150, 98/112 (88%); one church in no roster (Allegheny College, Ford Chapel). `audit
+  --fetch`: no unresolved pairs. `fetch:check`: 47 rows verified current; Discover Mass's daily
+  cap blocked re-reading 10 rows that scouts had verified earlier the same day (research items
+  with retry triggers on four); St. Hippolyte's page lags (newest 4 Oct, revisit 2026-11-13).
 - **2026-10-23**, survey (diocese-surveyor): created the diocese, imported the GCatholic roster
   (150) and the directory roster (128), read the clergy PDF, decrees page and deanery plans, probed
   the 66 directory websites, and planned 26 scout batches in `batches.json` (all 278 roster entries

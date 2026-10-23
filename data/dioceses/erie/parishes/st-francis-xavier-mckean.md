@@ -28,6 +28,7 @@ evidence:
   note: 'Directory record 10306: one parish record, own locator_group_id, no secondary church or partner.
     Locator pastor ''Rev. Jason R. Feigh'' vs detail page and bulletin ''Rev. Benjamin Daghir'' (the bulletin
     is followed).'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish st-francis-xavier-mckean --expected-identity Daghir
     --expected-issue-date 2026-10-25 (headed Chrome)

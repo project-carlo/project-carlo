@@ -39,6 +39,7 @@ evidence:
     Sun 11 a.m., Wed and Fri 9 a.m.; city list ''partnered with St. Bartholomew Parish, Sharpsville''.
     The locator''s pastor ''Very Rev. Richard J. Allen'' is stale; the clergy PDF (updated 8/7/2026) names
     Miller for both parishes.'
+promoted: 2026-10-23
 research:
 - method: probe url notredame-pa.org; probe po (ParishesOnline search API at the parish's coordinates);
     md5 and masthead comparison of 4 weeks of both containers

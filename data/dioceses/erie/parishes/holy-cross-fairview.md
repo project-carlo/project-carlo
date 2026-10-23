@@ -36,6 +36,7 @@ evidence:
   note: 'Clergy list ''Updated 8/7/2026'' (read by the surveyor, see diocese.md): S. Detisch is pastor
     of St. John, Girard and Holy Cross, Fairview. Directory records 10302 (Holy Cross) and 10308 (St.
     John, group ''Holy Cross Parish (10302)'') both give website hcsjchurches.org.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish holy-cross-fairview --expected-identity Detisch --expected-issue-date
     2026-10-25 (headed Chrome)

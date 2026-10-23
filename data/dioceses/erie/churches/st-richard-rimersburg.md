@@ -28,6 +28,7 @@ evidence:
   note: '25 Oct 2026 bulletin page 1: ''November - April Mass Times: Saturday Vigil Mass 5:30 PM - St.
     Richard''; page 4 ad ''St. Richard''s Turkey Dinner ... 83 Purity Ave, Rimersburg, PA 16248 ... Nov.
     5th and 6th 2026''; letter: ''May - October - St. Nicholas, November - April - St. Richard''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

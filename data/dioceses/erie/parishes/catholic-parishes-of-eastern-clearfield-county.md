@@ -48,6 +48,7 @@ evidence:
     file is a re-export of the same text, 2.5 MB vs 6.8 MB on the parish site). The St. Agnes (st-agnes-morrisdale-pa)
     and St. Basil (st-basil-the-great-coalport-pa) pages say ''no bulletins available''. Not used as the
     source: the parish site''s weeklybulletin.php is the primary channel and also lists inserts.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese erie --parish catholic-parishes-of-eastern-clearfield-county --expected-identity
     'Eastern Clearfield County' (headed Chrome)
