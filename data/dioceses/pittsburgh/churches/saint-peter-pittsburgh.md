@@ -11,7 +11,7 @@ longitude: -80.0087528
 coordinates_from: diocese-directory
 name_verified: true
 address_verified: true
-roster: ['directory:christoursaviorparish/3', 'gcatholic:24238', 'massfinder:31957']
+roster: ['directory:christoursaviorparish/3', 'massfinder:31957']
 evidence:
 - url: https://diopitt.org/christoursaviorparish
   seen: 2026-10-23
