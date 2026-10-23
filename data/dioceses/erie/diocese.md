@@ -154,7 +154,9 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   faith-formation fliers. Check how far behind the page runs (Albion's newest on 2026-10-23 was 11
   October). Some of these sites also embed a ParishesOnline org (hcsjchurches.org,
   stelizabethsmethport.org, ststanserie.org, stgregoryparish.info): compare the two before
-  choosing a provider. `dioceseoferie.org/<name>/` is the same host (Holy Rosary, Johnsonburg 403s
+  choosing a provider. A template site with no
+  `weeklybulletin.php` may have a Bulletin menu entry that is a JavaScript `location.assign` to
+  `parishesonline.com/find/<slug>`: read the nav HTML. `dioceseoferie.org/<name>/` is the same host (Holy Rosary, Johnsonburg 403s
   probe url; St. Charles, New Bethlehem shows no bulletin links).
 - **A diocese-hosted `weeklybulletin.php` page can repost a partner's ParishesOnline issue or
   a sister site's PDF** byte for byte (Our Mother of Sorrows = St. Stanislaus 14/1710, md5 over
@@ -172,7 +174,8 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   compare containers with `probe po`. `probe pdf` reads 4 pages by default; pass `--pages`
   (or `pdftotext -layout`) for an 8-page issue's Mass columns. A ligature read as U+FFFD
   ("Baptist") breaks `fetch:check --expected-identity`: use another masthead word; when the
-  parish name is a graphic, use the pastor's surname (Blessed Sacrament: `Pinczewski`). Up to
+  parish name is a graphic, use the town or the pastor's surname (Blessed Sacrament:
+  `Pinczewski`). Up to
   three org records can alias one container (St. Joseph/Sacred Heart/St. Paul, 14/1876): record
   every org id on the row. GCatholic's parish websites here are often dead or squatted.
 - **Discover Mass ids** on oilcitycatholic.com, ourladyofmercychurch.org, sttobias.com and the
@@ -180,8 +183,8 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   file as the Discover Mass download (Our Lady of Peace: same size, same bulletin number 3518):
   compare size and number, and use `discover_mass` with the slug. `recheck` finds quotes from
   the issue PDF cited under the church page URL, but not the cover-class number or page
-  markup: put those in a note. Page-1 mastheads often extract garbled: quote a page-2
-  schedule line instead. `fetch:check` reports issue date `unknown` when the masthead
+  markup: put those in a note. `recheck` reads only the first pages, and page-1
+  mastheads often extract garbled: quote clean text from page 1 or 2. `fetch:check` reports issue date `unknown` when the masthead
   date is split by the layout, and ParishesOnline issues posted early show as `future`;
   neither is a failure.
 - **Other hosts seen:** Wix (`_files/ugd/` PDFs; a blog post's file-upload-viewer attachment
