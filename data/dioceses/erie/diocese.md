@@ -154,6 +154,9 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   stelizabethsmethport.org, ststanserie.org, stgregoryparish.info): compare the two before
   choosing a provider. `dioceseoferie.org/<name>/` is the same host (Holy Rosary, Johnsonburg 403s
   probe url; St. Charles, New Bethlehem shows no bulletin links).
+- **A diocese-hosted `weeklybulletin.php` page can repost a partner's ParishesOnline issue**
+  byte for byte (Our Mother of Sorrows = St. Stanislaus 14/1710, md5 over four weeks): compare
+  hashes before giving the page its own row.
 - **ParishesOnline** orgs embedded on parish sites: st-john-the-baptist-church-16504 (on both
   stjohn-holyrosary-erie.org and holytrinityrc.org), st-stanislaus-our-mother-of-sorrows-churches,
   sacred-heart-church-16508, st-mary-of-grace-st-agatha-st-brigid-churches, st-mary-sacred-heart-
@@ -173,7 +176,9 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   markup: put those in a note. `fetch:check` reports issue date `unknown` when the masthead
   date is split by the layout, and ParishesOnline issues posted early show as `future`;
   neither is a failure.
-- **Other hosts seen:** Wix (`_files/ugd/` PDFs: goodshepherdwm.org, sharoncatholic.org; Wix blog
+- **Other hosts seen:** Wix (`_files/ugd/` PDFs; a blog post's file-upload-viewer attachment
+  has no PDF link in the HTML or feed and is minted on click: `scratch/map-erie/tools/wixlinks.py`
+  clicks it with Playwright `expect_download`, after which `/_files/ugd/<id>.pdf` is public: goodshepherdwm.org, sharoncatholic.org; Wix blog
   posts per issue: latinmasserie.org), Duda (bsparisherie.org, sttobias.com, `irp.cdn-website.com`),
   WeConnect (icclarion.org, `uploads.weconnect.com/mce/<id>/2026Bulletins/<yyyy-mmdd> for
   Website.pdf`), WordPress (saintjude.church, st-boniface.org, stgeorgeerie.org, thesmchurch.com).
@@ -269,7 +274,11 @@ Decisions that apply to more than one record, and who made them.
 - **St. Hedwig, Erie (Latin Mass)** and any other apostolate follow the one-bulletin rule:
   its own regular bulletin makes it its own row, even though canonically it is a secondary
   church of St. Stanislaus. Blog posts or announcements alone are not a bulletin
-  (orchestrator, 2026-10-23).
+  (orchestrator, 2026-10-23). **Exception while unreadable:** a bulletin the pipeline can't
+  fetch (St. Hedwig's is a Wix blog attachment whose PDF URL is minted on click) doesn't get
+  its own row. When another row's bulletin prints the church's Mass times every week, the
+  church sits under that row, and the unreadable bulletin goes to `open/` with a retry
+  trigger (St. Hedwig under St. Stanislaus, 2026-10-23).
 
 ## Log
 
