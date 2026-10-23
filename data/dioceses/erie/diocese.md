@@ -122,7 +122,8 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
   (2018-03-25); Holy Cross, Rasselas (2017-09-07). St. Francis of Assisi, Bradford became a
   secondary church with no Sunday Mass by decree. Read the decree itself for each exclusion and cite the decree PDF URL, not decrees.html; a
   relegation decree states that the building closed, and gives the date. The decree list was read
-  on 2026-10-23, with dates taken from each PDF's text (`scratch/map-erie/raw/decree_summary.txt`).
+  on 2026-10-23, with dates taken from each PDF's text (`scratch/map-erie/raw/decree_summary.txt`). Some files in `raw/decrees/` are HTML error
+  pages (d39): use `raw/decrees2/`. Decree URLs containing double spaces need `%20%20`.
 - **Pastoral plan:** https://www.eriercd.org/planning-deaneries.html: final plans for the
   Clearfield and Bradford deaneries (October 2023), McKean/Potter/Warren (news release
   2023-10-17), the DuBois Holy Spirit merger (2023-10-07) and Erie County (April 2024). They list
@@ -133,7 +134,8 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
   (`scratch/map-erie/raw/dm/dm_pa_all.txt` lists the Pennsylvania slugs from the 2026-10-23
   sitemaps), including closed ones (Mount Calvary, St. Adalbert, St. Elizabeth Corry), campus pages
   (Gannon University, Mercyhurst College, Allegheny College) and one Romanian Byzantine church in
-  Hermitage (`st-john-the-baptistromanian-byzantin-hermitage-pa`) that no roster has. A page is not
+  Hermitage (`st-john-the-baptistromanian-byzantin-hermitage-pa`) that no roster has. Its Rite label can be wrong: the "Romanian Byzantin" church in Hermitage is
+  American Carpatho-Russian Orthodox (`not-catholic`; read the parish's own site). A page is not
   a channel: three of four sampled (Lucinda, St. Julia, Coudersport) say "no bulletins available";
   the cathedral's is live (bulletin number 3511).
 
