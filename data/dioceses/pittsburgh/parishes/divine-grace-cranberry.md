@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: org ''Divine Grace Parish'', 2535 Rochester Rd, Cranberry Township; container 14/1741;
     latest issue 2026-10-25.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

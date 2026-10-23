@@ -33,6 +33,7 @@ evidence:
     Matthew Parish: Holy Spirit Church (Millvale)'', 608 Farragut Street, Pittsburgh, PA 15209; group:
     Saint Matthew Parish. The Mass Finder (https://diopitt.org/massfinder) lists the same church at the
     same address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -37,6 +37,7 @@ evidence:
     PM and Sunday 11:00 AM; page 2 ''Next week the AGP Choir will provide music at the 11:00 AM Mass at
     St. Mary, Help of Christians Church''; page 3 Sunday confession 9:30-10:30 AM and Mon-Wed adoration
     there.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

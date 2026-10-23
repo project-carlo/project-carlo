@@ -46,6 +46,7 @@ evidence:
   seen: 2026-10-23
   note: '1 June 2025 issue (pdftotext) printed the Mass as ''5:00 pm W&J Newman Center'' with legend ''(NC)
     W & J Newman Center'': the same Mass under its older name.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

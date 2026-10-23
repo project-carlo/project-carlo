@@ -40,6 +40,7 @@ evidence:
   seen: 2026-10-23
   note: 'Diocese parish page (roster directory:saint-andrew-the-apostle-parish/1-3): three churches, pastor
     Rev. Levi D. Hartle, phone 724-258-7794, weekend times agreeing with the bulletin.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

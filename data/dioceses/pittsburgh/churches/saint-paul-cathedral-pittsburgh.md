@@ -30,6 +30,7 @@ evidence:
     page 2 Mass times ''Saint Paul Cathedral: Saturday Anticipated | 6pm; Sunday | 6:30am, 10am, 12pm,
     6pm; Mon - Sat | 8:15am & 12:05pm'', confessions Friday & Saturday 12:45pm, televised Mass Sunday
     10:00am. The 26 Oct-1 Nov intentions table has Masses at the Cathedral at 8:15am and 12:05pm daily.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

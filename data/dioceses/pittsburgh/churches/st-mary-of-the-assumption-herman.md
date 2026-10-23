@@ -38,6 +38,7 @@ evidence:
   quote: St. Mary 821 Herman Rd.
   note: 'Parish website ''Church Locations'' page (headed Chrome): one of the six churches of Saints Francis
     & Clare Parish.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

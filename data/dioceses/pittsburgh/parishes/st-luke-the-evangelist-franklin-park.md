@@ -39,6 +39,7 @@ evidence:
   note: 'Diocese parish page: Rev. Joseph A. Carr (Pastor); two churches, Good Samaritan (Ambridge) and
     Saints John and Paul (Franklin Park). The predecessor list calls the parish ''St. Luke the Evangelist
     - New Parish (Ambridge/Baden/Conway/Franklin Park)''.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

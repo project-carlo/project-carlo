@@ -32,6 +32,7 @@ evidence:
   note: 'Page 2 of the 25 October 2026 Holy Family bulletin: Saturday vigil 5:30 PM, Sunday 9:30 AM, Tuesday
     6:00-6:20 confession, first-Saturday confession after the 5:30 PM Mass, Thursday adoration. Page 1:
     ''825 Second Street / Verona, PA 15147 / NO MAIL AT THIS ADDRESS''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

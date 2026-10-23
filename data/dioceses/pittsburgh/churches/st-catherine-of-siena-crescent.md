@@ -34,6 +34,7 @@ evidence:
   note: 'Page 3 Mass list of the 18 Oct 2026 issue: Saturday Oct 17 4:00 PM, Sunday Oct 18 10:30 AM, weekdays
     8:30 AM Thursday and Friday, Saturday Oct 24 4:00 PM at St. Catherine of Siena. Page 1 masthead: ''ST.
     CATHERINE OF SIENA 199 McGovern Boulevard Crescent, PA 15046''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

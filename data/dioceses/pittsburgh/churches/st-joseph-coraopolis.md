@@ -34,6 +34,7 @@ evidence:
   note: 'Page 3 Mass list of the 18 Oct 2026 issue: Saturday Oct 17 5:30 PM, Sunday Oct 18 10:00 AM, weekdays
     8:00 AM Monday, Tuesday and Thursday and 7:00 PM Wednesday at St. Joseph. Page 1 masthead: ''ST. JOSEPH
     1304 Fourth Avenue Coraopolis, PA 15108''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

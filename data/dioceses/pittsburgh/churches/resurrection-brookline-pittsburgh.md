@@ -39,6 +39,7 @@ evidence:
   quote: 11:00 AM Resurrection
   note: 'Parish home page Mass times: Sunday 11:00 AM; weekdays 8:00 AM Tuesday, Thursday and Saturday
     at Resurrection; address block ''1100 Creedmoor Avenue''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

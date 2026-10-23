@@ -30,6 +30,7 @@ evidence:
     Mary of the Assumption Church (Glenshaw)'', 2510 Middle Road, Glenshaw, PA 15116; group: Our Lady
     of Perpetual Help Parish. The Mass Finder (https://diopitt.org/massfinder) lists the same church at
     the same address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -44,6 +44,7 @@ evidence:
     to recheck): one entry with three churches (Saint Paul Cathedral, Saint Rosalia, Saint Stephen), website
     www.saintpaulcathedral.org, phone 412-621-4951, pastor Very Rev. Kris D. Stubna. Saint Stephen is
     listed ''No Masses Scheduled''.'
+promoted: 2026-10-23
 research:
 - method: Grepped monthly issues of container 14/1180 (2025-10-05 to 2026-10-25) for 'Saint Stephen' and
     'Hazelwood'

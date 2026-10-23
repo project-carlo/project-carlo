@@ -45,6 +45,7 @@ evidence:
   note: '5 Oct 2025 bulletin: the Waynesburg University student Mass moved to Roberts Chapel until St.
     Ann''s restoration is completed. Parish Masses at St. Ann continue in every issue read (grepped 60
     issues), including 25 Oct 2026.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -35,6 +35,7 @@ evidence:
     Hollow Road, Pittsburgh, PA 15228'' and the Mass schedule box ''Saint Winifred Church Saturday Vigil:
     5:30 PM, Sunday: 11:30 AM''. Mass-intentions list codes (St. W): Saturday 5:30 PM and Sunday 11:30
     AM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

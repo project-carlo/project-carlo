@@ -28,6 +28,7 @@ evidence:
   note: 'Read 2026-10-23, 25 October 2026 issue (container 14/1251), page 2 attendance table and page
     3 Mass schedule and intentions: Sun 9:00 AM (attendance 187 on 18 October); page 5 also announces
     a Gospel Study Group at Nativity/Spiritual Center on 26 Oct and 2 Nov.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

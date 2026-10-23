@@ -42,6 +42,7 @@ evidence:
   seen: 2026-10-23
   quote: On July 1, 2019, these four parishes were formally merged to create the Christ Our Savior Parish.
   note: Diocese history page (headed Chrome; diopitt.org answers 403 to recheck).
+promoted: 2026-10-23
 bulletin_status: available
 publication_reviews:
 - parish: most-precious-blood-of-jesus-pittsburgh

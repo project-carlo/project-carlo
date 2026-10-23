@@ -27,6 +27,7 @@ evidence:
   quote: 'ST. BARBARA CHURCH LOCATION:'
   note: 'Read 2026-10-23, 25 October 2026 issue page 1, Mass schedule box: Sun 9:00 AM and 5:00 PM; weekdays
     Mon-Wed-Fri 7:00 AM; reconciliation Sat 12:30-1:30 PM; adoration first Saturdays noon-2:00 PM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

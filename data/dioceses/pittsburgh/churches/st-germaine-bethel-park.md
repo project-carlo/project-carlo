@@ -29,6 +29,7 @@ evidence:
   note: 'Read 2026-10-23, 25 October 2026 issue (container 14/1251), page 2 attendance table and page
     3 Mass schedule and intentions: Sun 7:30 AM and 10:30 AM. Page 3 lists intentions for ST. GERMAINE
     on weekdays as well as weekends.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

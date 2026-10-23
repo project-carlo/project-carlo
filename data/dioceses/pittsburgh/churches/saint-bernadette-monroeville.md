@@ -33,6 +33,7 @@ evidence:
   quote: ST. BERNADETTE CHURCH
   note: 'Page 1 of the 25 October 2026 Christ the Divine Shepherd bulletin: ''245 Azalea Drive, Monroeville,
     PA 15146''; Saturday 4:00 pm, Sunday 8:00 am and 11:00 am, Mon/Wed/Fri 9:00 am, Thursday 6:00 pm.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   quote: 'Saint Felix: 11:00 a.m.'
   note: 'Page 1: Sunday Saint Felix 11:00 a.m. (its only weekend Mass); page 1 masthead address ''450
     13th Street, Freedom, PA 15042''. Page 4 weekday: Monday, Thursday and Friday 9:00 (text wraps).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

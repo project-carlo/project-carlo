@@ -30,6 +30,7 @@ evidence:
   note: 'probe po: org ''Holy Child Church - Corpus Christi Parish'', 212 Station St, Bridgeville; container
     14/0673, latest issue 2026-10-25. Sibling org st-barbara-parish-15017 (45 Prestley Rd) points at the
     same container.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

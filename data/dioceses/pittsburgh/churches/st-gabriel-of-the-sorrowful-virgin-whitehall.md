@@ -31,6 +31,7 @@ evidence:
     3 Mass schedule and intentions: Sat 5:00 PM vigil, Sun 9:00 AM and 11:00 AM. Page 3 also lists weekday
     Mass intentions at ST. GABRIEL (e.g. a Saturday 10:00 AM Mass: ''If a Funeral Mass is scheduled on
     Saturday’s 10 AM Mass at St. Gabriel'').'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

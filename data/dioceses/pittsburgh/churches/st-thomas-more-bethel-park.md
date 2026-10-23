@@ -33,6 +33,7 @@ evidence:
   note: 'Page 1 (image, rendered 2026-10-23) has a Mass box headed Saint Thomas More, 126 Fort Couch Road
     Pittsburgh, PA 15241: Saturday Vigil 4:00 pm; Sunday 8:00 am, 9:30 am & 11:30 am; Weekdays & Saturday
     11:30 am; Saturday confessions 9:00-10:00 am. Page 2 gives the parish office at 126 Fort Couch Road.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: org ''Sacred Heart Church - Saint Jude Parish'', 310 Shady Ave, Pittsburgh, container
     14/1148.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

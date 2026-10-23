@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: three orgs titled ''Mary, Mother of God Parish'' (corpus-christi-parish-15132, st-angela-church-15131,
     st-patrick-church-15132) all resolve to container 14/0560, latest issue 2026-10-25.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

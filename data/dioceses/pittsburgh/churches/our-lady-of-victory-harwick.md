@@ -32,8 +32,8 @@ evidence:
   note: 'Page 2 of the 18 October 2026 Guardian Angels bulletin (container 14/0710): campus list gives
     ''Our Lady of Victory 1319 Low Grade Road Harwick PA 15049''; OLOV Masses Sat 5:00pm, Sun 9:00am and
     11:30am, weekdays 8:30am. Page 6 adds ''The morning Mass on October 27th @ 8:30am at Our Lady of Victory
-    has been canceled'', a single cancellation that confirms
-    weekday Mass here.'
+    has been canceled'', a single cancellation that confirms weekday Mass here.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

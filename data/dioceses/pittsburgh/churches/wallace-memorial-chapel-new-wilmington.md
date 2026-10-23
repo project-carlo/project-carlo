@@ -45,6 +45,7 @@ evidence:
   seen: 2026-10-23
   note: OSM building way 728246057 'Wallace Memorial Chapel', Maple Street, New Wilmington 16142, at 41.1198835,
     -80.3322201. The college itself (way 551948336) is at 41.1182, -80.3287.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

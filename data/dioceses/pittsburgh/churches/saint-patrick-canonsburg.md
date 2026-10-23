@@ -36,6 +36,7 @@ evidence:
 - url: https://parishesonline.com/organization/saint-oscar-romero-parish
   seen: 2026-10-23
   note: The parish's ParishesOnline org gives 317 W Pike St, Canonsburg (40.25789,-80.19500) as its address.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
     render.py) is the All Saints Parish Mass schedule, which prints this church''s street address with
     its Masses: Sunday 11am; weekday Thu 12:05pm. The quote is the text-layer footer of the ad pages;
     recheck cannot find the image text.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

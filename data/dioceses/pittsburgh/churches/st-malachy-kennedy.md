@@ -34,6 +34,7 @@ evidence:
     Grove Rd Coraopolis, PA 15108-3761''; Mass box lists the church against Saturday 4:00 PM and Sunday
     9:00 AM; page 3 Saturday confession 11:00 AM-12:00 PM, Thursday-Saturday adoration and the Thursday
     7:30 PM parish Holy Hour at St. Malachy.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

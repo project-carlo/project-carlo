@@ -42,6 +42,7 @@ evidence:
   seen: 2026-10-23
   note: 'Parish Mass-times page (headed Chrome): Saturday vigil 4:00 PM, Sunday 7:30 AM and 11:15 AM (live-streamed),
     Monday and Wednesday 7:00 PM, Friday 8:30 AM at St. Therese.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

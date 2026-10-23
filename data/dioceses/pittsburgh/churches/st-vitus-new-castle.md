@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   quote: 9:00 AM St. Vitus Church
   note: Parish Mass Schedule page (eCatholic site 20843, headed Chrome).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

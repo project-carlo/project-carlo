@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-23
   quote: 1112M ainS treet
   note: 'Page 1 cover lists the church: Our L ady of Lourdes 1112 Main Street, Burgettstown, PA 15021.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -44,6 +44,7 @@ evidence:
     the new All Saints Parish.
   note: Diocese history page (headed Chrome). Says the predecessor parishes were already 'publishing a
     joint bulletin' before the merger.
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

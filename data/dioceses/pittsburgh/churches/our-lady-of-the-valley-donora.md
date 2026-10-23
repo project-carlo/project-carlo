@@ -39,6 +39,7 @@ evidence:
     at 40.17749,-79.85746, about 1.4 km east of the Mass Finder pin. Reverse geocoding of the Mass Finder
     pin returns a house on Manor Road and of the GCatholic pin Madonna Catholic Regional School on Manor
     Road. Unresolved which is the building.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

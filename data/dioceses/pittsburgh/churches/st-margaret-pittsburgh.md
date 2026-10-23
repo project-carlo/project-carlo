@@ -30,6 +30,7 @@ evidence:
     (the 18 October page 2 intentions: ''Sunday, October 18 ... 8:00 a.m. | SMOS'', ''Tuesday ... 8:30
     a.m. | SMOS''); page 2 Penance Saturdays 11:30am-12:30pm here; page 20 gives ''310 Mansfield Ave.
     Pittsburgh, PA 15220''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

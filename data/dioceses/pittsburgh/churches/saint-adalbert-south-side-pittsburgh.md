@@ -35,6 +35,7 @@ evidence:
     entries on weekday dates (the text layer detaches the date column from the entries, so which weekday
     goes with which church is not recoverable). Page 10: ''Both St. Mary of the Mount and St. Adalbert
     have hearing LOOP systems''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

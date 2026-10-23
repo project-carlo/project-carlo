@@ -32,6 +32,7 @@ evidence:
   note: 'Listed in Diocese of Pittsburgh: parish pages (Weekend Mass Schedule by Church Building) as ''Saint
     Matthew Parish: All Saints Church (Etna)'', 19 Wilson Street, Pittsburgh, PA 15223; group: Saint Matthew
     Parish. The Mass Finder (https://diopitt.org/massfinder) lists the same church at the same address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

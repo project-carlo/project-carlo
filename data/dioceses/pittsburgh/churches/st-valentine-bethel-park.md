@@ -29,6 +29,7 @@ evidence:
   note: 'Read 2026-10-23, 25 October 2026 issue (container 14/1251), page 2 attendance table and page
     3 Mass schedule and intentions: Sat 4:00 PM vigil and Sun 10:30 AM; page 3 intentions list further
     St. Valentine Masses, and page 5 announces a ''Memorial Mass, St. Valentine, 2:00 PM''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

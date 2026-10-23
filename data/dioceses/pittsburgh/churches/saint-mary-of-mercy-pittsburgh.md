@@ -33,6 +33,7 @@ evidence:
     1 ''Saint Mary of Mercy 202 Stanwix Street Pittsburgh, PA 15222''; Mass box ''Weekend Masses Saturday
     St Mary of Mercy 4PM ... Sunday ... St Mary of Mercy 12PM'' and ''Weekday Masses ... St Mary of Mercy
     Mon - Fri 12PM''; page 3 intentions table ''SMOM'' 4PM Sat 24 Oct, 12PM Sun 25 Oct, 12PM Mon-Fri.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

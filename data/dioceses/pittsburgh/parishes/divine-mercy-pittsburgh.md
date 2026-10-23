@@ -39,6 +39,7 @@ evidence:
     to recheck): two churches, Epiphany (Uptown, Sunday 10:00) and Saint Mary of Mercy (The Point, Saturday
     4:00, Sunday 12:00), website www.divinemercypgh.org, phone 412-471-0257, Rev. Kevin J. Dominik administrator
     pro-tem. Matches the bulletin.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

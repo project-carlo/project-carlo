@@ -32,6 +32,7 @@ evidence:
   quote: Sunday,8:00a.m.-S t.Sebastian
   note: 'Page 4 (Mass Schedule) of the 25 October 2026 Our Lady of Mount Carmel Parish bulletin: Mass
     at this church. Text layer is letter-spaced; quote copied as extracted.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-23
   note: LPi org 'Catholic Newman Center', 4450 Bayard St, Pittsburgh 15213 (40.448522, -79.952135), website
     thepittsburghoratory.org; no publications.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

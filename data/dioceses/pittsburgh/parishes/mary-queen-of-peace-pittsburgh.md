@@ -34,6 +34,7 @@ evidence:
   note: 'Diocese parish page (headed Chrome): two churches, Saint Adalbert (160 South 15th Street) and
     Saint Mary of the Mount (407 Grandview Avenue); Administrator Rev. Anthony R. Sciarappa; website www.mqpeace.org;
     phone 412-481-8380.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

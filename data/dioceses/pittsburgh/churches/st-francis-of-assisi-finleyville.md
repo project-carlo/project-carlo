@@ -34,6 +34,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 issue (container 14/1156): address 3609 Washington Avenue, Finleyville,
     PA 15332; weekend Masses 4:00 p.m. Saturday and 9:00 a.m. Sunday at St. Francis; page 2 intentions
     list weekday Masses at St. Francis (6:00 pm, 9:00 am).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

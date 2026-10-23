@@ -31,6 +31,7 @@ evidence:
   note: 'Diocese parish page (directory roster): Transfiguration Church (Russellton) 100 McKrell Road,
     Saturday Vigil 6:00 p.m., Sunday 9:00 a.m.; Saint Victor Church (Bairdford) 531 Bairdford Road, Saturday
     Vigil 4:00 p.m., Sunday 11:00 a.m.; Rev. Kevin G. Poecking, Administrator. Matches the bulletin.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

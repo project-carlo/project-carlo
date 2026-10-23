@@ -38,6 +38,7 @@ evidence:
 - url: https://www.sclpgh.org/
   seen: 2026-10-23
   note: Home page Mass Times (headed Chrome) list the same Masses, all at St. Louise de Marillac.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -39,6 +39,7 @@ evidence:
     and Saint Alphonsus (221 Church Road); pastor Rev. David J. Egan, Jr. The predecessor list maps St.
     Alexis and St. Alphonsus (Wexford) to St. Aidan; GCatholic history for both says ''parishes merged
     2020.07.0[1]''.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

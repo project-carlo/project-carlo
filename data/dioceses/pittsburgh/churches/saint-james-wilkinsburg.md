@@ -42,6 +42,7 @@ evidence:
   note: 'Parish home page (headed Chrome): ''SATURDAY: 4:00 PM St. James''; Saturday confession ''3:00
     PM to 3:45 PM St. James prior to Vigil Mass''. The bulletin''s events column also names a ''St. James
     Chapel'' (blood drive, youth group, brown-bag lunch) at the same campus; no Mass is listed there separately.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

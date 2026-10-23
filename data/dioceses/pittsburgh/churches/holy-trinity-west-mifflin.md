@@ -42,6 +42,7 @@ evidence:
   seen: 2026-10-23
   note: 'Parish Mass-times page (headed Chrome): ''SATURDAY VIGIL ... 5:30 PM Holy Trinity''; Monday and
     Tuesday ''8:00 AM Holy Trinity''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

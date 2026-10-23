@@ -37,6 +37,7 @@ evidence:
   quote: 6:00 PM St. Hugh, Carmichaels
   note: 'Parish Mass Times page: Saturday 6:00 PM, Sunday 9:30 AM, M W F 9:00 AM St. Hugh, Carmichaels;
     address ''St. Hugh - 408 S. Route 88, Carmichaels, PA 15320''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

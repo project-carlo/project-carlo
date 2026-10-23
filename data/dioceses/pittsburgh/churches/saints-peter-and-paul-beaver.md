@@ -26,6 +26,7 @@ evidence:
   quote: 'Saints Peter and Paul: 6:00 p.m.'
   note: Page 1 masthead address '200 3rd Street, Beaver, PA 15009'; vigil Saints Peter and Paul 6:00 p.m.,
     Sunday 7:30 a.m., 10:00 a.m., Noon; reconciliation Saturday noon; adoration Friday noon to 4:00 p.m.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

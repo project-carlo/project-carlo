@@ -37,6 +37,7 @@ evidence:
   quote: St. Wendelin 210 St. Wendelin Rd.
   note: 'Parish website ''Church Locations'' page (headed Chrome): one of the six churches of Saints Francis
     & Clare Parish.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

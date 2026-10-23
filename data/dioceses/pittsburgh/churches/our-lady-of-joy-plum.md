@@ -32,6 +32,7 @@ evidence:
   note: 'Page 2 of the 25 October 2026 Holy Family bulletin: Sunday 7:30 AM and 10:30 AM, Tuesday 8:30
     AM weekday Mass, Tuesday first-weekday adoration 9:30 am-4:00 pm. Page 1: ''2000 O’Block Road / Plum,
     PA 15239 / OUR LADY OF JOY''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -39,6 +39,7 @@ evidence:
   quote: 3250 California Avenue
   note: 'Institute of Christ the King home page for the parish: Sunday 8:00 AM Low Mass and 11:00 AM High
     Mass, daily Masses Monday - Friday 12:00 Noon, Saturday 9:00 AM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -43,6 +43,7 @@ evidence:
   note: OSM place_of_worship 'St. Angela Marici Church' at 2701 Kelly Street, White Oak 15131 (40.3452895,-79.8179286),
     0.01 km from the Mass Finder pin; the same search for GCatholic's 1640 Fawcett Avenue returns a house
     (40.3459548,-79.8174285), about 80 m away on the next street.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

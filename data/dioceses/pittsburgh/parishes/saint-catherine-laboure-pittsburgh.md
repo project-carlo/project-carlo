@@ -27,6 +27,7 @@ evidence:
   note: Rendered in headed Chrome. Home page Mass Times list only St. Louise de Marillac (Sat 4:30 PM;
     Sun 8:00, 10:00, 12:00, 4:30). eCatholic site 22954 has a Bulletins page whose files.ecatholic.com/22954/bulletins
     PDFs stop at 1 June 2025; the current bulletin is the ParishesOnline container.
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

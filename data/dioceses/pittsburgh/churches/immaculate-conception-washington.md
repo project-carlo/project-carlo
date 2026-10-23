@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-23
   note: GCatholic 24211 'Immaculate Conception', 119 W Chestnut St., Washington 15301 (roster entry),
     an independent address that agrees; its pin 40.1721875,-80.2490625 is within 70 m of the diocese pin.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
   note: probe po gives the organization address '720 Arch Street, Pittsburgh, Pennsylvania, 15212-3429'
     (latitude 40.4675608, longitude -80.009638), the same address as the church (the parish office is
     at the church).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

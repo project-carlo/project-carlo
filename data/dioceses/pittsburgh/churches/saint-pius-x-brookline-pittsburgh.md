@@ -39,6 +39,7 @@ evidence:
   quote: 4:00 PM St. Pius X
   note: 'Parish home page Mass times: Saturday 4:00 PM and Sunday 8:00 AM at St. Pius X; weekdays 8:00
     AM Monday and Friday, 7:00 PM Wednesday; address block ''3040 Pioneer Avenue''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

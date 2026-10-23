@@ -44,6 +44,7 @@ evidence:
   seen: 2026-10-23
   note: Nominatim returned "Holy Sepulcher, East Cruikshank Road, Glade Mills, Middlesex Township, Butler
     County" place_of_worship at 40.72938,-79.92277, about 30 m from the GCatholic pin used.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

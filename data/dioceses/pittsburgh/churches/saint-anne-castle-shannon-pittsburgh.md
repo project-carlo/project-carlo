@@ -36,6 +36,7 @@ evidence:
     AM, Tuesday Evenings: 6:30 PM, Saturday Vigil: 4:00 PM, Sunday: 8:00 AM, 10:00 AM, 6:00 PM''. The
     Mass-intentions list codes (St. A) daily 8:00 AM, Saturday 4:00 PM, Sunday 8:00, 10:00 AM and 6:00
     PM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

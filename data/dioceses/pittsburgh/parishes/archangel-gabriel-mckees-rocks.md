@@ -38,6 +38,7 @@ evidence:
     of God, McKees Rocks. On January 6, 2020, the three parishes were formally merged ... All four church
     buildings initially remained open ... However, on July 1, 2022, Mother of Sorrows Church in McKees
     Rocks closed. The other three churches remained open.'''
+promoted: 2026-10-23
 ---
 
 ## Publisher

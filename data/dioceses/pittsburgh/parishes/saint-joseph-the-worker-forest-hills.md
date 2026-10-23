@@ -36,6 +36,7 @@ evidence:
   note: 'Parish site (eCatholic 22321, headed Chrome): ''Church Closures & Facilities Planning'' page
     links the seven closing decrees (dated 7 February 2026), the bishop''s letter and the Forest Hills
     Campus transition team.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

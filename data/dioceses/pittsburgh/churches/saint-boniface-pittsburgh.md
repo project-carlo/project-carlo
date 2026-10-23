@@ -34,6 +34,7 @@ evidence:
     Boniface Church 2206 East Street''; page 2 intentions ''Sunday, Oct. 18 8:00 AM St. B'', ''Saturday,
     Oct. 24 5:30 PM St. B'', ''Sunday, Oct. 25 8:00 AM St. B'', and confessions ''in St. Boniface church
     on Saturdays from 4:45 - 5:15 PM''. recheck cannot find the image text.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

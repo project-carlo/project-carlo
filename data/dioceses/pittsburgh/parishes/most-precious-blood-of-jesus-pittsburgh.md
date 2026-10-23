@@ -42,6 +42,7 @@ evidence:
     former Risen Lord Church (the former St. Francis Xavier), transferred to this personal parish in 2019.
     The directory lists the Mass Finder parish at the same address with ''Sunday 8:00 a.m. (Low Mass)
     | 11:00 a.m. (High Mass)''.'
+promoted: 2026-10-23
 bulletin_status: available
 publication_reviews:
 - parish: christ-our-savior-pittsburgh

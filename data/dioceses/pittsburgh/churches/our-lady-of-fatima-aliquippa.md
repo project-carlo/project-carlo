@@ -33,6 +33,7 @@ evidence:
   quote: 4 PM  |  Our Lady of Fatima
   note: Page 1 Saturday vigil 4 PM and Sunday 9 AM at Our Lady of Fatima, 2270 Brodhead Road, Aliquippa,
     PA 15001.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -34,6 +34,7 @@ evidence:
     225-37th St Pgh 15201 | Saint Augustine Church: 234-37th St Pgh 15201''. Page 3 prints the Mass schedule:
     Saturday 24 Oct 4:00 pm; Sunday 25 Oct 8:00, 9:30 and 11:30 am; weekday 6:30 am, 11:30 am and some
     6:30 pm Masses. Bulletin ad footer (quotable): ''St. Pio of Pietrelcina, Pittsburgh, PA 14-0730''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -34,6 +34,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-03/24182
   seen: 2026-10-23
   note: 'GCatholic 24182 ''Ave Maria'', 126 Church St., Bentleyville 15314: independent address that agrees.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

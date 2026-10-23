@@ -30,6 +30,7 @@ evidence:
     Wednesday, Thursday and 12:00pm Tuesday and Friday; page 2 intentions list SSJ Masses for 17-25 October;
     page 2 Penance 1st and 3rd Wednesday 6:00-6:45pm here; page 20 gives ''1607 Greentree Rd. Pittsburgh,
     PA 15220''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

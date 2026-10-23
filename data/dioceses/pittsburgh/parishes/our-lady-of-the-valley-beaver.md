@@ -44,6 +44,7 @@ evidence:
   note: Diocese parish page lists the same four churches (Saint Cecilia, Saint Felix, Holy Family, Saints
     Peter and Paul) with Fr. Campbell as pastor; the predecessor list names the same four as the 'Our
     Lady of the Valley - New Parish' (Beaver/Freedom/New Brighton/Rochester).
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

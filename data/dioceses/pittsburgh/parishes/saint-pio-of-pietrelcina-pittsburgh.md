@@ -47,6 +47,7 @@ evidence:
   quote: This ended on January 1, 2024 when St. Maria Goretti Parish merged with Our Lady of the Angels
     Parish, Lawrenceville to form the new St. Pio of Pietrelcina Parish.
   note: 'Diocese history page (headed Chrome; diopitt.org 403s recheck): the parish''s two predecessors.'
+promoted: 2026-10-23
 research:
 - method: 'probe po st-matthew-church-15201 (lead from scout 13: 5322 Carnegie St, Pittsburgh 15201);
     DuckDuckGo search on the address'

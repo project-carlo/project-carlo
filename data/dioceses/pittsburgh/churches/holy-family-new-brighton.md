@@ -32,6 +32,7 @@ evidence:
   note: probe po gives a different address for this org, '1851 3rd Ave, New Brighton' (40.7237, -80.3049),
     about 2 km from the church; every other source says 521 7th Avenue, so the PO org address is an office
     or stale entry, not used.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

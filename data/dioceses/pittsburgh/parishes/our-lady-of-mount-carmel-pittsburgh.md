@@ -34,6 +34,7 @@ evidence:
   note: 'Diocese parish page: four churches (St. Athanasius, Incarnation of the Lord ''No Masses Scheduled'',
     St. Sebastian, St. Teresa of Avila); weekend times match the bulletin; Rev. Paul Zywan (Administrator).
     Page url has the diocese''s odd slug ''httpsdiopittorgour-lady-of-mount-carmel-parish''.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

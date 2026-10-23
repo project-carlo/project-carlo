@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-23
   note: 'OpenStreetMap way 15024169: ''4, Church Street, Richeyville'' at 40.0541126, -80.0028728, about
     20 m from the diocese pin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

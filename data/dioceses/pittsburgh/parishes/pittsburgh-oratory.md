@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: LPi org ''Catholic Newman Center'' (0018000000Qx7qXAAR, 4450 Bayard St, website thepittsburghoratory.org)
     exists but has no publications. Not a channel; ids not recorded as publication.'
+promoted: 2026-10-23
 research:
 - method: fetch:check --diocese pittsburgh --parish pittsburgh-oratory (headed Chrome), 2026-10-23
   url: https://pittsburghoratory.org/publications

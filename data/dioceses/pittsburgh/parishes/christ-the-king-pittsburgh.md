@@ -36,6 +36,7 @@ evidence:
   note: 'probe url: HTTP 403 (Cloudflare); headed visit.py reads it. Site embeds ecatholic:22570; /bulletins
     and /our-sunday-bulletin are the bulletin pages. issues.py ecatholic ecatholic:22570 found files.ecatholic.com/22570/bulletins/20261018.pdf
     (200); 20261025.pdf not yet posted (403).'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

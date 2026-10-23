@@ -35,6 +35,7 @@ evidence:
   quote: 9th St. & Clay St., Sharpsburg, Pennsylvania 15215
   note: GCatholic 24328 Madonna of Jerusalem (Plus Code 87G2F3W8+5G, phone 412-784-8700 as on the parish
     site, history '1994; merged to Christ the King 2021.07.01').
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

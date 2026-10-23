@@ -31,6 +31,7 @@ evidence:
     St. Anthony, St. Christopher, St. Louis, Newman Center (SRU) and St. Peter; no St. Alphonsus or Epiphany.
     The home page embeds the ParishesOnline org (po-org:www-stfaustinaparish-org) and is eCatholic site
     21902.
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

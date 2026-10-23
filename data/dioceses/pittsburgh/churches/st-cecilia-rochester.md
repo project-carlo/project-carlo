@@ -32,6 +32,7 @@ evidence:
   note: 'probe po: org ''PERMANENTLY CLOSED'' at 628 Virginia Ave with no issues. This is a defunct predecessor
     org (the parish''s PO bulletin is the Our Lady of the Valley container 14/1276), not a closure of
     the church; the bulletin lists live Masses here.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

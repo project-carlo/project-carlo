@@ -36,6 +36,7 @@ evidence:
     adoration 6:00-7:00 p.m. at St. Mary; Mass-intentions entries coded (M): Saturday 5:30pm and Sunday
     11:00am (the Sunday Mass is marked as interpreted in American Sign Language). Page 10: ''the 24 Hour
     Chapel at St. Mary of the Mount will be locked outside of Mass times''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

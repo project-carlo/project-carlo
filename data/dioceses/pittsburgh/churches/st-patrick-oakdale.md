@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-23
   quote: 7322N oblestownR d
   note: 'Page 1 cover lists the church: Saint P atrick 7322 Noblestown Rd, Oakdale, PA 15071.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

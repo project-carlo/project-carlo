@@ -27,6 +27,7 @@ evidence:
   note: 'Diocese parish page: three churches (Assumption of the Blessed Virgin Mary, Bellevue; Saint John
     Neumann, Franklin Park; Sacred Heart, Emsworth) with weekend times matching the bulletin; Rev. David
     G. Poecking, STL (Administrator).'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

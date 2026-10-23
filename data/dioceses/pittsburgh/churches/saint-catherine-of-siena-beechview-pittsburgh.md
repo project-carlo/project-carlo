@@ -46,6 +46,7 @@ evidence:
   seen: 2026-10-23
   note: Nominatim geocodes 1909 Broadway Avenue, Beechview to 40.40697,-80.02746, about 30 m from the
     diocese pin; it also names 'Saint Catherine of Siena Church, Belasco Avenue' at 40.40687,-80.02684.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

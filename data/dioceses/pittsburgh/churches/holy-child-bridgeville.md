@@ -27,6 +27,7 @@ evidence:
   quote: 'HOLY CHILD CHURCH LOCATION:'
   note: 'Read 2026-10-23, 25 October 2026 issue page 1, Mass schedule box: Sat 5:00 PM; Sun 8:00 AM and
     11:00 AM; weekdays Mon-Fri noon, Wed 7:00-8:00 PM reconciliation, Wednesday adoration 12:30-8:00 PM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -37,6 +37,7 @@ evidence:
   quote: St. Joseph, N.O. 864 Chicora Rd.
   note: 'Parish website ''Church Locations'' page (headed Chrome): one of the six churches of Saints Francis
     & Clare Parish.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

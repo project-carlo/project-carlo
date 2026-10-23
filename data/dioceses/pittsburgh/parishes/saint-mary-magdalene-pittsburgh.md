@@ -54,6 +54,7 @@ evidence:
     S. Maier; weekend schedule by church building: Saint Bede Sunday 9:00 a.m. | 11:00 a.m.; Saint James
     Saturday Vigil 4:00 p.m.; Mother of Good Counsel ''No Masses Scheduled''. The 9:00 a.m. is now 8:30
     a.m. (change effective 18 October 2026, per the parish site and bulletin).'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese pittsburgh --parish saint-mary-magdalene-pittsburgh (headed Chrome)
   url: https://discovermass.com/church/st-bede-pittsburgh-pa/

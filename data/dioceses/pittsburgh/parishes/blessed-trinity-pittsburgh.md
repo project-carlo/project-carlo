@@ -51,6 +51,7 @@ evidence:
 revisit: 'Read the 8 November 2026 issue: confirm Masses resume at St. Sylvester after the parking-lot
   reconstruction'
 revisit_after: 2026-11-09
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

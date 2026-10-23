@@ -34,6 +34,7 @@ evidence:
     Sunday 8:00am and 11:00am St. Albert. The intentions list has St. Albert Masses on 18 October at 8:00
     AM and 11:00 AM, and from 26 October daily intentions of St. Sylvester move to St. Albert on Monday,
     Wednesday and Friday.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

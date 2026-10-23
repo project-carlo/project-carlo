@@ -49,6 +49,7 @@ evidence:
   seen: 2026-10-23
   note: OSM returns a house at 310 32nd Street, McKeesport (40.3308806,-79.8423060), 0.03 km from the
     Mass Finder pin and about 0.1 km from GCatholic's Plus Code pin for 312 32nd St.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

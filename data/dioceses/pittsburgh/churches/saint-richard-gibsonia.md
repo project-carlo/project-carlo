@@ -39,6 +39,7 @@ evidence:
   quote: 9:00 AM St. Richard
   note: 'Parish Mass Times page (headed Chrome): Saturday 5:00 PM, Sunday 7:30 AM and 10:00 AM, Tuesday/Thursday
     9:00 AM at St. Richard; All Souls Memorial Mass Nov 2 6:30 PM at St. Richard Church.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

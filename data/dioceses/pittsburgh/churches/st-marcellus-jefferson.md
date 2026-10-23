@@ -38,6 +38,7 @@ evidence:
   quote: 10:30 AM St. Marcellus, Jefferson
   note: 'Parish Mass Times page: Sunday 10:30 AM and Tuesday 9:00 AM St. Marcellus, Jefferson; ''St. Marcellus
     - 1340 Jefferson Rd, Jefferson, PA 15344''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

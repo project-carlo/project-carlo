@@ -32,6 +32,7 @@ evidence:
   note: '18 October 2026 Blessed Trinity bulletin, page 1 MASS TIMES: Saturday Vigil 6:00pm Holy Angels;
     Sunday 9:30am Holy Angels. Page 2: a temporary Saturday 4:00 PM Mass is added at Holy Angels on 31
     October and 7 November for St. Sylvester''s intentions.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

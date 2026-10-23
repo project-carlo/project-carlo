@@ -42,6 +42,7 @@ evidence:
   note: Nominatim returned "St Gregory's Roman Catholic Church, Pine Street, Zelienople" place_of_worship
     at 40.78929,-80.14389, about 60 m from the GCatholic pin used (the church is on the corner of Pine
     St and W Beaver St).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

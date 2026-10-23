@@ -40,6 +40,7 @@ evidence:
   note: 'Diocese parish page: Rev. John B. Gizler, III (Pastor), Rev. Jack E. Demnyan (Parochial Vicar),
     the same four churches. The predecessor list names them ''Mary, Queen of Saints - New Parish'' (Aliquippa/Center/Hopewell/Monaca),
     merged 2021-07-01 per GCatholic history.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

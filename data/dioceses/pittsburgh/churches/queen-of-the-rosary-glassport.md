@@ -33,6 +33,7 @@ evidence:
   note: 'Listed in Diocese of Pittsburgh: Mass Finder map as ''SS. Joachim & Anne Parish - Queen of the
     Rosary Church (Glassport)'', 530 Michigan Avenue, Glassport, PA, 15045; group: SS. Joachim & Anne
     Parish'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

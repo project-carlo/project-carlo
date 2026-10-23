@@ -33,6 +33,7 @@ evidence:
     lists Saturday 4:00pm and Sunday 11:00am Saint Victor, weekday 8:00am Monday, Tuesday and Wednesday,
     and Saturday 3:00pm confession at Saint Victor; address ''Saint Victor Church, 531 Bairdford Road,
     Bairdford''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

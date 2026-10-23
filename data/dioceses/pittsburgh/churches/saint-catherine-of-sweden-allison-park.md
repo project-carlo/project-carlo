@@ -41,6 +41,7 @@ evidence:
   quote: 9:15 AM St. Catherine
   note: 'Parish Mass Times page (headed Chrome): Saturday 4:00 PM, Sunday 9:15 AM and 11:30 AM, Monday/Wednesday/Friday
     9:00 AM at St. Catherine; All Saints Nov 1 9:00 AM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

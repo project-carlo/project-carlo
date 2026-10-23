@@ -42,6 +42,7 @@ evidence:
   seen: 2026-10-23
   note: Nominatim returned "St Ferdinand's Catholic Church, Rochester Road, Ogle, Cranberry Township"
     place_of_worship at 40.69812,-80.11038, about 30 m from the GCatholic pin used.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: 'ST. MARY CHURCH LOCATION:'
   note: 'Read 2026-10-23, 25 October 2026 issue page 1, Mass schedule box: Sat 4:00 PM vigil; Sun 10:00
     AM; weekdays Tue-Thu-Sat 7:00 AM; reconciliation Sat 11:30 AM-12:30 PM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

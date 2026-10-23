@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: org ''Saint Raphael Church - Saint Jude Parish'', 1154 Chislett St, pin 40.47855,-79.92891,
     container 14/1148.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

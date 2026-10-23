@@ -37,6 +37,7 @@ evidence:
   quote: 4:00 PM St. Peter Church
   note: Parish home page Mass Times box, rendered in headed Chrome (Cloudflare). Matches the bulletin
     and the diocese directory line 'Saturday Vigil 4:00 p.m. / Sunday 11:30 a.m.'.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

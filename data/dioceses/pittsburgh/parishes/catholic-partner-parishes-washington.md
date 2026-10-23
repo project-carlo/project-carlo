@@ -51,6 +51,7 @@ evidence:
     with pdftotext) all begin ''Catholic Partner Parishes / Saint James [Parish] & Saint Katharine Drexel
     Parish / Serving the Greater Washington County Area''. 74 issues from June 2025 to 25 Oct 2026 are
     in the archive, one per Sunday, none for either parish alone.'
+promoted: 2026-10-23
 research:
 - method: 'pnpm fetch:check --diocese pittsburgh --parish catholic-partner-parishes-washington (headed
     Chrome): resolved the /bulletins page link'

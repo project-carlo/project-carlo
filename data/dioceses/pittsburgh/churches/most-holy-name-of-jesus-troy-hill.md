@@ -33,6 +33,7 @@ evidence:
   quote: Most Holy Name of Jesus, Troy Hill
   note: Page 5 section heading, with the parish office '1700 Harpster Street, Pittsburgh, PA 15212, Phone
     412-231-2994 x101' and the Lyceum at 1626 Hatteras St.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

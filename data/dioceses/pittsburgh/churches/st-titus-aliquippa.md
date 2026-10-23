@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-23
   note: OSM address node 952 Franklin Avenue, Woodlawn, Aliquippa 15001 at 40.6127776, -80.2558129; agrees
     with the GCatholic Plus Code pin.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

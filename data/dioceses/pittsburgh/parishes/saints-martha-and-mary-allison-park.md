@@ -42,6 +42,7 @@ evidence:
   note: 'Diocese parish page (directory roster): two churches, Saint Catherine of Sweden (Hampton) and
     Saint Richard (Richland); pastor Rev. Robert J. Vular. The predecessor list maps St. Catherine of
     Sweden (Hampton Twp.) and St. Richard (Richland Twp.) to Sts. Martha and Mary.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

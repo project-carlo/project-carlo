@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-23
   note: 'Listed in Diocese of Pittsburgh: Mass Finder map as ''SS. Joachim & Anne Parish - St. Michael
     Church (Elizabeth)'', 101 McLay Drive, Elizabeth, PA, 15037; group: SS. Joachim & Anne Parish'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

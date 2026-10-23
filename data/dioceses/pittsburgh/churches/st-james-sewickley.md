@@ -32,6 +32,7 @@ evidence:
   note: Page 2 text. Page 1 (image, rendered) heads the cover 'St. James Church and Parish Center, 200
     Walnut Street, Sewickley, PA 15143' and lists Saturday (Vigil) 4:30pm Saint James; Sunday 8:00am and
     11:00am Saint James; weekday M/W/F 6:45am, T/Th 9:00am, Saturday 9:00am.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

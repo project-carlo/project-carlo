@@ -31,6 +31,7 @@ evidence:
   note: 'probe po: org ''St. Philip Catholic Parish'' (lpi 0018000000Qx7qDAAR), 50 W Crafton Ave, container
     14/1356, latest issue 2026-10-25. The twin org st-philip-church-15205 (lpi 0018000000Qx7qEAAR) lists
     the same container and issues; recorded as one publication.'
+promoted: 2026-10-23
 ---
 
 ## Publisher

@@ -33,6 +33,7 @@ evidence:
   note: 'Page 1 masthead: ''SAINT ROSALIA, 411 Greenfield Avenue, Pittsburgh, PA 15207''; page 2 Mass
     times ''Saint Rosalia: Saturday Anticipated | 4pm; Sunday | 9am & 12pm (Spanish)''; the 1 Nov intentions
     list has Saint Rosalia 9:00am and 12:00pm (Spanish), 31 Oct 4:00pm.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

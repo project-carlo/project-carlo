@@ -31,6 +31,7 @@ evidence:
   note: GCatholic 24324 St. Joseph (Plus Code 87G2G39G+H7; history 'merged to Christ the King 2021.07.01').
     Diocese directory and Mass Finder 32141 give the same street address; the Finder pin (40.5188571,
     -79.9242176) is about 10 m from the Plus Code.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

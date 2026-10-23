@@ -34,6 +34,7 @@ evidence:
     Matthew Parish: Saint Bonaventure Church (Glenshaw)'', 2001 Mount Royal Boulevard, Glenshaw, PA 15116;
     group: Saint Matthew Parish. The Mass Finder (https://diopitt.org/massfinder) lists the same church
     at the same address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

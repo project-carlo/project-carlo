@@ -26,6 +26,7 @@ evidence:
   note: 'probe po: org ''Resurrection Parish'' (126 Fort Couch Rd, Pittsburgh 15241), container 14/1223,
     latest issue 2026-10-25. The org st-john-capistran-church (''Resurrection Parish (St. John Capistran
     Church)'', website sjcusc.org) points at the same container 14/1223 with the same latest issue.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

@@ -38,6 +38,7 @@ evidence:
   quote: St. Alexis Church
   note: 'Parish Mass Times page (headed Chrome): Saturday 4:00 PM; Sunday 10:00 AM, 5:00 PM; Monday-Saturday
     8:00 AM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

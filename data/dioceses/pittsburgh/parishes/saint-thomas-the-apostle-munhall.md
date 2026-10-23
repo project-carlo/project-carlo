@@ -42,6 +42,7 @@ evidence:
   quote: No. St. Joseph and St. Rita remain worship sites of St. Thomas the Apostle Parish.
   note: '25 January 2026 issue, page 6 (Mass Schedule Change FAQ): the new schedule dropped Sunday Mass
     at St. Joseph and St. Rita; see their church records.'
+promoted: 2026-10-23
 research:
 - method: Compared the mastheads and LPi footers of the 25 October 2026 issue under the six ParishesOnline
     orgs listed by probe po; read the parish site bulletin link in headed Chrome.

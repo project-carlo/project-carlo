@@ -38,6 +38,7 @@ evidence:
   note: 'Diocese parish page (roster directory:saint-oscar-romero-parish/1-3): three churches, pastor
     Rev. Thomas L. Gillespie, phone 724-745-6560, weekend times agreeing with the bulletin (the directory''s
     Spanish Mass reads ''11:30 p.m.'', a typo for a.m.).'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

@@ -34,6 +34,7 @@ evidence:
   note: 'Listed in Diocese of Pittsburgh: Mass Finder map as ''Triumph of the Holy Cross Parish - St.
     Thomas a Becket Church (Jefferson Hills)'', 139 Gill Hall Road, Jefferson Hills, PA, 15025; group:
     Triumph of the Holy Cross Parish'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

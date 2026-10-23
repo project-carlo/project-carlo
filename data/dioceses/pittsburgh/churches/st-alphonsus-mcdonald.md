@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   quote: 219 WL incoln Ave
   note: 'Page 1 cover lists the church: Saint A lphonsus 219 W Lincoln Ave, McDonald, PA 15057.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

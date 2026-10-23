@@ -36,6 +36,7 @@ evidence:
     Pike McKees Rocks, PA 15136-1311''; the Sunday Mass box labels Holy Trinity at several times including
     ''(Livestreamed)'' (the 10:00 AM); page 2 notes ''The AGP Choir will provide music for the 10:00 AM
     Mass at Holy Trinity Church''; page 3 weekday confession and adoration Monday-Friday at Holy Trinity.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   quote: 11:00 AM St. Camillus Church
   note: Parish Mass Schedule page (eCatholic site 20843, headed Chrome).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -37,6 +37,7 @@ evidence:
   note: OSM way 583544315 'Holy Rosary Catholic Church', 246 Muse Bishop Road, Muse (40.29518,-80.20109),
     a place_of_worship; within 15 m of the Mass Finder pin. Orchard Street is a separate residential way
     to the west (40.2954,-80.2022).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

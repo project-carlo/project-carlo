@@ -33,6 +33,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 issue (container 14/1156): parish office and church address 120
     Abington Drive, McMurray, PA 15317; weekend Masses 5:00 p.m. Saturday, Sunday 7:30 a.m. and 10:00
     a.m. at St. Benedict; page 2 intentions list weekday Masses at St. Benedict (8:30 am, 6:00 pm).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

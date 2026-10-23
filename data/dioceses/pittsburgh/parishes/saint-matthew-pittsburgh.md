@@ -43,6 +43,7 @@ evidence:
     Saint Aloysius (Reserve Township), Saint Bonaventure (Glenshaw); pastor Rev. James R. Gretz. The predecessor
     list maps All Saints (Etna), Holy Spirit (Millvale), St. Aloysius (Reserve Twp.) and St. Bonaventure
     (Glenshaw) to St. Matthew.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

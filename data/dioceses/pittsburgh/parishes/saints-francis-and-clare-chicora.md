@@ -47,6 +47,7 @@ evidence:
     Clare of Assisi / June 28, 2026'') and 403 for each Sunday 2026-07-05 to 2026-10-25, while control
     container 14/1322 returned 20261025B.pdf the same day. Publishing there stopped when the John Patrick
     channel began (first issue 2026-07-05).'
+promoted: 2026-10-23
 research:
 - method: probe container 14/0644 for Sundays 2026-07-05 to 2026-10-25, with 14/1322 as a live control
   url: https://container.parishesonline.com/bulletins/14/0644/

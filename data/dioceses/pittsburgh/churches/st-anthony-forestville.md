@@ -36,6 +36,7 @@ evidence:
   quote: Sunday 8:15 AM St. Anthony Church
   note: Parish home page Mass Times box, rendered in headed Chrome (Cloudflare). Matches the bulletin
     and the diocese directory line 'Sunday 8:15 a.m.'.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

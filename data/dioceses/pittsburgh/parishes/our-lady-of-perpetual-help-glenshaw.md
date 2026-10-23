@@ -28,6 +28,7 @@ evidence:
     and Saint Ursula Church (Allison Park), website www.olphpgh.org, pastor Rev. Timothy F. Whalen, MA;
     same weekend times as the bulletin. The predecessor list maps St. Mary of the Assumption (Glenshaw)
     and St. Ursula (Allison Park) to Our Lady of Perpetual Help.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

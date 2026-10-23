@@ -31,6 +31,7 @@ evidence:
   quote: 9:30 AM St. Blaise
   note: 'Parish Mass Times: Sat 4:30 PM, Sun 9:30 AM (12:00 PM second Sundays), Tue-Fri 8:00 AM, First
     Saturday 9:00 AM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

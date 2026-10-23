@@ -36,6 +36,7 @@ evidence:
     20261025.pdf issue downloads from files.ecatholic.com without a browser. Each page footer reads 'View
     this bulletin online at www.DiscoverMass.com'; no DiscoverMass church listing was looked up (eCatholic
     is the primary channel here).
+promoted: 2026-10-23
 ---
 
 ## Publisher

@@ -32,6 +32,7 @@ evidence:
   quote: 4:00 PM Good Samaritan
   note: 'Parish home page, Mass Times, and Contact: ''Good Samaritan (724) 266-6565, 725 Glenwood Ave,
     Ambridge PA 15003''. Read in headed Chrome (the site answers 403 to probe url).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

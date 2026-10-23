@@ -30,6 +30,7 @@ evidence:
     Downloaded 2026-10-23, it is byte-identical (md5 f5479e25..., 17,419,124 bytes) to the ParishesOnline
     14/1799 20261018B.pdf: one bulletin posted twice, not two publishers. 20261025.pdf was not yet posted
     on either (403).'
+promoted: 2026-10-23
 ---
 
 ## Publisher

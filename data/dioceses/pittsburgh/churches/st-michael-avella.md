@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   quote: 97 Highland Ave
   note: 'Page 1 cover lists the church: Saint M ichael 97 Highland Ave, Avella, PA 15312.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

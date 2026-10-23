@@ -48,6 +48,7 @@ evidence:
   note: 'Diocese parish-history page (read with visit.py; diopitt.org answers 403 to recheck). Also dates
     the closures of St. Lawrence (2020-02-21) and St. Anthony, St. James, St. Joseph the Worker and St.
     Vincent de Paul (2023-10-02): see excluded/ records.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

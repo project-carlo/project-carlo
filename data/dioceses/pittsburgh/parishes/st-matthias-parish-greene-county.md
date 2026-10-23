@@ -40,6 +40,7 @@ evidence:
   note: 'Diocese directory (roster directory:saintmatthiasparish/1-4): one parish, four churches, website
     www.stmatthiasgreene.org, Rev. Thomas J. Lewandowski (Pastor). Nothing links it to another parish''s
     bulletin.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese pittsburgh --parish st-matthias-parish-greene-county (headed Chrome)
   checked: '2026-10-23'

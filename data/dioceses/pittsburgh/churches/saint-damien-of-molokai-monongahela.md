@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-23
   note: GCatholic 24284 'St. Damien of Molokai', 722 W Main St., Monongahela 15063 (roster entry); history
     'merged 2011'. Plus Code pin 40.20469,-79.92994 is about 300 m from the Mass Finder pin
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

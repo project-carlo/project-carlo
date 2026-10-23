@@ -33,6 +33,7 @@ evidence:
     50 West Crafton Avenue, Crafton''; intentions for 24 Oct-1 Nov show Sat 4:00pm (Vigil), Sun 7:00am
     and 11:00am, and weekday 8:00am Masses at Saint Philip. Page 1 masthead address: ''Saint Philip Church
     50 West Crafton Ave. Pittsburgh, PA 15205''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

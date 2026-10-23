@@ -32,6 +32,7 @@ evidence:
     image, read by rendering it, the quote is the page 8 ad footer that names the parish): Mass Schedule
     lists Saturday 6:00pm and Sunday 9:00am Transfiguration, and weekday 8:00am Thursday, Friday and Saturday
     at Transfiguration; address ''Transfiguration Church, 100 McKrell Road, Russellton''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -42,6 +42,7 @@ evidence:
   note: 'Diocese parish page (directory roster): Reverend C. Matthew Hawkins (Pastor); Sunday: 11:00 a.m.;
     address given as 1500 Centre Avenue; phone 412-281-3141. The predecessor list names it ''St. Benedict
     the Moor - New Personal Parish'', Hill District.'
+promoted: 2026-10-23
 research:
 - method: pnpm fetch:check --diocese pittsburgh --parish saint-benedict-the-moor-pittsburgh (headed Chrome)
   url: https://www.sbtmparishpgh.com/bulletins

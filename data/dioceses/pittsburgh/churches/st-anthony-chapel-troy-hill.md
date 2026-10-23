@@ -35,6 +35,7 @@ evidence:
   note: Page 8 section heading; contact line '1704 Harpster Street, Pittsburgh, PA 15212, www.stanthonychapel.org'.
     The chapel has its own website and chairperson, but its Masses are printed in the Shrines of Pittsburgh
     bulletin (Rules settled 3), so it is a church of that row.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

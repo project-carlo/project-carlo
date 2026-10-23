@@ -33,6 +33,7 @@ evidence:
   note: 'probe po: ''Our Lady of Hope Parish 15102'', 2710 Ohio St, Bethel Park; container 14/1251, latest
     issue 2026-10-25. The orgs st-germaine, nativity-church-south-park and st-gabriel-church-15236 all
     point at the same container 14/1251.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

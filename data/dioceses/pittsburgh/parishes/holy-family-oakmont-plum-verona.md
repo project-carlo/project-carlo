@@ -40,6 +40,7 @@ evidence:
   note: 'Diocese parish page (headed Chrome): Holy Family Parish, Rev. Daniel J. D''Antonio (Administrator),
     phone 412-793-4511, four churches in the weekend-schedule table (St. Irenaeus, St. John the Baptist,
     St. Joseph, Our Lady of Joy).'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

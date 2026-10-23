@@ -29,6 +29,7 @@ evidence:
   note: 'Rendered page 1 of the 25 October 2026 bulletin (text layer is only the LPi ad footer quoted
     here): MASS SCHEDULE lists Our Lady of Grace Saturday 4:00pm Vigil and Sunday 9:00am, weekday Monday-Friday
     9:00am, and the panel gives ''Our Lady of Grace Church, 310 Kane Blvd | Pittsburgh, PA 15243''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

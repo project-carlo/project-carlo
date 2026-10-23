@@ -31,6 +31,7 @@ evidence:
   note: 'Diocese parish page: three churches (Saint Catherine of Siena, Crescent; Saint Joseph, Coraopolis;
     Saint Margaret Mary, Moon) with weekend times matching the bulletin; Administrator Rev. Mark L. Thomas,
     STL, ''Chaplain (Part-time) to Robert Morris University''.'
+promoted: 2026-10-23
 research:
 - method: grep of the 18 Oct 2026 bulletin (container 14/1171, all 16 pages) for 'Robert Morris', 'University',
     'Campus', 'Newman'; grep of mshj.org home page text; web search attempt

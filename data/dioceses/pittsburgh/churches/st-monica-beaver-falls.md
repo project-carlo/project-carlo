@@ -37,6 +37,7 @@ evidence:
   note: 'History page: St. Monica Parish (2013) kept only Christ the Divine Teacher in Chippewa open for
     Mass from 2015, so this church is the former Christ the Divine Teacher building; the Beaver Falls
     and Darlington churches closed (2017 and 2020).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

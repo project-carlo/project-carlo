@@ -31,6 +31,7 @@ evidence:
   quote: SaturdayV igil 4:30P M
   note: 'Page 1 (masthead) of the 25 October 2026 Regina Coeli Parish bulletin: Mass at this church. Text
     layer is letter-spaced; quote copied as extracted.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

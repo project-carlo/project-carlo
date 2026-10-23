@@ -29,8 +29,9 @@ evidence:
 - url: https://files.ecatholic.com/24435/bulletins/20261018.pdf
   seen: 2026-10-23
   note: 'Bulletin of 18 Oct 2026. Page 1 is an image (read from a render), so there is no verbatim quote.
-    The cover reads ''St. Mary Church, 444 Glenfield Road, Sewickley, PA 15143''; Mass box: Saturday
-    (Vigil) 5:00pm Saint Mary; Sunday 9:30am Saint Mary; weekday M/W/F 9:00am, T/Th 6:45am.'
+    The cover reads ''St. Mary Church, 444 Glenfield Road, Sewickley, PA 15143''; Mass box: Saturday (Vigil)
+    5:00pm Saint Mary; Sunday 9:30am Saint Mary; weekday M/W/F 9:00am, T/Th 6:45am.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

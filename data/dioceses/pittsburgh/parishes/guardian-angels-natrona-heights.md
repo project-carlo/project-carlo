@@ -32,6 +32,7 @@ evidence:
     Sacrament (800 Montana Avenue) Sat 4:00 p.m., Sun 8:00 a.m. and 11:00 a.m.; Our Lady of Victory (1319
     Low Grade Road, Harwick) Sat 5:00 p.m., Sun 9:00 a.m. and 11:30 a.m.; pastor Rev. John B. Lendvai.
     Matches the bulletin.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

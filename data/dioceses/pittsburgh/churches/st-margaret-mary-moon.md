@@ -38,6 +38,7 @@ evidence:
   seen: 2026-10-23
   note: ParishesOnline org address One Parish Pl, Moon Township, PA 15108; coordinates 40.521668, -80.164456,
     about 350 m from the Mass Finder pin.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

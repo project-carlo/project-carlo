@@ -33,6 +33,7 @@ evidence:
   note: 'Page 1 (image, rendered 2026-10-23) has a Mass box headed Saint John Capistran, 1610 McMillan
     Road Pittsburgh, PA 15241: Saturday Vigil 5:00 pm; Sunday 9:00 am & 11:00 am; weekdays Monday 8:30
     am, Tuesday 6:30 pm, Wednesday-Friday 8:30 am; Saturday confessions 4:00-4:45 pm.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

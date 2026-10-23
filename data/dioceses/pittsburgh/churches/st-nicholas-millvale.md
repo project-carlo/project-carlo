@@ -29,6 +29,7 @@ evidence:
     Ave. Pittsburgh, PA 15209 / Saturday Vigil Mass: 5:00 pm''; page 6: ''Every Saturday, Confessions
     are at 4 p.m. and Rosary at 4:30 p.m., followed by Mass at 5 p.m.'' and ''ST. NICHOLAS PARISH 24 Maryland
     Ave. Millvale, PA 15209''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

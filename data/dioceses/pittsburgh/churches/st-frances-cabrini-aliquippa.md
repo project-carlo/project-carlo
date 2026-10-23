@@ -33,6 +33,7 @@ evidence:
   quote: 6 PM  |  St. Frances Cabrini
   note: 'Page 1 weekend box: Saturday vigil 6 PM and Sunday 11 AM at St. Frances Cabrini, 115 Trinity
     Drive, Aliquippa, PA 15001.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

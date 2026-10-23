@@ -48,6 +48,7 @@ evidence:
   note: 'Web directories list "Divine Grace Parish - Holy Redeemer Office" at 300 Crescent Ave #1, Ellwood
     City: the GCatholic address is the parish office, not the church. Found through a DuckDuckGo search;
     not a source for Mass.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

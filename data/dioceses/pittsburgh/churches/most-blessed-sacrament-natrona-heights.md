@@ -33,6 +33,7 @@ evidence:
   note: 'Page 2 of the 18 October 2026 Guardian Angels bulletin (container 14/0710): campus list gives
     ''Most Blessed Sacrament 800 Montana Ave Natrona Heights PA 15065''; MBS Masses Sat 4:00pm, Sun 8:00am
     and 11:00am, weekdays 7:30am (7:55am Tuesday).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

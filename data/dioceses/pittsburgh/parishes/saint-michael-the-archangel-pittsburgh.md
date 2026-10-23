@@ -35,6 +35,7 @@ evidence:
   note: 'Diocese parish page: Saint Bernard Church (Mount Lebanon) 311 Washington Road 15216 and Our Lady
     of Grace Church (Scott) 310 Kane Boulevard 15243; Rev. Brian J. Welding, Pastor; website www.smapgh.org.
     diopitt.org answers 403 to recheck.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

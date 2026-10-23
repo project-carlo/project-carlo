@@ -34,6 +34,7 @@ evidence:
     Sunday 10:00am St. Sylvester; Saturday confession 9:00 am (until 10:00 am). Page 2: ''No Masses at
     St. Sylvester''s Church Building DUE TO PARKING LOT RECONSTRUCTION, Monday, October 26th through Sunday,
     November 8th''; daily Mass intentions 19-25 October are still at ST. SYLVESTER (Monday 9:00 AM).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

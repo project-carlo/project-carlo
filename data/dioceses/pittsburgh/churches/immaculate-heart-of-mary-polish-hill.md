@@ -34,6 +34,7 @@ evidence:
   quote: Immaculate Heart of Mary, Polish Hill
   note: Page 4 section heading; the directory page 14 gives '3058 Brereton St. Pittsburgh, PA 15219',
     phone 412-621-5170 x501.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

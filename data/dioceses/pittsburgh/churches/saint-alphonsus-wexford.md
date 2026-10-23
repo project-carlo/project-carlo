@@ -37,6 +37,7 @@ evidence:
   quote: St. Alphonsus Church
   note: 'Parish Mass Times page (headed Chrome): Sunday 7:30, 9:30, 11:30 AM; Monday, Wednesday, Friday
     12:00 PM; First Thursday Rosary 6:30 PM and Mass 7:00 PM.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

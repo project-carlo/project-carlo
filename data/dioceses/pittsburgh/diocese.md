@@ -2,8 +2,9 @@
 name: Roman Catholic Diocese of Pittsburgh
 state: PA
 website: https://diopitt.org
-status: exploring
+status: promoted
 gcatholic: pitt1
+promoted: 2026-10-23
 ---
 
 Six counties of south-western Pennsylvania: Allegheny (Pittsburgh and its boroughs: McKeesport,

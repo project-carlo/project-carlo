@@ -43,6 +43,7 @@ evidence:
   seen: 2026-10-23
   note: 'Parish Mass-times page (headed Chrome): ''SUNDAY 10:30 AM St. Maximilian Kolbe''; ''WEDNESDAY
     8:00 AM St Maximilian Kolbe''; ''THURSDAY 8:00 AM St Maximilian Kolbe''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

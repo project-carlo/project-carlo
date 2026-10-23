@@ -36,6 +36,7 @@ evidence:
 revisit: 'Read the first January 2027 issue''s schedule: the new daily Mass schedule starts 4 January
   2027 and may change weekday Masses at St. Ann, Bulger.'
 revisit_after: 2027-01-10
+promoted: 2026-10-23
 research:
 - method: 'issues.py ecatholic ecatholic:21470 --weeks 2: probed 20261025 (403, not yet posted on 2026-10-23)
     and 20261018 (200, 12 pages)'

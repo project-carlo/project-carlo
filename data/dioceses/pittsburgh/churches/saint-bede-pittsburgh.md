@@ -42,6 +42,7 @@ evidence:
   note: 'Parish home page (headed Chrome): ''SUNDAY: 8:30 AM St. Bede Starting Oct. 18; 11:00 AM St. Bede'';
     daily ''MONSAT 9:00 AM St. Bede''; Saturday confession 9:30-10:30 AM St. Bede; adoration Wednesday
     7:00 PM and Saturday 9:30 AM. Parish office address 509 South Dallas Avenue, Pittsburgh 15208.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

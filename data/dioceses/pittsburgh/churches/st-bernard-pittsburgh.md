@@ -30,6 +30,7 @@ evidence:
     the LPi ad footer quoted here): MASS SCHEDULE lists Saint Bernard Sunday 7:00am, 9:00am, 11:00am,
     7:30pm Candlelight Mass; weekdays 7:00am Monday-Friday and 8:00am Saturday; First Friday 7:00pm Mass.
     The page-1 panel gives ''Parish Office and St. Bernard Church, 311 Washington Rd, Pittsburgh, PA 15216''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

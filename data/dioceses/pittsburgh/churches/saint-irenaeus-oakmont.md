@@ -32,6 +32,7 @@ evidence:
   note: 'Page 2 of the 25 October 2026 Holy Family bulletin lists Sunday 8:00 AM and 11:00 AM at St. Irenaeus
     and a Wednesday 6:00-6:20 PM confession slot; page 1 gives ''Church: 387 Maryland Ave. / Office: 637
     4th Street / Oakmont, PA 15139'' under the St. Irenaeus heading.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

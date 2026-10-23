@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: the parish''s ParishesOnline org address is 3616 Mt. Troy Road, Pittsburgh, PA 15212,
     the St. Aloysius campus, which is also the parish office address.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

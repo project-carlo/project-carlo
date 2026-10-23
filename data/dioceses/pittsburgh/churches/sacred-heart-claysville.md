@@ -36,8 +36,8 @@ evidence:
   quote: SacredHeartchurch
   note: Page 2 'Our Churches' still lists 'Sacred Heart church 1280 US 40 Claysville, PA 15323' (also
     the 4 Jan 2026 issue), while the Saint James weekend schedule no longer has a Sacred Heart line. Page
-    7 legend defines (SH) Sacred Heart. Page 4 of the 16 Aug 2026 issue (pastor letter) says Saint James includes 'its
-    mission Sacred Heart church in Claysville' (pre-2020 Immaculate Conception Parish).
+    7 legend defines (SH) Sacred Heart. Page 4 of the 16 Aug 2026 issue (pastor letter) says Saint James
+    includes 'its mission Sacred Heart church in Claysville' (pre-2020 Immaculate Conception Parish).
 - url: https://diopitt.org/saint-james-parish
   seen: 2026-10-23
   note: 'Diocese directory: ''Sacred Heart Church (Claysville)'', Main Street, Claysville, PA 15323, ''No
@@ -52,6 +52,7 @@ evidence:
 revisit: Check 2026 Mass Intentions pages (images) for further (SH) Masses and whether the 9:00 am Sunday
   Mass returns
 revisit_after: 2027-03-01
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

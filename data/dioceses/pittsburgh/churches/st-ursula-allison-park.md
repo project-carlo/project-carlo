@@ -33,6 +33,7 @@ evidence:
   note: OpenStreetMap (Nominatim) has 'Saint Ursula Church, Kirk Avenue, Allison Park' at 40.5602430,
     -79.9630400 with no house number, and 'Saint Ursula School' at 40.5609013, -79.9633875, so it confirms
     the building on Kirk Avenue and the GCatholic pin (about 30 m), not the street number.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -37,6 +37,7 @@ evidence:
   quote: Mater Dolorosa 409 North Main St.
   note: 'Parish website ''Church Locations'' page (headed Chrome): one of the six churches of Saints Francis
     & Clare Parish.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

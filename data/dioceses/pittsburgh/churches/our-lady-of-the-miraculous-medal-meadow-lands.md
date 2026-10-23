@@ -34,6 +34,7 @@ evidence:
   note: GCatholic 24232 'Our Lady of the Miraculous Medal', 300 Pike St., Meadow Lands 15347 (roster entry);
     history 'ded. 1950.09.03; parish 1953.06.18; parishes merged 2020.07.01'. Plus Code pin is within
     10 m of the Mass Finder pin
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

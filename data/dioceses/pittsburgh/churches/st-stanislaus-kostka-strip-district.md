@@ -31,6 +31,7 @@ evidence:
     November). Page 1 cover column: ''57 21st St, Pittsburgh / Saturday Vigil Mass: 4:00 pm / Sunday Mass:
     9:00 & 11:00 am''; reconciliation Saturdays 3:00 pm. Page 7 also announces a St. Jude Triduum Mass
     and novena at 6:30 pm on 26-28 October at St. Stanislaus Kostka.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

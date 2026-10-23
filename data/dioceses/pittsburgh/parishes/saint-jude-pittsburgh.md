@@ -38,6 +38,7 @@ evidence:
   note: 'Diocese parish page (headed Chrome; diopitt.org answers 403 to recheck): two churches, Saint
     Raphael (Morningside) and Sacred Heart (Shadyside); Rev. Brendan H. Dawson, pastor; website www.saintjudepgh.org;
     phone 412-661-0187. Matches the bulletin.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

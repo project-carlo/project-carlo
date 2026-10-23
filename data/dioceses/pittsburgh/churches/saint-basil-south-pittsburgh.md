@@ -34,6 +34,7 @@ evidence:
     Sunday 9:00am St. Basil; confession Saturday 11:00 am St. Basil (until 12:00 pm). Page 2: daily intentions
     of St. Sylvester move to St. Basil on Tuesday and Saturday from 26 October to 8 November, and the
     Sunday 11:00 AM Mass for St. Sylvester''s intentions is held at St. Basil on 1 and 8 November.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

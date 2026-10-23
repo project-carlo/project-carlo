@@ -34,6 +34,7 @@ evidence:
   quote: Penn St. & Garnier St., Sharpsburg, Pennsylvania 15215
   note: 'GCatholic 24327 St. Mary (Plus Code 87G2F3W7+C6): cross street only, about 30 m from the Mass
     Finder pin.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

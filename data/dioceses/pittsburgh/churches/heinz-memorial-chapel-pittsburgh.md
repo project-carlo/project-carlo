@@ -33,6 +33,7 @@ evidence:
   quote: Intersection of 5th Ave and S Bellefield Ave
   note: 'Infobox location (raw wikitext: ''location = Intersection of 5th Ave and S Bellefield Ave'');
     no street number was found on a university page.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

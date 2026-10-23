@@ -33,6 +33,7 @@ evidence:
   quote: Sunday 9:00 AM, 11:00 AM, 7:45 PM
   note: 'Page 1 (masthead) of the 25 October 2026 Regina Coeli Parish bulletin: Mass at this church. Text
     layer is letter-spaced; quote copied as extracted.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

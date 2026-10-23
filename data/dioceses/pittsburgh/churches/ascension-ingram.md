@@ -33,6 +33,7 @@ evidence:
     Sat 8:00am and 5:30pm (Vigil), Sun 9:30am, Tue/Thu 8:00am; the same page says ''Ascension Church,
     114 Berry Street, Pittsburgh'' and confessions Saturdays 12:00pm-1:00pm at Ascension. Page 1 masthead
     lists ''Ascension Church 114 Berry Street Pittsburgh, PA 15205''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

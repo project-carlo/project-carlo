@@ -30,6 +30,7 @@ evidence:
   note: GCatholic 24382 St. Scholastica (Plus Code 87G2F3RX+HJ, phone 412-781-0186, 'merged to Christ
     the King 2021.07.01'). The diocese directory and Mass Finder 32143 give 309 Brilliant Avenue with
     the Finder pin (40.491937, -79.9007941), about 60 m from the Plus Code.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

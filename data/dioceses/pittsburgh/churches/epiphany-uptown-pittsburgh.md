@@ -38,6 +38,7 @@ evidence:
   note: 'OSM (Nominatim) places ''Epiphany Church, Washington Place, Downtown'' at 40.44007, -79.99076,
     about 15 m from the diocese pin (40.44008, -79.99073) and 20 m from GCatholic''s (40.43994, -79.99094):
     same building.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -45,6 +45,7 @@ evidence:
   note: 'Diocese history page: grouped Saint Blaise, Midland and Saint Monica, Beaver Falls/Chippewa/Darlington,
     merged 2023-01-02, ''Both church buildings remained open to serve the new'' parish (the page text
     then mis-names it Our Lady of the Valley).'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

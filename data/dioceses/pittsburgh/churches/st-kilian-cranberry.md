@@ -45,6 +45,7 @@ evidence:
   note: Nominatim has no place_of_worship for St. Kilian; it returns the house-number point "7076, Franklin
     Road, Hendersonville, Cranberry Township" at 40.68151,-80.07408, about 300 m south of the GCatholic
     pin. ParishesOnline lists the parish at 40.68335,-80.07573.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

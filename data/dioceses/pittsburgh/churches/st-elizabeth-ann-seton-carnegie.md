@@ -30,6 +30,7 @@ evidence:
     Wednesday, Thursday; page 2 Mass intentions list SEAS Masses for 17-25 October (e.g. ''Sunday, October
     18 ... 9:00 a.m. | SEAS''); page 20 gives ''330 3rd Ave. Carnegie, PA 15106'' and the Parish Administration
     Center at 330 3rd Avenue.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

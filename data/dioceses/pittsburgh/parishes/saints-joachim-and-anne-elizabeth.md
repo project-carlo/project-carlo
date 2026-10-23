@@ -27,6 +27,7 @@ evidence:
   note: 'Rendered in headed Chrome (probe url gets 403). eCatholic site 21493 archive lists weekly files
     files.ecatholic.com/21493/bulletins/<yyyymmdd>.pdf, newest 20261025. The 25 October file has the same
     masthead text as the container issue (not byte-identical: 42,036,158 vs 42,053,862 bytes).'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

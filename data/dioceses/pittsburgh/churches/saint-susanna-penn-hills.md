@@ -33,6 +33,7 @@ evidence:
   quote: ST. SUSANNA CHURCH
   note: 'Page 1 of the 25 October 2026 Christ the Divine Shepherd bulletin: ''200 Stotler Road, Penn Hills,
     PA 15235''; Saturday 5:00 pm, Sunday 9:00 am and 11:30 am, Tuesday/Thursday 9:00 am.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

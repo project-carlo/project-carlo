@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-23
   quote: 8 AM  |  St. John the Baptist
   note: Page 1 Sunday Mass 8 AM at St. John the Baptist, 1409 Pennsylvania Avenue, Monaca, PA 15061.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

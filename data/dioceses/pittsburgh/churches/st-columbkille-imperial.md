@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-23
   quote: 103C hurchR oad
   note: 'Page 1 cover lists the church: Saint C olumbkille 103 Church Road, Imperial, PA 15126.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

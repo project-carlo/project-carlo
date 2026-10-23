@@ -41,6 +41,7 @@ evidence:
   quote: St. Patrick Church
   note: 'Page 7 (St. Patrick-St. Stanislaus Kostka section): ''St. Patrick Church / 1711 Liberty Avenue
     / Pittsburgh, PA 15222''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

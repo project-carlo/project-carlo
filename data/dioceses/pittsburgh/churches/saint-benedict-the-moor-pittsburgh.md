@@ -44,6 +44,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: the (empty) LPi account for the parish gives ''St. Benedict the Moor Church'', 91 Crawford
     St, Pittsburgh, Pennsylvania, 15219, latitude 40.44168, longitude -79.98638.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

@@ -43,6 +43,7 @@ evidence:
   seen: 2026-10-23
   note: 'Parish Mass-times page (headed Chrome): ''SUNDAY 9:00 AM St. Agnes''; ''FRIDAY 8:00 AM St. Agnes'';
     ''SATURDAY 8:00 AM St. Agnes''.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

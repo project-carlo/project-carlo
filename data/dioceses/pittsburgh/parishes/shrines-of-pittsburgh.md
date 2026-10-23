@@ -59,6 +59,7 @@ evidence:
     to recheck): one page for the four canonical parishes with six churches, all with website www.pghshrines.org,
     phone 412-621-5170, ''Rev. Thomas G. Kadlick (Team Ministry)'' and Deacon G. Gregory Jelinek. St.
     Patrick is listed ''Sunday Masses at Saint Stanislaus Church''.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

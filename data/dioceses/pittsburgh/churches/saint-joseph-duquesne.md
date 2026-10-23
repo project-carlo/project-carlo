@@ -49,6 +49,7 @@ evidence:
   seen: 2026-10-23
   note: Parish Mass-times page (headed Chrome) lists no Mass at St. Joseph. The site has a SAINT JOSEPH
     menu entry (page not found at /saint-joseph).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

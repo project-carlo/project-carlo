@@ -37,6 +37,7 @@ evidence:
   quote: 4:30 PM St. Christopher Church
   note: Parish home page Mass Times box, rendered in headed Chrome (Cloudflare). Matches the bulletin
     and the diocese directory line 'Saturday Vigil 4:30 p.m. / Sunday 11:15 a.m.'.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

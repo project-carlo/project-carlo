@@ -33,6 +33,7 @@ evidence:
     PM and 5:30 PM, last-Sunday 2:00 PM Spanish Mass, Monday 6:00-6:20 PM confession, Saturday 8:30-9:30
     AM, Friday 24-hour adoration. Page 1 gives ''444 Holy Family Way / Plum, PA 15239''. The Mass of Remembrance
     on 2 November 6:30 pm is also here (page 2).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

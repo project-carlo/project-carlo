@@ -30,6 +30,7 @@ evidence:
     files.ecatholic.com/21966/bulletins/<yyyymmdd>.pdf, newest 20261025. Downloaded 20261025.pdf from
     there and from the ParishesOnline container: byte-identical (8,237,329 bytes), so the site reposts
     the container issue and is not a second bulletin.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

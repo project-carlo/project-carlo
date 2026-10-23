@@ -34,6 +34,7 @@ evidence:
     Church 3854 Brighton Road''; Mass Schedule ''Saturday 4:00 PM (vigil) in St. Cyril Church; Sunday
     12:00 PM in St. Cyril Church; Weekday 9:00 AM Mon.- Sat. in St. Cyril Church''; page 2 daily intentions
     ''St. C''. recheck cannot find the image text.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

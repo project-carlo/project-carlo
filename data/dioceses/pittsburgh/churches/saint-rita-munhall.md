@@ -49,6 +49,7 @@ evidence:
   seen: 2026-10-23
   quote: 10:00 AM St. Rita (JB) Gary Antol Martha Fenner
   note: '4 January 2026 issue, page 2: the last regular schedule had a Sunday 10:00 AM Mass at St. Rita.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

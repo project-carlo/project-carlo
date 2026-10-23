@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-23
   note: 'ParishesOnline org address: 2586 Wexford Bayne Rd., Sewickley, PA, 15143 (the parish''s administrative
     address, which is this church).'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

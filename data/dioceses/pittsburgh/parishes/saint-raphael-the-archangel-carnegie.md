@@ -32,6 +32,7 @@ evidence:
   note: 'Diocese parish page: Saint Elizabeth Ann Seton Church (Carnegie), Saint Margaret of Scotland
     Church (Green Tree), Saints Simon and Jude Church (Scott); Rev. Robert J. Grecco, Pastor; website
     www.straphaelcgs.org. diopitt.org answers 403 to recheck.'
+promoted: 2026-10-23
 bulletin_status: available
 ---
 

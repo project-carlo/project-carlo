@@ -33,6 +33,7 @@ evidence:
   note: 'Listed in Diocese of Pittsburgh: Mass Finder map as ''Triumph of the Holy Cross Parish - St.
     Clare of Assisi Church (Clairton)'', 460 Reed Street, Clairton, PA, 15025; group: Triumph of the Holy
     Cross Parish'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

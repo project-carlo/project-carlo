@@ -33,6 +33,7 @@ evidence:
     predecessor of Christ the King. Inferred identity: same street address and the phone the parish site
     gives for Saint Edward. The Mass Finder pin (40.4962326, -79.8585423) is about 60 m from the Plus
     Code.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

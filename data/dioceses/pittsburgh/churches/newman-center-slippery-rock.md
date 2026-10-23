@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-23
   note: OpenStreetMap way 160688996, building=church, named 'Rock Catholic Center', addr 342 Normal Avenue,
     Slippery Rock 16057, at 41.0623065,-80.0516550 (about 5 m from the diocese pin).
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

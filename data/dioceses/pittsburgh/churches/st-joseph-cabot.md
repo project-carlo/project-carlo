@@ -38,6 +38,7 @@ evidence:
   quote: St. Joseph, Cabot 315 Stoney Hollow Rd.
   note: 'Parish website ''Church Locations'' page (headed Chrome): one of the six churches of Saints Francis
     & Clare Parish.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

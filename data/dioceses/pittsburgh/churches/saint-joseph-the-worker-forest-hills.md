@@ -45,6 +45,7 @@ evidence:
   quote: 2001 Ardmore Blvd., Pittsburgh, Pennsylvania 15221
   note: GCatholic lists 'St. Maurice', same address, group Parish of St. Joseph the Worker, history 'parishes
     merged 2020.07.01'.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

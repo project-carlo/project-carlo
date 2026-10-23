@@ -39,6 +39,7 @@ evidence:
   seen: 2026-10-23
   note: 'probe po: org ''St. Paul Cathedral Parish - St. Stephen Church'', 5115 2nd Ave, Pittsburgh, PA
     15207-1724 (40.40691, -79.94238), container 14/1180.'
+promoted: 2026-10-23
 ---
 
 ## Holds Mass

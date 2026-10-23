@@ -48,6 +48,7 @@ evidence:
     Franklin Avenue in Bobtown. A reverse lookup at the pin returns a house at 300 North Willis Street,
     so OSM does not independently mark a church there (an Overpass query timed out). Not a confirmation
     of the building.
+promoted: 2026-10-23
 ---
 
 ## Holds Mass
