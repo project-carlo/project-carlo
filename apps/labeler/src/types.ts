@@ -252,6 +252,11 @@ export interface SeedSlot {
   answer: SeedAnswer | null;
   /** Open questions sharing a group are one question, answered together. */
   group?: string | null;
+  /** The agent's reason for retaining a weekly service after one silent issue. */
+  weekly_omission?: {
+    bulletin: string;
+    reason: string;
+  };
 }
 
 /** A church or chapel the bulletins name that the church list lacks or can't place. */

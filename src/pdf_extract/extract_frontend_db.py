@@ -44,6 +44,7 @@ Version 2 added, after `note`: `weeks_of_month` (a list of "first" ...
 days null or a day of the month; all null for all year), and
 `cancels_event_id`: a cancelled dated row names the weekly row (same church,
 event type and start time, on the date's weekday) whose occurrence it cancels.
+The weekly row's weeks of the month, exclusions and season must include the date.
 A cancellation that matches no weekly row is left out, and so is every dated
 row before the build date. `read_snapshot` still reads version 1, as every
 week, no season and no cancellations, so a run can be checked against a
@@ -75,7 +76,12 @@ from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date, week_order_sql
 from pdf_extract.labeling.labels import DAYS
-from pdf_extract.schedule.qualifiers import mask_excludes_weeks, mask_to_weeks
+from pdf_extract.schedule.qualifiers import (
+    mask_excludes_weeks,
+    mask_to_weeks,
+    recurrence_includes_date,
+    weeks_to_mask,
+)
 from pdf_extract.storage import (
     DEFAULT_DB_PATH,
     configure_sqlite_connection,
@@ -283,30 +289,43 @@ def _fetch_only_parish_ids(conn: sqlite3.Connection) -> set[int]:
 _ID, _CHURCH, _TYPE, _KIND, _DAY, _DATE, _START = range(7)
 _CANCELLED = EVENT_COLUMNS.index("cancelled")
 _CANCELS = EVENT_COLUMNS.index("cancels_event_id")
+_WEEKS = EVENT_COLUMNS.index("weeks_of_month")
+_EXCLUDE_WEEKS = EVENT_COLUMNS.index("exclude_weeks")
+_SEASON = slice(EVENT_COLUMNS.index("season_start_month"), EVENT_COLUMNS.index("season_end_day") + 1)
 
 
 def finish_events(rows: list[tuple], build_date: date) -> list[tuple]:
     """Drop past dated rows, match each cancellation to the weekly row it cancels, sort by id.
 
     A cancelled dated row cancels the weekly row with the same church, event
-    type and start time on its date's weekday. One that matches nothing is
-    left out (cancelled rows are hidden anyway). In update mode the identity
-    rules allow at most one match; an extract-mode bulletin can repeat a slot,
-    and then the lowest id is named.
+    type and start time on its date's weekday, whose weeks of the month and
+    season include that date. One that matches nothing is left out (cancelled
+    rows are hidden anyway). In update mode the identity rules allow at most
+    one matching recurrence; an extract-mode bulletin can repeat a slot, and
+    then the lowest id is named.
     """
     today = build_date.isoformat()
     rows = [r for r in rows if r[_KIND] != "specific_date" or (r[_DATE] or "") >= today]
-    weekly: dict[tuple, Any] = {}
+    weekly: dict[tuple, list[tuple]] = {}
     for row in sorted(rows, key=lambda r: r[_ID]):
         if row[_KIND] == "weekly":
-            weekly.setdefault((row[_CHURCH], row[_TYPE], row[_DAY], row[_START]), row[_ID])
+            weekly.setdefault((row[_CHURCH], row[_TYPE], row[_DAY], row[_START]), []).append(row)
     out = []
     for row in rows:
         if row[_CANCELLED] and row[_KIND] == "specific_date":
             day = parse_iso_date(row[_DATE])
-            match = None if day is None else weekly.get(
-                (row[_CHURCH], row[_TYPE], DAYS[day.weekday()], row[_START])
+            if day is None:
+                continue
+            candidates = weekly.get(
+                (row[_CHURCH], row[_TYPE], DAYS[day.weekday()], row[_START]), [],
             )
+            match = next((
+                candidate[_ID] for candidate in candidates
+                if recurrence_includes_date(
+                    day, weeks_to_mask(candidate[_WEEKS], candidate[_EXCLUDE_WEEKS]),
+                    *candidate[_SEASON],
+                )
+            ), None)
             if match is None:
                 continue
             row = (*row[:_CANCELS], match, *row[_CANCELS + 1:])

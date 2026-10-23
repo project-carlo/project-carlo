@@ -638,6 +638,17 @@ function SlotCard(props: SlotCardProps) {
         </div>
       )}
 
+      {slot.weekly_omission && (
+        <p className="mt-1.5 rounded bg-sky-50 px-2 py-1 text-xs text-slate-700">
+          <button
+            className="font-semibold underline"
+            onClick={() => props.onSource(resolveBulletin(seed, slot.weekly_omission?.bulletin), null)}
+          >
+            Kept after one missing mention
+          </button>
+          {": "}{slot.weekly_omission.reason}
+        </p>
+      )}
       <div className="mt-1.5 grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-1.5">
         {slot.sources.map((source, i) => {
           if (source.url && /^https?:\/\//.test(source.url)) {

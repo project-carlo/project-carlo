@@ -196,6 +196,10 @@ questions` lists answered questions, their leanings and what they cite.
   issue simply omits it once, with no service-specific cancellation or change.
 - Do: retain it with `page: null`, cite the matching readings in older issues, including
   the immediately preceding read issue, and explain the omission in the rationale.
+  Record `weekly_omission` with `--weekly-omission "why this is only an omission"` and
+  `--page -`. The checker needs paged agent evidence from two older issue weeks and
+  the preceding read issue exactly one week before newest, with valid publication
+  dates. If that evidence is unavailable, ask rather than inventing citations.
   Repeated fetches of the same issue do not establish cross-week recurrence. A named
   monthly service still follows R11/R12; do not use this rule to skip its relevant week.
   Ask if a continuing pattern is not established or there is a real contradiction.

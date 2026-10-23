@@ -35,7 +35,9 @@ Do one parish at a time. Finish and finalize each before starting the next.
 3. **Compare with history.** `seed history <parish> [--bulletins N]` prints one table per
    bulletin, and it is free. Apply R7–R9. Use your own readings across bulletins to
    establish recurrence (R35); one silent issue does not erase a repeated schedule
-   (R36). History's extracted rows are hints, not substitutes for those readings.
+   (R36). For the latter, record `--weekly-omission "why only an omission" --page -`
+   and the older bulletin readings. History's extracted rows are hints, not
+   substitutes for those readings.
 4. **Read further back** when R3 or R11 calls for it. Start with `seed grep <parish>
    [pattern]`, which searches every stored bulletin at once (with no pattern, it searches
    for schedule words). Then read one bulletin at a time with `seed text <parish> <hash>
