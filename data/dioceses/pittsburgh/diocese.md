@@ -132,6 +132,9 @@ Greensburg's playbook next door.
   the Divine Shepherd, 23303 St. Matthias, 21158 St. Teresa of Kolkata all had 20261025.pdf).
   `issues.py ecatholic --weeks N` returns only the newest issue; for older ones take the
   site's /bulletins archive links with `visit.py --links` (keep the `?t=` query).
+  An eCatholic masthead can be a graphic over a letter-split text layer (22570): render page
+  1, quote a clean line from an inner page. A parish site's Mass-times page can list a Mass
+  (St. John Cantius's Korean Mass) that the bulletin never prints: Rules settled 1 applies.
   The 20435 text layer is letter-split ("Catholic PartnerP arishes"); quote it verbatim.
 - **John Patrick Publishing** (church-bulletin.org/<slug>/, `/bulletin/<slug>/<yyyy-mm-dd>.pdf`)
   prints Saints Francis and Clare (`saints-francis-clare-parish-chicora-pa-16025`).
