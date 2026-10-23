@@ -192,12 +192,14 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   name found only there as a current Mass. `fetch:check` reports issue date `unknown` when the masthead
   date is split by the layout, and ParishesOnline issues posted early show as `future`;
   neither is a failure.
-- **Other hosts seen:** Wix (`_files/ugd/` PDFs; a blog post's file-upload-viewer attachment
+- **Other hosts seen:** Wix (a bulletins page lists `_files/ugd/*.pdf` in static HTML;
+  John Patrick PDFs there are often image-only, so render page 1 and the Mass Intentions page; a blog post's file-upload-viewer attachment
   has no PDF link in the HTML or feed and is minted on click: `scratch/map-erie/tools/wixlinks.py`
   clicks it with Playwright `expect_download`, after which `/_files/ugd/<id>.pdf` is public: goodshepherdwm.org, sharoncatholic.org; Wix blog
   posts per issue: latinmasserie.org), Duda (bsparisherie.org, sttobias.com, `irp.cdn-website.com`),
   WeConnect (icclarion.org, `uploads.weconnect.com/mce/<id>/2026Bulletins/<yyyy-mmdd> for
-  Website.pdf`), WordPress (saintjude.church, st-boniface.org, stgeorgeerie.org, thesmchurch.com).
+  Website.pdf`; its Bulletins page can also link the ParishesOnline container PDF: when the md5
+  matches, use `parishes_online`, as for Immaculate Conception, Clarion, 14/1155), WordPress (saintjude.church, st-boniface.org, stgeorgeerie.org, thesmchurch.com).
 - **Failed `probe url`:** HTTP 403 for holyredeemerwarren.com, steulaliacoudersport.org,
   stpatrickfranklin.org, weareholyspirit.com, dioceseoferie.org/holyrosary (try headed
   `visit.py`); DEAD-DNS for catholic-meadville.com and steulaliacouderport.org (a directory typo);
