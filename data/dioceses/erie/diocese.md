@@ -236,7 +236,12 @@ this diocese shows otherwise.
   two sites means one bulletin.
 - **eCatholic** sites sit behind Cloudflare: `https://www.<domain>/bulletins` usually opens in
   headed Chrome (parish-site-access); `files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf`
-  downloads plainly. None seen here yet.
+  downloads plainly. Here: weareholyspirit.com (Holy Spirit, DuBois) serves its bulletins at
+  `/bulletin` (singular) as `files.ecatholic.com/<id>/documents/...` PDFs, which the eCatholic
+  resolver (`/bulletins` only) misses: use `other` with `page-pdfs
+  https://www.weareholyspirit.com/bulletin`. The printable directory states each church's
+  secondary status and schedule, and Mass Intentions lines tag each Mass with its building:
+  grep a run of issues for a building before deciding it has only a feast-day Mass.
 - **Partners and one-pastor parishes:** a parish domain redirecting to its partner's site is a
   fold-in, not a squat; sister parishes with one pastor can each post their own bulletin with the
   same combined Mass rota (two rows while both channels are live); same-pastor parishes print each
