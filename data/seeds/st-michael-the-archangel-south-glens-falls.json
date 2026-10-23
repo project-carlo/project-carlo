@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-michael-the-archangel-south-glens-falls",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:59Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:35:02Z",
-  "reviewer": "lyonsl2 (via Codex)",
-  "approved_at": null,
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
   "summary": "Two churches: St. Michael's (Tue-Sat 8:30 AM, Saturday 3:00-3:45 Reconciliation and 4:00 PM vigil, Sunday 8, 11 and 5:30) and St. Therese Mission Chapel (Sunday 9:30). All three bulletins agree on the weekly schedule. Open: whether a 9:00 AM Columbus Day Mass was held on Oct 12 (the bulletin contradicts itself) and which church holds the Nov 2 All Souls Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -684,8 +684,8 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
+      "decision": "exclude",
+      "status": "settled",
       "entry": null,
       "page": 6,
       "sources": [
@@ -702,7 +702,7 @@
           "page": 6
         }
       ],
-      "rationale": "R32: the parish calendar gives no church. Leaning St. Michael's: the calendar is the parish church's, and the chapel's only Mass is Sunday 9:30 AM. History has it at St. Michael's.",
+      "rationale": "R32: the parish calendar gives no church. Leaning St. Michael's: the calendar is the parish church's, and the chapel's only Mass is Sunday 9:30 AM. History has it at St. Michael's.\n\nDelegated review (owner authorized best judgment on 2026-10-22): Exclude the November 2 remembrance Mass from the mapped schedule because neither the bulletin nor the follow-up review establishes St. Michael or St. Therese as its venue. Ordinary Sunday chapel hours do not rule out a special Monday event, and extracted history is not venue confirmation.",
       "question": "Which church is the All Souls' Day Mass of Remembrance on Monday, November 2 at 7:00 PM?",
       "options": [
         {
@@ -745,7 +745,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 2,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
     }
   ]
 }

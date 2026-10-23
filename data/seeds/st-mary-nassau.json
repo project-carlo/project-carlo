@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-nassau",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:31:29Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:51:08Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
   "summary": "Small one-church parish. Sat 5:30 PM and Sun 10:00 AM Mass and first-Friday 6:00 PM Adoration are clear in the p2 list. Three questions: the Tuesday and Thursday 9:30 AM Masses move to the rectory in 'winter months' (unspecified), and the Tuesday Adoration after Mass has an end (10:30) but no printed start. Rosaries and the Divine Mercy Chaplet are not recorded.",
   "blocked_reason": null,
   "bulletins": [
@@ -133,8 +133,8 @@
     },
     {
       "id": "s3",
-      "decision": null,
-      "status": "needs_human",
+      "decision": "exclude",
+      "status": "settled",
       "entry": null,
       "page": 2,
       "sources": [
@@ -169,7 +169,7 @@
           "page": 2
         }
       ],
-      "rationale": "The weekday Mass at 9:30 AM is printed in the Parish Happenings list (also in older bulletins) and in Mass Intentions. A footnote says that in winter months it moves to the rectory; no months are given and the rectory's address is not stated (p3 says the parish is selling the rectory). The church is the likely current location in October.",
+      "rationale": "The weekday Mass at 9:30 AM is printed in the Parish Happenings list (also in older bulletins) and in Mass Intentions. A footnote says that in winter months it moves to the rectory; no months are given and the rectory's address is not stated (p3 says the parish is selling the rectory). The church is the likely current location in October.\n\nDelegated review (owner authorized best judgment on 2026-10-22): Exclude this mapped weekly entry because the winter rectory location and transition dates remain unconfirmed. The Tuesday time is supported, but do not assume October is outside winter, guess a rectory address, omit the winter move, or invent seasonal bounds.",
       "question": "Record the Tuesday 9:30 AM Mass at the church, and how to handle the winter move to the rectory?",
       "options": [
         {
@@ -212,12 +212,16 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 2,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
     },
     {
       "id": "s4",
-      "decision": null,
-      "status": "needs_human",
+      "decision": "exclude",
+      "status": "settled",
       "entry": null,
       "page": 2,
       "sources": [
@@ -252,7 +256,7 @@
           "page": 2
         }
       ],
-      "rationale": "The weekday Mass at 9:30 AM is printed in the Parish Happenings list (also in older bulletins) and in Mass Intentions. A footnote says that in winter months it moves to the rectory; no months are given and the rectory's address is not stated (p3 says the parish is selling the rectory). The church is the likely current location in October.",
+      "rationale": "The weekday Mass at 9:30 AM is printed in the Parish Happenings list (also in older bulletins) and in Mass Intentions. A footnote says that in winter months it moves to the rectory; no months are given and the rectory's address is not stated (p3 says the parish is selling the rectory). The church is the likely current location in October.\n\nDelegated review (owner authorized best judgment on 2026-10-22): Exclude this mapped weekly entry because the winter rectory location and transition dates remain unconfirmed. The Thursday time is supported, but do not assume October is outside winter, guess a rectory address, omit the winter move, or invent seasonal bounds.",
       "question": "Record the Thursday 9:30 AM Mass at the church, and how to handle the winter move to the rectory?",
       "options": [
         {
@@ -295,7 +299,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 2,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
     },
     {
       "id": "s5",

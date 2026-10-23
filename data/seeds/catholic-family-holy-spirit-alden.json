@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "catholic-family-holy-spirit-alden",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:32:13Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:35:46Z",
-  "reviewer": "lyonsl2 (via Codex)",
-  "approved_at": null,
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
   "summary": "Three churches (OLP Clarence, SJB Alden, STA Akron). The schedule boxes on page 1 give Mass, Confession and Adoration times and agree in all three bulletins read, and history matches. Open: whether to list two dated OLP Masses, the Oct 17 Mass for Rita Grabowski and the Oct 31 Mass of Remembrance.",
   "blocked_reason": null,
   "bulletins": [
@@ -2125,9 +2125,22 @@
     },
     {
       "id": "s35",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-clarence",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-31",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Special Mass of Remembrance; light fare afterwards in the Parish Center. RSVP requested by October 20, 2026."
+      },
       "page": 5,
       "sources": [
         {
@@ -2143,7 +2156,7 @@
           "page": 5
         }
       ],
-      "rationale": "R30: an invitation with an RSVP; it is not a Mass for one person, but the invitation may be aimed at bereaved families and not the public. Leans include. Printed only in the newest bulletin (a notice on the OLP page).",
+      "rationale": "R30: an invitation with an RSVP; it is not a Mass for one person, but the invitation may be aimed at bereaved families and not the public. Leans include. Printed only in the newest bulletin (a notice on the OLP page).\n\nDelegated review (owner authorized best judgment on 2026-10-22): The explicit invitation to you and your family supports including this dated Mass. Retain the RSVP request without claiming it applies only to the reception.",
       "question": "Add the 9:00 AM Special Mass of Remembrance at Our Lady of Peace on Saturday, Oct 31?",
       "options": [
         {
@@ -2169,7 +2182,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "edited",
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
     }
   ]
 }

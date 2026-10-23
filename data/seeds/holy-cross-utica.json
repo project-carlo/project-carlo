@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-cross-utica",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:35:19Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T22:05:29Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
   "summary": "Holy Cross Parish, Utica (St. Mark's and St. Peter's). The bulletins print no schedule box, so weekly slots come from the intentions listing repeated in all three bulletins: Sat 4 PM, Sun 10 AM and Mon 10 AM at St. Mark's (Oct 12 cancelled for Columbus Day), and Wed 10 AM at St. Peter's. One question asks whether to include the 'Most Saturdays' 3:15-3:45 PM Confession.",
   "blocked_reason": null,
   "bulletins": [
@@ -346,9 +346,22 @@
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Most Saturdays"
+      },
       "page": 1,
       "sources": [
         {
@@ -393,7 +406,7 @@
           "page": 1
         }
       ],
-      "rationale": "R33: 'Most Saturdays' means some Saturdays have no Confession and the bulletins print no dates for them, which the file cannot express. Printed identically in all three bulletins; the website says plain 'Saturday at 3:15pm' and history has it weekly in 3/3 bulletins. Leaning toward weekly with a note, per the website and history. (The 'by appointment' part has no time, R26.)",
+      "rationale": "R33: 'Most Saturdays' means some Saturdays have no Confession and the bulletins print no dates for them, which the file cannot express. Printed identically in all three bulletins; the website says plain 'Saturday at 3:15pm' and history has it weekly in 3/3 bulletins. Leaning toward weekly with a note, per the website and history. (The 'by appointment' part has no time, R26.)\n\nDelegated review (owner authorized best judgment on 2026-10-22): Accept the habitual Saturday Confession window with the literal Most Saturdays qualifier visible. It describes conditional weekly availability, not a guaranteed occurrence every Saturday. The undated website does not erase the bulletin qualification; no exception dates are invented.",
       "question": "Add Saturday 3:15-3:45 PM Confession at St. Mark's, which the bulletin gives as 'Most Saturdays'?",
       "options": [
         {
@@ -419,7 +432,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
     },
     {
       "id": "s7",
