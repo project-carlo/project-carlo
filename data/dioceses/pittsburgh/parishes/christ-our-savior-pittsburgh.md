@@ -49,11 +49,12 @@ publication_reviews:
   evidence:
   - url: https://institute-christ-king.org/images/pittsburgh/bulletins/2026-10-18.pdf
     seen: 2026-10-23
-    note: 'Compared the two 18 October 2026 bulletins: the Institute''s PDF (rendered) is headed ''Most
-      Precious Blood of Jesus Parish ... Personal Parish for the Extraordinary Form'' with Canon William
-      Avis, one church at 3250 California Avenue; container 14/1701 is headed ''Christ Our Savior Parish''
-      with Fr. Michael Caridi and three other churches. Different publishers, content and clergy; a stale
-      LPi org named for Most Precious Blood merely points at 14/1701.'
+    note: 'Masthead comparison of the two 18 October 2026 bulletins: the Institute''s PDF (rendered) has
+      the masthead ''Most Precious Blood of Jesus Parish ... Personal Parish for the Extraordinary Form'',
+      Canon William Avis, and serves one church, 3250 California Avenue; the Christ Our Savior masthead
+      (ParishesOnline 14/1701) names Fr. Michael Caridi and serves three other churches (St. Peter, St.
+      Boniface, St. Cyril of Alexandria). Different publishers, mastheads, clergy and member churches;
+      a stale LPi org named for Most Precious Blood merely points at 14/1701.'
 ---
 
 ## Publisher
