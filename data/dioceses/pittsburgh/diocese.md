@@ -153,6 +153,8 @@ Greensburg's playbook next door.
   Alphonsus page on Epiphany, Boyers) while the closed church's own page can still say "remains
   open": quote the dated one and record the disagreement. diopitt.org answers 403 to `recheck`;
   `visit.py --text` stops at 4000 characters (the diopitt.org nav): pass `--chars 30000`.
+  TribLive (Valley News Dispatch) names relegated churches (Guardian Angels, Natrona Heights,
+  2022-10-01).
   The predecessor pages use set phrases: "closed at the time of the merger" and "remained
   open to serve the new parish"; read each predecessor's page.
   read it with `visit.py` (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, and a long
@@ -174,7 +176,7 @@ otherwise.
   carry text only on the LPi ad page, whose footer names the parish and container. Render
   pages with `render.py` (no tesseract here). `render.py` crashes on very large image PDFs (83 MB,
   Saints Martha and Mary): curl it and `pdftoppm -r 70 -f 1 -l 3 -png`. Here too: All Saints, Butler (pages 1-13) and St. Luke, Ambridge
-  (14/1208) are images; its quotable line is the ad-page footer "All Saints Parish, Butler, PA 14-1322".
+  (14/1208) and Our Lady of the Lakes (14/1310, footer on page 8) are images; its quotable line is the ad-page footer "All Saints Parish, Butler, PA 14-1322".
 - **A ParishesOnline org page can render blank** while `probe po` still lists issues; pin
   `other` to `page-pdfs <publicationWidget URL> filename=*B.pdf`. An old org can list a stopped
   container: check its latest issue before treating it as a channel.
