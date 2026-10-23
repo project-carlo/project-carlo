@@ -167,6 +167,10 @@ keep it current rather than a log.
   Recent issues may have no text layer (render page 1; quote an older issue). Discover Mass can
   run a week ahead of a parish's own repost: compare newest dates before choosing a provider.
 
+- **Template-site post dates:** `wp-json/wp/v2/posts?per_page=3&_fields=date,slug` answers
+  curl with a browser User-Agent and shows whether a site is behind its container or just
+  posts on Saturday.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
