@@ -130,6 +130,8 @@ Greensburg's playbook next door.
   `files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf` downloads without a browser and
   `issues.py ecatholic ecatholic:<id>` finds it (20435 Catholic Partner Parishes, 21574 Christ
   the Divine Shepherd, 23303 St. Matthias, 21158 St. Teresa of Kolkata all had 20261025.pdf).
+  `issues.py ecatholic --weeks N` returns only the newest issue; for older ones take the
+  site's /bulletins archive links with `visit.py --links` (keep the `?t=` query).
   The 20435 text layer is letter-split ("Catholic PartnerP arishes"); quote it verbatim.
 - **John Patrick Publishing** (church-bulletin.org/<slug>/, `/bulletin/<slug>/<yyyy-mm-dd>.pdf`)
   prints Saints Francis and Clare (`saints-francis-clare-parish-chicora-pa-16025`).
