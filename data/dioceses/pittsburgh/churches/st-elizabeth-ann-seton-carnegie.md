@@ -11,7 +11,7 @@ longitude: -80.0906875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['gcatholic:24285', 'directory:saint-raphael-the-archangel-parish/1', 'massfinder:32103']
+roster: ['gcatholic:24285', 'directory:saint-raphael-the-archangel-parish/1', 'massfinder:32103', 'massfinder:22104']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24285
   seen: 2026-10-23

@@ -11,7 +11,7 @@ longitude: -79.7715625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['gcatholic:24268', 'directory:christ-the-divine-shepherd-parish/1', 'massfinder:31958']
+roster: ['directory:christ-the-divine-shepherd-parish/1', 'gcatholic:24268', 'massfinder:31958', 'massfinder:35657']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24268
   seen: 2026-10-23

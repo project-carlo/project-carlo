@@ -257,6 +257,13 @@ README's model and the Greensburg precedent:
    September issues for the church's name. A parish site's statements page can link a closure
    decree (St. Regis, effective 2025-09-29) that diopitt.org's history page hasn't caught up with.
 
+8. **Mass Finder parish-level pins** (no building of their own; their id is the parish's
+   eCatholic site id: 21737/35656 Archangel Gabriel, 26316 Blessed Trinity, 23091 Shrines,
+   33326 St. Augustine, 22384 St. Pio, 22104 St. Raphael, 35657 Christ the Divine Shepherd)
+   are linked, for coverage accounting only, to one church of their parish: the parish's
+   first directory church, or the church whose address the pin carries. They are not
+   evidence about that church. (Orchestrator, 2026-10-23.)
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.

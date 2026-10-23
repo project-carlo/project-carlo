@@ -11,7 +11,7 @@ longitude: -79.9616659
 coordinates_from: diocese-directory
 name_verified: true
 address_verified: true
-roster: ['directory:blessed-trinity-parish/1', 'gcatholic:24247', 'massfinder:31952']
+roster: ['directory:blessed-trinity-parish/1', 'gcatholic:24247', 'massfinder:31952', 'massfinder:26316']
 evidence:
 - url: https://diopitt.org/blessed-trinity-parish
   seen: 2026-10-23

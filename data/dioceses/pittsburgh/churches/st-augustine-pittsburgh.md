@@ -11,7 +11,7 @@ longitude: -79.9638125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster: ['gcatholic:24231', 'directory:saint-pio-of-pietrelcina-parish/1', 'massfinder:32011']
+roster: ['gcatholic:24231', 'directory:saint-pio-of-pietrelcina-parish/1', 'massfinder:32011', 'massfinder:22384']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24231
   seen: 2026-10-23

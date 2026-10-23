@@ -11,7 +11,7 @@ longitude: -80.0846875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['gcatholic:24226', 'directory:saint-michael-the-archangel-parish/2']
+roster: ['directory:saint-michael-the-archangel-parish/2', 'gcatholic:24226', 'massfinder:32086']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24226
   seen: 2026-10-23

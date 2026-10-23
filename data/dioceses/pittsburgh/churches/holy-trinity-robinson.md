@@ -11,7 +11,8 @@ longitude: -80.1355625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['directory:archangel-gabriel-parish/1', 'gcatholic:24207', 'massfinder:31939', 'massfinder:35656']
+roster: ['directory:archangel-gabriel-parish/1', 'gcatholic:24207', 'massfinder:31939', 'massfinder:35656',
+  'massfinder:21737']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24207
   seen: 2026-10-23

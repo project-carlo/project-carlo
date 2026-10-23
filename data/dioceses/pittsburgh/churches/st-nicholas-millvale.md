@@ -11,7 +11,7 @@ longitude: -79.9696875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['gcatholic:24356', 'directory:shrines-of-pittsburgh/4']
+roster: ['gcatholic:24356', 'directory:shrines-of-pittsburgh/4', 'massfinder:32089']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24356
   seen: 2026-10-23

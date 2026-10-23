@@ -11,7 +11,7 @@ longitude: -80.4513125
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['gcatholic:24270', 'directory:saintaugustineparish/1', 'massfinder:32029']
+roster: ['gcatholic:24270', 'directory:saintaugustineparish/1', 'massfinder:32029', 'massfinder:33326']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/24270
   seen: 2026-10-23
