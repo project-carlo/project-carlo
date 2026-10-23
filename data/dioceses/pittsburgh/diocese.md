@@ -113,7 +113,8 @@ Greensburg's playbook next door.
   saint-mary-magdalene-parish, st-benedict-the-moor-church-15219, divine-mercy-parish-15222) are
   not fold-ins: those parishes publish elsewhere.
 - **Find a parish's ParishesOnline org in `scratch/map-pittsburgh/raw/lpi-catholic.tsv`**, not
-  by `probe po <parish name>` (bare names hit same-named orgs elsewhere: `corpus-christi-parish`
+  by `probe po <parish name>` (when it is missing from the TSV, the parish site's /bulletin page links
+  it: Most Sacred Heart, 14/1171) (bare names hit same-named orgs elsewhere: `corpus-christi-parish`
   is Winslow, Maine). Merged parishes keep one org per former church, all resolving to one
   container: record every `po-org`/`lpi` id on the one row (Corpus Christi, Bridgeville).
   A parish's eCatholic site can repost the container PDF a week later (Corpus Christi, 21066):
