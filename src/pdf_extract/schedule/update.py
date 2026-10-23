@@ -394,7 +394,9 @@ def decide_and_apply(
             today=prepared.call_date, whole_call=whole, targetable=set(_view_ids(view_text)),
         )
 
-        changes: list[Change] = []
+        # Proposals are stored in `seq` order; their changes are logged in the order they were
+        # applied, so a deferred add or modify folds in after the removals it waited for.
+        applied_changes: list[tuple[int, Change]] = []
         new_sightings: list[tuple[int, int | None]] = []
         for decision in decisions:
             proposal = decision.proposal
@@ -412,15 +414,16 @@ def decide_and_apply(
             )
             if decision.decision != APPLIED:
                 continue
-            changes.append(Change(
+            applied_changes.append((decision.order, Change(
                 proposal.op,
                 before_entry_id=proposal.target_entry_id,
                 after_entry_id=entry_id,
                 proposed_change_id=int(cursor.lastrowid),
-            ))
+            )))
             if entry_id is not None:
                 new_sightings.append((entry_id, proposal.page_number))
 
+        changes = [change for _, change in sorted(applied_changes, key=lambda item: item[0])]
         if changes:
             append_revision(
                 conn, parish_id, source_kind=LLM, changes=changes, llm_call_id=call_id,

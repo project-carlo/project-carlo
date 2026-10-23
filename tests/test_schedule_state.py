@@ -667,6 +667,103 @@ def test_a_bulletin_can_modify_one_recurrence_and_add_its_disjoint_sibling(conn)
     assert rebuild_current_schedule(conn)["differing_rows"] == 0
 
 
+def _friday_adoration() -> tuple[dict, dict]:
+    first = {**SUN_9, "event_type": "adoration", "day_of_week": "Friday",
+             "start_time": "11:30 AM", "weeks_of_month": ["first"]}
+    return first, {**first, "weeks_of_month": ["second", "third", "fourth", "fifth"]}
+
+
+def _revision_changes(conn: sqlite3.Connection, revision: int) -> list[tuple]:
+    """(op, seq) of a revision's changes in log order."""
+    return [
+        tuple(r) for r in conn.execute(
+            """SELECT c.op, p.seq FROM schedule_change c
+               JOIN proposed_change p ON p.id = c.proposed_change_id
+               WHERE c.revision = ? ORDER BY c.id""",
+            (revision,),
+        ).fetchall()
+    ]
+
+
+@pytest.mark.parametrize("modify_first", [True, False])
+def test_a_merge_of_disjoint_recurrences_is_applied_whole_in_either_order(conn, modify_first):
+    first, remaining = _friday_adoration()
+    _seed(conn, [first, remaining])
+    ids = {e.weeks_of_month: i for i, e in live_entries(conn, _parish_id(conn)).items()}
+    first_id, remaining_id = ids[1], ids[30]
+    merge = {"op": "modify", "entry_id": first_id,
+             "entry": {**first, "weeks_of_month": None}}
+    delete = {"op": "delete", "entry_id": remaining_id}
+    changes = [merge, delete] if modify_first else [delete, merge]
+    _bulletin(conn, "new", "2026-10-10T12:00:00Z")
+    stats = _run(conn, FakeUpdater(_reply(changes=[
+        *changes, {"op": "add", "entry": first},
+    ])))
+    assert stats["update_changes_applied"] == 2
+    # Stored in the model's order; the late add duplicates the merged slot.
+    assert [p[1:] for p in _proposals(conn)] == [
+        (1, changes[0]["op"], APPLIED, AUTO), (2, changes[1]["op"], APPLIED, AUTO),
+        (3, "add", REJECTED, DUPLICATE),
+    ]
+    # Logged (and folded) with the delete first, each change still tied to its proposal.
+    delete_seq = 2 if modify_first else 1
+    assert _revision_changes(conn, 2) == [("delete", delete_seq), ("modify", 3 - delete_seq)]
+    live = live_entries(conn, _parish_id(conn))
+    assert [e.weeks_of_month for e in live.values()] == [0]
+    assert first_id not in live and remaining_id not in live
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
+def test_a_merge_waiting_on_a_removal_that_fails_is_still_a_duplicate(conn):
+    first, remaining = _friday_adoration()
+    _seed(conn, [first, remaining])
+    ids = {e.weeks_of_month: i for i, e in live_entries(conn, _parish_id(conn)).items()}
+    first_id, remaining_id = ids[1], ids[30]
+    _bulletin(conn, "new", "2026-10-10T12:00:00Z")
+    _run(conn, FakeUpdater(_reply(changes=[
+        {"op": "modify", "entry_id": first_id, "entry": {**first, "weeks_of_month": None}},
+        {"op": "modify", "entry_id": remaining_id, "entry": {**remaining, "note": "Chapel"}},
+        # Already changed by the proposal before it: nothing is removed.
+        {"op": "delete", "entry_id": remaining_id},
+        {"op": "delete", "entry_id": 9999},
+    ])))
+    assert [p[2:] for p in _proposals(conn)] == [
+        ("modify", REJECTED, DUPLICATE), ("modify", APPLIED, AUTO),
+        ("delete", REJECTED, UNKNOWN_ITEM), ("delete", REJECTED, UNKNOWN_ITEM),
+    ]
+    live = live_entries(conn, _parish_id(conn))
+    assert first_id in live
+    assert sorted((e.weeks_of_month, e.note) for e in live.values()) == [
+        (1, None), (30, "Chapel")]
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
+def test_a_merge_in_a_rejected_call_can_be_applied_by_hand_in_either_order(conn):
+    first, remaining = _friday_adoration()
+    _seed(conn, [first, remaining, SUN_9, SUN_11, SAT_5])
+    ids = {e.weeks_of_month: i for i, e in live_entries(conn, _parish_id(conn)).items()
+           if e.event_type == "adoration"}
+    first_id, remaining_id = ids[1], ids[30]
+    others = [i for i in _ids(conn).values() if i not in (first_id, remaining_id)]
+    _bulletin(conn, "b1", "2026-10-10T12:00:00Z")
+    _run(conn, FakeUpdater(_reply(changes=[
+        {"op": "modify", "entry_id": first_id, "entry": {**first, "weeks_of_month": None}},
+        *({"op": "delete", "entry_id": i} for i in others),
+        {"op": "delete", "entry_id": remaining_id},
+    ])))
+    call_id = conn.execute("SELECT id FROM llm_call").fetchone()[0]
+    assert {p[4] for p in _proposals(conn)} == {MASS_DELETE}
+
+    result = apply_proposals(conn, call_id, [1, 5], actor="luke", today=date(2026, 10, 10))
+
+    assert result.applied == [1, 5] and result.skipped == []
+    assert _revision_changes(conn, result.revision) == [("delete", 5), ("modify", 1)]
+    live = live_entries(conn, _parish_id(conn))
+    assert sorted(e.weeks_of_month for e in live.values() if e.event_type == "adoration") == [0]
+    assert len(live) == 4
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
 def test_a_bulletin_is_read_against_the_believed_schedule(conn: sqlite3.Connection) -> None:
     _seed(conn, [SUN_9, SAT_5, CONFESSION])
     ids = _ids(conn)

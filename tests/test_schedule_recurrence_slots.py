@@ -10,7 +10,14 @@ import pytest
 from pdf_extract.db import _migration_files, create_db, migrate
 from pdf_extract.schedule.edits import EditError, edit_entry
 from pdf_extract.schedule.entries import parse_entry
-from pdf_extract.schedule.policy import APPLIED, DUPLICATE, REJECTED, Proposal, decide
+from pdf_extract.schedule.policy import (
+    APPLIED,
+    DUPLICATE,
+    REJECTED,
+    UNKNOWN_ITEM,
+    Proposal,
+    decide,
+)
 from pdf_extract.schedule.store import (
     ADD,
     HUMAN,
@@ -203,14 +210,68 @@ def test_qualifier_modifies_exclude_the_target_but_check_siblings_and_prior_modi
         Proposal(3, "modify", {}, first_id, expanded),
         Proposal(4, "add", {}, entry=REMAINING),
     ], live=live_entries(conn, 1), churches=CHURCHES, today=date(2026, 10, 1), whole_call=None)
-    assert [d.decision for d in decisions] == [REJECTED, APPLIED, APPLIED, REJECTED]
-    assert decisions[0].reason == decisions[3].reason == DUPLICATE
+    # The first expansion waits for the narrowing it overlaps and is applied after it, so
+    # the repeated expansion finds its target already changed.
+    assert [d.decision for d in decisions] == [APPLIED, APPLIED, REJECTED, REJECTED]
+    assert [d.order for d in decisions[:2]] == [1, 0]
+    assert (decisions[2].reason, decisions[3].reason) == (UNKNOWN_ITEM, DUPLICATE)
     with pytest.raises(EditError, match="duplicate"):
         edit_entry(conn, 1, "modify", target_entry_id=first_id, entry=expanded, actor="test")
     edit_entry(conn, 1, "modify", target_entry_id=remaining_id, entry=narrowed, actor="test")
     edit_entry(conn, 1, "modify", target_entry_id=first_id, entry=expanded, actor="test")
     assert {e.weeks_of_month for e in live_entries(conn, 1).values()} == {3, 28}
     assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
+def test_a_waiting_proposal_needs_every_overlap_removed_and_its_removal_targetable(conn):
+    seed(conn, FIRST, REMAINING)
+    ids = {e.weeks_of_month: i for i, e in live_entries(conn, 1).items()}
+    first_id, remaining_id = ids[1], ids[30]
+    live = live_entries(conn, 1)
+    kwargs = {"churches": CHURCHES, "today": date(2026, 10, 1), "whole_call": None}
+
+    def outcome(decisions):
+        return [(d.decision, d.reason, d.order) for d in decisions]
+
+    # An add duplicating two entries waits until both are deleted.
+    assert outcome(decide([
+        Proposal(1, "add", {}, entry=BASE),
+        Proposal(2, "delete", {}, first_id),
+        Proposal(3, "delete", {}, remaining_id),
+    ], live=live, **kwargs)) == [
+        (APPLIED, "auto", 2), (APPLIED, "auto", 0), (APPLIED, "auto", 1)]
+    # Only one of them deleted: the add is still a duplicate.
+    assert outcome(decide([
+        Proposal(1, "add", {}, entry=BASE),
+        Proposal(2, "delete", {}, first_id),
+    ], live=live, **kwargs)) == [(REJECTED, DUPLICATE, None), (APPLIED, "auto", 0)]
+    # A delete the call may not name removes nothing.
+    assert outcome(decide([
+        Proposal(1, "modify", {}, first_id, BASE),
+        Proposal(2, "delete", {}, remaining_id),
+    ], live=live, targetable={first_id}, **kwargs)) == [
+        (REJECTED, DUPLICATE, None), (REJECTED, UNKNOWN_ITEM, None)]
+    # A whole-call rejection overrides any wait.
+    assert outcome(decide([
+        Proposal(1, "modify", {}, first_id, BASE),
+        Proposal(2, "delete", {}, remaining_id),
+    ], live=live, **{**kwargs, "whole_call": "mass_delete"})) == [
+        (REJECTED, "mass_delete", None), (REJECTED, "mass_delete", None)]
+    # An earlier waiting proposal keeps the slot over a later one, and a swap of
+    # overlapping modifies (each waiting on the other) is rejected.
+    assert outcome(decide([
+        Proposal(1, "add", {}, entry={**BASE, "note": "first"}),
+        Proposal(2, "delete", {}, first_id),
+        Proposal(3, "add", {}, entry={**BASE, "note": "second"}),
+        Proposal(4, "delete", {}, remaining_id),
+    ], live=live, **kwargs)) == [
+        (APPLIED, "auto", 2), (APPLIED, "auto", 0), (REJECTED, DUPLICATE, None),
+        (APPLIED, "auto", 1)]
+    expanded = {**FIRST, "weeks_of_month": ["first", "second"]}
+    assert outcome(decide([
+        Proposal(1, "modify", {}, first_id, expanded),
+        Proposal(2, "modify", {}, remaining_id, {**REMAINING, "weeks_of_month": ["first"]}),
+    ], live=live, **kwargs)) == [(REJECTED, DUPLICATE, None), (REJECTED, DUPLICATE, None)]
 
 
 def test_migration_rekeys_history_and_current_without_changing_content_or_references(tmp_path):

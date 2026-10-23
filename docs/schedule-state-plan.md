@@ -207,7 +207,7 @@ CREATE TABLE schedule_revision (
 CREATE TABLE proposed_change (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     llm_call_id INTEGER NOT NULL REFERENCES llm_call(id) ON DELETE CASCADE,
-    seq INTEGER NOT NULL,             -- position in the model's answer; decided in this order
+    seq INTEGER NOT NULL,             -- position in the model's answer; decided in this order (see Decision policy)
     op TEXT NOT NULL CHECK (op IN ('add', 'modify', 'delete')),
     raw_json TEXT NOT NULL,           -- the proposal as the model wrote it
     -- modify, delete: the entry id as the model gave it. Not a foreign key: it
@@ -494,6 +494,20 @@ proposals before it left it, and is **rejected** when:
 Every other proposal is **applied** (`auto`): adds, modifies and deletes,
 weekly or dated. A call with no applied proposals writes no revision.
 
+One exception to deciding strictly in `seq` order keeps a merge or swap whole
+whichever order the model lists it in (say first-Friday Adoration modified to
+every Friday, and the other-Fridays entry at the same start deleted). An add or
+modify that is a `duplicate` only of live entries that later proposals in the
+call modify or delete **waits**: it is checked again after each later proposal
+is applied, applied as soon as it passes, and otherwise rejected as a
+`duplicate` once nothing it duplicates can still be removed. A removal that is
+itself rejected removes nothing, so it can't let a duplicate through, and a
+duplicate of an entry the call added never waits. Waiting proposals are retried
+in `seq` order, so an earlier one keeps the slot over a later one. Proposals
+keep their `seq`; the revision logs applied changes in the order they were
+applied (a waiting one after the removals it waited for), which is the order
+they fold and replay in.
+
 ### Which week a bulletin is for
 
 A call's week is `bulletin_week` of the `published_date` it read, with the
@@ -532,8 +546,9 @@ policy rejected or the report flagged:
 
 - **apply** a rejected call's proposals, all of them or chosen `seq`s. Each
   is checked against the current schedule with the per-proposal rules above
-  (the whole-call rules are what the person is overriding), and any that fail
-  are reported and skipped. The log rows carry the `proposed_change_id` they
+  (the whole-call rules are what the person is overriding), in `seq` order
+  with the same wait for later removals, and any that fail are reported and
+  skipped. The log rows carry the `proposed_change_id` they
   apply; the proposals' own decisions stay as the policy made them.
 - **add**, **modify** or **delete** entries directly, with the same checks.
 
