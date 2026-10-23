@@ -288,10 +288,14 @@ this diocese shows otherwise.
 
 Decisions that apply to more than one record, and who made them.
 
-- **Eastern Catholic churches** (Ruthenian: Archeparchy of Pittsburgh; Ukrainian:
-  Archeparchy of Philadelphia; the Romanian church in Hermitage) are excluded as
-  `other-jurisdiction` once each one's jurisdiction is read, as in every other diocese here
-  (orchestrator, 2026-10-23).
+- **Eastern Catholic churches** (eight Ruthenian: Metropolitanate of Pittsburgh; one
+  Ukrainian, Annunciation, Ramey: Eparchy of St. Josaphat in Parma, per each GCatholic page's
+  "Jurisdiction:" line) are excluded as `other-jurisdiction`, as in every other diocese here.
+  The "Romanian Byzantine" church in Hermitage is Orthodox (`not-catholic`) (orchestrator,
+  2026-10-23).
+- **A school chapel Mass a parish bulletin lists** (Cathedral Prep, Erie: weekdays 7:45 in the
+  St. Patrick bulletin) goes to `open/` until a source says the public may attend; a college
+  campus Mass follows the campus rule below (orchestrator, 2026-10-23).
 - **Shared pastors and partnering decrees don't make shared bulletins.** A partnership
   (Erie city, St. Marys, Lucinda/Crown/Fryburg, Meadville/Frenchtown, ...) is one row only
   when a current masthead covers each partner; a partner with its own live channel and
