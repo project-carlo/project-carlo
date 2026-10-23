@@ -161,6 +161,12 @@ keep it current rather than a log.
   byte-identical files (Apollo/East Vandergrift): compare MD5s, record both slugs on one row.
   evcatholic.org (Wix) challenges curl on its homepage, but `/bulletins` answers.
 
+- **John Patrick Publishing is live here:** a "Current Bulletin" link to
+  `jppc.net/onlinebulletins/<id>template.pdf` redirects to `church-bulletin.org/<parish-slug>`,
+  which lists `/bulletin/<slug>/<yyyy-mm-dd>.pdf`; unpinned `page-pdfs` on it picks the newest.
+  Recent issues may have no text layer (render page 1; quote an older issue). Discover Mass can
+  run a week ahead of a parish's own repost: compare newest dates before choosing a provider.
+
 Carried over from Altoona-Johnstown, Harrisburg, Scranton and Allentown (2026-10); correct it
 as this diocese shows otherwise.
 
