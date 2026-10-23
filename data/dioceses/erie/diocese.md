@@ -156,9 +156,11 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   stelizabethsmethport.org, ststanserie.org, stgregoryparish.info): compare the two before
   choosing a provider. `dioceseoferie.org/<name>/` is the same host (Holy Rosary, Johnsonburg 403s
   probe url; St. Charles, New Bethlehem shows no bulletin links).
-- **A diocese-hosted `weeklybulletin.php` page can repost a partner's ParishesOnline issue**
-  byte for byte (Our Mother of Sorrows = St. Stanislaus 14/1710, md5 over four weeks): compare
-  hashes before giving the page its own row.
+- **A diocese-hosted `weeklybulletin.php` page can repost a partner's ParishesOnline issue or
+  a sister site's PDF** byte for byte (Our Mother of Sorrows = St. Stanislaus 14/1710, md5 over
+  four weeks; St. Thomas Corry / St. Teresa): compare hashes before giving the page its own row.
+  Conversely, when the container is an image-only ad edition, the site's text-layer PDF is the
+  better `other` source; keep the container id in `publication` (St. Thomas, Corry).
 - **ParishesOnline** orgs embedded on parish sites: st-john-the-baptist-church-16504 (on both
   stjohn-holyrosary-erie.org and holytrinityrc.org), st-stanislaus-our-mother-of-sorrows-churches,
   sacred-heart-church-16508, st-mary-of-grace-st-agatha-st-brigid-churches, st-mary-sacred-heart-
