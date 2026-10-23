@@ -144,7 +144,11 @@ Greensburg's playbook next door.
   issues have a text layer until mid-August 2026 and are image-only from 2026-08-30: quote an
   older issue, render the newest.
 - **Institute of Christ the King:** mostpreciousbloodparish.org redirects to
-  institute-christ-king.org/pittsburgh-home; look there for Most Precious Blood's bulletin.
+  institute-christ-king.org/pittsburgh-home; Most Precious Blood self-hosts its bulletin PDF
+  there (406 to bare curl; send a browser User-Agent). LPi org
+  most-precious-blood-of-jesus-parish is Christ Our Savior's container 14/1701, not MPB's.
+- **Scouts: run `coverage` without `--link`.** `--link` writes roster ids into every batch's
+  records; the orchestrator runs it at the end.
 - **A ParishesOnline org titled "PERMANENTLY CLOSED"** (St. Cecilia, Rochester) is a dead
   predecessor account, not a church closure: the live bulletin still lists Masses there. A
   GCatholic entry named for a merged parish in another town can be a closed predecessor's
