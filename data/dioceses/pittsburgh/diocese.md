@@ -137,6 +137,10 @@ Greensburg's playbook next door.
   older issue, render the newest.
 - **Institute of Christ the King:** mostpreciousbloodparish.org redirects to
   institute-christ-king.org/pittsburgh-home; look there for Most Precious Blood's bulletin.
+- **diopitt.org history pages date closures** of predecessor churches ("closed in 2019", St.
+  Alphonsus page on Epiphany, Boyers) while the closed church's own page can still say "remains
+  open": quote the dated one and record the disagreement. diopitt.org answers 403 to `recheck`;
+  read it with `visit.py`.
 - **Web search:** `visit.py "https://duckduckgo.com/html/?q=..." --text` works (the plain
   `duckduckgo.com/?q=` page returns only the region menu); results begin after "Past Year".
   It finds diopitt.org history pages and church-bulletin.org issues.
