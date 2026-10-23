@@ -149,7 +149,9 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   stlawrencealbion.org, cpoecc.org, stbernardcatholic.org, stthomastheapostle.church, ...; footer
   "Diocese of Erie 429 East Grandview Blvd."). The page lists one PDF per issue at
   `images/weeklybulletin/<md5>.pdf`: the file name carries no date, the link text and `title` do
-  ("October 11, 2026"); `scratch/map-erie/tools/weeklybulletin_issues.sh <site>` lists them. Check how far behind the page runs (Albion's newest on 2026-10-23 was 11
+  ("October 11, 2026"); `scratch/map-erie/tools/weeklybulletin_issues.sh <site>` lists them. A `page-pdfs <site>/weeklybulletin.php` recipe passes `fetch:check`
+  (St. Lawrence, Albion). Not every such page is the bulletin: hcsjchurches.org's holds only
+  faith-formation fliers. Check how far behind the page runs (Albion's newest on 2026-10-23 was 11
   October). Some of these sites also embed a ParishesOnline org (hcsjchurches.org,
   stelizabethsmethport.org, ststanserie.org, stgregoryparish.info): compare the two before
   choosing a provider. `dioceseoferie.org/<name>/` is the same host (Holy Rosary, Johnsonburg 403s
@@ -238,7 +240,8 @@ this diocese shows otherwise.
   states the building no longer serves for worship.
 - **Geocoding:** Nominatim answers (generic User-Agent `project-carlo-diocese-research`, ~1 request
   a second); Overpass resets connections. GCatholic Plus Codes are usually on the building; the
-  directory's locator pins are the diocese's.
+  directory's locator pins are the diocese's and can sit on a former church (St. John,
+  Girard: the pin is on the relegated Olin Ave building).
 - **Pin a recipe** for template sites after `fetch:check` (`page-pdfs <site>/weeklybulletin.php`),
   and check `source_url` is this week's issue, not a sidebar PDF.
 
