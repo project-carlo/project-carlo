@@ -6,9 +6,9 @@ line2: ''
 city: Moon Township
 state: PA
 postal_code: '15108'
-latitude: 40.5184013
-longitude: -80.1667247
-coordinates_from: diocese-directory
+latitude: 40.5153751
+longitude: -80.2175524
+coordinates_from: osm-node
 name_verified: true
 address_verified: true
 roster: ['gcatholic:24335', 'directory:most-sacred-heart-of-jesus-parish/3', 'massfinder:31996']
@@ -38,6 +38,19 @@ evidence:
   seen: 2026-10-23
   note: ParishesOnline org address One Parish Pl, Moon Township, PA 15108; coordinates 40.521668, -80.164456,
     about 350 m from the Mass Finder pin.
+- url: https://www.openstreetmap.org/node/2570115754
+  seen: 2026-10-23
+  note: OpenStreetMap node 2570115754 is named Saint Margaret Mary Catholic Church and tagged amenity=place_of_worship,
+    religion=christian. The raw API returns latitude 40.5153751, longitude -80.2175524, about 21 m from
+    GCatholic's Plus Code position. Used this named worship-site node for coordinates.
+- url: https://www.google.com/maps/place/?q=place_id:ChIJV1bFRrpdNIgRSoKtFK9Jjxs
+  seen: 2026-10-23
+  note: 'Google Maps search for St Margaret Mary Church, 1 Parish Place, Moon Township resolved to St
+    Margaret Mary Church - Most Sacred Heart of Jesus Parish. The listing shows 1 Parish Pl, Coraopolis,
+    PA 15108, mshj.org, phone (412) 264-2573, and place coordinates 40.5153233, -80.2174036. Inspected
+    the map: the church pin is on Parish Place beside Beaver Grade Road and Sharon Road. This is within
+    14 m of GCatholic and within 14 m of the OpenStreetMap node; the previously selected Mass Finder pin
+    is about 4.3 km east.'
 promoted: 2026-10-23
 ---
 
@@ -47,4 +60,4 @@ Yes, current. The 18 October 2026 Most Sacred Heart of Jesus bulletin (container
 
 ## Name and address
 
-The bulletin masthead, the diocese directory ('One Parish Place') and GCatholic 24335 ('1 Parish Pl.') agree on the address, Moon Township, PA 15108 (the Mass Finder files the city as Coraopolis). Coordinates disagree: GCatholic's Plus Code (40.51531, -80.21731) is about 4.6 km west of the other sources, so it was not used. Followed the Mass Finder pin (40.51840, -80.16672), which sits within 350 m of the ParishesOnline org's coordinates (40.52167, -80.16446).
+The bulletin masthead, the diocese directory ('One Parish Place') and GCatholic 24335 ('1 Parish Pl.') agree on the address, Moon Township, PA 15108 (the Mass Finder files the city as Coraopolis). Coordinates were corrected on 2026-10-23 after checking the named church in Google Maps and OpenStreetMap. Google Maps identifies the church at 1 Parish Pl, with the parish website and phone, at 40.5153233, -80.2174036; the map places it on Parish Place beside Beaver Grade Road and Sharon Road. OpenStreetMap node 2570115754 names Saint Margaret Mary Catholic Church at 40.5153751, -80.2175524, within about 14 m of Google's pin and about 21 m of GCatholic's Plus Code (40.5153125, -80.2173125). The OpenStreetMap node supplies the stored coordinates. The Mass Finder pin (40.5184013, -80.1667247) is about 4.3 km east of the church, and the ParishesOnline org's coordinates (40.521668, -80.164456) are also east of the site. Their proximity to each other had incorrectly been taken as confirmation; both are rejected after checking the church itself. The roster snapshots retain their original source values.
