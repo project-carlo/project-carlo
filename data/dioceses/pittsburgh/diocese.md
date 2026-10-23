@@ -59,7 +59,8 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
   Cross Monastery (47063), the Pittsburgh Oratory (60863, St. Philip Neri) and St. Anthony
   shrine (24219 = St. Anthony Chapel, Troy Hill). Its `history` field gives merger dates
   ("merged to All Saints 2021.07.01") but never says a building closed except for its four
-  "Former Church" entries. It lists St. Maria Goretti three times (24336-24338). Strong on
+  "Former Church" entries. It lists St. Maria Goretti three times (24336-24338): the closed Bloomfield and
+  Garfield buildings of that merged parish, named for the parish; identify each by address. Strong on
   addresses; weak on closures.
 - **Clusters / families of parishes:** none above the parish. The predecessor list
   (https://diopitt.org/alphabetical-list-of-current-and-predecessor-parishes, read 2026-10-23,
