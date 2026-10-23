@@ -494,7 +494,7 @@ proposals before it left it, and is **rejected** when:
 Every other proposal is **applied** (`auto`): adds, modifies and deletes,
 weekly or dated. A call with no applied proposals writes no revision.
 
-One exception to deciding strictly in `seq` order keeps a merge or swap whole
+One exception to deciding strictly in `seq` order keeps a merge whole
 whichever order the model lists it in (say first-Friday Adoration modified to
 every Friday, and the other-Fridays entry at the same start deleted). An add or
 modify that is a `duplicate` only of live entries that later proposals in the
@@ -503,7 +503,8 @@ is applied, applied as soon as it passes, and otherwise rejected as a
 `duplicate` once nothing it duplicates can still be removed. A removal that is
 itself rejected removes nothing, so it can't let a duplicate through, and a
 duplicate of an entry the call added never waits. Waiting proposals are retried
-in `seq` order, so an earlier one keeps the slot over a later one. Proposals
+in `seq` order, so an earlier waiting proposal gets the first retry for the same
+slot. Circular dependencies where no proposal can apply remain rejected. Proposals
 keep their `seq`; the revision logs applied changes in the order they were
 applied (a waiting one after the removals it waited for), which is the order
 they fold and replay in.

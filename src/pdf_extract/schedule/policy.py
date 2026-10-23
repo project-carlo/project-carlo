@@ -204,7 +204,7 @@ def check_in_order(
     """Check and apply (op, target, raw entry) proposals in the order given; one outcome each.
 
     Each is checked against the schedule as the proposals before it left it, with
-    one exception, so that a merge or swap the model lists in either order is kept
+    one exception, so that a merge the model lists in either order is kept
     whole: an add or modify rejected only as a `duplicate` of live entries that later
     proposals in the list modify or delete waits. It is checked again after each
     later proposal is applied, applied as soon as it passes (after the removals it
@@ -212,7 +212,8 @@ def check_in_order(
     reason once none of what it duplicates can still be removed. Removals that are
     rejected (unknown, not targetable) remove nothing, so a waiting proposal that
     still duplicates is rejected as before. Waiting proposals are retried in list
-    order, so an earlier one keeps precedence over a later one for the same slot.
+    order, so an earlier waiting proposal gets the first retry for the same slot.
+    Circular dependencies where no proposal can apply remain rejected.
     """
     outcomes: list[Outcome | None] = [None] * len(proposals)
     waiting: dict[int, Outcome] = {}
