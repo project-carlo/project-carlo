@@ -131,6 +131,10 @@ Greensburg's playbook next door.
 - **John Patrick Publishing** (church-bulletin.org/<slug>/, `/bulletin/<slug>/<yyyy-mm-dd>.pdf`)
   prints Saints Francis and Clare (`saints-francis-clare-parish-chicora-pa-16025`).
   `church-bulletin.org/<any-slug>` answers 200, so only a listing with PDFs is a channel.
+  The parish site's own bulletin link (`church-bulletin.org/<numeric id>`, redirecting to the
+  listing) is what confirms a listing is the parish's channel. Saints Francis and Clare's
+  issues have a text layer until mid-August 2026 and are image-only from 2026-08-30: quote an
+  older issue, render the newest.
 - **Institute of Christ the King:** mostpreciousbloodparish.org redirects to
   institute-christ-king.org/pittsburgh-home; look there for Most Precious Blood's bulletin.
 - **Web search:** `visit.py "https://duckduckgo.com/html/?q=..." --text` works (the plain
