@@ -176,7 +176,8 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   file as the Discover Mass download (Our Lady of Peace: same size, same bulletin number 3518):
   compare size and number, and use `discover_mass` with the slug. `recheck` finds quotes from
   the issue PDF cited under the church page URL, but not the cover-class number or page
-  markup: put those in a note. `fetch:check` reports issue date `unknown` when the masthead
+  markup: put those in a note. Page-1 mastheads often extract garbled: quote a page-2
+  schedule line instead. `fetch:check` reports issue date `unknown` when the masthead
   date is split by the layout, and ParishesOnline issues posted early show as `future`;
   neither is a failure.
 - **Other hosts seen:** Wix (`_files/ugd/` PDFs; a blog post's file-upload-viewer attachment
