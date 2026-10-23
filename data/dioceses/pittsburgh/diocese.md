@@ -141,7 +141,9 @@ Greensburg's playbook next door.
 - **diopitt.org history pages date closures** of predecessor churches ("closed in 2019", St.
   Alphonsus page on Epiphany, Boyers) while the closed church's own page can still say "remains
   open": quote the dated one and record the disagreement. diopitt.org answers 403 to `recheck`;
-  read it with `visit.py`.
+  read it with `visit.py` (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a`, and a long
+  timeout: hsplc.org took over two minutes). Find a successor parish's history page by
+  DuckDuckGo (holy-spirit-new-castle dates five closures).
 - **Web search:** `visit.py "https://duckduckgo.com/html/?q=..." --text` works (the plain
   `duckduckgo.com/?q=` page returns only the region menu); results begin after "Past Year".
   It finds diopitt.org history pages and church-bulletin.org issues.
