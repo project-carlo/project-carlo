@@ -117,7 +117,8 @@ Greensburg's playbook next door.
   is Winslow, Maine). Merged parishes keep one org per former church, all resolving to one
   container: record every `po-org`/`lpi` id on the one row (Corpus Christi, Bridgeville).
   A parish's eCatholic site can repost the container PDF a week later (Corpus Christi, 21066):
-  same bulletin, not a second one. Image covers put the Mass schedule on page 3 (Our Lady of
+  same bulletin, not a second one. These archives are byte-identical to the container PDFs and
+  the cheapest way to grep a year of issues (Divine Grace, St. Mark, 2026-10). Image covers put the Mass schedule on page 3 (Our Lady of
   Hope); `probe pdf --pages N` returns pages 1..N, so pick the page with `jq`.
 - **`fetch:check` on ParishesOnline** reports freshness `future` about two days before the
   Sunday and `publication_identity: unverified` (no expected identity given): read the
