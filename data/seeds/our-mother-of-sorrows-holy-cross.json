@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-mother-of-sorrows-holy-cross",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:53Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:30:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches, Our Mother of Sorrows and Holy Cross. Weekend, weekday, Confession and Wednesday Adoration times agree in the three readable bulletins. The first-Saturday Mass at St. John's on the Ridge and the All Souls cemetery events are left out as held elsewhere. Open: whether first-Saturday Adoration at OMOS ends at 3:30 PM (schedule box) or 3:00 PM (Oct 3 calendar).",
   "blocked_reason": null,
   "bulletins": [
@@ -1186,9 +1186,24 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-mother-of-sorrows",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1234,7 +1249,7 @@
           "page": 1
         }
       ],
-      "rationale": "R28: the schedule box prints 1-3:30PM in all three bulletins read (newest included); the Sept 27 calendar for Oct 3, a first Saturday, prints 1-3:00PM against its own box. The newest week holds no first Saturday (R11). Leaning 3:30 per C8: the box is the regular schedule, three bulletins agree, and history read Oct 3 as 'Time adjusted for this date'.",
+      "rationale": "R28: the schedule box prints 1-3:30PM in all three bulletins read (newest included); the Sept 27 calendar for Oct 3, a first Saturday, prints 1-3:00PM against its own box. The newest week holds no first Saturday (R11). Leaning 3:30 per C8: the box is the regular schedule, three bulletins agree, and history read Oct 3 as 'Time adjusted for this date'.\n\nReview 2026-10-22: Keep first-Saturday 1–3:30 PM Adoration at Our Mother of Sorrows. The older Oct 3 1–3 PM listing is a dated exception, not evidence of a permanent change.",
       "question": "First-Saturday Adoration at Our Mother of Sorrows: 1:00-3:30 PM or 1:00-3:00 PM?",
       "options": [
         {
@@ -1281,7 +1296,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s18",

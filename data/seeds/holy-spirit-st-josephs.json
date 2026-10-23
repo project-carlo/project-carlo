@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-spirit-st-josephs",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:17Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:28:45Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches, Holy Spirit (Webster) and St. Joseph's (Penfield). The weekend, weekday, Confession and daily Holy Spirit Adoration times agree in the three readable bulletins. A dated Relic Tour Mass at St. Joseph's on Oct 28 is included. Open: whether the Friday 8 PM Holy Hour, which sits inside the Friday Adoration hours, gets its own slot.",
   "blocked_reason": null,
   "bulletins": [
@@ -1945,9 +1945,22 @@
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, Rosaries and Prayers with Knights of Columbus"
+      },
       "page": 8,
       "sources": [
         {
@@ -1969,7 +1982,7 @@
           "said": "Friday - 3:00 pm Divine Mercy Chaplet; 8:00 pm Holy Hour, Rosaries, and Prayers w/ K of C"
         }
       ],
-      "rationale": "R30: POLICY calls a Holy Hour Adoration, but this one falls inside the Friday 10:00 AM-9:00 PM Adoration slot already included, so it adds no hours. No end time is printed. History has it as its own event in 1 of 4 bulletins and as a note on the Friday Adoration in the others. Leaning to leave it out as covered.",
+      "rationale": "R30: POLICY calls a Holy Hour Adoration, but this one falls inside the Friday 10:00 AM-9:00 PM Adoration slot already included, so it adds no hours. No end time is printed. History has it as its own event in 1 of 4 bulletins and as a note on the Friday Adoration in the others. Leaning to leave it out as covered.\n\nReview 2026-10-22: Do not add a second Adoration slot inside the existing Friday 10 AM–9 PM interval. Preserve the 8 PM Holy Hour in a note if useful.",
       "question": "Add a Friday 8:00 PM Holy Hour at Holy Spirit as its own Adoration slot?",
       "options": [
         {
@@ -1995,7 +2008,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s31",

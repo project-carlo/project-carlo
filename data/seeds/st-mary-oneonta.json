@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-oneonta",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:48Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:50:12Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "One-church parish with a clear Mass Schedule box on page 3: Mon-Wed 8:30 AM, Sat 5:00 PM vigil, Sun 10:30 AM, Saturday confession 4:15-4:45 PM; all match history. The Oct 12 daily Mass is cancelled for Columbus Day. One open question: a one-time Holy Hour and Night Prayer on Oct 21 with no stated location in the bulletin.",
   "blocked_reason": null,
   "bulletins": [
@@ -396,9 +396,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oneonta",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-21",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour and Night Prayer"
+      },
       "page": 1,
       "sources": [
         {
@@ -419,7 +432,7 @@
           "page": 1
         }
       ],
-      "rationale": "Printed once in the page 1 headlines with no place or end time (website says in the Church). It is a one-off dated Holy Hour; unclear whether it is Eucharistic Adoration or a prayer service. Not in earlier bulletins.",
+      "rationale": "Printed once in the page 1 headlines with no place or end time (website says in the Church). It is a one-off dated Holy Hour; unclear whether it is Eucharistic Adoration or a prayer service. Not in earlier bulletins.\n\nReview 2026-10-22: Include Oct 21, 6:30 PM Holy Hour and Night Prayer as Adoration under the explicit POLICY definition. It has now passed.",
       "question": "Add a one-time Holy Hour and Night Prayer on Wed Oct 21 at 6:30 PM as an Adoration event at St. Mary's?",
       "options": [
         {
@@ -445,7 +458,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-the-annunciation-queensbury",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:37:53Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:11:17Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Weekend Masses (Sat 4 PM, Sun 8 AM and 11:30 AM), Saturday 3:15-3:45 PM Reconciliation and Friday 7-8 PM Adoration are printed clearly on page 1 of the newest bulletin. Tuesday 7:30 AM Mass is weekly (dated in three bulletins). The Monday 7:30 AM Mass is not printed in the newest bulletin, which says no Mass on Monday Oct 12 (Columbus Day); recorded that cancellation and left the weekly Monday slot as a question. Website holy-day times (7:30 AM and 7 PM) have no dates and are left out.",
   "blocked_reason": null,
   "bulletins": [
@@ -389,9 +389,22 @@
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -430,7 +443,7 @@
           "page": 2
         }
       ],
-      "rationale": "Monday 7:30 AM Mass is dated in the two older bulletins (Sep 28, Oct 5) and the website lists it weekly, but the newest bulletin prints no Monday Mass, only 'No Mass at OLA' for the Columbus Day Monday. Policy asks a human to confirm a slot the newest bulletin does not print.",
+      "rationale": "Monday 7:30 AM Mass is dated in the two older bulletins (Sep 28, Oct 5) and the website lists it weekly, but the newest bulletin prints no Monday Mass, only 'No Mass at OLA' for the Columbus Day Monday. Policy asks a human to confirm a slot the newest bulletin does not print.\n\nReview 2026-10-22: Include weekly Monday 7:30 AM Mass; keep the explicit Oct 12 cancellation. R18 covers a holiday interruption.",
       "question": "Keep a weekly Monday 7:30 AM Mass at Our Lady of the Annunciation?",
       "options": [
         {
@@ -456,7 +469,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-pauls-webster",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:28:19Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:11:08Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
   "summary": "St. Paul's has one church (st-pauls) with a clear front-page schedule: Sat 4:00 PM, Sun 9:00 and 11:00 AM, Mon-Thu 8:30 AM, Wed 9:00 AM Adoration, Sat 2:00-3:00 PM Confession. The newest bulletin cancels the Tue Oct 13 daily Mass and lists a 10:00 AM Memorial Mass that day (question: public or private?). The Nov 2 All Souls Mass of Remembrance at 6:30 PM appears only in the two prior bulletins (question). The Oct 17 4:00 PM Mass with Bishop Bonnici is the regular Saturday Mass and is not recorded separately.",
   "blocked_reason": null,
   "bulletins": [
@@ -641,8 +641,8 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
+      "decision": "exclude",
+      "status": "settled",
       "entry": null,
       "page": 2,
       "sources": [
@@ -659,7 +659,7 @@
           "page": 2
         }
       ],
-      "rationale": "The calendar lists a 10:00 AM Memorial Mass on the day the daily Mass is cancelled. It does not say whether it is open to the public or a private family Mass (e.g. for one deceased person); policy excludes private Masses. The calendar entry has a definite date and time at the parish church, so I lean to include.",
+      "rationale": "The calendar lists a 10:00 AM Memorial Mass on the day the daily Mass is cancelled. It does not say whether it is open to the public or a private family Mass (e.g. for one deceased person); policy excludes private Masses. The calendar entry has a definite date and time at the parish church, so I lean to include.\n\nDelegated review (owner authorized best judgment on 2026-10-22): Exclude this unexplained Memorial Mass from the public schedule because general attendance is not established. This is an evidence judgment, not a finding that the Mass was private. Preserve the separately settled daily-Mass cancellation; the date having passed does not decide access.",
       "question": "Include the Tuesday Oct 13, 10:00 AM Memorial Mass as a public Mass?",
       "options": [
         {
@@ -685,13 +685,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pauls",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance, All Souls Day"
+      },
       "page": null,
       "sources": [
         {
@@ -719,7 +736,7 @@
           "page": 4
         }
       ],
-      "rationale": "Printed in the Oct 4 and Sept 27 bulletins (A Rose to Remember article), invited to all parishioners, but the newest bulletin (Oct 11) does not print it. Nov 2, 2026 is a Monday. History stored it at 18:30.",
+      "rationale": "Printed in the Oct 4 and Sept 27 bulletins (A Rose to Remember article), invited to all parishioners, but the newest bulletin (Oct 11) does not print it. Nov 2, 2026 is a Monday. History stored it at 18:30.\n\nReview 2026-10-22: Include Nov 2, 6:30 PM All Souls Mass at St. Paul’s under R19, supported by the older invitation.",
       "question": "Add a dated All Souls Day Mass of Remembrance on Nov 2, 2026 at 6:30 PM?",
       "options": [
         {
@@ -745,7 +762,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

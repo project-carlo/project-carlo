@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joan-of-arc-menands",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:48Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:49:58Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish; the Masses box and masthead agree in all three bulletins: daily 8 AM, Sat 4 PM vigil, Sun 9 AM and 10:15 AM Black Apostolate Mass, Sat 3:30 PM Reconciliation. One question: the Oct 17 intentions list shows a Saturday 3:00pm line, probably a copy of the Oct 10 special Mass (Cardinal Turkson).",
   "blocked_reason": null,
   "bulletins": [
@@ -591,9 +591,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-menands",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -609,7 +622,7 @@
           "said": "His Eminence Peter Cardinal Turkson will be celebrating the Holy Mass on Saturday, October 10, 2026, at 3:00PM."
         }
       ],
-      "rationale": "The Mass-intentions list for Saturday Oct 17 shows a blank 3:00pm line, like the Oct 10 line for Cardinal Turkson's special 3 PM Mass. The regular vigil is 4:00pm everywhere else, so this is probably a copied template line, but the bulletin does not say so.",
+      "rationale": "The Mass-intentions list for Saturday Oct 17 shows a blank 3:00pm line, like the Oct 10 line for Cardinal Turkson's special 3 PM Mass. The regular vigil is 4:00pm everywhere else, so this is probably a copied template line, but the bulletin does not say so.\n\nReview 2026-10-22: Exclude the blank Oct 17 3 PM line as a probable copy of the prior week’s special service. It conflicts with the standing 4 PM vigil; the date has passed.",
       "question": "Is there a 3:00 PM Mass on Saturday, Oct 17 (instead of or besides the 4:00 PM vigil)?",
       "options": [
         {
@@ -635,7 +648,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }

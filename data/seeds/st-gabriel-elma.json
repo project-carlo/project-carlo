@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-gabriel-elma",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:34:08Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:14:54Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Weekday (8:00 and 11:30), Saturday (8:00, 4:00 and 6:00 PM) and Sunday (6, 8, 10 and 12) Masses, weekday and Saturday confession times, and First Friday confession and adoration are all in the page 2 box of every bulletin. First Friday adoration starts 'immediately following' the 11:30 Mass with no clock time, so it is set to 12:00 by policy. Oct 12 Columbus Day: 11:30 explicitly cancelled, 9:00 added, and one open question on whether the 8:00 is also cancelled; Nov 3 Mass of Remembrance included.",
   "blocked_reason": null,
   "bulletins": [
@@ -1730,9 +1730,22 @@
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day; moved to 9:00 AM"
+      },
       "page": 3,
       "sources": [
         {
@@ -1742,7 +1755,7 @@
           "said": "Monday, October 12, 2026 COLUMBUS DAY 9:00AM ... NO 11:30AM Mass Today (no 8:00AM Mass listed)"
         }
       ],
-      "rationale": "The Columbus Day listing shows only a 9:00 AM Mass and says the 11:30 is cancelled, but never says the usual 8:00 AM Mass is cancelled; it looks moved to 9:00. The Monday 7:30 AM confession is also not mentioned and is left alone.",
+      "rationale": "The Columbus Day listing shows only a 9:00 AM Mass and says the 11:30 is cancelled, but never says the usual 8:00 AM Mass is cancelled; it looks moved to 9:00. The Monday 7:30 AM confession is also not mentioned and is left alone.\n\nReview 2026-10-22: Do not infer an Oct 12 cancellation of the 8 AM Mass. The bulletin explicitly cancels 11:30 only. R17 applies; the date has passed.",
       "question": "Is the regular 8:00 AM Mass cancelled on Monday, Oct 12 (replaced by 9:00 AM)?",
       "options": [
         {
@@ -1768,7 +1781,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s29",

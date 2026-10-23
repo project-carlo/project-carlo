@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-catherine-of-siena-ithaca",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:29:32Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:11:15Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Standard weekly schedule (Sat 5 PM vigil, Sun 9 AM, Tue/Thu/Fri 9 AM, Sat confession 3:30-4:30, Wed adoration 7:30-8:30 PM) printed in the newest bulletin (10/11) and matching history. Added the dated Nov 2 7 PM Mass of Remembrance. The First Saturday 9 AM Mass is at Immaculate Conception (not a listed church) and Kendal/Longview Masses are off-site, so all are excluded.",
   "blocked_reason": null,
   "bulletins": [
@@ -541,9 +541,24 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-ithaca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -559,7 +574,7 @@
           "page": 2
         }
       ],
-      "rationale": "The newest bulletin says the First Saturday 9 AM Mass is at Immaculate Conception, a different church that is not in the known-churches list, so policy says leave it out; history put it under St. Catherine (2 of 4 bulletins). Immaculate Conception evidently has its own Mass, so the church list may need review.",
+      "rationale": "The newest bulletin says the First Saturday 9 AM Mass is at Immaculate Conception, a different church that is not in the known-churches list, so policy says leave it out; history put it under St. Catherine (2 of 4 bulletins). Immaculate Conception evidently has its own Mass, so the church list may need review.\n\nReview 2026-10-22: Exclude the Immaculate Conception event from St. Catherine’s seed. R21–R23 distinguish another parish’s church from a missing church.",
       "question": "First Saturday 9:00 AM Mass is held at Immaculate Conception, not St. Catherine. Leave it out?",
       "options": [
         {
@@ -587,7 +602,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s10",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-jude-st-michael-wynantskill",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:34:31Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:37:02Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two churches, St. Jude (Wynantskill) and St. Michael (Troy). Weekend, weekday and Adoration times print identically in the Mass schedule box of all three bulletins. The newest bulletin adds cancellations for Oct 12 and Oct 15, and a Veterans Day Mass at St. Jude on Nov 11 that replaces the 8:15 AM Mass. Open: which church holds the Saturday 3:00 Reconciliation (Sept 27 said St. Jude, the newer two say St. Michael).",
   "blocked_reason": null,
   "bulletins": [
@@ -845,9 +845,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -892,7 +905,7 @@
           "page": 1
         }
       ],
-      "rationale": "R28: the Sept 27 bulletin gives St. Jude, the Oct 4 and Oct 11 bulletins give St. Michael, and the website names no church. Leaning to the newest two (and history: Oct 4 and 11 read St. Michael, Sept 27 St. Jude), which may be a corrected typo.",
+      "rationale": "R28: the Sept 27 bulletin gives St. Jude, the Oct 4 and Oct 11 bulletins give St. Michael, and the website names no church. Leaning to the newest two (and history: Oct 4 and 11 read St. Michael, Sept 27 St. Jude), which may be a corrected typo.\n\nReview 2026-10-22: Choose St. Michael for Saturday 3–3:40 PM Reconciliation. Both newer bulletins explicitly name it; one older issue names St. Jude.",
       "question": "Which church holds the Saturday 3:00-3:40 PM Reconciliation?",
       "options": [
         {
@@ -935,7 +948,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s16",

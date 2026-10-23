@@ -69,6 +69,12 @@ and the churches the files list in `church_list_issues` (for whoever maintains
 `data/churches.csv`). A ready file whose rationale holds a doubt it never asked about goes
 back to its drafter, to become a question (rules.md asks by default).
 
+Before returning a question to the reviewer, check whether an active rule already
+settles it. In particular, R6 allows an assessed parish website schedule, R12 and R19
+allow the specified older evidence, R35 establishes recurrence across bulletins, and
+R36 retains a repeated schedule after one omission. Keep questions about unresolved
+public access, hedged availability and unknown venues open; those still need a decision.
+
 ## Learn from reviews
 
 After a batch has been reviewed, run `pnpm seed questions --answered [--eval RUN]`. Look

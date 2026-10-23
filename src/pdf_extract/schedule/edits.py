@@ -2,7 +2,8 @@
 
 - `apply_proposals` applies a call's rejected proposals, all of them or chosen
   `seq`s. Each is checked against the current schedule with the per-proposal
-  rules (the whole-call rules are what the person is overriding); any that fail
+  rules (the whole-call rules are what the person is overriding), in `seq` order
+  with the policy's wait for later removals (`check_in_order`); any that fail
   are reported and skipped. The log rows carry the `proposed_change_id` they
   apply; the proposals' own decisions stay as the policy made them.
 - `edit_entry` adds, modifies or deletes one entry directly, with the same checks.
@@ -20,7 +21,7 @@ from datetime import date
 from typing import Any
 
 from pdf_extract.classifiers.schedule_update import _without_nulls
-from pdf_extract.schedule.policy import APPLIED, Schedule, check_proposal
+from pdf_extract.schedule.policy import APPLIED, Schedule, check_in_order, check_proposal
 from pdf_extract.schedule.store import (
     ADD,
     DELETE,
@@ -87,27 +88,33 @@ def apply_proposals(
     with conn:
         schedule = Schedule(ids=live_entries(conn, call["parish_id"]))
         churches = parish_churches(conn, call["parish_id"])
-        changes: list[Change] = []
         for row in rows:
             if row["decision"] == APPLIED:
                 result.skipped.append((row["seq"], "already_applied", None))
+        pending = [row for row in rows if row["decision"] != APPLIED]
+        outcomes = check_in_order(
+            [
+                (row["op"], row["target_entry_id"],
+                 _without_nulls(json.loads(row["raw_json"]).get("entry")))
+                for row in pending
+            ],
+            schedule=schedule, churches=churches, today=today,
+        )
+        applied: list[tuple[int, Change]] = []
+        for row, outcome in zip(pending, outcomes, strict=True):
+            if outcome.reason is not None:
+                result.skipped.append((row["seq"], outcome.reason, outcome.detail))
                 continue
-            raw = json.loads(row["raw_json"])
-            entry, reason, detail = check_proposal(
-                row["op"], row["target_entry_id"], _without_nulls(raw.get("entry")),
-                schedule=schedule, churches=churches, today=today,
-            )
-            if reason is not None:
-                result.skipped.append((row["seq"], reason, detail))
-                continue
-            schedule.apply(row["op"], row["target_entry_id"], entry)
-            changes.append(Change(
+            applied.append((outcome.order, Change(
                 row["op"],
                 before_entry_id=row["target_entry_id"],
-                after_entry_id=intern_entry(conn, entry) if entry else None,
+                after_entry_id=intern_entry(conn, outcome.entry) if outcome.entry else None,
                 proposed_change_id=row["id"],
-            ))
+            )))
             result.applied.append(row["seq"])
+        result.skipped.sort(key=lambda item: item[0])
+        # Logged in the order applied: a deferred add or modify after the removals it waited for.
+        changes = [change for _, change in sorted(applied, key=lambda item: item[0])]
         if changes:
             result.revision = append_revision(
                 conn, call["parish_id"], source_kind=HUMAN, changes=changes, actor=actor,

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-clare-christ-our-light-colonie",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:11Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:32:32Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
   "summary": "Two churches, St. Clare (Colonie) and Christ Our Light (Loudonville). Weekend Masses, the two weekday chapel Masses and the Saturday 3:15-3:45 PM Confession at both agree in all three bulletins. Dated: a Charismatic Mass on October 14 at Christ Our Light. Open: whether the Syro-Malabar Community Mass on October 11 at St. Clare's is open to all.",
   "blocked_reason": null,
   "bulletins": [
@@ -627,9 +627,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clare-colonie",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-11",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Syro-Malabar Catholic Community Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -663,7 +676,7 @@
           "page": 3
         }
       ],
-      "rationale": "R30: POLICY leaves out a Mass limited to a group; the bulletin lists this community's Mass among the parish events without saying it is closed, so leaning include. It is dated: shown on Sep 27 and Oct 11 but not Oct 4 or Oct 18, with no 'weeks of the month' wording. Its date is the same as as_of (2026-10-11).",
+      "rationale": "R30: POLICY leaves out a Mass limited to a group; the bulletin lists this community's Mass among the parish events without saying it is closed, so leaning include. It is dated: shown on Sep 27 and Oct 11 but not Oct 4 or Oct 18, with no 'weeks of the month' wording. Its date is the same as as_of (2026-10-11).\n\nDelegated review (owner authorized best judgment on 2026-10-22): Accept the named Catholic community Mass in the public parish calendar, with definite date, time and church and no stated attendance restriction. Include only the printed October 11 occurrence; do not infer weekly or fortnightly recurrence.",
       "question": "Include the Syro-Malabar Community Mass at St. Clare's on Sunday, October 11 at 4:00 PM?",
       "options": [
         {
@@ -689,7 +702,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
     },
     {
       "id": "s11",

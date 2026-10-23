@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-waterford",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:38:52Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:11:05Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish with a clear schedule box on page 1 of every bulletin read (all three identical): Sat 4 PM, Sun 8 AM and 10 AM, Saturday confession 3:00-3:30, and a First Friday 11 AM Mass with the school. One question: whether the First Friday school Mass is open to the public.",
   "blocked_reason": null,
   "bulletins": [
@@ -281,9 +281,24 @@
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-waterford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With St. Mary's School"
+      },
       "page": 1,
       "sources": [
         {
@@ -323,7 +338,7 @@
           "page": 1
         }
       ],
-      "rationale": "Printed in the Mass schedule box, weekly by weeks_of_month. It is a Mass with the school; the bulletin does not say whether the public may attend. The policy leaves out Masses limited to a group such as students only. No other bulletin calendar says more.",
+      "rationale": "Printed in the Mass schedule box, weekly by weeks_of_month. It is a Mass with the school; the bulletin does not say whether the public may attend. The policy leaves out Masses limited to a group such as students only. No other bulletin calendar says more.\n\nReview 2026-10-22: Include first-Friday 11 AM Mass with St. Mary’s School: POLICY explicitly says “with” a school is open unless restricted.",
       "question": "Include the First Friday 11:00 AM Mass 'w/ St. Mary's School' as a public Mass?",
       "options": [
         {
@@ -351,7 +366,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s6",

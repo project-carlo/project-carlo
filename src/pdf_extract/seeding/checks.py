@@ -13,6 +13,8 @@ rules it enforces are .claude/skills/draft-parish-seed/rules.md R1, R2, R5):
   newest one the agent read (in a test run, of the labeled bulletin);
 - the newest listed bulletin is marked read, and an agent's settled inclusions
   cite its own reading there at their page (reviewer answers may include older slots),
+  or cite an assessed current website schedule in that bulletin's context,
+  or retain an established weekly slot after one assessed omission;
   except what the newest bulletin can't be expected to print (`older_evidence_ok`):
   a weeks-of-the-month slot none of whose weeks fall in the newest bulletin's
   week, or a dated entry from `as_of` on that an older bulletin announced;
@@ -26,9 +28,9 @@ import sqlite3
 from datetime import date, timedelta
 from typing import Any
 
-from pdf_extract.bulletin_week import bulletin_week
+from pdf_extract.bulletin_week import bulletin_reference_date, bulletin_week, parse_iso_date
 from pdf_extract.labeling.labels import DAYS, WEEKS_OF_MONTH
-from pdf_extract.schedule.entries import UNKNOWN_CHURCH, EntryError, parse_entry
+from pdf_extract.schedule.entries import UNKNOWN_CHURCH, Entry, EntryError, parse_entry
 from pdf_extract.schedule.store import normalize_as_of, parish_churches
 from pdf_extract.seeding.files import (
     AGENT,
@@ -120,6 +122,75 @@ def _parish_id(conn: sqlite3.Connection, parish_slug: str) -> int | None:
     return None if row is None else int(row[0])
 
 
+def weekly_omission_ok(
+    seed: dict[str, Any], slot: dict[str, Any], newest: dict[str, Any],
+) -> bool:
+    """Auditable carry-forward after one omission, not a semantic schedule check.
+
+    The assessment and this slot's paged agent quotes assert that the same
+    church/type/weekday/time recurs and that the newest issue merely omits it,
+    rather than cancelling or changing it. Code cannot decide those meanings.
+    It checks distinct older issue weeks, including the immediately preceding
+    read issue exactly one week before newest. Fetch dates cannot establish
+    recurrence: missing/invalid/implausible publication dates get no credit.
+    Named monthly patterns must use their targeted older-evidence rules.
+    """
+    entry = slot["entry"]
+    assessment = slot.get("weekly_omission")
+    if (slot["page"] is not None or not isinstance(entry, dict)
+            or entry.get("event_kind") != "weekly" or entry.get("weeks_of_month")
+            or entry.get("exclude_weeks") or entry.get("cancelled")
+            or not isinstance(assessment, dict)
+            or resolve_hash(seed, assessment.get("bulletin")) != newest["content_hash"]):
+        return False
+
+    def issue_week(bulletin: dict[str, Any]) -> date | None:
+        published = parse_iso_date(bulletin.get("published_date"))
+        if published is None or bulletin_reference_date(bulletin) != published:
+            return None
+        return bulletin_week(bulletin)
+
+    read = sorted(
+        (b for b in seed["bulletins"] if b["read"]),
+        key=lambda b: normalize_as_of(b["fetched_at"]), reverse=True,
+    )
+    if len(read) < 3:
+        return False
+    here = issue_week(newest)
+    previous = read[1]
+    if (here is None or issue_week(previous) != here - timedelta(days=7)
+            or normalize_as_of(previous["fetched_at"]) >= normalize_as_of(newest["fetched_at"])):
+        return False
+    cited = {
+        resolve_hash(seed, source.get("bulletin")) for source in slot["sources"]
+        if source.get("source") == AGENT and source.get("page") is not None
+    }
+    if previous["content_hash"] not in cited:
+        return False
+    weeks = {
+        week for b in read[1:] if b["content_hash"] in cited
+        and (week := issue_week(b)) is not None and week < here
+    }
+    return len(weeks) >= 2
+
+
+def website_evidence_ok(
+    seed: dict[str, Any], slot: dict[str, Any], newest: dict[str, Any],
+) -> bool:
+    """A quoted website schedule assessed against the newest read bulletin.
+
+    Shape validation requires the URL, quote, check time and both explanations.
+    These record the agent's judgment; code cannot establish semantic freshness.
+    A website-only slot has no bulletin page or manufactured bulletin sighting.
+    """
+    return slot["page"] is None and any(
+        source.get("source") == WEBSITE
+        and isinstance(source.get("schedule_check"), dict)
+        and resolve_hash(seed, source["schedule_check"].get("bulletin")) == newest["content_hash"]
+        for source in slot["sources"]
+    )
+
+
 def entry_problem(
     raw: dict[str, Any], churches: dict[str, int], where: str, *, outside_ok: bool = False,
 ) -> str | None:
@@ -162,6 +233,13 @@ def check_seed(
         problems.append(
             "status is still drafting: set needs_review (open questions) or ready, or blocked"
         )
+    if cutoff is not None:
+        for i, slot in enumerate(seed["slots"]):
+            if any(source.get("source") == WEBSITE for source in slot["sources"]):
+                problems.append(
+                    f"slots[{i}] ({slot['id']}): website sources are not allowed in a "
+                    "historical test run; use only bulletins and history within its cutoff"
+                )
     if seed["status"] == BLOCKED:
         return problems
 
@@ -174,13 +252,13 @@ def check_seed(
             "use `pnpm seed mark-read` after reading it, even when no slot cites it"
         )
     as_of_date = normalize_as_of(seed["as_of"])[:10] if seed["as_of"] else None
-    slots_by_identity: dict[str, str] = {}
+    included_entries: list[tuple[Entry, str]] = []
     for i, slot in enumerate(seed["slots"]):
         where = f"slots[{i}] ({slot['id']})"
         included = slot["decision"] == INCLUDE and slot["status"] != NEEDS_HUMAN
         if check_evidence and included and slot["answer"] is None:
             # A reviewer may explicitly include an older/website-backed option.
-            # An agent's settled inclusion needs its own reading of the anchor PDF.
+            # The agent may instead assess a quoted website schedule in its context.
             anchored = newest is not None and slot["page"] is not None and any(
                 source.get("source") == AGENT
                 and resolve_hash(seed, source.get("bulletin")) == newest["content_hash"]
@@ -188,20 +266,24 @@ def check_seed(
                 for source in slot["sources"]
             )
             if not anchored and not (
-                newest is not None and older_evidence_ok(seed, slot, newest, as_of_date)
+                newest is not None and (
+                    older_evidence_ok(seed, slot, newest, as_of_date)
+                    or website_evidence_ok(seed, slot, newest)
+                    or weekly_omission_ok(seed, slot, newest)
+                )
             ):
                 problems.append(
                     f"{where}: a settled inclusion needs an agent source on the newest "
                     "bulletin at its page; otherwise leave it needs_human with page null "
                     "(a weeks-of-the-month slot whose weeks the newest bulletin's week "
                     "doesn't hold, or a dated entry from as_of on, may instead cite an older "
-                    "bulletin read, with page null)"
+                    "bulletin read, with page null; or a quoted website schedule may use "
+                    "schedule_check explaining why it is current and fits the newest "
+                    "read bulletin, with page null; or an every-week slot may use "
+                    "weekly_omission assessing the newest issue, with page null and "
+                    "paged agent evidence from two older issue weeks, including the "
+                    "immediately preceding read issue one week before newest)"
                 )
-        if cutoff is not None and any(s.get("source") == WEBSITE for s in slot["sources"]):
-            problems.append(
-                f"{where}: website sources are not allowed in a historical test run; "
-                "use only bulletins and history within its cutoff"
-            )
         if slot["entry"] is not None:
             problem = entry_problem(
                 slot["entry"], churches, f"{where}.entry", outside_ok=not included,
@@ -209,13 +291,15 @@ def check_seed(
             if problem:
                 problems.append(problem)
             elif included:
-                identity = parse_entry(slot["entry"], churches).identity_key
-                if identity in slots_by_identity:
-                    problems.append(
-                        f"{where} is the same slot as {slots_by_identity[identity]}: "
-                        "one of them must go"
-                    )
-                slots_by_identity.setdefault(identity, slot["id"])
+                entry = parse_entry(slot["entry"], churches)
+                for other, slot_id in included_entries:
+                    if entry.conflicts_with(other):
+                        problems.append(
+                            f"{where} is the same slot as {slot_id}: "
+                            "their recurrence patterns overlap; one of them must go"
+                        )
+                        break
+                included_entries.append((entry, slot["id"]))
                 date = slot["entry"].get("date")
                 if as_of_date and slot["entry"]["event_kind"] != "weekly" and date < as_of_date:
                     problems.append(

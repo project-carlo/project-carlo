@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "ccncc-valatie",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:37:10Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-14T01:37:41Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Three churches (St. John's Valatie, St. James Chatham, St. Joseph/San Jose Stuyvesant). The bulletin has no schedule box, only a two-week calendar, so weekly Masses come from the same slots appearing in all six weeks across three bulletins. Open: whether the Wednesday 'Mass & Adoration' at St. Joseph's counts as a timed Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -467,9 +467,22 @@
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-stuyvesant",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -509,7 +522,7 @@
           "page": 1
         }
       ],
-      "rationale": "R30, leaning per C6: Adoration is attached to the Mass at 10:05 with no clock time of its own, start or end. POLICY says an event that includes Adoration does not set the component's times. History reads it as Adoration at 10:05.",
+      "rationale": "R30, leaning per C6: Adoration is attached to the Mass at 10:05 with no clock time of its own, start or end. POLICY says an event that includes Adoration does not set the component's times. History reads it as Adoration at 10:05.\n\nReview 2026-10-22: Exclude Adoration at the Mass’s 10:05 AM start. “Mass & Adoration” supplies no separate Adoration time; POLICY final checks already prohibit copying it.",
       "question": "Add weekly Wednesday Adoration at St. Joseph's, Stuyvesant, 10:05 AM?",
       "options": [
         {
@@ -535,7 +548,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s9",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-kateri-latin-mass-community",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:32:58Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:55:48Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "One-church Latin Mass community at St. Thomas the Apostle, Rochester. Sunday 9:00 AM English and 11:15 AM Latin Masses are settled; Sunday Confession after the 11:15 Mass is settled at 12:15 PM by POLICY's relative-time rule. Two open questions: the website-only Monday-Friday adoration chapel hours (leaning include) and website-homepage-only Confession after the 9:00 Mass (leaning leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -233,9 +233,22 @@
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -255,7 +268,7 @@
           "said": "CONFESSION Sundays before & after 11:15am Mass."
         }
       ],
-      "rationale": "R29: only the website homepage says confession follows both Masses; the bulletins (both) and the website's own Mass & Sacraments page tie it to the 11:15 Mass alone. Leaning leave out. If included, POLICY's relative time is 1 hour after the 9:00 AM Mass starts (10:00 AM).",
+      "rationale": "R29: only the website homepage says confession follows both Masses; the bulletins (both) and the website's own Mass & Sacraments page tie it to the 11:15 Mass alone. Leaning leave out. If included, POLICY's relative time is 1 hour after the 9:00 AM Mass starts (10:00 AM).\n\nReview 2026-10-22: Exclude Confession after the 9 AM English Mass: both the bulletins and the website’s specific sacrament page name only the 11:15 AM Mass.",
       "question": "Is there Confession after the 9:00 AM English Mass too? (Only the website homepage says 'after both Masses'.)",
       "options": [
         {
@@ -281,13 +294,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -307,7 +337,7 @@
           "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
         }
       ],
-      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.",
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
       "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
       "options": [
         {
@@ -333,14 +363,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -360,7 +407,7 @@
           "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
         }
       ],
-      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.",
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
       "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
       "options": [
         {
@@ -386,14 +433,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -413,7 +477,7 @@
           "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
         }
       ],
-      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.",
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
       "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
       "options": [
         {
@@ -439,14 +503,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -466,7 +547,7 @@
           "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
         }
       ],
-      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.",
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
       "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
       "options": [
         {
@@ -492,14 +573,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel"
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
       "page": null,
       "sources": [
         {
@@ -519,7 +617,7 @@
           "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
         }
       ],
-      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.",
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
       "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
       "options": [
         {
@@ -545,7 +643,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
       "group": "adoration-chapel"
     },
     {

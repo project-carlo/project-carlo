@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-greece",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:27:58Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-11T21:50:55Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Single-church parish; the cover schedule box and page 3 list agree in all three bulletins: Mon-Wed and Fri 8:15 AM (no Thursday Mass), Sat 4 PM, Sun 8 and 10 AM, Confession by appointment only. Two questions on first-week items printed only in the Sept 27 bulletin: First Friday 10 AM Benediction and First Saturday 8:15 AM Mass (website supports both). The Oct 4 minutes say weekday Masses may be cancelled when the visiting priest is away, but no date is given.",
   "blocked_reason": null,
   "bulletins": [
@@ -636,9 +636,24 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-evangelist-greece",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
       "page": null,
       "sources": [
         {
@@ -659,7 +674,7 @@
           "page": 3
         }
       ],
-      "rationale": "Only the Sept 27 bulletin prints it (as a dated calendar item, Oct 2); the newest two calendars (Oct 5-11, Oct 12-18) cover no first Friday, so it is unconfirmed as recurring. Policy rule 2 makes a First Friday item weekly with weeks_of_month. The website says Adoration follows the First Friday 8:15 Mass; the bulletin's only clock time is the 10:00 AM Benediction, so no end time is recorded.",
+      "rationale": "Only the Sept 27 bulletin prints it (as a dated calendar item, Oct 2); the newest two calendars (Oct 5-11, Oct 12-18) cover no first Friday, so it is unconfirmed as recurring. Policy rule 2 makes a First Friday item weekly with weeks_of_month. The website says Adoration follows the First Friday 8:15 Mass; the bulletin's only clock time is the 10:00 AM Benediction, so no end time is recorded.\n\nReview 2026-10-22: Include first-Friday 10 AM Benediction as Adoration with the note Benediction, under R12 and POLICY. Do not invent an earlier start from the website.",
       "question": "Add a First Friday 10:00 AM Adoration (Benediction) at St. John's?",
       "options": [
         {
@@ -687,13 +702,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-evangelist-greece",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -714,7 +748,7 @@
           "page": 3
         }
       ],
-      "rationale": "Printed only in the Sept 27 bulletin (Oct 3 first Saturday); the newest two calendars cover no first Saturday. The website lists it as a recurring first-Saturday Mass. History recorded it as a one-off dated Mass.",
+      "rationale": "Printed only in the Sept 27 bulletin (Oct 3 first Saturday); the newest two calendars cover no first Saturday. The website lists it as a recurring first-Saturday Mass. History recorded it as a one-off dated Mass.\n\nReview 2026-10-22: Include first-Saturday 8:15 AM Mass at St. John, Greece, under R12.",
       "question": "Add a First Saturday 8:15 AM Mass at St. John's?",
       "options": [
         {
@@ -742,7 +776,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s11",

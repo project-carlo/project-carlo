@@ -33,7 +33,11 @@ Do one parish at a time. Finish and finalize each before starting the next.
    a page that is only an image, or a dense table, `seed pages <parish> <hash> --page N
    [--dpi 200]` renders a PNG. Draft its slots, then run `seed mark-read <parish> <hash>`.
 3. **Compare with history.** `seed history <parish> [--bulletins N]` prints one table per
-   bulletin, and it is free. Apply R7–R9.
+   bulletin, and it is free. Apply R7–R9. Use your own readings across bulletins to
+   establish recurrence (R35); one silent issue does not erase a repeated schedule
+   (R36). For the latter, record `--weekly-omission "why only an omission" --page -`
+   and the older bulletin readings. History's extracted rows are hints, not
+   substitutes for those readings.
 4. **Read further back** when R3 or R11 calls for it. Start with `seed grep <parish>
    [pattern]`, which searches every stored bulletin at once (with no pattern, it searches
    for schedule words). Then read one bulletin at a time with `seed text <parish> <hash>
@@ -43,13 +47,18 @@ Do one parish at a time. Finish and finalize each before starting the next.
 5. **Website (production only, when R5 calls for it).** `seed site <parish>` prints the
    homepage's text and the links that look like schedules. `seed site <parish>
    /mass-times` (or a full address) prints one of those pages, and each page is kept for
-   a day.
+   a day. Under R6 a real, current parish schedule that fits the bulletin may supply a
+   missing time. Quote it and record why it appears current and fits the newest read
+   bulletin using `--website-current` and `--website-context`. Keep its slot page null.
 6. **Model calls (R4).** `seed ask <parish> <hash> --model gemini-3-flash-preview "Page 2:
    when are Saturday confessions at St. Mary's?"` asks one question. `seed extract
    <parish> <hash> --model gpt-6.1-sol` runs a full extraction. Both are cached and
    recorded in the file's `calls`. Run them one at a time; each parish gets 4 paid calls.
-7. **Decide each slot** by [rules.md](rules.md). Settle a slot only by a rule, and cite
-   the rule in its rationale; ask about everything else. `seed slot include`, `slot
+7. **Decide each slot** by [rules.md](rules.md). Apply active rules and POLICY exceptions
+   first, cite the rule in the rationale, then ask about what remains unclear. Do not
+   offer a false weekly pattern when the format cannot express the real one (R33).
+   Preserve reviewer answers and group only questions that truly share one answer
+   (R27). `seed slot include`, `slot
    exclude` and `slot ask` add slots (one per day and time), and `seed slot batch
    <parish> plan.txt` writes a whole parish at once; the syntax and an example are in
    [file-format.md](file-format.md), "Writing slots", and `pnpm seed slot --help`. Each

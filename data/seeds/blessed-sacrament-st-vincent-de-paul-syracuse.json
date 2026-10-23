@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "blessed-sacrament-st-vincent-de-paul-syracuse",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:34:58Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-13T21:59:56Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Two linked Syracuse churches. Blessed Sacrament's schedule box (Mon-Fri 8, Sat 5:15 PM, Sun 7:30 and 9:15, Saturday confession 4:00-4:45, Thursday 6-7 PM adoration) and St. Vincent de Paul's (Mon-Wed noon, Sat 4, Sun 10:30) are the same in all three bulletins and match history. Thanksgiving Day Mass is dated and included; one question asks which church holds the November 2 All Souls Liturgy of Remembrance at 6 PM.",
   "blocked_reason": null,
   "bulletins": [
@@ -953,9 +953,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Liturgy of Remembrance"
+      },
       "page": 4,
       "sources": [
         {
@@ -971,7 +984,7 @@
           "page": 4
         }
       ],
-      "rationale": "R32: the notice names no church; it sits in the right-hand (Blessed Sacrament) column of the events page, and history also reads it at Blessed Sacrament, but the text says 'from the parish' and does not say outright that it is a Mass. Printed in only one bulletin and dated after as_of. Leaning Blessed Sacrament 6 PM Mass.",
+      "rationale": "R32: the notice names no church; it sits in the right-hand (Blessed Sacrament) column of the events page, and history also reads it at Blessed Sacrament, but the text says 'from the parish' and does not say outright that it is a Mass. Printed in only one bulletin and dated after as_of. Leaning Blessed Sacrament 6 PM Mass.\n\nReview 2026-10-22: Include Nov 2, 6 PM Mass at Blessed Sacrament. The actual page has a Blessed Sacrament column heading, and the notice says “At the end of Mass.” This is stronger venue evidence than the draft suggests.",
       "question": "Is the All Souls Liturgy of Remembrance on Monday, November 2 at 6 PM a Mass, and at which church?",
       "options": [
         {
@@ -1014,7 +1027,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     },
     {
       "id": "s18",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-the-evangelist-new-hartford",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-11T16:32:00Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-12T17:12:30Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
   "summary": "Mass times (Sat 5:30 PM, Sun 8 and 11 AM, Mon/Wed/Fri 6:45 AM) are not printed as a schedule but come from the Mass-intentions page (p6), repeating across consecutive weeks; history agrees. Tuesday 6-7 PM Holy Hour and Confession and Thursday 1-7 PM Adoration (3 PM Holy Hour with Benediction) repeat weekly in the page-1 announcements and are recorded as weekly. The Nov 2 All Souls Mass is at Annunciation, Clark Mills, an unlisted church, and is raised as a question.",
   "blocked_reason": null,
   "bulletins": [
@@ -543,9 +543,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-new-hartford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day, at Annunciation Church, Clark Mills"
+      },
       "page": 1,
       "sources": [
         {
@@ -555,7 +568,7 @@
           "said": "On Monday, November 2nd, at 5:30 p.m. at Annunciation Church in Clark Mills, we will celebrate our annual All Souls' Day Mass"
         }
       ],
-      "rationale": "All Souls Day Mass of this parish is held at Annunciation Church, Clark Mills, which is not in data/churches.csv (seed church finds nothing). Policy leaves out events at an unlisted church and says to flag when the church list may need review.",
+      "rationale": "All Souls Day Mass of this parish is held at Annunciation Church, Clark Mills, which is not in data/churches.csv (seed church finds nothing). Policy leaves out events at an unlisted church and says to flag when the church list may need review.\n\nReview 2026-10-22: Exclude the Annunciation, Clark Mills Mass from the current known churches and record the church-list issue under R23. Including it requires correcting church ownership first.",
       "question": "All Souls Mass on Nov 2, 5:30 PM is at Annunciation Church, Clark Mills (not a listed church). Leave it out?",
       "options": [
         {
@@ -581,7 +594,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
     }
   ]
 }
