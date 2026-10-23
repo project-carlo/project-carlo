@@ -149,7 +149,7 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   stlawrencealbion.org, cpoecc.org, stbernardcatholic.org, stthomastheapostle.church, ...; footer
   "Diocese of Erie 429 East Grandview Blvd."). The page lists one PDF per issue at
   `images/weeklybulletin/<md5>.pdf`: the file name carries no date, the link text and `title` do
-  ("October 11, 2026"). Check how far behind the page runs (Albion's newest on 2026-10-23 was 11
+  ("October 11, 2026"); `scratch/map-erie/tools/weeklybulletin_issues.sh <site>` lists them. Check how far behind the page runs (Albion's newest on 2026-10-23 was 11
   October). Some of these sites also embed a ParishesOnline org (hcsjchurches.org,
   stelizabethsmethport.org, ststanserie.org, stgregoryparish.info): compare the two before
   choosing a provider. `dioceseoferie.org/<name>/` is the same host (Holy Rosary, Johnsonburg 403s
@@ -162,7 +162,13 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   Thomas, Corry); LPi ids on stjuliaerie.com, sainttitus.com, saintbartholomews.com. Org names
   record past groupings ("st-mary-of-grace-st-agatha-st-brigid"): read the masthead.
 - **Discover Mass ids** on oilcitycatholic.com, ourladyofmercychurch.org, sttobias.com and the
-  cathedral. See *Sources* for the many empty pages.
+  cathedral. See *Sources* for the many empty pages. A parish site's own PDF can be the same
+  file as the Discover Mass download (Our Lady of Peace: same size, same bulletin number 3518):
+  compare size and number, and use `discover_mass` with the slug. `recheck` finds quotes from
+  the issue PDF cited under the church page URL, but not the cover-class number or page
+  markup: put those in a note. `fetch:check` reports issue date `unknown` when the masthead
+  date is split by the layout, and ParishesOnline issues posted early show as `future`;
+  neither is a failure.
 - **Other hosts seen:** Wix (`_files/ugd/` PDFs: goodshepherdwm.org, sharoncatholic.org; Wix blog
   posts per issue: latinmasserie.org), Duda (bsparisherie.org, sttobias.com, `irp.cdn-website.com`),
   WeConnect (icclarion.org, `uploads.weconnect.com/mce/<id>/2026Bulletins/<yyyy-mmdd> for
