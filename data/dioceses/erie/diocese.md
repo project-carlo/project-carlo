@@ -222,6 +222,9 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
 Carried over from Altoona-Johnstown, Greensburg, Scranton and Buffalo (2026-10); correct it as
 this diocese shows otherwise.
 
+- **Discover Mass downloads** work with curl given `Referer: https://discovermass.com/`, so
+  past issues can be fetched and grepped (mind the daily cap). `probe pdf --grep` still prints
+  every page: redirect it to a file.
 - **J.S. Paluch on Discover Mass.** Its `?s=` search is broken; grep the town in the sitemaps
   (`discovermass.com/wp-sitemap-posts-item-{1..11}.xml`; slugs here are mixed `saint-` and `st-`).
   Probe on the bare host (200 = exists, 404 = not). A joint bulletin may sit under only one of its
@@ -307,7 +310,8 @@ Decisions that apply to more than one record, and who made them.
   schedule (weekend, weekday, monthly or seasonal) is a church row under the row whose
   bulletin lists it. One whose only Masses are the patronal feast (and, under the 2016 merger
   decrees, the dedication anniversary), funerals and weddings, stated by a current source, is
-  `no-public-mass` (St. Walburga, Titusville), as Scranton settled (St. Clare, St.
+  `no-public-mass` (St. Walburga, Titusville). So is one whose only public Mass is another
+  single yearly occasion (St. Hermenegild, Pardoe: an August Mass and picnic), as Scranton settled (St. Clare, St.
   Rocco). One no current source describes goes to `open/` with a revisit at its patronal
   feast (orchestrator, 2026-10-23).
 - **A GCatholic-only church that no current source mentions and no decree closed** goes to
