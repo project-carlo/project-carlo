@@ -1,6 +1,6 @@
 ---
 name: map-diocese
-description: Map a whole new diocese from start to pull request as a lean orchestrator. Set up its rosters and structure, hand small batches of parishes to parish-scout agents one at a time, keep a playbook between batches, then cross-check, promote and open the PR. Use when asked to map, add or explore a whole diocese; use explore-diocese for single records, audits and fixes.
+description: Map a whole new diocese from start to pull request as a lean orchestrator. Have a diocese-surveyor agent set up its rosters, structure and batch plan, then hand small batches of parishes to parish-scout agents one at a time, keep a playbook between batches, then cross-check, promote and open the PR. Use when asked to map, add or explore a whole diocese; use explore-diocese for single records, audits and fixes.
 ---
 
 # Mapping a whole diocese
@@ -20,6 +20,11 @@ limit, and each resume rebuilt a large context.
 
 So:
 
+- **Setup is done once, by one careful agent.** A `diocese-surveyor` agent
+  (`.claude/agents/diocese-surveyor.md`, on Opus) creates the diocese, scrapes its rosters,
+  reads its structure into `diocese.md`, seeds the playbook and plans the batches. Every
+  batch is built on that work, so it gets the stronger model; it runs once, so the cost is
+  small next to the scouts.
 - **Bulky reading happens in short-lived contexts.** A `parish-scout` agent
   (`.claude/agents/parish-scout.md`, on Sonnet) researches about four parishes, writes their
   records and ends. The records, with their quoted evidence, are the result, so its report
@@ -36,38 +41,33 @@ So:
   that apply everywhere go into the README, a skill or the CLI, where the next diocese gets
   them for free.
 
-## 1. Set up
+## 1. Survey
 
-1. `pnpm diocese init <d> ...` and `pnpm diocese roster fetch <d> gcatholic`. If the
-   diocese's directory runs WP Store Locator, `roster fetch <d> wpsl <URL>`. If scraping it
-   takes more than reading one page, give it to a scout as a task (section 4).
-2. Run `.claude/skills/parish-site-access/scripts/setup_browser.sh` once, so scouts don't
-   each install Chrome.
-3. Make the scratch folders (`scratch/` is ignored by git):
-   `mkdir -p scratch/map-<d>/tools scratch/map-<d>/scouts` and start
-   `scratch/map-<d>/tools/README.md` with one line saying what the folder is for.
-4. Read the structure: the diocese's family or cluster list, its closed-parishes page, its
-   pastoral plan. Write what you find in `diocese.md` *Sources*. This is the one place you
-   read source pages yourself, because the batches depend on it.
-5. Copy the playbook from the dioceses already mapped: in `diocese.md`, fill in the
-   *Bulletin publishers here* section that `init` put under *Sources* with what earlier
-   dioceses in the same region found about the publishers likely to appear (e.g. Discover
-   Mass's daily download cap, eCatholic sites behind Cloudflare). Keep it to the lines a
-   scout needs.
+Before any scout starts, start one `diocese-surveyor` with `Agent` (`subagent_type:
+diocese-surveyor`, in the foreground, since nothing else can happen until it's done). Give
+it the diocese's name, its slug if you've chosen one, and anything the user said about it.
+It runs `init`, sets up the browser and the scratch folders, fetches and scrapes the
+rosters, writes `diocese.md`'s intro, *Sources* and *Bulletin publishers here*, and plans
+the batches in `scratch/map-<d>/batches.md`. Its definition says how; don't repeat it.
 
-## 2. Plan the batches
+If it runs out of turns or hits the usage limit, resume it with `SendMessage`; don't start
+the scouts on a half-finished survey.
 
-List the roster in one line per entry rather than reading the JSON:
-`jq -r '.entries[] | [.id, .name, .city, .group] | @tsv' data/dioceses/<d>/rosters/<r>.json`.
+## 2. Review the survey
 
-Group the entries into batches of about four parishes that belong together: one town, one
-family or cluster, or one shared pastor. Entries that might share a bulletin go in the same
-batch, so one scout settles them. Use fewer parishes for a family with many churches or a
-city centre full of closures. Write the batches to `scratch/map-<d>/batches.md`, with each
-batch's roster ids, and tick them off there as they finish.
+This is the one place you read files the survey wrote, because every batch depends on them.
 
-Start with a typical batch, not the hardest one, so the playbook fills up before the
-difficult ones.
+1. Read its report, `diocese.md` and `batches.md`. Check the roster counts without reading
+   the JSON: `jq '.entries | length' data/dioceses/<d>/rosters/*.json`, and list a roster in
+   one line per entry if a batch looks wrong:
+   `jq -r '.entries[] | [.id, .name, .city, .group] | @tsv' data/dioceses/<d>/rosters/<r>.json`.
+2. Check that every roster entry is in one batch, that entries that might share a bulletin
+   (one family, one pastor, one town) are together, and that the first batch is a typical
+   one. Send anything missing or wrong back to the surveyor with `SendMessage`; its
+   context still holds the diocese.
+3. Decide its proposed rules and write them in `diocese.md` *Rules settled*.
+4. `pnpm diocese validate <d>`, then commit: `<Diocese>: rosters, sources and batches`.
+   `batches.md` stays in `scratch/`; tick batches off there as they finish.
 
 ## 3. Run the scouts, one at a time
 
@@ -99,8 +99,8 @@ the reset instead of starting a new one. Its records are on disk either way.
 Give a scout any job whose reading is large and whose answer is short. Say in the message
 what it may write and what to report. For example:
 
-- scraping the diocese's parish finder or Mass-times pages into a roster (`roster import`);
-  report the entry count and anything odd;
+- scraping a roster the survey couldn't get, or refreshing one with the surveyor's script
+  in the tools folder (`roster import`); report the entry count and anything odd;
 - dating a closure by grepping a bulletin archive; report the date and the quote;
 - linking the `coverage` entries left unmatched at the end, when there are more than a
   handful;
