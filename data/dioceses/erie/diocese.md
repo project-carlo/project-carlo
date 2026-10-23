@@ -120,7 +120,7 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
   (2020-02-16; the survey first gave Anita's date); St. Joseph, Anita (2020-01-26); St. Elizabeth, Corry and St. Joseph, DuBois (2019-12-01); Assumption
   BVM, Oil City (2019-07-19); St. Stanislaus Kostka, Sharon (2019); Sacred Heart, Sharon
   (2018-03-25); Holy Cross, Rasselas (2017-09-07). St. Francis of Assisi, Bradford became a
-  secondary church with no Sunday Mass by decree. Read the decree itself for each exclusion; a
+  secondary church with no Sunday Mass by decree. Read the decree itself for each exclusion and cite the decree PDF URL, not decrees.html; a
   relegation decree states that the building closed, and gives the date. The decree list was read
   on 2026-10-23, with dates taken from each PDF's text (`scratch/map-erie/raw/decree_summary.txt`).
 - **Pastoral plan:** https://www.eriercd.org/planning-deaneries.html: final plans for the
@@ -189,7 +189,8 @@ From `probe url` on the directory's 66 distinct websites (2026-10-23):
   cathedral. See *Sources* for the many empty pages. A parish site's own PDF can be the same
   file as the Discover Mass download (Our Lady of Peace: same size, same bulletin number 3518):
   compare size and number, and use `discover_mass` with the slug. `recheck` finds quotes from
-  the issue PDF cited under the church page URL, but not the cover-class number or page
+  the issue PDF cited under the church page URL only sometimes (St. Boniface, Kersey: not
+  found); safest is a quote from the church page with the bulletin text in the note. It never finds the cover-class number or page
   markup: put those in a note. `recheck` reads only the first pages, and page-1
   mastheads often extract garbled: quote a clean full line from page 1 or 2 (link text is not
   page text). A Discover Mass PDF can carry stale hidden text from an earlier week: don't read a
