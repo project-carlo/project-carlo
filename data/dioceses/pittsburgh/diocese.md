@@ -123,6 +123,10 @@ Greensburg's playbook next door.
   same bulletin, not a second one. These archives are byte-identical to the container PDFs and
   the cheapest way to grep a year of issues (Divine Grace, St. Mark, 2026-10). Image covers put the Mass schedule on page 3 (Our Lady of
   Hope); `probe pdf --pages N` returns pages 1..N, so pick the page with `jq`.
+- **`probe po`'s latest issue can lag the container by a week:** run `probe container`. A
+  parish's eCatholic archive can stop (sclpgh.org, June 2025): check the newest file's date
+  before calling it a channel. Successor bulletins' pastor letters date relegations (St.
+  Isaac Jogues: final Mass 2026-06-03).
 - **`fetch:check` on ParishesOnline** reports freshness `future` about two days before the
   Sunday and `publication_identity: unverified` (no expected identity given): read the
   masthead yourself. `visit.py` prints a warning line before its JSON (`tail -n +2 | jq`).
