@@ -60,7 +60,16 @@ def parse_date_from_texts(texts: list[str], reference_date: date) -> date | None
 def parse_date(
     text: str, reference_date: date, *, year: int | None = None,
 ) -> date | None:
-    """A date in text. One without a year is `year`'s if given, else the nearest."""
+    """A plausible date in text, retaining up to ten years of archive history."""
+    parsed = _parse_date(text, reference_date, year=year)
+    if parsed is not None and 2000 <= parsed.year and abs(parsed.year - reference_date.year) <= 10:
+        return parsed
+    return None
+
+
+def _parse_date(
+    text: str, reference_date: date, *, year: int | None = None,
+) -> date | None:
     if not text:
         return None
 
@@ -94,7 +103,7 @@ def parse_date(
     month_day_pattern = re.compile(
         rf"(?:(?<!\d)(?P<lead_year>20\d{{2}})\s+)?"
         rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?!\d){_ORDINAL}?"
-        rf"(?:\s*(?:&|and|-|\s)\s*\d{{1,2}}{_ORDINAL}?(?=\s+\d{{4}}(?!\d)))?"
+        rf"(?:\s*(?:&|and|-|\s)\s*\d{{1,2}}{_ORDINAL}?(?=\s+\d{{2,4}}(?!\d)))?"
         # "Bulletin_October 12_2025": an underscore can join the year on. A
         # longer number is no year (a mistyped "20026").
         rf"(?:[\s_]+(?P<year>\d{{2,4}})(?![\d{_ORDINAL}]))?",
@@ -106,14 +115,16 @@ def parse_date(
         flags=re.IGNORECASE,
     )
 
+    named_date_text = re.sub(r"[-_]+|(?<=[a-z])\.", " ", normalized)
     for pattern in (month_day_pattern, day_month_pattern):
-        for match in pattern.finditer(normalized):
+        for match in pattern.finditer(named_date_text):
             month_num = _month_name_to_number(match.group("month"))
             if month_num is None:
                 continue
             day = int(match.group("day"))
-            raw_year = match.group("year") or match.groupdict().get("lead_year")
-            if raw_year:
+            raw_year = match.groupdict().get("lead_year") or match.group("year")
+            # A named month still identifies the day when the year is mangled.
+            if raw_year and len(raw_year) != 3:
                 parsed = safe_date(_normalize_year(raw_year, reference_date), month_num, day)
             else:
                 parsed = yearless(month_num, day)
@@ -133,6 +144,8 @@ def parse_date(
         rf"(?<!\d)(?P<a>\d{{1,2}})[-/.](?P<b>\d{{1,2}})[-/.](?P<c>\d{{2,4}})(?![\d{_ORDINAL}])",
         normalized,
     ):
+        if len(match.group("c")) == 3:
+            continue
         parsed = safe_date(
             _normalize_year(match.group("c"), reference_date),
             int(match.group("a")), int(match.group("b")),
@@ -144,6 +157,9 @@ def parse_date(
     for match in re.finditer(
         r"(?<!\d)(?<!\d[-/.])(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)(?![-/.]\d)", normalized,
     ):
+        # MM-YY can name a month rather than a day (a flyer for October 2026).
+        if int(match.group("b")) == reference_date.year % 100:
+            continue
         parsed = yearless(int(match.group("a")), int(match.group("b")))
         if parsed is not None:
             return parsed

@@ -1184,3 +1184,30 @@ def test_other_publishers_current_pdf_cannot_hide_a_filtered_issue(location):
     assert link.source_url == own
     assert link.fetch_url == own
     assert page.waited is (location == "late-render")
+
+
+@pytest.mark.parametrize(('text', 'expected'), [
+    ('dougs-and-bottle-drive-10-26.pdf', None),
+    ('October-10-111-23.pdf', date(2026, 10, 10)),
+    ('10/25/206', None),
+    ('OCTOBER-3-4-26.pdf', date(2026, 10, 3)),
+    ('Sep-20-26.pdf', date(2026, 9, 20)),
+    ('2026-10-25.pdf', date(2026, 10, 25)),
+    ('10/25/1999', None),
+    ('October 25 2099', None),
+    ('20991025.pdf', None),
+    ('/bulletins/2099/October_25.pdf', None),
+])
+def test_dates_reject_implausible_and_ambiguous_years(text, expected) -> None:
+    assert parse_date_from_texts([text], date(2026, 10, 25)) == expected
+
+
+def test_st_michael_series_beats_month_year_flyer() -> None:
+    names = [
+        'dougs-and-bottle-drive-10-26.pdf', 'October-10-111-23.pdf',
+        'OCTOBER-3-4-26.pdf', 'Set-26-27-26.pdf', 'Sep-20-26.pdf',
+    ]
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f'{HOME}/bulletin': ''.join(f'<a href="/s/{name}">{name}</a>' for name in names),
+    }, today=date(2026, 10, 25)) == f'{HOME}/s/October-10-111-23.pdf'
