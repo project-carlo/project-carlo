@@ -1326,3 +1326,47 @@ def test_process_promotes_a_dated_event_that_recurred_the_past_two_weeks(
     assert sorted(d.isoformat() for d in history[("st-mary-anytown", "adoration", 1140)]) == [
         "2026-08-05", "2026-08-12", "2026-08-19",
     ]
+
+
+@pytest.mark.parametrize('published_date, has_events, rejected', [
+    (None, False, True),
+    ('2026-10-25', False, False),
+    (None, True, False),
+])
+def test_process_undated_empty_pdf_keeps_previous_current(
+    monkeypatch, db: Path, published_date, has_events, rejected,
+) -> None:
+    _processed_week(db, '2026-10-11', hash='previous', start_time='8:00 AM')
+    new_id = _add_bulletin(
+        db, source_url='https://example.org/flyer.pdf', content_hash='flyer',
+        fetched_at='2026-10-25T09:00:00Z',
+    )
+    _stub_extractor(monkeypatch, _extraction(
+        *([_event()] if has_events else []), published_date=published_date,
+    ))
+    conn = connect_db(db)
+    start_run(conn, 'guard-run', git_sha=None, trigger='test')
+    conn.close()
+    process_bulletins(parish_name='Test Parish', run_id='guard-run')
+    conn = connect_db(db)
+    try:
+        row = conn.execute('SELECT * FROM bulletin WHERE id = ?', (new_id,)).fetchone()
+        assert bool(row['wrong_bulletin']) is rejected
+        [result] = parish_results(conn, 'guard-run')
+        if rejected:
+            assert result['status'] == 'wrong_bulletin'
+            assert 'Undated PDF extracted zero events' in result['detail']
+            assert [e['start_time'] for e in _current_events(db)] == ['8:00 AM']
+    finally:
+        conn.close()
+
+    if rejected:
+        from pdf_extract.report import build_report
+
+        report = build_report(
+            run_id='guard-run', before_db=db, after_db=db, stages={},
+            snapshot_verification=None,
+        )
+        assert [r['parish_slug'] for r in report['attention']['wrong_bulletins']] == [
+            'test-parish',
+        ]

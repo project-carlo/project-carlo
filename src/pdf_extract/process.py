@@ -250,7 +250,8 @@ def process_bulletins(
             nonlocal inserted_events, skipped_events, processed_count, promoted_events
             rows, promoted = _prepare_rows(entry, extracted, history)
             save_history_to_db(conn, history)
-            wrong_bulletin = bool(extracted.get("wrong_bulletin"))
+            undated_empty = not entry.get("published_date") and not rows
+            wrong_bulletin = bool(extracted.get("wrong_bulletin")) or undated_empty
             processed_at = utc_now_iso()
             stored, skipped = save_processed_bulletin(
                 conn,
@@ -287,6 +288,7 @@ def process_bulletins(
                 event_count=stored,
                 detail=join_details(
                     placement_detail,
+                    "Undated PDF extracted zero events" if undated_empty else None,
                     f"{skipped} events could not be stored" if skipped else None,
                 ),
             )
