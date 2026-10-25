@@ -157,9 +157,6 @@ def _parse_date(
     for match in re.finditer(
         r"(?<!\d)(?<!\d[-/.])(?P<a>\d{1,2})[-/.](?P<b>\d{1,2})(?!\d)(?![-/.]\d)", normalized,
     ):
-        # MM-YY can name a month rather than a day (a flyer for October 2026).
-        if int(match.group("b")) == reference_date.year % 100:
-            continue
         parsed = yearless(int(match.group("a")), int(match.group("b")))
         if parsed is not None:
             return parsed

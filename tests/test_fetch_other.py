@@ -1187,7 +1187,7 @@ def test_other_publishers_current_pdf_cannot_hide_a_filtered_issue(location):
 
 
 @pytest.mark.parametrize(('text', 'expected'), [
-    ('dougs-and-bottle-drive-10-26.pdf', None),
+    ('dougs-and-bottle-drive-10-26.pdf', date(2026, 10, 26)),
     ('October-10-111-23.pdf', date(2026, 10, 10)),
     ('10/25/206', None),
     ('OCTOBER-3-4-26.pdf', date(2026, 10, 3)),
@@ -1211,3 +1211,45 @@ def test_st_michael_series_beats_month_year_flyer() -> None:
         HOME: '<a href="/bulletin">Bulletin</a>',
         f'{HOME}/bulletin': ''.join(f'<a href="/s/{name}">{name}</a>' for name in names),
     }, today=date(2026, 10, 25)) == f'{HOME}/s/October-10-111-23.pdf'
+
+
+@pytest.mark.parametrize(('text', 'today'), [
+    ('bulletin-7-26.pdf', date(2026, 7, 26)),
+    ('4-26 Bulletin.pdf', date(2026, 4, 26)),
+    ('4.26.pdf', date(2026, 4, 26)),
+    ('Bulletin 7/26', date(2026, 7, 26)),
+    ('bulletin-6-27.pdf', date(2027, 6, 27)),
+])
+def test_yearless_month_day_matching_year(text, today) -> None:
+    assert parse_date_from_texts([text], today) == today
+
+
+@pytest.mark.parametrize(('name', 'today'), [
+    ('4.26.pdf', date(2026, 4, 26)),
+    ('bulletin-10-26.pdf', date(2026, 10, 25)),
+    ('10-26-26.pdf', date(2026, 10, 25)),
+])
+def test_month_day_corroboration_preserves_bulletins(name, today) -> None:
+    names = [name, f'{today.year}-{today.month:02d}-10.pdf',
+             f'{today.year}-{today.month:02d}-03.pdf']
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f'{HOME}/bulletin': ''.join(f'<a href="/s/{n}">{n}</a>' for n in names),
+    }, today=today) == f'{HOME}/s/{name}'
+
+
+def test_standalone_weekday_month_day_is_preserved() -> None:
+    name = '10-26.pdf'
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f'{HOME}/bulletin': f'<a href="/s/{name}">{name}</a>',
+    }, today=date(2026, 10, 25)) == f'{HOME}/s/{name}'
+
+
+@pytest.mark.parametrize('year', [2026, 2027])
+def test_weekday_month_day_yields_to_series_independently_of_year(year) -> None:
+    names = ['drive-10-26.pdf', f'October-10-{year}.pdf', f'October-3-{year}.pdf']
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f'{HOME}/bulletin': ''.join(f'<a href="/s/{n}">{n}</a>' for n in names),
+    }, today=date(year, 10, 25)) == f'{HOME}/s/October-10-{year}.pdf'

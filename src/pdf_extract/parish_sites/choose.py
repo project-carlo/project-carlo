@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from datetime import date
+from urllib.parse import unquote, urlsplit
 
 # A bulletin dated within this many days of today is taken as the current one.
 CURRENT_WINDOW_DAYS = 7
@@ -66,6 +68,18 @@ def _age_days(candidate: Candidate, reference_date: date) -> int:
     return (reference_date - (candidate.parsed_date or reference_date)).days
 
 
+def _bare_month_day(candidate: Candidate) -> bool:
+    filename = unquote(urlsplit(candidate.source_url).path.rsplit("/", 1)[-1])
+    numbers = re.findall(r"\d+", filename)
+    parsed = candidate.parsed_date
+    return (
+        parsed is not None
+        and len(numbers) == 2
+        and [int(n) for n in numbers] == [parsed.month, parsed.day]
+        and re.search(r"(?<!\d)\d{1,2}[-/.]\d{1,2}(?!\d)", filename) is not None
+    )
+
+
 def choose(
     candidates: list[Candidate], *, reference_date: date, max_age_days: int | None = None,
 ) -> Choice:
@@ -83,9 +97,24 @@ def choose(
       newest recent one when the page lists a dated series of them (Our Lady
       of Peace, Hazleton lists a "Parish Consolidation" PDF above its weekly
       issues, which can be a week or two late).
+    Unlabelled bare M-D filenames dated on weekdays yield to a recent series
+    with fuller dates: the pair may instead name a flyer's month and year.
     With `max_age_days`, a pick dated further than that from today is refused
     with OldBulletinOnly.
     """
+    # A bare M-D can also mean month-year on a flyer. An unlabelled weekday
+    # needs corroboration when the page has a recent series with fuller dates.
+    series = [
+        c for c in candidates
+        if c.parsed_date is not None and not _bare_month_day(c)
+        and -CURRENT_WINDOW_DAYS <= _age_days(c, reference_date) <= FALLBACK_MAX_AGE_DAYS
+    ]
+    if len(series) >= MIN_RECENT_SERIES:
+        candidates = [
+            c for c in candidates
+            if not (not c.labelled and _bare_month_day(c)
+                    and c.parsed_date is not None and c.parsed_date.weekday() < 5)
+        ]
     current = [c for c in candidates if is_current(c.parsed_date, reference_date)]
     if current:
         return Choice(max(current, key=lambda c: c.parsed_date or date.min), CURRENT)
