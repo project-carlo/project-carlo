@@ -15,6 +15,11 @@ promotes the diocese, so its parishes go live in extract mode like every parish 
 **seed Run** starts once those parishes have bulletins in the database, and seeds them with
 today's seeding tools.
 
+An agent reviewer approves the seeds, which replaces `seeding-plan.md`'s rule that a person
+approves every seed. You stay involved through the borderline cases: every PR lists the
+decisions the factory made that no rule covered (§10). If one looks wrong, you change the
+policy (`rules.md`, a skill) in a separate PR. The factory never changes `rules.md`.
+
 ## 2. Vocabulary
 
 | Term | Meaning |
@@ -33,6 +38,7 @@ today's seeding tools.
 | **Dispatcher** | Code, not an agent. It picks the next job, checks usage, starts workers, runs gates, retries. |
 | **Ledger** | SQLite state: Runs, jobs, attempts, sessions, worker steps, costs, flags. |
 | **Queue** | `factory/queue.json`, the ordered list of dioceses waiting for a map Run. |
+| **Precedent** | A seed question `seed-review` settled that no rule covered, kept in `diocese.md` so the rest of the diocese is decided alike. |
 
 ## 3. The pipeline
 
@@ -51,9 +57,13 @@ for each batch: seed × each parish ─▶ seed-review ──▶ PR ─▶ (you 
 
 - **One Run at a time**, and one job at a time within it (`max_workers: 1`). Batches run
   in order, so each map batch starts from the playbook the earlier ones built.
-- A seed Run that is ready goes before a new map Run, so dioceses are finished before new
-  ones start. A Run waiting for your merge, or blocked on an issue, steps aside and the
-  next Run starts.
+- When no job is running, the dispatcher picks, in order: the active Run's next job; a
+  blocked Run whose issues are all answered; a ready seed Run; a map Run for the next
+  diocese in the queue. So dioceses are finished before new ones start. A Run waiting for
+  your merge, or blocked on an issue, steps aside.
+- Once a Run's PR is open, the Run doesn't change. A parked parish answered after that
+  goes into a small follow-up Run of the same kind, which starts after the PR is merged:
+  `map → promote → pr` or `seed → seed-review → pr`, for those parishes only.
 - In a map Run, a parish the map job excluded or left open gets no seed later.
 - A seed Run uses the map Run's batches from `batches.json`, leaving out parishes that
   aren't ready.
@@ -72,7 +82,7 @@ for each batch: seed × each parish ─▶ seed-review ──▶ PR ─▶ (you 
 | reconcile | map | agent | Opus | `coverage --link`, `audit --fetch`, peer `publication_reviews`, merges across batches, `fetch:check --diocese`, a last integrate | `batches validate`, `diocese validate` |
 | promote | map | code | none | `promote --dry-run`, `promote`, `uv run pytest`, lint, commit | its own exit codes |
 | seed | seed | agent | Sonnet, high | Drafts one parish's seed (today's `seed-drafter`) | `seed check` |
-| seed-review | seed | reviewer | Opus | Approves each seed in the batch or sends it back, answering questions by `rules.md` | `seed check` on approved files |
+| seed-review | seed | reviewer | Opus | Settles each seed in the batch: sends back a question a rule already covers, decides the rest by the diocese's precedents or its own judgment, then approves (§8) | `seed check` on approved files |
 | pr | both | code | none | Pushes, opens the PR and writes its summary (§10) | none |
 
 ### Integrating what batches learn
@@ -89,7 +99,10 @@ What a map job learns reaches later batches in three ways:
   as advisory flags and handled by `reconcile`.
 
 Lessons from `seed` jobs don't go into `diocese.md`. They stay in the ledger for foreman
-reviews.
+reviews. What a seed Run carries forward is `seed-review`'s decisions that no rule
+covered: the dispatcher appends each to *Seeding precedents* in `diocese.md` (the
+situation, the choice and the parishes), and later `seed-review` jobs in that diocese
+follow them. Precedents stay in their diocese; only you turn one into a rule.
 
 ## 4. Stage spec
 
@@ -132,7 +145,6 @@ dispatcher acts on their verdicts (§8).
 {
   "status": "done | partial | blocked",
   "summary": "one or two sentences",
-  "changed": ["paths"],
   "flags": [{
     "severity": "blocking | advisory",
     "scope": "parish | run",
@@ -151,7 +163,11 @@ Reviewers add their verdicts:
 - `survey-review`: `"verdict": "approve | send_back"`, `"problems": [...]`, and
   `"rules": [...]`, the proposed rules it accepts, as written.
 - `seed-review`: `"seeds": [{ "parish", "verdict": "approve | send_back", "answers":
-  { "<question id>": "..." }, "problems": [...] }]`.
+  [{ "question", "choice", "basis": "precedent | judgment", "why" }], "problems": [...]
+  }]`. A question a rule covers is never answered here; it is a problem, and the seed
+  goes back.
+
+The dispatcher takes the changed paths from `git`, not from the handoff.
 
 `reconcile` puts lessons that would help in any diocese (a publisher's quirk worth a line
 in the README's *Traps*, a script every batch rewrote) in its `lessons`, for the PR.
@@ -172,19 +188,26 @@ Each tick:
 
    A rate-limit error from the SDK is the backstop: that job becomes `waiting_usage`
    whatever the endpoint said. If no account is eligible, it waits for the earliest reset.
-   `pnpm factory pause` and `resume` override this.
+   If the endpoint errors or its response doesn't parse, the dispatcher pauses and says
+   why; `pnpm factory resume` starts it again. `pnpm factory pause` and `resume` also
+   override the caps.
 
    **Accounts.** Each account has its own config directory (`CLAUDE_CONFIG_DIR`), which
    holds its login and session transcripts. A new job goes to the eligible account with the
    most headroom, and **stays on that account** for its whole life, because it can only be
    resumed from where its transcript is stored.
-2. **Pick the next job.** With no job running, it takes the next job of the active Run.
-   With no active Run, it starts one: a ready seed Run first (§11), otherwise a map Run for
-   the first diocese in the queue that has none.
-3. **Start a job.** It merges `origin/main` into the Run branch so the worker gets the
-   latest specs and data (§10), then runs `query()` with the stage spec in the Run's
-   worktree. It stores the session id, the transcript, the cost and each step the worker
-   takes.
+
+   Each account is signed in once with `claude /login` under its config directory. The
+   Agent SDK runs the Claude Code binary, so jobs use that subscription login, not an API
+   key. Anthropic's terms allow this for your own use: Pro and Max limits "assume
+   ordinary, individual usage of Claude Code and the Agent SDK". What they forbid is
+   offering Claude login in a product for other people. A factory running around the
+   clock stretches "ordinary", which is one more reason for the caps above.
+2. **Pick the next job** in the order in §3.
+3. **Start a job.** At the start of a stage, if `origin/main` has moved, it merges it into
+   the Run branch so the worker gets the latest specs and data (§10). It then runs
+   `query()` with the stage spec in the Run's worktree, and stores the session id, the
+   transcript, the cost and each step the worker takes.
 4. **Finish a job.** It runs the gates, then:
    - all pass → commit with a `Factory-Job: <id>` trailer, push the branch, act on the
      handoff (leads, lessons, verdicts, flags), queue the next job;
@@ -197,6 +220,10 @@ Each tick:
 
    If a session can't be resumed, a fresh worker of the same stage gets the problems and
    the files already on disk.
+
+   Each step after the gates is recorded in the ledger as it completes, so a dispatcher
+   restarted partway through skips what's done instead of committing or appending lessons
+   twice.
 5. **Flags.** Advisory flags are stored for the PR. A blocking flag about a parish
    **parks** that parish and opens an issue (§7); the Run carries on with the next job. A
    blocking flag about the Run (a bad survey, a merge conflict, a gate the worker can't pass
@@ -206,6 +233,10 @@ Job states: `queued → running → (gating) → done`, plus `waiting_usage`, `s
 `blocked` and `failed`. A Run is `active`, `blocked`, `in_review` or `merged`. A parish's
 state comes from its files (`diocese todo`, `seed status`), not the ledger.
 
+A Run in review becomes `merged` when its last commit is in `origin/main`, which the
+dispatcher checks after each `git fetch`. It doesn't watch the PR itself. You handle
+review comments in your own session.
+
 CLI: `pnpm factory status | queue | run | pause | resume | retry <job> | inspect <job> |
 cost [--stage]`.
 
@@ -213,9 +244,15 @@ cost [--stage]`.
 
 - **Worktree.** The dispatcher works in its own worktree, one branch per Run, with its own
   copy of the database and its own `node_modules`, so it never touches your checkout.
-- **Permissions.** Workers run in auto mode (`permission_mode="auto"`), where a classifier
-  checks each action instead of a person. Only the dispatcher commits, pushes and opens
-  PRs.
+- **Permissions.** Workers run in auto mode, where a classifier checks each action
+  instead of a person. The SDK starts in `default` mode, so the dispatcher sets
+  `permission_mode="auto"` explicitly.
+- **Only the dispatcher commits, pushes and opens PRs.** Workers start without
+  `GH_TOKEN` or git credentials in their environment, and with deny rules for `git
+  commit`, `git push` and `gh`. The diff-scope gate checks files git tracks or would
+  track; gitignored files (the database copy, `scratch/`) are left to the worker.
+- **Supervision.** The dispatcher runs as a systemd user service with `Restart=always`.
+  On startup, a job still marked `running` is treated as a crash and resumed.
 
 ## 6. Ledger and storage
 
@@ -233,8 +270,9 @@ cost [--stage]`.
   the parish is left open or excluded with a reason, and the flag is listed in the PR.
 - A blocking flag becomes a **GitHub issue** with labels `factory`, `run:<diocese>` and
   `stage:<stage>`, holding the question, the evidence and the suggestion.
-- You answer by commenting and closing the issue. The dispatcher sees it closed and
-  resumes the blocked job with your answer:
+- You answer by commenting and closing the issue. The dispatcher checks open factory
+  issues every 10 minutes, and when one is closed it resumes the blocked job with your
+  answer:
   - your last comment is the answer;
   - a comment of `/accept` takes the issue's suggestion;
   - closing with no comment from you changes nothing: the dispatcher reopens the issue
@@ -243,7 +281,7 @@ cost [--stage]`.
     agent's prompt.
 - A parked parish whose issue is answered gets its job queued again. If the Run has
   already passed that stage, the job runs before `reconcile`, or before `promote` if
-  `reconcile` is done.
+  `reconcile` is done. Once the PR is open, the parish goes to a follow-up Run (§3).
 
 ## 8. Reviewers
 
@@ -253,14 +291,24 @@ dispatcher acts on its verdicts:
 1. **Approve.** For `survey-review`, the dispatcher appends its accepted rules to *Rules
    settled* in `diocese.md` and the Run moves on. For `seed-review`, it runs
    `pnpm seed approve <parish> --reviewer agent:seed-review@<commit>` with the reviewer's
-   answers (§11).
+   answers (§11), and appends those settled by judgment to *Seeding precedents* (§3).
 2. **Send back** to the worker's session with specific problems, which counts against the
    job's 2 send-backs. For `seed-review`, each seed sent back goes to the session that
-   drafted it.
+   drafted it, and counts against that seed job. When the redrafts pass their gates, a
+   new `seed-review` job reviews only those seeds. A seed past its 2 send-backs gets a
+   blocking flag, and its parish is parked.
 3. **Flag**, which becomes an issue when it's blocking.
 
-When `seed-review` answers a question against the drafter's lean, that is recorded for
-foreman reviews.
+How `seed-review` settles a question:
+
+- **A rule in `rules.md` covers it.** The drafter should have applied it, so the seed goes
+  back citing the rule.
+- **A precedent in this diocese covers it.** Follow the precedent.
+- **Neither covers it.** Decide, preferring the drafter's lean unless the evidence is
+  against it, and say why. This is a borderline case, and it is listed in the PR. If it
+  can't decide on the evidence, it raises a blocking flag instead.
+
+Answers against the drafter's lean are also recorded for foreman reviews.
 
 ## 9. Foreman
 
@@ -284,17 +332,22 @@ a stage's recent jobs, or a Run, and it tells you what went wrong and how to imp
 
 ## 10. Git and PRs
 
-- One branch per Run (`factory/<diocese>-map`, `factory/<diocese>-seed`). Each job ends
-  in a commit with a `Factory-Job` trailer, then a push.
-- Before each job, the dispatcher merges `origin/main` into the Run branch. This keeps
-  specs current and the PR mergeable. A merge conflict raises a Run-level blocking flag,
+- One branch per Run, numbered because a diocese can have several Runs of a kind
+  (`factory/<diocese>-map-1`, `factory/<diocese>-seed-1`, `factory/<diocese>-seed-2`).
+  Each job ends in a commit with a `Factory-Job` trailer, then a push.
+- At the start of each stage, if `origin/main` has moved, the dispatcher merges it into
+  the Run branch. This keeps specs current and the PR mergeable without a merge commit per
+  job, and no stage changes spec partway through. A merge conflict raises a Run-level
+  blocking flag,
   except in `parishes.csv` and `churches.csv`: there a code job takes main's version and
   runs `promote` again.
 - The `pr` code step writes the PR summary from the ledger and the CLIs:
   - **map Run:** coverage numbers, advisory flags, parked parishes, and `reconcile`'s
     lessons for every diocese;
-  - **seed Run:** seeds by status, advisory flags, parked parishes, and a random sample
-    of agent approvals for you to spot-check.
+  - **seed Run:** seeds by status, advisory flags, parked parishes, and **decisions without
+    a rule**: every question `seed-review` settled by judgment, with the parish and slot,
+    the drafter's lean, the choice and why. Answers against the lean come first. These are
+    the cases to read; a wrong one is a reason to change the policy.
 - **You merge.** Seeds load as they do today once the seed PR is merged.
 
 ## 11. Seed Runs
@@ -303,7 +356,8 @@ A seed Run uses today's seeding tools against the database, so the parishes need
 rows first.
 
 - **When a parish is ready.** A parish from a merged map Run is ready once the database has
-  at least 2 of its bulletins. Once a day the dispatcher refreshes its database copy
+  at least 2 of its bulletins. Only parishes the map Run promoted with a bulletin source
+  count, for readiness and for the 80% below; excluded and open ones never do. Once a day the dispatcher refreshes its database copy
   (`pnpm data:pull`) and counts them.
 - **First seed Run.** Starts once 80% of the diocese's mapped parishes are ready, and
   seeds those.
@@ -311,8 +365,13 @@ rows first.
   after the map Run merged, whichever comes first. Each parish still not ready then gets an
   issue, since its bulletin source is probably broken.
 - **Agent approval.** One new command: `pnpm seed approve <parish> --reviewer agent:...
-  [--answers <file>]`. It does what Seeds mode does for a person and writes only
-  `reviewer`, `approved_at` and the reviewer's answers.
+  [--answers <file>]`. It does what Seeds mode does for a person: it writes each answer
+  into its slot as `{"choice", "by": "agent:seed-review@<commit>", "at"}`, then
+  `reviewer` and `approved_at`, and changes nothing else.
+- **Rules stay yours.** The factory never edits `rules.md`. `pnpm seed questions
+  --answered` shows agent answers apart from people's, by their `by`, so candidate rules
+  come from your own decisions or from a borderline case you agree with. Either way, you
+  add the rule in a separate PR.
 
 ## 12. What carries over
 
@@ -327,7 +386,11 @@ rows first.
 
 Get one diocese through end to end, then improve it.
 
-- `pnpm seed approve`.
+- `pnpm seed approve`, `seed questions` showing agent answers separately, and
+  `seeding-plan.md` updated for agent approval.
+- A stub-worker mode: fake workers write canned handoffs and diffs, so send-backs,
+  parking, follow-up Runs, merge conflicts and resuming after a kill can be tested without
+  spending usage.
 - The dispatcher: usage check with the two accounts, job picking, resume, gates, the
   daily seed-readiness check.
 - The ledger and its nightly backup.
@@ -350,8 +413,9 @@ you've already mapped. You review its PRs closely; they are the test of the fact
   auto mode, to save the classifier's usage and its false blocks. First check that
   `parish-site-access`'s headed Chrome works inside it.
 - **More at once.** Several Runs, or several workers, in parallel.
-- **Overrules and auto-merge.** Record your corrections against reviewer decisions, drop
-  spot-checks once the record supports it, and merge automatically when gates pass.
+- **Overrules and auto-merge.** Record your corrections against reviewer decisions,
+  shorten the PR's list of decisions without a rule once the record supports it, and
+  merge automatically when gates pass.
 - **Measuring spec changes.** Foremen that run on their own, and replay evals to show a
   change helped.
 - **Other intakes.** Leads from eCatholic dumps or pasted lists feeding or ranking the
