@@ -173,6 +173,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - OSV/Duda parish sites (hrparish.com) hide the bulletin link from probe url; visit.py --links shows 'Bulletin' going to sponsors.bonventure.net/?page=<n>. Bonventure PDFs are at /pdfs/<n>/<date>.pdf.
 - sponsors.bonventure.net fails TLS verification from Python (probe pdf, recheck) but loads in Chrome; use the http:// form in recipes and evidence urls, and tools/browser_download.py to read a PDF.
 - church-bulletin.org 406s a bare 'Mozilla/5.0' agent; a full Chrome-style user agent works with curl.
+- A shared pastor can mean a shared bulletin: St. Ann's eCatholic file (38453) has carried both St. Ann and St. Thomas pages since at least 26 July 2026, while sainttom.org's own bulletins page went stale in June; check the sister parish's homepage 'bulletins' link and read page 1 of the file.
+- St. Mary Magdalen's church-bulletin.org issues are scanned images (probe pdf reports no text); render page 1 with parish-site-access render.py to read the masthead.
+- St. Joseph on the Brandywine's eCatholic site (30639) and its LPi container 03/4127 carry the same issue; record both ids on one row.
+- A curl with a spoofed browser user agent was refused by the sandbox; use probe pdf or visit.py instead.
 
 
 ## Rules settled for this diocese
