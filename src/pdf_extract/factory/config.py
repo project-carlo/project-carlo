@@ -24,6 +24,10 @@ RUNS_DIR = DATA / "runs"
 STUB_DATA = DATA / "stub"
 
 
+# How long after an attempt the usage meter has caught up (docs/factory-spec.md, Usage).
+QUOTA_SETTLE_SECONDS = 150
+
+
 class FactoryError(RuntimeError):
     """Something the dispatcher can't do; the message says what to fix."""
 
@@ -56,7 +60,7 @@ class Config:
     # Quota readings (docs/factory-spec.md, Usage): a settled reading once an account has
     # been idle this long after an attempt, one of every account this often, and an
     # optional idle gap between attempts on an account so each gets a settled reading.
-    quota_settle_seconds: int = 150
+    quota_settle_seconds: int = QUOTA_SETTLE_SECONDS
     quota_sample_minutes: int = 15
     calibration_gap_seconds: int = 0
     # This machine's, from local.yaml.

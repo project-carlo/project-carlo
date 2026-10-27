@@ -239,6 +239,17 @@ def now() -> str:
     return datetime.now(UTC).isoformat(timespec="microseconds")
 
 
+def when(value: Any) -> datetime | None:
+    """An ISO time from the ledger, a transcript or an API (`Z` allowed); None if empty or
+    unreadable."""
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
 class Ledger:
     """A connection to the ledger, with the queries the dispatcher and reports share."""
 
@@ -383,7 +394,20 @@ class Ledger:
             "seven_day_resets, source, attempt_id, job_id, raw) VALUES (?,?,?,?,?,?,?,?,?,?)",
             account, at, usage.five_hour, usage.five_hour_resets.isoformat(), usage.seven_day,
             usage.seven_day_resets.isoformat(), source, attempt_id, job_id,
-            json.dumps(raw) if raw is not None else None)
+            json.dumps(raw, default=str) if raw is not None else None)
+
+    def link_usage(self, reading_id: int, source: str, attempt_id: int, job_id: int) -> None:
+        """A reading becomes an attempt's before, after or settled reading."""
+        self.run_sql("UPDATE usage SET source = ?, attempt_id = ?, job_id = ? WHERE id = ?",
+                     source, attempt_id, job_id, reading_id)
+
+    def previous_in_session(self, session_id: str | None, attempt_id: int) -> int | None:
+        """The attempt before this one in its session: the one it resumed."""
+        if not session_id:
+            return None
+        row = self.one("SELECT id FROM attempt WHERE session_id = ? AND id < ? ORDER BY id "
+                       "DESC LIMIT 1", session_id, attempt_id)
+        return row["id"] if row else None
 
     def add_rate_limit_event(self, attempt_id: int, info: dict[str, Any],
                              at: str | None = None) -> None:
@@ -393,7 +417,7 @@ class Ledger:
             "VALUES (?,?,?,?,?,?,?,?,?,?)", attempt_id, at or now(), info.get("type"),
             info.get("status"), info.get("utilization"), info.get("resets_at"),
             info.get("overage_status"), info.get("overage_resets_at"),
-            info.get("overage_disabled_reason"), json.dumps(info.get("raw") or {}))
+            info.get("overage_disabled_reason"), json.dumps(info.get("raw") or {}, default=str))
 
     def set_attempt_meta(self, attempt_id: int, **values: Any) -> None:
         values = {k: json.dumps(v) if isinstance(v, (list, dict)) else v

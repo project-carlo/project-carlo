@@ -505,8 +505,9 @@ factory, so each attempt's five-hour and weekly points are measured from reading
 usage endpoint (`quota.py`):
 
 - **Readings.** The reading taken to choose an account is the chosen account's `before`
-  reading for the attempt; an `after` reading follows as soon as the worker returns (if
-  it fails, that is logged and the job carries on). Once an account has been idle
+  reading for the attempt; an `after` reading starts as soon as the worker returns and is
+  taken in the background while the attempt is recorded. The gates wait for it at most
+  10 seconds; if it fails or comes later, that is logged and the job carries on. Once an account has been idle
   `quota_settle_seconds` (default 150) after its last attempt, the dispatcher takes one
   `settled` reading of it, since the meter lags a minute or two; and every
   `quota_sample_minutes` (default 15) a `periodic` reading of every account. Each reading
@@ -515,14 +516,16 @@ usage endpoint (`quota.py`):
 - **Calibration gap.** `calibration_gap_seconds` (default 0: nothing waits) holds the
   next job on an account until that long after its last attempt finished, so every
   attempt gets a settled reading. Set it at or above `quota_settle_seconds`, for
-  calibration runs only; it is a setting, with no CLI flag.
+  calibration runs only; it is a setting, with no CLI flag. A job that waits on every
+  account waits until the soonest of one coming under its caps and one's gap ending.
 - **Attribution** is computed when a report asks, never stored, as a range with a label.
   `settled`: an idle reading before, a settled one after, no other attempt on the account
   in between: the delta ±1 for whole-percent rounding (a displayed 0 is `<1`).
   `immediate`: only an early reading after: a minimum. `shared`: another attempt on the
   account started less than `quota_settle_seconds` after this one ended: the group's
   total over its combined interval, with its attempts, and no exact share (the first
-  attempt's early reading still gives it a minimum). `reset`: the window's reset time
+  attempt's early reading still gives it a minimum). A job with several attempts in one
+  group counts the group's upper bound once. `reset`: the window's reset time
   moved by more than 3 minutes (reset times jitter by a second between readings), or
   passed: a minimum. `missing`, or `inconsistent` (the meter fell without a reset): no
   number. The meter rising between two readings while the account was idle is outside
@@ -559,7 +562,8 @@ usage endpoint (`quota.py`):
 - **Quota tables.** `usage` rows carry their `source` (`select`, `before`, `after`,
   `settled`, `periodic`), the attempt and job a reading is for, and the scrubbed `raw`
   response. `rate_limit_event` keeps every SDK rate-limit event in full (type, status,
-  utilization, reset time, overage, raw), besides its `rate_limit` step. `attempt_meta`,
+  utilization, reset time, overage, raw, without credentials), besides its `rate_limit`
+  step; failing to record one never stops the attempt. `attempt_meta`,
   one row per attempt: requested model and effort (the stage spec's), the models it
   actually used (side calls included), SDK and CLI versions, entrypoint, the account's
   plan, a hash of the stage spec, prompt file and skill names at its commit, the attempt
@@ -567,8 +571,8 @@ usage endpoint (`quota.py`):
   reads; cache writes kept apart by 5-minute and 1-hour TTL; web searches) in total and
   per model, distinct messages and repeated transcript records, work units, gaps, and its
   `source`: `live` (the ResultMessage), `transcript` (a crash or timeout, parsed from its
-  transcript: messages counted once by id, from the attempt's start, so a resumed
-  session's earlier attempts aren't counted again) or `backfill`.
+  transcript: messages counted once by id, from the attempt's start to its finish, so a
+  resumed session's other attempts aren't counted in it) or `backfill`.
 - An older ledger gains the new columns when the dispatcher opens it.
 - **Backfill.** `pnpm factory quota backfill` fills `attempt_meta` for attempts without
   it, from their copied transcripts and the stage spec at their commit (`git show`), and

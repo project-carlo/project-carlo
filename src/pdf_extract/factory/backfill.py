@@ -55,7 +55,9 @@ def backfill(ledger: Ledger, config: Config, show: Show, root: Path = Path("."))
         if path is not None and path.exists():
             ids = seen.setdefault(str(path), set())
             with path.open(encoding="utf-8") as f:
+                # A resumed session's later attempts are in the same file: stop at its end.
                 tokens = parse_transcript(f, since=datetime.fromisoformat(a["started_at"]),
+                                          until=datetime.fromisoformat(a["finished_at"]),
                                           seen=ids)
             ids |= tokens.message_ids
             gaps += tokens.gaps
@@ -87,16 +89,15 @@ def backfill(ledger: Ledger, config: Config, show: Show, root: Path = Path("."))
         gaps.append("plan read at backfill time" if plan else "plan unknown")
         if not _settled_reading(ledger, a, config.quota_settle_seconds):
             gaps.append("no settled reading after it")
-        resumed = ledger.one("SELECT id FROM attempt WHERE session_id = ? AND id < ? ORDER BY "
-                             "id DESC LIMIT 1", a["session_id"], a["id"]) \
-            if a["session_id"] and a["kind"] not in ("start", "fresh") else None
+        resumed = ledger.previous_in_session(a["session_id"], a["id"]) \
+            if a["kind"] not in ("start", "fresh") else None
         ledger.set_attempt_meta(
             a["id"], source="backfill", approximate=1, requested_model=spec.get("model"),
             effort=spec.get("effort"), sdk_version=None, cli_version=tokens.cli_version,
             entrypoint=tokens.entrypoint, plan=plan,
             config_hash=fingerprint(spec_text, prompt, list(spec.get("skills") or []))
             if spec_text else None,
-            resumed_from=resumed["id"] if resumed else None, work_units=units, gaps=gaps,
+            resumed_from=resumed, work_units=units, gaps=gaps,
             **tokens.columns())
         done.append({"attempt": a["id"], "job": f"{job['run_id']}/{job['name']}",
                      "tokens": tokens.columns(), "gaps": gaps})
@@ -128,8 +129,7 @@ def _link_readings(ledger: Ledger) -> int:
                          a["account"], a["started_at"],
                          (start - BEFORE_WITHIN).isoformat(timespec="microseconds"))
         if row:
-            ledger.run_sql("UPDATE usage SET source = 'before', attempt_id = ?, job_id = ? "
-                           "WHERE id = ?", a["id"], a["job_id"], row["id"])
+            ledger.link_usage(row["id"], "before", a["id"], a["job_id"])
             linked += 1
     for a in attempts:
         row = ledger.one("SELECT id FROM usage WHERE account = ? AND attempt_id IS NULL AND "
@@ -139,7 +139,6 @@ def _link_readings(ledger: Ledger) -> int:
                          "started_at > ?", a["account"], a["finished_at"])["at"]
         if row and (nxt is None or ledger.one("SELECT at FROM usage WHERE id = ?",
                                               row["id"])["at"] <= nxt):
-            ledger.run_sql("UPDATE usage SET source = 'after', attempt_id = ?, job_id = ? "
-                           "WHERE id = ?", a["id"], a["job_id"], row["id"])
+            ledger.link_usage(row["id"], "after", a["id"], a["job_id"])
             linked += 1
     return linked

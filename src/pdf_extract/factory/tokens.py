@@ -3,16 +3,19 @@
 Thinking tokens are a part of output tokens, never added to them again. Cache writes keep
 their TTL (5 minutes or 1 hour). A transcript repeats an assistant message once per
 content block, so messages are counted once by id; a resumed session appends to the same
-file, so only the messages from the attempt's start (and not seen before) count.
+file, so only the messages from the attempt's start to its finish (and not seen before)
+count.
 """
 
 from __future__ import annotations
 
 import json
 from collections.abc import Iterable
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any
+
+from pdf_extract.factory.ledger import when
 
 FIELDS = ("input", "output", "thinking", "cache_read", "cache_write_5m", "cache_write_1h",
           "web_search")
@@ -60,11 +63,6 @@ class Tokens:
                 "model": self.model, "models": sorted(self.per_model),
                 "messages": self.messages, "duplicate_records": self.duplicates}
 
-    def as_dict(self) -> dict[str, Any]:
-        d = asdict(self)
-        d.pop("message_ids")
-        return d
-
 
 def _int(value: Any) -> int:
     try:
@@ -98,17 +96,12 @@ def model_counts(usage: dict[str, Any]) -> dict[str, int]:
             "unsplit": written, "web_search": _int(usage.get("webSearchRequests"))}
 
 
-def _when(value: Any) -> datetime | None:
-    try:
-        return datetime.fromisoformat(str(value).replace("Z", "+00:00"))
-    except ValueError:
-        return None
-
-
 def parse_transcript(lines: Iterable[str], since: datetime | None = None,
-                     seen: set[str] | None = None) -> Tokens:
+                     seen: set[str] | None = None, until: datetime | None = None) -> Tokens:
     """The tokens of one attempt in a session transcript: assistant messages from `since`
-    on, each counted once by id, skipping ids an earlier attempt already counted (`seen`).
+    to `until`, each counted once by id, skipping ids an earlier attempt already counted
+    (`seen`). A resumed session appends later attempts to the same file: `until` keeps
+    them out.
     Side calls (a small model summarising) appear only in the session's cost-state record:
     a model there with no assistant message is added from it."""
     seen = seen or set()
@@ -125,13 +118,16 @@ def parse_transcript(lines: Iterable[str], since: datetime | None = None,
             continue
         if r.get("type") == "cost-state":
             started = r.get("startTime")
-            if since is None or (started and started / 1000 >= since.timestamp() - 60):
+            if (since is None or (started and started / 1000 >= since.timestamp() - 60)) \
+                    and (until is None or (started and started / 1000 <= until.timestamp())):
                 cost_state = r
             continue
         if r.get("type") != "assistant" or not isinstance(r.get("message"), dict):
             continue
-        at = _when(r.get("timestamp"))
-        if since is not None and (at is None or at < since):
+        at = when(r.get("timestamp"))
+        if (since is not None or until is not None) and at is None:
+            continue
+        if (since is not None and at < since) or (until is not None and at > until):
             continue
         message = r["message"]
         mid = message.get("id") or r.get("uuid")

@@ -11,6 +11,7 @@ import json
 import logging
 import shutil
 import subprocess
+import threading
 import time
 from collections.abc import Callable
 from dataclasses import dataclass
@@ -75,6 +76,7 @@ from pdf_extract.factory.usage import (
     choose,
     fetch_usage,
     next_eligible,
+    scrub,
     standings,
 )
 from pdf_extract.factory.workers import (
@@ -94,6 +96,8 @@ LOGGER = logging.getLogger(__name__)
 MAX_CRASHES = 3
 MAX_FAILURES = 3  # git or GitHub failing on one job, tick after tick
 FAILURE_RETRY = timedelta(minutes=5)
+# How long an attempt's gates wait for its after reading (seconds); usually under one.
+AFTER_READING_WAIT = 10
 # What a git, gh or command call raises when it fails; a job's tick waits and tries again.
 TRANSIENT = (FactoryError, OSError, subprocess.SubprocessError)
 REGENERATE = "pnpm --silent diocese promote {diocese}"
@@ -382,7 +386,9 @@ class Dispatcher:
         else:
             pick = choose(rows, only=only)
         if pick is None:
-            until = next_eligible(rows, only=only) or self.clock() + timedelta(minutes=30)
+            # The soonest of an account under its caps again and a calibration gap ending.
+            soonest = [t for t in (next_eligible(rows, only=only), until) if t is not None]
+            until = min(soonest, default=self.clock() + timedelta(minutes=30))
             self.ledger.set_job(job["id"], status=WAITING_USAGE, wait_until=until.isoformat())
             return None, None, Outcome("waiting", f"no account under its caps until {until}",
                                        until)
@@ -405,6 +411,44 @@ class Dispatcher:
             if last is not None and at < last + gap:
                 held[a.name] = last + gap
         return held
+
+    def _after_reading(self, account: Account) -> Callable[[int, int], None]:
+        """Start the reading after an attempt in the background, so a slow endpoint or an
+        expired login doesn't hold up the attempt's gates. The returned function records it
+        for the attempt, waiting at most AFTER_READING_WAIT; a late one is dropped."""
+        got: dict[str, Any] = {}
+
+        def fetch() -> None:
+            try:
+                got["usage"] = self.fetch_usage(account)
+                got["at"] = self._stamp()
+            except Exception as exc:  # recorded as a warning below
+                got["error"] = exc
+
+        thread = threading.Thread(target=fetch, name=f"after-reading-{account.name}",
+                                  daemon=True)
+        thread.start()
+
+        def record(attempt_id: int, job_id: int) -> None:
+            thread.join(AFTER_READING_WAIT)
+            if thread.is_alive():
+                LOGGER.warning("after quota reading of %s took over %ss: skipped",
+                               account.name, AFTER_READING_WAIT)
+            elif "error" in got:
+                LOGGER.warning("after quota reading of %s failed: %s", account.name,
+                               got["error"])
+            else:
+                self.ledger.add_usage(account.name, got["at"], got["usage"], "after",
+                                      attempt_id, job_id)
+        return record
+
+    def _rate_limit(self, attempt_id: int, info: dict[str, Any]) -> None:
+        """An SDK rate-limit event, kept without credentials. Called from inside the
+        worker's message loop: a failure to record it is logged, never raised."""
+        try:
+            self.ledger.add_rate_limit_event(attempt_id, scrub(info), self._stamp())
+        except Exception:
+            LOGGER.exception("attempt %s: recording a rate-limit event failed", attempt_id)
 
     def _reading(self, account: Account, source: str, attempt_id: int | None = None,
                  job_id: int | None = None) -> None:
@@ -487,8 +531,7 @@ class Dispatcher:
                                              account.name if account else None, commit_sha,
                                              at=started)
         if reading is not None:  # the selection's reading of this account is its before
-            self.ledger.run_sql("UPDATE usage SET source = 'before', attempt_id = ?, job_id = ? "
-                                "WHERE id = ?", attempt_id, job["id"], reading)
+            self.ledger.link_usage(reading, "before", attempt_id, job["id"])
         self.ledger.set_job(job["id"], status=RUNNING, started_at=job["started_at"] or now(),
                             account=job["account"] or (account.name if account else None),
                             commit_sha=job["commit_sha"] or commit_sha, wait_until=None,
@@ -500,13 +543,11 @@ class Dispatcher:
             system_append=prompt_body(worktree, spec.prompt), values=values, session_id=session,
             on_step=lambda k, name, detail: self.ledger.add_step(attempt_id, next(steps), k,
                                                                  name, detail),
-            on_rate_limit=lambda info: self.ledger.add_rate_limit_event(attempt_id, info,
-                                                                        self._stamp()),
+            on_rate_limit=lambda info: self._rate_limit(attempt_id, info),
         )
         result = self.worker.run(request)
         finished = self._stamp()
-        if account is not None:
-            self._reading(account, "after", attempt_id, job["id"])
+        after = self._after_reading(account) if account is not None else None
         transcript = copy_transcript(result, self.runs_dir / run["id"] / job["name"])
         self.ledger.finish_attempt(attempt_id, outcome=result.outcome, error=result.error,
                                    cost_usd=result.cost_usd, turns=result.turns,
@@ -514,9 +555,14 @@ class Dispatcher:
                                    transcript=str(transcript) if transcript else None)
         try:
             self._record_meta(attempt_id, run, job, spec, worktree, account, result,
-                              transcript, session, started)
+                              transcript, session, started, finished)
         except Exception:  # metadata never stops a job
             LOGGER.exception("attempt %s: recording its metadata failed", attempt_id)
+        if after is not None:
+            try:
+                after(attempt_id, job["id"])
+            except Exception:  # nor does a reading
+                LOGGER.exception("attempt %s: recording its after reading failed", attempt_id)
         job = self.ledger.job(job["id"])
         self.ledger.set_job(job["id"], cost_usd=job["cost_usd"] + result.cost_usd,
                             turns=job["turns"] + result.turns,
@@ -553,7 +599,8 @@ class Dispatcher:
 
     def _record_meta(self, attempt_id: int, run: Any, job: Any, spec: StageSpec,
                      worktree: Path, account: Account | None, result: WorkerResult,
-                     transcript: Path | None, session: str | None, started: str) -> None:
+                     transcript: Path | None, session: str | None, started: str,
+                     finished: str) -> None:
         """How the attempt ran and its tokens: from the ResultMessage, else (a crash, a
         timeout) from its transcript."""
         info, gaps = result.info, []
@@ -564,7 +611,8 @@ class Dispatcher:
         elif transcript is not None:
             source = "transcript"
             with transcript.open(encoding="utf-8") as f:
-                tokens = parse_transcript(f, since=datetime.fromisoformat(started))
+                tokens = parse_transcript(f, since=datetime.fromisoformat(started),
+                                          until=datetime.fromisoformat(finished))
         else:
             source, tokens = "live", Tokens()
             gaps.append("no token usage reported")
@@ -572,9 +620,6 @@ class Dispatcher:
             if spec.prompt and (worktree / spec.prompt).exists() else ""
         spec_path = worktree / "factory" / "stages" / f"{job['stage']}.yaml"
         spec_text = spec_path.read_text(encoding="utf-8") if spec_path.exists() else ""
-        resumed = self.ledger.one("SELECT id FROM attempt WHERE session_id = ? AND id < ? "
-                                  "ORDER BY id DESC LIMIT 1", session, attempt_id) \
-            if session else None
         models = sorted(set(tokens.per_model) | set(info.get("models") or []))
         self.ledger.set_attempt_meta(
             attempt_id, source=source, approximate=0, requested_model=spec.model,
@@ -583,7 +628,7 @@ class Dispatcher:
             entrypoint=info.get("entrypoint") or tokens.entrypoint,
             plan=account_plan(account) if account else None,
             config_hash=fingerprint(spec_text, prompt, list(spec.skills)),
-            resumed_from=resumed["id"] if resumed else None,
+            resumed_from=self.ledger.previous_in_session(session, attempt_id),
             work_units=work_units(job["stage"], json.loads(job["input"]),
                                   ordered_batches(worktree, run["diocese"])),
             gaps=gaps + tokens.gaps,

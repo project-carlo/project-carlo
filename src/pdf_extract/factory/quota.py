@@ -22,9 +22,12 @@ from __future__ import annotations
 
 import hashlib
 import json
+from bisect import bisect_left, bisect_right, insort
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from typing import Any
+
+from pdf_extract.factory.ledger import when
 
 WINDOWS = ("five_hour", "seven_day")
 SETTLED, IMMEDIATE, SHARED, RESET = "settled", "immediate", "shared", "reset"
@@ -35,12 +38,6 @@ ORDER = (INCONSISTENT, MISSING, RESET, SHARED, IMMEDIATE, SETTLED)
 TOLERANCE = timedelta(minutes=3)
 # How close to a rise while idle an attempt is flagged as possibly including outside use.
 NEARBY = timedelta(hours=1)
-
-
-def when(value: Any) -> datetime | None:
-    if not value:
-        return None
-    return datetime.fromisoformat(str(value).replace("Z", "+00:00"))
 
 
 @dataclass(frozen=True)
@@ -99,17 +96,6 @@ class Measure:
     outside_use: bool = False
     approximate: bool = False
     note: str = ""
-
-    def text(self) -> str:
-        out = f"{self.label} {range_text(self.low, self.high)}"
-        if self.group:
-            out += (f" (group {','.join(map(str, self.group))}: "
-                    f"{range_text(self.group_low, self.group_high)})")
-        if self.outside_use:
-            out += " outside use?"
-        if self.approximate:
-            out += " approx"
-        return out
 
     def as_dict(self) -> dict[str, Any]:
         return {"label": self.label, "low": self.low, "high": self.high,
@@ -176,6 +162,34 @@ def _delta(a: Reading, b: Reading, window: str,
     return "ok", vb - va
 
 
+class _Account:
+    """One account's spans and readings, sorted, with the times to search them by."""
+
+    def __init__(self, spans: list[Span], reads: list[Reading]) -> None:
+        self.spans, self.reads = spans, reads
+        self.starts = [s.started for s in spans]
+        self.ats = [r.at for r in reads]
+        # The latest finish among spans[:i+1]; None once one of them is still running.
+        self.latest: list[datetime | None] = []
+        latest: datetime | None = None
+        running = False
+        for s in spans:
+            if s.finished is None:
+                running = True
+            elif latest is None or s.finished > latest:
+                latest = s.finished
+            self.latest.append(None if running else latest)
+        self.rises: list[dict[str, Any]] = []
+        self.rise_ends: list[datetime] = []
+
+    def first_read(self, at: datetime, until: datetime | None = None) -> Reading | None:
+        """The first reading at or after `at` (and at or before `until`)."""
+        i = bisect_left(self.ats, at)
+        if i == len(self.reads) or (until is not None and self.ats[i] > until):
+            return None
+        return self.reads[i]
+
+
 class Analysis:
     """Every attempt's measures, idle rises and window totals, for one set of readings."""
 
@@ -187,14 +201,26 @@ class Analysis:
         self.readings = sorted(readings, key=lambda r: r.at)
         self.groups: dict[int, _Group] = {}
         self.rises: list[dict[str, Any]] = []
-        accounts = sorted({s.account for s in self.spans if s.account}
-                          | {r.account for r in self.readings})
-        for account in accounts:
-            mine = [s for s in self.spans if s.account == account]
-            reads = [r for r in self.readings if r.account == account]
-            for g in self._chain(mine):
-                self._measure(g, mine, reads)
-            self.rises += self._idle_rises(account, mine, reads)
+        by_span: dict[str, list[Span]] = {}
+        by_read: dict[str, list[Reading]] = {}
+        for s in self.spans:
+            if s.account:
+                by_span.setdefault(s.account, []).append(s)
+        for r in self.readings:
+            by_read.setdefault(r.account, []).append(r)
+        self.accounts: dict[str, _Account] = {}
+        for account in sorted(by_span.keys() | by_read.keys()):
+            acc = self.accounts[account] = _Account(by_span.get(account, []),
+                                                    by_read.get(account, []))
+            finished: list[datetime] = []  # earlier groups' finishes, sorted
+            for g in self._chain(acc.spans):
+                self._measure(g, acc, finished)
+                for s in g.spans:
+                    if s.finished is not None:
+                        insort(finished, s.finished)
+            acc.rises = self._idle_rises(account, acc)
+            acc.rise_ends = [r["to"] for r in acc.rises]
+            self.rises += acc.rises
 
     # ── Groups: attempts on an account less than `settle` apart ──────────────
     def _chain(self, spans: list[Span]) -> list[_Group]:
@@ -211,33 +237,32 @@ class Analysis:
                 self.groups[s.id] = g
         return groups
 
-    def _measure(self, g: _Group, spans: list[Span], reads: list[Reading]) -> None:
+    def _measure(self, g: _Group, acc: _Account, finished: list[datetime]) -> None:
         start, end = g.spans[0].started, g.spans[-1].finished
         if end is None:
             g.why = "still running"
             return
-        prev = [s for s in spans if s.finished is not None and s.finished <= start
-                and s not in g.spans]
-        nxt = [s for s in spans if s.started > end]
-        idle_from = max((s.finished for s in prev), default=None)  # type: ignore[type-var]
-        before = [r for r in reads if r.at <= start
-                  and (idle_from is None or r.at >= idle_from + self.settle)]
-        if not before:
+        # The account went idle when the last attempt before this group finished.
+        i = bisect_right(finished, start)
+        idle_from = finished[i - 1] if i else None
+        j = bisect_right(acc.ats, start)
+        before = acc.reads[j - 1] if j else None
+        if before is None or (idle_from is not None and before.at < idle_from + self.settle):
             g.why = "no idle reading before"
             return
-        g.before = before[-1]
-        until = nxt[0].started if nxt else None
-        after = [r for r in reads if r.at >= end and (until is None or r.at <= until)]
-        if not after:
+        g.before = before
+        k = bisect_right(acc.starts, end)
+        until = acc.starts[k] if k < len(acc.starts) else None
+        first = acc.first_read(end, until)
+        if first is None:
             g.why = "no reading after"
             return
-        settled = [r for r in after if r.at >= end + self.settle]
-        g.end, g.settled = (settled[0], True) if settled else (after[0], False)
+        settled = acc.first_read(end + self.settle, until)
+        g.end, g.settled = (settled, True) if settled else (first, False)
         if len(g.spans) > 1:
-            first, second = g.spans[0], g.spans[1]
-            early = [r for r in reads if first.finished is not None
-                     and first.finished <= r.at <= second.started]
-            g.first_after = early[0] if early else None
+            one, two = g.spans[0], g.spans[1]
+            g.first_after = acc.first_read(one.finished, two.started) \
+                if one.finished is not None else None
 
     # ── Per attempt ─────────────────────────────────────────────────────────
     def measure(self, span: Span, window: str) -> Measure:
@@ -285,16 +310,18 @@ class Analysis:
         return m
 
     # ── Outside use ─────────────────────────────────────────────────────────
-    def _idle(self, spans: list[Span], a: datetime, b: datetime) -> bool:
+    def _idle(self, acc: _Account, a: datetime, b: datetime) -> bool:
         """No attempt on the account ran in [a - settle, b]."""
-        return not any(s.started <= b and (s.finished is None or s.finished > a - self.settle)
-                       for s in spans)
+        k = bisect_right(acc.starts, b)  # the attempts started by b
+        if not k:
+            return True
+        latest = acc.latest[k - 1]
+        return latest is not None and latest <= a - self.settle
 
-    def _idle_rises(self, account: str, spans: list[Span],
-                    reads: list[Reading]) -> list[dict[str, Any]]:
+    def _idle_rises(self, account: str, acc: _Account) -> list[dict[str, Any]]:
         out = []
-        for a, b in zip(reads, reads[1:], strict=False):
-            if not self._idle(spans, a.at, b.at):
+        for a, b in zip(acc.reads, acc.reads[1:], strict=False):
+            if not self._idle(acc, a.at, b.at):
                 continue
             for w in WINDOWS:
                 kind, d = _delta(a, b, w, self.tolerance)
@@ -304,8 +331,13 @@ class Analysis:
         return out
 
     def _near_rise(self, account: str, a: datetime, b: datetime) -> bool:
-        return any(r["account"] == account and r["from"] - NEARBY <= b
-                   and r["to"] + NEARBY >= a for r in self.rises)
+        """A rise while idle within NEARBY of [a, b]. Rises are between consecutive
+        readings, so sorted by both ends: the first ending late enough is the one to check."""
+        acc = self.accounts.get(account)
+        if acc is None:
+            return False
+        i = bisect_left(acc.rise_ends, a - NEARBY)
+        return i < len(acc.rises) and acc.rises[i]["from"] - NEARBY <= b
 
     # ── Account and window totals ───────────────────────────────────────────
     def window_totals(self) -> list[dict[str, Any]]:
@@ -313,35 +345,42 @@ class Analysis:
         used, the factory's settled, shared and uncertain portions, and the rest."""
         out = []
         groups = list({id(g): g for g in self.groups.values()}.values())
-        for account in sorted({r.account for r in self.readings}):
-            reads = [r for r in self.readings if r.account == account]
+        for account, acc in self.accounts.items():
+            if not acc.reads:
+                continue
+            mine = [g for g in groups if g.spans[0].account == account
+                    and g.before is not None and g.end is not None]
             for w in WINDOWS:
-                for inst in _instances(reads, w, self.tolerance):
-                    ids = {r.id for r in inst}
-                    parts = {"settled": 0.0, "shared": 0.0, "uncertain": 0.0}
-                    for g in groups:
-                        if g.before is None or g.end is None or g.spans[0].account != account \
-                                or g.before.id not in ids or g.end.id not in ids:
-                            continue
-                        kind, d = _delta(g.before, g.end, w, self.tolerance)
-                        if kind != "ok" or d is None:
-                            continue
-                        settled = g.settled and not any(s.id in self.approximate
-                                                        for s in g.spans)
-                        key = ("shared" if len(g.spans) > 1 else "settled") if settled \
-                            else "uncertain"
-                        parts[key] += d
+                instances = _instances(acc.reads, w, self.tolerance)
+                where = {r.id: n for n, inst in enumerate(instances) for r in inst}
+                parts = [{"settled": 0.0, "shared": 0.0, "uncertain": 0.0} for _ in instances]
+                for g in mine:
+                    assert g.before is not None and g.end is not None
+                    n = where.get(g.before.id)
+                    if n is None or where.get(g.end.id) != n:
+                        continue
+                    kind, d = _delta(g.before, g.end, w, self.tolerance)
+                    if kind != "ok" or d is None:
+                        continue
+                    settled = g.settled and not any(s.id in self.approximate for s in g.spans)
+                    key = ("shared" if len(g.spans) > 1 else "settled") if settled \
+                        else "uncertain"
+                    parts[n][key] += d
+                idle = [0.0] * len(instances)
+                for r in acc.rises:
+                    n = where.get(r["readings"][1])
+                    if r["window"] == w and n is not None:
+                        idle[n] += r["points"]
+                for n, inst in enumerate(instances):
                     total = max(r.values[w] or 0 for r in inst)
                     resets = next((r.resets[w] for r in inst if r.values[w]), None)
                     out.append({
                         "account": account, "window": w,
                         "resets": resets.isoformat() if resets else None,
                         "first": inst[0].at.isoformat(), "last": inst[-1].at.isoformat(),
-                        "readings": len(inst), "total": total, **parts,
-                        "unexplained": max(0.0, total - sum(parts.values())),
-                        "idle_rises": sum(r["points"] for r in self.rises
-                                          if r["account"] == account and r["window"] == w
-                                          and r["readings"][1] in ids),
+                        "readings": len(inst), "total": total, **parts[n],
+                        "unexplained": max(0.0, total - sum(parts[n].values())),
+                        "idle_rises": idle[n],
                     })
         return out
 
@@ -366,12 +405,20 @@ def _instances(reads: list[Reading], w: str, tolerance: timedelta) -> list[list[
 
 
 def combine(measures: list[Measure]) -> dict[str, Any]:
-    """A job's points in one window, over its attempts: the sum of their ranges."""
+    """A job's points in one window, over its attempts: the sum of their ranges. Attempts
+    measured together share one group total, so its upper bound counts once."""
     if not measures:
         return {"label": MISSING, "low": None, "high": None, "text": "-"}
     label = min((m.label for m in measures), key=ORDER.index)
     low: float | None = sum(m.low or 0 for m in measures)
-    highs = [m.high for m in measures]
+    highs: list[float | None] = []
+    groups: set[tuple[int, ...]] = set()
+    for m in measures:
+        if m.label == SHARED and m.group:
+            if tuple(m.group) in groups:
+                continue
+            groups.add(tuple(m.group))
+        highs.append(m.high)
     high = None if any(h is None for h in highs) else sum(h for h in highs if h is not None)
     if label in (MISSING, INCONSISTENT):
         low, high = (low or None), None

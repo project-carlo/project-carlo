@@ -11,6 +11,8 @@ import json
 import shutil
 import sqlite3
 import subprocess
+import threading
+import time
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -19,6 +21,7 @@ from typing import Any
 import pytest
 
 from pdf_extract.blobstore import BlobStoreError
+from pdf_extract.factory import dispatcher as dispatcher_mod
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import playbook, readiness, report
 from pdf_extract.factory.backfill import backfill
@@ -1273,7 +1276,9 @@ def test_back_to_back_attempts_share_their_measurement() -> None:
     assert (a.group_low, a.group_high) == (10, 12)  # 21 - 10 ± 1, settled
     assert a.low == 1 and a.high == 12  # A's early reading: at least 12 - 10 - 1
     assert b.low == 0 and b.high == 12
-    assert "group 1,2" in a.text()
+    # One job running both: the group's upper bound counts once, not once per attempt.
+    job = combine([a, b])
+    assert (job["label"], job["low"], job["high"]) == (SHARED, 1, 12)
     totals = {(w["window"]): w for w in an.window_totals()}
     assert totals["five_hour"]["shared"] == 11 and totals["five_hour"]["unexplained"] == 10
 
@@ -1283,7 +1288,7 @@ def test_an_idle_gap_gives_a_settled_range_and_zero_is_below_one() -> None:
     an = Analysis(spans, [reading(1, 0, 10, 20), reading(2, 13, 15, 20)], SETTLE)
     five, week = an.measure(spans[0], "five_hour"), an.measure(spans[0], "seven_day")
     assert (five.label, five.low, five.high) == (SETTLED, 4, 6)
-    assert (week.label, week.low, week.high) == (SETTLED, 0, 1) and "<1" in week.text()
+    assert (week.label, week.low, week.high) == (SETTLED, 0, 1) and week.as_dict()["text"] == "<1"
     # Read sooner than the meter settles: a minimum only.
     early = Analysis(spans, [reading(1, 0, 10), reading(2, 10.5, 15)], SETTLE)
     m = early.measure(spans[0], "five_hour")
@@ -1598,3 +1603,89 @@ def test_backfill_recovers_tokens_and_lists_gaps(tmp_path: Path) -> None:
     backfill(ledger, config, files.get, root=tmp_path)
     gaps = " ".join(report.attempt_meta(ledger, other)["gaps"])
     assert "no transcript" in gaps and "stage spec" in gaps
+
+
+def test_backfill_gives_a_resumed_session_each_attempt_its_own_tokens(tmp_path: Path) -> None:
+    ledger = Ledger(tmp_path / "factory.db")
+    run_id = ledger.add_run(diocese=D, kind=MAP, worktrees_dir=tmp_path)
+    job = ledger.add_job(run_id, "survey", {})
+    rel = "s1.jsonl"
+    (tmp_path / rel).write_text("\n".join(TRANSCRIPT) + "\n")
+    ids = []
+    for kind, start in (("start", T0), ("resume", T0 + timedelta(hours=1))):
+        a = ledger.add_attempt(job, kind, "p", "a", None, at=start.isoformat())
+        ledger.finish_attempt(a, outcome="ok", session_id="s1", transcript=rel,
+                              finished_at=(start + timedelta(minutes=10)).isoformat())
+        ids.append(a)
+    backfill(ledger, Config(accounts=[Account("a", tmp_path / "acct")]), {}.get, root=tmp_path)
+    first, second = (report.attempt_meta(ledger, a) for a in ids)
+    assert (first["messages"], first["output_tokens"]) == (2, 220)  # m1, m2 only
+    assert (second["messages"], second["output_tokens"]) == (1, 10)  # m3
+    assert second["resumed_from"] == ids[0]
+
+
+def test_a_calibration_gap_ends_the_wait_when_the_other_account_is_over_its_caps(
+        env: Env) -> None:
+    meter, spend = metered(env, gap=200)
+    env.config.accounts.append(Account("b", env.tmp / "acct-b"))
+
+    def fetch(account: Account) -> Usage:
+        return meter(account) if account.name == "a" else Usage(
+            99, FIVE_RESETS, 20, WEEK_RESETS)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=fetch)
+    assert drive(d)[-1].startswith("waiting")
+    waiting = env.ledger.one("SELECT wait_until FROM job WHERE status = ?", WAITING_USAGE)
+    finished = env.ledger.one("SELECT finished_at FROM attempt WHERE id = 1")["finished_at"]
+    # Account a is free once its gap ends, long before b's five-hour window resets.
+    assert datetime.fromisoformat(waiting["wait_until"]) == \
+        datetime.fromisoformat(finished) + timedelta(seconds=200)
+
+
+def test_rate_limit_events_are_scrubbed_and_never_stop_the_attempt(
+        env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
+    meter, spend = metered(env)
+    event = {"type": "five_hour", "status": "allowed_warning", "utilization": 0.9,
+             "raw": {"access_token": "tok-123", "surpassedThreshold": 0.8}}
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"),
+                        rate_limits=[event, event])
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=meter)
+    real = env.ledger.add_rate_limit_event
+    calls = []
+
+    def flaky(*args: Any, **kwargs: Any) -> None:
+        calls.append(1)
+        if len(calls) == 1:
+            raise sqlite3.OperationalError("database is locked")
+        real(*args, **kwargs)
+    monkeypatch.setattr(env.ledger, "add_rate_limit_event", flaky)
+    assert d.tick().action == "ran"
+    assert env.ledger.one("SELECT outcome FROM attempt WHERE id = 1")["outcome"] == OK
+    rows = env.ledger.all("SELECT raw FROM rate_limit_event")
+    assert len(rows) == 1 and "tok-123" not in rows[0]["raw"]
+    assert "surpassedThreshold" in rows[0]["raw"]
+
+
+def test_a_slow_after_reading_does_not_hold_up_the_gates(
+        env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(dispatcher_mod, "AFTER_READING_WAIT", 0.2)
+    meter, spend = metered(env)
+    release = threading.Event()
+
+    def slow(account: Account) -> Usage:
+        if threading.current_thread() is not threading.main_thread():  # the after reading
+            release.wait(5)
+        return meter(account)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=slow)
+    started = time.monotonic()
+    assert d.tick().action == "ran"
+    assert time.monotonic() - started < 3
+    release.set()
+    assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] == DONE
+    assert not env.ledger.all("SELECT * FROM usage WHERE source = 'after'")
+
+
+def test_an_unknown_time_zone_is_a_clear_error(tmp_path: Path) -> None:
+    with pytest.raises(FactoryError, match="unknown time zone 'US/Eastrn'"):
+        report.quota(Ledger(tmp_path / "l.db"), by="hour", tz="US/Eastrn")
