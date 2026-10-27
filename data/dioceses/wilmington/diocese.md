@@ -232,6 +232,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site can answer 403 to curl and probe url yet load in the browser (stjosephmiddletown.com, setonparish.net); its own bulletin page can lag the John Patrick listing by a week, so pin the church-bulletin.org listing.
 - When a JPPC cover is image-only, render page 1: it can list each church with times and a status line (St. Joseph, Middletown: 'The Church is currently closed for repairs'), which is the current-Mass evidence for a mission or shrine.
 - A parish's own history page can settle a former church's closure (St. Joseph, Middletown: original building sold November 2006); GCatholic 'Former Church' entries have no last Mass date, so the exclusion keeps last_mass empty and validate warns.
+- A parish's eCatholic archive can stop weeks early while the home page's 'Weekly Bulletin' link (here the /bulletin page's image) goes to a Bonventure listing (sponsors.bonventure.net/?page=2169, files pdfs/2169/<date>.pdf) with the current issue: record `other` with `page-pdfs http://sponsors.bonventure.net/?page=<n>`, not ecatholic (Sacred Heart, Chestertown).
+- Two parishes under one pastor can print separate John Patrick bulletins even when one cover lists the other's office and livestream as a contact (St. Dennis lists St. Polycarp's): compare mastheads and Mass schedules, not contact lines.
+- saintpolycarp.org and stdennischurch.org answered HTTP 500 / no connection from the sandbox in curl and the browser on 2026-10-27; the jppc.net/onlinebulletins/<n>template.pdf redirect still gives the listing.
 
 ## Rules settled for this diocese
 
