@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-bvm-lancaster",
+  "status": "ready",
+  "as_of": "2026-10-25T13:12:35Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:55:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, one stored bulletin (Oct 25, 2026), no history. Daily 12:05 Mass, weekend Masses (Sat 4:30 vigil, Sun 8:30 and 11:00), Friday and Saturday Confession and Friday Adoration are printed in the schedule box. A Mass of Remembrance on Nov 4 at 7:00 PM is included as a dated Mass. Padre Pio and O Hallows evenings, youth Adoration and the Rosary are left out for lacking their own times. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "479cf18fdcfa412f95a334975710dd9cbd50c1a8033933b58e6b72618ae15932",
+      "fetched_at": "2026-10-25T13:12:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "DAILY MASS: MONDAY THROUGH FRIDAY 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Weekly Mass Intentions: Monday, October 26 through Friday, October 30, 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and every weekday of the p2 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "DAILY MASS: MONDAY THROUGH FRIDAY 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Weekly Mass Intentions: Monday, October 26 through Friday, October 30, 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and every weekday of the p2 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "DAILY MASS: MONDAY THROUGH FRIDAY 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Weekly Mass Intentions: Monday, October 26 through Friday, October 30, 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and every weekday of the p2 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "DAILY MASS: MONDAY THROUGH FRIDAY 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Weekly Mass Intentions: Monday, October 26 through Friday, October 30, 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and every weekday of the p2 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "DAILY MASS: MONDAY THROUGH FRIDAY 12:05 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Weekly Mass Intentions: Monday, October 26 through Friday, October 30, 12:05 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and every weekday of the p2 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "SUNDAY MASS: SATURDAY VIGIL 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Saturday, October 31: 4:30 pm Parishioners and Friends"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and the p2 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "SUNDAY 8:30 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Sunday, November 1: 8:30 am; 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and the p2 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "SUNDAY 8:30 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Sunday, November 1: 8:30 am; 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and the p2 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "CONFESSIONS FRIDAY, 12:30-1:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Reconciliation: Friday afternoons from 12:30-1:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 3,
+          "said": "30 Adoration & Confessions ( CH ) - 12:30 - 1:30 pm"
+        }
+      ],
+      "rationale": "R1: printed with a clock time in the schedule box, the Reconciliation list and the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "SATURDAY, 3:30-4:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 2,
+          "said": "Saturday afternoons from 3:30-4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 3,
+          "said": "31 Confessions ( CH ) - 3:30 - 4:15 pm"
+        }
+      ],
+      "rationale": "R1: printed with a clock time in the schedule box, the Reconciliation list and the calendar (Oct 24 and Oct 31 entries).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 1,
+          "said": "ADORATION FRIDAY, 12:30-1:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 3,
+          "said": "30 Adoration & Confessions ( CH ) - 12:30 - 1:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box and in the p3 calendar for Friday, October 30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-lancaster",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-04",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 6,
+          "said": "On Wednesday, November 4, a Mass of Remembrance will be celebrated at 7:00 pm for parishioners who have died in the last year and the loved ones of parishioners. A reception ... after Mass. All are invited and welcome."
+        }
+      ],
+      "rationale": "R1, R16, POLICY (What to extract): a memorial Mass for the parish's deceased is open because the bulletin invites all. Dated Wednesday, November 4, 2026, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 4,
+          "said": "Tuesday, October 27, 7:00 - 8:30 PM Join us for Mass, Adoration, the Rosary and Reconciliation, all in one evening! Padre Pio Prayer Group"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 3,
+          "said": "27 Padre Pio Prayer Group ( CH ) - 7:00 pm"
+        }
+      ],
+      "rationale": "R26, POLICY (Final source checks): the Padre Pio Prayer Group evening names Mass, Adoration and Reconciliation but gives none of them a time of its own; the 7:00-8:30 PM hours of the whole event are not copied onto the components.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 4,
+          "said": "Anticipating O Hallows, October 29th, 6:30 PM ... Reflection, Adoration, Blessings with first-class relics, Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 3,
+          "said": "29 Relic Event: Anticipating O Hallows ( CH ) - 6:00 pm"
+        }
+      ],
+      "rationale": "R26, POLICY (Final source checks): a relic event listing Adoration and Confessions among its parts, with no times of their own; the bulletin and calendar do not even agree on its start (6:30 vs 6:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 6,
+          "said": "Sat. Nov 7 - Adoration and Confession (St. Mary's Youth Group)"
+        }
+      ],
+      "rationale": "R26: the Youth Group's Nov 7 Adoration and Confession has no time and no place beyond the youth group.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "479cf18f",
+          "page": 3,
+          "said": "*Rosary prayed Daily in the Holy Family Chapel except for Friday - The Rosary is also recited before the daily 12:05 pm Mass & before each Sunday Mass."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration, and has no stated time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

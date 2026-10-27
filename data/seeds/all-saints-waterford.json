@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "parish_slug": "all-saints-waterford",
+  "status": "ready",
+  "as_of": "2026-10-25T13:39:36Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:55:56Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, one stored bulletin (Oct 25, 2026) and no history. Saturday 4:30 PM vigil, Sunday 9:00 AM Mass and Saturday 3:30-4:00 PM Confession agree with the parish website. A Thursday Healing Mass at Maria House is left out as an unlisted, unplaced venue. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5990f57a799887c47867c4d5b96d52b5c6c9e085ba4afea7e195650867386621",
+      "fetched_at": "2026-10-25T13:39:36Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-waterford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5990f57a",
+          "page": 1,
+          "said": "Weekend Masses Saturday | 4:30pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5990f57a",
+          "page": 2,
+          "said": "Saturday 4:30pm Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://allsaintsrcc.org/",
+          "said": "Saturday: 4:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on p1 and in This Week at the Parish on p2; the parish website's Mass Times agrees. Only one bulletin is stored and no history.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-waterford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5990f57a",
+          "page": 1,
+          "said": "Sunday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5990f57a",
+          "page": 2,
+          "said": "Sunday 9:00am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://allsaintsrcc.org/",
+          "said": "Sunday: in-person and online 9 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on p1 and in This Week at the Parish on p2; the parish website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-waterford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5990f57a",
+          "page": 1,
+          "said": "Confession Saturday | 3:30pm - 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://allsaintsrcc.org/",
+          "said": "Confessions: Saturday at 3:30 p.m.; or by appointment"
+        }
+      ],
+      "rationale": "R1: printed with a clock time in the p1 schedule box; the website's Saturday 3:30 p.m. start agrees. The by-appointment option has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-waterford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass at Maria House"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5990f57a",
+          "page": 2,
+          "said": "Thursday 6:00 pm Healing Mass Maria House"
+        }
+      ],
+      "rationale": "R23: Maria House is not on the church list and its location is not given; the bulletin and website do not place it at All Saints (POLICY, Churches and chapels). Listed once in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Maria House (Thursday 6:00 PM Healing Mass)",
+      "said": "Thursday 6:00 pm Healing Mass Maria House",
+      "bulletin": "5990f57a",
+      "page": 2
+    }
+  ]
+}
